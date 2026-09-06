@@ -146,10 +146,13 @@ build/
 .ipynb_checkpoints/
 
 # c#
+# **/obj/ and **/bin/ match at any depth, which is what .NET output needs
+# (src/<proj>/bin, src/<proj>/obj). The un-globbed [Oo]bj/ and [Bb]in/ that
+# used to follow were redundant with these two and are gone.
 **/obj/
 **/bin/
-[Oo]bj/
-[Bb]in/
+# perl-meta keeps real Perl sources under perl/bin/Meta/, not build output.
+!/perl/bin/
 
 # flash/air
 *.swf
