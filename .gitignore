@@ -241,3 +241,6 @@ creds.txt
 # generated website pieces (built into the Pages artifact by CI)
 /docs/output/
 /docs/index.html
+
+# per-machine tool resolution cache (absolute paths, not portable)
+/.tools.versions
