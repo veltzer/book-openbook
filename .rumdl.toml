@@ -2,8 +2,19 @@
 # over from the pydmt-era .markdownlint.json / .mdl.style.rb configs the
 # repos were maintained against: rules those never addressed stay on.
 
+# MD057 (existing-relative-links) resolves link targets relative to the file
+# that contains them. Marp decks address images from the project root
+# instead (.marprc.mjs sets baseUrl to the repo root), so every such link
+# is reported as broken while resolving correctly at render time. The
+# repos that carry decks verify these targets themselves against the real
+# root -- teaching-slides does it in scripts/check_md.py --images.
+# MD014 (commands-show-output) wants a shell example either to show its
+# output or to drop the "$" prompt. The prompt is deliberate in these
+# repos: it separates the command from its output and marks the shell
+# being used (a Windows example uses ">"), so the rule's fix would
+# rewrite authored teaching material. Kept off fleet-wide.
 [global]
-disable = ["MD022", "MD024", "MD026", "MD031", "MD032", "MD033", "MD034"]
+disable = ["MD022", "MD024", "MD026", "MD031", "MD032", "MD033", "MD034", "MD057", "MD014"]
 
 [MD007]
 indent = 4
