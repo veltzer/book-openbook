@@ -8,13 +8,19 @@
 # is reported as broken while resolving correctly at render time. The
 # repos that carry decks verify these targets themselves against the real
 # root -- teaching-slides does it in scripts/check_md.py --images.
+# MD053 (unused-link-image-reference) reports a link reference definition
+# that nothing references. The [//1]: <> (...) form is the portable
+# markdown comment idiom, and being unreferenced is the whole mechanism --
+# that is what keeps the text out of the rendered output. demos-lang-md
+# teaches this idiom explicitly, so the rule's "fix" would delete the
+# lesson. No rule can tell the idiom from a genuinely dead reference.
 # MD014 (commands-show-output) wants a shell example either to show its
 # output or to drop the "$" prompt. The prompt is deliberate in these
 # repos: it separates the command from its output and marks the shell
 # being used (a Windows example uses ">"), so the rule's fix would
 # rewrite authored teaching material. Kept off fleet-wide.
 [global]
-disable = ["MD022", "MD024", "MD026", "MD031", "MD032", "MD033", "MD034", "MD057", "MD014"]
+disable = ["MD022", "MD024", "MD026", "MD031", "MD032", "MD033", "MD034", "MD057", "MD014", "MD053"]
 
 [MD007]
 indent = 4
