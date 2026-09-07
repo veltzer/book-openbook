@@ -190,13 +190,18 @@ terraform.tfstate.backup
 /terraform.lock.hcl
 
 # scala
-project/
+# Anchored: sbt's build dir is at the repo root. Unanchored, this also
+# swallowed source directories named project/ nested under src/.
+/project/
 
 # rust
 **/*.rs.bk
 **/mutants.out*/
 *.pdb
-debug
+# Anchored: this is the root debug build dir. Unanchored (and without a
+# trailing slash) it matched any file or directory named debug at any depth,
+# including authored example content.
+/debug/
 /.rsconstruct_cache.json
 
 # claude
