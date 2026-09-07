@@ -260,42 +260,19 @@ creds.txt
 /docs/objects.inv
 /docs/searchindex.js
 /docs/.nojekyll
-# sphinx's top-level html: the shared index/search pages plus one page per
-# package module. Listed by name rather than as /docs/*.html because
-# js-jschess and the site-personal-* repos keep hand-authored html there.
+# sphinx's top-level html. Not a blanket /docs/*.html: js-jschess and the
+# site-personal-* repos keep hand-authored html under docs/. The fixed pages
+# (genindex, modules, search) and the authored-rst pages some repos render
+# (architecture, notes, ...) are listed by name; the one-page-per-module
+# output is /docs/py*.html, since every package here is named py*.
 /docs/architecture.html
 /docs/cli-reference.html
 /docs/development.html
 /docs/genindex.html
-/docs/index.html
 /docs/modules.html
 /docs/notes.html
 /docs/overview.html
-/docs/py-modindex.html
-/docs/pyapikey.html
-/docs/pyblueprint.html
-/docs/pycookie.html
-/docs/pydmt.api.html
-/docs/pydmt.builders.html
-/docs/pydmt.core.html
-/docs/pydmt.features.html
-/docs/pydmt.helpers.html
-/docs/pydmt.html
-/docs/pydmt.utils.html
-/docs/pygitpub.html
-/docs/pygitpub.utils.html
-/docs/pylogconf.html
-/docs/pymultigit.html
-/docs/pymultigit.utils.html
-/docs/pypitools.html
-/docs/pypowerline.html
-/docs/pyscrapers.core.html
-/docs/pyscrapers.html
-/docs/pyscrapers.workers.html
-/docs/pytconf.html
-/docs/pytsv.html
-/docs/pytubekit.html
-/docs/pyunique.html
+/docs/py*.html
 /docs/quota-guide.html
 /docs/search.html
 
