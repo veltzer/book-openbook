@@ -249,6 +249,55 @@ creds.txt
 # generated website pieces (built into the Pages artifact by CI)
 /docs/output/
 /docs/index.html
+# sphinx html output: the 14 py* repos render docs/ from sphinx/ and publish
+# it as the Pages artifact, so none of it is committed. Listed path by path
+# rather than as /docs/ because the rs* repos keep hand-written mdBook
+# sources there, and several others keep authored html.
+/docs/_modules/
+/docs/_sources/
+/docs/_static/
+/docs/.buildinfo
+/docs/objects.inv
+/docs/searchindex.js
+/docs/.nojekyll
+# sphinx's top-level html: the shared index/search pages plus one page per
+# package module. Listed by name rather than as /docs/*.html because
+# js-jschess and the site-personal-* repos keep hand-authored html there.
+/docs/architecture.html
+/docs/cli-reference.html
+/docs/development.html
+/docs/genindex.html
+/docs/index.html
+/docs/modules.html
+/docs/notes.html
+/docs/overview.html
+/docs/py-modindex.html
+/docs/pyapikey.html
+/docs/pyblueprint.html
+/docs/pycookie.html
+/docs/pydmt.api.html
+/docs/pydmt.builders.html
+/docs/pydmt.core.html
+/docs/pydmt.features.html
+/docs/pydmt.helpers.html
+/docs/pydmt.html
+/docs/pydmt.utils.html
+/docs/pygitpub.html
+/docs/pygitpub.utils.html
+/docs/pylogconf.html
+/docs/pymultigit.html
+/docs/pymultigit.utils.html
+/docs/pypitools.html
+/docs/pypowerline.html
+/docs/pyscrapers.core.html
+/docs/pyscrapers.html
+/docs/pyscrapers.workers.html
+/docs/pytconf.html
+/docs/pytsv.html
+/docs/pytubekit.html
+/docs/pyunique.html
+/docs/quota-guide.html
+/docs/search.html
 
 # per-machine tool resolution cache (absolute paths, not portable)
 /.tools.versions
