@@ -153,6 +153,19 @@ args = ["-m", "scripts.gen_index_csv"]
 inputs = ["out/tera/books/openbook.pdf"]
 output_files = ["out/tera/books/openbook.csv"]
 
+# Embedded PDF bookmarks for the openbook PDF (issue #121 follow-up): the
+# same tune list as the index.csv, written directly into the PDF as outline
+# entries so forScore (and every other PDF reader) picks up the table of
+# contents natively, no CSV import needed. This is the step that publishes
+# openbook.pdf to the website: it reads the engraved PDF and writes the
+# bookmarked copy straight into docs/output, which is why pages_books_pdf
+# below skips openbook.pdf (one producer per output file).
+[processor.explicit.openbook_pdf_bookmarks]
+command = "python"
+args = ["-m", "scripts.embed_pdf_bookmarks"]
+inputs = ["out/tera/books/openbook.pdf"]
+output_files = ["docs/output/openbook.pdf"]
+
 [processor.explicit.israeli]
 command = "python"
 args = ["-m", "scripts.wrapper_lilypond_explicit"]
@@ -193,6 +206,10 @@ dir = "docs"
 command = "cp"
 src_dirs = ["out/tera/books"]
 src_extensions = [".pdf"]
+# openbook.pdf is published by openbook_pdf_bookmarks instead, which copies
+# it with the table of contents embedded. Copying it here too would make two
+# processors produce docs/output/openbook.pdf.
+src_exclude_files = ["openbook.pdf"]
 output_dir = "docs/output"
 output_extension = "pdf"
 batch = false
