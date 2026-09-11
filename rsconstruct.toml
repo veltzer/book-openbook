@@ -144,6 +144,15 @@ args = ["-m", "scripts.wrapper_lilypond_explicit"]
 inputs = ["out/tera/books/openbook.ly"]
 output_files = ["out/tera/books/openbook.pdf", "out/tera/books/openbook.ps"]
 
+# forScore index.csv for the openbook PDF (issue #121): one bookmark per tune
+# when imported into the forScore iPad app. Page numbers are read from the
+# book's rendered table of contents by scripts.gen_index_csv.
+[processor.explicit.openbook_index_csv]
+command = "python"
+args = ["-m", "scripts.gen_index_csv"]
+inputs = ["out/tera/books/openbook.pdf"]
+output_files = ["out/tera/books/openbook.csv"]
+
 [processor.explicit.israeli]
 command = "python"
 args = ["-m", "scripts.wrapper_lilypond_explicit"]
@@ -202,6 +211,16 @@ src_dirs = ["out/tera/books"]
 src_extensions = [".ly"]
 output_dir = "docs/output"
 output_extension = "ly"
+batch = false
+
+# publish the forScore index.csv to the site so it can be downloaded from
+# the gh-pages site alongside the PDFs
+[processor.generator.pages_books_csv]
+command = "cp"
+src_dirs = ["out/tera/books"]
+src_extensions = [".csv"]
+output_dir = "docs/output"
+output_extension = "csv"
 batch = false
 
 # ─── external dependencies ───────────────────────────────────────────────────
