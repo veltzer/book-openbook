@@ -1,3 +1,5 @@
+#!/usr/bin/env python
+
 """ Embed the book's table of contents as PDF bookmarks (outlines).
 
 forScore (https://forscore.co/) reads a PDF's embedded Table of Contents

@@ -44,6 +44,7 @@ used by Jazz musicians both for practice and for performance.
 
 ## What python modules are used?
 * requests
+* pypdf
 
 ## What is produced?
 Beautiful and lightweight postscript and PDF real books with Jazz tunes.
