@@ -4,21 +4,24 @@ updates:
     directory: "/"
     schedule:
       interval: "weekly"
-{% if glob(pattern="pyproject.toml") | length > 0 or glob(pattern="requirements.txt") | length > 0 %}
+{%- if glob(pattern="pyproject.toml") | length > 0 or glob(pattern="requirements.txt") | length > 0 %}
+
   - package-ecosystem: "pip"
     directory: "/"
     schedule:
       interval: "weekly"
-{% endif %}
-{% if glob(pattern="Cargo.toml") | length > 0 %}
+{%- endif %}
+{%- if glob(pattern="Cargo.toml") | length > 0 %}
+
   - package-ecosystem: "cargo"
     directory: "/"
     schedule:
       interval: "weekly"
-{% endif %}
-{% if glob(pattern="package.json") | length > 0 %}
+{%- endif %}
+{%- if glob(pattern="package.json") | length > 0 %}
+
   - package-ecosystem: "npm"
     directory: "/"
     schedule:
       interval: "weekly"
-{% endif %}
+{%- endif %}
