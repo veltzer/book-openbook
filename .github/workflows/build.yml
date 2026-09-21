@@ -20,7 +20,7 @@ jobs:
         # A no-op in repos without submodules, so every repo shares this
         # exact file.
         submodules: recursive
-    - uses: actions/cache@v5
+    - uses: actions/cache@v6
       with:
         path: .rsconstruct
         # Primary key is unique per run so every successful run saves a fresh
