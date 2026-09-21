@@ -15,7 +15,7 @@ jobs:
     outputs:
       pages-dir: ${{ steps.pages.outputs.dir }}
     steps:
-    - uses: actions/checkout@v6
+    - uses: actions/checkout@v7
       with:
         # A no-op in repos without submodules, so every repo shares this
         # exact file.
