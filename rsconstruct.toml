@@ -30,8 +30,6 @@ dep_inputs = ["config/project.lua", "config/personal.lua", "config/version.lua"]
 [processor.ruff]
 src_dirs = ["scripts", "config", "tests"]
 
-[processor.pylint]
-src_dirs = ["scripts", "config", "tests"]
 
 [processor.mypy]
 src_dirs = ["scripts", "config", "tests"]
