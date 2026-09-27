@@ -268,6 +268,18 @@ inputs = ["scripts/check_all.py"]
 input_globs = ["src/**/*.ly.tera"]
 output_files = ["out/checks/check_all.stamp"]
 
+# End-to-end smoke test: engrave the single demo song
+# (src/test/demo.ly.tera → its generated driver → its rendered .ly → pdf+ps).
+# It exercises every stage the real books go through, so a plain
+# `rsconstruct build` catches LilyPond breakage without waiting for the
+# 200-tune full engrave — which is the point on CI. The tera render of
+# out/tera/src/test/demo.ly is picked up automatically as the input dep.
+[processor.explicit.demo_smoke]
+command = "python"
+args = ["-m", "scripts.wrapper_lilypond_explicit"]
+inputs = ["out/tera/src/test/demo.ly"]
+output_files = ["out/smoke/demo.pdf", "out/smoke/demo.ps"]
+
 # validate the generated website index page (part of the default build)
 [processor.tidy]
 src_dirs = ["docs"]

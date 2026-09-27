@@ -12,11 +12,17 @@ Invoked per the rsconstruct explicit-processor contract:
 
 On success the stamp file is written; on any finding every error is printed
 to stderr as file:line: reason and the exit code is 1.
+
+With --json, findings are emitted to stdout as one JSON object per line
+(file, line, reason, snippet), so editor plugins can consume them without
+parsing the human-oriented "file:line: reason" text.
 """
 
 import argparse
+import json
 import re
 import sys
+from dataclasses import asdict, dataclass
 from pathlib import Path
 
 # jazz tunes get extra conventions checks (was src/openbook in make)
@@ -30,15 +36,29 @@ PART_IF = re.compile(r"\{%-?\s*if part == \"(\w+)\"")
 PART_END = re.compile(r"\{%-?\s*endif")
 
 
+@dataclass(frozen=True)
+class Finding:
+    """ one check finding """
+    file: str
+    line: int
+    reason: str
+    snippet: str = ""
+
+
 class Checker:
-    """ Accumulates errors over the checked files """
+    """ Accumulates findings over the checked files """
 
     def __init__(self) -> None:
-        self.errors = 0
+        self.findings: list[Finding] = []
+
+    @property
+    def errors(self) -> int:
+        """ number of findings so far """
+        return len(self.findings)
 
     def error(self, file: str, num: int, reason: str, line: str = "") -> None:
         """ report a single finding """
-        self.errors += 1
+        self.findings.append(Finding(file=file, line=num, reason=reason, snippet=line))
         print(f"{file}:{num}: {reason} {line}".rstrip(), file=sys.stderr)
 
     def check_line(self, file: str, num: int, line: str) -> None:
@@ -126,7 +146,13 @@ def main() -> int:
     """ main entry point """
     parser = argparse.ArgumentParser(description=__doc__)
     parser.add_argument("--inputs", nargs="+", required=True)
-    parser.add_argument("--output-files", nargs="+", required=True, dest="output_files")
+    parser.add_argument(
+        "--output-files", nargs="+", required=False, default=[], dest="output_files",
+    )
+    parser.add_argument(
+        "--json", action="store_true",
+        help="emit findings as one JSON object per line on stdout",
+    )
     args = parser.parse_args()
     checker = Checker()
     for name in args.inputs:
@@ -135,6 +161,10 @@ def main() -> int:
         if not name.endswith(".ly.tera") or "src/include/" in name:
             continue
         checker.check_file(Path(name))
+    if args.json:
+        for finding in checker.findings:
+            sys.stdout.write(json.dumps(asdict(finding), ensure_ascii=False) + "\n")
+        sys.stdout.flush()
     if checker.errors > 0:
         print(f"check_all: {checker.errors} error(s)", file=sys.stderr)
         return 1

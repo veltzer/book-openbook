@@ -34,13 +34,13 @@ def render(source: Path, output: Path) -> int:
     elif output.suffix == ".mp3":
         timidity = ["timidity", str(source), "-idq", "-Ow", "-o", "-"]
         lame = ["lame", "--quiet", "-", str(output)]
-        command = timidity + ["|"] + lame
         with subprocess.Popen(timidity, stdout=subprocess.PIPE, stderr=subprocess.PIPE) as producer:
             result = subprocess.run(
                 lame, stdin=producer.stdout, capture_output=True, check=False)
             _, timidity_err = producer.communicate()
         if producer.returncode != 0 or result.returncode != 0:
-            return fail(command, output, timidity_err + result.stderr)
+            pipeline = " ".join(timidity) + " | " + " ".join(lame)
+            return fail([pipeline], output, timidity_err + result.stderr)
         return 0
     else:
         print(f"unknown output format [{output}]", file=sys.stderr)

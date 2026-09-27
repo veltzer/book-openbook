@@ -26,7 +26,6 @@ package = false
 pythonpath = ["."]
 
 [tool.mypy]
-mypy_path = "src:python"
 explicit_package_bases = true
 namespace_packages = true
 

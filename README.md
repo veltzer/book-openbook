@@ -32,7 +32,7 @@ Because of many reasons:
 * I wanted beautiful sheet music that I could fiddle with.
 * I did not want to pay for the overly expensive real or fake books out there.
 * I believe in free software and wanted free (in the sense of freedom) sheet music.
-* Jazz is a prime example of a free type of art, so it's conjunction with free software seems a match made in heaven.
+* Jazz is a prime example of a free type of art, so its conjunction with free software seems a match made in heaven.
 * Jazz musicians may need beautiful electronic Real books because electronic books are starting to be
 used by Jazz musicians both for practice and for performance.
 
@@ -48,8 +48,8 @@ used by Jazz musicians both for practice and for performance.
 
 ## What is produced?
 Beautiful and lightweight postscript and PDF real books with Jazz tunes.
-The idea is that the end user can control the final output and decide if he/she
-wants lyrics, size of paper, transposition for a trumpet, selection of tunes and more.
+The idea is that the end user can control the final output and decide whether they
+want lyrics, size of paper, transposition for a trumpet, selection of tunes and more.
 In addition, you can produce midi, mp3 and ogg outputs.
 Possibly other output formats will be supported in the future (epub?).
 
@@ -63,7 +63,7 @@ Anyone.
 A Linux system that you can install software on.
 Mac OSX is reported to work too if you know how to install the right stuff on it.
 Windows is not currently supported although well-formed patches will be accepted.
-(disclaimer: the author hates Windows with a vengence so patches have to be spotless
+(disclaimer: the author hates Windows with a vengeance so patches have to be spotless
 to be accepted)
 
 ## What do I need to know to participate?

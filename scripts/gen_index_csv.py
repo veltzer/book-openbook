@@ -44,30 +44,37 @@ def pdf_page_count(pdf: Path) -> int:
     raise ValueError(f"pdfinfo reported no page count for {pdf}")
 
 
-def toc_page_range(pdf: Path) -> tuple[int, int]:
-    """ First and last PDF page (1-based, inclusive) that hold TOC entries.
+def _page_text(pdf: Path, page: int) -> str:
+    """ pdftotext -layout output for one 1-based PDF page. """
+    return subprocess.run(
+        ["pdftotext", "-layout", "-f", str(page), "-l", str(page), str(pdf), "-"],
+        capture_output=True,
+        text=True,
+        check=True,
+    ).stdout
+
+
+def toc_text(pdf: Path) -> str:
+    """ Concatenated pdftotext output of every TOC page in *pdf*.
 
     A TOC page is one whose lines are overwhelmingly "text ... <number>"
-    entries; song pages are not. We scan from the front until we find TOC
-    pages and stop at the first page after them that has none. """
+    entries; song pages are not. We scan from the front, capture text from
+    every TOC page, and stop at the first non-TOC page after them. """
     first = None
+    parts: list[str] = []
     total = pdf_page_count(pdf)
     for page in range(1, total + 1):
-        text = subprocess.run(
-            ["pdftotext", "-layout", "-f", str(page), "-l", str(page), str(pdf), "-"],
-            capture_output=True,
-            text=True,
-            check=True,
-        ).stdout
+        text = _page_text(pdf, page)
         hits = sum(1 for line in text.splitlines() if _TOC_LINE.match(line.strip()))
         if hits >= 5:
             if first is None:
                 first = page
+            parts.append(text)
         elif first is not None:
-            return first, page - 1
+            return "".join(parts)
     if first is None:
         raise ValueError(f"no table-of-contents pages found in {pdf}")
-    return first, total
+    return "".join(parts)
 
 
 def split_title_composer(body: str) -> tuple[str, str]:
@@ -82,15 +89,8 @@ def split_title_composer(body: str) -> tuple[str, str]:
 
 def parse_toc(pdf: Path) -> list[tuple[str, str, int]]:
     """ Return (title, composer, start_page) for every tune, in book order. """
-    lo, hi = toc_page_range(pdf)
-    text = subprocess.run(
-        ["pdftotext", "-layout", "-f", str(lo), "-l", str(hi), str(pdf), "-"],
-        capture_output=True,
-        text=True,
-        check=True,
-    ).stdout
     entries: list[tuple[str, str, int]] = []
-    for line in text.splitlines():
+    for line in toc_text(pdf).splitlines():
         match = _TOC_LINE.match(line.strip())
         if not match:
             continue

@@ -9,11 +9,12 @@ that knowledge. Run a build first so docs/index.html and the books in
 docs/output/ exist:
 
     rsconstruct build
-    python -m scripts.serve_pages [port]
+    python -m scripts.serve_pages [--port PORT]
 
 Then browse http://localhost:8000/ (or the port you passed).
 """
 
+import argparse
 import functools
 import http.server
 import subprocess
@@ -36,12 +37,17 @@ def pages_dir() -> str:
 
 def main() -> int:
     """ main entry point """
-    port = int(sys.argv[1]) if len(sys.argv) > 1 else DEFAULT_PORT
+    parser = argparse.ArgumentParser(description=__doc__.splitlines()[1])
+    parser.add_argument(
+        "--port", "-p", type=int, default=DEFAULT_PORT,
+        help=f"TCP port to listen on (default: {DEFAULT_PORT})",
+    )
+    args = parser.parse_args()
     directory = pages_dir()
     handler = functools.partial(
         http.server.SimpleHTTPRequestHandler, directory=directory)
-    server = http.server.ThreadingHTTPServer(("", port), handler)
-    print(f"serving [{directory}] at http://localhost:{port}/ (Ctrl+C to stop)")
+    server = http.server.ThreadingHTTPServer(("", args.port), handler)
+    print(f"serving [{directory}] at http://localhost:{args.port}/ (Ctrl+C to stop)")
     try:
         server.serve_forever()
     except KeyboardInterrupt:

@@ -1,3 +1,12 @@
 - create the outputs in docs/outputs/[XXXX] and not docs/[XXXX] to separate them
 	from other outputs.
 - added option to download the real books from my dropbox drive.
+- retired the Makefile; the build now runs under rsconstruct.
+- retired PyMySQL from the build; there is no database step any more, so no
+	system-python dependency either. The python environment is managed by uv.
+- retired mako; the song tree is now tera .ly.tera files under src/ with TOML
+	front matter, driven by the driver generator in scripts/drivers.py.
+- migrated all check scripts to python (scripts/check_all.py); wired into the
+	default build so failing checks fail the build.
+- restored midi/ogg/wav/mp3 rendering as python wrappers
+	(scripts/wrapper_midi_audio.py); the old perl scripts are gone.

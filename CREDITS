@@ -1,2 +1,21 @@
-This project does not maintain a CREDITS file
-look at the git changelog instead.
+OpenBook contributors, from git history (`git shortlog -sn`):
+
+    Mark Veltzer            (project lead, engraver)
+    Jordan Eldredge
+    Michael Dienert
+    Werner Grünberger
+    Samuel Tardieu
+    Roberto Bucher
+    Patrick Paulson
+    arktisvogel
+    captbaritone
+    glynnforrest
+    jaredwhite128
+    skuzzymiglet
+
+Thanks to everyone who has sent tunes, corrections, or infrastructure
+patches. Some contributors preferred to remain anonymous — their work is
+in the git history under whatever name they submitted with.
+
+The tunes engraved in this project have their own copyright holders,
+credited on each tune's page.
