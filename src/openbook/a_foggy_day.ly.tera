@@ -16,11 +16,15 @@ uuid = "87da6ece-a26e-11df-95d7-0019d11e5a41"
 structure = "AB"
 structureremark = "this tunes structure can also be categorised as ABAC since the first 8 bars of both the first and second part are the same."
 location = "rbk1:6,jfb:120-121"
-idyoutuberemark1 = "Wynton Marsalis Quartet"
-idyoutube1 = "-P2xoeGoWMs"
-idyoutuberemark2 = "Mel Torme (one of the greatest vocal versions)"
-idyoutube2 = "tVCDZaApwV8"
 lyricsurl = "http://www.sing365.com/music/lyric.nsf/A-Foggy-Day-lyrics-Frank-Sinatra/0F2EB16090A785424825692000077664"
+
+[[youtube]]
+id = "-P2xoeGoWMs"
+remark = "Wynton Marsalis Quartet"
+
+[[youtube]]
+id = "tVCDZaApwV8"
+remark = "Mel Torme (one of the greatest vocal versions)"
 
 [versions.Fake]
 doChords = true

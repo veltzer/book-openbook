@@ -15,11 +15,15 @@ uuid = "ba3d8788-10f7-11e4-b63c-8397db34c0b9"
 structure = "ABA"
 structureremark = "Each A part is the 16 bars where the first 4 of every half are the same"
 location = "jfb:292"
-idyoutuberemark1 = "Excellent piano arrangement"
-idyoutube1 = "2LEah90aDmA"
-idyoutuberemark2 = "Classic tango vocal version"
-idyoutube2 = "WuD8XmCza5U"
 lyricsurl = "http://lyricsplayground.com/alpha/songs/o/orchidsinthemoonlight.shtml"
+
+[[youtube]]
+id = "2LEah90aDmA"
+remark = "Excellent piano arrangement"
+
+[[youtube]]
+id = "WuD8XmCza5U"
+remark = "Classic tango vocal version"
 
 [versions.Fake]
 doChords = true

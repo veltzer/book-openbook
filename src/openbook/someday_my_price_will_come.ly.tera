@@ -13,13 +13,19 @@ uuid = "4933391e-ee10-11e0-b804-0019d11e5a41"
 structure = "ABAC"
 structureremark = "This could be thought of as AB as well"
 location = "rbk1:388"
-idyoutuberemark1 = "Miles"
-idyoutube1 = "Lo18F5ObPng"
-idyoutuberemark2 = "the great Bill Evans"
-idyoutube2 = "zYpKNM1Yi5o"
-idyoutuberemark3 = "and Bill again"
-idyoutube3 = "KUT06K5eGz4"
 lyricsurl = "http://artists.letssingit.com/disney-lyrics-someday-my-prince-will-come-31rjgwv"
+
+[[youtube]]
+id = "Lo18F5ObPng"
+remark = "Miles"
+
+[[youtube]]
+id = "zYpKNM1Yi5o"
+remark = "the great Bill Evans"
+
+[[youtube]]
+id = "KUT06K5eGz4"
+remark = "and Bill again"
 
 [versions.Real]
 doChords = true

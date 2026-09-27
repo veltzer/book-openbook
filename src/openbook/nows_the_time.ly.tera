@@ -13,10 +13,14 @@ completion = "5"
 uuid = "cd56a8d8-da1d-11e3-a6ca-c3a55777c28e"
 structure = "Blues"
 location = "jfb:279"
-idyoutuberemark1 = "The great Charlie Parker"
-idyoutube1 = "ryNtmkfeJk4"
-idyoutuberemark2 = "A much more modern version by Blakey and the Messengers"
-idyoutube2 = "qq7xDN1G3Bc"
+
+[[youtube]]
+id = "ryNtmkfeJk4"
+remark = "The great Charlie Parker"
+
+[[youtube]]
+id = "qq7xDN1G3Bc"
+remark = "A much more modern version by Blakey and the Messengers"
 
 [versions.Fake]
 doChords = true

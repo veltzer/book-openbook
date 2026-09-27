@@ -14,11 +14,15 @@ completion = "5"
 uuid = "be87a49a-1a05-11e1-ba9e-0019d11e5a41"
 structure = "AABA"
 location = "jfb:119"
-idyoutuberemark1 = "Duke and his orchestra"
-idyoutube1 = "XlmMzUMCIIg"
-idyoutuberemark2 = "Petrucciani and Grappelli"
-idyoutube2 = "oqR5hPjPM3o"
 lyricsurl = "http://lyricsplayground.com/alpha/songs/f/flamingo.shtml"
+
+[[youtube]]
+id = "XlmMzUMCIIg"
+remark = "Duke and his orchestra"
+
+[[youtube]]
+id = "oqR5hPjPM3o"
+remark = "Petrucciani and Grappelli"
 
 [versions.Fake]
 doChords = true

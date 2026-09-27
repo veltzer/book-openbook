@@ -15,11 +15,15 @@ completion = "5"
 uuid = "c3fff540-a26e-11df-9435-0019d11e5a41"
 structure = "AABA"
 location = "rbk1:112-113,jfb:97"
-idyoutuberemark1 = "Joao Gilberto in a nice brasilian version"
-idyoutube1 = "g6w3a2v_50U"
-idyoutuberemark2 = "Stan Getz in a nice instrumental version"
-idyoutube2 = "lo1SiVwVqic"
 lyricsurl = "http://www.hotlyrics.net/lyrics/E/Ella_Fitzgerald/Desafinado.html"
+
+[[youtube]]
+id = "g6w3a2v_50U"
+remark = "Joao Gilberto in a nice brasilian version"
+
+[[youtube]]
+id = "lo1SiVwVqic"
+remark = "Stan Getz in a nice instrumental version"
 
 [versions.Fake]
 doChords = true

@@ -14,11 +14,15 @@ completion = "5"
 uuid = "dedcc73c-1ead-11e1-8007-0019d11e5a41"
 structure = "ABAC"
 location = "rbk1:238,hlrjb:181"
-idyoutuberemark1 = "Cool Jazz by Chet Baker..."
-idyoutube1 = "c8C6i3kpsQU"
-idyoutuberemark2 = "Swinging Bill Evans..."
-idyoutube2 = "10ZYoSryrcI"
 lyricsurl = "http://www.stlyrics.com/lyrics/onefineday/isntitromantic.htm"
+
+[[youtube]]
+id = "c8C6i3kpsQU"
+remark = "Cool Jazz by Chet Baker..."
+
+[[youtube]]
+id = "10ZYoSryrcI"
+remark = "Swinging Bill Evans..."
 
 [versions.Real]
 doChords = true

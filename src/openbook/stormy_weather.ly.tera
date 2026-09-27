@@ -15,11 +15,15 @@ completion = "5"
 uuid = "6204de70-da80-11e3-95e9-fbc293b14fcd"
 structure = "AABA"
 location = "jfb:363"
-idyoutuberemark1 = "Ella in a great version"
-idyoutube1 = "ezGHapF8-lY"
-idyoutuberemark2 = "Ella in 1975 with Joe Pass"
-idyoutube2 = "teXOPAFMOp0"
 lyricsurl = "http://www.lyricsfreak.com/b/billie+holiday/stormy+weather_20018077.html"
+
+[[youtube]]
+id = "ezGHapF8-lY"
+remark = "Ella in a great version"
+
+[[youtube]]
+id = "teXOPAFMOp0"
+remark = "Ella in 1975 with Joe Pass"
 
 [versions.Fake]
 doChords = true

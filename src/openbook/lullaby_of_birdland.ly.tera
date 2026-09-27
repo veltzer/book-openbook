@@ -13,11 +13,15 @@ completion = "5"
 uuid = "f9668406-a26e-11df-8542-0019d11e5a41"
 structure = "AABA"
 location = "rbk1:277,jfb:234"
-idyoutuberemark1 = "The famous Ella version"
-idyoutube1 = "UY8zK4R9oE8"
-idyoutuberemark2 = "George Shearing himself! Amazing!"
-idyoutube2 = "LKXvMbAKAmY"
 lyricsurl = "http://www.bluesforpeace.com/lyrics/lullaby-birdland.htm"
+
+[[youtube]]
+id = "UY8zK4R9oE8"
+remark = "The famous Ella version"
+
+[[youtube]]
+id = "LKXvMbAKAmY"
+remark = "George Shearing himself! Amazing!"
 
 [versions.Fake]
 doChords = true

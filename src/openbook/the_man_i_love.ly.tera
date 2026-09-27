@@ -12,11 +12,15 @@ completion = "5"
 uuid = "e8ff288e-2233-11e1-9b9f-0019d11e5a41"
 structure = "AABA"
 location = "rbk2:229"
-idyoutuberemark1 = "Classic Billie Holiday"
-idyoutube1 = "uzJMTSaAl8g"
-idyoutuberemark2 = "Ella Fitzgerald with Tommy Flanagan on the piano"
-idyoutube2 = "ySszeu4H4QI"
 lyricsurl = "http://www.sing365.com/music/lyric.nsf/The-Man-I-Love-lyrics-Ella-Fitzgerald/8EE600AB304A9C6948256AAB0009579B"
+
+[[youtube]]
+id = "uzJMTSaAl8g"
+remark = "Classic Billie Holiday"
+
+[[youtube]]
+id = "ySszeu4H4QI"
+remark = "Ella Fitzgerald with Tommy Flanagan on the piano"
 
 [versions.Real]
 doChords = true

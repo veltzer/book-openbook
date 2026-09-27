@@ -14,11 +14,19 @@ uuid = "f7fdc5e0-db41-11e0-a31c-0019d11e5a41"
 structure = "A"
 location = "rbk1:51"
 remark = "Play last 4 bars twice more to end"
-idyoutube1 = "EhQfGODnvww"
-idyoutube2 = "-0mNSP1452o"
-idyoutube3 = "6sr7BXinJMw"
-idyoutube4 = "lKEEVECH58Q"
 lyricsurl = "http://fyicomminc.bizland.com/music/lyrics/bluebossa.htm"
+
+[[youtube]]
+id = "EhQfGODnvww"
+
+[[youtube]]
+id = "-0mNSP1452o"
+
+[[youtube]]
+id = "6sr7BXinJMw"
+
+[[youtube]]
+id = "lKEEVECH58Q"
 
 [versions.Real]
 doChords = true

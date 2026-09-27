@@ -14,11 +14,15 @@ completion = "5"
 uuid = "ac777f1c-0bf0-11e3-9fd3-782bcbdd3b7a"
 structure = "AABA"
 location = "jfb:266"
-idyoutuberemark1 = "Coltrane!"
-idyoutube1 = "ecrE80rnjhw"
-idyoutuberemark2 = "Sting in the leaving Las-Vegas version"
-idyoutube2 = "lEkJoMNFPEA"
 lyricsurl = "http://www.lyricsfreak.com/l/louis+armstrong/my+one+and+only+love_20268115.html"
+
+[[youtube]]
+id = "ecrE80rnjhw"
+remark = "Coltrane!"
+
+[[youtube]]
+id = "lEkJoMNFPEA"
+remark = "Sting in the leaving Las-Vegas version"
 
 [versions.Fake]
 doChords = true

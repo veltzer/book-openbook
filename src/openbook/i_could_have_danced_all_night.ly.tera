@@ -16,11 +16,15 @@ uuid = "47321f34-1a2e-11e4-b94f-232e14538fbe"
 structure = "ABCD"
 structureremark = "A, B and D parts are similar in many ways but not in exact harmony so this tune is close to a an AABA tune."
 location = "jfb:153"
-idyoutuberemark1 = "Frank in a great version"
-idyoutube1 = "IGqGBu6Ksqk"
-idyoutuberemark2 = "Julie Andrews in a musical like version"
-idyoutube2 = "JNaIor5lxN8"
 lyricsurl = "http://www.metrolyrics.com/i-could-have-danced-all-night-lyrics-my-fair-lady.html"
+
+[[youtube]]
+id = "IGqGBu6Ksqk"
+remark = "Frank in a great version"
+
+[[youtube]]
+id = "JNaIor5lxN8"
+remark = "Julie Andrews in a musical like version"
 
 [versions.Fake]
 doChords = true

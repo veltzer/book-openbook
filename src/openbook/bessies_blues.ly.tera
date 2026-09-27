@@ -12,10 +12,14 @@ completion = "5"
 uuid = "46708476-aa13-11e4-bb67-3860779cb560"
 structure = "Blues"
 location = "rbk1:42"
-idyoutuberemark1 = "John Coltrane in the classic version"
-idyoutube1 = "XMC2bvHk0Bo"
-idyoutuberemark2 = "Chick Corea in a modern take"
-idyoutube2 = "XyR4MrpkRjY"
+
+[[youtube]]
+id = "XMC2bvHk0Bo"
+remark = "John Coltrane in the classic version"
+
+[[youtube]]
+id = "XyR4MrpkRjY"
+remark = "Chick Corea in a modern take"
 
 [versions.Real]
 doChords = true

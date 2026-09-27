@@ -15,11 +15,15 @@ completion = "5"
 uuid = "f5edb3c8-9452-11e4-8279-3860779cb560"
 structure = "AABA"
 location = "rbk1:55"
-idyoutuberemark1 = "Chet Baker in a slow sensitive version"
-idyoutube1 = "DOBCOVEeX2A"
-idyoutuberemark2 = "Benny Goodman big band classic"
-idyoutube2 = "DRo129k55fg"
 lyricsurl = "http://www.lorenzhart.org/broom.htm"
+
+[[youtube]]
+id = "DOBCOVEeX2A"
+remark = "Chet Baker in a slow sensitive version"
+
+[[youtube]]
+id = "DRo129k55fg"
+remark = "Benny Goodman big band classic"
 
 [versions.Real]
 doChords = true

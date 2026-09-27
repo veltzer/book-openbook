@@ -13,11 +13,15 @@ completion = "5"
 uuid = "010d881c-e348-11e3-bd2b-af99bf9a3980"
 structure = "AABA"
 location = "jfb:414"
-idyoutuberemark1 = "Bill Evans in great form"
-idyoutube1 = "dH3GSrCmzC8"
-idyoutuberemark2 = "Bill with Tony Bennett"
-idyoutube2 = "lsb8mYrYycE"
 lyricsurl = "http://www.azlyrics.com/lyrics/tonybennett/waltzfordebby.html"
+
+[[youtube]]
+id = "dH3GSrCmzC8"
+remark = "Bill Evans in great form"
+
+[[youtube]]
+id = "lsb8mYrYycE"
+remark = "Bill with Tony Bennett"
 
 [versions.Fake]
 doChords = true

@@ -13,8 +13,10 @@ typesetter = "מרק ולצר <mark.veltzer@gmail.com>"
 completion = "5"
 uuid = "95e9e525-ef27-4e45-bba0-9ba1391723c1"
 remark = "The D minor is the original key from the Shlomo Artzi album"
-idyoutube1 = "jl5uOClGcWQ"
 lyricsurl = "http://www.mp3music.co.il/lyrics/579.html"
+
+[[youtube]]
+id = "jl5uOClGcWQ"
 
 [versions.My]
 doChords = true

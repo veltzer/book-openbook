@@ -15,13 +15,19 @@ uuid = "30fc7894-d8f8-11e3-84a6-77203dda2123"
 structure = "AABA"
 structureremark = "The New Real Book marks this one as AABC but the C is too damn close to the A"
 location = "nrbk1:395-396"
-idyoutuberemark1 = "The cannonical performance by Frank Sinatra"
-idyoutube1 = "h9ZGKALMMuc"
-idyoutuberemark2 = "Nat King Cole in a great version"
-idyoutube2 = "qLVvHtKUrdQ"
-idyoutuberemark3 = "Monk and Rollins in an instrumental version"
-idyoutube3 = "V0fPYzyB2AQ"
 lyricsurl = "http://www.lyrics007.com/Frank%20Sinatra%20Lyrics/The%20Way%20You%20Look%20Tonight%20Lyrics.html"
+
+[[youtube]]
+id = "h9ZGKALMMuc"
+remark = "The cannonical performance by Frank Sinatra"
+
+[[youtube]]
+id = "qLVvHtKUrdQ"
+remark = "Nat King Cole in a great version"
+
+[[youtube]]
+id = "V0fPYzyB2AQ"
+remark = "Monk and Rollins in an instrumental version"
 
 [versions.Newreal]
 doChords = true

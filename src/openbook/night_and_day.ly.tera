@@ -11,12 +11,16 @@ completion = "5"
 uuid = "f3f8f010-3fda-11e2-ad72-a3725b0aaeaa"
 structure = "AAB"
 location = "kw:42,rbk1:320"
-idyoutuberemark1 = "Cannonical version by Frank Sinatra"
-idyoutube1 = "mGGirB4XOmI"
-idyoutuberemark2 = "Cole Porter version"
-idyoutube2 = "5WX_fKVWX2s"
 lyricsurl = "http://www.lyricsfreak.com/f/frank+sinatra/night+day_20055251.html"
 wiki = "Night_and_Day_(song)"
+
+[[youtube]]
+id = "mGGirB4XOmI"
+remark = "Cannonical version by Frank Sinatra"
+
+[[youtube]]
+id = "5WX_fKVWX2s"
+remark = "Cole Porter version"
 
 [versions.Real]
 doChords = true

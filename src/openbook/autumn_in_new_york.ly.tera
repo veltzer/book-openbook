@@ -15,11 +15,15 @@ uuid = "9677b522-7463-11e1-a57d-bbc28ffad085"
 structure = "ABAC"
 structureremark = "I determined it was ABAC although the part A does not repeat exactly. It is good enough"
 location = "rbk1:33,hlrjb:34"
-idyoutuberemark1 = "Virtuoso Sonny Stitt"
-idyoutube1 = "Nn11v07Db3s"
-idyoutuberemark2 = "The classic Billie Holiday..."
-idyoutube2 = "cl_e7UW-bz8"
 lyricsurl = "http://www.sing365.com/music/lyric.nsf/Autumn-in-New-York-lyrics-Frank-Sinatra/C779DB117665DFD94825691F00067AD0"
+
+[[youtube]]
+id = "Nn11v07Db3s"
+remark = "Virtuoso Sonny Stitt"
+
+[[youtube]]
+id = "cl_e7UW-bz8"
+remark = "The classic Billie Holiday..."
 
 [versions.Real]
 doChords = true

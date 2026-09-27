@@ -14,11 +14,15 @@ completion = "5"
 uuid = "2f6e2740-f29e-11e0-9ede-0019d11e5a41"
 structure = "AB"
 location = "rbk1:249,nrbk3:193"
-idyoutuberemark1 = "the fabulous Chet Baker"
-idyoutube1 = "88CqlgFAJ-k"
-idyoutuberemark2 = "fast and furious Trane"
-idyoutube2 = "9W_XQCLD_I0"
 lyricsurl = "http://www.sing365.com/music/lyric.nsf/Just-Friends-lyrics-Frank-Sinatra/FA2BFD6A414238734825691F000AC7E7"
+
+[[youtube]]
+id = "88CqlgFAJ-k"
+remark = "the fabulous Chet Baker"
+
+[[youtube]]
+id = "9W_XQCLD_I0"
+remark = "fast and furious Trane"
 
 [versions.Real]
 doChords = true

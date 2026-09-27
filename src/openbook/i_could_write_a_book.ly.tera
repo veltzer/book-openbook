@@ -15,11 +15,15 @@ uuid = "e00ddbf8-a26e-11df-92da-0019d11e5a41"
 structure = "ABAC"
 structureremark = "could be categorized as AB"
 location = "rbk1:209,jfb:153"
-idyoutuberemark1 = "Frank in the classic vocal version"
-idyoutube1 = "UwoZNHhFgLQ"
-idyoutuberemark2 = "Miles swings!"
-idyoutube2 = "_DH46QyK2cw"
 lyricsurl = "http://www.lorenzhart.org/booksng.htm"
+
+[[youtube]]
+id = "UwoZNHhFgLQ"
+remark = "Frank in the classic vocal version"
+
+[[youtube]]
+id = "_DH46QyK2cw"
+remark = "Miles swings!"
 
 [versions.Real]
 doChords = true

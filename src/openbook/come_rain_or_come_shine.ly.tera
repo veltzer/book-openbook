@@ -14,7 +14,9 @@ uuid = "b109cd80-a26e-11df-8c11-0019d11e5a41"
 structure = "AB"
 location = "rbk2:63,jfb:86-87"
 remark = "the my set of chords is from Amit Golan"
-idyoutube1 = "XqECFy_qzkM"
+
+[[youtube]]
+id = "XqECFy_qzkM"
 
 [versions.Fake]
 doChords = true

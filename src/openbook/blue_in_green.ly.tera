@@ -13,10 +13,14 @@ completion = "5"
 uuid = "c73decf2-e30c-11e3-b12b-dbe41a94d84d"
 structure = "A"
 location = "jfb:64"
-idyoutuberemark1 = "Original from Kind of Blue"
-idyoutube1 = "PoPL7BExSQU"
-idyoutuberemark2 = "Bill Evans in a piano version"
-idyoutube2 = "mW_7gRH7ASE"
+
+[[youtube]]
+id = "PoPL7BExSQU"
+remark = "Original from Kind of Blue"
+
+[[youtube]]
+id = "mW_7gRH7ASE"
+remark = "Bill Evans in a piano version"
 
 [versions.Fake]
 doChords = true

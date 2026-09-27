@@ -15,11 +15,15 @@ uuid = "dff04e04-a969-11e1-b8c5-5a1faa0d3cc5"
 structure = "ABAC"
 structureremark = "The structure could also be thought of as AB but it is very close to a pure ABAC"
 location = "nrbk3:336,rbk1:381"
-idyoutuberemark1 = "A very sensitive rendition by Dexter Gordon"
-idyoutube1 = "8PttNhYVY3c"
-idyoutuberemark2 = "Sarah Vaughan, fucking awesome"
-idyoutube2 = "t9HxfF7faXk"
 lyricsurl = "http://www.absolutelyrics.com/lyrics/view/barbra_streisand/the_shadow_of_your_smile"
+
+[[youtube]]
+id = "8PttNhYVY3c"
+remark = "A very sensitive rendition by Dexter Gordon"
+
+[[youtube]]
+id = "t9HxfF7faXk"
+remark = "Sarah Vaughan, fucking awesome"
 
 [versions.Real]
 doChords = true

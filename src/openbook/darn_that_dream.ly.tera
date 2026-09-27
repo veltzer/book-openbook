@@ -14,11 +14,15 @@ completion = "5"
 uuid = "f0a5804c-eb83-11e0-aeb1-0019d11e5a41"
 structure = "AABA"
 location = "rbk1:103,jfb:94"
-idyoutuberemark1 = "Theloneous Monk...:)"
-idyoutube1 = "GsI4oNKGJPg"
-idyoutuberemark2 = "Dexter Gordon, one of the great performances of this song..."
-idyoutube2 = "upZ00qxXrBg"
 lyricsurl = "http://www.lyricsfreak.com/b/billie+holiday/darn+that+dream_20018018.html"
+
+[[youtube]]
+id = "GsI4oNKGJPg"
+remark = "Theloneous Monk...:)"
+
+[[youtube]]
+id = "upZ00qxXrBg"
+remark = "Dexter Gordon, one of the great performances of this song..."
 
 [versions.Fake]
 doChords = true

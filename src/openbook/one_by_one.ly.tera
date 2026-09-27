@@ -13,10 +13,14 @@ uuid = "654dc682-0e83-11e4-8688-1f470b65356e"
 structure = "AABA"
 structureremark = "The second half of the B part is the same as the second half of the A part. Didn't see this a lot."
 location = "jfb:292"
-idyoutuberemark1 = "Blakey with the kids"
-idyoutube1 = "Hmu57-USSs0"
-idyoutuberemark2 = "Wyntons version (he learned it from Blakey...:)"
-idyoutube2 = "-phKoexy_E0"
+
+[[youtube]]
+id = "Hmu57-USSs0"
+remark = "Blakey with the kids"
+
+[[youtube]]
+id = "-phKoexy_E0"
+remark = "Wyntons version (he learned it from Blakey...:)"
 
 [versions.Fake]
 doChords = true

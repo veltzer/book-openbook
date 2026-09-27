@@ -11,10 +11,14 @@ completion = "5"
 uuid = "736a8ed2-ea4b-11e3-8549-ff0ac7b12d0d"
 structure = "ABCB"
 location = "rbk1:138"
-idyoutuberemark1 = "Monk live!"
-idyoutube1 = "dZ9El7k4mNo"
-idyoutuberemark2 = "Monk and Coltrane"
-idyoutube2 = "K_h1geOaLvY"
+
+[[youtube]]
+id = "dZ9El7k4mNo"
+remark = "Monk live!"
+
+[[youtube]]
+id = "K_h1geOaLvY"
+remark = "Monk and Coltrane"
 
 [versions.Real]
 doChords = true

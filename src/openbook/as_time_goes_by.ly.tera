@@ -13,11 +13,15 @@ completion = "5"
 uuid = "0a7b423c-7a4e-11e1-8d67-878c1414bdce"
 structure = "AABA"
 location = "rbk1:31"
-idyoutuberemark1 = "Classic Billie Holiday"
-idyoutube1 = "vYoet7-qDHI"
-idyoutuberemark2 = "The classic Sinatra performance with the Casablanca footage"
-idyoutube2 = "AY62QByUYJQ"
 lyricsurl = "http://www.lyrics007.com/Frank%20Sinatra%20Lyrics/As%20Time%20Goes%20By%20Lyrics.html"
+
+[[youtube]]
+id = "vYoet7-qDHI"
+remark = "Classic Billie Holiday"
+
+[[youtube]]
+id = "AY62QByUYJQ"
+remark = "The classic Sinatra performance with the Casablanca footage"
 
 [versions.Real]
 doChords = true

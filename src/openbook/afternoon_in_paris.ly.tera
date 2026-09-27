@@ -12,10 +12,14 @@ completion = "5"
 uuid = "8f0a1ea6-a26e-11df-8edc-0019d11e5a41"
 structure = "AABA"
 location = "rbk1:10,jfb:35"
-idyoutuberemark1 = "Chet Baker in a cool jazz version"
-idyoutube1 = "o3KtgcvYkig"
-idyoutuberemark2 = "Milt Jackson in a cool jazz version"
-idyoutube2 = "FFj03f2Zr5Y"
+
+[[youtube]]
+id = "o3KtgcvYkig"
+remark = "Chet Baker in a cool jazz version"
+
+[[youtube]]
+id = "FFj03f2Zr5Y"
+remark = "Milt Jackson in a cool jazz version"
 
 [versions.Real]
 doChords = true

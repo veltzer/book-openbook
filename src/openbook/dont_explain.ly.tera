@@ -14,11 +14,15 @@ completion = "5"
 uuid = "070df83e-0676-11e1-b7fe-0019d11e5a41"
 structure = "AABA"
 location = "jfb:102,jltd:90"
-idyoutuberemark1 = "Billie in a radio show"
-idyoutube1 = "XxwJ9lh-id4"
-idyoutuberemark2 = "The great Dexter Gordon at the height of his power"
-idyoutube2 = "k2Lx3n10fkc"
 lyricsurl = "http://www.elyrics.net/read/b/billie-holiday-lyrics/don_t-explain-lyrics.html"
+
+[[youtube]]
+id = "XxwJ9lh-id4"
+remark = "Billie in a radio show"
+
+[[youtube]]
+id = "k2Lx3n10fkc"
+remark = "The great Dexter Gordon at the height of his power"
 
 [versions.Fake]
 doChords = true

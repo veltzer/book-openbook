@@ -11,8 +11,10 @@ typesetter = "Mark Veltzer <mark.veltzer@gmail.com>"
 completion = "5"
 uuid = "e9b74c60-97f6-11e0-86b8-0019d11e5a41"
 remark = "The G scale is the one used in the original version (Mark Veltzer,17/6/11)"
-idyoutube1 = "XFkzRNyygfk"
 lyricsurl = "http://www.azlyrics.com/lyrics/radiohead/creepacoustic.html"
+
+[[youtube]]
+id = "XFkzRNyygfk"
 
 [versions.DontMatter]
 doChords = false

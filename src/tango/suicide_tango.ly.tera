@@ -10,8 +10,10 @@ typesetter = "Mark Veltzer <mark.veltzer@gmail.com>"
 completion = "5"
 uuid = "66834ecc-dcd0-11e2-9ec9-782bcbdd3b7a"
 structure = "AABA"
-idyoutuberemark1 = "Original Russian version"
-idyoutube1 = "qOnU-TRRmSE"
+
+[[youtube]]
+id = "qOnU-TRRmSE"
+remark = "Original Russian version"
 
 [versions.My]
 doChords = true

@@ -13,9 +13,13 @@ uuid = "afea10ce-edc0-11e0-9cc4-0019d11e5a41"
 structure = "AB"
 location = "rbk1:408"
 remark = "there are a couple of different lyric versions for this song"
-idyoutube1 = "Iqs3w1Q5sto"
-idyoutube2 = "IbzxJuvbH08"
 lyricsurl = "http://www.lyrics007.com/Ella%20Fitzgerald%20Lyrics/Stella%20By%20Starlight%20Lyrics.html"
+
+[[youtube]]
+id = "Iqs3w1Q5sto"
+
+[[youtube]]
+id = "IbzxJuvbH08"
 
 [versions.Real]
 doChords = true

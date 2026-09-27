@@ -13,8 +13,10 @@ typesetter = "מרק ולצר <mark.veltzer@gmail.com>"
 completion = "5"
 uuid = "f2e3c22e-f100-11e0-9162-0019d11e5a41"
 remark = "Ilan Virtsberg plays it in G in live concerts"
-idyoutube1 = "XJYKf0sNDoE"
 lyricsurl = "http://www.mp3music.co.il/tabs/10728.html"
+
+[[youtube]]
+id = "XJYKf0sNDoE"
 
 [versions.My]
 doChords = true

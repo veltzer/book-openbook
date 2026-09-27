@@ -13,11 +13,15 @@ completion = "5"
 uuid = "b0685520-db92-11e3-a96d-4fe96cfbc3fb"
 structure = "AABA"
 location = "jfb:380-381"
-idyoutuberemark1 = "Nat King Cole cannonical version"
-idyoutube1 = "sooSaQpGnMM"
-idyoutuberemark2 = "Frank Sinatra cannonical version"
-idyoutube2 = "SINfqtCq0lY"
 lyricsurl = "http://www.metrolyrics.com/thats-all-lyrics-nat-king-cole.html"
+
+[[youtube]]
+id = "sooSaQpGnMM"
+remark = "Nat King Cole cannonical version"
+
+[[youtube]]
+id = "SINfqtCq0lY"
+remark = "Frank Sinatra cannonical version"
 
 [versions.Fake]
 doChords = true

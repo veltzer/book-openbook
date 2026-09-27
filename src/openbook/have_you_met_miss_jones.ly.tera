@@ -13,11 +13,15 @@ completion = "5"
 uuid = "fe106f6c-a26e-11df-abb3-0019d11e5a41"
 structure = "AABA"
 location = "rbk1:186,jfb:143"
-idyoutuberemark1 = "Frank!"
-idyoutube1 = "wZIVgszUs7c"
-idyoutuberemark2 = "Art Tatum on piano solo"
-idyoutube2 = "h3YNBVpxOcQ"
 lyricsurl = "http://www.lyrics007.com/Ella%20Fitzgerald%20Lyrics/Have%20You%20Met%20Miss%20Jones%20Lyrics.html"
+
+[[youtube]]
+id = "wZIVgszUs7c"
+remark = "Frank!"
+
+[[youtube]]
+id = "h3YNBVpxOcQ"
+remark = "Art Tatum on piano solo"
 
 [versions.Fake]
 doChords = true

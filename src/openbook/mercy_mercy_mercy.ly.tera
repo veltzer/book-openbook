@@ -11,9 +11,11 @@ copyright = "1966 ZAWINUL MUSIC, ADivisionofGopam Enterprises,Inc."
 typesetter = "Werner Grünberger <openbook@wernergruenberger.de>"
 structure = "AB"
 location = "rbk2:242"
-idyoutuberemark1 = "Joe Zawinul -- Mercy, Mercy, Mercy."
-idyoutube1 = "ycNv57aZFTg"
 lyricsurl = "https://www.songtexte.com/songtext/marlena-shaw/mercy-mercy-mercy-5bd22b70.html"
+
+[[youtube]]
+id = "ycNv57aZFTg"
+remark = "Joe Zawinul -- Mercy, Mercy, Mercy."
 
 [versions.Fake]
 doChords = true

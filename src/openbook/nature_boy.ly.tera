@@ -15,11 +15,15 @@ structure = "AB"
 structureremark = "this tunes structure can also be AA' or maybe ABAC since the A and the part B are VERY similar."
 location = "rbk2:260,nrbk1:231"
 remark = "7th bar of letters A and B were originally 2 bars each. Melody is straight eights, though rather freely interpreted rhythmically."
-idyoutuberemark1 = "Nat King Cole in a the cannonical version..."
-idyoutube1 = "Iq0XJCJ1Srw"
-idyoutuberemark2 = "Miles in a slow version"
-idyoutube2 = "GDS_nqHaUvc"
 lyricsurl = "http://www.metrolyrics.com/nature-boy-lyrics-nat-king-cole.html"
+
+[[youtube]]
+id = "Iq0XJCJ1Srw"
+remark = "Nat King Cole in a the cannonical version..."
+
+[[youtube]]
+id = "GDS_nqHaUvc"
+remark = "Miles in a slow version"
 
 [versions.Newreal]
 doChords = true

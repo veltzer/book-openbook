@@ -15,11 +15,15 @@ completion = "5"
 uuid = "f4f39800-a26e-11df-b97a-0019d11e5a41"
 structure = "AABA"
 location = "jfb:189"
-idyoutuberemark1 = "Astrud Gilberto in the classic version"
-idyoutube1 = "86MwK3TT9og"
-idyoutuberemark2 = "Bill Evans the master himself"
-idyoutube2 = "kUvIdEWiQms"
 lyricsurl = "http://www.lyricsondemand.com/soundtracks/s/statefairlyrics/itmightaswellbespringlyrics.html"
+
+[[youtube]]
+id = "86MwK3TT9og"
+remark = "Astrud Gilberto in the classic version"
+
+[[youtube]]
+id = "kUvIdEWiQms"
+remark = "Bill Evans the master himself"
 
 [versions.Fake]
 doChords = true

@@ -10,10 +10,12 @@ piece = "Med. Ballad"
 typesetter = "Mark Veltzer <mark.veltzer@gmail.com>"
 completion = "5"
 uuid = "669540fe-d851-11df-ae78-0019d11e5a41"
-idyoutuberemark1 = "The original video clip from youtube"
-idyoutube1 = "tIdIqbv7SPo"
 lyricsurl = "http://tabs.ultimate-guitar.com/b/bill_withers/aint_no_sunshine_crd.htm"
 wiki = "Ain%27t_No_Sunshine"
+
+[[youtube]]
+id = "tIdIqbv7SPo"
+remark = "The original video clip from youtube"
 
 [versions.DontMatter]
 doChords = false

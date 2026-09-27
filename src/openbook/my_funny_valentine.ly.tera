@@ -13,11 +13,15 @@ completion = "5"
 uuid = "087137ac-a26f-11df-aa1f-0019d11e5a41"
 structure = "AABA"
 location = "rbk1:308,jfb:259"
-idyoutuberemark1 = "Frank!"
-idyoutube1 = "wG6lAtpcI_Q"
-idyoutuberemark2 = "Chet Baker vocal version (amazing!)"
-idyoutube2 = "7iQQGBfbB0k"
 lyricsurl = "http://www.elyrics.net/read/f/frank-sinatra-lyrics/my-funny-valentine-lyrics.html"
+
+[[youtube]]
+id = "wG6lAtpcI_Q"
+remark = "Frank!"
+
+[[youtube]]
+id = "7iQQGBfbB0k"
+remark = "Chet Baker vocal version (amazing!)"
 
 [versions.Fake]
 doChords = true

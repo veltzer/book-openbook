@@ -14,10 +14,14 @@ uuid = "dac427e4-0b81-11e4-9974-0f7c29702a29"
 structure = "ABAC"
 structureremark = "This can also be seen as AB but they start with exactly the same first 8 bar so ABAC is better"
 location = "jfb:293"
-idyoutuberemark1 = "Charlie!"
-idyoutube1 = "DEeISJ0wr48"
-idyoutuberemark2 = "Kenny Garrett And Brad Mehldau classic"
-idyoutube2 = "W_CskOhskbc"
+
+[[youtube]]
+id = "DEeISJ0wr48"
+remark = "Charlie!"
+
+[[youtube]]
+id = "W_CskOhskbc"
+remark = "Kenny Garrett And Brad Mehldau classic"
 
 [versions.Fake]
 doChords = true

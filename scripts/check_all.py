@@ -27,6 +27,8 @@ from pathlib import Path
 
 # jazz tunes get extra conventions checks (was src/openbook in make)
 JAZZ_PREFIX = "src/openbook/"
+# stray legacy attrs, replaced by the [[youtube]] array on 2026-09-27
+LEGACY_YOUTUBE = re.compile(r"^\s*(idyoutube\d+|idyoutuberemark\d+)\s*=")
 # a \myMark must name a song section
 MYMARK_SECTIONS = re.compile(r"A|B|C|D|Intro|End|Instr")
 # multiple authors are comma separated, never "X and Y"
@@ -85,6 +87,8 @@ class Checker:
             self.error(file, num, "empty copyright")
         if "\\bar" in line or "\\include" in line or "\\break" in line:
             self.error(file, num, "use of illegal lilypond symbol", line)
+        if LEGACY_YOUTUBE.match(line):
+            self.error(file, num, "legacy idyoutube* attr; use [[youtube]]", line)
 
     def check_jazz_line(self, file: str, num: int, line: str) -> None:
         """ per-line checks that only apply to the jazz tunes """

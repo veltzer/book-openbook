@@ -13,11 +13,15 @@ completion = "5"
 uuid = "dd1624e6-2567-11e1-9444-0019d11e5a41"
 structure = "AABA"
 location = "rbk2:43,jfb:58"
-idyoutuberemark1 = "Ella Fitzgerald with the intro part..."
-idyoutube1 = "nDlCCKHql0w"
-idyoutuberemark2 = "Benny Goodman in the 1980's"
-idyoutube2 = "rv8G78Cw2mc"
 lyricsurl = "http://www.lyricsfreak.com/e/ella+fitzgerald/bewitched_20045684.html"
+
+[[youtube]]
+id = "nDlCCKHql0w"
+remark = "Ella Fitzgerald with the intro part..."
+
+[[youtube]]
+id = "rv8G78Cw2mc"
+remark = "Benny Goodman in the 1980's"
 
 [versions.Fake]
 doChords = true

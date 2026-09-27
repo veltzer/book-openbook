@@ -14,11 +14,15 @@ completion = "5"
 uuid = "ffe98a96-0a4c-11e3-bcaf-3b8eec526bc3"
 structure = "AABA"
 location = "jfb:268-269"
-idyoutuberemark1 = "Hancock, Brecker and Hargrove"
-idyoutube1 = "QTHYSBAZJrQ"
-idyoutuberemark2 = "Ella and Joe Pass"
-idyoutube2 = "UEOll-nNy4I"
 lyricsurl = "http://www.stlyrics.com/lyrics/ladyinthedark/myship.htm"
+
+[[youtube]]
+id = "QTHYSBAZJrQ"
+remark = "Hancock, Brecker and Hargrove"
+
+[[youtube]]
+id = "UEOll-nNy4I"
+remark = "Ella and Joe Pass"
 
 [versions.Fake]
 doChords = true

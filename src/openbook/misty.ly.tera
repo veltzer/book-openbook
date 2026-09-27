@@ -14,11 +14,15 @@ completion = "5"
 uuid = "bb21d126-f210-11e0-9b64-0019d11e5a41"
 structure = "AABA"
 location = "rbk1:296,jfb:252"
-idyoutuberemark1 = "great version by Ella Fitzgerald"
-idyoutube1 = "mQouJdvB80U"
-idyoutuberemark2 = "Garner himself! what an amazing piano..."
-idyoutube2 = "nAaZzQWk8V4"
 lyricsurl = "http://www.lyrics007.com/Ella%20Fitzgerald%20Lyrics/Misty%20Lyrics.html"
+
+[[youtube]]
+id = "mQouJdvB80U"
+remark = "great version by Ella Fitzgerald"
+
+[[youtube]]
+id = "nAaZzQWk8V4"
+remark = "Garner himself! what an amazing piano..."
 
 [versions.Real]
 doChords = true

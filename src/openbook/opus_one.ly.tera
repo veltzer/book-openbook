@@ -14,11 +14,15 @@ uuid = "31cf66b6-11b8-11e4-bcfe-f76051fd87b1"
 structure = "AABA"
 structureremark = "The A's are just a little bit different"
 location = "jfb:291"
-idyoutuberemark1 = "Nat King Cole swings"
-idyoutube1 = "a33vdj7zoB0"
-idyoutuberemark2 = "Tommy Dorsey's Orchestra swings"
-idyoutube2 = "rV9LhjTr5Bc"
 lyricsurl = "http://www.songlyrics.com/the-mills-brothers/opus-one-lyrics/"
+
+[[youtube]]
+id = "a33vdj7zoB0"
+remark = "Nat King Cole swings"
+
+[[youtube]]
+id = "rV9LhjTr5Bc"
+remark = "Tommy Dorsey's Orchestra swings"
 
 [versions.Fake]
 doChords = true

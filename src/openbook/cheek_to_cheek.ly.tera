@@ -11,11 +11,15 @@ completion = "1"
 uuid = "1ae3c3d4-1951-11ee-94b2-4fe241ad9c11"
 structure = "AABA"
 location = "rbk3:50"
-idyoutuberemark1 = ""
-idyoutube1 = ""
-idyoutuberemark2 = ""
-idyoutube2 = ""
 lyricsurl = "https://www.azlyrics.com/lyrics/franksinatra/cheektocheek.html"
+
+[[youtube]]
+id = ""
+remark = ""
+
+[[youtube]]
+id = ""
+remark = ""
 
 [versions.Real]
 doChords = true

@@ -11,19 +11,31 @@ singer = "Sting"
 typesetter = "Mark Veltzer <mark.veltzer@gmail.com>"
 completion = "5"
 uuid = "677fee0a-a26f-11df-bd2c-0019d11e5a41"
-idyoutuberemark1 = "Leon the professional clip...:)"
-idyoutube1 = "_0J0toYZB6Q"
-idyoutuberemark2 = "Another one from Leon...:)"
-idyoutube2 = "nVYFOlVB-Uo"
-idyoutuberemark3 = "And another one from Leon...:)"
-idyoutube3 = "P_1orNvO6Xk"
-idyoutuberemark4 = "And another one from Leon...:)"
-idyoutube4 = "locIxsfpgp4"
-idyoutuberemark5 = "Sting and Dominic with nylon guitar"
-idyoutube5 = "037uSAIahho"
-idyoutuberemark6 = "Orignal video in the studio"
-idyoutube6 = "qZ22i7QllO8"
 lyricsurl = "http://www.lyrics007.com/Sting%20Lyrics/Shape%20Of%20My%20Heart%20Lyrics.html"
+
+[[youtube]]
+id = "_0J0toYZB6Q"
+remark = "Leon the professional clip...:)"
+
+[[youtube]]
+id = "nVYFOlVB-Uo"
+remark = "Another one from Leon...:)"
+
+[[youtube]]
+id = "P_1orNvO6Xk"
+remark = "And another one from Leon...:)"
+
+[[youtube]]
+id = "locIxsfpgp4"
+remark = "And another one from Leon...:)"
+
+[[youtube]]
+id = "037uSAIahho"
+remark = "Sting and Dominic with nylon guitar"
+
+[[youtube]]
+id = "qZ22i7QllO8"
+remark = "Orignal video in the studio"
 
 [versions.My]
 doChords = true

@@ -12,11 +12,15 @@ completion = "5"
 uuid = "b806ce6c-b405-11e1-9daf-1fdf93f5ba36"
 structure = "AB"
 location = "rbk1:215"
-idyoutuberemark1 = "John Coltrane in a great version"
-idyoutube1 = "MzSVV1sI57g"
-idyoutuberemark2 = "Peter Bernstein on guitar"
-idyoutube2 = "C9gT-6K-cgE"
 lyricsurl = "http://www.lyricstime.com/cole-porter-i-love-you-lyrics.html"
+
+[[youtube]]
+id = "MzSVV1sI57g"
+remark = "John Coltrane in a great version"
+
+[[youtube]]
+id = "C9gT-6K-cgE"
+remark = "Peter Bernstein on guitar"
 
 [versions.Real]
 doChords = true

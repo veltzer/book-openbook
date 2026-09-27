@@ -14,11 +14,15 @@ structure = "A"
 structureremark = "Very weird not repeating structure because of the weird harmony steps"
 location = "rbk1:170,hlrjb:130,nrbk2:121,kw:3"
 remark = "the key here is of little meaning as the harmony changes key all the time...:) That's why it's written in C."
-idyoutuberemark1 = "Mccoy Tyner awesome solo..."
-idyoutube1 = "PukuQPUKfyU"
-idyoutuberemark2 = "The original Coltrane version..."
-idyoutube2 = "BZRnkBK_0no"
 lyricsurl = "http://www.bjazz.com/Giant_Steps.html"
+
+[[youtube]]
+id = "PukuQPUKfyU"
+remark = "Mccoy Tyner awesome solo..."
+
+[[youtube]]
+id = "BZRnkBK_0no"
+remark = "The original Coltrane version..."
 
 [versions.Real]
 doChords = true

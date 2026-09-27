@@ -14,11 +14,15 @@ completion = "5"
 uuid = "39de7d2c-a26f-11df-8dbc-0019d11e5a41"
 structure = "AABA"
 location = "jfb:422-423"
-idyoutuberemark1 = "Orchestral version from the film score of 'Meet Joe Black'"
-idyoutube1 = "Qhrpc9FFFAI"
-idyoutuberemark2 = "Louis in the classic version"
-idyoutube2 = "m5TwT69i1lU"
 lyricsurl = "http://www.lyrics007.com/Louis%20Armstrong%20Lyrics/What%20A%20Wonderful%20World%20Lyrics.html"
+
+[[youtube]]
+id = "Qhrpc9FFFAI"
+remark = "Orchestral version from the film score of 'Meet Joe Black'"
+
+[[youtube]]
+id = "m5TwT69i1lU"
+remark = "Louis in the classic version"
 
 [versions.Fake]
 doChords = true

@@ -13,15 +13,23 @@ completion = "5"
 uuid = "f046f51c-ed4d-11e3-9d71-67b6b025e741"
 structure = "AABA"
 location = "cc:209,file:over_the_rainbow.pdf,nrbk3:287-288"
-idyoutuberemark1 = "Keith Jarret solo"
-idyoutube1 = "eq0EWNuR1H8"
-idyoutuberemark2 = "Original Judy Garland version"
-idyoutube2 = "PSZxmZmBfnU"
-idyoutuberemark3 = "Keith Jarret kills them"
-idyoutube3 = "u3eH6VW6Chc"
-idyoutuberemark4 = "The original Judy Garland version"
-idyoutube4 = "1HRa4X07jdE"
 lyricsurl = "http://www.stlyrics.com/lyrics/thewizardofoz/somewhereovertherainbow.htm"
+
+[[youtube]]
+id = "eq0EWNuR1H8"
+remark = "Keith Jarret solo"
+
+[[youtube]]
+id = "PSZxmZmBfnU"
+remark = "Original Judy Garland version"
+
+[[youtube]]
+id = "u3eH6VW6Chc"
+remark = "Keith Jarret kills them"
+
+[[youtube]]
+id = "1HRa4X07jdE"
+remark = "The original Judy Garland version"
 
 [versions.Ccb]
 doChords = true

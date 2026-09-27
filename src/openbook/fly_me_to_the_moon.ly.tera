@@ -14,11 +14,15 @@ completion = "5"
 uuid = "3244f4ae-159d-11e1-bbe3-0019d11e5a41"
 structure = "AB"
 location = "jfb:119"
-idyoutuberemark1 = "The one and only Frank"
-idyoutube1 = "oCW9Hey6IVY"
-idyoutuberemark2 = "I didn't know that Diana Krall knew piano this well..."
-idyoutube2 = "-b8brVSAAQA"
 lyricsurl = "http://www.metrolyrics.com/fly-me-to-the-moon-lyrics-frank-sinatra.html"
+
+[[youtube]]
+id = "oCW9Hey6IVY"
+remark = "The one and only Frank"
+
+[[youtube]]
+id = "-b8brVSAAQA"
+remark = "I didn't know that Diana Krall knew piano this well..."
 
 [versions.Fake]
 doChords = true

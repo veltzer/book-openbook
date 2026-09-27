@@ -13,11 +13,15 @@ completion = "5"
 uuid = "c01fbf4c-d7a2-11e3-a29f-abfec0c435b3"
 structure = "AABA"
 location = "jfb:392"
-idyoutuberemark1 = "I like this version by Diana Krall"
-idyoutube1 = "9uRGw8Bc0s0"
-idyoutuberemark2 = "Well know version by Nat King Cole"
-idyoutube2 = "dfWsU4IDCS0"
 lyricsurl = "http://www.lyricsfreak.com/n/nat+king+cole/this+cant+be+love_20098113.html"
+
+[[youtube]]
+id = "9uRGw8Bc0s0"
+remark = "I like this version by Diana Krall"
+
+[[youtube]]
+id = "dfWsU4IDCS0"
+remark = "Well know version by Nat King Cole"
 
 [versions.Fake]
 doChords = true

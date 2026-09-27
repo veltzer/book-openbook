@@ -11,12 +11,18 @@ completion = "5"
 uuid = "7f78edea-47a9-11e2-8d61-0f0bb7c14483"
 structure = "AB"
 location = "rbk1:377"
-idyoutuberemark1 = "Jethro Tull doing it ?!?"
-idyoutube1 = "Zh4GZJlQCfY"
-idyoutuberemark2 = "Another one from Jethro"
-idyoutube2 = "wHw4N_lZl10"
-idyoutuberemark3 = "The original Roland Kirk!"
-idyoutube3 = "_q8Ye58uL5o"
+
+[[youtube]]
+id = "Zh4GZJlQCfY"
+remark = "Jethro Tull doing it ?!?"
+
+[[youtube]]
+id = "wHw4N_lZl10"
+remark = "Another one from Jethro"
+
+[[youtube]]
+id = "_q8Ye58uL5o"
+remark = "The original Roland Kirk!"
 
 [versions.Real]
 doChords = true

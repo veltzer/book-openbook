@@ -14,11 +14,15 @@ completion = "5"
 uuid = "2af3e35c-e252-11e3-abb7-932771d3c7a0"
 structure = "AA'BA"
 location = "jfb:364-365"
-idyoutuberemark1 = "Cannonical version by Frank"
-idyoutube1 = "hlSbSKNk9f0"
-idyoutuberemark2 = "Another version by Frank"
-idyoutube2 = "nHuko5BCFzA"
 lyricsurl = "http://www.lyricsfreak.com/f/frank+sinatra/strangers+in+the+night_20056148.html"
+
+[[youtube]]
+id = "hlSbSKNk9f0"
+remark = "Cannonical version by Frank"
+
+[[youtube]]
+id = "nHuko5BCFzA"
+remark = "Another version by Frank"
 
 [versions.Fake]
 doChords = true

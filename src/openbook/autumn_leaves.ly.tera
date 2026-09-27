@@ -15,11 +15,15 @@ completion = "5"
 uuid = "8c35acf6-a7c1-11df-9040-0019d11e5a41"
 structure = "AAB"
 location = "rbk1:36,jfb:50"
-idyoutuberemark1 = "The great Bill Evans..."
-idyoutube1 = "mRhVI7cpcS4"
-idyoutuberemark2 = "Keith Jarret in a great performance"
-idyoutube2 = "io1o1Hwpo8Y"
 lyricsurl = "http://www.bluesforpeace.com/lyrics/autumn-leaves.htm"
+
+[[youtube]]
+id = "mRhVI7cpcS4"
+remark = "The great Bill Evans..."
+
+[[youtube]]
+id = "io1o1Hwpo8Y"
+remark = "Keith Jarret in a great performance"
 
 [versions.Real]
 doChords = true

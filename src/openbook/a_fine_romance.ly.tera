@@ -15,11 +15,15 @@ uuid = "7c9691e6-a26e-11df-8418-0019d11e5a41"
 structure = "ABAC"
 structureremark = "the structure of this tune can also be AA or AA'. Doesn't really matter."
 location = "rbk1:3,jfb:116"
-idyoutuberemark1 = "Oscar Peterson!"
-idyoutube1 = "ytipqjANlrY"
-idyoutuberemark2 = "Ella and Louis, great vocal performance of this song"
-idyoutube2 = "cKbD4PQBrIA"
 lyricsurl = "http://www.elyrics.net/read/b/billie-holiday-lyrics/a-fine-romance-lyrics.html"
+
+[[youtube]]
+id = "ytipqjANlrY"
+remark = "Oscar Peterson!"
+
+[[youtube]]
+id = "cKbD4PQBrIA"
+remark = "Ella and Louis, great vocal performance of this song"
 
 [versions.Fake]
 doChords = true

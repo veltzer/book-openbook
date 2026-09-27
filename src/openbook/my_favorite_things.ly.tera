@@ -15,11 +15,15 @@ completion = "5"
 uuid = "02c22208-a26f-11df-98fd-0019d11e5a41"
 structure = "AABA"
 location = "rbk1:306,jfb:260"
-idyoutuberemark1 = "Sarah Vaughan"
-idyoutube1 = "dusavln6Cjw"
-idyoutuberemark2 = "The great version by Coltrane"
-idyoutube2 = "0I6xkVRWzCY"
 lyricsurl = "http://www.stlyrics.com/songs/s/soundofmusic9841/myfavouritethings323514.html"
+
+[[youtube]]
+id = "dusavln6Cjw"
+remark = "Sarah Vaughan"
+
+[[youtube]]
+id = "0I6xkVRWzCY"
+remark = "The great version by Coltrane"
 
 [versions.Real]
 doChords = true

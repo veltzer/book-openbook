@@ -12,10 +12,14 @@ uuid = "841f9004-4477-11e2-acde-078065be2912"
 structure = "A"
 structureremark = "The 12 bars have a kind of blues structure feel to them"
 location = "rbk1:386"
-idyoutuberemark1 = "Metheny/Holland/Hancock/DeJohnette kickass performance"
-idyoutube1 = "FAYt3a-c_k0"
-idyoutuberemark2 = "Classic miles davis"
-idyoutube2 = "9GADuMRXMRw"
+
+[[youtube]]
+id = "FAYt3a-c_k0"
+remark = "Metheny/Holland/Hancock/DeJohnette kickass performance"
+
+[[youtube]]
+id = "9GADuMRXMRw"
+remark = "Classic miles davis"
 
 [versions.Real]
 doChords = true

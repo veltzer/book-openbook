@@ -14,11 +14,15 @@ completion = "5"
 uuid = "84142766-dba0-11e3-9e62-bb6aa0505531"
 structure = "ABA"
 location = "jfb:168-169"
-idyoutuberemark1 = "Caterina Valente & Chet Baker"
-idyoutube1 = "2YZ4FGEGom8"
-idyoutuberemark2 = "Sonny Stitt blasts away..."
-idyoutube2 = "VHbwr4ieI2U"
 lyricsurl = "http://www.lyricsfreak.com/f/frank+sinatra/ill+remember+april_20055817.html"
+
+[[youtube]]
+id = "2YZ4FGEGom8"
+remark = "Caterina Valente & Chet Baker"
+
+[[youtube]]
+id = "VHbwr4ieI2U"
+remark = "Sonny Stitt blasts away..."
 
 [versions.Fake]
 doChords = true

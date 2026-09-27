@@ -12,11 +12,15 @@ completion = "5"
 uuid = "d01b9fc8-e077-11e3-8a42-b3378bc59d8a"
 structure = "AABA"
 location = "rbk1:125"
-idyoutuberemark1 = "Nat King Cole"
-idyoutube1 = "CkqKURwl9m0"
-idyoutuberemark2 = "Monk in a monked version of the tune"
-idyoutube2 = "KshrtLXBdl8"
 lyricsurl = "http://www.sing365.com/music/lyric.nsf/Don%27t-Blame-Me-1958-version-lyrics-Nat-King-Cole/C27E88B65E6C613D48256AF1000ED478"
+
+[[youtube]]
+id = "CkqKURwl9m0"
+remark = "Nat King Cole"
+
+[[youtube]]
+id = "KshrtLXBdl8"
+remark = "Monk in a monked version of the tune"
 
 [versions.Real]
 doChords = true

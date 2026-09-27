@@ -15,11 +15,15 @@ uuid = "769f56f4-7f33-11ea-b0b2-eb3dd252214d"
 structure = "ABAC"
 structureremark = ""
 location = "jfb:74"
-idyoutuberemark1 = "Tony Bennett and Lady Gaga"
-idyoutube1 = "O1OdWOLWeCM"
-idyoutuberemark2 = "Classic Nat King Cole version"
-idyoutube2 = "uywr_l2tfdQ"
 lyricsurl = "https://genius.com/Nat-king-cole-but-beautiful-lyrics"
+
+[[youtube]]
+id = "O1OdWOLWeCM"
+remark = "Tony Bennett and Lady Gaga"
+
+[[youtube]]
+id = "uywr_l2tfdQ"
+remark = "Classic Nat King Cole version"
 
 [versions.Fake]
 doChords = true

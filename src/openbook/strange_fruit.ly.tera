@@ -13,11 +13,15 @@ completion = "5"
 uuid = "68679a0a-da80-11e3-8208-4fcd89557297"
 structure = "A"
 location = "jfb:364"
-idyoutuberemark1 = "Nina Simon version"
-idyoutube1 = "ughAVo2ZAag"
-idyoutuberemark2 = "The famous version by Billie Holiday"
-idyoutube2 = "h4ZyuULy9zs"
 lyricsurl = "http://www.lyricsfreak.com/b/billie+holiday/strange+fruit_20017859.html"
+
+[[youtube]]
+id = "ughAVo2ZAag"
+remark = "Nina Simon version"
+
+[[youtube]]
+id = "h4ZyuULy9zs"
+remark = "The famous version by Billie Holiday"
 
 [versions.Fake]
 doChords = true

@@ -13,9 +13,11 @@ typesetter = "מרק ולצר <mark.veltzer@gmail.com>"
 completion = "5"
 uuid = "702eab24-e8ce-11e2-91c8-5b1ff4f22893"
 structure = "A"
-idyoutuberemark1 = "Mati Caspi in the original performance"
-idyoutube1 = "Eiae247OZXI"
 lyricsurl = "http://shironet.mako.co.il/artist?type=lyrics&lang=1&prfid=688&wrkid=2292&gclid=CLiirsj_o7gCFci23godXw0A8w"
+
+[[youtube]]
+id = "Eiae247OZXI"
+remark = "Mati Caspi in the original performance"
 
 [versions.My]
 doChords = true

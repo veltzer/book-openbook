@@ -14,10 +14,14 @@ completion = "5"
 uuid = "952831ac-74cc-11e5-b102-3860779cb560"
 structure = "ABAC"
 location = "rbk1:96"
-idyoutuberemark1 = "Classic Jazz Balad feel"
-idyoutube1 = "c6ohlv16V-g"
-idyoutuberemark2 = "A cafe performance"
-idyoutube2 = "fDxb7zdkewA"
+
+[[youtube]]
+id = "c6ohlv16V-g"
+remark = "Classic Jazz Balad feel"
+
+[[youtube]]
+id = "fDxb7zdkewA"
+remark = "A cafe performance"
 
 [versions.Real]
 doChords = true

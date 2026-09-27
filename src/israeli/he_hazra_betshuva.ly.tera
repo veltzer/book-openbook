@@ -12,7 +12,9 @@ singer = "מתי כספי"
 typesetter = "מרק ולצר <mark.veltzer@gmail.com>"
 completion = "5"
 uuid = "24815072-2a71-11e1-a41f-0019d11e5a41"
-idyoutube1 = "1GI5Vst5a-o"
+
+[[youtube]]
+id = "1GI5Vst5a-o"
 
 [versions.Epdf0]
 doChords = true

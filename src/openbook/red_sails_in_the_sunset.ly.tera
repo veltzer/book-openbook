@@ -14,11 +14,15 @@ completion = "5"
 uuid = "2507f6ec-da80-11e3-9bfd-ff436f70a1a7"
 structure = "AABA"
 location = "jfb:313"
-idyoutuberemark1 = "Nat King Cole in a classic..."
-idyoutube1 = "HLQZZoAkdig"
-idyoutuberemark2 = "The Beatles?!?"
-idyoutube2 = "b_Xg_md46Sw"
 lyricsurl = "http://www.sing365.com/music/lyric.nsf/Red-Sails-In-the-Sunset-lyrics-Nat-King-Cole/F51AC099651BC18A48256AF1000B7499"
+
+[[youtube]]
+id = "HLQZZoAkdig"
+remark = "Nat King Cole in a classic..."
+
+[[youtube]]
+id = "b_Xg_md46Sw"
+remark = "The Beatles?!?"
 
 [versions.Fake]
 doChords = true

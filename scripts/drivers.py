@@ -93,18 +93,6 @@ ATTR_ORDER = [
     "structureremark",
     "location",
     "remark",
-    "idyoutuberemark1",
-    "idyoutube1",
-    "idyoutuberemark2",
-    "idyoutube2",
-    "idyoutuberemark3",
-    "idyoutube3",
-    "idyoutuberemark4",
-    "idyoutube4",
-    "idyoutuberemark5",
-    "idyoutube5",
-    "idyoutuberemark6",
-    "idyoutube6",
     "lyricsurl",
     "wiki",
 ]
@@ -161,6 +149,7 @@ class SongMeta:
     attrs: dict[str, Any]
     versions: dict[str, dict[str, bool]]
     default_version: str
+    videos: list[dict[str, str]]  # [[youtube]] blocks: {id, remark?}
 
     @property
     def working_version(self) -> dict[str, bool]:
@@ -310,6 +299,22 @@ class DriverEmitter:
         # a space and let the left-trim marker remove it from the output
         return line.replace("{{%", "{ {%-")
 
+    def youtube_links_block(self) -> str:
+        """ tera loop over the current song's [[youtube]] blocks.
+
+        Emits one \\fill-line per video with a \\with-url link. Label is
+        the remark when present, else the video id. Rendered inside the
+        per-song scope where `meta` names the derived toml. """
+        return (
+            '{% for video in meta.youtube | default(value=[]) %}'
+            '\t\\fill-line {\n'
+            '\t\t\\smaller \\smaller {'
+            ' \\with-url #"https://youtu.be/{{ video.id }}"'
+            ' "{{ video.remark | default(value=video.id) }}" }\n'
+            '\t}\n'
+            '{% endfor %}'
+        )
+
     def splice_part(self, part_expr: str) -> str:
         """ render one part of the current song, as mako's include did """
         if part_expr.startswith("'"):
@@ -388,6 +393,9 @@ class DriverEmitter:
             if "${self.clearVars()}" in line:
                 self.emit(self.eval_def_body(self.clearvars_body) + "\n")
                 continue
+            if "${self.youtubeLinks()}" in line:
+                self.emit(self.youtube_links_block())
+                continue
             self.emit(self.substitute(line))
 
     def unroll_loop(self, rest: list[str]) -> int:
@@ -461,6 +469,7 @@ def parse_song_meta(tera_path: Path) -> SongMeta:
         attrs=data["attributes"],
         versions=data["versions"],
         default_version=data["default_version"],
+        videos=data.get("youtube", []),
     )
 
 
@@ -477,6 +486,11 @@ def derived_content(meta: SongMeta) -> str:
     lines.append("\n[computed]\n")
     for key, val in compute_scratch(meta.attrs).items():
         lines.append(f"{key} = {toml_str(val)}\n")
+    for video in meta.videos:
+        lines.append("\n[[youtube]]\n")
+        lines.append(f"id = {toml_str(video['id'])}\n")
+        if "remark" in video:
+            lines.append(f"remark = {toml_str(video['remark'])}\n")
     return "".join(lines)
 
 

@@ -14,9 +14,13 @@ completion = "5"
 uuid = "ce9be996-a26e-11df-bf2c-0019d11e5a41"
 structure = "AB"
 location = "jfb:260-261"
-idyoutube1 = "a2LFVWBmoiw"
-idyoutube2 = "neXL51g8P-M"
 lyricsurl = "http://www.oldielyrics.com/lyrics/frank_sinatra/my_foolish_heart.html"
+
+[[youtube]]
+id = "a2LFVWBmoiw"
+
+[[youtube]]
+id = "neXL51g8P-M"
 
 [versions.Fake]
 doChords = true

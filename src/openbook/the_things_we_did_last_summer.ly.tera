@@ -15,13 +15,19 @@ uuid = "31587e4e-ab0c-11e1-9dc8-3765c038b685"
 structure = "AABA"
 structureremark = "This is not a perfect AABA (last A is a little different) but very very close"
 location = "jfb:392-393"
-idyoutuberemark1 = "Fats Navaro blowing cool"
-idyoutube1 = "extdr--C3jI"
-idyoutuberemark2 = "The classic Dean Martin version"
-idyoutube2 = "yRWfc-8wLm4"
-idyoutuberemark3 = "The classic Sinatra version"
-idyoutube3 = "f_88dKZHeF4"
 lyricsurl = "http://www.lyricsfreak.com/f/frank+sinatra/the+things+we+did+last+summer_20055125.html"
+
+[[youtube]]
+id = "extdr--C3jI"
+remark = "Fats Navaro blowing cool"
+
+[[youtube]]
+id = "yRWfc-8wLm4"
+remark = "The classic Dean Martin version"
+
+[[youtube]]
+id = "f_88dKZHeF4"
+remark = "The classic Sinatra version"
 
 [versions.Fake]
 doChords = true

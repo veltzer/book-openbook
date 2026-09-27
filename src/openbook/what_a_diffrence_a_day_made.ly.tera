@@ -13,11 +13,15 @@ completion = "5"
 uuid = "d28e02f4-2218-11e4-870b-bfbfa80d68bd"
 structure = "ABAC"
 location = "jfb:422"
-idyoutuberemark1 = "Dinah Washington in a classic performance"
-idyoutube1 = "OmBxVfQTuvI"
-idyoutuberemark2 = "Jamie Cullum vocal+piano"
-idyoutube2 = "NzS4ygeE1oQ"
 lyricsurl = "http://www.azlyrics.com/lyrics/reneeolstead/whatadifferenceadaymakes.html"
+
+[[youtube]]
+id = "OmBxVfQTuvI"
+remark = "Dinah Washington in a classic performance"
+
+[[youtube]]
+id = "NzS4ygeE1oQ"
+remark = "Jamie Cullum vocal+piano"
 
 [versions.Fake]
 doChords = true

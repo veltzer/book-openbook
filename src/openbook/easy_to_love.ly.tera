@@ -16,11 +16,15 @@ uuid = "ac74c90e-0d62-11e1-816c-0019d11e5a41"
 structure = "ABAC"
 structureremark = "Can also think of this tune as AB"
 location = "rbk1:130,jfb:107"
-idyoutuberemark1 = "Ella"
-idyoutube1 = "uYnqy84ZY9Q"
-idyoutuberemark2 = "Billie Holiday"
-idyoutube2 = "izaZR89BJBo"
 lyricsurl = "http://www.sing365.com/music/lyric.nsf/Easy-To-Love-lyrics-Ella-Fitzgerald/3040B6936D6C386048256AAB00074FEE"
+
+[[youtube]]
+id = "uYnqy84ZY9Q"
+remark = "Ella"
+
+[[youtube]]
+id = "izaZR89BJBo"
+remark = "Billie Holiday"
 
 [versions.Real]
 doChords = true

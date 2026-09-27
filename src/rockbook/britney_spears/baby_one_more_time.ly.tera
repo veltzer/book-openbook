@@ -10,11 +10,15 @@ piece = "Pop"
 typesetter = "Mark Veltzer <mark.veltzer@gmail.com>"
 completion = "5"
 uuid = "8a728316-ee02-11e0-b7c5-0019d11e5a41"
-idyoutuberemark1 = "the original Britney Spears clip"
-idyoutube1 = "C-u5WLJ9Yk4"
-idyoutuberemark2 = "a cover by Travis"
-idyoutube2 = "acULghgYUg0"
 lyricsurl = "http://www.elyrics.net/read/b/britney-spears-lyrics/baby-one-more-time-lyrics.html"
+
+[[youtube]]
+id = "C-u5WLJ9Yk4"
+remark = "the original Britney Spears clip"
+
+[[youtube]]
+id = "acULghgYUg0"
+remark = "a cover by Travis"
 
 [versions.DontMatter]
 doChords = false

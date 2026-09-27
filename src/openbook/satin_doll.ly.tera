@@ -13,11 +13,15 @@ completion = "5"
 uuid = "42beeace-da80-11e3-933c-cbd0bd4c5a97"
 structure = "AABA"
 location = "jfb:324-325"
-idyoutuberemark1 = "Duke with his orchestra"
-idyoutube1 = "TrytKuC3Z_o"
-idyoutuberemark2 = "Clark Terry on the trumpet"
-idyoutube2 = "GivaZbLzaoQ"
 lyricsurl = "http://www.metrolyrics.com/satin-doll-lyrics-ella-fitzgerald.html"
+
+[[youtube]]
+id = "TrytKuC3Z_o"
+remark = "Duke with his orchestra"
+
+[[youtube]]
+id = "GivaZbLzaoQ"
+remark = "Clark Terry on the trumpet"
 
 [versions.Fake]
 doChords = true

@@ -13,11 +13,15 @@ completion = "5"
 uuid = "4a4a2f24-ed86-11e3-aaf5-87841dcdcaf2"
 structure = "AABA"
 location = "jfb:41"
-idyoutuberemark1 = "Diana Krall in a good version of this one"
-idyoutube1 = "GHyT8m6mSuI"
-idyoutuberemark2 = "Early Frank with Orchestra"
-idyoutube2 = "u7klm1GS3v8"
 lyricsurl = "http://www.azlyrics.com/lyrics/franksinatra/allornothingatall.html"
+
+[[youtube]]
+id = "GHyT8m6mSuI"
+remark = "Diana Krall in a good version of this one"
+
+[[youtube]]
+id = "u7klm1GS3v8"
+remark = "Early Frank with Orchestra"
 
 [versions.Fake]
 doChords = true

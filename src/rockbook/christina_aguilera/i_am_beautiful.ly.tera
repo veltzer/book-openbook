@@ -10,9 +10,11 @@ piece = "Ballad"
 typesetter = "Mark Veltzer <mark.veltzer@gmail.com>"
 completion = "5"
 uuid = "94c2657c-2726-11e1-b716-0019d11e5a41"
-idyoutuberemark1 = "The original Christina Aguilera video clip"
-idyoutube1 = "eAfyFTzZDMM"
 lyricsurl = "http://www.lyrics007.com/Christina%20Aguilera%20Lyrics/Beautiful%20Lyrics.html"
+
+[[youtube]]
+id = "eAfyFTzZDMM"
+remark = "The original Christina Aguilera video clip"
 
 [versions.DontMatter]
 doChords = false

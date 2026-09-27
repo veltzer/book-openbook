@@ -11,7 +11,9 @@ typesetter = "Mark Veltzer <mark.veltzer@gmail.com>"
 completion = "5"
 uuid = "29e07ac4-ba42-11e0-a95c-0019d11e5a41"
 remark = "Taken from guitar album II by Misha Applebaum"
-idyoutube1 = "gVDDRvoVgQg"
+
+[[youtube]]
+id = "gVDDRvoVgQg"
 
 [versions.Own]
 doChords = false

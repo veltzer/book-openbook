@@ -14,11 +14,15 @@ completion = "5"
 uuid = "718a13e0-023a-11e1-924f-0019d11e5a41"
 structure = "AABA"
 location = "rbk1:12"
-idyoutuberemark1 = "An amzing version by Oscar Peterson"
-idyoutube1 = "TSNPzm_wYLY"
-idyoutuberemark2 = "Bill Evans in the amazing Village Vanguard version"
-idyoutube2 = "bSXRvgFea-0"
 lyricsurl = "http://www.stlyrics.com/lyrics/aliceinwonderland/aliceinwonderland.htm"
+
+[[youtube]]
+id = "TSNPzm_wYLY"
+remark = "An amzing version by Oscar Peterson"
+
+[[youtube]]
+id = "bSXRvgFea-0"
+remark = "Bill Evans in the amazing Village Vanguard version"
 
 [versions.Real]
 doChords = true

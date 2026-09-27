@@ -15,11 +15,15 @@ completion = "5"
 uuid = "2c3b337c-a26f-11df-b7d1-0019d11e5a41"
 structure = "AABA"
 location = "rbk1:171,jfb:132"
-idyoutuberemark1 = "Tom Jobim and Joan Gilberto"
-idyoutube1 = "DmV0TcTNJ3o"
-idyoutuberemark2 = "Frank!"
-idyoutube2 = "NldPFVKYmiw"
 lyricsurl = "http://www.lyricsfreak.com/f/frank+sinatra/girl+from+ipanema+the_10121534.html"
+
+[[youtube]]
+id = "DmV0TcTNJ3o"
+remark = "Tom Jobim and Joan Gilberto"
+
+[[youtube]]
+id = "NldPFVKYmiw"
+remark = "Frank!"
 
 [versions.Fake]
 doChords = true

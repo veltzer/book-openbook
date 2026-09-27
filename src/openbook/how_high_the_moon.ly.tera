@@ -14,11 +14,15 @@ uuid = "7d17fd1c-15fe-11e1-b205-0019d11e5a41"
 structure = "AB"
 structureremark = "this tunes structure can also be categorised as ABAC if you take the AB as A and the AC as B. Under the AB interpretation the first part of A (first 8 bars) is the same as the first part of B."
 location = "rbk1:202,jfb:149"
-idyoutuberemark1 = "Ella!"
-idyoutube1 = "2d-l7_TGnIE"
-idyoutuberemark2 = "Grappelli in a nice emotional version with McCoy Tyner at the Piano"
-idyoutube2 = "S4kf5aU1Wtg"
 lyricsurl = "http://www.lyricsfreak.com/e/ella+fitzgerald/how+high+the+moon_20045644.html"
+
+[[youtube]]
+id = "2d-l7_TGnIE"
+remark = "Ella!"
+
+[[youtube]]
+id = "S4kf5aU1Wtg"
+remark = "Grappelli in a nice emotional version with McCoy Tyner at the Piano"
 
 [versions.Fake]
 doChords = true

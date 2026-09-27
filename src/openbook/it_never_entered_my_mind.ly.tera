@@ -13,11 +13,15 @@ completion = "5"
 uuid = "3ff5de34-5e09-11e5-83ea-3860779cb560"
 structure = "AABA"
 location = "jfb:187"
-idyoutuberemark1 = "Sarah Vaughan in a great orchestral version"
-idyoutube1 = "u37lgz7b3lQ"
-idyoutuberemark2 = "I like this version by Miles. So cool."
-idyoutube2 = "-Np8PJDGq_A"
 lyricsurl = "http://www.azlyrics.com/lyrics/franksinatra/itneverenteredmymind.html"
+
+[[youtube]]
+id = "u37lgz7b3lQ"
+remark = "Sarah Vaughan in a great orchestral version"
+
+[[youtube]]
+id = "-Np8PJDGq_A"
+remark = "I like this version by Miles. So cool."
 
 [versions.Fake]
 doChords = true

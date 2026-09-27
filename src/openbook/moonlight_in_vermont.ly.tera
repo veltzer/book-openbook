@@ -14,11 +14,15 @@ completion = "5"
 uuid = "557b082e-e0d8-11e3-a037-b365e6166d43"
 structure = "AABA"
 location = "jfb:256"
-idyoutuberemark1 = "Louis and Ella"
-idyoutube1 = "Rg0hg5YD7sE"
-idyoutuberemark2 = "Franks version"
-idyoutube2 = "_CiizL8Vfu8"
 lyricsurl = "http://www.azlyrics.com/lyrics/franksinatra/moonlightinvermont.html"
+
+[[youtube]]
+id = "Rg0hg5YD7sE"
+remark = "Louis and Ella"
+
+[[youtube]]
+id = "_CiizL8Vfu8"
+remark = "Franks version"
 
 [versions.Fake]
 doChords = true

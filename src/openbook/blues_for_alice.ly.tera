@@ -12,10 +12,14 @@ completion = "5"
 uuid = "9bd9980c-9628-11e4-80e9-3860779cb560"
 structure = "Blues"
 location = "rbk1:57"
-idyoutuberemark1 = "The Charlie Parker original"
-idyoutube1 = "4s5FZBisaf8"
-idyoutuberemark2 = "Roland Kirk in a good be-bop version"
-idyoutube2 = "d2yQAfOqTf4"
+
+[[youtube]]
+id = "4s5FZBisaf8"
+remark = "The Charlie Parker original"
+
+[[youtube]]
+id = "d2yQAfOqTf4"
+remark = "Roland Kirk in a good be-bop version"
 
 [versions.Real]
 doChords = true

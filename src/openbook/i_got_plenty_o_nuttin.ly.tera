@@ -15,11 +15,15 @@ completion = "5"
 uuid = "51444eaa-da7f-11e3-a1f7-4b82298467da"
 structure = "AABA"
 location = "jfb:157"
-idyoutuberemark1 = "Sinatra in the classic version"
-idyoutube1 = "DvLLQAAr8zQ"
-idyoutuberemark2 = "Classic Gershwin rendition"
-idyoutube2 = "upqf0ts2dSE"
 lyricsurl = "http://www.stlyrics.com/lyrics/porgy&bess/igotplentyonuttin.htm"
+
+[[youtube]]
+id = "DvLLQAAr8zQ"
+remark = "Sinatra in the classic version"
+
+[[youtube]]
+id = "upqf0ts2dSE"
+remark = "Classic Gershwin rendition"
 
 [versions.Fake]
 doChords = true

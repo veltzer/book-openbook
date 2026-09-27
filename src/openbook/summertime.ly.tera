@@ -14,11 +14,15 @@ completion = "5"
 uuid = "2615b7ec-a26f-11df-b010-0019d11e5a41"
 structure = "AB"
 location = "rbk2:323,jfb:370,ja54:4"
-idyoutuberemark1 = "Janis!"
-idyoutube1 = "mzNEgcqWDG4"
-idyoutuberemark2 = "Ella Fitzgerald with Louis"
-idyoutube2 = "MIDOEsQL7lA"
 lyricsurl = "http://www.stlyrics.com/songs/g/georgegershwin8836/summertime299720.html"
+
+[[youtube]]
+id = "mzNEgcqWDG4"
+remark = "Janis!"
+
+[[youtube]]
+id = "MIDOEsQL7lA"
+remark = "Ella Fitzgerald with Louis"
 
 [versions.Fake]
 doChords = true

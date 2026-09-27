@@ -13,11 +13,15 @@ completion = "5"
 uuid = "18294374-a26f-11df-a5f0-0019d11e5a41"
 structure = "AAB"
 location = "rbk1:329,nrbk1:250"
-idyoutuberemark1 = "Joe Henderson accompanied by guitar doing Bossa..."
-idyoutube1 = "rJxHFW2S-Eo"
-idyoutuberemark2 = "Astrud Gilberto (original Bossa Style with Orchestra)"
-idyoutube2 = "BwP0eIRU-dQ"
 lyricsurl = "http://www.sing365.com/music/lyric.nsf/Once-I-Loved-lyrics-Ella-Fitzgerald/24CD6F6E245519E348256AAB0009C557"
+
+[[youtube]]
+id = "rJxHFW2S-Eo"
+remark = "Joe Henderson accompanied by guitar doing Bossa..."
+
+[[youtube]]
+id = "BwP0eIRU-dQ"
+remark = "Astrud Gilberto (original Bossa Style with Orchestra)"
 
 [versions.Real]
 doChords = true

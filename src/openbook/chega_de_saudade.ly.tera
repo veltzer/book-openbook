@@ -15,11 +15,15 @@ completion = "5"
 uuid = "a8d44d0c-a26e-11df-a32b-0019d11e5a41"
 structure = "AA'BA''"
 location = "jfb:82"
-idyoutuberemark1 = "The original Jobim on piano"
-idyoutube1 = "-c6Zbi3tbMg"
-idyoutuberemark2 = "And Jobim sings..."
-idyoutube2 = "UzFJwiHRwDg"
 lyricsurl = "http://www.stlyrics.com/songs/j/janemonheit24558/chegadesaudadenomoreblues1055457.html"
+
+[[youtube]]
+id = "-c6Zbi3tbMg"
+remark = "The original Jobim on piano"
+
+[[youtube]]
+id = "UzFJwiHRwDg"
+remark = "And Jobim sings..."
 
 [versions.Fake]
 doChords = true

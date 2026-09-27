@@ -12,11 +12,15 @@ completion = "5"
 uuid = "dbd95022-6dd8-11e5-864c-3860779cb560"
 structure = "AA'BB'"
 location = "jfb:138"
-idyoutuberemark1 = "The great Oscar"
-idyoutube1 = "35eZI9plYpk"
-idyoutuberemark2 = "Paul Desmond in a mellow version"
-idyoutube2 = "GH9tcQI_Qvw"
 lyricsurl = "http://www.metrolyrics.com/greensleeves-lyrics-loreena-mckennitt.html"
+
+[[youtube]]
+id = "35eZI9plYpk"
+remark = "The great Oscar"
+
+[[youtube]]
+id = "GH9tcQI_Qvw"
+remark = "Paul Desmond in a mellow version"
 
 [versions.Fake]
 doChords = true

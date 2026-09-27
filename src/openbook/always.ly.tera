@@ -14,11 +14,15 @@ uuid = "e2f7709c-da80-11e3-80dc-7f255b43b3a5"
 structure = "AB"
 structureremark = "The tune has an ABAC feel to it because the A and B part start off the same way"
 location = "tbk:354"
-idyoutuberemark1 = "Frank!"
-idyoutube1 = "eLh-m1Z_feY"
-idyoutuberemark2 = "Billie!"
-idyoutube2 = "iQPdnqDAJE4"
 lyricsurl = "http://www.metrolyrics.com/always-lyrics-irving-berlin.html"
+
+[[youtube]]
+id = "eLh-m1Z_feY"
+remark = "Frank!"
+
+[[youtube]]
+id = "iQPdnqDAJE4"
+remark = "Billie!"
 
 [versions.TBK]
 doChords = true

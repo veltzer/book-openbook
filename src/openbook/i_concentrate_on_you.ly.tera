@@ -15,11 +15,15 @@ completion = "5"
 uuid = "74865056-6f44-11e5-89f9-3860779cb560"
 structure = "AA'BA''"
 location = "jfb:152"
-idyoutuberemark1 = "Sinatra in an old school orchestrated version"
-idyoutube1 = "Nir7Yw6mTxM"
-idyoutuberemark2 = "Ella with orchestra"
-idyoutube2 = "u8j79CB2_Bo"
 lyricsurl = "http://www.azlyrics.com/lyrics/franksinatra/iconcentrateonyou.html"
+
+[[youtube]]
+id = "Nir7Yw6mTxM"
+remark = "Sinatra in an old school orchestrated version"
+
+[[youtube]]
+id = "u8j79CB2_Bo"
+remark = "Ella with orchestra"
 
 [versions.Fake]
 doChords = true

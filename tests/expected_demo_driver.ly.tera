@@ -81,7 +81,10 @@
 {% endif %}{% if meta.has.copyrightextraextra %}	\fill-line {
 		\smaller \smaller { "{{ meta.attributes.copyrightextraextra }}" }
 	}
-{% endif %}
+{% endif %}{% for video in meta.youtube | default(value=[]) %}	\fill-line {
+		\smaller \smaller { \with-url #"https://youtu.be/{{ video.id }}" "{{ video.remark | default(value=video.id) }}" }
+	}
+{% endfor %}
 	\fill-line {
 		\smaller \smaller { "Typeset by {{ meta.attributes.typesetter }}, Built at {{ date }}, Engraved by lilypond {{ lilypond_version }}" }
 	}

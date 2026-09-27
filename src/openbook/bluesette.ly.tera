@@ -14,11 +14,15 @@ completion = "5"
 uuid = "e4c0cc74-eb5c-11e3-8d65-b71fa04c4d86"
 structure = "A"
 location = "jfb:67-68"
-idyoutuberemark1 = "Bill with Toots"
-idyoutube1 = "micPH3vJVs0"
-idyoutuberemark2 = "Toots with Orchestra"
-idyoutube2 = "yKnG_9q4crA"
 lyricsurl = "http://www.lyricsmode.com/lyrics/t/toots_thielemans/bluesette.html"
+
+[[youtube]]
+id = "micPH3vJVs0"
+remark = "Bill with Toots"
+
+[[youtube]]
+id = "yKnG_9q4crA"
+remark = "Toots with Orchestra"
 
 [versions.Fake]
 doChords = true

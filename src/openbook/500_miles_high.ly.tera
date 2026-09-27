@@ -11,11 +11,15 @@ completion = "5"
 uuid = "ed0cff46-dffa-11e3-b4b7-43ee65102d59"
 structure = "A"
 location = "rbk1:152"
-idyoutuberemark1 = "The Chick Corea cool version"
-idyoutube1 = "b3yAq20qSm4"
-idyoutuberemark2 = "An older Chick with Stanley Clarke, Marcus Gilmore, Gaule Moran, Hubert Laws"
-idyoutube2 = "fxhSFDdTfD4"
 lyricsurl = "http://www.allthelyrics.com/lyrics/chick_corea/500_miles_high-lyrics-1180014.html"
+
+[[youtube]]
+id = "b3yAq20qSm4"
+remark = "The Chick Corea cool version"
+
+[[youtube]]
+id = "fxhSFDdTfD4"
+remark = "An older Chick with Stanley Clarke, Marcus Gilmore, Gaule Moran, Hubert Laws"
 
 [versions.Real]
 doChords = true

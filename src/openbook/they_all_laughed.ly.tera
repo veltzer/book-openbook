@@ -15,11 +15,15 @@ uuid = "89e1c354-f2a2-11e0-9cf1-0019d11e5a41"
 structure = "AA'BA''"
 structureremark = "this tune is very close to AABA. The tags (A') are there to show that there are subtle changes but these are indeed subtle."
 location = "jfb:389"
-idyoutuberemark1 = "Ella & Louis"
-idyoutube1 = "ppFVmnmpGz8"
-idyoutuberemark2 = "Carlie Biddle with daughter Stephanie Biddle - excellent performance"
-idyoutube2 = "TdLm9qRRdh4"
 lyricsurl = "http://www.sing365.com/music/lyric.nsf/They-All-Laughed-lyrics-Ella-Fitzgerald/2123DA2C32C02AF848256AAB000AB847"
+
+[[youtube]]
+id = "ppFVmnmpGz8"
+remark = "Ella & Louis"
+
+[[youtube]]
+id = "TdLm9qRRdh4"
+remark = "Carlie Biddle with daughter Stephanie Biddle - excellent performance"
 
 [versions.Fake]
 doChords = true

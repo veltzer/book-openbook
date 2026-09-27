@@ -11,9 +11,11 @@ typesetter = "Mark Veltzer <mark.veltzer@gmail.com>"
 completion = "5"
 uuid = "11542882-e65c-11e2-9030-4311f6fc08c2"
 structure = "ABAC"
-idyoutuberemark1 = "Rita Hayworth version"
-idyoutube1 = "SQ8keKFByh8"
 lyricsurl = "http://www.sing365.com/music/lyric.nsf/Moon-River-lyrics-Frank-Sinatra/B08DDFF369E15C874825691F000CAC36"
+
+[[youtube]]
+id = "SQ8keKFByh8"
+remark = "Rita Hayworth version"
 
 [versions.My]
 doChords = true

@@ -13,11 +13,15 @@ completion = "5"
 uuid = "3162420a-a26f-11df-aacf-0019d11e5a41"
 structure = "AB"
 location = "jfb:406-407"
-idyoutuberemark1 = "Nat King Cole the unforgettable..."
-idyoutube1 = "S1UEzL9poPM"
-idyoutuberemark2 = "Nat King Cole with Natalie Cole duet..."
-idyoutube2 = "2uRtNMFfF-g"
 lyricsurl = "http://www.sing365.com/music/lyric.nsf/unforgettable-lyrics-nat-king-cole/afdec7063791226248256af1000bbaa6"
+
+[[youtube]]
+id = "S1UEzL9poPM"
+remark = "Nat King Cole the unforgettable..."
+
+[[youtube]]
+id = "2uRtNMFfF-g"
+remark = "Nat King Cole with Natalie Cole duet..."
 
 [versions.Fake]
 doChords = true

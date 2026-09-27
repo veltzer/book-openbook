@@ -13,11 +13,15 @@ uuid = "c05b953a-3034-11e5-b197-3860779cb560"
 structure = "ABAC"
 structureremark = "This is almost an A tune since the B and C in the ABAC interpretation are almost the same"
 location = "rbk2:50"
-idyoutuberemark1 = "A great version by Miles Davis and Sonny Rollins"
-idyoutube1 = "r98HGV9M7SY"
-idyoutuberemark2 = "A classic version of Ella Fitzgerald"
-idyoutube2 = "FnfUN6bBAg4"
 lyricsurl = "http://www.azlyrics.com/lyrics/ellafitzgerald/butnotforme.html"
+
+[[youtube]]
+id = "r98HGV9M7SY"
+remark = "A great version by Miles Davis and Sonny Rollins"
+
+[[youtube]]
+id = "FnfUN6bBAg4"
+remark = "A classic version of Ella Fitzgerald"
 
 [versions.Real]
 doChords = true

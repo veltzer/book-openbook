@@ -12,10 +12,14 @@ completion = "5"
 uuid = "b303b0a6-95e4-11e4-acdf-3860779cb560"
 structure = "Minor Blues"
 location = "rbk1:58"
-idyoutuberemark1 = "John Coltrane in the original tune"
-idyoutube1 = "S1GrP6thz-k"
-idyoutuberemark2 = "Bireli Lagrene & John McLaughlin Blue Train"
-idyoutube2 = "xe2jVU4WixY"
+
+[[youtube]]
+id = "S1GrP6thz-k"
+remark = "John Coltrane in the original tune"
+
+[[youtube]]
+id = "xe2jVU4WixY"
+remark = "Bireli Lagrene & John McLaughlin Blue Train"
 
 [versions.Real]
 doChords = true

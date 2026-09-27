@@ -14,11 +14,15 @@ completion = "5"
 uuid = "160af5b0-ebe1-11e2-937c-bb8193c610fc"
 structure = "AABA"
 location = "nrbk3:73"
-idyoutuberemark1 = "A great performance by Ella"
-idyoutube1 = "s4VjltPMfds"
-idyoutuberemark2 = "Jazz messengers with an intro by Blakey"
-idyoutube2 = "eP12RhmBIRw"
 lyricsurl = "http://www.metrolyrics.com/caravan-lyrics-ella-fitzgerald.html"
+
+[[youtube]]
+id = "s4VjltPMfds"
+remark = "A great performance by Ella"
+
+[[youtube]]
+id = "eP12RhmBIRw"
+remark = "Jazz messengers with an intro by Blakey"
 
 [versions.Real]
 doChords = true

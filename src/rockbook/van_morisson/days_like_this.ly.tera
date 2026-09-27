@@ -12,10 +12,12 @@ typesetter = "Mark Veltzer <mark.veltzer@gmail.com>"
 completion = "5"
 uuid = "6437a34a-3bd4-11e2-9e13-9f845e169c9b"
 remark = "This is the right scale"
-idyoutuberemark1 = "Original video clip"
-idyoutube1 = "BteIwbKU_iQ"
 lyricsurl = "http://www.lyricsfreak.com/v/van+morrison/days+like+this_20142994.html"
 wiki = "Days_Like_This_(song)"
+
+[[youtube]]
+id = "BteIwbKU_iQ"
+remark = "Original video clip"
 
 [versions.DontMatter]
 doChords = false

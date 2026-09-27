@@ -13,11 +13,15 @@ completion = "5"
 uuid = "1c99c334-a26f-11df-b3cb-0019d11e5a41"
 structure = "AABA"
 location = "rbk1:364,jfb:322"
-idyoutuberemark1 = "Ella's vocal version"
-idyoutube1 = "DEaDj6TXiQQ"
-idyoutuberemark2 = "Monk. What can I say?"
-idyoutube2 = "OMmeNsmQaFw"
 lyricsurl = "http://www.sing365.com/music/lyric.nsf/Round-Midnight-lyrics-Ella-Fitzgerald/F7F9D0761ABE750348256AAB0009FEEA"
+
+[[youtube]]
+id = "DEaDj6TXiQQ"
+remark = "Ella's vocal version"
+
+[[youtube]]
+id = "OMmeNsmQaFw"
+remark = "Monk. What can I say?"
 
 [versions.Real]
 doChords = true

@@ -13,11 +13,15 @@ completion = "5"
 uuid = "0a43bee4-e044-11e3-9617-b76a2faa3d0b"
 structure = "AABA"
 location = "jfb:45"
-idyoutuberemark1 = "Chet Baker in a very good version"
-idyoutube1 = "shuy1hpUGvQ"
-idyoutuberemark2 = "Stings version (I like this one...)"
-idyoutube2 = "QS1MgqJ7B3Y"
 lyricsurl = "http://www.metrolyrics.com/angel-eyes-lyrics-ella-fitzgerald.html"
+
+[[youtube]]
+id = "shuy1hpUGvQ"
+remark = "Chet Baker in a very good version"
+
+[[youtube]]
+id = "QS1MgqJ7B3Y"
+remark = "Stings version (I like this one...)"
 
 [versions.Fake]
 doChords = true

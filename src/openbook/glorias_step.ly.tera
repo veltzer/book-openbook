@@ -12,10 +12,14 @@ completion = "5"
 uuid = "892e5552-f2ad-11e0-8c10-0019d11e5a41"
 structure = "AABA"
 location = "rbk1:172,nrbk1:118"
-idyoutuberemark1 = "Bill Evans, not the orignal Sunday at the Village version..."
-idyoutube1 = "C84KmJwtPeI"
-idyoutuberemark2 = "the original Sunday at the Village version (take 2)..."
-idyoutube2 = "Aib_RL_x7PA"
+
+[[youtube]]
+id = "C84KmJwtPeI"
+remark = "Bill Evans, not the orignal Sunday at the Village version..."
+
+[[youtube]]
+id = "Aib_RL_x7PA"
+remark = "the original Sunday at the Village version (take 2)..."
 
 [versions.Real]
 doChords = true

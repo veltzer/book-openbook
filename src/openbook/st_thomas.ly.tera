@@ -13,10 +13,14 @@ uuid = "ef0827e0-f690-11e0-ba56-0019d11e5a41"
 structure = "AABC"
 structureremark = "The tune is so short and fast that some see it as just A"
 location = "jfb:357"
-idyoutuberemark1 = "The classic version from Saxophone Colossus"
-idyoutube1 = "UA2XIWZxMKM"
-idyoutuberemark2 = "Kenny Drew on Piano"
-idyoutube2 = "Ed8UuEH41XQ"
+
+[[youtube]]
+id = "UA2XIWZxMKM"
+remark = "The classic version from Saxophone Colossus"
+
+[[youtube]]
+id = "Ed8UuEH41XQ"
+remark = "Kenny Drew on Piano"
 
 [versions.Fake]
 doChords = true

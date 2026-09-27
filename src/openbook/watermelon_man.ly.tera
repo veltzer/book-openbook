@@ -12,7 +12,9 @@ completion = "5"
 uuid = "359f7428-a26f-11df-ad8c-0019d11e5a41"
 structure = "16 bar Blues"
 location = "rbk3:334"
-idyoutube1 = "4z8Rt4nvd-I"
+
+[[youtube]]
+id = "4z8Rt4nvd-I"
 
 [versions.Aebersold]
 doChords = true

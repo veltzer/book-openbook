@@ -13,9 +13,13 @@ singer = "יהודית רביץ"
 typesetter = "מרק ולצר <mark.veltzer@gmail.com>"
 completion = "5"
 uuid = "11ad0c38-6dc9-4318-873f-5e7e80b7c8a8"
-idyoutube1 = "DZd_Ik2SNcg"
-idyoutube2 = "jZ_8rSmLFwU"
 lyricsurl = "http://shironet.mako.co.il/artist?type=lyrics&lang=1&prfid=462&wrkid=2413"
+
+[[youtube]]
+id = "DZd_Ik2SNcg"
+
+[[youtube]]
+id = "jZ_8rSmLFwU"
 
 [versions.My]
 doChords = true

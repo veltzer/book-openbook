@@ -15,11 +15,15 @@ completion = "5"
 uuid = "f8098732-7367-11e5-bffe-3860779cb560"
 structure = "AA'"
 location = "jfb:309"
-idyoutuberemark1 = "Jobim in Portugese"
-idyoutube1 = "6_F7MX1hGtU"
-idyoutuberemark2 = "Frank Sinatra with Jobim"
-idyoutube2 = "mCI65SsOhb8"
 lyricsurl = "http://www.azlyrics.com/lyrics/franksinatra/quietnightsofquietstarscorcovado.html"
+
+[[youtube]]
+id = "6_F7MX1hGtU"
+remark = "Jobim in Portugese"
+
+[[youtube]]
+id = "mCI65SsOhb8"
+remark = "Frank Sinatra with Jobim"
 
 [versions.Fake]
 doChords = true

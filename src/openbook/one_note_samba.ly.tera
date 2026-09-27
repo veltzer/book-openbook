@@ -15,11 +15,15 @@ completion = "5"
 uuid = "21bc8284-a26f-11df-a829-0019d11e5a41"
 structure = "ABA'"
 location = "jfb:289,rbk1:331"
-idyoutuberemark1 = "Dizzy Gilespie in a great version"
-idyoutube1 = "Jb7LqPmWBKw"
-idyoutuberemark2 = "The only performance of Jobim in Japan"
-idyoutube2 = "eEkMwotUuic"
 lyricsurl = "http://www.lyricsfreak.com/f/frank+sinatra/one+note+samba_10122272.html"
+
+[[youtube]]
+id = "Jb7LqPmWBKw"
+remark = "Dizzy Gilespie in a great version"
+
+[[youtube]]
+id = "eEkMwotUuic"
+remark = "The only performance of Jobim in Japan"
 
 [versions.Real]
 doChords = true

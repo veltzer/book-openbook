@@ -15,11 +15,15 @@ uuid = "04bbfb74-0128-11e1-9e2a-0019d11e5a41"
 structure = "AB"
 structureremark = "This tune has a weird structure because the part B has different lengths"
 location = "rbk1:169,nrbk3:128"
-idyoutuberemark1 = "Tony Bennet slow version"
-idyoutube1 = "uJGqzudEDDE"
-idyoutuberemark2 = "The wonderful ballad version of Astrud Gilberto"
-idyoutube2 = "s6ndU7GKpjI"
 lyricsurl = "http://lyrics.wikia.com/Astrud_Gilberto:The_Gentle_Rain"
+
+[[youtube]]
+id = "uJGqzudEDDE"
+remark = "Tony Bennet slow version"
+
+[[youtube]]
+id = "s6ndU7GKpjI"
+remark = "The wonderful ballad version of Astrud Gilberto"
 
 [versions.Real]
 doChords = true

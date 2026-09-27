@@ -14,11 +14,15 @@ completion = "5"
 uuid = "5a3efd64-70b7-11e5-bcb5-3860779cb560"
 structure = "AABA"
 location = "jfb:156"
-idyoutuberemark1 = "Fats Domino classic version"
-idyoutube1 = "olF-OnbDM3w"
-idyoutuberemark2 = "Betty Carter version"
-idyoutube2 = "gbDYyzvc9Kc"
 lyricsurl = "http://www.lyricsmode.com/lyrics/t/the_ink_spots/i_dont_want_to_set_the_world_on_fire.html"
+
+[[youtube]]
+id = "olF-OnbDM3w"
+remark = "Fats Domino classic version"
+
+[[youtube]]
+id = "gbDYyzvc9Kc"
+remark = "Betty Carter version"
 
 [versions.Fake]
 doChords = true

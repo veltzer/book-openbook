@@ -13,9 +13,11 @@ typesetter = "מרק ולצר <mark.veltzer@gmail.com>"
 completion = "5"
 uuid = "d4c79db6-8aec-11e1-bca8-3b15b6cb5cfe"
 remark = "The chords were taken from the original song which is in the C scale"
-idyoutuberemark1 = "הביצוע המקורי של בנזין"
-idyoutube1 = "wD0Zlwg5VOg"
 lyricsurl = "http://shironet.mako.co.il/artist?type=lyrics&lang=1&prfid=187&wrkid=1537"
+
+[[youtube]]
+id = "wD0Zlwg5VOg"
+remark = "הביצוע המקורי של בנזין"
 
 [versions.My]
 doChords = true

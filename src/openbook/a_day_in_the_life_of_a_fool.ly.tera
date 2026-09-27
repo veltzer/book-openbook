@@ -16,11 +16,15 @@ uuid = "88a1ec40-db4c-11e3-8a8c-23226fc873cc"
 structure = "AA'B"
 structureremark = "This is almost ABAC"
 location = "jfb:94-95"
-idyoutuberemark1 = "Frank doin it sadly..."
-idyoutube1 = "ZMX3AeJy4_Q"
-idyoutuberemark2 = "Cassandra Wilson live"
-idyoutube2 = "SHRn-uKViqg"
 lyricsurl = "http://www.lyricsfreak.com/f/frank+sinatra/a+day+in+the+life+of+a+fool_20055645.html"
+
+[[youtube]]
+id = "ZMX3AeJy4_Q"
+remark = "Frank doin it sadly..."
+
+[[youtube]]
+id = "SHRn-uKViqg"
+remark = "Cassandra Wilson live"
 
 [versions.Fake]
 doChords = true

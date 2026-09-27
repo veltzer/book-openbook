@@ -15,11 +15,15 @@ uuid = "4e2019f6-f9ef-11e1-b796-174ce4bd9471"
 structure = "ABAC"
 structureremark = "You can think of this as AB but its really an ABAC tune"
 location = "jfb:423,rbk1:461"
-idyoutuberemark1 = "Nat King Cole in an excellent lyric version"
-idyoutube1 = "GfAb0gNPy6s"
-idyoutuberemark2 = "Bill Evans Trio (Wow!)"
-idyoutube2 = "adPpG0Dnxeg"
 lyricsurl = "http://www.lyricsfreak.com/n/nat+king+cole/when+i+fall+in+love_20098122.html"
+
+[[youtube]]
+id = "GfAb0gNPy6s"
+remark = "Nat King Cole in an excellent lyric version"
+
+[[youtube]]
+id = "adPpG0Dnxeg"
+remark = "Bill Evans Trio (Wow!)"
 
 [versions.Fake]
 doChords = true

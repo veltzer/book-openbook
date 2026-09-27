@@ -14,9 +14,13 @@ structure = "AB"
 structureremark = "this tunes structure could also be thought of as ABAC since the begining of the A and part B (the first 8 bars) under the AB interpretation is exactly the same."
 location = "rbk3:130"
 remark = "the My version is from Amit Golan"
-idyoutube1 = "7Oh-Dl-KbF0"
-idyoutube2 = "u6lXbfx1hHw"
 lyricsurl = "http://lyricsplayground.com/alpha/songs/i/illclosemyeyes.shtml"
+
+[[youtube]]
+id = "7Oh-Dl-KbF0"
+
+[[youtube]]
+id = "u6lXbfx1hHw"
 
 [versions.My]
 doChords = true

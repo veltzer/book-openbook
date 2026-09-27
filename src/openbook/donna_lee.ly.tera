@@ -12,10 +12,14 @@ uuid = "a9ca1752-53d6-11e2-a687-1bd4487b8eae"
 structure = "AB"
 structureremark = "This could be thought of as ABAC although the two A's are not the same so AB is more accurate"
 location = "rbk1:124"
-idyoutuberemark1 = "Very fast Wynton Marsalis version"
-idyoutube1 = "QdD6XE9DtAE"
-idyoutuberemark2 = "The original Parker, Davis, Bud Powell version"
-idyoutube2 = "hANODMX9c5g"
+
+[[youtube]]
+id = "QdD6XE9DtAE"
+remark = "Very fast Wynton Marsalis version"
+
+[[youtube]]
+id = "hANODMX9c5g"
+remark = "The original Parker, Davis, Bud Powell version"
 
 [versions.Real]
 doChords = true

@@ -12,8 +12,10 @@ singer = "אלי לוזון"
 typesetter = "מרק ולצר <mark.veltzer@gmail.com>"
 completion = "5"
 uuid = "c562b5fa-c345-11e0-995c-0019d11e5a41"
-idyoutube1 = "1CBj7q51-BQ"
 lyricsurl = "http://www.mp3music.co.il/lyrics/448.html"
+
+[[youtube]]
+id = "1CBj7q51-BQ"
 
 [versions.My]
 doChords = true
