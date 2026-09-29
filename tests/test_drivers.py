@@ -23,6 +23,7 @@ from scripts.drivers import (
     derived_content,
     driver_header,
     parse_song_meta,
+    song_meta_from_derived,
     toml_to_song,
 )
 
@@ -59,3 +60,20 @@ def test_toml_to_song_roundtrip():
     """ derived-toml paths map back to the song sources they came from """
     meta = parse_song_meta(DEMO_SONG)
     assert toml_to_song(meta.derived_toml) == DEMO_SONG
+
+
+def test_song_meta_from_derived_roundtrip(tmp_path, monkeypatch):
+    """ round-trip a SongMeta through derived_content + song_meta_from_derived """
+    original = parse_song_meta(DEMO_SONG)
+    dst = tmp_path / original.derived_toml
+    dst.parent.mkdir(parents=True, exist_ok=True)
+    dst.write_text(derived_content(original), encoding="utf-8")
+    monkeypatch.chdir(tmp_path)
+    recovered = song_meta_from_derived(original.derived_toml)
+    assert recovered.default_version == original.default_version
+    assert recovered.versions == original.versions
+    assert recovered.videos == original.videos
+    # attrs are filtered by ATTR_ORDER in derived_content; check the ones
+    # that always survive that filter (title, uuid) rather than full equality
+    assert recovered.attrs["title"] == original.attrs["title"]
+    assert recovered.attrs["uuid"] == original.attrs["uuid"]

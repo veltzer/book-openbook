@@ -474,8 +474,11 @@ def parse_song_meta(tera_path: Path) -> SongMeta:
 
 
 def derived_content(meta: SongMeta) -> str:
-    """ the derived metadata the driver loads at render time """
+    """ the derived metadata the driver loads at render time and that the
+    driver emitter itself reads back to reconstruct the SongMeta,
+    avoiding a second parse of the .ly.tera front matter """
     lines = ["# derived from the song's front matter, do not edit\n"]
+    lines.append(f"\ndefault_version = {toml_str(meta.default_version)}\n")
     lines.append("\n[attributes]\n")
     for key in ATTR_ORDER:
         if key in meta.attrs:
@@ -486,12 +489,32 @@ def derived_content(meta: SongMeta) -> str:
     lines.append("\n[computed]\n")
     for key, val in compute_scratch(meta.attrs).items():
         lines.append(f"{key} = {toml_str(val)}\n")
+    for name, flags in meta.versions.items():
+        lines.append(f"\n[versions.{name}]\n")
+        for flag, value in flags.items():
+            lines.append(f"{flag} = {toml_str(value)}\n")
     for video in meta.videos:
         lines.append("\n[[youtube]]\n")
         lines.append(f"id = {toml_str(video['id'])}\n")
         if "remark" in video:
             lines.append(f"remark = {toml_str(video['remark'])}\n")
     return "".join(lines)
+
+
+def song_meta_from_derived(toml_path: Path) -> SongMeta:
+    """ reconstruct a SongMeta from the derived TOML written by
+    derived_content(). Used by the driver commands so a single build
+    parses each song's front matter exactly once (in derive_metadata),
+    not twice. """
+    data = tomllib.loads(toml_path.read_text(encoding="utf-8"))
+    attrs = data["attributes"]
+    return SongMeta(
+        tera_source=toml_to_song(toml_path),
+        attrs=attrs,
+        versions=data["versions"],
+        default_version=data["default_version"],
+        videos=data.get("youtube", []),
+    )
 
 
 # ── driver generation ────────────────────────────────────────────────────
@@ -529,7 +552,7 @@ def cmd_songs(args: list[str]) -> int:
         print(f"usage: {sys.argv[0]} songs input output [input output ...]", file=sys.stderr)
         return 1
     for source, output in zip(args[::2], args[1::2]):
-        meta = parse_song_meta(toml_to_song(Path(source)))
+        meta = song_meta_from_derived(Path(source))
         write_driver(GATTR_SINGLE, [meta], SINGLE_VARS, Path(output))
     return 0
 
@@ -544,11 +567,11 @@ def cmd_book(args: list[str]) -> int:
         raise ValueError(f"expected exactly one driver output, got {parsed.output_files}")
     tomls = [Path(p) for p in parsed.inputs if p.endswith(".ly.toml")]
     # the canonical book order (the order the old Makefile+wrapper sorted by)
-    songs = sorted(
-        (toml_to_song(p) for p in tomls),
-        key=lambda p: "src/" + str(p.relative_to(SRC)),
+    tomls_sorted = sorted(
+        tomls,
+        key=lambda p: "src/" + str(toml_to_song(p).relative_to(SRC)),
     )
-    metas = [parse_song_meta(p) for p in songs]
+    metas = [song_meta_from_derived(p) for p in tomls_sorted]
     write_driver(GATTR_BOOK, metas, BOOK_VARS, Path(parsed.output_files[0]))
     return 0
 

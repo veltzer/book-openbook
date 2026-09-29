@@ -13,8 +13,6 @@ author: {{ personal.FULLNAME }}
 
 version: {{ version_str(path="config/version.lua") }}
 
-![Code style: black](https://img.shields.io/badge/code%20style-black-000000.svg)
-
 ## github
 
 ![License](https://img.shields.io/github/license/{{ personal.GITHUB_USERNAME }}/{{ project.NAME }})

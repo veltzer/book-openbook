@@ -10,3 +10,10 @@
 	default build so failing checks fail the build.
 - restored midi/ogg/wav/mp3 rendering as python wrappers
 	(scripts/wrapper_midi_audio.py); the old perl scripts are gone.
+- deduplicated front-matter parsing: the driver generator loads the derived
+	toml written by derive_metadata rather than re-parsing the .ly.tera front
+	matter (new song_meta_from_derived in scripts/drivers.py).
+- fixed the memory.ly engraving bug: replaced the LilyPond 2.14-era
+	\RemoveEmptyStaffContext (which was removed upstream) with the modern
+	\Staff \RemoveEmptyStaves inside the score's \layout block. Every tune
+	now engraves individually under generator.songs_pdf.enabled=true.
