@@ -285,10 +285,6 @@ output_files = ["out/smoke/demo.pdf", "out/smoke/demo.ps"]
 src_dirs = ["docs"]
 args = ["-errors", "-q", "-utf8"]
 
-[processor.htmlhint]
-enabled = false
-src_dirs = ["docs"]
-
 # per-song engraving (DO_PDF / DO_PS / DO_MIDI): one product per rendered song
 [processor.generator.songs_pdf]
 enabled = false
