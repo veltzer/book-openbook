@@ -86,7 +86,7 @@ wish to contribute to the mutopia project at http://www.mutopiaproject.org/.
 * activate the virutal env ```$ source .venv/bin/activate```
 * run the build process ```$ rsconstruct build```
 * the pdfs should now be built, and you will find them in the 'out/tera/books' folder.
-* if you want to build all the tunes individually then run ```$ rsconstruct build --iset generator.songs_pdf.enabled=true --iset generator.songs_midi.enabled=true``` (after a plain build has rendered the songs).
+* if you want to build all the tunes individually then run ```$ rsconstruct build --iset processor.generator.generic.songs_pdf.enabled=true --iset processor.generator.generic.songs_midi.enabled=true``` (after a plain build has rendered the songs).
 
 ## MacOS user notes
 * [Python3](https://realpython.com/installing-python)
@@ -112,18 +112,18 @@ melody etc.
 The build picks the new tune up by itself — no other file needs editing.
 After working on the tune build just that single tune by issueing:
 ```sh
-rsconstruct build --iset generator.songs_pdf.enabled=true -t "*[tunename]*"
+rsconstruct build --iset processor.generator.generic.songs_pdf.enabled=true -t "*[tunename]*"
 ```
-or with --iset generator.songs_midi.enabled=true for the midi.
+or with --iset processor.generator.generic.songs_midi.enabled=true for the midi.
 
 ## Can I just build a single tune?
 Sure. Just use:
 ```sh
-rsconstruct build --iset generator.songs_pdf.enabled=true -t "*[tunename]*"
+rsconstruct build --iset processor.generator.generic.songs_pdf.enabled=true -t "*[tunename]*"
 ```
 to build the pdf
 ```sh
-rsconstruct build --iset generator.songs_midi.enabled=true -t "*[tunename]*"
+rsconstruct build --iset processor.generator.generic.songs_midi.enabled=true -t "*[tunename]*"
 ```
 to build the midi (a plain ```rsconstruct build``` must have rendered the songs first).
 
@@ -144,6 +144,6 @@ Just edit the TONALITY_PITCH / TONALITY_NAME constants in `scripts/drivers.py`
 ## How do I download the external pdfs to compare them to this project?
 Just run:
 ``` sh
-rsconstruct build --iset explicit.real_books.enabled=true
+rsconstruct build --iset processor.explicit.generic.real_books.enabled=true
 ```
 and look at the resulting `real_books_archive.gi` folder that is created.
