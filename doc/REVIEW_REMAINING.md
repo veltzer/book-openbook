@@ -5,7 +5,7 @@ were moved to `DONE.txt`; this file tracks what is still open.
 
 ## Blocked here (needs fleet-template edits, not this repo)
 
-The following live in files that `rsmultigit check-same` treats as
+The following live in files that `rsmultigit check same` treats as
 byte-identical across the fleet; editing them here would diverge from
 every other repo. Do them in the shared template / rsmultigit config,
 not here.
