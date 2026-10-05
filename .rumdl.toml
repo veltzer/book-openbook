@@ -7,7 +7,7 @@
 # instead (.marprc.mjs sets baseUrl to the repo root), so every such link
 # is reported as broken while resolving correctly at render time. The
 # repos that carry decks verify these targets themselves against the real
-# root -- teaching-slides does it in scripts/check_md.py --images.
+# root -- teaching-slides does it in scripts/check_marp_md.py --images.
 # MD053 (unused-link-image-reference) reports a link reference definition
 # that nothing references. The [//1]: <> (...) form is the portable
 # markdown comment idiom, and being unreferenced is the whole mechanism --
