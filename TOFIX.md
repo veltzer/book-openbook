@@ -6,7 +6,7 @@ Findings from a code scan on 2026-10-04.
 
 - `doc/coding_style.txt:13` - the contributor docs still describe the retired Mako/Make setup: "Currently we are using pythons Mako", song files named `*.mako` (lines 31-36; songs are `src/<book>/<song>.ly.tera` now), and "`make check_all` ... is currently not part of the build" (line 21; `[processor.explicit.check_all]` runs in the default build). The same stale Mako/`.mako` guidance is in `doc/design.txt:35`, `doc/osx.txt:1` ("install the python mako templating system"), `doc/vim.txt:1` and `doc/moving_to_new_lilypond_version.txt:1` (`find . -name "*.mako"` matches nothing under `src/`). Update them to tera / `.ly.tera` / rsconstruct.
 - `doc/version_of_lilypond_in_this_project.txt:3` - says the project sticks to the LilyPond 2.14 feature set on Ubuntu 11.04-12.04; the build stamps whatever `lilypond --version` reports (`scripts/drivers.py:102`, currently 2.24.x). Rewrite with the real minimum version (or delete).
-- `scripts/build_on_docker.sh:1` - no `set -e` (or `-euo pipefail`), so a failed `apt-get`, `curl`, `rsconstruct tools install-deps` or `uv sync` is ignored and the script carries on to a confusing later failure; it also pipes `install.sh` from the network straight into `sh` (line 18). Add `set -euo pipefail`.
+- `scripts/build_on_docker.sh:1` - no `set -e` (or `-euo pipefail`), so a failed `apt-get`, `curl`, `rsconstruct tool install-deps` or `uv sync` is ignored and the script carries on to a confusing later failure; it also pipes `install.sh` from the network straight into `sh` (line 18). Add `set -euo pipefail`.
 
 ## Low
 

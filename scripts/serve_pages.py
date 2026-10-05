@@ -3,7 +3,7 @@
 """
 Serve the GitHub Pages site locally, exactly as CI would publish it.
 
-The served directory is whatever `rsconstruct pages dir` reports (the
+The served directory is whatever `rsconstruct page dir` reports (the
 [pages] section of rsconstruct.toml), so this script never duplicates
 that knowledge. Run a build first so docs/index.html and the books in
 docs/output/ exist:

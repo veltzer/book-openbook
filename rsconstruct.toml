@@ -240,7 +240,7 @@ batch = false
 
 # ─── external dependencies ───────────────────────────────────────────────────
 
-# lilypond engraves the books; installed by `rsconstruct tools install-deps`
+# lilypond engraves the books; installed by `rsconstruct tool install-deps`
 [dependencies]
 # poppler-utils provides pdfinfo/pdftotext, used by scripts.gen_index_csv to
 # read tune page numbers out of the built PDF's table of contents.

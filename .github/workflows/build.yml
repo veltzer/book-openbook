@@ -39,8 +39,8 @@ jobs:
         GH_TOKEN: ${{ github.token }}
     - name: install
       run: |
-        rsconstruct tools install-deps
-        rsconstruct tools install
+        rsconstruct tool install-deps
+        rsconstruct tool install
     - name: build
       run: rsconstruct build
     - name: status
@@ -50,7 +50,7 @@ jobs:
       # step and the deploy job skip on empty, which is what lets Pages and
       # non-Pages repos share this exact file.
       id: pages
-      run: echo "dir=$(rsconstruct pages dir)" >> "$GITHUB_OUTPUT"
+      run: echo "dir=$(rsconstruct page dir)" >> "$GITHUB_OUTPUT"
     - name: delete stale pages artifact
       # Artifacts survive re-run attempts, and both the upload and
       # deploy-pages fail hard when a "github-pages" artifact already exists

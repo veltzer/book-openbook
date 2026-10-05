@@ -13,7 +13,7 @@ curl -L -o /usr/local/bin/rsconstruct \
 	https://github.com/veltzer/rsconstruct/releases/latest/download/rsconstruct-linux-x86_64
 chmod +x /usr/local/bin/rsconstruct
 # install the project's external dependencies (lilypond etc.)
-rsconstruct tools install-deps
+rsconstruct tool install-deps
 # install uv and create the python environment from pyproject.toml + uv.lock
 curl -LsSf https://astral.sh/uv/install.sh | sh
 export PATH="${HOME}/.local/bin:${PATH}"
