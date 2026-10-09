@@ -11,7 +11,7 @@ dependencies = [
 
 [dependency-groups]
 dev = [
-    "mypy",
+    "pyrefly",
     "pytest",
     "ruff",
     "types-requests",
@@ -25,12 +25,11 @@ package = false
 # the tests import scripts.* from the repository root
 pythonpath = ["."]
 
-[tool.mypy]
-explicit_package_bases = true
-namespace_packages = true
-
-# Third-party libraries without type stubs; `foo.*` also matches `foo` itself.
-[[tool.mypy.overrides]]
-module = [
+[tool.pyrefly]
+# Type checking (rsconstruct's pyrefly processor). preset = "legacy" is
+# pyrefly's mypy-compatible behavior; "." on the search path is mypy's
+# implicit current directory.
+preset = "legacy"
+search-path = [
+    ".",
 ]
-ignore_missing_imports = true

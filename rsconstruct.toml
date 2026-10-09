@@ -31,7 +31,7 @@ dep_inputs = ["config/project.lua", "config/personal.lua", "config/version.lua"]
 src_dirs = ["scripts", "config", "tests"]
 
 
-[processor.checker.mypy]
+[processor.checker.pyrefly]
 src_dirs = ["scripts", "config", "tests"]
 
 # golden tests pinning the driver generator (tests/test_drivers.py)
