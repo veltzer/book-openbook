@@ -281,9 +281,8 @@ inputs = ["out/tera/src/test/demo.ly"]
 output_files = ["out/smoke/demo.pdf", "out/smoke/demo.ps"]
 
 # validate the generated website index page (part of the default build)
-[processor.checker.tidy]
+[processor.checker.itidy]
 src_dirs = ["docs"]
-args = ["-errors", "-q", "-utf8"]
 
 # per-song engraving (DO_PDF / DO_PS / DO_MIDI): one product per rendered song
 [processor.generator.generic.songs_pdf]
