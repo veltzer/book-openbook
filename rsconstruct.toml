@@ -12,13 +12,10 @@ reject_dot_src_dirs = true
 
 # ─── templating ──────────────────────────────────────────────────────────────
 
-# Repos still on config/*.py keep a dep_inputs override in their local
-# overlay until converted.
 [processor.generator.tera]
 # out/drivers holds the build-generated driver templates (see the
 # driver-generation section below); nothing under it is committed.
 src_dirs = ["tera.templates", "out/drivers"]
-dep_inputs = ["config/project.lua", "config/personal.lua", "config/version.lua"]
 
 [processor.checker.ruff]
 src_dirs = ["scripts", "config", "tests"]
