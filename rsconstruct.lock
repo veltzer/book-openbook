@@ -4,9 +4,6 @@
 
 version = 1
 
-[rsconstruct]
-version = "0.9.140"
-
 [binary.rumdl]
 url = "https://github.com/rvben/rumdl/releases/download/v0.2.66/rumdl-v0.2.66-x86_64-unknown-linux-gnu.tar.gz"
 sha256 = "2ca8703a66b17a73f6f85435d06f8d62484c1361d6b015f82bc46f9f642959a4"
