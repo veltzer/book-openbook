@@ -12,15 +12,14 @@ apt-get install -y python3 git curl
 curl -L -o /usr/local/bin/rsconstruct \
 	https://github.com/veltzer/rsconstruct/releases/latest/download/rsconstruct-linux-x86_64
 chmod +x /usr/local/bin/rsconstruct
-# install the project's external dependencies (lilypond etc.)
-rsconstruct tool install-deps
-# install uv and create the python environment from pyproject.toml + uv.lock
+# install uv, which builds the python environment below
 curl -LsSf https://astral.sh/uv/install.sh | sh
 export PATH="${HOME}/.local/bin:${PATH}"
-uv sync
-# enter the virtual env
-# shellcheck disable=SC1091
-source .venv/bin/activate
+# install the project's machine dependencies (lilypond etc.)
+rsconstruct tool install machine
+# create the python environment (.venv) from pyproject.toml + uv.lock, and
+# the project's other locked tools; rsconstruct puts .venv/bin on PATH itself
+rsconstruct tool install project
 # build the books (renders the songs and engraves the five books)
 rsconstruct build
 # build every tune individually as well (the song generators scan the
