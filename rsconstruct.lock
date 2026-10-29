@@ -13,3 +13,8 @@ executable_sha256 = "12b47b3018e202259e2dba444f9fbcf168c6f8ffd2bc4d8f0e5ee410c79
 url = "https://github.com/tamasfe/taplo/releases/download/0.10.0/taplo-linux-x86_64.gz"
 sha256 = "8fe196b894ccf9072f98d4e1013a180306e17d244830b03986ee5e8eabeb6156"
 executable_sha256 = "dad2faf6377d2daa4f4fabf459fe7ccfb98a5448f0d4bca8270ca9acb0409bfe"
+
+[binary.uv]
+url = "https://github.com/astral-sh/uv/releases/download/0.13.6/uv-x86_64-unknown-linux-gnu.tar.gz"
+sha256 = "f29c3e94ffabd7e6f3ba521dba169a9b7ec12100bf3257087f0f24f6123f3645"
+executable_sha256 = "23803452c0fbe125033054cd9ff245f1d649fb65b4b73f68429f4abda432436d"
