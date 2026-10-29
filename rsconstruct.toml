@@ -130,6 +130,7 @@ output_files = ["out/drivers/out/tera/books/guitar_album.ly.tera"]
 command = "python"
 args = ["-m", "scripts.wrapper_lilypond_explicit"]
 inputs = ["out/tera/books/openbook.ly"]
+required_tools = ["lilypond"]
 output_files = ["out/tera/books/openbook.pdf", "out/tera/books/openbook.ps"]
 
 # forScore index.csv for the openbook PDF (issue #121): one bookmark per tune
@@ -158,24 +159,28 @@ output_files = ["docs/output/openbook.pdf"]
 command = "python"
 args = ["-m", "scripts.wrapper_lilypond_explicit"]
 inputs = ["out/tera/books/israeli.ly"]
+required_tools = ["lilypond"]
 output_files = ["out/tera/books/israeli.pdf", "out/tera/books/israeli.ps"]
 
 [processor.explicit.generic.drumming]
 command = "python"
 args = ["-m", "scripts.wrapper_lilypond_explicit"]
 inputs = ["out/tera/books/drumming.ly"]
+required_tools = ["lilypond"]
 output_files = ["out/tera/books/drumming.pdf", "out/tera/books/drumming.ps"]
 
 [processor.explicit.generic.rockbook]
 command = "python"
 args = ["-m", "scripts.wrapper_lilypond_explicit"]
 inputs = ["out/tera/books/rockbook.ly"]
+required_tools = ["lilypond"]
 output_files = ["out/tera/books/rockbook.pdf", "out/tera/books/rockbook.ps"]
 
 [processor.explicit.generic.guitar_album]
 command = "python"
 args = ["-m", "scripts.wrapper_lilypond_explicit"]
 inputs = ["out/tera/books/guitar_album.ly"]
+required_tools = ["lilypond"]
 output_files = ["out/tera/books/guitar_album.pdf", "out/tera/books/guitar_album.ps"]
 
 # ─── github pages ────────────────────────────────────────────────────────────
@@ -230,11 +235,14 @@ batch = false
 
 # ─── external dependencies ───────────────────────────────────────────────────
 
-# lilypond engraves the books; installed by `rsconstruct tool install machine`
+# lilypond engraves the books: the stanzas that run it name it in
+# required_tools, so `rsconstruct tool install project` installs the release
+# rsconstruct.lock pins. The rest is installed by `rsconstruct tool install
+# machine`.
 [dependencies]
 # poppler-utils provides pdfinfo/pdftotext, used by scripts.gen_index_csv to
 # read tune page numbers out of the built PDF's table of contents.
-system = ["lilypond", "tidy", "poppler-utils"]
+system = ["tidy", "poppler-utils"]
 
 # ─── opt-in targets (disabled by default) ────────────────────────────────────
 
@@ -268,6 +276,7 @@ output_files = ["out/checks/check_all.stamp"]
 command = "python"
 args = ["-m", "scripts.wrapper_lilypond_explicit"]
 inputs = ["out/tera/src/test/demo.ly"]
+required_tools = ["lilypond"]
 output_files = ["out/smoke/demo.pdf", "out/smoke/demo.ps"]
 
 # validate the generated website index page (part of the default build)

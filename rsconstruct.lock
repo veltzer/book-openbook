@@ -4,6 +4,11 @@
 
 version = 1
 
+[binary.lilypond]
+url = "https://gitlab.com/api/v4/projects/lilypond%2Flilypond/packages/generic/lilypond/2.24.4/lilypond-2.24.4-linux-x86_64.tar.gz"
+sha256 = "53bc1df875ee56dabe56ae1f0b4550237e0c9acc837b60f0ef8c42fc35a68641"
+executable_sha256 = "d54351796cf4284d355b6d3c8669ae5352c4d89238ba866d7f1a9e7f419344ce"
+
 [binary.rumdl]
 url = "https://github.com/rvben/rumdl/releases/download/v0.2.66/rumdl-v0.2.66-x86_64-unknown-linux-gnu.tar.gz"
 sha256 = "2ca8703a66b17a73f6f85435d06f8d62484c1361d6b015f82bc46f9f642959a4"
