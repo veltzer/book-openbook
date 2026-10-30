@@ -1,0 +1,84 @@
+{#
+default_version = "Real"
+
+[attributes]
+title = "Bags' Groove"
+style = "Jazz"
+composer = "Milt Jackson"
+piece = "Medium Swing"
+copyright = "1958 WEMAR MUSIC CORP."
+typesetter = "Mark Veltzer <mark.veltzer@gmail.com>"
+completion = "5"
+uuid = "450ed7f8-d49b-11f1-8000-046874d194b7"
+structure = "Blues"
+location = "colorado:40,jfb:51"
+
+[[youtube]]
+id = "iZIYcJiLB0U"
+remark = "Miles Davis and Thelonious Monk in the original recording (1954)"
+
+[[youtube]]
+id = "vyTS7uzVM6A"
+remark = "Milt Jackson"
+
+[versions.Real]
+doChords = true
+doVoice = true
+doLyrics = false
+doLyricsmore = false
+doLyricsmoremore = false
+doChordBars = false
+doGuitar = false
+doExtra = false
+doPrep = false
+doOwn = false
+#}
+{% if part == "Vars" %}
+{% endif %}
+{% if part == "Doc" %}	DONE:
+	- added the meta data from the fake book.
+	- put in the tunes structure.
+	- put in the chords (Colorado Cookbook).
+	- put in the tune (Colorado Cookbook).
+	- added youtube performances.
+	TODO:
+	- check the chords (Colorado Cookbook).
+	- check the tune (Colorado Cookbook).
+	- hear the tune to check that it is right and adjust the tempo.
+	- the Colorado Cookbook has no tempo marking, the tempo name is from the fake book (jfb:51).
+	- the fake book version (jfb:51) is a 16 bar chart with no key signature and only an Am chord, so it was not used.
+{% endif %}
+{% if part == "ChordsReal" %}\chordmode {
+	\startChords
+	\startSong
+
+	\partial 4 s4 |
+
+	\myMark "A"
+	\startPart
+	\repeat volta 2 {
+		f1*4:7 | \myEndLine
+		bes1*2:7 | f1*2:7 | \myEndLine
+		g1:m7 | c:7 | f:7 | c:7 | \myEndLine
+	}
+	\endPart
+
+	\endSong
+	\endChords
+}
+{% endif %}
+{% if part == "VoiceReal" %}{
+	\tempo "Moderato" 4 = 130
+	\time 4/4
+	\key f \major
+
+	\partial 4 f4 |
+
+	% part "A"
+	\repeat volta 2 {
+		c'2. bes8 aes | bes4 aes8 f aes4 f8 ees | f4. ees8 r2 | r2 r4 f4 |
+		c'2. bes8 aes | bes4 aes8 f aes4 f8 ees | f4. ees8 r2 | r2 r4 f4 |
+		c'2. bes8 aes | bes4 aes8 f aes4 f8 ees | f4. ees8 r2 | r1 |
+	}
+}
+{% endif %}

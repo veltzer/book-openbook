@@ -1,0 +1,94 @@
+{#
+default_version = "Real"
+
+[attributes]
+title = "Stolen Moments"
+style = "Jazz"
+composer = "Oliver Nelson"
+piece = "Moderately slow"
+copyright = "1962, 1965 by Oliver E. Nelson"
+copyrightextra = "Copyright Renewed. Alameda Music Co.: Sole Licensing and Selling Agent"
+typesetter = "Mark Veltzer <mark.veltzer@gmail.com>"
+completion = "5"
+uuid = "a08f86ac-d49a-11f1-8000-046874d194b7"
+structure = "AB"
+location = "hlrjb:330"
+
+[[youtube]]
+id = "44DfWE0gatQ"
+remark = "Oliver Nelson in the original recording from The Blues and the Abstract Truth (1961)"
+
+[[youtube]]
+id = "uakxJ3E_d3w"
+remark = "Eric Dolphy"
+
+[versions.Real]
+doChords = true
+doVoice = true
+doLyrics = false
+doLyricsmore = false
+doLyricsmoremore = false
+doChordBars = false
+doGuitar = false
+doExtra = false
+doPrep = false
+doOwn = false
+#}
+{% if part == "Vars" %}
+{% endif %}
+{% if part == "Doc" %}	DONE:
+	- added the meta data from the Hal Leonard Real Jazz Book.
+	- put in the tunes structure.
+	- put in the chords (Hal Leonard Real Jazz Book).
+	- put in the tune (Hal Leonard Real Jazz Book).
+	- added youtube performances.
+	TODO:
+	- check the chords (Hal Leonard Real Jazz Book).
+	- check the tune (Hal Leonard Real Jazz Book).
+	- hear the tune to check that it is right and adjust the tempo.
+	- the book is on pdf page 330 (book page 330), not on pdf page 328.
+	- bar 14: the third note has no accidental in the book (Eb) although the chord is C/E.
+	- the book puts the chords of bars 9-13 on the tied eighth before each beat, here they are on the beat.
+{% endif %}
+{% if part == "ChordsReal" %}\chordmode {
+	\startChords
+	\startSong
+
+	\myMark "A"
+	\startPart
+	c1:m7 | c:m6 | c:m7 | c:m6 | \myEndLine
+	f1:m7 | f:m6 | c:m7 | c:m6 | \myEndLine
+	\endPart
+
+	\myMark "B"
+	\startPart
+	d2:m dis:m | e:m f:m | fis:m f:m | e:m ees:m | \myEndLine
+	d2:m7 dis:dim7 | c/e f:m | c1:m | g:7.5+ | \myEndLine
+	\endPart
+
+	\myMark "Coda"
+	\startPart
+	g1:7.5+ | c:m7 | g:7.5+ | f:7sus4 | c:m9 | \myEndLine
+	\endPart
+
+	\endSong
+	\endChords
+}
+{% endif %}
+{% if part == "VoiceReal" %}{
+	\tempo "Andante" 4 = 80
+	\time 4/4
+	\key bes \major
+
+	% part "A"
+	r8 g'8 bes d r c4 bes8 | c8 a~ a f16 c ees8 g4. | r8 g bes d r c4 bes8 | c8 a4. g2 |
+	r8 aes c ees r d4 c8 | d8 bes4. f8 aes4. | r8 ees g bes r a!4 g8 | a8 f4. ees4 g8 bes |
+
+	% part "B"
+	c8 ees c c~ c ees c c~ | c ees c c~ c ees c c~ | c ees c c~ c ees c c~ | c ees c c~ c ees, c c~ |
+	c8 d c c~ c d c c~ | c8 d16 ees c8 c~ c g' a g | bes4 a8 g~ g4. g8~^\markup {To Coda \musicglyph #"scripts.coda"} | g1^\markup {D.C. al Coda} |
+
+	% part "Coda"
+	g2 r8 g a g | bes4 a8 g~ g4. g8~ | g2 r8 c, ees g | f1~ | f1\fermata |
+}
+{% endif %}

@@ -1,0 +1,105 @@
+{#
+default_version = "Fake"
+
+[attributes]
+title = "Airegin"
+style = "Jazz"
+composer = "Sonny Rollins"
+piece = "Bright tempo"
+copyright = "1963 Prestige Music"
+typesetter = "Mark Veltzer <mark.veltzer@gmail.com>"
+completion = "5"
+uuid = "450b9962-d49b-11f1-8000-046874d194b7"
+structure = "ABA'"
+location = "jfb:37"
+
+[[youtube]]
+id = "yBue9GbB_6E"
+remark = "Miles Davis with Sonny Rollins in the original recording (1954)"
+
+[[youtube]]
+id = "l6YOEwjSy3g"
+remark = "Miles Davis Quintet from Cookin' (1956)"
+
+[versions.Fake]
+doChords = true
+doVoice = true
+doLyrics = false
+doLyricsmore = false
+doLyricsmoremore = false
+doChordBars = false
+doGuitar = false
+doExtra = false
+doPrep = false
+doOwn = false
+#}
+{% if part == "Vars" %}
+{% endif %}
+{% if part == "Doc" %}	DONE:
+	- added the meta data from the fake book.
+	- put in the tunes structure.
+	- put in the chords (fake book).
+	- put in the tune (fake book).
+	- added youtube performances.
+	TODO:
+	- check the chords (fake book).
+	- check the tune (fake book).
+	- hear the tune to check that it is right and adjust the tempo.
+	- the fake book form is 51 bars (18+18+15), check it against the original recording.
+	- bars 20 and 24 have x noteheads (ghost notes) in the fake book.
+	- bar 22: the fake book puts F7#9 on beat 3 and Bbm7 on the last eighth.
+{% endif %}
+{% if part == "ChordsFake" %}\chordmode {
+	\startChords
+	\startSong
+
+	\myMark "A"
+	\startPart
+	f1:m7 | ges:7 | f:m7 | ges:7 | f:m7 | ges:7 | \myEndLine
+	f1:m7 | ges:7 | f:m7 | ges:7 | f:m7 | ges:7 | \myEndLine
+	f1:m7 | ges:7 | f:m7 | ges:7 | f:m7 | c:7.5-.9+ | \myEndLine
+	\endPart
+
+	\myMark "B"
+	\startPart
+	f1:m7 | f:7 | bes:m7 | bes2:m7 f4.:7.9+ bes8:m7 | bes1:m7 | bes1:m7 | bes1:m7 | \myEndLine
+	d2:m7 g:7 | c1:maj7 | cis2:m7 fis:7 | b1:maj7 | c2:m7 f:7 | bes1*2:maj7 | \myEndLine
+	bes1:m7 | ees:7 | aes:maj7 | g2:m7 c:7 | \myEndLine
+	\endPart
+
+	\myMark "A"
+	\startPart
+	f1:m7 | ges:7 | f:m7 | ges:7 | f:m7 | ges:7 | \myEndLine
+	f1:m7 | ges:7 | bes:m7 | ees:7 | \myEndLine
+	c1:m7 | f:7 | bes:m7 | ees:7.9- | aes1 | \myEndLine
+	\endPart
+
+	\endSong
+	\endChords
+}
+{% endif %}
+{% if part == "VoiceFake" %}{
+	\tempo "Allegro" 4 = 220
+	\time 4/4
+	\key aes \major
+
+	% part "A"
+	\tuplet 3/2 { f8 g f } c2 \tuplet 3/2 { f8 g f } | des4. ges8 r2 | \tuplet 3/2 { f8 g f } c2 \tuplet 3/2 { f8 g f } | bes,4. ees8 r2 |
+	\tuplet 3/2 { f8 g f } c2 \tuplet 3/2 { f8 g f } | des4. ges8 r2 |
+	\tuplet 3/2 { f8 g f } c2 \tuplet 3/2 { f8 g f } | bes,4. ees8 r2 | \tuplet 3/2 { f8 g f } c2 \tuplet 3/2 { f8 g f } | des4. ges8 r2 |
+	\tuplet 3/2 { f8 g f } c2 \tuplet 3/2 { f8 g f } | bes,4. ees8 r2 |
+	\tuplet 3/2 { f8 g f } c2 \tuplet 3/2 { f8 g f } | des4. ges8 r2 | \tuplet 3/2 { f8 g f } c2 \tuplet 3/2 { f8 g f } | bes,4. ees8 r2 |
+	r4 f4 c8 f aes c | ges4 ees'2 des4 |
+
+	% part "B"
+	r2 \tuplet 3/2 { f,4 g aes } | \tuplet 3/2 { \xNote ees4 \xNote ees \xNote ees } r2 | r4 bes'4 f8 bes des f | ces4 r4 aes'4. ges8 |
+	r2 \tuplet 3/2 { bes,4 c des } | \tuplet 3/2 { \xNote ees,4 \xNote ees \xNote ees } r2 | f'1 |
+	g4 g2 f4 | e1 | fis4 fis2 e4 | dis1 | f4 f2 ees4 | d1~ |
+	d1 | des1 | ees4 ees2 des4 | c1~ | c1 |
+
+	% part "A"
+	c1~ | c1~ | c1~ | c1~ | c1~ | c1~ |
+	c1~ | c1 | f1 | g4 g2 f4 |
+	ees4 r8 c8~ c ges'4 e8 | f4 f bes, b | c4 r8 aes8~ aes f bes4 | r8 aes4 f8 e4. d8 | ees8 aes r4 r2 |
+}
+{% endif %}

@@ -1,0 +1,80 @@
+{#
+default_version = "Fake"
+
+[attributes]
+title = "Footprints"
+style = "Jazz"
+composer = "Wayne Shorter"
+piece = "Medium Swing"
+copyright = "1976 Miyako Music"
+typesetter = "Mark Veltzer <mark.veltzer@gmail.com>"
+completion = "5"
+uuid = "cff21b32-d49b-11f1-8000-046874d194b7"
+structure = "Minor Blues"
+location = "jfb:122"
+
+[[youtube]]
+id = "LgaIUqH0w6c"
+remark = "Wayne Shorter in the original recording from Adam's Apple (1966)"
+
+[[youtube]]
+id = "O-rrt8IYhe0"
+remark = "Miles Davis from Miles Smiles (1967)"
+
+[versions.Fake]
+doChords = true
+doVoice = true
+doLyrics = false
+doLyricsmore = false
+doLyricsmoremore = false
+doChordBars = false
+doGuitar = false
+doExtra = false
+doPrep = false
+doOwn = false
+#}
+{% if part == "Vars" %}
+{% endif %}
+{% if part == "Doc" %}	DONE:
+	- added the meta data from the fake book.
+	- put in the tunes structure.
+	- put in the chords (fake book).
+	- put in the tune (fake book).
+	- added youtube performances.
+	TODO:
+	- check the chords (fake book).
+	- check the tune (fake book).
+	- hear the tune to check that it is right and adjust the tempo.
+	- the fake book has AbM7 in bars 5-6 where most versions have Fm7.
+	- the quintuplets are written as 5 quarters in the time of 3 (the book only marks them "5").
+{% endif %}
+{% if part == "ChordsFake" %}\chordmode {
+	\startChords
+	\startSong
+
+	\myMark "A"
+	\startPart
+	\repeat volta 2 {
+		c1.*4:m9 | \myEndLine
+		aes1.*2:maj7 | c1.*2:m9 | \myEndLine
+		f2.:7.5- f:13 | e:9.5- a:9 | c1.*2:m9 | \myEndLine
+	}
+	\endPart
+
+	\endSong
+	\endChords
+}
+{% endif %}
+{% if part == "VoiceFake" %}{
+	\tempo "Moderato" 4 = 144
+	\time 6/4
+	\key c \minor
+
+	% part "A"
+	\repeat volta 2 {
+		bes'4 bes bes bes8 c~ c4. a8 | \tuplet 5/3 { bes4 a g f d~ } d2 c4 | r2 r8 d~ d2 c4 | r2 r8 d~ d2 c4 |
+		bes'4 bes bes bes8 c~ c4. d8 | \tuplet 5/3 { ees4 d c bes g~ } g2 f4 | \tuplet 5/3 { bes4 a g f d~ } d2 c4 | r2 r8 d~ d2 c4 |
+		b'4 b b b8 d~ d4 g,8 bes~ | bes2. g | f1.~ | f1. |
+	}
+}
+{% endif %}

@@ -1,0 +1,106 @@
+{#
+default_version = "Fake"
+
+[attributes]
+title = "Ain't Misbehavin'"
+style = "Jazz"
+composer = "Thomas Waller, Harry Brooks"
+poet = "Andy Razaf"
+piece = "Slowly"
+copyright = "1929 by Mills Music, Inc."
+copyrightextra = "Copyright Renewed, Waller's interest controlled by Chappell & Co., Inc. (Rightsong Music, Publisher)"
+typesetter = "Mark Veltzer <mark.veltzer@gmail.com>"
+completion = "5"
+uuid = "91ef1324-d49a-11f1-8000-046874d194b7"
+structure = "AABA"
+location = "jfb:36"
+
+[[youtube]]
+id = "pZ8fWP6a3Q4"
+remark = "Fats Waller in the original recording (1929)"
+
+[[youtube]]
+id = "ljuo5fkW-fs"
+remark = "Louis Armstrong (1929)"
+
+[versions.Fake]
+doChords = true
+doVoice = true
+doLyrics = false
+doLyricsmore = false
+doLyricsmoremore = false
+doChordBars = false
+doGuitar = false
+doExtra = false
+doPrep = false
+doOwn = false
+#}
+{% if part == "Vars" %}
+{% endif %}
+{% if part == "Doc" %}	DONE:
+	- added the meta data from the fake book.
+	- put in the tunes structure.
+	- put in the chords (fake book).
+	- put in the tune (fake book).
+	- added youtube performances.
+	TODO:
+	- add the lyrics.
+	- check the chords (fake book).
+	- check the tune (fake book).
+	- hear the tune to check that it is right and adjust the tempo.
+	- bar 4 ends "g8 ges4 f8" while bars 12 and 28 end "g8 ges8 f4" in the book, check which is right.
+{% endif %}
+{% if part == "ChordsFake" %}\chordmode {
+	\startChords
+	\startSong
+
+	\myMark "A"
+	\startPart
+	ees2 e:dim7 | f:m7 fis:dim7 | ees/g g:7.5+ | aes:6 des:9 | \myEndLine
+	ees/g c:7 | f:m7 bes:9 | g:7 c:7 | f:7 bes:7 | \myEndLine
+	\endPart
+
+	\myMark "A"
+	\startPart
+	ees2 e:dim7 | f:m7 fis:dim7 | ees/g g:7.5+ | aes:6 des:9 | \myEndLine
+	ees/g c:7 | f:m7 bes:9 | ees aes | ees d4:7.9- g:7 | \myEndLine
+	\endPart
+
+	\myMark "B"
+	\startPart
+	c1:m | aes:7/c | f:7/c | c:7 | \myEndLine
+	f:6 | c2:m7 f:9 | g:7.9+ c:7 | f:7 bes:7 | \myEndLine
+	\endPart
+
+	\myMark "A"
+	\startPart
+	ees2 e:dim7 | f:m7 fis:dim7 | ees/g g:7.5+ | aes:6 des:9 | \myEndLine
+	ees/g c:7 | f:m7 bes:9 | aes1:9 | ees:6.9 | \myEndLine
+	\endPart
+
+	\endSong
+	\endChords
+}
+{% endif %}
+{% if part == "VoiceFake" %}{
+	\tempo "Andante" 2 = 50
+	\time 2/2
+	\key ees \major
+
+	% part "A"
+	r8 ees f ees bes'8 bes4. | r8 f g f c'2 | r8 bes c bes ees8 ees4 d8 | f8 ees c g~ g8 ges4 f8 |
+	r8 ees f ees bes'8 bes4. | r8 f g f c'8 c4 bes8 | g1~ | g1 |
+
+	% part "A"
+	r8 ees f ees bes'8 bes4. | r8 f g f c'2 | r8 bes c bes ees8 ees4 d8 | f8 ees c g~ g ges f4 |
+	r8 ees f ees bes'8 bes4. | r8 f g f c'8 c4 bes8 | ees,1~ | ees2. r4 |
+
+	% part "B"
+	r4 ees'8 c ees c4. | r4 ees8 c ees c4. | r4 ees8 c ees c4. | r4 e8 c e c4. |
+	r4 f f f | f4 ees d c | bes2 c | g2 f |
+
+	% part "A"
+	r8 ees f ees bes'8 bes4. | r8 f g f c'2 | r8 bes c bes ees8 ees4 d8 | f8 ees c g~ g ges f4 |
+	r8 ees f ees bes'8 bes4. | r8 f g f c'8 c4 bes8 | ees1~ | ees2. r4 |
+}
+{% endif %}

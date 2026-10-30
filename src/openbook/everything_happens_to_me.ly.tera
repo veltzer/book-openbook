@@ -1,0 +1,121 @@
+{#
+default_version = "Fake"
+
+[attributes]
+title = "Everything Happens To Me"
+style = "Jazz"
+composer = "Matt Dennis"
+poet = "Tom Adair"
+piece = "Slowly"
+copyright = "1941 Dorsey Brothers Music, Division of Music Sales Corporation, New York"
+copyrightextra = "Copyright Renewed."
+typesetter = "Mark Veltzer <mark.veltzer@gmail.com>"
+completion = "5"
+uuid = "24e3ba77-d49a-11f1-8000-046874d194b7"
+structure = "AABA"
+location = "jfb:112"
+
+[[youtube]]
+id = "RLmdzJyP1eg"
+remark = "Tommy Dorsey with Frank Sinatra in the original recording (1941)"
+
+[[youtube]]
+id = "BuiQKqC96WY"
+remark = "Chet Baker"
+
+[versions.Fake]
+doChords = true
+doVoice = true
+doLyrics = false
+doLyricsmore = false
+doLyricsmoremore = false
+doChordBars = false
+doGuitar = false
+doExtra = false
+doPrep = false
+doOwn = false
+#}
+{% if part == "Vars" %}
+{% endif %}
+{% if part == "Doc" %}	DONE:
+	- added the meta data from the fake book.
+	- put in the tunes structure.
+	- put in the chords (fake book).
+	- put in the tune (fake book).
+	- added youtube performances.
+	TODO:
+	- add the lyrics.
+	- check the chords (fake book).
+	- check the tune (fake book).
+	- hear the tune to check that it is right and adjust the tempo.
+	- bridge bar 1: the fake book has Db D Cb D with no accidental on the D's, so by the
+		rules they are Db's. Check if D natural is meant.
+	- bridge bar 5: the B has no accidental so it is a Bb. Check against a recording.
+	- last A bar 7: the four high notes look like D's but the scan is not clear.
+{% endif %}
+{% if part == "ChordsFake" %}\chordmode {
+	\startChords
+	\startSong
+
+	\partial 8 s8 |
+
+	\myMark "A"
+	\startPart
+	\repeat volta 2 {
+		c2:m9 f4:9 f:7/ees | d2:m7 cis:dim7 | c2:m7 f4:7 f:7/ees | d2:m7.5- g:7 | \myEndLine
+		d2:dim7 ees:m6 | d2:m7 g:13 |
+	} \alternative {
+		{
+			c2:m7 b:7 | bes2:maj7 g:7 | \myEndLineVoltaNotLast
+		}
+		{
+			c2:m7 b:7 | bes1:6 | \myEndLineVoltaLast
+		}
+	}
+	\endPart
+
+	\myMark "B"
+	\startPart
+	f2:m7 bes:7.5+ | ees2.:maj9 ees4:6 | f2:m7 bes:7.9- | ees1:maj9 | \myEndLine
+	e2:m11 a:7.5+ | d2.:maj9 d4:6 | g2:m7 c:9 | c2:m7 f:7 | \myEndLine
+	\endPart
+
+	\myMark "A"
+	\startPart
+	c2:m9 f4:9 f:7/ees | d2:m7 cis:dim7 | c2:m7 f4:7 f:7/ees | d2:m7.5- g:7.5+ | \myEndLine
+	d2:dim7 ees:m6 | d2:m7 g4:13 g:7.5+ | c2:m7 b:7.9+ | bes1:6 | \myEndLine
+	\endPart
+
+	\endSong
+	\endChords
+}
+{% endif %}
+{% if part == "VoiceFake" %}{
+	\tempo "Adagio" 4 = 60
+	\time 4/4
+	\key bes \major
+
+	\partial 8 g'8 |
+
+	% part "A"
+	\repeat volta 2 {
+		d'8 d d ees c c bes a | c c c d bes4 r8 g | bes bes bes c a a g f | aes aes aes bes g4 r8 d |
+		f8 f f g ees fis a bes | c c \tuplet 3/2 { c c a~ } a2 |
+	} \alternative {
+		{
+			g8 g g a~ a a a f~ | f2. r8 g |
+		}
+		{
+			g8 g g a~ a a a bes~ | bes2. r8 bes |
+		}
+	}
+
+	% part "B"
+	bes8 bes bes bes des des ces des | bes bes bes2 r8 bes | bes bes bes bes ces ges f ees | bes'2. r8 bes |
+	a8 a a a c c bes c | a a a2 r8 a | bes bes bes bes bes bes a bes | c2. r8 g |
+
+	% part "A"
+	d'8 d d ees c c bes a | c c c d bes4 r8 g | bes bes bes c a a g f | aes aes aes bes g4 r8 d |
+	f8 f f g ees fis a bes | c c \tuplet 3/2 { c c a~ } a2 | g8 g g d'~ d d d bes~ | bes2. r4 |
+}
+{% endif %}

@@ -1,0 +1,132 @@
+{#
+default_version = "Real"
+
+[attributes]
+title = "Sophisticated Lady"
+subtitle = "from Sophisticated Ladies"
+style = "Jazz"
+composer = "Duke Ellington, Irving Mills, Mitchell Parish"
+poet = "Duke Ellington, Irving Mills, Mitchell Parish"
+piece = "Moderately"
+copyright = "1933 Famous Music Corporation and EMI Mills Music Inc."
+copyrightextra = "Copyright Renewed 1960."
+typesetter = "Mark Veltzer <mark.veltzer@gmail.com>"
+completion = "5"
+uuid = "a08f86ab-d49a-11f1-8000-046874d194b7"
+structure = "AABA"
+location = "hlrjb:324"
+
+[[youtube]]
+id = "-Y__G3Pa5Fw"
+remark = "Duke Ellington in the original recording (1933)"
+
+[[youtube]]
+id = "nJ4DrrgMiUk"
+remark = "Thelonious Monk"
+
+[versions.Real]
+doChords = true
+doVoice = true
+doLyrics = false
+doLyricsmore = false
+doLyricsmoremore = false
+doChordBars = false
+doGuitar = false
+doExtra = false
+doPrep = false
+doOwn = false
+#}
+{% if part == "Vars" %}
+{% endif %}
+{% if part == "Doc" %}	DONE:
+	- added the meta data from the Hal Leonard Real Jazz Book.
+	- put in the tunes structure.
+	- put in the chords (Hal Leonard Real Jazz Book).
+	- put in the tune (Hal Leonard Real Jazz Book).
+	- added youtube performances.
+	TODO:
+	- add the lyrics.
+	- check the chords (Hal Leonard Real Jazz Book).
+	- check the tune (Hal Leonard Real Jazz Book).
+	- hear the tune to check that it is right and adjust the tempo.
+	- the book places the Eb7 in bars 6, 14 and 30 between beats 2 and 4, here it is on beat 3.
+	- the book continues this tune on page 325 (pdf page 325).
+{% endif %}
+{% if part == "ChordsReal" %}\chordmode {
+	\startChords
+	\startSong
+
+	\partial 4 s4 |
+
+	\repeat volta 2 {
+
+		\myMark "A"
+		\startPart
+		bes1:m7 | ges4:7 f:7 e:7 ees:7 | aes1:maj7 | aes4:7 g:7 ges:7 f:7 | \myEndLine
+		bes1:7 | bes2:m7 ees:7 | aes1:maj7 | c2:m7.5- f:7.9- | \myEndLine
+		\endPart
+
+		\myMark "A"
+		\startPart
+		bes1:m7 | ges4:7 f:7 e:7 ees:7 | aes1:maj7 | aes4:7 g:7 ges:7 f:7 | \myEndLine
+		bes1:7 | bes2:m7 ees:7 | aes1:maj7 | a2:m7.5- d:7 | \myEndLine
+		\endPart
+
+		\myMark "B"
+		\startPart
+		g2:maj7 e:m7 | a:m7 d:7 | g4:maj7 gis2.:dim7 | a2:m7 d:7.9- | \myEndLine
+		g2:maj7 e:m7 | a:m7 d:7 | g4:maj7 b:dim7 c2:m7 | bes4:m7 ees:7 c:m7.5- f:7.9- | \myEndLine
+		\endPart
+
+		\myMark "A"
+		\startPart
+		bes1:m7 | ges4:7 f:7 e:7 ees:7 | aes1:maj7 | aes4:7 g:7 ges:7 f:7 | \myEndLine
+		bes1:7 | bes2:m7 ees:7 |
+	} \alternative {
+		{
+			aes1:6 | c2:m7.5- f:7.9- | \myEndLineVoltaNotLast
+		}
+		{
+			aes1*2:6 | \myEndLineVoltaLast
+		}
+	}
+	\endPart
+
+	\endSong
+	\endChords
+}
+{% endif %}
+{% if part == "VoiceReal" %}{
+	\tempo "Moderato" 2 = 50
+	\time 2/2
+	\key aes \major
+
+	\partial 4 ges'4 |
+
+	\repeat volta 2 {
+
+		% part "A"
+		f2~ f8 aes c ees | ges4 f e! ees8 c | g2~ g8 f aes c | ees4 d! des c8 f |
+		f,2~ f8 g aes c | \tuplet 3/2 { ees8 c ees } c2 ees4 | g,2. ees'4 | ges,1 |
+
+		% part "A"
+		f2~ f8 aes c ees | ges4 f e! ees8 c | g2~ g8 f aes c | ees4 d! des c8 f |
+		f,2~ f8 g aes c | \tuplet 3/2 { ees8 c ees } c2 ees4 | f,8 ees aes2. | r1 |
+
+		% part "B"
+		r8 d,4 b8 e4 b8 g'~ | g8 e b'4 fis8 e'4 bes8 | b4 a2. | e8 c' ees,2. |
+		r8 d4 b8 e4 b8 g'~ | g8 e b'4 fis8 e'4 bes8 | b4 a8 c g ees c4 | f8 g bes des c ees fis,4 |
+
+		% part "A"
+		f!2~ f8 aes c ees | ges4 f e! ees8 c | g2~ g8 f aes c | ees4 d! des c8 f |
+		f,2~ f8 g aes c | \tuplet 3/2 { ees8 c ees } c2 ees4 |
+	} \alternative {
+		{
+			aes,1~ | aes2 r4 ges4 |
+		}
+		{
+			aes1~ | aes2. r4 |
+		}
+	}
+}
+{% endif %}

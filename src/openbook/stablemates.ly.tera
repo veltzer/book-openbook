@@ -1,0 +1,102 @@
+{#
+default_version = "Real"
+
+[attributes]
+title = "Stablemates"
+style = "Jazz"
+composer = "Benny Golson"
+piece = "Moderately"
+copyright = "1955 TIME STEP MUSIC (ASCAP)"
+copyrightextra = "Copyright Renewed 1983. All Rights Administered by MAYFLOWER MUSIC CORPORATION (ASCAP)"
+typesetter = "Mark Veltzer <mark.veltzer@gmail.com>"
+completion = "5"
+uuid = "a08f86aa-d49a-11f1-8000-046874d194b7"
+structure = "ABA"
+location = "hlrjb:324"
+
+[[youtube]]
+id = "odrMjFuHBSs"
+remark = "Miles Davis in the first recording (1955)"
+
+[[youtube]]
+id = "VjnXU0f0yus"
+remark = "Benny Golson"
+
+[versions.Real]
+doChords = true
+doVoice = true
+doLyrics = false
+doLyricsmore = false
+doLyricsmoremore = false
+doChordBars = false
+doGuitar = false
+doExtra = false
+doPrep = false
+doOwn = false
+#}
+{% if part == "Vars" %}
+{% endif %}
+{% if part == "Doc" %}	DONE:
+	- added the meta data from the Hal Leonard Real Jazz Book.
+	- put in the tunes structure.
+	- put in the chords (Hal Leonard Real Jazz Book).
+	- put in the tune (Hal Leonard Real Jazz Book).
+	- added youtube performances.
+	TODO:
+	- check the chords (Hal Leonard Real Jazz Book).
+	- check the tune (Hal Leonard Real Jazz Book).
+	- hear the tune to check that it is right and adjust the tempo.
+	- the form is 14+8+14 bars, as in the book.
+{% endif %}
+{% if part == "ChordsReal" %}\chordmode {
+	\startChords
+	\startSong
+
+	\partial 2 s2 |
+
+	\myMark "A"
+	\startPart
+	e2:m7 a:7 | ees:m7 aes:7 | des1:maj7 | c:7.5+ | aes:m7 | \myEndLine
+	des1:7 | ges:maj7 | g2:m7.5- c:7 | f1:m7 | bes2:7.5+.9+ r | \myEndLine
+	ees1:m7 | aes:7.5+ | des1*2:maj7 | \myEndLine
+	\endPart
+
+	\myMark "B"
+	\startPart
+	f1:m7 | ges:13 | g:7.5+ | c:7 | \myEndLine
+	b1:7 | bes:7 | a:7 | aes2:7 r | \myEndLine
+	\endPart
+
+	\myMark "A"
+	\startPart
+	e2:m7 a:7 | ees:m7 aes:7 | des1:maj7 | c:7.5+ | aes:m7 | \myEndLine
+	des1:7 | ges:maj7 | g2:m7.5- c:7 | f1:m7 | bes2:7.5+.9+ r | \myEndLine
+	ees1:m7 | aes:7.5+ | des1*2:maj7 | \myEndLine
+	\endPart
+
+	\endSong
+	\endChords
+}
+{% endif %}
+{% if part == "VoiceReal" %}{
+	\tempo "Moderato" 4 = 160
+	\time 4/4
+	\key des \major
+
+	\partial 2 \tuplet 3/2 { r4 d f } |
+
+	% part "A"
+	ges2. d8 f | r8 ees4. ces'4 des8 aes~ | aes2. ces8 aes~ | aes2. ces8 aes~ | aes2~ \tuplet 3/2 { aes4 g! aes } |
+	bes2 aes4. des8~ | des2 \tuplet 3/2 { r4 bes b! } | c4 f,8 e!~ e4 bes'8 aes~ | aes1 | r2 bes4 ges8 f~ |
+	f2~ \tuplet 3/2 { f4 d! ees } | e!2 c | ees1~ | ees1 |
+
+	% part "B"
+	aes4. c8 r aes r f | aes4 aes2 aes4 |  ees'4. b!8 r g! r bes | c2. aes4 |
+	b!2.~ b8 aes | r2 r4 aes | cis4. a!8~ a4 cis8 c! | r2 \tuplet 3/2 { r4 d,! f } |
+
+	% part "A"
+	ges2. d8 f | r8 ees4. ces'4 des8 aes~ | aes2. ces8 aes~ | aes2. ces8 aes~ | aes2~ \tuplet 3/2 { aes4 g! aes } |
+	bes2 aes4. des8~ | des2 \tuplet 3/2 { r4 bes b! } | c4 f,8 e!~ e4 bes'8 aes~ | aes1 | r2 bes4 ges8 f~ |
+	f2~ \tuplet 3/2 { f4 d! ees } | e!2 c | ees1~ | ees1 |
+}
+{% endif %}

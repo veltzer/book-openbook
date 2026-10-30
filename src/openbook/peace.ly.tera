@@ -1,0 +1,99 @@
+{#
+default_version = "Real"
+
+[attributes]
+title = "Peace"
+style = "Jazz"
+composer = "Horace Silver"
+poet = "Horace Silver"
+piece = "Ballad"
+copyright = "1959 by Ecaroh Music, Inc."
+copyrightextra = "Copyright Renewed 1987."
+typesetter = "Mark Veltzer <mark.veltzer@gmail.com>"
+completion = "5"
+uuid = "5db996f4-d49a-11f1-8000-046874d194b7"
+structure = "A"
+location = "hlrjb:272"
+
+[[youtube]]
+id = "ieaAHwvqljg"
+remark = "Horace Silver in the original recording from Blowin' the Blues Away (1959)"
+
+[[youtube]]
+id = "0cf6avtZS1w"
+remark = "Chet Baker"
+
+[versions.Real]
+doChords = true
+doVoice = true
+doLyrics = false
+doLyricsmore = false
+doLyricsmoremore = false
+doChordBars = false
+doGuitar = false
+doExtra = false
+doPrep = false
+doOwn = false
+#}
+{% if part == "Vars" %}
+{% endif %}
+{% if part == "Doc" %}	DONE:
+	- added the meta data from the Hal Leonard Real Jazz Book.
+	- put in the tunes structure.
+	- put in the chords (Hal Leonard Real Jazz Book).
+	- put in the tune (Hal Leonard Real Jazz Book).
+	- added youtube performances.
+	TODO:
+	- add the lyrics (4 verses, the book has the repeat for 4 times, endings 1-3 and 4).
+	- check the chords (Hal Leonard Real Jazz Book).
+	- check the tune (Hal Leonard Real Jazz Book).
+	- hear the tune to check that it is right and adjust the tempo (the book has no tempo marking).
+	- bar 5: the book prints the last three notes (F# E D) as quarter notes under a triplet bracket
+			after a tied quarter, which does not add up. Here they are an eighth note triplet.
+{% endif %}
+{% if part == "ChordsReal" %}\chordmode {
+	\startChords
+	\startSong
+
+	\partial 4 s4 |
+
+	\myMark "A"
+	\startPart
+	\repeat volta 4 {
+		a2:m7.5- aes:7 | g2:m7 c:7.9- | b2:maj7 c4:m7.5- f:7.9+ | bes1:maj7 | \myEndLine
+		b2:m7 e:7 | a2:maj7 fis:m7 | ees2:m7.5- aes:7.9+ | des1:maj7 | c2:7.9+ b:7.9+ |
+	} \alternative {
+		{
+			bes1:maj7 | \myEndLineVoltaNotLast
+		}
+		{
+			bes1:maj7 | \myEndLineVoltaLast
+		}
+	}
+	\endPart
+
+	\endSong
+	\endChords
+}
+{% endif %}
+{% if part == "VoiceReal" %}{
+	\tempo "Andante" 4 = 66
+	\time 4/4
+	\key bes \major
+
+	\partial 4 \tuplet 3/2 { r8 c' d } |
+
+	% part "A"
+	\repeat volta 4 {
+		\tuplet 3/2 { ees4 ees ees } ees4~ \tuplet 3/2 { ees8 d c } | \tuplet 3/2 { d8 c bes~ } bes4 bes4. bes8 | \tuplet 3/2 { bes8 aes ges~ } ges4 ges aes | f2. \tuplet 3/2 { r8 d e } |
+		\tuplet 3/2 { fis4 fis fis } fis4~ \tuplet 3/2 { fis8 e d } | cis8 e a b cis4~ \tuplet 3/2 { cis8 b a } | \tuplet 3/2 { aes4 b a } aes4 aes | aes1 | \tuplet 3/2 { fis4 gis fis } f f |
+	} \alternative {
+		{
+			f2. \tuplet 3/2 { r8 c' d } |
+		}
+		{
+			f,1 |
+		}
+	}
+}
+{% endif %}

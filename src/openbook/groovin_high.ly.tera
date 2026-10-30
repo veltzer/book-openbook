@@ -1,0 +1,118 @@
+{#
+default_version = "Fake"
+
+[attributes]
+title = "Groovin' High"
+style = "Jazz"
+composer = "John 'Dizzy' Gillespie"
+piece = "Moderately Fast"
+copyright = "1944, 1945 by MCA Music Publishing, A Division of MCA Inc., New York, NY"
+copyrightextra = "Copyright Renewed."
+typesetter = "Mark Veltzer <mark.veltzer@gmail.com>"
+completion = "5"
+uuid = "cff40a32-d49b-11f1-8000-046874d194b7"
+structure = "ABAC"
+location = "jfb:138"
+
+[[youtube]]
+id = "YtPgYmRhXeI"
+remark = "Dizzy Gillespie in the original recording, Guild 1001 (1945)"
+
+[[youtube]]
+id = "ukL3TDV6XRg"
+remark = "Charlie Parker"
+
+[versions.Fake]
+doChords = true
+doVoice = true
+doLyrics = false
+doLyricsmore = false
+doLyricsmoremore = false
+doChordBars = false
+doGuitar = false
+doExtra = false
+doPrep = false
+doOwn = false
+#}
+{% if part == "Vars" %}
+{% endif %}
+{% if part == "Doc" %}	DONE:
+	- added the meta data from the fake book.
+	- put in the tunes structure.
+	- put in the chords (fake book).
+	- put in the tune (fake book).
+	- added youtube performances.
+	TODO:
+	- check the chords (fake book).
+	- check the tune (fake book).
+	- hear the tune to check that it is right and adjust the tempo.
+	- bar 14 (F#m7): the book prints the middle note of the 16th triplet as F (not F#).
+	- bar 16 (E7): the book prints a natural sign on the first note (D).
+	- bar 28 (Bb9): the book prints A (no natural, so Ab) on beat 4, unlike bar 12 which has A natural.
+{% endif %}
+{% if part == "ChordsFake" %}\chordmode {
+	\startChords
+	\startSong
+
+	\partial 4 s4 |
+
+	\repeat volta 2 {
+
+	\myMark "A"
+	\startPart
+	ees1*2:6 | a2:m e:7.5+ | a:m7 d:9 | \myEndLine
+	ees1*2:6 | g2:m d:7.5+ | g:m7 c:9 | \myEndLine
+	\endPart
+
+	\myMark "B"
+	\startPart
+	f1*2:7 | f2:m c:7.5+ | f:m7 bes:9 | \myEndLine
+	ees2:maj7 g:m7 | fis1:m7 | f:m7 | e:7 | \myEndLine
+	\endPart
+
+	\myMark "A"
+	\startPart
+	ees1*2:6 | a2:m e:7 | a:m7 d:9 | \myEndLine
+	ees1*2:6 | g2:m d:7.5+ | g:m7 c:9 | \myEndLine
+	\endPart
+
+	\myMark "C"
+	\startPart
+	f1*2:7 | f2:m c:7.5+ | f:m7 bes:9 | \myEndLine
+	f1:m | des2:7 bes:7.9- | g:m7 fis:m7 | f:m7 e:7 | \myEndLine
+	\endPart
+
+	}
+
+	\endSong
+	\endChords
+}
+{% endif %}
+{% if part == "VoiceFake" %}{
+	\tempo "Allegro" 4 = 192
+	\time 4/4
+	\key ees \major
+
+	\partial 4 ces'8 a |
+
+	\repeat volta 2 {
+
+	% part "A"
+	bes8 g r4 r2 | bes8 g r4 r2 | r8 e a c b a gis e | g8 f fis d'~ d4 c16 d c a |
+	bes8 g r4 r2 | bes8 g r4 r2 | r8 d g bes a g fis d | f8 ees e c'~ c4 bes8 gis |
+
+	% part "B"
+	a8 f r4 r2 | \tuplet 3/2 { a8 bes a } f8 r r2 | r8 c f aes g f e c | ees8 cis d bes'~ bes4 a8. fis16 |
+	g8 r d' f~ f4 d8 bes | \tuplet 3/2 { e16 f e } cis8 r4 r2 | f,4 c'8 e~ e c4 r8 | d8 b r2 b16 cis b a |
+
+	% part "A"
+	bes8. g16 r4 r4 r8. ees16 | bes'8. g16 r4 r2 | r8 e a c b a gis e | g8 f fis d'~ d4~ \tuplet 3/2 { d8 c a } |
+	bes8 g r4 r2 | bes8 g r4 r2 | r8 d g bes a g fis d | f8 dis e c'~ c4 bes8. gis16 |
+
+	% part "C"
+	a8 f r4 r2 | \tuplet 3/2 { a8 bes a } f8 r r2 | r8 c f aes g f e c | ees8 cis d bes'~ bes4 aes8. e16 |
+	f4. g8 aes bes4 ces8~ | ces8 des ees f~ f4 b,8. a16 | bes8 g r4 r2 | r1 |
+
+	}
+}
+{% endif %}

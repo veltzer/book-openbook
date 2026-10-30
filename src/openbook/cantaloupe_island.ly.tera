@@ -1,0 +1,86 @@
+{#
+default_version = "Real"
+
+[attributes]
+title = "Cantaloupe Island"
+style = "Jazz"
+composer = "Herbie Hancock"
+piece = "Moderate Rock"
+copyright = "1964 (Renewed) by Hancock Music Co."
+typesetter = "Mark Veltzer <mark.veltzer@gmail.com>"
+completion = "5"
+uuid = "31641660-d49a-11f1-8000-046874d194b7"
+structure = "A"
+location = "hlrjb:69"
+
+[[youtube]]
+id = "otFVFLtRF_s"
+remark = "Herbie Hancock in the original recording from Empyrean Isles (1964)"
+
+[[youtube]]
+id = "5KNL0_sis1k"
+remark = "Herbie Hancock live (1990)"
+
+[versions.Real]
+doChords = true
+doVoice = true
+doLyrics = false
+doLyricsmore = false
+doLyricsmoremore = false
+doChordBars = false
+doGuitar = false
+doExtra = false
+doPrep = false
+doOwn = false
+#}
+{% if part == "Vars" %}
+{% endif %}
+{% if part == "Doc" %}	DONE:
+	- added the meta data from the Hal Leonard Real Jazz Book.
+	- put in the tunes structure.
+	- put in the chords (Hal Leonard Real Jazz Book).
+	- put in the tune (Hal Leonard Real Jazz Book).
+	- added youtube performances.
+	TODO:
+	- check the chords (Hal Leonard Real Jazz Book).
+	- check the tune (Hal Leonard Real Jazz Book).
+	- hear the tune to check that it is right and adjust the tempo.
+	- the book spells the title "Cantelope Island".
+	- add the piano vamp from the original recording.
+{% endif %}
+{% if part == "ChordsReal" %}\chordmode {
+	\startChords
+	\startSong
+
+	\partial 4 s4 |
+
+	\myMark "A"
+	\startPart
+	\repeat volta 2 {
+		f1*4:m | \myEndLine
+		des1*4:7 | \myEndLine
+		d1*4:m11 | \myEndLine
+		f1*4:m | \myEndLine
+	}
+	\endPart
+
+	\endSong
+	\endChords
+}
+{% endif %}
+{% if part == "VoiceReal" %}{
+	\tempo "Moderato" 4 = 112
+	\time 4/4
+	\key c \major
+
+	\partial 4 f8 f |
+
+	% part "A"
+	\repeat volta 2 {
+		r2 aes8 bes bes4~ | bes4. aes8 bes c ees, f | R1 | r2 r4 f8 f |
+		r2 aes8 bes bes4~ | bes4. aes8 bes c ees, f | R1 | r2 c'8 ees c ees |
+		f,4. f8~ f2 | r2 c'8 ees c ees | f,4. f8~ f2 | R1 |
+		R1 | R1 | R1 | r2 r4 f8 f |
+	}
+}
+{% endif %}

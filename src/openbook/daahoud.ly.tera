@@ -1,0 +1,118 @@
+{#
+default_version = "Fake"
+
+[attributes]
+title = "Daahoud"
+style = "Jazz"
+composer = "Clifford Brown"
+piece = "Up Tempo"
+copyright = "1962 Slow Dancing Music, Inc."
+typesetter = "Mark Veltzer <mark.veltzer@gmail.com>"
+completion = "5"
+uuid = "cff05824-d49b-11f1-8000-046874d194b7"
+structure = "AABA"
+location = "jfb:93"
+
+[[youtube]]
+id = "lv4EarQxGMo"
+remark = "Clifford Brown and Max Roach Quintet in the original recording"
+
+[[youtube]]
+id = "hw7Auhy-_78"
+remark = "Oscar Peterson and Friends (1980)"
+
+[versions.Fake]
+doChords = true
+doVoice = true
+doLyrics = false
+doLyricsmore = false
+doLyricsmoremore = false
+doChordBars = false
+doGuitar = false
+doExtra = false
+doPrep = false
+doOwn = false
+#}
+{% if part == "Vars" %}
+{% endif %}
+{% if part == "Doc" %}	DONE:
+	- added the meta data from the fake book.
+	- put in the tunes structure.
+	- put in the chords (fake book).
+	- put in the tune (fake book).
+	- added youtube performances.
+	TODO:
+	- check the chords (fake book).
+	- check the tune (fake book).
+	- hear the tune to check that it is right and adjust the tempo.
+	- the fake book prints no chord over the second ending (left blank here).
+	- the last A is extended to 12 bars as in the fake book.
+{% endif %}
+{% if part == "ChordsFake" %}\chordmode {
+	\startChords
+	\startSong
+
+	\partial 8*7 s8*7 |
+
+	\myMark "A"
+	\startPart
+	\repeat volta 2 {
+		ees2:m7 aes:7 | des:m7 ges:7 | ces1:maj7 | f2:m7 bes:7 | \myEndLine
+		ees1:6 | ces2:7 bes:7 | ees1:maj7 |
+	} \alternative {
+		{
+			r1 | \myEndLineVoltaNotLast
+		}
+		{
+			s1 | \myEndLineVoltaLast
+		}
+	}
+	\endPart
+
+	\myMark "B"
+	\startPart
+	bes1:m7 | ees:7 | aes1*2:maj7 | \myEndLine
+	aes1:m7 | des:7 | ges:maj7 | f8:m7 r2.. | \myEndLine
+	\endPart
+
+	\myMark "A"
+	\startPart
+	ees2:m7 aes:7 | des:m7 ges:7 | ces1:maj7 | f2:m7 bes:7 | \myEndLine
+	ees1:6 | ces2:7 bes:7 | ees1:maj7 | aes2:m7 des:7 | \myEndLine
+	ges1:maj7 | ees2:m7 aes:7 | ces:7 bes:7 | ees1:maj7 | \myEndLine
+	\endPart
+
+	\endSong
+	\endChords
+}
+{% endif %}
+{% if part == "VoiceFake" %}{
+	\tempo "Presto" 4 = 260
+	\time 4/4
+	\key ees \major
+
+	\partial 8*7 f8 d ees ges bes d f~ |
+
+	% part "A"
+	\repeat volta 2 {
+		f1 | r4 ees8 des ees ges ees des | bes8 ges g! aes r2 | r4 bes8 aes bes aes ges ees~ |
+		ees1 | r8 ges ees des~ des bes des d!~ | d1 |
+	} \alternative {
+		{
+			r8 f d ees ges bes d f\laissezVibrer |
+		}
+		{
+			r2 r8 d, ees ees'~ |
+		}
+	}
+
+	% part "B"
+	ees2~ ees8 ees ees ees | r4 r8 ges~ ges ees4 des8 | ees2. bes8 aes | r2 r8 c, des des'~ |
+	des2~ des8 des des des | r4 r8 e!~ e des4 bes8 | des2 bes8 aes ges bes | r8 f d ees ges bes d f~ |
+
+	% part "A"
+	f1 | r4 ees8 des ees ges ees des | bes8 ges g! aes r2 | r4 bes8 aes bes aes ges ees~ |
+	ees1~ | ees8 ges ees des~ des bes des d! | r1 | r4 bes'8 aes~ aes des ces bes~ |
+	bes4. bes8 r aes ges f~ | f4. f8 r ees des c~ | c8 ges' f aes ges f ees d! | r1 |
+}
+{% endif %}

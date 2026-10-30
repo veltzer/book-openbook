@@ -1,0 +1,87 @@
+{#
+default_version = "Fake"
+
+[attributes]
+title = "Goodbye Pork Pie Hat"
+style = "Jazz"
+composer = "Charles Mingus"
+piece = "Slow Ballad"
+copyright = "1975 Jazz Workshop, Inc."
+typesetter = "Mark Veltzer <mark.veltzer@gmail.com>"
+completion = "5"
+uuid = "6415a722-d49a-11f1-8000-046874d194b7"
+structure = "Blues"
+location = "jfb:137"
+
+[[youtube]]
+id = "CWWO_VcdnHY"
+remark = "Charles Mingus in the original recording from Mingus Ah Um (1959)"
+
+[[youtube]]
+id = "UAy_NQoADR8"
+remark = "Jeff Beck from Wired (1976)"
+
+[versions.Fake]
+doChords = true
+doVoice = true
+doLyrics = false
+doLyricsmore = false
+doLyricsmoremore = false
+doChordBars = false
+doGuitar = false
+doExtra = false
+doPrep = false
+doOwn = false
+#}
+{% if part == "Vars" %}
+{% endif %}
+{% if part == "Doc" %}	DONE:
+		- added the meta data from the fake book.
+		- put in the tunes structure.
+		- put in the chords (fake book).
+		- put in the tune (fake book).
+		- added youtube performances.
+	TODO:
+		- check the chords (fake book).
+		- check the tune (fake book).
+		- hear the tune to check that it is right and adjust the tempo.
+		- in bar 4 the F7 is printed between beat 3 and the last eighth, I put it on beat 3.
+{% endif %}
+{% if part == "ChordsFake" %}\chordmode {
+	\startChords
+	\startSong
+
+	\partial 8 s8 |
+
+	\myMark "A"
+	\startPart
+	\repeat volta 2 {
+		f2:7.9+ des:9 | ges2:maj7 b:7.5- | ees2:7 des:7 | ees2:7 f:7 | \myEndLine
+		bes2:m7 des:7 | g2:7.5- c:7 | d2:7 g:7 | des2:7 ges:maj7 | \myEndLine
+		b2:7 bes:7 | c2:7 ees:7 | f2:7.9+ des:7 | ges2:maj7 b:7 |
+	}
+	f1:m11 | \myEndLine
+	\endPart
+
+	\endSong
+	\endChords
+}
+{% endif %}
+{% if part == "VoiceFake" %}{
+	\tempo "Adagio" 4 = 60
+	\time 4/4
+	\key f \minor
+
+	\partial 8 c8 |
+
+	% part "A"
+	\repeat volta 2 {
+		f8 aes~ \tuplet 3/2 { aes f aes } bes8 aes4 f16 des | f8 aes4 f16 ees f4. c8 |
+		f8 aes~ \tuplet 3/2 { aes f aes } ces8 bes4 aes16 f | f8 aes4 f16 ees f4. f8 |
+		c'8 ees~ \tuplet 3/2 { ees f, aes } bes8 aes4 f16 aes | c8 f~ \tuplet 3/2 { f f, bes } \tuplet 3/2 { ees4 c8 } \tuplet 3/2 { aes8 e! d } |
+		\tuplet 3/2 { aes'4 b! f } \tuplet 3/2 { e! bes' g } | aes2 f4. ces'16 bes |
+		aes2 f | bes8 aes f ees ces' bes aes f | aes2 f | \tuplet 3/2 { c'4 bes aes } \tuplet 3/2 { f ees c } |
+	}
+	f1\fermata |
+}
+{% endif %}

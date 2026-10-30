@@ -1,0 +1,129 @@
+{#
+default_version = "Real"
+
+[attributes]
+title = "You Don't Know What Love Is"
+style = "Jazz"
+composer = "Gene DePaul"
+poet = "Don Raye"
+piece = "Slowly"
+copyright = "1941 by MCA MUSIC PUBLISHING, A Division of UNIVERSAL STUDIOS, INC."
+copyrightextra = "Copyright Renewed."
+typesetter = "Mark Veltzer <mark.veltzer@gmail.com>"
+completion = "5"
+uuid = "7d1ce14c-d49a-11f1-8000-046874d194b7"
+structure = "AABA"
+location = "hlrjb:380"
+
+[[youtube]]
+id = "aMotuRCx4bU"
+remark = "Sonny Rollins from Saxophone Colossus (1956)"
+
+[[youtube]]
+id = "DZufZc4VEcU"
+remark = "John Coltrane from Ballads (1962)"
+
+[versions.Real]
+doChords = true
+doVoice = true
+doLyrics = false
+doLyricsmore = false
+doLyricsmoremore = false
+doChordBars = false
+doGuitar = false
+doExtra = false
+doPrep = false
+doOwn = false
+#}
+{% if part == "Vars" %}
+{% endif %}
+{% if part == "Doc" %}	DONE:
+	- added the meta data from the Hal Leonard Real Jazz Book.
+	- put in the tunes structure.
+	- put in the chords (Hal Leonard Real Jazz Book).
+	- put in the tune (Hal Leonard Real Jazz Book).
+	- added youtube performances.
+	TODO:
+	- add the lyrics.
+	- check the chords (Hal Leonard Real Jazz Book).
+	- check the tune (Hal Leonard Real Jazz Book).
+	- hear the tune to check that it is right and adjust the tempo.
+	- bars 18 and 21: the book places Fm7 and G9 a bit before beat 3, they are put on beat 3.
+{% endif %}
+{% if part == "ChordsReal" %}\chordmode {
+	\startChords
+	\startSong
+
+	\partial 8 s8 |
+
+	\repeat volta 2 {
+
+		\myMark "A"
+		\startPart
+		f1:m7 | des2:7 c:7.5+ | f1:m7 | des:7 | \myEndLine
+		g2:m7.5- c:7.5+ | f1:m7 | des:9 | g2:m7.5- c:7 | \myEndLine
+		\endPart
+
+		\myMark "A"
+		\startPart
+		f1:m7 | des2:7 c:7.5+ | f1:m7 | des:7 | \myEndLine
+		g2:m7.5- c:7.5+ | f1:m7 | des2:9 c:7.5+ | f1:m7 | \myEndLine
+		\endPart
+
+		\myMark "B"
+		\startPart
+		bes2:m7 ees:7 | aes:maj7 f:m7 | bes:m7 ees:7 | aes1:maj7 | \myEndLine
+		d2:m7 g:9 | c1:maj7 | des:9 | g2:m7.5- c:7 | \myEndLine
+		\endPart
+
+		\myMark "A"
+		\startPart
+		f1:m7 | des2:7 c:7.5+ | f1:m7 | des:7 | \myEndLine
+		g2:m7.5- c:7.5+ | f1:m7 | des2:9 c:7.5+ |
+	} \alternative {
+		{
+			f1:m6 | \myEndLineVoltaNotLast
+		}
+		{
+			f1:m6 | \myEndLineVoltaLast
+		}
+	}
+	\endPart
+
+	\endSong
+	\endChords
+}
+{% endif %}
+{% if part == "VoiceReal" %}{
+	\tempo "Adagio" 4 = 60
+	\time 4/4
+	\key aes \major
+
+	\partial 8 c8 |
+
+	\repeat volta 2 {
+		% part "A"
+		g'8 g~ g2 f4 | aes8 aes~ aes2 r8 g8 | f8 g aes bes c bes~ \tuplet 3/2 { bes8 aes g } | f2. r8 f8 |
+		g8 aes bes c des c ees des | c2. c4 | bes8 bes~ bes2 aes4 | g8 g~ g2 r8 c,8 |
+
+		% part "A"
+		g'8 g~ g2 f4 | aes8 aes~ aes2 r8 g8 | f8 g aes bes c bes~ \tuplet 3/2 { bes8 aes g } | f2. r8 f8 |
+		g8 aes bes c des c ees des | c2. c4 | bes8 bes~ bes2 aes4 | f8 f~ f2 f4 |
+
+		% part "B"
+		ees'8 ees~ ees2 des8 ees | c8 c4 c8~ c4. c8 | f,4. g8 aes bes4 c8~ | c8 ees4.~ ees4 ees8 ees |
+		e4. e8 e d4 g,8~ | g1 | g8 g4 g8~ g4. g8 | aes8 g~ g2 r8 c,8 |
+
+		% part "A"
+		g'8 g~ g2 f4 | aes8 aes~ aes2 r8 g8 | f8 g aes bes c bes~ \tuplet 3/2 { bes8 aes g } | f2. r8 f8 |
+		g8 aes bes c des c ees des | c2. c4 | bes8 bes~ bes2 aes4 |
+	} \alternative {
+		{
+			f8 f~ f2 r8 c8 |
+		}
+		{
+			f8 f~ f2. |
+		}
+	}
+}
+{% endif %}

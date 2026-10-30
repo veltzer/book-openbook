@@ -1,0 +1,80 @@
+{#
+default_version = "Fake"
+
+[attributes]
+title = "Cheryl"
+style = "Jazz"
+composer = "Charlie Parker"
+piece = "Fast"
+copyright = "1947 ATLANTIC MUSIC CORP."
+copyrightextra = "Renewed and assigned 1975 ATLANTIC MUSIC CORP."
+typesetter = "Mark Veltzer <mark.veltzer@gmail.com>"
+completion = "5"
+uuid = "fa385ca2-d499-11f1-8000-046874d194b7"
+structure = "Blues"
+location = "jfb:84"
+
+[[youtube]]
+id = "ezX2rG2kOCM"
+remark = "Charlie Parker All Stars with Miles Davis in the original recording (1947)"
+
+[[youtube]]
+id = "vsqU02toI7Y"
+remark = "Charlie Parker live (1949)"
+
+[versions.Fake]
+doChords = true
+doVoice = true
+doLyrics = false
+doLyricsmore = false
+doLyricsmoremore = false
+doChordBars = false
+doGuitar = false
+doExtra = false
+doPrep = false
+doOwn = false
+#}
+{% if part == "Vars" %}
+{% endif %}
+{% if part == "Doc" %}	DONE:
+	- added the meta data from the fake book.
+	- put in the tunes structure.
+	- put in the chords (fake book).
+	- put in the tune (fake book).
+	- added youtube performances.
+	TODO:
+	- check the chords (fake book).
+	- check the tune (fake book).
+	- hear the tune to check that it is right and adjust the tempo.
+	- the book starts with a full N.C. pickup bar before the 12 bar blues, here it is a \partial 1.
+{% endif %}
+{% if part == "ChordsFake" %}\chordmode {
+	\startChords
+	\startSong
+
+	\partial 1 r1 |
+
+	\myMark "A"
+	\startPart
+	c1:7 | c:7 | g:m7 | c:7 | \myEndLine
+	f1:7 | f:7 | c:7 | e2:m7.5- a:7 | \myEndLine
+	d1:m7 | g:7 | c:7 | d2:m7 g:7 | \myEndLine
+	\endPart
+
+	\endSong
+	\endChords
+}
+{% endif %}
+{% if part == "VoiceFake" %}{
+	\tempo "Allegro" 4 = 220
+	\time 4/4
+	\key c \major
+
+	\partial 1 r8 bes4 ees16 ges aes8 g des b |
+
+	% part "A"
+	c8 g'4 a8~ a e f g | e8 d r g d' c a g~ | g8 a bes a g4 r8 des'8 | c8 a bes c a g r c16 b |
+	a4 r bes8 ges ees c | aes'8 f ges g a, bes f' ees | e4 r8 f g f e d | \tuplet 3/2 { g4 a bes } \tuplet 3/2 { a e a, } |
+	aes8 d c a e'4. d8 | g4 r r c,~ | c4 d~ d8 f r a | g8 e r c f e c c |
+}
+{% endif %}

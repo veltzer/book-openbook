@@ -1,0 +1,127 @@
+{#
+default_version = "Fake"
+
+[attributes]
+title = "Ev'ry Time We Say Goodbye"
+style = "Jazz"
+composer = "Cole Porter"
+poet = "Cole Porter"
+piece = "Slowly"
+copyright = "1944 by Chappell & Co. Inc."
+copyrightextra = "Copyright Renewed."
+typesetter = "Mark Veltzer <mark.veltzer@gmail.com>"
+completion = "5"
+uuid = "24e3ba78-d49a-11f1-8000-046874d194b7"
+structure = "ABAC"
+location = "jfb:110"
+
+[[youtube]]
+id = "6oPpWeodc7Q"
+remark = "Ella Fitzgerald from the Cole Porter Song Book (1956)"
+
+[[youtube]]
+id = "-Y6DEGNKccs"
+remark = "John Coltrane from My Favorite Things (1961)"
+
+[versions.Fake]
+doChords = true
+doVoice = true
+doLyrics = false
+doLyricsmore = false
+doLyricsmoremore = false
+doChordBars = false
+doGuitar = false
+doExtra = false
+doPrep = false
+doOwn = false
+#}
+{% if part == "Vars" %}
+{% endif %}
+{% if part == "Doc" %}	DONE:
+	- added the meta data from the fake book.
+	- put in the tunes structure.
+	- put in the chords (fake book).
+	- put in the tune (fake book).
+	- added youtube performances.
+	TODO:
+	- add the lyrics.
+	- check the chords (fake book).
+	- check the tune (fake book).
+	- hear the tune to check that it is right and adjust the tempo.
+	- bar 16: the fake book has Fm7b5/Bb then Bb7, I put the Bb7 on beat 3.
+	- bar 24: the fake book prints the Db9 late in the bar, I put it on beat 3 like in bar 8.
+{% endif %}
+{% if part == "ChordsFake" %}\chordmode {
+	\startChords
+	\startSong
+
+	\myMark "A"
+	\startPart
+	\repeat volta 2 {
+		ees1:maj7 | f2:m7 bes:7 | g2:m7.5- c:7 | f2:m7 bes4:7 bes:7/aes | \myEndLine
+		g2:m7.5- c:7.9- | f2:m7 bes:7 | bes2:m7 ees:7 | aes2:m7 des:9 | \myEndLine
+		\endPart
+
+		\myMark "B"
+		\startPart
+		ees2/g ges:dim7 | f2:m7.5- bes:7 | bes2:m7 ees:7 | aes1:maj7 | \myEndLine
+		aes2:m7 des:9 | ees1:maj7 | b1:9 | f2:m7.5-/bes bes:7 | \myEndLine
+		\endPart
+
+		\myMark "A"
+		\startPart
+		ees1:maj7 | f2:m7 bes:7 | g2:m7.5- c:7 | f2:m7 bes4:7 bes:7/aes | \myEndLine
+		g2:m7.5- c:7.9- | f2:m7 bes:7 | bes2:m7 ees:7 | aes2:maj7 des:9 | \myEndLine
+		\endPart
+
+		\myMark "C"
+		\startPart
+		ees2/g ges:dim7 | f2:m7.5- bes:7 | ees2:7 aes:maj7 | aes2:m7 des:7 | \myEndLine
+		ees2:maj7 c:7 |
+	} \alternative {
+		{
+			f2:9 aes4/bes bes:7 | ees2 ges:dim7 | f2:m7 bes:7 | \myEndLineVoltaNotLast
+		}
+		{
+			f2:9 f4:m7/bes b:dim7 | c2:m c:m/bes | a2:m7.5- d:7 | \myEndLine
+			g2:m7.5- c:7 | f2:7 bes:7 | ees1*2 | \myEndLineVoltaLast
+		}
+	}
+	\endPart
+
+	\endSong
+	\endChords
+}
+{% endif %}
+{% if part == "VoiceFake" %}{
+	\tempo "Adagio" 4 = 60
+	\time 4/4
+	\key ees \major
+
+	\repeat volta 2 {
+		% part "A"
+		g'4. g8 g2~ | g4 g g g | g2. g4 | aes2~ aes8 f ees d |
+		r8 bes'4 bes8 bes2~ | bes4 bes bes bes | bes2~ bes8 g aes bes | ces2~ ces8 aes g f |
+
+		% part "B"
+		r8 ees'4 ees8 ees4 ees | ees4 d2 bes4 | des4 r8 g,8~ g aes4 bes8 | c1 |
+		r8 ces4 ces8 ces ces4. | ces4 bes2 ees,8 f | ges8 ges4 ees8 ges4 f~ | f2. r4 |
+
+		% part "A"
+		g4. g8 g2~ | g4 g g g | g2. g4 | aes2~ aes8 f ees d |
+		r8 bes'4 bes8 bes2~ | bes4 bes bes bes | bes2~ bes8 g aes bes | c2~ c8 aes g f |
+
+		% part "C"
+		r8 ees'4 ees8 f4 ees | ees4 d2 bes8 c | des4. g,8 c4. f,8 | ees8 d ees bes'~ bes4 aes |
+		g4. g8 g2~ |
+	} \alternative {
+		{
+			g4 f ees d | ees1~ | ees4 r r2 |
+		}
+		{
+			g4 f ees d | ees1 | d'4 des c ces |
+			bes2. c4 | f2. c4 | ees1~ | ees2. r4 |
+		}
+	}
+}
+{% endif %}

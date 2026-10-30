@@ -1,0 +1,124 @@
+{#
+default_version = "Fake"
+
+[attributes]
+title = "Bernie's Tune"
+style = "Jazz"
+composer = "Bernie Miller"
+poet = "Mike Stoller, Jerry Leiber"
+piece = "Moderately, with a beat"
+copyright = "1953-1954-1955 ATLANTIC MUSIC CORP."
+copyrightextra = "Renewed 1981-1982 Assigned to ATLANTIC MUSIC CORP."
+typesetter = "Mark Veltzer <mark.veltzer@gmail.com>"
+completion = "5"
+uuid = "fa385ca0-d499-11f1-8000-046874d194b7"
+structure = "AABA"
+location = "jfb:55"
+
+[[youtube]]
+id = "bheZvff6qOc"
+remark = "Gerry Mulligan Quartet in the original recording (1952)"
+
+[[youtube]]
+id = "xGyagvDZxZ8"
+remark = "Gerry Mulligan Quartet with Chet Baker (1953)"
+
+[versions.Fake]
+doChords = true
+doVoice = true
+doLyrics = false
+doLyricsmore = false
+doLyricsmoremore = false
+doChordBars = false
+doGuitar = false
+doExtra = false
+doPrep = false
+doOwn = false
+#}
+{% if part == "Vars" %}
+{% endif %}
+{% if part == "Doc" %}	DONE:
+	- added the meta data from the fake book.
+	- put in the tunes structure.
+	- put in the chords (fake book).
+	- put in the tune (fake book).
+	- added youtube performances.
+	TODO:
+	- add the lyrics.
+	- check the chords (fake book).
+	- check the tune (fake book).
+	- hear the tune to check that it is right and adjust the tempo.
+	- the book anticipates the bridge chords by an eighth (Fm7 and Bb7 fall on the
+		last eighth before the beat), here they are on the beat.
+{% endif %}
+{% if part == "ChordsFake" %}\chordmode {
+	\startChords
+	\startSong
+
+	\repeat volta 2 {
+
+		\myMark "A"
+		\startPart
+		d1:m6 | d:m6 | bes:7.5- | bes:7.5- | \myEndLine
+		a1:7 | a:7 | d:m6 | d:m6 | \myEndLine
+		\endPart
+
+		\myMark "A"
+		\startPart
+		d1:m6 | d:m6 | bes:7.5- | bes:7.5- | \myEndLine
+		a1:7 | a:7 | d:m6 | d:m6 | \myEndLine
+		\endPart
+
+		\myMark "B"
+		\startPart
+		bes1:7 | f2:m7 bes:7 | bes1:7 | f:m7 | \myEndLine
+		bes1:7 | f2:m7 bes:7 | a1:7 | a:7 | \myEndLine
+		\endPart
+
+		\myMark "A"
+		\startPart
+		d1:m6 | d:m6 | bes:7.5- | bes:7.5- | \myEndLine
+	} \alternative {
+		{
+			a1:7 | a:7 | d:m6 | d:m6 | \myEndLineVoltaNotLast
+		}
+		{
+			a1:7 | a:7 | d:m6 | d:m6 | \myEndLineVoltaLast
+		}
+	}
+	\endPart
+
+	\endSong
+	\endChords
+}
+{% endif %}
+{% if part == "VoiceFake" %}{
+	\tempo "Moderato" 4 = 150
+	\time 4/4
+	\key f \major
+
+	\repeat volta 2 {
+		% part "A"
+		r8 a'4 gis8 a4. a8~ | a8 gis a4 a,8 d f a | gis2.~ gis8 e~ | e4 r r2 |
+		r8 g4 fis8 g4. g8~ | g8 fis g4 a,8 cis e g | f2.~ f8 d~ | d4 r r2 |
+
+		% part "A"
+		r8 a'4 gis8 a4. a8~ | a8 gis a4 a,8 d f a | gis2.~ gis8 e~ | e4 r r2 |
+		r8 g4 fis8 g4. g8~ | g8 fis g4 a,8 cis e g | f2.~ f8 d~ | d4 r r2 |
+
+		% part "B"
+		bes4 bes g'8 f d c~ | c4. d8~ d4 r | bes4 bes g'8 f d c~ | c1 |
+		bes4 bes g'8 f d c~ | c4. d8~ d4 r | r8 a'4 a8 a2~ | a2. r4 |
+
+		% part "A"
+		r8 a4 gis8 a4. a8~ | a8 gis a4 a,8 d f a | gis2.~ gis8 e~ | e4 r r2 |
+	} \alternative {
+		{
+			r8 g4 fis8 g4. g8~ | g8 fis g4 a,8 cis e g | f2.~ f8 d~ | d4 r r2 |
+		}
+		{
+			r8 g4 fis8 g4. g8~ | g8 fis g4 a8 a a a | d1~ | d2 r2 |
+		}
+	}
+}
+{% endif %}

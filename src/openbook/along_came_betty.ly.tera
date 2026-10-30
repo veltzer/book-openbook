@@ -1,0 +1,106 @@
+{#
+default_version = "Fake"
+
+[attributes]
+title = "Along Came Betty"
+style = "Jazz"
+composer = "Benny Golson"
+piece = "Medium bounce"
+copyright = "1958 (Renewed 1986) TIME STEP MUSIC (ASCAP)"
+copyrightextra = "All Rights Administered by MAYFLOWER MUSIC CORPORATION (ASCAP)"
+typesetter = "Mark Veltzer <mark.veltzer@gmail.com>"
+completion = "5"
+uuid = "450d1706-d49b-11f1-8000-046874d194b7"
+structure = "ABCA'"
+location = "jfb:43"
+
+[[youtube]]
+id = "6lJeothOwCU"
+remark = "Art Blakey and the Jazz Messengers in the original recording from Moanin' (1958)"
+
+[[youtube]]
+id = "x4_CX-KAZ6Q"
+remark = "Benny Golson Sextet"
+
+[versions.Fake]
+doChords = true
+doVoice = true
+doLyrics = false
+doLyricsmore = false
+doLyricsmoremore = false
+doChordBars = false
+doGuitar = false
+doExtra = false
+doPrep = false
+doOwn = false
+#}
+{% if part == "Vars" %}
+{% endif %}
+{% if part == "Doc" %}	DONE:
+	- added the meta data from the fake book.
+	- put in the tunes structure.
+	- put in the chords (fake book).
+	- put in the tune (fake book).
+	- added youtube performances.
+	TODO:
+	- check the chords (fake book).
+	- check the tune (fake book).
+	- hear the tune to check that it is right and adjust the tempo.
+	- bar 5: the third note is printed as A without an accidental (Ab by the key), maybe it should be A natural (AM7).
+	- bar 12: the fake book puts C9 near beat 4, here it is on beat 3.
+	- bar 32: F# E F# follows the accidentals of the bar as printed (the triplet has no accidentals of its own).
+{% endif %}
+{% if part == "ChordsFake" %}\chordmode {
+	\startChords
+	\startSong
+
+	\myMark "A"
+	\startPart
+	bes1:m7 | b2:m7 e:9 | bes1:m7 | b2:m7 e:9 | \myEndLine
+	a1:maj7 | aes:7 | g:maj7 | ges:7 | \myEndLine
+	\endPart
+
+	\myMark "B"
+	\startPart
+	ges1:m7 | g2:m7 c:9 | ges1:m7 | g2:m7 c:9 | \myEndLine
+	f1:maj7 | a:7.5+.9- | d:m7 | g2:13 g:7.5+ | \myEndLine
+	\endPart
+
+	\myMark "C"
+	\startPart
+	c1:m7 | f:7.9- | a2:m7.5- d:7.9- | g1:m7 | \myEndLine
+	e1:m7.5- | a:7.9- | f:m7 | bes:7 | \myEndLine
+	\endPart
+
+	\myMark "A"
+	\startPart
+	bes1:m7 | b2:m7 e:9 | bes1:m7 | b2:m7 e:9 | \myEndLine
+	c1:m7.5- | f:7 | bes:m7.5- | ees:7.9+ | aes1*2:maj9 | \myEndLine
+	\endPart
+
+	\endSong
+	\endChords
+}
+{% endif %}
+{% if part == "VoiceFake" %}{
+	\tempo "Moderato" 4 = 132
+	\time 4/4
+	\key aes \major
+
+	% part "A"
+	r2 c'8 r bes des~ | des1 | r4 r8 c8~ c bes a bes | des1 |
+	r8 e, fis aes \tuplet 3/2 { b r a } \tuplet 3/2 { r a f } | aes1 | r8 d, e fis a r g fis~ | fis1 |
+
+	% part "B"
+	r2 aes8 r ges a~ | a1 | r4 r8 aes~ aes ges f ges | a2. c8 g~ |
+	g4. f8 c' b bes g | \tuplet 3/2 { a4 bes g } a4. a8 | d,8 e f g a d des d | a2~ a4. d8~ |
+
+	% part "C"
+	d8 ees d bes c2 | r8 ees, ges g c ees d des | c2~ c8 d c a | bes8 d, g a bes d c b |
+	bes1 | r8 e, g a \tuplet 3/2 { c r b } \tuplet 3/2 { r bes a } | aes4. g8~ \tuplet 3/2 { g4 bes aes } | f4~ \tuplet 3/2 { f8 c ees } d4 r4 |
+
+	% part "A"
+	r2 c'8 r bes des~ | des1 | r4 r8 c8~ c bes a bes | des2. c8 ees~ |
+	ees1~ | ees4. des8 r c r f, | e1 | fis4. e8 \tuplet 3/2 { fis4 e fis } | ees1~ | ees1 |
+}
+{% endif %}

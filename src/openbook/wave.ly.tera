@@ -1,0 +1,135 @@
+{#
+default_version = "Real"
+
+[attributes]
+title = "Wave"
+style = "Jazz"
+composer = "Antonio Carlos Jobim"
+poet = "Antonio Carlos Jobim"
+piece = "Medium Bossa Nova"
+copyright = "1967, 1968 Antonio Carlos Jobim"
+copyrightextra = "Copyright Renewed. Published by Corcovado Music Corp."
+typesetter = "Mark Veltzer <mark.veltzer@gmail.com>"
+completion = "5"
+uuid = "7d1ce14b-d49a-11f1-8000-046874d194b7"
+structure = "AABA"
+location = "hlrjb:360"
+
+[[youtube]]
+id = "JGqzKmp_5Bg"
+remark = "Antonio Carlos Jobim in the original recording from Wave (1967)"
+
+[[youtube]]
+id = "5IAg6XY-0rI"
+remark = "Oscar Peterson"
+
+[versions.Real]
+doChords = true
+doVoice = true
+doLyrics = false
+doLyricsmore = false
+doLyricsmoremore = false
+doChordBars = false
+doGuitar = false
+doExtra = false
+doPrep = false
+doOwn = false
+#}
+{% if part == "Vars" %}
+{% endif %}
+{% if part == "Doc" %}	DONE:
+	- added the meta data from the Hal Leonard Real Jazz Book.
+	- put in the tunes structure.
+	- put in the chords (Hal Leonard Real Jazz Book).
+	- put in the tune (Hal Leonard Real Jazz Book).
+	- added youtube performances.
+	TODO:
+	- add the lyrics.
+	- check the chords (Hal Leonard Real Jazz Book).
+	- check the tune (Hal Leonard Real Jazz Book).
+	- hear the tune to check that it is right and adjust the tempo.
+	- the book repeats the whole chorus and ends on a single Dm7 bar, this is written as two endings.
+{% endif %}
+{% if part == "ChordsReal" %}\chordmode {
+	\startChords
+	\startSong
+
+	\partial 2 s2 |
+
+	\repeat volta 2 {
+
+		\myMark "A"
+		\startPart
+		d1:maj7 | bes:dim7 | a:m7 | d:7.9- | \myEndLine
+		g1:maj7 | g:m6 | fis2:13 fis:7.5+ | b:9sus4 b:7.9- | \myEndLine
+		e2:9sus4 e:9 | bes:7 a:7 | d:m7 g:7 | d:m7 g:7 | \myEndLine
+		\endPart
+
+		\myMark "A"
+		\startPart
+		d1:maj7 | bes:dim7 | a:m7 | d:7.9- | \myEndLine
+		g1:maj7 | g:m6 | fis2:13 fis:7.5+ | b:9sus4 b:7.9- | \myEndLine
+		e2:9sus4 e:9 | bes:7 a:7 | d:m7 g:7 | d:m7 g:7 | \myEndLine
+		\endPart
+
+		\myMark "B"
+		\startPart
+		g1:m7 | c:9/bes | a:m7 | a:m7 | \myEndLine
+		bes1:9sus4 | bes:9/aes | g:m7 | a:7.5+.9- | \myEndLine
+		\endPart
+
+		\myMark "A"
+		\startPart
+		d1:maj7 | bes:dim7 | a:m7 | d:7.9- | \myEndLine
+		g1:maj7 | g:m6 | fis2:13 fis:7.5+ | b:9sus4 b:7.9- | \myEndLine
+		e2:9sus4 e:9 | bes:7 a:7 | d:m7 g:7 |
+	} \alternative {
+		{
+			d2:m7 g:7 | \myEndLineVoltaNotLast
+		}
+		{
+			d1:m7 | \myEndLineVoltaLast
+		}
+	}
+	\endPart
+
+	\endSong
+	\endChords
+}
+{% endif %}
+{% if part == "VoiceReal" %}{
+	\tempo "Moderato" 4 = 120
+	\time 4/4
+	\key d \major
+
+	\partial 2 r8 b'8 d cis |
+
+	\repeat volta 2 {
+		% part "A"
+		a2.. fis8 | g8 bes cis e g8 fis4 a8~ | a1~ | a4 a8 a~ a b4 a8~ |
+		a8 g4 g8 fis4 g~ | g4 fis8 g~ g a4 fis8~ | fis1 | r8 fis8 a aes g fis4 fis8~ |
+		fis8 d d d~ d b d e | f8 d c aes g8 f4 f8~ | f8 d4.~ d2 | r2 r8 b'8 d cis |
+
+		% part "A"
+		a2.. fis8 | g8 bes cis e g8 fis4 a8~ | a1~ | a4 a8 a~ a b4 a8~ |
+		a8 g4 g8 fis4 g~ | g4 fis8 g~ g a4 fis8~ | fis1 | r8 fis8 a aes g fis4 fis8~ |
+		fis8 d d d~ d b d e | f8 d c aes g8 f4 f8~ | f8 d4.~ d2 | r1 |
+
+		% part "B"
+		d'2 \tuplet 3/2 { c4 bes a } | g2 \tuplet 3/2 { a4 bes d } | c4. c8 c2~ | c2 r2 |
+		c2 \tuplet 3/2 { bes4 aes g } | f2 \tuplet 3/2 { g4 aes c } | bes4. bes8 bes2~ | bes2 r8 bes8 d cis |
+
+		% part "A"
+		a2.. fis8 | g8 bes cis e g8 fis4 a8~ | a1~ | a4 a8 a~ a b4 a8~ |
+		a8 g4 g8 fis4 g~ | g4 fis8 g~ g a4 fis8~ | fis1 | r8 fis8 a aes g fis4 fis8~ |
+		fis8 d d d~ d b d e | f8 d c aes g8 f4 f8~ | f8 d4.~ d2 |
+	} \alternative {
+		{
+			r1 |
+		}
+		{
+			r1 |
+		}
+	}
+}
+{% endif %}

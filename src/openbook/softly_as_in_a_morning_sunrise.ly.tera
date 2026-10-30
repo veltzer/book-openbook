@@ -1,0 +1,106 @@
+{#
+default_version = "Real"
+
+[attributes]
+title = "Softly As In A Morning Sunrise"
+subtitle = "from The New Moon"
+style = "Jazz"
+composer = "Sigmund Romberg"
+poet = "Oscar Hammerstein II"
+piece = "Moderately"
+copyright = "1928 by Bambalina Music Publishing Co. and Warner Bros. Inc. in the United States"
+copyrightextra = "Copyright Renewed. All Rights on behalf of Bambalina Music Publishing Co. Administered by Williamson Music."
+typesetter = "Mark Veltzer <mark.veltzer@gmail.com>"
+completion = "5"
+uuid = "5dbce0c0-d49a-11f1-8000-046874d194b7"
+structure = "AABA"
+location = "hlrjb:316"
+
+[[youtube]]
+id = "j7Ajbb9zDHU"
+remark = "Sonny Clark Trio (1957)"
+
+[[youtube]]
+id = "VlViBYcZpJ0"
+remark = "John Coltrane live at the Village Vanguard (1961)"
+
+[versions.Real]
+doChords = true
+doVoice = true
+doLyrics = false
+doLyricsmore = false
+doLyricsmoremore = false
+doChordBars = false
+doGuitar = false
+doExtra = false
+doPrep = false
+doOwn = false
+#}
+{% if part == "Vars" %}
+{% endif %}
+{% if part == "Doc" %}	DONE:
+	- added the meta data from the Hal Leonard Real Jazz Book.
+	- put in the tunes structure.
+	- put in the chords (Hal Leonard Real Jazz Book).
+	- put in the tune (Hal Leonard Real Jazz Book).
+	- added youtube performances.
+	TODO:
+	- add the lyrics.
+	- check the chords (Hal Leonard Real Jazz Book).
+	- check the tune (Hal Leonard Real Jazz Book).
+	- hear the tune to check that it is right and adjust the tempo.
+{% endif %}
+{% if part == "ChordsReal" %}\chordmode {
+	\startChords
+	\startSong
+
+	\myMark "A"
+	\startPart
+	c1:m7 | d2:m7.5- g:7 | c1:m7 | d2:m7.5- g:7 | \myEndLine
+	c1:m7 | d2:m7.5- g:7 | c1:m7 | d2:m7.5- g:7 | \myEndLine
+	\endPart
+
+	\myMark "A"
+	\startPart
+	c1:m7 | d2:m7.5- g:7 | c1:m7 | d2:m7.5- g:7 | \myEndLine
+	c1:m7 | d2:m7.5- g:7 | c1:m7 | f2:m7 bes:7 | \myEndLine
+	\endPart
+
+	\myMark "B"
+	\startPart
+	ees1*2:maj7 | c1*2:7.9- | \myEndLine
+	f1:m7 | fis:dim7 | g:7 | d2:m7.5- g:7 | \myEndLine
+	\endPart
+
+	\myMark "A"
+	\startPart
+	c1:m7 | d2:m7.5- g:7 | c1:m7 | d2:m7.5- g:7 | \myEndLine
+	c1:m7 | d2:m7.5- g:7 | c1*2:m7 | \myEndLine
+	\endPart
+
+	\endSong
+	\endChords
+}
+{% endif %}
+{% if part == "VoiceReal" %}{
+	\tempo "Moderato" 4 = 120
+	\time 4/4
+	\key c \minor
+
+	% part "A"
+	c'2 g | r8 f g f g4 f | c'2 ees, | r8 d ees d ees4 d |
+	g2 c, | r8 g' aes g ees4 d | c1 | g'1 |
+
+	% part "A"
+	c2 g | r8 f g f g4 f | c'2 ees, | r8 d ees d ees4 d |
+	g2 c, | r8 g' aes g ees4 d | c1 | \tuplet 3/2 { r4 d ees } \tuplet 3/2 { f g aes } |
+
+	% part "B"
+	bes2 ees, | r8 bes' c bes c4 bes | bes2 e,~ | \tuplet 3/2 { e4 e f } \tuplet 3/2 { g aes bes } |
+	c2 f, | r8 c' d c d4 c | d2. d4 | f4 f ees d |
+
+	% part "A"
+	c2 g | r8 f g f g4 f | c'2 ees, | r8 d ees d ees4 d |
+	g2 c, | r8 g' aes g ees'4 d | c1~ | c2 r2 |
+}
+{% endif %}

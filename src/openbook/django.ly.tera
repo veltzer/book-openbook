@@ -1,0 +1,76 @@
+{#
+default_version = "Fake"
+
+[attributes]
+title = "Django"
+style = "Jazz"
+composer = "John Lewis"
+piece = "Medium Swing"
+copyright = "1955 and Renewal of Copyright 1983 by MJQ Music Inc."
+typesetter = "Mark Veltzer <mark.veltzer@gmail.com>"
+completion = "5"
+uuid = "91ef1323-d49a-11f1-8000-046874d194b7"
+structure = "A"
+location = "jfb:100"
+
+[[youtube]]
+id = "wXnkD7_5vqM"
+remark = "The Modern Jazz Quartet in the original recording from Django (1956)"
+
+[[youtube]]
+id = "kfxfl2Tlmio"
+remark = "The Modern Jazz Quartet live in London"
+
+[versions.Fake]
+doChords = true
+doVoice = true
+doLyrics = false
+doLyricsmore = false
+doLyricsmoremore = false
+doChordBars = false
+doGuitar = false
+doExtra = false
+doPrep = false
+doOwn = false
+#}
+{% if part == "Vars" %}
+{% endif %}
+{% if part == "Doc" %}	DONE:
+	- added the meta data from the fake book.
+	- put in the tunes structure.
+	- put in the chords (fake book).
+	- put in the tune (fake book).
+	- added youtube performances.
+	TODO:
+	- check the chords (fake book).
+	- check the tune (fake book).
+	- hear the tune to check that it is right and adjust the tempo.
+	- the fake book only has the 20 bar theme, add the rest of the form from another book.
+	- bar 12 (C7): the book prints Eb (no accidental) before a D natural, check if it should be E natural.
+{% endif %}
+{% if part == "ChordsFake" %}\chordmode {
+	\startChords
+	\startSong
+
+	\myMark "A"
+	\startPart
+	f1:m7 | bes2:m7 g:m7.5- | c1:7.9- | f1:m | f:7 | bes:m7 | ees:9 | \myEndLine
+	aes2:maj7 aes:6 | des1:maj7 | g:m7.5- | g:7 | c:7 | f:m9 | bes2.:m9 bes4:m6 | \myEndLine
+	c2.:7.5+ c4:7 | f1*2:m | bes2.:m9 bes4:m6 | c2.:7.5+ c4:7 | f1:m | \myEndLine
+	\endPart
+
+	\endSong
+	\endChords
+}
+{% endif %}
+{% if part == "VoiceFake" %}{
+	\tempo "Moderato" 4 = 120
+	\time 4/4
+	\key f \minor
+
+	% part "A"
+	r4 aes'2 g4 | f4. e8 f4 des | r4 bes'2 des4 | aes4. g8 aes4 f | r4 c'2 ees4 | des4. c8 des4 bes | r4 bes2 des4 |
+	c4. b8 c4 aes | r4 aes2 c4 | bes4. a8 bes4 g | b4. a8 b4 g | ees'4. d8 ees4 g | r4 g2 f4 | r4 ees2 des4 |
+	r4 c2 bes4 | bes2 aes4 r | r4 g2 f4 | r4 ees2 des4 | r4 c2 bes4 | bes2 aes |
+}
+{% endif %}

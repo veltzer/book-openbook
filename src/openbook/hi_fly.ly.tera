@@ -1,0 +1,112 @@
+{#
+default_version = "Fake"
+
+[attributes]
+title = "Hi-Fly"
+style = "Jazz"
+composer = "Randy Weston"
+piece = "Medium swing"
+copyright = "1958 (Renewed 1987) Black Sun Music (SESAC)"
+copyrightextra = "All Rights Administered by Mayflower Music Corporation (ASCAP)"
+typesetter = "Mark Veltzer <mark.veltzer@gmail.com>"
+completion = "5"
+uuid = "6415a724-d49a-11f1-8000-046874d194b7"
+structure = "AABA"
+location = "jfb:146"
+
+[[youtube]]
+id = "nv4-ZI_EtyE"
+remark = "Randy Weston live at the Five Spot Cafe, New York (1959)"
+
+[[youtube]]
+id = "7r4VJq_pXgI"
+remark = "Cannonball Adderley"
+
+[versions.Fake]
+doChords = true
+doVoice = true
+doLyrics = false
+doLyricsmore = false
+doLyricsmoremore = false
+doChordBars = false
+doGuitar = false
+doExtra = false
+doPrep = false
+doOwn = false
+#}
+{% if part == "Vars" %}
+{% endif %}
+{% if part == "Doc" %}	DONE:
+		- added the meta data from the fake book.
+		- put in the tunes structure.
+		- put in the chords (fake book).
+		- put in the tune (fake book).
+		- added youtube performances.
+	TODO:
+		- check the chords (fake book).
+		- check the tune (fake book).
+		- hear the tune to check that it is right and adjust the tempo.
+		- the fake book calls this tune "High Fly".
+{% endif %}
+{% if part == "ChordsFake" %}\chordmode {
+	\startChords
+	\startSong
+
+	\myMark "A"
+	\startPart
+	\repeat volta 2 {
+		d1:m7 | g:7 | c2:maj7 f:7 | e2:m7 a:7 | \myEndLine
+		c1:m7 | f:7 |
+	} \alternative {
+		{
+			bes1:13 | b:13 | \myEndLineVoltaNotLast
+		}
+		{
+			d1:m7.5- | g:7.9- | \myEndLineVoltaLast
+		}
+	}
+	\endPart
+
+	\myMark "B"
+	\startPart
+	c1:m7.5- | f:7.9- | d:m7 | g:7.9- | \myEndLine
+	c1:m7.5- | f:7.9- | e2:m7 a:7 | ees2:m7 aes:7 | \myEndLine
+	\endPart
+
+	\myMark "A"
+	\startPart
+	d1:m7 | g:7 | c2:maj7 f:7 | e2:m7 a:7 | \myEndLine
+	c1:m7 | f:7 | bes1:13.5- | b:13.5- | \myEndLine
+	\endPart
+
+	\endSong
+	\endChords
+}
+{% endif %}
+{% if part == "VoiceFake" %}{
+	\tempo "Moderato" 4 = 140
+	\time 4/4
+	\key c \major
+
+	% part "A"
+	\repeat volta 2 {
+		g'8 g d'16 g,8 g16~ g2 | r4 g8 g d'16 g,8 g16~ g4 | g8 g d'16 g,8 g16~ g2 | r4 g8 g d'16 g,8 g16~ g4 |
+		g8 g d'16 g,8 g16~ g2 | r4 g8 g d'16 g,8 g16~ g8 f |
+	} \alternative {
+		{
+			g2. r8 f | aes1 |
+		}
+		{
+			g2. r8 f | aes2. f'4 |
+		}
+	}
+
+	% part "B"
+	ees1 | r2 \tuplet 3/2 { d4 c b } | a1 | aes2. f'4 |
+	ees1 | r2 \tuplet 3/2 { d4 c b } | a2. r8 a | aes1 |
+
+	% part "A"
+	g8 g d'16 g,8 g16~ g2 | r4 g8 g d'16 g,8 g16~ g4 | g8 g d'16 g,8 g16~ g2 | r4 g8 g d'16 g,8 g16~ g4 |
+	g8 g d'16 g,8 g16~ g2 | r4 g8 g d'16 g,8 g16~ g8 f | g2. r8 f | aes1 |
+}
+{% endif %}

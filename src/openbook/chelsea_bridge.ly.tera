@@ -1,0 +1,122 @@
+{#
+default_version = "Fake"
+
+[attributes]
+title = "Chelsea Bridge"
+style = "Jazz"
+composer = "Billy Strayhorn"
+piece = "Moderately"
+copyright = "1941, 1942 by Tempo Music, Inc."
+copyrightextra = "Copyright renewed and assigned to Tempo Music, Inc."
+typesetter = "Mark Veltzer <mark.veltzer@gmail.com>"
+completion = "5"
+uuid = "fa385ca1-d499-11f1-8000-046874d194b7"
+structure = "AABA"
+location = "jfb:83"
+
+[[youtube]]
+id = "VKRRH1BtWQY"
+remark = "Duke Ellington and his Orchestra in the original recording (1941)"
+
+[[youtube]]
+id = "pR3Bs8Ntu9c"
+remark = "Joe Henderson Sextet"
+
+[versions.Fake]
+doChords = true
+doVoice = true
+doLyrics = false
+doLyricsmore = false
+doLyricsmoremore = false
+doChordBars = false
+doGuitar = false
+doExtra = false
+doPrep = false
+doOwn = false
+#}
+{% if part == "Vars" %}
+{% endif %}
+{% if part == "Doc" %}	DONE:
+	- added the meta data from the fake book.
+	- put in the tunes structure.
+	- put in the chords (fake book).
+	- put in the tune (fake book).
+	- added youtube performances.
+	TODO:
+	- check the chords (fake book).
+	- check the tune (fake book).
+	- hear the tune to check that it is right and adjust the tempo.
+	- the book has a D.S. al Fine, here the last A is written out.
+	- the book prints a bar line in the middle of the F#m7 F9 bar of the bridge
+		(bar 19), here it is one 4/4 bar.
+{% endif %}
+{% if part == "ChordsFake" %}\chordmode {
+	\startChords
+	\startSong
+
+	\partial 2. s2. |
+
+	\myMark "A"
+	\startPart
+	\repeat volta 2 {
+		ees1:9.11+ | des:9.11+ | ees2:9.11+ des:9.11+ | bes1:9 | \myEndLine
+		ees1:m7 | aes:13 | des:6 |
+	} \alternative {
+		{
+			c2:7 b4:9 bes:9 | \myEndLineVoltaNotLast
+		}
+		{
+			des2:6 c4:9 b:9 | \myEndLineVoltaLast
+		}
+	}
+	\endPart
+
+	\myMark "B"
+	\startPart
+	fis2:m7 b:7 | e:maj7 cis:m7 | fis:m7 f:9 | b:m7 e:7 | \myEndLine
+	a2:maj7 a4:m7 d:7 | g1:maj7 | g:m7 | des4:9.11+ c:9 b:9 bes:9 | \myEndLine
+	\endPart
+
+	\myMark "A"
+	\startPart
+	ees1:9.11+ | des:9.11+ | ees2:9.11+ des:9.11+ | bes1:9 | \myEndLine
+	ees1:m7 | aes:13 | des:6 | \myEndLine
+	\endPart
+
+	\endSong
+	\endChords
+}
+{% endif %}
+{% if part == "VoiceFake" %}{
+	\tempo "Moderato" 4 = 90
+	\time 4/4
+	\key des \major
+
+	\partial 2. bes8 c des ees \tuplet 3/2 { f ges aes } |
+
+	% part "A"
+	\repeat volta 2 {
+		a2. bes8 g | ges2. aes8 a~ | a4 bes8 g~ g4 aes8 d,~ | d1 |
+		f8 des~ des2. | f8 aes~ aes2. | f8 des~ des2. |
+	} \alternative {
+		{
+			r4 bes8 c des ees \tuplet 3/2 { f ges aes } |
+		}
+		{
+			r2 r4 aes8 a |
+		}
+	}
+
+	% part "B"
+	\key e \major
+	b8 b b b b4 b8 b | b8 cis, \tuplet 3/2 { e gis b } dis4. e8 |
+	b8 gis' e cis c g'4 dis8 | d2. e,8 fis |
+	gis4. a8 e'4 d8 c | b8 d d2 c8 b | bes4 g8 bes d4 bes8 d |
+	g4 bes,,8 c des ees \tuplet 3/2 { f ges aes } |
+
+	% part "A"
+	\key des \major
+	a2. bes8 g | ges2. aes8 a~ | a4 bes8 g~ g4 aes8 d,~ | d1 |
+	f8 des~ des2. | f8 aes~ aes2. | f8 des~ des2. |
+}
+{% endif %}

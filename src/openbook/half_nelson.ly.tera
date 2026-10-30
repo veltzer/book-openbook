@@ -1,0 +1,84 @@
+{#
+default_version = "Fake"
+
+[attributes]
+title = "Half Nelson"
+style = "Jazz"
+composer = "Miles Davis"
+piece = "Medium Swing"
+copyright = "1948 by Screen Gems-EMI Music Inc."
+typesetter = "Mark Veltzer <mark.veltzer@gmail.com>"
+completion = "5"
+uuid = "6415a723-d49a-11f1-8000-046874d194b7"
+structure = "A"
+location = "jfb:140"
+
+[[youtube]]
+id = "3jdQChUmMNs"
+remark = "Miles Davis with Charlie Parker in the original recording (1947)"
+
+[[youtube]]
+id = "Fv3AzlnZIBI"
+remark = "Miles Davis Quintet from Workin' (1956)"
+
+[versions.Fake]
+doChords = true
+doVoice = true
+doLyrics = false
+doLyricsmore = false
+doLyricsmoremore = false
+doChordBars = false
+doGuitar = false
+doExtra = false
+doPrep = false
+doOwn = false
+#}
+{% if part == "Vars" %}
+{% endif %}
+{% if part == "Doc" %}	DONE:
+		- added the meta data from the fake book.
+		- put in the tunes structure.
+		- put in the chords (fake book).
+		- put in the tune (fake book).
+		- added youtube performances.
+	TODO:
+		- check the chords (fake book).
+		- check the tune (fake book).
+		- hear the tune to check that it is right and adjust the tempo.
+		- bar 8: the next to last note has no accidental in the book so it is an A flat (carried from the start of the bar), check against a recording.
+		- bar 4: the book prints Fm7 and Bb7 close together at the start of the bar, I put them on beats 1 and 3.
+{% endif %}
+{% if part == "ChordsFake" %}\chordmode {
+	\startChords
+	\startSong
+
+	\myMark "A"
+	\startPart
+	\repeat volta 2 {
+		c1*2 | f2:m7 bes:7 | f2:m7 bes:7 | \myEndLine
+		c1*2 | b1:m7 | bes2:m7 ees:7 | \myEndLine
+
+		aes1*2 | a1:m7 | d:7 | \myEndLine
+		d2:m7 g:7 | d2:m7 g:7 | c2 ees:maj7 | aes2:maj7 des:maj7 | \myEndLine
+	}
+	\endPart
+
+	\endSong
+	\endChords
+}
+{% endif %}
+{% if part == "VoiceFake" %}{
+	\tempo "Moderato" 4 = 160
+	\time 4/4
+	\key c \major
+
+	% part "A"
+	\repeat volta 2 {
+		r8 g'8 e f~ f f16 a b8 c~ | c8 d16 c b2. | bes4 \tuplet 3/2 { aes8 bes aes } g f r4 | r2 r8 c'16 b bes8 aes |
+		g8 r r a~ a b4 c8 | d8 c d c b a4 fis8~ | \tuplet 3/2 { fis8 g gis } a fis~ \tuplet 3/2 { fis g gis } a f~ | \tuplet 3/2 { f8 fis g } aes f~ \tuplet 3/2 { f fis g } aes g~ |
+
+		g4 ees f r | r8 ees f g bes g aes bes | \tuplet 3/2 { c8 d c } b a g e4 g16 a | fis8 r r4 r2 |
+		\tuplet 3/2 { f8 g f } e d g f4. | \tuplet 3/2 { e8 f e } cis e d e f fis | g8 e r4 ees8 g bes g | aes8 des, f aes bes aes16 bes g8 f |
+	}
+}
+{% endif %}

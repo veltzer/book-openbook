@@ -1,0 +1,126 @@
+{#
+default_version = "Real"
+
+[attributes]
+title = "Red Clay"
+style = "Jazz"
+composer = "Freddie Hubbard"
+piece = "Moderate Latin"
+copyright = "1972 by HUBTONES MUSIC CO."
+typesetter = "Mark Veltzer <mark.veltzer@gmail.com>"
+completion = "5"
+uuid = "5dbb251e-d49a-11f1-8000-046874d194b7"
+structure = "AABA"
+location = "hlrjb:287"
+
+[[youtube]]
+id = "yFwg2s4jpWI"
+remark = "Freddie Hubbard in the original recording from Red Clay (1970)"
+
+[[youtube]]
+id = "6b0F3QzX-_M"
+remark = "Freddie Hubbard live at the North Sea Jazz Festival"
+
+[versions.Real]
+doChords = true
+doVoice = true
+doLyrics = false
+doLyricsmore = false
+doLyricsmoremore = false
+doChordBars = false
+doGuitar = false
+doExtra = false
+doPrep = false
+doOwn = false
+#}
+{% if part == "Vars" %}
+{% endif %}
+{% if part == "Doc" %}	DONE:
+	- added the meta data from the Hal Leonard Real Jazz Book.
+	- put in the tunes structure.
+	- put in the chords (Hal Leonard Real Jazz Book).
+	- put in the tune (Hal Leonard Real Jazz Book).
+	- added youtube performances.
+	TODO:
+	- check the chords (Hal Leonard Real Jazz Book).
+	- check the tune (Hal Leonard Real Jazz Book).
+	- hear the tune to check that it is right and adjust the tempo.
+	- the book has D.S. al Coda (with repeats) and endings marked 1,3 and 2,4. Here the endings are
+		plain 1 and 2 and the pickup eighth at the end of the first ending is not tied back to the segno bar.
+	- in the turnaround bars the book places the second chord (F#9sus, Bb7sus) late in the bar,
+		here they are on beat 3.
+{% endif %}
+{% if part == "ChordsReal" %}\chordmode {
+	\startChords
+	\startSong
+
+	\partial 8 s8 |
+
+	\myMark "A"
+	\startPart
+	\repeat volta 2 {
+		ees1:m11 | des:m11 | e2:9sus4 fis:9sus4 | aes2:9sus4 bes:7sus4 | \myEndLine
+		ees1:m11 | des:m11 | e2:9sus4 fis:9sus4 |
+	} \alternative {
+		{
+			aes2:9sus4 bes:7sus4 | \myEndLineVoltaNotLast
+		}
+		{
+			aes2:9sus4 bes:7sus4 | \myEndLineVoltaLast
+		}
+	}
+	\endPart
+
+	\myMark "B"
+	\startPart
+	ees1:m11 | des:m11 | e2:9sus4 fis:9sus4 | aes2:9sus4 bes:7sus4 | \myEndLine
+	ees1:m11 | des:m11 | e2:9sus4 fis:9sus4 | aes2:9sus4 bes:7sus4 | \myEndLine
+	\endPart
+
+	\myMark "A"
+	\startPart
+	ees1:m11 | des:m11 | e2:9sus4 fis:9sus4 | aes2:9sus4 bes:7sus4 | \myEndLine
+	ees1:m11 | des:m11 | e2:9sus4 fis:9sus4 | aes2:9sus4 bes:7sus4 | \myEndLine
+	\endPart
+
+	\myMark "Coda"
+	\startPart
+	e2:9sus4 fis:9sus4 | aes2:9sus4 bes:7sus4 | s2. ees4:m11 | \myEndLine
+	\endPart
+
+	\endSong
+	\endChords
+}
+{% endif %}
+{% if part == "VoiceReal" %}{
+	\tempo "Moderato" 4 = 120
+	\time 4/4
+	\key ees \minor
+
+	\partial 8 ees'8~ |
+
+	% part "A"
+	\repeat volta 2 {
+		ees8^\markup { \musicglyph #"scripts.segno" } des ees des bes aes ges aes~ | aes4. ges8~ ges2 | r8 e fis a b4 gis8 fis | des'4 bes8 aes ees'4 aes |
+		r2 aes8 ges16 ees des8 aes | bes8 ges ees aes~ aes ges4.~ | ges1 |
+	} \alternative {
+		{
+			ges2. r8 ees' |
+		}
+		{
+			ges,2. r4 |
+		}
+	}
+
+	% part "B"
+	r2 aes2 | r4 r8 ges~ ges2 | r4 a r b | r4 des r8 ees r4 |
+	r2 aes,2 | r4 r8 ges~ ges2 | r4 a r b | r4 des r8 ees4 ees8~ |
+
+	% part "A"
+	ees8 des ees des bes aes ges aes~ | aes4. ges8~ ges2 | r8 e fis a b4 gis8 fis | des'4 bes8 aes ees'4 aes |
+	r2 aes8 ges16 ees des8 aes | bes8 ges ees aes~ aes ges4.~ | ges2.^\markup { To Coda \musicglyph #"scripts.coda" } r4 | r2 r4 r8 ees'^\markup { D.S. al Coda } |
+
+	% part "Coda"
+	ges,1~^\markup { \musicglyph #"scripts.coda" } | ges2. r4 | r2 r4\fermata aes'4\fermata |
+}
+{% endif %}

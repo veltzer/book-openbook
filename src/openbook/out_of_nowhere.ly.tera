@@ -1,0 +1,106 @@
+{#
+default_version = "Real"
+
+[attributes]
+title = "Out Of Nowhere"
+subtitle = "from the Paramount Picture Dude Ranch"
+style = "Jazz"
+composer = "Johnny Green"
+poet = "Edward Heyman"
+piece = "Moderately"
+copyright = "1931 (Renewed 1958) by Famous Music Corporation"
+typesetter = "Mark Veltzer <mark.veltzer@gmail.com>"
+completion = "5"
+uuid = "31641661-d49a-11f1-8000-046874d194b7"
+structure = "ABAC"
+location = "hlrjb:271"
+
+[[youtube]]
+id = "qAhRZkR0oIQ"
+remark = "Bing Crosby in the original hit recording (1931)"
+
+[[youtube]]
+id = "QX1veZFtWZE"
+remark = "Charlie Parker"
+
+[versions.Real]
+doChords = true
+doVoice = true
+doLyrics = false
+doLyricsmore = false
+doLyricsmoremore = false
+doChordBars = false
+doGuitar = false
+doExtra = false
+doPrep = false
+doOwn = false
+#}
+{% if part == "Vars" %}
+{% endif %}
+{% if part == "Doc" %}	DONE:
+	- added the meta data from the Hal Leonard Real Jazz Book.
+	- put in the tunes structure.
+	- put in the chords (Hal Leonard Real Jazz Book).
+	- put in the tune (Hal Leonard Real Jazz Book).
+	- added youtube performances.
+	TODO:
+	- add the lyrics.
+	- check the chords (Hal Leonard Real Jazz Book).
+	- check the tune (Hal Leonard Real Jazz Book).
+	- hear the tune to check that it is right and adjust the tempo.
+	- bar 14: the book has no accidental on the second triplet, so it is read as Bb G Bb.
+{% endif %}
+{% if part == "ChordsReal" %}\chordmode {
+	\startChords
+	\startSong
+
+	\myMark "A"
+	\startPart
+	g1*2:maj7 | bes1:m7 | ees:7 | \myEndLine
+	g1*2:maj7 | b1:m7 | e:7 | \myEndLine
+	\endPart
+
+	\myMark "B"
+	\startPart
+	a1:m7 | d2:m7.5- e:7 | a1*2:m7 | \myEndLine
+	ees1*2:7 | a1:m7 | d:7 | \myEndLine
+	\endPart
+
+	\myMark "A"
+	\startPart
+	g1*2:maj7 | bes1:m7 | ees:7 | \myEndLine
+	g1*2:maj7 | b1:m7 | e:7 | \myEndLine
+	\endPart
+
+	\myMark "C"
+	\startPart
+	a1:m7 | b2:m7.5- e:7 | a1:m7 | f:7.11+ | \myEndLine
+	b2:m7 bes | a:m7 d:7 | g1*2:maj7 | \myEndLine
+	\endPart
+
+	\endSong
+	\endChords
+}
+{% endif %}
+{% if part == "VoiceReal" %}{
+	\tempo "Moderato" 4 = 120
+	\time 4/4
+	\key g \major
+
+	% part "A"
+	d8 e fis a~ a2~ | a4 g d e | f2 f2~ | f1 |
+	d8 e fis a~ a2~ | a4 g d e | fis1~ | fis2 r2 |
+
+	% part "B"
+	e8 f e c'~ c2 | e,8 f e b'~ b4 e, | b'1 | a1 |
+	\tuplet 3/2 { bes4 a g } g2 | \tuplet 3/2 { g4 a bes } \tuplet 3/2 { bes g bes } | e1( | d2) r2 |
+
+	% part "A"
+	d,8 e fis a~ a2~ | a4 g d e | f2 f2~ | f1 |
+	d8 e fis a~ a2~ | a4 g d e | fis1~ | fis2 r2 |
+
+	% part "C"
+	e8 f e c'~ c2 | \tuplet 3/2 { e,4 f e } \tuplet 3/2 { b' c d } | e1 | b1 |
+	a8 fis4 g8 e4 fis | d2 b'2 | g1~ | g2 r2 |
+}
+{% endif %}

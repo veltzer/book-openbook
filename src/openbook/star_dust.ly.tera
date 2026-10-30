@@ -1,0 +1,122 @@
+{#
+default_version = "Real"
+
+[attributes]
+title = "Star Dust"
+style = "Jazz"
+composer = "Hoagy Carmichael"
+poet = "Mitchell Parish"
+piece = "Moderately slow"
+copyright = "1929 (Renewed 1957) Hoagy Publishing Company and EMI Mills Music Inc. in the USA"
+copyrightextra = "All Rights outside the USA Controlled and Administered by EMI Mills Music Inc. and Warner Bros. Publications Inc."
+typesetter = "Mark Veltzer <mark.veltzer@gmail.com>"
+completion = "5"
+uuid = "21ed19cc-d49d-11f1-8000-046874d194b7"
+structure = "ABAC"
+structureremark = "a 16 bar verse followed by a 32 bar ABAC refrain."
+location = "hlrjb:328"
+
+[[youtube]]
+id = "cyHc9bQ8Mm0"
+remark = "Hoagy Carmichael and His Pals in the first recording (1927)"
+
+[[youtube]]
+id = "enEUZz9sLeo"
+remark = "Louis Armstrong (1931)"
+
+[versions.Real]
+doChords = true
+doVoice = true
+doLyrics = false
+doLyricsmore = false
+doLyricsmoremore = false
+doChordBars = false
+doGuitar = false
+doExtra = false
+doPrep = false
+doOwn = false
+#}
+{% if part == "Vars" %}
+{% endif %}
+{% if part == "Doc" %}	DONE:
+	- added the meta data from the Hal Leonard Real Jazz Book.
+	- put in the tunes structure.
+	- put in the chords (Hal Leonard Real Jazz Book).
+	- put in the tune (Hal Leonard Real Jazz Book).
+	- added youtube performances.
+	TODO:
+	- add the lyrics.
+	- check the chords (Hal Leonard Real Jazz Book).
+	- check the tune (Hal Leonard Real Jazz Book).
+	- hear the tune to check that it is right and adjust the tempo.
+	- the first part ("A") is the verse, the refrain starts at "B".
+	- bar 7: the second E in the bar has no accidental in the book, it is taken as natural (from the first E of the bar).
+{% endif %}
+{% if part == "ChordsReal" %}\chordmode {
+	\startChords
+	\startSong
+
+	\myMark "A"
+	\startPart
+	des1:maj7 | ges:9.11+ | f:7.9- | bes:7 | \myEndLine
+	ees2:m7 aes:7 | f:m7 bes:m7 | g:m7 c:7 | ees:m7 aes:7 | \myEndLine
+	des1:maj7 | ges:9.11+ | f:7.9- | bes:7 | \myEndLine
+	ees2:m7 aes:7 | f:m7 bes:m7 | ees:m7 aes:7 | des:maj7 des:7.5+ | \myEndLine
+	\endPart
+
+	\myMark "B"
+	\startPart
+	ges1*2:maj7 | ges1:m7+ | fis2:m7 b:7 | \myEndLine
+	des1:maj7 | f2:m7 bes:7 | ees:m7 bes:7 | ees1:m7 | \myEndLine
+	\endPart
+
+	\myMark "C"
+	\startPart
+	aes1:7 | ees2:m7 aes:7 | des:maj7 ees4:m7 e:dim7 | f2:m7 bes:m7 | \myEndLine
+	ees1:9 | bes2:m7 ees:7 | aes:7 ees:m7 | aes:7 des:7 | \myEndLine
+	\endPart
+
+	\myMark "B"
+	\startPart
+	ges1*2:maj7 | ges1:m7+ | fis2:m7 b:7 | \myEndLine
+	des1:maj7 | f2:m7 bes:7 | ees:m7 bes:7 | ees1:m7 | \myEndLine
+	\endPart
+
+	\myMark "D"
+	\startPart
+	fis1:m7 | b:13 | des2:maj7 bes:m7 | f:m7 bes:7 | \myEndLine
+	ees1:m7 | aes:7 | des1*2:maj7 | \myEndLine
+	\endPart
+
+	\endSong
+	\endChords
+}
+{% endif %}
+{% if part == "VoiceReal" %}{
+	\tempo "Andante" 4 = 72
+	\time 4/4
+	\key des \major
+
+	% part "A"
+	r8 des'8 f des ees c des bes | c8 bes aes2. | ges8 f e! f des' c a! f | e!1 |
+	r4 ees8 ges bes ees, ges bes | \tuplet 3/2 { aes4 f aes } des2 | c4 c,8 e! bes' c, e! bes' | aes4 aes aes2 |
+	r8 des8 f des ees c des bes | c8 bes aes2. | ges8 f e! f des' c a! f | e!1 |
+	r4 ees8 ges bes ees, ges bes | \tuplet 3/2 { aes4 f aes } des2 | r8 aes8 bes ges aes f ges ees | des2 r8 c'8 des d! |
+
+	% part "B"
+	ees4 des bes ges | ees4 ges bes f' | f1 | ees8 des a! ges ees4. ees'8 |
+	des4 aes des2 | c8 f c aes f2 | r8 bes8 des bes ges aes f ges | ees2~ ees8 f4 ees8 |
+
+	% part "C"
+	aes4 aes aes2 | r8 ees4 f8 aes ees e! aes | f2 bes2~ | bes2. f'4 |
+	f8 ees des bes f4 g! | c8 ees, d! des~ des8 bes'4 ees,8 | aes4 aes bes8 ees ees, bes' | aes2. des4 |
+
+	% part "B"
+	ees4 des bes ges | ees4 ges bes f' | f1 | ees8 des a! ges ees4. ees'8 |
+	des4 aes des2 | c8 f c aes f2 | r8 bes8 des bes ges aes f ges | ees2~ ees8 f4 ees8 |
+
+	% part "D"
+	gis4 g! fis2~ | fis2. des8 ees | f4 aes des f | c2. des4 |
+	ees8 des bes ges bes2~ | bes8 aes bes ges aes f ges ees | des1 | r1 |
+}
+{% endif %}
