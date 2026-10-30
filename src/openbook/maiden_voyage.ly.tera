@@ -1,0 +1,115 @@
+{#
+default_version = "Real"
+
+[attributes]
+title = "Maiden Voyage"
+style = "Jazz"
+composer = "Herbie Hancock"
+piece = "Moderately"
+copyright = "1973 by Hancock Music Co."
+typesetter = "Mark Veltzer <mark.veltzer@gmail.com>"
+completion = "5"
+uuid = "98066966-d480-11f1-8000-046874d194b7"
+structure = "AABA"
+location = "hlrjb:228"
+
+[[youtube]]
+id = "EWC5x9G45yo"
+remark = "Herbie Hancock in the original recording from Maiden Voyage (1965)"
+
+[[youtube]]
+id = "FU7ZYOk_InI"
+remark = "Herbie Hancock live in Munich (1989)"
+
+[versions.Real]
+doChords = true
+doVoice = true
+doLyrics = false
+doLyricsmore = false
+doLyricsmoremore = false
+doChordBars = false
+doGuitar = false
+doExtra = false
+doPrep = false
+doOwn = false
+#}
+{% if part == "Vars" %}
+{% endif %}
+{% if part == "Doc" %}	DONE:
+		- added the meta data from the Hal Leonard Real Jazz Book.
+		- put in the tunes structure.
+		- put in the chords (Hal Leonard Real Jazz Book).
+		- put in the tune (Hal Leonard Real Jazz Book).
+		- added youtube performances.
+	TODO:
+		- check the chords (Hal Leonard Real Jazz Book).
+		- check the tune (Hal Leonard Real Jazz Book).
+		- hear the tune to check that it is right and adjust the tempo.
+		- the first note over Db7sus (bar 13) is printed as E natural in the book, check it against the recording.
+{% endif %}
+{% if part == "ChordsReal" %}\chordmode {
+	\startChords
+	\startSong
+
+	\partial 4 s4 |
+
+	\myMark "A"
+	\startPart
+	\repeat volta 2 {
+		d1*4:7sus4 | \myEndLine
+		f1*3:7sus4 |
+	} \alternative {
+		{
+			f1:7sus4 | \myEndLineVoltaNotLast
+		}
+		{
+			f1:7sus4 | \myEndLineVoltaLast
+		}
+	}
+	\endPart
+
+	\myMark "B"
+	\startPart
+	ees1*4:7sus4 | \myEndLine
+	des1*4:7sus4 | \myEndLine
+	\endPart
+
+	\myMark "A"
+	\startPart
+	d1*4:7sus4 | \myEndLine
+	f1*4:7sus4 | \myEndLine
+	\endPart
+
+	\endSong
+	\endChords
+}
+{% endif %}
+{% if part == "VoiceReal" %}{
+	\tempo "Moderato" 4 = 120
+	\time 4/4
+	\key c \major
+
+	\partial 4 a'8 d |
+
+	% part "A"
+	\repeat volta 2 {
+		d1~ | d1~ | d1 | r2 r4 c8 d |
+		ees8 f c2.~ | c1~ | c1 |
+	} \alternative {
+		{
+			r2 r4 a8 d |
+		}
+		{
+			r2 r4 c8 f |
+		}
+	}
+
+	% part "B"
+	f1~ | f1~ | f1 | r2 r4 ees8 e! |
+	e8 ges des2.~ | des1~ | des1 | r2 r4 a8 d! |
+
+	% part "A"
+	d1~ | d1~ | d1 | r2 r4 c8 d |
+	ees8 f c2.~ | c1~ | c1 | r1 |
+}
+{% endif %}

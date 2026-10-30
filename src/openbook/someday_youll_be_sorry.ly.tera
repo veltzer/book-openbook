@@ -1,0 +1,93 @@
+{#
+default_version = "Real"
+
+[attributes]
+title = "Someday You'll Be Sorry"
+style = "Jazz"
+composer = "Louis Armstrong"
+poet = "Louis Armstrong"
+piece = "Medium Dixieland"
+typesetter = "Mark Veltzer <mark.veltzer@gmail.com>"
+completion = "5"
+uuid = "d13b5cde-d481-11f1-8000-046874d194b7"
+structure = "AB"
+location = "dfb:46"
+
+[[youtube]]
+id = "4P5Ncbvf84k"
+remark = "Louis Armstrong and the All-Stars"
+
+[[youtube]]
+id = "0ex0s12dxto"
+remark = "Louis Armstrong and the Dukes of Dixieland"
+
+[versions.Real]
+doChords = true
+doVoice = true
+doLyrics = false
+doLyricsmore = false
+doLyricsmoremore = false
+doChordBars = false
+doGuitar = false
+doExtra = false
+doPrep = false
+doOwn = false
+#}
+{% if part == "Vars" %}
+{% endif %}
+{% if part == "Doc" %}	DONE:
+	- added the meta data from the Dixieland fake book (The Firehouse Jazz Band, tune #46, pdf page 66).
+	- put in the tunes structure.
+	- put in the chords (Dixieland fake book).
+	- put in the tune (Dixieland fake book).
+	- added youtube performances.
+	TODO:
+	- add the lyrics.
+	- add the copyright notice (the Dixieland fake book does not have one).
+	- check the chords (Dixieland fake book).
+	- check the tune (Dixieland fake book).
+	- hear the tune to check that it is right and adjust the tempo (the book has no tempo marking).
+	- bar 16: the book has the Bb+7 on the last eighth of beat 2, here it is on beat 3.
+{% endif %}
+{% if part == "ChordsReal" %}\chordmode {
+	\startChords
+	\startSong
+
+	\myMark "A"
+	\startPart
+	ees1*2 | d1*2:7 | \myEndLine
+	ees1*2 | g1:m7 | c:9 | \myEndLine
+	f1:m | bes:7 | ees2 g:7 | c2:m c:m7 | \myEndLine
+	f1:7 | f2.:7 f4:dim | bes1:7 | bes2:7 bes:aug7 | \myEndLine
+	\endPart
+
+	\myMark "B"
+	\startPart
+	ees1*2 | d1*2:7 | \myEndLine
+	ees1*2 | g1:m7 | c:7 | \myEndLine
+	f1:m7 | aes:m6 | ees2 g:m7 | c1:7 | \myEndLine
+	f1:m7 | bes:7 | ees1*2 | \myEndLine
+	\endPart
+
+	\endSong
+	\endChords
+}
+{% endif %}
+{% if part == "VoiceReal" %}{
+	\tempo "Moderato" 4 = 108
+	\time 4/4
+	\key ees \major
+
+	% part "A"
+	g'2 bes~ | bes g4 bes | c2 d~ | d1 |
+	r4 r8 c8 d4 c | d c bes g | d1~ | d1 |
+	r4 c d ees | g f g aes | bes2 g | ees1 |
+	r4 c d ees | g8 f4. g4 aes | c b! bes8 a! aes bes | g4. fis8~ fis2 |
+
+	% part "B"
+	g2 bes~ | bes g4 bes | c2 d~ | d1 |
+	r4 r8 c8 d4 c | d c bes g | d1 | r2 bes' |
+	c,4 ees bes' aes | g f2 bes4 | d d d bes | d c2. |
+	ees4 c aes c, | g'2 g4. ees8~ | ees1~ | ees4 r r2 |
+}
+{% endif %}

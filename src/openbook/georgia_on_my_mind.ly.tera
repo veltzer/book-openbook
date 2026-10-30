@@ -1,0 +1,127 @@
+{#
+default_version = "Real"
+
+[attributes]
+title = "Georgia On My Mind"
+style = "Jazz"
+composer = "Hoagy Carmichael"
+poet = "Stuart Gorrell"
+piece = "Slowly"
+copyright = "1930 by Peermusic Ltd."
+copyrightextra = "Copyright Renewed."
+typesetter = "Mark Veltzer <mark.veltzer@gmail.com>"
+completion = "5"
+uuid = "58d2cf67-d481-11f1-8000-046874d194b7"
+structure = "AABA"
+location = "hlrjb:133"
+
+[[youtube]]
+id = "72vJU8IKwIM"
+remark = "Hoagy Carmichael in the original recording (1930)"
+
+[[youtube]]
+id = "ggGzE5KfCio"
+remark = "Ray Charles (1960)"
+
+[versions.Real]
+doChords = true
+doVoice = true
+doLyrics = false
+doLyricsmore = false
+doLyricsmoremore = false
+doChordBars = false
+doGuitar = false
+doExtra = false
+doPrep = false
+doOwn = false
+#}
+{% if part == "Vars" %}
+{% endif %}
+{% if part == "Doc" %}	DONE:
+	- added the meta data from the Hal Leonard Real Jazz Book.
+	- put in the tunes structure.
+	- put in the chords (Hal Leonard Real Jazz Book).
+	- put in the tune (Hal Leonard Real Jazz Book).
+	- added youtube performances.
+	TODO:
+	- add the lyrics.
+	- check the chords (Hal Leonard Real Jazz Book).
+	- check the tune (Hal Leonard Real Jazz Book).
+	- hear the tune to check that it is right and adjust the tempo.
+{% endif %}
+{% if part == "ChordsReal" %}\chordmode {
+	\startChords
+	\startSong
+
+	\repeat volta 2 {
+
+	\myMark "A"
+	\startPart
+	f1 | a:7 | d2:m d:m/c | g2/b bes:m6 | \myEndLine
+	a2:m7 d:7 | g2:m7 c:7 | a2:m7 d:7.9- | g2:m7 c:7.5+ | \myEndLine
+	\endPart
+
+	\myMark "A"
+	\startPart
+	f1 | a:7 | d2:m d:m/c | g2/b bes:m6 | \myEndLine
+	a2:m7 d:7 | g2:m7 g4:9 c:13 | f2 ees:9 | f2 a:7 | \myEndLine
+	\endPart
+
+	\myMark "B"
+	\startPart
+	d2:m g:m6 | d2:m bes:7 | d2:m g:m6 | d2:m7 g:7 | \myEndLine
+	d2:m cis:dim7 | f2:6/c b4:m7.5- e:7 | a2:m7 fis:dim7 | g2:m7 c:7 | \myEndLine
+	\endPart
+
+	\myMark "A"
+	\startPart
+	f1 | a:7 | d2:m d:m/c | g2/b bes:m6 | \myEndLine
+	a2:m7 d:7 | g2:m7 g4:9 c:13 |
+
+	} \alternative {
+		{
+			f2 d:m7 | g4:m7 c:7 c2:7.5+ | \myEndLineVoltaNotLast
+		}
+		{
+			f2 c:7.5+ | f1:6 | \myEndLineVoltaLast
+		}
+	}
+	\endPart
+
+	\endSong
+	\endChords
+}
+{% endif %}
+{% if part == "VoiceReal" %}{
+	\tempo "Slowly" 4 = 70
+	\time 4/4
+	\key f \major
+
+	\repeat volta 2 {
+
+	% part "A"
+	a'8 c~ c2. | a8 g~ g2. | r4 a d a | g2. f8 g |
+	a4 c e d | bes8 d~ d4 a g | c1 | d8 d d d gis,2 |
+
+	% part "A"
+	a8 c~ c2. | a8 g~ g2. | r4 a d a | g2. f8 g |
+	a4 c e d | bes4 d, a' a | f1~ | f2 r2 |
+
+	% part "B"
+	d8 f4 g8~ g4 a | f8 d4 f8~ f2 | d8 f4 g8~ g4 a | c8 a4 b!8~ b2 |
+	d,8 f4 g8~ g4 a | c8 d4 e8~ e4. d8 | c4 a c c | a2 g |
+
+	% part "A"
+	a8 c~ c2. | a8 g~ g2. | r4 a d a | g2. f8 g |
+	a4 c e d | bes4 d, a' a |
+
+	} \alternative {
+		{
+			f1~ | f4 r r2 |
+		}
+		{
+			f1~ | f2. r4 |
+		}
+	}
+}
+{% endif %}

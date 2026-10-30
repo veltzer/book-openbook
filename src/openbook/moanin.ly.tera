@@ -1,0 +1,126 @@
+{#
+default_version = "Real"
+
+[attributes]
+title = "Moanin'"
+style = "Jazz"
+composer = "Bobby Timmons"
+piece = "Medium Swing"
+copyright = "1959 Totem Music Inc."
+typesetter = "Mark Veltzer <mark.veltzer@gmail.com>"
+completion = "5"
+uuid = "ed3d7c56-d480-11f1-8000-046874d194b7"
+structure = "AABA"
+location = "557:234"
+
+[[youtube]]
+id = "Cv9NSR-2DwM"
+remark = "Art Blakey and the Jazz Messengers in the original recording (1958)"
+
+[[youtube]]
+id = "sh-ocjKjp5c"
+remark = "Bobby Timmons Trio with Jimmy Cobb (1960)"
+
+[versions.Real]
+doChords = true
+doVoice = true
+doLyrics = false
+doLyricsmore = false
+doLyricsmoremore = false
+doChordBars = false
+doGuitar = false
+doExtra = false
+doPrep = false
+doOwn = false
+#}
+{% if part == "Vars" %}
+{% endif %}
+{% if part == "Doc" %}	DONE:
+	- added the meta data from the 557 jazz standards book.
+	- put in the tunes structure.
+	- put in the chords (557 jazz standards book).
+	- put in the tune (557 jazz standards book).
+	- added youtube performances.
+	TODO:
+	- check the chords (557 jazz standards book). The melody chart has no chords
+		on the A sections, they were taken from the "changes" chart on the next page.
+	- the 2nd ending chords (F7/A B7b5) and the chords in the last bar of the
+		A sections are a guess combining the melody chart and the changes chart.
+	- check the tune (557 jazz standards book).
+	- the book draws a bar line in the middle of the quintuplet bars
+		(bars 3 and 5 of each A), here they are joined into one 4/4 bar.
+	- check the voicings of the horn "amen" chords in the A sections.
+	- bridge bar 4: the book shows a tie into a half rest, here the Ab is held.
+	- hear the tune to check that it is right and adjust the tempo.
+	- check the copyright.
+{% endif %}
+{% if part == "ChordsReal" %}\chordmode {
+	\startChords
+	\startSong
+
+	\partial 1 s1 |
+
+	\myMark "A"
+	\startPart
+	\repeat volta 2 {
+		f2:m7 aes:7 | g:7 c:7 | f:m7 aes:7 | g:7 c:7 | \myEndLine
+		f:m7 aes:7 | g:7 c:7 | f:m7 aes:7 |
+	} \alternative {
+		{
+			g2:7 c:7 | \myEndLineVoltaNotLast
+		}
+		{
+			f2:7/a b:7.5- | \myEndLineVoltaLast
+		}
+	}
+	\endPart
+
+	\myMark "B"
+	\startPart
+	bes2:7 aes:7 | g:7 c:7.9+ | f1:m7 | f2:m7 b:7.5- | \myEndLine
+	bes2:m7 aes:7 | g1:7.9- | c1*2:7 | \myEndLine
+	\endPart
+
+	\myMark "A"
+	\startPart
+	f2:m7 aes:7 | g:7 c:7 | f:m7 aes:7 | g:7 c:7 | \myEndLine
+	f:m7 aes:7 | g:7 c:7 | f1:m7 | g2:7 c:7 | \myEndLine
+	\endPart
+
+	\endSong
+	\endChords
+}
+{% endif %}
+{% if part == "VoiceReal" %}{
+	\tempo "Moderato" 4 = 130
+	\time 4/4
+	\key f \minor
+
+	\partial 1 r8 f4 f8 \tuplet 3/2 { aes8 r aes } \tuplet 3/2 { f8 r c } |
+
+	% part "A"
+	\repeat volta 2 {
+		ees4-. f4-- <f bes des>4. <f a! c>8 | \tuplet 3/2 { r4 f f } aes8 bes~ bes4 |
+		\tuplet 5/4 { bes16 ces bes aes f } f4 <f bes des>4. <f a! c>8 | r8 f4 f8 c'8 ees~ ees4 |
+		\tuplet 5/4 { bes16 ces bes aes f } f4 <f bes des>4. <f a! c>8 | r8 f4 f8 \tuplet 3/2 { aes8 r aes } \tuplet 3/2 { f8 r c } |
+		ees4-. f4-- <f bes des>4. <f a! c>8 |
+	} \alternative {
+		{
+			r8 f4 f8 \tuplet 3/2 { aes8 r aes } \tuplet 3/2 { f8 r c } |
+		}
+		{
+			r2 f4 f |
+		}
+	}
+
+	% part "B"
+	c'2 \tuplet 3/2 { ces8 bes aes } \tuplet 3/2 { bes8 r f } | aes4. f8 ees c ees f~ | f2 bes8 aes g aes~ | aes2 f4 f |
+	c'2 \tuplet 3/2 { ces8 bes aes } \tuplet 3/2 { bes8 r f } | aes4. f8 aes f aes c~ | c2 ees8 c bes c | r8 f,4 f8 \tuplet 3/2 { aes8 r aes } \tuplet 3/2 { f8 r c } |
+
+	% part "A"
+	ees4-. f4-- <f bes des>4. <f a! c>8 | \tuplet 3/2 { r4 f f } aes8 bes~ bes4 |
+	\tuplet 5/4 { bes16 ces bes aes f } f4 <f bes des>4. <f a! c>8 | r8 f4 f8 c'8 ees~ ees4 |
+	\tuplet 5/4 { bes16 ces bes aes f } f4 <f bes des>4. <f a! c>8 | r8 f4 f8 \tuplet 3/2 { aes8 r aes } \tuplet 3/2 { f8 r c } |
+	ees4-. f4-- <f bes des>4. <f a! c>8 | r1 |
+}
+{% endif %}

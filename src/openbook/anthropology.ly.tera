@@ -1,0 +1,113 @@
+{#
+default_version = "Real"
+
+[attributes]
+title = "Anthropology"
+style = "Jazz"
+composer = "Charlie Parker, Dizzy Gillespie"
+piece = "Fast Bebop"
+copyright = "1946, Renewed and Assigned to Atlantic Music Corp. and Music Sales Corporation"
+typesetter = "Mark Veltzer <mark.veltzer@gmail.com>"
+completion = "5"
+uuid = "d7e5fc5c-d480-11f1-8000-046874d194b7"
+structure = "AABA"
+location = "hlrjb:30"
+
+[[youtube]]
+id = "yMiZ7XtWvm0"
+remark = "Dizzy Gillespie in the first recording (1946)"
+
+[[youtube]]
+id = "VXncfHa8DZw"
+remark = "Charlie Parker"
+
+[versions.Real]
+doChords = true
+doVoice = true
+doLyrics = false
+doLyricsmore = false
+doLyricsmoremore = false
+doChordBars = false
+doGuitar = false
+doExtra = false
+doPrep = false
+doOwn = false
+#}
+{% if part == "Vars" %}
+{% endif %}
+{% if part == "Doc" %}	DONE:
+	- added the meta data from the Hal Leonard Real Jazz Book.
+	- put in the tunes structure.
+	- put in the chords (Hal Leonard Real Jazz Book).
+	- put in the tune (Hal Leonard Real Jazz Book).
+	- added youtube performances.
+	TODO:
+	- check the chords (Hal Leonard Real Jazz Book).
+	- check the tune (Hal Leonard Real Jazz Book).
+	- hear the tune to check that it is right and adjust the tempo.
+	- bar 10: the book has a tie from the last e to the f of bar 11, I dropped it.
+{% endif %}
+{% if part == "ChordsReal" %}\chordmode {
+	\startChords
+	\startSong
+
+	\myMark "A"
+	\startPart
+	\repeat volta 2 {
+		bes2:6 g:7 | c2:m7 f:7 | bes2:6 g:m7 | c2:7 f:7 | \myEndLine
+		f2:m7 bes:7 | ees2:7 aes:7 |
+	} \alternative {
+		{
+			d2:m7 g:7 | c2:m7 f:7 | \myEndLineVoltaNotLast
+		}
+		{
+			d2:m7 g:7 | c4:m7 f:7 bes2:6 | \myEndLineVoltaLast
+		}
+	}
+	\endPart
+
+	\myMark "B"
+	\startPart
+	d1*2:7 | g1*2:7 | \myEndLine
+	c1*2:7 | f1*2:7 | \myEndLine
+	\endPart
+
+	\myMark "A"
+	\startPart
+	bes2:6 g:7 | c2:m7 f:7 | bes2:6 g:m7 | c2:7 f:7 | \myEndLine
+	f2:m7 bes:7 | ees2:7 aes:7 | d2:m7 g:7 | c4:m7 f:7 bes2:6 | \myEndLine
+	\endPart
+
+	\endSong
+	\endChords
+}
+{% endif %}
+{% if part == "VoiceReal" %}{
+	\tempo "Presto" 4 = 260
+	\time 4/4
+	\key bes \major
+
+	% part "A"
+	\repeat volta 2 {
+		bes'8 d c b ees cis d f | r4 r8 ees r f ees4 | r8 d ees d c a bes d | c g bes a r4 r8 bes~ |
+		bes4 g8 bes d bes r e~ | e ees4 ges,8~ ges bes c d |
+	} \alternative {
+		{
+			f4 r8 b,! r aes' r fis | g ees bes g d' f r f, |
+		}
+		{
+			ees'8 f d f r d ees g, | c g bes c r4 r8 fis~ |
+		}
+	}
+
+	% part "B"
+	fis4 g8 gis a fis g! a | fis d r4 r r8 e |
+	f8 e d cis e d b a | r4 r8 a' r a r a~ |
+	a8 g e d~ d4. a8 | \tuplet 3/2 { c16 d c } g8 bes c r4 r8 ees~ |
+	ees4 d8 c b d c g | c4 bes8 a r4 r8 f |
+
+	% part "A"
+	bes8 d c b ees cis d f | r4 r8 ees r f ees4 | r8 d ees d c a bes d | c g bes a r4 r8 bes~ |
+	bes4 g8 bes d bes r e~ | e ees4 ges,8~ ges bes c d | ees8 f d f r d ees g, | c bes a bes r2 |
+}
+{% endif %}

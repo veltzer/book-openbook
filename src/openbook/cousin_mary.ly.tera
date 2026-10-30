@@ -1,0 +1,79 @@
+{#
+default_version = "Real"
+
+[attributes]
+title = "Cousin Mary"
+style = "Jazz"
+composer = "John Coltrane"
+piece = "Brightly"
+copyright = "1974 JOWCOL MUSIC"
+typesetter = "Mark Veltzer <mark.veltzer@gmail.com>"
+completion = "5"
+uuid = "ef1c82f4-d482-11f1-8000-046874d194b7"
+structure = "Blues"
+location = "hlrjb:85"
+
+[[youtube]]
+id = "aAf8YyFtVDA"
+remark = "John Coltrane in the original recording from Giant Steps (1960)"
+
+[[youtube]]
+id = "T9Xu9VtVIow"
+remark = "John Coltrane live in Berlin (1963)"
+
+[versions.Real]
+doChords = true
+doVoice = true
+doLyrics = false
+doLyricsmore = false
+doLyricsmoremore = false
+doChordBars = false
+doGuitar = false
+doExtra = false
+doPrep = false
+doOwn = false
+#}
+{% if part == "Vars" %}
+{% endif %}
+{% if part == "Doc" %}	DONE:
+	- added the meta data from the Hal Leonard Real Jazz Book.
+	- put in the tunes structure.
+	- put in the chords (Hal Leonard Real Jazz Book).
+	- put in the tune (Hal Leonard Real Jazz Book).
+	- added youtube performances.
+	TODO:
+	- check the chords (Hal Leonard Real Jazz Book).
+	- check the tune (Hal Leonard Real Jazz Book).
+	- hear the tune to check that it is right and adjust the tempo.
+	- the book writes this Ab blues with a key signature of 5 flats, kept here as is.
+{% endif %}
+{% if part == "ChordsReal" %}\chordmode {
+	\startChords
+	\startSong
+
+	\myMark "A"
+	\startPart
+	\repeat volta 2 {
+		c2:7.9+ ees4.:7.9+ aes8:7 | aes1:7 | c2:7.9+ ees4.:7.9+ aes8:7 | aes1:7 | \myEndLine
+		aes2:7 d4.:7 des8:7 | des1:7 | c2:7.9+ ees4.:7.9+ aes8:7 | aes1:7 | \myEndLine
+		d1:7.5- | des:7 | c2:7.9+ ees4.:7.9+ aes8:7 | aes1:7 | \myEndLine
+	}
+	\endPart
+
+	\endSong
+	\endChords
+}
+{% endif %}
+{% if part == "VoiceReal" %}{
+	\tempo "Allegro" 4 = 200
+	\time 4/4
+	\key des \major
+
+	% part "A"
+	\repeat volta 2 {
+		r4 ees' ges4. ees8~ | ees1 | r4 ees ges4. ees8~ | ees1 |
+		r4 ees ges4. aes8~ | aes1 | r4 ees ges4. ees8~ | ees1 |
+		r8 aes ges aes~ aes4 ges8 aes~ | aes4. ges8 ees4 des | r4 ees ges4. ees8~ | ees1 |
+	}
+}
+{% endif %}

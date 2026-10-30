@@ -1,0 +1,105 @@
+{#
+default_version = "Real"
+
+[attributes]
+title = "Naima"
+subtitle = "(Niema)"
+style = "Jazz"
+composer = "John Coltrane"
+piece = "Moderately slow"
+copyright = "1973 JOWCOL MUSIC"
+typesetter = "Mark Veltzer <mark.veltzer@gmail.com>"
+completion = "5"
+uuid = "98066965-d480-11f1-8000-046874d194b7"
+structure = "AABA"
+location = "hlrjb:253"
+
+[[youtube]]
+id = "bPAC6zt_1ZM"
+remark = "John Coltrane in the original recording from Giant Steps (1959)"
+
+[[youtube]]
+id = "cYIrN_7ZT68"
+remark = "John Coltrane Quartet live (1965)"
+
+[versions.Real]
+doChords = true
+doVoice = true
+doLyrics = false
+doLyricsmore = false
+doLyricsmoremore = false
+doChordBars = false
+doGuitar = false
+doExtra = false
+doPrep = false
+doOwn = false
+#}
+{% if part == "Vars" %}
+{% endif %}
+{% if part == "Doc" %}	DONE:
+		- added the meta data from the Hal Leonard Real Jazz Book.
+		- put in the tunes structure.
+		- put in the chords (Hal Leonard Real Jazz Book).
+		- put in the tune (Hal Leonard Real Jazz Book).
+		- added youtube performances.
+	TODO:
+		- check the chords (Hal Leonard Real Jazz Book).
+		- check the tune (Hal Leonard Real Jazz Book).
+		- hear the tune to check that it is right and adjust the tempo.
+		- the book writes the form as D.C. al Coda, here it is written out once with the coda after it.
+		- the 16th notes at the end of the coda bar 4 look like 32nds in the book (they would not fit the bar).
+{% endif %}
+{% if part == "ChordsReal" %}\chordmode {
+	\startChords
+	\startSong
+
+	\myMark "A"
+	\startPart
+	\repeat volta 2 {
+		bes1:m7/ees | ees:m7 | a2:maj7/ees g:maj7.5+/ees | aes1:maj7/ees | \myEndLine
+	}
+	\endPart
+
+	\myMark "B"
+	\startPart
+	b1:maj7/bes | bes:13.9- | b:maj7/bes | bes:13.9- | \myEndLine
+	d1:maj7.5+/bes | b:maj7/bes | aes:maj7/bes | ges:13/ees | \myEndLine
+	\endPart
+
+	\myMark "A"
+	\startPart
+	bes1:m7/ees | ees:m7 | a2:maj7/ees g:maj7.5+/ees | aes1:maj7/ees | \myEndLine
+	\endPart
+
+	\myMark "Coda"
+	\startPart
+	aes1:maj7/ees | a2:maj7/ees g:maj7/ees | aes1:maj7/ees | a2:maj7/ees g:maj7.5+/ees | \myEndLine
+	aes1/ees | a2:maj7/ees g:maj7/ees | aes2:maj7 des:maj7 | aes:maj7 des:maj7 | aes:maj7 des:maj7 | aes1:maj7 | \myEndLine
+	\endPart
+
+	\endSong
+	\endChords
+}
+{% endif %}
+{% if part == "VoiceReal" %}{
+	\tempo "Lento" 4 = 60
+	\time 4/4
+	\key aes \major
+
+	% part "A"
+	\repeat volta 2 {
+		c'2.~ c8 bes16 ees | f,2. r4 | aes2 ges4. ees16 ges | ees2. r4 |
+	}
+
+	% part "B"
+	bes'2.~ bes8 bes | g2. r8 ees | bes'2.~ bes8 bes | g2. r8 f16 ees |
+	des'2.~ des8 bes16 des | bes2. r8 ges16 des' | g,!2.~ g8 ees16 g | ees2. r4 |
+
+	% part "A"
+	c'2.~ c8 bes16 ees | f,2. r4 | aes2 ges4.^\markup {To Coda \musicglyph #"scripts.coda"} ees16 ges | ees2.^\markup {D.C. al Coda} r4 |
+
+	% part "Coda"
+	ees2. r4 | aes2 ges4. ees16 ges | ees2. r4 | aes2 ges4. ees16 ges |
+	ees2. r4 | aes2 ges4. ees16 ges | ees2 f | g! aes | bes c | ees1 |
+}
+{% endif %}

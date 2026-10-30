@@ -1,0 +1,125 @@
+{#
+default_version = "Real"
+
+[attributes]
+title = "My Man's Gone Now"
+style = "Jazz"
+composer = "George Gershwin"
+poet = "DuBose Heyward, Ira Gershwin"
+piece = "Ballad"
+copyright = "1935 by Gershwin Publishing Corporation"
+copyrightextra = "Copyright Renewed."
+typesetter = "Mark Veltzer <mark.veltzer@gmail.com>"
+completion = "5"
+uuid = "c9e37cba-d480-11f1-8000-046874d194b7"
+structure = "AAB"
+location = "rbk3:206-207"
+
+[[youtube]]
+id = "LyZwSC1JUPU"
+remark = "Miles Davis from Porgy and Bess (1958)"
+
+[[youtube]]
+id = "6yH2s-ZBgMU"
+remark = "Bill Evans Trio live at the Village Vanguard (1961)"
+
+[versions.Real]
+doChords = true
+doVoice = true
+doLyrics = false
+doLyricsmore = false
+doLyricsmoremore = false
+doChordBars = false
+doGuitar = false
+doExtra = false
+doPrep = false
+doOwn = false
+#}
+{% if part == "Vars" %}
+{% endif %}
+{% if part == "Doc" %}	DONE:
+	- added the meta data from the real book.
+	- put in the tunes structure.
+	- put in the chords (real book).
+	- put in the tune (real book).
+	- added youtube performances.
+	TODO:
+	- add the lyrics.
+	- check the chords (real book).
+	- check the tune (real book).
+	- hear the tune to check that it is right and adjust the tempo.
+	- the intro in the real book is a piano vamp (written out chords and bass), only its chords are here.
+	- the first A7 bar of the B part on page 207 reads as b natural, while the matching bar on page 206 reads as a natural. Check both.
+	- the B7 bars are written as c sharp (the scan is not very clear there).
+{% endif %}
+{% if part == "ChordsReal" %}\chordmode {
+	\startChords
+	\startSong
+
+	\myMark "Intro"
+	\startPart
+	d2.:m7 | d2.:sus2 | d2.:7.9+ | a2.:13/d | \myEndLine
+	\endPart
+
+	\myMark "A"
+	\startPart
+	\repeat volta 2 {
+		d2.:m7 | d2.:sus2 | d2.:7.9+ | a2.:13/d | \myEndLine
+		d2.:7.9+ | bes2.:maj7 | g4:7 f:7 ees:7 | d2.:m7 | \myEndLine
+		d2. | d2.:7 | d2.:m7 | b2:7.9- e4:7.11+ | a2:m7 a4:7 | \myEndLine
+	}
+	\endPart
+
+	\myMark "B"
+	\startPart
+	aes2.:7 | des2.:maj7 | a2.:7 | \myEndLine
+	d2.:m7 | b2.:7 | e2.:m7 | f4:6 g:m7 gis:dim7 | \myEndLine
+	a2.*2:m7 | aes2.:7 | des2.:maj7 | \myEndLine
+	a2.:7 | d2.:m7 | b2.:7 | e2.:m7 | \myEndLine
+	g4:m7.5- ges:maj7 f:aug7 | bes2.:6.9 | g2:m7.5- c4:aug7.9- | f2.:6.9 | \myEndLine
+	e2:m7.5- a4:aug7 | d2.:m7 | d2.:7.11+ | d2.:m7 | b2:7.9- e4:7.9- | a2:m7 a4:7 | \myEndLine
+	\endPart
+
+	\myMark "A"
+	\startPart
+	d2.:m7 | d2.:sus2 | d2.:7.9+ | \myEndLine
+	a2.:13/d | d2.:7.9+ | bes2.:maj7 | g4:7 f:7 ees:7 | \myEndLine
+	d2.:m7 | a2.:7 | d2.:7 | a2.:7 | \myEndLine
+	d2.:m7 | a2.:7 | d2.:7 | e2:m7.5- a4:aug7.9- | d2.:m7 | \myEndLine
+	\endPart
+
+	\endSong
+	\endChords
+}
+{% endif %}
+{% if part == "VoiceReal" %}{
+	\tempo "Adagio" 4 = 60
+	\time 3/4
+	\key d \minor
+
+	% part "Intro"
+	r2. | r2. | r2. | r2. |
+
+	% part "A"
+	\repeat volta 2 {
+		d'4 f2 | f4 d2 | d8 c d4. c8 | a8 a4. r4 |
+		a8 g a4. g8 | f4 d2 | a'8 g a g f d~ | d2.~ |
+		d2 r4 | gis4 a b! | c2. | r8 b!8 c b bes4 | a2. |
+	}
+
+	% part "B"
+	aes8 aes aes4 aes | bes4 bes2 | a!8 a a4 a |
+	c8 c c2 | cis8 cis cis4 cis | d4 d2 | a8 g a g f d |
+	d2.~ | d2. | aes'4 aes2 | bes4 bes2 |
+	b!8 b b b b4 | c4 c2 | cis8 cis cis4 cis | d4 d2 |
+	f8 ees f ees des4 | bes2. | c8 bes c bes aes4 | f2. |
+	a8 g a g f4 | d2. | gis4 a b! | c2. | r8 b!8 c b bes4 |
+	a2. |
+
+	% part "A"
+	d4 f2 | f4 d2 | d8 c d4. c8 |
+	a8 a4. r4 | a8 g a4 g | f4 d2 | a'8 g a g f d~ |
+	d2. | b'!8 a b4. a8 | b!4 b2 | b!4. a8 b a |
+	c8 b! a2 | b!8 a b4. a8 | b!4 b bes | a8 g a g f d~ | d2. |
+}
+{% endif %}

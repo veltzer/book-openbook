@@ -1,0 +1,130 @@
+{#
+default_version = "Fake"
+
+[attributes]
+title = "All Of You"
+style = "Jazz"
+composer = "Cole Porter"
+poet = "Cole Porter"
+piece = "Moderately"
+copyright = "1954 by Cole Porter"
+copyrightextra = "Copyright Renewed, assigned to Robert H. Montgomery, Trustee of the Cole Porter Music & Literary Property Trusts. Chappell & Co., Inc., Publisher"
+typesetter = "Mark Veltzer <mark.veltzer@gmail.com>"
+completion = "5"
+uuid = "13ba9de0-d482-11f1-8000-046874d194b7"
+structure = "ABAC"
+location = "jfb:39"
+
+[[youtube]]
+id = "GzROkEEfKjM"
+remark = "Miles Davis from 'Round About Midnight (1956)"
+
+[[youtube]]
+id = "Eg6YPeflAJA"
+remark = "Bill Evans Trio live at the Village Vanguard (1961)"
+
+[versions.Fake]
+doChords = true
+doVoice = true
+doLyrics = false
+doLyricsmore = false
+doLyricsmoremore = false
+doChordBars = false
+doGuitar = false
+doExtra = false
+doPrep = false
+doOwn = false
+#}
+{% if part == "Vars" %}
+{% endif %}
+{% if part == "Doc" %}	DONE:
+	- added the meta data from the fake book.
+	- put in the tunes structure.
+	- put in the chords (fake book).
+	- put in the tune (fake book).
+	- added youtube performances.
+	TODO:
+	- add the lyrics.
+	- check the chords (fake book).
+	- check the tune (fake book).
+	- hear the tune to check that it is right and adjust the tempo.
+	- bar 25: the fake book prints "Absus" over a D/C melody, check the chord.
+	- bar 23: the first note (C below the staff) is hard to read in the scan.
+{% endif %}
+{% if part == "ChordsFake" %}\chordmode {
+	\startChords
+	\startSong
+
+	\partial 2. s2. |
+
+	\repeat volta 2 {
+
+		\myMark "A"
+		\startPart
+		aes1/ees | ees | f:m7.5- | bes:7.9- | \myEndLine
+		aes1/ees | ees | aes:m7 | des:7 | \myEndLine
+		\endPart
+
+		\myMark "B"
+		\startPart
+		ees1 | c:7.9- | f:m7 | bes2.:7 bes4:7/aes | \myEndLine
+		g1:m7 | c:7.9- | f:m7 | bes:7 | \myEndLine
+		\endPart
+
+		\myMark "A"
+		\startPart
+		aes1/ees | ees | f:m7.5- | bes:7.9- | \myEndLine
+		aes1/ees | ees | g:m7 | c:7 | \myEndLine
+		\endPart
+
+		\myMark "C"
+		\startPart
+		aes1:sus4 | a2:m7.5- d:7.9- | g:7.5+ des:9 | c1:7 | \myEndLine
+		f2:m c:7/g | f:m/aes bes:7 |
+	} \alternative {
+		{
+			ees1 | f2:m7 bes:7 | \myEndLineVoltaNotLast
+		}
+		{
+			ees2 des4:6 d:6 | ees1:6.9 | \myEndLineVoltaLast
+		}
+	}
+	\endPart
+
+	\endSong
+	\endChords
+}
+{% endif %}
+{% if part == "VoiceFake" %}{
+	\tempo "Moderato" 2 = 80
+	\time 2/2
+	\key ees \major
+
+	\partial 2. ees4 f g |
+
+	\repeat volta 2 {
+		% part "A"
+		aes2. g4 | g2. bes,4 | ces2. aes'4 | aes2. f4 |
+		aes2. g4 | g2. bes,4 | ces2. bes'4 | bes2. aes4 |
+
+		% part "B"
+		c2. bes4 | c2. bes4 | c2. d,4 | d2. c4 |
+		bes'2 bes | bes4 des2 c4 | bes2 c,4 c~ | c4 d ees f |
+
+		% part "A"
+		aes2. g4 | g2. bes,4 | ces2. aes'4 | aes2. f4 |
+		aes2. g4 | g4 bes,8 c d4 ees | c2. bes'4 | aes2. a4 |
+
+		% part "C"
+		d4. c8 d4. c8 | d4 c8 ees~ ees d c4 | g1~ | g2. c,4 |
+		aes'2 bes | c2 d, |
+	} \alternative {
+		{
+			ees2 r | r4 ees f g |
+		}
+		{
+			ees1~ | ees4 r r2 |
+		}
+	}
+}
+{% endif %}

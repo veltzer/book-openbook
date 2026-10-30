@@ -1,0 +1,94 @@
+{#
+default_version = "Real"
+
+[attributes]
+title = "Lady Bird"
+style = "Jazz"
+composer = "Tadd Dameron"
+piece = "Moderately"
+copyright = "1947 (Renewed) by Music Sales Corporation"
+typesetter = "Mark Veltzer <mark.veltzer@gmail.com>"
+completion = "5"
+uuid = "be5a751b-d480-11f1-8000-046874d194b7"
+structure = "AA"
+location = "hlrjb:210"
+
+[[youtube]]
+id = "kY5EOn3tb1k"
+remark = "Tadd Dameron Sextet with Fats Navarro in the original recording (1948)"
+
+[[youtube]]
+id = "vnpe_HFdnOQ"
+remark = "Miles Davis with Tadd Dameron"
+
+[versions.Real]
+doChords = true
+doVoice = true
+doLyrics = false
+doLyricsmore = false
+doLyricsmoremore = false
+doChordBars = false
+doGuitar = false
+doExtra = false
+doPrep = false
+doOwn = false
+#}
+{% if part == "Vars" %}
+{% endif %}
+{% if part == "Doc" %}	DONE:
+	- added the meta data from the Hal Leonard Real Jazz Book.
+	- put in the tunes structure.
+	- put in the chords (Hal Leonard Real Jazz Book).
+	- put in the tune (Hal Leonard Real Jazz Book).
+	- added youtube performances.
+	TODO:
+	- check the chords (Hal Leonard Real Jazz Book).
+	- check the tune (Hal Leonard Real Jazz Book).
+	- hear the tune to check that it is right and adjust the tempo.
+{% endif %}
+{% if part == "ChordsReal" %}\chordmode {
+	\startChords
+	\startSong
+
+	\myMark "A"
+	\startPart
+	\repeat volta 2 {
+		c1*2:maj7 | f1:m7 | bes:7 | \myEndLine
+		c1*2:maj7 | bes1:m7 | ees:7 | \myEndLine
+		aes1*2:maj7 | a1:m7 | d:7 | \myEndLine
+		d1:m7 | g:7 |
+	} \alternative {
+		{
+			c2:maj7 ees:maj7 | aes:maj7 des:maj7 | \myEndLineVoltaNotLast
+		}
+		{
+			c1:maj7 | \myEndLineVoltaLast
+		}
+	}
+	\endPart
+
+	\endSong
+	\endChords
+}
+{% endif %}
+{% if part == "VoiceReal" %}{
+	\tempo "Moderato" 4 = 140
+	\time 4/4
+	\key c \major
+
+	% part "A"
+	\repeat volta 2 {
+		r8 g'4. g4 g | g4. g8~ g4 g | bes2 \tuplet 3/2 { aes4 c, ees } | g4. f8~ f2 |
+		r8 g4. g4 g | g4. g8~ g4 g | c2 \tuplet 3/2 { bes4 des, f } | c'4. bes8~ bes2 |
+		r8 bes4. a4 aes | bes4 a!8 aes~ aes2 | r8 b!4. bes4 a | b!4 bes8 a~ a2 |
+		c2~ c8 a f e~ | e2 cis4 d8 g~ |
+	} \alternative {
+		{
+			g1~ | g1 |
+		}
+		{
+			g1\fermata |
+		}
+	}
+}
+{% endif %}

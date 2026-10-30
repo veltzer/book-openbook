@@ -1,0 +1,105 @@
+{#
+default_version = "Fake"
+
+[attributes]
+title = "Ruby, My Dear"
+style = "Jazz"
+composer = "Thelonious Monk"
+piece = "Moderately Slow"
+copyright = "1945 J.J. Robbins & Sons, Inc."
+copyrightextra = "Assigned to Consolidated Music Publishers. Renewed Embassy Music Corp."
+typesetter = "Mark Veltzer <mark.veltzer@gmail.com>"
+completion = "5"
+uuid = "eb5e3780-d481-11f1-8000-046874d194b7"
+structure = "AABA"
+location = "jfb:322"
+
+[[youtube]]
+id = "IGcIlCK08_Q"
+remark = "Thelonious Monk in the original recording (1947)"
+
+[[youtube]]
+id = "OfTlmq_5aQQ"
+remark = "Thelonious Monk with John Coltrane (1957)"
+
+[versions.Fake]
+doChords = true
+doVoice = true
+doLyrics = false
+doLyricsmore = false
+doLyricsmoremore = false
+doChordBars = false
+doGuitar = false
+doExtra = false
+doPrep = false
+doOwn = false
+#}
+{% if part == "Vars" %}
+{% endif %}
+{% if part == "Doc" %}	DONE:
+	- added the meta data from the fake book.
+	- put in the tunes structure.
+	- put in the chords (fake book).
+	- put in the tune (fake book).
+	- added youtube performances.
+	TODO:
+	- check the chords (fake book).
+	- check the tune (fake book).
+	- hear the tune to check that it is right and adjust the tempo.
+	- bars 5, 13 and 29: the fake book has an F flat on the last eighth (b9 of Eb7), check against a recording.
+	- bar 24: the position of the A9 chord (beat 2 or 3) is not clear in the fake book.
+{% endif %}
+{% if part == "ChordsFake" %}\chordmode {
+	\startChords
+	\startSong
+
+	\myMark "A"
+	\startPart
+	f1:m7 | ees:maj7 | g2:9 c:7 | f1:maj7 | \myEndLine
+	bes2:m7 ees:7 | aes1:maj7 | bes2:m7 a:7 | b2:m7 bes4:7.5- bes:7.5+ | \myEndLine
+	\endPart
+
+	\myMark "A"
+	\startPart
+	f2:m7 bes:7 | ees1:maj7 | g2:9 c:7 | f1:maj7 | \myEndLine
+	bes2:m7 ees:7 | aes2:maj7 aes:6 | bes2:m7 a:7 | b2:m7 bes:7.5- | \myEndLine
+	\endPart
+
+	\myMark "B"
+	\startPart
+	a1:maj7 | b2:m7 e:7.9- | a2.:6 a4:maj7 | bes4:6 b2.:dim7 | \myEndLine
+	c1:m7 | c2.:m7 d4:m7 | ees1:m7 | aes2:9 a:9 | \myEndLine
+	\endPart
+
+	\myMark "A"
+	\startPart
+	f2:m7 bes:7 | ees1:maj7 | g2:9 c:7 | f1:maj7 | \myEndLine
+	bes2:m7 ees:7 | aes2:maj7 aes:6 | bes2:m7 b:m7 | aes1:6 | \myEndLine
+	\endPart
+
+	\endSong
+	\endChords
+}
+{% endif %}
+{% if part == "VoiceFake" %}{
+	\tempo "Andante" 4 = 72
+	\time 4/4
+	\key aes \major
+
+	% part "A"
+	r4 g''4~ g8 f4 ces8 | bes1 | r4 a'4~ a8 g des4 | c1 |
+	c'2 bes4. fes8 | ees2 r8 f c des | ees2 r8 fis cis d! | e!2. fis4 |
+
+	% part "A"
+	r4 g4~ g8 f4 ces8 | bes1 | r4 a'4~ a8 g des4 | c1 |
+	c'2 bes4. fes8 | ees2 r8 f c des | ees2 r8 fis cis d! | e!1 |
+
+	% part "B"
+	e!2 fis4 cis | b!2 f4 cis' | fis,4 fis2 gis4 | g4 g2. |
+	c2. d!8 c | g2. e!4 | ees'2 f4 des | bes8 f'~ f2 fis4 |
+
+	% part "A"
+	r4 g4~ g8 f4 ces8 | bes1 | r4 a'4~ a8 g des4 | c1 |
+	c'2 bes4. fes8 | ees2 r8 f c des | ees2 r8 fis \tuplet 3/2 { e!8 cis a! } | aes1 |
+}
+{% endif %}

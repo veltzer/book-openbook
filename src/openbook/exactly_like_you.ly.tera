@@ -1,0 +1,106 @@
+{#
+default_version = "Fake"
+
+[attributes]
+title = "Exactly Like You"
+style = "Jazz"
+composer = "Jimmy McHugh"
+poet = "Dorothy Fields"
+piece = "Medium Swing"
+copyright = "1930 Shapiro, Bernstein & Co., Inc. New York. Copyright Renewed."
+typesetter = "Mark Veltzer <mark.veltzer@gmail.com>"
+completion = "5"
+uuid = "eb69ef62-d481-11f1-8000-046874d194b7"
+structure = "AABA"
+location = "jfb:114"
+
+[[youtube]]
+id = "c3lmdbmN3hc"
+remark = "Louis Armstrong and his Orchestra (1930)"
+
+[[youtube]]
+id = "-K2E-BQM2fk"
+remark = "Benny Goodman Trio"
+
+[versions.Fake]
+doChords = true
+doVoice = true
+doLyrics = false
+doLyricsmore = false
+doLyricsmoremore = false
+doChordBars = false
+doGuitar = false
+doExtra = false
+doPrep = false
+doOwn = false
+#}
+{% if part == "Vars" %}
+{% endif %}
+{% if part == "Doc" %}	DONE:
+	- added the meta data from the fake book.
+	- put in the tunes structure.
+	- put in the chords (fake book).
+	- put in the tune (fake book).
+	- added youtube performances.
+	TODO:
+	- add the lyrics.
+	- check the chords (fake book).
+	- check the tune (fake book).
+	- hear the tune to check that it is right and adjust the tempo.
+	- bars 7, 15 and 31: the fake book puts the F chord on beat 3 in bar 7 but on beat 2 in bars 15 and 31.
+	- bars 6, 14 and 30: the G7 chord is printed between beats 3 and 4, put on beat 4 here.
+{% endif %}
+{% if part == "ChordsFake" %}\chordmode {
+	\startChords
+	\startSong
+
+	\myMark "A"
+	\startPart
+	c1 | c | d:7 | d4:7 c/e f:m d:7/fis | \myEndLine
+	g2:7 cis:dim7 | g2.:7/d g4:7 | c2 f4 c | c2 g:7.5+ | \myEndLine
+	\endPart
+
+	\myMark "A"
+	\startPart
+	c1 | c | d:7 | d4:7 c/e f:m d:7/fis | \myEndLine
+	g2:7 cis:dim7 | g2.:7/d g4:7 | c4 f2 c4 | g2:m7 c:7 | \myEndLine
+	\endPart
+
+	\myMark "B"
+	\startPart
+	f1:6 | f:m6 | c | c2 e4:7 a:m | \myEndLine
+	d1:m7 | f2:m g:7 | c2:maj7 ees:dim7 | d2:m7 g:7.5+ | \myEndLine
+	\endPart
+
+	\myMark "A"
+	\startPart
+	c1 | c | d:7 | d4:7 c/e f:m d:7/fis | \myEndLine
+	g2:7 cis:dim7 | g2.:7/d g4:7 | c4 f2 c4 | c1 | \myEndLine
+	\endPart
+
+	\endSong
+	\endChords
+}
+{% endif %}
+{% if part == "VoiceFake" %}{
+	\tempo "Allegro" 4 = 130
+	\time 2/2
+	\key c \major
+
+	% part "A"
+	e'4 b d a | c4 c2. | e4 b d a | c1 |
+	b4 f a e | g4 g2 g4 | c4 c, c c~ | c2 r2 |
+
+	% part "A"
+	e'4 b d a | c4 c2. | e4 b d a | c1 |
+	b4 f a e | g4 g2 g4 | c4 c, c c~ | c4 d e g |
+
+	% part "B"
+	d'4 d d2~ | d4 cis e8 d c! b | c4 c c2~ | c4 a b c |
+	f4 f f2~ | f4 e g8 f e d | e4 e b b | d4 d a g |
+
+	% part "A"
+	e'4 b d a | c4 c2. | e4 b d a | c1 |
+	b4 f a e | g4 g2 g4 | c4 c, c c~ | c2. r4 |
+}
+{% endif %}

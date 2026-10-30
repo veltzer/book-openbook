@@ -1,0 +1,101 @@
+{#
+default_version = "Real"
+
+[attributes]
+title = "I Fall In Love Too Easily"
+style = "Jazz"
+composer = "Jule Styne"
+poet = "Sammy Cahn"
+piece = "Ballad"
+copyright = "1944 Metro-Goldwyn-Mayer Inc."
+copyrightextra = "Copyright Renewed."
+typesetter = "Mark Veltzer <mark.veltzer@gmail.com>"
+completion = "5"
+uuid = "ed40ab60-d480-11f1-8000-046874d194b7"
+structure = "AB"
+location = "557:141"
+
+[[youtube]]
+id = "XnL2FK5wv6E"
+remark = "Frank Sinatra in the original from the movie Anchors Aweigh (1945)"
+
+[[youtube]]
+id = "y6qfgwy77ms"
+remark = "Chet Baker"
+
+[versions.Real]
+doChords = true
+doVoice = true
+doLyrics = false
+doLyricsmore = false
+doLyricsmoremore = false
+doChordBars = false
+doGuitar = false
+doExtra = false
+doPrep = false
+doOwn = false
+#}
+{% if part == "Vars" %}
+{% endif %}
+{% if part == "Doc" %}	DONE:
+	- added the meta data from the 557 jazz standards book.
+	- put in the tunes structure.
+	- put in the chords (557 jazz standards book).
+	- put in the tune (557 jazz standards book).
+	- added youtube performances.
+	TODO:
+	- add the lyrics.
+	- check the chords (557 jazz standards book).
+	- the book has alternate chords in parenthesis in bars 8 and 13-15
+		(Dm7b5 G7, Fm7 Abm7, G7 C7, F9 Bb13) which are not put in.
+	- check the tune (557 jazz standards book).
+	- bar 13 is hard to read in the book (c8. c16 bes8. aes16).
+	- hear the tune to check that it is right and adjust the tempo.
+	- check the copyright.
+{% endif %}
+{% if part == "ChordsReal" %}\chordmode {
+	\startChords
+	\startSong
+
+	\myMark "A"
+	\startPart
+	\repeat volta 2 {
+		f2:m7 bes:7 | ees:maj7 aes:maj7 | d:m7.5- g:7 | c:m7 a:m7.5- | \myEndLine
+		d2:m7.5- g:7.9- | c:m7 c:m7/bes | a:m7.5- d:7 | g1:7 | \myEndLine
+		a2:m7.5- d:7 | g1:7 | g2:m7.5- c:7 | f1:m7 | \myEndLine
+		f2:m7 bes:9 | g:m7 c:7 | f:m7 bes:7 |
+	} \alternative {
+		{
+			ees2:6 g4:m7.5- c:7 | \myEndLineVoltaNotLast
+		}
+		{
+			ees1:6 | \myEndLineVoltaLast
+		}
+	}
+	\endPart
+
+	\endSong
+	\endChords
+}
+{% endif %}
+{% if part == "VoiceReal" %}{
+	\tempo "Adagio" 4 = 60
+	\time 4/4
+	\key ees \major
+
+	% part "A"
+	\repeat volta 2 {
+		r8. c'16 b!8. c16 bes4. aes8 | g8 aes g2. | r8. aes16 g8. aes16 g4. f8 | ees1 |
+		r8. f16 e!8. f16 ees4. d8 | c8 d ees g~ g2 | r8. fis16 g8. a!16 d4 d | d1 |
+		r8. ees16 d8. ees16 d4. c8 | b!2~ b8. g16 aes8. g16 | c2. bes8. c16 | aes2~ aes8 g aes8. g16 |
+		c2~ c8. c16 bes8. aes16 | \tuplet 3/2 { g8 aes g~ } g2. | r8 g f8. ees16 g4. g8 |
+	} \alternative {
+		{
+			ees2 r2 |
+		}
+		{
+			ees2. r4 |
+		}
+	}
+}
+{% endif %}

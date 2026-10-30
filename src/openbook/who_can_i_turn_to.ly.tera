@@ -1,0 +1,95 @@
+{#
+default_version = "Fake"
+
+[attributes]
+title = "Who Can I Turn To"
+subtitle = "(When Nobody Needs Me)"
+style = "Jazz"
+composer = "Leslie Bricusse, Anthony Newley"
+poet = "Leslie Bricusse, Anthony Newley"
+piece = "Slowly"
+copyright = "1964 Concord Music Ltd., London, England"
+copyrightextra = "TRO - Musical Comedy Productions, Inc., New York, controls all publication rights for the U.S.A. and Canada"
+typesetter = "Mark Veltzer <mark.veltzer@gmail.com>"
+completion = "5"
+uuid = "eb658b02-d481-11f1-8000-046874d194b7"
+structure = "AA'"
+location = "jfb:430"
+
+[[youtube]]
+id = "95dANDYwcms"
+remark = "Tony Bennett in the hit recording (1964)"
+
+[[youtube]]
+id = "UjO7XxUiLGg"
+remark = "Bill Evans Trio live at Town Hall, New York (1966)"
+
+[versions.Fake]
+doChords = true
+doVoice = true
+doLyrics = false
+doLyricsmore = false
+doLyricsmoremore = false
+doChordBars = false
+doGuitar = false
+doExtra = false
+doPrep = false
+doOwn = false
+#}
+{% if part == "Vars" %}
+{% endif %}
+{% if part == "Doc" %}	DONE:
+	- added the meta data from the fake book.
+	- put in the tunes structure.
+	- put in the chords (fake book).
+	- put in the tune (fake book).
+	- added youtube performances.
+	TODO:
+	- add the lyrics.
+	- check the chords (fake book).
+	- check the tune (fake book).
+	- hear the tune to check that it is right and adjust the tempo.
+	- the song is from the musical "The Roar of the Greasepaint - The Smell of the Crowd".
+{% endif %}
+{% if part == "ChordsFake" %}\chordmode {
+	\startChords
+	\startSong
+
+	\myMark "A"
+	\startPart
+	ees1:maj7 | g2:m7 c:7 | f2:m7 bes:7 | f2:m7/bes bes:7 | \myEndLine
+	ees2:maj7 f:m7 | g2:m7 aes:maj7 | bes1:m7 | ees:9 | \myEndLine
+	aes1:maj7 | a2:m7.5- d:7 | g2:m7 c:m7 | bes2:m7 ees:7 | \myEndLine
+	aes2:maj7 d:m7.5- | g2:m7 c:7.9- | f2:m7 b:9 | bes2:7sus4 bes:7 | \myEndLine
+	\endPart
+
+	\myMark "A"
+	\startPart
+	ees1:maj7 | g2:m7 c:7 | f2:m7 bes:7 | f2:m7/bes bes:7 | \myEndLine
+	ees2:maj7 f:m7 | g2:m7 aes:maj7 | bes1:m7 | ees:9 | \myEndLine
+	aes1:maj7 | d2:m7.5- g:7.9- | c2:m7 c:m7/bes | a2:m7.5- aes:maj7 | \myEndLine
+	ees2:6.9/g ges:dim7 | f2:m9 bes:7.5+.9- | ees1*2:6.9 | \myEndLine
+	\endPart
+
+	\endSong
+	\endChords
+}
+{% endif %}
+{% if part == "VoiceFake" %}{
+	\tempo "Andante" 4 = 72
+	\time 4/4
+	\key ees \major
+
+	% part "A"
+	f4 f8 ees f4 g~ | g2 r4 bes,4 | f'4 f8 ees f4 bes,~ | bes2 r4 bes4 |
+	g'4 g8 fis g4 aes | bes4 bes8 a! bes4 c | des4 des8 c des4 f,~ | f2 r4 ees4 |
+	c'4 c8 b! c4 ees~ | ees2 r4 f4 | d4 d8 cis d4 ees,~ | ees2 r4 ees4 |
+	c'4 c8 b! c4 aes | bes4 bes8 a! bes4 g | f4 f8 e! f4 aes~ | aes2 r4 bes,4 |
+
+	% part "A"
+	f'4 f8 ees f4 g~ | g2 r4 bes,4 | f'4 f8 ees f4 bes,~ | bes2 r4 bes4 |
+	g'4 g8 fis g4 aes | bes4 bes8 a! bes4 c | des4 des8 c des4 f,~ | f2 r4 ees4 |
+	c'4 c8 b! c4 d~ | d2 r4 g,4 | d'4 d8 c d4 ees~ | ees2 r4 c4 |
+	ees4 ees8 d ees4 ees8 f | g2 d4 d | ees1~ | ees4 r4 r2 |
+}
+{% endif %}

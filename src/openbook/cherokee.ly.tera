@@ -1,0 +1,122 @@
+{#
+default_version = "Fake"
+
+[attributes]
+title = "Cherokee"
+subtitle = "(Indian Love Song)"
+style = "Jazz"
+composer = "Ray Noble"
+poet = "Ray Noble"
+piece = "Smoothly"
+copyright = "1938 The Peter Maurice Music Co. Ltd. London, England"
+copyrightextra = "Renewed."
+typesetter = "Mark Veltzer <mark.veltzer@gmail.com>"
+completion = "5"
+uuid = "13be2b18-d482-11f1-8000-046874d194b7"
+structure = "AABA"
+location = "jfb:83"
+
+[[youtube]]
+id = "5GR2t1Q0HE0"
+remark = "Charlie Barnet and his Orchestra (1939)"
+
+[[youtube]]
+id = "W9cUWqkHCQ8"
+remark = "Clifford Brown and Max Roach Quintet from Study in Brown (1955)"
+
+[versions.Fake]
+doChords = true
+doVoice = true
+doLyrics = false
+doLyricsmore = false
+doLyricsmoremore = false
+doChordBars = false
+doGuitar = false
+doExtra = false
+doPrep = false
+doOwn = false
+#}
+{% if part == "Vars" %}
+{% endif %}
+{% if part == "Doc" %}	DONE:
+	- added the meta data from the fake book.
+	- put in the tunes structure.
+	- put in the chords (fake book).
+	- put in the tune (fake book).
+	- added youtube performances.
+	- wrote out the D.C. al Coda of the fake book as a last A section with the coda.
+	TODO:
+	- add the lyrics.
+	- check the chords (fake book).
+	- check the tune (fake book).
+	- hear the tune to check that it is right and adjust the tempo (jazz players take this very fast).
+{% endif %}
+{% if part == "ChordsFake" %}\chordmode {
+	\startChords
+	\startSong
+
+	\myMark "A"
+	\startPart
+	\repeat volta 2 {
+		bes1:6 | f:7.5+ | f:m7 | bes:9 | \myEndLine
+		ees1*2:maj7 | ees1:m | aes:7 | \myEndLine
+		bes1:6 | g:m7 | c1*2:9 | \myEndLine
+		c1:m7 |
+	} \alternative {
+		{
+			g1:7.9- | c:m7 | f:7.5+ | \myEndLineVoltaNotLast
+		}
+		{
+			f1:7 | bes1*2 | \myEndLineVoltaLast
+		}
+	}
+	\endPart
+
+	\myMark "B"
+	\startPart
+	cis1:m7 | fis:7 | b:maj9 | b:7 | \myEndLine
+	b1:m7 | e:7 | a | a2:maj7 a:6 | \myEndLine
+	a1:m7 | d:7 | g1*2:maj7 | \myEndLine
+	g1:m7 | c:9 | c:m7 | f:7.5+ | \myEndLine
+	\endPart
+
+	\myMark "A"
+	\startPart
+	bes1:6 | f:7.5+ | f:m7 | bes:9 | \myEndLine
+	ees1*2:maj7 | ees1:m | aes:7 | \myEndLine
+	bes1:6 | g:m7 | c1*2:9 | \myEndLine
+	c1:m7 | f:7 | bes | bes:maj7 | \myEndLine
+	\endPart
+
+	\endSong
+	\endChords
+}
+{% endif %}
+{% if part == "VoiceFake" %}{
+	\tempo "Moderato" 2 = 100
+	\time 2/2
+	\key bes \major
+
+	% part "A"
+	\repeat volta 2 {
+		d1 | f2 g | bes1 | g1 | f1 | d2 f | d1 | c1 | bes1 | d2 f | d'1 | bes1 | g1 |
+	} \alternative {
+		{
+			f2 d | c1 | cis1 |
+		}
+		{
+			d1 | bes1~ | bes1 |
+		}
+	}
+
+	% part "B"
+	dis'1~ | dis2 cis | cis4 ais fis2~ | fis2 cis' |
+	cis4 a fis2~ | fis2 b | e,1~ | e1 |
+	b'1~ | b2 a | a4 fis d2~ | d2 a' |
+	a4 f d2~ | d2 g | c,1 | cis1 |
+
+	% part "A"
+	d1 | f2 g | bes1 | g1 | f1 | d2 f | d1 | c1 | bes1 | d2 f | d'1 | bes1 |
+	g1 | d1 | bes1~ | bes1 |
+}
+{% endif %}

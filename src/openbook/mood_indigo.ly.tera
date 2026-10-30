@@ -1,0 +1,95 @@
+{#
+default_version = "Real"
+
+[attributes]
+title = "Mood Indigo"
+subtitle = "from Sophisticated Ladies"
+style = "Jazz"
+composer = "Duke Ellington, Irving Mills, Albany Bigard"
+poet = "Duke Ellington, Irving Mills, Albany Bigard"
+piece = "Moderately slow"
+copyright = "1931 (Renewed 1958) and Assigned to Famous Music Corporation, EMI Mills Music Inc. and Indigo Mood Music"
+copyrightextra = "Rights for the world outside the U.S.A. Controlled by EMI Mills Music Inc. and Warner Bros. Publications Inc."
+typesetter = "Mark Veltzer <mark.veltzer@gmail.com>"
+completion = "5"
+uuid = "be5a751a-d480-11f1-8000-046874d194b7"
+structure = "AB"
+location = "hlrjb:225"
+
+[[youtube]]
+id = "pJEufDSkLj4"
+remark = "Duke Ellington and his Orchestra in the original recording (1930)"
+
+[[youtube]]
+id = "1V3O5kgwH2w"
+remark = "Nina Simone (1958)"
+
+[versions.Real]
+doChords = true
+doVoice = true
+doLyrics = false
+doLyricsmore = false
+doLyricsmoremore = false
+doChordBars = false
+doGuitar = false
+doExtra = false
+doPrep = false
+doOwn = false
+#}
+{% if part == "Vars" %}
+{% endif %}
+{% if part == "Doc" %}	DONE:
+	- added the meta data from the Hal Leonard Real Jazz Book.
+	- put in the tunes structure.
+	- put in the chords (Hal Leonard Real Jazz Book).
+	- put in the tune (Hal Leonard Real Jazz Book).
+	- added youtube performances.
+	TODO:
+	- add the lyrics.
+	- check the chords (Hal Leonard Real Jazz Book).
+	- check the tune (Hal Leonard Real Jazz Book).
+	- hear the tune to check that it is right and adjust the tempo.
+	- bar 28: in the book the Eb7 falls on the Fb (beat 3 and a half), here it is on beat 3.
+{% endif %}
+{% if part == "ChordsReal" %}\chordmode {
+	\startChords
+	\startSong
+
+	\myMark "A"
+	\startPart
+	aes1:maj7 | bes:7 | bes2:m7 ees:7.5+ | aes1:maj7 | \myEndLine
+	aes1:maj7 | bes:7 | e4.:7 b:m7 e4:7 | ees1:7 | \myEndLine
+	aes1:maj7 | ees2:m7 aes:7 | des1:maj7 | ges:7 | \myEndLine
+	aes1:maj7 | bes:7 | bes2:m7 ees:7.5+ | aes2:maj7 bes4:m7 ees:7 | \myEndLine
+	\endPart
+
+	\myMark "B"
+	\startPart
+	aes1:maj7 | bes:7 | bes2:m7 ees:7 | aes2:maj7 bes4:m7 ees:7 | \myEndLine
+	aes1:maj7 | bes:7 | e:7 | ees:7 | \myEndLine
+	ees1:m7 | aes:7 | des:7 | e2:7 ees:7 | \myEndLine
+	aes1:maj7 | bes:7 | bes2:m7 ees:7 | aes1:maj7 | \myEndLine
+	\endPart
+
+	\endSong
+	\endChords
+}
+{% endif %}
+{% if part == "VoiceReal" %}{
+	\tempo "Andante" 4 = 76
+	\time 4/4
+	\key aes \major
+
+	% part "A"
+	c'2 b!8 c4 c8~ | c1 | ees2 b!2 | c1 |
+	c2 b!8 c4 c8~ | c1 | b!8 b4 a!8~ a4 gis | g!2 f8 fis g4 |
+	r4 aes aes g | r4 ees'4~ ees8 f ees4 | des2 des4 des | bes2. b!4 |
+	c2 b!8 c4 c8~ | c1 | ees2 b!2 | c1 |
+
+	% part "B"
+	r4 ees,8 e! f4. ees8 | d!8 c' ces bes~ bes2 | c!8 bes aes f g4 bes | ees,1 |
+	r4 ees8 e! f4. ees8 | d!8 c' ces bes~ bes2 | c8 b! c b c b4. | bes1 |
+	r8 aes bes ees, aes bes4 ees,8 | aes8 bes ees, aes~ aes2 | r8 aes bes aes ces4. aes8 | ces8 aes bes aes~ aes fes4 ees8 |
+	r4 ees8 e! f!4. ees8 | d!8 c' ces bes~ bes2 | c!8 bes aes f g4 bes | aes2 r2 |
+}
+{% endif %}

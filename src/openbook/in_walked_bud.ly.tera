@@ -1,0 +1,111 @@
+{#
+default_version = "Real"
+
+[attributes]
+title = "In Walked Bud"
+style = "Jazz"
+composer = "Thelonious Monk"
+piece = "Moderately"
+copyright = "1948 (Renewed) by Embassy Music Corporation"
+typesetter = "Mark Veltzer <mark.veltzer@gmail.com>"
+completion = "5"
+uuid = "be5a751c-d480-11f1-8000-046874d194b7"
+structure = "AABA"
+location = "hlrjb:178"
+
+[[youtube]]
+id = "glBvp8dQN6c"
+remark = "Thelonious Monk"
+
+[[youtube]]
+id = "VdiV2SE57I8"
+remark = "Art Blakey's Jazz Messengers with Thelonious Monk (1957)"
+
+[versions.Real]
+doChords = true
+doVoice = true
+doLyrics = false
+doLyricsmore = false
+doLyricsmoremore = false
+doChordBars = false
+doGuitar = false
+doExtra = false
+doPrep = false
+doOwn = false
+#}
+{% if part == "Vars" %}
+{% endif %}
+{% if part == "Doc" %}	DONE:
+	- added the meta data from the Hal Leonard Real Jazz Book.
+	- put in the tunes structure.
+	- put in the chords (Hal Leonard Real Jazz Book).
+	- put in the tune (Hal Leonard Real Jazz Book).
+	- added youtube performances.
+	TODO:
+	- check the chords (Hal Leonard Real Jazz Book).
+	- check the tune (Hal Leonard Real Jazz Book).
+	- hear the tune to check that it is right and adjust the tempo.
+	- bars 5 and 21: the two low eighths at the end (B natural, A natural) are hard to read in the scan, check them.
+{% endif %}
+{% if part == "ChordsReal" %}\chordmode {
+	\startChords
+	\startSong
+
+	\myMark "A"
+	\startPart
+	\repeat volta 2 {
+		f1:m | f:m7+ | f:m7 | bes2:7 ees:7 | \myEndLine
+		aes2:6 f:7 | bes2:m7 ees:7 | aes1:6 |
+	} \alternative {
+		{
+			g2:m7.5- c:7 | \myEndLineVoltaNotLast
+		}
+		{
+			aes1:6 | \myEndLineVoltaLast
+		}
+	}
+	\endPart
+
+	\myMark "B"
+	\startPart
+	f1*2:m7 | des1*2:7 | \myEndLine
+	f1*2:m7 | des1:7 | des2:7 c:7.9- | \myEndLine
+	\endPart
+
+	\myMark "A"
+	\startPart
+	f1:m | f:m7+ | f:m7 | bes2:7 ees:7 | \myEndLine
+	aes2:6 f:7 | bes2:m7 ees:7 | aes1*2:6 | \myEndLine
+	\endPart
+
+	\endSong
+	\endChords
+}
+{% endif %}
+{% if part == "VoiceReal" %}{
+	\tempo "Moderato" 4 = 160
+	\time 4/4
+	\key aes \major
+
+	% part "A"
+	\repeat volta 2 {
+		f8 c'~ c2 f,4 | e!8 c'~ c2 e,4 | ees8 c'~ c2 ees,4 | d!8 bes'4. des,4. b!8 |
+		c8 aes'~ aes2 b,!8 a! | bes8 g'4. des4. b!8 | c8 ees f ees aes4 f8 ees |
+	} \alternative {
+		{
+			r8 aes,4. r2 |
+		}
+		{
+			r8 aes4. r2 |
+		}
+	}
+
+	% part "B"
+	f'8 g aes4 \tuplet 3/2 { bes8 ces bes } aes8 bes | aes4 \tuplet 3/2 { bes8 ces bes } aes8 bes aes f | ces'1~ | ces1 |
+	f,8 g aes4 \tuplet 3/2 { bes8 ces bes } aes8 bes | aes4 \tuplet 3/2 { bes8 ces bes } aes8 bes aes f | ces'1~ | ces1 |
+
+	% part "A"
+	f,8 c'~ c2 f,4 | e!8 c'~ c2 e,4 | ees8 c'~ c2 ees,4 | d!8 bes'4. des,4. b!8 |
+	c8 aes'~ aes2 b,!8 a! | bes8 g'4. des4. b!8 | c8 ees f ees aes4 f8 ees | r8 aes,4. r2 |
+}
+{% endif %}

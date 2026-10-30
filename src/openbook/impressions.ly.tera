@@ -1,0 +1,108 @@
+{#
+default_version = "Real"
+
+[attributes]
+title = "Impressions"
+style = "Jazz"
+composer = "John Coltrane"
+piece = "Fast Swing"
+copyright = "1974 JOWCOL MUSIC"
+typesetter = "Mark Veltzer <mark.veltzer@gmail.com>"
+completion = "5"
+uuid = "98066964-d480-11f1-8000-046874d194b7"
+structure = "AABA"
+location = "hlrjb:175"
+
+[[youtube]]
+id = "-mZ54FJ6h-k"
+remark = "John Coltrane in the original recording from Impressions (1961)"
+
+[[youtube]]
+id = "3Z7yXLIk4oI"
+remark = "Wes Montgomery live in Belgium (1965)"
+
+[versions.Real]
+doChords = true
+doVoice = true
+doLyrics = false
+doLyricsmore = false
+doLyricsmoremore = false
+doChordBars = false
+doGuitar = false
+doExtra = false
+doPrep = false
+doOwn = false
+#}
+{% if part == "Vars" %}
+{% endif %}
+{% if part == "Doc" %}	DONE:
+		- added the meta data from the Hal Leonard Real Jazz Book.
+		- put in the tunes structure.
+		- put in the chords (Hal Leonard Real Jazz Book).
+		- put in the tune (Hal Leonard Real Jazz Book).
+		- added youtube performances.
+	TODO:
+		- check the chords (Hal Leonard Real Jazz Book).
+		- check the tune (Hal Leonard Real Jazz Book).
+		- hear the tune to check that it is right and adjust the tempo.
+		- the book writes the form as D.C. al Coda, here it is written out once with the coda after it.
+{% endif %}
+{% if part == "ChordsReal" %}\chordmode {
+	\startChords
+	\startSong
+
+	\myMark "A"
+	\startPart
+	d1*4:m7 | d1*4:m7 | \myEndLine
+	\endPart
+
+	\myMark "A"
+	\startPart
+	d1*4:m7 | d1*4:m7 | \myEndLine
+	\endPart
+
+	\myMark "B"
+	\startPart
+	ees1*4:m7 | ees1*4:m7 | \myEndLine
+	\endPart
+
+	\myMark "A"
+	\startPart
+	d1*4:m7 | d1*4:m7 | \myEndLine
+	\endPart
+
+	\myMark "Coda"
+	\startPart
+	d1*5:m7 | d1*5:m7 | \myEndLine
+	\endPart
+
+	\endSong
+	\endChords
+}
+{% endif %}
+{% if part == "VoiceReal" %}{
+	\tempo "Presto" 4 = 280
+	\time 4/4
+	\key d \minor
+
+	% part "A"
+	d'1~ | d2 e8 g f d~ | d1 | r4 r8 e f4 g |
+	a4 c e,2 | d4 f b, d8 a~ | a1 | r2 g'4 f |
+
+	% part "A"
+	d1~ | d2 e8 g f d~ | d1 | r4 r8 e f4 g |
+	a4 c e,2 | d4 f b, d8 a~ | a1 | r2 f'4. f8~ |
+
+	% part "B"
+	f1~ | f4. ees8 aes4 ges | f2 ees | des2 ges4. c,8~ |
+	c2 bes8 ees4. | aes,2 ges4 des'8 f,~ | f1 | r2 f'2 |
+
+	% part "A"
+	d1~ | d2 e8 g f d~ | d1 | r4 r8 e f4 g |
+	a4 c e,2 | d4 f b, d8 a~ | a1^\markup {To Coda \musicglyph #"scripts.coda"} | r1^\markup {D.C. al Coda} |
+
+	% part "Coda"
+	a1 | r2 g4. f8~ | f1 | r2 r4 e | d1 |
+	r2 r4 c' | b1 | r2 e | a,1~ | a1 |
+}
+{% endif %}

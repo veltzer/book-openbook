@@ -1,0 +1,116 @@
+{#
+default_version = "Fake"
+
+[attributes]
+title = "(I Don't Stand) A Ghost Of A Chance"
+style = "Jazz"
+composer = "Victor Young"
+poet = "Bing Crosby, Ned Washington"
+piece = "Smoothly"
+copyright = "1932 by American Academy of Music, Inc."
+copyrightextra = "Copyright renewed, assigned to American Academy of Music, Inc. and Chappell & Co., Inc., for the U.S.A. only"
+typesetter = "Mark Veltzer <mark.veltzer@gmail.com>"
+completion = "5"
+uuid = "43bc869a-d480-11f1-8000-046874d194b7"
+structure = "AABA"
+location = "jfb:129"
+
+[[youtube]]
+id = "djSlIX-Tips"
+remark = "Billie Holiday on Clef Records (1955)"
+
+[[youtube]]
+id = "kjcR-kPIAMY"
+remark = "Ben Webster"
+
+[versions.Fake]
+doChords = true
+doVoice = true
+doLyrics = false
+doLyricsmore = false
+doLyricsmoremore = false
+doChordBars = false
+doGuitar = false
+doExtra = false
+doPrep = false
+doOwn = false
+#}
+{% if part == "Vars" %}
+{% endif %}
+{% if part == "Doc" %}	DONE:
+	- added the meta data from the fake book.
+	- put in the tunes structure.
+	- put in the chords (fake book).
+	- put in the tune (fake book).
+	- added youtube performances.
+	TODO:
+	- add the lyrics.
+	- check the chords (fake book).
+	- check the tune (fake book).
+	- hear the tune to check that it is right and adjust the tempo.
+	- bar 4: the third note is printed without an accidental, typed as A flat (b9 of G7b9).
+{% endif %}
+{% if part == "ChordsFake" %}\chordmode {
+	\startChords
+	\startSong
+
+	\partial 4 s4 |
+
+	\myMark "A"
+	\startPart
+	\repeat volta 2 {
+		c1 | g2.:7.5+ g4:7.5+/f | e2:m7.5- a:7 | d2.:m7.5- g4:7.9- | \myEndLine
+		c2:maj7 a:m7 | d2:7 g:7.5+ |
+	} \alternative {
+		{
+			c2 a:7 | d:m7 g:7 | \myEndLineVoltaNotLast
+		}
+		{
+			c2 f:9 | c1 | \myEndLineVoltaLast
+		}
+	}
+	\endPart
+
+	\myMark "B"
+	\startPart
+	d1:m7 | g:7.5+ | c | a:m7 | \myEndLine
+	fis:m7.5- | b:7.9- | e:9 | g:7.5+ | \myEndLine
+	\endPart
+
+	\myMark "Coda"
+	\startPart
+	c2 f:9 | c1:6 | \myEndLine
+	\endPart
+
+	\endSong
+	\endChords
+}
+{% endif %}
+{% if part == "VoiceFake" %}{
+	\tempo "Andante" 4 = 80
+	\time 4/4
+	\key c \major
+
+	\partial 4 g'4 |
+
+	% part "A"
+	\repeat volta 2 {
+		g4^\markup { \musicglyph #"scripts.segno" } g g g | g g2 g4 | g g bes a | aes aes2 aes4 |
+		g4 g d'4. c8 | \tuplet 3/2 { e4 c a } g a^\markup {To Coda \musicglyph #"scripts.coda"} |
+	} \alternative {
+		{
+			e1~ | e4 r r g |
+		}
+		{
+			c1~ | c1 |
+		}
+	}
+
+	% part "B"
+	\tuplet 3/2 { d,4 e f } a8 a4. | \tuplet 3/2 { ees4 f g } b8 bes4. | g4. e8 e2~ | e2. r4 |
+	\tuplet 3/2 { fis4 g a } c8 c4. | \tuplet 3/2 { fis,4 g a } c8 c4. | b4. fis8 fis4 fis | a4. ees8 ees4 g^\markup {D.S. al Coda} |
+
+	% part "Coda"
+	c1~ | c2. r4 |
+}
+{% endif %}

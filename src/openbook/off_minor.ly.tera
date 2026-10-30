@@ -1,0 +1,97 @@
+{#
+default_version = "Real"
+
+[attributes]
+title = "Off Minor"
+style = "Jazz"
+composer = "Thelonius Monk"
+piece = "Moderately"
+copyright = "1947 (Renewed) by Embassy Music Corporation"
+typesetter = "Mark Veltzer <mark.veltzer@gmail.com>"
+completion = "5"
+uuid = "d7e3edf4-d480-11f1-8000-046874d194b7"
+structure = "AABA"
+location = "hlrjb:265"
+
+[[youtube]]
+id = "jcHq3CztcrQ"
+remark = "Thelonious Monk in the original recording (1947)"
+
+[[youtube]]
+id = "RUWefuTD5kk"
+remark = "Bud Powell"
+
+[versions.Real]
+doChords = true
+doVoice = true
+doLyrics = false
+doLyricsmore = false
+doLyricsmoremore = false
+doChordBars = false
+doGuitar = false
+doExtra = false
+doPrep = false
+doOwn = false
+#}
+{% if part == "Vars" %}
+{% endif %}
+{% if part == "Doc" %}	DONE:
+	- added the meta data from the Hal Leonard Real Jazz Book.
+	- put in the tunes structure.
+	- put in the chords (Hal Leonard Real Jazz Book).
+	- put in the tune (Hal Leonard Real Jazz Book).
+	- added youtube performances.
+	TODO:
+	- check the chords (Hal Leonard Real Jazz Book).
+	- check the tune (Hal Leonard Real Jazz Book).
+	- hear the tune to check that it is right and adjust the tempo.
+	- bars 6 and 22: the book has e-flat (by the key) over B♭13♭9(♭5), maybe it should be e natural.
+{% endif %}
+{% if part == "ChordsReal" %}\chordmode {
+	\startChords
+	\startSong
+
+	\myMark "A"
+	\startPart
+	\repeat volta 2 {
+		g1:m | cis2:7 fis:7 | b2:m7 bes:7 | ees2:maj7 d:7 | \myEndLine
+		g1:m | bes1:13.9-.5- | d1*2:13.9-.5- | \myEndLine
+	}
+	\endPart
+
+	\myMark "B"
+	\startPart
+	des2.:maj7 d4:7 | bes2:m7 ees:7.5- | b1:m7 | e1:13.9- | \myEndLine
+	e1:m7 | a2:9sus4 a:7 | d1*2:13.9-.5- | \myEndLine
+	\endPart
+
+	\myMark "A"
+	\startPart
+	g1:m | cis2:7 fis:7 | b2:m7 bes:7 | ees2:maj7 d:7 | \myEndLine
+	g1:m | bes1:13.9-.5- | d1*2:13.9-.5- | \myEndLine
+	\endPart
+
+	\endSong
+	\endChords
+}
+{% endif %}
+{% if part == "VoiceReal" %}{
+	\tempo "Moderato" 4 = 120
+	\time 4/4
+	\key g \minor
+
+	% part "A"
+	\repeat volta 2 {
+		bes'8 bes fis4 e d | a'2 r4 r8 bes, | a8 d~ d2.~ | d1 |
+		bes'8 bes fis4 e d | r4 ees2 r8 des | d!2. r4 | r8 des d!2 r4 |
+	}
+
+	% part "B"
+	c2. \tuplet 3/2 { e8 g a } | bes2 a | a2~ a8 fis f!4 | e4 gis fis f! |
+	e2. d'4 | b!4 g cis2 | c!2 aes | b!4 aes2. |
+
+	% part "A"
+	bes8 bes fis4 e d | a'2 r4 r8 bes, | a8 d~ d2.~ | d1 |
+	bes'8 bes fis4 e d | r4 ees2 r8 des | d!2. r4 | r8 des d!2 r4 |
+}
+{% endif %}

@@ -1,0 +1,88 @@
+{#
+default_version = "Real"
+
+[attributes]
+title = "Con Alma"
+style = "Jazz"
+composer = "John 'Dizzy' Gillespie"
+piece = "Moderately"
+copyright = "1956 by Jatap Publishing Co., Inc."
+copyrightextra = "Copyright Renewed 1984 by John Dizzy Gillespie"
+typesetter = "Mark Veltzer <mark.veltzer@gmail.com>"
+completion = "5"
+uuid = "d7e233b0-d480-11f1-8000-046874d194b7"
+structure = "AABA"
+location = "hlrjb:84"
+
+[[youtube]]
+id = "hLUyVyM626A"
+remark = "Dizzy Gillespie in the original recording (1954)"
+
+[[youtube]]
+id = "f94Fqy5KohI"
+remark = "Stan Getz"
+
+[versions.Real]
+doChords = true
+doVoice = true
+doLyrics = false
+doLyricsmore = false
+doLyricsmoremore = false
+doChordBars = false
+doGuitar = false
+doExtra = false
+doPrep = false
+doOwn = false
+#}
+{% if part == "Vars" %}
+{% endif %}
+{% if part == "Doc" %}	DONE:
+	- added the meta data from the Hal Leonard Real Jazz Book.
+	- put in the tunes structure.
+	- put in the chords (Hal Leonard Real Jazz Book).
+	- put in the tune (Hal Leonard Real Jazz Book).
+	- added youtube performances.
+	TODO:
+	- check the chords (Hal Leonard Real Jazz Book).
+	- check the tune (Hal Leonard Real Jazz Book).
+	- hear the tune to check that it is right and adjust the tempo.
+	- bar 11: the book has a f-flat as the fourth note (a minor third above bar 9), check it.
+{% endif %}
+{% if part == "ChordsReal" %}\chordmode {
+	\startChords
+	\startSong
+
+	\myMark "A"
+	\startPart
+	\repeat volta 2 {
+		e2:maj7 gis:7/dis | cis2:m7 b:7 | bes1:7 | ees2:maj7 ees4:m7 aes:7 | \myEndLine
+		des2:maj7 f:7/c | bes2:m7 aes:7 | g1:7 | c1:maj7 | \myEndLine
+	}
+	\endPart
+
+	\myMark "B"
+	\startPart
+	c1:m7.5- | f1:7.9- | fis1:m7 | b1:7 | \myEndLine
+	e1*2:maj7 | f1:m7 | bes1:7 | \myEndLine
+	\endPart
+
+	\endSong
+	\endChords
+}
+{% endif %}
+{% if part == "VoiceReal" %}{
+	\tempo "Moderato" 4 = 120
+	\time 4/4
+	\key c \major
+
+	% part "A"
+	\repeat volta 2 {
+		gis'2 gis | gis gis | gis4. ais16 b ais4 gis | g!2 ges4 aes |
+		f2 f | f f | f4. g16 aes g4 f | e1^\markup { \italic { Fine } } |
+	}
+
+	% part "B"
+	ges8. f16 ees des ees8~ ees2~ | ees2 \tuplet 3/2 { f4 ges aes } | a8. aes16 ges fes ges8~ ges2~ | ges2 aes4 a |
+	b1~ | b1 | bes1~ | bes1^\markup { \italic { D.C. al Fine } } |
+}
+{% endif %}

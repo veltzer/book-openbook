@@ -1,0 +1,130 @@
+{#
+default_version = "Real"
+
+[attributes]
+title = "Moon River"
+subtitle = "From the Paramount Picture 'Breakfast At Tiffany's'"
+style = "Jazz"
+composer = "Henry Mancini"
+poet = "Johnny Mercer"
+piece = "Slowly"
+copyright = "1961 by Famous Music Corporation"
+copyrightextra = "Copyright Renewed 1989."
+typesetter = "Mark Veltzer <mark.veltzer@gmail.com>"
+completion = "5"
+uuid = "58d2cf68-d481-11f1-8000-046874d194b7"
+structure = "ABAC"
+location = "hlrjb:241"
+
+[[youtube]]
+id = "uirBWk-qd9A"
+remark = "Audrey Hepburn in the original movie scene from Breakfast at Tiffany's (1961)"
+
+[[youtube]]
+id = "Ozg3P3LrJs8"
+remark = "Henry Mancini and his orchestra (1961)"
+
+[versions.Real]
+doChords = true
+doVoice = true
+doLyrics = false
+doLyricsmore = false
+doLyricsmoremore = false
+doChordBars = false
+doGuitar = false
+doExtra = false
+doPrep = false
+doOwn = false
+#}
+{% if part == "Vars" %}
+{% endif %}
+{% if part == "Doc" %}	DONE:
+	- added the meta data from the Hal Leonard Real Jazz Book.
+	- put in the tunes structure.
+	- put in the chords (Hal Leonard Real Jazz Book).
+	- put in the tune (Hal Leonard Real Jazz Book).
+	- added youtube performances.
+	TODO:
+	- add the lyrics.
+	- check the chords (Hal Leonard Real Jazz Book).
+	- check the tune (Hal Leonard Real Jazz Book).
+	- hear the tune to check that it is right and adjust the tempo.
+{% endif %}
+{% if part == "ChordsReal" %}\chordmode {
+	\startChords
+	\startSong
+
+	\repeat volta 2 {
+
+	\myMark "A"
+	\startPart
+	c2.:maj7 | a:m7 | f:7.11+ | c/e | \myEndLine
+	f:7.11+ | c/e | b:m7.5- | e:7 | \myEndLine
+	\endPart
+
+	\myMark "B"
+	\startPart
+	a:m7 | c:7/g | f:maj7 | bes:9.11+ | \myEndLine
+	a2:m a4:m7/g | fis4:m7.5- b2:7 | e4:m7 a2:7 | d4:m7 g2:9 | \myEndLine
+	\endPart
+
+	\myMark "A"
+	\startPart
+	c2.:maj7 | a:m7 | f:7.11+ | c/e | \myEndLine
+	f:7.11+ | c/e | b:m7.5- | e:7 | \myEndLine
+	\endPart
+
+	\myMark "C"
+	\startPart
+	a:m7 | a:m/g | fis:m7.5- | f:13 | \myEndLine
+	c/e | f:7.11+ | c/e | f:7.11+ | \myEndLine
+	c/e | a:m7 | d:m7 | g:9 |
+
+	} \alternative {
+		{
+			c2.*2:maj7 | \myEndLineVoltaNotLast
+		}
+		{
+			aes2.:maj7 | des:maj7 | c:maj7 | \myEndLineVoltaLast
+		}
+	}
+	\endPart
+
+	\endSong
+	\endChords
+}
+{% endif %}
+{% if part == "VoiceReal" %}{
+	\tempo "Slowly" 4 = 90
+	\time 3/4
+	\key c \major
+
+	\repeat volta 2 {
+
+	% part "A"
+	g'2. | d'4 c2 | b4. a8 g f | g2 c,4 |
+	b'4. a8 g f | g2 c,4 | d2.~ | d4 r e |
+
+	% part "B"
+	c2. | g'4 e4. d8 | c2. | g'4 e4. d8 |
+	c4 e g | c8 b~ b4. a8 | b8 a~ a4. g8 | a2. |
+
+	% part "A"
+	g2. | d'4 c2 | b4. a8 g f | g2 c,4 |
+	b'4. a8 g f | g2 c,4 | d2.~ | d4 r e |
+
+	% part "C"
+	c2. | e2 g4 | c2. | d2 c4 |
+	g2.~ | g4 b8 a g f | g2.~ | g8 c, b' a g f |
+	g2. | c,2. | f4 d2~ | d2 e4 |
+
+	} \alternative {
+		{
+			c2.~ | c2 r4 |
+		}
+		{
+			c2.~ | c2.~ | c2. |
+		}
+	}
+}
+{% endif %}
