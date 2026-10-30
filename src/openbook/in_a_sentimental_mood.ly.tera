@@ -1,0 +1,109 @@
+{#
+default_version = "Real"
+
+[attributes]
+title = "In A Sentimental Mood"
+style = "Jazz"
+composer = "Duke Ellington, Irving Mills, Manny Kurtz"
+poet = "Duke Ellington, Irving Mills, Manny Kurtz"
+piece = "Slowly"
+copyright = "1935 (Renewed 1963) and Assigned to Famous Music Corporation and EMI Mills Music Inc. in the U.S.A."
+copyrightextra = "Rights for the world outside the U.S.A. Controlled by EMI Mills Music Inc. and Warner Bros. Publications Inc."
+typesetter = "Mark Veltzer <mark.veltzer@gmail.com>"
+completion = "5"
+uuid = "db0102be-d46d-11f1-8000-046874d194b7"
+structure = "AABA"
+location = "hlrjb:176"
+
+[[youtube]]
+id = "sCQfTNOC5aE"
+remark = "Duke Ellington & John Coltrane"
+
+[[youtube]]
+id = "gkdFmq4Nnmk"
+remark = "Duke Ellington"
+
+[versions.Real]
+doChords = true
+doVoice = true
+doLyrics = false
+doLyricsmore = false
+doLyricsmoremore = false
+doChordBars = false
+doGuitar = false
+doExtra = false
+doPrep = false
+doOwn = false
+#}
+{% if part == "Vars" %}
+{% endif %}
+{% if part == "Doc" %}	DONE:
+	- added the meta data from the Hal Leonard Real Jazz Book.
+	- put in the tunes structure.
+	- put in the chords (Hal Leonard Real Jazz Book).
+	- put in the tune (Hal Leonard Real Jazz Book).
+	- added youtube performances.
+	TODO:
+	- add the lyrics.
+	- check the chords (Hal Leonard Real Jazz Book).
+	- check the tune (Hal Leonard Real Jazz Book).
+	- hear the tune to check that it is right and adjust the tempo.
+{% endif %}
+{% if part == "ChordsReal" %}\chordmode {
+	\startChords
+	\startSong
+
+	\partial 2. s2. |
+
+	\myMark "A"
+	\startPart
+	d2:m d:m7+ | d:m7 d:m6 | g:m g:m7+ | g2:m7 bes4:7 a:7 | \myEndLine
+	d1:m7 | d:7 | g2:m7 ges:7 | f2:maj7 e4:m7.5- a:7 | \myEndLine
+	\endPart
+
+	\myMark "A"
+	\startPart
+	d2:m d:m7+ | d:m7 d:m6 | g:m g:m7+ | g2:m7 bes4:7 a:7 | \myEndLine
+	d1:m7 | d:7 | g2:m7 ges:7 | f2:maj7 ees4:m7 aes:7 | \myEndLine
+	\endPart
+
+	\myMark "B"
+	\startPart
+	des2:maj7 bes:m7 | ees:m7 aes:7 | des:maj7 bes:7 | ees:7 aes:7 | \myEndLine
+	des:maj7 bes:m7 | ees:m7 aes:7 | g1:m7 | c2:7 e4:m7.5- a:7 | \myEndLine
+	\endPart
+
+	\myMark "A"
+	\startPart
+	d2:m d:m7+ | d:m7 d:m6 | g:m g:m7+ | g2:m7 bes4:7 a:7 | \myEndLine
+	d1:m7 | d:7 | g2:m7 ges:7 | f1:maj7 | \myEndLine
+	\endPart
+
+	\endSong
+	\endChords
+}
+{% endif %}
+{% if part == "VoiceReal" %}{
+	\tempo "Andante" 4 = 80
+	\time 4/4
+	\key f \major
+
+	\partial 2. f8 g a c d f |
+
+	% part "A"
+	g1~ | g4 f8 g f e d c | a4 d8 a~ a2~ | a4 a8 c d aes g f |
+	d2~ d8 f a c | e2. d4 | bes2 e,2 | g4 f8 g a c d f |
+
+	% part "A"
+	g1~ | g4 f8 g f e d c | a4 d8 a~ a2~ | a4 a8 c d aes g f |
+	d2~ d8 f a c | e2. d4 | bes2 e,2 | f2. r4 |
+
+	% part "B"
+	c'4 bes8 c ees des c bes | f4 ees8 f ges aes f ees | des2 r2 | r1 |
+	c'4 bes8 c ees des c bes | f4 ees8 f ges aes f ees | c1 | r4 f8 g a c d f |
+
+	% part "A"
+	g1~ | g4 f8 g f e d c | a4 d8 a~ a2~ | a4 a8 c d aes g f |
+	d2~ d8 f a c | e2. d4 | bes2 e,2 | f2. r4 |
+}
+{% endif %}

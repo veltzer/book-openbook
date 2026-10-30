@@ -1,0 +1,129 @@
+{#
+default_version = "Real"
+
+[attributes]
+title = "Bésame Mucho"
+subtitle = "Kiss Me Much"
+style = "Latin/Jazz"
+composer = "Consuelo Velazquez"
+poet = "Consuelo Velazquez, English Words by Sunny Skylar"
+piece = "Moderately"
+copyright = "1941 and 1943 by Promotora Hispano Americana De Musica, S.A."
+copyrightextra = "Copyrights Renewed by Peer International Corporation"
+typesetter = "Mark Veltzer <mark.veltzer@gmail.com>"
+completion = "5"
+uuid = "f4321890-d46d-11f1-8000-046874d194b7"
+structure = "ABAC"
+location = "hlrjb:41"
+
+[[youtube]]
+id = "pwRiKDcrjz0"
+remark = "Trio Los Panchos"
+
+[[youtube]]
+id = "qcd6GV1Pptc"
+remark = "Wes Montgomery"
+
+[versions.Real]
+doChords = true
+doVoice = true
+doLyrics = false
+doLyricsmore = false
+doLyricsmoremore = false
+doChordBars = false
+doGuitar = false
+doExtra = false
+doPrep = false
+doOwn = false
+#}
+{% if part == "Vars" %}
+{% endif %}
+{% if part == "Doc" %}	DONE:
+	- added the meta data from the Hal Leonard Real Jazz Book.
+	- put in the tunes structure.
+	- put in the chords (Hal Leonard Real Jazz Book).
+	- put in the tune (Hal Leonard Real Jazz Book).
+	- added youtube performances.
+	TODO:
+	- add the lyrics.
+	- check the chords (Hal Leonard Real Jazz Book).
+	- check the tune (Hal Leonard Real Jazz Book).
+	- hear the tune to check that it is right and adjust the tempo.
+	- in the bar before the endings the book has two voices: the upper
+		(e2 f4 triplet, used here, fits the english lyrics) and a lower
+		(e4 d cis triplet, fits the spanish lyrics). Only the upper one is in.
+{% endif %}
+{% if part == "ChordsReal" %}\chordmode {
+	\startChords
+	\startSong
+
+	\repeat volta 2 {
+
+		\myMark "A"
+		\startPart
+		d2:m g:m6 | d1:m | g2:sus4 g:m | g1:m | \myEndLine
+		g2:m fis:dim | g2:m a:7 | d2:m a:7 | d1:m | \myEndLine
+		d2:7 c:sus2/e | d2:7 d4:7.9- d:aug | g2:sus4 g:m | g1:m | \myEndLine
+		d1:m | e2:7.9- a:7 | d2:m g:m6 | d1:m | \myEndLine
+		\endPart
+
+		\myMark "B"
+		\startPart
+		g1:m | d1:m | a2:7 g:m6 | d1:m | \myEndLine
+		g1:m | d1:m | e2:7 bes:7 | a1:7 | \myEndLine
+		\endPart
+
+		\myMark "A"
+		\startPart
+		d2:m g:m6 | d1:m | g2:sus4 g:m | g1:m | \myEndLine
+		g2:m fis:dim | g2:m a:7 | d2:m a:7 | d1:m | \myEndLine
+		\endPart
+
+		\myMark "C"
+		\startPart
+		d2:7 c:sus2/e | d2:7 d4:7.9- d:aug | g2:sus4 g:m | g1:m | \myEndLine
+		d1:m | e2:7.9- \tuplet 3/2 { a2:7 a4:7.5+ } |
+	} \alternative {
+		{
+			d1:m | bes2:9 a4:sus4.7 a:7 | \myEndLineVoltaNotLast
+		}
+		{
+			d2:m g:m6 | d1:m | \myEndLineVoltaLast
+		}
+	}
+	\endPart
+
+	\endSong
+	\endChords
+}
+{% endif %}
+{% if part == "VoiceReal" %}{
+	\tempo "Moderato" 4 = 116
+	\time 2/2
+	\key d \minor
+
+	\repeat volta 2 {
+		% part "A"
+		d4 d8 d~ d2~ | d2 \tuplet 3/2 { d4 e f } | a2 g~ | g2. r4 |
+		\tuplet 3/2 { g4 g g } \tuplet 3/2 { a a a } | \tuplet 3/2 { bes bes bes } \tuplet 3/2 { cis d e } | a,1~ | a2. r4 |
+		d1~ | d2 c4 bes | a2 g~ | g2. r4 |
+		\tuplet 3/2 { d'4 a f } \tuplet 3/2 { a f d } | \tuplet 3/2 { f e d } \tuplet 3/2 { e d cis } | d1~ | d2. r4 |
+		% part "B"
+		g4 g8 g \tuplet 3/2 { g4 f e } | f4 f8 f \tuplet 3/2 { f4 e d } | e8 e4. e8. e16 f8. g16 | a1 |
+		g4 g8 g \tuplet 3/2 { g4 f e } | f4 f8 f \tuplet 3/2 { f4 e d } | \tuplet 3/2 { e4 e e } \tuplet 3/2 { f f f } | e1 |
+		% part "A"
+		d4 d8 d~ d2~ | d2 \tuplet 3/2 { d4 e f } | a2 g~ | g2. r4 |
+		\tuplet 3/2 { g4 g g } \tuplet 3/2 { a a a } | \tuplet 3/2 { bes bes bes } \tuplet 3/2 { cis d e } | a,1~ | a2. r4 |
+		% part "C"
+		d1~ | d2 c4 bes | a2 g~ | g2. r4 |
+		\tuplet 3/2 { d'4 a f } \tuplet 3/2 { a f d } | \tuplet 3/2 { f e d } \tuplet 3/2 { e2 f4 } |
+	} \alternative {
+		{
+			d1~ | d2~ d4 r |
+		}
+		{
+			d1~ | d2~ d4 r |
+		}
+	}
+}
+{% endif %}

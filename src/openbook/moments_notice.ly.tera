@@ -1,0 +1,102 @@
+{#
+default_version = "Real"
+
+[attributes]
+title = "Moment's Notice"
+style = "Jazz"
+composer = "John Coltrane"
+piece = "Quickly"
+copyright = "1957 (Renewed 1985) JOWCOL MUSIC"
+typesetter = "Mark Veltzer <mark.veltzer@gmail.com>"
+completion = "5"
+uuid = "f4321891-d46d-11f1-8000-046874d194b7"
+structure = "AAB"
+location = "hlrjb:231"
+
+[[youtube]]
+id = "iosNQMGMVwY"
+remark = "John Coltrane in the original recording from Blue Train (1957)"
+
+[[youtube]]
+id = "D98VP9FZMWA"
+remark = "A Tribute to John Coltrane, Newport Jazz Festival 2004"
+
+[versions.Real]
+doChords = true
+doVoice = true
+doLyrics = false
+doLyricsmore = false
+doLyricsmoremore = false
+doChordBars = false
+doGuitar = false
+doExtra = false
+doPrep = false
+doOwn = false
+#}
+{% if part == "Vars" %}
+{% endif %}
+{% if part == "Doc" %}	DONE:
+	- added the meta data from the Hal Leonard Real Jazz Book.
+	- put in the tunes structure.
+	- put in the chords (Hal Leonard Real Jazz Book).
+	- put in the tune (Hal Leonard Real Jazz Book).
+	- added youtube performances.
+	TODO:
+	- check the chords (Hal Leonard Real Jazz Book).
+	- check the tune (Hal Leonard Real Jazz Book).
+	- hear the tune to check that it is right and adjust the tempo.
+{% endif %}
+{% if part == "ChordsReal" %}\chordmode {
+	\startChords
+	\startSong
+
+	\repeat volta 2 {
+
+		\myMark "A"
+		\startPart
+		e2:m7 a:7 | f:m7 bes:7 | ees1:maj7 | aes2:m7 des:7 | \myEndLine
+		d2:m7 g:7 | ees:m7 aes:7 | des1:maj7.11+ | d2:m7 g:7 | \myEndLine
+		c2:m7 b:7.9- | bes:m7 ees:7 | aes1:maj7 | aes2:m7 des:7 | \myEndLine
+	} \alternative {
+		{
+			g2:m7 c:7.13- | aes:m7 des:7 | ges1:6 | f2:m7 bes:7 | \myEndLineVolta
+		}
+		{
+			g2:m7 c:7.9+ |
+		}
+	}
+	\endPart
+
+	\myMark "B"
+	\startPart
+	f2:m7 bes:7 | ees1:6.9 | f:m7 | \myEndLine
+	g1:m7 | f:m7 | ees2:6.9 f:m7 | g:m7 f:m7 | ees1*2 | \myEndLine
+	\endPart
+
+	\endSong
+	\endChords
+}
+{% endif %}
+{% if part == "VoiceReal" %}{
+	\tempo "Presto" 4 = 230
+	\time 4/4
+	\key ees \major
+
+	\repeat volta 2 {
+		% part "A"
+		r8 g'4. g2 | g4. g8~ g4 g | r4 g aes bes | bes4. aes8~ aes2 |
+		r8 f4. f2 | f4. f8~ f4 f | r4 f g aes | g4. f8~ f g f4 |
+		ees1 | c'1 | bes2 g | ees2 f |
+	} \alternative {
+		{
+			g2 aes | bes ces | des4. bes8 ges ees ges ees~ | ees2 f |
+		}
+		{
+			g2 ees |
+		}
+	}
+	% part "B"
+	f4. ees8 f ees f g | ees2. g4 | f2. aes4 |
+	g2. bes4 | f2. g4 | ees2 f | g f | ees4 r r2 | r1 |
+}
+{% endif %}

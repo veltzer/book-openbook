@@ -1,0 +1,116 @@
+{#
+default_version = "Fake"
+
+[attributes]
+title = "Smoke Gets In Your Eyes"
+style = "Jazz"
+composer = "Jerome Kern"
+poet = "Otto Harbach"
+piece = "Moderately"
+copyright = "1933 T.B. Harms Company"
+copyrightextra = "Copyright Renewed. (c/o The Welk Music Group, Santa Monica, CA 90401)"
+typesetter = "Mark Veltzer <mark.veltzer@gmail.com>"
+completion = "5"
+uuid = "5ab6a536-d46e-11f1-8000-046874d194b7"
+structure = "AABA"
+location = "jfb:343"
+
+[[youtube]]
+id = "Z-T3iH3n1kk"
+remark = "The Platters on The Ed Sullivan Show"
+
+[[youtube]]
+id = "eXZ866B2INQ"
+remark = "Thelonious Monk from 'Monk'"
+
+[versions.Fake]
+doChords = true
+doVoice = true
+doLyrics = false
+doLyricsmore = false
+doLyricsmoremore = false
+doChordBars = false
+doGuitar = false
+doExtra = false
+doPrep = false
+doOwn = false
+#}
+{% if part == "Vars" %}
+{% endif %}
+{% if part == "Doc" %}	DONE:
+	- added the meta data from the fake book.
+	- put in the tunes structure.
+	- put in the fake book chords.
+	- put in the fake book tune.
+	- added youtube performances.
+	TODO:
+	- add the lyrics.
+	- check the fake book chords.
+	- check the fake book tune.
+	- hear the tune to check that it is right and adjust the tempo.
+{% endif %}
+{% if part == "ChordsFake" %}\chordmode {
+	\startChords
+	\startSong
+
+	\myMark "A"
+	\startPart
+	\repeat volta 2 {
+		ees2 g4:m7 ges:dim7 | f2:m7 bes:7 | ees2 g:7.5+ | aes:maj7 a:dim7 | \myEndLine
+		g:m7 c:m7 | f:m7 bes:7 |
+	} \alternative {
+		{
+			g:7 c:7 | f:m7 bes:7 | \myEndLineVoltaNotLast
+		}
+		{
+			ees1*2 | \myEndLineVoltaLast
+		}
+	}
+	\endPart
+
+	\myMark "B"
+	\startPart
+	b1:maj7 | gis:m7 | cis2:m7 c:dim7 | cis:m7 fis:7 | \myEndLine
+	b1:maj7 | aes2:m7 f4:m7/bes bes:7 | ees2:maj7 c:7.9- | f:m7 bes:9 | \myEndLine
+	\endPart
+
+	\myMark "A"
+	\startPart
+	ees2 g4:m7 ges:dim7 | f2:m7 bes:7 | ees2 g:7.5+ | aes:maj7 a:dim7 | \myEndLine
+	g:m7 c:m7 | f:m7 bes:7 | ees2:6 des4:6 d:6 | ees1:6.9 | \myEndLine
+	\endPart
+
+	\endSong
+	\endChords
+}
+{% endif %}
+{% if part == "VoiceFake" %}{
+	\tempo "Moderato" 4 = 100
+	\time 4/4
+	\key ees \major
+
+	% part "A"
+	\repeat volta 2 {
+		ees2 d8 f ees c | aes'2 g8 bes aes f | ees'1~ | ees2 f8 ees b c |
+		d2 c8 bes c, ees | bes'2 c8 bes bes, c |
+	} \alternative {
+		{
+			g'1 | f |
+		}
+		{
+			ees1~ | ees |
+		}
+	}
+
+	% part "B"
+	\key b \major
+	dis8 fis dis'4~ dis8 ais cis b | dis,8 fis ais4~ ais8 gis \tuplet 3/2 { fis8 gis, b } | fis'2 fis | fis1 |
+	dis8 fis dis'4~ dis8 ais cis b | ees,8 ges bes4~ bes8 aes g f |
+	\key ees \major
+	g2 g | f1 |
+
+	% part "A"
+	ees2 d8 f ees c | aes'2 g8 bes aes f | ees'1~ | ees2 f8 ees b c |
+	d2 c8 bes \tuplet 3/2 { c,8 ees g } | bes2 c8 bes bes, c | ees1~ | ees2. r4 |
+}
+{% endif %}

@@ -1,0 +1,76 @@
+{#
+default_version = "Fake"
+
+[attributes]
+title = "All Blues"
+style = "Jazz"
+composer = "Miles Davis"
+piece = "Moderately"
+copyright = "1959 JAZZ HORN MUSIC CORP. & WARNER-TAMERLANE PUBLISHING CORP."
+copyrightextra = "WARNER-TAMERLANE PUBLISHING CORP. administers on behalf of itself and JAZZ HORN MUSIC CORP."
+typesetter = "Mark Veltzer <mark.veltzer@gmail.com>"
+completion = "5"
+uuid = "b717bc30-d46d-11f1-8000-046874d194b7"
+structure = "Blues"
+location = "jfb:39"
+
+[[youtube]]
+id = "-488UORrfJ0"
+remark = "Miles Davis in the original recording from Kind of Blue (1959)"
+
+[[youtube]]
+id = "BFuouqVU3G4"
+remark = "Miles Davis live at Philharmonic Hall, New York, 1964"
+
+[versions.Fake]
+doChords = true
+doVoice = true
+doLyrics = false
+doLyricsmore = false
+doLyricsmoremore = false
+doChordBars = false
+doGuitar = false
+doExtra = false
+doPrep = false
+doOwn = false
+#}
+{% if part == "Vars" %}
+{% endif %}
+{% if part == "Doc" %}	DONE:
+	- added the meta data from the fake book.
+	- put in the tunes structure.
+	- put in the chords (fake book).
+	- put in the tune (fake book).
+	- added youtube performances.
+	TODO:
+	- check the chords (fake book).
+	- check the tune (fake book).
+	- hear the tune to check that it is right and adjust the tempo.
+	- add the bass/piano vamp from the real book (rbk1:13).
+{% endif %}
+{% if part == "ChordsFake" %}\chordmode {
+	\startChords
+	\startSong
+
+	\myMark "A"
+	\startPart
+	g2.*4:7 | \myEndLine
+	c2.*2:7 | g2.*2:7 | \myEndLine
+	d2.:7.9+ | ees4.:7.9+ d:7.5+.9+ | g2.*2:7 | \myEndLine
+	\endPart
+
+	\endSong
+	\endChords
+}
+{% endif %}
+{% if part == "VoiceFake" %}{
+	\tempo "Moderato" 4. = 50
+	\time 6/8
+	\key c \major
+
+	% part "A"
+	b'4.~ b4~ b16 d, | b'16 c b4~ b4~ b16 d, | b'16 c b4~ b4~ b16 d, | b'4.~ b4 r8 |
+	a4 bes8 c4 d8 | c4 bes8 a4~ a16 d, | b'!2. | g4.~ g4~ g16 gis |
+	a2. | bes2. | a4. b! | a4. g |
+}
+{% endif %}

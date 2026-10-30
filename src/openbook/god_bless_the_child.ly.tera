@@ -1,0 +1,117 @@
+{#
+default_version = "Fake"
+
+[attributes]
+title = "God Bless' The Child"
+style = "Jazz"
+composer = "Arthur Herzog Jr., Billie Holiday"
+poet = "Arthur Herzog Jr., Billie Holiday"
+piece = "Slowly, with feeling"
+copyright = "1941 by Edward B. Marks Music Company"
+copyrightextra = "Copyright Renewed."
+typesetter = "Mark Veltzer <mark.veltzer@gmail.com>"
+completion = "5"
+uuid = "27dcd7ec-d46f-11f1-8000-046874d194b7"
+structure = "AABA"
+location = "jfb:131"
+
+[[youtube]]
+id = "biryhZEt00A"
+remark = "Billie Holiday in the original recording (1941)"
+
+[[youtube]]
+id = "mZNEEKtA8hU"
+remark = "Sonny Rollins and Jim Hall from The Bridge (1962)"
+
+[versions.Fake]
+doChords = true
+doVoice = true
+doLyrics = false
+doLyricsmore = false
+doLyricsmoremore = false
+doChordBars = false
+doGuitar = false
+doExtra = false
+doPrep = false
+doOwn = false
+#}
+{% if part == "Vars" %}
+{% endif %}
+{% if part == "Doc" %}	DONE:
+	- added the meta data from the fake book.
+	- put in the tunes structure.
+	- put in the chords (fake book).
+	- put in the tune (fake book).
+	- added youtube performances.
+	TODO:
+	- add the lyrics.
+	- check the chords (fake book).
+	- check the tune (fake book).
+	- hear the tune to check that it is right and adjust the tempo.
+{% endif %}
+{% if part == "ChordsFake" %}\chordmode {
+	\startChords
+	\startSong
+
+	\partial 4 s4 |
+
+	\myMark "A"
+	\startPart
+	\repeat volta 2 {
+		ees4:maj7 ees:7 aes2:6 | ees4:maj7 ees:7 aes2:6 | bes2:m7 ees:7 | bes4:m7 e:9.5- ees2:9 | aes2:maj7 aes:6 | \myEndLine
+		aes2:m aes:m6 | g2:m7 c:7.9- | f2:m9 bes:7 | ees1:6 |
+	} \alternative {
+		{
+			c4:m g:m7 f:m7 bes:7 | \myEndLineVoltaNotLast
+		}
+		{
+			aes2:7 g:7 | \myEndLineVoltaLast
+		}
+	}
+	\endPart
+
+	\myMark "B"
+	\startPart
+	c2:m c:m7+ | c2:m7 c:m6 | g1:m | d2:7 g:7 | \myEndLine
+	c2:m c:m7+ | c2:m7 c:m6 | g2:m c:7 | b4:9.5- bes:9 f:m7 bes:7 | \myEndLine
+	\endPart
+
+	\myMark "A"
+	\startPart
+	ees4:maj7 ees:7 aes2:6 | ees4:maj7 ees:7 aes2:6 | bes4:m7 e:9 ees2:9 | bes4:m7 e:9.5- ees2:9 | aes2:maj7 aes:6 | \myEndLine
+	aes2:m aes:m6 | g2:m7 c4:9 c:7.9- | f2:m9 bes:7 | ees1*2:6 | \myEndLine
+	\endPart
+
+	\endSong
+	\endChords
+}
+{% endif %}
+{% if part == "VoiceFake" %}{
+	\tempo "Andante" 4 = 76
+	\time 4/4
+	\key ees \major
+
+	\partial 4 ees8 f |
+
+	% part "A"
+	\repeat volta 2 {
+		g4 g f ees8 f | g4 g f bes8 c | des4 des c bes8 c | des4 bes g2 | g8 g4 f8 c2 |
+		g'8 g4 f8 ces4. g'8 | bes8 bes4 g8 bes4 g | g8 bes bes2 bes,4 | c8 ees g2 r4 |
+	} \alternative {
+		{
+			r2 r4 ees8 f |
+		}
+		{
+			r1 |
+		}
+	}
+
+	% part "B"
+	ees'4 c ees c | ees4 c8 ees~ ees2 | d4 bes d bes | d1 |
+	ees4 c ees c | ees4 c8 ees~ ees2 | bes4 c c c | f,2. ees8 f |
+
+	% part "A"
+	g4 g f ees8 f | g4 g f bes8 c | des4 des c bes8 c | des4 bes g2 | g8 g4 f8 c2 |
+	g'8 g4 f8 ces4. g'8 | bes8 bes4 g8 bes4 g | g8 bes bes2 bes,4 | c8 ees g2.~ | g2. r4 |
+}
+{% endif %}

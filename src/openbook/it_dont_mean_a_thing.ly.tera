@@ -1,0 +1,110 @@
+{#
+default_version = "Real"
+
+[attributes]
+title = "It Don't Mean A Thing"
+subtitle = "(If It Ain't Got That Swing)"
+style = "Jazz"
+composer = "Duke Ellington, Irving Mills"
+poet = "Duke Ellington, Irving Mills"
+piece = "Fast Swing"
+copyright = "1932 (Renewed 1959) and Assigned to Famous Music Corporation and EMI Mills Music Inc. in the U.S.A."
+copyrightextra = "Rights for the world outside the U.S.A. Controlled by EMI Mills Music Inc. and Warner Bros. Publications Inc."
+typesetter = "Mark Veltzer <mark.veltzer@gmail.com>"
+completion = "5"
+uuid = "db0102bf-d46d-11f1-8000-046874d194b7"
+structure = "AABA"
+location = "hlrjb:181"
+
+[[youtube]]
+id = "myRc-3oF1d0"
+remark = "Ella Fitzgerald and Duke Ellington on the Ed Sullivan Show"
+
+[[youtube]]
+id = "qDQpZT3GhDg"
+remark = "Duke Ellington (1943)"
+
+[versions.Real]
+doChords = true
+doVoice = true
+doLyrics = false
+doLyricsmore = false
+doLyricsmoremore = false
+doChordBars = false
+doGuitar = false
+doExtra = false
+doPrep = false
+doOwn = false
+#}
+{% if part == "Vars" %}
+{% endif %}
+{% if part == "Doc" %}	DONE:
+	- added the meta data from the Hal Leonard Real Jazz Book.
+	- put in the tunes structure.
+	- put in the chords (Hal Leonard Real Jazz Book).
+	- put in the tune (Hal Leonard Real Jazz Book).
+	- added youtube performances.
+	TODO:
+	- add the lyrics.
+	- check the chords (Hal Leonard Real Jazz Book).
+	- check the tune (Hal Leonard Real Jazz Book).
+	- hear the tune to check that it is right and adjust the tempo.
+{% endif %}
+{% if part == "ChordsReal" %}\chordmode {
+	\startChords
+	\startSong
+
+	\partial 4 s4 |
+
+	\myMark "A"
+	\startPart
+	g2:m g:m/fis | g:m/f g:m/e | ees:7 d:7 | g1:m6 | \myEndLine
+	c:7 | f:7 | bes:6 | d:7.5+ | \myEndLine
+	\endPart
+
+	\myMark "A"
+	\startPart
+	g2:m g:m/fis | g:m/f g:m/e | ees:7 d:7 | g1:m6 | \myEndLine
+	c:7 | f:7 | bes1*2:6 | \myEndLine
+	\endPart
+
+	\myMark "B"
+	\startPart
+	f1:m7 | bes:7 | ees1*2:maj7 | \myEndLine
+	g1:m7 | c:7 | f:7 | d:7 | \myEndLine
+	\endPart
+
+	\myMark "A"
+	\startPart
+	g2:m g:m/fis | g:m/f g:m/e | ees:7 d:7 | g1:m6 | \myEndLine
+	c:7 | f:7 | bes1*2:6 | \myEndLine
+	\endPart
+
+	\endSong
+	\endChords
+}
+{% endif %}
+{% if part == "VoiceReal" %}{
+	\tempo "Allegro" 4 = 160
+	\time 4/4
+	\key bes \major
+
+	\partial 4 d'4 |
+
+	% part "A"
+	g,2 g4 bes | d2 g,4 bes | des2 c8 bes4 g8~ | g1 |
+	r4 bes8 bes~ bes bes bes4 | bes8 bes4 bes8 bes4 bes8 bes~ | bes8 bes bes4 bes8 bes4 bes8 | bes4 r r bes |
+
+	% part "A"
+	g2 g4 bes | d2~ d8 bes4 g8 | bes4 bes bes g | bes1 |
+	r4 bes8 bes~ bes bes bes4 | bes8 bes4 bes8 bes4 bes8 bes~ | bes8 bes bes4 bes8 bes4 bes8 | bes2. c4 |
+
+	% part "B"
+	c4 c c8 bes4 c8~ | c4 bes c8 bes4. | g1~ | g2. c4 |
+	c4 c c8 c4. | c4 bes c8 c4. | f,1 | r2 r4 bes |
+
+	% part "A"
+	g2 g4 bes | d2 g,4 bes | des2 c8 bes4 g8~ | g1 |
+	r4 bes8 bes~ bes bes bes4 | bes8 bes4 bes8 bes4 bes8 bes~ | bes8 bes bes4 bes8 bes4 bes8 | bes4 r r2 |
+}
+{% endif %}

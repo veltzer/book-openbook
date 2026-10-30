@@ -1,0 +1,114 @@
+{#
+default_version = "Fake"
+
+[attributes]
+title = "Scrapple From The Apple"
+style = "Jazz"
+composer = "Charlie Parker"
+piece = "Fast"
+copyright = "1957 ATLANTIC MUSIC CORP."
+copyrightextra = "Renewed and assigned 1985 ATLANTIC MUSIC CORP."
+typesetter = "Mark Veltzer <mark.veltzer@gmail.com>"
+completion = "5"
+uuid = "1512e79c-d46e-11f1-8000-046874d194b7"
+structure = "AABA"
+location = "jfb:327"
+
+[[youtube]]
+id = "GQ84uSuzXTc"
+remark = "Charlie Parker with Miles Davis in the original recording"
+
+[[youtube]]
+id = "SlKyvmUnTCA"
+remark = "Emmet Cohen with Joshua Redman"
+
+[versions.Fake]
+doChords = true
+doVoice = true
+doLyrics = false
+doLyricsmore = false
+doLyricsmoremore = false
+doChordBars = false
+doGuitar = false
+doExtra = false
+doPrep = false
+doOwn = false
+#}
+{% if part == "Vars" %}
+{% endif %}
+{% if part == "Doc" %}	DONE:
+	- filled in the meta data from the fake book.
+	- put in the tunes structure.
+	- write the fake book chords.
+	- write the fake book tune.
+	- add you tube performances.
+	TODO:
+	- check the fake book chords.
+	- check the fake book tune.
+	- hear the tune to check that it is right and adjust the tempo.
+	- bar 13 (the G7 run): the fake book beams the six notes F-D as 32nds,
+		which does not add up to a full bar, so I wrote them as a sextuplet
+		of 16ths on beat 3. Check against a recording.
+{% endif %}
+{% if part == "ChordsFake" %}\chordmode {
+	\startChords
+	\startSong
+
+	\myMark "A"
+	\startPart
+	\repeat volta 2 {
+		g1:m7 | c:7 | g:m7 | c:7 | \myEndLine
+		f | bes2:7 b:dim7 |
+	} \alternative {
+		{
+			f1 | f | \myEndLineVoltaNotLast
+		}
+		{
+			f | f | \myEndLineVoltaLast
+		}
+	}
+	\endPart
+
+	\myMark "B"
+	\startPart
+	e1:m7 | a:7 | d1*2:7 | \myEndLine
+	g1*2:7 | g1:m7 | c:7 | \myEndLine
+	\endPart
+
+	\myMark "A"
+	\startPart
+	g1:m7 | c:7 | g:m7 | c:7 | \myEndLine
+	f | bes2:7 b:dim7 | f1 | f | \myEndLine
+	\endPart
+
+	\endSong
+	\endChords
+}
+{% endif %}
+{% if part == "VoiceFake" %}{
+	\tempo "Presto" 4 = 200
+	\time 4/4
+	\key f \major
+
+	% part "A"
+	\repeat volta 2 {
+		r8 fis8 g bes a g f d | g c r4 r8 bes4 a8 | bes8. f'16 \tuplet 3/2 { d8 bes g } a d, g des | r4 r8 a'~ a bes4 a8 |
+		c8. a16 \tuplet 3/2 { g8 f g~ } g4 r8 f' | d4 r8 e~ e d \tuplet 3/2 { a bes b } |
+	} \alternative {
+		{
+			c4 r8 a bes a gis a | c a bes c r2 |
+		}
+		{
+			c4 r8 a bes a gis a | f c e f r2 |
+		}
+	}
+
+	% part "B"
+	r2 \tuplet 3/2 { fis'16 g fis } e8 d des | b a g fis e d cis e | g b4 g8 a e~ e4 | r4 r8 d16 des c b a g ges8 r |
+	r4 r8 d'16 e \tuplet 6/4 { f16 g a b c d } e d cis d | g4 e8 a,~ a fis \tuplet 3/2 { g bes d } | f8 \tuplet 3/2 { e16 d c } bes8 a g f \tuplet 3/2 { e g bes } | d4 g,8 a c bes~ bes4 |
+
+	% part "A"
+	r8 fis8 g bes a g f d | g c r4 r8 bes4 a8 | bes8. f'16 \tuplet 3/2 { d8 bes g } a d, g des | r4 r8 a'~ a bes4 a8 |
+	c8. a16 \tuplet 3/2 { g8 f g~ } g4 r8 f' | d4 r8 e~ e d \tuplet 3/2 { a bes b } | c4 r8 a bes a gis a | f c e f r2 |
+}
+{% endif %}

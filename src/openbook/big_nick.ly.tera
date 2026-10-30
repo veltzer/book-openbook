@@ -1,0 +1,80 @@
+{#
+default_version = "Real"
+
+[attributes]
+title = "Big Nick"
+style = "Jazz"
+composer = "John Coltrane"
+piece = "Moderately slow"
+copyright = "1977 JOWCOL MUSIC"
+typesetter = "Mark Veltzer <mark.veltzer@gmail.com>"
+completion = "5"
+uuid = "1512e79d-d46e-11f1-8000-046874d194b7"
+structure = "AA'"
+location = "hlrjb:43"
+
+[[youtube]]
+id = "2r6ust9UrkY"
+remark = "John Coltrane"
+
+[[youtube]]
+id = "wDWQA5uOz60"
+remark = "Duke Ellington and John Coltrane"
+
+[versions.Real]
+doChords = true
+doVoice = true
+doLyrics = false
+doLyricsmore = false
+doLyricsmoremore = false
+doChordBars = false
+doGuitar = false
+doExtra = false
+doPrep = false
+doOwn = false
+#}
+{% if part == "Vars" %}
+{% endif %}
+{% if part == "Doc" %}	DONE:
+	- added the meta data from the Hal Leonard Real Jazz Book.
+	- put in the tunes structure.
+	- put in the chords (Hal Leonard Real Jazz Book).
+	- put in the tune (Hal Leonard Real Jazz Book).
+	- added youtube performances.
+	TODO:
+	- check the chords (Hal Leonard Real Jazz Book).
+	- check the tune (Hal Leonard Real Jazz Book).
+	- hear the tune to check that it is right and adjust the tempo.
+{% endif %}
+{% if part == "ChordsReal" %}\chordmode {
+	\startChords
+	\startSong
+
+	\myMark "A"
+	\startPart
+	\repeat volta 2 {
+		g2:maj7 e:m7 | a:m7 d:7 | g:maj7 e:m7 | a:m7 d:7 | \myEndLine
+		g2 g:7/b | c cis:dim | g/d e:7 | a:m7 d:7 | \myEndLine
+		g2:maj7 e:m7 | a:m7 d:7 | g:maj7 e:m7 | a:m7 d:7 | g g:7/b | \myEndLine
+		c cis:dim | g/d e:7 | a:m7 d:7 | g1 | g | \myEndLine
+	}
+	\endPart
+
+	\endSong
+	\endChords
+}
+{% endif %}
+{% if part == "VoiceReal" %}{
+	\tempo "Andante Moderato" 4 = 88
+	\time 4/4
+	\key g \major
+
+	% part "A"
+	\repeat volta 2 {
+		r8 cis8 d dis e f fis d' | b4 r8 g e a fis4 | r8 cis8 d dis e4. d'8 | b fis e4 r8 a \tuplet 3/2 { e c! fis } |
+		d4 r8 d a'4 r8 g | d'16 e d c g'4~ g4. g,8 | e'4 r8 d, d'4 r8 d, | b'4. a8 e16 f e c fis4 |
+		r8 cis8 d dis e f fis d' | b4 r8 g e a fis4 | r8 cis8 d dis e4. d'8 | b fis e4 r8 a \tuplet 3/2 { e c fis } | d4 r8 d a'4 r8 g |
+		d'16 e d c g'4~ g4. g,8 | e'4 r8 d, d'4 r8 d, | b'4. a8 e16 f e c fis8 d | \tuplet 3/2 { a'16 bes aes } g8~ g2. | g1 |
+	}
+}
+{% endif %}

@@ -1,0 +1,97 @@
+{#
+default_version = "Fake"
+
+[attributes]
+title = "Four"
+style = "Jazz"
+composer = "Miles Davis"
+piece = "Medium Swing"
+copyright = "1963 Prestige Music"
+typesetter = "Mark Veltzer <mark.veltzer@gmail.com>"
+completion = "5"
+uuid = "b71b1998-d46d-11f1-8000-046874d194b7"
+structure = "AA'"
+location = "jfb:123"
+
+[[youtube]]
+id = "W4YLIAqhz7E"
+remark = "Miles Davis in the original recording (1954)"
+
+[[youtube]]
+id = "Ce2S2LkTjKI"
+remark = "Miles Davis live at Philharmonic Hall, New York, 1964 (Four & More)"
+
+[versions.Fake]
+doChords = true
+doVoice = true
+doLyrics = false
+doLyricsmore = false
+doLyricsmoremore = false
+doChordBars = false
+doGuitar = false
+doExtra = false
+doPrep = false
+doOwn = false
+#}
+{% if part == "Vars" %}
+{% endif %}
+{% if part == "Doc" %}	DONE:
+	- added the meta data from the fake book.
+	- put in the tunes structure.
+	- put in the chords (fake book).
+	- put in the tune (fake book).
+	- added youtube performances.
+	TODO:
+	- check the chords (fake book).
+	- check the tune (fake book).
+	- hear the tune to check that it is right and adjust the tempo.
+	- add the real book version of this tune (rbk1:161).
+{% endif %}
+{% if part == "ChordsFake" %}\chordmode {
+	\startChords
+	\startSong
+
+	\partial 4. s4. |
+
+	\myMark "A"
+	\startPart
+	\repeat volta 2 {
+		ees1*2:maj7 | bes1:m7 | ees:7 | \myEndLine
+		aes1*2:maj7 | aes1:m7 | des:7 | \myEndLine
+		ees:maj7 | ges2:m7 ces:7 | f1:m7 | bes:7 | \myEndLine
+	} \alternative {
+		{
+			ees1:maj7 | ges2:m7 b:7 | f1:m7 | bes:7 | \myEndLineVoltaNotLast
+		}
+		{
+			g2:m7 ges4:m7 ces:7 | f2:m7 bes:7 | ees1*2:maj7 | \myEndLineVoltaLast
+		}
+	}
+	\endPart
+
+	\endSong
+	\endChords
+}
+{% endif %}
+{% if part == "VoiceFake" %}{
+	\tempo "Allegro" 4 = 160
+	\time 4/4
+	\key ees \major
+
+	\partial 4. bes8 c d |
+
+	% part "A"
+	\repeat volta 2 {
+		r8 bes c d r bes c d | r f ees d r bes c des~ | des1 | r2 ees8 d! ees f |
+		g ees f g r ees f g | r bes aes g r4 ees8 f | ges1 | r2 f8 g aes a! |
+		bes2 ees,8 g bes b!~ | b4 e,!8 dis~ dis2 | r8 c'4. bes4 aes8 g | r2 f8 g aes a! |
+	} \alternative {
+		{
+			bes2 ees,8 g bes b!~ | b4 e,!8 dis~ dis2 | r8 c'4. bes4 aes8 g | r2 r8 bes, c d |
+		}
+		{
+			bes'4 g8 bes b! e,! dis4 | c'4 aes8 f d'4 bes8 ees | r1 | r1 |
+		}
+	}
+}
+{% endif %}
