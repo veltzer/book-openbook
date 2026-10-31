@@ -1,0 +1,133 @@
+{#
+default_version = "Fake"
+
+[attributes]
+title = "Don't Let The Sun Catch You Cryin'"
+style = "Blues"
+composer = "Joe Greene"
+poet = "Joe Greene"
+piece = "Slowly"
+copyright = "1966 by Northern Music Corporation"
+typesetter = "Mark Veltzer <mark.veltzer@gmail.com>"
+completion = "5"
+uuid = "4acdf384-d510-11f1-8000-046874d194b7"
+structure = "Intro AABA"
+location = "jfb:101"
+
+[[youtube]]
+id = "BL6wQO2FjPc"
+remark = "Ray Charles in the original recording (1959)"
+
+[[youtube]]
+id = "rHUrkdqCopA"
+remark = "Ray Charles live"
+
+[versions.Fake]
+doChords = true
+doVoice = true
+doLyrics = false
+doLyricsmore = false
+doLyricsmoremore = false
+doChordBars = false
+doGuitar = false
+doExtra = false
+doPrep = false
+doOwn = false
+#}
+{% if part == "Vars" %}
+{% endif %}
+{% if part == "Doc" %}	DONE:
+	- added the meta data from the fake book.
+	- put in the tunes structure.
+	- put in the chords (fake book).
+	- put in the tune (fake book).
+	- added youtube performances.
+	TODO:
+	- add the lyrics.
+	- check the chords (fake book).
+	- check the tune (fake book).
+	- hear the tune to check that it is right and adjust the tempo.
+	- the book prints the F6 of the end of each A section over the last tied eighth, the following whole note bar has no chord of its own.
+{% endif %}
+{% if part == "ChordsFake" %}\chordmode {
+	\startChords
+	\startSong
+
+	\myMark "Intro"
+	\startPart
+	f2:6 g:m7 | f:dim g4:m7 c:7 | f2:6 g:m7 | g:m9 c:7 | \myEndLine
+	\endPart
+
+	\repeat volta 2 {
+
+		\myMark "A"
+		\startPart
+		f2:maj7 ees:maj7 | f:maj7 ees:maj7 | f:maj7 ees:maj7 | f:maj7 f:6 | \myEndLine
+		bes b:dim | g:m7 bes4:m6 f:6 | s1 | c:7.5+ | \myEndLine
+		\endPart
+
+		\myMark "A"
+		\startPart
+		f2:maj7 ees:maj7 | f:maj7 ees:maj7 | f:maj7 ees:maj7 | f:maj7 f:6 | \myEndLine
+		bes b:dim | g:m7 bes4:m6 f:6 | s1 | e:7 | \myEndLine
+		\endPart
+
+		\myMark "B"
+		\startPart
+		a2:m e4:7 a:m | g2:m6 a4:aug a:7 | a1:m7 | d:7 | \myEndLine
+		g2:9 g:9.5+ | g1:7 | c2.:7 g4:m7 | s2. c4:7.5+ | \myEndLine
+		\endPart
+
+		\myMark "A"
+		\startPart
+		f2:maj7 ees:maj7 | f:maj7 ees:maj7 | f:maj7 ees:maj7 | f:maj7 f:6 | \myEndLine
+		bes b:dim | g:m7 bes4:m6 f:6 |
+	} \alternative {
+		{
+			s2 d:m7 | g4:m7 c2.:7.5+ | \myEndLineVoltaNotLast
+		}
+		{
+			s1 | g4:m7 c:7.5+.9- f2:6 | \myEndLineVoltaLast
+		}
+	}
+	\endPart
+
+	\endSong
+	\endChords
+}
+{% endif %}
+{% if part == "VoiceFake" %}{
+	\tempo "Andante" 4 = 72
+	\time 4/4
+	\key f \major
+
+	% part "Intro"
+	a'8 a f d f4 d | f8 f f4 d8 c4. | a'8 a f d f4 d8 f | a8 a4 g8~ g2 |
+
+	\repeat volta 2 {
+
+		% part "A"
+		a8 c4 a8 g4~ \tuplet 3/2 { g8 f g } | a8 c4.~ c2 | a8 c a g~ g4. f8 | a8 c,4.~ c2 |
+		d8 f g aes g g4. | r8 g g aes f c f f~ | f1 | r1 |
+
+		% part "A"
+		a8 c4 a8 g4~ \tuplet 3/2 { g8 f g } | a8 c4.~ c2 | a8 c a g~ g4. f8 | a8 c,4.~ c2 |
+		d8 f g aes g g4. | r8 g g aes f c f f~ | f1 | r2 e4 fis |
+
+		% part "B"
+		c'4 c b!8 a4. | r2 r4 a | d8 d4. d4 b! | a2. d,8 d |
+		a'2 a4 a | a8 g4.~ g4 g8 g | c4 c8 g c c a g~ | g2. gis4 |
+
+		% part "A"
+		a8 c4 a8 g4~ \tuplet 3/2 { g8 f g } | a8 c4.~ c2 | a8 c a g~ g4. f8 | a8 c,4.~ c2 |
+		d8 f g aes g g4. | r8 g g aes f c f f~ |
+	} \alternative {
+		{
+			f1~ | f4 r r2 |
+		}
+		{
+			f1~ | f4 r r2 |
+		}
+	}
+}
+{% endif %}

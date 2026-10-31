@@ -1,0 +1,129 @@
+{#
+default_version = "Fake"
+
+[attributes]
+title = "For You, For Me, For Evermore"
+style = "Broadway"
+composer = "George Gershwin"
+poet = "Ira Gershwin"
+piece = "Slowly"
+copyright = "1946 by Gershwin Publishing Corporation"
+copyrightextra = "Copyright Renewed, Assigned to Chappell & Co., Inc."
+typesetter = "Mark Veltzer <mark.veltzer@gmail.com>"
+completion = "5"
+uuid = "83aa044a-d510-11f1-8000-046874d194b7"
+structure = "ABAC"
+location = "jfb:124"
+
+[[youtube]]
+id = "UcHEisqKE2k"
+remark = "Judy Garland and Dick Haymes in the original recording (1946)"
+
+[[youtube]]
+id = "4b5FXZ30V_s"
+remark = "Ella Fitzgerald on Verve Records"
+
+[versions.Fake]
+doChords = true
+doVoice = true
+doLyrics = false
+doLyricsmore = false
+doLyricsmoremore = false
+doChordBars = false
+doGuitar = false
+doExtra = false
+doPrep = false
+doOwn = false
+#}
+{% if part == "Vars" %}
+{% endif %}
+{% if part == "Doc" %}	DONE:
+	- added the meta data from the fake book.
+	- put in the tunes structure.
+	- put in the chords (fake book).
+	- put in the tune (fake book).
+	- added youtube performances.
+	TODO:
+	- add the lyrics.
+	- check the chords (fake book).
+	- check the tune (fake book).
+	- hear the tune to check that it is right and adjust the tempo.
+{% endif %}
+{% if part == "ChordsFake" %}\chordmode {
+	\startChords
+	\startSong
+
+	\partial 4 s4 |
+
+	\repeat volta 2 {
+
+		\myMark "A"
+		\startPart
+		ees1 | f:7 | f2:m7 bes:7 | f2:m7 bes:7 | \myEndLine
+		ees1 | f:7 | f2:m7 bes:7 | f2:m7 bes:7 | \myEndLine
+		\endPart
+
+		\myMark "B"
+		\startPart
+		bes1:m7 | ees:7 | bes2:m7 ees:7 | aes1 | \myEndLine
+		c1:m7 | f:7 | b:7 | bes2:7.5+ bes:13 | \myEndLine
+		\endPart
+
+		\myMark "A"
+		\startPart
+		ees1 | f:7 | f2:m7 bes:7 | f2:m7 bes:7 | \myEndLine
+		bes1:m7 | ees:7 | aes | des:9 | \myEndLine
+		\endPart
+
+		\myMark "C"
+		\startPart
+		ees2 g:m7 | f:m7 bes:7 | ees c:m7 | f:9 f:7 | \myEndLine
+		f1:m7 | ees2/bes f4:m7/bes bes:7 |
+	} \alternative {
+		{
+			ees2 ges:dim7 | f:7 bes:7 | \myEndLineVoltaNotLast
+		}
+		{
+			ees1*2:6 | \myEndLineVoltaLast
+		}
+	}
+	\endPart
+
+	\endSong
+	\endChords
+}
+{% endif %}
+{% if part == "VoiceFake" %}{
+	\tempo "Andante" 4 = 76
+	\time 4/4
+	\key ees \major
+
+	\partial 4 g'4 |
+
+	\repeat volta 2 {
+
+		% part "A"
+		bes2. ees,4 | d2. ees4 | f4. g8 f2~ | f2 r4 g4 |
+		bes2. ees,4 | d2. ees4 | g4. f8 f2~ | f2 r4 g4 |
+
+		% part "B"
+		c2. bes4 | des,2. ees4 | c' c c bes8 c | bes4 aes2 c4 |
+		d2. c4 | ees,2. f4 | fis1~ | fis2. g4 |
+
+		% part "A"
+		bes2. ees,4 | d2. ees4 | f4. g8 f2~ | f2. g4 |
+		c2. bes4 | des,2. c4 | ees1~ | ees2 r4 ees8 f |
+
+		% part "C"
+		g4 bes bes bes | bes4. c8 bes4 ees,8 f | g4 bes bes c | d2. c4 |
+		ees2. c4 | bes4 g ees f |
+	} \alternative {
+		{
+			ees1~ | ees2 r4 g4 |
+		}
+		{
+			ees1~ | ees1 |
+		}
+	}
+}
+{% endif %}

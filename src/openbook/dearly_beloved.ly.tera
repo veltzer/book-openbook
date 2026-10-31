@@ -1,0 +1,101 @@
+{#
+default_version = "Fake"
+
+[attributes]
+title = "Dearly Beloved"
+subtitle = "From 'You Were Never Lovelier'"
+style = "Jazz"
+composer = "Jerome Kern"
+poet = "Johnny Mercer"
+piece = "Moderately"
+copyright = "1942 T.B. Harms Company. Copyright Renewed."
+copyrightextra = "(c/o The Welk Music Group, Santa Monica, CA 90401)"
+typesetter = "Mark Veltzer <mark.veltzer@gmail.com>"
+completion = "5"
+uuid = "2786dc26-d513-11f1-8000-046874d194b7"
+structure = "ABAC"
+location = "jfb:96"
+
+[[youtube]]
+id = "IYa-tQVMxW8"
+remark = "Fred Astaire from the film You Were Never Lovelier (1942)"
+
+[[youtube]]
+id = "FkrPInE0oOM"
+remark = "Sonny Rollins"
+
+[[youtube]]
+id = "Mx1VR4c4z9A"
+remark = "Nancy Wilson live at the Newport Jazz Festival (1987)"
+
+[versions.Fake]
+doChords = true
+doVoice = true
+doLyrics = false
+doLyricsmore = false
+doLyricsmoremore = false
+doChordBars = false
+doGuitar = false
+doExtra = false
+doPrep = false
+doOwn = false
+#}
+{% if part == "Vars" %}
+{% endif %}
+{% if part == "Doc" %}	DONE:
+	- added the meta data from the fake book.
+	- put in the tunes structure.
+	- put in the chords (fake book).
+	- put in the tune (fake book).
+	- added youtube performances.
+	TODO:
+	- check the chords (fake book).
+	- check the tune (fake book).
+	- hear the tune to check that it is right and adjust the tempo.
+{% endif %}
+{% if part == "ChordsFake" %}\chordmode {
+	\startChords
+	\startSong
+
+	\myMark "A"
+	\startPart
+	g1:7 | g:11 | g:7 | g:11 | g:7 | g:11 | g:7 | g:11 | \myEndLine
+	\endPart
+
+	\myMark "B"
+	\startPart
+	c:maj7 | a:m7 | d2:m7 g:7 | d:m7 g:7 | c1:maj7 | c:maj7 | ees:m7 | aes:7 | \myEndLine
+	\endPart
+
+	\myMark "A"
+	\startPart
+	g1:7 | g:11 | g:7 | g:11 | g:7 | g:11 | g:7 | g:11 | \myEndLine
+	\endPart
+
+	\myMark "C"
+	\startPart
+	c:maj7 | a:m7 | d:7 | d:7.9- | d2:m7 g:7 | d:m7 g:7 | c1:6 | c:6 | \myEndLine
+	\endPart
+
+	\endSong
+	\endChords
+}
+{% endif %}
+{% if part == "VoiceFake" %}{
+	\tempo "Moderato" 4 = 120
+	\time 4/4
+	\key c \major
+
+	% part "A"
+	g'2 d4. e8 | f4 g2 a4 | g2 d4. g8 | f1 | g2 d4. e8 | f4 g a c | b2 g4. b8 | a1 |
+
+	% part "B"
+	g4 a c2~ | c1 | c,2 g'~ | g1 | g4 b d2~ | d4 cis c b | bes2 aes~ | aes1 |
+
+	% part "A"
+	g2 d4. e8 | f4 g2 a4 | g2 d4. g8 | f1 | g2 d4. e8 | f4 g a c | b2 g4. b8 | a1 |
+
+	% part "C"
+	g4 a c2~ | c1 | d,2 b'~ | b1 | g2 d4. e8 | f4 g2 e4 | c1~ | c2. r4 |
+}
+{% endif %}

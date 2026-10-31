@@ -1,0 +1,110 @@
+{#
+default_version = "Fake"
+
+[attributes]
+title = "'Deed I Do"
+style = "Jazz"
+composer = "Walter Hirsch, Fred Rose"
+poet = "Walter Hirsch, Fred Rose"
+piece = "Moderately"
+copyright = "1926 Copyright renewed 1954 by Range Road Music Inc. and Quartet Music Inc."
+copyrightextra = "All rights for the United States of America, Canada, Australia and New Zealand administered by Herald Square Music, Inc."
+typesetter = "Mark Veltzer <mark.veltzer@gmail.com>"
+completion = "5"
+uuid = "f8d3df0a-d512-11f1-8000-046874d194b7"
+structure = "AABA"
+location = "jfb:96"
+
+[[youtube]]
+id = "jvzktoc2TsQ"
+remark = "Ruth Etting in the hit recording (1927)"
+
+[[youtube]]
+id = "Vj4gbky1QCU"
+remark = "Ella Fitzgerald"
+
+[[youtube]]
+id = "cXyKzzxAVpo"
+remark = "Lester Young"
+
+[versions.Fake]
+doChords = true
+doVoice = true
+doLyrics = false
+doLyricsmore = false
+doLyricsmoremore = false
+doChordBars = false
+doGuitar = false
+doExtra = false
+doPrep = false
+doOwn = false
+#}
+{% if part == "Vars" %}
+{% endif %}
+{% if part == "Doc" %}	DONE:
+	- added the meta data from the fake book.
+	- put in the tunes structure.
+	- put in the chords (fake book).
+	- put in the tune (fake book).
+	- added youtube performances.
+	TODO:
+	- check the chords (fake book).
+	- check the tune (fake book).
+	- hear the tune to check that it is right and adjust the tempo.
+	- the book uses a repeat with two endings, a D.C. al Coda and a coda,
+		here the form is written out in full.
+{% endif %}
+{% if part == "ChordsFake" %}\chordmode {
+	\startChords
+	\startSong
+
+	\myMark "A"
+	\startPart
+	c1 | c:9 | f:6 | f:m6 | \myEndLine
+	c1 | d2:7 g:7 | c2 a:m7 | d:m7 g:7 | \myEndLine
+	\endPart
+
+	\myMark "A"
+	\startPart
+	c1 | c:9 | f:6 | f:m6 | \myEndLine
+	c1 | d2:7 g:7 | c:6 f:7 | c:6 c:9 | \myEndLine
+	\endPart
+
+	\myMark "B"
+	\startPart
+	f1 | f | e:7 | e:7 | \myEndLine
+	a:7 | a:7 | d:7 | g:7 | \myEndLine
+	\endPart
+
+	\myMark "A"
+	\startPart
+	c1 | c:9 | f:6 | f:m6 | \myEndLine
+	c1 | d2:7 g:7 | c f:7 | c1:6 | \myEndLine
+	\endPart
+
+	\endSong
+	\endChords
+}
+{% endif %}
+{% if part == "VoiceFake" %}{
+	\tempo "Moderato" 4 = 132
+	\time 4/4
+	\key c \major
+
+	% part "A"
+	a'8 c4.~ c2 | a8 g4.~ g2 | e8 d4.~ d2 | e8 d4.~ d2 |
+	e8 g4.~ g2 | c,2 d | c1~ | c2 r |
+
+	% part "A"
+	a'8 c4.~ c2 | a8 g4.~ g2 | e8 d4.~ d2 | e8 d4.~ d2 |
+	e8 g4.~ g2 | c,2 d | c1~ | c1 |
+
+	% part "B"
+	r4 a' b c | d c a f | e1 | b'1 |
+	r4 e, g a | b a g e | d1 | g1 |
+
+	% part "A"
+	a8 c4.~ c2 | a8 g4.~ g2 | e8 d4.~ d2 | e8 d4.~ d2 |
+	e8 g4.~ g2 | c,2 d | c1~ | c2 r |
+}
+{% endif %}

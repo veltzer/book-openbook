@@ -1,0 +1,118 @@
+{#
+default_version = "Fake"
+
+[attributes]
+title = "The Christmas Song"
+subtitle = "Chestnuts Roasting On An Open Fire"
+style = "Jazz"
+composer = "Mel Torme, Robert Wells"
+poet = "Mel Torme, Robert Wells"
+piece = "Moderately"
+copyright = "1946, 1967 Edwin H. Morris & Company, A Division of MPL Communications, Inc."
+copyrightextra = "Renewed 1974 Edwin H. Morris & Company, A Division of MPL Communications, Inc. International Copyright Secured. All Rights Reserved."
+typesetter = "Mark Veltzer <mark.veltzer@gmail.com>"
+completion = "5"
+uuid = "0df26e20-d512-11f1-8000-046874d194b7"
+structure = "AABA"
+location = "jfb:85"
+
+[[youtube]]
+id = "5QJNhCi3AyA"
+remark = "The Nat King Cole Trio in the original hit recording (1946)"
+
+[[youtube]]
+id = "JjWQmtgxbMU"
+remark = "Mel Torme"
+
+[[youtube]]
+id = "pUDIFSFBS7I"
+remark = "European Jazz Trio"
+
+[versions.Fake]
+doChords = true
+doVoice = true
+doLyrics = false
+doLyricsmore = false
+doLyricsmoremore = false
+doChordBars = false
+doGuitar = false
+doExtra = false
+doPrep = false
+doOwn = false
+#}
+{% if part == "Vars" %}
+{% endif %}
+{% if part == "Doc" %}	DONE:
+	- added the meta data from the fake book.
+	- put in the tunes structure.
+	- put in the chords (fake book).
+	- put in the tune (fake book).
+	- added youtube performances.
+	TODO:
+	- check the chords (fake book).
+	- check the tune (fake book).
+	- hear the tune to check that it is right and adjust the tempo.
+	- the placement of some of the chords inside the bars in the book is ambiguous
+		(the Am7 D7 in bars 6 and 14 and the Gm7 C7 Fm7 Bb7 in bar 15),
+		they are written here on the beats.
+{% endif %}
+{% if part == "ChordsFake" %}\chordmode {
+	\startChords
+	\startSong
+
+	\myMark "A"
+	\startPart
+	ees2:6 bes:7 | ees2:6 f4:m7 bes:7 | ees2:6 bes4:m7 ees:9 | aes2 g:7.5+ | c2:m7 aes:m6 | \myEndLine
+	ees2 a4:m7 d:7 | g2:maj7 aes4:m7 des:9 | ges2:maj7 f4:m7 bes:7 |
+	\endPart
+
+	\myMark "A"
+	\startPart
+	ees2:6 bes:7 | \myEndLine
+	ees2:6 f4:m7 bes:7 | ees2:6 bes4:m7 ees:9 | aes2 g:7.5+ | c2:m7 aes:m6 | ees2 a4:m7 d:7 | \myEndLine
+	g4:m7 c:7 f:m7 bes:7 | ees1:6 |
+	\endPart
+
+	\myMark "B"
+	\startPart
+	bes2:m7 ees:9 | bes2:m7 ees4:9 ees:7 | \myEndLine
+	bes2:m7 ees:9 | aes1:maj7 | aes2:m7 des:9 | \myEndLine
+	ges1:maj7 | c2:m7 f:7 | f2:m7 bes:7.9- |
+	\endPart
+
+	\myMark "A"
+	\startPart
+	ees2:6 bes:7 | \myEndLine
+	ees2:6 f4:m7 bes:7 | ees2:6 bes4:m7 ees:9 | aes2 g:7 | c2:m7 aes:m7 | \myEndLine
+	ees4 c:m7 d:7 fis:dim7 | g4:m7 c:m7 f:m7 bes:7.9- | ees1:6 | \myEndLine
+	\endPart
+
+	\endSong
+	\endChords
+}
+{% endif %}
+{% if part == "VoiceFake" %}{
+	\tempo "Moderato" 4 = 96
+	\time 2/2
+	\key ees \major
+
+	% part "A"
+	ees4 ees' d8 c bes aes | g4 g g2 | ees4 c' bes8 aes g f | ees1 | ees4 ees f8 f ees f |
+	\tuplet 3/2 { g4 bes c } d4. c8 | b4 b des8 ces bes aes | bes2 bes8 aes g f |
+
+	% part "A"
+	ees4 ees' d8 c bes aes |
+	g8 g g4~ g2 | ees4 c' bes8 aes g f | ees1 | ees4 ees f ees8 f | \tuplet 3/2 { g4 bes c } d4. c8 |
+	bes8 g c bes aes4. d,8 | ees2 r8 ees d ees |
+
+	% part "B"
+	des'2~ des8 c bes a | bes2 r8 ees, d ees |
+	des'8 c des c des c bes aes | bes2 r8 ees, d ees | ces'8 bes c4~ c8 bes aes ges |
+	aes2~ aes8 ges aes g | f8 f~ \tuplet 3/2 { f f f } \tuplet 3/2 { f4 f f } | f2. r8 g |
+
+	% part "A"
+	ees4 ees' d8 c bes aes |
+	g4 g g4. g8 | ees4 c' bes8 aes g f | ees2. r8 d | ees4 d8 ees f4 ees8 f |
+	g4 bes8 c d4 ees8 c | bes4 ees,2 f4 | ees2. r4 |
+}
+{% endif %}

@@ -1,0 +1,112 @@
+{#
+default_version = "Fake"
+
+[attributes]
+title = "Getting To Know You"
+subtitle = "From 'The King And I'"
+style = "Broadway"
+composer = "Richard Rodgers"
+poet = "Oscar Hammerstein II"
+piece = "Moderately"
+copyright = "1951 by Richard Rodgers and Oscar Hammerstein II. Copyright Renewed."
+copyrightextra = "Williamson Music Co., owner of publication and allied rights for all countries of the Western Hemisphere and Japan. All Rights Administered by Chappell & Co., Inc."
+typesetter = "Mark Veltzer <mark.veltzer@gmail.com>"
+completion = "5"
+uuid = "7730b3c6-d510-11f1-8000-046874d194b7"
+structure = "ABAC"
+location = "jfb:130"
+
+[[youtube]]
+id = "IjHRWEPcHYA"
+remark = "Gertrude Lawrence in the original Broadway cast recording of The King And I (1951)"
+
+[[youtube]]
+id = "tmWly23Vb00"
+remark = "Mulgrew Miller"
+
+[versions.Fake]
+doChords = true
+doVoice = true
+doLyrics = false
+doLyricsmore = false
+doLyricsmoremore = false
+doChordBars = false
+doGuitar = false
+doExtra = false
+doPrep = false
+doOwn = false
+#}
+{% if part == "Vars" %}
+{% endif %}
+{% if part == "Doc" %}	DONE:
+	- added the meta data from the fake book.
+	- put in the tunes structure.
+	- put in the chords (fake book).
+	- put in the tune (fake book).
+	- added youtube performances.
+	TODO:
+	- check the chords (fake book).
+	- check the tune (fake book).
+	- hear the tune to check that it is right and adjust the tempo.
+	- add the lyrics.
+{% endif %}
+{% if part == "ChordsFake" %}\chordmode {
+	\startChords
+	\startSong
+
+	\partial 4 s4 |
+
+	\myMark "A"
+	\startPart
+	c2 c:maj7 | c1:6 | d:m7 | g:7 | \myEndLine
+	d2:m7 g:7 | d:m7 g:7 | c:maj7 a:m7 | d:m9 g:7 | \myEndLine
+	\endPart
+
+	\myMark "B"
+	\startPart
+	c2 c:maj7 | c:6 c:7 | f:maj7 f:6 | f1:maj7 | \myEndLine
+	a:m7 | d:7 | d:m7 | g:7 | \myEndLine
+	\endPart
+
+	\myMark "A"
+	\startPart
+	c2 c:maj7 | c1:6 | d:m7 | g:7 | \myEndLine
+	d2:m7 g:7 | d:m7 g:7 | c1:7 | c:7 | \myEndLine
+	\endPart
+
+	\myMark "C"
+	\startPart
+	f2:maj7 f:6 | d:m7 g:7 | c:maj7 c:7 | f1 | \myEndLine
+	c2:maj9 a:7 | d:m7 g:7 | c1:6 | a2:m7 d:7 | \myEndLine
+	d1:m7 | g:7 | c1*2:6 | \myEndLine
+	\endPart
+
+	\endSong
+	\endChords
+}
+{% endif %}
+{% if part == "VoiceFake" %}{
+	\tempo "Moderato" 4 = 120
+	\time 2/2
+	\key c \major
+
+	\partial 4 \tuplet 3/2 { e8 f g } |
+
+	% part "A"
+	c2 c | \tuplet 3/2 { e,8 f g } c4 c4. e,8 | g2 g~ | g2. \tuplet 3/2 { f8 g a } |
+	d2 d | \tuplet 3/2 { f,8 g a } d4 d4. f,8 | e1~ | e2. \tuplet 3/2 { e8 f g } |
+
+	% part "B"
+	c2 c | \tuplet 3/2 { e,8 f g } c4 c4. e,8 | a2 a~ | a2. \tuplet 3/2 { a8 b c } |
+	d2 d~ | d4 e c a | f1~ | f2. \tuplet 3/2 { e8 f g } |
+
+	% part "A"
+	c2 c | \tuplet 3/2 { e,8 f g } c4 c4. e,8 | g2 g~ | g2. \tuplet 3/2 { f8 g a } |
+	d2 d | \tuplet 3/2 { f,8 g a } d4 d4. f,8 | e1~ | e2. \tuplet 3/2 { e8 f g } |
+
+	% part "C"
+	a2 a | \tuplet 3/2 { b8 c d } d4 d4. b8 | e2 e~ | e4 c a f |
+	e2 e | \tuplet 3/2 { e8 f g } g4 g2 | a2 a | \tuplet 3/2 { a8 b c } c4 c2 |
+	d1 | g,1 | c1~ | c2. r4 |
+}
+{% endif %}

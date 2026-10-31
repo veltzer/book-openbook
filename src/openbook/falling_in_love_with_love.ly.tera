@@ -1,0 +1,95 @@
+{#
+default_version = "Fake"
+
+[attributes]
+title = "Falling In Love With Love"
+subtitle = "From 'The Boys From Syracuse'"
+style = "Broadway"
+composer = "Richard Rodgers"
+poet = "Lorenz Hart"
+piece = "Fast Waltz"
+copyright = "1938 by Chappell & Co., Inc."
+copyrightextra = "Copyright Renewed."
+typesetter = "Mark Veltzer <mark.veltzer@gmail.com>"
+completion = "5"
+uuid = "69b1e63e-d510-11f1-8000-046874d194b7"
+structure = "ABAC"
+location = "jfb:114"
+
+[[youtube]]
+id = "nz9VaMKqUGI"
+remark = "Frank Sinatra"
+
+[[youtube]]
+id = "G_FMbCOM4mo"
+remark = "Sonny Rollins"
+
+[versions.Fake]
+doChords = true
+doVoice = true
+doLyrics = false
+doLyricsmore = false
+doLyricsmoremore = false
+doChordBars = false
+doGuitar = false
+doExtra = false
+doPrep = false
+doOwn = false
+#}
+{% if part == "Vars" %}
+{% endif %}
+{% if part == "Doc" %}	DONE:
+	- added the meta data from the fake book.
+	- put in the tunes structure.
+	- put in the chords (fake book).
+	- put in the tune (fake book).
+	- added youtube performances.
+	TODO:
+	- add the lyrics.
+	- check the chords (fake book).
+	- check the tune (fake book).
+	- hear the tune to check that it is right and adjust the tempo.
+	- the fake book prints GM7 in the third bar of the second ending (typed as printed, maybe Gm7 was meant).
+{% endif %}
+{% if part == "ChordsFake" %}\chordmode {
+	\startChords
+	\startSong
+
+	\myMark "A"
+	\startPart
+	\repeat volta 2 {
+		bes2. | c:m7 | d:m7 | g:7.9- | c:m7 | f:7 | c:m7 | f:7 | c:m7 | f:7 | \myEndLine
+		c:m7 | f:7 | bes:maj7 | bes:6 | bes:maj7 | bes:6 | bes:maj7 | bes:6 | bes:maj7 | bes:6 | \myEndLine
+	} \alternative {
+		{
+			a:m7 | d:7 | a:m7 | d:7 | g:m | g:m7+ | g:m7 | c:7 | c2.*2:m7 | f2.*2:7 | \myEndLineVoltaNotLast
+		}
+		{
+			a2.:m7 | d:7 | g:maj7 | g:7 | c:m7 | g:7.9- | c:m7 | f:7 | bes2.*4 | \myEndLineVoltaLast
+		}
+	}
+	\endPart
+
+	\endSong
+	\endChords
+}
+{% endif %}
+{% if part == "VoiceFake" %}{
+	\tempo "Allegro" 4 = 200
+	\time 3/4
+	\key bes \major
+
+	% part "A"
+	\repeat volta 2 {
+		c4 d d | d2 d4 | d2 d4 | d4 ees f | f2 g4 | c,2.~ | c2.~ | c4 r r | ees4 f f | f2 f4 |
+		f2 f4 | f4 g a | d2.~ | d2.~ | d2.~ | d4 r r | c4 d d | d2 d4 | d2 d4 | d4 c bes |
+	} \alternative {
+		{
+			d,2. | d2.~ | d2.~ | d4 r r | bes'4 c c | c2 c4 | c2 c4 | c4 bes a | c,2.~ | c2.~ | c2.~ | c4 r r |
+		}
+		{
+			d2. | d2.~ | d4 r r | d'2. | c2. | d2. | ees2. | f2. | f2.~ | f2.~ | f2.~ | f4 r r |
+		}
+	}
+}
+{% endif %}

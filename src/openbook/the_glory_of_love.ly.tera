@@ -1,0 +1,132 @@
+{#
+default_version = "Fake"
+
+[attributes]
+title = "The Glory Of Love"
+style = "Swing"
+composer = "Billy Hill"
+poet = "Billy Hill"
+piece = "Medium Beat"
+copyright = "1936 Shapiro, Bernstein & Co., Inc. New York. Copyright Renewed."
+typesetter = "Mark Veltzer <mark.veltzer@gmail.com>"
+completion = "5"
+uuid = "77326180-d510-11f1-8000-046874d194b7"
+structure = "AABA"
+location = "jfb:133"
+
+[[youtube]]
+id = "MCaInKOpriA"
+remark = "Benny Goodman with Helen Ward, the 1936 hit recording"
+
+[[youtube]]
+id = "90kHq_9eqr4"
+remark = "Jimmy Durante"
+
+[versions.Fake]
+doChords = true
+doVoice = true
+doLyrics = false
+doLyricsmore = false
+doLyricsmoremore = false
+doChordBars = false
+doGuitar = false
+doExtra = false
+doPrep = false
+doOwn = false
+#}
+{% if part == "Vars" %}
+{% endif %}
+{% if part == "Doc" %}	DONE:
+	- added the meta data from the fake book.
+	- put in the tunes structure.
+	- put in the chords (fake book).
+	- put in the tune (fake book).
+	- added youtube performances.
+	TODO:
+	- check the chords (fake book).
+	- check the tune (fake book).
+	- hear the tune to check that it is right and adjust the tempo.
+	- the pickup is printed as d8 e8. d16 while the same figure inside the tune is d16 e8. d16; check which is right.
+	- bar 24: the rest before the pickup to the last A is hard to read; typed as a sixteenth so the bar adds up.
+	- add the lyrics.
+{% endif %}
+{% if part == "ChordsFake" %}\chordmode {
+	\startChords
+	\startSong
+
+	\partial 4. s4. |
+
+	\repeat volta 2 {
+
+		\myMark "A"
+		\startPart
+		g1 | d:7 | g2 g:7 | c1 | \myEndLine
+		g2 e:m7 | a:m7 d:7 | g e:m7 | a:m7 d:7 | \myEndLine
+		\endPart
+
+		\myMark "A"
+		\startPart
+		g1 | d:7 | g2 g:7 | c1 | \myEndLine
+		g2 e:m7 | a:m7 d:7 | g c4 c:m | g2 g:7 | \myEndLine
+		\endPart
+
+		\myMark "B"
+		\startPart
+		c1 | c | g2 gis:dim7 | g d4:m7 g:7 | \myEndLine
+		c1:m | c2:m c:m/bes | a1:7 | a2:m7.5- d:7 | \myEndLine
+		\endPart
+
+		\myMark "A"
+		\startPart
+		g1 | d:7 | g2 g:7 | c1 | \myEndLine
+		g2 e:m7 | a:m7 d:7 |
+
+	} \alternative {
+		{
+			g2 gis:dim7 | a:m7 d:9 | \myEndLineVoltaNotLast
+		}
+		{
+			g2 c:m6 | g1 | \myEndLineVoltaLast
+		}
+	}
+	\endPart
+
+	\endSong
+	\endChords
+}
+{% endif %}
+{% if part == "VoiceFake" %}{
+	\tempo "Moderato" 4 = 120
+	\time 4/4
+	\key g \major
+
+	\partial 4. d8 e8. d16 |
+
+	\repeat volta 2 {
+
+		% part "A"
+		b'4. g8 e d4. | c'4. a8 fis d4. | r8. d'16 d8. d16 d4 d | d4. c8 g e4. |
+		r4 b'8. ais16 b8. a!16 g4 | r4 a8. gis16 a8. g16 fis4 | g1~ | g4 r4 r8. d16 e8. d16 |
+
+		% part "A"
+		b'4. g8 e d4. | c'4. a8 fis d4. | r8. d'16 d8. d16 d4 d | d4. c8 g e4. |
+		r4 b'8. ais16 b8. a!16 g4 | r4 a8. gis16 a8. g16 fis4 | g1~ | g8 r8 r4 r4 g4 |
+
+		% part "B"
+		c8 r8 r8 b8 c8 r8 r8 d8 | e8 d c r8 r8 g c e | d4 d e cis | d2~ d8 r8 g,4 |
+		c8 r8 r8 b8 c8 r8 r8 d8 | ees8 d c r8 r2 | r8. b16 b8. b16 b4 g | a2~ a8 r16 d,16 e8. d16 |
+
+		% part "A"
+		b'4. g8 e d4. | c'4. a8 fis d4. | r8. d'16 d8. d16 d4 d | d4. c8 g e4. |
+		r4 b'8. ais16 b8. a!16 g4 | r4 a8. gis16 a8. g16 fis4 |
+
+	} \alternative {
+		{
+			g2~ g8 r8 r4 | r2 r8. d16 e8. d16 |
+		}
+		{
+			g1~ | g2. r4 |
+		}
+	}
+}
+{% endif %}

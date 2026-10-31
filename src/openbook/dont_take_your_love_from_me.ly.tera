@@ -1,0 +1,124 @@
+{#
+default_version = "Fake"
+
+[attributes]
+title = "Don't Take Your Love From Me"
+style = "Jazz"
+composer = "Henry Nemo"
+poet = "Henry Nemo"
+piece = "Slow ballad"
+copyright = "1941 by M. Witmark and Sons, New York, NY"
+copyrightextra = "Copyright renewed 1969 by Indano Music Co., New York, NY. Sole selling agent - Ivan Mogull Music Corporation, New York, NY"
+typesetter = "Mark Veltzer <mark.veltzer@gmail.com>"
+completion = "5"
+uuid = "4acf8ca8-d510-11f1-8000-046874d194b7"
+structure = "Verse ABAC"
+location = "jfb:104"
+
+[[youtube]]
+id = "IazJ9Y7ew-o"
+remark = "Frank Sinatra"
+
+[[youtube]]
+id = "Ga97cXLI6EQ"
+remark = "Doris Day"
+
+[versions.Fake]
+doChords = true
+doVoice = true
+doLyrics = false
+doLyricsmore = false
+doLyricsmoremore = false
+doChordBars = false
+doGuitar = false
+doExtra = false
+doPrep = false
+doOwn = false
+#}
+{% if part == "Vars" %}
+{% endif %}
+{% if part == "Doc" %}	DONE:
+	- added the meta data from the fake book.
+	- put in the tunes structure.
+	- put in the chords (fake book).
+	- put in the tune (fake book).
+	- added youtube performances.
+	TODO:
+	- add the lyrics.
+	- check the chords (fake book).
+	- check the tune (fake book).
+	- hear the tune to check that it is right and adjust the tempo.
+	- the book prints no chord at the start of bar 13 of the refrain (the Dm7 of the bar before carries over), the A7#5 and A7 come on beats 3 and 4.
+{% endif %}
+{% if part == "ChordsFake" %}\chordmode {
+	\startChords
+	\startSong
+
+	\myMark "Intro"
+	\startPart
+	\repeat volta 2 {
+		d2:m7 f:maj7 | f1:m6 |
+	} \alternative {
+		{
+			c1*2:maj7 | \myEndLineVoltaNotLast
+		}
+		{
+			c2:maj7 b:7 | e1:maj7 | \myEndLineVoltaLast
+		}
+	}
+	f1:maj7 | f:m6 | c2 d:9 | d2:m7 g4:7 g:7.5+ | \myEndLine
+	\endPart
+
+	\myMark "A"
+	\startPart
+	c2:maj7 d:m7 | e:m7 ees:dim7 | g:7/d g:7 | d:m7 g:7 | \myEndLine
+	d1:m7 | g:7 | c1*2:maj7 | \myEndLine
+	\endPart
+
+	\myMark "B"
+	\startPart
+	c1/e | ees:dim7 | d2:m7 a4:7.5+ a:7 | d1:m7 | \myEndLine
+	s2 a4:7.5+ a:7 | d2:m7.5- g:7 | c:maj7 aes:7 | g2.:7 g4:7.5+ | \myEndLine
+	\endPart
+
+	\myMark "Coda"
+	\startPart
+	c1 | g2:m7 c:7 | f1:maj7 | bes:9 | c | \myEndLine
+	e2:m7.5- a:7 | d1:m7 | g:7 | c2 f4 f:m | c1 | \myEndLine
+	\endPart
+
+	\endSong
+	\endChords
+}
+{% endif %}
+{% if part == "VoiceFake" %}{
+	\tempo "Andante" 4 = 72
+	\time 2/2
+	\key c \major
+
+	% part "Intro"
+	\repeat volta 2 {
+		e8 d c d e d4 d8 | e d c d e d4 e16 f |
+	} \alternative {
+		{
+			g8 g4. r8 b a b | g1 |
+		}
+		{
+			g4 g8 g b4 b8 b | gis1 |
+		}
+	}
+	r8 a b c d c a f | d1 | e8 c4. c8 d e a | g2. g8 a |
+
+	% part "A"
+	g4^\markup { \musicglyph #"scripts.segno" } e e8 d4 d8~ | d2. c8 d | b4 a' a2~ | a2. a8 b |
+	a4 f f8 e4 e8~ | e2. d8 e^\markup { To Coda \musicglyph #"scripts.coda" } | c4 b' b2~ | b1 |
+
+	% part "B"
+	b4 c c4. a8 | b4 c c4. a8 | c4 d, f e | d2. a'4 |
+	c4 d, f e | d2. e4 | \tuplet 3/2 { g4 g g } bes4. aes8 | g2. g8 a^\markup { D.S. al Coda } |
+
+	% part "Coda"
+	c,4^\markup { \musicglyph #"scripts.coda" } c' c2~ | c2. c4 | e4 d d c | c aes8 aes~ aes2 | r4 d8 c g4 e |
+	bes'4 c a2 | r4 c a f | e2 e | c1~ | c2. r4 |
+}
+{% endif %}

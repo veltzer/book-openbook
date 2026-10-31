@@ -1,0 +1,105 @@
+{#
+default_version = "Fake"
+
+[attributes]
+title = "Fool That I Am"
+style = "Pop"
+composer = "Carole Bayer Sager, Bruce Roberts"
+poet = "Carole Bayer Sager, Bruce Roberts"
+piece = "Slowly"
+copyright = "1980 by Unichappell Music Inc., Begonia Melodies, Inc. and Fedora Music"
+copyrightextra = "Unichappell Music, Inc. administers Begonia Melodies, Inc. throughout the World."
+typesetter = "Mark Veltzer <mark.veltzer@gmail.com>"
+completion = "5"
+uuid = "59ad927f-d510-11f1-8000-046874d194b7"
+structure = "AB"
+location = "jfb:121"
+
+[versions.Fake]
+doChords = true
+doVoice = true
+doLyrics = false
+doLyricsmore = false
+doLyricsmoremore = false
+doChordBars = false
+doGuitar = false
+doExtra = false
+doPrep = false
+doOwn = false
+#}
+{% if part == "Vars" %}
+{% endif %}
+{% if part == "Doc" %}	DONE:
+	- added the meta data from the fake book.
+	- put in the tunes structure.
+	- put in the chords (fake book).
+	- put in the tune (fake book).
+	- added youtube performances.
+	TODO:
+	- add the lyrics.
+	- check the chords (fake book).
+	- check the tune (fake book).
+	- hear the tune to check that it is right and adjust the tempo.
+	- the tie from the last note of the second ending into the segno bar is left out.
+	- the book prints a repeat sign at the end of the second ending as well as the D.S. al Coda; ignored the repeat sign.
+{% endif %}
+{% if part == "ChordsFake" %}\chordmode {
+	\startChords
+	\startSong
+
+	\partial 4 s4 |
+
+	\myMark "A"
+	\startPart
+	\repeat volta 2 {
+		g2 g:sus4 | d2:7sus4 d:7 | g2:sus4 f4 g:7 | \myEndLine
+		c2 b:m7 | a2:m7 b:m | c2 b4:7sus4 b:7 | e2:m7 g | \myEndLine
+		c2 d | g2 e:m7 | a2:m7 d:7 | \myEndLine
+		g1 | c2 b:7 | e2.:m7 c4 | \myEndLine
+	} \alternative {
+		{
+			a2:m7 d:7sus4 | g2 a:m7 | d1:7 | g | d:7 | \myEndLineVoltaNotLast
+		}
+		{
+			a2:m7 d:7 | g1 | \myEndLineVoltaLast
+		}
+	}
+	\endPart
+
+	\myMark "Coda"
+	\startPart
+	a2:m7 b:m7 | e2:m7 c4 b:m | \myEndLine
+	a2:m7 d4:7sus4 d:7 | r1 | g1 | \myEndLine
+	\endPart
+
+	\endSong
+	\endChords
+}
+{% endif %}
+{% if part == "VoiceFake" %}{
+	\tempo "Adagio" 4 = 66
+	\time 4/4
+	\key g \major
+
+	\partial 4 g'16 a8. |
+
+	% part "A"
+	\repeat volta 2 {
+		b4 b r a8 b16 c~ | c4 c16 b a8 r4 b8 d16 e~ | e16 d8 d16~ d2 b16 d8 e16~ |
+		e2 r4 b16 a g8 | a8 b r4 r r8 d,16 e | c'16 c8.~ c8 b~ b4 a8 b16 a | g4 r b8 c d e~ |
+		e4^\markup { \musicglyph #"scripts.segno" } r a8 a16 fis~ fis8 e16 d | d4 r g,8 a b c~ | c4 g'8 fis~ fis4 e16 d d c |
+		b4 r b8 c d e~ | e8 e r4 fis8 b,4 g'8~ | g2. a,16 b8.^\markup {To Coda \musicglyph #"scripts.coda"} |
+	} \alternative {
+		{
+			c4~ c8. d16 b a g8~ g16 e d8 | a'16 g8.~ g2 r4 | r1 | r1 | r2 r4 g16 a8. |
+		}
+		{
+			c4~ c8. d16 b4. a16 b | a16 g e g~ g4 b8 c d e^\markup {D.S. al Coda} |
+		}
+	}
+
+	% part "Coda"
+	c4~ c8. d16 b4. a16 b | a16 g e g~ g4 r a16 b8. |
+	c2 b16 a g e d4\fermata | a'16 g8.~ g2. | r1 |
+}
+{% endif %}

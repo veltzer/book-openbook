@@ -1,0 +1,110 @@
+{#
+default_version = "Fake"
+
+[attributes]
+title = "Do You Know What It Means To Miss New Orleans"
+style = "Jazz"
+composer = "Louis Alter"
+poet = "Eddie De Lange"
+piece = "Slowly"
+copyright = "1946"
+copyrightextra = "Copyright Renewed and Assigned to Scarsdale Music Corporation, New York, NY 10022 and Louis Alter Music Publications, New York"
+typesetter = "Mark Veltzer <mark.veltzer@gmail.com>"
+completion = "5"
+uuid = "4acc0fc4-d510-11f1-8000-046874d194b7"
+structure = "AABA"
+location = "jfb:100"
+
+[[youtube]]
+id = "7ftMumYGwxI"
+remark = "Billie Holiday and Louis Armstrong in the film New Orleans (1947)"
+
+[[youtube]]
+id = "TnkpYEOn1yo"
+remark = "Louis Armstrong and the All-Stars live"
+
+[versions.Fake]
+doChords = true
+doVoice = true
+doLyrics = false
+doLyricsmore = false
+doLyricsmoremore = false
+doChordBars = false
+doGuitar = false
+doExtra = false
+doPrep = false
+doOwn = false
+#}
+{% if part == "Vars" %}
+{% endif %}
+{% if part == "Doc" %}	DONE:
+	- added the meta data from the fake book.
+	- put in the tunes structure.
+	- put in the chords (fake book).
+	- put in the tune (fake book).
+	- added youtube performances.
+	TODO:
+	- add the lyrics.
+	- check the chords (fake book).
+	- check the tune (fake book).
+	- hear the tune to check that it is right and adjust the tempo.
+	- the exact placement of the Cm7b5 and F7 chords in bar 16 is crowded in the book, check it.
+{% endif %}
+{% if part == "ChordsFake" %}\chordmode {
+	\startChords
+	\startSong
+
+	\partial 4 s4 |
+
+	\myMark "A"
+	\startPart
+	c2:6 g:7.5+ | c2:maj7 a:m7 | e2:m7 a:m7 | d1:9 | \myEndLine
+	d2:m7 dis:dim7 | e:m7 a:7 | d2.:m7 aes4:7 | g1:7 | \myEndLine
+	\endPart
+
+	\myMark "A"
+	\startPart
+	c2:6 g:7.5+ | c2:maj7 a:m7 | e2:m7 a:m7 | d1:9 | \myEndLine
+	d2:m7 dis:dim7 | e:m7 a:7 | d:m7 g:7 | c2 c4:m7.5- f:7 | \myEndLine
+	\endPart
+
+	\myMark "B"
+	\startPart
+	bes2:m7 ees:9 | aes f:7 | bes:m7 ees:9 | aes1 | \myEndLine
+	a2:m7 d:9 | g:6 e:m7 | a:m7 d:9 | d:m7 g:7 | \myEndLine
+	\endPart
+
+	\myMark "A"
+	\startPart
+	c2:6 g:7.5+ | c2:maj7 a:m7 | e2:m7 a:m7 | d1:9 | \myEndLine
+	d2:m7 dis:dim7 | e:m7 a:7 | d2.:9 g4:7.9- | c1 | \myEndLine
+	\endPart
+
+	\endSong
+	\endChords
+}
+{% endif %}
+{% if part == "VoiceFake" %}{
+	\tempo "Andante" 4 = 100
+	\time 2/2
+	\key c \major
+
+	\partial 4 c8 d |
+
+	% part "A"
+	e8 g a b~ b4. c8 | b a g a~ a4. c8 | b a g a~ a4 c | e,2. r8 ees |
+	d8 cis d c'~ c4. b8 | d des c b bes a4 e8 | g ges f c'~ c4 ees,8 d~ | d2. c8 d |
+
+	% part "A"
+	e8 g a b~ b4. c8 | b a g a~ a4. c8 | b a g a~ a4 c | e,2. r8 ees |
+	d8 cis d c'~ c4. b8 | d des c b bes a4 e8 | g ges f e~ e4 g!8 c~ | c2. c4 |
+
+	% part "B"
+	c2~ c8 bes g ees | f8 f4.~ f8 c' des c | c2~ c8 bes g ees | f2. c'4 |
+	b2~ b8 a fis d | e fis d e~ e fis g b | c d b c~ c4 b8 d | d2. c,8 d |
+
+	% part "A"
+	e8 g a b~ b4. c8 | b a g a~ a4. c8 | b a g a~ a4 c | e,2. r8 ees |
+	d8 cis d c'~ c4. b8 | d des c b bes a4. | e'8 c a e'~ e a, e'4 | c2. r4 |
+}
+{% endif %}

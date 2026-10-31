@@ -1,0 +1,109 @@
+{#
+default_version = "Fake"
+
+[attributes]
+title = "Count Every Star"
+style = "Jazz"
+composer = "Bruno Coquatrix"
+poet = "Sammy Gallop"
+piece = "Slowly and expressively"
+copyright = "1950 PIC Corp."
+copyrightextra = "Renewed 1978 PIC Corp."
+typesetter = "Mark Veltzer <mark.veltzer@gmail.com>"
+completion = "5"
+uuid = "682c88ee-d512-11f1-8000-046874d194b7"
+structure = "AA"
+location = "jfb:89"
+
+[[youtube]]
+id = "qVxRFwiU1kc"
+remark = "Hugo Winterhalter and His Orchestra in the hit recording (1950)"
+
+[[youtube]]
+id = "ZgEtnibVAw4"
+remark = "Grant Green"
+
+[[youtube]]
+id = "Ef4IBRvchuA"
+remark = "Al Hibbler"
+
+[versions.Fake]
+doChords = true
+doVoice = true
+doLyrics = false
+doLyricsmore = false
+doLyricsmoremore = false
+doChordBars = false
+doGuitar = false
+doExtra = false
+doPrep = false
+doOwn = false
+#}
+{% if part == "Vars" %}
+{% endif %}
+{% if part == "Doc" %}	DONE:
+	- added the meta data from the fake book.
+	- put in the tunes structure.
+	- put in the chords (fake book).
+	- put in the tune (fake book).
+	- added youtube performances.
+	TODO:
+	- check the chords (fake book).
+	- check the tune (fake book).
+	- hear the tune to check that it is right and adjust the tempo.
+{% endif %}
+{% if part == "ChordsFake" %}\chordmode {
+	\startChords
+	\startSong
+
+	\repeat volta 2 {
+
+		\myMark "A"
+		\startPart
+		g2:6 e:m7 | a:m7 d:7 | g:6 e:m7 | \myEndLine
+		a:m7 d:7 | g1:7 | c2 f:7 | e1:m7 | a2:m7 d:7.5+ | \myEndLine
+		\endPart
+
+		\myMark "A"
+		\startPart
+		g:6 e:m7 | a:m7 d:7 | g:6 e:m7 | \myEndLine
+		a:m7 d:7 | d:m7 g:7.9- | c:maj7 f:9 | g:6 e:m | \myEndLine
+		a:m7 d:7.9- |
+	} \alternative {
+		{
+			g2:6 e:m7 | a:m7 d:7 | \myEndLineVoltaNotLast
+		}
+		{
+			g2:6 e:m7 | a:m7 aes4:maj7 g:6.9 | \myEndLineVoltaLast
+		}
+	}
+	\endPart
+
+	\endSong
+	\endChords
+}
+{% endif %}
+{% if part == "VoiceFake" %}{
+	\tempo "Lento" 4 = 72
+	\time 4/4
+	\key g \major
+
+	\repeat volta 2 {
+		% part "A"
+		r8 b8 \tuplet 3/2 { d8 g e~ } e4. d16 b | c4 g' fis2 | r8 b,8 \tuplet 3/2 { d8 g e~ } e4. d16 b |
+		c4 b' a2 | r8 g a b a g e b | d2 c | r4 b8 d e4 g | a2 d, |
+
+		% part "A"
+		r8 b8 \tuplet 3/2 { d8 g e~ } e4. d16 b | c4 g' fis2 | r8 b,8 \tuplet 3/2 { d8 g e~ } e4. d16 b |
+		c4 b' a2 | r8 d d d e b ais b | d4 des c2 | r8 b c d \tuplet 3/2 { g,4 a b } |
+		c2 fis, |
+	} \alternative {
+		{
+			g1~ | g4 r r2 |
+		}
+		{
+			g1~ | g1\fermata |
+		}
+	}
+}
+{% endif %}

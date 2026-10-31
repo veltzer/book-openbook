@@ -1,0 +1,109 @@
+{#
+default_version = "Fake"
+
+[attributes]
+title = "The Champ"
+style = "Jazz"
+composer = "Dizzy Gillespie"
+piece = "Very Fast"
+copyright = "1953-1959 by VOGUE RECORDS EDITIONS MUSICALES"
+copyrightextra = "Renewed 1981. Sub-publisher CRITERION MUSIC CORP."
+typesetter = "Mark Veltzer <mark.veltzer@gmail.com>"
+completion = "5"
+uuid = "6c53c6c8-d510-11f1-8000-046874d194b7"
+structure = "AAB"
+location = "jfb:81"
+
+[[youtube]]
+id = "XcLecir04-I"
+remark = "Dizzy Gillespie in the original recording (1951)"
+
+[[youtube]]
+id = "Xg3G6CeqZ3M"
+remark = "Dizzy Gillespie live at Salle Pleyel, Paris, 1953"
+
+[versions.Fake]
+doChords = true
+doVoice = true
+doLyrics = false
+doLyricsmore = false
+doLyricsmoremore = false
+doChordBars = false
+doGuitar = false
+doExtra = false
+doPrep = false
+doOwn = false
+#}
+{% if part == "Vars" %}
+{% endif %}
+{% if part == "Doc" %}	DONE:
+	- added the meta data from the fake book.
+	- put in the tunes structure.
+	- put in the chords (fake book).
+	- put in the tune (fake book).
+	- added youtube performances.
+	TODO:
+	- check the chords (fake book).
+	- check the tune (fake book).
+	- hear the tune to check that it is right and adjust the tempo.
+	- the last bar of the fake book holds only a single quarter note (a) before the final barline; the rest of the bar was filled with rests.
+{% endif %}
+{% if part == "ChordsFake" %}\chordmode {
+	\startChords
+	\startSong
+
+	\partial 4 s4 |
+
+	\myMark "A"
+	\startPart
+	\repeat volta 2 {
+		aes1*4:maj7 | \myEndLine
+		des1*2 | aes1*2 | \myEndLine
+		bes1:m7 | ees:7.5+ | aes1 |
+	} \alternative {
+		{
+			aes1 | \myEndLineVoltaNotLast
+		}
+		{
+			aes1 | \myEndLineVoltaLast
+		}
+	}
+	\endPart
+
+	\myMark "B"
+	\startPart
+	a1*4:m7 | d1*2:m7 | \myEndLine
+	a1*7:m7 | \myEndLine
+	\endPart
+
+	\endSong
+	\endChords
+}
+{% endif %}
+{% if part == "VoiceFake" %}{
+	\tempo "Presto" 4 = 280
+	\time 4/4
+	\key aes \major
+
+	\partial 4 g4~ |
+
+	% part "A"
+	\repeat volta 2 {
+		g aes b! c | d! ees b! g~ | g aes8 ees g aes r4 | r2 r4 g~ |
+		g aes b! c | d! ees b! g~ | g aes8 ees g aes r4 | r2 r4 g~ |
+		g aes b! c | d! ees b! g~ | g aes8 ees g aes r4 |
+	} \alternative {
+		{
+			r2 r4 g |
+		}
+		{
+			r1 |
+		}
+	}
+
+	% part "B"
+	\key c \major
+	r8 a' c d c a g e | g e a4 g e | d e d e~ | e1 | r8 a c d c a g e | g e a4 g e |
+	d e d e~ | e1 | r8 a c d c a g e | g e a4 g e | d1~ | d2. e4 | a r2. |
+}
+{% endif %}

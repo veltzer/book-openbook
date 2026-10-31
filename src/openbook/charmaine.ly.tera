@@ -1,0 +1,128 @@
+{#
+default_version = "Fake"
+
+[attributes]
+title = "Charmaine"
+style = "Swing"
+composer = "Lew Pollack, Erno Rapee"
+poet = "Lew Pollack, Erno Rapee"
+piece = "Slowly with expression"
+copyright = "1926 by United Artists Music"
+copyrightextra = "Copyright renewed, extended term of Copyright deriving from Lew Pollack assigned and effective Dec 20, 1982 to Lew Pollack Music. All rights administered by Bienstock Publishing Co."
+typesetter = "Mark Veltzer <mark.veltzer@gmail.com>"
+completion = "5"
+uuid = "6c53c6c9-d510-11f1-8000-046874d194b7"
+structure = "ABAC"
+location = "jfb:80"
+
+[[youtube]]
+id = "_Pj5eM1PT7E"
+remark = "Guy Lombardo and his Royal Canadians in a hit recording (1927)"
+
+[[youtube]]
+id = "lZl53ZwCoi4"
+remark = "Mantovani and his Orchestra in the famous 1951 version"
+
+[versions.Fake]
+doChords = true
+doVoice = true
+doLyrics = false
+doLyricsmore = false
+doLyricsmoremore = false
+doChordBars = false
+doGuitar = false
+doExtra = false
+doPrep = false
+doOwn = false
+#}
+{% if part == "Vars" %}
+{% endif %}
+{% if part == "Doc" %}	DONE:
+	- added the meta data from the fake book.
+	- put in the tunes structure.
+	- put in the chords (fake book).
+	- put in the tune (fake book).
+	- added youtube performances.
+	TODO:
+	- add the lyrics.
+	- check the chords (fake book).
+	- check the tune (fake book).
+	- hear the tune to check that it is right and adjust the tempo.
+	- in bars 13, 14, 20, 21 and 22 the fake book prints a second note an octave below on beat 3 (a split for the two singers); only the upper note was typed.
+{% endif %}
+{% if part == "ChordsFake" %}\chordmode {
+	\startChords
+	\startSong
+
+	\partial 4 s4 |
+
+	\myMark "A"
+	\startPart
+	\repeat volta 2 {
+		ees2.*2 | ees2.:maj7 | ees2.:6 | \myEndLine
+		ees2. | e2.:dim7 | f2.:m7 | bes2.:7 | \myEndLine
+		\endPart
+
+		\myMark "B"
+		\startPart
+		f2.:m7 | bes2.:7 | f2.:m7 | bes2.*2:7 | \myEndLine
+		bes2.:7.5+ | ees2 e4:dim7 | f2:m7 bes4:7 | \myEndLine
+		\endPart
+
+		\myMark "A"
+		\startPart
+		ees2.*2 | g2.:m7.5- | c2.:7 | \myEndLine
+		f2.:m | c2.:7 | f2.:m | f2:m c4:7.9- | \myEndLine
+		\endPart
+
+		\myMark "C"
+		\startPart
+		f2.:m | des2.:9 | ees2. | c2.:7.5+ | \myEndLine
+		f2.:9 | f4:m7 bes:7 bes:7.5+ |
+	} \alternative {
+		{
+			ees2. | f2:m7 bes4:7.5+ | \myEndLineVoltaNotLast
+		}
+		{
+			ees2.*2 | \myEndLineVoltaLast
+		}
+	}
+	\endPart
+
+	\endSong
+	\endChords
+}
+{% endif %}
+{% if part == "VoiceFake" %}{
+	\tempo "Andante" 4 = 80
+	\time 3/4
+	\key ees \major
+
+	\partial 4 bes'4 |
+
+	\repeat volta 2 {
+		% part "A"
+		ees d c | bes g ees | d2. | c2 bes4 |
+		g'2.~ | g4 bes, bes | aes'2.~ | aes2 c4 |
+
+		% part "B"
+		ees d c | bes aes f | c2. | d2 bes4 |
+		f'2 bes4 | fis2 bes4 | g2.~ | g2 c4 |
+
+		% part "A"
+		ees d c | bes g ees | des2. | c2 c'4 |
+		aes2 c4 | g2 c4 | f,2.~ | f2 e!4 |
+
+		% part "C"
+		f g aes | ces4 ees4. f8 | f4 ees bes | aes2\fermata c8 c |
+		g4 c c, | g' bes c |
+	} \alternative {
+		{
+			ees2.~ | ees4 r bes |
+		}
+		{
+			ees2.~ | ees2\fermata r4 |
+		}
+	}
+}
+{% endif %}

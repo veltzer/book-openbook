@@ -1,0 +1,104 @@
+{#
+default_version = "Fake"
+
+[attributes]
+title = "Cute"
+style = "Jazz"
+composer = "Neal Hefti"
+poet = "Stanley Styne"
+piece = "Medium swing"
+copyright = "1958 by International Korwin Corp."
+typesetter = "Mark Veltzer <mark.veltzer@gmail.com>"
+completion = "5"
+uuid = "3f732d42-d510-11f1-8000-046874d194b7"
+structure = "ABAC"
+location = "jfb:91"
+
+[[youtube]]
+id = "YOUTUBE1"
+remark = "REMARK1"
+
+[[youtube]]
+id = "YOUTUBE2"
+remark = "REMARK2"
+
+[versions.Fake]
+doChords = true
+doVoice = true
+doLyrics = false
+doLyricsmore = false
+doLyricsmoremore = false
+doChordBars = false
+doGuitar = false
+doExtra = false
+doPrep = false
+doOwn = false
+#}
+{% if part == "Vars" %}
+{% endif %}
+{% if part == "Doc" %}	DONE:
+	- added the meta data from the fake book.
+	- put in the tunes structure.
+	- put in the chords (fake book).
+	- put in the tune (fake book).
+	- added youtube performances.
+	TODO:
+	- add the lyrics.
+	- check the chords (fake book).
+	- check the tune (fake book).
+	- hear the tune to check that it is right and adjust the tempo.
+{% endif %}
+{% if part == "ChordsFake" %}\chordmode {
+	\startChords
+	\startSong
+
+	\myMark "A"
+	\startPart
+	d1:m7 | g:9 | c:6 | e2:m7.5- a:7.9- | \myEndLine
+	d1:m7 | g:9 | g2:m7 c:7 | g:m7 c:9 | \myEndLine
+	\endPart
+
+	\myMark "B"
+	\startPart
+	f1:maj7 | bes:9 | c | a:m7 | \myEndLine
+	fis:m7.5- | b:7 | e:maj7 | e2:m7.5- a:7.9- | \myEndLine
+	\endPart
+
+	\myMark "A"
+	\startPart
+	d1:m7 | g:9 | c:6 | e2:m7.5- a:7.9- | \myEndLine
+	d1:m7 | g:9 | g2:m7 c:7 | g:m7 c:9 | \myEndLine
+	\endPart
+
+	\myMark "C"
+	\startPart
+	f1:maj7 | bes:9 | c | a:m7 | \myEndLine
+	d:m7 | g:7.9- | c1*2:6 | \myEndLine
+	\endPart
+
+	\endSong
+	\endChords
+}
+{% endif %}
+{% if part == "VoiceFake" %}{
+	\tempo "Moderato" 4 = 130
+	\time 4/4
+	\key c \major
+
+	% part "A"
+	r8 d4. e4 f | g2 a4. e8~ | e4 r r2 | r1 |
+	r8 d4. e4 f | g2 a4. g8~ | g4 r r2 | r1 |
+
+	% part "B"
+	r8 a4. b4 c8 d~ | d2 r | r8 g,4. a4 b8 c~ | c2 r |
+	r8 fis,4. g4 a | b2 fis4. b8~ | b2 r | r1 |
+
+	% part "A"
+	r8 d,4. e4 f | g2 a4. e8~ | e2 r | r1 |
+	r8 d4. e4 f | g2 a4. g8~ | g2 r | r1 |
+
+	% part "C"
+	r8 a4. b4 c8 d~ | d2 r | r8 g,4. a4 b8 c~ | c2 r |
+	r8 f,4. g4 a | c2 d4. c8~ | c1~ | c8 r r4 r2 |
+}
+{% endif %}

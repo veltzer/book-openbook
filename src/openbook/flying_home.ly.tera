@@ -1,0 +1,114 @@
+{#
+default_version = "Fake"
+
+[attributes]
+title = "Flying Home"
+style = "Jazz"
+composer = "Benny Goodman, Lionel Hampton"
+piece = "Medium Bounce"
+copyright = "1940 by Regent Music Corp."
+copyrightextra = "Copyright renewed by Regent Music Corp. and Jewel Music Publishing Co., Inc."
+typesetter = "Mark Veltzer <mark.veltzer@gmail.com>"
+completion = "5"
+uuid = "59ad927e-d510-11f1-8000-046874d194b7"
+structure = "AABA"
+location = "jfb:120"
+
+[[youtube]]
+id = "GI3HG3nAOEQ"
+remark = "Benny Goodman Sextet in the original recording (1939)"
+
+[[youtube]]
+id = "HOI-9mKluLI"
+remark = "Lionel Hampton and his Orchestra with Illinois Jacquet (1942)"
+
+[versions.Fake]
+doChords = true
+doVoice = true
+doLyrics = false
+doLyricsmore = false
+doLyricsmoremore = false
+doChordBars = false
+doGuitar = false
+doExtra = false
+doPrep = false
+doOwn = false
+#}
+{% if part == "Vars" %}
+{% endif %}
+{% if part == "Doc" %}	DONE:
+	- added the meta data from the fake book.
+	- put in the tunes structure.
+	- put in the chords (fake book).
+	- put in the tune (fake book).
+	- added youtube performances.
+	TODO:
+	- check the chords (fake book).
+	- check the tune (fake book).
+	- hear the tune to check that it is right and adjust the tempo.
+	- bar 15 (Bb7): the book prints no naturals on the d notes after the tied d natural; typed d natural as the Bb7 harmony implies.
+	- bar 16: the A7/E is printed over the middle of the bar; placed it on beat 3.
+	- bar 18: the crowded Adim7 Bbm9 Eb7 labels start at the third eighth; typed Eb7 (continued) Adim7 Bbm9 Eb7 one per beat.
+{% endif %}
+{% if part == "ChordsFake" %}\chordmode {
+	\startChords
+	\startSong
+
+	\myMark "A"
+	\startPart
+	\repeat volta 2 {
+		aes2:6 aes:7/ges | f2:m e4:7 ees:7 | aes2:6 aes:7/ges | \myEndLine
+		f2:m e4:7 ees:7 | aes2:6 aes:7/ges | f2:m e4:7 ees:7 | \myEndLine
+	} \alternative {
+		{
+			aes1:6 | aes2:7 a:9 | \myEndLineVoltaNotLast
+		}
+		{
+			aes1:6 | aes2:7sus4 aes:7 | \myEndLineVoltaLast
+		}
+	}
+	\endPart
+
+	\myMark "B"
+	\startPart
+	aes1:7 | aes2:7 c | des1 | des | \myEndLine
+	bes1:7 | bes2:7 a:7/e | ees1:7 | ees4:7 a:dim7 bes:m9 ees:7 | \myEndLine
+	\endPart
+
+	\myMark "A"
+	\startPart
+	aes2:6 aes:7/ges | f2:m e4:7 ees:7 | aes2:6 aes:7/ges | f2:m e4:7 ees:7 | \myEndLine
+	aes2:6 aes:7/ges | f2:m e4:7 ees:7 | aes1 | aes:7 | \myEndLine
+	\endPart
+
+	\endSong
+	\endChords
+}
+{% endif %}
+{% if part == "VoiceFake" %}{
+	\tempo "Moderato" 2 = 100
+	\time 2/2
+	\key aes \major
+
+	% part "A"
+	\repeat volta 2 {
+		c'8 ees4 bes8~ bes2 | c8 ees c ees \tuplet 3/2 { b! bes aes } f ees | c'8 ees4 bes8~ bes4. aes8 |
+		c8 ees c ees \tuplet 3/2 { b! bes aes } f ees | c'8 ees4 bes8~ bes4. aes8 | c8 ees c ees \tuplet 3/2 { b! bes aes } f ees |
+	} \alternative {
+		{
+			c8 ees f aes~ aes ges4.~ | ges2 r8 ees'4. |
+		}
+		{
+			c,8 ees f aes~ aes ges4 ees8 | aes8 ges4 ees8~ ees4 ees'8 c~ |
+		}
+	}
+
+	% part "B"
+	c8 ees c ees~ ees c bes c | aes8 c aes c~ c aes e! f | aes8 aes4.~ aes4 f8 ges | aes8 des4.~ des4 r8 d!~ |
+	d!8 f d! f~ f d! c d! | bes8 d! bes d~ d bes a! bes | g8 g4.~ g4 f8 fis | g8 bes c ees c bes4. |
+
+	% part "A"
+	c8 ees4 bes8~ bes2 | c8 ees c ees \tuplet 3/2 { b! bes aes } f ees | c'8 ees4 bes8~ bes4. aes8 | c8 ees c ees \tuplet 3/2 { b! bes aes } f ees |
+	c'8 ees4 bes8~ bes4. aes8 | c8 ees c ees \tuplet 3/2 { b! bes aes } f ees | c8 ees f aes~ aes ges4 ees8 | aes8 ges4 ees8~ ees4 r4 |
+}
+{% endif %}

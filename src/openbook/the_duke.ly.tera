@@ -1,0 +1,113 @@
+{#
+default_version = "Fake"
+
+[attributes]
+title = "The Duke"
+style = "Jazz"
+composer = "Dave Brubeck"
+piece = "With a relaxed beat"
+copyright = "1955, 1956 Derry Music Company"
+copyrightextra = "U.S. copyright renewed. Sole Selling Agent: Shawnee Press, Inc., Delaware Water Gap, PA 18327"
+typesetter = "Mark Veltzer <mark.veltzer@gmail.com>"
+completion = "5"
+uuid = "86b6759c-d510-11f1-8000-046874d194b7"
+structure = "AABA"
+location = "jfb:106"
+
+[[youtube]]
+id = "iI59ViwyNRA"
+remark = "The Dave Brubeck Quartet in the original recording (1955)"
+
+[[youtube]]
+id = "cL3A-o2D7pU"
+remark = "Miles Davis with the Gil Evans Orchestra live (1959)"
+
+[versions.Fake]
+doChords = true
+doVoice = true
+doLyrics = false
+doLyricsmore = false
+doLyricsmoremore = false
+doChordBars = false
+doGuitar = false
+doExtra = false
+doPrep = false
+doOwn = false
+#}
+{% if part == "Vars" %}
+{% endif %}
+{% if part == "Doc" %}	DONE:
+	- added the meta data from the fake book.
+	- put in the tunes structure.
+	- put in the chords (fake book).
+	- put in the tune (fake book).
+	- added youtube performances.
+	TODO:
+	- check the chords (fake book).
+	- check the tune (fake book).
+	- hear the tune to check that it is right and adjust the tempo.
+	- in bar 13 the book prints a natural e under the Ab9 chord with no accidental,
+		it is written here as e flat to fit the harmony.
+{% endif %}
+{% if part == "ChordsFake" %}\chordmode {
+	\startChords
+	\startSong
+
+	\myMark "A"
+	\startPart
+	\repeat volta 2 {
+		c2:maj7 f:maj7 | g4:6 a:m7 b2:7.9- | e2:m7 a:m9 | d2:m9 f4:m7 bes:7 | \myEndLine
+		ees2 des:maj7 | c:m7 b:m7 | bes4:m7 ees:7 aes2:maj7 |
+	} \alternative {
+		{
+			d2:7 g:7 | \myEndLineVoltaNotLast
+		}
+		{
+			d4:7 des:7.9- c:maj7 ges:7 | \myEndLineVoltaLast
+		}
+	}
+	\endPart
+
+	\myMark "B"
+	\startPart
+	f2:maj7 e:7 | d:6 c:maj7 | bes:m7 aes:m | c2:m/g f:m6 | \myEndLine
+	d4:m7.5- des:9.5- aes2:9 | c4:m7.5- b:9.5- bes2:m7 | f4:m7/c bes:dim aes g:7.9+ | f4:m9 des/ees ees2/des | \myEndLine
+	\endPart
+
+	\myMark "A"
+	\startPart
+	c2:maj7 f:maj7 | g4:6 a:m7 b2:7.9- | e2:m7 a:m9 | d2:m9 f4:m9 bes:7 | \myEndLine
+	ees1:7 | c2:m7 b:m7 | bes4:m7 ees:7 aes2:maj7 | d4:7 des:7.9- c2:maj7 | \myEndLine
+	\endPart
+
+	\endSong
+	\endChords
+}
+{% endif %}
+{% if part == "VoiceFake" %}{
+	\tempo "Moderato" 4 = 160
+	\time 2/2
+	\key c \major
+
+	% part "A"
+	\repeat volta 2 {
+		r8 b''8 a4 g8 e4 d8 | b4 g8 a~ a2 | r8 d,8 g b d4 d | e4 c8 aes~ aes2 |
+		r8 g aes g f c'4. | ees,4 f8 d~ d2 | r8 des ees des c aes'4. |
+	} \alternative {
+		{
+			c,4 d8 b~ b2 |
+		}
+		{
+			c4 d8 b~ b4 bes |
+		}
+	}
+
+	% part "B"
+	\tuplet 3/2 { r4 b'4 c } \tuplet 3/2 { d2 e4 } | \tuplet 3/2 { fis2 g4 } e2 | \tuplet 3/2 { r4 c4 des } \tuplet 3/2 { ees2 f4 } |
+	\tuplet 3/2 { g2 aes4 } f2 | f4 g ees2 | ees4 f des2 | c4 des ees f | g4 aes bes2 |
+
+	% part "A"
+	r8 b8 a4 g8 e4 d8 | b4 g8 a~ a2 |
+	r8 d,8 g b d4 d | e4 c8 aes~ aes2 | r8 g aes g f c'4. | ees,4 f8 d~ d2 | r8 des ees des c aes'4. | c,4 d8 b~ b2 |
+}
+{% endif %}

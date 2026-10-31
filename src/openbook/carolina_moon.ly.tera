@@ -1,0 +1,108 @@
+{#
+default_version = "Fake"
+
+[attributes]
+title = "Carolina Moon"
+style = "Jazz"
+composer = "Benny Davis, Joe Burke"
+poet = "Benny Davis, Joe Burke"
+piece = "Moderately Slow"
+copyright = "1928 and Renewed 1956"
+copyrightextra = "Rights for extended term administered by Fred Ahlert Music Corporation"
+typesetter = "Mark Veltzer <mark.veltzer@gmail.com>"
+completion = "5"
+uuid = "b131df54-d511-11f1-8000-046874d194b7"
+structure = "AABA"
+location = "jfb:79"
+
+[[youtube]]
+id = "FT02lU_NT24"
+remark = "Gene Austin in the hit recording (1929)"
+
+[[youtube]]
+id = "ZkXFYBc6gzg"
+remark = "Thelonious Monk"
+
+[[youtube]]
+id = "SqobNXNZk10"
+remark = "Connie Francis (1958)"
+
+[versions.Fake]
+doChords = true
+doVoice = true
+doLyrics = false
+doLyricsmore = false
+doLyricsmoremore = false
+doChordBars = false
+doGuitar = false
+doExtra = false
+doPrep = false
+doOwn = false
+#}
+{% if part == "Vars" %}
+{% endif %}
+{% if part == "Doc" %}	DONE:
+	- added the meta data from the fake book.
+	- put in the tunes structure.
+	- put in the chords (fake book).
+	- put in the tune (fake book).
+	- added youtube performances.
+	TODO:
+	- check the chords (fake book).
+	- check the tune (fake book).
+	- hear the tune to check that it is right and adjust the tempo.
+{% endif %}
+{% if part == "ChordsFake" %}\chordmode {
+	\startChords
+	\startSong
+
+	\myMark "A"
+	\startPart
+	g2. | g2./b | c | c:m6 | g | d:7 | g | \myEndLine
+	a2:m7 d4:7 |
+	\endPart
+
+	\myMark "A"
+	\startPart
+	g2. | g2./b | c | c:m6 | g | d:7 | \myEndLine
+	g | g |
+	\endPart
+
+	\myMark "B"
+	\startPart
+	c | c | g | g | a:7 | \myEndLine
+	a:7 | a:m7 | d:7.5+ |
+	\endPart
+
+	\myMark "A"
+	\startPart
+	g | g2./b | c | c:m6 | \myEndLine
+	g | a2:7 d4:7 | g2 c4 | g2.:6 | \myEndLine
+	\endPart
+
+	\endSong
+	\endChords
+}
+{% endif %}
+{% if part == "VoiceFake" %}{
+	\tempo "Moderato" 4 = 100
+	\time 3/4
+	\key g \major
+
+	% part "A"
+	b'4~ b8. c16 cis8. d16 | g,2 fis4 | e2. | c'2. | b4~ b8. a16 g8. b16 | a4~ a8. g16 fis8. a16 | g2.~ |
+	g2 r4 |
+
+	% part "A"
+	b4~ b8. c16 cis8. d16 | g,2 fis4 | e2. | c'2. | b4~ b8. a16 g8. b16 | a4~ a8. g16 fis8. a16 |
+	g2.~ | g4 g g |
+
+	% part "B"
+	\tuplet 3/2 { g8 fis f } e2 | c'4 e,2 | \tuplet 3/2 { fis8 e ees } d2 | b'4 d,2 | \tuplet 3/2 { e8 dis d } cis2 |
+	\tuplet 3/2 { e8 f fis } g4 b | a2. | ais2. |
+
+	% part "A"
+	b4~ b8. c16 cis8. d16 | g,2 fis4 | e2. | c'2. |
+	b4~ b8. a16 g8. b16 | a2 b4 | g2.~ | g2.\fermata |
+}
+{% endif %}

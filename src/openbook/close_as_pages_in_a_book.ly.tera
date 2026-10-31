@@ -1,0 +1,106 @@
+{#
+default_version = "Fake"
+
+[attributes]
+title = "Close As Pages In A Book"
+style = "Broadway"
+composer = "Sigmund Romberg"
+poet = "Dorothy Fields"
+piece = "Moderately"
+copyright = "1944 by Williamson Music Co."
+copyrightextra = "Copyright Renewed."
+typesetter = "Mark Veltzer <mark.veltzer@gmail.com>"
+completion = "3"
+uuid = "b77118cc-d510-11f1-8000-046874d194b7"
+structure = "ABAC"
+location = "jfb:86"
+
+[[youtube]]
+id = "XqHEu7ByjIk"
+remark = "Benny Goodman, the hit recording from the year of the show Up In Central Park (1945)"
+
+[[youtube]]
+id = "fnjcHORtw-U"
+remark = "J.J. Johnson"
+
+[versions.Fake]
+doChords = true
+doVoice = true
+doLyrics = false
+doLyricsmore = false
+doLyricsmoremore = false
+doChordBars = false
+doGuitar = false
+doExtra = false
+doPrep = false
+doOwn = false
+#}
+{% if part == "Vars" %}
+{% endif %}
+{% if part == "Doc" %}	DONE:
+	- added the meta data from the fake book.
+	- put in the tunes structure.
+	- put in the chords (fake book).
+	- put in the tune (fake book).
+	- added youtube performances.
+	TODO:
+	- add the lyrics.
+	- check the chords (fake book).
+	- check the tune (fake book).
+	- hear the tune to check that it is right and adjust the tempo.
+	- the fake book prints several bars with only three beats (bars 1, 2, 3, 6, 9, 11, 14, 17, 18, 19, 23, 29, 30, 31): the middle note of the X-Y-Z bars and the last note after the four beamed eighths are printed as filled quarters; they were made half notes as in the bars where the book prints them hollow (bars 5, 7, 10, 21, 22, 25, 26). Check against a recording.
+{% endif %}
+{% if part == "ChordsFake" %}\chordmode {
+	\startChords
+	\startSong
+
+	\myMark "A"
+	\startPart
+	ees2:maj7 f:m7 | g:m7.5- c:7.9- | f1:m7 | bes:7 | \myEndLine
+	f:m | c:7 | f:m7 | bes2 bes/aes | \myEndLine
+	\endPart
+
+	\myMark "B"
+	\startPart
+	g1 | d:7 | g | c:m7 | \myEndLine
+	f2:m7 bes:7 | g:m7 c:7 | f:m7 f:7 | f:m7 bes:7.5+ | \myEndLine
+	\endPart
+
+	\myMark "A"
+	\startPart
+	ees1 | bes2:m7 ees:7 | aes2. ees4:7 | aes2. aes4:7/ges | \myEndLine
+	f1:7 | c2:m7 f:7 | bes2. f4:7 | bes1:7 | \myEndLine
+	\endPart
+
+	\myMark "C"
+	\startPart
+	ees:maj7 | g:7 | c2:m9 c:7 | f:m7 e:9 | \myEndLine
+	ees:maj7 f:m7 | g:m7.5- c:7.9- | f:m7 bes:9 | ees1 | \myEndLine
+	\endPart
+
+	\endSong
+	\endChords
+}
+{% endif %}
+{% if part == "VoiceFake" %}{
+	\tempo "Moderato" 4 = 100
+	\time 4/4
+	\key ees \major
+
+	% part "A"
+	g'4 bes2 bes,8 c | des des bes' aes g2 | aes4 bes2 g4 | f2. r4 |
+	aes4 c2 c,8 d | e8 e bes' aes g2 | aes4 c2 c4 | d2. r4 |
+
+	% part "B"
+	b4 d2 d,8 e | fis8 fis c' b a2 | b4 d2 d4 | ees2. r4 |
+	ees4 c8 bes aes2 | d4 bes8 aes g2 | c4 aes8 g f4 ees | f2 fis |
+
+	% part "A"
+	g4 bes2 bes,8 c | des des bes' aes g2 | aes4 aes2 bes4 | c2. r4 |
+	a4 c2 c,8 d | ees ees c' bes a2 | bes4 bes2 c4 | d2. r4 |
+
+	% part "C"
+	d4 ees2 d4 | d4 ees2 d4 | d4 ees d8 c \tuplet 3/2 { bes aes g } | f2 fis |
+	g4 bes2 bes,8 c | des des bes' aes g2 | aes4 bes2 c4 | ees2. r4 |
+}
+{% endif %}
