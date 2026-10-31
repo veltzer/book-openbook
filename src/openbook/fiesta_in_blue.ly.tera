@@ -15,12 +15,12 @@ structure = "ABA"
 location = "jfb:116"
 
 [[youtube]]
-id = "YOUTUBE1"
-remark = "REMARK1"
+id = "iq6q-u1J3bk"
+remark = "Benny Goodman and his Orchestra"
 
 [[youtube]]
-id = "YOUTUBE2"
-remark = "REMARK2"
+id = "kb9p9lqD3Pc"
+remark = "Cootie Williams"
 
 [versions.Fake]
 doChords = true
@@ -98,13 +98,13 @@ doOwn = false
 	r8 e'4. d8 e r4 | r8 e4. d8 e r4 | r8 e8~ e4 d8 ees e! d | g4 e8 a,~ a2 |
 	r4 \tuplet 3/2 { g8 a g } \tuplet 3/2 { bes g a } \tuplet 3/2 { g a g } | bes4 g8 e~ e4 e'4 |
 	d4 c bes4. b!8~ | b8 bes b! a bes b! \tuplet 3/2 { bes a aes } | g1 |
-	\tuplet 3/2 { e'4 b e } b8 g \tuplet 6/4 { bes16 g a g aes f! } | r8 b8~ b c d c |
+	\tuplet 3/2 { e'4 b e } b8 g \tuplet 6/4 { bes16 g a g aes f! } | r8 b8~ b c d4 c |
 	b8 c d d~ d4 r4 | r8. ees,16 e! g a bes g8 e4. | r8. ees16 e! g a bes g8 e4. |
 	r4 \tuplet 3/2 { b'!8 d d,~ } d4 \tuplet 3/2 { b'8 d fis,~ } |
 	fis4 \tuplet 3/2 { b8 d f,~ } f4 \tuplet 3/2 { b8 d f, } | \tuplet 3/2 { dis8 e g } a8 bes~ bes2 |
 	\tuplet 3/2 { r8 dis, e } \tuplet 3/2 { g a bes } \tuplet 3/2 { a g dis } e8 g~ | g1~ | g2. r8 g8 |
 	\tuplet 3/2 { ais8 b d } \tuplet 3/2 { e d e } g4. g,8 | \tuplet 3/2 { ais8 b d } \tuplet 3/2 { e d e } g,2 |
-	r8 \acciaccatura dis8 e8 \acciaccatura dis8 e8 d8 \acciaccatura dis8 e8 \acciaccatura dis8 e8 \acciaccatura dis8 e8 d8 |
+	r8 \acciaccatura dis'8 e8 \acciaccatura dis8 e8 d8 \acciaccatura dis8 e8 \acciaccatura dis8 e8 \acciaccatura dis8 e8 d8 |
 	e8 d g g,~ g4 r4 | r8 a'4. a4~ a8 g16 e |
 	a8 a~ a4\bendAfter #-4 r4 r8 d,8 |
 	\tuplet 3/2 { ges8 g! g,~ } \tuplet 3/2 { g g g } \tuplet 3/2 { \acciaccatura aes8 g g g } \tuplet 3/2 { g g g } |

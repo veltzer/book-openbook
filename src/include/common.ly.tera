@@ -94,6 +94,7 @@ myChordDefinitions={
 	<c e g bes f'>-\markup \super {7sus}
 	<c e g bes d f'>-\markup \super {9sus}
 	<c e g f'>-\markup \super {sus}
+	<c e g d'>-\markup \super {add9}
 	<c ees ges bes>-\markup { "m" \super { "7 " \flat "5" } }
 	<c ees ges beses>-\markup { "dim" \super { "7" } }
 	<c ees ges>-\markup { "dim" }

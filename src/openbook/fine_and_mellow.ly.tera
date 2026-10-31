@@ -1,0 +1,122 @@
+{#
+default_version = "Fake"
+
+[attributes]
+title = "Fine And Mellow"
+style = "Blues"
+composer = "Billie Holiday"
+poet = "Billie Holiday"
+piece = "Moderately Slow Blues"
+copyright = "1940 by Edward B. Marks Music Company"
+copyrightextra = "Copyright Renewed."
+typesetter = "Mark Veltzer <mark.veltzer@gmail.com>"
+completion = "5"
+uuid = "69f8ad30-d510-11f1-8000-046874d194b7"
+structure = "Blues"
+location = "jfb:118"
+
+[[youtube]]
+id = "SHArH4K_P9w"
+remark = "Billie Holiday in the original recording (1939)"
+
+[[youtube]]
+id = "Nw_lQ2Fbe_k"
+remark = "Billie Holiday on The Sound of Jazz television broadcast (1957)"
+
+[versions.Fake]
+doChords = true
+doVoice = true
+doLyrics = false
+doLyricsmore = false
+doLyricsmoremore = false
+doChordBars = false
+doGuitar = false
+doExtra = false
+doPrep = false
+doOwn = false
+#}
+{% if part == "Vars" %}
+{% endif %}
+{% if part == "Doc" %}	DONE:
+	- added the meta data from the fake book.
+	- put in the tunes structure.
+	- put in the chords (fake book).
+	- put in the tune (fake book).
+	- added youtube performances.
+	TODO:
+	- add the lyrics.
+	- check the chords (fake book).
+	- check the tune (fake book).
+	- hear the tune to check that it is right and adjust the tempo.
+	- the book writes out five twelve bar blues choruses, typed as printed.
+{% endif %}
+{% if part == "ChordsFake" %}\chordmode {
+	\startChords
+	\startSong
+
+	\myMark "A"
+	\startPart
+	f1:m6 | bes:7 | f | f:7 | bes:7 | \myEndLine
+	bes:9 | f | s2. c4:dim | c1:7 | bes:7 | f | c2.:7 c4:7.5+ | \myEndLine
+	\endPart
+
+	\myMark "A"
+	\startPart
+	f1:m6 | bes:7 | f | f:7 | bes:7 | \myEndLine
+	s1 | f | s2 c:dim7 | c1:7 | bes:7 | \myEndLine
+	f1 | s2 c:7.5+ |
+	\endPart
+
+	\myMark "A"
+	\startPart
+	f1:m6 | bes:7 | f | \myEndLine
+	f:7 | bes:7 | s1 | f | s1 | \myEndLine
+	c1:7.5+ | bes:7 | f | s2 c:7 |
+	\endPart
+
+	\myMark "A"
+	\startPart
+	f8 r2.. | \myEndLine
+	bes1:7 | f | f:7 | bes:7 | s1 | f | \myEndLine
+	s1 | c4:7.5+ c2.:7 | bes1:7 | f | s2 c:7.5+ | \myEndLine
+	\endPart
+
+	\myMark "A"
+	\startPart
+	f1:m6 | bes:7 | f | f:7 | bes:7 | bes:9 | f | \myEndLine
+	s2 c:dim7 | c1:7 | bes:7 | f | s1 | \myEndLine
+	\endPart
+
+	\endSong
+	\endChords
+}
+{% endif %}
+{% if part == "VoiceFake" %}{
+	\tempo "Andante" 4 = 80
+	\time 2/2
+	\key f \major
+
+	% part "A"
+	r8 aes'8 aes aes aes8 g4. | r4 aes8 aes g4. f8 | d8 c~ c2. | r2 r4 r8 g'8 | d8 f aes aes~ aes8 g4. |
+	r4 aes8 aes g4. f8 | d8 c~ c2. | r2 r4 a'8 a | bes8 a bes2. | r4 r8 aes8 aes4. g16 f | f2. r4 | r2 r8 aes8 aes4 |
+
+	% part "A"
+	aes4 g8 g~ g2 | r4 aes8 aes \tuplet 3/2 { g4 c, g' } | f1~ | f4 r4 r8 g8 g4 | aes8 g4 g8~ g2 |
+	r8 aes8 aes4 \tuplet 3/2 { g4 c, g' } | f2 r2 | r2 r8 gis8 a a | a4 a8 a a8 g4. | r4 aes8 aes g4. g8 |
+	g8 f4.~ f2 | r2 r8 aes4 aes8 |
+
+	% part "A"
+	aes8 g g g g8 g4. | r4 aes8 aes aes aes g f | d8 c~ c2. |
+	r2 r8 g'4 g8 | d8 f aes g g8 f4. | r4 aes8 aes aes aes g8. f16 | d8 c~ c2. | r1 |
+	aes'8 aes aes aes aes8 g4. | r4 aes8 aes g8 f4 f8~ | f2 r2 | r2 r8 c'8 c c |
+
+	% part "A"
+	c8 aes aes g~ g8 g4. |
+	r8 aes8 aes4 aes g8 f | d8 c~ c2. | r2 r8 g'4 aes8 | aes8 g g4 g8 f4. | r8 aes4 aes8 g4 g8 f | d8 c~ c2. |
+	r2 r8 aes'8 aes aes | aes4 g8 g g8 g4. | r8 aes8 aes16 aes aes aes g4 f8. f16 | f2. r4 | r2 r8 aes4 aes8 |
+
+	% part "A"
+	aes4 g8 g g8 g4. | r4 aes8 aes g4. f8 | d8 c~ c2. | r1 | d8 f aes aes aes8 g4. | r4 d8 f g4. f8 | d8 c~ c2. |
+	r2 r8 gis'8 a a16 a | a8 a a4 g8 c,4. | r8 aes'8 aes4 aes g8 f | f2. r4 | r1 |
+}
+{% endif %}

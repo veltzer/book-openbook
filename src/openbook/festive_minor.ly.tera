@@ -1,0 +1,109 @@
+{#
+default_version = "Fake"
+
+[attributes]
+title = "Festive Minor"
+style = "Jazz"
+composer = "Gerry Mulligan"
+piece = "Medium"
+copyright = "1959-1964 Criterion Music Corp."
+typesetter = "Mark Veltzer <mark.veltzer@gmail.com>"
+completion = "5"
+uuid = "69e72632-d510-11f1-8000-046874d194b7"
+structure = "AA"
+location = "jfb:117"
+
+[[youtube]]
+id = "lRRJ2LIFZv4"
+remark = "Gerry Mulligan"
+
+[[youtube]]
+id = "7jlQN7TlFGU"
+remark = "Art Farmer"
+
+[versions.Fake]
+doChords = true
+doVoice = true
+doLyrics = false
+doLyricsmore = false
+doLyricsmoremore = false
+doChordBars = false
+doGuitar = false
+doExtra = false
+doPrep = false
+doOwn = false
+#}
+{% if part == "Vars" %}
+{% endif %}
+{% if part == "Doc" %}	DONE:
+	- added the meta data from the fake book.
+	- put in the tunes structure.
+	- put in the chords (fake book).
+	- put in the tune (fake book).
+	- added youtube performances.
+	TODO:
+	- check the chords (fake book).
+	- check the tune (fake book).
+	- hear the tune to check that it is right and adjust the tempo.
+	- the fake book has a D.S. al Coda and a coda but no To Coda sign.
+{% endif %}
+{% if part == "ChordsFake" %}\chordmode {
+	\startChords
+	\startSong
+
+	\partial 4. s4. |
+
+	\myMark "A"
+	\startPart
+	\repeat volta 2 {
+		f1:m | bes:m | f:m | bes:m | f:m | bes:m | \myEndLine
+		ees1:7 | aes | ees:7 | c:7.9- | f1*2:m |
+	} \alternative {
+		{
+			g1*2:7 | \myEndLine
+			c1*2:7.9- | \myEndLineVoltaNotLast
+		}
+		{
+			g1:7 | g2:m7.5- c:7 | f2.:m7/ees d4:m7.5- | \myEndLine
+			g2:m7.5- c:7 | f1*2:m | \myEndLineVoltaLast
+		}
+	}
+	\endPart
+
+	\myMark "Coda"
+	\startPart
+	f1*2:m | \myEndLine
+	\endPart
+
+	\endSong
+	\endChords
+}
+{% endif %}
+{% if part == "VoiceFake" %}{
+	\tempo "Moderato" 4 = 120
+	\time 4/4
+	\key f \minor
+
+	\partial 4. c'4 aes8 |
+
+	% part "A"
+	\repeat volta 2 {
+		f2^\markup { \musicglyph #"scripts.segno" } r8 f'4 des8 | bes2 r8 c4 aes8 | f2 r8 f'4 des8 |
+		bes2 \tuplet 3/2 { r8 b c } \tuplet 3/2 { des c aes } | f2 r8 f'4 c8 |
+		ees8. des16 c8. des16~ des8. a16 bes8. ees16~ |
+		ees2.~ ees8 des | des8. c16 r4 r8 aes8 \tuplet 3/2 { aes8 bes c } | des2 bes4. aes8 |
+		g2 e8. g16 bes8. des16 | c8. aes16 bes8. c16 r2 | r2 f,8. g16 aes8. c16 |
+	} \alternative {
+		{
+			b1~ | b8. d16 f8. g16 aes8. aes16 g8. f16 | g8. e16 r4 r4 ees8 des~ | des4 r4 r8 c4 aes8 |
+		}
+		{
+			b2 f4. bes8 | bes8 f aes bes ces bes aes f~ | f2. r8 b8 |
+			bes8 f aes bes \tuplet 3/2 { ces bes aes } f8 f~ | f4 r4 r2 | r1^\markup { D.S. al Coda } |
+		}
+	}
+
+	% part "Coda"
+	f4 r4 r2 | r1 |
+}
+{% endif %}
