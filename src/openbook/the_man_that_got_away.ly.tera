@@ -1,0 +1,120 @@
+{#
+default_version = "Fake"
+
+[attributes]
+title = "The Man That Got Away"
+style = "Jazz"
+composer = "Harold Arlen"
+poet = "Ira Gershwin"
+piece = "Slowly, but insistently"
+copyright = "1954, 1987 HARWIN MUSIC CO."
+copyrightextra = "Renewed 1982 HARWIN MUSIC CO. International Copyright Secured. All Rights Reserved."
+typesetter = "Mark Veltzer <mark.veltzer@gmail.com>"
+completion = "5"
+uuid = "4af662ee-d51d-11f1-8000-046874d194b7"
+structure = "AABA"
+location = "jfb:240"
+
+[[youtube]]
+id = "gNDu75gEiIo"
+remark = "Judy Garland in the original from the film A Star Is Born (1954)"
+
+[[youtube]]
+id = "XIxNkUdnO5Y"
+remark = "Frank Sinatra as The Gal That Got Away (1954)"
+
+[versions.Fake]
+doChords = true
+doVoice = true
+doLyrics = false
+doLyricsmore = false
+doLyricsmoremore = false
+doChordBars = false
+doGuitar = false
+doExtra = false
+doPrep = false
+doOwn = false
+#}
+{% if part == "Vars" %}
+{% endif %}
+{% if part == "Doc" %}	DONE:
+	- added the meta data from the fake book.
+	- put in the tunes structure.
+	- put in the chords (fake book).
+	- put in the tune (fake book).
+	- added youtube performances.
+	TODO:
+	- add the lyrics.
+	- check the chords (fake book).
+	- check the tune (fake book).
+	- hear the tune to check that it is right and adjust the tempo.
+	- the tune spans jfb:240-241.
+	- bar 4: the book prints Fm7/B the first time and Fm7/Bb the second time; typed as Fm7/Bb both times.
+	- first ending and bar 30: the A7#5 chord is printed between the second and third beat; typed on the third beat.
+{% endif %}
+{% if part == "ChordsFake" %}\chordmode {
+	\startChords
+	\startSong
+
+	\partial 8 s8 |
+
+	\myMark "A"
+	\startPart
+	\repeat volta 2 {
+		f1*2:6 | g4:m7 ees/g c2:7 | bes4:9 f:m7/bes c2:7 | f1 | \myEndLine
+	} \alternative {
+		{
+			f2 a:7.5+ | d1:7.5+ | \myEndLine
+			d2:7.9- d:7 | g1:m7 | c:7 | f1*2:9 | \myEndLine
+			g1:m7 | c:7 | f | c:7 | \myEndLineVoltaNotLast
+		}
+		{
+			f4 g:m a:m bes | a1:m7 | \myEndLine
+			d:7 | g:m7 | c2.:9 c4:7.5+ | f1 | \myEndLine
+			d:7.5+ | g:m7 | g2:m7 bes:m6 | f1*2 | d1:7.9- | \myEndLine
+			s1 | g:9 | c2.:7.5+.9- c4:7 | f1 | f4 g:m f/a gis:dim | aes1:m6 | c:9 | \myEndLineVoltaLast
+		}
+	}
+	\endPart
+
+	\myMark "A"
+	\startPart
+	f1*2:6 | g4:m7 ees/g c2:7 | bes4:9 f:m7/bes c2:7 | \myEndLine
+	f1 | f2 a:7.5+ | a1:m7 | d:7 | bes:6 | b:dim7 | \myEndLine
+	f1/c | d:7.5+ | g:m7 | g:m7/c | f1*2 | \myEndLine
+	\endPart
+
+	\endSong
+	\endChords
+}
+{% endif %}
+{% if part == "VoiceFake" %}{
+	\tempo "Lento" 4 = 66
+	\time 2/2
+	\key f \major
+
+	\partial 8 c8 |
+
+	% part "A"
+	\repeat volta 2 {
+		d4 ees e!8 c4 c8 | d8. d16 ees8. ees16 e!8 c4 c8 | d4 ees e!8 c4 c8 | d8. d16 ees8. ees16 e!8 c4 c8 | f4 g a8 f4 c8 |
+	} \alternative {
+		{
+			f4 g a f | bes1~ |
+			bes2. c4 | c8 c4 c8~ c c4 c8~ | c2. d4 | c8 c4 c8~ c c4 c8~ | c2. ees4 |
+			c8 c4 c8~ c c4 c8~ | c2 a4 g | a1~ | a2. r8 c,8 |
+		}
+		{
+			f4 g a f | d'1~ |
+			d2. d4 | d8 d4 d8~ d d4 d8~ | d2. e4 | d8 d4 d8~ d4 f, |
+			bes2. a4 | a8 a a4 a c | a2 f4 f | f1~ | f4 c8 d~ d f a4 | bes2. cis,8 d |
+			bes'4 a bes a | b!1 | c2. c4 | d2~ \tuplet 3/2 { d4 f, g } | a4 bes c d | aes1 | c2.~ c8 c,8 |
+		}
+	}
+
+	% part "A"
+	d4 ees e!8 c4 c8 | d8. d16 ees8. ees16 e!8 c4 c8 | d4 ees e!8 c4 c8 | d8. d16 ees8. ees16 e!8 c4 c8 |
+	f4 g a8 f4 c8 | f4 g a f | d'1~ | d2~ d8 d4 bes8 | d4 d d8 d4 d8~ | d2~ d8 d4 c8 |
+	d4 d d8 f,4 bes8~ | bes2. a4 | f4 g a8 a f d | f8. f16 g8. g16 a4 f | f1~ | f2. r4 |
+}
+{% endif %}

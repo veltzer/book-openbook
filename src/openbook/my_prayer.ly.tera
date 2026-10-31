@@ -1,0 +1,130 @@
+{#
+default_version = "Fake"
+
+[attributes]
+title = "My Prayer"
+style = "Jazz"
+composer = "George Boulanger"
+poet = "Jimmy Kennedy"
+piece = "Moderately"
+copyright = "1939 The World Wide Music Co. Ltd, London, England. Renewed"
+typesetter = "Mark Veltzer <mark.veltzer@gmail.com>"
+completion = "5"
+uuid = "2067bc86-d521-11f1-8000-046874d194b7"
+structure = "AABA"
+location = "jfb:267"
+
+[[youtube]]
+id = "PcDl65vWLnY"
+remark = "The Ink Spots in the original hit recording (1939)"
+
+[[youtube]]
+id = "dFZRXJiaBtk"
+remark = "The Platters in their number one hit (1956)"
+
+[versions.Fake]
+doChords = true
+doVoice = true
+doLyrics = false
+doLyricsmore = false
+doLyricsmoremore = false
+doChordBars = false
+doGuitar = false
+doExtra = false
+doPrep = false
+doOwn = false
+#}
+{% if part == "Vars" %}
+{% endif %}
+{% if part == "Doc" %}	DONE:
+	- added the meta data from the fake book.
+	- put in the tunes structure.
+	- put in the chords (fake book).
+	- put in the tune (fake book).
+	- added youtube performances.
+	TODO:
+	- check the chords (fake book).
+	- check the tune (fake book).
+	- hear the tune to check that it is right and adjust the tempo.
+	- bar 18: the book prints no flat on the third and fifth notes (strictly d natural) but the Eb7 chord implies d flat, which was typed.
+	- add the lyrics.
+{% endif %}
+{% if part == "ChordsFake" %}\chordmode {
+	\startChords
+	\startSong
+
+	\partial 4 s4 |
+
+	\repeat volta 2 {
+
+		\myMark "A"
+		\startPart
+		f1*2 | f1:dim7 | f | \myEndLine
+		bes1*2:m6 | f2 fis:dim7 | c:7/g c:7.5+ | \myEndLine
+		\endPart
+
+		\myMark "A"
+		\startPart
+		f1*2 | f1:dim7 | f | \myEndLine
+		bes1:m6 | c2:7 c:7.5+ | f1 | c2:m7 f:7 | \myEndLine
+		\endPart
+
+		\myMark "B"
+		\startPart
+		bes1:m7 | ees:7 | aes1*2 | \myEndLine
+		g1:m7.5- | g:7.9- | c2:7 des:9 | c:7 c:7.5+ | \myEndLine
+		\endPart
+
+		\myMark "A"
+		\startPart
+		f1*2:6 | f1:dim7 | f | \myEndLine
+		bes1*2:m6 | f1 | f2/a aes:dim7 | \myEndLine
+		g2:m7 c:7 | g:m7 c:7 |
+	} \alternative {
+		{
+			f1 | f2 c:7.5+ | \myEndLineVoltaNotLast
+		}
+		{
+			f1*2 | \myEndLineVoltaLast
+		}
+	}
+	\endPart
+
+	\endSong
+	\endChords
+}
+{% endif %}
+{% if part == "VoiceFake" %}{
+	\tempo "Moderato" 4 = 140
+	\time 2/2
+	\key f \major
+
+	\partial 4 c4 |
+
+	\repeat volta 2 {
+		% part "A"
+		a'1 | \tuplet 3/2 { a4 c a } \tuplet 3/2 { g f4. g8 } | d1~ | \tuplet 3/2 { d4 f g } \tuplet 3/2 { a g4. f8 } |
+		des1~ | \tuplet 3/2 { des4 f g } \tuplet 3/2 { a g4. f8 } | c1~ | c2 r4 c |
+
+		% part "A"
+		a'1~ | \tuplet 3/2 { a4 c a } \tuplet 3/2 { g f4. g8 } | d1~ | \tuplet 3/2 { d4 f g } \tuplet 3/2 { a g f } |
+		des1~ | \tuplet 3/2 { des4 c d } \tuplet 3/2 { e d c } | f1~ | f2 r4 f |
+
+		% part "B"
+		des'1~ | \tuplet 3/2 { des4 ees des } \tuplet 3/2 { ees des4. ees8 } | c1~ | c2. c4 |
+		\tuplet 3/2 { bes4 aes g } bes2~ | \tuplet 3/2 { bes4 aes bes } \tuplet 3/2 { aes g4. aes8 } | g1~ | g4 r r c, |
+
+		% part "A"
+		a'1~ | \tuplet 3/2 { a4 c a } \tuplet 3/2 { g8 f4. g4 } | d1~ | \tuplet 3/2 { d4 f g } \tuplet 3/2 { a g4. f8 } |
+		des1~ | \tuplet 3/2 { des4 f g } \tuplet 3/2 { a g f } | f'1~ | \tuplet 3/2 { f4 e f } \tuplet 3/2 { e d e } |
+		d2 c~ | \tuplet 3/2 { c4 bes a } \tuplet 3/2 { c bes g } |
+	} \alternative {
+		{
+			f1~ | f4 r r c |
+		}
+		{
+			f1~ | f2. r4 |
+		}
+	}
+}
+{% endif %}

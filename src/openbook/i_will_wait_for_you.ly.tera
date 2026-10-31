@@ -1,0 +1,121 @@
+{#
+default_version = "Fake"
+
+[attributes]
+title = "I Will Wait For You"
+style = "Jazz"
+composer = "Michel Legrand"
+poet = "Norman Gimbel"
+piece = "Moderately"
+copyright = "1965 Productions Michel Legrand, Paris, France and Productions Francis Lemarque, LaVerne (Seine)"
+copyrightextra = "Copyright 1964 Vogue Music and Jonware Music Corp. (c/o The Welk Music Group, Santa Monica, CA 90401)"
+typesetter = "Mark Veltzer <mark.veltzer@gmail.com>"
+completion = "5"
+uuid = "0c052be0-d51a-11f1-8000-046874d194b7"
+structure = "AB"
+location = "jfb:164"
+
+[[youtube]]
+id = "sD4xSUBVC_Y"
+remark = "Michel Legrand from The Umbrellas of Cherbourg (1964)"
+
+[[youtube]]
+id = "X20zu4Qv-7Y"
+remark = "McCoy Tyner"
+
+[versions.Fake]
+doChords = true
+doVoice = true
+doLyrics = false
+doLyricsmore = false
+doLyricsmoremore = false
+doChordBars = false
+doGuitar = false
+doExtra = false
+doPrep = false
+doOwn = false
+#}
+{% if part == "Vars" %}
+{% endif %}
+{% if part == "Doc" %}	DONE:
+	- added the meta data from the fake book.
+	- put in the tunes structure.
+	- put in the chords (fake book).
+	- put in the tune (fake book).
+	- added youtube performances.
+	TODO:
+	- add the lyrics.
+	- check the chords (fake book).
+	- check the tune (fake book).
+	- hear the tune to check that it is right and adjust the tempo.
+	- the fake book calls the B part "Interlude" and writes it in 4/4 (the A part is in cut time).
+{% endif %}
+{% if part == "ChordsFake" %}\chordmode {
+	\startChords
+	\startSong
+
+	\partial 2 s2 |
+
+	\repeat volta 3 {
+
+		\myMark "A"
+		\startPart
+		d1:m | d2:m d:7 | g1:m7 | g2:m7 d:7 | \myEndLine
+		g2:m7 c:7 | g:m7 c:7 | f1 | e2:m7.5- a:7 | \myEndLine
+		d1:m | d2:m d:7 | g1:m7 | e2:m7.5- a:7 | \myEndLine
+		d2:m bes:maj7 | e:m7.5- a:7 | \myEndLine
+	} \alternative {
+		{
+			d2:m bes:maj7 | e:m7.5- a:7 | \myEndLineVoltaNotLast
+		}
+		{
+			d1*2:m | \myEndLineVoltaNotLast
+		}
+		{
+			d2:m g:m6 | d1:m | \myEndLineVoltaLast
+		}
+	}
+	\endPart
+
+	\myMark "B"
+	\startPart
+	g1:m7 | c:7 | c:7 | bes:maj7 | \myEndLine
+	e1:m7.5- | a:7.9- | d2:m d:m/c | b:m7.5- bes:7 | a:7 bes:7.5- | a1:7 | \myEndLine
+	\endPart
+
+	\endSong
+	\endChords
+}
+{% endif %}
+{% if part == "VoiceFake" %}{
+	\tempo "Moderato" 4 = 160
+	\time 2/2
+	\key f \major
+
+	\partial 2 gis'4 a |
+
+	\repeat volta 3 {
+
+		% part "A"
+		g!2^\markup { \musicglyph #"scripts.segno" } f | e4 d cis' d | c!2 bes | bes fis4 g |
+		f!2 e | d4 c b'! c | bes2 a | a aes4 a! |
+		g2 f | e4 d cis' d | c!2 bes | bes a4 g |
+		a4 f' d,2 | e4 a a,2 |
+	} \alternative {
+		{
+			d1 | r2 gis4 a |
+		}
+		{
+			d,1~ | d2 r4 r8 bes'8^\markup { To Interlude } |
+		}
+		{
+			d,1~ | d2. r4^\markup { \italic { Fine } } |
+		}
+	}
+
+	% part "B"
+	\time 4/4
+	c'8 c bes bes c c bes4 | d4 c8 bes~ bes4. a8 | bes8 bes a a bes bes a a | c4 bes8 a~ a4. g8 |
+	a8 a g g a a g g | bes4 a8 g~ g2 | f1 | r4 e8 f g4 d | e1~ | e2 gis4 a^\markup { \italic { D.S. al Fine } } |
+}
+{% endif %}

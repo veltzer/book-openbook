@@ -1,0 +1,116 @@
+{#
+default_version = "Fake"
+
+[attributes]
+title = "Jeannine"
+style = "Jazz"
+composer = "Duke Pearson"
+piece = "Bright and Kickin'"
+copyright = "1960 UPAM MUSIC CO., A Division of Gopam Enterprises, Inc."
+typesetter = "Mark Veltzer <mark.veltzer@gmail.com>"
+completion = "5"
+uuid = "5d9c76cd-d51d-11f1-8000-046874d194b7"
+structure = "AABA"
+location = "jfb:197"
+
+[[youtube]]
+id = "9-fn-tf9g7M"
+remark = "Donald Byrd in the original recording, live at the Half Note Cafe (1960)"
+
+[[youtube]]
+id = "FAzHD5nSa1M"
+remark = "Cannonball Adderley from Them Dirty Blues (1960)"
+
+[versions.Fake]
+doChords = true
+doVoice = true
+doLyrics = false
+doLyricsmore = false
+doLyricsmoremore = false
+doChordBars = false
+doGuitar = false
+doExtra = false
+doPrep = false
+doOwn = false
+#}
+{% if part == "Vars" %}
+{% endif %}
+{% if part == "Doc" %}	DONE:
+	- added the meta data from the fake book (the fake book prints the composer as 'Duke Parson').
+	- put in the tunes structure.
+	- put in the chords (fake book).
+	- put in the tune (fake book).
+	- added youtube performances.
+	TODO:
+	- check the chords (fake book).
+	- check the tune (fake book).
+	- hear the tune to check that it is right and adjust the tempo.
+{% endif %}
+{% if part == "ChordsFake" %}\chordmode {
+	\startChords
+	\startSong
+
+	\myMark "Intro"
+	\startPart
+	\repeat volta 2 {
+		c1:m | c:m6 | c:m7 | c:m6 | \myEndLine
+	}
+	\endPart
+
+	\myMark "A"
+	\startPart
+	\repeat volta 2 {
+		c1:m | c:m | c:m7 | c:m7 | \myEndLine
+		c:m7 | c:m7 | c:m7 | c:m7 | \myEndLine
+		bes:m9 | ees:7.9- | aes:maj7 | des:9 | \myEndLine
+		d:m11 | g:7.9- | g:7.9- |
+	} \alternative {
+		{
+			g1:7.9- | \myEndLineVoltaNotLast
+		}
+		{
+			g1:7.9- | \myEndLineVoltaLast
+		}
+	}
+	\endPart
+
+	\myMark "B"
+	\startPart
+	g2:m9 c:7 | f1 | b2:m7 e:7 | a1:maj7 | \myEndLine
+	a:6 | a:m7 | d:7 | g:7 | \myEndLine
+	\endPart
+
+	\endSong
+	\endChords
+}
+{% endif %}
+{% if part == "VoiceFake" %}{
+	\tempo "Allegro" 4 = 200
+	\time 4/4
+	\key c \minor
+
+	% part "Intro"
+	\repeat volta 2 {
+		r8 g' r4 g8 r r4 | r8 a r4 a8 r r4 | r8 bes r4 bes8 r r4 | r8 a r4 a8 r r4 |
+	}
+
+	% part "A"
+	\repeat volta 2 {
+		r8^\markup { \musicglyph #"scripts.segno" } g r4 g8 r r4 | r8 g r4 g a | bes a8 g~ g4 r | d'4 c8 bes~ bes4 r |
+		r8 g r4 g8 r r4 | r8 g r4 g a | bes a8 g~ g4 r | d'4 c8 bes~ bes aes a c~ |
+		c4. aes8~ aes f4 des8 | c'4 b bes8 c bes ees~ | ees4 r r8 d ees bes~ | bes2. aes4 |
+		g1~ | g8 d e f bes4 aes8 g~ | g1~ |
+	} \alternative {
+		{
+			g1^\markup { \italic { Fine } } |
+		}
+		{
+			g2 r8 ees g a~ |
+		}
+	}
+
+	% part "B"
+	a2 g | c,2 r8 d f g | a fis a b a b cis4~ | cis1~ |
+	cis8 r gis4 \tuplet 3/2 { a b d } | c2 r8 b c d~ | d2 r4 a8 d~ | d2 r2^\markup { \italic { D.S. al Fine } } |
+}
+{% endif %}

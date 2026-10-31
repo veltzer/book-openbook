@@ -1,0 +1,126 @@
+{#
+default_version = "Fake"
+
+[attributes]
+title = "Jingle-Bell Rock"
+style = "Pop"
+composer = "Joe Beal, Jim Boothe"
+poet = "Joe Beal, Jim Boothe"
+piece = "Moderately, with a Rock Beat"
+copyright = "1957 by Cornell Music, Inc."
+copyrightextra = "Copyright Renewed, Assigned to Chappell & Co., Inc. (Intersong Music, Publisher). All Rights controlled by Chappel & Co., Inc. (Intersong Music, Publisher)"
+typesetter = "Mark Veltzer <mark.veltzer@gmail.com>"
+completion = "5"
+uuid = "5db635c6-d51d-11f1-8000-046874d194b7"
+structure = "AABA"
+location = "jfb:199"
+
+[[youtube]]
+id = "g5NekJuNwZs"
+remark = "Bobby Helms in the original hit recording (1957)"
+
+[[youtube]]
+id = "8xMxY9KjY28"
+remark = "Brenda Lee"
+
+[versions.Fake]
+doChords = true
+doVoice = true
+doLyrics = false
+doLyricsmore = false
+doLyricsmoremore = false
+doChordBars = false
+doGuitar = false
+doExtra = false
+doPrep = false
+doOwn = false
+#}
+{% if part == "Vars" %}
+{% endif %}
+{% if part == "Doc" %}	DONE:
+	- added the meta data from the fake book.
+	- put in the tunes structure.
+	- put in the chords (fake book).
+	- put in the tune (fake book).
+	- added youtube performances.
+	TODO:
+	- add the lyrics.
+	- check the chords (fake book).
+	- check the tune (fake book).
+	- hear the tune to check that it is right and adjust the tempo.
+	- bar 7: the book prints a sharp only on the first g; following the notation rule the second g is a g sharp too - check.
+	- bar 8: the book prints a sharp only on the first d; following the notation rule (and the G7#5 chord) the half note is a d sharp too - check.
+{% endif %}
+{% if part == "ChordsFake" %}\chordmode {
+	\startChords
+	\startSong
+
+	\repeat volta 2 {
+
+		\myMark "A"
+		\startPart
+		c2 c:maj7 | c:6 c | c2.:6 cis4:dim7 | d2:m7 g:7 | \myEndLine
+		d2:m7 g:7 | d:m7 g:7 | d1:m7 | g:7.5+ | \myEndLine
+		\endPart
+
+		\myMark "A"
+		\startPart
+		c2 c:maj7 | c:6 c | c2.:6 cis4:dim7 | d2:m7 g:7 | \myEndLine
+		d2:m7 g:7 | d:m7 g:7 | d:7 g:7 | c c:7 | \myEndLine
+		\endPart
+
+		\myMark "B"
+		\startPart
+		f1 | fis:dim7 | c1/g | c/g | \myEndLine
+		a1:m7 | d:7 | d:m7 | g:7 | \myEndLine
+		\endPart
+
+		\myMark "A"
+		\startPart
+		c2 c:maj7 | c:6 c | c2.:6 bes4:7 | a1:7 | \myEndLine
+		f1 | f:m6 | d2:7 g:7 | \myEndLine
+	} \alternative {
+		{
+			c1 | \myEndLineVoltaNotLast
+		}
+		{
+			d2:7 g:7 | d:7 g:7 | c1 | \myEndLineVoltaLast
+		}
+	}
+	\endPart
+
+	\endSong
+	\endChords
+}
+{% endif %}
+{% if part == "VoiceFake" %}{
+	\tempo "Moderato" 4 = 120
+	\time 2/2
+	\key c \major
+
+	\repeat volta 2 {
+		% part "A"
+		c'8 c c4 b8 b b4 | a8 b a4 e2 | a8 b a4 e g | a8 b a4 f2 |
+		d8 e4 f8 g a4 g8 | d8 e f4 g2 | r4 a8 gis a gis a4 | a4 dis, dis2 |
+
+		% part "A"
+		c'8 c c4 b8 b b4 | a8 b a4 e2 | a8 b a4 e g | a8 b a4 f2 |
+		d8 e4 f8 g a4 g8 | d8 e f4 g2 | r4 a8 a b4 g | c2. c8 c |
+
+		% part "B"
+		c8 d4 c8~ c4 a8 c | c8 d4 c8~ c4. c8 | c4 b a g | e2. c'8 c |
+		c8 d4 c8~ c4 a8 c | d4. c8~ c2 | r8 g g4 a8 a a a | b4 a g r |
+
+		% part "A"
+		c8 c c4 b8 b b4 | a8 b a4 e2 | a8 b a4 e g | a1 |
+		a4 c d8 d c c | aes8 aes c4 d2 | r4 c8 a b a g4 |
+	} \alternative {
+		{
+			c1 |
+		}
+		{
+			r4 c8 a b a g4 | r4 c8 a b c f4 | c2. r4 |
+		}
+	}
+}
+{% endif %}

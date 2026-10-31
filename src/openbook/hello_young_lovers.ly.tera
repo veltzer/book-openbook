@@ -1,0 +1,125 @@
+{#
+default_version = "Fake"
+
+[attributes]
+title = "Hello, Young Lovers"
+style = "Broadway"
+composer = "Richard Rodgers"
+poet = "Oscar Hammerstein II"
+piece = "Moderately"
+copyright = "1951 by Richard Rodgers and Oscar Hammerstein II. Copyright Renewed"
+copyrightextra = "Williamson Music Co., owner of publication and allied rights for all countries of the Western Hemisphere and Japan. All Rights Administered by Chappell & Co., Inc."
+typesetter = "Mark Veltzer <mark.veltzer@gmail.com>"
+completion = "5"
+uuid = "3f933c40-d51a-11f1-8000-046874d194b7"
+structure = "AABA"
+location = "jfb:146"
+
+[[youtube]]
+id = "CLmWTbPVID0"
+remark = "Gertrude Lawrence in the original Broadway cast recording of The King and I (1951)"
+
+[[youtube]]
+id = "DdJupeludhM"
+remark = "Frank Sinatra (1951)"
+
+[versions.Fake]
+doChords = true
+doVoice = true
+doLyrics = false
+doLyricsmore = false
+doLyricsmoremore = false
+doChordBars = false
+doGuitar = false
+doExtra = false
+doPrep = false
+doOwn = false
+#}
+{% if part == "Vars" %}
+{% endif %}
+{% if part == "Doc" %}	DONE:
+	- added the meta data from the fake book.
+	- put in the tunes structure.
+	- put in the chords (fake book).
+	- put in the tune (fake book).
+	- added youtube performances.
+	TODO:
+	- add the lyrics.
+	- check the chords (fake book).
+	- check the tune (fake book).
+	- hear the tune to check that it is right and adjust the tempo.
+{% endif %}
+{% if part == "ChordsFake" %}\chordmode {
+	\startChords
+	\startSong
+
+	\partial 4 s4 |
+
+	\myMark "A"
+	\startPart
+	\repeat volta 2 {
+		c2.:maj9 | d:m7 | e:m7 | d:m7 | c:maj7 | a:7.9- | \myEndLine
+		d:m7 | g:7 | d:m7.5- | g:7 | ees:maj7 | g:7 | \myEndLine
+		d:m7 | g2:7sus4 g4:7 |
+	} \alternative {
+		{
+			c2. | d2:m7 g4:7 | \myEndLineVoltaNotLast
+		}
+		{
+			c2. | c:7 | \myEndLineVoltaLast
+		}
+	}
+	\endPart
+
+	\myMark "B"
+	\startPart
+	f2. | g:m7 | a:m7 | g:m7 | f:maj9 | g:m7 | \myEndLine
+	f:maj7 | f:6 | b:m7 | e:7 | a:m9 | d:7 | \myEndLine
+	d:m7 | a:7.5+ | d:m7 | g:7 | \myEndLine
+	\endPart
+
+	\myMark "A"
+	\startPart
+	c:maj9 | d:m7 | e:m7 | d:m7 | c:maj7 | a:7.9- | \myEndLine
+	d:m7 | g:7 | d:m7.5- | g:7 | ees:maj7 | g:7 | \myEndLine
+	d:m7 | g:7 | g:m | c:7 | f | \myEndLine
+	f:m | e:7 | a:7 | d:m7 | aes2:9 g4:7.9- | c2.*2 | \myEndLine
+	\endPart
+
+	\endSong
+	\endChords
+}
+{% endif %}
+{% if part == "VoiceFake" %}{
+	\tempo "Moderato" 4 = 120
+	\time 3/4
+	\key c \major
+
+	\partial 4 g'4 |
+
+	% part "A"
+	\repeat volta 2 {
+		g2 g4 | g4. a8 b4 | a4. g8 f4 | e2 e4 | e2 e4 | e4. g8 a4 |
+		d,2.~ | d2. | f4. f8 f4 | d4. d8 d4 | g4. a8 g4 | d2. |
+		d4 d4. d8 | c2 b4 |
+	} \alternative {
+		{
+			c2.~ | c2 g'4 |
+		}
+		{
+			c,2.~ | c2 c4 |
+		}
+	}
+
+	% part "B"
+	f4 f f | f2 e8 f | g4 f f | f2 e8 f | g4 f f | f2 e8 g |
+	a2.~ | a2 a4 | a gis gis | gis2 a8 b | b4 a a | a2 a8 b |
+	c4 r f, | f e f | d2.~ | d2 g4 |
+
+	% part "A"
+	g2 g4 | g4. a8 b4 | a4. g8 f4 | e2 e4 | e2 e4 | e4. g8 a4 |
+	d,2.~ | d2. | f4. f8 f4 | d4. d8 d4 | g4. a8 g4 | d2. |
+	d4 d d | d c b | e2.~ | e2. | f4 f f |
+	f4 g gis | gis2 a4 | a2. | a4 a a | bes bes b! | c2.~ | c4 r r |
+}
+{% endif %}

@@ -1,0 +1,112 @@
+{#
+default_version = "Fake"
+
+[attributes]
+title = "My Heart Belongs To Daddy"
+subtitle = "From 'Leave It To Me'"
+style = "Broadway"
+composer = "Cole Porter"
+poet = "Cole Porter"
+piece = "Brightly"
+copyright = "1938 by Chappell & Co., Inc."
+copyrightextra = "Copyright Renewed, Assigned to John F. Wharton, Trustee of the Cole Porter Musical & Literary Property Trusts. Chappell & Co., Inc., Publisher"
+typesetter = "Mark Veltzer <mark.veltzer@gmail.com>"
+completion = "5"
+uuid = "2c9874f2-d521-11f1-8000-046874d194b7"
+structure = "AABC"
+location = "jfb:262"
+
+[[youtube]]
+id = "oYF6rkZJ1n8"
+remark = "Mary Martin with Eddy Duchin in the original recording (1938)"
+
+[[youtube]]
+id = "b8I0-R3stD4"
+remark = "Marilyn Monroe (Let's Make Love, 1960)"
+
+[versions.Fake]
+doChords = true
+doVoice = true
+doLyrics = false
+doLyricsmore = false
+doLyricsmoremore = false
+doChordBars = false
+doGuitar = false
+doExtra = false
+doPrep = false
+doOwn = false
+#}
+{% if part == "Vars" %}
+{% endif %}
+{% if part == "Doc" %}	DONE:
+	- added the meta data from the fake book.
+	- put in the tunes structure.
+	- put in the chords (fake book).
+	- put in the tune (fake book).
+	- added youtube performances.
+	TODO:
+	- add the lyrics.
+	- check the chords (fake book).
+	- check the tune (fake book).
+	- hear the tune to check that it is right and adjust the tempo.
+	- the book prints very few chords in the B and C parts (Cm carried into B, then G7, C, ...), typed as printed.
+	- bars 22-23: the b notes without an accidental after a b natural are typed as b natural (fits the G7).
+{% endif %}
+{% if part == "ChordsFake" %}\chordmode {
+	\startChords
+	\startSong
+
+	\partial 4 s4 |
+
+	\myMark "A"
+	\startPart
+	c1*3:m | d1:m7.5- | \myEndLine
+	g1*2:7 | f2:m g:7 | c2.:m g4:7.5+ | \myEndLine
+	\endPart
+
+	\myMark "A"
+	\startPart
+	c1*3:m | d1:m7.5- | \myEndLine
+	g1*2:7 | f2:m g:7 | c1:m | \myEndLine
+	\endPart
+
+	\myMark "B"
+	\startPart
+	s1*3 | g1:7 | \myEndLine
+	s1*3 | c1 | \myEndLine
+	\endPart
+
+	\myMark "C"
+	\startPart
+	s2 g:7 | c1 | s2 c:7 | f1 | \myEndLine
+	f1:m | c | d2:m7.5- g:7 | c1 | \myEndLine
+	\endPart
+
+	\endSong
+	\endChords
+}
+{% endif %}
+{% if part == "VoiceFake" %}{
+	\tempo "Allegro" 4 = 180
+	\time 2/2
+	\key ees \major
+
+	\partial 4 ees4 |
+
+	% part "A"
+	d4 ees8 c~ c4 ees | d4 ees8 c~ c4 ees | \tuplet 3/2 { d4 ees c } \tuplet 3/2 { d4 ees f } | g8 f4 r8 r4 f4 |
+	fis8 g4 d'8~ d4. b8 | g8 fis f d~ d4 ees8 f | g4 g8 g~ g4. f8 | ees8 c4 r8 r4 ees4 |
+
+	% part "A"
+	d4 ees8 c~ c4 ees | d4 ees8 c~ c4 ees | \tuplet 3/2 { d4 ees c } \tuplet 3/2 { d4 ees f } | g8 f4 r8 r4 f4 |
+	fis8 g4 d'8~ d4. b8 | g8 fis f d~ d4 ees8 f | g4 g8 g~ g4. f8 | ees8 c4 r8 r4 c'8 d |
+
+	% part "B"
+	ees4 ees8 ees~ ees4. d8 | d8 c4 r8 r4 c8 d | ees4 ees8 ees~ ees8 d4 c8 | d2. b8 c |
+	d4 d8 d~ d4. c8 | c8 b4 r8 \tuplet 3/2 { r4 b aes } | \tuplet 3/2 { g4 b aes } g8 b4 \tuplet 3/2 { aes16 b aes } | g2. c8 d |
+
+	% part "C"
+	e4 e8 e~ e4. d8 | d8 c4 r8 r4 c8 d | e4 e8 e~ \tuplet 3/2 { e4 d c } | a2. aes8 a |
+	c4 c8 bes~ bes4. aes8 | aes8 g4.~ g8 r e f | \tuplet 3/2 { g4 g g } \tuplet 3/2 { f4 ees d } | c2. r4 |
+}
+{% endif %}

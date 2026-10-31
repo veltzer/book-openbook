@@ -1,0 +1,137 @@
+{#
+default_version = "Fake"
+
+[attributes]
+title = "Oh! What It Seemed To Be"
+style = "Swing"
+composer = "Bennie Benjamin, George Weiss, Frankie Carle"
+poet = "Bennie Benjamin, George Weiss, Frankie Carle"
+piece = "Slowly"
+copyright = "1945 by Anne-Rachel Music, Corp."
+copyrightextra = "Copyright Renewed, all rights administered by Chappell & Co., Inc. (Intersong Music, Publisher) and Abilene Music, Inc."
+typesetter = "Mark Veltzer <mark.veltzer@gmail.com>"
+completion = "5"
+uuid = "361f3c7a-d521-11f1-8000-046874d194b7"
+structure = "AABA"
+location = "jfb:280"
+
+[[youtube]]
+id = "j6qY9to8tbE"
+remark = "Frankie Carle and his Orchestra with Marjorie Hughes, the original hit recording (1946)"
+
+[[youtube]]
+id = "i0Bho_0_lTg"
+remark = "Frank Sinatra (1946)"
+
+[versions.Fake]
+doChords = true
+doVoice = true
+doLyrics = false
+doLyricsmore = false
+doLyricsmoremore = false
+doChordBars = false
+doGuitar = false
+doExtra = false
+doPrep = false
+doOwn = false
+#}
+{% if part == "Vars" %}
+{% endif %}
+{% if part == "Doc" %}	DONE:
+	- added the meta data from the fake book.
+	- put in the tunes structure.
+	- put in the chords (fake book).
+	- put in the tune (fake book).
+	- added youtube performances.
+	TODO:
+	- check the chords (fake book).
+	- check the tune (fake book).
+	- hear the tune to check that it is right and adjust the tempo.
+	- the fake book prints no chords in bars 2, 5-7, 10, 14, 29-30; they are left empty.
+	- add the lyrics.
+{% endif %}
+{% if part == "ChordsFake" %}\chordmode {
+	\startChords
+	\startSong
+
+	\partial 4 s4 |
+
+	\repeat volta 2 {
+
+		\myMark "A"
+		\startPart
+		ees1 | s1 | ees2:maj7/g ges:dim7 | bes2:7/f bes:7 | \myEndLine
+		s1 | s1 | s1 | ees2. f8.:m bes16:7 | \myEndLine
+		\endPart
+
+		\myMark "A"
+		\startPart
+		ees1 | s1 | ees2:maj7/g ges:dim7 | bes2:7/f bes:7 | \myEndLine
+		bes1:7 | s1 | f2:m7 bes:7 | ees2 ees:7 | \myEndLine
+		\endPart
+
+		\myMark "B"
+		\startPart
+		aes1:maj7 | ees2:maj7 c:m7 | f2:m7 bes:7 | ees2 ees:7 | \myEndLine
+		aes1:maj7 | ees8:maj7 des4.:7 c2:7 | f1:7 | f2:m7 bes:7 | \myEndLine
+		\endPart
+
+		\myMark "A"
+		\startPart
+		ees1 | s2 bes:7 | ees2:maj7/g ges:dim7 | bes2:7/f bes:7 | \myEndLine
+		s1 | s1 | f2:m7 bes:7 |
+
+	} \alternative {
+		{
+			ees2 f4:m7 bes:7 | \myEndLineVoltaNotLast
+		}
+		{
+			ees1 | \myEndLineVoltaLast
+		}
+	}
+	\endPart
+
+	\endSong
+	\endChords
+}
+{% endif %}
+{% if part == "VoiceFake" %}{
+	\tempo "Andante" 4 = 76
+	\time 4/4
+	\key ees \major
+
+	\partial 4 a'8. bes16 |
+
+	\repeat volta 2 {
+
+		% part "A"
+		c8. bes16 \tuplet 3/2 { a8 bes c } bes2 | bes,8 bes'~ \tuplet 3/2 { bes a bes } g4. d8 |
+		f4~ \tuplet 3/2 { f8 f f } ees4. f8 | d2. b'8. c16 |
+		d8. c16 \tuplet 3/2 { b8 c d } c4. c,8 | d8 bes'4 a8 aes4. bes8 |
+		c8. c,16 \tuplet 3/2 { cis8 d bes'~ } bes4 c8 g~ | g2. a8. bes16 |
+
+		% part "A"
+		c8. bes16 \tuplet 3/2 { a8 bes c } bes2 | bes,8 bes'~ \tuplet 3/2 { bes a bes } g4. d8 |
+		f4~ \tuplet 3/2 { f8 f f } ees4. f8 | d2. b'8. c16 |
+		d8. c16 \tuplet 3/2 { b8 c d } c4. c,8 | d8 bes'4 a8 aes4. bes8 |
+		c8. c,16 \tuplet 3/2 { cis8 d bes'~ } bes4 d,8 ees~ | ees2~ ees8 ees ees ees |
+
+		% part "B"
+		c'8 c4.~ c2 | a8 bes4.~ bes4 bes8 a | aes8 g aes g aes4. bes8 | g2~ g8 ees ees ees |
+		c'8 c4.~ c2 | a8 bes4.~ bes4 bes8 b | c4. g8 f ees d ees | f2. a8. bes16 |
+
+		% part "A"
+		c8. bes16 \tuplet 3/2 { a8 bes c } bes2 | bes,8 bes'~ \tuplet 3/2 { bes a bes } g4. d8 |
+		f4~ \tuplet 3/2 { f8 f f } ees4. f8 | d2. b'8. c16 |
+		d8. c16 \tuplet 3/2 { b8 c d } c4. c,8 | d8 bes'4 a8 aes4. bes8 |
+		c8. c,16 \tuplet 3/2 { cis8 d bes'~ } bes4 d,8 ees~ |
+	} \alternative {
+		{
+			ees2 r4 a8. bes16 |
+		}
+		{
+			ees,1 |
+		}
+	}
+}
+{% endif %}

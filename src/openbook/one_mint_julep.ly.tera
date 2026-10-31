@@ -1,0 +1,134 @@
+{#
+default_version = "Fake"
+
+[attributes]
+title = "One Mint Julep"
+style = "Blues"
+composer = "Rudolph Toombs"
+poet = "Rudolph Toombs"
+piece = "Slow Rock"
+copyright = "1952 by Hill & Range Songs, Inc."
+copyrightextra = "Copyright renewed, assigned to Unichappell Music, Inc. (Rightsong Music, Publisher)"
+typesetter = "Mark Veltzer <mark.veltzer@gmail.com>"
+completion = "5"
+uuid = "1338a778-d521-11f1-8000-046874d194b7"
+structure = "AABACB"
+location = "jfb:288"
+
+[[youtube]]
+id = "QkrbV9Riq3s"
+remark = "The Clovers in the original recording (1952)"
+
+[[youtube]]
+id = "njO4y1KYZzE"
+remark = "Ray Charles in the hit instrumental recording (1961)"
+
+[versions.Fake]
+doChords = true
+doVoice = true
+doLyrics = false
+doLyricsmore = false
+doLyricsmoremore = false
+doChordBars = false
+doGuitar = false
+doExtra = false
+doPrep = false
+doOwn = false
+#}
+{% if part == "Vars" %}
+{% endif %}
+{% if part == "Doc" %}	DONE:
+	- added the meta data from the fake book.
+	- put in the tunes structure.
+	- put in the chords (fake book).
+	- put in the tune (fake book).
+	- added youtube performances.
+	TODO:
+	- add the lyrics.
+	- check the chords (fake book).
+	- check the tune (fake book).
+	- hear the tune to check that it is right and adjust the tempo.
+	- the fake book prints the Fine at a double bar after the d2. of the last D6 bar, with the a4 pickup to the second bridge after it; here the Fine is a markup on that d.
+{% endif %}
+{% if part == "ChordsFake" %}\chordmode {
+	\startChords
+	\startSong
+
+	\myMark "A"
+	\startPart
+	\repeat volta 2 {
+		d1:7 | g:9 | d:7 | g:9 | \myEndLine
+		d1:7 | g:9 | d:7 | g:9 | a:7 | \myEndLine
+		e2:m9 e:m7/a |
+	} \alternative {
+		{
+			d1*2:6 | \myEndLineVoltaNotLast
+		}
+		{
+			d1*2:6 | \myEndLineVoltaLast
+		}
+	}
+	\endPart
+
+	\myMark "B"
+	\startPart
+	fis1*2:7 | f:7 | \myEndLine
+	e1*2:7 | a:7 | \myEndLine
+	\endPart
+
+	\myMark "A"
+	\startPart
+	d1:7 | g:9 | d:7 | g:9 | \myEndLine
+	\endPart
+
+	\myMark "C"
+	\startPart
+	d1:7 | g:9 | d:7 | g:9 | \myEndLine
+	a1:7 | e2:m9 e:m7/a | d1*2:6 | \myEndLine
+	\endPart
+
+	\myMark "B"
+	\startPart
+	fis1*2:7 | f:7 | \myEndLine
+	e1*2:7 | a:7 | \myEndLine
+	\endPart
+
+	\endSong
+	\endChords
+}
+{% endif %}
+{% if part == "VoiceFake" %}{
+	\tempo "Andante" 4 = 80
+	\time 4/4
+	\key d \major
+
+	% part "A"
+	\repeat volta 2 {
+		r8 a' d a c!4 d | r8 d, a' d, g4 f! | r8 a d a c!4 d | r8 d, a' d, g4 f! |
+		r8 a d a c!4 a | a4 a8 d, g4 f! | r8 a d a c!4 d | r8 d,8 a'4 g f! | e'4 c! a b |
+		r8 fis4 a8 fis d b d~ |
+	} \alternative {
+		{
+			d1~ | d1 |
+		}
+		{
+			d1~ | d2. fis4 |
+		}
+	}
+
+	% part "B"
+	fis8 fis fis gis fis2 | r8 fis fis fis fis fis gis4 | f!8 f f g f2 | r8 f! f f f f g4 |
+	e8 e e fis e2 | r8 e e fis e e a a | b8 b a4 a r | e'4 bis8 cis a b!4. |
+
+	% part "A"
+	r8 a d a c!4 d | r8 d, a' d, g4 f! | r8 a d a c!4 d | d,4 a' g f! |
+
+	% part "C"
+	r8 a8^\markup { \musicglyph #"scripts.segno" } d4 c! d | r8 d,8 a'4 g f! | r8 a8 d4 c! d | r8 d,8 a'4 g f! |
+	e'4 c! a b | r8 fis4 a8 fis d b d~ | d1~ | d2.^\markup { Fine } a'4 |
+
+	% part "B"
+	fis4 fis8 gis fis4 fis | r8 fis4 fis8 fis fis fis fis | f!4 f f g | r8 f!4 f8 f f f4 |
+	e4 e e8 e e4 | r8 e4 e8 e e gis gis | a4 a a8 a4. | c!8 a b a a4 b^\markup { D.S. al Fine } |
+}
+{% endif %}

@@ -1,0 +1,105 @@
+{#
+default_version = "Fake"
+
+[attributes]
+title = "Let There Be You"
+style = "Jazz"
+composer = "Vicki Young, Dave Cavanaugh"
+poet = "Vicki Young, Dave Cavanaugh"
+piece = "Slowly"
+copyright = "1956 by DUCHESS MUSIC CORPORATION, New York, NY"
+copyrightextra = "Copyright Renewed. Rights Administered by MCA MUSIC PUBLISHING, A Division of MCA Inc., New York, NY"
+typesetter = "Mark Veltzer <mark.veltzer@gmail.com>"
+completion = "5"
+uuid = "8eedb64a-d51e-11f1-8000-046874d194b7"
+structure = "AABA"
+location = "jfb:215"
+
+[[youtube]]
+id = "BDwxIW-HmsQ"
+remark = "Vicki Young in the original recording (1956)"
+
+[[youtube]]
+id = "wlcz6zYAyfU"
+remark = "The Five Keys (1957)"
+
+[versions.Fake]
+doChords = true
+doVoice = true
+doLyrics = false
+doLyricsmore = false
+doLyricsmoremore = false
+doChordBars = false
+doGuitar = false
+doExtra = false
+doPrep = false
+doOwn = false
+#}
+{% if part == "Vars" %}
+{% endif %}
+{% if part == "Doc" %}	DONE:
+	- added the meta data from the fake book.
+	- put in the tunes structure.
+	- put in the chords (fake book).
+	- put in the tune (fake book).
+	- added youtube performances.
+	TODO:
+	- add the lyrics.
+	- check the chords (fake book).
+	- check the tune (fake book).
+	- hear the tune to check that it is right and adjust the tempo.
+{% endif %}
+{% if part == "ChordsFake" %}\chordmode {
+	\startChords
+	\startSong
+
+	\myMark "A"
+	\startPart
+	c2 ees:dim7 | d1:m7 | g2:7 g:7.5+ | c2:maj7 b4:m11 bes:7 | \myEndLine
+	a1:7 | d:m | d:7 | d2:m7 g:7 | \myEndLine
+	\endPart
+
+	\myMark "A"
+	\startPart
+	c2 ees:dim7 | d1:m7 | g2:7 g:7.5+ | c2:maj7 b4:m11 bes:7 | \myEndLine
+	a1:7 | d:m | d2:7 g:7 | c c:7 | \myEndLine
+	\endPart
+
+	\myMark "B"
+	\startPart
+	f1 | fis:dim7 | c:/g | a:9 | \myEndLine
+	d2:m g:9 | c a:m7 | d1:7 | d2:m7 g:7 | \myEndLine
+	\endPart
+
+	\myMark "A"
+	\startPart
+	c2 ees:dim7 | d1:m7 | g2:7 g:7.5+ | c2:maj7 b4:m11 bes:7 | \myEndLine
+	a1:7 | d:m7 | d2:7 g:7 | c g4:7 c | \myEndLine
+	\endPart
+
+	\endSong
+	\endChords
+}
+{% endif %}
+{% if part == "VoiceFake" %}{
+	\tempo "Andante" 4 = 80
+	\time 2/2
+	\key c \major
+
+	% part "A"
+	\tuplet 3/2 { c'4 c c } c b8 a | c8 f, f2. | \tuplet 3/2 { b4 b b } b4. g8 | b8 e, e4~ e4. g8 |
+	\tuplet 3/2 { a4 a a } a g8 e | f8 g a2. | a2 \tuplet 3/2 { a4 b c } | d1 |
+
+	% part "A"
+	\tuplet 3/2 { c4 c c } c b8 a | c4 f,2. | \tuplet 3/2 { d'4 c b } a8 g4. | b4 e,8 e~ e4. g8 |
+	\tuplet 3/2 { a4 a a } a g8 e | f8 g a2. | c2 \tuplet 3/2 { b4 c d } | c1 |
+
+	% part "B"
+	c4 a8 b \tuplet 3/2 { c4 a b } | c1 | b4 g8 a \tuplet 3/2 { b4 g e } | b'1 |
+	a4 f8 g \tuplet 3/2 { a4 f f } | e4 g8 c~ c2 | r4 a8 b c a b c | d1 |
+
+	% part "A"
+	\tuplet 3/2 { c4 c c } c b8 a | c4 f,2. | \tuplet 3/2 { b4 b b } b4. g8 | b8 e, e4~ e4. g8 |
+	\tuplet 3/2 { a4 a a } a g8 e | f8 g a2. | c2 \tuplet 3/2 { b4 c d } | c1 |
+}
+{% endif %}

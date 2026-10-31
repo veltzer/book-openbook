@@ -1,0 +1,105 @@
+{#
+default_version = "Fake"
+
+[attributes]
+title = "Love Walked In"
+style = "Jazz"
+composer = "George Gershwin"
+poet = "Ira Gershwin"
+piece = "Moderately"
+copyright = "1938 by Gershwin Publishing Corporation"
+copyrightextra = "Copyright Renewed, Assigned to Chappell & Co., Inc."
+typesetter = "Mark Veltzer <mark.veltzer@gmail.com>"
+completion = "5"
+uuid = "b28727ee-d51e-11f1-8000-046874d194b7"
+structure = "ABAC"
+location = "jfb:236"
+
+[[youtube]]
+id = "7W-kbu12-cU"
+remark = "Kenny Baker in the original film The Goldwyn Follies (1938)"
+
+[[youtube]]
+id = "HJZC19pK1ME"
+remark = "Sarah Vaughan"
+
+[versions.Fake]
+doChords = true
+doVoice = true
+doLyrics = false
+doLyricsmore = false
+doLyricsmoremore = false
+doChordBars = false
+doGuitar = false
+doExtra = false
+doPrep = false
+doOwn = false
+#}
+{% if part == "Vars" %}
+{% endif %}
+{% if part == "Doc" %}	DONE:
+	- added the meta data from the fake book.
+	- put in the tunes structure.
+	- put in the chords (fake book).
+	- put in the tune (fake book).
+	- added youtube performances.
+	TODO:
+	- add the lyrics.
+	- check the chords (fake book).
+	- check the tune (fake book).
+	- hear the tune to check that it is right and adjust the tempo.
+{% endif %}
+{% if part == "ChordsFake" %}\chordmode {
+	\startChords
+	\startSong
+
+	\myMark "A"
+	\startPart
+	ees1 | ees | f:7 | bes2:7sus4 bes:7 | ees1 | ees | \myEndLine
+	f1:7 | bes:7 |
+	\endPart
+
+	\myMark "B"
+	\startPart
+	ees1 | ees2. ees4:7.5+ | aes1 | c:7.5+ | \myEndLine
+	f2:m c:7.5+ | f1:m7 | ees2 aes4 bes | f2:9 f4:m7 bes:7 |
+	\endPart
+
+	\myMark "A"
+	\startPart
+	ees1 | ees | \myEndLine
+	f1:7 | bes2:7sus4 bes:7 | ees1 | ees | f:7 | bes:7 |
+	\endPart
+
+	\myMark "C"
+	\startPart
+	ees1 | \myEndLine
+	ees2. ees4:7.5+ | aes1 | f2:m7 aes:m6 | ees2 ees4:7 c:7 | f2:m bes:7 | ees1*2 | \myEndLine
+	\endPart
+
+	\endSong
+	\endChords
+}
+{% endif %}
+{% if part == "VoiceFake" %}{
+	\tempo "Moderato" 2 = 80
+	\time 2/2
+	\key ees \major
+
+	% part "A"
+	g'1 | bes,4 ees g bes | a!4 a a8 g a4 | bes1 | g1 | bes,4 ees g bes |
+	c4 c c8 bes c4 | d1 |
+
+	% part "B"
+	ees1 | ees,4 g bes ees | d4 d d8 c d4 | c1 |
+	r4 bes bes8 aes bes4 | aes1 | r4 g aes bes | b!4 c ees, f |
+
+	% part "A"
+	g1 | bes,4 ees g bes |
+	a!4 a a8 g a4 | bes1 | g1 | bes,4 ees g bes | c4 c c8 bes c4 | d1 |
+
+	% part "C"
+	ees1 |
+	ees,4 g bes ees | f2 ees | d4 c bes aes | g2. g4 | bes4 aes g f | ees1~ | ees4 r r2 |
+}
+{% endif %}

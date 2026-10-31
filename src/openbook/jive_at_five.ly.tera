@@ -1,0 +1,97 @@
+{#
+default_version = "Fake"
+
+[attributes]
+title = "Jive At Five"
+style = "Swing"
+composer = "Count Basie, Harry Edison"
+piece = "Fast"
+copyright = "1941 (Renewed) WB Music Corp."
+typesetter = "Mark Veltzer <mark.veltzer@gmail.com>"
+completion = "5"
+uuid = "a9f0797e-d51d-11f1-8000-046874d194b7"
+structure = "AABA"
+location = "jfb:201"
+
+[[youtube]]
+id = "acSVsvgZWYE"
+remark = "Count Basie and his Orchestra in the original recording (1939)"
+
+[[youtube]]
+id = "VO2nFcxTVz8"
+remark = "Harry 'Sweets' Edison"
+
+[versions.Fake]
+doChords = true
+doVoice = true
+doLyrics = false
+doLyricsmore = false
+doLyricsmoremore = false
+doChordBars = false
+doGuitar = false
+doExtra = false
+doPrep = false
+doOwn = false
+#}
+{% if part == "Vars" %}
+{% endif %}
+{% if part == "Doc" %}	DONE:
+	- added the meta data from the fake book.
+	- put in the tunes structure.
+	- put in the chords (fake book).
+	- put in the tune (fake book).
+	- added youtube performances.
+	TODO:
+	- check the chords (fake book).
+	- check the tune (fake book).
+	- hear the tune to check that it is right and adjust the tempo.
+	- bars 7 and 23: the book prints a flat only on the first g of the bar; following the notation rule the last g (under Bb7) is a g flat too - check.
+{% endif %}
+{% if part == "ChordsFake" %}\chordmode {
+	\startChords
+	\startSong
+
+	\myMark "A"
+	\startPart
+	\repeat volta 2 {
+		ees2 c:m7 | f:m7 bes:7 | ees c:m7 | f:m7 bes:7 | \myEndLine
+		ees2:7 d4.:7 des8 | c1:7 | b2:7 bes:7 | ees1 | \myEndLine
+	}
+	\endPart
+
+	\myMark "B"
+	\startPart
+	ees2 ges:dim7 | f4:m7 bes:7 ees2 | ees ges:dim7 | f4:m7 bes:7 ees2 | \myEndLine
+	ees2 ges:dim7 | f4:m7 bes:7 ees2 | f1:7 | bes:7.5+ | \myEndLine
+	\endPart
+
+	\myMark "A"
+	\startPart
+	ees2 c:m7 | f:m7 bes:7 | ees c:m7 | f:m7 bes:7 | \myEndLine
+	ees2:7 d4.:7 des8:7 | c1:7 | b2:7 bes:7 | ees1 | \myEndLine
+	\endPart
+
+	\endSong
+	\endChords
+}
+{% endif %}
+{% if part == "VoiceFake" %}{
+	\tempo "Allegro" 4 = 220
+	\time 4/4
+	\key ees \major
+
+	% part "A"
+	\repeat volta 2 {
+		g'8 bes r4 bes des8 c~ | c c4 ges8 f ees c bes | g'8 bes r4 bes des8 c~ | c c4 ges8 f ees c bes |
+		r8 bes' bes4 a8 a4 aes8 | aes4 g8 g~ g4 r | ges4 ges f8 ees f ges | f8 ees4 ees8~ ees4 r |
+	}
+
+	% part "B"
+	bes'8 ees4 bes8 a ees'4 a,8 | aes4 g8 ees~ ees4 r | bes'8 ees4 bes8 a ees'4 a,8 | aes4 g8 ees~ ees4 r |
+	bes'8 ees4 bes8 a ees'4 a,8 | aes4 g8 ees~ ees4 r | g4 g d' d8 d | c8 fis,4 fis8~ fis4 r |
+
+	% part "A"
+	g8 bes r4 bes des8 c~ | c c4 ges8 f ees c bes | g'8 bes r4 bes des8 c~ | c c4 ges8 f ees c bes |
+	r8 bes' bes4 a8 a4 aes8 | aes4 g8 g~ g4 r | ges4 ges f8 ees f ges | f8 ees4 ees8~ ees4 r |
+}
+{% endif %}

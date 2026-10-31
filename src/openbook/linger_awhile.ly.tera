@@ -1,0 +1,109 @@
+{#
+default_version = "Fake"
+
+[attributes]
+title = "Linger Awhile"
+style = "Jazz"
+composer = "Vincent Rose"
+poet = "Larry Owens"
+piece = "Moderately"
+copyright = "1923 LEO FEIST, INC."
+copyrightextra = "Renewed 1951 EDWIN H. MORRIS & COMPANY, A Division of MPL Communications, Inc. This Arrangement 1987 EDWIN H. MORRIS & COMPANY, A Division of MPL Communications, Inc. International Copyright Secured. All Rights Reserved."
+typesetter = "Mark Veltzer <mark.veltzer@gmail.com>"
+completion = "5"
+uuid = "d6c4db34-d51d-11f1-8000-046874d194b7"
+structure = "ABCA"
+location = "jfb:221"
+
+[[youtube]]
+id = "SyOzoHgBHJA"
+remark = "Paul Whiteman and His Orchestra in the original hit recording (1923)"
+
+[[youtube]]
+id = "N2ENj7k6aLU"
+remark = "Samara Joy with Pasquale Grasso"
+
+[versions.Fake]
+doChords = true
+doVoice = true
+doLyrics = false
+doLyricsmore = false
+doLyricsmoremore = false
+doChordBars = false
+doGuitar = false
+doExtra = false
+doPrep = false
+doOwn = false
+#}
+{% if part == "Vars" %}
+{% endif %}
+{% if part == "Doc" %}	DONE:
+	- added the meta data from the fake book.
+	- put in the tunes structure.
+	- put in the chords (fake book).
+	- put in the tune (fake book).
+	- added youtube performances.
+	TODO:
+	- add the lyrics.
+	- check the chords (fake book).
+	- check the tune (fake book).
+	- hear the tune to check that it is right and adjust the tempo.
+{% endif %}
+{% if part == "ChordsFake" %}\chordmode {
+	\startChords
+	\startSong
+
+	\partial 2 s2 |
+
+	\myMark "A"
+	\startPart
+	f1 | s2 c:7 | f1 | f2/a des:7/aes | \myEndLine
+	c1:7/g | c2:7 c:dim7 | c1*2:7 | \myEndLine
+	\endPart
+
+	\myMark "B"
+	\startPart
+	c1*3:7 | s2 c:dim7 | \myEndLine
+	f1:maj7 | s2 f:dim7 | f1 | s2 c:7 | \myEndLine
+	\endPart
+
+	\myMark "C"
+	\startPart
+	d1*2:m7 | a1*2:7 | \myEndLine
+	d1*2:7 | g1:7 | g2:m7 c:7 | \myEndLine
+	\endPart
+
+	\myMark "A"
+	\startPart
+	f1 | s2 c:7 | f1 | f2/a des:7/aes | \myEndLine
+	c1:7/g | s2 c:7 | f2 bes4 bes:m | f1 | \myEndLine
+	\endPart
+
+	\endSong
+	\endChords
+}
+{% endif %}
+{% if part == "VoiceFake" %}{
+	\tempo "Moderato" 4 = 160
+	\time 2/2
+	\key f \major
+
+	\partial 2 c2 |
+
+	% part "A"
+	d2 f~ | f g | a c~ | c cis |
+	d e,~ | e dis | e1~ | e2 c |
+
+	% part "B"
+	d2 e~ | e g | bes d~ | d dis |
+	e a,~ | a gis | a1~ | a2 c |
+
+	% part "C"
+	f d~ | d f | e4 cis a2~ | a cis |
+	d a~ | a d | a4 g d2~ | d c |
+
+	% part "A"
+	d f~ | f g | a c~ | c cis |
+	d c~ | c d | f1~ | f4 r r2 |
+}
+{% endif %}

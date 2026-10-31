@@ -1,0 +1,152 @@
+{#
+default_version = "Fake"
+
+[attributes]
+title = "New York Afternoon"
+style = "Latin/Jazz"
+composer = "Richie Cole"
+poet = "Richie Cole"
+piece = "Medium Samba"
+copyright = "1976 Alto Madness Music (BMI)"
+copyrightextra = "Admin. by Bug"
+typesetter = "Mark Veltzer <mark.veltzer@gmail.com>"
+completion = "5"
+uuid = "2067bc8a-d521-11f1-8000-046874d194b7"
+structure = "Intro-ABC-Instr-Coda"
+location = "jfb:272"
+
+[[youtube]]
+id = "zFcslsWfgsM"
+remark = "Richie Cole with Eddie Jefferson on the album New York Afternoon (1976)"
+
+[[youtube]]
+id = "7-3m2OWWHJg"
+remark = "Rare Silk"
+
+[versions.Fake]
+doChords = true
+doVoice = true
+doLyrics = false
+doLyricsmore = false
+doLyricsmoremore = false
+doChordBars = false
+doGuitar = false
+doExtra = false
+doPrep = false
+doOwn = false
+#}
+{% if part == "Vars" %}
+{% endif %}
+{% if part == "Doc" %}	DONE:
+	- added the meta data from the fake book.
+	- put in the tunes structure.
+	- put in the chords (fake book).
+	- put in the tune (fake book).
+	- added youtube performances.
+	TODO:
+	- check the chords (fake book).
+	- check the tune (fake book).
+	- hear the tune to check that it is right and adjust the tempo.
+	- the second bar of part C: the book prints a dotted eighth rest before the two sixteenths, which overfills the bar; typed an eighth rest.
+	- the segno part has two lyric lines in the book (first time and after the D.S.).
+	- the Funk part is voice scats; the Solos part is two bars of samba feel.
+	- the pickup in the first ending of the coda vamp is marked 'last x only' (in parentheses) in the book.
+	- add the lyrics.
+{% endif %}
+{% if part == "ChordsFake" %}\chordmode {
+	\startChords
+	\startSong
+
+	\myMark "Intro"
+	\startPart
+	r1 | d:9sus4 | r1 | d:9sus4 | \myEndLine
+	\endPart
+
+	\myMark "A"
+	\startPart
+	g1:maj7 | c:maj7 | g:maj7 | c4:maj7 bes:maj7 g2:maj7 | \myEndLine
+	g1:maj7 | c:maj7 | g:maj7 | c4:maj7 bes:maj7 g2:maj7 | \myEndLine
+	\endPart
+
+	\myMark "B"
+	\startPart
+	d1*2:9sus4 | g1:maj7 | c:maj7 | \myEndLine
+	g1:maj7 | c4:maj7 bes:maj7 g2:maj7 | g1:m9 | c:7 | f:maj7 | \myEndLine
+	d1:m9 | f:m9 | bes:7sus4 | d:9sus4 | \myEndLine
+	\endPart
+
+	\myMark "C"
+	\startPart
+	s1 | g:maj7 | c:maj7 | g:maj7 | c4:maj7 bes:maj7 g2:maj7 | \myEndLine
+	\endPart
+
+	\myMark "Instr"
+	\startPart
+	\repeat volta 2 {
+		g1*4:7 | \myEndLine
+	}
+	\repeat volta 2 {
+		g1:maj7 | c:maj7 | \myEndLine
+	}
+	\endPart
+
+	\myMark "Coda"
+	\startPart
+	d1:9sus4 | ees1*2:9sus4 | \myEndLine
+	\repeat volta 2 {
+		aes1:maj7 | ees:9sus4 |
+	}
+	\repeat volta 2 {
+		aes1:maj7 | ees:9sus4 | \myEndLine
+	}
+	\repeat volta 2 {
+		aes1:maj7 | ees:9sus4 | \myEndLine
+	}
+	\endPart
+
+	\endSong
+	\endChords
+}
+{% endif %}
+{% if part == "VoiceFake" %}{
+	\tempo "Moderato" 4 = 180
+	\time 4/4
+	\key g \major
+
+	% part "Intro"
+	d'16 d d d d b8 c16 r16 e d8~ d4 | r2 r4 r8. d,16 | d'16 d d d d b8 c16 r16 e d8~ d4 | r2 r4 g,8 g |
+
+	% part "A"
+	fis8. d16~ d2 r4 | e8 e16 e e16 e8 e16 r16 e e e g8 g | fis8. d16~ d2 r4 | e8 e16 c r16 e d8~ d4 g8 g |
+	fis8. d16~ d2 r4 | e8 e16 e e16 e8 e16 r16 e e e g8 g | fis8. d16~ d2 r4 | e8 e16 c r16 e d8~ d2 |
+
+	% part "B"
+	a16^\markup { \musicglyph #"scripts.segno" } c c a c8 c16 a c16 a c a c8 d | a16 c c a c8 c16 a c16 a c a c16 d e g | fis8. d16~ d2 r4 | e16 e8 e16 e8 e16 e r16 e e e g8 g |
+	fis8. d16~ d2 r4 | e8 e16 c r16 e d8~ d2 | a'2 d4 c | a2 g4 f! | e2 f!4 g |
+	e2 d4 c | g'2 aes4 bes | c2 d4 ees | d1^\markup { To Coda \musicglyph #"scripts.coda" } |
+
+	% part "C"
+	r2 r4 g,8 g | fis8. d16~ d2 r4 | e16 e8 e16 e8 e16 e r16 e e e g8 g | fis8. d16~ d2 r8 d16 d | e8 e16 c r16 e d8~ d2 |
+
+	% part "Instr"
+	\repeat volta 2 {
+		d'8^\markup { Funk (voice scats) } r16 g r8 f!8~ f2 | g16 f! d c~ c8 d r2 | d8 r16 g r8 f!8~ f2 | g16 f! d c~ c16 d r c bes8. g16 ais8 c |
+	}
+	\repeat volta 2 {
+		r1^\markup { Solos - Samba feel } | r1^\markup { after solos, D.S. al Coda } |
+	}
+
+	% part "Coda"
+	r2^\markup { \musicglyph #"scripts.coda" } d4 d | ees1 | r2 r4 aes,4 |
+	\key aes \major
+	\repeat volta 2 {
+		g4 ees8. c16~ c4 aes16 c ees g | f8 f16 des r16 des bes8~ bes4 aes'4 |
+	}
+	\repeat volta 2 {
+		r1 | r2 r16^\markup { (Last x only) } ees16 f g aes bes c des |
+	}
+	\repeat volta 2 {
+		ees16 ees ees ees ees c8 des16 r16 f ees8~ ees4 | r2 r16^\markup { Vamp and fade } ees,16 f g aes bes c des |
+	}
+}
+{% endif %}

@@ -1,0 +1,127 @@
+{#
+default_version = "Fake"
+
+[attributes]
+title = "Lullaby Of The Leaves"
+style = "Jazz"
+composer = "Bernice Petkere"
+poet = "Joe Young"
+piece = "Moderately"
+copyright = "1932 IRVING BERLIN, INC."
+copyrightextra = "Renewed 1960 WAROCK CORP."
+typesetter = "Mark Veltzer <mark.veltzer@gmail.com>"
+completion = "5"
+uuid = "05b77d16-d51e-11f1-8000-046874d194b7"
+structure = "AABA"
+location = "jfb:231"
+
+[[youtube]]
+id = "5FNHqwMBXPE"
+remark = "George Olsen and his orchestra in the original hit recording (1932)"
+
+[[youtube]]
+id = "tL6FPQQm0SM"
+remark = "Gerry Mulligan Quartet with Chet Baker"
+
+[versions.Fake]
+doChords = true
+doVoice = true
+doLyrics = false
+doLyricsmore = false
+doLyricsmoremore = false
+doChordBars = false
+doGuitar = false
+doExtra = false
+doPrep = false
+doOwn = false
+#}
+{% if part == "Vars" %}
+{% endif %}
+{% if part == "Doc" %}	DONE:
+	- added the meta data from the fake book.
+	- put in the tunes structure.
+	- put in the chords (fake book).
+	- put in the tune (fake book).
+	- added youtube performances.
+	TODO:
+	- add the lyrics.
+	- check the chords (fake book).
+	- check the tune (fake book).
+	- hear the tune to check that it is right and adjust the tempo.
+{% endif %}
+{% if part == "ChordsFake" %}\chordmode {
+	\startChords
+	\startSong
+
+	\myMark "A"
+	\startPart
+	\repeat volta 2 {
+		c4:m g:7/b c:m/bes f/a | aes2:7 g:7.5+ | c1:7 | f2:m7 f:m7/ees | d:m11 g:7 | \myEndLine
+		d2:m11 g:7.5+ | c:m aes:maj7 | d:m7.5- g:7.9- |
+		\endPart
+
+		\myMark "A"
+		\startPart
+		c4:m g:7/b c:m7/bes f/a | aes2:7 g:7.5+ | \myEndLine
+		c1:7 | f2:m7 f:m7/ees | d:m11 g:7 | d:m11 g:7.5+ | c:m6 f:m | \myEndLine
+		c2:m c:m7/bes |
+		\endPart
+
+		\myMark "B"
+		\startPart
+		aes1*2:7 | c2 c:maj7 | \myEndLine
+		c2:6 c:7/bes | aes1*2:7 | c2 cis:dim7 | \myEndLine
+		g2:7/d g:7.5+ |
+		\endPart
+
+		\myMark "A"
+		\startPart
+		c4:m g:7/b c:m/bes f/a | aes2:7 g:7.5+ | c1:7 | f2:m7 f:m7/ees | \myEndLine
+		d2:m11 g:7 | d:m11 g:7.5+ |
+	} \alternative {
+		{
+			c2:m c:m7/bes | aes:7 g:7 | \myEndLineVoltaNotLast
+		}
+		{
+			c2:m f:m | c1:6.9 | \myEndLineVoltaLast
+		}
+	}
+	\endPart
+
+	\endSong
+	\endChords
+}
+{% endif %}
+{% if part == "VoiceFake" %}{
+	\tempo "Moderato" 2 = 90
+	\time 2/2
+	\key c \minor
+
+	% part "A"
+	\repeat volta 2 {
+		c4. d8 ees4. f8 | ges4 g! ees'4. d8 | c4. d8 c4. g8 | bes4 aes ees f | \tuplet 3/2 { g4 g g } g2 |
+		\tuplet 3/2 { g4 g g } g4 ees | c1~ | c2 r |
+
+		% part "A"
+		c4. d8 ees4. f8 | ges4 g! ees'4. d8 |
+		c4. d8 c4. g8 | bes4 aes ees f | \tuplet 3/2 { g4 g g } g2 | \tuplet 3/2 { g4 g g } g4 ees | c1~ |
+		c2. r8 c |
+
+		% part "B"
+		\tuplet 3/2 { c8 cis d } ees8. ees16 \tuplet 3/2 { ees8 d des } c!8. c16 | \tuplet 3/2 { c8 cis d } ees8. ees16 \tuplet 3/2 { ees8 d des } c!8. c16 | g'4. e!8 g4. e8 |
+		g2. r8 c, | \tuplet 3/2 { c8 cis d } ees8. ees16 \tuplet 3/2 { ees8 d des } c!8. c16 | \tuplet 3/2 { c8 cis d } ees8. ees16 \tuplet 3/2 { ees8 d des } c!8. c16 | g'4. e!8 g2~ |
+		g8 r ees4 ees d |
+
+		% part "A"
+		c4. d8 ees4. f8 | ges4 g! ees'4. d8 | c4. d8 c4. g8 | bes4 aes ees f |
+		\tuplet 3/2 { g4 g g } g2 | \tuplet 3/2 { g4 g g } ees'4 ees |
+	} \alternative {
+		{
+			c1~ | c2 r |
+		}
+		{
+			c1~ | c1 |
+		}
+	}
+}
+{% endif %}

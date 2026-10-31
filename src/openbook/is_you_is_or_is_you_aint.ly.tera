@@ -1,0 +1,128 @@
+{#
+default_version = "Fake"
+
+[attributes]
+title = "Is You Is, Or Is You Ain't"
+style = "Jazz"
+composer = "Billy Austin, Louis Jordan"
+poet = "Billy Austin, Louis Jordan"
+piece = "Jazz Blues"
+copyright = "1943, 1944 by MCA MUSIC PUBLISHING, A Division of MCA Inc., New York, NY"
+copyrightextra = "Copyright Renewed"
+typesetter = "Mark Veltzer <mark.veltzer@gmail.com>"
+completion = "5"
+uuid = "ec7e6900-d519-11f1-8000-046874d194b7"
+structure = "ABA"
+location = "jfb:188"
+
+[[youtube]]
+id = "l81IIBU7FzM"
+remark = "Louis Jordan and his Tympany Five in the original recording (1944)"
+
+[[youtube]]
+id = "aDU6TYQwzGY"
+remark = "Dinah Washington"
+
+[versions.Fake]
+doChords = true
+doVoice = true
+doLyrics = false
+doLyricsmore = false
+doLyricsmoremore = false
+doChordBars = false
+doGuitar = false
+doExtra = false
+doPrep = false
+doOwn = false
+#}
+{% if part == "Vars" %}
+{% endif %}
+{% if part == "Doc" %}	DONE:
+	- added the meta data from the fake book.
+	- put in the tunes structure.
+	- put in the chords (fake book).
+	- put in the tune (fake book).
+	- added youtube performances.
+	TODO:
+	- add the lyrics.
+	- check the chords (fake book).
+	- check the tune (fake book).
+	- hear the tune to check that it is right and adjust the tempo.
+	- the exact beat placement of the crowded chords in bars 4 and 12 of the verse and in the last bar of the bridge is a guess.
+	- bar 12 of the verse prints a plain c where the parallel bars 2, 4 and 10 have c flat; typed as printed.
+{% endif %}
+{% if part == "ChordsFake" %}\chordmode {
+	\startChords
+	\startSong
+
+	\myMark "Intro"
+	\startPart
+	f2:m f:m/ees | des:7 c | f:m f:m/ees | des f4:m/c f:m7.5-/ces | bes1:7 | \myEndLine
+	bes1:7 | ees:7 | c:7 | f2:m f:m/ees | des:7 c | \myEndLine
+	f2:m f:m/ees | des:7 f4:m/c f:m7.5-/ces | bes1*2:7 | ees1:7 | c:7 | \myEndLine
+	\endPart
+
+	\myMark "A"
+	\startPart
+	\repeat volta 2 {
+		f2:m c:7/g | f:m/aes c:7/g | f1:m | f2:m b:13 | bes1:7 | \myEndLine
+		ees1:7 | aes | des2:7 c:7 | f:m c:7/g | f:m/aes c:7/g | f1:m | b:13 | \myEndLine
+		\endPart
+
+		\myMark "B"
+		\startPart
+		bes1:7 | bes2:m7 ees:7 | aes1 | ees4:7.5+ aes aes2:aug | des1 | des:m | \myEndLine
+		aes1 | aes2.:7 aes4:aug | des1 | ges | ges2:9 f:7 | bes4:m g2:m7.5- c4:7 | \myEndLine
+		\endPart
+
+		\myMark "A"
+		\startPart
+		f2:m c:7/g | f:m/aes c:7/g | f1:m | b:13 | bes:7 | ees:7 | aes2:9 ges:9 | f1:7 | \myEndLine
+		bes1:7 |
+	} \alternative {
+		{
+			bes2:m7 ees:7 | aes1 | des2:7 c:7 | \myEndLineVoltaNotLast
+		}
+		{
+			ees1:7 | aes1*2 | \myEndLineVoltaLast
+		}
+	}
+	\endPart
+
+	\endSong
+	\endChords
+}
+{% endif %}
+{% if part == "VoiceFake" %}{
+	\tempo "Moderato" 4 = 120
+	\time 4/4
+	\key f \minor
+
+	% part "Intro"
+	ces'4 bes8 aes bes4 aes | bes8 aes4 ces8~ ces4 r | r2 bes8 aes bes aes | bes8 aes4 ces8~ ces4 f,8 aes |
+	c8 c~ c2.~ | c2. f,8 aes | c8 c~ c2.~ | c2. r4 |
+	ces4 bes8 aes bes4 aes | bes8 aes4 ces8~ ces4 r | r4 r8 aes bes aes bes aes | bes8 aes4 c8~ c4 f,8 aes |
+	c8 c~ c2.~ | c2~ c8 f, aes f | c'8 c~ c2.~ | c2. r4 |
+
+	% part "A"
+	\repeat volta 2 {
+		c4 c c c | c c c bes8 aes~ | aes8 f4. r2 | r2 r4 r8 f | c'4 c c c | c c c c8 aes~ | aes4 r r2 | r1 |
+		c2. c4 | c c c bes8 aes~ | aes8 f4. r2 | r1 |
+
+		% part "B"
+		c'4 c c c | c c c c8 aes~ | aes4 r r2 | r2 r4 aes | bes8 aes4. bes4 aes | bes8 aes4. bes4 aes8 c~ |
+		c8 ees,~ ees2 bes'8 aes~ | aes2. aes4 | bes aes bes aes | bes aes bes aes | c c c c8 des,~ | des4 r r2 |
+
+		% part "A"
+		c'4 c c c | c c c bes8 aes~ | aes8 f4. r2 | r1 | c'4 c c c | c c c8 c4 c8~ | c1~ | c2. f,4 |
+		c'4 c c c |
+	} \alternative {
+		{
+			c4 c c8 c4 aes8~ | aes1 | r1 |
+		}
+		{
+			r4 des,8 g c c4 aes8~ | aes1~ | aes2. r4 |
+		}
+	}
+}
+{% endif %}

@@ -1,0 +1,117 @@
+{#
+default_version = "Fake"
+
+[attributes]
+title = "Moonlight Cocktail"
+style = "Swing"
+composer = "Lucky Roberts"
+poet = "Kim Gannon"
+piece = "Slowly"
+copyright = "1941 by Jewel Music Publishing Co., Inc."
+copyrightextra = "Copyright renewed by Jewel Music Publishing Co., Inc. and Rytvoc Music. Reprinted by permission."
+typesetter = "Mark Veltzer <mark.veltzer@gmail.com>"
+completion = "5"
+uuid = "3191e54a-d521-11f1-8000-046874d194b7"
+structure = "AABA"
+location = "jfb:256"
+
+[[youtube]]
+id = "R4x3eSBmovc"
+remark = "Glenn Miller and his Orchestra with Ray Eberle and the Modernaires in the hit recording (1942)"
+
+[[youtube]]
+id = "ajdC5krF6Mo"
+remark = "Bing Crosby (1942)"
+
+[versions.Fake]
+doChords = true
+doVoice = true
+doLyrics = false
+doLyricsmore = false
+doLyricsmoremore = false
+doChordBars = false
+doGuitar = false
+doExtra = false
+doPrep = false
+doOwn = false
+#}
+{% if part == "Vars" %}
+{% endif %}
+{% if part == "Doc" %}	DONE:
+	- added the meta data from the fake book.
+	- put in the tunes structure.
+	- put in the chords (fake book).
+	- put in the tune (fake book).
+	- added youtube performances.
+	TODO:
+	- check the chords (fake book).
+	- check the tune (fake book).
+	- hear the tune to check that it is right and adjust the tempo.
+	- add the lyrics.
+	- the fake book prints no ledger lines for the low notes (they seem lost in the scan); the low notes of the triplet figures are read as b and c by their position.
+	- the c notes after the c sharp in the A7 triplet bars have no accidental in the book; they are typed as c sharp (the sharp carries through the bar and matches the A7 and A7/C# chords).
+{% endif %}
+{% if part == "ChordsFake" %}\chordmode {
+	\startChords
+	\startSong
+
+	\repeat volta 2 {
+
+		\myMark "A"
+		\startPart
+		g4 d:7/a g2/b | b2:7 e:m7 | a4:7 e:7/b a2:7/cis | a1:7 | \myEndLine
+		d4:7 a:7/e d2:7/fis | d1:9 |
+	} \alternative {
+		{
+			g2 e:m7 | a2:m7 d:7 | \myEndLineVoltaNotLast
+		}
+		{
+			a1:m7 | a8:9 d4:7 g8*5:6 | \myEndLineVoltaLast
+		}
+	}
+	\endPart
+
+	\myMark "B"
+	\startPart
+	b1:7 | fis2:m7 b:7 | fis2:m7 b:7 | e1:m | \myEndLine
+	a1:7 | e2:m7 a:7 | e2:m7 a:7 | d1:7 | \myEndLine
+	\endPart
+
+	\myMark "A"
+	\startPart
+	g4 d:7/a g2/b | b2:7 e:m7 | a4:7 e:7/b a2:7/cis | a1:7 | \myEndLine
+	d4:7 a:7/e d2:7/fis | d1:9 | a1:m7 | a8:9 d4:7 g8*5:6 | \myEndLine
+	\endPart
+
+	\endSong
+	\endChords
+}
+{% endif %}
+{% if part == "VoiceFake" %}{
+	\tempo "Andante" 2 = 60
+	\time 2/2
+	\key g \major
+
+	\repeat volta 2 {
+
+		% part "A"
+		\tuplet 3/2 { b8 ais b } \tuplet 3/2 { c b c } d8 b'4 b,8 | a'4 b,8 g'~ g2 | \tuplet 3/2 { cis,8 bis cis } \tuplet 3/2 { d cis d } e8 b'4 cis,8 | a'4 cis,8 g'~ g2 |
+		\tuplet 3/2 { fis8 eis fis } \tuplet 3/2 { g fis g } a8 fis'4 fis,8 | e'4 fis,8 d'~ d2 |
+	} \alternative {
+		{
+			b4 d g,4. b8 | a4 c fis, a |
+		}
+		{
+			c4 e a, c | b8 a4 g8~ g2 |
+		}
+	}
+
+	% part "B"
+	fis2~ fis8. fis16 g8. gis16 | a8 b4 b8~ b2 | b8. b16 a8. a16 fis8. fis16 dis8. dis16 | e8 fis4 g8~ g2 |
+	cis,2~ cis8. cis16 d8. dis16 | e8 g4 g8~ g4 e | b'8. b16 a8. a16 g8 e4. | fis8 g4 a8~ a2 |
+
+	% part "A"
+	\tuplet 3/2 { b,8 ais b } \tuplet 3/2 { c b c } d8 b'4 b,8 | a'4 b,8 g'~ g2 | \tuplet 3/2 { cis,8 bis cis } \tuplet 3/2 { d cis d } e8 b'4 cis,8 | a'4 cis,8 g'~ g2 |
+	\tuplet 3/2 { fis8 eis fis } \tuplet 3/2 { g fis g } a8 fis'4 fis,8 | e'4 fis,8 d'~ d2 | c4 e a, c | b8 a4 g8~ g2 |
+}
+{% endif %}

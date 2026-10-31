@@ -1,0 +1,127 @@
+{#
+default_version = "Fake"
+
+[attributes]
+title = "Malagueña"
+style = "Latin"
+composer = "Ernesto Lecuona"
+poet = "Ernesto Lecuona, Marian Banks"
+piece = "Moderately slow-in 3"
+copyright = "1928 by Edward B. Marks Music Company. Copyright renewed."
+typesetter = "Mark Veltzer <mark.veltzer@gmail.com>"
+completion = "5"
+uuid = "4af2c6e8-d51d-11f1-8000-046874d194b7"
+structure = "Intro-AB-Coda"
+location = "jfb:238"
+
+[[youtube]]
+id = "zIRv7VHD7GA"
+remark = "Daniel Barenboim with the Berlin Philharmonic"
+
+[[youtube]]
+id = "SBNfOuzHqck"
+remark = "Stan Kenton and his Orchestra"
+
+[versions.Fake]
+doChords = true
+doVoice = true
+doLyrics = false
+doLyricsmore = false
+doLyricsmoremore = false
+doChordBars = false
+doGuitar = false
+doExtra = false
+doPrep = false
+doOwn = false
+#}
+{% if part == "Vars" %}
+{% endif %}
+{% if part == "Doc" %}	DONE:
+	- added the meta data from the fake book.
+	- put in the tunes structure.
+	- put in the chords (fake book).
+	- put in the tune (fake book).
+	- added youtube performances.
+	TODO:
+	- add the lyrics (the book prints two English verses and a Spanish verse; Spanish lyric by Ernesto Lecuona, English lyric by Marian Banks).
+	- check the chords (fake book).
+	- check the tune (fake book).
+	- hear the tune to check that it is right and adjust the tempo.
+	- the tune spans jfb:238-239.
+	- bar 36: the book prints a quarter note f for the English verses and two eighth notes f f for the Spanish verse; the quarter note is typed.
+	- bars 54 and 58: the beaming of the opening sixteenths is unclear in the scan; typed as a16 a16 a8 a8 a8 followed by four eighths.
+	- the book's tempo changes (Flamenco tempo-in 4, Broadly-in 3, Fast-in 1) are typed as markups.
+{% endif %}
+{% if part == "ChordsFake" %}\chordmode {
+	\startChords
+	\startSong
+
+	\myMark "Intro"
+	\startPart
+	s4 a8 bes c4 | a8 bes c4 bes | a4. bes8 c4 | a8 bes c4 bes | a2.*2 | \myEndLine
+	bes2.*2 | a2.*2 | bes2.*2 | \myEndLine
+	a2.*2 | bes2.*2/a | a2.*2 | \myEndLine
+	bes2.*2/a | a2.*3 | \myEndLine
+	\endPart
+
+	\myMark "A"
+	\startPart
+	a1*2 | bes1*4 | \myEndLine
+	a1*4 | \myEndLine
+	bes1*2 | bes1*2:7.5- | \myEndLine
+	a1*2 | bes1*2 | \myEndLine
+	\endPart
+
+	\myMark "B"
+	\startPart
+	a1*2 | bes1*2 | \myEndLine
+	a1*2 | bes1*2 | a1*2 | \myEndLine
+	bes1*2 | a1*2 | \myEndLine
+	bes1*2 | a1*2 | \myEndLine
+	\endPart
+
+	\myMark "Coda"
+	\startPart
+	a2.*2 | bes2.*2 | \myEndLine
+	a2.*2 | bes2.*2 | \myEndLine
+	a2.*5 | \myEndLine
+	d2:m g4:m | d2:m g4:m | d2.:m | s2. | \myEndLine
+	\endPart
+
+	\endSong
+	\endChords
+}
+{% endif %}
+{% if part == "VoiceFake" %}{
+	\tempo "Moderato" 4 = 120
+	\time 3/4
+	\key c \major
+
+	% part "Intro"
+	r4 e8 f g4 | e8 f g4 f | e cis8 d e4 | cis8 d e4 f | e e8 f a4 | e8 f a4 g |
+	f4 d8 e f4 | f8 g a4 bes | a a8 bes c bes | a4 e8 g f e | f4 d8 cis d e |
+	f8 e g f e d | cis4 a''8 bes c bes | a4 e8 g f e | f4 d8 cis d e |
+	f8 e g f e d | cis4 a'8 bes c bes | a4 e8 g f e | f4 d8 cis d e |
+	f8 e g f e d | cis4 a' a, | a a, r | a''4 r r\fermata |
+
+	% part "A"
+	\time 4/4
+	e,4^\markup { \musicglyph #"scripts.segno" Flamenco tempo-in 4 } f g2 | g2 g4 g |
+	g2 f8 e d e | f1~ | f2 d4 e | f2 g4 f8 e | d4 cis8 d e2~ | e1 |
+	r4 cis d e | g bes2 a4 | g2 f8 e d e | g2. f4 | e2. f4 | g2. e'8 cis^\markup {To Coda \musicglyph #"scripts.coda"} |
+	a1~ | a1~ | a1~ | a2 r2 |
+
+	% part "B"
+	a2 a8 bes c bes | a2 e8 g f e | f2 d8 cis d e | f8 e g f e d c bes |
+	a2 cis4 e | a,2 cis4 e | d4 f2 bes4 | a4 c2 bes4 | a1~ | a2. a16 cis e a |
+	bes1~ | bes8 e,16 g cis, e a, bes g a e g cis, e a, bes | a16 a' a8 a a bes a bes a | r8 a16 a a8 bes a r a16 cis e a |
+	bes1~ | bes8 e,16 g cis, e a, bes g a e g cis, e a, bes | a16 a' a8 a a bes a bes a | r8 a16 a a8 bes a r r4^\markup {D.S. al Coda} |
+
+	% part "Coda"
+	\time 3/4
+	a4 a8 bes c bes | a4 e8 g f e | f4 d8 cis d e | f8 e g f e d |
+	cis4 a''8 bes c bes | a4 e8 g f e | f4 d8 cis d e | f8 e g f e d |
+	cis4 a' a, | a a, r | r4\fermata^\markup { Broadly - in 3 } a' cis | cis( bes a) | cis( bes a) |
+	d2.~^\markup { Fast - in 1 } | d2.~ | d4 r2 | r2. |
+}
+{% endif %}

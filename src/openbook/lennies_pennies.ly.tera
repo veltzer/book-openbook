@@ -1,0 +1,114 @@
+{#
+default_version = "Fake"
+
+[attributes]
+title = "Lennie's Pennies"
+style = "Jazz"
+composer = "Lennie Tristano"
+piece = "Fast Swing"
+copyright = "1958 Wm. H. Bauer Inc."
+typesetter = "Mark Veltzer <mark.veltzer@gmail.com>"
+completion = "3"
+uuid = "8b177f04-d520-11f1-8000-046874d194b7"
+structure = "ABAC"
+location = "jfb:212"
+
+[[youtube]]
+id = "B6ivucAR5JY"
+remark = "Lennie Tristano Quintet from Live In Toronto (1952)"
+
+[[youtube]]
+id = "XewoFoScI7Y"
+remark = "Clare Fischer from Thesaurus (1968)"
+
+[versions.Fake]
+doChords = true
+doVoice = true
+doLyrics = false
+doLyricsmore = false
+doLyricsmoremore = false
+doChordBars = false
+doGuitar = false
+doExtra = false
+doPrep = false
+doOwn = false
+#}
+{% if part == "Vars" %}
+{% endif %}
+{% if part == "Doc" %}	DONE:
+	- added the meta data from the fake book.
+	- put in the tunes structure.
+	- put in the chords (fake book).
+	- put in the tune (fake book).
+	- added youtube performances.
+	TODO:
+	- check the chords (fake book).
+	- check the tune (fake book).
+	- hear the tune to check that it is right and adjust the tempo.
+	- the rhythms of the dense ees-f-ees-c figures in the D7, Dm7b5 and G7 bars of the B part (and the similar figures later) are hard to read in the scan; check them.
+	- the fake book prints D.S. al Coda but no segno, so the D.S. presumably goes back to the top.
+	- the coda chord is printed as Cdim7 (add 9, add maj7); it is typed as a plain Cdim7.
+{% endif %}
+{% if part == "ChordsFake" %}\chordmode {
+	\startChords
+	\startSong
+
+	\myMark "A"
+	\startPart
+	c1:m6 | c:m6 | d:7 | g:7 | \myEndLine
+	c1:m6 | c:m6 | d:7 | g:7 | \myEndLine
+	\endPart
+
+	\myMark "B"
+	\startPart
+	g1:m7.5- | c:7 | f:m6 | f:m7+ | \myEndLine
+	c1:m6 | d:7 | d:m7.5- | g:7 | \myEndLine
+	\endPart
+
+	\myMark "A"
+	\startPart
+	c1:m6 | c:m6 | d:7 | g:7.5- | \myEndLine
+	c1:7 | c:7 | f:m6 | f:m6 | \myEndLine
+	\endPart
+
+	\myMark "C"
+	\startPart
+	f1:m6 | d:m7.5- | c:m6 | a:7 | \myEndLine
+	d1:m7.5- | g:7 | c:m6 | g:7 | \myEndLine
+	\endPart
+
+	\myMark "Coda"
+	\startPart
+	c1:dim7 | \myEndLine
+	\endPart
+
+	\endSong
+	\endChords
+}
+{% endif %}
+{% if part == "VoiceFake" %}{
+	\tempo "Allegro" 4 = 220
+	\time 4/4
+	\key ees \major
+
+	% part "A"
+	g'8 c b g c8 g4 aes16 g | fis8 g ees' g,~ g aes16 g f8 g | d'8 fis,4 gis16 fis eis8 fis cis' f, | r1 |
+	r4 ees'8 d des c b8 c16 b | g8 ges f fes ees f16 ees c8 ces | bes8 c ees fis bes d f4~ | f8 g16 f d4 r2 |
+
+	% part "B"
+	r2 f,4. des8 | bes8 des f aes r8 e d e | aes8 c r aes f aes c e~ | e1 |
+	r4 r8 c16 a g8 a c ees~ | \tuplet 3/2 { ees16 f ees } c8 ees8 f16 ees c8 ees~ \tuplet 3/2 { ees16 f ees } c8 | ees8 f16 ees c8 ees~ \tuplet 3/2 { ees16 f ees } c8 ees8 f16 ees | c8 ees~ \tuplet 3/2 { ees16 f ees } ces8 bes8 g bes4 |
+
+	% part "A"
+	r2 r4 ees8 d | c8 g d' c b g c bes | fis8 d~ d f16 bes c8 a f des~ | des8 f16 a bes8 g ees b d! des |
+	\tuplet 3/2 { c8 d dis } \tuplet 3/2 { e8 g c } bes8 c16 bes g8 a | c8 bes~ \tuplet 3/2 { bes16 c bes } g8 a8 c bes8 c16 bes | f8 g bes aes~ \tuplet 3/2 { aes16 bes aes } e8 g ges | f8 aes c d f e~ \tuplet 3/2 { e16 f e } c8 |
+
+	% part "C"
+	e8 ees d des c ces bes a | aes8 bes16 aes d,4 r2 | g8 gis a c,~ \tuplet 3/2 { c16 ees g } a8 g8 gis | a8 cis,~ \tuplet 3/2 { cis16 e g } a8 \tuplet 3/2 { g8 gis a } \tuplet 3/2 { g8 gis a } |
+	aes8 d, r4 r2 | r4 b'8 bes a aes g ees~ | \tuplet 3/2 { ees16 f ees } c8 ges'8 aes16 g ees8 a~ \tuplet 3/2 { a16 b a } g8^\markup { To Coda \musicglyph #"scripts.coda" } | c8 d16 c a8 ees'~ ees2^\markup { D.S. al Coda } |
+
+	% part "Coda"
+	c8^\markup { \musicglyph #"scripts.coda" } d16 c a8 ees'~ \tuplet 3/2 { ees16 f c } c8 ges'4 |
+
+}
+{% endif %}

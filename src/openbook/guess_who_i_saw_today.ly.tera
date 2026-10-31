@@ -1,0 +1,108 @@
+{#
+default_version = "Fake"
+
+[attributes]
+title = "Guess Who I Saw Today"
+style = "Jazz"
+composer = "Murray Grand, Elisse Boyd"
+poet = "Murray Grand, Elisse Boyd"
+piece = "Moderately"
+copyright = "1952 by Stanly-Joy Select"
+copyrightextra = "Copyright Renewed, Assigned to R.C. Jay Publishing Inc. All Rights Administered by Chappell & Co., Inc."
+typesetter = "Mark Veltzer <mark.veltzer@gmail.com>"
+completion = "5"
+uuid = "e8714f24-d519-11f1-8000-046874d194b7"
+structure = "AABA"
+location = "jfb:139"
+
+[[youtube]]
+id = "zlS8Nxm-Cjk"
+remark = "Nancy Wilson (1960)"
+
+[[youtube]]
+id = "fFRGHTaB9xg"
+remark = "Carmen McRae"
+
+[versions.Fake]
+doChords = true
+doVoice = true
+doLyrics = false
+doLyricsmore = false
+doLyricsmoremore = false
+doChordBars = false
+doGuitar = false
+doExtra = false
+doPrep = false
+doOwn = false
+#}
+{% if part == "Vars" %}
+{% endif %}
+{% if part == "Doc" %}	DONE:
+	- added the meta data from the fake book.
+	- put in the tunes structure.
+	- put in the chords (fake book).
+	- put in the tune (fake book).
+	- added youtube performances.
+	TODO:
+	- add the lyrics.
+	- check the chords (fake book).
+	- check the tune (fake book).
+	- hear the tune to check that it is right and adjust the tempo.
+	- bar 27: the fake book prints an optional parenthesized eighth note above the first d; it is left out.
+{% endif %}
+{% if part == "ChordsFake" %}\chordmode {
+	\startChords
+	\startSong
+
+	\myMark "A"
+	\startPart
+	g2:m7 c:7.9- | f d:m7 | g:m7 c:7 | f1 | \myEndLine
+	g2:m7 c:7 | a:7 d:7 | \myEndLine
+	\endPart
+
+	\myMark "A"
+	\startPart
+	g2:m7 c:7.9- | f d:m7 | g:m7 c:7 | f1 | \myEndLine
+	g2:m7 c:7 | a:7 d:7 | \myEndLine
+	\endPart
+
+	\myMark "B"
+	\startPart
+	g2:m7 c:7.9- | f4 ges:maj7 f2 | bes:m7 ees:7 | aes1 | \myEndLine
+	bes2:m7 ees:7 | aes:maj7 aes:6 | a:m7 d:9 | \myEndLine
+	g2:maj7 g:6 | a:m7 d:9 | g1:7 | \myEndLine
+	\endPart
+
+	\myMark "A"
+	\startPart
+	g2:m7 c:7.9- | f d:m7 | g:m7 c4:9 c:7/bes | a2:m7 d:7 | \myEndLine
+	g2:m c4:7 a:7 | d2:m g4:7 des:9 | f4/c d:m7 g:m7 c:7.9- | des2:7 f:6 | \myEndLine
+	\endPart
+
+	\endSong
+	\endChords
+}
+{% endif %}
+{% if part == "VoiceFake" %}{
+	\tempo "Moderato" 4 = 120
+	\time 2/2
+	\key f \major
+
+	% part "A"
+	r8 c' bes a bes a g a | c,2~ c8 d f a | c8 g g g g a f g | a2~ a8 d, f a |
+	c8 g g g g a f g | a1 |
+
+	% part "A"
+	r8 c bes a bes a g a | c,2~ c8 d f a | c8 g g g g a f g | a2~ a8 d, f a |
+	c8 g g g g a f g | a1 |
+
+	% part "B"
+	r8 c bes a bes a g a | f2~ f8 f f f | f8 f f f g g f g | g4 g~ g8 g g g |
+	aes8 aes aes aes bes bes aes bes | c2~ c8 c c c | c8 c c c b! b a b |
+	d,8 d d4~ d8 d dis e | c'8 c c c b! b b ais | b!1 |
+
+	% part "A"
+	r8 c bes a bes a g a | c,2~ c8 d f a | c8 g g g g d e g | d'8 a a a a2 |
+	r8 d e d c bes a g | f2~ f8 f g f | c'8 c c2 e,8 e | f1 |
+}
+{% endif %}

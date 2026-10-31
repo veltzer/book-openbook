@@ -1,0 +1,103 @@
+{#
+default_version = "Fake"
+
+[attributes]
+title = "Miles Ahead"
+style = "Jazz"
+composer = "Miles Davis"
+piece = "Moderately"
+copyright = "1966 Prestige Music"
+typesetter = "Mark Veltzer <mark.veltzer@gmail.com>"
+completion = "5"
+uuid = "3c595e7c-d521-11f1-8000-046874d194b7"
+structure = "AABA"
+location = "jfb:250"
+
+[[youtube]]
+id = "pi92MKevGVc"
+remark = "Miles Davis in the original recording from Blue Haze (1953)"
+
+[[youtube]]
+id = "1dGk6iju3e0"
+remark = "The Miles Davis Quartet"
+
+[versions.Fake]
+doChords = true
+doVoice = true
+doLyrics = false
+doLyricsmore = false
+doLyricsmoremore = false
+doChordBars = false
+doGuitar = false
+doExtra = false
+doPrep = false
+doOwn = false
+#}
+{% if part == "Vars" %}
+{% endif %}
+{% if part == "Doc" %}	DONE:
+	- added the meta data from the fake book.
+	- put in the tunes structure.
+	- put in the chords (fake book).
+	- put in the tune (fake book).
+	- added youtube performances.
+	TODO:
+	- check the chords (fake book).
+	- check the tune (fake book).
+	- hear the tune to check that it is right and adjust the tempo.
+	- in the Em6 bars (18, 22) the book writes d flat and b natural at the start of the bar and plain b and d later in the bar; typed with the accidentals carried through the bar (b natural, d flat), which fits Em6.
+{% endif %}
+{% if part == "ChordsFake" %}\chordmode {
+	\startChords
+	\startSong
+
+	\myMark "A"
+	\startPart
+	ees1:maj7 | ees:m7 | d:m7 | des:m6 | \myEndLine
+	c:m7 | f:7 | bes2:maj7 ges | ges1 | \myEndLine
+	\endPart
+
+	\myMark "A"
+	\startPart
+	ees1:maj7 | ees:m7 | d:m7 | des:m6 | \myEndLine
+	c:m7 | f:7 | ges | ges | \myEndLine
+	\endPart
+
+	\myMark "B"
+	\startPart
+	ees1:maj7 | e:m6 | aes:7 | g:7 | \myEndLine
+	ees:maj7 | e:m6 | aes:7 | aes:m6 | \myEndLine
+	\endPart
+
+	\myMark "A"
+	\startPart
+	ees1:maj7 | ees:m7 | d:m7 | des:m6 | \myEndLine
+	c:m7 | f:7 | bes2:maj7 ges | ges1 | \myEndLine
+	\endPart
+
+	\endSong
+	\endChords
+}
+{% endif %}
+{% if part == "VoiceFake" %}{
+	\tempo "Moderato" 4 = 120
+	\time 4/4
+	\key bes \major
+
+	% part "A"
+	r4 d' bes8 g ees g | d'8 des~ des2. | r4 c a8 f d f | c'8 b! c bes~ bes2 |
+	r4 d g,8 ees c ees | bes'8 a~ a2~ a8 \tuplet 3/2 { f'16 f ees } | ees8 des b! bes \tuplet 3/2 { ges8 f f } e! des | ees8 ges~ ges2. |
+
+	% part "A"
+	r4 d' bes8 g ees g | d'8 des~ des2. | r4 c a8 f d f | c'8 b! c bes~ bes2 |
+	r4 d g,8 ees c ees | bes'8 a~ a2 f'4 | ees8 des c b! \tuplet 3/2 { bes8 a aes } \tuplet 3/2 { f8 e! des } | ees8 ges~ ges2. |
+
+	% part "B"
+	d'4 c8 d bes c d4 | des4 b!8 c a b des4 | c4 bes8 c aes bes c4 | b!2. d4 |
+	d4 c8 d bes c d4 | des4 b!8 c a b des4 | c4 bes8 c aes bes c4 | c1 |
+
+	% part "A"
+	r4 d bes8 g ees g | d'8 des~ des2. | r4 c a8 f d f | c'8 b! c bes~ bes2 |
+	r4 d g,8 ees c ees | bes'8 a~ a2~ a8 \tuplet 3/2 { f'16 f e! } | d8 c b! bes \tuplet 3/2 { ges8 f f } e! des | ges1 |
+}
+{% endif %}

@@ -1,0 +1,109 @@
+{#
+default_version = "Fake"
+
+[attributes]
+title = "Oh! You Beautiful Doll"
+style = "Swing"
+composer = "Nat D. Ayer"
+poet = "A. Seymour Brown"
+piece = "Moderately"
+copyright = "1911 Warner Bros."
+copyrightextra = "Copyright renewed, extended term of Copyright deriving from Nat Ayer Assigned and effective January 4, 1980 to Herald Square Music, Inc."
+typesetter = "Mark Veltzer <mark.veltzer@gmail.com>"
+completion = "5"
+uuid = "361f3c7c-d521-11f1-8000-046874d194b7"
+structure = "AA'"
+location = "jfb:282"
+
+[[youtube]]
+id = "sGrw4qAsBGo"
+remark = "Billy Murray and the American Quartet, the original hit recording (1911)"
+
+[[youtube]]
+id = "KWYxJsNrf1k"
+remark = "Al Jolson"
+
+[versions.Fake]
+doChords = true
+doVoice = true
+doLyrics = false
+doLyricsmore = false
+doLyricsmoremore = false
+doChordBars = false
+doGuitar = false
+doExtra = false
+doPrep = false
+doOwn = false
+#}
+{% if part == "Vars" %}
+{% endif %}
+{% if part == "Doc" %}	DONE:
+	- added the meta data from the fake book.
+	- put in the tunes structure.
+	- put in the chords (fake book).
+	- put in the tune (fake book).
+	- added youtube performances.
+	TODO:
+	- check the chords (fake book).
+	- check the tune (fake book).
+	- hear the tune to check that it is right and adjust the tempo.
+	- the fake book prints no chords in bars 4, 6, 14 and 16; they are left empty.
+	- add the lyrics.
+{% endif %}
+{% if part == "ChordsFake" %}\chordmode {
+	\startChords
+	\startSong
+
+	\repeat volta 2 {
+
+		\myMark "A"
+		\startPart
+		f1 | f2 d:7 | g1:7 | s1 | \myEndLine
+		c1:7 | s1 | f2 c:7 | f2 g4:m7 c:7.9- | \myEndLine
+		\endPart
+
+		\myMark "A"
+		\startPart
+		f1 | f2 d:7 | g1:7 | s2. c4:7 | \myEndLine
+		f1 | s1 | des1:7 | s1 | \myEndLine
+		f2 a:7 | d1:m7 | g2:7 c:7 |
+
+	} \alternative {
+		{
+			f2. c4:7 | \myEndLineVoltaNotLast
+		}
+		{
+			f1 | \myEndLineVoltaLast
+		}
+	}
+	\endPart
+
+	\endSong
+	\endChords
+}
+{% endif %}
+{% if part == "VoiceFake" %}{
+	\tempo "Moderato" 4 = 120
+	\time 4/4
+	\key f \major
+
+	\repeat volta 2 {
+
+		% part "A"
+		c2. d4 | f8 g a c~ c4 a | g4 g g8 f d g~ | g2. r4 |
+		e2~ e8 dis e f | g4 e d c | f2~ f8 e f g | a4 f d des |
+
+		% part "A"
+		c2. d4 | f8 g a c~ c4 a | g4 g g8 f d g~ | g2. f8 g |
+		a4 gis8 a~ a g f g | a4 gis8 a~ a4 f | aes4 g8 aes~ aes g f g | aes4 g8 aes~ aes4 r |
+		a!2 a | a2 a | a8 a4 c8~ c a g4 |
+	} \alternative {
+		{
+			f2. r4 |
+		}
+		{
+			f2. r4 |
+		}
+	}
+}
+{% endif %}

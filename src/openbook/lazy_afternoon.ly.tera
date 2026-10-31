@@ -1,0 +1,110 @@
+{#
+default_version = "Fake"
+
+[attributes]
+title = "Lazy Afternoon"
+style = "Broadway"
+composer = "Jerome Moross"
+poet = "John Latouche"
+piece = "Slowly"
+copyright = "1953 & 1954 by John Latouche & Jerome Moross"
+copyrightextra = "Copyright Renewed, Assigned to Chappell & Co., Inc. and Fisher Music Corp. Chappell & Co., Inc., owner of publication and allied rights"
+typesetter = "Mark Veltzer <mark.veltzer@gmail.com>"
+completion = "5"
+uuid = "77a9f1ca-d51d-11f1-8000-046874d194b7"
+structure = "AABA"
+location = "jfb:212"
+
+[[youtube]]
+id = "xVaEiPjLgtE"
+remark = "Kaye Ballard in the original cast recording of The Golden Apple (1954)"
+
+[[youtube]]
+id = "p1999h8wr20"
+remark = "Barbra Streisand"
+
+[versions.Fake]
+doChords = true
+doVoice = true
+doLyrics = false
+doLyricsmore = false
+doLyricsmoremore = false
+doChordBars = false
+doGuitar = false
+doExtra = false
+doPrep = false
+doOwn = false
+#}
+{% if part == "Vars" %}
+{% endif %}
+{% if part == "Doc" %}	DONE:
+	- added the meta data from the fake book.
+	- put in the tunes structure.
+	- put in the chords (fake book).
+	- put in the tune (fake book).
+	- added youtube performances.
+	TODO:
+	- add the lyrics.
+	- check the chords (fake book).
+	- check the tune (fake book).
+	- hear the tune to check that it is right and adjust the tempo.
+	- bars 3 and 28: the book prints a sharp only on the first f of the bar; the later f are read as f sharp by the carry-through rule (could be f natural).
+{% endif %}
+{% if part == "ChordsFake" %}\chordmode {
+	\startChords
+	\startSong
+
+	\partial 4 s4 |
+
+	\myMark "A"
+	\startPart
+	a1:m7 | a:9 | a:m7 | d:7 | \myEndLine
+	a:m7 | d:7 | a:m7 | d:7 | \myEndLine
+	\endPart
+
+	\myMark "A"
+	\startPart
+	d:m7 | d:9 | d:m9 | g:7 | \myEndLine
+	d:m7 | g:7 | d:m7 | g:9 | \myEndLine
+	\endPart
+
+	\myMark "B"
+	\startPart
+	d:m7 | g:7 | c:maj7 | s1 | \myEndLine
+	d:m7 | g:7 | c:maj7 | d:m7 | e:m7 | \myEndLine
+	\endPart
+
+	\myMark "A"
+	\startPart
+	a:m7 | a:9 | a:m7 | d:7 | \myEndLine
+	a:m7 | d:7 | a:m7 | d:7 | a1*2:6 | \myEndLine
+	\endPart
+
+	\endSong
+	\endChords
+}
+{% endif %}
+{% if part == "VoiceFake" %}{
+	\tempo "Adagio" 4 = 66
+	\time 4/4
+	\key c \major
+
+	\partial 4 e8 a |
+
+	% part "A"
+	g2~ g8 g fis g | fis2 r4 e8 a | g g fis g fis fis e fis | e e d e d d c d |
+	c8 c b c \tuplet 3/2 { b4 b a } | b2~ \tuplet 3/2 { b4 e a } | fis1~ | fis4. r8 r4 a8 f' |
+
+	% part "A"
+	e2~ e8 e d e | b2 r4 a8 f' | c c b c b b a b | a a g a g g f g |
+	f8 f e f \tuplet 3/2 { e4 e d } | e2~ \tuplet 3/2 { e4 a d } | b1~ | b2 r4 c |
+
+	% part "B"
+	d4 c d c | \tuplet 3/2 { b4 b c } b a | b a b a | g2 r4 a8 a |
+	b4 a b a | g a g f8 f | g4 f \tuplet 3/2 { g4 f e } | d1~ | d2 r4 e8 a |
+
+	% part "A"
+	g2~ g8 g fis g | fis2 r4 e8 a | g g fis g fis fis e fis | e e d e d d c d |
+	c8 c b c \tuplet 3/2 { b4 b a } | b2 r4 b | e a fis fis | a d b b | b a2.~ | a2. r4 |
+}
+{% endif %}

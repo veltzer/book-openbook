@@ -1,0 +1,104 @@
+{#
+default_version = "Fake"
+
+[attributes]
+title = "It's Not For Me To Say"
+style = "Jazz"
+composer = "Robert Allen"
+poet = "Al Stillman"
+piece = "Moderately, with much expression"
+copyright = "1956 by Korwin Music Inc."
+typesetter = "Mark Veltzer <mark.veltzer@gmail.com>"
+completion = "5"
+uuid = "6e19df24-d51a-11f1-8000-046874d194b7"
+structure = "ABAC"
+location = "jfb:191"
+
+[[youtube]]
+id = "1qV0tmDM0jM"
+remark = "Johnny Mathis in the original hit recording (1957)"
+
+[[youtube]]
+id = "hX5OykW6vmg"
+remark = "Shorty Rogers and his Orchestra"
+
+[versions.Fake]
+doChords = true
+doVoice = true
+doLyrics = false
+doLyricsmore = false
+doLyricsmoremore = false
+doChordBars = false
+doGuitar = false
+doExtra = false
+doPrep = false
+doOwn = false
+#}
+{% if part == "Vars" %}
+{% endif %}
+{% if part == "Doc" %}	DONE:
+	- added the meta data from the fake book.
+	- put in the tunes structure.
+	- put in the chords (fake book).
+	- put in the tune (fake book).
+	- added youtube performances.
+	TODO:
+	- add the lyrics.
+	- check the chords (fake book).
+	- check the tune (fake book).
+	- hear the tune to check that it is right and adjust the tempo.
+{% endif %}
+{% if part == "ChordsFake" %}\chordmode {
+	\startChords
+	\startSong
+
+	\partial 8 s8 |
+
+	\myMark "A"
+	\startPart
+	\repeat volta 2 {
+		g1:m7 | c2:9 c:7.9- | f:maj7 f:6 | s1 | g:m7 | c:9 | \myEndLine
+		f1 | d2:7 d:7.9- | g:m g:m7/f | e:m7.5- a:7.9- | d1*2:m | a2 fis:7 | \myEndLine
+		b2:m7 e:7 | a1 | g2:m7 c:7 | g1:m7 | c2:9 c:7.9- | f:maj7 f:6 | s1 | \myEndLine
+		c1:m7 | f2:7 f:7.5+ | bes bes:maj7 | bes1:6 | s1 | ees:9 | \myEndLine
+		f2:maj7 a:m7.5- |
+	} \alternative {
+		{
+			d2:7 d:7.9- | g:7 g:7.5+ | c1:9 | f2:6 aes:dim7 | \myEndLine
+			g2:m7 c:7 | \myEndLineVoltaNotLast
+		}
+		{
+			d2:7 d:7.9- | g1:m7 | c:9 | f1*2:6 | \myEndLineVoltaLast
+		}
+	}
+	\endPart
+
+	\endSong
+	\endChords
+}
+{% endif %}
+{% if part == "VoiceFake" %}{
+	\tempo "Moderato" 4 = 100
+	\time 2/2
+	\key f \major
+
+	\partial 8 d8 |
+
+	% part "A"
+	\repeat volta 2 {
+		g8 a g d g2~ | g2 a | g f~ | f2. r8 d | g a g d g2~ | g4 d e d' |
+		c1~ | c4 r bes a | bes g8 a bes4 g | bes4. g8 f4 e | a1~ | a4 a g f | e4. e8 e2~ |
+		e4 fis gis e | cis2. e4 | c!2. r8 d | g8 a g d g2~ | g2 a4 c | g2 f~ | f2. r8 c |
+		f8 g f c f2~ | f4 g a f | d1~ | d2. r8 f | g4. f8 a4. g8 | bes4. a8 c4. bes8 |
+		a8 bes a bes c2~ |
+	} \alternative {
+		{
+			c4 c bes a | g8 a g d g4. a8 | g4. a8 g a c, d | f1 |
+			r2 r4 r8 d |
+		}
+		{
+			c'4 c ees4. d8 | c bes a bes g4. a8 | g4. a8 g a c, d | f1~ | f2. r4 |
+		}
+	}
+}
+{% endif %}

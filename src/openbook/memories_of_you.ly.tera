@@ -1,0 +1,127 @@
+{#
+default_version = "Fake"
+
+[attributes]
+title = "Memories Of You"
+style = "Jazz"
+composer = "Eubie Blake"
+poet = "Andy Razaf"
+piece = "Moderately Slow"
+copyright = "1930 Shapiro, Bernstein & Co., Inc. New York. Copyright Renewed"
+copyrightextra = "1930 Razaf Music Co. pursuant to sections 304(c) and 401(b) of the U.S. Copyright Act. All rights for Andy Razaf administered by The Songwriters Guild of America"
+typesetter = "Mark Veltzer <mark.veltzer@gmail.com>"
+completion = "5"
+uuid = "fdef54e2-d521-11f1-8000-046874d194b7"
+structure = "AABA"
+location = "jfb:245"
+
+[[youtube]]
+id = "Xw9KzKJJjPs"
+remark = "Eubie Blake, the composer, at the piano"
+
+[[youtube]]
+id = "12b6GLhFX5w"
+remark = "Benny Goodman Sextet (1940)"
+
+[versions.Fake]
+doChords = true
+doVoice = true
+doLyrics = false
+doLyricsmore = false
+doLyricsmoremore = false
+doChordBars = false
+doGuitar = false
+doExtra = false
+doPrep = false
+doOwn = false
+#}
+{% if part == "Vars" %}
+{% endif %}
+{% if part == "Doc" %}	DONE:
+	- added the meta data from the fake book.
+	- put in the tunes structure.
+	- put in the chords (fake book).
+	- put in the tune (fake book).
+	- added youtube performances.
+	TODO:
+	- add the lyrics.
+	- check the chords (fake book).
+	- check the tune (fake book).
+	- hear the tune to check that it is right and adjust the tempo.
+	- the second ending chords are typed as printed (Eb6 EM7 Bb6), check them.
+{% endif %}
+{% if part == "ChordsFake" %}\chordmode {
+	\startChords
+	\startSong
+
+	\repeat volta 2 {
+
+		\myMark "A"
+		\startPart
+		ees2 e:dim7 | f:m7 fis:dim7 | ees/g c:m7 | f1:7 | \myEndLine
+		ees2/bes c:m7 | g:m7 c:9 | f:7 bes:9 | ees f4:m7 bes:9 | \myEndLine
+		\endPart
+
+		\myMark "A"
+		\startPart
+		ees2 e:dim7 | f:m7 fis:dim7 | ees c:m7 | f1:7 | \myEndLine
+		ees2/bes c:m7 | g:m7 c:9 | f:7 bes:9 | ees g:7 | \myEndLine
+		\endPart
+
+		\myMark "B"
+		\startPart
+		c1:m | f:m7 | c:m | f:9 | \myEndLine
+		ees2 c:m7 | f1:9 | g2:m7 ges:7 | f:m7 bes:7 | \myEndLine
+		\endPart
+
+		\myMark "A"
+		\startPart
+		ees2 e:dim7 | f:m7 fis:dim7 | ees/g c:m7 | f1:7 | \myEndLine
+		ees2 c:m7 | g:m7 c:9 | f:7 bes:9 |
+
+	} \alternative {
+		{
+			ees2 f4:m7 bes:7 | \myEndLineVoltaNotLast
+		}
+		{
+			ees2:6 e4:maj7 bes:6 | \myEndLineVoltaLast
+		}
+	}
+	\endPart
+
+	\endSong
+	\endChords
+}
+{% endif %}
+{% if part == "VoiceFake" %}{
+	\tempo "Andante" 4 = 88
+	\time 2/2
+	\key ees \major
+
+	\repeat volta 2 {
+
+		% part "A"
+		bes4 c c2 | c4 d d2 | d4 ees g bes | f'1 |
+		ees4 c c2 | bes4 g g2 | f4 c c c | ees2. r4 |
+
+		% part "A"
+		bes4 c c2 | c4 d d2 | d4 ees g bes | f'1 |
+		ees4 c c2 | bes4 g g2 | f4 c c c | ees2 r2 |
+
+		% part "B"
+		g4 c d ees | aes, c d ees | g, c d ees | g,1 |
+		g4 c d ees | ees c c g | bes1~ | bes2 r2 |
+
+		% part "A"
+		bes,4 c c2 | c4 d d2 | d4 ees g bes | f'1 |
+		ees4 c c2 | bes4 g g2 | f4 c c c |
+	} \alternative {
+		{
+			ees2. r4 |
+		}
+		{
+			ees2. r4 |
+		}
+	}
+}
+{% endif %}

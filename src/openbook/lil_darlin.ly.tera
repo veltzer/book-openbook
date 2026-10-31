@@ -1,0 +1,112 @@
+{#
+default_version = "Fake"
+
+[attributes]
+title = "Li'l Darlin'"
+style = "Jazz"
+composer = "Neal Hefti"
+piece = "Slow Blues"
+copyright = "1958 & 1962 by Neal Hefti Music Inc., Encino, CA"
+typesetter = "Mark Veltzer <mark.veltzer@gmail.com>"
+completion = "5"
+uuid = "5aa01b6c-d51e-11f1-8000-046874d194b7"
+structure = "ABAB"
+location = "jfb:209"
+
+[[youtube]]
+id = "DvXpfZyqbp4"
+remark = "Count Basie and his orchestra in the original recording from The Atomic Mr. Basie (1957)"
+
+[[youtube]]
+id = "e7upE_aj5gI"
+remark = "Count Basie and his orchestra live at the Tropicana Hotel, Las Vegas (1969)"
+
+[versions.Fake]
+doChords = true
+doVoice = true
+doLyrics = false
+doLyricsmore = false
+doLyricsmoremore = false
+doChordBars = false
+doGuitar = false
+doExtra = false
+doPrep = false
+doOwn = false
+#}
+{% if part == "Vars" %}
+{% endif %}
+{% if part == "Doc" %}	DONE:
+	- added the meta data from the fake book.
+	- put in the tunes structure.
+	- put in the chords (fake book).
+	- put in the tune (fake book).
+	- added youtube performances.
+	TODO:
+	- check the chords (fake book).
+	- check the tune (fake book).
+	- hear the tune to check that it is right and adjust the tempo.
+{% endif %}
+{% if part == "ChordsFake" %}\chordmode {
+	\startChords
+	\startSong
+
+	\myMark "A"
+	\startPart
+	g2:9 d4:m7 des:9.11+ | g2:m7/c g4:m7 c:7.9- | a1:m7 | d:7.9- | \myEndLine
+	g2:9 d4:m7 des:9.11+ | g2:m7/c g4:m7 c:7.9- | f1:13 | f:7.5+ | \myEndLine
+	\endPart
+
+	\myMark "B"
+	\startPart
+	bes2:6 bes:m6 | f1:7 | bes2:6 bes:m6 | a:m7 d:7.9-.11+ | \myEndLine
+	g2:13 d4:m7 g:13 | d2:m7 g:9 | g:m7 c:9 | a:m7 d:7 | \myEndLine
+	\endPart
+
+	\myMark "A"
+	\startPart
+	g2:9 d4:m7 des:9.11+ | g2:m7/c g4:m7 c:7.9- | a1:m7 | d:7.9- | \myEndLine
+	g2:9 d4:m7 des:9.11+ | g2:m7/c g4:m7 c:7.9- | f1:13 | f:7.5+ | \myEndLine
+	\endPart
+
+	\myMark "B"
+	\startPart
+	bes2:6 bes:m6 | f1:7 | bes2:6 bes:m6 | a:m7 d:7.9-.11+ | \myEndLine
+	g2:9 d4:m7 des:9.11+ | g2:m7/c c4:7 c:7.9- | f1:6 | a2:m7 d:7 | \myEndLine
+	\endPart
+
+	\myMark "Coda"
+	\startPart
+	g2:9 d4:m7 des:9.11+ | g2:m7/c c4:7 c:7.9- | f1:6 | a2:m7 d:7 | \myEndLine
+	g2:9 d4:m7 des:9.11+ | g2:m7/c c4:7 c:7.9- | f4:6 ees8:m9 d4.:m7 des8:maj9 g8:m7/c | s2. f4:maj9 | \myEndLine
+	\endPart
+
+	\endSong
+	\endChords
+}
+{% endif %}
+{% if part == "VoiceFake" %}{
+	\tempo "Andante" 4 = 72
+	\time 4/4
+	\key f \major
+
+	% part "A"
+	r8 d'4. a4 g4 | f4 d f g8 a~ | a1~ | a2~ a4. r8 |
+	r8 d4. a4 g4 | f4 d f g8 a~ | a1~ | a2. r8. fis16 |
+
+	% part "B"
+	g4 g8. fis16 g8. aes16 g8. f!16 | r8 c4.~ c4 r8. fis16 | g4 g8. fis16 g8. a16 bes8. c16~ | c1 |
+	r8 d4. a4 g4 | f4 d f8. g16 a8. g16~ | g1 | r1 |
+
+	% part "A"
+	r8 d'4. a4 g4 | f4 d f g8 a~ | a1~ | a2~ a4. r8 |
+	r8 d4. a4 g4 | f4 d f g8 a~ | a1~ | a2. r8. fis16 |
+
+	% part "B"
+	g4 g8. fis16 g8. aes16 g8. f!16 | r8 c4.~ c4 r8. fis16 | g4 g8. fis16 g8. a16 bes8. c16~ | c1 |
+	r8 d4. a4 g4 | f4 d e8. f16 g8. f16~ | f1 | r1 |
+
+	% part "Coda"
+	r8 d'4. a4 g4 | f4 d e8. f16 g8. f16~ | f1 | r1 |
+	r8 d'4. a4 g4 | f4 d e8. f16 g8. f16~ | f4 aes8 f~ f4 a8 f~ | f4 c'8 c'8~ c4 c,4\fermata |
+}
+{% endif %}

@@ -1,0 +1,135 @@
+{#
+default_version = "Fake"
+
+[attributes]
+title = "Mad About Him, Sad Without Him, How Can I Be Glad Without Him Blues"
+style = "Blues"
+composer = "Larry Markes, Dick Charles"
+poet = "Larry Markes, Dick Charles"
+piece = "Quick Boogie Blues"
+copyright = "1942 by MCA MUSIC PUBLISHING, A Division of MCA Inc., New York, NY"
+copyrightextra = "Copyright Renewed"
+typesetter = "Mark Veltzer <mark.veltzer@gmail.com>"
+completion = "5"
+uuid = "6b1949dc-d51e-11f1-8000-046874d194b7"
+structure = "Blues"
+location = "jfb:235"
+
+[[youtube]]
+id = "FXR4sJmDDlw"
+remark = "Dinah Shore in the original recording (1942)"
+
+[[youtube]]
+id = "cYMRYx7r5EA"
+remark = "Morgana King"
+
+[versions.Fake]
+doChords = true
+doVoice = true
+doLyrics = false
+doLyricsmore = false
+doLyricsmoremore = false
+doChordBars = false
+doGuitar = false
+doExtra = false
+doPrep = false
+doOwn = false
+#}
+{% if part == "Vars" %}
+{% endif %}
+{% if part == "Doc" %}	DONE:
+	- added the meta data from the fake book.
+	- put in the tunes structure.
+	- put in the chords (fake book).
+	- put in the tune (fake book).
+	- added youtube performances.
+	TODO:
+	- add the lyrics.
+	- check the chords (fake book).
+	- check the tune (fake book).
+	- hear the tune to check that it is right and adjust the tempo.
+{% endif %}
+{% if part == "ChordsFake" %}\chordmode {
+	\startChords
+	\startSong
+
+	\partial 16*5 s16*5 |
+
+	\myMark "A"
+	\startPart
+	\repeat volta 2 {
+		c1 | c | c | c:7 | \myEndLine
+		f1:7 | f:7 | c | c | \myEndLine
+		g1:7 | f2 g:7 | c1 | c | \myEndLine
+		\endPart
+
+		\myMark "B"
+		\startPart
+		c1 | c | c:7 | c:7 | \myEndLine
+		f1 | f:7 | c | c | \myEndLine
+		g1:7 | g:7 | c4 c:7/bes f/a f:m/aes | c4/g g:7 c2 | \myEndLine
+		\endPart
+
+		\myMark "C"
+		\startPart
+		c1 | c | c | c:7 | \myEndLine
+		f1 | f | c | c | \myEndLine
+		g1:7 | g:7 | c | c | \myEndLine
+		\endPart
+
+		\myMark "B"
+		\startPart
+		c1 | c | c:7 | c:7 | \myEndLine
+		f1 | f:7 | c | c | \myEndLine
+		g1:7 | g:7 |
+	} \alternative {
+		{
+			c1 | g:7 | \myEndLineVoltaNotLast
+		}
+		{
+			c4 c:7/bes f/a f:m/aes | c4/g g:7 c2 | \myEndLineVoltaLast
+		}
+	}
+	\endPart
+
+	\endSong
+	\endChords
+}
+{% endif %}
+{% if part == "VoiceFake" %}{
+	\tempo "Allegro" 4 = 180
+	\time 4/4
+	\key c \major
+
+	\partial 16*5 g'16 a8. g16 |
+
+	% part "A"
+	\repeat volta 2 {
+		c4 bes g8 c,4. | c'8. g16 bes8. g16 c8 g4 e8~ | e1~ | e4 r r \tuplet 3/2 { c8 d c } |
+		g'4 f ees8 c4. | r8. e!16 f8. fis16 g8. a16 c,8. e16~ | e1~ | e4 r r bes'8. g16 |
+		bes4 bes a8 g4 fis8 | g8. c16 g8. ges16 f4 e8. c16~ | c1~ | c4 r r8. g'16 dis8. e16 |
+
+		% part "B"
+		g8. g16 dis8. e16 g8. g16 d8. e16 | g8. g16 dis8. e16 g8. g16 d8. e16 | g1~ | g4 r r8. c16 gis8. a16 |
+		c8. c16 gis8. a16 c2 | r8. ees16 d8. ees16 d8. c16 a8. aes16 | g1~ | g4 r r8. g16 a8. ais16 |
+		b8. d16 b8. bes16 a8. g16 a8. ais16 | b!8. d16 cis8. b16 g8 ees'4 c8~ | c1~ | c4 r r8. g16 a8. g16 |
+
+		% part "C"
+		c8. dis,16 e8. g16~ g4 r8 a | c8. dis,16 e8. g16~ g4 r8 a | c8. dis,16 e8. g16 c8. d,16 e8. g16 | bes4 a g ees8. d16~ |
+		d1 | r4 \tuplet 3/2 { c8 d c } dis8 e4 c8~ | c1~ | c4 r r8. g'16 a8. g16 |
+		d'8 bes4 g8~ g4 r8. dis16 | e8. g16 e8. g16 a8. ees16 d8. c16~ | c1~ | c4 r r8. g'16 dis8. e16 |
+
+		% part "B"
+		g8. g16 dis8. e16 g8. g16 d8. e16 | g8. g16 dis8. e16 g8. g16 d8. e16 | g1~ | g4 r r8. c16 gis8. a16 |
+		c8. c16 gis8. a16 c2 | r8. ees16 d8. ees16 d8. c16 a8. aes16 | g1~ | g4 r r8. g16 a8. ais16 |
+		b8. d16 b8. bes16 a8. g16 a8. ais16 | b!8. d16 cis8. b16 g8 ees'4 c8~ |
+	} \alternative {
+		{
+			c1~ | c4 r r8. g16 a8. g16 |
+		}
+		{
+			c1~ | c2 r |
+		}
+	}
+}
+{% endif %}

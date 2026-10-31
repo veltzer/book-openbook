@@ -1,0 +1,103 @@
+{#
+default_version = "Fake"
+
+[attributes]
+title = "Intermission Riff"
+style = "Jazz"
+composer = "Ray Wetzel"
+poet = "Steve Graham"
+piece = "Medium Swing"
+copyright = "1946, 1947, 1956 & 1958 MICHAEL H. GOLDSEN, INC."
+copyrightextra = "Renewed 1974-1975-1985-1987 MICHAEL H. GOLDSEN, INC."
+typesetter = "Mark Veltzer <mark.veltzer@gmail.com>"
+completion = "5"
+uuid = "ec7e68fe-d519-11f1-8000-046874d194b7"
+structure = "AA"
+location = "jfb:185"
+
+[[youtube]]
+id = "7BUy3hVlsV8"
+remark = "Stan Kenton and his orchestra in the original recording"
+
+[[youtube]]
+id = "jcrAhQvMRYQ"
+remark = "Maxwell Davis"
+
+[versions.Fake]
+doChords = true
+doVoice = true
+doLyrics = false
+doLyricsmore = false
+doLyricsmoremore = false
+doChordBars = false
+doGuitar = false
+doExtra = false
+doPrep = false
+doOwn = false
+#}
+{% if part == "Vars" %}
+{% endif %}
+{% if part == "Doc" %}	DONE:
+	- added the meta data from the fake book.
+	- put in the tunes structure.
+	- put in the chords (fake book).
+	- put in the tune (fake book).
+	- added youtube performances.
+	TODO:
+	- add the lyrics.
+	- check the chords (fake book).
+	- check the tune (fake book).
+	- hear the tune to check that it is right and adjust the tempo.
+{% endif %}
+{% if part == "ChordsFake" %}\chordmode {
+	\startChords
+	\startSong
+
+	\myMark "A"
+	\startPart
+	\repeat volta 2 {
+		c1*3:6 | des1:6 | c1*2:6 | \myEndLine
+		c1:6 | des:6 | d:9 | des:9 | c:6 | g:7 | \myEndLine
+		\endPart
+
+		\myMark "A"
+		\startPart
+		c1*3:6 | des1:6 | c1*2:6 | \myEndLine
+		c1:6 | des:6 | d:9 | des:9 | c:6 |
+	} \alternative {
+		{
+			g1:7 | \myEndLineVoltaNotLast
+		}
+		{
+			c1:6.9 | \myEndLineVoltaLast
+		}
+	}
+	\endPart
+
+	\endSong
+	\endChords
+}
+{% endif %}
+{% if part == "VoiceFake" %}{
+	\tempo "Moderato" 4 = 160
+	\time 4/4
+	\key c \major
+
+	% part "A"
+	\repeat volta 2 {
+		r8 g'4 r8 a4 r | b8 r r g r2 | r4 r8 g~ g g g g | aes1 | r8 g4 r8 a4 r | b8 r r g r2 |
+		r4 r8 g~ g g g g | aes1 | r4 r8 c~ c e c a | aes8 ees'~ ees2 aes,4 | g a b c | cis d2 r4 |
+
+		% part "A"
+		r8 g,4 r8 a4 r | b8 r r g r2 | r4 r8 g~ g g g g | aes1 | r8 g4 r8 a4 r | b8 r r g r2 |
+		r4 r8 g~ g g g g | aes1 | r4 r8 c~ c e c a | aes8 ees'~ ees2 aes,4 | g a b c |
+	} \alternative {
+		{
+			cis4 d2 r4 |
+		}
+		{
+			cis4 d2. |
+		}
+	}
+}
+{% endif %}

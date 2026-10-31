@@ -1,0 +1,112 @@
+{#
+default_version = "Fake"
+
+[attributes]
+title = "I've Grown Accustomed To Her Face"
+style = "Broadway"
+composer = "Frederick Loewe"
+poet = "Alan Jay Lerner"
+piece = "Moderately Slow"
+copyright = "1956 by Alan Jay Lerner and Frederick Loewe"
+copyrightextra = "Copyright Renewed. Chappell & Co., Inc., owner of publication and allied rights throughout the World"
+typesetter = "Mark Veltzer <mark.veltzer@gmail.com>"
+completion = "5"
+uuid = "6e16a052-d51a-11f1-8000-046874d194b7"
+structure = "AB"
+location = "jfb:174"
+
+[[youtube]]
+id = "Ay0fl0l0IAE"
+remark = "Rex Harrison in the original cast recording of My Fair Lady (1956)"
+
+[[youtube]]
+id = "Lmzs3e0Th-Q"
+remark = "Wes Montgomery"
+
+[versions.Fake]
+doChords = true
+doVoice = true
+doLyrics = false
+doLyricsmore = false
+doLyricsmoremore = false
+doChordBars = false
+doGuitar = false
+doExtra = false
+doPrep = false
+doOwn = false
+#}
+{% if part == "Vars" %}
+{% endif %}
+{% if part == "Doc" %}	DONE:
+	- added the meta data from the fake book.
+	- put in the tunes structure.
+	- put in the chords (fake book).
+	- put in the tune (fake book).
+	- added youtube performances.
+	TODO:
+	- add the lyrics.
+	- check the chords (fake book).
+	- check the tune (fake book).
+	- hear the tune to check that it is right and adjust the tempo.
+	- bar 15: the 7th note (g) carries a natural sign in the fake book, check it.
+{% endif %}
+{% if part == "ChordsFake" %}\chordmode {
+	\startChords
+	\startSong
+
+	\partial 4. s4. |
+
+	\repeat volta 2 {
+
+		\myMark "A"
+		\startPart
+		ees2 aes:7 | g:m7 c:m7 | f:m7 bes:7 | bes:m7 ees:7 | \myEndLine
+		bes2/aes a4.:m7.5- d8:7 | g2:m7 c:7 | a4.:m7.5- d8:7.9- g4.:m7 c8:7 | f2:m7 bes:9 | \myEndLine
+		\endPart
+
+		\myMark "B"
+		\startPart
+		ees2 aes:7 | g:m7 c:m7 | f:m7 bes:7 | bes:m7 ees:7 | \myEndLine
+		a2:m7.5- d:7 | g:m7 c:7.5+ | f:m7 bes4:7 bes:7/aes | g2:7.5+ c:7.5+ | \myEndLine
+		a2:m7.5- aes4.:m7 des8:7 | g2:m7 c:7.9- | f4.:m7 f8:m7/bes bes2:9 |
+	} \alternative {
+		{
+			ees2 f4:m7 bes:7 | \myEndLineVoltaNotLast
+		}
+		{
+			ees1:6 | \myEndLineVoltaLast
+		}
+	}
+	\endPart
+
+	\endSong
+	\endChords
+}
+{% endif %}
+{% if part == "VoiceFake" %}{
+	\tempo "Moderato" 4 = 100
+	\time 4/4
+	\key ees \major
+
+	\partial 4. ees8 f g |
+
+	\repeat volta 2 {
+
+		% part "A"
+		bes8 bes bes bes f2~ | f4 r r8 ees f g | bes bes bes bes aes2~ | aes4 r r8 g aes bes |
+		d8 d d d c4. a!8 | c c c c bes4. b!8 | c4. a!8 bes4. g8 | aes8 r r e! f f g aes |
+
+		% part "B"
+		bes8 bes bes bes f2~ | f4 r r8 ees f g | bes bes bes bes aes2~ | aes4 r r8 g aes bes |
+		c8 c d c d c bes a! | bes bes c bes c2 | aes8 aes bes aes bes aes g! f | g g aes g aes g f ees |
+		g8 g g g ees4. f8 | g g g g bes4. bes8 | g8 g4. ees8 c4. |
+	} \alternative {
+		{
+			ees4. r8 r ees f g |
+		}
+		{
+			ees2. r4 |
+		}
+	}
+}
+{% endif %}

@@ -1,0 +1,116 @@
+{#
+default_version = "Fake"
+
+[attributes]
+title = "It's The Talk Of The Town"
+style = "Jazz"
+composer = "Jerry Livingston"
+poet = "Marty Symes, A.J. Neiburg"
+piece = "Slowly, with expression"
+copyright = "1933 by Stanly Bros., Inc."
+copyrightextra = "Copyright 1961 Renewed and Assigned to Hallmark Music Co., Inc., Beverly Hills, Calif."
+typesetter = "Mark Veltzer <mark.veltzer@gmail.com>"
+completion = "5"
+uuid = "6e1d1ee6-d51a-11f1-8000-046874d194b7"
+structure = "AABA"
+location = "jfb:194"
+
+[[youtube]]
+id = "gS11CBQJ9ao"
+remark = "Glen Gray and the Casa Loma Orchestra with Kenny Sargent (vocal) in the hit recording (1933)"
+
+[[youtube]]
+id = "T0u4R9Xq_OM"
+remark = "Coleman Hawkins Quartet"
+
+[versions.Fake]
+doChords = true
+doVoice = true
+doLyrics = false
+doLyricsmore = false
+doLyricsmoremore = false
+doChordBars = false
+doGuitar = false
+doExtra = false
+doPrep = false
+doOwn = false
+#}
+{% if part == "Vars" %}
+{% endif %}
+{% if part == "Doc" %}	DONE:
+	- added the meta data from the fake book.
+	- put in the tunes structure.
+	- put in the chords (fake book).
+	- put in the tune (fake book).
+	- added youtube performances.
+	TODO:
+	- add the lyrics.
+	- check the chords (fake book).
+	- check the tune (fake book).
+	- hear the tune to check that it is right and adjust the tempo.
+	- last two bars: the fake book places C7b9 over the last triplet note and Gb maj7 and F maj9 inside the final whole note; the beat positions here are approximate.
+{% endif %}
+{% if part == "ChordsFake" %}\chordmode {
+	\startChords
+	\startSong
+
+	\myMark "A"
+	\startPart
+	f2:maj7 aes:dim7 | g:m7 c:7 | c:m7/f f:7 | \myEndLine
+	bes:maj7 ees:9 | f1:maj7 | ees2:7 d:7 | \myEndLine
+	g1:9 | g2:m7/c c:7 |
+	\endPart
+
+	\myMark "A"
+	\startPart
+	f:maj7 aes:dim7 | g:m7 c:7 | \myEndLine
+	c:m7/f f:7 | bes:maj7 ees:9 | f1:maj7 | ees2:7 d:7 | \myEndLine
+	g:7 c:7.9- | f1 |
+	\endPart
+
+	\myMark "B"
+	\startPart
+	g2:m7 d:7 | \myEndLine
+	g1:m7 | g:m7 | a2:m7.5- d:7 | \myEndLine
+	g:7 d:m7 | g:7 d:m | g1:9 | \myEndLine
+	c2:7.5+ ges:9 |
+	\endPart
+
+	\myMark "A"
+	\startPart
+	f:maj7 aes:dim7 | g:m7 c:7 | \myEndLine
+	c:m7/f f:7 | bes:maj7 ees:9 | f1:maj7 | \myEndLine
+	ees2:7 d:7 | g:7 c4:9 c:7.9- | f ges:maj7 f2:maj9 | \myEndLine
+	\endPart
+
+	\endSong
+	\endChords
+}
+{% endif %}
+{% if part == "VoiceFake" %}{
+	\tempo "Andante" 4 = 80
+	\time 2/2
+	\key f \major
+
+	% part "A"
+	e8. e16 e8. e16 d2 | f8. f16 f8. f16 e2 | g8. g16 g8. g16 f2 |
+	a8. a16 a8. a16 g2 | r4 c8. c16 e8. e16 d8. d16 | bes2 a |
+	r4 a8 a \tuplet 3/2 { d4 d a } | g1 |
+
+	% part "A"
+	e8. e16 e8. e16 d2 | f8. f16 f8. f16 e2 |
+	g8. g16 g8. g16 f2 | a8. a16 a8. a16 g2 | r4 c8. c16 e8. e16 d8. d16 | bes2 a |
+	r4 d,8 d \tuplet 3/2 { a'4 a a } | f2. r8 f |
+
+	% part "B"
+	g8. g16 g8. g16 a8 a4 a8 |
+	bes4 bes8. bes16 c8 c4 c8 | \tuplet 3/2 { d4 d d } d bes | a1 |
+	g8. g16 g8. g16 a8 a4. | b!8. b16 b8. b16 d8 d4. | \tuplet 3/2 { d4 cis e } a, a |
+	\tuplet 3/2 { d4 cis e } gis,2 |
+
+	% part "A"
+	e8. e16 e8. e16 d2 | f8. f16 f8. f16 e2 |
+	g8. g16 g8. g16 f2 | a8. a16 a8. a16 g2 | r4 c8. c16 e8. e16 d8. d16 |
+	bes2 a | r4 d,8 d \tuplet 3/2 { a'4 a a } | f1 |
+}
+{% endif %}

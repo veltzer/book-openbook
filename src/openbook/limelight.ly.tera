@@ -1,0 +1,127 @@
+{#
+default_version = "Fake"
+
+[attributes]
+title = "Limelight"
+style = "Jazz"
+composer = "Gerry Mulligan"
+piece = "Fast"
+copyright = "1952 CRITERION MUSIC CORP."
+copyrightextra = "Renewed 1980 CRITERION MUSIC CORP."
+typesetter = "Mark Veltzer <mark.veltzer@gmail.com>"
+completion = "5"
+uuid = "a3fee55a-d51d-11f1-8000-046874d194b7"
+structure = "AABA"
+location = "jfb:220"
+
+[[youtube]]
+id = "kIseWtLCoWk"
+remark = "Gerry Mulligan studio recording"
+
+[[youtube]]
+id = "J_klGMqaDyE"
+remark = "Gerry Mulligan with the WDR Big Band"
+
+[versions.Fake]
+doChords = true
+doVoice = true
+doLyrics = false
+doLyricsmore = false
+doLyricsmoremore = false
+doChordBars = false
+doGuitar = false
+doExtra = false
+doPrep = false
+doOwn = false
+#}
+{% if part == "Vars" %}
+{% endif %}
+{% if part == "Doc" %}	DONE:
+	- added the meta data from the fake book.
+	- put in the tunes structure.
+	- put in the chords (fake book).
+	- put in the tune (fake book).
+	- added youtube performances.
+	TODO:
+	- check the chords (fake book).
+	- check the tune (fake book).
+	- hear the tune to check that it is right and adjust the tempo.
+	- last A bar 7: the book prints a bar line in the middle of the bar (two half bars of 2/4); it is typed as one 4/4 bar, check it.
+	- last A bar 8: the book prints the chord as Dm7#5 over a b flat melody, check it.
+{% endif %}
+{% if part == "ChordsFake" %}\chordmode {
+	\startChords
+	\startSong
+
+	\partial 2 s2 |
+
+	\myMark "A"
+	\startPart
+	\repeat volta 2 {
+		c2 bes4 aes | g2 f | e:m7 a:7.9- | d:m7 g:7 | \myEndLine
+		c1 | c:m7 | d2:m c |
+	} \alternative {
+		{
+			f2:7.9- fis:dim7 | \myEndLineVoltaNotLast
+		}
+		{
+			f2:7.9- fis:dim7 | \myEndLineVoltaLast
+		}
+	}
+	\endPart
+
+	\myMark "B"
+	\startPart
+	e1*2:7 | a1*2:m | \myEndLine
+	d1*2:7 | g2:7 g:7.5+ | g1:7.5+ | \myEndLine
+	\endPart
+
+	\myMark "A"
+	\startPart
+	c2 bes4 aes | g2 f | e:m7 a:7 | d1:m7 | \myEndLine
+	c1 | f2:7.9- fis:dim7 | c1 | s4 d:m7.5+ g:7 g:m7 | \myEndLine
+	s2 c:7 | f:7.9- fis:dim7 | s2 d4:m7 g8:7 c | s1 | \myEndLine
+	\endPart
+
+	\myMark "Coda"
+	\startPart
+	s2 c:7 | f2.:7.9- g4:m7 | s2 c:7 | f:7.9- fis:dim7 | s2 d4:m7 g8:7 c | \myEndLine
+	\endPart
+
+	\endSong
+	\endChords
+}
+{% endif %}
+{% if part == "VoiceFake" %}{
+	\tempo "Allegro" 4 = 220
+	\time 4/4
+	\key c \major
+
+	\partial 2 r8 g' a r |
+
+	% part "A"
+	\repeat volta 2 {
+		c8^\markup { \musicglyph #"scripts.segno" } g r bes f r aes ees | r g d r f c r dis | e g a g bes4 g8 f~ | f g4. r4 r8 c, |
+		dis e f fis g c r g | bes4 g8 f r4 r8 c | dis e f fis g4 c,4 |
+	} \alternative {
+		{
+			fis4 f!8 ees r g a r |
+		}
+		{
+			fis4 f!8 ees r4 r8 e! |
+		}
+	}
+
+	% part "B"
+	f8 e r4 r4 r8 e | d e r4 r r8 e | a e r e d e r e | c a r4 r r8 e' |
+	d e r4 r r8 e | b'4 b b8 a fis d | g gis a dis,~ dis2~ | dis2 r8 g a r |
+
+	% part "A"
+	c8 g r bes f r aes ees | r g d r f c r dis | e g a g bes4 g8 f~ | f g4. r4 r8 c, |
+	dis e f fis g4 c,4 | fis4 f!8 ees r4 r8 c | dis e f fis g c r g | bes4 g8 f r4 bes4~^\markup { To Coda \musicglyph #"scripts.coda" } |
+	bes4 a8 aes g4 c,4 | fis4 f!8 ees r c4 dis8~ | dis8 e dis e a4 b,8 c | r1^\markup { D.S. al Coda } |
+
+	% part "Coda"
+	bes'4 a8 aes g4 c,4 | fis4 f!8 ees r4 bes'4~ | bes4 a8 aes g4 c, | fis4 f!8 ees r8 c4 dis8~ | dis8 e dis e a4 b,8 c |
+}
+{% endif %}

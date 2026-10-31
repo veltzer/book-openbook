@@ -1,0 +1,137 @@
+{#
+default_version = "Fake"
+
+[attributes]
+title = "Harold's House Of Jazz"
+style = "Jazz"
+composer = "Richie Cole, David Lahm"
+poet = "Richie Cole, David Lahm"
+piece = "Fast Swing"
+copyright = "1974 Alto Madness Music (BMI) Admin. by Bug"
+typesetter = "Mark Veltzer <mark.veltzer@gmail.com>"
+completion = "5"
+uuid = "3f8dc17a-d51a-11f1-8000-046874d194b7"
+structure = "AABA"
+location = "jfb:142"
+
+[[youtube]]
+id = "JY5LOaI-fkI"
+remark = "Richie Cole with Eddie Jefferson in the original recording"
+
+[[youtube]]
+id = "RaP2Mzw-j7M"
+remark = "Richie Cole live with Alto Madness (2015)"
+
+[versions.Fake]
+doChords = true
+doVoice = true
+doLyrics = false
+doLyricsmore = false
+doLyricsmoremore = false
+doChordBars = false
+doGuitar = false
+doExtra = false
+doPrep = false
+doOwn = false
+#}
+{% if part == "Vars" %}
+{% endif %}
+{% if part == "Doc" %}	DONE:
+	- added the meta data from the fake book.
+	- put in the tunes structure.
+	- put in the chords (fake book).
+	- put in the tune (fake book).
+	- added youtube performances.
+	TODO:
+	- add the lyrics.
+	- check the chords (fake book).
+	- check the tune (fake book).
+	- hear the tune to check that it is right and adjust the tempo.
+	- the book brackets only the first bar of the second ending; the four bars after it are typed inside the second ending.
+{% endif %}
+{% if part == "ChordsFake" %}\chordmode {
+	\startChords
+	\startSong
+
+	\partial 4. s4. |
+
+	\myMark "Intro"
+	\startPart
+	bes2:6 bes:dim7 | c4.:m7/bes b:maj7/bes bes4:6 | s1 | s1 | \myEndLine
+	\endPart
+
+	\myMark "A"
+	\startPart
+	\repeat volta 2 {
+		bes1*2:maj7 | f1:m7 | bes:7 | \myEndLine
+		ees1*2:maj7 | ees1:m7 | aes:7 | \myEndLine
+		bes1*2:maj7 | c1:7 | \myEndLine
+	} \alternative {
+		{
+			s1 | c:m7 | g:7 | c:m7 | f2:7 f:7.5+ | \myEndLineVoltaNotLast
+		}
+		{
+			c1:7 | c2:m7 f:7 | c:m7 f:7.5+ | bes1*2:maj7 | \myEndLineVoltaLast
+		}
+	}
+	\endPart
+
+	\myMark "B"
+	\startPart
+	cis1:m7 | fis:7 | b1*2:maj7 | \myEndLine
+	b1:m7 | e:7 | a1*2:maj7 | \myEndLine
+	a1:m7 | d:7 | g1*2:maj7 | \myEndLine
+	g1:m7 | c:7 | c:m7 | f:7 | \myEndLine
+	\endPart
+
+	\myMark "A"
+	\startPart
+	bes1*2:maj7 | f1:m7 | bes:7 | \myEndLine
+	ees1*2:maj7 | ees1:m7 | aes:7 | \myEndLine
+	bes1*2:maj7 | c1*2:7 | \myEndLine
+	c1:m7 | f:7 | d:m7 | g:7 | \myEndLine
+	c:m7 | f2.:7sus4 bes4:6 | \myEndLine
+	\endPart
+
+	\endSong
+	\endChords
+}
+{% endif %}
+{% if part == "VoiceFake" %}{
+	\tempo "Allegro" 4 = 220
+	\time 4/4
+	\key bes \major
+
+	\partial 4. f'8 g4 |
+
+	% part "Intro"
+	bes4 r bes r | bes4 r8 bes r4 bes | r1 | r1 |
+
+	% part "A"
+	\repeat volta 2 {
+		f4 f f f | f f f f | f8 g bes g r2 | aes8 bes c bes r2 |
+		bes4 bes, c r | r2 bes8 c ees g | bes4. c8 bes4 ges~ | ges2 r |
+		r8 c, d f d c d f | d c d f d c d f | a d, ees e!~ e2 |
+	} \alternative {
+		{
+			r2 r4 r8 f'8 | r8 ees4 g,8 d'4 c | bes8 fis g aes~ aes aes g g | bes4. g8 ees f r d~ | d8 c4. cis2 |
+		}
+		{
+			r1 | r8 d8 \tuplet 3/2 { ees g bes } d8 d4 d,8 | \tuplet 3/2 { ees8 g bes } d8 des~ des4 a | bes1~ | bes1 |
+		}
+	}
+
+	% part "B"
+	dis4. gis,8~ gis2 | r8 gis g! gis dis'4 d! | cis4. fis,8~ fis2~ | fis2 r |
+	fis2 cis' | r8 cis c! cis b!4 cis8 gis~ | gis1 | r1 |
+	r8 b,!8 \tuplet 3/2 { c8 e! g } b!8 fis g a | d8 b!4 d8 bes4 c8 a~ | a2 fis' | d1 |
+	r8 cis, d f c' a bes c | d8 e! c d~ d4 des | r8 d, cis d f ees d ees | g8 bes g a~ a4 g |
+
+	% part "A"
+	f4 f f f | f f f f | f8 g bes g r2 | aes8 bes c bes r2 |
+	bes4 bes, c r | r2 bes8 c ees g | bes4. c8 bes4 ges~ | ges2 r |
+	r8 c, d f d c d f | d c d f d c d f | a d, ees e!~ e2 | r2 r4 r8 f'8 |
+	r8 ees4 g,8 d'4 c | bes8 fis g aes~ aes g4 g'8 | r8 f4 a,8 e'!4 d | c8 a bes b! r8 f8 g4 |
+	bes4 r bes r | bes4 r8 bes r4 bes |
+}
+{% endif %}

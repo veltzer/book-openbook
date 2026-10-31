@@ -1,0 +1,110 @@
+{#
+default_version = "Fake"
+
+[attributes]
+title = "The Last Time I Saw Paris"
+style = "Broadway"
+composer = "Jerome Kern"
+poet = "Oscar Hammerstein II"
+piece = "Moderately"
+copyright = "1940 T.B. Harms Company"
+copyrightextra = "Copyright Renewed. (c/o The Welk Music Group, Santa Monica, CA 90401)"
+typesetter = "Mark Veltzer <mark.veltzer@gmail.com>"
+completion = "5"
+uuid = "77a66f3c-d51d-11f1-8000-046874d194b7"
+structure = "AABA"
+location = "jfb:210"
+
+[[youtube]]
+id = "6BofW9xnqe4"
+remark = "Kate Smith in the hit recording of 1940"
+
+[[youtube]]
+id = "XMOAwc-btA0"
+remark = "Sonny Rollins"
+
+[versions.Fake]
+doChords = true
+doVoice = true
+doLyrics = false
+doLyricsmore = false
+doLyricsmoremore = false
+doChordBars = false
+doGuitar = false
+doExtra = false
+doPrep = false
+doOwn = false
+#}
+{% if part == "Vars" %}
+{% endif %}
+{% if part == "Doc" %}	DONE:
+	- added the meta data from the fake book.
+	- put in the tunes structure.
+	- put in the chords (fake book).
+	- put in the tune (fake book).
+	- added youtube performances.
+	TODO:
+	- add the lyrics.
+	- check the chords (fake book).
+	- check the tune (fake book).
+	- hear the tune to check that it is right and adjust the tempo.
+	- the last A is extended to ten bars.
+{% endif %}
+{% if part == "ChordsFake" %}\chordmode {
+	\startChords
+	\startSong
+
+	\partial 4 s4 |
+
+	\myMark "A"
+	\startPart
+	g1*2 | g2 gis:dim7 | d:7/a d:7 | \myEndLine
+	s1 | c2:m d:7 | a:m7 d:7 | g1:6 | \myEndLine
+	\endPart
+
+	\myMark "A"
+	\startPart
+	s1 | s1 | s2 gis:dim7 | d:7/a d:7 | \myEndLine
+	s1 | c2:m d:7 | a:m7 d:7 | g1:6 | \myEndLine
+	\endPart
+
+	\myMark "B"
+	\startPart
+	e2:m7 a:7 | d:maj7 d:6 | e:m7 a:7 | d:maj7 d:6 | \myEndLine
+	fis:m7 b:7 | e:maj7 e:6 | a1:m7 | d2:sus4.7 d:7 | \myEndLine
+	\endPart
+
+	\myMark "A"
+	\startPart
+	g1*2 | g2 gis:dim7 | d:7/a d:7 | \myEndLine
+	a2:m7 d4:7 d:7/c | b2:m7.5- e:7.9- | a1:m7 | d:7.9- | g1*2:6 | \myEndLine
+	\endPart
+
+	\endSong
+	\endChords
+}
+{% endif %}
+{% if part == "VoiceFake" %}{
+	\tempo "Moderato" 2 = 90
+	\time 2/2
+	\key g \major
+
+	\partial 4 d4 |
+
+	% part "A"
+	e4 d b d | g g2 d4 | e d b d | a'2. d,4 |
+	e4 d c d | c' c a d, | c' c a b | g2. d4 |
+
+	% part "A"
+	e4 d b d | g g2 d4 | e d b d | a'2. d,4 |
+	e4 d c d | c' c a d, | c' c a b | g2. g4 |
+
+	% part "B"
+	a4 b g a | fis fis fis b | a b g a | fis2. a4 |
+	b4 cis a b | gis gis gis gis | b a g e | d2. d4 |
+
+	% part "A"
+	e4 d b d | g g2 d4 | e d b d | a'2. d,4 |
+	e4 c' b a | d2 \tuplet 3/2 { e,4 e e } | e4 c' a2~ | a2 b | g1~ | g2. r4 |
+}
+{% endif %}

@@ -1,0 +1,103 @@
+{#
+default_version = "Fake"
+
+[attributes]
+title = "The 'New Frankie And Johnnie' Song"
+style = "Pop"
+composer = "Shel Silverstein, Bob Gibson"
+poet = "Shel Silverstein, Bob Gibson"
+piece = "Moderately Bright"
+copyright = "1962 and 1964 Hollis Music, Inc., New York, NY"
+copyrightextra = "TRO"
+typesetter = "Mark Veltzer <mark.veltzer@gmail.com>"
+completion = "5"
+uuid = "2067bc89-d521-11f1-8000-046874d194b7"
+structure = "A"
+location = "jfb:270"
+
+[[youtube]]
+id = "mApC5xDuiBo"
+remark = "The Greenwood County Singers in their hit recording (1964)"
+
+[[youtube]]
+id = "J4Up2QILitE"
+remark = "Bob Gibson live at Amazingrace, Evanston (1973)"
+
+[versions.Fake]
+doChords = true
+doVoice = true
+doLyrics = false
+doLyricsmore = false
+doLyricsmoremore = false
+doChordBars = false
+doGuitar = false
+doExtra = false
+doPrep = false
+doOwn = false
+#}
+{% if part == "Vars" %}
+{% endif %}
+{% if part == "Doc" %}	DONE:
+	- added the meta data from the fake book.
+	- put in the tunes structure.
+	- put in the chords (fake book).
+	- put in the tune (fake book).
+	- added youtube performances.
+	TODO:
+	- check the chords (fake book).
+	- check the tune (fake book).
+	- hear the tune to check that it is right and adjust the tempo.
+	- the book labels the endings '1-5' and '6.' for its nine verses; here they are plain first and second endings.
+	- the last bar has only a dotted half in the book; a quarter rest was added to fill it.
+	- add the lyrics (nine verses).
+{% endif %}
+{% if part == "ChordsFake" %}\chordmode {
+	\startChords
+	\startSong
+
+	\partial 4 s4 |
+
+	\myMark "A"
+	\startPart
+	\repeat volta 2 {
+		f1 | f:7 | bes | des | \myEndLine
+		f1 | f:7 | g:7 | c:7 | \myEndLine
+		f1 | f:7 | bes | des | f2/c d:7 | \myEndLine
+	} \alternative {
+		{
+			g2:7 c:7 | f1 | c:7 | \myEndLineVoltaNotLast
+		}
+		{
+			g2:7 c:7 | f1 | d:7 | g:7 | \myEndLine
+			c1:7 | f | f:9 | \myEndLineVoltaLast
+		}
+	}
+	\endPart
+
+	\endSong
+	\endChords
+}
+{% endif %}
+{% if part == "VoiceFake" %}{
+	\tempo "Allegro" 4 = 180
+	\time 2/2
+	\key f \major
+
+	\partial 4 c4 |
+
+	% part "A"
+	\repeat volta 2 {
+		a'4 a r2 | r2 r8. f16 f8. f16 | f4 f8. d16 f8. f16 f8. f16 | aes4 aes f8. f16 f8. f16 |
+		a!4 a r2 | r2 r8 a4 a8 | g4 g8. g16 g8. g16 g8. g16 | d'8 c4 c8~ c4 d8. f,16 |
+		a4 a r2 | r1 | f8. f16 f8. f16 f4 f8. f16 | f4 f8 f~ f f4. | a8. a16 a4 a a |
+	} \alternative {
+		{
+			g4 g8. f16 g8 a4 f8~ | f1 | r2 r4 c |
+		}
+		{
+			g'4 g8. f16 g8 a4 f8~ | f2 f' | d1 | f8. f16 f4 f f |
+			d4 c8. d16 c8 d4 f8~ | f1~ | f2. r4 |
+		}
+	}
+}
+{% endif %}

@@ -1,0 +1,129 @@
+{#
+default_version = "Fake"
+
+[attributes]
+title = "More Than You Know"
+style = "Jazz"
+composer = "Vincent Youmans"
+poet = "William Rose, Edward Eliscu"
+piece = "Moderately"
+copyright = "1929 by Miller Music Corp. & Vincent Youman, Inc."
+copyrightextra = "Copyright Renewed, Pubished in the U.S.A by Chappell & Co., Inc. (Intersong Music Publisher)"
+typesetter = "Mark Veltzer <mark.veltzer@gmail.com>"
+completion = "5"
+uuid = "2c9874f0-d521-11f1-8000-046874d194b7"
+structure = "AABA"
+location = "jfb:258"
+
+[[youtube]]
+id = "rLxDPqmjtMU"
+remark = "Billie Holiday (Brunswick Records, 1939)"
+
+[[youtube]]
+id = "dd0a2bNlTOQ"
+remark = "Thelonious Monk and Sonny Rollins Quartet (1954)"
+
+[versions.Fake]
+doChords = true
+doVoice = true
+doLyrics = false
+doLyricsmore = false
+doLyricsmoremore = false
+doChordBars = false
+doGuitar = false
+doExtra = false
+doPrep = false
+doOwn = false
+#}
+{% if part == "Vars" %}
+{% endif %}
+{% if part == "Doc" %}	DONE:
+	- added the meta data from the fake book.
+	- put in the tunes structure.
+	- put in the chords (fake book).
+	- put in the tune (fake book).
+	- added youtube performances.
+	TODO:
+	- add the lyrics.
+	- check the chords (fake book).
+	- check the tune (fake book).
+	- hear the tune to check that it is right and adjust the tempo.
+{% endif %}
+{% if part == "ChordsFake" %}\chordmode {
+	\startChords
+	\startSong
+
+	\partial 2 s2 |
+
+	\repeat volta 2 {
+
+		\myMark "A"
+		\startPart
+		ees2:6 bes:7.5+ | bes:m7 ees:7 | aes:6 g4:m7.5- c:7 | f2:m7 f:m7.5- | \myEndLine
+		bes:7 f:7 | f:m9 bes:7 | g:m7 c:7 | f:m7 bes:7.5+ | \myEndLine
+		\endPart
+
+		\myMark "A"
+		\startPart
+		ees2:6 bes:7.5+ | bes:m7 ees:7 | aes:6 g4:m7.5- c:7 | f2:m7 des:9 | \myEndLine
+		g:m7 c:7 | f:7 bes:7 | ees1 | a2:m7.5- d:7 | \myEndLine
+		\endPart
+
+		\myMark "B"
+		\startPart
+		g1:m7 | a2.:m7.5- aes4:7.5- | g1:m | g2:m c4:m7.5- f:7 | \myEndLine
+		bes2 g:m7 | c:7 c4:m7/f f:7 | bes2.:7 bes4:dim7 | bes2:7 bes:7.5+ | \myEndLine
+		\endPart
+
+		\myMark "A"
+		\startPart
+		ees2:6 bes:7.5+ | bes:m7 ees:7 | aes:6 g4:m7.5- c:7 | f2:m7 des:9 | \myEndLine
+		g:m7 c:7 | f:7 bes:7 |
+	} \alternative {
+		{
+			ees2 ges:dim7 | f:m7 bes:7.5+ | \myEndLineVoltaNotLast
+		}
+		{
+			ees2 ces | ees1 | \myEndLineVoltaLast
+		}
+	}
+	\endPart
+
+	\endSong
+	\endChords
+}
+{% endif %}
+{% if part == "VoiceFake" %}{
+	\tempo "Moderato" 4 = 110
+	\time 4/4
+	\key ees \major
+
+	\partial 2 \tuplet 3/2 { bes'4 b c } |
+
+	\repeat volta 2 {
+
+		% part "A"
+		c2 \tuplet 3/2 { bes4 b c } | c2 \tuplet 3/2 { bes4 b c } | ees4 c bes g | f2 \tuplet 3/2 { f4 fis g } |
+		g2 \tuplet 3/2 { f4 fis g } | g2 \tuplet 3/2 { f4 fis g } | bes1~ | bes4 r \tuplet 3/2 { bes4 b c } |
+
+		% part "A"
+		c2 \tuplet 3/2 { bes4 b c } | c2 \tuplet 3/2 { bes4 b c } | ees4 c bes g | f2 \tuplet 3/2 { f4 fis g } |
+		bes2 \tuplet 3/2 { bes4 b c } | ees2 f | ees1~ | ees4 r d8 c bes a! |
+
+		% part "B"
+		c4 bes8 a! g4 bes | a!8 g f ees g4 f | ees4 d2.~ | d4 r f'8 ees d c |
+		ees4 d8 c bes4 d | c8 bes a! g bes4 aes | g4 f2 r4 | r2 \tuplet 3/2 { bes4 b c } |
+
+		% part "A"
+		c2 \tuplet 3/2 { bes4 b c } | c2 \tuplet 3/2 { bes4 b c } | ees4 c bes g | f2 \tuplet 3/2 { f4 ges g! } |
+		bes2 \tuplet 3/2 { bes4 b c } | f2 g |
+	} \alternative {
+		{
+			ees1~ | ees4 r \tuplet 3/2 { bes4 b c } |
+		}
+		{
+			ees1~ | ees2. r4 |
+		}
+	}
+}
+{% endif %}

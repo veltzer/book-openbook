@@ -1,0 +1,105 @@
+{#
+default_version = "Fake"
+
+[attributes]
+title = "Love Is A Simple Thing"
+style = "Broadway"
+composer = "Arthur Siegel"
+poet = "June Carroll"
+piece = "Moderate rocking tempo"
+copyright = "1952 by Joy Music, Inc."
+copyrightextra = "Copyright Renewed, controlled by Chappell & Co., Inc. (Intersong Music, Publisher)"
+typesetter = "Mark Veltzer <mark.veltzer@gmail.com>"
+completion = "5"
+uuid = "ae967de8-d51d-11f1-8000-046874d194b7"
+structure = "AB"
+location = "jfb:230"
+
+[[youtube]]
+id = "LybgjR3iUjc"
+remark = "The original cast of New Faces of 1952"
+
+[[youtube]]
+id = "5kok83oXJ4k"
+remark = "Sonny Rollins"
+
+[versions.Fake]
+doChords = true
+doVoice = true
+doLyrics = false
+doLyricsmore = false
+doLyricsmoremore = false
+doChordBars = false
+doGuitar = false
+doExtra = false
+doPrep = false
+doOwn = false
+#}
+{% if part == "Vars" %}
+{% endif %}
+{% if part == "Doc" %}	DONE:
+	- added the meta data from the fake book.
+	- put in the tunes structure.
+	- put in the chords (fake book).
+	- put in the tune (fake book).
+	- added youtube performances.
+	TODO:
+	- add the lyrics.
+	- check the chords (fake book).
+	- check the tune (fake book).
+	- hear the tune to check that it is right and adjust the tempo.
+{% endif %}
+{% if part == "ChordsFake" %}\chordmode {
+	\startChords
+	\startSong
+
+	\myMark "A"
+	\startPart
+	\repeat volta 2 {
+		c2 a:m7 | d:m7 g:7 | c a:m7 | d:m7 g:7 | \myEndLine
+		c2:maj9/e ees:dim7 | d:m7 g:7 | c:maj7/e ees:dim7 | d:m7 g:7 | \myEndLine
+		\endPart
+
+		\myMark "B"
+		\startPart
+		c2 a:m7 | d:m7 g:7 | c a:m7 | d:m7 g:7 | \myEndLine
+		c2:maj9 ees:dim7 | e:m7.5- a:7.9- | d:m7 g:7.9- | \myEndLine
+		c2:maj7 e4:m7.5- a:7 | d2:m7 g:7.9- |
+	} \alternative {
+		{
+			c2 d4:m7 g:7 | \myEndLineVoltaNotLast
+		}
+		{
+			c1 | \myEndLineVoltaLast
+		}
+	}
+	\endPart
+
+	\endSong
+	\endChords
+}
+{% endif %}
+{% if part == "VoiceFake" %}{
+	\tempo "Moderato" 4 = 120
+	\time 4/4
+	\key c \major
+
+	% part "A"
+	\repeat volta 2 {
+		e4 e8. f16 e8. d16 c4 | d4 d8. e16 f8. g16 a4 | g8. fis16 g8. a16 g8. f!16 e4 | f4 f8. g16 a8. b16 c4 |
+		d4 d8. c16 d8. d16 c4 | g2. r4 | b4 b8. a16 b4 a | d,2. r4 |
+
+		% part "B"
+		e4 e8. f16 e8. d16 c4 | d4 d8. e16 f8. g16 a4 | g8. fis16 g8. a16 g8. f!16 e4 | f4 f8. g16 a8. b16 c4 |
+		d4 d8. c16 d4 c | g2 ais4. a!8 | f4 f8. g16 f8. e16 d4 |
+		g4 g8. a16 g8. f16 e4 | c'4 a8. b16 c4 d |
+	} \alternative {
+		{
+			c2. r4 |
+		}
+		{
+			c2. r4 |
+		}
+	}
+}
+{% endif %}

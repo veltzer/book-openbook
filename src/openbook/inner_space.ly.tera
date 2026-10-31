@@ -1,0 +1,119 @@
+{#
+default_version = "Fake"
+
+[attributes]
+title = "Inner Space"
+style = "Jazz"
+composer = "Chick Corea"
+piece = "Medium-Up Swing"
+copyright = "1973 Litha Music"
+typesetter = "Mark Veltzer <mark.veltzer@gmail.com>"
+completion = "3"
+uuid = "234784c4-d51a-11f1-8000-046874d194b7"
+structure = "AB"
+location = "jfb:184"
+
+[[youtube]]
+id = "C44V39jVtgI"
+remark = "Chick Corea in the original recording from Tones for Joan's Bones (1968)"
+
+[[youtube]]
+id = "GF0wbcxLK6M"
+remark = "Chick Corea"
+
+[versions.Fake]
+doChords = true
+doVoice = true
+doLyrics = false
+doLyricsmore = false
+doLyricsmoremore = false
+doChordBars = false
+doGuitar = false
+doExtra = false
+doPrep = false
+doOwn = false
+#}
+{% if part == "Vars" %}
+{% endif %}
+{% if part == "Doc" %}	DONE:
+	- added the meta data from the fake book.
+	- put in the tunes structure.
+	- put in the chords (fake book).
+	- put in the tune (fake book).
+	- added youtube performances.
+	TODO:
+	- check the chords (fake book).
+	- check the tune (fake book).
+	- hear the tune to check that it is right and adjust the tempo.
+	- the book prints many accidentals only on the first note of a bar; the following notes were typed with the accidental carried through the bar (e.g. the e flats and f flats in the A part, the c flats in the 5th to 8th bars of the A part, the g sharps in the B part, the d in the ninth bar of the coda); check them.
+	- the exact beat of several chord changes (the E chord at the end of the intro and of the coda line, the Eb add9, the E and EbM7 near the end of the A part) is unclear in the book; check them.
+{% endif %}
+{% if part == "ChordsFake" %}\chordmode {
+	\startChords
+	\startSong
+
+	\myMark "Intro"
+	\startPart
+	r1 | a1*2:maj7 | c1:maj7.5- | \myEndLine
+	des1:maj7 | s2.. e8:maj7.5- | e2:maj7.5- ees:maj7 | d1:maj7.5- | \myEndLine
+	\endPart
+
+	\repeat volta 2 {
+
+		\myMark "A"
+		\startPart
+		des1*2:m | s2 d4:maj7.5- des:m | c4.:m7.5- a8:maj7.5- s2 | \myEndLine
+		des1*2:m | s2 d:maj7.5- | c2:maj7.5- a4.:maj7.5- ees8:5.9 | s1 | \myEndLine
+		s4 e2.:maj7.5- | s2 ges:maj7 | s2 e4. ees8:maj7 | s2 e4:7 ees:7 | s1 | \myEndLine
+		\endPart
+
+		\myMark "B"
+		\startPart
+		a1:maj7.5- | c:maj7.5- | des:maj7.5- | e8:maj7.5- ees4:maj7 e8*5:maj7.5- | \myEndLine
+		e1*4/f | \myEndLine
+		ees1*4:m7 | \myEndLine
+		d1*4:maj7.5- | \myEndLine
+		\endPart
+
+	}
+
+	\myMark "Coda"
+	\startPart
+	s2 a:maj7.5- | s1 | s1 | c1:maj7.5- | \myEndLine
+	des1:maj7.5- | s2.. e8:maj7.5- | s2 ees:maj7.5- | d4.:maj7.5- f8*5:maj7.5- | \myEndLine
+	e2:maj7.5- ees:maj7.5- | d4.:maj7.5- f8*5:maj7.5- | e2:maj7.5- ees:maj7.5- | d1:maj7.5- | \myEndLine
+	\endPart
+
+	\endSong
+	\endChords
+}
+{% endif %}
+{% if part == "VoiceFake" %}{
+	\tempo "Allegro" 4 = 200
+	\time 4/4
+	\key c \major
+
+	% part "Intro"
+	dis'8 e gis, dis'~ dis2~ | dis2 cis8 dis~ \tuplet 3/2 { dis8 cis gis } | b4 c8 b~ b2~ | b2 \tuplet 3/2 { a4 e b } |
+	\tuplet 3/2 { g'4 aes c, } g'2~ | g4. f8 g,8 aes4 dis8~ | dis8 fis gis fis a4 d,!8 cis~ | cis1 |
+
+	\repeat volta 2 {
+
+		% part "A"
+		ees4^\markup { \musicglyph #"scripts.segno" } ees r8 ees4.~ | ees4 ees ees4. ees8~ | ees2 cis4 ees | fis4. dis8~ dis2 |
+		ees4. fes8 ees g, aes fes' | ees8 fes ees4~ ees8 fes ees g, | aes8 fes' ees ges cis,4 ees | fis2 gis4. bes8~ | bes4. ces8 bes d, ees ces' |
+		bes8 ces bes4~ bes8 ces bes d, | ees8 ces' bes ces bes4. ces8 | bes8 d, ees ces' bes ces4 bes8~ | bes1 | r8^\markup { break } g, d' dis e g b d^\markup { To Coda \musicglyph #"scripts.coda" } |
+
+		% part "B"
+		dis2 cis8 b gis cis | b2 a8 fis e g~ | g2 f8 ees c f | dis8 d!4 cis8 r8 g8 \tuplet 3/2 { c!8 d g } |
+		gis4 r8 gis8~ gis2 | r4 gis8 r8 r8 gis4. | r2 gis8 r8 r8 gis8~ | gis1 |
+		aes8 r8 r8 aes8~ aes2 | r4 aes8 r8 r8 aes4. | r2 aes8 r8 r8 aes8~ | aes1 |
+		cis8 e b d cis a4 e8 | b'8 fis cis gis'~ gis a gis e | b8 fis'~ fis2. | r8 e b cis~ cis4 b8 gis^\markup { D.S. al Coda } |
+	}
+
+	% part "Coda"
+	dis''8 e gis, dis'~ dis2~ | dis2 cis8 dis~ \tuplet 3/2 { dis8 cis gis } | b4 c8 b~ b2~ | b2 \tuplet 3/2 { a4 e b } |
+	\tuplet 3/2 { g'4 aes c, } g'2~ | g4. f8 g,8 aes4 dis8~ | dis8 fis gis fis a4 d,!8 cis | r4 r8 e8~ e2 |
+	dis8 fis gis fis a4 dis,8 cis | r4 r8 e8~ e2 | dis8 fis gis fis a4 d,!8 cis~ | cis1\fermata |
+}
+{% endif %}

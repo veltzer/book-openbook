@@ -1,0 +1,107 @@
+{#
+default_version = "Fake"
+
+[attributes]
+title = "Lonely Woman"
+style = "Jazz"
+composer = "Horace Silver"
+poet = "Leonard Feather"
+piece = "Moderately"
+copyright = "1962 Ecaroh Music Inc."
+typesetter = "Mark Veltzer <mark.veltzer@gmail.com>"
+completion = "5"
+uuid = "5ab717c8-d51d-11f1-8000-046874d194b7"
+structure = "AABA"
+location = "jfb:224"
+
+[[youtube]]
+id = "fJyq_F0g3KE"
+remark = "Horace Silver in the original recording from Song for My Father (1964)"
+
+[[youtube]]
+id = "dcAw_72tSCw"
+remark = "Horace Silver Trio"
+
+[versions.Fake]
+doChords = true
+doVoice = true
+doLyrics = false
+doLyricsmore = false
+doLyricsmoremore = false
+doChordBars = false
+doGuitar = false
+doExtra = false
+doPrep = false
+doOwn = false
+#}
+{% if part == "Vars" %}
+{% endif %}
+{% if part == "Doc" %}	DONE:
+	- added the meta data from the fake book.
+	- put in the tunes structure.
+	- put in the chords (fake book).
+	- put in the tune (fake book).
+	- added youtube performances.
+	TODO:
+	- check the chords (fake book).
+	- check the tune (fake book).
+	- hear the tune to check that it is right and adjust the tempo.
+	- the fake book prints Fm7#5 in the second bar of the last A (Fm7b5 in the same place elsewhere), check it.
+	- add the lyrics.
+{% endif %}
+{% if part == "ChordsFake" %}\chordmode {
+	\startChords
+	\startSong
+
+	\partial 8 s8 |
+
+	\myMark "A"
+	\startPart
+	ees2:m7 des4:m7 ges:7 | c2:m7.5- ces:maj7 | f:m7.5- bes:7.9+ | ees1:m11 | \myEndLine
+	f2:m7.5- bes:7.9+ | a4:7.5- g2.:7.5+ | f2:m7.5- bes:7.9+ | ees:m9 bes:7.9+ | \myEndLine
+	\endPart
+
+	\myMark "A"
+	\startPart
+	ees2:m7 des4:m7 ges:7 | c2:m7.5- ces:maj7 | f:m7.5- bes:7.9+ | ees1:m11 | \myEndLine
+	f2:m7.5- bes:7.9- | a4:7.5- g2.:7.5+ | f2:m7.5- bes:7.9+ | ees:m9 ees:m7+ | \myEndLine
+	\endPart
+
+	\myMark "B"
+	\startPart
+	ees1:m9 | des2:m7 ges:7 | ces:maj7 bes:7.9+ | \myEndLine
+	\endPart
+
+	\myMark "A"
+	\startPart
+	ees2:m7 des4:m7 ges:7 | c2:m7.5- ces:maj7 | f:m7.5- bes:7.9+ | ees1:m11 | \myEndLine
+	f2:m7.5+ bes:7.9- | a4:7.5- g2.:7.5+ | f2:m7.5- bes:7.9+ | ees1:m9 | \myEndLine
+	\endPart
+
+	\endSong
+	\endChords
+}
+{% endif %}
+{% if part == "VoiceFake" %}{
+	\tempo "Moderato" 4 = 96
+	\time 4/4
+	\key ees \minor
+
+	\partial 8 bes8 |
+
+	% part "A"
+	bes'2 bes | bes bes | r4 \tuplet 3/2 { bes16 ces bes } a!16 bes des4. bes16 aes | bes1 |
+	r4 r16 aes aes ges aes8 bes4. | ges8 ees~ ees2. | r4 r16 ges \tuplet 3/2 { f32 ges f } ees16 des4. bes8 | f'4. des16 d! des'8 b!16 des bes8 bes, |
+
+	% part "A"
+	bes'2 bes | bes bes | r4 \tuplet 3/2 { bes16 ces bes } a!16 bes des4. bes16 aes | bes1 |
+	r4 r16 aes aes ges aes4. bes8 | ges8 ees~ ees2. | r4 r16 ges f ees des4. bes8 | f'4 des'16 bes bes ges ges8 d!4. |
+
+	% part "B"
+	r4 f'16 des des bes bes8 ges4. | r4 ees'16 ces aes e! ees4~ ees16 des c! des | ges4 des8 d! des'8 b!16 des bes8 aes |
+
+	% part "A"
+	bes2 bes | bes bes | r4 \tuplet 3/2 { bes16 ces bes } a!16 bes des4. bes16 aes | bes1 |
+	r4 r16 aes aes ges aes4. bes8 | ges8 ees~ ees2. | r4 r16 ges \tuplet 3/2 { f32 ges f } ees16 des4. bes8 | aes'1 |
+}
+{% endif %}

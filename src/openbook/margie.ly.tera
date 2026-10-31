@@ -1,0 +1,109 @@
+{#
+default_version = "Fake"
+
+[attributes]
+title = "Margie"
+style = "Jazz"
+composer = "Con Conrad, J. Russel Robinson"
+poet = "Benny Davis"
+piece = "Moderately in 2"
+copyright = "1920 Benny Davis Music"
+copyrightextra = "Pursuant to Sections 304(c) and 401(b) of the U.S. Copyright Law."
+typesetter = "Mark Veltzer <mark.veltzer@gmail.com>"
+completion = "5"
+uuid = "288cbb28-d521-11f1-8000-046874d194b7"
+structure = "ABAC"
+location = "jfb:236"
+
+[[youtube]]
+id = "2BfolGcKTx4"
+remark = "Eddie Cantor in the original hit recording (1920)"
+
+[[youtube]]
+id = "7Nvngq3Z7RA"
+remark = "Django Reinhardt (1940)"
+
+[versions.Fake]
+doChords = true
+doVoice = true
+doLyrics = false
+doLyricsmore = false
+doLyricsmoremore = false
+doChordBars = false
+doGuitar = false
+doExtra = false
+doPrep = false
+doOwn = false
+#}
+{% if part == "Vars" %}
+{% endif %}
+{% if part == "Doc" %}	DONE:
+	- added the meta data from the fake book.
+	- put in the tunes structure.
+	- put in the chords (fake book).
+	- put in the tune (fake book).
+	- added youtube performances.
+	TODO:
+	- add the lyrics.
+	- check the chords (fake book).
+	- check the tune (fake book).
+	- hear the tune to check that it is right and adjust the tempo.
+{% endif %}
+{% if part == "ChordsFake" %}\chordmode {
+	\startChords
+	\startSong
+
+	\partial 2. s2. |
+
+	\myMark "A"
+	\startPart
+	f1 | f | f | f2:7 f:7.5+ | \myEndLine
+	bes1:6 | bes:6 | bes:6 | bes:6 | \myEndLine
+	\endPart
+
+	\myMark "B"
+	\startPart
+	f1 | f2:dim7 f | d1:7 | d:7 | \myEndLine
+	g1:7 | g2:dim7 g:7 | c1:7 | c:7 | \myEndLine
+	\endPart
+
+	\myMark "A"
+	\startPart
+	f1 | f | f | f2:7 f:7.5+ | \myEndLine
+	bes1 | bes | a4 b:m7 c2:dim7 | a2:7/cis c:7 | \myEndLine
+	\endPart
+
+	\myMark "C"
+	\startPart
+	f1 | c:7 | f | a2:m7 d:7 | \myEndLine
+	g1:m7 | c:7 | f2 bes:7 | f1 | \myEndLine
+	\endPart
+
+	\endSong
+	\endChords
+}
+{% endif %}
+{% if part == "VoiceFake" %}{
+	\tempo "Moderato" 4 = 160
+	\time 2/2
+	\key f \major
+
+	\partial 2. c'4 c c |
+
+	% part "A"
+	c1 | a | r4 c b! c | d c a g |
+	f1 | d | r4 f e f | bes f g gis |
+
+	% part "B"
+	a2 c | b!2 c | d4 c a fis~ | fis2. r4 |
+	g2 d' | cis d | e4 d bes g | d' c b! bes |
+
+	% part "A"
+	c1 | a | r4 c b! c | d c a g |
+	f2 bes | f g | a1~ | a4 r a bes |
+
+	% part "C"
+	c f e f | c2 a4 bes | c d c d | e2. d4 |
+	bes2 bes | bes4 a2 g4 | f1~ | f2. r4 |
+}
+{% endif %}

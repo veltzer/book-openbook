@@ -1,0 +1,120 @@
+{#
+default_version = "Fake"
+
+[attributes]
+title = "Oh, What A Beautiful Mornin'"
+style = "Broadway"
+composer = "Richard Rodgers"
+poet = "Oscar Hammerstein II"
+piece = "Bright Waltz"
+copyright = "1943 by Williamson Music Co."
+copyrightextra = "Copyright Renewed, All Rights Administered by Chappell & Co., Inc."
+typesetter = "Mark Veltzer <mark.veltzer@gmail.com>"
+completion = "5"
+uuid = "361f3c7b-d521-11f1-8000-046874d194b7"
+structure = "AB"
+location = "jfb:280"
+
+[[youtube]]
+id = "lyaCmhBg4H0"
+remark = "Alfred Drake on the original Broadway cast album of Oklahoma! (1943)"
+
+[[youtube]]
+id = "O5APc0z49wg"
+remark = "Gordon MacRae in the film Oklahoma! (1955)"
+
+[versions.Fake]
+doChords = true
+doVoice = true
+doLyrics = false
+doLyricsmore = false
+doLyricsmoremore = false
+doChordBars = false
+doGuitar = false
+doExtra = false
+doPrep = false
+doOwn = false
+#}
+{% if part == "Vars" %}
+{% endif %}
+{% if part == "Doc" %}	DONE:
+	- added the meta data from the fake book.
+	- put in the tunes structure.
+	- put in the chords (fake book).
+	- put in the tune (fake book).
+	- added youtube performances.
+	TODO:
+	- check the chords (fake book).
+	- check the tune (fake book).
+	- hear the tune to check that it is right and adjust the tempo.
+	- the tune runs over two pages in the fake book (280 and the top of 281).
+	- the fake book prints no chords in bars 18 and 26; they are left empty.
+	- add the lyrics.
+{% endif %}
+{% if part == "ChordsFake" %}\chordmode {
+	\startChords
+	\startSong
+
+	\partial 2 s2 |
+
+	\repeat volta 3 {
+
+		\myMark "A"
+		\startPart
+		ees2. | bes:7 | ees | bes:7 | \myEndLine
+		ees2. | bes:7 | c:m7 | aes2:m7 des4:7 | \myEndLine
+		ees2. | bes:7 | ees | aes | \myEndLine
+		ees2. | c:m7 | cis:dim7 | bes2:7/d bes4:7 | \myEndLine
+		\endPart
+
+		\myMark "B"
+		\startPart
+		ees2. | s | g2:m7.5- c4:7.9- | f2:m7 bes4:7 | \myEndLine
+		ees2. | c:m7 | f:m7 | bes:7 | \myEndLine
+		ees2. | s | aes | a:dim7 | \myEndLine
+		ees2./bes | bes:7 |
+
+	} \alternative {
+		{
+			ees2. | bes:7 | \myEndLineVoltaNotLast
+		}
+		{
+			ees2. | f:m7 | ees/bes | bes:7 | ees | s | \myEndLineVoltaLast
+		}
+	}
+	\endPart
+
+	\endSong
+	\endChords
+}
+{% endif %}
+{% if part == "VoiceFake" %}{
+	\tempo "Allegro" 4 = 160
+	\time 3/4
+	\key ees \major
+
+	\partial 2 bes'4 aes |
+
+	\repeat volta 3 {
+
+		% part "A"
+		g4 f ees | f g aes | g bes2~ | bes4 bes aes |
+		g4 f ees | f g aes | g ees2~ | ees2 f4 |
+		g4 f ees | f g aes | bes aes g | c2 c8 c |
+		bes4 bes bes | bes bes bes | bes bes bes | bes2. |
+
+		% part "B"
+		bes4 g d | ees g bes | des2. | c2. |
+		bes4 g d | ees g bes | f2.~ | f2. |
+		bes4 g d | ees g bes | d2. | ees2. |
+		ees4 bes g | d' aes f |
+	} \alternative {
+		{
+			ees2.~ | ees4 bes' aes |
+		}
+		{
+			ees2. | f2. | ees'4 bes g | d' aes f | ees2.~ | ees4 r r |
+		}
+	}
+}
+{% endif %}

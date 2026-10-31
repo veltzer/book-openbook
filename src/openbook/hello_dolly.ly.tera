@@ -1,0 +1,113 @@
+{#
+default_version = "Fake"
+
+[attributes]
+title = "Hello, Dolly!"
+style = "Broadway"
+composer = "Jerry Herman"
+poet = "Jerry Herman"
+copyright = "1963, 1987 JERRY HERMAN"
+copyrightextra = "All Rights Controlled by JERRYCO MUSIC CO. Exclusive Agent EDWIN H. MORRIS & COMPANY, A Division of MPL Communications, Inc. International Copyright Secured. All Rights Reserved."
+typesetter = "Mark Veltzer <mark.veltzer@gmail.com>"
+completion = "5"
+uuid = "3f91513c-d51a-11f1-8000-046874d194b7"
+structure = "ABAC"
+location = "jfb:145"
+
+[[youtube]]
+id = "Kx2AYFvwxKY"
+remark = "Louis Armstrong in the original hit recording (1964)"
+
+[[youtube]]
+id = "eLKqHfXGc10"
+remark = "Ella Fitzgerald live (1964)"
+
+[versions.Fake]
+doChords = true
+doVoice = true
+doLyrics = false
+doLyricsmore = false
+doLyricsmoremore = false
+doChordBars = false
+doGuitar = false
+doExtra = false
+doPrep = false
+doOwn = false
+#}
+{% if part == "Vars" %}
+{% endif %}
+{% if part == "Doc" %}	DONE:
+	- added the meta data from the fake book.
+	- put in the tunes structure.
+	- put in the chords (fake book).
+	- put in the tune (fake book).
+	- added youtube performances.
+	TODO:
+	- add the lyrics.
+	- check the chords (fake book).
+	- check the tune (fake book).
+	- hear the tune to check that it is right and adjust the tempo.
+	- the book prints no tempo word.
+{% endif %}
+{% if part == "ChordsFake" %}\chordmode {
+	\startChords
+	\startSong
+
+	\partial 4 s4 |
+
+	\myMark "A"
+	\startPart
+	\repeat volta 2 {
+		bes1*2 | g1*2:m | \myEndLine
+		bes1:maj7/d | des:dim7 | c:m7 | f:7 | \myEndLine
+		c1*2:m7 | aes1*2/c | \myEndLine
+		c1:m7 | f:7 | d2.:m7 des4:dim7 | c2:m7 f:7 | \myEndLine
+		bes1*2 | g1*2:m | \myEndLine
+		f1:m7 | bes:7 | ees:maj7 | a2:m7.5- d:7 | \myEndLine
+		g1:m | d:m7 | g:m | d:m7 | \myEndLine
+		c2:9 c:9.5+ |
+	} \alternative {
+		{
+			c2:m7 f:9 | bes des:dim7 | c:m7 f:7 | \myEndLineVoltaNotLast
+		}
+		{
+			c2:m7 f:9 | \myEndLineVoltaLast
+		}
+	}
+	c2:9 c:9.5+ | c:m7 f:9 | c:9 c:9.5+ | c:m7 f:9 | \myEndLine
+	bes4 bes:7/d ees ees:dim7 | bes/f f:7 bes2:6 | \myEndLine
+	\endPart
+
+	\endSong
+	\endChords
+}
+{% endif %}
+{% if part == "VoiceFake" %}{
+	\tempo "Moderato" 4 = 120
+	\time 4/4
+	\key bes \major
+
+	\partial 4 d4 |
+
+	% part "A"
+	\repeat volta 2 {
+		f1 | d4 bes d f | g1 | d4 bes d f |
+		a4 bes a bes | a bes c r8 bes8 | f1 | r4 e! f fis |
+		g1 | ees4 c ees g | aes1 | ees4 c ees g |
+		d'4 c d c | d c a f | r4 g2 a4 | f d ees e! |
+		f1 | d4 bes d f | g1 | d4 bes d f |
+		c'4 bes c bes | c bes c bes | g1 | a1 |
+		r4 bes2 g4 | f2 d8 f4. | bes8 bes bes4 bes g | f2 d8 f4. |
+		d'8 d d4 d d |
+	} \alternative {
+		{
+			d4 c ees d | bes1 | r2 r4 d,4 |
+		}
+		{
+			d'4 c ees r |
+		}
+	}
+	d8 d d4 d d | d c ees r | d8 d d4 d d | d c ees d |
+	bes1~ | bes2. r4 |
+}
+{% endif %}

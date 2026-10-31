@@ -1,0 +1,121 @@
+{#
+default_version = "Fake"
+
+[attributes]
+title = "I'll Walk Alone"
+style = "Jazz"
+composer = "Jule Styne"
+poet = "Sammy Cahn"
+piece = "Slowly"
+copyright = "1944, 1967 MORLEY MUSIC CO. Renewed 1972 MORLEY MUSIC CO."
+copyrightextra = "International Copyright Secured. All Rights Reserved."
+typesetter = "Mark Veltzer <mark.veltzer@gmail.com>"
+completion = "5"
+uuid = "0b846662-d51b-11f1-8000-046874d194b7"
+structure = "AABA"
+location = "jfb:170"
+
+[[youtube]]
+id = "Q2joqd5VNTQ"
+remark = "Dinah Shore in the original hit recording (1944)"
+
+[[youtube]]
+id = "w_sA193TXzk"
+remark = "Frank Sinatra"
+
+[versions.Fake]
+doChords = true
+doVoice = true
+doLyrics = false
+doLyricsmore = false
+doLyricsmoremore = false
+doChordBars = false
+doGuitar = false
+doExtra = false
+doPrep = false
+doOwn = false
+#}
+{% if part == "Vars" %}
+{% endif %}
+{% if part == "Doc" %}	DONE:
+	- added the meta data from the fake book.
+	- put in the tunes structure.
+	- put in the chords (fake book).
+	- put in the tune (fake book).
+	- added youtube performances.
+	TODO:
+	- add the lyrics.
+	- check the chords (fake book).
+	- check the tune (fake book).
+	- hear the tune to check that it is right and adjust the tempo.
+	- bars 4 and 20: the book prints a sharp only on the first c of the bar; the sharp was carried to the later c (tied into the A7 bar, fits the A7 chord) - check.
+{% endif %}
+{% if part == "ChordsFake" %}\chordmode {
+	\startChords
+	\startSong
+
+	\partial 4. s4. |
+
+	\repeat volta 2 {
+
+		\myMark "A"
+		\startPart
+		g1 | g2 e:7.9- | a:m7 d:7 | b:m7 e:7 | \myEndLine
+		a1:7 | a2:m7 d:7 | g e:m7 |
+
+	} \alternative {
+		{
+			a2:7 d:9 | \myEndLineVoltaNotLast
+		}
+		{
+			d2:m7 g:9 | \myEndLineVoltaLast
+		}
+	}
+	\endPart
+
+	\myMark "B"
+	\startPart
+	c1:6 | c:m6 | g1*2:maj7 | \myEndLine
+	cis2:m7.5- fis:7 | cis:m7.5- fis:7 | b:m7 e:7 | a:m7 d:7 | \myEndLine
+	\endPart
+
+	\myMark "A"
+	\startPart
+	g1 | g2 e:7.9- | a:m7 d:7 | b:m7 e:7 | \myEndLine
+	a1:7 | a2:m7 d:7.9- | g c:6 | g1:6 | \myEndLine
+	\endPart
+
+	\endSong
+	\endChords
+}
+{% endif %}
+{% if part == "VoiceFake" %}{
+	\tempo "Andante" 4 = 76
+	\time 4/4
+	\key g \major
+
+	\partial 4. b8 c8. cis16 |
+
+	\repeat volta 2 {
+
+		% part "A"
+		d2~ d8. b16 c8. cis16 | d8. g16 a8 b~ b8. c16 b4 | a2 d,2~ | d4 d'8. cis16 d8. e16 d8 cis~ |
+		cis2 a2~ | a4 c8. b16 c8. d16 c8 b~ | b2~ b8. g16 a8. b16 |
+	} \alternative {
+		{
+			a2~ a8 r16 b,16 c8. cis16 |
+		}
+		{
+			a'2. r8 g8 |
+		}
+	}
+
+	% part "B"
+	a8. g16 b8 a~ a8 a4 g8 | a8. g16 b8 a~ a4 b4 | fis2~ fis8. e16 g8 b8 | d2. r8 b8 |
+	cis8. b16 d8 cis~ cis8 cis4 b8 | cis8. b16 d8 cis~ cis8. d16 cis8. d16 | b2~ b8. c16 b8. c16 | a2~ a8 r16 b,16 c8. cis16 |
+
+	% part "A"
+	d2~ d8. b16 c8. cis16 | d8. g16 a8 b~ b8. c16 b4 | a2 d,2~ | d4 d'8. cis16 d8. e16 d8 cis~ |
+	cis2 a2~ | a4 b c fis, | g1~ | g1 |
+}
+{% endif %}

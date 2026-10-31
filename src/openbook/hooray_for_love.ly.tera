@@ -1,0 +1,98 @@
+{#
+default_version = "Fake"
+
+[attributes]
+title = "Hooray For Love"
+style = "Jazz"
+composer = "Harold Arlen"
+poet = "Leo Robin"
+piece = "Moderately"
+copyright = "1948, 1987 Harwin Music Co."
+copyrightextra = "Renewed 1976 Harwin Music Co. International Copyright Secured. All Rights Reserved."
+typesetter = "Mark Veltzer <mark.veltzer@gmail.com>"
+completion = "5"
+uuid = "6279170c-d51a-11f1-8000-046874d194b7"
+structure = "ABA"
+location = "jfb:148"
+
+[[youtube]]
+id = "qyYMlwK4dbU"
+remark = "Tony Martin, who introduced the song in the film Casbah (1948)"
+
+[[youtube]]
+id = "rGv_gVE0wLo"
+remark = "Ella Fitzgerald from Ella Fitzgerald Sings the Harold Arlen Songbook (1961)"
+
+[versions.Fake]
+doChords = true
+doVoice = true
+doLyrics = false
+doLyricsmore = false
+doLyricsmoremore = false
+doChordBars = false
+doGuitar = false
+doExtra = false
+doPrep = false
+doOwn = false
+#}
+{% if part == "Vars" %}
+{% endif %}
+{% if part == "Doc" %}	DONE:
+	- added the meta data from the fake book.
+	- put in the tunes structure.
+	- put in the chords (fake book).
+	- put in the tune (fake book).
+	- added youtube performances.
+	TODO:
+	- add the lyrics.
+	- check the chords (fake book).
+	- check the tune (fake book).
+	- hear the tune to check that it is right and adjust the tempo.
+	- the fake book prints the B part (bars 19-22) in two voices (a sustained lower line answered by an upper line); it is typed here as one melody line following the lyrics, the two-voice version is kept as a comment.
+{% endif %}
+{% if part == "ChordsFake" %}\chordmode {
+	\startChords
+	\startSong
+
+	\myMark "A"
+	\startPart
+	ees2:6 aes:maj7 | g:m7 f:m7 | ees aes:maj7 | f:7/a bes:9 | ees f:m7 | ees/g bes4:m7 ees:7 | \myEndLine
+	aes2 c:9 | f4:m7 bes:9 ees2 | bes1:m7 | ees:7 | aes2:6 ees/g | aes4 f:7.5+ bes2:9 | \myEndLine
+	ees2:6 aes:maj7 | des:9 c:9.5+ | f1:7 | b2:9.5- bes:9 | ees:6 c:m7 | f:7 bes:9 | \myEndLine
+	\endPart
+
+	\myMark "B"
+	\startPart
+	f2:m7 bes:7 | f:m7 bes:7 | ees:maj7 ees:6 | ees:maj7 ees:6 | ees f:m7 | \myEndLine
+	ees/g fis:dim7 | ees/g fis4:dim7 f:dim7 | ees2:6 e:7.5- | \myEndLine
+	\endPart
+
+	\myMark "Coda"
+	\startPart
+	ees1*2 | \myEndLine
+	\endPart
+
+	\endSong
+	\endChords
+}
+{% endif %}
+{% if part == "VoiceFake" %}{
+	\tempo "Moderato" 4 = 160
+	\time 2/2
+	\key ees \major
+
+	% part "A"
+	ees2 ees4. f8 | g4 ees aes2 | g8. fis16 g8. f16 g4 ees | f c d2 | ees2 ees4. f8 | g4 ees bes'2 |
+	aes8. g16 aes8. g16 aes4 g | f f ees2 | des'2 des4. c8 | des4 c bes2 | g8. aes16 bes8. c16 bes4 ees | aes,4 g f2 |
+	ees2 ees4. f8 | g4 ees aes2 | r4 g8. fis16 g4 ees | aes2 aes^\markup { To Coda \musicglyph #"scripts.coda" } | ees1~ | ees4 r r bes8. bes16 |
+
+	% part "B"
+	% the fake book prints bars 19-22 in two voices:
+	% << { r2 r4 bes'8. bes16 | aes'8. g16 f8. ees16 f4 r | r2 r4 bes,8. bes16 | g'8. f16 ees8. d16 ees4 r } \\ { aes,8. g16 f8. ees16 f2~ | f2. bes,8. bes16 | g'8. f16 ees8. d16 ees2~ | ees2. c'4 } >>
+	aes'8. g16 f8. ees16 f4 bes8. bes16 | aes'8. g16 f8. ees16 f4 bes,,8. bes16 | g'8. f16 ees8. d16 ees4 bes'8. bes16 | g'8. f16 ees8. d16 ees4 c | bes ees d c |
+	bes ees d c | bes ees c d | ees r bes2^\markup { D.C. al Coda } |
+
+	% part "Coda"
+	ees,1~ | ees4 r r2 |
+}
+{% endif %}

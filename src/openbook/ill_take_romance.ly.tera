@@ -1,0 +1,128 @@
+{#
+default_version = "Fake"
+
+[attributes]
+title = "I'll Take Romance"
+style = "Jazz"
+composer = "Ben Oakland"
+poet = "Oscar Hammerstein II"
+piece = "Moderate Waltz"
+copyright = "1937 by Bourne Inc. Copyright renewed."
+copyrightextra = "Published in the U.S.A. by Williamson Music Co. and Bourne Co."
+typesetter = "Mark Veltzer <mark.veltzer@gmail.com>"
+completion = "5"
+uuid = "adbee85e-d51a-11f1-8000-046874d194b7"
+structure = "AABA"
+location = "jfb:170"
+
+[[youtube]]
+id = "7EVY4HTwY2k"
+remark = "Grace Moore in the original recording (1937)"
+
+[[youtube]]
+id = "MOY5SUBQrWw"
+remark = "McCoy Tyner Trio"
+
+[versions.Fake]
+doChords = true
+doVoice = true
+doLyrics = false
+doLyricsmore = false
+doLyricsmoremore = false
+doChordBars = false
+doGuitar = false
+doExtra = false
+doPrep = false
+doOwn = false
+#}
+{% if part == "Vars" %}
+{% endif %}
+{% if part == "Doc" %}	DONE:
+	- added the meta data from the fake book.
+	- put in the tunes structure.
+	- put in the chords (fake book).
+	- put in the tune (fake book).
+	- added youtube performances.
+	TODO:
+	- add the lyrics.
+	- check the chords (fake book).
+	- check the tune (fake book).
+	- hear the tune to check that it is right and adjust the tempo.
+{% endif %}
+{% if part == "ChordsFake" %}\chordmode {
+	\startChords
+	\startSong
+
+	\repeat volta 2 {
+
+		\myMark "A"
+		\startPart
+		f2. | d:m7 | g:m7 | c:7 | \myEndLine
+		a:m7 | aes:7 | des:maj7 | g:m7 | \myEndLine
+		c:7sus4 | d:7.9- | g:m7 | c:9 |
+
+	} \alternative {
+		{
+			f2. | d:m7 | g:m7 | c:11 | \myEndLineVoltaNotLast
+		}
+		{
+			f2. | g:m7 | \myEndLineVoltaLast
+		}
+	}
+	\endPart
+
+	\myMark "B"
+	\startPart
+	f2.*2 | ees2.:m7 | aes:7 | des:maj7 | \myEndLine
+	bes:m7 | ees:m7 | aes:7sus4 | des2.*2:maj7 | \myEndLine
+	ges2.*2:7 | ces2.*2:maj7 | \myEndLine
+	f2. | d:7 | g:m7 | c:9 | \myEndLine
+	\endPart
+
+	\myMark "A"
+	\startPart
+	f2. | d:m7 | g:m7 | c:7 | \myEndLine
+	a:m7 | aes:7 | des:maj7 | g:m7 | \myEndLine
+	c:7sus4 | d:7.9- | g:m7 | c:9 | \myEndLine
+	f2. | d:m7 | g2.*2:m7 | \myEndLine
+	e2.*2:7/c | f2.*2:6 | \myEndLine
+	\endPart
+
+	\endSong
+	\endChords
+}
+{% endif %}
+{% if part == "VoiceFake" %}{
+	\tempo "Moderato" 4 = 152
+	\time 3/4
+	\key f \major
+
+	\repeat volta 2 {
+
+		% part "A"
+		f2. | d2~ d8 f | g2.~ | g2 a8 bes |
+		c2 c4 | c2 c4 | c4 des c | bes2. |
+		bes4 c bes | a2 c4 | g2. | g4 f e |
+	} \alternative {
+		{
+			f2.~ | f2.~ | f2.~ | f4 r r |
+		}
+		{
+			f2.~ | f2.~ |
+		}
+	}
+
+	% part "B"
+	f8 r f4 g | e8 f a4 c | des2. | ees2. | c2. |
+	bes2. | r4 des des | des4 ees4. des8 | c2. | bes2. |
+	bes2. | des2. | bes2. | aes2. |
+	r4 a! a | a4 c bes | g g g | g4 bes a |
+
+	% part "A"
+	f2. | d2~ d8 f | g2.~ | g2 a8 bes |
+	c2 c4 | c2 c4 | c4 des c | bes2. |
+	bes4 c bes | a2 c4 | g2. | g4 f e |
+	f2.~ | f2.~ | f2. | g4 bes d |
+	e2.~ | e2 d4 | f2.~ | f2. |
+}
+{% endif %}

@@ -1,0 +1,116 @@
+{#
+default_version = "Fake"
+
+[attributes]
+title = "Moten Swing"
+style = "Swing"
+composer = "Buster Moten, Bennie Moten"
+piece = "Medium Swing"
+copyright = "1942 by MCA MUSIC PUBLISHING, A Division of MCA INC., New York, NY."
+copyrightextra = "Copyright Renewed"
+typesetter = "Mark Veltzer <mark.veltzer@gmail.com>"
+completion = "5"
+uuid = "2c9874f1-d521-11f1-8000-046874d194b7"
+structure = "AABA"
+location = "jfb:261"
+
+[[youtube]]
+id = "NObGoBDVMok"
+remark = "Bennie Moten's Kansas City Orchestra in the original recording (1932)"
+
+[[youtube]]
+id = "NZoNg9xKOe8"
+remark = "Count Basie Orchestra live (1959)"
+
+[versions.Fake]
+doChords = true
+doVoice = true
+doLyrics = false
+doLyricsmore = false
+doLyricsmoremore = false
+doChordBars = false
+doGuitar = false
+doExtra = false
+doPrep = false
+doOwn = false
+#}
+{% if part == "Vars" %}
+{% endif %}
+{% if part == "Doc" %}	DONE:
+	- added the meta data from the fake book.
+	- put in the tunes structure.
+	- put in the chords (fake book).
+	- put in the tune (fake book).
+	- added youtube performances.
+	TODO:
+	- check the chords (fake book).
+	- check the tune (fake book).
+	- hear the tune to check that it is right and adjust the tempo.
+	- the book has no natural or flat on the later b notes of bar 1, so they are typed as b natural (carried through the bar).
+	- bar 7 of the bridge: the book prints "C6 C" at the start of the bar, typed as C6 and C on beats 1 and 2.
+	- the last A is nine bars long as printed.
+{% endif %}
+{% if part == "ChordsFake" %}\chordmode {
+	\startChords
+	\startSong
+
+	\repeat volta 2 {
+
+		\myMark "A"
+		\startPart
+		aes1*2:6 | ees1*3:7 | \myEndLine
+		bes2:m7 bes:m7/ees | aes1 |
+	} \alternative {
+		{
+			bes2:m7 ees:7 | \myEndLineVoltaNotLast
+		}
+		{
+			aes2:7 g:7 | \myEndLineVoltaLast
+		}
+	}
+	\endPart
+
+	\myMark "B"
+	\startPart
+	c1:6 | g:7 | c:6 | g:7 | \myEndLine
+	c1:6 | g:7 | c4:6 c b8:dim7 bes4.:m7 | bes2:m7 ees:7 | \myEndLine
+	\endPart
+
+	\myMark "A"
+	\startPart
+	aes1*2 | ees1*4:7 | \myEndLine
+	bes2:m7 bes:m7/ees | aes2:6 des:7 | aes1:6.9 | \myEndLine
+	\endPart
+
+	\endSong
+	\endChords
+}
+{% endif %}
+{% if part == "VoiceFake" %}{
+	\tempo "Allegro" 4 = 160
+	\time 2/2
+	\key aes \major
+
+	\repeat volta 2 {
+
+		% part "A"
+		aes'8 b4 aes8 b4 b8 aes~ | aes8 aes4. b8 aes b aes | b8 bes4 bes8~ bes4 b8 bes~ | bes2. aes4 |
+		b8 bes~ bes2 aes4 | b8 bes4. aes4 f8 aes~ | aes8 aes~ aes2. |
+	} \alternative {
+		{
+			b8 b bes aes b bes4. |
+		}
+		{
+			aes2 g |
+		}
+	}
+
+	% part "B"
+	c8 c~ c2 c4 | g8 g4. g4 g8 c,~ | c8 c~ c2. | g'8 g~ g2. |
+	c8 c~ c2 c4 | g8 g4. g4 g8 c,~ | c8 c~ c2 b'8 bes~ | bes1 |
+
+	% part "A"
+	aes2 bes8 aes bes aes~ | aes2 bes8 aes bes aes | b8 bes4 bes8~ bes4 b8 bes~ | bes2. aes4 |
+	b8 bes4 b8~ b4. bes8~ | bes4. b8~ b4. bes8~ | bes4 aes~ aes4. f8~ | f4. aes8~ aes2~ | aes1 |
+}
+{% endif %}

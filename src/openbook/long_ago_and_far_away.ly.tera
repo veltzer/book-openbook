@@ -1,0 +1,97 @@
+{#
+default_version = "Fake"
+
+[attributes]
+title = "Long Ago (And Far Away)"
+style = "Jazz"
+composer = "Jerome Kern"
+poet = "Ira Gershwin"
+piece = "Moderately Slow"
+copyright = "1944 T.B. Harms Company. Copyright Renewed."
+copyrightextra = "(c/o The Welk Music Group, Santa Monica, CA 90401)"
+typesetter = "Mark Veltzer <mark.veltzer@gmail.com>"
+completion = "5"
+uuid = "5ab8ed46-d51d-11f1-8000-046874d194b7"
+structure = "ABAC"
+location = "jfb:225"
+
+[[youtube]]
+id = "XhxGANhTJHQ"
+remark = "Gene Kelly in the original recording from Cover Girl (1944)"
+
+[[youtube]]
+id = "fg2izQ91y6o"
+remark = "Chet Baker"
+
+[versions.Fake]
+doChords = true
+doVoice = true
+doLyrics = false
+doLyricsmore = false
+doLyricsmoremore = false
+doChordBars = false
+doGuitar = false
+doExtra = false
+doPrep = false
+doOwn = false
+#}
+{% if part == "Vars" %}
+{% endif %}
+{% if part == "Doc" %}	DONE:
+	- added the meta data from the fake book.
+	- put in the tunes structure.
+	- put in the chords (fake book).
+	- put in the tune (fake book).
+	- added youtube performances.
+	TODO:
+	- check the chords (fake book).
+	- check the tune (fake book).
+	- hear the tune to check that it is right and adjust the tempo.
+	- add the lyrics.
+{% endif %}
+{% if part == "ChordsFake" %}\chordmode {
+	\startChords
+	\startSong
+
+	\myMark "A"
+	\startPart
+	\repeat volta 2 {
+		f2:6 d:m7 | g:m7 c:7 | f1:maj7 | g2:m7 c:9 | \myEndLine
+		f1:6 | g2:m7 c:7 | f:6 ees4:9 d:7 | g2:m7 c:7 | \myEndLine
+	} \alternative {
+		{
+			aes2:6 f:m7 | bes:m7 ees:9 | aes1:maj7 | g:7 | \myEndLine
+			c1:maj7 | a2.:m7 d4:7.9- | g1:m7 | c:7 | \myEndLineVoltaNotLast
+		}
+		{
+			c1:m7 | f:7 | bes:maj7 | bes2:maj7 ees:9 | \myEndLine
+			f2:6/a aes:dim | g:m7 c:7 | f1*2:6 | \myEndLineVoltaLast
+		}
+	}
+	\endPart
+
+	\endSong
+	\endChords
+}
+{% endif %}
+{% if part == "VoiceFake" %}{
+	\tempo "Andante" 4 = 80
+	\time 4/4
+	\key f \major
+
+	% part "A"
+	\repeat volta 2 {
+		f2. f4 | f a e4. d8 | e2. e4 | e f d c |
+		d2. c4 | d2. c4 | d e f fis | a2 g |
+	} \alternative {
+		{
+			aes2. aes4 | aes c g f | g2. g4 | g b! f e |
+			g2. e4 | a2. bes4 | c1~ | c2. r4 |
+		}
+		{
+			c2. c4 | c ees bes a | bes1( | d4) bes a g |
+			f2. f4 | f a e g | f1~ | f2. r4 |
+		}
+	}
+}
+{% endif %}

@@ -1,0 +1,105 @@
+{#
+default_version = "Fake"
+
+[attributes]
+title = "My Shining Hour"
+style = "Jazz"
+composer = "Harold Arlen"
+poet = "Johnny Mercer"
+piece = "Tenderly"
+copyright = "1943, 1987 HARWIN MUSIC CO."
+copyrightextra = "Renewed 1971 HARWIN MUSIC CO. International Copyright Secured. All Rights Reserved."
+typesetter = "Mark Veltzer <mark.veltzer@gmail.com>"
+completion = "5"
+uuid = "2067bc87-d521-11f1-8000-046874d194b7"
+structure = "ABCA"
+location = "jfb:267"
+
+[[youtube]]
+id = "zj9UMnM8cP8"
+remark = "Fred Astaire and Joan Leslie in the film The Sky's the Limit (1943)"
+
+[[youtube]]
+id = "UvFG2D146P4"
+remark = "John Coltrane on Coltrane Jazz (1961)"
+
+[versions.Fake]
+doChords = true
+doVoice = true
+doLyrics = false
+doLyricsmore = false
+doLyricsmoremore = false
+doChordBars = false
+doGuitar = false
+doExtra = false
+doPrep = false
+doOwn = false
+#}
+{% if part == "Vars" %}
+{% endif %}
+{% if part == "Doc" %}	DONE:
+	- added the meta data from the fake book.
+	- put in the tunes structure.
+	- put in the chords (fake book).
+	- put in the tune (fake book).
+	- added youtube performances.
+	TODO:
+	- check the chords (fake book).
+	- check the tune (fake book).
+	- hear the tune to check that it is right and adjust the tempo.
+	- add the lyrics.
+{% endif %}
+{% if part == "ChordsFake" %}\chordmode {
+	\startChords
+	\startSong
+
+	\myMark "A"
+	\startPart
+	ees1 | c:m7 | f:9 | bes2:7.9- bes:7 | \myEndLine
+	ees1 | c2:m7 aes | bes1:7sus4 | bes:7 | \myEndLine
+	\endPart
+
+	\myMark "B"
+	\startPart
+	c1:m7 | a:m7.5- | d:m7.5- | g:7 | \myEndLine
+	c1:m7 | f:7 | bes2:7sus4 f:m7 | bes1:7 | \myEndLine
+	\endPart
+
+	\myMark "C"
+	\startPart
+	bes1:m7 | ees:9 | aes:maj7 | f:m7 | \myEndLine
+	aes1:m | f:m7.5- | bes1:7sus4 | bes2:7sus4 bes:7 | \myEndLine
+	\endPart
+
+	\myMark "A"
+	\startPart
+	ees1 | c:m7 | ees2 f:m7 | g:m7.5- c:7 | \myEndLine
+	aes1:maj7 | f2:m7.5- bes:7.9- | ees1*2:6 | \myEndLine
+	\endPart
+
+	\endSong
+	\endChords
+}
+{% endif %}
+{% if part == "VoiceFake" %}{
+	\tempo "Andante" 4 = 120
+	\time 2/2
+	\key ees \major
+
+	% part "A"
+	g'2. aes4 | bes2 ees, | g2. g4 | g2 bes, |
+	g'2. aes4 | bes4 ees, aes2 | bes,1~ | bes1 |
+
+	% part "B"
+	ees2. f4 | g2 c, | f2 f | f2 d |
+	ees2. f4 | g4 ees a f | bes1~ | bes1 |
+
+	% part "C"
+	bes2. c4 | ees2 c | ees,2 ees | ees2 bes' |
+	ees,2 ees | ees2 bes' | ees,2 ees | ees2 bes' |
+
+	% part "A"
+	g2. aes4 | bes2 ees, | g2 aes | bes2 c |
+	ees2 ees, | aes4 g f2 | ees1~ | ees2. r4 |
+}
+{% endif %}

@@ -1,0 +1,112 @@
+{#
+default_version = "Fake"
+
+[attributes]
+title = "On A Clear Day (You Can See Forever)"
+style = "Broadway"
+composer = "Burton Lane"
+poet = "Alan Jay Lerner"
+piece = "Moderately"
+copyright = "1965 by Alan Jay Lerner and Burton Lane"
+copyrightextra = "Chappell & Co., Inc., Owner of publication and allied rights"
+typesetter = "Mark Veltzer <mark.veltzer@gmail.com>"
+completion = "5"
+uuid = "361f3c7d-d521-11f1-8000-046874d194b7"
+structure = "ABCA'"
+location = "jfb:283"
+
+[[youtube]]
+id = "CB87_ucR3yI"
+remark = "John Cullum on the original Broadway cast album (1965)"
+
+[[youtube]]
+id = "PeiEirfsfg0"
+remark = "Barbra Streisand"
+
+[versions.Fake]
+doChords = true
+doVoice = true
+doLyrics = false
+doLyricsmore = false
+doLyricsmoremore = false
+doChordBars = false
+doGuitar = false
+doExtra = false
+doPrep = false
+doOwn = false
+#}
+{% if part == "Vars" %}
+{% endif %}
+{% if part == "Doc" %}	DONE:
+	- added the meta data from the fake book.
+	- put in the tunes structure.
+	- put in the chords (fake book).
+	- put in the tune (fake book).
+	- added youtube performances.
+	TODO:
+	- check the chords (fake book).
+	- check the tune (fake book).
+	- hear the tune to check that it is right and adjust the tempo.
+	- bar 15: the G#dim is printed close to the Am7 in the fake book; typed on beat 3.
+	- add the lyrics.
+{% endif %}
+{% if part == "ChordsFake" %}\chordmode {
+	\startChords
+	\startSong
+
+	\partial 2 s2 |
+
+	\myMark "A"
+	\startPart
+	g1:maj7 | s1 | c1:9 | s1 | \myEndLine
+	g1:maj7 | s1 | b1:m7 | e1:7 | \myEndLine
+	\endPart
+
+	\myMark "B"
+	\startPart
+	a1:m7 | s1 | f1:13 | d1:7 | \myEndLine
+	b1:m7 | bes1:dim7 | a2:m7 gis:dim | a2:m7 d:7 | \myEndLine
+	\endPart
+
+	\myMark "C"
+	\startPart
+	d1:m7 | g1:7 | d1:m7 | g1:7 | \myEndLine
+	c1:maj7 | a1:7 | d1:7 | s1 | \myEndLine
+	\endPart
+
+	\myMark "A"
+	\startPart
+	g2:dim7 g:maj7 | s1 | b1:m7 | e1:7 | \myEndLine
+	a2:m7 g:6/b | a2.:m7/c g4:6/b | a2.:m7 g4:6/b | a2.:m7/c g4:6/b | \myEndLine
+	a1:m7 | d1:7 | g1 | s1 | \myEndLine
+	\endPart
+
+	\endSong
+	\endChords
+}
+{% endif %}
+{% if part == "VoiceFake" %}{
+	\tempo "Moderato" 2 = 80
+	\time 2/2
+	\key g \major
+
+	\partial 2 b4 d |
+
+	% part "A"
+	a'2 fis~ | fis2 d8 b d fis | a2 fis~ | fis2 bes,4 d |
+	a'2 fis~ | fis2 fis | d1~ | d2 e4 g |
+
+	% part "B"
+	d'2 b~ | b2 g8 e g b | d2 b~ | b2 cis,4 d |
+	a'2 aes4 g | fis4 a r g | c2 d4 b | a2 b4 c |
+
+	% part "C"
+	d2 a~ | a2 b4 c | d8 e d a c2~ | c2 g4 a |
+	b4 e, g a | b4 e, g a | b8 ais b fis e2~ | e4 cis b d |
+
+	% part "A"
+	a'2 fis~ | fis2 g4 b | e2 b~ | b2 ais4 b |
+	c2 b | g4 c r b | g4 c r b | g4 c r b |
+	g1 | a1 | g1~ | g2 r2 |
+}
+{% endif %}

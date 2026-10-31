@@ -1,0 +1,144 @@
+{#
+default_version = "Fake"
+
+[attributes]
+title = "A Lot Of Livin' To Do"
+style = "Broadway"
+composer = "Charles Strouse"
+poet = "Lee Adams"
+piece = "With a steady, growing drive"
+copyright = "1960, 1967 LEE ADAMS and CHARLES STROUSE"
+copyrightextra = "All Rights Controlled by EDWIN H. MORRIS & COMPANY, A Division of MPL Communications, Inc."
+typesetter = "Mark Veltzer <mark.veltzer@gmail.com>"
+completion = "5"
+uuid = "5abc955e-d51d-11f1-8000-046874d194b7"
+structure = "AABA"
+location = "jfb:227"
+
+[[youtube]]
+id = "-gTmwTaF8-0"
+remark = "Dick Gautier with the original Broadway cast of Bye Bye Birdie (1960)"
+
+[[youtube]]
+id = "jNx0Jhymzds"
+remark = "Sammy Davis Jr."
+
+[versions.Fake]
+doChords = true
+doVoice = true
+doLyrics = false
+doLyricsmore = false
+doLyricsmoremore = false
+doChordBars = false
+doGuitar = false
+doExtra = false
+doPrep = false
+doOwn = false
+#}
+{% if part == "Vars" %}
+{% endif %}
+{% if part == "Doc" %}	DONE:
+	- added the meta data from the fake book.
+	- put in the tunes structure.
+	- put in the chords (fake book).
+	- put in the tune (fake book).
+	- added youtube performances.
+	TODO:
+	- check the chords (fake book).
+	- check the tune (fake book).
+	- hear the tune to check that it is right and adjust the tempo.
+	- the fake book ends the tune with a bar of only two beats (the held last note), check it.
+	- add the lyrics.
+{% endif %}
+{% if part == "ChordsFake" %}\chordmode {
+	\startChords
+	\startSong
+
+	\partial 2 s2 |
+
+	\myMark "A"
+	\startPart
+	\repeat volta 2 {
+		c1:maj7 | c:maj7 | c:6 | c:6 | c:maj7 | c:7 | \myEndLine
+		f:6 | f:6 | f:maj7 | g:7 | c | c | d:m7 | \myEndLine
+		g:7 | c | g:7 | \myEndLine
+		\endPart
+
+		\myMark "A"
+		\startPart
+		c:maj7 | c:maj7 | c:6 | c:6 | c:maj7 | \myEndLine
+		c:7 | f:6 | f:6 | f:maj7 | g:7 | c | c | d:m7 | \myEndLine
+		g:7 | c | c:7 | \myEndLine
+		\endPart
+
+		\myMark "B"
+		\startPart
+		f:6 | f:m7 | ees | ees | \myEndLine
+		bes | bes | g | g:7 | \myEndLine
+		\endPart
+
+		\myMark "A"
+		\startPart
+		c:maj7 | c:maj7 | c:6 | c:6 | \myEndLine
+		c:maj7 | c:7 | f:6 | f:6 | f:maj7 | g:7 | c | c | \myEndLine
+		d:m7 |
+	} \alternative {
+		{
+			g:7 | c | g:7 | \myEndLineVoltaNotLast
+		}
+		{
+			g:7 | d:m7 | g:7 | \myEndLineVoltaLast
+		}
+	}
+	d2.:m7 | d2.:m7 | d2.:m7 | g2:7.9- | c1:6 | c2:6
+	\endPart
+
+	\endSong
+	\endChords
+}
+{% endif %}
+{% if part == "VoiceFake" %}{
+	\tempo "Moderato" 4 = 144
+	\time 2/2
+	\key c \major
+
+	\partial 2 g'4 a |
+
+	\repeat volta 2 {
+		% part "A"
+		b4 r r2 | r4 c8 b~ b g e4 | d4. e8~ e2 | r2 c4 d |
+		e1 | r4 g8 c~ c a g4 | d1 | r2 f4 g |
+		a1 | r4 b8 d~ d c b4 | d4. g,8~ g2 | r2 r4 c |
+		c4 f, f c' | b8 g4.~ g4 a | e1 | r2 g4 a |
+
+		% part "A"
+		b1 | r4 c8 b~ b g e4 | d4. e8~ e2 | r2 c4 d |
+		e8 e e4 r2 | r4 g \tuplet 3/2 { c4 a g } | d1 | r2 f4 g |
+		a1 | r4 b8 d~ d c b4 | d4. g,8~ g2 | r2 r4 c |
+		c4 f, f c' | b8 g4.~ g4 d' | c1 | r2 r4 c |
+
+		% part "B"
+		c8 a a a~ a2 | ees'8 c c c~ c2 | \tuplet 3/2 { bes4 g g } g2~ | g2. r4 |
+		bes4. f8~ f2~ | f4 d f bes | b!1~ | b4 r g a |
+
+		% part "A"
+		b2 r | r4 c8 b~ b g e4 | d4. e8~ e4 r | r2 c4 c |
+		e1 | r4 g \tuplet 3/2 { c4 a g } | d1 | r2 f4 g |
+		a1 | r4 b \tuplet 3/2 { d4 c b } | d4. g,8~ g2 | r2 r8 c4. |
+		c4 f, f c' |
+	} \alternative {
+		{
+			b8 g4.~ g4 d' | c1 | r2 g4 a |
+		}
+		{
+			b8 g4.~ g2 | r8 c4 a8 a4 c | d8 b4.~ b2 |
+		}
+	}
+	\time 3/4
+	c4. a8~ a4 | c4. a8~ a4 | c4. a8~ a4 |
+	\time 2/4
+	d2 |
+	\time 2/2
+	c1~ | c2
+}
+{% endif %}

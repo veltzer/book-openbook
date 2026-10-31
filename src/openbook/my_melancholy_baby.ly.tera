@@ -1,0 +1,128 @@
+{#
+default_version = "Fake"
+
+[attributes]
+title = "My Melancholy Baby"
+style = "Jazz"
+composer = "Ernie Burnett"
+poet = "George A. Norton"
+piece = "Moderately"
+copyright = "1911 by Ernest M. Burnett"
+copyrightextra = "Copyright 1912 & 1914 by Theron C. Bennett Co. Copyright renewed 1939 by Charles E. Norton and assigned to Jerry Vogel Music Co., Inc. Copyright Renewed 1938, 1939, & 1942 by Ernest M. Burnett and assigned to Shapiro, Bernstein & Co., New York, NY"
+typesetter = "Mark Veltzer <mark.veltzer@gmail.com>"
+completion = "5"
+uuid = "2c9874f4-d521-11f1-8000-046874d194b7"
+structure = "AA'"
+location = "jfb:265"
+
+[[youtube]]
+id = "P-ausczD_f8"
+remark = "Gene Austin (1928)"
+
+[[youtube]]
+id = "Mr6coB5EAHY"
+remark = "Charlie Parker with Dizzy Gillespie and Thelonious Monk (1950)"
+
+[versions.Fake]
+doChords = true
+doVoice = true
+doLyrics = false
+doLyricsmore = false
+doLyricsmoremore = false
+doChordBars = false
+doGuitar = false
+doExtra = false
+doPrep = false
+doOwn = false
+#}
+{% if part == "Vars" %}
+{% endif %}
+{% if part == "Doc" %}	DONE:
+	- added the meta data from the fake book.
+	- put in the tunes structure.
+	- put in the chords (fake book).
+	- put in the tune (fake book).
+	- added youtube performances.
+	TODO:
+	- add the lyrics (two verses and the chorus).
+	- check the chords (fake book).
+	- check the tune (fake book).
+	- hear the tune to check that it is right and adjust the tempo.
+	- the sixteen bar verse is repeated (two sets of words) and is typed as the intro.
+{% endif %}
+{% if part == "ChordsFake" %}\chordmode {
+	\startChords
+	\startSong
+
+	\repeat volta 2 {
+
+		\myMark "Intro"
+		\startPart
+		ees4. b8*5:7 | ees4. b8*5:7 | ees1 | ees4/g ges:dim7 bes:7/f bes:7 | \myEndLine
+		f2:m c:7 | f:m c:7 | f1:7 | bes:7 | \myEndLine
+		ees4. b8*5:7 | ees4. b8*5:7 | ees1 | ees4/g ges:dim7 bes:7/f bes:7 | \myEndLine
+		f1:7 | bes4 g2.:7 | c2:7 f:7 | f4:m7 f:m7.5- bes2:7 | \myEndLine
+		\endPart
+
+	}
+
+	\repeat volta 2 {
+
+		\myMark "A"
+		\startPart
+		ees2. g4:m7.5- | des2:7 c:7 | f:m7 c:7.5+ | f2.:m7 c4:7 | \myEndLine
+		f2.:m7 bes4:7 | f2:7 bes:7 | ees4 c:m7 f2:7 | bes4 c:m cis:dim7 bes:7/d | \myEndLine
+		\endPart
+
+		\myMark "A"
+		\startPart
+		ees2. g4:m7.5- | des2:7 c:7 | f:m7 c:7.5+ | f2.:m7 c4:7 | \myEndLine
+		f2:m7 fis:dim7 | g:m7 c:7 | f:m bes:7 |
+	} \alternative {
+		{
+			ees2 bes:7.5+ | \myEndLineVoltaNotLast
+		}
+		{
+			ees4 aes:7 ees2 | \myEndLineVoltaLast
+		}
+	}
+	\endPart
+
+	\endSong
+	\endChords
+}
+{% endif %}
+{% if part == "VoiceFake" %}{
+	\tempo "Moderato" 4 = 110
+	\time 4/4
+	\key ees \major
+
+	\repeat volta 2 {
+
+		% part "Intro"
+		g'8 bes g fis~ fis2 | g8 bes g fis~ fis2 | g8 bes c d f ees bes g | bes4 a aes2 |
+		aes8 c aes g~ g2 | aes8 c aes g~ g2 | f8 g a bes c b c d | c4 b bes2 |
+		g8 bes g fis~ fis2 | g8 bes g fis~ fis2 | g8 bes c d f ees bes g | bes4 a aes2 |
+		a8 bes b c~ c2 | bes8 c cis d~ d2 | c8 d c d c a g f | c'4 b bes2 |
+
+	}
+
+	\repeat volta 2 {
+
+		% part "A"
+		g8 aes a bes f' ees bes aes | aes2 g | g8 f e f aes4 d | c2. r4 |
+		f,8 g aes bes c ees d c | g2 f | f8 ees d ees f ees f g | bes2. r4 |
+
+		% part "A"
+		g8 aes a bes f' ees bes aes | aes2 g | g8 f e f aes4 d | c2. r4 |
+		c8 b c d ees4 d8 c | bes8 a bes b c4. g8 | aes8 bes b c g bes g f |
+	} \alternative {
+		{
+			ees4 bes' c bes |
+		}
+		{
+			ees,2. r4 |
+		}
+	}
+}
+{% endif %}

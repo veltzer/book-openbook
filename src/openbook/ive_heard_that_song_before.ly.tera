@@ -1,0 +1,105 @@
+{#
+default_version = "Fake"
+
+[attributes]
+title = "I've Heard That Song Before"
+style = "Swing"
+composer = "Jule Styne"
+poet = "Sammy Cahn"
+piece = "Moderately"
+copyright = "1942, 1987 Morley Music Co."
+copyrightextra = "Renewed 1970 Morley Music Co. International Copyright Secured. All Rights Reserved."
+typesetter = "Mark Veltzer <mark.veltzer@gmail.com>"
+completion = "5"
+uuid = "6e1819be-d51a-11f1-8000-046874d194b7"
+structure = "ABAC"
+location = "jfb:178"
+
+[[youtube]]
+id = "cK0j8_N_dBg"
+remark = "Harry James with Helen Forrest (vocal) in the original hit recording (1942)"
+
+[[youtube]]
+id = "FRyuRfj8KXc"
+remark = "Frank Sinatra"
+
+[versions.Fake]
+doChords = true
+doVoice = true
+doLyrics = false
+doLyricsmore = false
+doLyricsmoremore = false
+doChordBars = false
+doGuitar = false
+doExtra = false
+doPrep = false
+doOwn = false
+#}
+{% if part == "Vars" %}
+{% endif %}
+{% if part == "Doc" %}	DONE:
+	- added the meta data from the fake book.
+	- put in the tunes structure.
+	- put in the chords (fake book).
+	- put in the tune (fake book).
+	- added youtube performances.
+	TODO:
+	- add the lyrics.
+	- check the chords (fake book).
+	- check the tune (fake book).
+	- hear the tune to check that it is right and adjust the tempo.
+	- the fake book prints no chord on the first bar of the second ending, G7 is assumed there.
+	- second to last line, first bar: the fake book puts B7 over the second beat (C6 over the first), check it.
+{% endif %}
+{% if part == "ChordsFake" %}\chordmode {
+	\startChords
+	\startSong
+
+	\partial 4 s4 |
+
+	\myMark "A"
+	\startPart
+	\repeat volta 2 {
+		c1*2 | b2:m7 e:7 | e1:7 | \myEndLine
+		a1:7 |
+	} \alternative {
+		{
+			a1:7 | d1*2:7 | g1*2:7 | \myEndLine
+			c2 g:7.5+ | c1 | a:m | a2:m7 d:7 | d:m7 d:m7.5- | \myEndLine
+			g1:7 | \myEndLineVoltaNotLast
+		}
+		{
+			g1:7 | d2:m a:7 | d1:m | d2:m c:7.5+ | f2 bes:9 | \myEndLine
+			c4:6 b2.:7 | c4:6 e:m7.5- a2:7 | d1:m7 | d2:m7.5- g:7 | c1*2 | \myEndLineVoltaLast
+		}
+	}
+	\endPart
+
+	\endSong
+	\endChords
+}
+{% endif %}
+{% if part == "VoiceFake" %}{
+	\tempo "Moderato" 4 = 160
+	\time 2/2
+	\key c \major
+
+	\partial 4 g'4 |
+
+	% part "A"
+	\repeat volta 2 {
+		e2~ e8 dis e d | e4 c' b8 a4 e8~ | e2~ e8 dis e d | e4 d' c8 b4 a8~ |
+		a2~ a8 gis a g |
+	} \alternative {
+		{
+			a4 g f8 cis4 e8~ | e1~ | e1 | r4 e e e | e8 d4 g8~ g2 |
+			r4 a a a | a8 fis g c~ c2 | r4 c c c | c8 b c d~ d4 a | d1~ |
+			d4 b a g |
+		}
+		{
+			bes4 a g8 e4 a8~ | a1~ | a2. r4 | r4 d d d | d8 c e d~ d2 |
+			r4 a a a | a8 g bes a~ a4 e | f g a c | d2 e | c1~ | c2. r4 |
+		}
+	}
+}
+{% endif %}

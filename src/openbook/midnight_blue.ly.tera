@@ -1,0 +1,134 @@
+{#
+default_version = "Fake"
+
+[attributes]
+title = "Midnight Blue"
+style = "Pop"
+composer = "Carole Bayer Sager, Melissa Manchester"
+poet = "Carole Bayer Sager, Melissa Manchester"
+piece = "Moderately Slow Rock"
+copyright = "1974 1975 by Alley Music Corp., Trio Music Co., Inc., and Rumanian Pickleworks Music Company"
+copyrightextra = "All rights administered by Hudson Bay Music, Inc."
+typesetter = "Mark Veltzer <mark.veltzer@gmail.com>"
+completion = "5"
+uuid = "230b143a-d521-11f1-8000-046874d194b7"
+structure = "ABC"
+location = "jfb:248"
+
+[[youtube]]
+id = "0ao6Mlc0Pbs"
+remark = "Melissa Manchester in the original recording from Melissa (1975)"
+
+[[youtube]]
+id = "Yd4Nrh96Nl0"
+remark = "Melissa Manchester live on The Midnight Special"
+
+[versions.Fake]
+doChords = true
+doVoice = true
+doLyrics = false
+doLyricsmore = false
+doLyricsmoremore = false
+doChordBars = false
+doGuitar = false
+doExtra = false
+doPrep = false
+doOwn = false
+#}
+{% if part == "Vars" %}
+{% endif %}
+{% if part == "Doc" %}	DONE:
+	- added the meta data from the fake book.
+	- put in the tunes structure.
+	- put in the chords (fake book).
+	- put in the tune (fake book).
+	- added youtube performances.
+	TODO:
+	- add the lyrics.
+	- check the chords (fake book).
+	- check the tune (fake book).
+	- hear the tune to check that it is right and adjust the tempo.
+{% endif %}
+{% if part == "ChordsFake" %}\chordmode {
+	\startChords
+	\startSong
+
+	\partial 8 s8 |
+
+	\repeat volta 2 {
+
+		\myMark "A"
+		\startPart
+		c1*3 | c2.:7 c4:9 | \myEndLine
+		f2 bes | f1 | c1*2 | \myEndLine
+		\endPart
+
+		\myMark "B"
+		\startPart
+		g1 | f1 | a1:m | g1:7sus4 | \myEndLine
+		c1*2 | e1*2:m | \myEndLine
+		a1:m | g2.:sus4 g4 | c1 | g1:sus4 | \myEndLine
+	} \alternative {
+		{
+			g1 | \myEndLineVoltaNotLast
+		}
+		{
+			g1 | \myEndLineVoltaLast
+		}
+	}
+	\endPart
+
+	\myMark "C"
+	\startPart
+	c1*3 | c2.:7 c4:9 | \myEndLine
+	f1*2 | c1*2 | \myEndLine
+	g1 | f1 | a1:m | g1:7sus4 | \myEndLine
+	\endPart
+
+	\myMark "End"
+	\startPart
+	\repeat volta 2 {
+		c1*4 | \myEndLine
+	}
+	\endPart
+
+	\endSong
+	\endChords
+}
+{% endif %}
+{% if part == "VoiceFake" %}{
+	\tempo "Andante" 4 = 84
+	\time 4/4
+	\key c \major
+
+	\partial 8 g8 |
+
+	\repeat volta 2 {
+		% part "A"
+		e'8 e f e~ e g, g e'~ | e4 e8 f e4 c | f8 e f e~ e c4. | a'4 g e16 d c8 d4 |
+		c1~ | c4 r4 g8 c4 e8~ | e1~ | e2. r4 |
+
+		% part "B"
+		g8 g b g~ g b4 a8~ | a8 f g4 f r4 | c'8 c b a~ a g d4~ | d8 r8 g,8 g c c e a~ |
+		a8 g~ g2.~ | g4 r4 c8 b4 g8~ | g1~ | g4 r4 b4 g8 d8 |
+		c1 | r2 c4 d4 | e4 f8 e~ e f e4 | d1~ |
+	} \alternative {
+		{
+			d4 r4 r4 r8 g,8 |
+		}
+		{
+			d'2. r8 g8 |
+		}
+	}
+
+	% part "C"
+	e'8 e f e~ e g, g e'~ | e4 e8 f e4 c | f8 e f e~ e c4. | a4 g e16 d c8 d4 |
+	c2 a'8 g a f~ | f8 f~ f2. | r2 c'8 a g a~ | a8 g~ g2. |
+	g8 g b g~ g b4 a8~ | a8 f g4 f r4 | c'8 c b a~ a g e d~ | d8 r8 g,8 g c c e a~ |
+
+	% part "End"
+	\repeat volta 2 {
+		a8 g~ g2. | r4 g,8 g c c e a~ | a8 g~ g2. | r4 g,8 g c c e a~ |
+	}
+}
+{% endif %}

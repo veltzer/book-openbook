@@ -1,0 +1,129 @@
+{#
+default_version = "Fake"
+
+[attributes]
+title = "Let There Be Love"
+style = "Jazz"
+composer = "Lionel Rand"
+poet = "Ian Grant"
+piece = "Moderately"
+copyright = "1940 Shapiro, Bernstein and Co., Inc., New York, NY."
+copyrightextra = "Renewed."
+typesetter = "Mark Veltzer <mark.veltzer@gmail.com>"
+completion = "5"
+uuid = "3f6656e0-d51e-11f1-8000-046874d194b7"
+structure = "ABAC"
+location = "jfb:214"
+
+[[youtube]]
+id = "X9mSxUeTEkQ"
+remark = "Sammy Kaye with Tommy Ryan in the original recording (1940)"
+
+[[youtube]]
+id = "_JwgE9ZwxZc"
+remark = "Nat King Cole and George Shearing from Nat King Cole Sings/George Shearing Plays (1962)"
+
+[versions.Fake]
+doChords = true
+doVoice = true
+doLyrics = false
+doLyricsmore = false
+doLyricsmoremore = false
+doChordBars = false
+doGuitar = false
+doExtra = false
+doPrep = false
+doOwn = false
+#}
+{% if part == "Vars" %}
+{% endif %}
+{% if part == "Doc" %}	DONE:
+	- added the meta data from the fake book.
+	- put in the tunes structure.
+	- put in the chords (fake book).
+	- put in the tune (fake book).
+	- added youtube performances.
+	TODO:
+	- add the lyrics.
+	- check the chords (fake book).
+	- check the tune (fake book).
+	- hear the tune to check that it is right and adjust the tempo.
+{% endif %}
+{% if part == "ChordsFake" %}\chordmode {
+	\startChords
+	\startSong
+
+	\partial 2 s2 |
+
+	\repeat volta 2 {
+
+		\myMark "A"
+		\startPart
+		ees1:maj7 | g:m7 | g:m7.5- | c:7.9- | \myEndLine
+		f1:m7.5- | bes:7.9- | ees2:maj9 f:m7 | g:m7 ges:dim7 | \myEndLine
+		\endPart
+
+		\myMark "B"
+		\startPart
+		f1:m7 | bes:7.9- | ees:maj9 | ees2:6 ges:dim7 | \myEndLine
+		f1:m7 | bes:7.9- | ees:6 | f2:m7 bes:7.9- | \myEndLine
+		\endPart
+
+		\myMark "A"
+		\startPart
+		ees1:maj9 | g:m7 | g:m7.5- | c:7.9- | \myEndLine
+		f1:m7.5- | bes:7.9- | ees2:maj9 e:dim7 | f:m7 bes:7.9- | \myEndLine
+		\endPart
+
+		\myMark "C"
+		\startPart
+		ees1:maj9 | g:m7 | c2:9 g:m7 | c1:7 | \myEndLine
+		f1:m7 | bes:7.9- |
+	} \alternative {
+		{
+			ees2 ees:dim7 | f:m7 bes:7 | \myEndLineVoltaNotLast
+		}
+		{
+			ees2 aes:m6 | ees1:6 | \myEndLineVoltaLast
+		}
+	}
+	\endPart
+
+	\endSong
+	\endChords
+}
+{% endif %}
+{% if part == "VoiceFake" %}{
+	\tempo "Moderato" 4 = 120
+	\time 4/4
+	\key ees \major
+
+	\partial 2 \tuplet 3/2 { g'4 aes bes } |
+
+	\repeat volta 2 {
+
+		% part "A"
+		bes1~ | bes4 g \tuplet 3/2 { g aes bes } | bes1~ | bes2 \tuplet 3/2 { g4 aes bes } |
+		aes2 aes~ | aes2 \tuplet 3/2 { f4 g aes } | bes1~ | bes2 \tuplet 3/2 { a!4 d c } |
+
+		% part "B"
+		bes1~ | \tuplet 3/2 { bes4 f f } \tuplet 3/2 { f g aes } | bes1~ | bes2 \tuplet 3/2 { ees,4 d c } |
+		aes'2 aes~ | aes4 f \tuplet 3/2 { f ees d } | g1~ | g2 \tuplet 3/2 { g4 aes bes } |
+
+		% part "A"
+		bes1~ | bes4 g \tuplet 3/2 { g aes bes } | bes1~ | bes2 \tuplet 3/2 { g4 aes bes } |
+		aes2 aes~ | aes4 f \tuplet 3/2 { f g aes } | bes1~ | bes2 \tuplet 3/2 { g4 aes bes } |
+
+		% part "C"
+		bes2 bes~ | bes4 bes \tuplet 3/2 { bes g bes } | d1~ | d4 c \tuplet 3/2 { c b! c } |
+		ees1~ | ees2 \tuplet 3/2 { d,4 ees f } |
+	} \alternative {
+		{
+			ees1 | r2 \tuplet 3/2 { g4 aes bes } |
+		}
+		{
+			ees,1~ | ees2 r |
+		}
+	}
+}
+{% endif %}

@@ -1,0 +1,109 @@
+{#
+default_version = "Fake"
+
+[attributes]
+title = "Little Girl Blue"
+style = "Jazz"
+composer = "Richard Rodgers"
+poet = "Lorenz Hart"
+piece = "Moderately"
+copyright = "1935 T.B. Harms Company"
+copyrightextra = "Copyright Renewed. (c/o The Welk Music Group, Santa Monica, CA 90401)"
+typesetter = "Mark Veltzer <mark.veltzer@gmail.com>"
+completion = "5"
+uuid = "fc78a170-d51e-11f1-8000-046874d194b7"
+structure = "AAB"
+location = "jfb:223"
+
+[[youtube]]
+id = "ol_8cPp-1J0"
+remark = "Gloria Grafton (who introduced the song in Jumbo) with Paul Whiteman and His Orchestra (1936)"
+
+[[youtube]]
+id = "mYeYxf0UQB0"
+remark = "Nina Simone (1958)"
+
+[versions.Fake]
+doChords = true
+doVoice = true
+doLyrics = false
+doLyricsmore = false
+doLyricsmoremore = false
+doChordBars = false
+doGuitar = false
+doExtra = false
+doPrep = false
+doOwn = false
+#}
+{% if part == "Vars" %}
+{% endif %}
+{% if part == "Doc" %}	DONE:
+	- added the meta data from the fake book.
+	- put in the tunes structure.
+	- put in the chords (fake book).
+	- put in the tune (fake book).
+	- added youtube performances.
+	TODO:
+	- add the lyrics.
+	- check the chords (fake book).
+	- check the tune (fake book).
+	- hear the tune to check that it is right and adjust the tempo.
+	- B part bar 6: the book marks only the second c of the bar with a sharp; the fourth c is kept sharp following the notation rule (fits the A7 chord), check it.
+{% endif %}
+{% if part == "ChordsFake" %}\chordmode {
+	\startChords
+	\startSong
+
+	\myMark "A"
+	\startPart
+	\repeat volta 2 {
+		f2 d:m7 | g:m9 c:9 | f1 | c2:m9 f:7.9- | \myEndLine
+		bes1:maj7 | bes2:m7 ees:7 | \myEndLine
+		f2 d:m7 | d:7.9- des:7 | a:m7 aes:7 | g:m7 c:7 | \myEndLine
+		f1 |
+	} \alternative {
+		{
+			g2:m7 c:7 | \myEndLineVoltaNotLast
+		}
+		{
+			f1 | \myEndLineVoltaLast
+		}
+	}
+	\endPart
+
+	\myMark "B"
+	\startPart
+	c1:7 | g2:m7 c:7 | f1*2:maj7 | e1:m7 | \myEndLine
+	a1:7 | a2:m7 d:7.9- | g:m7 c:7.9- | \myEndLine
+	f2 d:m7 | g:m9 c:9 | f1*2 | \myEndLine
+	\endPart
+
+	\endSong
+	\endChords
+}
+{% endif %}
+{% if part == "VoiceFake" %}{
+	\tempo "Moderato" 4 = 120
+	\time 2/2
+	\key f \major
+
+	% part "A"
+	\repeat volta 2 {
+		f4 f2 f4 | a a g g | f f2 f4 | d'1 | f,4 f2 f4 | c'1 |
+		f,4 f2 f4 | bes a g f | c c2 c4 | bes4 c d8 d e4 |
+		f1~ |
+	} \alternative {
+		{
+			f2 r2 |
+		}
+		{
+			f4 c' c, d |
+		}
+	}
+
+	% part "B"
+	e2. c'4 | c,4 d e g | a a2 c4 | a c a c | a a2 cis4 |
+	a cis a cis | a2 bes | g a |
+	f4 f2 f4 | a a g8 g g4 | f1~ | f2. r4 |
+}
+{% endif %}

@@ -1,0 +1,118 @@
+{#
+default_version = "Fake"
+
+[attributes]
+title = "Marmaduke"
+style = "Jazz"
+composer = "Charlie Parker"
+piece = "Up Tempo"
+copyright = "1948 Atlantic Music Corp."
+copyrightextra = "Renewed and assigned 1976 Atlantic Music Corp."
+typesetter = "Mark Veltzer <mark.veltzer@gmail.com>"
+completion = "5"
+uuid = "9bea1ca0-d521-11f1-8000-046874d194b7"
+structure = "AABA"
+location = "jfb:242"
+
+[[youtube]]
+id = "7FyAUEfHONQ"
+remark = "Charlie Parker in the original recording (1948)"
+
+[[youtube]]
+id = "AgITtZp8duc"
+remark = "Roy Hargrove"
+
+[versions.Fake]
+doChords = true
+doVoice = true
+doLyrics = false
+doLyricsmore = false
+doLyricsmoremore = false
+doChordBars = false
+doGuitar = false
+doExtra = false
+doPrep = false
+doOwn = false
+#}
+{% if part == "Vars" %}
+{% endif %}
+{% if part == "Doc" %}	DONE:
+	- added the meta data from the fake book.
+	- put in the tunes structure.
+	- put in the chords (fake book).
+	- put in the tune (fake book).
+	- added youtube performances.
+	TODO:
+	- check the chords (fake book).
+	- check the tune (fake book).
+	- hear the tune to check that it is right and adjust the tempo.
+	- the book's second ending bracket covers only one bar; the lead in bar that follows it is typed after the repeat, as the last bar of the second A.
+{% endif %}
+{% if part == "ChordsFake" %}\chordmode {
+	\startChords
+	\startSong
+
+	\partial 8*7 s8*7 |
+
+	\myMark "A"
+	\startPart
+	\repeat volta 2 {
+		g1:m7 | g:m7 | g:m7 | \myEndLine
+		g2:m7 c:7 | f1 | g2:m7 c:7 | \myEndLine
+	} \alternative {
+		{
+			f1 | a2:m7.5- d:7 | \myEndLineVoltaNotLast
+		}
+		{
+			f1 | \myEndLineVoltaLast
+		}
+	}
+	f1 | \myEndLine
+	\endPart
+
+	\myMark "B"
+	\startPart
+	c1:m7 | f:7 | bes | bes | \myEndLine
+	g1:7 | g:7 | g:m7 | c:7 | \myEndLine
+	\endPart
+
+	\myMark "A"
+	\startPart
+	g1:m7 | g:m7 | g:m7 | g2:m7 c:7 | \myEndLine
+	f1 | g2:m7 c:7 | f1 | f | \myEndLine
+	\endPart
+
+	\endSong
+	\endChords
+}
+{% endif %}
+{% if part == "VoiceFake" %}{
+	\tempo "Allegro" 4 = 220
+	\time 4/4
+	\key f \major
+
+	\partial 8*7 bes'8 c d e d a c |
+
+	% part "A"
+	\repeat volta 2 {
+		bes8 a bes a g4. a8 | bes8 d, f a g4 r8 a | bes8 c16 bes a8 g bes c g bes |
+		a8 g f d des4. a'8 | e8 d! e4 r8 f4 g8 | a8 f g a bes c des bes |
+	} \alternative {
+		{
+			c4 r r r8 bes8 | c8 d ees d~ d4 r8 a |
+		}
+		{
+			c4 r r2 |
+		}
+	}
+	r8 c,16 d f8 g a bes c a |
+
+	% part "B"
+	bes8 c16 bes a8 g f e ees g, | d'8 c~ c4 r2 | r2 r8 d f g | a8 bes c a bes c16 bes g8 f |
+	a4 r8 d,16 e f8 g a b! | e8 d~ d4 r2 | r8 fis, \tuplet 3/2 { g8 bes d } f8 \tuplet 3/2 { e16 d c } bes8 a | g8 f \tuplet 3/2 { e g bes } des16 ees c8~ c a |
+
+	% part "A"
+	bes8 a bes a g4. a8 | bes8 d, f a g4 r8 a | bes8 c16 bes a8 g bes c g bes | a8 g f d des4. a'8 |
+	e8 d! e4 r8 f4 g8 | a8 f g a bes c des bes | c4 r8 f, bes c a f~ | f4 r r2 |
+}
+{% endif %}

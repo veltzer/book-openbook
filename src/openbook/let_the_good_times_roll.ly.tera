@@ -1,0 +1,146 @@
+{#
+default_version = "Fake"
+
+[attributes]
+title = "Let The Good Times Roll"
+style = "Blues"
+composer = "Leonard Lee"
+poet = "Leonard Lee"
+piece = "Medium bounce"
+copyright = "1956-1959-1960-1963 ATLANTIC MUSIC CORP."
+copyrightextra = "Renewed 1985-1987 ATLANTIC MUSIC CORP."
+typesetter = "Mark Veltzer <mark.veltzer@gmail.com>"
+completion = "5"
+uuid = "a98a160c-d51d-11f1-8000-046874d194b7"
+structure = "AABA"
+location = "jfb:214"
+
+[[youtube]]
+id = "wj1yV0K4q1g"
+remark = "Shirley and Lee in the original recording (1956)"
+
+[[youtube]]
+id = "H-PtYY_Eiok"
+remark = "Bunny Sigler (1967)"
+
+[versions.Fake]
+doChords = true
+doVoice = true
+doLyrics = false
+doLyricsmore = false
+doLyricsmoremore = false
+doChordBars = false
+doGuitar = false
+doExtra = false
+doPrep = false
+doOwn = false
+#}
+{% if part == "Vars" %}
+{% endif %}
+{% if part == "Doc" %}	DONE:
+	- added the meta data from the fake book.
+	- put in the tunes structure.
+	- put in the chords (fake book).
+	- put in the tune (fake book).
+	- added youtube performances.
+	TODO:
+	- add the lyrics.
+	- check the chords (fake book).
+	- check the tune (fake book).
+	- hear the tune to check that it is right and adjust the tempo.
+	- in the 'a gis a g' figures the fake book prints no natural on the last g; it is typed as g natural (strictly it would carry the sharp).
+{% endif %}
+{% if part == "ChordsFake" %}\chordmode {
+	\startChords
+	\startSong
+
+	\repeat volta 2 {
+
+		\myMark "A"
+		\startPart
+		f1 | f | f | f | \myEndLine
+		bes1 | f | g:7 | c:7 | \myEndLine
+		\endPart
+
+		\myMark "A"
+		\startPart
+		f1 | f | f | f | \myEndLine
+		bes1 | f | c:7 | \myEndLine
+	} \alternative {
+		{
+			f1 | \myEndLineVoltaNotLast
+		}
+		{
+			f1 | \myEndLineVoltaLast
+		}
+	}
+	\endPart
+
+	\repeat volta 2 {
+
+		\myMark "B"
+		\startPart
+		bes1 | f | c:7 | f | \myEndLine
+		bes1 | f | g:7 | c:7 | \myEndLine
+		\endPart
+
+		\myMark "A"
+		\startPart
+		f1 | f | f | f | \myEndLine
+		bes1 | f | c:7 | \myEndLine
+	} \alternative {
+		{
+			f1 | \myEndLineVoltaNotLast
+		}
+		{
+			f1 | f | \myEndLineVoltaLast
+		}
+	}
+	\endPart
+
+	\endSong
+	\endChords
+}
+{% endif %}
+{% if part == "VoiceFake" %}{
+	\tempo "Moderato" 4 = 140
+	\time 2/2
+	\key f \major
+
+	\repeat volta 2 {
+
+		% part "A"
+		r8 c' a4 a8 gis a g | a8 g!4 f8~ f d c r | r8 c' a4 a8 gis a g | a8 g!4 f8~ f4 g8 r |
+		r8 g g f g f d c | f8 f4 f8~ f d c r | r4 g'2 f8 f | e4 c bes a |
+
+		% part "A"
+		r8 c' a4 a8 gis a g | a8 g!4 f8~ f d c r | r8 c' a4 a8 gis a g | a8 g!4 f8~ f4 g8 r |
+		r8 g g f g f d c | f8 f4 f8~ f d c r | r4 bes'8 c a4 g |
+	} \alternative {
+		{
+			a8 g f2 r4 |
+		}
+		{
+			a8 g f2 r4 |
+		}
+	}
+
+	\repeat volta 2 {
+
+		% part "B"
+		bes2. f4 | a4 f2. | g2. a4 | f1 |
+		bes4 bes2. | a4 f2. | g4 g <g a> <f a> | <e c'>1 |
+
+		% part "A"
+		r8 c' a4 a8 gis a g | a8 g!4 f8~ f d c r | r8 c' a4 a8 gis a g | a8 g!4 f8~ f4 g8 r |
+		r8 g g f g f d c | f8 f4 f8~ f d c r | r4 bes'8 c a4 g |
+	} \alternative {
+		{
+			a8 g f2 r4 |
+		}
+		{
+			a8 g f2.~ | f2. r4 |
+		}
+	}
+}
+{% endif %}

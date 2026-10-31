@@ -1,0 +1,126 @@
+{#
+default_version = "Fake"
+
+[attributes]
+title = "No Moon At All"
+style = "Jazz"
+composer = "Reed Evans, Dave Mann"
+poet = "Reed Evans, Dave Mann"
+piece = "With a Beat"
+copyright = "1947, 1949 JEFFERSON MUSIC CO., INC."
+copyrightextra = "Renewed 1975, 1977 RYTVOC, INC."
+typesetter = "Mark Veltzer <mark.veltzer@gmail.com>"
+completion = "5"
+uuid = "414e46f4-d521-11f1-8000-046874d194b7"
+structure = "AABA"
+location = "jfb:276"
+
+[[youtube]]
+id = "pumVIvjbl_I"
+remark = "Nat King Cole Trio"
+
+[[youtube]]
+id = "JkbLQ2DQ2VM"
+remark = "Diana Krall"
+
+[versions.Fake]
+doChords = true
+doVoice = true
+doLyrics = false
+doLyricsmore = false
+doLyricsmoremore = false
+doChordBars = false
+doGuitar = false
+doExtra = false
+doPrep = false
+doOwn = false
+#}
+{% if part == "Vars" %}
+{% endif %}
+{% if part == "Doc" %}	DONE:
+	- added the meta data from the fake book.
+	- put in the tunes structure.
+	- put in the chords (fake book).
+	- put in the tune (fake book).
+	- added youtube performances.
+	TODO:
+	- add the lyrics.
+	- check the chords (fake book).
+	- check the tune (fake book).
+	- hear the tune to check that it is right and adjust the tempo.
+	- in the A parts the book writes an f with no accidental after the f sharp in the D7/C bar; it is read as f sharp (carried through the bar, as the harmony implies).
+{% endif %}
+{% if part == "ChordsFake" %}\chordmode {
+	\startChords
+	\startSong
+
+	\repeat volta 2 {
+
+		\myMark "A"
+		\startPart
+		d1:m | a:/cis | d:7/c | g:/b | \myEndLine
+		c:7/bes | f2:/a bes4:7 a:7 | d2:m bes:9 | e:7.5- a:7.5+ | \myEndLine
+		\endPart
+
+		\myMark "A"
+		\startPart
+		d1:m | a:/cis | d:7/c | g:/b | \myEndLine
+		c:7/bes | f2:/a bes4:7 a:7 | d1:m | a:7.9- | \myEndLine
+		\endPart
+
+		\myMark "B"
+		\startPart
+		d4:m ees:7 d2:7 | s1 | g1:7 | s1 | \myEndLine
+		c1:7 | g2:m7.5- c:7 | f1 | a2:7/e a:7 | \myEndLine
+		\endPart
+
+		\myMark "A"
+		\startPart
+		d1:m | a:/cis | d:7/c | g:/b | \myEndLine
+		c:7/bes | f2:/a bes4:7 a:7 |
+	} \alternative {
+		{
+			d2:m bes:9 | a:7.9- ees:9.11+ | \myEndLineVoltaNotLast
+		}
+		{
+			d2:m bes:9 | ees:13.11+ d:m7+ | \myEndLineVoltaLast
+		}
+	}
+	\endPart
+
+	\endSong
+	\endChords
+}
+{% endif %}
+{% if part == "VoiceFake" %}{
+	\tempo "Moderato" 4 = 160
+	\time 2/2
+	\key f \major
+
+	\repeat volta 2 {
+
+		% part "A"
+		a'8 f g a~ a2 | r8 a e a~ a2 | r8 a4 fis8 a g fis a | g4 d8 g~ g2 |
+		r8 g4 e8 g f e g | f8 b,! c f~ f d e d~ | d1 | r1 |
+
+		% part "A"
+		a'8 f g a~ a2 | r8 a e a~ a2 | r8 a4 fis8 a g fis a | g4 d8 g~ g2 |
+		r8 g4 e8 g f e g | f8 b,! c f~ f d e d~ | d1 | r1 |
+
+		% part "B"
+		r8 d4. fis8 a4 d,8~ | d4 fis8 a~ a2 | r8 g4. b!8 f'4 g,8~ | g4 b!8 d~ d2 |
+		r8 c4. bes8 g4 c8~ | c4 bes8 g~ g4 f8 g | a8 a a a a a a a | r8 cis bes a~ a2 |
+
+		% part "A"
+		a8 f g a~ a2 | r8 a e a~ a2 | r8 a4 fis8 a g fis a | g4 d8 g~ g2 |
+		r8 g4 e8 g f e g | f8 b,! c f~ f d e d~ |
+	} \alternative {
+		{
+			d1 | r1 |
+		}
+		{
+			d1 | r1 |
+		}
+	}
+}
+{% endif %}

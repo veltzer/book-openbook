@@ -1,0 +1,127 @@
+{#
+default_version = "Fake"
+
+[attributes]
+title = "Once Upon A Summertime"
+style = "Jazz"
+composer = "Eddie Barclay, Michel Legrand"
+poet = "Johnny Mercer, Eddie Marnay"
+piece = "Slowly, with feeling"
+copyright = "1954, 1962 by Compagnie Phonographique Francaise Editions Eddie Barclay, Paris, France"
+copyrightextra = "Sole Selling Agent MCA MUSIC PUBLISHING, A Division of MCA Inc., New York, NY for the U.S.A. and Canada"
+typesetter = "Mark Veltzer <mark.veltzer@gmail.com>"
+completion = "5"
+uuid = "13368236-d521-11f1-8000-046874d194b7"
+structure = "ABCB"
+location = "jfb:287"
+
+[[youtube]]
+id = "teFWHnJUH5k"
+remark = "Blossom Dearie from Once Upon A Summertime (1958)"
+
+[[youtube]]
+id = "_X0sjP_iFbU"
+remark = "Miles Davis and Gil Evans from Quiet Nights (1962)"
+
+[versions.Fake]
+doChords = true
+doVoice = true
+doLyrics = false
+doLyricsmore = false
+doLyricsmoremore = false
+doChordBars = false
+doGuitar = false
+doExtra = false
+doPrep = false
+doOwn = false
+#}
+{% if part == "Vars" %}
+{% endif %}
+{% if part == "Doc" %}	DONE:
+	- added the meta data from the fake book.
+	- put in the tunes structure.
+	- put in the chords (fake book).
+	- put in the tune (fake book).
+	- added youtube performances.
+	TODO:
+	- add the lyrics.
+	- check the chords (fake book).
+	- check the tune (fake book).
+	- hear the tune to check that it is right and adjust the tempo.
+	- the fake book shows the return to the A flat key signature (in parentheses) at the end of the first ending; it is not typeset here.
+	- the fake book prints no accidental on the last note of the G7 bar and on the first note of the following C7 bar (bars 7-8); the key signature would make them d flat, which clashes with the G7, so they are typed as d natural.
+{% endif %}
+{% if part == "ChordsFake" %}\chordmode {
+	\startChords
+	\startSong
+
+	\repeat volta 2 {
+
+		\myMark "A"
+		\startPart
+		f2.:m | f:m | g:m7.5- | c:7 | \myEndLine
+		f2.:m7 | d:m7.5- | g:7 | c:7 | \myEndLine
+		\endPart
+
+		\myMark "B"
+		\startPart
+		c2.:m7 | f2:7 f4:7.9- | bes2. | ees:9 | f:maj7 | \myEndLine
+		d2.:m7 | g:7 | c2:7 c4:7.9- | \myEndLine
+		\endPart
+
+		\myMark "C"
+		\startPart
+		f2.:maj7 | d:m7 | g:m7 | c:9 | \myEndLine
+		f2. | d:m7 | g:m7 | c:7 | \myEndLine
+		\endPart
+
+		\myMark "B"
+		\startPart
+		c2.:m7 | f2:9 f4:7.9- | bes2. | ees:9 | f:maj7 | \myEndLine
+		d2.:m7 | g:7 | g4:m7 c:9 c:7.9- | \myEndLine
+	} \alternative {
+		{
+			f2 d4:m7 | g:m7 c2:7.9- | \myEndLineVoltaNotLast
+		}
+		{
+			f2.*2 | \myEndLineVoltaLast
+		}
+	}
+	\endPart
+
+	\endSong
+	\endChords
+}
+{% endif %}
+{% if part == "VoiceFake" %}{
+	\tempo "Andante" 4 = 92
+	\time 3/4
+	\key aes \major
+
+	\repeat volta 2 {
+		% part "A"
+		c'4. des8 c b! | c8 des c b! c aes | bes4. c8 bes a! | bes8 c bes a! bes g |
+		aes4. bes8 aes g | aes8 bes aes g aes f | g4. f8 ees d! | d!4 c2 |
+
+		% part "B"
+		c'4. d!8 c b! | c8 d! c b! c a! | bes4. c8 bes a! | bes8 c bes a! bes g | a!4. bes8 a gis |
+		a!8 bes a gis a f | g2.~ | g2. |
+
+		% part "C"
+		\key f \major
+		a4. bes8 a gis | a8 bes a gis a f | g4. a8 g fis | g8 a g fis g e |
+		f4. g8 f e | f8 g f e d c | d2 c4 | d4 c2 |
+
+		% part "B"
+		c'4. d8 c b! | c8 d c b! c a | bes4. c8 bes a | bes8 c bes a bes g | a4. bes8 a gis |
+		a8 bes a gis a f | g4. a8 g fis | g8 a g fis g e |
+	} \alternative {
+		{
+			f2.~ | f4 r r |
+		}
+		{
+			f2.~ | f2. |
+		}
+	}
+}
+{% endif %}

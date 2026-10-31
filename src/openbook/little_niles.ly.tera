@@ -1,0 +1,115 @@
+{#
+default_version = "Fake"
+
+[attributes]
+title = "Little Niles"
+style = "Jazz"
+composer = "Randy Weston"
+piece = "Jazz Waltz"
+copyright = "1957 (Renewed 1985) BLACK SUN MUSIC (SESAC)"
+copyrightextra = "All Rights Administered by MAYFLOWER MUSIC CORPORATION (ASCAP)"
+typesetter = "Mark Veltzer <mark.veltzer@gmail.com>"
+completion = "5"
+uuid = "5ab5443e-d51d-11f1-8000-046874d194b7"
+structure = "ABA"
+location = "jfb:223"
+
+[[youtube]]
+id = "Ja9fanfCExs"
+remark = "Randy Weston in the original recording"
+
+[[youtube]]
+id = "JC_jNHi3iHM"
+remark = "Phineas Newborn Jr."
+
+[versions.Fake]
+doChords = true
+doVoice = true
+doLyrics = false
+doLyricsmore = false
+doLyricsmoremore = false
+doChordBars = false
+doGuitar = false
+doExtra = false
+doPrep = false
+doOwn = false
+#}
+{% if part == "Vars" %}
+{% endif %}
+{% if part == "Doc" %}	DONE:
+	- added the meta data from the fake book.
+	- put in the tunes structure.
+	- put in the chords (fake book).
+	- put in the tune (fake book).
+	- added youtube performances.
+	TODO:
+	- check the chords (fake book).
+	- check the tune (fake book).
+	- hear the tune to check that it is right and adjust the tempo.
+{% endif %}
+{% if part == "ChordsFake" %}\chordmode {
+	\startChords
+	\startSong
+
+	\myMark "A"
+	\startPart
+	\repeat volta 2 {
+		g2.*2:m9 | ees2.:7 | d:7 | g2.*2:m9 | ees2.:7 | \myEndLine
+		d2.:7 | g:m | g2.*2:m5+ | g2.:m6 | \myEndLine
+		g2.:m5+ | b:7.5- | e:7 | a:7.5- | d:7 | \myEndLine
+	}
+	\endPart
+
+	\myMark "B"
+	\startPart
+	\repeat volta 2 {
+		des2.*4:7.9+ | \myEndLine
+	}
+	\repeat volta 2 {
+		d2.*4:7.9+ | \myEndLine
+	}
+	\endPart
+
+	\myMark "A"
+	\startPart
+	g2.*2:m9 | ees2.:7 | d:7 | g2.*2:m9 | ees2.:7 | \myEndLine
+	d2.:7 | g:m | g2.*2:m5+ | g2.:m6 | \myEndLine
+	g2.:m5+ |
+	\repeat volta 2 {
+		b2.:7.5- | e:7 | a:7.5- | d:7 | \myEndLine
+	}
+	\endPart
+
+	\endSong
+	\endChords
+}
+{% endif %}
+{% if part == "VoiceFake" %}{
+	\tempo "Allegro" 4 = 160
+	\time 3/4
+	\key bes \major
+
+	% part "A"
+	\repeat volta 2 {
+		a'8 bes a'2 | r8 g~ g d bes g | fis g f'!4. g,8 | f!8 fis ees'4. d8 | a8 bes a'2 | r8 g~ g d bes g | fis g f'!4. g,8 |
+		f!8 fis ees'4. d8 | des bes des d! \tuplet 3/2 { ees16 f ees } d8 | des bes des d! \tuplet 3/2 { ees16 f ees } d8 | des bes des d! \tuplet 3/2 { ees16 f ees } d8 | des bes des d! \tuplet 3/2 { ees16 f ees } d8 |
+		des bes des d! \tuplet 3/2 { ees16 f ees } d8 | a4~ a8 f' r a, | gis4 e'! gis, | g!4~ g8 ees' r g, | fis4 d' fis, |
+	}
+
+	% part "B"
+	\repeat volta 2 {
+		r8 b!~ b bes a4 | r8 gis r a r bes | r8 b!~ b bes a4 | r2. |
+	}
+	\repeat volta 2 {
+		r8 d~ d des c4 | r8 b! r c r cis | r8 d~ d des c4 | r2. |
+	}
+
+	% part "A"
+	a8 bes a'2 | r8 g~ g d bes g | fis g f'!4. g,8 | f!8 fis ees'4. d8 | a8 bes a'2 | r8 g~ g d bes g | fis g f'!4. g,8 |
+	f!8 fis ees'4. d8 | des bes des d! \tuplet 3/2 { ees16 f ees } d8 | des bes des d! \tuplet 3/2 { ees16 f ees } d8 | des bes des d! \tuplet 3/2 { ees16 f ees } d8 | des bes des d! \tuplet 3/2 { ees16 f ees } d8 |
+	des bes des d! \tuplet 3/2 { ees16 f ees } d8 |
+	\repeat volta 2 {
+		a4~ a8 f' r a, | gis4 e'! gis, | g!4~ g8 ees' r g, | fis4^\markup { Repeat and Fade } d' fis, |
+	}
+}
+{% endif %}

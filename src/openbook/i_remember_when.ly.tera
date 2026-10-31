@@ -1,0 +1,129 @@
+{#
+default_version = "Fake"
+
+[attributes]
+title = "I Remember When"
+subtitle = "Si Tu Vois Ma Mère"
+style = "Jazz"
+composer = "Sidney Bechet"
+piece = "Very Slow"
+copyright = "1952, 1956 (Renewed) by Les Editions Musicales du Carousel, S.A., France"
+copyrightextra = "All rights for the United States and Canada controlled by Regent Music Corporation. Reprinted by permission."
+typesetter = "Mark Veltzer <mark.veltzer@gmail.com>"
+completion = "5"
+uuid = "4b4a758a-d51a-11f1-8000-046874d194b7"
+structure = "ABAC"
+location = "jfb:162"
+
+[[youtube]]
+id = "teNJbH1Tqg4"
+remark = "Sidney Bechet in the original recording (1952)"
+
+[[youtube]]
+id = "bmVTnLR02Nc"
+remark = "Sidney Bechet from the soundtrack of Midnight in Paris (2011)"
+
+[versions.Fake]
+doChords = true
+doVoice = true
+doLyrics = false
+doLyricsmore = false
+doLyricsmoremore = false
+doChordBars = false
+doGuitar = false
+doExtra = false
+doPrep = false
+doOwn = false
+#}
+{% if part == "Vars" %}
+{% endif %}
+{% if part == "Doc" %}	DONE:
+	- added the meta data from the fake book (the book prints the subtitle as "Si Tu Vois Me Mere").
+	- put in the tunes structure.
+	- put in the chords (fake book).
+	- put in the tune (fake book).
+	- added youtube performances.
+	TODO:
+	- check the chords (fake book).
+	- check the tune (fake book).
+	- hear the tune to check that it is right and adjust the tempo.
+	- bar 27: the small flagged eighth note after the dotted quarter is partly hidden by the sharp of the next note in the scan; typed as e, check it.
+{% endif %}
+{% if part == "ChordsFake" %}\chordmode {
+	\startChords
+	\startSong
+
+	\partial 2 s2 |
+
+	\repeat volta 2 {
+
+		\myMark "A"
+		\startPart
+		c1:6 | c:maj7 | c:6 | c:7 | \myEndLine
+		f1:6 | f:m6 | c2/e g:7/d | c1 | \myEndLine
+		\endPart
+
+		\myMark "B"
+		\startPart
+		b2:m7.5- e:7 | b:m7.5- e:7 | a1:m | a:m7 | \myEndLine
+		d1*2:7 | d2:m7 g:7 | d:m7 g:7 | \myEndLine
+		\endPart
+
+		\myMark "A"
+		\startPart
+		c1:6 | c:maj7 | c:6 | c:9 | \myEndLine
+		f1:6 | f:m6 | e2:m7.5- bes:9 | a1:7 | \myEndLine
+		\endPart
+
+		\myMark "C"
+		\startPart
+		d1*2:m7.5- | c1 | e2:m7 a:7 | d1:m7.5- | \myEndLine
+		\endPart
+
+	} \alternative {
+		{
+			d2:9 g:7 | c cis:dim7 | d:m7 g:7 | \myEndLineVoltaNotLast
+		}
+		{
+			d2:9 g:7 | c4 f:maj7 e:m7 d:m7 | c1:maj7 | \myEndLineVoltaLast
+		}
+	}
+
+	\endSong
+	\endChords
+}
+{% endif %}
+{% if part == "VoiceFake" %}{
+	\tempo "Lento" 4 = 50
+	\time 4/4
+	\key c \major
+
+	\partial 2 fis4 g |
+
+	\repeat volta 2 {
+
+		% part "A"
+		\tuplet 3/2 { e'8 g e~ } e2 \tuplet 3/2 { r8 fis, g } | \tuplet 3/2 { d'8 g d~ } d2 \tuplet 3/2 { r8 fis, g } | \tuplet 3/2 { c8 e c~ } c2 \tuplet 3/2 { r8 dis, e } | \tuplet 3/2 { bes'8 d bes~ } bes2 \tuplet 3/2 { r8 b,! c } |
+		\tuplet 3/2 { a'8 c a~ } a2 \tuplet 3/2 { r8 b, c } | \tuplet 3/2 { aes'8 c aes~ } aes2 \tuplet 3/2 { r8 b, c } | g'1~ | g2 r8 e f16 e dis e |
+
+		% part "B"
+		f4. e8 dis e \tuplet 3/2 { gis8 b d } | f2~ f8 e b d | c2. b4 | d4 c2 b4 |
+		d,2~ d8 e16 d e d cis d | fis8 a e'2 \tuplet 3/2 { d8 gis, a } | c4 b2 cis,16 d f a | c8 b4 a8~ a4 fis8 g |
+
+		% part "A"
+		\tuplet 3/2 { e'8 g e~ } e2 \tuplet 3/2 { r8 fis, g } | \tuplet 3/2 { d'8 g d~ } d2 \tuplet 3/2 { r8 fis, g } | \tuplet 3/2 { c8 e c~ } c2 \tuplet 3/2 { r8 dis, e } | \tuplet 3/2 { bes'8 d bes~ } bes2 \tuplet 3/2 { r8 b,! c } |
+		\tuplet 3/2 { a'8 c a~ } a2 \tuplet 3/2 { r8 b, c } | \tuplet 3/2 { aes'8 c aes~ } aes2 \tuplet 3/2 { r8 b, c } | g'1~ | g2. r8 g8 |
+
+		% part "C"
+		aes4 g'2 f4 | aes,2. \tuplet 3/2 { r8 g' f } | e4. e8 fis g~ \tuplet 3/2 { g8 e c } | b2. r8 g8 | aes4 g'2 f4 |
+
+	} \alternative {
+		{
+			a,!2 b | c4 e, a e | g2. fis8 g |
+		}
+		{
+			a'2 b | c4 e,,8 d e g c, b | b8 e4. b''8 e4.\fermata |
+		}
+	}
+}
+{% endif %}

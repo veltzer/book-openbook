@@ -1,0 +1,111 @@
+{#
+default_version = "Fake"
+
+[attributes]
+title = "Johnny's Theme"
+style = "Swing"
+composer = "Paul Anka, Johnny Carson"
+poet = "Paul Anka, Johnny Carson"
+piece = "Bright Swing"
+copyright = "1962, 1965 by Management Agency Music Publishing Inc. and Here's Johnny Music"
+copyrightextra = "Rights Administered by MCA Music Publishing, A Division of MCA Inc., New York, NY"
+typesetter = "Mark Veltzer <mark.veltzer@gmail.com>"
+completion = "5"
+uuid = "a515f810-d51e-11f1-8000-046874d194b7"
+structure = "AA'"
+location = "jfb:201"
+
+[[youtube]]
+id = "GXsvA4QiHlU"
+remark = "Doc Severinsen and the Tonight Show Band"
+
+[[youtube]]
+id = "TLT_gZfj_vM"
+remark = "Tokyo Large Ensemble (arr. John Higgins)"
+
+[versions.Fake]
+doChords = true
+doVoice = true
+doLyrics = false
+doLyricsmore = false
+doLyricsmoremore = false
+doChordBars = false
+doGuitar = false
+doExtra = false
+doPrep = false
+doOwn = false
+#}
+{% if part == "Vars" %}
+{% endif %}
+{% if part == "Doc" %}	DONE:
+	- added the meta data from the fake book.
+	- put in the tunes structure.
+	- put in the chords (fake book).
+	- put in the tune (fake book).
+	- added youtube performances.
+	TODO:
+	- check the chords (fake book).
+	- check the tune (fake book).
+	- hear the tune to check that it is right and adjust the tempo.
+	- the fake book credits words and music but prints no lyrics.
+{% endif %}
+{% if part == "ChordsFake" %}\chordmode {
+	\startChords
+	\startSong
+
+	\myMark "A"
+	\startPart
+	\repeat volta 2 {
+		c1:maj7 | ees:dim7 | d:m7 | g:7.9- | \myEndLine
+		c1:maj7 | ees:dim7 | d:m7 | g:7.9- | \myEndLine
+		\endPart
+
+		\myMark "A"
+		\startPart
+		c1:maj7 | ees:dim7 | d:m7 | g:7.9- | \myEndLine
+		a1:m7 | ees:dim7 | d:m7 | g:7 | c | \myEndLine
+	} \alternative {
+		{
+			b1:7 | \myEndLineVoltaNotLast
+		}
+		{
+			b1:7 | \myEndLineVoltaLast
+		}
+	}
+	\endPart
+
+	\myMark "End"
+	\startPart
+	c1:maj7 | ees:dim7 | r | r4 g:7.9- c2:7.9- | \myEndLine
+	\endPart
+
+	\endSong
+	\endChords
+}
+{% endif %}
+{% if part == "VoiceFake" %}{
+	\tempo "Allegro" 4 = 168
+	\time 4/4
+	\key c \major
+
+	% part "A"
+	\repeat volta 2 {
+		r8 e'4. d4 c | b4. a8~ a2 | r8 gis a4 c e8 d~ | d2. r8 e |
+		r8 e4. d8 des c4 | b8 e, b' a~ a2 | r8 f4. a8 c e d~ | d1 |
+
+		% part "A"
+		r8 dis e g \tuplet 3/2 { d e d } c4 | b8 e, f bes~ bes4. a8 | r8 f r gis a c e d~ | d2 r8 d4. |
+		c4 a8 e~ e d'4. | c4 a8 e~ \tuplet 3/2 { e4 d' des } | c4 a8 d,~ d c'4. | \tuplet 3/2 { b8 c b } g a b c d c~ | c2 a'8 e r4 |
+	} \alternative {
+		{
+			r4 a8 dis, r2 |
+		}
+		{
+			r4 a'8 dis, r2 |
+		}
+	}
+
+	% part "End"
+	r8 e4. d4 c | b4. a8~ a2 | c4 \tuplet 3/2 { g8 fis g } aes4 g | r4 b c2 |
+}
+{% endif %}

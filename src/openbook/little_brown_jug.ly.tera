@@ -1,0 +1,103 @@
+{#
+default_version = "Fake"
+
+[attributes]
+title = "Little Brown Jug"
+style = "Swing"
+composer = "Traditional"
+piece = "Gaily"
+copyright = "1988 by HAL LEONARD PUBLISHING CORPORATION"
+typesetter = "Mark Veltzer <mark.veltzer@gmail.com>"
+completion = "5"
+uuid = "0a90e782-d51e-11f1-8000-046874d194b7"
+structure = "AB"
+location = "jfb:222"
+
+[[youtube]]
+id = "fMWl8ck8XSk"
+remark = "Glenn Miller and his Orchestra in the famous recording (1939)"
+
+[[youtube]]
+id = "J8VRMG2Wb-0"
+remark = "The Kings Of Dixieland"
+
+[versions.Fake]
+doChords = true
+doVoice = true
+doLyrics = false
+doLyricsmore = false
+doLyricsmoremore = false
+doChordBars = false
+doGuitar = false
+doExtra = false
+doPrep = false
+doOwn = false
+#}
+{% if part == "Vars" %}
+{% endif %}
+{% if part == "Doc" %}	DONE:
+	- added the meta data from the fake book.
+	- put in the tunes structure.
+	- put in the chords (fake book).
+	- put in the tune (fake book).
+	- added youtube performances.
+	TODO:
+	- add the lyrics.
+	- check the chords (fake book).
+	- check the tune (fake book).
+	- hear the tune to check that it is right and adjust the tempo.
+{% endif %}
+{% if part == "ChordsFake" %}\chordmode {
+	\startChords
+	\startSong
+
+	\partial 4 s4 |
+
+	\myMark "A"
+	\startPart
+	\repeat volta 2 {
+		c1:6 | f:6 | g:7 | c:6 | \myEndLine
+		c:6 | f:6 | g:7 | c:6 | \myEndLine
+	\endPart
+
+	\myMark "B"
+	\startPart
+		c:6 | f:6 | g:7 | c4:6 g:7 c2:6 | \myEndLine
+	} \alternative {
+		{
+			c1:6 | f:6 | g:7 | c:6 | \myEndLineVoltaNotLast
+		}
+		{
+			c1:6 | f:6 | g:7 | c | \myEndLineVoltaLast
+		}
+	}
+	\endPart
+
+	\endSong
+	\endChords
+}
+{% endif %}
+{% if part == "VoiceFake" %}{
+	\tempo "Allegro" 4 = 160
+	\time 4/4
+	\key c \major
+
+	\partial 4 g'4 |
+
+	% part "A"
+	\repeat volta 2 {
+		e g g g | f a a a8 a | b b b4 a b | c d e2 |
+		e,4 g g g | f a a a | b b a b | d c c2 |
+
+	% part "B"
+		g4 g g2 | a4 a a2 | b8 b b4 a b | c d e2 |
+	} \alternative {
+		{
+			g,4 g g2 | a4 a a2 | b8 b b4 a b | c g c g |
+		}
+		{
+			g4 g g2 | a4 a a2 | b8 b b4 a b | c g c2 |
+		}
+	}
+}
+{% endif %}

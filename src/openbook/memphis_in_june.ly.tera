@@ -1,0 +1,99 @@
+{#
+default_version = "Fake"
+
+[attributes]
+title = "Memphis In June"
+style = "Jazz"
+composer = "Hoagy Carmichael"
+poet = "Paul Francis Webster"
+piece = "With an easy flow"
+copyright = "1945, 1987 Edwin H. Morris & Company, A Division of MPL Communications, Inc."
+copyrightextra = "Renewed 1973 Edwin H. Morris & Company, A Division of MPL Communications, Inc. International Copyright Secured. All Rights Reserved."
+typesetter = "Mark Veltzer <mark.veltzer@gmail.com>"
+completion = "5"
+uuid = "5bf8e06c-d522-11f1-8000-046874d194b7"
+structure = "ABA"
+location = "jfb:246"
+
+[[youtube]]
+id = "pNy_S_M5b0c"
+remark = "Hoagy Carmichael (1949)"
+
+[[youtube]]
+id = "dNhPIJX7N9k"
+remark = "Nina Simone (1961)"
+
+[versions.Fake]
+doChords = true
+doVoice = true
+doLyrics = false
+doLyricsmore = false
+doLyricsmoremore = false
+doChordBars = false
+doGuitar = false
+doExtra = false
+doPrep = false
+doOwn = false
+#}
+{% if part == "Vars" %}
+{% endif %}
+{% if part == "Doc" %}	DONE:
+	- added the meta data from the fake book.
+	- put in the tunes structure.
+	- put in the chords (fake book).
+	- put in the tune (fake book).
+	- added youtube performances.
+	TODO:
+	- add the lyrics.
+	- check the chords (fake book).
+	- check the tune (fake book).
+	- hear the tune to check that it is right and adjust the tempo.
+	- the last A is ten bars long, as printed.
+	- the beat placement of the chords in bars 1, 5, 16 and 17 is not clear in the fake book (typed on beat 3).
+{% endif %}
+{% if part == "ChordsFake" %}\chordmode {
+	\startChords
+	\startSong
+
+	\myMark "A"
+	\startPart
+	c2 d:m7 | e:m7 d:m7 | c des:7 | c4 a:7 d:m7 g:7 | \myEndLine
+	c2 d:m7 | e:m7 d:m7 | c d4:m g:7 | f2 c | \myEndLine
+	\endPart
+
+	\myMark "B"
+	\startPart
+	e2:m e:m/dis | e:m7/d cis:m7.5- | c:9 b:7 | e4:m6 a:m6 fis:m7.5- b:7.5- | \myEndLine
+	e2:m e:m/dis | e:m7/d a:9/cis | g4/d e:7 a:7 d:9 | c4:6/g cis:dim7 g2:7 | \myEndLine
+	\endPart
+
+	\myMark "A"
+	\startPart
+	c2 d:m7 | e:m7 d:m7 | c des:7 | c4 a:7 d:m7 g:7 | \myEndLine
+	c2 c:7 | f4 a:7 d:m d:m7.5- | c2 g4:7.5+ r | \myEndLine
+	c2:maj7 g4:7.5+ r | c4 a:m7 d:m7 g:7 | f2 c | \myEndLine
+	\endPart
+
+	\endSong
+	\endChords
+}
+{% endif %}
+{% if part == "VoiceFake" %}{
+	\tempo "Moderato" 4 = 100
+	\time 4/4
+	\key c \major
+
+	% part "A"
+	e8. g16 a8 g~ g4. a8 | b8. g16 b8 g~ g8 e4. | c8. d16 e8 g~ g8. ees16 a4 | e!1 |
+	e8. g16 a8 g~ g4. a8 | b8. g16 b8 g~ g8 e4. | c8. d16 e8 a,8~ a8 d4. | c1 |
+
+	% part "B"
+	e8. fis16 g8. a16 b8. a16 g8. a16 | b8. g16 b8 g~ g8 e4. | bes'8. a16 \tuplet 3/2 { g8 e b'!~ } b4~ \tuplet 3/2 { b8 a g } | \tuplet 3/2 { fis8 e b~ } b2. |
+	e8. fis16 g8. a16 b8. a16 g8. a16 | b8. g16 b8 g~ g8 e4. | d'4 b8. bes16 a8. g16 e4 | g1 |
+
+	% part "A"
+	e8. g16 a8 g~ g4. a8 | b8. g16 b8 g~ g8 e4. | c8. d16 e8 g~ g8. ees16 a4 | e!1 |
+	e8. g16 a8 g~ g8. g16 fis8. g16 | c4 a f16 e d4. | e8. g16 a8 g~ g4 c,8 d |
+	e8. g16 a8 g~ g4 c,8 d | e8 g a c d16 c a8 g4 | c1 |
+}
+{% endif %}

@@ -1,0 +1,107 @@
+{#
+default_version = "Fake"
+
+[attributes]
+title = "I'm Glad There Is You"
+style = "Jazz"
+composer = "Jimmy Dorsey"
+poet = "Paul Madeira"
+piece = "Slowly"
+copyright = "1941, 1942, 1987 MORLEY MUSIC CO."
+copyrightextra = "Renewed 1969, 1970 MORLEY MUSIC CO."
+typesetter = "Mark Veltzer <mark.veltzer@gmail.com>"
+completion = "5"
+uuid = "d4402218-d51a-11f1-8000-046874d194b7"
+structure = "AABA"
+location = "jfb:172"
+
+[[youtube]]
+id = "BN1fL_VlH9s"
+remark = "Jimmy Dorsey and his orchestra with Bob Eberly in the original recording (1941)"
+
+[[youtube]]
+id = "uU6O601qFvA"
+remark = "Sarah Vaughan with Clifford Brown (1954)"
+
+[versions.Fake]
+doChords = true
+doVoice = true
+doLyrics = false
+doLyricsmore = false
+doLyricsmoremore = false
+doChordBars = false
+doGuitar = false
+doExtra = false
+doPrep = false
+doOwn = false
+#}
+{% if part == "Vars" %}
+{% endif %}
+{% if part == "Doc" %}	DONE:
+	- added the meta data from the fake book.
+	- put in the tunes structure.
+	- put in the chords (fake book).
+	- put in the tune (fake book).
+	- added youtube performances.
+	TODO:
+	- add the lyrics.
+	- check the chords (fake book).
+	- check the tune (fake book).
+	- hear the tune to check that it is right and adjust the tempo.
+{% endif %}
+{% if part == "ChordsFake" %}\chordmode {
+	\startChords
+	\startSong
+
+	\myMark "A"
+	\startPart
+	f1*2:maj7 | f1*2:m7 | \myEndLine
+	g1:m7 | g2:m7 c:7 | f2:maj7 d:7 | g2:m7 c:7 | \myEndLine
+	\endPart
+
+	\myMark "A"
+	\startPart
+	f1:maj7 | f2:maj7 aes:dim7 | g1:m7 | c2:7 c:7.5+ | \myEndLine
+	f1:maj7 | d1:7 | g1:m7 | c2:7 c4:m7 f:7 | \myEndLine
+	\endPart
+
+	\myMark "B"
+	\startPart
+	bes1:maj9 | bes2:maj9 ees:9 | f1:maj7 | f2.:maj7 a4:7/e | \myEndLine
+	d2:m7 g:7 | d2:m7 g:7 | g1:m7 | c2:7 c:7.9- | \myEndLine
+	\endPart
+
+	\myMark "A"
+	\startPart
+	f1*2:maj7 | f1*2:m7 | \myEndLine
+	g1:m7 | g2:m7 c:7 | c1:m7 | f1:7 | \myEndLine
+	bes2:6 f/a | g2:m7 c4:7 c:7.9- | f2 ees4:6 e:6 | f1:6.9 | \myEndLine
+	\endPart
+
+	\endSong
+	\endChords
+}
+{% endif %}
+{% if part == "VoiceFake" %}{
+	\tempo "Adagio" 4 = 66
+	\time 4/4
+	\key f \major
+
+	% part "A"
+	e8 e4 e8~ e2~ | e4 e a8. a16 e8. e16 | ees8 ees~ ees2.~ | ees4 ees aes8. aes16 ees8. ees16 |
+	d8 d~ d2.~ | d4 d \tuplet 3/2 { e4 f g } | c1~ | c1 |
+
+	% part "A"
+	c8 c4 c8~ c2~ | c4 c e8. e16 d8. d16 | bes8 bes~ bes2.~ | bes4 bes d8. d16 c8. c16 |
+	a8 a~ a2.~ | a4 a c8 bes a g~ | g1~ | g4 a bes c |
+
+	% part "B"
+	c2~ c8. f,16 g8. a16 | c4 bes f g | a4. a8~ a2~ | a4 e f g |
+	a2~ a8. e16 f8. g16 | a4 g e f | d1 | e1 |
+
+	% part "A"
+	e8 e4 e8~ e2~ | e4 e a8. a16 e8. e16 | ees8 ees4 ees8~ ees2~ | ees4 ees aes8. aes16 ees8. ees16 |
+	d8 d4 d8~ d2~ | d4 d \tuplet 3/2 { e4 f g } | c1~ | c2. c8. cis16 |
+	d8 f4. f2~ | f4 f, a8 a a4 | f1~ | f2. r4 |
+}
+{% endif %}

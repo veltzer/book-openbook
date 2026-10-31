@@ -1,0 +1,113 @@
+{#
+default_version = "Fake"
+
+[attributes]
+title = "I Cried For You"
+style = "Jazz"
+composer = "Arthur Freed, Gus Arnheim, Abe Lyman"
+poet = "Arthur Freed, Gus Arnheim, Abe Lyman"
+piece = "Moderately"
+copyright = "1923 Arthur Freed Music"
+copyrightextra = "Pursuant to Sections 304(c) and 401(b) of the U.S. Copyright Law."
+typesetter = "Mark Veltzer <mark.veltzer@gmail.com>"
+completion = "5"
+uuid = "627d2b4e-d51a-11f1-8000-046874d194b7"
+structure = "ABAC"
+location = "jfb:154"
+
+[[youtube]]
+id = "gx_gQx5mqbk"
+remark = "Bennie Krueger's Orchestra (1923)"
+
+[[youtube]]
+id = "dLUl3-g8Se8"
+remark = "Billie Holiday with Teddy Wilson (1936)"
+
+[versions.Fake]
+doChords = true
+doVoice = true
+doLyrics = false
+doLyricsmore = false
+doLyricsmoremore = false
+doChordBars = false
+doGuitar = false
+doExtra = false
+doPrep = false
+doOwn = false
+#}
+{% if part == "Vars" %}
+{% endif %}
+{% if part == "Doc" %}	DONE:
+	- added the meta data from the fake book.
+	- put in the tunes structure.
+	- put in the chords (fake book).
+	- put in the tune (fake book).
+	- added youtube performances.
+	TODO:
+	- add the lyrics.
+	- check the chords (fake book).
+	- check the tune (fake book).
+	- hear the tune to check that it is right and adjust the tempo.
+{% endif %}
+{% if part == "ChordsFake" %}\chordmode {
+	\startChords
+	\startSong
+
+	\myMark "A"
+	\startPart
+	f1:maj7 | a2:m7 d:7 | g1:7 | d2:m7 g:7 | \myEndLine
+	g:m7 c:7 | g:m7 c:9 | f:6 c:7.5+ | f1:6 | \myEndLine
+	\endPart
+
+	\myMark "B"
+	\startPart
+	f1:maj7 | a2:m7 d:7 | g1:m7 | c:7 | \myEndLine
+	c:7 | c:7 | gis:dim7 | c2:7/g c:7 | \myEndLine
+	\endPart
+
+	\myMark "A"
+	\startPart
+	f1:maj7 | a2:m7 d:7 | g1:7 | g:7 | \myEndLine
+	g:m7 | c2:7 e:m7.5- | a1:7 | a:7 | \myEndLine
+	\endPart
+
+	\myMark "C"
+	\startPart
+	d1:7 | d:7 | d:7 | d:7 | \myEndLine
+	g:9 | g:9 | g:9 | c:7 | \myEndLine
+	\endPart
+
+	\myMark "Coda"
+	\startPart
+	f2 bes:9 | f1 | \myEndLine
+	\endPart
+
+	\endSong
+	\endChords
+}
+{% endif %}
+{% if part == "VoiceFake" %}{
+	\tempo "Moderato" 4 = 160
+	\time 2/2
+	\key f \major
+
+	% part "A"
+	a'2 e'~ | e d | d,1~ | d2 e4 f |
+	c'2 a4 g | c a2 g4^\markup { To Coda \musicglyph #"scripts.coda" } | d1~ | d1 |
+
+	% part "B"
+	e2 f | g a4 bes | c1 | e,1 |
+	c2 e | g bes | d1 | c1 |
+
+	% part "A"
+	a2 e'~ | e d | d,1~ | d2 e4 f |
+	c'2 c | c bes | a1~ | a2 gis4 a |
+
+	% part "C"
+	d2 d | d d4 cis | d cis d d |
+	d a2 gis4 | a2 a | a2 a4 gis | a gis a a~ | a d,2.^\markup { D.C. al Coda } |
+
+	% part "Coda"
+	f1~ | f2. r4 |
+}
+{% endif %}

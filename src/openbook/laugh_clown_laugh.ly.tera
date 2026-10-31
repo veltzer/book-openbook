@@ -1,0 +1,124 @@
+{#
+default_version = "Fake"
+
+[attributes]
+title = "Laugh! Clown! Laugh!"
+style = "Swing"
+composer = "Ted Fiorito"
+poet = "Sam M. Lewis, Joe Young"
+piece = "Moderately"
+copyright = "1928 JEROME H. REMICK & CO."
+copyrightextra = "Renewed 1956 WAROCK CORP."
+typesetter = "Mark Veltzer <mark.veltzer@gmail.com>"
+completion = "5"
+uuid = "77a83844-d51d-11f1-8000-046874d194b7"
+structure = "ABAC"
+location = "jfb:211"
+
+[[youtube]]
+id = "6qm2llcyKxA"
+remark = "Fred Waring and his Pennsylvanians in the hit recording of 1928"
+
+[[youtube]]
+id = "OZALEnEAiDk"
+remark = "Abbey Lincoln"
+
+[versions.Fake]
+doChords = true
+doVoice = true
+doLyrics = false
+doLyricsmore = false
+doLyricsmoremore = false
+doChordBars = false
+doGuitar = false
+doExtra = false
+doPrep = false
+doOwn = false
+#}
+{% if part == "Vars" %}
+{% endif %}
+{% if part == "Doc" %}	DONE:
+	- added the meta data from the fake book.
+	- put in the tunes structure.
+	- put in the chords (fake book).
+	- put in the tune (fake book).
+	- added youtube performances.
+	TODO:
+	- add the lyrics.
+	- check the chords (fake book).
+	- check the tune (fake book).
+	- hear the tune to check that it is right and adjust the tempo.
+{% endif %}
+{% if part == "ChordsFake" %}\chordmode {
+	\startChords
+	\startSong
+
+	\repeat volta 2 {
+
+		\myMark "A"
+		\startPart
+		c2.*2 | g2.*2:7 | \myEndLine
+		s2.*2 | c2. | e:7 | \myEndLine
+		\endPart
+
+		\myMark "B"
+		\startPart
+		a2.:7 | s2. | d:m7 | s2 d4:m7/c | \myEndLine
+		b2.:7 | s2. | e:m | d4:m7 g2:7 | \myEndLine
+		\endPart
+
+		\myMark "A"
+		\startPart
+		c2.*2 | g2.*2:7 | \myEndLine
+		s2.*2 | c2. | e:7 | \myEndLine
+		\endPart
+
+		\myMark "C"
+		\startPart
+		a2.:7 | s2. | d:m7 | s2. | \myEndLine
+		d2.:7 | g:7 |
+	} \alternative {
+		{
+			c2. | g:7.5+ | \myEndLineVoltaNotLast
+		}
+		{
+			c2.*2 | \myEndLineVoltaLast
+		}
+	}
+	\endPart
+
+	\endSong
+	\endChords
+}
+{% endif %}
+{% if part == "VoiceFake" %}{
+	\tempo "Moderato" 4 = 120
+	\time 3/4
+	\key c \major
+
+	\repeat volta 2 {
+		% part "A"
+		e4. f8 fis g | e' d c b a g | f4 d2 | f2. |
+		d4. e8 f b | d c b a g f | e4 c2 | e2. |
+
+		% part "B"
+		a4 e f | g a4. f8 | e4 d2~ | d2 r4 |
+		b'4 fis g | a b g | fis e2 | a4 g2 |
+
+		% part "A"
+		e4. f8 fis g | e' d c b a g | f4 d2 | f2. |
+		d4. e8 f b | d c b a g f | g4 e2 | c'4 b2 |
+
+		% part "C"
+		a4 e f | g a4. f8 | \tuplet 3/2 { e8 f e } d2 | d8 e f g a c |
+		d2. | e2. |
+	} \alternative {
+		{
+			c2 r4 | r2. |
+		}
+		{
+			c2.~ | c4 r r |
+		}
+	}
+}
+{% endif %}

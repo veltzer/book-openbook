@@ -1,0 +1,90 @@
+{#
+default_version = "Fake"
+
+[attributes]
+title = "I Loves You Porgy"
+style = "Broadway"
+composer = "George Gershwin"
+poet = "Ira Gershwin, DuBose Heyward"
+piece = "Moderately"
+copyright = "1935 by Gershwin Publishing Corporation"
+copyrightextra = "Copyright Renewed, Assigned to Chappell & Co., Inc."
+typesetter = "Mark Veltzer <mark.veltzer@gmail.com>"
+completion = "5"
+uuid = "4b46f202-d51a-11f1-8000-046874d194b7"
+structure = "ABA"
+location = "jfb:159"
+
+[[youtube]]
+id = "ddWfTurBb_4"
+remark = "Nina Simone (1958)"
+
+[[youtube]]
+id = "XheNXQd-Ju0"
+remark = "Nina Simone on The Ed Sullivan Show"
+
+[versions.Fake]
+doChords = true
+doVoice = true
+doLyrics = false
+doLyricsmore = false
+doLyricsmoremore = false
+doChordBars = false
+doGuitar = false
+doExtra = false
+doPrep = false
+doOwn = false
+#}
+{% if part == "Vars" %}
+{% endif %}
+{% if part == "Doc" %}	DONE:
+	- added the meta data from the fake book.
+	- put in the tunes structure.
+	- put in the chords (fake book).
+	- put in the tune (fake book).
+	- added youtube performances.
+	TODO:
+	- add the lyrics.
+	- check the chords (fake book).
+	- check the tune (fake book).
+	- hear the tune to check that it is right and adjust the tempo.
+	- bar 6: the book prints no accidental on the last eighth f after the f sharp earlier in the bar; typed as f natural to fit the Gm7 chord.
+{% endif %}
+{% if part == "ChordsFake" %}\chordmode {
+	\startChords
+	\startSong
+
+	\partial 4. s4. |
+
+	\myMark "A"
+	\startPart
+	f1:maj7 | bes:maj7 | c:7/g | f | \myEndLine
+	a2:m7 d:9 | g1:m7 | c:7 | f | \myEndLine
+	\endPart
+
+	\myMark "B"
+	\startPart
+	a1:m6 | ees2:9 e:9 | a1:m6 | aes2:7.5+ g:7.5- | \myEndLine
+	c1:m6 | fis2:9 g:9 | g:m6 des | f:m6 c:7.9+ | \myEndLine
+	\endPart
+
+	\endSong
+	\endChords
+}
+{% endif %}
+{% if part == "VoiceFake" %}{
+	\tempo "Moderato" 4 = 96
+	\time 4/4
+	\key f \major
+
+	\partial 4. f8 a c |
+
+	% part "A"
+	e8^\markup { \musicglyph #"scripts.segno" } g4. r8 f8 c a | a8 c4. r8 d,8 f a | c8 e4. r8 c8 a f | a2 r8 d,8 f a |
+	c8 e4. r8 c a fis | fis8 a4. r8 bes,8 d f | a8 c c4 r8 a f d | f1^\markup { \italic { Fine } } |
+
+	% part "B"
+	r8 a8 b! c d e d c | a4 a c b! | r8 a8 b! c d e d c | e,4 e g2 |
+	r8 c8 d ees f g f ees | c8 c c c ees4 d | r8 e!8 e e f4 f | d8 d d d ees f, a c^\markup { \italic { D.S. al Fine } } |
+}
+{% endif %}

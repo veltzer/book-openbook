@@ -1,0 +1,105 @@
+{#
+default_version = "Fake"
+
+[attributes]
+title = "Minor Swing"
+style = "Jazz"
+composer = "Django Reinhardt, Stephane Grappelli"
+piece = "Moderately"
+copyright = "1938 (Renewed) by Les Editions Francis-Day, S.A., France"
+copyrightextra = "All rights for the U.S.A. and Canada controlled by Jewel Music Publishing Co., Inc."
+typesetter = "Mark Veltzer <mark.veltzer@gmail.com>"
+completion = "5"
+uuid = "3c5b0ede-d521-11f1-8000-046874d194b7"
+structure = "AB"
+location = "jfb:251"
+
+[[youtube]]
+id = "MKTwtSEGatM"
+remark = "Django Reinhardt and Stephane Grappelli with the Quintette du Hot Club de France in the original recording (1937)"
+
+[[youtube]]
+id = "qe29wZwIqkw"
+remark = "Stephane Grappelli (1982)"
+
+[versions.Fake]
+doChords = true
+doVoice = true
+doLyrics = false
+doLyricsmore = false
+doLyricsmoremore = false
+doChordBars = false
+doGuitar = false
+doExtra = false
+doPrep = false
+doOwn = false
+#}
+{% if part == "Vars" %}
+{% endif %}
+{% if part == "Doc" %}	DONE:
+	- added the meta data from the fake book.
+	- put in the tunes structure.
+	- put in the chords (fake book).
+	- put in the tune (fake book).
+	- added youtube performances.
+	TODO:
+	- check the chords (fake book).
+	- check the tune (fake book).
+	- hear the tune to check that it is right and adjust the tempo.
+{% endif %}
+{% if part == "ChordsFake" %}\chordmode {
+	\startChords
+	\startSong
+
+	\myMark "Intro"
+	\startPart
+	r1 | r1 | r1 | r1 | \myEndLine
+	r1 | r1 | r1 | r1 | \myEndLine
+	r1 | r1 | r1 | r1 | \myEndLine
+	r1 | r1 | r1 | r1 | \myEndLine
+	\endPart
+
+	\myMark "A"
+	\startPart
+	a1:m | a:m | d:m6 | d:m6 | \myEndLine
+	e:7 | e:7 | a:m | a:m | \myEndLine
+	d:m6 | d:m6 | a:m | a:m | \myEndLine
+	e:7 | e:7 | a:m | a:m | \myEndLine
+	\endPart
+
+	\myMark "B"
+	\startPart
+	a1:m | a:m | d:m6 | d:m6 | \myEndLine
+	e:7 | e:7 | a2:m f | a4:m/e a:m b:m7.5- e:7 | \myEndLine
+	a1:m | a:m | d:m6 | d:m6 | \myEndLine
+	e:7 | e:7 | r1 | a2:m a:m6 | \myEndLine
+	\endPart
+
+	\endSong
+	\endChords
+}
+{% endif %}
+{% if part == "VoiceFake" %}{
+	\tempo "Moderato" 2 = 100
+	\time 2/2
+	\key a \minor
+
+	% part "Intro"
+	a'4 c e4. f16 e | d4 f8 a~ a4 r | a,4 c e4. f16 e | d4 f8 a~ a4 r |
+	a,4 c e4. f16 e | d4 f8 a~ a4 r | a,,1~ | a1 |
+	a'4 c e4. f16 e | d4 f8 a~ a4 r | a,4 c e4. f16 e | d4 f8 a~ a4 r |
+	a,4 c e4. f16 e | d4 f8 a~ a4 r8 a,, | c4 b a f | e8 c''' c c~ c c b4~ |
+
+	% part "A"
+	b8 a a r a4. r8 | r8 a gis a b a gis b | a4 f8 d b4 r | r4 r8 f' d' c b a |
+	gis4 f8 d b4 r | r4 \tuplet 3/2 { a8 bes d } f4 \tuplet 3/2 { e8 f e } | c8. b16 a4 a r | r4 r8 a' b4 c8 d~ |
+	d8 d4. r8 c b a | b4. gis8 b a f e | d c b f' e4 c8 a | e8 a c e a b c a |
+	b4 fis8. a16 gis4 e8. ees16 | d8 c'4. b8 a gis b | a8. e16 c4 a2 | r1 |
+
+	% part "B"
+	a4 c e r | a,4 c8 e~ e e4 r8 | d4 f a r | d,4 f8 a~ a a4 r8 |
+	e4 gis b r | e,4 gis8 b~ b c4. | a1 | r1 |
+	a,4 c e r | a,4 c8 e~ e e4 r8 | d4 f a r | d,4 f8 a~ a a4 r8 |
+	e4 gis b r | e,4 gis8 b~ b r r4 | r8 e, dis e f fis g gis | a4 r fis2 |
+}
+{% endif %}

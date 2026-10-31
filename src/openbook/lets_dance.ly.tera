@@ -1,0 +1,109 @@
+{#
+default_version = "Fake"
+
+[attributes]
+title = "Let's Dance"
+style = "Swing"
+composer = "Fanny Baldridge, Gregory Stone, Joseph Bonime"
+poet = "Fanny Baldridge, Gregory Stone, Joseph Bonime"
+piece = "Medium Swing"
+copyright = "1935 by Edward B. Marks Music Company"
+copyrightextra = "Copyright renewed."
+typesetter = "Mark Veltzer <mark.veltzer@gmail.com>"
+completion = "5"
+uuid = "470bfaae-d51d-11f1-8000-046874d194b7"
+structure = "ABAC"
+location = "jfb:217"
+
+[[youtube]]
+id = "kp4FA7re3x8"
+remark = "Benny Goodman and his orchestra, the band's theme song (1939 recording)"
+
+[[youtube]]
+id = "nwAjpE3clxI"
+remark = "Benny Goodman, album version"
+
+[versions.Fake]
+doChords = true
+doVoice = true
+doLyrics = false
+doLyricsmore = false
+doLyricsmoremore = false
+doChordBars = false
+doGuitar = false
+doExtra = false
+doPrep = false
+doOwn = false
+#}
+{% if part == "Vars" %}
+{% endif %}
+{% if part == "Doc" %}	DONE:
+	- added the meta data from the fake book.
+	- put in the tunes structure.
+	- put in the chords (fake book).
+	- put in the tune (fake book).
+	- added youtube performances.
+	TODO:
+	- add the lyrics.
+	- check the chords (fake book).
+	- check the tune (fake book).
+	- hear the tune to check that it is right and adjust the tempo.
+{% endif %}
+{% if part == "ChordsFake" %}\chordmode {
+	\startChords
+	\startSong
+
+	\partial 4 s4 |
+
+	\myMark "A"
+	\startPart
+	c1 | c:dim7 | c | s1 | \myEndLine
+	g:7 | fis:dim7 | g:7 | g4:7 g2.:7.5+ | \myEndLine
+	\endPart
+
+	\myMark "B"
+	\startPart
+	c1 | c:dim7 | c2 g:m6/bes | a1:7 | \myEndLine
+	d:m7 | s1 | d:m7 | g2.:7 g4:7.5+ | \myEndLine
+	\endPart
+
+	\myMark "A"
+	\startPart
+	c1 | c:dim7 | c | s1 | \myEndLine
+	f | bes:7 | f2 f:7/ees | d1:7 | \myEndLine
+	\endPart
+
+	\myMark "C"
+	\startPart
+	c1:maj7 | s1 | e:m7.5- | a2.:7.5+ a4:7 | \myEndLine
+	d1:9 | g2:9 g:7.9- | c1 | s1 | \myEndLine
+	\endPart
+
+	\endSong
+	\endChords
+}
+{% endif %}
+{% if part == "VoiceFake" %}{
+	\tempo "Moderato" 4 = 140
+	\time 2/2
+	\key c \major
+
+	\partial 4 f4 |
+
+	% part "A"
+	e1 | ees | e! | c |
+	g'1 | fis | g~ | g8 r cis, d b'4 a |
+
+	% part "B"
+	e1 | ees | e! | a2~ a8 g4. |
+	g2. f4 | e8 f4 e'8~ e d4. | c2 a8 c4 b8~ | b4 a2 g4 |
+
+	% part "A"
+	e1 | ees | e! | c |
+	a'1 | aes | a! | gis8 a4 d8~ d c4. |
+
+	% part "C"
+	e1 | d4 c r8 b4. | bes1 | a4 f'2 e4 |
+	e1 | d | c~ | c4 r r2 |
+}
+{% endif %}

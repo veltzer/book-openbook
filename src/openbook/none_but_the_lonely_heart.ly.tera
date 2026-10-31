@@ -1,0 +1,107 @@
+{#
+default_version = "Fake"
+
+[attributes]
+title = "None But The Lonely Heart"
+style = "Jazz"
+composer = "Mack David, Al Hoffman, Jerry Livingston"
+poet = "Mack David, Al Hoffman, Jerry Livingston"
+piece = "Slowly with expression"
+copyright = "1947 by Anne-Rachel Music Corp."
+copyrightextra = "Copyright Renewed, Assigned to Hallmark Music, and Al Hoffman Enterprises. All Rights Administered by Chappell & Co., Inc."
+typesetter = "Mark Veltzer <mark.veltzer@gmail.com>"
+completion = "5"
+uuid = "414fd1fe-d521-11f1-8000-046874d194b7"
+structure = "AABA"
+location = "jfb:277"
+
+[[youtube]]
+id = "xcluXA_P--s"
+remark = "Frank Sinatra"
+
+[[youtube]]
+id = "EeCNoQVbFuw"
+remark = "Al Hirt"
+
+[versions.Fake]
+doChords = true
+doVoice = true
+doLyrics = false
+doLyricsmore = false
+doLyricsmoremore = false
+doChordBars = false
+doGuitar = false
+doExtra = false
+doPrep = false
+doOwn = false
+#}
+{% if part == "Vars" %}
+{% endif %}
+{% if part == "Doc" %}	DONE:
+	- added the meta data from the fake book.
+	- put in the tunes structure.
+	- put in the chords (fake book).
+	- put in the tune (fake book).
+	- added youtube performances.
+	TODO:
+	- add the lyrics.
+	- check the chords (fake book).
+	- check the tune (fake book).
+	- hear the tune to check that it is right and adjust the tempo.
+{% endif %}
+{% if part == "ChordsFake" %}\chordmode {
+	\startChords
+	\startSong
+
+	\myMark "A"
+	\startPart
+	bes1:9/aes | ees:/g | f2:m f:m7/ees | bes:7/d bes:m/des | \myEndLine
+	c:7 c:7.5+ | f:m f:m7/aes | bes1:7 | c2 c:7/bes | \myEndLine
+	\endPart
+
+	\myMark "A"
+	\startPart
+	bes1:9/aes | ees:/g | f2:m f:m7/ees | bes:7/d bes:m/des | \myEndLine
+	c:7 c:7.5+ | f:m f:m7/aes | bes1:7 | c | \myEndLine
+	\endPart
+
+	\myMark "B"
+	\startPart
+	c2:7 c:7.5+ | f1:m | b:dim7 | c | \myEndLine
+	c2:7 c:7.5+ | f1:m | fis:dim7 | g2:m bes4:7/f bes:7 | \myEndLine
+	\endPart
+
+	\myMark "A"
+	\startPart
+	bes1:9/aes | ees:/g | f2:m f:m7/ees | bes:7/d bes:m/des | \myEndLine
+	c:7 c:7.5+ | f:m f:m7/aes | bes1:7 | c2 c4:7.5+ c:7/bes | \myEndLine
+	f1:m6 | bes2.:9 bes4:7.9- | ees2 c:m7 | f4:m7/aes bes:9 ees2:6 | \myEndLine
+	\endPart
+
+	\endSong
+	\endChords
+}
+{% endif %}
+{% if part == "VoiceFake" %}{
+	\tempo "Andante" 4 = 80
+	\time 2/2
+	\key ees \major
+
+	% part "A"
+	c'2 d,4 d | c'4. ees,8 ees2 | r4 f g aes | bes2 bes |
+	r4 des c bes | aes g f c' | bes2. aes4 | g1 |
+
+	% part "A"
+	c2 d,4 d | c'4. ees,8 ees2 | r4 f g aes | bes2 bes |
+	r4 des c bes | aes g f c' | bes2. aes4 | g1 |
+
+	% part "B"
+	r4 g c bes | aes4. des8 c2 | r4 aes g f | e!2 c' |
+	r4 g c bes | aes4. des8 c2 | r4 a! d! c | bes2 bes |
+
+	% part "A"
+	c2 d,4 d | c'4. ees,8 ees2 | r4 f g aes | bes2 bes |
+	r4 des c bes | aes g f c' | bes2. aes4 | g2 aes4 bes |
+	c2 d,4 d | c'4. d,8 d4 d | ees1~ | ees1 |
+}
+{% endif %}

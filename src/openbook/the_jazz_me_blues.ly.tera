@@ -1,0 +1,124 @@
+{#
+default_version = "Fake"
+
+[attributes]
+title = "The Jazz-Me Blues"
+style = "Dixieland"
+composer = "Tom Delaney"
+poet = "Tom Delaney"
+piece = "Ragtime"
+copyright = "1921 by Edward B. Marks Music Company"
+copyrightextra = "Copyright Renewed"
+typesetter = "Mark Veltzer <mark.veltzer@gmail.com>"
+completion = "5"
+uuid = "5d9c76cc-d51d-11f1-8000-046874d194b7"
+structure = "Intro A"
+location = "jfb:195"
+
+[[youtube]]
+id = "ihkjNd0HWBM"
+remark = "The Original Dixieland Jazz Band in the original recording (1921)"
+
+[[youtube]]
+id = "XRMwJUkMVk0"
+remark = "Bix Beiderbecke with the Wolverine Orchestra (1924)"
+
+[versions.Fake]
+doChords = true
+doVoice = true
+doLyrics = false
+doLyricsmore = false
+doLyricsmoremore = false
+doChordBars = false
+doGuitar = false
+doExtra = false
+doPrep = false
+doOwn = false
+#}
+{% if part == "Vars" %}
+{% endif %}
+{% if part == "Doc" %}	DONE:
+	- added the meta data from the fake book.
+	- put in the tunes structure.
+	- put in the chords (fake book).
+	- put in the tune (fake book).
+	- added youtube performances.
+	TODO:
+	- add the lyrics.
+	- check the chords (fake book).
+	- check the tune (fake book).
+	- hear the tune to check that it is right and adjust the tempo.
+	- the second ending of the verse has no chord symbols in the fake book; the chords of the first ending were used.
+{% endif %}
+{% if part == "ChordsFake" %}\chordmode {
+	\startChords
+	\startSong
+
+	\myMark "Intro"
+	\startPart
+	\repeat volta 2 {
+		ees1 | bes2:7 ees | ees1 | f2:7 bes:7 | \myEndLine
+		ees1 | bes2:7 ees | ees4:aug aes ees2 |
+	} \alternative {
+		{
+			f4:7 bes:7 ees bes:7 | \myEndLineVoltaNotLast
+		}
+		{
+			f4:7 bes:7 ees2 | \myEndLineVoltaLast
+		}
+	}
+	bes1:7 | bes:dim7 | bes2:7 f:7 | bes g:7 | \myEndLine
+	\endPart
+
+	\myMark "A"
+	\startPart
+	\repeat volta 2 {
+		c1 | c | f:7 | f:7 | \myEndLine
+	} \alternative {
+		{
+			bes1:7 | bes:7 | ees | f2:7 bes:7 | \myEndLineVoltaNotLast
+		}
+		{
+			ees1 | g | f:7 | c:7 | \myEndLine
+			f:7 | bes:9 | ees | ees | \myEndLineVoltaLast
+		}
+	}
+	\endPart
+
+	\endSong
+	\endChords
+}
+{% endif %}
+{% if part == "VoiceFake" %}{
+	\tempo "Moderato" 4 = 110
+	\time 4/4
+	\key ees \major
+
+	% part "Intro"
+	\repeat volta 2 {
+		g'8 fis g bes c bes g ees | g8 aes4 bes8~ bes4 bes,4 | g'8 fis g aes bes a! bes b! | c8 f,4 f8~ f4 bes,8 bes |
+		g'8 fis g bes c bes g ees | g8 aes4 bes8~ bes4 c8 d | ees8 b! c ces bes g f ees |
+	} \alternative {
+		{
+			f8 g4 ees8~ ees4 bes4 |
+		}
+		{
+			f'8 g4 ees8~ ees4 r4 |
+		}
+	}
+	bes'8 bes4 bes8~ bes f bes4 | bes8 bes4 bes8~ bes g bes4 | d4 des c f, | bes2 b!2 |
+
+	% part "A"
+	\repeat volta 2 {
+		c4. g8~ g2 | r8 b! c b c b c b | c4. f,8~ f2 | c'4. f,8~ f4 f4 |
+	} \alternative {
+		{
+			bes8 bes c f, bes bes c f, | bes8 c4 bes8~ bes bes c d | ees4 c8 bes c bes g4 | f8 g4 bes8~ bes a! bes b! |
+		}
+		{
+			r8 g g g g2 | r8 g g g g2 | g8 f g f g f g f | bes8 bes4 bes8~ bes a! bes b! |
+			c4 c c c | c8 d4 c8~ c4 bes4 | ees1~ | ees2. r4 |
+		}
+	}
+}
+{% endif %}

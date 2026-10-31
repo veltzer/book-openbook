@@ -1,0 +1,106 @@
+{#
+default_version = "Fake"
+
+[attributes]
+title = "June Is Bustin' Out All Over"
+subtitle = "From 'Carousel'"
+style = "Broadway"
+composer = "Richard Rodgers"
+poet = "Oscar Hammerstein II"
+piece = "Brightly in 2"
+copyright = "1945 Williamson Music Co. Copyright Renewed."
+copyrightextra = "Sole Selling Agent T.B. Harms Company (c/o The Welk Music Group, Santa Monica, CA 90401)"
+typesetter = "Mark Veltzer <mark.veltzer@gmail.com>"
+completion = "5"
+uuid = "4e7b49d8-d51e-11f1-8000-046874d194b7"
+structure = "AB"
+location = "jfb:206"
+
+[[youtube]]
+id = "khL3AVmPj24"
+remark = "From the film of Carousel (1956)"
+
+[[youtube]]
+id = "EAk28Z4qIKc"
+remark = "Renee Fleming"
+
+[versions.Fake]
+doChords = true
+doVoice = true
+doLyrics = false
+doLyricsmore = false
+doLyricsmoremore = false
+doChordBars = false
+doGuitar = false
+doExtra = false
+doPrep = false
+doOwn = false
+#}
+{% if part == "Vars" %}
+{% endif %}
+{% if part == "Doc" %}	DONE:
+	- added the meta data from the fake book.
+	- put in the tunes structure.
+	- put in the chords (fake book).
+	- put in the tune (fake book).
+	- added youtube performances.
+	TODO:
+	- check the chords (fake book).
+	- check the tune (fake book).
+	- hear the tune to check that it is right and adjust the tempo.
+	- first ending: the book prints the chord as "A7sus9"; typed as A9sus4, check it.
+	- the book prints three verses of lyrics (the first ending is taken twice).
+	- add the lyrics.
+{% endif %}
+{% if part == "ChordsFake" %}\chordmode {
+	\startChords
+	\startSong
+
+	\myMark "A"
+	\startPart
+	\repeat volta 2 {
+		g1*6:maj7 | fis1:m7.5- | \myEndLine
+		b1:7.9- | e2:m e:m7+ | e:m7 e:m6 | e1:m7 | a2:7.9- a:7.9-/g |
+	} \alternative {
+		{
+			d2/fis f:7 | \myEndLine
+			e:m7 a4:9sus4 a:7 | a1:m7 | d:7 | \myEndLineVoltaNotLast
+		}
+		{
+			d2/fis f:7 | e:m7 a:13 | a1:m7 | d4:9 r2. | g1:maj7 | \myEndLineVoltaLast
+		}
+	}
+	\endPart
+
+	\myMark "B"
+	\startPart
+	g1*3:maj7 | a1*2:m7 | d1:13 | d:7.5- | g1*2:maj7 | \myEndLine
+	\endPart
+
+	\endSong
+	\endChords
+}
+{% endif %}
+{% if part == "VoiceFake" %}{
+	\tempo "Allegro" 2 = 112
+	\time 2/2
+	\key g \major
+
+	% part "A"
+	\repeat volta 2 {
+		d2 d | e4 fis g b | d b d2~ | d2. b4 | d2 d4. b8 | d4 b a g | fis1~ |
+		fis2 fis4 fis | g e e e | g e e e | g e e e | g e e e |
+	} \alternative {
+		{
+			a a a a |
+			a d, d cis | d1 | r1 |
+		}
+		{
+			a'4 a a a | a a b a | d1~ | d4 a b a | d1~ |
+		}
+	}
+
+	% part "B"
+	d1 | d,2 d | d1 | c2 e | g c | d1 | d | d~ | d2. r4 |
+}
+{% endif %}

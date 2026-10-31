@@ -1,0 +1,125 @@
+{#
+default_version = "Fake"
+
+[attributes]
+title = "Let's Fall In Love"
+style = "Jazz"
+composer = "Harold Arlen"
+poet = "Ted Koehler"
+piece = "Moderately Bright"
+copyright = "1933 Bourne Co."
+copyrightextra = "Copyright Renewed."
+typesetter = "Mark Veltzer <mark.veltzer@gmail.com>"
+completion = "5"
+uuid = "cd539f18-d51d-11f1-8000-046874d194b7"
+structure = "AABA"
+location = "jfb:218"
+
+[[youtube]]
+id = "20sH9Dfo1sU"
+remark = "Eddy Duchin and his orchestra, Lew Sherwood vocal, the original hit recording (1934)"
+
+[[youtube]]
+id = "rz-bwzOtafk"
+remark = "Oscar Peterson"
+
+[versions.Fake]
+doChords = true
+doVoice = true
+doLyrics = false
+doLyricsmore = false
+doLyricsmoremore = false
+doChordBars = false
+doGuitar = false
+doExtra = false
+doPrep = false
+doOwn = false
+#}
+{% if part == "Vars" %}
+{% endif %}
+{% if part == "Doc" %}	DONE:
+	- added the meta data from the fake book.
+	- put in the tunes structure.
+	- put in the chords (fake book).
+	- put in the tune (fake book).
+	- added youtube performances.
+	TODO:
+	- add the lyrics.
+	- check the chords (fake book).
+	- check the tune (fake book).
+	- hear the tune to check that it is right and adjust the tempo.
+{% endif %}
+{% if part == "ChordsFake" %}\chordmode {
+	\startChords
+	\startSong
+
+	\repeat volta 2 {
+
+		\myMark "A"
+		\startPart
+		c1 | d2:m7 g:7 | c2 e4:m7.5- a:7.9- | d2:m7 g4:7 g:7/f | \myEndLine
+		e2:m7 a:m7 | d:m7 g:7 | e:m7 a:7 | d:m7 g:7 | \myEndLine
+		\endPart
+
+		\myMark "A"
+		\startPart
+		c1 | d2:m7 g:7 | c2 e4:m7.5- a:7.9- | d2:m7 g4:7 g:7/f | \myEndLine
+		e2:m7 a:m7 | d:m7 g:7 | b1:m11 | e:7 | \myEndLine
+		\endPart
+
+		\myMark "B"
+		\startPart
+		a1:m7 | s1 | d:7 | s2 d:7.9- | \myEndLine
+		c1:maj9 | c | e2:m7 a:7.9- | d2:m7 g:7 | \myEndLine
+		\endPart
+
+		\myMark "A"
+		\startPart
+		c1 | d2:m7 g:7 | c2 e4:m7.5- a:7.9- | d2:m7 g4:7 g:7/f | \myEndLine
+		e2:m7 a:m7 |
+	} \alternative {
+		{
+			d2:m7 g:7 | c f | c g:7 | \myEndLineVoltaNotLast
+		}
+		{
+			d2:m7 g:7 | c g:sus4.7 | c1 | \myEndLineVoltaLast
+		}
+	}
+	\endPart
+
+	\endSong
+	\endChords
+}
+{% endif %}
+{% if part == "VoiceFake" %}{
+	\tempo "Allegro" 4 = 180
+	\time 2/2
+	\key c \major
+
+	\repeat volta 2 {
+
+		% part "A"
+		c'2 g4 e | a2 g8 b d c~ | c2 g4 e | a2 f8 e d g~ |
+		g8 g g4 e8 d c f~ | f2 d8 c b e~ | e4. e8 e2~ | e1 |
+
+		% part "A"
+		c'2 g4 e | a2 g8 b d c~ | c2 g4 e | a2 f8 e d g~ |
+		g8 g g4 e8 d c f~ | f2 d8 c b e~ | e4. e8 e2~ | e1 |
+
+		% part "B"
+		e'1 | \tuplet 3/2 { d4 c b } a4 e8 f | fis2 b2~ | b2 a2 |
+		d1 | \tuplet 3/2 { c4 b a } g4 e8 f | g2 bes | a b! |
+
+		% part "A"
+		c2 g4 e | a2 g8 b d c~ | c2 g4 e | a2 f8 e d g~ |
+		g8 g g4 \tuplet 3/2 { e4 d c } |
+	} \alternative {
+		{
+			a'2 f8 e d c'~ | c1~ | c2 r2 |
+		}
+		{
+			a2 f8 e d4 | c'1~ | c2 r2 |
+		}
+	}
+}
+{% endif %}

@@ -1,0 +1,121 @@
+{#
+default_version = "Fake"
+
+[attributes]
+title = "I Won't Dance"
+style = "Jazz"
+composer = "Jerome Kern"
+poet = "Oscar Hammerstein, Otto Harbach, Dorothy Fields, Jimmy McHugh"
+piece = "Moderately"
+copyright = "1935 T.B. Harms Company. Copyright Renewed."
+copyrightextra = "(c/o The Welk Music Group, Santa Monica, CA 90401)"
+typesetter = "Mark Veltzer <mark.veltzer@gmail.com>"
+completion = "5"
+uuid = "0c083e84-d51a-11f1-8000-046874d194b7"
+structure = "AB"
+location = "jfb:166"
+
+[[youtube]]
+id = "6CTR3d2Ly80"
+remark = "Fred Astaire in the original from the film Roberta (1935)"
+
+[[youtube]]
+id = "98NFqiCkK3E"
+remark = "Ella Fitzgerald and Louis Armstrong"
+
+[versions.Fake]
+doChords = true
+doVoice = true
+doLyrics = false
+doLyricsmore = false
+doLyricsmoremore = false
+doChordBars = false
+doGuitar = false
+doExtra = false
+doPrep = false
+doOwn = false
+#}
+{% if part == "Vars" %}
+{% endif %}
+{% if part == "Doc" %}	DONE:
+	- added the meta data from the fake book.
+	- put in the tunes structure.
+	- put in the chords (fake book).
+	- put in the tune (fake book).
+	- added youtube performances.
+	TODO:
+	- add the lyrics.
+	- check the chords (fake book).
+	- check the tune (fake book).
+	- hear the tune to check that it is right and adjust the tempo.
+	- the fake book says "D.S. al Coda" at the end of the B part but prints no segno, it probably means back to the top.
+	- the fake book prints three verses of lyrics for the A part but only first and second endings.
+{% endif %}
+{% if part == "ChordsFake" %}\chordmode {
+	\startChords
+	\startSong
+
+	\repeat volta 2 {
+
+		\myMark "A"
+		\startPart
+		c2:maj9 ees:7 | d:m7 g:7 | c:maj7 cis:dim7 | d:m7 g:7 | \myEndLine
+		bes:13 a:7 | d:m7 g:7 | c c:maj7 | c1:7 | f:maj7 | \myEndLine
+		f2:m g:7.9- |
+	} \alternative {
+		{
+			c:6 ees:7 | d:m7 des:13 | \myEndLineVoltaNotLast
+		}
+		{
+			c:6 f:7 | c1:7 | \myEndLineVoltaLast
+		}
+	}
+	\endPart
+
+	\myMark "B"
+	\startPart
+	f1:maj7 | f2:m g:7.9- | c1 | d2:m7 g:7 | aes1*2:maj7 | \myEndLine
+	aes1*2:7 | des1*2:maj7 | \myEndLine
+	des1:7 | b1*2 | c1*2:9 | \myEndLine
+	e1:7 | a:m7 | d:m9 | g:7 | \myEndLine
+	\endPart
+
+	\myMark "Coda"
+	\startPart
+	c2:6 c:7 | f1:maj7 | d2:m7 g:7.9- | c:maj7 ees:9 | aes4:maj7 des:maj9 c2:6 | \myEndLine
+	\endPart
+
+	\endSong
+	\endChords
+}
+{% endif %}
+{% if part == "VoiceFake" %}{
+	\tempo "Moderato" 4 = 160
+	\time 2/2
+	\key c \major
+
+	\repeat volta 2 {
+
+		% part "A"
+		r8 g'8 g4 g2 | r4 a c, d | r8 g g4 g2 | r4 a c, d |
+		r8 g g4 g2 | r4 a c, d | e1~ | e4. e8 g4 f | e4 c d c |
+		e4 c d c~^\markup { To Coda \musicglyph #"scripts.coda" } |
+	} \alternative {
+		{
+			c1~ | c2. r4 |
+		}
+		{
+			c1~ | c4 e g f |
+		}
+	}
+
+	% part "B"
+	e4 c d c | e4 c d c~ | c1 | r1 | c4 ees f c' |
+	bes4 aes ees f | ges4. ges8~ ges2 | r1 | aes,4 bes des f | ees4 des aes bes |
+	ces4. ces8~ ces2 | b4 dis fis b | a4 fis cis dis | e4. e8~ e2~ | e4 e g f |
+	e4. e8~ e2~ | e4 e c' a | e4. e8~ e2~ | e4 d e f^\markup { D.S. al Coda } |
+
+	% part "Coda"
+	c4 e g f | e4 g a c | e4 c d2 | c1~ | c4 r r2 |
+}
+{% endif %}

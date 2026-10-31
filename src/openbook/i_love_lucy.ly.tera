@@ -1,0 +1,107 @@
+{#
+default_version = "Fake"
+
+[attributes]
+title = "I Love Lucy"
+style = "Jazz"
+composer = "Eliot Daniel"
+poet = "Harold Adamson"
+piece = "Brightly"
+copyright = "1953, 1987 DESILU MUSIC CORP."
+copyrightextra = "Renewed 1981 DESILU MUSIC CORP. International Copyright Secured. All Rights Reserved."
+typesetter = "Mark Veltzer <mark.veltzer@gmail.com>"
+completion = "5"
+uuid = "4b43535e-d51a-11f1-8000-046874d194b7"
+structure = "ABAC"
+location = "jfb:158"
+
+[[youtube]]
+id = "U3Hlu8Warlk"
+remark = "Desi Arnaz sings the theme of the TV show (1953)"
+
+[[youtube]]
+id = "SEekhqixk7U"
+remark = "Barry Harris"
+
+[versions.Fake]
+doChords = true
+doVoice = true
+doLyrics = false
+doLyricsmore = false
+doLyricsmoremore = false
+doChordBars = false
+doGuitar = false
+doExtra = false
+doPrep = false
+doOwn = false
+#}
+{% if part == "Vars" %}
+{% endif %}
+{% if part == "Doc" %}	DONE:
+	- added the meta data from the fake book.
+	- put in the tunes structure.
+	- put in the chords (fake book).
+	- put in the tune (fake book).
+	- added youtube performances.
+	TODO:
+	- add the lyrics.
+	- check the chords (fake book).
+	- check the tune (fake book).
+	- hear the tune to check that it is right and adjust the tempo.
+{% endif %}
+{% if part == "ChordsFake" %}\chordmode {
+	\startChords
+	\startSong
+
+	\myMark "A"
+	\startPart
+	c1*2:maj7 | d2:m7 g:7.9- | s1 | \myEndLine
+	c1*2:maj7 | a2:m7 d:9.5- | s d:7.9- | \myEndLine
+	\endPart
+
+	\myMark "B"
+	\startPart
+	c1*2:maj7 | b1:m7 | e:7 | \myEndLine
+	a2:maj7 a:6 | s1 | d2:m7 ges4:9 g:9 | s1 | \myEndLine
+	\endPart
+
+	\myMark "A"
+	\startPart
+	c1*2:maj7 | d2:m7 g:7.9- | s1 | \myEndLine
+	c1*2:maj7 | a2:m7 d:9.5- | s dis:dim7 | \myEndLine
+	\endPart
+
+	\myMark "C"
+	\startPart
+	e1*2:m7 | a1:m7 | d2:7 fis:dim7 | \myEndLine
+	c2. d4:m7 | g1:7 | c2. e4:m7 | s2 a:9 | \myEndLine
+	d1:9 | d2:m7 g:7 | c2 d:m7 | c1:6 | \myEndLine
+	\endPart
+
+	\endSong
+	\endChords
+}
+{% endif %}
+{% if part == "VoiceFake" %}{
+	\tempo "Allegro" 2 = 112
+	\time 2/2
+	\key c \major
+
+	% part "A"
+	b2 c | d4 b2 c4 | g'2 g4 e~ | e1 |
+	b2 c | d4 b2 c4 | b'2 b4 gis~ | gis2 a |
+
+	% part "B"
+	b2. a4 | g b,2 c4 | e1~ | e |
+	gis2. fis4 | e2 gis,4 a | e' r e e~ | e d2. |
+
+	% part "A"
+	b2 c | d4 b2 c4 | g'2 g4 e~ | e1 |
+	b2 c | d4 b2 c4 | b'2 b4 gis~ | gis2 a |
+
+	% part "C"
+	b2 c4 b~ | b b c2 | d1~ | d4 r c2 |
+	e4 r c a~ | a a g2 | e'4 r c a~ | a a g2 |
+	e'2 c~ | c4 r d2 | c1~ | c2. r4 |
+}
+{% endif %}

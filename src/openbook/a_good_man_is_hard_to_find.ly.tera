@@ -1,0 +1,92 @@
+{#
+default_version = "Fake"
+
+[attributes]
+title = "A Good Man Is Hard To Find"
+style = "Jazz"
+composer = "Eddie Green"
+poet = "Eddie Green"
+piece = "Moderately"
+copyright = "1917, 1918, 1987 EDWIN H. MORRIS & COMPANY, A Division of MPL Communications, Inc."
+copyrightextra = "Renewed 1945, 1946 EDWIN H. MORRIS & COMPANY, A Division of MPL Communications, Inc. International Copyright Secured. All Rights Reserved"
+typesetter = "Mark Veltzer <mark.veltzer@gmail.com>"
+completion = "5"
+uuid = "e86f9ff8-d519-11f1-8000-046874d194b7"
+structure = "AA'"
+location = "jfb:137"
+
+[[youtube]]
+id = "kIrpeScz2mQ"
+remark = "Bessie Smith (1927)"
+
+[[youtube]]
+id = "LdoRHOeWGDk"
+remark = "Lola Albright"
+
+[versions.Fake]
+doChords = true
+doVoice = true
+doLyrics = false
+doLyricsmore = false
+doLyricsmoremore = false
+doChordBars = false
+doGuitar = false
+doExtra = false
+doPrep = false
+doOwn = false
+#}
+{% if part == "Vars" %}
+{% endif %}
+{% if part == "Doc" %}	DONE:
+	- added the meta data from the fake book.
+	- put in the tunes structure.
+	- put in the chords (fake book).
+	- put in the tune (fake book).
+	- added youtube performances.
+	TODO:
+	- add the lyrics.
+	- check the chords (fake book).
+	- check the tune (fake book).
+	- hear the tune to check that it is right and adjust the tempo.
+	- bar 7: the last note has no accidental after the d sharp; typed as d natural (chromatic line, no chord).
+{% endif %}
+{% if part == "ChordsFake" %}\chordmode {
+	\startChords
+	\startSong
+
+	\partial 4 s4 |
+
+	\myMark "A"
+	\startPart
+	a1*2:7 | d1:7 | d2.:7 d4:7.5+ | \myEndLine
+	g1*2:7 | c4 r2. | c4 g:7 c2 | \myEndLine
+	\endPart
+
+	\myMark "A"
+	\startPart
+	a1*2:7 | d1:7 | d2:7 g:7 | c2 ees:dim7 | \myEndLine
+	d2:m7 g:7 | c1*3 | \myEndLine
+	a1:m7 | d:7 | d2:m7 g:7 | c2 d4:m7 g:7.9- | c1 | \myEndLine
+	\endPart
+
+	\endSong
+	\endChords
+}
+{% endif %}
+{% if part == "VoiceFake" %}{
+	\tempo "Moderato" 4 = 120
+	\time 4/4
+	\key c \major
+
+	\partial 4 g'8 gis |
+
+	% part "A"
+	a2~ a8. e16 dis8. e16 | a2~ a8. e16 dis8. e16 | a2~ a8. d,16 cis8. d16 | a'2. ais4 |
+	b4 a g8 b4 g8 | a8 g4 b8~ b4 g | c8 gis a fis g! dis e d | e8 g e d c4 g'8 gis |
+
+	% part "A"
+	a2~ a8. e16 dis8. e16 | a2~ a8. e16 dis8. e16 | a2~ a8. d,16 cis8. d16 | a'2~ a8. gis16 a8. b16 | c4 c b a |
+	g4 gis8 a~ a4 g! | c8. a16 g8. e16 d8 c4. | c'8. a16 g8. e16 d8 c4. | c'8. c,16 d8. dis16 e8 c'4. |
+	dis,8 e4 c8~ c4 g'8 gis | a4 b a8 b4 a8~ | a4 b a g | c1~ | c2. r4 |
+}
+{% endif %}

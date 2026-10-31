@@ -1,0 +1,131 @@
+{#
+default_version = "Fake"
+
+[attributes]
+title = "My Monday Date"
+style = "Jazz"
+composer = "Earl Hines"
+poet = "Sid Robin"
+piece = "With a beat"
+copyright = "1928, 1956 by MCA MUSIC PUBLISHING, A Division of MCA INC., New York, NY."
+copyrightextra = "Copyright Renewed."
+typesetter = "Mark Veltzer <mark.veltzer@gmail.com>"
+completion = "5"
+uuid = "2c9874f3-d521-11f1-8000-046874d194b7"
+structure = "AABA"
+location = "jfb:263"
+
+[[youtube]]
+id = "dXITQFhtDa0"
+remark = "Louis Armstrong and His Hot Five with Earl Hines in the original recording (1928)"
+
+[[youtube]]
+id = "cmMEZKNGyuo"
+remark = "Earl Hines piano solo (1928)"
+
+[versions.Fake]
+doChords = true
+doVoice = true
+doLyrics = false
+doLyricsmore = false
+doLyricsmoremore = false
+doChordBars = false
+doGuitar = false
+doExtra = false
+doPrep = false
+doOwn = false
+#}
+{% if part == "Vars" %}
+{% endif %}
+{% if part == "Doc" %}	DONE:
+	- added the meta data from the fake book.
+	- put in the tunes structure.
+	- put in the chords (fake book).
+	- put in the tune (fake book).
+	- added youtube performances.
+	TODO:
+	- add the lyrics (the book prints separate boy and girl words in the first A).
+	- check the chords (fake book).
+	- check the tune (fake book).
+	- hear the tune to check that it is right and adjust the tempo.
+	- bar 18: the melody note under the Ebm chord is printed as a natural a, typed as printed.
+	- the last bar of the second ending is three beats long (completing the pickup), as printed.
+{% endif %}
+{% if part == "ChordsFake" %}\chordmode {
+	\startChords
+	\startSong
+
+	\partial 4 s4 |
+
+	\repeat volta 2 {
+
+		\myMark "A"
+		\startPart
+		bes1:6 | d2.:m7 des4:dim7 | c1*2:m7 | \myEndLine
+		f1:7 | s2 fis:7.5+ | bes:6 bes:dim7 | c:m7 f:7 | \myEndLine
+		\endPart
+
+		\myMark "A"
+		\startPart
+		bes1:6 | d2.:m7 bes4:dim7 | c1*2:m7 | \myEndLine
+		f1*2:7 | bes2 c4:m7 f:7 | bes2:6 bes:7 | \myEndLine
+		\endPart
+
+		\myMark "B"
+		\startPart
+		ees1 | s2 ees:m | bes1*2 | \myEndLine
+		c1*2:9 | f1*2:7 | \myEndLine
+		\endPart
+
+		\myMark "A"
+		\startPart
+		bes1:6 | d2.:m7 des4:dim7 | c1*2:m7 | \myEndLine
+		f1:7 | c2:m7 f:7 |
+	} \alternative {
+		{
+			bes2 b:dim7 | c:m7 f:7 | \myEndLineVoltaNotLast
+		}
+		{
+			bes4 bes/d ees e:dim7 | bes4/f b:9 bes:9 \myEndLineVoltaLast
+		}
+	}
+	\endPart
+
+	\endSong
+	\endChords
+}
+{% endif %}
+{% if part == "VoiceFake" %}{
+	\tempo "Allegro" 4 = 180
+	\time 2/2
+	\key bes \major
+
+	\partial 4 f4 |
+
+	\repeat volta 2 {
+
+		% part "A"
+		d'2. a4 | c2. g4 | bes4 g g2~ | g4 r \tuplet 3/2 { bes4 g ees } |
+		d4 f2.~ | f4 a a a | g1~ | g2 r4 f |
+
+		% part "A"
+		d'2. a4 | c2. g4 | bes4 g g2~ | g4 r \tuplet 3/2 { bes4 g ees } |
+		d4 f2.~ | f4 d'8 cis d4 f,8 bes | bes1 | r4 bes c cis |
+
+		% part "B"
+		d4 c! d c~ | c2 d4 a | c4 bes c bes~ | bes4 bes c bes |
+		a4 g g g~ | g4 c2 a4 | g4 f f f~ | f2 r4 f |
+
+		% part "A"
+		d'2. a4 | c2. g4 | bes4 g g2~ | g4 r \tuplet 3/2 { bes4 g ees } |
+		d4 f2.~ | f2 d'8 cis d4 |
+	} \alternative {
+		{
+			bes1 | r2 r4 f4 |
+		}
+		{
+			bes1~ | bes2.
+		}
+	}
+}
+{% endif %}

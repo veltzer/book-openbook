@@ -1,0 +1,121 @@
+{#
+default_version = "Fake"
+
+[attributes]
+title = "High Society"
+style = "Dixieland"
+composer = "Porter Steele, Walter Melrose"
+poet = "Porter Steele, Walter Melrose"
+piece = "Moderately"
+copyright = "1931, 1949, 1987 EDWIN H. MORRIS & COMPANY, A Division of MPL Communications, Inc."
+copyrightextra = "Renewed 1959, 1977 EDWIN H. MORRIS & COMPANY, A Division of MPL Communications, Inc. International Copyright Secured. All Rights Reserved."
+typesetter = "Mark Veltzer <mark.veltzer@gmail.com>"
+completion = "5"
+uuid = "3f952794-d51a-11f1-8000-046874d194b7"
+structure = "AA'B"
+location = "jfb:147"
+
+[[youtube]]
+id = "rvw0a_2uezE"
+remark = "King Oliver's Creole Jazz Band (1923)"
+
+[[youtube]]
+id = "vS0XPRXE6Is"
+remark = "Jelly Roll Morton's New Orleans Jazzmen (1939)"
+
+[versions.Fake]
+doChords = true
+doVoice = true
+doLyrics = false
+doLyricsmore = false
+doLyricsmoremore = false
+doChordBars = false
+doGuitar = false
+doExtra = false
+doPrep = false
+doOwn = false
+#}
+{% if part == "Vars" %}
+{% endif %}
+{% if part == "Doc" %}	DONE:
+	- added the meta data from the fake book.
+	- put in the tunes structure.
+	- put in the chords (fake book).
+	- put in the tune (fake book).
+	- added youtube performances.
+	TODO:
+	- add the lyrics.
+	- check the chords (fake book).
+	- check the tune (fake book).
+	- hear the tune to check that it is right and adjust the tempo.
+	- the book prints the first chord as G7+5 (typed as G7#5) and the C/E in the last bar of part A' on beat 4.
+	- the last note of the Gm7 bars of part B has no accidental in the book (typed as b flat, carried through the bar).
+{% endif %}
+{% if part == "ChordsFake" %}\chordmode {
+	\startChords
+	\startSong
+
+	\partial 2 g2:7.5+ |
+
+	\myMark "A"
+	\startPart
+	c1 | s2 g:7.5+ | c1 | s2 g:7.5+ | \myEndLine
+	c1 | s2 f | c1 | s2 cis:dim7 | \myEndLine
+	g1:7/d | s2 dis:dim7 | c1/e | s2 a:m7 | \myEndLine
+	d1*2:7 | d1:m7 | g2:7 g:7.5+ | \myEndLine
+	\endPart
+
+	\myMark "A"
+	\startPart
+	c1 | s2 g:7.5+ | c1 | s2 g:7.5+ | \myEndLine
+	c1 | s2 f | c1 | s2 c:7 | \myEndLine
+	f1:6 | fis:dim7 | c2/g e:7/gis | a1:7 | \myEndLine
+	d1:7 | g:7 | c2 d:m7 | dis2.:dim7 c4/e | \myEndLine
+	\endPart
+
+	\myMark "B"
+	\startPart
+	g1:m7 | c:7 | f:maj7 | f:6 | \myEndLine
+	g:m7 | c:7 | f:maj7 | f:6 | \myEndLine
+	a:m7 | d:7 | g:maj7 | g:6 | \myEndLine
+	a:m7 | d:7 | a2:m7 d:7 | g g:7.5+ | \myEndLine
+	\endPart
+
+	\myMark "Coda"
+	\startPart
+	c2 f | c1 | \myEndLine
+	\endPart
+
+	\endSong
+	\endChords
+}
+{% endif %}
+{% if part == "VoiceFake" %}{
+	\tempo "Moderato" 4 = 120
+	\time 4/4
+	\key c \major
+
+	\partial 2 g'2 |
+
+	% part "A"
+	e1~^\markup { \musicglyph #"scripts.segno" } | e2 g | c1~ | c2 g |
+	e2. dis4 | e2 a | g1~ | g4 r e2 |
+	f1~ | f2 fis | g1~ | g2 c4 c |
+	a2. a4 | a2 d | d1~ | d4 r g,2 |
+
+	% part "A"
+	e1~ | e2 g | c1~ | c2 g |
+	e2. dis4 | e2 a | g1~ | g4 r g g |
+	a2. a4 | b2 c | e1~ | e4 r g, gis |
+	a2 a | b2 e^\markup { To Coda \musicglyph #"scripts.coda" } | c1~ | c2. c4 |
+
+	% part "B"
+	c4 bes a bes | c2 c4 a | e e g f | d2. a'4 |
+	c4 bes a bes | c2 c4 a | e e g f | d2 r4 c'4 |
+	d4 c b c | d2 d4 b | fis fis a g | e r b' b |
+	d4 c b c | d2 d4 b | d c b a | g4 r g2^\markup { D.S. al Coda } |
+
+	% part "Coda"
+	c1~ | c1 |
+}
+{% endif %}

@@ -1,0 +1,116 @@
+{#
+default_version = "Fake"
+
+[attributes]
+title = "I'm Confessin' That I Love You"
+style = "Jazz"
+composer = "Doc Daugherty, Al J. Neiburg, Ellis Reynolds"
+poet = "Doc Daugherty, Al J. Neiburg, Ellis Reynolds"
+piece = "Slowly"
+copyright = "1930 Bourne Co. Copyright Renewed."
+typesetter = "Mark Veltzer <mark.veltzer@gmail.com>"
+completion = "5"
+uuid = "72a86722-d51a-11f1-8000-046874d194b7"
+structure = "AABA"
+location = "jfb:171"
+
+[[youtube]]
+id = "J2r5bQhv6j4"
+remark = "Louis Armstrong in the original recording (1930)"
+
+[[youtube]]
+id = "4lsGVTl7l9I"
+remark = "Thelonious Monk on Solo Monk (1965)"
+
+[versions.Fake]
+doChords = true
+doVoice = true
+doLyrics = false
+doLyricsmore = false
+doLyricsmoremore = false
+doChordBars = false
+doGuitar = false
+doExtra = false
+doPrep = false
+doOwn = false
+#}
+{% if part == "Vars" %}
+{% endif %}
+{% if part == "Doc" %}	DONE:
+	- added the meta data from the fake book.
+	- put in the tunes structure.
+	- put in the chords (fake book).
+	- put in the tune (fake book).
+	- added youtube performances.
+	TODO:
+	- add the lyrics.
+	- check the chords (fake book).
+	- check the tune (fake book).
+	- hear the tune to check that it is right and adjust the tempo.
+{% endif %}
+{% if part == "ChordsFake" %}\chordmode {
+	\startChords
+	\startSong
+
+	\myMark "A"
+	\startPart
+	\repeat volta 2 {
+		g2 d:aug | g1:maj7 | g2 d:aug | b2:m7 e:9 | \myEndLine
+		a1:7 | a2:m7 d4:7 d:7.9- | g2 e:m7 | a2:m7 d8:13 d4.:7.9- | \myEndLine
+		g2 d:aug | g1:maj7 | g2 d:aug | b2:m7 e:9 | \myEndLine
+		a1:7 | a2:m7 d4:7 d:7.9- | g2 c:m | g1 | \myEndLine
+		\endPart
+
+		\myMark "B"
+		\startPart
+		g1:7 | g1:9 | c2 g:aug | c2:6 b4:7 bes:7 | \myEndLine
+		a1:7 | e4:m7 a2.:9 | d2:9 a:m7 | d2:9 d:7.9- | \myEndLine
+		\endPart
+
+		\myMark "A"
+		\startPart
+		g2 d:aug | g1:maj7 | g2 d:aug | b2:m7 e:9 | \myEndLine
+		a1:7 | a2:m7 d4:7 d:7.9- |
+	} \alternative {
+		{
+			g2 e:m7 | a2:m7 d4:9 d:7.9- | \myEndLineVoltaNotLast
+		}
+		{
+			g2 c:m6 | g1:6 | \myEndLineVoltaLast
+		}
+	}
+	\endPart
+
+	\endSong
+	\endChords
+}
+{% endif %}
+{% if part == "VoiceFake" %}{
+	\tempo "Adagio" 4 = 66
+	\time 2/2
+	\key g \major
+
+	\repeat volta 2 {
+		% part "A"
+		d8 e fis g fis4 d | fis4 fis2. | d8 e fis g fis4 d | fis1 |
+		e8 fis g b a4 g | a4 a \tuplet 3/2 { a4 g fis } | g1 | e8 g e g b8 b4. |
+		d,8 e fis g fis4 d | fis4 fis2. | d8 e fis g fis4 d | fis1 |
+		e8 fis g b a4 g | a4 a \tuplet 3/2 { a4 g fis } | g1~ | g4 r r2 |
+
+		% part "B"
+		f!8 g a c b4 f | a4 a2. | g8 a b c b4 g | a1 |
+		a8 b cis d cis4 a | b4 b2. | a8 b c e c4 b | a1 |
+
+		% part "A"
+		d,8 e fis g fis4 d | fis4 fis2. | d8 e fis g fis4 d | fis1 |
+		e8 fis g b a4 g | a4 a \tuplet 3/2 { a4 g fis } |
+	} \alternative {
+		{
+			g1~ | g4 r r2 |
+		}
+		{
+			g1~ | g2. r4 |
+		}
+	}
+}
+{% endif %}

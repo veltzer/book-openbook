@@ -1,0 +1,128 @@
+{#
+default_version = "Fake"
+
+[attributes]
+title = "In The Still Of The Night"
+style = "Broadway"
+composer = "Cole Porter"
+poet = "Cole Porter"
+piece = "Moderately"
+copyright = "1937 by Chappell & Co., Inc."
+copyrightextra = "Copyright Renewed, assigned to John F. Wharton, Trustee of the Cole Porter Musical and Literary Property Trusts. Chappell & Co., Inc., owner of publication and allied rights througout the World."
+typesetter = "Mark Veltzer <mark.veltzer@gmail.com>"
+completion = "5"
+uuid = "2345fcee-d51a-11f1-8000-046874d194b7"
+structure = "AABC"
+location = "jfb:183"
+
+[[youtube]]
+id = "nVpuZHzOldI"
+remark = "Nelson Eddy in the original recording from the film Rosalie (1937)"
+
+[[youtube]]
+id = "D6RGpBEkyks"
+remark = "Ella Fitzgerald from the Cole Porter Song Book (1956)"
+
+[versions.Fake]
+doChords = true
+doVoice = true
+doLyrics = false
+doLyricsmore = false
+doLyricsmoremore = false
+doChordBars = false
+doGuitar = false
+doExtra = false
+doPrep = false
+doOwn = false
+#}
+{% if part == "Vars" %}
+{% endif %}
+{% if part == "Doc" %}	DONE:
+	- added the meta data from the fake book.
+	- put in the tunes structure.
+	- put in the chords (fake book).
+	- put in the tune (fake book).
+	- added youtube performances.
+	TODO:
+	- add the lyrics.
+	- check the chords (fake book).
+	- check the tune (fake book).
+	- hear the tune to check that it is right and adjust the tempo.
+{% endif %}
+{% if part == "ChordsFake" %}\chordmode {
+	\startChords
+	\startSong
+
+	\repeat volta 2 {
+
+		\myMark "A"
+		\startPart
+		f1*2 | f1*2:m6 | f1*2 | f1*2:m6 | \myEndLine
+		g1*2:m7 | c1*2:7 | f1*2 | g1:m7 | c:7 | \myEndLine
+		\endPart
+
+		\myMark "A"
+		\startPart
+		f1*2 | f1*2:m6 | f1*2 | f1:m6 | e:7 | \myEndLine
+		a1*2:m | e1*2:7 | a1*2:m | c1*2:7 | \myEndLine
+		\endPart
+
+		\myMark "B"
+		\startPart
+		f1*2 | bes1*2 | g2:m7 c:7 | c1:7 | f1*2 | \myEndLine
+		f1 | f1:aug | bes1*2 | c1*2:7 | a1:m7.5- | d:7 | \myEndLine
+		\endPart
+
+		\myMark "C"
+		\startPart
+		a2:m7 d:7 | a2:m7 d:7 | g1*2:m | bes1*2:m6 | \myEndLine
+		f1*2 | b1*2:dim7 | c1*2:9 | f1*2 | \myEndLine
+		aes1*2:dim7 | g1*2:m7 | c1*2:7 |
+
+	} \alternative {
+		{
+			f1*2 | f1*2:m6 | \myEndLineVoltaNotLast
+		}
+		{
+			f1*2 | f1*2:m6 | f1 | \myEndLineVoltaLast
+		}
+	}
+	\endPart
+
+	\endSong
+	\endChords
+}
+{% endif %}
+{% if part == "VoiceFake" %}{
+	\tempo "Moderato" 4 = 132
+	\time 2/2
+	\key f \major
+
+	\repeat volta 2 {
+
+		% part "A"
+		r2 c4 d | f2 e4 f | d1~ | d1 | r2 c4 d | f2 e4 f | d1 | d1 |
+		r2 cis4 d | bes'2 a4 bes | g2. a4 | bes2 c | c2. c4 | c1~ | c1~ | c4 r r2 |
+
+		% part "A"
+		r2 c,4 d | f2 e4 f | d1~ | d1 | r2 c4 d | f2 e4 f | d1 | e1 |
+		r2 dis4 e | a2 gis4 a | fis2. gis4 | a4 b! c d | e2. e4 | e1~ | e1~ | e2. r4 |
+
+		% part "B"
+		f1~ | f2. e4 | e1 | d1 | r2 e,2 | d'2. c4 | c1~ | c2. r4 |
+		f1 | f2. e4 | e2. d4 | d1 | r2 e,2 | d'2. c4 | c1~ | c2. r4 |
+
+		% part "C"
+		r2 a2 | d2. c4 | c2. bes4 | bes1 | bes1~ | bes2 f4 g | a1~ | a2 c,4 d |
+		f1~ | f2 e4 f | d1~ | d2 c4 d | f1~ | f2 e4 f |
+		d1~ | d2 c4 d | f1~ | f1 | g1~ | g2 a4 bes |
+	} \alternative {
+		{
+			c1~ | c1~ | c1~ | c2 r2 |
+		}
+		{
+			c1~ | c1~ | c1~ | c1~ | c4 r r2 |
+		}
+	}
+}
+{% endif %}

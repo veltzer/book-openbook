@@ -1,0 +1,105 @@
+{#
+default_version = "Fake"
+
+[attributes]
+title = "Nevertheless (I'm In Love With You)"
+style = "Jazz"
+composer = "Bert Kalmar, Harry Ruby"
+poet = "Bert Kalmar, Harry Ruby"
+piece = "Moderately"
+copyright = "1931 by DeSylva, Brown & Henderson, Inc."
+copyrightextra = "Copyright Renewed, Assigned to Chappell & Co., Inc. and Harry Ruby Music Co. (c/o The Songwriters Guild)"
+typesetter = "Mark Veltzer <mark.veltzer@gmail.com>"
+completion = "5"
+uuid = "2067bc88-d521-11f1-8000-046874d194b7"
+structure = "AABA"
+location = "jfb:270"
+
+[[youtube]]
+id = "Iw7oBpP_Two"
+remark = "Ruth Etting in a recording from the year the song came out (1931)"
+
+[[youtube]]
+id = "b9vgN2JkKX4"
+remark = "Fred Astaire in the film Three Little Words (1950)"
+
+[versions.Fake]
+doChords = true
+doVoice = true
+doLyrics = false
+doLyricsmore = false
+doLyricsmoremore = false
+doChordBars = false
+doGuitar = false
+doExtra = false
+doPrep = false
+doOwn = false
+#}
+{% if part == "Vars" %}
+{% endif %}
+{% if part == "Doc" %}	DONE:
+	- added the meta data from the fake book.
+	- put in the tunes structure.
+	- put in the chords (fake book).
+	- put in the tune (fake book).
+	- added youtube performances.
+	TODO:
+	- check the chords (fake book).
+	- check the tune (fake book).
+	- hear the tune to check that it is right and adjust the tempo.
+	- add the lyrics.
+{% endif %}
+{% if part == "ChordsFake" %}\chordmode {
+	\startChords
+	\startSong
+
+	\myMark "A"
+	\startPart
+	bes1 | des:dim7 | f:7 | d2:m7.5- g:7 | \myEndLine
+	c2:m g:7 | c:7 f:7 | bes g:m7 | c:7 f:7 | \myEndLine
+	\endPart
+
+	\myMark "A"
+	\startPart
+	bes1 | des:dim7 | f:7 | d2:m7.5- g:7 | \myEndLine
+	c2:m g:7 | c:7 f:7 | bes1*2 | \myEndLine
+	\endPart
+
+	\myMark "B"
+	\startPart
+	f2:m7 bes:7 | f:m7 bes:7 | ees1*2 | \myEndLine
+	g2:m7 c:7 | g:m7 c:7 | c1:m7 | f:7 | \myEndLine
+	\endPart
+
+	\myMark "A"
+	\startPart
+	bes1 | des:dim7 | f:7 | d2:m7.5- g:7 | \myEndLine
+	c2:m g:7 | c:7 f:7 | bes1*2 | \myEndLine
+	\endPart
+
+	\endSong
+	\endChords
+}
+{% endif %}
+{% if part == "VoiceFake" %}{
+	\tempo "Moderato" 4 = 160
+	\time 2/2
+	\key bes \major
+
+	% part "A"
+	bes'8. bes16 bes8. a16~ a4. g8 | bes8. bes16 bes8. a16~ a4. g8 | a8. a16 a8. g16~ g4. f8 | aes8. aes16 aes8. g16~ g4. f8 |
+	g8. g16 g8. f16~ f8. e16 ees4 | d2 c | f1 | r1 |
+
+	% part "A"
+	bes8. bes16 bes8. a16~ a4. g8 | bes8. bes16 bes8. a16~ a4. g8 | a8. a16 a8. g16~ g4. f8 | aes8. aes16 aes8. g16~ g4. f8 |
+	g8. g16 g8. f16~ f8. e16 ees4 | d2 f | bes1~ | bes8 r a4 bes b |
+
+	% part "B"
+	c8. c16 c8. bes16~ bes4. aes8 | c8. c16 c8. bes16~ bes8. c16 aes4 | g1 | bes1 |
+	d8. d16 d8. c16~ c4. bes8 | d8. d16 d8. c16~ c8. d16 bes4 | c1 | f,1 |
+
+	% part "A"
+	bes8. bes16 bes8. a16~ a4. g8 | bes8. bes16 bes8. a16~ a4. g8 | a8. a16 a8. g16~ g4. f8 | aes8. aes16 aes8. g16~ g4. f8 |
+	g8. g16 g8. f16~ f8. e16 ees4 | d2 f | bes1~ | bes2. r4 |
+}
+{% endif %}

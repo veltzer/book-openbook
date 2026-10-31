@@ -1,0 +1,108 @@
+{#
+default_version = "Fake"
+
+[attributes]
+title = "Lands End"
+style = "Jazz"
+composer = "Harold Land"
+piece = "Medium Swing"
+copyright = "1962 Slow Dancing Music, Inc."
+typesetter = "Mark Veltzer <mark.veltzer@gmail.com>"
+completion = "5"
+uuid = "77a4f440-d51d-11f1-8000-046874d194b7"
+structure = "AABA"
+location = "jfb:210"
+
+[[youtube]]
+id = "iqk4rCv4CwQ"
+remark = "Clifford Brown, Max Roach with Harold Land in the original recording from Study in Brown (1955)"
+
+[[youtube]]
+id = "WxmFEywtoBE"
+remark = "Harold Land, the composer, in his own recording"
+
+[versions.Fake]
+doChords = true
+doVoice = true
+doLyrics = false
+doLyricsmore = false
+doLyricsmoremore = false
+doChordBars = false
+doGuitar = false
+doExtra = false
+doPrep = false
+doOwn = false
+#}
+{% if part == "Vars" %}
+{% endif %}
+{% if part == "Doc" %}	DONE:
+	- added the meta data from the fake book.
+	- put in the tunes structure.
+	- put in the chords (fake book).
+	- put in the tune (fake book).
+	- added youtube performances.
+	TODO:
+	- check the chords (fake book).
+	- check the tune (fake book).
+	- hear the tune to check that it is right and adjust the tempo.
+	- the Fine double bar falls in the middle of the bar of the second ending (the last beat is the pickup to the bridge); typed as one bar.
+{% endif %}
+{% if part == "ChordsFake" %}\chordmode {
+	\startChords
+	\startSong
+
+	\partial 4. s4. |
+
+	\myMark "A"
+	\startPart
+	\repeat volta 2 {
+		a2:m a:m/g | f e:7 | a1:m | f2 e:7 | \myEndLine
+		a2:m a:m/g | f e:7 | a1:m |
+	} \alternative {
+		{
+			b2:m7.5- e:7 | \myEndLineVoltaNotLast
+		}
+		{
+			b4:7 e:7 a:m s | \myEndLineVoltaLast
+		}
+	}
+	\endPart
+
+	\myMark "B"
+	\startPart
+	d1:m7 | g:7 | c | e2.:7 a4:7 | \myEndLine
+	d2:m7 g:7 | c f | b1:7 | b2:m7.5- e:7 | \myEndLine
+	\endPart
+
+	\endSong
+	\endChords
+}
+{% endif %}
+{% if part == "VoiceFake" %}{
+	\tempo "Moderato" 4 = 140
+	\time 4/4
+	\key c \major
+
+	\partial 4. e8 a c |
+
+	% part "A"
+	\repeat volta 2 {
+		\tuplet 3/2 { cis8^\markup { \musicglyph #"scripts.segno" } d ees } d8 c! a4 g | a4. c8~ c fis, \acciaccatura dis'8 e4~ |
+		e4 \tuplet 3/2 { ees8 d c } a4 g | a4. g8~ g e a c |
+		\tuplet 3/2 { cis8 d ees } d8 c! a4 g | a4. c8~ c dis16 e a4~ | a8 g!16 e ees8 d c a g e |
+	} \alternative {
+		{
+			f8 gis b e~ e e, a c |
+		}
+		{
+			c4 gis8 a~ a4^\markup { \italic { Fine } } \grace { b16 c } d8. e16 |
+		}
+	}
+
+	% part "B"
+	f8 f e16 d g8~ g4 g16 f e d | g8 d r4 g16 a g f e8 d |
+	b16 c8 e16~ e8 gis,16 a e'8 g,!16 aes e'4~ | e2. \grace { b16 c } d8 e |
+	f8 f e16 d g8~ g4 g16 f e d | g8 d r4 r8 g, c d |
+	dis8 dis d!16 c dis8~ dis d! c g | f16 aes b d g8 f r e, a! c^\markup { \italic { D.S. al Fine } } |
+}
+{% endif %}

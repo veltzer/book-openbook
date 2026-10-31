@@ -1,0 +1,108 @@
+{#
+default_version = "Fake"
+
+[attributes]
+title = "I Remember Duke"
+style = "Jazz"
+composer = "Leonard Feather"
+piece = "Slow, Romantic"
+copyright = "1959, 1987 EDWIN H. MORRIS & COMPANY, A Division of MPL Communications, Inc."
+copyrightextra = "Renewed 1987 EDWIN H. MORRIS & COMPANY, A Division of MPL Communications, Inc. International Copyright Secured. All Rights Reserved."
+typesetter = "Mark Veltzer <mark.veltzer@gmail.com>"
+completion = "5"
+uuid = "4b489760-d51a-11f1-8000-046874d194b7"
+structure = "AABA"
+location = "jfb:161"
+
+[[youtube]]
+id = "7YYHHUtAHdQ"
+remark = "Woody Herman"
+
+[[youtube]]
+id = "phd9P46jZGU"
+remark = "Adam Flint"
+
+[versions.Fake]
+doChords = true
+doVoice = true
+doLyrics = false
+doLyricsmore = false
+doLyricsmoremore = false
+doChordBars = false
+doGuitar = false
+doExtra = false
+doPrep = false
+doOwn = false
+#}
+{% if part == "Vars" %}
+{% endif %}
+{% if part == "Doc" %}	DONE:
+	- added the meta data from the fake book.
+	- put in the tunes structure.
+	- put in the chords (fake book).
+	- put in the tune (fake book).
+	- added youtube performances.
+	TODO:
+	- check the chords (fake book).
+	- check the tune (fake book).
+	- hear the tune to check that it is right and adjust the tempo.
+	- bars 3, 11 and 27: the last a before the e flat carries no accidental in the book (a flat by the bar rule) although the chord is B7; check against a recording.
+{% endif %}
+{% if part == "ChordsFake" %}\chordmode {
+	\startChords
+	\startSong
+
+	\partial 4. s4. |
+
+	\myMark "A"
+	\startPart
+	aes2:m7 des:7 | g:m7 c:7 | ges:m7 b:7 | f:m7 bes:7 | \myEndLine
+	g2:m7.5- c:7.5+.9- | f:9 bes:7.5+.9- | ees:9 c:13 | f:m7 ges:m7 | \myEndLine
+	\endPart
+
+	\myMark "A"
+	\startPart
+	aes2:m7 des:7 | g:m7 c:7 | ges:m7 b:7 | f:m7 bes:7 | \myEndLine
+	g2:m7.5- c:7.5+.9- | f:9 bes:7.5+.9- | ees:9 c:13 | f4:m7 e:6 ees2:maj7 | \myEndLine
+	\endPart
+
+	\myMark "B"
+	\startPart
+	ees1*3:7 | aes1:maj7 | \myEndLine
+	c2:m c:m7+ | c:m7 c:m6 | f:m7 bes:7 | ges:m7 b:7 | \myEndLine
+	\endPart
+
+	\myMark "A"
+	\startPart
+	aes2:m7 des:7 | g:m7 c:7 | ges:m7 b:7 | f:m7 bes:7 | \myEndLine
+	g2:m7.5- c:7.5+.9- | f:9 bes:7.5+.9- | ees:9 c:13 | f4:m7 b:7 ees2:maj7 | \myEndLine
+	\endPart
+
+	\endSong
+	\endChords
+}
+{% endif %}
+{% if part == "VoiceFake" %}{
+	\tempo "Adagio" 4 = 60
+	\time 4/4
+	\key ees \major
+
+	\partial 4. fis8 \tuplet 3/2 { g8 aes a! } |
+
+	% part "A"
+	bes2~ bes8 des bes f~ | f8 d a'! e!~ e4 \tuplet 3/2 { f8 fis g } | aes2~ aes8 b! aes ees~ | ees8 c g' d~ d ees e! f~ |
+	f2 e!8 des'4. | c8 g4. fis8 b!4. | r8 bes4. a!8 e!4. | ees8 c aes' a!~ a fis \tuplet 3/2 { g8 aes a! } |
+
+	% part "A"
+	bes2~ bes8 des bes f~ | f8 d a'! e!~ e4 \tuplet 3/2 { f8 fis g } | aes2~ aes8 b! aes ees~ | ees8 c g' d~ d ees e! f~ |
+	f2 e!8 des'4. | c8 g4. fis8 b!4. | r8 bes4. a!8 e!4. | ees8 aes des, d!~ d2 |
+
+	% part "B"
+	ees8 ees' ees ees, ees e! e e | e!8 ees' ees e,! e f f f | f8 ees' ees f, f ges ges g! | g1 |
+	r8 g d' a! b! g f ees | r8 g d' a! b! g f ees | aes2~ aes8. f16 \tuplet 3/2 { fis8 g aes } | a!2~ a8. fis16 \tuplet 3/2 { g8 aes a! } |
+
+	% part "A"
+	bes2~ bes8 des bes f~ | f8 d a'! e!~ e4 \tuplet 3/2 { f8 fis g } | aes2~ aes8 b! aes ees~ | ees8 c g' d~ d ees e! f~ |
+	f2 e!8 des'4. | c8 g4. fis8 b!4. | r8 bes4. a!8 e!4. | ees8 aes a! bes bes\fermata r8 r4 |
+}
+{% endif %}

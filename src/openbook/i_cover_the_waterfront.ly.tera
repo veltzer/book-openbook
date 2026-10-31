@@ -1,0 +1,107 @@
+{#
+default_version = "Fake"
+
+[attributes]
+title = "I Cover The Waterfront"
+style = "Jazz"
+composer = "John Green"
+poet = "Edward Heyman"
+piece = "Moderately"
+copyright = "1933 (Renewed) Warner Bros. Inc."
+typesetter = "Mark Veltzer <mark.veltzer@gmail.com>"
+completion = "5"
+uuid = "627b2bfa-d51a-11f1-8000-046874d194b7"
+structure = "AABA"
+location = "jfb:154"
+
+[[youtube]]
+id = "0CaCht6SBYc"
+remark = "Eddy Duchin and his Orchestra with Lew Sherwood (vocal), the 1933 hit recording"
+
+[[youtube]]
+id = "uKBk6JtSb3Q"
+remark = "Billie Holiday (1941)"
+
+[versions.Fake]
+doChords = true
+doVoice = true
+doLyrics = false
+doLyricsmore = false
+doLyricsmoremore = false
+doChordBars = false
+doGuitar = false
+doExtra = false
+doPrep = false
+doOwn = false
+#}
+{% if part == "Vars" %}
+{% endif %}
+{% if part == "Doc" %}	DONE:
+	- added the meta data from the fake book.
+	- put in the tunes structure.
+	- put in the chords (fake book).
+	- put in the tune (fake book).
+	- added youtube performances.
+	TODO:
+	- add the lyrics.
+	- check the chords (fake book).
+	- check the tune (fake book).
+	- hear the tune to check that it is right and adjust the tempo.
+{% endif %}
+{% if part == "ChordsFake" %}\chordmode {
+	\startChords
+	\startSong
+
+	\myMark "A"
+	\startPart
+	e2:m7 a:7 | a:m7 d:7 | g a:m7 | b:m7 bes:dim7 | \myEndLine
+	a1:m7 | d:7 | g2 fis:7 | f:7 e:7 | \myEndLine
+	\endPart
+
+	\myMark "A"
+	\startPart
+	e2:m7 a:7 | a:m7 d:7 | g a:m7 | b:m7 bes:dim7 | \myEndLine
+	a1:m7 | d:7 | g2 c:7 | g:6 e:m7 | \myEndLine
+	\endPart
+
+	\myMark "B"
+	\startPart
+	a2:m7 d:7 | b:m7 e:m7 | a:m7 d:7 | g1 | \myEndLine
+	b2:m7 e:7 | a fis:m7 | b:m7 e:7 | a4:m7 a:m7/g fis:m7.5- b:7 | \myEndLine
+	\endPart
+
+	\myMark "A"
+	\startPart
+	e2:m7 a:7 | a:m7 d:7 | g a:m7 | b:m7 bes:dim7 | \myEndLine
+	a1:m7 | d:7 | g2 aes:maj7 | g1 | \myEndLine
+	\endPart
+
+	\endSong
+	\endChords
+}
+{% endif %}
+{% if part == "VoiceFake" %}{
+	\tempo "Moderato" 4 = 120
+	\time 4/4
+	\key g \major
+
+	% part "A"
+	r4 b' \tuplet 3/2 { a4 g a } | b b8 b~ b2 | r4 d \tuplet 3/2 { d4 b g } | a2. e8 fis | g8 g4 g8~ g4. a8 |
+	b8 b4 b8~ b4 a | d1~ | d1 |
+
+	% part "A"
+	r4 b \tuplet 3/2 { a4 g a } | b b8 b~ b2 | r4 d \tuplet 3/2 { d4 b g } | a2. e8 fis |
+	g8 g4 g8~ g4. a8 | b8 b4 b8~ b4 a | g1~ | g4 r r2 |
+
+	% part "B"
+	d'4 d8 d~ d2 | \tuplet 3/2 { d,4 d dis } e8 e~ e4 |
+	\key d \major
+	\tuplet 3/2 { d'4 d d } d8 d~ d4 | \tuplet 3/2 { d,4 d dis } e2 | e'4 e8 e~ e2 | \tuplet 3/2 { e,4 e eis } fis8 fis~ fis4 | \tuplet 3/2 { e'4 e e } cis8 cis4. |
+	\key g \major
+	\tuplet 3/2 { c!4 c c } a2 |
+
+	% part "A"
+	r4 b \tuplet 3/2 { a4 g a } | b b8 b~ b2 | r4 d \tuplet 3/2 { d4 b g } | a2. e8 fis |
+	g8 g4 g8~ g4. a8 | b8 b4 b8~ b4 a | g1~ | g4 r r2 |
+}
+{% endif %}

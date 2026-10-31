@@ -1,0 +1,117 @@
+{#
+default_version = "Fake"
+
+[attributes]
+title = "It's Sand, Man"
+style = "Swing"
+composer = "Ed Lewis"
+poet = "Jon Hendricks, Dave Lambert"
+piece = "Medium Swing"
+copyright = "1942, 1958 (Renewed) WB Music Corp."
+typesetter = "Mark Veltzer <mark.veltzer@gmail.com>"
+completion = "5"
+uuid = "6e1b9e2c-d51a-11f1-8000-046874d194b7"
+structure = "AABA"
+location = "jfb:193"
+
+[[youtube]]
+id = "wrpz9SZ21z8"
+remark = "Count Basie and his Orchestra in the original recording (1942)"
+
+[[youtube]]
+id = "AR5DgSDrpGY"
+remark = "Lambert, Hendricks and Ross"
+
+[versions.Fake]
+doChords = true
+doVoice = true
+doLyrics = false
+doLyricsmore = false
+doLyricsmoremore = false
+doChordBars = false
+doGuitar = false
+doExtra = false
+doPrep = false
+doOwn = false
+#}
+{% if part == "Vars" %}
+{% endif %}
+{% if part == "Doc" %}	DONE:
+	- added the meta data from the fake book.
+	- put in the tunes structure.
+	- put in the chords (fake book).
+	- put in the tune (fake book).
+	- added youtube performances.
+	TODO:
+	- add the lyrics.
+	- check the chords (fake book).
+	- check the tune (fake book).
+	- hear the tune to check that it is right and adjust the tempo.
+	- last bar: the fake book prints the Cm7 over the last eighth of the previous bar (anticipation) and F7 and Bb on the second and third eighths, simplified here to Cm7 F7 Bb on beats 1, 2 and 3.
+{% endif %}
+{% if part == "ChordsFake" %}\chordmode {
+	\startChords
+	\startSong
+
+	\partial 4. s4. |
+
+	\myMark "A"
+	\startPart
+	\repeat volta 2 {
+		bes1 | c2:m7 f:7 | bes g:7 | c:m7 f:7 | \myEndLine
+		bes2 bes:7 | ees des:dim7 | bes/d des:dim7 |
+	} \alternative {
+		{
+			c2:m7 des:dim7 | \myEndLineVoltaNotLast
+		}
+		{
+			c4:m7 f:7 bes2 | \myEndLineVoltaLast
+		}
+	}
+	\endPart
+
+	\myMark "B"
+	\startPart
+	ees1:7 | bes2:m7 ees:7 | bes1*2 | ees1:7 | bes2:m7 ees:7 | \myEndLine
+	bes2 b:dim7 | c:m7 f:7 |
+	\endPart
+
+	\myMark "A"
+	\startPart
+	bes1 | c2:m7 f:7 | bes g:7 | \myEndLine
+	c2:m7 f:7 | bes bes:7 | ees des:dim7 | bes/d des:dim7 | c4:m7 f:7 bes2 | \myEndLine
+	\endPart
+
+	\endSong
+	\endChords
+}
+{% endif %}
+{% if part == "VoiceFake" %}{
+	\tempo "Moderato" 4 = 140
+	\time 4/4
+	\key bes \major
+
+	\partial 4. cis8 d f |
+
+	% part "A"
+	\repeat volta 2 {
+		bes8 g r bes, cis d4 bes8~ | bes4. g8~ g r r bes' | r g r bes, cis d4 bes8~ | bes4. c8~ c r r bes' |
+		r8 g r bes, cis d4 ees8~ | ees4 g8 bes r2 | r8 bes4 g8 bes4. bes8~ |
+	} \alternative {
+		{
+			bes8 g bes4~ bes8 bes4 g8 |
+		}
+		{
+			bes8 g bes bes r4 bes8 r |
+		}
+	}
+
+	% part "B"
+	des2 des4. c8~ | c bes4.~ bes4 r8 bes | d f g r f4 bes,8 d~ | d2 r4 bes8 r | des2 des4. c8~ | c bes4.~ bes4 r8 bes |
+	d8 f~ f2 f8 g~ | g r r4 r8 cis,,8 d f |
+
+	% part "A"
+	bes8 g r bes, cis d4 bes8~ | bes4. g8~ g r r bes' | r g r bes, cis d4 bes8~ |
+	bes4. c8~ c r r bes' | r8 g r bes, cis d4 ees8~ | ees4 g8 bes r2 | r8 bes4 g8 bes4. bes8~ | bes8 g bes bes r2 |
+}
+{% endif %}

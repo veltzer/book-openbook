@@ -1,0 +1,121 @@
+{#
+default_version = "Fake"
+
+[attributes]
+title = "It's A Blue World"
+style = "Jazz"
+composer = "Bob Wright, Chet Forrest"
+poet = "Bob Wright, Chet Forrest"
+piece = "Slowly"
+copyright = "1939 Bourne Co."
+copyrightextra = "Copyright renewed."
+typesetter = "Mark Veltzer <mark.veltzer@gmail.com>"
+completion = "5"
+uuid = "ec7e6901-d519-11f1-8000-046874d194b7"
+structure = "AABA"
+location = "jfb:190"
+
+[[youtube]]
+id = "Mr460E9I4UQ"
+remark = "The Four Freshmen"
+
+[[youtube]]
+id = "AFUpB83NEMw"
+remark = "Mel Torme"
+
+[versions.Fake]
+doChords = true
+doVoice = true
+doLyrics = false
+doLyricsmore = false
+doLyricsmoremore = false
+doChordBars = false
+doGuitar = false
+doExtra = false
+doPrep = false
+doOwn = false
+#}
+{% if part == "Vars" %}
+{% endif %}
+{% if part == "Doc" %}	DONE:
+	- added the meta data from the fake book.
+	- put in the tunes structure.
+	- put in the chords (fake book).
+	- put in the tune (fake book).
+	- added youtube performances.
+	TODO:
+	- add the lyrics.
+	- check the chords (fake book).
+	- check the tune (fake book).
+	- hear the tune to check that it is right and adjust the tempo.
+{% endif %}
+{% if part == "ChordsFake" %}\chordmode {
+	\startChords
+	\startSong
+
+	\partial 2 s2 |
+
+	\myMark "A"
+	\startPart
+	\repeat volta 2 {
+		g1:m9 | g2:m9 c:7.5+ | f1*2:maj9 | c1:m9 | c2:m9 f:7.5+ | bes1*2:maj9 | \myEndLine
+		\endPart
+
+		\myMark "B"
+		\startPart
+		bes1:maj9 | bes2:m9 c:7.9- | f1:maj7 | f:7 | bes:m7 | des:9 | c2:9 des:9.5- | \myEndLine
+		c1:7 |
+		\endPart
+
+		\myMark "A"
+		\startPart
+		g1:m9 | g2:m9 c:7.5+ | f1*2:maj9 | c1:m9 | c2:m9 f:7.5+ | bes1*2:maj9 | \myEndLine
+		\endPart
+
+		\myMark "C"
+		\startPart
+		bes1:maj9 | bes2:m9 ees:9 | f:maj7 g:m7 | a:m7.5- d:7 | g1:9 | \myEndLine
+		g2:m9 c:7.9- |
+	} \alternative {
+		{
+			f2 aes:dim7 | g:m7 c:7 | \myEndLineVoltaNotLast
+		}
+		{
+			f4 bes:m7 f/a aes:dim7 | g:m7 ges:maj7 f2:6 | \myEndLineVoltaLast
+		}
+	}
+	\endPart
+
+	\endSong
+	\endChords
+}
+{% endif %}
+{% if part == "VoiceFake" %}{
+	\tempo "Adagio" 2 = 50
+	\time 2/2
+	\key f \major
+
+	\partial 2 cis4 d |
+
+	% part "A"
+	\repeat volta 2 {
+		a'2 a~ | a aes | g g~ | g e4 f | d'2 d~ | d des | c1~ | c2~ c8 c4. |
+
+		% part "B"
+		c4. bes8 c4. bes8 | c4. bes8 des4. c8 | a2 a~ | a2. a4 | aes4. g8 aes4. g8 | aes4. g8 bes4. aes8 | g1~ | g2 cis,4 d |
+
+		% part "A"
+		a'2 a~ | a aes | g g~ | g e4 f | d'2 d~ | d des | c1~ | c2~ c8 c4. |
+
+		% part "C"
+		c4. bes8 c4. bes8 | c4. bes8 f4. g8 | a4. e8 \tuplet 3/2 { g4 f e } | ees2 cis4 d | a'2 cis,4 d | a'2 a |
+	} \alternative {
+		{
+			f1~ | f4 r cis d |
+		}
+		{
+			f1~ | f2. r4 |
+		}
+	}
+}
+{% endif %}

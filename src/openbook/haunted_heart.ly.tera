@@ -1,0 +1,105 @@
+{#
+default_version = "Fake"
+
+[attributes]
+title = "Haunted Heart"
+style = "Jazz"
+composer = "John Green"
+poet = "Howard Dietz"
+piece = "Slowly with expression"
+copyright = "1948"
+copyrightextra = "Copyright renewed and assigned to Chappell & Co., Inc."
+typesetter = "Mark Veltzer <mark.veltzer@gmail.com>"
+completion = "5"
+uuid = "3f8f9ec8-d51a-11f1-8000-046874d194b7"
+structure = "AB"
+location = "jfb:144"
+
+[[youtube]]
+id = "WlYHCY6rPNA"
+remark = "Jo Stafford in the original hit recording (1948)"
+
+[[youtube]]
+id = "xlHg4_PJl8E"
+remark = "The Bill Evans Trio from Explorations (1961)"
+
+[versions.Fake]
+doChords = true
+doVoice = true
+doLyrics = false
+doLyricsmore = false
+doLyricsmoremore = false
+doChordBars = false
+doGuitar = false
+doExtra = false
+doPrep = false
+doOwn = false
+#}
+{% if part == "Vars" %}
+{% endif %}
+{% if part == "Doc" %}	DONE:
+	- added the meta data from the fake book.
+	- put in the tunes structure.
+	- put in the chords (fake book).
+	- put in the tune (fake book).
+	- added youtube performances.
+	TODO:
+	- add the lyrics.
+	- check the chords (fake book).
+	- check the tune (fake book).
+	- hear the tune to check that it is right and adjust the tempo.
+	- check the placement of the Bbdim7 and Ebdim7/Bb chords in the second and fourth bars of the second line of part B (typed on beat 2).
+	- check the placement of the Fm and B9b5 chords in the last line (the book prints them on the last quarter and on the second half of beat 3).
+{% endif %}
+{% if part == "ChordsFake" %}\chordmode {
+	\startChords
+	\startSong
+
+	\myMark "A"
+	\startPart
+	ees1:6 | s2 bes:7.9- | ees:6 ges:dim7 | f:m7 bes:7 | \myEndLine
+	ees1:6 | s2 e:dim7 | f:m7 bes:7 | f:m7 bes:7 | \myEndLine
+	f:m7 e:dim7 | ees:m6 d:m7.5- | ees:dim7 ees:6 | ees:maj7 ees:6 | \myEndLine
+	ges:dim7 f:m7 | s2 bes:7.5+ | ees:maj9 c:m7 | f:m9 bes:7 | ees1:6 | \myEndLine
+	s2 bes:7.9- | ees:6 ges:dim7 | f:m7 bes:7 | ees1:6 | \myEndLine
+	s2 bes:7 | bes:m7 ees:7 | bes:m7 ees:7 | aes ees:6/g | \myEndLine
+	f:m7 fis:dim7 | ees1/g | s1 | ges1:dim7 | \myEndLine
+	f2:m7 bes:7 | g1:m7 | c:7 | f:m7 | \myEndLine
+	bes2:9 bes:7.9- | ees ees:6 | ees1 | \myEndLine
+	\endPart
+
+	\myMark "B"
+	\startPart
+	s1 | ees2:dim7 f:m7 | ees:maj7 ees | ees1:dim7 | bes2:7 bes:7.5+ | ees1:maj7 | \myEndLine
+	aes1*2:9 | f2:m7/bes bes:7.5+ | ees1 | \myEndLine
+	f4:m7/bes bes2.:dim7 | f2:m7/bes bes:7 | bes4:6 ees2.:dim7/bes | \myEndLine
+	b2:dim7 c:m | aes:6 bes:7 | ees2.:maj7 f4:m | b2:9.5+ s8 b4.:9.5- | bes1:9 | \myEndLine
+	\endPart
+
+	\endSong
+	\endChords
+}
+{% endif %}
+{% if part == "VoiceFake" %}{
+	\tempo "Adagio" 4 = 60
+	\time 2/2
+	\key ees \major
+
+	% part "A"
+	ees4. f8 f2~ | f2 g | ees4. f8 c2~ | c1 |
+	ees4. f8 f4. g8 | g4. aes8 aes4. bes8 | bes4. c8 f,2~ | f1 |
+	aes4. bes8 bes2~ | bes2 c | d4. ees8 c2~ | c1 |
+	d4. ees8 c2~ | c2 bes4. bes8 | bes1~ | bes1 | ees,4. f8 f2~ |
+	f2 g | ees4. f8 c2~ | c1 | ees4. f8 f4. g8 |
+	g4. aes8 aes4. bes8 | bes4. c8 g2~ | g1 | aes4. bes8 bes4. c8 |
+	c4. d8 d4. ees8 | ees4. f8 bes,2~ | bes2. aes4 | d1~ |
+	d4 c c4. bes8 | bes1~ | bes2. g4 | g1~ |
+	g4 f f4. ees8 | ees1~ | ees4 r r2^\markup { \italic { Fine } } |
+
+	% part "B"
+	r1 | r1 | d'2 ees | d1 | \tuplet 3/2 { d4 ees f } d4. c8 | d2 g, |
+	c2 d | c1 | \tuplet 3/2 { c4 d ees } c4. bes8 | c2 ees, |
+	r4 f g f8 g | aes4 g8 aes bes2 | r4 bes c bes8 c |
+	d4 c8 d ees2 | r4 f \tuplet 3/2 { d4 c bes } | g2~ g8 f f4 | g2~ g8 f f4 | g1^\markup { \italic { D.C. al Fine } } |
+}
+{% endif %}

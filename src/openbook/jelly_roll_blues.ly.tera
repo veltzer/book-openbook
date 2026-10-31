@@ -1,0 +1,145 @@
+{#
+default_version = "Fake"
+
+[attributes]
+title = "Jelly Roll Blues"
+style = "Jazz"
+composer = "Ferd 'Jelly Roll' Morton"
+piece = "Moderately"
+copyright = "1915, 1987 EDWIN H. MORRIS & COMPANY, A Division of MPL Communications, Inc."
+copyrightextra = "Renewed 1943 EDWIN H. MORRIS & COMPANY, A Division of MPL Communications, Inc. International Copyright Secured. All Rights Reserved"
+typesetter = "Mark Veltzer <mark.veltzer@gmail.com>"
+completion = "5"
+uuid = "5d9c76d0-d51d-11f1-8000-046874d194b7"
+structure = "ABCD"
+location = "jfb:196"
+
+[[youtube]]
+id = "iikgGshcfhU"
+remark = "Jelly Roll Morton, piano solo (1924)"
+
+[[youtube]]
+id = "H4o01H7lnbs"
+remark = "Jelly Roll Morton's Red Hot Peppers (1926)"
+
+[versions.Fake]
+doChords = true
+doVoice = true
+doLyrics = false
+doLyricsmore = false
+doLyricsmoremore = false
+doChordBars = false
+doGuitar = false
+doExtra = false
+doPrep = false
+doOwn = false
+#}
+{% if part == "Vars" %}
+{% endif %}
+{% if part == "Doc" %}	DONE:
+	- added the meta data from the fake book.
+	- put in the tunes structure.
+	- put in the chords (fake book).
+	- put in the tune (fake book).
+	- added youtube performances.
+	TODO:
+	- check the chords (fake book).
+	- check the tune (fake book).
+	- hear the tune to check that it is right and adjust the tempo.
+	- the fake book ends the repeat of the first strain in the middle of bar 17 (after its opening dotted eighth rest); here the repeat closes at the end of bar 16 so that bar 17 stays whole.
+	- the four bar passage before the key change has no letter in the fake book; it is marked here as Instr.
+	- in the first bar of part D the second f sharp has no accidental in the fake book; it is kept sharp (the sharp carries through the bar).
+	- the accidental on the f of the triplets in bars 50 and 62 is hard to read in the scan (taken as a natural).
+	- the exact beat of several chord changes in bars 9, 21, 33 and 40 is cramped in the fake book; check them.
+{% endif %}
+{% if part == "ChordsFake" %}\chordmode {
+	\startChords
+	\startSong
+
+	\myMark "A"
+	\startPart
+	\repeat volta 2 {
+		bes2 g:m | g2.:m g4:dim7 | bes4 r2. | r2. aes4 | ees1 | \myEndLine
+		ees1 | bes:6 | bes2.:6 des4:dim7 | f2.:7 ees4 | f4:7 g:dim7 ges f:7 | bes g:dim7 ges f:7 | \myEndLine
+		bes4 r2. | bes4:6 r2. | d4:7 r2. | bes2:6 d:7 | bes4 ees bes2:7 |
+	}
+	\endPart
+
+	\myMark "B"
+	\startPart
+	ees1 | ees | \myEndLine
+	bes4 r2. | r2. des4:dim7 | c2:m7 f4:7 g:7 | c2:7 ges4:7 f:7 | bes g:dim7 ges:7 f:7 | \myEndLine
+	bes4 r2. |
+	\endPart
+
+	\myMark "C"
+	\startPart
+	bes1 | bes | bes:7 | bes:7 | ees | \myEndLine
+	ees2. e4:dim7 | ees2 ees4:7 e:dim7 | bes2 des:dim7 | c2:m7 f4:7 g:7 | c2:7 ges4:7 f:7 | \myEndLine
+	bes4 g:dim7 ges:7 f:7 | bes1 |
+	\endPart
+
+	\myMark "Instr"
+	\startPart
+	bes1:7 | ees | bes:7 | ees2 bes:7 | \myEndLine
+	\endPart
+
+	\myMark "D"
+	\startPart
+	ees1 | g:7 | ees | ees:7 | aes | \myEndLine
+	a:dim7 | ees/bes | ees | bes:7 | bes4:7 c:dim7 ces:7 bes:7 | \myEndLine
+	ees c:dim7 ces:7 bes:7 | ees4 r2. | ees1 | g:7 | ees:7 | \myEndLine
+	ees1:7 | aes | a:dim7 | ees/bes | ees | \myEndLine
+	bes1:7 | bes4:7 c:dim7 ces:7 bes:7 | ees c:dim7 ces:7 bes:7 | ees bes:7.5+ ees2:9 | \myEndLine
+	\endPart
+
+	\endSong
+	\endChords
+}
+{% endif %}
+{% if part == "VoiceFake" %}{
+	\tempo "Moderato" 2 = 80
+	\time 2/2
+	\key bes \major
+
+	% part "A"
+	\repeat volta 2 {
+		\tuplet 3/2 { bes'8 bes bes } bes8 r \tuplet 3/2 { g8 g g } g8 r | \tuplet 3/2 { f8 f f } f8 r g8 r cis,8 d~ | d8 r g8. f16 cis8. d16 bes4 | g'8. f16 cis8. d16 bes4 c4 |
+		ees8 r bes'8. c16 bes8. des16 bes8. c16 |
+		r4 bes8. c16 bes8. des16 bes8. c16 | r8 f,4. f2 | r8 f4. f4 e4 | ees4 r8 g8 a8. c16 bes8. g16 |
+		f8 r cis'8. d16 \tuplet 3/2 { bes8 c bes } c8. a16 | bes8 r cis8. d16 \tuplet 3/2 { bes8 c bes } c8. a16 |
+		bes8 r f'2.\trill | d8 r f2.\trill | d8 r fis2.\trill | d8 r r4 d8 r r4 |
+		bes8 d4 bes8 d4 bes8 c8 |
+	}
+
+	% part "B"
+	r8. c16 d8. bes16 c8. bes16 fis8. g16 | r8. cis16 d8. bes16 c8. bes16 fis8. g16 |
+	f8 r \tuplet 3/2 { f'8 g f } \tuplet 3/2 { d8 f d } \tuplet 3/2 { bes8 d bes } |
+	\tuplet 3/2 { f8 bes f } \tuplet 3/2 { d8 f d } \tuplet 3/2 { bes8 d f } a8 g | g8 ges4 f8~ f8 d'4. |
+	r4 cis8. d16 \tuplet 3/2 { bes8 c bes } c8. a16 | bes8 r cis8. d16 \tuplet 3/2 { bes8 c bes } c8. a16 |
+	bes8 r f'8 f~ f8. f16 g4 |
+
+	% part "C"
+	bes8. bes16 bes8. bes16 bes8. bes16 bes8. bes16 | bes8. bes,16 bes8. bes16 bes8. bes16 bes8. bes16 |
+	bes8. bes16 bes8. bes16 bes8. bes16 bes8. bes16 | bes8. bes16 bes8. bes16 bes8 c4. |
+	g8. fis16 g8 bes a8 c4. | des8. bes16 c8 bes~ bes4 g4 | bes8 r c8. bes16 \tuplet 3/2 { des8 c bes } g8. f16 |
+	bes8 r d,8. f16 a8 g4. | g8 ges4 f8~ f8 d'4. | r4 cis8. d16 \tuplet 3/2 { bes8 c bes } c8. a16 |
+	bes8 r cis8. d16 \tuplet 3/2 { bes8 c bes } c8. a16 | bes2 bes'8 r r4 |
+
+	% part "Instr"
+	r4 bes,,8 c~ c8. d16 ees8. f16 | r4 bes,8 c~ c8. d16 ees8. f16 | r8. bes16 aes8. e16 g8. f16 d8. c16 |
+	bes8 bes'4 bes8~ bes8 bes4. |
+
+	% part "D"
+	\key ees \major
+	r8 g'4 g8 fis8. g16 fis8. g16 | f8 r d8 b8~ b8. b16 g4 | r8. ees'16 d8. ees16 f8. ees16 d8. ees16 |
+	des8. bes'16 g8. ges16 f8. g16 f8 ees~ | \tuplet 3/2 { ees8 ees, f } \tuplet 3/2 { aes8 c ees } g8. ees16 c8. aes16 |
+	r8. c,16 ees8. fis16 a,8. c16 ees8. fis16 | r8. g16 bes8. fis16 g8 d'4. | r8. g,16 bes8. fis16 g8 d'4. |
+	r8. c16 bes8 d,8~ d8. bes'16 aes8. d,16 | r4 fis8. g16 \tuplet 3/2 { ees8 f ees } f8. d16 |
+	ees8 r fis8. g16 \tuplet 3/2 { ees8 f ees } f8. d16 | ees8 r fis8. g16 bes8. c16 ees8. f16 |
+	fis8. g16 ees8 g~ g2 | fis8. g16 d8 g~ g2 | fis8. g16 ees8 g~ g4. f8~ |
+	f4 fis,8. g16 f8. ees16 ees'8. des16 | c4 b8. c16 ees,8. f16 aes8. bes16 | c4 a8. fis16 ees8. c16 c'4 |
+	r8. g16 bes8. fis16 g8 d'4. | r8. g,16 bes8. fis16 g8 d'4. | r8. c16 bes8 d,8~ d8. bes'16 aes8. d,16 |
+	r4 fis8. g16 \tuplet 3/2 { ees8 f ees } f8. d16 | ees8 r fis8. g16 \tuplet 3/2 { ees8 f ees } f8. d16 | ees8 r ges8 f~ f2 |
+}
+{% endif %}

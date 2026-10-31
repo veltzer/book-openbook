@@ -1,0 +1,113 @@
+{#
+default_version = "Fake"
+
+[attributes]
+title = "Happy Talk"
+subtitle = "From 'South Pacific'"
+style = "Broadway"
+composer = "Richard Rodgers"
+poet = "Oscar Hammerstein II"
+piece = "Brightly"
+copyright = "1949 by Richard Rodgers and Oscar Hammerstein II."
+copyrightextra = "Copyright Renewed. Williamson Music Co., owner of publication and allied rights for all countries of the Western Hemisphere and Japan. All Rights Administered by Chappell & Co., Inc."
+typesetter = "Mark Veltzer <mark.veltzer@gmail.com>"
+completion = "5"
+uuid = "e8747bcc-d519-11f1-8000-046874d194b7"
+structure = "AB"
+location = "jfb:143"
+
+[[youtube]]
+id = "fX_zg7assf8"
+remark = "Juanita Hall in the film South Pacific (1958)"
+
+[[youtube]]
+id = "ZW44cpolj08"
+remark = "Captain Sensible (1982)"
+
+[versions.Fake]
+doChords = true
+doVoice = true
+doLyrics = false
+doLyricsmore = false
+doLyricsmoremore = false
+doChordBars = false
+doGuitar = false
+doExtra = false
+doPrep = false
+doOwn = false
+#}
+{% if part == "Vars" %}
+{% endif %}
+{% if part == "Doc" %}	DONE:
+	- added the meta data from the fake book.
+	- put in the tunes structure.
+	- put in the chords (fake book).
+	- put in the tune (fake book).
+	- added youtube performances.
+	TODO:
+	- add the lyrics.
+	- check the chords (fake book).
+	- check the tune (fake book).
+	- hear the tune to check that it is right and adjust the tempo.
+	- the fake book has no repeat sign: the first ending goes "To Trio" and the Trio ends with D.C. al Fine, which takes the second ending to Fine. Here it is written as a volta repeat with markups, check the layout.
+	- bar 11: the accidental before the a is hard to read; typed as a natural (diatonic, chord F).
+	- bar 8: the F7 is printed over the last quarter (the c sharp), check it.
+{% endif %}
+{% if part == "ChordsFake" %}\chordmode {
+	\startChords
+	\startSong
+
+	\myMark "A"
+	\startPart
+	\repeat volta 2 {
+		f1:maj7 | f:7.5+ | bes | g:7 | \myEndLine
+		c1:7sus4 | g2:m7 c:7 | f1 | f2. f4:7 | \myEndLine
+		bes1:maj7 | ees:9 | f | d2:7.9- d:7 | d:m7 g:9 | \myEndLine
+		g2:m9 c:7 |
+	} \alternative {
+		{
+			f1*2:maj9 | \myEndLineVoltaNotLast
+		}
+		{
+			f1*2:maj9 | \myEndLineVoltaLast
+		}
+	}
+	\endPart
+
+	\myMark "B"
+	\startPart
+	f1*4:maj7 | \myEndLine
+	g1:m7 | c:7 | f2 d:m7 | g:m7 c:7 | f1*2 | \myEndLine
+	f1*2 | g1*2:m7 | c2 bes/d | dis:dim7 c:7/e | \myEndLine
+	\endPart
+
+	\endSong
+	\endChords
+}
+{% endif %}
+{% if part == "VoiceFake" %}{
+	\tempo "Allegro" 4 = 160
+	\time 2/2
+	\key f \major
+
+	% part "A"
+	\repeat volta 2 {
+		r4 f2 c4 | a'4 a a a | g8 f4 e8~ e2 | e1 |
+		c8. c16 a'4 c, a' | c,2 a' | c,1~ | c2. cis4 |
+		d4 f g8 bes4 c8~ | c2. bes4 | c,4 f g8 a4 bes8~ | bes1 | a4 d a d |
+		a8 d4 a8~ a4 g |
+	} \alternative {
+		{
+			f1~ | f1^\markup { \italic { To Trio } } |
+		}
+		{
+			f1~ | f2. r4^\markup { \italic { Fine } } |
+		}
+	}
+
+	% part "B"
+	f4^\markup { \italic { Trio } } e d c | c1 | f4 e d c | c1 |
+	d4 g d g | d4 g d g | c,1~ | c1 | f4 e d c | c1 |
+	f4 e d c | c1 | d4 g d g | d4 g d g | a1~ | a1^\markup { \italic { D.C. al Fine } } |
+}
+{% endif %}

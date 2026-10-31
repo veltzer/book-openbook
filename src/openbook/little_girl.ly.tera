@@ -1,0 +1,109 @@
+{#
+default_version = "Fake"
+
+[attributes]
+title = "Little Girl"
+style = "Jazz"
+composer = "Madeline Hyde, Francis Henry"
+poet = "Madeline Hyde, Francis Henry"
+piece = "Moderately"
+copyright = "1931, 1948 by MCA MUSIC PUBLISHING, A Division of MCA, Inc., New York, NY"
+copyrightextra = "Copyright Renewed"
+typesetter = "Mark Veltzer <mark.veltzer@gmail.com>"
+completion = "5"
+uuid = "bb5c69ce-d51e-11f1-8000-046874d194b7"
+structure = "ABAC"
+location = "jfb:222"
+
+[[youtube]]
+id = "4XATHYn_kLk"
+remark = "Joe Venuti with Harold Arlen on vocals in an original hit recording (1931)"
+
+[[youtube]]
+id = "Y3csmdqBs40"
+remark = "Nat King Cole Trio"
+
+[versions.Fake]
+doChords = true
+doVoice = true
+doLyrics = false
+doLyricsmore = false
+doLyricsmoremore = false
+doChordBars = false
+doGuitar = false
+doExtra = false
+doPrep = false
+doOwn = false
+#}
+{% if part == "Vars" %}
+{% endif %}
+{% if part == "Doc" %}	DONE:
+	- added the meta data from the fake book.
+	- put in the tunes structure.
+	- put in the chords (fake book).
+	- put in the tune (fake book).
+	- added youtube performances.
+	TODO:
+	- add the lyrics.
+	- check the chords (fake book).
+	- check the tune (fake book).
+	- hear the tune to check that it is right and adjust the tempo.
+{% endif %}
+{% if part == "ChordsFake" %}\chordmode {
+	\startChords
+	\startSong
+
+	\partial 2 s2 |
+
+	\myMark "A"
+	\startPart
+	ees1*2:6 | ees1:m6 | ees2:m6 e:dim7 | \myEndLine
+	bes1*3:maj7 | bes2:maj7 b:dim7 | \myEndLine
+	\endPart
+
+	\myMark "B"
+	\startPart
+	c1*2:m7 | f1*2:7 | \myEndLine
+	bes2.:maj7 c4:7 | c1:7 | c2.:m7 f4:7 | f2:7 bes:7.5+ | \myEndLine
+	\endPart
+
+	\myMark "A"
+	\startPart
+	ees1*2:6 | ees1:m6 | ees2:m6 e:dim7 | \myEndLine
+	bes1*3:maj7 | bes2:maj7 b:dim7 | \myEndLine
+	\endPart
+
+	\myMark "C"
+	\startPart
+	c1:m7 | d:7 | g2.:m g4:7 | g1:7 | \myEndLine
+	c1:7 | f:7 | bes1*2 | \myEndLine
+	\endPart
+
+	\endSong
+	\endChords
+}
+{% endif %}
+{% if part == "VoiceFake" %}{
+	\tempo "Moderato" 4 = 160
+	\time 2/2
+	\key bes \major
+
+	\partial 2 d'4 bes |
+
+	% part "A"
+	c1~ | c2 d4 bes | c d bes c~ | c2 bes4 g |
+	a1~ | a2 bes4 g | a bes g a~ | a2 g4 d |
+
+	% part "B"
+	f2 ees | g bes | d4 d d d~ | d2. a4 |
+	c c c c~ | c2. g4 | bes g bes a~ | a2 d4 bes |
+
+	% part "A"
+	c1~ | c2 d4 bes | c d bes c~ | c2 bes4 g |
+	a1~ | a2 bes4 g | a bes g a~ | a2 g4 d |
+
+	% part "C"
+	f2 ees | d'2 a | c4 r bes d~ | d2 fis,4 g |
+	c2 fis,4 g | d'2 d | bes1~ | bes4 r r2 |
+}
+{% endif %}

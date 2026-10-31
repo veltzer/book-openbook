@@ -1,0 +1,135 @@
+{#
+default_version = "Fake"
+
+[attributes]
+title = "Harlem Nocturne"
+style = "Jazz"
+composer = "Earle Hagen"
+poet = "Dick Rogers"
+piece = "Slowly"
+copyright = "1940, 1946, 1951 Shapiro, Bernstein & Co., Inc., New York"
+copyrightextra = "Renewed"
+typesetter = "Mark Veltzer <mark.veltzer@gmail.com>"
+completion = "5"
+uuid = "e875e106-d519-11f1-8000-046874d194b7"
+structure = "AABA"
+location = "jfb:144"
+
+[[youtube]]
+id = "x5kLhXOokFw"
+remark = "Ray Noble and his Orchestra (1940)"
+
+[[youtube]]
+id = "-TvKxBD0j-g"
+remark = "Illinois Jacquet"
+
+[versions.Fake]
+doChords = true
+doVoice = true
+doLyrics = false
+doLyricsmore = false
+doLyricsmoremore = false
+doChordBars = false
+doGuitar = false
+doExtra = false
+doPrep = false
+doOwn = false
+#}
+{% if part == "Vars" %}
+{% endif %}
+{% if part == "Doc" %}	DONE:
+	- added the meta data from the fake book.
+	- put in the tunes structure.
+	- put in the chords (fake book).
+	- put in the tune (fake book).
+	- added youtube performances.
+	TODO:
+	- add the lyrics.
+	- check the chords (fake book).
+	- check the tune (fake book).
+	- hear the tune to check that it is right and adjust the tempo.
+{% endif %}
+{% if part == "ChordsFake" %}\chordmode {
+	\startChords
+	\startSong
+
+	\partial 2.. s2.. |
+
+	\myMark "A"
+	\startPart
+	\repeat volta 2 {
+		g1*2:m6 | c1*3:m6 | \myEndLine
+		s4 ees2:7 d4:7.9- |
+	} \alternative {
+		{
+			g1:m6 | r1 | \myEndLineVoltaNotLast
+		}
+		{
+			g1*2:m6 | \myEndLineVoltaLast
+		}
+	}
+	\endPart
+
+	\myMark "B"
+	\startPart
+	\repeat volta 2 {
+		bes2:13 f:m7 | bes:13 f:m7 | bes:13 f:m7 | bes2:13 b4:13 bes:13 | \myEndLine
+		ees2:9 bes:m7 | ees:9 bes:m7 | ees4:9 des:9 b:9 a:9 |
+	} \alternative {
+		{
+			g4:9 c:9 f2:7 | \myEndLineVoltaNotLast
+		}
+		{
+			g4:9 f:9 ees:9 des:9 | g2:m9 d:7.5+ | g4:m6 r2. | \myEndLineVoltaLast
+		}
+	}
+	\endPart
+
+	\myMark "A"
+	\startPart
+	g1*2:m6 | c1*3:m6 | \myEndLine
+	s4 ees2:7 d4:7.9- | g2:m6 c:m6 | g:m6 g:m | s1 | g1:m6 | \myEndLine
+	\endPart
+
+	\endSong
+	\endChords
+}
+{% endif %}
+{% if part == "VoiceFake" %}{
+	\tempo "Andante" 4 = 80
+	\time 4/4
+	\key bes \major
+
+	\partial 2.. g8 d' g a4 bes8 fis~ |
+
+	% part "A"
+	\repeat volta 2 {
+		fis1~ | fis8 g d bes g4 bes8 d~ | d8 c~ c2.~ | c8 c g' c d4 ees8 b!~ | b1~ |
+		b8 c \tuplet 3/2 { bes g ees } des4 a'8 g~ |
+	} \alternative {
+		{
+			g1 | r8 g, d' g a4 bes8 fis\laissezVibrer |
+		}
+		{
+			g1~ | g4 r r r8 c |
+		}
+	}
+
+	% part "B"
+	\repeat volta 2 {
+		bes8 f g aes~ aes4. c8 | bes8 f g aes~ aes4. c8 | bes8 f g aes~ aes4 g8 f | d8 f~ f2 r8 f |
+		ees8 bes c des~ des4. f8 | ees8 bes c des~ des4. ees8 | g'8 bes, ees aes, des ges, b! e,! |
+	} \alternative {
+		{
+			a8 d, g c, f4. c'8 |
+		}
+		{
+			a8 d, g c, f bes, ees aes, | d1~ | d8 g, d' g a4 bes8 fis~ |
+		}
+	}
+
+	% part "A"
+	fis1~ | fis8 g d bes g4 bes8 d~ | d8 c~ c2.~ | c8 c g' c d4 ees8 b!~ | b1~ |
+	b8 c \tuplet 3/2 { bes g ees } des8 bes' a g~ | g1~ | g1~ | g4 r r2 | r1 |
+}
+{% endif %}

@@ -1,0 +1,99 @@
+{#
+default_version = "Fake"
+
+[attributes]
+title = "Merry-Go-Round"
+style = "Jazz"
+composer = "Charlie Parker"
+piece = "Up Tempo"
+copyright = "1948 ATLANTIC MUSIC CORP."
+copyrightextra = "Renewed and assigned 1976 ATLANTIC MUSIC CORP."
+typesetter = "Mark Veltzer <mark.veltzer@gmail.com>"
+completion = "5"
+uuid = "230b1439-d521-11f1-8000-046874d194b7"
+structure = "ABC"
+location = "jfb:247"
+
+[[youtube]]
+id = "bHgMelUCb08"
+remark = "Charlie Parker All Stars with Miles Davis in the original Savoy recording (1948)"
+
+[[youtube]]
+id = "jgsFidk0f4w"
+remark = "Charlie Parker, take 1 from the same session (1948)"
+
+[versions.Fake]
+doChords = true
+doVoice = true
+doLyrics = false
+doLyricsmore = false
+doLyricsmoremore = false
+doChordBars = false
+doGuitar = false
+doExtra = false
+doPrep = false
+doOwn = false
+#}
+{% if part == "Vars" %}
+{% endif %}
+{% if part == "Doc" %}	DONE:
+	- added the meta data from the fake book.
+	- put in the tunes structure.
+	- put in the chords (fake book).
+	- put in the tune (fake book).
+	- added youtube performances.
+	TODO:
+	- check the chords (fake book).
+	- check the tune (fake book).
+	- hear the tune to check that it is right and adjust the tempo.
+	- the triplet at the end of bar 18 has no accidentals in the book after the A flat earlier in the bar; typed as A flat (the flat carries through the bar), check.
+{% endif %}
+{% if part == "ChordsFake" %}\chordmode {
+	\startChords
+	\startSong
+
+	\repeat volta 2 {
+
+		\myMark "A"
+		\startPart
+		bes1 | bes2 f:7 | bes2 g:7 | c2:m7 f:7 | \myEndLine
+		f2:m7 bes:7 | ees1 | bes1 | f1:7 | \myEndLine
+		\endPart
+
+		\myMark "B"
+		\startPart
+		bes1 | c2:m7 f:7 | d2:m7 des:m7 | c2:m7 f:7 | \myEndLine
+		f2:m7 bes:7 | ees2 e:dim7 | bes1*2 | \myEndLine
+		\endPart
+
+		\myMark "C"
+		\startPart
+		f1:m7 | bes1:7 | ees1*2 | \myEndLine
+		c1*2:7 | c1:m7 | f1:7 | \myEndLine
+		\endPart
+	}
+
+	\endSong
+	\endChords
+}
+{% endif %}
+{% if part == "VoiceFake" %}{
+	\tempo "Allegro" 4 = 220
+	\time 4/4
+	\key bes \major
+
+	\repeat volta 2 {
+		% part "A"
+		r4 f8 g a bes c a | bes8 f d bes fis' g ees c | f8 ees d c b aes' g f | ees8 g, bes d c bes a16 c ees ges |
+		f8 ees d c bes a aes bes | g8 bes c d f ees d c | a8 bes c a bes d4. | r1 |
+
+		% part "B"
+		r2 f8 g bes des | d8 bes c2~ c8 cis, | \tuplet 3/2 { d8 f a } c8 bes b! aes e! des | bes'8 a g ges f ees d c |
+		bes8 a aes bes bes' aes g f | ees8 a, bes c des bes g a | c8 bes a bes d f r4 | r1 |
+
+		% part "C"
+		r4 f8 aes c ees d bes | c8 aes f g bes g \tuplet 3/2 { aes bes aes } | g8 f ees b! bes aes \tuplet 3/2 { g bes d } | f8 d \tuplet 3/2 { ees g bes } d8 c4. |
+		r2 r8 fis,8 \tuplet 3/2 { g bes d } | f8 d ees e! c cis d c! | bes8 a g f ees g, bes d | c8 bes a c ees ges ees c |
+	}
+}
+{% endif %}

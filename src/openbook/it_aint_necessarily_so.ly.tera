@@ -1,0 +1,179 @@
+{#
+default_version = "Fake"
+
+[attributes]
+title = "It Ain't Necessarily So"
+style = "Jazz"
+composer = "George Gershwin"
+poet = "Ira Gershwin"
+piece = "Slowly"
+copyright = "1935 by Gershwin Publishing Corporation"
+copyrightextra = "Copyright Renewed, Assigned to Chappell & Co., Inc."
+typesetter = "Mark Veltzer <mark.veltzer@gmail.com>"
+completion = "5"
+uuid = "ec7e68ff-d519-11f1-8000-046874d194b7"
+structure = "ABABC"
+location = "jfb:186"
+
+[[youtube]]
+id = "R_5sk0GD38o"
+remark = "Leo Reisman and his orchestra (1935)"
+
+[[youtube]]
+id = "V96bYcS5JzU"
+remark = "Miles Davis and Gil Evans from Porgy and Bess (1958)"
+
+[versions.Fake]
+doChords = true
+doVoice = true
+doLyrics = false
+doLyricsmore = false
+doLyricsmoremore = false
+doChordBars = false
+doGuitar = false
+doExtra = false
+doPrep = false
+doOwn = false
+#}
+{% if part == "Vars" %}
+{% endif %}
+{% if part == "Doc" %}	DONE:
+	- added the meta data from the fake book.
+	- put in the tunes structure.
+	- put in the chords (fake book).
+	- put in the tune (fake book).
+	- added youtube performances.
+	TODO:
+	- add the lyrics.
+	- check the chords (fake book).
+	- check the tune (fake book).
+	- hear the tune to check that it is right and adjust the tempo.
+	- the x note heads (spoken) in the fast sections are placed on b flat arbitrarily and the scoop/fall line above them is not notated.
+	- the rhythm of the second bar of the scat figure (des bes g) in the fast sections is hard to read in the scan.
+{% endif %}
+{% if part == "ChordsFake" %}\chordmode {
+	\startChords
+	\startSong
+
+	\partial 8 s8 |
+
+	\myMark "A"
+	\startPart
+	\repeat volta 2 {
+		g2:m c | g:m c | g:m c | g1:m | \myEndLine
+		c2:7 des:7 | c:7 des:7 | a:7 d:7 |
+	} \alternative {
+		{
+			g2:m c:7 | ees:7 d:11 | \myEndLineVoltaNotLast
+		}
+		{
+			g2:m g:m7 | \myEndLineVoltaLast
+		}
+	}
+	\endPart
+
+	\myMark "B"
+	\startPart
+	ees4:7 des | ges:m ees:7 | aes ees:7 | b:dim7 aes | \myEndLine
+	d4:7 e:m7 | f:m6 d:7 | g2*2:m | d2 | \myEndLine
+	\endPart
+
+	\myMark "A"
+	\startPart
+	\repeat volta 2 {
+		g2:m c | g:m c | g:m c | g1:m | \myEndLine
+		c2:7 des:7 | c:7 des:7 | a:7 d:7 |
+	} \alternative {
+		{
+			g2:m c:7 | ees:7 d:11 | \myEndLineVoltaNotLast
+		}
+		{
+			g2:m g:m7 | \myEndLineVoltaLast
+		}
+	}
+	\endPart
+
+	\myMark "B"
+	\startPart
+	ees4:7 des:7 | ges:m ees:7 | aes ees:7 | aes:dim7 aes | \myEndLine
+	d4:7 ees:m7 | f:m6 d:7 | g2*2:m | d2 | \myEndLine
+	\endPart
+
+	\myMark "C"
+	\startPart
+	g2:m c | g:m c | g:m c | g1:m | \myEndLine
+	c2:7 des:7 | c:7 des:7 | a:7 d:7 | g1:m | ees2:7 aes | \myEndLine
+	aes1:maj7 | a2:m7 d:7 | g:6 g:7 | c1:7 | f:maj7 | \myEndLine
+	a2:7sus4 a:7.5- | bes1 | g2:m c | g:m c | g:m c | \myEndLine
+	g1:m | c2:7 des:7 | c:7 des:7 | a:7 d:7 | g2:m c | ges:7 ees:7 | \myEndLine
+	c1:m6 | g2 d:7 | c b:7 | e:m c:m6 | \myEndLine
+	g2 d:9.5+ | g1*4 | \myEndLine
+	\endPart
+
+	\endSong
+	\endChords
+}
+{% endif %}
+{% if part == "VoiceFake" %}{
+	\tempo "Andante" 4 = 80
+	\time 4/4
+	\key g \minor
+
+	\partial 8 g'8 |
+
+	% part "A"
+	\repeat volta 2 {
+		\tuplet 3/2 { d'4 des g, } \tuplet 3/2 { c ces g } | bes2. r8 g | \tuplet 3/2 { d'4 des g, } \tuplet 3/2 { c ces g } | bes2. r8 g |
+		\tuplet 3/2 { d'4 des g, } \tuplet 3/2 { bes g bes } | \tuplet 3/2 { g bes g } \tuplet 3/2 { bes g bes } | \tuplet 3/2 { g bes g } \tuplet 3/2 { f d f } |
+	} \alternative {
+		{
+			g1~ | g4~ g8 r r4 r8 g |
+		}
+		{
+			g2. r4 |
+		}
+	}
+
+	% part "B"
+	\tempo "Allegro" 4 = 200
+	\time 2/4
+	\key g \minor
+	ges'8. ees16~ ees4 | ges8. ees16~ ees4 | ees8 ees ees16 f ees8 | ees8 ees ees16 f ees8 |
+	d16 d d d d8 d | d16 d d d d8 d | des16 bes8 g16~ g4 | des'16 bes8 g16~ g4 | \xNote bes4 r8 d,8 |
+
+	% part "A"
+	\tempo "Andante" 4 = 80
+	\time 4/4
+	\key g \minor
+	\repeat volta 2 {
+		\tuplet 3/2 { d'4 des g, } \tuplet 3/2 { c ces g } | bes2. r8 g | \tuplet 3/2 { d'4 des g, } \tuplet 3/2 { c ces g } | bes2. r8 g |
+		\tuplet 3/2 { d'4 des g, } \tuplet 3/2 { bes g bes } | \tuplet 3/2 { g bes g } \tuplet 3/2 { bes g bes } | \tuplet 3/2 { g bes g } \tuplet 3/2 { f d f } |
+	} \alternative {
+		{
+			g1~ | g4 r r r8 g |
+		}
+		{
+			g2. r4 |
+		}
+	}
+
+	% part "B"
+	\tempo "Allegro" 4 = 200
+	\time 2/4
+	\key g \minor
+	ges'8. ees16~ ees4 | ges8. ees16~ ees4 | ees8 ees ees16 f ees8 | ees8 ees ees16 f ees8 |
+	d16 d d d d8 d | d16 d d d d8 d | des16 bes8 g16~ g4 | des'16 bes8 g16~ g4 | \xNote bes4 r8 d,8 |
+
+	% part "C"
+	\tempo "Andante" 4 = 80
+	\time 4/4
+	\key g \minor
+	\tuplet 3/2 { d'4 des g, } \tuplet 3/2 { c b g } | bes2. r8 g | \tuplet 3/2 { d'4 des g, } \tuplet 3/2 { c b g } | bes2. r8 g |
+	\tuplet 3/2 { d'4 des g, } \tuplet 3/2 { bes g bes } | \tuplet 3/2 { g bes g } \tuplet 3/2 { bes g bes } | \tuplet 3/2 { g bes g } \tuplet 3/2 { f d f } | g2~ g8 r g'4 | \tuplet 3/2 { f4 ees des } \tuplet 3/2 { c bes aes } |
+	\tuplet 3/2 { g f g } \tuplet 3/2 { aes bes c } | d4. d8 d4. d8 | d2. d4 | \tuplet 3/2 { c bes a } \tuplet 3/2 { g f e } | \tuplet 3/2 { d c d } \tuplet 3/2 { e f g } |
+	a4. a8 a4. a8 | bes2. d,4 | \tuplet 3/2 { d'4 des g, } \tuplet 3/2 { c ces g } | bes2. r8 g | \tuplet 3/2 { d'4 des g, } \tuplet 3/2 { c ces g } |
+	bes2. r8 g | \tuplet 3/2 { d'4 des g, } \tuplet 3/2 { bes g bes } | \tuplet 3/2 { g bes g } \tuplet 3/2 { bes g bes } | \tuplet 3/2 { g bes g } \tuplet 3/2 { f d f } | g1~ | g2 r4 g |
+	\tuplet 3/2 { a bes c } \tuplet 3/2 { a bes c } | d2~ \tuplet 3/2 { d4 r d, } | \tuplet 3/2 { e fis g } \tuplet 3/2 { gis b a } | \tuplet 3/2 { g! a ais } \tuplet 3/2 { b d c } |
+	\tuplet 3/2 { b c d } \tuplet 3/2 { e e e } | e1~ | e~ | e~ | e4 r r2 |
+}
+{% endif %}

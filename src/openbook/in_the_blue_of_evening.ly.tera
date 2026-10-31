@@ -1,0 +1,131 @@
+{#
+default_version = "Fake"
+
+[attributes]
+title = "In The Blue Of Evening"
+style = "Jazz"
+composer = "D'Artega"
+poet = "Tom Adair"
+piece = "Slowly, with expression"
+copyright = "1942 by Associated Music Publishers, Inc."
+copyrightextra = "Sole Agents for the world - Shapiro, Bernstein & Co., Inc."
+typesetter = "Mark Veltzer <mark.veltzer@gmail.com>"
+completion = "5"
+uuid = "23449fc0-d51a-11f1-8000-046874d194b7"
+structure = "AABA"
+location = "jfb:182"
+
+[[youtube]]
+id = "m27MhMAihLA"
+remark = "Tommy Dorsey and his Orchestra with Frank Sinatra in the hit recording (1943)"
+
+[[youtube]]
+id = "zKKRtouH8-Q"
+remark = "Rossano Sportiello"
+
+[versions.Fake]
+doChords = true
+doVoice = true
+doLyrics = false
+doLyricsmore = false
+doLyricsmoremore = false
+doChordBars = false
+doGuitar = false
+doExtra = false
+doPrep = false
+doOwn = false
+#}
+{% if part == "Vars" %}
+{% endif %}
+{% if part == "Doc" %}	DONE:
+	- added the meta data from the fake book.
+	- put in the tunes structure.
+	- put in the chords (fake book).
+	- put in the tune (fake book).
+	- added youtube performances.
+	TODO:
+	- add the lyrics.
+	- check the chords (fake book).
+	- check the tune (fake book).
+	- hear the tune to check that it is right and adjust the tempo.
+	- the exact beat of the Gm7 and C7#5 chords in the bar of rest of the first ending is unclear in the book; check it.
+{% endif %}
+{% if part == "ChordsFake" %}\chordmode {
+	\startChords
+	\startSong
+
+	\repeat volta 2 {
+
+		\myMark "A"
+		\startPart
+		f1 | bes:m7 | f2/a aes:dim7 | g2:m7 g:m7.5- | \myEndLine
+		c1:7.9- | f2 aes:dim7 | g1:m7 | \myEndLine
+		c1:7.9- | f2./a aes4:dim7 | g4:m7 c:9 c2:7.5+ | \myEndLine
+		\endPart
+
+		\myMark "A"
+		\startPart
+		f1 | bes:m7 | f2/a aes:dim7 | g2:m7 g:m7.5- | \myEndLine
+		c1:7.9- | f2 aes:dim7 | g1:m7 | \myEndLine
+		c1:7.9- | f1 | ees2:m aes:7 | \myEndLine
+		\endPart
+
+		\myMark "B"
+		\startPart
+		des1 | ees2:m7.5- aes:7 | ees2:m7.5- aes:7 | des1 | \myEndLine
+		f1 | g2:m7.5- c:7 | g1:m7.5- | c:7 | \myEndLine
+		\endPart
+
+		\myMark "A"
+		\startPart
+		f1 | bes:m7 | f2/a aes:dim7 | g2:m7 g:m7.5- | \myEndLine
+		c1:7.9- | f2 aes:dim7 | g1:m7 | c2.:9 c4:7.9- |
+
+	} \alternative {
+		{
+			f1 | g2:m7 c:7.5+ | \myEndLineVoltaNotLast
+		}
+		{
+			f1*2 | \myEndLineVoltaLast
+		}
+	}
+	\endPart
+
+	\endSong
+	\endChords
+}
+{% endif %}
+{% if part == "VoiceFake" %}{
+	\tempo "Andante" 4 = 80
+	\time 2/2
+	\key f \major
+
+	\repeat volta 2 {
+
+		% part "A"
+		b!4 c c'4. a8 | aes4 aes2. | \tuplet 3/2 { g4 f e } g2 | \tuplet 3/2 { f4 e d } des4 bes'~ |
+		bes1 | \tuplet 3/2 { a4 g f } e4. f8 | d2. d4 |
+		a'2~ \tuplet 3/2 { a4 fis g } | c2. r4 | r1 |
+
+		% part "A"
+		b,!4 c c'4. a8 | aes4 aes2. | \tuplet 3/2 { g4 f e } g2 | \tuplet 3/2 { f4 e d } des4 bes'~ |
+		bes1 | \tuplet 3/2 { a4 g f } e4. f8 | d'2. d,4 |
+		a'2. e4 | g4 f2. | r1 |
+
+		% part "B"
+		f8. c16 des8. f16 bes4. aes8 | ges4. f8 ees4. aes8 | ges4. f8 ees4. des8 | aes'1 |
+		a!8. e16 f8 a d4. c8 | bes4. a8 g4. c8 | bes4. a8 g4. f8 | c'1 |
+
+		% part "A"
+		b,!4 c c'4. a8 | aes4 aes2. | \tuplet 3/2 { g4 f e } g2 | \tuplet 3/2 { f4 e d } des4 bes'~ |
+		bes1 | \tuplet 3/2 { a4 g f } e4. f8 | d'2. cis,8 d | a'2. e4 |
+	} \alternative {
+		{
+			g4 f2 r4 | r1 |
+		}
+		{
+			g4 f2.~ | f2. r4 |
+		}
+	}
+}
+{% endif %}

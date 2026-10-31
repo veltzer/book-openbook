@@ -1,0 +1,137 @@
+{#
+default_version = "Fake"
+
+[attributes]
+title = "The Joint Is Jumpin'"
+style = "Swing"
+composer = "Thomas 'Fats' Waller"
+poet = "Andy Razaf, J.C. Johnson"
+piece = "Tempo di-sturb de neighbors"
+copyright = "1938, Renewed 1965 RAZAF MUSIC CO., RECORD MUSIC PUBLISHING CO. and CHAPPELL & CO., INC."
+copyrightextra = "Pursuant to Sections 304(c) and 401(b) of the U.S. Copyright Law."
+typesetter = "Mark Veltzer <mark.veltzer@gmail.com>"
+completion = "5"
+uuid = "7fc7389a-d51d-11f1-8000-046874d194b7"
+structure = "ABCA"
+location = "jfb:202"
+
+[[youtube]]
+id = "xSWBXzQVmZc"
+remark = "Fats Waller and his Rhythm in the original recording (1937)"
+
+[[youtube]]
+id = "MT-6GVyuW30"
+remark = "Nell Carter from the cast recording of Ain't Misbehavin'"
+
+[versions.Fake]
+doChords = true
+doVoice = true
+doLyrics = false
+doLyricsmore = false
+doLyricsmoremore = false
+doChordBars = false
+doGuitar = false
+doExtra = false
+doPrep = false
+doOwn = false
+#}
+{% if part == "Vars" %}
+{% endif %}
+{% if part == "Doc" %}	DONE:
+	- added the meta data from the fake book.
+	- put in the tunes structure.
+	- put in the chords (fake book).
+	- put in the tune (fake book).
+	- added youtube performances.
+	TODO:
+	- check the chords (fake book).
+	- check the tune (fake book).
+	- hear the tune to check that it is right and adjust the tempo.
+	- the spoken words (bar 12 and the first ending) are typed as x note heads, as printed.
+	- next to last bar: the fourth note has no accidental in the book; typed as c sharp (the sharp earlier in the bar carries through), check it.
+	- add the lyrics.
+{% endif %}
+{% if part == "ChordsFake" %}\chordmode {
+	\startChords
+	\startSong
+
+	\myMark "A"
+	\startPart
+	\repeat volta 2 {
+		bes2 b:dim7 | c:m7 f:7 | bes b:dim7 | c:m7 f:7 | \myEndLine
+		bes bes:7/d | ees e:dim7 | bes/f f:7.5+ | bes1 | \myEndLine
+		\endPart
+
+		\myMark "B"
+		\startPart
+		d2 a:7/e | d/fis a:7/e | d a:7 | d c:7 | \myEndLine
+		f c:7/g | f/a fis:dim7 | c:7/g c:7 | f1:7 | \myEndLine
+		\endPart
+
+		\myMark "C"
+		\startPart
+		bes2:7 e:dim7 | f:m7 bes:7 | ees bes:7 | ees1 | \myEndLine
+		c1*2:7 | f2:9 c:7.5+ | f1:7 | \myEndLine
+		\endPart
+
+		\myMark "A"
+		\startPart
+		bes2 b:dim7 | c:m7 f:7 | bes b:dim7 | c:m7 f:7 | \myEndLine
+		bes bes:7/d | ees e:dim7 |
+	} \alternative {
+		{
+			bes/f f:7.5+ | bes f:7 | \myEndLineVoltaNotLast
+		}
+		{
+			bes ees4:7 f:7 | bes2 f:7.5+ | \myEndLineVoltaLast
+		}
+	}
+	\endPart
+
+	\myMark "End"
+	\startPart
+	bes2 b:dim7 | c:m7 f:9 | bes b:dim7 | c:m7 f:7 | \myEndLine
+	bes bes:7/aes | ees:m/g ees:m/ges | bes/f ees4:7 f:7 | bes2 f:7.5+ | \myEndLine
+	bes bes:7/aes | ees/g ees:m/ges | bes4/f bes:aug/fis g2:m7 | c4:7.9- f:7.5+ bes2:6 | \myEndLine
+	\endPart
+
+	\endSong
+	\endChords
+}
+{% endif %}
+{% if part == "VoiceFake" %}{
+	\tempo "Allegro" 4 = 180
+	\time 4/4
+	\key bes \major
+
+	% part "A"
+	\repeat volta 2 {
+		r4 f f8 f4 f8~ | f g4. r2 | r4 f aes8 aes4 g8~ | g f4. r2 |
+		bes8 bes4 bes8~ bes bes4 bes8~ | bes bes4 bes8~ bes bes4 c8~ | c bes4 des8~ des des4 c8~ | c bes4. r2 |
+
+		% part "B"
+		r4 a8 a a a4 a8~ | a b!4. r2 | r4 a8 a~ a4 a | a b! \xNote b r |
+		c8 c4 c8~ c4 a | c8 c4 c8~ c4 a | c a c a8 g~ | g f4. r2 |
+
+		% part "C"
+		r8 bes4 g8 bes4 g | bes g8 bes~ bes4 g | bes g bes g | f ees r2 |
+		r8 c'4 a8 c4 a | c a8 c~ c4 a | c a8 a c a4 g8~ | g f4. r2 |
+
+		% part "A"
+		r4 f f8 f4 f8~ | f g4. r2 | r4 f aes8 aes4 g8~ | g f4. r2 |
+		bes8 bes4 bes8~ bes4 bes8 bes | bes bes4 bes8~ bes bes4 c8~ |
+	} \alternative {
+		{
+			c4 bes des8 des4 c8~ | c bes4. \xNote { ees,8 ees4 ees8 } |
+		}
+		{
+			c'4 bes des8 des4 c8~ | c bes4. r2 |
+		}
+	}
+
+	% part "End"
+	r4 f f8 f4 f8~ | f g4. r2 | r4 f aes8 aes4 g8~ | g f4. r2 |
+	bes8 bes4 bes8~ bes4 bes8 bes | bes bes4 bes8~ bes bes4 c8~ | c4 bes des8 des4 c8~ | c bes4. r8 cis4 bes8 |
+	des4 des bes r | des4. bes8 r bes c cis | d cis d cis d f4. | des4. bes8 r bes4. |
+}
+{% endif %}

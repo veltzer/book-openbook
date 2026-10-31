@@ -1,0 +1,109 @@
+{#
+default_version = "Fake"
+
+[attributes]
+title = "Jersey Bounce"
+style = "Swing"
+composer = "Bobby Plater, Tiny Bradshaw, Edward Johnson"
+poet = "Robert R. Wright"
+piece = "Moderately"
+copyright = "1941 by Lewis Music Publishing Co., Inc."
+copyrightextra = "Copyright Renewed"
+typesetter = "Mark Veltzer <mark.veltzer@gmail.com>"
+completion = "5"
+uuid = "5d9c76ce-d51d-11f1-8000-046874d194b7"
+structure = "AABA"
+location = "jfb:198"
+
+[[youtube]]
+id = "oXHuW49_Ta4"
+remark = "Benny Goodman and his Orchestra in the hit recording (1942)"
+
+[[youtube]]
+id = "X45IrHMiB7o"
+remark = "Jimmy Dorsey and his Orchestra (1942)"
+
+[versions.Fake]
+doChords = true
+doVoice = true
+doLyrics = false
+doLyricsmore = false
+doLyricsmoremore = false
+doChordBars = false
+doGuitar = false
+doExtra = false
+doPrep = false
+doOwn = false
+#}
+{% if part == "Vars" %}
+{% endif %}
+{% if part == "Doc" %}	DONE:
+	- added the meta data from the fake book.
+	- put in the tunes structure.
+	- put in the chords (fake book).
+	- put in the tune (fake book).
+	- added youtube performances.
+	TODO:
+	- add the lyrics.
+	- check the chords (fake book).
+	- check the tune (fake book).
+	- hear the tune to check that it is right and adjust the tempo.
+{% endif %}
+{% if part == "ChordsFake" %}\chordmode {
+	\startChords
+	\startSong
+
+	\partial 8 s8 |
+
+	\myMark "A"
+	\startPart
+	c1 | c | d:9 | d:9 | \myEndLine
+	g:9 | g:9 | c2 ees:dim7 | d:m7 g:13 | \myEndLine
+	\endPart
+
+	\myMark "A"
+	\startPart
+	c1 | c | d:9 | d:9 | \myEndLine
+	g:9 | g:9 | c2 aes:9 | c1 | \myEndLine
+	\endPart
+
+	\myMark "B"
+	\startPart
+	c1:9 | c:9 | bes:9 | bes:9 | \myEndLine
+	aes:9 | aes:9 | g:7 | g:7.5+ | \myEndLine
+	\endPart
+
+	\myMark "A"
+	\startPart
+	c1 | c | d:9 | d:9 | \myEndLine
+	g:9 | g:9 | c2 aes:9 | c1 | \myEndLine
+	\endPart
+
+	\endSong
+	\endChords
+}
+{% endif %}
+{% if part == "VoiceFake" %}{
+	\tempo "Moderato" 2 = 100
+	\time 2/2
+	\key c \major
+
+	\partial 8 dis8 |
+
+	% part "A"
+	e8. g16 b8 r d4 c8 e,~ | e2. e8 f | fis8. a16 c8 r e4 d8 a~ | a2. a8 e |
+	f8. a16 b8 r e4 d8 a~ | a2. a8 dis, | e8. g16 b8 r d8. c16 a8. fis16 | f8. a16 c8 e~ e4. dis,8 |
+
+	% part "A"
+	e8. g16 b8 r d4 c8 e,~ | e2. e8 f | fis8. a16 c8 r e4 d8 a~ | a2. a8 e |
+	f8. a16 b8 r e4 d8 a~ | a2. a8 dis, | e8. g16 a8. c16 bes4 aes8 c~ | c1 |
+
+	% part "B"
+	a4. a8~ a2 | a8 g d' a~ a2 | g4. g8~ g2 | g8 f c' g~ g2 |
+	f4. f8~ f2 | f4 ees bes' aes8 g~ | g2 r8 g g g | dis8 g~ g2 r8 d |
+
+	% part "A"
+	e8. g16 b8 r d4 c8 e,~ | e2. e8 f | fis8. a16 c8 r e4 d8 a~ | a2. a8 e |
+	f8. a16 b8 r e4 d8 a~ | a2. a8 dis, | e8. g16 a8. c16 bes4 aes8 c~ | c2. r4 |
+}
+{% endif %}

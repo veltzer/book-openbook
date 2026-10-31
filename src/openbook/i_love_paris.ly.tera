@@ -1,0 +1,114 @@
+{#
+default_version = "Fake"
+
+[attributes]
+title = "I Love Paris"
+style = "Broadway"
+composer = "Cole Porter"
+poet = "Cole Porter"
+piece = "Moderately"
+copyright = "1953 by Cole Porter"
+copyrightextra = "Copyright renewed, assigned to Robert H. Montgomery, Trustee of the Cole Porter Musical and Literary Property Trusts. Chappell & Co., Inc., Publisher"
+typesetter = "Mark Veltzer <mark.veltzer@gmail.com>"
+completion = "5"
+uuid = "4b4542d6-d51a-11f1-8000-046874d194b7"
+structure = "AB"
+location = "jfb:159"
+
+[[youtube]]
+id = "3ahbE6bcVf8"
+remark = "Ella Fitzgerald from the Cole Porter Song Book (1956)"
+
+[[youtube]]
+id = "rDMqEd-48yA"
+remark = "Oscar Peterson"
+
+[versions.Fake]
+doChords = true
+doVoice = true
+doLyrics = false
+doLyricsmore = false
+doLyricsmoremore = false
+doChordBars = false
+doGuitar = false
+doExtra = false
+doPrep = false
+doOwn = false
+#}
+{% if part == "Vars" %}
+{% endif %}
+{% if part == "Doc" %}	DONE:
+	- added the meta data from the fake book.
+	- put in the tunes structure.
+	- put in the chords (fake book).
+	- put in the tune (fake book).
+	- added youtube performances.
+	TODO:
+	- add the lyrics.
+	- check the chords (fake book).
+	- check the tune (fake book).
+	- hear the tune to check that it is right and adjust the tempo.
+	- bar 27: the second eighth note f carries no accidental in the book; typed as f sharp (carried through the bar), check against a recording.
+{% endif %}
+{% if part == "ChordsFake" %}\chordmode {
+	\startChords
+	\startSong
+
+	\repeat volta 2 {
+
+		\myMark "A"
+		\startPart
+		c1*4:m | c1*2:m | d1:m7.5- | g:7 | \myEndLine
+		g1*4:7 | d1:m7.5- | g:7 | c1*2:m | \myEndLine
+		\endPart
+
+		\myMark "B"
+		\startPart
+		c2:6 d:m7 | c:6/e d:m7 | c:6 d:m7 | c:6/e d:m7 | \myEndLine
+		c2:6 d:m7 | e:m7 ees:dim7 | g1:7/d | d2:m7 g:7 | \myEndLine
+		f1 | fis:dim7 | c:/g | a:7 | \myEndLine
+		\endPart
+
+	} \alternative {
+		{
+			d1:m7 | g:7 | c | g:7 | \myEndLineVoltaNotLast
+		}
+		{
+			d2:m7 g:7 | e:m7 a:7 | d1:m7 | s1 | g:7 | c1*3 | \myEndLineVoltaLast
+		}
+	}
+
+	\endSong
+	\endChords
+}
+{% endif %}
+{% if part == "VoiceFake" %}{
+	\tempo "Moderato" 2 = 96
+	\time 2/2
+	\key ees \major
+
+	\repeat volta 2 {
+
+		% part "A"
+		c2 c | c4 ees d4. c8 | ees4 c2.~ | c4 r r2 |
+		c2 c | c4 ees d4. c8 | d1~ | d4 r r2 |
+		d2 d | d4 f ees4. d8 | f4 d r8 f4 ees8 | f4 d2 r4 |
+		d2 aes'2 | g4 f ees4. d8 | ees4 c r8 ees4 d8 | ees4 c2 r4 |
+
+		% part "B"
+		\key c \major
+		c'2 c | c4 e d4. c8 | e4 c2.~ | c4 r r2 |
+		c2 e | d4 c b4. a8 | g1~ | g4 r r2 |
+		a2 a | a4 c2 r4 | g4. fis8 g4. fis8 | g4 a g e |
+
+	} \alternative {
+		{
+			r4 d e f | e2. d4 | c1~ | c4 r r2 |
+		}
+		{
+			r4 d e f | g1~ | g4 f g a | d1~ |
+			d2. c4 | c1~ | c~ | c4 r r2 |
+		}
+	}
+}
+{% endif %}

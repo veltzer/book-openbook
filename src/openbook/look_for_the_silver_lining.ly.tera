@@ -1,0 +1,105 @@
+{#
+default_version = "Fake"
+
+[attributes]
+title = "Look For The Silver Lining"
+style = "Broadway"
+composer = "Jerome Kern"
+poet = "Buddy DeSylva"
+piece = "Smoothly"
+copyright = "1920 by T.B. Harms Company. Copyright Renewed."
+copyrightextra = "(c/o The Welk Music Group, Santa Monica, CA 90401)"
+typesetter = "Mark Veltzer <mark.veltzer@gmail.com>"
+completion = "5"
+uuid = "5abae2ae-d51d-11f1-8000-046874d194b7"
+structure = "ABAC"
+location = "jfb:225"
+
+[[youtube]]
+id = "UFITLxanHoU"
+remark = "Judy Garland in Till the Clouds Roll By (1946)"
+
+[[youtube]]
+id = "SpRvuVOCJac"
+remark = "Chet Baker"
+
+[versions.Fake]
+doChords = true
+doVoice = true
+doLyrics = false
+doLyricsmore = false
+doLyricsmoremore = false
+doChordBars = false
+doGuitar = false
+doExtra = false
+doPrep = false
+doOwn = false
+#}
+{% if part == "Vars" %}
+{% endif %}
+{% if part == "Doc" %}	DONE:
+	- added the meta data from the fake book.
+	- put in the tunes structure.
+	- put in the chords (fake book).
+	- put in the tune (fake book).
+	- added youtube performances.
+	TODO:
+	- check the chords (fake book).
+	- check the tune (fake book).
+	- hear the tune to check that it is right and adjust the tempo.
+	- add the lyrics.
+{% endif %}
+{% if part == "ChordsFake" %}\chordmode {
+	\startChords
+	\startSong
+
+	\myMark "A"
+	\startPart
+	c1:maj7 | d2:m7/g g:7.9- | c:6 a:m7 | d:m7 g:7 | \myEndLine
+	c1:maj9 | f | e:m7 | a:m7 | \myEndLine
+	\endPart
+
+	\myMark "B"
+	\startPart
+	d1:m7 | g2:7 g:7/f | e1*2:m7 | \myEndLine
+	a2:m a:m/g | fis1:m7.5- | e2:m7 ees:maj7 | d:m des:maj7 | \myEndLine
+	\endPart
+
+	\myMark "A"
+	\startPart
+	c1:maj9 | d2:m7/g g:7.9- | c1*2:6 | \myEndLine
+	g1:m7 | c:7.9- | f2:maj7 f:6 | f:maj7 e4:7.9- ees:9 | \myEndLine
+	\endPart
+
+	\myMark "C"
+	\startPart
+	d1:9 | d2:7.9- dis:dim7 | e:m7 bes:9 | a:7 a:7.5+ | \myEndLine
+	d:m7 d:m7.5- | g1:7.9- | c1*2:6 | \myEndLine
+	\endPart
+
+	\endSong
+	\endChords
+}
+{% endif %}
+{% if part == "VoiceFake" %}{
+	\tempo "Moderato" 4 = 120
+	\time 2/2
+	\key c \major
+
+	% part "A"
+	e2 e~ | e4 f d e | c2 c~ | c4 d e f |
+	g2 g | c4 b2 a4 | g1~ | g4 c, d e |
+
+	% part "B"
+	a2 a( | f4) a, b d | g2 g~ | g4 e g a |
+	c2 c~ | c b | g4. a8 g4. a8 | g4. a8 f4. g8 |
+
+	% part "A"
+	e2 e~ | e4 f d e | c2 c~ | c4 d e f |
+	g2 g | g4 f2 e4 | a1~ | a4 a gis a |
+
+	% part "C"
+	d2 b~ | b4 c a b | g2 g~ | g4 e b' a |
+	f2 f | f8 g e2 d4 | c1~ | c2. r4 |
+}
+{% endif %}

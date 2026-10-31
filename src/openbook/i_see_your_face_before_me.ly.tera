@@ -1,0 +1,125 @@
+{#
+default_version = "Fake"
+
+[attributes]
+title = "I See Your Face Before Me"
+style = "Jazz"
+composer = "Arthur Schwartz"
+poet = "Howard Dietz"
+piece = "Moderately Slow"
+copyright = "1937 by DeSylva, Brown & Henderson, Inc."
+copyrightextra = "Copyright Renewed, Assigned to Chappell & Co., Inc."
+typesetter = "Mark Veltzer <mark.veltzer@gmail.com>"
+completion = "5"
+uuid = "0c0349ba-d51a-11f1-8000-046874d194b7"
+structure = "ABAC"
+location = "jfb:162"
+
+[[youtube]]
+id = "GZ8jTYpMnxI"
+remark = "Frank Sinatra from In the Wee Small Hours (1955)"
+
+[[youtube]]
+id = "BYgZ31_V0kM"
+remark = "John Coltrane from Settin' the Pace (1958)"
+
+[versions.Fake]
+doChords = true
+doVoice = true
+doLyrics = false
+doLyricsmore = false
+doLyricsmoremore = false
+doChordBars = false
+doGuitar = false
+doExtra = false
+doPrep = false
+doOwn = false
+#}
+{% if part == "Vars" %}
+{% endif %}
+{% if part == "Doc" %}	DONE:
+	- added the meta data from the fake book.
+	- put in the tunes structure.
+	- put in the chords (fake book).
+	- put in the tune (fake book).
+	- added youtube performances.
+	TODO:
+	- add the lyrics.
+	- check the chords (fake book).
+	- check the tune (fake book).
+	- hear the tune to check that it is right and adjust the tempo.
+{% endif %}
+{% if part == "ChordsFake" %}\chordmode {
+	\startChords
+	\startSong
+
+	\repeat volta 2 {
+
+		\myMark "A"
+		\startPart
+		ees2:maj7 f:m7 | g:m7 f:m7 | ees:maj7 f:m7 | g:m7 c:7 | \myEndLine
+		f:m7 bes:7 | f:m7 bes:7 | f:m7 bes:sus4 | ees1 | \myEndLine
+		\endPart
+
+		\myMark "B"
+		\startPart
+		g1:m7 | c:7 | f2:m7 bes:7 | ees1 | \myEndLine
+		a2:m7.5- d:7 | g:m7 c:7 | f1:m7 | bes:7.5+ | \myEndLine
+		\endPart
+
+		\myMark "A"
+		\startPart
+		ees2:maj7 f:m7 | g:m7 f:m7 | ees f:m7 | g:m7 c:7 | \myEndLine
+		f:m7 bes:7 | f:m7 bes:7 | f:m7 bes:sus4 | ees1:7 | \myEndLine
+		\endPart
+
+		\myMark "C"
+		\startPart
+		aes2:6 aes:maj7 | ees:dim7 ees | bes:m7 ees:7 | aes:6 des:9 | \myEndLine
+		ees c:7.9- | f:m7 bes:7.9- | ees1 |
+	} \alternative {
+		{
+			f2:m7 bes:7 | \myEndLineVoltaNotLast
+		}
+		{
+			bes2:7 ees | \myEndLineVoltaLast
+		}
+	}
+	\endPart
+
+	\endSong
+	\endChords
+}
+{% endif %}
+{% if part == "VoiceFake" %}{
+	\tempo "Andante" 4 = 100
+	\time 2/2
+	\key ees \major
+
+	\repeat volta 2 {
+
+		% part "A"
+		g'4 g8 g g4. g8 | g4 g2. | g4 g8 g g4. aes8 | bes1 |
+		f4 f8 f f4. f8 | f4 f2. | f4 f8 f ees4. f8 | g1 |
+
+		% part "B"
+		bes4 bes8 bes bes4. bes8 | c4. bes8 bes2 | c4. bes8 bes4. bes8 | ees4. bes8 bes2 |
+		a4 a8 a a4. a8 | d4. g,8 g2 | c1 | fis,1 |
+
+		% part "A"
+		g4 g8 g g4. g8 | g4 g2. | g4 g8 g g4 aes | bes1 |
+		f4 f8 f f4. f8 | f4 f2. | f4 f8 f ees4. f8 | g1 |
+
+		% part "C"
+		aes4 aes8 bes c4. c8 | c4. bes8 bes2 | c4. bes8 bes2 | ees4. aes,8 aes2 |
+		g4 g8 g g4. aes8 | f4 f8 f f4. g8\fermata | ees2 ees |
+	} \alternative {
+		{
+			r1 |
+		}
+		{
+			r1 |
+		}
+	}
+}
+{% endif %}

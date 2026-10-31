@@ -1,0 +1,125 @@
+{#
+default_version = "Fake"
+
+[attributes]
+title = "Mad About The Boy"
+style = "Jazz"
+composer = "Noel Coward"
+poet = "Noel Coward"
+piece = "Moderately"
+copyright = "1932 by Chappell & Co., Ltd., London. Copyright Renewed"
+copyrightextra = "Published in the U.S.A. by Chappell & Co., Inc."
+typesetter = "Mark Veltzer <mark.veltzer@gmail.com>"
+completion = "5"
+uuid = "4aeecb60-d51d-11f1-8000-046874d194b7"
+structure = "AABA"
+location = "jfb:237"
+
+[[youtube]]
+id = "rhqk0uoOEds"
+remark = "Noel Coward singing his own song"
+
+[[youtube]]
+id = "4EsganGQEyc"
+remark = "Dinah Washington"
+
+[versions.Fake]
+doChords = true
+doVoice = true
+doLyrics = false
+doLyricsmore = false
+doLyricsmoremore = false
+doChordBars = false
+doGuitar = false
+doExtra = false
+doPrep = false
+doOwn = false
+#}
+{% if part == "Vars" %}
+{% endif %}
+{% if part == "Doc" %}	DONE:
+	- added the meta data from the fake book.
+	- put in the tunes structure.
+	- put in the chords (fake book).
+	- put in the tune (fake book).
+	- added youtube performances.
+	TODO:
+	- add the lyrics.
+	- check the chords (fake book).
+	- check the tune (fake book).
+	- hear the tune to check that it is right and adjust the tempo.
+	- bar 6: the book prints a sharp only on the first f; the second f is typed as f sharp too (carry through the bar, fits the Ab7 = Gb).
+{% endif %}
+{% if part == "ChordsFake" %}\chordmode {
+	\startChords
+	\startSong
+
+	\repeat volta 2 {
+
+		\myMark "A"
+		\startPart
+		d1:m7.5- | g:7.9- | d:m7.5- | g:7.9- | \myEndLine
+		c2:m c:m/bes | aes:7 g:7.5+ | c1 | f2:m c | \myEndLine
+		\endPart
+
+		\myMark "A"
+		\startPart
+		d1:m7.5- | g:7 | d:m7.5- | g:7 | \myEndLine
+		c:m | d:7 | g:7 | s1 | \myEndLine
+		\endPart
+
+		\myMark "B"
+		\startPart
+		c2:m d:7 | g1:m | g2:m7.5- c:7 | f:m f:m/ees | \myEndLine
+		d:m7.5- g:7 | c:m6 a:m7.5- | d1:7.9- | d2:m7 g:7 | \myEndLine
+		\endPart
+
+		\myMark "A"
+		\startPart
+		d1:m7.5- | g:7.9- | d:m7.5- | g:7.9- | \myEndLine
+		c2:m c4:m/bes a:m7.5- | aes:7 d:7.9- g:7.5+ g:7.9- | \myEndLine
+	} \alternative {
+		{
+			c1:m6 | d2:m7 g:7 | \myEndLineVoltaNotLast
+		}
+		{
+			c2:m6 d4:m7.5- des:maj7 | c1:6.9 | \myEndLineVoltaLast
+		}
+	}
+	\endPart
+
+	\endSong
+	\endChords
+}
+{% endif %}
+{% if part == "VoiceFake" %}{
+	\tempo "Moderato" 4 = 108
+	\time 4/4
+	\key ees \major
+
+	\repeat volta 2 {
+		% part "A"
+		f8. d16 d8. d16 d2~ | d8. ees16 f8. ees16 g8. f16 ees8. d16 | f8. d16 d8. d16 d2~ | d4 f ees d |
+		c8. d16 ees8. f16 g8. a!16 b!8. c16 | fis,4 fis g ees | d8 c c c c2 | r1 |
+
+		% part "A"
+		f8 d d d d2~ | d8 ees f ees g f ees d | f d d d d2~ | d4 f ees d |
+		c8 d ees f g a! b! c | d4 d d d | b!8 g g g g2 | r1 |
+
+		% part "B"
+		ees'2 d8 c bes a! | d4 d2. | des2 c8 bes aes g | aes2. r4 |
+		aes2 g8 f ees d | f ees d ees fis g d' c | ees,2 ees | g1 |
+
+		% part "A"
+		f8 d d d d2~ | d8 ees f ees g f ees d | f d d d d2~ | d4 f ees d |
+		c8 d ees f g a! b! c | ees4 ees ees d |
+	} \alternative {
+		{
+			d8 c c c c2~ | c2 r2 |
+		}
+		{
+			d8 c c c c2~ | c2. r4 |
+		}
+	}
+}
+{% endif %}

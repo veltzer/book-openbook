@@ -1,0 +1,127 @@
+{#
+default_version = "Fake"
+
+[attributes]
+title = "On A Little Street In Singapore"
+style = "Swing"
+composer = "Peter DeRose"
+poet = "Billy Hill"
+piece = "Slowly"
+copyright = "1938 by Shapiro, Bernstein & Co., Inc. Copyright Renewed"
+typesetter = "Mark Veltzer <mark.veltzer@gmail.com>"
+completion = "5"
+uuid = "361f3c7e-d521-11f1-8000-046874d194b7"
+structure = "AABA"
+location = "jfb:284"
+
+[[youtube]]
+id = "UFcjPnnIK1s"
+remark = "Glenn Miller and his Orchestra with Ray Eberle (1939)"
+
+[[youtube]]
+id = "BMBj1QCXZc4"
+remark = "Harry James and his Orchestra with Frank Sinatra (1939)"
+
+[versions.Fake]
+doChords = true
+doVoice = true
+doLyrics = false
+doLyricsmore = false
+doLyricsmoremore = false
+doChordBars = false
+doGuitar = false
+doExtra = false
+doPrep = false
+doOwn = false
+#}
+{% if part == "Vars" %}
+{% endif %}
+{% if part == "Doc" %}	DONE:
+	- added the meta data from the fake book.
+	- put in the tunes structure.
+	- put in the chords (fake book).
+	- put in the tune (fake book).
+	- added youtube performances.
+	TODO:
+	- check the chords (fake book).
+	- check the tune (fake book).
+	- hear the tune to check that it is right and adjust the tempo.
+	- bar 22: the Fm is printed between beats 3 and 4 and the Dm7 slightly before bar 23 in the fake book; typed on beat 3 and on bar 23.
+	- the fake book prints no chord in bar 20; it is left empty.
+	- add the lyrics.
+{% endif %}
+{% if part == "ChordsFake" %}\chordmode {
+	\startChords
+	\startSong
+
+	\repeat volta 2 {
+
+		\myMark "A"
+		\startPart
+		c2 bes | c g:7.5+ | c bes | c bes | \myEndLine
+		g2 f | g c:7.5- | g f | g f | \myEndLine
+		\endPart
+
+		\myMark "A"
+		\startPart
+		c2 bes | c g:7.5+ | c bes | c bes | \myEndLine
+		g2 f | g c:7.5- | c bes | c bes | \myEndLine
+		\endPart
+
+		\myMark "B"
+		\startPart
+		f1 | g2:m/c f | des1 | s1 | \myEndLine
+		f1 | s2 f:m | d1:m7 | g1:7 | \myEndLine
+		\endPart
+
+		\myMark "A"
+		\startPart
+		c2 bes | c g:7.5+ | c bes | c bes | \myEndLine
+		g2 f | g c:7.5- |
+
+	} \alternative {
+		{
+			c2:6 a:m7 | c2:6 d4:m7 g:7 | \myEndLineVoltaNotLast
+		}
+		{
+			c1 | bes2 e | c1 | \myEndLineVoltaLast
+		}
+	}
+	\endPart
+
+	\endSong
+	\endChords
+}
+{% endif %}
+{% if part == "VoiceFake" %}{
+	\tempo "Andante" 2 = 56
+	\time 2/2
+	\key c \major
+
+	\repeat volta 2 {
+
+		% part "A"
+		c'1~ | c8 b g bes a f aes g | g1~ | g2. g4 |
+		g1~ | g8 fis d f e c ees d | d1~ | d2. g4 |
+
+		% part "A"
+		c1~ | c8 b g bes a f aes g | g1~ | g2. g4 |
+		g1~ | g8 fis d f e c ees d | c1~ | c2. c4 |
+
+		% part "B"
+		c'4. a8 a4 g | g4. f8 \tuplet 3/2 { f4 g f } | aes4. f8 des2~ | des2. c4 |
+		c'4. a8 a4 g | g4. f8 f4 e | g1~ | g8 g fis g gis a bes b |
+
+		% part "A"
+		c1~ | c8 b g bes a f aes g | g1~ | g2. r4 |
+		g1~ | g8 fis d f e c ees d |
+	} \alternative {
+		{
+			c1~ | c4 r r2 |
+		}
+		{
+			c1~ | c1~ | c1 |
+		}
+	}
+}
+{% endif %}

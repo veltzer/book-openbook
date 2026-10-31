@@ -1,0 +1,131 @@
+{#
+default_version = "Fake"
+
+[attributes]
+title = "King Porter Stomp"
+style = "Dixieland"
+composer = "Ferdinand 'Jelly Roll' Morton"
+poet = "Sid Robin, Sonny Burke"
+piece = "Medium Ragtime"
+copyright = "1924, 1956, 1987 EDWIN H. MORRIS & COMPANY, A Division of MPL Communications, Inc."
+copyrightextra = "Renewed 1952, 1984 EDWIN H. MORRIS & COMPANY, A Division of MPL Communications, Inc. International Copyright Secured. All Rights Reserved"
+typesetter = "Mark Veltzer <mark.veltzer@gmail.com>"
+completion = "5"
+uuid = "77ab89ae-d51d-11f1-8000-046874d194b7"
+structure = "ABCC"
+location = "jfb:208"
+
+[[youtube]]
+id = "VSCEV5c2A_M"
+remark = "Jelly Roll Morton, the composer, in his original piano solo recording (1923)"
+
+[[youtube]]
+id = "G0ashbq9kZA"
+remark = "Benny Goodman and his Orchestra in the famous Fletcher Henderson arrangement (1935)"
+
+[versions.Fake]
+doChords = true
+doVoice = true
+doLyrics = false
+doLyricsmore = false
+doLyricsmoremore = false
+doChordBars = false
+doGuitar = false
+doExtra = false
+doPrep = false
+doOwn = false
+#}
+{% if part == "Vars" %}
+{% endif %}
+{% if part == "Doc" %}	DONE:
+	- added the meta data from the fake book.
+	- put in the tunes structure.
+	- put in the chords (fake book).
+	- put in the tune (fake book).
+	- added youtube performances.
+	TODO:
+	- add the lyrics (the fake book credits a lyric but prints none).
+	- check the chords (fake book).
+	- check the tune (fake book).
+	- hear the tune to check that it is right and adjust the tempo.
+	- bars 49, 51, 53, 57, 59, 61 and 63: the book writes f flat and then an f with no accidental in the same bar; the second one is typed as f natural, as the D flat harmony implies.
+	- bar 40: the chromatic run before the c is typed as grace notes (it does not fit the bar otherwise).
+{% endif %}
+{% if part == "ChordsFake" %}\chordmode {
+	\startChords
+	\startSong
+
+	\myMark "A"
+	\startPart
+	des2 des:7 | ges ges:m | des des:7 | ges ges:m | \myEndLine
+	des2 des:7 | ges ges:m | des bes:7 | ees1:7 | \myEndLine
+	s2 aes4:7 des | ges2 g:dim | des des:7 | ges g:dim | \myEndLine
+	des2 des:7 | ges2. g4:dim | des2 bes:7 | ees2:7 a4:7 aes:7 | \myEndLine
+	\endPart
+
+	\myMark "B"
+	\startPart
+	des1 | ges2 g:dim | des1 | ges2 g:dim7 | \myEndLine
+	des2/aes des | ges g:dim7 | des/aes bes:m | ees1:7 | \myEndLine
+	s2 aes4:7 des:7 | ges2 g:dim7 | des/aes des | ges g:dim7 | \myEndLine
+	des1/aes | ges2 g:dim7 | des/aes bes:m | ees2:7 a4:7 aes:7 | \myEndLine
+	\endPart
+
+	\myMark "C"
+	\startPart
+	des1 | ges2 g:dim7 | des1:7 | ges2 g:dim7 | \myEndLine
+	des1:7 | ges2 g:dim | des:6 bes:9 | ees1:7 | \myEndLine
+	s2 aes4:7 des | ges2 ees:7 | des:7/aes des:7 | ges ees:7 | \myEndLine
+	des:7/aes des:7 | ges g:dim7 | des4/aes a:dim7 bes2:m7 | ees:7 aes:7 | \myEndLine
+	\endPart
+
+	\myMark "C"
+	\startPart
+	des2 des:7/f | ges g:dim7 | des:7 des:7/f | ges g:dim7 | \myEndLine
+	des2 des:7/f | ges g:dim7 | des4/aes a:dim7 bes2:m7 | ees1:7 | \myEndLine
+	s2 aes4:9 des | ges2 g:dim7 | des/aes des:7 | ges g:dim7 | \myEndLine
+	des/aes des:7 | ges g:dim7 | des4/aes a:dim7 bes:m7 des:/aes | g2:dim7 ges:7 | \myEndLine
+	\endPart
+
+	\myMark "End"
+	\startPart
+	des4 bes:m a:dim7 des:/aes | ees:7/g ges:6 des:/f aes:7/ees | des1:9 | \myEndLine
+	\endPart
+
+	\endSong
+	\endChords
+}
+{% endif %}
+{% if part == "VoiceFake" %}{
+	\tempo "Moderato" 4 = 120
+	\time 4/4
+	\key des \major
+
+	% part "A"
+	c'4 bes8 aes r aes4 aes8~ | aes8 aes4 ges8 aes8. aes16 ges4 | e!8. e16 f8 des r aes'4 aes8~ | aes8 aes4 ges8 aes4 ges |
+	e!8 f4 des8 r aes'4 aes8 | aes8 aes4 ges8 aes8. aes16 ges4 | e!8. e16 f8 bes~ bes2 | r8. bes16 c8. bes16 c8. ees16 c8. bes16 |
+	ees8. bes16 c8 bes r aes4 aes8~ | aes8 aes4 ges8 aes8. aes16 ges4 | e!8. e16 f8 des r aes'4 aes8~ | aes8 aes4 ges8 aes8. aes16 ges4 |
+	e!8. e16 f8 des r aes'4 aes8~ | aes8. aes16 ges4 aes ges | e!8 f4 bes8~ bes2 | r8. e,16 f8. ees16 \tuplet 3/2 { des8 ees des } ees8 des~ |
+
+	% part "B"
+	des4 des'8 des r des4. | des4 r des r | des4 r8 des r des4 r8 | des4 r des r8 des |
+	r8 des4. des4 r8 des | r8 des4. des4 r | des4 r8 des r des4. | r8. bes16 c8. bes16 c8. ees16 c8. bes16 |
+	ees8. bes16 c8 bes r ees4 bes8 | des4 des des des | des4 des8 des r des4 bes8 | des4 des des des |
+	des4 des8 des r des4 bes8 | des4 des des des | des4 des8 des r des4 r8 | r8. e,16 f8. ees16 \tuplet 3/2 { des8 ees des } ees8 des~ |
+
+	% part "C"
+	des4 ges'8 ges r ges4. | ges4 r ees r | ees8 aes4 ees8 aes4 aes | ges4 r ees r |
+	ees8 aes4 ees8 aes4 aes | ges4 r ees r | f4 r8 c8~ c8. bes16 c4 | r4 \grace { g!32 aes a! bes b! } c4 ees r8. c16 |
+	ees8. bes16 c8 bes r ges'4 ees8 | ges4 ges ees ees | ees8 aes4 ees8 aes4 aes | ges4 ges ees ees |
+	ees8 aes4 ees8 aes4 aes | ges4 ges8 ees~ ees8. ees16 ees4 | e!8. f16 e8. f16 des4 bes | des8 des4. c8. ees,16 ges8 f |
+
+	% part "C"
+	r4 fes'8 f!~ f8. des16 ees4 | bes2 r | r4 fes'8 f!~ f8. des16 ees4 | des2 r |
+	r4 fes8 f!~ f8. f16 ees4 | des4 fes8. des16 ees8. des16 bes4 | e!8 f!4 bes,8~ bes4 r | r4 c8. bes16 c8. ees16 c8 ees~ |
+	ees8. ees16 c4 bes8 fes'4 f!8~ | f2 des8. ees16 des8 des~ | des2 r8 fes4 f!8~ | f8 fes4. des8. ees16 des8. ees16 |
+	des2 r8 fes4 f!8~ | f2 des8. ees16 des4 | fes8. des16 ees8 des~ des4 f!8. des16 | ees4 des fes8. des16 ees4 |
+
+	% part "End"
+	des4 fes8. des16 ees4 des | fes8. des16 ees4 des aes8 bes | des,1 |
+}
+{% endif %}

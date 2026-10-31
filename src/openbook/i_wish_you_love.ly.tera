@@ -1,0 +1,130 @@
+{#
+default_version = "Fake"
+
+[attributes]
+title = "I Wish You Love"
+style = "Jazz"
+composer = "Charles Trenet"
+poet = "Albert A. Beach, Charles Trenet"
+piece = "Moderately"
+copyright = "1946, 1955, 1956 by Editions Salabert, France. Copyright Renewed."
+copyrightextra = "Sole Selling Agent LEEDS MUSIC CORPORATION (MCA), New York, NY for the U.S.A. and Canada"
+typesetter = "Mark Veltzer <mark.veltzer@gmail.com>"
+completion = "5"
+uuid = "0c06d8e6-d51a-11f1-8000-046874d194b7"
+structure = "AABA"
+location = "jfb:164"
+
+[[youtube]]
+id = "Btk5ERwGpSk"
+remark = "Charles Trenet in the original French version (Que reste-t-il de nos amours)"
+
+[[youtube]]
+id = "YYn4KqaeAac"
+remark = "Nancy Wilson (1964)"
+
+[versions.Fake]
+doChords = true
+doVoice = true
+doLyrics = false
+doLyricsmore = false
+doLyricsmoremore = false
+doChordBars = false
+doGuitar = false
+doExtra = false
+doPrep = false
+doOwn = false
+#}
+{% if part == "Vars" %}
+{% endif %}
+{% if part == "Doc" %}	DONE:
+	- added the meta data from the fake book.
+	- put in the tunes structure.
+	- put in the chords (fake book).
+	- put in the tune (fake book).
+	- added youtube performances.
+	TODO:
+	- add the lyrics.
+	- check the chords (fake book).
+	- check the tune (fake book).
+	- hear the tune to check that it is right and adjust the tempo.
+	- bar 18: the fake book writes a b natural under Abm6 (enharmonic c flat), check.
+{% endif %}
+{% if part == "ChordsFake" %}\chordmode {
+	\startChords
+	\startSong
+
+	\partial 2 s2 |
+
+	\repeat volta 2 {
+
+		\myMark "A"
+		\startPart
+		f1:m7 | bes:9 | ees2:maj7 f:m7 | g:m7 ges:dim7 | \myEndLine
+		f1:m7 | bes:7 | ees2:6 f:m7 | g:m7.5- c:7.9- | \myEndLine
+		\endPart
+
+		\myMark "A"
+		\startPart
+		f1:m7 | bes:9 | ees2:maj7 f:m7 | g:m7 ges:dim7 | \myEndLine
+		f1:m7 | bes:7 | ees1*2:7 | \myEndLine
+		\endPart
+
+		\myMark "B"
+		\startPart
+		aes2 aes:aug | aes:m6 aes:m7 | g1:m7 | c:7.9- | \myEndLine
+		f1:m7 | f:9 | bes:7 | g2:m7.5- c:7.9- | \myEndLine
+		\endPart
+
+		\myMark "A"
+		\startPart
+		f1:m7 | bes:9 | ees2:maj7 f:m7 | g:m7 ges:dim7 | \myEndLine
+		f1:m7 |
+	} \alternative {
+		{
+			bes2:7 bes:7.9- | ees f:m7 | g:m7.5- c:7.9- | \myEndLineVoltaNotLast
+		}
+		{
+			bes2:7 e:7 | ees:6 aes:9 | ees1:6.9 | \myEndLineVoltaLast
+		}
+	}
+	\endPart
+
+	\endSong
+	\endChords
+}
+{% endif %}
+{% if part == "VoiceFake" %}{
+	\tempo "Moderato" 4 = 100
+	\time 4/4
+	\key ees \major
+
+	\partial 2 \tuplet 3/2 { g'4 aes bes } |
+
+	\repeat volta 2 {
+
+		% part "A"
+		g4 f~ \tuplet 3/2 { f g f } | g2 \tuplet 3/2 { f4 f bes } | f2 \tuplet 3/2 { ees4 f ees } | f2 \tuplet 3/2 { ees4 ees aes } |
+		ees2 \tuplet 3/2 { c4 ees c } | d2 \tuplet 3/2 { g4 f ees } | c1~ | c4 r \tuplet 3/2 { g'4 aes bes } |
+
+		% part "A"
+		g2 \tuplet 3/2 { f4 g f } | g2 \tuplet 3/2 { f4 f bes } | f2 \tuplet 3/2 { ees4 f ees } | f2 \tuplet 3/2 { ees4 ees aes } |
+		ees2 \tuplet 3/2 { c4 ees c } | d2 \tuplet 3/2 { g4 f g } | f1~ | f4 r \tuplet 3/2 { ees4 f aes } |
+
+		% part "B"
+		c2 \tuplet 3/2 { c4 c c } | b!2 \tuplet 3/2 { ees,4 f g } | bes2 \tuplet 3/2 { bes4 bes bes } | bes2 \tuplet 3/2 { c,4 des c } |
+		aes'2 \tuplet 3/2 { aes4 aes aes } | g2 \tuplet 3/2 { c4 c ces } | bes1~ | bes4 r \tuplet 3/2 { g4 aes bes } |
+
+		% part "A"
+		g4 f~ \tuplet 3/2 { f g f } | g2 \tuplet 3/2 { f4 f bes } | f2 \tuplet 3/2 { ees4 f ees } | f2 \tuplet 3/2 { ees4 ees aes } |
+		ees2 \tuplet 3/2 { c4 ees c } |
+	} \alternative {
+		{
+			d2 \tuplet 3/2 { g4 g g } | ees1 | r2 \tuplet 3/2 { g4 aes bes } |
+		}
+		{
+			c2 \tuplet 3/2 { d,4 d d } | ees1~ | ees2. r4 |
+		}
+	}
+}
+{% endif %}

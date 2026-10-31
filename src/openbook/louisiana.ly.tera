@@ -1,0 +1,132 @@
+{#
+default_version = "Fake"
+
+[attributes]
+title = "Louisiana"
+style = "Pop"
+composer = "Fernando Arbex"
+poet = "Fernando Arbex"
+piece = "Moderately"
+copyright = "1971, 1972 by Arbex Music Corp."
+copyrightextra = "Sole Selling Agent MCA MUSIC PUBLISHING, A Division of MCA Inc. for the U.S.A. and Canada"
+typesetter = "Mark Veltzer <mark.veltzer@gmail.com>"
+completion = "5"
+uuid = "6c849c0a-d51d-11f1-8000-046874d194b7"
+structure = "Verse-Chorus"
+location = "jfb:228"
+
+[[youtube]]
+id = "uQG32I9yLwc"
+remark = "Mike Kennedy in the original hit recording (1972)"
+
+[[youtube]]
+id = "czWn97N8odE"
+remark = "Mike Kennedy, the 45 RPM single (1972)"
+
+[versions.Fake]
+doChords = true
+doVoice = true
+doLyrics = false
+doLyricsmore = false
+doLyricsmoremore = false
+doChordBars = false
+doGuitar = false
+doExtra = false
+doPrep = false
+doOwn = false
+#}
+{% if part == "Vars" %}
+{% endif %}
+{% if part == "Doc" %}	DONE:
+	- added the meta data from the fake book.
+	- put in the tunes structure.
+	- put in the chords (fake book).
+	- put in the tune (fake book).
+	- added youtube performances.
+	TODO:
+	- add the lyrics.
+	- check the chords (fake book).
+	- check the tune (fake book).
+	- hear the tune to check that it is right and adjust the tempo.
+	- the fake book has four verses: the inner repeat (endings 1,3 and 2,4) is for the verses and the outer repeat (ending 1 'To 3rd Verse') goes back for verses 3 and 4. check that this is clear.
+	- bar 3: the fourth verse has an extra pickup a quarter note (a) on beat 4 which is not typed in.
+	- the answer phrases in the chorus are written in the fake book as a second voice; they are merged into the melody here (the two voice version is in a comment).
+{% endif %}
+{% if part == "ChordsFake" %}\chordmode {
+	\startChords
+	\startSong
+
+	\myMark "A"
+	\startPart
+	\repeat volta 2 {
+		\repeat volta 2 {
+			f1 | c | d:m | \myEndLine
+			a:m | bes |
+		} \alternative {
+			\volta 1,3 {
+				c2:7 c:7sus4 | \myEndLineVoltaNotLast
+			}
+			\volta 2,4 {
+				c1:7 | \myEndLineVoltaLast
+			}
+		}
+		f1 | c:7 | \myEndLine
+		c1:7 | f | f | c:7 | c:7 | \myEndLine
+		\endPart
+
+		\myMark "B"
+		\startPart
+		f1 | f | g:m7/c | g:m7/c | \myEndLine
+		f1:6 | f:6 | g:m7/c | g:m7/c | \myEndLine
+		f1 | f | g:m7/c | g:m7/c | \myEndLine
+	} \alternative {
+		{
+			f1 | f | \myEndLineVoltaNotLast
+		}
+		{
+			f1 | f | \myEndLineVoltaLast
+		}
+	}
+	\endPart
+
+	\endSong
+	\endChords
+}
+{% endif %}
+{% if part == "VoiceFake" %}{
+	\tempo "Moderato" 4 = 120
+	\time 4/4
+	\key f \major
+
+	% part "A"
+	\repeat volta 2 {
+		\repeat volta 2 {
+			a'2 a | g8 g g g~ g2 | f8 f f f~ f2 |
+			e8 e e e~ e c4 bes8~ | bes8 f'~ f2 d4 |
+		} \alternative {
+			\volta 1,3 {
+				c4. e8 f4 g8 f |
+			}
+			\volta 2,4 {
+				c2 \tuplet 3/2 { a'4 a a } |
+			}
+		}
+		\tuplet 3/2 { a8 g f~ } f2 g8 a | bes4 bes8 g~ g e4 c8~ |
+		c4. c8 \tuplet 3/2 { a'4 a a } | a4 f2. | r2 r4 g8 a | bes4 bes8 g~ g e4 c8~ | c4. c8 a'8 a4 a8~ |
+
+		% part "B"
+		a8 a \tuplet 3/2 { a g f~ } f2 | r2 r4 r8 f | g2. r8 f | g8 f g f g f4 d8~ |
+		% << { r2 r8 a bes c | f8 e4 d8~ d c4 f,8 } \\ { d8 c~ c4. r4 | f2 r4 r8 s8 } >>
+		d8 c~ c4. a'8 bes c | f8 e4 d8~ d c4 f,8 | g2. r8 f | g8 f g f g f4 a8~ |
+		% << { a8 s8 r4 r4 r8 c8 | f8 e4 d8~ d c4 f,8 } \\ { a8 f~ f2. | f2 r4 r8 s8 } >>
+		a8 f~ f2 r8 c' | f8 e4 d8~ d c4 f,8 | g2. r8 f | g8 f g f g f4 f8~ |
+	} \alternative {
+		{
+			f8 d c2.~ | c4 r r2 |
+		}
+		{
+			f8 d c2.~ | c8 r r4 r2 |
+		}
+	}
+}
+{% endif %}

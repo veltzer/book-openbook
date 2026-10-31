@@ -1,0 +1,131 @@
+{#
+default_version = "Fake"
+
+[attributes]
+title = "In A Shanty In Old Shanty Town"
+style = "Swing"
+composer = "Little Jack Little, John Siras"
+poet = "Joe Young"
+piece = "Moderately"
+copyright = "1932 M. WITMARK & SONS"
+copyrightextra = "Renewed 1960 WAROCK CORP."
+typesetter = "Mark Veltzer <mark.veltzer@gmail.com>"
+completion = "5"
+uuid = "23431362-d51a-11f1-8000-046874d194b7"
+structure = "ABAC"
+location = "jfb:182"
+
+[[youtube]]
+id = "TmtkUTDpQL8"
+remark = "Ted Lewis and his Band in the hit recording (1932)"
+
+[[youtube]]
+id = "9h9Twv7trT4"
+remark = "Johnny Long and his Orchestra (1940)"
+
+[versions.Fake]
+doChords = true
+doVoice = true
+doLyrics = false
+doLyricsmore = false
+doLyricsmoremore = false
+doChordBars = false
+doGuitar = false
+doExtra = false
+doPrep = false
+doOwn = false
+#}
+{% if part == "Vars" %}
+{% endif %}
+{% if part == "Doc" %}	DONE:
+	- added the meta data from the fake book.
+	- put in the tunes structure.
+	- put in the chords (fake book).
+	- put in the tune (fake book).
+	- added youtube performances.
+	TODO:
+	- add the lyrics.
+	- check the chords (fake book).
+	- check the tune (fake book).
+	- hear the tune to check that it is right and adjust the tempo.
+	- in the A7 and F#9 bars the book prints a sharp only on the first note; the following notes were typed with the sharp carried through the bar; check them.
+{% endif %}
+{% if part == "ChordsFake" %}\chordmode {
+	\startChords
+	\startSong
+
+	\partial 8 s8 |
+
+	\repeat volta 2 {
+
+		\myMark "A"
+		\startPart
+		f2. | a:7 | d2.*2:7 | \myEndLine
+		g2.:7 | fis:9 | g2.*2:7 | \myEndLine
+		\endPart
+
+		\myMark "B"
+		\startPart
+		c4:7 a:m aes:dim7 | c2:7/g c4:7 | f4 bes:6 des:7 | f2 d4:9 | \myEndLine
+		g2.*2:7 | g2.:m7 | c:7 | \myEndLine
+		\endPart
+
+		\myMark "A"
+		\startPart
+		f2. | a:7 | d2.*2:7 | \myEndLine
+		g2.:7 | fis:9 | g2.*2:7 | \myEndLine
+		\endPart
+
+		\myMark "C"
+		\startPart
+		bes4 bes:dim7 bes | bes2.:m6 | f2 a4:9 | d2:7.5+ d4:7 | \myEndLine
+		g2.:m7 | c:7 |
+
+	} \alternative {
+		{
+			f2. | g4:9 g:m7 c:7.5+ | \myEndLineVoltaNotLast
+		}
+		{
+			f4 ees e:6 | f2.:6 | \myEndLineVoltaLast
+		}
+	}
+	\endPart
+
+	\endSong
+	\endChords
+}
+{% endif %}
+{% if part == "VoiceFake" %}{
+	\tempo "Moderato" 4 = 120
+	\time 3/4
+	\key f \major
+
+	\partial 8 c8 |
+
+	\repeat volta 2 {
+
+		% part "A"
+		c'4 c c | cis cis r8 cis | d4 c a | fis2~ fis8 d |
+		g4 g g | gis gis r8 gis | a4 g f | d2 d8 dis |
+
+		% part "B"
+		e4 c' b! | bes2 d,8 e | f4 d' des | c2 a8 aes |
+		g4 a ais | b e4. b8 | d4 bes g | e2~ e8 c |
+
+		% part "A"
+		c'4 c c | cis cis r8 cis | d4 c a | fis2~ fis8 d |
+		g4 g g | gis gis r8 gis | a4 g f | d2 d8 e |
+
+		% part "C"
+		f4 e f | g2 f8 g | a4 c e | d2 cis,8 d |
+		bes'4 bes4. b!8 | c4 c a |
+	} \alternative {
+		{
+			f2. | r4 r r8 c8 |
+		}
+		{
+			f2.~ | f2. |
+		}
+	}
+}
+{% endif %}

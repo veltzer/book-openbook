@@ -1,0 +1,93 @@
+{#
+default_version = "Fake"
+
+[attributes]
+title = "Life Is Just A Bowl Of Cherries"
+style = "Broadway"
+composer = "Lew Brown, Ray Henderson"
+poet = "Lew Brown, Ray Henderson"
+piece = "Moderately"
+copyright = "1931 by DeSylva, Brown & Henderson, Inc."
+copyrightextra = "Copyright Renewed, Assigned to Chappell & Co., Inc."
+typesetter = "Mark Veltzer <mark.veltzer@gmail.com>"
+completion = "5"
+uuid = "94bb8bac-d51d-11f1-8000-046874d194b7"
+structure = "AA'B"
+location = "jfb:217"
+
+[[youtube]]
+id = "hoDjMMMqWT4"
+remark = "Rudy Vallee in the original hit recording (1931)"
+
+[[youtube]]
+id = "IJYaSq52B7o"
+remark = "Ethel Merman, who introduced the song in George White's Scandals of 1931"
+
+[versions.Fake]
+doChords = true
+doVoice = true
+doLyrics = false
+doLyricsmore = false
+doLyricsmoremore = false
+doChordBars = false
+doGuitar = false
+doExtra = false
+doPrep = false
+doOwn = false
+#}
+{% if part == "Vars" %}
+{% endif %}
+{% if part == "Doc" %}	DONE:
+	- added the meta data from the fake book.
+	- put in the tunes structure.
+	- put in the chords (fake book).
+	- put in the tune (fake book).
+	- added youtube performances.
+	TODO:
+	- add the lyrics.
+	- check the chords (fake book).
+	- check the tune (fake book).
+	- hear the tune to check that it is right and adjust the tempo.
+{% endif %}
+{% if part == "ChordsFake" %}\chordmode {
+	\startChords
+	\startSong
+
+	\myMark "A"
+	\startPart
+	ees2 ees:maj7 | ees1:6 | e:dim7 | bes2:7/f bes:7 | \myEndLine
+	f2:m7 bes:9 | ees4 g:m7.5- c2:7 | f2:m7 bes:9 | f:9 bes:7 | \myEndLine
+	\endPart
+
+	\myMark "A"
+	\startPart
+	ees2 ees:maj7 | ees1:6 | g2:m7.5- c:7 | f:m f:m/ees | \myEndLine
+	d1:7.9- | g2:m7 c:7 | f:m7 bes:7 | f:9 bes:9 | \myEndLine
+	\endPart
+
+	\myMark "B"
+	\startPart
+	ees g:m7.5- | c1:7 | f2:7 f4:m7 bes:9 | ees1 | \myEndLine
+	\endPart
+
+	\endSong
+	\endChords
+}
+{% endif %}
+{% if part == "VoiceFake" %}{
+	\tempo "Moderato" 4 = 120
+	\time 4/4
+	\key ees \major
+
+	% part "A"
+	bes'4. g8 bes8. g16 bes8. g16 | bes4 c,4~ c8. c16 c8. c16 | cis8. cis16 cis4~ cis8. cis16 cis8. cis16 | d8. d16 d4~ d4. aes'8 |
+	c4. aes8 c4. d8 | ees4 bes bes c8. bes16 | aes4 aes8. g16 aes4 bes8. aes16 | g4 ees f bes, |
+
+	% part "A"
+	bes'4. g8 bes8. g16 bes8. g16 | bes4 c,2 bes'4 | des4 des g, g | c2~ c4. d8 |
+	ees8. c16 a!8. fis16~ fis4. ees'8 | d8. bes16 g8. e!16~ e4. d'8 | c8. aes16 f8. d16~ d4. ees8 | g8 f ees f~ f2 |
+
+	% part "B"
+	bes4. g8 bes8. g16 bes8. g16 | c4 g2 c4 | ees4. c8 c bes c4 | ees2. r4 |
+}
+{% endif %}

@@ -1,0 +1,126 @@
+{#
+default_version = "Fake"
+
+[attributes]
+title = "Jim"
+style = "Jazz"
+composer = "Caesar Petrillo, Milton Samuels"
+poet = "Nelson Shawn"
+piece = "Moderately"
+copyright = "1941, 1952 by MCA MUSIC PUBLISHING, A Division of MCA Inc., New York, NY."
+copyrightextra = "Copyright renewed."
+typesetter = "Mark Veltzer <mark.veltzer@gmail.com>"
+completion = "5"
+uuid = "5d9c76cf-d51d-11f1-8000-046874d194b7"
+structure = "AABA"
+location = "jfb:198"
+
+[[youtube]]
+id = "-Kxlf-0Myd4"
+remark = "Billie Holiday with Teddy Wilson and his Orchestra (1941)"
+
+[[youtube]]
+id = "N_EFwjrKcQQ"
+remark = "Dinah Shore in her hit recording (1941)"
+
+[versions.Fake]
+doChords = true
+doVoice = true
+doLyrics = false
+doLyricsmore = false
+doLyricsmoremore = false
+doChordBars = false
+doGuitar = false
+doExtra = false
+doPrep = false
+doOwn = false
+#}
+{% if part == "Vars" %}
+{% endif %}
+{% if part == "Doc" %}	DONE:
+	- added the meta data from the fake book.
+	- put in the tunes structure.
+	- put in the chords (fake book).
+	- put in the tune (fake book).
+	- added youtube performances.
+	TODO:
+	- add the lyrics.
+	- check the chords (fake book).
+	- check the tune (fake book).
+	- hear the tune to check that it is right and adjust the tempo.
+	- the placement of the G7b9 in bar 30 and of the G7sus in the second ending is cramped in the fake book; check them.
+{% endif %}
+{% if part == "ChordsFake" %}\chordmode {
+	\startChords
+	\startSong
+
+	\repeat volta 2 {
+
+		\myMark "A"
+		\startPart
+		f1:maj7 | f2:maj7 f:m | c1:maj7 | c2/e ees:dim7 | \myEndLine
+		d1:m7 | g:7 | c2 cis:dim7 | d:m7 g:7 | \myEndLine
+		\endPart
+
+		\myMark "A"
+		\startPart
+		f1:maj7 | f2:maj7 f:m | c1:maj7 | c2/e ees:dim7 | \myEndLine
+		d1:m7 | d2:m7 g:7 | g1:m7 | g2:m7 g:m7/f | \myEndLine
+		\endPart
+
+		\myMark "B"
+		\startPart
+		e1:7 | a:m | e:7 | a:m | \myEndLine
+		d:7 | g | d:7 | g:7 | \myEndLine
+		\endPart
+
+		\myMark "A"
+		\startPart
+		f1:maj7 | f2:maj7 f:m | c1:maj7 | c2/e ees:dim7 | \myEndLine
+		d1:m7 | d2:m7 g:7.9- |
+	} \alternative {
+		{
+			c2 a:m7 | d:m7 g:7 | \myEndLineVoltaNotLast
+		}
+		{
+			c2 d4:m7 g:7sus4 | c1:6.9 | \myEndLineVoltaLast
+		}
+	}
+	\endPart
+
+	\endSong
+	\endChords
+}
+{% endif %}
+{% if part == "VoiceFake" %}{
+	\tempo "Moderato" 4 = 120
+	\time 4/4
+	\key c \major
+
+	\repeat volta 2 {
+
+		% part "A"
+		e'2 a,8 b c d | e d e d aes4 e' | d2 g,8 a b c | d c d c fis,4 d' |
+		c2 f,4 g | a a a8 g f4 | g1~ | g2. r4 |
+
+		% part "A"
+		e'2 a,8 b c d | e d e d aes4 e' | d2 g,8 a b c | d c d c fis,4 d' |
+		c2 f,4 g | a a a8 b c d~ | d1~ | d2. r4 |
+
+		% part "B"
+		e4 g,8 a b4 g | c e a,2 | e'4 b8 c d4 b | c1 |
+		c4 a8 b c4 a | b d g,2 | d'4 a8 b c4 b | d2. r4 |
+
+		% part "A"
+		e2 a,8 b c d | e d e d aes4 e' | d2 g,8 a b c | d c d c fis,4 d' |
+		c2 f,4 g | a8 b c d e4 e |
+	} \alternative {
+		{
+			c1~ | c2 r2 |
+		}
+		{
+			c1~ | c2. r4 |
+		}
+	}
+}
+{% endif %}

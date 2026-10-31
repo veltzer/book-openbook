@@ -1,0 +1,124 @@
+{#
+default_version = "Fake"
+
+[attributes]
+title = "In A Little Spanish Town ('Twas On A Night Like This)"
+style = "Pop"
+composer = "Mabel Wayne"
+poet = "Sam M. Lewis, Joe Young"
+piece = "Slowly, with much expression"
+copyright = "1926 LEO FEIST, INC."
+copyrightextra = "Renewed 1954 WAROCK CORP."
+typesetter = "Mark Veltzer <mark.veltzer@gmail.com>"
+completion = "5"
+uuid = "9dc924a4-d51b-11f1-8000-046874d194b7"
+structure = "ABAC"
+location = "jfb:180"
+
+[[youtube]]
+id = "libTj2jIo8k"
+remark = "Paul Whiteman and his orchestra with Jack Fulton in the original hit recording (1926)"
+
+[[youtube]]
+id = "S3bI9rJhDjk"
+remark = "Bing Crosby (1956)"
+
+[versions.Fake]
+doChords = true
+doVoice = true
+doLyrics = false
+doLyricsmore = false
+doLyricsmoremore = false
+doChordBars = false
+doGuitar = false
+doExtra = false
+doPrep = false
+doOwn = false
+#}
+{% if part == "Vars" %}
+{% endif %}
+{% if part == "Doc" %}	DONE:
+	- added the meta data from the fake book.
+	- put in the tunes structure.
+	- put in the chords (fake book).
+	- put in the tune (fake book).
+	- added youtube performances.
+	TODO:
+	- add the lyrics.
+	- check the chords (fake book).
+	- check the tune (fake book).
+	- hear the tune to check that it is right and adjust the tempo.
+{% endif %}
+{% if part == "ChordsFake" %}\chordmode {
+	\startChords
+	\startSong
+
+	\repeat volta 2 {
+
+		\myMark "A"
+		\startPart
+		g2.*2 | a2.:m7 | d2.:7 | \myEndLine
+		d2.*2:7 | g2.*2 | \myEndLine
+		\endPart
+
+		\myMark "B"
+		\startPart
+		g2. | bes2.:dim7 | a2.:m7 | d2.:7 | \myEndLine
+		a2.:m7 | d2.:7 | g2.*2 | \myEndLine
+		\endPart
+
+		\myMark "A"
+		\startPart
+		g2.*2 | a2.:m7 | d2:7 d4:7/c | \myEndLine
+		b2.*2:7.9- | e2:7 f4:7 | e2.:7 | \myEndLine
+		\endPart
+
+		\myMark "C"
+		\startPart
+		e2.*2:7 | a2.:9 | cis2.:dim7 | \myEndLine
+		g2. | d2.:7 |
+	} \alternative {
+		{
+			g2 bes4:dim7 | a2:m7 d4:7.9- | \myEndLineVoltaNotLast
+		}
+		{
+			a2:m7 a4:m7/d | g2. | \myEndLineVoltaLast
+		}
+	}
+	\endPart
+
+	\endSong
+	\endChords
+}
+{% endif %}
+{% if part == "VoiceFake" %}{
+	\tempo "Adagio" 4 = 80
+	\time 3/4
+	\key g \major
+
+	\repeat volta 2 {
+		% part "A"
+		b'8. d,16 g8. b16 a8. g16 | b8. d,16 g8. b16 a8. g16 | a2.~ | a2. |
+		a8. d,16 fis8. a16 g8. fis16 | a8. d,16 fis8. a16 g8. fis16 | g2.~ | g2. |
+
+		% part "B"
+		d4 e g | fis4 e d | c'2.~ | c4 b a |
+		c2. | d2. | b2.~ | b2. |
+
+		% part "A"
+		b8. d,16 g8. b16 a8. g16 | b8. d,16 g8. b16 a8. g16 | a2.~ | a2. |
+		c8. dis,16 fis8. c'16 b8. a16 | c8. dis,16 fis8. c'16 b8. a16 | b2.~ | b2. |
+
+		% part "C"
+		e,4 gis b | d4 c b | b4. a8 g8. fis16 | e2. |
+		b'8. d,16 g8. b16 a8. g16 | a8. d,16 fis8. a16 g8. fis16 |
+	} \alternative {
+		{
+			g2.~ | g4 r r |
+		}
+		{
+			g2.~ | g2 r4 |
+		}
+	}
+}
+{% endif %}
