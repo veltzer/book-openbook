@@ -1,0 +1,92 @@
+{#
+default_version = "Fake"
+
+[attributes]
+title = "In A Silent Way"
+style = "Jazz"
+composer = "Josef Zawinul"
+piece = "Very Slow Bossa Nova"
+copyright = "1969 ZAWINUL MUSIC, A Division of Gopam Ent., Inc."
+typesetter = "Mark Veltzer <mark.veltzer@gmail.com>"
+completion = "5"
+uuid = "56e48c3a-d4ef-11f1-8000-046874d194b7"
+structure = "AA'"
+location = "jfb:180"
+
+[[youtube]]
+id = "8bdBONxS-Es"
+remark = "Miles Davis in the original recording from In a Silent Way (1969)"
+
+[[youtube]]
+id = "RXe2F897-ic"
+remark = "Joe Zawinul from his album Zawinul (1971)"
+
+[versions.Fake]
+doChords = true
+doVoice = true
+doLyrics = false
+doLyricsmore = false
+doLyricsmoremore = false
+doChordBars = false
+doGuitar = false
+doExtra = false
+doPrep = false
+doOwn = false
+#}
+{% if part == "Vars" %}
+{% endif %}
+{% if part == "Doc" %}	DONE:
+	- added the meta data from the fake book.
+	- put in the tunes structure.
+	- put in the chords (fake book).
+	- put in the tune (fake book).
+	- added youtube performances.
+	TODO:
+	- check the chords (fake book).
+	- check the tune (fake book).
+	- hear the tune to check that it is right and adjust the tempo.
+	- bars 11-12 and 27-28: the fake book places D, C#m7, Bm7 and E7 over the anticipating eighth notes, check the chord positions.
+	- bars 6, 15, 17, 22 and 31: the chord changes are placed on beat 3 following the position of the chord symbols in the fake book, check.
+{% endif %}
+{% if part == "ChordsFake" %}\chordmode {
+	\startChords
+	\startSong
+
+	\myMark "A"
+	\startPart
+	e1 | d1:6/e | d1:6/e | f1:maj7.5-/e | \myEndLine
+	e1 | e2 gis2:m7 | a1:maj7 | gis1:m7 | \myEndLine
+	gis1:m7 | d1:maj7/e | d4.:maj7/e d4 cis4:m7 b8:m7 | b4.:m7 e8*5:7 | \myEndLine
+	cis2:m c2/gis | a1/f | a2/f d2:maj9 | b1/cis | \myEndLine
+	\endPart
+
+	\myMark "A"
+	\startPart
+	b2/cis b2:m6/cis | b1:m/cis | b1:m/cis | c1/cis | \myEndLine
+	cis1:m7 | e2 gis2:m7 | a1:maj7 | gis1:m7 | \myEndLine
+	gis1:m | d1:maj7/e | d4.:maj7/e d4 cis4:m7 b8:m7 | b4.:m7 e8*5:7 | \myEndLine
+	cis2:m c2/gis | a1/f | a2/f d2:maj9 | cis1:m11 | \myEndLine
+	\endPart
+
+	\endSong
+	\endChords
+}
+{% endif %}
+{% if part == "VoiceFake" %}{
+	\tempo "Adagio" 4 = 60
+	\time 4/4
+	\key e \major
+
+	% part "A"
+	r4 r8 gis'8~ gis4. a8 | b4. cis8 b2 | r2 fis4. a8 | e1 |
+	r4 r8 b8 gis'2~ | gis2 \tuplet 3/2 { r4 a b } | e4. fis8 e2 | b1~ |
+	b2. r8 b,8 | fis'1 | r4 r8 fis8~ fis gis4 a8~ | a4. fis'8~ fis4. e16 d16 |
+	e1 | cis1 | a2 e | b'1~ |
+
+	% part "A"
+	b2 gis4. a8 | b4. cis8 b2 | r2 fis4. a8 | e1 |
+	r4 r8 b8 gis'2~ | gis2 \tuplet 3/2 { r4 a b } | e4. fis8 e2 | b1~ |
+	b2. r8 b,8 | fis'1 | r4 r8 fis8~ fis gis4 a8~ | a4. fis'8~ fis4. e16 d16 |
+	e1 | cis1 | a2 e | b1 |
+}
+{% endif %}

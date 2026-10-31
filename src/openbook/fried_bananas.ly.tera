@@ -1,0 +1,107 @@
+{#
+default_version = "Fake"
+
+[attributes]
+title = "Fried Bananas"
+style = "Jazz"
+composer = "Dexter Gordon"
+piece = "Moderately bright"
+copyright = "1967 by DEX MUSIC"
+copyrightextra = "Exclusive worldwide administration rights controlled by MAYFLOWER MUSIC CORP., NEW YORK, N.Y."
+typesetter = "Mark Veltzer <mark.veltzer@gmail.com>"
+completion = "5"
+uuid = "af076e14-d4ef-11f1-8000-046874d194b7"
+structure = "ABAC"
+location = "jfb:126"
+
+[[youtube]]
+id = "BIbZbNCtWm8"
+remark = "Dexter Gordon in a studio recording"
+
+[[youtube]]
+id = "Ob6b0M8jMRI"
+remark = "Dexter Gordon Quartet live in Prague (1980)"
+
+[versions.Fake]
+doChords = true
+doVoice = true
+doLyrics = false
+doLyricsmore = false
+doLyricsmoremore = false
+doChordBars = false
+doGuitar = false
+doExtra = false
+doPrep = false
+doOwn = false
+#}
+{% if part == "Vars" %}
+{% endif %}
+{% if part == "Doc" %}	DONE:
+	- added the meta data from the fake book.
+	- put in the tunes structure.
+	- put in the chords (fake book).
+	- put in the tune (fake book).
+	- added youtube performances.
+	TODO:
+	- check the chords (fake book).
+	- check the tune (fake book).
+	- hear the tune to check that it is right and adjust the tempo.
+{% endif %}
+{% if part == "ChordsFake" %}\chordmode {
+	\startChords
+	\startSong
+
+	\partial 8 s8 |
+
+	\myMark "A"
+	\startPart
+	ees1 | g2:m7.5- c:7 | f1:m7 | a2:m7.5- d:7 | \myEndLine
+	g1:m7 | f2:m7 bes:7 | g1:m7 | c1:7 | \myEndLine
+	\endPart
+
+	\myMark "B"
+	\startPart
+	f1:m7 | aes2:m7 des:7 | ees1 | d2:m7 g:7 | \myEndLine
+	c1:m7 | f1:7 | f1:m7 | bes1:7 | \myEndLine
+	\endPart
+
+	\myMark "A"
+	\startPart
+	ees1 | g2:m7.5- c:7 | f1:m7 | a2:m7.5- d:7 | \myEndLine
+	g1:m7 | f2:m7 bes:7 | g1:m7 | c1:7 | \myEndLine
+	\endPart
+
+	\myMark "C"
+	\startPart
+	f1:m7 | aes2:m7 des:7 | g1:m7 | g2:m7.5- c:7 | \myEndLine
+	f1:m7 | f2:m7 fes:maj7 | ees1*2 | \myEndLine
+	\endPart
+
+	\endSong
+	\endChords
+}
+{% endif %}
+{% if part == "VoiceFake" %}{
+	\tempo "Allegro" 4 = 192
+	\time 4/4
+	\key ees \major
+
+	\partial 8 ees'8~ |
+
+	% part "A"
+	ees8 d4 c8 bes fis \tuplet 3/2 { g bes c } | des4 g,8 c~ c4 r8 g'~ | g8 f4 ees8 d b c d | ees4 f8 d~ d4. c8 |
+	bes4 r8 ees r bes a aes~ | aes2.~ aes8 bes | g8 g~ g2. | r2 des'8 c ges e |
+
+	% part "B"
+	f8 aes4 bes8~ bes f aes bes | ges8 f r f f' ees ces bes~ | bes2. r8 a | e'8 d b a~ a2 |
+	r4 r8 d ees b \tuplet 3/2 { c ees g } | d'8 d r4 r2 | r4 r8 g,,8 aes e \tuplet 3/2 { f aes c } | g'4 r r r8 ees8~ |
+
+	% part "A"
+	ees8 d4 c8 bes fis \tuplet 3/2 { g bes c } | des4 g,8 c~ c4 r8 g'~ | g8 f4 ees8 d b c d | ees4 f8 d~ d4. c8 |
+	bes4 r8 ees r bes beses aes~ | aes2.~ aes8 bes | g8 g r4 r2 | r2 des'8 c b c |
+
+	% part "C"
+	ees8 c aes f~ f2 | ges'8 ees ces aes~ aes2 | f'8 d bes g r d \tuplet 3/2 { ees g bes } | des4 ees8 c r ees4 ees8~ |
+	ees4 r r2 | r8 ees \tuplet 3/2 { c aes f } ees' ces aes fes | ees2. r4 | r1 |
+}
+{% endif %}

@@ -1,0 +1,108 @@
+{#
+default_version = "Fake"
+
+[attributes]
+title = "I'm Old Fashioned"
+style = "Jazz"
+composer = "Jerome Kern"
+poet = "Johnny Mercer"
+piece = "Liltingly"
+copyright = "1942 T.B. Harms Company"
+copyrightextra = "Copyright Renewed (c/o The Welk Music Group, Santa Monica, CA 90401)"
+typesetter = "Mark Veltzer <mark.veltzer@gmail.com>"
+completion = "5"
+uuid = "72b63300-d4ef-11f1-8000-046874d194b7"
+structure = "ABCA"
+location = "jfb:173"
+
+[[youtube]]
+id = "sXFP6mGjjlQ"
+remark = "Fred Astaire in the original recording (1942)"
+
+[[youtube]]
+id = "eMqOA7qN9B4"
+remark = "John Coltrane from Blue Train (1957)"
+
+[versions.Fake]
+doChords = true
+doVoice = true
+doLyrics = false
+doLyricsmore = false
+doLyricsmoremore = false
+doChordBars = false
+doGuitar = false
+doExtra = false
+doPrep = false
+doOwn = false
+#}
+{% if part == "Vars" %}
+{% endif %}
+{% if part == "Doc" %}	DONE:
+	- added the meta data from the fake book.
+	- put in the tunes structure.
+	- put in the chords (fake book).
+	- put in the tune (fake book).
+	- added youtube performances.
+	TODO:
+	- check the chords (fake book).
+	- check the tune (fake book).
+	- hear the tune to check that it is right and adjust the tempo.
+	- check the placement of the Bb7b5 chord in bar 20 (beat 3 or beat 4 in the fake book).
+	- add the lyrics.
+{% endif %}
+{% if part == "ChordsFake" %}\chordmode {
+	\startChords
+	\startSong
+
+	\myMark "A"
+	\startPart
+	f2. d4:m7 | g2.:m7 c4:7 | f2. d4:m7 | g2.:m7 c4:7 | \myEndLine
+	f1 | f1:maj7 | e1:m7.5- | a1:7 | \myEndLine
+	\endPart
+
+	\myMark "B"
+	\startPart
+	d1:m7 | g1:7 | d1:m7 | d1:7 | \myEndLine
+	g1:m7 | g2:m aes:dim7 | a2:m7 aes:7 | des2:maj7 c:7 | \myEndLine
+	\endPart
+
+	\myMark "C"
+	\startPart
+	f2.:6 d4:m7 | g2.:m7 c4:7 | f1:maj7 | e2.:sus4.7 bes4:7.5- | \myEndLine
+	a2 e:7/b | a2/cis d:7 | e2:7 fis:dim7 | g2:m7 c:7 | \myEndLine
+	\endPart
+
+	\myMark "A"
+	\startPart
+	f2. d4:m7 | g2.:m7 c4:7 | f2. d4:m7 | g2.:m7 c4:7 | \myEndLine
+	f1:maj7 | bes2.:maj7 bes4:dim7 | a2:m7 d:m7 | g1:9 | \myEndLine
+	f2./c d4:m7 | g2.:m7 c4:7 | f2:6 bes:7 | f1:6 | \myEndLine
+	\endPart
+
+	\endSong
+	\endChords
+}
+{% endif %}
+{% if part == "VoiceFake" %}{
+	\tempo "Allegretto" 4 = 160
+	\time 2/2
+	\key f \major
+
+	% part "A"
+	f2. c4 | c c2 c4 | a'2. c,4 | c c2 c4 |
+	bes'2. a4 | c,4 c2 a'4 | g1~ | g2. e4 |
+
+	% part "B"
+	g2. f4 | e2. d4 | g4 a g f | e2. d4 |
+	bes'4 c bes a | g2 f | c'1~ | c1 |
+
+	% part "C"
+	d2. f,4 | f f2 e4 | a2. e4 | e e2 d4 |
+	cis4 a d2 | e4 cis fis2 | gis4 e a2 | bes4 g c2 |
+
+	% part "A"
+	f,2. c4 | c c2 c4 | a'2. c,4 | c c2 c4 |
+	c'4 d c f, | a2. g4 | c4 d c f, | a2. g4 |
+	c2. c,4 | c c2 c4 | f1~ | f2. r4 |
+}
+{% endif %}

@@ -1,0 +1,110 @@
+{#
+default_version = "Fake"
+
+[attributes]
+title = "There Is No Greater Love"
+style = "Jazz"
+composer = "Isham Jones"
+poet = "Marty Symes"
+piece = "With Emotion"
+copyright = "1936 by ISHAM JONES MUSIC CORP."
+copyrightextra = "Copyright Assigned 1944 to WORLD MUSIC, INC."
+typesetter = "Mark Veltzer <mark.veltzer@gmail.com>"
+completion = "5"
+uuid = "44b54b8a-d4ef-11f1-8000-046874d194b7"
+structure = "AABA"
+location = "jfb:386"
+
+[[youtube]]
+id = "GITYSOYUpLw"
+remark = "Isham Jones with Woody Herman (vocal) in the first recording (1936)"
+
+[[youtube]]
+id = "uZi7aQV9VZo"
+remark = "Ahmad Jamal live at the Pershing, Chicago (1958)"
+
+[versions.Fake]
+doChords = true
+doVoice = true
+doLyrics = false
+doLyricsmore = false
+doLyricsmoremore = false
+doChordBars = false
+doGuitar = false
+doExtra = false
+doPrep = false
+doOwn = false
+#}
+{% if part == "Vars" %}
+{% endif %}
+{% if part == "Doc" %}	DONE:
+	- added the meta data from the fake book.
+	- put in the tunes structure.
+	- put in the chords (fake book).
+	- put in the tune (fake book).
+	- added youtube performances.
+	TODO:
+	- add the lyrics.
+	- check the chords (fake book).
+	- check the tune (fake book).
+	- hear the tune to check that it is right and adjust the tempo.
+	- bars 2, 10 and 26: the fake book prints the second note as F flat (same line as the F before it), check whether that is right.
+{% endif %}
+{% if part == "ChordsFake" %}\chordmode {
+	\startChords
+	\startSong
+
+	\partial 2. s2. |
+
+	\myMark "A"
+	\startPart
+	bes1 | ees:7 | d2:7 aes:9 | g1:7 | \myEndLine
+	c1*2:7 | c1:m7 | f:7 | \myEndLine
+	\endPart
+
+	\myMark "A"
+	\startPart
+	bes1 | ees:7 | d2:7 aes:9 | g1:7 | \myEndLine
+	c1:7 | c2:m7/f f:7 | bes1*2 | \myEndLine
+	\endPart
+
+	\myMark "B"
+	\startPart
+	d2:7.9-/a d:7.9- | g1:m | d2:7.9-/a d:7.9- | g1:m | \myEndLine
+	d1:7.9- | g:m7 | c2:7 c:7.5-/ges | f1:7 | \myEndLine
+	\endPart
+
+	\myMark "A"
+	\startPart
+	bes1 | ees:7 | d2:7 aes:9 | g1:7 | \myEndLine
+	c1:7 | c2:m7/f f:7 | bes4 bes/d des:dim7 c:m7 | bes1:6.9 | \myEndLine
+	\endPart
+
+	\endSong
+	\endChords
+}
+{% endif %}
+{% if part == "VoiceFake" %}{
+	\tempo "Andante" 4 = 88
+	\time 2/2
+	\key bes \major
+
+	\partial 2. a'4 bes c |
+
+	% part "A"
+	bes4 a g4. d8 | f4 fes ees bes | d1~ | d8 r8 d4 a' aes |
+	g1~ | g4 g d' des | c1~ | c8 r8 a4 bes c |
+
+	% part "A"
+	bes4 a g4. d8 | f4 fes ees bes | d1~ | d4 d a' aes |
+	g4 g d' c | bes2 c | bes1~ | bes2. r4 |
+
+	% part "B"
+	d,4 fis a c | bes1 | fis4 a c ees | d1 |
+	d,4 fis a c | bes a g d | c1~ | c8 r8 a'4 bes c |
+
+	% part "A"
+	bes4 a g4. d8 | f4 fes ees bes | d1~ | d8 r8 d4 a' aes |
+	g4 g d' c | bes2 c | bes1~ | bes4 r r2 |
+}
+{% endif %}

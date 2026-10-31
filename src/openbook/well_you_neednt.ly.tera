@@ -1,0 +1,130 @@
+{#
+default_version = "Fake"
+
+[attributes]
+title = "Well You Needn't (It's Over Now)"
+style = "Jazz"
+composer = "Thelonious Monk"
+poet = "Mike Ferro"
+piece = "Bright Bop"
+copyright = "1944 (Renewed), 1988 by Regent Music Corp."
+typesetter = "Mark Veltzer <mark.veltzer@gmail.com>"
+completion = "5"
+uuid = "af970826-d4ef-11f1-8000-046874d194b7"
+structure = "AABA"
+location = "jfb:419"
+
+[[youtube]]
+id = "zBY7lBkyCs8"
+remark = "Thelonious Monk in the original recording (1947)"
+
+[[youtube]]
+id = "MSmTZry-u-A"
+remark = "Miles Davis Quintet from Steamin' (1956)"
+
+[versions.Fake]
+doChords = true
+doVoice = true
+doLyrics = false
+doLyricsmore = false
+doLyricsmoremore = false
+doChordBars = false
+doGuitar = false
+doExtra = false
+doPrep = false
+doOwn = false
+#}
+{% if part == "Vars" %}
+{% endif %}
+{% if part == "Doc" %}	DONE:
+	- added the meta data from the fake book.
+	- put in the tunes structure.
+	- put in the chords (fake book).
+	- put in the tune (fake book).
+	- added youtube performances.
+	TODO:
+	- check the chords (fake book).
+	- check the tune (fake book).
+	- hear the tune to check that it is right and adjust the tempo.
+	- add the lyrics.
+	- bridge bar 2: the last eighth has no accidental in the book after the Eb in the same bar, so it is read as Eb (the sequence a half step up in bar 4 has E).
+	- bridge bar 5: the last two eighths have no accidental after the F# in the same bar, so they are read as F# (the bar is the first half of the bar a half step up).
+{% endif %}
+{% if part == "ChordsFake" %}\chordmode {
+	\startChords
+	\startSong
+
+	\partial 8 s8 |
+
+	\repeat volta 2 {
+
+		\myMark "A"
+		\startPart
+		f1:7 | ges:7 | f:7 | ges:7 | \myEndLine
+		f1:7 | ges:7 | f1*2:7 | \myEndLine
+		\endPart
+
+		\myMark "A"
+		\startPart
+		f1:7 | ges:7 | f:7 | ges:7 | \myEndLine
+		f1:7 | ges:7 | f1*2:7 | \myEndLine
+		\endPart
+
+		\myMark "B"
+		\startPart
+		aes1*2:7 | a1*2:7 | \myEndLine
+		bes2:7 b:7 | bes:7 a:7 | aes:7 g:7 | ges:7 c:7 | \myEndLine
+		\endPart
+
+		\myMark "A"
+		\startPart
+		f1:7 | ges:7 | f:7 | ges:7 | \myEndLine
+		f1:7 | ges:7 | f:7 |
+	} \alternative {
+		{
+			f1:7 | \myEndLineVoltaNotLast
+		}
+		{
+			f1:7 | \myEndLineVoltaLast
+		}
+	}
+	\endPart
+
+	\endSong
+	\endChords
+}
+{% endif %}
+{% if part == "VoiceFake" %}{
+	\tempo "Allegro" 4 = 200
+	\time 4/4
+	\key f \major
+
+	\partial 8 b8 |
+
+	\repeat volta 2 {
+
+		% part "A"
+		c8 f a4 c a8 f | ees'8 bes r4 r r8 b, | c8 f a4 c a8 f | bes8 ges r4 r r8 b, |
+		c8 f a4 c a8 f | ees'8 bes r4 r r8 b, | c8 f c4 r8 b c f | c4 r r r8 b |
+
+		% part "A"
+		c8 f a4 c a8 f | ees'8 bes r4 r r8 b, | c8 f a4 c a8 f | bes8 ges r4 r r8 b, |
+		c8 f a4 c a8 f | ees'8 bes r4 r r8 b, | c8 f c4 r8 b c f | c4 r r r8 d |
+
+		% part "B"
+		ees8 aes ees4 r8 d ees aes | ees2. r8 ees | e8 a e4 r8 dis e a | e2. r8 e |
+		f8 bes f f fis b fis fis | f!8 bes f f e a e e | ees8 aes ees ees d g d d | des8 ges des c~ c4 r8 b |
+
+		% part "A"
+		c8 f a4 c a8 f | ees'8 bes r4 r r8 b, | c8 f a4 c a8 f | bes8 ges r4 r r8 b, |
+		c8 f a4 c a8 f | ees'8 bes r4 r r8 b, | c8 f c4 r8 b c f |
+	} \alternative {
+		{
+			c4 r r r8 b |
+		}
+		{
+			c4 r r2 |
+		}
+	}
+}
+{% endif %}

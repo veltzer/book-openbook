@@ -1,0 +1,92 @@
+{#
+default_version = "Fake"
+
+[attributes]
+title = "Very Early"
+style = "Jazz"
+composer = "Bill Evans"
+poet = "Carol Hall"
+piece = "Medium Jazz Waltz"
+copyright = "1962, 1965 and 1987 ACORN MUSIC CORP., New York, NY"
+copyrightextra = "TRO"
+typesetter = "Mark Veltzer <mark.veltzer@gmail.com>"
+completion = "5"
+uuid = "0f76a8aa-d4f0-11f1-8000-046874d194b7"
+structure = "AAB"
+location = "jfb:410"
+
+[[youtube]]
+id = "eywBpj-Yeww"
+remark = "The Bill Evans Trio from Moon Beams (1962)"
+
+[[youtube]]
+id = "xmm5DqY1XS0"
+remark = "Bill Evans at the Munch Museum (1967)"
+
+[versions.Fake]
+doChords = true
+doVoice = true
+doLyrics = false
+doLyricsmore = false
+doLyricsmoremore = false
+doChordBars = false
+doGuitar = false
+doExtra = false
+doPrep = false
+doOwn = false
+#}
+{% if part == "Vars" %}
+{% endif %}
+{% if part == "Doc" %}	DONE:
+	- added the meta data from the fake book.
+	- put in the tunes structure.
+	- put in the chords (fake book).
+	- put in the tune (fake book).
+	- added youtube performances.
+	TODO:
+	- add the lyrics.
+	- check the chords (fake book).
+	- check the tune (fake book).
+	- hear the tune to check that it is right and adjust the tempo.
+	- the book has no start repeat sign, the repeat goes back to the beginning.
+{% endif %}
+{% if part == "ChordsFake" %}\chordmode {
+	\startChords
+	\startSong
+
+	\myMark "A"
+	\startPart
+	\repeat volta 2 {
+		c2.:maj7 | bes:9 | ees:maj7 | aes:7.9+ | des:maj7 | g:13 | c:maj7 | bes:9.5- | d:maj7 | a:m7 | \myEndLine
+		fis:m7 | b:7.9- | e:m7 | aes:13 | des:maj7 | g:7.5+ | \myEndLine
+	}
+	\endPart
+
+	\myMark "B"
+	\startPart
+	b2.:maj7 | aes:13 | des:maj7 | bes:13 | b:maj7 | g:13 | c:maj7 | aes:7 | \myEndLine
+	des:maj7 | g:13 | c:maj7 | a:7.5-.9- | d:m7 | \myEndLine
+	f4:6 g2:7 | d4:m7 e2:m7 | f2:maj7 g4:7 | f2:maj7 e4:m7 | d2:m7 c4:maj7 | b2.*2:maj7 | \myEndLine
+	\endPart
+
+	\endSong
+	\endChords
+}
+{% endif %}
+{% if part == "VoiceFake" %}{
+	\tempo "Moderato" 4 = 160
+	\time 3/4
+	\key c \major
+
+	% part "A"
+	\repeat volta 2 {
+		g'2 e4 | c bes'2 | g bes,4 | b! a'2 | aes aes,4 | a!4 g'2 | e2.~ | e2. | a2 d,4 | c c'2 |
+		b2 b,4 | c gis'2 | a2 a,4 | bes bes'4. aes8 | f2.~ | f2. |
+	}
+
+	% part "B"
+	fis2 b,4 | bes f'2 | aes4. f8 ees des | c4 g'2 | ais2 cis,4 | c!4 a'!4. g8 | e2. | r2. |
+	ees'2 aes,4 | e!4 b'2 | d2 g,4 | ees bes'2 | g2 e!4 |
+	c4 d2 | g4 e2 | c2 d4 | g4. f8 e d~ | d4 c d | dis2.~ | dis2. |
+}
+{% endif %}

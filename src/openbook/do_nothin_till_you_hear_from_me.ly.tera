@@ -1,0 +1,132 @@
+{#
+default_version = "Fake"
+
+[attributes]
+title = "Do Nothin' Till You Hear From Me"
+style = "Jazz"
+composer = "Duke Ellington"
+poet = "Bob Russell"
+piece = "Moderately Slow"
+copyright = "1973 Harrison Music Corp and Robbins Music"
+typesetter = "Mark Veltzer <mark.veltzer@gmail.com>"
+completion = "5"
+uuid = "957b49ce-d4f0-11f1-8000-046874d194b7"
+structure = "AABA"
+location = "jfb:99"
+
+[[youtube]]
+id = "CJ4LJCqQgvY"
+remark = "Duke Ellington in the original recording (1940 instrumental, the 1944 hit)"
+
+[[youtube]]
+id = "INJVFZK0k0I"
+remark = "Ella Fitzgerald and Duke Ellington on The Ed Sullivan Show"
+
+[versions.Fake]
+doChords = true
+doVoice = true
+doLyrics = false
+doLyricsmore = false
+doLyricsmoremore = false
+doChordBars = false
+doGuitar = false
+doExtra = false
+doPrep = false
+doOwn = false
+#}
+{% if part == "Vars" %}
+{% endif %}
+{% if part == "Doc" %}	DONE:
+	- added the meta data from the fake book.
+	- put in the tunes structure.
+	- put in the chords (fake book).
+	- put in the tune (fake book).
+	- added youtube performances.
+	TODO:
+	- add the lyrics.
+	- check the chords (fake book).
+	- check the tune (fake book).
+	- hear the tune to check that it is right and adjust the tempo.
+	- the book ends the second ending with a single eighth note bar (completing the 7/8 pickup); here that bar is filled with rests.
+	- bar 23: the second note is printed as E sharp (on the bottom line, with a sharp), typed as printed.
+	- bar 23: the exact beats of the Gm D A7 D7 chords are hard to read in the fake book.
+{% endif %}
+{% if part == "ChordsFake" %}\chordmode {
+	\startChords
+	\startSong
+
+	\partial 2.. s2.. |
+
+	\repeat volta 2 {
+
+		\myMark "A"
+		\startPart
+		g2 g:maj7 | g1:7 | c:maj7 | f:9 | \myEndLine
+		g2 a:m7 | d1:9 | g2 gis:dim7 | a:m7 d:9 | \myEndLine
+		\endPart
+
+		\myMark "A"
+		\startPart
+		g2 g:maj7 | g1:7 | c:maj7 | f:9 | \myEndLine
+		g2 a:m7 | d1:9 | g2 c:7 | f:m7 bes:7 | \myEndLine
+		\endPart
+
+		\myMark "B"
+		\startPart
+		ees2 ees:maj7 | ees ees:maj7 | ees1:maj7 | ees2 ees:9 | \myEndLine
+		a2:m7 d:7 | g e:9 | g4:m d a:7 d:7 | d1:7 | \myEndLine
+		\endPart
+
+		\myMark "A"
+		\startPart
+		g2 g:maj7 | g1:7 | c:maj7 | f:9 | \myEndLine
+		g2 a:m7 | d1:9 |
+
+	} \alternative {
+		{
+			g4 bes:7 ees:9 d:9 | r1 | \myEndLineVoltaNotLast
+		}
+		{
+			g1 | s1 | \myEndLineVoltaLast
+		}
+	}
+	\endPart
+
+	\endSong
+	\endChords
+}
+{% endif %}
+{% if part == "VoiceFake" %}{
+	\tempo "Andante" 4 = 80
+	\time 2/2
+	\key g \major
+
+	\partial 2.. c'8 a ais b d c a |
+
+	\repeat volta 2 {
+
+		% part "A"
+		b1 | r8 c a ais b d c a | b1 | r8 c a ais b d c a |
+		b8 g d c~ c2~ | c8 r ais'4 b8 d, e g~ | g1 | r8 c a ais b d c a |
+
+		% part "A"
+		b1 | r8 c a ais b d c a | b1 | r8 c a ais b d c a |
+		b8 g d c~ c2~ | c8 r ais'4 b8 d, e g~ | g2. r4 | r2 r8 g g g |
+
+		% part "B"
+		bes1 | g8 bes g g~ g g g g | bes1 | g8 bes g g~ g g g g |
+		d'2~ d4. d,8 | e g b fis~ fis4. g8 | a eis fis a~ a ais b d~ | d c a ais b d c a |
+
+		% part "A"
+		b1 | r8 c a ais b d c a | b1 | r8 c a ais b d c a |
+		b8 g d c~ c2~ | c8 r ais'4 b8 d, e g~ |
+	} \alternative {
+		{
+			g2 r | r8 c a ais b d c a |
+		}
+		{
+			g1~ | g8 r r4 r2 |
+		}
+	}
+}
+{% endif %}

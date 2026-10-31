@@ -1,0 +1,120 @@
+{#
+default_version = "Fake"
+
+[attributes]
+title = "Milestones"
+style = "Jazz"
+composer = "Miles Davis"
+piece = "Up Tempo"
+copyright = "1948, 1980 Screen Gems-EMI Music Inc., Hollywood, CA"
+typesetter = "Mark Veltzer <mark.veltzer@gmail.com>"
+completion = "5"
+uuid = "b02e0c8a-d4ef-11f1-8000-046874d194b7"
+structure = "AABBA"
+location = "jfb:249"
+
+[[youtube]]
+id = "k94zDsJ-JMU"
+remark = "Miles Davis in the original recording from Milestones (1958)"
+
+[[youtube]]
+id = "D_fFkt4TTHU"
+remark = "Miles Davis live"
+
+[versions.Fake]
+doChords = true
+doVoice = true
+doLyrics = false
+doLyricsmore = false
+doLyricsmoremore = false
+doChordBars = false
+doGuitar = false
+doExtra = false
+doPrep = false
+doOwn = false
+#}
+{% if part == "Vars" %}
+{% endif %}
+{% if part == "Doc" %}	DONE:
+	- added the meta data from the fake book.
+	- put in the tunes structure.
+	- put in the chords (fake book).
+	- put in the tune (fake book).
+	- added youtube performances.
+	TODO:
+	- check the chords (fake book).
+	- check the tune (fake book).
+	- hear the tune to check that it is right and adjust the tempo.
+{% endif %}
+{% if part == "ChordsFake" %}\chordmode {
+	\startChords
+	\startSong
+
+	\myMark "A"
+	\startPart
+	\repeat volta 2 {
+		g1*4:m7 | \myEndLine
+		g1*2:m7 |
+	} \alternative {
+		{
+			f1*2:maj7 | \myEndLineVoltaNotLast
+		}
+		{
+			f1*2:maj7 | \myEndLineVoltaLast
+		}
+	}
+	\endPart
+
+	\myMark "B"
+	\startPart
+	a1*4:m | \myEndLine
+	a1*4:m | \myEndLine
+	\endPart
+
+	\myMark "B"
+	\startPart
+	a1*4:m | \myEndLine
+	a1*4:m | \myEndLine
+	\endPart
+
+	\myMark "A"
+	\startPart
+	g1*4:m7 | \myEndLine
+	g1*2:m7 | f1*2:maj7 | \myEndLine
+	\endPart
+
+	\endSong
+	\endChords
+}
+{% endif %}
+{% if part == "VoiceFake" %}{
+	\tempo "Allegro" 4 = 230
+	\time 2/2
+	\key f \major
+
+	% part "A"
+	\repeat volta 2 {
+		f4 r g r | a4 r8 g8 r2 | f4 r g r | a4 r8 g8 r2 |
+		f4 r g r | a4 r8 f8 r4 g4~ |
+	} \alternative {
+		{
+			g1~ | g1 |
+		}
+		{
+			g1~ | g2~ g8 c4. |
+		}
+	}
+
+	% part "B"
+	b2 c | e d | b c | d c |
+	b2 c | e b4 c~ | c1~ | c2~ c8 c4. |
+
+	% part "B"
+	b2 c | e d | b c | d c |
+	b2 c | e b4 c~ | c1~ | c2~ c8 bes4. |
+
+	% part "A"
+	f4 r g r | a4 r8 g8 r2 | f4 r g r | a4 r8 g8 r2 |
+	f4 r g r | a4 r8 f8 r4 g4~ | g1~ | g1 |
+}
+{% endif %}

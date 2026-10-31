@@ -1,0 +1,109 @@
+{#
+default_version = "Fake"
+
+[attributes]
+title = "Yardbird Suite"
+style = "Jazz"
+composer = "Charlie Parker"
+piece = "Fast"
+copyright = "1946 ATLANTIC MUSIC CORP."
+copyrightextra = "Renewed and assigned 1974 ATLANTIC MUSIC CORP."
+typesetter = "Mark Veltzer <mark.veltzer@gmail.com>"
+completion = "5"
+uuid = "af950968-d4ef-11f1-8000-046874d194b7"
+structure = "AABA"
+location = "jfb:435"
+
+[[youtube]]
+id = "HqGJt6ca6eY"
+remark = "Charlie Parker in the original recording (1946)"
+
+[[youtube]]
+id = "29ZK6XUxHek"
+remark = "Chet Baker live at The Haig, Los Angeles (1953)"
+
+[versions.Fake]
+doChords = true
+doVoice = true
+doLyrics = false
+doLyricsmore = false
+doLyricsmoremore = false
+doChordBars = false
+doGuitar = false
+doExtra = false
+doPrep = false
+doOwn = false
+#}
+{% if part == "Vars" %}
+{% endif %}
+{% if part == "Doc" %}	DONE:
+	- added the meta data from the fake book.
+	- put in the tunes structure.
+	- put in the chords (fake book).
+	- put in the tune (fake book).
+	- added youtube performances.
+	TODO:
+	- check the chords (fake book).
+	- check the tune (fake book).
+	- hear the tune to check that it is right and adjust the tempo.
+{% endif %}
+{% if part == "ChordsFake" %}\chordmode {
+	\startChords
+	\startSong
+
+	\myMark "A"
+	\startPart
+	\repeat volta 2 {
+		c1 | f2:m7 bes:7 | c bes:7 | a1:7 | d:7 | \myEndLine
+	} \alternative {
+		{
+			g1:7 | e2:m7 a:7 | d:m7 g:7 | \myEndLineVoltaNotLast
+		}
+		{
+			g1:7 | c | fis2:m7 b:7.5+ | \myEndLineVoltaLast
+		}
+	}
+	\endPart
+
+	\myMark "B"
+	\startPart
+	e1:m | fis2:m7.5- b:7.9- | e1:m7 | a:7 | \myEndLine
+	d1:m7 | e2:m7.5- a:7 | d1:7 | g2:7 des:7 | \myEndLine
+	\endPart
+
+	\myMark "A"
+	\startPart
+	c1 | f2:m7 bes:7 | c bes:7 | a1:7 | \myEndLine
+	d1:7 | g:7 | c1*2 | \myEndLine
+	\endPart
+
+	\endSong
+	\endChords
+}
+{% endif %}
+{% if part == "VoiceFake" %}{
+	\tempo "Allegro" 4 = 200
+	\time 4/4
+	\key c \major
+
+	% part "A"
+	\repeat volta 2 {
+		r8 c'4. g4 a | bes4. aes8~ aes ees f g~ | g2 g4. e8~ | e4. e8 f e f g | e8 c r c~ c2 |
+	} \alternative {
+		{
+			r4 r8 d r e f g~ | g4. a8~ a e f g~ | g2. r4 |
+		}
+		{
+			r4 r8 c, e c e c~ | c1 | r2 r4 \tuplet 3/2 { g'16 a g } ges8 |
+		}
+	}
+
+	% part "B"
+	e4. fis8 g e4 a8 | r8 a a2. | g8 a g fis e b c cis~ | cis2 r4 r8 bes |
+	a4. a'8 r e f g | r8 g4. f8 e d cis | e8 a, r e'~ e4. a,8 | d8 e f g r2 |
+
+	% part "A"
+	r8 c4. g4 a | bes4. aes8~ aes ees f g~ | g2 g4. e8~ | e4 e8 f r ees e a |
+	r8 a8~ a2. | r8 a,8 \tuplet 3/2 { b c d } e4 g,8 c~ | c2. r4 | r1 |
+}
+{% endif %}

@@ -1,0 +1,94 @@
+{#
+default_version = "Fake"
+
+[attributes]
+title = "Tune Up"
+style = "Jazz"
+composer = "Miles Davis"
+piece = "Medium Swing"
+copyright = "1963 Prestige Music"
+typesetter = "Mark Veltzer <mark.veltzer@gmail.com>"
+completion = "5"
+uuid = "56e48c3c-d4ef-11f1-8000-046874d194b7"
+structure = "AB"
+location = "jfb:403"
+
+[[youtube]]
+id = "-oocbmW8eLM"
+remark = "Miles Davis in the original recording (1953)"
+
+[[youtube]]
+id = "HTjoOcUVtgI"
+remark = "Miles Davis Quintet from Cookin' (1956)"
+
+[versions.Fake]
+doChords = true
+doVoice = true
+doLyrics = false
+doLyricsmore = false
+doLyricsmoremore = false
+doChordBars = false
+doGuitar = false
+doExtra = false
+doPrep = false
+doOwn = false
+#}
+{% if part == "Vars" %}
+{% endif %}
+{% if part == "Doc" %}	DONE:
+	- added the meta data from the fake book.
+	- put in the tunes structure.
+	- put in the chords (fake book).
+	- put in the tune (fake book).
+	- added youtube performances.
+	TODO:
+	- check the chords (fake book).
+	- check the tune (fake book).
+	- hear the tune to check that it is right and adjust the tempo.
+{% endif %}
+{% if part == "ChordsFake" %}\chordmode {
+	\startChords
+	\startSong
+
+	\myMark "A"
+	\startPart
+	\repeat volta 2 {
+		e1:m7 | a1:7 | d1*2:maj7 | \myEndLine
+		d1:m7 | g1:7 | c1*2:maj7 | \myEndLine
+		c1:m7 | f1:7 | bes1*2:maj7 | \myEndLine
+		e1:m7 | a1:7 | bes1:maj7 | \myEndLine
+	} \alternative {
+		{
+			e2:m7 a2:7.9+ | \myEndLineVoltaNotLast
+		}
+		{
+			bes1 | \myEndLineVoltaLast
+		}
+	}
+	\endPart
+
+	\endSong
+	\endChords
+}
+{% endif %}
+{% if part == "VoiceFake" %}{
+	\tempo "Allegro" 4 = 160
+	\time 4/4
+	\key d \major
+
+	% part "A"
+	\repeat volta 2 {
+		a'2. g4 | dis2 e2 | fis1~ | fis1 |
+		r4 g2 f4 | cis2 d2 | e1~ | e2. e4 |
+		ees4. ees8~ ees4 ees4~ | ees2 f8 g a d | d4. d8~ d2~ | d2 d4 c4 |
+		a4. a8~ a2~ | a2 a8 c4 a8~ | a4 a2. |
+	} \alternative {
+		{
+			r2 c8 b c b |
+		}
+		{
+			r1 |
+		}
+	}
+}
+{% endif %}

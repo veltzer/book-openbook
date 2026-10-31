@@ -1,0 +1,127 @@
+{#
+default_version = "Fake"
+
+[attributes]
+title = "A Felicidade"
+style = "Jazz"
+composer = "Antonio Carlos Jobim"
+poet = "Vinicius De Moraes"
+piece = "Moderate Bossa Nova"
+copyright = "1959 by Les Nouvelles. Copyright Renewed."
+copyrightextra = "All rights administered by Chappell & Co., Inc. (Intersong Music, Publisher)"
+typesetter = "Mark Veltzer <mark.veltzer@gmail.com>"
+completion = "5"
+uuid = "957802d2-d4f0-11f1-8000-046874d194b7"
+structure = "ABC"
+location = "jfb:31"
+
+[[youtube]]
+id = "4vxpHfCNITA"
+remark = "Antonio Carlos Jobim in the original soundtrack of Black Orpheus (1959)"
+
+[[youtube]]
+id = "Iq1L_vN6vJg"
+remark = "Joao Gilberto (1959)"
+
+[versions.Fake]
+doChords = true
+doVoice = true
+doLyrics = false
+doLyricsmore = false
+doLyricsmoremore = false
+doChordBars = false
+doGuitar = false
+doExtra = false
+doPrep = false
+doOwn = false
+#}
+{% if part == "Vars" %}
+{% endif %}
+{% if part == "Doc" %}	DONE:
+	- added the meta data from the fake book.
+	- put in the tunes structure.
+	- put in the chords (fake book).
+	- put in the tune (fake book).
+	- added youtube performances.
+	TODO:
+	- add the lyrics.
+	- check the chords (fake book).
+	- check the tune (fake book).
+	- hear the tune to check that it is right and adjust the tempo.
+	- the book prints the lyricist as "Vinicius De Morales", here the usual spelling "Vinicius De Moraes" is used.
+	- the coda bars after the first two have no chord printed in the book, the C minor of the coda is kept.
+{% endif %}
+{% if part == "ChordsFake" %}\chordmode {
+	\startChords
+	\startSong
+
+	\partial 4 s4 |
+
+	\myMark "A"
+	\startPart
+	c1:m | aes:9 | c2:m c:m7+ | c:m7 c:m6 | \myEndLine
+	g1:m/d | d:7.9- | g:m | f2:m7 bes:7 | \myEndLine
+	ees1:maj7 | ees2:6 c:7.9- | f:m7 f:m7/ees | d:m7.5- g:7 | \myEndLine
+	c1:m | f:m | bes:m7 | ees2:7 a:7.5- | \myEndLine
+	\endPart
+
+	\myMark "B"
+	\startPart
+	aes1 | g:7 | c:m | d2:m7.5- g:7 | \myEndLine
+	c1:m | d2:m7.5- g4:7 g:7.5+ | c1:m | f2:m7 bes:7.9- | \myEndLine
+	\endPart
+
+	\myMark "C"
+	\startPart
+	ees1 | aes:7 | ees1*2 | \myEndLine
+	bes1:m7 | ees2:7 ees:7.5+ | aes1*2:6 | \myEndLine
+	f1:m7 | bes:7 | ees1*2 | \myEndLine
+	a2:m7.5- d:7.5+ | a:m7.5- d:7.5+ | g:m7.5- c:7.9- | f:m7.5- bes:7 | \myEndLine
+	ees1*2 | d1:m7.5- | g:7 | \myEndLine
+	c1:m | d2:m7.5- g4:7 g:7.5+ | c1*2:m | \myEndLine
+	\endPart
+
+	\myMark "Coda"
+	\startPart
+	c1*3:m | d2:m7.5- g4:7 g:7.5+ | \myEndLine
+	c1*3:m | d2:m7.5- g4:7 g:7.5+ | \myEndLine
+	c1*3:m | aes1:9 | \myEndLine
+	c2:m c:m7+ | c:m c:m6 | c:m c:m7+ | c:m7 c:m6 | c1:m | \myEndLine
+	\endPart
+
+	\endSong
+	\endChords
+}
+{% endif %}
+{% if part == "VoiceFake" %}{
+	\tempo "Moderato" 4 = 140
+	\time 2/2
+	\key c \minor
+
+	\partial 4 g'4 |
+
+	% part "A"
+	c1~^\markup { \musicglyph #"scripts.segno" } | c4 ees d bes | g1~ | g2 r4 g |
+	bes2. g4 | a!2. fis4 | g1~ | g2 r |
+	g1~ | g4 bes aes g | g f e! f | aes4. aes8~ aes4 g |
+	f4 ees d ees | g f ees f | des1~ | des2 r |
+
+	% part "B"
+	r4 c ees f | g g2 ees4 | c ees f g | f f2 g4 |
+	c4 b! bes ees, | g fis8 f!~ f4 ees^\markup { To Coda \musicglyph #"scripts.coda" } | c1~ | c2 r |
+
+	% part "C"
+	bes4 c d ees | c d ees f | d c8 d~ d2 | d2. r4 |
+	ees4 f g aes | f g ees g | f1~ | f2 r4 bes |
+	bes2 f4 bes | bes bes2 c4 | c2 g4 c | c c2 d4 |
+	d4 c \tuplet 3/2 { bes a! bes } | c c~ \tuplet 3/2 { c bes a! } | bes2 \tuplet 3/2 { bes4 aes g } | aes aes2 g4 |
+	ees2~ ees8 f g4 | c g8 f~ f ees c4 | f f2.~ | f2 r4 g |
+	c4 b! bes ees, | g fis8 f!~ f4 ees | c c2.~ | c4 r r g'^\markup { D.S. al Coda } |
+
+	% part "Coda"
+	c,1~^\markup { \musicglyph #"scripts.coda" } | c2 r4 g' | c b! bes ees, | g fis8 f!~ f4 ees |
+	c1~ | c2 r4 g' | c b! bes ees, | g fis8 f!~ f4 ees |
+	c1~ | c2 r4 g' | c1~ | c4 ees d bes |
+	g1~ | g1~ | g1~ | g1 | r1 |
+}
+{% endif %}

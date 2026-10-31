@@ -1,0 +1,81 @@
+{#
+default_version = "Fake"
+
+[attributes]
+title = "Barbados"
+style = "Jazz"
+composer = "Charlie Parker"
+piece = "Fast"
+copyright = "1948 ATLANTIC MUSIC CORP."
+copyrightextra = "Renewed and assigned 1976 ATLANTIC MUSIC CORP."
+typesetter = "Mark Veltzer <mark.veltzer@gmail.com>"
+completion = "5"
+uuid = "08f2f98e-d4f0-11f1-8000-046874d194b7"
+structure = "Blues"
+location = "jfb:52"
+
+[[youtube]]
+id = "aIRVoZ2esDg"
+remark = "Charlie Parker in the original recording (1948)"
+
+[[youtube]]
+id = "dlLH1qa6peM"
+remark = "Charlie Parker live at the Royal Roost (1949)"
+
+[versions.Fake]
+doChords = true
+doVoice = true
+doLyrics = false
+doLyricsmore = false
+doLyricsmoremore = false
+doChordBars = false
+doGuitar = false
+doExtra = false
+doPrep = false
+doOwn = false
+#}
+{% if part == "Vars" %}
+{% endif %}
+{% if part == "Doc" %}	DONE:
+	- added the meta data from the fake book.
+	- put in the tunes structure.
+	- put in the chords (fake book).
+	- put in the tune (fake book).
+	- added youtube performances.
+	TODO:
+	- check the chords (fake book).
+	- check the tune (fake book).
+	- hear the tune to check that it is right and adjust the tempo.
+	- the melody is printed low in the book (down to E below middle C), it is kept at the printed octave.
+{% endif %}
+{% if part == "ChordsFake" %}\chordmode {
+	\startChords
+	\startSong
+
+	\myMark "A"
+	\startPart
+	\repeat volta 2 {
+		f1 | g2:m7 c:7 | f1:7 | c2:m7 f:7 | \myEndLine
+		bes1*2:7 | f1*2 | \myEndLine
+		g1:m7 | c:7.9- | f | g2:m7 c:7 | \myEndLine
+	}
+	\endPart
+
+
+	\endSong
+	\endChords
+}
+{% endif %}
+{% if part == "VoiceFake" %}{
+	\tempo "Allegro" 4 = 220
+	\time 4/4
+	\key f \major
+
+	% part "A"
+	\repeat volta 2 {
+		g4 r8 c a4. bes8 | \tuplet 3/2 { c4 a bes } \tuplet 3/2 { des4 a'4. g8 } | e8 g f c bes d c c | r8 a16 bes c8 d ees f d a |
+		c8 f, g aes r4 r8 f | g8 f bes a c bes ees c | r4 r8 c c2 | r8 c4 a8 bes a c bes |
+		a8 f g a c4 r8 bes16 c | des8 a'~ a2 g4 | r8 e, f g a g f e | r8 e f g a g f e |
+	}
+}
+{% endif %}

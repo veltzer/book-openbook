@@ -1,0 +1,104 @@
+{#
+default_version = "Fake"
+
+[attributes]
+title = "Work Song"
+style = "Jazz"
+composer = "Nathaniel Adderley"
+poet = "Oscar Brown Jr."
+piece = "Medium"
+copyright = "1960 UPAM MUSIC CO., A Division of Gopam Enterprises, Inc."
+typesetter = "Mark Veltzer <mark.veltzer@gmail.com>"
+completion = "5"
+uuid = "af0af124-d4ef-11f1-8000-046874d194b7"
+structure = "AB"
+location = "jfb:434"
+
+[[youtube]]
+id = "qLQ43zsXPik"
+remark = "Nat Adderley in the original recording from Work Song (1960)"
+
+[[youtube]]
+id = "VlepuNi40M8"
+remark = "Cannonball Adderley Quintet from Them Dirty Blues (1960)"
+
+[versions.Fake]
+doChords = true
+doVoice = true
+doLyrics = false
+doLyricsmore = false
+doLyricsmoremore = false
+doChordBars = false
+doGuitar = false
+doExtra = false
+doPrep = false
+doOwn = false
+#}
+{% if part == "Vars" %}
+{% endif %}
+{% if part == "Doc" %}	DONE:
+	- added the meta data from the fake book.
+	- put in the tunes structure.
+	- put in the chords (fake book).
+	- put in the tune (fake book).
+	- added youtube performances.
+	TODO:
+	- add the lyrics.
+	- check the chords (fake book).
+	- check the tune (fake book).
+	- hear the tune to check that it is right and adjust the tempo.
+	- the last note of bar 6 of the B part has no accidental in the fake book after a G flat earlier in the bar, so it is written as G flat (tied into the next bar). Check whether G natural is meant.
+{% endif %}
+{% if part == "ChordsFake" %}\chordmode {
+	\startChords
+	\startSong
+
+	\repeat volta 4 {
+
+		\myMark "A"
+		\startPart
+		c1*4:m7 | \myEndLine
+		c1*2:m7 | g2..:m7 g8:7 | g1:7 | \myEndLine
+		\endPart
+
+		\myMark "B"
+		\startPart
+		c1*4:m7 | \myEndLine
+		c1:7 | f:7 | d4.:7 g8*5:7.5+ |
+	} \alternative {
+		{
+			c1:m6 | \myEndLineVoltaNotLast
+		}
+		{
+			c1:m6.9 | \myEndLineVoltaLast
+		}
+	}
+	\endPart
+
+	\endSong
+	\endChords
+}
+{% endif %}
+{% if part == "VoiceFake" %}{
+	\tempo "Moderato" 4 = 120
+	\time 4/4
+	\key c \minor
+
+	\repeat volta 4 {
+		% part "A"
+		r4 c8 c ees f4 g8~ | g4 g8 f g4 bes | r4 c,8 c ees f4. | c4 c8 bes c2 |
+		r4 c8 c ees f4 g8~ | g4 g8 f g4 bes | r4 g8 g bes g4 b8~ | b4 g8 f g2 |
+
+		% part "B"
+		r4 c8 bes \tuplet 3/2 { g f ees } f ees~ | ees4 ees8 c ees4 f | r4 c8 c ees f4 c8~ | c4 c8 bes c c c4 |
+		ges'8 g4. r4 c, | ges'8 f4. r8 c ees ges~ | ges8 f4 ees8 \tuplet 3/2 { f8 ees c } bes c~ |
+	} \alternative {
+		{
+			c2. r4 |
+		}
+		{
+			c2. r4 |
+		}
+	}
+}
+{% endif %}

@@ -1,0 +1,124 @@
+{#
+default_version = "Fake"
+
+[attributes]
+title = "I Should Care"
+style = "Jazz"
+composer = "Sammy Cahn, Alex Stordahl, Paul Weston"
+poet = "Sammy Cahn, Alex Stordahl, Paul Weston"
+piece = "Tenderly"
+copyright = "1944 (Renewed) Dorsey Brothers Music, A Division of Music Sales Corporation"
+typesetter = "Mark Veltzer <mark.veltzer@gmail.com>"
+completion = "5"
+uuid = "72b45256-d4ef-11f1-8000-046874d194b7"
+structure = "ABAC"
+location = "jfb:163"
+
+[[youtube]]
+id = "7dHqZ9JgdpQ"
+remark = "Frank Sinatra in the original recording (1945)"
+
+[[youtube]]
+id = "Ab1mVkiNpzM"
+remark = "Thelonious Monk solo piano"
+
+[versions.Fake]
+doChords = true
+doVoice = true
+doLyrics = false
+doLyricsmore = false
+doLyricsmoremore = false
+doChordBars = false
+doGuitar = false
+doExtra = false
+doPrep = false
+doOwn = false
+#}
+{% if part == "Vars" %}
+{% endif %}
+{% if part == "Doc" %}	DONE:
+	- added the meta data from the fake book.
+	- put in the tunes structure.
+	- put in the chords (fake book).
+	- put in the tune (fake book).
+	- added youtube performances.
+	TODO:
+	- check the chords (fake book).
+	- check the tune (fake book).
+	- hear the tune to check that it is right and adjust the tempo.
+	- add the lyrics.
+{% endif %}
+{% if part == "ChordsFake" %}\chordmode {
+	\startChords
+	\startSong
+
+	\repeat volta 2 {
+
+		\myMark "A"
+		\startPart
+		d2.:m7 g4:9 | e2:m7 a:7 | d2:m7 \tuplet 3/2 { f2/g g4:9 } | c1:maj9 | \myEndLine
+		e2.:m7.5- a4:7 | a1:7 | d1:m7 | f4:m7 bes2.:7 | \myEndLine
+		\endPart
+
+		\myMark "B"
+		\startPart
+		a1:m | b4:m7 e2.:7 | g2:m7 g:m7/c | f1:maj7 | \myEndLine
+		b2:m7.5- e:7.9- | a1:m7 | d1:sus4.7 | d2:m7 g:7 | \myEndLine
+		\endPart
+
+		\myMark "A"
+		\startPart
+		fis2.:m7.5- b4:7.5- | e2:m7 a:7 | d2:m7 f2/g | c1:maj9 | \myEndLine
+		e2.:m7.5- a4:7 | a1:7 | d1:m7 | f4:m7 bes2.:7 | \myEndLine
+		\endPart
+
+		\myMark "C"
+		\startPart
+		a1:m | b4:m7.5- e2.:7.9- | a4:m a2:m7+ a4:m7 | \myEndLine
+		d2.:13 ees4:m9 | d1:m7 | g1:7 |
+	} \alternative {
+		{
+			c2 f:maj7 | e:m7 a:7 | \myEndLineVoltaNotLast
+		}
+		{
+			c2 bes4:9 f:m7 | c1:6 | \myEndLineVoltaLast
+		}
+	}
+	\endPart
+
+	\endSong
+	\endChords
+}
+{% endif %}
+{% if part == "VoiceFake" %}{
+	\tempo "Andante" 4 = 72
+	\time 4/4
+	\key c \major
+
+	\repeat volta 2 {
+
+		% part "A"
+		c'2. b4 | b1 | r4 a8 b \tuplet 3/2 { c4 b a } | b4 c2. |
+		bes2. a4 | a1 | r4 e8 f \tuplet 3/2 { g4 d e } | f4 f2. |
+
+		% part "B"
+		\tuplet 3/2 { e4 f e } f e | e4 e2. | \tuplet 3/2 { e4 f e } g f | e1 |
+		\tuplet 3/2 { d4 e d } f e | c4 c2. | \tuplet 3/2 { d4 e c } d e | \tuplet 3/2 { a4 b g } a b |
+
+		% part "A"
+		c2. b4 | b1 | r4 a8 b \tuplet 3/2 { c4 b a } | b4 c2. |
+		bes2. a4 | a1 | r4 e8 f \tuplet 3/2 { g4 d e } | f4 f2. |
+
+		% part "C"
+		\tuplet 3/2 { e4 f e } f e | g4 f2 e4 | b'4 gis2 a4 |
+		d2. cis4 | c!2. a4 | b2. a8 b |
+	} \alternative {
+		{
+			c1~ | c4 r r2 |
+		}
+		{
+			c1~ | c2~ c8 r r4 |
+		}
+	}
+}
+{% endif %}

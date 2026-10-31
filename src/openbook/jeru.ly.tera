@@ -1,0 +1,98 @@
+{#
+default_version = "Fake"
+
+[attributes]
+title = "Jeru"
+style = "Jazz"
+composer = "Miles Davis"
+piece = "Fast"
+copyright = "1954 by Beechwood Music Corp., Hollywood, CA"
+typesetter = "Mark Veltzer <mark.veltzer@gmail.com>"
+completion = "5"
+uuid = "b02c327a-d4ef-11f1-8000-046874d194b7"
+structure = "AABA"
+location = "jfb:197"
+
+[[youtube]]
+id = "qH1x4ODEJo4"
+remark = "Miles Davis in the original recording from Birth of the Cool (1949)"
+
+[[youtube]]
+id = "Di7jX-4iFlo"
+remark = "Gerry Mulligan"
+
+[versions.Fake]
+doChords = true
+doVoice = true
+doLyrics = false
+doLyricsmore = false
+doLyricsmoremore = false
+doChordBars = false
+doGuitar = false
+doExtra = false
+doPrep = false
+doOwn = false
+#}
+{% if part == "Vars" %}
+{% endif %}
+{% if part == "Doc" %}	DONE:
+	- added the meta data from the fake book.
+	- put in the tunes structure.
+	- put in the chords (fake book).
+	- put in the tune (fake book).
+	- added youtube performances.
+	TODO:
+	- check the chords (fake book).
+	- check the tune (fake book).
+	- hear the tune to check that it is right and adjust the tempo.
+	- the fake book has no melody in the B part (only chords and rests); add the melody from a recording.
+	- the fake book ends the last A with a repeat sign as well; it is not written here.
+{% endif %}
+{% if part == "ChordsFake" %}\chordmode {
+	\startChords
+	\startSong
+
+	\myMark "A"
+	\startPart
+	\repeat volta 2 {
+		ees1*3 | des1:7 | \myEndLine
+		ees2 c:7 | f:m7 d:7 | ees1 | f2:m7 ges:dim7 | \myEndLine
+	}
+	\endPart
+
+	\myMark "B"
+	\startPart
+	bes1:m7 | ees:7 | aes1*2 | \myEndLine
+	aes1:m7 | des:7 | ges | f2:m7 bes:7 | \myEndLine
+	\endPart
+
+	\myMark "A"
+	\startPart
+	ees1*3 | des1:7 | \myEndLine
+	ees2 c:7 | f:m7 d:7 | ees1 | f2:m7 ges:dim7 | \myEndLine
+	\endPart
+
+	\endSong
+	\endChords
+}
+{% endif %}
+{% if part == "VoiceFake" %}{
+	\tempo "Allegro" 4 = 220
+	\time 4/4
+	\key ees \major
+
+	% part "A"
+	\repeat volta 2 {
+		bes'8 c d ees bes g f ees | f8 g f ees r4 r8 ees8 | f8 g f ees~ ees c4 ees8 | f8 g f ces r4 r8 ees8 |
+		f8 g f ees e! c'4 g8 | bes8 g aes a!~ a d4 a8 | c8 a! bes c d f ees aes,~ | aes8 f' ees a,!~ a f' ees bes |
+	}
+
+	% part "B"
+	R1 | R1 | R1 | R1 |
+	R1 | R1 | R1 | R1 |
+
+	% part "A"
+	bes8 c d ees bes g f ees | f8 g f ees r4 r8 ees8 | f8 g f ees~ ees c4 ees8 | f8 g f ces r4 r8 ees8 |
+	f8 g f ees e! c'4 g8 | bes8 g aes a!~ a d4 a8 | c8 a! bes c d f ees aes,~ | aes8 f' ees a,!~ a f' ees bes |
+}
+{% endif %}

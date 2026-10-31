@@ -1,0 +1,80 @@
+{#
+default_version = "Fake"
+
+[attributes]
+title = "Bloomdido"
+style = "Jazz"
+composer = "Charlie Parker"
+piece = "Fast"
+copyright = "1954 ATLANTIC MUSIC CORP."
+copyrightextra = "Renewed 1981 ATLANTIC MUSIC CORP."
+typesetter = "Mark Veltzer <mark.veltzer@gmail.com>"
+completion = "5"
+uuid = "08f5092c-d4f0-11f1-8000-046874d194b7"
+structure = "Blues"
+location = "jfb:62"
+
+[[youtube]]
+id = "tM1oX_b86E4"
+remark = "Charlie Parker and Dizzy Gillespie in the original recording from Bird and Diz (1950)"
+
+[[youtube]]
+id = "fzzE73QK_Kk"
+remark = "Charlie Parker and Dizzy Gillespie Quintet"
+
+[versions.Fake]
+doChords = true
+doVoice = true
+doLyrics = false
+doLyricsmore = false
+doLyricsmoremore = false
+doChordBars = false
+doGuitar = false
+doExtra = false
+doPrep = false
+doOwn = false
+#}
+{% if part == "Vars" %}
+{% endif %}
+{% if part == "Doc" %}	DONE:
+	- added the meta data from the fake book.
+	- put in the tunes structure.
+	- put in the chords (fake book).
+	- put in the tune (fake book).
+	- added youtube performances.
+	TODO:
+	- check the chords (fake book).
+	- check the tune (fake book).
+	- hear the tune to check that it is right and adjust the tempo.
+{% endif %}
+{% if part == "ChordsFake" %}\chordmode {
+	\startChords
+	\startSong
+
+	\myMark "A"
+	\startPart
+	\repeat volta 2 {
+		bes1 | bes:7 | bes1*2 | \myEndLine
+		ees1*2:7 | bes1:7 | des:m7 | \myEndLine
+		c1:m7 | f:7 | bes:7 | c2:m7 f:7 | \myEndLine
+	}
+	\endPart
+
+
+	\endSong
+	\endChords
+}
+{% endif %}
+{% if part == "VoiceFake" %}{
+	\tempo "Allegro" 4 = 220
+	\time 4/4
+	\key bes \major
+
+	% part "A"
+	\repeat volta 2 {
+		bes8 c bes g r4 r8 bes | d4 f8 c r f, r d' | bes8 c bes g ees' d bes aes | r8 g' r f c aes fis g |
+		f'8 ees bes g bes r r des~ | des4 bes8 ges c bes g f | r4 r8 bes a r r c | fis8 e \tuplet 3/2 { b8 gis dis' } r4 r8 cis |
+		c!8 g! r a c bes a g | ges8 bes c d ees c d ees | \tuplet 3/2 { d16 ees d } bes8 ees bes d ees \tuplet 3/2 { d16 ees d } bes8 | ees4 r r2 |
+	}
+}
+{% endif %}

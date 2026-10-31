@@ -1,0 +1,139 @@
+{#
+default_version = "Fake"
+
+[attributes]
+title = "Lush Life"
+style = "Jazz"
+composer = "Billy Strayhorn"
+poet = "Billy Strayhorn"
+piece = "Verse tempo ad lib., Chorus a tempo"
+copyright = "1949 by Tempo Music, Inc."
+copyrightextra = "Copyright renewed and assigned to Temp Music, Inc."
+typesetter = "Mark Veltzer <mark.veltzer@gmail.com>"
+completion = "5"
+uuid = "3170e79e-d4f1-11f1-8000-046874d194b7"
+structure = "Intro ABC"
+location = "jfb:232"
+
+[[youtube]]
+id = "oTSVj7PRgU8"
+remark = "Nat King Cole Trio, the first famous recording (1949)"
+
+[[youtube]]
+id = "WTYbhVJsUEw"
+remark = "Billy Strayhorn, the composer, sings and plays"
+
+[versions.Fake]
+doChords = true
+doVoice = true
+doLyrics = false
+doLyricsmore = false
+doLyricsmoremore = false
+doChordBars = false
+doGuitar = false
+doExtra = false
+doPrep = false
+doOwn = false
+#}
+{% if part == "Vars" %}
+{% endif %}
+{% if part == "Doc" %}	DONE:
+	- added the meta data from the fake book.
+	- put in the tunes structure.
+	- put in the chords (fake book).
+	- put in the tune (fake book).
+	- added youtube performances.
+	TODO:
+	- add the lyrics.
+	- check the chords (fake book).
+	- check the tune (fake book).
+	- hear the tune to check that it is right and adjust the tempo.
+	- the verse (marked here as Intro) is "tempo ad lib." and the chorus "a tempo" in the fake book.
+	- the copyright on the page says "Temp Music, Inc." in the second line (probably a typo for Tempo Music, Inc.).
+	- accidentals that the fake book does not repeat inside a bar were taken to carry through the bar (verse bars 4, 5 and the second ending; chorus bar 10 "fis fis e").
+	- the exact beat of some chords is doubtful (B7 in verse bars 2-3, A9 in chorus bar 9, D9 in chorus bar 22, the chords of chorus bars 11-12).
+{% endif %}
+{% if part == "ChordsFake" %}\chordmode {
+	\startChords
+	\startSong
+
+	\partial 8 s8 |
+
+	\myMark "Intro"
+	\startPart
+	\repeat volta 2 {
+		des2:6 b:7 | des2.:maj7 b4:7 | \myEndLine
+		des2.:maj7 b4:7 | des4:maj7 ees:m e:maj7 fis:m7 |
+	} \alternative {
+		{
+			aes2:m7 d:9 | \myEndLine
+			des2:6.9 d:9 | des1:maj9 | \myEndLineVoltaNotLast
+		}
+		{
+			aes2:m7 d:9 | \myEndLineVoltaLast
+		}
+	}
+	des2:6.9 d:9 | des2.:6.9 c4:7.5+ | f2:m f:m6 | f2:m7 d:m7.5- | s2 g:m7 | \myEndLine
+	s2 c:7.9- | f2:m f:m6 | f2:m7 d:m7.5- | des2:maj7/f c:7.9-/e | ees2:m7 aes:9 | \myEndLine
+	b1:9.5- | bes:7.9- | ees:m7 | a:9.5- | aes:11 | s2 aes:7.9- | \myEndLine
+	\endPart
+
+	\myMark "A"
+	\startPart
+	des2 d:9 | des2:6 d:9 | des2:6 c4:9.5- b:7.9- | e4 ees:9.5+ d:9 d:7 | \myEndLine
+	des2 d:9 | des2 d:9 | des2:6 des4:9 c:13 | f4 e:7.5+ bes:m7 ees:7 | \myEndLine
+	\endPart
+
+	\myMark "B"
+	\startPart
+	aes2 ees4:7.9+ a:9 | aes2:6 e4:m9 a:7.9- | d2:6 d4:m7 g:9 | c4.:6 b8:7 \tuplet 3/2 { bes4:13 a:13.9+ aes:13 } | \myEndLine
+	des2 d:9 | des2:6 d:9 | des2:6 c4:9.5- b:7.9- | bes1:13 | \myEndLine
+	\endPart
+
+	\myMark "C"
+	\startPart
+	ees2:m11 ges4:m9 b:9 | a2:9.5+ aes:9 | des4.:maj7 des8:m7 ges2:7.9- | ces8:maj7 ces4:6 f4.:m11 bes4:7 | \myEndLine
+	ees2:m7 ges4:m9 b:9 | a2:9.5+ aes4.:13 d8:9 | e4 ees:6 d:maj7 g:9 | des2:6.9 des:maj7 | \myEndLine
+	\endPart
+
+	\endSong
+	\endChords
+}
+{% endif %}
+{% if part == "VoiceFake" %}{
+	\tempo "Adagio" 2 = 40
+	\time 2/2
+	\key des \major
+
+	\partial 8 aes8 |
+
+	% part "Intro"
+	\repeat volta 2 {
+		des8 des des des ees ees ees ees | \tuplet 3/2 { f4 f f~ } f8 f ees ees |
+		\tuplet 3/2 { f4 f f~ } f8 f ees ees | f8 f ges ges aes aes a a |
+	} \alternative {
+		{
+			b8 b b4~ b8 a b a |
+			aes8 aes aes4~ aes8 bes e, e | ees8 ees4. r4 r8 aes,8 |
+		}
+		{
+			b'8 b b4~ b8 a \tuplet 3/2 { b8 a b } |
+		}
+	}
+	aes8 aes aes2 e8 e | ees8 ees4. r4 c'4 | c,4 c8 c d4. d8 | f4 f8 f aes4. aes8 | \tuplet 3/2 { c4 d aes } c4 c~ |
+	c2 r4 c4 | c,4 c8 c d4. d8 | f4 f8 f aes4. aes8 | \tuplet 3/2 { c4 ees bes } c4 c | \tuplet 3/2 { bes4 c aes } bes4 c8 f,~ |
+	f1 | r4 aes aes ges8 f | ees1 | r4 ees ees f8 des | aes'1~ | aes2 r2 |
+
+	% part "A"
+	aes,4. bes8 \tuplet 3/2 { b4 e a, } | aes4. bes8 \tuplet 3/2 { c4 e b } | bes4 \tuplet 3/2 { aes8 des f } ges4 aes | b,2. a4 |
+	aes4. bes8 \tuplet 3/2 { b4 e a, } | aes4. bes8 \tuplet 3/2 { c4 e b } | bes4 \tuplet 3/2 { aes8 des f } aes4 a | c,2. des4 |
+
+	% part "B"
+	ees4. f8 ges ges4 e8 | ees4. f8 \tuplet 3/2 { fis4 fis e } | a,4. b8 c c4 b8 | a4. b8 \tuplet 3/2 { c4 c bes } |
+	aes4. bes8 \tuplet 3/2 { b4 e a, } | aes4. bes8 \tuplet 3/2 { c4 e b } | bes4 \tuplet 3/2 { aes8 des f } ges4 aes | bes2. r8 f8 |
+
+	% part "C"
+	aes4. ges8 aes4 aes8 ges | f4 ees8 f~ f4. c8 | ees4. des8 ees ees4 des8 | des8 ces4 bes'8~ bes4. f8 |
+	aes4. ges8 aes4 aes8 ges | f4 f8 ees f4. aes,8 | ces4 c des d | ees8 e f2. |
+}
+{% endif %}

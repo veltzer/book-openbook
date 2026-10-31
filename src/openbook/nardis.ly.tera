@@ -1,0 +1,114 @@
+{#
+default_version = "Fake"
+
+[attributes]
+title = "Nardis"
+style = "Jazz"
+composer = "Miles Davis, Bill Evans"
+piece = "Medium Fast Jazz"
+copyright = "1959 JAZZ HORN MUSIC CORP & WARNER-TAMERLANE PUBLISHING CORP."
+copyrightextra = "WARNER-TAMERLANE PUBLISHING CORP. administers on behalf of itself and JAZZ HORN MUSIC CORP."
+typesetter = "Mark Veltzer <mark.veltzer@gmail.com>"
+completion = "5"
+uuid = "0f747f6c-d4f0-11f1-8000-046874d194b7"
+structure = "AABA"
+location = "jfb:269"
+
+[[youtube]]
+id = "XLCTmYdmCkY"
+remark = "The Bill Evans Trio (official release)"
+
+[[youtube]]
+id = "qAeMI8w_9xc"
+remark = "Bill Evans live (1970)"
+
+[versions.Fake]
+doChords = true
+doVoice = true
+doLyrics = false
+doLyricsmore = false
+doLyricsmoremore = false
+doChordBars = false
+doGuitar = false
+doExtra = false
+doPrep = false
+doOwn = false
+#}
+{% if part == "Vars" %}
+{% endif %}
+{% if part == "Doc" %}	DONE:
+	- added the meta data from the fake book.
+	- put in the tunes structure.
+	- put in the chords (fake book).
+	- put in the tune (fake book).
+	- added youtube performances.
+	TODO:
+	- check the chords (fake book).
+	- check the tune (fake book).
+	- hear the tune to check that it is right and adjust the tempo.
+	- the book places the FM7 in bars 3 and 7 of the B part on beat 4 (over the last quarter note), kept so here.
+	- the last bar of the book has only a half note, here it is completed with a half rest.
+{% endif %}
+{% if part == "ChordsFake" %}\chordmode {
+	\startChords
+	\startSong
+
+	\partial 2 s2 |
+
+	\myMark "A"
+	\startPart
+	\repeat volta 2 {
+		e1:m | f2:maj7 e:maj7 | b1:7 | c:maj7 | a:m7 | f:maj7 | e:maj7 |
+	} \alternative {
+		{
+			e1:m | \myEndLineVoltaNotLast
+		}
+		{
+			e1:m | \myEndLineVoltaLast
+		}
+	}
+	\endPart
+
+	\myMark "B"
+	\startPart
+	a1:m7 | f:maj7 | a2.:m7 f4:maj7 | f1:maj7 | \myEndLine
+	d1:m7 | g:7 | c2.:maj7 f4:maj7 | f1:maj7 | \myEndLine
+	\endPart
+
+	\myMark "A"
+	\startPart
+	e1:m | f2:maj7 e:maj7 | b1:7 | c:maj7 | \myEndLine
+	a:m7 | f:maj7 | e:maj7 | e:m | \myEndLine
+	\endPart
+
+	\endSong
+	\endChords
+}
+{% endif %}
+{% if part == "VoiceFake" %}{
+	\tempo "Allegro" 4 = 176
+	\time 4/4
+	\key g \major
+
+	\partial 2 b'2 |
+
+	% part "A"
+	\repeat volta 2 {
+		e1 | r8 dis,8 e e' dis4. c8 | b1~ | b1 | r8 b4. a4 g | e4. a8~ a2 | \tuplet 3/2 { gis8 a gis } f!2 e4~ |
+	} \alternative {
+		{
+			e2 b'2 |
+		}
+		{
+			e,2 e2 |
+		}
+	}
+
+	% part "B"
+	b'2. b4~ | b2 b,8 c e g | b2. b4~ | b2. r4 |
+	r8 e4. d4 c | e2 d2 | b2. b4~ | b2 b2 |
+
+	% part "A"
+	e1 | r8 dis,8 e e' dis4. c8 | b1~ | b1 | r8 b4. a4 g | e4. a8~ a2 | \tuplet 3/2 { gis8 a gis } f!2 e4~ | e2 r2 |
+}
+{% endif %}

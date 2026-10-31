@@ -1,0 +1,102 @@
+{#
+default_version = "Fake"
+
+[attributes]
+title = "Oleo"
+style = "Jazz"
+composer = "Sonny Rollins"
+piece = "Fast"
+copyright = "1963 Prestige Music"
+typesetter = "Mark Veltzer <mark.veltzer@gmail.com>"
+completion = "5"
+uuid = "af92fb0a-d4ef-11f1-8000-046874d194b7"
+structure = "AABA"
+location = "jfb:284"
+
+[[youtube]]
+id = "RJUZroNIbYM"
+remark = "Miles Davis with Sonny Rollins in the original recording from Bags' Groove (1954)"
+
+[[youtube]]
+id = "cdJSQF3AzX8"
+remark = "Sonny Rollins live with NHOP and Alan Dawson (1965)"
+
+[versions.Fake]
+doChords = true
+doVoice = true
+doLyrics = false
+doLyricsmore = false
+doLyricsmoremore = false
+doChordBars = false
+doGuitar = false
+doExtra = false
+doPrep = false
+doOwn = false
+#}
+{% if part == "Vars" %}
+{% endif %}
+{% if part == "Doc" %}	DONE:
+	- added the meta data from the fake book.
+	- put in the tunes structure.
+	- put in the chords (fake book).
+	- put in the tune (fake book).
+	- added youtube performances.
+	TODO:
+	- check the chords (fake book).
+	- check the tune (fake book).
+	- hear the tune to check that it is right and adjust the tempo.
+	- the fake book only gives a Bb chord for the whole A section (no rhythm changes written out).
+	- the fake book gives no melody for the bridge (rests only, the bridge is improvised).
+{% endif %}
+{% if part == "ChordsFake" %}\chordmode {
+	\startChords
+	\startSong
+
+	\myMark "A"
+	\startPart
+	\repeat volta 2 {
+		bes1*4 | \myEndLine
+		bes1*3 |
+	} \alternative {
+		{
+			bes1 | \myEndLineVoltaNotLast
+		}
+		{
+			bes1 | \myEndLineVoltaLast
+		}
+	}
+	\endPart
+
+	\myMark "B"
+	\startPart
+	d1*2:7 | g1*2:7 | \myEndLine
+	c1*2:7 | f1*2:7 | \myEndLine
+	\endPart
+
+	\endSong
+	\endChords
+}
+{% endif %}
+{% if part == "VoiceFake" %}{
+	\tempo "Allegro" 4 = 220
+	\time 4/4
+	\key bes \major
+
+	% part "A"
+	\repeat volta 2 {
+		r8 bes'4 f8 c'4. bes8~ | bes8 f d'4 r8 ees4 d8 | r8 bes r g d' ees d c | bes8 g aes a r bes4 f8 |
+		c'4 r8 bes8~ bes g bes4 | r8 bes4 g8 ees' d a c | r4 r8 g r bes r g |
+	} \alternative {
+		{
+			d'4 r8 c d c a f |
+		}
+		{
+			des'8 g, c bes r2^\markup { \italic { Fine } } |
+		}
+	}
+
+	% part "B"
+	r1 | r1 | r1 | r1 |
+	r1 | r1 | r1 | r1^\markup { \italic { D.C. al Fine (2nd ending) } } |
+}
+{% endif %}

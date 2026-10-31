@@ -1,0 +1,106 @@
+{#
+default_version = "Fake"
+
+[attributes]
+title = "Boplicity"
+subtitle = "Bebop Lives"
+style = "Jazz"
+composer = "Miles Davis"
+poet = "Ray Passman, Holli Ross"
+piece = "Medium swing"
+copyright = "1981 Sophisticate Music"
+typesetter = "Mark Veltzer <mark.veltzer@gmail.com>"
+completion = "5"
+uuid = "b02a1896-d4ef-11f1-8000-046874d194b7"
+structure = "AABA"
+location = "jfb:70"
+
+[[youtube]]
+id = "HdP0Xma4pSw"
+remark = "Miles Davis in the original recording from Birth of the Cool (1949)"
+
+[[youtube]]
+id = "w6vuBL9eQbs"
+remark = "Miles Davis with the Gil Evans Orchestra conducted by Quincy Jones, live at Montreux (1991)"
+
+[versions.Fake]
+doChords = true
+doVoice = true
+doLyrics = false
+doLyricsmore = false
+doLyricsmoremore = false
+doChordBars = false
+doGuitar = false
+doExtra = false
+doPrep = false
+doOwn = false
+#}
+{% if part == "Vars" %}
+{% endif %}
+{% if part == "Doc" %}	DONE:
+	- added the meta data from the fake book.
+	- put in the tunes structure.
+	- put in the chords (fake book).
+	- put in the tune (fake book).
+	- added youtube performances.
+	TODO:
+	- add the lyrics.
+	- check the chords (fake book).
+	- check the tune (fake book).
+	- hear the tune to check that it is right and adjust the tempo.
+	- check the placement of the second chord in bars 4, 12, 17, 18, 21, 22, 28 (the fake book prints it over the second or third beat; put on beat 3 here).
+{% endif %}
+{% if part == "ChordsFake" %}\chordmode {
+	\startChords
+	\startSong
+
+	\myMark "A"
+	\startPart
+	f2:m7 g:m7 | aes:maj7 bes:7 | ees1:maj7 | bes2:m7 ees:7.5+.9+ | \myEndLine
+	aes1:maj7 | f2:m7 ees:maj7/g | aes2:maj7 bes4.:7sus4 ees8*9:maj7.11+ | \myEndLine
+	\endPart
+
+	\myMark "A"
+	\startPart
+	f2:m7 g:m7 | aes:maj7 bes:7 | ees1:maj7 | bes2:m7 ees:7.5+.9+ | \myEndLine
+	aes1:maj7 | f2:m7 ees:maj7/g | aes2:maj7 bes:7sus4 | ees1:maj7.11+ | \myEndLine
+	\endPart
+
+	\myMark "B"
+	\startPart
+	bes2:m7 ees:7.5+.9+ | bes2:m7 ees:7.5+.9+ | aes1*2:maj7 | \myEndLine
+	aes2:m7 des:7.5+.9+ | aes2:m7 des:7.5+.9+ | ges2:maj7 ges:m7 | f:m7 bes:13.11+ | \myEndLine
+	\endPart
+
+	\myMark "A"
+	\startPart
+	f2:m7 g:m7 | aes:maj7 bes:7 | ees1:maj7 | bes2:m7 ees:7.5+.9+ | \myEndLine
+	aes1:maj7 | f2:m7 ees:maj7/g | aes2:maj7 bes4.:7 ees8*9:maj7.11+ | \myEndLine
+	\endPart
+
+	\endSong
+	\endChords
+}
+{% endif %}
+{% if part == "VoiceFake" %}{
+	\tempo "Moderato" 4 = 144
+	\time 4/4
+	\key ees \major
+
+	% part "A"
+	c8 ees4 bes'8~ \tuplet 3/2 { bes4 g ees } | \tuplet 3/2 { f4 ees f } g4 r8 bes,8~ | bes4 g'8 d~ d ees g bes | c8 aes16 f des8 b'!8 r4 r8 g8 |
+	bes8 g \tuplet 3/2 { aes bes aes } g ees c bes | ees8 c ees g ees c ees g | \tuplet 3/2 { ees4 g bes } ees8 bes4 a!8~ | a1 |
+
+	% part "A"
+	c,8 ees4 c'8~ c bes g ees | \tuplet 3/2 { f4 g f } g4 r8 bes,8~ | bes4 g'8 d~ d ees g bes | c8 aes16 f des8 b'!8 r4 r8 g8 |
+	bes8 g \tuplet 3/2 { aes bes aes } g ees c bes | ees8 c ees g ees c ees g | \tuplet 3/2 { ees4 g bes } ees4 bes8 a!8~ | a2. r8 aes8 |
+
+	% part "B"
+	c8 aes16 f des8 b'!8 r4 r8 c8 | c4 \tuplet 3/2 { aes8 f des } b'!4 r8 aes8 | bes8 bes4 bes8~ bes aes g f | ees8 des bes b! c ees f ees |
+	bes'8 ges16 ees b!8 a'!8 r4 r8 aes8 | bes4 \tuplet 3/2 { ges8 ees ces } a'!4 r8 f8 | aes8 aes4 aes8~ aes ges fes des | \tuplet 3/2 { g!4 aes bes } g2 |
+
+	% part "A"
+	c,8 ees4 bes'8~ bes g4 ees8 | \tuplet 3/2 { f4 ees f } g4 r8 bes,8~ | bes4 g'8 d~ d ees g bes | c8 aes16 f des8 b'!8 r4 r8 g8 |
+	bes8 g \tuplet 3/2 { aes bes aes } g ees c bes | ees8 c ees g ees c ees g | \tuplet 3/2 { ees4 g bes } ees8 bes4 a!8~ | a1 |
+}
+{% endif %}

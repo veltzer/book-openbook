@@ -1,0 +1,107 @@
+{#
+default_version = "Fake"
+
+[attributes]
+title = "Willow Weep For Me"
+style = "Jazz"
+composer = "Ann Ronell"
+poet = "Ann Ronell"
+piece = "Slowly"
+copyright = "1932 Bourne Co."
+copyrightextra = "Copyright Renewed."
+typesetter = "Mark Veltzer <mark.veltzer@gmail.com>"
+completion = "5"
+uuid = "44b116c8-d4ef-11f1-8000-046874d194b7"
+structure = "AABA"
+location = "jfb:434"
+
+[[youtube]]
+id = "sYtmBUpfEHE"
+remark = "Paul Whiteman with Irene Taylor (vocal) in the original recording (1932)"
+
+[[youtube]]
+id = "T7mjtTz3Vk4"
+remark = "Wes Montgomery with the Wynton Kelly Trio, live at the Half Note (1965)"
+
+[versions.Fake]
+doChords = true
+doVoice = true
+doLyrics = false
+doLyricsmore = false
+doLyricsmoremore = false
+doChordBars = false
+doGuitar = false
+doExtra = false
+doPrep = false
+doOwn = false
+#}
+{% if part == "Vars" %}
+{% endif %}
+{% if part == "Doc" %}	DONE:
+	- added the meta data from the fake book.
+	- put in the tunes structure.
+	- put in the chords (fake book).
+	- put in the tune (fake book).
+	- added youtube performances.
+	TODO:
+	- add the lyrics.
+	- check the chords (fake book).
+	- check the tune (fake book).
+	- hear the tune to check that it is right and adjust the tempo.
+	- bar 20 (B section): the fake book prints the third note of "aes. bes a g" with no accidental (so it reads as A flat), check whether an A natural was meant.
+	- the fake book prints the last A as 7 bars only (ending on G6/9), check against another source.
+{% endif %}
+{% if part == "ChordsFake" %}\chordmode {
+	\startChords
+	\startSong
+
+	\myMark "A"
+	\startPart
+	g2 c:7 | g c:7 | g1 | a2:m7 g4/b g:7 | \myEndLine
+	c2:9 des:9 | c:9 a4:m7 d:7 | g2 f4:7 e:7 | a2:m7 d:7 | \myEndLine
+	\endPart
+
+	\myMark "A"
+	\startPart
+	g2 c:7 | g c:7 | g1 | a2:m7 g4/b g:7 | \myEndLine
+	c2:9 des:9 | c:9 a4:m7 d:7 | g1 | d2:m7.5- g:7.9- | \myEndLine
+	\endPart
+
+	\myMark "B"
+	\startPart
+	c4:m c:m/bes a:m7.5- d:7.9- | g2:m g:7 | c:m bes:9 | aes:7 g:7 | \myEndLine
+	c4:m c:m/bes a:m7.5- d:7.9- | g2:m g:7 | c4:m7 f:9 bes:m7 ees:9 | aes2:7 d4:7 d:7.5+ | \myEndLine
+	\endPart
+
+	\myMark "A"
+	\startPart
+	g2 c:7 | g c:7 | g1 | a2:m7 g4/b g:7 | \myEndLine
+	c2:9 des:9 | c:9 a4:m7 d:7 | g4 c:7 g2:6.9 | \myEndLine
+	\endPart
+
+	\endSong
+	\endChords
+}
+{% endif %}
+{% if part == "VoiceFake" %}{
+	\tempo "Adagio" 4 = 66
+	\time 2/2
+	\key g \major
+
+	% part "A"
+	d'8. d,16 \tuplet 3/2 { e8 g e~ } e2 | d'8. d,16 \tuplet 3/2 { e8 g e~ } e2 | d'8. d,16 \tuplet 3/2 { e8 g e~ } e8. d16 \tuplet 3/2 { e8 g b~ } | b8. g16 \tuplet 3/2 { e8 g e~ } e2 |
+	d'8 c bes a g2 | d'8. c16 \tuplet 3/2 { bes8 a g } d'8 d,4 d8~ | d1~ | d1 |
+
+	% part "A"
+	d'8. d,16 \tuplet 3/2 { e8 g e~ } e2 | d'8. d,16 \tuplet 3/2 { e8 g e~ } e2 | d'8. d,16 \tuplet 3/2 { e8 g e~ } e8. d16 \tuplet 3/2 { e8 g b~ } | b8. g16 \tuplet 3/2 { e8 g e~ } e2 |
+	d'8 c bes a g2 | d'8. c16 \tuplet 3/2 { bes8 a g } d'8 d,4 d8~ | d1~ | d2 r2 |
+
+	% part "B"
+	g8. c16 \tuplet 3/2 { d8 c ees~ } ees4. c8 | bes8. g16 \tuplet 3/2 { bes8 g b~ } b4. g8 | c8. c16 d8. d16 bes8 c4 bes8 | aes8. bes16 aes8 g~ g4 r |
+	g8. c16 \tuplet 3/2 { d8 c ees~ } ees4. c8 | bes8. g16 \tuplet 3/2 { bes8 g b~ } b4. g8 | c8. c16 d8. c16 bes8 c4 bes8 | aes8. bes16 \tuplet 3/2 { c8 ees d~ } d4 d |
+
+	% part "A"
+	d8. d,16 \tuplet 3/2 { e8 g e~ } e2 | d'8. d,16 \tuplet 3/2 { e8 g e~ } e2 | d'8. d,16 \tuplet 3/2 { e8 g e~ } e8. d16 \tuplet 3/2 { e8 g b~ } | b8. g16 \tuplet 3/2 { e8 g e~ } e2 |
+	d'8 c bes a g2 | d'8. c16 \tuplet 3/2 { bes8 a g } d'8 d,4 d8~ | d2. r4 |
+}
+{% endif %}

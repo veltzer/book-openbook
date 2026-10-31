@@ -1,0 +1,87 @@
+{#
+default_version = "Fake"
+
+[attributes]
+title = "Yesterdays"
+style = "Jazz"
+composer = "Jerome Kern"
+poet = "Otto Harbach"
+piece = "Slowly"
+copyright = "1933 T.B. Harms Company."
+copyrightextra = "Copyright renewed. (c/o The Welk Music Group, Santa Monica, CA 90401)"
+typesetter = "Mark Veltzer <mark.veltzer@gmail.com>"
+completion = "5"
+uuid = "44b39c2c-d4ef-11f1-8000-046874d194b7"
+structure = "AB"
+location = "jfb:439"
+
+[[youtube]]
+id = "a3_lRQDr4UY"
+remark = "Leo Reisman with Frank Luther (vocal) in the first recording (1933)"
+
+[[youtube]]
+id = "KajYesrqm_s"
+remark = "Billie Holiday and her Orchestra (Commodore, 1939)"
+
+[versions.Fake]
+doChords = true
+doVoice = true
+doLyrics = false
+doLyricsmore = false
+doLyricsmoremore = false
+doChordBars = false
+doGuitar = false
+doExtra = false
+doPrep = false
+doOwn = false
+#}
+{% if part == "Vars" %}
+{% endif %}
+{% if part == "Doc" %}	DONE:
+	- added the meta data from the fake book.
+	- put in the tunes structure.
+	- put in the chords (fake book).
+	- put in the tune (fake book).
+	- added youtube performances.
+	TODO:
+	- add the lyrics.
+	- check the chords (fake book).
+	- check the tune (fake book).
+	- hear the tune to check that it is right and adjust the tempo.
+	- the fake book prints this tune as 18 bars (bars 9 and 10 both "a4. f8 g2"), check the form against another source.
+	- the fake book crowds four chords over bars 1 and 2, the beat placement of the chords there is a guess.
+{% endif %}
+{% if part == "ChordsFake" %}\chordmode {
+	\startChords
+	\startSong
+
+	\myMark "A"
+	\startPart
+	d4:m6 b:m7.5- e:m7.5- a:7.9- | d:m bes:maj7 e:m7.5- a:7.5- | d8:m cis:dim7 d:m/c g:7/b bes:7 d:m/a aes:dim7 c:7/g | f4.:7 b8:m7.5- e2:13 | \myEndLine
+	a2:7.5+ d:9 | g:7.9- c:13 | c4.:m7 f8:9 bes4:maj9 ees:9 | d2:m e4:m11 ees:9 | \myEndLine
+	\endPart
+
+	\myMark "B"
+	\startPart
+	d4.:m d8:m/c bes4:7 a:7 | d4.:m f8:7 bes4:7 a:7 | d4:m d:m/cis d:m7/c f:9 | b2:m7.5- e4:7.5+ e:7 | a2:7.5+ d:9 | \myEndLine
+	g2:7.9- c4:9.5+ c:9 | c4.:m7 f8:9 bes4:maj7 ees:9 | d2:m6 e4:m7.5- ees:9 | d2:6.9 g:9 | bes:maj7 ees4:9.11+ d:6.9 | \myEndLine
+	\endPart
+
+	\endSong
+	\endChords
+}
+{% endif %}
+{% if part == "VoiceFake" %}{
+	\tempo "Adagio" 4 = 66
+	\time 4/4
+	\key d \minor
+
+	% part "A"
+	a'4. f8 g2 | a4. f8 g2 | d8 e f g gis a b c | f4. b,8 e2 |
+	f4. a,8 e'2 | e4. g,8 d'2 | d4. a8 c bes f g | a2 a4 a |
+
+	% part "B"
+	a4. f8 g2 | a4. f8 g2 | d8 e f g gis a b c | f4. b,8 e2 | f4. a,8 e'2 |
+	e4. g,8 d'2 | d4. a8 c bes f g | a2 a4 a | a1~ | a1 |
+}
+{% endif %}

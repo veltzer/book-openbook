@@ -1,0 +1,100 @@
+{#
+default_version = "Fake"
+
+[attributes]
+title = "Soul Eyes"
+style = "Jazz"
+composer = "Mal Waldron"
+piece = "Slow"
+copyright = "1964 Prestige Music"
+typesetter = "Mark Veltzer <mark.veltzer@gmail.com>"
+completion = "5"
+uuid = "3db658b0-d4ef-11f1-8000-046874d194b7"
+structure = "AA'"
+location = "jfb:353"
+
+[[youtube]]
+id = "Y_z4pYO4Y_g"
+remark = "John Coltrane from Coltrane (1962)"
+
+[[youtube]]
+id = "rO7eroROBek"
+remark = "Mal Waldron, the composer"
+
+[versions.Fake]
+doChords = true
+doVoice = true
+doLyrics = false
+doLyricsmore = false
+doLyricsmoremore = false
+doChordBars = false
+doGuitar = false
+doExtra = false
+doPrep = false
+doOwn = false
+#}
+{% if part == "Vars" %}
+{% endif %}
+{% if part == "Doc" %}	DONE:
+	- added the meta data from the fake book.
+	- put in the tunes structure.
+	- put in the chords (fake book).
+	- put in the tune (fake book).
+	- added youtube performances.
+	TODO:
+	- check the chords (fake book).
+	- check the tune (fake book).
+	- hear the tune to check that it is right and adjust the tempo.
+	- the fake book has a tie/slur from the whole note of the first ending into the next bar.
+	- the fake book has no chord on the first three beats of the second bar of the first ending.
+{% endif %}
+{% if part == "ChordsFake" %}\chordmode {
+	\startChords
+	\startSong
+
+	\partial 4 s4 |
+
+	\myMark "A"
+	\startPart
+	\repeat volta 2 {
+		c1:m7+ | g2:7.9-/d g:7.9- | c1:m7 | f:7 | f:m9 | \myEndLine
+		bes:7.9+ | g:m7.5- | c:7.5+.9- | aes:maj7 | a2:m7.5- d:7 |
+	} \alternative {
+		{
+			g1:maj7 | \myEndLine
+			s2. des4:13 | ges1:maj7 | f2.:m9 bes4:7 | ees1:maj7 | d2:m7.5- g:7.5+ | \myEndLineVoltaNotLast
+		}
+		{
+			g1:m7.5- | \myEndLine
+			c:7 | f:m7 | bes:7.5+.9+ | ees:maj7 | s1 | \myEndLineVoltaLast
+		}
+	}
+	\endPart
+
+	\endSong
+	\endChords
+}
+{% endif %}
+{% if part == "VoiceFake" %}{
+	\tempo "Slow" 4 = 60
+	\time 4/4
+	\key ees \major
+
+	\partial 4 g'4 |
+
+	% part "A"
+	\repeat volta 2 {
+		d2. ees4 | b2~ b8 c d ees | f2. g4 | d2~ d8 ees f g | bes1 |
+		des2.~ des8 bes16 aes | bes2. ees4 | des2. c4 | ees2. ees4 | ees2~ ees8 d c d |
+	} \alternative {
+		{
+			b1 |
+			bes2. bes4 | des2~ des8 bes aes ges | bes2.~ bes8 aes16 bes | g1 | bes2~ bes8 aes ees b |
+		}
+		{
+			bes'1 |
+			bes2. g4 | ees2. bes'4 | des2.~ des8 bes16 aes | bes1~ | bes2. r4 |
+		}
+	}
+}
+{% endif %}

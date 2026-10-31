@@ -1,0 +1,122 @@
+{#
+default_version = "Fake"
+
+[attributes]
+title = "Killer Joe"
+style = "Jazz"
+composer = "Benny Golson"
+piece = "Medium groove"
+copyright = "1958 (Renewed 1987) TIME STEP MUSIC (ASCAP)"
+copyrightextra = "All Rights Administered by MAYFLOWER MUSIC CORPORATION (ASCAP)"
+typesetter = "Mark Veltzer <mark.veltzer@gmail.com>"
+completion = "5"
+uuid = "af09568e-d4ef-11f1-8000-046874d194b7"
+structure = "AABA"
+location = "jfb:207"
+
+[[youtube]]
+id = "u23Etcb-L9M"
+remark = "Art Farmer and Benny Golson Jazztet in the original recording from Meet the Jazztet (1960)"
+
+[[youtube]]
+id = "aASXNyc6xmY"
+remark = "Quincy Jones from Walking in Space (1969)"
+
+[versions.Fake]
+doChords = true
+doVoice = true
+doLyrics = false
+doLyricsmore = false
+doLyricsmoremore = false
+doChordBars = false
+doGuitar = false
+doExtra = false
+doPrep = false
+doOwn = false
+#}
+{% if part == "Vars" %}
+{% endif %}
+{% if part == "Doc" %}	DONE:
+	- added the meta data from the fake book.
+	- put in the tunes structure.
+	- put in the chords (fake book).
+	- put in the tune (fake book).
+	- added youtube performances.
+	TODO:
+	- check the chords (fake book).
+	- check the tune (fake book).
+	- hear the tune to check that it is right and adjust the tempo.
+	- the fake book connects the C sharp of bar 5 of the B part to the C of the next bar with an arc. It is written here as a slur. Check.
+{% endif %}
+{% if part == "ChordsFake" %}\chordmode {
+	\startChords
+	\startSong
+
+	\myMark "Intro"
+	\startPart
+	c1:13 | bes:13 | c:13 | bes:13 | \myEndLine
+	\endPart
+
+	\myMark "A"
+	\startPart
+	c1:13 | bes:13 | c:13 | bes:13 | \myEndLine
+	c1:13 | bes:13 | c:13 | bes:13 | \myEndLine
+	\endPart
+
+	\myMark "A"
+	\startPart
+	c1:13 | bes:13 | c:13 | bes:13 | \myEndLine
+	c1:13 | bes:13 | c:13 | bes:13 | \myEndLine
+	\endPart
+
+	\myMark "B"
+	\startPart
+	e1:m7.5- | a:7.9- | ees:m7 | aes2:13 aes:7 | \myEndLine
+	a2:9 a:7.9- | aes1:7.9- | e:m7 | a:13.9- | \myEndLine
+	\endPart
+
+	\myMark "A"
+	\startPart
+	c1:13 | bes:13 | c:13 | bes:13 | \myEndLine
+	c1:13 | bes:13 | c:13 | bes:13 | \myEndLine
+	\endPart
+
+	\myMark "End"
+	\startPart
+	c1:13 | bes:13 | c:13 | bes:13 | \myEndLine
+	c1:13 | bes2..:13 c8:7.9+ | c1*2:7.9+ | \myEndLine
+	\endPart
+
+	\endSong
+	\endChords
+}
+{% endif %}
+{% if part == "VoiceFake" %}{
+	\tempo "Moderato" 4 = 120
+	\time 4/4
+	\key c \major
+
+	% part "Intro"
+	c''4. c8 r2 | c4. c8 r2 | c4. c8 r2 | c4. c8 r2 |
+
+	% part "A"
+	r2 f,4 e8 g~ | g1 | r2 e4 c8 bes~ | bes1 |
+	r2 f'4 e8 g~ | g2 r4 e8 g~ | g1~ | g1 |
+
+	% part "A"
+	r2 f4 e8 g~ | g1 | r2 e4 c8 bes~ | bes1 |
+	r2 f'4 e8 g~ | g2 r4 e8 g~ | g1~ | g1 |
+
+	% part "B"
+	g,1~ | g2 a | bes1~ | bes2 c |
+	cis1( | c1) | e1~ | e1 |
+
+	% part "A"
+	r2 f4 e8 g~ | g1 | r2 e4 c8 bes~ | bes1 |
+	r2 f'4 e8 g~ | g2 r4 e8 g~ | g1~ | g1 |
+
+	% part "End"
+	c4. c8 r2 | c4. c8 r2 | c4. c8 r2 | c4. c8 r2 |
+	c4. c8 r2 | c4. c8 r4 r8 ees,,8~ | ees1~ | ees2. r4 |
+}
+{% endif %}
