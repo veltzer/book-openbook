@@ -1,0 +1,115 @@
+{#
+default_version = "Fake"
+
+[attributes]
+title = "Ah-Leu-Cha"
+subtitle = "Also Known As Ah Lev Cha"
+style = "Jazz"
+composer = "Charlie Parker"
+piece = "Bright tempo"
+copyright = "1948 ATLANTIC MUSIC CORP"
+copyrightextra = "Renewed and assigned 1976 ATLANTIC MUSIC CORP."
+typesetter = "Mark Veltzer <mark.veltzer@gmail.com>"
+completion = "5"
+uuid = "44e00c68-d504-11f1-8000-046874d194b7"
+structure = "AABA"
+location = "jfb:36"
+
+[[youtube]]
+id = "9kySvrZ38HM"
+remark = "Charlie Parker with Miles Davis, John Lewis, Curly Russell in the original recording (1948)"
+
+[[youtube]]
+id = "8ltI5ffpMoQ"
+remark = "Miles Davis"
+
+[versions.Fake]
+doChords = true
+doVoice = true
+doLyrics = false
+doLyricsmore = false
+doLyricsmoremore = false
+doChordBars = false
+doGuitar = false
+doExtra = false
+doPrep = false
+doOwn = false
+#}
+{% if part == "Vars" %}
+{% endif %}
+{% if part == "Doc" %}	DONE:
+	- added the meta data from the fake book.
+	- put in the tunes structure.
+	- put in the chords (fake book).
+	- put in the tune (fake book).
+	- added youtube performances.
+	TODO:
+	- check the chords (fake book).
+	- check the tune (fake book).
+	- hear the tune to check that it is right and adjust the tempo.
+	- the fake book prints only Gm7 for the first six bars of every A part, check the changes against a recording.
+	- bar 16 (part "B", C7): the book has no accidental on the third note after the d flat, so it is typed as d flat; check whether d natural is meant.
+{% endif %}
+{% if part == "ChordsFake" %}\chordmode {
+	\startChords
+	\startSong
+
+	\myMark "A"
+	\startPart
+	\repeat volta 2 {
+		g1*4:m7 | \myEndLine
+		g1*2:m7 |
+	} \alternative {
+		{
+			g2:m7 c:7 | f1 | \myEndLineVoltaNotLast
+		}
+		{
+			g2:m7 c:7 | f1 | \myEndLineVoltaLast
+		}
+	}
+	\endPart
+
+	\myMark "B"
+	\startPart
+	e1:m7 | a:7 | d1*2:7 | \myEndLine
+	g1*2:7 | g1:m7 | c:7 | \myEndLine
+	\endPart
+
+	\myMark "A"
+	\startPart
+	g1*4:m7 | \myEndLine
+	g1*2:m7 | g2:m7 c:7 | f1 | \myEndLine
+	\endPart
+
+	\endSong
+	\endChords
+}
+{% endif %}
+{% if part == "VoiceFake" %}{
+	\tempo "Allegro" 4 = 220
+	\time 4/4
+	\key f \major
+
+	% part "A"
+	\repeat volta 2 {
+		g'8 bes a g c a g f | bes8 a bes4~ bes8 a g f | g bes a g c e d c | g8 f g4~ g8 c c a |
+		bes f' e c g d' c a | bes8 a bes2 \tuplet 3/2 { f8 g a } |
+	} \alternative {
+		{
+			bes8 g a f e f g a | c4 r8 a \tuplet 3/2 { bes c bes } a g |
+		}
+		{
+			bes8 g a f e f g a | c4 r r8 e, \tuplet 3/2 { g16 a g } f8 |
+		}
+	}
+
+	% part "B"
+	e4 b8 d cis4 r8 e | g8 a bes g a fis e d | a'4 c,8 d~ d4 r | r1 |
+	r4 g'8 ges16 f e4 r8 f~ | f8 \tuplet 3/2 { e16 d c } b4 r8 e cis d |
+	f8 \tuplet 3/2 { e16 d c } bes8 a g f \tuplet 3/2 { e8 g bes } | des8 ees16 des c8 a bes16 c bes a g8 r |
+
+	% part "A"
+	g8 bes a g c a g f | bes8 a bes4~ bes8 a g f | g bes a g c e d c | g8 f g4~ g8 c c a |
+	bes f' e c g d' c a | bes8 a bes2 \tuplet 3/2 { f8 g a } | bes8 g a f e f g a | c4 r r2 |
+}
+{% endif %}

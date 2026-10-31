@@ -1,0 +1,98 @@
+{#
+default_version = "Fake"
+
+[attributes]
+title = "Ballin' The Jack"
+style = "Dixieland"
+composer = "Chris Smith"
+poet = "Jim Burris"
+piece = "Moderately"
+copyright = "1913 CHRISTIE-MAX MUSIC and JERRY VOGEL MUSIC COMPANY, INC."
+copyrightextra = "Pursuant to Sections 304(c) and 401(b) of the U.S. Copyright Law."
+typesetter = "Mark Veltzer <mark.veltzer@gmail.com>"
+completion = "5"
+uuid = "d216a080-d505-11f1-8000-046874d194b7"
+structure = "ABAC"
+location = "jfb:53"
+
+[[youtube]]
+id = "UqtkIOx2nlk"
+remark = "Victor Military Band in an early recording (1914)"
+
+[[youtube]]
+id = "sQOWrGxlZKg"
+remark = "Jelly Roll Morton and his New Orleans Jazzmen"
+
+[versions.Fake]
+doChords = true
+doVoice = true
+doLyrics = false
+doLyricsmore = false
+doLyricsmoremore = false
+doChordBars = false
+doGuitar = false
+doExtra = false
+doPrep = false
+doOwn = false
+#}
+{% if part == "Vars" %}
+{% endif %}
+{% if part == "Doc" %}	DONE:
+	- added the meta data from the fake book.
+	- put in the tunes structure.
+	- put in the chords (fake book).
+	- put in the tune (fake book).
+	- added youtube performances.
+	TODO:
+	- add the lyrics.
+	- check the chords (fake book).
+	- check the tune (fake book).
+	- hear the tune to check that it is right and adjust the tempo.
+	- bar 14: the fake book puts F#dim7 over the second note (the off-beat c), typed one chord per beat, check it.
+{% endif %}
+{% if part == "ChordsFake" %}\chordmode {
+	\startChords
+	\startSong
+
+	\myMark "A"
+	\startPart
+	g1*2:7 | c1*2:7 | \myEndLine
+	\endPart
+
+	\myMark "B"
+	\startPart
+	f1*2:7 | bes2 d:7 | ees:7 d:7 | \myEndLine
+	\endPart
+
+	\myMark "A"
+	\startPart
+	g1*2:7 | c1*2:7 | \myEndLine
+	\endPart
+
+	\myMark "C"
+	\startPart
+	ges1:7 | bes4/f fis:dim7 g:m g:7 | c:m g c:m c:m7.5- | f2:7 bes | \myEndLine
+	\endPart
+
+	\endSong
+	\endChords
+}
+{% endif %}
+{% if part == "VoiceFake" %}{
+	\tempo "Moderato" 4 = 120
+	\time 4/4
+	\key bes \major
+
+	% part "A"
+	d'8. d16 b!8. b16 g4 a | d8 b!4 g8~ g4 a8. aes16 | g8. g16 a8. a16 bes4 a8. g16 | bes8. bes16 a8. a16 g4 r |
+
+	% part "B"
+	f8. f16 g8. g16 a4 g8. f16 | c'8 a4 f8~ f4 d'8. cis16 | d8. cis16 d8. bes16 c!8. b!16 c8. a16 | bes!8 a g a~ a4 r |
+
+	% part "A"
+	d8. d16 b!8. b16 g4 a | d8 b!4 g8~ g4 a8. aes16 | g8. g16 a8. a16 bes4 a8. g16 | bes8 a4 g8~ g4 bes8. c16 |
+
+	% part "C"
+	des4 bes des bes | d!8 c4 bes8~ bes4 g | c d ees c | d8 cis d bes~ bes4 r |
+}
+{% endif %}

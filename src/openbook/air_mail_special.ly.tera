@@ -1,0 +1,112 @@
+{#
+default_version = "Fake"
+
+[attributes]
+title = "Air Mail Special"
+style = "Swing"
+composer = "Benny Goodman, Charlie Christian, Jimmy Mundy"
+piece = "Bright tempo"
+copyright = "1941 by Regent Music Corp."
+copyrightextra = "Copyright renewed by Regent Music Corp., Jewel Music Publishing Co., Inc. and Rytvoc Music. Reprinted by permission"
+typesetter = "Mark Veltzer <mark.veltzer@gmail.com>"
+completion = "5"
+uuid = "44e00c69-d504-11f1-8000-046874d194b7"
+structure = "AABA"
+location = "jfb:38"
+
+[[youtube]]
+id = "OUHjw4GP0cY"
+remark = "The Benny Goodman Sextet with Charlie Christian in the original recording (1941)"
+
+[[youtube]]
+id = "rN0ww1OzEoY"
+remark = "Ella Fitzgerald"
+
+[versions.Fake]
+doChords = true
+doVoice = true
+doLyrics = false
+doLyricsmore = false
+doLyricsmoremore = false
+doChordBars = false
+doGuitar = false
+doExtra = false
+doPrep = false
+doOwn = false
+#}
+{% if part == "Vars" %}
+{% endif %}
+{% if part == "Doc" %}	DONE:
+	- added the meta data from the fake book.
+	- put in the tunes structure.
+	- put in the chords (fake book).
+	- put in the tune (fake book).
+	- added youtube performances.
+	TODO:
+	- check the chords (fake book).
+	- check the tune (fake book).
+	- hear the tune to check that it is right and adjust the tempo.
+	- bar 15 (part "B", Gb9): the fourth note reads as c flat in the scan (high, small print), check.
+{% endif %}
+{% if part == "ChordsFake" %}\chordmode {
+	\startChords
+	\startSong
+
+	\myMark "A"
+	\startPart
+	\repeat volta 2 {
+		bes1*4:6 | \myEndLine
+		bes1*2:6 |
+	} \alternative {
+		{
+			bes1*2:6 | \myEndLineVoltaNotLast
+		}
+		{
+			bes1*2:6 | \myEndLineVoltaLast
+		}
+	}
+	\endPart
+
+	\myMark "B"
+	\startPart
+	bes1*4:dim7 | \myEndLine
+	bes2:dim7 a:dim7 | aes1:dim7 | ges:9 | f:9 | \myEndLine
+	\endPart
+
+	\myMark "A"
+	\startPart
+	bes1*4:6 | \myEndLine
+	bes1*4:6 | \myEndLine
+	\endPart
+
+	\endSong
+	\endChords
+}
+{% endif %}
+{% if part == "VoiceFake" %}{
+	\tempo "Allegro" 4 = 260
+	\time 2/2
+	\key bes \major
+
+	% part "A"
+	\repeat volta 2 {
+		r8 bes' d f bes bes r bes, | d f bes bes r bes, d f | bes bes g f bes bes g f | bes bes g f~ f4 r |
+		r8 bes, d f bes bes r bes, | d f bes bes r bes, d f |
+	} \alternative {
+		{
+			bes8 bes g f bes bes g f | bes bes a bes~ bes4 r |
+		}
+		{
+			bes8 bes g f bes bes g f | bes bes a bes~ bes2 |
+		}
+	}
+
+	% part "B"
+	r8 g bes des bes g bes des | bes g bes des bes g e des | r8 g bes des bes g bes des | bes g bes des bes g e des |
+	r8 g bes des bes ges a c | aes f aes b aes f d b | bes e aes ces aes e des bes | a ees' g bes~ bes4 r |
+
+	% part "A"
+	r8 bes, d f bes bes r bes, | d f bes bes r bes, d f | bes bes g f bes bes g f | bes bes g f~ f4 r |
+	r8 bes, d f bes bes r bes, | d f bes bes r bes, d f | bes bes g f bes bes g f | bes bes a bes r2 |
+}
+{% endif %}

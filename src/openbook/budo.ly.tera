@@ -1,0 +1,79 @@
+{#
+default_version = "Fake"
+
+[attributes]
+title = "Budo"
+style = "Jazz"
+composer = "Miles Davis, Bud Powell"
+piece = "Medium Swing"
+copyright = "1956 Beechwood Music Corp."
+typesetter = "Mark Veltzer <mark.veltzer@gmail.com>"
+completion = "5"
+uuid = "8062e3d8-d506-11f1-8000-046874d194b7"
+structure = "Blues"
+location = "jfb:73"
+
+[[youtube]]
+id = "Ij1RVSnJ37Q"
+remark = "Miles Davis in the original recording from Birth of the Cool (1949)"
+
+[[youtube]]
+id = "HCYiAmZHv1s"
+remark = "Miles Davis Quintet with John Coltrane and Paul Chambers"
+
+[versions.Fake]
+doChords = true
+doVoice = true
+doLyrics = false
+doLyricsmore = false
+doLyricsmoremore = false
+doChordBars = false
+doGuitar = false
+doExtra = false
+doPrep = false
+doOwn = false
+#}
+{% if part == "Vars" %}
+{% endif %}
+{% if part == "Doc" %}	DONE:
+	- added the meta data from the fake book.
+	- put in the tunes structure.
+	- put in the chords (fake book).
+	- put in the tune (fake book).
+	- added youtube performances.
+	TODO:
+	- check the chords (fake book).
+	- check the tune (fake book).
+	- hear the tune to check that it is right and adjust the tempo.
+	- the fake book prints only the riff with empty bars between its statements (the tune is also known as "Hallucinations").
+{% endif %}
+{% if part == "ChordsFake" %}\chordmode {
+	\startChords
+	\startSong
+
+	\myMark "A"
+	\startPart
+	\repeat volta 2 {
+		bes1 | ees:7 | bes | bes:7 | \myEndLine
+		ees1*2:7 | bes2 c:m7 | d:m7 g:7 | \myEndLine
+		c1:m7 | f:7 | bes1*2 | \myEndLine
+	}
+	\endPart
+
+	\endSong
+	\endChords
+}
+{% endif %}
+{% if part == "VoiceFake" %}{
+	\tempo "Allegro" 4 = 160
+	\time 4/4
+	\key bes \major
+
+	% part "A"
+	\repeat volta 2 {
+		f'8 f e4 ees d | f4. d8 bes f a bes | r1 | r1 |
+		f'8 f e4 ees d | f4. d8 bes f a bes | r1 | r1 |
+		f'8 f e4 ees d | f4. d8 bes f a bes | r1 | r1 |
+	}
+}
+{% endif %}

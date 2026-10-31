@@ -1,0 +1,252 @@
+{#
+default_version = "Fake"
+
+[attributes]
+title = "Birdland"
+style = "Jazz"
+composer = "Joe Zawinul"
+piece = "Brightly"
+copyright = "1977 & 1978 Mulatto Music (BMI)"
+typesetter = "Mark Veltzer <mark.veltzer@gmail.com>"
+completion = "5"
+uuid = "bce9136a-d504-11f1-8000-046874d194b7"
+structure = "Intro ABCD"
+location = "jfb:60"
+
+[[youtube]]
+id = "JI1QCXIXlp8"
+remark = "Weather Report in the original recording from Heavy Weather (1977)"
+
+[[youtube]]
+id = "vr2X-wO3_3M"
+remark = "The Manhattan Transfer from Extensions (1979)"
+
+[versions.Fake]
+doChords = true
+doVoice = true
+doLyrics = false
+doLyricsmore = false
+doLyricsmoremore = false
+doChordBars = false
+doGuitar = false
+doExtra = false
+doPrep = false
+doOwn = false
+#}
+{% if part == "Vars" %}
+{% endif %}
+{% if part == "Doc" %}	DONE:
+	- added the meta data from the fake book.
+	- put in the tunes structure.
+	- put in the chords (fake book).
+	- put in the tune (fake book).
+	- added youtube performances.
+	TODO:
+	- check the chords (fake book).
+	- check the tune (fake book).
+	- hear the tune to check that it is right and adjust the tempo.
+	- the fake book crowds the chord symbols, so the beat on which some chords fall is a guess (especially CM7 and C#m7b5 in the second bar of the coda, which are printed further right there than in part "D").
+	- the "G pedal" written in the fake book is shown as a text above the melody.
+{% endif %}
+{% if part == "ChordsFake" %}\chordmode {
+	\startChords
+	\startSong
+
+	\partial 8 r8 |
+
+	\myMark "Intro"
+	\startPart
+	\repeat volta 3 {
+		r1*3 |
+	} \alternative {
+		{
+			r1 | \myEndLineVoltaNotLast
+		}
+		{
+			r1 | \myEndLineVoltaLast
+		}
+	}
+	\endPart
+
+	\myMark "A"
+	\startPart
+	\repeat volta 2 {
+		s1*3 | \myEndLine
+		s1*4 |
+	} \alternative {
+		{
+			s1 | \myEndLineVoltaNotLast
+		}
+		{
+			s2.. g8:m | \myEndLineVoltaLast
+		}
+	}
+	\endPart
+
+	\myMark "B"
+	\startPart
+	f2../g f8/bes | s4 ees2/bes s8 d8:m7 | s2.. f8/c | s4 c2:m7 s8 f8/b | s4 e2:m s8 g8:m/c | s4 f2./ees | e4:m f8 ges g4 e4:m | \myEndLine
+	g4:m/c f2./c | g1*4 | s1 | \myEndLine
+	\endPart
+
+	\myMark "C"
+	\startPart
+	\repeat volta 2 {
+		s1*2 | \myEndLine
+		s1*5 |
+	} \alternative {
+		{
+			s1 | \myEndLineVoltaNotLast
+		}
+		{
+			s1 | \myEndLineVoltaLast
+		}
+	}
+	s1*3 | g1 | c4 g2. | s1*2 | s1 | \myEndLine
+	c4 g2 b4:m7.5- | s1*2 |
+	\endPart
+
+	\myMark "D"
+	\startPart
+	\repeat volta 2 {
+		g4 b4:m e4.:m g8/b | s4 c4:maj7 cis4.:m7.5- b8:m7 | s2 e2:7 | a8:m7 g4/b c4:6 c4/d g8 | s4 b4:m e4.:m c8:6 | \myEndLine
+		s4 cis4:m7.5- d4.:sus4.7 c8:maj7 | s1 |
+	} \alternative {
+		{
+			s8 a4:m c4:maj7/e a4.:m7/d | \myEndLineVoltaNotLast
+		}
+		{
+			s8 a4:m c4:maj7/e a4:m7/d g8 | \myEndLineVoltaLast
+		}
+	}
+	s4 b4:m e4.:m g8/d | s4 cis4:m7.5- c4.:9 b8:m7 | s2 e2:7 | a8:m g4/b c4:6 c4/d g8 | s4 b4:m e4.:m a8:m7/d | s4 cis4:m7.5- c4.:9 b8:m7 | \myEndLine
+	s2 e2:7 | a8:m g4/b c4:6 c4./d | g1 | s1*3 | \myEndLine
+	\endPart
+
+	\myMark "Instr"
+	\startPart
+	\repeat volta 3 {
+		s1*4 |
+	}
+	\repeat volta 7 {
+		g4:7 ges:7 f:7 e:7 |
+	} \alternative {
+		{
+			ees4:7 d:7 des:7 c:7 | \myEndLineVoltaNotLast
+		}
+		{
+			ees4:7 d:7 des:7 c8:7 g8 | \myEndLineVoltaLast
+		}
+	}
+	s1*2 |
+	\endPart
+
+	\myMark "Coda"
+	\startPart
+	s1 |
+	\repeat volta 2 {
+		g4 g4/b e4.:m g8/b | s4 c4:maj7 cis2:m7.5- | b2:m7 e2:7 | \myEndLine
+		a8:m g4/b c4:6 c4/d g8 | s4 g4/b e4.:m c8:6 | s4 cis4:m7.5- g4./d g8/c | s1 | g8/c a4:m e4:m7 c4/d g8 | \myEndLine
+	}
+	\repeat volta 2 {
+		s4 b4:m e4.:m g8/d | s4 cis4:m7.5- c4.:7 b8:m7 | s2 e2:7 | a8:m g4/b c4:6 c4/d g8 | \myEndLine
+	}
+	\endPart
+
+	\endSong
+	\endChords
+}
+{% endif %}
+{% if part == "VoiceFake" %}{
+	\tempo "Allegro" 4 = 152
+	\time 4/4
+	\key g \major
+
+	\partial 8 b8~ |
+
+	% part "Intro"
+	\repeat volta 3 {
+		b2 c4. d8~ | d1 | b2 c4 d8 g~ |
+	} \alternative {
+		{
+			g1 |
+		}
+		{
+			g2. r8 bes~ |
+		}
+	}
+
+	% part "A"
+	\repeat volta 2 {
+		bes8^\markup { \musicglyph #"scripts.segno" } a bes a g4 e8 g~ | g4 e g a8 bes~ | bes4 a g e8 d~ |
+		d8 g4. r4 r8 bes~ | bes8 c bes a g4 e8 g~ | g4 e g a8 bes~ | bes4 a g e8 d~ |
+	} \alternative {
+		{
+			d8 g4. r4 r8 bes |
+		}
+		{
+			d,8 g4. r4 r8 bes~ |
+		}
+	}
+
+	% part "B"
+	bes4 a8 a r4 r8 a~ | a4 g8 g r4 r8 a~ | a4 f8 f r4 r8 a~ | a4 g8 g r4 r8 a~ | a4 g8 g r4 r8 bes~ | bes4 a2. | r8 g a bes b4 g |
+	bes4 a2. | g1~ | g1~ | g1~ | g1~ | g2 r8 c, d f~ |
+
+	% part "C"
+	\repeat volta 2 {
+		f4^\markup { G pedal } d c r8 c~ | c8 r c r r c d f~ |
+		f4 d c r8 b~ | b8 r b4 r8 c d f~ | f4 d c r8 c~ | c8 r r4 r8 c d f~^\markup { To Coda \musicglyph #"scripts.coda" } | f4 d c r8 b~ |
+	} \alternative {
+		{
+			b8 r b4 r8 c d f |
+		}
+		{
+			b,8 r b4 r8 c' d f~ |
+		}
+	}
+	f4 d c r8 c~ | c8 r c4 r8 c d f~ | f4 d c r8 b~ | b4. b8~ b4. b8 | c4 b8 d~ d4 d~ | d1~ | d1 | b4. b8~ b4. b8 |
+	c4 b8 d~ d4 f~ | f1~ | f2~ f4. r8 |
+
+	% part "D"
+	\repeat volta 2 {
+		b,4 d g, r8 g~ | g4 b g r8 d'~ | d1 | c8 b4 a8~ a g4 b8~ | b4 d g, r8 a~ |
+		a4 b g r8 d'~ | d1 |
+	} \alternative {
+		{
+			d8 e4 b8~ b g4 r8 |
+		}
+		{
+			d'8 e4 b8~ b g4 b8~ |
+		}
+	}
+	b4 d g r8 g,~ | g4 b e r8 d~ | d1 | c8 b4 a8~ a g4 b8~ | b4 d g r8 g,~ | g4 b e r8 d~ |
+	d1 | c8 b4 a8~ a g4. | g1~ | g1~ | g1~ | g4 r r d8 e |
+
+	% part "Instr"
+	\repeat volta 3 {
+		g4 a ais8 b d, e | g8 g r4 r b8 g~ | g1 | r4 d'8 bes~ bes4 d,8 e |
+	}
+	\repeat volta 7 {
+		d'4 des c b |
+	} \alternative {
+		{
+			bes4 a aes g |
+		}
+		{
+			bes4 a aes g8 g~ |
+		}
+	}
+	g1~ | g2. r8 bes^\markup { D.S. al Coda } |
+
+	% part "Coda"
+	f4^\markup { \musicglyph #"scripts.coda" } d c r8 b'~ |
+	\repeat volta 2 {
+		b4 d g, r8 g~ | g4 b g r8 d'~ | d1 |
+		c8 b r a r g r b~ | b4 d g, r8 a~ | a4 b g r8 d'~ | d1 | d8 e r b r g r b~ |
+	}
+	\repeat volta 2 {
+		b4^\markup { Repeat and Fade } d g r8 g,~ | g4 b e r8 d~ | d1 | c8 b r a r g r b~ |
+	}
+}
+{% endif %}

@@ -1,0 +1,107 @@
+{#
+default_version = "Fake"
+
+[attributes]
+title = "Bess You Is My Woman"
+style = "Broadway"
+composer = "George Gershwin"
+poet = "DuBose Heyward, Ira Gershwin"
+piece = "Slowly"
+copyright = "1935 by Gershwin Publishing Corporation"
+copyrightextra = "Copyright Renewed, Assigned to Chappell & Co., Inc."
+typesetter = "Mark Veltzer <mark.veltzer@gmail.com>"
+completion = "5"
+uuid = "58e2fdea-d504-11f1-8000-046874d194b7"
+structure = "AAB"
+location = "jfb:56"
+
+[[youtube]]
+id = "bd6em9sXHDI"
+remark = "Lawrence Tibbett in the original recording (1935)"
+
+[[youtube]]
+id = "c1ZsstxvMCE"
+remark = "Miles Davis with Gil Evans from Porgy and Bess (1958)"
+
+[versions.Fake]
+doChords = true
+doVoice = true
+doLyrics = false
+doLyricsmore = false
+doLyricsmoremore = false
+doChordBars = false
+doGuitar = false
+doExtra = false
+doPrep = false
+doOwn = false
+#}
+{% if part == "Vars" %}
+{% endif %}
+{% if part == "Doc" %}	DONE:
+	- added the meta data from the fake book.
+	- put in the tunes structure.
+	- put in the chords (fake book).
+	- put in the tune (fake book).
+	- added youtube performances.
+	TODO:
+	- add the lyrics.
+	- check the chords (fake book).
+	- check the tune (fake book).
+	- hear the tune to check that it is right and adjust the tempo.
+	- the fake book prints "D.C. al Coda" under bar 16 (below the second lyric line); here it is put at the end of bar 20, where the D.C. presumably happens (the second time through, after bar 12, take the coda).
+	- coda bars 6 and 8: the book prints b natural under Gm7b5; kept as printed.
+{% endif %}
+{% if part == "ChordsFake" %}\chordmode {
+	\startChords
+	\startSong
+
+	\myMark "A"
+	\startPart
+	bes1 | f1:7/c | bes2/d d2:m7.5- | ees2 ees2:m | \myEndLine
+	g2:m g2:m7/f | e2.:m7.5- ees4:7 | bes2/d aes2:7 | des2 f2:7 | \myEndLine
+	\endPart
+
+	\myMark "A"
+	\startPart
+	bes1 | f1:7/c | bes2/d d4:m g4:m7/d | a1:7/e | \myEndLine
+	b2:m b2:m/a | g1:7 | d1 | gis2.:m7.5- cis4:7 | \myEndLine
+	\endPart
+
+	\myMark "B"
+	\startPart
+	fis1/ais | b2.:7 cis4:7 | fis1 | fis4:m g4:m c4:7 f4:7 | \myEndLine
+	\endPart
+
+	\myMark "Coda"
+	\startPart
+	d2/a a2:7/g | d2:9/fis a2:7/e | b2:m/d fis2:7/cis | b2:m bes2:7 | d1 | \myEndLine
+	g1:m7.5- | d1 | g1:m7.5- | d2 d2:9/fis | g2:maj7 e2:m7 | \myEndLine
+	d2 d2:9/fis | g2:maj7 e2:m7 | d1 | a1:7 | d1*2:m | \myEndLine
+	\endPart
+
+	\endSong
+	\endChords
+}
+{% endif %}
+{% if part == "VoiceFake" %}{
+	\tempo "Adagio" 4 = 66
+	\time 4/4
+	\key bes \major
+
+	% part "A"
+	bes'2. d4 | f,4 g aes g | f2~ f8 r bes8 bes,8~ | bes2 bes'8 bes,4 c8 |
+	cis8 d f c d g c, d | a'4 a a bes | c1~ | c2. r4 |
+
+	% part "A"
+	bes2. d4 | f,4 g aes g | f2. bes,4 | a'2. a,4^\markup { To Coda \musicglyph #"scripts.coda" } |
+	b'2 r8 a g fis | f8 d e d e4 d | fis2. d4 | gis2. cis,4 |
+
+	% part "B"
+	dis'2 r8 cis b ais | a8 fis gis fis a4 ais | fis1~ | fis4 r \tuplet 3/2 { e8 f fis } \tuplet 3/2 { g8 gis a^\markup { D.C. al Coda } } |
+
+	% part "Coda"
+	b4. a8 b a4. | r8 d b a b a4 g8 | g4. fis8 g fis4. | r8 b fis d cis4. d8 | d'2. fis4 |
+	a,4 b c b | a2. fis'4 | a,4 b c b | a8 d, d d a' d, d d | a'8 d d d a d, d4 |
+	a'8 d, d d a' d, d d | a8 d d d a' d, d4 | a'1~ | a4 aes g fis | f1~ | f2. r4 |
+}
+{% endif %}

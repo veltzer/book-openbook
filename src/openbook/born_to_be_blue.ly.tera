@@ -1,0 +1,113 @@
+{#
+default_version = "Fake"
+
+[attributes]
+title = "Born To Be Blue"
+style = "Jazz"
+composer = "Robert Wells, Mel Torme"
+poet = "Robert Wells, Mel Torme"
+piece = "Very slowly"
+copyright = "1946, Renewed 1974 Wells Music Inc. and Arc Music"
+copyrightextra = "Pursuant to Sections 304(c) and 401(b) of the U.S. Copyright Law."
+typesetter = "Mark Veltzer <mark.veltzer@gmail.com>"
+completion = "5"
+uuid = "342e422e-d505-11f1-8000-046874d194b7"
+structure = "AABA"
+location = "jfb:71"
+
+[[youtube]]
+id = "vvpRDia6Jxc"
+remark = "Mel Torme, the composer, sings it"
+
+[[youtube]]
+id = "yUnjR_aXeA8"
+remark = "Chet Baker"
+
+[versions.Fake]
+doChords = true
+doVoice = true
+doLyrics = false
+doLyricsmore = false
+doLyricsmoremore = false
+doChordBars = false
+doGuitar = false
+doExtra = false
+doPrep = false
+doOwn = false
+#}
+{% if part == "Vars" %}
+{% endif %}
+{% if part == "Doc" %}	DONE:
+	- added the meta data from the fake book.
+	- put in the tunes structure.
+	- put in the chords (fake book).
+	- put in the tune (fake book).
+	- added youtube performances.
+	TODO:
+	- add the lyrics.
+	- check the chords (fake book).
+	- check the tune (fake book).
+	- hear the tune to check that it is right and adjust the tempo.
+{% endif %}
+{% if part == "ChordsFake" %}\chordmode {
+	\startChords
+	\startSong
+
+	\myMark "A"
+	\startPart
+	\repeat volta 2 {
+		c2:9 des:9 | c:9 ges:7 | f:9 ees:7.9- | \myEndLine
+		aes2:maj7 aes4:7 g:7.5+ | c2:m des:9 | c:m7 f:7 |
+	} \alternative {
+		{
+			f2:m7 d:7.5- | d:m7 g:7 | \myEndLineVoltaNotLast
+		}
+		{
+			f2:m7 aes4:9 g:9.5+ | c1 | \myEndLineVoltaLast
+		}
+	}
+	\endPart
+
+	\myMark "B"
+	\startPart
+	aes2:m7 des:9 | aes:m7 des:9 | aes:m7 des:7.9- | \myEndLine
+	ges1:maj7 | des2:m7 ges:9 | ces:maj7 aes:m7 | f:m7 bes:7 | \myEndLine
+	ees2:maj7 d4:m7 g:9 | \myEndLine
+	\endPart
+
+	\myMark "Coda"
+	\startPart
+	f2:m7 aes4:9 g:9.5+ | c1 | \myEndLine
+	\endPart
+
+	\endSong
+	\endChords
+}
+{% endif %}
+{% if part == "VoiceFake" %}{
+	\tempo "Adagio" 4 = 60
+	\time 4/4
+	\key c \major
+
+	% part "A"
+	\repeat volta 2 {
+		r8 c'8 a g aes des bes aes | a!8 c4.~ c2 | r8 g f ees g c g f |
+		ees2. r8 d8 | ees8 ees d ees g f4 c8 | \tuplet 3/2 { ees8 f ees } d8 ees g f4.^\markup { To Coda \musicglyph #"scripts.coda" } |
+	} \alternative {
+		{
+			r8 c8 d c d b c4 | g'1 |
+		}
+		{
+			r8 c,8 d c ees c ees4 | c1 |
+		}
+	}
+
+	% part "B"
+	r8 bes'8 bes aes bes4. aes8 | bes8 des bes aes bes des4. | bes8 des bes aes bes4 aes8 f8~ |
+	f2 r8 des8 c des | aes'2~ aes8 ges fes ees | ges4 aes bes8 ces4. | bes8 f g aes \tuplet 3/2 { bes4 bes bes } |
+	g2 g2^\markup { D.C. al Coda } |
+
+	% part "Coda"
+	r8 c,8 d c ees c ees4 | c1 |
+}
+{% endif %}

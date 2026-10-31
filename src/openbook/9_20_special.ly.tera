@@ -1,0 +1,123 @@
+{#
+default_version = "Fake"
+
+[attributes]
+title = "9:20 Special"
+style = "Swing"
+composer = "Bill Engvick, Earl Warren"
+piece = "Medium Bounce"
+copyright = "1941 (Renewed) by Regent Music Corp."
+copyrightextra = "Reprinted by permission."
+typesetter = "Mark Veltzer <mark.veltzer@gmail.com>"
+completion = "5"
+uuid = "31859382-d506-11f1-8000-046874d194b7"
+structure = "AABA"
+location = "jfb:275"
+
+[[youtube]]
+id = "C0rClq9Sj7U"
+remark = "Count Basie and His Orchestra in the original recording (1941)"
+
+[[youtube]]
+id = "ES6192jd0C4"
+remark = "Jim Hall"
+
+[versions.Fake]
+doChords = true
+doVoice = true
+doLyrics = false
+doLyricsmore = false
+doLyricsmoremore = false
+doChordBars = false
+doGuitar = false
+doExtra = false
+doPrep = false
+doOwn = false
+#}
+{% if part == "Vars" %}
+{% endif %}
+{% if part == "Doc" %}	DONE:
+	- added the meta data from the fake book.
+	- put in the tunes structure.
+	- put in the chords (fake book).
+	- put in the tune (fake book).
+	- added youtube performances.
+	TODO:
+	- check the chords (fake book).
+	- check the tune (fake book).
+	- hear the tune to check that it is right and adjust the tempo.
+{% endif %}
+{% if part == "ChordsFake" %}\chordmode {
+	\startChords
+	\startSong
+
+	\repeat volta 2 {
+
+		\myMark "A"
+		\startPart
+		c1:9 | ees:m6 | c:9 | ees:m6 | \myEndLine
+		bes | bes4:7 a:7 aes:7 g:7 | c2:9 fis:dim7 | c4:9 ges:7 f2:7 | \myEndLine
+		\endPart
+
+		\myMark "A"
+		\startPart
+		c1:9 | ees:m6 | c:9 | ees:m6 | \myEndLine
+		bes | bes4:7 a:7 aes:7 g:7 | c2:9 fis:dim7 | c4:9 f:7 bes2 | \myEndLine
+		\endPart
+
+		\myMark "B"
+		\startPart
+		bes1:7 | ees2 ees:6 | ees1*2:6 | \myEndLine
+		c1:9 | f2 f:6 | f1:9 | f2:9 f:7 | \myEndLine
+		\endPart
+
+		\myMark "A"
+		\startPart
+		c1:9 | ees:m6 | c:9 | ees:m6 | \myEndLine
+		bes | bes4:7 a:7 aes:7 g:7 | c2:9 fis:dim7 |
+	} \alternative {
+		{
+			c4:6 f:7 bes des:9 | \myEndLineVoltaNotLast
+		}
+		{
+			c4:9 f:7 bes2 | \myEndLineVoltaLast
+		}
+	}
+	\endPart
+
+	\endSong
+	\endChords
+}
+{% endif %}
+{% if part == "VoiceFake" %}{
+	\tempo "Moderato" 4 = 160
+	\time 2/2
+	\key bes \major
+
+	\repeat volta 2 {
+
+		% part "A"
+		r8 g'4. bes8 c d bes | c8 ges4 ges8~ ges2 | r8 g!4. bes8 c d bes | c8 ges4 ges8~ ges2 |
+		f8 bes r4 r r8 d | f4 e! ees8 d4 g,8~ | g2 g8 bes c d | d4 ges,8 f~ f2 |
+
+		% part "A"
+		r8 g4. bes8 c d bes | c8 ges4 ges8~ ges2 | r8 g!4. bes8 c d bes | c8 ges4 ges8~ ges2 |
+		f8 bes r4 r r8 d | f4 e! ees8 d4 g,8~ | g2 g8 bes c d~ | d4 f,8 bes~ bes f bes, d |
+
+		% part "B"
+		f4. bes8 bes4. fis8 | g8 bes g bes~ bes2 | r8 bes4. bes4 g | g8 c,4 c8~ c2 |
+		a'4. c8~ c4. g8 | a8 c a c~ c2 | r8 c4. c4 c | c8 f,4 f8~ f2 |
+
+		% part "A"
+		r8 g4. bes8 c d bes | c8 ges4 ges8~ ges2 | r8 g!4. bes8 c d bes | c8 ges4 ges8~ ges2 |
+		f8 bes r4 r r8 d | f4 e! ees8 d4 g,8~ | g2 g8 bes c d~ |
+	} \alternative {
+		{
+			d4 f,8 bes~ bes4 r |
+		}
+		{
+			d4 f,8 bes~ bes4 r |
+		}
+	}
+}
+{% endif %}

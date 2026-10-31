@@ -1,0 +1,123 @@
+{#
+default_version = "Fake"
+
+[attributes]
+title = "Apple Honey"
+style = "Swing"
+composer = "Woody Herman"
+piece = "Medium Jump"
+copyright = "1944, 1945, 1987 EDWIN H. MORRIS & COMPANY, A Division of MPL Communications, Inc."
+copyrightextra = "Renewed 1972, 1973 EDWIN H. MORRIS & COMPANY, A Division of MPL Communications, Inc. International Copyright Secured. All Rights Reserved."
+typesetter = "Mark Veltzer <mark.veltzer@gmail.com>"
+completion = "5"
+uuid = "f5c9dee0-d503-11f1-8000-046874d194b7"
+structure = "AABABA"
+location = "jfb:48"
+
+[[youtube]]
+id = "alEQ73eINTQ"
+remark = "Woody Herman and his Orchestra in the original recording (1945)"
+
+[[youtube]]
+id = "jW966gfgQeA"
+remark = "Woody Herman on the Timex All-Star Jazz Show, 1957"
+
+[versions.Fake]
+doChords = true
+doVoice = true
+doLyrics = false
+doLyricsmore = false
+doLyricsmoremore = false
+doChordBars = false
+doGuitar = false
+doExtra = false
+doPrep = false
+doOwn = false
+#}
+{% if part == "Vars" %}
+{% endif %}
+{% if part == "Doc" %}	DONE:
+	- added the meta data from the fake book.
+	- put in the tunes structure.
+	- put in the chords (fake book).
+	- put in the tune (fake book).
+	- added youtube performances.
+	TODO:
+	- check the chords (fake book).
+	- check the tune (fake book).
+	- hear the tune to check that it is right and adjust the tempo.
+{% endif %}
+{% if part == "ChordsFake" %}\chordmode {
+	\startChords
+	\startSong
+
+	\myMark "A"
+	\startPart
+	bes2:6 g:m7 | c:9 f:9 | g:m7 des:dim7 | c:7.9- f:13 | \myEndLine
+	bes:6 g:m7 | c:9 f:9 | bes:6 g:m7 | ges4:9.5+ f:13 bes2:6 | \myEndLine
+	\endPart
+
+	\myMark "A"
+	\startPart
+	g1:m7 | c2:9 f:13 | g:m7 des:dim7 | c:7.9- f:13 | \myEndLine
+	bes:6 g:m7 | c:m9 f:13 | bes:6 g:m7 | ges4:9.5+ f:13 bes2:6 | \myEndLine
+	\endPart
+
+	\myMark "B"
+	\startPart
+	d1:9 | ees2:9 d:9 | g1*2:m6 | \myEndLine
+	c1*2:9 | f1:13 | f2:13 b:7.5- | \myEndLine
+	\endPart
+
+	\myMark "A"
+	\startPart
+	bes2:6 g:m7 | c:9 ges4:7.5+ f:9.5+ | bes2:6 g:m7 | c:9 f:9 | \myEndLine
+	bes:6 g:m7 | c:9 f:13 | bes:6 g:m7 | ges4:7.5+ f:13 bes2:6 | \myEndLine
+	\endPart
+
+	\myMark "B"
+	\startPart
+	d1*2:9 | g1*2:m6 | \myEndLine
+	c1:7 | des2:7 c:7 | c1:9 | f2:13 f:7.5+ | \myEndLine
+	\endPart
+
+	\myMark "A"
+	\startPart
+	bes2:6 g:m7 | g4:m7 c:m7 ges:7 f:7 | g2:m7 des:dim7 | c:m7 f:13 | \myEndLine
+	bes:maj9 bes:7/aes | ees:6/g ges4:9 f:13 | f2:13 c4:7 f:7 | bes1:6 | \myEndLine
+	\endPart
+
+	\endSong
+	\endChords
+}
+{% endif %}
+{% if part == "VoiceFake" %}{
+	\tempo "Allegro" 4 = 200
+	\time 2/2
+	\key bes \major
+
+	% part "A"
+	bes'2 d8 bes g f | e!2 ees8 f a c | bes8 g4 g8~ g2 | r8 cis4 d8~ d f4. |
+	r8 bes,4. d8 bes g f | e!2 ees8 f a c | bes4 r r8 bes \tuplet 3/2 { cis d f } | d4 f,8 bes~ bes2 |
+
+	% part "A"
+	r8 bes bes bes d bes bes bes | d4 r8 bes d f d4 | bes8 g4 g8~ g2 | r8 cis4 d8~ d f g4-> |
+	bes,4 bes d bes8 bes | d4 g,8 gis a f d' bes~ | bes2 r8 bes \tuplet 3/2 { cis d f } | d4 f,8 bes~ bes2 |
+
+	% part "B"
+	r8 d4. d4 r | ees4 r8 d~ d2 | r8 d4. d4 r | g4 r8 d~ d2 |
+	r8 d4. d4 g,8 a | bes g a g~ g a bes c | d8 f r4 r f,8 e! | ees f g a d8 f4. |
+
+	% part "A"
+	bes,4 r bes'4 bes, | d4 r8 ees e! f4 bes,8~ | bes8 bes4. g2 | e!2 ees |
+	d2 r8 f g bes | d8 g4 g8 d d f4 | bes4 r r8 bes, \tuplet 3/2 { cis d f } | d4 f,8 bes~ bes2 |
+
+	% part "B"
+	r8 d d d fis a4 d,8 | r8 d d d fis a4 g8~ | g4 r r g,8 a | bes g a g~ g2 |
+	r8 c4. c4 r | des4 r8 c~ c4 g8 a | bes8 c a bes g a bes c | d8 f r4 r8 f4. |
+
+	% part "A"
+	bes4 r bes,4 r | d4 ees e! f | bes,8 g bes4 g2 | r8 ees g bes d f g4 |
+	bes,4 bes d bes8 bes | ees8 c ees e!~ e e4 f8 | r8 f e! f fis g gis a | bes2. r4 |
+}
+{% endif %}

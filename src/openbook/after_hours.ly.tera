@@ -1,0 +1,129 @@
+{#
+default_version = "Fake"
+
+[attributes]
+title = "After Hours"
+style = "Blues"
+composer = "Avery Parrish"
+poet = "Robert Bruce, Buddy Feyne"
+piece = "Slow blues"
+copyright = "1946 by Popular Music Co."
+copyrightextra = "Copyright renewed, Assigned to Chappell & Co., Inc."
+typesetter = "Mark Veltzer <mark.veltzer@gmail.com>"
+completion = "5"
+uuid = "44e00c66-d504-11f1-8000-046874d194b7"
+structure = "Blues"
+location = "jfb:32"
+
+[[youtube]]
+id = "B-7mp8-cDw8"
+remark = "Erskine Hawkins and his Orchestra with Avery Parrish on piano in the original recording (1940)"
+
+[[youtube]]
+id = "Zei65-cyvYM"
+remark = "Arthur Migliazza, solo piano"
+
+[versions.Fake]
+doChords = true
+doVoice = true
+doLyrics = false
+doLyricsmore = false
+doLyricsmoremore = false
+doChordBars = false
+doGuitar = false
+doExtra = false
+doPrep = false
+doOwn = false
+#}
+{% if part == "Vars" %}
+{% endif %}
+{% if part == "Doc" %}	DONE:
+	- added the meta data from the fake book.
+	- put in the tunes structure.
+	- put in the chords (fake book).
+	- put in the tune (fake book).
+	- added youtube performances.
+	TODO:
+	- add the lyrics.
+	- check the chords (fake book).
+	- check the tune (fake book).
+	- hear the tune to check that it is right and adjust the tempo.
+	- bar 38 (part "D", F7): the book has no accidental on the e after the e flat, so it is typed as e flat (bars 34 and 36 have e natural there).
+	- bar 41 (part "D", last eighth): the note looks like a d in the scan (the matching bars have a c), check.
+{% endif %}
+{% if part == "ChordsFake" %}\chordmode {
+	\startChords
+	\startSong
+
+	\partial 8 s8 |
+
+	\myMark "A"
+	\startPart
+	c1:6 | f:9 | c:6 | c:7 | \myEndLine
+	f1*2:9 | c1*2:6 | \myEndLine
+	d2:m7 g:7 | d:m7 g:7 | c4 c:7/e f fis:dim7 | c4/g cis:dim7 g:7/d g:7 | \myEndLine
+	\endPart
+
+	\myMark "B"
+	\startPart
+	c1*4:7 | \myEndLine
+	f1*2:7 | c1:7 | c2. cis4:dim7 | \myEndLine
+	d2:m7 g:7 | d:m7 g:7 | c4 c:7/e f fis:dim7 | c4/g aes:9 g2:9 | \myEndLine
+	\endPart
+
+	\repeat volta 2 {
+
+		\myMark "C"
+		\startPart
+		c1*2 | f1*2 | \myEndLine
+		c1 | d:m7 | g:7.5+ | c4 g:7 c cis8:dim7 d:m7 | g1:7 | \myEndLine
+		\endPart
+
+		\myMark "D"
+		\startPart
+		c1*3 | c1:7 | \myEndLine
+		f1*2:7 | c1 | cis:dim7 | \myEndLine
+		d2:m7 g:7 | d:m7 g:7 | c4 c:7/e f fis:dim7 | c4/g g:7 c2:6.9 | \myEndLine
+		\endPart
+	}
+
+	\endSong
+	\endChords
+}
+{% endif %}
+{% if part == "VoiceFake" %}{
+	\tempo "Adagio" 4 = 66
+	\time 4/4
+	\key c \major
+
+	\partial 8 g'16 g |
+
+	% part "A"
+	g1~ | g4. g16 f g f ees c g a c a | c8 c4.~ c4 r8 e8~ | e4 r r r8 g16 g |
+	g1~ | g4. g16 f g f ees c g a c a | c8 c4.~ c4 r8 e8~ | e4 r r c8. e16 |
+	f4 r8 g~ g4 r | f8. g16 f8. e16 c8. g16 b8. d16 | c4 e8. g16 f4 a8. c16 | g2. r4 |
+
+	% part "B"
+	\tuplet 3/2 { c,8 e g } \tuplet 3/2 { bes c d } \tuplet 3/2 { c bes g } \tuplet 3/2 { dis e g } |
+	\tuplet 3/2 { c,8 e g } \tuplet 3/2 { bes c d } \tuplet 3/2 { c bes g } \tuplet 3/2 { e r g } |
+	\tuplet 3/2 { c,8 e g } \tuplet 3/2 { bes c d } \tuplet 3/2 { c bes g } \tuplet 3/2 { dis e g } |
+	\tuplet 3/2 { c,8 e g } \tuplet 3/2 { bes c d } \tuplet 3/2 { c bes g } e8 r |
+	\tuplet 3/2 { f8 a c } \tuplet 3/2 { ees d c } \tuplet 3/2 { ees d c } \tuplet 3/2 { gis a c } |
+	\tuplet 3/2 { f,8 a c } \tuplet 3/2 { ees d c } \tuplet 3/2 { ees d c } a8 r |
+	\tuplet 3/2 { c,8 e g } \tuplet 3/2 { bes c d } \tuplet 3/2 { c bes g } \tuplet 3/2 { dis e g } |
+	\tuplet 3/2 { c,8 e g } \tuplet 3/2 { bes c d } \tuplet 3/2 { c bes g } \tuplet 3/2 { e e e } |
+	f4 r8 g~ g4 r | f8. g16 f8. e16 c8. g16 b8. d16 | c4 e8. g16 f4 a8. c16 | g4 ees8 d~ d r r4 |
+
+	\repeat volta 2 {
+
+		% part "C"
+		r8. e16 f8. fis16 g4 r | r8. e16 f8. fis16 g4 r | r8. a16 bes8. b16 c4 r | r8. a16 bes8. b16 c4 r |
+		r8. e,16 f8. fis16 g4 r | r8. e16 f8. fis16 g4 r | a8 dis,4.~ dis2 | c8. g16 b8. d!16 c4 e8 g~ | g2. r8 c,8 |
+
+		% part "D"
+		g'8. g16 \tuplet 3/2 { f8 e c~ } c4 e8 g~ | g2. r8 c,8 | g'8. g16 \tuplet 3/2 { f8 e c~ } c4 e8 g~ | g2. r8 c,8 |
+		g'8. g16 \tuplet 3/2 { f8 ees c~ } c4 ees8 g~ | g2. r8 c,8 | g'8. g16 \tuplet 3/2 { f8 e c~ } c4 e8 g~ | g2. r8 d8 |
+		f8. e16 f8. e16 f8 g4 e8 | f8. g16 f8. e16 c8. g16 b8. d16 | c1~ | c2. r4 |
+	}
+}
+{% endif %}

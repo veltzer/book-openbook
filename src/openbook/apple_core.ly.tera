@@ -1,0 +1,122 @@
+{#
+default_version = "Fake"
+
+[attributes]
+title = "Apple Core"
+style = "Jazz"
+composer = "Gerry Mulligan"
+piece = "Medium Fast"
+copyright = "1956 CRITERION MUSIC CORP."
+copyrightextra = "Renewed 1985 CRITERION MUSIC CORP."
+typesetter = "Mark Veltzer <mark.veltzer@gmail.com>"
+completion = "5"
+uuid = "f5c80048-d503-11f1-8000-046874d194b7"
+structure = "AABA"
+location = "jfb:47"
+
+[[youtube]]
+id = "zJ24iHxyvXU"
+remark = "Gerry Mulligan"
+
+[[youtube]]
+id = "wh2N9F8Nfws"
+remark = "Gerry Mulligan and the Concert Jazz Band featuring Zoot Sims"
+
+[versions.Fake]
+doChords = true
+doVoice = true
+doLyrics = false
+doLyricsmore = false
+doLyricsmoremore = false
+doChordBars = false
+doGuitar = false
+doExtra = false
+doPrep = false
+doOwn = false
+#}
+{% if part == "Vars" %}
+{% endif %}
+{% if part == "Doc" %}	DONE:
+	- added the meta data from the fake book.
+	- put in the tunes structure.
+	- put in the chords (fake book).
+	- put in the tune (fake book).
+	- the bridge is printed as rhythm slashes in the fake book and is written the same way here.
+	- added youtube performances.
+	TODO:
+	- check the chords (fake book).
+	- check the tune (fake book).
+	- hear the tune to check that it is right and adjust the tempo.
+{% endif %}
+{% if part == "ChordsFake" %}\chordmode {
+	\startChords
+	\startSong
+
+	\myMark "A"
+	\startPart
+	\repeat volta 2 {
+		f1:m | g2:7 c:7 | f1:m | g2:7 c:7 | \myEndLine
+		aes2 f:m7 | bes:7 ees:7 |
+	} \alternative {
+		{
+			aes1 | c:7 | \myEndLineVoltaNotLast
+		}
+		{
+			aes1*2 | \myEndLineVoltaLast
+		}
+	}
+	\endPart
+
+	\myMark "B"
+	\startPart
+	f1*2:7.9- | bes1*2:m7+.9 | \myEndLine
+	ees1*2:7 | aes1 | c:7 | \myEndLine
+	\endPart
+
+	\myMark "A"
+	\startPart
+	f1:m | g2:7 c:7 | f1:m | g2:7 c:7 | \myEndLine
+	aes2 f:m | bes:7 ees:7 | aes1*2 | \myEndLine
+	\endPart
+
+	\myMark "Coda"
+	\startPart
+	aes2:maj7/c b:6 | bes:7 a:7 | aes1*2:maj7 | \myEndLine
+	\endPart
+
+	\endSong
+	\endChords
+}
+{% endif %}
+{% if part == "VoiceFake" %}{
+	\tempo "Allegro" 4 = 200
+	\time 4/4
+	\key aes \major
+
+	% part "A"
+	\repeat volta 2 {
+		c8 d! f aes c aes f c | d!4. e!8~ e4 r | c8 d! f aes c aes f c | d!4. e!8~ e4 r |
+		ees8 f aes c ees c aes ees | f4. g8~ g4 ees8 f |
+	} \alternative {
+		{
+			aes8 bes aes aes~ aes4 r | r8 aes g g~ g4 r |
+		}
+		{
+			aes8 bes aes aes~ aes2~ | aes2. r4 |
+		}
+	}
+
+	% part "B"
+	\improvisationOn
+	b4 b b b | b b b b | b b b b | b b b b |
+	b4 b b b | b b b b | b b b b | b b b b |
+	\improvisationOff
+
+	% part "A"
+	c,8 d! f aes c aes f c | d!4. e!8~ e4 r | c8 d! f aes c aes f c | d!4. e!8~ e4 r |
+	ees8 f aes c ees c aes ees | f4. g8~ g4 ees8 f^\markup { To Coda \musicglyph #"scripts.coda" } | aes8 bes aes aes~ aes2~ | aes2. r4^\markup { D.C. al Coda } |
+
+	% part "Coda"
+	aes8^\markup { \musicglyph #"scripts.coda" } bes aes aes~ aes bes aes aes~ | aes bes aes g~ g aes g g~ | g1~ | g2. r4 |
+}
+{% endif %}

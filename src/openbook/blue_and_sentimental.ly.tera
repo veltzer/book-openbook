@@ -1,0 +1,101 @@
+{#
+default_version = "Fake"
+
+[attributes]
+title = "Blue And Sentimental"
+style = "Jazz"
+composer = "Count Basie, Jerry Livingston, Mack David"
+poet = "Count Basie, Jerry Livingston, Mack David"
+piece = "Slowly, with a lift"
+copyright = "1938, 1930 Bregman, Vocco & Conn, Inc."
+copyrightextra = "Copyright renewed and assigned to Harry Von Tilzer Music Publishing Company and Bregman, Vocco & Conn, Inc., (c/o The Welk Music Group, Santa Monica, CA 90401)"
+typesetter = "Mark Veltzer <mark.veltzer@gmail.com>"
+completion = "5"
+uuid = "bced821a-d504-11f1-8000-046874d194b7"
+structure = "AABA"
+location = "jfb:63"
+
+[[youtube]]
+id = "uJrDC-bqw_o"
+remark = "Count Basie and his Orchestra with Herschel Evans in the original recording (1938)"
+
+[[youtube]]
+id = "Wwf9NnOQ03k"
+remark = "Ike Quebec from Blue & Sentimental (1961)"
+
+[versions.Fake]
+doChords = true
+doVoice = true
+doLyrics = false
+doLyricsmore = false
+doLyricsmoremore = false
+doChordBars = false
+doGuitar = false
+doExtra = false
+doPrep = false
+doOwn = false
+#}
+{% if part == "Vars" %}
+{% endif %}
+{% if part == "Doc" %}	DONE:
+	- added the meta data from the fake book.
+	- put in the tunes structure.
+	- put in the chords (fake book).
+	- put in the tune (fake book).
+	- added youtube performances.
+	TODO:
+	- add the lyrics.
+	- check the chords (fake book).
+	- check the tune (fake book).
+	- hear the tune to check that it is right and adjust the tempo.
+	- the fake book credits all three authors with "By", so they are typed as both composers and lyricists.
+	- the exact beat of the B9#5 and Bb9 chords is not clear from the fake book (in bar 15 they are printed later than in the other bars).
+{% endif %}
+{% if part == "ChordsFake" %}\chordmode {
+	\startChords
+	\startSong
+
+	\myMark "A"
+	\startPart
+	ees4:7 des4:7 c2:7 | f2:9 b8:9.5+ bes4.:9 | f2:9 b8:9.5+ bes4.:9 | ees4 e4:dim7 f4:m7 bes4:7 | \myEndLine
+	\endPart
+
+	\myMark "A"
+	\startPart
+	ees4 des4:7 c2:7 | f2:9 b8:9.5+ bes4.:9 | f2:9 b8:9.5+ bes4.:9 | c4:m7 b4:dim bes4:m7 ees4:7 | \myEndLine
+	\endPart
+
+	\myMark "B"
+	\startPart
+	aes2:6 a2:dim7 | ees8/bes e4:9.5- ees2:9 s8 | aes2:6 a2:dim7 | ees8/bes c4:m7 f8:m7 bes2:7 | \myEndLine
+	\endPart
+
+	\myMark "A"
+	\startPart
+	ees4:7 des4:7 c2:7 | f2:9 b8:9.5+ bes4.:9 | f2:9 b4:9.5+ bes4:9 | \myEndLine
+	ees4:9 d4:9 des4:9 c4:9 | f4:9 ges4:7 f4:m7 bes4:7 | ees1 | \myEndLine
+	\endPart
+
+	\endSong
+	\endChords
+}
+{% endif %}
+{% if part == "VoiceFake" %}{
+	\tempo "Andante" 4 = 80
+	\time 4/4
+	\key ees \major
+
+	% part "A"
+	g'8 aes a bes d c4. | r8. ees,16 ees8. c16 g'8 g4. | r8. ees16 ees8. c16 g'8 g4 bes8 | g2. r4 |
+
+	% part "A"
+	g8 aes a bes d c4. | r8. ees,16 ees8. c16 g'8 g4. | r8. ees16 ees8. c16 g'8 g4. | g8 bes g f~ f4. ees8 |
+
+	% part "B"
+	f4 f8. ees16 ges4 f8. ees16 | g!8 bes4 bes8~ bes4. ees,8 | f4 f8. ees16 ges4 f8. ees16 | g!8 bes4 bes8~ bes2 |
+
+	% part "A"
+	g8 aes a bes d c4. | r8. ees,16 ees8. c16 g'8 g4. | r8. ees16 ees8. c16 g'8 g4 f8 |
+	bes4 a aes g | c2 r8 bes bes g | f8 ees4.~ ees2 |
+}
+{% endif %}

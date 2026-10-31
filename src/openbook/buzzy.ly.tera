@@ -1,0 +1,80 @@
+{#
+default_version = "Fake"
+
+[attributes]
+title = "Buzzy"
+style = "Jazz"
+composer = "Charlie Parker"
+piece = "Fast"
+copyright = "1947 ATLANTIC MUSIC CORP."
+copyrightextra = "Renewed and assigned 1975 ATLANTIC MUSIC CORP."
+typesetter = "Mark Veltzer <mark.veltzer@gmail.com>"
+completion = "5"
+uuid = "12eea226-d504-11f1-8000-046874d194b7"
+structure = "Blues"
+location = "jfb:74"
+
+[[youtube]]
+id = "urjCs9MwNxE"
+remark = "Charlie Parker in the original recording with Miles Davis, Bud Powell, Max Roach (1947)"
+
+[[youtube]]
+id = "jcs47csR2S4"
+remark = "Charlie Parker live at the Symphony Ballroom, Boston"
+
+[versions.Fake]
+doChords = true
+doVoice = true
+doLyrics = false
+doLyricsmore = false
+doLyricsmoremore = false
+doChordBars = false
+doGuitar = false
+doExtra = false
+doPrep = false
+doOwn = false
+#}
+{% if part == "Vars" %}
+{% endif %}
+{% if part == "Doc" %}	DONE:
+	- added the meta data from the fake book.
+	- put in the tunes structure.
+	- put in the chords (fake book).
+	- put in the tune (fake book).
+	- added youtube performances.
+	TODO:
+	- check the chords (fake book).
+	- check the tune (fake book).
+	- hear the tune to check that it is right and adjust the tempo.
+	- bar 5: the fake book keeps the a natural (from the key signature) under Eb7; check against the recording.
+{% endif %}
+{% if part == "ChordsFake" %}\chordmode {
+	\startChords
+	\startSong
+
+	\myMark "A"
+	\startPart
+	\repeat volta 2 {
+		bes1*4:7 | \myEndLine
+		ees1*2:7 | bes1:7 | g:7 | \myEndLine
+		c1:m7 | f:7 | bes:7 | c2:m7 f:7 | \myEndLine
+	}
+	\endPart
+
+	\endSong
+	\endChords
+}
+{% endif %}
+{% if part == "VoiceFake" %}{
+	\tempo "Allegro" 4 = 220
+	\time 4/4
+	\key bes \major
+
+	% part "A"
+	\repeat volta 2 {
+		d'8 c bes a bes a4 c8~ | c bes r4 r r8 f | d' c bes a bes f g aes | r1 |
+		des8 c bes a bes a4 c8~ | c bes r4 r r8 f | d' c bes a bes f g aes | r1 |
+		d8 c bes a bes a4 c8~ | c bes r4 r r8 f | d' c bes a bes f g aes | r1 |
+	}
+}
+{% endif %}

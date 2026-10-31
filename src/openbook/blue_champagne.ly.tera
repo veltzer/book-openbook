@@ -1,0 +1,116 @@
+{#
+default_version = "Fake"
+
+[attributes]
+title = "Blue Champagne"
+style = "Swing"
+composer = "Grady Watts, Frank Ryerson, Jimmy Eaton"
+poet = "Grady Watts, Frank Ryerson, Jimmy Eaton"
+piece = "Slowly"
+copyright = "1941 (Renewed) Music Sales Corporation, New York, NY"
+typesetter = "Mark Veltzer <mark.veltzer@gmail.com>"
+completion = "5"
+uuid = "bcef3f88-d504-11f1-8000-046874d194b7"
+structure = "AABA"
+location = "jfb:64"
+
+[[youtube]]
+id = "Pr28CN325kY"
+remark = "Jimmy Dorsey and his Orchestra with Bob Eberly in the original hit recording (1941)"
+
+[[youtube]]
+id = "xn0NwJPQlLk"
+remark = "The Manhattan Transfer"
+
+[versions.Fake]
+doChords = true
+doVoice = true
+doLyrics = false
+doLyricsmore = false
+doLyricsmoremore = false
+doChordBars = false
+doGuitar = false
+doExtra = false
+doPrep = false
+doOwn = false
+#}
+{% if part == "Vars" %}
+{% endif %}
+{% if part == "Doc" %}	DONE:
+	- added the meta data from the fake book.
+	- put in the tunes structure.
+	- put in the chords (fake book).
+	- put in the tune (fake book).
+	- added youtube performances.
+	TODO:
+	- add the lyrics.
+	- check the chords (fake book).
+	- check the tune (fake book).
+	- hear the tune to check that it is right and adjust the tempo.
+{% endif %}
+{% if part == "ChordsFake" %}\chordmode {
+	\startChords
+	\startSong
+
+	\myMark "A"
+	\startPart
+	\repeat volta 2 {
+		f2 aes2:dim7 | c2:7/g c2:7 | f1 | des2:7 g4:m7.5- c4:7 | f2 aes2:dim7 | \myEndLine
+		g2:m7.5- c2:7 |
+	} \alternative {
+		{
+			f2 d2:m7 | g2:m7 c2:7 | \myEndLineVoltaNotLast
+		}
+		{
+			f2 bes2 | \myEndLineVoltaLast
+		}
+	}
+	f2 a2:7 |
+	\endPart
+
+	\myMark "B"
+	\startPart
+	d2:m d2:m7+ | \myEndLine
+	d2:m7 g2:9 | f2 g4.:m7 c8:7.5+ | f2 a2:7 | d2:m d2:m7+ | d2:m7 g2:9 | \myEndLine
+	f2 g2:9 | des2:7 g4:m7 c4:7 |
+	\endPart
+
+	\myMark "A"
+	\startPart
+	f2 aes2:dim7 | c2:7/g c2:7 | f1 | \myEndLine
+	des2:7 g4:m7.5- c4:7 | f2 d2:7 | g2:m7.5- c2:9 | f1 | s1 | \myEndLine
+	\endPart
+
+	\endSong
+	\endChords
+}
+{% endif %}
+{% if part == "VoiceFake" %}{
+	\tempo "Andante" 4 = 76
+	\time 2/2
+	\key f \major
+
+	% part "A"
+	\repeat volta 2 {
+		f'4 c8 d~ d2 | r4 e8 c d a c4 | f,4 c8 d~ d2 | r4 des'8 aes bes f g4 | a!4 c,8 d~ d2 |
+		r8 c' ces bes a f d f~ |
+	} \alternative {
+		{
+			f1~ | f2. r4 |
+		}
+		{
+			f1~ |
+		}
+	}
+	f2. r4 |
+
+	% part "B"
+	d8 e f g a8 a4. |
+	d,8 e f g a2 | c4 c8 c c4. c8 | c2 r2 | d,8 e f g a8 a4. | d,8 e f a d2 |
+	\tuplet 3/2 { c4 c c } d8 d4. | \tuplet 3/2 { des4 aes bes } c4. c8 |
+
+	% part "A"
+	f4 c8 d~ d2 | r4 e8 c d a c4 | f,4 c8 d~ d2 |
+	r4 des'8 aes bes f g4 | a!4 c,8 d~ d2 | r8 c' ces bes a c! d f~ | f1~ | f2.\fermata r4 |
+}
+{% endif %}

@@ -1,0 +1,80 @@
+{#
+default_version = "Fake"
+
+[attributes]
+title = "Another Hairdo"
+style = "Jazz"
+composer = "Charlie Parker"
+piece = "Blues"
+copyright = "1948 ATLANTIC MUSIC CORP."
+copyrightextra = "Renewed and assigned 1976 ATLANTIC MUSIC CORP."
+typesetter = "Mark Veltzer <mark.veltzer@gmail.com>"
+completion = "5"
+uuid = "edcfba02-d503-11f1-8000-046874d194b7"
+structure = "Blues"
+location = "jfb:45"
+
+[[youtube]]
+id = "6WYXWO-k_BM"
+remark = "Charlie Parker in the original recording for Savoy (1947)"
+
+[[youtube]]
+id = "rdSrB-GAa3o"
+remark = "Jackie McLean"
+
+[versions.Fake]
+doChords = true
+doVoice = true
+doLyrics = false
+doLyricsmore = false
+doLyricsmoremore = false
+doChordBars = false
+doGuitar = false
+doExtra = false
+doPrep = false
+doOwn = false
+#}
+{% if part == "Vars" %}
+{% endif %}
+{% if part == "Doc" %}	DONE:
+	- added the meta data from the fake book.
+	- put in the tunes structure.
+	- put in the chords (fake book).
+	- put in the tune (fake book).
+	- added youtube performances.
+	TODO:
+	- check the chords (fake book).
+	- check the tune (fake book).
+	- hear the tune to check that it is right and adjust the tempo.
+	- bar 8: the triplet after the a flat eighth has no accidental on its middle note; typed as a flat by the notation rule (fits the G7 as a flat nine).
+{% endif %}
+{% if part == "ChordsFake" %}\chordmode {
+	\startChords
+	\startSong
+
+	\myMark "A"
+	\startPart
+	\repeat volta 2 {
+		bes1*4:7 | \myEndLine
+		ees1*2:7 | bes1:7 | \myEndLine
+		bes2:7 g:7 | c1:m7 | f:7 | bes:7 | bes2:7 f:7 | \myEndLine
+	}
+	\endPart
+
+	\endSong
+	\endChords
+}
+{% endif %}
+{% if part == "VoiceFake" %}{
+	\tempo "Allegro" 4 = 200
+	\time 4/4
+	\key bes \major
+
+	% part "A"
+	\repeat volta 2 {
+		r8 bes8 \tuplet 3/2 { ees16 f ees } bes8 des d! r8 bes8 | \tuplet 3/2 { ees16 f ees } bes8 des d! r8 bes8 \tuplet 3/2 { ees16 f ees } bes8 | des8 d! r8 bes8 c aes4. | r1 |
+		des'16 c bes aes g f ees a,! bes c des bes c4~ | c4 r r8 bes d f | g8 bes c a bes16 c bes a g8 ges |
+		f8 ees d c b! aes' \tuplet 3/2 { g16 aes g } f8 | ees8 g, bes d c4 r8 des'8~ | des8 bes4 aes8 f ees des bes~ | bes4 g8 bes \tuplet 3/2 { c4 bes bes } | bes4 r r2 |
+	}
+}
+{% endif %}

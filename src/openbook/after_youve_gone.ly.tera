@@ -1,0 +1,113 @@
+{#
+default_version = "Fake"
+
+[attributes]
+title = "After You've Gone"
+style = "Jazz"
+composer = "Henry Creamer, Turner Layton"
+poet = "Henry Creamer, Turner Layton"
+piece = "Moderately"
+copyright = "1918, 1987 MORLEY MUSIC CO."
+copyrightextra = "Renewed 1946 MORLEY MUSIC CO. International Copyright Secured. All Rights Reserved."
+typesetter = "Mark Veltzer <mark.veltzer@gmail.com>"
+completion = "5"
+uuid = "44e00c67-d504-11f1-8000-046874d194b7"
+structure = "AAB"
+location = "jfb:33"
+
+[[youtube]]
+id = "VW33oH_EkW4"
+remark = "Marion Harris in the original recording (1918)"
+
+[[youtube]]
+id = "8qtJVThNQ_M"
+remark = "The Benny Goodman Trio"
+
+[versions.Fake]
+doChords = true
+doVoice = true
+doLyrics = false
+doLyricsmore = false
+doLyricsmoremore = false
+doChordBars = false
+doGuitar = false
+doExtra = false
+doPrep = false
+doOwn = false
+#}
+{% if part == "Vars" %}
+{% endif %}
+{% if part == "Doc" %}	DONE:
+	- added the meta data from the fake book.
+	- put in the tunes structure.
+	- put in the chords (fake book).
+	- put in the tune (fake book).
+	- added youtube performances.
+	TODO:
+	- add the lyrics.
+	- check the chords (fake book).
+	- check the tune (fake book).
+	- hear the tune to check that it is right and adjust the tempo.
+{% endif %}
+{% if part == "ChordsFake" %}\chordmode {
+	\startChords
+	\startSong
+
+	\repeat volta 2 {
+
+		\myMark "A"
+		\startPart
+		ees1:maj7 | aes:9 | d:m7 | g:7 | \myEndLine
+		c1:9 | f:9 | bes:6 | f2:m7 bes:7 | \myEndLine
+		\endPart
+
+		\myMark "A"
+		\startPart
+		ees1:maj7 | aes:9 | d:m7 | g:7 | \myEndLine
+		\endPart
+
+		\myMark "B"
+		\startPart
+		c2:m g:7 | c4.:m7 aes8:9 s2 | bes2 d:7 | g4.:m g8:m/f e4:m7 a:7.9- | \myEndLine
+		d2:m7 g:m7 | c:m7 f:7 | bes1 |
+	} \alternative {
+		{
+			f2:m7 bes:7 | \myEndLineVoltaNotLast
+		}
+		{
+			bes1:maj7 | \myEndLineVoltaLast
+		}
+	}
+	\endPart
+
+	\endSong
+	\endChords
+}
+{% endif %}
+{% if part == "VoiceFake" %}{
+	\tempo "Moderato" 4 = 120
+	\time 4/4
+	\key bes \major
+
+	\repeat volta 2 {
+
+		% part "A"
+		g'8 bes c d~ d2 | r8 c d c d c4. | d,8 f g a~ a2 | r8 g a g a g4. |
+		g8 d'4 d8~ d2 | g,8 c4 c8~ c2 | r8 f, g f a f g f | bes8 d,4 f8~ f2 |
+
+		% part "A"
+		g8 bes c d~ d2 | r8 c d c d c4. | d,8 f g a~ a2 | r8 g a g a g4. |
+
+		% part "B"
+		ees'2 d | c8 fis, g d'~ d4 c | r8 cis d bes c! b! c a | bes8 cis, d a'~ a4 g |
+		f8 g bes d~ d2 | r8 ees, f a c4 d | d8 bes~ bes2.~ |
+	} \alternative {
+		{
+			bes4 r r2 |
+		}
+		{
+			bes4\repeatTie r r2 |
+		}
+	}
+}
+{% endif %}

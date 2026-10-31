@@ -1,0 +1,113 @@
+{#
+default_version = "Fake"
+
+[attributes]
+title = "Bud's Blues"
+style = "Jazz"
+composer = "Sonny Stitt"
+piece = "Moderately"
+copyright = "1965 by Primebeat Music Co."
+copyrightextra = "Assigned to Richcar Music Co. All Rights Reserved. Used by Permission."
+typesetter = "Mark Veltzer <mark.veltzer@gmail.com>"
+completion = "5"
+uuid = "38339756-d506-11f1-8000-046874d194b7"
+structure = "AABA"
+location = "jfb:72"
+
+[[youtube]]
+id = "dgJEKNzmeK8"
+remark = "Sonny Stitt and Bud Powell in the original recording"
+
+[[youtube]]
+id = "0PJr3Jy2yP8"
+remark = "Sonny Stitt"
+
+[versions.Fake]
+doChords = true
+doVoice = true
+doLyrics = false
+doLyricsmore = false
+doLyricsmoremore = false
+doChordBars = false
+doGuitar = false
+doExtra = false
+doPrep = false
+doOwn = false
+#}
+{% if part == "Vars" %}
+{% endif %}
+{% if part == "Doc" %}	DONE:
+	- added the meta data from the fake book.
+	- put in the tunes structure.
+	- put in the chords (fake book).
+	- put in the tune (fake book).
+	- added youtube performances.
+	TODO:
+	- check the chords (fake book).
+	- check the tune (fake book).
+	- hear the tune to check that it is right and adjust the tempo.
+	- second bar of the B part (F7): the book has no accidental on the two d's, so they are read as d flat (key signature).
+	- fifth bar of the B part (Gb7): the a after the b flat carries the natural from earlier in the bar, check against a recording.
+{% endif %}
+{% if part == "ChordsFake" %}\chordmode {
+	\startChords
+	\startSong
+
+	\myMark "A"
+	\startPart
+	\repeat volta 2 {
+		aes1*2 | bes1:m7 | ees:7 | \myEndLine
+		bes2:7 d:dim7 | ees4:m7 f2.:7 |
+	} \alternative {
+		{
+			bes2:m7 ees:7 | aes1:maj7 | \myEndLineVoltaNotLast
+		}
+		{
+			bes2:m7 ees:7 | aes1:maj7 | \myEndLineVoltaLast
+		}
+	}
+	\endPart
+
+	\myMark "B"
+	\startPart
+	c1:m7 | f:7 | bes1*2 | \myEndLine
+	des2:m7 ges:7 | c:m7 f:7 | b:m7 e:7 | bes:m7 ees:7 | \myEndLine
+	\endPart
+
+	\myMark "A"
+	\startPart
+	aes1*2 | bes1:m7 | ees:7 | \myEndLine
+	des2:7 d:dim7 | ees4:m7 f2.:7 | bes2:m7 ees:7 | aes1:maj7 | \myEndLine
+	\endPart
+
+	\endSong
+	\endChords
+}
+{% endif %}
+{% if part == "VoiceFake" %}{
+	\tempo "Moderato" 4 = 120
+	\time 4/4
+	\key aes \major
+
+	% part "A"
+	\repeat volta 2 {
+		ees'8 f des ees c8 r8 r8 b8~ | b4 bes2 a4 | r8 c,8 \tuplet 3/2 { des8 f aes } c8 aes f des | bes'8 ees,8 r4 r4 aes4 |
+		b8 r8 b8 b bes8 aes4 ges8~ | ges4 f2 c8 ees8~ |
+	} \alternative {
+		{
+			ees8 c8 \tuplet 3/2 { des8 f aes } c8 ees c g~ | g2. r4 |
+		}
+		{
+			ees8 c8 \tuplet 3/2 { des8 f aes } c4. ees8~ | ees2. r4 |
+		}
+	}
+
+	% part "B"
+	\tuplet 3/2 { d8 ees d } c8 g d'8 c4. | r8 e16 ees des8 c bes des aes ges | f8 ees' d f, a bes r4 | r2 r4 des,8 e8 |
+	aes8 ces aes a bes a ges e | ees8 c~ c16 ees g bes a8 f r4 | r8 a8 fis g gis e r4 | bes4~ bes16 des f aes g8 ees r4 |
+
+	% part "A"
+	ees'8 f des ees c8 r8 r8 b8~ | b4 bes2 a4 | r8 c,8 \tuplet 3/2 { des8 f aes } c8 aes f des | bes'8 ees,8 r4 r4 aes4 |
+	b8 r8 b8 b bes8 aes4 ges8~ | ges4 f2 c8 ees8~ | ees8 c8 \tuplet 3/2 { des8 f aes } c4. ees8~ | ees2. r4 |
+}
+{% endif %}

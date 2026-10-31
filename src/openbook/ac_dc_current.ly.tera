@@ -1,0 +1,97 @@
+{#
+default_version = "Fake"
+
+[attributes]
+title = "AC-DC Current"
+style = "Swing"
+composer = "Benny Goodman, Lionel Hampton, Charlie Christian"
+piece = "Medium bounce"
+copyright = "1941 by Regent Music Corp."
+copyrightextra = "Copyright renewed by Regent Music Corp. and Jewel Music Publishing Co., Inc. Reprinted by permission."
+typesetter = "Mark Veltzer <mark.veltzer@gmail.com>"
+completion = "5"
+uuid = "9e6ed346-d506-11f1-8000-046874d194b7"
+structure = "AA'"
+location = "jfb:35"
+
+[[youtube]]
+id = "xpMboNlkC8U"
+remark = "Benny Goodman Sextet with Charlie Christian, Waldorf Astoria, New York (1939)"
+
+[[youtube]]
+id = "h9XmQKrWvsc"
+remark = "Benny Goodman Sextet"
+
+[versions.Fake]
+doChords = true
+doVoice = true
+doLyrics = false
+doLyricsmore = false
+doLyricsmoremore = false
+doChordBars = false
+doGuitar = false
+doExtra = false
+doPrep = false
+doOwn = false
+#}
+{% if part == "Vars" %}
+{% endif %}
+{% if part == "Doc" %}	DONE:
+	- added the meta data from the fake book.
+	- put in the tunes structure.
+	- put in the chords (fake book).
+	- put in the tune (fake book).
+	- added youtube performances.
+	TODO:
+	- check the chords (fake book).
+	- check the tune (fake book).
+	- hear the tune to check that it is right and adjust the tempo.
+	- the book prints no chord at the start of the second ending (only Am7/D in its middle), G6 is typed there as in the first ending.
+	- the last note of bar 1 is printed without an accidental after a flatted b in the same bar, it is typed as b flat.
+{% endif %}
+{% if part == "ChordsFake" %}\chordmode {
+	\startChords
+	\startSong
+
+	\partial 4 s4 |
+
+	\myMark "A"
+	\startPart
+	\repeat volta 2 {
+		c1*2:9 | g1*2:6 | \myEndLine
+		d1*2:7 |
+	} \alternative {
+		{
+			g1*2:6 | \myEndLineVoltaNotLast
+		}
+		{
+			g2:6 a:m7/d | g1:6 | \myEndLineVoltaLast
+		}
+	}
+	\endPart
+
+	\endSong
+	\endChords
+}
+{% endif %}
+{% if part == "VoiceFake" %}{
+	\tempo "Moderato" 4 = 160
+	\time 2/2
+	\key g \major
+
+	\partial 4 e4->~ |
+
+	% part "A"
+	\repeat volta 2 {
+		e8 e g bes d4 bes | d4 bes8 d~ d4 d,4->~ | d8 d g b d4 b | d4 b8 d~ d4 d,4->~ |
+		d8 d fis a d4 a | d4 a8 d~ d4 d,4->~ |
+	} \alternative {
+		{
+			d8 d g b d4 b | d4 b8 d~ d4 e,4->\laissezVibrer |
+		}
+		{
+			d8\repeatTie d g b d4 c8 ais | b8 d e g~ g4 r |
+		}
+	}
+}
+{% endif %}

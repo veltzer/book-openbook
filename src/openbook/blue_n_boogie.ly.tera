@@ -1,0 +1,96 @@
+{#
+default_version = "Fake"
+
+[attributes]
+title = "Blue 'N Boogie"
+style = "Jazz"
+composer = "John 'Dizzy' Gillespie, Frank Paparelli"
+piece = "Moderately Fast"
+copyright = "1944, 1961 by MCA MUSIC PUBLISHING, A Division of MCA INC., New York, NY."
+copyrightextra = "Copyright Renewed."
+typesetter = "Mark Veltzer <mark.veltzer@gmail.com>"
+completion = "5"
+uuid = "058dea56-d504-11f1-8000-046874d194b7"
+structure = "AB"
+location = "jfb:62"
+
+[[youtube]]
+id = "JgftJgCzZQY"
+remark = "Dizzy Gillespie Sextet in the original recording (1945)"
+
+[[youtube]]
+id = "poE4N3rj3J8"
+remark = "Miles Davis from Walkin' (1954)"
+
+[versions.Fake]
+doChords = true
+doVoice = true
+doLyrics = false
+doLyricsmore = false
+doLyricsmoremore = false
+doChordBars = false
+doGuitar = false
+doExtra = false
+doPrep = false
+doOwn = false
+#}
+{% if part == "Vars" %}
+{% endif %}
+{% if part == "Doc" %}	DONE:
+	- added the meta data from the fake book.
+	- put in the tunes structure.
+	- put in the chords (fake book).
+	- put in the tune (fake book).
+	- added youtube performances.
+	TODO:
+	- check the chords (fake book).
+	- check the tune (fake book).
+	- hear the tune to check that it is right and adjust the tempo.
+	- the book prints only a single Bb chord for the first 15 bars (the head), check the head chords against a recording.
+{% endif %}
+{% if part == "ChordsFake" %}\chordmode {
+	\startChords
+	\startSong
+
+	\partial 8 s8 |
+
+	\myMark "A"
+	\startPart
+	bes1*4 | \myEndLine
+	bes1*4 | \myEndLine
+	bes1*2 | \myEndLine
+	bes1*3 | \myEndLine
+	bes1 | bes2 bes:6 | b1*2:7.5- | \myEndLine
+	\endPart
+
+	\myMark "B"
+	\startPart
+	bes1:6 | ees:9 | bes1*2:6 | \myEndLine
+	ees1*2:9 | bes1*2:6 | \myEndLine
+	c1:m7 | ces:maj7 | bes1*2:6 | \myEndLine
+	\endPart
+
+	\endSong
+	\endChords
+}
+{% endif %}
+{% if part == "VoiceFake" %}{
+	\tempo "Allegro" 4 = 220
+	\time 2/2
+	\key bes \major
+
+	\partial 8 f'8 |
+
+	% part "A"
+	f,8 g bes cis d bes g f | bes g cis2 d8 bes | \tuplet 3/2 { cis16 d cis } bes8 c d~ d4 \tuplet 3/2 { a16 bes a } f8 | a8 bes r4 r4 r8 f'8 |
+	f,8 g bes cis d bes g f | bes g cis2 d8 bes | \tuplet 3/2 { cis16 d cis } bes8 c d~ d4 \tuplet 3/2 { a16 bes a } f8 | a8 bes r4 r4 r8 f'8 |
+	\tuplet 3/2 { a16 bes a } f8 a bes~ bes4 \tuplet 3/2 { e,!16 f e } bes8 | e!8 f r4 r4 r8 bes,8 |
+	\tuplet 3/2 { e!16 f e } bes8 e f~ f4 \tuplet 3/2 { cis16 d cis } bes8 | cis8 d r4 r4 r8 f,8 | \tuplet 3/2 { cis8 d f } \tuplet 3/2 { g aes bes } \tuplet 3/2 { c cis d } \tuplet 3/2 { ees e! f } |
+	\tuplet 3/2 { ges16 aes ges } e!8 f d \tuplet 3/2 { ees16 f ees } cis8 d f, | a8 c a f bes4 r4 | r1 | r1 |
+
+	% part "B"
+	bes4 r8 f8 \tuplet 3/2 { a16 bes a } f8 a bes | r4 r8 f8 \tuplet 3/2 { a16 bes a } f8 a bes | r4 r8 f8 a bes r4 | r1 |
+	bes4 r8 f8 \tuplet 3/2 { a16 bes a } f8 a bes | r4 r8 f8 \tuplet 3/2 { a16 bes a } f8 a bes | r4 r8 f8 a bes r4 | r8 f a bes r2 |
+	bes4 r8 f8 \tuplet 3/2 { a16 bes a } f8 a bes | r4 r8 f8 \tuplet 3/2 { a16 bes a } f8 a bes | r4 r8 f8 a bes r4 | r8 f a bes r f a bes |
+}
+{% endif %}

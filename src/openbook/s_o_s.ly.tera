@@ -1,0 +1,107 @@
+{#
+default_version = "Fake"
+
+[attributes]
+title = "S.O.S."
+style = "Jazz"
+composer = "Wes Montgomery"
+piece = "Bright"
+copyright = "1965 by Taggie Music Co., A Division of Gopam Enterprises, Inc."
+typesetter = "Mark Veltzer <mark.veltzer@gmail.com>"
+completion = "5"
+uuid = "8279e948-d504-11f1-8000-046874d194b7"
+structure = "AABA"
+location = "jfb:323"
+
+[[youtube]]
+id = "th1K_GzlC1k"
+remark = "Wes Montgomery in the original recording from Full House (1962)"
+
+[[youtube]]
+id = "q8C9FbiqZB8"
+remark = "Andy Bartosh"
+
+[versions.Fake]
+doChords = true
+doVoice = true
+doLyrics = false
+doLyricsmore = false
+doLyricsmoremore = false
+doChordBars = false
+doGuitar = false
+doExtra = false
+doPrep = false
+doOwn = false
+#}
+{% if part == "Vars" %}
+{% endif %}
+{% if part == "Doc" %}	DONE:
+	- added the meta data from the fake book.
+	- put in the tunes structure.
+	- put in the chords (fake book).
+	- put in the tune (fake book).
+	- added youtube performances.
+	TODO:
+	- check the chords (fake book).
+	- check the tune (fake book).
+	- hear the tune to check that it is right and adjust the tempo.
+	- the book prints the chord before the first bar of the last A as "Ab" (cut off at the end of the line), it is typed as Abmaj7 like the other A sections.
+{% endif %}
+{% if part == "ChordsFake" %}\chordmode {
+	\startChords
+	\startSong
+
+	\partial 8*7 s8*7 |
+
+	\myMark "A"
+	\startPart
+	c1:m | bes2:m7 ees:7 | aes1:maj7 | d2:m7.5- g:7 | \myEndLine
+	c1:m | aes2:7 g:7 | c1*2:maj7 | \myEndLine
+	\endPart
+
+	\myMark "A"
+	\startPart
+	c1:m7 | bes2:m7 ees:7 | aes1:maj7 | d2:m7.5- g:7 | \myEndLine
+	c1:m | aes2:7 des:7 | c1*2:m | \myEndLine
+	\endPart
+
+	\myMark "B"
+	\startPart
+	g1:m9 | c:7 | f:m9 | bes1*2:7 | \myEndLine
+	a1:7 | aes:7 | g:7 | \myEndLine
+	\endPart
+
+	\myMark "A"
+	\startPart
+	c1:m | bes2:m7 ees:7 | aes1:maj7 | d2:m7.5- g:7 | \myEndLine
+	c1:m | aes2:7 des:7 | c1*2:maj7 | \myEndLine
+	\endPart
+
+	\endSong
+	\endChords
+}
+{% endif %}
+{% if part == "VoiceFake" %}{
+	\tempo "Allegro" 4 = 220
+	\time 2/2
+	\key c \minor
+
+	\partial 8*7 g'8 a! b! c d ees f |
+
+	% part "A"
+	g4 r r ees | aes des, bes' ees,8 c'~ | c2 r8 g aes bes | ces bes aes g f ees f g |
+	r4 r8 g16 f ees8 des c bes | ees f g! f ees ces bes aes | g1 | r8 g4 a! b! c8~ |
+
+	% part "A"
+	c d4 ees f g8 | aes4 des, bes' ees,8 c'~ | c2 r8 g aes bes | ces bes aes g f ees f g |
+	r4 r8 g16 f ees8 des c bes | ees f g! f ees b! bes aes | g1 | r8 g c ees g c4 c,8 |
+
+	% part "B"
+	a'!1 | r4 f8 c r aes f4 | g1~ | g1 |
+	r8 bes \tuplet 3/2 { b!8 cis ees } g e! r4 | r8 e! f ees e! d ees r | r4 r8 aes, \tuplet 3/2 { a!8 b! cis } fis ees | g aes g f! ees g, b! c |
+
+	% part "A"
+	r4 r8 d ees f g4 | aes des, bes' ees,8 c'~ | c2 r8 g aes bes | ces bes aes g f ees f g |
+	r4 r8 g16 f ees8 des c bes | ees f g f ees b! bes aes | g1~ | g4 r r2 |
+}
+{% endif %}

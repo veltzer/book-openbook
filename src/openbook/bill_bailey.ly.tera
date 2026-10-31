@@ -1,0 +1,116 @@
+{#
+default_version = "Fake"
+
+[attributes]
+title = "Bill Bailey"
+style = "Dixieland"
+composer = "Traditional"
+piece = "Brightly"
+copyright = "1988 by HAL LEONARD PUBLISHING CORPORATION"
+typesetter = "Mark Veltzer <mark.veltzer@gmail.com>"
+completion = "5"
+uuid = "58e85010-d504-11f1-8000-046874d194b7"
+structure = "ABAC"
+location = "jfb:59"
+
+[[youtube]]
+id = "r3seUny2pB8"
+remark = "Arthur Collins in an early recording (1902)"
+
+[[youtube]]
+id = "IlFXYKqw2nQ"
+remark = "Louis Armstrong and the All-Stars"
+
+[versions.Fake]
+doChords = true
+doVoice = true
+doLyrics = false
+doLyricsmore = false
+doLyricsmoremore = false
+doChordBars = false
+doGuitar = false
+doExtra = false
+doPrep = false
+doOwn = false
+#}
+{% if part == "Vars" %}
+{% endif %}
+{% if part == "Doc" %}	DONE:
+	- added the meta data from the fake book.
+	- put in the tunes structure.
+	- put in the chords (fake book).
+	- put in the tune (fake book).
+	- added youtube performances.
+	TODO:
+	- add the lyrics.
+	- check the chords (fake book).
+	- check the tune (fake book).
+	- hear the tune to check that it is right and adjust the tempo.
+	- the fake book credits the song as "Traditional"; it is usually credited to Hughie Cannon.
+{% endif %}
+{% if part == "ChordsFake" %}\chordmode {
+	\startChords
+	\startSong
+
+	\myMark "A"
+	\startPart
+	\repeat volta 2 {
+		g1*4 | \myEndLine
+		g1 | g2 gis2:dim7 | d4:7/a d2.:7 | d1:7 | \myEndLine
+
+		\myMark "B"
+		d1*4:7 | \myEndLine
+		d1:7 | d2:7 d2:9.5+ | g1*2 | \myEndLine
+
+		\myMark "A"
+		g1*4 | \myEndLine
+		g1 | g2 b2:dim | a2:m e2:7 | a1:m | \myEndLine
+
+		\myMark "C"
+		c1 | cis1:dim7 | g1/d | e1:7 | \myEndLine
+		a1:7 | d2:9 d2:7 | \myEndLine
+	} \alternative {
+		{
+			g1 | a2:7 d2:7 | \myEndLineVoltaNotLast
+		}
+		{
+			g1*2 | \myEndLineVoltaLast
+		}
+	}
+	\endPart
+
+	\endSong
+	\endChords
+}
+{% endif %}
+{% if part == "VoiceFake" %}{
+	\tempo "Allegro" 2 = 112
+	\time 2/2
+	\key g \major
+
+	\repeat volta 2 {
+		% part "A"
+		d4 e2 g4 | b4. ais8 b4 d | d,4 e2 g4 | b1 |
+		d,4 e2 g4 | b2 d | d4 fis,2.~ | fis1 |
+
+		% part "B"
+		d4 fis2 a4 | c4 b c d | d,4 fis2 a4 | c1 |
+		d,4 fis2 a4 | d2 e | e4 b2.~ | b1 |
+
+		% part "A"
+		d,4 e2 g4 | b4. ais8 b4 d | d,4 e2 g4 | b2. d,4 |
+		d4 d g b | d2 f | e1~ | e2. g,4 |
+
+		% part "C"
+		g4 g2 g4 | a2 g | d'4 d2 e4 | b2. b4 |
+		b4 a gis a | c2 b |
+	} \alternative {
+		{
+			g1~ | g4 r r2 |
+		}
+		{
+			g1~ | g4 r r2 |
+		}
+	}
+}
+{% endif %}

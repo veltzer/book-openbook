@@ -1,0 +1,109 @@
+{#
+default_version = "Fake"
+
+[attributes]
+title = "As Catch Can"
+style = "Jazz"
+composer = "Gerry Mulligan"
+piece = "Fast"
+copyright = "1959-1964 CRITERION MUSIC CORP."
+typesetter = "Mark Veltzer <mark.veltzer@gmail.com>"
+completion = "5"
+uuid = "f5cd0412-d503-11f1-8000-046874d194b7"
+structure = "ABCB"
+location = "jfb:49"
+
+[[youtube]]
+id = "jMnFREIOipo"
+remark = "Gerry Mulligan (1959)"
+
+[[youtube]]
+id = "B8Wu41sWY-8"
+remark = "Gerry Mulligan in the film Jazz On A Summer's Day (Newport 1958)"
+
+[versions.Fake]
+doChords = true
+doVoice = true
+doLyrics = false
+doLyricsmore = false
+doLyricsmoremore = false
+doChordBars = false
+doGuitar = false
+doExtra = false
+doPrep = false
+doOwn = false
+#}
+{% if part == "Vars" %}
+{% endif %}
+{% if part == "Doc" %}	DONE:
+	- added the meta data from the fake book.
+	- put in the tunes structure.
+	- put in the chords (fake book).
+	- put in the tune (fake book).
+	- added youtube performances.
+	TODO:
+	- check the chords (fake book).
+	- check the tune (fake book).
+	- hear the tune to check that it is right and adjust the tempo.
+	- bars 23 and 38: the book flats the first c of the first triplet and prints no natural on the c's of the second triplet, so they are typed as c flat (carry through the bar); check whether c natural is meant.
+{% endif %}
+{% if part == "ChordsFake" %}\chordmode {
+	\startChords
+	\startSong
+
+	\partial 4. s4. |
+
+	\myMark "A"
+	\startPart
+	des4 ees8:m des8*5 | des1 | des4 ees8:m des8*5 | des1 | des1 | des1 | \myEndLine
+	des1 | des4 ees8:m des8*5 | des1 | des1 | des1 | des4 ees8:m des8*5 | des1 | \myEndLine
+	\endPart
+
+	\myMark "B"
+	\startPart
+	des1 | des1 | des1 | ees8:m des8*7 | aes1:7 | des1 | \myEndLine
+	des1 | des4 ees8:m des8*5 | des1 | des1 | des1 | des1 | \myEndLine
+	\endPart
+
+	\myMark "C"
+	\startPart
+	des2 c:7 | f1 | f2 b:7 | e2 b:7 | e2 bes:7 | \myEndLine
+	ees1 | ees2 a:7 | d2 aes:7 | \myEndLine
+	\endPart
+
+	\myMark "B"
+	\startPart
+	des1 | des1 | des4 ees8:m des8*5 | des1 | des1 | des1 | des1 | \myEndLine
+	\endPart
+
+	\endSong
+	\endChords
+}
+{% endif %}
+{% if part == "VoiceFake" %}{
+	\tempo "Allegro" 4 = 220
+	\time 2/2
+	\key des \major
+
+	\partial 4. aes8 bes aes |
+
+	% part "A"
+	des4 ees8 des~ des4 r | r2 r8 aes bes des | f4 ges8 f~ f4 r | r2 r4 aes,4 |
+	aes4. bes8 \tuplet 3/2 { aes4 g! aes } | des4. ees8 \tuplet 3/2 { des4 c des } | f4. ges8 \tuplet 3/2 { f4 e! f } | aes4 bes8 aes~ aes4 r |
+	r2 r4 aes,4 | des4. ees8 \tuplet 3/2 { des4 c des } | f4. ges8 \tuplet 3/2 { f4 e! f } | aes4 bes8 aes~ aes4 r |
+	r1 |
+
+	% part "B"
+	r2 r8 aes bes aes | des8 c ees des bes aes bes4 | des8 bes a! ges ees des f4 | ges8 f r4 r2 |
+	r4 r8 aes, c ees d! aes | des4 ees8 des c des f e! | ges8 f e! f aes g! bes aes | des8 c ees des~ des r r4 |
+	r2 r8 aes bes aes | des4 ees8 des \tuplet 3/2 { ces aes bes } \tuplet 3/2 { ces bes ces } | d!8 ees e! des \tuplet 3/2 { ges, f e! } f8 aes~ | aes4 g!8 fes des aes'4 des8~ |
+
+	% part "C"
+	des4 r8 c~ c c4 c8 | f4 r r r8 c | f4 r8 b,!~ b4 dis | e!4 r r8 b!4 b8 |
+	e!4 r r8 bes4. | ees4 r r8 bes4 bes8 | ees4 r8 a,!~ a cis4. | d!4 r8 aes c ees des aes |
+
+	% part "B"
+	des,4 ees8 des c des f e! | ges8 f e! f aes g! bes aes | des8 c ees des~ des r r4 | r2 r8 aes bes aes |
+	des4 ees8 des \tuplet 3/2 { ces aes bes } \tuplet 3/2 { ces bes ces } | d!8 ees e! des \tuplet 3/2 { ges, f e! } f8 aes~ | aes4 g!8 e! des aes'4 des8 |
+}
+{% endif %}

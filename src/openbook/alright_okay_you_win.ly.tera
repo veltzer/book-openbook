@@ -1,0 +1,123 @@
+{#
+default_version = "Fake"
+
+[attributes]
+title = "Alright, Okay, You Win"
+style = "Blues"
+composer = "Sid Wyche, Mayme Watts"
+poet = "Sid Wyche, Mayme Watts"
+piece = "Moderate Boogie Woogie"
+copyright = "1955 CHERIO CORP."
+copyrightextra = "Renewed 1983 CHERIO CORP."
+typesetter = "Mark Veltzer <mark.veltzer@gmail.com>"
+completion = "5"
+uuid = "edcc6190-d503-11f1-8000-046874d194b7"
+structure = "AABA"
+location = "jfb:42"
+
+[[youtube]]
+id = "aYVEdPy8gQY"
+remark = "Count Basie and his Orchestra with Joe Williams (1955)"
+
+[[youtube]]
+id = "4VNSOmyHovY"
+remark = "Peggy Lee (1959)"
+
+[versions.Fake]
+doChords = true
+doVoice = true
+doLyrics = false
+doLyricsmore = false
+doLyricsmoremore = false
+doChordBars = false
+doGuitar = false
+doExtra = false
+doPrep = false
+doOwn = false
+#}
+{% if part == "Vars" %}
+{% endif %}
+{% if part == "Doc" %}	DONE:
+	- added the meta data from the fake book.
+	- put in the tunes structure.
+	- put in the chords (fake book).
+	- put in the tune (fake book).
+	- added youtube performances.
+	TODO:
+	- add the lyrics.
+	- check the chords (fake book).
+	- check the tune (fake book).
+	- hear the tune to check that it is right and adjust the tempo.
+	- bar 4 of part A and bar 3 of part B: the book writes a g flat sixteenth followed by an unmarked note on the same line; typed as g flat by the notation rule (could be g natural).
+	- the exact placement of the last chords of the coda (E9b5, Eb6/9) over the final rest bar is a guess.
+{% endif %}
+{% if part == "ChordsFake" %}\chordmode {
+	\startChords
+	\startSong
+
+	\partial 4. s4. |
+
+	\myMark "A"
+	\startPart
+	\repeat volta 2 {
+		ees2. bes4:aug | ees2. bes4:aug | ees1 | \myEndLine
+		ees1:7 | aes1*2 | ees1 | \myEndLine
+		ees1 | bes1:7 | aes1:9 | ees2 aes:7 | \myEndLine
+	} \alternative {
+		{
+			ees1 | \myEndLineVoltaNotLast
+		}
+		{
+			ees1:6 | \myEndLineVoltaLast
+		}
+	}
+	\endPart
+
+	\myMark "B"
+	\startPart
+	ees1*2:6 | ees1*2 | aes1*2:9 | \myEndLine
+	ees4 r2. | bes1:7 | ees2. bes4:7 | ees2. bes4:aug | ees1 | \myEndLine
+	\endPart
+
+	\myMark "Coda"
+	\startPart
+	aes1:9 | ees2 aes4:6 aes:9 | \myEndLine
+	ees1 | ees4 aes ees2 | ees4 aes ees aes | ees2 aes4 ces:7 | ees4 e2:9.5- ees4:6.9 | \myEndLine
+	\endPart
+
+	\endSong
+	\endChords
+}
+{% endif %}
+{% if part == "VoiceFake" %}{
+	\tempo "Moderato" 4 = 140
+	\time 2/2
+	\key ees \major
+
+	\partial 4. bes8 c8. ees16~ |
+
+	% part "A"
+	\repeat volta 2 {
+		ees4 r r ges8. ees16~ | ees4 r r fis8. g16~ | g4 r r8. bes,16 c4 |
+		ees4^\markup { \musicglyph #"scripts.segno" } f8. ges16 ges8. b,!16 c8. ees16~ | ees4 r r f8. ees16~ | ees4 r r c'8. bes16~ | bes8. g16 r4 r8 g4 fis8 |
+		g8. ees16 c8. bes16~ bes4 r8 aes'8~ | aes8. g16 \tuplet 3/2 { aes8 g aes~ } aes4 a!8. bes16~^\markup { To Coda \musicglyph #"scripts.coda" } | bes4 r r r8. ees,16 | bes'4 aes8. bes16 ges4 ees8. ees16~ |
+	} \alternative {
+		{
+			ees4 r r8. bes16 c8. ees16~ |
+		}
+		{
+			ees4 r r2 |
+		}
+	}
+
+	% part "B"
+	r8 c'4 bes8~ bes8. g16 c,8. ees16~ | ees8. ges16 r4 r2 |
+	r8. c16 bes8. ges16 ges4 ees8. ees16~ | ees4 r r2 | r8 c'4 bes8~ bes8. ges16 ees4 | r8 c'4 bes8~ bes8. ees,16 ees8. ees16 |
+	ges4 ees ees ees8. f16~ | f4 r r8. bes,16 c8. ees16~ | ees4 r r f8. ges16~ | ges4 r r ges8. g!16~ |
+	g4 r r8. bes,16 c4^\markup { D.S. al Coda } |
+
+	% part "Coda"
+	bes'4 r r8 ees4 ees8~ | ees8. c16 bes8. ges16 f4 ees8. ees16~ |
+	ees4 r r8. ees'16 ees8. ees16~ | ees4 r r ees8. ees16~ | ees4 r r ees8. ees16~ | ees1 | r1 |
+}
+{% endif %}

@@ -1,0 +1,80 @@
+{#
+default_version = "Fake"
+
+[attributes]
+title = "Blues For Pablo"
+style = "Jazz"
+composer = "Gil Evans"
+piece = "Very slowly"
+copyright = "1956 (Renewed 1984) SOLAR PLEXUS MUSIC (BMI)"
+copyrightextra = "All Rights Administered by MAYFLOWER MUSIC CORPORATION (ASCAP). International Copyright Secured. Made in U.S.A. All Rights Reserved."
+typesetter = "Mark Veltzer <mark.veltzer@gmail.com>"
+completion = "5"
+uuid = "059191ce-d504-11f1-8000-046874d194b7"
+structure = "A"
+location = "jfb:70"
+
+[[youtube]]
+id = "UGyFmzcBEP0"
+remark = "Miles Davis with Gil Evans in the original recording from Miles Ahead (1957)"
+
+[[youtube]]
+id = "bDEJ37rDuUI"
+remark = "The Gil Evans Orchestra"
+
+[versions.Fake]
+doChords = true
+doVoice = true
+doLyrics = false
+doLyricsmore = false
+doLyricsmoremore = false
+doChordBars = false
+doGuitar = false
+doExtra = false
+doPrep = false
+doOwn = false
+#}
+{% if part == "Vars" %}
+{% endif %}
+{% if part == "Doc" %}	DONE:
+	- added the meta data from the fake book.
+	- put in the tunes structure.
+	- put in the chords (fake book).
+	- put in the tune (fake book).
+	- added youtube performances.
+	TODO:
+	- check the chords (fake book).
+	- check the tune (fake book).
+	- hear the tune to check that it is right and adjust the tempo.
+	- bar 16: the book prints no accidental on the d eighth after the d flat; under the D7b9 chord it is typed as d natural, check it.
+{% endif %}
+{% if part == "ChordsFake" %}\chordmode {
+	\startChords
+	\startSong
+
+	\partial 2 g2:m |
+
+	\myMark "A"
+	\startPart
+	g1*5:m | \myEndLine
+	g4:m d2.:7.9-.5+ | g1*2:6 | g1*2:m | \myEndLine
+	g1*3:m | c2:m f:m7.5- | g2:m f:6 | ees2:maj7 d:7.9- | g1:m | \myEndLine
+	\endPart
+
+	\endSong
+	\endChords
+}
+{% endif %}
+{% if part == "VoiceFake" %}{
+	\tempo "Largo" 4 = 50
+	\time 4/4
+	\key bes \major
+
+	\partial 2 \tuplet 3/2 { r4 d'4 e! } |
+
+	% part "A"
+	f8 f f8. e!16 g2~ | g2~ g8 f4 g16 f | e!1~ | e4 r4 \tuplet 3/2 { r4 d e! } | f8 f f8. e!16 g2~ |
+	g4 fis2\fermata~ fis8. f!16 | e!1~ | e2 r4 d4 | f2. e!4 | c2~ c8 ees4.~ |
+	ees4. f16 ees d2~ | d2 r4 d4 | f2. e!4 | c2 ees4. f16 ees | d1 | r4 \tuplet 3/2 { des,8 c bes } d8 c4 r8 | g1 |
+}
+{% endif %}

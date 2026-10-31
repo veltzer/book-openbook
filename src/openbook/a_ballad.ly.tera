@@ -1,0 +1,103 @@
+{#
+default_version = "Fake"
+
+[attributes]
+title = "A Ballad"
+style = "Jazz"
+composer = "Gerry Mulligan"
+piece = "Very slow"
+copyright = "1956 CRITERION MUSIC CORP."
+copyrightextra = "Renewed 1985 CRITERION MUSIC CORP."
+typesetter = "Mark Veltzer <mark.veltzer@gmail.com>"
+completion = "5"
+uuid = "6fc23228-d505-11f1-8000-046874d194b7"
+structure = "ABCB"
+location = "jfb:52"
+
+[[youtube]]
+id = "WKuoKZA-b7o"
+remark = "Gerry Mulligan"
+
+[[youtube]]
+id = "NJgm-x1ekGM"
+remark = "Gerry Mulligan and Stan Getz"
+
+[versions.Fake]
+doChords = true
+doVoice = true
+doLyrics = false
+doLyricsmore = false
+doLyricsmoremore = false
+doChordBars = false
+doGuitar = false
+doExtra = false
+doPrep = false
+doOwn = false
+#}
+{% if part == "Vars" %}
+{% endif %}
+{% if part == "Doc" %}	DONE:
+	- added the meta data from the fake book.
+	- put in the tunes structure.
+	- put in the chords (fake book).
+	- put in the tune (fake book).
+	- added youtube performances.
+	TODO:
+	- check the chords (fake book).
+	- check the tune (fake book).
+	- hear the tune to check that it is right and adjust the tempo.
+	- bar 27: the fake book prints a B with no flat under Bb7b9, typed a B flat as the harmony implies, check it.
+	- bar 24: the fake book puts "Fine" after the second beat of the bar and the pickup to the C part in the same bar, check the layout.
+{% endif %}
+{% if part == "ChordsFake" %}\chordmode {
+	\startChords
+	\startSong
+
+	\partial 4. s4. |
+
+	\myMark "A"
+	\startPart
+	c2 a:7.9- | d:m7 des:7.11+ | c:maj7 c:6 | fis:m7 c:7.9- | \myEndLine
+	b1:maj7 | e2:m7 a:7.5+.9- | d a4:m6 b:7 | e2:m7 a:7 | \myEndLine
+	d2 b:7 | e:m d:7 | d/a fis/a | g:maj7 a:7 | \myEndLine
+	\endPart
+
+	\myMark "B"
+	\startPart
+	d2:m7 g:7.5+ | c:maj7 c:6 | fis:m7 c:7.9- | b1:maj7 | \myEndLine
+	e2:m7 a:7.5+.9- | d b:7 | d:m7/g g:7 | c a:7 | \myEndLine
+	d2:m f:m | c ees:dim7 | d:m7 g:7.9- | c:maj7 s4 c:m7 | \myEndLine
+	\endPart
+
+	\myMark "C"
+	\startPart
+	f2:m7 bes:13.9- | ees:maj7 b:7.5- | f:m7 bes:7.9- | ees2. bes4:m7 | \myEndLine
+	ees2:m7 aes4:9 aes:7.9- | f2:m7 bes:7.9- | ees:m7 aes:7.9- | des a:7 | \myEndLine
+	\endPart
+
+	\endSong
+	\endChords
+}
+{% endif %}
+{% if part == "VoiceFake" %}{
+	\tempo "Adagio" 4 = 60
+	\time 4/4
+	\key c \major
+
+	\partial 4. d8 e g |
+
+	% part "A"
+	a4 g f e | f2 aes | b2 a! | gis4. gis8 c!4. c8 |
+	ais4 gis g!8 gis ais gis | r8 fis4 g16 fis f!4 bes | a2 b! | r4 \tuplet 3/2 { b,8 d e } fis e d cis |
+	a'4. fis16 a b8 a g fis | a g fis e g fis e d | fis4. g16 fis fis4. g16 fis | fis4. g16 fis fis4~ \tuplet 3/2 { fis8 g fis } |
+
+	% part "B"
+	f!2^\markup { \musicglyph #"scripts.segno" } aes | b2 a | gis4. gis8 c!4. c8 | ais4 gis g!8 gis ais gis |
+	fis4 g8 fis f!4 bes | a4. a8 fis2 | d2 e8 d c b | g'2 a8 g f e |
+	g8 f e d f e d c | e d c b d c b c | a2 e' | e2^\markup { \italic { Fine } } r16 g8 a16 c16 c8 d16 |
+
+	% part "C"
+	ees16 ees8 f16 g16 g8.~ g4. g16 f | ees16 ees8 d16 f16 f8.~ f4~ f16 ees d c | ees16 ees8 c16 g'16 c,8. bes4. r8 | g'16 f ees d f ees d c ees d c bes des ces bes aes |
+	bes4~ bes16 c des ees f ges aes aes~ aes8 f16 c~ | c4. aes16 bes \tuplet 3/2 { b!8 b cis } d16 cis b bes~ | bes8. c16 \tuplet 3/2 { des8 ees f } ges8. f16 ges f ees d! | ees16 f ees d! ees f ees d~ d4 r4^\markup { \italic { D.S. al Fine } } |
+}
+{% endif %}

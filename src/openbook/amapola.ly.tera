@@ -1,0 +1,109 @@
+{#
+default_version = "Fake"
+
+[attributes]
+title = "Amapola"
+subtitle = "Pretty Little Poppy"
+style = "Latin"
+composer = "Joseph M. Lacalle"
+poet = "Albert Gamse"
+piece = "With Pep"
+copyright = "1924 by Edward B. Marks Music Company"
+copyrightextra = "Copyright renewed."
+typesetter = "Mark Veltzer <mark.veltzer@gmail.com>"
+completion = "5"
+uuid = "edce4e06-d503-11f1-8000-046874d194b7"
+structure = "ABAC"
+location = "jfb:43"
+
+[[youtube]]
+id = "Wzkeec8LMd0"
+remark = "Jimmy Dorsey and his Orchestra with Bob Eberly and Helen O'Connell (1941)"
+
+[[youtube]]
+id = "0J9ooNkn-Sk"
+remark = "Deanna Durbin (1940)"
+
+[versions.Fake]
+doChords = true
+doVoice = true
+doLyrics = false
+doLyricsmore = false
+doLyricsmoremore = false
+doChordBars = false
+doGuitar = false
+doExtra = false
+doPrep = false
+doOwn = false
+#}
+{% if part == "Vars" %}
+{% endif %}
+{% if part == "Doc" %}	DONE:
+	- added the meta data from the fake book.
+	- put in the tunes structure.
+	- put in the chords (fake book).
+	- put in the tune (fake book).
+	- added youtube performances.
+	TODO:
+	- add the lyrics.
+	- check the chords (fake book).
+	- check the tune (fake book).
+	- hear the tune to check that it is right and adjust the tempo.
+	- the fake book prints no chord between the F7 of bar 8 and the F7#5 at the end of bar 16 (all F7 here).
+{% endif %}
+{% if part == "ChordsFake" %}\chordmode {
+	\startChords
+	\startSong
+
+	\partial 2 s2 |
+
+	\myMark "A"
+	\startPart
+	bes1*5 | \myEndLine
+	bes2/d des:dim7 | f1:7/c | f1:7 | \myEndLine
+	\endPart
+
+	\myMark "B"
+	\startPart
+	f1*3:7 | \myEndLine
+	f1*4:7 | f2.:7 f4:7.5+ | \myEndLine
+	\endPart
+
+	\myMark "A"
+	\startPart
+	bes1*4 | g1:7 | c2.:m g4:7 | \myEndLine
+	\endPart
+
+	\myMark "C"
+	\startPart
+	c1:m | c2.:m g4:7 | c1:m | ees1:m6 | bes1/d | des1:dim7 | \myEndLine
+	f1:7/c | f1:7 | bes1*2 | \myEndLine
+	\endPart
+
+	\endSong
+	\endChords
+}
+{% endif %}
+{% if part == "VoiceFake" %}{
+	\tempo "Allegro" 4 = 160
+	\time 2/2
+	\key bes \major
+
+	\partial 2 d4 f |
+
+	% part "A"
+	bes2 c~ | c4 r8 bes8 bes a bes c | a2 bes~ | bes4 r8 a8 a g a bes | a2 g |
+	bes2. a4 | a8 f ees2.~ | ees4 r ees f |
+
+	% part "B"
+	a2 bes~ | bes4 r8 a8 a g a bes | g2 a~ |
+	a4 r8 g8 g f g a | g2 f | a2. g4 | f8 ees d2.~ | d4 r d f |
+
+	% part "A"
+	bes2 c~ | c4 r8 bes8 bes a bes c | a2 bes~ | bes4 r8 a8 a g a bes | a2 g | c2. d4 |
+
+	% part "C"
+	ees1~ | ees4 r ees d | g,2 c~ | c4 r d c | f,2 bes~ | bes4 r c bes |
+	bes4 a gis a | c2. d4 | d8 c bes2.~ | bes4 r r2 |
+}
+{% endif %}

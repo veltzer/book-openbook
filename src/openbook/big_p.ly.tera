@@ -1,0 +1,101 @@
+{#
+default_version = "Fake"
+
+[attributes]
+title = "Big P"
+style = "Jazz"
+composer = "Jimmy Heath"
+piece = "Bounce tempo"
+copyright = "1960 by MJQ Music, Inc."
+typesetter = "Mark Veltzer <mark.veltzer@gmail.com>"
+completion = "5"
+uuid = "58e65ac6-d504-11f1-8000-046874d194b7"
+structure = "ABB"
+location = "jfb:58"
+
+[[youtube]]
+id = "nBkFsCPjPdw"
+remark = "Jimmy Heath in the original recording from Really Big! (1960)"
+
+[[youtube]]
+id = "bG5pUz6l4eU"
+remark = "The Jimmy Heath Big Band"
+
+[versions.Fake]
+doChords = true
+doVoice = true
+doLyrics = false
+doLyricsmore = false
+doLyricsmoremore = false
+doChordBars = false
+doGuitar = false
+doExtra = false
+doPrep = false
+doOwn = false
+#}
+{% if part == "Vars" %}
+{% endif %}
+{% if part == "Doc" %}	DONE:
+	- added the meta data from the fake book.
+	- put in the tunes structure.
+	- put in the chords (fake book).
+	- put in the tune (fake book).
+	- added youtube performances.
+	TODO:
+	- check the chords (fake book).
+	- check the tune (fake book).
+	- hear the tune to check that it is right and adjust the tempo.
+	- bars 15 and 19: the beamed triplet looks like a sixteenth triplet followed by an eighth (that is the only reading that fills the bar); check it.
+{% endif %}
+{% if part == "ChordsFake" %}\chordmode {
+	\startChords
+	\startSong
+
+	\myMark "A"
+	\startPart
+	d2:m d2:m/f | e2:7 ees2:7 | d1:m | a2:m7.5- d2:7 | g2:m bes2 | a2 aes2 | \myEndLine
+	d2.:m a8:7 d8:m | d2:m7/c d2:m6/b | bes1:7 | a1:7 | d1*2:m | \myEndLine
+	\endPart
+
+	\myMark "B"
+	\startPart
+	\repeat volta 2 {
+		d2:m f2 | e2 ees2 | d1:m | a2.:m7 d4:7 | g2:m bes2 | a2 aes2 | \myEndLine
+		d1:m | d2:m7/c d2:m6/b | bes2:7 b2:7.5- | a1:7.9+ | d1:m | \myEndLine
+	} \alternative {
+		{
+			d1:m | \myEndLineVoltaNotLast
+		}
+		{
+			d1:m | \myEndLineVoltaLast
+		}
+	}
+	\endPart
+
+	\endSong
+	\endChords
+}
+{% endif %}
+{% if part == "VoiceFake" %}{
+	\tempo "Allegro" 4 = 160
+	\time 4/4
+	\key f \major
+
+	% part "A"
+	r4 r8 a'8 r4 r8 aes8 | r4 r8 g8 r2 | f4 f2 g8 a | r1 | r4 r8 d8 r4 r8 des8 | r4 r8 c8 r2 |
+	a4 a2 c8 a | r2 r8 a8 d e~ | e4. d8 e d r c~ | c4. bes8 c bes c a~ | a1 | r2 r4 b8 a |
+
+	% part "B"
+	\repeat volta 2 {
+		d8 e~ e2. | e2 r4 b8 a | \tuplet 3/2 { e'16 f e } d8 b f a d, r4 | r2 r4 f8 d | g8 a~ a2. | a2 r4 b8 a |
+		\tuplet 3/2 { e'16 f e } d8 b f a d, r4 | r2 r8 a'8 d e~ | e4. d8 e d r c~ | c4. bes8 c bes c a~ | a1 |
+	} \alternative {
+		{
+			r2 r4 b8 a |
+		}
+		{
+			r1 |
+		}
+	}
+}
+{% endif %}

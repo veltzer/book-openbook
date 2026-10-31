@@ -1,0 +1,110 @@
+{#
+default_version = "Fake"
+
+[attributes]
+title = "Boogie Woogie (The Original)"
+style = "Blues"
+composer = "Clarence 'Pine Top' Smith"
+piece = "Moderately bright"
+copyright = "1929, 1937, 1987 Edwin H. Morris & Company, A Division of MPL Communications, Inc."
+copyrightextra = "Renewed 1957, 1965 Edwin H. Morris & Company, A Division of MPL Communications, Inc. International Copyright Secured. All Rights Reserved."
+typesetter = "Mark Veltzer <mark.veltzer@gmail.com>"
+completion = "5"
+uuid = "b47787d4-d504-11f1-8000-046874d194b7"
+structure = "Blues"
+location = "jfb:68"
+
+[[youtube]]
+id = "VekWbDsCkQY"
+remark = "Pine Top Smith in the original recording (1928)"
+
+[[youtube]]
+id = "btLNtvzx4eA"
+remark = "Tommy Dorsey and his orchestra (1938)"
+
+[versions.Fake]
+doChords = true
+doVoice = true
+doLyrics = false
+doLyricsmore = false
+doLyricsmoremore = false
+doChordBars = false
+doGuitar = false
+doExtra = false
+doPrep = false
+doOwn = false
+#}
+{% if part == "Vars" %}
+{% endif %}
+{% if part == "Doc" %}	DONE:
+	- added the meta data from the fake book.
+	- put in the tunes structure.
+	- put in the chords (fake book).
+	- put in the tune (fake book).
+	- added youtube performances.
+	TODO:
+	- check the chords (fake book).
+	- check the tune (fake book).
+	- hear the tune to check that it is right and adjust the tempo.
+	- the book writes the slurred four note runs (c d d# e) as 32nd notes that do not fit
+		in the bar, they are written here as grace notes.
+{% endif %}
+{% if part == "ChordsFake" %}\chordmode {
+	\startChords
+	\startSong
+
+	\partial 4 s4 |
+
+	\myMark "A"
+	\startPart
+	f1*4 | \myEndLine
+	bes1*2 | f1 | f2 bes:6 | \myEndLine
+	c1:7 | bes:7 | f1*2 | \myEndLine
+	\endPart
+
+	\myMark "B"
+	\startPart
+	f1*4:7 | \myEndLine
+	bes1*2:7 | f1 | f2 f:7 | \myEndLine
+	c1:7 | bes2:7 c:7 | f2. bes4:7 | f4 bes:7 f2:6 | \myEndLine
+	\endPart
+
+	\myMark "C"
+	\startPart
+	f1*4:6 | \myEndLine
+	bes1*2:7 | f1*2:6 | \myEndLine
+	c1:7 | bes:9 | f2 bes4 bes:9 | f1 | \myEndLine
+	\endPart
+
+	\endSong
+	\endChords
+}
+{% endif %}
+{% if part == "VoiceFake" %}{
+	\tempo "Allegro" 4 = 168
+	\time 2/2
+	\key f \major
+
+	\partial 4 \grace { c32( d dis e } f8.) g16 |
+
+	% part "A"
+	gis8. a16~ a4 r4 \grace { c,32( d dis e } f8.) g16 | gis8. a16~ a4 r4 \grace { c,32( d dis e } f8.) g16 |
+	gis8. a16~ a4 r4 \grace { c,32( d dis e } f8.) g16 | gis8. a16~ a4 r4 \grace { c,32( d dis e } f8.) g16 |
+	gis8. a16~ a4 r4 \grace { c,32( d dis e } f8.) g16 | gis8. a16~ a4 r4 \grace { c,32( d dis e } f8.) g16 |
+	gis8. a16~ a4 r2 | r2 r8 bes4 bes8~ |
+	bes4 r r8 bes4 r8 | aes8. cis,16 d8. f16 aes8 g16 f d8. aes16 | f'4 r aes8 g16 f d8. aes16 | f'4 r r r8. gis16 |
+
+	% part "B"
+	a8. a'16 g8. bes,16 f'8. f,16 e'8. gis,16 | a8. a'16 g8. bes,16 f'8. f,16 e'8. gis,16 |
+	a8. a'16 g8. bes,16 f'8. f,16 e'8. gis,16 | a8. a'16 g8. bes,16 f'8. f,16 e'8. cis16 |
+	d8. d'16 c8. c,16 bes'8. bes,16 a'8. cis,16 | d8. d'16 c8. c,16 bes'8. bes,16 a'8. gis,16 |
+	a8. a'16 g8. bes,16 f'8. f,16 e'8. gis,16 | a8. a'16 g8. bes,16 f'8. f,16 e'8. dis16 |
+	e8. e'16 d8. d,16 c'8. c,16 bes'8. cis,16 | d8. d'16 c8. c,16 bes'8. bes,16 a'8. c,16 |
+	f4 c8. d16 c8. c,16 aes'8. c,16 | f4 r4 r8 f'4 r8 |
+
+	% part "C"
+	f4 r4 r8 f4 r8 | f4 r4 r8 f4 r8 | f4 r4 r8 f4 r8 | f4 r4 r8 f4 r8 |
+	f4 r4 r8 f4 r8 | f4 r4 r8 f4 r8 | f4 r4 r8 f4 r8 | f4 r4 r8 f4 r8 |
+	c4 r4 r8 c4 r8 | aes4 r4 r8 aes4 r8 | f8 f'4 f8 d d g, c | f,4 r4 r2 |
+}
+{% endif %}

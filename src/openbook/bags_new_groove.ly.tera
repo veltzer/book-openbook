@@ -1,0 +1,92 @@
+{#
+default_version = "Fake"
+
+[attributes]
+title = "Bags' New Groove"
+style = "Jazz"
+composer = "Milt Jackson"
+piece = "Moderately bright"
+copyright = "1960 by MJQ Music, Inc."
+typesetter = "Mark Veltzer <mark.veltzer@gmail.com>"
+completion = "5"
+uuid = "f9ea82f4-d503-11f1-8000-046874d194b7"
+structure = "Blues"
+location = "jfb:51"
+
+[[youtube]]
+id = "omcUSOoxPQo"
+remark = "Milt Jackson in the original recording"
+
+[[youtube]]
+id = "aolkx9pASzc"
+remark = "The Modern Jazz Quartet live"
+
+[versions.Fake]
+doChords = true
+doVoice = true
+doLyrics = false
+doLyricsmore = false
+doLyricsmoremore = false
+doChordBars = false
+doGuitar = false
+doExtra = false
+doPrep = false
+doOwn = false
+#}
+{% if part == "Vars" %}
+{% endif %}
+{% if part == "Doc" %}	DONE:
+	- added the meta data from the fake book.
+	- put in the tunes structure.
+	- put in the chords (fake book).
+	- put in the tune (fake book).
+	- added youtube performances.
+	TODO:
+	- check the chords (fake book).
+	- check the tune (fake book).
+	- hear the tune to check that it is right and adjust the tempo.
+{% endif %}
+{% if part == "ChordsFake" %}\chordmode {
+	\startChords
+	\startSong
+
+	\myMark "A"
+	\startPart
+	c1*4 | \myEndLine
+	f1*2:9 | c1*2 | \myEndLine
+	g1*2:7 | c1*2 | \myEndLine
+	\endPart
+
+	\myMark "B"
+	\startPart
+	c1*4:m7 | \myEndLine
+	c1*4:m7 | \myEndLine
+	c1*4:m7 | \myEndLine
+	c1*4:m7 | \myEndLine
+	c1*4:m7 | \myEndLine
+	c1*2:m7 | c1*2 | \myEndLine
+	\endPart
+
+	\endSong
+	\endChords
+}
+{% endif %}
+{% if part == "VoiceFake" %}{
+	\tempo "Allegro" 2 = 120
+	\time 2/2
+	\key c \major
+
+	% part "A"
+	r8 dis \tuplet 3/2 { e g a } c4 bes8 c16 bes | g8 f ees c d e! f g | e4 c8 g d'4 bes | r1 |
+	r8 \tuplet 3/2 { a'16 g ees } \tuplet 3/2 { g8 a c } d c4 r8 | ees8 c16 g c8 e d c bes g | f ees c b g4~ g8. g16 | e'!4 f g r8 g, |
+	f'8 a, d f e4 d | r4 bes'8 aes g g, g' f | e4 c8 r c4 r8 e | f g r f ees g, c4 |
+
+	% part "B"
+	g''1 | g8 f g f ees4 f | ees1~ | ees2. c4 |
+	g'1 | g8 f g f ees4 f | ees1~ | ees2. c4 |
+	g'1 | g8 f g f ees4 f | ees1~ | ees2. c4 |
+	g'1 | g8 f g f ees4 f | ees1~ | ees2. c4 |
+	g'1 | g8 f g f ees4 f | ees1~ | ees2. c4 |
+	g'1 | g8 f g f ees4 f | e!1~ | e1 |
+}
+{% endif %}

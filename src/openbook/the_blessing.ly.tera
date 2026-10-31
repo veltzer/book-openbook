@@ -1,0 +1,97 @@
+{#
+default_version = "Fake"
+
+[attributes]
+title = "The Blessing"
+style = "Jazz"
+composer = "Ornette Coleman"
+piece = "Medium Swing"
+copyright = "1958 Composers Music"
+typesetter = "Mark Veltzer <mark.veltzer@gmail.com>"
+completion = "5"
+uuid = "bcec2028-d504-11f1-8000-046874d194b7"
+structure = "AABA"
+location = "jfb:62"
+
+[[youtube]]
+id = "Pg4mgs9eTac"
+remark = "Ornette Coleman in the original recording from Something Else!!!! (1958)"
+
+[[youtube]]
+id = "kRRtlWr_pHk"
+remark = "Charlie Haden, Don Cherry, Ed Blackwell from The Montreal Tapes (1989)"
+
+[versions.Fake]
+doChords = true
+doVoice = true
+doLyrics = false
+doLyricsmore = false
+doLyricsmoremore = false
+doChordBars = false
+doGuitar = false
+doExtra = false
+doPrep = false
+doOwn = false
+#}
+{% if part == "Vars" %}
+{% endif %}
+{% if part == "Doc" %}	DONE:
+	- added the meta data from the fake book.
+	- put in the tunes structure.
+	- put in the chords (fake book).
+	- put in the tune (fake book).
+	- added youtube performances.
+	TODO:
+	- check the chords (fake book).
+	- check the tune (fake book).
+	- hear the tune to check that it is right and adjust the tempo.
+	- in bars 3 and 19 the book prints a sharp only on the first d of the bar, so by the notation rule the second d (beat 3) is typed as d sharp too; check against a recording.
+{% endif %}
+{% if part == "ChordsFake" %}\chordmode {
+	\startChords
+	\startSong
+
+	\myMark "A"
+	\startPart
+	\repeat volta 2 {
+		fis1:m7 | b1:7 | fis1:m7.5- | b1:7 | \myEndLine
+		e1:m7 | a2:m7 d2:7 | g2:6/d d2:7/fis | g1:6 | \myEndLine
+	}
+	\endPart
+
+	\myMark "B"
+	\startPart
+	fis1:m7.5- | b1:7.9- | b1:m7.5- | e1:7.5- | \myEndLine
+	e1:m7.5- | a1:7.9+ | a2:m7 d2:7 | g2:m7 c2:7 | \myEndLine
+	\endPart
+
+	\myMark "A"
+	\startPart
+	fis1:m7 | b1:7 | fis1:m7.5- | b1:7 | \myEndLine
+	e1:m7 | a2:m7 d2:7 | g2:6/d d2:7/fis | g1:6 | \myEndLine
+	\endPart
+
+	\endSong
+	\endChords
+}
+{% endif %}
+{% if part == "VoiceFake" %}{
+	\tempo "Moderato" 4 = 140
+	\time 4/4
+	\key g \major
+
+	% part "A"
+	\repeat volta 2 {
+		r8 gis8 \tuplet 3/2 { a8 cis e } gis4 fis8 b~ | b2. r8 ais | b8 g dis b g' dis \tuplet 3/2 { g8 a fis~ } | fis2 r4 r8 e |
+		g4 a8 fis r e b c | d8 e r e b'8 c16 cis d8 c | r8 b r e, c'4. b8~ | b1 |
+	}
+
+	% part "B"
+	b4. a8 gis a4 c8~ | c4. b8 ais b4 e8~ | e4 f8 f~ f4 e8 bes~ | bes1 |
+	bes4. a8 gis a4 a8~ | a4. g8 fis g4 a8~ | a4 b8 b~ b4 a8 d,~ | d1 |
+
+	% part "A"
+	r8 gis,8 \tuplet 3/2 { a8 cis e } gis4 fis8 b~ | b2. r8 ais | b8 g dis b g' dis \tuplet 3/2 { g8 a fis~ } | fis2 r4 r8 e |
+	g4 a8 fis r e b c | d8 e r e b'8 c16 cis d8 c | r8 b r e, c'4. b8~ | b1 |
+}
+{% endif %}

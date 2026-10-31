@@ -1,0 +1,163 @@
+{#
+default_version = "Fake"
+
+[attributes]
+title = "12th Street Rag"
+style = "Ragtime"
+composer = "Euday L. Bowman"
+piece = "Brightly"
+copyright = "1914 by Euday L. Bowman"
+copyrightextra = "Renewed. Published by Shapiro, Bernstein & Co., Inc. and Jerry Vogel Music Co."
+typesetter = "Mark Veltzer <mark.veltzer@gmail.com>"
+completion = "5"
+uuid = "cd4605be-d505-11f1-8000-046874d194b7"
+structure = "ABC"
+location = "jfb:401"
+
+[[youtube]]
+id = "1pP5-GlJeFM"
+remark = "Louis Armstrong and His Hot Seven (1927)"
+
+[[youtube]]
+id = "tnFWgQT0bZQ"
+remark = "Aaron Robinson, piano"
+
+[versions.Fake]
+doChords = true
+doVoice = true
+doLyrics = false
+doLyricsmore = false
+doLyricsmoremore = false
+doChordBars = false
+doGuitar = false
+doExtra = false
+doPrep = false
+doOwn = false
+#}
+{% if part == "Vars" %}
+{% endif %}
+{% if part == "Doc" %}	DONE:
+	- added the meta data from the fake book.
+	- put in the tunes structure.
+	- put in the chords (fake book).
+	- put in the tune (fake book).
+	- added youtube performances.
+	TODO:
+	- check the chords (fake book).
+	- check the tune (fake book).
+	- hear the tune to check that it is right and adjust the tempo.
+	- the book prints no chord on the first bar of each second ending (the chord before it is Bb7), Eb is typed there.
+	- the four bars after the second ending of part B (a break into the trio) are typed as the end of part B.
+{% endif %}
+{% if part == "ChordsFake" %}\chordmode {
+	\startChords
+	\startSong
+
+	\myMark "A"
+	\startPart
+	\repeat volta 2 {
+		ees1*2 | bes1*2:7 | \myEndLine
+		bes1*2:7 | ees1*2 | \myEndLine
+	} \alternative {
+		{
+			ees1*2 | bes1*2:7 | \myEndLine
+			f1*2:9 | bes1*2:7 | \myEndLineVoltaNotLast
+		}
+		{
+			ees1 | ees1:7/des | aes1/c | b1:7 | \myEndLine
+			ees2/bes c:m7 | f2:9 bes:7 | ees1*2 | \myEndLineVoltaLast
+		}
+	}
+	\endPart
+
+	\myMark "B"
+	\startPart
+	\repeat volta 2 {
+		ees1*2 | bes1*2:7 | \myEndLine
+		bes1*2:7 | ees1*2 | \myEndLine
+	} \alternative {
+		{
+			ees1*2 | bes1*2:7 | \myEndLine
+			f1*2:7 | bes1*2:7 | \myEndLineVoltaNotLast
+		}
+		{
+			ees1 | g1:7 | aes2 a:dim7 | ees2/bes c:m7 | \myEndLine
+			f1:9 | bes1:7 | ees1*2 | \myEndLineVoltaLast
+		}
+	}
+	bes1*4:7 | \myEndLine
+	\endPart
+
+	\myMark "C"
+	\startPart
+	\repeat volta 2 {
+		ees1*2 | bes1*2:7 | \myEndLine
+		bes1*2:7 | ees1*2 | \myEndLine
+	} \alternative {
+		{
+			ees1*2 | bes1*2:7 | \myEndLine
+			f1*2:7 | bes1*2:7 | \myEndLineVoltaNotLast
+		}
+		{
+			ees1 | ees1:7/des | aes1/c | b1:7 | \myEndLine
+			ees2/bes c:m7 | f2:9 bes:7 | ees1*2 | \myEndLineVoltaLast
+		}
+	}
+	\endPart
+
+	\endSong
+	\endChords
+}
+{% endif %}
+{% if part == "VoiceFake" %}{
+	\tempo "Allegro" 4 = 200
+	\time 2/2
+	\key ees \major
+
+	% part "A"
+	\repeat volta 2 {
+		ees'8. d16 c8. ees16 d8. c16 ees8. d16 | c8. ees16 d8. c16 ees8. d16 c8. ees16~ | ees8. d16 c8. ees16 d8. c16 ees8. d16 | c1 |
+		ees8. d16 c8. ees16 d8. c16 ees8. d16 | c8. ees16 d8. c16 ees8. d16 c8. ees16~ | ees8. d16 c8. ees16 d8. c16 ees8. d16 | c1 |
+	} \alternative {
+		{
+			ees8. d16 c8. ees16 d8. c16 ees8. d16 | c8. ees16 d8. c16 ees8. d16 c8. ees16~ | ees8. d16 c8. ees16 d8. c16 ees8. d16 | c1 |
+			g'2 f | d'2 c | bes4 c,, d4. ees8 | f8 d4 c8~ c8 bes4. |
+		}
+		{
+			ees'4 bes8 ees~ ees bes ees4 | ees4 bes8 ees~ ees bes ees4 | ees4 c8 ees~ ees c ees4 | ees2. r4 |
+			bes4 c ees c | g'2 f | ees1~ | ees2 ees'4 r |
+		}
+	}
+
+	% part "B"
+	\repeat volta 2 {
+		ees,4 g8 d~ d g c, g' | bes,8 g' ees g d g c, g' | d4 aes'8 c,~ c aes' b,!4 | bes1 |
+		d4 aes'8 c,~ c aes' bes, aes' | d,4 aes'8 c,~ c aes' bes, aes' | ees4 g8 d~ d g c, g' | bes,1 |
+	} \alternative {
+		{
+			ees4 g8 d~ d g c, g' | bes,8 g' ees g d g c, g' | d4 aes'8 c,~ c aes' b,!4 | bes1 |
+			g'2 f | d'2 c | bes4 c d4. ees8 | f4 d c8 bes4. |
+		}
+		{
+			g2. g4 | g2. g4 | r8 ees f ges~ ges8. f16 ees4 | g1 |
+			g4 f ees8 c4. | g'2 f | ees1~ | ees4 r ees r |
+		}
+	}
+	bes'8 a! bes c bes4 r | bes,8 a! bes c bes4 r | bes8. bes16 b8. b16 c8. c16 cis8. cis16 | d4 r bes'4 r |
+
+	% part "C"
+	\repeat volta 2 {
+		b,8. c16 bes'8. b,16 c8. bes'16 b,8. c16 | bes'8. b,16 c8. bes'16 b,8. c16 bes'4 | b,8. c16 bes'8. b,16 c8. bes'16 b,8. c16 | c'1 |
+		b,8. c16 bes'8. b,16 c8. bes'16 b,8. c16 | bes'8. b,16 c8. bes'16 b,8. c16 bes'4 | b,8. c16 bes'8. b,16 c8. bes'16 b,8. c16 | c'1 |
+	} \alternative {
+		{
+			b,8. c16 bes'8. b,16 c8. bes'16 b,8. c16 | bes'8. b,16 c8. bes'16 b,8. c16 bes'4 | b,8. c16 bes'8. b,16 c8. bes'16 b,8. c16 | c'1 |
+			g2 f | a!2 g | bes8 bes,4 aes8 aes8. aes'16 f,8. f'16 | bes,8. bes'16 b,8. b'16 c,8. c'16 d,8. d'16 |
+		}
+		{
+			ees,4 bes8 ees~ ees bes ees4 | ees4 bes8 ees~ ees bes ees4 | ees4 c8 ees~ ees c ees4 | ees2. r4 |
+			bes'2 c8. bes16 g8. ees16 | g2 f | ees4 c8 bes~ bes g f4 | ees4 r ees''4 r |
+		}
+	}
+}
+{% endif %}

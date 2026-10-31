@@ -1,0 +1,154 @@
+{#
+default_version = "Fake"
+
+[attributes]
+title = "Be-Bop"
+style = "Jazz"
+composer = "John 'Dizzy' Gillespie"
+piece = "Fast Bop"
+copyright = "1944, 1945 by MCA MUSIC PUBLISHING, A Division of MCA INC., New York, NY."
+copyrightextra = "Copyright Renewed."
+typesetter = "Mark Veltzer <mark.veltzer@gmail.com>"
+completion = "5"
+uuid = "94c386b0-d507-11f1-8000-046874d194b7"
+structure = "AABA"
+location = "jfb:54"
+
+[[youtube]]
+id = "nYB7gvyvKPs"
+remark = "Dizzy Gillespie in the original recording (Manor, 1945)"
+
+[[youtube]]
+id = "0w1POPcZgzo"
+remark = "Dizzy Gillespie Sextet"
+
+[versions.Fake]
+doChords = true
+doVoice = true
+doLyrics = false
+doLyricsmore = false
+doLyricsmoremore = false
+doChordBars = false
+doGuitar = false
+doExtra = false
+doPrep = false
+doOwn = false
+#}
+{% if part == "Vars" %}
+{% endif %}
+{% if part == "Doc" %}	DONE:
+	- added the meta data from the fake book.
+	- put in the tunes structure.
+	- put in the chords (fake book).
+	- put in the tune (fake book).
+	- added youtube performances.
+	TODO:
+	- check the chords (fake book).
+	- check the tune (fake book).
+	- hear the tune to check that it is right and adjust the tempo.
+	- the fake book marks the endings of the first A as "1, 3." and "2, 4." (the whole AABA is played twice through the outer repeat), here they are printed as "1." and "2.".
+	- bar 14: the third note of the first triplet is crowded against the bar line in the scan, check it.
+{% endif %}
+{% if part == "ChordsFake" %}\chordmode {
+	\startChords
+	\startSong
+
+	\partial 4 s4 |
+
+	\myMark "Intro"
+	\startPart
+	r1*5 | \myEndLine
+	r1*5 | \myEndLine
+	\endPart
+
+	\repeat volta 2 {
+
+		\myMark "A"
+		\startPart
+		\repeat volta 2 {
+			f2:m g:m7.5- | f:m/aes bes:m6 | f1:m/c | g2:m7.5- c:7 | \myEndLine
+			f2:m g:m7.5- | f:m/aes bes:m6 |
+		} \alternative {
+			{
+				f1:m/c | g4:m7.5- c:7 f2:m | \myEndLineVoltaNotLast
+			}
+			{
+				f1:m/c | g4:m7.5- c:7 f2:m | \myEndLineVoltaLast
+			}
+		}
+		\endPart
+
+		\myMark "B"
+		\startPart
+		f1:m7 | f2:m7 bes:7.9+ | ees1:maj7 | ees:maj7 | \myEndLine
+		ees2:m7 ees:m7 | ees:m7 aes:7.9+ | des1:maj7 | g2:m7.5- c:7.5- | \myEndLine
+		\endPart
+
+		\myMark "A"
+		\startPart
+		f2:m g:m7.5- | f:m/aes bes:m6 | f1:m/c | g2:m7.5- c:7 | \myEndLine
+		f2:m g:m7.5- | f:m/aes bes:m6 | f1:m/c |
+	} \alternative {
+		{
+			g4:m7.5- c:7 f2:m | \myEndLineVoltaNotLast
+		}
+		{
+			g4:m7.5- c:7 f2:m | \myEndLineVoltaLast
+		}
+	}
+	\endPart
+
+	\myMark "Coda"
+	\startPart
+	r2. c4:7.5- | \myEndLine
+	\endPart
+
+	\endSong
+	\endChords
+}
+{% endif %}
+{% if part == "VoiceFake" %}{
+	\tempo "Presto" 4 = 280
+	\time 4/4
+	\key aes \major
+
+	\partial 4 \tuplet 3/2 { f8 aes c } |
+
+	% part "Intro"
+	f4^\markup { \musicglyph #"scripts.segno" } r8 c e!4 r8 c | ees8 cis d!4 r des8 b! | c8 aes f c bes'4. g8 | aes8 f r4 r r8 c8 | f8 aes g f e! g bes des |
+	c8 bes aes f g bes des e! | f8 c aes f e! g bes des | c8 aes f c ges'4. e!8 | f4^\markup { To Coda \musicglyph #"scripts.coda" } aes8 c,~ c aes' c,4 | c'4 des8 c bes aes ges e! |
+
+	\repeat volta 2 {
+		% part "A"
+		\repeat volta 2 {
+			f8 aes r f g bes r g | aes8 c r aes bes des r b! | c8 f r4 r2 | \tuplet 3/2 { c8 des c } \tuplet 3/2 { bes aes g } r4 r8 c,8 |
+			f8 aes r f g bes r g | aes8 c r aes bes des r b! |
+		} \alternative {
+			{
+				c8 f, r4 r2 | \tuplet 3/2 { f8 g f } e!8 f r4 r8 c8 |
+			}
+			{
+				c'8 f, r4 r2 | \tuplet 3/2 { f8 g f } e!8 f r2 |
+			}
+		}
+
+		% part "B"
+		bes8 aes r4 g'8 ges f fes | ees8 c aes4 des ces8 a! | bes8 g ees4 aes8 fis g ees | r1 |
+		aes8 ges r4 f'8 fes ees d! | des8 bes ges4 b! a!8 g! | aes4 r r \tuplet 3/2 { f8 aes c } | des4 c8 ges~ ges4. e!8 |
+
+		% part "A"
+		f8 aes r f g bes r g | aes8 c r aes bes des r b! | c8 f r4 r2 | \tuplet 3/2 { c8 des c } \tuplet 3/2 { bes aes g } r4 r8 c,8 |
+		f8 aes r f g bes r g | aes8 c r aes bes des r b! | c8 f, r4 r2 |
+	} \alternative {
+		{
+			\tuplet 3/2 { f8 g f } e!8 f r2 |
+		}
+		{
+			\tuplet 3/2 { f8 g f } e!8 f r4 \tuplet 3/2 { f8 aes c^\markup { D.S. al Coda } } |
+		}
+	}
+
+	% part "Coda"
+	c4 d!8 des c4 ges |
+}
+{% endif %}

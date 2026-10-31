@@ -1,0 +1,86 @@
+{#
+default_version = "Fake"
+
+[attributes]
+title = "Blue Haze"
+style = "Jazz"
+composer = "Miles Davis"
+piece = "Moderately"
+copyright = "1965 Prestige Music"
+typesetter = "Mark Veltzer <mark.veltzer@gmail.com>"
+completion = "5"
+uuid = "058c7d9c-d504-11f1-8000-046874d194b7"
+structure = "AA"
+location = "jfb:65"
+
+[[youtube]]
+id = "quGb8aH5M9E"
+remark = "Miles Davis in the original recording from the album Blue Haze (1953)"
+
+[[youtube]]
+id = "VU6W9YShvTA"
+remark = "Miles Davis from MILES '54: The Prestige Recordings"
+
+[versions.Fake]
+doChords = true
+doVoice = true
+doLyrics = false
+doLyricsmore = false
+doLyricsmoremore = false
+doChordBars = false
+doGuitar = false
+doExtra = false
+doPrep = false
+doOwn = false
+#}
+{% if part == "Vars" %}
+{% endif %}
+{% if part == "Doc" %}	DONE:
+	- added the meta data from the fake book.
+	- put in the tunes structure.
+	- put in the chords (fake book).
+	- put in the tune (fake book).
+	- added youtube performances.
+	TODO:
+	- check the chords (fake book).
+	- check the tune (fake book).
+	- hear the tune to check that it is right and adjust the tempo.
+{% endif %}
+{% if part == "ChordsFake" %}\chordmode {
+	\startChords
+	\startSong
+
+	\myMark "A"
+	\startPart
+	bes1:maj7 | c:m7 | bes2:maj7 bes:7 | bes1:7 | \myEndLine
+	ees1:maj7 | ees:m6 | d:m6 | d:dim7 | \myEndLine
+	ees1*2:maj7 | ees1:m | f:7 | \myEndLine
+	\endPart
+
+	\myMark "A"
+	\startPart
+	bes1:maj7 | c:m7 | bes2:maj7 bes:7 | bes1:7 | \myEndLine
+	ees1:maj7 | ees:m6 | d:m7 | d:dim7 | \myEndLine
+	ees1*2:maj7 | ees1:m | bes | \myEndLine
+	\endPart
+
+	\endSong
+	\endChords
+}
+{% endif %}
+{% if part == "VoiceFake" %}{
+	\tempo "Moderato" 4 = 108
+	\time 4/4
+	\key bes \major
+
+	% part "A"
+	r4 d'8 bes~ bes f ees4~ | ees1 | r4 d'8 bes~ bes f16 bes aes4~ | aes1 |
+	r4 f'8 bes,~ bes f ees4~ | ees2. d8 f | d1 | r4 r8 aes'16 f bes4. aes16 g |
+	f2~ f8 g16 f \tuplet 3/2 { ees8 g bes } | d4. bes16 g f4. g16 f | bes1 | r1 |
+
+	% part "A"
+	r4 f'8 bes,~ bes f ees4~ | ees1 | r4 d'8 bes~ bes f16 bes aes4~ | aes1 |
+	r4 f'8 bes,~ bes f ees4~ | ees2. d8 f | d1 | r4 r8 aes'16 f bes4. aes16 g |
+	f2~ f8 g16 f \tuplet 3/2 { ees8 g bes } | d4. bes16 g f4. g16 f | bes1~ | bes1 |
+}
+{% endif %}

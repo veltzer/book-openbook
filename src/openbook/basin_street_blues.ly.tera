@@ -1,0 +1,104 @@
+{#
+default_version = "Fake"
+
+[attributes]
+title = "Basin Street Blues"
+style = "Dixieland"
+composer = "Spencer Williams"
+poet = "Spencer Williams"
+piece = "Moderately"
+copyright = "1926, 1929, 1933, 1987 EDWIN H. MORRIS & COMPANY, A Division of MPL Communications, Inc."
+copyrightextra = "Renewed 1956, 1957, 1961 EDWIN H. MORRIS & COMPANY, A Division of MPL Communications, Inc. International Copyright Secured. All Rights Reserved"
+typesetter = "Mark Veltzer <mark.veltzer@gmail.com>"
+completion = "5"
+uuid = "93977392-d506-11f1-8000-046874d194b7"
+structure = "AB"
+location = "jfb:54"
+
+[[youtube]]
+id = "k-U69b21TYk"
+remark = "Louis Armstrong and his Hot Five (1928)"
+
+[[youtube]]
+id = "Hhfe1SUe2-A"
+remark = "Miles Davis"
+
+[versions.Fake]
+doChords = true
+doVoice = true
+doLyrics = false
+doLyricsmore = false
+doLyricsmoremore = false
+doChordBars = false
+doGuitar = false
+doExtra = false
+doPrep = false
+doOwn = false
+#}
+{% if part == "Vars" %}
+{% endif %}
+{% if part == "Doc" %}	DONE:
+	- added the meta data from the fake book.
+	- put in the tunes structure.
+	- put in the tune (fake book).
+	- the fake book prints no chord symbols for this tune, took the chords from the Dixieland Fake Book of The Firehouse Jazz Band (pdf page 225, tune number 157), which is in B flat, and transposed them up a whole tone to the key of the fake book (C).
+	- added youtube performances.
+	TODO:
+	- add the lyrics.
+	- check the chords (they come from the Firehouse Jazz Band book and the melody of the fake book is a bit different in places).
+	- check the tune (fake book).
+	- hear the tune to check that it is right and adjust the tempo.
+	- bar 32: the fake book prints only a dotted half note in the last bar, added a quarter rest to fill it.
+{% endif %}
+{% if part == "ChordsFake" %}\chordmode {
+	\startChords
+	\startSong
+
+	\partial 4 s4 |
+
+	\myMark "Intro"
+	\startPart
+	c1 | c1 | c2 g:7 | c g:7 | \myEndLine
+	c2 c:7 | f f:m | c1 | g2:7 c4 g:7.5+ | \myEndLine
+	c1 | c1 | c2 g:7 | c g:7 | \myEndLine
+	c2 c:7 | f f:m | c1 | g2:7 c | \myEndLine
+	\endPart
+
+	\myMark "A"
+	\startPart
+	c1 | e:7 | a:7 | bes2:7 a:7 | \myEndLine
+	d1:7 | g:7 | c2 c:dim | d:m7 g:7 | \myEndLine
+	\endPart
+
+	\myMark "B"
+	\startPart
+	c1 | e:7 | a:7 | bes2:7 a:7 | \myEndLine
+	d1:7 | g:7 | c2 f:7 | c g:7 | \myEndLine
+	\endPart
+
+	\endSong
+	\endChords
+}
+{% endif %}
+{% if part == "VoiceFake" %}{
+	\tempo "Moderato" 2 = 72
+	\time 2/2
+	\key c \major
+
+	\partial 4 c8. c16 |
+
+	% part "Intro"
+	e8. e16 f4 fis8 g4. | r1 | c8. c16 bes8. a16 g8 a4. | r1 |
+	g8 c g c~ c4 g8 g | c4 c8 d~ d2 | c4 bes8. a16 g8. e16 e8. f16 | g8 g4 c,8~ c4 c |
+	e4 f8. f16 fis8 g4. | r1 | c4 bes8. a16 g8 a4. | r1 |
+	g8 c4 g8 c4 g | c8 c4 d8~ d2 | r2 r4 c8. d16 | ees8 d4 c8~ c2 |
+
+	% part "A"
+	e,8 e4 e8~ e2 | e8 e4 e8~ e4 r8. e16 | e8 b'4 e,8~ e2 | b'8 b4 a8~ a4 e |
+	e8 e4 e8~ e2 | e8 g4 e8~ e4 g | d'8. e16 c8. c16 b8. b16 a8. a16 | c8. c16 b8. b16 a8. a16 g4 |
+
+	% part "B"
+	e8 e4 e8~ e2 | b'8 b4 gis8~ gis4 e | e8 b'4 a8~ a2 | f8 f4 e8~ e4 e |
+	e8 b'4 a8~ a2 | r4 e g8 e d c~ | c1~ | c2. r4 |
+}
+{% endif %}

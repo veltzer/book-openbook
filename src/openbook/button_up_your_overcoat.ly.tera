@@ -1,0 +1,129 @@
+{#
+default_version = "Fake"
+
+[attributes]
+title = "Button Up Your Overcoat"
+subtitle = "From 'Follow Thru'"
+style = "Broadway"
+composer = "B.G. DeSylva, Lew Brown, Ray Henderson"
+poet = "B.G. DeSylva, Lew Brown, Ray Henderson"
+piece = "Moderately"
+copyright = "1928 by DeSylva, Brown & Henderson"
+copyrightextra = "Copyright renewed, assigned to Chappell & Co., Inc. and Stephen Ballentine Music Publishing Company"
+typesetter = "Mark Veltzer <mark.veltzer@gmail.com>"
+completion = "5"
+uuid = "12ecce38-d504-11f1-8000-046874d194b7"
+structure = "AABA"
+location = "jfb:73"
+
+[[youtube]]
+id = "Rclfkeyy1bg"
+remark = "Helen Kane in the original hit recording (1929)"
+
+[[youtube]]
+id = "6UliCMEdTFE"
+remark = "Ruth Etting (1929)"
+
+[versions.Fake]
+doChords = true
+doVoice = true
+doLyrics = false
+doLyricsmore = false
+doLyricsmoremore = false
+doChordBars = false
+doGuitar = false
+doExtra = false
+doPrep = false
+doOwn = false
+#}
+{% if part == "Vars" %}
+{% endif %}
+{% if part == "Doc" %}	DONE:
+	- added the meta data from the fake book.
+	- put in the tunes structure.
+	- put in the chords (fake book).
+	- put in the tune (fake book).
+	- added youtube performances.
+	TODO:
+	- check the chords (fake book).
+	- check the tune (fake book).
+	- hear the tune to check that it is right and adjust the tempo.
+	- the last chord of bar 24 is hard to read in the scan (looks like C#dim7/D, could be C#7/D).
+	- add the lyrics.
+{% endif %}
+{% if part == "ChordsFake" %}\chordmode {
+	\startChords
+	\startSong
+
+	\repeat volta 2 {
+
+		\myMark "A"
+		\startPart
+		g1 | e:7 | a1*2:7 | \myEndLine
+		d1:7 | d2:dim7 d:7 | g:6 e:m7 | a:m7 d:7 | \myEndLine
+		\endPart
+
+		\myMark "A"
+		\startPart
+		g1 | e:7 | a1*2:7 | \myEndLine
+		d1:7 | d2:dim7 d:7 | g1:6 | d2:m7 g:7 | \myEndLine
+		\endPart
+
+		\myMark "B"
+		\startPart
+		c1*2:6 | g1*2:6 | \myEndLine
+		e1:m7 | a:9 | d2:7 e:m7/d | g:maj7/d a4:m7/d cis:dim7/d | \myEndLine
+		\endPart
+
+		\myMark "A"
+		\startPart
+		g1 | e:7 | a1*2:7 | \myEndLine
+		d1:7 | d2:dim7 d:7 | g c:7 |
+
+	} \alternative {
+		{
+			g2 a4:m7 d:7 | \myEndLineVoltaNotLast
+		}
+		{
+			g1 | \myEndLineVoltaLast
+		}
+	}
+	\endPart
+
+	\endSong
+	\endChords
+}
+{% endif %}
+{% if part == "VoiceFake" %}{
+	\tempo "Moderato" 4 = 160
+	\time 2/2
+	\key g \major
+
+	\repeat volta 2 {
+
+		% part "A"
+		r4 d'8 cis d4 c! | c b8 b~ b2 | r4 a8 gis a4 g! | a1 |
+		e4. d8~ d4 r | e8 dis e d!~ d d'4 c8 | b4 g g2~ | g2. r4 |
+
+		% part "A"
+		r4 d'8 cis d4 c! | c b8 b~ b2 | r4 a8 gis a4 g! | a1 |
+		e4. d8~ d4 r | e8 dis e d!~ d d'4 c8 | b4 g g2~ | g4 g a b |
+
+		% part "B"
+		c c c2 | e c4 r | b b b2 | d b4 r |
+		g g g2 | b g4 r | fis8 fis4 g8 g4 a8 a~ | a b b4 c cis |
+
+		% part "A"
+		r4 d8 cis d4 c! | c b8 b~ b2 | r4 a8 gis a4 g! | a1 |
+		e4. d8~ d4 r | e8 dis e d!~ d d'4 c8 | b2 g |
+
+	} \alternative {
+		{
+			g2 r |
+		}
+		{
+			g2. r4 |
+		}
+	}
+}
+{% endif %}

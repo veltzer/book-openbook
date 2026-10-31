@@ -1,0 +1,102 @@
+{#
+default_version = "Fake"
+
+[attributes]
+title = "Amazing Grace"
+style = "Gospel"
+composer = "Traditional"
+piece = "Moderately"
+copyright = "1988 HAL LEONARD PUBLISHING CORPORATION"
+copyrightextra = "International Copyright Secured. ALL RIGHTS RESERVED."
+typesetter = "Mark Veltzer <mark.veltzer@gmail.com>"
+completion = "5"
+uuid = "edcace2a-d503-11f1-8000-046874d194b7"
+structure = "AB"
+location = "jfb:44"
+
+[[youtube]]
+id = "9-PrfrFJFJY"
+remark = "Mahalia Jackson"
+
+[[youtube]]
+id = "LGN64GwVIRM"
+remark = "Aretha Franklin from the album Amazing Grace (1972)"
+
+[versions.Fake]
+doChords = true
+doVoice = true
+doLyrics = false
+doLyricsmore = false
+doLyricsmoremore = false
+doChordBars = false
+doGuitar = false
+doExtra = false
+doPrep = false
+doOwn = false
+#}
+{% if part == "Vars" %}
+{% endif %}
+{% if part == "Doc" %}	DONE:
+	- added the meta data from the fake book.
+	- put in the tunes structure.
+	- put in the chords (fake book).
+	- put in the tune (fake book).
+	- added youtube performances.
+	TODO:
+	- add the lyrics.
+	- check the chords (fake book).
+	- check the tune (fake book).
+	- hear the tune to check that it is right and adjust the tempo.
+{% endif %}
+{% if part == "ChordsFake" %}\chordmode {
+	\startChords
+	\startSong
+
+	\partial 4 s4 |
+
+	\myMark "A"
+	\startPart
+	\repeat volta 2 {
+		g2. | g2./b | c | g2.*3 | d2.:7sus4 | d:7 | \myEndLine
+		\endPart
+
+		\myMark "B"
+		\startPart
+		g2. | g2.:7/b | c | g2 d4:7 | e2:m g4/b | a2:m9 d4:7 |
+	} \alternative {
+		{
+			g2.*2 | \myEndLineVoltaNotLast
+		}
+		{
+			g2 c4/g | g2. | \myEndLineVoltaLast
+		}
+	}
+	\endPart
+
+	\endSong
+	\endChords
+}
+{% endif %}
+{% if part == "VoiceFake" %}{
+	\tempo "Moderato" 4 = 90
+	\time 3/4
+	\key g \major
+
+	\partial 4 d4 |
+
+	\repeat volta 2 {
+		% part "A"
+		g2 b8 g | b2 a4 | g2 e4 | d2 d4 | g2 b8 g | b2 a4 | d2.~ | d4 r b |
+
+		% part "B"
+		d4. b8 d b | g2 d4 | e4. g8 g e | d2 d4 | g2 b8 g | b2 a4 |
+	} \alternative {
+		{
+			g2.~ | g4 r d |
+		}
+		{
+			g2.~ | g4 r r |
+		}
+	}
+}
+{% endif %}

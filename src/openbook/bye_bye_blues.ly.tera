@@ -1,0 +1,125 @@
+{#
+default_version = "Fake"
+
+[attributes]
+title = "Bye Bye Blues"
+style = "Swing"
+composer = "Fred Hamm, Dave Bennett, Bert Lown, Chauncey Gray"
+poet = "Fred Hamm, Dave Bennett, Bert Lown, Chauncey Gray"
+piece = "Moderately"
+copyright = "1925 Bourne Co."
+copyrightextra = "Copyright Renewed."
+typesetter = "Mark Veltzer <mark.veltzer@gmail.com>"
+completion = "5"
+uuid = "12f076aa-d504-11f1-8000-046874d194b7"
+structure = "ABAC"
+location = "jfb:75"
+
+[[youtube]]
+id = "rYZiCIJeRI0"
+remark = "Bert Lown and His Hotel Biltmore Orchestra (1930)"
+
+[[youtube]]
+id = "Hz7ZsyLXgbE"
+remark = "Les Paul and Mary Ford (1953)"
+
+[versions.Fake]
+doChords = true
+doVoice = true
+doLyrics = false
+doLyricsmore = false
+doLyricsmoremore = false
+doChordBars = false
+doGuitar = false
+doExtra = false
+doPrep = false
+doOwn = false
+#}
+{% if part == "Vars" %}
+{% endif %}
+{% if part == "Doc" %}	DONE:
+	- added the meta data from the fake book.
+	- put in the tunes structure.
+	- put in the chords (fake book).
+	- put in the tune (fake book).
+	- added youtube performances.
+	TODO:
+	- check the chords (fake book).
+	- check the tune (fake book).
+	- hear the tune to check that it is right and adjust the tempo.
+	- add the lyrics.
+{% endif %}
+{% if part == "ChordsFake" %}\chordmode {
+	\startChords
+	\startSong
+
+	\repeat volta 2 {
+
+		\myMark "A"
+		\startPart
+		c1*2 | aes1*2:7 | \myEndLine
+		c1 | b2:7 bes:7 | a1*2:7 | \myEndLine
+		\endPart
+
+		\myMark "B"
+		\startPart
+		d1:9 | d:7 | g:7 | g:7.9- | c:maj9 | \myEndLine
+		ees:dim7 | d2:m7 g:7 | d:m7 g:7.5+ | \myEndLine
+		\endPart
+
+		\myMark "A"
+		\startPart
+		c1*2 | aes1*2:7 | \myEndLine
+		c1 | b2:7 bes:7 | a1*2:7 | \myEndLine
+		\endPart
+
+		\myMark "C"
+		\startPart
+		d1:9 | d:7 | g:7 | g:7.9- | c | aes:7 |
+
+	} \alternative {
+		{
+			c1 | s2 g:7 | \myEndLineVoltaNotLast
+		}
+		{
+			c2 f:7 | c1 | \myEndLineVoltaLast
+		}
+	}
+	\endPart
+
+	\endSong
+	\endChords
+}
+{% endif %}
+{% if part == "VoiceFake" %}{
+	\tempo "Moderato" 4 = 160
+	\time 4/4
+	\key c \major
+
+	\repeat volta 2 {
+
+		% part "A"
+		e'1 | g, | aes~ | aes |
+		e' | g, | a~ | a |
+
+		% part "B"
+		e' | a, | e' | b | d2 c |
+		b2 a | c b | a g |
+
+		% part "A"
+		e'1 | g, | aes~ | aes |
+		e' | g, | a~ | a |
+
+		% part "C"
+		e' | a, | e' | b | c | aes |
+
+	} \alternative {
+		{
+			c1~ | c4 r r2 |
+		}
+		{
+			c1~ | c4 r r2 |
+		}
+	}
+}
+{% endif %}

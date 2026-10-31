@@ -1,0 +1,130 @@
+{#
+default_version = "Fake"
+
+[attributes]
+title = "Blues In The Night"
+style = "Jazz"
+composer = "Harold Arlen"
+poet = "Johnny Mercer"
+piece = "Blues tempo"
+copyright = "1941 (Renewed) WARNER BROS. INC."
+typesetter = "Mark Veltzer <mark.veltzer@gmail.com>"
+completion = "5"
+uuid = "05935f36-d504-11f1-8000-046874d194b7"
+structure = "ABC"
+location = "jfb:66"
+
+[[youtube]]
+id = "1VcJlc2bbQU"
+remark = "Jimmie Lunceford and his Orchestra in the 1941 hit recording"
+
+[[youtube]]
+id = "l5oW0hopdqY"
+remark = "Ella Fitzgerald from Ella Fitzgerald Sings the Harold Arlen Songbook (1961)"
+
+[versions.Fake]
+doChords = true
+doVoice = true
+doLyrics = false
+doLyricsmore = false
+doLyricsmoremore = false
+doChordBars = false
+doGuitar = false
+doExtra = false
+doPrep = false
+doOwn = false
+#}
+{% if part == "Vars" %}
+{% endif %}
+{% if part == "Doc" %}	DONE:
+	- added the meta data from the fake book.
+	- put in the tunes structure.
+	- put in the chords (fake book).
+	- put in the tune (fake book).
+	- added youtube performances.
+	TODO:
+	- add the lyrics (the A part has two verses, sung the second time after the D.S.; the C part has two verses for its repeat).
+	- check the chords (fake book).
+	- check the tune (fake book).
+	- hear the tune to check that it is right and adjust the tempo.
+	- bar 9: the book marks only the first b with a natural; the second b of the bar is kept natural following the notation rule, check it.
+	- the book marks the second ending of the C part as whistled and the start of the coda as hummed; add these indications.
+{% endif %}
+{% if part == "ChordsFake" %}\chordmode {
+	\startChords
+	\startSong
+
+	\partial 8 s8 |
+
+	\myMark "A"
+	\startPart
+	bes1*3 | bes1:7 | \myEndLine
+	ees1*2:7 | bes1*2:7 | \myEndLine
+	f1:7 | c2:7 f:7 | bes1*2 | \myEndLine
+	\endPart
+
+	\myMark "B"
+	\startPart
+	bes1:7 | ees:7 | bes1*2 | \myEndLine
+	ees1:9 | ees2:9 f:7 | bes1*2 | \myEndLine
+	f1:7 | c2:7 f:7 | bes1*2 | \myEndLine
+	\endPart
+
+	\myMark "C"
+	\startPart
+	\repeat volta 2 {
+		ees1:9 | ees2:m6 f:7 | des1:7 | c2:5+ c:7 | \myEndLine
+		g1:7.9- |
+	} \alternative {
+		{
+			g2:m7.5- c:7 | f1:7 | c2:m7.5- f:7 | \myEndLineVoltaNotLast
+		}
+		{
+			g2:m7.5- c:7 | f2:7 ees:m/ges | aes2.:m6 f4:7/a | bes1:7 | c2:7 f:7 | \myEndLineVoltaLast
+		}
+	}
+	\endPart
+
+	\myMark "Coda"
+	\startPart
+	bes1 | bes:7 | c2:7.9- f:7 | c2:7 f:7sus4 | bes1 | \myEndLine
+	\endPart
+
+	\endSong
+	\endChords
+}
+{% endif %}
+{% if part == "VoiceFake" %}{
+	\tempo "Andante" 4 = 92
+	\time 4/4
+	\key bes \major
+
+	\partial 8 f8 |
+
+	% part "A"
+	\tuplet 3/2 { a8^\markup { \musicglyph #"scripts.segno" } bes f } a8 bes~ bes4. f8 | \tuplet 3/2 { a8 bes f } a8 bes~ bes4. f8 | \tuplet 3/2 { a8 bes f } a8 bes~ bes2 | d,2~ d4. bes8 |
+	\tuplet 3/2 { f'8 ees bes } f'8 ees~ ees4. bes8 | \tuplet 3/2 { f'8 ees bes } f'8 ees~ ees2 | r8 bes' aes g f g cis, d~ | d2~ d4. f8 |
+	\tuplet 3/2 { b8 c f, } b8 c~ c4. f,8 | \tuplet 3/2 { des'8 c des } bes8. bes16 \tuplet 3/2 { aes8 g aes } f8. f16 | a8 bes~ bes2~ \tuplet 3/2 { bes8 g f^\markup { To Coda \musicglyph #"scripts.coda" } } | bes,1 |
+
+	% part "B"
+	d'4. f8 d8. bes16 g8. f16 | des'4. f8 des8. bes16 g8. f16 | cis'8 d!4.~ d4. f,8 | \tuplet 3/2 { a8 bes f } a8 bes~ bes2 |
+	des4. f8 des8. bes16 g8. f16 | ees'4. f8 ees8. des16 bes8. ges16 | cis8 d4.~ d4. f,8 | \tuplet 3/2 { a8 bes f } a8 bes~ bes4. f8 |
+	\tuplet 3/2 { e'!8 f f, } e'8 f~ f4. f,8 | \tuplet 3/2 { des'8 c des } bes8. bes16 \tuplet 3/2 { aes8 g aes } f8. f16 | a8 bes~ bes2~ \tuplet 3/2 { bes8 g f } | bes,2~ bes8 f' g bes |
+
+	% part "C"
+	\repeat volta 2 {
+		c4. bes8 c4. bes8 | ees4. des8 ees8. des16 ees8. f16 | bes,4. aes8 bes4. aes8 | des1 |
+		aes4. g8 aes4. g8 |
+	} \alternative {
+		{
+			c2~ c8 bes c c~ | c1~ | c2 r2 |
+		}
+		{
+			c2~ c8 bes c d~ | d1~ | d2. \tuplet 3/2 { r8 f, bes } | aes2. \tuplet 3/2 { aes8 g ees' } | des2~ des4. f,8^\markup { D.S. al Coda } |
+		}
+	}
+
+	% part "Coda"
+	bes,2. \tuplet 3/2 { r8 f' bes } | aes2.~ \tuplet 3/2 { aes8 g ees' } | des2~ des4. f,8 | \tuplet 3/2 { des'8 c des } bes8. bes16 f8 bes~ \tuplet 3/2 { bes8 g f } | bes,1 |
+}
+{% endif %}

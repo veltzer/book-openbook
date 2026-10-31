@@ -1,0 +1,109 @@
+{#
+default_version = "Fake"
+
+[attributes]
+title = "The Best Things In Life Are Free"
+style = "Broadway"
+composer = "B.G. DeSylva, Lew Brown, Ray Henderson"
+poet = "B.G. DeSylva, Lew Brown, Ray Henderson"
+piece = "Brightly"
+copyright = "1927 by DeSylva, Brown and Henderson, Inc."
+copyrightextra = "Copyright Renewed, assigned to Chappell & Co., Inc. and Stephen Ballentine Music Publishing Company"
+typesetter = "Mark Veltzer <mark.veltzer@gmail.com>"
+completion = "5"
+uuid = "58e4be3c-d504-11f1-8000-046874d194b7"
+structure = "ABCA"
+location = "jfb:57"
+
+[[youtube]]
+id = "IMX9XIs9V04"
+remark = "George Olsen and His Music in the original hit recording (1927)"
+
+[[youtube]]
+id = "k9E4xQ6rzKI"
+remark = "Hank Mobley"
+
+[versions.Fake]
+doChords = true
+doVoice = true
+doLyrics = false
+doLyricsmore = false
+doLyricsmoremore = false
+doChordBars = false
+doGuitar = false
+doExtra = false
+doPrep = false
+doOwn = false
+#}
+{% if part == "Vars" %}
+{% endif %}
+{% if part == "Doc" %}	DONE:
+	- added the meta data from the fake book.
+	- put in the tunes structure.
+	- put in the chords (fake book).
+	- put in the tune (fake book).
+	- added youtube performances.
+	TODO:
+	- add the lyrics.
+	- check the chords (fake book).
+	- check the tune (fake book).
+	- hear the tune to check that it is right and adjust the tempo.
+{% endif %}
+{% if part == "ChordsFake" %}\chordmode {
+	\startChords
+	\startSong
+
+	\partial 2 s2 |
+
+	\myMark "A"
+	\startPart
+	c1*4 | \myEndLine
+	c1 | c2/e ees2:dim7 | d1:m7 | g1:7 | \myEndLine
+	\endPart
+
+	\myMark "B"
+	\startPart
+	d1*4:m7 | \myEndLine
+	g1:7 | g2:7 g2:7.9- | c2 cis2:dim7 | g2.:7/d g4:7 | \myEndLine
+	\endPart
+
+	\myMark "C"
+	\startPart
+	c1*2:7 | f1*2 | \myEndLine
+	d1*2:7 | d1:m7 | g1:9 | \myEndLine
+	\endPart
+
+	\myMark "A"
+	\startPart
+	c1*2 | a1*2:7 | \myEndLine
+	d1:m7 | g2:7sus4 g2:7 | c2 aes2:7 | c1 | \myEndLine
+	\endPart
+
+	\endSong
+	\endChords
+}
+{% endif %}
+{% if part == "VoiceFake" %}{
+	\tempo "Allegro" 2 = 120
+	\time 2/2
+	\key c \major
+
+	\partial 2 g'2 |
+
+	% part "A"
+	c,2 e | g2 c | b4 c b2~ | b2. a4 |
+	g2 b,4 c | g'2 ges | f1~ | f2. a4 |
+
+	% part "B"
+	d,2 f | a2 d | c4 d c2~ | c2. b4 |
+	a2 cis,4 d | a'2 aes | g1~ | g2. g4 |
+
+	% part "C"
+	c4 d c d~ | d2. e,4 | d4 e d e~ | e2. a4 |
+	d4 e d e~ | e2. a,4 | c2. f,4 | a2. g4 |
+
+	% part "A"
+	c,2 e | g2 c | b4 c b2~ | b2 a |
+	d2 c4 d | c2 d | c1~ | c4 r r2 |
+}
+{% endif %}
