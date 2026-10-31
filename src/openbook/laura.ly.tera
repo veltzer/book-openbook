@@ -1,0 +1,120 @@
+{#
+default_version = "Laurent"
+
+[attributes]
+title = "Laura"
+style = "Jazz"
+composer = "David Raksin"
+poet = "Johnny Mercer"
+typesetter = "Laurent Martelli"
+completion = "3"
+uuid = "44cc1166-d4a0-11f1-8000-046874d194b7"
+structure = "ABAC"
+
+[versions.Laurent]
+doChords = true
+doVoice = true
+doLyrics = false
+doLyricsmore = false
+doLyricsmoremore = false
+doChordBars = false
+doGuitar = false
+doExtra = false
+doPrep = false
+doOwn = false
+#}
+{% if part == "Vars" %}
+{% endif %}
+{% if part == "Doc" %}	DONE:
+	- converted the Laurent Martelli version from staging/openbook/laurent/laura.ly (its to-coda/coda layout is written as a second ending).
+	TODO:
+	- check the tune and chords against a real book (hlrjb:234).
+	- the source has no tempo marking, the tempo is a guess.
+	- the last chord in the source is c:maj.11+^5.9, written here as c:maj9.11+.
+	- add the lyrics.
+	- add youtube performances.
+{% endif %}
+{% if part == "ChordsLaurent" %}\chordmode {
+	\startChords
+	\startSong
+
+	\myMark "Intro"
+	\startPart
+	e1:m7 | \myEndLine
+	\endPart
+
+	\repeat volta 2 {
+
+		\myMark "A"
+		\startPart
+		a1:m7 | a2:m7/+d d | g:maj7 c:7 | g1:maj7 | \myEndLine
+		g:m7 | g2:m7/+c c:7.9-.5+ | f:maj7 g:m7 | a:m7 g:m7 | \myEndLine
+		\endPart
+
+		\myMark "B"
+		\startPart
+		f1:m7 | bes:7 | ees:maj7 | g2:m7 c:m7 | \myEndLine
+		a1:7.5- | d2:7.9- d:9 | g1:maj7 | b2:m7.5- e:7.9- | \myEndLine
+		\endPart
+
+		\myMark "A"
+		\startPart
+		a1:m7 | a2:m7/+d d:7.5+.9- | g:maj7 a:m7 | bes:dim7 b:m7 | \myEndLine
+		g1:m7 | des2:7 c:7.5+.9- | f:maj7 bes:7 | f1:maj7 | \myEndLine
+		\endPart
+
+		\myMark "C"
+		\startPart
+		f2:m7 f:m7+ | d:m7.5- g:7.5- | c:maj7 d:m7 | e:m7 a:m7 | \myEndLine
+		d1:7.5+.9- | g:9 |
+	} \alternative {
+		{
+			fis2:m7.5- b:7 | f:m7 bes:7 | \myEndLineVoltaNotLast
+		}
+		{
+			fis2:m7.5- f:m7 | e:m7 ees:7 | d:m7 des:maj7 | c1:maj9.11+ | \myEndLineVoltaLast
+		}
+	}
+	\endPart
+
+	\endSong
+	\endChords
+}
+{% endif %}
+{% if part == "VoiceLaurent" %}{
+	\tempo "Andante" 4 = 80
+	\time 4/4
+	\key c \major
+
+	% part "Intro"
+	r8 e'4. c4 d |
+
+	\repeat volta 2 {
+		% part "A"
+		b4. b8 ~ b2 | \tuplet 3/2 { r4 ais b } \tuplet 3/2 { ais fis g } |
+		a!4. a8 e2 ~ | e2 e8 b \tuplet 3/2 { d8 e g } | a4. a8 ~ a2 ~ |
+		a4. gis16 a \tuplet 3/2 { gis4 e f } | g1 ~ | g2. r4 |
+
+		% part "B"
+		r8 c, ees f ~ f2 ~ | f4 ees \tuplet 3/2 { f ees f } | g4 g8 d ~ d2 |
+		r8 ees4. g4 bes8 ees ~ | ees4. ees8 gis,2 ~ |
+		gis a2 | d1 ~ | d4 e c d |
+
+		% part "A"
+		b2 b2 ~ | \tuplet 3/2 { b4 ais b } \tuplet 3/2 { ais fis g } |
+		a4 a8 e ~ e2 ~ | e2 ~ e8 d e16 d cis d |
+		a'4. a8 ~ a2 ~ | a4 \tuplet 3/2 { r8 gis a } g8 a f g ~ | g1 | g2. c,4 |
+
+		% part "C"
+		g'4. g8 ~ g2 ~ | \tuplet 3/2 { g2 a4 } \tuplet 3/2 { f gis b } | d4. c8 d2 ~ | d2 b4 c |
+		ees2 ees | \tuplet 3/2 { ees4 e ees } \tuplet 3/2 { d4 a b } |
+	} \alternative {
+		{
+			c1 ~ | c4 r c2 |
+		}
+		{
+			c1 | c | c | c\fermata |
+		}
+	}
+}
+{% endif %}

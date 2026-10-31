@@ -1,0 +1,92 @@
+{#
+default_version = "Laurent"
+
+[attributes]
+title = "Perdido"
+style = "Jazz"
+composer = "Juan Tizol"
+copyright = "1942 Tempo Music, Inc. and Music Sales Corporation (ASCAP)"
+typesetter = "Laurent Martelli"
+completion = "3"
+uuid = "baf9b820-d4a0-11f1-8000-046874d194b7"
+structure = "AABA"
+
+[versions.Laurent]
+doChords = true
+doVoice = true
+doLyrics = false
+doLyricsmore = false
+doLyricsmoremore = false
+doChordBars = false
+doGuitar = false
+doExtra = false
+doPrep = false
+doOwn = false
+#}
+{% if part == "Vars" %}
+{% endif %}
+{% if part == "Doc" %}	DONE:
+	- converted the Laurent Martelli version from staging/openbook/laurent/perdido.ly.
+	TODO:
+	- check the tune and chords against a real book.
+	- the source stops after the bridge; the last A (a repeat of the first A) is not written out.
+	- the tempo is the midi tempo of the source; check it.
+	- add the lyrics.
+	- add youtube performances.
+{% endif %}
+{% if part == "ChordsLaurent" %}\chordmode {
+	\startChords
+	\startSong
+
+	\partial 8 s8 |
+
+	\myMark "A"
+	\startPart
+	\repeat volta 2 {
+		c1:m7 | f:7 | bes2:maj ees:7 | d:m7 g:7 | \myEndLine
+		c1:m7 | c2:m7 f:7 |
+	} \alternative {
+		{
+			bes2:maj ees:7 | d:m7 g:7 | \myEndLineVoltaNotLast
+		}
+		{
+			bes1:maj | bes1:maj | \myEndLineVoltaLast
+		}
+	}
+	\endPart
+
+	\myMark "B"
+	\startPart
+	d1:7 | a2:m7 d:7 | g1:7 | g:7 | \myEndLine
+	c:7 | g2:m7 c:7 | f1:7 | f1:7 | \myEndLine
+	\endPart
+
+	\endSong
+	\endChords
+}
+{% endif %}
+{% if part == "VoiceLaurent" %}{
+	\tempo "Moderato" 4 = 132
+	\time 4/4
+	\key bes \major
+
+	\partial 8 c8 |
+
+	% part "A"
+	\repeat volta 2 {
+		ees8 f~ f2 r8 c | ees f4 c8 ees f4 bes,8 | d f~ f2 r8 bes, | d f4 bes,8 d f4 c8 |
+		ees f~ f2 r8 c | \tuplet 3/2 { ees4 f d' } c4. f,8 |
+	} \alternative {
+		{
+			g8 bes~ bes2. | r2 r4 r8 c,8 |
+		}
+		{
+			g'8 bes~ bes2.~ | bes2 r |
+		}
+	}
+
+	% part "B"
+	d1 | \tuplet 3/2 { a4 b c } d d8 e~ | e1 | b8 a~ a2. |
+	c1 | \tuplet 3/2 { g4 a bes } c c8 d~ | d1 | a8 g~ g2 r8 c,8 |
+}
+{% endif %}

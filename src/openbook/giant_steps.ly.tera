@@ -35,10 +35,23 @@ doGuitar = false
 doExtra = false
 doPrep = false
 doOwn = false
+
+[versions.Laurent]
+doChords = true
+doVoice = true
+doLyrics = false
+doLyricsmore = false
+doLyricsmoremore = false
+doChordBars = false
+doGuitar = false
+doExtra = false
+doPrep = false
+doOwn = false
 #}
 {% if part == "Vars" %}
 {% endif %}
 {% if part == "Doc" %}	DONE:
+	- converted the Laurent Martelli version from staging/openbook/laurent/giant_steps.ly (the staged chords had Bb where the standard changes have B in bars 1, 12 and 13 and Bbm7 for Bb7 in bar 5; fixed to the standard changes).
 	- added the real book pdf.
 	- added the real book chords.
 	- added the real book notes.
@@ -103,5 +116,33 @@ doOwn = false
 	For -- ward east, __ cas -- tle next __
 	Not the pace __ _ but the steps __
 	Check -- mate __
+}
+{% endif %}
+{% if part == "ChordsLaurent" %}\chordmode {
+	\startChords
+	\startSong
+
+	\myMark "A"
+	\startPart
+	b2:maj7 d:7 | g:maj7 bes:7 | ees1:maj7 | a2:m7 d:7 | \myEndLine
+	g2:maj7 bes:7 | ees:maj7 fis:7 | b1:maj7 | f2:m7 bes4.:7 ees8:maj7 | \myEndLine
+	s1 | a2:m7 d4.:7 g8:maj7 | s1 | cis2:m7 fis4.:7 b8:maj7 | \myEndLine
+	s1 | f2:m7 bes4.:7 ees8:maj7 | s1 | cis4.:m7 fis8:7 s2 | \myEndLine
+	\endPart
+
+	\endSong
+	\endChords
+}
+{% endif %}
+{% if part == "VoiceLaurent" %}{
+	\tempo "Allegro" 4 = 150
+	\time 4/4
+	\key c \major
+
+	% part "A"
+	fis'2 d | b g4. bes8~ | bes1 | b4. a8~ a2 |
+	d2 bes | g dis4. fis8~ | fis1 | g2 f4. bes8~ |
+	bes1 | b2 a4. d8~ | d1 | dis2 dis4. fis8~ |
+	fis1 | g2 g4. bes8~ | bes1 | fis4. fis8-. r2 |
 }
 {% endif %}

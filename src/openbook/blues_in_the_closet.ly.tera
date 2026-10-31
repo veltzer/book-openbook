@@ -1,0 +1,76 @@
+{#
+default_version = "Laurent"
+
+[attributes]
+title = "Blues In The Closet"
+style = "Jazz"
+composer = "Oscar Pettiford"
+typesetter = "Laurent Martelli"
+completion = "3"
+uuid = "9b6de5d6-d49f-11f1-8000-046874d194b7"
+structure = "Blues"
+
+[versions.Laurent]
+doChords = true
+doVoice = true
+doLyrics = false
+doLyricsmore = false
+doLyricsmoremore = false
+doChordBars = false
+doGuitar = false
+doExtra = false
+doPrep = false
+doOwn = false
+#}
+{% if part == "Vars" %}
+{% endif %}
+{% if part == "Doc" %}	DONE:
+	- converted the Laurent Martelli version from staging/openbook/laurent/blues_in_the_closet.ly.
+	TODO:
+	- check the tune and chords against a real book.
+	- the source writes the second chorus in two voices (the riff and a harmony line a third above, starting on a grace b flat). Only the riff is here, add the harmony line as a second voice.
+	- the source has no tempo mark (only a midi tempo of 188), check the tempo.
+	- add youtube performances.
+{% endif %}
+{% if part == "ChordsLaurent" %}\chordmode {
+	\startChords
+	\startSong
+
+	\partial 8 s8 |
+
+	\myMark "A"
+	\startPart
+	aes1*4 | \myEndLine
+	des1*2:7 | aes1*2 | \myEndLine
+	bes1:m7 | ees:7 | aes1*2 | \myEndLine
+	\endPart
+
+	\myMark "A"
+	\startPart
+	aes1*4 | \myEndLine
+	des1*2:7 | aes1*2 | \myEndLine
+	bes1:m7 | ees:7 | aes1*2 | \myEndLine
+	\endPart
+
+	\endSong
+	\endChords
+}
+{% endif %}
+{% if part == "VoiceLaurent" %}{
+	\tempo "Allegro" 4 = 188
+	\time 4/4
+	\key aes \major
+
+	\partial 8 aes'8 ~ |
+
+	% part "A"
+	aes4 c8 aes des4 c8 aes | des4 c8 aes ~ aes ees4 aes8 ~ | aes4 c8 aes des4 c8 aes ~ | aes ees4. ~ ees4 r8 aes8 ~ |
+	aes4 ces8 aes des4 ces8 aes | des4 ces8 aes ~ aes ees4 aes8 ~ | aes4 c8 aes des4 c8 aes ~ | aes ees4. ~ ees4 r8 aes8 ~ |
+	aes4 c8 aes des4 c8 aes | des4 c8 aes ~ aes ees4 aes8 ~ | aes4 c8 aes des4 c8 aes ~ | aes ees4 des8 c4 ees8 \grace g8 aes8 ~ |
+
+	% part "A"
+	aes4 c8 aes des4 c8 aes | des4 c8 aes ~ aes ees4 aes8 ~ | aes4 c8 aes des4 c8 aes ~ | aes ees4. ~ ees4 r8 aes8 ~ |
+	aes4 ces8 aes des4 ces8 aes | des4 ces8 aes ~ aes ees4 aes8 ~ | aes4 c8 aes des4 c8 aes ~ | aes ees4. ~ ees4 r8 aes8 ~ |
+	aes4 c8 aes des4 c8 aes | des4 c8 aes ~ aes ees4 aes8 ~ | aes4 c8 aes des4 c8 aes ~ | aes ees4. ~ ees4 r4 |
+}
+{% endif %}

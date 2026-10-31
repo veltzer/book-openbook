@@ -1,0 +1,71 @@
+{#
+default_version = "Anon"
+
+[attributes]
+title = "Windows"
+style = "Jazz"
+composer = "Chick Corea"
+piece = "Up"
+typesetter = "Anonymous <anonymous@zivlempel.org>"
+completion = "3"
+uuid = "36efac92-d4a0-11f1-8000-046874d194b7"
+structure = "AB"
+
+[versions.Anon]
+doChords = true
+doVoice = true
+doLyrics = false
+doLyricsmore = false
+doLyricsmoremore = false
+doChordBars = false
+doGuitar = false
+doExtra = false
+doPrep = false
+doOwn = false
+#}
+{% if part == "Vars" %}
+{% endif %}
+{% if part == "Doc" %}	DONE:
+	- converted the Anonymous <anonymous@zivlempel.org> version from staging/openbook/anon/Windows.ly.
+	TODO:
+	- check the tune and chords against a real book.
+	- add youtube performances.
+{% endif %}
+{% if part == "ChordsAnon" %}\chordmode {
+	\startChords
+	\startSong
+
+	\myMark "A"
+	\startPart
+	c2.:m7 | s | s | s | a:3-.5-.7 | s | s | d:7.9- | \myEndLine
+	g:m9 | s | s | s | ees:7.11+ | s | s | s | \myEndLine
+	f:maj | s | f:5.7+.11+ | s | s | s | s | s | \myEndLine
+	\endPart
+
+	\myMark "B"
+	\startPart
+	a:7 | bes:7 | a:7 | bes:7 | a:7 | bes:7 | a:7 | s | \myEndLine
+	f:maj | e:m7 | d:m7 | d:m7/c | b:3-.5-.7 | b:3-.5-.7/a | e:7/gis | e:5+.7 | \myEndLine
+	a:m7 | a:m7/g | d:7/fis | d:7 | f:maj | e:m7 | d:m7 | des:5.7+.11+ | \myEndLine
+	\endPart
+
+	\endSong
+	\endChords
+}
+{% endif %}
+{% if part == "VoiceAnon" %}{
+	\tempo "Up" 4 = 180
+	\time 3/4
+	\key c \major
+
+	% part "A"
+	ees'4 g bes | d,4. c | ees bes' | d,2. | c4 ees g | b,!4. a | c g' | b,2 a4 |
+	d,2.~ | d~ | d~ | d | c'4 bes8 ees~ ees4~ | ees2.~ | ees2. | des4 c bes |
+	c2. | e4. g | b,2.~ | b4. a8~ \tuplet 3/2 { a8 b g } | a2. | c4. e | g,2.~ | g4. f |
+
+	% part "B"
+	e4 a e | g4. f | r8 e4 a e8 | f4. g | e4 a e | f4. g | a8 e'4 cis a8 | \tuplet 3/2 { g8 fis e } a4~ \tuplet 3/2 { a8 g fis } |
+	e'2.~ | e~ | e4. f | d2~ d8 c | d2.~ | d~ | d4. e | c2~ c8 b |
+	c2.~ | c | r4 d, ees | b'2 a4 | g2.~ | g~ | g~ | g |
+}
+{% endif %}

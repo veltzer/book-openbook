@@ -1,0 +1,111 @@
+{#
+default_version = "Laurent"
+
+[attributes]
+title = "Strike Up The Band"
+style = "Jazz"
+composer = "George Gershwin"
+poet = "Ira Gershwin"
+typesetter = "Laurent Martelli"
+completion = "3"
+uuid = "045ebe90-d49f-11f1-8000-046874d194b7"
+
+[versions.Laurent]
+doChords = true
+doVoice = true
+doLyrics = false
+doLyricsmore = false
+doLyricsmoremore = false
+doChordBars = false
+doGuitar = false
+doExtra = false
+doPrep = false
+doOwn = false
+#}
+{% if part == "Vars" %}
+{% endif %}
+{% if part == "Doc" %}	DONE:
+	- converted the Laurent Martelli version from staging/openbook/laurent/strike_up_the_band.ly.
+	TODO:
+	- check the tune and chords against a real book.
+	- the source marks "To Coda" and a Coda but no "D.C."; the "D.C. al Coda" markup is my reading of the form.
+	- the last bar of the coda has no chord in the source.
+	- add the lyrics.
+	- add youtube performances.
+	- hear the tune to check that it is right and adjust the tempo.
+{% endif %}
+{% if part == "ChordsLaurent" %}\chordmode {
+	\startChords
+	\startSong
+
+	\myMark "A"
+	\startPart
+	c1:m9 | f:7 | d:m7 | g:7 | \myEndLine
+	c:m7 | f2:sus4.7 f:7.13 | bes1:6 | f:7 | \myEndLine
+	\endPart
+
+	\myMark "B"
+	\startPart
+	bes1*2:6 | b1*2:dim7 | \myEndLine
+	f1*2:7 | bes1:6 | f2:m7 bes:7 | \myEndLine
+	\endPart
+
+	\myMark "B"
+	\startPart
+	ees1*2:6 | e1*2:dim7 | \myEndLine
+	f1:m7 | bes:9 | ees:6 | f:7 | \myEndLine
+	\endPart
+
+	\myMark "C"
+	\startPart
+	bes1*2:maj7 | a1:m7 | d:m7 | \myEndLine
+	bes:m7 | c:7 | c:m7 | f:7 | \myEndLine
+	\endPart
+
+	\myMark "B"
+	\startPart
+	bes1*2:6 | d1:m7.5- | g:7 | \myEndLine
+	c:m7 | f:9 | bes:6 | c2:m7 f:7 | \myEndLine
+	\endPart
+
+	\myMark "Coda"
+	\startPart
+	c1:m9 | f:7 | d:m7 | g:7 | \myEndLine
+	c:m7 | f:7.13 | bes1*2:6 | s1 | \myEndLine
+	\endPart
+
+	\endSong
+	\endChords
+}
+{% endif %}
+{% if part == "VoiceLaurent" %}{
+	\tempo "Moderato" 4 = 120
+	\time 4/4
+	\key bes \major
+
+	% part "A"
+	r8 d'4. bes4 g | bes4. c8 ~ c2 | r8 g'4. f4 c | bes'4. aes8 ~ aes2 |
+	r8 d,4. bes4 g | bes2 d | bes8 f4 f8 f2 | r2 r4 f8 e |
+
+	% part "B"
+	f8 g4 g8 ~ g2 ~ | g2. f8 e | f aes4 aes8 ~ aes2 ~ | aes2. f8 e |
+	f8 a4 a!8 ~ a2 ~ | a2 f8 g4 f8 | bes1 ~ | bes2. bes8 a |
+
+	% part "B"
+	bes8 c4 c8 ~ c2 | c2. bes8 a | bes des4 des8 ~ des2 ~ | des2. bes8 a |
+	bes d!4 d8 ~ d2 ~ | d2 bes8 c4 bes8 | ees1 ~ | ees4 f2 ees4 |
+
+	% part "C"
+	d4 d8 bes d4 d8 bes | d2 r8 ees r d | c4 c8 a c4 c8 a | c2 r8 d r c |
+	bes4 bes8 g bes4 bes8 g | bes2 bes8 d r f ~ | f1 ~ | f2 r4 f,8 e |
+
+	% part "B"
+	f8 g4 g8 ~ g2 ~ | g2. d'8 cis | d f4 f8 ~ f2 ~ | f2. r4^\markup {To Coda \musicglyph #"scripts.coda"} |
+	r4 ees4 d c | g' f2 d4 | bes r r2 | r1^\markup {D.C. al Coda} |
+
+	% part "Coda"
+	r8 d4. bes4 g | bes4. c8 ~ c2 | r8 g'4. f4 c | bes'4. aes8 ~ aes2 |
+	r8 d,4. bes4 g | d'2 d | bes4 r <ees bes'>-. r | <e bes'>4.-. <f bes>8-> r4 bes,,-- |
+	c1\fermata |
+}
+{% endif %}

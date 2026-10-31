@@ -34,10 +34,23 @@ doGuitar = false
 doExtra = false
 doPrep = false
 doOwn = false
+
+[versions.Laurent]
+doChords = true
+doVoice = true
+doLyrics = false
+doLyricsmore = false
+doLyricsmoremore = false
+doChordBars = false
+doGuitar = false
+doExtra = false
+doPrep = false
+doOwn = false
 #}
 {% if part == "Vars" %}
 {% endif %}
 {% if part == "Doc" %}	DONE:
+	- added the Laurent Martelli version from staging/openbook/laurent/once_i_loved.ly.
 	- added the chords.
 	- added the melody.
 	- added the lyrics.
@@ -53,6 +66,7 @@ doOwn = false
 	- checked the tune.
 	- checked the lyrics.
 	TODO:
+	- the Laurent version has a To Coda mark and a Coda vamp but no D.C. sign; the D.C. is implied.
 	- add the version from the new real book.
 {% endif %}
 {% if part == "ChordsReal" %}\chordmode {
@@ -140,5 +154,75 @@ doOwn = false
 	when it goes a -- way, __ __
 	Be -- cause love is the __ sad -- dest thing __
 	when it goes a -- way, __
+}
+{% endif %}
+{% if part == "ChordsLaurent" %}\chordmode {
+	\startChords
+	\startSong
+
+	\myMark "A"
+	\startPart
+	\repeat volta 2 {
+		g1:m7 | c:7 | f:maj | fis:dim7 | \myEndLine
+		g:m7 | aes:dim7 | a:m7 | a:m7/+g | \myEndLine
+		f:m7 | bes:7 | ees1*2:maj | \myEndLine
+		e1:m7.5- | a:7.9- |
+	} \alternative {
+		{
+			d:maj | d:7.9- | \myEndLineVoltaNotLast
+		}
+		{
+			d:maj | g:7 | \myEndLineVoltaLast
+		}
+	}
+	\endPart
+
+	\myMark "B"
+	\startPart
+	c1:maj | f:7 | bes1*2:maj | \myEndLine
+	b1:dim7 | bes:m6 | a:m7 | aes:7.11+ | \myEndLine
+	g:7 | g2:m7 a:7.9- | d1:m7 | d2:m7 d:7.9+ | \myEndLine
+	\endPart
+
+	\myMark "Coda"
+	\startPart
+	\repeat volta 2 {
+		d1:m7 | g:7 | d:m7 | g:7 | \myEndLine
+	}
+	\endPart
+
+	\endSong
+	\endChords
+}
+{% endif %}
+{% if part == "VoiceLaurent" %}{
+	\tempo "Allegro" 4 = 144
+	\time 4/4
+	\key f \major
+
+	% part "A"
+	\repeat volta 2 {
+		d'1~ | d2~ d8 c4 a8~ | a1~ | a2 \tuplet 3/2 { r4 bes c } |
+		\tuplet 3/2 { d d d } \tuplet 3/2 { d d d } | d2 \tuplet 3/2 { f4 e d } | \tuplet 3/2 { e c a~ } a2~ | a2. r4 |
+		c1~ | c2~ c8 bes4 g8~ | g1~ | g2 \tuplet 3/2 { r4 g a } |
+		\tuplet 3/2 { bes bes a } \tuplet 3/2 { c c bes } | a2 \tuplet 3/2 { g4 bes a } |
+	} \alternative {
+		{
+			g8 fis4 fis8~ fis2 | fis r |
+		}
+		{
+			g8 fis4 a8~ a2 | g8 f4 a8~ a g4 e8~ |
+		}
+	}
+
+	% part "B"
+	e1 | g2~ g8 f4 d8~ | d1~ | d2 \tuplet 3/2 { r4 d e } |
+	\tuplet 3/2 { f f e~ } \tuplet 3/2 { e g ges } | f2~ f8 f4 des8 | e4 d8 d~ d2~ | d2 \tuplet 3/2 { r4 d e } |
+	\tuplet 3/2 { f f e~ } \tuplet 3/2 { e g ges } | f2~ f8 f4 cis8^\markup { To Coda \musicglyph #"scripts.coda" } | e4. d8 d2~ | d1 |
+
+	% part "Coda"
+	\repeat volta 2 {
+		s1*4 |
+	}
 }
 {% endif %}

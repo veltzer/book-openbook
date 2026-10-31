@@ -1,0 +1,99 @@
+{#
+default_version = "Anon"
+
+[attributes]
+title = "Tergiversation"
+style = "Jazz"
+composer = "Gene Perla"
+piece = "Up"
+typesetter = "Anonymous <anonymous@zivlempel.org>"
+completion = "3"
+uuid = "06b729ec-d4a0-11f1-8000-046874d194b7"
+structure = "AABA"
+
+[versions.Anon]
+doChords = true
+doVoice = true
+doLyrics = false
+doLyricsmore = false
+doLyricsmoremore = false
+doChordBars = false
+doGuitar = false
+doExtra = false
+doPrep = false
+doOwn = false
+#}
+{% if part == "Vars" %}
+{% endif %}
+{% if part == "Doc" %}	DONE:
+	- converted the Anonymous <anonymous@zivlempel.org> version from staging/openbook/anon/Tergiversation.ly.
+	TODO:
+	- check the tune and chords against a real book.
+	- add youtube performances.
+{% endif %}
+{% if part == "ChordsAnon" %}\chordmode {
+	\startChords
+	\startSong
+
+	\partial 2 s2 |
+
+	\myMark "A"
+	\startPart
+	\repeat volta 2 {
+		bes1:m7 | aes:m7 | b:m7 | b:m7 | \myEndLine
+		bes:m7 | aes:m7 | f:m7 |
+	} \alternative {
+		{
+			ges:maj | \myEndLineVoltaNotLast
+		}
+		{
+			ges:maj | \myEndLineVoltaLast
+		}
+	}
+	\endPart
+
+	\myMark "B"
+	\startPart
+	bes:m | e:7 | ees:m7 | d:7/aes | \myEndLine
+	des | ges | f4.:m bes:m b4:7 | s1 | \myEndLine
+	\endPart
+
+	\myMark "A"
+	\startPart
+	bes1:m7 | aes:m7 | b:m7 | b:m7 | \myEndLine
+	bes:m7 | aes:m7 | f:m7 | ges:maj | \myEndLine
+	\endPart
+
+	\endSong
+	\endChords
+}
+{% endif %}
+{% if part == "VoiceAnon" %}{
+	\tempo "Up" 4 = 150
+	\time 4/4
+	\key bes \minor
+
+	\partial 2 a'8 bes4. |
+
+	% part "A"
+	\repeat volta 2 {
+		des1 | r4 bes des f | a,2 ges8 aes a4 | des4 b8 a aes ges~ ges4 |
+		f2 des~ | des2 ees4 aes, | bes2 ees4 aes |
+	} \alternative {
+		{
+			f4 r a8 bes4. |
+		}
+		{
+			f2. r8 bes |
+		}
+	}
+
+	% part "B"
+	g'4 f8 ees d bes4 des8~ | des1 | f4 ees8 des c aes4 b8~ | b1 |
+	bes8 aes bes aes~ aes bes aes4 | ees'8 des ees des~ des ees des4 | c4.-^ bes-^ a4-^~ | a2 a8 bes4. |
+
+	% part "A"
+	des1 | r4 bes des f | a,2 ges8 aes a4 | des4 b8 a aes ges~ ges4 |
+	f2 des~ | des2 ees4 aes, | bes2 ees4 aes | f1 |
+}
+{% endif %}

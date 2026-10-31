@@ -1,0 +1,111 @@
+{#
+default_version = "Laurent"
+
+[attributes]
+title = "So What"
+style = "Jazz"
+composer = "Miles Davis"
+typesetter = "Laurent Martelli"
+completion = "3"
+uuid = "f1d840d2-d4a0-11f1-8000-046874d194b7"
+structure = "AABA"
+
+[versions.Laurent]
+doChords = true
+doVoice = true
+doLyrics = false
+doLyricsmore = false
+doLyricsmoremore = false
+doChordBars = false
+doGuitar = false
+doExtra = false
+doPrep = false
+doOwn = false
+#}
+{% if part == "Vars" %}
+{% endif %}
+{% if part == "Doc" %}	DONE:
+	- converted the Laurent Martelli version from staging/openbook/laurent/so_what.ly; the source is a piano/bass arrangement, here the bass call and the piano answer chords are merged into one bass clef staff.
+	TODO:
+	- check the tune and chords against a real book.
+	- the source has no tempo; adjust the tempo.
+	- add youtube performances.
+{% endif %}
+{% if part == "ChordsLaurent" %}\chordmode {
+	\startChords
+	\startSong
+
+	\myMark "Intro"
+	\startPart
+	s1 | \myEndLine
+	\endPart
+
+	\myMark "A"
+	\startPart
+	\repeat volta 2 {
+		d1*4:m7 | \myEndLine
+		d1*3:m7 |
+	} \alternative {
+		{
+			s1 | \myEndLineVoltaNotLast
+		}
+		{
+			s1 | \myEndLineVoltaLast
+		}
+	}
+	\endPart
+
+	\myMark "B"
+	\startPart
+	ees1*4:m7 | \myEndLine
+	ees1*4:m7 | \myEndLine
+	\endPart
+
+	\myMark "A"
+	\startPart
+	d1*4:m7 | \myEndLine
+	d1*4:m7 | \myEndLine
+	\endPart
+
+	\endSong
+	\endChords
+}
+{% endif %}
+{% if part == "VoiceLaurent" %}{
+	\tempo "Moderato" 4 = 136
+	\time 4/4
+	\key c \major
+
+	\clef bass
+
+	% part "Intro"
+	r8 e,,8 a b c( d) e c |
+
+	% part "A"
+	\repeat volta 2 {
+		d2 <e a d g b>4. <d g c f a>8 | r8 e,8 a b c( d) e c |
+		d8 a4. <e' a d g b>4. <d g c f a>8 | r8 e,8 a b c( d) e c |
+		d2 <e a d g b>4. <d g c f a>8 | r8 e4. e4 e |
+		d8( a4.) <e' a d g b>4. <d g c f a>8 |
+	} \alternative {
+		{
+			r8 e,8 a b c( d) e c |
+		}
+		{
+			r8 f,8 bes c des( ees) f des |
+		}
+	}
+
+	% part "B"
+	ees2 <f bes ees aes c>4. <ees aes des ges bes>8 | r8 f,8 bes c des( ees) f des |
+	ees8 bes4. <f' bes ees aes c>4. <ees aes des ges bes>8 | r8 f,8 bes c des( ees) f des |
+	ees2 <f bes ees aes c>4. <ees aes des ges bes>8 | r8 f4. f4 f |
+	ees8( bes4.) <f' bes ees aes c>4. <ees aes des ges bes>8 | r8 e,8 a b c( d) e c |
+
+	% part "A"
+	d2 <e a d g b>4. <d g c f a>8 | r8 e,8 a b c( d) e c |
+	d8 a4. <e' a d g b>4. <d g c f a>8 | r8 e,8 a b c( d) e c |
+	d2 <e a d g b>4. <d g c f a>8 | r8 e4. e4 e |
+	d8( a4.) <e' a d g b>4. <d g c f a>8 | r1 |
+}
+{% endif %}

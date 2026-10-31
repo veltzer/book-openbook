@@ -1,0 +1,122 @@
+{#
+default_version = "Laurent"
+
+[attributes]
+title = "You've Changed"
+style = "Jazz"
+composer = "Carl Fischer"
+poet = "Bill Carey"
+typesetter = "Silvia Bertoluzza"
+completion = "3"
+uuid = "156811a4-d49f-11f1-8000-046874d194b7"
+structure = "AABA"
+
+[versions.Laurent]
+doChords = true
+doVoice = true
+doLyrics = true
+doLyricsmore = true
+doLyricsmoremore = false
+doChordBars = false
+doGuitar = false
+doExtra = false
+doPrep = false
+doOwn = false
+#}
+{% if part == "Vars" %}
+{% endif %}
+{% if part == "Doc" %}	DONE:
+	- converted the Silvia Bertoluzza version from staging/openbook/laurent/youvechanged.ly.
+	TODO:
+	- check the tune and chords against a real book.
+	- the last part is 8 bars of melody but 7 bars of chords in the source, I made the last chord two bars.
+	- the source has tempo 60 for the midi and no tempo name, adjust the tempo.
+	- add youtube performances.
+{% endif %}
+{% if part == "ChordsLaurent" %}\chordmode {
+	\startChords
+	\startSong
+
+	\partial 4 bes4:7.5+ |
+
+	\myMark "A"
+	\startPart
+	\repeat volta 2 {
+		ees1:maj7 | a2:m7.5- d:7.5+ | g1:m7.5- | c2:7 c:7.5- | \myEndLine
+		f1:9 |
+	} \alternative {
+		{
+			b2:7 bes:7 | g:m7 c:7 | f:m7 bes:7 | \myEndLineVoltaNotLast
+		}
+		{
+			b2:7 bes:7 | bes1:m7 | ees:9 | \myEndLineVoltaLast
+		}
+	}
+	\endPart
+
+	\myMark "B"
+	\startPart
+	aes1:maj7 | des:9.4^3 | g:m7 | bes2:m7 ees:7 | \myEndLine
+	aes1:maj7 | des:9.4^3 | g2:m7 ges4:m7 b:9 | f2:m7 bes:7 | \myEndLine
+	\endPart
+
+	\myMark "A"
+	\startPart
+	ees1:maj7 | a2:m7.5- d:7.5+ | g1:m7.5- | c2:7 c:7.5- | \myEndLine
+	f1:9 | b2:7 bes:7 | ees1*2:6 | \myEndLine
+	\endPart
+
+	\endSong
+	\endChords
+}
+{% endif %}
+{% if part == "VoiceLaurent" %}{
+	\tempo "Adagio" 4 = 60
+	\time 4/4
+	\key ees \major
+
+	\partial 4 bes'4 |
+
+	% part "A"
+	\repeat volta 2 {
+		d2. bes4 | d8 des c ces bes4 c | bes2. g4 | c8 ces bes a aes4 c |
+		g2. c4 |
+	} \alternative {
+		{
+			ges8 ges ges g ~ g4 d8 c ~ | c1 ~ | c2 r4 bes' |
+		}
+		{
+			ges8 ges ges g ~ g4 d8 f ~ | f1 | r2 r4 ees8 f |
+		}
+	}
+
+	% part "B"
+	g8 bes aes g ~ g4 ees8 ges ~ | ges8 ges4. ~ ges2 | f8 d ees f ~ f d ees bes' ~ | bes2. ees,8 f |
+	g8 bes aes g ~ g ees4 ges8 ~ | ges8 ges4. ~ ges4 g8 aes | bes bes bes bes des des4 bes8 ~ | bes2. bes4 |
+
+	% part "A"
+	d2. bes4 | d8 des c ces bes4 c | bes2. g4 | c8 ces bes a aes4 c |
+	g2. c4 | ges8 ges ges g ~ g4 g8 ees ~ | ees1 ~ | ees2 r |
+}
+{% endif %}
+{% if part == "LyricsLaurent" %}\lyricmode {
+	You've changed, that spar -- kle in your eyes is gone,
+	your smile is just a care -- less yawn, you're
+	break -- ing my heart you've changed.
+	You've
+	can't un -- der -- stand, you've changed.
+	You've for -- got -- ten the words I love you, each me -- mo -- ry that
+	we shared. You ig -- nore eve -- ry star a -- bove you.
+	I can't re -- a -- lize  you e -- ver cared.
+	You've changed, you're not the an -- gel I once knew
+	no need to tell me that we're through,
+	It's all o -- ver now, you've changed.
+}
+{% endif %}
+{% if part == "LyricsmoreLaurent" %}\lyricmode {
+	_ changed,
+	your kiss -- es now are so bla -- se,
+	You're bored with me in eve -- ry way,
+	I
+}
+{% endif %}

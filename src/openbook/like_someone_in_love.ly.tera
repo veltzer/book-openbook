@@ -24,10 +24,23 @@ doGuitar = false
 doExtra = false
 doPrep = false
 doOwn = false
+
+[versions.Laurent]
+doChords = true
+doVoice = true
+doLyrics = true
+doLyricsmore = false
+doLyricsmoremore = false
+doChordBars = false
+doGuitar = false
+doExtra = false
+doPrep = false
+doOwn = false
 #}
 {% if part == "Vars" %}
 {% endif %}
 {% if part == "Doc" %}	DONE:
+	- converted the Silvia Bertoluzza version (from Laurent Martelli's collection) from staging/openbook/laurent/likesomeoneinlove.ly (version Laurent).
 	TODO:
 	- mark what has been done to this tune.
 {% endif %}
@@ -125,5 +138,70 @@ doOwn = false
 
 	% part "Volta"
 	Love. __
+}
+{% endif %}
+{% if part == "ChordsLaurent" %}\chordmode {
+	\startChords
+	\startSong
+
+	\myMark "A"
+	\startPart
+	c1*2 | d2:7 g:7 | c1 | \myEndLine
+	d:m | g:7 | c | g2:m c:7 | \myEndLine
+	\endPart
+
+	\myMark "B"
+	\startPart
+	f1 | b2:m e:7 | a1*2 | \myEndLine
+	a1:m | d:7 | d:m | g:7.5+ | \myEndLine
+	\endPart
+
+	\myMark "A"
+	\startPart
+	c1*2 | d2:7 g:7 | c1 | \myEndLine
+	d:m | g:7 | c | g2:m c:7 | \myEndLine
+	\endPart
+
+	\myMark "C"
+	\startPart
+	f1 | b2:m e:7 | a1 | ees:dim7 | \myEndLine
+	e2:m a:7 | d:m g:7 | c1 | d2:m g:7 | \myEndLine
+	\endPart
+
+	\endSong
+	\endChords
+}
+{% endif %}
+{% if part == "VoiceLaurent" %}{
+	\tempo "Moderato" 4 = 80
+	\time 4/4
+	\key c \major
+
+	% part "A"
+	e4 e2 e4 | e a g e | d d2 b'4 | g1 |
+	f4 f2 c'4 | b2. a4 | g g2 e'4 | d1 |
+
+	% part "B"
+	d4 d2 cis4 | e d cis b | e,2 e ~ | e1 |
+	c'4 c2 b4 | d c b a | d,1 | dis |
+
+	% part "A"
+	e4 e2 e4 | e a g e | d d2 b'4 | g1 |
+	f4 f2 c'4 | b2. a4 | g g2 e'4 | d1 |
+
+	% part "C"
+	d4 d2 cis4 | e d cis b | e, e2 e4 | fis2. fis4 |
+	g g2 g4 | f d'2 b4 | c1 | r |
+}
+{% endif %}
+{% if part == "LyricsLaurent" %}\lyricmode {
+	Late -- ly I find my -- self out ga -- zing at stars,
+	Hear -- ing gui -- tars like some -- one in love.
+	Some -- times the things I do as -- tound me,
+	Most -- ly, when -- e -- ver you're a -- round me.
+	Late -- ly I seem to walk as though I had wings,
+	Bump in -- to things like some -- one in love.
+	Each time I look at you I'm limp as a glove
+	and fee -- ling like some -- one in love.
 }
 {% endif %}

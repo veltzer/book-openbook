@@ -1,0 +1,123 @@
+{#
+default_version = "Laurent"
+
+[attributes]
+title = "Lover Man"
+style = "Jazz"
+subtitle = "Oh, Where Can You Be?"
+composer = "Jimmy Davis, Roger Ramirez, Jimmy Sherman"
+poet = "Jimmy Davis, Roger Ramirez, Jimmy Sherman"
+typesetter = "Laurent Martelli"
+completion = "3"
+uuid = "edf50fe0-d4a0-11f1-8000-046874d194b7"
+structure = "AABA"
+
+[versions.Laurent]
+doChords = true
+doVoice = true
+doLyrics = true
+doLyricsmore = true
+doLyricsmoremore = false
+doChordBars = false
+doGuitar = false
+doExtra = false
+doPrep = false
+doOwn = false
+#}
+{% if part == "Vars" %}
+{% endif %}
+{% if part == "Doc" %}	DONE:
+	- converted the version from staging/openbook/laurent/loverman.ly (Laurent Martelli's collection, no enteredby in the file), including both verses of the lyrics.
+	TODO:
+	- check the tune and chords against a real book.
+	- the tempo is taken from the midi tempo in the source.
+	- the source shows slash beats in the first ending and in bar 4 of the bridge, they are left out.
+	- add youtube performances.
+{% endif %}
+{% if part == "ChordsLaurent" %}\chordmode {
+	\startChords
+	\startSong
+
+	\myMark "A"
+	\startPart
+	\repeat volta 2 {
+		d2:m7 g:7 | d:m7 g:7 | g:m7 c:7 | g:m7 c:7 | \myEndLine
+		f1:7 | bes:7 | bes4:m7 ees:7 g:m7 c:7 |
+	} \alternative {
+		{
+			f2:maj7 e4:m7 a:7 | \myEndLineVoltaNotLast
+		}
+		{
+			f2:maj7 bes:7 | \myEndLineVoltaLast
+		}
+	}
+	\endPart
+
+	\myMark "B"
+	\startPart
+	a:m a:m7+ | a:m7 d:7 | g:maj7 a:m7 | b:m7 a4:m7 d:7 | \myEndLine
+	g2:m g:m7+ | g:m7 c:7 | f:maj7 ees:7 | g:m6 a:7 | \myEndLine
+	\endPart
+
+	\myMark "A"
+	\startPart
+	d2:m7 g:7 | d:m7 g:7 | g:m7 c:7 | g:m7 c:7 | \myEndLine
+	f1:7 | bes:7 | bes4:m7 ees:7 g:m7 c:7 | f1:maj7 | \myEndLine
+	\endPart
+
+	\endSong
+	\endChords
+}
+{% endif %}
+{% if part == "VoiceLaurent" %}{
+	\tempo "Adagio" 4 = 60
+	\time 4/4
+	\key f \major
+
+	% part "A"
+	\repeat volta 2 {
+		r8 d e d g4 d8 e | f d a' g ~ g2 | r8 g a g c4 g8 a | bes g d' c ~ c2 |
+		aes8 f g f aes f4. | aes8 f g f c' f,4. | des8 f g aes g4 f8 d |
+	} \alternative {
+		{
+			f1 |
+		}
+		{
+			f1 |
+		}
+	}
+
+	% part "B"
+	c'4 a8 b c4 a8 b | c4. a8 \tuplet 3/2 { c4 d c } | b g8 a \tuplet 3/2 { b4 a g } | b1 |
+	bes4 g8 a bes4 g8 a | bes4 g8 a \tuplet 3/2 { bes4 c bes } | a2 \tuplet 3/2 { a4 g f } | a1 |
+
+	% part "A"
+	r8 d, e d g4 d8 e | f d a' g ~ g2 | r8 g a g c4 g8 a | bes g d' c ~ c2 |
+	aes8 f g f aes f4. | aes8 f g f c' f,4. | des8 f g aes g4 f8 d | f2. r4 |
+}
+{% endif %}
+{% if part == "LyricsLaurent" %}\lyricmode {
+	I don't know why but I'm fee -- ling so sad.
+	I long to try some -- thing I've ne -- ver had.
+	Ne -- ver had no kiss -- in'
+	Oh, what I've been miss -- in'.
+	Lo -- ver man oh where can you be?
+	be?
+	I've heard it said that the thrill of ro -- mance can be
+	like a hea -- ven -- ly dream,
+	I go to bed with a prayer that he'll make love to me,
+	Stange as it seems.
+	Some day we'll meet and you'll dry all my tears,
+	Then whis -- per sweet lit -- tle things in my ears.
+	Hug -- gin' and a kiss -- ing.
+	Oh, what I've been miss -- in'.
+	Lo -- ver man oh where can you be?
+}
+{% endif %}
+{% if part == "LyricsmoreLaurent" %}\lyricmode {
+	The night is cold and I'm so all a -- lone.
+	I'd give my soul just to call you my own.
+	Got a moon a -- bove me, but no -- one to love me.
+	Lo -- ver man oh where can you
+}
+{% endif %}

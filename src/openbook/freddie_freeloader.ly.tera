@@ -1,0 +1,75 @@
+{#
+default_version = "Laurent"
+
+[attributes]
+title = "Freddie Freeloader"
+style = "Jazz"
+composer = "Miles Davis"
+typesetter = "Laurent Martelli"
+completion = "3"
+uuid = "8aa2247e-d49f-11f1-8000-046874d194b7"
+structure = "Blues"
+
+[versions.Laurent]
+doChords = true
+doVoice = true
+doLyrics = false
+doLyricsmore = false
+doLyricsmoremore = false
+doChordBars = false
+doGuitar = false
+doExtra = false
+doPrep = false
+doOwn = false
+#}
+{% if part == "Vars" %}
+{% endif %}
+{% if part == "Doc" %}	DONE:
+	- converted the Laurent Martelli version from staging/openbook/laurent/freddy_freeloader.ly (titled "Freddy the Freeloader" there).
+	TODO:
+	- check the tune and chords against a real book.
+	- the staged file has no tempo marking; the tempo is a guess.
+	- add youtube performances.
+{% endif %}
+{% if part == "ChordsLaurent" %}\chordmode {
+	\startChords
+	\startSong
+
+	\myMark "A"
+	\startPart
+	\repeat volta 2 {
+		bes1*4:7 | \myEndLine
+		ees1*2:7 | bes1*2:7 | \myEndLine
+	} \alternative {
+		{
+			f2.:7 bes4:7 | ees1:7 | aes1*2:7 | \myEndLineVoltaNotLast
+		}
+		{
+			f2.:7 bes4:7 | ees1:7 | bes1*2:7 | \myEndLineVoltaLast
+		}
+	}
+	\endPart
+
+	\endSong
+	\endChords
+}
+{% endif %}
+{% if part == "VoiceLaurent" %}{
+	\tempo "Moderato" 4 = 130
+	\time 4/4
+	\key ees \major
+
+	% part "A"
+	\repeat volta 2 {
+		g'4. f8~ f2~ | f1 | g4. f8~ f2~ | f1 |
+		c'4. bes8~ bes2~ | bes1 | g4. f8~ f2~ | f2. aes4-. |
+	} \alternative {
+		{
+			a2. aes8 g~ | g2. f8 ges~ | ges1~ | ges |
+		}
+		{
+			a2. aes8 g~ | g2. f4-. | g4. f8~ f2~ | f1 |
+		}
+	}
+}
+{% endif %}

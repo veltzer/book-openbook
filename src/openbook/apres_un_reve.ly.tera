@@ -1,0 +1,102 @@
+{#
+default_version = "Laurent"
+
+[attributes]
+title = "Après Un Rêve"
+style = "Classical"
+composer = "Gabriel Fauré"
+copyright = "Public Domain"
+typesetter = "Tak-Shing Chan <chan12@alumni.usc.edu>"
+completion = "3"
+uuid = "9b67cf16-d49f-11f1-8000-046874d194b7"
+
+[versions.Laurent]
+doChords = true
+doVoice = true
+doLyrics = false
+doLyricsmore = false
+doLyricsmoremore = false
+doChordBars = false
+doGuitar = false
+doExtra = false
+doPrep = false
+doOwn = false
+#}
+{% if part == "Vars" %}
+{% endif %}
+{% if part == "Doc" %}	DONE:
+	- converted the Tak-Shing Chan version from staging/openbook/laurent/apres_un_reve.ly (Fauré 1877, Choudens 1880, as played by Belmondo).
+	TODO:
+	- the source has no chords, only the melody. Add chords.
+	- the source prints the melody transposed down to B minor (as played by Belmondo). It is here in the original key of C minor.
+	- the source has no tempo mark, check the tempo.
+	- the song has French words (Romain Bussine), add the lyrics.
+	- add youtube performances.
+{% endif %}
+{% if part == "ChordsLaurent" %}\chordmode {
+	\startChords
+	\startSong
+
+	\myMark "A"
+	\startPart
+	\repeat volta 2 {
+		s2.*15 |
+	}
+	\endPart
+
+	\myMark "B"
+	\startPart
+	s2.*32 |
+	\endPart
+
+	\endSong
+	\endChords
+}
+{% endif %}
+{% if part == "VoiceLaurent" %}{
+	\tempo "Andante" 4 = 60
+	\time 3/4
+	\key c \minor
+
+	% part "A"
+	\repeat volta 2 {
+		g'4 c d | ees ~ \tuplet 3/2 4 { ees8 d c ees d c } |
+		c2 bes4 | des8 f, des'4 c8 b |
+		c4. c8 bes8. aes16 |
+		g4 ~ \tuplet 3/2 4 { g8( aes bes aes bes c) } |
+		g2. |
+		g4 \tuplet 3/2 4 { ees4 f8 g4 aes8 } |
+		bes4 ~ \tuplet 3/2 4 { bes8 f f f e f } |
+		aes2 g4 | c c4. ces8 |
+		bes4 ees, ees |
+		f ~ \tuplet 3/2 4 { f8 ges aes ges aes bes } |
+		bes2 ees,4 | R2. |
+	}
+
+	% part "B"
+	g4 c d | ees ~ \tuplet 3/2 4 { ees8 d c ees d c } |
+	c2 bes4 | des8 f, des'4 c8 b |
+	c4. c8 bes aes |
+	g4 ~ \tuplet 3/2 4 { g8( aes bes aes bes c) } |
+	g2. |
+	g4 \tuplet 3/2 4 { ees4( f8) g4( aes8) } |
+	bes4. f8 \tuplet 3/2 4 { f e f } |
+	aes4 g c, | des4 ~ \tuplet 3/2 4 { des8( ees f) ees( f) g } |
+	g4 c, e |
+	\tuplet 3/2 4 { f4 f8 f( g) aes bes( aes) bes } |
+	c4 c, c' |
+	f2\f f,4 |
+	f \tuplet 3/2 4 { f8 g a bes( c) des } |
+	des4 ~ \tuplet 3/2 4 { des8( c ees des c bes) } |
+	des2 bes8. bes16 |
+	ees2 des4 |
+	des4 ~ \tuplet 3/2 4 { des8( c) bes aes g f } |
+	g4 ~ \tuplet 3/2 4 { g8( aes g f g aes) } |
+	g2 g4 |
+	c2 c4 | c2 c8. d16 |
+	ees2.\f | d2 d4 |
+	d2\p c4 | bes4. g8 ees f |
+	g4\pp ~ \tuplet 3/2 4 { g8( f ees f g aes } | g2.) |
+	c, | R2. |
+}
+{% endif %}

@@ -47,6 +47,18 @@ doGuitar = false
 doExtra = false
 doPrep = false
 doOwn = false
+
+[versions.Laurent]
+doChords = true
+doVoice = true
+doLyrics = false
+doLyricsmore = false
+doLyricsmoremore = false
+doChordBars = false
+doGuitar = false
+doExtra = false
+doPrep = false
+doOwn = false
 #}
 {% if part == "Vars" %}
 {% endif %}
@@ -71,6 +83,7 @@ doOwn = false
 	- checked the fakebook tune.
 	- checked the fakebook lyrics.
 	- hear the fakebook version to hear that the tempo is right and there are no errors.
+	- converted the Laurent Martelli version from staging/openbook/laurent/summertime.ly (as the Laurent version).
 	TODO:
 	- add real book version.
 	- in the Aebersold tune there are two versions: one marked out and one not. The only
@@ -239,5 +252,41 @@ doOwn = false
 	there's a -- noth -- in' can harm you __
 	with dad -- dy an' mam -- my
 	stand -- _ in' by. __
+}
+{% endif %}
+{% if part == "ChordsLaurent" %}\chordmode {
+	\startChords
+	\startSong
+
+	\partial 4 s4 |
+
+	\myMark "A"
+	\startPart
+	\repeat volta 2 {
+		d1*4:m7 | \myEndLine
+		g1*2:m7 | e1:m7.5- | a:7.9+ | \myEndLine
+		d1*3:m7 | g2:m7 c:7 | \myEndLine
+		f1:maj7 | e2:m7.5- a:7.9+ | d1:m7 | a:7.9+ | \myEndLine
+	}
+	\endPart
+
+	\endSong
+	\endChords
+}
+{% endif %}
+{% if part == "VoiceLaurent" %}{
+	\tempo "Moderato" 4 = 108
+	\time 4/4
+	\key d \minor
+
+	\partial 4 a''8. f16 |
+
+	% part "A"
+	\repeat volta 2 {
+		a1 | r4 g8. f16 g8. a16 f4 | d2 a ~ | a4 r a' f |
+		g8 g ~ g2. | r4 f8. d16 f8. d16 f4 | e1 ~ | e2 r4 a8. f16 |
+		a1 | r4 g8. f16 g8. a16 f4 | d2 a ~ | a2 r4 a |
+		c a8 c d f ~ f4 | a8 g ~ g4 f2 | d1 ~ | d4 r r a'8. f16 |
+	}
 }
 {% endif %}

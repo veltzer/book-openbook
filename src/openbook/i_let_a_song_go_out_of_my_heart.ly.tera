@@ -1,0 +1,113 @@
+{#
+default_version = "Laurent"
+
+[attributes]
+title = "I Let A Song Go Out Of My Heart"
+style = "Jazz"
+composer = "Duke Ellington, Irving Mills, Henry Nemo, John Redmond"
+poet = "Irving Mills, Henry Nemo, John Redmond"
+typesetter = "Silvia Bertoluzza"
+completion = "3"
+uuid = "bee31985-d49f-11f1-8000-046874d194b7"
+structure = "AABA"
+
+[versions.Laurent]
+doChords = true
+doVoice = true
+doLyrics = true
+doLyricsmore = true
+doLyricsmoremore = false
+doChordBars = false
+doGuitar = false
+doExtra = false
+doPrep = false
+doOwn = false
+#}
+{% if part == "Vars" %}
+{% endif %}
+{% if part == "Doc" %}	DONE:
+	- converted the Silvia Bertoluzza version from staging/openbook/laurent/iletasong.ly (lyrics copied from it).
+	TODO:
+	- check the tune, chords and lyrics against a real book.
+	- the source has no tempo marking; the tempo here is from its midi block.
+	- the source credits only Duke Ellington; the co-writers were added from the published credits.
+	- add youtube performances.
+{% endif %}
+{% if part == "ChordsLaurent" %}\chordmode {
+	\startChords
+	\startSong
+
+	\myMark "A"
+	\startPart
+	\repeat volta 2 {
+		ees2 aes:7 | ees c:m7 | g:m7 c:7 | g:m7 c:7 | \myEndLine
+		f4:m/aes g:m f:m7 fis:dim7 | ees2/g aes:7 | ees c:m7 |
+	} \alternative {
+		{
+			f:m7.5- bes:7 | \myEndLineVoltaNotLast
+		}
+		{
+			ees4 ees2/g ges4:dim7 | \myEndLineVoltaLast
+		}
+	}
+	\endPart
+
+	\myMark "B"
+	\startPart
+	f1:m7 | bes:7 | ees:maj7 | ees4:6 s4 d:m7 g:7 | \myEndLine
+	c4:m g:7.5+/b g:m/bes c:m/a | aes:m7 des:7 ges2:7 | b1:7 | bes:7.5+ | \myEndLine
+	\endPart
+
+	\myMark "A"
+	\startPart
+	ees2 aes:7 | ees c:m7 | g:m7 c:7 | g:m7 c:7 | \myEndLine
+	f4:m/aes g:m f:m7 fis:dim7 | ees2/g aes:7 | ees/bes f:m7/bes | ees1 | \myEndLine
+	\endPart
+
+	\endSong
+	\endChords
+}
+{% endif %}
+{% if part == "VoiceLaurent" %}{
+	\tempo "Moderato" 4 = 90
+	\time 4/4
+	\key ees \major
+
+	% part "A"
+	\repeat volta 2 {
+		ees8 f ees ees'~ ees4. c8 | \tuplet 3/2 { bes8 c bes } ees,2. | r8 d'4. c8 bes g d | d'4 g,8 c~ c4. g8 |
+		f8 g4 aes8~ aes a4 bes8~ | bes ees4.~ ees c8 | \tuplet 3/2 { bes8 c bes } ees,2.~ |
+	} \alternative {
+		{
+			ees2. r4 |
+		}
+		{
+			r4 bes' bes a |
+		}
+	}
+
+	% part "B"
+	aes1~ | aes4 c c b | bes1~ | bes8 bes4. c4 d |
+	ees ees ees ees | ees des ges, aes | b1 | c8 fis,~ fis2. |
+
+	% part "A"
+	ees8 f ees ees'~ ees4. c8 | \tuplet 3/2 { bes8 c bes } ees,2. | r8 d'4. c8 bes g d | d'4 g,8 c~ c4. g8 |
+	f8 g4 aes8~ aes a4 bes8~ | bes ees4.~ ees c8 | \tuplet 3/2 { bes8 c bes } ees,2 f4 | ees1 |
+}
+{% endif %}
+{% if part == "LyricsLaurent" %}\lyricmode {
+	I let a song go out of my heart It was the sweet -- est mel -- o -- dy
+	I know I lost _ hea -- ven cause you were the song
+	Am I too late to make a -- mends
+	You know that we are meant to be more than just friends, just friends.
+	I let a song go out of my heart. Be -- lieve me dar -- lin' when I say
+	I won't know sweet _ mu -- sic Un -- til you re -- turn some day.
+}
+{% endif %}
+{% if part == "LyricsmoreLaurent" %}\lyricmode {
+	Since you and I have drif -- ted a -- part Life
+	does -- n't mean a thing to me.
+	Please come back sweet _ mu -- sic.
+	I know I was wrong.
+}
+{% endif %}

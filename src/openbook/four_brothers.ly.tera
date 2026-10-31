@@ -1,0 +1,96 @@
+{#
+default_version = "Laurent"
+
+[attributes]
+title = "Four Brothers"
+style = "Jazz"
+composer = "Jimmy Giuffre"
+typesetter = "Laurent Martelli"
+completion = "3"
+uuid = "8aa22480-d49f-11f1-8000-046874d194b7"
+structure = "AABA"
+
+[versions.Laurent]
+doChords = true
+doVoice = true
+doLyrics = false
+doLyricsmore = false
+doLyricsmoremore = false
+doChordBars = false
+doGuitar = false
+doExtra = false
+doPrep = false
+doOwn = false
+#}
+{% if part == "Vars" %}
+{% endif %}
+{% if part == "Doc" %}	DONE:
+	- converted the Laurent Martelli version from staging/openbook/laurent/four_brothers.ly (transposed to the concert key, Ab, as the staged file did).
+	TODO:
+	- check the tune and chords against a real book.
+	- the bridge's Cb and Fb are written enharmonically as B and E (chord Bmaj7).
+	- the staged file has no tempo marking; the tempo comes from its midi setting.
+	- add youtube performances.
+{% endif %}
+{% if part == "ChordsLaurent" %}\chordmode {
+	\startChords
+	\startSong
+
+	\myMark "A"
+	\startPart
+	\repeat volta 2 {
+		bes1:9 | bes2:m7 ees:7.5+ | aes1:maj7 | f:9 | \myEndLine
+		bes1:m7 | c2:m7 f:7 |
+	} \alternative {
+		{
+			bes2:m7 ees:7 | aes:maj7 f:7 | \myEndLineVoltaNotLast
+		}
+		{
+			bes2:m7 ees:7 | aes1:6 | \myEndLineVoltaLast
+		}
+	}
+	\endPart
+
+	\myMark "B"
+	\startPart
+	des2:m7 ges:7 | b1:maj7 | e2:m7 a:7 | d1:maj7 | \myEndLine
+	d2:m7 g:7 | c:maj7 cis:dim7 | d:m7 g:7 | c:m7 f:7 | \myEndLine
+	\endPart
+
+	\myMark "A"
+	\startPart
+	bes1:9 | bes2:m7 ees:7.5+ | aes1:maj7 | f:9 | \myEndLine
+	bes1:m7 | c2:m7 f:7 | bes:m7 ees:7 | aes1:6 | \myEndLine
+	\endPart
+
+	\endSong
+	\endChords
+}
+{% endif %}
+{% if part == "VoiceLaurent" %}{
+	\tempo "Allegro" 4 = 178
+	\time 4/4
+	\key aes \major
+
+	% part "A"
+	\repeat volta 2 {
+		c'8 b c b c aes f d | des f aes c b g ees des | c ees g bes r aes r ees | g f4. r4 r8 g |
+		aes f des bes aes' f des bes | g'4-. bes,8 a~ a4 r8 e' |
+	} \alternative {
+		{
+			f des c bes ees c des ees~ | ees4 r r r8 b' |
+		}
+		{
+			f des c bes ees b c aes~ | aes4 r r r8 g' |
+		}
+	}
+
+	% part "B"
+	aes e des b bes des e aes | ges ees e ges~ ges4 r | fis8 d cis b a' f g a~ | a2 r4 r8 fis |
+	f!8 e d c b d f a | g f e d cis bes' a ees | g f r c e4 d8 c | r f4. r4 r8 b |
+
+	% part "A"
+	c b c b c aes f d | des f aes c b g ees des | c ees g bes r aes r ees | g f4. r4 r8 g |
+	aes f des bes aes' f des bes | g'4-. bes,8 a~ a4 r8 e' | f des!8 c bes ees b c aes~ | aes4 r r2 |
+}
+{% endif %}

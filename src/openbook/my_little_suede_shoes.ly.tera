@@ -1,0 +1,187 @@
+{#
+default_version = "Unknown"
+
+[attributes]
+title = "My Little Suede Shoes"
+style = "Jazz"
+composer = "Charlie Parker"
+piece = "Med Swing"
+typesetter = "Mark Veltzer <mark.veltzer@gmail.com>"
+completion = "3"
+uuid = "0db617f0-a26f-11df-92f0-0019d11e5a41"
+structure = "AABA"
+
+[versions.Unknown]
+doChords = true
+doVoice = true
+doLyrics = false
+doLyricsmore = false
+doLyricsmoremore = false
+doChordBars = false
+doGuitar = false
+doExtra = false
+doPrep = false
+doOwn = false
+
+[versions.Laurent]
+doChords = true
+doVoice = true
+doLyrics = false
+doLyricsmore = false
+doLyricsmoremore = false
+doChordBars = false
+doGuitar = false
+doExtra = false
+doPrep = false
+doOwn = false
+#}
+{% if part == "Vars" %}
+{% endif %}
+{% if part == "Doc" %}	DONE:
+	- converted the old mako version from staging/openbook/my_little_suede_shoes.mako.
+	- converted the Laurent Martelli version from staging/openbook/laurent/my_little_suede_shoes.ly.
+	TODO:
+	- where is this from?
+	- check the tune and chords against a real book.
+	- the tempo is a guess from "Med Swing".
+	- add youtube performances.
+	REMARKS:
+	- both sources had octave slips (the repeated
+		pickup in bars 2 and 22 and the second ending/start of the bridge
+		jumped an octave or two); fixed so that the A phrases stay at the
+		pitch of the opening and the bridge starts on the Eb above middle C.
+{% endif %}
+{% if part == "ChordsUnknown" %}\chordmode {
+	\startChords
+	\startSong
+
+	\partial 4. s4. |
+
+	\myMark "A"
+	\startPart
+	\repeat volta 2 {
+		f2:m7 bes:7 | g:m7 c:7 | f:m7 bes:7 | ees:maj7 c:7 | \myEndLine
+		f:m7 bes:7 | g:m7 c:7.9+.5+ | f:m7 bes:7 |
+	} \alternative {
+		{
+			ees:maj7 c:7 | \myEndLineVoltaNotLast
+		}
+		{
+			ees:maj7 ees:7 | \myEndLineVoltaLast
+		}
+	}
+	\endPart
+
+	\myMark "B"
+	\startPart
+	aes:maj7 aes:m7 | g:m7 c:7.9- | f:m7 bes:7 | ees:maj7 ees:7 | \myEndLine
+	aes aes:m7 | g:m7 c:7.9- | f:m7 bes:7 | g:m7 c:7 | \myEndLine
+	\endPart
+
+	\myMark "A"
+	\startPart
+	f:m7 bes:7 | ees:maj7 c:7 | f:m7 bes:7 | ees:maj7 c:7 | \myEndLine
+	f:m7 aes:m7 | g:m7 c:7.9+.5+ | f:m7 bes:7 | ees1:maj7 | \myEndLine
+	\endPart
+
+	\endSong
+	\endChords
+}
+{% endif %}
+{% if part == "VoiceUnknown" %}{
+	\tempo "Moderato" 4 = 160
+	\time 4/4
+	\key ees \major
+
+	\partial 4. bes8 ees g |
+
+	% part "A"
+	\repeat volta 2 {
+		f f f f ees f r g | r2 r8 bes,8 ees g | f f f f ees f r ees | r2 r8 bes8 ees g | f f f f ees f r g |
+		r bes4. a4 aes | g8 g g g f f r ees |
+	} \alternative {
+		{
+			r2 r8 bes ees g |
+		}
+		{
+			r2 r8 bes c d |
+		}
+	}
+
+	% part "B"
+	ees8 ees ees ees c aes r d | r d4. bes8 g r4 | c8 c c c aes f r bes~ |
+	bes2 r8 bes c d | ees ees ees ees c aes r d | r d4. bes8 g r4 |
+	c8 c c c aes f g ees~ | ees2 r8 bes8 ees g |
+
+	% part "A"
+	f f f f ees f r g | r2 r8 bes,8 ees g | f f f f ees f r ees | r2 r8 bes8 ees g | f f f f ees f r g |
+	r bes4. a4 aes | g8 g g g f f r ees | r1 |
+}
+{% endif %}
+{% if part == "ChordsLaurent" %}\chordmode {
+	\startChords
+	\startSong
+
+	\partial 4. s4. |
+
+	\myMark "A"
+	\startPart
+	\repeat volta 2 {
+		f2:m7 bes:7 | g:m7 c:7 | f:m7 bes:7 | ees:maj c:7 | \myEndLine
+		f:m7 bes:7 | g:m7 c:7.9+.5+ | f:m7 bes:7 |
+	} \alternative {
+		{
+			ees:maj c:7 | \myEndLineVoltaNotLast
+		}
+		{
+			ees:maj ees:7 | \myEndLineVoltaLast
+		}
+	}
+	\endPart
+
+	\myMark "B"
+	\startPart
+	aes:maj aes:m7 | g:m7 c:7.9- | f:m7 bes:7 | ees:maj ees:7 | \myEndLine
+	aes aes:m7 | g:m7 c:7.9- | f:m7 bes:7 | g:m7 c:7 | \myEndLine
+	\endPart
+
+	\myMark "A"
+	\startPart
+	f:m7 bes:7 | ees:maj c:7 | f:m7 bes:7 | ees:maj c:7 | \myEndLine
+	f:m7 aes:m7 | g:m7 c:7.9+.5+ | f:m7 bes:7 | ees1:maj | \myEndLine
+	\endPart
+
+	\endSong
+	\endChords
+}
+{% endif %}
+{% if part == "VoiceLaurent" %}{
+	\tempo "Moderato" 4 = 160
+	\time 4/4
+	\key ees \major
+
+	\partial 4. bes8 ees g |
+
+	% part "A"
+	\repeat volta 2 {
+		f8[ f f f] ees f r g | r2 r8 bes,8 ees g | f[ f f f] ees f r ees | r2 r8 bes ees g |
+		f[ f f f] ees f r g | r bes4. a4 aes | g8[ g g g] f f r ees |
+	} \alternative {
+		{
+			r2 r8 bes ees g |
+		}
+		{
+			r2 r8 bes c d |
+		}
+	}
+
+	% part "B"
+	ees8[ ees ees ees] c aes r d | r d4. bes8 g r4 | c8[ c c c] aes f r bes~ |
+	bes2 r8 bes c d | ees[ ees ees ees] c aes r d | r d4. bes8 g r4 |
+	c8[ c c c] aes f g ees~ | ees2 r8 bes ees g |
+
+	% part "A"
+	f[ f f f] ees f r g | r2 r8 bes, ees g | f[ f f f] ees f r ees | r2 r8 bes ees g |
+	f[ f f f] ees f r g | r bes4. a4 aes | g8[ g g g] f f r ees | r1 |
+}
+{% endif %}

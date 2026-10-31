@@ -35,10 +35,23 @@ doGuitar = false
 doExtra = false
 doPrep = false
 doOwn = false
+
+[versions.Laurent]
+doChords = true
+doVoice = true
+doLyrics = false
+doLyricsmore = false
+doLyricsmoremore = false
+doChordBars = false
+doGuitar = false
+doExtra = false
+doPrep = false
+doOwn = false
 #}
 {% if part == "Vars" %}
 {% endif %}
 {% if part == "Doc" %}	DONE:
+	- converted the Laurent Martelli version from staging/openbook/laurent/it_dont_mean_a_thing.ly.
 	- added the meta data from the Hal Leonard Real Jazz Book.
 	- put in the tunes structure.
 	- put in the chords (Hal Leonard Real Jazz Book).
@@ -106,5 +119,71 @@ doOwn = false
 	% part "A"
 	g2 g4 bes | d2 g,4 bes | des2 c8 bes4 g8~ | g1 |
 	r4 bes8 bes~ bes bes bes4 | bes8 bes4 bes8 bes4 bes8 bes~ | bes8 bes bes4 bes8 bes4 bes8 | bes4 r r2 |
+}
+{% endif %}
+{% if part == "ChordsLaurent" %}\chordmode {
+	\startChords
+	\startSong
+
+	\partial 4 s4 |
+
+	\myMark "A"
+	\startPart
+	\repeat volta 2 {
+		g2:m7 g:m7/fis | g:m7/f c:7/e | ees:7 d:7 | g1:m7 | \myEndLine
+		c:7 | cis:dim7 | bes:maj7/d |
+	} \alternative {
+		{
+			d1:7.5+ | \myEndLineVoltaNotLast
+		}
+		{
+			bes1:maj7 | \myEndLineVoltaLast
+		}
+	}
+	\endPart
+
+	\myMark "B"
+	\startPart
+	f1:m7 | bes:7 | ees1*2:maj7 | \myEndLine
+	g1:m7 | c:7 | f:7 | d:7 | \myEndLine
+	\endPart
+
+	\myMark "A"
+	\startPart
+	g2:m7 g:m7/fis | g:m7/f c:7/e | ees:7 d:7 | g1:m7 | \myEndLine
+	c:7 | cis:dim7 | bes:maj7/d | d1:7.5+ | \myEndLine
+	\endPart
+
+	\endSong
+	\endChords
+}
+{% endif %}
+{% if part == "VoiceLaurent" %}{
+	\tempo "Allegro" 4 = 160
+	\time 4/4
+	\key bes \major
+
+	\partial 4 d'4 |
+
+	% part "A"
+	\repeat volta 2 {
+		g,2 g4 bes | d2 g,4 bes | des2 c8 bes4 g8~ | g1 |
+		r4 bes8 bes~ bes bes bes4 | bes8 bes4 bes8 bes4 bes8 bes~ | bes bes bes4 bes8 bes4 bes8 |
+	} \alternative {
+		{
+			bes4 r r bes |
+		}
+		{
+			bes2. c4 |
+		}
+	}
+
+	% part "B"
+	c4 c c8 bes4 c8~ | c4 bes c8 bes4. | g1~ | g2. c4 |
+	c4 c4 c8 c4. | c4 bes c8 bes4. | f1 | g2. bes4 |
+
+	% part "A"
+	g2 g4 bes | d2 g,4 bes | des2 c8 bes4 g8~ | g1 |
+	r4 bes8 bes~ bes bes bes4 | bes8 bes4 bes8 bes4 bes8 bes~ | bes bes bes4 bes8 bes4 bes8 | bes1 |
 }
 {% endif %}

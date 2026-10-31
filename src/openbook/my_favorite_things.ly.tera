@@ -36,6 +36,18 @@ doGuitar = false
 doExtra = false
 doPrep = false
 doOwn = false
+
+[versions.Laurent]
+doChords = true
+doVoice = true
+doLyrics = false
+doLyricsmore = false
+doLyricsmoremore = false
+doChordBars = false
+doGuitar = false
+doExtra = false
+doPrep = false
+doOwn = false
 #}
 {% if part == "Vars" %}
 {% endif %}
@@ -53,6 +65,7 @@ doOwn = false
 	- checked the lyrics for the real book version.
 	- added the song structure (and note about it).
 	- added notation about where I got the meta data from.
+	- added the Laurent Martelli version from staging/openbook/laurent/my_favorite_things.ly.
 	TODO:
 	- add the fake book version.
 	NOTES:
@@ -152,5 +165,86 @@ doOwn = false
 	door -- bells and sleigh -- bell and schnitz -- el with noo -- dles;
 	wild geese that fly with the moon on the wings,
 	these are a few of My Fa -- vor -- ite Things.
+}
+{% endif %}
+{% if part == "ChordsLaurent" %}\chordmode {
+	\startChords
+	\startSong
+
+	\myMark "Intro"
+	\startPart
+	\repeat volta 2 {
+		e2.:m7 | f:maj7.11+ | e:m7 | f:maj7.11+ | \myEndLine
+		e2.:m7 | f:maj7.11+ | e:m7 | f:maj7.11+ | \myEndLine
+	}
+	\endPart
+
+	\myMark "A"
+	\startPart
+	\repeat volta 2 {
+		e2.*4:m7 | c2.*4:maj7 | \myEndLine
+		a2.:m7 | d:7 | g:maj7 | c:maj7 | \myEndLine
+		g:maj7 | c:maj7 | fis:m7.5- | b:7.9- | \myEndLine
+	}
+	\endPart
+
+	\myMark "A"
+	\startPart
+	e2.*4:m7 | a2.*4:maj7 | \myEndLine
+	a2.:m7 | d:7 | g:maj7 | c:maj7 | \myEndLine
+	g:maj7 | c:maj7 | fis:m7.5- | b:7.9- | \myEndLine
+	\endPart
+
+	\myMark "B"
+	\startPart
+	e2.*2:m7 | fis2.:m7.5- | b:7.9- | \myEndLine
+	e:m7 | e:m7/+d | c2.*2:maj7 | \myEndLine
+	c2.*2:maj7 | a2.*2:7 | \myEndLine
+	g2.:maj7 | c2.*2:maj7 | d2.:7 | \myEndLine
+	\endPart
+
+	\myMark "End"
+	\startPart
+	g2.:maj7 | c:maj7 | g:maj7 | c:maj7 | \myEndLine
+	g:maj7 | c:maj7 | fis:m7.5- | b:7.9- | \myEndLine
+	\endPart
+
+	\endSong
+	\endChords
+}
+{% endif %}
+{% if part == "VoiceLaurent" %}{
+	\tempo "Allegro" 4 = 130
+	\time 3/4
+	\key g \major
+
+	% part "Intro"
+	\repeat volta 2 {
+		R2.*8 |
+	}
+
+	% part "A"
+	\repeat volta 2 {
+		e4 b' b | fis e e | b e e | fis e2 |
+		e4 b' b | fis e e | b e e | fis e2 |
+		e4 b' a | e fis d | d a' g | c,2. |
+		b4 c d | e fis g | a b a | dis,2. |
+	}
+
+	% part "A"
+	e4 b' b | fis e e | b e e | fis e2 |
+	e4 b' b | fis e e | b e e | fis e2 |
+	e4 b' a | e fis d | d a' g | c,2. |
+	b4 c d | e fis g | a ais b | c2. |
+
+	% part "B"
+	r4 b b | b2 e,4 | r a a | a2 dis,4 |
+	r g g | g2 b,4 | e2.~ | e2 e4 |
+	e fis e | fis e fis | g a g | a2 g4 |
+	b c b | c2.~ | c2. | b2. |
+
+	% part "End"
+	g2.~ | g~ | g~ | g |
+	r2. | r | r | r |
 }
 {% endif %}

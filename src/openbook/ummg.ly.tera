@@ -1,0 +1,109 @@
+{#
+default_version = "Anon"
+
+[attributes]
+title = "U.M.M.G."
+subtitle = "Upper Manhattan Medical Group"
+style = "Jazz"
+composer = "Billy Strayhorn"
+piece = "Up"
+typesetter = "Anonymous <anonymous@zivlempel.org>"
+completion = "3"
+uuid = "248e36fe-d4a0-11f1-8000-046874d194b7"
+structure = "AABA"
+
+[versions.Anon]
+doChords = true
+doVoice = true
+doLyrics = false
+doLyricsmore = false
+doLyricsmoremore = false
+doChordBars = false
+doGuitar = false
+doExtra = false
+doPrep = false
+doOwn = false
+#}
+{% if part == "Vars" %}
+{% endif %}
+{% if part == "Doc" %}	DONE:
+	- converted the Anonymous <anonymous@zivlempel.org> version from staging/openbook/anon/UMMG.ly.
+	TODO:
+	- check the tune and chords against a real book.
+	- add youtube performances.
+	- the source was written in C and transposed to Db for the C version; it is entered here directly in Db (a few notes respelled enharmonically: A instead of Bbb).
+	- the source puts a coda sign over bar 21 (the end phrase) and a 4 times repeated ending vamp marked "ending only"; check the form against a recording.
+{% endif %}
+{% if part == "ChordsAnon" %}\chordmode {
+	\startChords
+	\startSong
+
+	\myMark "A"
+	\startPart
+	\repeat volta 2 {
+		f1:3-.5-.7 | bes:3.5.7.9- | ees:m7 | aes:7 |
+	} \alternative {
+		{
+			des2:dim7 des:6 | des1:maj | des:m7 | ges:7 | \myEndLineVoltaNotLast
+		}
+		{
+			des2:dim7 des:6 | des1:maj | aes2:m7 des:7 | aes2:m7 des:7 | \myEndLineVoltaLast
+		}
+	}
+	\endPart
+
+	\myMark "B"
+	\startPart
+	g1:3-.5-.7 | c:7.9- | f:maj | f:maj | \myEndLine
+	aes:3-.5-.7 | des:7.9- | ges:m | aes:7 | \myEndLine
+	\endPart
+
+	\myMark "A"
+	\startPart
+	f1:3-.5-.7 | bes:3.5.7.9- | ees:m7 | aes:7 | \myEndLine
+	des:dim7 | des:6 | des:dim7 | des:6 | \myEndLine
+	\endPart
+
+	\myMark "Coda"
+	\startPart
+	\repeat volta 4 {
+		des1:dim7 | des:dim7 | des:6 | des:6 |
+	}
+	\myEndLine
+	\endPart
+
+	\endSong
+	\endChords
+}
+{% endif %}
+{% if part == "VoiceAnon" %}{
+	\tempo "Up" 4 = 150
+	\time 4/4
+	\key des \major
+
+	% part "A"
+	\repeat volta 2 {
+		bes'2. aes8 ces~ | ces4. bes8~ bes2 | r8 aes4. aes4 ges8 f~ | f2 r8 ees4. |
+	} \alternative {
+		{
+			a,4. bes8~ bes4. c8~ | c4 des \tuplet 3/2 { f4 aes c } | ees2. des8 g,~ | g2 aes |
+		}
+		{
+			a,4. bes8~ bes4. c8~ | c4 des \tuplet 3/2 { f4 aes des } | ges2. f8 ges~ | ges2 f |
+		}
+	}
+
+	% part "B"
+	f,2. fes4 | c'4 bes a g | g2. f8 e~ | e4. f8~ f2 |
+	g2. f4 | des'4 ces a aes | aes2. ges8 f~ | f1 |
+
+	% part "A"
+	bes2. aes8 ces~ | ces4. bes8~ bes2 | r8 aes4. aes4 ges8 f~ | f2 r8 ees4. |
+	a,2.^\markup { \musicglyph #"scripts.coda" } des8 bes~ | bes1 | a2. des8 bes~ | bes1 |
+
+	% part "Coda"
+	\repeat volta 4 {
+		a1^\markup { (ending only) }~ | a2. des8 bes~ | bes1~ | bes |
+	}
+}
+{% endif %}

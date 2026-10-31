@@ -32,10 +32,23 @@ doGuitar = false
 doExtra = false
 doPrep = false
 doOwn = false
+
+[versions.Laurent]
+doChords = true
+doVoice = true
+doLyrics = false
+doLyricsmore = false
+doLyricsmoremore = false
+doChordBars = false
+doGuitar = false
+doExtra = false
+doPrep = false
+doOwn = false
 #}
 {% if part == "Vars" %}
 {% endif %}
 {% if part == "Doc" %}	DONE:
+	- converted the Laurent Martelli version from staging/openbook/laurent/blue_train.ly (version Laurent).
 	- added the epdf from the real book.
 	- put in the tunes structure
 	- added the meta data from the real book.
@@ -92,6 +105,56 @@ doOwn = false
 		}
 		{
 			c1~ | c4-^_\markup { \italic { Fine } } r4 r2 |
+		}
+	}
+}
+{% endif %}
+{% if part == "ChordsLaurent" %}\chordmode {
+	\startChords
+	\startSong
+
+	\partial 8*5 s8*5 |
+
+	\myMark "A"
+	\startPart
+	\repeat volta 2 {
+		ees1*4:7 | \myEndLine
+		aes1*2:13 | ees1*2:7 | \myEndLine
+		bes1*2:7 |
+	} \alternative {
+		{
+			ees1*2:7 | \myEndLineVoltaNotLast
+		}
+		{
+			ees1*2:7 | \myEndLineVoltaLast
+		}
+	}
+	\endPart
+
+	\endSong
+	\endChords
+}
+{% endif %}
+{% if part == "VoiceLaurent" %}{
+	\tempo "Allegro" 4 = 130
+	\time 4/4
+	\key ees \major
+
+	\partial 8*5 bes'8 des f-> des ees ~ |
+
+	% part "A"
+	\repeat volta 2 {
+		ees1 | r4 r8 bes des f-> des ees ~ |
+		ees1 | r4 r8 ees, ges bes-> ges aes ~ |
+		aes1 | r4 r8 bes des f-> des ees ~ |
+		ees1 | r4 r8 bes des ges-> ees des ~ |
+		des1 | r4 r8 bes des f-> des ees ~ |
+	} \alternative {
+		{
+			ees1 | r4 r8 bes des f-> des ees ~ |
+		}
+		{
+			ees4 r4 r2 | r1 |
 		}
 	}
 }

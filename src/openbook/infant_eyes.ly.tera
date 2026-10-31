@@ -1,0 +1,81 @@
+{#
+default_version = "Anon"
+
+[attributes]
+title = "Infant Eyes"
+style = "Jazz"
+composer = "Wayne Shorter"
+piece = "Slow"
+typesetter = "Anonymous <anonymous@zivlempel.org>"
+completion = "3"
+uuid = "97214c16-d49f-11f1-8000-046874d194b7"
+structure = "ABA"
+
+[versions.Anon]
+doChords = true
+doVoice = true
+doLyrics = false
+doLyricsmore = false
+doLyricsmoremore = false
+doChordBars = false
+doGuitar = false
+doExtra = false
+doPrep = false
+doOwn = false
+#}
+{% if part == "Vars" %}
+{% endif %}
+{% if part == "Doc" %}	DONE:
+	- converted the Anonymous <anonymous@zivlempel.org> version from staging/openbook/anon/InfantEyes.ly.
+	TODO:
+	- check the tune and chords against a real book.
+	- add youtube performances.
+{% endif %}
+{% if part == "ChordsAnon" %}\chordmode {
+	\startChords
+	\startSong
+
+	\partial 2 s2 |
+
+	\myMark "A"
+	\startPart
+	g1:m7 | f:m7 | ees:maj | a:13.9- | \myEndLine
+	ges:maj | f:5.4.9^3 | ees:m7 | bes:5.4.9^3 | bes:7 | \myEndLine
+	\endPart
+
+	\myMark "B"
+	\startPart
+	ees1:maj | e:maj/ees | ees:7+.11+ | e:maj | \myEndLine
+	b:maj | bes:5.4.9^3 | aes:m7 | ees:5.4.9^3 | d:7.9- | \myEndLine
+	\endPart
+
+	\myMark "A"
+	\startPart
+	g1:m7 | f:m7 | ees:maj | a:13.9- | \myEndLine
+	ges:maj | f:5.4.9^3 | ees:m7 | bes:5.4.9^3 | r | \myEndLine
+	\endPart
+
+	\endSong
+	\endChords
+}
+{% endif %}
+{% if part == "VoiceAnon" %}{
+	\tempo "Slow" 4 = 80
+	\time 4/4
+	\key ees \major
+
+	\partial 2 c4 c |
+
+	% part "A"
+	f2~ f8 d f g | aes2. g4 | f2~ f8 d c bes | bes'2. f4 |
+	aes2~ aes8 bes, ees aes | f2. bes,4 | des2~ des8 ees, ges des' | bes1~ | bes2. ges'8 aes |
+
+	% part "B"
+	bes2~ bes8 g f ees | des'2.~ des8 bes | a2~ a8 g f c | dis'2. bes4 |
+	cis2~ cis8 dis, gis cis | bes2. ees,4 | ges2~ ges8 aes, ces ges' | ees1~ | ees2. c4 |
+
+	% part "A"
+	f2~ f8 d f g | aes2. g4 | f2~ f8 d c bes | bes'2. f4 |
+	aes2~ aes8 bes, ees aes | f2. bes,4 | des2~ des8 bes ees des | bes1~ | bes2. r4 |
+}
+{% endif %}

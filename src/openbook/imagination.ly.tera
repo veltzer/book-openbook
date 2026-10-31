@@ -1,0 +1,123 @@
+{#
+default_version = "Laurent"
+
+[attributes]
+title = "Imagination"
+style = "Jazz"
+composer = "Jimmy Van Heusen"
+poet = "Johnny Burke"
+typesetter = "Silvia Bertoluzza"
+completion = "3"
+uuid = "bee31986-d49f-11f1-8000-046874d194b7"
+structure = "AABA"
+
+[versions.Laurent]
+doChords = true
+doVoice = true
+doLyrics = true
+doLyricsmore = true
+doLyricsmoremore = false
+doChordBars = false
+doGuitar = false
+doExtra = false
+doPrep = false
+doOwn = false
+#}
+{% if part == "Vars" %}
+{% endif %}
+{% if part == "Doc" %}	DONE:
+	- converted the Silvia Bertoluzza version from staging/openbook/laurent/imagination.ly (lyrics copied from it).
+	TODO:
+	- check the tune, chords and lyrics against a real book.
+	- the source has no tempo marking; the tempo here is from its midi block.
+	- the source credits "Burke & Van Heusen"; split into composer (Van Heusen) and poet (Burke).
+	- add youtube performances.
+{% endif %}
+{% if part == "ChordsLaurent" %}\chordmode {
+	\startChords
+	\startSong
+
+	\partial 4. s4. |
+
+	\myMark "A"
+	\startPart
+	\repeat volta 2 {
+		ees2 e:m7.5- | f:m bes:7 | ees bes:m | c1:7.9- | \myEndLine
+		f2:m c:7.5+.9- | f:m bes:7 |
+	} \alternative {
+		{
+			g:m c:7.9- | f:m bes:7 | \myEndLineVoltaNotLast
+		}
+		{
+			ees1:7 | bes2:m ees:7 | \myEndLineVoltaLast
+		}
+	}
+	\endPart
+
+	\myMark "B"
+	\startPart
+	aes1 | a2:m d:7 | g1:m | c:7.9- | \myEndLine
+	bes | c2:m f:7 | f1:m | bes:7.5+.9- | \myEndLine
+	\endPart
+
+	\myMark "A"
+	\startPart
+	ees2 e:m7.5- | f:m bes:7 | ees bes:m | c1:7.9- | \myEndLine
+	f2:m c:7.5+.9- | f:m bes:7 | g1:7.9+ | c:7.9- | \myEndLine
+	f:m | f2:m/bes bes:7.9- | ees1 | f2:m bes:7 | \myEndLine
+	\endPart
+
+	\endSong
+	\endChords
+}
+{% endif %}
+{% if part == "VoiceLaurent" %}{
+	\tempo "Adagio" 4 = 60
+	\time 4/4
+	\key ees \major
+
+	\partial 4. d8 ees f |
+
+	% part "A"
+	\repeat volta 2 {
+		g4 g2 bes4 | aes aes2 c4 | bes bes \tuplet 3/2 { bes c des } | bes bes2. |
+		aes4 aes \tuplet 3/2 { aes bes c } | aes aes c bes8 g~ |
+	} \alternative {
+		{
+			g2 bes4 aes8 f~ | f2 r8 d ees f |
+		}
+		{
+			g2 bes4 g8 f~ | f2. r4 |
+		}
+	}
+
+	% part "B"
+	r4 ees8 f g aes bes c | d4 d a4. bes8 | c4 c g4. a8 | bes4 r8 bes e,2 |
+	r4 f8 g a bes c d | ees4 ees \tuplet 3/2 { a, bes c } | bes2. c4 | fis,2 r8 d ees f |
+
+	% part "A"
+	g4 g2 bes4 | aes aes2 c4 | bes bes \tuplet 3/2 { bes c des } | bes bes2. |
+	aes4 aes \tuplet 3/2 { aes bes c } | aes aes \tuplet 3/2 { aes a bes } | g1~ | g4 bes aes g |
+	f f \tuplet 3/2 { f g aes } | f f2 g4 | ees1~ | ees2 r |
+}
+{% endif %}
+{% if part == "LyricsLaurent" %}\lyricmode {
+	I -- ma -- gi -- na -- tion is fun -- ny it
+	makes a clou -- dy day sun -- ny,
+	makes a bee think of ho -- ney, Just as I
+	think of you I -- ma -- gi
+	_ what to do?
+	Have you e -- ver felt a gen -- tle touch and then
+	a kiss and then, and then find it's on -- ly your
+	i -- ma -- gi -- na -- tion a -- gain? Oh, well,
+	I -- ma -- gi -- na -- tion is sil -- ly you go a -- round wi -- lly -- ni -- lly
+	For e -- xam -- ple I go a -- round wan -- ting you. And yet I can't i -- ma -- gine that
+	you want me too.
+}
+{% endif %}
+{% if part == "LyricsmoreLaurent" %}\lyricmode {
+	_ _ _
+	na -- tion is cra -- zy, Your whole per -- spec -- tive gets
+	ha -- zy. Stary you as -- king a dai -- sy what to do?
+}
+{% endif %}

@@ -1,0 +1,156 @@
+{#
+default_version = "Laurent"
+
+[attributes]
+title = "I Remember Clifford"
+style = "Jazz"
+composer = "Benny Golson"
+piece = "Med Swing"
+typesetter = "Laurent Martelli"
+completion = "3"
+uuid = "efea8972-a26e-11df-af8e-0019d11e5a41"
+structure = "AABA"
+structureremark = "6 bar intro, the first A is repeated with two 4 bar endings"
+
+[versions.Laurent]
+doChords = true
+doVoice = true
+doLyrics = false
+doLyricsmore = false
+doLyricsmoremore = false
+doChordBars = false
+doGuitar = false
+doExtra = false
+doPrep = false
+doOwn = false
+
+[versions.Unknown]
+doChords = true
+doVoice = true
+doLyrics = false
+doLyricsmore = false
+doLyricsmoremore = false
+doChordBars = false
+doGuitar = false
+doExtra = false
+doPrep = false
+doOwn = false
+#}
+{% if part == "Vars" %}
+{% endif %}
+{% if part == "Doc" %}	DONE:
+	- converted the Laurent Martelli version from staging/openbook/laurent/i_remember_clifford.ly.
+	- converted the old mako version from staging/openbook/i_remember_clifford.mako.
+	TODO:
+	- check the tune and chords against a real book.
+	- the tempo is a guess from "Med Swing".
+	- add youtube performances.
+	- add the lyrics.
+	REMARKS:
+	- the Laurent Martelli source writes the melody in C and transposes it to
+		Eb when engraving (the chords are in Eb), so the melody here is that
+		melody a minor third up, in concert Eb.
+	- the Unknown version is the old mako draft: the same melody, in C, with
+		no chords. It is kept as it was.
+	- the uuid is the one of the old mako draft.
+{% endif %}
+{% if part == "ChordsLaurent" %}\chordmode {
+	\startChords
+	\startSong
+
+	\myMark "Intro"
+	\startPart
+	aes1:maj | g2:7.5+ bes:7.9- | g:7.9- g:7/+b | \myEndLine
+	c4:m7 bes:m7 aes:m7 ges:m7 | f1:m7 | bes4*3:sus4.7 bes4:7.9- | \myEndLine
+	\endPart
+
+	\myMark "A"
+	\startPart
+	\repeat volta 2 {
+		ees2:maj g:7 | aes:maj a:dim7 | bes:7 b:dim7 | c:m7 c:m7/+bes | \myEndLine
+	} \alternative {
+		{
+			a2:m7.5- d:7.9- | g:m7 g:m7/+f | e:m7.5- a:7.9- | f:m7 bes:7.9- | \myEndLineVoltaNotLast
+		}
+		{
+			a2:m7.5- d:7.9- | g:m7.5- c:7.9- | f:m7 bes:7.5+ | g:m7 aes:maj | \myEndLineVoltaLast
+		}
+	}
+	\endPart
+
+	\myMark "B"
+	\startPart
+	a2:m7.5- d:7.9- | g:m7.5- c:7.9- | f:m7 bes:7.5+ | ees1:maj | \myEndLine
+	d2:m7.5- g:7.9- | c:m7 c:m7/+bes | a:m7.5- d:7.9- | g4:m7 c:7 f:m7 bes:7 | \myEndLine
+	\endPart
+
+	\myMark "A"
+	\startPart
+	ees2:maj g:7 | aes:maj a:dim7 | bes:7 b:dim7 | c:m7 c:m7/+bes | \myEndLine
+	a2:m7.5- d:7.9- | g:m7.5- c:7.9- | f:m7 bes:7.5+ | ees1:maj | \myEndLine
+	\endPart
+
+	\endSong
+	\endChords
+}
+{% endif %}
+{% if part == "VoiceLaurent" %}{
+	\tempo "Moderato" 4 = 120
+	\time 4/4
+	\key ees \major
+
+	% part "Intro"
+	r8 c ( ees g bes aes ees f | g g~ ) g2. | r8 g ( b d f4. d8 ) | ees1 |
+	r8 c, ( ees f g4 ees8 c | ees8 ees~ ) ees4 r4 bes' |
+
+	% part "A"
+	\repeat volta 2 {
+		g2. ( f8 d ) | ees2 r8 f ( g aes | bes4. bes8 b aes d b ) | c2 r8 g ( c d ) |
+	} \alternative {
+		{ ees2. ( d8 c | bes16 c ) d8~ d4 r8 d, ( g a | bes2. a8 g ) | aes!2. bes4 }
+		{ ees2 r8 f,8 ( bes c ) | des2. r8 c ( | f,4. c'8 fis,4. d'8 | g,4. ees'8 c4. d8 ) | }
+	}
+
+	% part "B"
+	ees2 ( d8 c bes c | d4 ) des r8 c, ( ees f | g c, ees f ges4 ces ) | bes2. f8 ( g |
+	aes4. aes8 bes aes g f ) | g2 r8 g ( c d | ees4. ees8 f ees d c | d g, bes d c4 bes |
+
+	% part "A"
+	g2. f8 d ) | ees2 r8 f ( g aes | bes4. bes8 b aes d b ) | c2 r8 g ( c d ) |
+	ees2 r8 f, ( bes c ) | des2 r8 c, ( ees f | g c, ees f ges4 d ) | ees1 |
+}
+{% endif %}
+{% if part == "ChordsUnknown" %}\chordmode {
+	\startChords
+	\startSong
+
+	\endSong
+	\endChords
+}
+{% endif %}
+{% if part == "VoiceUnknown" %}{
+	\tempo "Moderato" 4 = 120
+	\time 4/4
+	\key c \major
+
+	% part "Intro"
+	r8 a' ( c e g f c d | e e~ ) e2. | r8 e ( gis b d4. b8 ) | c1 |
+	r8 a, ( c d e4 c8 a | c8 c~ ) c4 r4 g' |
+
+	% part "A"
+	\repeat volta 2 {
+		e2. ( d8 b ) | c2 r8 d ( e f | g4. g8 gis f b gis ) | a2 r8 e ( a b ) |
+	} \alternative {
+		{ c2. ( b8 a | g16 a ) b8~ b4 r8 b, ( e fis | g2. fis8 e ) | f!2. g4 }
+		{ c2 r8 d,8 ( g a ) | bes2. r8 a ( | d,4. a'8 dis,4. b'8 | e,4. c'8 a4. b8 ) | }
+	}
+
+	% part "B"
+	c2 ( b8 a g a | b4 ) bes r8 a, ( c d | e a, c d ees4 aes ) | g2. d8 ( e |
+	f4. f8 g f e d ) | e2 r8 e ( a b | c4. c8 d c b a | b e, g b a4 g |
+
+	% part "A"
+	e2. d8 b ) | c2 r8 d ( e f | g4. g8 gis f b gis ) | a2 r8 e ( a b ) |
+	c2 r8 d, ( g a ) | bes2 r8 a, ( c d | e a, c d ees4 b ) | c1 |
+}
+{% endif %}

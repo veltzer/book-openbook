@@ -1,0 +1,97 @@
+{#
+default_version = "Laurent"
+
+[attributes]
+title = "Song For My Father"
+style = "Jazz"
+composer = "Horace Silver"
+copyright = "1966 Ecaroh Music Inc."
+typesetter = "Laurent Martelli"
+completion = "3"
+uuid = "0459842a-d49f-11f1-8000-046874d194b7"
+structure = "AB"
+
+[versions.Laurent]
+doChords = true
+doVoice = true
+doLyrics = false
+doLyricsmore = false
+doLyricsmoremore = false
+doChordBars = false
+doGuitar = false
+doExtra = false
+doPrep = false
+doOwn = false
+#}
+{% if part == "Vars" %}
+{% endif %}
+{% if part == "Doc" %}	DONE:
+	- converted the Laurent Martelli version from staging/openbook/laurent/song_for_my_father.ly.
+	TODO:
+	- check the tune and chords against a real book.
+	- add youtube performances.
+	- hear the tune to check that it is right and adjust the tempo.
+{% endif %}
+{% if part == "ChordsLaurent" %}\chordmode {
+	\startChords
+	\startSong
+
+	\partial 4. s4. |
+
+	\myMark "A"
+	\startPart
+	\repeat volta 2 {
+		f1*2:m7 | ees1*2:7 | \myEndLine
+		des1:7 | g1:m7/+c | f1:m7 |
+	} \alternative {
+		{
+			f1:m7 | \myEndLineVoltaNotLast
+		}
+		{
+			f1:m7 | \myEndLineVoltaLast
+		}
+	}
+	\endPart
+
+	\myMark "B"
+	\startPart
+	ees1*2:7 | f1*2:m7 | \myEndLine
+	ees2:7 des:7 | g1:m7/+c | f1*2:m7 | \myEndLine
+	\endPart
+
+	\endSong
+	\endChords
+}
+{% endif %}
+{% if part == "VoiceLaurent" %}{
+	\tempo "Moderato" 4 = 120
+	\time 4/4
+	\key aes \major
+
+	\partial 4. c8-. f-. aes-. |
+
+	% part "A"
+	\repeat volta 2 {
+		c-> \tuplet 3/2 { des16 c bes } aes8 bes-> ~ bes \tuplet 3/2 { c16 bes aes } f8 aes-> ~ |
+		aes \tuplet 3/2 { bes16 aes f } ees8 f-> ~ f \tuplet 3/2 { g16 f ees } c8 <des ees>-> ~ |
+		<des ees>1 ~ | <des ees>2. g,8( ges | f <b des!> ~ <b des>2.) |
+		r2 <d f>4.( <ees g>8) ~ | <ees g>1 ~ |
+	} \alternative {
+		{
+			<ees g>2 r8 c-. f-. aes-. |
+		}
+		{
+			<ees g>2 r8 <c ees>-. <c ees>-. <c ees>-. |
+		}
+	}
+
+	% part "B"
+	<c ees>-.( <bes des>) r <des f> ~ <des f>2 |
+	<des f>2 r8 <des f>-. <des f>-. <des f>-. |
+	<des f>-.( <c ees>) r <ees g> ~ <ees g>2 ~ |
+	<ees g>2 r8 <c ees>-. <c ees>-. <c ees>-. |
+	<c ees>-.( <bes des>) r <des f> ~ <des f>2 |
+	r2 <e aes>4. <g bes>8 ~ | <g bes>1 ~ |
+	<g bes>2 r8 c,-. f-. aes-. |
+}
+{% endif %}

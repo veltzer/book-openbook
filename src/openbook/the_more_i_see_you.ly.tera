@@ -52,6 +52,15 @@ doOwn = false
 	- check the chords (Standards Real Book).
 	- check the tune (Standards Real Book).
 	- hear the tune to check that it is right and adjust the tempo.
+	REMARKS:
+	- an old mako draft of this tune (staging/openbook/the_more_i_see_you.mako,
+		see git history) had no melody, only a start at the verse chords
+		from the Standards Real Book, with a (Bb7) pickup:
+		ees2:6 f4:9 bes:9.5+ | ees2:6 e:dim7 | f:m7 bes:9.11 | ees:maj7 (bes:13) |
+		ees:6 a4:m7.5- d:7.9- | g:sus4 gis:dim7 | a:m7 d4:9sus4 (d:9) | g:7 c:7 f:7 bes:7 | bes:7 |
+		(the durations of the last bars are incomplete). It also listed
+		youtube ids ViniUjqqVZI (Hank Mobley, no longer available) and
+		XASZpJcgVLI (Nat King Cole).
 {% endif %}
 {% if part == "ChordsReal" %}\chordmode {
 	\startChords

@@ -18,6 +18,7 @@ version: 0.0.1
 ## build
 
 ![build](https://github.com/veltzer/book-openbook/workflows/build/badge.svg)
+![release](https://github.com/veltzer/book-openbook/workflows/release/badge.svg)
 ## What is OpenBook?
 OpenBook is a Jazz real book constructed with free software. A real book simply means a big book with lots of Jazz tunes or standards as they are more widely known.
 

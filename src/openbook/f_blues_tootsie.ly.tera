@@ -1,0 +1,72 @@
+{#
+default_version = "Laurent"
+
+[attributes]
+title = "F Blues"
+subtitle = "Tootsie"
+style = "Jazz"
+composer = "Jamey Aebersold"
+typesetter = "Laurent Martelli"
+completion = "3"
+uuid = "8aa2247f-d49f-11f1-8000-046874d194b7"
+structure = "Blues"
+
+[versions.Laurent]
+doChords = true
+doVoice = true
+doLyrics = false
+doLyricsmore = false
+doLyricsmoremore = false
+doChordBars = false
+doGuitar = false
+doExtra = false
+doPrep = false
+doOwn = false
+#}
+{% if part == "Vars" %}
+{% endif %}
+{% if part == "Doc" %}	DONE:
+	- converted the Laurent Martelli version from staging/openbook/laurent/f_blues.ly.
+	TODO:
+	- check the tune and chords against the Aebersold play-along book.
+	- bar 5 starts on Ab in the staged file while bar 1 starts on A; kept as staged.
+	- the staged file has no tempo marking; the tempo is a guess.
+	- add youtube performances.
+{% endif %}
+{% if part == "ChordsLaurent" %}\chordmode {
+	\startChords
+	\startSong
+
+	\partial 4. s4. |
+
+	\myMark "A"
+	\startPart
+	\repeat volta 2 {
+		f1:7 | bes:7 | f1*2:7 | \myEndLine
+		bes1*2:7 | f1:7 | a4*3:m7 d4:7 | \myEndLine
+		g1:m7 | c:7 | a2:7 d:7 | g:7 c:7 | \myEndLine
+	}
+	\endPart
+
+	\endSong
+	\endChords
+}
+{% endif %}
+{% if part == "VoiceLaurent" %}{
+	\tempo "Moderato" 4 = 120
+	\time 4/4
+	\key f \major
+
+	\partial 4. c8 f8.[ bes16] |
+
+	% part "A"
+	\repeat volta 2 {
+		a8.\( f16 d8. c16 f4\)-- r8 aes->\(~ | aes8. f16 g8 f\) r c f8.[ bes16] |
+		a8.\( f16 d8. c16\) f8\( g4-. ees8\)~ | ees2 r8 c f8.[ bes16] |
+		aes8.\( f16 d8 c f4\)-- r8 aes->\(~ | aes8. f16 g8 f\) r c f8.[ bes16] |
+		a8.\( f16 d8. c16 f8 g4-. d8\)~ | d2. r8 d\( |
+		a'8. a16 \tuplet 3/2 { f8 d f } a8. a16 \tuplet 3/2 { f8 d f } | a8. c16 bes8 a f8. c16 e8 f\)~ |
+		f1 | r2 r8 c f8.[ bes16] |
+	}
+}
+{% endif %}

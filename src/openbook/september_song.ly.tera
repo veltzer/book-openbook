@@ -1,0 +1,93 @@
+{#
+default_version = "Laurent"
+
+[attributes]
+title = "September Song"
+style = "Jazz"
+composer = "Kurt Weill"
+poet = "Maxwell Anderson"
+typesetter = "Laurent Martelli"
+completion = "3"
+uuid = "ca670f4c-d4a0-11f1-8000-046874d194b7"
+structure = "AABA"
+
+[versions.Laurent]
+doChords = true
+doVoice = true
+doLyrics = false
+doLyricsmore = false
+doLyricsmoremore = false
+doChordBars = false
+doGuitar = false
+doExtra = false
+doPrep = false
+doOwn = false
+#}
+{% if part == "Vars" %}
+{% endif %}
+{% if part == "Doc" %}	DONE:
+	- converted the Laurent Martelli version from staging/openbook/laurent/september_song.ly.
+	TODO:
+	- check the tune and chords against a real book.
+	- the source has no tempo; adjust the tempo.
+	- add the lyrics.
+	- add youtube performances.
+{% endif %}
+{% if part == "ChordsLaurent" %}\chordmode {
+	\startChords
+	\startSong
+
+	\partial 2. s2. |
+
+	\myMark "A"
+	\startPart
+	f1:7 | f2:m7 bes:7 | c1*2:maj | \myEndLine
+	d1:7 | d2:m7.5- g:7.9+ | c1:maj | c:7 | \myEndLine
+	\endPart
+
+	\myMark "A"
+	\startPart
+	f1:7 | f2:m7 bes:7 | c1*2:maj | \myEndLine
+	d1:7 | d2:m7.5- g:7.9+ | c1:maj | c2:maj c:7.9+ | \myEndLine
+	\endPart
+
+	\myMark "B"
+	\startPart
+	f1*2:m7 | fis:dim7 | \myEndLine
+	f:m7 | fis1:dim7 | c:maj | \myEndLine
+	\endPart
+
+	\myMark "A"
+	\startPart
+	f1:7 | f2:m7 bes:7 | c1*2:maj | \myEndLine
+	d1:7 | d2:m7.5- g:7.9+ | c1:maj | c:7.9+ | \myEndLine
+	\endPart
+
+	\endSong
+	\endChords
+}
+{% endif %}
+{% if part == "VoiceLaurent" %}{
+	\tempo "Andante" 4 = 80
+	\time 4/4
+	\key c \major
+
+	\partial 2. c4 e b' |
+
+	% part "A"
+	a a a2 | r4 c,4 \tuplet 3/2 { c ees aes } | g4. g8~ g2 | r4 e8 e g4 c |
+	d1~ | d4 d,4 \tuplet 3/2 { d c d } | e4. e8~ e2 | r4 c8 c e4 b' |
+
+	% part "A"
+	a4. a8~ a2 | r4 c,8 c ees4 aes | g1 | r4 e4 g8 g c4 |
+	d1~ | d4 d,8 e f4 f | e1~ | e4 r c' c |
+
+	% part "B"
+	d c8 b c2~ | c c4 c | ees4. c8 c2~ | c r4 r8 c8 |
+	d2 c | r2 r4 r8 c | ees2 c | r4 c, e b' |
+
+	% part "A"
+	a4. a8~ a2 | r4 c,4 ees aes | g1 | r4 e8 e g4 c |
+	d2. a4 | c2 c | c1 | r1 |
+}
+{% endif %}

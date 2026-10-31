@@ -34,10 +34,23 @@ doGuitar = false
 doExtra = false
 doPrep = false
 doOwn = false
+
+[versions.Laurent]
+doChords = true
+doVoice = true
+doLyrics = false
+doLyricsmore = false
+doLyricsmoremore = false
+doChordBars = false
+doGuitar = false
+doExtra = false
+doPrep = false
+doOwn = false
 #}
 {% if part == "Vars" %}
 {% endif %}
 {% if part == "Doc" %}	DONE:
+	- converted the Laurent Martelli version from staging/openbook/laurent/but_not_for_me.ly (version Laurent).
 	- filled in the this tunes structure.
 	- filled in the meta data for this tune from the real book.
 	- added the real book epdf.
@@ -51,6 +64,7 @@ doOwn = false
 	- check the real book lyrics.
 	- heard the real book version to make sure it sounds ok.
 	TODO:
+	- Laurent version: bars 11 and 17 start with B natural in the source (over Bbmaj7/Fmaj7), check.
 	- bring in another version of this tune.
 {% endif %}
 {% if part == "ChordsReal" %}\chordmode {
@@ -148,5 +162,53 @@ doOwn = false
 	and al -- __ so lack a day
 
 	Al -- though I
+}
+{% endif %}
+{% if part == "ChordsLaurent" %}\chordmode {
+	\startChords
+	\startSong
+
+	s1 | \myEndLine
+
+	\myMark "A"
+	\startPart
+	\repeat volta 2 {
+		g1:7 | c:7 | f:maj7 | d:7.9+ | \myEndLine
+		g:7 | c:7 | c:m7 | f:7 | \myEndLine
+		bes:maj7 | ees:7.11+ |
+	} \alternative {
+		{
+			f1:maj7 | d:m7 | g1*2:7 | g1:m7 | c:7 | \myEndLineVoltaNotLast
+		}
+		{
+			f1:maj7 | d:m7 | g:m7 | c:7 | f:maj7 | d:7.9+ | \myEndLineVoltaLast
+		}
+	}
+	\endPart
+
+	\endSong
+	\endChords
+}
+{% endif %}
+{% if part == "VoiceLaurent" %}{
+	\tempo "Allegro" 4 = 150
+	\time 4/4
+	\key f \major
+
+	r8 g'4. a4 g |
+
+	% part "A"
+	\repeat volta 2 {
+		a2 g4 f~ | f g a g | a1 | r4 g a g |
+		a2 g4 f~ | f g a g | a1 | r8 a4. bes4 c |
+		cis2 d4 f | r g, a bes |
+	} \alternative {
+		{
+			b2 c4 f | r f, g a | a2 bes4 f' | r f d bes | g1 | r4 g a g |
+		}
+		{
+			b2 c4 g' | r f d bes | a1 | g | f | r |
+		}
+	}
 }
 {% endif %}

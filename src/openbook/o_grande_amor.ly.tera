@@ -1,0 +1,89 @@
+{#
+default_version = "Laurent"
+
+[attributes]
+title = "O Grande Amor"
+style = "Jazz"
+composer = "Antonio Carlos Jobim"
+poet = "Vinicius DeMoraes"
+piece = "Bossa Nova"
+copyright = "1965 Antonio Carlos Jobim and Vinicius DeMoraes"
+typesetter = "Laurent Martelli"
+completion = "3"
+uuid = "8791b9ba-d4a0-11f1-8000-046874d194b7"
+structure = "AABA"
+
+[versions.Laurent]
+doChords = true
+doVoice = true
+doLyrics = false
+doLyricsmore = false
+doLyricsmoremore = false
+doChordBars = false
+doGuitar = false
+doExtra = false
+doPrep = false
+doOwn = false
+#}
+{% if part == "Vars" %}
+{% endif %}
+{% if part == "Doc" %}	DONE:
+	- converted the Laurent Martelli version from staging/openbook/laurent/o_grande_amor.ly.
+	TODO:
+	- check the tune and chords against a real book.
+	- the tempo is the midi tempo of the source; check it.
+	- add the lyrics.
+	- add youtube performances.
+{% endif %}
+{% if part == "ChordsLaurent" %}\chordmode {
+	\startChords
+	\startSong
+
+	\myMark "Intro"
+	\startPart
+	\repeat volta 2 {
+		a1:m7 | a:m6 | d:m7/+a | a:m6 | \myEndLine
+	}
+	\endPart
+
+	\myMark "A"
+	\startPart
+	\repeat volta 2 {
+		a1:m7 | gis:dim7 | g:m7 | c:7 | \myEndLine
+		b:m7.5- | e:7.9+ | a:m7 | a:7.9+ | \myEndLine
+		d:m7 | g:7 | c:maj | f:maj | \myEndLine
+		bes1*2:maj | b1:m7.5- | e:7.9+ | \myEndLine
+		a1:m7 | gis:dim7 | g:m7 | c:7 | \myEndLine
+		b:m7.5- | e:7.9+ | e:m7.5- | a:7.9+ | \myEndLine
+		d:m7 | ees:dim7 | a:m7/+e | f:maj | \myEndLine
+		bes:maj | b2:m7.5- e:7.9+ | a1:m7 | e:7.9+ | \myEndLine
+	}
+	\endPart
+
+	\endSong
+	\endChords
+}
+{% endif %}
+{% if part == "VoiceLaurent" %}{
+	\tempo "Allegro" 4 = 144
+	\time 4/4
+	\key c \major
+
+	% part "Intro"
+	\repeat volta 2 {
+		s1*4 |
+	}
+
+	% part "A"
+	\repeat volta 2 {
+		a''2. f4 | e2~ e8 d4 c8~ | c1 | r4 d8 c~ c d4 b8~ |
+		b2 c2 | b4. b8~ b d4 c8~ | c c4 c8~ c2 | r1 |
+		d2. a'4 | g2~ g8 f4 c8~ | c2 \tuplet 3/2 { d4 c d } | e8 g4 f8~ f e4 d8~ |
+		d1 | r4 f8 e~ e d4 c8 | c2 \tuplet 3/2 { b4 ais b } | d1 |
+		a'2. f4 | e2~ e8 d4 c8~ | c1 | r4 d8 c~ c d4 b8~ |
+		b1 | r4 c8 b~ b c4 bes8~ | bes1 | r4 c8 bes~ bes c4 a8~ |
+		a1 | r4 b8 a~ a b4 a8 | a1 | r4 b8 c~ c e4 d8~ |
+		d1 | r4 e8 gis~ gis b4 a8~ | a1~ | a1 |
+	}
+}
+{% endif %}

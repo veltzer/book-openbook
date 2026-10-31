@@ -1,0 +1,64 @@
+{#
+default_version = "Vicnet"
+
+[attributes]
+title = "Tenor Madness"
+style = "Jazz"
+composer = "Sonny Rollins"
+typesetter = "Vicnet"
+completion = "3"
+uuid = "69309414-d4a0-11f1-8000-046874d194b7"
+structure = "Blues"
+
+[versions.Vicnet]
+doChords = true
+doVoice = true
+doLyrics = false
+doLyricsmore = false
+doLyricsmoremore = false
+doChordBars = false
+doGuitar = false
+doExtra = false
+doPrep = false
+doOwn = false
+#}
+{% if part == "Vars" %}
+{% endif %}
+{% if part == "Doc" %}	DONE:
+	- converted the Vicnet version from staging/openbook/TenorMadness.txt.
+	TODO:
+	- check the tune and chords against a real book.
+	- add youtube performances.
+	- the source has no tempo marking; the tempo is a guess.
+	- bar 9 is C(maj7) G7 in the source, where a Bb blues usually has Cm7; check it.
+{% endif %}
+{% if part == "ChordsVicnet" %}\chordmode {
+	\startChords
+	\startSong
+
+	\partial 8 s8 |
+
+	\myMark "A"
+	\startPart
+	bes1:7 | ees | bes:7 | f2:m7 bes:7 | \myEndLine
+	ees1:7 | ees:7 | bes:7 | bes:7 | \myEndLine
+	c2:maj g:7 | c:m7 f:7 | bes1:7 | bes:7 | \myEndLine
+	\endPart
+
+	\endSong
+	\endChords
+}
+{% endif %}
+{% if part == "VoiceVicnet" %}{
+	\tempo "Moderato" 4 = 160
+	\time 4/4
+	\key bes \major
+
+	\partial 8 e'8 |
+
+	% part "A"
+	d8 bes4 g8 bes4 r8 des~ | des bes4 g8 bes4 r8 d | d bes4 g8 bes c bes g | bes c bes bes r4 r8 des~ |
+	des bes4 g8 bes4 r8 des~ | des bes4 g8 bes4 r8 d~ | d bes4 g8 bes c bes g | bes c bes bes r4 r8 c~ |
+	c g4 c8 b g ees c | bes' g gis a r4 r8 d~ | d bes4 g8 bes c bes g | bes c bes bes r2 |
+}
+{% endif %}

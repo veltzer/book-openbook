@@ -35,10 +35,23 @@ doGuitar = false
 doExtra = false
 doPrep = false
 doOwn = false
+
+[versions.Laurent]
+doChords = true
+doVoice = true
+doLyrics = false
+doLyricsmore = false
+doLyricsmoremore = false
+doChordBars = false
+doGuitar = false
+doExtra = false
+doPrep = false
+doOwn = false
 #}
 {% if part == "Vars" %}
 {% endif %}
 {% if part == "Doc" %}	DONE:
+	- converted the Laurent Martelli version from staging/openbook/laurent/cherokee.ly (version Laurent).
 	- added the meta data from the fake book.
 	- put in the tunes structure.
 	- put in the chords (fake book).
@@ -46,6 +59,7 @@ doOwn = false
 	- added youtube performances.
 	- wrote out the D.C. al Coda of the fake book as a last A section with the coda.
 	TODO:
+	- Laurent version: the source octaves drifted at the 2nd ending and the bridge, moved them up an octave (g' and dis'), check against a recording.
 	- add the lyrics.
 	- check the chords (fake book).
 	- check the tune (fake book).
@@ -118,5 +132,77 @@ doOwn = false
 	% part "A"
 	d1 | f2 g | bes1 | g1 | f1 | d2 f | d1 | c1 | bes1 | d2 f | d'1 | bes1 |
 	g1 | d1 | bes1~ | bes1 |
+}
+{% endif %}
+{% if part == "ChordsLaurent" %}\chordmode {
+	\startChords
+	\startSong
+
+	\myMark "A"
+	\startPart
+	\repeat volta 2 {
+		bes1.:maj7 f2:7 | f1:m7 | bes:7 | \myEndLine
+		ees1*2:maj7 | aes1*2:7 | \myEndLine
+		bes1. d2:m7 | c1*2:7 | \myEndLine
+	} \alternative {
+		{
+			c1:m7 | d2:m7.5- g:7 | c1:m7 | f:7 | \myEndLineVoltaNotLast
+		}
+		{
+			c1:m7 | f:7 | bes1*2:maj7 | \myEndLineVoltaLast
+		}
+	}
+	\endPart
+
+	\myMark "B"
+	\startPart
+	cis1:m7 | fis:7 | b1*2:maj7 | \myEndLine
+	b1:m7 | e:7 | a1*2:maj7 | \myEndLine
+	a1:m7 | d:7 | g1*2:maj7 | \myEndLine
+	g1:m7 | c:7 | c:m7 | f:7 | \myEndLine
+	\endPart
+
+	\myMark "A"
+	\startPart
+	bes1.:maj7 f2:7 | bes1*2:7 | \myEndLine
+	ees:maj7 | aes:7 | \myEndLine
+	bes1. d2:m7 | c1*2:7 | \myEndLine
+	c1:m7 | f:7 | bes1*2:maj7 | \myEndLine
+	\endPart
+
+	\endSong
+	\endChords
+}
+{% endif %}
+{% if part == "VoiceLaurent" %}{
+	\tempo "Allegro" 4 = 200
+	\time 4/4
+	\key bes \major
+
+	% part "A"
+	\repeat volta 2 {
+		d1 | f2 g | bes1 | g |
+		f | d2 f | d1 | c |
+		bes | d2 f | d'1 | bes |
+	} \alternative {
+		{
+			g | f2 d | c1 | cis |
+		}
+		{
+			g' | d | bes~ | bes |
+		}
+	}
+
+	% part "B"
+	dis'1~ | dis2 cis | cis4 ais fis2~ | fis cis' |
+	cis4 a fis2~ | fis b | e,1~ | e |
+	b'~ | b2 a | a4 fis d2~ | d a' |
+	a4 f d2~ | d g | c,1 | cis |
+
+	% part "A"
+	d1 | f2 g | bes1 | g |
+	f | d2 f | d1 | c |
+	bes | d2 f | d'1 | bes |
+	g | d | bes~ | bes |
 }
 {% endif %}

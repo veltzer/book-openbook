@@ -1,0 +1,127 @@
+{#
+default_version = "Laurent"
+
+[attributes]
+title = "Whisper Not"
+style = "Jazz"
+composer = "Benny Golson"
+typesetter = "Laurent Martelli"
+completion = "3"
+uuid = "156811a2-d49f-11f1-8000-046874d194b7"
+structure = "AABA"
+
+[versions.Laurent]
+doChords = true
+doVoice = true
+doLyrics = false
+doLyricsmore = false
+doLyricsmoremore = false
+doChordBars = false
+doGuitar = false
+doExtra = false
+doPrep = false
+doOwn = false
+#}
+{% if part == "Vars" %}
+{% endif %}
+{% if part == "Doc" %}	DONE:
+	- converted the Laurent Martelli version from staging/openbook/laurent/whisper_not.ly.
+	TODO:
+	- check the tune and chords against a real book.
+	- the last chord bar of the source is Fm7 (3 beats) and Bb7 (2 beats), I made the Bb7 one beat.
+	- the source has no tempo, adjust the tempo.
+	- add youtube performances.
+{% endif %}
+{% if part == "ChordsLaurent" %}\chordmode {
+	\startChords
+	\startSong
+
+	\partial 4 s4 |
+
+	\myMark "A"
+	\startPart
+	\repeat volta 2 {
+		c2:m7 c:m7/bes | a:m7.5- d:7.9- | g:m7 g:m7/f | e:m7.5- a:7.9- | \myEndLine
+	} \alternative {
+		{
+			\grace s8 d2:m7 b:m7.5- | e:m7 a:7.9- | d:m7 e:m7 | f:m7 g:7.9- | \myEndLineVoltaNotLast
+		}
+		{
+			\grace s8 d2:m7 d:m7/c | e:m7 a:7.9- | d:m7 e:m7 | f:m7 bes:7 | \myEndLineVoltaLast
+		}
+	}
+	\endPart
+
+	\myMark "B"
+	\startPart
+	a1:m7.5- | d:7.9- | g:m7 | c:7 | \myEndLine
+	e1:m7.5- | a:13 | d:m7.5- | g:13 | \myEndLine
+	\endPart
+
+	\myMark "A"
+	\startPart
+	c2:m7 c:m7/bes | a:m7.5- d:7.9- | g:m7 g:m7/f | e:m7.5- a:7.9- | \myEndLine
+	\grace s8 d2:m7 b:m7.5- | e:m7 a:7.9- | d1:m7 | aes2:7 g:7.5+ | \myEndLine
+	\endPart
+
+	\myMark "C"
+	\startPart
+	\repeat volta 2 {
+		c2:m7 c:m7/bes | a:m7.5- d:7.9- | g:m7 g:m7/f | e:m7.5- a:7 | \myEndLine
+		d2:m7 b:m7.5- | e:m7 a:7 | d:m7 e:m7 |
+	} \alternative {
+		{
+			g1:7 | \myEndLineVoltaNotLast
+		}
+		{
+			f2.:m7 bes4:7 | \myEndLineVoltaLast
+		}
+	}
+	\endPart
+
+	\endSong
+	\endChords
+}
+{% endif %}
+{% if part == "VoiceLaurent" %}{
+	\tempo "Moderato" 4 = 132
+	\time 4/4
+	\key f \major
+
+	\partial 4 c8 g' ~ |
+
+	% part "A"
+	\repeat volta 2 {
+		g2. c,8 g' ~ | g2. a8 bes ~ | bes2. a8 g | bes2. \tuplet 3/2 { a16 bes a } g8 |
+	} \alternative {
+		{
+			\grace gis8( a4) d8 gis, ~ \tuplet 3/2 { gis16 bes gis } f8 g4 ~ | g2. f8 d ~ | d2 e4. f8 ~ | f2. c8 g'\laissezVibrer |
+		}
+		{
+			\grace gis8( a4) d8 gis, ~ gis16 bes gis f g4 ~ | g2. e8 f ~ | f2 g4. aes8 ~ | aes1 |
+		}
+	}
+
+	% part "B"
+	r4 r8 g c8. g16 \tuplet 3/2 { f8 ees fis ~ } | fis2 g4 a8 bes ~ | bes2 ~ \tuplet 3/2 { bes4 c a } | bes2 ~ \tuplet 3/2 { bes4 c a } |
+	bes2 ~ bes8 d, g bes | bes2. a4 | aes2 ~ aes8 c, f aes | aes2. c,8 g' ~ |
+
+	% part "A"
+	g2. c,8 g' ~ | g2. a8 bes ~ | bes2. a8 g | bes2. \tuplet 3/2 { a16 bes a } g8 |
+	\grace gis8 a4 d8 gis, ~ gis16 bes gis f g4 ~ | g2. f8 d ~ | d1 ~ | d2 r |
+
+	% part "C"
+	\repeat volta 2 {
+		r4 \tuplet 3/2 { c8 ees g } c8. ees16 c8. g16 | c8. g16 ees8. c16 fis2 |
+		r4 \tuplet 3/2 { bes,8 d g } bes8. d16 bes8. g16 | a8. d,16 g8. bes16 cis,8. e16 a8. g16 |
+		a8 f r4 r8 a, d8. f16 | aes8( f g4) r8 a, d8. f16 | g8 d f2. |
+	} \alternative {
+		{
+			r2 \tuplet 3/2 { g8 aes g ~ } g4 |
+		}
+		{
+			f2.\repeatTie r4 |
+		}
+	}
+}
+{% endif %}

@@ -1,0 +1,124 @@
+{#
+default_version = "Laurent"
+
+[attributes]
+title = "Full House"
+style = "Jazz"
+composer = "Wes Montgomery"
+typesetter = "Laurent Martelli"
+completion = "3"
+uuid = "8aa22481-d49f-11f1-8000-046874d194b7"
+
+[versions.Laurent]
+doChords = true
+doVoice = true
+doLyrics = false
+doLyricsmore = false
+doLyricsmoremore = false
+doChordBars = false
+doGuitar = false
+doExtra = false
+doPrep = false
+doOwn = false
+#}
+{% if part == "Vars" %}
+{% endif %}
+{% if part == "Doc" %}	DONE:
+	- converted the Laurent Martelli version from staging/openbook/laurent/full_house.ly (transposed to the concert key, F minor, as the staged file did).
+	TODO:
+	- check the tune and chords against a real book.
+	- the staged file has a D major key signature (C major after its transposition), which does not fit the
+		tune; a three flat key signature is used here.
+	- the octave of the theme after the first and second endings follows the old lilypond rule (octave taken from
+		the end of the repeated section); check it against a recording.
+	- the staged file has no tempo marking; the tempo comes from its midi setting.
+	- add youtube performances.
+{% endif %}
+{% if part == "ChordsLaurent" %}\chordmode {
+	\startChords
+	\startSong
+
+	\myMark "Intro"
+	\startPart
+	s4 f2:m7 | \myEndLine
+	\endPart
+
+	\myMark "A"
+	\startPart
+	\repeat volta 2 {
+		s8 f4.:m7 s4 | s4 bes2/f | s8 f4.:m7 s4 | s4. bes/f | \myEndLine
+		s4 f2:m7 | s8 bes2/f s8 | s8 f4.:m7 s4 |
+	} \alternative {
+		{
+			s8 bes2:7 s8 | \myEndLineVoltaNotLast
+		}
+		{
+			s2. | \myEndLineVoltaLast
+		}
+	}
+	\endPart
+
+	\myMark "B"
+	\startPart
+	s8 f:m7 s2 | s8 bes:7 s2 | s8 f:m7 s2 | s8 bes:7 s2 | \myEndLine
+	s8 f:m7 s2 | s8 bes:7 s2 | s8 des:7 s2 | s4 c2:7 | \myEndLine
+	s8 f:m7 s2 | s8 bes:7 s2 | s8 f:m7 s2 | s8 bes:7 s2 | \myEndLine
+	s8 f:m7 s2 | s8 bes:7 s2 | des4.:7 c:7 | s8 f:7 s2 | \myEndLine
+	\endPart
+
+	\myMark "C"
+	\startPart
+	bes2.:m7 | bes4.:m7 ees:7 | aes2.:maj7 | aes4.:maj7 des:7 | \myEndLine
+	ges2.:maj7 | s4 b2:7 | g2.:m7 | c:7 | \myEndLine
+	\endPart
+
+	\myMark "B"
+	\startPart
+	s8 f:m7 s2 | s8 bes:7 s2 | s8 f:m7 s2 | s8 bes:7 s2 | \myEndLine
+	s8 f:m7 s2 | s8 bes:7 s2 | s8 des:7 s2 | s4 c2:7 | \myEndLine
+	s8 f:m7 s2 | s8 bes:7 s2 | s8 f:m7 s2 | s8 bes:7 s2 | \myEndLine
+	s8 f:m7 s2 | s8 bes:7 s2 | des4.:7 c:7 | f2.:7 | \myEndLine
+	\endPart
+
+	\endSong
+	\endChords
+}
+{% endif %}
+{% if part == "VoiceLaurent" %}{
+	\tempo "Allegro" 4 = 160
+	\time 3/4
+	\key ees \major
+
+	% part "Intro"
+	r8 c c ees f ees |
+
+	% part "A"
+	\repeat volta 2 {
+		f c ees f r4 | r g g8 c, | ees ees c ees r4 | r8 c4 ees c8 |
+		f c ees f r g~ | g f4 ees8 c bes | c bes aes f r4 |
+	} \alternative {
+		{
+			r8 c'4 ees c8 |
+		}
+		{
+			r2 r4 |
+		}
+	}
+
+	% part "B"
+	f8 aes r2 | f8 bes r4 r8 f | r4 aes8 f aes4 | bes8 aes bes4 aes |
+	f8 aes r2 | f8 bes r4 r8 f~ | f aes4 f8 aes4 | r c,2 |
+	f8 aes r2 | f8 bes r4 r8 f~ | f aes4 f aes8 | bes aes bes4 aes |
+	f8 aes r2 | f8 bes r4 r8 c, | f aes g ees4 c8 | f g4 aes c8 |
+
+	% part "C"
+	f2.~ | f4. g4 ees8 | c2.~ | c4. f4 des8 |
+	bes2. | r4 g8 aes bes b | c2. | r4 c2-> |
+
+	% part "B"
+	f,8 aes r2 | f8 bes r4 r8 f~ | f aes4 f8 aes4 | bes8 aes bes4 aes |
+	f8 aes r2 | f8 bes r4 r8 f~ | f aes4 f8 aes4 | r c,2 |
+	f8 aes r2 | f8 bes r4 r8 f~ | f aes4 f8 aes4 | bes8 aes bes4 aes |
+	f8 aes r2 | f8 bes r4 r8 <f d>8 | f aes g ees4 c8 | f2. |
+}
+{% endif %}

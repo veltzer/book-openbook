@@ -1,0 +1,70 @@
+{#
+default_version = "Laurent"
+
+[attributes]
+title = "Las Vegas Tango"
+style = "Jazz"
+composer = "Gil Evans"
+typesetter = "Laurent Martelli"
+completion = "3"
+uuid = "361a7900-d4a0-11f1-8000-046874d194b7"
+
+[versions.Laurent]
+doChords = true
+doVoice = true
+doLyrics = false
+doLyricsmore = false
+doLyricsmoremore = false
+doChordBars = false
+doGuitar = false
+doExtra = false
+doPrep = false
+doOwn = false
+#}
+{% if part == "Vars" %}
+{% endif %}
+{% if part == "Doc" %}	DONE:
+	- converted the Laurent Martelli version from staging/openbook/laurent/las_vegas_tango.ly (its repeated phrases are written out here).
+	TODO:
+	- check the tune and chords against a real book.
+	- the source has no tempo marking, the tempo is a guess.
+	- add youtube performances.
+{% endif %}
+{% if part == "ChordsLaurent" %}\chordmode {
+	\startChords
+	\startSong
+
+	\myMark "Intro"
+	\startPart
+	s1 | \myEndLine
+	\endPart
+
+	\myMark "A"
+	\startPart
+	\repeat volta 2 {
+		e1*4:m7 | \myEndLine
+		a1*2:m7 | e1*2:m7 | \myEndLine
+		a1*2:m7 | e1*2:m7 | \myEndLine
+	}
+	\endPart
+
+	\endSong
+	\endChords
+}
+{% endif %}
+{% if part == "VoiceLaurent" %}{
+	\tempo "Moderato" 4 = 120
+	\time 4/4
+	\key g \major
+
+	% part "Intro"
+	r4 g'8 g a b4 b16 a |
+
+	% part "A"
+	\repeat volta 2 {
+		b1 ~ | b4 g8 g a b4 b16 a | b1 ~ | b4 b8 b d e4 e16 d |
+		e1 ~ | e4 g,8 g a b4 b16 a | b1 ~ | b4 b8 b d e4 e16 d |
+		e1 ~ | e4 g,8 g a b4 b16 a | b1 ~ | b4 g8 g a b4 b16 a |
+	}
+}
+{% endif %}

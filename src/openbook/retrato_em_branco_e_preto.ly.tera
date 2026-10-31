@@ -1,0 +1,79 @@
+{#
+default_version = "Anon"
+
+[attributes]
+title = "Retrato Em Branco E Preto"
+subtitle = "Zingaro"
+style = "Bossa Nova"
+composer = "Antonio Carlos Jobim"
+poet = "Chico Buarque"
+piece = "Romantic"
+typesetter = "Anonymous <anonymous@zivlempel.org>"
+completion = "3"
+uuid = "4ccddaf2-d4a0-11f1-8000-046874d194b7"
+structure = "AB"
+
+[versions.Anon]
+doChords = true
+doVoice = true
+doLyrics = false
+doLyricsmore = false
+doLyricsmoremore = false
+doChordBars = false
+doGuitar = false
+doExtra = false
+doPrep = false
+doOwn = false
+#}
+{% if part == "Vars" %}
+{% endif %}
+{% if part == "Doc" %}	DONE:
+	- converted the Anonymous <anonymous@zivlempel.org> version from staging/openbook/anon/Zingaro.ly.
+	TODO:
+	- check the tune and chords against a real book.
+	- add youtube performances.
+	- the source marks melody bars 25-32 "(end tag)" while its chords run continuously through 32 bars; check the form against a recording.
+	- add the lyrics.
+{% endif %}
+{% if part == "ChordsAnon" %}\chordmode {
+	\startChords
+	\startSong
+
+	\myMark "A"
+	\startPart
+	g1:m | s | d:7/fis | s | \myEndLine
+	f:m6 | e:7 | ees:5+ | ees:6.7+ | \myEndLine
+	c:m7 | d:7.9+ | bes:maj | bes:6 | \myEndLine
+	a:7.9.13 | a:7.13- | d:maj | aes:7.11+ | \myEndLine
+	\endPart
+
+	\myMark "B"
+	\startPart
+	g1:m | s | d:7/fis | s | \myEndLine
+	f:m6 | e:7 | ees:5-.7+ | ees:maj | \myEndLine
+	c:m7 | cis:dim7 | g:m/d | ees:maj | \myEndLine
+	c:m7 | d2:maj9 d:7 | g1:m | d:7 | \myEndLine
+	\endPart
+
+	\endSong
+	\endChords
+}
+{% endif %}
+{% if part == "VoiceAnon" %}{
+	\tempo "Romantic" 4 = 96
+	\time 4/4
+	\key bes \major
+
+	% part "A"
+	d'4. cis8~ cis ees4 c8 | d8 cis4 ees8~ ees c4 d8~ | d4. cis8~ cis ees4 c8 | d8 cis4 ees8~ ees c4 d8~ |
+	d4. cis8~ cis ees4 c8 | d8 cis4 ees8~ ees c4 d8~ | d1 | r |
+	f4. ees8~ ees fis4 d8 | f8 ees4 fis8~ fis d4 f8~ | f4. d8~ d g4 d8 | a'8 d,4 bes'8~ bes d,4 c'8~ |
+	c4. bes8~ bes cis4 a8 | c8 bes4 cis8~ cis a4 cis8~ | cis4. b8~ b d4 c8 | d8 c4 aes8~ aes ees4 d8~ |
+
+	% part "B"
+	d4. cis8~ cis ees4 c8 | d bes4 c8~ c a4 bes8~ | bes4. a8~ a c4 a8 | bes8 a4 ees'8~ ees cis4 d8~ |
+	d4. c8~ c ees4 cis8 | d8 c4 ees8~ ees d4 g8~ | g1 | r |
+	g4._\markup { \bold "(end tag)" } fis8~ fis aes4 g8 | a8 gis4 bes8~ bes a4 c8~ | c4. bes8~ bes cis4 a8 | c8 bes4 a8~ a g4 f8~ |
+	f4. ees8~ ees fis4 d8 | f8 ees4 fis8~ fis d4 g8~ | g1_\markup { \bold "(end)" }~ | g4 r r2 |
+}
+{% endif %}

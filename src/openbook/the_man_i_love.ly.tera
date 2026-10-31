@@ -45,6 +45,18 @@ doGuitar = false
 doExtra = false
 doPrep = false
 doOwn = false
+
+[versions.Laurent]
+doChords = true
+doVoice = true
+doLyrics = false
+doLyricsmore = false
+doLyricsmoremore = false
+doChordBars = false
+doGuitar = false
+doExtra = false
+doPrep = false
+doOwn = false
 #}
 {% if part == "Vars" %}
 {% endif %}
@@ -65,6 +77,8 @@ doOwn = false
 	- added the galit version of the tune. (copied from the real book version).
 	- added the galit version of the lyrics.
 	- checked all the parts of the galit version.
+	- converted the Laurent Martelli version from staging/openbook/laurent/the_man_i_love.ly (as the Laurent version).
+	- the Laurent version source has the bridge pickup as ees, which in current lilypond puts the bridge and the last A an octave too low; entered as ees.
 	TODO:
 	- add copyright to this tune.
 	- bring in another version of this (from where?)
@@ -300,5 +314,69 @@ doOwn = false
 
 	% part "Volta"
 	_ בי?
+}
+{% endif %}
+{% if part == "ChordsLaurent" %}\chordmode {
+	\startChords
+	\startSong
+
+	\myMark "A"
+	\startPart
+	\repeat volta 2 {
+		ees1:maj7 | ees:m7 | bes:m7 | c:7.5+ | \myEndLine
+		aes:m6 |
+	} \alternative {
+		{
+			bes1:7 | ees2:maj7 aes:maj7 | f:m7 bes:7.9- | \myEndLineVoltaNotLast
+		}
+		{
+			bes1:7 | f2:m7 e:maj7 | ees:maj7 d4:m7.5- g:7.9- | \myEndLineVoltaLast
+		}
+	}
+	\endPart
+
+	\myMark "B"
+	\startPart
+	c2:m c:m7 | d:7 g:7 | c1:m7 | g:7 | \myEndLine
+	c2:m c:m7 | d:7 g:7 | c2:m g4:m7 c:7 | f2.:m9 e4:maj7 | \myEndLine
+	\endPart
+
+	\myMark "A"
+	\startPart
+	ees1:maj7 | ees:m7 | bes:m7 | c:7.5+ | \myEndLine
+	aes:m6 | f1:m7 | bes2:7 e:maj7 | ees1:maj7 | \myEndLine
+	\endPart
+
+	\endSong
+	\endChords
+}
+{% endif %}
+{% if part == "VoiceLaurent" %}{
+	\tempo "Moderato" 4 = 100
+	\time 4/4
+	\key ees \major
+
+	% part "A"
+	\repeat volta 2 {
+		r8 bes' c bes c bes des4 | r8 bes c bes des2 |
+		r8 bes c bes c bes des4 | r8 aes bes aes c2 |
+		r8 aes bes aes bes aes ces4 |
+	} \alternative {
+		{
+			r8 g aes g bes4 aes | g2 g | g1 |
+		}
+		{
+			r8 g aes g bes4 g | ees2 ees | ees r |
+		}
+	}
+
+	% part "B"
+	ees8 f g fis g4 ees'4 | ees d bes b | d c g a | b1 |
+	ees,8 f g fis g4 ees'4 | ees d bes b | d c bes aes | g f g aes |
+
+	% part "A"
+	r8 bes c bes c bes des4 | r8 bes c bes des2 |
+	r8 bes c bes c bes des4 | r8 aes bes aes c2 |
+	r8 aes bes aes bes aes ces4 | r8 g aes g bes4 c! | ees2 ees | g1 |
 }
 {% endif %}

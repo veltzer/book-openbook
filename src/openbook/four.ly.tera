@@ -32,10 +32,23 @@ doGuitar = false
 doExtra = false
 doPrep = false
 doOwn = false
+
+[versions.Laurent]
+doChords = true
+doVoice = true
+doLyrics = false
+doLyricsmore = false
+doLyricsmoremore = false
+doChordBars = false
+doGuitar = false
+doExtra = false
+doPrep = false
+doOwn = false
 #}
 {% if part == "Vars" %}
 {% endif %}
 {% if part == "Doc" %}	DONE:
+	- converted the Laurent Martelli version from staging/openbook/laurent/four.ly (transposed to the concert key as the staged file did; the staged unfolded repeat is written as one repeat with two endings, and its outer repeat as D.C. al Coda).
 	- added the meta data from the fake book.
 	- put in the tunes structure.
 	- put in the chords (fake book).
@@ -93,5 +106,63 @@ doOwn = false
 			bes'4 g8 bes b! e,! dis4 | c'4 aes8 f d'4 bes8 ees | r1 | r1 |
 		}
 	}
+}
+{% endif %}
+{% if part == "ChordsLaurent" %}\chordmode {
+	\startChords
+	\startSong
+
+	\partial 4. s4. |
+
+	\myMark "A"
+	\startPart
+	\repeat volta 2 {
+		ees1*2:maj7 | ees1:m7 | aes:7 | \myEndLine
+		f1*2:m7 | aes1:m7 | des:7 | \myEndLine
+		ees1:maj7/g | ges2:m7 ces:7 | f1:m7 | d2:m7.5- g:7.5- | \myEndLine
+	} \alternative {
+		{
+			ees1:maj7/g | ges2:m7 ces:7 | f2.:m7 s8 bes8:7 | s1 | \myEndLineVoltaNotLast
+		}
+		{
+			g2:m7 ges:m7 | f:m7 bes4.:7 ees8:6 | s1 | f2:m7 bes:7 | \myEndLineVoltaLast
+		}
+	}
+	\endPart
+
+	\myMark "Coda"
+	\startPart
+	g2:m7 ges:m7 | f:m7 bes:7 | a1:m7.5- | d:7 | \myEndLine
+	g2:m7 ges:m7 | f:m7 bes4.:7 ees8 | s2 ees:m7 | s1 | \myEndLine
+	\endPart
+
+	\endSong
+	\endChords
+}
+{% endif %}
+{% if part == "VoiceLaurent" %}{
+	\tempo "Allegro" 4 = 178
+	\time 4/4
+	\key ees \major
+
+	\partial 4. bes8 c d |
+
+	% part "A"
+	\repeat volta 2 {
+		r bes c d r bes c d | r f ees d r bes c des~ | des1 | r2 r8 ees f g |
+		r ees f g r ees f g | r bes aes g r ees f ges~ | ges1 | r2 f8 g aes a |
+		bes2 ees,8 g bes b | r e,4. ees2 | r8 c'4. bes4 aes8 g~ | g2 r8 f g aes |
+	} \alternative {
+		{
+			bes2 ees,8 g bes b~ | b4 e,8 ees~ ees2 | r8 c'4. bes4 aes8 g-^ | r2 r8 bes, c d |
+		}
+		{
+			bes'4^\markup {To Coda \musicglyph #"scripts.coda"} g8 bes b e, ees4 | c'!4 aes8 f d'4 bes8 ees-^ | r1 | r1^\markup {D.C. al Coda} |
+		}
+	}
+
+	% part "Coda"
+	bes2 b4. c8~ | c4. d8~ d4 bes8 f'~ | f4 ees8 d c bes a g | fis4 r8 ees' d4 c8 bes~ |
+	bes4 g8 bes b e, ees4 | c' aes8 f d'4 bes8 ees-^ | r2 r8 bes, ees ges~ | ges ees ges2.\fermata |
 }
 {% endif %}

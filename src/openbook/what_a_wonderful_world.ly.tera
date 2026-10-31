@@ -35,6 +35,19 @@ doGuitar = false
 doExtra = false
 doPrep = false
 doOwn = false
+
+[versions.Laurent]
+doChords = true
+doVoice = true
+doLyrics = true
+doLyricsmore = false
+doLyricsmoremore = false
+doChordBars = false
+doGuitar = false
+doExtra = false
+doPrep = false
+doOwn = false
+
 #}
 {% if part == "Vars" %}
 {% endif %}
@@ -50,6 +63,7 @@ doOwn = false
 	- checked the lyrics from the fake book.
 	- heard the tune to make sure it sounds ok.
 	- added you tube performances and lyrics url.
+	- added the Laurent Martelli version (version Laurent) from staging/openbook/laurent/what_a_wonderful_world.ly; the source has 'bes,' in bars 20 and 22 (an obvious typo), I put the B flat above middle C; the piano part of the source is not put in.
 	TODO:
 	- get another version of this tune from somewhere.
 {% endif %}
@@ -134,5 +148,85 @@ doOwn = false
 	They'll learn much more than I'll __ ev -- er know, __
 	and I think __ to my -- self What A Won -- der -- ful World. __
 	Yes, I think to my -- self What A Won -- der -- ful World. __
+}
+{% endif %}
+{% if part == "ChordsLaurent" %}\chordmode {
+	\startChords
+	\startSong
+
+	\myMark "Intro"
+	\startPart
+	s1*2 | \myEndLine
+	\endPart
+
+	\myMark "A"
+	\startPart
+	f2 a:m | bes a:m | g:m7 f | a:7 d:m | \myEndLine
+	des1 | c2:7.11 c:7 | f f:5+ | bes:maj7 c:7 | \myEndLine
+	\endPart
+
+	\myMark "A"
+	\startPart
+	f2 a:m | bes a:m | g:m7 f | a:7 d:m | \myEndLine
+	des1 | c2:7.11 c:7 | f bes | bes f | \myEndLine
+	\endPart
+
+	\myMark "B"
+	\startPart
+	c1:7 | f | c:7 | f | \myEndLine
+	d2:m c | d:m c | d:m fis:dim | g4:m7 fis:dim c2:7 | \myEndLine
+	\endPart
+
+	\myMark "A"
+	\startPart
+	f2 a:m | bes a:m | g:m7 f | a:7 d:m | \myEndLine
+	des1 | c2:7.11 c:7 | f a:m7.5- | d1:7 | \myEndLine
+	g1:m7 | s2 c:7.9- | f bes:6 | s f | \myEndLine
+	\endPart
+
+	\endSong
+	\endChords
+}
+{% endif %}
+{% if part == "VoiceLaurent" %}{
+	\tempo "Andante" 4 = 90
+	\time 4/4
+	\key f \major
+
+	% part "Intro"
+	r1 | r2 r4 c8 e |
+
+	% part "A"
+	f4. a8 c2 | r8 d d d c2 | r8 bes bes bes a2 | r8 g g g f4 ~ \tuplet 3/2 { f8 f f } |
+	f4 ~ \tuplet 3/2 { f8 f f } f2 | r4 f8 f \tuplet 3/2 { e4 f g } | a1 ~ | a2 r4 c,8 e |
+
+	% part "A"
+	f4. a8 c4. c8 | d4. d8 c4. c8 | bes4 ~ \tuplet 3/2 { bes8 bes bes } a4. a8 | g4 ~ \tuplet 3/2 { g8 g g } f4 ~ \tuplet 3/2 { f8 f f } |
+	f4 ~ \tuplet 3/2 { f8 f f } f2 | r4 f8 f \tuplet 3/2 { e4 f g } | f1 ~ | f2 r4 f4 |
+
+	% part "B"
+	g8 g g g g c,4 c8 | bes'8 a a gis a4. f8 | g8 g g g g c,4 g'8 | bes8 a a gis a4 a8 c |
+	d4 d8 d c4 ~ \tuplet 3/2 { c8 a c } | d4 d8 d c2 | r8 d d d c c4. | bes4 a g c,8 e |
+
+	% part "A"
+	f4. a8 c4. c8 | d4. d8 c2 | r8 bes bes bes a4. a8 | g4 ~ \tuplet 3/2 { g8 g g } f4 ~ \tuplet 3/2 { f8 f f } |
+	f4 ~ \tuplet 3/2 { f8 f f } f2 | r4 f8 f \tuplet 3/2 { e4 f g } | a1 ~ | a4 r a a |
+	\tuplet 3/2 { a4 f g } f2 | r4 f8 f \tuplet 3/2 { e4 f g } | f1 ~ | f1 |
+}
+{% endif %}
+{% if part == "LyricsLaurent" %}\lyricmode {
+	I see trees of green, red ros -- es too, I see the bloom for me and you,
+	and I think to my -- self what a won -- der -- ful world.
+	I see skies of blue and clouds of white,
+	the bright bles -- sed day, the dark  sac -- red night,
+	and I think  to my- self what a won -- der -- ful world.
+	The col -- ors of the rain- bow so pret -- ty in the sky
+	are al -- so on the fa- ces  of peo -- ple go -- in' by,
+	I see friends sha -- kin' hands,  say -- in' How do you do!
+	They're real -- ly say -- in' I love you
+	I hear ba -- bies cry, I watch them grow
+	They'll learn much more than I'll  ev -- er know
+	and I think  to my -- self what a won -- der -- ful world.
+	Yes, I think to my -- self  what a won -- der -- ful world.
 }
 {% endif %}

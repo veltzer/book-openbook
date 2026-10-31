@@ -35,6 +35,18 @@ doGuitar = false
 doExtra = false
 doPrep = false
 doOwn = false
+
+[versions.Laurent]
+doChords = true
+doVoice = true
+doLyrics = false
+doLyricsmore = false
+doLyricsmoremore = false
+doChordBars = false
+doGuitar = false
+doExtra = false
+doPrep = false
+doOwn = false
 #}
 {% if part == "Vars" %}
 {% endif %}
@@ -44,7 +56,9 @@ doOwn = false
 	- put in the chords (Hal Leonard Real Jazz Book).
 	- put in the tune (Hal Leonard Real Jazz Book).
 	- added youtube performances.
+	- converted the Silvia Bertoluzza version (from the Laurent Martelli collection) from staging/openbook/laurent/sophisticated_lady.ly (as the Laurent version, lyrics not copied: the source lyrics do not line up with its repeats).
 	TODO:
+	- Laurent version: the source's last A has only 7 bars (it ends on a whole bar of A flat).
 	- add the lyrics.
 	- check the chords (Hal Leonard Real Jazz Book).
 	- check the tune (Hal Leonard Real Jazz Book).
@@ -128,5 +142,71 @@ doOwn = false
 			aes1~ | aes2. r4 |
 		}
 	}
+}
+{% endif %}
+{% if part == "ChordsLaurent" %}\chordmode {
+	\startChords
+	\startSong
+
+	\partial 4 b4:m7 |
+
+	\myMark "A"
+	\startPart
+	\repeat volta 2 {
+		bes1:m7 | ges4:7 f:7 e:7 ees:7 | aes1:maj7 | aes4:7 g:7 ges:7 f:7 | \myEndLine
+		bes1:7 | bes2:m7 ees:7 |
+	} \alternative {
+		{
+			aes1:maj7 | aes2.:7 ces4:m7 | \myEndLineVoltaNotLast
+		}
+		{
+			aes1:maj7 | a2:m7.5- d:7.9- | \myEndLineVoltaLast
+		}
+	}
+	\endPart
+
+	\myMark "B"
+	\startPart
+	g2:maj7 e:m7 | a:m7 d:7 | g:7 gis:dim7 | a:m7 d:7 | \myEndLine
+	g:maj7 e:m7 | a:m7 d:7 | g:7 c:m7 | ees:7 d4:7 ces:m7 | \myEndLine
+	\endPart
+
+	\myMark "A"
+	\startPart
+	bes1:m7 | ges4:7 f:7 e:7 ees:7 | aes1:maj7 | aes4:7 g:7 ges:7 f:7 | \myEndLine
+	bes1:7 | bes2:m7 ees:7 | aes1:maj7 | \myEndLine
+	\endPart
+
+	\endSong
+	\endChords
+}
+{% endif %}
+{% if part == "VoiceLaurent" %}{
+	\tempo "Moderato" 4 = 100
+	\time 4/4
+	\key aes \major
+
+	\partial 4 g'4 |
+
+	% part "A"
+	\repeat volta 2 {
+		f2 ~ f8 aes c ees | ges4 f e ees8 c | g2 ~ g8 f aes c | ees4 d des c8 f |
+		f,2 ~ f8 g aes c | \tuplet 3/2 { ees c ees } c2 ees4 |
+	} \alternative {
+		{
+			g,2. ees'4 | ges,1 |
+		}
+		{
+			g8 f aes2. | r1 |
+		}
+	}
+
+	% part "B"
+	r8 d,4 b8 ees4 b8 g' ~ | g e b'4 fis8 e'4 ais,8 | b4 f2. | e8 c' ees,2. |
+	r8 d4 b8 ees4 b8 g' ~ | g e b'4 fis8 e'4 ais,8 | b4 f8 aes g ees c4 | f8 g bes des c ees ges,4 |
+
+	% part "A"
+	f2 ~ f8 aes c ees | ges4 f e ees8 c | g2 ~ g8 f aes c | ees4 d des c8 f |
+	f,2 ~ f8 g aes c | \tuplet 3/2 { ees c ees } c2 ees4 | aes,1 |
 }
 {% endif %}

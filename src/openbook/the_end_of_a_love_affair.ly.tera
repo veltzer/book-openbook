@@ -1,0 +1,134 @@
+{#
+default_version = "Laurent"
+
+[attributes]
+title = "The End Of A Love Affair"
+style = "Jazz"
+composer = "Edward C. Redding"
+poet = "Edward C. Redding"
+typesetter = "Silvia Bertoluzza"
+completion = "3"
+uuid = "156811a0-d49f-11f1-8000-046874d194b7"
+structure = "AABA'"
+
+[versions.Laurent]
+doChords = true
+doVoice = true
+doLyrics = true
+doLyricsmore = true
+doLyricsmoremore = false
+doChordBars = false
+doGuitar = false
+doExtra = false
+doPrep = false
+doOwn = false
+#}
+{% if part == "Vars" %}
+{% endif %}
+{% if part == "Doc" %}	DONE:
+	- converted the Silvia Bertoluzza version from staging/openbook/laurent/theendofaloveaffair.ly.
+	TODO:
+	- check the tune and chords against a real book.
+	- the source has no composer; Edward C. Redding is from memory, check it.
+	- the source has only "f" for the last two bars of chords, I put F for both bars.
+	- the source has no tempo, adjust the tempo.
+	- add youtube performances.
+{% endif %}
+{% if part == "ChordsLaurent" %}\chordmode {
+	\startChords
+	\startSong
+
+	\partial 4 s4 |
+
+	\myMark "A"
+	\startPart
+	\repeat volta 2 {
+		g2:m7 c:7 | f1:maj7 | f2:m7 bes:7 | ees1:maj7 | \myEndLine
+		ees2:m7 aes:7 | ees:m7 aes:7 | des:maj7 c4:sus4 c:7 |
+	} \alternative {
+		{
+			f2 d:m7 | \myEndLineVoltaNotLast
+		}
+		{
+			f1 | \myEndLineVoltaLast
+		}
+	}
+	\endPart
+
+	\myMark "B"
+	\startPart
+	d2:m7 g:7 | d:m7 g:7 | d:m7 g:7 | d:m7 g:7 | \myEndLine
+	c1:maj7 | a2:m7 d:7 | d:m7 g:7 | g:m7 c:7 | \myEndLine
+	\endPart
+
+	\myMark "A"
+	\startPart
+	g2:m7 c:7 | f1:maj7 | f2:m7 bes:7 | ees1:maj7 | \myEndLine
+	ees2:m7 aes:7 | ees:m7 aes:7 | des:maj7 c4:sus4 c:7 | c2:m7 f:7 | \myEndLine
+	\endPart
+
+	\myMark "C"
+	\startPart
+	bes1:maj7 | ees:9 | f | gis:dim7 | \myEndLine
+	g2:m7 c:7 | g:m7 c:9 | f1*2 | \myEndLine
+	\endPart
+
+	\endSong
+	\endChords
+}
+{% endif %}
+{% if part == "VoiceLaurent" %}{
+	\tempo "Moderato" 4 = 160
+	\time 4/4
+	\key f \major
+
+	\partial 4 f8 g |
+
+	% part "A"
+	\repeat volta 2 {
+		a4. a8 \tuplet 3/2 { a4 g f } | e2 r4 d8 c | g'4. g8 \tuplet 3/2 { g4 f ees } | d2 r4 c8 bes |
+		f'4 f8 f f4 aes8 bes | f4 f8 f f4 ees8 des | c4 c8 bes c4. c8 |
+	} \alternative {
+		{
+			c2 r4 f8 g |
+		}
+		{
+			c,2 r4 d8 e |
+		}
+	}
+
+	% part "B"
+	f4 d8 f a4 f8 d | f4 f2 d8 e | f4 d8 f a4 f8 d | f2 r4 e8 f |
+	g4 e8 g b4 a8 g | a4 b8 c d4. d8 | d1 ~ | d2 r4 f,8 g |
+
+	% part "A"
+	a4. a8 \tuplet 3/2 { a4 g f } | e2 r4 d8 c | g'4. g8 \tuplet 3/2 { g4 f ees } | d2 r4 c8 bes |
+	f'4 f8 f f4 aes8 bes | f4 f8 f f4 ees8 des | c4 c8 bes c4. c8 | c'2 r4 bes8 a |
+
+	% part "C"
+	a4 a8 g \tuplet 3/2 { a4 a g } | bes2 r8 a g f | e4 e8 d e4 e8 d | g2 r4 f8 e |
+	d4 d8 c d4 d8 c | d4 f8 bes d4. e,8 | f1 ~ | f2. r4 |
+}
+{% endif %}
+{% if part == "LyricsLaurent" %}\lyricmode {
+	So I walk a lit -- tle too fast, and I drive a lit -- tle too
+	fast and I'm reck -- less, it's true, but what else can you do at
+	the end of a love af -- fair? So I stare
+	Do they know, do they care that it's on -- ly that I'm
+	lone -- ly and low as can be?
+	And the smile on my face is -- n't real -- ly a smile at all?
+	So I smoke a lit -- tle too much, and I drink a lit -- tle too
+	much, and the tunes I re -- quest are not al -- ways the best
+	but the ones where the trum -- pets blare!
+	So I go at a mad -- den -- ing pace, and I pre -- tend that it's
+	ta -- king his place. But what else can you do at
+	the end of a love af -- fair?
+}
+{% endif %}
+{% if part == "LyricsmoreLaurent" %}\lyricmode {
+	_ _
+	talk a lit -- tle too much, and a laugh a lit -- tle too much,
+	and my voice is too loud when I'm out in a crowd, so that peo -- ple are
+	apt to
+}
+{% endif %}

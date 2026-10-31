@@ -36,10 +36,36 @@ doGuitar = false
 doExtra = false
 doPrep = false
 doOwn = false
+
+[versions.Laurent]
+doChords = true
+doVoice = true
+doLyrics = false
+doLyricsmore = false
+doLyricsmoremore = false
+doChordBars = false
+doGuitar = false
+doExtra = false
+doPrep = false
+doOwn = false
+
+[versions.Laurent2]
+doChords = true
+doVoice = true
+doLyrics = true
+doLyricsmore = false
+doLyricsmoremore = false
+doChordBars = false
+doGuitar = false
+doExtra = false
+doPrep = false
+doOwn = false
 #}
 {% if part == "Vars" %}
 {% endif %}
 {% if part == "Doc" %}	DONE:
+	- added the second Laurent Martelli version (with lyrics) from staging/openbook/laurent/samba_de_uma_nota_so.ly.
+	- added the Laurent Martelli version from staging/openbook/laurent/one_note_samba.ly.
 	- filled in the meta data.
 	- brought in fake book epdf.
 	- brought in real book epdf.
@@ -54,6 +80,7 @@ doOwn = false
 	- added youtube performances.
 	- added lyrics url.
 	TODO:
+	- the Laurent version: the octaves of the scale bars (part C) were taken from the Laurent2 version.
 	- add the fake book version.
 	REMARKS:
 	- I added turn around notes at the end of the real book version.
@@ -139,5 +166,166 @@ doOwn = false
 	A -- ny -- one who wants __ the whole __ show, Re, Mi, Fa, Sol, La, __ Te, Doh. __
 	he will find him -- self __ with no __ show.
 	Bet -- ter play __ the note __ you know.
+}
+{% endif %}
+{% if part == "ChordsLaurent" %}\chordmode {
+	\startChords
+	\startSong
+
+	\partial 4. s4. |
+
+	\myMark "A"
+	\startPart
+	d1:m7 | des:7 | c:m7 | b:7.11+ | \myEndLine
+	d1:m7 | des:7 | c:m7 | b:7.11+ | \myEndLine
+	\endPart
+
+	\myMark "B"
+	\startPart
+	f:m7 | bes:7 | ees:maj | aes:7 | \myEndLine
+	d1:m7 | des:7 | c2:m7 b:7.11+ | bes1 | \myEndLine
+	\endPart
+
+	\myMark "C"
+	\startPart
+	ees1:m7 | aes:7 | des1*2:maj | \myEndLine
+	des1:m7 | ges:7 | bes:maj | c2:m7.5- f:7 | \myEndLine
+	\endPart
+
+	\myMark "A"
+	\startPart
+	d1:m7 | des:7 | c:m7 | b:7.11+ | \myEndLine
+	d1:m7 | des:7 | ges:maj | f:7.11+ | \myEndLine
+	\endPart
+
+	\myMark "B"
+	\startPart
+	f1:m7 | bes:7.11+ | ees:maj | aes:7 | \myEndLine
+	des1:maj | c:7 | b:maj | bes | \myEndLine
+	\endPart
+
+	\endSong
+	\endChords
+}
+{% endif %}
+{% if part == "VoiceLaurent" %}{
+	\tempo "Allegro" 4 = 218
+	\time 4/4
+	\key bes \major
+
+	\partial 4. f4 f8 |
+
+	% part "A"
+	f4 f8 f~ f f4 f8~ | f4. f8 r f4 f8 | f4 f8 f~ f f4 f8~ | f2 r8 f4 f8 |
+	f4 f8 f~ f f4 f8~ | f4. f8 r f4 f8 | f4 f8 f~ f f4 f8~ | f2 r8 bes4 bes8 |
+
+	% part "B"
+	bes4 bes8 bes~ bes bes4 bes8~ | bes bes bes4~ bes8 bes4 bes8 | bes4 bes8 bes~ bes bes4 bes8~ | bes2 r8 f4 f8 |
+	f4 f8 f~ f f4 f8~ | f f4 f8~ f f f4 | f4 f8 f~ f f4 bes8~ | bes2. r4 |
+
+	% part "C"
+	bes8 c des ees des c bes aes | ges f ees des c des ees f | c4. bes8 r c des f | c4. bes8~ bes4 r |
+	aes'8 bes ces des ces bes aes g | fes ees des ces bes ces des ees | bes4. aes8 r bes b dis | ges4. f8 r f4 f8 |
+
+	% part "A"
+	f4 f8 f~ f f4 f8~ | f4. f8 r f4 f8 | f4 f8 f~ f f4 f8~ | f2 r8 f4 f8 |
+	f4 f8 f~ f f4 f8~ | f4. f8 r f4 f8 | f4 f8 f~ f f4 f8~ | f2 r8 bes4 bes8 |
+
+	% part "B"
+	bes4 bes8 bes~ bes bes4 bes8~ | bes4. bes8 r bes4 bes8 | bes4 bes8 bes~ bes bes4 bes8~ | bes2 r8 bes4 bes8 |
+	bes4 bes8 bes~ bes bes4 bes8~ | bes bes4 bes8 bes4 bes~ | bes bes8 bes~ bes bes4 bes8~ | bes2 r |
+}
+{% endif %}
+{% if part == "ChordsLaurent2" %}\chordmode {
+	\startChords
+	\startSong
+
+	\partial 4. s4. |
+
+	\myMark "A"
+	\startPart
+	d1:m7 | des:7 | c:m11 | b:7.5- | \myEndLine
+	d:m7 | des:7 | c:m7 | b:7.5- | \myEndLine
+	\endPart
+
+	\myMark "B"
+	\startPart
+	f:m7 | e:7.5- | ees:maj | aes:9 | \myEndLine
+	d4.:m7 des2:7 c8:m11 | s1 | b1:7.5- | bes:6 | \myEndLine
+	\endPart
+
+	\myMark "C"
+	\startPart
+	ees1:m7 | aes:7 | des4.:maj des2:6 s8 | des4.:maj des2:6 s8 | \myEndLine
+	des1:m7 | des:7 | ces:maj | c4.:m7.5- b2:7.5- s8 | \myEndLine
+	\endPart
+
+	\myMark "A"
+	\startPart
+	d1:m7 | des:7 | c:m7 | b:7.5- | \myEndLine
+	d:m7 | des:7 | c:m7 | b:7.5- | \myEndLine
+	\endPart
+
+	\myMark "B"
+	\startPart
+	f:m7 | e:7.5- | ees:maj | aes:9 | \myEndLine
+	des2.:6 s8 c:7 | s2. ces1:maj s8 bes1:6 s8 | \myEndLine
+	\endPart
+
+	\endSong
+	\endChords
+}
+{% endif %}
+{% if part == "VoiceLaurent2" %}{
+	\tempo "Allegro" 4 = 218
+	\time 4/4
+	\key bes \major
+
+	\partial 4. f4 f8 |
+
+	% part "A"
+	f4 f8 f~ f f4 f8~ | f4. f8 r f4 f8 | f4 f8 f~ f f4 f8~ | f2 r8 f4 f8 |
+	f4 f8 f~ f f4 f8~ | f4. f8 r f4 f8 | f4 f8 f~ f f4 f8~ | f2 r8 bes4 bes8 |
+
+	% part "B"
+	bes4 bes8 bes~ bes bes4 bes8~ | bes bes bes4~ bes8 bes4 bes8 | bes4 bes8 bes~ bes bes4 bes8~ | bes2 r8 f4 ees8 |
+	f4 f8 f~ f f4 f8~ | f f4 f8~ f f f4 | f f8 f~ f f4 bes8~ | bes2. r4 |
+
+	% part "C"
+	bes8 c des ees des c bes aes | ges f ees des c des ees f | c4. bes8 r c des ees | c4. bes8~ bes4 r |
+	aes'8 bes ces des ces bes aes g | fes ees des ces bes ces des ees | bes4. aes8 r bes ces ees | ges4. f8 r f4 f8 |
+
+	% part "A"
+	f4 f8 f f~ f4 f8~ | f4. f8 r f4 f8 | f4 f8 f~ f f4 f8~ | f2 r8 f4 f8 |
+	f4 f8 f~ f f4 f8~ | f4. f8 r f4 f8 | f4 f8 f~ f f4 f8~ | f2 r8 bes4 bes8 |
+
+	% part "B"
+	bes4 bes8 bes~ bes bes4 bes8~ | bes4. bes8 r bes4 bes8 | bes4 bes8 bes~ bes bes4 bes8~ | bes2 r8 bes4 bes8 |
+	bes4 bes8 bes~ bes bes4 bes8~ | bes bes4 bes8 bes4 bes~ | bes bes8 bes~ bes bes4 bes8~ | bes2 r8 f4 f8 |
+}
+{% endif %}
+{% if part == "LyricsLaurent2" %}\lyricmode {
+
+	This is just a lit -- tle sam -- ba
+	built up -- on a sin -- gle note.
+	Oth -- er notes are bound to fol -- low
+	but the root is still that note.
+
+	Now the new one is the con -- se -- quence
+	of the one we've just been through
+	as I'm bound to be the un -- a -- void -- a -- ble
+	con -- se -- quence of you.
+
+	There's so man -- y peo -- ple who can talk and talk and talk
+	and just say no -- thing or near -- ly no -- thing
+
+	I have used up all the scale I know and at the end I've come to no -- thing
+	or near -- ly no -- thing
+
+	So I come back to my first note as I must come back to you.
+	I will pour in -- to that one note all the love I feel for you
+	A -- ny -- one who wants the whole show, Re, Mi, Fa, Sol, La, Te, Doh.
+	he will find him -- self with no show.
+	Bet -- ter play the note you know.
 }
 {% endif %}

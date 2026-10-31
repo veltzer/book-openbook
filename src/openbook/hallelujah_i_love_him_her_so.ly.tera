@@ -35,10 +35,23 @@ doGuitar = false
 doExtra = false
 doPrep = false
 doOwn = false
+
+[versions.Laurent]
+doChords = true
+doVoice = true
+doLyrics = true
+doLyricsmore = false
+doLyricsmoremore = false
+doChordBars = false
+doGuitar = false
+doExtra = false
+doPrep = false
+doOwn = false
 #}
 {% if part == "Vars" %}
 {% endif %}
 {% if part == "Doc" %}	DONE:
+	- converted the Laurent Martelli version from staging/openbook/laurent/hallelujah.ly (lyrics copied from it).
 	- brought in the fake book epdf.
 	- filled in the song meta data from the fake book.
 	- filled in the songs structure.
@@ -127,5 +140,64 @@ doOwn = false
 	he kiss -- es me __ _ and he holds me tight. __
 	He tells me "\"Ba" -- by ev -- 'ry -- thing's all "right.\""
 	That's why I know, __ _ yes, I know. __ _ Hal -- le -- lu -- jah, I just love him so. __
+}
+{% endif %}
+{% if part == "ChordsLaurent" %}\chordmode {
+	\startChords
+	\startSong
+
+	\myMark "A"
+	\startPart
+	f1 | bes4. b4:dim7 s4. | f1 | bes4. b8:dim7 s8. c16:7 s4 | \myEndLine
+	f1 | f2.:7 f4:7.5+ | bes1 | b:dim7 | \myEndLine
+	f2 a:7 | d:m bes:7 | g:7 c4.:sus4.7 f8 | s1 | \myEndLine
+	\endPart
+
+	\myMark "A"
+	\startPart
+	f1 | bes4. b4:dim7 s4. | f1 | bes4. b8:dim7 s8. c16:7 s4 | \myEndLine
+	f1 | f2.:7 f4:7.5+ | bes1 | b:dim7 | \myEndLine
+	f2 a:7 | d:m bes:7 | g:7 c4.:sus4.7 f8 | s2 f:7.5+ | \myEndLine
+	\endPart
+
+	\endSong
+	\endChords
+}
+{% endif %}
+{% if part == "VoiceLaurent" %}{
+	\tempo "Allegro" 4 = 130
+	\time 4/4
+	\key f \major
+
+	% part "A"
+	r4 d'8. c16 aes8. g16 f8. d16 | f4 f8 aes8~ aes8 r8 r4 |
+	r8. c16 d8. c16 aes8. g16 f8. d16 | f4 f8 d8~ d8. c16 r4 |
+	r4 d'8. c16 aes8. g16 f8. d16 | f4 f8 f8~ f8 r8 r4 |
+	r8. c'16 d8. c16 aes8. g16 f8. d16 | f4 f8 f8~ f8. c16 d8. f16 |
+	a8 c4. r4 a8. a16 | g8 f4. r4 aes8. g16 |
+	aes8. g16 f8. d16 f4 f8 f8~ | f8 r8 r4 r2 |
+
+	% part "A"
+	r8. c'16 d8. c16 aes8. g16 f8. d16 | f4 f8 aes8~ aes8 r8 r4 |
+	r8. c16 d8. c16 aes8. g16 f8. d16 | f4 f8 d8~ d8. c16 r4 |
+	r4 d'8. c16 aes8. g16 f8. d16 | f4 f8 f8~ f8 r8 r4 |
+	r8. c'16 d8. c16 aes8. g16 f8. d16 | f4 f8 f8~ f8. c16 d8. f16 |
+	a8 c4. r4 a8. a16 | g8 f4. r4 aes8. g16 |
+	aes8. g16 f8. d16 f4 f8 f8~ | f8 r8 r4 r2 |
+}
+{% endif %}
+{% if part == "LyricsLaurent" %}\lyricmode {
+	Let me tell you 'bout a boy I know
+	He is my ba -- by and he lives next door.
+	Ev -- 'ry morn -- ing 'fore the sun comes up,
+	He brings my cof -- fe in my fav -- 'rite cup.
+	That's why I know, yes, I know, Hal -- le -- lu -- jah, I just love him so.
+
+
+	When I'm in trou -- ble an I have no friends,
+	I know he'll go with me un -- til the end.
+	Ev -- 'vry bo -- dy asks me how I know.
+	I smile at them and say he told me so.
+	That's why I know, yes I know, Hal -- le -- lu -- jah, I just love him so.
 }
 {% endif %}

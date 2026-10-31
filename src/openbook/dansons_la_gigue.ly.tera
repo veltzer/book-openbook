@@ -1,0 +1,85 @@
+{#
+default_version = "Anon"
+
+[attributes]
+title = "Dansons La Gigue"
+style = "Jazz"
+composer = "Patricia Barber"
+piece = "Mysterious"
+typesetter = "Anonymous <anonymous@zivlempel.org>"
+completion = "3"
+uuid = "8034eb34-d49f-11f1-8000-046874d194b7"
+structure = "Intro A End"
+
+[versions.Anon]
+doChords = true
+doVoice = true
+doLyrics = false
+doLyricsmore = false
+doLyricsmoremore = false
+doChordBars = false
+doGuitar = false
+doExtra = false
+doPrep = false
+doOwn = false
+#}
+{% if part == "Vars" %}
+{% endif %}
+{% if part == "Doc" %}	DONE:
+	- converted the Anonymous <anonymous@zivlempel.org> version from staging/openbook/anon/DansonsLaGigue.ly.
+	TODO:
+	- check the tune and chords against a real book.
+	- add youtube performances.
+	- the source was written in C minor and transposed to Ab minor for the C version; it is entered here directly in Ab minor (a few chords respelled enharmonically: F#m7 B7 Em7 A7).
+	- the main section has only the sparse melodic fills of the source; the turnaround (bar 16 of A) is skipped on the out.
+{% endif %}
+{% if part == "ChordsAnon" %}\chordmode {
+	\startChords
+	\startSong
+
+	\myMark "Intro"
+	\startPart
+	des2.:m7 | s | aes:3-.5.7+ | s | des:m7 | s | aes:3-.5.7+ | s | \myEndLine
+	des2.:m7 | s | aes:3-.5.7+ | s | des:m7 | s | bes:m7 | ees:7 | \myEndLine
+	\endPart
+
+	\myMark "A"
+	\startPart
+	\repeat volta 2 {
+		aes2.:3-.5.7+ | s | des:m7 | s | bes:m7 | ees:7.9- | aes:3-.5.7+ | aes:3-.5.6 | \myEndLine
+		fis:m7 | b:7 | e:m7 | a:7 | bes:3-.5-.7 | ees:7 | aes:m | bes4.:5-.7 ees:7 | \myEndLine
+	}
+	\endPart
+
+	\myMark "End"
+	\startPart
+	des2.:m7 | s | aes:3-.5.7+ | s | des:m7 | s | aes:3-.5.7+ | s | \myEndLine
+	des2.:m7 | s | aes:3-.5.7+ | s | des:m7 | s | aes:3-.5.7+ | s | \myEndLine
+	\endPart
+
+	\endSong
+	\endChords
+}
+{% endif %}
+{% if part == "VoiceAnon" %}{
+	\tempo "Mysterious" 8 = 200
+	\time 6/8
+	\key aes \minor
+
+	% part "Intro"
+	\repeat percent 4 { r4^\markup { (intro) } r r | r4 r r }
+	\repeat percent 4 { r4 r r | r4 r r }
+
+	% part "A"
+	\repeat volta 2 {
+		r4 r8 aes' bes aes | bes4. r8 r aes | bes ces ces r r4 | r4 r r |
+		r4 r8 aes bes aes | bes aes ces4 r8 ces | aes4. r8 r4 | r4 r r |
+		r4 r8 aes a aes | a4. r8 r aes | a ces ces r r4 | r4 r r |
+		r4 r r | r ees des8 ces | aes2. | r4_\markup { "skip turnaround on out" } r8 r4 r8 |
+	}
+
+	% part "End"
+	\repeat percent 4 { r4^\markup { (out only) } r r | r4 r r }
+	\repeat percent 4 { r4 r r | r4 r r }
+}
+{% endif %}

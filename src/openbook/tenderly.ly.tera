@@ -35,6 +35,18 @@ doGuitar = false
 doExtra = false
 doPrep = false
 doOwn = false
+
+[versions.Laurent]
+doChords = true
+doVoice = true
+doLyrics = false
+doLyricsmore = false
+doLyricsmoremore = false
+doChordBars = false
+doGuitar = false
+doExtra = false
+doPrep = false
+doOwn = false
 #}
 {% if part == "Vars" %}
 {% endif %}
@@ -51,6 +63,7 @@ doOwn = false
 	- heard the tune to check that it is right and adjust the tempo.
 	- added lyrics url.
 	- added youtube performances.
+	- converted the Laurent Martelli version from staging/openbook/laurent/tenderly.ly (as the Laurent version; the source is written in F and transposed by the score to E flat, it is entered here in concert E flat).
 	TODO:
 	- add another version of this tune.
 {% endif %}
@@ -127,5 +140,63 @@ doOwn = false
 
 	% part "C"
 	Your arms op -- ened wide and closed me in -- side; you took my lips, you took my love so Ten -- der -- ly. __
+}
+{% endif %}
+{% if part == "ChordsLaurent" %}\chordmode {
+	\startChords
+	\startSong
+
+	\partial 4. s4. |
+
+	\myMark "A"
+	\startPart
+	ees1:maj7 | aes:9 | ees:m9 | aes:13 | \myEndLine
+	f:m9 | des:9 | ees:maj7 | g2:m7 c:7 | \myEndLine
+	\endPart
+
+	\myMark "B"
+	\startPart
+	f1:m7.5- | bes:13 | f:m7.5- | bes2:13 b:dim7 | \myEndLine
+	c1:m7 | f:13 | f:m7 | bes:7 | \myEndLine
+	\endPart
+
+	\myMark "A"
+	\startPart
+	ees1:maj7 | aes:9 | ees:m9 | aes:13 | \myEndLine
+	f:m9 | des:9 | ees:maj7 | g2:m7 c:7 | \myEndLine
+	\endPart
+
+	\myMark "C"
+	\startPart
+	f1:m7.5- | bes2:13 b:dim7 | c1:m7 | f2:13 fis:dim7 | \myEndLine
+	g:m7 c:7.5+ | f:m9 bes:7 | ees1:6 | f2:m7 bes:7 | \myEndLine
+	\endPart
+
+	\endSong
+	\endChords
+}
+{% endif %}
+{% if part == "VoiceLaurent" %}{
+	\tempo "Andante" 4 = 80
+	\time 4/4
+	\key ees \major
+
+	\partial 4. bes'8 c ees |
+
+	% part "A"
+	d2 ~ d8 bes c ees | d2. bes8 ges | f1 ~ | f2 r8 ees f aes |
+	g2 ~ g8 ees f aes | g2. ees8 ces | bes1 ~ | bes2 r4 bes |
+
+	% part "B"
+	ces2. bes'4 | g2. bes,4 | ces2 ees4 bes' | g2. f4 |
+	ees2 g4 f' | d2. f,4 | bes1 ~ | bes2 r8 bes c ees |
+
+	% part "A"
+	d2 ~ d8 bes c ees | d2. bes8 ges | f1 ~ | f2 r8 ees f aes |
+	g2 ~ g8 ees f aes | g2. ees8 ces | bes1 ~ | bes2 r4 bes |
+
+	% part "C"
+	ces2 ees4 bes' | g2. f4 | ees2 g4 f' | d2 ~ d8 ees c d |
+	bes2 ~ bes8 c aes bes | g2 ~ g8 f aes d, | ees1 | r |
 }
 {% endif %}

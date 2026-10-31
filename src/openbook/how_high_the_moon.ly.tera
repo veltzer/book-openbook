@@ -47,10 +47,23 @@ doGuitar = false
 doExtra = false
 doPrep = false
 doOwn = false
+
+[versions.Laurent]
+doChords = true
+doVoice = true
+doLyrics = false
+doLyricsmore = false
+doLyricsmoremore = false
+doChordBars = false
+doGuitar = false
+doExtra = false
+doPrep = false
+doOwn = false
 #}
 {% if part == "Vars" %}
 {% endif %}
 {% if part == "Doc" %}	DONE:
+	- converted the Laurent Martelli version from staging/openbook/laurent/how_high_the_moon.ly.
 	- brought in the fake book epdf.
 	- filled in the meta data from the real book.
 	- filled in the meta data from the fake book.
@@ -228,5 +241,55 @@ doOwn = false
 	The dark -- est night would shine if you would come __ to me soon. __
 	Un -- til you will, how still my heart,
 	How High The Moon! __
+}
+{% endif %}
+{% if part == "ChordsLaurent" %}\chordmode {
+	\startChords
+	\startSong
+
+	\partial 2. s2. |
+
+	\myMark "A"
+	\startPart
+	\repeat volta 2 {
+		g1*2:maj7 | g1:m7 | c:7 | \myEndLine
+		f1*2:maj7 | f1:m7 | bes:7 | \myEndLine
+	} \alternative {
+		{
+			ees1:maj7 | a2:m7 d:7 | g1:m7 | a2:m7.5- d:7.9- | \myEndLine
+			g1:maj7 | a2:m7 d:7 | b:m7 bes:7 | a:m7 d:7 | \myEndLineVoltaNotLast
+		}
+		{
+			ees1:maj7 | a2:m7 d:7 | g1:maj7 | a2:m7.5- d:7.9- | \myEndLine
+			b:m7 bes:7 | a:m7 d:7 | g1:6 | a2:m7 d:7 | \myEndLineVoltaLast
+		}
+	}
+	\endPart
+
+	\endSong
+	\endChords
+}
+{% endif %}
+{% if part == "VoiceLaurent" %}{
+	\tempo "Allegro" 4 = 130
+	\time 4/4
+	\key g \major
+
+	\partial 2. d4 g a |
+
+	% part "A"
+	\repeat volta 2 {
+		a2 b~ | b4 d, g a | bes1~ | bes4 c, f g |
+		g2 a~ | a4 c, f g | aes1~ | aes4 d, ees f |
+	} \alternative {
+		{
+			g4 g g g | g g8 a~ a g a4 | bes1~ | bes4. a8~ a g a4 |
+			b!1~ | b4 a b c | d d d d | d8 r d,4 g a |
+		}
+		{
+			g4 g g g | g g8 a~ a g a4 | b1~ | b4 a b c |
+			d d d d | d d, g a | g1~ | g1 |
+		}
+	}
 }
 {% endif %}

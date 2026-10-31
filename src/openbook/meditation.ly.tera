@@ -1,0 +1,92 @@
+{#
+default_version = "Laurent"
+
+[attributes]
+title = "Meditation"
+subtitle = "Meditação"
+style = "Bossa Nova"
+composer = "Antonio Carlos Jobim"
+typesetter = "Laurent Martelli"
+completion = "3"
+uuid = "6120ae68-d49f-11f1-8000-046874d194b7"
+structure = "AABA"
+
+[versions.Laurent]
+doChords = true
+doVoice = true
+doLyrics = false
+doLyricsmore = false
+doLyricsmoremore = false
+doChordBars = false
+doGuitar = false
+doExtra = false
+doPrep = false
+doOwn = false
+#}
+{% if part == "Vars" %}
+{% endif %}
+{% if part == "Doc" %}	DONE:
+	- converted the Laurent Martelli version from staging/openbook/laurent/meditation.ly.
+	TODO:
+	- check the tune and chords against a real book.
+	- the source has no tempo marking, the tempo is a guess.
+	- the source hints at endings and a coda that were never entered.
+	- add the lyrics.
+	- add youtube performances.
+{% endif %}
+{% if part == "ChordsLaurent" %}\chordmode {
+	\startChords
+	\startSong
+
+	\myMark "A"
+	\startPart
+	\repeat volta 2 {
+		c1*2 | fis1:m7/b | b:7 | \myEndLine
+		c1 | f:7 | e:m7 | a:7.5+ | \myEndLine
+		d1*2:m7 | f1:m7 | bes:7 | \myEndLine
+		e:m7 | a:7.5+ | d:m7 | g:7.5+ | \myEndLine
+	}
+	\endPart
+
+	\myMark "B"
+	\startPart
+	f1*2:maj7 | f1:m7 | bes:7 | \myEndLine
+	e:m7 | ees:dim7 | d:m7 | g:7.5+ | \myEndLine
+	\endPart
+
+	\myMark "A"
+	\startPart
+	c1*2 | fis1:m7/b | b:7 | \myEndLine
+	c1 | d2:m7 ees:dim7 | e1:m7 | a:7.5+ | \myEndLine
+	d1*2:m7 | f1:m7 | bes:7 | \myEndLine
+	e2:m7 a:7.5+ | d:m7 g:7.9- | c1:maj7 | d:m7/+g | \myEndLine
+	\endPart
+
+	\endSong
+	\endChords
+}
+{% endif %}
+{% if part == "VoiceLaurent" %}{
+	\tempo "Moderato" 4 = 120
+	\time 4/4
+	\key c \major
+
+	% part "A"
+	\repeat volta 2 {
+		a'1~ | a2~ a8 g4 b8~ | b bes4 a8~ a2~ | a2~ a8 fis g a~ |
+		a a a a~ a a a a~ | a g4 b8~ b g4 a8~ | a b4 a8~ a2~ | a2 r |
+		f1~ | f2~ f8 e4 g8~ | g ges4 f8~ f2~ | f2~ f8 c d e~ |
+		e e e e~ e dis e f~ | f2 r8 e f g~ | g g g g~ g fis g a~ | a1 |
+	}
+
+	% part "B"
+	c1~ | c2~ c8 b4 d8~ | d des4 c8~ c2~ | c2 r8 b4 d8~ |
+	d des4 c8~ c b4 d8~ | d des4 c8~ c b4 a8~ | a1~ | a2 r |
+
+	% part "A"
+	a1~ | a2~ a8 g4 b8~ | b bes4 a8~ a2~ | a2~ a8 fis g a~ |
+	a a a a~ a a a a~ | a g4 b8~ b g4 a8~ | a b4 a8~ a2~ | a2 r |
+	f1~ | f2~ f8 e4 g8~ | g ges4 f8~ f2~ | f2~ f8 c d e~ |
+	e e e f~ f f f d~ | d d d e~ e e e c~ | c1~ | c4 r4 r2 |
+}
+{% endif %}

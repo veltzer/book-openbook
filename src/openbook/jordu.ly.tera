@@ -1,0 +1,108 @@
+{#
+default_version = "Laurent"
+
+[attributes]
+title = "Jordu"
+style = "Jazz"
+composer = "Duke Jordan"
+typesetter = "Laurent Martelli"
+completion = "3"
+uuid = "e1326c2c-d49f-11f1-8000-046874d194b7"
+structure = "AABA"
+
+[versions.Laurent]
+doChords = true
+doVoice = true
+doLyrics = false
+doLyricsmore = false
+doLyricsmoremore = false
+doChordBars = false
+doGuitar = false
+doExtra = false
+doPrep = false
+doOwn = false
+#}
+{% if part == "Vars" %}
+{% endif %}
+{% if part == "Doc" %}	DONE:
+	- converted the Laurent Martelli version from staging/openbook/laurent/jordu.ly (that file is written in F and transposed by a major second down, so it is in Eb here).
+	TODO:
+	- check the tune and chords against a real book.
+	- the source has no tempo marking, the tempo is a guess.
+	- add youtube performances.
+{% endif %}
+{% if part == "ChordsLaurent" %}\chordmode {
+	\startChords
+	\startSong
+
+	\myMark "Intro"
+	\startPart
+	s1 | \myEndLine
+	\endPart
+
+	\myMark "A"
+	\startPart
+	\repeat volta 2 {
+		d2:7 g:7 | c1:m7 | f2:7 bes:7 | ees1:maj | \myEndLine
+		d2:7 g:7 | c1:m7 |
+	} \alternative {
+		{
+			aes:7 | g:7 | \myEndLineVoltaNotLast
+		}
+		{
+			aes:7 | g:7 | \myEndLineVoltaLast
+		}
+	}
+	\endPart
+
+	\myMark "B"
+	\startPart
+	g2:7 c:7 | f:7 bes:7 | ees:7 aes:7 | des1:7 | \myEndLine
+	f2:7 bes:7 | ees:7 aes:7 | des:7 ges:7 | g1:7 | \myEndLine
+	\endPart
+
+	\myMark "A"
+	\startPart
+	d2:7 g:7 | c1:m7 | f2:7 bes:7 | ees1:maj | \myEndLine
+	d2:7 g:7 | c1:m7 | aes2:7 g:7 | c1:m7 | \myEndLine
+	\endPart
+
+	\endSong
+	\endChords
+}
+{% endif %}
+{% if part == "VoiceLaurent" %}{
+	\tempo "Moderato" 4 = 160
+	\time 4/4
+	\key ees \major
+
+	% part "Intro"
+	r8 g c d ees f g ees |
+
+	% part "A"
+	\repeat volta 2 {
+		fis2 f4. ees8-. | r g, c d ees f g bes | a2 aes4. g8-. | r g, c d ees f g ees |
+		fis2 f4. ees8-. | r2 \tuplet 3/2 { ees16 f ees } c8 ees c ~ |
+	} \alternative {
+		{
+			c2.. c8-. | r g c d ees f g ees |
+		}
+		{
+			c2.. c8-. | r2 r8 g''4-. g8 ~ |
+		}
+	}
+
+	% part "B"
+	g4 \tuplet 3/2 { b,16 c b } a8 bes4 g'8 e |
+	f4 \tuplet 3/2 { a,16 bes a } g8 aes4 f'8 d |
+	ees4 \tuplet 3/2 { g,16 aes g } f8 ges4 e | f2 r8 f'4-. f8 ~ |
+	f4 \tuplet 3/2 { a,16 bes a } g8 aes4 f'8 d |
+	ees4 \tuplet 3/2 { g,16 aes g } f8 ges4 ees'8 c |
+	des4 \tuplet 3/2 { f,16 ges f } ees8 e4. ees8-. |
+	r8 g, c d ees f g ees |
+
+	% part "A"
+	fis2 f4. ees8-. | r g, c d ees f g bes | a2 aes4. g8-. | r g, c d ees f g ees |
+	fis2 f4. ees8-. | r2 \tuplet 3/2 { ees16 f ees } c8 ees c ~ | c2.. c8-. | r1 |
+}
+{% endif %}

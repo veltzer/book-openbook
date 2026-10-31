@@ -1,0 +1,109 @@
+{#
+default_version = "Laurent"
+
+[attributes]
+title = "I Got Rhythm"
+style = "Jazz"
+composer = "George Gershwin"
+poet = "Ira Gershwin"
+typesetter = "Laurent Martelli"
+completion = "3"
+uuid = "bee31983-d49f-11f1-8000-046874d194b7"
+structure = "AABA"
+
+[versions.Laurent]
+doChords = true
+doVoice = true
+doLyrics = false
+doLyricsmore = false
+doLyricsmoremore = false
+doChordBars = false
+doGuitar = false
+doExtra = false
+doPrep = false
+doOwn = false
+#}
+{% if part == "Vars" %}
+{% endif %}
+{% if part == "Doc" %}	DONE:
+	- converted the Laurent Martelli version from staging/openbook/laurent/i_got_rhythm.ly.
+	TODO:
+	- check the tune and chords against a real book.
+	- the source has no tempo; the tempo here is a guess.
+	- the coda ends with two bars of slashes (rhythm only) as in the source.
+	- add the lyrics.
+	- add youtube performances.
+{% endif %}
+{% if part == "ChordsLaurent" %}\chordmode {
+	\startChords
+	\startSong
+
+	\myMark "A"
+	\startPart
+	\repeat volta 2 {
+		bes2:6 g:m7 | c:m7 f:7 | bes des:dim7 | c:m7 f:7 | \myEndLine
+		bes2:6 bes:7 | ees:6 ees:m6 | bes f:7 |
+	} \alternative {
+		{
+			bes:6 f:7 | \myEndLineVoltaNotLast
+		}
+		{
+			bes:6 a:7 | \myEndLineVoltaLast
+		}
+	}
+	\endPart
+
+	\myMark "B"
+	\startPart
+	d1:7 | a2:m7 d:7 | g1:7 | d2:m7 g:7 | \myEndLine
+	c1:7 | g2:m7 c:7 | c1:m7 | f:7 | \myEndLine
+	\endPart
+
+	\myMark "A"
+	\startPart
+	bes2:6 g:m7 | c:m7 f:7 | bes des:dim7 | c:m7 f:7 | \myEndLine
+	bes2:6 bes:7 | ees:6 ees:m7 | bes aes:7 | g1:7 | \myEndLine
+	\endPart
+
+	\myMark "Coda"
+	\startPart
+	c2:9 f:7 | bes:6 f:7 | c1:m7 | f:7 | \myEndLine
+	bes4 bes:7 ees e:dim7 | bes8. f:7 bes8:6 s2 | \myEndLine
+	\endPart
+
+	\endSong
+	\endChords
+}
+{% endif %}
+{% if part == "VoiceLaurent" %}{
+	\tempo "Allegro" 4 = 180
+	\time 4/4
+	\key bes \major
+
+	% part "A"
+	\repeat volta 2 {
+		r4 f2 g8 r | bes4. c8~ c2 | r4 c2 bes8 r | g4. f8~ f2 |
+		r4 f2 g8 r | bes4. c8~ c ees4 c8 | d4 d c8 d c4 |
+	} \alternative {
+		{
+			bes1 |
+		}
+		{
+			bes2. r4 |
+		}
+	}
+
+	% part "B"
+	r4 d2 d4 | d4. e8~ e2 | r4 d2 d4 | d4. g,8~ g2 |
+	r4 c2 c4 | c4. d8~ d2 | r4 c2 c4 | c4. c8~ c2 |
+
+	% part "A"
+	r4 f,2 g8 r | bes4. c8~ c2 | r4 c2 bes8 r | g4. f8~ f2 |
+	r4 f2 g8 r | bes4. c8~ c ees4 c8 | d4 d c8 d c4 | f2 r8 ees4 b8^\markup { To Coda \musicglyph #"scripts.coda" } |
+
+	% part "Coda"
+	d4 d c8 bes c bes->~ | bes1_"Break" | r1 | r1 |
+	\override NoteHead.style = #'slash
+	c4 c c c | c8. c16 c8 c~ c2\fermata |
+}
+{% endif %}

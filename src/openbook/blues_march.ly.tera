@@ -1,0 +1,67 @@
+{#
+default_version = "Laurent"
+
+[attributes]
+title = "Blues March"
+style = "Jazz"
+composer = "Benny Golson"
+typesetter = "Laurent Martelli"
+completion = "3"
+uuid = "9b7144e2-d49f-11f1-8000-046874d194b7"
+structure = "Blues"
+
+[versions.Laurent]
+doChords = true
+doVoice = true
+doLyrics = false
+doLyricsmore = false
+doLyricsmoremore = false
+doChordBars = false
+doGuitar = false
+doExtra = false
+doPrep = false
+doOwn = false
+#}
+{% if part == "Vars" %}
+{% endif %}
+{% if part == "Doc" %}	DONE:
+	- converted the Laurent Martelli version from staging/openbook/laurent/blues_march.ly.
+	TODO:
+	- check the tune and chords against a real book.
+	- the source has no tempo mark, check the tempo.
+	- add youtube performances.
+{% endif %}
+{% if part == "ChordsLaurent" %}\chordmode {
+	\startChords
+	\startSong
+
+	\partial 8 s8 |
+
+	\myMark "A"
+	\startPart
+	bes1:7 | ees:7 | bes1*2:7 | \myEndLine
+	ees2:m7 aes:m7 | des1:m7 | aes:7 | g2.:m7.5- gis4:dim7 | \myEndLine
+	a2:dim7 bes:m7.5- | c4:7 f:7 bes des:7 | c:7 f2.:7 | bes1 | \myEndLine
+	\endPart
+
+	\endSong
+	\endChords
+}
+{% endif %}
+{% if part == "VoiceLaurent" %}{
+	\tempo "Moderato" 4 = 120
+	\time 4/4
+	\key bes \major
+
+	\partial 8 f8 |
+
+	% part "A"
+	bes2 d16 bes r8 r8. bes16 | des2 ees16 des r8 r8. f,16 |
+	bes2. \grace cis8 d8 d | bes4. aes8 r4 r8 f8 |
+	bes8. bes16 des8. des16 \tuplet 3/2 { ees8 fes ees } \tuplet 3/2 { des8 bes des } |
+	bes8. bes16 aes8. aes16 \tuplet 3/2 { ges8 ees ges } des8. ees16 |
+	f2 r8 f \tuplet 3/2 { aes f aes } | ges2 r8 ges ces des |
+	bes4 ~ \tuplet 3/2 { bes8 aes ges } bes4 ~ \tuplet 3/2 { bes8 aes ges } |
+	a!8 r f'8. f16 \tuplet 3/2 { ees8 c a } f8 ees | d bes' ~ bes2. ~ | bes1 |
+}
+{% endif %}

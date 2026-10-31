@@ -35,6 +35,18 @@ doGuitar = false
 doExtra = false
 doPrep = false
 doOwn = false
+
+[versions.Laurent]
+doChords = true
+doVoice = true
+doLyrics = false
+doLyricsmore = false
+doLyricsmoremore = false
+doChordBars = false
+doGuitar = false
+doExtra = false
+doPrep = false
+doOwn = false
 #}
 {% if part == "Vars" %}
 {% endif %}
@@ -51,6 +63,7 @@ doOwn = false
 	- heard the tune to check that it is right and adjust the tempo.
 	- added lyrics url.
 	- added youtube performances.
+	- converted the Laurent Martelli version from staging/openbook/laurent/take_the_a_train.ly (as the Laurent version, with the intro).
 	TODO:
 	- how do I add the small notes at the last bar?
 	- add another version of this tune.
@@ -139,5 +152,66 @@ doOwn = false
 
 	% part "A"
 	If __ you miss the "\"A\"" Train, __ You'll find you've missed the quick -- est way to Har -- lem. __
+}
+{% endif %}
+{% if part == "ChordsLaurent" %}\chordmode {
+	\startChords
+	\startSong
+
+	\myMark "Intro"
+	\startPart
+	c2/+g aes:7.5+/ges | c/+g aes:7.5+/ges | c/+g aes:7.5+/ges | c/+g aes:7.5+/ges | \myEndLine
+	\endPart
+
+	\myMark "A"
+	\startPart
+	c1*2:6 | d1*2:9.11+ | \myEndLine
+	d1:m7 | g:7 | c:6 | d2:m7 g:7 | \myEndLine
+	\endPart
+
+	\myMark "A"
+	\startPart
+	c1*2:6 | d1*2:9.11+ | \myEndLine
+	d1:m7 | g:7 | c:6 | c:7 | \myEndLine
+	\endPart
+
+	\myMark "B"
+	\startPart
+	g1*4:maj7 | \myEndLine
+	d1*2:9 | d1:m9 | g2:9 g:9- | \myEndLine
+	\endPart
+
+	\myMark "A"
+	\startPart
+	c1*2:6 | d1*2:9.11+ | \myEndLine
+	d1:m7 | g:7 | c:6 | d2:m7 g:7 | \myEndLine
+	\endPart
+
+	\endSong
+	\endChords
+}
+{% endif %}
+{% if part == "VoiceLaurent" %}{
+	\tempo "Allegro" 4 = 168
+	\time 4/4
+	\key c \major
+
+	% part "Intro"
+	r8 e' ~ e \tuplet 3/2 { d16 c bes } aes2 | e'4 ~ e8 \tuplet 3/2 { d16 c bes } aes8 aes r4 |
+	r8 e' ~ e \tuplet 3/2 { d16 c bes } aes2 | e'4 ~ e8 \tuplet 3/2 { d16 c bes } aes8 aes r4 |
+
+	% part "A"
+	\repeat unfold 2 {
+		g1 ~ | g8 e'4. g,4 c | e8 gis, ~ gis2. ~ | gis1 |
+		a1 | a8 ais b e g, ges f des' | c e, ~ e2. ~ | e1 |
+	}
+
+	% part "B"
+	a8 c ~ c2. | e8 f,4. a4 c | e8 a, ~ a2. ~ | a1 |
+	a8 c ~ c2. | e8 fis,4. a4 c | e8 a, ~ a2. ~ | a2 aes |
+
+	% part "A"
+	g1 ~ | g8 e'4. g,4 c | e8 gis, ~ gis2. ~ | gis1 |
+	a1 | a8 ais b e g, ges f des' | c e, ~ e2. ~ | e1 |
 }
 {% endif %}

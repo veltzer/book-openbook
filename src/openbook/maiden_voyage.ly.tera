@@ -32,6 +32,18 @@ doGuitar = false
 doExtra = false
 doPrep = false
 doOwn = false
+
+[versions.Laurent]
+doChords = true
+doVoice = true
+doLyrics = false
+doLyricsmore = false
+doLyricsmoremore = false
+doChordBars = false
+doGuitar = false
+doExtra = false
+doPrep = false
+doOwn = false
 #}
 {% if part == "Vars" %}
 {% endif %}
@@ -41,6 +53,7 @@ doOwn = false
 		- put in the chords (Hal Leonard Real Jazz Book).
 		- put in the tune (Hal Leonard Real Jazz Book).
 		- added youtube performances.
+		- added the Laurent Martelli version from staging/openbook/laurent/maiden_voyage.ly.
 	TODO:
 		- check the chords (Hal Leonard Real Jazz Book).
 		- check the tune (Hal Leonard Real Jazz Book).
@@ -111,5 +124,71 @@ doOwn = false
 	% part "A"
 	d1~ | d1~ | d1 | r2 r4 c8 d |
 	ees8 f c2.~ | c1~ | c1 | r1 |
+}
+{% endif %}
+{% if part == "ChordsLaurent" %}\chordmode {
+	\startChords
+	\startSong
+
+	\partial 4 s4 |
+
+	\myMark "A"
+	\startPart
+	\repeat volta 2 {
+		a1*4:m7/+d | \myEndLine
+		c1*3:m7/+f |
+	} \alternative {
+		{
+			s1 | \myEndLineVoltaNotLast
+		}
+		{
+			s1 | \myEndLineVoltaLast
+		}
+	}
+	\endPart
+
+	\myMark "B"
+	\startPart
+	bes1*4:m7/+ees | \myEndLine
+	cis1*4:m7 | \myEndLine
+	\endPart
+
+	\myMark "A"
+	\startPart
+	a1*4:m7/+d | \myEndLine
+	c1*4:m7/+f | \myEndLine
+	\endPart
+
+	\endSong
+	\endChords
+}
+{% endif %}
+{% if part == "VoiceLaurent" %}{
+	\tempo "Moderato" 4 = 120
+	\time 4/4
+	\key c \major
+
+	\partial 4 a'8( d) |
+
+	% part "A"
+	\repeat volta 2 {
+		d1~ | d~ | d2 r | r r4 c8( d) |
+		ees f c2.~ | c1~ | c2 r |
+	} \alternative {
+		{
+			r2 r4 a8( d) |
+		}
+		{
+			r2 r4 c8( f) |
+		}
+	}
+
+	% part "B"
+	f1~ | f~ | f2 r | r r4 ees8( e) |
+	e fis cis2.~ | cis1 | cis2 r | r r4 a8( d) |
+
+	% part "A"
+	d1~ | d~ | d2 r | r r4 c8( d) |
+	ees f c2.~ | c1 | c2 r | r1 |
 }
 {% endif %}

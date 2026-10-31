@@ -1,0 +1,108 @@
+{#
+default_version = "Laurent"
+
+[attributes]
+title = "Lazy Bird"
+style = "Jazz"
+composer = "John Coltrane"
+typesetter = "Laurent Martelli"
+completion = "3"
+uuid = "5dad74b8-d4a0-11f1-8000-046874d194b7"
+structure = "AABA"
+
+[versions.Laurent]
+doChords = true
+doVoice = true
+doLyrics = false
+doLyricsmore = false
+doLyricsmoremore = false
+doChordBars = false
+doGuitar = false
+doExtra = false
+doPrep = false
+doOwn = false
+#}
+{% if part == "Vars" %}
+{% endif %}
+{% if part == "Doc" %}	DONE:
+	- converted the Laurent Martelli version from staging/openbook/laurent/lazy_bird.ly.
+	TODO:
+	- check the tune and chords against a real book.
+	- the source has no tempo marking, the tempo is a guess.
+	- the source goes to the coda after bar 6 of the last A; here the last A is written in full and the coda follows it.
+	- add youtube performances.
+{% endif %}
+{% if part == "ChordsLaurent" %}\chordmode {
+	\startChords
+	\startSong
+
+	\myMark "A"
+	\startPart
+	\repeat volta 2 {
+		a2.:m7 d4:7 | c2:m7 f:7 | f1:m7 | bes:7 | \myEndLine
+		ees:maj7 | a2.:m7 d4:7 | g1:maj7 |
+	} \alternative {
+		{
+			aes2.:m7.5- des4:7.9- | \myEndLineVoltaNotLast
+		}
+		{
+			g1:maj7 | \myEndLineVoltaLast
+		}
+	}
+	\endPart
+
+	\myMark "B"
+	\startPart
+	b1:m7 | e:7 | a:maj7 | bes2:m7 ees:7 | \myEndLine
+	a1:m7 | d:7 | g:maj7 | aes2:m7 des:7 | \myEndLine
+	\endPart
+
+	\myMark "A"
+	\startPart
+	a2.:m7 d4:m7 | c2:m7 f:7 | f1:m7 | bes:7 | \myEndLine
+	ees1:maj7 | a2.:7 d4:7 | g1*2:maj7 | \myEndLine
+	\endPart
+
+	\myMark "Coda"
+	\startPart
+	f1:7.11+^9.5 | ees:7 | a:m7 | d:7.9- | \myEndLine
+	g:maj7 | c:7.9- | f:maj7 | bes:7.9- | \myEndLine
+	ees:7 | aes:maj7 | des:7 | \myEndLine
+	\endPart
+
+	\endSong
+	\endChords
+}
+{% endif %}
+{% if part == "VoiceLaurent" %}{
+	\tempo "Moderato" 4 = 160
+	\time 4/4
+	\key g \major
+
+	% part "A"
+	\repeat volta 2 {
+		b'2. a4 | d2 c | bes1 | f2 g4 aes8 bes ~ |
+		bes2 g4 bes8 c ~ | c2 a4 c8 d ~ | d1 ~ |
+	} \alternative {
+		{
+			d2. r4 |
+		}
+		{
+			d2. b4 |
+		}
+	}
+
+	% part "B"
+	d1 ~ | \tuplet 3/2 { d4 b c } \tuplet 3/2 { d4 fis e } | cis1 ~ | cis |
+	c!1 ~ | \tuplet 3/2 { c4 a b } \tuplet 3/2 { c4 e d } | b1 ~ | b |
+
+	% part "A"
+	b2. a4 | d2 c | bes1 | f2 g4 aes8 bes ~ |
+	bes2 g4 bes8 c ~ | c2 a4 c8 d ~ | d1 ~ | d1 |
+
+	% part "Coda"
+	d2. d4 | f2. e4 | c2. r4 | r ees2 d4 |
+	b1 | bes | a | aes |
+	g | g2. r4 | g1\fermata |
+}
+{% endif %}

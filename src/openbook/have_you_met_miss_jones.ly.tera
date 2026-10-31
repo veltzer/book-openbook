@@ -34,6 +34,18 @@ doGuitar = false
 doExtra = false
 doPrep = false
 doOwn = false
+
+[versions.Laurent]
+doChords = true
+doVoice = true
+doLyrics = false
+doLyricsmore = false
+doLyricsmoremore = false
+doChordBars = false
+doGuitar = false
+doExtra = false
+doPrep = false
+doOwn = false
 #}
 {% if part == "Vars" %}
 {% endif %}
@@ -51,6 +63,7 @@ doOwn = false
 	- played the fake book tune to hear that it's ok and adjusted it's speed.
 	- add you tube performances.
 	- add a lyrics url.
+	- added the Laurent Martelli version from staging/openbook/laurent/miss_jones.ly.
 	TODO:
 	- add the real book version.
 {% endif %}
@@ -147,5 +160,67 @@ doOwn = false
 	Miss Jones and I.
 
 	I. __
+}
+{% endif %}
+{% if part == "ChordsLaurent" %}\chordmode {
+	\startChords
+	\startSong
+
+	\myMark "A"
+	\startPart
+	\repeat volta 2 {
+		f1:maj7 | d:7.9- | g:m7 | c:7 | \myEndLine
+		a:m7 | d:m7 |
+	} \alternative {
+		{
+			g:m7 | c:7 | \myEndLineVoltaNotLast
+		}
+		{
+			c:m7 | f:7 | \myEndLineVoltaLast
+		}
+	}
+	\endPart
+
+	\myMark "B"
+	\startPart
+	bes1:maj7 | aes2:m7 des:7 | ges1:maj7 | e2:m7 a:7 | \myEndLine
+	d1:maj7 | aes2:m7 des:7 | ges1:maj7 | g2:m7 c:7 | \myEndLine
+	\endPart
+
+	\myMark "A"
+	\startPart
+	f1:maj7 | d:7.9- | g:m7 | c:7 | \myEndLine
+	a2:m7 d:7 | g:m7 c:7 | f1:maj7 | g2:m7 c:7 | \myEndLine
+	\endPart
+
+	\endSong
+	\endChords
+}
+{% endif %}
+{% if part == "VoiceLaurent" %}{
+	\tempo "Allegro" 4 = 160
+	\time 4/4
+	\key f \major
+
+	% part "A"
+	\repeat volta 2 {
+		a'4 d, c d | c2. r4 | d e f g | a bes c2 |
+		d4 g, f g | f2. a4 |
+	} \alternative {
+		{
+			bes1~ | bes2. r4 |
+		}
+		{
+			c1~ | c4 d d d |
+		}
+	}
+
+	% part "B"
+	c4 bes f g | aes aes aes aes | aes ges des ees | e! e e e |
+	e d fis a | des2 des | bes1~ | bes2. r4 |
+
+	% part "A"
+	a4 d, c d | c2. r4 | d e f g | a bes c d |
+	e1~ | e4 d a g | f1 | r1 |
 }
 {% endif %}

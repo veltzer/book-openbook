@@ -33,10 +33,23 @@ doGuitar = false
 doExtra = false
 doPrep = false
 doOwn = false
+
+[versions.Laurent]
+doChords = true
+doVoice = true
+doLyrics = false
+doLyricsmore = false
+doLyricsmoremore = false
+doChordBars = false
+doGuitar = false
+doExtra = false
+doPrep = false
+doOwn = false
 #}
 {% if part == "Vars" %}
 {% endif %}
 {% if part == "Doc" %}	DONE:
+	- added the Laurent Martelli version from staging/openbook/laurent/nows_the_time.ly.
 	- filled in the meta data from the fake book
 	- write the fake book chords.
 	- write the fake book tune.
@@ -79,5 +92,35 @@ doOwn = false
 		f f g c, f bes,4. | f'8 f g c, f b,!4. | f'8 f g c, f f g c, | f f g c, f4 r8 aes~ |
 		\tuplet 3/2 { aes16 bes aes } f8 d b! d4 r | r8 g4. f8 g f ees | r c r c4 r8 r4 | r1 |
 	}
+}
+{% endif %}
+{% if part == "ChordsLaurent" %}\chordmode {
+	\startChords
+	\startSong
+
+	\partial 8 s8 |
+
+	\myMark "A"
+	\startPart
+	f1:7 | bes:7 | f:7 | c2:m7 f:7 | \myEndLine
+	bes1:7 | bes2:7 b:dim7 | f bes:7 | a:m7.5- d:7.9+ | \myEndLine
+	g:m7 c:9 | g:m7 c:7 | f:7 aes:7 | g:m7 c:7 | \myEndLine
+	\endPart
+
+	\endSong
+	\endChords
+}
+{% endif %}
+{% if part == "VoiceLaurent" %}{
+	\tempo "Presto" 4 = 190
+	\time 4/4
+	\key f \major
+
+	\partial 8 c8 |
+
+	% part "A"
+	f f g c, f4 r8 c | f f g c, f4 r8 c | f f g c, f f g c, | f f g c, f4 r8 c |
+	f f g c, f bes, r c | f f g c, f b, r c | f f g c, f f g c, | f f g c, f4 r8 aes~ |
+	aes f d c d4 r | r8 g~ g4 f8 g f ees~ | ees c4 a8 c4 r8 ees | r c4 bes8 c2 |
 }
 {% endif %}

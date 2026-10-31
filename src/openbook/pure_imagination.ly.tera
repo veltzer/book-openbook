@@ -1,0 +1,90 @@
+{#
+default_version = "Anon"
+
+[attributes]
+title = "Pure Imagination"
+style = "Jazz"
+composer = "Leslie Bricusse, Anthony Newley"
+poet = "Leslie Bricusse, Anthony Newley"
+piece = "Warm"
+typesetter = "Anonymous <anonymous@zivlempel.org>"
+completion = "3"
+uuid = "dfffe8f2-d49f-11f1-8000-046874d194b7"
+structure = "Intro ABC"
+
+[versions.Anon]
+doChords = true
+doVoice = true
+doLyrics = false
+doLyricsmore = false
+doLyricsmoremore = false
+doChordBars = false
+doGuitar = false
+doExtra = false
+doPrep = false
+doOwn = false
+#}
+{% if part == "Vars" %}
+{% endif %}
+{% if part == "Doc" %}	DONE:
+	- converted the Anonymous <anonymous@zivlempel.org> version from staging/openbook/anon/PureImagination.ly.
+	TODO:
+	- check the tune and chords against a real book.
+	- add youtube performances.
+	- the intro is played by the piano; the last two notes of the intro bar are the pickup to A.
+	- add the lyrics.
+{% endif %}
+{% if part == "ChordsAnon" %}\chordmode {
+	\startChords
+	\startSong
+
+	\myMark "Intro"
+	\startPart
+	s1 | s1 | s1 | s1 | \myEndLine
+	\endPart
+
+	\myMark "A"
+	\startPart
+	c1:m9 | f:7sus4 | bes:maj | g:m | c:m9 | f:7sus4 | bes:dim7 | bes:6 | \myEndLine
+	c:m | f:7 | bes:maj | g2:m e:3-.5-.7 | c1:m9 | f:7sus4 | d:maj | s | \myEndLine
+	\endPart
+
+	\myMark "B"
+	\startPart
+	ees1:maj | d2:m7 g:m | c:m7 f:7 | bes1:maj | \myEndLine
+	e2:3-.5-.7 a:7 | d:m7 g:m7 | c2:7sus4 c:9 | f2:7sus4 f:7 | \myEndLine
+	\endPart
+
+	\myMark "C"
+	\startPart
+	c1:m9 | f:7sus4 | bes:maj | g:m | c:m9 | f:7sus4 | \myEndLine
+	d:maj | c2:m f:7 | bes1:maj | s1 | \myEndLine
+	\endPart
+
+	\endSong
+	\endChords
+}
+{% endif %}
+{% if part == "VoiceAnon" %}{
+	\tempo "Warm" 4 = 80
+	\time 4/4
+	\key bes \major
+
+	% part "Intro"
+	g''4^\markup { "Intro (piano)" } fis, g!2 | g'4 fis, g!2 | g'4 fis, g!2 | g'4 fis, g^\markup { Pickup } bes |
+
+	% part "A"
+	f'2. g,8 bes | f'2. d8 f | a4. bes8 a bes a bes | a4 f g, bes |
+	d2. ees8 f | d2. c8 bes | a4. bes8 a bes a bes | a4 f g bes |
+	f'2. g,8 bes | f'2. d8 f | a4. bes8 a bes a bes | a4 f g, bes |
+	d2. ees8 f | d2. c8 bes | a8 a'~ a2.~ | a1 |
+
+	% part "B"
+	bes8 c bes c bes2 | a4 f d2 | d8 ees d ees d4. bes8 | d4 f~ f2 |
+	a8 bes a bes a4. e8 | g4 a~ a2 | g8 a g a g g, a bes | b4 c~ c g8 bes |
+
+	% part "C"
+	f'2. g,8 bes | f'2. d8 f | a4. bes8 a bes a bes | a4 f g, bes |
+	d2. ees8 f | d2. c8 bes | a2 a'~ | a2 aes,4 a | bes1~ | bes2 r2_\markup { "back to" \box "A" } |
+}
+{% endif %}

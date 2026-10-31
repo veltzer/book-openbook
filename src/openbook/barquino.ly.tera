@@ -1,0 +1,94 @@
+{#
+default_version = "Laurent"
+
+[attributes]
+title = "O Barquino"
+subtitle = "Little Boat"
+style = "Jazz"
+composer = "Roberto Menescal"
+piece = "Bossa Nova"
+copyright = "1962-1964 Editions SACHA s.q.r.l. Paris, France"
+typesetter = "Laurent Martelli"
+completion = "3"
+uuid = "9b6b1a40-d49f-11f1-8000-046874d194b7"
+structure = "AAAB"
+
+[versions.Laurent]
+doChords = true
+doVoice = true
+doLyrics = false
+doLyricsmore = false
+doLyricsmoremore = false
+doChordBars = false
+doGuitar = false
+doExtra = false
+doPrep = false
+doOwn = false
+#}
+{% if part == "Vars" %}
+{% endif %}
+{% if part == "Doc" %}	DONE:
+	- converted the Laurent Martelli version from staging/openbook/laurent/barquino.ly.
+	TODO:
+	- check the tune and chords against a real book.
+	- the source has no tempo mark (only a midi tempo of 144), check the tempo.
+	- the source ends with a coda that only has chords (the last four bars twice and a final chord), the melody there is just rests.
+	- add the lyrics.
+	- add youtube performances.
+{% endif %}
+{% if part == "ChordsLaurent" %}\chordmode {
+	\startChords
+	\startSong
+
+	\myMark "A"
+	\startPart
+	bes1*2:maj | e2:m7.5- a:7 | e2:m7.5- a:7 | \myEndLine
+	\endPart
+
+	\myMark "A"
+	\startPart
+	aes1*2:maj | d2:m7.5- g:7 | d2:m7.5- g:7 | \myEndLine
+	\endPart
+
+	\myMark "A"
+	\startPart
+	ges1*2:maj | c2:m7.5- f:7 | c2:m7.5- f:7 | \myEndLine
+	\endPart
+
+	\myMark "B"
+	\startPart
+	d1:m7 | g:7.9- | c:m7 | f:7.9- | \myEndLine
+	\endPart
+
+	\myMark "End"
+	\startPart
+	d1:m7 | g:7.9- | c:m7 | f:7.9- | \myEndLine
+	d1:m7 | g:7.9- | c:m7 | f:7.9- | bes:maj | \myEndLine
+	\endPart
+
+	\endSong
+	\endChords
+}
+{% endif %}
+{% if part == "VoiceLaurent" %}{
+	\tempo "Bossa Nova" 4 = 144
+	\time 4/4
+	\key bes \major
+
+	% part "A"
+	a'8 bes4 a8 c4 a8 bes ~ | bes a c4 b bes | a8 a a a a4 ees8 e | a8 a a a a2 |
+
+	% part "A"
+	g8 aes4 g8 bes4 g8 aes ~ | aes g bes4 a aes | g8 g g g g4 cis,8 d | g8 g g g g2 |
+
+	% part "A"
+	f8 ges4 g8 aes4 f8 ges ~ | ges f aes4 g ges | f8 f f f f4 b,8 c | f2 r8 c'4 bes8 |
+
+	% part "B"
+	f2. g4 | aes2 ~ aes8 ees'4 d8 | ees,2. f4 | ges2. r4 |
+
+	% part "End"
+	r1 | r1 | r1 | r1 |
+	r1 | r1 | r1 | r1 | r1\fermata |
+}
+{% endif %}

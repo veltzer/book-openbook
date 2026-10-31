@@ -35,10 +35,23 @@ doGuitar = false
 doExtra = false
 doPrep = false
 doOwn = false
+
+[versions.Laurent]
+doChords = true
+doVoice = true
+doLyrics = false
+doLyricsmore = false
+doLyricsmoremore = false
+doChordBars = false
+doGuitar = false
+doExtra = false
+doPrep = false
+doOwn = false
 #}
 {% if part == "Vars" %}
 {% endif %}
 {% if part == "Doc" %}	DONE:
+	- converted the Laurent Martelli version from staging/openbook/laurent/i_ll_remember_april.ly.
 	- added the epdf from the fake book.
 	- added the meta data from the fake book.
 	- put in the tunes structure
@@ -133,5 +146,61 @@ doOwn = false
 	The fire will dwin -- dle in -- to glow -- ing ash -- es,
 	for flames and love live such a lit -- tle while. __
 	I
+}
+{% endif %}
+{% if part == "ChordsLaurent" %}\chordmode {
+	\startChords
+	\startSong
+
+	\myMark "A"
+	\startPart
+	g1:maj7 | g:6 | g:maj7 | g:6 | \myEndLine
+	g:m7 | g:m6 | g:m7 | g:m6 | \myEndLine
+	a:m7.5- | d:7 | b:m7.5- | e:7 | \myEndLine
+	a:m7 | d:7 | g:maj7 | g:7.9- | \myEndLine
+	\endPart
+
+	\myMark "B"
+	\startPart
+	c:m7 | f:7 | bes:maj7 | g:m7 | \myEndLine
+	c:m7 | f:7 | bes:maj7 | bes:6 | \myEndLine
+	a:m7 | d:7 | g:maj7 | g:6 | \myEndLine
+	fis:m7 | b:7 | e:maj7 | a2:m7 d:7 | \myEndLine
+	\endPart
+
+	\myMark "A"
+	\startPart
+	g1:maj7 | g:6 | g:maj7 | g:6 | \myEndLine
+	g:m7 | g:m6 | g:m7 | g:m6 | \myEndLine
+	a:m7.5- | d:7 | b:m7.5- | e:7 | \myEndLine
+	a:m7 | d:7 | g1*2:maj7 | \myEndLine
+	\endPart
+
+	\endSong
+	\endChords
+}
+{% endif %}
+{% if part == "VoiceLaurent" %}{
+	\tempo "Allegro" 4 = 130
+	\time 4/4
+	\key g \major
+
+	% part "A"
+	r4 b' c d | c b a g | a2. g4 | fis e2. |
+	r4 a bes c | bes a g f | g8 a g2.~ | g2 r8 g4. |
+	a2. a4 | a a b c | d4. d8~ d2~ | d2 e4. d8 |
+	b4 c d c~ | c2 b4 ais | b1~ | b2 r8 b4. |
+
+	% part "B"
+	g4 g g2~ | g4 a4 bes c | d2. c4 | bes g2 f4 |
+	g4 g g2~ | g4 a bes c | d2 d4 d~ | d d \tuplet 3/2 { d d d } |
+	d2. d4 | e c d4. b8 | a4 b2.~ | b4 b d c |
+	b b2.~ | b2 \tuplet 3/2 { b4 a gis } | b1~ | b1 |
+
+	% part "A"
+	r4 b c d | c b a g | a2. g4 | fis e2. |
+	r4 a bes c | bes a g f | g8 a g2.~ | g2 r8 g4. |
+	a4. a8 a2~ | a4 a \tuplet 3/2 { a b c } | d2 d~ | d e4. d8 |
+	b4 c d c~ | c2 b4 b | g1~ | g4 r r2 |
 }
 {% endif %}

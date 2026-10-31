@@ -4,120 +4,465 @@
 <html lang="en">
 	<head>
 		<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-		<title>{{ project.NAME }}</title>
-		<link rel="shortcut icon" href="favicon.ico"/>
+		<meta name="viewport" content="width=device-width, initial-scale=1" />
+		<title>{{ project.NAME_FANCY }} - an open source Jazz real book</title>
+		<link rel="icon" type="image/svg+xml" href="logo.svg"/>
+		<link rel="icon" href="favicon.ico" sizes="16x16 32x32 48x48"/>
 		<meta name="Description" content="{{ project.DESCRIPTION_LONG }}"/>
 		<meta name="Keywords" content="{{ personal.FULLNAME }}, {{ personal.SLUG }}, {{ project.NAME }}, {{ project.KEYWORDS | join(sep=", ") }}"/>
+		<link rel="preconnect" href="https://fonts.googleapis.com"/>
+		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin=""/>
+		<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&amp;family=Playfair+Display:ital,wght@0,600;0,800;1,600&amp;display=swap"/>
+		<style>
+			:root {
+				--bg: #f7f4ee;
+				--surface: #ffffff;
+				--surface-2: #fbf8f2;
+				--text: #1f2430;
+				--muted: #5d6475;
+				--navy: #1d2b4a;
+				--navy-2: #2c3e66;
+				--brass: #b8740f;
+				--brass-light: #f6cf5c;
+				--border: #e6dfd2;
+				--shadow: 0 1px 2px rgba(29, 43, 74, 0.06), 0 8px 24px rgba(29, 43, 74, 0.08);
+				--serif: "Playfair Display", Georgia, serif;
+				--sans: Inter, system-ui, -apple-system, "Segoe UI", sans-serif;
+			}
+			@media (prefers-color-scheme: dark) {
+				:root {
+					--bg: #0e1426;
+					--surface: #162039;
+					--surface-2: #1a2643;
+					--text: #e9e6df;
+					--muted: #a3a9b8;
+					--brass: #f0b941;
+					--border: #273457;
+					--shadow: 0 1px 2px rgba(0, 0, 0, 0.3), 0 8px 24px rgba(0, 0, 0, 0.3);
+				}
+			}
+			* { box-sizing: border-box; }
+			html { scroll-behavior: smooth; scroll-padding-top: 72px; }
+			body {
+				margin: 0;
+				background: var(--bg);
+				color: var(--text);
+				font-family: var(--sans);
+				font-size: 17px;
+				line-height: 1.65;
+			}
+			a { color: var(--brass); text-decoration-thickness: 1px; text-underline-offset: 3px; }
+			a:hover { color: var(--brass-light); }
+
+			/* navigation */
+			nav {
+				position: sticky;
+				top: 0;
+				z-index: 10;
+				background: rgba(29, 43, 74, 0.92);
+				backdrop-filter: blur(8px);
+				border-bottom: 1px solid rgba(246, 207, 92, 0.25);
+			}
+			nav .inner {
+				max-width: 1080px;
+				margin: 0 auto;
+				padding: 10px 20px;
+				display: flex;
+				align-items: center;
+				gap: 20px;
+			}
+			nav .brand {
+				display: flex;
+				align-items: center;
+				gap: 10px;
+				color: #f7f4ee;
+				text-decoration: none;
+				font-family: var(--serif);
+				font-weight: 800;
+				font-size: 1.25em;
+				margin-right: auto;
+			}
+			nav .brand img { width: 34px; height: 34px; }
+			nav a.link { color: #d6dae4; text-decoration: none; font-weight: 500; font-size: 0.92em; }
+			nav a.link:hover { color: var(--brass-light); }
+			@media (max-width: 640px) { nav a.link.optional { display: none; } }
+
+			/* hero */
+			.hero {
+				position: relative;
+				overflow: hidden;
+				color: #f7f4ee;
+				text-align: center;
+				padding: 72px 20px 88px;
+				background:
+					repeating-linear-gradient(180deg, transparent 0, transparent 13px, rgba(246, 207, 92, 0.07) 13px, rgba(246, 207, 92, 0.07) 14px),
+					radial-gradient(ellipse at 50% 0%, #34497a 0%, #1d2b4a 55%, #141f38 100%);
+			}
+			.hero img.logo {
+				width: 168px;
+				height: 168px;
+				filter: drop-shadow(0 10px 30px rgba(246, 207, 92, 0.35));
+			}
+			.hero h1 {
+				font-family: var(--serif);
+				font-weight: 800;
+				font-size: clamp(2.6em, 7vw, 4.4em);
+				line-height: 1.05;
+				margin: 18px 0 8px;
+				letter-spacing: 0.01em;
+			}
+			.hero .tagline {
+				font-family: var(--serif);
+				font-style: italic;
+				font-size: 1.35em;
+				color: var(--brass-light);
+				margin: 0 0 6px;
+			}
+			.hero .sub { color: #c3c9d6; max-width: 560px; margin: 0 auto; }
+			.stats { display: flex; gap: 12px; justify-content: center; flex-wrap: wrap; margin: 26px 0 0; }
+			.stat {
+				border: 1px solid rgba(246, 207, 92, 0.35);
+				border-radius: 999px;
+				padding: 6px 16px;
+				font-size: 0.9em;
+				color: #e9e6df;
+				background: rgba(255, 255, 255, 0.04);
+			}
+			.stat b { color: var(--brass-light); }
+			.buttons { margin-top: 30px; display: flex; gap: 14px; justify-content: center; flex-wrap: wrap; }
+			.button {
+				display: inline-block;
+				padding: 13px 28px;
+				border-radius: 999px;
+				font-weight: 600;
+				text-decoration: none;
+				transition: transform 0.15s ease, box-shadow 0.15s ease;
+			}
+			.button:hover { transform: translateY(-2px); }
+			.button.primary {
+				background: linear-gradient(135deg, #f6cf5c, #c47f17);
+				color: #1d2b4a;
+				box-shadow: 0 8px 24px rgba(246, 207, 92, 0.3);
+			}
+			.button.primary:hover { color: #1d2b4a; }
+			.button.secondary { border: 2px solid rgba(246, 207, 92, 0.7); color: #f6cf5c; }
+			.hero .version { margin-top: 22px; font-family: ui-monospace, monospace; font-size: 0.8em; color: #8f97aa; }
+
+			/* layout */
+			main { max-width: 1080px; margin: 0 auto; padding: 0 20px 64px; }
+			section { margin-top: 64px; }
+			.eyebrow {
+				text-transform: uppercase;
+				letter-spacing: 0.14em;
+				font-size: 0.75em;
+				font-weight: 700;
+				color: var(--brass);
+				margin: 0;
+			}
+			h2 {
+				font-family: var(--serif);
+				font-size: 2.1em;
+				line-height: 1.2;
+				margin: 4px 0 18px;
+			}
+			.lead { color: var(--muted); font-size: 1.08em; max-width: 760px; }
+			.card {
+				background: var(--surface);
+				border: 1px solid var(--border);
+				border-radius: 16px;
+				box-shadow: var(--shadow);
+			}
+
+			/* tune index */
+			.search {
+				display: flex;
+				gap: 12px;
+				align-items: center;
+				flex-wrap: wrap;
+				margin-bottom: 16px;
+			}
+			.search input {
+				flex: 1 1 320px;
+				font: inherit;
+				padding: 13px 18px;
+				border-radius: 12px;
+				border: 1px solid var(--border);
+				background: var(--surface);
+				color: var(--text);
+				box-shadow: var(--shadow);
+			}
+			.search input:focus { outline: 2px solid var(--brass); outline-offset: 1px; }
+			.search .count { color: var(--muted); font-size: 0.9em; }
+			.tunes {
+				list-style: none;
+				margin: 0;
+				padding: 6px;
+				max-height: 520px;
+				overflow-y: auto;
+				display: grid;
+				grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+				gap: 2px 10px;
+			}
+			.tunes li a {
+				display: flex;
+				justify-content: space-between;
+				align-items: baseline;
+				gap: 12px;
+				padding: 8px 12px;
+				border-radius: 8px;
+				color: var(--text);
+				text-decoration: none;
+			}
+			.tunes li a:hover { background: var(--surface-2); }
+			.tunes .title { font-weight: 600; }
+			.tunes .composer { display: block; color: var(--muted); font-size: 0.82em; font-weight: 400; }
+			.tunes .page { color: var(--brass); font-size: 0.85em; font-variant-numeric: tabular-nums; white-space: nowrap; }
+			.tunes .empty { padding: 16px; color: var(--muted); }
+
+			/* books */
+			.books { display: grid; grid-template-columns: repeat(auto-fill, minmax(185px, 1fr)); gap: 16px; }
+			.book { padding: 22px 22px 18px; display: flex; flex-direction: column; }
+			.book .icon { font-size: 1.8em; line-height: 1; }
+			.book h3 { font-family: var(--serif); font-size: 1.3em; margin: 10px 0 4px; }
+			.book p { color: var(--muted); font-size: 0.92em; margin: 0 0 14px; flex: 1; }
+			.book .formats { display: flex; gap: 8px; flex-wrap: wrap; }
+			.book .formats a {
+				font-size: 0.8em;
+				font-weight: 600;
+				text-decoration: none;
+				padding: 4px 12px;
+				border-radius: 999px;
+				border: 1px solid var(--border);
+				background: var(--surface-2);
+			}
+			.book.featured { border-color: var(--brass); }
+
+			/* why */
+			.features { display: grid; grid-template-columns: repeat(auto-fill, minmax(300px, 1fr)); gap: 18px; }
+			.feature { padding: 20px 22px; }
+			.feature h3 { margin: 0 0 6px; font-size: 1.02em; }
+			.feature p { margin: 0; color: var(--muted); font-size: 0.94em; }
+			.two { display: grid; grid-template-columns: repeat(auto-fit, minmax(320px, 1fr)); gap: 18px; }
+			.two .card { padding: 6px 26px 18px; }
+			.two h3 { font-family: var(--serif); font-size: 1.35em; }
+			.two p { color: var(--muted); }
+			.links { columns: 2 260px; padding-left: 1.1em; }
+			.links li { margin: 4px 0; break-inside: avoid; }
+
+			footer {
+				border-top: 1px solid var(--border);
+				text-align: center;
+				color: var(--muted);
+				font-size: 0.88em;
+				padding: 28px 20px 44px;
+			}
+			footer img { width: 28px; height: 28px; vertical-align: middle; margin-right: 6px; }
+		</style>
 	</head>
 	<body>
-		<h1>Welcome to the <i>{{ project.NAME_FANCY }}</i> web site</h1>
+		<nav>
+			<div class="inner">
+				<a class="brand" href="#top"><img src="logo.svg" alt=""/>{{ project.NAME_FANCY }}</a>
+				<a class="link" href="#tunes">Tunes</a>
+				<a class="link" href="#books">Books</a>
+				<a class="link optional" href="#why">Why</a>
+				<a class="link optional" href="#about">About</a>
+				<a class="link" href="https://github.com/{{ personal.GITHUB_USERNAME }}/{{ project.NAME }}">GitHub</a>
+			</div>
+		</nav>
 
-		<p>current version is {{ version_str(path="config/version.lua") }}</p>
+		<header class="hero" id="top">
+			<img class="logo" src="logo.svg" alt="{{ project.NAME_FANCY }} logo: a saxophone"/>
+			<h1>{{ project.NAME_FANCY }}</h1>
+			<p class="tagline">An open source Jazz real book</p>
+			<p class="sub">Hundreds of jazz standards, beautifully engraved with LilyPond, free forever.</p>
+			<div class="stats">
+				<span class="stat"><b id="tune-count">Hundreds of</b> tunes</span>
+				<span class="stat"><b>5</b> books</span>
+				<span class="stat"><b>PDF</b>, PostScript and LilyPond</span>
+				<span class="stat"><b>{{ project.LICENSE_TYPE }}</b> licensed</span>
+			</div>
+			<div class="buttons">
+				<a class="button primary" href="output/openbook.pdf">Download the real book</a>
+				<a class="button secondary" href="#tunes">Browse the tunes</a>
+			</div>
+			<p class="version">version {{ version_str(path="config/version.lua") }}</p>
+		</header>
 
-		<h2>A demo for the impatient is
-			<a href="output/openbook.pdf">here</a>
-		</h2>
-		<p>You can download the latest version of <b>{{ project.NAME_FANCY }}</b> from <a href="output/openbook.pdf">here</a>.</p>
+		<main>
+			<section id="tunes">
+				<p class="eyebrow">Find a tune</p>
+				<h2>Every tune in the book</h2>
+				<p class="lead">Search by title or composer. Clicking a tune opens the PDF right at its page.</p>
+				<div class="search">
+					<input id="tune-search" type="search" placeholder="Search, e.g. Monk, Autumn, Gershwin..." aria-label="Search tunes"/>
+					<span class="count" id="tune-shown"></span>
+				</div>
+				<div class="card">
+					<ul class="tunes" id="tune-list">
+						<li class="empty">The tune list is loaded from <a href="output/openbook.csv">output/openbook.csv</a>.</li>
+					</ul>
+				</div>
+			</section>
 
-		<p><b>{{ project.NAME }}</b> is an open source project to build a free, high quality "real book"
-		for Jazz musicians. A real book simply means a big book with lots of Jazz tunes or standards as they are more widely known. <b>{{ project.NAME }}</b> will always remain free and is guaranteed so by its license. The goal of production is beautiful and lightweight postscript and PDF real books with Jazz tunes. The idea is that the end user can control the final output and decide whether they want lyrics, size of paper, transposition for trumpet, selection of tunes and more. In addition you can produce midi, mp3 and ogg outputs. The end user can also, obviously, modify add or remove tunes or use the tunes in <b>{{ project.NAME }}</b> as the basis of arrangements.</p>
+			<section id="books">
+				<p class="eyebrow">Downloads</p>
+				<h2>All the books</h2>
+				<p class="lead">Besides the main real book this project builds several more books, all engraved fresh on every release.</p>
+				<div class="books">
+					<div class="card book featured">
+						<span class="icon">🎷</span>
+						<h3>OpenBook</h3>
+						<p>The jazz real book: standards with melody, chords and, where available, lyrics.</p>
+						<div class="formats"><a href="output/openbook.pdf">PDF</a><a href="output/openbook.ps">PostScript</a><a href="output/openbook.ly">LilyPond</a><a href="output/openbook.csv">forScore index</a></div>
+					</div>
+					<div class="card book">
+						<span class="icon">🇮🇱</span>
+						<h3>Israeli songbook</h3>
+						<p>Israeli songs with melody and chords.</p>
+						<div class="formats"><a href="output/israeli.pdf">PDF</a><a href="output/israeli.ps">PostScript</a><a href="output/israeli.ly">LilyPond</a></div>
+					</div>
+					<div class="card book">
+						<span class="icon">🎸</span>
+						<h3>Rock book</h3>
+						<p>Rock and pop songs.</p>
+						<div class="formats"><a href="output/rockbook.pdf">PDF</a><a href="output/rockbook.ps">PostScript</a><a href="output/rockbook.ly">LilyPond</a></div>
+					</div>
+					<div class="card book">
+						<span class="icon">🥁</span>
+						<h3>Drumming</h3>
+						<p>Rock drum beats to practice.</p>
+						<div class="formats"><a href="output/drumming.pdf">PDF</a><a href="output/drumming.ps">PostScript</a><a href="output/drumming.ly">LilyPond</a></div>
+					</div>
+					<div class="card book">
+						<span class="icon">🎼</span>
+						<h3>Guitar album</h3>
+						<p>Classical guitar pieces.</p>
+						<div class="formats"><a href="output/guitar_album.pdf">PDF</a><a href="output/guitar_album.ps">PostScript</a><a href="output/guitar_album.ly">LilyPond</a></div>
+					</div>
+				</div>
+			</section>
 
-		<p>The project is developed by me, {{ personal.FULLNAME }}, and you can contact me at <a href="mailto:{{ personal.EMAIL }}">{{ personal.EMAIL }}</a>. There is already a handful of contributors who contributed or are contributing to this project and you can see the ones that are contributing by name in the git changelog. Some are contributing anonymously because of copyright issues. Anyone is welcome to contribute anonymously or by name (it is your choice).</p>
+			<section id="why">
+				<p class="eyebrow">The idea</p>
+				<h2>Why did I start this?</h2>
+				<p class="lead"><b>{{ project.NAME_FANCY }}</b> is an open source project to build a free, high quality "real book" for Jazz musicians: a big book of Jazz tunes, or standards as they are more widely known. The end user controls the final output and decides whether they want lyrics, the size of paper, transposition for trumpet, the selection of tunes and more. You can also produce midi, mp3 and ogg, and modify, add or remove tunes or use them as the basis of arrangements.</p>
+				<div class="features">
+					<div class="card feature"><h3>🎓 Learning Jazz</h3><p>Writing down the tunes is a good way to learn Jazz (amongst many many other things).</p></div>
+					<div class="card feature"><h3>🎨 Beautiful sheet music</h3><p>I wanted beautiful sheet music that I could fiddle with.</p></div>
+					<div class="card feature"><h3>💸 No expensive books</h3><p>I did not want to pay for the overly expensive real or fake books out there.</p></div>
+					<div class="card feature"><h3>🕊️ Free as in freedom</h3><p>I believe in free software and wanted free (in the sense of freedom) sheet music.</p></div>
+					<div class="card feature"><h3>🎶 A natural match</h3><p>Jazz is a prime example of a free type of art so combining it with free software seems a match made in heaven.</p></div>
+					<div class="card feature"><h3>📱 On stage, on a tablet</h3><p>Jazz musicians increasingly use electronic real books both for practice and for performance.</p></div>
+				</div>
+				<p class="lead">Future ideas include supporting mobile reading formats like epub, and a mobile application that shows musicians their music sheets and lets them search for standards.</p>
+			</section>
 
-		<p>The license for the project is currently {{ project.LICENSE_TYPE }}. This is only so because I did not have time to think more deeply about the issue. It may change in the future as a result of future thinking on my part and the fact that I am the only copyright holder. The fact that the tunes inside the book have their own copyright holders complicates matters. In any case I am committed to keeping the project free in the free software sense and you are well within your rights to take a snapshot of it and continue developing it on your own when and if you feel that a future license selection does not match your expectations.</p>
+			<section id="about">
+				<p class="eyebrow">About</p>
+				<h2>The project</h2>
+				<div class="two">
+					<div class="card">
+						<h3>Who is behind it</h3>
+						<p>The project is developed by me, {{ personal.FULLNAME }}, and you can contact me at <a href="mailto:{{ personal.EMAIL }}">{{ personal.EMAIL }}</a>. There is already a handful of contributors who contributed or are contributing to this project and you can see the ones that are contributing by name in the git changelog. Some are contributing anonymously because of copyright issues. Anyone is welcome to contribute anonymously or by name (it is your choice).</p>
+					</div>
+					<div class="card">
+						<h3>License</h3>
+						<p>The license for the project is currently {{ project.LICENSE_TYPE }}. This is only so because I did not have time to think more deeply about the issue. It may change in the future as a result of future thinking on my part and the fact that I am the only copyright holder. The fact that the tunes inside the book have their own copyright holders complicates matters. In any case I am committed to keeping the project free in the free software sense and you are well within your rights to take a snapshot of it and continue developing it on your own when and if you feel that a future license selection does not match your expectations.</p>
+					</div>
+					<div class="card">
+						<h3>Project links</h3>
+						<ul class="links">
+							<li><a title="{{ project.NAME }} github project" href="https://github.com/{{ personal.GITHUB_USERNAME }}/{{ project.NAME }}">GitHub project</a></li>
+							<li><a title="{{ project.NAME }} web site" href="https://{{ personal.GITHUB_USERNAME }}.github.io/{{ project.NAME }}">This web site</a></li>
+							<li><a title="{{ project.NAME }} git clone link" href="https://github.com/{{ personal.GITHUB_USERNAME }}/{{ project.NAME }}.git">Git clone link</a></li>
+							<li><a title="latest pdf" href="output/openbook.pdf">Latest PDF</a></li>
+							<li><a title="latest postscript" href="output/openbook.ps">Latest PostScript</a></li>
+							<li><a title="latest lilypond" href="output/openbook.ly">Latest LilyPond</a></li>
+						</ul>
+					</div>
+					<div class="card">
+						<h3>Tools used</h3>
+						<ul class="links">
+							<li><a title="git" href="http://git-scm.com/">git</a>: source control</li>
+							<li><a title="rsconstruct" href="https://github.com/veltzer/rsconstruct">rsconstruct</a>: build system</li>
+							<li><a title="uv" href="https://docs.astral.sh/uv/">uv</a>: Python packages</li>
+							<li><a title="python" href="http://python.org/">python</a>: scripting</li>
+							<li><a title="tera" href="https://keats.github.io/tera/">tera</a>: templating</li>
+							<li><a title="lilypond" href="http://lilypond.org/">lilypond</a>: engraving</li>
+							<li><a title="timidity++" href="http://timidity.sourceforge.net/">timidity</a>: midi to wav and ogg</li>
+							<li><a title="lame" href="http://lame.sourceforge.net/">lame</a>: mp3 encoding</li>
+						</ul>
+					</div>
+				</div>
+			</section>
+		</main>
 
-		<p>Why did I start this ?</p>
-		<ul>
-			<li>
-			I wanted to learn Jazz and a good way to do that is to write down the tunes (amongst many many other things).
-			</li>
-			<li>
-			I wanted beautiful sheet music that I could fiddle with.
-			</li>
-			<li>
-			I did not want to pay for the overly expensive real or fake books out there.
-			</li>
-			<li>
-			I believe in free software and wanted free (in the sense of freedom) sheet music.
-			</li>
-			<li>
-			Jazz is a prime example of a free type of art so combining it with free software seems a match made in heaven.
-			</li>
-			<li>
-			Jazz musicians may need beautiful electronic Real books because electronic books are starting to be used by Jazz musicians both for practice and for performance.
-			</li>
-		</ul>
-		<p>Future ideas include:</p>
-		<ul>
-			<li>
-			supporting mobile reading formats like epub
-			</li>
-			<li>
-			producing a mobile application for various platforms that musicians could use on their portable pads. This app would show them their music sheets and allow them to search for standards.
-			</li>
-		</ul>
-		<p>Links to tools used by the <b>{{ project.NAME }}</b> project:</p>
-		<ul>
-			<li>
-			The git tool used as a source control system for <b>{{ project.NAME }}</b> is <a title="git" href="http://git-scm.com/">here</a>
-			</li>
-			<li>
-			The rsconstruct build system used to build <b>{{ project.NAME }}</b> is <a title="rsconstruct" href="https://github.com/veltzer/rsconstruct">here</a>
-			</li>
-			<li>
-			The uv Python package manager used to manage the Python environment of <b>{{ project.NAME }}</b> is <a title="uv" href="https://docs.astral.sh/uv/">here</a>
-			</li>
-			<li>
-			The python scripting language that is used to script <b>{{ project.NAME }}</b> is <a title="python" href="http://python.org/">here</a>
-			</li>
-			<li>
-			The tera templating engine that is used in <b>{{ project.NAME }}</b> is <a title="tera" href="https://keats.github.io/tera/">here</a>
-			</li>
-			<li>
-			The lilypond language and compiler used to develop the tunes in <b>{{ project.NAME }}</b> is <a title="lilypond" href="http://lilypond.org/">here</a>
-			</li>
-			<li>
-			The timidity tool used to convert from midi to wav and ogg in <b>{{ project.NAME }}</b> is <a title="timidity++" href="http://timidity.sourceforge.net/">here</a>
-			</li>
-			<li>
-			The lame tool used to encode midi to mp3 in <b>{{ project.NAME }}</b> is <a title="lame" href="http://lame.sourceforge.net/">here</a>
-			</li>
-		</ul>
-		<p>Some related <b>{{ project.NAME }}</b> project links:</p>
-		<ul>
-			<li>
-			The <b>{{ project.NAME }}</b> github project is <a title="{{ project.NAME }} github project" href="https://github.com/{{ personal.GITHUB_USERNAME }}/{{ project.NAME }}">here</a>
-			</li>
-			<li>
-			The <b>{{ project.NAME }}</b> web site for the project is <a title="{{ project.NAME }} web site" href="https://{{ personal.GITHUB_USERNAME }}.github.io/{{ project.NAME }}">here</a>
-			</li>
-			<li>
-			The <b>{{ project.NAME }}</b> git clone link is <a title="{{ project.NAME }} git clone link" href="https://github.com/{{ personal.GITHUB_USERNAME }}/{{ project.NAME }}.git">here</a>
-			</li>
-			<li>
-			The latest stable pdf coming out of the <b>{{ project.NAME }}</b> project is <a title="latest pdf" href="output/openbook.pdf">here</a>
-			</li>
-			<li>
-			The latest stable postscript coming out of the <b>{{ project.NAME }}</b> project is <a title="latest postscript" href="output/openbook.ps">here</a>
-			</li>
-			<li>
-			The latest stable lilypond coming out of the <b>{{ project.NAME }}</b> project is <a title="latest lilypond" href="output/openbook.ly">here</a>
-			</li>
-		</ul>
-		<h2>All the books</h2>
-		<p>Besides the main real book this project builds several more books, all engraved fresh on every release:</p>
-		<table>
-			<tr><th>book</th><th></th><th></th><th></th><th></th></tr>
-{% for book in ["openbook", "israeli", "drumming", "rockbook", "guitar_album"] %}			<tr>
-				<td><b>{{ book }}</b></td>
-				<td><a href="output/{{ book }}.pdf">pdf</a></td>
-				<td><a href="output/{{ book }}.ps">postscript</a></td>
-				<td><a href="output/{{ book }}.ly">lilypond</a></td>
-			</tr>
-{% endfor %}		</table>
-		<p>
-			Copyright {{ personal.FULLNAME }} © {{ copyright_years() }}
+		<footer>
+			<img src="logo.svg" alt=""/>Copyright {{ personal.FULLNAME }} © {{ copyright_years() }}
 			<a href="mailto:{{ personal.EMAIL }}">{{ personal.EMAIL }}</a>
-		</p>
+		</footer>
+
+		<script>
+			// Build the searchable tune list from the forScore index that the
+			// build publishes next to the PDF (Title,Book Name,Start Page,End Page,Composer).
+			function parseCsv(text) {
+				const rows = [];
+				let row = [], field = "", quoted = false;
+				for (let i = 0; i < text.length; i++) {
+					const c = text[i];
+					if (quoted) {
+						if (c === '"' && text[i + 1] === '"') { field += '"'; i++; }
+						else if (c === '"') { quoted = false; }
+						else { field += c; }
+					} else if (c === '"') { quoted = true; }
+					else if (c === ",") { row.push(field); field = ""; }
+					else if (c === "\n") { row.push(field); rows.push(row); row = []; field = ""; }
+					else if (c !== "\r") { field += c; }
+				}
+				if (field || row.length) { row.push(field); rows.push(row); }
+				return rows;
+			}
+			function render(tunes, query) {
+				const list = document.getElementById("tune-list");
+				const q = query.trim().toLowerCase();
+				const shown = tunes.filter(t => !q || t.title.toLowerCase().includes(q) || t.composer.toLowerCase().includes(q));
+				list.replaceChildren(...shown.map(t => {
+					const li = document.createElement("li");
+					const a = document.createElement("a");
+					a.href = "output/openbook.pdf#page=" + t.page;
+					const name = document.createElement("span");
+					name.className = "title";
+					name.textContent = t.title;
+					const composer = document.createElement("span");
+					composer.className = "composer";
+					composer.textContent = t.composer;
+					name.appendChild(composer);
+					const page = document.createElement("span");
+					page.className = "page";
+					page.textContent = "p. " + t.page;
+					a.append(name, page);
+					li.appendChild(a);
+					return li;
+				}));
+				if (!shown.length) {
+					const li = document.createElement("li");
+					li.className = "empty";
+					li.textContent = "No tune matches “" + query + "”.";
+					list.appendChild(li);
+				}
+				document.getElementById("tune-shown").textContent = shown.length + " of " + tunes.length + " tunes";
+			}
+			fetch("output/openbook.csv")
+				.then(response => response.ok ? response.text() : Promise.reject(response.status))
+				.then(text => {
+					const tunes = parseCsv(text).slice(1).filter(r => r.length >= 5 && r[0]).map(r => ({ title: r[0], page: r[2], composer: r[4] }));
+					document.getElementById("tune-count").textContent = tunes.length;
+					const search = document.getElementById("tune-search");
+					search.addEventListener("input", () => render(tunes, search.value));
+					render(tunes, "");
+				})
+				.catch(() => {});
+		</script>
 	</body>
 </html>

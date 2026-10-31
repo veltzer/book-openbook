@@ -34,6 +34,19 @@ doGuitar = false
 doExtra = false
 doPrep = false
 doOwn = false
+
+[versions.Laurent]
+doChords = true
+doVoice = true
+doLyrics = false
+doLyricsmore = false
+doLyricsmoremore = false
+doChordBars = false
+doGuitar = false
+doExtra = false
+doPrep = false
+doOwn = false
+
 #}
 {% if part == "Vars" %}
 {% endif %}
@@ -43,6 +56,7 @@ doOwn = false
 	- put in the chords (Hal Leonard Real Jazz Book).
 	- put in the tune (Hal Leonard Real Jazz Book).
 	- added youtube performances.
+	- added the Laurent Martelli version (version Laurent) from staging/openbook/laurent/triste.ly.
 	TODO:
 	- add the lyrics.
 	- check the chords (Hal Leonard Real Jazz Book).
@@ -104,5 +118,77 @@ doOwn = false
 	r8 bes bes, c d ees4 f8~ | f8 e4 ees8~ ees4 f~ | f4 ees8 d c bes4 c8~ | c1 |
 	r4 r8 ees8~ ees d4 ees8 | c4 d8 bes~ bes c4 bes8~ |
 	bes1~ | bes1~ | bes1~ | bes1 |
+}
+{% endif %}
+{% if part == "ChordsLaurent" %}\chordmode {
+	\startChords
+	\startSong
+
+	\myMark "Intro"
+	\startPart
+	bes2:m7 ees:7 | bes:m7 ees:7 | bes:m7 ees:7 | bes:m7 ees:7 | \myEndLine
+	\endPart
+
+	\myMark "A"
+	\startPart
+	bes1*2:maj7 | ges1:maj7 | b:7.11+ | \myEndLine
+	bes1:maj7 | ees:7.11+ | d:m7 | g:7 | \myEndLine
+	\endPart
+
+	\myMark "B"
+	\startPart
+	c1:m7 | a2:m7 d:7.9+ | g1:m7 | e2:m7 a:7 | \myEndLine
+	d1:maj7 | e2:m7 a:7 | d:m7 g:7 | c:m7 f:7 | \myEndLine
+	\endPart
+
+	\myMark "A"
+	\startPart
+	bes1*2:maj7 | bes1*2:m7 | \myEndLine
+	bes1*2:maj7 | f1:m7 | bes:7 | \myEndLine
+	\endPart
+
+	\myMark "C"
+	\startPart
+	ees1:maj7 | aes:7.11+ | d2:m7 g:m7 | c1:7 | \myEndLine
+	c1:m7 | f:7 | bes2:m7 ees:7 | bes:m7 ees:7 | \myEndLine
+	bes2:m7 ees:7 | bes:m7 ees:7 | \myEndLine
+	\endPart
+
+	\myMark "End"
+	\startPart
+	bes2:m7 ees:7 | bes:m7 ees:7 | bes:m7 ees:7 | bes:m7 ees:7 | \myEndLine
+	\endPart
+
+	\endSong
+	\endChords
+}
+{% endif %}
+{% if part == "VoiceLaurent" %}{
+	\tempo "Allegro" 4 = 152
+	\time 4/4
+	\key bes \major
+
+	% part "Intro"
+	r1 | r1 | r1 | r1 |
+
+	% part "A"
+	r4 r8 bes'8 ~ bes a4 bes8 | a4 g8 d ~ d ees4 f8 ~ | f1 ~ | f1 |
+	r4 r8 bes8 ~ bes a4 bes8 | a4 g8 d ~ d ees4 f8 ~ | f1 ~ | f1 |
+
+	% part "B"
+	r4 r8 g8 f g4 f8 ~ | f ees4 d8 ~ d a4 c8 ~ | c8 a bes d f a4 c8 ~ | c2 ~ c8 bes4 cis8 ~ |
+	cis8 a a a ~ a2 | a8 fis fis fis ~ fis4. e8 ~ | e8 d d d ~ d4 g ~ | g8 f f f ~ f2 |
+
+	% part "A"
+	r4 r8 bes8 ~ bes a4 bes8 | a4 g8 d ~ d ees4 f8 ~ | f1 ~ | f1 |
+	r4 r8 bes8 ~ bes a4 bes8 | a4 g8 d ~ d ees4 f8 ~ | f1 ~ | f1 |
+
+	% part "C"
+	r8 bes bes, c d ees4 f8 ~ | f8 e4 ees8 ~ ees4 f4 ~ | f4 ees8 d c bes4 c8 ~ | c1 |
+	r4 r8 ees8 ~ ees d4 ees8 | c4 d8 bes ~ bes c4 bes8 ~ | bes1 ~ | bes1 ~ |
+	bes1 ~ | bes1 |
+
+	% part "End"
+	r1 | r1 | r1 | r1 |
 }
 {% endif %}

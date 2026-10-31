@@ -35,10 +35,23 @@ doGuitar = false
 doExtra = false
 doPrep = false
 doOwn = false
+
+[versions.Laurent]
+doChords = true
+doVoice = true
+doLyrics = true
+doLyricsmore = false
+doLyricsmoremore = false
+doChordBars = false
+doGuitar = false
+doExtra = false
+doPrep = false
+doOwn = false
 #}
 {% if part == "Vars" %}
 {% endif %}
 {% if part == "Doc" %}	DONE:
+	- converted the Silvia Bertoluzza version (from Laurent Martelli's collection) from staging/openbook/laurent/just_friends.ly (version Laurent).
 	- put in the real book chords.
 	- put in the real book notes.
 	- put in lyrics to the real book version and adjusted them.
@@ -113,6 +126,63 @@ doOwn = false
 	% part "B"
 	Two friends __ drift -- ing a -- part, __
 	Two friends __ but one brok -- en heart. __
+	We loved, we laughed, we cried and sud -- den -- ly love died.
+	The sto -- ry ends and we're just friends.
+}
+{% endif %}
+{% if part == "ChordsLaurent" %}\chordmode {
+	\startChords
+	\startSong
+
+	\partial 2 g2:7 |
+
+	\myMark "A"
+	\startPart
+	c1*2:maj7 | c1:m7 | f:7 | \myEndLine
+	g1*2:maj7 | bes1:m7 | ees:7 | \myEndLine
+	a:m7 | d:7 | g:maj7 | e:m7 | \myEndLine
+	a1*2:9 | a1:m7 | d2:7 g:7 | \myEndLine
+	\endPart
+
+	\myMark "A"
+	\startPart
+	c1*2:maj7 | c1:m7 | f:7 | \myEndLine
+	g1*2:maj7 | bes1:m7 | ees:7 | \myEndLine
+	a:m7 | d:7 | fis2:m7.5- b:7 | e1:m7 | \myEndLine
+	a:9 | a2:m7 d:7 | g1:6 | d2:m7 g:7 | \myEndLine
+	\endPart
+
+	\endSong
+	\endChords
+}
+{% endif %}
+{% if part == "VoiceLaurent" %}{
+	\tempo "Moderato" 4 = 120
+	\time 4/4
+	\key g \major
+
+	\partial 2 b'2 |
+
+	% part "A"
+	b1 ~ | b2 \tuplet 3/2 { a4 b a } | ees1 ~ | ees2 a |
+	a1 ~ | a4 a \tuplet 3/2 { g a g } | des1 ~ | des2. g4 |
+	g4. e8 g4. e8 | fis2. fis4 | fis4. d8 fis4. d8 | e4 fis g b |
+	e2 b ~ | b4 e, \tuplet 3/2 { e fis g } | b2 a ~ | a b |
+
+	% part "A"
+	b1 ~ | b2 \tuplet 3/2 { a4 b a } | ees1 ~ | ees2 a |
+	a1 ~ | a4 a \tuplet 3/2 { g a g } | des1 ~ | des2. g4 |
+	g4. e8 g4. e8 | fis2. a4 | a4. fis8 a4. fis8 | g4 a b d |
+	e2. e,4 | d'2 b | g1 | r1 |
+}
+{% endif %}
+{% if part == "LyricsLaurent" %}\lyricmode {
+	Just friends, lov -- ers no more
+	Just friends, but not like be -- fore.
+	To think of what we've been and not to kiss a -- gain seems like
+	pre -- tend -- ing it is -- n't the end -- ing.
+	Two friends drift -- ing a -- part,
+	Two friends but one brok -- en heart.
 	We loved, we laughed, we cried and sud -- den -- ly love died.
 	The sto -- ry ends and we're just friends.
 }

@@ -1,0 +1,109 @@
+{#
+default_version = "Laurent"
+
+[attributes]
+title = "Speak Low"
+style = "Jazz"
+composer = "Kurt Weill"
+poet = "Ogden Nash"
+typesetter = "Silvia Bertoluzza"
+completion = "3"
+uuid = "046a656a-d49f-11f1-8000-046874d194b7"
+structure = "ABA"
+
+[versions.Laurent]
+doChords = true
+doVoice = true
+doLyrics = false
+doLyricsmore = false
+doLyricsmoremore = false
+doChordBars = false
+doGuitar = false
+doExtra = false
+doPrep = false
+doOwn = false
+#}
+{% if part == "Vars" %}
+{% endif %}
+{% if part == "Doc" %}	DONE:
+	- converted the Silvia Bertoluzza version (from the Laurent Martelli collection) from staging/openbook/laurent/speaklow.ly.
+	TODO:
+	- check the tune and chords against a real book (the source has only an 8 bar bridge).
+	- add the lyrics (they are in git history of staging/openbook/laurent/speaklow.ly, but do not line up with its repeat).
+	- add youtube performances.
+	- hear the tune to check that it is right and adjust the tempo.
+{% endif %}
+{% if part == "ChordsLaurent" %}\chordmode {
+	\startChords
+	\startSong
+
+	\partial 4 s4 |
+
+	\myMark "A"
+	\startPart
+	\repeat volta 2 {
+		g1:m7 | c:7 | g:m7 | c:7 | \myEndLine
+		g:m7 | c:7 | a:m7.5- | d:7.9- | \myEndLine
+		bes:m9 | ees:7 | bes:m9 | ees:7 | \myEndLine
+		g:7 | c:7 |
+	} \alternative {
+		{
+			f2 e:7 | g:m7 c:7 | \myEndLineVoltaNotLast
+		}
+		{
+			f1*2 | \myEndLineVoltaLast
+		}
+	}
+	\endPart
+
+	\myMark "B"
+	\startPart
+	f1*2:m7 | aes1:m7+ | aes:m6 | \myEndLine
+	ees1*2:maj7 | aes1:m | g2:7 c:7 | \myEndLine
+	\endPart
+
+	\myMark "A"
+	\startPart
+	g1:m7 | c:7 | g:m7 | c:7 | \myEndLine
+	g:m7 | c:7 | a:m7.5- | d:7.9- | \myEndLine
+	bes:m7 | ees:7 | a:m7.5- | d:7 | \myEndLine
+	g:m7 | c:7.5+ | f1*2 | \myEndLine
+	\endPart
+
+	\endSong
+	\endChords
+}
+{% endif %}
+{% if part == "VoiceLaurent" %}{
+	\tempo "Moderato" 4 = 130
+	\time 4/4
+	\key f \major
+
+	\partial 4 c4 |
+
+	% part "A"
+	\repeat volta 2 {
+		a'1 ~ | a2 \tuplet 3/2 { g4 d g } | a1 ~ | a2 \tuplet 3/2 { g4 d g } |
+		a2 \tuplet 3/2 { g4 d g } | a2. g4 | d'2. c4 | d2. a4 |
+		c1 ~ | c2 \tuplet 3/2 { bes4 f bes } | c1 ~ | c4. bes16 c16 \tuplet 3/2 { bes4 f g } |
+		a4. a8 ~ \tuplet 3/2 { a4 e f } | g4. g8 ~ \tuplet 3/2 { g4 f e } |
+	} \alternative {
+		{
+			d2 d | d2. c4 |
+		}
+		{
+			f1 ~ | f |
+		}
+	}
+
+	% part "B"
+	\tuplet 3/2 { ees'4 d c } ees2 ~ | ees aes, | g2. f4 | f1 |
+	\tuplet 3/2 { d'4 c bes } d2 ~ | d g, | f2. e4 | e2. c4 |
+
+	% part "A"
+	a'1 ~ | a2 \tuplet 3/2 { g4 d g } | a1 ~ | a4 r8 a \tuplet 3/2 { g4 d g } |
+	a2 \tuplet 3/2 { g4 d g } | a2. g4 | d'2. c4 | d2. a4 |
+	c1 ~ | c2 \tuplet 3/2 { bes4 f g } | a1 ~ | a4 a bes c |
+	d d d4. d8 | d4 d d4. d8 | d1 | r1 |
+}
+{% endif %}

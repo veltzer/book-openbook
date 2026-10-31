@@ -34,10 +34,36 @@ doGuitar = false
 doExtra = false
 doPrep = false
 doOwn = false
+
+[versions.Laurent]
+doChords = true
+doVoice = true
+doLyrics = false
+doLyricsmore = false
+doLyricsmoremore = false
+doChordBars = false
+doGuitar = false
+doExtra = false
+doPrep = false
+doOwn = false
+
+[versions.Laurent2]
+doChords = true
+doVoice = true
+doLyrics = true
+doLyricsmore = true
+doLyricsmoremore = false
+doChordBars = false
+doGuitar = false
+doExtra = false
+doPrep = false
+doOwn = false
 #}
 {% if part == "Vars" %}
 {% endif %}
 {% if part == "Doc" %}	DONE:
+	- converted the Silvia Bertoluzza version (from the Laurent Martelli collection) from staging/openbook/laurent/everythinghappenstome.ly as version Laurent2, with its lyrics (first and second verse lines).
+	- converted the Laurent Martelli version from staging/openbook/laurent/everything_happens_to_me.ly (tempo from its midi setting; its F7sus9 is written as F9sus4 and its m7.11^9 chords as m11).
 	- added the meta data from the fake book.
 	- put in the tunes structure.
 	- put in the chords (fake book).
@@ -117,5 +143,154 @@ doOwn = false
 	% part "A"
 	d'8 d d ees c c bes a | c c c d bes4 r8 g | bes bes bes c a a g f | aes aes aes bes g4 r8 d |
 	f8 f f g ees fis a bes | c c \tuplet 3/2 { c c a~ } a2 | g8 g g d'~ d d d bes~ | bes2. r4 |
+}
+{% endif %}
+{% if part == "ChordsLaurent" %}\chordmode {
+	\startChords
+	\startSong
+
+	\partial 8 s8 |
+
+	\myMark "A"
+	\startPart
+	c2:m9 f:7 | d:m7 cis:dim7 | c:m7 f4:7 ees:7 | d2:m7.5- g:7 | \myEndLine
+	b2:dim7 c:m7.5- | d:m7 g:9 | c:m7 f:7 | bes1:maj7 | \myEndLine
+	\endPart
+
+	\myMark "A"
+	\startPart
+	c2:m9 f:7 | d:m7 cis:dim7 | c:m7 f4:7 ees:7 | d2:m7.5- g:7 | \myEndLine
+	b2:dim7 c:m7.5- | d:m7 g:9 | c:m7 f:7 | bes1:6 | \myEndLine
+	\endPart
+
+	\myMark "B"
+	\startPart
+	f2:m7.11 bes:7.5+.9+ | ees:maj7 c:m7 | f:m7.11 bes:7.5+.9+ | ees1:maj7 | \myEndLine
+	e2:m7.11 a:7.5+.9+ | d:maj7 b:m7 | g:m7 c:7 | f:9sus4 f:7 | \myEndLine
+	\endPart
+
+	\myMark "A"
+	\startPart
+	c2:m9 f:7 | d:m7 cis:dim7 | c:m7 f4:7 ees:7 | d2:m7.5- g:7 | \myEndLine
+	b2:dim7 c:m7.5- | d:m7 g:9 | c:m7 f:13 | bes1:6 | \myEndLine
+	\endPart
+
+	\endSong
+	\endChords
+}
+{% endif %}
+{% if part == "VoiceLaurent" %}{
+	\tempo "Adagio" 4 = 60
+	\time 4/4
+	\key bes \major
+
+	\partial 8 g'8 |
+
+	% part "A"
+	d' d d ees c c bes a | c c c d bes4 r8 g | bes bes bes c a a g f | aes aes aes bes g4 r8 d |
+	f f f g ees fis a bes | c c \tuplet 3/2 { c c a~ } a2 | g8 g g a~ a a a f~ | f2. r8 g |
+
+	% part "A"
+	d' d d ees c c bes a | c c c d bes4 r8 g | bes bes bes c a a g f | aes aes aes bes g4 r8 d |
+	f f f g ees fis a bes | c c \tuplet 3/2 { c c a~ } a2 | g8 g g a~ a a a bes~ | bes2. r8 bes |
+
+	% part "B"
+	bes bes bes bes des des b des | bes bes bes2 r8 bes | bes bes bes bes b ges f ees | bes'2. r8 bes |
+	a a a a c c bes c | a a a2 r8 a | bes bes bes bes bes bes a bes | c2. r8 g |
+
+	% part "A"
+	d' d d ees c c bes a | c c c d bes4 r8 g | bes bes bes c a a g f | aes aes aes bes g4 r8 d |
+	f f f g ees fis a bes | c c \tuplet 3/2 { c c a~ } a2 | g8 g g d'~ d d d bes~ | bes2. r4 |
+}
+{% endif %}
+{% if part == "ChordsLaurent2" %}\chordmode {
+	\startChords
+	\startSong
+
+	\partial 8 s8 |
+
+	\myMark "A"
+	\startPart
+	\repeat volta 2 {
+		c2:m f:7 | d:m cis:dim7 | c:m f:7 | d:m7.5- g:7 | \myEndLine
+		g2:7.9- c:m7.5- | d:m g:7 |
+	} \alternative {
+		{
+			c2:m f:7 | bes1 | \myEndLineVoltaNotLast
+		}
+		{
+			c2:m f:7 | bes1 | \myEndLineVoltaLast
+		}
+	}
+	\endPart
+
+	\myMark "B"
+	\startPart
+	f2:m bes:7.9+ | ees c:7 | f:m bes:7.9+ | ees1 | \myEndLine
+	e2:m a:7.9+ | d1 | g2:m c:7 | c:m f:7 | \myEndLine
+	\endPart
+
+	\myMark "A"
+	\startPart
+	c2:m f:7 | d:m cis:dim7 | c:m f:7 | d:m7.5- g:7 | \myEndLine
+	g2:7.9- c:m7.5- | d:m g:7 | c:m f:7 | bes g:7.9- | \myEndLine
+	\endPart
+
+	\endSong
+	\endChords
+}
+{% endif %}
+{% if part == "VoiceLaurent2" %}{
+	\tempo "Adagio" 4 = 60
+	\time 4/4
+	\key bes \major
+
+	\partial 8 g'8 |
+
+	% part "A"
+	\repeat volta 2 {
+		d' d d ees c c bes a | c c c d bes4 r8 g | bes bes bes c a a g f | aes aes aes bes g4 r8 d |
+		f f f g ees fis a bes | c c \tuplet 3/2 { c c a~ } a2 |
+	} \alternative {
+		{
+			g8 g g a~ a a a f~ | f2. r8 g |
+		}
+		{
+			g g g a~ a a a bes~ | bes2. r8 bes |
+		}
+	}
+
+	% part "B"
+	bes bes bes bes des des ces des | bes bes bes2 r8 bes | bes bes bes bes ces ges f ees | bes'2. r8 bes |
+	a a a a c c bes c | a a a2 r8 a | bes bes bes bes bes bes a bes | c2~ c4 r8 g |
+
+	% part "A"
+	d' d d ees c c bes a | c c c d bes4 r8 g | bes bes bes c a a g f | aes aes aes bes g4 r8 d |
+	f f f g ees fis a bes | c c \tuplet 3/2 { c c a~ } a2 | g8 g g d'~ d d d bes~ | bes2. r4 |
+}
+{% endif %}
+{% if part == "LyricsLaurent2" %}\lyricmode {
+	I make a date for golf and you can bet your life it rains
+	I try to give a par -- ty and the guy up -- stairs com -- plains
+	I guess I'll go thru life just catch -- ing colds and mis -- sin' trains
+	eve -- ry -- thing hap -- pens to me. I
+	eve -- ry -- thing hap -- pens to me.
+	At first my heart tho't  you could break this jinx for me,
+	that love would turn the trick to end des -- pair,
+	But now I just can't fool this head that thinks for me,
+	I mort -- gaged all my cas -- tles in the air.
+	I've te -- le -- graphed and phoned, I sent an Air -- mail Spe -- cial too,
+	Your ans -- wer was good -- bye and there was e -- ven post -- age due,
+	I fell in love just once and then It had to be with you,
+	eve -- ry -- thing hap -- pens to me.
+	When I get that Mood In -- di -- go.
+	I could lay me down and die.
+}
+{% endif %}
+{% if part == "LyricsmoreLaurent2" %}\lyricmode {
+	_
+	ne -- ver miss a thing, I've had the mea -- sles and the mumps,
+	and ev' -- ry time I play an ace my part -- ner al -- ways  trumps,
+	I guess I'm just a fool who ne -- ver looks be -- fore she jumps,
 }
 {% endif %}

@@ -32,10 +32,23 @@ doGuitar = false
 doExtra = false
 doPrep = false
 doOwn = false
+
+[versions.Laurent]
+doChords = true
+doVoice = true
+doLyrics = false
+doLyricsmore = false
+doLyricsmoremore = false
+doChordBars = false
+doGuitar = false
+doExtra = false
+doPrep = false
+doOwn = false
 #}
 {% if part == "Vars" %}
 {% endif %}
 {% if part == "Doc" %}	DONE:
+	- converted the Laurent Martelli version from staging/openbook/laurent/cousin_mary.ly (version Laurent).
 	- added the meta data from the Hal Leonard Real Jazz Book.
 	- put in the tunes structure.
 	- put in the chords (Hal Leonard Real Jazz Book).
@@ -75,5 +88,32 @@ doOwn = false
 		r4 ees ges4. aes8~ | aes1 | r4 ees ges4. ees8~ | ees1 |
 		r8 aes ges aes~ aes4 ges8 aes~ | aes4. ges8 ees4 des | r4 ees ges4. ees8~ | ees1 |
 	}
+}
+{% endif %}
+{% if part == "ChordsLaurent" %}\chordmode {
+	\startChords
+	\startSong
+
+	\myMark "A"
+	\startPart
+	aes1*4:7 | \myEndLine
+	des1*2:7 | aes1*2:7 | \myEndLine
+	d1:7 | des:7 | aes1*2:7 | \myEndLine
+	\endPart
+
+	\endSong
+	\endChords
+}
+{% endif %}
+{% if part == "VoiceLaurent" %}{
+	\tempo "Allegro" 4 = 200
+	\time 4/4
+	\key des \major
+
+	% part "A"
+	r4 ees8 r ges4. ees8~ | ees1 | r4 ees8 r ges4. ees8~ | ees1 |
+	r4 ees8 r ges4. aes8~ | aes1 | r4 ees8 r ges4. ees8~ | ees1 |
+	r8 aes ges aes~ aes4 ges8 aes~ | aes4 aes8 ges ees ees des r |
+	r4 ees8 r ges4. ees8~ | ees1 |
 }
 {% endif %}

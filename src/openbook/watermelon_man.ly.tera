@@ -27,11 +27,25 @@ doGuitar = false
 doExtra = false
 doPrep = false
 doOwn = false
+
+[versions.Laurent]
+doChords = true
+doVoice = true
+doLyrics = false
+doLyricsmore = false
+doLyricsmoremore = false
+doChordBars = false
+doGuitar = false
+doExtra = false
+doPrep = false
+doOwn = false
+
 #}
 {% if part == "Vars" %}
 {% endif %}
 {% if part == "Doc" %}	DONE:
 	- added 'structure' field to the meta data.
+	- added the Laurent Martelli version (version Laurent) from staging/openbook/laurent/watermelon_man.ly, one octave lower than the source (the source starts on a high E flat), it is almost the same as the Aebersold version.
 	TODO:
 	- bring in the aebersold pdf this tune is based on as it is not in the epdf folder.
 	- document what has been done.
@@ -67,5 +81,38 @@ doOwn = false
 	r4 c'8 ( c g'4 a | aes8 g f d f4 g-. ) |
 	r c,8 ( c g'4 a | aes8 g f d c4 d-. ) |
 	r c8 ( c g'4 aes | \mark \markup { \italic { break } } f-. ) f,8 f <aes c> ( <bes d>4-. ) f8~ | f1 | r |
+}
+{% endif %}
+{% if part == "ChordsLaurent" %}\chordmode {
+	\startChords
+	\startSong
+
+	\myMark "A"
+	\startPart
+	\repeat volta 2 {
+		f1*4:7 | \myEndLine
+		bes1*2:7 | f:7 | \myEndLine
+		c1:7 | bes:7 | c:7 | bes:7 | \myEndLine
+		c:7 | bes:7 | f1*2:7 | \myEndLine
+	}
+	\endPart
+
+	\endSong
+	\endChords
+}
+{% endif %}
+{% if part == "VoiceLaurent" %}{
+	\tempo "Allegro" 4 = 130
+	\time 4/4
+	\key c \major
+
+	% part "A"
+	\repeat volta 2 {
+		ees'1 ~ | ees4 f,8 f <aes c>8( <bes d>4-.) f8 ~ | f1 ~ | f2 r |
+		f'1 ~ | f4 f,8 f <aes c>8 <bes d>4-. f8 ~ | f1 ~ | f2 r |
+		r4 c'8( c g'4 a | aes8 g f d f4 g-.) |
+		r4 c,8( c g'4 a | aes8 g f d c4 d-.) |
+		r4 c8( c g'4 aes | f-.) f,8 f <aes c>8 <bes d>4-. f8 ~ | f1 | r1 |
+	}
 }
 {% endif %}

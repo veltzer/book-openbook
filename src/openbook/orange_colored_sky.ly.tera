@@ -1,0 +1,102 @@
+{#
+default_version = "Anon"
+
+[attributes]
+title = "Orange Colored Sky"
+style = "Jazz"
+composer = "Milton DeLugg, Willie Stein"
+piece = "Easy"
+typesetter = "Anonymous <anonymous@zivlempel.org>"
+completion = "3"
+uuid = "cb32eb22-d49f-11f1-8000-046874d194b7"
+structure = "AABA"
+
+[versions.Anon]
+doChords = true
+doVoice = true
+doLyrics = false
+doLyricsmore = false
+doLyricsmoremore = false
+doChordBars = false
+doGuitar = false
+doExtra = false
+doPrep = false
+doOwn = false
+#}
+{% if part == "Vars" %}
+{% endif %}
+{% if part == "Doc" %}	DONE:
+	- converted the Anonymous <anonymous@zivlempel.org> version from staging/openbook/anon/OrangeColoredSky.ly.
+	TODO:
+	- check the tune and chords against a real book.
+	- add youtube performances.
+	- the X marks over the rests are drum hits.
+	- performance notes from the source: Intro: four bars from bar 5 (no drum hits), take the 1st ending. Last time: play the last line 3 times with a Dm7 / G7 turnaround.
+	- add the lyrics.
+{% endif %}
+{% if part == "ChordsAnon" %}\chordmode {
+	\startChords
+	\startSong
+
+	\partial 4 s4 |
+
+	\myMark "A"
+	\startPart
+	\repeat volta 2 {
+		g2 gis:dim7 | a:m7 ais:dim7 | g f | e1:7 | \myEndLine
+		c2 cis:dim7 | g/d e:7 |
+	} \alternative {
+		{
+			a2:m7 d:7 | g2 a4:m7 d:7 | \myEndLineVoltaNotLast
+		}
+		{
+			a2:m7 d:7 | g cis:7 | \myEndLineVoltaLast
+		}
+	}
+	\endPart
+
+	\myMark "B"
+	\startPart
+	c1 | fis:7 | fis2:m7 b:7 | e1:m | \myEndLine
+	e2:m e:3-.5.7+ | e:m7 e:3-.5.6 | a1:m7 | d:7 | \myEndLine
+	\endPart
+
+	\myMark "A"
+	\startPart
+	g2 gis:dim7 | a:m7 ais:dim7 | g f | e1:7 | \myEndLine
+	c2 cis:dim7 | g/d e:7 | a2:m7 d:7 | g2 a4:m7 d:7 | \myEndLine
+	\endPart
+
+	\endSong
+	\endChords
+}
+{% endif %}
+{% if part == "VoiceAnon" %}{
+	\tempo "Easy" 4 = 100
+	\time 4/4
+	\key g \major
+
+	\partial 4 b'8 c |
+
+	% part "A"
+	\repeat volta 2 {
+		d8 e d e~ e2 | e8 fis g4 fis8 e~ e4 | d8 e d4 e d8 fis~ | fis1 |
+		g4 r^"X" g r^"X" | g8 e g4 e2 |
+	} \alternative {
+		{
+			g8 e c4 b a8 d~ | d1 |
+		}
+		{
+			g8 e c4 b b8 g~ | g1 |
+		}
+	}
+
+	% part "B"
+	a'4 a a g | bes bes~ bes2 | b!4 b a b | g2~ g4 \tuplet 3/2 { r8 e fis } |
+	g4 g g g | g g g \tuplet 3/2 { g8 d e } | fis4 \tuplet 3/2 { r8 fis g } a4 \tuplet 3/2 { r8 a b } | c2 r4 b,8 c |
+
+	% part "A"
+	d8 e d e~ e2 | e8 fis g4 fis8 e~ e4 | d8 e d4 e d8 fis~ | fis1 |
+	g4 r^"X" g r^"X" | g8 e g4 e2 | g8 e c4 b a8 g~ | g1 |
+}
+{% endif %}

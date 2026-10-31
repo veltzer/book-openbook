@@ -1,0 +1,52 @@
+name: release
+# A GitHub release after every successful build of master, carrying exactly
+# what GitHub Pages serves: the build uploads docs/ as the github-pages
+# artifact and deploys it, and this takes the books from that same artifact
+# (output/*: every book as .pdf, .ps and .ly, and openbook.csv), so the release
+# holds the very bytes the site got.
+#
+# A workflow of its own, triggered by the build finishing, because build.yml is
+# byte-identical across the fleet. The tag is the build run's UTC creation time,
+# so re-running a build finds its release already there instead of making a
+# second one.
+on:
+  workflow_run:
+    workflows: [build]
+    types: [completed]
+    branches: [master]
+
+concurrency:
+  group: ${{ github.workflow }}
+  cancel-in-progress: false
+
+jobs:
+  release:
+    if: github.event.workflow_run.conclusion == 'success'
+    runs-on: ubuntu-26.04
+    permissions:
+      contents: write
+      # to download the build run's github-pages artifact
+      actions: read
+    steps:
+    - name: release
+      env:
+        GH_TOKEN: ${{ github.token }}
+        GH_REPO: ${{ github.repository }}
+        RUN_ID: ${{ github.event.workflow_run.id }}
+        SHA: ${{ github.event.workflow_run.head_sha }}
+        CREATED: ${{ github.event.workflow_run.created_at }}
+        RUN_URL: ${{ github.event.workflow_run.html_url }}
+      run: |
+        tag=$(date -u -d "$CREATED" +%Y%m%d-%H%M%S)
+        if gh release view "$tag" >/dev/null 2>&1; then
+          echo "release $tag already exists (a re-run of the same build)"
+          exit 0
+        fi
+        gh run download "$RUN_ID" --name github-pages --dir artifact
+        mkdir site
+        tar -xf artifact/artifact.tar -C site
+        gh release create "$tag" site/output/* \
+          --target "$SHA" \
+          --latest \
+          --title "Openbook, $(date -u -d "$CREATED" '+%Y-%m-%d %H:%M UTC')" \
+          --notes "The books as published on https://veltzer.org/book-openbook/ at commit $SHA, released by the build $RUN_URL"

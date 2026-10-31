@@ -33,6 +33,30 @@ doGuitar = false
 doExtra = false
 doPrep = false
 doOwn = false
+
+[versions.Laurent]
+doChords = true
+doVoice = true
+doLyrics = false
+doLyricsmore = false
+doLyricsmoremore = false
+doChordBars = false
+doGuitar = false
+doExtra = false
+doPrep = false
+doOwn = false
+
+[versions.Anon]
+doChords = true
+doVoice = true
+doLyrics = false
+doLyricsmore = false
+doLyricsmoremore = false
+doChordBars = false
+doGuitar = false
+doExtra = false
+doPrep = false
+doOwn = false
 #}
 {% if part == "Vars" %}
 {% endif %}
@@ -42,6 +66,8 @@ doOwn = false
 		- put in the chords (Hal Leonard Real Jazz Book).
 		- put in the tune (Hal Leonard Real Jazz Book).
 		- added youtube performances.
+		- added the Laurent Martelli version from staging/openbook/laurent/naima.ly.
+		- added the Anonymous <anonymous@zivlempel.org> version from staging/openbook/anon/Naima.ly.
 	TODO:
 		- check the chords (Hal Leonard Real Jazz Book).
 		- check the tune (Hal Leonard Real Jazz Book).
@@ -101,5 +127,115 @@ doOwn = false
 	% part "Coda"
 	ees2. r4 | aes2 ges4. ees16 ges | ees2. r4 | aes2 ges4. ees16 ges |
 	ees2. r4 | aes2 ges4. ees16 ges | ees2 f | g! aes | bes c | ees1 |
+}
+{% endif %}
+{% if part == "ChordsLaurent" %}\chordmode {
+	\startChords
+	\startSong
+
+	\myMark "A"
+	\startPart
+	\repeat volta 2 {
+		bes1:m7 | ees:m7 | b2:7.5- a:7.5- | aes1:maj7 | \myEndLine
+	}
+	\endPart
+
+	\myMark "B"
+	\startPart
+	b1:maj7 | bes:7.9- | b:maj7 | bes:7.9- | \myEndLine
+	e:7 | b:maj7 | f:m7 | ges:7 | \myEndLine
+	\endPart
+
+	\myMark "A"
+	\startPart
+	bes1:m7 | ees:m7 | b2:7.5- a:7.5- | aes1:maj7 | \myEndLine
+	\endPart
+
+	\myMark "End"
+	\startPart
+	b2:7.5- a:7.5- | aes1:maj7 | b2:7.5- a:7.5- | aes1:maj7 | \myEndLine
+	b2:7.5- a:7.5- | aes2:maj7 des:maj7 | aes:maj7 des:maj7 | aes:maj7 des:maj7 | \myEndLine
+	aes1:maj7 | \myEndLine
+	\endPart
+
+	\endSong
+	\endChords
+}
+{% endif %}
+{% if part == "VoiceLaurent" %}{
+	\tempo "Lento" 4 = 60
+	\time 4/4
+	\key aes \major
+
+	% part "A"
+	\repeat volta 2 {
+		c'2.~ \tuplet 3/2 { c8 bes ees } | f,1 | aes2 ges4~ \tuplet 3/2 { ges8 ees ges } | ees1 |
+	}
+
+	% part "B"
+	bes'2.~ \tuplet 3/2 { bes8 bes bes } | g2.~ \tuplet 3/2 { g8 ees f } | bes2.~ \tuplet 3/2 { bes8 bes bes } | g2.~ \tuplet 3/2 { g8 f ees } |
+	des'2.~ \tuplet 3/2 { des8 bes des } | bes2.~ \tuplet 3/2 { bes8 ees, bes' } | g2.~ \tuplet 3/2 { g8 ees g } | ees1 |
+
+	% part "A"
+	c'2.~ \tuplet 3/2 { c8 bes ees } | f,1 | aes2 ges4~ \tuplet 3/2 { ges8 ees ges } | ees1 |
+
+	% part "End"
+	aes2 ges4~ \tuplet 3/2 { ges8 ees ges } | ees1 | aes2 ges4~ \tuplet 3/2 { ges8 ees ges } | ees1 |
+	aes2 ges4~ \tuplet 3/2 { ges8 ees ges } | ees2 f | g aes | bes c |
+	ees1\fermata |
+}
+{% endif %}
+{% if part == "ChordsAnon" %}\chordmode {
+	\startChords
+	\startSong
+
+	\myMark "A"
+	\startPart
+	\repeat volta 2 {
+		bes1:m7/ees | ees:m7 | a2:maj7/ees g:maj7/ees | aes1:maj7 | \myEndLine
+	}
+	\endPart
+
+	\myMark "B"
+	\startPart
+	b1:maj7/bes | bes:6.9- | b:maj7/bes | bes:6.9- | \myEndLine
+	b:maj7/bes | bes:6.9- | f:m7/bes | e:maj7 | \myEndLine
+	\endPart
+
+	\myMark "A"
+	\startPart
+	bes1:m7/ees | ees:m7 | a2:maj7/ees g:maj7/ees | aes1:maj7 | \myEndLine
+	\endPart
+
+	\myMark "End"
+	\startPart
+	a2:maj7/ees g:maj7/ees | aes1:maj7 | a2:maj7/ees g:maj7/ees | \myEndLine
+	aes2:maj7 des:maj7 | aes:maj7 des:maj7 | aes:maj7 des:maj7 | aes1:maj7 | \myEndLine
+	\endPart
+
+	\endSong
+	\endChords
+}
+{% endif %}
+{% if part == "VoiceAnon" %}{
+	\tempo "Slow, warm" 4 = 60
+	\time 4/4
+	\key aes \major
+
+	% part "A"
+	\repeat volta 2 {
+		c'2.~ \tuplet 3/2 { c8 bes ees } | f,1 | aes2 ges4~ \tuplet 3/2 { ges8 ees ges } | ees1 |
+	}
+
+	% part "B"
+	bes'2.~ \tuplet 3/2 { bes8 bes bes } | g2.~ \tuplet 3/2 { g8 ees f } | bes2.~ \tuplet 3/2 { bes8 bes bes } | g2.~ \tuplet 3/2 { g8 f ees } |
+	des'2.~ \tuplet 3/2 { des8 bes des } | bes2.~ \tuplet 3/2 { bes8 ees, bes' } | g2.~ \tuplet 3/2 { g8 c, g' } | ees1 |
+
+	% part "A"
+	c'2.~ \tuplet 3/2 { c8 bes ees } | f,1 | aes2 ges4~ \tuplet 3/2 { ges8 ees ges } | ees1_\markup { "(back to top)" } |
+
+	% part "End"
+	aes2_\markup { "(ending only)" } ges4~ \tuplet 3/2 { ges8 ees ges } | ees1 | aes2 ges4~ \tuplet 3/2 { ges8 ees ges } |
+	ees2 f | g2 aes4~ \tuplet 3/2 { aes8 aes f } | bes2 c4~ \tuplet 3/2 { c8 c aes\glissando } | ees'1 |
 }
 {% endif %}

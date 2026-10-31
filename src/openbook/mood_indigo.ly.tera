@@ -35,6 +35,18 @@ doGuitar = false
 doExtra = false
 doPrep = false
 doOwn = false
+
+[versions.Laurent]
+doChords = true
+doVoice = true
+doLyrics = true
+doLyricsmore = false
+doLyricsmoremore = false
+doChordBars = false
+doGuitar = false
+doExtra = false
+doPrep = false
+doOwn = false
 #}
 {% if part == "Vars" %}
 {% endif %}
@@ -44,6 +56,7 @@ doOwn = false
 	- put in the chords (Hal Leonard Real Jazz Book).
 	- put in the tune (Hal Leonard Real Jazz Book).
 	- added youtube performances.
+	- added the Silvia Bertoluzza version from staging/openbook/laurent/mood_indigo.ly (lyrics copied from it).
 	TODO:
 	- add the lyrics.
 	- check the chords (Hal Leonard Real Jazz Book).
@@ -91,5 +104,64 @@ doOwn = false
 	r4 ees8 e! f4. ees8 | d!8 c' ces bes~ bes2 | c8 b! c b c b4. | bes1 |
 	r8 aes bes ees, aes bes4 ees,8 | aes8 bes ees, aes~ aes2 | r8 aes bes aes ces4. aes8 | ces8 aes bes aes~ aes fes4 ees8 |
 	r4 ees8 e! f!4. ees8 | d!8 c' ces bes~ bes2 | c!8 bes aes f g4 bes | aes2 r2 |
+}
+{% endif %}
+{% if part == "ChordsLaurent" %}\chordmode {
+	\startChords
+	\startSong
+
+	\myMark "A"
+	\startPart
+	aes1 | bes:7 | bes2:m7 ees:7 | aes1 | \myEndLine
+	aes1 | bes:7 | e:7 | ees:7 | \myEndLine
+	aes:7 | ees2:m7 aes:7 | des1 | ges2.:7 ees4:7 | \myEndLine
+	aes1 | bes:7 | bes2:m7 ees:7 | aes1 | \myEndLine
+	\endPart
+
+	\myMark "B"
+	\startPart
+	aes1 | bes:7 | bes2:m7 ees:7 | aes4 f:7 bes:m7 ees:7 | \myEndLine
+	aes1 | bes:7 | bes:7 | ees:7 | \myEndLine
+	aes:7 | ees2:m7 aes:7 | des des:7 | des:7 ees:7 | \myEndLine
+	aes1 | bes:7 | bes2:m7 ees:7 | aes4 f:7 bes:m7 ees:7 | \myEndLine
+	\endPart
+
+	\endSong
+	\endChords
+}
+{% endif %}
+{% if part == "VoiceLaurent" %}{
+	\tempo "Andante" 4 = 76
+	\time 4/4
+	\key aes \major
+
+	% part "A"
+	c'2 b8 c4 c8~ | c1 | ees2 b | c1 |
+	c2 b8 c4 c8~ | c1 | b8 b4 a8~ a4 gis | g2 f8. fis16 g4 |
+	r4 aes aes g | r ees'~ ees8 f ees4 | des2 des4 des | bes2. b4 |
+	c2 b8 c4 c8~ | c1 | ees2 b | c1 |
+
+	% part "B"
+	r4 ees,8. e16 f4. ees8 | d c' ces bes~ bes2 | cis8. bes16 aes8. f16 g4 bes | ees,1 |
+	r4 ees8. e16 f4. ees8 | d c' ces bes~ bes2 | c8. b16 c8. b16 c8 b4 bes8~ | bes1 |
+	r8. aes16 bes8. ees,16 aes8 bes4 ees,8 | aes bes ees, aes~ aes2 | r8. aes16 bes8. aes16 ces4. aes8 | ces aes bes aes~ aes fes4 ees8~ |
+	ees4 ees8. e16 f4. ees8 | d c' ces bes~ bes2 | c8. bes16 aes8. f16 g4 bes | aes2 r |
+}
+{% endif %}
+{% if part == "LyricsLaurent" %}\lyricmode {
+
+	% part "A"
+	You ain't been blue. No, No, No,
+	You ain't been blue, Til you've had that Mood In -- di -- go
+	That fee -- lin' goes stea -- lin' down to my shoes,
+	While I sit and sigh: Go 'long, blues!
+	Al -- ways get that Mood In -- di -- go,
+	Since my ba -- by said good -- bye,
+	In the eve -- ning when lights are low
+	I'm so lone -- some I could cry,
+	Cause there's no -- bo -- dy who cares a -- bout me,
+	I'm just a soul who's blu -- er than blue can be.
+	When I get that Mood In -- di -- go.
+	I could lay me down and die.
 }
 {% endif %}

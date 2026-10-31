@@ -1,0 +1,87 @@
+{#
+default_version = "Laurent"
+
+[attributes]
+title = "Old Devil Moon"
+style = "Jazz"
+composer = "Burton Lane"
+poet = "E. Y. Harburg"
+typesetter = "Laurent Martelli"
+completion = "3"
+uuid = "9f90c326-d4a0-11f1-8000-046874d194b7"
+structure = "AA"
+
+[versions.Laurent]
+doChords = true
+doVoice = true
+doLyrics = false
+doLyricsmore = false
+doLyricsmoremore = false
+doChordBars = false
+doGuitar = false
+doExtra = false
+doPrep = false
+doOwn = false
+#}
+{% if part == "Vars" %}
+{% endif %}
+{% if part == "Doc" %}	DONE:
+	- converted the Laurent Martelli version from staging/openbook/laurent/old_devil_moon.ly (the source writes the repeat out; here it is a volta repeat).
+	TODO:
+	- check the tune and chords against a real book.
+	- the source has no tempo; adjust the tempo.
+	- add the lyrics.
+	- add youtube performances.
+{% endif %}
+{% if part == "ChordsLaurent" %}\chordmode {
+	\startChords
+	\startSong
+
+	\myMark "A"
+	\startPart
+	\repeat volta 2 {
+		f1:maj | c:m7/+f | f1:maj | c:m7/+f | \myEndLine
+		f1:maj | c:m7/+f | f1:maj | c2:m7 f:7 | \myEndLine
+		bes1*2:maj | bes1:m7 | ees:7 | \myEndLine
+		aes2:m7 des:7 | ges:maj c:7 | f1:maj | \myEndLine
+	} \alternative {
+		{
+			c1:m7/+f | f2:maj c2*3:m7/+f d2*3:maj d2*3:m7 | \myEndLine
+			g1:7 | g:m7 | c:7 | \myEndLineVoltaNotLast
+		}
+		{
+			c1:m7/+f | f2*3:maj c2:m7/+f | f1:maj | c:m7/+f | \myEndLine
+			a2:m7 d:7.9+ | g:m7 c:7 | f1:maj | g2:m7 c:7 | \myEndLineVoltaLast
+		}
+	}
+	\endPart
+
+	\endSong
+	\endChords
+}
+{% endif %}
+{% if part == "VoiceLaurent" %}{
+	\tempo "Moderato" 4 = 160
+	\time 4/4
+	\key f \major
+
+	% part "A"
+	\repeat volta 2 {
+		f1 | ees8. ees16 ees8. ees16 ees4 g | f1 | g8. g16 g8. g16 g4 bes |
+		a1 | bes8. bes16 bes8. bes16 bes4 d | c1~ | c2 c4 c |
+		c2 bes8 a4 f8~ | f2 a4 bes | c2 bes8 a4 f8~ | f2 a4 bes |
+		des2 b8 bes4 ges8~ | ges2 a8 g!4 f8~ | f1 |
+	} \alternative {
+		{
+			r2 ees8. c16 ees8 f8~ | f2 ees8. c16 ees8 g8~ | g2 \tuplet 3/2 { ees4 c ees } | a2 a2~ |
+			a2 f8. d16 f8 a~ | a2 f8. d16 f8 b~ | b2 \tuplet 3/2 { f4 d f } | c'2 c2~ |
+			c8 d4 aes8 g8. f16 d8. c16 |
+		}
+		{
+			r2 ees8. c16 ees8 f8~ | f2 f2~ | f2 ees8. c16 ees8 f8~ | f1~ |
+			f2 \tuplet 3/2 { ees'4 ees ees } | c2 \tuplet 3/2 { bes4 c bes } | a2 \tuplet 3/2 { f4 ees e } | f1 |
+			r1 |
+		}
+	}
+}
+{% endif %}

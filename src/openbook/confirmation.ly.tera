@@ -33,10 +33,23 @@ doGuitar = false
 doExtra = false
 doPrep = false
 doOwn = false
+
+[versions.Laurent]
+doChords = true
+doVoice = true
+doLyrics = false
+doLyricsmore = false
+doLyricsmoremore = false
+doChordBars = false
+doGuitar = false
+doExtra = false
+doPrep = false
+doOwn = false
 #}
 {% if part == "Vars" %}
 {% endif %}
 {% if part == "Doc" %}	DONE:
+	- converted the Laurent Martelli version from staging/openbook/laurent/confirmation.ly (version Laurent).
 	- added the meta data from the fake book.
 	- put in the tunes structure.
 	- put in the chords (fake book).
@@ -102,5 +115,67 @@ doOwn = false
 	% part "A"
 	r8 c'4. bes8 a \tuplet 3/2 { e8 f fis } | g8 d' bes g a cis, r g' | r8 f r4 r4 r8 a | g8 bes a g r8 f4 bes8 |
 	b8 bes aes f bes aes4. | r8 c bes aes a cis, d f~ | f8 d f a r8 f4 d8 | f4 r r2 |
+}
+{% endif %}
+{% if part == "ChordsLaurent" %}\chordmode {
+	\startChords
+	\startSong
+
+	\myMark "A"
+	\startPart
+	f1:maj7 | e2:m7.5- a:7 | d:m7 g:7 | c:m7 f:7 | \myEndLine
+	bes1:7 | a2:m7 d:7 | g1:7.11+ | g2:m7 c:7 | \myEndLine
+	\endPart
+
+	\myMark "A"
+	\startPart
+	f1:maj7 | e2:m7.5- a:7 | d:m7 g:7 | c:m7 f:7 | \myEndLine
+	bes1:7 | a2:m7 d:7 | g:m7 c:7 | f1:maj7 | \myEndLine
+	\endPart
+
+	\myMark "B"
+	\startPart
+	c1:m7 | f:7 | bes1*2:maj7 | \myEndLine
+	ees1:m7 | aes:7 | des:maj7 | g2:m7 c:7 | \myEndLine
+	\endPart
+
+	\myMark "A"
+	\startPart
+	f1:maj7 | e2:m7.5- a:7 | d:m7 g:7 | c:m7 f:7 | \myEndLine
+	bes1:7 | a2:m7 d:7 | g:m7 c:7 | f1:maj7 | \myEndLine
+	\endPart
+
+	\endSong
+	\endChords
+}
+{% endif %}
+{% if part == "VoiceLaurent" %}{
+	\tempo "Allegro" 4 = 200
+	\time 4/4
+	\key f \major
+
+	% part "A"
+	a'8 c r a bes a \tuplet 3/2 { e f fis } | g d' bes g a cis, r g' |
+	r f r4 r r8 a | g bes a g r f4 bes8 |
+	b bes aes f bes aes~ aes4 | r8 c bes g fis a d, b'~ |
+	b4 e8 a, r4 r8 ees'16 d | des8 f, g e r c'4. |
+
+	% part "A"
+	a4 r8 f \tuplet 3/2 { bes a aes } g a | f16 g ees8 r4 r8 cis4 g'8~ |
+	g f4 r8 r4 r8 a | g bes a g f des f f~ |
+	f aes bes f aes bes r4 | r8 ees, g bes a fis r4 |
+	g8 bes \tuplet 3/2 { a16 bes a } g8 c gis a f | r2 r8 d'4. |
+
+	% part "B"
+	c4 r16 g ees c b'8 g4 g8 | \tuplet 3/2 { bes! c bes } g ees aes ges b, f' |
+	a f a g~ g4. g8 | r2 r4 r8 bes |
+	des16 bes gis a c bes ges8~ ges aes f e | ees aes aes4 aes8 aes~ aes ges16 e! |
+	\tuplet 3/2 { f16 aes c } ees8~ ees d16 c des bes r8 r4 | r8 g des f aes e des c |
+
+	% part "A"
+	r8 c'4. bes8 a \tuplet 3/2 { e f fis } | g d' bes g a cis, r g' |
+	r f r4 r r8 a | g bes a g r f4 bes8 |
+	b bes aes f bes aes~ aes4 | r8 c bes gis a cis, d f~ |
+	f d f a r f~ f d | f4-^ f2. |
 }
 {% endif %}

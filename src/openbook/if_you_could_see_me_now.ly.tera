@@ -33,10 +33,24 @@ doGuitar = false
 doExtra = false
 doPrep = false
 doOwn = false
+
+[versions.Laurent]
+doChords = true
+doVoice = true
+doLyrics = false
+doLyricsmore = false
+doLyricsmoremore = false
+doChordBars = false
+doGuitar = false
+doExtra = false
+doPrep = false
+doOwn = false
 #}
 {% if part == "Vars" %}
 {% endif %}
 {% if part == "Doc" %}	DONE:
+	- converted the Laurent Martelli version from staging/openbook/laurent/if_you_could_see_me_now.ly.
+	- fixed the octave of the Laurent 2nd ending and B section (LilyPond 1.x pitched the notes after the volta endings from the end of the repeated body).
 	- brought in the real book epdf.
 	- brought in the wikifonia epdf.
 	- added lyrics url.
@@ -152,5 +166,67 @@ doOwn = false
 	_ and try -- in aw -- f'lly hard to make my tears be -- have.
 	But that's quite im -- pos -- si -- ble.
 	I'm still in love with _ you. __
+}
+{% endif %}
+{% if part == "ChordsLaurent" %}\chordmode {
+	\startChords
+	\startSong
+
+	\myMark "A"
+	\startPart
+	\repeat volta 2 {
+		f2:maj7 d:m7 | bes1:sus4.7 | f2:7 d8:m7 des:m7 c:m7 b:m7 | bes2:m7 ees:7 | \myEndLine
+		a4:m7 d:m7 aes:m7 des:7 | g:m7 c:7 b:m7 fis:7 |
+	} \alternative {
+		{
+			ees2:9 d:7 | g:m7 c:7 | \myEndLineVoltaNotLast
+		}
+		{
+			b2:m7.5- c:m7 | a4:m7 d:m7 c:m7 f:7 | \myEndLineVoltaLast
+		}
+	}
+	\endPart
+
+	\myMark "B"
+	\startPart
+	b2:m7 e:7 | cis:m7.5- fis:7 | b:m7 e:7 | a:maj7 fis:m7 | b:m7 d4:m7 g:7 | \myEndLine
+	e2:m7 a:m7 | d:m7.5- g:7 | g4:m7 aes des ges | f2:maj7 des:7 | c1:sus4.7 | \myEndLine
+	\endPart
+
+	\myMark "Coda"
+	\startPart
+	s1*4 | \myEndLine
+	\endPart
+
+	\endSong
+	\endChords
+}
+{% endif %}
+{% if part == "VoiceLaurent" %}{
+	\tempo "Adagio" 4 = 76
+	\time 4/4
+	\key c \major
+
+	% part "A"
+	\repeat volta 2 {
+		r8 e f a c e d a | c b bes c g2 |
+		r8 e f a c e d a | c b bes c g4. a8^\markup { To Coda \musicglyph #"scripts.coda" } |
+		c4 a8 c des ges, f4 | d' bes8 g e'4. c8 |
+	} \alternative {
+		{
+			a1~ | a1 |
+		}
+		{
+			f'1~ | f2. f4 |
+		}
+	}
+
+	% part "B"
+	e4 e8 e \tuplet 3/2 { e4 fis d } | \tuplet 3/2 { cis4 cis cis } cis4. d16 e |
+	b4 b8 b b4 cis8 d | f2. fis,4 | cis'8 b a b c d e f |
+	g2 r8 e d b | f2 r8 d' c b | c1 | f1~ | f1^\markup { D.C. al Coda } |
+
+	% part "Coda"
+	c4 a8 c des ges, f4 | d'! b8 d ees aes, g4 | e'! cis8 e f4 fis | g1\fermata |
 }
 {% endif %}

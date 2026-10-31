@@ -1,0 +1,107 @@
+{#
+default_version = "Laurent"
+
+[attributes]
+title = "Early Autumn"
+style = "Jazz"
+composer = "Ralph Burns, Woody Herman"
+poet = "Johnny Mercer"
+typesetter = "Laurent Martelli"
+completion = "3"
+uuid = "53a87194-d49f-11f1-8000-046874d194b7"
+structure = "AABA"
+
+[versions.Laurent]
+doChords = true
+doVoice = true
+doLyrics = false
+doLyricsmore = false
+doLyricsmoremore = false
+doChordBars = false
+doGuitar = false
+doExtra = false
+doPrep = false
+doOwn = false
+#}
+{% if part == "Vars" %}
+{% endif %}
+{% if part == "Doc" %}	DONE:
+	- converted the Laurent Martelli version from staging/openbook/laurent/early_autumn.ly.
+	TODO:
+	- check the tune and chords against a real book.
+	- add the lyrics.
+	- add youtube performances.
+	- hear the tune to check that it is right and adjust the tempo.
+{% endif %}
+{% if part == "ChordsLaurent" %}\chordmode {
+	\startChords
+	\startSong
+
+	\partial 2 s2 |
+
+	\myMark "A"
+	\startPart
+	\repeat volta 2 {
+		bes1:maj7 | a:7 | aes:maj7 | g:7 | \myEndLine
+		ges:maj7 | f:7 | bes:maj7 |
+	} \alternative {
+		{
+			c2:m7 f:7 | \myEndLineVoltaNotLast
+		}
+		{
+			bes2:maj7 des:7 | \myEndLineVoltaLast
+		}
+	}
+	\endPart
+
+	\myMark "B"
+	\startPart
+	aes2:m7 des:7 | ges:maj7 aes:7 | aes:m7 des:7 | ges1:maj7 | \myEndLine
+	ges2:m7 b:7 | e:maj7 aes:7 | a:7.5+ ges:7 | c:m7 f:7 | \myEndLine
+	\endPart
+
+	\myMark "A"
+	\startPart
+	bes1:maj7 | a:7 | aes:maj7 | g:7 | \myEndLine
+	ges:maj7 | f:7 | bes1*2:maj7 | \myEndLine
+	\endPart
+
+	\endSong
+	\endChords
+}
+{% endif %}
+{% if part == "VoiceLaurent" %}{
+	\tempo "Andante" 4 = 80
+	\time 4/4
+	\key bes \major
+
+	\partial 2 f8 fis g gis |
+
+	% part "A"
+	\repeat volta 2 {
+		a8 f d bes a'16 bes c bes a4 | r cis,16 e g bes a g f e a8 cis, |
+		g' ees c aes g'16 aes bes c g4 | r b,16 d f aes g f ees d g8 b, |
+		f'4 \tuplet 3/2 { des8 bes ges } \tuplet 3/2 { f' ges aes } f4 |
+		r a,16 c ees ges f ees d c f4 | d1 |
+	} \alternative {
+		{
+			r2 f8 fis g gis |
+		}
+		{
+			r2 r8 d8 ees f |
+		}
+	}
+
+	% part "B"
+	ges4. ees8 bes'16 a aes g~ g4 | r8 f aes ges f'16 e ees d~ d4 |
+	ees4 des8 b \tuplet 3/2 { bes4 aes bes } | des2 r8 des, ees f |
+	ges4. e8 aes4~ \tuplet 3/2 { aes8 f ges } | g!8 aes b dis f16 e ees d~ d4 |
+	ees2 e | bes b |
+
+	% part "A"
+	a8 f d bes a'16 bes c bes a4 | r cis,16 e g bes a g f e a8 cis, |
+	g' ees c aes g'16 aes bes c g4 | r b,16 d f aes g f ees d g8 b, |
+	f'4 \tuplet 3/2 { des8 bes ges } \tuplet 3/2 { f' ges aes } f4 |
+	r a,16 c ees ges f ees d c f4 | d1~ | d2 r |
+}
+{% endif %}

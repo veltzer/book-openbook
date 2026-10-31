@@ -33,10 +33,23 @@ doGuitar = false
 doExtra = false
 doPrep = false
 doOwn = false
+
+[versions.Laurent]
+doChords = true
+doVoice = true
+doLyrics = false
+doLyricsmore = false
+doLyricsmoremore = false
+doChordBars = false
+doGuitar = false
+doExtra = false
+doPrep = false
+doOwn = false
 #}
 {% if part == "Vars" %}
 {% endif %}
 {% if part == "Doc" %}	DONE:
+	- converted the Laurent Martelli version from staging/openbook/laurent/con_alma.ly (version Laurent).
 	- added the meta data from the Hal Leonard Real Jazz Book.
 	- put in the tunes structure.
 	- put in the chords (Hal Leonard Real Jazz Book).
@@ -84,5 +97,59 @@ doOwn = false
 	% part "B"
 	ges8. f16 ees des ees8~ ees2~ | ees2 \tuplet 3/2 { f4 ges aes } | a8. aes16 ges fes ges8~ ges2~ | ges2 aes4 a |
 	b1~ | b1 | bes1~ | bes1^\markup { \italic { D.C. al Fine } } |
+}
+{% endif %}
+{% if part == "ChordsLaurent" %}\chordmode {
+	\startChords
+	\startSong
+
+	\myMark "A"
+	\startPart
+	\repeat volta 2 {
+		e2:maj7 gis:7/dis | cis:m7 b:7 | bes1:7 | ees2:maj7 ees4:m7 aes:7 | \myEndLine
+		des2:maj7 f:7/c | bes:m7 aes:7 | g1:7 |
+	} \alternative {
+		{
+			c2:maj7 fis4:m7 b:7 | \myEndLineVoltaNotLast
+		}
+		{
+			c1:maj7 | \myEndLineVoltaLast
+		}
+	}
+	\endPart
+
+	\myMark "B"
+	\startPart
+	c1:m7.5- | f:7.9- | fis:m7 | b:7 | \myEndLine
+	e1*2:maj7 | f1:m7 | bes:7 | \myEndLine
+	\endPart
+
+	\endSong
+	\endChords
+}
+{% endif %}
+{% if part == "VoiceLaurent" %}{
+	\tempo "Moderato" 4 = 100
+	\time 4/4
+	\key bes \major
+
+	% part "A"
+	\repeat volta 2 {
+		gis'2 gis | gis gis | gis4 bes8 b bes4 gis | g!2 ges4 aes |
+		f2 f | f f | f4 g8 aes g4 f8 g |
+	} \alternative {
+		{
+			e2 r |
+		}
+		{
+			e2 \tuplet 3/2 { r4 ees f } |
+		}
+	}
+
+	% part "B"
+	\tuplet 3/2 { ges4 f ees8 d } ees2~ | ees ees8 f ges aes |
+	\tuplet 3/2 { a!4 gis fis8 f } fis2~ | fis~ fis8 fis gis a |
+	b1~ | b2 \tuplet 3/2 { e,4 gis b8 cis } |
+	bes1~ | bes |
 }
 {% endif %}

@@ -24,11 +24,24 @@ doGuitar = false
 doExtra = false
 doPrep = false
 doOwn = false
+
+[versions.Laurent]
+doChords = true
+doVoice = true
+doLyrics = false
+doLyricsmore = false
+doLyricsmoremore = false
+doChordBars = false
+doGuitar = false
+doExtra = false
+doPrep = false
+doOwn = false
 #}
 {% if part == "Vars" %}
 {% endif %}
 {% if part == "Doc" %}	DONE:
 	- brought in the real book location.
+	- converted the Laurent Martelli version from staging/openbook/laurent/take_five.ly (as the Laurent version, in E flat minor).
 	TODO:
 	- mark what has been done with this tune.
 {% endif %}
@@ -78,5 +91,59 @@ doOwn = false
 	% part "A"
 	gis a gis g f4 a, c | d2. \tuplet 3/2 { e16 f e } d8 c4 | d2. \tuplet 3/2 { c16 d c } a8 g4 | a2.~ a8 d f g |
 	gis a gis g f4 a, c | d2. \tuplet 3/2 { c16 d c } a8 g4 | a2. \tuplet 3/2 { e'16 f e } d8 c4 | d2.~ d2 |
+}
+{% endif %}
+{% if part == "ChordsLaurent" %}\chordmode {
+	\startChords
+	\startSong
+
+	\partial 2 s2 |
+
+	\myMark "A"
+	\startPart
+	ees2.:m7 bes2:m7 | ees2.:m7 bes2:m7 | ees2.:m7 bes2:m7 | ees2.:m7 bes2:m7 | \myEndLine
+	ees2.:m7 bes2:m7 | ees2.:m7 bes2:m7 | ees2.:m7 bes2:m7 | ees2.:m7 bes2:m7 | \myEndLine
+	\endPart
+
+	\myMark "B"
+	\startPart
+	ces2.:maj7 aes2:m6 | bes2.:m7 ees2:m7 | aes2.:m7 des2:7 | ges4*5:maj7 | \myEndLine
+	ces2.:maj7 aes2:m6 | bes2.:m7 ees2:m7 | aes2.:m7 des2:7 | f2.:m7 bes2:7 | \myEndLine
+	\endPart
+
+	\myMark "A"
+	\startPart
+	ees2.:m7 bes2:m7 | ees2.:m7 bes2:m7 | ees2.:m7 bes2:m7 | ees2.:m7 bes2:m7 | \myEndLine
+	ees2.:m7 bes2:m7 | ees2.:m7 bes2:m7 | ees2.:m7 bes2:m7 | ees4*5:m7 | \myEndLine
+	\endPart
+
+	\endSong
+	\endChords
+}
+{% endif %}
+{% if part == "VoiceLaurent" %}{
+	\tempo "Moderato" 4 = 168
+	\time 5/4
+	\key ges \major
+
+	\partial 2 bes8 ees ges aes |
+
+	% part "A"
+	a bes a aes ges4 bes,4( des-.) | ees2. f16( ges f ees) des4 |
+	ees2. des16( ees des bes) aes4 | bes2. bes8 ees ges aes |
+	a bes a aes ges4 bes,4( des-.) | ees2. des16( ees des bes) aes4 |
+	bes2. f'16( ges f ees) des4 | ees2. ees'8 des ees des |
+
+	% part "B"
+	ees ges4 ees8 ces4 aes8 bes ces c | des8 f4 des8 bes4 ges8 aes a bes |
+	ces ees4 ces8 aes4 f8 ges aes a | bes a bes ces des4 des8 c des d |
+	ees ges4 ees8 ces4 aes8 bes ces c | des g4 des8 bes4 ges8 aes a bes |
+	ces ees4 ces8 aes4 f8 aes des ces | bes2. bes,8 ees ges aes |
+
+	% part "A"
+	a bes a aes ges4 bes,4( des-.) | ees2. f16( ges f ees) des4 |
+	ees2. des16( ees des bes) aes4 | bes2. bes8 ees ges aes |
+	a bes a aes ges4 bes,4( des-.) | ees2. des16( ees des bes) aes4 |
+	bes2. f'16( ges f ees) des4 | ees2. r2 |
 }
 {% endif %}

@@ -1,0 +1,117 @@
+{#
+default_version = "Anon"
+
+[attributes]
+title = "Black Diamond"
+style = "Jazz"
+composer = "Roland Kirk"
+piece = "Up"
+typesetter = "Anonymous <anonymous@zivlempel.org>"
+completion = "3"
+uuid = "68626a2c-d49f-11f1-8000-046874d194b7"
+structure = "AB"
+
+[versions.Anon]
+doChords = true
+doVoice = true
+doLyrics = false
+doLyricsmore = false
+doLyricsmoremore = false
+doChordBars = false
+doGuitar = false
+doExtra = false
+doPrep = false
+doOwn = false
+#}
+{% if part == "Vars" %}
+{% endif %}
+{% if part == "Doc" %}	DONE:
+	- converted the Anonymous <anonymous@zivlempel.org> version from staging/openbook/anon/BlackDiamond.ly.
+	TODO:
+	- check the tune and chords against a real book.
+	- add youtube performances.
+	- the source marks the coda at bar 15 but has no "D.C. al Coda" sign; the form is presumably play A B, then back to the top and take the coda (ending only).
+{% endif %}
+{% if part == "ChordsAnon" %}\chordmode {
+	\startChords
+	\startSong
+
+	\myMark "A"
+	\startPart
+	\repeat volta 2 {
+		d2.:m | d:3-.5+ | d:m6 | d:7 | \myEndLine
+		g:m7 | c:7 | f:maj |
+	} \alternative {
+		{
+			a:5+ | \myEndLineVoltaNotLast
+		}
+		{
+			b:5+ | \myEndLineVoltaLast
+		}
+	}
+	\endPart
+
+	\myMark "B"
+	\startPart
+	\repeat volta 2 {
+		e2.:5+ | a:5+ | d:5+ | g:5+ | \myEndLine
+		g:m7 | c:7.9- | f:maj |
+	} \alternative {
+		{
+			b:5+ | \myEndLineVoltaNotLast
+		}
+		{
+			a:5+ | \myEndLineVoltaLast
+		}
+	}
+	\endPart
+
+	\myMark "Coda"
+	\startPart
+	\repeat volta 2 {
+		f2.:maj | fis:7 |
+	}
+	\myEndLine
+	\endPart
+
+	\endSong
+	\endChords
+}
+{% endif %}
+{% if part == "VoiceAnon" %}{
+	\tempo "Up" 4 = 150
+	\time 3/4
+	\key c \major
+
+	% part "A"
+	\repeat volta 2 {
+		r4 d8 d f f | g f d c d4 | r a'8 d aes g | f d f4 g |
+		e'8 d g4 r8 f | e d e4 d8 e | a,2. |
+	} \alternative {
+		{
+			r4 a8 g f e |
+		}
+		{
+			b'4 g'4. ges8 |
+		}
+	}
+
+	% part "B"
+	\repeat volta 2 {
+		bes,2. | a4 f' e | aes,2. | g4 ees' d |
+		ges,4 g a | bes des c | c2.^\markup { To Coda \musicglyph #"scripts.coda" } |
+	} \alternative {
+		{
+			b4 g'4. fis8 |
+		}
+		{
+			r4 a,8 g f e |
+		}
+	}
+
+	% part "Coda"
+	\repeat volta 2 {
+		c'2.^\markup { (ending only) } | cis2. |
+	}
+}
+{% endif %}

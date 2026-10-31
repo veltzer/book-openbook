@@ -1,0 +1,60 @@
+{#
+default_version = "Laurent"
+
+[attributes]
+title = "Mr. P.C."
+style = "Jazz"
+composer = "John Coltrane"
+typesetter = "Laurent Martelli"
+completion = "3"
+uuid = "6124a126-d49f-11f1-8000-046874d194b7"
+structure = "Minor Blues"
+
+[versions.Laurent]
+doChords = true
+doVoice = true
+doLyrics = false
+doLyricsmore = false
+doLyricsmoremore = false
+doChordBars = false
+doGuitar = false
+doExtra = false
+doPrep = false
+doOwn = false
+#}
+{% if part == "Vars" %}
+{% endif %}
+{% if part == "Doc" %}	DONE:
+	- converted the Laurent Martelli version from staging/openbook/laurent/mr_pc.ly.
+	TODO:
+	- check the tune and chords against a real book.
+	- the source has no tempo marking, the tempo is a guess.
+	- the source writes the key signature as Eb major, this is a C minor blues.
+	- add youtube performances.
+{% endif %}
+{% if part == "ChordsLaurent" %}\chordmode {
+	\startChords
+	\startSong
+
+	\myMark "A"
+	\startPart
+	c1*2:m7 | c2:m7 bes | c1:m7 | \myEndLine
+	f1*2:m7 | c2:m7 bes | c2.:m7 s8 d:7 | \myEndLine
+	s8 g2.:7 d8:7 | s8 g4.:7 s2 | c2:m7 bes | c1:m7 | \myEndLine
+	\endPart
+
+	\endSong
+	\endChords
+}
+{% endif %}
+{% if part == "VoiceLaurent" %}{
+	\tempo "Allegro" 4 = 220
+	\time 4/4
+	\key c \minor
+
+	% part "A"
+	c8 c d d ees ees f f | g g f f ees c4 bes8 | c2 bes4. c8~ | c2 r |
+	f8 f g g aes aes bes bes | c c bes bes aes f4 ees8 | c2 bes4. c8 | r2 ees8 c ees ges |
+	r8 f4.~ f4. ges8 | r f4 ees8 f4 ees | c2 bes4. c8~ | c2 r2 |
+}
+{% endif %}

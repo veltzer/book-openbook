@@ -33,10 +33,23 @@ doGuitar = false
 doExtra = false
 doPrep = false
 doOwn = false
+
+[versions.Laurent]
+doChords = true
+doVoice = true
+doLyrics = false
+doLyricsmore = false
+doLyricsmoremore = false
+doChordBars = false
+doGuitar = false
+doExtra = false
+doPrep = false
+doOwn = false
 #}
 {% if part == "Vars" %}
 {% endif %}
 {% if part == "Doc" %}	DONE:
+	- converted the Laurent Martelli version from staging/openbook/laurent/i_love_you.ly.
 	- brought in the real book epdf.
 	- filled in meta data from the real book.
 	- filled in the tunes structure.
@@ -121,5 +134,63 @@ doOwn = false
 	That's the song of songs __
 	And it all be -- longs
 	To you and me.
+}
+{% endif %}
+{% if part == "ChordsLaurent" %}\chordmode {
+	\startChords
+	\startSong
+
+	\partial 4 s4 |
+
+	\myMark "A"
+	\startPart
+	bes1:m7 | c:7.9- | f:maj7 | d:7.9+ | \myEndLine
+	g:m7 | c:7 | f1*2:maj7 | \myEndLine
+	\endPart
+
+	\myMark "A"
+	\startPart
+	bes1:m7 | c:7.9- | f:maj7 | b2:m7.5- e:7.9+ | \myEndLine
+	a1:maj7 | b2:m7 e:7 | a1*2:maj7 | \myEndLine
+	\endPart
+
+	\myMark "B"
+	\startPart
+	g1:m7 | c:7 | f1*2:maj7 | \myEndLine
+	a1:m7.5- | d:7.9+ | g:m7 | c:7 | \myEndLine
+	\endPart
+
+	\myMark "C"
+	\startPart
+	bes:m7 | c:7.9- | a:m7.5- | d:7.9+ | \myEndLine
+	g:7 | g2:m7 c:7 | f1:maj7 | a2:m7 d:7 | \myEndLine
+	\endPart
+
+	\endSong
+	\endChords
+}
+{% endif %}
+{% if part == "VoiceLaurent" %}{
+	\tempo "Allegro" 4 = 160
+	\time 4/4
+	\key f \major
+
+	\partial 4 c'4 |
+
+	% part "A"
+	c4. des,8~ des2~ | des bes'4. a8 | gis a4 a8~ a2~ | a2. a4 |
+	a4. bes,8~ bes2~ | bes2 g'8 f e d~ | d2 r | r r4 c' |
+
+	% part "A"
+	c4. des,8~ des2~ | des bes'4. a8 | gis a4 a8~ a2~ | a2 r8 a4. |
+	b8 cis4 cis8~ cis4 cis | d2 e | e1~ | e2. e4 |
+
+	% part "B"
+	f f8 f8~ f2 | r e8 d c e~ | e4 e8 e~ e2~ | e c4 d |
+	ees4. ees8 ees ees4 ees8 | r8 d4. c4 bes! | a1 | g2. c4 |
+
+	% part "C"
+	c4. des,8~ des2~ | des bes'4. a8 | gis a4 a8~ a2~ | a2 bes4 c |
+	cis4. d8~ d4 f, | a4. a8~ a2 | f1 | r1 |
 }
 {% endif %}

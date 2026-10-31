@@ -53,12 +53,8 @@ ${self.defs()}
 			\column {
 				\null
 				\null
-				\null
-				\null
-				\null
-				\null
-				\null
-				\null
+				%% the logo; images/logo.svg is the master, see scripts/make_logo.sh
+				\fill-line { \epsfile #X #22 #"images/logo.eps" }
 				\null
 				\null
 				\fill-line { \fontsize #11 \bold "OpenBook (${TONALITYName})"}

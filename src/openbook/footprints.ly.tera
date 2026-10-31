@@ -32,10 +32,23 @@ doGuitar = false
 doExtra = false
 doPrep = false
 doOwn = false
+
+[versions.Laurent]
+doChords = true
+doVoice = true
+doLyrics = false
+doLyricsmore = false
+doLyricsmoremore = false
+doChordBars = false
+doGuitar = false
+doExtra = false
+doPrep = false
+doOwn = false
 #}
 {% if part == "Vars" %}
 {% endif %}
 {% if part == "Doc" %}	DONE:
+	- converted the Laurent Martelli version from staging/openbook/laurent/footprints.ly.
 	- added the meta data from the fake book.
 	- put in the tunes structure.
 	- put in the chords (fake book).
@@ -76,5 +89,34 @@ doOwn = false
 		bes'4 bes bes bes8 c~ c4. d8 | \tuplet 5/3 { ees4 d c bes g~ } g2 f4 | \tuplet 5/3 { bes4 a g f d~ } d2 c4 | r2 r8 d~ d2 c4 |
 		b'4 b b b8 d~ d4 g,8 bes~ | bes2. g | f1.~ | f1. |
 	}
+}
+{% endif %}
+{% if part == "ChordsLaurent" %}\chordmode {
+	\startChords
+	\startSong
+
+	\myMark "A"
+	\startPart
+	c1.*4:m7 | \myEndLine
+	f1.*2:m7 | c1.*2:m7 | \myEndLine
+	fis1:m7.5- b2:7.9+ | e2.:7.9+ a:7.5+.9+ | c1.*2:m7 | \myEndLine
+	\endPart
+
+	\endSong
+	\endChords
+}
+{% endif %}
+{% if part == "VoiceLaurent" %}{
+	\tempo "Moderato" 4 = 144
+	\time 6/4
+	\key c \minor
+
+	% part "A"
+	bes'4-- bes-- bes-- bes8\( c~ c4. a8 | \tuplet 5/6 { bes a g f d~ } d2 c4\)-. |
+	r2 r8 d~ d2 c4-. | r2 r8 d~ d2 c4-. |
+	bes'-- bes-- bes-- bes8\( c~ c4. d8 | \tuplet 5/6 { ees d c bes g~ } g2 f4\)-. |
+	\tuplet 5/6 { bes8\( a g f d~ } d2 c4\)-. | r2 r8 d~ d2 c4-. |
+	b'\( b b b8 d~ d4 g,8 bes~ | bes2~ \tuplet 3/2 { bes8 a aes } g2~ g16 c g ges |
+	f1.~ | f\) |
 }
 {% endif %}

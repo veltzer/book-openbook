@@ -34,10 +34,23 @@ doGuitar = false
 doExtra = false
 doPrep = false
 doOwn = false
+
+[versions.Laurent]
+doChords = true
+doVoice = true
+doLyrics = false
+doLyricsmore = false
+doLyricsmoremore = false
+doChordBars = false
+doGuitar = false
+doExtra = false
+doPrep = false
+doOwn = false
 #}
 {% if part == "Vars" %}
 {% endif %}
 {% if part == "Doc" %}	DONE:
+	- added the Laurent Martelli version (melody only, no chord symbols) from staging/openbook/laurent/round_midnight.ly.
 	- brought in the real book epdf.
 	- brought in the fake book epdf.
 	- fill in the meta data for the this tune.
@@ -53,6 +66,7 @@ doOwn = false
 	- checked the real book lyrics.
 	- added youtube performances.
 	TODO:
+	- the Laurent version has no chord symbols; its octaves around the repeat were reconstructed (the octave entry of the old source is ambiguous there), check them.
 	- add the fake book version.
 	REMARKS:
 	- in the real book chords the bes:7 chord that ends the first two bars of the A section (appears
@@ -158,5 +172,106 @@ doOwn = false
 	Ha -- ven't got the heart to stand -- _ _ those me -- _ _ mories,
 	When my heart is still with you, _ _ _ _ _
 	And ol'
+}
+{% endif %}
+{% if part == "ChordsLaurent" %}\chordmode {
+	\startChords
+	\startSong
+
+	\myMark "Intro"
+	\startPart
+	s1*4 | \myEndLine
+	s1*4 | \myEndLine
+	\endPart
+
+	\myMark "A"
+	\startPart
+	\repeat volta 2 {
+		s1*4 | \myEndLine
+		s1*2 |
+	} \alternative {
+		{
+			s1*2 | \myEndLineVoltaNotLast
+		}
+		{
+			s1*2 | \myEndLineVoltaLast
+		}
+	}
+	\endPart
+
+	\myMark "B"
+	\startPart
+	s1*4 | \myEndLine
+	s1*4 | \myEndLine
+	\endPart
+
+	\myMark "A"
+	\startPart
+	s1*4 | \myEndLine
+	s1*4 | \myEndLine
+	\endPart
+
+	\myMark "Coda"
+	\startPart
+	s1*4 | \myEndLine
+	s1*4 | \myEndLine
+	s1 s2 s1 | \myEndLine
+	\endPart
+
+	\endSong
+	\endChords
+}
+{% endif %}
+{% if part == "VoiceLaurent" %}{
+	\tempo "Adagio" 4 = 60
+	\time 4/4
+	\key ges \major
+
+	% part "Intro"
+	r4 ees16 f g a \grace { cis8( } d8) a16 g \grace { cis8( } d8) a16 g |
+	\grace { e'8( } f4)~ f16 e bes fis gis2 |
+	r4 des16 ees f g \grace { b8( } c8) g16 f \grace { b8( } c8) g16 f |
+	\grace { d'8( } ees4)~ ees16 d aes e fis2 |
+	r4 ces16 des ees f \grace { a8( } bes8) f16 ees \grace { a8( } bes8) f16 ees |
+	\grace { c'8( } des4)~ des16 c ges d e2 |
+	\repeat unfold 3 { r16 <g, d' fis ais>16 <g d' fis ais>8 <g d' fis ais>8 <g d' fis ais>16 <g d' fis ais>16 }
+	r16 <g d' fis ais>16 <g d' fis ais>8 <aes d e bes'>4 |
+
+	% part "A"
+	\repeat volta 2 {
+		r4 bes16 ees f bes ges4. bes,8 | ees8 ees~ ees4~ ees8 ees bes'16 aes8. |
+		r4 ees16 ges bes des c4. ges8 | a4 aes aes8 ges~ ges4 |
+		r4 aes16 ces ees ges f4. ces8 | bes2. ees,8 f |
+	} \alternative {
+		{
+			\tuplet 3/2 { ges8 f ges } f4~ f4. ees8 | d8 bes~ bes2. |
+		}
+		{
+			ges'8 f4 ees8~ ees4 ees8 ees~ | ees2. ees8 f |
+		}
+	}
+
+	% part "B"
+	\tuplet 3/2 { ges8 f ges } f4~ f4. ees8 | d8 bes~ bes2 ees8 f |
+	\tuplet 3/2 { ges8 f ges } f4~ f4. ees8 | d8 bes'8~ bes2. |
+	ces4 ces8. ces16 bes8 bes~ bes4 | ges8. ges16 ges8 f~ f4. bes8 |
+	ees4. ees16 ees des4. des16 des | ces4. des16 ces bes2 |
+
+	% part "A"
+	r4 bes,16 ees f bes ges4. bes,8 | ees8 ees~ ees4~ ees8 ees bes'16 aes8. |
+	r4 ees16 ges bes des c4. ges8 | a4 aes aes8 ges~ ges4 |
+	r4 aes16 ces ees ges f4. ces8 | bes2. ees,8 f |
+	ges8 f4 ees8~ ees4 ees8 ees~ | ees2. r4 |
+
+	% part "Coda"
+	r8 bes \tuplet 3/2 { c8 d ees } f ees~ \tuplet 3/2 { ees8 des c } |
+	ges'1~ | ges4~ \tuplet 3/2 { ges8 f ees } f8. d16 ees f ges aes |
+	\tuplet 3/2 { a8 ces gis } a2.~ | a4~ \tuplet 3/2 { a8 gis fis } gis8. fis16 f fis gis a |
+	b2.~ \tuplet 3/2 { b8 e, f } | bes4 \tuplet 3/2 { aes8 ees c } <b e g>4 r8 bes |
+	ees4 bes' ees aes,! | des! ges,! ces! e, |
+	\time 2/4
+	bes'2 |
+	\time 4/4
+	<a fis d a>1\fermata |
 }
 {% endif %}

@@ -1,0 +1,93 @@
+{#
+default_version = "Laurent"
+
+[attributes]
+title = "Love Is Here To Stay"
+style = "Jazz"
+composer = "George Gershwin"
+poet = "Ira Gershwin"
+typesetter = "Laurent Martelli"
+completion = "3"
+uuid = "b1b9334e-d4a0-11f1-8000-046874d194b7"
+structure = "ABAC"
+
+[versions.Laurent]
+doChords = true
+doVoice = true
+doLyrics = false
+doLyricsmore = false
+doLyricsmoremore = false
+doChordBars = false
+doGuitar = false
+doExtra = false
+doPrep = false
+doOwn = false
+#}
+{% if part == "Vars" %}
+{% endif %}
+{% if part == "Doc" %}	DONE:
+	- converted the Laurent Martelli version from staging/openbook/laurent/love_is_here_to_stay.ly.
+	TODO:
+	- check the tune and chords against a real book.
+	- the source has no tempo marking, the tempo is a guess.
+	- add the lyrics.
+	- add youtube performances.
+{% endif %}
+{% if part == "ChordsLaurent" %}\chordmode {
+	\startChords
+	\startSong
+
+	\partial 2. s2. |
+
+	\myMark "A"
+	\startPart
+	g1:7 | g2:m7 c:7 | f1*2:maj7 | \myEndLine
+	g1:7 | g2:m7 c:7 | ees:7.11+ d:7 | g:7 aes:dim7 | \myEndLine
+	\endPart
+
+	\myMark "B"
+	\startPart
+	a:m7 d:7 | g:m7 c:7 | f:maj7 bes:maj7 | e:7.5- a:7.9+ | \myEndLine
+	d1:m7 | g:7 | g:m7 | c:7 | \myEndLine
+	\endPart
+
+	\myMark "A"
+	\startPart
+	g1:7 | g2:m7 c:7 | f1:maj7 | d:7.9+ | \myEndLine
+	g:7 | g2:m7 c:7 | ees:7.11+ d:7 | g:7 aes:dim7 | \myEndLine
+	\endPart
+
+	\myMark "C"
+	\startPart
+	a:m7 d:7 | g:m7 c:7 | ees:7.11+ d:7 | g:m7 aes:dim7 | \myEndLine
+	a:m7 d:m7 | g:m7 c:7 | f1*2:maj7 | \myEndLine
+	\endPart
+
+	\endSong
+	\endChords
+}
+{% endif %}
+{% if part == "VoiceLaurent" %}{
+	\tempo "Moderato" 4 = 120
+	\time 4/4
+	\key f \major
+
+	\partial 2. c4 d a' |
+
+	% part "A"
+	f1 | f8 g4 f8 g4 g | f1 | r4 c4 d c' |
+	a1 | f8 g4 f8 g4 g | a1 | r4 e' e d |
+
+	% part "B"
+	c2 d4. c8 | bes bes bes4 c4. bes8 | a4 a c bes | g a a g |
+	f g e f | r8 g4 a8 fis4 g | d'1 | r4 c,4 d a' |
+
+	% part "A"
+	f1 | f8 g4 f8 g4 g | f1 | r4 c4 d c' |
+	a1 | f8 g4 f8 g4 g | a1 | r4 e' e4. d8 |
+
+	% part "C"
+	c8 c c4 d8 d4 c8 | bes bes bes4 c8 c4. | r8 a gis a c4 bes | g2 d' |
+	r4 c d a | c2 d, | f1 ~ | f4 r r2 |
+}
+{% endif %}

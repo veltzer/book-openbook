@@ -1,0 +1,119 @@
+{#
+default_version = "Laurent"
+
+[attributes]
+title = "Unit Seven"
+style = "Jazz"
+composer = "Sam Jones"
+typesetter = "Laurent Martelli"
+completion = "3"
+uuid = "156811a1-d49f-11f1-8000-046874d194b7"
+structure = "AABA"
+
+[versions.Laurent]
+doChords = true
+doVoice = true
+doLyrics = false
+doLyricsmore = false
+doLyricsmoremore = false
+doChordBars = false
+doGuitar = false
+doExtra = false
+doPrep = false
+doOwn = false
+#}
+{% if part == "Vars" %}
+{% endif %}
+{% if part == "Doc" %}	DONE:
+	- converted the Laurent Martelli version from staging/openbook/laurent/unit_seven.ly.
+	TODO:
+	- check the tune and chords against a real book.
+	- the source also has the solo changes (with slash notation), they are not put in.
+	- the source has the second ending an octave higher than the first, I lowered it to match the first ending.
+	- the last bar of the second ending (e f e d cis a) and the start of B are in the octave of the source (LilyPond 1.x pitched the notes after the volta endings from the end of the repeated body).
+	- the last bar of B (high B flat, A) is as in the source, check the octave.
+	- the source has no tempo, adjust the tempo.
+	- add youtube performances.
+{% endif %}
+{% if part == "ChordsLaurent" %}\chordmode {
+	\startChords
+	\startSong
+
+	\partial 4. s4. |
+
+	\myMark "A"
+	\startPart
+	\repeat volta 2 {
+		c1*2:7 | c1*2:7 | \myEndLine
+		f1*2:7 | c1:7 | a:7.5+ | \myEndLine
+	} \alternative {
+		{
+			aes1:maj7 | des:maj7 | c:maj7 | g:7 | \myEndLineVoltaNotLast
+		}
+		{
+			aes1:maj7 | des:maj7 | c:maj7 | a:7 | \myEndLineVoltaLast
+		}
+	}
+	\endPart
+
+	\myMark "B"
+	\startPart
+	a1:m7 | g:7 | c:maj7 | a:7.9- | \myEndLine
+	d1:m7 | g:7.9- | a2:7 a:7.5+ | d1:m7 | \myEndLine
+	\endPart
+
+	\myMark "A"
+	\startPart
+	c1*2:7 | c1*2:7 | \myEndLine
+	f1*2:7 | c1:7 | a:7.5+ | \myEndLine
+	aes1:maj7 | des2.:maj7 s8 c8:6 | s1 | s1 | \myEndLine
+	\endPart
+
+	\myMark "End"
+	\startPart
+	\repeat volta 2 {
+		aes1:maj7 | des:maj7 | c:maj7 | a:7 |
+	}
+	aes1:maj7 | des2.:maj7 s8 c8:6 | s1 | s2 c:7.9+ | \myEndLine
+	\endPart
+
+	\endSong
+	\endChords
+}
+{% endif %}
+{% if part == "VoiceLaurent" %}{
+	\tempo "Moderato" 4 = 160
+	\time 4/4
+	\key c \major
+
+	\partial 4. g'8 a bes ~ |
+
+	% part "A"
+	\repeat volta 2 {
+		bes1 ~ | bes2 r8 g8 a bes ~ | bes1 ~ | bes2 r8 c d ees ~ |
+		ees1 ~ | ees2 r8 bes a g ~ | g2 ~ g8 g g( a) | r2 r8 c, ees c |
+	} \alternative {
+		{
+			g' c, ees c' ~ c2 ~ | c2 bes8 g f g ~ | g1 ~ | g2 r8 g a bes\laissezVibrer |
+		}
+		{
+			g c, ees c' ~ c2 ~ | c2 bes8 g b c | r1 | r8 e, r f e d cis a |
+		}
+	}
+
+	% part "B"
+	e'8 cis d e f g a c! | b4-. r8 d8 ~ d4 a8 g ~ | g1 | r8 fis g bes ~ bes4 a8 f ~ |
+	f1 | r8 e f aes ~ aes4 g8 e ~ | e1 | bes''8( a) r4 r8 g, a bes ~ |
+
+	% part "A"
+	bes1 ~ | bes2 r8 g8 a bes ~ | bes1 ~ | bes2 r8 c d ees ~ |
+	ees1 ~ | ees2 r8 bes a g ~ | g2 ~ g8 g g( a) | r2 r8 c, ees c |
+	g' c, ees c' ~ c2 ~ | c2 bes8 g b c | r1^"Solo break" | r1 |
+
+	% part "End"
+	\repeat volta 2 {
+		g8 c, ees c' ~ c2 ~ | c2 bes8 g b c | r1 | r2 r8 c, f c |
+	}
+	g' c, ees c' ~ c2 ~ | c2 bes8 g b c | r1^"Break" | r2 <d, fis a c>2:32 |
+}
+{% endif %}

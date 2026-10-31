@@ -1,0 +1,83 @@
+{#
+default_version = "Anon"
+
+[attributes]
+title = "Jitterbug Waltz"
+style = "Jazz"
+composer = "Fats Waller"
+piece = "Up"
+typesetter = "Anonymous <anonymous@zivlempel.org>"
+completion = "3"
+uuid = "b157ce7a-d49f-11f1-8000-046874d194b7"
+structure = "A"
+
+[versions.Anon]
+doChords = true
+doVoice = true
+doLyrics = false
+doLyricsmore = false
+doLyricsmoremore = false
+doChordBars = false
+doGuitar = false
+doExtra = false
+doPrep = false
+doOwn = false
+#}
+{% if part == "Vars" %}
+{% endif %}
+{% if part == "Doc" %}	DONE:
+	- converted the Anonymous <anonymous@zivlempel.org> version from staging/openbook/anon/JitterbugWaltz.ly.
+	TODO:
+	- check the tune and chords against a real book.
+	- add youtube performances.
+	- the source was written in C and transposed to Db for the C version; it is entered here directly in Db (a few notes and chords respelled enharmonically: Gbm7 as F#m7, Cb7b5 as B7b5, Fb7 as E7, Ebb7 as D7).
+{% endif %}
+{% if part == "ChordsAnon" %}\chordmode {
+	\startChords
+	\startSong
+
+	\myMark "A"
+	\startPart
+	\repeat volta 2 {
+		des2.:maj | s | s | s | ges:7 | s | s | s | \myEndLine
+		des:maj | s | s | s | f:m7 | s | bes:7.9- | s | \myEndLine
+		bes:m7 | s | ees:7.9 | s | fis:m7 | s | b:7.5- | s | \myEndLine
+		bes:m7 | s |
+	} \alternative {
+		{
+			ees:7 | aes:7 | f:m7 | e:7 | ees:m7 | d:7 | \myEndLineVoltaNotLast
+		}
+		{
+			ees:7 | aes:7 | des:maj | e:7 | ees:7 | d:7 | \myEndLineVoltaLast
+		}
+	}
+	\endPart
+
+	\endSong
+	\endChords
+}
+{% endif %}
+{% if part == "VoiceAnon" %}{
+	\tempo "Up" 4 = 150
+	\time 3/4
+	\key des \major
+
+	% part "A"
+	\repeat volta 2 {
+		r8 des' f c ees bes | des aes c ges bes f | aes ees ges des f c | ees bes des aes c aes |
+		bes2.~ | bes2 \tuplet 3/2 { aes8 bes des } | aes'2~ aes8 bes | fes2. |
+		r8 des' f c ees bes | des aes c ges bes f | aes ees ges des f c | ees c des aes c aes |
+		bes2.~ | bes2 \tuplet 3/2 { bes8 d f } | bes2~ bes8 c | f,2. |
+		r8 bes, des bes des bes | des bes des bes des bes | f'4 f2~ | f2. |
+		r8 a,8 des a des a | des a des a des a | f'4 f2~ | f2. |
+		r8 bes, des bes des bes | des bes des bes des bes |
+	} \alternative {
+		{
+			c4 des d | ees c bes | aes2.~ | aes~ | aes~ | aes |
+		}
+		{
+			bes'2. | r4 aes f | des2.~ | des~ | des~ | des |
+		}
+	}
+}
+{% endif %}

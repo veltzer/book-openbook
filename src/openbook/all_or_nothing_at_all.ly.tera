@@ -34,10 +34,23 @@ doGuitar = false
 doExtra = false
 doPrep = false
 doOwn = false
+
+[versions.Anon]
+doChords = true
+doVoice = true
+doLyrics = false
+doLyricsmore = false
+doLyricsmoremore = false
+doChordBars = false
+doGuitar = false
+doExtra = false
+doPrep = false
+doOwn = false
 #}
 {% if part == "Vars" %}
 {% endif %}
 {% if part == "Doc" %}	DONE:
+	- converted the Anonymous <anonymous@zivlempel.org> version (C major, with coda) from staging/openbook/anon/AllOrNothingAtAll.ly as version Anon.
 	- added the epdf from the fake book.
 	- put in the tunes structure
 	- added the meta data from the fake book.
@@ -51,6 +64,7 @@ doOwn = false
 	- added lyrics url.
 	- added youtube performances.
 	TODO:
+	- Anon version: the source has "D.S. al Coda" but no segno (it probably means D.C. al Coda).
 	- how do I make the a:m chord in the second B part not appear on the page after the line break?
 	- add another version of this tune.
 {% endif %}
@@ -149,5 +163,65 @@ doOwn = false
 	I would be caught in the un -- der -- tow. __
 	So, you see, I've got to say: No! No!
 	All __ Or Noth -- ing At All! __
+}
+{% endif %}
+{% if part == "ChordsAnon" %}\chordmode {
+	\startChords
+	\startSong
+
+	\myMark "A"
+	\startPart
+	\repeat volta 2 {
+		a1:3-.5.7+ | s | s | s | s | s | bes:maj | bes:6 | \myEndLine
+		g:m7 | s | d:m7 | ees:dim7 | d:m7 | g:5+ | c:maj |
+	} \alternative {
+		{
+			b2:3-.5-.7 e:7.9+ | \myEndLineVoltaNotLast
+		}
+		{
+			bes2:m7 ees:3.5.7.9- | \myEndLineVoltaLast
+		}
+	}
+	\endPart
+
+	\myMark "B"
+	\startPart
+	aes1:maj | des/aes | aes:maj | des/aes | aes:maj | f:7 | bes:m7 | ees:7 | \myEndLine
+	bes:m7 | ees:7 | bes:m7 | c:5+ | f:m7 | des:7 | c:7.9- | e:5+ | \myEndLine
+	\endPart
+
+	\myMark "Coda"
+	\startPart
+	d1:m | e:7.9+ | a:m7 | bes:9 | c | b2:3-.5-.7 e:7.9+ | \myEndLine
+	\endPart
+
+	\endSong
+	\endChords
+}
+{% endif %}
+{% if part == "VoiceAnon" %}{
+	\tempo "Up" 4 = 180
+	\time 4/4
+	\key c \major
+
+	% part "A"
+	\repeat volta 2 {
+		e2~ e^\markup { "(add6)" }~ | e4^\markup { "(sim.)" } e \tuplet 3/2 { e4 f c } | e1~ | e1 | e2 e | e \tuplet 3/2 { e4 g c, } | d4. d8 d2~ | d1 |
+		d2 d | d \tuplet 3/2 { e4 cis d } | a'4.^\markup { To Coda \musicglyph #"scripts.coda" } a8 a2~ | a b4 a | g g2 g4 | g g2 g4 | g1~ |
+	} \alternative {
+		{
+			g4 r r2 |
+		}
+		{
+			g2.\repeatTie ees4 |
+		}
+	}
+
+	% part "B"
+	c'4 c c c | c4. c8 \tuplet 3/2 { c4 des aes } | c1~ | c2. ees,4 | c'4. c8 c4. c8 | des2 \tuplet 3/2 { c4 bes aes } | g1~ | g2. ees4 |
+	\tuplet 3/2 { bes'4 bes bes } bes4. bes8 | \tuplet 3/2 { bes4 bes bes } \tuplet 3/2 { bes4 c aes } | bes1~ | bes2 c4 bes | aes2 aes4 aes | aes aes2 aes4 | g1 | r4 d c b^\markup { D.S. al Coda } |
+
+	% part "Coda"
+	a'1 | b | c~ | c4 c \tuplet 3/2 { c4 c c } | c1~ | c |
 }
 {% endif %}

@@ -34,10 +34,23 @@ doGuitar = false
 doExtra = false
 doPrep = false
 doOwn = false
+
+[versions.Laurent]
+doChords = true
+doVoice = true
+doLyrics = true
+doLyricsmore = true
+doLyricsmoremore = false
+doChordBars = false
+doGuitar = false
+doExtra = false
+doPrep = false
+doOwn = false
 #}
 {% if part == "Vars" %}
 {% endif %}
 {% if part == "Doc" %}	DONE:
+	- added the Silvia Bertoluzza version (from the Laurent Martelli collection) from staging/openbook/laurent/satin_doll.ly.
 	- put in the location in the fake book.
 	- put in the meta data from the fake book.
 	- put in the tune structure.
@@ -50,6 +63,7 @@ doOwn = false
 	- check the fake book lyrics.
 	- heard the tune the tune to make sure its ok and the tempo is fine.
 	TODO:
+	- the Laurent version has G (major) in bar 1 of the bridge, changed to Gm7; check against a real book.
 	- get another version of the tune in here.
 {% endif %}
 {% if part == "ChordsFake" %}\chordmode {
@@ -135,5 +149,81 @@ doOwn = false
 	% part "A"
 	Ba -- by shall we __ go out skip -- pin' care -- ful a -- mi -- go, you're flip -- pin'.
 	Speaks lat -- in that Sat -- in Doll.
+}
+{% endif %}
+{% if part == "ChordsLaurent" %}\chordmode {
+	\startChords
+	\startSong
+
+	\myMark "A"
+	\startPart
+	\repeat volta 2 {
+		d2:m g:7 | d:m g:7 | e:m a:7 | e:m a:7 | \myEndLine
+		a:m d:7 | aes:m des:7 |
+	} \alternative {
+		{
+			c2:7 b:7 | bes:7 a:7 | \myEndLineVoltaNotLast
+		}
+		{
+			c1*2 | \myEndLineVoltaLast
+		}
+	}
+	\endPart
+
+	\myMark "B"
+	\startPart
+	g1:m7 | c:7 | f1*2 | \myEndLine
+	a1:m | d:7 | g1*2:7 | \myEndLine
+	\endPart
+
+	\myMark "A"
+	\startPart
+	d2:m g:7 | d:m g:7 | e:m a:7 | e:m a:7 | \myEndLine
+	a:m d:7 | aes:m des:7 | c1 | a:7 | \myEndLine
+	\endPart
+
+	\endSong
+	\endChords
+}
+{% endif %}
+{% if part == "VoiceLaurent" %}{
+	\tempo "Andante" 4 = 60
+	\time 4/4
+	\key c \major
+
+	% part "A"
+	\repeat volta 2 {
+		a'8. g16 a8 g~ g a4. | r8 a4. g8 a4. | b8. a16 b8 a~ a b4. | r8 b4. a8 b4. |
+		r8 d4. c8 d4. | r8 bes4. aes4 bes8 g~ |
+	} \alternative {
+		{
+			g1~ | g4 r r2 |
+		}
+		{
+			g1 | r2 r4 r8 g |
+		}
+	}
+
+	% part "B"
+	c4 bes8. a16 g8. a16 bes4 | c bes8. a16 g8. a16 bes8 c~ | c1~ | c2. r8 c |
+	d8. c16 b8 a~ a8. b16 c4 | d8. c16 b8 a~ a8. b16 c8 d~ | d1~ | d8 r r4 r2 |
+
+	% part "A"
+	a8. g16 a8 g~ g a4. | r8 a4. g8 a4. | b8. a16 b8 a~ a b4. | r8 b4. a8 b4. |
+	r8 d4. c8 d4. | r8 bes4. aes4 bes8 g~ | g1~ | g4 r r2 |
+}
+{% endif %}
+{% if part == "LyricsLaurent" %}\lyricmode {
+	Ci -- ga -- rette hol -- der, which wigs me o -- ver my shoul -- der
+	he digs me, out -- cat -- ting, that sa -- tin doll.
+	_  He's no -- bo -- dy's fool so I'm playn' it as cool as can be.
+	I'll give it a whirl but I ain't for no boy catch -- ing me.
+	Te -- le -- phone num -- bers, well you know, do -- in' my
+	rum -- bas, with u -- no, and that' -- n, my sa -- tin doll.
+}
+{% endif %}
+{% if part == "LyricsmoreLaurent" %}\lyricmode {
+	Ba -- by shall we go out skip -- ping, care -- ful a -- mi -- go, you're
+	flip -- ping, speaks la -- tin, my sa -- tin doll.
 }
 {% endif %}

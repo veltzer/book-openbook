@@ -49,10 +49,23 @@ doGuitar = false
 doExtra = false
 doPrep = false
 doOwn = false
+
+[versions.Laurent]
+doChords = true
+doVoice = true
+doLyrics = false
+doLyricsmore = false
+doLyricsmoremore = false
+doChordBars = false
+doGuitar = false
+doExtra = false
+doPrep = false
+doOwn = false
 #}
 {% if part == "Vars" %}
 {% endif %}
 {% if part == "Doc" %}	DONE:
+	- converted the Laurent Martelli version from staging/openbook/laurent/foggy_day.ly (no tempo marking there; the tempo is a guess).
 	- brought in the real book epdf.
 	- brought in the fake book epdf.
 	- put in you tube performances with documentation.
@@ -207,5 +220,65 @@ doOwn = false
 
 	% part "Volta"
 	A where. __
+}
+{% endif %}
+{% if part == "ChordsLaurent" %}\chordmode {
+	\startChords
+	\startSong
+
+	\partial 4 s4 |
+
+	\myMark "A"
+	\startPart
+	f1:maj7 | aes:7 | g:m7 | c2:7 c:7.9- | \myEndLine
+	f1:maj7 | aes:7 | g:7 | c:7 | \myEndLine
+	\endPart
+
+	\myMark "B"
+	\startPart
+	f1:maj7 | c2:m7 f:7 | bes1:maj7 | ees:7 | \myEndLine
+	f1:maj7 | d:7 | g:7 | c:7 | \myEndLine
+	\endPart
+
+	\myMark "A"
+	\startPart
+	f1:maj7 | aes:7 | g:m7 | c:7 | \myEndLine
+	f1:maj7 | aes:7 | g:7 | c:7 | \myEndLine
+	\endPart
+
+	\myMark "C"
+	\startPart
+	c1:m7 | f:7 | bes:maj7 | ees:7 | \myEndLine
+	f2:maj7/c g:m7/c | f:maj7/c g:m7/c | a:m7 d:m7 | \myEndLine
+	g2:m7 c:7 | f:maj7 d:7 | g:m7 c:7 | \myEndLine
+	\endPart
+
+	\endSong
+	\endChords
+}
+{% endif %}
+{% if part == "VoiceLaurent" %}{
+	\tempo "Moderato" 4 = 120
+	\time 4/4
+	\key f \major
+
+	\partial 4 c4 |
+
+	% part "A"
+	c c2 ees4~ | ees2. ees4 | d d2 a'4~ | a1 |
+	f2 f4 aes~ | aes2. aes4 | g2 g4 d'~ | d1 |
+
+	% part "B"
+	r4 e e e | c c2. | a2 a4 f~ | f2. f4 |
+	a a a c~ | c c2 c4 | a2 a4 d,~ | d2. c4 |
+
+	% part "A"
+	c2 c4 ees~ | ees ees2 ees4 | d2 d4 a'~ | a2 a4 a |
+	f2 f4 aes~ | aes bes aes2 | g g4 d'~ | d2. d4 |
+
+	% part "C"
+	f2 f4 d~ | d2. d4 | c2 c4 a~ | a2 a4 bes |
+	c f, g bes | a f g bes | a2 f' |
+	f, g | f1 | r |
 }
 {% endif %}

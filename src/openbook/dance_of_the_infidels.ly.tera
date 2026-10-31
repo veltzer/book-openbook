@@ -1,0 +1,94 @@
+{#
+default_version = "Laurent"
+
+[attributes]
+title = "Dance Of The Infidels"
+style = "Jazz"
+composer = "Bud Powell"
+typesetter = "Laurent Martelli"
+completion = "3"
+uuid = "53a3c748-d49f-11f1-8000-046874d194b7"
+structure = "Intro A"
+
+[versions.Laurent]
+doChords = true
+doVoice = true
+doLyrics = false
+doLyricsmore = false
+doLyricsmoremore = false
+doChordBars = false
+doGuitar = false
+doExtra = false
+doPrep = false
+doOwn = false
+#}
+{% if part == "Vars" %}
+{% endif %}
+{% if part == "Doc" %}	DONE:
+	- converted the Laurent Martelli version from staging/openbook/laurent/dance_of_the_infidels.ly.
+	TODO:
+	- check the tune and chords against a real book.
+	- add youtube performances.
+	- hear the tune to check that it is right and adjust the tempo.
+{% endif %}
+{% if part == "ChordsLaurent" %}\chordmode {
+	\startChords
+	\startSong
+
+	\myMark "Intro"
+	\startPart
+	s1*4 | \myEndLine
+	a1:m7 | aes:m7 | g:m7 | ges:m7 | \myEndLine
+	\endPart
+
+	\myMark "A"
+	\startPart
+	\repeat volta 3 {
+		f1 | f2:m7 bes:7 | a:m7 g:m7 | ges:m7 b:7 | \myEndLine
+		bes1:7 | bes2:m7 ees:7 | a1:m7 | aes2:m7 des:7 | \myEndLine
+		g:m7 c:7 | des:m7 ges:7 | g1 | c | g |
+	} \alternative {
+		{
+			d1:7 | \myEndLineVoltaNotLast
+		}
+		{
+			g1*2 | \myEndLineVoltaLast
+		}
+	}
+	\endPart
+
+	\endSong
+	\endChords
+}
+{% endif %}
+{% if part == "VoiceLaurent" %}{
+	\tempo "Allegro" 4 = 220
+	\time 4/4
+	\key f \major
+
+	% part "Intro"
+	<a c>8 <c e> <bes d> <d fis> <c e>4 <c e> |
+	<c e>8 <bes d>16 <aes c> <g bes>8 <d' fis> <c e>4 r |
+	<bes d>8 <d fis> <c e> <e gis> <d fis>4 <d fis> |
+	<d fis>8 <c e>16 <bes d> <aes c>8 <d fis> <c e>4 r |
+	R1*3 | r2 r4 r8 d16 des |
+
+	% part "A"
+	\repeat volta 3 {
+		c8 d e f g e f g | aes bes c g r4 r8 f |
+		\tuplet 3/2 { a8 bes b } c a b a g f | a8 ges e16 des ees8 r4 bes'16 a8 g16 |
+		aes8 c, f g aes! bes c aes! | \tuplet 3/2 { g16 aes g } f8 bes aes! r f g f |
+		\tuplet 3/2 { e16 f e } c8 f g c4 r | des8 ees des b bes aes r d~ |
+		d fis, g a bes c d ees~ | ees ees des b bes aes ges r |
+		r8 c, f g a bes c <g e>~ | <g e> <d f> <e g>2 <d f>4 |
+		r4 <e g>2 <d f>4 |
+	} \alternative {
+		{
+			r4 <e g>2 <d f>8 d16 des |
+		}
+		{
+			r4 <e g>2.~ | <e g>2. <d f>4 |
+		}
+	}
+}
+{% endif %}

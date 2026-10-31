@@ -35,10 +35,23 @@ doGuitar = false
 doExtra = false
 doPrep = false
 doOwn = false
+
+[versions.Laurent]
+doChords = true
+doVoice = true
+doLyrics = false
+doLyricsmore = false
+doLyricsmoremore = false
+doChordBars = false
+doGuitar = false
+doExtra = false
+doPrep = false
+doOwn = false
 #}
 {% if part == "Vars" %}
 {% endif %}
 {% if part == "Doc" %}	DONE:
+	- converted the Laurent Martelli version from staging/openbook/laurent/bluesette.ly (version Laurent).
 	- added the epdf from the fake book.
 	- added the meta data from the fake book.
 	- put in the tunes structure
@@ -162,5 +175,37 @@ doOwn = false
 	Long as there's love in your heart to share, dear Blues -- ette, don't des -- pair
 	Some blue boy is long -- ing, just like you to find a some -- one to be true to.
 	Two lov -- ing arms he can nest -- le in and stay. __
+}
+{% endif %}
+{% if part == "ChordsLaurent" %}\chordmode {
+	\startChords
+	\startSong
+
+	\myMark "A"
+	\startPart
+	bes2.*2:maj | a2.:m7.5- | d:7 | \myEndLine
+	g:m7 | c:7 | f:m7 | bes:7 | \myEndLine
+	ees2.*2:maj | ees2.:m7 | aes:7 | \myEndLine
+	des2.*2:maj | des2.:m7 | ges:7 | \myEndLine
+	b2.*2:maj | c2.:m7.5- | f:7 | \myEndLine
+	d:m7 | des:7 | c:m7 | f:7 | \myEndLine
+	\endPart
+
+	\endSong
+	\endChords
+}
+{% endif %}
+{% if part == "VoiceLaurent" %}{
+	\tempo "Moderato" 4 = 160
+	\time 3/4
+	\key bes \major
+
+	% part "A"
+	f4 g a | bes c d | ees2 g,4 | fis2. |
+	d'2 f,4 | e2. | c'2 ees,4 | d2. |
+	bes'2 d,4 | ees4. f8 ges aes | bes2 ges'4 | f2 ees4 |
+	aes,2 f'4 | ees2 des4 | aes2 fes'4 | ees2 des4 |
+	ges,4 aes bes | ces des ees | f2 ees4 | d2 c4 |
+	f,2. ~ | f ~ | f ~ | f |
 }
 {% endif %}

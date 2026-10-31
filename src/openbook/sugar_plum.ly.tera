@@ -1,0 +1,69 @@
+{#
+default_version = "Anon"
+
+[attributes]
+title = "Sugar Plum"
+style = "Jazz"
+composer = "Bill Evans"
+piece = "Moderate"
+typesetter = "Anonymous <anonymous@zivlempel.org>"
+completion = "3"
+uuid = "f6b9597a-d49f-11f1-8000-046874d194b7"
+structure = "AB"
+
+[versions.Anon]
+doChords = true
+doVoice = true
+doLyrics = false
+doLyricsmore = false
+doLyricsmoremore = false
+doChordBars = false
+doGuitar = false
+doExtra = false
+doPrep = false
+doOwn = false
+#}
+{% if part == "Vars" %}
+{% endif %}
+{% if part == "Doc" %}	DONE:
+	- converted the Anonymous <anonymous@zivlempel.org> version from staging/openbook/anon/SugarPlum.ly.
+	TODO:
+	- check the tune and chords against a real book.
+	- add youtube performances.
+	- performance notes from the source: continue to modulate in a descending circle of 5ths (the next 8 bars in F, and so on). Last time: slow down and end at "( fine )".
+{% endif %}
+{% if part == "ChordsAnon" %}\chordmode {
+	\startChords
+	\startSong
+
+	\myMark "A"
+	\startPart
+	g1:maj | g:maj | f:maj | f:maj | \myEndLine
+	g:maj | g:maj | d:m7 | g:7 | \myEndLine
+	\endPart
+
+	\myMark "B"
+	\startPart
+	c:maj | c:maj | bes:maj | bes:maj | \myEndLine
+	c:maj | c:maj | g:m7 | c:7 | \myEndLine
+	\endPart
+
+	\endSong
+	\endChords
+}
+{% endif %}
+{% if part == "VoiceAnon" %}{
+	\tempo "Moderato" 4 = 140
+	\time 4/4
+	\key g \major
+
+	% part "A"
+	d4 r8 fis a4 r8 fis | g8 b d g~ g2 | r4 r8 e d4. a8 | g2 r2 |
+	r2 fis16 g gis a fis8 d | b4 d8 fis a aes g fis | f4 d8 a~ a2 | r4 c8 a b d f a |
+
+	% part "B"
+	\key c \major
+	g4 r8 b d4 r8 b | c8 e g c~ c2 | r4 r8 a g4. d8 | c2 r2 |
+	r2 b16 c cis d b8 g | e4 g8 a d des c b | bes4_\markup { ( fine ) } g8 d~ d2 | r4 f8 d e g bes d |
+}
+{% endif %}

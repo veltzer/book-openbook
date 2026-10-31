@@ -1,0 +1,98 @@
+{#
+default_version = "Fake"
+
+[attributes]
+title = "Together"
+style = "Jazz"
+composer = "B.G. DeSylva, Ray Henderson, Lew Brown"
+poet = "B.G. DeSylva, Ray Henderson, Lew Brown"
+piece = "Moderately Slow"
+copyright = "1928 by DeSylva, Brown & Henderson, Inc."
+copyrightextra = "Copyright Renewed, Assigned to Chappell & Co., Inc. and Stephen Ballentine Music Publishing Company"
+typesetter = "Mark Veltzer <mark.veltzer@gmail.com>"
+completion = "5"
+uuid = "83bc23bc-d49f-11f1-8000-046874d194b7"
+structure = "ABAC"
+location = "jfb:397"
+
+[[youtube]]
+id = "WC7e9JJQtEc"
+remark = "Waring's Pennsylvanians (1928)"
+
+[[youtube]]
+id = "M4D49puhT-I"
+remark = "Connie Francis (1961)"
+
+[versions.Fake]
+doChords = true
+doVoice = true
+doLyrics = false
+doLyricsmore = false
+doLyricsmoremore = false
+doChordBars = false
+doGuitar = false
+doExtra = false
+doPrep = false
+doOwn = false
+#}
+{% if part == "Vars" %}
+{% endif %}
+{% if part == "Doc" %}	DONE:
+	- added the meta data from the fake book.
+	- put in the tunes structure.
+	- put in the chords (fake book).
+	- put in the tune (fake book).
+	- added youtube performances.
+	TODO:
+	- add the lyrics.
+	- check the chords (fake book).
+	- check the tune (fake book).
+	- hear the tune to check that it is right and adjust the tempo.
+	- bar 27: the book puts F13, E7#5 and Eb7#5 one per beat; check against a recording.
+{% endif %}
+{% if part == "ChordsFake" %}\chordmode {
+	\startChords
+	\startSong
+
+	\myMark "A"
+	\startPart
+	\repeat volta 2 {
+		f2.*2 | c2.*2:7 | c2.:7 | c2:7 c4:7.5+ | f2.*2 | \myEndLine
+		d2.*2:7 | g2.*2:m | g2.*2:7 | g2.:m7 | c:7.9- | \myEndLine
+		f2.*2 | c2.*2:7 | d2.*2:7 | g2.*2:m | \myEndLine
+		e2.*2:7 | f4:13 e:7.5+ ees:7.5+ | d2.:7.5+ | g2.:m | c2:sus7 c4:9 |
+	} \alternative {
+		{
+			f2. | g2:m7 c4:7 | \myEndLineVoltaNotLast
+		}
+		{
+			f2.*2 | \myEndLineVoltaLast
+		}
+	}
+	\endPart
+
+	\endSong
+	\endChords
+}
+{% endif %}
+{% if part == "VoiceFake" %}{
+	\tempo "Andante" 4 = 120
+	\time 3/4
+	\key f \major
+
+	% part "A"
+	\repeat volta 2 {
+		c4 f a | c2 a4 | g4 c2~ | c2. | c,4 e g | c2 gis4 | a4 c2~ | c2. |
+		d,4 fis a | d2 a4 | bes4 d2~ | d2 a8 aes | g2 a4 | d,2 a'8 aes | g2 a4 | des,2. |
+		c4 f a | c2 a4 | g4 c2~ | c2. | d,4 fis a | d2 a4 | bes4 d2~ | d2. |
+		e,4 gis b | e2 d8 e | d4 c b | bes2 a4 | d,4 g bes | d2 e,4 |
+	} \alternative {
+		{
+			g4 f2 | r2. |
+		}
+		{
+			g4 f2~ | f4 r r |
+		}
+	}
+}
+{% endif %}

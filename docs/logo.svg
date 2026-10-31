@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- OpenBook logo: a saxophone on a round badge.
+     This is the master file; scripts/make_logo.sh derives the favicon,
+     the website copy and the EPS used on the title page of the books. -->
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" width="64" height="64">
+	<defs>
+		<linearGradient id="brass" x1="0" y1="0" x2="1" y2="1">
+			<stop offset="0" stop-color="#f6cf5c"/>
+			<stop offset="1" stop-color="#c47f17"/>
+		</linearGradient>
+	</defs>
+	<circle cx="32" cy="32" r="31" fill="#1d2b4a"/>
+	<circle cx="32" cy="32" r="28.5" fill="none" stroke="#f6cf5c" stroke-width="1.2" opacity="0.6"/>
+	<!-- neck and mouthpiece -->
+	<path d="M 28 18 C 27 11, 21 9, 15 12.5" fill="none" stroke="url(#brass)" stroke-width="3.6" stroke-linecap="round"/>
+	<path d="M 15.5 12.2 L 11 14.6" fill="none" stroke="#11182b" stroke-width="3.2" stroke-linecap="round"/>
+	<!-- body and bow -->
+	<path d="M 28 17 C 27.5 28, 24.5 39, 28 47 C 31.5 55, 41.5 53.5, 43.5 45 L 44.8 38" fill="none" stroke="url(#brass)" stroke-width="7.5" stroke-linecap="round"/>
+	<!-- bell -->
+	<path d="M 41.1 35.9 C 44 31, 45.5 27, 46.5 22.6 L 57.5 29.4 C 53.5 31.5, 50.5 35.5, 47.9 40.1 Z" fill="url(#brass)" stroke="url(#brass)" stroke-width="1" stroke-linejoin="round"/>
+	<ellipse cx="52" cy="26" rx="5.6" ry="1.9" transform="rotate(32 52 26)" fill="#11182b"/>
+	<!-- keys -->
+	<circle cx="27.2" cy="25" r="1.6" fill="#1d2b4a"/>
+	<circle cx="26.4" cy="31" r="1.6" fill="#1d2b4a"/>
+	<circle cx="26" cy="37" r="1.6" fill="#1d2b4a"/>
+	<circle cx="28.6" cy="43.5" r="1.6" fill="#1d2b4a"/>
+</svg>

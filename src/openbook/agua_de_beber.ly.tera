@@ -1,0 +1,64 @@
+{#
+default_version = "Laurent"
+
+[attributes]
+title = "Agua De Beber"
+style = "Jazz"
+composer = "Antonio Carlos Jobim"
+piece = "Bossa Nova"
+typesetter = "Laurent Martelli"
+completion = "3"
+uuid = "9b637416-d49f-11f1-8000-046874d194b7"
+
+[versions.Laurent]
+doChords = true
+doVoice = true
+doLyrics = false
+doLyricsmore = false
+doLyricsmoremore = false
+doChordBars = false
+doGuitar = false
+doExtra = false
+doPrep = false
+doOwn = false
+#}
+{% if part == "Vars" %}
+{% endif %}
+{% if part == "Doc" %}	DONE:
+	- converted the Laurent Martelli version from staging/openbook/laurent/agua_de_beber.ly.
+	TODO:
+	- the source was marked "uncomplete": the melody stops after 22 bars and only the first 6 bars have chords, and those chords do not fit the melody well.
+	- complete the tune and the chords from a real book.
+	- bar 20 was only 7/8 long in the source (c4 c8 c2, after a tie from e flat); it is guessed here as e flat 8, c 4, c 8 tied to c 2.
+	- check the tune and chords against a real book.
+	- add the lyrics.
+	- add youtube performances.
+{% endif %}
+{% if part == "ChordsLaurent" %}\chordmode {
+	\startChords
+	\startSong
+
+	\myMark "A"
+	\startPart
+	s1 | d2:7 c:m/+e | f8*5:m7 aes4:maj f8:m7/aes | c1:m7 | \myEndLine
+	c8*7:m7 g2:m7 aes:maj aes8:maj/g | \myEndLine
+	\endPart
+
+	\endSong
+	\endChords
+}
+{% endif %}
+{% if part == "VoiceLaurent" %}{
+	\tempo "Bossa Nova" 4 = 132
+	\time 4/4
+	\key ees \major
+
+	% part "A"
+	r4 c8 ees ~ ees g4 fis8 ~ | fis2 g | ees2 ~ ees8 c4 ees8 ~ | ees c4. ~ c2 |
+	r4 c8 ees ~ ees g4 bes8 ~ | bes4. c8 ~ c4. g8 | g2 ~ g8 f4 g8 ~ | g2. r4 |
+	r4 c8 ees ~ ees g4 fis8 ~ | fis2 g | ees2 ~ ees8 c4 ees8 ~ | ees c4. ~ c2 |
+	r2 r4 r8 ees8 ~ | ees ees4 ees8 ~ ees ees ees4 | d4. a8 ~ a c4 ees8 ~ | ees d4 c8 ~ c2 |
+	c4 c8 ees8 ~ ees g4 f8 ~ | f1 | g4 f8 ees8 ~ ees c4 ees8 ~ | ees8 c4 c8 ~ c2 |
+	c4 c8 ees8 ~ ees g4 f8 ~ | f1 | f4 f8 r8 r2 |
+}
+{% endif %}

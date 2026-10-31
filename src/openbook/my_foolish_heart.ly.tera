@@ -33,10 +33,23 @@ doGuitar = false
 doExtra = false
 doPrep = false
 doOwn = false
+
+[versions.Laurent]
+doChords = true
+doVoice = true
+doLyrics = false
+doLyricsmore = false
+doLyricsmoremore = false
+doChordBars = false
+doGuitar = false
+doExtra = false
+doPrep = false
+doOwn = false
 #}
 {% if part == "Vars" %}
 {% endif %}
 {% if part == "Doc" %}	DONE:
+	- converted the Laurent Martelli version from staging/openbook/laurent/foolish_heart.ly (titled "Foolish Heart" there; no tempo marking there).
 	- added the fake book epdf.
 	- added the fake book chords.
 	- added the fake book tune.
@@ -173,5 +186,63 @@ doOwn = false
 	My Fool -- ish Heart. __ The
 
 	Heart. __
+}
+{% endif %}
+{% if part == "ChordsLaurent" %}\chordmode {
+	\startChords
+	\startSong
+
+	\partial 4 s4 |
+
+	\myMark "A"
+	\startPart
+	bes2:maj7 ees:maj7 | d:m7 g:7 | c:m7 c:m7/bes | e:m7/+a a:7.9 | \myEndLine
+	d2:m7 d:7.5+.9+ | g:m7 des:7 | c1:m7 | c2:m7.5- f:7.9- | \myEndLine
+	\endPart
+
+	\myMark "B"
+	\startPart
+	bes1:maj7 | f2:m7 bes:7 | ees1:maj7 | a2:m7.5- d:7.9 | \myEndLine
+	g2:m7 des:7.9- | g:m7 c:7 | c:m7 g:7.5+ | c:m7 f:7 | \myEndLine
+	\endPart
+
+	\myMark "A"
+	\startPart
+	bes2:maj7 ees:maj7 | d:m7 g:7 | c:m7 c:m7/bes | e:m7/+a a:7.9+.5+ | \myEndLine
+	d2:m7 d:7.9+.5+ | g:m7 des:7 | c:m7 c:m7/bes | a:m7.5- d:7.9+.5+ | \myEndLine
+	\endPart
+
+	\myMark "C"
+	\startPart
+	g1:m7 | ees2:m7 aes:7 | bes:maj7 ees:maj7 | aes:7.11+ g:7 | \myEndLine
+	c2:m7 g:7.9+.5+ | c4:7 c:7.5+ c:m7 f:7.9- | bes2:maj7 g:m7 | ges:maj7 f:7 | \myEndLine
+	\endPart
+
+	\endSong
+	\endChords
+}
+{% endif %}
+{% if part == "VoiceLaurent" %}{
+	\tempo "Moderato" 4 = 108
+	\time 4/4
+	\key bes \major
+
+	\partial 4 f4 |
+
+	% part "A"
+	f2~ f8 bes, d f | g a g2 g4 | g2~ g8 c, ees g | a2. a4 |
+	a2~ a8 d, f a | bes c bes2 bes4 | bes2~ bes8 ees, g bes | c2. bes8 c |
+
+	% part "B"
+	d4. d8 d4 c8 bes | d4 d2 c8 bes | c4. c16 c \tuplet 3/2 { c8 d c } a bes | c2. bes8 a |
+	bes4. bes8 bes a g a | bes4 bes2 a8 g | a4. a8 a f g f | a2. g4 |
+
+	% part "A"
+	f2~ f8 bes, d f | g a g2 g4 | g2~ g8 c, ees g | a2. a4 |
+	a2~ a8 d, f a | bes c bes2 bes4 | bes2~ bes8 ees, g bes | d2. c4 |
+
+	% part "C"
+	bes4. bes8 bes a g a | bes4 bes2 bes8 c | d4. d8 d d c bes | d,2. g4 |
+	bes2~ bes8 ees, g bes | c4 d bes c | bes1 | r |
 }
 {% endif %}
