@@ -1,0 +1,91 @@
+{#
+default_version = "Fake"
+
+[attributes]
+title = "Ko Ko"
+style = "Jazz"
+composer = "Charlie Parker"
+piece = "Up Tempo"
+copyright = "1946 ATLANTIC MUSIC CORP."
+copyrightextra = "Renewed and assigned 1974 ATLANTIC MUSIC CORP."
+typesetter = "Mark Veltzer <mark.veltzer@gmail.com>"
+completion = "5"
+uuid = "765a3f50-d4ff-11f1-8000-046874d194b7"
+structure = "AA'"
+location = "jfb:207"
+
+[[youtube]]
+id = "0ajJBNodEYs"
+remark = "Charlie Parker in the original recording (Savoy, 1945)"
+
+[[youtube]]
+id = "tGHKbhc_6KU"
+remark = "Charlie Parker and Dizzy Gillespie live at Carnegie Hall, 1947"
+
+[versions.Fake]
+doChords = true
+doVoice = true
+doLyrics = false
+doLyricsmore = false
+doLyricsmoremore = false
+doChordBars = false
+doGuitar = false
+doExtra = false
+doPrep = false
+doOwn = false
+#}
+{% if part == "Vars" %}
+{% endif %}
+{% if part == "Doc" %}	DONE:
+	- added the meta data from the fake book.
+	- put in the tunes structure.
+	- put in the chords (fake book).
+	- put in the tune (fake book).
+	- added youtube performances.
+	TODO:
+	- check the chords (fake book).
+	- check the tune (fake book).
+	- hear the tune to check that it is right and adjust the tempo.
+{% endif %}
+{% if part == "ChordsFake" %}\chordmode {
+	\startChords
+	\startSong
+
+	\myMark "A"
+	\startPart
+	bes1*2 | f1:m7 | bes:7 | \myEndLine
+	ees1*2 | aes1*2:7 | \myEndLine
+	bes1*2 | c1*2:7 | \myEndLine
+	c1:m7 | g:7 | c:m7 | f:7 | \myEndLine
+	\endPart
+
+	\myMark "A"
+	\startPart
+	bes1*2 | f1:m7 | bes:7 | \myEndLine
+	ees1*2 | aes1*2:7 | \myEndLine
+	bes1*2 | c1*2:7 | \myEndLine
+	c1:m7 | f:7 | bes1*2 | \myEndLine
+	\endPart
+
+	\endSong
+	\endChords
+}
+{% endif %}
+{% if part == "VoiceFake" %}{
+	\tempo "Presto" 4 = 300
+	\time 4/4
+	\key bes \major
+
+	% part "A"
+	a'8 bes c a bes f d bes | fis'8 g ees c fis ees d c | bes8 a aes bes bes' ges r4 | r1 |
+	r8 g \tuplet 3/2 { bes8 c f } c4 r8 g | \tuplet 3/2 { bes8 c f } c4 r2 | r8 ges \tuplet 3/2 { bes8 c f } c4 r8 ges | \tuplet 3/2 { bes8 c f } c4 r2 |
+	r2 g8 bes des f | ees8 d c b! bes a g f | e!8 c cis d r2 | r4 d16 e! f g a8 g fis g |
+	bes8 g r4 r \tuplet 3/2 { aes8 g ges } | f8 ees d c b! d f aes | g8 f \tuplet 3/2 { ees8 g bes } d des c b! | bes8 g ees c bes' ges ees b! |
+
+	% part "A"
+	\tuplet 3/2 { a'8 bes b! } c a bes f d bes | fis'8 g ees c f! ees d c | bes8 a aes bes bes' ges4. | r1 |
+	r8 f \tuplet 3/2 { g8 bes d } f ees d c | bes8 aes g f ees c ges' bes | des4 des8 c~ c4 r | r1 |
+	r8 cis, d f a bes c b! | bes8 f d bes \tuplet 3/2 { a'8 g fis } g4 | r2 \tuplet 3/2 { a8 bes a } g f | e!8 g bes d a4 r |
+	r8 c16 b! bes8 aes g ges f e! | ees8 bes a bes d c a bes | c8 bes a bes d f r4 | r1 |
+}
+{% endif %}

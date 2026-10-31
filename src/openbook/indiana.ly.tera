@@ -1,0 +1,103 @@
+{#
+default_version = "Fake"
+
+[attributes]
+title = "Indiana"
+subtitle = "(Back Home Again In Indiana)"
+style = "Jazz"
+composer = "James F. Hanley"
+poet = "Ballard MacDonald"
+piece = "Upbeat Swing"
+copyright = "1917 Shapiro, Bernstein & Co., Inc."
+copyrightextra = "Copyright Renewed, extended term of Copyright deriving from James Hanley assigned and effective January 4, 1980 to Herald Square Music, Inc."
+typesetter = "Mark Veltzer <mark.veltzer@gmail.com>"
+completion = "5"
+uuid = "1bea992a-d4ff-11f1-8000-046874d194b7"
+structure = "ABAC"
+location = "jfb:184"
+
+[[youtube]]
+id = "zojdphgCW5I"
+remark = "The Sterling Trio in the original recording (1917)"
+
+[[youtube]]
+id = "XbNZNVW8I8Y"
+remark = "Louis Armstrong and the All-Stars"
+
+[versions.Fake]
+doChords = true
+doVoice = true
+doLyrics = false
+doLyricsmore = false
+doLyricsmoremore = false
+doChordBars = false
+doGuitar = false
+doExtra = false
+doPrep = false
+doOwn = false
+#}
+{% if part == "Vars" %}
+{% endif %}
+{% if part == "Doc" %}	DONE:
+	- added the meta data from the fake book.
+	- put in the tunes structure.
+	- put in the chords (fake book).
+	- put in the tune (fake book).
+	- added youtube performances.
+	TODO:
+	- add the lyrics.
+	- check the chords (fake book).
+	- check the tune (fake book).
+	- hear the tune to check that it is right and adjust the tempo.
+	- bars 1-2 and 17-18: the fake book squeezes "F7 E7 Eb7 D7" over two bars, the split into half bars is a guess.
+{% endif %}
+{% if part == "ChordsFake" %}\chordmode {
+	\startChords
+	\startSong
+
+	\partial 2. s2. |
+
+	\myMark "A"
+	\startPart
+	f2:7 e:7 | ees:7 d:7 | g1*2:7 | c1*2:7 | f1 | f:7 | \myEndLine
+	\endPart
+
+	\myMark "B"
+	\startPart
+	bes1 | bes2 b:dim7 | f1/c | d:7 | g1*2:7 | g1:m7 | c4:7 r2. | \myEndLine
+	\endPart
+
+	\myMark "A"
+	\startPart
+	f2:7 e:7 | ees:7 d:7 | g1*2:7 | e1:m7 | a:7 | d:m | bes:m | \myEndLine
+	\endPart
+
+	\myMark "C"
+	\startPart
+	f1 | e2:m7 a:7 | d:m d:m/c | b1:dim7 | f | g2:m7 c:7 | f1*2 | \myEndLine
+	\endPart
+
+	\endSong
+	\endChords
+}
+{% endif %}
+{% if part == "VoiceFake" %}{
+	\tempo "Allegro" 4 = 200
+	\time 4/4
+	\key f \major
+
+	\partial 2. c4 f a |
+
+	% part "A"
+	c1~ | c4 d c a | g2 d~ | d e4 f | a2. e4 | a2 g | f1~ | f4 f e ees |
+
+	% part "B"
+	d f bes2~ | bes d, | c4 f a2~ | a a4 ais | b a e2~ | e d | g1~ | g4 c, f a |
+
+	% part "A"
+	c1~ | c4 d c a | g2 d~ | d e4 f | a2. e4 | a2 g | f1~ | f4 r f g |
+
+	% part "C"
+	a4 gis a f | g a g e | f2 d~ | d e4 d | c2 f4 a | c g bes a | f1~ | f2. r4 |
+}
+{% endif %}

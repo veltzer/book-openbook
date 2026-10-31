@@ -1,0 +1,124 @@
+{#
+default_version = "Fake"
+
+[attributes]
+title = "Gone With The Wind"
+style = "Jazz"
+composer = "Herb Magidson, Allie Wrubel"
+poet = "Herb Magidson, Allie Wrubel"
+piece = "Moderately"
+copyright = "1937 by Bourne Co."
+copyrightextra = "Copyright Renewed."
+typesetter = "Mark Veltzer <mark.veltzer@gmail.com>"
+completion = "5"
+uuid = "1bee200e-d4ff-11f1-8000-046874d194b7"
+structure = "ABAC"
+location = "jfb:135"
+
+[[youtube]]
+id = "CCHd9Sq6gSY"
+remark = "Horace Heidt and his Brigadiers in the original hit recording (1937)"
+
+[[youtube]]
+id = "9hNqzDp5MYE"
+remark = "Wes Montgomery from The Incredible Jazz Guitar of Wes Montgomery (1960)"
+
+[versions.Fake]
+doChords = true
+doVoice = true
+doLyrics = false
+doLyricsmore = false
+doLyricsmoremore = false
+doChordBars = false
+doGuitar = false
+doExtra = false
+doPrep = false
+doOwn = false
+#}
+{% if part == "Vars" %}
+{% endif %}
+{% if part == "Doc" %}	DONE:
+	- added the meta data from the fake book.
+	- put in the tunes structure.
+	- put in the chords (fake book).
+	- put in the tune (fake book).
+	- added youtube performances.
+	TODO:
+	- add the lyrics.
+	- check the chords (fake book).
+	- check the tune (fake book).
+	- hear the tune to check that it is right and adjust the tempo.
+{% endif %}
+{% if part == "ChordsFake" %}\chordmode {
+	\startChords
+	\startSong
+
+	\repeat volta 2 {
+
+		\myMark "A"
+		\startPart
+		f2:m7 bes:7 | ees:maj9 ees:6 | f:m7 bes:7 | ees:maj7 ees:6 | \myEndLine
+		a:m7 d:7 | g1 | a2:m7 d:7 | g:maj9 g:6 | \myEndLine
+		\endPart
+
+		\myMark "B"
+		\startPart
+		g1:m7 | c:dim | f2:m7 bes2*3:7 | \myEndLine
+		ees2 des:9 | c1:7.9- | f:m7 | f2.:m7/bes bes4:9 | \myEndLine
+		\endPart
+
+		\myMark "A"
+		\startPart
+		f2:m7 bes:7 | ees:maj7 ees:6 | f:m7 bes:7 | ees:maj9 ees:6 | \myEndLine
+		a:m7 d:7 | g1 | a2:m7 d:7 | g:maj9 g:6 | \myEndLine
+		\endPart
+
+		\myMark "C"
+		\startPart
+		f1:m7 | c:m7 | f2:m6 bes:7 | c1:7 | \myEndLine
+		f:m7 | des2:9 e:9.11+ |
+	} \alternative {
+		{
+			ees2:maj9 c:9 | b:9 bes:9 | \myEndLineVoltaNotLast
+		}
+		{
+			ees1*2:maj9 | \myEndLineVoltaLast
+		}
+	}
+	\endPart
+
+	\endSong
+	\endChords
+}
+{% endif %}
+{% if part == "VoiceFake" %}{
+	\tempo "Moderato" 4 = 120
+	\time 2/2
+	\key ees \major
+
+	% part "A"
+	\repeat volta 2 {
+		c'2 bes4. bes8 | g1 | c4 c8 c \tuplet 3/2 { bes4 bes bes } | bes4. bes8 g2 |
+		g fis4. a8 | e1~ | e4 g \tuplet 3/2 { fis g a } | d4. d8 d2 |
+
+		% part "B"
+		r2 \tuplet 3/2 { d4 d d } | d ees2 c4 | \tuplet 3/2 { ees4 c ees } d2~ | d1 |
+		r4 bes bes bes | bes c8 des c4 bes | r aes \tuplet 3/2 { ees'4 c aes } | f2. bes4 |
+
+		% part "A"
+		c2 bes4. bes8 | g1 | c4 c8 c \tuplet 3/2 { bes4 bes bes } | bes4. bes8 g2 |
+		g fis4. a8 | e1~ | e4 g \tuplet 3/2 { fis g a } | d4. d8 d2 |
+
+		% part "C"
+		f2 c4. c8 | ees1 | d4 c bes8 aes g f | c'2. g4 |
+		bes aes ees'8 c aes c | g2 \tuplet 3/2 { bes4 bes bes } |
+	} \alternative {
+		{
+			bes1 | r1 |
+		}
+		{
+			bes1~ | bes2. r4 |
+		}
+	}
+}
+{% endif %}

@@ -1,0 +1,111 @@
+{#
+default_version = "Fake"
+
+[attributes]
+title = "Room 608"
+style = "Jazz"
+composer = "Horace Silver"
+piece = "Medium Swing"
+copyright = "1956 Silhouette Music Corp."
+typesetter = "Mark Veltzer <mark.veltzer@gmail.com>"
+completion = "5"
+uuid = "43240814-d4ff-11f1-8000-046874d194b7"
+structure = "AABA"
+location = "jfb:317"
+
+[[youtube]]
+id = "a215Vz94niE"
+remark = "Horace Silver and the Jazz Messengers in the original recording (1954)"
+
+[[youtube]]
+id = "nlUgAf-z0hY"
+remark = "The Horace Silver Quintet live (1959)"
+
+[versions.Fake]
+doChords = true
+doVoice = true
+doLyrics = false
+doLyricsmore = false
+doLyricsmoremore = false
+doChordBars = false
+doGuitar = false
+doExtra = false
+doPrep = false
+doOwn = false
+#}
+{% if part == "Vars" %}
+{% endif %}
+{% if part == "Doc" %}	DONE:
+	- added the meta data from the fake book.
+	- put in the tunes structure.
+	- put in the chords (fake book).
+	- put in the tune (fake book).
+	- added youtube performances.
+	TODO:
+	- check the chords (fake book).
+	- check the tune (fake book).
+	- hear the tune to check that it is right and adjust the tempo.
+	- the second note of bar 16 (f or e, under Cm7) is hard to read in the fake book.
+{% endif %}
+{% if part == "ChordsFake" %}\chordmode {
+	\startChords
+	\startSong
+
+	\myMark "A"
+	\startPart
+	\repeat volta 2 {
+		bes2 g:7 | c:m7 f:7 | bes g:7 | c:m7 f:7 | \myEndLine
+		bes1 | c2:m7 cis:dim7 | bes/d g:7 |
+	} \alternative {
+		{
+			c2:m7 f:7 | \myEndLineVoltaNotLast
+		}
+		{
+			c4:m7 f:7 bes2 | \myEndLineVoltaLast
+		}
+	}
+	\endPart
+
+	\myMark "B"
+	\startPart
+	aes1:7 | b:7 | ees1*2 | \myEndLine
+	b1:7 | d:7 | c:7 | c2:m7 f:7.9- | \myEndLine
+	\endPart
+
+	\myMark "A"
+	\startPart
+	bes2 g:7 | c:m7 f:7 | bes g:7 | c:m7 f:7 | \myEndLine
+	bes1 | c2:m7 cis:dim7 | bes/d g:7 | c4:m7 f:7 bes2 | \myEndLine
+	\endPart
+
+	\endSong
+	\endChords
+}
+{% endif %}
+{% if part == "VoiceFake" %}{
+	\tempo "Allegro" 4 = 160
+	\time 4/4
+	\key bes \major
+
+	% part "A"
+	\repeat volta 2 {
+		a'8 bes g bes f d b! d | c b! c d ees f g f~ | f4 d8 ees d c b! d | c g bes a r4 r8 g'8~ |
+		g4 f8 ees d bes r4 | ees8 d c ees e des g e | f d r4 d8 ees des ees |
+	} \alternative {
+		{
+			c8 g bes a r2 |
+		}
+		{
+			bes8 f a bes r2 |
+		}
+	}
+
+	% part "B"
+	bes'4 bes aes8 ees c aes | r4 cis'4 b!8 fis dis b! | bes c ees g a bes aes bes | ees,8 bes d ees r2 |
+	cis'4 cis b!8 fis dis b! | r8 e'4. d8 a fis e | r8 d'4. c8 g e d | r4 g'8 f ges ees aes, ges |
+
+	% part "A"
+	f8 g bes c cis d ees e | f cis d bes~ bes4 g | bes4 r r8 ees b!4 | d4 bes8 g des' bes r g~ |
+	g4 f8 ees d bes r4 | ees8 d c ees e cis g' e | f d r4 d8 ees des ees | bes8 f a bes r2 |
+}
+{% endif %}

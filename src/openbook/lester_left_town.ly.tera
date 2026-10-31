@@ -1,0 +1,123 @@
+{#
+default_version = "Fake"
+
+[attributes]
+title = "Lester Left Town"
+style = "Jazz"
+composer = "Wayne Shorter"
+piece = "Medium-Up Swing"
+copyright = "1959 Mikayo Music"
+typesetter = "Mark Veltzer <mark.veltzer@gmail.com>"
+completion = "5"
+uuid = "bc05c2ea-d4ff-11f1-8000-046874d194b7"
+structure = "AAB"
+location = "jfb:211"
+
+[[youtube]]
+id = "eih7gn35cM4"
+remark = "Art Blakey and the Jazz Messengers in the original recording from The Big Beat (1960)"
+
+[[youtube]]
+id = "otiAbxxFTWM"
+remark = "Wayne Shorter"
+
+[versions.Fake]
+doChords = true
+doVoice = true
+doLyrics = false
+doLyricsmore = false
+doLyricsmoremore = false
+doChordBars = false
+doGuitar = false
+doExtra = false
+doPrep = false
+doOwn = false
+#}
+{% if part == "Vars" %}
+{% endif %}
+{% if part == "Doc" %}	DONE:
+	- added the meta data from the fake book.
+	- put in the tunes structure.
+	- put in the chords (fake book).
+	- put in the tune (fake book).
+	- added youtube performances.
+	TODO:
+	- check the chords (fake book).
+	- check the tune (fake book).
+	- hear the tune to check that it is right and adjust the tempo.
+	- bar 10 (Bm7 E7): the fake book prints no accidentals, so the key signature would give e flat and b flat; typed e and b natural as the chords imply.
+	- bar 28 (C#m7 F#7): the fake book prints b, g, d with no accidentals (b flat, g, d by the key signature); typed b, g sharp, d sharp as the C#m7 chord implies. Check against a recording.
+	- the coda note is tied from the last note before "To Coda" in the fake book; the tie is not shown here.
+{% endif %}
+{% if part == "ChordsFake" %}\chordmode {
+	\startChords
+	\startSong
+
+	\partial 8 s8 |
+
+	\myMark "A"
+	\startPart
+	\repeat volta 2 {
+		d1:m7.5- | g:7 | c:m7 | a:m7.5- | \myEndLine
+		d1:m7.5- | g:7 | c:m7 | a:m7.5- | \myEndLine
+		f1:m7 | b2:m7 e:7 | ees:m7 d:7.9+ | aes1:maj7 | \myEndLine
+		e1:7.9+ | a:7.5- |
+	} \alternative {
+		{
+			bes2:m7 ees:7 | aes1:maj7 | \myEndLineVoltaNotLast
+		}
+		{
+			f2:m7 bes:7 | \myEndLineVoltaLast
+		}
+	}
+	\endPart
+
+	\myMark "B"
+	\startPart
+	ees1:maj7 | f:m7 | bes:7 | ees:maj7 | \myEndLine
+	des1:maj7 | c2:m7 bes:m7 | a:m7 d:7 | g1:m7 | \myEndLine
+	e1:m7.5- | ees2:7 d:7 | cis:m7 fis:7 | b1:maj7 | \myEndLine
+	bes2:m7 ees:7 | aes1:maj7 | g2:m7.5- c:7 | f:m7 bes:7 | ees:m7 aes:7 | \myEndLine
+	\endPart
+
+	\myMark "Coda"
+	\startPart
+	ees1:maj7 | \myEndLine
+	\endPart
+
+	\endSong
+	\endChords
+}
+{% endif %}
+{% if part == "VoiceFake" %}{
+	\tempo "Allegro" 4 = 200
+	\time 4/4
+	\key ees \major
+
+	\partial 8 g'8 |
+
+	% part "A"
+	\repeat volta 2 {
+		d'4^\markup { \musicglyph #"scripts.segno" } des c b | bes4 a aes g | \tuplet 3/2 { fis8 g f } c8 ees r2 | r2 r4 r8 g8 |
+		d'4 des c b | bes4 a aes g | \tuplet 3/2 { fis8 g f } c8 ees r2 | r1 |
+		r8 c ees aes c ees r g~ | g4 e8 c b e c b | ges2 f4. ees8~ | ees2 r8 c ees aes |
+		g2~ g4. ees8~ | ees2 r8 c ees c' |
+	} \alternative {
+		{
+			bes2~ bes4. g8~ | g2. r8 g8 |
+		}
+		{
+			bes2~ bes4. f8~^\markup { To Coda \musicglyph #"scripts.coda" } |
+		}
+	}
+
+	% part "B"
+	f2. r8 c'8 | bes1~ | bes2~ bes4. g8~ | g1 |
+	r2 g4 bes | d2. g,4 | d'2 c | bes4. g8~ g2 |
+	r2 g4 bes | c1 | b4 gis8 dis' cis2 | ais4. fis8~ fis2 |
+	r4 r8 bes8 c4. bes8 | d4 ees e f~ | f4 g e ees | f4 d r4 r8 g,8 | des'4 ees c r8 g8^\markup { D.S. al Coda } |
+
+	% part "Coda"
+	f1^\markup { \musicglyph #"scripts.coda" } |
+}
+{% endif %}

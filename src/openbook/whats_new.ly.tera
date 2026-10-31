@@ -1,0 +1,117 @@
+{#
+default_version = "Fake"
+
+[attributes]
+title = "What's New"
+style = "Jazz"
+composer = "Bob Haggart"
+poet = "Johnny Burke"
+piece = "Slowly"
+copyright = "1939 (Renewed) WARNER BROS. INC."
+typesetter = "Mark Veltzer <mark.veltzer@gmail.com>"
+completion = "5"
+uuid = "53998fe8-d4ff-11f1-8000-046874d194b7"
+structure = "AABA"
+location = "jfb:421"
+
+[[youtube]]
+id = "h5oewd1L-bY"
+remark = "Bob Crosby and his orchestra in the original hit recording (1939)"
+
+[[youtube]]
+id = "Klfph2fY8rQ"
+remark = "John Coltrane from Ballads (1962)"
+
+[versions.Fake]
+doChords = true
+doVoice = true
+doLyrics = false
+doLyricsmore = false
+doLyricsmoremore = false
+doChordBars = false
+doGuitar = false
+doExtra = false
+doPrep = false
+doOwn = false
+#}
+{% if part == "Vars" %}
+{% endif %}
+{% if part == "Doc" %}	DONE:
+	- added the meta data from the fake book.
+	- put in the tunes structure.
+	- put in the chords (fake book).
+	- put in the tune (fake book).
+	- added youtube performances.
+	TODO:
+	- add the lyrics.
+	- check the chords (fake book).
+	- check the tune (fake book).
+	- hear the tune to check that it is right and adjust the tempo.
+	- the fake book draws the second ending bracket over two bars (into the first bar of the bridge); here it covers one bar.
+{% endif %}
+{% if part == "ChordsFake" %}\chordmode {
+	\startChords
+	\startSong
+
+	\partial 2 s2 |
+
+	\myMark "A"
+	\startPart
+	\repeat volta 2 {
+		c2:6 a:m7 | bes2:m7 ees:7 | aes2:maj7 f:m7 | d2:m7.5- g:7.9- | \myEndLine
+		c2:m6 a:m7.5- | d2:m7.5- g:7.9- | c2 a:m7 |
+	} \alternative {
+		{
+			d2:m7 g:7.5+.9- | \myEndLineVoltaNotLast
+		}
+		{
+			g2:m7 c:7.5+.9- | \myEndLineVoltaLast
+		}
+	}
+	\endPart
+
+	\myMark "B"
+	\startPart
+	f2:6 d:m7 | ees2:m7 aes:7 | des2:maj7 bes:m7 | g2:m7.5- c:7.9- | \myEndLine
+	f2:m6 d:m7.5- | g2:m7.5- c:7.9- | f1:m6 | d2:m7.5- g4:7 des:9 | \myEndLine
+	\endPart
+
+	\myMark "A"
+	\startPart
+	c2:6 a:m7 | bes2:m7 ees:7 | aes2:maj7 f:m7 | d2:m7.5- g:7.9- | \myEndLine
+	c2:m6 a:m7.5- | d2:m7.5- g:7.9- | c2 f:9 | c1:6.9 | \myEndLine
+	\endPart
+
+	\endSong
+	\endChords
+}
+{% endif %}
+{% if part == "VoiceFake" %}{
+	\tempo "Andante" 4 = 72
+	\time 4/4
+	\key c \major
+
+	\partial 2 b'4. c8~ |
+
+	% part "A"
+	\repeat volta 2 {
+		c1 | r4 \tuplet 3/2 { c8 bes aes } g f e ees~ | ees1~ | ees8 d ees d cis4 d |
+		g1 | r8 f g f ees4 d | d8 c c c~ c2 |
+	} \alternative {
+		{
+			r2 b'4. c8\laissezVibrer |
+		}
+		{
+			r2 e4. f8~ |
+		}
+	}
+
+	% part "B"
+	f1 | r4 \tuplet 3/2 { f8 ees des } c bes a aes~ | aes1~ | aes8 g aes g fis4 g |
+	c1 | r8 bes c bes aes4 g | g8 f c f~ f2 | aes8 g d g~ g4 b |
+
+	% part "A"
+	c1 | r4 \tuplet 3/2 { c8 bes aes } g f e ees~ | ees1~ | ees8 d ees d cis4 d |
+	g1 | r8 f g f ees4 d | d8 c c c~ c2~ | c2. r4 |
+}
+{% endif %}

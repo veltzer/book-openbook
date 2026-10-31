@@ -1,0 +1,107 @@
+{#
+default_version = "Fake"
+
+[attributes]
+title = "Moonglow"
+style = "Jazz"
+composer = "Will Hudson, Eddie DeLange, Irving Mills"
+poet = "Will Hudson, Eddie DeLange, Irving Mills"
+piece = "Smoothly"
+copyright = "1934 by Mills Music Inc."
+copyrightextra = "Copyright Renewed 1962 by Will Hudson and Irving Mills and Assigned to Mills Music Inc. Copyright Renewed 1962 by Margaret De Lange and Assigned to Scarsdale Music Corporation, New York, NY c/o Shapiro, Bernstein & Co., Inc., 10 East 53rd Street, New York, NY 10022"
+typesetter = "Mark Veltzer <mark.veltzer@gmail.com>"
+completion = "5"
+uuid = "77ac3c00-d4ff-11f1-8000-046874d194b7"
+structure = "AABA"
+location = "jfb:254"
+
+[[youtube]]
+id = "4dm3Ml9g_cs"
+remark = "Benny Goodman Quartet in the famous recording (1936)"
+
+[[youtube]]
+id = "FoUK8CT8i8w"
+remark = "Art Tatum (1955)"
+
+[versions.Fake]
+doChords = true
+doVoice = true
+doLyrics = false
+doLyricsmore = false
+doLyricsmoremore = false
+doChordBars = false
+doGuitar = false
+doExtra = false
+doPrep = false
+doOwn = false
+#}
+{% if part == "Vars" %}
+{% endif %}
+{% if part == "Doc" %}	DONE:
+	- added the meta data from the fake book.
+	- put in the tunes structure.
+	- put in the chords (fake book).
+	- put in the tune (fake book).
+	- added youtube performances.
+	TODO:
+	- add the lyrics.
+	- check the chords (fake book).
+	- check the tune (fake book).
+	- hear the tune to check that it is right and adjust the tempo.
+	- in bars 7, 8, 15, 16, 31 and 32 the book places the G chords loosely (sometimes over the tied eighth before beat 3), here they are on beat 3.
+	- in bar 18 the book writes c sharp, c, c natural, c: the second c is read as c sharp (accidental carries through the bar), which fits the F#9 chord.
+{% endif %}
+{% if part == "ChordsFake" %}\chordmode {
+	\startChords
+	\startSong
+
+	\myMark "A"
+	\startPart
+	c1:6 | f1:9.11+ | b1:m7 | a1:7.5- | a1:m7 | \myEndLine
+	d1:7.9- | g2/b bes:dim7 | a4:m7 bes:dim7 g2/b | \myEndLine
+	\endPart
+
+	\myMark "A"
+	\startPart
+	c1:6 | f1:9.11+ | b2:m7 e:m7 | a1:7.5- | a1:m7 | \myEndLine
+	d1:7.9- | g2/b bes:dim7 | a4:m7 bes:dim7 g2/b | \myEndLine
+	\endPart
+
+	\myMark "B"
+	\startPart
+	g1:9 | g2:9 fis4:9 f:9 | e1:9 | b2:m7 e:7 | \myEndLine
+	e1:m7 | a1:7 | a1:m7 | d2:7 g:7.5+ | \myEndLine
+	\endPart
+
+	\myMark "A"
+	\startPart
+	c1:6 | f1:9.11+ | b2:m7 e:m7 | a1:7.5- | \myEndLine
+	a1:m7 | d1:7.9- | g2/b bes:dim7 | a4:m7 aes:maj7 g2:6 | \myEndLine
+	\endPart
+
+	\endSong
+	\endChords
+}
+{% endif %}
+{% if part == "VoiceFake" %}{
+	\tempo "Andante" 4 = 80
+	\time 2/2
+	\key g \major
+
+	% part "A"
+	r4 r8 e8 g e g4 | b4 b2. | r4 r8 e,8 g e g4 | b1 | r4 r8 e,8 g e g4 |
+	b4 b2. | r8 g4. g4 g | g4 g8 g~ g2 |
+
+	% part "A"
+	r4 r8 e8 g e g4 | b4 b2. | r4 r8 e,8 g e g4 | b1 | r4 r8 e,8 g e g4 |
+	b4 b2. | r8 g4. g4 g | g4 g8 g~ g2 |
+
+	% part "B"
+	d'1~ | d4 d8 d cis cis c! c | b1~ | b1 |
+	b8 b b b~ b2~ | b2 cis,8 e g b | b2. bes4 | a1 |
+
+	% part "A"
+	r4 r8 e8 g e g4 | b4 b2. | r4 r8 e,8 g e g4 | b1 |
+	r4 r8 e,8 g e g4 | b4 b2. | r8 g4. g4 g | g4 g8 g~ g4 r |
+}
+{% endif %}

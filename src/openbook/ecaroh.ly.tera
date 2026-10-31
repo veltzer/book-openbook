@@ -1,0 +1,126 @@
+{#
+default_version = "Fake"
+
+[attributes]
+title = "Ecaroh"
+style = "Jazz"
+composer = "Horace Silver"
+piece = "Mambo"
+copyright = "1984 by Ecaroh Music, Inc."
+typesetter = "Mark Veltzer <mark.veltzer@gmail.com>"
+completion = "5"
+uuid = "19892f60-d500-11f1-8000-046874d194b7"
+structure = "AB"
+location = "jfb:108"
+
+[[youtube]]
+id = "Wn3VIgRJT2w"
+remark = "Horace Silver in the original recording"
+
+[[youtube]]
+id = "b4AugBKYZ3s"
+remark = "Art Blakey and the Jazz Messengers"
+
+[versions.Fake]
+doChords = true
+doVoice = true
+doLyrics = false
+doLyricsmore = false
+doLyricsmoremore = false
+doChordBars = false
+doGuitar = false
+doExtra = false
+doPrep = false
+doOwn = false
+#}
+{% if part == "Vars" %}
+{% endif %}
+{% if part == "Doc" %}	DONE:
+	- added the meta data from the fake book.
+	- put in the tunes structure.
+	- put in the chords (fake book).
+	- put in the tune (fake book).
+	- added youtube performances.
+	TODO:
+	- check the chords (fake book).
+	- check the tune (fake book).
+	- hear the tune to check that it is right and adjust the tempo.
+	- the copyright year is printed as 1984 in the book (maybe a misprint for 1964), kept as printed.
+	- in bars 4 and 8 the book prints the E flat 7#9 / E7#9 over the rest on beat 4 (in the other bars of the pattern the second chord is on beat 3), kept as printed.
+	- in bar 53 the book has a B flat over Gbm7 (the same melody as over the GbM7 of bar 37), kept as printed.
+	- the B part is marked "Moderate Swing" in the book, the tempo of that part should be checked.
+{% endif %}
+{% if part == "ChordsFake" %}\chordmode {
+	\startChords
+	\startSong
+
+	\myMark "A"
+	\startPart
+	\repeat volta 2 {
+		bes2:7.5+.9+ ees:7.9+ | bes:7.5+.9+ ees:7.9+ | bes:7.5+.9+ ees:7.9+ | bes2.:7.5+.9+ ees4:7.9+ | \myEndLine
+		b2:7.5+.9+ e:7.9+ | b:7.5+.9+ e:7.5+.9+ | b:7.5+.9+ e:7.9+ | b2.:7.5+.9+ e4:7.9+ | \myEndLine
+		a1*2:maj7 | d1*2:7.5- | \myEndLine
+		des1:maj7 | d2:m7 g4.:7.9+ c8:maj7 | c1:maj7 | c2:m7 f:7.9+ | \myEndLine
+		fis2:7.9+ fis8:7.9+ g4.:7.9+ | e2:7.9+ e8:7.9+ f4.:7.9+ | ges4:7.9+ ees:7.9+ c:7.9+ des:7.9+ | bes1:7.9+ | \myEndLine
+		bes2:7.9+ bes8:7.9+ b4.:7.9+ | aes1:7.9+ | aes4:7.9+ g:7.9+ e:7.9+ f:7.9+ | \myEndLine
+	} \alternative {
+		{
+			d1:7.9+ | \myEndLineVoltaNotLast
+		}
+		{
+			d2.:7.9+ d4:7 | \myEndLineVoltaLast
+		}
+	}
+	\endPart
+
+	\myMark "B"
+	\startPart
+	des1:maj7 | ges:7.5- | des:maj7 | g:7.5- | \myEndLine
+	ges:maj7 | g2:m7 c:9 | fis:m7 b:9 | e:maj7 ees4:m7 aes:7 | \myEndLine
+	des1:maj7 | ges:7.5- | des:maj7 | g:7.5- | \myEndLine
+	ges:maj7 | f2:m7.5- bes:7.9+ | ees:m7.5- aes:7.5+ | des1:maj9 | \myEndLine
+	aes:m7 | des:7 | ges2:maj7 aes:m7 | bes:m7 ees:m7 | \myEndLine
+	b1:m7 | e:7 | a | aes2.:7.9- d4:7 | \myEndLine
+	des1:maj7 | ges:7.5- | des:maj7 | g:7.5- | ges:m7 | \myEndLine
+	f2:m7.5- bes:7.9+ | ees:m7.5- aes:7.5+ | des1*4:m9 | \myEndLine
+	\endPart
+
+	\endSong
+	\endChords
+}
+{% endif %}
+{% if part == "VoiceFake" %}{
+	\tempo "Allegro" 4 = 200
+	\time 4/4
+	\key c \major
+
+	% part "A"
+	\repeat volta 2 {
+		fis1~ | fis4. e8 fis a fis e | fis8 a fis e fis2~ | fis2. r4 |
+		g1~ | g4. f8 g bes g f | g8 bes g f g2~ | g2. r4 |
+		gis8 b gis fis gis2 | r8 b gis fis gis b gis fis | aes8 b aes fis aes2 | r8 b aes fis aes b aes fis |
+		aes1 | a!2 bes4. b8~ | b1 | g2 gis4. a8~ |
+		a2 r8 bes4. | g2 r8 gis4. | a4 fis ees e! | des1 |
+		des'2 r8 d!4. | b2 r8 c4. | b4 bes g gis |
+	} \alternative {
+		{
+			f1 |
+		}
+		{
+			f2. c8 ees |
+		}
+	}
+
+	% part "B"
+	\key des \major
+	r4^\markup { \bold "Moderate Swing" } c'8 bes aes f ees des | ees8 ees des ees~ ees2 | r4 c'8 bes aes f ees des | e!8 e d! e~ e2 |
+	r4 des'8 bes aes ges f ees | c'4 bes fis g! | b!4 a! f fis | gis2 gis8 fis f! dis |
+	f4 c'8 bes aes f ees des | ees8 ees des ees~ ees2 | r4 c'8 bes aes f ees des | e!8 e d! e~ e2 |
+	r4 des'8 bes aes ges f ees | aes4 bes f' d! | aes4 ges e! c8 ees~ | ees2 ees8 f \tuplet 3/2 { ges aes a! } |
+	bes8 bes4 bes8~ bes aes \tuplet 3/2 { ges f ees } | d!8 bes'~ bes2 aes4 | c,4 des d! ees | e!4 f aes ges |
+	des'8 des4 des8~ des b! \tuplet 3/2 { a! aes ges } | f8 des'~ des2 b!4 | ees,4 e! b'! a! |
+	b!8 des a! b aes r ges f~ | f4 c'8 bes aes f ees des | ees8 ees des ees~ ees2 | r4 c'8 bes aes f ees des | e!8 e d! e~ e2 |
+	r4 des'8 bes aes ges f ees | aes4 bes f' d! | aes4 ges e! c8 ees~ | ees4. e16 fis aes8 bes b des |
+	f2~ f8 des16 b bes aes ges e | ees1~ | ees2. r4 |
+}
+{% endif %}

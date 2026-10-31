@@ -1,0 +1,95 @@
+{#
+default_version = "Fake"
+
+[attributes]
+title = "Little Willy Leaps"
+style = "Jazz"
+composer = "Miles Davis"
+copyright = "1948, 1979 SCREEN GEMS-EMI MUSIC INC., Hollywood, CA"
+typesetter = "Mark Veltzer <mark.veltzer@gmail.com>"
+completion = "5"
+uuid = "bc03c594-d4ff-11f1-8000-046874d194b7"
+structure = "AA'"
+location = "jfb:224"
+
+[[youtube]]
+id = "q02HyN-wfeg"
+remark = "Miles Davis with Charlie Parker in the original recording (New York, August 14, 1947)"
+
+[[youtube]]
+id = "3VNFq081UJY"
+remark = "Emmet Cohen with Patrick Bartley and Bruce Harris"
+
+[versions.Fake]
+doChords = true
+doVoice = true
+doLyrics = false
+doLyricsmore = false
+doLyricsmoremore = false
+doChordBars = false
+doGuitar = false
+doExtra = false
+doPrep = false
+doOwn = false
+#}
+{% if part == "Vars" %}
+{% endif %}
+{% if part == "Doc" %}	DONE:
+	- added the meta data from the fake book.
+	- put in the tunes structure.
+	- put in the chords (fake book).
+	- put in the tune (fake book).
+	- added youtube performances.
+	TODO:
+	- check the chords (fake book).
+	- check the tune (fake book).
+	- hear the tune to check that it is right and adjust the tempo.
+	- the fake book spells the title "Little Willy Leaps"; it is usually spelled "Little Willie Leaps".
+	- the fake book prints no tempo word for this tune.
+{% endif %}
+{% if part == "ChordsFake" %}\chordmode {
+	\startChords
+	\startSong
+
+	\myMark "A"
+	\startPart
+	\repeat volta 2 {
+		f1 | g2:m7 c:7 | f d:7 | g:m7 c:7 | f1 | \myEndLine
+		g2:m7 c:7 | f1 | d:7 | b2:m7 e:7 | a:m7 d:7 | \myEndLine
+		g2:m7 c:7 |
+	} \alternative {
+		{
+			f1 | e2:m7 a:7 | d1:m | bes2:m7 ees:7 | \myEndLine
+			g2:m7 c:7 | \myEndLineVoltaNotLast
+		}
+		{
+			f1 | g2:m7 c:7 | g:m7 c:7 | f1 | s1 | \myEndLineVoltaLast
+		}
+	}
+	\endPart
+
+	\endSong
+	\endChords
+}
+{% endif %}
+{% if part == "VoiceFake" %}{
+	\tempo "Allegro" 4 = 220
+	\time 4/4
+	\key f \major
+
+	% part "A"
+	\repeat volta 2 {
+		r8 c f g a bes a f | g4 r8 g a bes a g | c8 bes a g fis ees' d c | bes8 g f dis e des' c bes | a8 r r4 r4 r8 a8 |
+		bes8 cis, d f a g e c | c'4 a8 c aes e4. | fis8 a c ees d b \tuplet 3/2 { c8 b c } | d8 c b a gis b, d f | e8 c' b a gis fis e d |
+		g8 a bes fis \tuplet 3/2 { bes8 a g } ges8 e |
+	} \alternative {
+		{
+			f8 r r4 r8 c' a g | e8 d \tuplet 3/2 { cis8 e g } \tuplet 3/2 { bes8 c bes } a8 e | f4 d8 e f g e d | des8 r r4 r2 |
+			\tuplet 3/2 { d'8 ees d } des8 c bes a g4 |
+		}
+		{
+			f8 r r4 r4 c'8 bes | r2 r8 cis,8 d f | a8 a aes aes g g ges ges | f8 r r4 r2 | r1 |
+		}
+	}
+}
+{% endif %}

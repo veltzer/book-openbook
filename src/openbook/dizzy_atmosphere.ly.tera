@@ -1,0 +1,106 @@
+{#
+default_version = "Fake"
+
+[attributes]
+title = "Dizzy Atmosphere"
+style = "Jazz"
+composer = "Dizzy Gillespie"
+piece = "Fast"
+copyright = "1944, 1945 by MCA Music Publishing, a division of MCA, Inc."
+copyrightextra = "Copyright Renewed."
+typesetter = "Mark Veltzer <mark.veltzer@gmail.com>"
+completion = "5"
+uuid = "2ddf6a10-d500-11f1-8000-046874d194b7"
+structure = "AABA"
+location = "jfb:98"
+
+[[youtube]]
+id = "N5e-TaVH9_Y"
+remark = "Dizzy Gillespie Sextet in the original recording (1945)"
+
+[[youtube]]
+id = "y0h5K8KwiOM"
+remark = "Dizzy Gillespie and Charlie Parker live at Carnegie Hall (1947)"
+
+[versions.Fake]
+doChords = true
+doVoice = true
+doLyrics = false
+doLyricsmore = false
+doLyricsmoremore = false
+doChordBars = false
+doGuitar = false
+doExtra = false
+doPrep = false
+doOwn = false
+#}
+{% if part == "Vars" %}
+{% endif %}
+{% if part == "Doc" %}	DONE:
+	- added the meta data from the fake book.
+	- put in the tunes structure.
+	- put in the chords (fake book).
+	- put in the tune (fake book).
+	- added youtube performances.
+	TODO:
+	- check the chords (fake book).
+	- check the tune (fake book).
+	- hear the tune to check that it is right and adjust the tempo.
+	- bar 32: the fake book marks "(Repeat for Solos)" with a closing repeat sign, the repeat is not typeset.
+	- bar 24 (A13): the low first note is hard to read in the scan (A or G below the staff), typed as A natural.
+	- bar 17 (D9): the second note (F natural against D9) is small in the scan, check it.
+{% endif %}
+{% if part == "ChordsFake" %}\chordmode {
+	\startChords
+	\startSong
+
+	\myMark "A"
+	\startPart
+	aes2:6 f:m7 | bes:m7 ees:7.9- | aes:6 f:m7 | bes:m7 ees:7.9- | \myEndLine
+	aes2:6 f:m7 | bes:m7 ees:7.9- | aes:6 des:6 | aes:6 bes:m6 | \myEndLine
+	\endPart
+
+	\myMark "A"
+	\startPart
+	aes2:6 f:m7 | bes:m7 ees:7.9- | aes:6 f:m7 | bes:m7 ees:7.9- | \myEndLine
+	aes2:6 f:m7 | bes:m7 ees:7.9- | aes:6 des:6 | aes:6 ees:9 | \myEndLine
+	\endPart
+
+	\myMark "B"
+	\startPart
+	d1:9 | d:13 | des:9 | des:13 | \myEndLine
+	c1:13 | b:13 | bes:13 | a:13 | \myEndLine
+	\endPart
+
+	\myMark "A"
+	\startPart
+	aes2:6 f:m7 | bes:m7 ees:7.9- | aes:6 f:m7 | bes:m7 ees:7.9- | \myEndLine
+	aes2:6 f:m7 | bes:m7 ees:7.9- | aes:6 des:6 | aes:6 bes:m6 | \myEndLine
+	\endPart
+
+	\endSong
+	\endChords
+}
+{% endif %}
+{% if part == "VoiceFake" %}{
+	\tempo "Fast" 4 = 280
+	\time 4/4
+	\key aes \major
+
+	% part "A"
+	\tuplet 3/2 { aes'8 bes aes } \tuplet 3/2 { f r ees } \tuplet 3/2 { aes bes aes } f8 r | \tuplet 3/2 { aes8 bes aes } f8 c' r2 | \tuplet 3/2 { aes8 bes aes } \tuplet 3/2 { f r ees } \tuplet 3/2 { aes bes aes } \tuplet 3/2 { f r ees } | \tuplet 3/2 { aes8 bes aes } f8 ees r2 |
+	\tuplet 3/2 { aes8 bes aes } \tuplet 3/2 { f r ees } \tuplet 3/2 { aes bes aes } \tuplet 3/2 { f r ees } | \tuplet 3/2 { aes8 bes aes } f8 c' r2 | \tuplet 3/2 { aes8 bes aes } f2 \tuplet 3/2 { aes8 bes aes } | f2 \tuplet 3/2 { aes8 bes aes } f8 r |
+
+	% part "A"
+	\tuplet 3/2 { aes8 bes aes } \tuplet 3/2 { f r ees } \tuplet 3/2 { aes bes aes } \tuplet 3/2 { f r ees } | \tuplet 3/2 { aes8 bes aes } f8 c' r2 | \tuplet 3/2 { aes8 bes aes } \tuplet 3/2 { f r ees } \tuplet 3/2 { aes bes aes } \tuplet 3/2 { f r ees } | \tuplet 3/2 { aes8 bes aes } f8 ees r2 |
+	\tuplet 3/2 { aes8 bes aes } \tuplet 3/2 { f r ees } \tuplet 3/2 { aes bes aes } \tuplet 3/2 { f r ees } | \tuplet 3/2 { aes8 bes aes } f8 c' r2 | \tuplet 3/2 { aes8 bes aes } f2 \tuplet 3/2 { aes8 bes aes } | f2 \tuplet 3/2 { aes8 bes aes } f8 r |
+
+	% part "B"
+	r4 d!8. f16 fis8. ais16 b!8. a!16 | d!8 b! d e! r2 | r4 des,8. e!16 f8. aes16 bes8. aes16 | des8 bes des ees r2 |
+	r4 c,4 c'8 a!8~ a r | ces,4 ces'8. ces16 aes4 r | r4 bes,4 bes'8 g~ g r | a,4 a'8 fis~ fis2 |
+
+	% part "A"
+	\tuplet 3/2 { aes8 bes aes } \tuplet 3/2 { f r ees } \tuplet 3/2 { aes bes aes } f8 r | \tuplet 3/2 { aes8 bes aes } f8 c' r2 | \tuplet 3/2 { aes8 bes aes } \tuplet 3/2 { f r ees } \tuplet 3/2 { aes bes aes } \tuplet 3/2 { f r ees } | \tuplet 3/2 { aes8 bes aes } f8 ees r2 |
+	\tuplet 3/2 { aes8 bes aes } \tuplet 3/2 { f r ees } \tuplet 3/2 { aes bes aes } \tuplet 3/2 { f r ees } | \tuplet 3/2 { aes8 bes aes } f8 c' r2 | \tuplet 3/2 { aes8 bes aes } f2 \tuplet 3/2 { aes8 bes aes } | f2 \tuplet 3/2 { aes8 bes aes } f8 r |
+}
+{% endif %}

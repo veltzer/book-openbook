@@ -1,0 +1,109 @@
+{#
+default_version = "Fake"
+
+[attributes]
+title = "The Best Is Yet To Come"
+style = "Jazz"
+composer = "Cy Coleman"
+poet = "Carolyn Leigh"
+piece = "Moderately"
+copyright = "1959, 1961, 1987 Edwin H. Morris & Company, A Division of MPL Communications, Inc."
+copyrightextra = "International Copyright Secured. All Rights Reserved."
+typesetter = "Mark Veltzer <mark.veltzer@gmail.com>"
+completion = "5"
+uuid = "01b52bed-d4ff-11f1-8000-046874d194b7"
+structure = "ABCA"
+location = "jfb:56"
+
+[[youtube]]
+id = "SXwoOUTrCb0"
+remark = "Tony Bennett"
+
+[[youtube]]
+id = "lpK_k6SXbQY"
+remark = "Frank Sinatra with Count Basie and his Orchestra (It Might As Well Be Swing, 1964)"
+
+[versions.Fake]
+doChords = true
+doVoice = true
+doLyrics = false
+doLyricsmore = false
+doLyricsmoremore = false
+doChordBars = false
+doGuitar = false
+doExtra = false
+doPrep = false
+doOwn = false
+#}
+{% if part == "Vars" %}
+{% endif %}
+{% if part == "Doc" %}	DONE:
+	- added the meta data from the fake book.
+	- put in the tunes structure.
+	- put in the chords (fake book).
+	- put in the tune (fake book).
+	- added youtube performances.
+	TODO:
+	- add the lyrics.
+	- check the chords (fake book).
+	- check the tune (fake book).
+	- hear the tune to check that it is right and adjust the tempo.
+	- bar 27: the book prints a plain d (des by the key signature) under the C chord; typed d natural as the harmony and bar 23 imply.
+	- bar 28: the placement of Bbm7 Eb7 inside the bar is not clear in the book; typed two beats each.
+{% endif %}
+{% if part == "ChordsFake" %}\chordmode {
+	\startChords
+	\startSong
+
+	\myMark "A"
+	\startPart
+	aes1*4 | \myEndLine
+	aes1*2 | f1*2:7 | \myEndLine
+	bes1:m7 | ees:7 | aes | d2:m7.5- g:7 | \myEndLine
+	\endPart
+
+	\myMark "B"
+	\startPart
+	c1*4 | \myEndLine
+	c1*2 | a1*2:7 | \myEndLine
+	\endPart
+
+	\myMark "C"
+	\startPart
+	d2:m7 g:7 | d:m7 g:7 | c d:m7 | dis2.:dim7 c4/e | \myEndLine
+	d2:m7 g:7 | d:m7 g:7 | c1 | bes2:m7 ees:7 | \myEndLine
+	\endPart
+
+	\myMark "A"
+	\startPart
+	aes1*2 | f1*2:7 | \myEndLine
+	bes1:7 | ees:7 | aes1*2 | \myEndLine
+	\endPart
+
+	\endSong
+	\endChords
+}
+{% endif %}
+{% if part == "VoiceFake" %}{
+	\tempo "Moderato" 4 = 120
+	\time 4/4
+	\key aes \major
+
+	% part "A"
+	c8 g'4 c,8 ges'4 c,8 f~ | f8 c e!4 c8 ees4 c8 | ees8 c4.~ c2~ | c2. r4 |
+	c8 g'4 c,8 ges'4 c,8 f~ | f8 c e!4 c8 ees4 c8 | ees8 c4.~ c2~ | c2. r4 |
+	bes8 ees4 bes8 ees4 bes8 ees~ | ees8 bes ees4 bes8 ees4 des8 | c8 aes4.~ aes2~ | aes4 r r2 |
+
+	% part "B"
+	e'!8 b'!4 e,8 bes'4 e,8 a!~ | a8 e! aes4 e8 g4 e8 | g8 e!4.~ e2~ | e2. r4 |
+	e!8 b'!4 e,8 bes'4 e,8 a!~ | a8 e! aes4 e8 g4 e8 | g8 e!4.~ e2~ | e2. r4 |
+
+	% part "C"
+	d!8 g4 d8 g4 d | g4 g8 d!~ d2 | a'!8 c4 a8 c4 a8 c~ | c2. r4 |
+	d,!8 g4 d8 g4 d | g4 g8 d!~ d2 | a'!8 c4 a8 d!4 a8 c~ | c2. r4 |
+
+	% part "A"
+	c,8 g'4 c,8 ges'4 c,8 f~ | f8 c e!4 c8 ees4 c8 | ees8 c4.~ c2~ | c2. r4 |
+	f8 c'4 f,8 b!4 f8 bes~ | bes8 b!4 aes8 b bes aes4 | aes1~ | aes1 |
+}
+{% endif %}

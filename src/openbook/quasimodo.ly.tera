@@ -1,0 +1,128 @@
+{#
+default_version = "Fake"
+
+[attributes]
+title = "Quasimodo"
+style = "Jazz"
+composer = "Charlie Parker"
+piece = "Medium Swing"
+copyright = "1961 by DUCHESS MUSIC CORPORATION"
+copyrightextra = "Right Administered by MCA MUSIC PUBLISHING, A Division of MCA INC., New York, NY"
+typesetter = "Mark Veltzer <mark.veltzer@gmail.com>"
+completion = "5"
+uuid = "bc022da6-d4ff-11f1-8000-046874d194b7"
+structure = "ABAC"
+location = "jfb:308"
+
+[[youtube]]
+id = "8nKapUL_5RY"
+remark = "Charlie Parker in the original recording (Dial, 1947)"
+
+[[youtube]]
+id = "Np-ZjS9A1a0"
+remark = "Jazz at Lincoln Center Orchestra with Wynton Marsalis (Bird at 100)"
+
+[versions.Fake]
+doChords = true
+doVoice = true
+doLyrics = false
+doLyricsmore = false
+doLyricsmoremore = false
+doChordBars = false
+doGuitar = false
+doExtra = false
+doPrep = false
+doOwn = false
+#}
+{% if part == "Vars" %}
+{% endif %}
+{% if part == "Doc" %}	DONE:
+	- added the meta data from the fake book.
+	- put in the tunes structure.
+	- put in the chords (fake book).
+	- put in the tune (fake book).
+	- added youtube performances.
+	TODO:
+	- check the chords (fake book).
+	- check the tune (fake book).
+	- hear the tune to check that it is right and adjust the tempo.
+	- the last bar in the fake book has only a half note and an eighth rest; it was completed with a half rest.
+{% endif %}
+{% if part == "ChordsFake" %}\chordmode {
+	\startChords
+	\startSong
+
+	\partial 4. s4. |
+
+	\repeat volta 2 {
+
+		\myMark "A"
+		\startPart
+		ees1:maj7 | d:7 | f:m7 | bes:7 | \myEndLine
+		f1:m7 | bes:7 | ees:maj7 | g:7 | \myEndLine
+		\endPart
+
+		\myMark "B"
+		\startPart
+		c1:m7 | a2:m7 d:7 | g1:m7 | c2:7 f:7 | \myEndLine
+		bes1:6 | c2:m7 f:7 | f:m7 c:7.5+ | f:m7 bes:7 | \myEndLine
+		\endPart
+
+		\myMark "A"
+		\startPart
+		ees1:maj7 | d:7 | f:m7 | bes:7 | \myEndLine
+		f1:m7 | bes:7 | bes2:m7 f:7.5+ | bes:m7 ees:7 | \myEndLine
+		\endPart
+
+		\myMark "C"
+		\startPart
+		aes1:6 | d2:m7 g:7 | c1:m7 | aes2:m6 f:7 | \myEndLine
+		ees1:6 | f2:m7.5- bes:7.9- | ees1:maj7 |
+	} \alternative {
+		{
+			f2:m7 bes:7 | \myEndLineVoltaNotLast
+		}
+		{
+			f2:m7 bes:7 | ees1:6 | \myEndLineVoltaLast
+		}
+	}
+	\endPart
+
+	\endSong
+	\endChords
+}
+{% endif %}
+{% if part == "VoiceFake" %}{
+	\tempo "Allegro" 4 = 168
+	\time 4/4
+	\key ees \major
+
+	\partial 4. g'8 aes bes |
+
+	\repeat volta 2 {
+
+		% part "A"
+		g4. bes,8 c d f ees | d8 f r ees aes g fis g | bes8 f e f r g4 f8 | aes8 c, \tuplet 3/2 { g'8 aes f } r4 r8 g8 |
+		f4 r8 g aes bes b c | g'4. f8 r ees \tuplet 3/2 { c8 aes f } | bes8 aes e f bes g bes bes | r8 d16 f ees4 r8 d16 c b8 aes |
+
+		% part "B"
+		g8 d' ees g, d'8 ees4 fis,8 | e8 f c' fis, a c bes g | r8 a bes c d c g' bes, | r8 g a ges' r4 r8 bes, |
+		bes8 g16 a bes8 c d16 f ees8~ ees c16 g | f8 ees g d'~ d4 r8 c8 | f,8 c' aes f e c' r bes | aes8 g aes f r g aes bes |
+
+		% part "A"
+		g4. bes,8 c d f ees | d8 f r ees aes g fis g | bes8 f e f r g4 f8 | aes8 c, \tuplet 3/2 { g'8 aes f } r4 r8 g8 |
+		f4 r8 g aes bes b c | g'4. f8 r ees \tuplet 3/2 { c8 aes f } | bes8 c16 des f des bes f a8 f' r c | des16 c bes a aes8 ges des'8 b c f, |
+
+		% part "C"
+		r4 r8 aes16 c ees8 c r f, | d'8 a r c r bes \tuplet 3/2 { b8 d f } | ees8 f16 ees d8 c ees g, aes g | bes8 aes ces g' r f \tuplet 3/2 { ees8 c aes } |
+		g8 ees' r g, ees' c aes g | bes8 aes bes ces~ ces4 r8 bes | g8 bes bes bes~ bes4 r8 g~ |
+	} \alternative {
+		{
+			g8 ees f ees g4. ees8 |
+		}
+		{
+			g8 ees f ees g4. ees8~ | ees2 r2 |
+		}
+	}
+}
+{% endif %}

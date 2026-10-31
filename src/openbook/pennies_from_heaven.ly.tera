@@ -1,0 +1,107 @@
+{#
+default_version = "Fake"
+
+[attributes]
+title = "Pennies From Heaven"
+style = "Jazz"
+composer = "Arthur Johnston"
+poet = "John Burke"
+piece = "Moderately"
+copyright = "1936 by Select Music Publications, Inc."
+copyrightextra = "Copyright renewed, assigned to Chappell & Co., Inc. (Intersong Music, Publisher)"
+typesetter = "Mark Veltzer <mark.veltzer@gmail.com>"
+completion = "5"
+uuid = "1bec4dce-d4ff-11f1-8000-046874d194b7"
+structure = "ABAC"
+location = "jfb:296"
+
+[[youtube]]
+id = "25wDawjMmEY"
+remark = "Bing Crosby in the original recording (1936)"
+
+[[youtube]]
+id = "tVAGHbOssQg"
+remark = "Billie Holiday (1936)"
+
+[versions.Fake]
+doChords = true
+doVoice = true
+doLyrics = false
+doLyricsmore = false
+doLyricsmoremore = false
+doChordBars = false
+doGuitar = false
+doExtra = false
+doPrep = false
+doOwn = false
+#}
+{% if part == "Vars" %}
+{% endif %}
+{% if part == "Doc" %}	DONE:
+	- added the meta data from the fake book.
+	- put in the tunes structure.
+	- put in the chords (fake book).
+	- put in the tune (fake book).
+	- added youtube performances.
+	TODO:
+	- add the lyrics.
+	- check the chords (fake book).
+	- check the tune (fake book).
+	- hear the tune to check that it is right and adjust the tempo.
+	- bar 12: the fake book squeezes "F F7 E7 Eb7" over one bar, read here as one chord per beat.
+	- bar 27: the placement of "C9 B9 Bb9" over the eighth notes is a guess.
+{% endif %}
+{% if part == "ChordsFake" %}\chordmode {
+	\startChords
+	\startSong
+
+	\myMark "A"
+	\startPart
+	c2:6 d:m7 | e:m7 ees:dim7 | d:m7 g:7 | d:m7 g:7 | \myEndLine
+	c2:6 d:m7 | e:m7 ees:dim7 | d:m7 g:7 | d:m7 g:7 | \myEndLine
+	\endPart
+
+	\myMark "B"
+	\startPart
+	c1*2:9 | f2 c:7.5+ | f4 f:7 e:7 ees:7 | \myEndLine
+	d1*2:9 | g1:7 | d2:m7 g:9 | \myEndLine
+	\endPart
+
+	\myMark "A"
+	\startPart
+	c2 d:m7 | e:m7 ees:dim7 | d:m7 g:7 | d:m7 g:7 | \myEndLine
+	c1:7 | c:9 | f:maj7 | f:6 | \myEndLine
+	\endPart
+
+	\myMark "C"
+	\startPart
+	f1:6 | bes:7 | c2:maj7 c8:9 b:9 bes4:9 | a1:9 | \myEndLine
+	d1:m7 | d2:7 g:7.9- | c1*2 | \myEndLine
+	\endPart
+
+	\endSong
+	\endChords
+}
+{% endif %}
+{% if part == "VoiceFake" %}{
+	\tempo "Moderato" 4 = 120
+	\time 2/2
+	\key c \major
+
+	% part "A"
+	c'4 c c b | d d b2 | a8 a a a~ a4 g~ | g1 |
+	c4 c c b | d d b2 | a8 a a a~ a4 g~ | g1 |
+
+	% part "B"
+	r4 e g bes | d d c bes | r a a gis | a1 |
+	r4 fis a c | e e d c | r b d8 r f,4 | a1 |
+
+	% part "A"
+	c4 c c b | d d b2 | a8 a a a~ a4 g~ | g1 |
+	c4 c c b | d d c2 | e8 e e e~ e4 d~ | d1 |
+
+	% part "C"
+	r4 f, a c | e e e ees | d d d8 cis c b~ | b2. b8 bes |
+	\tuplet 3/2 { a4 f a } \tuplet 3/2 { c a c } | d2 e | c1~ | c |
+}
+{% endif %}

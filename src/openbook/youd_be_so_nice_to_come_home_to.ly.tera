@@ -1,0 +1,109 @@
+{#
+default_version = "Fake"
+
+[attributes]
+title = "You'd Be So Nice To Come Home To"
+style = "Jazz"
+composer = "Cole Porter"
+poet = "Cole Porter"
+piece = "Slowly"
+copyright = "1942 by Chappell & Co., Inc."
+copyrightextra = "Copyright Renewed"
+typesetter = "Mark Veltzer <mark.veltzer@gmail.com>"
+completion = "5"
+uuid = "539b4c98-d4ff-11f1-8000-046874d194b7"
+structure = "ABAC"
+location = "jfb:441"
+
+[[youtube]]
+id = "YM0PhsP7ulk"
+remark = "Helen Merrill with Clifford Brown (1954)"
+
+[[youtube]]
+id = "tYWbzZ4CRjk"
+remark = "Art Pepper from Art Pepper Meets The Rhythm Section (1957)"
+
+[versions.Fake]
+doChords = true
+doVoice = true
+doLyrics = false
+doLyricsmore = false
+doLyricsmoremore = false
+doChordBars = false
+doGuitar = false
+doExtra = false
+doPrep = false
+doOwn = false
+#}
+{% if part == "Vars" %}
+{% endif %}
+{% if part == "Doc" %}	DONE:
+	- added the meta data from the fake book.
+	- put in the tunes structure.
+	- put in the chords (fake book).
+	- put in the tune (fake book).
+	- added youtube performances.
+	TODO:
+	- add the lyrics.
+	- check the chords (fake book).
+	- check the tune (fake book).
+	- hear the tune to check that it is right and adjust the tempo.
+{% endif %}
+{% if part == "ChordsFake" %}\chordmode {
+	\startChords
+	\startSong
+
+	\partial 2 s2 |
+
+	\myMark "A"
+	\startPart
+	a1:m | b2:m7.5- e:7 | a2:m e:7 | a1:m | \myEndLine
+	g1:m9 | c1:7 | f2:maj7 c:7.5+ | f1:maj7 | \myEndLine
+	\endPart
+
+	\myMark "B"
+	\startPart
+	d2:m7 b:7.5- | e1:7 | e1:7.9- | a2:m a:m7/g | \myEndLine
+	fis1:m7.5- | f2:7 b:7.9- | e2:7 f:7.5- | e1:7 | \myEndLine
+	\endPart
+
+	\myMark "A"
+	\startPart
+	a1:m | b2:m7.5- e:7 | a2:m e:7 | a1:m | \myEndLine
+	g1:m9 | c1:7 | f2:6 c:7.5+ | f1 | \myEndLine
+	\endPart
+
+	\myMark "C"
+	\startPart
+	dis1:dim7 | c1/e | f1:6 | fis1:dim7 | \myEndLine
+	c2/g aes:7 | d2:7.9- g:7 | c1*2 | \myEndLine
+	\endPart
+
+	\endSong
+	\endChords
+}
+{% endif %}
+{% if part == "VoiceFake" %}{
+	\tempo "Andante" 2 = 60
+	\time 2/2
+	\key c \major
+
+	\partial 2 a'4 b |
+
+	% part "A"
+	c1 | b2~ b8 a4 gis8 | a2 e~ | e2 dis4 e |
+	a1 | g2~ g8 e4 d8 | c1~ | c2 d4 e |
+
+	% part "B"
+	f2. dis4 | e2~ e8 gis4 b8 | d2. b4 | c2~ c8 d4 dis8 |
+	e2. c4 | ees2 c4. b8 | b1~ | b2 a4 b |
+
+	% part "A"
+	c1 | b2~ b8 a4 gis8 | a2 e~ | e2 \tuplet 3/2 { e4 f g } |
+	a4 c a2 | g2~ g8 e4 c8 | d1~ | d2 e4 f |
+
+	% part "C"
+	a1 | g2 r8 a4 b8 | d2. c4 | a2 c4 d |
+	e2 ees~ | ees2 d | c1~ | c2 r |
+}
+{% endif %}

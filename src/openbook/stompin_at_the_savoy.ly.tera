@@ -1,0 +1,118 @@
+{#
+default_version = "Fake"
+
+[attributes]
+title = "Stompin' At The Savoy"
+style = "Jazz"
+composer = "Benny Goodman, Andy Razaf, Chick Webb, Edgar Sampson"
+poet = "Benny Goodman, Andy Razaf, Chick Webb, Edgar Sampson"
+piece = "Medium Swing Tempo"
+copyright = "1936 ROBBINS MUSIC CORPORATION"
+copyrightextra = "Renewed 1964 RYTVOC, INC."
+typesetter = "Mark Veltzer <mark.veltzer@gmail.com>"
+completion = "5"
+uuid = "77aabfba-d4ff-11f1-8000-046874d194b7"
+structure = "AABA"
+location = "jfb:362"
+
+[[youtube]]
+id = "ApK1KuVM0a0"
+remark = "Benny Goodman and his orchestra in the famous recording (1936)"
+
+[[youtube]]
+id = "Dk1toxG81nY"
+remark = "Ella Fitzgerald and Louis Armstrong"
+
+[versions.Fake]
+doChords = true
+doVoice = true
+doLyrics = false
+doLyricsmore = false
+doLyricsmoremore = false
+doChordBars = false
+doGuitar = false
+doExtra = false
+doPrep = false
+doOwn = false
+#}
+{% if part == "Vars" %}
+{% endif %}
+{% if part == "Doc" %}	DONE:
+	- added the meta data from the fake book.
+	- put in the tunes structure.
+	- put in the chords (fake book).
+	- put in the tune (fake book).
+	- added youtube performances.
+	TODO:
+	- add the lyrics.
+	- check the chords (fake book).
+	- check the tune (fake book).
+	- hear the tune to check that it is right and adjust the tempo.
+	- the book ties the last note of the first ending into the first note of the repeat, the tie is not typeset here.
+{% endif %}
+{% if part == "ChordsFake" %}\chordmode {
+	\startChords
+	\startSong
+
+	\partial 2 s2 |
+
+	\myMark "A"
+	\startPart
+	\repeat volta 2 {
+		f1 | f2 c:9 | f1 | f2 fis:dim7 | \myEndLine
+		g1:m7 | c1:9 |
+	} \alternative {
+		{
+			f2 aes:dim7 | g:m7 c:9 | \myEndLineVoltaNotLast
+		}
+		{
+			f1 | c2:m7 f:7 | \myEndLineVoltaLast
+		}
+	}
+	\endPart
+
+	\myMark "B"
+	\startPart
+	bes2:7 b:7 | bes1:7 | ees2:9 bes:m7.5- | ees1:9 | \myEndLine
+	aes2:7 a:7 | aes1:7 | des1:7 | c2:7 c:9 | \myEndLine
+	\endPart
+
+	\myMark "A"
+	\startPart
+	f1 | f2 c:9 | f1 | f2 fis:dim7 | \myEndLine
+	g1:m7 | c1:9 | f2 ees4:9 e:9 | f1:maj9 | \myEndLine
+	\endPart
+
+	\endSong
+	\endChords
+}
+{% endif %}
+{% if part == "VoiceFake" %}{
+	\tempo "Moderato" 4 = 140
+	\time 2/2
+	\key f \major
+
+	\partial 2 a'4. c8~ |
+
+	% part "A"
+	\repeat volta 2 {
+		c8 c, d a' e4 c8 d~ | d4 r a'4. c8~ | c8 c, d a' e4 c8 d~ | d4 r a'4. c8~ |
+		c8 c, d f bes4 f8 e~ | e4 r a4. f8~ |
+	} \alternative {
+		{
+			f4 r r2 | r2 a4. c8 |
+		}
+		{
+			f,4 r r2 | r1 |
+		}
+	}
+
+	% part "B"
+	c'8 bes4. cis8 b!4. | c8 bes4.~ bes4 r | c8 bes4. ees8 des4. | c8 bes4.~ bes4 r |
+	bes8 aes4. b!8 a!4. | bes8 aes4.~ aes8 r aes4 | bes8 des des des~ des4 r | a8 c c c a4. c8~ |
+
+	% part "A"
+	c8 c, d a' e4 c8 d~ | d4 r a'4. c8~ | c8 c, d a' e4 c8 d~ | d4 r a'4. c8~ |
+	c8 c, d f bes4 f8 e~ | e4 r a4. f8~ | f4 r r2 | r1 |
+}
+{% endif %}

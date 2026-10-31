@@ -1,0 +1,124 @@
+{#
+default_version = "Fake"
+
+[attributes]
+title = "Sister Sadie"
+style = "Jazz"
+composer = "Horace Silver"
+piece = "Medium blues"
+copyright = "1959 by Ecaroh Music, Inc."
+typesetter = "Mark Veltzer <mark.veltzer@gmail.com>"
+completion = "5"
+uuid = "43226a04-d4ff-11f1-8000-046874d194b7"
+structure = "AABA"
+location = "jfb:338"
+
+[[youtube]]
+id = "MkLhMPQtQ-o"
+remark = "Horace Silver in the original recording from Blowin' the Blues Away (1959)"
+
+[[youtube]]
+id = "SmO2pM20MrU"
+remark = "Horace Silver Quintet"
+
+[versions.Fake]
+doChords = true
+doVoice = true
+doLyrics = false
+doLyricsmore = false
+doLyricsmoremore = false
+doChordBars = false
+doGuitar = false
+doExtra = false
+doPrep = false
+doOwn = false
+#}
+{% if part == "Vars" %}
+{% endif %}
+{% if part == "Doc" %}	DONE:
+	- added the meta data from the fake book.
+	- put in the tunes structure.
+	- put in the chords (fake book).
+	- put in the tune (fake book).
+	- added youtube performances.
+	TODO:
+	- add the lyrics.
+	- check the chords (fake book).
+	- check the tune (fake book).
+	- hear the tune to check that it is right and adjust the tempo.
+	- the book has a D.C. al Coda with the "To Coda" sign only in the last A; the markings are kept as in the book.
+	- coda bar 3: the book prints no flat on the b in the triplet (under Dm7/G before C9); typed b flat as in the same figure in the bridge.
+	- the B13 and Bb13 in the middle of the bridge fall on the 2nd and 3rd triplet quarters as printed.
+{% endif %}
+{% if part == "ChordsFake" %}\chordmode {
+	\startChords
+	\startSong
+
+	\myMark "A"
+	\startPart
+	\repeat volta 2 {
+		d1:m7/g | d2:m7/g aes:9.11+ | d1:m7/g | d2:m7/g aes:9.11+ | \myEndLine
+		d1:m7/g | d2:m7/g aes:9.11+ |
+	} \alternative {
+		{
+			d1:m7/g | d2.:m7/g aes4:9.11+ | \myEndLineVoltaNotLast
+		}
+		{
+			d1*2:m7/g | \myEndLineVoltaLast
+		}
+	}
+	\endPart
+
+	\myMark "B"
+	\startPart
+	c1*2:13 | g1*2:13 | \myEndLine
+	c2:13 \tuplet 3/2 { s4 b:13 bes:13 } | s1 | a2:13 \tuplet 3/2 { s2 aes4:13 } | s2 aes:9.11+ | \myEndLine
+	\endPart
+
+	\myMark "A"
+	\startPart
+	d1:m7/g | d2:m7/g aes:9.11+ | d1:m7/g | d2:m7/g aes:9.11+ | \myEndLine
+	d1:m7/g | d2:m7/g aes:9.11+ | d1*2:m7/g | \myEndLine
+	\endPart
+
+	\myMark "Coda"
+	\startPart
+	d1*2:m7/g | d2:m7/g c4:9 b:9 | bes:9 a:9 r2 | \myEndLine
+	s2 bes4:9 a:9 | aes2:9 g:9 | \myEndLine
+	\endPart
+
+	\endSong
+	\endChords
+}
+{% endif %}
+{% if part == "VoiceFake" %}{
+	\tempo "Moderato" 4 = 130
+	\time 4/4
+	\key g \major
+
+	% part "A"
+	\repeat volta 2 {
+		r8 g4 ais8 b d e d | g4. b8 r2 | r8 g,4 ais8 b d e d | g4. e8 r2 |
+		r8 g,4 ais8 b d e d | e'8 bes4. g4 r8 g8 |
+	} \alternative {
+		{
+			ais8 b! ais b g f d c | d bes g f g4 r4 |
+		}
+		{
+			ais'8 b ais b g f d c | d bes g f g4 r4 |
+		}
+	}
+
+	% part "B"
+	r2 \tuplet 3/2 { r4 g'4 bes } | \tuplet 3/2 { d8 c bes } g8 f g2~ | g2 \tuplet 3/2 { r4 d'4 f } | \tuplet 3/2 { a8 g f } d8 c d2~ |
+	d2 \tuplet 3/2 { r4 g,4 bes } | \tuplet 3/2 { d8 c bes } g8 f g2~ | g2 \tuplet 3/2 { r4 d4 f } | a8 f d c~ c2 |
+
+	% part "A"
+	r8 g4 ais8 b d e d | g4. b8 r2 | r8 g,4 ais8 b d e d | g4. e8 r2 |
+	r8 g,4 ais8 b d e d | e'8 bes4. g4 r8 g8^\markup { To Coda \musicglyph #"scripts.coda" } | ais8 b ais b g f d c | d bes g f g4 r4^\markup { D.C. al Coda } |
+
+	% part "Coda"
+	ais'8 b ais b g f d c | d bes g f \tuplet 3/2 { g4 g' bes } | \tuplet 3/2 { d8 c bes } g8 f g2 | r2 \tuplet 3/2 { r4 d4 f } |
+	a8 f d c d2~ | d1 |
+}
+{% endif %}

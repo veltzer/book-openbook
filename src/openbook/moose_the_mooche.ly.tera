@@ -1,0 +1,105 @@
+{#
+default_version = "Fake"
+
+[attributes]
+title = "Moose The Mooche"
+style = "Jazz"
+composer = "Charlie Parker"
+piece = "Fast"
+copyright = "1946 ATLANTIC MUSIC CORP."
+copyrightextra = "Renewed and assigned 1974 ATLANTIC MUSIC CORP."
+typesetter = "Mark Veltzer <mark.veltzer@gmail.com>"
+completion = "5"
+uuid = "7656a6f6-d4ff-11f1-8000-046874d194b7"
+structure = "AABA"
+location = "jfb:257"
+
+[[youtube]]
+id = "yiPdn11m0UE"
+remark = "Charlie Parker Septet in the original recording with Miles Davis (Dial, 1946)"
+
+[[youtube]]
+id = "Raxg2lO5460"
+remark = "Charlie Parker live at the Storyville Club, Boston, 1953"
+
+[versions.Fake]
+doChords = true
+doVoice = true
+doLyrics = false
+doLyricsmore = false
+doLyricsmoremore = false
+doChordBars = false
+doGuitar = false
+doExtra = false
+doPrep = false
+doOwn = false
+#}
+{% if part == "Vars" %}
+{% endif %}
+{% if part == "Doc" %}	DONE:
+	- added the meta data from the fake book.
+	- put in the tunes structure.
+	- put in the chords (fake book).
+	- put in the tune (fake book).
+	- added youtube performances.
+	TODO:
+	- check the chords (fake book).
+	- check the tune (fake book).
+	- hear the tune to check that it is right and adjust the tempo.
+	- the fake book ends the tune with a repeat sign (the whole tune is repeated); this is not notated here.
+	- bar 8: the fake book prints a parenthesized (ghost) low d in the F7 run; it is typed as a plain note.
+{% endif %}
+{% if part == "ChordsFake" %}\chordmode {
+	\startChords
+	\startSong
+
+	\myMark "A"
+	\startPart
+	bes1 | c2:m7 f:7 | bes1 | c2:m7 f:7 | \myEndLine
+	f:m7 bes:7 | ees1:7 | bes | c2:m7 f:7 | \myEndLine
+	\endPart
+
+	\myMark "A"
+	\startPart
+	bes1 | c2:m7 f:7 | bes1 | c2:m7 f:7 | \myEndLine
+	bes1:7 | ees2 aes:7 | bes1 | bes | \myEndLine
+	\endPart
+
+	\myMark "B"
+	\startPart
+	a1:m7.5- | d:7 | d:m7 | g:7 | \myEndLine
+	g:m7 | c:7 | c:m7 | f:7 | \myEndLine
+	\endPart
+
+	\myMark "A"
+	\startPart
+	bes1 | c2:m7 f:7 | bes1 | c2:m7 f:7 | \myEndLine
+	bes1:7 | ees | bes | c2:m7 f:7 | \myEndLine
+	\endPart
+
+	\endSong
+	\endChords
+}
+{% endif %}
+{% if part == "VoiceFake" %}{
+	\tempo "Allegro" 4 = 220
+	\time 4/4
+	\key bes \major
+
+	% part "A"
+	f4 r8 f'~ f d ees4 | r8 bes \tuplet 3/2 { g8 ees c } bes' g cis d | f,4 r8 d'~ d bes c4 | r8 f, f f c' f,4 g8 |
+	aes8 aes g ges f4 r8 c' | r8 bes r g cis d cis d | f,4 r8 bes d ees d a~ | a8 bes \tuplet 3/2 { g8 f d } f d aes' f |
+
+	% part "A"
+	r4 r8 f'~ f d ees4 | r8 bes \tuplet 3/2 { g8 ees c } bes' ges ees c | f4 r8 d'~ d bes c4 | r8 c, ees g c bes d aes~ |
+	aes4 ees8 c bes g' r d | f8 d \tuplet 3/2 { bes16 c bes } g8 ges des'4 bes8 | c4 r8 ees r g f4 | r8 a r c bes d, dis e |
+
+	% part "B"
+	r4 r8 a r g r fis | e!8 c cis d~ d4 r8 e | a8 f g a e'! d b! a | r4 r8 g r a r g |
+	bes4 r8 d, a' g e!4 | d8 c d a'~ a4. g8 | f4 r8 d ees d cis d | ees4 r8 aes r ges r e! |
+
+	% part "A"
+	f4 r8 f'~ f d ees4 | r8 bes \tuplet 3/2 { g8 ees c } bes' g cis d | f,4 r8 d'~ d bes c4 | r8 f, f4 c'8 f,4 g8 |
+	aes8 aes g ges f4 r8 c' | r8 bes r g cis d cis d | f,4 r8 des'~ \tuplet 3/2 { des16 ees des } bes8 c4 | r8 bes~ \tuplet 3/2 { bes16 c bes } g8 bes4 r |
+}
+{% endif %}

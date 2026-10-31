@@ -1,0 +1,119 @@
+{#
+default_version = "Fake"
+
+[attributes]
+title = "Un Poco Loco"
+style = "Jazz"
+composer = "Earl Bud Powell"
+piece = "Bright Latin"
+copyright = "1953 by BIG SEVEN MUSIC CORP."
+typesetter = "Mark Veltzer <mark.veltzer@gmail.com>"
+completion = "5"
+uuid = "19876112-d500-11f1-8000-046874d194b7"
+structure = "Intro AB"
+location = "jfb:404"
+
+[[youtube]]
+id = "4QL2umE4_TI"
+remark = "Bud Powell in the original recording (The Amazing Bud Powell, 1951)"
+
+[[youtube]]
+id = "xS4lqjqkbZU"
+remark = "Chick Corea and the Remembering Bud Powell Band (1996)"
+
+[versions.Fake]
+doChords = true
+doVoice = true
+doLyrics = false
+doLyricsmore = false
+doLyricsmoremore = false
+doChordBars = false
+doGuitar = false
+doExtra = false
+doPrep = false
+doOwn = false
+#}
+{% if part == "Vars" %}
+{% endif %}
+{% if part == "Doc" %}	DONE:
+	- added the meta data from the fake book.
+	- put in the tunes structure.
+	- put in the chords (fake book).
+	- put in the tune (fake book).
+	- added youtube performances.
+	TODO:
+	- check the chords (fake book).
+	- check the tune (fake book).
+	- hear the tune to check that it is right and adjust the tempo.
+	- the book prints the second G7#9 of the intro between the eighth rest and the B flat of bar 2, here it is on beat 1.
+{% endif %}
+{% if part == "ChordsFake" %}\chordmode {
+	\startChords
+	\startSong
+
+	\myMark "Intro"
+	\startPart
+	\repeat volta 2 {
+		d2:m7 g4.:7.9+ d8:m7 | g2:7.9+ d4:m7 g:7.9+ | c1*2:maj7.5- | \myEndLine
+	}
+	\endPart
+
+	\myMark "A"
+	\startPart
+	\repeat volta 2 {
+		ees1:maj7.5- | ees2:maj7.5- des:maj7.5- | c1*2:maj7.5- | \myEndLine
+		ees1:maj7.5- | des:maj7.5- | c1*2:maj7.5- | \myEndLine
+		d1*2:7 | des1*2:7 | \myEndLine
+		c1*3:maj7.5- | c2:maj7.5- | \myEndLine
+	}
+	\endPart
+
+	\myMark "B"
+	\startPart
+	f1:m7 | bes:7 | ees1*2:maj7 | \myEndLine
+	ees1:m7 | aes:7 | des1*2:maj7 | \myEndLine
+	d1:dim7 | g:7 | c | c4. b4:m7/a e:7/b bes8:7 | \myEndLine
+	a2.:m7 d4:7 | d1:7 | g:7 | g:7.9+.5- | \myEndLine
+	\endPart
+
+	\myMark "Coda"
+	\startPart
+	c1*2:maj7.5- | \myEndLine
+	\endPart
+
+	\endSong
+	\endChords
+}
+{% endif %}
+{% if part == "VoiceFake" %}{
+	\tempo "Allegro" 4 = 200
+	\time 4/4
+	\key c \major
+
+	% part "Intro"
+	\repeat volta 2 {
+		r4 g' bes4. g8 | r8 bes4. g4 b!4 | fis4 r8 fis8 r4 fis4~ | fis4 \tuplet 3/2 { fis8 g a } \tuplet 3/2 { cis a g } fis4 |
+	}
+
+	% part "A"
+	\repeat volta 2 {
+		a4^\markup { \musicglyph #"scripts.segno" } r8 a8 r4 a4~ | a2 g4 a4 | fis4 r8 fis8 r4 fis4~ | fis8 a, b cis e fis a b |
+		a4 r8 a8 r4 a4~ | a2 g4 a4 | fis4 r8 fis8 r4 fis4~ | fis8 a, b cis e fis a b |
+		b4. b8~ b4 b4~ | b2 a4 b4 | bes4. bes8~ bes4 bes4~ | bes2 aes4 bes4 |
+		fis4 \tuplet 3/2 { fis8 g a } \tuplet 3/2 { cis a g } fis4 | \tuplet 3/2 { fis8 g a } \tuplet 3/2 { cis a g } fis4 r8 c8^\markup { To Coda \musicglyph #"scripts.coda" } |
+		\tuplet 3/2 { fis8 g a } \tuplet 3/2 { cis a g } fis4 r8 c8 |
+		\time 2/4
+		c4 r4 |
+	}
+
+	% part "B"
+	\time 4/4
+	aes'1 | \tuplet 3/2 { g8 aes g } e8 f r8 g8 r8 aes8 | bes1~ | bes1 |
+	ges1 | \tuplet 3/2 { f8 ges f } d8 ees r8 f8 r8 g8 | \tuplet 3/2 { aes4 bes g } aes2~ | aes1 |
+	d,8 e f g aes bes b! bes | aes8 g f e d c b d~ | d4 f8 c8 d2 | r4 r8 e8 r8 d8 r8 e8 |
+	c2. c4~ | c4 r8 c'8 r8 d8 r8 c8 | \tuplet 3/2 { b8 c b } g2. | r4 bes2.^\markup { D.S. al Coda } |
+
+	% part "Coda"
+	\tuplet 3/2 { fis8^\markup { \musicglyph #"scripts.coda" } g a } \tuplet 3/2 { cis a g } fis4 r8 c8 | c4 r4 r2 |
+}
+{% endif %}

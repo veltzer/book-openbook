@@ -1,0 +1,102 @@
+{#
+default_version = "Fake"
+
+[attributes]
+title = "Shiny Stockings"
+style = "Jazz"
+composer = "Frank Foster"
+poet = "Ella Fitzgerald"
+piece = "Medium Swing"
+copyright = "1956 (renewed) Lynnstorm Publishing Co."
+copyrightextra = "All Rights Reserved. International Copyright Secured."
+typesetter = "Mark Veltzer <mark.veltzer@gmail.com>"
+completion = "5"
+uuid = "2ddda450-d500-11f1-8000-046874d194b7"
+structure = "AA'"
+location = "jfb:338"
+
+[[youtube]]
+id = "YWqbQDjLK44"
+remark = "Count Basie and his Orchestra"
+
+[[youtube]]
+id = "_MYhp9iu83M"
+remark = "Ella Fitzgerald"
+
+[versions.Fake]
+doChords = true
+doVoice = true
+doLyrics = false
+doLyricsmore = false
+doLyricsmoremore = false
+doChordBars = false
+doGuitar = false
+doExtra = false
+doPrep = false
+doOwn = false
+#}
+{% if part == "Vars" %}
+{% endif %}
+{% if part == "Doc" %}	DONE:
+	- added the meta data from the fake book.
+	- put in the tunes structure.
+	- put in the chords (fake book).
+	- put in the tune (fake book).
+	- added youtube performances.
+	TODO:
+	- add the lyrics.
+	- check the chords (fake book).
+	- check the tune (fake book).
+	- hear the tune to check that it is right and adjust the tempo.
+	- bar 12 (first ending, F7): the fake book prints a plain D (D flat by the key signature), check it.
+	- bar 16 (first ending, Ebm6): the second G has no accidental in the fake book, typed as G flat (tied G flat before it, Ebm6 harmony).
+	- the fake book prints only this 16 bar repeated section, check the form against a recording.
+{% endif %}
+{% if part == "ChordsFake" %}\chordmode {
+	\startChords
+	\startSong
+
+	\partial 4. s4. |
+
+	\myMark "A"
+	\startPart
+	\repeat volta 2 {
+		bes1:m7 | ees:7 | bes:m7 | ees:7 | \myEndLine
+		aes1 | des:7 | c:m7 | b2:dim7 b:m7 | \myEndLine
+		bes1:m7 | ees2:7 des:7 | c1:m7 | \myEndLine
+	} \alternative {
+		{
+			f1:7 | d:m7 | g:7 | c | ees:m6 | \myEndLineVoltaNotLast
+		}
+		{
+			f1:7 | bes:m7 | s4. ees2:9 aes8 | s1 | s1 | \myEndLineVoltaLast
+		}
+	}
+	\endPart
+
+	\endSong
+	\endChords
+}
+{% endif %}
+{% if part == "VoiceFake" %}{
+	\tempo "Medium Swing" 2 = 72
+	\time 2/2
+	\key aes \major
+
+	\partial 4. b'!4. |
+
+	% part "A"
+	\repeat volta 2 {
+		c4 r bes8 c4 ees8~ | ees8 c4. bes4 c | f,4 bes c8 bes4 c8 | r2 r8 a!4. |
+		bes4 r aes8 bes4 ees8~ | ees8 bes4. aes4 bes | ees,4 aes bes8 aes4 bes8 | r2 r8 a!4. |
+		aes4 r f8 aes c ees~ | ees2~ ees8 ces4. | bes4 r g8 bes d! f~ |
+	} \alternative {
+		{
+			f2. des8 c | r2 a!8 c e! g~ | g2~ g8 e!4. | c4 r r r8 ges'~ | ges8 ges f4 ees8 des4. |
+		}
+		{
+			f2~ f8 g4. | aes4 f ees8 des4 c8 | r8 aes4. c8 c4 aes8 | r1 | r1 |
+		}
+	}
+}
+{% endif %}

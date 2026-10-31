@@ -1,0 +1,109 @@
+{#
+default_version = "Fake"
+
+[attributes]
+title = "Walkin'"
+style = "Jazz"
+composer = "Richard Carpenter"
+piece = "Easy"
+copyright = "1955 by Richard Carpenter"
+copyrightextra = "Assigned to RICHCAR MUSIC CO. All Rights Reserved. Used by Permission."
+typesetter = "Mark Veltzer <mark.veltzer@gmail.com>"
+completion = "5"
+uuid = "4320c99c-d4ff-11f1-8000-046874d194b7"
+structure = "AB (Blues)"
+location = "jfb:411"
+
+[[youtube]]
+id = "nqCInb4qPEU"
+remark = "Miles Davis in the original recording (1954)"
+
+[[youtube]]
+id = "Unn5jWjjJ3g"
+remark = "Herb Ellis"
+
+[versions.Fake]
+doChords = true
+doVoice = true
+doLyrics = false
+doLyricsmore = false
+doLyricsmoremore = false
+doChordBars = false
+doGuitar = false
+doExtra = false
+doPrep = false
+doOwn = false
+#}
+{% if part == "Vars" %}
+{% endif %}
+{% if part == "Doc" %}	DONE:
+	- added the meta data from the fake book.
+	- put in the tunes structure.
+	- put in the chords (fake book).
+	- put in the tune (fake book).
+	- added youtube performances.
+	TODO:
+	- check the chords (fake book).
+	- check the tune (fake book).
+	- hear the tune to check that it is right and adjust the tempo.
+	- the book has a wavy scoop line before the a flat in bar 14 (6th bar of the blues), not typeset here.
+	- the b natural (bars 9, 15) and e natural (bar 13) against F7/Bb7 are as printed in the book.
+{% endif %}
+{% if part == "ChordsFake" %}\chordmode {
+	\startChords
+	\startSong
+
+	\partial 4 r4 |
+
+	\myMark "A"
+	\startPart
+	r1*4 | \myEndLine
+	s1*4 | \myEndLine
+	\endPart
+
+	\myMark "B"
+	\startPart
+	\repeat volta 2 {
+		f1*2:7 | bes1:7 | f:7 | \myEndLine
+		bes1*2:7 | f1*2:7 | \myEndLine
+		c1:7 | bes:7 | f:7 |
+	} \alternative {
+		{
+			c1:7 | \myEndLineVoltaNotLast
+		}
+		{
+			r1 | \myEndLineVoltaLast
+		}
+	}
+	\endPart
+
+	\endSong
+	\endChords
+}
+{% endif %}
+{% if part == "VoiceFake" %}{
+	\tempo "Moderato" 4 = 120
+	\time 4/4
+	\key f \major
+
+	\partial 4 f'4 |
+
+	% part "A"
+	aes8^\markup { \musicglyph #"scripts.segno" } f4. ees4 c | ees8 c4. bes4 f | aes8 f4. ees2~ | ees2. f'4 |
+	aes8 f4. ees4 c | ees8 c4. bes4 f | aes8 f4. ees2_\markup { \italic { Fine } } | r4 f8 c e! f4 b!8~ |
+
+	% part "B"
+	\repeat volta 2 {
+		b2~ b4. c8 | r4 r8 f,8 e f4 bes8~ | bes2. \grace g8 a8 f | r4 r8 aes16 f aes8 f4 e'8~ |
+		e2~ e4. f8 | r2 aes,8 f4 b!8~ | b2~ b4. c8 | r2 r8 a c d |
+		ees8 ees d4 r des8 des | c4 r ces8 ces bes bes | aes2.~ aes8 bes |
+	} \alternative {
+		{
+			r4 r8 f16 c e8 f4 b!8 |
+		}
+		{
+			r2 r4 f'4^\markup { D.S. al Fine } |
+		}
+	}
+}
+{% endif %}

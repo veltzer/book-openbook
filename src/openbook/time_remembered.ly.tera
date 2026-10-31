@@ -1,0 +1,99 @@
+{#
+default_version = "Fake"
+
+[attributes]
+title = "Time Remembered"
+style = "Jazz"
+composer = "Bill Evans"
+piece = "With Movement"
+copyright = "1965 Acorn Music Corp., New York, NY"
+copyrightextra = "TRO"
+typesetter = "Mark Veltzer <mark.veltzer@gmail.com>"
+completion = "5"
+uuid = "19859db4-d500-11f1-8000-046874d194b7"
+structure = "A"
+location = "jfb:395"
+
+[[youtube]]
+id = "q0WSkffWI-I"
+remark = "Bill Evans (official audio)"
+
+[[youtube]]
+id = "lofQn2eI5mc"
+remark = "Bill Evans live at the Munch Museum, Oslo, Norway, 1966"
+
+[versions.Fake]
+doChords = true
+doVoice = true
+doLyrics = false
+doLyricsmore = false
+doLyricsmoremore = false
+doChordBars = false
+doGuitar = false
+doExtra = false
+doPrep = false
+doOwn = false
+#}
+{% if part == "Vars" %}
+{% endif %}
+{% if part == "Doc" %}	DONE:
+	- added the meta data from the fake book.
+	- put in the tunes structure.
+	- put in the chords (fake book).
+	- put in the tune (fake book).
+	- added youtube performances.
+	TODO:
+	- check the chords (fake book).
+	- check the tune (fake book).
+	- hear the tune to check that it is right and adjust the tempo.
+{% endif %}
+{% if part == "ChordsFake" %}\chordmode {
+	\startChords
+	\startSong
+
+	\myMark "A"
+	\startPart
+	\repeat volta 2 {
+		b1:m9 | c:maj7.11+ | f:maj7.11+ | e:m9 | \myEndLine
+		a2:m9 d:m9 | g1:m9 | ees:maj9.11+ | aes:maj9.11+ | \myEndLine
+		a:m9 | d:m9 | g:m9 | c:m9 | \myEndLine
+		f:m11 | e:m9 | b1*2:m9 | \myEndLine
+		ees1:m9 | a:m9 | c:m9 | fis:m9 | \myEndLine
+		b:m9 | g:m9 | ees:maj7.11+ | d:m9 | \myEndLine
+	} \alternative {
+		{
+			c1*2:m9 | \myEndLineVoltaNotLast
+		}
+		{
+			c1*2:m9 | \myEndLineVoltaLast
+		}
+	}
+	\endPart
+
+	\endSong
+	\endChords
+}
+{% endif %}
+{% if part == "VoiceFake" %}{
+	\tempo "Moderato" 2 = 70
+	\time 2/2
+	\key c \major
+
+	% part "A"
+	\repeat volta 2 {
+		fis1~ | fis2. g4 | e4 b'2 d4 | cis4 a b2 |
+		r2 \tuplet 3/2 { r4 c g' } | e4 f c d | a'2. d,4~ | d2. r4 |
+		r2 e4 a,4~ | a4 b c e | d2. g,4~ | g4. a8 bes d f g |
+		aes2. ees4 | fis4 b, cis d | e8 d cis'2.~ | cis1 |
+		r4 des,4 aes bes | b!8 g fis'2. | r2 r8 bes, f g | gis8 e dis'2. |
+		r4 gis e cis | a2~ a8 e' c a | f4 d a'2~ | a4 g c b |
+	} \alternative {
+		{
+			a1~ | a4 g d' bes |
+		}
+		{
+			a1~ | a4 r r2 |
+		}
+	}
+}
+{% endif %}
