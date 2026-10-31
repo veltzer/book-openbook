@@ -1,0 +1,93 @@
+{#
+default_version = "Fake"
+
+[attributes]
+title = "Revelation"
+style = "Jazz"
+composer = "Gerry Mulligan"
+piece = "Medium"
+copyright = "1956 CRITERION MUSIC CORP."
+copyrightextra = "Renewed 1985 CRITERION MUSIC CORP."
+typesetter = "Mark Veltzer <mark.veltzer@gmail.com>"
+completion = "5"
+uuid = "6d1bf7d8-d547-11f1-8000-046874d194b7"
+structure = "A"
+location = "jfb:316"
+
+[[youtube]]
+id = "j6quZaXn470"
+remark = "Gerry Mulligan"
+
+[[youtube]]
+id = "PqU_wahhVjw"
+remark = "Gerry Mulligan, Lee Konitz"
+
+[versions.Fake]
+doChords = true
+doVoice = true
+doLyrics = false
+doLyricsmore = false
+doLyricsmoremore = false
+doChordBars = false
+doGuitar = false
+doExtra = false
+doPrep = false
+doOwn = false
+#}
+{% if part == "Vars" %}
+{% endif %}
+{% if part == "Doc" %}	DONE:
+	- added the meta data from the fake book.
+	- put in the tunes structure.
+	- put in the chords (fake book).
+	- put in the tune (fake book).
+	- added youtube performances.
+	TODO:
+	- check the chords (fake book).
+	- check the tune (fake book).
+	- hear the tune to check that it is right and adjust the tempo.
+{% endif %}
+{% if part == "ChordsFake" %}\chordmode {
+	\startChords
+	\startSong
+
+	\partial 4. s4. |
+
+	\myMark "A"
+	\startPart
+	\repeat volta 2 {
+		f1 | bes2 c:7 | f f:7 | c:m7 f:7 | \myEndLine
+		bes1 | bes:m7 | a2:m7 a:m6 | a:m7.5- d:7.5+ | g1:m7 | \myEndLine
+		g2:m7 c:7 | c1:7 | c1:7 | \myEndLine
+	}
+	\endPart
+
+	\myMark "Coda"
+	\startPart
+	bes2 b:m7.5- | bes:m7 ees:7 | a1:m7 | d2:7 d:7.5+.9+ | \myEndLine
+	g2:m7 c:7 | g:m7 c4:7 e8:7 f8:maj9 | f1:maj9 | f1:maj9 | \myEndLine
+	\endPart
+
+	\endSong
+	\endChords
+}
+{% endif %}
+{% if part == "VoiceFake" %}{
+	\tempo "Moderato" 4 = 140
+	\time 4/4
+	\key f \major
+
+	\partial 4. c8 d e |
+
+	% part "A"
+	\repeat volta 2 {
+		f4^\markup { \musicglyph #"scripts.segno" } r8 g a bes c4 | r8 f e f d bes a g | c4 r8 d ees d c4 | r8 f \tuplet 3/2 { ees8 bes g } d' des c f,~^\markup { To Coda \musicglyph #"scripts.coda" } |
+		f1 | r4 r8 f g f g aes | a d c fis,~ fis2 | r8 a c f~ f4. ees8 | c8 des d bes a g r c16 b |
+		bes8 des, d f a a aes g~ | g1 | r1^\markup { 2nd time D.S. al Coda } |
+	}
+
+	% part "Coda"
+	f1~ | f2. r8 f | g f g aes a f' c4 | fis,8 g c f~ f ees c des |
+	d8 bes a g c bes r4 | r8 des, d f a a aes g~ | g1~ | g2. r4 |
+}
+{% endif %}

@@ -1,0 +1,118 @@
+{#
+default_version = "Fake"
+
+[attributes]
+title = "Pools"
+style = "Jazz"
+composer = "Don Grolnick"
+piece = "Relaxed Funk"
+copyright = "1986 by Carmine Street Music"
+typesetter = "Mark Veltzer <mark.veltzer@gmail.com>"
+completion = "5"
+uuid = "9c85d458-d547-11f1-8000-046874d194b7"
+structure = "AAB"
+location = "jfb:305"
+
+[[youtube]]
+id = "3pBJGbZOAEM"
+remark = "Steps Ahead in the original recording (Steps Ahead, 1983)"
+
+[[youtube]]
+id = "dLE_IBg9abk"
+remark = "Steps Ahead live at Copenhagen"
+
+[versions.Fake]
+doChords = true
+doVoice = true
+doLyrics = false
+doLyricsmore = false
+doLyricsmoremore = false
+doChordBars = false
+doGuitar = false
+doExtra = false
+doPrep = false
+doOwn = false
+#}
+{% if part == "Vars" %}
+{% endif %}
+{% if part == "Doc" %}	DONE:
+	- added the meta data from the fake book.
+	- put in the tunes structure.
+	- put in the chords (fake book).
+	- put in the tune (fake book).
+	- added youtube performances.
+	TODO:
+	- check the chords (fake book).
+	- check the tune (fake book).
+	- hear the tune to check that it is right and adjust the tempo.
+	- the fake book places most chord symbols over the anticipating eighth note before the bar line, here they are put on the following downbeat.
+	- the form is: play A (repeated), B, then D.S. (to the segno at the start of the repeat) taking the 2nd ending and on to the coda at the To Coda sign.
+{% endif %}
+{% if part == "ChordsFake" %}\chordmode {
+	\startChords
+	\startSong
+
+	\partial 8 s8 |
+
+	\myMark "A"
+	\startPart
+	c1:13.5-.9- |
+	\repeat volta 2 {
+		f1*3:m11 | c1:13.5-.9- | f1*3:m11 | \myEndLine
+		c1:13.5-.9- | f1*2:m11 | f2:m11 f:13.9- | f2.:7.5+ f4:7 | aes1*2:m11 | a1*2:13.5- | ges1*2:maj7/aes | \myEndLine
+	} \alternative {
+		{
+			ges1:maj7/aes | c1:13.5-.9- | \myEndLineVoltaNotLast
+		}
+		{
+			ges1:maj7/aes | \myEndLineVoltaLast
+		}
+	}
+	\endPart
+
+	\myMark "B"
+	\startPart
+	c2:maj7/d d:7.5+.9+/fis | d:7.5+.9+/fis g:9sus4 | g1*2:9sus4 | c2:maj7/d d:7.5+.9+/fis | \myEndLine
+	d2:7.5+.9+/fis a:9.13-/g | a1*2:9.13-/g | ces2:maj7/des des:7.5+.9+/f | des:7.5+.9+/f ges:7sus4 | ges1:7sus4 | ees:7.9+ | aes:m9 | \myEndLine
+	ces2:maj7/des c:13.5-.9- | c1:13.5-.9- | \myEndLine
+	\endPart
+
+	\myMark "Coda"
+	\startPart
+	ces2:maj7/des c:13.5-.9- | c1*2:13.5-.9- | b1:13.5-.9- | \myEndLine
+	\endPart
+
+	\endSong
+	\endChords
+}
+{% endif %}
+{% if part == "VoiceFake" %}{
+	\tempo "Moderato" 4 = 96
+	\time 4/4
+	\key c \major
+
+	\partial 8 a''8~ |
+
+	% part "A"
+	a2. a8 g~ |
+	\repeat volta 2 {
+		g1~^\markup { \musicglyph #"scripts.segno" } | g1~ | g2. g8 a~ | a2. a8 g~ | g1~ | g1~ | g2. g8 a~ |
+		a2. a8 g~ | g1~ | g1~ | g4 r8 ges~ ges2 | f4 r \tuplet 3/2 { r4 r ees } | des1~ | des2.~ des8 fis~ | fis1~ | fis2.~ fis8 f!~ | f1~ | f1~ |
+	} \alternative {
+		{
+			f2.~ f8 a~ | a2. a8 g |
+		}
+		{
+			f1 |
+		}
+	}
+
+	% part "B"
+	b,4 b8 d r d r4 | \tuplet 3/2 { r4 r g,~ } g2~ | g1~ | g2 r2 | b4 b8 d r d r4 |
+	\tuplet 3/2 { r4 r e~ } e2~ | e1~ | e2 r2 | bes4 bes8 des r des r4 | \tuplet 3/2 { r4 r ges,~ } ges2~ | ges1 | ges4. ges8 \tuplet 3/2 { r4 b' e } | des2.~ des8^\markup { To Coda \musicglyph #"scripts.coda" } ces16 des |
+	bes4 r8 a~ a2~ | a2. a8 g^\markup { D.S. al Coda } |
+
+	% part "Coda"
+	bes4 r8 a~ a2~ | a1~ | a2. a8 gis~ | gis1\fermata |
+}
+{% endif %}

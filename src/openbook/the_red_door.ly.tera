@@ -1,0 +1,108 @@
+{#
+default_version = "Fake"
+
+[attributes]
+title = "The Red Door"
+style = "Jazz"
+composer = "Gerry Mulligan, Jack 'Zoot' Sims"
+piece = "Easy Swing"
+copyright = "1953, 1981 Elliot Music Co., Inc."
+typesetter = "Mark Veltzer <mark.veltzer@gmail.com>"
+completion = "5"
+uuid = "6d1708ae-d547-11f1-8000-046874d194b7"
+structure = "AA'A''"
+location = "jfb:312"
+
+[[youtube]]
+id = "Y-jB-VYdcnE"
+remark = "Gerry Mulligan"
+
+[[youtube]]
+id = "RMyoLoXwZvk"
+remark = "Zoot Sims Sextet"
+
+[versions.Fake]
+doChords = true
+doVoice = true
+doLyrics = false
+doLyricsmore = false
+doLyricsmoremore = false
+doChordBars = false
+doGuitar = false
+doExtra = false
+doPrep = false
+doOwn = false
+#}
+{% if part == "Vars" %}
+{% endif %}
+{% if part == "Doc" %}	DONE:
+	- added the meta data from the fake book.
+	- put in the tunes structure.
+	- put in the chords (fake book).
+	- put in the tune (fake book).
+	- added youtube performances.
+	TODO:
+	- check the chords (fake book).
+	- check the tune (fake book).
+	- hear the tune to check that it is right and adjust the tempo.
+{% endif %}
+{% if part == "ChordsFake" %}\chordmode {
+	\startChords
+	\startSong
+
+	\myMark "A"
+	\startPart
+	\repeat volta 3 {
+		g1:maj7 | c2:m7 f4:7 aes:7 | g2 e:m7 | c2:m7 f4:7 fis:dim7 | \myEndLine
+		g2:m6 e:m7.5- | a:m7.5- d:7.5- |
+	} \alternative {
+		{
+			g2:m7 c:9 | f:9 fis:9 | \myEndLineVoltaNotLast
+		}
+		{
+			g2:m7 g:m6 | d:m7.5- g:7.9- | c:m6 c:m7 | d:m7.5- g:7.9- | c:m6 fis:dim7 | \myEndLine
+			f:m7 e:7.5- | ees e:dim7 | f:m7 b:m7 | \myEndLine
+			c2:m6 s8 ges4.:7 | f2:m7 d:7.9- | \myEndLineVoltaNotLast
+		}
+		{
+			g1*2 | a2:m7 s8 bes4.:dim | \myEndLine
+			g1 | c2:m7 cis:dim7 | g1:m6 | c4:m7 c:dim cis2:dim | \myEndLine
+			bes2 bes:dim7 | a:m7.5- d:7.5- | g:m7 c4:7.9- ges:7.5+ | f2:7 d:7.5- | \myEndLine
+			g1:maj7 | c2:m7 cis:dim7 | g b:m7 | c:m7 cis:dim7 | \myEndLine
+			bes g:m6 | a2.:m7 aes4:6 | g1:maj7 | s1 | \myEndLineVoltaLast
+		}
+	}
+	\endPart
+
+	\endSong
+	\endChords
+}
+{% endif %}
+{% if part == "VoiceFake" %}{
+	\tempo "Moderato" 4 = 120
+	\time 4/4
+	\key g \major
+
+	% part "A"
+	\repeat volta 3 {
+		r8 d'4. b8 g e d | f4. ees8~ ees4 r | r8 d e d a' g b d | f4. ees8 r4 r8 d |
+		d4 g, bes r8 d16 cis | c8 d ees16 f e c d4. bes8 |
+	} \alternative {
+		{
+			a8 g4. r2 | g4. bes8~ bes4. d8 |
+		}
+		{
+			a8 g4. r4 r8 f'8~ | f4 aes,8 f g f a g~ | g4 c, ees4. r8 | r4 f8 ees f g4.~ | g4 c, ees4. r8 |
+			r8 b \tuplet 3/2 { c8 ees g } bes aes r f | g bes ees bes des c bes g | f g aes bes b cis d ees~ |
+			ees8 c ees c~ c g fis f~ | f4. fis8~ fis4. a8 |
+		}
+		{
+			a8 g~ g2. | g4 r r2 | c8 e4. e8 g4. |
+			b4 g8 d~ d4 r | c8 ees g bes a g a bes~ | bes4 g8 d~ d4 r | r8 d ees e cis e g bes~ |
+			bes4 g8 des~ des r r4 | r4 c8 d f ees d c | d bes a16 g a8 r2 | r4 r8 bes b d g bes~ |
+			bes8 g bes g~ g4 r8 d | ees g r bes a g a bes | b4 g8 d~ d4 r | r8 ees16 d ees8 e cis e g bes~ |
+			bes4. g8~ g4 r8 bes | b g e c b d d d~ | d2. r4 | r1 |
+		}
+	}
+}
+{% endif %}

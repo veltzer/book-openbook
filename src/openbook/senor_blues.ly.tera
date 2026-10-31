@@ -1,0 +1,138 @@
+{#
+default_version = "Fake"
+
+[attributes]
+title = "Señor Blues"
+style = "Jazz"
+composer = "Horace Silver"
+poet = "Horace Silver"
+piece = "Moderate Latin Tempo"
+copyright = "1956 by Ecaroh Music, Inc."
+typesetter = "Mark Veltzer <mark.veltzer@gmail.com>"
+completion = "5"
+uuid = "dcb34060-d547-11f1-8000-046874d194b7"
+structure = "ABC-Coda"
+location = "jfb:328"
+
+[[youtube]]
+id = "yKWphXfIsxs"
+remark = "Horace Silver Quintet in the original recording from 6 Pieces of Silver (1956)"
+
+[[youtube]]
+id = "VvWyZfZNkS0"
+remark = "Horace Silver with Bill Henderson in the vocal version (1958)"
+
+[versions.Fake]
+doChords = true
+doVoice = true
+doLyrics = false
+doLyricsmore = false
+doLyricsmoremore = false
+doChordBars = false
+doGuitar = false
+doExtra = false
+doPrep = false
+doOwn = false
+#}
+{% if part == "Vars" %}
+{% endif %}
+{% if part == "Doc" %}	DONE:
+	- added the meta data from the fake book.
+	- put in the tunes structure.
+	- put in the chords (fake book).
+	- put in the tune (fake book).
+	- added youtube performances.
+	TODO:
+	- add the lyrics.
+	- check the chords (fake book).
+	- check the tune (fake book).
+	- hear the tune to check that it is right and adjust the tempo.
+	- the book prints a second, lower voice (bass figure, 8bassa/15bassa) under the melody in the C part and the first two bars of the coda; only the melody is typeset here, add the bass figure as a second voice.
+	- the two endings of the coda repeat are printed in bass clef (the bass figure only); check the pitches.
+{% endif %}
+{% if part == "ChordsFake" %}\chordmode {
+	\startChords
+	\startSong
+
+	\partial 4. s4. |
+
+	\myMark "A"
+	\startPart
+	s2. | ees2.*2:m6.9 | \myEndLine
+	ees2.*4:m6.9 | \myEndLine
+	ees2.*2:m6.9 | b2.*2:7 | \myEndLine
+	b2.*2:7 | ees2.*2:m6.9 | \myEndLine
+	\endPart
+
+	\myMark "B"
+	\startPart
+	ees2.*2:m6.9 | bes2.*2:7 | \myEndLine
+	aes2.*2:7 | ees2.*2:m6.9 | \myEndLine
+	\endPart
+
+	\myMark "C"
+	\startPart
+	ees2.*5:m6.9 | \myEndLine
+	ees2.*5:m6.9 | \myEndLine
+	b2.*4:7 | ees2.*2:m6.9 | \myEndLine
+	\endPart
+
+	\myMark "Coda"
+	\startPart
+	s2.*2 |
+	\repeat volta 2 {
+		ees2.*4:m6.9 | \myEndLine
+		ees2.*7:m6.9 | \myEndLine
+		ees2.*3:m6.9 |
+	} \alternative {
+		{
+			s2.*2 | \myEndLineVoltaNotLast
+		}
+		{
+			s2.*4 | \myEndLineVoltaLast
+		}
+	}
+	\endPart
+
+	\endSong
+	\endChords
+}
+{% endif %}
+{% if part == "VoiceFake" %}{
+	\tempo "Moderato" 4. = 66
+	\time 6/8
+	\key ees \minor
+
+	\partial 4. a'8 bes4 |
+
+	% part "A"
+	\tuplet 3/2 { a16 bes a } ges8 r r ees des | ees4.~ ees4 ges8~ | ges8 r r r4 r8 |
+	r4 r8 a8 bes4 | \tuplet 3/2 { a16 bes a } ges8 r r ees des | ees2.~ | ees2. |
+	r4 r8 a4 bes8 | \tuplet 3/2 { a16 bes a } ges8 r r ees des | ees4.~ ees4 ges8~ | ges8 r r r4 r8 |
+	r4 r8 a4 bes8 | \tuplet 3/2 { a16 bes a } ges8 r r ees des | ees2.~ | ees2. |
+
+	% part "B"
+	r4^\markup { \musicglyph #"scripts.segno" } r8 bes'8 des a | r4 r8 r aes ges | aes4.~ aes4 bes8~ | bes8 r r r4 r8 |
+	r4 r8 a8 bes4 | \tuplet 3/2 { a16 bes a } ges8 r r ees des | ees2.~ | ees2.~^\markup { To Coda \musicglyph #"scripts.coda" } |
+
+	% part "C"
+	ees8 r r r4 r8 | r8 ees' ges aes ges ees | ges8 aes r r4 r8 | R2. | r4 r8 r ees ges |
+	aes8 ges ees f ees des | ees8 r r r4 r8 | R2. | R2. | r8 ees ges aes ges ees |
+	ges8 aes r r4 r8 | R2. | r4 r8 r ees ges | aes8 ges ees ges ees des | ees8 r r r4 r8 | R2.^\markup { D.S. al Coda } |
+
+	% part "Coda"
+	ees,8 r r r4 r8 | R2. |
+	\repeat volta 2 {
+		ees'2.~ | ees2. | r4 r8 r ges ees | des8 bes aes ges ees des |
+		ees2.~ | ees2. | r4 r8 r ees ges | aes8 ges ees ges ees des | ees2.~ | ees2. |
+		r4 r8 r ees ges | aes8 ges ees ges ees des | ees2.~ | ees2. |
+	} \alternative {
+		{
+			\clef bass ees,,4 bes'8 ees ees des | ees4 des8 ees des bes \clef treble |
+		}
+		{
+			\clef bass ees,4 bes'8 ees ees des | ees4 des8 ees des bes | ees,8 r r r4 r8 | R2. |
+		}
+	}
+}
+{% endif %}

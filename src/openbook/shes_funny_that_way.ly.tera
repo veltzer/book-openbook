@@ -1,0 +1,131 @@
+{#
+default_version = "Fake"
+
+[attributes]
+title = "She's Funny That Way"
+subtitle = "I Got A Woman, Crazy For Me"
+style = "Jazz"
+composer = "Neil Moret"
+poet = "Richard A. Whiting"
+piece = "Moderately"
+copyright = "1928 by Villa Moret, Inc."
+copyrightextra = "Copyright Renewed, assigned to Chappell and Co., Inc. (Intersong Music, Publisher) for the U.S.A. only"
+typesetter = "Mark Veltzer <mark.veltzer@gmail.com>"
+completion = "5"
+uuid = "08f37042-d547-11f1-8000-046874d194b7"
+structure = "AABA"
+location = "jfb:334"
+
+[[youtube]]
+id = "KYkH8-gEbpk"
+remark = "Billie Holiday as He's Funny That Way (Clef Records, 1952)"
+
+[[youtube]]
+id = "4jKciadhXWc"
+remark = "Frank Sinatra"
+
+[versions.Fake]
+doChords = true
+doVoice = true
+doLyrics = false
+doLyricsmore = false
+doLyricsmoremore = false
+doChordBars = false
+doGuitar = false
+doExtra = false
+doPrep = false
+doOwn = false
+#}
+{% if part == "Vars" %}
+{% endif %}
+{% if part == "Doc" %}	DONE:
+	- added the meta data from the fake book.
+	- put in the tunes structure.
+	- put in the chords (fake book).
+	- put in the tune (fake book).
+	- added youtube performances.
+	TODO:
+	- add the lyrics.
+	- check the chords (fake book).
+	- check the tune (fake book).
+	- hear the tune to check that it is right and adjust the tempo.
+{% endif %}
+{% if part == "ChordsFake" %}\chordmode {
+	\startChords
+	\startSong
+
+	\partial 4 bes4:7 |
+
+	\repeat volta 2 {
+
+		\myMark "A"
+		\startPart
+		ees2 bes:7 | ees bes:7 | ees bes:7 | g:m7.5- c:7 | \myEndLine
+		aes1 | aes:m | ees2 f:9 | f:m7 bes:7 | \myEndLine
+		\endPart
+
+		\myMark "A"
+		\startPart
+		ees2 bes:7 | ees bes:7 | ees bes:7 | g:m7.5- c:7 | \myEndLine
+		aes1 | aes:m | ees2 f4:m7 bes:7 | ees1 | \myEndLine
+		\endPart
+
+		\myMark "B"
+		\startPart
+		aes1*2:m | ees2 bes:7 | ees1 | \myEndLine
+		aes1:m | ees2 c:m | c:m7 f:7 | f:m7 bes:7 | \myEndLine
+		\endPart
+
+		\myMark "A"
+		\startPart
+		ees2 bes:7 | ees bes:7 | ees bes:7 | g:m7.5- c:7 | \myEndLine
+		aes1 | aes:m |
+
+	} \alternative {
+		{
+			ees2 f4:m7 bes:7 | ees2 bes:7 | \myEndLineVoltaNotLast
+		}
+		{
+			ees2 f4:m7 bes:9 | ees1 | \myEndLineVoltaLast
+		}
+	}
+	\endPart
+
+	\endSong
+	\endChords
+}
+{% endif %}
+{% if part == "VoiceFake" %}{
+	\tempo "Moderato" 4 = 160
+	\time 2/2
+	\key ees \major
+
+	\partial 4 bes'4 |
+
+	\repeat volta 2 {
+
+		% part "A"
+		c8 d c d~ d4 d | c8 d c d~ d2 | c8 d c d~ d c d4 | bes8 c bes c~ c2 |
+		f,8 g f g~ g4 g | f8 g f g~ g2 | r4 ees g8 ees g4 | bes2. bes4 |
+
+		% part "A"
+		c8 d c d~ d4 d | c8 d c d~ d2 | c8 d c d~ d c d4 | bes8 c bes c~ c2 |
+		f,8 g f g~ g4 g | f8 g f g~ g2 | r4 ees g8 ees g4 | ees1 |
+
+		% part "B"
+		ees4. f8 g4. aes8 | bes4. ces8 des4. d8 | ees2 bes8 aes4. | g1 |
+		ees4. f8 g4. aes8 | bes4. c8 d4. ees8 | f2 d8 c4. | bes2. bes4 |
+
+		% part "A"
+		c8 d c d~ d4 d | c8 d c d~ d2 | c8 d c d~ d c d4 | bes8 c bes c~ c2 |
+		f,8 g f g~ g4 g | f8 g f g~ g2 |
+	} \alternative {
+		{
+			r4 ees f8 ees f4 | ees2 r4 bes'4 |
+		}
+		{
+			r4 ees f8 ees f4 | ees1 |
+		}
+	}
+}
+{% endif %}

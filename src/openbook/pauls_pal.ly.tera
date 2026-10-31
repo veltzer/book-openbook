@@ -1,0 +1,113 @@
+{#
+default_version = "Fake"
+
+[attributes]
+title = "Paul's Pal"
+style = "Jazz"
+composer = "Sonny Rollins"
+piece = "Moderately"
+copyright = "1964 Prestige Music"
+typesetter = "Mark Veltzer <mark.veltzer@gmail.com>"
+completion = "5"
+uuid = "e4b29a50-d546-11f1-8000-046874d194b7"
+structure = "AABA"
+location = "jfb:296"
+
+[[youtube]]
+id = "15om8RwWIcQ"
+remark = "Sonny Rollins in the original recording on Tenor Madness (1956)"
+
+[[youtube]]
+id = "mMHQEhldQiw"
+remark = "Sonny Rollins, from The Complete Prestige Recordings"
+
+[versions.Fake]
+doChords = true
+doVoice = true
+doLyrics = false
+doLyricsmore = false
+doLyricsmoremore = false
+doChordBars = false
+doGuitar = false
+doExtra = false
+doPrep = false
+doOwn = false
+#}
+{% if part == "Vars" %}
+{% endif %}
+{% if part == "Doc" %}	DONE:
+	- added the meta data from the fake book.
+	- put in the tunes structure.
+	- put in the chords (fake book).
+	- put in the tune (fake book).
+	- added youtube performances.
+	TODO:
+	- check the chords (fake book).
+	- check the tune (fake book).
+	- hear the tune to check that it is right and adjust the tempo.
+	- the coda bar in the book holds only a half note (F major 7); typed as a half note followed by a half rest.
+{% endif %}
+{% if part == "ChordsFake" %}\chordmode {
+	\startChords
+	\startSong
+
+	\partial 2 s2 |
+
+	\myMark "A"
+	\startPart
+	\repeat volta 2 {
+		g2:m7 c:7 | f d:m7 | g:m7 c:7 | \myEndLine
+		f1 | b2:m7 e:7 | a:m7 d:7 | g:m7 c:7 |
+	} \alternative {
+		{
+			f d:m7 | \myEndLineVoltaNotLast
+		}
+		{
+			f d:m7 | \myEndLineVoltaLast
+		}
+	}
+	\endPart
+
+	\myMark "B"
+	\startPart
+	g2:m7 c:7 | f1 | g2:m7 c:7 | f1 | \myEndLine
+	b2:m7.5- e:7.9+ | a:m7 d:7.9+ | g1:m7 | c:7 | \myEndLine
+	\endPart
+
+	\myMark "Coda"
+	\startPart
+	f1:maj7 | \myEndLine
+	\endPart
+
+	\endSong
+	\endChords
+}
+{% endif %}
+{% if part == "VoiceFake" %}{
+	\tempo "Moderato" 4 = 140
+	\time 4/4
+	\key f \major
+
+	\partial 2 f8 g r a |
+
+	% part "A"
+	\repeat volta 2 {
+		bes4^\markup { \musicglyph #"scripts.segno" } r bes8 a r g | f4 r f8 g r a | bes4 bes8 bes bes a r g |
+		f4 r a8 bes r c | d4 r \tuplet 3/2 { d4 ees e! } | a,4 r a8 bes r a | g4 r g8 a r g^\markup { To Coda \musicglyph #"scripts.coda" } |
+	} \alternative {
+		{
+			a4 r f8 g r a |
+		}
+		{
+			a4 r8 d r e r f |
+		}
+	}
+
+	% part "B"
+	g,4 g a4. f8 | r4 r8 d' r e r f | g,4 g a8 g a c | r4 r8 c r d r e |
+	f2 g | e f | d~ d8 bes g f | e4 r f8 g r a^\markup { D.S. al Coda } |
+
+	% part "Coda"
+	a2 r2 |
+}
+{% endif %}

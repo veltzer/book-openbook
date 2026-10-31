@@ -1,0 +1,191 @@
+{#
+default_version = "Fake"
+
+[attributes]
+title = "Maple Leaf Rag"
+style = "Ragtime"
+composer = "Scott Joplin, Jule Styne, Bob Russell"
+poet = "Jule Styne, Bob Russell"
+piece = "Tempo di marcia"
+copyright = "1950, 1987 Edwin H. Morris & Company, A Division of MPL Communications, Inc."
+copyrightextra = "Renewed 1978 Edwin H. Morris & Company, A Division of MPL Communications, Inc. International Copyright Secured. All Rights Reserved."
+typesetter = "Mark Veltzer <mark.veltzer@gmail.com>"
+completion = "5"
+uuid = "47336548-d541-11f1-8000-046874d194b7"
+structure = "AABBACCDD"
+location = "jfb:243"
+
+[[youtube]]
+id = "pMAtL7n_-rc"
+remark = "Scott Joplin, the composer, on a piano roll (1916)"
+
+[[youtube]]
+id = "tx78IM7ip1U"
+remark = "Sidney Bechet and the New Orleans Feetwarmers (1932)"
+
+[versions.Fake]
+doChords = true
+doVoice = true
+doLyrics = false
+doLyricsmore = false
+doLyricsmoremore = false
+doChordBars = false
+doGuitar = false
+doExtra = false
+doPrep = false
+doOwn = false
+#}
+{% if part == "Vars" %}
+{% endif %}
+{% if part == "Doc" %}	DONE:
+	- added the meta data from the fake book.
+	- put in the tunes structure.
+	- put in the chords (fake book).
+	- put in the tune (fake book).
+	- added youtube performances.
+	TODO:
+	- check the chords (fake book).
+	- check the tune (fake book).
+	- hear the tune to check that it is right and adjust the tempo.
+	- the fake book prints Db/A in the trio (bar 14), typed as Db/Ab.
+	- the very high notes (the 8va bar in the first strain, the Eb6 and C6 notes in the second strain and the trio) were hard to read in the scan, check them.
+	- the chords printed over the last eighth of a beat (F in the second strain, F7 in the trio) are typed on the beat.
+{% endif %}
+{% if part == "ChordsFake" %}\chordmode {
+	\startChords
+	\startSong
+
+	\myMark "A"
+	\startPart
+	\repeat volta 2 {
+		aes4 a:dim7 | ees:7/bes ees:7 | aes a:dim7 | ees:7/bes ees | \myEndLine
+		fes4 ees | fes ees | r2 | r2 | \myEndLine
+		d2:dim7 | aes/ees | fes4 aes/ees | ees:7 aes | \myEndLine
+		d2:dim7 | aes/ees | fes4 aes/ees | ees:7 aes | \myEndLine
+	}
+	\endPart
+
+	\myMark "B"
+	\startPart
+	\repeat volta 2 {
+		ees4:7/bes ees | ees2 | aes | aes4 f | \myEndLine
+		ees4:7/bes ees:7 | ees:7 d:dim7 | aes2 | aes4 f | \myEndLine
+		ees4/bes ees | ees2 | aes | aes4:7 g8 ges:7 | \myEndLine
+		f2 | bes:m | bes4:9 ees:7 |
+	} \alternative {
+		{
+			aes4 a:dim | \myEndLineVoltaNotLast
+		}
+		{
+			aes4 ees:7 | \myEndLineVoltaLast
+		}
+	}
+	\endPart
+
+	\myMark "Coda"
+	\startPart
+	ees4:7 aes | \myEndLine
+	\endPart
+
+	\myMark "C"
+	\startPart
+	\repeat volta 2 {
+		aes4:7/ees aes:7 | aes2:7 | des | des | \myEndLine
+		aes2:7 | aes:7 | des | des4 f:7 | \myEndLine
+		bes2:7 | bes:7 | ees:m | ees:m | \myEndLine
+		g2:dim7 | des4/aes bes:7 | ees:7 aes:7 |
+	} \alternative {
+		{
+			des4 d:dim7 | \myEndLineVoltaNotLast
+		}
+		{
+			des2 | \myEndLineVoltaLast
+		}
+	}
+	\endPart
+
+	\myMark "D"
+	\startPart
+	\repeat volta 2 {
+		des2 | des4 b:dim | aes2 | aes4 f | \myEndLine
+		ees4:7/bes ees:7 | ees2:7 | aes | aes | \myEndLine
+		des2 | des4 d:dim7 | aes2 | aes | \myEndLine
+		des4 des:m | aes2 | bes4:7 ees:7 |
+	} \alternative {
+		{
+			aes2 | \myEndLineVoltaNotLast
+		}
+		{
+			aes8 ees:7 aes4 | \myEndLineVoltaLast
+		}
+	}
+	\endPart
+
+	\endSong
+	\endChords
+}
+{% endif %}
+{% if part == "VoiceFake" %}{
+	\tempo "Moderato" 4 = 100
+	\time 2/4
+	\key aes \major
+
+	% part "A"
+	\repeat volta 2 {
+		r16 aes' ees' aes, c ees8 g,16 | ees'16 g, bes ees~ ees4 | r16 aes, ees' aes, c ees8 g,16 | ees'16 g, bes ees~ ees8 r16 ees16 |
+		r16 aes, ces fes r16 ees r16 ees16 | r16 aes, ces fes r16 ees8 r16 | aes,,16 aes ces aes' aes, aes' ces aes' | aes,,16 aes' ces aes' \ottava #1 aes, aes' c aes' \ottava #0 |
+		aes,8 aes aes aes16 aes~ | aes16 ees f c ees f8 aes,16~ | aes16 bes ces aes bes c!8 aes16 | c16 aes bes8 aes8. aes16~ |
+		aes8 aes aes aes16 aes~ | aes16 ees f c ees f8 aes,16~ | aes16 bes ces aes bes c!8 aes16^\markup { To Coda \musicglyph #"scripts.coda" } | c16 aes bes8 aes8 r8 |
+	}
+
+	% part "B"
+	\repeat volta 2 {
+		r16 g'' ees' g, bes d!8 g,16 | des'16 g, bes c~ c ees, bes' ees, | r16 c aes' c, ees f8 c16 | aes'16 c, ees f~ f c f8 |
+		r16 ees g bes, des f8 ees16 | g16 bes, des f~ f des f8 | r16 c aes' c, ees f8 c16 | aes'16 c, ees f~ f c f8 |
+		r16 g ees' g, bes d!8 g,16 | des'16 g, bes c~ c ees, bes' ees, | r16 c aes' c, ees f8 c16 | aes'8 aes g ges |
+		r16 f, a! c f c a f | r16 f bes des f8 des | c8 r16 c16 r16 bes8 ees,16 |
+	} \alternative {
+		{
+			aes8 ees' ees ees |
+		}
+		{
+			r16 aes, c ees aes8 r8^\markup { D.C. al Coda } |
+		}
+	}
+
+	% part "Coda"
+	c,16 aes bes8 aes8 aes'8 |
+
+	% part "C"
+	\key des \major
+	\repeat volta 2 {
+		aes,8. bes16~ bes16 c bes8 | aes8. bes16~ bes c bes c | aes16 des bes des f aes, des f | bes,16 des f aes,~ aes f' des f |
+		aes,8. bes16~ bes16 c bes8 | aes8. bes16~ bes c bes c | aes16 des bes des f aes, des f | bes,16 des f aes,~ aes f' a,! f' |
+		bes,8. c16~ c16 d! c8 | bes8. c16~ c d! c d | r16 ees bes' ees, ges c8 ees,16 | bes'16 ees, ges c~ c ees, bes'8 |
+		des8 des c bes | f16 des ees ges~ ges bes, f'8 | f16 des ees f~ f c ees des~ |
+	} \alternative {
+		{
+			des16 aes'8 f16 aes f aes f |
+		}
+		{
+			des16 des f aes des8 r8 |
+		}
+	}
+
+	% part "D"
+	\key aes \major
+	\repeat volta 2 {
+		aes8 f aes f | aes8 bes16 c~ c bes aes f | ees16 f8 c16~ c4 | r16 ees f c ees f8 c16 |
+		ees16 f8 bes,16~ bes4 | r16 des f bes, des f8 c16~ | c16 ees f c ees f8 c16~ | c16 ees f c ees f8 ees16 |
+		aes8 f aes f | aes8 bes16 c~ c bes aes f | aes8 f ees16 aes8 c,16~ | c16 ees f c ees f8 aes,16~ |
+		aes16 bes aes8 aes8 bes16 aes~ | aes16 bes c aes bes c8 aes16~ | aes16 bes c aes r16 bes8 ees,16 |
+	} \alternative {
+		{
+			aes8 ees' ees ees |
+		}
+		{
+			aes,8 ees' aes r |
+		}
+	}
+}
+{% endif %}

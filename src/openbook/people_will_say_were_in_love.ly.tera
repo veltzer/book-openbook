@@ -1,0 +1,102 @@
+{#
+default_version = "Fake"
+
+[attributes]
+title = "People Will Say We're In Love"
+style = "Broadway"
+composer = "Richard Rodgers"
+poet = "Oscar Hammerstein II"
+piece = "Moderately"
+copyright = "1943 by Williamson Music Co. Copyright Renewed."
+copyrightextra = "All Rights Administered by Chappell & Co., Inc."
+typesetter = "Mark Veltzer <mark.veltzer@gmail.com>"
+completion = "5"
+uuid = "8fcbd21c-d547-11f1-8000-046874d194b7"
+structure = "AABC"
+location = "jfb:300"
+
+[[youtube]]
+id = "qROGlIIiBgk"
+remark = "Alfred Drake and Joan Roberts in the original Oklahoma cast album (1943)"
+
+[[youtube]]
+id = "O5nyDSfWEE4"
+remark = "Cannonball Adderley"
+
+[versions.Fake]
+doChords = true
+doVoice = true
+doLyrics = false
+doLyricsmore = false
+doLyricsmoremore = false
+doChordBars = false
+doGuitar = false
+doExtra = false
+doPrep = false
+doOwn = false
+#}
+{% if part == "Vars" %}
+{% endif %}
+{% if part == "Doc" %}	DONE:
+	- added the meta data from the fake book.
+	- put in the tunes structure.
+	- put in the chords (fake book).
+	- put in the tune (fake book).
+	- added youtube performances.
+	TODO:
+	- add the lyrics.
+	- check the chords (fake book).
+	- check the tune (fake book).
+	- hear the tune to check that it is right and adjust the tempo.
+	- bar 14: the last note has no accidental in the book; typed as a flat (carried from the start of the bar, fits the G7b9).
+{% endif %}
+{% if part == "ChordsFake" %}\chordmode {
+	\startChords
+	\startSong
+
+	\myMark "A"
+	\startPart
+	c1 | c1 | c1:maj7 | d2:m7 g:7 | c1 | c2/e ees:dim7 | g1:7/d | g1:7 | \myEndLine
+	c1 | a1:m7 | d1:9 | d1:9 | d1:m7 | g1:7.9- | c2 cis:dim7 | d2:m7 g:7 | \myEndLine
+	\endPart
+
+	\myMark "A"
+	\startPart
+	c1 | c1 | c1:maj7 | d2:m7 g:7 | c1 | c2/e ees:dim7 | g1:7/d | g1:7 | \myEndLine
+	c1 | a1:m7 | d1:9 | d1:9 | d1:m7 | g1:7 | c2 f:7 | c1:6 | \myEndLine
+	\endPart
+
+	\myMark "B"
+	\startPart
+	c2:m7 f:7 | c2:m7 f:7.9- | bes1 | bes1 | b2:m7.5- e:7 | a1:7 | d1:7 | g1:7 | \myEndLine
+	\endPart
+
+	\myMark "C"
+	\startPart
+	c1 | a1:m7 | d1:7 | d1:7 | c1/g | g1:7 | c1 | c1 | \myEndLine
+	\endPart
+
+	\endSong
+	\endChords
+}
+{% endif %}
+{% if part == "VoiceFake" %}{
+	\tempo "Moderato" 4 = 120
+	\time 4/4
+	\key c \major
+
+	% part "A"
+	c2 g'~ | g2. a4 | b e, e2~ | e2. r4 | c2 g'~ | g2. a4 | f b, b2~ | b2. r4 |
+	c2 g'~ | g2. a8 b | c4 fis, fis2~ | fis2. r4 | a2 gis4 a | aes2 g4 aes | g1~ | g2. r4 |
+
+	% part "A"
+	c,2 g'~ | g2. a4 | b e, e2~ | e2. r4 | c2 g'~ | g2. a4 | f b, b2~ | b2. r4 |
+	c2 g'~ | g2. a8 b | c4 fis, fis2~ | fis2. r4 | a2 gis4 a | b2 ais4 b | c1~ | c2. r4 |
+
+	% part "B"
+	c2 f,~ | f2. ges4 | ges f f2~ | f2. r4 | f4 e e2 | g2 f4 e | d1~ | d2. r4 |
+
+	% part "C"
+	c2 g'~ | g2. a8 b | c4 d d2~ | d2. r4 | e2 dis4 e | d2 cis4 d | c!1~ | c2. r4 |
+}
+{% endif %}

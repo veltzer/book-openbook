@@ -1,0 +1,94 @@
+{#
+default_version = "Fake"
+
+[attributes]
+title = "Raincheck"
+style = "Jazz"
+composer = "Billy Strayhorn"
+piece = "Medium Swing"
+copyright = "1942 by Temp Music, Inc."
+copyrightextra = "Copyright renewed and assigned to Tempo Music, Inc."
+typesetter = "Mark Veltzer <mark.veltzer@gmail.com>"
+completion = "5"
+uuid = "ffe7895c-d546-11f1-8000-046874d194b7"
+structure = "AA'"
+location = "jfb:312"
+
+[[youtube]]
+id = "cIOJhT9ZVGg"
+remark = "Duke Ellington and his orchestra"
+
+[[youtube]]
+id = "iGWF0F6-1mI"
+remark = "Jazz at Lincoln Center Orchestra (2002)"
+
+[versions.Fake]
+doChords = true
+doVoice = true
+doLyrics = false
+doLyricsmore = false
+doLyricsmoremore = false
+doChordBars = false
+doGuitar = false
+doExtra = false
+doPrep = false
+doOwn = false
+#}
+{% if part == "Vars" %}
+{% endif %}
+{% if part == "Doc" %}	DONE:
+	- added the meta data from the fake book.
+	- put in the tunes structure.
+	- put in the chords (fake book).
+	- put in the tune (fake book).
+	- added youtube performances.
+	TODO:
+	- check the chords (fake book).
+	- check the tune (fake book).
+	- hear the tune to check that it is right and adjust the tempo.
+	- bar 13: the last triplet note has no accidental in the fake book (F natural under F#7); typed as F sharp following the harmony, check it.
+{% endif %}
+{% if part == "ChordsFake" %}\chordmode {
+	\startChords
+	\startSong
+
+	\myMark "A"
+	\startPart
+	f2 g:m7 | g:7/gis f:/a | bes:6 a:m7 | e1:7/gis | \myEndLine
+	f2 g:m7 | g:7/gis f:/a | bes4.:6 f8*5:6 | f8 g4:m7 g:7.9- c4.:9 | \myEndLine
+	\endPart
+
+	\myMark "A"
+	\startPart
+	f2 g:m7 | g:7/gis f:/a | bes:6 a:m7 | b4.:m9 b4:7.9- e4.:9 | \myEndLine
+	cis2:m7 fis:7 | b:m7 e:9 | ees:9.11+ d:9 | des:9.11+ c:7.9- | \myEndLine
+	\endPart
+
+	\myMark "Coda"
+	\startPart
+	f2 fis:m7 | f1:7 | bes2:6 d:9 | des:9.11+ c:7.9- | \myEndLine
+	f2 g:m7 | g:7/gis f:6/a | bes4.:6 f8*5:6 | ges4.:7.9+ f8*3 f4:6.9 | \myEndLine
+	\endPart
+
+	\endSong
+	\endChords
+}
+{% endif %}
+{% if part == "VoiceFake" %}{
+	\tempo "Moderato" 2 = 100
+	\time 2/2
+	\key f \major
+
+	% part "A"
+	c'4. f8 r d r bes | g4. c8 r a r f | d4. e8~ e2~ | e2. r4 |
+	c'4. f8 r f d bes | g4. c8 r c a f | d4. f8 r2 | c'8 bes4 aes8~ aes a4.^\markup { To Coda \musicglyph #"scripts.coda" } |
+
+	% part "A"
+	c4. f8 r d r bes | g4. c8 r a r f | d4. e8~ e4 r | e'8 d4 c8~ c cis4. |
+	r4 e, \tuplet 3/2 { cis'4 e, fis } | \tuplet 3/2 { fis4 g gis } cis b | a1 | g2. r4^\markup { D.C. al Coda } |
+
+	% part "Coda"
+	r4^\markup { \musicglyph #"scripts.coda" } a \tuplet 3/2 { a g a } | f2 \tuplet 3/2 { g4 a bes } | c4 d \tuplet 3/2 { a g d' } | g2 a |
+	c,4. f8 r d r bes | g4. c8 r a r f | d4. f8 r d \tuplet 3/2 { e f g } | a4. f8 r4 f\fermata |
+}
+{% endif %}

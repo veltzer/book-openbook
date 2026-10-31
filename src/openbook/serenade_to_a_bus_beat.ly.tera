@@ -1,0 +1,116 @@
+{#
+default_version = "Fake"
+
+[attributes]
+title = "Serenade To A Bus Beat"
+style = "Jazz"
+composer = "Clark Terry"
+piece = "Medium Swing"
+copyright = "1958 (Renewed 1986) Orpheum Music"
+typesetter = "Mark Veltzer <mark.veltzer@gmail.com>"
+completion = "5"
+uuid = "130de952-d549-11f1-8000-046874d194b7"
+structure = "AABA"
+location = "jfb:331"
+
+[[youtube]]
+id = "Ljz07WWmS44"
+remark = "Clark Terry Quintet in the original recording (1957), released as Serenade To A Bus Seat"
+
+[[youtube]]
+id = "du_DunK9G1Q"
+remark = "The Sundance Square Big Band"
+
+[versions.Fake]
+doChords = true
+doVoice = true
+doLyrics = false
+doLyricsmore = false
+doLyricsmoremore = false
+doChordBars = false
+doGuitar = false
+doExtra = false
+doPrep = false
+doOwn = false
+#}
+{% if part == "Vars" %}
+{% endif %}
+{% if part == "Doc" %}	DONE:
+	- added the meta data from the fake book.
+	- put in the tunes structure.
+	- put in the chords (fake book).
+	- put in the tune (fake book).
+	- added youtube performances.
+	TODO:
+	- check the chords (fake book).
+	- check the tune (fake book).
+	- hear the tune to check that it is right and adjust the tempo.
+	- the tune is better known as Serenade To A Bus Seat; the fake book prints Bus Beat and that is the title used here.
+	- the last bar is incomplete in the book (it completes the pickup); it is typeset as printed.
+{% endif %}
+{% if part == "ChordsFake" %}\chordmode {
+	\startChords
+	\startSong
+
+	\partial 4. s4. |
+
+	\myMark "A"
+	\startPart
+	\repeat volta 2 {
+		bes2 b:dim7 | a:m7.5- d:7 | g:m7 c:7 | f f:7 | \myEndLine
+		bes2 b:dim7 | a:m7.5- d:7 | g:m7 ges:9 |
+	} \alternative {
+		{
+			f2 f:7 | \myEndLineVoltaNotLast
+		}
+		{
+			f1 | \myEndLineVoltaLast
+		}
+	}
+	\endPart
+
+	\myMark "B"
+	\startPart
+	f1*2:9 | bes2:maj7 c:m7 | cis:dim7 d:m7 | \myEndLine
+	g1*2:7 | c1:7 | c2:7 f:7 | \myEndLine
+	\endPart
+
+	\myMark "A"
+	\startPart
+	bes2 b:dim7 | a:m7.5- d:7 | g:m7 c:7 | f f:7 | \myEndLine
+	bes2 b:dim7 | a:m7 d:7 | g:m7 ges:9 | f2 s8 \myEndLine
+	\endPart
+
+	\endSong
+	\endChords
+}
+{% endif %}
+{% if part == "VoiceFake" %}{
+	\tempo "Moderato" 4 = 140
+	\time 4/4
+	\key f \major
+
+	\partial 4. cis'8 d e |
+
+	% part "A"
+	\repeat volta 2 {
+		f4. aes,8~ aes b e d | c8 d ees d~ d c4 ces8 | bes8 c! cis b c! bes g gis | a8 c, d ees~ ees cis' d e! |
+		f4. aes,8~ aes b e d | c8 d ees d~ d4 c8 ces | bes8 d16 f a8. aes16~ aes8 e16 c bes8. a!16 |
+	} \alternative {
+		{
+			r2 r8 cis d e |
+		}
+		{
+			r2 r8 d4 des8 |
+		}
+	}
+
+	% part "B"
+	c8 bes g gis a g! f e | ees8 f g a d c a f | d8 cis d f e f bes a | bes8 d cis d f4 r |
+	e2 b4 g8 ges | f8 g a b e f d e | c4 r r c8 cis | d8 bes a g r cis d e |
+
+	% part "A"
+	f4. aes,8~ aes b e d | c8 d ees d~ d c4 ces8 | bes8 c! cis b c! bes g gis | a8 c, d ees~ ees cis' d e! |
+	f4. aes,8~ aes b e d | c8 d ees d~ d c4 ces8 | bes8 d16 f a8. aes16~ aes8 e16 c bes8. a!16 | r2 r8
+}
+{% endif %}

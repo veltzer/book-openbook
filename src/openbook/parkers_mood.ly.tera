@@ -1,0 +1,90 @@
+{#
+default_version = "Fake"
+
+[attributes]
+title = "Parker's Mood"
+style = "Blues"
+composer = "Charlie Parker"
+piece = "Blues"
+copyright = "1948 ATLANTIC MUSIC CORP."
+copyrightextra = "Renewed and assigned 1976 ATLANTIC MUSIC CORP."
+typesetter = "Mark Veltzer <mark.veltzer@gmail.com>"
+completion = "3"
+uuid = "a2529350-d540-11f1-8000-046874d194b7"
+structure = "Blues"
+location = "jfb:294"
+
+[[youtube]]
+id = "dk75Du_27-M"
+remark = "Charlie Parker in the original recording (1948)"
+
+[[youtube]]
+id = "A1pYGPFFoYI"
+remark = "King Pleasure"
+
+[versions.Fake]
+doChords = true
+doVoice = true
+doLyrics = false
+doLyricsmore = false
+doLyricsmoremore = false
+doChordBars = false
+doGuitar = false
+doExtra = false
+doPrep = false
+doOwn = false
+#}
+{% if part == "Vars" %}
+{% endif %}
+{% if part == "Doc" %}	DONE:
+	- added the meta data from the fake book.
+	- put in the tunes structure.
+	- put in the chords (fake book).
+	- put in the tune (fake book).
+	- added youtube performances.
+	TODO:
+	- check the chords (fake book).
+	- check the tune (fake book).
+	- hear the tune to check that it is right and adjust the tempo.
+	- the scan of the fast runs (bars 5-12) is small and the ledger lines below the staff are partly missing;
+	check the low notes, the beam counts and the rhythm of the 32nd note groups against the recording.
+	- bar 10 and bar 11: the notes right after the 32nd note triplets are read as 16ths so that the
+	bars add up; check.
+{% endif %}
+{% if part == "ChordsFake" %}\chordmode {
+	\startChords
+	\startSong
+
+	\myMark "A"
+	\startPart
+	\repeat volta 2 {
+		bes1:7 | ees:7 | bes:7 | bes2:7 f4:m7 bes:7 | \myEndLine
+		ees1:7 | ees:7 | \myEndLine
+		bes1 | bes2:7 des4:m7 ges:7 | c1:m7 | c2:m7 f:7 | \myEndLine
+		bes1:7 | c2:m7 f:7 | \myEndLine
+	}
+	\endPart
+
+	\endSong
+	\endChords
+}
+{% endif %}
+{% if part == "VoiceFake" %}{
+	\tempo "Adagio" 4 = 60
+	\time 4/4
+	\key bes \major
+
+	% part "A"
+	\repeat volta 2 {
+		r8 bes8 \tuplet 3/2 { d8 f g } \tuplet 3/2 { bes8 bes, d~ } d8 bes | \tuplet 3/2 { c'8 c c } f,16 ees8.~ ees4 r4 |
+		r8 bes8 \tuplet 3/2 { d8 f g } \tuplet 3/2 { bes8 bes, d~ } d4 | r8 f8 f'8 f16 f d16 aes8.~ aes4 |
+		r4 \tuplet 3/2 { c32 des c } bes16 aes f ees8 bes \tuplet 3/2 { c'32 des c } bes16 aes f |
+		\tuplet 3/2 { c'16 des c } bes8 aes16 f ees bes \tuplet 3/2 { c'16 des c } bes8 aes16 f ees bes |
+		d16 f f g \tuplet 3/2 { d8 bes d } r4 r8 a16 bes | c32 bes a bes d ees e f r4 aes32 g f ees d c b c f32 a g f ees8~ |
+		ees4 r4 r8 \tuplet 3/2 { c16 ees g } \tuplet 5/4 { bes16 d des c b } |
+		\tuplet 3/2 { bes32 c bes } \tuplet 3/2 { a32 bes a } f8 g4 r8. ees16 \tuplet 3/2 { f32 g f } d16 \tuplet 3/2 { ees32 f ees } c16 |
+		\tuplet 3/2 { d32 ees d } bes16 \tuplet 3/2 { c32 d c } a16 bes16 f8. r4 r16 ees'16 \tuplet 3/2 { ges16 aes ges } |
+		f16 ees d bes~ bes4 r2 |
+	}
+}
+{% endif %}

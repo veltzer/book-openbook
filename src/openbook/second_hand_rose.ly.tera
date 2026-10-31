@@ -1,0 +1,139 @@
+{#
+default_version = "Fake"
+
+[attributes]
+title = "Second Hand Rose"
+style = "Broadway"
+composer = "James F. Hanley"
+poet = "Grant Clarke"
+piece = "Moderatly, not too slowly"
+copyright = "1921 Shapiro, Bernstein & Co., Inc."
+copyrightextra = "Copyright renewed, extended term of Copyright deriving from James Hanley assigned and effective January 4, 1980 to Herald Square Music, Inc."
+typesetter = "Mark Veltzer <mark.veltzer@gmail.com>"
+completion = "5"
+uuid = "47d139ac-d547-11f1-8000-046874d194b7"
+structure = "ABACA"
+location = "jfb:325"
+
+[[youtube]]
+id = "7hENLRTHM1k"
+remark = "Fanny Brice in the original recording (1921)"
+
+[[youtube]]
+id = "E5yoZiT97Vw"
+remark = "Barbra Streisand (1965)"
+
+[versions.Fake]
+doChords = true
+doVoice = true
+doLyrics = false
+doLyricsmore = false
+doLyricsmoremore = false
+doChordBars = false
+doGuitar = false
+doExtra = false
+doPrep = false
+doOwn = false
+#}
+{% if part == "Vars" %}
+{% endif %}
+{% if part == "Doc" %}	DONE:
+	- added the meta data from the fake book.
+	- put in the tunes structure.
+	- put in the chords (fake book).
+	- put in the tune (fake book).
+	- added youtube performances.
+	TODO:
+	- check the chords (fake book).
+	- check the tune (fake book).
+	- hear the tune to check that it is right and adjust the tempo.
+	- the fake book splits notes for the second verse (bar 6: two quarters instead of a half, bar 28: a pickup note instead of the rest), only the first verse rhythm is typed in.
+	- the exact beat of the C7b9 in bar 28 and of the Bdim7 in the first ending is hard to read in the fake book.
+	- add the lyrics.
+{% endif %}
+{% if part == "ChordsFake" %}\chordmode {
+	\startChords
+	\startSong
+
+	\partial 4. s4. |
+
+	\myMark "A"
+	\startPart
+	\repeat volta 2 {
+		f1*2 | g1*2:7 | \myEndLine
+		c1*2:7 | f1*2 | \myEndLine
+		\endPart
+
+		\myMark "B"
+		\startPart
+		f1 | f2. fis4:dim7 | g1:m7 | c1:7 | \myEndLine
+		c1*2:7 | f1*2:6 | \myEndLine
+		\endPart
+
+		\myMark "A"
+		\startPart
+		f1*2 | g1*2:7 | \myEndLine
+		c2:m7 f:7 | c2:m7 f:7.5+ | bes1*2:6 | \myEndLine
+		\endPart
+
+		\myMark "C"
+		\startPart
+		g2:m c:m6 | g2:m c:m6 | g2:m c4:m6 g:m | g2:m c:7.9- | \myEndLine
+		f2 bes:m6 | f2 bes:m6 | f2 bes4:m6 g:7 | g1:7 | \myEndLine
+		\endPart
+
+		\myMark "A"
+		\startPart
+		f1*2 | g1*2:7 | \myEndLine
+		g1:m7 | c2:9 c:7.9- | \myEndLine
+	} \alternative {
+		{
+			f2 b:dim7 | c4:7 r2. | \myEndLineVoltaNotLast
+		}
+		{
+			f1*2 | \myEndLineVoltaLast
+		}
+	}
+	\endPart
+
+	\endSong
+	\endChords
+}
+{% endif %}
+{% if part == "VoiceFake" %}{
+	\tempo "Moderato" 4 = 120
+	\time 4/4
+	\key f \major
+
+	\partial 4. c8 f a |
+
+	% part "A"
+	\repeat volta 2 {
+		c4 b bes a~ | a1 | a4 aes g f~ | f1 |
+		f4 e dis e~ | e2 bes'2 | bes4 a gis a~ | a1 |
+
+		% part "B"
+		c,4 d f d | c d f a | c1 | e,1 |
+		d4 e g e | d e g bes | d1 | a1 |
+
+		% part "A"
+		c4 b bes a~ | a c, d f | a aes g f~ | f2. f4 |
+		g4 f a f | g f a f | g1~ | g2. r4 |
+
+		% part "C"
+		bes4 g a g | bes g a g | bes g a g~ | g2. r4 |
+		a4 f g f | a f g f | a f g f~ | f2. r4 |
+
+		% part "A"
+		c'4 b bes a~ | a c, d f | a aes g f~ | f2. f4 |
+		d'2 d,2 | e4 a2. |
+	} \alternative {
+		{
+			f1 | r4 c f a |
+		}
+		{
+			f1~ | f2. r4 |
+		}
+	}
+}
+{% endif %}

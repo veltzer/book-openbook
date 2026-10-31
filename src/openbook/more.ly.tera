@@ -1,0 +1,126 @@
+{#
+default_version = "Fake"
+
+[attributes]
+title = "More"
+subtitle = "(Theme From Mondo Cane)"
+style = "Jazz"
+composer = "Riz Ortolani, Nino Oliviero"
+poet = "Norman Newell"
+piece = "Smoothly"
+copyright = "1962, 1963, 1965 by Ed. C.A.M. spa Roma"
+copyrightextra = "Selling Agent U.S. and Canada: Edward B. Marks Music Company"
+typesetter = "Mark Veltzer <mark.veltzer@gmail.com>"
+completion = "5"
+uuid = "319369b0-d521-11f1-8000-046874d194b7"
+structure = "AABAC"
+location = "jfb:258"
+
+[[youtube]]
+id = "M-I5L-0oJSM"
+remark = "Kai Winding in the hit instrumental recording (1963)"
+
+[[youtube]]
+id = "ZPPBlVPThL8"
+remark = "Frank Sinatra with Count Basie (1964)"
+
+[versions.Fake]
+doChords = true
+doVoice = true
+doLyrics = false
+doLyricsmore = false
+doLyricsmoremore = false
+doChordBars = false
+doGuitar = false
+doExtra = false
+doPrep = false
+doOwn = false
+#}
+{% if part == "Vars" %}
+{% endif %}
+{% if part == "Doc" %}	DONE:
+	- added the meta data from the fake book.
+	- put in the tunes structure.
+	- put in the chords (fake book).
+	- put in the tune (fake book).
+	- added youtube performances.
+	TODO:
+	- check the chords (fake book).
+	- check the tune (fake book).
+	- hear the tune to check that it is right and adjust the tempo.
+	- add the lyrics.
+{% endif %}
+{% if part == "ChordsFake" %}\chordmode {
+	\startChords
+	\startSong
+
+	\repeat volta 2 {
+
+		\myMark "A"
+		\startPart
+		g1:maj7 | e1:m7 | a1:m7 | d1:9 | \myEndLine
+		g1:maj7 | e1:m7 | a1:m7 |
+	} \alternative {
+		{
+			d1:9 | \myEndLineVoltaNotLast
+		}
+		{
+			fis2:m7 b:7 | \myEndLineVoltaLast
+		}
+	}
+	\endPart
+
+	\myMark "B"
+	\startPart
+	e1:m | e1:m7+/dis | e1:m7/d | e1:m6/cis | \myEndLine
+	a1:m7/c | a1:7 | a1:m7 | d1:7 | \myEndLine
+	\endPart
+
+	\myMark "A"
+	\startPart
+	g1:maj7 | e1:m7 | a1:m7 | d1:9 | \myEndLine
+	g1:maj7 | e1:m7 | a1:m7 | fis2:m7 b:7 | \myEndLine
+	\endPart
+
+	\myMark "C"
+	\startPart
+	e1:m | e1:m7+/dis | e1:m7/d | e1:m6/cis | \myEndLine
+	a1:m7/c | a2:m7 d:7 | g1 | g1 | \myEndLine
+	\endPart
+
+	\endSong
+	\endChords
+}
+{% endif %}
+{% if part == "VoiceFake" %}{
+	\tempo "Andante" 2 = 60
+	\time 2/2
+	\key g \major
+
+	\repeat volta 2 {
+
+		% part "A"
+		d2. e8 fis | g4 fis g b | c,2. b'4 | a1 |
+		b,2. c8 d | e4 dis e g | a,2. g'4 |
+	} \alternative {
+		{
+			fis1 |
+		}
+		{
+			fis1 |
+		}
+	}
+
+	% part "B"
+	g2. fis8 g | a4 g g fis | g2. fis8 g | a4 g g fis |
+	g2. fis8 g | e'4 b a g | a4 g g fis | fis4 e e ees |
+
+	% part "A"
+	d2. e!8 fis | g4 fis g b | c,2. b'4 | a1 |
+	b,2. c8 d | e4 dis e g | a,2. g'4 | fis1 |
+
+	% part "C"
+	g2. fis8 g | a4 g g fis | g2. fis8 g | a4 g g fis |
+	g2. fis8 g | a4 g g fis | g1~ | g2. r4 |
+}
+{% endif %}

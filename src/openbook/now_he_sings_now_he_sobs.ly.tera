@@ -1,0 +1,170 @@
+{#
+default_version = "Fake"
+
+[attributes]
+title = "Now He Sings, Now He Sobs"
+style = "Jazz"
+composer = "Chick Corea"
+piece = "March-Like"
+copyright = "1968 Litha Music"
+typesetter = "Mark Veltzer <mark.veltzer@gmail.com>"
+completion = "3"
+uuid = "4151608c-d521-11f1-8000-046874d194b7"
+structure = "Intro-AB-Coda"
+location = "jfb:278"
+
+[[youtube]]
+id = "9AFhQ1-Vuhc"
+remark = "Chick Corea with Miroslav Vitous and Roy Haynes in the original recording (1968)"
+
+[[youtube]]
+id = "frqt_gWM-4g"
+remark = "Chick Corea live"
+
+[versions.Fake]
+doChords = true
+doVoice = true
+doLyrics = false
+doLyricsmore = false
+doLyricsmoremore = false
+doChordBars = false
+doGuitar = false
+doExtra = false
+doPrep = false
+doOwn = false
+#}
+{% if part == "Vars" %}
+{% endif %}
+{% if part == "Doc" %}	DONE:
+	- added the meta data from the fake book.
+	- put in the tunes structure.
+	- put in the chords (fake book).
+	- put in the tune (fake book).
+	- added youtube performances.
+	TODO:
+	- check the chords (fake book).
+	- check the tune (fake book).
+	- hear the tune to check that it is right and adjust the tempo.
+	- the book changes to a jazz waltz (3/4) after the march-like intro; the change is marked with a text markup only, adjust the tempo there.
+	- the book writes C(no 3rd), here c:5, and B(add 9)(no 3), here b:sus2.
+	- the final vamp (6 times) is printed in bass clef with two voices in the book; check the pitches, the scan is small there.
+	- the placement of the two chords in the 3/4 bars (dotted quarter each) is approximate in the book.
+{% endif %}
+{% if part == "ChordsFake" %}\chordmode {
+	\startChords
+	\startSong
+
+	\myMark "Intro"
+	\startPart
+	r1 | r2 g2/aes | g1/aes | g2./aes b4:sus4 | b1*2:sus4 | \myEndLine
+	c1:maj7 | f:maj7 | e1*2:m7 | d4:maj7 b:maj7 aes:maj7 ges:13/e | c1*2:maj7 | \myEndLine
+	r1 | r2 g2/aes | g1/aes | g2./aes b4:sus4 | \myEndLine
+	\endPart
+
+	\myMark "Instr"
+	\startPart
+	b2.:sus4 | c:maj7 | b:m7+ | c:maj7 | \myEndLine
+	b:m7+ | c:maj7 | b:m7+ | c:maj7 | \myEndLine
+	\endPart
+
+	\myMark "A"
+	\startPart
+	b2.:m7+ | c:maj7 | b:m7+ | c:maj7 | b4.:sus4 bes:sus4 | \myEndLine
+	a:sus4 aes:sus4 | g:sus4 fis:sus4 | s2. | b2.:m7+ | c:maj7 | b:m7+ | c:maj7 | b4.:m aes | \myEndLine
+	f4. d | c:5 b:sus4 | s2. | \myEndLine
+	\endPart
+
+	\myMark "B"
+	\startPart
+	b4.:m7 a:maj7 | g:m7 f:maj7 | ees:m7 des:maj7 | \myEndLine
+	fis:m7 aes:m7 | aes2.:7 | a:7 | aes:7 | a:7 | b:7 | \myEndLine
+	aes:7 | f:7 | fis:7.5+.9+ | \myEndLine
+	\endPart
+
+	\myMark "Instr"
+	\startPart
+	b2.:m | c:maj7 | b:m | c:maj7 | b:m | c:maj7 | \myEndLine
+	b:m | c:maj7/fis | \myEndLine
+	\endPart
+
+	\myMark "Coda"
+	\startPart
+	b2.:m | c:maj7 | b:m | c:maj7 | b:m | \myEndLine
+	c:maj7 | b:m | c2:maj7 b4:sus2 | \myEndLine
+	\repeat volta 6 {
+		b2.*3:sus2 |
+	} \alternative {
+		{
+			s2. | \myEndLineVoltaNotLast
+		}
+		{
+			s2. | \myEndLineVoltaLast
+		}
+	}
+	\endPart
+
+	\endSong
+	\endChords
+}
+{% endif %}
+{% if part == "VoiceFake" %}{
+	\tempo "Moderato" 4 = 120
+	\time 4/4
+	\key d \major
+
+	% part "Intro"
+	b'4 g \grace { c!16 cis } d4. cis16 b | cis4 g b2~ | b1~ | b4. g16 e fis4 b,4 | b4 b2.~ | b2 b4. b'8 |
+	g'4. fis16 e fis4. b,8 | e4. d16 c! d4 g,4~ | g1~ | g1 | cis'4 dis g, bes | g1~ | g1 |
+	b,4 g \grace { c!16 cis } d4. cis16 b | cis4 g b2~ | b1~ | b4. g16 e fis4 b,4 |
+
+	% part "Instr"
+	\time 3/4
+	b4^\markup { Jazz Waltz } b2 |
+	\improvisationOn
+	b'4^\markup { Fill } b b | b b b | b b b |
+	b4 b b | b b b | b b b | b b
+	\improvisationOff
+	cis'8 d |
+
+	% part "A"
+	cis4.^\markup { \musicglyph #"scripts.segno" } b4.~ | b4 a e | e8 fis~ fis2~ | fis2 r8 e | d4 b8 aes4 d8 |
+	b4 aes8 ges4 d8 | a'4. fis4.~ | fis2 cis''8 d | cis4. b4.~ | b4 a e | e8 fis~ fis2~ | fis2 r8 e | d4 b8 aes4 d8 |
+	b4 gis8 e4 b8 | d4. b8~ b4~ | b2 b8 b |
+
+	% part "B"
+	d8 b d e~ \tuplet 3/2 { e cis e } | f!8 d f g~ \tuplet 3/2 { g e g } | aes8 f! aes bes~ \tuplet 3/2 { bes g bes } |
+	b!8 gis b des~ \tuplet 3/2 { des bes des } | d2~ \tuplet 3/2 { d8 b! d } | b4 b2 | r8 d'8 r8 b4 g8 | \tuplet 3/2 { f16 g f } e8 f4 e | r8 d'8 r8 c!4. |
+	b4. a | gis4. fis | \tuplet 3/2 { ais8 a! g } \tuplet 3/2 { a g fis } \tuplet 3/2 { g fis e^\markup { To Coda \musicglyph #"scripts.coda" } } |
+
+	% part "Instr"
+	fis8 b,8~ b2 |
+	\improvisationOn
+	b4^\markup { Fill } b b | b b b | b b b | b b b |
+	b4 b b | b b b | b b
+	\improvisationOff
+	cis'8 d^\markup { D.S. al Coda } |
+
+	% part "Coda"
+	fis,8^\markup { \musicglyph #"scripts.coda" } b,8~ b2 |
+	\improvisationOn
+	b4^\markup { Fill } b b | b b b | b b b | b b b |
+	b4 b b | b b b |
+	\clef bass
+	d,,4 d
+	\improvisationOff
+	\fixed c { <fis b cis'>4~ } |
+	\repeat volta 6 {
+		<<
+			\fixed c { \voiceOne <fis b cis'>2.~ | <fis b cis'>2.~ | <fis b cis'>2.~ | }
+			\new Voice \fixed c { \voiceTwo r8 fis,8 gis, b, cis4 | g,!8 f,! bes, c~ c e, | d,8 g, a,4 fis,8 b,, | }
+		>>
+	} \alternative {
+		{
+			<< \fixed c { \voiceOne <fis b cis'>2 <fis b cis'>4 } \new Voice \fixed c { \voiceTwo b,,4 b,,2 } >> \oneVoice |
+		}
+		{
+			<< \fixed c { \voiceOne <fis b cis'>4 <fis b cis'>2\fermata } \new Voice \fixed c { \voiceTwo b,,4 b,,2 } >> \oneVoice |
+		}
+	}
+}
+{% endif %}

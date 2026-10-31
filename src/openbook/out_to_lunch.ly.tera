@@ -1,0 +1,79 @@
+{#
+default_version = "Fake"
+
+[attributes]
+title = "Out To Lunch"
+style = "Jazz"
+composer = "Eric Dolphy"
+piece = "Stalking"
+copyright = "1964 by MJQ Music, Inc."
+typesetter = "Mark Veltzer <mark.veltzer@gmail.com>"
+completion = "3"
+uuid = "a24fa758-d540-11f1-8000-046874d194b7"
+structure = "A"
+location = "jfb:294"
+
+[[youtube]]
+id = "gzBpK1GcwdQ"
+remark = "Eric Dolphy in the original recording from Out To Lunch! (1964)"
+
+[[youtube]]
+id = "pTHrlLINBl8"
+remark = "Bao Long and band, a tribute to Eric Dolphy (2023)"
+
+[versions.Fake]
+doChords = false
+doVoice = true
+doLyrics = false
+doLyricsmore = false
+doLyricsmoremore = false
+doChordBars = false
+doGuitar = false
+doExtra = false
+doPrep = false
+doOwn = false
+#}
+{% if part == "Vars" %}
+{% endif %}
+{% if part == "Doc" %}	DONE:
+	- added the meta data from the fake book.
+	- put in the tunes structure.
+	- put in the tune (fake book).
+	- added youtube performances.
+	TODO:
+	- add the chords (the fake book prints none and no other book in the archive has this tune).
+	- check the tune (fake book).
+	- hear the tune to check that it is right and adjust the tempo.
+	- bar 6: the A and B quarter notes have no accidentals, so by the notation rule they carry the
+	A flat and B flat from earlier in the bar; check against the recording.
+	- bar 3: the second triplet ends on an E with no accidental after an E flat earlier in the bar,
+	so it is typed as E flat; check against the recording.
+{% endif %}
+{% if part == "ChordsFake" %}\chordmode {
+	\startChords
+	\startSong
+
+	\myMark "A"
+	\startPart
+	\repeat volta 2 {
+		s4*5 | s4*5 | s4*5 | \myEndLine
+		s4*5 | s4*5 | s4*5 | s4*5 | s4*5 | \myEndLine
+	}
+	\endPart
+
+	\endSong
+	\endChords
+}
+{% endif %}
+{% if part == "VoiceFake" %}{
+	\tempo "Moderato" 4 = 120
+	\time 5/4
+	\key c \major
+
+	% part "A"
+	\repeat volta 2 {
+		r8 d' c a f d bes'4 aes~ | aes4 bes8 f ges bes d f c aes' | \tuplet 3/2 { d,!8 f ees } \tuplet 3/2 { d c ees } \tuplet 3/2 { d c bes } \tuplet 3/2 { d aes g } ges4 |
+		des'1~ des4 | des2. \tuplet 3/2 { r8 r16 bes8 aes16 } bes8 ges | aes8 bes g e des4 aes' bes | r8 ges4 des8 ces4 bes'2~ | bes2. r2 |
+	}
+}
+{% endif %}

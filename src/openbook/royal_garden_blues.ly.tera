@@ -1,0 +1,143 @@
+{#
+default_version = "Fake"
+
+[attributes]
+title = "Royal Garden Blues"
+style = "Dixieland"
+composer = "Clarence Williams, Spencer Williams"
+poet = "Clarence Williams, Spencer Williams"
+piece = "Blues Tempo"
+copyright = "1919 Shapiro, Bernstein & Co., Inc. New York. Copyright Renewed."
+typesetter = "Mark Veltzer <mark.veltzer@gmail.com>"
+completion = "5"
+uuid = "d6e73ede-d547-11f1-8000-046874d194b7"
+structure = "AABCD"
+location = "jfb:320"
+
+[[youtube]]
+id = "iGuCVIQlKls"
+remark = "Original Dixieland Jazz Band (1921)"
+
+[[youtube]]
+id = "jyvH6wf4ghw"
+remark = "Bix Beiderbecke and his Gang (1927)"
+
+[versions.Fake]
+doChords = true
+doVoice = true
+doLyrics = false
+doLyricsmore = false
+doLyricsmoremore = false
+doChordBars = false
+doGuitar = false
+doExtra = false
+doPrep = false
+doOwn = false
+#}
+{% if part == "Vars" %}
+{% endif %}
+{% if part == "Doc" %}	DONE:
+	- added the meta data from the fake book.
+	- put in the tunes structure.
+	- put in the chords (fake book).
+	- put in the tune (fake book).
+	- added youtube performances.
+	TODO:
+	- add the lyrics.
+	- check the chords (fake book).
+	- check the tune (fake book).
+	- hear the tune to check that it is right and adjust the tempo.
+	- bars 10 and 22: the book prints no natural on the eighth note a after the a flat in the same bar; typed a natural since the chord above it is C7.
+	- the chords Bb and Bbm in the first bars are placed on beats 3 and 4 as an approximation of the book's placement.
+{% endif %}
+{% if part == "ChordsFake" %}\chordmode {
+	\startChords
+	\startSong
+
+	\myMark "A"
+	\startPart
+	f2 bes4 bes:m | f2 bes4 bes:m | f2 bes4 bes:m | f2 f:9 | \myEndLine
+	bes:6 f:7.5+ | bes:6 f:7.5+ | bes:6 f:7.5+ | bes:dim bes:7 | \myEndLine
+	c:7 d4:dim7 c:dim7 | c:7 des:7 c2:7 | f1 | f2 c:7 | \myEndLine
+	\endPart
+
+	\myMark "A"
+	\startPart
+	f2 bes4 bes:m | f2 bes4 bes:m | f2 bes4 bes:m | f2 f:9 | \myEndLine
+	bes:6 f:7.5+ | bes:6 f:7.5+ | bes:6 f:7.5+ | bes bes:7 | \myEndLine
+	c:7 d4:dim7/c c:dim7 | c:7 des:7 c2:7 | f1 | f2 c:7 | \myEndLine
+	\endPart
+
+	\myMark "B"
+	\startPart
+	\repeat volta 2 {
+		f2 f:7 | f f:7 | f f:7 | c1:7 | \myEndLine
+		bes:6 | bes2:6 des4:7 c:7 | f1 | f2 f:m7.5- | c1:7/g | \myEndLine
+	} \alternative {
+		{
+			c1:7 | f | f2 c:7 | \myEndLineVoltaNotLast
+		}
+		{
+			c1:7 | f | f2 c:7.5+ | \myEndLineVoltaLast
+		}
+	}
+	\endPart
+
+	\myMark "C"
+	\startPart
+	f1:7 | bes | bes:m | f2 f:7 | \myEndLine
+	\endPart
+
+	\myMark "D"
+	\startPart
+	\repeat volta 2 {
+		bes1*3 | bes1:7 | \myEndLine
+		ees | ees:m | bes | g:7 | \myEndLine
+		c:7 | f:7 | bes2 ees:m6 | bes4 ees:m6 bes2 | \myEndLine
+	}
+	\endPart
+
+	\endSong
+	\endChords
+}
+{% endif %}
+{% if part == "VoiceFake" %}{
+	\tempo "Moderato" 4 = 120
+	\time 4/4
+	\key f \major
+
+	% part "A"
+	a'4 a8. f16 bes8 c4 r8 | a4 a8. f16 bes8 c4 bes8 | a4 a8. f16 bes8 c4 bes8 | a8 f4 g8~ g4 r |
+	g4 g8. f16 g8 a4. | g4 g8. f16 g8 a4. | g4 g8. f16 g8 a4 f8 | g8 f4 d8~ d2 |
+	c2 d4 dis | e4 aes a!8 g4. | f1~ | f4 r r2 |
+
+	% part "A"
+	a4 a8. f16 bes8 c4 bes8 | a4 a8. f16 bes8. c16 c8. bes16 | a4 a8. f16 bes8 c4 bes8 | a8 f4 g8~ g4 r |
+	g4 g8. f16 g8 a4. | g4 g8. f16 g8 a4. | g4 g8. f16 g8 a4 f8 | g8 f4 d8~ d2 |
+	c2 d4 dis | e4 aes a!8 g4. | f1~ | f4 r r2 |
+
+	% part "B"
+	\repeat volta 2 {
+		\tuplet 3/2 { c'8 d c } a8. f16 ees4 r | \tuplet 3/2 { c'8 d c } a8. f16 ees4 r | \tuplet 3/2 { c'8 d c } a8. f16 ees4 r | r1 |
+		r4 g8. f16 g4 r | r8 cis,8 d f aes g4. | f1~ | f8 g gis a e'8 d4. | c1~ |
+	} \alternative {
+		{
+			c8 dis, e bes'~ bes4 a | f1~ | f2. r4 |
+		}
+		{
+			c'8 d, dis e bes'8 a4. | f1~ | f2. r4 |
+		}
+	}
+
+	% part "C"
+	\key bes \major
+	f4 f g8 a4. | f4 f g8 a4. | f4 f g8 a4. | f4 r r2 |
+
+	% part "D"
+	\repeat volta 2 {
+		bes4 r bes8 c cis d | bes8 bes4 bes8~ bes4 r | bes4 r bes8 c cis d | bes8 bes4 bes8~ bes4 r |
+		bes4 r bes8 c cis d | bes8 bes4 bes8~ bes4 r | bes4 r bes8 c cis d | g,8 g4 g8~ g4 r |
+		g4 r bes8 c cis d | f,8 f4 f8~ f r r4 | bes4 r bes r | c4 bes bes r |
+	}
+}
+{% endif %}

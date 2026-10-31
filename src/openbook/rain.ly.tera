@@ -1,0 +1,124 @@
+{#
+default_version = "Fake"
+
+[attributes]
+title = "Rain"
+style = "Swing"
+composer = "Peter DeRose"
+piece = "Slowly"
+copyright = "1934 by Shapiro, Bernstein & Co., Inc."
+copyrightextra = "Copyright Renewed"
+typesetter = "Mark Veltzer <mark.veltzer@gmail.com>"
+completion = "5"
+uuid = "ffe3ef5e-d546-11f1-8000-046874d194b7"
+structure = "AABA"
+location = "jfb:310"
+
+[[youtube]]
+id = "d_PjpeWH9j0"
+remark = "Jan Garber and his orchestra, Lee Bennett vocal (1934)"
+
+[[youtube]]
+id = "D6mvoZJEoAE"
+remark = "Vaughn Monroe"
+
+[versions.Fake]
+doChords = true
+doVoice = true
+doLyrics = false
+doLyricsmore = false
+doLyricsmoremore = false
+doChordBars = false
+doGuitar = false
+doExtra = false
+doPrep = false
+doOwn = false
+#}
+{% if part == "Vars" %}
+{% endif %}
+{% if part == "Doc" %}	DONE:
+	- added the meta data from the fake book.
+	- put in the tunes structure.
+	- put in the chords (fake book).
+	- put in the tune (fake book).
+	- added youtube performances.
+	TODO:
+	- add the lyrics.
+	- check the chords (fake book).
+	- check the tune (fake book).
+	- hear the tune to check that it is right and adjust the tempo.
+{% endif %}
+{% if part == "ChordsFake" %}\chordmode {
+	\startChords
+	\startSong
+
+	\repeat volta 2 {
+
+		\myMark "A"
+		\startPart
+		c1 | f | c4 c:7 b:7 bes:7 | a1:7 | \myEndLine
+		d1:7 | g2:7 g:7.5+ | c a:m7 | d:m7 g:7 | \myEndLine
+		\endPart
+
+		\myMark "A"
+		\startPart
+		c1 | f | c4 c:7 b:7 bes:7 | a1:7 | \myEndLine
+		d1:7 | g2:7 g:7.5+ | c f:6 | c c:7 | \myEndLine
+		\endPart
+
+		\myMark "B"
+		\startPart
+		f1 | e:m7 | f2 fis:dim7 | c2/g bes4:7 a:7 | \myEndLine
+		d2:m7 g:7 | c4:7 b:7 bes:7 a:7 | d1:7 | d2:m7 g:7.5+ | \myEndLine
+		\endPart
+
+		\myMark "A"
+		\startPart
+		c1 | f | c4 c:7 b:7 bes:7 | a1:7 | \myEndLine
+		d1:7 | g2:7 g:7.5+ |
+	} \alternative {
+		{
+			c1 | c | \myEndLineVoltaNotLast
+		}
+		{
+			c1 | c | \myEndLineVoltaLast
+		}
+	}
+	\endPart
+
+	\endSong
+	\endChords
+}
+{% endif %}
+{% if part == "VoiceFake" %}{
+	\tempo "Andante" 4 = 88
+	\time 4/4
+	\key c \major
+
+	\repeat volta 2 {
+
+		% part "A"
+		g'1 | c8 b c b d c a4 | g1 | g8 fis g f a g e4 |
+		d2 a' | r4 g8 g~ g gis a4 | e2 r | r1 |
+
+		% part "A"
+		g1 | c8 b c b d c a4 | g1 | g8 fis g f a g e4 |
+		d2 a' | r4 g8 g~ g gis a4 | c1~ | c4 r r r8 a |
+
+		% part "B"
+		c4 c8. a16 c8. d16 c8. a16 | b4 b8. g16 b4. b8 | a4. a8 c b a4 | g1 |
+		f4 f8. f16 a4. a8 | g8 fis f! e~ e2 | r8 e e e b'4 a | d,2 g |
+
+		% part "A"
+		g1 | c8 b c b d c a4 | g1 | g8 fis g f a g e4 |
+		d2 a' | r4 g8 g~ g gis a4 |
+	} \alternative {
+		{
+			c1~ | c4 r r2 |
+		}
+		{
+			c1~ | c2. r4 |
+		}
+	}
+}
+{% endif %}

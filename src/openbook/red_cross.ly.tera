@@ -1,0 +1,102 @@
+{#
+default_version = "Fake"
+
+[attributes]
+title = "Red Cross"
+style = "Jazz"
+composer = "Charlie Parker"
+piece = "Fast"
+copyright = "1945 ATLANTIC MUSIC CORP."
+copyrightextra = "Renewed and assigned 1973 ATLANTIC MUSIC CORP."
+typesetter = "Mark Veltzer <mark.veltzer@gmail.com>"
+completion = "5"
+uuid = "ffeb6c70-d546-11f1-8000-046874d194b7"
+structure = "AABA"
+location = "jfb:314"
+
+[[youtube]]
+id = "WhcTMI0jEwU"
+remark = "Charlie Parker in the original recording (1944)"
+
+[[youtube]]
+id = "wnELIBfDKlA"
+remark = "Dexter Gordon"
+
+[versions.Fake]
+doChords = true
+doVoice = true
+doLyrics = false
+doLyricsmore = false
+doLyricsmoremore = false
+doChordBars = false
+doGuitar = false
+doExtra = false
+doPrep = false
+doOwn = false
+#}
+{% if part == "Vars" %}
+{% endif %}
+{% if part == "Doc" %}	DONE:
+	- added the meta data from the fake book.
+	- put in the tunes structure.
+	- put in the chords (fake book).
+	- put in the tune (fake book).
+	- added youtube performances.
+	TODO:
+	- check the chords (fake book).
+	- check the tune (fake book).
+	- hear the tune to check that it is right and adjust the tempo.
+	- the low B flats have no visible ledger line in the scan; read as the B flat below middle C.
+	- the fake book prints only the first A with a repeat sign and a last A of 6 bars; check the form against the recording.
+	- the second bar of the 16th note figure in the last A has D flat while the first A has D natural; typed as printed.
+{% endif %}
+{% if part == "ChordsFake" %}\chordmode {
+	\startChords
+	\startSong
+
+	\partial 8 s8 |
+
+	\myMark "A"
+	\startPart
+	\repeat volta 2 {
+		bes1 | bes | bes | bes | \myEndLine
+		bes1 | b | bes | bes | \myEndLine
+	}
+	\endPart
+
+	\myMark "B"
+	\startPart
+	d1*2:7 | g1*2:7 | \myEndLine
+	c1*2:7 | f1*2:7 | \myEndLine
+	\endPart
+
+	\myMark "A"
+	\startPart
+	bes1 | bes | bes | b | bes | bes | \myEndLine
+	\endPart
+
+	\endSong
+	\endChords
+}
+{% endif %}
+{% if part == "VoiceFake" %}{
+	\tempo "Allegro" 4 = 220
+	\time 4/4
+	\key bes \major
+
+	\partial 8 f8 |
+
+	% part "A"
+	\repeat volta 2 {
+		c'8 d16 c bes8 f c' bes r4 | bes,4 bes r r8 f'8 | c'8 d16 c bes8 f c' bes r4 | bes,4 bes r r8 c'8 |
+		bes8 f ges ees d f c bes | b8 fis' gis cis~ cis4. f,8 | c'8 d16 c bes8 f bes f a bes | r2 r4 r8 \parenthesize f8 |
+	}
+
+	% part "B"
+	r4 \tuplet 3/2 { g16 a g } e8 fis d' r4 | \tuplet 3/2 { g,16 a g } e8 fis d' r2 | r4 \tuplet 3/2 { c16 d c } a8 b g' r4 | \tuplet 3/2 { c,16 d c } a8 b g' r2 |
+	r4 \tuplet 3/2 { f,16 g f } d8 e c' r4 | \tuplet 3/2 { f,16 g f } d8 e c' r2 | r4 \tuplet 3/2 { bes16 c bes } g8 a f' r4 | \tuplet 3/2 { bes,16 c bes } g8 a c r4 r8 f,8 |
+
+	% part "A"
+	c'8 d16 c bes8 f c' bes r4 | bes,4 bes r r8 c'8 | bes8 f ges ees d f c bes | b8 fis' gis cis~ cis4. f,8 | c'8 des16 c bes8 f bes f a bes | r1 |
+}
+{% endif %}

@@ -1,0 +1,125 @@
+{#
+default_version = "Fake"
+
+[attributes]
+title = "S-H-I-N-E"
+style = "Jazz"
+composer = "Ford Dabney"
+poet = "Cecil Mack, Lew Brown"
+piece = "Moderately"
+copyright = "1910 by R.C. McPherson and Ford Dabney ('That's Why They Call Me Shine')"
+copyrightextra = "Copyright Renewed and Assigned to Shapiro, Bernstein & Co., Inc., New York. Copyright 1924 Shapiro, Bernstein & Co., Inc. Copyright Renewed. Copyright 1948 Shapiro, Bernstein & Co., Inc. Renewed."
+typesetter = "Mark Veltzer <mark.veltzer@gmail.com>"
+completion = "5"
+uuid = "d6e8b4f8-d547-11f1-8000-046874d194b7"
+structure = "ABAC"
+location = "jfb:321"
+
+[[youtube]]
+id = "szkzaQ2Azss"
+remark = "Louis Armstrong (1931)"
+
+[[youtube]]
+id = "kedejJAN0dU"
+remark = "Bing Crosby with the Mills Brothers (1932)"
+
+[versions.Fake]
+doChords = true
+doVoice = true
+doLyrics = false
+doLyricsmore = false
+doLyricsmoremore = false
+doChordBars = false
+doGuitar = false
+doExtra = false
+doPrep = false
+doOwn = false
+#}
+{% if part == "Vars" %}
+{% endif %}
+{% if part == "Doc" %}	DONE:
+	- added the meta data from the fake book.
+	- put in the tunes structure.
+	- put in the chords (fake book).
+	- put in the tune (fake book).
+	- added youtube performances.
+	TODO:
+	- add the lyrics.
+	- check the chords (fake book).
+	- check the tune (fake book).
+	- hear the tune to check that it is right and adjust the tempo.
+	- bar 18: the book prints Ebm/G (bars 2 and 6 have Ebm/Gb); typed as printed, check it.
+{% endif %}
+{% if part == "ChordsFake" %}\chordmode {
+	\startChords
+	\startSong
+
+	\repeat volta 2 {
+
+		\myMark "A"
+		\startPart
+		ees1 | ees:m/ges | f:m7 | bes:7 | \myEndLine
+		ees | ees:m/ges | f:m7 | bes:7 | \myEndLine
+		\endPart
+
+		\myMark "B"
+		\startPart
+		g2:7 d:m7 | g1:7 | c1*2:m7 | \myEndLine
+		f2:7 c:m7 | f1:7 | bes1*2:7 | \myEndLine
+		\endPart
+
+		\myMark "A"
+		\startPart
+		ees1 | ees:m/g | f:m7 | bes:7 | \myEndLine
+		g1*2:7 | c2:m g:7 | c1:m | \myEndLine
+		\endPart
+
+		\myMark "C"
+		\startPart
+		f:m7 | bes:7 | ees | c:7 | \myEndLine
+		f:m7 | bes2:7 bes:7.5+ |
+	} \alternative {
+		{
+			ees1 | f2:m7 bes:7 | \myEndLineVoltaNotLast
+		}
+		{
+			ees2 aes:7 | ees1 | \myEndLineVoltaLast
+		}
+	}
+	\endPart
+
+	\endSong
+	\endChords
+}
+{% endif %}
+{% if part == "VoiceFake" %}{
+	\tempo "Moderato" 2 = 100
+	\time 2/2
+	\key ees \major
+
+	\repeat volta 2 {
+		% part "A"
+		bes'1~ | bes4 bes c d | c4 bes2.~ | bes2. r4 |
+		bes1~ | bes4 bes c d | c4 bes2.~ | bes2. r4 |
+
+		% part "B"
+		g4 r a! r | b! r g r | c4 d2 ees4~ | ees4 d c2 |
+		f,4 r g r | a! r f r | bes4 c2 d4~ | d4 c bes2 |
+
+		% part "A"
+		bes1~ | bes4 bes c d | c4 bes2.~ | bes2. r4 |
+		g4 g2 a!4 | b!4 g a!8 b4. | c2 d | ees1 |
+
+		% part "C"
+		d2. c4 | d8 c4 aes8~ aes4 f | r4 c'8. bes16 c4 bes | c8 bes4 aes8~ aes4 g |
+		f4 g2 aes4 | c2 bes |
+	} \alternative {
+		{
+			ees1 | r1 |
+		}
+		{
+			ees1~ | ees2. r4 |
+		}
+	}
+}
+{% endif %}

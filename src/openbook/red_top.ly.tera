@@ -1,0 +1,94 @@
+{#
+default_version = "Fake"
+
+[attributes]
+title = "Red Top"
+style = "Jazz"
+composer = "Lionel Hampton, Ken Kynard"
+poet = "Lionel Hampton, Ken Kynard"
+piece = "Medium Bounce"
+copyright = "1947 CHERIO CORP."
+copyrightextra = "Renewed 1975 CHERIO CORP."
+typesetter = "Mark Veltzer <mark.veltzer@gmail.com>"
+completion = "5"
+uuid = "6d18b15e-d547-11f1-8000-046874d194b7"
+structure = "AA'"
+location = "jfb:314"
+
+[[youtube]]
+id = "J89COeIMnAU"
+remark = "Lionel Hampton and his orchestra in the original recording (1947)"
+
+[[youtube]]
+id = "ynxTryqeF1o"
+remark = "Gene Ammons (1947)"
+
+[versions.Fake]
+doChords = true
+doVoice = true
+doLyrics = false
+doLyricsmore = false
+doLyricsmoremore = false
+doChordBars = false
+doGuitar = false
+doExtra = false
+doPrep = false
+doOwn = false
+#}
+{% if part == "Vars" %}
+{% endif %}
+{% if part == "Doc" %}	DONE:
+	- added the meta data from the fake book.
+	- put in the tunes structure.
+	- put in the chords (fake book).
+	- put in the tune (fake book).
+	- added youtube performances.
+	TODO:
+	- check the chords (fake book).
+	- check the tune (fake book).
+	- hear the tune to check that it is right and adjust the tempo.
+	- the fake book prints a pickup of five eighths (b8 d8. e16 g4); check it against a recording.
+	- add the lyrics.
+{% endif %}
+{% if part == "ChordsFake" %}\chordmode {
+	\startChords
+	\startSong
+
+	\partial 8*5 s8*5 |
+
+	\myMark "A"
+	\startPart
+	g2:6 g:6/b | c cis:m7.5- | g/d c | g/b g:7 | \myEndLine
+	c1:9 | c2:maj7 cis:m7.5- | g/d c | b:m7.5- e:7.9- | a1:m7 | \myEndLine
+	d1:7 | g4 g/b c cis:dim7 | g/d c g/b a:m7 | \myEndLine
+	\endPart
+
+	\myMark "A"
+	\startPart
+	g2:6 g/b | c cis:m7.5- | g/d c | g/b g:7 | c1:9 | \myEndLine
+	c2:maj7 cis:m7.5- | g/d c | b:m7.5- e:7.9- | a1:m7 | \myEndLine
+	d1:7 | g4 g/b c ees:7/des | g/d d:7sus4 g2:6 | \myEndLine
+	\endPart
+
+	\endSong
+	\endChords
+}
+{% endif %}
+{% if part == "VoiceFake" %}{
+	\tempo "Moderato" 4 = 160
+	\time 2/2
+	\key g \major
+
+	\partial 8*5 b'8 d,8. e16 g4 |
+
+	% part "A"
+	b4 r r2 | r8. b16 d,8. e16 g8 b4. | g8 e~ e2. | r2 r4 g8. g16 |
+	\tuplet 3/2 { d'4 g, bes~ } bes2 | r8. b!16 d,8. e16 g8 b4. | g4 r r2 | r1 | r8 b4. g8. e16 \tuplet 3/2 { c8 e g } |
+	\tuplet 3/2 { d'8 des c } b2 d,4 | g8. a16 g8 g~ g8. a16 g8 g~ | g8. a16 g8 g~ g8. a16 g8 b~ |
+
+	% part "A"
+	b4 r r2 | r8. b16 d,8. e16 g8 b4. | g8 e~ e2. | r2 r4 g4 | \tuplet 3/2 { d'4 g, bes~ } bes2 |
+	r8. b!16 d,8. e16 g8 b4. | g4 r r2 | r1 | r8 b4. g8. e16 \tuplet 3/2 { c8 e g } |
+	\tuplet 3/2 { d'8 des c } b2 d,4 | g8. a16 g8 g~ g8. a16 g8 g~ | g8. a16 g8 g~ g4 r |
+}
+{% endif %}

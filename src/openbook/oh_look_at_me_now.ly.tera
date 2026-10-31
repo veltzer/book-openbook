@@ -1,0 +1,130 @@
+{#
+default_version = "Fake"
+
+[attributes]
+title = "Oh! Look At Me Now"
+style = "Jazz"
+composer = "Joe Bushkin"
+poet = "John DeVries"
+piece = "Moderately"
+copyright = "1941 and renewed 1969 Hampshire House Publishing Corp., New York, NY."
+copyrightextra = "TRO"
+typesetter = "Mark Veltzer <mark.veltzer@gmail.com>"
+completion = "5"
+uuid = "41532c78-d521-11f1-8000-046874d194b7"
+structure = "AABA"
+location = "jfb:279"
+
+[[youtube]]
+id = "iiS_gBmQvQU"
+remark = "Tommy Dorsey with Frank Sinatra, Connie Haines and the Pied Pipers in the original recording (1941)"
+
+[[youtube]]
+id = "qlZh4ICdPnI"
+remark = "Frank Sinatra"
+
+[versions.Fake]
+doChords = true
+doVoice = true
+doLyrics = false
+doLyricsmore = false
+doLyricsmoremore = false
+doChordBars = false
+doGuitar = false
+doExtra = false
+doPrep = false
+doOwn = false
+#}
+{% if part == "Vars" %}
+{% endif %}
+{% if part == "Doc" %}	DONE:
+	- added the meta data from the fake book.
+	- put in the tunes structure.
+	- put in the chords (fake book).
+	- put in the tune (fake book).
+	- added youtube performances.
+	TODO:
+	- add the lyrics.
+	- check the chords (fake book).
+	- check the tune (fake book).
+	- hear the tune to check that it is right and adjust the tempo.
+	- the second chord in the Eb7 D7 and Db7 C7 bars of the bridge is printed over the eighth note on beat 2.5; check the placement.
+{% endif %}
+{% if part == "ChordsFake" %}\chordmode {
+	\startChords
+	\startSong
+
+	\partial 8 s8 |
+
+	\repeat volta 2 {
+
+		\myMark "A"
+		\startPart
+		ees2:6 bes:9 | bes:m9/ees ees:7.9- | aes1:maj7 | aes2:m6 des:7.5- | \myEndLine
+		g:m7 c:7 | f2.:7 b4:7.9- | bes2:9 b:7.5- | bes1:9 | \myEndLine
+		\endPart
+
+		\myMark "A"
+		\startPart
+		ees2:6 bes:9 | bes:m9/ees ees:7.9- | aes1:maj7 | aes2:m6 des:7.5- | \myEndLine
+		g:m7 c:7 | f2:7 f4:m7 bes:9 | ees1 | a2:m7.5- d:7 | \myEndLine
+		\endPart
+
+		\myMark "B"
+		\startPart
+		g1:m | ees4.:7 d8:7 s2 | g2:m d:7.5+ | g:m7 c:7 | \myEndLine
+		f1:m | des4.:7 c8:7 s2 | f1:m7 | bes2:7 bes:7.5+ | \myEndLine
+		\endPart
+
+		\myMark "A"
+		\startPart
+		ees2:6 bes:9 | bes:m9/ees ees:7.9- | aes1:maj7 | aes2:m6 des:7.5- | \myEndLine
+		g:m7 c:7 | f2:9 f4:m7 bes:9 |
+	} \alternative {
+		{
+			ees2:6 c:m7 | f:m7 bes4:9 bes:7.5+ | \myEndLineVoltaNotLast
+		}
+		{
+			ees2:6 b4:9 e:maj7 | ees1:6 | \myEndLineVoltaLast
+		}
+	}
+	\endPart
+
+	\endSong
+	\endChords
+}
+{% endif %}
+{% if part == "VoiceFake" %}{
+	\tempo "Moderato" 4 = 120
+	\time 4/4
+	\key ees \major
+
+	\partial 8 bes'8 |
+
+	\repeat volta 2 {
+
+		% part "A"
+		ees8 d bes g~ g4. g8 | bes8 c bes c~ c bes4. | c8 bes g ees~ ees4. ees8 | f8 ees f g~ g aes bes g |
+		g2 g8 aes bes g~ | g8 ees'4. c8 ees, fis4 | b!1( | f4) r r2 |
+
+		% part "A"
+		ees'8 d bes g~ g4. g8 | bes8 c bes c~ c bes4. | c8 bes g ees~ ees4. ees8 | f8 ees f g~ g aes bes g |
+		g2 g8 aes bes g~ | g8 ees'4. c8 ees, g4 | ees1~ | ees4 r r2 |
+
+		% part "B"
+		d4 e! fis g | bes8 g4 a!8~ a2 | g8 a! bes c d4 bes8 g~ | g1 |
+		c,4 d e! f | aes8 f4 g8~ g2 | f8 g aes bes c aes c d~ | d2. r8 bes8 |
+
+		% part "A"
+		ees8 d bes g~ g4. g8 | bes8 c bes c~ c bes4. | c8 bes g ees~ ees4. ees8 | f8 ees f g~ g aes bes g |
+		g2 g8 aes bes g~ | g8 ees'4. c8 ees, g4 |
+	} \alternative {
+		{
+			ees1~ | ees4 r r2 |
+		}
+		{
+			ees1~ | ees4 r r2 |
+		}
+	}
+}
+{% endif %}

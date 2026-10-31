@@ -1,0 +1,79 @@
+{#
+default_version = "Fake"
+
+[attributes]
+title = "Perhaps"
+style = "Jazz"
+composer = "Charlie Parker"
+piece = "Quick Blues"
+copyright = "1948 ATLANTIC MUSIC CORP."
+copyrightextra = "Renewed and assigned 1976 ATLANTIC MUSIC CORP."
+typesetter = "Mark Veltzer <mark.veltzer@gmail.com>"
+completion = "5"
+uuid = "8fcf58c4-d547-11f1-8000-046874d194b7"
+structure = "Blues"
+location = "jfb:301"
+
+[[youtube]]
+id = "N1oWrkPyns4"
+remark = "Charlie Parker's All Stars with Miles Davis and John Lewis in the original recording (1948)"
+
+[[youtube]]
+id = "EIoc8UBG4dk"
+remark = "Charlie Parker (another take)"
+
+[versions.Fake]
+doChords = true
+doVoice = true
+doLyrics = false
+doLyricsmore = false
+doLyricsmoremore = false
+doChordBars = false
+doGuitar = false
+doExtra = false
+doPrep = false
+doOwn = false
+#}
+{% if part == "Vars" %}
+{% endif %}
+{% if part == "Doc" %}	DONE:
+	- added the meta data from the fake book.
+	- put in the tunes structure.
+	- put in the chords (fake book).
+	- put in the tune (fake book).
+	- added youtube performances.
+	TODO:
+	- check the chords (fake book).
+	- check the tune (fake book).
+	- hear the tune to check that it is right and adjust the tempo.
+{% endif %}
+{% if part == "ChordsFake" %}\chordmode {
+	\startChords
+	\startSong
+
+	\myMark "A"
+	\startPart
+	\repeat volta 2 {
+		c1:7 | c1:7 | c1:7 | c1:7 | \myEndLine
+		f1:7 | f1:7 | c1:7 | e2:m7 a:7 | \myEndLine
+		d1:m7 | g1:7 | c1:7 | d2:m7 g:7 | \myEndLine
+	}
+	\endPart
+
+	\endSong
+	\endChords
+}
+{% endif %}
+{% if part == "VoiceFake" %}{
+	\tempo "Allegro" 4 = 200
+	\time 4/4
+	\key c \major
+
+	% part "A"
+	\repeat volta 2 {
+		g'4 e8 f g a b c~ | c8 g4 a8 b a e f | g a g e f g e d | r2 r8 c'8~ c a |
+		c4 r8 e,8 f g f e | ees8 g a b~ b4. a8 | g4 r8 aes8~ aes e'4 d8 | b8 g e bes'~ bes4. aes8 |
+		a!4 r8 c8 e d c a | aes8 f g f~ f4. g8 | e4 r8 g8 f4 r8 a8 | g8 d16 c b8 c d c b c |
+	}
+}
+{% endif %}

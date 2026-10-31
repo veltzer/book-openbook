@@ -1,0 +1,118 @@
+{#
+default_version = "Fake"
+
+[attributes]
+title = "Peel Me A Grape"
+style = "Jazz"
+composer = "David Frishberg"
+poet = "David Frishberg"
+piece = "Light, cute, sexy"
+copyright = "1962 FRANK MUSIC CORP."
+typesetter = "Mark Veltzer <mark.veltzer@gmail.com>"
+completion = "5"
+uuid = "e4b7afc2-d546-11f1-8000-046874d194b7"
+structure = "AABA"
+location = "jfb:299"
+
+[[youtube]]
+id = "EY7KnmkgHVE"
+remark = "Dave Frishberg sings his own song"
+
+[[youtube]]
+id = "_Jm7YAATqoM"
+remark = "Diana Krall on Love Scenes (1997)"
+
+[versions.Fake]
+doChords = true
+doVoice = true
+doLyrics = false
+doLyricsmore = false
+doLyricsmoremore = false
+doChordBars = false
+doGuitar = false
+doExtra = false
+doPrep = false
+doOwn = false
+#}
+{% if part == "Vars" %}
+{% endif %}
+{% if part == "Doc" %}	DONE:
+	- added the meta data from the fake book.
+	- put in the tunes structure.
+	- put in the chords (fake book).
+	- put in the tune (fake book).
+	- added youtube performances.
+	TODO:
+	- add the lyrics.
+	- check the chords (fake book).
+	- check the tune (fake book).
+	- hear the tune to check that it is right and adjust the tempo.
+	- part B bars 4 to 7: the exact beats of the chords (Em7b5, E7, D/F#, Gm, G#dim, Bb13, A7#5#9) are read from their printed position and are doubtful.
+	- part B bars 1 and 3: the e and the last sixteenth (c) have no accidentals in the book, so by the notation rule they would be e flat and c sharp; typed as e natural and c natural, which fit the D7sus and Gm9/F# chords.
+{% endif %}
+{% if part == "ChordsFake" %}\chordmode {
+	\startChords
+	\startSong
+
+	\myMark "A"
+	\startPart
+	\repeat volta 2 {
+		d4:m9 ees2.:13 | d1:m9 | d2:m9 c:13 | bes:13 a:7.5+.9+ | \myEndLine
+		d4:m9 ees:13 d2:m9 | d4:m9 f2.:9 | bes2:9 b:dim7 | f2.:m6/c b4:9.5- | bes2:9 b:dim7 | \myEndLine
+		f2.:m6/c b4:9.5- | bes2:9 b:dim7 | f1:m6/c | b:m7/a | b2:m7/a a:7.5+.9+ | \myEndLine
+	} \alternative {
+		{
+			d2:m9 d:m9/c | bes:13 a:7.5+.9+ | \myEndLineVoltaNotLast
+		}
+		{
+			d2:m7 f:6/c | bes4:7 a:7.5+.9+ d:m7 ees:7 | \myEndLineVoltaLast
+		}
+	}
+	\endPart
+
+	\myMark "B"
+	\startPart
+	d1:7sus4 | d2:7sus4 d:7 | g:m g:m9/fis | \myEndLine
+	g:m9/f e:m7.5- | e4:7 d2/fis g4:m | g2:m gis4:dim bes:13 | bes2.:13 a4:7.5+.9+ | a1:7.5+.9+ | \myEndLine
+	\endPart
+
+	\myMark "A"
+	\startPart
+	d4:m9 ees2.:13 | d4:m9 ees2.:13 | d2:m9 c:13 | bes:13 a:7.5+.9+ | \myEndLine
+	d4:m9 ees:9 d2:m9 | d4:m9 f2.:13 | bes2:9 b:dim7 | f2:m6/c b:9.5- | bes:9 b:dim7 | \myEndLine
+	f2.:m6/c b4:9.5- | bes2:9 b:dim7 | f1:m6/c | b:m7/a | b2:m7/a a:7.5+.9+ | d1:m11 | \myEndLine
+	\endPart
+
+	\endSong
+	\endChords
+}
+{% endif %}
+{% if part == "VoiceFake" %}{
+	\tempo "Moderato" 4 = 120
+	\time 4/4
+	\key f \major
+
+	% part "A"
+	\repeat volta 2 {
+		r8 a'~ \tuplet 3/2 { a f d } g4 r | r8 a~ \tuplet 3/2 { a f d } g4 r | r8 a~ \tuplet 3/2 { a f d } g4 d8. f16 | g4 f8. d16 f g8. r4 |
+		r8 a~ \tuplet 3/2 { a f d } g4 r | r8 a~ \tuplet 3/2 { a f d } g4 r | r8 f g8. d16 f4 g | r4 aes f d | f g8. d16 f4 g |
+		r4 aes8 f~ f4 d | f g8. d16 f4 g | r4 aes8 f~ f4 d | r8 a'~ \tuplet 3/2 { a b! gis } a8 a,4.~ | a4 r c8 a cis d |
+	} \alternative {
+		{
+			r1 | r1 |
+		}
+		{
+			r1 | r1 |
+		}
+	}
+
+	% part "B"
+	d4 ees8. cis16 d4 e8. c16 | d8. ees16 cis8 d r2 | d4 ees8. cis16 d4 e8. c16 |
+	d8. ees16 cis8 d r2 | e4 f8. dis16 e8 e r4 | e8. f16 dis8 e r4 r8 e | f4 f f16 d r8 r4 | r4 e f8 g r4 |
+
+	% part "A"
+	r8 a~ \tuplet 3/2 { a f d } g4 r | r8 a~ \tuplet 3/2 { a f d } g4 r | r8 a~ \tuplet 3/2 { a f d } g4 d8. f16 | g4 f8. d16 f g8. r4 |
+	r8 a~ \tuplet 3/2 { a f d } g4 r | r8 a~ \tuplet 3/2 { a f d } g4 r | f8. g16 d4 f g | r4 aes f d | f8. g16 d4 f g |
+	r4 aes f d | f g8. d16 f4 g | r4 aes8 f d4 r | r8 a'~ \tuplet 3/2 { a b! gis } a8 a,4.~ | a4 r c8 a c4 | d1 |
+}
+{% endif %}

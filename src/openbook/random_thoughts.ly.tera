@@ -1,0 +1,177 @@
+{#
+default_version = "Fake"
+
+[attributes]
+title = "Random Thoughts"
+style = "Jazz"
+composer = "Steve Kuhn"
+piece = "Medium Jazz Waltz"
+copyright = "1978 Stelk Music"
+typesetter = "Mark Veltzer <mark.veltzer@gmail.com>"
+completion = "5"
+uuid = "ffe96da8-d546-11f1-8000-046874d194b7"
+structure = "Intro-AB-Coda"
+location = "jfb:311"
+
+[[youtube]]
+id = "XS3StAEC9m4"
+remark = "Steve Kuhn in the original recording"
+
+[[youtube]]
+id = "3LpIGfUAAUo"
+remark = "Steve Kuhn, the original recording played from vinyl"
+
+[versions.Fake]
+doChords = true
+doVoice = true
+doLyrics = false
+doLyricsmore = false
+doLyricsmoremore = false
+doChordBars = false
+doGuitar = false
+doExtra = false
+doPrep = false
+doOwn = false
+#}
+{% if part == "Vars" %}
+{% endif %}
+{% if part == "Doc" %}	DONE:
+	- added the meta data from the fake book.
+	- put in the tunes structure.
+	- put in the chords (fake book).
+	- put in the tune (fake book).
+	- the free time (Freely) intro and coda bars are written with measure lengths that fit their notes and without a time signature, as in the fake book.
+	- the solo sections are written as multi bar rests and slashes as in the fake book.
+	- added youtube performances.
+	TODO:
+	- check the chords (fake book).
+	- check the tune (fake book).
+	- hear the tune to check that it is right and adjust the tempo.
+	- intro bar 1: the low eighth note B flat has no visible ledger line in the scan; read as the B flat below middle C.
+	- intro bars 2 and 4 print B and G without flats, while the same bars in the coda print B flat and G flat; typed as printed, check.
+	- the free time bars repeat E and D after E flat and D flat without accidentals; typed as E flat and D flat following the notation rule (it fits the chords), check.
+	- the small parenthesized cue notes at the start of the solo and bass solo sections were left out.
+{% endif %}
+{% if part == "ChordsFake" %}\chordmode {
+	\startChords
+	\startSong
+
+	\partial 8 s8 |
+
+	\myMark "Intro"
+	\startPart
+	des8*16:maj7.5+ | s8*19 | \myEndLine
+	s4*7 | s4*5 | \myEndLine
+	\endPart
+
+	\myMark "A"
+	\startPart
+	ges2.*6:maj7/aes | \myEndLine
+	ges2.*5:maj7/aes | ges2.*16:maj7/aes | \myEndLine
+	\endPart
+
+	\repeat volta 2 {
+
+		\myMark "B"
+		\startPart
+		ges2.*4:maj7/aes | c2.:m7 | e:maj7 | \myEndLine
+		a2.*4:m7 | aes2.*2:maj7.11+ | r2.*3 |
+	} \alternative {
+		{
+			s2. | \myEndLineVoltaNotLast
+		}
+		{
+			a2.:m7 | fis:m7 | f:m7 | \myEndLineVoltaLast
+		}
+	}
+	\endPart
+
+	\myMark "Instr"
+	\startPart
+	\repeat volta 2 {
+		e2.*8:m7 | e2.*8:maj7 | f2.*8:m7 | f2.*8:maj7 | \myEndLine
+	}
+	a2.:m7 | fis:m7 | f:m7 | \myEndLine
+	\endPart
+
+	\myMark "Instr"
+	\startPart
+	\repeat volta 2 {
+		ges2.*6:maj7/aes | a2.:m7 | fis:m7 | f:m7 | \myEndLine
+	}
+	ges2.*16:maj7/aes | \myEndLine
+	\endPart
+
+	\myMark "Coda"
+	\startPart
+	s2. | ges2.*4:maj7/aes | \myEndLine
+	des8*4:maj7.5+ f8*7:7.5+ bes8*5:7.5+ | ees8*12:m aes8*7:7 | \myEndLine
+	a8*10:dim7 bes8*4:7 | ees8*10:m | r1*3 des1 | \myEndLine
+	\endPart
+
+	\endSong
+	\endChords
+}
+{% endif %}
+{% if part == "VoiceFake" %}{
+	\tempo "Moderato" 4 = 150
+	\time 4/4
+	\key c \major
+
+	\set Timing.measureLength = #(ly:make-moment 8/4)
+	\partial 8 aes'8 |
+
+	% part "Intro"
+	ees'8[ des a f] ees'[ des c des] bes4 bes,8 fis'2\fermata f8 |
+	\set Timing.measureLength = #(ly:make-moment 19/8)
+	d8[ ees ges b] des,[ c f ees] d[ ees g b] des,4 c8 ees2\fermata |
+	\set Timing.measureLength = #(ly:make-moment 7/4)
+	f8[ ges g aes] a[ bes] f'[ ees d ees] bes'2\fermata |
+	\set Timing.measureLength = #(ly:make-moment 5/4)
+	f,8[ g g aes] a[ b] f'[ e d e] |
+
+	% part "A"
+	\time 3/4
+	des'2.~ | des~ | des | c | bes | r4 r ges4 |
+	f2 bes,4~ | bes2.~ | bes2.~ | bes2.~ | bes2. | \compressMMRests { R2.*16 } |
+
+	\repeat volta 2 {
+
+		% part "B"
+		aes'2.^\markup { \musicglyph #"scripts.segno" } | ees2.~ | ees2.~ | ees2 f4 | d2 c4 | dis4 fis dis |
+		d2. | b2.~ | b2.~ | b2. | d2. | bes2. | r8 a aes a f' ees | d8 ees d bes g ees | d8 f ees g a c^\markup { To Coda \musicglyph #"scripts.coda" } |
+	} \alternative {
+		{
+			d4 e ges |
+		}
+		{
+			d8 d d d d d | b8 b b b b b | g8 g g g g g |
+		}
+	}
+
+	% part "Instr"
+	\repeat volta 2 {
+		\compressMMRests { R2.*8^\markup { Solos } | R2.*8 | R2.*8 | R2.*8 | }
+	}
+	d'8 d d d d d | b8 b b b b b | g8 g g g g g |
+
+	% part "Instr"
+	\repeat volta 2 {
+		\compressMMRests { R2.*6^\markup { Bass solo } } | \improvisationOn b4 b b | b4 b b | b4 b b | \improvisationOff
+	}
+	\compressMMRests { R2.*16^\markup { Bass solo cont. D.S. al Coda } } |
+
+	% part "Coda"
+	d4^\markup { \musicglyph #"scripts.coda" } e fis | aes2. | ees2.~ | ees2.~ | ees2 f,8 aes |
+	\set Timing.measureLength = #(ly:make-moment 8/4)
+	ees'8[^\markup { Freely } des a f] ees'[ des c des] bes4 bes,8 fis'2\fermata f8 |
+	\set Timing.measureLength = #(ly:make-moment 19/8)
+	d8[ ees ges bes] des,[ c f ees] d[ ees g bes] des,4 c8 ees2\fermata |
+	\set Timing.measureLength = #(ly:make-moment 7/4)
+	f8[ ges g aes] a[ bes] f'[ ees d ees] bes'2\fermata |
+	\set Timing.measureLength = #(ly:make-moment 5/4)
+	f,8[ ges g aes] a[ bes] f'[ ees d ees] |
+	\set Timing.measureLength = #(ly:make-moment 16/4)
+	<f des'>2 <ees c'> <des bes'> <bes ges'> <aes f'> <ges ees'> <des des'>1\fermata |
+}
+{% endif %}

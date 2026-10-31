@@ -1,0 +1,127 @@
+{#
+default_version = "Fake"
+
+[attributes]
+title = "The Organ Grinder"
+style = "Jazz"
+composer = "Woody Shaw"
+piece = "Bright swing"
+copyright = "1979 by CELESTIAL HARMONIES, a division of MAYFLOWER MUSIC CORP., New York, N.Y."
+copyrightextra = "International Copyright Secured. Made in U.S.A. All Rights Reserved."
+typesetter = "Mark Veltzer <mark.veltzer@gmail.com>"
+completion = "5"
+uuid = "a24e0286-d540-11f1-8000-046874d194b7"
+structure = "AABC"
+location = "jfb:293"
+
+[[youtube]]
+id = "1J1gMDQFjpA"
+remark = "Woody Shaw in the original recording"
+
+[[youtube]]
+id = "Vj51vZfXrVw"
+remark = "Woody Shaw live at the Keystone Korner"
+
+[versions.Fake]
+doChords = true
+doVoice = true
+doLyrics = false
+doLyricsmore = false
+doLyricsmoremore = false
+doChordBars = false
+doGuitar = false
+doExtra = false
+doPrep = false
+doOwn = false
+#}
+{% if part == "Vars" %}
+{% endif %}
+{% if part == "Doc" %}	DONE:
+	- added the meta data from the fake book.
+	- put in the tunes structure.
+	- put in the chords (fake book).
+	- put in the tune (fake book).
+	- added youtube performances.
+	TODO:
+	- check the chords (fake book).
+	- check the tune (fake book).
+	- hear the tune to check that it is right and adjust the tempo.
+	- in the Gm6/9 bars the note after the C B-natural C triplet has no accidental, so the strict reading would
+	be a B natural; it is typed as B flat to fit the chord.
+{% endif %}
+{% if part == "ChordsFake" %}\chordmode {
+	\startChords
+	\startSong
+
+	\myMark "A"
+	\startPart
+	\repeat volta 2 {
+		ees1:maj7 | d:m9 | ees:maj7 | d:m9 | aes:7 | \myEndLine
+		c:7.5+.9+ | aes:7 |
+	} \alternative {
+		{
+			c:7.5+.9+ | \myEndLineVoltaNotLast
+		}
+		{
+			c:7.5+.9+ | \myEndLineVoltaLast
+		}
+	}
+	\endPart
+
+	\myMark "B"
+	\startPart
+	ees1:m9 | ees:m9 | ees:m9 | ees:m9 | \myEndLine
+	fis:m9 | fis:m9 | fis:m9 | fis:m9 | \myEndLine
+	a:m9 | a:m9 | a:m9 | a:m9 | \myEndLine
+	\endPart
+
+	\myMark "C"
+	\startPart
+	aes1:7 | g:m6.9 | aes:7 | g:m6.9 | \myEndLine
+	aes:7 | g:m6.9 | aes:7 | g:m6.9 | \myEndLine
+	\endPart
+
+	\myMark "End"
+	\startPart
+	\repeat volta 2 {
+		aes1:7 | g:m6.9 | \myEndLine
+	}
+	\endPart
+
+	\endSong
+	\endChords
+}
+{% endif %}
+{% if part == "VoiceFake" %}{
+	\tempo "Allegro" 4 = 200
+	\time 4/4
+	\key ees \major
+
+	% part "A"
+	\repeat volta 2 {
+		bes'2~ bes8 c bes a~ | a4. d,8 d' c \tuplet 3/2 { r8 bes a } | \tuplet 3/2 { g8 a bes~ } bes4~ bes8 c bes a~ | a2 g8 f c ees~ | ees1~ |
+		ees8 r r c g' f c ees~ | ees1~ |
+	} \alternative {
+		{
+			ees8 r r4 g a |
+		}
+		{
+			ees8 r r4 r ees8 f |
+		}
+	}
+
+	% part "B"
+	ges2 ees | aes2 bes | ges2 ees4. aes8~ | aes2 r4 \tuplet 3/2 { r8 ges aes } |
+	a2 fis | b2 cis | a2 fis4. b8~ | b2 r4 r8 b16 cis |
+	d2. b8 r | e2 fis | d2 b4. e8~ | e2 r2 |
+
+	% part "C"
+	r4 \tuplet 3/2 { ees,8 ges bes } aes4~ \tuplet 3/2 { aes8 a b } | c4~ \tuplet 3/2 { c8 b c } bes8 e, r4 | r4 \tuplet 3/2 { ees8 ges bes } aes4~ \tuplet 3/2 { aes8 a b } | c4~ \tuplet 3/2 { c8 b c } bes8 e, r4 |
+	r4 \tuplet 3/2 { ees8 ges bes } aes4~ \tuplet 3/2 { aes8 a b } | c4~ \tuplet 3/2 { c8 b c } bes8 e, r4 | r4 \tuplet 3/2 { ees8 ges bes } aes4~ \tuplet 3/2 { aes8 a b } | c4~ \tuplet 3/2 { c8 b c } bes8 e, r4 |
+
+	% part "End"
+	\repeat volta 2 {
+		r4^\markup { Last time vamp and fade } \tuplet 3/2 { ees8 ges bes } aes4~ \tuplet 3/2 { aes8 a b } | c4~ \tuplet 3/2 { c8 b c } bes8 e, r4 |
+	}
+}
+{% endif %}

@@ -1,0 +1,110 @@
+{#
+default_version = "Fake"
+
+[attributes]
+title = "The Party's Over"
+style = "Broadway"
+composer = "Jule Styne"
+poet = "Betty Comden, Adolph Green"
+piece = "Moderately Slow"
+copyright = "1956 by Betty Comden, Adolph Green and Jule Styne. Copyright Renewed"
+copyrightextra = "Stratford Music Corp., Owner, and Chappell & Co., Inc. and G. Schirmer, Inc., Administrators of publication and allied rights"
+typesetter = "Mark Veltzer <mark.veltzer@gmail.com>"
+completion = "5"
+uuid = "a254123e-d540-11f1-8000-046874d194b7"
+structure = "ABAC"
+location = "jfb:295"
+
+[[youtube]]
+id = "K4GUiSQ0qnY"
+remark = "Judy Holliday in the original cast recording of Bells Are Ringing (1956)"
+
+[[youtube]]
+id = "J1Hfd_ATxO0"
+remark = "Tony Bennett"
+
+[versions.Fake]
+doChords = true
+doVoice = true
+doLyrics = false
+doLyricsmore = false
+doLyricsmoremore = false
+doChordBars = false
+doGuitar = false
+doExtra = false
+doPrep = false
+doOwn = false
+#}
+{% if part == "Vars" %}
+{% endif %}
+{% if part == "Doc" %}	DONE:
+	- added the meta data from the fake book.
+	- put in the tunes structure.
+	- put in the chords (fake book).
+	- put in the tune (fake book).
+	- added youtube performances.
+	TODO:
+	- add the lyrics.
+	- check the chords (fake book).
+	- check the tune (fake book).
+	- hear the tune to check that it is right and adjust the tempo.
+	- bar 23: the Bbm7 is printed over the second eighth note; it is placed on beat 2.
+{% endif %}
+{% if part == "ChordsFake" %}\chordmode {
+	\startChords
+	\startSong
+
+	\partial 2. s2. |
+
+	\myMark "A"
+	\startPart
+	ees2 c:m7 | f2:m7 aes4/bes bes:7 | ees2 c:m7 | f2:m7 aes4/bes bes:7 | \myEndLine
+	ees2. bes4:7/f | ees2./g aes4 | bes1:m7 | ees:7.9- | \myEndLine
+	\endPart
+
+	\myMark "B"
+	\startPart
+	aes1:6 | des:9 | ees:maj7 | ees:maj7 | \myEndLine
+	d1:m7 | g:7 | c2:7 f:7 | bes2:7 aes4/bes bes:7 | \myEndLine
+	\endPart
+
+	\myMark "A"
+	\startPart
+	ees2 c:m7 | f2:m7 aes4/bes bes:7 | ees2 c:m7 | f2:m7 aes4/bes bes:7 | \myEndLine
+	ees2. bes4:7/f | ees1/g | aes4 bes2.:m7 | ees2:7 ees:7.5+ | \myEndLine
+	\endPart
+
+	\myMark "C"
+	\startPart
+	aes1 | bes2:7 bes:7.5+ | g1:m7.5- | c:7 | f:m7 | \myEndLine
+	bes1:7 | ees:maj7 | c:m | f:m7 | bes:7 | ees | ees | \myEndLine
+	\endPart
+
+	\endSong
+	\endChords
+}
+{% endif %}
+{% if part == "VoiceFake" %}{
+	\tempo "Andante" 4 = 80
+	\time 4/4
+	\key ees \major
+
+	\partial 2. bes4 ees f |
+
+	% part "A"
+	aes4 g2.~ | g4 bes, ees f | aes4 g8 f g2~ | g8 r bes,4 ees f |
+	aes4 g8 f g4 aes | c4 bes8 a bes4 c | bes1~ | bes4 bes bes bes |
+
+	% part "B"
+	c4 aes2.~ | aes4 aes aes aes | g1~ | g4 g g g |
+	a4 d,2.~ | d4 f f f | e2 ees | d8 r bes4 ees f |
+
+	% part "A"
+	aes4 g2.~ | g4 bes, ees f | aes4 g8 f g2~ | g8 r bes,4 ees f |
+	aes4 g8 f g4 aes | c4 bes8 a bes4 c | ees4 des8 c des2~ | des4 ees ees ees |
+
+	% part "C"
+	ees4 aes,2.~ | aes4 d d4. d8 | g,1~ | g4 c c c | c4 f,2.~ |
+	f4 f ees d | g4 g2.~ | g2 f4 ees | aes4 aes2.~ | aes2 d, | ees1~ | ees4 r r2 |
+}
+{% endif %}

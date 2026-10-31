@@ -1,0 +1,111 @@
+{#
+default_version = "Fake"
+
+[attributes]
+title = "The Peanut Vendor"
+subtitle = "El Manisero"
+style = "Latin"
+composer = "Moises Simons"
+poet = "Marion Sunshine, L. Wolfe Gilbert, Moises Simons"
+piece = "Quick Rhumba"
+copyright = "1928, 1929, 1931 by Edward B. Marks Music Company"
+copyrightextra = "Copyright Renewed."
+typesetter = "Mark Veltzer <mark.veltzer@gmail.com>"
+completion = "5"
+uuid = "e4b6087a-d546-11f1-8000-046874d194b7"
+structure = "AB"
+location = "jfb:298"
+
+[[youtube]]
+id = "d8Awtl8WMUs"
+remark = "Don Azpiazu and his Havana Casino Orchestra in the famous recording (1930)"
+
+[[youtube]]
+id = "A-ZaN7o02iA"
+remark = "Stan Kenton and his Orchestra"
+
+[versions.Fake]
+doChords = true
+doVoice = true
+doLyrics = false
+doLyricsmore = false
+doLyricsmoremore = false
+doChordBars = false
+doGuitar = false
+doExtra = false
+doPrep = false
+doOwn = false
+#}
+{% if part == "Vars" %}
+{% endif %}
+{% if part == "Doc" %}	DONE:
+	- added the meta data from the fake book (English words by Marion Sunshine and L. Wolfe Gilbert, Spanish words by Moises Simons).
+	- put in the tunes structure.
+	- put in the chords (fake book).
+	- put in the tune (fake book).
+	- added youtube performances.
+	TODO:
+	- add the lyrics (the book prints two verses under the repeat, the first marked 1,3).
+	- check the chords (fake book).
+	- check the tune (fake book).
+	- hear the tune to check that it is right and adjust the tempo.
+	- bar 10 of part A: the book prints the G chord over the last quarter of the bar; typed as printed.
+{% endif %}
+{% if part == "ChordsFake" %}\chordmode {
+	\startChords
+	\startSong
+
+	\myMark "A"
+	\startPart
+	\repeat volta 2 {
+		g1 | d:7 | g | d:7 | g | \myEndLine
+		d:7 | g | d:7 | g | d2.:7 g4 | \myEndLine
+		g1 | d:7 | g | d:7 | g | \myEndLine
+		d:7 | g | d:7 | g | d:7 | \myEndLine
+		\endPart
+
+		\myMark "B"
+		\startPart
+		g | d:7 | g | d:7 | \myEndLine
+		g | d:7 | g | d:7 | \myEndLine
+		g | d:7 | g | d:7 | g | \myEndLine
+		d:7 | g | d:7 | g | \myEndLine
+		d:7 | \myEndLine
+	}
+	\endPart
+
+	\myMark "Coda"
+	\startPart
+	g | d:7 | g | d:7 | \myEndLine
+	g | d:7 | d:7 | d:7 | g | \myEndLine
+	\endPart
+
+	\endSong
+	\endChords
+}
+{% endif %}
+{% if part == "VoiceFake" %}{
+	\tempo "Allegro" 4 = 200
+	\time 2/2
+	\key g \major
+
+	% part "A"
+	\repeat volta 2 {
+		r4 g' d e | r4 fis8 e~ e e d4 | r4 g d e | r4 fis8 e~ e e d4 | r4 b' d2~ |
+		d4 fis,8 e~ e e d4 | r4 b' d2~ | d4 fis,8 e~ e e d4 | r4^\markup { To Coda \musicglyph #"scripts.coda" } b'8 c d e d cis | d4 d8 c~ c c b4 |
+		r4 g8 a b c d b | d4 a8 c~ c b g4 | r4 g d e | r4 fis8 e~ e e d4 | r4 g d e |
+		r4 fis8 e~ e e d4 | r4 d e g8 a~ | a a4 c8~ c b g4 | r4 d e g8 a~ | a8 a4 c8~ c b d4~ |
+
+		% part "B"
+		d4 g, d e | r4 fis8 e~ e e d4 | r8 d' e fis g4 e8 fis~ | fis4 d8 e~ e c d4 |
+		r8 b c d e4 c8 d~ | d4 b8 c~ c a b4 | r8 g4 a8 b4 g8 a~ | a4 fis8 e~ e e d4~ |
+		d4 g d e | r4 fis8 e~ e e d4 | r4 g d e | r8 c'4 d8 e d c d~ | d4 g, d e |
+		r8 c'4 d8 e fis e d~ | d8 b4 c8 d e d cis | d4 d8 c~ c c b4 | r8 g4 a8 b c d b |
+		d8 a4 c8~ c b g4^\markup { 2nd time: D.C. al Coda } |
+	}
+
+	% part "Coda"
+	r4 b d2~ | d8 fis,4 e8~ e e d4 | r4 b' d2~ | d8 fis,4 e8~ e e d4 |
+	r4 b' d2~ | d8 fis,4 e8~ e e d4 | r8 fis4 e8~ e e d4 | r8 fis4 e8~ e e d4 | g8 r r4 r2 |
+}
+{% endif %}

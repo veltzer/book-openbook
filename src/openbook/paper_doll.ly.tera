@@ -1,0 +1,109 @@
+{#
+default_version = "Fake"
+
+[attributes]
+title = "Paper Doll"
+style = "Swing"
+composer = "Johnny S. Black"
+poet = "Johnny S. Black"
+piece = "Smoothly"
+copyright = "1915 by John Stewart Black"
+copyrightextra = "Copyright 1930 by Edward B. Marks Music Company. Copyright renewed."
+typesetter = "Mark Veltzer <mark.veltzer@gmail.com>"
+completion = "5"
+uuid = "a2511a7a-d540-11f1-8000-046874d194b7"
+structure = "AB"
+location = "jfb:294"
+
+[[youtube]]
+id = "HaMeSrynug0"
+remark = "The Mills Brothers in the famous hit recording (1942)"
+
+[[youtube]]
+id = "SDbmxd9qn2c"
+remark = "Frank Sinatra"
+
+[versions.Fake]
+doChords = true
+doVoice = true
+doLyrics = false
+doLyricsmore = false
+doLyricsmoremore = false
+doChordBars = false
+doGuitar = false
+doExtra = false
+doPrep = false
+doOwn = false
+#}
+{% if part == "Vars" %}
+{% endif %}
+{% if part == "Doc" %}	DONE:
+	- added the meta data from the fake book.
+	- put in the tunes structure.
+	- put in the chords (fake book).
+	- put in the tune (fake book).
+	- added youtube performances.
+	TODO:
+	- add the lyrics.
+	- check the chords (fake book).
+	- check the tune (fake book).
+	- hear the tune to check that it is right and adjust the tempo.
+{% endif %}
+{% if part == "ChordsFake" %}\chordmode {
+	\startChords
+	\startSong
+
+	\partial 4. s4. |
+
+	\repeat volta 2 {
+
+		\myMark "A"
+		\startPart
+		f2 d:7 | g1:7 | c:7 | f2 g4:m7 c:7 | \myEndLine
+		f2. f4:m | c2 a:7 | g1:7 | c:7 | \myEndLine
+		\endPart
+
+		\myMark "B"
+		\startPart
+		f4 d:7 g:7 c:7 | f1 | f4 d:7 g:7 c:7 | a1:7 | bes2 b:dim7 | \myEndLine
+		f4 a:7 d2:7 | g2:7 bes4:m6 c:7 |
+	} \alternative {
+		{
+			f4 aes:dim7 g:m7 c:7 | \myEndLineVoltaNotLast
+		}
+		{
+			f1 | \myEndLineVoltaLast
+		}
+	}
+	\endPart
+
+	\endSong
+	\endChords
+}
+{% endif %}
+{% if part == "VoiceFake" %}{
+	\tempo "Moderato" 4 = 112
+	\time 4/4
+	\key f \major
+
+	\partial 4. c8 d e |
+
+	\repeat volta 2 {
+
+		% part "A"
+		f8 e f a d c bes a | d,4 a' g4. f8 | e8 dis e f g e d e | d2 r8 c d e |
+		g8 f e f g4 f8 d | e8 dis e b' a4. ais8 | b8 a g fis f d d' des | c2. c4 |
+
+		% part "B"
+		c8 b bes a g fis g gis | a8 c~ c2 c4 | c8 b bes a g fis g gis | a2. e4 | d8 cis d e f e f g |
+		a4 e' d8 c bes a | d,8 f d f g4 a |
+	} \alternative {
+		{
+			f2 r8 c d e |
+		}
+		{
+			f2~ f8 r r4 |
+		}
+	}
+}
+{% endif %}

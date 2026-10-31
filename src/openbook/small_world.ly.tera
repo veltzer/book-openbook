@@ -1,0 +1,128 @@
+{#
+default_version = "Fake"
+
+[attributes]
+title = "Small World"
+style = "Broadway"
+composer = "Jule Styne"
+poet = "Stephen Sondheim"
+piece = "Slowly"
+copyright = "1959 by Norbeth Productions, Inc. and Stephen Sondheim. Copyright Renewed."
+copyrightextra = "Williamson Music Co. and Stratford Music Corp., owners of publication and allied rights throughout the World. (Chappell & Co., Inc., Administrator)"
+typesetter = "Mark Veltzer <mark.veltzer@gmail.com>"
+completion = "5"
+uuid = "330cbec4-d547-11f1-8000-046874d194b7"
+structure = "AABA"
+location = "jfb:340"
+
+[[youtube]]
+id = "9pSKXW7PjR4"
+remark = "Jack Klugman and Ethel Merman in the original Broadway cast recording of Gypsy (1959)"
+
+[[youtube]]
+id = "YUe16O6rcYM"
+remark = "Johnny Mathis (1959)"
+
+[versions.Fake]
+doChords = true
+doVoice = true
+doLyrics = false
+doLyricsmore = false
+doLyricsmoremore = false
+doChordBars = false
+doGuitar = false
+doExtra = false
+doPrep = false
+doOwn = false
+#}
+{% if part == "Vars" %}
+{% endif %}
+{% if part == "Doc" %}	DONE:
+	- added the meta data from the fake book.
+	- put in the tunes structure.
+	- put in the chords (fake book).
+	- put in the tune (fake book).
+	- added youtube performances.
+	TODO:
+	- add the lyrics.
+	- check the chords (fake book).
+	- check the tune (fake book).
+	- hear the tune to check that it is right and adjust the tempo.
+	- bar 11: the book puts the Cm7 on the fourth beat (in the parallel bars 3 and 27 it is on the third beat); typed as printed.
+{% endif %}
+{% if part == "ChordsFake" %}\chordmode {
+	\startChords
+	\startSong
+
+	\repeat volta 2 {
+
+		\myMark "A"
+		\startPart
+		ees1 | ees | ees2 c:m7 | f:m7.5- bes:7 | \myEndLine
+		ees1:6 | ees:6 | f:m7 | bes:9 | \myEndLine
+		\endPart
+
+		\myMark "A"
+		\startPart
+		ees1:6 | ees:6 | ees2.:6 c4:m7 | f2:m7.5- bes:7 | \myEndLine
+		ees1:6 | ees2:6 f:m7 | g1:m7 | c:7 | \myEndLine
+		\endPart
+
+		\myMark "B"
+		\startPart
+		f2:m7 bes:9 | ees g8:m7 ges4.:m7 | f2:m7 bes:7.5+ | ees1:maj7 | \myEndLine
+		ees2:m7 aes:7 | des:maj7 f8:m7 e4.:m7 | ees4:m7 ees:m/des c8:7.5+ f4.:9 | bes1:7.5+ | \myEndLine
+		\endPart
+
+		\myMark "A"
+		\startPart
+		ees1:6 | ees:6 | ees2:6 c:m7 | f:m7.5- bes:7 | \myEndLine
+		ees1 | aes2. ees4 | ees2:/bes e:dim7 | f:m7 bes:9 | \myEndLine
+		g1:m7 | c:7.5+ | f:9 | bes:9 | \myEndLine
+	} \alternative {
+		{
+			ees2 ges:dim7 | f:m7 bes:7.5+ | \myEndLineVoltaNotLast
+		}
+		{
+			ees2 aes | ees1 | \myEndLineVoltaLast
+		}
+	}
+	\endPart
+
+	\endSong
+	\endChords
+}
+{% endif %}
+{% if part == "VoiceFake" %}{
+	\tempo "Andante" 4 = 80
+	\time 4/4
+	\key ees \major
+
+	\repeat volta 2 {
+
+		% part "A"
+		bes8 ees~ ees2 bes8. ees16 | aes8. aes16 g4 f ees | aes8. aes16 g4 f ees | aes1 |
+		bes,8 ees~ ees2 bes8. ees16 | c'8. c16 bes4 aes g | bes4 bes2. | aes8 g f2. |
+
+		% part "A"
+		bes,8 ees~ ees2 bes8. ees16 | aes8. aes16 g4 f ees | aes8. aes16 g4 f ees | aes1 |
+		bes,8 ees~ ees2 bes8. ees16 | c'8. c16 bes4 aes g | bes4 bes2. | d8 c d2. |
+
+		% part "B"
+		c2 d, | r8. ees16 g8. bes16 c8 des4. | r8. c,16 ees8. aes16 c8 ces4. | bes1 |
+		des2 bes | r8. f16 aes8. c16 ees8 d4. | r8. ees,16 ges8. bes16 des8 c4. | ces8 bes4 bes8~ bes2 |
+
+		% part "A"
+		bes,8 ees~ ees2 bes8. ees16 | aes8. aes16 g4 f ees | aes8. aes16 g4 f ees | aes1 |
+		bes,8 ees~ ees2 bes8. ees16 | \tuplet 3/2 { c'4 c bes } aes g | bes4 bes2. | aes8 g f2. |
+		bes4 bes2. | c8 bes c2. | d2. c4 | g4 g2 c,4 |
+	} \alternative {
+		{
+			ees1~ | ees2 r |
+		}
+		{
+			ees1~ | ees2. r4 |
+		}
+	}
+}
+{% endif %}

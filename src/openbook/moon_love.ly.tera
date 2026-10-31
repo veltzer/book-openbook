@@ -1,0 +1,109 @@
+{#
+default_version = "Fake"
+
+[attributes]
+title = "Moon Love"
+style = "Jazz"
+composer = "Mack David, Mack Avis, Andre Kostelanetz"
+poet = "Mack David, Mack Avis, Andre Kostelanetz"
+piece = "Moderately Slow"
+copyright = "1939 Famous Music Corp."
+copyrightextra = "Copyright renewed and assigned to Harry Von Tilzer Music Publishing Company and Famous Music Corp. (c/o The Welk Music Group, Santa Monica, CA 90401)"
+typesetter = "Mark Veltzer <mark.veltzer@gmail.com>"
+completion = "5"
+uuid = "3c5e7470-d521-11f1-8000-046874d194b7"
+structure = "ABCA"
+location = "jfb:253"
+
+[[youtube]]
+id = "07Lj7nWOQMY"
+remark = "Glenn Miller and his Orchestra with Ray Eberle, the hit recording (1939)"
+
+[[youtube]]
+id = "O1BHjBK9Pf0"
+remark = "Chet Baker (1953)"
+
+[versions.Fake]
+doChords = true
+doVoice = true
+doLyrics = false
+doLyricsmore = false
+doLyricsmoremore = false
+doChordBars = false
+doGuitar = false
+doExtra = false
+doPrep = false
+doOwn = false
+#}
+{% if part == "Vars" %}
+{% endif %}
+{% if part == "Doc" %}	DONE:
+	- added the meta data from the fake book (the page says: Adapted From Tschaikowsky's Fifth Symphony, Second Movement).
+	- put in the tunes structure.
+	- put in the chords (fake book).
+	- put in the tune (fake book).
+	- added youtube performances.
+	TODO:
+	- add the lyrics.
+	- check the chords (fake book).
+	- check the tune (fake book).
+	- hear the tune to check that it is right and adjust the tempo.
+{% endif %}
+{% if part == "ChordsFake" %}\chordmode {
+	\startChords
+	\startSong
+
+	\partial 2 s2 |
+
+	\myMark "A"
+	\startPart
+	g2:m7 c:7 | c1:7 | f:maj7 | d:m7 | \myEndLine
+	g:m7 | c2:7sus4 c:7 | f:sus4 f | f:/a aes:dim7 | \myEndLine
+	\endPart
+
+	\myMark "B"
+	\startPart
+	g2:m7 c:7 | c1:7 | f:maj7 | d:m7 | \myEndLine
+	b:m7.5- | e:7.9- | a:m | a:m7.5- | \myEndLine
+	\endPart
+
+	\myMark "C"
+	\startPart
+	d1:7 | g:m7 | c:7 | f:maj7 | \myEndLine
+	d2:m7 g:9 | g:m7 c:7 | f1:maj7 | f2:/a aes:dim7 | \myEndLine
+	\endPart
+
+	\myMark "A"
+	\startPart
+	g2:m7 c:7 | c1:7 | f:maj7 | d:m7 | \myEndLine
+	g:9 | g2:m9 c:7 | f bes:maj7 | f1:6 | \myEndLine
+	\endPart
+
+	\endSong
+	\endChords
+}
+{% endif %}
+{% if part == "VoiceFake" %}{
+	\tempo "Andante" 4 = 90
+	\time 4/4
+	\key f \major
+
+	\partial 2 \tuplet 3/2 { f4 e d } |
+
+	% part "A"
+	f2 e~ | e2 \tuplet 3/2 { c4 d e } | g2 f~ | f2 \tuplet 3/2 { f4 g a } |
+	bes2 bes4. bes8 | bes2. bes4 | bes4. a8 a2~ | a2 \tuplet 3/2 { f4 e d } |
+
+	% part "B"
+	f2 e~ | e2 \tuplet 3/2 { c4 d e } | g2 f~ | f2 \tuplet 3/2 { f4 g a } |
+	b!2 b4. b8 | b!2. b4 | \tuplet 3/2 { b!4 d c } c2~ | c2 \tuplet 3/2 { a4 bes c } |
+
+	% part "C"
+	c2 d,~ | d2 \tuplet 3/2 { g4 a bes } | bes2 c,~ | c2 \tuplet 3/2 { f4 g a } |
+	a2 a4. a8 | a2. g4 | d'4. c8 c2~ | c2 \tuplet 3/2 { f,4 e d } |
+
+	% part "A"
+	f2 e~ | e2 \tuplet 3/2 { c4 d e } | g2 f~ | f2 \tuplet 3/2 { a4 bes c } |
+	d2 d,4. d8 | a'2 e4 e | f1~ | f2. r4 |
+}
+{% endif %}

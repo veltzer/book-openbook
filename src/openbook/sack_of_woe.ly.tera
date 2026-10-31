@@ -1,0 +1,105 @@
+{#
+default_version = "Fake"
+
+[attributes]
+title = "Sack Of Woe"
+style = "Jazz"
+composer = "Julian Adderley"
+piece = "Medium Swing"
+copyright = "1960 UPAM MUSIC CO., A Division of Gopam Enterprises, Inc."
+typesetter = "Mark Veltzer <mark.veltzer@gmail.com>"
+completion = "5"
+uuid = "47cfe2c8-d547-11f1-8000-046874d194b7"
+structure = "AB"
+location = "jfb:324"
+
+[[youtube]]
+id = "N45hYXNu12o"
+remark = "Cannonball Adderley Quintet (live)"
+
+[[youtube]]
+id = "0QRWC-mjiCg"
+remark = "Cannonball Adderley live (1961)"
+
+[versions.Fake]
+doChords = true
+doVoice = true
+doLyrics = false
+doLyricsmore = false
+doLyricsmoremore = false
+doChordBars = false
+doGuitar = false
+doExtra = false
+doPrep = false
+doOwn = false
+#}
+{% if part == "Vars" %}
+{% endif %}
+{% if part == "Doc" %}	DONE:
+	- added the meta data from the fake book.
+	- put in the tunes structure.
+	- put in the chords (fake book).
+	- put in the tune (fake book).
+	- added youtube performances.
+	TODO:
+	- check the chords (fake book).
+	- check the tune (fake book).
+	- hear the tune to check that it is right and adjust the tempo.
+	- the fake book has no accidental on the e in the C7 bar of the A part, so it is e flat here (blue note).
+{% endif %}
+{% if part == "ChordsFake" %}\chordmode {
+	\startChords
+	\startSong
+
+	\myMark "A"
+	\startPart
+	\repeat volta 2 {
+		f1*4:m7 | \myEndLine
+		bes1*4:7 | \myEndLine
+		c1*2:7 | f1*2:m7 | \myEndLine
+		\endPart
+
+		\myMark "B"
+		\startPart
+		bes2:m7 ees:7.5+ | aes1 | g2:m7.5- c:7 | f1:m | \myEndLine
+		bes2:m7 ees:7.5+ | aes1 | g2:m7.5- c:7 | f1:m | \myEndLine
+		bes2:m7 ees:7.5+ | aes2 c:7 | f1*2:m7 | \myEndLine
+	} \alternative {
+		{
+			f1*2:m7 | \myEndLineVoltaNotLast
+		}
+		{
+			f1*2:m7 | \myEndLineVoltaLast
+		}
+	}
+	\endPart
+
+	\endSong
+	\endChords
+}
+{% endif %}
+{% if part == "VoiceFake" %}{
+	\tempo "Moderato" 4 = 140
+	\time 2/2
+	\key f \minor
+
+	% part "A"
+	\repeat volta 2 {
+		r2 c'8 ees4. | \tuplet 3/2 { c8 b bes } aes8 f aes4 bes | f1~ | f1 |
+		r2 c'8 ees4. | \tuplet 3/2 { c8 b bes } aes8 f aes4 bes | f1~ | f1 |
+		r2 c'8 ees4. | \tuplet 3/2 { c8 b bes } aes8 f aes4 bes | f1~ | f2. r4 |
+
+		% part "B"
+		des'8 ees des ees~ ees4 b | c4 aes bes r | r4 c8 b bes aes \tuplet 3/2 { f8 des f~ } | f1 |
+		des'8 ees des ees~ ees4 b | c4 aes bes r | r4 c8 b bes aes \tuplet 3/2 { f8 des f~ } | f1 |
+		des'8 ees des ees~ ees4 b | c4 aes bes r | r2 c8 ees4. | \tuplet 3/2 { c8 b bes } aes8 f aes4 bes |
+	} \alternative {
+		{
+			f1~ | f1 |
+		}
+		{
+			f1~ | f1 |
+		}
+	}
+}
+{% endif %}

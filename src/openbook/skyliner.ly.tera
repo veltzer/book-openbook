@@ -1,0 +1,115 @@
+{#
+default_version = "Fake"
+
+[attributes]
+title = "Skyliner"
+style = "Swing"
+composer = "Charlie Barnet"
+piece = "Bright Swing Tempo"
+copyright = "1944 Atlantic Music Corp."
+copyrightextra = "Renewed 1972 Atlantic Music Corp."
+typesetter = "Mark Veltzer <mark.veltzer@gmail.com>"
+completion = "5"
+uuid = "330ad6e0-d547-11f1-8000-046874d194b7"
+structure = "AABA"
+location = "jfb:340"
+
+[[youtube]]
+id = "pwyqn60zzos"
+remark = "Charlie Barnet and his Orchestra in the original recording (1944)"
+
+[[youtube]]
+id = "2fQY79Fcvoo"
+remark = "ELMO Bigband featuring Stephan Greisinger"
+
+[versions.Fake]
+doChords = true
+doVoice = true
+doLyrics = false
+doLyricsmore = false
+doLyricsmoremore = false
+doChordBars = false
+doGuitar = false
+doExtra = false
+doPrep = false
+doOwn = false
+#}
+{% if part == "Vars" %}
+{% endif %}
+{% if part == "Doc" %}	DONE:
+	- added the meta data from the fake book.
+	- put in the tunes structure.
+	- put in the chords (fake book).
+	- put in the tune (fake book).
+	- added youtube performances.
+	TODO:
+	- add the lyrics.
+	- check the chords (fake book).
+	- check the tune (fake book).
+	- hear the tune to check that it is right and adjust the tempo.
+	- bars 21-22: the book omits accidentals on the B's after the Bb's; typed with the carry-through-the-bar rule (bes), which fits the Eb9 chord.
+{% endif %}
+{% if part == "ChordsFake" %}\chordmode {
+	\startChords
+	\startSong
+
+	\myMark "A"
+	\startPart
+	\repeat volta 2 {
+		c1:maj7 | c2:7 c:6 | a1:9 | e2:m7.5- a:7 | \myEndLine
+		d1:m7 | d:m7 | aes:maj7 | f:m6 | \myEndLine
+		d:m7 | f:m6 | g:9 | g:7.9- | \myEndLine
+	} \alternative {
+		{
+			c1:maj7 | d:7 | g:7 | a:m7/g | \myEndLineVoltaNotLast
+		}
+		{
+			c1 | bes:9 | c | c | \myEndLineVoltaLast
+		}
+	}
+	\endPart
+
+	\myMark "B"
+	\startPart
+	ees1:9 | ees:9 | aes:maj7 | aes:maj7 | des:9 | ges:9 | \myEndLine
+	ces1 | ces | c:7 | c:7 | f | f | \myEndLine
+	ges:9 | d:9 | des:9.11+ | des:9.11+ | \myEndLine
+	\endPart
+
+	\myMark "Coda"
+	\startPart
+	c1 | bes:9 | c | c | \myEndLine
+	\endPart
+
+	\endSong
+	\endChords
+}
+{% endif %}
+{% if part == "VoiceFake" %}{
+	\tempo "Allegro" 4 = 200
+	\time 2/2
+	\key c \major
+
+	% part "A"
+	\repeat volta 2 {
+		b'1 | bes2 a | b!1 | bes2 a |
+		g1 | f2 a | g1 | f |
+		e1 | d2 g | e1 | d^\markup { To Coda \musicglyph #"scripts.coda" } |
+	} \alternative {
+		{
+			b1 | c2 e | g4 b d f | a, c e g |
+		}
+		{
+			c,,1 | c2 c | c1~ | c4 r r2 |
+		}
+	}
+
+	% part "B"
+	\tuplet 3/2 { c'4 b bes } \tuplet 3/2 { a bes b! } | \tuplet 3/2 { c b bes } \tuplet 3/2 { a bes c } | g1 | r2 aes4 c | ees1 | ges |
+	des1~ | des2 \tuplet 3/2 { r4 ces bes } | \tuplet 3/2 { a aes g } \tuplet 3/2 { fis g gis } | \tuplet 3/2 { a! aes g } \tuplet 3/2 { fis g a! } | a1~ | a4 r r2 |
+	aes1 | b! | g~ | g4 r r2^\markup { D.C. al Coda } |
+
+	% part "Coda"
+	c,1 | c' | c~ | c2. r4 |
+}
+{% endif %}

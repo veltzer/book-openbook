@@ -1,0 +1,117 @@
+{#
+default_version = "Fake"
+
+[attributes]
+title = "Seven Come Eleven"
+style = "Swing"
+composer = "Benny Goodman, Charlie Christian"
+piece = "Bright tempo"
+copyright = "1940 by Regent Music Corp."
+copyrightextra = "Copyright renewed by Regent Music Corp. and Jewel Music Publishing Co., Inc. Reprinted by permission."
+typesetter = "Mark Veltzer <mark.veltzer@gmail.com>"
+completion = "5"
+uuid = "d8a51d2a-d549-11f1-8000-046874d194b7"
+structure = "AABA"
+location = "jfb:332"
+
+[[youtube]]
+id = "xb2BkYZCJoc"
+remark = "Benny Goodman Sextet with Charlie Christian in the original recording (1939)"
+
+[[youtube]]
+id = "GMUNmkTDnqE"
+remark = "Herb Ellis and Joe Pass live at Concord Boulevard Park (1973)"
+
+[versions.Fake]
+doChords = true
+doVoice = true
+doLyrics = false
+doLyricsmore = false
+doLyricsmoremore = false
+doChordBars = false
+doGuitar = false
+doExtra = false
+doPrep = false
+doOwn = false
+#}
+{% if part == "Vars" %}
+{% endif %}
+{% if part == "Doc" %}	DONE:
+	- added the meta data from the fake book.
+	- put in the tunes structure.
+	- put in the chords (fake book).
+	- put in the tune (fake book).
+	- added youtube performances.
+	TODO:
+	- check the chords (fake book).
+	- check the tune (fake book).
+	- hear the tune to check that it is right and adjust the tempo.
+{% endif %}
+{% if part == "ChordsFake" %}\chordmode {
+	\startChords
+	\startSong
+
+	\partial 4 s4 |
+
+	\myMark "A"
+	\startPart
+	\repeat volta 2 {
+		aes1*3 | \myEndLine
+		aes1*4 | \myEndLine
+	} \alternative {
+		{
+			aes1 | \myEndLineVoltaNotLast
+		}
+		{
+			aes1 | \myEndLineVoltaLast
+		}
+	}
+	\endPart
+
+	\myMark "B"
+	\startPart
+	g1*2:7 | \myEndLine
+	c1*2:7 | f1*2:7 | \myEndLine
+	bes1:7 | ees:7 | \myEndLine
+	\endPart
+
+	\myMark "A"
+	\startPart
+	aes1*4 | \myEndLine
+	aes1*4 | \myEndLine
+	\endPart
+
+	\endSong
+	\endChords
+}
+{% endif %}
+{% if part == "VoiceFake" %}{
+	\tempo "Allegro" 2 = 120
+	\time 2/2
+	\key aes \major
+
+	\partial 4 b8 c |
+
+	% part "A"
+	\repeat volta 2 {
+		ees8 c ees c ees f b, c | ees8 c ees c ees f b, c | ees8 f r4 r b,8 c |
+		ees8 f r4 r b,8 c | ees8 c ees c ees f b, c | ees8 c ees c ees f b, c | ees8 aes, r4 r b8 c |
+	} \alternative {
+		{
+			ees8 aes, r4 r8 aes b c |
+		}
+		{
+			ees8 aes, r aes' des d! e! a! |
+		}
+	}
+
+	% part "B"
+	g4 \tuplet 3/2 { g,8 aes a! } des8 d! f aes | a!8 f d! b! g f d! b! |
+	e!4 \tuplet 3/2 { e8 g bes } des8 d! a'! aes | g8 ges f e! g c, ees g | f2. r8 a! |
+	c8 b! bes a! aes g f ees | d!4 aes'8 f des bes aes f | ees'8 g, bes c ees4 b,8 c |
+
+	% part "A"
+	ees8 c ees c ees f b, c | ees8 c ees c ees f b, c | ees8 f r4 r b,8 c | ees8 f r4 r b,8 c |
+	ees8 c ees c ees f b, c | ees8 c ees c ees f b, c | ees8 aes, r4 r b8 c | ees8 aes, r4 r2 |
+}
+{% endif %}

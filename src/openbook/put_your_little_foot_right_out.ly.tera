@@ -1,0 +1,118 @@
+{#
+default_version = "Fake"
+
+[attributes]
+title = "Put Your Little Foot Right Out"
+style = "Jazz"
+composer = "Larry Spier"
+poet = "Larry Spier"
+piece = "Jazz Waltz"
+copyright = "1939. Renewed 1966 and Assigned to Larry Spier, Inc., New York, NY"
+copyrightextra = "This arrangement Copyright 1987 Larry Spier, Inc."
+typesetter = "Mark Veltzer <mark.veltzer@gmail.com>"
+completion = "5"
+uuid = "9a4de8aa-d548-11f1-8000-046874d194b7"
+structure = "ABA"
+location = "jfb:306"
+
+[[youtube]]
+id = "793hpxrv61s"
+remark = "Monty Alexander"
+
+[[youtube]]
+id = "mTri86Fphrg"
+remark = "Ray Brown"
+
+[versions.Fake]
+doChords = true
+doVoice = true
+doLyrics = false
+doLyricsmore = false
+doLyricsmoremore = false
+doChordBars = false
+doGuitar = false
+doExtra = false
+doPrep = false
+doOwn = false
+#}
+{% if part == "Vars" %}
+{% endif %}
+{% if part == "Doc" %}	DONE:
+	- added the meta data from the fake book.
+	- put in the tunes structure.
+	- put in the chords (fake book).
+	- put in the tune (fake book).
+	- added youtube performances.
+	TODO:
+	- check the chords (fake book).
+	- check the tune (fake book).
+	- hear the tune to check that it is right and adjust the tempo.
+	- add the lyrics.
+{% endif %}
+{% if part == "ChordsFake" %}\chordmode {
+	\startChords
+	\startSong
+
+	\partial 4 s4 |
+
+	\myMark "A"
+	\startPart
+	g2.*2 | g2.:7 | g2:7 e4:7.5+ | a2.:m7 | d:7 | a:m7 | d:7 | \myEndLine
+	g2.*3 | g2:7 e4:7.5+ | a2.:m7 | d:7 | a:m7 | d:7 | g | \myEndLine
+	\endPart
+
+	\repeat volta 2 {
+
+		\myMark "B"
+		\startPart
+		g2 e4:7 | a2.:m7 | d2:7 d4:9.5+ | g2.:6 | e:m7 | a:m7 | d:7 | g | \myEndLine
+		g2 e4:7 | a2.:m7 | d2:7 d4:9.5+ | g2.:6 | e:m7 | a:m7 | d:7 | g:6 | \myEndLine
+		\endPart
+
+		\myMark "A"
+		\startPart
+		g2.*2:6 | g2:7 e4:7.5+ | a2.:m7 | d:7 | a:m7 | d:7 | \myEndLine
+		g2.*4 | g2 e4:7.5+ | a2.:m7 | d:7 | a:m7 | d:7 |
+	} \alternative {
+		{
+			g2. | \myEndLineVoltaNotLast
+		}
+		{
+			g2. | \myEndLineVoltaLast
+		}
+	}
+	\endPart
+
+	\endSong
+	\endChords
+}
+{% endif %}
+{% if part == "VoiceFake" %}{
+	\tempo "Moderato" 4 = 160
+	\time 3/4
+	\key g \major
+
+	\partial 4 d8 g |
+
+	% part "A"
+	b8 ais b4 d,8 g | b8 ais b4 d,8 g | b8 ais b4 d,8 g | b8 ais b4 c | a2 d,8 fis | a8 gis a4 d,8 fis | a8 gis a4 d,8 fis | a8 gis a4 b |
+	g2 d8 g | b8 ais b4 d,8 g | b8 ais b4 d,8 g | b8 ais b4 c | a2 d,8 fis | a8 gis a4 d,8 fis | a8 gis a4 d,8 fis | a8 gis a4 b | g2 b8 c |
+
+	\repeat volta 2 {
+		% part "B"
+		d4 g, b | a2 a8 b | c4 a e' | d2 b8 c | d4 g, b | a2 a8 b | c4 e, fis | g2 b8 c |
+		d4 g, b | a2 a8 b | c4 a e' | d2 b8 c | d4 g, b | a2 a8 b | c4 e, fis | g2 d8 g |
+
+		% part "A"
+		b8 ais b4 d,8 g | b8 ais b4 d,8 g | b8 ais b4 c | a2 d,8 fis | a8 gis a4 d,8 fis | a8 gis a4 d,8 fis | a8 gis a4 b |
+		g2 d8 g | b8 ais b4 d,8 g | b8 ais b4 d,8 g | b8 ais b4 d,8 g | b8 ais b4 c | a2 d,8 fis | a8 gis a4 d,8 fis | a8 gis a4 d,8 fis | a8 gis a4 b |
+	} \alternative {
+		{
+			g2 b8 c |
+		}
+		{
+			g2 r4 |
+		}
+	}
+}
+{% endif %}

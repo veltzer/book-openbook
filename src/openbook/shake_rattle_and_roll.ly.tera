@@ -1,0 +1,113 @@
+{#
+default_version = "Fake"
+
+[attributes]
+title = "Shake, Rattle And Roll"
+style = "Blues"
+composer = "Charles Calhoun"
+poet = "Charles Calhoun"
+piece = "Moderately"
+copyright = "1954 by Progressive Music Publishing Co., Inc."
+copyrightextra = "Copyright Renewed and Assigned to Unichappell Music, Inc. (Rightsong Music, Publisher). All rights controlled by Unichappell Music, Inc. (Rightsong Music, Publisher)"
+typesetter = "Mark Veltzer <mark.veltzer@gmail.com>"
+completion = "5"
+uuid = "08ef796a-d547-11f1-8000-046874d194b7"
+structure = "Blues"
+location = "jfb:332"
+
+[[youtube]]
+id = "hze024iM7EA"
+remark = "Big Joe Turner in the original recording (1954)"
+
+[[youtube]]
+id = "COWGi7H-dJY"
+remark = "Bill Haley and his Comets (1954)"
+
+[versions.Fake]
+doChords = true
+doVoice = true
+doLyrics = false
+doLyricsmore = false
+doLyricsmoremore = false
+doChordBars = false
+doGuitar = false
+doExtra = false
+doPrep = false
+doOwn = false
+#}
+{% if part == "Vars" %}
+{% endif %}
+{% if part == "Doc" %}	DONE:
+	- added the meta data from the fake book.
+	- put in the tunes structure.
+	- put in the chords (fake book).
+	- put in the tune (fake book).
+	- added youtube performances.
+	TODO:
+	- add the lyrics.
+	- check the chords (fake book).
+	- check the tune (fake book).
+	- hear the tune to check that it is right and adjust the tempo.
+{% endif %}
+{% if part == "ChordsFake" %}\chordmode {
+	\startChords
+	\startSong
+
+	\partial 4 s4 |
+
+	\myMark "A"
+	\startPart
+	c1*4:7 | \myEndLine
+	f1*2:9 | c1:6 | c2.:6 ees4:dim7 | \myEndLine
+	d1:m7 | g:9 | c1*2:6 | \myEndLine
+	\endPart
+
+	\myMark "B"
+	\startPart
+	c1*4:7 | \myEndLine
+	f1*2:9 | c1:7 | c2.:7 ees4:dim7 | \myEndLine
+	d1:m7 | g:7 | c1*2 | \myEndLine
+	\endPart
+
+	\myMark "C"
+	\startPart
+	c1*4:7 | \myEndLine
+	f1*2:7 | c1:6 | c2.:6 ees4:dim7 | \myEndLine
+	d1:m7 | g:9 | c1*2:6 | \myEndLine
+	\endPart
+
+	\myMark "Coda"
+	\startPart
+	c1*2:6 | \myEndLine
+	\endPart
+
+	\endSong
+	\endChords
+}
+{% endif %}
+{% if part == "VoiceFake" %}{
+	\tempo "Moderato" 4 = 160
+	\time 2/2
+	\key c \major
+
+	\partial 4 c'8 c~ |
+
+	% part "A"
+	c8 c c4 c8 c4 a8 | c8 c a4 a g8 e~ | e1 | r2 r4 c'8 c~ |
+	c8 c c4 c8 c4 a8 | c8 c a4 a g8 e~ | e1 | r2 r4 c'4 |
+	c4 c a8 a f e | a4 g a g8 c,~ | c1~ | c2. r4 |
+
+	% part "B"
+	c'4^\markup { \musicglyph #"scripts.segno" } r c8 c c c~ | c1 | c4 r c8 c c c~ | c1 |
+	c4 r c8 c c ees~ | ees1 | c4 r c8 c c c~ | c2. c4 |
+	c8 c c4 c8 c4 g8 | bes4 a a g | c,1~^\markup { To Coda \musicglyph #"scripts.coda" } | c2. r4 |
+
+	% part "C"
+	c'8 c c4 c8 c4 c8 | c4 a a g8 e~ | e1 | r1 |
+	c'8 c c4 c8 c4 c8 | c4 a a g8 e~ | e1 | r2 r4 c'4 |
+	c4 c8 a~ a4 a8 g | bes4 a8 a~ a4 g8 c,~ | c1~ | c2. r4^\markup { D.S. al Coda } |
+
+	% part "Coda"
+	c1~^\markup { \musicglyph #"scripts.coda" } | c2. r4 |
+}
+{% endif %}

@@ -1,0 +1,105 @@
+{#
+default_version = "Fake"
+
+[attributes]
+title = "Put On A Happy Face"
+style = "Broadway"
+composer = "Charles Strouse"
+poet = "Lee Adams"
+piece = "Lightly"
+copyright = "1960, 1987 LEE ADAMS and CHARLES STROUSE"
+copyrightextra = "All Rights Controlled by EDWIN H. MORRIS & COMPANY, A Division of MPL Communications, Inc. International Copyright Secured. All Rights Reserved."
+typesetter = "Mark Veltzer <mark.veltzer@gmail.com>"
+completion = "5"
+uuid = "3d3035e2-d548-11f1-8000-046874d194b7"
+structure = "ABAC"
+location = "jfb:305"
+
+[[youtube]]
+id = "wDNqWdwrr-c"
+remark = "Dick Van Dyke in the original Broadway cast recording of Bye Bye Birdie (1960)"
+
+[[youtube]]
+id = "PGx-cWwhJU4"
+remark = "Tony Bennett"
+
+[versions.Fake]
+doChords = true
+doVoice = true
+doLyrics = false
+doLyricsmore = false
+doLyricsmoremore = false
+doChordBars = false
+doGuitar = false
+doExtra = false
+doPrep = false
+doOwn = false
+#}
+{% if part == "Vars" %}
+{% endif %}
+{% if part == "Doc" %}	DONE:
+	- added the meta data from the fake book.
+	- put in the tunes structure.
+	- put in the chords (fake book).
+	- put in the tune (fake book).
+	- added youtube performances.
+	TODO:
+	- check the chords (fake book).
+	- check the tune (fake book).
+	- hear the tune to check that it is right and adjust the tempo.
+	- add the lyrics.
+{% endif %}
+{% if part == "ChordsFake" %}\chordmode {
+	\startChords
+	\startSong
+
+	\myMark "A"
+	\startPart
+	ees1:6 | g2:m7 c:7 | f:m7 bes:9 | f:m7 bes:9 | \myEndLine
+	ees ees:6 | g:m7 c:7 | f:m7 bes:9 | bes:m7 ees:7 | \myEndLine
+	\endPart
+
+	\myMark "B"
+	\startPart
+	aes:maj7 d:7 | g:7 c:7 | f:7 bes:7 | ees:maj7 ees:7 | \myEndLine
+	aes:maj7 d:7 | g:7 c:7 | f1:7 | f2:m7 bes:9 | \myEndLine
+	\endPart
+
+	\myMark "A"
+	\startPart
+	ees1:6 | g2:m7 c:7 | f:m7 bes:9 | f:m7 bes:9 | \myEndLine
+	ees1:6 | g2:m7 c:7 | f:m7 bes:9 | bes:m7 ees:7 | \myEndLine
+	\endPart
+
+	\myMark "C"
+	\startPart
+	aes:maj7 bes:9 | ees1 | f2:m7 bes:7 | g4:7.5+ g:7 c2:9 | \myEndLine
+	f1:9 | f2:m7 bes:9 | ees ees:6 | f:m7 ees | \myEndLine
+	\endPart
+
+	\endSong
+	\endChords
+}
+{% endif %}
+{% if part == "VoiceFake" %}{
+	\tempo "Moderato" 2 = 100
+	\time 2/2
+	\key ees \major
+
+	% part "A"
+	bes8 c4 ees8 g4 bes | c8 c4.~ c2 | c8 bes4 aes8 f4 d | c2. r4 |
+	bes8 c4 ees8 g4 bes | c8 c4.~ c2 | c8 bes4 aes8 f4 d | des2. r4 |
+
+	% part "B"
+	c8 ees4 aes8 c4 c | b4 g8 bes~ bes c bes4 | r4 a! aes bes | g2. r4 |
+	c,8 ees4 aes8 c4 c | b4 g8 bes~ bes c bes4 | a!4 f a bes~ | bes2. r4 |
+
+	% part "A"
+	bes,8 c4 ees8 g4 bes | c8 c4.~ c2 | c8 bes4 aes8 f4 d | c2. r4 |
+	bes8 c4 ees8 g4 bes | c8 c4.~ c2 | c8 bes4 aes8 f4 d | des2. ees4 |
+
+	% part "C"
+	c'1 | c4 bes2 ees4 | bes4 aes2 bes4 | g2 c |
+	d4 c2 g4 | bes2 g | ees1~ | ees4 r r2 |
+}
+{% endif %}

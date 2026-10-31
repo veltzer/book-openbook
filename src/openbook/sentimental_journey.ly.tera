@@ -1,0 +1,99 @@
+{#
+default_version = "Fake"
+
+[attributes]
+title = "Sentimental Journey"
+style = "Swing"
+composer = "Bud Green, Les Brown, Ben Homer"
+poet = "Bud Green, Les Brown, Ben Homer"
+piece = "Easy Swing"
+copyright = "1944, 1987 MORLEY MUSIC CO."
+copyrightextra = "Renewed 1972 MORLEY MUSIC CO. International Copyright Secured. All Rights Reserved."
+typesetter = "Mark Veltzer <mark.veltzer@gmail.com>"
+completion = "5"
+uuid = "3f203d70-d548-11f1-8000-046874d194b7"
+structure = "AABA"
+location = "jfb:329"
+
+[[youtube]]
+id = "fKCozjGub_M"
+remark = "Les Brown and his Orchestra with Doris Day in the original recording (1945)"
+
+[[youtube]]
+id = "gQpjfyR8jFk"
+remark = "Rosemary Clooney"
+
+[versions.Fake]
+doChords = true
+doVoice = true
+doLyrics = false
+doLyricsmore = false
+doLyricsmoremore = false
+doChordBars = false
+doGuitar = false
+doExtra = false
+doPrep = false
+doOwn = false
+#}
+{% if part == "Vars" %}
+{% endif %}
+{% if part == "Doc" %}	DONE:
+	- added the meta data from the fake book.
+	- put in the tunes structure.
+	- put in the chords (fake book).
+	- put in the tune (fake book).
+	- added youtube performances.
+	TODO:
+	- add the lyrics.
+	- check the chords (fake book).
+	- check the tune (fake book).
+	- hear the tune to check that it is right and adjust the tempo.
+{% endif %}
+{% if part == "ChordsFake" %}\chordmode {
+	\startChords
+	\startSong
+
+	\myMark "A"
+	\startPart
+	\repeat volta 2 {
+		c1*3 | d2:7 g:7 | \myEndLine
+		c1 | f:9 | c | g2:7 c | \myEndLine
+	}
+	\endPart
+
+	\myMark "B"
+	\startPart
+	f1*2:maj7 | c1*2:maj7 | \myEndLine
+	d1*2:7 | g2:7 d:m7 | g4:7 cis:dim7 g:7/d g:7 | \myEndLine
+	\endPart
+
+	\myMark "A"
+	\startPart
+	c1*3 | d2:7 g:7 | \myEndLine
+	c1 | f:9 | c | g2:7 c | \myEndLine
+	\endPart
+
+	\endSong
+	\endChords
+}
+{% endif %}
+{% if part == "VoiceFake" %}{
+	\tempo "Moderato" 4 = 120
+	\time 4/4
+	\key c \major
+
+	% part "A"
+	\repeat volta 2 {
+		r8 e4 c8 e4. c8 | e8. c16 e8. c16 e8 c4. | r8 e4 c8 e4. f8 | e4 ees8 d~ d2 |
+		r8 e!4 c8 e4. c8 | ees8. c16 ees8. c16 ees8 d4. | r8 e!4 c8 e f4. | e8. ees16 d8 c~ c2 |
+	}
+
+	% part "B"
+	b'8 c~ c2. | b8. c16 b8. c16 d8 c4. | fis,8 g~ g2. | fis8. g16 fis8. g16 a8 g4. |
+	cis8 d~ d2. | cis8. d16 cis8. d16 c!4. a8 | b8 g4 a8~ a4. f8 | g4 e8 f~ f2 |
+
+	% part "A"
+	r8 e4 c8 e4. c8 | e8. c16 e8. c16 e8 c4. | r8 e4 c8 e4. f8 | e4 ees8 d~ d2 |
+	r8 e!4 c8 e4. c8 | ees8. c16 ees8. c16 ees8 d4. | r8 e!4 c8 e f4. | e8. ees16 d8 c~ c2 |
+}
+{% endif %}

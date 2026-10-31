@@ -1,0 +1,111 @@
+{#
+default_version = "Fake"
+
+[attributes]
+title = "Smoke Rings"
+style = "Swing"
+composer = "H. Eugene Gifford"
+poet = "Ned Washington"
+piece = "Moderately Slow"
+copyright = "1932 Mills Music, Inc."
+copyrightextra = "Copyright Renewed, Assigned to Dorsey Brothers Music, Inc."
+typesetter = "Mark Veltzer <mark.veltzer@gmail.com>"
+completion = "5"
+uuid = "330eb648-d547-11f1-8000-046874d194b7"
+structure = "AABA"
+location = "jfb:342"
+
+[[youtube]]
+id = "EJhwsJRdloU"
+remark = "Glen Gray and the Casa Loma Orchestra in the original recording (1932)"
+
+[[youtube]]
+id = "givhnw8u8E4"
+remark = "The Mills Brothers"
+
+[versions.Fake]
+doChords = true
+doVoice = true
+doLyrics = false
+doLyricsmore = false
+doLyricsmoremore = false
+doChordBars = false
+doGuitar = false
+doExtra = false
+doPrep = false
+doOwn = false
+#}
+{% if part == "Vars" %}
+{% endif %}
+{% if part == "Doc" %}	DONE:
+	- added the meta data from the fake book.
+	- put in the tunes structure.
+	- put in the chords (fake book).
+	- put in the tune (fake book).
+	- added youtube performances.
+	TODO:
+	- add the lyrics.
+	- check the chords (fake book).
+	- check the tune (fake book).
+	- hear the tune to check that it is right and adjust the tempo.
+{% endif %}
+{% if part == "ChordsFake" %}\chordmode {
+	\startChords
+	\startSong
+
+	\myMark "A"
+	\startPart
+	\repeat volta 2 {
+		ees1 | bes:7.5+ | ees | ees:7 | \myEndLine
+		aes | f2:m7.5- bes:7.9- | ees c:m7 | f:m7 bes:7.5+ | \myEndLine
+		ees1 | bes2:7.5+ ees:6 | f1:9 | f:9 | \myEndLine
+		aes | f2:m7.5- bes:7.9- | ees aes:7 | ees bes:7.5+ | \myEndLine
+	}
+	\endPart
+
+	\myMark "B"
+	\startPart
+	ees1 | bes:7.5+ | ees | ees:7 | \myEndLine
+	aes | f2:m7 bes:7 | ees1 | f2:m7 bes:7.5+ | \myEndLine
+	ees1 | bes2:7.5+ ees:6 | f1:9 | c2:m7.5- f:7 | \myEndLine
+	aes1:maj7 | f2:m7.5- bes:7 | ees c:m7 | f:m7 bes:7.5+ | \myEndLine
+	\endPart
+
+	\myMark "A"
+	\startPart
+	ees1 | bes:7.5+ | ees | ees:9 | \myEndLine
+	aes | f2:m7.5- bes:7.9- | ees c:m7 | f:m7 bes:7.5+ | \myEndLine
+	ees1 | bes2:7.5+ ees:6 | f1:9 | f2.:9 ees4:7 | \myEndLine
+	aes1 | f2:m7.5- bes:7.9- | ees aes:7 | ees1:6.9 | \myEndLine
+	\endPart
+
+	\endSong
+	\endChords
+}
+{% endif %}
+{% if part == "VoiceFake" %}{
+	\tempo "Andante" 4 = 80
+	\time 2/2
+	\key ees \major
+
+	% part "A"
+	\repeat volta 2 {
+		g'8 bes g bes~ bes4. g8 | fis8 bes d c~ c4. bes8 | g1~ | g1 |
+		c,8 ees c g'~ g4. c,8 | ces8 f g f~ f4. bes,8 | ees1~ | ees2 bes' |
+		g8 bes g bes~ bes4. g8 | fis8 bes c ees~ ees4 ees | c1 | g1 |
+		c,8 ees c g'~ g4. c,8 | ces8 f g f~ f4. bes,8 | ees1~ | ees2 r |
+	}
+
+	% part "B"
+	bes'2 g | fis c'8. c16 d8. d16 | g,1~ | g1 |
+	f2 ees | g bes4 bes | ees,1~ | ees2 r |
+	bes'2 g8. g16 bes8. bes16 | fis2 bes8. bes16 ees8. ees16 | c1~ | c2 r |
+	g2 ees8. ees16 bes'8. bes16 | g2 d8. d16 f8. f16 | ees1~ | ees2 r |
+
+	% part "A"
+	g8 bes g bes~ bes4. g8 | fis8 bes d c~ c4. bes8 | g1~ | g1 |
+	c,8 ees c g'~ g4. c,8 | ces8 f g f~ f4. bes,8 | ees1~ | ees2 bes' |
+	g8 bes g bes~ bes4. g8 | fis8 bes c ees~ ees4 ees | ees1~ | ees8 r g,4 f ees |
+	c8 ees c g'~ g4. c,8 | ces8 f g f~ f4 \tuplet 3/2 { bes,8 bes bes } | ees1~ | ees1 |
+}
+{% endif %}

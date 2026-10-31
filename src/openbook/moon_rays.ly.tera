@@ -1,0 +1,117 @@
+{#
+default_version = "Fake"
+
+[attributes]
+title = "Moon Rays"
+style = "Latin"
+composer = "Horace Silver"
+piece = "Medium Latin Tempo"
+copyright = "1985 by Ecaroh Music, Inc."
+typesetter = "Mark Veltzer <mark.veltzer@gmail.com>"
+completion = "5"
+uuid = "3c6016ea-d521-11f1-8000-046874d194b7"
+structure = "AAB"
+location = "jfb:253"
+
+[[youtube]]
+id = "N8Df4SNprrA"
+remark = "The Horace Silver Quintet in the original recording from Further Explorations (1958)"
+
+[[youtube]]
+id = "i8L6QHQ4BZc"
+remark = "Minoru Satomura with four tenors"
+
+[versions.Fake]
+doChords = true
+doVoice = true
+doLyrics = false
+doLyricsmore = false
+doLyricsmoremore = false
+doChordBars = false
+doGuitar = false
+doExtra = false
+doPrep = false
+doOwn = false
+#}
+{% if part == "Vars" %}
+{% endif %}
+{% if part == "Doc" %}	DONE:
+	- added the meta data from the fake book.
+	- put in the tunes structure.
+	- put in the chords (fake book).
+	- put in the tune (fake book).
+	- added youtube performances.
+	TODO:
+	- check the chords (fake book).
+	- check the tune (fake book).
+	- hear the tune to check that it is right and adjust the tempo.
+	- the book writes "Ab#11", typed as A flat major seven sharp eleven.
+{% endif %}
+{% if part == "ChordsFake" %}\chordmode {
+	\startChords
+	\startSong
+
+	\partial 4 s4 |
+
+	\myMark "A"
+	\startPart
+	f1:m7 | bes:7.9- | ees | ees | \myEndLine
+	ges:m7 | ges:m7 | f:m7 | f:m7 | \myEndLine
+	a:m7.5- | aes:m7 | g:m7.5- | c:7.5+.9- | \myEndLine
+	f:m7 | bes:7.5+.9- | ees2 aes:maj7.11+ | ees2. aes4:maj7.11+ | \myEndLine
+	\endPart
+
+	\myMark "A"
+	\startPart
+	f1:m7 | bes:7.9- | ees | ees | \myEndLine
+	ges:m7 | ges:m7 | f:m7 | f:m7 | \myEndLine
+	a:m7.5- | aes:m7 | g:m7.5- | c:7.5+.9- | \myEndLine
+	f:m7 | bes:7.5+ | ees2 aes:maj7.11+ | ees aes:maj7.11+ | \myEndLine
+	\endPart
+
+	\myMark "B"
+	\startPart
+	a1:m7 | d:7.9- | g:maj7 | g:maj7 | \myEndLine
+	bes:m7 | bes:m7 | a:m7 | a:m7 | \myEndLine
+	des:m7.5- | c:m7 | b:m7.5- | e:7.5+.9- | \myEndLine
+	a:m7 | d:7.5+.9- | g2.:m7 c4:7 | f2.:m7 bes4:9 | \myEndLine
+	\endPart
+
+	\myMark "Coda"
+	\startPart
+	ees1:maj9 | ees:maj9 | \myEndLine
+	\endPart
+
+	\endSong
+	\endChords
+}
+{% endif %}
+{% if part == "VoiceFake" %}{
+	\tempo "Moderato" 4 = 160
+	\time 4/4
+	\key ees \major
+
+	\partial 4 bes4 |
+
+	% part "A"
+	g'1~^\markup { \musicglyph #"scripts.segno" } | g2 f4 ees | d1~ | d2. bes4 |
+	aes'1~ | aes1 | g1~ | g2. bes,4 |
+	g'1~ | g2 f4 ees | des1 | c4 aes'2 e!4 |
+	g1~ | g4 ges2 d4^\markup { To Coda \musicglyph #"scripts.coda" } | f1~ | f2. bes,4 |
+
+	% part "A"
+	g'1~ | g2 f4 ees | d1~ | d2. bes4 |
+	aes'1~ | aes1 | g1~ | g2. bes,4 |
+	g'1~ | g2 f4 ees | des1 | c4 aes'2 e!4 |
+	g1~ | g4 ges2 d4 | f1~ | f2. d4 |
+
+	% part "B"
+	b'1~ | b2 a4 g | fis1~ | fis2. d4 |
+	c'1~ | c1 | b1~ | b2. d,4 |
+	b'1~ | b2 a4 g | f1 | e4 c'2 aes4 |
+	b1 | r4 bes!2 fis4 | a2. e4 | g2. bes,4^\markup { D.S. al Coda } |
+
+	% part "Coda"
+	f'1~ | f1 |
+}
+{% endif %}

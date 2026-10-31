@@ -1,0 +1,124 @@
+{#
+default_version = "Fake"
+
+[attributes]
+title = "Rockin' Chair"
+style = "Jazz"
+composer = "Hoagy Carmichael"
+poet = "Hoagy Carmichael"
+piece = "Moderately"
+copyright = "1929, 1930 Southern Music Publishing Co., Inc."
+copyrightextra = "Renewed 1957, 1958 Frank Music Corp. This Arrangement 1987 Frank Music Corp. International Copyright Secured. All Rights Reserved."
+typesetter = "Mark Veltzer <mark.veltzer@gmail.com>"
+completion = "5"
+uuid = "d6e1e916-d547-11f1-8000-046874d194b7"
+structure = "ABCA"
+location = "jfb:318"
+
+[[youtube]]
+id = "4SRwkMLvXWw"
+remark = "Louis Armstrong with Hoagy Carmichael, the original recording (1929)"
+
+[[youtube]]
+id = "81uOcHk8Kno"
+remark = "Mildred Bailey (1937)"
+
+[versions.Fake]
+doChords = true
+doVoice = true
+doLyrics = false
+doLyricsmore = false
+doLyricsmoremore = false
+doChordBars = false
+doGuitar = false
+doExtra = false
+doPrep = false
+doOwn = false
+#}
+{% if part == "Vars" %}
+{% endif %}
+{% if part == "Doc" %}	DONE:
+	- added the meta data from the fake book.
+	- put in the tunes structure.
+	- put in the chords (fake book).
+	- put in the tune (fake book).
+	- added youtube performances.
+	TODO:
+	- add the lyrics.
+	- check the chords (fake book).
+	- check the tune (fake book).
+	- hear the tune to check that it is right and adjust the tempo.
+{% endif %}
+{% if part == "ChordsFake" %}\chordmode {
+	\startChords
+	\startSong
+
+	\repeat volta 2 {
+
+		\myMark "A"
+		\startPart
+		ees2 ees:maj7 | bes:m7 ees:9 | aes1:maj7 | des:7 | \myEndLine
+		g:m7 | c:7 | f2:7 f:7.5-/ces | f:m7 bes:7 | \myEndLine
+		\endPart
+
+		\myMark "B"
+		\startPart
+		ees1:6 | c:m7 | a2:m7.5- d:7 | g1:m | \myEndLine
+		c:m7.5- | f:7 | ees2/bes bes:7 | ees ees:7 | \myEndLine
+		\endPart
+
+		\myMark "C"
+		\startPart
+		aes1*2:9 | ees1*2:maj7 | \myEndLine
+		a2:m7.5- d:7 | g1:m7 | c2:m7 f:9 | f:m7 bes:7 | \myEndLine
+		\endPart
+
+		\myMark "A"
+		\startPart
+		ees2 ees:maj7 | bes:m7 ees:9 | aes1:maj7 | des:9 | \myEndLine
+		g2:m7 c:7 | f:m7 e:maj7 |
+	} \alternative {
+		{
+			ees1 | f2:m7 bes:7 | \myEndLineVoltaNotLast
+		}
+		{
+			ees2 aes:9 | ees1:6 | \myEndLineVoltaLast
+		}
+	}
+	\endPart
+
+	\endSong
+	\endChords
+}
+{% endif %}
+{% if part == "VoiceFake" %}{
+	\tempo "Moderato" 4 = 100
+	\time 4/4
+	\key ees \major
+
+	\repeat volta 2 {
+		% part "A"
+		r4 g' g8 aes bes4 | f8 f~ f2. | r4 g aes bes | ees,1 |
+		r4 g aes bes | aes2 g | f4 f f f | bes1 |
+
+		% part "B"
+		r4 g g8 f ees4 | g8 g~ g2. | c2 d | bes1 |
+		r4 ees, ees8 f ges4 | f4 ees2 ees8 f | g4 g8 aes a!4 bes | ees,1 |
+
+		% part "C"
+		r4 bes' bes8 aes ges4 | bes8 ges bes2. | r4 bes bes8 aes g4 | bes1 |
+		c4 c2 d4 | bes16 a! g8~ g4. r8 ees f | g4 g8 g g f ees4 | f1 |
+
+		% part "A"
+		r4 g g8 aes bes4 | f8 f~ f2. | g8 g4. aes4 bes | ees,1 |
+		r4 g aes bes | ees,2 ees |
+	} \alternative {
+		{
+			ees1 | r1 |
+		}
+		{
+			ees1~ | ees2 r |
+		}
+	}
+}
+{% endif %}

@@ -1,0 +1,99 @@
+{#
+default_version = "Fake"
+
+[attributes]
+title = "Shoo Fly Pie And Apple Pan Dowdy"
+style = "Swing"
+composer = "Guy Wood"
+poet = "Sammy Gallop"
+piece = "Slow bounce - solid beat"
+copyright = "1945 Warock Corp."
+copyrightextra = "Renewed 1973 Warock Corp."
+typesetter = "Mark Veltzer <mark.veltzer@gmail.com>"
+completion = "5"
+uuid = "330726da-d547-11f1-8000-046874d194b7"
+structure = "AABA"
+location = "jfb:336"
+
+[[youtube]]
+id = "dOqEEfLxVJU"
+remark = "Stan Kenton and his Orchestra with June Christy, the hit recording (1946)"
+
+[[youtube]]
+id = "LXjj4K09V8I"
+remark = "Dinah Shore (1946)"
+
+[versions.Fake]
+doChords = true
+doVoice = true
+doLyrics = false
+doLyricsmore = false
+doLyricsmoremore = false
+doChordBars = false
+doGuitar = false
+doExtra = false
+doPrep = false
+doOwn = false
+#}
+{% if part == "Vars" %}
+{% endif %}
+{% if part == "Doc" %}	DONE:
+	- added the meta data from the fake book.
+	- put in the tunes structure.
+	- put in the chords (fake book).
+	- put in the tune (fake book).
+	- added youtube performances.
+	TODO:
+	- add the lyrics.
+	- check the chords (fake book).
+	- check the tune (fake book).
+	- hear the tune to check that it is right and adjust the tempo.
+{% endif %}
+{% if part == "ChordsFake" %}\chordmode {
+	\startChords
+	\startSong
+
+	\myMark "A"
+	\startPart
+	\repeat volta 2 {
+		f2 f:/a | bes c:7 | f aes:dim7 | g:7 c:7 | \myEndLine
+		f f:/a | bes f:/a | f bes | f4:/c c:7 f2:6 | \myEndLine
+	}
+	\endPart
+
+	\myMark "B"
+	\startPart
+	a1:7 | a:7 | d:9 | d:9 | \myEndLine
+	g:7 | g:7 | c2:7 fis:dim7 | g:m7 c:7 | \myEndLine
+	\endPart
+
+	\myMark "A"
+	\startPart
+	f f:/a | bes c:7 | f1 | g2:7 c:7 | \myEndLine
+	f f:/a | bes f:/a | f bes | f4:/c c:7 f2:6 | \myEndLine
+	\endPart
+
+	\endSong
+	\endChords
+}
+{% endif %}
+{% if part == "VoiceFake" %}{
+	\tempo "Moderato" 4 = 120
+	\time 2/2
+	\key f \major
+
+	% part "A"
+	\repeat volta 2 {
+		a'8 f4 f8~ f4. c8 | f8. f16 f4 a8. c16 g8. gis16 | a8 f4 f8~ f4. g8 | aes8. g16 f4 d8 c4. |
+		a'8 f4 f8~ f4. c8 | f8. f16 f4 a8 c~ c8. b16 | c8. bes16 a8. f16 c'4 bes8. a16 | f8. c16 e8. f16~ f2 |
+	}
+
+	% part "B"
+	a8 a r4 r2 | b4 e,8 a~ a2 | a8 a r4 r4 r8 a | b4 fis a2 |
+	g8 g r4 r2 | a4 d,8 g~ g2 | \tuplet 3/2 { c4 c c } c8 c~ c8. c16 | c8. b16 bes8. a16 g8 gis~ gis8. a16 |
+
+	% part "A"
+	a8 f4 f8~ f4. c8 | f8. f16 f4 a8. c16 g8. gis16 | a8 f4 f8~ f4. g8 | aes8. g16 f4 d8 c4. |
+	a'8 f4 f8~ f4. c8 | f8. f16 f4 a8 c~ c8. b16 | c8. bes16 a8. f16 c'4 bes8. a16 | f8. c16 e8. f16~ f2 |
+}
+{% endif %}

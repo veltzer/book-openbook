@@ -1,0 +1,115 @@
+{#
+default_version = "Fake"
+
+[attributes]
+title = "Sermonette"
+style = "Jazz"
+composer = "Jon Hendricks, Julian Adderley"
+poet = "Jon Hendricks, Julian Adderley"
+piece = "Moderately"
+copyright = "1955 by Silhouette Music Corp."
+typesetter = "Mark Veltzer <mark.veltzer@gmail.com>"
+completion = "5"
+uuid = "9ed6144c-d548-11f1-8000-046874d194b7"
+structure = "AB"
+location = "jfb:330"
+
+[[youtube]]
+id = "bwrtYVicbus"
+remark = "Nat Adderley"
+
+[[youtube]]
+id = "_HP5G7Wt2rc"
+remark = "Lambert, Hendricks and Ross in the vocal version"
+
+[versions.Fake]
+doChords = true
+doVoice = true
+doLyrics = false
+doLyricsmore = false
+doLyricsmoremore = false
+doChordBars = false
+doGuitar = false
+doExtra = false
+doPrep = false
+doOwn = false
+#}
+{% if part == "Vars" %}
+{% endif %}
+{% if part == "Doc" %}	DONE:
+	- added the meta data from the fake book.
+	- put in the tunes structure.
+	- put in the chords (fake book).
+	- put in the tune (fake book).
+	- added youtube performances.
+	TODO:
+	- add the lyrics.
+	- check the chords (fake book).
+	- check the tune (fake book).
+	- hear the tune to check that it is right and adjust the tempo.
+	- the book squeezes F F7 Bb6/D Bdim7 F into the last bar before the endings; the exact placement of these chords is a guess.
+{% endif %}
+{% if part == "ChordsFake" %}\chordmode {
+	\startChords
+	\startSong
+
+	\partial 8*5 s8*5 |
+
+	\myMark "A"
+	\startPart
+	\repeat volta 2 {
+		f1 | f2 f4:6 d:7.5-/fis | c1/g | c2:7 a4:m/c a:7/cis | \myEndLine
+		d2:m f4./a bes8 | bes8 f4./a g4:m7 fis:dim7 | g2 g:7 | c1:7 | f1 | \myEndLine
+		f2 f4:6 d:7.5-/fis | c1/g | c2:7 a4:m/c a:7/cis | d2:m bes | f2/a g:m7 | \myEndLine
+		f2 g4:m7 c:7.9- | f1 | \myEndLine
+		\endPart
+
+		\myMark "B"
+		\startPart
+		c2:7 c4.:7.5- c8:7 | c1:7 | f2 bes | \myEndLine
+		f2. a4:7/cis | d2:m a4.:m bes8:6 | bes8:6 f4.:6/a g4:m7 fis:dim7 | g2 g:7 | c1:7 | \myEndLine
+		f2 f4.:maj7 f8:7 | f1:7 | bes2:6 b:dim7 | f2:6/c bes4/d g:m7.5- | f2 d4.:m7 g8:9 | \myEndLine
+		g2:7 c:7 | f4 f:7 bes:6/d b8:dim7 f8 |
+	} \alternative {
+		{
+			f1 |
+		}
+		{
+			f1:6 | \myEndLineVoltaLast
+		}
+	}
+	\endPart
+
+	\endSong
+	\endChords
+}
+{% endif %}
+{% if part == "VoiceFake" %}{
+	\tempo "Moderato" 4 = 120
+	\time 4/4
+	\key f \major
+
+	\partial 8*5 f8 c8. d16 f4 |
+
+	\repeat volta 2 {
+		% part "A"
+		a2 f4. c8~ | c2 a'4 aes | g2 e4. c8~ | c2 a'4 g |
+		f2 f'4. d8~ | d8 c4. bes4 a | g2 g4. a8 | g4 r8 g c,8. d16 f4 | a2 f4. c8~ |
+		c2 a'4 aes | g2 e4. c8~ | c2 a'4 g | f2 d'2 | c2 bes4. g8 |
+		a8 f4. f4 e8 f~ | f4 r8 a f8. a16 c4 |
+
+		% part "B"
+		e2 e4. e8~ | e8 c~ c4~ c8 r16 c16 d8. c16 | f2 f4. f8 |
+		d8 c~ c2 a4 | f'2 e4. d8~ | d8 c4. bes4 a | g2 g4. a8 | g4 r8 a c,8. d16 f4 |
+		a2 a4. f8~ | f2 f4 f | d'2 d4. d8 | c8 a4. f4 bes | a2 f4. a8~ |
+		a8 g4. e4 c | f2 f4. f8~ |
+	} \alternative {
+		{
+			f4 r8 f c8. d16 f4 |
+		}
+		{
+			f2. r4 |
+		}
+	}
+}
+{% endif %}

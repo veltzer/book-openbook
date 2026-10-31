@@ -1,0 +1,110 @@
+{#
+default_version = "Fake"
+
+[attributes]
+title = "Poinciana (Song Of The Tree)"
+style = "Jazz"
+composer = "Nat Simon"
+poet = "Buddy Bernier"
+piece = "Moderately"
+copyright = "1936 by Edward B. Marks Music Corp."
+copyrightextra = "Copyright Renewed, controlled by Chappell & Co., Inc. (Intersong Music, Publisher) in the U.S.A. only"
+typesetter = "Mark Veltzer <mark.veltzer@gmail.com>"
+completion = "5"
+uuid = "8fd5e3e2-d547-11f1-8000-046874d194b7"
+structure = "AABA"
+location = "jfb:302"
+
+[[youtube]]
+id = "vhJ-_D-f5Fc"
+remark = "Bing Crosby (1944)"
+
+[[youtube]]
+id = "Z0e2G32f3IU"
+remark = "Ahmad Jamal live at the Pershing, Chicago (1958)"
+
+[versions.Fake]
+doChords = true
+doVoice = true
+doLyrics = false
+doLyricsmore = false
+doLyricsmoremore = false
+doChordBars = false
+doGuitar = false
+doExtra = false
+doPrep = false
+doOwn = false
+#}
+{% if part == "Vars" %}
+{% endif %}
+{% if part == "Doc" %}	DONE:
+	- added the meta data from the fake book.
+	- put in the tunes structure.
+	- put in the chords (fake book).
+	- put in the tune (fake book).
+	- added youtube performances.
+	TODO:
+	- add the lyrics.
+	- check the chords (fake book).
+	- check the tune (fake book).
+	- hear the tune to check that it is right and adjust the tempo.
+	- bars 18 and 22 (B part, second bar and sixth bar): the f has no accidental in the book (the key would make it f sharp); typed as f natural to fit the Cm6 and the f naturals around it.
+{% endif %}
+{% if part == "ChordsFake" %}\chordmode {
+	\startChords
+	\startSong
+
+	\partial 2 s2 |
+
+	\myMark "A"
+	\startPart
+	g1:maj9 | g1:maj9 | d1:m7 | g1:9 | c1:m6 | \myEndLine
+	c1:m6 | g1:maj9 | a2:m7 d:7 | \myEndLine
+	\endPart
+
+	\myMark "A"
+	\startPart
+	g1:maj9 | g1:maj9 | \myEndLine
+	d1:m7 | g1:9 | c1:m6 | c1:m6 | g1:maj9 | g2:maj9 g:7 | \myEndLine
+	\endPart
+
+	\myMark "B"
+	\startPart
+	c1:m | c1:m6 | d1:maj7 | d1:maj7 | c1:m | \myEndLine
+	c1:m6 | d2 d:dim7 | d1:7 | \myEndLine
+	\endPart
+
+	\myMark "A"
+	\startPart
+	g1:maj9 | g1:maj9 | d1:m7 | \myEndLine
+	g1:9 | c1:m6 | c1:m6 | g1:maj7 | g1:maj7 | \myEndLine
+	\endPart
+
+	\endSong
+	\endChords
+}
+{% endif %}
+{% if part == "VoiceFake" %}{
+	\tempo "Moderato" 4 = 120
+	\time 4/4
+	\key g \major
+
+	\partial 2 d'4. b8 |
+
+	% part "A"
+	a2 a~ | a8 g a b d b a g | f!1~ | f1 | ees2 ees~ |
+	ees8 ees f! g bes g f ees | d1~ | d4 r d'4. b8 |
+
+	% part "A"
+	a2 a~ | a8 g a b d b a g |
+	f!1~ | f2. r8 f8 | ees2 ees~ | ees8 ees f! g bes g f ees | d1~ | d2. r4 |
+
+	% part "B"
+	ees8 f! g a bes4. a8 | c4. bes8 a g f! g | a1~ | a2. r4 | ees8 f! g a bes4. a8 |
+	c4. bes8 a g f! g | d1~ | d4 r d'4. b8 |
+
+	% part "A"
+	a2 a~ | a8 g a b d b a g | f!1~ |
+	f1 | ees2 ees~ | ees8 ees f! g bes g f ees | d1~ | d2 r2 |
+}
+{% endif %}

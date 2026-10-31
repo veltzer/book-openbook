@@ -1,0 +1,108 @@
+{#
+default_version = "Fake"
+
+[attributes]
+title = "Pompton Turnpike"
+style = "Swing"
+composer = "Will Osborne, Dick Rogers"
+poet = "Will Osborne, Dick Rogers"
+piece = "Slow"
+copyright = "1940 by Anne-Rachel Music Corp."
+copyrightextra = "Copyright Renewed, controlled by Chappell & Co., Inc. (Intersong Music, Publisher)"
+typesetter = "Mark Veltzer <mark.veltzer@gmail.com>"
+completion = "5"
+uuid = "8fd9488e-d547-11f1-8000-046874d194b7"
+structure = "AABA"
+location = "jfb:303"
+
+[[youtube]]
+id = "4IcO1K_Hh2E"
+remark = "Charlie Barnet and his orchestra in the original hit recording (1940)"
+
+[[youtube]]
+id = "FninWysu-MQ"
+remark = "Louis Jordan and his Tympany Five (1940)"
+
+[versions.Fake]
+doChords = true
+doVoice = true
+doLyrics = false
+doLyricsmore = false
+doLyricsmoremore = false
+doChordBars = false
+doGuitar = false
+doExtra = false
+doPrep = false
+doOwn = false
+#}
+{% if part == "Vars" %}
+{% endif %}
+{% if part == "Doc" %}	DONE:
+	- added the meta data from the fake book.
+	- put in the tunes structure.
+	- put in the chords (fake book).
+	- put in the tune (fake book).
+	- added youtube performances.
+	TODO:
+	- add the lyrics.
+	- check the chords (fake book).
+	- check the tune (fake book).
+	- hear the tune to check that it is right and adjust the tempo.
+	- bars 18 and 19 (B part): the book prints no chord there; kept the Bbm7 of bar 17 going.
+{% endif %}
+{% if part == "ChordsFake" %}\chordmode {
+	\startChords
+	\startSong
+
+	\myMark "A"
+	\startPart
+	ees1:6 | f1:m7 | ees1:6 | f1:m7 | \myEndLine
+	b1:7 | bes1:7 | ees1:6 | c2:6 des4:6 d:6 |
+	\endPart
+
+	\myMark "A"
+	\startPart
+	ees1:6 | \myEndLine
+	f1:m7 | ees1:6 | f1:m7 | b1:7 | bes1:7 | \myEndLine
+	ees1:6 | des4:6 d:6 ees2:6 |
+	\endPart
+
+	\myMark "B"
+	\startPart
+	bes1:m7 | bes1:m7 | bes1:m7 | \myEndLine
+	ees1:7 | bes1:m7 | ees4:7 ees:7/des c2:7 | b1:7 | \myEndLine
+	bes2:7 bes:7.5+ |
+	\endPart
+
+	\myMark "A"
+	\startPart
+	ees1:6 | f1:m7 | ees1:6 | \myEndLine
+	f1:m7 | b1:7 | bes1:7 | ees2 des4:6.9 d:6.9 | ees1:6.9 | \myEndLine
+	\endPart
+
+	\endSong
+	\endChords
+}
+{% endif %}
+{% if part == "VoiceFake" %}{
+	\tempo "Adagio" 2 = 50
+	\time 2/2
+	\key ees \major
+
+	% part "A"
+	g'8 bes~ bes2. | g8 c,~ c2. | g'8. bes16 g8. bes16 g8. bes16 g8. bes16 | g8 c,~ c2. |
+	gis'8 b!~ b2. | g8 bes~ bes2. | g8 ees~ ees2.~ | ees8 r r4 r2 |
+
+	% part "A"
+	g8 bes~ bes2. | g8 c,~ c2. | g'8. bes16 g8. bes16 g8. bes16 g8. bes16 | g8 c,~ c2. |
+	gis'8 b!~ b2. | g!8 bes~ bes2. | g8 ees~ ees2.~ | ees2 ees8 r r4 |
+
+	% part "B"
+	r8 des'4. c4 b! | bes4 g8 ees~ ees2 | r8 des'4. c4 b! | bes4 g8 ees~ ees2 |
+	r8 des'4. c4 b! | bes4 g8 c~ c4. c8 | b!4 b cis b | bes8 c4 fis,8~ fis2 |
+
+	% part "A"
+	g8 bes~ bes2. | g8 c,~ c2. | g'8. bes16 g8. bes16 g8. bes16 g8. bes16 | g8 c,~ c2. |
+	gis'8 b!~ b2. | g!8 bes~ bes2. | g8 ees~ ees2.~ | ees1 |
+}
+{% endif %}

@@ -1,0 +1,122 @@
+{#
+default_version = "Fake"
+
+[attributes]
+title = "The Peacock"
+style = "Latin"
+composer = "Ernesto Lecuona"
+poet = "Carol Raven"
+piece = "Moderately"
+copyright = "1929 by Edward B. Marks Music Company"
+copyrightextra = "Copyright Renewed"
+typesetter = "Mark Veltzer <mark.veltzer@gmail.com>"
+completion = "5"
+uuid = "e4b41aba-d546-11f1-8000-046874d194b7"
+structure = "ABCC"
+location = "jfb:297"
+
+[[youtube]]
+id = "RPdYELO9NCo"
+remark = "Ernesto Lecuona plays his Pavo real"
+
+[[youtube]]
+id = "XU1uoSBtuLE"
+remark = "Franco Rivero plays Pavo real"
+
+[versions.Fake]
+doChords = true
+doVoice = true
+doLyrics = false
+doLyricsmore = false
+doLyricsmoremore = false
+doChordBars = false
+doGuitar = false
+doExtra = false
+doPrep = false
+doOwn = false
+#}
+{% if part == "Vars" %}
+{% endif %}
+{% if part == "Doc" %}	DONE:
+	- added the meta data from the fake book.
+	- put in the tunes structure.
+	- put in the chords (fake book).
+	- put in the tune (fake book).
+	- added youtube performances.
+	TODO:
+	- add the lyrics.
+	- check the chords (fake book).
+	- check the tune (fake book).
+	- hear the tune to check that it is right and adjust the tempo.
+	- bar 8 of part A: the A7 is printed over the last quarter of the bar; its exact placement is a guess.
+	- bar 6 of part C: the book prints the held vocal note (g) under an instrumental fill; both are typed as two voices. The fill continues into bar 7 and is typed as the melody there.
+	- part Instr: the book prints an instrumental line (the melody an octave up) with no lyrics; the vocal comes back on the d e pickup in bar 6 of the second line of that part (the book shows a half rest under the instrumental eighths there; only the instrumental notes are typed).
+{% endif %}
+{% if part == "ChordsFake" %}\chordmode {
+	\startChords
+	\startSong
+
+	\partial 4 s4 |
+
+	\myMark "A"
+	\startPart
+	g1 | a2:7 d:7 | g1 | g | b:m | e:m6 | e:m6 | e2.:m6 a4:7 | \myEndLine
+	d1 | e2:m a:7 | d1 | d | e:m7 | a:7 | d | d | \myEndLine
+	\endPart
+
+	\myMark "B"
+	\startPart
+	g1 | g | g | g | g | g | d:7 | d:7 | d:7 | \myEndLine
+	d:7 | e:m | e:m | a:7 | a:7 | d:7 | d:7 | g | \myEndLine
+	\endPart
+
+	\myMark "C"
+	\startPart
+	g1 | g | g | g:maj7 | g:7 | c | c | a:7 | \myEndLine
+	ais:dim7 | b:m | e:7 | a:m | d:7 | g2 cis:dim7 | d2:7/a d:7 | g1 | \myEndLine
+	\endPart
+
+	\myMark "Instr"
+	\startPart
+	g1 | g | g | g | g | d | d | d | d | \myEndLine
+	e:m | e:m | a:7 | a:7 | d:7 | d2:7 d:7.5+ | g1 | g | g | \myEndLine
+	\endPart
+
+	\myMark "C"
+	\startPart
+	g1 | g:maj7 | g:7 | c | c | a:7 | ais:dim7 | b:m | \myEndLine
+	e:7 | a:m | d:7 | g | c/g | g | c/g | g | g | \myEndLine
+	\endPart
+
+	\endSong
+	\endChords
+}
+{% endif %}
+{% if part == "VoiceFake" %}{
+	\tempo "Moderato" 4 = 120
+	\time 2/2
+	\key g \major
+
+	\partial 4 d4 |
+
+	% part "A"
+	d'4 d d e | b g a b | g1~ | g2 r4 d | d' d d e | fis d e cis | b1~ | b2 r4 a |
+	fis'4 fis fis fis | g fis g e | fis1~ | fis2 r4 a, | b d b d | e cis a fis' | d1~ | d4 r d, e |
+
+	% part "B"
+	g1~ | g4 r a b | a2 g~ | g4 r d e | fis2 g4 a | b2 d4 fis | e2 d~ | d4 r b d | b2 a~ |
+	a4 r a d | a2 g~ | g4 r fis g | b2 a~ | a4 r dis, e | b'2 a~ | a4 r d, e | g1~ |
+
+	% part "C"
+	g4 r a b | a2 g~ | g4 r d e | fis2 g4 a | b2 c4 d | dis2 e~ | e4 r e fis | a2 g4 fis |
+	e2 fis4 g | fis2 e4 d | fis2. e4 | d2 c4 e, | b'2 b | << { r4 d8 e d4 d8 e } \\ { g,1 } >> | d'4 d8 e d4 e | g1~ |
+
+	% part "Instr"
+	g2 a4 b | a2 g~ | g2 d4 e | fis2 g4 a | b2 d4 fis | e2 d~ | d2 b4 d | b2 a~ | a2 a4 d |
+	a2 g~ | g2 fis4 g | b2 a~ | a2 dis,4 e | b'2 a~ | a8 d, c fis, d4 e | g1~ | g4 r a b | a2 g~ |
+
+	% part "C"
+	g4 r d e | fis2 g4 a | b2 c4 d | dis2 e~ | e2 e4 fis | a2 g4 fis | e2 fis4 g | fis2 e4 d |
+	fis2. e4 | d2 c4 e, | b'2 b | g'1~ | g1~ | g1~ | g4 r r2 | r1 | r1 |
+}
+{% endif %}

@@ -1,0 +1,136 @@
+{#
+default_version = "Fake"
+
+[attributes]
+title = "Midnight Sun"
+style = "Jazz"
+composer = "Lionel Hampton, Sonny Burke, Johnny Mercer"
+piece = "Slowly, with a beat"
+copyright = "1947 by Crystal Music Publishers"
+copyrightextra = "Copyright renewed by Regent Music Corp. and Crystal Music Publishers. Reprinted by permission."
+typesetter = "Mark Veltzer <mark.veltzer@gmail.com>"
+completion = "5"
+uuid = "230b143b-d521-11f1-8000-046874d194b7"
+structure = "AABA"
+location = "jfb:249"
+
+[[youtube]]
+id = "wzk77HzWFpc"
+remark = "Lionel Hampton and his orchestra in the original recording (1947)"
+
+[[youtube]]
+id = "-f53xo_NNF8"
+remark = "Ella Fitzgerald (1957)"
+
+[versions.Fake]
+doChords = true
+doVoice = true
+doLyrics = false
+doLyricsmore = false
+doLyricsmoremore = false
+doChordBars = false
+doGuitar = false
+doExtra = false
+doPrep = false
+doOwn = false
+#}
+{% if part == "Vars" %}
+{% endif %}
+{% if part == "Doc" %}	DONE:
+	- added the meta data from the fake book.
+	- put in the tunes structure.
+	- put in the chords (fake book).
+	- put in the tune (fake book).
+	- added youtube performances.
+	TODO:
+	- check the chords (fake book).
+	- check the tune (fake book).
+	- hear the tune to check that it is right and adjust the tempo.
+{% endif %}
+{% if part == "ChordsFake" %}\chordmode {
+	\startChords
+	\startSong
+
+	\partial 4 s4 |
+
+	\repeat volta 2 {
+
+		\myMark "A"
+		\startPart
+		c1*2:maj7 | c2:m7 f:9 | c2:m7 f:9 | \myEndLine
+		bes1*2:maj7 | bes2:m7 ees:9 | ees1:9 | \myEndLine
+		aes1*2:maj7 | aes2:m7 des:9 | des1:9 | \myEndLine
+		c2:maj7 a:m7 | d2:m7 g:7.9- | \myEndLine
+		\endPart
+
+		\myMark "A"
+		\startPart
+		c1*2:maj7 | c2:m7 f:9 | c2:m7 f:9 | \myEndLine
+		bes1*2:maj7 | bes2:m7 ees:9 | ees1:9 | \myEndLine
+		aes1*2:maj7 | aes2:m7 des:9 | des1:9 | \myEndLine
+		\endPart
+
+		\myMark "B"
+		\startPart
+		c2:maj7 a:m7 | fis2:m7 b:7.9- | e2:maj7 e:6 | e2:m7 a:7 | \myEndLine
+		d2:maj7 d:6 | d2:maj7 d:6 | d2:maj7 d:6 | \myEndLine
+		d2:m7 g4:9 g:7.5+ | e2:m7 ees:9 | d2:m7 des:7.9+ | \myEndLine
+		\endPart
+
+		\myMark "A"
+		\startPart
+		c1*2:maj7 | c2:m7 f:9 | c2:m7 f:9 | \myEndLine
+		bes1*2:maj7 | bes2:m7 ees:9 | ees1:9 | \myEndLine
+		aes1*2:maj7 | aes2:m7 des:9 | des1:9 | \myEndLine
+	} \alternative {
+		{
+			c2 a:m7 | d2:m7 g:7.9- | \myEndLineVoltaNotLast
+		}
+		{
+			c1 | des2:9 c:9 | \myEndLineVoltaLast
+		}
+	}
+	\endPart
+
+	\endSong
+	\endChords
+}
+{% endif %}
+{% if part == "VoiceFake" %}{
+	\tempo "Andante" 4 = 80
+	\time 4/4
+	\key c \major
+
+	\partial 4 b'4 |
+
+	\repeat volta 2 {
+		% part "A"
+		d8. des16 c8. b16 bes8. a16 aes8. e16 | g8 e4. g8. ges16 f8. e16 | ees4 d'8 b~ b2~ | b2 r4 a4 |
+		c8. b16 bes8. a16 aes8. g16 ges8. d16 | f8 d4. f8. e16 ees8. d16 | des4 c'8 a~ a2~ | a2 r4 g4 |
+		bes8. a16 aes8. g16 ges8. f16 e8. c16 | ees8 c4. ees8. d16 des8. c16 | ces4 bes'8 g~ g2~ | g2 bes8. g16 e8. f16 |
+		g8 g4 g8~ g2~ | g2 r4 b4 |
+
+		% part "A"
+		d8. des16 c8. b16 bes8. a16 aes8. e16 | g8 e4. g8. ges16 f8. e16 | ees4 d'8 b~ b2~ | b2 r4 a4 |
+		c8. b16 bes8. a16 aes8. g16 ges8. d16 | f8 d4. f8. e16 ees8. d16 | des4 c'8 a~ a2~ | a2 r4 g4 |
+		bes8. a16 aes8. g16 ges8. f16 e8. c16 | ees8 c4. ees8. d16 des8. c16 | ces4 bes'8 g~ g2~ | g2 bes8. g16 e8. f16 |
+
+		% part "B"
+		g8 g4 g8~ g2 | r1 | b8. cis16 gis8. a16 b4 gis8. a16 | b8. cis16 g8. a16 b4 cis4 |
+		a1~ | a2 r4 fis4 | a8. b16 fis8. g16 a4 fis8. g16 |
+		a8. b16 f8. g16 a4 b8 g8~ | g1~ | g2 r4 b4 |
+
+		% part "A"
+		d8. des16 c8. b16 bes8. a16 aes8. e16 | g8 e4. g8. ges16 f8. e16 | ees4 d'8 b~ b2~ | b2 r4 a4 |
+		c8. b16 bes8. a16 aes8. g16 ges8. d16 | f8 d4. f8. e16 ees8. d16 | des4 c'8 a~ a2~ | a2 r4 g4 |
+		bes8. a16 aes8. g16 ges8. f16 e8. c16 | ees8 c4. ees8. d16 des8. c16 | ces4 bes'8 g~ g2~ | g2 bes8. g16 e8. f16 |
+	} \alternative {
+		{
+			g8 g4 g8~ g2 | r2 r4 b4 |
+		}
+		{
+			g8 g4 g8~ g2~ | g2. r4 |
+		}
+	}
+}
+{% endif %}

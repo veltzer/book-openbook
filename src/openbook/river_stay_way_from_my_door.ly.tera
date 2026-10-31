@@ -1,0 +1,167 @@
+{#
+default_version = "Fake"
+
+[attributes]
+title = "River, Stay 'Way From My Door"
+style = "Jazz"
+composer = "Harry Woods"
+poet = "Mort Dixon"
+piece = "Slow Ballad"
+copyright = "1931 Shapiro, Bernstein & Co., Inc., New York, Copyright Renewed"
+typesetter = "Mark Veltzer <mark.veltzer@gmail.com>"
+completion = "5"
+uuid = "6d1a7732-d547-11f1-8000-046874d194b7"
+structure = "AABACA"
+location = "jfb:315"
+
+[[youtube]]
+id = "4IgfX9p967Y"
+remark = "Ethel Waters (1931)"
+
+[[youtube]]
+id = "ypBv-oVoqSw"
+remark = "Frank Sinatra (1960)"
+
+[versions.Fake]
+doChords = true
+doVoice = true
+doLyrics = false
+doLyricsmore = false
+doLyricsmoremore = false
+doChordBars = false
+doGuitar = false
+doExtra = false
+doPrep = false
+doOwn = false
+#}
+{% if part == "Vars" %}
+{% endif %}
+{% if part == "Doc" %}	DONE:
+	- added the meta data from the fake book.
+	- put in the tunes structure.
+	- put in the chords (fake book).
+	- put in the tune (fake book).
+	- added youtube performances.
+	TODO:
+	- check the chords (fake book).
+	- check the tune (fake book).
+	- hear the tune to check that it is right and adjust the tempo.
+	- the fake book has a repeat sign at the end of the first ending of the last A with no matching start repeat; it is typeset here as an outer repeat back to the beginning.
+	- add the lyrics.
+{% endif %}
+{% if part == "ChordsFake" %}\chordmode {
+	\startChords
+	\startSong
+
+	\myMark "A"
+	\startPart
+	\repeat volta 2 {
+		\repeat volta 2 {
+			ees2 bes:7 | ees ees:7 | aes a:dim7 | ees/bes c:m7 | f1:7 | \myEndLine
+			b2.:7 bes4:7 | ees2 c:m7 |
+		} \alternative {
+			{
+				f2:m7 bes:7 | \myEndLineVoltaNotLast
+			}
+			{
+				a2:m7.5- d:7 | \myEndLineVoltaLast
+			}
+		}
+		\endPart
+
+		\myMark "B"
+		\startPart
+		g1:m | g1:m | g1:m | c1:9 | \myEndLine
+		bes1 | b1:dim7 | c2:m7 f:7 | bes1:7 | \myEndLine
+		\endPart
+
+		\myMark "A"
+		\startPart
+		ees2 bes:7 | ees ees:7 | aes a:dim7 | ees c:7 | f1:7 | b2.:7 bes4:7 | \myEndLine
+	} \alternative {
+		{
+			ees1 | ees1 | \myEndLineVoltaNotLast
+		}
+		{
+			ees1 | ees1 | \myEndLineVoltaLast
+		}
+	}
+	\endPart
+
+	\myMark "C"
+	\startPart
+	\repeat volta 2 {
+		c2.:m aes4:7 | c2.:m aes4:7 | c1:m | c2.:m aes4:7 | \myEndLine
+		c1:m | c1:m |
+	} \alternative {
+		{
+			c2 g:7 | c2. g4:7 | \myEndLineVoltaNotLast
+		}
+		{
+			f1:7 | bes1:7 | \myEndLineVoltaLast
+		}
+	}
+	\endPart
+
+	\myMark "A"
+	\startPart
+	ees2 bes:7 | ees ees:7 | aes a:dim7 | ees c:m7 | \myEndLine
+	f1:7 | b2:7 bes:7 | ees2 b4:7 aes:m7 | ees1 | \myEndLine
+	\endPart
+
+	\endSong
+	\endChords
+}
+{% endif %}
+{% if part == "VoiceFake" %}{
+	\tempo "Adagio" 4 = 66
+	\time 2/2
+	\key ees \major
+
+	% part "A"
+	\repeat volta 2 {
+		\repeat volta 2 {
+			ees4 ees ees f | g bes2. | ees4 ees ees c | bes g2. | g4 f2 d4 |
+			ges2 ges4 f | ees1~ |
+		} \alternative {
+			{
+				ees4 r r2 |
+			}
+			{
+				ees4 r r2 |
+			}
+		}
+
+		% part "B"
+		d'4 c8 c~ c g bes4 | d4 d2. | d4 d g, bes | c1 |
+		f4 f8 f~ f bes, d4 | f4 f2. | r4 f f f | bes,1 |
+
+		% part "A"
+		ees,4 ees ees f | g bes2. | ees4 ees ees c | bes g2. | g4 f2 d4 | ges2 ges4 f |
+	} \alternative {
+		{
+			ees4 r r2 | r1 |
+		}
+		{
+			ees4 r r2 | r2 r4 g4 |
+		}
+	}
+
+	% part "C"
+	\repeat volta 2 {
+		c2~ c8. c16 ees8. c16 | ees8 c4.~ c8. c16 ees8. c16 | ees4 c8. c16 ees8 ees4 c8 | ees8 c4 ees8~ ees4 c |
+		g'2~ g4 ees8. c16 | ees4 c8 c~ c4. g8 |
+	} \alternative {
+		{
+			g8 g4 g8 g4 g | g2. g4 |
+		}
+		{
+			g8. g16 g8. g16 g8 g4. | bes1 |
+		}
+	}
+
+	% part "A"
+	ees,4 ees ees f | g bes2. | ees4 ees ees c | bes g2. |
+	g4 f2 d4 | ges2 ges4 f | ees1~ | ees2. r4 |
+}
+{% endif %}

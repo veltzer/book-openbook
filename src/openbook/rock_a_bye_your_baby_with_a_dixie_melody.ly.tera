@@ -1,0 +1,125 @@
+{#
+default_version = "Fake"
+
+[attributes]
+title = "Rock-A-Bye Your Baby With A Dixie Melody"
+style = "Broadway"
+composer = "Jean Schwartz"
+poet = "Sam M. Lewis, Joe Young"
+piece = "Moderately"
+copyright = "1918 MILLS MUSIC INC."
+copyrightextra = "Renewed 1946 MPL COMMUNICATIONS, INC. and WAROCK CORP."
+typesetter = "Mark Veltzer <mark.veltzer@gmail.com>"
+completion = "5"
+uuid = "6d1d8774-d547-11f1-8000-046874d194b7"
+structure = "ABAC"
+location = "jfb:317"
+
+[[youtube]]
+id = "GgYPZ091_30"
+remark = "Al Jolson in the first recording (1918)"
+
+[[youtube]]
+id = "Do5KOMbHu5k"
+remark = "Judy Garland live at Carnegie Hall (1961)"
+
+[versions.Fake]
+doChords = true
+doVoice = true
+doLyrics = false
+doLyricsmore = false
+doLyricsmoremore = false
+doChordBars = false
+doGuitar = false
+doExtra = false
+doPrep = false
+doOwn = false
+#}
+{% if part == "Vars" %}
+{% endif %}
+{% if part == "Doc" %}	DONE:
+	- added the meta data from the fake book.
+	- put in the tunes structure.
+	- put in the chords (fake book).
+	- put in the tune (fake book).
+	- added youtube performances.
+	TODO:
+	- check the chords (fake book).
+	- check the tune (fake book).
+	- hear the tune to check that it is right and adjust the tempo.
+	- add the lyrics.
+{% endif %}
+{% if part == "ChordsFake" %}\chordmode {
+	\startChords
+	\startSong
+
+	\repeat volta 2 {
+
+		\myMark "A"
+		\startPart
+		c1 | c2 e4:m7 ees:dim7 | d2:m7 g:7 | g1:9 | \myEndLine
+		d2:m7 g:7 | d:m7 g:7 | c a:m7 | d:9 g:7 | \myEndLine
+		\endPart
+
+		\myMark "B"
+		\startPart
+		d:m7 g:9 | d:m7 g:9 | c1 | e2:m7 a:9 | \myEndLine
+		g1/d | a2:m7 d:7 | g1:7 | g1:7 | \myEndLine
+		\endPart
+
+		\myMark "A"
+		\startPart
+		c1 | c2 e4:m7 ees:dim7 | d2:m7 g:7 | g1:9 | \myEndLine
+		d2:m7 g:7 | d:m7 g4:7 g:7.5+/f | e1:7 | e1:7 | \myEndLine
+		\endPart
+
+		\myMark "C"
+		\startPart
+		a1:7 | a1:7 | d1:7 | d1:7 | \myEndLine
+		c2/g d4:m7 aes:7 | c2 c4/e ees:7 | d2:7 g:7 |
+	} \alternative {
+		{
+			c2 d4:7 g:7 | \myEndLineVoltaNotLast
+		}
+		{
+			c1 | \myEndLineVoltaLast
+		}
+	}
+	\endPart
+
+	\endSong
+	\endChords
+}
+{% endif %}
+{% if part == "VoiceFake" %}{
+	\tempo "Moderato" 4 = 120
+	\time 4/4
+	\key c \major
+
+	\repeat volta 2 {
+
+		% part "A"
+		g'4 e f fis | g8 e'4 d8~ d4 c | c b d8 f,4. | a2. r4 |
+		c8 b4 d8~ d2 | a8 g4 b8~ b2 | f8 e4 a8~ a4 c | e,8 dis e d~ d2 |
+
+		% part "B"
+		r8 cis d e f a4. | a8 f4 a8~ a2 | r8 e f8. fis16 g8 b4. | b8 g4 b8~ b2 |
+		r4 g a b | c8 d4 b8~ b4 a | r8 cis, d e f e f fis | g8 a4 e8~ e4 d |
+
+		% part "A"
+		g4 e f fis | g8 e'4 d8~ d4 c | c b d8 f,4. | a2. c4 |
+		c8 b4 d8~ d2 | a8 g4 d'8~ d4 dis | e2~ e8 d b gis | e2. r4 |
+
+		% part "C"
+		r8 e f e g e f e | g8 e4 f8~ f4 e | r8 a b a c a b a | c8 a4 b8~ b4 a |
+		g4 e f fis | g8 a b c~ c b c cis | e4 d f8 e4. |
+	} \alternative {
+		{
+			c2~ c4 r |
+		}
+		{
+			c2. r4 |
+		}
+	}
+}
+{% endif %}

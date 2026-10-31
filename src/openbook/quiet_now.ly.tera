@@ -1,0 +1,106 @@
+{#
+default_version = "Fake"
+
+[attributes]
+title = "Quiet Now"
+style = "Jazz"
+composer = "Denny Zeitlin"
+piece = "Very slowly, rubato, with tenderness"
+copyright = "1966 and 1982 Ludlow Music, Inc., New York, NY. (TRO)"
+typesetter = "Mark Veltzer <mark.veltzer@gmail.com>"
+completion = "5"
+uuid = "222618ce-d549-11f1-8000-046874d194b7"
+structure = "ABA'"
+location = "jfb:307"
+
+[[youtube]]
+id = "JV9BoUM0Ujs"
+remark = "Denny Zeitlin in the original recording"
+
+[[youtube]]
+id = "dx4JjKKtJ-c"
+remark = "Bill Evans Trio live at the Montreux Jazz Festival, 1968"
+
+[versions.Fake]
+doChords = true
+doVoice = true
+doLyrics = false
+doLyricsmore = false
+doLyricsmoremore = false
+doChordBars = false
+doGuitar = false
+doExtra = false
+doPrep = false
+doOwn = false
+#}
+{% if part == "Vars" %}
+{% endif %}
+{% if part == "Doc" %}	DONE:
+	- added the meta data from the fake book.
+	- put in the tunes structure.
+	- put in the chords (fake book).
+	- put in the tune (fake book).
+	- added youtube performances.
+	TODO:
+	- check the chords (fake book).
+	- check the tune (fake book).
+	- hear the tune to check that it is right and adjust the tempo.
+	- bar 18: the Bb9 symbol sits between the second and third beats in the scan, here it is put on the third beat.
+	- bar 34: the first note of the arpeggio is far below the staff in the scan (read as the e below middle c), check it.
+{% endif %}
+{% if part == "ChordsFake" %}\chordmode {
+	\startChords
+	\startSong
+
+	\myMark "A"
+	\startPart
+	a2:m7 f:maj7 | e4.:9 e8:7.9- a2:m7 | d4:m9 g:7 c2:maj9 | bes:9 a:7.9- | \myEndLine
+	f:m6/aes g4:7 e:7 | a2:m7 d:9 | ees:maj7 aes:maj9 | des1:9 | \myEndLine
+	b2:m7 g:6.9 | fis4.:9 fis8:7.9- b2:m7.5- | e4:m7 a:13 d:maj9 b:m7 | c2:9 b:7.5+ | \myEndLine
+	\endPart
+
+	\myMark "B"
+	\startPart
+	bes2:7 a4:13 fis:9 | b2:m7 cis:m6 | fis4:m7 b:m9 e4.:m7 a8:7 | a2:m7 d:7.9- | \myEndLine
+	g:maj7 c:9 | b:m9 bes:9 | aes:maj9 des:9 | c4:m9 b2.:7.9- | \myEndLine
+	a2:9 d:9 | cis:m7 c:9 | b1:m7 | e:7.9+ | a2:m f | \myEndLine
+	\endPart
+
+	\myMark "A"
+	\startPart
+	b4:6 e:7 a2:m9 | d4.:m13 g8:9 c4:maj9 c:maj7/b | bes2:9 a:7 | \myEndLine
+	f:m6/aes g4:7 e:7 | a2:m7 d:9 | e4:m7 a:m7 d:m9 g:9sus4 | \myEndLine
+	\endPart
+
+	\myMark "Coda"
+	\startPart
+	e4:m7 a:m7 f:maj9 bes:maj9 | e:m7 ees:6.9 aes:maj9 des:maj13 | c1:maj13 | c:maj9 | \myEndLine
+	\endPart
+
+	\endSong
+	\endChords
+}
+{% endif %}
+{% if part == "VoiceFake" %}{
+	\tempo "Adagio" 4 = 60
+	\time 4/4
+	\key c \major
+
+	% part "A"
+	c'4 c c c | c4. b8 e,2~ | e4 b'8 a g4 c, | e2 f |
+	r8 d e f g gis b c | d2 b | g4. ees8 g4 \tuplet 3/2 { ees8 g aes } | \tuplet 3/2 { bes8 ces des~ } des2. |
+	d4 d d d | d4. cis8 f,2 | r4 cis'8 b a4 d, | fis2 g |
+
+	% part "B"
+	r8 e fis g a bes des d | e2 cis | a4 d e,4. fis8 | a2 a8 g fis e |
+	d4. e8 fis4 g | a4 g d4. d8 | ees4. f8 g4 gis | bes4 aes dis,2 |
+	b4 e8 fis gis4 a | b4. a8 g'4. f8 | e2 fis8 a b e | f8 e d b bes g \tuplet 3/2 { f e d } | c4~ c16 e, a c b4 a |
+
+	% part "A"
+	c4 b ees,2 | b'4. a8 g4 c, | e2 f |
+	r8 d e f g gis b c | d2 b | g4 c g c,\fermata |
+
+	% part "Coda"
+	g'4 c g c,\fermata | g'4 c g c,\fermata | \tuplet 3/2 { r8 e, a } \tuplet 3/2 { b e a } \tuplet 3/2 { b e a } \tuplet 3/2 { b, e a } | b1 |
+}
+{% endif %}

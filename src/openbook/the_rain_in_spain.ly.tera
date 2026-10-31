@@ -1,0 +1,100 @@
+{#
+default_version = "Fake"
+
+[attributes]
+title = "The Rain In Spain"
+subtitle = "From 'My Fair Lady'"
+style = "Broadway"
+composer = "Frederick Loewe"
+poet = "Alan Jay Lerner"
+piece = "Moderately"
+copyright = "1956 by Alan Jay Lerner & Frederick Loewe. Copyright Renewed."
+copyrightextra = "Chappell & Co., Inc., owner of publication and allied rights throughout the World"
+typesetter = "Mark Veltzer <mark.veltzer@gmail.com>"
+completion = "5"
+uuid = "ffe5e62e-d546-11f1-8000-046874d194b7"
+structure = "ABA"
+location = "jfb:310"
+
+[[youtube]]
+id = "1ojdB_aGKcY"
+remark = "Rex Harrison in the original Broadway cast recording of My Fair Lady (1956)"
+
+[[youtube]]
+id = "uVmU3iANbgk"
+remark = "The scene from the film My Fair Lady (1964)"
+
+[versions.Fake]
+doChords = true
+doVoice = true
+doLyrics = false
+doLyricsmore = false
+doLyricsmoremore = false
+doChordBars = false
+doGuitar = false
+doExtra = false
+doPrep = false
+doOwn = false
+#}
+{% if part == "Vars" %}
+{% endif %}
+{% if part == "Doc" %}	DONE:
+	- added the meta data from the fake book.
+	- put in the tunes structure.
+	- put in the chords (fake book).
+	- put in the tune (fake book).
+	- added youtube performances.
+	TODO:
+	- add the lyrics.
+	- check the chords (fake book).
+	- check the tune (fake book).
+	- hear the tune to check that it is right and adjust the tempo.
+{% endif %}
+{% if part == "ChordsFake" %}\chordmode {
+	\startChords
+	\startSong
+
+	\partial 4 s4 |
+
+	\myMark "A"
+	\startPart
+	f2. fis4:dim7 | c2.:7/g c4:7 | f1 | g2:m7 c:7 | \myEndLine
+	f2 f4/a des:7/aes | g2.:m c4:7 | f1 | \myEndLine
+	\endPart
+
+	\myMark "B"
+	\startPart
+	f1 | g2.:m7 c4:7 | f2 fis:dim7 | c2.:7/g c4:7 | \myEndLine
+	f2. f4:7 | bes2. g4:m6/bes | a1 | e:7 | a2 c:7 | \myEndLine
+	\endPart
+
+	\myMark "A"
+	\startPart
+	f2. fis4:dim7 | c2.:7/g c4:7 | f1 | g2:m7 c:7 | \myEndLine
+	f2. fis4:dim7 | c2.:7/g c4:7 | f1 | f2. \myEndLine
+	\endPart
+
+	\endSong
+	\endChords
+}
+{% endif %}
+{% if part == "VoiceFake" %}{
+	\tempo "Moderato" 2 = 80
+	\time 2/2
+	\key f \major
+
+	\partial 4 c4 |
+
+	% part "A"
+	c'4. b8 c4 a | bes4. a8 bes4 e, | g8 f4.~ f8 r r4 | r2 r4 c4 |
+	c'4. b8 c4 cis | d4. bes8 g4 e | g8 f4.~ f8 r r4 |
+
+	% part "B"
+	r2 r8 e f e | d4. e8 f4 g | c,2~ c8 r a'8 bes | c2. a8 bes |
+	c2. f,4 | d4. e8 f4 g | a2~ a8 r cis4 | e2. b4 | e2~ e8 r c,4 |
+
+	% part "A"
+	c'4. b8 c4 a | bes4. a8 bes4 e, | g8 f4.~ f8 r r4 | r2 r4 c4 |
+	c'4. b8 c4 a | c4. cis8 d4 e | f1~ | f2.
+}
+{% endif %}

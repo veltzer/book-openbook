@@ -1,0 +1,123 @@
+{#
+default_version = "Fake"
+
+[attributes]
+title = "Side By Side"
+style = "Swing"
+composer = "Harry Woods"
+poet = "Harry Woods"
+piece = "Moderately"
+copyright = "1927 by Shapiro, Bernstein & Co., Inc., New York"
+copyrightextra = "Copyright Renewed"
+typesetter = "Mark Veltzer <mark.veltzer@gmail.com>"
+completion = "5"
+uuid = "3309253e-d547-11f1-8000-046874d194b7"
+structure = "AABA"
+location = "jfb:337"
+
+[[youtube]]
+id = "wE1wxs3kfR4"
+remark = "Nick Lucas, the hit recording (1927)"
+
+[[youtube]]
+id = "nEuUeb6X96s"
+remark = "Kay Starr (1953)"
+
+[versions.Fake]
+doChords = true
+doVoice = true
+doLyrics = false
+doLyricsmore = false
+doLyricsmoremore = false
+doChordBars = false
+doGuitar = false
+doExtra = false
+doPrep = false
+doOwn = false
+#}
+{% if part == "Vars" %}
+{% endif %}
+{% if part == "Doc" %}	DONE:
+	- added the meta data from the fake book.
+	- put in the tunes structure.
+	- put in the chords (fake book).
+	- put in the tune (fake book).
+	- added youtube performances.
+	TODO:
+	- add the lyrics.
+	- check the chords (fake book).
+	- check the tune (fake book).
+	- hear the tune to check that it is right and adjust the tempo.
+{% endif %}
+{% if part == "ChordsFake" %}\chordmode {
+	\startChords
+	\startSong
+
+	\partial 4 s4 |
+
+	\repeat volta 2 {
+
+		\myMark "A"
+		\startPart
+		\repeat volta 2 {
+			ees1 | aes2 ees | ees1 | aes2 ees | \myEndLine
+			aes a:dim7 | ees:/bes c:7 | f:7 bes:7 | ees1 | \myEndLine
+		}
+		\endPart
+
+		\myMark "B"
+		\startPart
+		g1:7.5+ | g:7 | c:7 | c:7 | \myEndLine
+		f:7 | f:7 | bes2:7 bes:dim7 | bes1:7 | \myEndLine
+		\endPart
+
+		\myMark "A"
+		\startPart
+		ees1 | aes2 ees | ees1 | aes2 ees | \myEndLine
+		aes a:dim7 | ees:/bes c:7 | f:7 bes:7 |
+	} \alternative {
+		{
+			ees2 f4:m7 bes:7 | \myEndLineVoltaNotLast
+		}
+		{
+			ees4 aes ees2 | \myEndLineVoltaLast
+		}
+	}
+	\endPart
+
+	\endSong
+	\endChords
+}
+{% endif %}
+{% if part == "VoiceFake" %}{
+	\tempo "Moderato" 4 = 120
+	\time 2/2
+	\key ees \major
+
+	\partial 4 ees8. f16 |
+
+	\repeat volta 2 {
+
+		% part "A"
+		\repeat volta 2 {
+			g4 g8. aes16 g8. fis16 g4 | aes2 g | bes4 bes8. c16 bes8. a16 bes4 | c2 bes4 bes8. b16 |
+			c8. b16 c8 ees~ ees2 | g,8 aes a bes~ bes2 | ees,2 f | ees1 |
+		}
+
+		% part "B"
+		g4 ees' ees ees | ees d2. | d8 d4 d8 d4 g, | c2~ c8 r c8. cis16 |
+		d4. c8 d4. c8 | d4 c2 f,4 | c'4 c c8. bes16 c4 | bes2~ bes8 r ees,8. f16 |
+
+		% part "A"
+		g4 g8. aes16 g8. fis16 g4 | aes2 g | bes4 bes8. c16 bes8. a16 bes4 | c2 bes4 bes |
+		c8. b16 c8 ees~ ees2 | g,8 aes a bes~ bes2 | ees f |
+	} \alternative {
+		{
+			ees2~ ees8 r ees,8. f16 |
+		}
+		{
+			ees'2 r |
+		}
+	}
+}
+{% endif %}
