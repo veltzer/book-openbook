@@ -4,6 +4,7 @@ default_version = "Real"
 [attributes]
 title = "Wave"
 style = "Jazz"
+subtitle = "Vou Te Contar"
 composer = "Antonio Carlos Jobim"
 poet = "Antonio Carlos Jobim"
 piece = "Medium Bossa Nova"
@@ -38,6 +39,7 @@ doOwn = false
 {% if part == "Vars" %}
 {% endif %}
 {% if part == "Doc" %}	DONE:
+	- took the subtitle from the Laurent Martelli entry staging/openbook/laurent/wave.ly and wave_lower.ly (only meta data, its notes were in a wave_inc.ly that was never in this repository).
 	- added the meta data from the Hal Leonard Real Jazz Book.
 	- put in the tunes structure.
 	- put in the chords (Hal Leonard Real Jazz Book).

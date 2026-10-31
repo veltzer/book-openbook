@@ -1,0 +1,96 @@
+{#
+default_version = "My"
+
+[attributes]
+title = "Mack The Knife"
+style = "Jazz"
+subtitle = "Die Moritat von Mackie Messer"
+composer = "Kurt Weill"
+poet = "Bertolt Brecht, Marc Blitzstein"
+piece = "Medium Swing"
+typesetter = "Mark Veltzer <mark.veltzer@gmail.com>"
+completion = "3"
+uuid = "874bf512-d4b2-11f1-8000-046874d194b7"
+structure = "A"
+
+[[youtube]]
+id = "ZK7PtV2ADBo"
+remark = "Louis Armstrong and the All-Stars, the first hit version (1955)"
+
+[[youtube]]
+id = "557lFG-qq5g"
+remark = "Bobby Darin on the Ed Sullivan Show"
+
+[versions.My]
+doChords = true
+doVoice = true
+doLyrics = false
+doLyricsmore = false
+doLyricsmoremore = false
+doChordBars = false
+doGuitar = false
+doExtra = false
+doPrep = false
+doOwn = false
+#}
+{% if part == "Vars" %}
+{% endif %}
+{% if part == "Doc" %}	DONE:
+	- added the meta data (title and composer from the Laurent Martelli entry staging/openbook/laurent/mack_the_knife.ly; its notes were in mack_the_knife_inc.ly which was never in this repository).
+	- put in the tunes structure.
+	- put in the chords (the usual jazz changes, in the B flat key of the Armstrong and Darin recordings).
+	- put in the tune (Weill's 1928 melody, after the ABC transcription by John Chambers, transposed from D to B flat and written in 4/4 with doubled note values).
+	- added youtube performances.
+	TODO:
+	- add the lyrics (the staged lyrics file staging/openbook/laurent/mack_the_knife_lyrics.ly had none of its own, they were in the missing include file).
+	- check the tune and chords against a real book.
+	- hear the tune to check that it is right and adjust the tempo.
+	REMARKS:
+	- Bobby Darin's version goes up a half step on every few choruses (B flat, B, C, D flat, D, E flat ...).
+{% endif %}
+{% if part == "ChordsMy" %}\chordmode {
+	\startChords
+	\startSong
+
+	\partial 2 s2 |
+
+	\myMark "A"
+	\startPart
+	\repeat volta 2 {
+		bes1*2:6 | c1*2:m7 | f1*2:7 | bes1*2:6 | \myEndLine
+		g1*2:m7 | c1*2:m7 | f1*2:7 | bes1:6 |
+	} \alternative {
+		{
+			bes1:6 | \myEndLineVoltaNotLast
+		}
+		{
+			bes1:6 | \myEndLineVoltaLast
+		}
+	}
+	\endPart
+
+	\endSong
+	\endChords
+}
+{% endif %}
+{% if part == "VoiceMy" %}{
+	\tempo "Moderato" 4 = 132
+	\time 4/4
+	\key bes \major
+
+	\partial 2 d4 f |
+
+	% part "A"
+	\repeat volta 2 {
+		g2 g | r2 d4 f | g2 g | r2 c,4 ees | g2 g | r2 c,4 ees | g1~ | g2 f4 a |
+		c2 bes~ | bes2 a4 g | bes2 c,~ | c2 d4 ees | bes'2 c,~ | c2 bes'4 a | g1~ |
+	} \alternative {
+		{
+			g2 d4 f |
+		}
+		{
+			g1 |
+		}
+	}
+}
+{% endif %}

@@ -48,6 +48,7 @@ doOwn = true
 {% if part == "Vars" %}
 {% endif %}
 {% if part == "Doc" %}	DONE:
+	- compared with the Laurent Martelli entries staging/openbook/laurent/cantaloupe_island.ly and cantaloupe_island_with_piano.ly (their melody file was never in this repository, their piano vamp is the same as the one in the Own version).
 	- added the meta data from the Hal Leonard Real Jazz Book.
 	- put in the tunes structure.
 	- put in the chords (Hal Leonard Real Jazz Book).

@@ -40,6 +40,7 @@ doOwn = false
 {% if part == "Vars" %}
 {% endif %}
 {% if part == "Doc" %}	DONE:
+	- compared with the Laurent Martelli entry from staging/openbook/laurent/corcovado.ly and corcovado_lyrics.ly (same English lyrics, its notes were in a corcovado_inc.ly that was never in this repository; it gave the copyright as "1959 Editora Musical Arapua, Brazil").
 	- put in location in the fake book.
 	- put in the tunes meta data from the fake book.
 	- put in the tunes structure.

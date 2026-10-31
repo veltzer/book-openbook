@@ -40,6 +40,7 @@ doOwn = false
 {% if part == "Vars" %}
 {% endif %}
 {% if part == "Doc" %}	DONE:
+	- compared with the Laurent Martelli entry from staging/openbook/laurent/the_girl_from_ipanema.ly and its lyrics file (only meta data, its notes and lyrics were in a the_girl_from_ipanema_inc.ly that was never in this repository; it gave the copyright as "1959 editora musical arapua, brazil").
 	- put in the tunes meta data from the real book and fake book.
 	- put in locations for reak book and fake book.
 	- put in the tunes structure.

@@ -38,6 +38,7 @@ doOwn = false
 {% if part == "Vars" %}
 {% endif %}
 {% if part == "Doc" %}	DONE:
+	- compared with the Laurent Martelli entry from staging/openbook/laurent/my_funny_valentine.ly and my_funny_valentine_lyrics.ly (same lyrics, its notes were in a my_funny_valentine_inc.ly that was never in this repository).
 	- identified the version as the fake book version.
 	- made sure we have two epdfs (real and fake).
 	- marked down the structure of this tune.
