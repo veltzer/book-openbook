@@ -1,0 +1,120 @@
+{#
+default_version = "Fake"
+
+[attributes]
+title = "For Every Man There's A Woman"
+style = "Jazz"
+composer = "Harold Arlen"
+poet = "Leo Robin"
+piece = "Slowly"
+copyright = "1948, 1987 Harwin Music Co."
+copyrightextra = "Renewed 1976 Harwin Music Co. International Copyright Secured. All Rights Reserved."
+typesetter = "Mark Veltzer <mark.veltzer@gmail.com>"
+completion = "5"
+uuid = "59ad9281-d510-11f1-8000-046874d194b7"
+structure = "AABA"
+location = "jfb:123"
+
+[[youtube]]
+id = "Pq0Rx9mj_i4"
+remark = "Tony Martin in the original recording from the film Casbah (1948)"
+
+[[youtube]]
+id = "VCOGO_qd8Sw"
+remark = "Peggy Lee (1948)"
+
+[versions.Fake]
+doChords = true
+doVoice = true
+doLyrics = false
+doLyricsmore = false
+doLyricsmoremore = false
+doChordBars = false
+doGuitar = false
+doExtra = false
+doPrep = false
+doOwn = false
+#}
+{% if part == "Vars" %}
+{% endif %}
+{% if part == "Doc" %}	DONE:
+	- added the meta data from the fake book.
+	- put in the tunes structure.
+	- put in the chords (fake book).
+	- put in the tune (fake book).
+	- added youtube performances.
+	TODO:
+	- add the lyrics.
+	- check the chords (fake book).
+	- check the tune (fake book).
+	- hear the tune to check that it is right and adjust the tempo.
+	- first ending: the book writes the pickup to the repeat as a second voice (quarter rest, eighth rest, c) under the dotted g; typed as one voice.
+{% endif %}
+{% if part == "ChordsFake" %}\chordmode {
+	\startChords
+	\startSong
+
+	\partial 8 s8 |
+
+	\myMark "A"
+	\startPart
+	\repeat volta 2 {
+		f2:m f:m/aes | c2:7/g c:7 | aes2:aug aes | g2:m c:7 | \myEndLine
+		f1:m | bes:7 | aes4:m c:7 des:7 c:7 | f1:m | \myEndLine
+		g2:7.5+ c:9 | f1:m | c:7 | f:m | \myEndLine
+	} \alternative {
+		{
+			des2:7 c:7 | \myEndLineVoltaNotLast
+		}
+		{
+			des2:7 c:7 | \myEndLineVoltaLast
+		}
+	}
+	\endPart
+
+	\myMark "B"
+	\startPart
+	aes2 a:dim7 | bes2:m7 ees:7 | aes2. bes4:7 | des2:9 c:9 | \myEndLine
+	\endPart
+
+	\myMark "A"
+	\startPart
+	f2:m f:m/aes | c2:7/g c:7 | f2:m f:m/ees | bes2/d des:7 | \myEndLine
+	f1:m/c | g2:7.5+ c:9 | f1:m | c:7 | f:m | \myEndLine
+	g2:7.5+.9+ c:9 | f1:m | c:9 | f:m | \myEndLine
+	\endPart
+
+	\endSong
+	\endChords
+}
+{% endif %}
+{% if part == "VoiceFake" %}{
+	\tempo "Adagio" 2 = 50
+	\time 2/2
+	\key f \major
+
+	\partial 8 c8 |
+
+	% part "A"
+	\repeat volta 2 {
+		f4 c' c bes8 aes | bes8 c4. r4 r8 c,8 | f4 c' c bes8 aes | bes2.~ bes8 c,8 |
+		f4 c' c bes8 aes | bes8 c d2. | ees4 c bes g | aes1 |
+		ees'8 ees4 c8 bes4 g8 f~ | f1 | r8 bes4 bes8 g2 | r8 c4 c8 aes2 |
+	} \alternative {
+		{
+			bes8 bes4 bes8 g4. c,8 |
+		}
+		{
+			bes'8 bes4 bes8 g2 |
+		}
+	}
+
+	% part "B"
+	r8 ees'4 ees8 c2 | r8 ees4 ees8 c2 | r8 ees4 c8 ees c bes aes | bes4 g8 c~ c4 r8 c,8 |
+
+	% part "A"
+	f4 c' c bes8 aes | bes8 c4.~ c4. c,8 | f4 g aes c | bes1~ |
+	bes4 f8 g aes4 c | ees8 ees4 c8 bes4 g | f1 | r8 bes4 bes8 g2 | r8 c4 c8 aes2 |
+	bes2 g | f1~ | f1~ | f4 r r2 |
+}
+{% endif %}

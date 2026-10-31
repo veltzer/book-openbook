@@ -80,7 +80,7 @@ doOwn = false
 	\time 4/4
 	\key f \major
 
-	\partial 4 gis4 |
+	\partial 4 gis'4 |
 
 	% part "A"
 	a4^\markup { \musicglyph #"scripts.segno" } c, d f | f8 f4 a8~ a2 | r4 a a4. gis8 | a8 g4 f8~ f2 | r4 g g4. fis8 | g8 f4 e8~ e2 | r4 a a4. gis8 |

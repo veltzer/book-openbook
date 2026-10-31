@@ -1,0 +1,112 @@
+{#
+default_version = "Fake"
+
+[attributes]
+title = "Choo Choo Ch' Boogie"
+style = "Blues"
+composer = "Vaughn Horton, Denver Darling, Milton Gabler"
+poet = "Vaughn Horton, Denver Darling, Milton Gabler"
+piece = "Medium Boogie"
+copyright = "1945 RYTVOC, INC."
+copyrightextra = "Renewal 1973 RYTVOC, INC."
+typesetter = "Mark Veltzer <mark.veltzer@gmail.com>"
+completion = "5"
+uuid = "6c53c6cb-d510-11f1-8000-046874d194b7"
+structure = "Blues"
+location = "jfb:84"
+
+[[youtube]]
+id = "P1EG__jgefA"
+remark = "Louis Jordan and his Tympany Five in the original recording (1946)"
+
+[[youtube]]
+id = "rmypejzeK84"
+remark = "Asleep at the Wheel"
+
+[versions.Fake]
+doChords = true
+doVoice = true
+doLyrics = false
+doLyricsmore = false
+doLyricsmoremore = false
+doChordBars = false
+doGuitar = false
+doExtra = false
+doPrep = false
+doOwn = false
+#}
+{% if part == "Vars" %}
+{% endif %}
+{% if part == "Doc" %}	DONE:
+	- added the meta data from the fake book.
+	- put in the tunes structure.
+	- put in the chords (fake book).
+	- put in the tune (fake book).
+	- added youtube performances.
+	TODO:
+	- add the lyrics.
+	- check the chords (fake book).
+	- check the tune (fake book).
+	- hear the tune to check that it is right and adjust the tempo.
+	- the fake book prints this on a page numbered 4 (it is page 84 of the book).
+{% endif %}
+{% if part == "ChordsFake" %}\chordmode {
+	\startChords
+	\startSong
+
+	\partial 16 s16 |
+
+	\myMark "A"
+	\startPart
+	\repeat volta 2 {
+		f1*3:7 | \myEndLine
+		f1:7 | bes1*2:7 | \myEndLine
+		f1*2:7 | c1:7 | \myEndLine
+		c1:7 | f2 bes:7 | f1 | \myEndLine
+		\endPart
+
+		\myMark "B"
+		\startPart
+		bes1*2:7 | f1*2:7 | \myEndLine
+		bes1*2:7 |
+	} \alternative {
+		{
+			c2:7 c:dim7 | c1:7 | \myEndLineVoltaNotLast
+		}
+		{
+			c1:7 | f:6 | \myEndLineVoltaLast
+		}
+	}
+	\endPart
+
+	\endSong
+	\endChords
+}
+{% endif %}
+{% if part == "VoiceFake" %}{
+	\tempo "Moderato" 2 = 100
+	\time 2/2
+	\key f \major
+
+	\partial 16 gis'16 |
+
+	% part "A"
+	\repeat volta 2 {
+		a8. f16 d8. c16 a'8. f16 d8. c16 | f8. e16 f8 a~ a4 r8. gis16 | a8. f16 d8. c16 a'8. f16 d8. c16 |
+		f8. e16 f8 a~ a4 r8. aes16 | aes8. f16 d8. bes16 aes'8. f16 d8. bes16 | f'8. e16 f8 aes~ aes4 r8. aes16 |
+		a!8. f16 d8. c16 a'8. f16 d8. c16 | f8. e16 f8 a~ a4 r8. a16 | bes8. g16 e8. c16 bes'8. g16 e8. c16 |
+		g'8. e16 g8 bes~ bes4 r8. a16 | \tuplet 3/2 { f4 f f } \tuplet 3/2 { f f f } | f4 r f r |
+
+		% part "B"
+		aes8. aes16~ aes2. | aes8 aes4 aes8 f g4. | a!8. a16~ a2. | a4. f8 d c4. |
+		aes'8. aes16~ aes2. | aes8 aes4 aes8 f g4. |
+	} \alternative {
+		{
+			\tuplet 3/2 { c4 c c } \tuplet 3/2 { c c c } | c4 r c r8. gis16 |
+		}
+		{
+			\tuplet 3/2 { c4 c c } \tuplet 3/2 { c d e } | f4 r f, r |
+		}
+	}
+}
+{% endif %}

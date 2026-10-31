@@ -1,0 +1,129 @@
+{#
+default_version = "Fake"
+
+[attributes]
+title = "Goin' Out Of My Head"
+style = "Pop"
+composer = "Teddy Randazzo, Bobby Weinstein"
+poet = "Teddy Randazzo, Bobby Weinstein"
+piece = "Moderately slow rock"
+copyright = "1964 Vogue Music (c/o the Welk Music Group, Santa Monica, CA 90401)"
+typesetter = "Mark Veltzer <mark.veltzer@gmail.com>"
+completion = "5"
+uuid = "77360dee-d510-11f1-8000-046874d194b7"
+structure = "AB"
+location = "jfb:134"
+
+[[youtube]]
+id = "qah0t_maZRo"
+remark = "Little Anthony and the Imperials in the original hit recording (1964)"
+
+[[youtube]]
+id = "O1F4sP-PL8w"
+remark = "Wes Montgomery (1965)"
+
+[versions.Fake]
+doChords = true
+doVoice = true
+doLyrics = false
+doLyricsmore = false
+doLyricsmoremore = false
+doChordBars = false
+doGuitar = false
+doExtra = false
+doPrep = false
+doOwn = false
+#}
+{% if part == "Vars" %}
+{% endif %}
+{% if part == "Doc" %}	DONE:
+	- added the meta data from the fake book.
+	- put in the tunes structure.
+	- put in the chords (fake book).
+	- put in the tune (fake book).
+	- added youtube performances.
+	TODO:
+	- check the chords (fake book).
+	- check the tune (fake book).
+	- hear the tune to check that it is right and adjust the tempo.
+	- the CM7/F6 bars in part B: the chord changes are placed under the syncopated notes as printed; check the exact placement.
+	- add the lyrics.
+{% endif %}
+{% if part == "ChordsFake" %}\chordmode {
+	\startChords
+	\startSong
+
+	\partial 2 s2 |
+
+	\repeat volta 2 {
+
+		\myMark "A"
+		\startPart
+		c1:m7 | c:maj7 | c:m7 | c2:maj7 c:7.5+ | \myEndLine
+		f1:maj7 | f:maj7 | f:m7 | bes:9 | \myEndLine
+		ees:maj7 | g:m7 | ees2:maj7 g:m7 | aes bes:9 | \myEndLine
+
+	} \alternative {
+		{
+			c1:maj7 | c:maj7 | \myEndLineVoltaNotLast
+		}
+		{
+			c1:maj7 | \myEndLineVoltaLast
+		}
+	}
+	\endPart
+
+	\myMark "B"
+	\startPart
+	d2:m7 g:7 | c1:maj7 | f:maj7 | c:maj7 | \myEndLine
+	d:m7 | c4.:maj7 f8*5:6 | c8:maj7 f4.:6 c4:maj7 f:6 | c4.:maj7 f8*5:6 | \myEndLine
+	c1:maj7 | d:/fis | f:m | c:/e | ees:dim7 | \myEndLine
+	g:7/d | a2:m7/d d:7 | g1:7sus4 | g:7 | \myEndLine
+	\endPart
+
+	\myMark "End"
+	\startPart
+	\repeat volta 2 {
+		c1:m7 | c:maj7 | \myEndLine
+	}
+	\endPart
+
+	\endSong
+	\endChords
+}
+{% endif %}
+{% if part == "VoiceFake" %}{
+	\tempo "Moderato" 4 = 100
+	\time 2/2
+	\key c \major
+
+	\partial 2 g'4 a |
+
+	\repeat volta 2 {
+
+		% part "A"
+		bes8 a bes a bes c a4 | g2. g8 a | bes8 a bes a bes c a4 | g2 c,4 c' |
+		d4 a2.~ | a2 c,4 c' | c4 aes2.~ | aes2. bes,4 |
+		aes'4 g2 bes,4 | c'4 bes2 bes,4 | aes'8 g4 bes,8 c'8 bes4 bes,8 | aes'8 g4 ees8 c'8 bes e, f |
+
+	} \alternative {
+		{
+			g1~ | g2 g4 a |
+		}
+		{
+			g1~ |
+		}
+	}
+
+	% part "B"
+	g4 g8 g c c d4 | e2. e8 e | d8 c4. c8 c d4 | e2~ \tuplet 3/2 { e4 e e } |
+	d8 c4. c8 c d4 | e4 r8 d8~ d8 d e4 | r8 d4 d8 e4 d | e4 r8 d8~ d8 d e4 |
+	\tuplet 3/2 { r4 c d } \tuplet 3/2 { e d c } | d1~ | d2 \tuplet 3/2 { g,4 a b } | c1~ | c4 c \tuplet 3/2 { c b a } |
+	b2 \tuplet 3/2 { b4 a g } | a4. a8 \tuplet 3/2 { a4 g fis } | g1~ | g2 g4 a |
+
+	% part "End"
+	\repeat volta 2 {
+		bes8 a bes a bes c a g~ | g2. g8 a |
+	}
+}
+{% endif %}

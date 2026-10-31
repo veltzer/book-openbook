@@ -1,0 +1,105 @@
+{#
+default_version = "Fake"
+
+[attributes]
+title = "Crazy Rhythm"
+style = "Jazz"
+composer = "Joseph Meyer, Roger Wolfe Kahn"
+poet = "Irving Caesar"
+piece = "Moderately Fast"
+copyright = "1928. Copyright Renewed, Terminated, and Assigned to JoRo Music Corporation, New York, N.Y."
+copyrightextra = "This arrangement Copyright 1987 JoRo Music Corporation"
+typesetter = "Mark Veltzer <mark.veltzer@gmail.com>"
+completion = "5"
+uuid = "b7777992-d510-11f1-8000-046874d194b7"
+structure = "AABA"
+location = "jfb:91"
+
+[[youtube]]
+id = "L3wdu47_5W4"
+remark = "Roger Wolfe Kahn and his orchestra with Franklyn Baur, the original hit recording (1928)"
+
+[[youtube]]
+id = "oAUNxFiGCvQ"
+remark = "Coleman Hawkins and his All Star Jam Band with Benny Carter and Django Reinhardt (1937)"
+
+[versions.Fake]
+doChords = true
+doVoice = true
+doLyrics = false
+doLyricsmore = false
+doLyricsmoremore = false
+doChordBars = false
+doGuitar = false
+doExtra = false
+doPrep = false
+doOwn = false
+#}
+{% if part == "Vars" %}
+{% endif %}
+{% if part == "Doc" %}	DONE:
+	- added the meta data from the fake book.
+	- put in the tunes structure.
+	- put in the chords (fake book).
+	- put in the tune (fake book).
+	- added youtube performances.
+	TODO:
+	- add the lyrics.
+	- check the chords (fake book).
+	- check the tune (fake book).
+	- hear the tune to check that it is right and adjust the tempo.
+{% endif %}
+{% if part == "ChordsFake" %}\chordmode {
+	\startChords
+	\startSong
+
+	\myMark "A"
+	\startPart
+	g1*3:maj7 | g2:maj7/b bes:dim7 | \myEndLine
+	a1:m7 | d:7 | g:6 | a2:m7 d:7 | \myEndLine
+	\endPart
+
+	\myMark "A"
+	\startPart
+	g1*3:maj7 | g2:maj7/b bes:dim7 | \myEndLine
+	a1:m7 | d:7 | g:6 | s2. d4:7 | \myEndLine
+	\endPart
+
+	\myMark "B"
+	\startPart
+	d1:m7 | g:7 | c2 g:7 | c1 | \myEndLine
+	c:m | f:9 | e:7 | a2:7 d:7 | \myEndLine
+	\endPart
+
+	\myMark "A"
+	\startPart
+	g1*2:maj7 | a1*2:7 | \myEndLine
+	d1*3:7 | g1 | \myEndLine
+	\endPart
+
+	\endSong
+	\endChords
+}
+{% endif %}
+{% if part == "VoiceFake" %}{
+	\tempo "Allegro" 2 = 100
+	\time 2/2
+	\key g \major
+
+	% part "A"
+	r8 a'4 a8 g4 g | fis4 fis8 g~ g g r4 | r8 a4 a8 g4 g | fis4 fis8 g~ g g r4 |
+	r8 a4 a8 g4 g | fis4 fis8 g~ g a4. | g1~ | g4 r r2 |
+
+	% part "A"
+	r8 a4 a8 g4 g | fis4 fis8 g~ g g r4 | r8 a4 a8 g4 g | fis4 fis8 g~ g g r4 |
+	r8 a4 a8 g4 g | fis4 fis8 g~ g a4. | g1~ | g4 a b c |
+
+	% part "B"
+	r8 d4 d8 b4 b | b4 b8 c~ c d4. | d8 c4 d8 c4 b | a1 |
+	r8 c4 c8 b4 b | a4 a8 b~ b c4. | c8 b4 c8 b2 | b8 a4 b8 a2 |
+
+	% part "A"
+	r8 a4 a8 g4 g | fis4 fis8 g~ g g r4 | r8 b4 b8 a4 a | gis4 gis8 a~ a a r4 |
+	r8 e'4 e8 d4 d | cis4 cis8 d~ d b4. | g1~ | g2. r4 |
+}
+{% endif %}

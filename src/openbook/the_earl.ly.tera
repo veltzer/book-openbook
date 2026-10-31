@@ -1,0 +1,113 @@
+{#
+default_version = "Fake"
+
+[attributes]
+title = "The Earl"
+style = "Swing"
+composer = "Mel Powell"
+piece = "Bright"
+copyright = "1941 by Regent Music Corp."
+copyrightextra = "Copyright renewed by Jewel Music Publishing Co., Inc. Reprinted by permission"
+typesetter = "Mark Veltzer <mark.veltzer@gmail.com>"
+completion = "5"
+uuid = "86b9fa5a-d510-11f1-8000-046874d194b7"
+structure = "AABA"
+location = "jfb:106"
+
+[[youtube]]
+id = "RtzwNiRB0tg"
+remark = "Benny Goodman and his orchestra with Mel Powell in the original recording (1941)"
+
+[[youtube]]
+id = "2CE8iyKVnEY"
+remark = "Benny Goodman and Mel Powell, a compilation of versions"
+
+[versions.Fake]
+doChords = true
+doVoice = true
+doLyrics = false
+doLyricsmore = false
+doLyricsmoremore = false
+doChordBars = false
+doGuitar = false
+doExtra = false
+doPrep = false
+doOwn = false
+#}
+{% if part == "Vars" %}
+{% endif %}
+{% if part == "Doc" %}	DONE:
+	- added the meta data from the fake book.
+	- put in the tunes structure.
+	- put in the chords (fake book).
+	- put in the tune (fake book).
+	- added youtube performances.
+	TODO:
+	- check the chords (fake book).
+	- check the tune (fake book).
+	- hear the tune to check that it is right and adjust the tempo.
+{% endif %}
+{% if part == "ChordsFake" %}\chordmode {
+	\startChords
+	\startSong
+
+	\myMark "A"
+	\startPart
+	\repeat volta 2 {
+		f2:6 fis:dim7 | c2:7/g c:7 | f2:6 fis:dim7 | c2:7/g c:7 | \myEndLine
+		f8 e4 f8*5/ees | bes2/d bes:m/des | g4:m7 g:m/f g:m/e g:m/d |
+	} \alternative {
+		{
+			f4/c c/bes f/a c:7 | \myEndLineVoltaNotLast
+		}
+		{
+			f4/c c/bes f2/a | \myEndLineVoltaLast
+		}
+	}
+	\endPart
+
+	\myMark "B"
+	\startPart
+	des1:6 | aes4/c des aes/ees c:7/e | f1*2:6 | \myEndLine
+	fis1:dim7 | gis4:dim7 a:dim7 bes:m aes/c | des2 g:m7.5- | c1:7 | \myEndLine
+	\endPart
+
+	\myMark "A"
+	\startPart
+	f2:6 fis:dim7 | c2:7/g c:7 | f2:6 fis:dim7 | c2:7/g c:7 | \myEndLine
+	f8 e4 f8*5/ees | bes2/d bes:m/des | g4:m7 g:m7/f g:m/e g:m/d | f4/c c:7 f2:6 | \myEndLine
+	\endPart
+
+	\endSong
+	\endChords
+}
+{% endif %}
+{% if part == "VoiceFake" %}{
+	\tempo "Allegro" 4 = 200
+	\time 2/2
+	\key f \major
+
+	% part "A"
+	\repeat volta 2 {
+		c'8 a4 c8~ c a4 d8 | \tuplet 3/2 { g,8 d' g, } d8. fis16 e8 g a g |
+		c8 a4 c8~ c a4 d8 | \tuplet 3/2 { g,8 d' g, } d8. fis16 e8 g a c |
+		f8 gis4 a8~ a d, f g | a f gis a~ a f d bes | f'8 g, d' b c c, bes' gis |
+	} \alternative {
+		{
+			a8 c, g' f~ f c'4 a8 |
+		}
+		{
+			a8 c, g' f r gis a c |
+		}
+	}
+
+	% part "B"
+	f4. f8~ f4. f8 | ees4 des c bes | f'4. c8 r2 | r2 r8 gis a c |
+	fis4. fis8~ fis4. fis8 | f!4 ees des c | f4. bes,8~ bes4. bes8 | d,16 e g bes d e g bes d4 r8 a,8 |
+
+	% part "A"
+	c8 a4 c8~ c a4 d8 | \tuplet 3/2 { g,8 d' g, } d8. fis16 e8 g a g |
+	c8 a4 c8~ c a4 d8 | \tuplet 3/2 { g,8 d' g, } d8. fis16 e8 g a c |
+	f8 gis4 a8~ a d, f g | a f gis a~ a f d bes | f'8 g, d' b c c, bes' gis | a8 c, g' f~ f r r4 |
+}
+{% endif %}

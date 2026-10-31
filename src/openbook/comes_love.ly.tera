@@ -1,0 +1,132 @@
+{#
+default_version = "Fake"
+
+[attributes]
+title = "Comes Love"
+style = "Jazz"
+composer = "Lew Brown, Sam H. Stept, Charlie Tobias"
+poet = "Lew Brown, Sam H. Stept, Charlie Tobias"
+piece = "Moderately"
+copyright = "1939 by Chappell & Co., Inc."
+copyrightextra = "Copyright Renewed"
+typesetter = "Mark Veltzer <mark.veltzer@gmail.com>"
+completion = "5"
+uuid = "b7728392-d510-11f1-8000-046874d194b7"
+structure = "AABA"
+location = "jfb:88"
+
+[[youtube]]
+id = "CC8JUycGed4"
+remark = "Artie Shaw with Helen Forrest, the hit recording (1939)"
+
+[[youtube]]
+id = "6FrwC0TsIvE"
+remark = "Billie Holiday"
+
+[versions.Fake]
+doChords = true
+doVoice = true
+doLyrics = false
+doLyricsmore = false
+doLyricsmoremore = false
+doChordBars = false
+doGuitar = false
+doExtra = false
+doPrep = false
+doOwn = false
+#}
+{% if part == "Vars" %}
+{% endif %}
+{% if part == "Doc" %}	DONE:
+	- added the meta data from the fake book.
+	- put in the tunes structure.
+	- put in the chords (fake book).
+	- put in the tune (fake book).
+	- added youtube performances.
+	TODO:
+	- add the lyrics.
+	- check the chords (fake book).
+	- check the tune (fake book).
+	- hear the tune to check that it is right and adjust the tempo.
+	- the fake book prints no chord on the first half of bars 5, 13 and 29 (the C/E starts on beat 3), so the previous D7 carries over; check.
+{% endif %}
+{% if part == "ChordsFake" %}\chordmode {
+	\startChords
+	\startSong
+
+	\partial 4 s4 |
+
+	\repeat volta 2 {
+
+		\myMark "A"
+		\startPart
+		g1:m | s | d:7 | s | \myEndLine
+		s2 c4/e f:dim7 | d2:7/fis ees4:7 d:7 | g2:m g:m/f | e2:m7.5- ees4:7 d:7 | \myEndLine
+		\endPart
+
+		\myMark "A"
+		\startPart
+		g1:m | s | d:7 | s | \myEndLine
+		s2 c4/e f:dim7 | d2:7/fis ees4:7 d:7 | g2:m g:m/f | ees d:7 | \myEndLine
+		\endPart
+
+		\myMark "B"
+		\startPart
+		g1:7 | s | c2:m g:7 | c1:m7 | \myEndLine
+		f1:7 | a:m7.5- | d2:7 d:dim7 | d1:7 | \myEndLine
+		\endPart
+
+		\myMark "A"
+		\startPart
+		g1:m | s | d:7 | s | \myEndLine
+		s2 c4/e f:dim7 | d2:7/fis ees4:7 d:7 | \myEndLine
+
+	} \alternative {
+		{
+			g2:m g:m/f | e2:m7.5- ees4:7 d:7 | \myEndLineVoltaNotLast
+		}
+		{
+			g2:m c:m7 | g1:m | \myEndLineVoltaLast
+		}
+	}
+	\endPart
+
+	\endSong
+	\endChords
+}
+{% endif %}
+{% if part == "VoiceFake" %}{
+	\tempo "Moderato" 2 = 90
+	\time 2/2
+	\key g \minor
+
+	\partial 4 d8. d16 |
+
+	\repeat volta 2 {
+
+		% part "A"
+		g4 bes2 d,8. d16 | g8. g16 bes8. bes16 g4 d8. d16 | fis4 a2 d,8. d16 | fis8. fis16 a8. a16 fis4 d |
+		d'1~ | d8 c4 c8 bes4 a | g1~ | g2 r4 d8. d16 |
+
+		% part "A"
+		g4 bes2 d,8. d16 | g8. g16 bes8. bes16 g4 d8. d16 | fis4 a2 d,8. d16 | fis8. fis16 a8. a16 fis4 d |
+		d'1~ | d8 c4 c8 bes4 a | g1~ | g2. r4 |
+
+		% part "B"
+		d'4. b8~ b4 r | d4. b8~ b ees4 d8 | ees4 d c b8 c~ | c2. r4 |
+		c4. a8~ a4 r | c4. a8~ a4 r | d8 d4 d8 d d4 d8~ | d d,4 d8~ d4 d8. d16 |
+
+		% part "A"
+		g4 bes2 d,8. d16 | g8. g16 bes8. bes16 g4 d8. d16 | fis4 a2 d,8. d16 | fis8. fis16 a8. a16 fis4 d |
+		d'1~ | d8 c4 c8 bes4 a |
+
+	} \alternative {
+		{
+			g1~ | g4 r r d8. d16 |
+		}
+		{
+			g1~ | g2. r4 |
+		}
+	}
+}
+{% endif %}

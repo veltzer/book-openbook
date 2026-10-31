@@ -3,26 +3,25 @@ default_version = "Fake"
 
 [attributes]
 title = "Carioca"
-subtitle = "From 'Flying Down To Rio'"
 style = "Latin"
 composer = "Vincent Youmans"
 poet = "Gus Kahn, Edward Eliscu"
 piece = "Moderate Latin Beat"
-copyright = "1933 T.B. Harms Co. Copyright Renewed, Eliscu interest controlled by Chappell & Co., Inc. (Intersong Music, Publisher)"
-copyrightextra = "Administered in the U.S.A. & Canada by Chappell & Co., Inc. (Intersong Music, Publisher) and T.B. Harms, Inc."
+copyright = "1933 T.B. Harms Co."
+copyrightextra = "Copyright Renewed. Eliscu interest controlled by Chappell & Co., Inc. (Intersong Music, Publisher). Administered in the U.S.A. & Canada by Chappell & Co., Inc. (Intersong Music, Publisher) and T.B. Harms, Inc."
 typesetter = "Mark Veltzer <mark.veltzer@gmail.com>"
 completion = "5"
-uuid = "55cc51c6-d511-11f1-8000-046874d194b7"
-structure = "AB"
+uuid = "68db1104-d510-11f1-8000-046874d194b7"
+structure = "AABB"
 location = "jfb:79"
 
 [[youtube]]
 id = "i1tRy0fj4II"
-remark = "Fred Astaire and Ginger Rogers in the original film Flying Down To Rio (1933)"
+remark = "Fred Astaire, Ginger Rogers in the original film Flying Down to Rio (1933)"
 
 [[youtube]]
 id = "M6BzSczJwb0"
-remark = "Les Paul (1952)"
+remark = "Les Paul in his hit recording (1952)"
 
 [versions.Fake]
 doChords = true
@@ -48,8 +47,8 @@ doOwn = false
 	- check the chords (fake book).
 	- check the tune (fake book).
 	- hear the tune to check that it is right and adjust the tempo.
-	- the book prints the first bar as a full bar with only seven eighth notes and no chord,
-		it is written here as a seven eighth pickup.
+	- the C#dim7 in bars 2 of both B parts is printed in the middle of the bar; it was put on beat 3.
+	- add the lyrics.
 {% endif %}
 {% if part == "ChordsFake" %}\chordmode {
 	\startChords
@@ -59,16 +58,26 @@ doOwn = false
 
 	\myMark "A"
 	\startPart
-	c1:m | c:m | g:7 | g:7 | \myEndLine
-	g:7 | g:7 | c:m | g:7 | c:m | c:m | \myEndLine
-	g:7 | g:7 | g:7 | g:7 | c | c |
+	c1*2:m | g1*2:7 | \myEndLine
+	g1*2:7 | c1:m | g:7 | \myEndLine
+	\endPart
+
+	\myMark "A"
+	\startPart
+	c1*2:m | g1*2:7 | \myEndLine
+	g1*2:7 | c1*2 | \myEndLine
 	\endPart
 
 	\myMark "B"
 	\startPart
-	c | \myEndLine
-	c2 cis:dim7 | d1:m7 | g:7 | d:m7 | g:7 | c | c | c | \myEndLine
-	c2 cis:dim7 | d1:m7 | g:7 | d:m7 | g:7 | c | c | \myEndLine
+	c1 | c2 cis:dim7 | d1:m7 | g:7 | \myEndLine
+	d1:m7 | g:7 | c1*2 | \myEndLine
+	\endPart
+
+	\myMark "B"
+	\startPart
+	c1 | c2 cis:dim7 | d1:m7 | g:7 | \myEndLine
+	d1:m7 | g:7 | c1*2 | \myEndLine
 	\endPart
 
 	\endSong
@@ -76,21 +85,27 @@ doOwn = false
 }
 {% endif %}
 {% if part == "VoiceFake" %}{
-	\tempo "Moderato" 4 = 160
+	\tempo "Moderato" 4 = 120
 	\time 4/4
 	\key c \minor
 
-	\partial 8*7 g'8 aes g bes a aes g |
+	\partial 8*7 g'8 aes g bes a! aes g |
 
 	% part "A"
-	c8 g~ g2. | r8 g aes g bes a aes g | d'8 g,~ g2. | r8 g aes g bes a aes g |
-	f'4. d8~ d ees4 c8 | d4. b8~ b c4 aes8 | g1~ | g8 g aes g bes a aes g | c8 g~ g2. | r8 g aes g bes a aes g |
-	d'8 g,~ g2. | r8 g aes g bes a aes g | f'4. d8~ d ees4 c8 | d4. b8~ b c4 a8 | c1~ | c4 r r e, |
+	c8 g~ g2. | r8 g aes g bes a! aes g | d'8 g,~ g2. | r8 g aes g bes a! aes g |
+	f'4. d8~ d ees4 c8 | d4. b!8~ b c4 aes8 | g1~ | g8 g aes g bes a! aes g |
+
+	% part "A"
+	c8 g~ g2. | r8 g aes g bes a! aes g | d'8 g,~ g2. | r8 g aes g bes a! aes g |
+	f'4. d8~ d ees4 c8 | d4. b!8~ b c4 a!8 | c1~ | c4 r r e,!4 |
 
 	% part "B"
-	\partBar \key c \major
-	g1~ |
-	g4 e8 f g a4 g8 | f2 d~ | d2. d4 | f1~ | f4 d8 e f g4 f8 | e1~ | e2. e4 | g1~ |
-	g4 e8 f g a4 g8 | f2 d~ | d2. e4 | f8 a4 e8 g4 d8 f~ | f c e4 b8 d4 a8 | c1~ | c4 r r2 |
+	\key c \major
+	g1~ | g4 e8 f g a4 g8 | f2 d~ | d2. d4 |
+	f1~ | f4 d8 e f g4 f8 | e1~ | e2. e4 |
+
+	% part "B"
+	g1~ | g4 e8 f g a4 g8 | f2 d~ | d2. e4 |
+	f8 a4 e8 g4 d8 f~ | f8 c e4 b8 d4 a8 | c1~ | c4 r r2 |
 }
 {% endif %}

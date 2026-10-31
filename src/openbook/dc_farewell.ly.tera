@@ -1,0 +1,115 @@
+{#
+default_version = "Fake"
+
+[attributes]
+title = "D.C. Farewell"
+style = "Jazz"
+composer = "Richie Cole"
+poet = "Richie Cole"
+piece = "Slow Swing"
+copyright = "1976 Alto Madness Music (BMI) Admin. by Bug"
+typesetter = "Mark Veltzer <mark.veltzer@gmail.com>"
+completion = "5"
+uuid = "879ab6fc-d516-11f1-8000-046874d194b7"
+structure = "A"
+location = "jfb:93"
+
+[[youtube]]
+id = "j9AFx0nU7w0"
+remark = "Uptown Vocal Jazz Quartet featuring Richie Cole"
+
+[[youtube]]
+id = "uB5B3T1SDk4"
+remark = "Rare Silk from New Weave (1983)"
+
+[versions.Fake]
+doChords = true
+doVoice = true
+doLyrics = false
+doLyricsmore = false
+doLyricsmoremore = false
+doChordBars = false
+doGuitar = false
+doExtra = false
+doPrep = false
+doOwn = false
+#}
+{% if part == "Vars" %}
+{% endif %}
+{% if part == "Doc" %}	DONE:
+	- added the meta data from the fake book.
+	- put in the tunes structure.
+	- put in the chords (fake book).
+	- put in the tune (fake book).
+	- added youtube performances.
+	TODO:
+	- add the lyrics.
+	- check the chords (fake book).
+	- check the tune (fake book).
+	- hear the tune to check that it is right and adjust the tempo.
+	- bar 3 (and coda bar 4) print the first chord as EM#11 (FM#11 in the coda is printed FM7#11), typed as a major seventh sharp eleven like bar 1.
+	- bar 9 has a dot after the a flat that would overfill the bar; it looks like a speck and is ignored (the coda bar 10 has no dot).
+	- coda bar 10 prints the last chord as C7#11 where the main part has B7#9 (a half step lower); typed as printed.
+	- the book prints three verses (1,3 and 2) for the repeated part and a fourth for the coda, which is the tune transposed up a half step.
+{% endif %}
+{% if part == "ChordsFake" %}\chordmode {
+	\startChords
+	\startSong
+
+	\myMark "A"
+	\startPart
+	\repeat volta 2 {
+		e4:maj7.11+ f:m7 bes:m7 ees:13.9- | aes2:maj7 ees:13.9- | e4:maj7.11+ f:m7 bes:m7 ees:13.9- | aes2:maj7 ees4:m7 aes:7 | \myEndLine
+		des1:maj7 | des:m7 | aes2:maj7 bes:m7 | c:m7 f:7.9+ | \myEndLine
+		bes4:m7 c:m7 f:7.9+ b:7.9+ | bes1:m7 | e2:maj7 a:maj7 | \myEndLine
+	} \alternative {
+		{
+			aes2:maj7 bes4:m7 ees:7.11+ | \myEndLineVoltaNotLast
+		}
+		{
+			aes2:maj7 bes4:m7 ees:7.11+ | \myEndLineVoltaLast
+		}
+	}
+	\endPart
+
+	\myMark "Coda"
+	\startPart
+	aes2:maj7 e:maj7 | f4:maj7.11+ fis:m7 b:m7 e:13.9- | \myEndLine
+	a2:maj7 e:13.9- | f4:maj7.11+ fis:m7 b:m7 e:13.9- | a2:maj7 e4:m7 a:7 | \myEndLine
+	d1:maj7 | d:m7 | a2:maj7 b:m7 | cis:m7 fis:7.9+ | \myEndLine
+	b4:m7 cis:m7 fis:7.9+ c:7.11+ | b1:m7 | f2:maj7 bes:maj7 | \myEndLine
+	a2:maj7 b4:m7 e:7.9- | f4:maj7.11+ d:maj7 c:maj7 f:maj7 | a1:maj7 | \myEndLine
+	\endPart
+
+	\endSong
+	\endChords
+}
+{% endif %}
+{% if part == "VoiceFake" %}{
+	\tempo "Andante" 4 = 80
+	\time 4/4
+	\key aes \major
+
+	% part "A"
+	\repeat volta 2 {
+		bes'4 g ees c8 ees~ | ees4. g8~ g4 r | bes4 g ees c8 ees~ | ees4. f8~ f4 r8 ees |
+		aes4 f8 c~ c2 | \tuplet 3/2 { r4 aes bes } \tuplet 3/2 { ces8 bes aes~ } aes bes | c!8 ees~ ees2.~ | ees2. r4 |
+		ees'16 ees r8 c4 aes f8 ees~ | ees2 \tuplet 3/2 { r8 aes bes } \tuplet 3/2 { ces bes aes~ } | aes2 \tuplet 3/2 { r8 des, ees } \tuplet 3/2 { fes ees des^\markup { To Coda \musicglyph #"scripts.coda" } } |
+	} \alternative {
+		{
+			c8 g'4. aes4 a! |
+		}
+		{
+			c,8 g'4. aes4 a!^\markup { D.C. al Coda } |
+		}
+	}
+
+	% part "Coda"
+	r1 |
+	\key a \major
+	b4 gis e cis8 e~ | e4. gis8~ gis4 r | b4 gis e cis8 e~ | e4. fis8~ fis4 r8 e |
+	a4 fis8 cis~ cis2 | \tuplet 3/2 { r4 a b } \tuplet 3/2 { c!8 b a~ } a b | cis8 e~ e2.~ | e2. r4 |
+	e'16 e r8 cis4 a fis8 e~ | e2 \tuplet 3/2 { r8 a b } \tuplet 3/2 { c! b a~ } | a2 \tuplet 3/2 { r8 d, e } \tuplet 3/2 { f! e d } |
+	cis8 gis'~ gis4 fis f! | e fis! a b | e1\fermata |
+}
+{% endif %}

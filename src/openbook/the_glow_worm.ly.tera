@@ -1,0 +1,118 @@
+{#
+default_version = "Fake"
+
+[attributes]
+title = "The Glow Worm"
+style = "Swing"
+composer = "Paul Lincke"
+poet = "Johnny Mercer, Lilla Cayley Robinson"
+piece = "Medium Jump"
+copyright = "1952 by Edward B. Marks Music Company. Copyright Renewed."
+typesetter = "Mark Veltzer <mark.veltzer@gmail.com>"
+completion = "5"
+uuid = "77343578-d510-11f1-8000-046874d194b7"
+structure = "AB"
+location = "jfb:134"
+
+[[youtube]]
+id = "fi9XFSKMaVQ"
+remark = "The Mills Brothers in their original hit recording of the Johnny Mercer version (1952)"
+
+[[youtube]]
+id = "WELo4ywIneo"
+remark = "Johnny Mercer"
+
+[versions.Fake]
+doChords = true
+doVoice = true
+doLyrics = false
+doLyricsmore = false
+doLyricsmoremore = false
+doChordBars = false
+doGuitar = false
+doExtra = false
+doPrep = false
+doOwn = false
+#}
+{% if part == "Vars" %}
+{% endif %}
+{% if part == "Doc" %}	DONE:
+	- added the meta data from the fake book.
+	- put in the tunes structure.
+	- put in the chords (fake book).
+	- put in the tune (fake book).
+	- added youtube performances.
+	TODO:
+	- check the chords (fake book).
+	- check the tune (fake book).
+	- hear the tune to check that it is right and adjust the tempo.
+	- bars 2 and 10: the book prints no accidental on the g that follows the g sharp in the same bar; typed as g natural to fit the G7 chord.
+	- the fake book prints the first ending as "1,2", the second ending as "Fine for 3rd Chorus" and the last two bars as "Fine for 4th Chorus"; here they are written as a three time repeat with two endings followed by an End part. Check how the choruses should be laid out.
+	- add the lyrics.
+{% endif %}
+{% if part == "ChordsFake" %}\chordmode {
+	\startChords
+	\startSong
+
+	\repeat volta 3 {
+
+		\myMark "A"
+		\startPart
+		c1 | g:7 | g:7 | c | \myEndLine
+		c2/e ees:dim7 | g1:7/d | d2:m7 g:7 | c1 | \myEndLine
+		\endPart
+
+		\myMark "B"
+		\startPart
+		c1 | g:7 | g:7 | c | \myEndLine
+		c | d:7 |
+
+	} \alternative {
+		{
+			g:7 | c | \myEndLineVoltaNotLast
+		}
+		{
+			c/g | c/g | des:9 | des:9 | \myEndLine
+			c | d2:m7 des:7.9+ | c1 | c | \myEndLineVoltaLast
+		}
+	}
+	\endPart
+
+	\myMark "End"
+	\startPart
+	g1:7 | c | \myEndLine
+	\endPart
+
+	\endSong
+	\endChords
+}
+{% endif %}
+{% if part == "VoiceFake" %}{
+	\tempo "Allegro" 4 = 160
+	\time 4/4
+	\key c \major
+
+	\repeat volta 3 {
+
+		% part "A"
+		a'4 g8 g fis4 g | gis4. a8 g a r8 b~ | b8 b4 a8 gis4 a | b4 c b8 c r4 |
+		d8 d4 c8 b4 c | b4 a8 gis~ gis a4. | c8 c4 b8 ais4 b | a!4 g8 fis~ fis g4. |
+
+		% part "B"
+		a4 g8 g fis4 g | gis4. a8 g a r8 b~ | b8 b4 a8 gis4 a | b4. c8 b c r4 |
+		d8 d c c b4. c8 | b4 a8 d~ d2 |
+
+	} \alternative {
+		{
+			g,4 g8 g d'4 c | c1 |
+		}
+		{
+			g2 a4 c8 e~ | e8 e~ e2. | r8 ees~ ees4 ces aes8 ees'~ | ees8 ees~ ees2. |
+			g,2 a4 c | d2 e | c1~ | c4 a r2 |
+		}
+	}
+
+	% part "End"
+	g4 g d' c | c2. r4 |
+}
+{% endif %}

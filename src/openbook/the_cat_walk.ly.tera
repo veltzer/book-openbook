@@ -1,0 +1,124 @@
+{#
+default_version = "Fake"
+
+[attributes]
+title = "The Cat Walk"
+style = "Jazz"
+composer = "Gerry Mulligan"
+piece = "Medium"
+copyright = "1960-1964 CRITERION MUSIC CORP."
+typesetter = "Mark Veltzer <mark.veltzer@gmail.com>"
+completion = "5"
+uuid = "68de694e-d510-11f1-8000-046874d194b7"
+structure = "AABA"
+location = "jfb:80"
+
+[[youtube]]
+id = "yPwQSVlPUGY"
+remark = "Gerry Mulligan, Ben Webster in the original recording from Gerry Mulligan Meets Ben Webster (1959)"
+
+[[youtube]]
+id = "z_TVjv3_gJ4"
+remark = "Gerry Mulligan, Ben Webster, alternate take from the same session (1959)"
+
+[versions.Fake]
+doChords = true
+doVoice = true
+doLyrics = false
+doLyricsmore = false
+doLyricsmoremore = false
+doChordBars = false
+doGuitar = false
+doExtra = false
+doPrep = false
+doOwn = false
+#}
+{% if part == "Vars" %}
+{% endif %}
+{% if part == "Doc" %}	DONE:
+	- added the meta data from the fake book.
+	- put in the tunes structure.
+	- put in the chords (fake book).
+	- put in the tune (fake book).
+	- added youtube performances.
+	TODO:
+	- check the chords (fake book).
+	- check the tune (fake book).
+	- hear the tune to check that it is right and adjust the tempo.
+	- bar 6 of the last A part: the Eb and Edim7 are printed late in the bar (put on beats 3 and 4); elsewhere this pair is on beats 1 and 3.
+	- the Bb chords in the last bar of the last A part and in the coda are printed over the anticipating d eighth note and were put there.
+{% endif %}
+{% if part == "ChordsFake" %}\chordmode {
+	\startChords
+	\startSong
+
+	\partial 8 s8 |
+
+	\myMark "A"
+	\startPart
+	\repeat volta 2 {
+		bes2 bes/d | ees e:dim7 | bes des:7 | c:7 b:7 | \myEndLine
+		bes bes/d | ees e:dim7 | bes1 |
+	} \alternative {
+		{
+			c2:m7 f:7 | \myEndLineVoltaNotLast
+		}
+		{
+			bes1 | \myEndLineVoltaLast
+		}
+	}
+	\endPart
+
+	\myMark "B"
+	\startPart
+	ees1 | f2:m7 bes:7 | ees1 | f2:m7 bes:7 | \myEndLine
+	ees ees:7/g | aes a:dim7 | ees1 | e:dim7 | \myEndLine
+	\endPart
+
+	\myMark "A"
+	\startPart
+	bes1 | ees2 e:dim7 | bes des:7 | c:7 b:7 | \myEndLine
+	bes1 | bes2 ees4 e:dim7 | bes1 | a4.:7 bes8*5 | \myEndLine
+	\endPart
+
+	\myMark "Coda"
+	\startPart
+	bes8 e4.:dim7 s4 bes8 e:dim7 | s1 | bes8 e4.:dim7 s4 bes8 e:dim7 | s2 a4.:7 bes8 | s1 | \myEndLine
+	\endPart
+
+	\endSong
+	\endChords
+}
+{% endif %}
+{% if part == "VoiceFake" %}{
+	\tempo "Moderato" 4 = 140
+	\time 4/4
+	\key bes \major
+
+	\partial 8 bes'8 |
+
+	% part "A"
+	\repeat volta 2 {
+		f8^\markup { \musicglyph #"scripts.segno" } bes f bes r2 | r2 r4 r8 bes8 | f8 bes f4 bes r | r2 r4 r8 e,!8 |
+		f8 bes f4 bes r | r2 r4 r8 bes8 | f8 bes r4 r2 |
+	} \alternative {
+		{
+			r2 r4 r8 bes8 |
+		}
+		{
+			r2 r4 r8 fis8 |
+		}
+	}
+
+	% part "B"
+	g8 bes r4 r r8 g8 | aes8 bes aes bes~ bes4 aes8 bes | g8 bes r4 r r8 g8 | aes8 bes aes bes~ bes4. aes8 |
+	g8 ees r4 r r8 g8 | aes8 ees r aes a! ees r a | bes8 ees, r4 r r8 d8 | ees8 e!~ e2. |
+
+	% part "A"
+	f8 bes f bes r2 | r2 r4 r8 bes8 | f8 bes f4 bes r | r2 r4 r8 e,!8 |
+	f8 bes f4 bes r | r2 r4 r8 bes8^\markup { To Coda \musicglyph #"scripts.coda" } | f8 bes r4 r2 | cis,4 c8 d~ d2^\markup { D.S. al Coda } |
+
+	% part "Coda"
+	f8 e!4. r4 f8 e~ | e2. r8 bes'8 | f8 e!4. r4 f8 e~ | e2 cis4 c8 d~ | d1\fermata |
+}
+{% endif %}

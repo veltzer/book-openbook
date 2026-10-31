@@ -1,0 +1,121 @@
+{#
+default_version = "Fake"
+
+[attributes]
+title = "Four Others (Lighthouse)"
+style = "Jazz"
+composer = "Jimmy Giuffre"
+piece = "Moderately"
+copyright = "1951 ATLANTIC MUSIC CORP."
+copyrightextra = "Renewed 1977 ATLANTIC MUSIC CORP."
+typesetter = "Mark Veltzer <mark.veltzer@gmail.com>"
+completion = "5"
+uuid = "83abdae0-d510-11f1-8000-046874d194b7"
+structure = "AABA"
+location = "jfb:125"
+
+[[youtube]]
+id = "eUZ6P01wPo4"
+remark = "Woody Herman and his Orchestra"
+
+[[youtube]]
+id = "Sk5qBe1YFD0"
+remark = "Tennessee Tech Troubadours at the APSU Jazz Festival (1965)"
+
+[versions.Fake]
+doChords = true
+doVoice = true
+doLyrics = false
+doLyricsmore = false
+doLyricsmoremore = false
+doChordBars = false
+doGuitar = false
+doExtra = false
+doPrep = false
+doOwn = false
+#}
+{% if part == "Vars" %}
+{% endif %}
+{% if part == "Doc" %}	DONE:
+	- added the meta data from the fake book.
+	- put in the tunes structure.
+	- put in the chords (fake book).
+	- put in the tune (fake book).
+	- added youtube performances.
+	TODO:
+	- check the chords (fake book).
+	- check the tune (fake book).
+	- hear the tune to check that it is right and adjust the tempo.
+{% endif %}
+{% if part == "ChordsFake" %}\chordmode {
+	\startChords
+	\startSong
+
+	\myMark "A"
+	\startPart
+	\repeat volta 2 {
+		bes2 g:m7 | c:m7 f:7 | bes g:m7 | c:m7 f:7 | \myEndLine
+		bes2 g:m7 | c:m7 f:7 | c:m7 f:7 |
+	} \alternative {
+		{
+			c4:m7 f:7 bes f:7 | \myEndLineVoltaNotLast
+		}
+		{
+			c4:m7 f:7 bes2 | \myEndLineVoltaLast
+		}
+	}
+	\endPart
+
+	\myMark "B"
+	\startPart
+	d1:7 | d:7 | g:7 | g:7 | \myEndLine
+	c1:7 | c2:7 c:7.9- | f1:7.5+ | f:7.5+ | \myEndLine
+	\endPart
+
+	\myMark "A"
+	\startPart
+	bes2 g:m7 | c:m7 f:7 | bes g:m7 | c:m7 f:7 | \myEndLine
+	bes2 g:m7 | c:m7 f:7 | c:m7 f:7 | c4:m7 f:7 bes2 | \myEndLine
+	\endPart
+
+	\myMark "End"
+	\startPart
+	c2:m7 f:7 | c4:m7 f:7 bes2 | \myEndLine
+	c1:m7 | cis:dim7 | c2:m7 f:7 | bes1:7.11+ | \myEndLine
+	\endPart
+
+	\endSong
+	\endChords
+}
+{% endif %}
+{% if part == "VoiceFake" %}{
+	\tempo "Moderato" 4 = 160
+	\time 4/4
+	\key bes \major
+
+	% part "A"
+	\repeat volta 2 {
+		r8 f16 g bes8 cis d f c d | bes g bes d r2 | r8 f,16 g bes8 cis d f c d | bes g bes d r2 |
+		r8 f,16 g bes8 cis d f c d | bes g bes d r2 | r8 des c4 bes f8 f |
+	} \alternative {
+		{
+			aes8 f a bes~ bes4 r4 |
+		}
+		{
+			aes8 f a bes~ bes4 r4 |
+		}
+	}
+
+	% part "B"
+	r8 d4. b8 a r8 d8~ | d4 b8 a r8 d4. | a8 g r8 d'8~ d4 a8 g | r1 |
+	r8 d'4. a8 g r8 d'8~ | d4 a8 g r8 des'4. | a8 g r8 des'8~ des4 a8 g | r1 |
+
+	% part "A"
+	r8 f16 g bes8 cis d f c d | bes g bes d r2 | r8 f,16 g bes8 cis d f c d | bes g bes g r2 |
+	r8 f16 g bes8 cis d f c d | bes g bes d r2 | r8 des( c4) bes f8 f | aes8 f a bes~ bes4 r4 |
+
+	% part "End"
+	r8 des( c4) bes f8 f | aes8 f a bes~ bes4 r4 |
+	r8 f16 g bes8 cis d f c d | bes g bes cis r bes c d | r8 bes d ees r bes ees e!~ | e1\fermata |
+}
+{% endif %}

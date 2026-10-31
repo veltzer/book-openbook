@@ -1,0 +1,136 @@
+{#
+default_version = "Fake"
+
+[attributes]
+title = "Frosty The Snow Man"
+style = "Pop"
+composer = "Steve Nelson, Jack Rollins"
+poet = "Steve Nelson, Jack Rollins"
+piece = "Moderately"
+copyright = "1950 by Hill & Range Songs, Inc."
+copyrightextra = "Copyright Renewed, controlled by Chappell & Co., (Intersong Music, Publisher)"
+typesetter = "Mark Veltzer <mark.veltzer@gmail.com>"
+completion = "5"
+uuid = "83af326c-d510-11f1-8000-046874d194b7"
+structure = "AABA"
+location = "jfb:127"
+
+[[youtube]]
+id = "dFnfWkiSJdw"
+remark = "Gene Autry in the original recording (1950)"
+
+[[youtube]]
+id = "Hmw4Fu4XupE"
+remark = "Ella Fitzgerald"
+
+[versions.Fake]
+doChords = true
+doVoice = true
+doLyrics = false
+doLyricsmore = false
+doLyricsmoremore = false
+doChordBars = false
+doGuitar = false
+doExtra = false
+doPrep = false
+doOwn = false
+#}
+{% if part == "Vars" %}
+{% endif %}
+{% if part == "Doc" %}	DONE:
+	- added the meta data from the fake book.
+	- put in the tunes structure.
+	- put in the chords (fake book).
+	- put in the tune (fake book).
+	- added youtube performances.
+	TODO:
+	- add the lyrics.
+	- check the chords (fake book).
+	- check the tune (fake book).
+	- hear the tune to check that it is right and adjust the tempo.
+	- the fake book prints no chords in the tag after the second ending except G7 and the final C; the chords were carried over.
+{% endif %}
+{% if part == "ChordsFake" %}\chordmode {
+	\startChords
+	\startSong
+
+	\repeat volta 2 {
+
+		\myMark "A"
+		\startPart
+		c1 | c2 c:7 | f2 fis:dim7 | c1/g | \myEndLine
+		f2 fis:dim7 | c1/g | g1:7 | c2 g:7 | \myEndLine
+		\endPart
+
+		\myMark "A"
+		\startPart
+		c1 | c2 c:7 | f2 fis:dim7 | c1/g | \myEndLine
+		f2 fis:dim7 | c2/g a:7 | d:m7 g:7 | c1 | \myEndLine
+		\endPart
+
+		\myMark "B"
+		\startPart
+		f2 fis:dim7 | c1/g | d2:m7 g:7 | c1 | \myEndLine
+		g1 | e:7.9- | a2:m7 d:7 | d:m7 g:7 | \myEndLine
+		\endPart
+
+		\myMark "A"
+		\startPart
+		c1 | c2 c:7 | f2 fis:dim7 | c1/g | \myEndLine
+		f2 fis:dim7 | c2/g a:7 | d:m7 g:7 |
+	} \alternative {
+		{
+			c1 | \myEndLineVoltaNotLast
+		}
+		{
+			c1 | \myEndLineVoltaLast
+		}
+	}
+	\endPart
+
+	\myMark "End"
+	\startPart
+	c1 | c | c | g:7 | \myEndLine
+	g1:7 | g:7 | g:7 | c | \myEndLine
+	\endPart
+
+	\endSong
+	\endChords
+}
+{% endif %}
+{% if part == "VoiceFake" %}{
+	\tempo "Moderato" 4 = 120
+	\time 4/4
+	\key c \major
+
+	\repeat volta 2 {
+
+		% part "A"
+		g'2 e4. f8 | g4 c2 b8 c | d4 c b a8 g~ | g2. b8 c |
+		d4 c b a8 a | g8 c4 e,8~ e4 g8 a | g4 f e f | g2. r4 |
+
+		% part "A"
+		g2 e4. f8 | g4 c2 b8 c | d4 c b a8 g~ | g2. b8 c |
+		d4 c b a8 a | g8 c4 e,8~ e4 g8 a | g4 f e d | c2. c4 |
+
+		% part "B"
+		a'4 a c c | b4 a g e | f4 a g f | e2. e4 |
+		d4 d g g | b4 b d~ d8 b | d4 c b a | g2 g |
+
+		% part "A"
+		g2 e4. f8 | g4 c2 b8 c | d4 c b a8 g~ | g2. b8 c |
+		d4 c b a8 a | g8 c4 e,8~ e4 g8 a | g4 f e d |
+	} \alternative {
+		{
+			c2. r4 |
+		}
+		{
+			c2. r4 |
+		}
+	}
+
+	% part "End"
+	g'8 g g4 g g | a8 g g4 g g | a4 g e g | d1 |
+	g8 g g4 g g | a8 g g4 g g | g8 g f4 e d | c2. r4 |
+}
+{% endif %}

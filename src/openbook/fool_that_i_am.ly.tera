@@ -15,6 +15,14 @@ uuid = "59ad927f-d510-11f1-8000-046874d194b7"
 structure = "AB"
 location = "jfb:121"
 
+[[youtube]]
+id = "25CQO782GY4"
+remark = "Rita Coolidge in the original recording"
+
+[[youtube]]
+id = "QKZllrsKIQg"
+remark = "Rita Coolidge live in Japan"
+
 [versions.Fake]
 doChords = true
 doVoice = true
@@ -49,11 +57,16 @@ doOwn = false
 
 	\partial 4 s4 |
 
-	\myMark "A"
-	\startPart
 	\repeat volta 2 {
+
+		\myMark "A"
+		\startPart
 		g2 g:sus4 | d2:7sus4 d:7 | g2:sus4 f4 g:7 | \myEndLine
 		c2 b:m7 | a2:m7 b:m | c2 b4:7sus4 b:7 | e2:m7 g | \myEndLine
+		\endPart
+
+		\myMark "B"
+		\startPart
 		c2 d | g2 e:m7 | a2:m7 d:7 | \myEndLine
 		g1 | c2 b:7 | e2.:m7 c4 | \myEndLine
 	} \alternative {
@@ -83,10 +96,13 @@ doOwn = false
 
 	\partial 4 g'16 a8. |
 
-	% part "A"
 	\repeat volta 2 {
+
+		% part "A"
 		b4 b r a8 b16 c~ | c4 c16 b a8 r4 b8 d16 e~ | e16 d8 d16~ d2 b16 d8 e16~ |
 		e2 r4 b16 a g8 | a8 b r4 r r8 d,16 e | c'16 c8.~ c8 b~ b4 a8 b16 a | g4 r b8 c d e~ |
+
+		% part "B"
 		e4^\markup { \musicglyph #"scripts.segno" } r a8 a16 fis~ fis8 e16 d | d4 r g,8 a b c~ | c4 g'8 fis~ fis4 e16 d d c |
 		b4 r b8 c d e~ | e8 e r4 fis8 b,4 g'8~ | g2. a,16 b8.^\markup {To Coda \musicglyph #"scripts.coda"} |
 	} \alternative {

@@ -1,0 +1,128 @@
+{#
+default_version = "Fake"
+
+[attributes]
+title = "The Cape Verdean Blues"
+style = "Jazz"
+composer = "Horace Silver"
+piece = "Moderate Samba"
+copyright = "1965 Ecaroh Music, Inc."
+typesetter = "Mark Veltzer <mark.veltzer@gmail.com>"
+completion = "5"
+uuid = "68d92e98-d510-11f1-8000-046874d194b7"
+structure = "AABB"
+location = "jfb:78"
+
+[[youtube]]
+id = "My6Jf-T5ZCQ"
+remark = "Horace Silver Quintet in the original recording from The Cape Verdean Blues (1965)"
+
+[[youtube]]
+id = "orMEsvzxc5Y"
+remark = "Horace Silver Quintet live at The Penthouse, Seattle (1965)"
+
+[versions.Fake]
+doChords = true
+doVoice = true
+doLyrics = false
+doLyricsmore = false
+doLyricsmoremore = false
+doChordBars = false
+doGuitar = false
+doExtra = false
+doPrep = false
+doOwn = false
+#}
+{% if part == "Vars" %}
+{% endif %}
+{% if part == "Doc" %}	DONE:
+	- added the meta data from the fake book.
+	- put in the tunes structure.
+	- put in the chords (fake book).
+	- put in the tune (fake book).
+	- added youtube performances.
+	TODO:
+	- check the chords (fake book).
+	- check the tune (fake book).
+	- hear the tune to check that it is right and adjust the tempo.
+	- the fake book prints no chord over the first two (pickup) bars; they were left without chords.
+	- the B7 chord in bars 4 and 20 of part B is printed between the two bars; it was put on the second one.
+{% endif %}
+{% if part == "ChordsFake" %}\chordmode {
+	\startChords
+	\startSong
+
+	\myMark "A"
+	\startPart
+	s2 | s2 | c:m | des:7 | \myEndLine
+	c:m | c:m | g:7 | aes:7 | \myEndLine
+	g:7 | g:7 | g:7 | aes:7 | \myEndLine
+	g:7 | des:7 | c:m | des:7 | \myEndLine
+	\endPart
+
+	\myMark "A"
+	\startPart
+	c:m | c:m | c:m | des:7 | \myEndLine
+	c:m | c:m | g:7 | aes:7 | \myEndLine
+	g:7 | g:7 | g:7 | aes:7 | \myEndLine
+	g:7 | des:7 | c:m | des:7 | \myEndLine
+	\endPart
+
+	\myMark "B"
+	\startPart
+	c:m | c:m | bes:7 | b:7 | \myEndLine
+	bes:7 | bes:7 | c:m | des:7 | \myEndLine
+	c:m | c:m | d:7 | d:7 | \myEndLine
+	aes:7 | g:7 | c:m | des:7 | \myEndLine
+	\endPart
+
+	\myMark "B"
+	\startPart
+	c:m | c:m | bes:7 | b:7 | \myEndLine
+	bes:7 | bes:7 | c:m | des:7 | \myEndLine
+	c:m | c:m | d:7 | d:7 | \myEndLine
+	aes:7 | g:7 | c:m | des:7 | \myEndLine
+	\endPart
+
+	\myMark "Coda"
+	\startPart
+	des:7 | c:m | c:m | \myEndLine
+	\endPart
+
+	\endSong
+	\endChords
+}
+{% endif %}
+{% if part == "VoiceFake" %}{
+	\tempo "Moderato" 4 = 120
+	\time 2/4
+	\key c \minor
+
+	% part "A"
+	r8. g'16 c16 r ees r | g8 bes g8 bes16 ees,16~ | ees16 c8.~ c4~ | c2 |
+	r4 c'16 r c r | c16 r c r c8 b!16 d16~ | d16 b!8.~ b4~ | b2 |
+	r4 d16 r d r | d8 b!16 g16~ g8 ges16 f16~ | f16 f8.~ f4~ | f2 |
+	r4 d'16 r c r | ges8 ees f c16 ees16~ | ees16^\markup { To Coda \musicglyph #"scripts.coda" } c8.~ c4~ | c2 |
+
+	% part "A"
+	r8. g16 c16 r ees r | g8 bes g8 bes16 ees,16~ | ees16 c8.~ c4~ | c2 |
+	r4 c'16 r c r | c16 r c r c8 b!16 d16~ | d16 b!8.~ b4~ | b2 |
+	r4 d16 r d r | d8 b!16 g16~ g8 ges16 f16~ | f16 f8.~ f4~ | f2 |
+	r4 d'16 r c r | ges8 ees f c16 ees16~ | ees16 c8.~ c4~ | c2 |
+
+	% part "B"
+	r4 ees16 r ees r | g16 r g r aes8 aes16 bes16~ | bes16 bes8.~ bes4~ | bes2 |
+	r4 aes16 r aes r | aes16 r aes r bes8 aes16 aes16~ | aes16 g8.~ g4~ | g2 |
+	r4 g16 r g r | g16 r g r aes r g fis~ | fis16 d8.~ d4~ | d2 |
+	r4 f16 r ees r | d16 r d ees~ ees16 f8 g,16~ | g2~ | g2 |
+
+	% part "B"
+	r4 ees'16 r ees r | g16 r g r aes8 aes16 bes16~ | bes16 bes8.~ bes4~ | bes2 |
+	r4 aes16 r aes r | aes16 r aes r bes8 aes16 aes16~ | aes16 g8.~ g4~ | g2 |
+	r4 g16 r g r | g16 r g r16 aes8 g16 fis16~ | fis16 d8.~ d4~ | d2 |
+	r4 f16 r ees r | d16 r d ees~ ees16 f8 g,16~ | g2~ | g2^\markup { D.C. al Coda } |
+
+	% part "Coda"
+	c2~ | c8 r r4 | r2 |
+}
+{% endif %}

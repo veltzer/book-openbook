@@ -1,0 +1,107 @@
+{#
+default_version = "Fake"
+
+[attributes]
+title = "Doodlin'"
+style = "Jazz"
+composer = "Horace Silver"
+piece = "Medium swing"
+copyright = "1956 & 1957 by Silhouette Music Corp."
+typesetter = "Mark Veltzer <mark.veltzer@gmail.com>"
+completion = "5"
+uuid = "4ad1641a-d510-11f1-8000-046874d194b7"
+structure = "Blues"
+location = "jfb:105"
+
+[[youtube]]
+id = "-gcBQgvkaFs"
+remark = "Horace Silver and the Jazz Messengers in the original recording (1954)"
+
+[[youtube]]
+id = "0NrXGUX2SMc"
+remark = "Ray Charles from The Great Ray Charles (1957)"
+
+[versions.Fake]
+doChords = true
+doVoice = true
+doLyrics = false
+doLyricsmore = false
+doLyricsmoremore = false
+doChordBars = false
+doGuitar = false
+doExtra = false
+doPrep = false
+doOwn = false
+#}
+{% if part == "Vars" %}
+{% endif %}
+{% if part == "Doc" %}	DONE:
+	- added the meta data from the fake book.
+	- put in the tunes structure.
+	- put in the chords (fake book).
+	- put in the tune (fake book).
+	- added youtube performances.
+	TODO:
+	- check the chords (fake book).
+	- check the tune (fake book).
+	- hear the tune to check that it is right and adjust the tempo.
+	- the book prints a dot high above the dotted quarter in bar 5 (staccato?), it is not typed.
+	- the low g flat and a flat at the start of bar 9 of part B are hard to read in the scan, check them.
+	- the book prints no chords in the two endings of part A and at the start of bar 1 of part B (Db carries over).
+{% endif %}
+{% if part == "ChordsFake" %}\chordmode {
+	\startChords
+	\startSong
+
+	\myMark "A"
+	\startPart
+	\repeat volta 2 {
+		des1*4:7 | \myEndLine
+		ges1*2:7 | des1:7 | bes:7 | \myEndLine
+		ees2:m7 ees:9 | aes1:9 | des |
+	} \alternative {
+		{
+			s1 | \myEndLineVoltaNotLast
+		}
+		{
+			s1 | \myEndLineVoltaLast
+		}
+	}
+	\endPart
+
+	\myMark "B"
+	\startPart
+	s4 b:dim7 bes:dim7 a:dim7 | aes2:dim7 des4 aes:7 | des aes:dim7 g:dim7 ges:dim7 | f2:dim7 ges4 des:7 | \myEndLine
+	ges4 e:dim7 ees:dim7 d:dim7 | des2:dim7 des4 aes:7 | des b:dim7 bes:dim7 a:dim7 | aes2:dim7 des | \myEndLine
+	aes1*2:7 | des2 des4:dim7 c:dim7 | des1 | \myEndLine
+	\endPart
+
+	\endSong
+	\endChords
+}
+{% endif %}
+{% if part == "VoiceFake" %}{
+	\tempo "Moderato" 4 = 132
+	\time 2/2
+	\key des \major
+
+	% part "A"
+	\repeat volta 2 {
+		r4 \tuplet 3/2 { ces16 des ces } aes8 c8 des4. | \tuplet 3/2 { ces16 des ces } aes8 c8 des~ des4 \tuplet 3/2 { ces16 des ces } aes8 | c8 des4. \tuplet 3/2 { ces16 des ces } aes8 c8 des~ | des8 des'4 ges,8 fes4 des |
+		r4 \tuplet 3/2 { fes16 ges fes } bes,8 f'8 ges4. | \tuplet 3/2 { fes16 ges fes } bes,8 f'8 ges~ ges4 \tuplet 3/2 { ces,16 des ces } aes8 | c8 des4. \tuplet 3/2 { ces16 des ces } aes8 c8 des~ | des4 f8. ges16 f8. ees16 d8. bes16 |
+		f'8. d16 ees8. f16 ges8. bes16 des8. f16 | \acciaccatura f8 ges8 f4. des8 aes c des~ | des2 \tuplet 3/2 { ges,8 aes ees } g8 aes~ |
+	} \alternative {
+		{
+			aes8 des4 ges,8 fes8 aes,8 c4 |
+		}
+		{
+			aes'8 ges f4 des8 aes c des~ |
+		}
+	}
+
+	% part "B"
+	des8 r8 b'8 b bes bes a a | aes8 ges f4 des8 aes c des~ | des8 r8 aes'8 aes g g ges ges | f8 ces'8 bes4 ges8 des f ges~ |
+	ges8 r8 des'8 des c c ces ces | bes8 ges f4 des8 aes c des~ | des8 r8 aes'8 aes g g ges ges | f8 bes, des f~ f des4-. aes8 |
+	ges4. aes8 c c des d | ees1 | r4 \tuplet 3/2 { aes16 ces aes } f8 e8 bes' ees, a | aes2. r4 |
+}
+{% endif %}

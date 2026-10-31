@@ -15,12 +15,12 @@ structure = "ABAC"
 location = "jfb:91"
 
 [[youtube]]
-id = "YOUTUBE1"
-remark = "REMARK1"
+id = "Kn8bL0WuPMU"
+remark = "Count Basie and his Orchestra in the original recording (1958)"
 
 [[youtube]]
-id = "YOUTUBE2"
-remark = "REMARK2"
+id = "yhK8TV27sBo"
+remark = "Count Basie Orchestra featuring Frank Wess on flute"
 
 [versions.Fake]
 doChords = true

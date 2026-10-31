@@ -8,8 +8,8 @@ style = "Jazz"
 composer = "Jack Palmer, Spencer Williams"
 poet = "Jack Palmer, Spencer Williams"
 piece = "Quickly"
-copyright = "1924 by MCA Music Publishing, A Division of MCA Inc., Copyright Renewed"
-copyrightextra = ""
+copyright = "1924 by MCA Music Publishing, A Division of MCA Inc."
+copyrightextra = "Copyright Renewed"
 typesetter = "Mark Veltzer <mark.veltzer@gmail.com>"
 completion = "5"
 uuid = "a45fa4d8-d515-11f1-8000-046874d194b7"
@@ -23,10 +23,6 @@ remark = "Clarence Williams Blue Five with Louis Armstrong and Eva Taylor (1924)
 [[youtube]]
 id = "C4X3xxto_38"
 remark = "Fletcher Henderson and his Orchestra with Louis Armstrong (1924)"
-
-[[youtube]]
-id = "9OhGowLAJw4"
-remark = "Catherine Russell (live)"
 
 [versions.Fake]
 doChords = true
@@ -52,6 +48,7 @@ doOwn = false
 	- check the chords (fake book).
 	- check the tune (fake book).
 	- hear the tune to check that it is right and adjust the tempo.
+	- add the lyrics.
 {% endif %}
 {% if part == "ChordsFake" %}\chordmode {
 	\startChords
@@ -73,7 +70,7 @@ doOwn = false
 
 		\myMark "B"
 		\startPart
-		f:7 f:dim7 | f:7 f:dim7 | f:7 f:dim7 | f1:7 | \myEndLine
+		f2:7 f:dim7 | f4.:7 f:dim7 f4:7 | f2:7 f:dim7 | f1:7 | \myEndLine
 		bes2 f:aug | bes g:7 | g1:7 | c2:7 a:7 | \myEndLine
 		\endPart
 

@@ -1,0 +1,113 @@
+{#
+default_version = "Fake"
+
+[attributes]
+title = "Dinah"
+style = "Jazz"
+composer = "Harry Akst"
+poet = "Sam M. Lewis, Joe Young"
+piece = "Medium swing"
+copyright = "1925 B & G Akst Publishing Co."
+copyrightextra = "Pursuant to Sections 304(c) and 401(b) of the U.S. Copyright Law."
+typesetter = "Mark Veltzer <mark.veltzer@gmail.com>"
+completion = "5"
+uuid = "fa95f48c-d516-11f1-8000-046874d194b7"
+structure = "AABA"
+location = "jfb:98"
+
+[[youtube]]
+id = "m_7NVvo6bmQ"
+remark = "Ethel Waters in the original recording (1925)"
+
+[[youtube]]
+id = "V0RAQ4jMtHw"
+remark = "Bing Crosby and The Mills Brothers (1932)"
+
+[versions.Fake]
+doChords = true
+doVoice = true
+doLyrics = false
+doLyricsmore = false
+doLyricsmoremore = false
+doChordBars = false
+doGuitar = false
+doExtra = false
+doPrep = false
+doOwn = false
+#}
+{% if part == "Vars" %}
+{% endif %}
+{% if part == "Doc" %}	DONE:
+	- added the meta data from the fake book.
+	- put in the tunes structure.
+	- put in the chords (fake book).
+	- put in the tune (fake book).
+	- added youtube performances.
+	TODO:
+	- add the lyrics.
+	- check the chords (fake book).
+	- check the tune (fake book).
+	- hear the tune to check that it is right and adjust the tempo.
+{% endif %}
+{% if part == "ChordsFake" %}\chordmode {
+	\startChords
+	\startSong
+
+	\myMark "A"
+	\startPart
+	\repeat volta 2 {
+		g1 | g | g | e:m7 | a:m7 | \myEndLine
+	} \alternative {
+		{
+			d1:7 | g2 bes:dim7 | a:m7 d:7 | \myEndLineVoltaNotLast
+		}
+		{
+			d1:7 | g2 c:7 | \myEndLineVoltaLast
+		}
+	}
+	g2 b:7 |
+	\endPart
+
+	\myMark "B"
+	\startPart
+	e1:m | ees:aug | e:m7/d | cis2:m7.5- c4:9 b:7.9- | e1:m7 | \myEndLine
+	a1:7 | a:m7 | d:7 | \myEndLine
+	\endPart
+
+	\myMark "A"
+	\startPart
+	g1 | g | g | e:m7 | \myEndLine
+	a:m7 | d:7 | g2 c:7 | g1 | \myEndLine
+	\endPart
+
+	\endSong
+	\endChords
+}
+{% endif %}
+{% if part == "VoiceFake" %}{
+	\tempo "Moderato" 4 = 130
+	\time 4/4
+	\key g \major
+
+	% part "A"
+	\repeat volta 2 {
+		d2 e~ | e4 d8. e16 g8. a16 b4 | d8 b4.~ b2~ | b4 g8. a16 b8. g16 a8. b16 | d8 b4.~ b2~ |
+	} \alternative {
+		{
+			b4 a8. b16 d8. b16 a4 | g8 e4.~ e2 | e8 d d d~ d2 |
+		}
+		{
+			b'4 a8. b16 d8. b16 a8. b16 | g1~ |
+		}
+	}
+	g4 r r2 |
+
+	% part "B"
+	b8 g4 b8~ b2 | b8 g4 b8~ b2 | b8 g4 b8~ b2~ | b4 b d c | b8 g4 b8~ b2 |
+	b8 g4 g8~ g8. a16 b4 | a1~ | a4 r r2 |
+
+	% part "A"
+	d,2 e~ | e4 d8. e16 g8. a16 b4 | d8 b4.~ b2~ | b4 g8. a16 b8. g16 a8. b16 |
+	d8 b4.~ b2~ | b4 a8. b16 d8. b16 a8. b16 | g1~ | g2. r4 |
+}
+{% endif %}

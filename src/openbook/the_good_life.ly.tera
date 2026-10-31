@@ -1,0 +1,109 @@
+{#
+default_version = "Fake"
+
+[attributes]
+title = "The Good Life"
+style = "Jazz"
+composer = "Sacha Distel"
+poet = "Jack Reardon"
+piece = "Slowly"
+copyright = "1962 by Diffussion Musicales Francais"
+copyrightextra = "Copyright 1963 by Paris Music Co., Inc. Published in the U.S.A. and Canada by Intersong-USA, Inc."
+typesetter = "Mark Veltzer <mark.veltzer@gmail.com>"
+completion = "5"
+uuid = "7737de6c-d510-11f1-8000-046874d194b7"
+structure = "ABAC"
+location = "jfb:136"
+
+[[youtube]]
+id = "1lqzIB-5nAA"
+remark = "Tony Bennett in the 1963 hit recording"
+
+[[youtube]]
+id = "_Zu7lbhU6fk"
+remark = "Sacha Distel (1964)"
+
+[versions.Fake]
+doChords = true
+doVoice = true
+doLyrics = false
+doLyricsmore = false
+doLyricsmoremore = false
+doChordBars = false
+doGuitar = false
+doExtra = false
+doPrep = false
+doOwn = false
+#}
+{% if part == "Vars" %}
+{% endif %}
+{% if part == "Doc" %}	DONE:
+	- added the meta data from the fake book.
+	- put in the tunes structure.
+	- put in the chords (fake book).
+	- put in the tune (fake book).
+	- added youtube performances.
+	TODO:
+	- check the chords (fake book).
+	- check the tune (fake book).
+	- hear the tune to check that it is right and adjust the tempo.
+	- add the lyrics.
+{% endif %}
+{% if part == "ChordsFake" %}\chordmode {
+	\startChords
+	\startSong
+
+	\partial 4 s4 |
+
+	\myMark "A"
+	\startPart
+	aes1 | aes | g:m7 | c:7 | \myEndLine
+	f:m | f:m | d:m7.5- | g:7 | \myEndLine
+	\endPart
+
+	\myMark "B"
+	\startPart
+	bes:m7 | ges:7 | aes | c:7 | \myEndLine
+	f:m | f:m7 | bes:m7 | ees:7 | \myEndLine
+	\endPart
+
+	\myMark "A"
+	\startPart
+	aes1 | aes | g:m7 | c:7 | \myEndLine
+	f:m | f:m | d:m7.5- | g:7 | \myEndLine
+	\endPart
+
+	\myMark "C"
+	\startPart
+	bes:m7 | ges:7 | aes | f:7 | \myEndLine
+	bes:m7 | bes2.:m7/ees ees4:7.9- | aes2 des4 des:m | aes1:6 | \myEndLine
+	\endPart
+
+	\endSong
+	\endChords
+}
+{% endif %}
+{% if part == "VoiceFake" %}{
+	\tempo "Andante" 4 = 76
+	\time 2/2
+	\key aes \major
+
+	\partial 4 \tuplet 3/2 { r8 des' c } |
+
+	% part "A"
+	ees,8 ees4.~ ees4~ \tuplet 3/2 { ees8 des' c } | ees,4~ \tuplet 3/2 { ees8 des' c } ees,4~ \tuplet 3/2 { ees8 c' bes } | c,1~ | c2. \tuplet 3/2 { r8 bes' aes } |
+	c,8 c4.~ c4~ \tuplet 3/2 { c8 bes' aes } | c,4~ \tuplet 3/2 { c8 bes' aes } c,4~ \tuplet 3/2 { c8 bes' aes } | g1~ | g2. \tuplet 3/2 { r8 f g } |
+
+	% part "B"
+	aes8 aes4.~ aes4~ \tuplet 3/2 { aes8 g aes } | bes2~ bes8 bes aes bes | c4. ees,8 ees2~ | ees2 r4 \tuplet 3/2 { r8 c' bes } |
+	aes8 aes4.~ aes4~ \tuplet 3/2 { aes8 c bes } | aes2 \tuplet 3/2 { aes4 bes c } | des4. ees,8 ees2~ | ees2. \tuplet 3/2 { r8 des' c } |
+
+	% part "A"
+	ees,8 ees4.~ ees4~ \tuplet 3/2 { ees8 des' c } | ees,4~ \tuplet 3/2 { ees8 des' c } ees,4~ \tuplet 3/2 { ees8 c' bes } | c,1~ | c2. \tuplet 3/2 { r8 bes' aes } |
+	c,8 c4.~ c4~ \tuplet 3/2 { c8 bes' aes } | c,4~ \tuplet 3/2 { c8 bes' aes } c,4~ \tuplet 3/2 { c8 bes' aes } | g1~ | g2. \tuplet 3/2 { r8 f g } |
+
+	% part "C"
+	aes8 aes4.~ aes4~ \tuplet 3/2 { aes8 g aes } | bes8 bes4.~ bes4~ \tuplet 3/2 { bes8 aes bes } | c8 c4.~ c4~ \tuplet 3/2 { c8 b! c } | c2.~ \tuplet 3/2 { c8 bes aes } |
+	aes8 aes4.~ aes4~ \tuplet 3/2 { aes8 des c } | aes8 aes4.~ aes4 bes | aes1~ | aes2.\fermata r4 |
+}
+{% endif %}

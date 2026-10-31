@@ -1,0 +1,110 @@
+{#
+default_version = "Fake"
+
+[attributes]
+title = "Gee Baby, Ain't I Good To You"
+style = "Jazz"
+composer = "Don Redman"
+poet = "Don Redman, Andy Razaf"
+piece = "Slow Blues Beat"
+copyright = "1929 and 1944 by MICHAEL H. GOLDSEN, INC."
+copyrightextra = "Copyright Renewed."
+typesetter = "Mark Veltzer <mark.veltzer@gmail.com>"
+completion = "5"
+uuid = "83b11d20-d510-11f1-8000-046874d194b7"
+structure = "AB"
+location = "jfb:128"
+
+[[youtube]]
+id = "45De6ak7YuI"
+remark = "McKinney's Cotton Pickers with Don Redman (vocal) in the original recording (1929)"
+
+[[youtube]]
+id = "kwB71T5yzoQ"
+remark = "Nat King Cole Quartet (1943)"
+
+[versions.Fake]
+doChords = true
+doVoice = true
+doLyrics = false
+doLyricsmore = false
+doLyricsmoremore = false
+doChordBars = false
+doGuitar = false
+doExtra = false
+doPrep = false
+doOwn = false
+#}
+{% if part == "Vars" %}
+{% endif %}
+{% if part == "Doc" %}	DONE:
+	- added the meta data from the fake book.
+	- put in the tunes structure.
+	- put in the chords (fake book).
+	- put in the tune (fake book).
+	- added youtube performances.
+	TODO:
+	- add the lyrics.
+	- check the chords (fake book).
+	- check the tune (fake book).
+	- hear the tune to check that it is right and adjust the tempo.
+	- bars 3, 7 and 15: the fake book prints a sixteenth and an undotted eighth after the first quarter followed by a sixteenth rest; the flat of the first g was carried through the bar (it fits the b9 of F7 and the sharp 5 of Bb9#5).
+{% endif %}
+{% if part == "ChordsFake" %}\chordmode {
+	\startChords
+	\startSong
+
+	\repeat volta 2 {
+
+		\myMark "A"
+		\startPart
+		c2:7 aes:7 | g2:7 c4:9 c:7.9- | f4:7.9- f:7.5- bes:9.5+ bes:9 | ees2:6 g:7 | \myEndLine
+		c2:7 aes:7 | g2:7 c4:9 c:7.9- | f4:7 f:7.5- bes:9.5+ bes:7.9- | ees1:7 | \myEndLine
+		\endPart
+
+		\myMark "B"
+		\startPart
+		aes2 a:dim7 | ees1 | aes2 a:dim7 | f4:m7.5- aes g2:7 | \myEndLine
+		c2:7 aes:7 | g2:7 c4:9 c:7.9- | f4:7.9- f:7.5- bes:9.5+ b:7.9- |
+	} \alternative {
+		{
+			ees4 f:7 aes:7 g:7 | \myEndLineVoltaNotLast
+		}
+		{
+			ees4 aes:m6 ees2:maj7 | \myEndLineVoltaLast
+		}
+	}
+	\endPart
+
+	\endSong
+	\endChords
+}
+{% endif %}
+{% if part == "VoiceFake" %}{
+	\tempo "Adagio" 4 = 60
+	\time 4/4
+	\key ees \major
+
+	\repeat volta 2 {
+
+		% part "A"
+		c'4~ \tuplet 3/2 { c8 g aes } bes8 ees,4 f8 | g4~ \tuplet 3/2 { g8 aes fis } g2 |
+		ges4 ges16 ees8 r16 \tuplet 3/2 { ges8 ges f~ } f8. ees16 | ees2 r8 g!4. |
+		c4~ \tuplet 3/2 { c8 g aes } bes8 ees,4 f8 | g4~ \tuplet 3/2 { g8 aes fis } g2 |
+		ges4 ges16 ees8 r16 \tuplet 3/2 { ges8 ges f~ } f8. ees16 | ees2. r4 |
+
+		% part "B"
+		r8. f16 \tuplet 3/2 { f8 e! f } \tuplet 3/2 { f8 ees! ges~ } ges8 f | r8. fis16 \tuplet 3/2 { g8 c bes~ } bes2 |
+		r8. c16 \tuplet 3/2 { ges8 ges ges } ges2 | r8. f16 \tuplet 3/2 { f8 ees d~ } d2 |
+		c'4~ \tuplet 3/2 { c8 g aes } bes8 ees,4 f8 | g4~ \tuplet 3/2 { g8 aes fis } g2 |
+		ges4 ges16 ees8 r16 \tuplet 3/2 { ges8 ges f~ } f8. ees16 |
+	} \alternative {
+		{
+			ees2 r2 |
+		}
+		{
+			ees2. r4 |
+		}
+	}
+}
+{% endif %}
