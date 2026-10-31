@@ -1,0 +1,106 @@
+{#
+default_version = "Fake"
+
+[attributes]
+title = "The Song Is You"
+style = "Jazz"
+composer = "Jerome Kern"
+poet = "Oscar Hammerstein II"
+piece = "Broadly"
+copyright = "1932 T.B. Harms Company. Copyright renewed."
+copyrightextra = "(c/o The Welk Music Group, Santa Monica, CA 90401)"
+typesetter = "Mark Veltzer <mark.veltzer@gmail.com>"
+completion = "5"
+uuid = "3f7e86fa-d552-11f1-8000-046874d194b7"
+structure = "AABC"
+location = "jfb:352"
+
+[[youtube]]
+id = "2livrT37RgM"
+remark = "Frank Sinatra with Tommy Dorsey (1942)"
+
+[[youtube]]
+id = "iT1-2uoN8S8"
+remark = "Stan Getz Quintet"
+
+[versions.Fake]
+doChords = true
+doVoice = true
+doLyrics = false
+doLyricsmore = false
+doLyricsmoremore = false
+doChordBars = false
+doGuitar = false
+doExtra = false
+doPrep = false
+doOwn = false
+#}
+{% if part == "Vars" %}
+{% endif %}
+{% if part == "Doc" %}	DONE:
+	- added the meta data from the fake book.
+	- put in the tunes structure.
+	- put in the chords (fake book).
+	- put in the tune (fake book).
+	- added youtube performances.
+	TODO:
+	- check the chords (fake book).
+	- check the tune (fake book).
+	- hear the tune to check that it is right and adjust the tempo.
+	- bars 21-23: the later d and f notes have no accidental in the book; typed sharp (carried from the start of the bar, fits the harmony) - check.
+	- add the lyrics.
+{% endif %}
+{% if part == "ChordsFake" %}\chordmode {
+	\startChords
+	\startSong
+
+	\myMark "A"
+	\startPart
+	c2 ees:dim7 | d:m7 g:7 | e:m7 a:7 | d:m7 g:7 | \myEndLine
+	e2:m7 a:m7 | d:m7 g:7 | d:m7.5- g:7 | e4:7 a:7 d:7 g:7 | \myEndLine
+	\endPart
+
+	\myMark "A"
+	\startPart
+	c2 ees:dim7 | d:m7 g:7 | e:m7 ees:9 | aes:9.5- g:7 | \myEndLine
+	c2:maj7 a4:m7 a:7 | d2:m7 g:7.5+ | c1 | fis2:m7.5- b:7.9- | \myEndLine
+	\endPart
+
+	\myMark "B"
+	\startPart
+	e1:maj7 | fis2:m7 b:7 | e1:maj7 | ais2:m7 dis:7 | \myEndLine
+	gis1:m7 | cis:9 | fis2:7 c:9.5- | b:7 g:7 | \myEndLine
+	\endPart
+
+	\myMark "C"
+	\startPart
+	c2 ees:dim7 | d:m7 g:9 | c:maj7 c:9 | \myEndLine
+	f2 bes:9 | e:m7 a:7 | d:m g:7 | c f:7 | c1:6 | \myEndLine
+	\endPart
+
+	\endSong
+	\endChords
+}
+{% endif %}
+{% if part == "VoiceFake" %}{
+	\tempo "Moderato" 4 = 120
+	\time 4/4
+	\key c \major
+
+	% part "A"
+	b'8 c c b b c c b | f2~ f8 a \tuplet 3/2 { a aes g } | g8 a a g g a a g | d2~ d8 f \tuplet 3/2 { f dis e } |
+	g2~ g8 e f8. e16 | g2~ g8 d e d | f2~ f8 c d c | e1 |
+
+	% part "A"
+	b'8 c c b b c c b | f2~ f8 a \tuplet 3/2 { a aes g } | g8 a a g g a a g | d2~ d8 f \tuplet 3/2 { f dis e } |
+	g2~ g8 e f e | a2~ a8 g a g | c1 | r1 |
+
+	% part "B"
+	e,8 b' b4~ b8 b b b | b a a2. | e8 dis' dis4~ dis8 dis dis dis | dis cis cis2. |
+	dis,8 b' gis4~ gis8 dis \tuplet 3/2 { fis f! e } | dis b' gis4~ gis8 dis dis dis | dis fis fis4~ fis8 fis fis fis | gis b b4~ b8 b b b |
+
+	% part "C"
+	b8 c c b b c c b | f'2~ f8 a, \tuplet 3/2 { a aes g } | g8 a a g g a a g |
+	c2~ c8 f, \tuplet 3/2 { f dis e } | g2~ g8 e f e | a2~ a8 g a g | c1~ | c2. r4 |
+}
+{% endif %}

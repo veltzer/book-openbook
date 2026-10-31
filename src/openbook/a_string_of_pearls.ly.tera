@@ -1,0 +1,117 @@
+{#
+default_version = "Fake"
+
+[attributes]
+title = "A String Of Pearls"
+style = "Swing"
+composer = "Jerry Gray"
+poet = "Eddie DeLange"
+piece = "Moderately"
+copyright = "1941, 1942 by Mutual Music Society, Inc."
+copyrightextra = "Copyright Renewed, Assigned to Chappell & Co., Inc. and Scarsdale Music Corp."
+typesetter = "Mark Veltzer <mark.veltzer@gmail.com>"
+completion = "5"
+uuid = "1bd4c31f-d551-11f1-8000-046874d194b7"
+structure = "ABA"
+location = "jfb:366"
+
+[[youtube]]
+id = "s_Ec9PJfTw8"
+remark = "Glenn Miller and his Orchestra in the original recording (1941)"
+
+[[youtube]]
+id = "vVue5eyYXzc"
+remark = "Benny Goodman and his Orchestra (1942)"
+
+[versions.Fake]
+doChords = true
+doVoice = true
+doLyrics = false
+doLyricsmore = false
+doLyricsmoremore = false
+doChordBars = false
+doGuitar = false
+doExtra = false
+doPrep = false
+doOwn = false
+#}
+{% if part == "Vars" %}
+{% endif %}
+{% if part == "Doc" %}	DONE:
+	- added the meta data from the fake book.
+	- put in the tunes structure.
+	- put in the chords (fake book).
+	- put in the tune (fake book).
+	- added youtube performances.
+	TODO:
+	- add the lyrics.
+	- check the chords (fake book).
+	- check the tune (fake book).
+	- hear the tune to check that it is right and adjust the tempo.
+	- the chord changes of the line cliches (Eb, EbM7, Eb7, Eb6, Eb+ ...) were placed on the melody notes they are printed over; check their exact placement.
+{% endif %}
+{% if part == "ChordsFake" %}\chordmode {
+	\startChords
+	\startSong
+
+	\repeat volta 2 {
+
+		\myMark "A"
+		\startPart
+		ees4. ees4.:maj7 ees4:7 | s8 ees4.:6 ees4:aug ees | ees4.:aug ees4.:6 ees4:7 | s8 ees4.:maj7 ees4 ees:maj7 | \myEndLine
+		ees4.:7 ees4.:6 ees4:aug | s8 ees4. f4:7 bes:7 | ees1 | ees1:7 | \myEndLine
+		\endPart
+
+		\myMark "B"
+		\startPart
+		aes4. aes4.:maj7 aes4:7 | s8 aes4.:6 aes4:aug aes | aes4.:aug aes4.:6 aes4:7 | s8 aes4.:maj7 aes4 aes:maj7 | \myEndLine
+		aes4.:7 aes4.:6 aes4:aug | s8 aes4. bes4:9 ees:7 | aes1 | bes1:7 | \myEndLine
+		\endPart
+
+		\myMark "A"
+		\startPart
+		ees4. ees4.:maj7 ees4:7 | s8 ees4.:6 ees4:aug ees | ees4.:aug ees4.:6 ees4:7 | s8 ees4.:maj7 ees4 ees:maj7 | \myEndLine
+		ees4.:7 ees4.:6 ees4:aug | s8 ees4. f4:9 bes:7 |
+
+	} \alternative {
+		{
+			ees1:6 | bes1:7 | \myEndLineVoltaNotLast
+		}
+		{
+			ees1:6 | f4:m7 bes:7 ees2:6.9 | \myEndLineVoltaLast
+		}
+	}
+	\endPart
+
+	\endSong
+	\endChords
+}
+{% endif %}
+{% if part == "VoiceFake" %}{
+	\tempo "Moderato" 4 = 120
+	\time 4/4
+	\key ees \major
+
+	\repeat volta 2 {
+
+		% part "A"
+		g'4. g8~ g4 g4~ | g8 g4. g8 aes bes4 | g4. g8~ g4 g4~ | g8 g4. g8 aes bes4 |
+		g4. g8~ g4 g4~ | g8 g4. g8 ees f4 | ees4. ees8~ ees4 r | r1 |
+
+		% part "B"
+		c'4. c8~ c4 c4~ | c8 c4. c8 des ees4 | c4. c8~ c4 c4~ | c8 c4. c8 des ees4 |
+		c4. c8~ c4 c4~ | c8 c4. c8 aes bes4 | aes4. aes8~ aes4 r | r1 |
+
+		% part "A"
+		g4. g8~ g4 g4~ | g8 g4. g8 aes bes4 | g4. g8~ g4 g4~ | g8 g4. g8 aes bes4 |
+		g4. g8~ g4 g4~ | g8 g4. g8 ees f4 |
+	} \alternative {
+		{
+			ees4. ees8~ ees4 r | r1 |
+		}
+		{
+			ees4. ees8~ ees2~ | ees2. r4 |
+		}
+	}
+}
+{% endif %}

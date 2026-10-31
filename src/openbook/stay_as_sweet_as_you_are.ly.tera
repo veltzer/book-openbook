@@ -1,0 +1,107 @@
+{#
+default_version = "Fake"
+
+[attributes]
+title = "Stay As Sweet As You Are"
+style = "Jazz"
+composer = "Harry Revel"
+poet = "Mack Gordon"
+piece = "Moderately"
+copyright = "1934 by DeSylva, Brown & Henderson, Inc."
+copyrightextra = "Copyright Renewed, Assigned to Chappell & Co., Inc."
+typesetter = "Mark Veltzer <mark.veltzer@gmail.com>"
+completion = "5"
+uuid = "1011baa0-d551-11f1-8000-046874d194b7"
+structure = "ABAC"
+location = "jfb:361"
+
+[[youtube]]
+id = "hcojao6_awI"
+remark = "Jimmie Grier and his orchestra in the original hit recording (1934)"
+
+[[youtube]]
+id = "fI9LwFV5PUQ"
+remark = "Nat King Cole Trio"
+
+[versions.Fake]
+doChords = true
+doVoice = true
+doLyrics = false
+doLyricsmore = false
+doLyricsmoremore = false
+doChordBars = false
+doGuitar = false
+doExtra = false
+doPrep = false
+doOwn = false
+#}
+{% if part == "Vars" %}
+{% endif %}
+{% if part == "Doc" %}	DONE:
+	- added the meta data from the fake book.
+	- put in the tunes structure.
+	- put in the chords (fake book).
+	- put in the tune (fake book).
+	- added youtube performances.
+	TODO:
+	- add the lyrics.
+	- check the chords (fake book).
+	- check the tune (fake book).
+	- hear the tune to check that it is right and adjust the tempo.
+	- the fake book has no section letters; the ABAC split is by eight bar phrases.
+	- bar 30: the book prints no accidental on the last note, so it is typed as a flat (carried from the a flat before it, which fits the Bb7 chord); check it.
+{% endif %}
+{% if part == "ChordsFake" %}\chordmode {
+	\startChords
+	\startSong
+
+	\myMark "A"
+	\startPart
+	c2 g:7.9- | c g:7.9- | c1 | d2:m7 g:7 | \myEndLine
+	c2 ees:dim7 | d:m7 g:7 | c1 | e:7.9- | \myEndLine
+	\endPart
+
+	\myMark "B"
+	\startPart
+	f1:maj7 | d2:m7 g:7 | a1:m | a:m7/g | \myEndLine
+	d:7/fis | d:7 | d:m7.5- | g:7.9- | \myEndLine
+	\endPart
+
+	\myMark "A"
+	\startPart
+	c2 g:7.9- | c g:7.9- | c1 | d2:m7 g:7 | \myEndLine
+	c2 ees:dim7 | d:m7 g:7 | c1 | b2:m7.5- e:7 | \myEndLine
+	\endPart
+
+	\myMark "C"
+	\startPart
+	f1:maj7 | e:m7 | a:m7 | d:9 | \myEndLine
+	f | bes:7 | c4/e ees:dim7 g:7/d g:7 | c1 | \myEndLine
+	\endPart
+
+	\endSong
+	\endChords
+}
+{% endif %}
+{% if part == "VoiceFake" %}{
+	\tempo "Moderato" 4 = 120
+	\time 4/4
+	\key c \major
+
+	% part "A"
+	c'4. c8 \tuplet 3/2 { b4 c d } | c2 \tuplet 3/2 { b4 c d } | c2 dis,4 e | a g2. |
+	g4. g8 \tuplet 3/2 { fis4 g a } | g2 \tuplet 3/2 { fis4 g a } | g2 b,4 c | f e2. |
+
+	% part "B"
+	e2 c4 e | g2 e4 g | c c c c~ | c2. r4 |
+	d4 d d d~ | d2 \tuplet 3/2 { d4 c a } | d, d d g~ | g1 |
+
+	% part "A"
+	c4. c8 \tuplet 3/2 { b4 c d } | c4. c8 \tuplet 3/2 { b4 c d } | c2 dis,4 e | a g2. |
+	g4. g8 \tuplet 3/2 { fis4 g a } | g2 \tuplet 3/2 { fis4 g a } | g2 b,8 c b c | f4 e2. |
+
+	% part "C"
+	e4. c8 c4 e | g4. e8 e2 | c'4. c8 \tuplet 3/2 { c4 a c } | e1 |
+	e8 c c a a2 | e'8 c c aes aes2 | r4 c b8 c d4 | c2. r4 |
+}
+{% endif %}

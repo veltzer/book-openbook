@@ -1,0 +1,137 @@
+{#
+default_version = "Fake"
+
+[attributes]
+title = "'Tain't Nobody's Biz-Ness If I Do"
+style = "Blues"
+composer = "Porter Grainger, Everett Robbins"
+poet = "Porter Grainger, Everett Robbins"
+piece = "Moderate Blues tempo"
+copyright = "1922, 1950 by MCA Music Publisher, A Division of MCA Inc., New York, NY"
+copyrightextra = "Copyright Renewed"
+typesetter = "Mark Veltzer <mark.veltzer@gmail.com>"
+completion = "5"
+uuid = "6a58a975-d551-11f1-8000-046874d194b7"
+structure = "Intro AAAA"
+location = "jfb:377"
+
+[[youtube]]
+id = "_AJwEFyWOzA"
+remark = "Bessie Smith in the classic recording (1923)"
+
+[[youtube]]
+id = "0rsYKnZrV4Q"
+remark = "Jimmy Witherspoon (1949)"
+
+[versions.Fake]
+doChords = true
+doVoice = true
+doLyrics = false
+doLyricsmore = false
+doLyricsmoremore = false
+doChordBars = false
+doGuitar = false
+doExtra = false
+doPrep = false
+doOwn = false
+#}
+{% if part == "Vars" %}
+{% endif %}
+{% if part == "Doc" %}	DONE:
+	- added the meta data from the fake book.
+	- put in the tunes structure.
+	- put in the chords (fake book).
+	- put in the tune (fake book).
+	- added youtube performances.
+	TODO:
+	- add the lyrics.
+	- check the chords (fake book).
+	- check the tune (fake book).
+	- hear the tune to check that it is right and adjust the tempo.
+	- in bars 25, 33 and 41 the fake book prints the rhythms of both lyric verses on top of each other (a half note and two quarters); the first verse rhythm was typeset.
+	- the fake book ends with "D.C. al 2nd Ending" (back to the verse, then the chorus with the second ending).
+{% endif %}
+{% if part == "ChordsFake" %}\chordmode {
+	\startChords
+	\startSong
+
+	\myMark "Intro"
+	\startPart
+	bes1 | d:7 | g:m | d:7 | g:7 | d2:m7 g:7 | \myEndLine
+	c1:m | g:7 | c:m | g:7 | c:m | c | c:7 | \myEndLine
+	c1:7 | ges:7 | f:7 | \myEndLine
+	\endPart
+
+	\myMark "A"
+	\startPart
+	\repeat volta 2 {
+		bes1 | d:7 | g2:m bes:7/f | ees2 e:dim7 | \myEndLine
+		bes1 | f:7 | bes2 g:7 | c2:7 f:7.5+ | \myEndLine
+		\endPart
+
+		\myMark "A"
+		\startPart
+		bes1 | d:7 | g2:m bes:7/f | ees2 e:dim7 | \myEndLine
+		bes1 | f:7 | bes2 c:m7 | cis2:dim7 bes/d | \myEndLine
+		\endPart
+
+		\myMark "A"
+		\startPart
+		bes1 | d:7 | g2:m bes:7/f | ees2 e:dim7 | \myEndLine
+		bes1 | f:7 | bes2 g:7 | c2:7 f:7.5+ | \myEndLine
+		\endPart
+
+		\myMark "A"
+		\startPart
+		bes1 | d:7 | g2:m bes:7/f | ees2 e:dim7 | \myEndLine
+		bes1 | f:7 |
+	} \alternative {
+		{
+			bes1 | f:7 | \myEndLineVoltaNotLast
+		}
+		{
+			bes1*2 | \myEndLineVoltaLast
+		}
+	}
+	\endPart
+
+	\endSong
+	\endChords
+}
+{% endif %}
+{% if part == "VoiceFake" %}{
+	\tempo "Moderato" 4 = 120
+	\time 2/2
+	\key bes \major
+
+	% part "Intro"
+	d'4 cis d bes | c! b! c a | bes a bes d | a1 | r4 g a b! | a2 g |
+	c1 | d1 | ees4 d ees c | d cis d b! | c! d c bes | g1 | r4 c b! c |
+	d4 c bes g | bes1 | a1 |
+
+	% part "A"
+	\repeat volta 2 {
+		cis4 d2 d4 | c!4. d8 c d4. | r4 r8 g,8 bes4 bes | des4 c8 bes g bes4. |
+		d4 f d8 bes4. | f8 ees~ ees2 c'8 bes | bes1~ | bes2. r4 |
+
+		% part "A"
+		cis4 d2 d4 | c!4. d8 c d4. | r4 bes bes4. bes8 | bes4 g bes8 g4. |
+		d'4 f d8 bes4. | f8 ees4. des'8 c bes g | bes1~ | bes2. r4 |
+
+		% part "A"
+		cis4 d2 d4 | c!4. d8 c d4. | r4 r8 g,8 bes4 bes | bes8 g bes4 bes8 g4. |
+		d'4 f d8 bes4. | f8 ees4. c'4 bes8 bes~ | bes1~ | bes2 r4 f4 |
+
+		% part "A"
+		cis'4 d2 d4 | c!4 d c8 d4. | r4 bes bes bes | des8 c4 bes8 g bes4. |
+		d4 f d8 bes4. | f8 ees~ ees2 c'8 bes |
+	} \alternative {
+		{
+			bes1 | r1 |
+		}
+		{
+			bes1~ | bes2. r4^\markup { D.C. al 2nd Ending } |
+		}
+	}
+}
+{% endif %}

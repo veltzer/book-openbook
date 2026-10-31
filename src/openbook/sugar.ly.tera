@@ -1,0 +1,127 @@
+{#
+default_version = "Fake"
+
+[attributes]
+title = "Sugar"
+style = "Swing"
+composer = "George W. Meyer"
+poet = "Joe Young"
+piece = "Moderately Slow"
+copyright = "1931 Stanly Bros., Inc."
+copyrightextra = "Renewed 1959 Warock Corp."
+typesetter = "Mark Veltzer <mark.veltzer@gmail.com>"
+completion = "5"
+uuid = "1bd4c322-d551-11f1-8000-046874d194b7"
+structure = "AABA"
+location = "jfb:368"
+
+[[youtube]]
+id = "CufI0E0r8mY"
+remark = "Ethel Waters in an early recording (1926)"
+
+[[youtube]]
+id = "LLwVjSeeJMY"
+remark = "Jack Teagarden"
+
+[versions.Fake]
+doChords = true
+doVoice = true
+doLyrics = false
+doLyricsmore = false
+doLyricsmoremore = false
+doChordBars = false
+doGuitar = false
+doExtra = false
+doPrep = false
+doOwn = false
+#}
+{% if part == "Vars" %}
+{% endif %}
+{% if part == "Doc" %}	DONE:
+	- added the meta data from the fake book.
+	- put in the tunes structure.
+	- put in the chords (fake book).
+	- put in the tune (fake book).
+	- added youtube performances.
+	TODO:
+	- add the lyrics.
+	- check the chords (fake book).
+	- check the tune (fake book).
+	- hear the tune to check that it is right and adjust the tempo.
+	- bar 30: the fake book prints the a after the tied d without an accidental after the a sharp earlier in the bar; typed as a natural to fit the D7 chord.
+{% endif %}
+{% if part == "ChordsFake" %}\chordmode {
+	\startChords
+	\startSong
+
+	\repeat volta 2 {
+
+		\myMark "A"
+		\startPart
+		g2 e:7 | a2:7 d:7 | g2:maj7 d:aug | g2 bes:dim7 | \myEndLine
+		a2:m7 gis:dim7 | d2:7/a d:aug | g2. e4:7 | a2:m7 d:7 | \myEndLine
+		\endPart
+
+		\myMark "A"
+		\startPart
+		g2 e:7 | a2:7 d:7 | g2:maj7 d:aug | g2 g:m | \myEndLine
+		d2 dis:dim7 | e2:m7 a:7 | d1:7 | a4:m7 gis:dim7 d:7/a d:7 | \myEndLine
+		\endPart
+
+		\myMark "B"
+		\startPart
+		g1:7 | d1:m7 | g1:7 | d2.:m7 g4:7 | \myEndLine
+		c1 | e1:7 | a1:7 | d1:7 | \myEndLine
+		\endPart
+
+		\myMark "A"
+		\startPart
+		g2 e:7 | a2:7 d:7 | g2:maj7 d:aug | g2 bes:dim7 | \myEndLine
+		a2:m7 e:7 | a2:7 d:7 | g1 |
+
+	} \alternative {
+		{
+			a2:m7 d:7 | \myEndLineVoltaNotLast
+		}
+		{
+			g4 d:7 g2:6 | \myEndLineVoltaLast
+		}
+	}
+	\endPart
+
+	\endSong
+	\endChords
+}
+{% endif %}
+{% if part == "VoiceFake" %}{
+	\tempo "Andante" 2 = 66
+	\time 2/2
+	\key g \major
+
+	\repeat volta 2 {
+
+		% part "A"
+		b'2 b | a8 ais b a!~ a ais b4 | fis2 fis | e8 eis fis e!~ e eis fis4 |
+		e!2 e | d8 dis e d!~ d dis e4 | b'2. e,4 | c'8 d4 b8~ b4 a |
+
+		% part "A"
+		b2 b | a8 ais b a!~ a ais b4 | fis2 fis | e8 eis fis e!~ e eis fis4 |
+		a2 a | a8 ais b a!~ a ais b4 | d1~ | d4 b c cis |
+
+		% part "B"
+		d8 d4 d8~ d2 | c8 c4 c8~ c2 | r4 b8 b~ b d b4 | a4 g a b |
+		c8 c4 c8~ c2 | b8 b4 b8~ b e b4 | a2. a4 | b8 a4 fis8~ fis4 d |
+
+		% part "A"
+		b'2 b | a8 ais b a!~ a ais b4 | fis2 fis | e8 eis fis e!~ e eis fis4 |
+		e!2 e | a8 ais b d~ d a b4 | g1~ |
+	} \alternative {
+		{
+			g4 r r2 |
+		}
+		{
+			g2 r |
+		}
+	}
+}
+{% endif %}

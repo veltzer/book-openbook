@@ -1,0 +1,118 @@
+{#
+default_version = "Fake"
+
+[attributes]
+title = "Swing House"
+style = "Jazz"
+composer = "Gerry Mulligan"
+piece = "Medium Swing"
+copyright = "1952 Benton Publications"
+typesetter = "Mark Veltzer <mark.veltzer@gmail.com>"
+completion = "5"
+uuid = "364b9948-d551-11f1-8000-046874d194b7"
+structure = "AABA"
+location = "jfb:373"
+
+[[youtube]]
+id = "ssfFKjlaJek"
+remark = "Gerry Mulligan in the original recording"
+
+[[youtube]]
+id = "A-Aflw-VlZc"
+remark = "WDR Big Band"
+
+[versions.Fake]
+doChords = true
+doVoice = true
+doLyrics = false
+doLyricsmore = false
+doLyricsmoremore = false
+doChordBars = false
+doGuitar = false
+doExtra = false
+doPrep = false
+doOwn = false
+#}
+{% if part == "Vars" %}
+{% endif %}
+{% if part == "Doc" %}	DONE:
+	- added the meta data from the fake book.
+	- put in the tunes structure.
+	- put in the chords (fake book).
+	- put in the tune (fake book).
+	- added youtube performances.
+	TODO:
+	- check the chords (fake book).
+	- check the tune (fake book).
+	- hear the tune to check that it is right and adjust the tempo.
+	- bar 4: the fake book prints a flat only on the first of the two pickup d notes, the second is read as d flat (carried through the bar), check.
+	- bar 7: the d before the tied c flat has no accidental and is read as d flat (carried through the bar) although the chord is D7, check.
+	- the last A: the chord positions in the first bar (Bb, F/A, Bb/Ab) are not aligned with beats in the fake book, check.
+{% endif %}
+{% if part == "ChordsFake" %}\chordmode {
+	\startChords
+	\startSong
+
+	\partial 4 s4 |
+
+	\myMark "A"
+	\startPart
+	\repeat volta 2 {
+		d2:7 g:7 | d:7 g:7 | d:7 ees:7 | d:7 g | \myEndLine
+		des:7 ges:7 | des:7 ges:7 | des:7 d:7 | des:7 ges | \myEndLine
+		c:7 f:7 | c:7 f:7 | c:7 des:7 | c:7 f | bes1*2 | \myEndLine
+	} \alternative {
+		{
+			s1*2 | \myEndLineVoltaNotLast
+		}
+		{
+			bes1*2 | \myEndLineVoltaLast
+		}
+	}
+	\endPart
+
+	\myMark "B"
+	\startPart
+	d1*4:7 | g1*4:7 | \myEndLine
+	c1*2:7 | c1:m7 | f:7 | \myEndLine
+	\endPart
+
+	\myMark "A"
+	\startPart
+	bes2 f4/a bes/aes | ees2/g ges4:maj7 f:7 | bes2 e4:dim7 f:7 | bes2 a:7 | \myEndLine
+	\endPart
+
+	\endSong
+	\endChords
+}
+{% endif %}
+{% if part == "VoiceFake" %}{
+	\tempo "Allegro" 4 = 160
+	\time 4/4
+	\key bes \major
+
+	\partial 4 d'8 d |
+
+	% part "A"
+	\repeat volta 2 {
+		c8^\markup { \musicglyph #"scripts.segno" } c d4 b! d8 d | c c d d b!4 d8 d | c c d d cis4 d8 c!~ | c c b!4 r des8 des |
+		ces ces des4 bes des8 des | ces ces des des bes4 des8 des | ces ces des des c!4 des8 ces~ | ces ces bes4 r c!8 c |
+		bes bes c4 a c8 c | bes bes c c a4 c8 c | bes bes c c b!4 c8 bes~ | bes bes a4 r2 | bes4. f8~ f4. e8 | r8 e4 ees8 des4 bes8 bes^\markup { \italic { Fine } } |
+	} \alternative {
+		{
+			r1 | r2 r4 d'8 d |
+		}
+		{
+			r1 | r1 |
+		}
+	}
+
+	% part "B"
+	d,4. d8~ d2~ | d1 | d8 e f g a d,4.~ | d1 |
+	d4. d8~ d2~ | d2 r8 e f g | a g a g r d4.~ | d1 |
+	\tuplet 3/2 { d4 e d } c2~ | c1 | c8 d ees f g c,4.~ | c1 |
+
+	% part "A"
+	bes8 bes bes c c c d d | d ees ees ees f4 r8 ees | d e g bes des bes c bes | r4 r8 gis a g! r4^\markup { \italic { D.S. al Fine } } |
+}
+{% endif %}

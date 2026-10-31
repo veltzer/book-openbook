@@ -1,0 +1,124 @@
+{#
+default_version = "Fake"
+
+[attributes]
+title = "So Nice (Summer Samba)"
+style = "Latin"
+composer = "Marcos Valle, Paulo Sergio Valle"
+poet = "Marcos Valle, Paulo Sergio Valle, Norman Gimbel"
+piece = "Moderately"
+copyright = "1965, 1966 by Marcos Valle and Paul Sergio Valle"
+copyrightextra = "Sole Selling Agent MCA MUSIC PUBLISHING, A Division of MCA Inc., New York, NY"
+typesetter = "Mark Veltzer <mark.veltzer@gmail.com>"
+completion = "5"
+uuid = "f8cc303c-d550-11f1-8000-046874d194b7"
+structure = "ABAC"
+location = "jfb:344"
+
+[[youtube]]
+id = "-sM-BxtS5jQ"
+remark = "Marcos Valle in the original recording (1966)"
+
+[[youtube]]
+id = "K-QHu0qIyzw"
+remark = "Astrud Gilberto (1966)"
+
+[versions.Fake]
+doChords = true
+doVoice = true
+doLyrics = false
+doLyricsmore = false
+doLyricsmoremore = false
+doChordBars = false
+doGuitar = false
+doExtra = false
+doPrep = false
+doOwn = false
+#}
+{% if part == "Vars" %}
+{% endif %}
+{% if part == "Doc" %}	DONE:
+	- added the meta data from the fake book.
+	- put in the tunes structure.
+	- put in the chords (fake book).
+	- put in the tune (fake book).
+	- added youtube performances.
+	TODO:
+	- add the lyrics.
+	- check the chords (fake book).
+	- check the tune (fake book).
+	- hear the tune to check that it is right and adjust the tempo.
+{% endif %}
+{% if part == "ChordsFake" %}\chordmode {
+	\startChords
+	\startSong
+
+	\repeat volta 2 {
+
+		\myMark "A"
+		\startPart
+		f1 | f | b:m7 | e:7 | \myEndLine
+		bes:maj7 | bes:6 | ees:9 | ees:9 | \myEndLine
+		\endPart
+
+		\myMark "B"
+		\startPart
+		a:m7 | d:7.9- | g:m7 | e2:m7.5- a:7.5+ | \myEndLine
+		d1:m11 | g:7 | g:m7 | des4:9 c2.:9 | \myEndLine
+		\endPart
+
+		\myMark "A"
+		\startPart
+		f1 | f | b:m7 | e:7 | \myEndLine
+		bes:maj7 | bes:6 | ees:9 | ees:9 | \myEndLine
+		\endPart
+
+		\myMark "C"
+		\startPart
+		a:m7 | d:7.9- | g:m7 | c:7.9- | \myEndLine
+		f | bes:9 |
+	} \alternative {
+		{
+			f1 | g2:m7 c:7.9- | \myEndLineVoltaNotLast
+		}
+		{
+			f1*2:6 | \myEndLineVoltaLast
+		}
+	}
+	\endPart
+
+	\endSong
+	\endChords
+}
+{% endif %}
+{% if part == "VoiceFake" %}{
+	\tempo "Moderato" 2 = 100
+	\time 2/2
+	\key f \major
+
+	\repeat volta 2 {
+		% part "A"
+		a8 c d4 e8 ees d4 | a8 c d e~ e ees d4 | a8 c d4 e8 ees d4 | gis,8 c d e~ e ees d4 |
+		d8 f g4 a8 aes g4 | d8 f g a~ a aes g4 | des8 f g4 a8 aes g4 | des8 f g a~ a aes g4 |
+
+		% part "B"
+		r4 c c,2~ | c2 ees'8 d c bes | a1~ | a2 c8 b! bes a |
+		g1~ | g2 a8 aes g ges | f8 d f d f d f aes~ | aes f g4 r2 |
+
+		% part "A"
+		a,8 c d4 e8 ees d4 | a8 c d e~ e ees d4 | a8 c d4 e8 ees d4 | gis,8 c d e~ e ees d4 |
+		d8 f g4 a8 aes g4 | d8 f g a~ a aes g4 | des8 f g4 a8 aes g4 | des8 f g a~ a aes g4 |
+
+		% part "C"
+		r4 c c,2~ | c2 ees'8 d c bes | a1~ | a1 |
+		g8 ges f4 f8 fis g!4 | g8 ges f4 f8 fis g!4 |
+	} \alternative {
+		{
+			f!1 | r1 |
+		}
+		{
+			f!1~ | f2. r4 |
+		}
+	}
+}
+{% endif %}

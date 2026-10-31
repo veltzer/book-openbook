@@ -1,0 +1,126 @@
+{#
+default_version = "Fake"
+
+[attributes]
+title = "The Tailgate Ramble"
+style = "Dixieland"
+composer = "Wingy Manone"
+poet = "Johnny Mercer"
+piece = "Moderately"
+copyright = "1944-1949-1963 by Michael H. Goldsen, Inc."
+copyrightextra = "Renewed 1972-1977 by Michael H. Goldsen, Inc."
+typesetter = "Mark Veltzer <mark.veltzer@gmail.com>"
+completion = "5"
+uuid = "6a58a978-d551-11f1-8000-046874d194b7"
+structure = "AAB"
+location = "jfb:380"
+
+[[youtube]]
+id = "ru1Att79oFI"
+remark = "Wingy Manone in the original recording (1944)"
+
+[[youtube]]
+id = "suRATP950vQ"
+remark = "Wingy Manone's Dixieland Band"
+
+[versions.Fake]
+doChords = true
+doVoice = true
+doLyrics = false
+doLyricsmore = false
+doLyricsmoremore = false
+doChordBars = false
+doGuitar = false
+doExtra = false
+doPrep = false
+doOwn = false
+#}
+{% if part == "Vars" %}
+{% endif %}
+{% if part == "Doc" %}	DONE:
+	- added the meta data from the fake book.
+	- put in the tunes structure.
+	- put in the chords (fake book).
+	- put in the tune (fake book).
+	- added youtube performances.
+	TODO:
+	- add the lyrics.
+	- check the chords (fake book).
+	- check the tune (fake book).
+	- hear the tune to check that it is right and adjust the tempo.
+	- bar 30: the fake book prints a dot after the c quarter which does not fit the bar; it was read as a plain quarter (as in bar 22).
+{% endif %}
+{% if part == "ChordsFake" %}\chordmode {
+	\startChords
+	\startSong
+
+	\partial 2. s2. |
+
+	\myMark "A"
+	\startPart
+	f2:m7 bes:7 | f:m7 bes:7 | ees1 | s2 c:m | \myEndLine
+	f2:m7 bes:7 | f:m bes:7 | ees1 | s2 f4:m7 ges:dim7 | \myEndLine
+	\endPart
+
+	\myMark "A"
+	\startPart
+	f2:m7 bes:7 | f:m7 bes:7 | ees1 | s2 ees4:maj7 ees:7 | \myEndLine
+	aes1 | f:m7 | f2:9 bes4:9 bes:7.9- | ees4 r2. | \myEndLine
+	\endPart
+
+	\myMark "B"
+	\startPart
+	\repeat volta 2 {
+		c1*2:7 | f1*2:7 | \myEndLine
+		bes1*2:7 | ees1*2 | \myEndLine
+		c1*2:7 | f1*2:7 | \myEndLine
+		bes1*2:7 | ees1*2 | \myEndLine
+		c1*2:7 | f1*2:7 | \myEndLine
+		bes1*2:7 |
+	} \alternative {
+		{
+			ees1 | r1 | \myEndLineVoltaNotLast
+		}
+		{
+			ees1*2 | \myEndLineVoltaLast
+		}
+	}
+	\endPart
+
+	\endSong
+	\endChords
+}
+{% endif %}
+{% if part == "VoiceFake" %}{
+	\tempo "Moderato" 4 = 160
+	\time 2/2
+	\key ees \major
+
+	\partial 2. g'4 aes aes |
+
+	% part "A"
+	bes2 aes4 f | c2 d | g4 ees8 bes~ bes2 | r4 g' f ees |
+	aes4 ees8 d~ d2 | r4 aes' g f | g4 ees8 bes~ bes2 | r4 g' aes a! |
+
+	% part "A"
+	bes2 aes4 f | c2 d | g4 ees8 bes~ bes2 | r4 ees d des |
+	c2 aes'4. g8 | aes4 g8 f~ f2 | g4 fis8 g ees f!4 ees8~ | ees8 bes'4 g8 bes4 bes |
+
+	% part "B"
+	\repeat volta 2 {
+		bes1 | r8 c4 g8 bes4 g | f1 | r8 c'4 g8 c4 g |
+		bes1 | r8 c4 ees,8 fis4 g | ees1 | r8 bes'4 g8 bes4 bes |
+		g1 | r8 c4 g8 bes4 g | f1 | r8 c'4 g8 bes4 g |
+		bes1 | r8 c4 ees,8 g4 g | ees1 | r4 g8 g aes4 a! |
+		bes1 | r8 c4 g8 bes4 g | f1 | r8 c'4 g8 c4 c |
+		bes1 | r8 c4 c8 g4 g |
+	} \alternative {
+		{
+			ees1 | r8 bes'4 g8 bes4 bes |
+		}
+		{
+			ees,1~ | ees2. r4 |
+		}
+	}
+}
+{% endif %}

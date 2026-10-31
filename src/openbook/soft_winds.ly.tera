@@ -1,0 +1,104 @@
+{#
+default_version = "Fake"
+
+[attributes]
+title = "Soft Winds"
+style = "Swing"
+composer = "Benny Goodman"
+piece = "Medium swing tempo"
+copyright = "1940 by Regent Music Corp."
+copyrightextra = "Copyright renewed by Jewel Music Publishing Co., Inc."
+typesetter = "Mark Veltzer <mark.veltzer@gmail.com>"
+completion = "5"
+uuid = "f8ce0d76-d550-11f1-8000-046874d194b7"
+structure = "Blues"
+location = "jfb:346"
+
+[[youtube]]
+id = "CG8VM8MSaK4"
+remark = "Benny Goodman Sextet in the original recording (1939)"
+
+[[youtube]]
+id = "3S-TjmIzNLA"
+remark = "Dinah Washington"
+
+[versions.Fake]
+doChords = true
+doVoice = true
+doLyrics = false
+doLyricsmore = false
+doLyricsmoremore = false
+doChordBars = false
+doGuitar = false
+doExtra = false
+doPrep = false
+doOwn = false
+#}
+{% if part == "Vars" %}
+{% endif %}
+{% if part == "Doc" %}	DONE:
+	- added the meta data from the fake book.
+	- put in the tunes structure.
+	- put in the chords (fake book).
+	- put in the tune (fake book).
+	- added youtube performances.
+	TODO:
+	- check the chords (fake book).
+	- check the tune (fake book).
+	- hear the tune to check that it is right and adjust the tempo.
+	- the fake book places the turnaround chords (Ab7/C Db6 Ab6/Eb Ab6) loosely; check their exact beats.
+{% endif %}
+{% if part == "ChordsFake" %}\chordmode {
+	\startChords
+	\startSong
+
+	\partial 8 aes8:7/c |
+
+	\myMark "Intro"
+	\startPart
+	des2:6 aes:6/ees | aes2.:6 aes4:7/c | des:6 aes:6/ees aes2 | aes1 | \myEndLine
+	\endPart
+
+	\myMark "A"
+	\startPart
+	aes1*4:9 | \myEndLine
+	des1*4:9 | \myEndLine
+	aes1*4:9 | \myEndLine
+	ees1:7 | ees2.:7 aes4:7/c | des2:6 aes4/ees aes:6 | aes1:6 | \myEndLine
+	\endPart
+
+	\myMark "A"
+	\startPart
+	aes1*4:9 | \myEndLine
+	des1*4:9 | \myEndLine
+	aes1*4:9 | \myEndLine
+	ees1:7 | ees2.:7 aes4:7/c | aes2:7/c aes4/ees aes:6 | aes1:6 | \myEndLine
+	\endPart
+
+	\endSong
+	\endChords
+}
+{% endif %}
+{% if part == "VoiceFake" %}{
+	\tempo "Moderato" 4 = 140
+	\time 2/2
+	\key aes \major
+
+	\partial 8 r8 |
+
+	% part "Intro"
+	r1 | aes''4 aes aes f8 b,~ | b4 r r r8 ees | aes8 aes, b c ees \tuplet 3/2 { c16 aes ees } b8 c |
+
+	% part "A"
+	ees8 aes4. ges2 | aes4. ges8~ ges4 r | r8 aes4. ges4 aes | ges4. aes8~ aes4 r |
+	r8 des4. b2 | des4. b8~ b4 r | r8 des4. b4 des | b4. des8~ des4 r |
+	r8 aes4. ges2 | aes4. ges8~ ges4 r | r8 aes4. ges4 aes | ges4. aes8~ aes4 r |
+	r8 ges4. ees2 | ges4. ees8~ ees4 r8 b'~ | b8 bes4. aes8 f aes aes~ | aes4 r r8 b, c ees |
+
+	% part "A"
+	aes8 aes4. ges2 | aes4. ges8~ ges b, c ees | r8 aes4. ges4 aes | ges4. aes8~ aes e f aes |
+	r8 des4. b2 | des4. b8~ b e, f aes | r8 des4. b4 des | b4. des8~ des b, c ees |
+	r8 aes4. ges2 | aes4. ges8~ ges b, c ees | r8 aes4. ges4 aes | ges4. aes8~ aes b, c ees |
+	r8 ges4. ees2 | ges4. ees8~ ees4 r8 b'~ | b8 bes4. aes8 f aes aes~ | aes4 r r2 |
+}
+{% endif %}

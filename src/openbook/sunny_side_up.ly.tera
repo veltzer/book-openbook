@@ -1,0 +1,106 @@
+{#
+default_version = "Fake"
+
+[attributes]
+title = "Sunny Side Up"
+style = "Broadway"
+composer = "B.G. DeSylva, Lew Brown, Ray Henderson"
+poet = "B.G. DeSylva, Lew Brown, Ray Henderson"
+piece = "Moderately Bright"
+copyright = "1929 by DeSylva, Brown and Henderson, Inc."
+copyrightextra = "Copyright Renewed, Assigned to Chappell & Co., Inc."
+typesetter = "Mark Veltzer <mark.veltzer@gmail.com>"
+completion = "5"
+uuid = "1bd4c321-d551-11f1-8000-046874d194b7"
+structure = "ABAC"
+location = "jfb:367"
+
+[[youtube]]
+id = "BT_0caMLjVY"
+remark = "Janet Gaynor in the original film Sunny Side Up (1929)"
+
+[[youtube]]
+id = "BHDFKS3Axvk"
+remark = "Johnny Hamp and his Kentucky Serenaders with Frank Luther (1929)"
+
+[versions.Fake]
+doChords = true
+doVoice = true
+doLyrics = false
+doLyricsmore = false
+doLyricsmoremore = false
+doChordBars = false
+doGuitar = false
+doExtra = false
+doPrep = false
+doOwn = false
+#}
+{% if part == "Vars" %}
+{% endif %}
+{% if part == "Doc" %}	DONE:
+	- added the meta data from the fake book.
+	- put in the tunes structure.
+	- put in the chords (fake book).
+	- put in the tune (fake book).
+	- added youtube performances.
+	TODO:
+	- add the lyrics.
+	- check the chords (fake book).
+	- check the tune (fake book).
+	- hear the tune to check that it is right and adjust the tempo.
+	- bar 31: the F and G7#5 are printed near the bar line before the last bar; placed on beats 3 and 4 of bar 31, check.
+{% endif %}
+{% if part == "ChordsFake" %}\chordmode {
+	\startChords
+	\startSong
+
+	\myMark "A"
+	\startPart
+	c2. f4:m | f2:m g:7 | c1 | c1:7.5+ | \myEndLine
+	f1 | f2 fis:dim7 | c1*2 | \myEndLine
+	\endPart
+
+	\myMark "B"
+	\startPart
+	g2:7/b cis:dim7 | g2:7/d ees:dim7 | c1/e | c1 | \myEndLine
+	d2:7 e:m7 | f2:dim7 d:7/fis | g1*2:7 | \myEndLine
+	\endPart
+
+	\myMark "A"
+	\startPart
+	c2. f4:m | f2:m g:7 | c1 | c1:7.5+ | \myEndLine
+	f2. e4:7 | e1:7 | a1:m | a1:7 | \myEndLine
+	\endPart
+
+	\myMark "C"
+	\startPart
+	d2.:m7 d4:m7.5- | d1:m7.5- | c2./g a4:7 | a1:7 | \myEndLine
+	d2.:7 g4:7 | g1:7 | c2 f4 g:7.5+ | c1 | \myEndLine
+	\endPart
+
+	\endSong
+	\endChords
+}
+{% endif %}
+{% if part == "VoiceFake" %}{
+	\tempo "Moderato" 2 = 100
+	\time 2/2
+	\key c \major
+
+	% part "A"
+	e4 r c f~ | f4 e d2 | g4 r r2 | gis4 r r2 |
+	a4 r f c'~ | c4 b a2 | g1~ | g1 |
+
+	% part "B"
+	d2 e | f2 fis | g4 b b b~ | b1 |
+	fis2 g | gis2 a | b4 d d d~ | d1 |
+
+	% part "A"
+	e,4 r c f~ | f4 e d2 | g4 r r2 | gis4 r r2 |
+	a4 r f b~ | b4 a b2 | c4 r r2 | cis4 r r2 |
+
+	% part "C"
+	d4 r c d,~ | d4 e f2 | d'4 r c e,~ | e4 f g2 |
+	c4 r a b~ | b4 c d2 | c4 r r2 | c2 c4 r |
+}
+{% endif %}

@@ -1,0 +1,105 @@
+{#
+default_version = "Fake"
+
+[attributes]
+title = "Sweet Eloise"
+style = "Swing"
+composer = "Russ Morgan"
+poet = "Mack David"
+piece = "Moderately"
+copyright = "1942 Shapiro, Bernstein & Co."
+copyrightextra = "Copyright renewed and assigned to Harry Von Tilzer Music Publishing Company and Shapiro, Bernstein & Co. (c/o The Welk Music Group, Santa Monica, CA 90401)"
+typesetter = "Mark Veltzer <mark.veltzer@gmail.com>"
+completion = "5"
+uuid = "364decac-d551-11f1-8000-046874d194b7"
+structure = "AABA"
+location = "jfb:374"
+
+[[youtube]]
+id = "SA2SuLe4U34"
+remark = "Glenn Miller and his Orchestra with Ray Eberle and the Modernaires in the original hit recording (1942)"
+
+[[youtube]]
+id = "ssXLGv3D4M0"
+remark = "Connee Boswell (1942)"
+
+[versions.Fake]
+doChords = true
+doVoice = true
+doLyrics = false
+doLyricsmore = false
+doLyricsmoremore = false
+doChordBars = false
+doGuitar = false
+doExtra = false
+doPrep = false
+doOwn = false
+#}
+{% if part == "Vars" %}
+{% endif %}
+{% if part == "Doc" %}	DONE:
+	- added the meta data from the fake book.
+	- put in the tunes structure.
+	- put in the chords (fake book).
+	- put in the tune (fake book).
+	- added youtube performances.
+	TODO:
+	- add the lyrics.
+	- check the chords (fake book).
+	- check the tune (fake book).
+	- hear the tune to check that it is right and adjust the tempo.
+{% endif %}
+{% if part == "ChordsFake" %}\chordmode {
+	\startChords
+	\startSong
+
+	\myMark "A"
+	\startPart
+	c1 | c2:7 f | f:m6 c | g:7 c4 a:7 | \myEndLine
+	d1.:9 g2:7 | e:7 a:7 | d:7 g:7 | \myEndLine
+	\endPart
+
+	\myMark "A"
+	\startPart
+	c1 | c2:7 f | f:m6 c | g:7 c4 a:7 | \myEndLine
+	d1:9 | d2:7 g:7 | c1 | g2:m7 c:9 | \myEndLine
+	\endPart
+
+	\myMark "B"
+	\startPart
+	f1 | d2:m7 g:7 | c bes:7 | a1:7 | \myEndLine
+	d2 a:m | d1:7 | g2 d:m7 | g1:7 | \myEndLine
+	\endPart
+
+	\myMark "A"
+	\startPart
+	c1 | c2:7 f | f:m6 c | g:7 c4 a:7 | \myEndLine
+	d1.:9 g2:7 | e:7 a:7 | d:7 g4:7 g:7.5+ | c2 f:7 | c1:6 | \myEndLine
+	\endPart
+
+	\endSong
+	\endChords
+}
+{% endif %}
+{% if part == "VoiceFake" %}{
+	\tempo "Moderato" 2 = 80
+	\time 2/2
+	\key c \major
+
+	% part "A"
+	c'4 g8. e16 b'4 g8. e16 | bes'8. g16 e8 a~ a4 r | aes4 f8. d16 g4 e8. c16 | a'!8. f16 d8. b16 c8 b'4 a8 |
+	e1~ | e8. c16 e8. a16 g8. f16 g8 e~ | e1~ | e1 |
+
+	% part "A"
+	c'4 g8. e16 b'4 g8. e16 | bes'8. g16 e8 a~ a4 r | aes4 f8. d16 g4 e8. c16 | a'!8. f16 d8. b16 c8 b'4 a8 |
+	e1~ | e8. c16 e8. a16 g8. a16 g8 c~ | c4. a8 g8. e16 d8. e16 | d2~ d8. c16 d8. c16 |
+
+	% part "B"
+	c'4 c b8. c16 b8 a~ | a2~ a8. e16 f8. fis16 | g4 g f8. g16 f8 e~ | e2~ e8. a16 b8. a16 |
+	d8. cis16 d4 c!8. d16 c4 | b8. c16 b8 a~ a2 | g8. fis16 g4 f!8. g16 f4 | e8. f16 e8 d~ d4 r |
+
+	% part "A"
+	c'4 g8. e16 b'4 g8. e16 | bes'8. g16 e8 a~ a4 r | aes4 f8. d16 g4 e8. c16 | a'!8. f16 d8. b16 c8 b'4 a8 |
+	e1~ | e8. c16 e8. a16 g8. f16 g8 e~ | e1~ | e8. c16 e8. a16 g8. a16 g8 c~ | c1~ | c2. r4 |
+}
+{% endif %}

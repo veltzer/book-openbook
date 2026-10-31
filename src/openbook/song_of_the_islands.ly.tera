@@ -1,0 +1,97 @@
+{#
+default_version = "Fake"
+
+[attributes]
+title = "Song Of The Islands"
+style = "Pop"
+composer = "Chas. E. King"
+poet = "Chas. E. King"
+piece = "Slowly"
+copyright = "1918 by Bertiner Verlag"
+copyrightextra = "Copyright renewed 1945 by Robert Stolz. Copyright assigned 1950 to Edward B. Marks Music Company. Copyright Renewed"
+typesetter = "Mark Veltzer <mark.veltzer@gmail.com>"
+completion = "5"
+uuid = "01267ad0-d551-11f1-8000-046874d194b7"
+structure = "AA"
+location = "jfb:352"
+
+[[youtube]]
+id = "ZDrvedrcV0Q"
+remark = "Bing Crosby (1936)"
+
+[[youtube]]
+id = "7xPffNwXV7E"
+remark = "Mike Holland, Hawaiian style lap steel guitar"
+
+[versions.Fake]
+doChords = true
+doVoice = true
+doLyrics = false
+doLyricsmore = false
+doLyricsmoremore = false
+doChordBars = false
+doGuitar = false
+doExtra = false
+doPrep = false
+doOwn = false
+#}
+{% if part == "Vars" %}
+{% endif %}
+{% if part == "Doc" %}	DONE:
+	- added the meta data from the fake book.
+	- put in the tunes structure.
+	- put in the chords (fake book).
+	- put in the tune (fake book).
+	- added youtube performances.
+	TODO:
+	- check the chords (fake book).
+	- check the tune (fake book).
+	- hear the tune to check that it is right and adjust the tempo.
+	- add the lyrics.
+{% endif %}
+{% if part == "ChordsFake" %}\chordmode {
+	\startChords
+	\startSong
+
+	\partial 8 s8 |
+
+	\myMark "A"
+	\startPart
+	\repeat volta 2 {
+		f2 fis:dim7 | c:7/g c:7 | g:7 c:7 | f1 | \myEndLine
+		d1:7 | g:7 | c:7 | \myEndLine
+	} \alternative {
+		{
+			f1 | \myEndLineVoltaNotLast
+		}
+		{
+			f1 | \myEndLineVoltaLast
+		}
+	}
+	\endPart
+
+	\endSong
+	\endChords
+}
+{% endif %}
+{% if part == "VoiceFake" %}{
+	\tempo "Adagio" 4 = 72
+	\time 4/4
+	\key f \major
+
+	\partial 8 c'8 |
+
+	% part "A"
+	\repeat volta 2 {
+		c4. c8 c4. c8 | c4 c~ c8 bes a g | d4. d8 e4. e8 | f2~ f8 c f a |
+		c4. c8 d4. d8 | d4 d~ d8 d d ees | e!8 d c a bes4 e, |
+	} \alternative {
+		{
+			f2 f'4. c8 |
+		}
+		{
+			f,2 f'2 |
+		}
+	}
+}
+{% endif %}

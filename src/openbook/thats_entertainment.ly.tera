@@ -1,0 +1,132 @@
+{#
+default_version = "Fake"
+
+[attributes]
+title = "That's Entertainment"
+style = "Broadway"
+subtitle = "From 'The Band Wagon'"
+composer = "Arthur Schwartz"
+poet = "Howard Dietz"
+piece = "Moderately"
+copyright = "1953 by Chappell & Co., Inc."
+copyrightextra = "Copyright renewed."
+typesetter = "Mark Veltzer <mark.veltzer@gmail.com>"
+completion = "5"
+uuid = "5ffa3ee8-d551-11f1-8000-046874d194b7"
+structure = "AABA"
+location = "jfb:382"
+
+[[youtube]]
+id = "4KYmkt2fxPU"
+remark = "Fred Astaire, Nanette Fabray, Oscar Levant, Jack Buchanan and Cyd Charisse in the original film The Band Wagon (1953)"
+
+[[youtube]]
+id = "1HXJkoO_cbs"
+remark = "Judy Garland live at Carnegie Hall (1961)"
+
+[versions.Fake]
+doChords = true
+doVoice = true
+doLyrics = false
+doLyricsmore = false
+doLyricsmoremore = false
+doChordBars = false
+doGuitar = false
+doExtra = false
+doPrep = false
+doOwn = false
+#}
+{% if part == "Vars" %}
+{% endif %}
+{% if part == "Doc" %}	DONE:
+	- added the meta data from the fake book.
+	- put in the tunes structure.
+	- put in the chords (fake book).
+	- put in the tune (fake book).
+	- added youtube performances.
+	TODO:
+	- check the chords (fake book).
+	- check the tune (fake book).
+	- hear the tune to check that it is right and adjust the tempo.
+	- add the lyrics.
+	- the fake book prints the tempo word as 'Moedrately' (typo), written here as 'Moderately'.
+	- the 'Cm7 F7' and 'Fm7 Bb7' bars are put in as half notes each; the scan places the second chord a little late in the bar.
+{% endif %}
+{% if part == "ChordsFake" %}\chordmode {
+	\startChords
+	\startSong
+
+	\partial 4 s4 |
+
+	\myMark "A"
+	\startPart
+	\repeat volta 2 {
+		bes1 | bes:aug | c:m7 | f:7 | \myEndLine
+		bes | b:dim7 | c:m7 | d4:7 d2:7.5+ d4:7.9- | \myEndLine
+		g1:m | g:m5+ | c2 c:m/ees | d1:7.5+ | \myEndLine
+	} \alternative {
+		{
+			ees1*2:6 | c1:m7 | f:7 | \myEndLineVoltaNotLast
+		}
+		{
+			ees1*2:6 | f1:7 | f2:m7 bes:9 | \myEndLineVoltaLast
+		}
+	}
+	\endPart
+
+	\myMark "B"
+	\startPart
+	ees1 | ees:aug | ees:6 | f2:m7 bes:7 | \myEndLine
+	ees1 | ees:aug | ees:6 | c:7 | \myEndLine
+	f | f:aug | f:6 | g2:9 c:7 | \myEndLine
+	f1 | ees:6 | d:m7 | c2:m7 f:7 | \myEndLine
+	\endPart
+
+	\myMark "A"
+	\startPart
+	bes1 | bes:aug | c:m7 | f:7 | \myEndLine
+	bes | b:dim7 | c:m7 | d4:7 d2:7.5+ d4:7.9- | \myEndLine
+	g1:m | g:m5+ | g:m7 | c:9 | \myEndLine
+	bes | c2:m7 f:7 | bes1 | g:7 | \myEndLine
+	c2:7 ges:7.5- | f:7 f:7.9- | bes ees:6 | bes1:6 | \myEndLine
+	\endPart
+
+	\endSong
+	\endChords
+}
+{% endif %}
+{% if part == "VoiceFake" %}{
+	\tempo "Moderato" 4 = 120
+	\time 4/4
+	\key bes \major
+
+	\partial 4 c4 |
+
+	% part "A"
+	\repeat volta 2 {
+		d1~ | d4 ees2 d4 | ees d ees f~ | f g2 f4 |
+		g1~ | g4 g2 f4 | g f g aes~ | aes bes2 aes4 |
+		bes1~ | bes4 c2 bes4 | c bes c d~ | d1 |
+	} \alternative {
+		{
+			r2 c | bes g | f c~ | c4 f' r c, |
+		}
+		{
+			r2 c' | bes g | f c'~ | c2 r4 bes |
+		}
+	}
+
+	% part "B"
+	g2 g4 f | g2 g4 f | g f ees bes'~ | bes2. f4 |
+	g2 g4 f | g2 g4 f | g f ees c'~ | c1 |
+	r2 a | a a | a4 g f d'~ | d2 c4 bes |
+	a2 c4 a | g bes2 g4 | \tuplet 3/2 { f4 f f } a f | ees g2 ees4 |
+
+	% part "A"
+	d1~ | d4 ees2 d4 | ees d ees f~ | f g2 f4 |
+	g1~ | g4 g2 f4 | g f g aes~ | aes bes2 aes4 |
+	bes1~ | bes4 c2 bes4 | c bes c d~ | d2. cis4 |
+	d2 bes4 f | g2. f4 | d'2 bes4 f | g f g bes |
+	c1~ | c | bes~ | bes2. r4 |
+}
+{% endif %}

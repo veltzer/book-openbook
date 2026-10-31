@@ -1,0 +1,130 @@
+{#
+default_version = "Fake"
+
+[attributes]
+title = "Thermo"
+style = "Jazz"
+composer = "Freddie Hubbard"
+piece = "Medium Swing"
+copyright = "1972 Hubtones Music Co."
+typesetter = "Mark Veltzer <mark.veltzer@gmail.com>"
+completion = "3"
+uuid = "96ac3bac-d552-11f1-8000-046874d194b7"
+structure = "AABA"
+location = "jfb:390-391"
+
+[[youtube]]
+id = "B-rRvIJgXQc"
+remark = "Art Blakey and the Jazz Messengers with Freddie Hubbard (album version)"
+
+[[youtube]]
+id = "nMuoYoKaY-c"
+remark = "Freddie Hubbard live at Ancona Jazz 1985"
+
+[versions.Fake]
+doChords = true
+doVoice = true
+doLyrics = false
+doLyricsmore = false
+doLyricsmoremore = false
+doChordBars = false
+doGuitar = false
+doExtra = false
+doPrep = false
+doOwn = false
+#}
+{% if part == "Vars" %}
+{% endif %}
+{% if part == "Doc" %}	DONE:
+	- added the meta data from the fake book.
+	- put in the tunes structure.
+	- put in the chords (fake book).
+	- put in the tune (fake book).
+	- added youtube performances.
+	TODO:
+	- check the chords (fake book).
+	- check the tune (fake book).
+	- hear the tune to check that it is right and adjust the tempo.
+	- the intro is over a Bb pedal and has no chords in the book; the volta bars have no chord symbols either (the EM7b5 was carried over).
+	- bar 2 of A: the book crams "Ebm7 D7 Dbm7" into one bar; the exact placement of D7 and Dbm7 is a guess.
+	- bar 1 of A: the book prints no accidental on the C (strictly a C flat); typed C natural to fit the Fm7.
+	- second ending: the book prints only an eighth rest, which leaves the bar one eighth short; typed a quarter rest.
+	- bar 4 of B (A7): the book prints a triplet "3" over the first three of eight eighths, which does not fit the bar; typed eight straight eighths.
+{% endif %}
+{% if part == "ChordsFake" %}\chordmode {
+	\startChords
+	\startSong
+
+	\partial 4. s4. |
+
+	\myMark "Intro"
+	\startPart
+	s1*4 | \myEndLine
+	s1*4 | \myEndLine
+	\endPart
+
+	\repeat volta 2 {
+
+		\myMark "A"
+		\startPart
+		f2:m7 bes:7 | ees2:m7 d4:7 des:m7 | c2:m7.5- f:7.9+ | bes:7.9+ ees:m7 | \myEndLine
+		b8:7 bes4:7 a8*5:7 | f4:m7 bes:7.5+.9+ ees2:m7 | e1:maj7.5- |
+	} \alternative {
+		{
+			e1:maj7.5- | \myEndLineVoltaNotLast
+		}
+		{
+			e1:maj7.5- | \myEndLineVoltaLast
+		}
+	}
+	\endPart
+
+	\myMark "B"
+	\startPart
+	des1:m9 | e2:m7 a:7 | aes1:m7 | a:7 | \myEndLine
+	des:7 | d:7 | ees1*2:7.11+ | \myEndLine
+	\endPart
+
+	\myMark "Coda"
+	\startPart
+	e1*3:maj7.5- | \myEndLine
+	e1*2:maj7.5- | \myEndLine
+	\endPart
+
+	\endSong
+	\endChords
+}
+{% endif %}
+{% if part == "VoiceFake" %}{
+	\tempo "Allegro" 4 = 160
+	\time 4/4
+	\key ges \major
+
+	\partial 4. \xNote bes'8^\markup { B \flat pedal } \tuplet 3/2 { \xNote bes8 \xNote bes \xNote bes } |
+
+	% part "Intro"
+	\xNote bes4 r8 ees8~ ees2 | r4 fis4. g8~ g4 | fis4. ees8~ ees4. des8~ | des4 c8 des bes4 r4 |
+	r4 r8 ees8~ ees2 | r4 fis4. g8~ g4 | fis4. ees8~ ees4. des8~ | des4 c8 des bes aes c ees~ |
+
+	\repeat volta 2 {
+		% part "A"
+		ees8^\markup { \musicglyph #"scripts.segno" } des~ \tuplet 3/2 { des c aes } bes aes ges ees~ | ees2 r8 des ees ges~ | ges4~ \tuplet 3/2 { ges8 ees ges } aes4~ \tuplet 3/2 { aes8 ges ees } | \tuplet 3/2 { des'8 bes des~ } \tuplet 3/2 { des bes aes } bes bes ees aes~ |
+		aes8 g4 fis8~ fis4 r8 ees8 | \tuplet 3/2 { ges8 ees ges~ } \tuplet 3/2 { ges ees des } ees bes~ \tuplet 3/2 { bes c ees } | \tuplet 3/2 { aes8 ees ges } \tuplet 3/2 { des ees bes } \tuplet 3/2 { des aes bes } \tuplet 3/2 { ges aes ees^\markup {To Coda \musicglyph #"scripts.coda"} } |
+	} \alternative {
+		{
+			\tuplet 3/2 { a16 aes ges8 ees } \tuplet 3/2 { ees8 des ees } r4 r8 ees'8 |
+		}
+		{
+			\tuplet 3/2 { a,16 aes ges8 ees } \tuplet 3/2 { ees8 des ees } r4 \tuplet 3/2 { e8 ges ees' } |
+		}
+	}
+
+	% part "B"
+	ees2. \tuplet 3/2 { des8 ces aes } | fis2~ fis8 e ges ees~ | ees1 | fis8 dis fis~ fis~ fis dis fis aes~ |
+	aes1 | \tuplet 3/2 { b8 gis b~ } b4 b8 gis b des~ | des2~ des4. des8~ | des2. r8 ees8^\markup {D.S. al Coda} |
+
+	% part "Coda"
+	\tuplet 3/2 { a,16 aes ges8 ees } \tuplet 3/2 { ees8 des ees } r8 bes'8~ \tuplet 3/2 { bes c ees } | \tuplet 3/2 { aes8 ees ges } \tuplet 3/2 { des ees bes } \tuplet 3/2 { des aes bes } \tuplet 3/2 { ges aes ees } | \tuplet 3/2 { a16 aes ges8 ees } \tuplet 3/2 { ees8 des ees } r8 bes'8~ \tuplet 3/2 { bes c ees } |
+	\tuplet 3/2 { aes8 ees ges } \tuplet 3/2 { des ees bes } \tuplet 3/2 { des bes aes } \tuplet 3/2 { ges aes ees } | \tuplet 3/2 { a16 aes ges8 ees } \tuplet 3/2 { ees8 des ees~ } ees2 |
+}
+{% endif %}

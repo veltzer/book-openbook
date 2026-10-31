@@ -1,0 +1,124 @@
+{#
+default_version = "Fake"
+
+[attributes]
+title = "Stuffy"
+style = "Jazz"
+composer = "Coleman Hawkins"
+piece = "Medium Swing"
+copyright = "1948-1954-1959 by Michael H. Goldsen, Inc."
+copyrightextra = "Renewed 1976-1982 by Michael H. Goldsen, Inc."
+typesetter = "Mark Veltzer <mark.veltzer@gmail.com>"
+completion = "5"
+uuid = "1bd4c31e-d551-11f1-8000-046874d194b7"
+structure = "AABA"
+location = "jfb:365"
+
+[[youtube]]
+id = "hKmQ9GmbCRY"
+remark = "Coleman Hawkins in the original recording (1945)"
+
+[[youtube]]
+id = "OacELpQhyR4"
+remark = "Coleman Hawkins All Stars live in Munich (1950)"
+
+[versions.Fake]
+doChords = true
+doVoice = true
+doLyrics = false
+doLyricsmore = false
+doLyricsmoremore = false
+doChordBars = false
+doGuitar = false
+doExtra = false
+doPrep = false
+doOwn = false
+#}
+{% if part == "Vars" %}
+{% endif %}
+{% if part == "Doc" %}	DONE:
+	- added the meta data from the fake book.
+	- put in the tunes structure.
+	- put in the chords (fake book).
+	- put in the tune (fake book).
+	- added youtube performances.
+	TODO:
+	- check the chords (fake book).
+	- check the tune (fake book).
+	- hear the tune to check that it is right and adjust the tempo.
+	- the fake book prints the sixteenth note f on beat 3 of the bars with the low f (bar 7, both endings and the matching bar of the last A) without an accidental after the f sharp earlier in the bar; typed as f natural to fit the chords.
+{% endif %}
+{% if part == "ChordsFake" %}\chordmode {
+	\startChords
+	\startSong
+
+	\partial 4. s4. |
+
+	\myMark "A"
+	\startPart
+	\repeat volta 2 {
+		ees1 | f2:m7 bes:9 | ees1 | f2:m7 bes:7 | \myEndLine
+		ees2 ees:9 | aes2 aes:m | ees2 aes | \myEndLine
+	} \alternative {
+		{
+			ees2 f4:m7 bes:9 | \myEndLineVoltaNotLast
+		}
+		{
+			ees4 f:m7 ees e:9 | \myEndLineVoltaLast
+		}
+	}
+	\endPart
+
+	\myMark "B"
+	\startPart
+	ees1:9 | aes1*3:6 | \myEndLine
+	f1*2:9 | bes1*2:9 | \myEndLine
+	\endPart
+
+	\myMark "A"
+	\startPart
+	ees1 | f2:m7 bes:9 | ees1 | f2:m7 bes:9 | \myEndLine
+	ees2 ees:9 | aes2 aes:m | ees2 aes | ees1 | \myEndLine
+	\endPart
+
+	\myMark "Coda"
+	\startPart
+	ees1 | \myEndLine
+	\endPart
+
+	\endSong
+	\endChords
+}
+{% endif %}
+{% if part == "VoiceFake" %}{
+	\tempo "Moderato" 4 = 140
+	\time 4/4
+	\key ees \major
+
+	\partial 4. fis8 \tuplet 3/2 { g bes c } |
+
+	% part "A"
+	\repeat volta 2 {
+		ees8.^\markup { \musicglyph #"scripts.segno" } c16 \tuplet 3/2 { fis,8 g bes } ees8 c4. | r2 r8 fis,8 \tuplet 3/2 { g bes c } | ees8. c16 \tuplet 3/2 { fis,8 g bes } ees8 c4. | r2 r8 fis,8 \tuplet 3/2 { g bes c } |
+		ees8. c16 \tuplet 3/2 { fis,8 g bes } ees8 c4. | r2 r8 fis,8 \tuplet 3/2 { g bes c } | ees8. c16 \tuplet 3/2 { fis,8 g bes } ees8. f,16 \tuplet 3/2 { g8 bes c^\markup { To Coda \musicglyph #"scripts.coda" } } |
+	} \alternative {
+		{
+			ees8. c16 \tuplet 3/2 { fis,8 g bes } ees8. f,16 \tuplet 3/2 { g8 bes c } |
+		}
+		{
+			ees8. c16 \tuplet 3/2 { fis,8 g bes } ees8. f,16 \tuplet 3/2 { g8 bes c } |
+		}
+	}
+
+	% part "B"
+	ees4 r r2 | ees4 r r2 | r1 | r1 |
+	r1 | r1 | r1 | r2 r8 fis,8 \tuplet 3/2 { g bes c } |
+
+	% part "A"
+	ees8. c16 \tuplet 3/2 { fis,8 g bes } ees8 c4. | r2 r8 fis,8 \tuplet 3/2 { g bes c } | ees8. c16 \tuplet 3/2 { fis,8 g bes } ees8 c4. | r2 r8 fis,8 \tuplet 3/2 { g bes c } |
+	ees8. c16 \tuplet 3/2 { fis,8 g bes } ees8 c4. | r2 r8 fis,8 \tuplet 3/2 { g bes c } | ees8. c16 \tuplet 3/2 { fis,8 g bes } ees8. f,16 \tuplet 3/2 { g8 bes c } | ees8. c16 \tuplet 3/2 { fis,8 g bes } ees8 r r4^\markup { D.S. al Coda } |
+
+	% part "Coda"
+	g,8. ees16 f8. ees16~ ees4 ees' |
+}
+{% endif %}

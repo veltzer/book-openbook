@@ -1,0 +1,125 @@
+{#
+default_version = "Fake"
+
+[attributes]
+title = "'Tain't What You Do (It's The Way That Cha Do It)"
+style = "Swing"
+composer = "Sy Oliver, James Young"
+poet = "Sy Oliver, James Young"
+piece = "Moderately"
+copyright = "1939 by MCA Music Publishing, A Division of MCA Inc., New York, NY"
+copyrightextra = "Copyright Renewed"
+typesetter = "Mark Veltzer <mark.veltzer@gmail.com>"
+completion = "5"
+uuid = "6a58a976-d551-11f1-8000-046874d194b7"
+structure = "AABA"
+location = "jfb:378"
+
+[[youtube]]
+id = "o1jwHyErN-I"
+remark = "Jimmie Lunceford and his Orchestra in the original recording, Trummy Young vocal (1939)"
+
+[[youtube]]
+id = "8NobNfXhzxk"
+remark = "Ella Fitzgerald with the Chick Webb Orchestra (1939)"
+
+[versions.Fake]
+doChords = true
+doVoice = true
+doLyrics = false
+doLyricsmore = false
+doLyricsmoremore = false
+doChordBars = false
+doGuitar = false
+doExtra = false
+doPrep = false
+doOwn = false
+#}
+{% if part == "Vars" %}
+{% endif %}
+{% if part == "Doc" %}	DONE:
+	- added the meta data from the fake book.
+	- put in the tunes structure.
+	- put in the chords (fake book).
+	- put in the tune (fake book).
+	- added youtube performances.
+	TODO:
+	- add the lyrics.
+	- check the chords (fake book).
+	- check the tune (fake book).
+	- hear the tune to check that it is right and adjust the tempo.
+{% endif %}
+{% if part == "ChordsFake" %}\chordmode {
+	\startChords
+	\startSong
+
+	\repeat volta 2 {
+
+		\myMark "A"
+		\startPart
+		aes2 aes:7/c | des ees:7 | des aes/c | bes:m7 ees:7 | \myEndLine
+		aes2 aes:7/c | des ees:7 | aes2/c bes4:m ees:7.5+ | aes2 bes4:m7 ees:7 | \myEndLine
+		\endPart
+
+		\myMark "A"
+		\startPart
+		aes2 aes:7/c | des ees:7 | des aes/c | bes:m7 ees:7 | \myEndLine
+		aes2 aes:7/c | des ees:7 | aes2/c bes4:m7 ees:7 | aes2 aes:7 | \myEndLine
+		\endPart
+
+		\myMark "B"
+		\startPart
+		des2:6 ees:m7 | bes:m7 ees:7.5+ | aes1 | s2 aes:7 | \myEndLine
+		des2:6 ees:m7 | e:dim7 des/f | aes/ees ees:dim7 | ees:7 e4:9 ees:9 | \myEndLine
+		\endPart
+
+		\myMark "A"
+		\startPart
+		aes2 aes:7/c | des ees:7 | des aes/c | bes:m7 ees:7 | \myEndLine
+		aes2 aes:7/c | des ees:7 | aes2/ees bes4:m7 ees:7 |
+	} \alternative {
+		{
+			aes2 bes4:m7 ees:7 | \myEndLineVoltaNotLast
+		}
+		{
+			aes2 ees4:7 aes | \myEndLineVoltaLast
+		}
+	}
+	\endPart
+
+	\endSong
+	\endChords
+}
+{% endif %}
+{% if part == "VoiceFake" %}{
+	\tempo "Moderato" 4 = 160
+	\time 2/2
+	\key aes \major
+
+	\repeat volta 2 {
+
+		% part "A"
+		aes'8 aes4 aes8 aes aes4 aes8 | aes8 aes4 aes8 f ees4. | aes8 aes4 aes8 aes aes4 aes8 | aes8 aes4 aes8 ces bes4. |
+		aes8 aes4 aes8 aes aes4 aes8 | aes8 aes4 aes8 c ees4. | ees4 ees ees8 des ces aes~ | aes4 r r2 |
+
+		% part "A"
+		aes8 aes4 aes8 aes aes4 aes8 | aes8 aes4 aes8 f ees4. | aes8 aes4 aes8 aes aes4 aes8 | aes8 aes4 aes8 ces bes4. |
+		aes8 aes4 aes8 aes aes4 aes8 | aes8 aes4 aes8 c ees4. | ees4 ees ees8 des ces aes~ | aes4 r aes bes |
+
+		% part "B"
+		des4. des8~ des2 | r8 ees4. des8 ces4 aes8~ | aes4 r r2 | r2 aes4 bes |
+		des4. des8~ des2 | r1 | r8 ees4 c8 ees4 c8 ees~ | ees1 |
+
+		% part "A"
+		aes,8 aes4 aes8 aes aes4 aes8 | aes8 aes4 aes8 f ees4. | aes8 aes4 aes8 aes aes4 aes8 | aes8 aes4 aes8 ces bes4. |
+		aes8 aes4 aes8 aes aes4 aes8 | aes8 aes4 aes8 c ees4. | ees4 ees ees8 des ces aes~ |
+	} \alternative {
+		{
+			aes8 r r4 r2 |
+		}
+		{
+			aes8 r r4 r2 |
+		}
+	}
+}
+{% endif %}

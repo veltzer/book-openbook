@@ -1,0 +1,111 @@
+{#
+default_version = "Fake"
+
+[attributes]
+title = "A Taste Of Honey"
+style = "Broadway"
+composer = "Ric Marlow, Bobby Scott"
+poet = "Ric Marlow, Bobby Scott"
+piece = "Slowly"
+copyright = "1960, 1962 by Songfest Music Corp., New York, NY"
+typesetter = "Mark Veltzer <mark.veltzer@gmail.com>"
+completion = "5"
+uuid = "6a58a977-d551-11f1-8000-046874d194b7"
+structure = "AB"
+location = "jfb:379"
+
+[[youtube]]
+id = "vaNK_6r823E"
+remark = "Herb Alpert and the Tijuana Brass in the famous recording (1965)"
+
+[[youtube]]
+id = "0TVV3sRwWzs"
+remark = "Martin Denny (1962)"
+
+[versions.Fake]
+doChords = true
+doVoice = true
+doLyrics = false
+doLyricsmore = false
+doLyricsmoremore = false
+doChordBars = false
+doGuitar = false
+doExtra = false
+doPrep = false
+doOwn = false
+#}
+{% if part == "Vars" %}
+{% endif %}
+{% if part == "Doc" %}	DONE:
+	- added the meta data from the fake book.
+	- put in the tunes structure.
+	- put in the chords (fake book).
+	- put in the tune (fake book).
+	- added youtube performances.
+	TODO:
+	- add the lyrics.
+	- check the chords (fake book).
+	- check the tune (fake book).
+	- hear the tune to check that it is right and adjust the tempo.
+	- the fake book writes "Dm#7" in bars 2 and 6 which was typeset as D minor with a major seventh.
+{% endif %}
+{% if part == "ChordsFake" %}\chordmode {
+	\startChords
+	\startSong
+
+	\repeat volta 3 {
+
+		\myMark "A"
+		\startPart
+		d2.:m | d:m7+ | d:m7 | g:6 | \myEndLine
+		d2.:m | d:m7+ | d:m7 | g:6 | \myEndLine
+		d2.*2:m | bes2. | a:m7 | d4:m g2:m6 | d2.:m | \myEndLine
+		\endPart
+
+		\myMark "B"
+		\startPart
+		d2.:m7 | g:6 | d:m7 | g:6 | \myEndLine
+		bes2. | a:m7 | d4:m g2:m6 |
+	} \alternative {
+		{
+			d2.:m | \myEndLineVoltaNotLast
+		}
+		{
+			d2.:m | \myEndLineVoltaLast
+		}
+	}
+	g2.:6 | bes | a:m | d:m | g:m6 | \myEndLine
+	d2.:m | a4:9.5+ a2:7.9- | d2.*2:m | \myEndLine
+	\endPart
+
+	\endSong
+	\endChords
+}
+{% endif %}
+{% if part == "VoiceFake" %}{
+	\tempo "Adagio" 4 = 72
+	\time 3/4
+	\key d \minor
+
+	\repeat volta 3 {
+
+		% part "A"
+		d2 a'4 | a2 a8 b! | c2 d4 | b!8 g4. a4 |
+		d,2 a'4 | a2 a8 b! | c2 d4 | b!4. g8 a b |
+		d8 d4.~ d4~ | d2 r8 c8 | a2 f4 | g8 e4. c4 | d2.~ | d2 r4 |
+
+		% part "B"
+		c'2 d8 c | b!8 g~ g2 | r8 a4.~ a8 a | g4 \tuplet 3/2 { r4 g g } |
+		f2 g8 f | e8 c4. c4 | d2.~ |
+	} \alternative {
+		{
+			d4 r a'4 |
+		}
+		{
+			d,2.~ |
+		}
+	}
+	d4 \tuplet 3/2 { r4 g g } | f2 g8 f | e8 c4. c4 | d2.~ | d4 \tuplet 3/2 { r4 bes' g } |
+	a2 a8 a | f'8 f \tuplet 3/2 { e4 f e } | d2.~ | d2. |
+}
+{% endif %}

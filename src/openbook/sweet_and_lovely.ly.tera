@@ -1,0 +1,105 @@
+{#
+default_version = "Fake"
+
+[attributes]
+title = "Sweet And Lovely"
+style = "Jazz"
+composer = "Gus Arnheim, Harry Tobias, Jules Lemare"
+poet = "Gus Arnheim, Harry Tobias, Jules Lemare"
+piece = "Moderately Slow"
+copyright = "1931 by Metro Goldwyn Meyer Corp."
+copyrightextra = "Copyright Renewed, administered by Chappell & Co., Inc., (Intersong Music, Publisher) & Robbins Music Corporation"
+typesetter = "Mark Veltzer <mark.veltzer@gmail.com>"
+completion = "5"
+uuid = "36497884-d551-11f1-8000-046874d194b7"
+structure = "AABA"
+location = "jfb:372"
+
+[[youtube]]
+id = "FEYeHFBUI9Q"
+remark = "Gus Arnheim and his Orchestra with Donald Novis in the original recording (1931)"
+
+[[youtube]]
+id = "588Om1o8SOw"
+remark = "Thelonious Monk"
+
+[versions.Fake]
+doChords = true
+doVoice = true
+doLyrics = false
+doLyricsmore = false
+doLyricsmoremore = false
+doChordBars = false
+doGuitar = false
+doExtra = false
+doPrep = false
+doOwn = false
+#}
+{% if part == "Vars" %}
+{% endif %}
+{% if part == "Doc" %}	DONE:
+	- added the meta data from the fake book.
+	- put in the tunes structure.
+	- put in the chords (fake book).
+	- put in the tune (fake book).
+	- added youtube performances.
+	TODO:
+	- add the lyrics.
+	- check the chords (fake book).
+	- check the tune (fake book).
+	- hear the tune to check that it is right and adjust the tempo.
+{% endif %}
+{% if part == "ChordsFake" %}\chordmode {
+	\startChords
+	\startSong
+
+	\myMark "A"
+	\startPart
+	c1*3:7 | g2:m7 c:7 | \myEndLine
+	f1:7 | bes:maj7 | c2:maj7 g:7 | c1 | \myEndLine
+	\endPart
+
+	\myMark "A"
+	\startPart
+	c1*3:7 | g2:m7 c:7 | \myEndLine
+	f1:7 | bes:maj7 | c2:maj7 g:7 | c1 | \myEndLine
+	\endPart
+
+	\myMark "B"
+	\startPart
+	f2:m7 bes:7 | c1 | f2:m7 bes:7 | c1 | \myEndLine
+	aes2:m7 des:7 | ees1 | aes:7 | g:7 | \myEndLine
+	\endPart
+
+	\myMark "A"
+	\startPart
+	c1*3:7 | g2:m7 c:7 | \myEndLine
+	f1:7 | bes:maj7 | c2:maj7 g:7 | c1 | \myEndLine
+	\endPart
+
+	\endSong
+	\endChords
+}
+{% endif %}
+{% if part == "VoiceFake" %}{
+	\tempo "Moderato" 4 = 100
+	\time 4/4
+	\key c \major
+
+	% part "A"
+	c'2. d4 | d g,2. | c8 c c c c cis d g,~ | g1 |
+	a2. c!4 | c f,2. | b,8 c e g gis a b, c~ | c1 |
+
+	% part "A"
+	c'2. d4 | d g,2. | c8 c c c c cis d g,~ | g1 |
+	a2. c!4 | c f,2. | b,8 c e g gis a b, c~ | c1 |
+
+	% part "B"
+	c8 aes' aes g g f f c | e16 f g8~ g2. | c,8 aes' aes g g f f e | g1 |
+	ees8 ces' ces bes bes aes aes ees | g16 aes bes8~ bes2. | ges8 aes bes2. | g!8 a! b!2. |
+
+	% part "A"
+	c2. d4 | d g,2. | c8 c c c c cis d g,~ | g1 |
+	a2. c!4 | c f,2. | b,8 c e g gis a b, c~ | c1 |
+}
+{% endif %}

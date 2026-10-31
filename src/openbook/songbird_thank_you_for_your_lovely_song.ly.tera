@@ -1,0 +1,105 @@
+{#
+default_version = "Fake"
+
+[attributes]
+title = "Songbird (Thank You For Your Lovely Song)"
+style = "Jazz"
+composer = "Loonis McGlohon"
+poet = "Loonis McGlohon"
+piece = "Slowly"
+copyright = "1978 and 1983 Melody Trails, Inc., New York, NY."
+copyrightextra = "TRO"
+typesetter = "Mark Veltzer <mark.veltzer@gmail.com>"
+completion = "5"
+uuid = "116edf22-d551-11f1-8000-046874d194b7"
+structure = "AABA"
+location = "jfb:349"
+
+[[youtube]]
+id = "4J9zGDaLDGc"
+remark = "Loonis McGlohon, the composer"
+
+[[youtube]]
+id = "Quyx5wXrp4w"
+remark = "Marlene VerPlanck"
+
+[versions.Fake]
+doChords = true
+doVoice = true
+doLyrics = false
+doLyricsmore = false
+doLyricsmoremore = false
+doChordBars = false
+doGuitar = false
+doExtra = false
+doPrep = false
+doOwn = false
+#}
+{% if part == "Vars" %}
+{% endif %}
+{% if part == "Doc" %}	DONE:
+	- added the meta data from the fake book.
+	- put in the tunes structure.
+	- put in the chords (fake book).
+	- put in the tune (fake book).
+	- added youtube performances.
+	TODO:
+	- check the chords (fake book).
+	- check the tune (fake book).
+	- hear the tune to check that it is right and adjust the tempo.
+	- check the placement of the C7b9 and C9 chords in bar 19 (the book prints C9 between the third and fourth beat).
+	- the last note of bars 7, 15 and 17 has no accidental in the book; typed as g flat (carried from earlier in the bar, fits the Ab7/D7 harmony) - check.
+	- add the lyrics.
+{% endif %}
+{% if part == "ChordsFake" %}\chordmode {
+	\startChords
+	\startSong
+
+	\myMark "A"
+	\startPart
+	d4:7 ees2.:maj7 | bes2.:m7/ees ees4:7 | aes2:maj7 f:m7 | d2:m7 g:7 | \myEndLine
+	c2:m7 f:7 | d4.:m7 d8:7 g2:m7 | ees2:m7 aes:7 | c4:m7 f:7 f:m7 bes:7 | \myEndLine
+	\endPart
+
+	\myMark "A"
+	\startPart
+	d4:7 ees2.:maj7 | bes2.:m7/ees ees4:7 | aes2:maj7 f:m7 | d2:m7 g:7 | \myEndLine
+	c2:m7 f:7 | d4.:m7 d8:7 g2:m7 | ees2:m7 aes:7 | des2:maj7 b4:9 bes:7.9- | \myEndLine
+	\endPart
+
+	\myMark "B"
+	\startPart
+	ees2:m7 aes4:7 d:7 | f4.:m7 f8:7 bes2:m7 | g2:m7 c4:7.9- c:9 | c4:m7/f f:dim7 f:m7 bes:7.9- | \myEndLine
+	\endPart
+
+	\myMark "A"
+	\startPart
+	d4:7 ees2.:maj7 | bes2.:m7/ees ees4:7 | aes2:maj7 f:m7 | d2:m7 g:7 | \myEndLine
+	c2:m7 bes4:m7 ees:7 | aes2:maj7 aes4.:m7/des des8:9 | ees4:maj7 ees:dim7 f:m7 f:m7/bes | ees1:6 | \myEndLine
+	\endPart
+
+	\endSong
+	\endChords
+}
+{% endif %}
+{% if part == "VoiceFake" %}{
+	\tempo "Andante" 4 = 72
+	\time 4/4
+	\key ees \major
+
+	% part "A"
+	f4 g bes,8 bes' aes g | aes f des2 ees4 | c8 ees g bes aes g ees f | g2. d4 |
+	c8 ees g bes a! f d ees | f4. c'8 bes4. f8 | ges f ges des' c bes aes ges | f2. r4 |
+
+	% part "A"
+	f4 g bes,8 bes' aes g | aes f des2 ees4 | c8 ees g bes aes g ees f | g2. d4 |
+	c8 ees g bes a! f d ees | f4. c'8 bes4. f8 | ges f ges des' c bes aes ges | f2. aes4 |
+
+	% part "B"
+	bes8 aes ges f d ees f ges | aes4. c,8 des4. c8 | c' bes a! g ges g! aes g | c,4 d ees e! |
+
+	% part "A"
+	f4 g bes,8 bes' aes g | aes f des2 ees4 | c8 ees g bes aes g ees f | g2. d4 |
+	c8 ees g bes aes g f ees | c'4. aes8 ees4. f8 | g bes d, ees c' ees ees,8. f16 | ees2. r4 |
+}
+{% endif %}

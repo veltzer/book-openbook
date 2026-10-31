@@ -1,0 +1,144 @@
+{#
+default_version = "Fake"
+
+[attributes]
+title = "Spring Can Really Hang You Up The Most"
+style = "Jazz"
+composer = "Tommy Wolf"
+poet = "Fran Landesman"
+piece = "Verse-Rubato, In tempo, slowly"
+copyright = "1955 by Wolf-Mills Music, Inc."
+copyrightextra = "1987 Reassigned to Wolfland, 7949 Belton Dr., Los Angeles, CA 90045"
+typesetter = "Mark Veltzer <mark.veltzer@gmail.com>"
+completion = "5"
+uuid = "1014b7d2-d551-11f1-8000-046874d194b7"
+structure = "AABA"
+location = "jfb:358"
+
+[[youtube]]
+id = "078QEpkUOWE"
+remark = "Ella Fitzgerald"
+
+[[youtube]]
+id = "pJmGAVPEjE4"
+remark = "Chet Baker"
+
+[versions.Fake]
+doChords = true
+doVoice = true
+doLyrics = false
+doLyricsmore = false
+doLyricsmoremore = false
+doChordBars = false
+doGuitar = false
+doExtra = false
+doPrep = false
+doOwn = false
+#}
+{% if part == "Vars" %}
+{% endif %}
+{% if part == "Doc" %}	DONE:
+	- added the meta data from the fake book.
+	- put in the tunes structure.
+	- put in the chords (fake book).
+	- put in the tune (fake book).
+	- added youtube performances.
+	TODO:
+	- add the lyrics.
+	- check the chords (fake book).
+	- check the tune (fake book).
+	- hear the tune to check that it is right and adjust the tempo.
+	- the fake book has no section letters; the twelve bar rubato verse is typed as an intro and the refrain as AABA with the printed first ending (with its two bar tag) and the long second ending.
+	- the verse is marked rubato and the refrain "in tempo, slowly"; only one tempo is typed.
+{% endif %}
+{% if part == "ChordsFake" %}\chordmode {
+	\startChords
+	\startSong
+
+	\myMark "Intro"
+	\startPart
+	c2 bes:7 | c c:6.9 | c bes:7 | c1:maj7 | bes4:m7 ees:7.9- aes2:maj7 | \myEndLine
+	fis4:m7 b:7sus4 e2:maj7 | d4:m7 g:7 c2:maj7 | a1:m7 | d2:m7 g:7 | ees4:7 a2:m7.5- a4:7 | \myEndLine
+	d2:m7 a:7.9- | d4:9 d:9.5+ g:9 g:7.9- | \myEndLine
+	\endPart
+
+	\repeat volta 2 {
+
+		\myMark "A"
+		\startPart
+		c2:maj7 bes:maj7 | c:maj7 bes:maj7 | c4:maj7 a:m7 d:m7 g:7 | e2:m7 a:7.9- | \myEndLine
+		fis:m7.5- f:m7 | e4:m7 a:m7 d:7 d:9.5- | d2:m7 g4:7sus4 g:7 | c2:maj7 g:7.5+ | \myEndLine
+		\endPart
+
+		\myMark "A"
+		\startPart
+		c2:maj7 bes:maj7 | c:maj7 bes:maj7 | c4:maj7 a:m7 d:m7 g:7 | e2:m7 a:7.9- | \myEndLine
+		fis:m7.5- f:m7 | e4:m7 a:m7 d:7 d:9.5- | d2:m7 g:7 | c:maj7 c:6 | \myEndLine
+		\endPart
+
+		\myMark "B"
+		\startPart
+		g2:m7 c:maj7/g | g:m7 c:maj7/g | g:m7 c:maj7/g | g:m7 c:maj7 | \myEndLine
+		c:m7 f:maj7/c | c:m7 f:maj7/c | fis:m7 e:maj7 | a:m7 d:7 | \myEndLine
+		\endPart
+
+		\myMark "A"
+		\startPart
+		g2:maj7 f:maj7 | c:maj7 bes:maj7 | c4:maj7 a:m7 d:m7 g:7 | e2:m7 a:7.9- | \myEndLine
+		fis:m7.5- f:m7 |
+	} \alternative {
+		{
+			e4:m7 a:m7 d:7 d:9.5- | d2:m7 g:7 | e:m7.5- a:7.9- | \myEndLine
+			d:m7 g:7 | c:maj7 bes:maj7 | \myEndLineVoltaNotLast
+		}
+		{
+			ees:m7 aes:7 | d:m7 g:7 | \myEndLine
+			e:m7.5- a:7.9- | d:m7/g c:maj7/g | d:m7/g c:maj7/g | b4:m7.5- bes:7 a2:m7 | d1:13.9-.11+ | \myEndLine
+			d2:m9 bes:9 | e4:m e:m7+ e8:m7 a4.:7.9- | d2:m7 des | c1:maj9 | \myEndLineVoltaLast
+		}
+	}
+	\endPart
+
+	\endSong
+	\endChords
+}
+{% endif %}
+{% if part == "VoiceFake" %}{
+	\tempo "Andante" 4 = 66
+	\time 4/4
+	\key c \major
+
+	% part "Intro"
+	g8 c d e f e d c | d2. r4 | g,8 c d e f4 e | g2. r4 | aes8 aes aes bes g2 |
+	e8 e e fis dis4 r | c8 c c d! b4. e8 | b'4 e,2 r4 | e8 e e f d4. a'8 | c4 g2. |
+	g4 a f g | e2. r4 |
+
+	\repeat volta 2 {
+		% part "A"
+		e4. g8 c4. g8 | e4. g8 \tuplet 3/2 { c8 d c~ } c4 | b8 g e c a' f d b | g'2 r4 f |
+		e8 c c c~ c4 c8 d | \tuplet 3/2 { g4 c, c } c8 d r4 | e8 d c a g g g8. g16 | g2. r4 |
+
+		% part "A"
+		e'4. g8 c4. g8 | e4. g8 \tuplet 3/2 { c8 d c~ } c4 | b8 g e c a' f d b | g'2. r8 f |
+		e8 c c c~ c4 c8 d | g8 c, c c~ c d r4 | e8 d c a g b d f | e2. r4 |
+
+		% part "B"
+		bes'4. g16 f g4. g8 | bes8 c4 a16 f g4 r | bes4. g16 f g4. e16 g | bes8 c4 a16 f g4 r |
+		ees4. c16 bes c4. c8 | ees8 f4 d16 bes c4 r | \tuplet 3/2 { b4 b b } \tuplet 3/2 { dis dis dis } | \tuplet 3/2 { e4 e e } fis2 |
+
+		% part "A"
+		b,4. d8 g4. d8 | e4. g8 \tuplet 3/2 { c8 d c } r4 | b8 g e c a' f d b | g'2 r4 g8 f |
+		e4. c8 c4 c8 d |
+	} \alternative {
+		{
+			g8 c, c c c d r4 | e8 d c a g b d r16 a'16 | g2. r4 |
+			e8 d c a g g g g | g2. r4 |
+		}
+		{
+			aes'8 des, des des des ees r4 | e!8 d! c a g b d r16 a'16 |
+			g2. r4 | a4. a8 g2 | r8 g a a g g4. | f8 f f f e c e g | b2 r4 a8 b |
+			c4 c, c8 d4 c8 | b'8 b, b b b cis4. | g'8 f e d des c bes r16 aes16 | g2. r4 |
+		}
+	}
+}
+{% endif %}

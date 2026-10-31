@@ -1,0 +1,103 @@
+{#
+default_version = "Fake"
+
+[attributes]
+title = "Spring Will Be A Little Late This Year"
+style = "Jazz"
+composer = "Frank Loesser"
+poet = "Frank Loesser"
+piece = "Moderately"
+copyright = "1943, 1987 Frank Music Corp."
+copyrightextra = "Renewed 1971 Frank Music Corp. International Copyright Secured. All Rights Reserved."
+typesetter = "Mark Veltzer <mark.veltzer@gmail.com>"
+completion = "5"
+uuid = "1010139e-d551-11f1-8000-046874d194b7"
+structure = "AA'"
+location = "jfb:359"
+
+[[youtube]]
+id = "3miELgKukoI"
+remark = "Deanna Durbin in the original recording from the film Christmas Holiday (1944)"
+
+[[youtube]]
+id = "ICtCV3OJ7MQ"
+remark = "Sarah Vaughan (Columbia, 1953)"
+
+[versions.Fake]
+doChords = true
+doVoice = true
+doLyrics = false
+doLyricsmore = false
+doLyricsmoremore = false
+doChordBars = false
+doGuitar = false
+doExtra = false
+doPrep = false
+doOwn = false
+#}
+{% if part == "Vars" %}
+{% endif %}
+{% if part == "Doc" %}	DONE:
+	- added the meta data from the fake book.
+	- put in the tunes structure.
+	- put in the chords (fake book).
+	- put in the tune (fake book).
+	- added youtube performances.
+	TODO:
+	- add the lyrics.
+	- check the chords (fake book).
+	- check the tune (fake book).
+	- hear the tune to check that it is right and adjust the tempo.
+	- the fake book has no section letters; the tune is typed as one repeated part with a seven bar first ending and a nine bar second ending, as printed.
+	- bar 7: the last note has no accidental in the book after the f sharp earlier in the bar, so it is typed as f sharp; check it.
+	- second ending, bar 6: the book prints "Bb7b7", typed as Bb7(b9); check it.
+	- second ending, bar 3: the last note has no accidental in the book, so it is typed as c flat (carried from the start of the bar, fits the Bb7b9 chord); check it.
+{% endif %}
+{% if part == "ChordsFake" %}\chordmode {
+	\startChords
+	\startSong
+
+	\myMark "A"
+	\startPart
+	\repeat volta 2 {
+		ees2 bes:7.5+ | ees:6 e:dim7 | f1:m7 | bes:9 | f:m7 | \myEndLine
+		bes:7 | ees | ees:7 | aes2:9 a:dim7 |
+	} \alternative {
+		{
+			ees1/bes | \myEndLine
+			aes2 ees/g | f:m7 ees | aes:9 a:dim7 | ees/bes c:m7 | f1:m7 | \myEndLine
+			bes:7.9- | \myEndLineVoltaNotLast
+		}
+		{
+			ees2/bes c:m7 | f:m7 ees | f:m7.5- bes:7.9- | \myEndLine
+			ees:maj7 bes:7.5+ | ees e:dim7 | f:m7 bes:7.9- | ees b:7 | f:m7 e:maj7 | ees1:6 | \myEndLineVoltaLast
+		}
+	}
+	\endPart
+
+	\endSong
+	\endChords
+}
+{% endif %}
+{% if part == "VoiceFake" %}{
+	\tempo "Moderato" 2 = 66
+	\time 2/2
+	\key ees \major
+
+	% part "A"
+	\repeat volta 2 {
+		bes'2. bes,4 | c2~ c8. bes16 c8. bes16 | c'2. bes4 | d,2~ d8. bes16 c8. bes16 | c'2. bes4 |
+		d,4 ees2 f4 | \tuplet 3/2 { g4 aes fis } \tuplet 3/2 { g aes fis } | g2. ees4 | d'2. c4 |
+	} \alternative {
+		{
+			bes4 ees,2 ees4 |
+			\tuplet 3/2 { ees4 ees ees } \tuplet 3/2 { ees ees ees } | ees1 | d'2. c4 | bes4 ees,2 ees4 | \tuplet 3/2 { f4 f f } f aes |
+			ces,4. ees8 f aes ces4 |
+		}
+		{
+			bes4 ees,2 ees4 | \tuplet 3/2 { ees4 ees ees } \tuplet 3/2 { ees ees ees } | ces'4. d,8 f aes ces4 |
+			bes2. bes,4 | c2~ c8. bes16 c8. bes16 | c'2. d,4 | ees1~ | ees~ | ees |
+		}
+	}
+}
+{% endif %}

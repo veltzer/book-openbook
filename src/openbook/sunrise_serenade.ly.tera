@@ -1,0 +1,115 @@
+{#
+default_version = "Fake"
+
+[attributes]
+title = "Sunrise Serenade"
+style = "Swing"
+composer = "Frankie Carle"
+poet = "Jack Lawrence"
+piece = "Slow Ballad"
+copyright = "1938 (renewed) Dorsey Bros. Music, Inc., a Division of Music Sales Corp., 24 E. 22nd Street, New York, NY 10010"
+typesetter = "Mark Veltzer <mark.veltzer@gmail.com>"
+completion = "5"
+uuid = "3651a0e2-d551-11f1-8000-046874d194b7"
+structure = "AB"
+location = "jfb:370-371"
+
+[[youtube]]
+id = "wxXKBBKcvlQ"
+remark = "Frankie Carle"
+
+[[youtube]]
+id = "HocWc7qc7hQ"
+remark = "Glenn Miller and his Orchestra (1939)"
+
+[versions.Fake]
+doChords = true
+doVoice = true
+doLyrics = false
+doLyricsmore = false
+doLyricsmoremore = false
+doChordBars = false
+doGuitar = false
+doExtra = false
+doPrep = false
+doOwn = false
+#}
+{% if part == "Vars" %}
+{% endif %}
+{% if part == "Doc" %}	DONE:
+	- added the meta data from the fake book.
+	- put in the tunes structure.
+	- put in the chords (fake book).
+	- put in the tune (fake book).
+	- added youtube performances.
+	TODO:
+	- add the lyrics.
+	- check the chords (fake book).
+	- check the tune (fake book).
+	- hear the tune to check that it is right and adjust the tempo.
+	- the book changes back to the key of Eb (C minor) at the end of the first ending, so the second ending is printed with the Eb key signature under a C chord; check this.
+{% endif %}
+{% if part == "ChordsFake" %}\chordmode {
+	\startChords
+	\startSong
+
+	\partial 8 s8 |
+
+	\repeat volta 2 {
+
+		\myMark "A"
+		\startPart
+		c1:m | g2:7 c:m | c1:m | bes2:7 ees | \myEndLine
+		ees1:dim7 | ees4 des:7 c:7 ges:9 | f4:9 b:9 bes:9 f:m7/bes | ees2 g:7 | \myEndLine
+		\endPart
+
+		\myMark "B"
+		\startPart
+		g1:7 | c | g:7 | c | \myEndLine
+		c:7 | f | d:7 | g4:9 g:dim g2:9 | \myEndLine
+		g1:7 | c | g:7 | c | \myEndLine
+		c:dim | c4 bes:7 a:7 ees:9 | d4:9 aes:9 g:9 d:m7/g |
+	} \alternative {
+		{
+			c1 | \myEndLineVoltaNotLast
+		}
+		{
+			c1 | \myEndLineVoltaLast
+		}
+	}
+	\endPart
+
+	\endSong
+	\endChords
+}
+{% endif %}
+{% if part == "VoiceFake" %}{
+	\tempo "Adagio" 4 = 66
+	\time 2/2
+	\key ees \major
+
+	\partial 8 c8 |
+
+	\repeat volta 2 {
+		% part "A"
+		ees8 d4 c8 ees8 d4 c8 | g'4 ees8 c~ c4. c8 | ees8 d4 c8 ees8 d4 c8 | bes'8. c16 ges8 ees~ ees4 \tuplet 3/2 { r8 c' d } |
+		ees8. c16 \tuplet 3/2 { a8 fis ees~ } ees8. f16 d'8. c16 | bes8 g f! des' c4 des,8 c~ | c4 fis8 f!~ f4 ees8 ees~ | ees4 r r8 a,8 \tuplet 3/2 { ais b b'~ } |
+
+		% part "B"
+		\key c \major
+		\tuplet 3/2 { b8 a, ais } \tuplet 3/2 { b b' a~ } \tuplet 3/2 { a a,! ais } \tuplet 3/2 { b a' g~ } | g2~ g8 a, \tuplet 3/2 { ais b b'~ } |
+		\tuplet 3/2 { b8 a, ais } \tuplet 3/2 { b b' a!~ } \tuplet 3/2 { a a,! ais } \tuplet 3/2 { b a'! g~ } | g2~ g8 d \tuplet 3/2 { dis e e'~ } |
+		\tuplet 3/2 { e8 d, dis } \tuplet 3/2 { e e' d!~ } \tuplet 3/2 { d d,! dis } \tuplet 3/2 { e d'! c~ } | c2~ c8 e4 c8 | e8. c16 a8. e16 b'8. b16 d8. d16 | a2~ a8 a, \tuplet 3/2 { ais b b'~ } |
+		\tuplet 3/2 { b8 a, ais } \tuplet 3/2 { b b' a!~ } \tuplet 3/2 { a a,! ais } \tuplet 3/2 { b a'! g~ } | g2~ g8 a, \tuplet 3/2 { ais b b'~ } |
+		\tuplet 3/2 { b8 a, ais } \tuplet 3/2 { b b' a!~ } \tuplet 3/2 { a a,! ais } \tuplet 3/2 { b a'! g~ } | g2~ g8 c4 a8 |
+		c4 a fis8 dis b' a | g8 e d! bes' a4 bes,8 a~ | a4 ees' d c8 c~ |
+	} \alternative {
+		{
+			c2 r2 \key ees \major |
+		}
+		{
+			c2. r4 |
+		}
+	}
+}
+{% endif %}

@@ -1,0 +1,116 @@
+{#
+default_version = "Fake"
+
+[attributes]
+title = "The Surrey With The Fringe On Top"
+style = "Broadway"
+composer = "Richard Rodgers"
+poet = "Oscar Hammerstein II"
+piece = "Lively"
+copyright = "1943 by Williamson Music Co. Copyright Renewed."
+copyrightextra = "All Rights Administered by Chappell & Co., Inc."
+typesetter = "Mark Veltzer <mark.veltzer@gmail.com>"
+completion = "5"
+uuid = "3651a0e4-d551-11f1-8000-046874d194b7"
+structure = "AABA"
+location = "jfb:372"
+
+[[youtube]]
+id = "BIG_GVE-KiE"
+remark = "from Rodgers and Hammerstein's Oklahoma!"
+
+[[youtube]]
+id = "TjH5Bz1Ota4"
+remark = "Miles Davis Quintet on Steamin' with the Miles Davis Quintet"
+
+[versions.Fake]
+doChords = true
+doVoice = true
+doLyrics = false
+doLyricsmore = false
+doLyricsmoremore = false
+doChordBars = false
+doGuitar = false
+doExtra = false
+doPrep = false
+doOwn = false
+#}
+{% if part == "Vars" %}
+{% endif %}
+{% if part == "Doc" %}	DONE:
+	- added the meta data from the fake book.
+	- put in the tunes structure.
+	- put in the chords (fake book).
+	- put in the tune (fake book).
+	- added youtube performances.
+	- the book subtitles the tune (From 'OKLAHOMA').
+	TODO:
+	- add the lyrics.
+	- check the chords (fake book).
+	- check the tune (fake book).
+	- hear the tune to check that it is right and adjust the tempo.
+{% endif %}
+{% if part == "ChordsFake" %}\chordmode {
+	\startChords
+	\startSong
+
+	\myMark "A"
+	\startPart
+	\repeat volta 2 {
+		g2 g:maj7 | g:6 g | g g:maj7 | g1:6 | \myEndLine
+		g2 g:maj7 | g:6 g | e:m7 a:7 |
+	} \alternative {
+		{
+			a2:m7 d:7 | \myEndLineVoltaNotLast
+		}
+		{
+			a2:m7 d:7 | \myEndLineVoltaLast
+		}
+	}
+	\endPart
+
+	\myMark "B"
+	\startPart
+	d2:m7 g:7 | c:maj7 a:m7 | d:m7 g:7 | c1:maj7 | \myEndLine
+	a1:7 | d2 b:m7 | e:m9 a:7 | a:m7 d:7 | \myEndLine
+	\endPart
+
+	\myMark "A"
+	\startPart
+	g2 g:maj7 | g:6 g | g g:maj7 | g:6 g | \myEndLine
+	g2 g:maj7 | g:6 g | a:m e:7.9- | a:m b4:dim7 a:m/c | \myEndLine
+	g1/d | a2:m7 d:7 | g:6 c | g1:6 | \myEndLine
+	\endPart
+
+	\endSong
+	\endChords
+}
+{% endif %}
+{% if part == "VoiceFake" %}{
+	\tempo "Allegro" 4 = 200
+	\time 2/2
+	\key g \major
+
+	% part "A"
+	\repeat volta 2 {
+		d4 d d d | d4 d8 cis d g r4 | d4 d d d | d4 d8 cis d a' r4 |
+		d,4 d d d | d4 d8 cis d b' a g | a2. b4 |
+	} \alternative {
+		{
+			d,1 |
+		}
+		{
+			d'2. d4 |
+		}
+	}
+
+	% part "B"
+	c4 b a8 a g g | c8 c b4 a4. e8 | g4 g g8 g g4 | a4 g2 g4 |
+	d'8 d cis4 b8 b a a | d4 cis b4. fis8 | a4 a8 a a4 b8 cis | d2 a |
+
+	% part "A"
+	d,4 d d d | d4 d8 cis d g r4 | d4 d d d | d4 d8 cis d a' r4 |
+	d,4 d d d | d4 d8 cis d b' a g | a2 b | c2 b4 a |
+	d,8 d d d d d d d | c'2 e,4 fis | g1~ | g2. r4 |
+}
+{% endif %}

@@ -1,0 +1,108 @@
+{#
+default_version = "Fake"
+
+[attributes]
+title = "Stockholm Sweetnin'"
+style = "Jazz"
+composer = "Quincy Jones"
+piece = "Bounce"
+copyright = "1956 by Silhouette Music Corp."
+typesetter = "Mark Veltzer <mark.veltzer@gmail.com>"
+completion = "5"
+uuid = "1013276e-d551-11f1-8000-046874d194b7"
+structure = "AABA"
+location = "jfb:362"
+
+[[youtube]]
+id = "EvTWLhvcJ0s"
+remark = "Art Farmer and Clifford Brown with the Swedish All Stars in the original recording (1953)"
+
+[[youtube]]
+id = "czoV-o9XGBw"
+remark = "Quincy Jones Orchestra"
+
+[versions.Fake]
+doChords = true
+doVoice = true
+doLyrics = false
+doLyricsmore = false
+doLyricsmoremore = false
+doChordBars = false
+doGuitar = false
+doExtra = false
+doPrep = false
+doOwn = false
+#}
+{% if part == "Vars" %}
+{% endif %}
+{% if part == "Doc" %}	DONE:
+	- added the meta data from the fake book.
+	- put in the tunes structure.
+	- put in the chords (fake book).
+	- put in the tune (fake book).
+	- added youtube performances.
+	TODO:
+	- check the chords (fake book).
+	- check the tune (fake book).
+	- hear the tune to check that it is right and adjust the tempo.
+	- the fake book has no section letters; the AABA split is by eight bar phrases, the last A has one extra bar for the held final note.
+	- bars 19-20: the book prints an f flat (tied over the bar line) and then an f; check it.
+{% endif %}
+{% if part == "ChordsFake" %}\chordmode {
+	\startChords
+	\startSong
+
+	\myMark "A"
+	\startPart
+	d2:m7.5- g:7 | c1:m7.5- | a2:m7 d:7 | g1:m | g:m | bes2 b:dim7 | \myEndLine
+	c2:m7 cis:dim7 | bes1 | \myEndLine
+	\endPart
+
+	\myMark "A"
+	\startPart
+	d2:m7.5- g:7 | c1:m7.5- | a2:m7 d:7 | g1:m | g:m | \myEndLine
+	bes2 b:dim7 | c:m7 f:7 | bes1 | \myEndLine
+	\endPart
+
+	\myMark "B"
+	\startPart
+	aes2:m7 des:7 | ges:6 ees:m7 | aes:m7 a:dim7 | \myEndLine
+	bes:m7.5- ees:7.9- | aes:m7 des:7.9- | ges1:6 | ees2:m7 c:m7.5- | c1:m7/f | \myEndLine
+	\endPart
+
+	\myMark "A"
+	\startPart
+	d2:m7.5- g:7 | c1:m7.5- | a2:m7 d:7 | g1:m | g:m | \myEndLine
+	bes2 b:dim7 | c:m7 f:7 | bes1 | bes | \myEndLine
+	\endPart
+
+	\endSong
+	\endChords
+}
+{% endif %}
+{% if part == "VoiceFake" %}{
+	\tempo "Moderato" 2 = 100
+	\time 2/2
+	\key bes \major
+
+	% part "A"
+	r8 d f g aes g f d | ees4 f8 ges~ ges2 | r8 a gis a d4 c8 bes~ | bes1 |
+	r8 g bes cis d bes g e! | f8 e f g r4 r8 f16 ees | ees4 r8 bes' a4 g8 f~ | f1~ |
+
+	% part "A"
+	f8 d f g aes g f d | ees4 f8 ges~ ges2 | r8 a aes a! d4 c8 bes~ | bes1 |
+	r8 g bes cis d bes g d | f8 e! f g r4 r8 f16 ees | ees8 c'4. bes4 a8 bes~ | bes1~ |
+
+	% part "B"
+	bes2 r4 r8 bes~ |
+	\key des \major
+	bes8 ees des ges, r4 r8 ges~ | ges4 aes8 ges beses des, ees fes~ |
+	fes2 f8 ges f ees~ | ees8 c des eses~ eses4 r8 bes'~ | bes8 ees des ges, r4 r8 ges~ | ges4 aes8 ges bes ges aes f~ | f1 |
+
+	% part "A"
+	r8 d! f g! aes g f d |
+	\key bes \major
+	ees4 f8 ges~ ges2 | r8 a gis a d4 c8 bes~ | bes1 |
+	r8 g bes cis d bes g d | f8 e! f g r4 r8 f16 ees | ees8 c'4. bes4 a8 bes~ | bes1~ | bes2. r4 |
+}
+{% endif %}

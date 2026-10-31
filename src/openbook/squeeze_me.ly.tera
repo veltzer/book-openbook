@@ -1,0 +1,119 @@
+{#
+default_version = "Fake"
+
+[attributes]
+title = "Squeeze Me"
+style = "Jazz"
+composer = "Clarence Williams, Thomas Waller"
+poet = "Clarence Williams, Thomas Waller"
+piece = "Moderate Blues Tempo"
+copyright = "1925, 1957 by MCA Music Publishing, A Division of MCA Inc., New York, NY."
+copyrightextra = "Copyright Renewed."
+typesetter = "Mark Veltzer <mark.veltzer@gmail.com>"
+completion = "5"
+uuid = "100e4fb4-d551-11f1-8000-046874d194b7"
+structure = "AB"
+location = "jfb:360"
+
+[[youtube]]
+id = "eOONZQFIcvQ"
+remark = "Fats Waller"
+
+[[youtube]]
+id = "MBZd9z6Jdmc"
+remark = "Louis Armstrong and His Hot Five (1928)"
+
+[versions.Fake]
+doChords = true
+doVoice = true
+doLyrics = false
+doLyricsmore = false
+doLyricsmoremore = false
+doChordBars = false
+doGuitar = false
+doExtra = false
+doPrep = false
+doOwn = false
+#}
+{% if part == "Vars" %}
+{% endif %}
+{% if part == "Doc" %}	DONE:
+	- added the meta data from the fake book.
+	- put in the tunes structure.
+	- put in the chords (fake book).
+	- put in the tune (fake book).
+	- added youtube performances.
+	TODO:
+	- add the lyrics.
+	- check the chords (fake book).
+	- check the tune (fake book).
+	- hear the tune to check that it is right and adjust the tempo.
+	- the fake book has no section letters; the first twelve bars are marked A and the repeated sixteen bars B.
+	- the exact placement of the quick passing chords (bars 12, 16, 20, 25, 26 and the endings) is read from their position over the notes; check it.
+{% endif %}
+{% if part == "ChordsFake" %}\chordmode {
+	\startChords
+	\startSong
+
+	\partial 4 s4 |
+
+	\myMark "A"
+	\startPart
+	g2:7 c:7 | f1:6 | g2:7 c:7 | f4:6 f:dim f:7 aes:7 | \myEndLine
+	a4:7 b:m7 c:dim7 a:7/cis | d2:m b:dim7 | c g:7 | \myEndLine
+	g2:m7 c:7 | d:m7 g:7 | c g4:m a:7 | d2:m7 g:7 | \myEndLine
+	c4 c:dim7 c8.:7 f16 ees8.:7 d16:7 | \myEndLine
+	\endPart
+
+	\myMark "B"
+	\startPart
+	\repeat volta 2 {
+		g2:7 c:7 | f2:6 ees4:maj7 d:7 | \myEndLine
+		g2:7 c:7 | f4:6 e:7 f:6 ees8.:7 d16:7 | g2:7 c:7 | f2:m d:m7.5- | \myEndLine
+		c2/g g:7 | g4:m7 c4..:7 f16 ees8.:7 d16:7 | g2:7 c:7 | f2:6 ees4:maj7 d:7 | \myEndLine
+		g2:7 c:7 | f2.:9 f4:7 | b8:dim7 bes4:dim7 a:dim7 aes8:dim7 g4:dim7 | fis8:dim7 f4:dim7 e8:dim7 ees4:dim7 d:dim7 | \myEndLine
+		g4:7 d:m7 g:m7.5- g:7 |
+	} \alternative {
+		{
+			c8:7 ges4:7 f4.:6 ees8.:7 d16:7 | \myEndLineVoltaNotLast
+		}
+		{
+			c8:7 ges4:7 f8*5:6 | \myEndLineVoltaLast
+		}
+	}
+	\endPart
+
+	\endSong
+	\endChords
+}
+{% endif %}
+{% if part == "VoiceFake" %}{
+	\tempo "Moderato" 2 = 80
+	\time 2/2
+	\key f \major
+
+	\partial 4 c8. cis16 |
+
+	% part "A"
+	d8. f16 g8. f16 gis8 a4 d,8~ | d2 r4 c8. cis16 | d8. f16 g8. f16 gis8 a4 f8~ | f2 r8. f16 g8. gis16 |
+	a8 a4 a8~ a4 b! | f8 f4 f8~ f4 f | e8 g4 d8~ d e d4 |
+	g2 r4 d8 e | f8 f f4 e8 d4 g8~ | g2. a8 e | g8 f g f e d4 c8~ |
+	c2 r8. c'16 cis8. d16 |
+
+	% part "B"
+	\repeat volta 2 {
+		a8 a4 d8 a8 a4 e8 | f8 d4. r8. c'16 cis8. d16 |
+		a8 a4 d8 a8 a4 e8 | f8 d4. r8. c'16 cis8. d16 | a8 a4 d8 a8 a4 c8 | c2 aes |
+		g8 g4 g8 g4 g | g2 r8. c16 cis8. d16 | a8 a4 d8 a8 a4 e8 | f8 d4. r8. c'16 cis8. d16 |
+		a8 a4 d8 a8 a4 d8 | g,2. f4 | d'8 des4 c8~ c r r4 | a8 aes4 g8~ g4 r8 e |
+		a8. g16 a8. g16 a8. g16 a8. g16 |
+	} \alternative {
+		{
+			c8 a4 f8~ f r16 c'16 cis8. d16 |
+		}
+		{
+			c8 a4 f8~ f4 r |
+		}
+	}
+}
+{% endif %}

@@ -1,0 +1,98 @@
+{#
+default_version = "Fake"
+
+[attributes]
+title = "Southern Comfort"
+style = "Jazz"
+composer = "Wayne Henderson"
+piece = "Medium"
+copyright = "1974 by American League Music (BMI) and Silver Carvings Music (BMI)"
+copyrightextra = "Administered by American League Music"
+typesetter = "Mark Veltzer <mark.veltzer@gmail.com>"
+completion = "5"
+uuid = "0129e9fe-d551-11f1-8000-046874d194b7"
+structure = "AABA"
+location = "jfb:354"
+
+[[youtube]]
+id = "p131adh0Jbc"
+remark = "The Crusaders in the original recording from Southern Comfort (1974)"
+
+[[youtube]]
+id = "uL84_q4wB7w"
+remark = "The Crusaders"
+
+[versions.Fake]
+doChords = true
+doVoice = true
+doLyrics = false
+doLyricsmore = false
+doLyricsmoremore = false
+doChordBars = false
+doGuitar = false
+doExtra = false
+doPrep = false
+doOwn = false
+#}
+{% if part == "Vars" %}
+{% endif %}
+{% if part == "Doc" %}	DONE:
+	- added the meta data from the fake book.
+	- put in the tunes structure.
+	- put in the chords (fake book).
+	- put in the tune (fake book).
+	- added youtube performances.
+	TODO:
+	- check the chords (fake book).
+	- check the tune (fake book).
+	- hear the tune to check that it is right and adjust the tempo.
+	- the exact beat of the Am7 and Gm7 chords in the second bar of each A section is doubtful.
+{% endif %}
+{% if part == "ChordsFake" %}\chordmode {
+	\startChords
+	\startSong
+
+	\myMark "A"
+	\startPart
+	f1 | bes4:maj7 a8:m7 g8*5:m7 | bes1/f | f | \myEndLine
+	\endPart
+
+	\myMark "A"
+	\startPart
+	f1 | bes4:maj7 a8:m7 g8*5:m7 | bes1/f | f | \myEndLine
+	\endPart
+
+	\myMark "B"
+	\startPart
+	bes2:maj7 a:m7 | bes:maj7 g:m7 | bes:maj7 a:m7 | bes:maj7 g:m7 | bes:maj7 a:m7 | \myEndLine
+	bes2:maj7 g:m7 | bes:maj7 a:m7 | g:m7 c:13 | \myEndLine
+	\endPart
+
+	\myMark "A"
+	\startPart
+	f1 | bes4:maj7 a8:m7 g8*5:m7 | bes1/f | f | \myEndLine
+	\endPart
+
+	\endSong
+	\endChords
+}
+{% endif %}
+{% if part == "VoiceFake" %}{
+	\tempo "Moderato" 4 = 120
+	\time 4/4
+	\key f \major
+
+	% part "A"
+	a'16 c c d c4~ c8 c, d16 f g f | a8 a16 g r8 a16 f~ f4 bes16 a d,8 | f1~ | f1 |
+
+	% part "A"
+	d'16 c a c~ c8 d r8. c,16 d f g d | a'8 a16 g r8 a16 f~ f4 bes16 a d,8 | f1~ | f1 |
+
+	% part "B"
+	d'8 c a c~ c2 | a8 g a f~ f2 | d'8 c a c~ c2 | a8 g a f~ f2 | d'8 c a c~ c2 |
+	a8 g a f~ f2 | d'8 c a c~ c2 | a8 g a a~ a2 |
+
+	% part "A"
+	a16 c c d c4~ c8 c, d16 f g f | a8 a16 g r8 a16 f~ f4 bes16 a d,8 | f1~ | f1 |
+}
+{% endif %}

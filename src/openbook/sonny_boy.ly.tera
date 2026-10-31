@@ -1,0 +1,125 @@
+{#
+default_version = "Fake"
+
+[attributes]
+title = "Sonny Boy"
+style = "Pop"
+composer = "Al Jolson, B.G. DeSylva, Lew Brown, Ray Henderson"
+poet = "Al Jolson, B.G. DeSylva, Lew Brown, Ray Henderson"
+piece = "Moderately"
+copyright = "1928 by DeSylva, Brown & Henderson, Inc."
+copyrightextra = "Copyright Renewed, controlled by Chappell & Co., Inc."
+typesetter = "Mark Veltzer <mark.veltzer@gmail.com>"
+completion = "5"
+uuid = "01281a52-d551-11f1-8000-046874d194b7"
+structure = "AABA"
+location = "jfb:354"
+
+[[youtube]]
+id = "fy1iOmqH27Y"
+remark = "Al Jolson in the original recording (1928)"
+
+[[youtube]]
+id = "64k57RQIoyo"
+remark = "Chet Baker"
+
+[versions.Fake]
+doChords = true
+doVoice = true
+doLyrics = false
+doLyricsmore = false
+doLyricsmoremore = false
+doChordBars = false
+doGuitar = false
+doExtra = false
+doPrep = false
+doOwn = false
+#}
+{% if part == "Vars" %}
+{% endif %}
+{% if part == "Doc" %}	DONE:
+	- added the meta data from the fake book (the book prints the composer as B.D. DeSylva, a misprint for B.G. DeSylva).
+	- put in the tunes structure.
+	- put in the chords (fake book).
+	- put in the tune (fake book).
+	- added youtube performances.
+	TODO:
+	- check the chords (fake book).
+	- check the tune (fake book).
+	- hear the tune to check that it is right and adjust the tempo.
+	- the fake book prints no start repeat sign, so the repeat goes back to the beginning, yet the second verse of lyrics starts at the last A section. Check where the repeat should start.
+	- add the lyrics.
+{% endif %}
+{% if part == "ChordsFake" %}\chordmode {
+	\startChords
+	\startSong
+
+	\repeat volta 2 {
+
+		\myMark "A"
+		\startPart
+		ees1 | g2:m7.5- c:7 | f1:m | f2:m7 bes:7 | \myEndLine
+		ees1 | ges:dim7 | f:m7 | bes:7 | \myEndLine
+		\endPart
+
+		\myMark "A"
+		\startPart
+		ees1 | g2:m7.5- c:7 | f1:m | f2:m7 bes:7 | \myEndLine
+		c1:m | f2:m7 bes:7 | ees2 aes:7 | ees1 | \myEndLine
+		\endPart
+
+		\myMark "B"
+		\startPart
+		g1:7 | g:7 | c:7.9- | c:7.9- | \myEndLine
+		c1:m7 | f:7 | bes2:7 bes:dim7 | bes1:7 | \myEndLine
+		\endPart
+
+		\myMark "A"
+		\startPart
+		ees1 | g2:m7.5- c:7 | f1:m | f2:m7 bes:7 | \myEndLine
+		c1:m | f2:m7 bes:7 | ees1 | \myEndLine
+	} \alternative {
+		{
+			f2:m7 bes:7 | \myEndLineVoltaNotLast
+		}
+		{
+			aes2:maj9 aes4:m6 ees | \myEndLineVoltaLast
+		}
+	}
+	\endPart
+
+	\endSong
+	\endChords
+}
+{% endif %}
+{% if part == "VoiceFake" %}{
+	\tempo "Moderato" 4 = 120
+	\time 4/4
+	\key ees \major
+
+	\repeat volta 2 {
+		% part "A"
+		ees'2 bes4 g | f2 e!2 | c'4 c aes f | ees2 d |
+		ees2 g4 bes | d2 c4 d | bes1~ | bes1 |
+
+		% part "A"
+		ees2 bes4 g | f2 e!2 | c'4 c aes f | ees2 d |
+		ees2 g4 bes | ees,2 g4 bes | ees,1~ | ees2 r2 |
+
+		% part "B"
+		d'2 d4 c | b!4 aes2 g4 | des'2 des4 c | bes1 |
+		c2 c4 bes | a!4 g2 f4 | bes4 bes c cis | d2. d4 |
+
+		% part "A"
+		ees2 bes4 g | f2 e!2 | c'4 c aes f | ees2 d |
+		ees2 g4 bes | ees2 bes4 c | ees1~ |
+	} \alternative {
+		{
+			ees4 r r2 |
+		}
+		{
+			ees1\repeatTie |
+		}
+	}
+}
+{% endif %}

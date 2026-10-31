@@ -1,0 +1,127 @@
+{#
+default_version = "Fake"
+
+[attributes]
+title = "Sweet Sue-Just You"
+style = "Swing"
+composer = "Victor Young"
+poet = "Will J. Harris"
+piece = "Moderately"
+copyright = "1928 Shapiro, Bernstein & Co., Inc., New York. Copyright Renewed."
+typesetter = "Mark Veltzer <mark.veltzer@gmail.com>"
+completion = "5"
+uuid = "3651a0e3-d551-11f1-8000-046874d194b7"
+structure = "AABA"
+location = "jfb:371"
+
+[[youtube]]
+id = "ppTwSoScRfU"
+remark = "Ben Pollack and his Californians in the original hit recording (1928)"
+
+[[youtube]]
+id = "5kWFFBF3Vlk"
+remark = "The Benny Goodman Quartet (1936)"
+
+[versions.Fake]
+doChords = true
+doVoice = true
+doLyrics = false
+doLyricsmore = false
+doLyricsmoremore = false
+doChordBars = false
+doGuitar = false
+doExtra = false
+doPrep = false
+doOwn = false
+#}
+{% if part == "Vars" %}
+{% endif %}
+{% if part == "Doc" %}	DONE:
+	- added the meta data from the fake book.
+	- put in the tunes structure.
+	- put in the chords (fake book).
+	- put in the tune (fake book).
+	- added youtube performances.
+	TODO:
+	- add the lyrics.
+	- check the chords (fake book).
+	- check the tune (fake book).
+	- hear the tune to check that it is right and adjust the tempo.
+{% endif %}
+{% if part == "ChordsFake" %}\chordmode {
+	\startChords
+	\startSong
+
+	\partial 2 s2 |
+
+	\repeat volta 2 {
+
+		\myMark "A"
+		\startPart
+		a1:m7 | d:7 | a:m7 | d2:7 d:7.9- | \myEndLine
+		g1 | g2 d:7.9- | g1 | g | \myEndLine
+		\endPart
+
+		\myMark "A"
+		\startPart
+		a1:m7 | d:7 | a:m7 | d2:7 d:7.9- | \myEndLine
+		g1 | g2 d:7.9- | g1 | g | \myEndLine
+		\endPart
+
+		\myMark "B"
+		\startPart
+		g1 | g:maj7/fis | g:7/f | e:7 | \myEndLine
+		a:m | a:m7 | a:m7.5- | d:7 | \myEndLine
+		\endPart
+
+		\myMark "A"
+		\startPart
+		a1:m7 | d:7 | a:m7 | d2:7 d:7.9- | \myEndLine
+		g1 | g2 c:9 |
+	} \alternative {
+		{
+			g1 | a4:m7 d2.:7 | \myEndLineVoltaNotLast
+		}
+		{
+			g4 c2 c4:m6 | g1:maj7 | \myEndLineVoltaLast
+		}
+	}
+	\endPart
+
+	\endSong
+	\endChords
+}
+{% endif %}
+{% if part == "VoiceFake" %}{
+	\tempo "Moderato" 4 = 120
+	\time 2/2
+	\key g \major
+
+	\partial 2 d4 e |
+
+	\repeat volta 2 {
+		% part "A"
+		a4 a a2~ | a2 d,4 e | a4 a a2~ | a2 b |
+		e,1~ | e2 b' | e,1~ | e2 d4 e |
+
+		% part "A"
+		a4 a a2~ | a2 d,4 e | a4 a a2~ | a2 b |
+		e,1~ | e2 b' | e,1~ | e2 b'4 c |
+
+		% part "B"
+		d4 d d2~ | d2 b4 c | d4 d d2~ | d2 dis,4 e |
+		c'4 c c c | c4 c b a | c1~ | c2 d,4 e |
+
+		% part "A"
+		a4 a a2~ | a2 d,4 e | a4 a a2~ | a2 b |
+		g1~ | g2 e |
+	} \alternative {
+		{
+			g1~ | g4 r d e |
+		}
+		{
+			g1~ | g2. r4 |
+		}
+	}
+}
+{% endif %}

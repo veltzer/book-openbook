@@ -1,0 +1,119 @@
+{#
+default_version = "Fake"
+
+[attributes]
+title = "Swinging Shepherd Blues"
+style = "Jazz"
+composer = "Moe Koffman"
+poet = "Rhoda Roberts, Kenny Jacobson"
+piece = "Slowly"
+copyright = "1958 by BIG SEVEN MUSIC CORP., New York, NY"
+typesetter = "Mark Veltzer <mark.veltzer@gmail.com>"
+completion = "5"
+uuid = "36505a32-d551-11f1-8000-046874d194b7"
+structure = "Blues"
+location = "jfb:374"
+
+[[youtube]]
+id = "xH1X_PTYYu4"
+remark = "Moe Koffman Quartette in the original single version (1958)"
+
+[[youtube]]
+id = "HhJc6zfYxU4"
+remark = "Ella Fitzgerald (1958)"
+
+[versions.Fake]
+doChords = true
+doVoice = true
+doLyrics = false
+doLyricsmore = false
+doLyricsmoremore = false
+doChordBars = false
+doGuitar = false
+doExtra = false
+doPrep = false
+doOwn = false
+#}
+{% if part == "Vars" %}
+{% endif %}
+{% if part == "Doc" %}	DONE:
+	- added the meta data from the fake book.
+	- put in the tunes structure.
+	- put in the chords (fake book).
+	- put in the tune (fake book).
+	- added youtube performances.
+	TODO:
+	- add the lyrics.
+	- check the chords (fake book).
+	- check the tune (fake book).
+	- hear the tune to check that it is right and adjust the tempo.
+	- bar 11: the chord positions (C, C9/E, F6, Ab7/Gb) are not aligned with beats in the fake book, check.
+	- third ending: the fake book leaves the bar incomplete after the tied c, rests were added to fill it.
+	- the second grace note in each grace pair of bars 1-3 and 9-10 has no accidental in the fake book and is read as carrying the accidental of the first one, check.
+{% endif %}
+{% if part == "ChordsFake" %}\chordmode {
+	\startChords
+	\startSong
+
+	\partial 4 \grace s8 s4 |
+
+	\myMark "A"
+	\startPart
+	\repeat volta 3 {
+		\grace s8 c1:6 | \grace s8 c1:6 | \grace s8 c1:6 | c2:9 c:7 | \myEndLine
+		f1*2:9 | c2 d4:m7 dis:dim7 | c2/e a:7 | \myEndLine
+		\grace s8 d1:m7 | \grace s8 g1:7 | c4 c:9/e f8:6 aes4.:7/ges | \myEndLine
+	} \alternative {
+		{
+			g2:7 c:6 | \myEndLineVoltaNotLast
+		}
+		{
+			g2:7 c:6 | \myEndLineVoltaNotLast
+		}
+		{
+			g2:7 c:6 | \myEndLineVoltaLast
+		}
+	}
+	\endPart
+
+	\myMark "B"
+	\startPart
+	c1*4:6 | \myEndLine
+	f1*2:9 | c1*2:6 | \myEndLine
+	d1:9 | g:7 | c1*2:6 | \myEndLine
+	\endPart
+
+	\endSong
+	\endChords
+}
+{% endif %}
+{% if part == "VoiceFake" %}{
+	\tempo "Andante" 2 = 60
+	\time 2/2
+	\key c \major
+
+	\partial 4 \grace g'8 a8. c16 |
+
+	% part "A"
+	\repeat volta 3 {
+		\acciaccatura dis8^\markup { \musicglyph #"scripts.segno" } e4 \acciaccatura dis8 e4 c8. g16 a8. c16 | \acciaccatura dis8 e4 \acciaccatura dis8 e4 c8. g16 a8. c16 | \acciaccatura dis8 e4 \acciaccatura dis8 e4 c8. g16 \tuplet 3/2 { a8 g bes~ } | bes2~ bes4. c8 |
+		f8. c16 ges'8 f~ f4. c8 | ges'8 f4. \grace { g16 f } ees8. c16 g8. f16 | e8. c16 e8. c16 f4 fis8 g~ | g2 \grace { g32 gis } a8. c16 d8. c16 |
+		\acciaccatura d8 ees4 \acciaccatura d8 ees4 c8. g16 f8. g16 | \acciaccatura d'8 ees4 \acciaccatura d8 ees4 c4 \tuplet 3/2 { g8 f g } | c8 bes4. a8 aes4. |
+	} \alternative {
+		{
+			g8. f16 e8 c~ c4 \tuplet 3/2 { g'8 a c } |
+		}
+		{
+			g8. f16 e8 c r8.^\markup { \bold { To next strain } } g'16 b8. d16 |
+		}
+		{
+			g,8. f16 e8 c~ c8 r^\markup { \italic { Fine } } r4 |
+		}
+	}
+
+	% part "B"
+	c'8. e,16 g4 e8. c16 e8. c16 | f4 f8. c16 fis8 c4. | r8 dis8 \tuplet 3/2 { e8 g a } a8. bes16 a8. bes16 | \tuplet 3/2 { a8 bes bes } a8. aes16 g4 a!8. c16 |
+	ees8. f,16 \tuplet 3/2 { fis8 g c } \tuplet 3/2 { f,8 g c } \tuplet 3/2 { f,8 g c } | \tuplet 3/2 { ges8 f ees } f8 f~ f2 | r8. g16 c8. e16 g8. e16 c8. a16 | g8. gis16 a8. e16 g!8. gis16 a8. e'16 |
+	fis8. fis,16 a8. c16 dis8. e16 f!8. fis16 | g8. gis,16 a8. c16 ees8. c16 d8. a16 | c4 c2 c4~ | c8 c4 c8 c4 \tuplet 3/2 { g8 a c^\markup { \italic { D.S. al Fine } } } |
+}
+{% endif %}

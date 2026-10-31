@@ -1,0 +1,124 @@
+{#
+default_version = "Fake"
+
+[attributes]
+title = "These Foolish Things"
+style = "Jazz"
+composer = "Jack Strachey, Harry Link"
+poet = "Holt Marvell"
+piece = "Slow Ballad"
+copyright = "1935 Boosey & Co. Ltd., London, England."
+copyrightextra = "Publication rights for United States, Canada and Newfoundland Assigned to Bourne Co. Copyright Renewed."
+typesetter = "Mark Veltzer <mark.veltzer@gmail.com>"
+completion = "5"
+uuid = "3d18875e-d551-11f1-8000-046874d194b7"
+structure = "AABA"
+location = "jfb:388"
+
+[[youtube]]
+id = "qO0Bn_H4C3M"
+remark = "Billie Holiday (1936)"
+
+[[youtube]]
+id = "1rojEhw5-QQ"
+remark = "Lester Young (1944)"
+
+[versions.Fake]
+doChords = true
+doVoice = true
+doLyrics = false
+doLyricsmore = false
+doLyricsmoremore = false
+doChordBars = false
+doGuitar = false
+doExtra = false
+doPrep = false
+doOwn = false
+#}
+{% if part == "Vars" %}
+{% endif %}
+{% if part == "Doc" %}	DONE:
+	- added the meta data from the fake book.
+	- put in the tunes structure.
+	- put in the chords (fake book).
+	- put in the tune (fake book).
+	- added youtube performances.
+	TODO:
+	- add the lyrics.
+	- check the chords (fake book).
+	- check the tune (fake book).
+	- hear the tune to check that it is right and adjust the tempo.
+{% endif %}
+{% if part == "ChordsFake" %}\chordmode {
+	\startChords
+	\startSong
+
+	\repeat volta 2 {
+
+		\myMark "A"
+		\startPart
+		ees2:6 c:m7 | f:m9 bes:7 | ees:6 c:m7 | f:9 bes:7 | \myEndLine
+		ees:9 ees:7.5+ | aes:6 c:7 | f1:7 | f2:m7 bes:7 | \myEndLine
+		\endPart
+
+		\myMark "A"
+		\startPart
+		ees:6 c:m7 | f:m9 bes:7 | ees c:m7 | f:9 bes:7 | \myEndLine
+		ees:9 ees:7.5+ | aes c:7 | f:9 bes:7 | ees d:7 | \myEndLine
+		\endPart
+
+		\myMark "B"
+		\startPart
+		g1:m7 | c2:m6 d:9 | g1:m7 | c:9 | \myEndLine
+		bes2/f g:m7 | c:m7 f:7 | bes:7 e:dim7 | f:m7 bes:7 | \myEndLine
+		\endPart
+
+		\myMark "A"
+		\startPart
+		ees:6 c:m7 | f:m9 bes:7 | ees:6 c:m7 | f:9 bes:7 | \myEndLine
+		ees:9 ees:7.5+ | aes:maj7 c:7 | f:9 bes:7 |
+	} \alternative {
+		{
+			ees4 e:dim7 f:m7 bes:7 | \myEndLineVoltaNotLast
+		}
+		{
+			ees4 aes:7 ees2:maj7 | \myEndLineVoltaLast
+		}
+	}
+	\endPart
+
+	\endSong
+	\endChords
+}
+{% endif %}
+{% if part == "VoiceFake" %}{
+	\tempo "Adagio" 2 = 40
+	\time 2/2
+	\key ees \major
+
+	\repeat volta 2 {
+		% part "A"
+		r8. ees16 f8. g16 f8. ees16 c8. ees16 | g4 g g8 f4. | r8. ees16 f8. g16 f8. ees16 c8. ees16 | c'4 c c8 bes4. |
+		r8. bes16 c8. bes16 ees4 ees8 ees~ | ees2 \tuplet 3/2 { g,4 aes bes } | c4. c,8 \tuplet 3/2 { c4 ees g } | f1 |
+
+		% part "A"
+		r8. ees16 f8. g16 f8. ees16 c8. ees16 | g4 g g8 f4. | r8. ees16 f8. g16 f8. ees16 c8. ees16 | c'4 c c8 bes4. |
+		r8. bes16 c8. bes16 ees8 ees4 ees8~ | ees2 \tuplet 3/2 { g,4 aes bes } | c4. c,8 \tuplet 3/2 { d4 ees f } | ees1 |
+
+		% part "B"
+		r4 bes' g2 | r4 c a!2 | r4 bes c d | d1 |
+		r4 d c bes | c8 d c2 f,4 | bes bes bes a! | aes8 bes aes2. |
+
+		% part "A"
+		r8. ees16 f8. g16 f8. ees16 c8. ees16 | g4 g g8 f4. | r8. ees16 f8. g16 f8. ees16 c8. ees16 | c'4 c c8 bes4. |
+		r8. bes16 c8. bes16 \tuplet 3/2 { ees4 ees ees } | g2 \tuplet 3/2 { g,4 aes bes } | c4. c,8 \tuplet 3/2 { d4 ees f } |
+	} \alternative {
+		{
+			ees2. r4 |
+		}
+		{
+			ees2. r4 |
+		}
+	}
+}
+{% endif %}

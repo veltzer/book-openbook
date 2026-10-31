@@ -1,0 +1,109 @@
+{#
+default_version = "Fake"
+
+[attributes]
+title = "They Didn't Believe Me"
+style = "Broadway"
+composer = "Jerome Kern"
+poet = "Herbert Reynolds"
+piece = "Moderately"
+copyright = "1914 T.B. Harms Company. Copyright Renewed"
+copyrightextra = "(c/o The Welk Music Group, Santa Monica, CA 90401)"
+typesetter = "Mark Veltzer <mark.veltzer@gmail.com>"
+completion = "5"
+uuid = "c323a85a-d552-11f1-8000-046874d194b7"
+structure = "ABAC"
+location = "jfb:391"
+
+[[youtube]]
+id = "VLn8fyE0saQ"
+remark = "Walter Van Brunt and Gladys Rice (1915)"
+
+[[youtube]]
+id = "nlv5EzkPtRY"
+remark = "Dinah Washington"
+
+[versions.Fake]
+doChords = true
+doVoice = true
+doLyrics = false
+doLyricsmore = false
+doLyricsmoremore = false
+doChordBars = false
+doGuitar = false
+doExtra = false
+doPrep = false
+doOwn = false
+#}
+{% if part == "Vars" %}
+{% endif %}
+{% if part == "Doc" %}	DONE:
+	- added the meta data from the fake book.
+	- put in the tunes structure.
+	- put in the chords (fake book).
+	- put in the tune (fake book).
+	- added youtube performances.
+	TODO:
+	- add the lyrics.
+	- check the chords (fake book).
+	- check the tune (fake book).
+	- hear the tune to check that it is right and adjust the tempo.
+{% endif %}
+{% if part == "ChordsFake" %}\chordmode {
+	\startChords
+	\startSong
+
+	\partial 2. s2. |
+
+	\myMark "A"
+	\startPart
+	a1:m7 | d:7 | g | b2:m7.5- e:7.9- | \myEndLine
+	a1:m7 | d:7 | g | e:m7 | \myEndLine
+	\endPart
+
+	\myMark "B"
+	\startPart
+	a:m7 | d2:7 d:7/c | b1:m7 | e:m | \myEndLine
+	b:m | fis:7 | b2:m7 f:9 | e:7 e:7.9- | \myEndLine
+	\endPart
+
+	\myMark "A"
+	\startPart
+	a1:m7 | d:7 | g:6 | e:m7 | \myEndLine
+	a:m | d:7 | g2:6 f:9 | e1:7 | \myEndLine
+	\endPart
+
+	\myMark "C"
+	\startPart
+	a:m | d:7 | g2 a:m7 | b:m7 e:7 | \myEndLine
+	a1:m7 | d2:7 d:7.9- | g1*2 | \myEndLine
+	\endPart
+
+	\endSong
+	\endChords
+}
+{% endif %}
+{% if part == "VoiceFake" %}{
+	\tempo "Moderato" 2 = 80
+	\time 2/2
+	\key g \major
+
+	\partial 2. d4 e g |
+
+	% part "A"
+	a2 a~ | a4 b a8. b16 g8. a16 | b1~ | b4 b \tuplet 3/2 { b c d } |
+	a2 a~ | a4 a \tuplet 3/2 { a b c } | d,2 d~ | d4 d e g |
+
+	% part "B"
+	c4 e, fis g | a4. fis8 g4 a | d fis, g a | b2 b4 cis |
+	d4 b8. cis16 d2~ | d4 cis b ais | b1~ | b4 d c b |
+
+	% part "A"
+	a2 a~ | a4 a8. b16 \tuplet 3/2 { a8 b a } g8. a16 | b2 b~ | b4 g a b |
+	c2 c | c4 c b ais | b1~ | b4 b b8 c d4 |
+
+	% part "C"
+	a2 a~ | a4 a a8 b c4 | d,2 d~ | d4 d dis e |
+	c'4 e, fis g | a2 b | g1~ | g4 r r2 |
+}
+{% endif %}

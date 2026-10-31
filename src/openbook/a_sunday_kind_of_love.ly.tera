@@ -1,0 +1,117 @@
+{#
+default_version = "Fake"
+
+[attributes]
+title = "A Sunday Kind Of Love"
+style = "Jazz"
+composer = "Barbara Belle, Louis Prima, Anita Leonard, Stan Rhodes"
+poet = "Barbara Belle, Louis Prima, Anita Leonard, Stan Rhodes"
+piece = "Moderately Slow"
+copyright = "1946, 1972 by MCA MUSIC PUBLISHING, A Division of MCA Inc., New York, NY"
+copyrightextra = "Copyright Renewed"
+typesetter = "Mark Veltzer <mark.veltzer@gmail.com>"
+completion = "5"
+uuid = "3651a0e1-d551-11f1-8000-046874d194b7"
+structure = "AABA"
+location = "jfb:369"
+
+[[youtube]]
+id = "0qjR4JNXfr4"
+remark = "Louis Prima"
+
+[[youtube]]
+id = "sfPOD2zrQSI"
+remark = "Etta James"
+
+[versions.Fake]
+doChords = true
+doVoice = true
+doLyrics = false
+doLyricsmore = false
+doLyricsmoremore = false
+doChordBars = false
+doGuitar = false
+doExtra = false
+doPrep = false
+doOwn = false
+#}
+{% if part == "Vars" %}
+{% endif %}
+{% if part == "Doc" %}	DONE:
+	- added the meta data from the fake book.
+	- put in the tunes structure.
+	- put in the chords (fake book).
+	- put in the tune (fake book).
+	- added youtube performances.
+	TODO:
+	- add the lyrics.
+	- check the chords (fake book).
+	- check the tune (fake book).
+	- hear the tune to check that it is right and adjust the tempo.
+	- the book prints the second ending bracket over one bar only; here the second ending holds two bars (the second one is the last bar of the A before the bridge).
+	- the book prints only a dotted half note in the last coda bar; a quarter rest was added to fill the bar.
+{% endif %}
+{% if part == "ChordsFake" %}\chordmode {
+	\startChords
+	\startSong
+
+	\partial 2. s2. |
+
+	\myMark "A"
+	\startPart
+	\repeat volta 2 {
+		f2:6 fis:dim7 | g:m7 c:7.9- | f1:6 | g2:m7 bes4:m6 ees:7 | \myEndLine
+		f2:6 fis:dim7 | g:m7 c:7 |
+	} \alternative {
+		{
+			f2 d:7 | g:m7 ges:7 | \myEndLineVoltaNotLast
+		}
+		{
+			f2 ges:maj7 | f1:maj7 | \myEndLineVoltaLast
+		}
+	}
+	\endPart
+
+	\myMark "B"
+	\startPart
+	c2:m7 f:9 | c:m7 f:7.9- | bes c4:m7 f:9 | bes2.:6 aes4:9 | \myEndLine
+	g2:9 d:m7 | g:9 des:9 | c:9 fis:dim7 | c:9/g ges:7 | \myEndLine
+	\endPart
+
+	\myMark "Coda"
+	\startPart
+	f2 ges:maj9 | f1:maj9 | \myEndLine
+	\endPart
+
+	\endSong
+	\endChords
+}
+{% endif %}
+{% if part == "VoiceFake" %}{
+	\tempo "Andante" 4 = 80
+	\time 2/2
+	\key f \major
+
+	\partial 2. c'4 gis a |
+
+	% part "A"
+	\repeat volta 2 {
+		c,8.^\markup { \musicglyph #"scripts.segno" } d16 \tuplet 3/2 { c8 d c~ } c2 | r8 bes8 d8. f16 a4 bes | c8. c16 d8 c~ c2 | r8 c8 bes8. c16 bes8. a16 g8. f16 |
+		c8. c16 d8 c~ c2 | r8 bes8 d8. f16 aes8. g16 \tuplet 3/2 { f8^\markup { To Coda \musicglyph #"scripts.coda" } d f~ } |
+	} \alternative {
+		{
+			f1~ | f4 c' gis a |
+		}
+		{
+			f1~ | f2. f4 |
+		}
+	}
+
+	% part "B"
+	g8. g16 g8. f16 g8 g4 f8 | g8. a16 bes8. c16 d8. c16 bes8. a16 | g8. g16 g8. a16 g8. g16 d'8 a | g2. d'4 |
+	d8. b16 a8. g16 a8 a4 g8 | a8. b16 c8. d16 e8 e4. | r8 d4 d8 d8. d16 a8 c~ | c4 c gis a^\markup { D.S. al Coda } |
+
+	% part "Coda"
+	f1~ | f2.\fermata r4 |
+}
+{% endif %}

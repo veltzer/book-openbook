@@ -1,0 +1,108 @@
+{#
+default_version = "Fake"
+
+[attributes]
+title = "There Are Such Things"
+style = "Jazz"
+composer = "Stanley Adams, Abel Baer, George W. Meyer"
+poet = "Stanley Adams, Abel Baer, George W. Meyer"
+piece = "Slow Ballad"
+copyright = "1942 (Renewed) Dorsey Brothers Music, Division of Music Sales Corporation, New York"
+typesetter = "Mark Veltzer <mark.veltzer@gmail.com>"
+completion = "5"
+uuid = "5ffdd486-d551-11f1-8000-046874d194b7"
+structure = "ABAC"
+location = "jfb:384"
+
+[[youtube]]
+id = "6lBmxVnhVW4"
+remark = "Tommy Dorsey with Frank Sinatra and the Pied Pipers in the original hit recording (1942)"
+
+[[youtube]]
+id = "N5kEMiNKi6s"
+remark = "Sarah Vaughan with the Count Basie Orchestra"
+
+[versions.Fake]
+doChords = true
+doVoice = true
+doLyrics = false
+doLyricsmore = false
+doLyricsmoremore = false
+doChordBars = false
+doGuitar = false
+doExtra = false
+doPrep = false
+doOwn = false
+#}
+{% if part == "Vars" %}
+{% endif %}
+{% if part == "Doc" %}	DONE:
+	- added the meta data from the fake book.
+	- put in the tunes structure.
+	- put in the chords (fake book).
+	- put in the tune (fake book).
+	- added youtube performances.
+	TODO:
+	- check the chords (fake book).
+	- check the tune (fake book).
+	- hear the tune to check that it is right and adjust the tempo.
+	- add the lyrics.
+{% endif %}
+{% if part == "ChordsFake" %}\chordmode {
+	\startChords
+	\startSong
+
+	\partial 2. s2. |
+
+	\myMark "A"
+	\startPart
+	c1:maj7 | c2:maj7 c:7.5+ | f1:6 | f2:6 g:7.5+ | \myEndLine
+	d1:m7 | d2:m7 g:7.5+ | c1:maj7 | c2.:maj7 a4:7 | \myEndLine
+	\endPart
+
+	\myMark "B"
+	\startPart
+	d1:m7 | d2:m7 fis:dim7 | c1:maj7 | c2/e ees:dim7 | \myEndLine
+	d1:m7 | d2:m7 d:9 | d1:m7 | g2:7 d:m7/g | \myEndLine
+	\endPart
+
+	\myMark "A"
+	\startPart
+	c1:maj7 | c2:maj7 c:7.5+ | f1:6 | f2:6 g:7.5+ | \myEndLine
+	d1:m7 | d2:m7 b:7 | e1:7sus4 | e2.:m7.5- a4:7 | \myEndLine
+	\endPart
+
+	\myMark "C"
+	\startPart
+	d1:m | d2:m f:m6 | c2 e:m7 | a4:13 a2.:7 | \myEndLine
+	d1:7 | d2:m7 g:7 | c1*2:6 | \myEndLine
+	\endPart
+
+	\endSong
+	\endChords
+}
+{% endif %}
+{% if part == "VoiceFake" %}{
+	\tempo "Slow Ballad" 4 = 70
+	\time 4/4
+	\key c \major
+
+	\partial 2. c'4 c b |
+
+	% part "A"
+	d1~ | d2 c | c d,4 d~ | d b' b a |
+	c1~ | c2 b | b e,4 e~ | e2. e4 |
+
+	% part "B"
+	d4 d f f | a a c c | b g b2~ | b4 b b bes |
+	a f a2~ | a4 a \tuplet 3/2 { a b c } | d1~ | d4 c c b |
+
+	% part "A"
+	d1~ | d2 c | c d,4 d~ | d b' b a |
+	c1~ | c2 b | b e,4 e~ | e2. e4 |
+
+	% part "C"
+	d4 d f f | a a c4. c8 | e4 e b b | a a gis a |
+	d2. a4 | c b a b | c1~ | c2. r4 |
+}
+{% endif %}

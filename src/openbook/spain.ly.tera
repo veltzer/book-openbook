@@ -1,0 +1,140 @@
+{#
+default_version = "Fake"
+
+[attributes]
+title = "Spain"
+style = "Latin/Jazz"
+composer = "Chick Corea"
+piece = "Moderately fast, in 2"
+copyright = "1973 Litha Music"
+typesetter = "Mark Veltzer <mark.veltzer@gmail.com>"
+completion = "3"
+uuid = "012d85be-d551-11f1-8000-046874d194b7"
+structure = "ABC"
+location = "jfb:357"
+
+[[youtube]]
+id = "sEhQTjgoTdU"
+remark = "Chick Corea and Return to Forever in the original recording from Light as a Feather (1973)"
+
+[[youtube]]
+id = "IWBkVucVMCY"
+remark = "Chick Corea live at Montreux (2004)"
+
+[versions.Fake]
+doChords = true
+doVoice = true
+doLyrics = false
+doLyricsmore = false
+doLyricsmoremore = false
+doChordBars = false
+doGuitar = false
+doExtra = false
+doPrep = false
+doOwn = false
+#}
+{% if part == "Vars" %}
+{% endif %}
+{% if part == "Doc" %}	DONE:
+	- added the meta data from the fake book.
+	- put in the tunes structure.
+	- put in the chords (fake book).
+	- put in the tune (fake book).
+	- added youtube performances.
+	TODO:
+	- check the chords (fake book).
+	- check the tune (fake book).
+	- hear the tune to check that it is right and adjust the tempo.
+	- the last bar of the B section (before the To Coda bar and the endings) only adds up to three and a half beats in the fake book (b8 fis8 e4 r8 fis8 b8); here the last note is made a quarter. Check it.
+	- the fake book prints no chords over the first bar of the second ending; here the chords of the first ending (G, Asus, Bm) are repeated. Check it.
+	- the fake book prints no start repeat sign, so the repeat goes back to the beginning (the intro). Check if it should go back to the segno.
+{% endif %}
+{% if part == "ChordsFake" %}\chordmode {
+	\startChords
+	\startSong
+
+	\repeat volta 2 {
+
+		\myMark "Intro"
+		\startPart
+		r1 | r | e:m7 | e2:m7 fis:sus4 | fis1:sus4 | \myEndLine
+		fis1:sus4 | g:maj7 | g:maj7 | fis:7 | fis:7 | \myEndLine
+		\endPart
+
+		\myMark "A"
+		\startPart
+		e1:m7 | a:7.9- | d:maj7 | g:maj7 | \myEndLine
+		cis1:7 | fis:7 | b:m | b:m | \myEndLine
+		\endPart
+
+		\myMark "B"
+		\startPart
+		r1 | r | r | r | r | \myEndLine
+		r1 | r | r | r | r2. fis4:sus4 | \myEndLine
+	} \alternative {
+		{
+			g2 a4.:sus4 b8:m | b1:m | b:m | \myEndLineVoltaNotLast
+		}
+		{
+			g2 a4.:sus4 b8:m | g1:maj7 | g:maj7 | g:maj7 | \myEndLineVoltaLast
+		}
+	}
+	\endPart
+
+	\myMark "C"
+	\startPart
+	g1:maj7 | fis:7 | fis:7 | fis:7 | fis:7 | \myEndLine
+	e1:m7 | e:m7 | a:7 | a:7 | d:maj7 | d:maj7 | \myEndLine
+	g1:maj7 | g:maj7 | cis:7 | cis:7 | fis:7 | \myEndLine
+	fis1:7 | b:m | b:m | b:7.9- | b:7.9- | \myEndLine
+	\endPart
+
+	\myMark "Coda"
+	\startPart
+	g1:maj7 | d/bes | b:sus4 | b:sus4 | \myEndLine
+	\endPart
+
+	\endSong
+	\endChords
+}
+{% endif %}
+{% if part == "VoiceFake" %}{
+	\tempo "Allegro" 2 = 120
+	\time 2/2
+	\key d \major
+
+	\repeat volta 2 {
+
+		% part "Intro"
+		d'4 fis8 d e d b d~ | d8 cis a cis~ cis b g4 | a4. a8 r4 a4~ | a2 fis4. fis8 |
+		r4 fis2.~ | fis2 r4 fis4 | g4. a8~ a4 b4 | cis4. d8~ d4 e4 |
+		d4. \grace { e32 d } cis8~ cis2~ | cis2 r4 fis,4 |
+
+		% part "A"
+		g4.^\markup { \musicglyph #"scripts.segno" } a8~ a4 b4 | cis4. d8~ d4 e4 | d4 e8 fis~ fis2~ | fis2 r8 \acciaccatura d8 e4 d8 |
+		cis4. d8~ d4 e4 | d2 cis2 | cis4. b8~ b2~ | b2. r4 |
+
+		% part "B"
+		b8 r r d r4 r8 g | fis4 d8 b e4 r8 a, | r4 r8 d cis4 r4 | a8 b4 g8~ g g d'4 |
+		e4 r8 e g4 fis8 d | b4 d8 b e4 cis8 b~ | b8 fis e4 r8 fis b4 |
+		cis4. \acciaccatura gis8 ais8~ ais g fis4 | r8 cis fis cis gis' cis, ais' a!~ | a8 fis4 g'8 r4 g4^\markup { To Coda \musicglyph #"scripts.coda" } |
+	} \alternative {
+		{
+			e2 d4. b8~ | b2. b'4~ | b2. r4 |
+		}
+		{
+			e,2 d4. b8~ | b1~ | b1~ | b1 |
+		}
+	}
+
+	% part "C"
+	\tuplet 3/2 { r4 b cis } \tuplet 3/2 { d cis b } | \acciaccatura cis8 d4. cis8~ cis4 ais~ | ais1~ | ais1 |
+	r2 \acciaccatura e'8 fis2 | e4. d8~ d4 b4 | b1~ | b1 | \tuplet 3/2 { r4 a b } \tuplet 3/2 { cis d e } |
+	d4. cis8~ cis4 fis~ | fis1~ | fis1 | r2 r8 \acciaccatura d8 e4 d8 |
+	cis4. d8~ d4 e~ | e1~ | e1 | \tuplet 3/2 { r2 d cis } |
+	cis2. b4~ | b1 | b1~ | b2 r4 fis4^\markup { D.S. al Coda } |
+
+	% part "Coda"
+	e'1\fermata | d\fermata | b\fermata | \ottava #1 b''1\fermata \ottava #0 |
+}
+{% endif %}

@@ -1,0 +1,112 @@
+{#
+default_version = "Fake"
+
+[attributes]
+title = "There'll Be Some Changes Made"
+style = "Swing"
+composer = "W. Benton Overstreet"
+poet = "Billy Higgins"
+piece = "Easy swing"
+copyright = "1921, 1923 by Edward B. Marks Music Company"
+copyrightextra = "Copyright renewed."
+typesetter = "Mark Veltzer <mark.veltzer@gmail.com>"
+completion = "5"
+uuid = "600194f4-d551-11f1-8000-046874d194b7"
+structure = "AA'"
+location = "jfb:386"
+
+[[youtube]]
+id = "Rqe-v3RhYsk"
+remark = "Ethel Waters and her Jazz Masters in the original recording (1921)"
+
+[[youtube]]
+id = "9_6qQVz03S4"
+remark = "Benny Goodman and his Orchestra (1941)"
+
+[versions.Fake]
+doChords = true
+doVoice = true
+doLyrics = false
+doLyricsmore = false
+doLyricsmoremore = false
+doChordBars = false
+doGuitar = false
+doExtra = false
+doPrep = false
+doOwn = false
+#}
+{% if part == "Vars" %}
+{% endif %}
+{% if part == "Doc" %}	DONE:
+	- added the meta data from the fake book.
+	- put in the tunes structure.
+	- put in the chords (fake book).
+	- put in the tune (fake book).
+	- added youtube performances.
+	TODO:
+	- check the chords (fake book).
+	- check the tune (fake book).
+	- hear the tune to check that it is right and adjust the tempo.
+	- add the lyrics (the fake book has two verses).
+	- bar 8 (Cm7 F7) and bar 16 (Bb Ab7 G7): the fake book prints the later chords over the anticipating eighths; put in that way.
+	- first ending: Ab7 is printed over the pickup to the repeat; put in on beat 4.
+{% endif %}
+{% if part == "ChordsFake" %}\chordmode {
+	\startChords
+	\startSong
+
+	\partial 16*5 s16*5 |
+
+	\repeat volta 2 {
+
+		\myMark "A"
+		\startPart
+		g1*2:7 | c1*2:9 | \myEndLine
+		d1:7 | g:7 | c:9 | c4.:m7 f8*5:7 | \myEndLine
+		\endPart
+
+		\myMark "A"
+		\startPart
+		g1*2:7 | c1*2:9 | \myEndLine
+		d1:7 | g:7 | c2:9 f:7 | \myEndLine
+		bes8 aes4:7 g8*5:7 | c2:9 f:7 |
+	} \alternative {
+		{
+			bes2 a4:7 aes:7 | \myEndLineVoltaNotLast
+		}
+		{
+			bes1 | \myEndLineVoltaLast
+		}
+	}
+	\endPart
+
+	\endSong
+	\endChords
+}
+{% endif %}
+{% if part == "VoiceFake" %}{
+	\tempo "Moderato" 4 = 160
+	\time 2/2
+	\key bes \major
+
+	\partial 16*5 d16 cis8. d16 |
+
+	\repeat volta 2 {
+
+		% part "A"
+		a'8. a16 a8 a~ a8. g16 cis,8. d16 | a'8. a16 a8 a~ a2 | r8. d16 d8. d16 d8. c16 bes8. g16 | d'8 d4 d8~ d4. d8 |
+		d8. d16 d8 d~ d8 c4 a8 | a8. cis,16 d8 g~ g2 | d'8. d16 d8. d16 d8. c16 bes8. g16 | c8 c4 c8~ c8. d,16 cis8. d16 |
+
+		% part "A"
+		a'8. a16 a8. a16 a8. g16 cis,8. d16 | a'8 a4 a8~ a2 | d8. d16 d8. d16 d8. c16 bes4 | d8 d4 d8~ d4 d |
+		d8. d16 d8 d~ d8. a16 f8. fis16 | a8 a4 g8~ g2 | r8. d'16 c8. bes16 g4 f | bes8 c4 d8~ d2 | r8. d16 c8. d16 f4. d8 |
+	} \alternative {
+		{
+			bes4 r r8. d,16 cis8. d16 |
+		}
+		{
+			bes'4 r r2 |
+		}
+	}
+}
+{% endif %}

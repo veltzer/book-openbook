@@ -1,0 +1,111 @@
+{#
+default_version = "Fake"
+
+[attributes]
+title = "A Smooth One"
+style = "Jazz"
+composer = "Benny Goodman"
+piece = "Medium bounce"
+copyright = "1941 by Regent Music Corp."
+copyrightextra = "Copyright renewed by Jewel Music Publishing Co., Inc."
+typesetter = "Mark Veltzer <mark.veltzer@gmail.com>"
+completion = "5"
+uuid = "f8ca86a6-d550-11f1-8000-046874d194b7"
+structure = "AABA"
+location = "jfb:344"
+
+[[youtube]]
+id = "x--Vkpnb-DM"
+remark = "Benny Goodman and his Sextet in the original recording (1941)"
+
+[[youtube]]
+id = "5JCKOdizVJ0"
+remark = "Joscho Stephan Trio"
+
+[versions.Fake]
+doChords = true
+doVoice = true
+doLyrics = false
+doLyricsmore = false
+doLyricsmoremore = false
+doChordBars = false
+doGuitar = false
+doExtra = false
+doPrep = false
+doOwn = false
+#}
+{% if part == "Vars" %}
+{% endif %}
+{% if part == "Doc" %}	DONE:
+	- added the meta data from the fake book.
+	- put in the tunes structure.
+	- put in the chords (fake book).
+	- put in the tune (fake book).
+	- added youtube performances.
+	TODO:
+	- check the chords (fake book).
+	- check the tune (fake book).
+	- hear the tune to check that it is right and adjust the tempo.
+{% endif %}
+{% if part == "ChordsFake" %}\chordmode {
+	\startChords
+	\startSong
+
+	\myMark "A"
+	\startPart
+	\repeat volta 2 {
+		b2:dim7 bes:6 | f:6/a f:6 | b:dim7 bes:6 | f:6/a f:6 | \myEndLine
+		b2:dim7 bes:6 | f:6/a f:6 | g:9 c4:9 c:9.5+ |
+	} \alternative {
+		{
+			f1:6 | \myEndLineVoltaNotLast
+		}
+		{
+			f2:6 f:7 | \myEndLineVoltaLast
+		}
+	}
+	\endPart
+
+	\myMark "B"
+	\startPart
+	bes1:6 | b:dim7 | f:6 | c2.:m7 f4:9 | \myEndLine
+	bes1:6 | b:dim7 | f2:6 d:7.9- | g:m7.5- c:7 | \myEndLine
+	\endPart
+
+	\myMark "A"
+	\startPart
+	b2:dim7 bes:6 | f:6/a f:6 | b:dim7 bes:6 | f:6/a f:6 | \myEndLine
+	b2:dim7 bes:6 | f:6/a f:6 | g:9 c4:9 c:9.5+ | f1:6 | \myEndLine
+	\endPart
+
+	\endSong
+	\endChords
+}
+{% endif %}
+{% if part == "VoiceFake" %}{
+	\tempo "Moderato" 4 = 144
+	\time 2/2
+	\key f \major
+
+	% part "A"
+	\repeat volta 2 {
+		d'8 aes4. f8 g f d | f aes4. r2 | d8 aes4. f8 g f d | f d4. r2 |
+		d'8 aes4. f8 g f d | f aes4. r4 \tuplet 3/2 { d,8 des c } | b! d f a d, d4 d8~ |
+	} \alternative {
+		{
+			d4 r r2 |
+		}
+		{
+			d4 r r f8 g~ |
+		}
+	}
+
+	% part "B"
+	g4 f8 d~ d4 f8 g~ | g4 f8 aes r4 bes8 c~ | c4 bes8 a~ a4 f8 g~ | g2. f8 g~ |
+	g4 f8 d~ d4 f8 g~ | g4 f8 aes r2 | a8 c d c ees c d bes | \tuplet 3/2 { c8 a bes } \tuplet 3/2 { g a f } \tuplet 3/2 { g e f } \tuplet 3/2 { d e c } |
+
+	% part "A"
+	d'8 aes4. f8 g f d | f aes4. r2 | d8 aes4. f8 g f d | f d4. r2 |
+	d'8 aes4. f8 g f d | f aes4. r4 \tuplet 3/2 { d,8 des c } | b! d f a d, d4 d8~ | d4 r r2 |
+}
+{% endif %}

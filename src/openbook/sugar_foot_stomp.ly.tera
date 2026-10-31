@@ -1,0 +1,97 @@
+{#
+default_version = "Fake"
+
+[attributes]
+title = "Sugar Foot Stomp"
+style = "Dixieland"
+composer = "Joe Oliver"
+poet = "Walter Melrose"
+piece = "Moderately"
+copyright = "1926, 1987 EDWIN H. MORRIS & COMPANY, A Division of MPL Communications, Inc."
+copyrightextra = "Renewed 1954 EDWIN H. MORRIS & COMPANY, A Division of MPL Communications, Inc. International Copyright Secured. All Rights Reserved."
+typesetter = "Mark Veltzer <mark.veltzer@gmail.com>"
+completion = "5"
+uuid = "3651a0e0-d551-11f1-8000-046874d194b7"
+structure = "Intro A"
+location = "jfb:368-369"
+
+[[youtube]]
+id = "T6Uv-1s2yMA"
+remark = "King Oliver and his Dixie Syncopators in the original recording (1926)"
+
+[[youtube]]
+id = "39wkDD8OXhg"
+remark = "Fletcher Henderson and his Orchestra"
+
+[versions.Fake]
+doChords = true
+doVoice = true
+doLyrics = false
+doLyricsmore = false
+doLyricsmoremore = false
+doChordBars = false
+doGuitar = false
+doExtra = false
+doPrep = false
+doOwn = false
+#}
+{% if part == "Vars" %}
+{% endif %}
+{% if part == "Doc" %}	DONE:
+	- added the meta data from the fake book.
+	- put in the tunes structure.
+	- put in the chords (fake book).
+	- put in the tune (fake book).
+	- added youtube performances.
+	TODO:
+	- add the lyrics.
+	- check the chords (fake book).
+	- check the tune (fake book).
+	- hear the tune to check that it is right and adjust the tempo.
+	- the book prints the Bb chord of verse bars 10 and 22 over the last eighth note (an anticipation); check it.
+{% endif %}
+{% if part == "ChordsFake" %}\chordmode {
+	\startChords
+	\startSong
+
+	\myMark "Intro"
+	\startPart
+	bes1:7 | ees:7 | bes | bes:7 | \myEndLine
+	ees:7 | ees:7 | bes | d2:m7 g:7 | \myEndLine
+	c1:7 | f2..:7 bes8 | bes1 | c4:7 f2.:7 | \myEndLine
+	bes1:7 | ees:7 | bes | bes:7 | \myEndLine
+	ees:7 | ees:7 | bes | d2:m7 g:7 | \myEndLine
+	c1:7 | f2..:7 bes8 | bes1 | bes:7 | \myEndLine
+	\endPart
+
+	\myMark "A"
+	\startPart
+	ees1 | ees | ees | ees | \myEndLine
+	aes:7 | aes:7 | ees | ees | \myEndLine
+	bes:7 | bes:7 | ees | bes2:7.5+ ees | \myEndLine
+	\endPart
+
+	\endSong
+	\endChords
+}
+{% endif %}
+{% if part == "VoiceFake" %}{
+	\tempo "Moderato" 4 = 160
+	\time 2/2
+	\key bes \major
+
+	% part "Intro"
+	r8 bes'8 aes g f ees4. | r8 des'8 c des c bes4. | r4 bes8 f bes a4 aes8~ | aes1 |
+	r8 des c des c bes4. | r8 des c des c bes4. | r4 d!8 bes f fis4 g8~ | g1 |
+	r8 d'8 cis d bes g4. | r8 d'8 cis d f, g4 bes8~ | bes1~ | bes4 r r2 |
+	r8 bes8 aes g f ees4. | r8 des'8 c des c bes4. | r8 f8 bes f bes f a4 | aes1 |
+	r8 des c des c bes4. | r8 des c des c bes4. | r4 d!8 bes f fis4 g8~ | g1 |
+	r8 d'8 cis d bes g4. | r8 d'8 cis d f, g4 bes8~ | bes1~ | bes4 r r r8 g8 |
+
+	% part "A"
+	\key ees \major
+	bes8 ees,8~ ees2 r8 g8 | bes8 ees,8~ ees2 r4 | bes'8 g bes g bes4 g | g8 ees8~ ees2 ges4 |
+	ges8 ees8~ ees2 r4 | ges8 ees ges ees bes'4 ges | ees1~ | ees2. bes'8 a! |
+	bes4 aes8 ees8~ ees2 | r8 bes'8 aes ees bes' ees, g4 | ees1~ | ees2. r4 |
+}
+{% endif %}

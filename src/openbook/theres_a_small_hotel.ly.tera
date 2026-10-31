@@ -1,0 +1,108 @@
+{#
+default_version = "Fake"
+
+[attributes]
+title = "There's A Small Hotel"
+subtitle = "From 'On Your Toes'"
+style = "Broadway"
+composer = "Richard Rodgers"
+poet = "Lorenz Hart"
+piece = "Moderately"
+copyright = "1936 by Chappell & Co., Inc."
+copyrightextra = "Copyright Renewed."
+typesetter = "Mark Veltzer <mark.veltzer@gmail.com>"
+completion = "5"
+uuid = "0b74000c-d551-11f1-8000-046874d194b7"
+structure = "AABA"
+location = "jfb:387"
+
+[[youtube]]
+id = "rPZwbMcIDUg"
+remark = "Jack Whiting (1937)"
+
+[[youtube]]
+id = "zSTUndSzBHQ"
+remark = "Ella Fitzgerald from the Rodgers and Hart Songbook"
+
+[versions.Fake]
+doChords = true
+doVoice = true
+doLyrics = false
+doLyricsmore = false
+doLyricsmoremore = false
+doChordBars = false
+doGuitar = false
+doExtra = false
+doPrep = false
+doOwn = false
+#}
+{% if part == "Vars" %}
+{% endif %}
+{% if part == "Doc" %}	DONE:
+	- added the meta data from the fake book.
+	- put in the tunes structure.
+	- put in the chords (fake book).
+	- put in the tune (fake book).
+	- added youtube performances.
+	TODO:
+	- add the lyrics.
+	- check the chords (fake book).
+	- check the tune (fake book).
+	- hear the tune to check that it is right and adjust the tempo.
+{% endif %}
+{% if part == "ChordsFake" %}\chordmode {
+	\startChords
+	\startSong
+
+	\myMark "A"
+	\startPart
+	g1*3:maj7 | g2:maj7/b bes:dim7 | \myEndLine
+	a:m7 gis:dim7 | a:m9 d:7 | g:maj7 e:m9 | a:m7 d:7 | \myEndLine
+	\endPart
+
+	\myMark "A"
+	\startPart
+	g1*3:maj7 | g2:maj7/b bes:dim7 | \myEndLine
+	a:m7 gis:dim7 | a:m7 d:7 | g g:maj7 | g1:7 | \myEndLine
+	\endPart
+
+	\myMark "B"
+	\startPart
+	c2:maj7 a:m7 | d:m7 g:7 | c:maj7 fis:7.5- | b:m7 e:7 | \myEndLine
+	a:m7 fis:m7.5- | b:m7 e:7 | d:m7.5- e:7 | a:m7.5- d:7 | \myEndLine
+	\endPart
+
+	\myMark "A"
+	\startPart
+	g1*3:maj7 | g2:maj7/b bes:dim7 | \myEndLine
+	a:m7 ges:dim7 | a:m7 d:7 | bes g:7 | c:m7 f:7 | \myEndLine
+	g e:7.9- | a:m7 d:7 | g:maj7 aes:9 | g1:maj9 | \myEndLine
+	\endPart
+
+	\endSong
+	\endChords
+}
+{% endif %}
+{% if part == "VoiceFake" %}{
+	\tempo "Moderato" 2 = 80
+	\time 2/2
+	\key g \major
+
+	% part "A"
+	a'2 g | a4 b g2 | fis e | fis4 g e fis |
+	d e b c | d2. d4 | a'2 a~ | a2. r4 |
+
+	% part "A"
+	a2 g | a4 b g2 | fis e | fis4 g e fis |
+	d e b c | d2. d4 | b'2 b~ | b2. r4 |
+
+	% part "B"
+	b4 c g4. a8 | c4 b f!4. g8 | b4 a e fis | a gis2 r4 |
+	b a e4. fis8 | a4 gis2 r4 | f!4 e r2 | ees4 d2 r4 |
+
+	% part "A"
+	a'2 g | a4 b g2 | fis e | fis4 g e fis |
+	d e b c | d2~ d8. d16 dis8. e16 | f!4 g d ees | f!2~ f8. f16 e8. ees16 |
+	d4 e b c | d2. d4 | d'2 d~ | d2. r4 |
+}
+{% endif %}

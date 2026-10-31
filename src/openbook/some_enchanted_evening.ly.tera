@@ -1,0 +1,130 @@
+{#
+default_version = "Fake"
+
+[attributes]
+title = "Some Enchanted Evening"
+style = "Broadway"
+composer = "Richard Rodgers"
+poet = "Oscar Hammerstein II"
+piece = "Moderately"
+copyright = "1949 by Richard Rodgers and Oscar Hammerstein II"
+copyrightextra = "Copyright Renewed."
+typesetter = "Mark Veltzer <mark.veltzer@gmail.com>"
+completion = "5"
+uuid = "f8cfdea8-d550-11f1-8000-046874d194b7"
+structure = "AABAC"
+location = "jfb:347"
+
+[[youtube]]
+id = "hnepNznzqzo"
+remark = "Ezio Pinza in the original cast recording of South Pacific (1949)"
+
+[[youtube]]
+id = "YoW9JZ7Tj-o"
+remark = "Frank Sinatra"
+
+[versions.Fake]
+doChords = true
+doVoice = true
+doLyrics = false
+doLyricsmore = false
+doLyricsmoremore = false
+doChordBars = false
+doGuitar = false
+doExtra = false
+doPrep = false
+doOwn = false
+#}
+{% if part == "Vars" %}
+{% endif %}
+{% if part == "Doc" %}	DONE:
+	- added the meta data from the fake book.
+	- put in the tunes structure.
+	- put in the chords (fake book).
+	- put in the tune (fake book).
+	- added youtube performances.
+	TODO:
+	- add the lyrics.
+	- check the chords (fake book).
+	- check the tune (fake book).
+	- hear the tune to check that it is right and adjust the tempo.
+{% endif %}
+{% if part == "ChordsFake" %}\chordmode {
+	\startChords
+	\startSong
+
+	\myMark "A"
+	\startPart
+	\repeat volta 2 {
+		c1 | c | g:7 | g:7 | \myEndLine
+		c1 | g2:m7 c:7.5+ | f1:maj7 | a:7.9- | \myEndLine
+		d2:m7 d:m/c | b:m7.5- e:7 | a:m c:7/g | f:maj7 f/e | \myEndLine
+		d1:m7 | g:7 |
+	} \alternative {
+		{
+			c2 a:m7 | d:m9 g:7 | \myEndLineVoltaNotLast
+		}
+		{
+			c1*2 | \myEndLineVoltaLast
+		}
+	}
+	\endPart
+
+	\myMark "B"
+	\startPart
+	g2:7/d c | g:7 c:6 | g:7/d c | a:m7 d:7 | \myEndLine
+	g2 a:m7.5- | bes:dim7 g:7/b | \myEndLine
+	\endPart
+
+	\myMark "A"
+	\startPart
+	c1 | c | g:7 | g:7 | \myEndLine
+	c1 | g2:m7 c:7.5+ | f1:maj7 | a:7.9- | \myEndLine
+	d2:m7 d:m/c | b:m7.5- e:7 | a:m c:7/g | f:maj7 f/e | \myEndLine
+	d1:m7 | d2.:m7/g g4:7 | c1*2 | \myEndLine
+	\endPart
+
+	\myMark "C"
+	\startPart
+	g2:7/d c | g:7 c:6 | g:7/d c | d1:m7 | d2:m7 d:m7/g | c1:6 | \myEndLine
+	\endPart
+
+	\endSong
+	\endChords
+}
+{% endif %}
+{% if part == "VoiceFake" %}{
+	\tempo "Moderato" 4 = 100
+	\time 4/4
+	\key c \major
+
+	% part "A"
+	\repeat volta 2 {
+		g'8 fis a g g4 c,~ | c2. r4 | g'8 fis a g g4 b~ | b2. r4 |
+		g8 fis a g g4 c~ | c c c c | a4. e8 d2 | r4 d \tuplet 3/2 { e g e } |
+		d1~ | d4 d \tuplet 3/2 { e g e } | c1~ | c4 a' \tuplet 3/2 { b c d } |
+		c4 b2 a4 | g e2 d4 |
+	} \alternative {
+		{
+			e1~ | e1 |
+		}
+		{
+			c1~ | c2. r4 |
+		}
+	}
+
+	% part "B"
+	f4 f8 f e4 e | d8 d d d c2 | f4 f8 f e4 e | d4 d d d |
+	g1~ | g2. r4 |
+
+	% part "A"
+	g8 fis a g g4 c,~ | c2. r4 | g'8 fis a g g4 b~ | b2. r4 |
+	g8 fis a g g4 c~ | c c c c | a4. e8 d2 | r4 d \tuplet 3/2 { e g e } |
+	d1~ | d4 d \tuplet 3/2 { e g e } | c'1~ | c4 a \tuplet 3/2 { b c d } |
+	c4 b2 a4 | c a2 d4 | c1~ | c2. r4 |
+
+	% part "C"
+	f,4 f8 f e4 e | d8 d d d c2 | f4 f8 f e4 e | d2 f |
+	a2 c | e2. r4 |
+}
+{% endif %}

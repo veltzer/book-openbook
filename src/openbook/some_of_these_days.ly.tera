@@ -1,0 +1,126 @@
+{#
+default_version = "Fake"
+
+[attributes]
+title = "Some Of These Days"
+style = "Dixieland"
+composer = "Shelton Brooks"
+poet = "Shelton Brooks"
+piece = "Moderately"
+copyright = "1987 by Hal Leonard Publishing Corp."
+typesetter = "Mark Veltzer <mark.veltzer@gmail.com>"
+completion = "5"
+uuid = "5e31a45c-d551-11f1-8000-046874d194b7"
+structure = "ABCD"
+location = "jfb:350"
+
+[[youtube]]
+id = "oFrGiEUNTkI"
+remark = "Sophie Tucker in the original recording (1911)"
+
+[[youtube]]
+id = "KF7-xh8Ai1c"
+remark = "Louis Armstrong and his Orchestra (1929)"
+
+[versions.Fake]
+doChords = true
+doVoice = true
+doLyrics = false
+doLyricsmore = false
+doLyricsmoremore = false
+doChordBars = false
+doGuitar = false
+doExtra = false
+doPrep = false
+doOwn = false
+#}
+{% if part == "Vars" %}
+{% endif %}
+{% if part == "Doc" %}	DONE:
+	- added the meta data from the fake book.
+	- put in the tunes structure.
+	- put in the chords (fake book).
+	- put in the tune (fake book).
+	- added youtube performances.
+	TODO:
+	- check the chords (fake book).
+	- check the tune (fake book).
+	- hear the tune to check that it is right and adjust the tempo.
+	- add the lyrics.
+{% endif %}
+{% if part == "ChordsFake" %}\chordmode {
+	\startChords
+	\startSong
+
+	\partial 4. s4. |
+
+	\myMark "A"
+	\startPart
+	\repeat volta 2 {
+		b1*2:7 | e1*2:m | \myEndLine
+		b1*2:7 | e1*2:m | \myEndLine
+		\endPart
+
+		\myMark "B"
+		\startPart
+		e1:7.5+ | e:7 | a1*4:7 | \myEndLine
+		d1*2:7 | g1 | g:7 | \myEndLine
+		\endPart
+
+		\myMark "C"
+		\startPart
+		c1*2 | e1*2:7 | \myEndLine
+		a1:m | a4:m/g fis:m7.5- b2:7 | c1 | cis:dim7 | \myEndLine
+		\endPart
+
+		\myMark "D"
+		\startPart
+		g2/d f:9 | e1:7 | a:7 | d:7 | \myEndLine
+		g4 g/b bes:dim7 a:m7 | \myEndLine
+	} \alternative {
+		{
+			g4 r2. | \myEndLineVoltaNotLast
+		}
+		{
+			g1 | \myEndLineVoltaLast
+		}
+	}
+	\endPart
+
+	\endSong
+	\endChords
+}
+{% endif %}
+{% if part == "VoiceFake" %}{
+	\tempo "Moderato" 4 = 120
+	\time 4/4
+	\key g \major
+
+	\partial 4. b'8 ais b |
+
+	\repeat volta 2 {
+		% part "A"
+		a1~ | a4 b8 b~ b4 a | g2 e~ | e4 b' ais b |
+		a1~ | a4 b8 b~ b4 a | g2 e~ | e4 e dis e |
+
+		% part "B"
+		c'2 c~ | c4 b gis e | b'2 b~ | b4 e, fis g |
+		b2 b~ | b4 b8 b e4 b | d1~ | d4 d d b |
+
+		% part "C"
+		g2 g~ | g4 b b e | c2 c~ | c4 c c c |
+		b2 b~ | b4 b b c | a1~ | a4 e dis e |
+
+		% part "D"
+		e'2 e~ | e4 e dis e | d2 b~ | b4 d8 e~ e d b gis |
+		b2 b | r4 b8 d~ d b a4 | g1~ |
+	} \alternative {
+		{
+			g4 b ais b |
+		}
+		{
+			g4 r r2 |
+		}
+	}
+}
+{% endif %}

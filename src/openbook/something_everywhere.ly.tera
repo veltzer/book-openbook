@@ -1,0 +1,123 @@
+{#
+default_version = "Fake"
+
+[attributes]
+title = "Something Everywhere"
+style = "Latin"
+composer = "Steve Kuhn"
+piece = "Intro-freely, Medium samba"
+copyright = "1973 Steik Music"
+typesetter = "Mark Veltzer <mark.veltzer@gmail.com>"
+completion = "5"
+uuid = "cd4f6eb4-d551-11f1-8000-046874d194b7"
+structure = "Intro-AB-Coda"
+location = "jfb:350"
+
+[[youtube]]
+id = "ue9Csrguxq4"
+remark = "Steve Kuhn in the original recording from Trance (1975)"
+
+[[youtube]]
+id = "8r7ieSVW1Vs"
+remark = "Steve Kuhn (1975), another upload"
+
+[versions.Fake]
+doChords = true
+doVoice = true
+doLyrics = false
+doLyricsmore = false
+doLyricsmoremore = false
+doChordBars = false
+doGuitar = false
+doExtra = false
+doPrep = false
+doOwn = false
+#}
+{% if part == "Vars" %}
+{% endif %}
+{% if part == "Doc" %}	DONE:
+	- added the meta data from the fake book.
+	- put in the tunes structure.
+	- put in the chords (fake book).
+	- put in the tune (fake book).
+	- added youtube performances.
+	TODO:
+	- check the chords (fake book).
+	- check the tune (fake book).
+	- hear the tune to check that it is right and adjust the tempo.
+	- the first five bars of the intro are played freely; the next seven (medium samba, no chords) are marked col 8vb in the book.
+	- intro bar 3 and B bar 6: the g after the g sharp has no accidental in the book; typed as g natural (fits the C7 harmony) - check.
+	- the D7(alt) chord of the book is written as D7#5#9.
+	- the last note of several bars (intro bars 4 and 12, B bars 8 and 19) has no accidental in the book after an f sharp earlier in the bar; typed as f sharp - check.
+	- the book shows the two ad lib bars as slashes and a repeat sign, and the final C#m11 note as a diamond (harmonic).
+{% endif %}
+{% if part == "ChordsFake" %}\chordmode {
+	\startChords
+	\startSong
+
+	\myMark "Intro"
+	\startPart
+	r1 | s1*4 | \myEndLine
+	s1*7 | \myEndLine
+	\endPart
+
+	\myMark "A"
+	\startPart
+	ees1*4:m11 | f1*4:m11 | \myEndLine
+	ees1*4:m11 | f1*3:m11 | d1:7.5- | \myEndLine
+	\endPart
+
+	\myMark "B"
+	\startPart
+	f1:m7 | c:7.9-/e | ees:m7 | d:7.5+.9+ | des:maj7 | c:7 | cis:7.9+ | \myEndLine
+	ees:maj7.9+ | b1*4:13sus4 | e1*2:m | d1:m9 | cis:7.5+.9+ | \myEndLine
+	d2:7.9+.11+ g4.:m7.5- a8:maj7 | a1:maj7 | d:maj7 | bes1*4:13sus4 | \myEndLine
+	\repeat volta 2 {
+		bes1*2:13sus4 |
+	}
+	s1 | \myEndLine
+	\endPart
+
+	\myMark "Coda"
+	\startPart
+	ees1*4:m7 | d1*4:m7 | \myEndLine
+	\repeat volta 2 {
+		ees1*4:m7 | d1*4:m7 |
+	}
+	cis1:m11 | \myEndLine
+	\endPart
+
+	\endSong
+	\endChords
+}
+{% endif %}
+{% if part == "VoiceFake" %}{
+	\tempo "Allegro" 2 = 140
+	\time 4/4
+	\key c \major
+
+	% part "Intro"
+	c'8^\markup { freely } aes f des' c g e4\fermata | ees8 bes' bes bes \tuplet 3/2 { bes c bes } aes bes | c2 \tuplet 3/2 { a8 gis a } g f | e4 cis8 e fis4 d8 fis | gis1\fermata |
+	e8^\markup { Medium samba (col 8vb) } e4 e8 e4 e8 e~ | e2 c'4 b | e,8 e4 e8 e4 e8 e~ | e2 a | gis2 f4. e8~ | e2 cis4 e | fis2 d4 fis |
+
+	% part "A"
+	aes1 | R1*3 | R1*4 |
+	R1*4 | R1*3 | r8 c, des ees f g aes bes |
+
+	% part "B"
+	c4.^\markup { \musicglyph #"scripts.segno" } aes8~ aes f4 des'8~ | des c4 g8 e2 | ees4. bes'8~ \tuplet 3/2 { bes4 bes bes } | \tuplet 3/2 { bes4 c bes } aes4 bes8 c~ | c1 | \tuplet 3/2 { a4 gis a } g4 f8 e~ | e2 cis4 e |
+	fis2 d4 fis | gis1~ | gis1 | r1 | r1 | e8 e4 e8 e4 e8 e~ | e2 <e c'>4 <d b'> | e8 e4 e8 e4 e8 e~ | e2 a |
+	gis2 f4. e8~ | e2 cis4 e | fis2^\markup { To Coda \musicglyph #"scripts.coda" } d4 fis | g1~ | g1 | r1 | r1 |
+	\repeat volta 2 {
+		\improvisationOn b4^\markup { ad lib } b b b | b b b b \improvisationOff |
+	}
+	r8 c, des ees f g aes bes^\markup { D.S. al Coda } |
+
+	% part "Coda"
+	aes1^\markup { \musicglyph #"scripts.coda" } | R1*3 | R1*4 |
+	\repeat volta 2 {
+		R1*4 | R1*4 |
+	}
+	<b\harmonic>1\fermata |
+}
+{% endif %}

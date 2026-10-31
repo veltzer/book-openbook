@@ -1,0 +1,96 @@
+{#
+default_version = "Fake"
+
+[attributes]
+title = "Swingin' Until The Girls Come Home"
+style = "Jazz"
+composer = "Oscar Pettiford"
+piece = "Medium Swing"
+copyright = "1955 Orpheus Music, Inc."
+copyrightextra = "Copyright Renewed"
+typesetter = "Mark Veltzer <mark.veltzer@gmail.com>"
+completion = "5"
+uuid = "36529432-d551-11f1-8000-046874d194b7"
+structure = "Blues"
+location = "jfb:375"
+
+[[youtube]]
+id = "nS3X8GmVlVg"
+remark = "Oscar Pettiford in the original recording"
+
+[[youtube]]
+id = "SB3roRHo60M"
+remark = "Bruce Forman, Pat Bergeson"
+
+[versions.Fake]
+doChords = true
+doVoice = true
+doLyrics = false
+doLyricsmore = false
+doLyricsmoremore = false
+doChordBars = false
+doGuitar = false
+doExtra = false
+doPrep = false
+doOwn = false
+#}
+{% if part == "Vars" %}
+{% endif %}
+{% if part == "Doc" %}	DONE:
+	- added the meta data from the fake book.
+	- put in the tunes structure.
+	- put in the chords (fake book).
+	- put in the tune (fake book).
+	- added youtube performances.
+	TODO:
+	- check the chords (fake book).
+	- check the tune (fake book).
+	- hear the tune to check that it is right and adjust the tempo.
+	- the fake book ends the second ending with a repeat sign (repeat for solos); here this is only a text remark.
+{% endif %}
+{% if part == "ChordsFake" %}\chordmode {
+	\startChords
+	\startSong
+
+	\partial 8 s8 |
+
+	\myMark "A"
+	\startPart
+	\repeat volta 2 {
+		bes1*3 | bes1:7 | ees1*2:7 | \myEndLine
+		bes2 c:m7 | d:m7 des:7 | c1:m7 | f:7 | bes2 des:7 | \myEndLine
+	} \alternative {
+		{
+			c2:m7 f:7 | \myEndLineVoltaNotLast
+		}
+		{
+			c2:m7 f:7 | \myEndLineVoltaLast
+		}
+	}
+	\endPart
+
+	\endSong
+	\endChords
+}
+{% endif %}
+{% if part == "VoiceFake" %}{
+	\tempo "Allegro" 4 = 160
+	\time 4/4
+	\key bes \major
+
+	\partial 8 f'8~ |
+
+	% part "A"
+	\repeat volta 2 {
+		f4 g8 f d r r f,~ | f4 g8 f d' r r f~ | f4 g8 f d f, \tuplet 3/2 { g8 bes cis } | d8 bes g f bes c bes bes | r4 r8 bes des ees des bes | des8 ees~ ees4~ ees8 des bes g |
+		d'8 f,4. f4 r | r8 d f a f g aes d, | f8 ees \tuplet 3/2 { g8 bes d } f d bes g | d'8 f,4. r4 f8 g | a8 d a f aes f g d |
+	} \alternative {
+		{
+			ees8 g bes d r4 f4\laissezVibrer |
+		}
+		{
+			ees,8 g bes d r2^\markup { \italic { (Repeat for Solos) } } |
+		}
+	}
+}
+{% endif %}
