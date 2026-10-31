@@ -1,0 +1,128 @@
+{#
+default_version = "Fake"
+
+[attributes]
+title = "Everybody Loves My Baby"
+subtitle = "But My Baby Don't Love Nobody But Me"
+style = "Jazz"
+composer = "Jack Palmer, Spencer Williams"
+poet = "Jack Palmer, Spencer Williams"
+piece = "Quickly"
+copyright = "1924 by MCA Music Publishing, A Division of MCA Inc., Copyright Renewed"
+copyrightextra = ""
+typesetter = "Mark Veltzer <mark.veltzer@gmail.com>"
+completion = "5"
+uuid = "a45fa4d8-d515-11f1-8000-046874d194b7"
+structure = "AABA"
+location = "jfb:111"
+
+[[youtube]]
+id = "T9k_onMF7gU"
+remark = "Clarence Williams Blue Five with Louis Armstrong and Eva Taylor (1924)"
+
+[[youtube]]
+id = "C4X3xxto_38"
+remark = "Fletcher Henderson and his Orchestra with Louis Armstrong (1924)"
+
+[[youtube]]
+id = "9OhGowLAJw4"
+remark = "Catherine Russell (live)"
+
+[versions.Fake]
+doChords = true
+doVoice = true
+doLyrics = false
+doLyricsmore = false
+doLyricsmoremore = false
+doChordBars = false
+doGuitar = false
+doExtra = false
+doPrep = false
+doOwn = false
+#}
+{% if part == "Vars" %}
+{% endif %}
+{% if part == "Doc" %}	DONE:
+	- added the meta data from the fake book.
+	- put in the tunes structure.
+	- put in the chords (fake book).
+	- put in the tune (fake book).
+	- added youtube performances.
+	TODO:
+	- check the chords (fake book).
+	- check the tune (fake book).
+	- hear the tune to check that it is right and adjust the tempo.
+{% endif %}
+{% if part == "ChordsFake" %}\chordmode {
+	\startChords
+	\startSong
+
+	\repeat volta 2 {
+
+		\myMark "A"
+		\startPart
+		d1:m6 | d:m6 | d:m6 | d:m6 | \myEndLine
+		g:7 | c2.:7 c4:7.5+ | f1:6 | a:7 | \myEndLine
+		\endPart
+
+		\myMark "A"
+		\startPart
+		d:m6 | d:m6 | d:m6 | d:m6 | \myEndLine
+		a2 ais:dim7 | e:7/b e:7 | a aes:dim7 | c:7/g c:7 | \myEndLine
+		\endPart
+
+		\myMark "B"
+		\startPart
+		f:7 f:dim7 | f:7 f:dim7 | f:7 f:dim7 | f1:7 | \myEndLine
+		bes2 f:aug | bes g:7 | g1:7 | c2:7 a:7 | \myEndLine
+		\endPart
+
+		\myMark "A"
+		\startPart
+		d1:m6 | d:m6 | d:m6 | d:m6 | \myEndLine
+		g:7 | c:7 |
+	} \alternative {
+		{
+			f2 bes:9 | a1:7 | \myEndLineVoltaNotLast
+		}
+		{
+			f1 | f | \myEndLineVoltaLast
+		}
+	}
+	\endPart
+
+	\endSong
+	\endChords
+}
+{% endif %}
+{% if part == "VoiceFake" %}{
+	\tempo "Quickly" 2 = 120
+	\time 2/2
+	\key f \major
+
+	\repeat volta 2 {
+		% part "A"
+		a'4 a f8 d4. | a'4 a f8 d4. | a'4 a f8 d f4 | a4 a f8 d f4 |
+		f8 d4.~ d2 | r4 e8 g~ g g e4 | d1 | r1 |
+
+		% part "A"
+		a'4 a f8 d4. | a'4 a f8 d4. | a'4 a f8 d f4 | a4 a f8 d f4 |
+		e1~ | e4 e e e | e1 | r2 r4 g |
+
+		% part "B"
+		f4 f f f | f8 g4 gis8~ gis4 a | f4 f f f | f2 r4 f |
+		f4 f f f | f8 g4 gis8~ gis4 a | f4 f e f | g2 a4 a |
+
+		% part "A"
+		a4 a f8 d4. | a'4 a f8 d4. | a'4 a f8 d f4 | a4 a f8 d f4 |
+		f8 d4.~ d2 | r4 a'8 c~ c a g4 |
+	} \alternative {
+		{
+			f1 | r1 |
+		}
+		{
+			f1~ | f4 r r2 |
+		}
+	}
+}
+{% endif %}

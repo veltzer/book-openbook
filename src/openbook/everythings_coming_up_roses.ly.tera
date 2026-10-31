@@ -1,0 +1,144 @@
+{#
+default_version = "Fake"
+
+[attributes]
+title = "Everything's Coming Up Roses"
+subtitle = "From 'Gypsy'"
+style = "Broadway"
+composer = "Jule Styne"
+poet = "Stephen Sondheim"
+piece = "Fast Tempo"
+copyright = "1959 by Norbeth Productions, Inc. and Stephen Sondheim, Copyright Renewed"
+copyrightextra = "Williamson Music Co. and Stratford Music Corp. owners of publication and allied rights. All rights Administered by Chappell & Co., Inc."
+typesetter = "Mark Veltzer <mark.veltzer@gmail.com>"
+completion = "5"
+uuid = "21278eb8-d516-11f1-8000-046874d194b7"
+structure = "AABA"
+location = "jfb:113"
+
+[[youtube]]
+id = "mPPAtQ9FpMY"
+remark = "Ethel Merman in the original Broadway cast recording (1959)"
+
+[[youtube]]
+id = "QDZLIvpJ3WM"
+remark = "Count Basie and his Orchestra"
+
+[[youtube]]
+id = "pR4j1iM--yA"
+remark = "Herb Geller"
+
+[versions.Fake]
+doChords = true
+doVoice = true
+doLyrics = false
+doLyricsmore = false
+doLyricsmoremore = false
+doChordBars = false
+doGuitar = false
+doExtra = false
+doPrep = false
+doOwn = false
+#}
+{% if part == "Vars" %}
+{% endif %}
+{% if part == "Doc" %}	DONE:
+	- added the meta data from the fake book.
+	- put in the tunes structure.
+	- put in the chords (fake book).
+	- put in the tune (fake book).
+	- added youtube performances.
+	TODO:
+	- check the chords (fake book).
+	- check the tune (fake book).
+	- hear the tune to check that it is right and adjust the tempo.
+	- the chord for the first bar of each ending is not written in the book (C assumed).
+{% endif %}
+{% if part == "ChordsFake" %}\chordmode {
+	\startChords
+	\startSong
+
+	\partial 2. s2. |
+
+	\repeat volta 2 {
+
+		\myMark "A"
+		\startPart
+		d1:m7 | g:7.5+ | c:6 | c:m | \myEndLine
+		d:m7 | d2.:m7 g4:7 | c1:6 | b:7.5+ | \myEndLine
+		e:m | c:7 | f:maj7 | f:maj7 | \myEndLine
+		c | c | e:m | e:m | d2:m7 g:7 | \myEndLine
+	} \alternative {
+		{
+			c1 | c | ees:dim7 | \myEndLineVoltaNotLast
+		}
+		{
+			c1 | c | c | \myEndLineVoltaLast
+		}
+	}
+	\endPart
+
+	\myMark "B"
+	\startPart
+	d2.:m7 g4:7 | g1:7 | c:maj7 | c:maj7 | \myEndLine
+	d:m7 | g:9 | c | c | \myEndLine
+	fis2.:m7.5- b4:7 | b1:7 | e:m | e:m | \myEndLine
+	a:m7 | d:7 | fis2. g4:7 | ees1:dim7 | \myEndLine
+	\endPart
+
+	\myMark "A"
+	\startPart
+	d1:m7 | g:7.5+ | c:6 | c:m | \myEndLine
+	d:m7 | d2.:m7 g4:7 | c1:6 | b2.:7.5+ b4:7 | \myEndLine
+	e1:m | c:7 | f:maj7 | f:maj7 | \myEndLine
+	e:m7 | a:m7 | d:9 | g:7 | \myEndLine
+	c2 g:7/b | a:m7 f:m/aes | c1 | c | \myEndLine
+	d2:7 cis:7.9- | d1:9 | cis2:7.9- d:9 | d1:9 | \myEndLine
+	c | c | e:m | e:m | \myEndLine
+	d:m7 | d:m7 | g2:7 d:m7 | g1:7 | \myEndLine
+	c | c | \myEndLine
+	\endPart
+
+	\endSong
+	\endChords
+}
+{% endif %}
+{% if part == "VoiceFake" %}{
+	\tempo "Fast Tempo" 2 = 132
+	\time 2/2
+	\key c \major
+
+	\partial 2. b'2 c4 |
+	\repeat volta 2 {
+		% part "A"
+		a1~ | a4 b2 c4 | a1~ | a4 b2 c4 |
+		a4 a a c~ | c a2 e4 | a1~ | a4 g2 fis4 |
+		g1~ | g4 e2 c4 | e1~ | e4 c2 e4 |
+		\tuplet 3/2 { a1 g2~ } | \tuplet 3/2 { g2 a1 } | \tuplet 3/2 { g1 a2~ } | \tuplet 3/2 { a2 g1 } | a2 g2~ |
+	} \alternative {
+		{
+			g1 | r1 | r4 b2 c4 |
+		}
+		{
+			g1 | r1 | r1 |
+		}
+	}
+
+	% part "B"
+	c,2. d4~ | d1 | d2. e4~ | e1 |
+	r4 f2 e4 | f4 e f g~ | g1~ | g2. r4 |
+	e2. fis4~ | fis1 | fis2. g4~ | g1 |
+	\tuplet 3/2 { e2 d e } | \tuplet 3/2 { fis2 g a } | ais2. b4~ | b4 b2 c4 |
+
+	% part "A"
+	a1~ | a4 b2 c4 | a1~ | a4 b2 c4 |
+	a4 a a c~ | c a2 e4 | a1~ | a4 g2 fis4 |
+	g1~ | g4 e2 c4 | e1~ | e4 g2 f4 |
+	g1~ | g4 e2 c4 | e1~ | e2. d4 |
+	c2 d2 | e2 f2 | g2 a2 | b2 c2 |
+	d1~ | d1~ | d2. r4 | r4 c2 b4 |
+	\tuplet 3/2 { a1 g2~ } | \tuplet 3/2 { g2 a1 } | \tuplet 3/2 { g1 a2~ } | \tuplet 3/2 { a2 g1 } |
+	\tuplet 3/2 { a1 g2~ } | \tuplet 3/2 { g2 a1 } | \tuplet 3/2 { g1 a2~ } | \tuplet 3/2 { a2 g1 } |
+	c1~ | c4 r r2 |
+}
+{% endif %}
