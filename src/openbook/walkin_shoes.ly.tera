@@ -1,0 +1,125 @@
+{#
+default_version = "Fake"
+
+[attributes]
+title = "Walkin' Shoes"
+style = "Jazz"
+composer = "Gerry Mulligan"
+piece = "Medium swing"
+copyright = "1954 Criterion Music Corp."
+copyrightextra = "Renewed 1982 Criterion Music Corp."
+typesetter = "Mark Veltzer <mark.veltzer@gmail.com>"
+completion = "5"
+uuid = "07dfdd00-d55e-11f1-8000-046874d194b7"
+structure = "AABA"
+location = "jfb:413"
+
+[[youtube]]
+id = "y6uOcShLPvE"
+remark = "Gerry Mulligan Quartet with Chet Baker in the original recording (1953)"
+
+[[youtube]]
+id = "PXBq_BnEmS4"
+remark = "Gerry Mulligan"
+
+[versions.Fake]
+doChords = true
+doVoice = true
+doLyrics = false
+doLyricsmore = false
+doLyricsmoremore = false
+doChordBars = false
+doGuitar = false
+doExtra = false
+doPrep = false
+doOwn = false
+#}
+{% if part == "Vars" %}
+{% endif %}
+{% if part == "Doc" %}	DONE:
+	- added the meta data from the fake book.
+	- put in the tunes structure.
+	- put in the chords (fake book).
+	- put in the tune (fake book).
+	- added youtube performances.
+	TODO:
+	- check the chords (fake book).
+	- check the tune (fake book).
+	- hear the tune to check that it is right and adjust the tempo.
+	- first A bars 6-7: the Bm7b5 is printed over the last eighth of bar 6 (anticipation); the chord positions inside several bars (E7b5#9, D7b5, E7, D7) are approximate and were put on the nearest beat.
+	- last A bars 4-5: the falls after the first note are typed as bendAfter.
+{% endif %}
+{% if part == "ChordsFake" %}\chordmode {
+	\startChords
+	\startSong
+
+	\partial 2. s2. |
+
+	\myMark "A"
+	\startPart
+	\repeat volta 2 {
+		g1 | c:7 | g | b2:m7.5- e:7.5-.9+ | \myEndLine
+		a1:m7 | cis2:m11 fis4.:7 b8:m7.5- | b2:m7.5- bes:7 |
+	} \alternative {
+		{
+			a2:m11 aes:9.11+ | \myEndLineVoltaNotLast
+		}
+		{
+			a2:m11 aes4:9.11+ c:7 | \myEndLineVoltaLast
+		}
+	}
+	\endPart
+
+	\myMark "B"
+	\startPart
+	b1:7 | b:7 | e:m6 | e:m6 | \myEndLine
+	a1:7 | a:7 | a:m7 | d:7 | \myEndLine
+	\endPart
+
+	\myMark "A"
+	\startPart
+	g1 | c:7 | g | b2:m7.5- e:7 | \myEndLine
+	a2:m7.5- d:7 | a4.:m7 d:7.5- g4 | g1 | d:7 | \myEndLine
+	\endPart
+
+	\myMark "Coda"
+	\startPart
+	a4.:m7 d:7.5- c4:m7 | c2:m7 aes:7 | g1:maj7 | \myEndLine
+	\endPart
+
+	\endSong
+	\endChords
+}
+{% endif %}
+{% if part == "VoiceFake" %}{
+	\tempo "Moderato" 4 = 144
+	\time 4/4
+	\key g \major
+
+	\partial 2. fis'8 e d c b a |
+
+	% part "A"
+	\repeat volta 2 {
+		g4^\markup { \musicglyph #"scripts.segno" } r8 bes b4 d8 g, | r8 g4 a8 bes4 e | g,4 r8 bes b d e d | f4 e8 ees d bes a g |
+		a4 a8 b c d e fis~ | fis2~ fis4. g8 | r8 g g g r f f f |
+	} \alternative {
+		{
+			r8 d d d~ d2 |
+		}
+		{
+			r8 d d d~ d4 c |
+		}
+	}
+
+	% part "B"
+	b4 r r2 | r8 b4 cis8 \tuplet 3/2 { dis8 e fis } \tuplet 3/2 { dis e fis } | b,4 r r2 | r8 b4 cis8 \tuplet 3/2 { dis8 e fis } \tuplet 3/2 { dis e fis } |
+	g4 fis8 e r b ais b | dis4 d8 cis r a \tuplet 3/2 { bes8 a g } | a4 a8 b c d e r | r4 fis8 e d c b a |
+
+	% part "A"
+	g4 r r r8 g~ | g8 g4 a8 bes4 e | g,4 r8 bes b d e d | f4\bendAfter #-4 b,8 e r4 r8 d |
+	ees4\bendAfter #-4 a,8 d r4 r8 b^\markup {To Coda \musicglyph #"scripts.coda"} | c8 d e fis r4 g | r4 \parenthesize b,8^\markup {(Jazz Solo pick-ups)} r r2 | r1^\markup {D.S. al Coda} |
+
+	% part "Coda"
+	c8 d e fis r4 g,~ | g2 fis | fis1\fermata |
+}
+{% endif %}

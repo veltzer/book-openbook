@@ -1,0 +1,128 @@
+{#
+default_version = "Fake"
+
+[attributes]
+title = "Where Flamingos Fly"
+style = "Jazz"
+composer = "James Kennedy, Mascha Spoliansky"
+poet = "James Kennedy, Mascha Spoliansky"
+piece = "Very Slow"
+copyright = "1948 Peter Maurice Music Ltd."
+copyrightextra = "All Rights for the U.S. and Canada Administered by Colgems-EMI Music Inc."
+typesetter = "Mark Veltzer <mark.veltzer@gmail.com>"
+completion = "5"
+uuid = "1cba3d84-d55d-11f1-8000-046874d194b7"
+structure = "AABA"
+location = "jfb:425"
+
+[[youtube]]
+id = "MMLyUp-fF0I"
+remark = "The Gil Evans Orchestra"
+
+[[youtube]]
+id = "9ptk4m7Uoas"
+remark = "Stan Getz"
+
+[versions.Fake]
+doChords = true
+doVoice = true
+doLyrics = false
+doLyricsmore = false
+doLyricsmoremore = false
+doChordBars = false
+doGuitar = false
+doExtra = false
+doPrep = false
+doOwn = false
+#}
+{% if part == "Vars" %}
+{% endif %}
+{% if part == "Doc" %}	DONE:
+	- added the meta data from the fake book.
+	- put in the tunes structure.
+	- put in the chords (fake book).
+	- put in the tune (fake book).
+	- added youtube performances.
+	TODO:
+	- add the lyrics.
+	- check the chords (fake book).
+	- check the tune (fake book).
+	- hear the tune to check that it is right and adjust the tempo.
+	- bar 22: the fake book prints Am6 between the half note and the eighths; it is put on beat 3 here.
+{% endif %}
+{% if part == "ChordsFake" %}\chordmode {
+	\startChords
+	\startSong
+
+	\partial 4. s4. |
+
+	\myMark "A"
+	\startPart
+	\repeat volta 2 {
+		a2:m f/a | a:m6 f/a | a:m f/a | a:m6 f/a | \myEndLine
+		a2:m7 c:7.9- | f2:6 d4:m7 g:7.9- | c1*2:6 | \myEndLine
+		\endPart
+
+		\myMark "A"
+		\startPart
+		a2:m f/a | a:m6 f/a | a:m f/a | a:m6 f/a | \myEndLine
+		a2:m7 c:7.9- | f2:6 d4:m7 g:7.9- | c1:6 | c1:9 | \myEndLine
+		\endPart
+
+		\myMark "B"
+		\startPart
+		f1:7 | c:6 | f:7 | c:6 | \myEndLine
+		f1:7 | a2:m7 a:m6 | f1:9 | e:7 | \myEndLine
+		\endPart
+
+		\myMark "A"
+		\startPart
+		a2:m f/a | a:m6 f/a | a:m f/a | a:m6 f/a | \myEndLine
+		a2:m7 c:7.9- | f2:6 d4:m7 g:7.9- |
+	} \alternative {
+		{
+			c1:6 | b2:m7.5- e:7.5+ | \myEndLineVoltaNotLast
+		}
+		{
+			c2:6 aes:9 | c1 | \myEndLineVoltaLast
+		}
+	}
+	\endPart
+
+	\endSong
+	\endChords
+}
+{% endif %}
+{% if part == "VoiceFake" %}{
+	\tempo "Adagio" 4 = 60
+	\time 4/4
+	\key c \major
+
+	\partial 4. c'4 a8 |
+
+	\repeat volta 2 {
+		% part "A"
+		c4 a8 a~ a2~ | a2 r8 c4 a8 | c4 a8 g~ g a4.~ | a2 r8 c4 a8 |
+		c4 a8 e g a g e | d2 c4 d | e c c2~ | c2 r8 c'4 a8 |
+
+		% part "A"
+		c4 a8 a~ a2~ | a2 r8 c4 a8 | c4 a8 g~ g a4.~ | a2 r8 c4 a8 |
+		c4 a8 e g a g e | d2 c4 d | e c c2~ | c1 |
+
+		% part "B"
+		\tuplet 3/2 { g'4 f c } ees4. c8 | e!8 g4.~ g2 | \tuplet 3/2 { g4 f c } \tuplet 3/2 { g' f c } | e1 |
+		\tuplet 3/2 { c'4 a g } \tuplet 3/2 { a g a } | \tuplet 3/2 { c8 a c~ } c2 a8 b | \tuplet 3/2 { c4 a b } \tuplet 3/2 { c d4. c8 } | b8 e,4. r8 c'4 a8 |
+
+		% part "A"
+		c4 a8 a~ a2~ | a2 r8 c4 a8 | c4 a8 g~ g a4.~ | a2 r8 c4 a8 |
+		c4 a8 e g a g e | d2 c'4 d |
+	} \alternative {
+		{
+			e4 c c2~ | c2 r8 c4 a8 |
+		}
+		{
+			e'4 c c2~ | c2. r4 |
+		}
+	}
+}
+{% endif %}

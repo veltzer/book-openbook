@@ -1,0 +1,95 @@
+{#
+default_version = "Fake"
+
+[attributes]
+title = "Woodchopper's Ball"
+style = "Swing"
+composer = "Joe Bishop, Woody Herman"
+piece = "Fast"
+copyright = "1934, 1943, 1958 by MCA MUSIC PUBLISHING, A Division of MCA INC., New York, NY"
+copyrightextra = "Copyright Renewed"
+typesetter = "Mark Veltzer <mark.veltzer@gmail.com>"
+completion = "5"
+uuid = "379f443c-d55d-11f1-8000-046874d194b7"
+structure = "Blues"
+location = "jfb:429"
+
+[[youtube]]
+id = "wP88PBeXzQo"
+remark = "Woody Herman in the original recording (1939)"
+
+[[youtube]]
+id = "4OcySBum734"
+remark = "Woody Herman and his Swingin' Herd"
+
+[versions.Fake]
+doChords = true
+doVoice = true
+doLyrics = false
+doLyricsmore = false
+doLyricsmoremore = false
+doChordBars = false
+doGuitar = false
+doExtra = false
+doPrep = false
+doOwn = false
+#}
+{% if part == "Vars" %}
+{% endif %}
+{% if part == "Doc" %}	DONE:
+	- added the meta data from the fake book.
+	- put in the tunes structure.
+	- put in the chords (fake book).
+	- put in the tune (fake book).
+	- added youtube performances.
+	TODO:
+	- check the chords (fake book).
+	- check the tune (fake book).
+	- hear the tune to check that it is right and adjust the tempo.
+{% endif %}
+{% if part == "ChordsFake" %}\chordmode {
+	\startChords
+	\startSong
+
+	\partial 4 s4 |
+
+	\myMark "A"
+	\startPart
+	\repeat volta 2 {
+		c1 | c | c | c2. f4:9 | f1:9 | f2.:9 c4 | \myEndLine
+		c1 | c2. d4:m7 | d1:m7 | d:m7 |
+	} \alternative {
+		{
+			c1*2 | \myEndLineVoltaNotLast
+		}
+		{
+			c1 | c2. \myEndLineVoltaLast
+		}
+	}
+	\endPart
+
+	\endSong
+	\endChords
+}
+{% endif %}
+{% if part == "VoiceFake" %}{
+	\tempo "Allegro" 4 = 200
+	\time 4/4
+	\key c \major
+
+	\partial 4 c'4~ |
+
+	% part "A"
+	\repeat volta 2 {
+		c4 c c r | c r8 c r4 c~ | c c c r | c r8 c r4 c~ | c c c r | c r8 c r4 c~ |
+		c c c r | c r8 c r4 c~ | c c c r | c r8 c r2 |
+	} \alternative {
+		{
+			r4^\markup { (Optional Repeats) } c2.~ | c2. c4\laissezVibrer |
+		}
+		{
+			r4 c2.~ | c2.
+		}
+	}
+}
+{% endif %}

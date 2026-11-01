@@ -1,0 +1,117 @@
+{#
+default_version = "Fake"
+
+[attributes]
+title = "With A Little Bit Of Luck"
+style = "Broadway"
+composer = "Frederick Loewe"
+poet = "Alan Jay Lerner"
+piece = "Brightly"
+copyright = "1956 by Alan Jay Lerner & Frederick Loewe. Copyright Renewed."
+copyrightextra = "Chappell & Co., Inc., owner of publication and allied rights throughout the World"
+typesetter = "Mark Veltzer <mark.veltzer@gmail.com>"
+completion = "5"
+uuid = "e1581430-d55e-11f1-8000-046874d194b7"
+structure = "AABA"
+location = "jfb:432"
+
+[[youtube]]
+id = "HmmOTfRgNvk"
+remark = "Stanley Holloway in the original Broadway cast recording of My Fair Lady (1956)"
+
+[[youtube]]
+id = "CEP1MqBcdOA"
+remark = "Shelly Manne and his Friends (My Fair Lady, 1956)"
+
+[versions.Fake]
+doChords = true
+doVoice = true
+doLyrics = false
+doLyricsmore = false
+doLyricsmoremore = false
+doChordBars = false
+doGuitar = false
+doExtra = false
+doPrep = false
+doOwn = false
+#}
+{% if part == "Vars" %}
+{% endif %}
+{% if part == "Doc" %}	DONE:
+	- added the meta data from the fake book.
+	- put in the tunes structure.
+	- put in the chords (fake book).
+	- put in the tune (fake book).
+	- added youtube performances.
+	TODO:
+	- add the lyrics.
+	- check the chords (fake book).
+	- check the tune (fake book).
+	- hear the tune to check that it is right and adjust the tempo.
+{% endif %}
+{% if part == "ChordsFake" %}\chordmode {
+	\startChords
+	\startSong
+
+	\partial 2. s2. |
+
+	\myMark "A"
+	\startPart
+	\repeat volta 2 {
+		c1 | c | c | c | c | c | c | \myEndLine
+		c1:7 | f | a:7 | f2 f:maj7/e | d1:7 | f | f2 d:7 | \myEndLine
+		g4 g2.:7 | c2 e:7 | f2. d4:m7 | c2/g g:7 | c1 | c | g:7 | \myEndLine
+		g1:7 | c | c | g:7 | g:7 | c |
+	} \alternative {
+		{
+			s1 | \myEndLineVoltaNotLast
+		}
+		{
+			s1 | f | f | c | c2 cis:dim7 | g1/d | d:7 | g | \myEndLineVoltaLast
+		}
+	}
+	\endPart
+
+	\myMark "A"
+	\startPart
+	s1 | c | c | c | c | c | c | c | \myEndLine
+	c1:7 | f | a:7 | f2 f:maj7/e | d1:7 | f | d:7/fis | \myEndLine
+	g4 g2.:7 | c2 e:7 | f1 | c2/g g:7 | c1 | c | g:7 | \myEndLine
+	g1:7 | c | c | g:7 | g:7 | c | c | \myEndLine
+	g1:7 | g:7 | c | c | c/g | g:7 | c | c | \myEndLine
+	\endPart
+
+	\endSong
+	\endChords
+}
+{% endif %}
+{% if part == "VoiceFake" %}{
+	\tempo "Allegro" 4 = 200
+	\time 2/2
+	\key c \major
+
+	\partial 2. g4 a b |
+
+	% part "A"
+	\repeat volta 2 {
+		c2 c | d4 c a b | c2 c~ | c4 g c d | e2 e | f4 e c d | e1~ |
+		e4 c d e | f2 f | g4 a f g | a2 a | b4 r r a8 b | c8 b c4 r b | a4 r d4. c8 |
+		b8 ais b4 r a!4 | g4 r e'4. d8 | c4 a g a | e r d r | c1~ | c4 r e'4. dis8 | e8 d! d4 r2 |
+		r2 d4. cis8 | d8 c! c4 r2 | r2 e4. dis8 | e8 d! d4 r d | d d c d | c2. r4 |
+	} \alternative {
+		{
+			r4 g, a b |
+		}
+		{
+			r4 c' c c | c2 a | c2. b4 | a2 g~ | g4 g f e | d8 d d4 r d | a'4 d, e fis | g4 r r2 |
+		}
+	}
+
+	% part "A"
+	r4 g, a b | c2 c | d4 c a b | c2 c~ | c4 g c d | e2 e | f4 e c d | e1~ |
+	e4 c d e | f2 f | g4 a f g | a2 a | b4 r r a8 b | c8 b c4 r b | a2 d4. c8 |
+	b8 ais b4 r a!4 | g2 e'4. d8 | c4 a g a | e r d r | c r r2 | r2 e'4. dis8 | e8 d! d4 r2 |
+	r2 d4. cis8 | d8 c! c4 r2 | r2 e4. dis8 | e8 d! d4 r d | d d c d | c4 r r2 | r2 e4. dis8 |
+	e8 d d4 r2 | r2 d4. cis8 | d8 c! c4 r2 | r2 c4. d8 | e4 c e c | d2 d | c1~ | c4 r r2 |
+}
+{% endif %}

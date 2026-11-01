@@ -1,0 +1,104 @@
+{#
+default_version = "Fake"
+
+[attributes]
+title = "Tickle Toe"
+style = "Swing"
+composer = "Lester Young"
+poet = "Jon Hendricks"
+piece = "Medium Swing"
+copyright = "1940, 1959 (Renewed) WB Music Corp."
+typesetter = "Mark Veltzer <mark.veltzer@gmail.com>"
+completion = "5"
+uuid = "fcba55f0-d55c-11f1-8000-046874d194b7"
+structure = "ABAC"
+location = "jfb:395"
+
+[[youtube]]
+id = "iZXjrLXn734"
+remark = "Lester Young with Count Basie and His Orchestra in the original recording (1940)"
+
+[[youtube]]
+id = "VMft5O6ux7w"
+remark = "Lambert, Hendricks and Ross with the Jon Hendricks lyric"
+
+[versions.Fake]
+doChords = true
+doVoice = true
+doLyrics = false
+doLyricsmore = false
+doLyricsmoremore = false
+doChordBars = false
+doGuitar = false
+doExtra = false
+doPrep = false
+doOwn = false
+#}
+{% if part == "Vars" %}
+{% endif %}
+{% if part == "Doc" %}	DONE:
+	- added the meta data from the fake book.
+	- put in the tunes structure.
+	- put in the chords (fake book).
+	- put in the tune (fake book).
+	- added youtube performances.
+	TODO:
+	- add the lyrics (the fake book credits a lyric by Jon Hendricks but does not print it).
+	- check the chords (fake book).
+	- check the tune (fake book).
+	- hear the tune to check that it is right and adjust the tempo.
+{% endif %}
+{% if part == "ChordsFake" %}\chordmode {
+	\startChords
+	\startSong
+
+	\myMark "A"
+	\startPart
+	bes2:m f:7 | bes:m f:7 | bes1:m | f2:m7 bes:7 | \myEndLine
+	ees2:m bes:7 | ees:m bes:7 | ees1:m | aes2:m7 des:7 | \myEndLine
+	\endPart
+
+	\myMark "B"
+	\startPart
+	ges1 | des:dim7 | des:maj7 | f2:m7 bes:7 | \myEndLine
+	ees1:7 | bes2:m7 ees:7 | aes1:7 | f:7 | \myEndLine
+	\endPart
+
+	\myMark "A"
+	\startPart
+	bes2:m f:7 | bes:m f:7 | bes1:m | f2:m7 bes:7 | \myEndLine
+	ees2:m bes:7 | ees:m bes:7 | ees1:m | aes2:m7 des:7 | \myEndLine
+	\endPart
+
+	\myMark "C"
+	\startPart
+	ges1 | des:dim7 | des:maj7 | bes:7 | \myEndLine
+	ees1:7 | ees2:m7 aes:7 | des1*2 | \myEndLine
+	\endPart
+
+	\endSong
+	\endChords
+}
+{% endif %}
+{% if part == "VoiceFake" %}{
+	\tempo "Medium Swing" 4 = 140
+	\time 4/4
+	\key bes \minor
+
+	% part "A"
+	f8 bes des f ees c a f~ | f4 bes8 des c a g e | f4. f8~ f2 | r1 |
+	ees8 ges bes ees d b aes f | ees4 bes'8 ees f d b a | bes4. bes8~ bes2 | r1 |
+
+	% part "B"
+	des4. bes8 des4 bes8 e,~ | e4. c'8~ c4 aes | c2 aes8 bes c bes | aes8 f \tuplet 3/2 { ees f ees } d f aes ces |
+	bes4. f8 c bes4.~ | bes4. c8 des4 bes | ges'4 f8 ges f16 ges f ees des8 bes | \tuplet 3/2 { a8 c ees } \tuplet 3/2 { ges f e } \tuplet 3/2 { f a c } f4 |
+
+	% part "A"
+	f,8 bes des f ees c a f~ | f4 bes8 des c a g e | f4. f8~ f2 | r1 |
+	ees8 ges bes ees d b aes f | ees4 bes'8 ees f d b a | bes4. bes8~ bes2 | r1 |
+
+	% part "C"
+	des8 bes des bes ges bes des bes | des8 a r4 r r8 c~ | c4 aes c8 aes c aes | f8 aes c aes ces4 r8 bes~ |
+	bes4 f bes2 | r2 aes8 bes des des | r1 | r1 |
+}
+{% endif %}

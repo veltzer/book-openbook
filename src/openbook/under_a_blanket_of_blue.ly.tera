@@ -1,0 +1,105 @@
+{#
+default_version = "Fake"
+
+[attributes]
+title = "Under A Blanket Of Blue"
+style = "Jazz"
+composer = "Jerry Livingston"
+poet = "Marty Symes, Al J. Neiburg"
+piece = "Slowly, with expression"
+copyright = "1933 by Santly Bros., Inc."
+copyrightextra = "Copyright assigned 1942 to Joy Music, Inc., New York. Copyright renewed 1961 by Jerry Livingston. Renewal Copyright assigned 1961 to Hallmark Music Co., Inc., Beverly Hills, CA"
+typesetter = "Mark Veltzer <mark.veltzer@gmail.com>"
+completion = "5"
+uuid = "95c7d80c-d55e-11f1-8000-046874d194b7"
+structure = "AABA"
+location = "jfb:406"
+
+[[youtube]]
+id = "9aFu2dWSzgU"
+remark = "Glen Gray and the Casa Loma Orchestra with Kenny Sargent in the original hit recording (1933)"
+
+[[youtube]]
+id = "Sv-zbrfTSYY"
+remark = "Ella Fitzgerald and Louis Armstrong (1956)"
+
+[versions.Fake]
+doChords = true
+doVoice = true
+doLyrics = false
+doLyricsmore = false
+doLyricsmoremore = false
+doChordBars = false
+doGuitar = false
+doExtra = false
+doPrep = false
+doOwn = false
+#}
+{% if part == "Vars" %}
+{% endif %}
+{% if part == "Doc" %}	DONE:
+	- added the meta data from the fake book.
+	- put in the tunes structure.
+	- put in the chords (fake book).
+	- put in the tune (fake book).
+	- added youtube performances.
+	TODO:
+	- add the lyrics.
+	- check the chords (fake book).
+	- check the tune (fake book).
+	- hear the tune to check that it is right and adjust the tempo.
+{% endif %}
+{% if part == "ChordsFake" %}\chordmode {
+	\startChords
+	\startSong
+
+	\myMark "A"
+	\startPart
+	f1:m7 | bes1:7.5+ | ees2 g:m7 | c1:7 | \myEndLine
+	f1:m7 | bes1:7 | ees1 | g2:m7 c:7 | \myEndLine
+	\endPart
+
+	\myMark "A"
+	\startPart
+	f1:m7 | bes1:7.5+ | ees2 g:m7 | c1:7 | \myEndLine
+	f1:m7 | bes1:7 | ees2 aes | ees1:6 | \myEndLine
+	\endPart
+
+	\myMark "B"
+	\startPart
+	ees2:7 bes:m7 | ees1:7 | aes1 | aes1 | \myEndLine
+	f2:7 c:m7 | f1:7 | f1:7 | bes1:7.5+ | \myEndLine
+	\endPart
+
+	\myMark "A"
+	\startPart
+	f1:m7 | bes1:7.5+ | ees2 g:m7 | c1:7 | \myEndLine
+	f1:m7 | bes1:7 | ees2 aes:m6 | ees1 | \myEndLine
+	\endPart
+
+	\endSong
+	\endChords
+}
+{% endif %}
+{% if part == "VoiceFake" %}{
+	\tempo "Adagio" 2 = 60
+	\time 2/2
+	\key ees \major
+
+	% part "A"
+	f8 g aes c~ c aes g fis~ | fis1 | g8 bes c d~ d4 d | c4. g8 g2 |
+	ees'8 c ees c~ c4. c,8 | g'8 bes g2 d4 | f4. ees8 bes'2~ | bes1 |
+
+	% part "A"
+	f8 g aes c~ c aes g fis~ | fis1 | g8 bes c d~ d4 d | c4. g8 g2 |
+	ees'8 c ees c~ c4. c,8 | g'8 bes g2 d4 | f4. ees8 ees2~ | ees1 |
+
+	% part "B"
+	r4 ees \tuplet 3/2 { f4 g aes } | g4 g2. | r4 ees \tuplet 3/2 { f4 g c } | g1 |
+	r4 f \tuplet 3/2 { g4 a bes } | a4 a2 f4 | g8 c c c~ c4 d | fis,8 c' c c~ c2 |
+
+	% part "A"
+	f,8 g aes c~ c aes g fis~ | fis1 | g8 bes c d~ d4 d | c4. g8 g2 |
+	ees'8 c ees c~ c4. c,8 | g'8 bes g2. | \tuplet 3/2 { f4 ees d } \tuplet 3/2 { f4 ees d } | ees1 |
+}
+{% endif %}

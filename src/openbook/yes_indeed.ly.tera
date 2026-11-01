@@ -1,0 +1,119 @@
+{#
+default_version = "Fake"
+
+[attributes]
+title = "Yes Indeed"
+style = "Swing"
+composer = "Sy Oliver"
+poet = "Sy Oliver"
+piece = "Peppy"
+copyright = "1941 (Renewed) Embassy Music Corporation, New York"
+typesetter = "Mark Veltzer <mark.veltzer@gmail.com>"
+completion = "5"
+uuid = "02985dc1-d55d-11f1-8000-046874d194b7"
+structure = "Intro AB"
+location = "jfb:437"
+
+[[youtube]]
+id = "bi88MGxJShE"
+remark = "Tommy Dorsey with Sy Oliver and Jo Stafford in the original recording (1941)"
+
+[[youtube]]
+id = "l6ZQpNLuF3w"
+remark = "Ray Charles (1958)"
+
+[versions.Fake]
+doChords = true
+doVoice = true
+doLyrics = false
+doLyricsmore = false
+doLyricsmoremore = false
+doChordBars = false
+doGuitar = false
+doExtra = false
+doPrep = false
+doOwn = false
+#}
+{% if part == "Vars" %}
+{% endif %}
+{% if part == "Doc" %}	DONE:
+	- added the meta data from the fake book.
+	- put in the tunes structure.
+	- put in the chords (fake book).
+	- put in the tune (fake book).
+	- added youtube performances.
+	TODO:
+	- add the lyrics.
+	- check the chords (fake book).
+	- check the tune (fake book).
+	- hear the tune to check that it is right and adjust the tempo.
+	- the fake book prints a start repeat sign at the first bar of the verse as well as at the chorus, with only one end repeat; it is typeset here as a verse played once and a repeated chorus.
+{% endif %}
+{% if part == "ChordsFake" %}\chordmode {
+	\startChords
+	\startSong
+
+	\partial 2 s2 |
+
+	\myMark "Intro"
+	\startPart
+	f2 bes | f1 | bes2 ees | bes c:7 | \myEndLine
+	f2. des4:7 | g2:m7 ges:maj7 | f bes | f1 | \myEndLine
+	\endPart
+
+	\repeat volta 2 {
+
+		\myMark "A"
+		\startPart
+		f2 d:m7 | g:m7 g:m7/c | f bes | f1 | \myEndLine
+		f1 | f | g:m7 | c:13 | \myEndLine
+		\endPart
+
+		\myMark "B"
+		\startPart
+		f1:7.9+ | f:7 | b2:13 bes:13 | bes1:m6 | \myEndLine
+		f2. d4:m7 | g2:m7 g:m7/c | f bes |
+	} \alternative {
+		{
+			f1 | \myEndLineVoltaNotLast
+		}
+		{
+			f1 | \myEndLineVoltaLast
+		}
+	}
+	\endPart
+
+	\endSong
+	\endChords
+}
+{% endif %}
+{% if part == "VoiceFake" %}{
+	\tempo "Allegro" 2 = 110
+	\time 2/2
+	\key f \major
+
+	\partial 2 c4 d |
+
+	% part "Intro"
+	f1~ | f2 f4 g | bes1~ | bes2 b!8 bes a4 |
+	f8 c4. c4 des | d!2 f | f1~ | f2 c4 d |
+
+	\repeat volta 2 {
+
+		% part "A"
+		f2 f4 f | a c f, f | f1~ | f2 a4 a |
+		f2 f4 f | a c f, f | a1 | a4 c c d |
+
+		% part "B"
+		aes4 f2 f4 | a!2 f4 f | b!4. bes8~ bes2~ | bes2 f4 f |
+		a8 c~ c2 a4 | f8 c4. f4 f | f1~ |
+	} \alternative {
+		{
+			f2 c4 d |
+		}
+		{
+			f2 r |
+		}
+	}
+}
+{% endif %}

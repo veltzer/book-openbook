@@ -1,0 +1,95 @@
+{#
+default_version = "Fake"
+
+[attributes]
+title = "While We're Young"
+style = "Jazz"
+composer = "Morty Palitz, Alec Wilder"
+poet = "Bill Engvick"
+piece = "Moderately"
+copyright = "1943 (renewed 1971) and 1944 (renewed 1972) Ludlow Music, Inc., New York, NY."
+copyrightextra = "TRO"
+typesetter = "Mark Veltzer <mark.veltzer@gmail.com>"
+completion = "5"
+uuid = "18ba53a4-d55d-11f1-8000-046874d194b7"
+structure = "ABAC"
+location = "jfb:429"
+
+[[youtube]]
+id = "fO4XyqEdL3c"
+remark = "Tony Bennett"
+
+[[youtube]]
+id = "CvMHKt1FSv0"
+remark = "Meredith d'Ambrosio"
+
+[versions.Fake]
+doChords = true
+doVoice = true
+doLyrics = false
+doLyricsmore = false
+doLyricsmoremore = false
+doChordBars = false
+doGuitar = false
+doExtra = false
+doPrep = false
+doOwn = false
+#}
+{% if part == "Vars" %}
+{% endif %}
+{% if part == "Doc" %}	DONE:
+	- added the meta data from the fake book.
+	- put in the tunes structure.
+	- put in the chords (fake book).
+	- put in the tune (fake book).
+	- added youtube performances.
+	TODO:
+	- add the lyrics.
+	- check the chords (fake book).
+	- check the tune (fake book).
+	- hear the tune to check that it is right and adjust the tempo.
+{% endif %}
+{% if part == "ChordsFake" %}\chordmode {
+	\startChords
+	\startSong
+
+	\myMark "A"
+	\startPart
+	ees2.*2 | f2.*2:m7 | f2.*2:m9 | bes2.:13 | bes:13.9- | \myEndLine
+	ees2.*2 | f2.*3:m7 | f2.:m7/ees | d:m7.5- | g:7 | \myEndLine
+	\endPart
+
+	\myMark "B"
+	\startPart
+	c2.*2:m | c2.*2:m6 | c2.*2:m | c2.*2:m7 | \myEndLine
+	c2.:m | c:m/bes | a2.*2:m7.5- | aes2.:6 | f:m7 | bes:13 | bes:13.9- | \myEndLine
+	\endPart
+
+	\myMark "Coda"
+	\startPart
+	c2.*2:m | bes2.:m7 | ees:7 | aes2.*2 | des2.*2:9 | \myEndLine
+	ees2. | c:m7 | f:m7 | bes2:7 bes4:7.9- | ees2. | aes:m6 | ees2.*2:6 | \myEndLine
+	\endPart
+
+	\endSong
+	\endChords
+}
+{% endif %}
+{% if part == "VoiceFake" %}{
+	\tempo "Moderato" 4 = 120
+	\time 3/4
+	\key ees \major
+
+	% part "A"
+	ees2 d4 | c2 ees4 | bes'2. | c,2 ees4 | g2.~ | g2.~ | g2.~ | g4 r r |
+	ees2 d4 | c2 ees4 | c'2. | c,2 ees4 | f2.~ | f2.~ | f2.~ | f4 r r^\markup { To Coda \musicglyph #"scripts.coda" } |
+
+	% part "B"
+	g2. | aes2 g4 | a!2.~ | a2. | g2. | aes2 g4 | bes2.~ | bes2. |
+	g2. | aes2 g4 | d'2.~ | d2 c4 | f,2. | g2 f4 | g2.~ | g2 r4^\markup { D.C. al Coda } |
+
+	% part "Coda"
+	g2. | ees'2 d4 | des2.~ | des2. | ees,2. | c'2 ees,4 | f2.~ | f2 r4 |
+	ees2 d4 | c2 ees4 | c'2. | c,2 d4 | ees2.~ | ees2.~ | ees2.~ | ees4 r r |
+}
+{% endif %}

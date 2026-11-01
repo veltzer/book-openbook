@@ -1,0 +1,106 @@
+{#
+default_version = "Fake"
+
+[attributes]
+title = "Too Darn Hot"
+style = "Jazz"
+composer = "Cole Porter"
+poet = "Cole Porter"
+piece = "Moderately Fast"
+copyright = "1949 by Cole Porter"
+copyrightextra = "Copyright Renewed, assigned to John F. Wharton, as Trustee of the Cole Porter Musical & Literary Property Trusts. Chappell & Co., Inc., owner of publication and allied rights throughout the World."
+typesetter = "Mark Veltzer <mark.veltzer@gmail.com>"
+completion = "5"
+uuid = "1ca2b9ac-d55d-11f1-8000-046874d194b7"
+structure = "AB"
+location = "jfb:400"
+
+[[youtube]]
+id = "WS_YAKZH3lw"
+remark = "Ann Miller in the film Kiss Me Kate (1953)"
+
+[[youtube]]
+id = "XZu3iGB3fYY"
+remark = "Ella Fitzgerald from the Cole Porter Song Book (1956)"
+
+[versions.Fake]
+doChords = true
+doVoice = true
+doLyrics = false
+doLyricsmore = false
+doLyricsmoremore = false
+doChordBars = false
+doGuitar = false
+doExtra = false
+doPrep = false
+doOwn = false
+#}
+{% if part == "Vars" %}
+{% endif %}
+{% if part == "Doc" %}	DONE:
+	- added the meta data from the fake book.
+	- put in the tunes structure.
+	- put in the chords (fake book).
+	- put in the tune (fake book).
+	- added youtube performances.
+	TODO:
+	- add the lyrics.
+	- check the chords (fake book).
+	- check the tune (fake book).
+	- hear the tune to check that it is right and adjust the tempo.
+{% endif %}
+{% if part == "ChordsFake" %}\chordmode {
+	\startChords
+	\startSong
+
+	\partial 4 s4 |
+
+	\myMark "A"
+	\startPart
+	\repeat volta 2 {
+		e2:m b:m7 | e:m b:7 | e:m b:m7 | e:m b:7 | \myEndLine
+		e2:m e:m/d | e:m/cis c:7 | b:7sus4 c:7.5- | b1:7 | \myEndLine
+		e2:m e:m/d | e:m/cis c:7 | b:7sus4 c:7.5- | b1:7 | \myEndLine
+
+		\myMark "B"
+		e2:6 cis:m7 | fis:m7 b:7 | e:6 cis:7 | fis:m7 b:7 | \myEndLine
+		e2 eis:dim7 | fis:m7 b:9 | e:m b:m7 |
+	} \alternative {
+		{
+			e2:m b:7 | \myEndLineVoltaNotLast
+		}
+		{
+			e1:m | \myEndLineVoltaLast
+		}
+	}
+	\endPart
+
+	\endSong
+	\endChords
+}
+{% endif %}
+{% if part == "VoiceFake" %}{
+	\tempo "Allegro" 2 = 110
+	\time 2/2
+	\key e \minor
+
+	\partial 4 b4 |
+
+	% part "A"
+	\repeat volta 2 {
+		e2 d | b4 r r b | e2 d | b4 r r b |
+		e4 fis8 g~ g2~ | g8 g4 e8 g fis e fis~ | fis1~ | fis4 r r b, |
+		e4 fis8 g~ g2~ | g8 g4 e8 g fis e fis~ | fis1~ | fis4 r r b, |
+		% part "B"
+		e4 fis8 gis~ gis8 gis4 e8 | gis8 fis e fis~ fis8 r8 b,4 | gis'4 a8 b~ b8 b4 gis8 | b8 a gis a~ a8 r fis fis |
+		b4 cis8 d~ d8 d4 b8 | d8 cis b cis~ cis8 b4 a8 | g2 fis |
+	} \alternative {
+		{
+			e4 r r b |
+		}
+		{
+			e4 r r2 |
+		}
+	}
+}
+{% endif %}

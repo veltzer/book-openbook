@@ -1,0 +1,129 @@
+{#
+default_version = "Fake"
+
+[attributes]
+title = "Tishomingo Blues"
+style = "Jazz"
+composer = "Spencer Williams"
+poet = "Spencer Williams"
+piece = "Moderately"
+copyright = "1917 by Edward B. Marks Music Company."
+copyrightextra = "Copyright Renewed."
+typesetter = "Mark Veltzer <mark.veltzer@gmail.com>"
+completion = "5"
+uuid = "fcbc4090-d55c-11f1-8000-046874d194b7"
+structure = "ABAC"
+location = "jfb:396"
+
+[[youtube]]
+id = "Lfkdu3sPJeU"
+remark = "Eddie Nelson in the first recording"
+
+[[youtube]]
+id = "DlcntNUmaeg"
+remark = "Duke Ellington and His Orchestra (1928)"
+
+[versions.Fake]
+doChords = true
+doVoice = true
+doLyrics = false
+doLyricsmore = false
+doLyricsmoremore = false
+doChordBars = false
+doGuitar = false
+doExtra = false
+doPrep = false
+doOwn = false
+#}
+{% if part == "Vars" %}
+{% endif %}
+{% if part == "Doc" %}	DONE:
+	- added the meta data from the fake book.
+	- put in the tunes structure.
+	- put in the chords (fake book).
+	- put in the tune (fake book).
+	- added youtube performances.
+	TODO:
+	- add the lyrics.
+	- check the chords (fake book).
+	- check the tune (fake book).
+	- hear the tune to check that it is right and adjust the tempo.
+	- bar 31: the third note is an a with no accidental after an a sharp in the same bar; typed as a sharp (carry-through rule), maybe it is a natural.
+	- bar 8: the G#dim7 is printed over the last beat rest of the bar; check whether it belongs on beat 1 of bar 9 together with the D7/A.
+{% endif %}
+{% if part == "ChordsFake" %}\chordmode {
+	\startChords
+	\startSong
+
+	\partial 4 s4 |
+
+	\myMark "A"
+	\startPart
+	\repeat volta 2 {
+		g1:7 | c | g | g:7 | \myEndLine
+		c1:7 | ees2:7 d:7 | g1 | g2. gis4:dim7 | \myEndLine
+		\endPart
+
+		\myMark "B"
+		\startPart
+		d1:7/a | d:7 | g | g | \myEndLine
+		d1 | a:7 | d2 a:7 | d1 | \myEndLine
+		\endPart
+
+		\myMark "A"
+		\startPart
+		g1 | c | g | g:7 | \myEndLine
+		c1 | c:7 | b | b | \myEndLine
+		\endPart
+
+		\myMark "C"
+		\startPart
+		g1 | b:7/fis | e:m | ees:7 | \myEndLine
+		g1/d | d:7 | g2/d d:7 |
+	} \alternative {
+		{
+			g4 gis:dim7 d:7/a d:7 | \myEndLineVoltaNotLast
+		}
+		{
+			g4 d:7 g2 | \myEndLineVoltaLast
+		}
+	}
+	\endPart
+
+	\endSong
+	\endChords
+}
+{% endif %}
+{% if part == "VoiceFake" %}{
+	\tempo "Moderato" 4 = 120
+	\time 4/4
+	\key g \major
+
+	\partial 4 d'4 |
+
+	% part "A"
+	\repeat volta 2 {
+		d8 b b b b a4. | r8 g g g g e4. | d1~ | d2. r4 |
+		r8 g a g bes a4. | r8 g a g bes a4. | g1~ | g2. r4 |
+
+		% part "B"
+		fis8 a fis e d4 e | fis8 a4 a8~ a4 ais | b8 d b a g4 a | b8 d4 d8~ d4 r |
+		fis,8 a4 a8~ a2 | g8 a4 a8~ a2 | d8 d, e eis fis a fis e | d4 r r d' |
+
+		% part "A"
+		d8 b b b b a4. | r8 g g g g e4. | d1~ | d2. r4 |
+		r8 g a g a g4. | r8 g a g a ais4. | b1~ | b4 r r g8 a |
+
+		% part "C"
+		b2. b4 | a2 a | g4 g g8 a4. | bes2. r4 |
+		r8 d d d d b4. | r8 d d d d a4. | ais8 b ais b d b4. |
+	} \alternative {
+		{
+			g4 r r d' |
+		}
+		{
+			g,2. r4 |
+		}
+	}
+}
+{% endif %}

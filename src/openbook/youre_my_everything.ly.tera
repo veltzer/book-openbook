@@ -1,0 +1,129 @@
+{#
+default_version = "Fake"
+
+[attributes]
+title = "You're My Everything"
+style = "Jazz"
+composer = "Harry Warren"
+poet = "Mort Dixon, Joe Young"
+piece = "Moderately"
+copyright = "1931 Harms, Inc."
+copyrightextra = "Renewed 1959 Warock Corp."
+typesetter = "Mark Veltzer <mark.veltzer@gmail.com>"
+completion = "5"
+uuid = "5f4d6e60-d56b-11f1-8000-046874d194b7"
+structure = "ABAC"
+location = "jfb:442-443"
+
+[[youtube]]
+id = "6TskQt1yxQA"
+remark = "Arden-Ohman Orchestra with Frank Luther, an original 1931 recording"
+
+[[youtube]]
+id = "_9Mf5EwlFcU"
+remark = "Freddie Hubbard"
+
+[versions.Fake]
+doChords = true
+doVoice = true
+doLyrics = false
+doLyricsmore = false
+doLyricsmoremore = false
+doChordBars = false
+doGuitar = false
+doExtra = false
+doPrep = false
+doOwn = false
+#}
+{% if part == "Vars" %}
+{% endif %}
+{% if part == "Doc" %}	DONE:
+	- added the meta data from the fake book.
+	- put in the tunes structure.
+	- put in the chords (fake book).
+	- put in the tune (fake book).
+	- added youtube performances.
+	TODO:
+	- add the lyrics.
+	- check the chords (fake book).
+	- check the tune (fake book).
+	- hear the tune to check that it is right and adjust the tempo.
+{% endif %}
+{% if part == "ChordsFake" %}\chordmode {
+	\startChords
+	\startSong
+
+	\partial 2 s2 |
+
+	\repeat volta 2 {
+
+		\myMark "A"
+		\startPart
+		c1*2 | b2:7sus4 b:7 | e:7 a:7 | \myEndLine
+		d1:m | d2:m d:m7 | g1*2:7 | \myEndLine
+		\endPart
+
+		\myMark "B"
+		\startPart
+		c1 | a:7.9- | d:m7 | g2:7 gis:dim7 | \myEndLine
+		a2:m a:m7 | d1:7 | d:m7 | g2:7 g:7.9- | \myEndLine
+		\endPart
+
+		\myMark "A"
+		\startPart
+		c1*2 | b2:7sus4 b:7 | e:7 a:7 | \myEndLine
+		d1*2:m | e2:7 f:7.11+ | e1:7 | \myEndLine
+		\endPart
+
+		\myMark "C"
+		\startPart
+		a1:m | c2.:7/g c4:7.5+ | f1 | f:m6 | \myEndLine
+		c2 a:7.9- | d:m7 g:7 |
+	} \alternative {
+		{
+			c2 ees:dim7 | d:m7 g:7.9- | \myEndLineVoltaNotLast
+		}
+		{
+			c2:6 f:9 | c1:6.9 | \myEndLineVoltaLast
+		}
+	}
+	\endPart
+
+	\endSong
+	\endChords
+}
+{% endif %}
+{% if part == "VoiceFake" %}{
+	\tempo "Moderato" 4 = 160
+	\time 2/2
+	\key c \major
+
+	\partial 2 e'4. d8 |
+
+	\repeat volta 2 {
+
+		% part "A"
+		d4. c8 e,2~ | e2 c8 e g c | b1~ | b2 a4. e8 |
+		g4. f8 f2~ | f2 f8 a c f, | e1~ | e2 d4 e |
+
+		% part "B"
+		g4 g g g | bes bes bes bes | a4. g8 g2~ | g2 a4 b |
+		c4 c c c | b a b c | d4. g,8 g2~ | g4 r e'4. d8 |
+
+		% part "A"
+		d4. c8 e,2~ | e2 c8 e g c | b1~ | b2 a4. e8 |
+		g4. f8 f2~ | f2 f8 a c d | b1~ | b2 gis4 b |
+
+		% part "C"
+		c4 c c c | d2. e4 | d8 c a f d2~ | d2 e4 f |
+		g4 g bes bes | a g d' e |
+	} \alternative {
+		{
+			c1 | r2 e4. d8 |
+		}
+		{
+			c1~ | c1 |
+		}
+	}
+}
+{% endif %}

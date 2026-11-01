@@ -1,0 +1,103 @@
+{#
+default_version = "Fake"
+
+[attributes]
+title = "Young Love"
+style = "Jazz"
+composer = "Erroll Garner"
+piece = "Moderately"
+copyright = "1946 by Michael H. Goldsen, Inc."
+copyrightextra = "Renewed 1974 by Michael H. Goldsen, Inc."
+typesetter = "Mark Veltzer <mark.veltzer@gmail.com>"
+completion = "5"
+uuid = "35bef212-d56b-11f1-8000-046874d194b7"
+structure = "AABA"
+location = "jfb:445"
+
+[[youtube]]
+id = "YsiAYFidn50"
+remark = "Erroll Garner in his recording as No Moon (Young Love) (1950)"
+
+[[youtube]]
+id = "Wbaa8fe_184"
+remark = "Jean-Claude Boudrant"
+
+[versions.Fake]
+doChords = true
+doVoice = true
+doLyrics = false
+doLyricsmore = false
+doLyricsmoremore = false
+doChordBars = false
+doGuitar = false
+doExtra = false
+doPrep = false
+doOwn = false
+#}
+{% if part == "Vars" %}
+{% endif %}
+{% if part == "Doc" %}	DONE:
+	- added the meta data from the fake book.
+	- put in the tunes structure.
+	- put in the chords (fake book).
+	- put in the tune (fake book).
+	- added youtube performances.
+	TODO:
+	- check the chords (fake book).
+	- check the tune (fake book).
+	- hear the tune to check that it is right and adjust the tempo.
+{% endif %}
+{% if part == "ChordsFake" %}\chordmode {
+	\startChords
+	\startSong
+
+	\myMark "A"
+	\startPart
+	c2 a:7.9- | d:m7 g:7 | c a:7.9- | d:m7 g4:7 e:7.9- | a2:m a4:m7+ a:m7 | \myEndLine
+	d2:m7 d:m7/g | c4 c:maj7 a2:7 | d:m7 g:7 | \myEndLine
+	\endPart
+
+	\myMark "A"
+	\startPart
+	c2 a:7.9- | d:m7 g:7 | c a:7.9- | d:m7 g4:7 e:7.9- | \myEndLine
+	a2:m a4:m7+ a:m7 | d2:m7 d4:m7/g g:7.9- | c2 f:7 | c c:7 | \myEndLine
+	\endPart
+
+	\myMark "B"
+	\startPart
+	f1:m7 | f2:m7 bes:7sus4 | ees f:m7 | ees2/g f:m7 | \myEndLine
+	ees1:m7 | ees2:m7 aes:7sus4 | des d:m7.5- | d:m11 g:7 | \myEndLine
+	\endPart
+
+	\myMark "A"
+	\startPart
+	c2 a:7.9- | d:m7 g:7 | c a:7.9- | d:m7 g4:7 e:7.9- | \myEndLine
+	a2:m a4:m7+ a:m7 | d2:m7 d4:m7/g g:7/f | e2:m7.5- a:7 | d2:m7 d4:m7/g g:7.9- | c1*2 | \myEndLine
+	\endPart
+
+	\endSong
+	\endChords
+}
+{% endif %}
+{% if part == "VoiceFake" %}{
+	\tempo "Moderato" 4 = 120
+	\time 4/4
+	\key c \major
+
+	% part "A"
+	g'2 g~ | g8 g a g bes a aes b | g2 g~ | g8 e f e g ges f g! | e2 e~ |
+	\tuplet 3/2 { e4 c d } \tuplet 3/2 { e c d } | e1~ | e1 |
+
+	% part "A"
+	g2 g~ | g8 g a g bes a aes b | g2 g~ | g8 e f e g ges f g! |
+	e2 e~ | \tuplet 3/2 { e4 c d } \tuplet 3/2 { e c d } | c1~ | c2. c4 |
+
+	% part "B"
+	c'2 c~ | \tuplet 3/2 { c4 aes bes } \tuplet 3/2 { c ees d } | bes1~ | bes2. bes,4 |
+	bes'2 bes~ | \tuplet 3/2 { bes4 ges aes } \tuplet 3/2 { bes des c } | aes2 \tuplet 3/2 { aes4 bes aes } | g1 |
+
+	% part "A"
+	g2 g~ | g8 g a g bes a aes b | g2 g~ | g8 e f e g ges f g! |
+	e2 e~ | \tuplet 3/2 { e4 c d } \tuplet 3/2 { e c d } | e1~ | e8 d f a c4 b | c1~ | c2. r4 |
+}
+{% endif %}

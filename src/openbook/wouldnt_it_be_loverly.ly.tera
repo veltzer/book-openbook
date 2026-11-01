@@ -1,0 +1,110 @@
+{#
+default_version = "Fake"
+
+[attributes]
+title = "Wouldn't It Be Loverly"
+style = "Broadway"
+composer = "Frederick Loewe"
+poet = "Alan Jay Lerner"
+piece = "Moderately"
+copyright = "1956 by Alan Jay Lerner & Frederick Loewe"
+copyrightextra = "Copyright Renewed. Chappell & Co., Inc., owner of publication and allied rights throughout the World."
+typesetter = "Mark Veltzer <mark.veltzer@gmail.com>"
+completion = "5"
+uuid = "02985dbf-d55d-11f1-8000-046874d194b7"
+structure = "AABA"
+location = "jfb:436"
+
+[[youtube]]
+id = "BYyqhlrVEVU"
+remark = "Julie Andrews in the original cast recording of My Fair Lady (1956)"
+
+[[youtube]]
+id = "aXCEoBFuTGg"
+remark = "Shelly Manne and his Friends from My Fair Lady (1956)"
+
+[versions.Fake]
+doChords = true
+doVoice = true
+doLyrics = false
+doLyricsmore = false
+doLyricsmoremore = false
+doChordBars = false
+doGuitar = false
+doExtra = false
+doPrep = false
+doOwn = false
+#}
+{% if part == "Vars" %}
+{% endif %}
+{% if part == "Doc" %}	DONE:
+	- added the meta data from the fake book.
+	- put in the tunes structure.
+	- put in the chords (fake book).
+	- put in the tune (fake book).
+	- added youtube performances.
+	TODO:
+	- add the lyrics.
+	- check the chords (fake book).
+	- check the tune (fake book).
+	- hear the tune to check that it is right and adjust the tempo.
+	- check the exact beats of the chords in bars 8 and 20-21 (crowded symbols in the fake book).
+{% endif %}
+{% if part == "ChordsFake" %}\chordmode {
+	\startChords
+	\startSong
+
+	\myMark "A"
+	\startPart
+	f1 | bes2 g4:m7 c:7 | f1 | g2:7 c:7 | \myEndLine
+	f2. c4:7/e | c4:7/e a:m7.5-/ees d:7 bes:m/des | f2./c fis4:dim7 | g2:m7 g4:m7.5- c:7 | \myEndLine
+	\endPart
+
+	\myMark "A"
+	\startPart
+	f1 | bes2 g4:m7 c:7 | f1 | g2:7 c:7 | \myEndLine
+	f2. c4:7/e | c4:7/e a:m7.5-/ees d:7 bes:m/des | f2./c c4:9 | f1 | \myEndLine
+	\endPart
+
+	\myMark "B"
+	\startPart
+	c2 cis:dim7 | g:7/d g:7 | c e:7/b | a:m e4:/gis c:7/g | \myEndLine
+	f2:6 e:7 | a2.:m d4:7 | g2. cis4:dim7 | g2:m7 c:7 | \myEndLine
+	\endPart
+
+	\myMark "A"
+	\startPart
+	f1 | bes2 g4:m7 c:7 | f1 | g2:7 c:7 | \myEndLine
+	f2. c4:7/e | c4:7/e a:m7.5-/ees d:7 bes:m/des | f2/c d:m | g2.:m7 c4:7 | \myEndLine
+	f1 | c:7 | f | bes | \myEndLine
+	f1*2 | \myEndLine
+	\endPart
+
+	\endSong
+	\endChords
+}
+{% endif %}
+{% if part == "VoiceFake" %}{
+	\tempo "Moderato" 2 = 100
+	\time 2/2
+	\key f \major
+
+	% part "A"
+	f4 g a f8. c16 | d4 f f2 | f4 g a f8. c16 | d4 g g2 |
+	r4 f f g | g a a bes | c2~ c8 a bes fis | a g g2. |
+
+	% part "A"
+	f4 g a f8. c16 | d4 f f2 | f4 g a f8. c16 | d4 g g2 |
+	r4 f f g | g a a bes | c2~ c8 a bes e, | g8 f f2. |
+
+	% part "B"
+	g2 g | \tuplet 3/2 { g8 a g } fis8. g16 b!8. a16 g8. f!16 | e2 e | e1 |
+	d2 e | c4 d e a | g2. g4 | \tuplet 3/2 { g8 a g } fis8. g16 bes2 |
+
+	% part "A"
+	f!4 g a f8. c16 | d4 f f2 | f4 g a f8. c16 | d4 g g2 |
+	r4 f f g | g a a bes | c2 f, | bes2. a4 |
+	g8 f f2. | d'8 c c2. | g8 f f2. | c'8 bes bes2. |
+	a8 f f2.~ | f4 r r2 |
+}
+{% endif %}

@@ -1,0 +1,106 @@
+{#
+default_version = "Fake"
+
+[attributes]
+title = "Younger Than Springtime"
+subtitle = "From 'South Pacific'"
+style = "Broadway"
+composer = "Richard Rodgers"
+poet = "Oscar Hammerstein II"
+piece = "Moderately"
+copyright = "1949 by Richard Rodgers and Oscar Hammerstein II."
+copyrightextra = "Copyright Renewed. Williamson Music Co., owner of publication and allied rights for all countries of the Western Hemisphere and Japan. All Rights Administered by Chappell & Co., Inc."
+typesetter = "Mark Veltzer <mark.veltzer@gmail.com>"
+completion = "5"
+uuid = "35c1ff70-d56b-11f1-8000-046874d194b7"
+structure = "AABA"
+location = "jfb:447"
+
+[[youtube]]
+id = "5eOPXq5dnqU"
+remark = "William Tabbert in the original Broadway cast recording of South Pacific (1949)"
+
+[[youtube]]
+id = "ms3WmsIBfes"
+remark = "Art Farmer"
+
+[versions.Fake]
+doChords = true
+doVoice = true
+doLyrics = false
+doLyricsmore = false
+doLyricsmoremore = false
+doChordBars = false
+doGuitar = false
+doExtra = false
+doPrep = false
+doOwn = false
+#}
+{% if part == "Vars" %}
+{% endif %}
+{% if part == "Doc" %}	DONE:
+	- added the meta data from the fake book.
+	- put in the tunes structure.
+	- put in the chords (fake book).
+	- put in the tune (fake book).
+	- added youtube performances.
+	TODO:
+	- add the lyrics.
+	- check the chords (fake book).
+	- check the tune (fake book).
+	- hear the tune to check that it is right and adjust the tempo.
+{% endif %}
+{% if part == "ChordsFake" %}\chordmode {
+	\startChords
+	\startSong
+
+	\myMark "A"
+	\startPart
+	c1*2:maj7 | d1:m7 | g:7 | \myEndLine
+	c:maj7 | a:m7 | d2:7sus4 d:7 | g:maj7 g:7 | \myEndLine
+	\endPart
+
+	\myMark "A"
+	\startPart
+	c1*2:maj7 | d1:m7 | g:7 | \myEndLine
+	c:maj7 | a:m7 | d2:7sus4 d:7 | g gis:dim7 | \myEndLine
+	\endPart
+
+	\myMark "B"
+	\startPart
+	a2.:m7 d4:7 | g1:maj7 | a2.:m7 d4:7 | g2:sus4 gis:dim7 | \myEndLine
+	a2.:m7 d4:7 | g1:maj7 | d:m7 | g:7 | \myEndLine
+	\endPart
+
+	\myMark "A"
+	\startPart
+	c1*2:maj7 | d1:m7 | g:7 | \myEndLine
+	c:maj7 | a:m7 | d:7 | g:7 | c1*2:6 | \myEndLine
+	\endPart
+
+	\endSong
+	\endChords
+}
+{% endif %}
+{% if part == "VoiceFake" %}{
+	\tempo "Moderato" 4 = 100
+	\time 4/4
+	\key c \major
+
+	% part "A"
+	e8 f g4 a c, | r4 d e2 | d8 e f4 g b, | r4 c d2 |
+	e8 f g4 a b | c b8 a g4 a | g2 fis | fis2 f! |
+
+	% part "A"
+	e8 f g4 a c, | r4 d e2 | d8 e f4 g b, | r4 c d2 |
+	e8 f g4 a b | c b8 a g4 a | g2 fis | g8 r d4 d d |
+
+	% part "B"
+	e2. fis4 | fis2. g4 | g2. a4 | d,8 r d4 d d |
+	e2. fis4 | fis2. g4 | g1 | g1 |
+
+	% part "A"
+	e8 f g4 a c, | r4 d e2 | d8 e f4 g b, | r4 c d2 |
+	e8 f g4 a b | c b8 a g4 a | d1 | d1 | c1~ | c2. r4 |
+}
+{% endif %}

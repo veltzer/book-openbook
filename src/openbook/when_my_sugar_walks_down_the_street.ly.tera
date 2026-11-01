@@ -1,0 +1,97 @@
+{#
+default_version = "Fake"
+
+[attributes]
+title = "When My Sugar Walks Down The Street"
+style = "Swing"
+composer = "Gene Austin, Jimmie McHugh, Irving Mills"
+poet = "Gene Austin, Jimmie McHugh, Irving Mills"
+piece = "Upbeat"
+copyright = "1924 Ireneadele Music"
+copyrightextra = "Pursuant to Sections 304(c) and 401(b) of the U.S. Copyright Law."
+typesetter = "Mark Veltzer <mark.veltzer@gmail.com>"
+completion = "5"
+uuid = "7683d960-d55d-11f1-8000-046874d194b7"
+structure = "ABAC"
+location = "jfb:421"
+
+[[youtube]]
+id = "IbIXBpVRYjE"
+remark = "Aileen Stanley and Gene Austin in the original hit recording (1925)"
+
+[[youtube]]
+id = "G_AHXC0ECVk"
+remark = "Ella Fitzgerald (1944)"
+
+[versions.Fake]
+doChords = true
+doVoice = true
+doLyrics = false
+doLyricsmore = false
+doLyricsmoremore = false
+doChordBars = false
+doGuitar = false
+doExtra = false
+doPrep = false
+doOwn = false
+#}
+{% if part == "Vars" %}
+{% endif %}
+{% if part == "Doc" %}	DONE:
+	- added the meta data from the fake book.
+	- put in the tunes structure.
+	- put in the chords (fake book).
+	- put in the tune (fake book).
+	- added youtube performances.
+	TODO:
+	- add the lyrics.
+	- check the chords (fake book).
+	- check the tune (fake book).
+	- hear the tune to check that it is right and adjust the tempo.
+{% endif %}
+{% if part == "ChordsFake" %}\chordmode {
+	\startChords
+	\startSong
+
+	\myMark "A"
+	\startPart
+	g2 b4:m7.5- e:7 | a1:7 | d:7 | g4 c:6 g2 | \myEndLine
+	\endPart
+
+	\myMark "B"
+	\startPart
+	g2 bes:dim7 | d:7/a d:7 | d:7/a d:7.5+ | g1 | \myEndLine
+	\endPart
+
+	\myMark "A"
+	\startPart
+	g2 b4:m7.5- e:7 | a1:7 | d:7 | g4 c:6 g g:7/f | \myEndLine
+	\endPart
+
+	\myMark "C"
+	\startPart
+	e1:7 | a4:m e:7 a:m/c a:m7 | g:/d e:7 a:9 d:7 | g1 | \myEndLine
+	\endPart
+
+	\endSong
+	\endChords
+}
+{% endif %}
+{% if part == "VoiceFake" %}{
+	\tempo "Allegro" 4 = 160
+	\time 2/2
+	\key g \major
+
+	% part "A"
+	r4 d'8. b16 d8. b16 d4 | cis4 cis cis2 | c!8. b16 c8. b16 c8. cis16 d4 | b4 g g2 |
+
+	% part "B"
+	r8. dis'16 e8. d16 e8. d16 e8. d16 | e8 d4 a8~ a2 | r8. d16 e8. d16 e4. d8 | e8 d4 b8~ b2 |
+
+	% part "A"
+	r8. b16 d8. b16 d8. b16 d8. b16 | cis4 cis cis4. a8 | c!8. b16 c8. b16 c4 d | b4 g g2 |
+
+	% part "C"
+	r4 e'8. dis16 e8. d!16 b4 | c4 b a8 b c cis | d8 e d4 b a | g2. r4 |
+}
+{% endif %}

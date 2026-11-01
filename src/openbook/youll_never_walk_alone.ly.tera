@@ -1,0 +1,93 @@
+{#
+default_version = "Fake"
+
+[attributes]
+title = "You'll Never Walk Alone"
+style = "Broadway"
+composer = "Richard Rodgers"
+poet = "Oscar Hammerstein II"
+piece = "Moderately"
+copyright = "1945 Williamson Music Co."
+copyrightextra = "Copyright Renewed. Sole Selling Agent-T.B. Harms Company (c/o The Welk Music Group, Santa Monica, CA 90401)"
+typesetter = "Mark Veltzer <mark.veltzer@gmail.com>"
+completion = "5"
+uuid = "35c07344-d56b-11f1-8000-046874d194b7"
+structure = "AB"
+location = "jfb:446"
+
+[[youtube]]
+id = "J-Cu5R94Ybg"
+remark = "Christine Johnson in the original Broadway cast recording of Carousel (1945)"
+
+[[youtube]]
+id = "6KKdbJwwgHY"
+remark = "Frank Sinatra"
+
+[versions.Fake]
+doChords = true
+doVoice = true
+doLyrics = false
+doLyricsmore = false
+doLyricsmoremore = false
+doChordBars = false
+doGuitar = false
+doExtra = false
+doPrep = false
+doOwn = false
+#}
+{% if part == "Vars" %}
+{% endif %}
+{% if part == "Doc" %}	DONE:
+	- added the meta data from the fake book.
+	- put in the tunes structure.
+	- put in the chords (fake book).
+	- put in the tune (fake book).
+	- added youtube performances.
+	TODO:
+	- add the lyrics.
+	- check the chords (fake book).
+	- check the tune (fake book).
+	- hear the tune to check that it is right and adjust the tempo.
+{% endif %}
+{% if part == "ChordsFake" %}\chordmode {
+	\startChords
+	\startSong
+
+	\partial 2 s2 |
+
+	\myMark "A"
+	\startPart
+	c1*2 | g1*2/b | f1/a | c1/g | \myEndLine
+	g1 | g1:m | d1:m | bes1 | f1 | d1:m | bes2 f | \myEndLine
+	g2:m f | e1 | c1:7 | \myEndLine
+	\endPart
+
+	\myMark "B"
+	\startPart
+	f1 | f1:dim7 | c1/e | d1:m7.5- | \myEndLine
+	c1 | e1:m | f1 | g1:7/f | c1/e | e1:aug | f1 | d1:7/fis | \myEndLine
+	c2/g e:aug | f:maj7 fis:7 | g1 | g2 g:7/f | c2/e e:aug | f g:7 | c1 | f1:m6 | c1*2 | \myEndLine
+	\endPart
+
+	\endSong
+	\endChords
+}
+{% endif %}
+{% if part == "VoiceFake" %}{
+	\tempo "Moderato" 4 = 92
+	\time 4/4
+	\key c \major
+
+	\partial 2 c4 c |
+
+	% part "A"
+	c2 e4 d | c2 e4 f | g2 d | d2. d4 | f2 g4 f | e2 g4 e |
+	d1~ | d2 d4 e | f2 d4 d | d2 d4 f | a2 f | f2 g4 a | bes2 a4 c |
+	g2 f4 c' | e,1~ | e2 e |
+
+	% part "B"
+	a2 g4 a | b2. b4 | c2 b4 c | d2 c4 d |
+	e2 c | g2 e | a1~ | a2 b | c2 c | c2 c | c2 b4 c | d2 c4 d |
+	e2 e | e2 e | e1~ | e2 b | g'2 e | c2 a | g1~ | g1~ | g1~ | g2 r2 |
+}
+{% endif %}

@@ -1,0 +1,129 @@
+{#
+default_version = "Fake"
+
+[attributes]
+title = "What Kind Of Fool Am I?"
+style = "Broadway"
+composer = "Leslie Bricusse, Anthony Newley"
+poet = "Leslie Bricusse, Anthony Newley"
+piece = "Slowly"
+copyright = "1961 TRO Essex Music Ltd., London, England"
+copyrightextra = "TRO - Ludlow Music, Inc., New York, controls all publication rights for the U.S.A. and Canada. From the musical production Stop The World, I Want To Get Off."
+typesetter = "Mark Veltzer <mark.veltzer@gmail.com>"
+completion = "5"
+uuid = "76858d64-d55d-11f1-8000-046874d194b7"
+structure = "ABAC"
+location = "jfb:424"
+
+[[youtube]]
+id = "_BGL-a_FrHk"
+remark = "Anthony Newley, who introduced the song (1961)"
+
+[[youtube]]
+id = "S8mmRHWBe5c"
+remark = "Bill Evans Trio from Moon Beams (1962)"
+
+[versions.Fake]
+doChords = true
+doVoice = true
+doLyrics = false
+doLyricsmore = false
+doLyricsmoremore = false
+doChordBars = false
+doGuitar = false
+doExtra = false
+doPrep = false
+doOwn = false
+#}
+{% if part == "Vars" %}
+{% endif %}
+{% if part == "Doc" %}	DONE:
+	- added the meta data from the fake book.
+	- put in the tunes structure.
+	- put in the chords (fake book).
+	- put in the tune (fake book).
+	- added youtube performances.
+	TODO:
+	- add the lyrics.
+	- check the chords (fake book).
+	- check the tune (fake book).
+	- hear the tune to check that it is right and adjust the tempo.
+{% endif %}
+{% if part == "ChordsFake" %}\chordmode {
+	\startChords
+	\startSong
+
+	\partial 2. s2. |
+
+	\repeat volta 2 {
+
+		\myMark "A"
+		\startPart
+		ees1:maj7 | ees2.:maj7 e4:dim7 | f1:m7 | bes2.:7 bes4:7/aes | \myEndLine
+		g1:m7 | c:7.9- | f:m7 | bes:7.9- | \myEndLine
+		\endPart
+
+		\myMark "B"
+		\startPart
+		ees1:maj7 | c:m7 | f:7 | f2:7 f:7/ees | \myEndLine
+		d2:m7 g:7.9- | c:m7 f:7 | f1:m9 | bes2:9 f4:m7/bes bes:7.9- | \myEndLine
+		\endPart
+
+		\myMark "A"
+		\startPart
+		ees1:maj7 | ees2.:maj7 e4:dim7 | f1:m7 | bes2.:7 bes4:7/aes | \myEndLine
+		g1:m7 | g:m7.5- | c2:7.9- bes:m6 | c:7.9- ees:9.5+ | \myEndLine
+		\endPart
+
+		\myMark "C"
+		\startPart
+		aes1:6 | des:9 | ees:maj9 | f:7 | \myEndLine
+		f1:m7 | f2:m7.5- bes:7.9- |
+	} \alternative {
+		{
+			ees2 ces:9 | f:m7 f4:m7/bes bes:7.9- | \myEndLineVoltaNotLast
+		}
+		{
+			ees2 ces4:9 e:maj9 | ees1:6.9 | \myEndLineVoltaLast
+		}
+	}
+	\endPart
+
+	\endSong
+	\endChords
+}
+{% endif %}
+{% if part == "VoiceFake" %}{
+	\tempo "Andante" 4 = 72
+	\time 4/4
+	\key ees \major
+
+	\partial 2. bes4 ees f |
+
+	\repeat volta 2 {
+
+		% part "A"
+		f4. g8 g2~ | g4 bes, f' g | g4. aes8 aes2~ | aes4 bes, g' aes |
+		bes4. c8 c4. bes8 | bes4 c c bes8 aes | g4. f8 f2~ | f4 f ees d |
+
+		% part "B"
+		d4. ees8 ees2~ | ees4 ees f g | a!1~ | a4 f g a! |
+		a4. bes8 f4. d8 | ees4 f a! f | bes1~ | bes4 bes, ees f |
+
+		% part "A"
+		f4. g8 g2~ | g4 bes, f' g | g4. aes8 aes2~ | aes4 bes, g' aes |
+		bes4. c8 c4. bes8 | bes4. c8 c4 c8 bes | c4. des8 des2~ | des8 r ees4 ees ees |
+
+		% part "C"
+		ees4. f8 f2~ | f4 ees ees ees | ees4. f8 f2~ | f4 ees ees ees |
+		ees4 f f4. ees8 | ees4 f f4. ees8 |
+	} \alternative {
+		{
+			ees1 | r4 bes, ees f |
+		}
+		{
+			ees'1~ | ees2. r4 |
+		}
+	}
+}
+{% endif %}

@@ -1,0 +1,107 @@
+{#
+default_version = "Fake"
+
+[attributes]
+title = "Wagon Wheels"
+style = "Swing"
+composer = "Peter DeRose"
+poet = "Billy Hill"
+piece = "Slowly and evenly"
+copyright = "1934 Shapiro, Bernstein & Co., Inc., New York."
+copyrightextra = "Copyright Renewed. United States Renewal Copyright owned by Shapiro, Bernstein & Co., Inc. and Ross Jungnickel, Inc. New York"
+typesetter = "Mark Veltzer <mark.veltzer@gmail.com>"
+completion = "5"
+uuid = "1d6b7bee-d55d-11f1-8000-046874d194b7"
+structure = "AABA"
+location = "jfb:412"
+
+[[youtube]]
+id = "ii4cnHlDchU"
+remark = "Paul Robeson"
+
+[[youtube]]
+id = "9XvpsxQAZjo"
+remark = "Sonny Rollins from Way Out West (1957)"
+
+[versions.Fake]
+doChords = true
+doVoice = true
+doLyrics = false
+doLyricsmore = false
+doLyricsmoremore = false
+doChordBars = false
+doGuitar = false
+doExtra = false
+doPrep = false
+doOwn = false
+#}
+{% if part == "Vars" %}
+{% endif %}
+{% if part == "Doc" %}	DONE:
+	- added the meta data from the fake book.
+	- put in the tunes structure.
+	- put in the chords (fake book).
+	- put in the tune (fake book).
+	- added youtube performances.
+	TODO:
+	- add the lyrics.
+	- check the chords (fake book).
+	- check the tune (fake book).
+	- hear the tune to check that it is right and adjust the tempo.
+{% endif %}
+{% if part == "ChordsFake" %}\chordmode {
+	\startChords
+	\startSong
+
+	\myMark "A"
+	\startPart
+	ees1*2 | bes1*2:7 | \myEndLine
+	ees1*2 | bes1*2:7 | \myEndLine
+	\endPart
+
+	\myMark "A"
+	\startPart
+	ees1*2 | bes1*2:7 | \myEndLine
+	ees1 | bes:7 | ees2 aes | ees1 | \myEndLine
+	\endPart
+
+	\myMark "B"
+	\startPart
+	aes2 ees | aes ees | aes ees | bes1:7 | \myEndLine
+	ees4 aes ees2 | aes ees | c:m7 f:7 | bes1:7 | \myEndLine
+	\endPart
+
+	\myMark "Coda"
+	\startPart
+	aes1 | aes:m | ees4/bes bes:7 c2:m | aes bes:7 | \myEndLine
+	ees2 aes | ees g:7 | aes1 | bes:7 | \myEndLine
+	ees1 | aes | ees | \myEndLine
+	\endPart
+
+	\endSong
+	\endChords
+}
+{% endif %}
+{% if part == "VoiceFake" %}{
+	\tempo "Andante" 4 = 88
+	\time 4/4
+	\key ees \major
+
+	% part "A"
+	bes'2. g4 | bes1 | g2. f4 | bes,1 |
+	ees4 ees2 ees4 | g4 bes2. | c2. bes4 | f1 |
+
+	% part "A"
+	bes2. g4 | bes1^\markup {To Coda \musicglyph #"scripts.coda"} | g2. f4 | bes,1 |
+	ees4 ees2 ees4 | g4 g2 f4 | ees1~ | ees4 r r2 |
+
+	% part "B"
+	ees'8 ees4 ees8~ ees4 bes8. c16 | ees8. ees16 c8. c16 bes8 g4. | ees'8. ees16 c8. c16 \tuplet 3/2 { bes4 g ees } | bes'1 |
+	ees8 ees4 ees8~ ees4. bes8 | ees8. ees16 c8. c16 bes8 g bes8. c16 | ees8 ees ees ees \tuplet 3/2 { f4 d c } | bes1^\markup {D.C. al Coda} |
+
+	% part "Coda"
+	ees2. f4 | g1 | g4 f ees2 | f4 ees d2 |
+	ees2 c | bes g | g4 f ees2 | f4 ees d2 |
+	ees1~ | ees1~ | ees2. r4 |
+}
+{% endif %}

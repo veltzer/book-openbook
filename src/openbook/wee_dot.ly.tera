@@ -1,0 +1,98 @@
+{#
+default_version = "Fake"
+
+[attributes]
+title = "Wee Dot"
+style = "Jazz"
+composer = "J.J. Johnson"
+piece = "Fast swing"
+copyright = "1948, 1978 SCREEN GEMS-EMI MUSIC INC., Hollywood, CA"
+typesetter = "Mark Veltzer <mark.veltzer@gmail.com>"
+completion = "5"
+uuid = "a824d4c4-d55d-11f1-8000-046874d194b7"
+structure = "Blues"
+location = "jfb:417"
+
+[[youtube]]
+id = "kKPt7tX-SMk"
+remark = "J.J. Johnson in the original recording"
+
+[[youtube]]
+id = "J8laMBjPEWA"
+remark = "J.J. Johnson live at Putnam Central Club, New York, 1953"
+
+[versions.Fake]
+doChords = true
+doVoice = true
+doLyrics = false
+doLyricsmore = false
+doLyricsmoremore = false
+doChordBars = false
+doGuitar = false
+doExtra = false
+doPrep = false
+doOwn = false
+#}
+{% if part == "Vars" %}
+{% endif %}
+{% if part == "Doc" %}	DONE:
+	- added the meta data from the fake book.
+	- put in the tunes structure.
+	- put in the chords (fake book).
+	- put in the tune (fake book).
+	- added youtube performances.
+	TODO:
+	- check the chords (fake book).
+	- check the tune (fake book).
+	- hear the tune to check that it is right and adjust the tempo.
+	- bar 2: the second c has no accidental after the c sharp; typed as c natural as the F7 chord implies.
+	- bar 7: the last note has no accidental and is printed slightly lower than the flatted notes before it; typed as g flat following the bar rule, it may be g natural.
+	- bars 8 and 10: the fake book draws a slide from the b flat down to the f, not typeset.
+{% endif %}
+{% if part == "ChordsFake" %}\chordmode {
+	\startChords
+	\startSong
+
+	\partial 2 f2:7 |
+
+	\myMark "A"
+	\startPart
+	\repeat volta 2 {
+		bes1 | c2:m7 f:7 | bes1 | bes:7 | ees:7 | s1 | bes | \myEndLine
+		s1 | c:m7 | f:7 | bes |
+	} \alternative {
+		{
+			c2:m7 f:7 | \myEndLineVoltaNotLast
+		}
+		{
+			bes1 | \myEndLineVoltaLast
+		}
+	}
+	\endPart
+
+	\endSong
+	\endChords
+}
+{% endif %}
+{% if part == "VoiceFake" %}{
+	\tempo "Allegro" 4 = 240
+	\time 4/4
+	\key bes \major
+
+	\partial 2 r8 d'4. |
+
+	% part "A"
+	\repeat volta 2 {
+		bes8 r r4 r2 | r8 a g bes cis d c! d | bes8 r bes2 aes8 f | r2 r8 g bes des |
+		r8 g,4 r8 g4 r4 | r4 \tuplet 3/2 { f8 g bes } ees cis d bes | r4 ges'4~ ges8 ges4. |
+		f8 r r bes, f g bes d~ | d2.~ d8 f | r4 r8 bes, f g bes d~ | d4~ d8 ees16 f d8 bes r4 |
+	} \alternative {
+		{
+			r2 r8 d4. |
+		}
+		{
+			r1 |
+		}
+	}
+}
+{% endif %}

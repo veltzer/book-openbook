@@ -1,0 +1,119 @@
+{#
+default_version = "Fake"
+
+[attributes]
+title = "Who's Got Rhythm"
+style = "Jazz"
+composer = "Gerry Mulligan"
+piece = "Fast"
+copyright = "1960-1964 CRITERION MUSIC CORP."
+typesetter = "Mark Veltzer <mark.veltzer@gmail.com>"
+completion = "5"
+uuid = "1cc13aa8-d55d-11f1-8000-046874d194b7"
+structure = "AABA"
+location = "jfb:428"
+
+[[youtube]]
+id = "R7I_ajrx7CQ"
+remark = "Gerry Mulligan"
+
+[[youtube]]
+id = "Vsm4j4Yzbcw"
+remark = "Gerry Mulligan and Ben Webster"
+
+[versions.Fake]
+doChords = true
+doVoice = true
+doLyrics = false
+doLyricsmore = false
+doLyricsmoremore = false
+doChordBars = false
+doGuitar = false
+doExtra = false
+doPrep = false
+doOwn = false
+#}
+{% if part == "Vars" %}
+{% endif %}
+{% if part == "Doc" %}	DONE:
+	- added the meta data from the fake book.
+	- put in the tunes structure.
+	- put in the chords (fake book).
+	- put in the tune (fake book).
+	- added youtube performances.
+	TODO:
+	- check the chords (fake book).
+	- check the tune (fake book).
+	- hear the tune to check that it is right and adjust the tempo.
+	- the fake book prints "To Coda" between the end of the bridge (bar 16) and the last A; here it is put at the end of bar 22 (the coda replaces the last two bars of the last A).
+{% endif %}
+{% if part == "ChordsFake" %}\chordmode {
+	\startChords
+	\startSong
+
+	\myMark "A"
+	\startPart
+	\repeat volta 2 {
+		bes1 | ees2 e:dim7 | bes/f g:m7 | c:7 b:7 | \myEndLine
+		bes1 | ees2 e:dim7 | bes1 |
+	} \alternative {
+		{
+			s1 | \myEndLineVoltaNotLast
+		}
+		{
+			s1 | \myEndLineVoltaLast
+		}
+	}
+	\endPart
+
+	\myMark "B"
+	\startPart
+	d1*2:7 | g1*2:7 | \myEndLine
+	c1*2:7 | f1*2:7 | \myEndLine
+	\endPart
+
+	\myMark "A"
+	\startPart
+	bes1 | ees2 e:dim7 | bes/f g:m7 | c:7 b:7 | \myEndLine
+	bes1 | ees2 e:dim7 | bes1 | s1 | \myEndLine
+	\endPart
+
+	\myMark "Coda"
+	\startPart
+	bes1*3 | \myEndLine
+	\endPart
+
+	\endSong
+	\endChords
+}
+{% endif %}
+{% if part == "VoiceFake" %}{
+	\tempo "Allegro" 4 = 220
+	\time 4/4
+	\key bes \major
+
+	% part "A"
+	\repeat volta 2 {
+		d2 f | g bes | c8 bes cis d bes f r4 | r1 |
+		d2 f | g bes4. c8 | \tuplet 3/2 { des8 c bes } g8 bes r2 |
+	} \alternative {
+		{
+			r1 |
+		}
+		{
+			r2 r4 r8 bes8 |
+		}
+	}
+
+	% part "B"
+	\tuplet 3/2 { d8 e d } a8 b~ b2~ | b2 r4 r8 b8 | \tuplet 3/2 { d8 e d } a8 b~ b2~ | b2. r8 b8 |
+	\tuplet 3/2 { d8 e d } a8 bes~ bes2~ | bes2. r8 bes8 | d8 c bes a~ a2~ | a1 |
+
+	% part "A"
+	d,2 f | g bes | c8 bes cis d bes f r4 | r1 |
+	d2 f | g bes4. c8^\markup { To Coda \musicglyph #"scripts.coda" } | \tuplet 3/2 { des8 c bes } g8 bes r2 | r1^\markup { D.C. al Coda } |
+
+	% part "Coda"
+	\tuplet 3/2 { des8 c bes } g8 bes r4 \tuplet 3/2 { des8 c bes } | g8 bes r4 \tuplet 3/2 { des8 c bes } g8 bes~ | bes1 |
+}
+{% endif %}

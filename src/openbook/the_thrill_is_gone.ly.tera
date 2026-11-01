@@ -1,0 +1,104 @@
+{#
+default_version = "Fake"
+
+[attributes]
+title = "The Thrill Is Gone"
+style = "Jazz"
+composer = "Ray Henderson"
+poet = "Lew Brown"
+piece = "Slowly"
+copyright = "1922 by DeSylva, Brown & Henderson, Inc."
+copyrightextra = "Copyright Renewed, Assigned to Chappell & Co., Inc."
+typesetter = "Mark Veltzer <mark.veltzer@gmail.com>"
+completion = "5"
+uuid = "fcb721c8-d55c-11f1-8000-046874d194b7"
+structure = "AAB"
+location = "jfb:394"
+
+[[youtube]]
+id = "IyhJlB50Gec"
+remark = "Everett Marshall in an early recording (1931)"
+
+[[youtube]]
+id = "HwSAR8vnGHI"
+remark = "Chet Baker"
+
+[versions.Fake]
+doChords = true
+doVoice = true
+doLyrics = false
+doLyricsmore = false
+doLyricsmoremore = false
+doChordBars = false
+doGuitar = false
+doExtra = false
+doPrep = false
+doOwn = false
+#}
+{% if part == "Vars" %}
+{% endif %}
+{% if part == "Doc" %}	DONE:
+	- added the meta data from the fake book.
+	- put in the tunes structure.
+	- put in the chords (fake book).
+	- put in the tune (fake book).
+	- added youtube performances.
+	TODO:
+	- add the lyrics.
+	- check the chords (fake book).
+	- check the tune (fake book).
+	- hear the tune to check that it is right and adjust the tempo.
+	- check the placement of the second chord in bars 11, 12, 23 and 24 (typed on beat 4, under the last note).
+{% endif %}
+{% if part == "ChordsFake" %}\chordmode {
+	\startChords
+	\startSong
+
+	\partial 4 s4 |
+
+	\myMark "A"
+	\startPart
+	d1*2:m6 | g1*2:7 | \myEndLine
+	g2:m9 c:9 | c:7.5+ f:maj7 | ees:maj7 e:m7.5- | a:7.5+ d:m | \myEndLine
+	g1:m6 | b2:m7.5- bes:maj7 | g2.:m e4:7.5- | a2.:7.5+ a4:7 | \myEndLine
+	\endPart
+
+	\myMark "A"
+	\startPart
+	d1*2:m6 | g1*2:7 | \myEndLine
+	g2:m9 c:9 | c:7.5+ f:maj7 | ees:maj7 e:m7.5- | a4:7.5+ a:7 d2:m | \myEndLine
+	g1:m6 | b2:m7.5- bes:maj7 | g2.:m7 d4:m | a2.:7.9- a4:7 | \myEndLine
+	\endPart
+
+	\myMark "B"
+	\startPart
+	d1:m | b:m7.5- | bes:7.5- | d:m/a | g:m7 | \myEndLine
+	ees:9.5- | a:7.5+ | a2:7 a:7.9- | d:m e:7 | ees:maj7 d:m | \myEndLine
+	\endPart
+
+	\endSong
+	\endChords
+}
+{% endif %}
+{% if part == "VoiceFake" %}{
+	\tempo "Adagio" 4 = 76
+	\time 4/4
+	\key f \major
+
+	\partial 4 a'4 |
+
+	% part "A"
+	a4 d, f2~ | f2. a4 | a4 d, f2~ | f2. r4 |
+	a4 a d d | c c a2 | g4 g bes bes | a a f2 |
+	e4 e g g | f f d d | bes'2. e,4 | a2. a4 |
+
+	% part "A"
+	a4 d, f2~ | f2. a4 | a4 d, f2~ | f2. r4 |
+	a4 a d d | c c a2 | g4 g bes bes | a a f2 |
+	e4 e g g | f f d d | bes'2. a4 | bes2. a4 |
+
+	% part "B"
+	f'2. e4 | f2. e4 | e2. d4 | e2. d4 | c2. bes4 |
+	a2. g4 | a1~ | a4 e g a | d,1~ | d2. r4 |
+}
+{% endif %}

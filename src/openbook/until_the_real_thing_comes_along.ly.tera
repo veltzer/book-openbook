@@ -1,0 +1,117 @@
+{#
+default_version = "Fake"
+
+[attributes]
+title = "Until The Real Thing Comes Along"
+style = "Jazz"
+composer = "Mann Holiner, Alberta Nichols, Sammy Cahn, Saul Chaplin, L.E. Freeman"
+poet = "Mann Holiner, Alberta Nichols, Sammy Cahn, Saul Chaplin, L.E. Freeman"
+piece = "Slowly, with expression"
+copyright = "1936 by Chappell & Co., Inc."
+copyrightextra = "Copyright Renewed"
+typesetter = "Mark Veltzer <mark.veltzer@gmail.com>"
+completion = "5"
+uuid = "aa6ff36d-d55d-11f1-8000-046874d194b7"
+structure = "AABA"
+location = "jfb:408"
+
+[[youtube]]
+id = "DtTSWFakZfE"
+remark = "Andy Kirk and his Twelve Clouds of Joy with Pha Terrell in the original hit recording (1936)"
+
+[[youtube]]
+id = "lwe4U254z3o"
+remark = "Fats Waller and his Rhythm (1936)"
+
+[versions.Fake]
+doChords = true
+doVoice = true
+doLyrics = false
+doLyricsmore = false
+doLyricsmoremore = false
+doChordBars = false
+doGuitar = false
+doExtra = false
+doPrep = false
+doOwn = false
+#}
+{% if part == "Vars" %}
+{% endif %}
+{% if part == "Doc" %}	DONE:
+	- added the meta data from the fake book.
+	- put in the tunes structure.
+	- put in the chords (fake book).
+	- put in the tune (fake book).
+	- added youtube performances.
+	TODO:
+	- add the lyrics.
+	- check the chords (fake book).
+	- check the tune (fake book).
+	- hear the tune to check that it is right and adjust the tempo.
+{% endif %}
+{% if part == "ChordsFake" %}\chordmode {
+	\startChords
+	\startSong
+
+	\partial 4 s4 |
+
+	\myMark "A"
+	\startPart
+	\repeat volta 2 {
+		ees1 | bes:7.5+ | ees:maj7 | c:9 | \myEndLine
+		f:m7 | bes:7 |
+	} \alternative {
+		{
+			ees2:6/g ges:dim7 | f2.:m7 bes4:7 | \myEndLineVoltaNotLast
+		}
+		{
+			ees2 aes:6 | a:m7.5- d:7 | \myEndLineVoltaLast
+		}
+	}
+	\endPart
+
+	\myMark "B"
+	\startPart
+	g2 gis:dim7 | a:m7 d:7 | g/b b:dim7 | a:m7 d:7 | \myEndLine
+	g2 gis:dim7 | a:m7 d:7 | g g:dim7 | f:m7 bes:7 | \myEndLine
+	\endPart
+
+	\myMark "A"
+	\startPart
+	ees1 | bes:7.5+ | ees:maj7 | c:9 | \myEndLine
+	f:m7 | bes:7 | ees2 aes:6 | ees1 | \myEndLine
+	\endPart
+
+	\endSong
+	\endChords
+}
+{% endif %}
+{% if part == "VoiceFake" %}{
+	\tempo "Lento" 4 = 90
+	\time 2/2
+	\key ees \major
+
+	\partial 4 g'4 |
+
+	% part "A"
+	\repeat volta 2 {
+		bes4 bes bes4. g8 | bes4 bes bes2 | r8 d d c \tuplet 3/2 { d4 d c8 c } | d4 bes g4. c8 |
+		ees8 c ees c~ c4 fis,8 g | bes4 bes g2 |
+	} \alternative {
+		{
+			r8 ees ees c ees ees c ees | f2. g4 |
+		}
+		{
+			r8 ees ees ees f f c c | ees2 r2 |
+		}
+	}
+
+	% part "B"
+	r8 d' d b! d4 ais8 b | e!4 e b!2 | r8 g g e! g4 e | g4 fis e!2 |
+	r8 d' d b! d d bes b! | e!4 e b!2 | r8 g g e! g4 fis8 g | bes4 bes bes4. g8 |
+
+	% part "A"
+	bes4 bes bes4. g8 | bes4 bes bes2 | r8 d d c \tuplet 3/2 { d4 d c8 c } | d4 bes g4. c8 |
+	ees8 c ees c~ c4 fis,8 g | bes4 bes g2 | r8 ees ees ees f f c c | ees2. r4 |
+}
+{% endif %}

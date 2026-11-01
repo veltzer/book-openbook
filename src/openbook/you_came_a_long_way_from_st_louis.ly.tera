@@ -1,0 +1,131 @@
+{#
+default_version = "Fake"
+
+[attributes]
+title = "You Came A Long Way From St. Louis"
+style = "Swing"
+composer = "John Benson Brooks"
+poet = "Bob Russell"
+piece = "Moderately, with an even beat"
+copyright = "1948 by Jewel Music Publishing Co., Inc."
+copyrightextra = "Copyright renewed by Jewel Music Publishing Co., Inc. and Harrison Music. Reprinted by permission. All rights reserved."
+typesetter = "Mark Veltzer <mark.veltzer@gmail.com>"
+completion = "5"
+uuid = "02985dc2-d55d-11f1-8000-046874d194b7"
+structure = "AABA"
+location = "jfb:438"
+
+[[youtube]]
+id = "DQ6KZGCixbU"
+remark = "Ray McKinley in the original hit recording (1948)"
+
+[[youtube]]
+id = "Bn7HwDqGIHo"
+remark = "Rosemary Clooney"
+
+[versions.Fake]
+doChords = true
+doVoice = true
+doLyrics = false
+doLyricsmore = false
+doLyricsmoremore = false
+doChordBars = false
+doGuitar = false
+doExtra = false
+doPrep = false
+doOwn = false
+#}
+{% if part == "Vars" %}
+{% endif %}
+{% if part == "Doc" %}	DONE:
+	- added the meta data from the fake book.
+	- put in the tunes structure.
+	- put in the chords (fake book).
+	- put in the tune (fake book).
+	- added youtube performances.
+	TODO:
+	- add the lyrics.
+	- check the chords (fake book).
+	- check the tune (fake book).
+	- hear the tune to check that it is right and adjust the tempo.
+	- the composer and lyricist are printed together as 'By John Benson Brooks and Bob Russell'; check who wrote what.
+	- bars 18 and 22: the last note is printed as a c without accidental after a c flat earlier in the bar, so it is a c flat by the notation rule (which also fits the Db7 and Fm7b5 chords).
+{% endif %}
+{% if part == "ChordsFake" %}\chordmode {
+	\startChords
+	\startSong
+
+	\partial 8*7 s8*7 |
+
+	\repeat volta 2 {
+
+		\myMark "A"
+		\startPart
+		ees2 aes | ees2. bes4:7 | ees2 aes | ees2. bes4:7 | \myEndLine
+		ees2 ees/g | aes2 f4:m9 bes:9 | ees2 aes | ees8 r2.. | \myEndLine
+		\endPart
+
+		\myMark "A"
+		\startPart
+		ees2 aes | ees2. bes4:7 | ees2 aes | ees2. bes4:7 | \myEndLine
+		ees2 ees/g | aes2 f4:m9 bes:9 | ees2 aes | ees8 r2.. | \myEndLine
+		\endPart
+
+		\myMark "B"
+		\startPart
+		aes1 | aes2:m7 des:7 | ees1 | r1 | \myEndLine
+		aes1 | aes2:m7 f:m7.5- | bes1:7 | r1 | \myEndLine
+		\endPart
+
+		\myMark "A"
+		\startPart
+		ees2 aes | ees2. bes4:7 | ees2 aes | ees2. bes4:7 | \myEndLine
+		ees2 ees/g | aes2 f4:m9 bes:9 |
+	} \alternative {
+		{
+			ees2 aes | ees8 r2.. | \myEndLineVoltaNotLast
+		}
+		{
+			ees2 aes | ees1 | \myEndLineVoltaLast
+		}
+	}
+	\endPart
+
+	\endSong
+	\endChords
+}
+{% endif %}
+{% if part == "VoiceFake" %}{
+	\tempo "Moderato" 2 = 80
+	\time 2/2
+	\key ees \major
+
+	\partial 8*7 bes8 ees f g bes aes fis |
+
+	\repeat volta 2 {
+
+		% part "A"
+		g8 ees4.~ ees2 | r8 bes ees f g bes aes bes | g1 | r8 bes, ees f g bes aes fis |
+		g8 ees f g~ g ees f g~ | g ees f g~ g ees g ees~ | ees1 | r8 bes ees f g bes aes fis |
+
+		% part "A"
+		g8 ees4.~ ees2 | r8 bes ees f g bes aes bes | g1 | r8 bes, ees f g bes aes fis |
+		g8 ees f g~ g ees f g~ | g ees f g~ g ees g ees~ | ees1 | r8 ees aes bes c ees des c |
+
+		% part "B"
+		ees4. ees,8 c' ees des c | ees4. ees,8 ces' ees des ces | bes16 bes bes8~ bes4 r2 | r8 ees, aes bes c ees des c |
+		ees4. ees,8 c' ees des c | ees4. ees,8 ces' ees des ces | bes4 bes bes r | r8 bes, ees f g bes aes fis |
+
+		% part "A"
+		g8 ees4.~ ees2 | r8 bes ees f g bes aes bes | g1 | r8 bes, ees f g bes aes fis |
+		g8 ees f g~ g ees f g~ | g ees f g~ g ees g ees~ |
+	} \alternative {
+		{
+			ees1 | r8 bes ees f g bes aes fis |
+		}
+		{
+			ees1~ | ees2. r4 |
+		}
+	}
+}
+{% endif %}

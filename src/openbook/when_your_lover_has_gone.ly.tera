@@ -1,0 +1,125 @@
+{#
+default_version = "Fake"
+
+[attributes]
+title = "When Your Lover Has Gone"
+style = "Jazz"
+composer = "E.A. Swan"
+poet = "E.A. Swan"
+piece = "Moderately"
+copyright = "1931 (Renewed) Warner Bros. Inc."
+typesetter = "Mark Veltzer <mark.veltzer@gmail.com>"
+completion = "5"
+uuid = "768770de-d55d-11f1-8000-046874d194b7"
+structure = "ABAC"
+location = "jfb:424"
+
+[[youtube]]
+id = "vek_fvHqWu4"
+remark = "Frank Sinatra from In The Wee Small Hours (1955)"
+
+[[youtube]]
+id = "REnPHphGPgQ"
+remark = "Billie Holiday (1955)"
+
+[versions.Fake]
+doChords = true
+doVoice = true
+doLyrics = false
+doLyricsmore = false
+doLyricsmoremore = false
+doChordBars = false
+doGuitar = false
+doExtra = false
+doPrep = false
+doOwn = false
+#}
+{% if part == "Vars" %}
+{% endif %}
+{% if part == "Doc" %}	DONE:
+	- added the meta data from the fake book.
+	- put in the tunes structure.
+	- put in the chords (fake book).
+	- put in the tune (fake book).
+	- added youtube performances.
+	TODO:
+	- add the lyrics.
+	- check the chords (fake book).
+	- check the tune (fake book).
+	- hear the tune to check that it is right and adjust the tempo.
+	- bar 30: the half note has no accidental after the b flat earlier in the bar; typed as b flat (the sharp 5 of the D7#5 above it).
+{% endif %}
+{% if part == "ChordsFake" %}\chordmode {
+	\startChords
+	\startSong
+
+	\repeat volta 2 {
+
+		\myMark "A"
+		\startPart
+		g1:maj7 | g:6 | c:7 | c:7 | \myEndLine
+		a:7 | a:7 | f:9 | f:9 | \myEndLine
+		\endPart
+
+		\myMark "B"
+		\startPart
+		g1:6 | e:m7 | a:7 | a:7 | \myEndLine
+		a:m7 | d:7.5+ | b2:m7 bes:7 | a:m7 aes:7 | \myEndLine
+		\endPart
+
+		\myMark "A"
+		\startPart
+		g1:maj7 | g:6 | c:7 | c:7 | \myEndLine
+		a:7 | a:7 | f:9 | f:9 | \myEndLine
+		\endPart
+
+		\myMark "C"
+		\startPart
+		g1 | e2.:m7 c4:m7 | b1:m7 | e:7 | \myEndLine
+		a1:m | ees2:7 d:7.5+ |
+	} \alternative {
+		{
+			g4 f:7 e2:7 | ees:7 d:9 | \myEndLineVoltaNotLast
+		}
+		{
+			g4 g:7 c c:m | g1 | \myEndLineVoltaLast
+		}
+	}
+	\endPart
+
+	\endSong
+	\endChords
+}
+{% endif %}
+{% if part == "VoiceFake" %}{
+	\tempo "Moderato" 4 = 120
+	\time 2/2
+	\key g \major
+
+	\repeat volta 2 {
+
+		% part "A"
+		r4 fis fis f! | e2. r4 | r4 fis fis f! | f!4 e e2 |
+		r4 b' b bes | a2. r4 | r4 b b bes | bes4 a a2 |
+
+		% part "B"
+		r4 d d b | g2. r4 | r4 b b g | fis2 e |
+		r2 d4 e | fis4 d fis2 | d1~ | d2. r4 |
+
+		% part "A"
+		r4 fis fis f! | e2. r4 | r4 fis fis f! | f!4 e e2 |
+		r4 b' b bes | a2. r4 | r4 b b bes | bes4 a a2 |
+
+		% part "C"
+		r4 d d b | g2. r4 | r4 d' d dis | dis4 e e2 |
+		r2 g,4 a | bes4 g bes2 |
+	} \alternative {
+		{
+			g1~ | g4 r r2 |
+		}
+		{
+			g1~ | g2 r2 |
+		}
+	}
+}
+{% endif %}

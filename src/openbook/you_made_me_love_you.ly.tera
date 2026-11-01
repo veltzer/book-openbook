@@ -1,0 +1,107 @@
+{#
+default_version = "Fake"
+
+[attributes]
+title = "You Made Me Love You (I Didn't Want To Do It)"
+style = "Jazz"
+composer = "James V. Monaco"
+poet = "Joe McCarthy"
+piece = "Slowly"
+copyright = "1913 Broadway Music Corp."
+copyrightextra = "Renewed 1941 Edwin H. Morris & Company, A Division of MPL Communications, Inc. This Arrangement 1987 Edwin H. Morris & Company, A Division of MPL Communications, Inc. International Copyright Secured. All Rights Reserved."
+typesetter = "Mark Veltzer <mark.veltzer@gmail.com>"
+completion = "5"
+uuid = "181eb954-d56b-11f1-8000-046874d194b7"
+structure = "ABAC"
+location = "jfb:440"
+
+[[youtube]]
+id = "Tpe_cqo0z9Q"
+remark = "Al Jolson in the original recording (1913)"
+
+[[youtube]]
+id = "GWRnMl0DQ1I"
+remark = "Harry James and his orchestra (1941)"
+
+[versions.Fake]
+doChords = true
+doVoice = true
+doLyrics = false
+doLyricsmore = false
+doLyricsmoremore = false
+doChordBars = false
+doGuitar = false
+doExtra = false
+doPrep = false
+doOwn = false
+#}
+{% if part == "Vars" %}
+{% endif %}
+{% if part == "Doc" %}	DONE:
+	- added the meta data from the fake book.
+	- put in the tunes structure.
+	- put in the chords (fake book).
+	- put in the tune (fake book).
+	- added youtube performances.
+	TODO:
+	- add the lyrics.
+	- check the chords (fake book).
+	- check the tune (fake book).
+	- hear the tune to check that it is right and adjust the tempo.
+	- bars 5, 8, 10, 13, 14, 21, 24 and 26 have no chord printed in the fake book (left empty).
+	- bars 7, 8, 24 and 25 have notes without an accidental after an altered note in the same bar (g sharp, b flat); typed with the accidental carried through the bar, as the notation rule says.
+{% endif %}
+{% if part == "ChordsFake" %}\chordmode {
+	\startChords
+	\startSong
+
+	\myMark "A"
+	\startPart
+	c1 | e2:m7 ees:m7 | d2:m7 g:7 | d2:m7 g:7 | \myEndLine
+	s1 | d2:m7 g:7 | c1 | s1 | \myEndLine
+	\endPart
+
+	\myMark "B"
+	\startPart
+	a1:7 | s1 | d2:7 a:m7 | d1:7 | \myEndLine
+	s1 | s1 | d1:m7 | g2:7 g:7.5+ | \myEndLine
+	\endPart
+
+	\myMark "A"
+	\startPart
+	c1 | e2:m7 ees:m7 | d2:m7 g:7 | d2:m7 g:7 | \myEndLine
+	s1 | d2:m7 b:7.5+ | e1:7 | s1 | \myEndLine
+	\endPart
+
+	\myMark "C"
+	\startPart
+	a1:7 | s1 | d1:7 | a2:m7 d:7 | \myEndLine
+	c2/g gis4:dim7 a:m7 | d2:m7 g:7 | c2 f:m6 | c1:6 | \myEndLine
+	\endPart
+
+	\endSong
+	\endChords
+}
+{% endif %}
+{% if part == "VoiceFake" %}{
+	\tempo "Andante" 4 = 90
+	\time 2/2
+	\key c \major
+
+	% part "A"
+	e4 b'2 a4 | g2 fis4. fis8 | f!8 e f e f d4 e8 | f8 e f e f d4. |
+	r8 d'4. d4 b | a2 b | r8 gis a gis a g! e c | r8 gis' a gis a g! e c |
+
+	% part "B"
+	r8 a'4. aes4 a!8 bes | b8 a4 g8~ g e4. | r8 e4. e4 ees8 d~ | d1 |
+	r8 d4. fis4 a8 d~ | d4 d2 b8 a~ | a4 b a8 aes4 g8~ | g1 |
+
+	% part "A"
+	e4 b'2 a4 | g2 fis4. fis8 | f!8 e f e f d4 e8 | f8 e f e f d4. |
+	r8 d'4. d4 b | a2 b | gis4 b8 a gis4 b8 a | gis8 a b a gis2 |
+
+	% part "C"
+	a4 bes a bes | a8 bes4 a8~ a e4 e8 | d8 d fis fis a a c c | d8 e4 d8~ d c4. |
+	r8 e4. d4 c8 a~ | a4 b~ b8 g4. | c1~ | c2. r4 |
+}
+{% endif %}

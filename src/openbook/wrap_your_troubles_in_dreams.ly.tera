@@ -1,0 +1,128 @@
+{#
+default_version = "Fake"
+
+[attributes]
+title = "Wrap Your Troubles In Dreams (And Dream Your Troubles Away)"
+style = "Jazz"
+composer = "Harry Barris"
+poet = "Ted Koehler, Billy Moll"
+piece = "Moderately Slow"
+copyright = "1931 Shapiro, Bernstein & Co., Inc. New York."
+copyrightextra = "Copyright Renewed."
+typesetter = "Mark Veltzer <mark.veltzer@gmail.com>"
+completion = "5"
+uuid = "02985dc0-d55d-11f1-8000-046874d194b7"
+structure = "AABA"
+location = "jfb:436"
+
+[[youtube]]
+id = "Gcx-UiaIe00"
+remark = "Bing Crosby in the original hit recording (1931)"
+
+[[youtube]]
+id = "YhwWgwi5a90"
+remark = "Louis Armstrong and his Orchestra (1931)"
+
+[versions.Fake]
+doChords = true
+doVoice = true
+doLyrics = false
+doLyricsmore = false
+doLyricsmoremore = false
+doChordBars = false
+doGuitar = false
+doExtra = false
+doPrep = false
+doOwn = false
+#}
+{% if part == "Vars" %}
+{% endif %}
+{% if part == "Doc" %}	DONE:
+	- added the meta data from the fake book.
+	- put in the tunes structure.
+	- put in the chords (fake book).
+	- put in the tune (fake book).
+	- added youtube performances.
+	TODO:
+	- add the lyrics.
+	- check the chords (fake book).
+	- check the tune (fake book).
+	- hear the tune to check that it is right and adjust the tempo.
+{% endif %}
+{% if part == "ChordsFake" %}\chordmode {
+	\startChords
+	\startSong
+
+	\partial 4 s4 |
+
+	\repeat volta 2 {
+
+		\myMark "A"
+		\startPart
+		c2 g:7 | c2.:6 g4:7 | c2:6 e:7 | a1:m | \myEndLine
+		d2:9 a:m7 | d1:9 | d2:m7 g:7 | c2. g4:9.5+ | \myEndLine
+		\endPart
+
+		\myMark "A"
+		\startPart
+		c2 g:7 | c2.:6 g4:7 | c2:6 e:7 | a1:m | \myEndLine
+		d2:9 a:m7 | d1:9 | d2:m7 g4:7 g:9.5+ | c2 b4:m7 e:7 | \myEndLine
+		\endPart
+
+		\myMark "B"
+		\startPart
+		a2:m b:7 | e:7 a:7 | d:7 g4:7 g:9 | c2 e:7 | \myEndLine
+		a2:m b:7 | e:7 a:7 | d:7 g:7 | c g:9.5+ | \myEndLine
+		\endPart
+
+		\myMark "A"
+		\startPart
+		c2 g:7 | c1:6 | c2:6 e:7 | a1:m | \myEndLine
+		d2:9 a:m7 | d1:9 | d2:m9 g4:9 g:9.5+ |
+	} \alternative {
+		{
+			c2 g:9.5+ | \myEndLineVoltaNotLast
+		}
+		{
+			c4 f:m6 c2:6.9 | \myEndLineVoltaLast
+		}
+	}
+	\endPart
+
+	\endSong
+	\endChords
+}
+{% endif %}
+{% if part == "VoiceFake" %}{
+	\tempo "Andante" 2 = 66
+	\time 2/2
+	\key c \major
+
+	\partial 4 g'4 |
+
+	\repeat volta 2 {
+		% part "A"
+		e e g8 e g4 | a2. g4 | a a b8 a b4 | a2. a4 |
+		c c c8 a c4 | a2. a4 | c c b8 g b4 | e,2. g4 |
+
+		% part "A"
+		e e g8 e g4 | a2. g4 | a a b8 a b4 | a2. a4 |
+		c c c8 a c4 | a2. a4 | c c a8 g a4 | c2 b |
+
+		% part "B"
+		e8 c e dis~ dis b4 dis8 | d!8 b d cis~ cis2 | c!8 a ais b~ b g a!4 | e1 |
+		e'8 c e dis~ dis b4 dis8 | d!8 b d cis~ cis2 | c!8 a ais b~ b g a!4 | e'2 g, |
+
+		% part "A"
+		e4 e g8 e g4 | a a2. | a4 a b8 a b4 | c2. a4 |
+		c c c8 a c4 | e2. a,4 | c c a8 g a4 |
+	} \alternative {
+		{
+			c2 r4 g |
+		}
+		{
+			c2. r4 |
+		}
+	}
+}
+{% endif %}

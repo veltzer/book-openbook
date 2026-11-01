@@ -1,0 +1,105 @@
+{#
+default_version = "Fake"
+
+[attributes]
+title = "We Kiss In A Shadow"
+style = "Broadway"
+composer = "Richard Rodgers"
+poet = "Oscar Hammerstein II"
+piece = "Slowly and Tenderly"
+copyright = "1951 by Richard Rodgers and Oscar Hammerstein II. Copyright Renewed."
+copyrightextra = "Williamson Music Co., owner of publication and allied rights throughout the Western Hemisphere and Japan. All Rights Administered by Chappell & Co., Inc."
+typesetter = "Mark Veltzer <mark.veltzer@gmail.com>"
+completion = "5"
+uuid = "d583b3fe-d55d-11f1-8000-046874d194b7"
+structure = "AABA"
+location = "jfb:418"
+
+[[youtube]]
+id = "L_1Z7hyagvA"
+remark = "Larry Douglas and Doretta Morrow in the original Broadway cast recording of The King and I (1951)"
+
+[[youtube]]
+id = "AVIwfIMKTDg"
+remark = "Sonny Rollins"
+
+[versions.Fake]
+doChords = true
+doVoice = true
+doLyrics = false
+doLyricsmore = false
+doLyricsmoremore = false
+doChordBars = false
+doGuitar = false
+doExtra = false
+doPrep = false
+doOwn = false
+#}
+{% if part == "Vars" %}
+{% endif %}
+{% if part == "Doc" %}	DONE:
+	- added the meta data from the fake book.
+	- put in the tunes structure.
+	- put in the chords (fake book).
+	- put in the tune (fake book).
+	- added youtube performances.
+	TODO:
+	- add the lyrics.
+	- check the chords (fake book).
+	- check the tune (fake book).
+	- hear the tune to check that it is right and adjust the tempo.
+{% endif %}
+{% if part == "ChordsFake" %}\chordmode {
+	\startChords
+	\startSong
+
+	\myMark "A"
+	\startPart
+	f1:maj7 | d:m7 | g:m7 | c:7 | g:m7 | c:7 | \myEndLine
+	f1:6 | g2:m7 c:7 |
+	\endPart
+
+	\myMark "A"
+	\startPart
+	f1:maj7 | d:m7 | g:m7 | c:7 | g:m7 | \myEndLine
+	c1:7 | f:6 | b2:m7.5- e:7.9- |
+	\endPart
+
+	\myMark "B"
+	\startPart
+	a1:m | b:7 | e:m7 | c:maj7 | \myEndLine
+	f1:6 | e2 e:7.9- | a1:m | g2:m7 c:7 |
+	\endPart
+
+	\myMark "A"
+	\startPart
+	f1:maj7 | d:m7 | g:m7 | c:7 | \myEndLine
+	g1:m7 | c:7 | f:7 | f:7.5+ | b:maj7 | g2.:m9 c4:7 | f1*2:6 | \myEndLine
+	\endPart
+
+	\endSong
+	\endChords
+}
+{% endif %}
+{% if part == "VoiceFake" %}{
+	\tempo "Adagio" 4 = 72
+	\time 4/4
+	\key f \major
+
+	% part "A"
+	r4 c' c bes8 a | g4 a2. | r4 bes bes a8 g | c,1 | r4 bes' bes a8 g | c,4 c c d8 e |
+	f1~ | f2. r4 |
+
+	% part "A"
+	r4 c' c bes8 a | g4 a2. | r4 bes bes a8 g | c,1 | r4 bes' bes a8 g |
+	c,4 c c d8 e | f1~ | f2. r4 |
+
+	% part "B"
+	r4 a a b!8 a | fis4 fis2. | r4 g g a8 g | e2. e4 |
+	f2 g4 a | b!2 c4 d | c1~ | c2. r4 |
+
+	% part "A"
+	r4 c c bes8 a | g4 a2. | r4 bes bes a8 g | c,1~ |
+	c4 c' c e,8 f | g4 c2 bes4 | a1~ | a2. a4 | a2 f4. g8 | a4 c2 e,4 | f1~ | f2. r4 |
+}
+{% endif %}

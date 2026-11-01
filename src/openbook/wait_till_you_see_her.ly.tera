@@ -1,0 +1,115 @@
+{#
+default_version = "Fake"
+
+[attributes]
+title = "Wait Till You See Her"
+style = "Broadway"
+composer = "Richard Rodgers"
+poet = "Lorenz Hart"
+piece = "Moderately"
+copyright = "1942 by Chappell & Co., Inc."
+copyrightextra = "Copyright Renewed"
+typesetter = "Mark Veltzer <mark.veltzer@gmail.com>"
+completion = "5"
+uuid = "aa6ff370-d55d-11f1-8000-046874d194b7"
+structure = "AABAC"
+location = "jfb:411"
+
+[[youtube]]
+id = "STH6-5zPKHw"
+remark = "Miles Davis with the Gil Evans Orchestra from Quiet Nights (1963)"
+
+[[youtube]]
+id = "yNsf2pI_rPM"
+remark = "Ella Fitzgerald from the Rodgers and Hart Song Book (1956)"
+
+[versions.Fake]
+doChords = true
+doVoice = true
+doLyrics = false
+doLyricsmore = false
+doLyricsmoremore = false
+doChordBars = false
+doGuitar = false
+doExtra = false
+doPrep = false
+doOwn = false
+#}
+{% if part == "Vars" %}
+{% endif %}
+{% if part == "Doc" %}	DONE:
+	- added the meta data from the fake book.
+	- put in the tunes structure.
+	- put in the chords (fake book).
+	- put in the tune (fake book).
+	- added youtube performances.
+	TODO:
+	- add the lyrics.
+	- check the chords (fake book).
+	- check the tune (fake book).
+	- hear the tune to check that it is right and adjust the tempo.
+{% endif %}
+{% if part == "ChordsFake" %}\chordmode {
+	\startChords
+	\startSong
+
+	\myMark "A"
+	\startPart
+	f2.:m7 | bes:7 | ees | ees:6 | \myEndLine
+	f:m7 | bes:9 | ees2.*2:maj7 | \myEndLine
+	\endPart
+
+	\myMark "A"
+	\startPart
+	f2.:m7 | bes:7 | ees | ees:6 | \myEndLine
+	f:m7 | d:7 | g2.*2:m | \myEndLine
+	\endPart
+
+	\myMark "B"
+	\startPart
+	c2.:m | f2:7sus4 f4:7 | g2.:m | bes | \myEndLine
+	c:m7 | g:7.5+ | c:9.5- | c:9 | \myEndLine
+	\endPart
+
+	\myMark "A"
+	\startPart
+	f2.:m7 | bes:7 | c:m | g:m | \myEndLine
+	c:9 | f:7 | f:m | g:7 | \myEndLine
+	\endPart
+
+	\myMark "C"
+	\startPart
+	ees2.:m | f:7 | e:7 | ees:7 | \myEndLine
+	f:m7 | bes:7 | ees2.*2 | \myEndLine
+	\endPart
+
+	\endSong
+	\endChords
+}
+{% endif %}
+{% if part == "VoiceFake" %}{
+	\tempo "Moderato" 4 = 120
+	\time 3/4
+	\key ees \major
+
+	% part "A"
+	c'4 c4. aes8 | g2 f4 | ees4 ees4. f8 | c2. |
+	c4 ees4. aes8 | c2 c4 | bes2.~ | bes2. |
+
+	% part "A"
+	c4 c4. aes8 | g2 f4 | ees4 ees4. f8 | c2. |
+	c4 ees4. aes8 | c2 c4 | bes2.~ | bes2. |
+
+	% part "B"
+	ees4 ees4. c8 | bes2 a!4 | g4 g4. a!8 | d,2. |
+	ees4 g4. bes8 | ees2 ees4 | d2.~ | d2. |
+
+	% part "A"
+	c4 c4. aes8 | g2 f4 | ees4 ees4. f8 | g4 g4. aes8 |
+	bes4 bes4. c8 | d4 d4. ees8 | f2. | d2. |
+
+	% part "C"
+	ees2. | c2. | d2. | bes2. |
+	c4 c4. aes8 | g2 f4 | ees2.~ | ees2 r4 |
+}
+{% endif %}

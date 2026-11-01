@@ -1,0 +1,89 @@
+{#
+default_version = "Fake"
+
+[attributes]
+title = "The World Is Waiting For The Sunrise"
+style = "Jazz"
+composer = "Ernest Seitz"
+poet = "Eugene Lockhart"
+piece = "Slowly"
+copyright = "1919 by Chappell & Co., Ltd."
+copyrightextra = "Copyright Renewed. Published in the U.S.A. by Chappell & Co., Inc."
+typesetter = "Mark Veltzer <mark.veltzer@gmail.com>"
+completion = "5"
+uuid = "02985dbe-d55d-11f1-8000-046874d194b7"
+structure = "AA'"
+location = "jfb:433"
+
+[[youtube]]
+id = "CPYL4yK-Yt8"
+remark = "Les Paul and Mary Ford in the famous recording (1951)"
+
+[[youtube]]
+id = "ASQoHaElDmE"
+remark = "John Steel (1921)"
+
+[versions.Fake]
+doChords = true
+doVoice = true
+doLyrics = false
+doLyricsmore = false
+doLyricsmoremore = false
+doChordBars = false
+doGuitar = false
+doExtra = false
+doPrep = false
+doOwn = false
+#}
+{% if part == "Vars" %}
+{% endif %}
+{% if part == "Doc" %}	DONE:
+	- added the meta data from the fake book.
+	- put in the tunes structure.
+	- put in the chords (fake book).
+	- put in the tune (fake book).
+	- added youtube performances.
+	TODO:
+	- add the lyrics.
+	- check the chords (fake book).
+	- check the tune (fake book).
+	- hear the tune to check that it is right and adjust the tempo.
+{% endif %}
+{% if part == "ChordsFake" %}\chordmode {
+	\startChords
+	\startSong
+
+	\partial 4 s4 |
+
+	\myMark "A"
+	\startPart
+	c2. g4:7.5+ | a2.:m g4:7.5+ | c2 a:m | e1:7 | \myEndLine
+	f1 | e2:m7 a:7 | d1:7 | d2.:m7 g4:7.5+ | \myEndLine
+	\endPart
+
+	\myMark "A"
+	\startPart
+	c2. g4:7.5+ | a2.:m g4:7.5+ | c2 a:m | e1:7 | \myEndLine
+	f1 | e2:m7 a:7 | d2.:m7.5- g4:7 | c1 | c2. \myEndLine
+	\endPart
+
+	\endSong
+	\endChords
+}
+{% endif %}
+{% if part == "VoiceFake" %}{
+	\tempo "Adagio" 4 = 72
+	\time 4/4
+	\key c \major
+
+	\partial 4 dis4 |
+
+	% part "A"
+	e2. g4 | a2. g4 | e g a c | e2 d |
+	c2. a4 | g2. e4 | e d2 e4 | d2. dis4 |
+
+	% part "A"
+	e2. g4 | a2. g4 | e g a c | e2 d |
+	c2. a4 | g2. e4 | f2. g4 | e'1~ | e2.
+}
+{% endif %}

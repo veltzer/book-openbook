@@ -1,0 +1,105 @@
+{#
+default_version = "Fake"
+
+[attributes]
+title = "Who?"
+style = "Broadway"
+composer = "Jerome Kern"
+poet = "Otto Harbach, Oscar Hammerstein II"
+piece = "Brightly"
+copyright = "1925 T.B. Harms Company (c/o The Welk Music Group, Santa Monica, CA 90401) and Bill/Bob Publishing Co."
+copyrightextra = "Copyright renewed."
+typesetter = "Mark Veltzer <mark.veltzer@gmail.com>"
+completion = "5"
+uuid = "1cbf75d8-d55d-11f1-8000-046874d194b7"
+structure = "ABCD"
+location = "jfb:428"
+
+[[youtube]]
+id = "4EJ45pA_zwY"
+remark = "George Olsen and His Music (1925)"
+
+[[youtube]]
+id = "OP9Y21UXq9w"
+remark = "Jack Buchanan (1925)"
+
+[versions.Fake]
+doChords = true
+doVoice = true
+doLyrics = false
+doLyricsmore = false
+doLyricsmoremore = false
+doChordBars = false
+doGuitar = false
+doExtra = false
+doPrep = false
+doOwn = false
+#}
+{% if part == "Vars" %}
+{% endif %}
+{% if part == "Doc" %}	DONE:
+	- added the meta data from the fake book.
+	- put in the tunes structure.
+	- put in the chords (fake book).
+	- put in the tune (fake book).
+	- added youtube performances.
+	TODO:
+	- add the lyrics.
+	- check the chords (fake book).
+	- check the tune (fake book).
+	- hear the tune to check that it is right and adjust the tempo.
+{% endif %}
+{% if part == "ChordsFake" %}\chordmode {
+	\startChords
+	\startSong
+
+	\myMark "A"
+	\startPart
+	d2:6 e:m7 | f:dim7 d:6/fis | d1*2:6 | \myEndLine
+	a2:7 b:m7 | c:dim7 a:7/cis | a1*2:7 | \myEndLine
+	\endPart
+
+	\myMark "B"
+	\startPart
+	a1*2:7 | e1:m7 | a:7 | \myEndLine
+	d2:6 e:m7 | f:dim7 d:6/fis | e1:m7 | a:7 | \myEndLine
+	\endPart
+
+	\myMark "C"
+	\startPart
+	g1*4:6 | \myEndLine
+	d1*4:6 | \myEndLine
+	\endPart
+
+	\myMark "D"
+	\startPart
+	a2:7 b:m7 | c:dim7 a:7/cis | a1*2:7 | \myEndLine
+	d2 d:7/c | g:6/b g:m/bes | d/a e:m7/a | d1:6 | \myEndLine
+	\endPart
+
+	\endSong
+	\endChords
+}
+{% endif %}
+{% if part == "VoiceFake" %}{
+	\tempo "Allegro" 2 = 110
+	\time 2/2
+	\key d \major
+
+	% part "A"
+	b'1~ | b1~ | b4 a d b~ | b a d,2 |
+	a'1~ | a1~ | a4 fis a fis~ | fis e cis2 |
+
+	% part "B"
+	fis2 fis | fis fis | fis4 a a a~ | a1 |
+	b2 b | b b | b4 e e e~ | e1 |
+
+	% part "C"
+	e1~ | e1~ | e4 d e d~ | d4 b e,2 |
+	b'1~ | b1~ | b4 a d b~ | b a d,2 |
+
+	% part "D"
+	a'1~ | a1~ | a4 fis a fis~ | fis e cis2 |
+	d2. r4 | r1 | fis4 d d d~ | d2 r2 |
+}
+{% endif %}

@@ -1,0 +1,106 @@
+{#
+default_version = "Fake"
+
+[attributes]
+title = "Young And Foolish"
+style = "Broadway"
+composer = "Albert Hague"
+poet = "Arnold B. Horwitt"
+piece = "Moderately Slow"
+copyright = "1954 by Chappell & Co., Inc."
+copyrightextra = "Copyright renewed."
+typesetter = "Mark Veltzer <mark.veltzer@gmail.com>"
+completion = "5"
+uuid = "5f4d6e63-d56b-11f1-8000-046874d194b7"
+structure = "ABAC"
+location = "jfb:444-445"
+
+[[youtube]]
+id = "4aRdCC54U1U"
+remark = "Bill Evans from Everybody Digs Bill Evans (1958)"
+
+[[youtube]]
+id = "D7WIaXyE7A0"
+remark = "Tony Bennett and Bill Evans"
+
+[versions.Fake]
+doChords = true
+doVoice = true
+doLyrics = false
+doLyricsmore = false
+doLyricsmoremore = false
+doChordBars = false
+doGuitar = false
+doExtra = false
+doPrep = false
+doOwn = false
+#}
+{% if part == "Vars" %}
+{% endif %}
+{% if part == "Doc" %}	DONE:
+	- added the meta data from the fake book.
+	- put in the tunes structure.
+	- put in the chords (fake book).
+	- put in the tune (fake book).
+	- added youtube performances.
+	TODO:
+	- add the lyrics.
+	- check the chords (fake book).
+	- check the tune (fake book).
+	- hear the tune to check that it is right and adjust the tempo.
+	- the fake book places the second chord in bars 2, 6, 18 and 22 between beats 2 and 3; it was put on beat 3.
+{% endif %}
+{% if part == "ChordsFake" %}\chordmode {
+	\startChords
+	\startSong
+
+	\myMark "A"
+	\startPart
+	c2:maj7 a:m7 | d:m7 g:7 | c c:maj7 | g:m7 c:7 | \myEndLine
+	f1:maj7 | e2:m7.5- a:7.9- | d1:m7 | g:9 | \myEndLine
+	\endPart
+
+	\myMark "B"
+	\startPart
+	c1:6 | dis:dim7 | c2/e e:7 | a1:m | \myEndLine
+	a2:m a4:m7+ a:m7 | d1:7 | d:m7 | g:7 | \myEndLine
+	\endPart
+
+	\myMark "A"
+	\startPart
+	c2:maj7 a:m7 | d:m7 g:7 | c c:maj7 | g:m7 c:7 | \myEndLine
+	f1:maj7 | e2:m7.5- a:7.9- | d1:m7 | g:9 | \myEndLine
+	\endPart
+
+	\myMark "C"
+	\startPart
+	c1 | e4:7 e2.:7.5+ | a2:m7 a4:m7+ a:m7 | d2.:9 d4:9.5- | \myEndLine
+	c2/g a:7.5+ | d:m7 g:7 | c aes:9 | c1:6 | \myEndLine
+	\endPart
+
+	\endSong
+	\endChords
+}
+{% endif %}
+{% if part == "VoiceFake" %}{
+	\tempo "Andante" 4 = 80
+	\time 4/4
+	\key c \major
+
+	% part "A"
+	g'2. c,4 | c d2. | r4 e e f | f g g2 |
+	a2. d,4 | d e2. | r4 f f g | g a a2 |
+
+	% part "B"
+	b4 c c4. b8 | b4 c c4. b8 | c4 g e d | c1 |
+	c'4 d d4. c8 | c4 d b c | d1~ | d2 r2 |
+
+	% part "A"
+	g,2. c,4 | c d2. | r4 e e f | f g g2 |
+	a2. d,4 | d e2. | r4 f f g | g a a2 |
+
+	% part "C"
+	b4 c c b | b c2. | c4 d d c | e2. e4 |
+	e4 c a f | d4. d'8 \tuplet 3/2 { d4 c b } | c1~ | c2 r2 |
+}
+{% endif %}

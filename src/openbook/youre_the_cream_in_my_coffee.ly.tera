@@ -1,0 +1,125 @@
+{#
+default_version = "Fake"
+
+[attributes]
+title = "You're The Cream In My Coffee"
+style = "Jazz"
+composer = "B.G. DeSylva, Lew Brown, Ray Henderson"
+poet = "B.G. DeSylva, Lew Brown, Ray Henderson"
+piece = "Moderately"
+copyright = "1928 by DeSylva, Brown & Henderson, Inc."
+copyrightextra = "Copyright Renewed, Assigned to Chappell & Co., Inc. and Stephen Ballentine Music Publishing Company"
+typesetter = "Mark Veltzer <mark.veltzer@gmail.com>"
+completion = "5"
+uuid = "5f4d6e61-d56b-11f1-8000-046874d194b7"
+structure = "AABA"
+location = "jfb:443"
+
+[[youtube]]
+id = "5z93Zird4cA"
+remark = "Ben Selvin and his Orchestra, an original 1928 recording"
+
+[[youtube]]
+id = "4hkOqQo2Y3s"
+remark = "The Nat King Cole Trio"
+
+[versions.Fake]
+doChords = true
+doVoice = true
+doLyrics = false
+doLyricsmore = false
+doLyricsmoremore = false
+doChordBars = false
+doGuitar = false
+doExtra = false
+doPrep = false
+doOwn = false
+#}
+{% if part == "Vars" %}
+{% endif %}
+{% if part == "Doc" %}	DONE:
+	- added the meta data from the fake book.
+	- put in the tunes structure.
+	- put in the chords (fake book).
+	- put in the tune (fake book).
+	- added youtube performances.
+	TODO:
+	- add the lyrics.
+	- check the chords (fake book).
+	- check the tune (fake book).
+	- hear the tune to check that it is right and adjust the tempo.
+{% endif %}
+{% if part == "ChordsFake" %}\chordmode {
+	\startChords
+	\startSong
+
+	\repeat volta 2 {
+
+		\myMark "A"
+		\startPart
+		ees1 | ees2/g ges:dim7 | bes:7/f bes:7 | bes:7/f bes:7 | \myEndLine
+		bes:7/f bes:7 | bes1*2:7 | ees2 aes:9 | \myEndLine
+		\endPart
+
+		\myMark "A"
+		\startPart
+		ees1 | ees2/g ges:dim7 | bes:7/f bes:7 | bes:7/f bes:7 | \myEndLine
+		bes:7/f bes:7 | bes:7/f bes:7 | bes:7/f bes:7 | ees1 | \myEndLine
+		\endPart
+
+		\myMark "B"
+		\startPart
+		ees1*2:7 | aes2 aes:aug | aes1:6 | \myEndLine
+		f1*2:7 | f2:m7 f:7.5- | bes:7 bes:7.5+ | \myEndLine
+		\endPart
+
+		\myMark "A"
+		\startPart
+		ees1:6 | ees2/g ges:dim7 | bes:7/f bes:7 | bes:7/f bes:7 | \myEndLine
+		bes:7/f bes:7 | bes:7/f bes:7 | bes1:7 |
+	} \alternative {
+		{
+			ees2 f4:m7 bes:7 | \myEndLineVoltaNotLast
+		}
+		{
+			ees4 aes:9 ees2 | \myEndLineVoltaLast
+		}
+	}
+	\endPart
+
+	\endSong
+	\endChords
+}
+{% endif %}
+{% if part == "VoiceFake" %}{
+	\tempo "Moderato" 4 = 160
+	\time 2/2
+	\key ees \major
+
+	\repeat volta 2 {
+
+		% part "A"
+		f'8 r e! ees~ ees g, bes4 | f'2 ees | c8 r b! bes~ bes d, f4 | c'1 |
+		c8 r b! bes~ bes d, f4 | r4 c'8 b! bes d, f4 | c'8 r b! bes~ bes fis g4 | ees1 |
+
+		% part "A"
+		f'8 r e! ees~ ees g, bes4 | f'2 ees | c8 r b! bes~ bes d, f4 | c'1 |
+		c8 r b! bes~ bes d, f4 | r4 c'8 b! bes d, f4 | c'8 r b! bes~ bes fis g4 | ees1 |
+
+		% part "B"
+		ees'4. ees,8~ ees e!4. | e!4. f8~ f2 | ees'4. ees,8~ ees e!4. | e!4. f8~ f2 |
+		f'4. f,8~ f fis4. | fis2 g | aes4. a!8~ a4. bes8~ | bes8 b!4 c8~ c d4. |
+
+		% part "A"
+		f8 r e! ees~ ees g, bes4 | f'2 ees | c8 r b! bes~ bes d, f4 | c'1 |
+		c8 r b! bes~ bes d, f4 | r4 c'8 b! bes d, f4 | c'8 r b! bes~ bes fis g4 |
+	} \alternative {
+		{
+			ees2. r4 |
+		}
+		{
+			ees'2. r4 |
+		}
+	}
+}
+{% endif %}

@@ -1,0 +1,125 @@
+{#
+default_version = "Fake"
+
+[attributes]
+title = "Weary Blues"
+style = "Dixieland"
+composer = "Artie Matthews"
+poet = "Mort Greene, George Cates"
+piece = "Moderately"
+copyright = "1915, 1987 EDWIN H. MORRIS & COMPANY, A Division of MPL Communications, Inc."
+copyrightextra = "Renewed 1943 EDWIN H. MORRIS & COMPANY, A Division of MPL Communications, Inc. International Copyright Secured. All Rights Reserved."
+typesetter = "Mark Veltzer <mark.veltzer@gmail.com>"
+completion = "5"
+uuid = "6530a42c-d55d-11f1-8000-046874d194b7"
+structure = "ABC"
+location = "jfb:417"
+
+[[youtube]]
+id = "2v-P-KE-Hw0"
+remark = "Louis Armstrong and his Hot Seven (1927)"
+
+[[youtube]]
+id = "gRjtqdlUmcI"
+remark = "The New Orleans Rhythm Kings (1923)"
+
+[versions.Fake]
+doChords = true
+doVoice = true
+doLyrics = false
+doLyricsmore = false
+doLyricsmoremore = false
+doChordBars = false
+doGuitar = false
+doExtra = false
+doPrep = false
+doOwn = false
+#}
+{% if part == "Vars" %}
+{% endif %}
+{% if part == "Doc" %}	DONE:
+	- added the meta data from the fake book.
+	- put in the tunes structure.
+	- put in the chords (fake book).
+	- put in the tune (fake book).
+	- added youtube performances.
+	TODO:
+	- add the lyrics.
+	- check the chords (fake book).
+	- check the tune (fake book).
+	- hear the tune to check that it is right and adjust the tempo.
+	- the last bar of the fake book holds only a quarter note, the rest of the bar was filled with rests.
+	- the fake book prints no chord on the second bar of the second line of part "B" (the F of the previous bar is kept).
+{% endif %}
+{% if part == "ChordsFake" %}\chordmode {
+	\startChords
+	\startSong
+
+	\partial 2. s2. |
+
+	\myMark "A"
+	\startPart
+	\repeat volta 2 {
+		c1*4:7 | f1*2 | \myEndLine
+		c1*2:7 | g1*2:7 |
+	} \alternative {
+		{
+			c1*2 | \myEndLineVoltaNotLast
+		}
+		{
+			c1 | c4 g:7 c2:7 | \myEndLineVoltaLast
+		}
+	}
+	\endPart
+
+	\myMark "B"
+	\startPart
+	f1:7 | c:7 | f:7 | c2:7 f | \myEndLine
+	s1 | c:7 | f:7 | \myEndLine
+	c4.:7 f8 s2 |
+	\endPart
+
+	\myMark "C"
+	\startPart
+	g1:7 | g:dim7 | g2:7 g:dim7 | g1:7 | \myEndLine
+	c1*4:7 | f1*2:7 | c1*2:7 | \myEndLine
+	g1*2:7 | c1*2 | g1*2:7 | c1*2 | \myEndLine
+	\endPart
+
+	\endSong
+	\endChords
+}
+{% endif %}
+{% if part == "VoiceFake" %}{
+	\tempo "Moderato" 2 = 90
+	\time 2/2
+	\key c \major
+
+	\partial 2. g'4 g g |
+
+	% part "A"
+	\repeat volta 2 {
+		g1~ | g4 a g f | f8 e~ e2.~ | e4 g g g | a1~ | a4 c c a |
+		g1~ | g4 g g g | g1~ | g4 f e d |
+	} \alternative {
+		{
+			c1~ | c4 g' g g |
+		}
+		{
+			c,1~ | c4 r r2 |
+		}
+	}
+
+	% part "B"
+	\key f \major
+	f8 f c d f f c d | e e c d e e c d | f f c d f f c d | a' aes g f~ f2 |
+	f8 f c d f f c d | e e c d e e c d | f f c d f f c d |
+	a'8 aes g f~ f4 g8. g16 |
+
+	% part "C"
+	\key c \major
+	g2 r8 g4 g8 | g2 r4 r8 g | \tuplet 3/2 { g4 g g } \tuplet 3/2 { g g g } | g4 g g g |
+	g1~ | g4 a g f | e1~ | e4 g g g | a1~ | a4 c c a | g1~ | g4 g g g |
+	g1~ | g4 f e d | c1~ | c4 g' g g | g1~ | g4 g b d | d8 c~ c2.~ | c4 r r2 |
+}
+{% endif %}

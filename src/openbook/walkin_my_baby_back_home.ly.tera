@@ -1,0 +1,124 @@
+{#
+default_version = "Fake"
+
+[attributes]
+title = "Walkin' My Baby Back Home"
+style = "Swing"
+composer = "Roy Turk, Fred E. Ahlert"
+poet = "Roy Turk, Fred E. Ahlert"
+piece = "Moderately"
+copyright = "1930 by DeSylva, Brown & Henderson, Inc."
+copyrightextra = "Copyright Renewed, Assigned to Chappell & Co., Inc."
+typesetter = "Mark Veltzer <mark.veltzer@gmail.com>"
+completion = "5"
+uuid = "8790f2a6-d55d-11f1-8000-046874d194b7"
+structure = "AABA"
+location = "jfb:412"
+
+[[youtube]]
+id = "1RceTmMaEKo"
+remark = "Annette Hanshaw (1931)"
+
+[[youtube]]
+id = "A0eM-b7cTrU"
+remark = "Nat King Cole (1952)"
+
+[versions.Fake]
+doChords = true
+doVoice = true
+doLyrics = false
+doLyricsmore = false
+doLyricsmoremore = false
+doChordBars = false
+doGuitar = false
+doExtra = false
+doPrep = false
+doOwn = false
+#}
+{% if part == "Vars" %}
+{% endif %}
+{% if part == "Doc" %}	DONE:
+	- added the meta data from the fake book.
+	- put in the tunes structure.
+	- put in the chords (fake book).
+	- put in the tune (fake book).
+	- added youtube performances.
+	TODO:
+	- add the lyrics.
+	- check the chords (fake book).
+	- check the tune (fake book).
+	- hear the tune to check that it is right and adjust the tempo.
+{% endif %}
+{% if part == "ChordsFake" %}\chordmode {
+	\startChords
+	\startSong
+
+	\repeat volta 2 {
+
+		\myMark "A"
+		\startPart
+		ees2 ees:6 | ees:maj7 ees:6 | ees:maj7 ees:6 | f1:9 | \myEndLine
+		f1:m7 | f2:m7 bes:7 | f:m7 bes:7 | ees2 f4:m7 bes:7 | \myEndLine
+		\endPart
+
+		\myMark "A"
+		\startPart
+		ees2 ees:6 | ees:maj7 ees:6 | ees:maj7 ees:6 | f1:9 | \myEndLine
+		f1:m7 | f2:m7 bes:7 | f:m7 bes:7 | ees1 | \myEndLine
+		\endPart
+
+		\myMark "B"
+		\startPart
+		g2:m g:m7+ | g:m7 g:m6 | c:m7 c:m7/bes | a:m7 d:7 | \myEndLine
+		g2:m g:m7+ | g:m7 g:m6 | f1:7 | bes:7 | \myEndLine
+		\endPart
+
+		\myMark "A"
+		\startPart
+		ees2 ees:6 | ees:maj7 ees:6 | ees:maj7 ees:6 | f1:9 | \myEndLine
+		f1:m7 | f2:m7 bes:7 | f:m7 bes:7 |
+	} \alternative {
+		{
+			ees2 f4:m7 bes:7 | \myEndLineVoltaNotLast
+		}
+		{
+			ees1 | \myEndLineVoltaLast
+		}
+	}
+	\endPart
+
+	\endSong
+	\endChords
+}
+{% endif %}
+{% if part == "VoiceFake" %}{
+	\tempo "Moderato" 4 = 120
+	\time 4/4
+	\key ees \major
+
+	\repeat volta 2 {
+		% part "A"
+		bes'8 bes4 c8~ c4 bes8. c16 | d8. ees16 d8 c~ c2 | d8. ees16 d8 c~ c bes c4 | g1 |
+		f8 f4 g8~ g4 f8. g16 | aes8. bes16 g8 f~ f2 | aes8. bes16 g8 f~ f ees f4 | ees4 r r2 |
+
+		% part "A"
+		bes'8 bes4 c8~ c4 bes8. c16 | d8. ees16 d8 c~ c2 | d8. ees16 d8 c~ c bes c4 | g1 |
+		f8 f4 g8~ g4 f8. g16 | aes8. bes16 g8 f~ f2 | aes8. bes16 g8 f~ f ees f4 | ees2. r8 ees'8 |
+
+		% part "B"
+		d8 bes c d~ d4. c8 | bes8 g a bes~ bes4. aes8 | g8 ees f g~ g f ees4 | d2. r8 ees'8 |
+		d8 bes c d~ d4. c8 | bes8 g a bes~ bes2 | r4 c8 c~ c d ees4 | f8. d16 c8 bes~ bes4. r8 |
+
+		% part "A"
+		bes8 bes4 c8~ c4 bes8. c16 | d8. ees16 d8 c~ c2 | d8. ees16 d8 c~ c bes c4 | g1 |
+		f8 f4 g8~ g4 f8. g16 | aes8. bes16 g8 f~ f2 | aes8. bes16 g8 f~ f ees f4 |
+	} \alternative {
+		{
+			ees2 r2 |
+		}
+		{
+			ees2. r4 |
+		}
+	}
+}
+{% endif %}

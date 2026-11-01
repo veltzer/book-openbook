@@ -1,0 +1,109 @@
+{#
+default_version = "Fake"
+
+[attributes]
+title = "You Call It Madness (But I Call It Love)"
+style = "Jazz"
+composer = "Con Conrad, Gladys Du Bois, Russ Columbo, Paul Gregory"
+poet = "Con Conrad, Gladys Du Bois, Russ Columbo, Paul Gregory"
+piece = "Moderately"
+copyright = "1931, 1987 Edwin H. Morris & Company, A Division of MPL Communications, Inc."
+copyrightextra = "Renewed 1959 Edwin H. Morris & Company, A Division of MPL Communications, Inc. International Copyright Secured. All Rights Reserved."
+typesetter = "Mark Veltzer <mark.veltzer@gmail.com>"
+completion = "5"
+uuid = "181cfc68-d56b-11f1-8000-046874d194b7"
+structure = "AABA"
+location = "jfb:440"
+
+[[youtube]]
+id = "ZGVn7Ba0ZlM"
+remark = "Russ Columbo in the original recording (1931)"
+
+[[youtube]]
+id = "V-dYwCjYpPg"
+remark = "The Nat King Cole Trio"
+
+[versions.Fake]
+doChords = true
+doVoice = true
+doLyrics = false
+doLyricsmore = false
+doLyricsmoremore = false
+doChordBars = false
+doGuitar = false
+doExtra = false
+doPrep = false
+doOwn = false
+#}
+{% if part == "Vars" %}
+{% endif %}
+{% if part == "Doc" %}	DONE:
+	- added the meta data from the fake book.
+	- put in the tunes structure.
+	- put in the chords (fake book).
+	- put in the tune (fake book).
+	- added youtube performances.
+	TODO:
+	- add the lyrics.
+	- check the chords (fake book).
+	- check the tune (fake book).
+	- hear the tune to check that it is right and adjust the tempo.
+{% endif %}
+{% if part == "ChordsFake" %}\chordmode {
+	\startChords
+	\startSong
+
+	\partial 2. s2. |
+
+	\myMark "A"
+	\startPart
+	c1:maj7 | f1:9 | g2:maj9 c:7 | b2:m7 e:7 | \myEndLine
+	a2:m7 gis:dim7 | a2:m7 d:7 | g2 c:7 | g2. g4:7.5+ | \myEndLine
+	\endPart
+
+	\myMark "A"
+	\startPart
+	c1:maj7 | f1:9 | g2:maj7 c:7 | b2:m7 e:7 | \myEndLine
+	a2:m7 gis:dim7 | a2:m7 d:7 | g2 c:6 | g2. g4:7 | \myEndLine
+	\endPart
+
+	\myMark "B"
+	\startPart
+	d2:m7.5- g:7 | d2:m7.5- g:7 | c2 e:7 | a1:m7 | \myEndLine
+	b2:m7.5- e:7 | b2:m7.5- e:7 | a2:m7 f:9 | d2.:7 des4:9 | \myEndLine
+	\endPart
+
+	\myMark "A"
+	\startPart
+	c1:maj7 | f1:9 | g2:maj9 c:7 | b2:m7 e:7 | \myEndLine
+	a2:m7 gis:dim7 | a2:m7 d:7 | g2 c:7 | g1:maj7 | \myEndLine
+	\endPart
+
+	\endSong
+	\endChords
+}
+{% endif %}
+{% if part == "VoiceFake" %}{
+	\tempo "Moderato" 4 = 120
+	\time 2/2
+	\key g \major
+
+	\partial 2. d4 e g |
+
+	% part "A"
+	b4. a8 b4. a8 | c4 c2 b4 | a4. g8 a4. g8 | fis2. r8 d |
+	e4. fis8 e4. d8 | a'4 a2 b4 | g4 g2 g4 | g8 r d4 e g |
+
+	% part "A"
+	b4. a8 b4. a8 | c4 c2 b4 | a4. g8 a4. g8 | fis2. r8 d |
+	e4. fis8 e4. d8 | a'4 a2 b4 | g4 g2 g4 | g8 r r4 r2 |
+
+	% part "B"
+	r8. d'16 d8. d16 d8 g,4. | r8. d'16 d8. d16 d8 g,4. | d'4 c e b | a1 |
+	r8. b16 b8. b16 b8 e,4. | r8. b'16 b8. b16 b8 e,4. | b'4 a c b | a8 r d,4 e g |
+
+	% part "A"
+	b4. a8 b4. a8 | c4 c2 b4 | a4. g8 a4. g8 | fis2. r8 d |
+	e4. fis8 e4. d8 | a'4 a2 b4 | g4 g2 g4 | g2~ g8 r r4 |
+}
+{% endif %}

@@ -1,0 +1,115 @@
+{#
+default_version = "Fake"
+
+[attributes]
+title = "Utter Chaos"
+style = "Jazz"
+composer = "Gerry Mulligan"
+piece = "Slow to medium"
+copyright = "1956 CRITERION MUSIC CORP."
+copyrightextra = "Renewed 1985 CRITERION MUSIC CORP."
+typesetter = "Mark Veltzer <mark.veltzer@gmail.com>"
+completion = "5"
+uuid = "aa6ff36c-d55d-11f1-8000-046874d194b7"
+structure = "AABA"
+location = "jfb:408"
+
+[[youtube]]
+id = "bWkpT4N3IMM"
+remark = "Gerry Mulligan in the original recording"
+
+[[youtube]]
+id = "bA8n_5v9iPE"
+remark = "Gerry Mulligan, another performance"
+
+[versions.Fake]
+doChords = true
+doVoice = true
+doLyrics = false
+doLyricsmore = false
+doLyricsmoremore = false
+doChordBars = false
+doGuitar = false
+doExtra = false
+doPrep = false
+doOwn = false
+#}
+{% if part == "Vars" %}
+{% endif %}
+{% if part == "Doc" %}	DONE:
+	- added the meta data from the fake book.
+	- put in the tunes structure.
+	- put in the chords (fake book).
+	- put in the tune (fake book).
+	- added youtube performances.
+	TODO:
+	- check the chords (fake book).
+	- check the tune (fake book).
+	- hear the tune to check that it is right and adjust the tempo.
+{% endif %}
+{% if part == "ChordsFake" %}\chordmode {
+	\startChords
+	\startSong
+
+	\partial 2 s2 |
+
+	\myMark "A"
+	\startPart
+	\repeat volta 2 {
+		c2:7.9- f:7.5+ | bes1:6 | c2:7.9- f:7 | bes1 | \myEndLine
+		c2:7.9- f:7 | bes4 aes:7 g2:7 | c2:7 f:7 |
+	} \alternative {
+		{
+			bes1 | \myEndLineVoltaNotLast
+		}
+		{
+			bes1 | \myEndLineVoltaLast
+		}
+	}
+	\endPart
+
+	\myMark "B"
+	\startPart
+	d1*2:7 | g1*2:7 | \myEndLine
+	c1:7 | g2:m7 c:7 | f2:7 c:m7 | f1:7 | \myEndLine
+	\endPart
+
+	\myMark "Coda"
+	\startPart
+	bes1 | c2:7 f:7 | bes4:7 aes:7 g2:7 | \myEndLine
+	c2:7 f:7 | bes1 | f2:m7 bes:maj7 | \myEndLine
+	\endPart
+
+	\endSong
+	\endChords
+}
+{% endif %}
+{% if part == "VoiceFake" %}{
+	\tempo "Andante" 4 = 110
+	\time 4/4
+	\key bes \major
+
+	\partial 2 \tuplet 3/2 { r8 f, d' } \tuplet 3/2 { f bes c } |
+
+	% part "A"
+	\repeat volta 2 {
+		g'8^\markup { \musicglyph #"scripts.segno" } des~ des2 bes8 g | bes8 g4. \tuplet 3/2 { r8 r f, } \tuplet 3/2 { d' f c' } | g'8 des4. bes8 g a bes~ | bes2 \tuplet 3/2 { r8 f, d' } \tuplet 3/2 { f bes c } |
+		g'8 des4.~ des8 bes4 g8 | \tuplet 3/2 { des'8 d! f } fis8 g~ g2 | des16 d! g des~ des4 c8 bes g bes^\markup { To Coda \musicglyph #"scripts.coda" } |
+	} \alternative {
+		{
+			c8 bes4. \tuplet 3/2 { r8 f, d' } \tuplet 3/2 { f bes c } |
+		}
+		{
+			c8 bes~ bes2. |
+		}
+	}
+
+	% part "B"
+	d4. c16 a d4. b!16 a | d16 b!8.~ b2 r8 c16 cis | d4. b!16 a d4. b16 a | \tuplet 3/2 { d8 b! bes } a2 r16 d8 c16 |
+	d4. bes16 g d'4. bes16 g | d'8 g4. d8 bes \tuplet 3/2 { g bes d } | f8 f, f' fis g4 des8 c~ | c2 \tuplet 3/2 { r8 f,, d' } \tuplet 3/2 { f bes c^\markup { D.S. al Coda } } |
+
+	% part "Coda"
+	c8 bes4. \tuplet 3/2 { r8 f, d' } \tuplet 3/2 { f bes c } | g'8 des4. bes8 g4. | \tuplet 3/2 { des'8 d! f } \tuplet 3/2 { aes d, g~ } g2 |
+	\tuplet 3/2 { r8 des4~ } \tuplet 3/2 { des8 c bes } \tuplet 3/2 { r8 des4~ } \tuplet 3/2 { des8 c bes } | \tuplet 3/2 { aes8 f e! } \tuplet 3/2 { ees des bes } d!4 r4 | r8 aes'4. a!2 |
+}
+{% endif %}

@@ -1,0 +1,174 @@
+{#
+default_version = "Fake"
+
+[attributes]
+title = "Twisted"
+style = "Jazz"
+composer = "Wardell Gray"
+poet = "Annie Ross"
+piece = "Medium Swing"
+copyright = "1965 Prestige Music"
+typesetter = "Mark Veltzer <mark.veltzer@gmail.com>"
+completion = "5"
+uuid = "c653f4b6-d55d-11f1-8000-046874d194b7"
+structure = "Blues"
+location = "jfb:402"
+
+[[youtube]]
+id = "9UN5bj1ywyk"
+remark = "Annie Ross in the original vocal recording (Prestige, 1952)"
+
+[[youtube]]
+id = "HFiAZYnNRyQ"
+remark = "Lambert, Hendricks and Ross"
+
+[versions.Fake]
+doChords = true
+doVoice = true
+doLyrics = false
+doLyricsmore = false
+doLyricsmoremore = false
+doChordBars = false
+doGuitar = false
+doExtra = false
+doPrep = false
+doOwn = false
+#}
+{% if part == "Vars" %}
+{% endif %}
+{% if part == "Doc" %}	DONE:
+	- added the meta data from the fake book.
+	- put in the tunes structure.
+	- put in the chords (fake book).
+	- put in the tune (fake book).
+	- added youtube performances.
+	TODO:
+	- add the lyrics.
+	- check the chords (fake book).
+	- check the tune (fake book).
+	- hear the tune to check that it is right and adjust the tempo.
+	- bar 9 (and its repeat): the fake book prints an extra eighth note d under the eighth rest for the second verse; only the first verse rhythm is typed.
+	- bar 19: the second high note (a flat) is printed without a ledger line; typed as a flat.
+	- bar 23: the fake book prints the e and e flat as sixteenths, which leaves the bar half a beat short; typed as eighths.
+	- second ending of the last repeat: the second d has no accidental after the d flat, so it is typed as a d flat; check.
+{% endif %}
+{% if part == "ChordsFake" %}\chordmode {
+	\startChords
+	\startSong
+
+	\myMark "Intro"
+	\startPart
+	bes2 aes4. f8:m | s8 aes4. bes2 | \myEndLine
+	\endPart
+
+	\myMark "A"
+	\startPart
+	\repeat volta 2 {
+		bes1:7 | ees2:7 f:7 | bes1:7 | bes1:7 | \myEndLine
+		ees1:9 | ees1:9 | bes1:7 | bes2:7 g:7 | \myEndLine
+		c1:m7 | f1:7 | bes2 g:7 |
+	} \alternative {
+		{
+			c2:m7 f:7 | \myEndLineVoltaNotLast
+		}
+		{
+			c2:m7 f:7 | \myEndLineVoltaLast
+		}
+	}
+	\endPart
+
+	\myMark "B"
+	\startPart
+	bes1:7 | ees1:7 | bes1:7 | bes1:7 | \myEndLine
+	ees1:7 | ees1:7 | bes1 | d2:m7 g:7 | \myEndLine
+	c1:m7 | f1:7 | bes2 g:7 | c2:m7 f:7 | \myEndLine
+	\endPart
+
+	\myMark "C"
+	\startPart
+	bes2:7 ees:7 | bes2:7 ees:7 | bes2:7 ees:7 | bes1:7 | \myEndLine
+	ees1:7 | ees1:7 | bes1:7 | g1:7 | \myEndLine
+	c1:m7 | f1:7 | bes1 | c2:m7 f:7 | \myEndLine
+	\endPart
+
+	\myMark "D"
+	\startPart
+	bes1 | ees1:7 | bes1:7 | bes1:7 | \myEndLine
+	ees1:7 | ees1:7 | bes1 | d2:m7 cis:m7 | \myEndLine
+	c1:m7 | f1:7 | bes2:7 g:7 | c2:m7 f:7 | \myEndLine
+	bes1 | bes1 | \myEndLine
+	\endPart
+
+	\myMark "A"
+	\startPart
+	\repeat volta 2 {
+		bes1:7 | ees2:7 f:7 | bes1:7 | bes1:7 | \myEndLine
+		ees1:9 | ees1:9 | bes1:7 | bes2:7 g:7 | \myEndLine
+		c1:m7 |
+	} \alternative {
+		{
+			f1:7 | bes2 g:7 | c2:m7 f:7 | \myEndLineVoltaNotLast
+		}
+		{
+			f1:7 | bes1:7 | bes1:7 | \myEndLineVoltaLast
+		}
+	}
+	\endPart
+
+	\endSong
+	\endChords
+}
+{% endif %}
+{% if part == "VoiceFake" %}{
+	\tempo "Allegro" 4 = 140
+	\time 4/4
+	\key bes \major
+
+	% part "Intro"
+	d4 d c4. aes8~ | aes8 c4 c8 d cis \tuplet 3/2 { d f g } |
+
+	% part "A"
+	\repeat volta 2 {
+		aes8 f r4 r8 fis \tuplet 3/2 { g bes c } | des8 bes des c~ c cis, \tuplet 3/2 { d f g } | aes8 f r4 r8 e \tuplet 3/2 { f aes bes } | ces8 bes4. f4 aes |
+		ees8 aes aes g aes4 g | aes4 bes g aes | f4 d8 ees f4 r8 d | f8 g aes4 g f8 e |
+		ees8 d' des4 c r | r4 c8 des c c ces c | bes4 f g r |
+	} \alternative {
+		{
+			r2 r8 cis,8 \tuplet 3/2 { d f g } |
+		}
+		{
+			r2 r4 r8 f |
+		}
+	}
+
+	% part "B"
+	bes4 c8 c d4 ees8 ees | f8 f \tuplet 3/2 { ees f ees } des8 bes bes bes | c8 aes bes f~ f4 r8 g | aes4 \tuplet 3/2 { ces8 d f } bes aes d, bes |
+	f'4 ees8 bes des2 | c4 r2 r4 | r2 g'4 bes | f4 e8 ees d bes g f |
+	c'8 d ees c~ c4 r | r8 d ees d c bes a c | bes4 r r2 | r2 r4 r8 d |
+
+	% part "C"
+	f4 g8 f bes g ees c | f8 g f4 bes r | f4 g8 f bes g ees c | f8 d bes aes~ aes4 r8 fis |
+	g8 bes c4 des8 bes c bes | f'8 ees des bes~ bes4 r8 c | d4 ees8 ees f ees d c | b8 d f aes~ aes4 g8 d |
+	g8 ees c aes d8 c4. | r8 gis \tuplet 3/2 { a c d } f e ees c | d4 f bes8 f4. | r2 r8 cis8 \tuplet 3/2 { d f g } |
+
+	% part "D"
+	bes8 f aes bes~ bes4 r | r8 cis, \tuplet 3/2 { d f g } bes f a f | \tuplet 3/2 { a8 bes a } bes g~ g4 r8 d | e8 f cis d a bes aes fis |
+	g4 bes8 c des d ees f | \tuplet 3/2 { g8 bes g } f ees des c bes aes | c8 aes bes f'~ f4 r | \tuplet 3/2 { d8 f a } c4 \tuplet 3/2 { cis,8 e gis } b4 |
+	\tuplet 3/2 { c,8 ees g } bes g a aes g fis | f8 ees c a d ees e f | f8 f d f e des bes g | ees'8 c d ees d bes g f |
+	bes4 r r2 | r2 r8 cis,8 \tuplet 3/2 { d f g } |
+
+	% part "A"
+	\repeat volta 2 {
+		aes8 f r4 r8 fis \tuplet 3/2 { g bes c } | des8 bes des c~ c cis, \tuplet 3/2 { d f g } | aes8 f r4 r8 e \tuplet 3/2 { f aes bes } | ces8 bes4. f4 aes |
+		ees8 aes aes g aes4 g | aes4 bes g aes | f4 d8 ees f4 r8 d | f8 g aes4 g f8 e |
+		ees8 d' des4 c r |
+	} \alternative {
+		{
+			r4 c8 des c c ces c | bes4 f g r | r2 r8 cis,8 \tuplet 3/2 { d f g } |
+		}
+		{
+			r4 des'4 des c8 g | bes4 r8 f'16 f e8 bes ees d | des8 f, bes aes~ aes2\fermata |
+		}
+	}
+}
+{% endif %}

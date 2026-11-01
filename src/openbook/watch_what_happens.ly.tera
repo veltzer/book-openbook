@@ -1,0 +1,117 @@
+{#
+default_version = "Fake"
+
+[attributes]
+title = "Watch What Happens"
+style = "Latin"
+composer = "Michel Legrand"
+poet = "Norman Gimbel"
+piece = "Medium bossa nova"
+copyright = "1964 Productions Michel Legrand & Productions Francis Lemarque."
+copyrightextra = "Copyright 1965 Vogue Music & Jonware Music (c/o The Welk Music Group, Santa Monica, CA 90401)"
+typesetter = "Mark Veltzer <mark.veltzer@gmail.com>"
+completion = "5"
+uuid = "595caf82-d55e-11f1-8000-046874d194b7"
+structure = "AABA"
+location = "jfb:414"
+
+[[youtube]]
+id = "PpcbNjfThaM"
+remark = "Michel Legrand"
+
+[[youtube]]
+id = "GTKBrfkcwok"
+remark = "Wes Montgomery from A Day in the Life (1967)"
+
+[versions.Fake]
+doChords = true
+doVoice = true
+doLyrics = false
+doLyricsmore = false
+doLyricsmoremore = false
+doChordBars = false
+doGuitar = false
+doExtra = false
+doPrep = false
+doOwn = false
+#}
+{% if part == "Vars" %}
+{% endif %}
+{% if part == "Doc" %}	DONE:
+	- added the meta data from the fake book.
+	- put in the tunes structure.
+	- put in the chords (fake book).
+	- put in the tune (fake book).
+	- added youtube performances.
+	TODO:
+	- add the lyrics.
+	- check the chords (fake book).
+	- check the tune (fake book).
+	- hear the tune to check that it is right and adjust the tempo.
+	- bridge bars 3 and 5: the C9 and F6 are printed over the eighth note before the third beat (anticipation); typed on the third beat.
+	- bridge bar 8: the order and placement of Bb9 and Bb7b9 over the whole note are approximate.
+{% endif %}
+{% if part == "ChordsFake" %}\chordmode {
+	\startChords
+	\startSong
+
+	\myMark "A"
+	\startPart
+	\repeat volta 2 {
+		ees2:maj7 ees:6 | ees1:6 | f2:9 c:m7 | f1:9 | \myEndLine
+		f2:m7 bes:9 | f:m7 bes:7 |
+	} \alternative {
+		{
+			ees:maj7 e:maj7 | f:maj7 e:maj7 | \myEndLineVoltaNotLast
+		}
+		{
+			ees:maj7 e:maj7 | f:maj7 ges:maj7 | \myEndLineVoltaLast
+		}
+	}
+	\endPart
+
+	\myMark "B"
+	\startPart
+	g2:maj7 g:6 | g:maj7 g:6 | g:m7 c:9 | g:m7 c:9 | \myEndLine
+	f2 f:6 | f:maj7 f:6 | f:m7 bes:7 | f:m7 bes4:9 bes:7.9- | \myEndLine
+	\endPart
+
+	\myMark "A"
+	\startPart
+	ees2:maj7 ees:6 | ees1:6 | f2:9 c:m7 | f1:9 | \myEndLine
+	f2:m7 bes:9 | f:m7 bes:9 | ees ees:6 | e:6 d:6 | \myEndLine
+	ees2 ees:6 | e:6 d:6 | ees:maj7 ees:6 | ees:maj7 ees:6 | ees1:maj7 | \myEndLine
+	\endPart
+
+	\endSong
+	\endChords
+}
+{% endif %}
+{% if part == "VoiceFake" %}{
+	\tempo "Moderato" 4 = 132
+	\time 2/2
+	\key ees \major
+
+	% part "A"
+	\repeat volta 2 {
+		g'4. g8 g2~ | g4 c,8 ees \tuplet 3/2 { g4 f ees } | g1 | \tuplet 3/2 { r4 c, ees } g4 f8 ees |
+		g1 | \tuplet 3/2 { r4 c, ees } \tuplet 3/2 { g f ees } |
+	} \alternative {
+		{
+			g2 gis | a gis |
+		}
+		{
+			g2 gis | a bes |
+		}
+	}
+
+	% part "B"
+	b1 | r4 d,8 g c b a g | bes4. a8 bes2~ | bes2 a4 g |
+	c,4. a'8 a2~ | \tuplet 3/2 { a4 c, f } \tuplet 3/2 { a g f } | aes1~ | aes1 |
+
+	% part "A"
+	g4. g8 g2~ | g4 c,8 ees \tuplet 3/2 { g4 f ees } | g1 | \tuplet 3/2 { r4 c, ees } \tuplet 3/2 { g f ees } |
+	g1~ | \tuplet 3/2 { g4 c, ees } \tuplet 3/2 { g f ees } | ees2. ees4 | e e d d |
+	ees2. ees4 | e e d d | ees1~ | ees1~ | ees1 |
+}
+{% endif %}

@@ -1,0 +1,125 @@
+{#
+default_version = "Fake"
+
+[attributes]
+title = "Western Reunion"
+style = "Jazz"
+composer = "Gerry Mulligan"
+piece = "Fast"
+copyright = "1955 CRITERION MUSIC CORP."
+copyrightextra = "Renewed 1983 CRITERION MUSIC CORP."
+typesetter = "Mark Veltzer <mark.veltzer@gmail.com>"
+completion = "5"
+uuid = "307b932c-d55d-11f1-8000-046874d194b7"
+structure = "AABA"
+location = "jfb:416"
+
+[[youtube]]
+id = "Au8DUQ5NC-A"
+remark = "Gerry Mulligan in the original recording"
+
+[[youtube]]
+id = "VORCSRRjVkQ"
+remark = "The Gerry Mulligan Sextet (1956)"
+
+[versions.Fake]
+doChords = true
+doVoice = true
+doLyrics = false
+doLyricsmore = false
+doLyricsmoremore = false
+doChordBars = false
+doGuitar = false
+doExtra = false
+doPrep = false
+doOwn = false
+#}
+{% if part == "Vars" %}
+{% endif %}
+{% if part == "Doc" %}	DONE:
+	- added the meta data from the fake book.
+	- put in the tunes structure.
+	- put in the chords (fake book).
+	- put in the tune (fake book).
+	- added youtube performances.
+	TODO:
+	- check the chords (fake book).
+	- check the tune (fake book).
+	- hear the tune to check that it is right and adjust the tempo.
+	- the fake book prints no chords over the "Solo Pick-ups" bar (bar 24).
+	- the five chords of bars 7 and 23 are crowded on the page, their exact placement within the bar is a guess.
+{% endif %}
+{% if part == "ChordsFake" %}\chordmode {
+	\startChords
+	\startSong
+
+	\partial 4. s4. |
+
+	\myMark "A"
+	\startPart
+	\repeat volta 2 {
+		c2.. g8:sus7 | s2 s8 f4.:9 | c2.. g8:sus7 | s2 s8 f4.:9 | c2.. g8:sus7 | s2 s8 f4.:9 | \myEndLine
+		d4:7 d:7/g des:maj7 des8:maj7/g c |
+	} \alternative {
+		{
+			g2:sus7 f:9 | \myEndLineVoltaNotLast
+		}
+		{
+			f1:7 | \myEndLineVoltaLast
+		}
+	}
+	\endPart
+
+	\myMark "B"
+	\startPart
+	s4. e4.:7 s4 | s2 b4:7.5+ e:7 | e4.:m7 a8:9 s2 | s2 ees4:7/a e:m7 | ees4.:7 d8:7 s2 | \myEndLine
+	s4. aes8:9 s2 | ees4.:7 d2:7 g8:sus7 | s2 s8 f4.:9 | \myEndLine
+	\endPart
+
+	\myMark "A"
+	\startPart
+	c2.. g8:sus7 | s2 s8 f4.:9 | c2.. g8:sus7 | s2 s8 f4.:9 | \myEndLine
+	c2.. g8:sus7 | s2 s8 f4.:9 | d4:7 d:7/g des:maj7 des8:maj7/g c | s1 | \myEndLine
+	\endPart
+
+	\myMark "Coda"
+	\startPart
+	c1:m7.9+.11+ | \myEndLine
+	\endPart
+
+	\endSong
+	\endChords
+}
+{% endif %}
+{% if part == "VoiceFake" %}{
+	\tempo "Allegro" 4 = 220
+	\time 4/4
+	\key c \major
+
+	\partial 4. g'8 a4 |
+
+	% part "A"
+	\repeat volta 2 {
+		c2~^\markup { \musicglyph #"scripts.segno" } c8 a g c | r2 r8 g a4 | c2~ c8 a g c | r2 r8 g a4 | c2~ c8 a g c | r2 r8 g a4 |
+		c4 a c aes8 c |
+	} \alternative {
+		{
+			r1 |
+		}
+		{
+			r2 f4 r |
+		}
+	}
+
+	% part "B"
+	f4 r8 e r2 | r2 dis4 d! | d4. cis8 r2 | r2 ees4 e! | ees4. d8 r2 |
+	r4 r8 ees ees ees4 c8 | ees4. d8 d4. g8 | r2 r8 g, a4 |
+
+	% part "A"
+	c2~ c8 a g c | r2 r8 g a4 | c2~ c8 a g c | r2 r8 g a4 |
+	c2~ c8 a g c | r2 r8 g a4 | c4 a c aes8 c^\markup {To Coda \musicglyph #"scripts.coda"} | \improvisationOn b4^\markup { Solo Pick-ups } b b b^\markup { D.S. al Coda } \improvisationOff |
+
+	% part "Coda"
+	r2 fis2 |
+}
+{% endif %}

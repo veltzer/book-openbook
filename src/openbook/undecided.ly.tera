@@ -1,0 +1,111 @@
+{#
+default_version = "Fake"
+
+[attributes]
+title = "Undecided"
+style = "Swing"
+composer = "Charles Shavers"
+poet = "Sid Robin"
+piece = "Moderately"
+copyright = "1939 by MCA MUSIC PUBLISHING, A Division of MCA Inc., New York, NY"
+copyrightextra = "Copyright Renewed"
+typesetter = "Mark Veltzer <mark.veltzer@gmail.com>"
+completion = "5"
+uuid = "5c200c46-d55e-11f1-8000-046874d194b7"
+structure = "AABA"
+location = "jfb:405"
+
+[[youtube]]
+id = "9ZWG2Hrc25E"
+remark = "John Kirby with Charlie Shavers in the original recording (1938)"
+
+[[youtube]]
+id = "jISkoEfn1gM"
+remark = "Chick Webb with Ella Fitzgerald (1939)"
+
+[versions.Fake]
+doChords = true
+doVoice = true
+doLyrics = false
+doLyricsmore = false
+doLyricsmoremore = false
+doChordBars = false
+doGuitar = false
+doExtra = false
+doPrep = false
+doOwn = false
+#}
+{% if part == "Vars" %}
+{% endif %}
+{% if part == "Doc" %}	DONE:
+	- added the meta data from the fake book.
+	- put in the tunes structure.
+	- put in the chords (fake book).
+	- put in the tune (fake book).
+	- added youtube performances.
+	TODO:
+	- add the lyrics.
+	- check the chords (fake book).
+	- check the tune (fake book).
+	- hear the tune to check that it is right and adjust the tempo.
+{% endif %}
+{% if part == "ChordsFake" %}\chordmode {
+	\startChords
+	\startSong
+
+	\myMark "A"
+	\startPart
+	\repeat volta 2 {
+		c1 | c1 | f1:9 | f1:9 | \myEndLine
+		d1:7 | d2:m7 aes4:7 g:7 |
+	} \alternative {
+		{
+			c2 a:7 | d2:m7 g:7 | \myEndLineVoltaNotLast
+		}
+		{
+			c1 | c1 | \myEndLineVoltaLast
+		}
+	}
+	\endPart
+
+	\myMark "B"
+	\startPart
+	g2:m7 c:7 | g2:m7 c:7 | f1 | f1 | \myEndLine
+	a2:m7 d:7 | a2:m7 d:7 | g1:7 | g1:7 | \myEndLine
+	\endPart
+
+	\myMark "Coda"
+	\startPart
+	c1 | c1 | \myEndLine
+	\endPart
+
+	\endSong
+	\endChords
+}
+{% endif %}
+{% if part == "VoiceFake" %}{
+	\tempo "Moderato" 2 = 100
+	\time 2/2
+	\key c \major
+
+	% part "A"
+	\repeat volta 2 {
+		b'8 c b c a4. c8 | b8 c a4~ a8 a4. | b8 c b c a4. c8 | b8 c a4~ a8 a4. |
+		b8 c b c a4. c8 | d8 d c4 ees4 d8 c~^\markup {To Coda \musicglyph #"scripts.coda"} |
+	} \alternative {
+		{
+			c1 | r1 |
+		}
+		{
+			c1~ | c2 r4 c8. c16 |
+		}
+	}
+
+	% part "B"
+	d8. d16 c8. bes16 c4 bes8. c16 | d8. d16 c8. bes16 c8 bes4 c8 | d8. d16 c8. a16 c4 a8. c16 | d8 c4.~ c4 a8. c16 |
+	d8. d16 c8. a16 c4 a8. c16 | d8. d16 c8. a16 c8 a4 c8 | d8. d16 b8. g16 b4 g8. b16 | d8 g,4.~ g2^\markup {D.C. al Coda} |
+
+	% part "Coda"
+	c1~ | c2. r4 |
+}
+{% endif %}

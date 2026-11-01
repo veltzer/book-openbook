@@ -1,0 +1,98 @@
+{#
+default_version = "Fake"
+
+[attributes]
+title = "Valse Hot"
+style = "Jazz"
+composer = "Sonny Rollins"
+piece = "Medium Jazz Waltz"
+copyright = "1965 Prestige Music"
+typesetter = "Mark Veltzer <mark.veltzer@gmail.com>"
+completion = "5"
+uuid = "aa6ff36f-d55d-11f1-8000-046874d194b7"
+structure = "ABBA"
+location = "jfb:410"
+
+[[youtube]]
+id = "SIVtK2gXLpk"
+remark = "Sonny Rollins in the original recording from Sonny Rollins Plus 4 (1956)"
+
+[[youtube]]
+id = "tPetksw7qb0"
+remark = "Emmet Cohen with Mike Rodriguez and John Ellis"
+
+[versions.Fake]
+doChords = true
+doVoice = true
+doLyrics = false
+doLyricsmore = false
+doLyricsmoremore = false
+doChordBars = false
+doGuitar = false
+doExtra = false
+doPrep = false
+doOwn = false
+#}
+{% if part == "Vars" %}
+{% endif %}
+{% if part == "Doc" %}	DONE:
+	- added the meta data from the fake book.
+	- put in the tunes structure.
+	- put in the chords (fake book).
+	- put in the tune (fake book).
+	- added youtube performances.
+	TODO:
+	- check the chords (fake book).
+	- check the tune (fake book).
+	- hear the tune to check that it is right and adjust the tempo.
+{% endif %}
+{% if part == "ChordsFake" %}\chordmode {
+	\startChords
+	\startSong
+
+	\myMark "A"
+	\startPart
+	ees2:7 aes4 | ees2:7 aes4 | ees2:7 aes4 | s2. | \myEndLine
+	aes2.*4:7 | \myEndLine
+	\endPart
+
+	\myMark "B"
+	\startPart
+	\repeat volta 2 {
+		aes2.:maj7 | ees2:m7 aes4:7 | des2.*2:maj7 | b2.:maj7 | \myEndLine
+		ges2.*2:maj7 | aes2.:7 | ees:maj7 | aes:7 | ees:m7 | aes2:7 ees4:m7 | \myEndLine
+		ees2.:7 | aes2.*3 | \myEndLine
+	}
+	\endPart
+
+	\myMark "A"
+	\startPart
+	ees2:7 aes4 | ees2:7 aes4 | ees2:7 aes4 | s2. | \myEndLine
+	aes2.*4:7 | \myEndLine
+	\endPart
+
+	\endSong
+	\endChords
+}
+{% endif %}
+{% if part == "VoiceFake" %}{
+	\tempo "Moderato" 4 = 160
+	\time 3/4
+	\key aes \major
+
+	% part "A"
+	bes'8. ees16 bes8 des c4 | bes8. ees16 bes8 des c4 | bes8. ees16 bes8 des c4 | r2. |
+	ees8. aes16 ees8 ges ees4 | ees8. aes16 ees8 ges ees4 | ees8. aes16 ees8 ges ees4 | r2. |
+
+	% part "B"
+	\repeat volta 2 {
+		aes,4 ees8 f g aes | bes8 des des ees ees ges | f8 ees des ees f4 | r2. | ees8 des b! des ees4 |
+		r4 des8 b! bes b! | des4 r r | ees,8 aes des c bes aes | g8 aes bes4 r4 | ees,8 aes bes aes des4 | des2. | c8 des bes ges des'4 |
+		des8 ees, f g aes bes | c4 bes8 aes aes g | aes4 r r | r2. |
+	}
+
+	% part "A"
+	bes8. ees16 bes8 des c4 | bes8. ees16 bes8 des c4 | bes8. ees16 bes8 des c4 | r2. |
+	ees8. aes16 ees8 ges ees4 | ees8. aes16 ees8 ges ees4 | ees8. aes16 ees8 ges ees4 | r2. |
+}
+{% endif %}

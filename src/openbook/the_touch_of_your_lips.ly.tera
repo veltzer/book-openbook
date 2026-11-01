@@ -1,0 +1,119 @@
+{#
+default_version = "Fake"
+
+[attributes]
+title = "The Touch Of Your Lips"
+style = "Jazz"
+composer = "Ray Noble"
+poet = "Ray Noble"
+piece = "Moderately slow, with expression"
+copyright = "1936 by Santly-Joy, Inc."
+copyrightextra = "Copyright renewed, all rights controlled by Chappell & Co., Inc. (Intersong Music, Publisher)"
+typesetter = "Mark Veltzer <mark.veltzer@gmail.com>"
+completion = "5"
+uuid = "1ca43200-d55d-11f1-8000-046874d194b7"
+structure = "ABAC"
+location = "jfb:400"
+
+[[youtube]]
+id = "XzZuQyTDZlA"
+remark = "Ray Noble and his Orchestra with Al Bowlly in the original recording (1936)"
+
+[[youtube]]
+id = "lfHf8UW732s"
+remark = "Chet Baker"
+
+[versions.Fake]
+doChords = true
+doVoice = true
+doLyrics = false
+doLyricsmore = false
+doLyricsmoremore = false
+doChordBars = false
+doGuitar = false
+doExtra = false
+doPrep = false
+doOwn = false
+#}
+{% if part == "Vars" %}
+{% endif %}
+{% if part == "Doc" %}	DONE:
+	- added the meta data from the fake book.
+	- put in the tunes structure.
+	- put in the chords (fake book).
+	- put in the tune (fake book).
+	- added youtube performances.
+	TODO:
+	- add the lyrics.
+	- check the chords (fake book).
+	- check the tune (fake book).
+	- hear the tune to check that it is right and adjust the tempo.
+	- the chord printed as Fm#7 was typeset as F minor major seventh.
+{% endif %}
+{% if part == "ChordsFake" %}\chordmode {
+	\startChords
+	\startSong
+
+	\partial 4 s4 |
+
+	\myMark "A"
+	\startPart
+	\repeat volta 2 {
+		c2:maj9 a:m7 | d:m9 g:7.5+ | c:6 a:m7 | d:m7 g:7.5+ | \myEndLine
+		c2:maj7 a:m7 | d:m7 g4:7 g:7/f | e1:m7.5- | a:7.9- | \myEndLine
+
+		\myMark "B"
+		d1:m7.5- | g:7.9- | c | fis2:m7.5- b:7.9- | \myEndLine
+		e1 | fis2:m7 b:7 | e1 | g2:7 f4/g f:m/g | \myEndLine
+
+		\myMark "A"
+		c2:maj9 a:m7 | d:m9 g:7 | c:6 a:m7 | d:m7 g:7.5+ | \myEndLine
+		c2:maj7 a:m7 | d:m7 g4:7 g:7/f | e1:m7.5- | a:7.9- | \myEndLine
+
+		\myMark "C"
+		d1:m7.5- | g:7.9- | c | a:m7 | \myEndLine
+		d1:7 | f2:m7+ g:7 |
+	} \alternative {
+		{
+			c2 f4 f:m | c d:m7 g2:9 | \myEndLineVoltaNotLast
+		}
+		{
+			c2 f4 f:m | c2. \myEndLineVoltaLast
+		}
+	}
+	\endPart
+
+	\endSong
+	\endChords
+}
+{% endif %}
+{% if part == "VoiceFake" %}{
+	\tempo "Andante" 2 = 60
+	\time 2/2
+	\key c \major
+
+	\partial 4 c4 |
+
+	% part "A"
+	\repeat volta 2 {
+		\tuplet 3/2 { d4 e d } e2~ | e2 g | a4. g8 a2~ | a2 a |
+		\tuplet 3/2 { b4 c b } c2~ | c2 b | bes1~ | bes2 a |
+		% part "B"
+		aes4. f8 d2~ | d2 \tuplet 3/2 { d4 e f } | g4. e8 c2~ | c2 c' |
+		b2 gis | fis dis | b1~ | b2 c |
+		% part "A"
+		\tuplet 3/2 { d4 e d } e2~ | e2 g | a4. g8 a2~ | a2 a |
+		\tuplet 3/2 { b4 c b } c2~ | c2 b | bes1~ | bes2 a |
+		% part "C"
+		aes4. f8 d2~ | d4 e \tuplet 3/2 { f4 aes c } | c1~ | c2 c |
+		\tuplet 3/2 { d4 e d } e2~ | e2 d |
+	} \alternative {
+		{
+			c1~ | c4 r r c, |
+		}
+		{
+			c'1~ | c2 r4
+		}
+	}
+}
+{% endif %}
