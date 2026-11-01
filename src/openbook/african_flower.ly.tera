@@ -1,0 +1,95 @@
+{#
+default_version = "Real"
+
+[attributes]
+title = "African Flower"
+style = "Jazz"
+composer = "Duke Ellington"
+piece = "Med. Latin"
+typesetter = "Mark Veltzer <mark.veltzer@gmail.com>"
+completion = "3"
+uuid = "c700bee0-d57a-11f1-8000-046874d194b7"
+structure = "AB"
+location = "rbk1:8"
+
+[[youtube]]
+id = "6HFQy9_rY58"
+remark = "Duke Ellington with Charles Mingus and Max Roach, Money Jungle (1962), the recording the real book refers to"
+
+[[youtube]]
+id = "Pq-mJ3KV1OQ"
+remark = "Gary Burton"
+
+[versions.Real]
+doChords = true
+doVoice = true
+doLyrics = false
+doLyricsmore = false
+doLyricsmoremore = false
+doChordBars = false
+doGuitar = false
+doExtra = false
+doPrep = false
+doOwn = false
+#}
+{% if part == "Vars" %}
+{% endif %}
+{% if part == "Doc" %}	DONE:
+	- added the meta data from the real book.
+	- put in the tunes structure.
+	- put in the chords (real book).
+	- put in the tune (real book).
+	- added youtube performances (the real book refers to Duke Ellington - "Money Jungle" or "Mingus Meets Duke", and to Gary Burton - "Lofty Fake Anagram").
+	TODO:
+	- check the chords (real book).
+	- check the tune (real book).
+	- hear the tune to check that it is right and adjust the tempo.
+	- the real book writes part A on two staves: the melody marked "1st x" and a harmonized version marked "2nd x". Only the "1st x" melody is typed here.
+	- the real book writes ".2." and a coda sign before bar 9 and "FINE" at the end of part A, but no D.C. or D.S. at the end of part B. Check what the form is.
+	- part B is written high above the staff in the real book with many ledger lines and hard to read. Check all its notes, especially bars 3-5 and 9-14 of part B.
+	- part B bars 3-6 of the book have a dynamic marking (ff, decrescendo) that is not typed here.
+	REMARKS:
+	- the real book key signature has five flats (E flat dorian). It is typed here as D flat major.
+{% endif %}
+{% if part == "ChordsReal" %}\chordmode {
+	\startChords
+	\startSong
+
+	\myMark "A"
+	\startPart
+	\repeat volta 2 {
+		ees1:m7 | ees:m7 | ees:m7 | \myEndLine
+		ees:m7 | aes:m7 | ges:m7 | ees:m7 | ees:m7 | \myEndLine
+		bes:m7 | bes:m7 | ees:m7 | ees:m7 | \myEndLine
+	}
+	\endPart
+
+	\myMark "B"
+	\startPart
+	ges1:maj7 | ges2.:maj7 ges4:7 | ces1:7 | ces:7 | ges:maj7 | ges:maj7 | \myEndLine
+	ges:7.11+ | ges:7.11+ | aes:7 | aes:7 | ges:m7 | \myEndLine
+	ees:m7 | d:7 | bes:7 | ees:m7 | ees:m7 | \myEndLine
+	\endPart
+
+	\endSong
+	\endChords
+}
+{% endif %}
+{% if part == "VoiceReal" %}{
+	\tempo "Moderato" 4 = 120
+	\time 4/4
+	\key des \major
+
+	% part "A"
+	\repeat volta 2 {
+		aes'8 bes aes bes aes2~ | aes1 | ges8 aes ges aes ges2~ |
+		ges1 | fes8 ges fes ges fes2~ | fes1 | ees8 f! ees f ees2~ | ees1 |
+		fes8^\markup { 2. \musicglyph #"scripts.coda" } ges fes ges fes2~ | fes4 fes \tuplet 3/2 { ges des' ces } | ges8 aes aes bes ees,2~ | ees1^\markup { \italic { Fine } } |
+	}
+
+	% part "B"
+	<bes' des'>1~ | <bes des'>2. des4 | ees1~ | ees | <bes des'>1~ | <bes des'>2. des4 |
+	<e e'>1~ | <e e'>2. r4 | r4 des8 aes'~ aes ces,4.~ | ces4. bes8 aes ges'4. | r4 ces,8 aes'~ aes2 |
+	r4 des,8 bes'~ bes4 c,8 c'~ | c2~ \tuplet 3/2 { c4 b bes } | bes2~ \tuplet 3/2 { bes4 aes ges } | ees1~ | ees |
+}
+{% endif %}

@@ -1,0 +1,120 @@
+{#
+default_version = "Real"
+
+[attributes]
+title = "Doin' The Pig"
+style = "Fusion"
+composer = "Steve Swallow"
+piece = "Rock"
+typesetter = "Mark Veltzer <mark.veltzer@gmail.com>"
+completion = "3"
+uuid = "514de92a-d581-11f1-8000-046874d194b7"
+structure = "ABCD"
+location = "rbk1:118-119"
+
+[[youtube]]
+id = "-PnLRwkcDk0"
+remark = "Gary Burton, Throb (1969), the recording the real book refers to"
+
+[[youtube]]
+id = "6ezifZMbHyY"
+remark = "Gary Burton Quintet (1974)"
+
+[versions.Real]
+doChords = true
+doVoice = true
+doLyrics = false
+doLyricsmore = false
+doLyricsmoremore = false
+doChordBars = false
+doGuitar = false
+doExtra = false
+doPrep = false
+doOwn = false
+#}
+{% if part == "Vars" %}
+{% endif %}
+{% if part == "Doc" %}	DONE:
+	- added the meta data from the real book.
+	- put in the tunes structure.
+	- put in the chords (real book).
+	- put in the tune (real book).
+	- added youtube performances (the real book refers to Gary Burton - 'Throb').
+	TODO:
+	- check the chords (real book).
+	- check the tune (real book).
+	- hear the tune to check that it is right and adjust the tempo.
+	- the tune is full of notes on ledger lines above the staff. Notes drawn with a ledger line through the head are typed as A (one ledger line), C (two) and E (three); notes drawn above their ledger lines as B, D and F. Check them all against a recording.
+	- A bar 1: the seventh note (sharp, on one ledger line) is typed as A sharp; it could be B sharp.
+	- A bar 3: the accidental before the first note is unclear, typed as a sharp (as in the same place in D).
+	- A bar 4 and D bar 4: the second note on beat 2 is drawn above three ledger lines and typed as F (natural in D), the note on beat 3.5 is D sharp in A and F sharp (above three ledger lines) in D.
+	- B bar 1: the second chord is hard to read (E7 or E-), typed as E7.
+	- several bars spell F natural as E sharp (B bar 3, C bar 7, D bars 2 and 3), typed as printed.
+	REMARKS:
+	- the book prints the chords on a second staff under the melody.
+	- the book has a start repeat sign at B and an end repeat sign at the end of D, and writes 'Solos on B C D' after the tune.
+	- B is five bars long on the page.
+{% endif %}
+{% if part == "ChordsReal" %}\chordmode {
+	\startChords
+	\startSong
+
+	\myMark "A"
+	\startPart
+	g1 | c4 cis:dim7 d2:7 | g1 | \myEndLine
+	c4 cis:dim7 d2:7 | g1 | \myEndLine
+	c4 cis:dim7 d2:7 | g1:7 | d2:7 g | \myEndLine
+	\endPart
+
+	\repeat volta 2 {
+
+		\myMark "B"
+		\startPart
+		b2:m7.5- e:7 | a:m7 d:7 | g1:7 | \myEndLine
+		d1:7 | a:7 | \myEndLine
+		\endPart
+
+		\myMark "C"
+		\startPart
+		e1:7 | a4:7 bes:dim7 b2:7 | e1:7 | a4:7 bes:dim7 b2:7 | \myEndLine
+		e1:7 | a4:7 bes:dim7 b2:7 | d1:7 | a2:7 d:7 | \myEndLine
+		\endPart
+
+		\myMark "D"
+		\startPart
+		g1 | c4 cis:dim7 d2:7 | g1 | \myEndLine
+		c4 cis:dim7 d2:7 | g1 | \myEndLine
+		c4 cis:dim7 d2:7 | g1:7 | d2:7 g | \myEndLine
+		\endPart
+	}
+
+	\endSong
+	\endChords
+}
+{% endif %}
+{% if part == "VoiceReal" %}{
+	\tempo "Allegro" 4 = 144
+	\time 4/4
+	\key g \major
+
+	% part "A"
+	r8 ais' b g' cis, d ais' dis, | e8 cis' f, fis d' b, c a' | cis,8 d b' f fis d' fis, g |
+	e'8 a, ais f' fis, dis' e,4 | r2 fis,8 g d' gis, |
+	a8 e' ais, b fis' c d a' | g4 r4 g,8 a ais b~ | b8 g' a, g' g,4 r4 |
+
+	\repeat volta 2 {
+		% part "B"
+		R1 | R1 | r2 d'8 e eis fis~ |
+		fis4 d'8 gis, a b c cis~ | cis8 c, d dis e fis g gis( |
+
+		% part "C"
+		a2) r2 | r8 e e cis dis e fis b,~ | b8 b b gis e' fis gis c,~ | c8 a' a fis dis4 b'8 a |
+		gis8 gis, gis e e' fis gis cis,~ | cis8 e e d dis fis g fis | fis4 r4 d8 e eis fis~ | fis8 d' e, cis' d,4 r4 |
+
+		% part "D"
+		r8 a' b, fis' c d dis e~ | e8 cis' eis, fis d' b, c a' | cis,8 d b' eis, fis d' fis, g |
+		e'8 a, ais f' fis, fis' e,4 | r2 fis,8 g d' gis, |
+		a8 e' ais, b fis' c d a' | g4 r4 g,8 a ais b~ | b8 g' a, g' g,4 r4 |
+	}
+}
+{% endif %}

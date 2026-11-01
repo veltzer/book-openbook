@@ -1,0 +1,111 @@
+{#
+default_version = "Real"
+
+[attributes]
+title = "Ana Maria"
+style = "Latin"
+composer = "Wayne Shorter"
+piece = "Bossa"
+typesetter = "Mark Veltzer <mark.veltzer@gmail.com>"
+completion = "3"
+uuid = "2461efe8-d57e-11f1-8000-046874d194b7"
+structure = "ABA"
+location = "rbk1:20"
+
+[[youtube]]
+id = "IrftwtFICbI"
+remark = "Wayne Shorter in the original recording (Native Dancer, 1975)"
+
+[[youtube]]
+id = "S8ojqKFw1I8"
+remark = "Wayne Shorter and Herbie Hancock with David Amaro"
+
+[versions.Real]
+doChords = true
+doVoice = true
+doLyrics = false
+doLyricsmore = false
+doLyricsmoremore = false
+doChordBars = false
+doGuitar = false
+doExtra = false
+doPrep = false
+doOwn = false
+#}
+{% if part == "Vars" %}
+{% endif %}
+{% if part == "Doc" %}	DONE:
+	- added the meta data from the real book.
+	- put in the tunes structure.
+	- put in the chords (real book).
+	- put in the tune (real book).
+	- added youtube performances.
+	TODO:
+	- check the chords (real book).
+	- check the tune (real book).
+	- hear the tune to check that it is right and adjust the tempo.
+	- the real book marks the intro chord as G (phrygian) and the vamp in the B part as G- (phrygian), both are written as G minor chords with the mode as a text mark.
+	- the real book writes Gb lyd. (bar 6 of the A part), it is written as Gbmaj7#11.
+	- the real book shows a second (piano, bass clef) staff under the last four bars with a chord voicing and the remark (col changes), it is not typeset.
+	- the whole note after the descending triplet (bars 7 and 25 of the head) is drawn tied from the Gb before it but sits between F and G, it was typed as Gb.
+	- the real book shows the start repeat sign of the head but the end barline is not clearly a repeat sign.
+{% endif %}
+{% if part == "ChordsReal" %}\chordmode {
+	\startChords
+	\startSong
+
+	\myMark "Intro"
+	\startPart
+	g1:m | g:m | g:m | g:m | \myEndLine
+	g:m | g:m | g:m | g:m | \myEndLine
+	\endPart
+
+	\myMark "A"
+	\startPart
+	\repeat volta 2 {
+		g1:maj7 | c:m7/g | g:7sus4 | c:m7/g | \myEndLine
+		des/f | ges:maj7.11+ | aes:m7 | bes/ees | \myEndLine
+
+		\myMark "B"
+		g:m | c:7sus4 | d/c | c:7sus4 | \myEndLine
+		aes4./c bes4./c aes4/c | aes1/c | g:m | g:m | g:m | g:m | \myEndLine
+
+		\myMark "A"
+		g:maj7 | g:7sus4 | f2:7sus4 c:7/e | ees1:7sus4 | \myEndLine
+		d2:maj7 f:7 | bes1:m7 | aes:m7 | bes/aes | \myEndLine
+	}
+	\endPart
+
+	\endSong
+	\endChords
+}
+{% endif %}
+{% if part == "VoiceReal" %}{
+	\tempo "Allegro" 4 = 180
+	\time 4/4
+	\key c \major
+
+	% part "Intro"
+	\improvisationOn
+	b'4^\markup { "(G phrygian, piano solo)" } b b b | b b b b | b b b b | b b b b |
+	b b b b | b b b b | b b b b | b b b b |
+	\improvisationOff
+
+	\repeat volta 2 {
+		% part "A"
+		d1~ | \tuplet 3/2 { d4 ees d } \tuplet 3/2 { c bes a } | g2.. g8~ | g2. r4 |
+		des'1~ | \tuplet 3/2 { des4 c bes } \tuplet 3/2 { aes g ges~ } | ges1 | f2 r2 |
+
+		% part "B"
+		bes1~ | \tuplet 3/2 { bes4 c g } \tuplet 3/2 { bes d e } | fis2 e4. d8 | d1 |
+		ees4. d8~ d4 c | c1 |
+		\improvisationOn
+		b4^\markup { "(G phrygian)" } b b b | b b b b | b b b b | b b b b |
+		\improvisationOff
+
+		% part "A"
+		d1~ | \tuplet 3/2 { d4 ees d } \tuplet 3/2 { c b bes~ } | bes1~ | bes2. r4 |
+		cis2.. c!8~ | c4. bes8 \tuplet 3/2 { aes4 g ges~ } | ges1 | f2. r4 |
+	}
+}
+{% endif %}

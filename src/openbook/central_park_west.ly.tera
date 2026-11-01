@@ -1,0 +1,83 @@
+{#
+default_version = "Real"
+
+[attributes]
+title = "Central Park West"
+style = "Jazz"
+composer = "John Coltrane"
+typesetter = "Mark Veltzer <mark.veltzer@gmail.com>"
+completion = "3"
+uuid = "07339186-d57b-11f1-8000-046874d194b7"
+structure = "A"
+location = "rbk1:156"
+
+[[youtube]]
+id = "euE0wyRmyZs"
+remark = "John Coltrane, Coltrane's Sound (1960), the recording the real book refers to"
+
+[[youtube]]
+id = "3kMVOd_wYkc"
+remark = "Manuel Aristaran, a cover"
+
+[versions.Real]
+doChords = true
+doVoice = true
+doLyrics = false
+doLyricsmore = false
+doLyricsmoremore = false
+doChordBars = false
+doGuitar = false
+doExtra = false
+doPrep = false
+doOwn = false
+#}
+{% if part == "Vars" %}
+{% endif %}
+{% if part == "Doc" %}	DONE:
+	- added the meta data from the real book.
+	- put in the tunes structure.
+	- put in the chords (real book).
+	- put in the tune (real book).
+	- added youtube performances (the real book refers to 'Coltrane's Sound').
+	TODO:
+	- check the chords (real book).
+	- check the tune (real book).
+	- hear the tune to check that it is right and adjust the tempo.
+	- the book writes the chords small inside a second staff and they are hard to read; the second half of bar 2 (Bb-7 Eb7), the second half of bar 3 (G-7 C7) and bar 4 (Fmaj7) are the most doubtful.
+	- bars 8 and 10: the book writes three filled note heads; the first one is typed as a half note (by its spacing) so that the bars add up.
+	REMARKS:
+	- the book prints no style or tempo word for this tune.
+	- the book prints the tune as a pickup and ten repeated bars.
+{% endif %}
+{% if part == "ChordsReal" %}\chordmode {
+	\startChords
+	\startSong
+
+	\partial 2 cis4:m7 fis:7 |
+
+	\myMark "A"
+	\startPart
+	\repeat volta 2 {
+		b2:maj7 e4:m7 a:7 | d2:maj7 bes4:m7 ees:7 | aes2:maj7 g4:m7 c:7 | f2:maj7 cis4:m7 fis:7 | b2:maj7 e4:m7 a:7 | \myEndLine
+		d2:maj7 cis4:m7 fis:7 | b1:maj7 | cis2:m7 fis:7 | b1:maj7 | cis2:m7 fis:7 | \myEndLine
+	}
+	\endPart
+
+	\endSong
+	\endChords
+}
+{% endif %}
+{% if part == "VoiceReal" %}{
+	\tempo "Adagio" 4 = 66
+	\time 4/4
+	\key c \major
+
+	\partial 2 dis4 cis |
+
+	% part "A"
+	\repeat volta 2 {
+		fis4 fis8 fis fis4 fis | fis2 aes4 bes | c4 c8 c c4 c | a2 dis,4 cis | fis4 fis8 fis fis4 fis |
+		fis2 dis4. cis8 | dis2 \tuplet 3/2 { gis4 fis dis } | cis2 b4 cis | dis2 \tuplet 3/2 { ais'4 fis dis } | cis2 dis4 cis |
+	}
+}
+{% endif %}

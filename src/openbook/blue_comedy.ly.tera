@@ -1,0 +1,97 @@
+{#
+default_version = "Real"
+
+[attributes]
+title = "Blue Comedy"
+style = "Jazz"
+composer = "Michael Gibbs"
+piece = "Med. Swing"
+typesetter = "Mark Veltzer <mark.veltzer@gmail.com>"
+completion = "3"
+uuid = "9c060a46-d57b-11f1-8000-046874d194b7"
+structure = "A"
+location = "rbk1:52"
+
+[[youtube]]
+id = "4C-CHH7ZWzg"
+remark = "Gary Burton live (the real book refers to Gary Burton - 'Carnegie Hall')"
+
+[[youtube]]
+id = "B3HTdC6J8mg"
+remark = "Gary Burton in the studio recording"
+
+[versions.Real]
+doChords = true
+doVoice = true
+doLyrics = false
+doLyricsmore = false
+doLyricsmoremore = false
+doChordBars = false
+doGuitar = false
+doExtra = false
+doPrep = false
+doOwn = false
+#}
+{% if part == "Vars" %}
+{% endif %}
+{% if part == "Doc" %}	DONE:
+	- added the meta data from the real book.
+	- put in the tunes structure.
+	- put in the chords (real book).
+	- put in the tune (real book).
+	- added youtube performances (the book refers to Gary Burton - 'Carnegie Hall').
+	TODO:
+	- check the chords (real book).
+	- check the tune (real book).
+	- hear the tune to check that it is right and adjust the tempo.
+	- the book writes F#7, B7 and E7 as (alt); they are written here as 7.5+.9+.
+	- bars 1-4, 6 and 9: the fast triplet lines are hard to read in the handwritten scan, check every note and accidental against a recording.
+	- bars 1 and 3: the naturals in the second triplet were read as E naturals (the heads sit between E and F).
+	- bar 6: the last note may be a G rather than an F.
+	- bar 11: the triplet may be E G A rather than E F A.
+	- interlude: the book writes '(Fine)' under the first Bb7 bar; it is put on that bar here.
+	REMARKS:
+	- the interlude is played in even eighths. Solos are on the head changes and the interlude is played between the soloists.
+{% endif %}
+{% if part == "ChordsReal" %}\chordmode {
+	\startChords
+	\startSong
+
+	\myMark "A"
+	\startPart
+	\repeat volta 2 {
+		ees1:7 | aes:7 | ees:7 | d:7 | \myEndLine
+		des:7 | des2:7 d:7 | e1:7 | fis:7.5+.9+ | \myEndLine
+		b:7.5+.9+ | e:7.5+.9+ | f:7.9 | f:7.9 | \myEndLine
+	}
+	\endPart
+
+	\myMark "Instr"
+	\startPart
+	a1:maj7.11+ | a:maj7.11+ | a:maj7.11+ | a:maj7.11+ | \myEndLine
+	a:maj7.11+ | a:maj7.11+ | bes:7.9- | bes:7.9- | \myEndLine
+	\endPart
+
+	\endSong
+	\endChords
+}
+{% endif %}
+{% if part == "VoiceReal" %}{
+	\tempo "Moderato" 4 = 144
+	\time 4/4
+	\key ees \major
+
+	% part "A"
+	\repeat volta 2 {
+		r8 des'8 \tuplet 3/2 { c bes ees, } \tuplet 3/2 { e g e } ees4 | r8 ees8 \tuplet 3/2 { ges aes bes } \tuplet 3/2 { c bes aes } \tuplet 3/2 { e' d c } | \tuplet 3/2 { ees4 des8 } \tuplet 3/2 { c bes ees, } \tuplet 3/2 { e g e } ees4 | r8 ees8 \tuplet 3/2 { f a a } \tuplet 3/2 { d g, f } \tuplet 3/2 { ees aes des } |
+		r4 r8 f8 f-^ c des4~ | \tuplet 3/2 { des8 c, d } \tuplet 3/2 { ees e g } \tuplet 3/2 { a c e } f4 | g2~ \tuplet 3/2 { g8 f e } \tuplet 3/2 { d b a } | fis4. a'8 a2-^ |
+		r4 \tuplet 3/2 { r8 aes ees } \tuplet 3/2 { a, g' ees } \tuplet 3/2 { aes ees a, } | g!4. bes'8 bes2-^ | r4 c4 c \tuplet 3/2 { e,8 f a } | a4 g8 f~ f2 |
+	}
+
+	% part "Instr"
+	\improvisationOn
+	b,4^\markup { Even 8ths } b b b | b b b b | b b b b | b b b b |
+	b4 b b b | b b b b | b^\markup { \italic { (Fine) } } b b b | b b b b^\markup { \column { "Solos on head changes," "interlude between soloists." "D.C." } } |
+	\improvisationOff
+}
+{% endif %}

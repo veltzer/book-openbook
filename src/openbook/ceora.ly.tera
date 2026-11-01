@@ -1,0 +1,118 @@
+{#
+default_version = "Real"
+
+[attributes]
+title = "Ceora"
+style = "Jazz"
+composer = "Lee Morgan"
+piece = "Bossa"
+typesetter = "Mark Veltzer <mark.veltzer@gmail.com>"
+completion = "3"
+uuid = "87dbaad8-d582-11f1-8000-046874d194b7"
+structure = "AB"
+location = "rbk1:73"
+
+[[youtube]]
+id = "StPEOSiMA-o"
+remark = "Lee Morgan, Cornbread (1965), the original recording (the real book refers to the Lee Morgan 'Memorial Album')"
+
+[[youtube]]
+id = "avpsZ76HdfA"
+remark = "Emmet Cohen with Patrick Bartley and Larry Grenadier"
+
+[versions.Real]
+doChords = true
+doVoice = true
+doLyrics = false
+doLyricsmore = false
+doLyricsmoremore = false
+doChordBars = false
+doGuitar = false
+doExtra = false
+doPrep = false
+doOwn = false
+#}
+{% if part == "Vars" %}
+{% endif %}
+{% if part == "Doc" %}	DONE:
+	- added the meta data from the real book.
+	- put in the tunes structure.
+	- put in the chords (real book).
+	- put in the tune (real book).
+	- added youtube performances (the real book refers to Lee Morgan - 'Memorial Album').
+	- used the Bb edition of the real book (page 73) and the New Real Book vol 3 (page 86) only to disambiguate rhythms and pitches of bars 2, 6-8, 13-16 and 27-31 of the real book.
+	TODO:
+	- check the chords (real book).
+	- check the tune (real book).
+	- hear the tune to check that it is right and adjust the tempo.
+	- bar 14: the beaming of the end of the bar (d, c-d-c triplet, b natural) is unclear; typed as quarter, sixteenth triplet, eighth.
+	- bar 12: the book prints no natural on the d of the four sixteenths (typed as d flat); the New Real Book has d natural there.
+	- bar 28: the last eighth has an unclear sign before it; typed as c.
+	- bars 6, 7 and 31: the book draws a plain half note where the bar needs a dotted half; typed as a dotted half.
+	- bar 29: the beaming of the a flat - b flat - a flat group is unclear; typed as two sixteenths and an eighth.
+	REMARKS:
+	- the book prints a circled 3 above the first ending; its meaning is not clear (play the head three times?).
+	- the second ending is the 'Ending' the book prints under the last line.
+{% endif %}
+{% if part == "ChordsReal" %}\chordmode {
+	\startChords
+	\startSong
+
+	\repeat volta 2 {
+
+		\myMark "A"
+		\startPart
+		aes1:maj7 | bes2:m7 ees:7 | aes1:maj7 | ees2:m7 aes:7 | \myEndLine
+		des1:maj7 | d2:m7 g:7 | c1:m7 | f:7 | \myEndLine
+		bes:m7 | ees:7 | c:m7 | f:7 | \myEndLine
+		d:m7 | g:7 | c2:m7 f:7 | bes:m7 ees:7 | \myEndLine
+		\endPart
+
+		\myMark "B"
+		\startPart
+		aes1:maj7 | bes2:m7 ees:7 | aes1:maj7 | ees2:m7 d:7.5+ | \myEndLine
+		des1:maj7 | d2:m7 g:7 | c1:m7 | f:7 | \myEndLine
+		bes:m7 | ees:7 | c:m7.5- | f:7 | \myEndLine
+		bes:m7 | ees:7sus4 | aes:maj7 |
+	} \alternative {
+		{
+			bes2:m7 ees:7 | \myEndLineVoltaNotLast
+		}
+		{
+			bes2:m7 ees:7 | aes1:maj7 | \myEndLineVoltaLast
+		}
+	}
+	\endPart
+
+	\endSong
+	\endChords
+}
+{% endif %}
+{% if part == "VoiceReal" %}{
+	\tempo "Moderato" 4 = 120
+	\time 4/4
+	\key aes \major
+
+	\repeat volta 2 {
+
+		% part "A"
+		r8 ees8 d'8 ees8~ ees8 ees,4 ees'16 d16 | des1 | r8 ees,8 b'8 c8~ c8 ees,4 bes'8~ | bes1 |
+		r8 aes,8 g'8 aes8 aes8 aes,4 aes'8 | g2.~ g8 g16 aes16 | ees2.~ ees8 c16 ees16 | aes4. ges8 \tuplet 3/2 { b16 c b } a8 aes8 g8 |
+		f8 aes4 c8~ c8 des4 ees16 c16 | bes2. bes16 aes g f | g8 bes4 d8~ d8 ees4 f16 d16 | c2. c16 des bes c |
+		a8 c4 e8~ e8 f8 e16 d16 c16 a16 | d4. e8 d4 \tuplet 3/2 { c16 d c } b8 | c4. f8 \tuplet 3/2 { des16 ees des } f,8 a8 c8 | bes4. des8 e16 fis16 ees8~ ees8 des8 |
+
+		% part "B"
+		r8 ees,8 d'8 ees8~ ees8 ees,4 ees'16 d16 | des1 | r8 ees,8 b'8 c8~ c8 ees,4 bes'8~ | bes1 |
+		r8 aes,8 g'8 aes8 aes8 aes,4 aes'8 | g2.~ g8 g16 aes16 | ees2.~ ees8 c16 ees16 | aes4. ges8 \tuplet 3/2 { b16 c b } a8 aes8 g8 |
+		f8 aes4 c8~ c8 des4 ees16 f16 | bes,2. bes16 aes g f | ges2 \tuplet 3/2 { g16 aes g } f8 e8 f8 | f'4. c8 \tuplet 3/2 { c8 f, aes } des8 c8 |
+		aes2~ aes8 f8 aes16 bes16 aes8~ | aes2~ aes8 aes16 g16 bes16 aes16 ees16 f16 | g2. c,16 ees g ges |
+	} \alternative {
+		{
+			f4. ees8~ ees4 r4 |
+		}
+		{
+			f4. ees8~ ees8 ees8 ges8 e8 | ees1\fermata |
+		}
+	}
+}
+{% endif %}

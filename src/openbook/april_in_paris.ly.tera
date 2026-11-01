@@ -1,0 +1,107 @@
+{#
+default_version = "Real"
+
+[attributes]
+title = "April In Paris"
+style = "Jazz"
+composer = "Vernon Duke"
+poet = "E.Y. Harburg"
+piece = "Jazz"
+typesetter = "Mark Veltzer <mark.veltzer@gmail.com>"
+completion = "5"
+uuid = "5084a5a0-d57b-11f1-8000-046874d194b7"
+structure = "ABCA"
+location = "rbk1:26"
+
+[[youtube]]
+id = "wI9qT13Zjx4"
+remark = "Charlie Parker with strings, the recording the real book refers to"
+
+[[youtube]]
+id = "Jzeb1_EmsFs"
+remark = "Thelonious Monk, the other recording the real book refers to"
+
+[versions.Real]
+doChords = true
+doVoice = true
+doLyrics = false
+doLyricsmore = false
+doLyricsmoremore = false
+doChordBars = false
+doGuitar = false
+doExtra = false
+doPrep = false
+doOwn = false
+#}
+{% if part == "Vars" %}
+{% endif %}
+{% if part == "Doc" %}	DONE:
+	- added the meta data from the real book.
+	- put in the tunes structure.
+	- put in the chords (real book).
+	- put in the tune (real book).
+	- added youtube performances (the real book refers to Charlie Parker - "April In Paris" and Thelonious Monk - "Monk").
+	TODO:
+	- check the chords (real book).
+	- check the tune (real book).
+	- hear the tune to check that it is right and adjust the tempo.
+	- the real book prints no style word for this tune; the tempo is a guess.
+	- the A7 alt chord of the book (bar 28) is written as A7#5#9.
+	- bar 29: the last note of the bar (and the first of bar 30) is written between c and d in the book; typed as c.
+	- the poet (E.Y. Harburg) is not printed in the real book; added from general knowledge.
+	- add the lyrics.
+{% endif %}
+{% if part == "ChordsReal" %}\chordmode {
+	\startChords
+	\startSong
+
+	\myMark "A"
+	\startPart
+	f1:m | c:maj7 | d:m7.5- | g:7 | \myEndLine
+	c:maj7 | c:maj7 | g:m7 | c:7 | \myEndLine
+	\endPart
+
+	\myMark "B"
+	\startPart
+	f:maj7 | f:maj7 | b2:m7.5- e:7 | a:m a:m/g | \myEndLine
+	fis1:m7.5- | b:7.9- | b2:m7 e:7 | e:m7.5- a:7.9- | \myEndLine
+	\endPart
+
+	\myMark "C"
+	\startPart
+	d2:m7 f:m | c/e ees:dim | d:m7.5- f:m | c1 | \myEndLine
+	b2:m7.5- e:7 | a:m a:m/g | fis:m7.5- b:7.9- | e:maj7 d4:m7 g:7 | \myEndLine
+	\endPart
+
+	\myMark "A"
+	\startPart
+	f1:m | c:maj7 | e:m7.5- | a:7.5+.9+ | \myEndLine
+	d:9 | d2:m7.5- g:7 | c1 | c | \myEndLine
+	\endPart
+
+	\endSong
+	\endChords
+}
+{% endif %}
+{% if part == "VoiceReal" %}{
+	\tempo "Andante" 4 = 84
+	\time 4/4
+	\key c \major
+
+	% part "A"
+	\tuplet 3/2 { f4 f f } dis e~ | e1 | \tuplet 3/2 { f4 f f } dis e~ | e1 |
+	\tuplet 3/2 { d4 d d } a c~ | c e g b8 d~ | d1~ | d1 |
+
+	% part "B"
+	\tuplet 3/2 { d4 d d } b c~ | c1 | \tuplet 3/2 { d4 d d } b c~ | c1 |
+	\tuplet 3/2 { c4 c c } a b~ | b2 c | e1~ | e1 |
+
+	% part "C"
+	e2 d8 ais b d | c4 c c2 | d8 ais b d c4 c | c1 |
+	e2 d8 ais b d | c4 c c2 | c8 gis a c b4 b | gis2 g |
+
+	% part "A"
+	\tuplet 3/2 { f4 f f } dis e~ | e1 | \tuplet 3/2 { bes'4 bes bes } gis a~ | a1 |
+	\tuplet 3/2 { d4 d d } b c~ | c2 e | c1~^\markup { \italic { Fine } } | c4 r r2 |
+}
+{% endif %}

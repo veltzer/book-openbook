@@ -1,0 +1,98 @@
+{#
+default_version = "Real"
+
+[attributes]
+title = "Bitter Suite In The Ozone"
+style = "Jazz"
+composer = "Bob Moses"
+typesetter = "Mark Veltzer <mark.veltzer@gmail.com>"
+completion = "3"
+uuid = "f5bb0c4e-d57b-11f1-8000-046874d194b7"
+structure = "A"
+location = "rbk1:45"
+
+[[youtube]]
+id = "l5mf68CKQYE"
+remark = "Bob Moses, the original recording (Glitteragbas Solo / Bittersuite in the Ozone)"
+
+[[youtube]]
+id = "fCUQAXviftQ"
+remark = "The Mostro Space Jazz Quartet"
+
+[versions.Real]
+doChords = true
+doVoice = true
+doLyrics = false
+doLyricsmore = false
+doLyricsmoremore = false
+doChordBars = false
+doGuitar = false
+doExtra = false
+doPrep = false
+doOwn = false
+#}
+{% if part == "Vars" %}
+{% endif %}
+{% if part == "Doc" %}	DONE:
+	- added the meta data from the real book.
+	- put in the tunes structure.
+	- put in the chords (real book).
+	- put in the tune (real book).
+	- added youtube performances.
+	- the real book names the recording: Bob Moses - "Bitter Suite In The Ozone".
+	- the real book prints no style word for this tune, so there is no piece attribute.
+	TODO:
+	- check the chords (real book).
+	- check the tune (real book).
+	- hear the tune to check that it is right and adjust the tempo.
+	- the intro bar is written on a grand staff (bass and treble) in the real book and is hard to read, check its notes (especially the last triplet a-flat b-flat d).
+	- the first chord of the last line is printed as f a c e under a c-flat (no flats on the lower notes), check it.
+	- the last bar has four stemless whole-note dyads with fermatas in the real book, they are put in as quarter notes with fermatas.
+{% endif %}
+{% if part == "ChordsReal" %}\chordmode {
+	\startChords
+	\startSong
+
+	\myMark "Intro"
+	\startPart
+	\repeat volta 2 {
+		s1 | \myEndLine
+	}
+	\endPart
+
+	\myMark "A"
+	\startPart
+	\repeat volta 2 {
+		ees1:m | ees:m | e:maj7 | \myEndLine
+		e1*5/4:maj7 | ees1:m | \myEndLine
+		ees:m | ees:m | ees:m | \myEndLine
+		s1 | s1 | s1 | \myEndLine
+	}
+	\endPart
+
+	\endSong
+	\endChords
+}
+{% endif %}
+{% if part == "VoiceReal" %}{
+	\tempo "Andante" 4 = 80
+	\time 4/4
+	\key c \major
+
+	% part "Intro"
+	\repeat volta 2 {
+		\tuplet 3/2 { e,8 gis b } \tuplet 3/2 { dis e gis } \tuplet 3/2 { b cis ees } \tuplet 3/2 { aes bes d } |
+	}
+
+	% part "A"
+	\repeat volta 2 {
+		c,4. bes8 bes2~ | bes2 aes8 ges des ees | fis4 gis8 cis, r cis dis4~ |
+		\time 5/4
+		dis2. \tuplet 3/2 { e,16 gis b } \tuplet 3/2 { dis e gis } \tuplet 3/2 { b cis dis } \tuplet 3/2 { fis a c } |
+		\time 4/4
+		c4. bes8 bes2~ |
+		bes2 aes8 ges des ees | aes16 ges fes ees d2.~ | d1 |
+		<f, a c e ces'>1\fermata | <ees a a'>1\fermata | <des f'>4\fermata <ees g'>\fermata <f aes'>\fermata <g bes'>\fermata |
+	}
+}
+{% endif %}

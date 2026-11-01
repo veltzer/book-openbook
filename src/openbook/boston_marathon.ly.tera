@@ -1,0 +1,102 @@
+{#
+default_version = "Real"
+
+[attributes]
+title = "Boston Marathon"
+style = "Fusion"
+composer = "Gary Burton"
+piece = "Rock"
+typesetter = "Mark Veltzer <mark.veltzer@gmail.com>"
+completion = "3"
+uuid = "9c060a47-d57b-11f1-8000-046874d194b7"
+structure = "Intro AA'"
+location = "rbk1:61"
+
+[[youtube]]
+id = "2c6pjCDqt-8"
+remark = "Gary Burton in the original recording (the real book refers to Gary Burton - 'Good Vibes')"
+
+[[youtube]]
+id = "-u3vMkyHxL8"
+remark = "Gary Burton in a 1978 version"
+
+[versions.Real]
+doChords = true
+doVoice = true
+doLyrics = false
+doLyricsmore = false
+doLyricsmoremore = false
+doChordBars = false
+doGuitar = false
+doExtra = false
+doPrep = false
+doOwn = false
+#}
+{% if part == "Vars" %}
+{% endif %}
+{% if part == "Doc" %}	DONE:
+	- added the meta data from the real book.
+	- put in the tunes structure.
+	- put in the chords (real book).
+	- put in the tune (real book).
+	- added youtube performances (the book refers to Gary Burton - 'Good Vibes').
+	TODO:
+	- check the chords (real book).
+	- check the tune (real book).
+	- hear the tune to check that it is right and adjust the tempo.
+	- the book prints a bass ostinato on a second staff in bar 1 (repeated with a % sign in all later bars); it is written here in the voice of the intro bars only.
+	- the rhythm of the three note sixteenth groups (bars 4, 6, 7, 10, 11, 14, 16, 18) is hard to read in the handwritten scan; they are typed as sixteenth, sixteenth, eighth.
+	- bar 9: the first two notes (G5 and Bb4) are unclear.
+	- bars 10 and 14: the accented chords are hard to read (typed A C E in bar 10 and C E / B D in bar 14).
+	- bar 16: the last two beats are hard to read.
+	- bars 17-18: the chords were read as C F G.
+	- bar 12: there seems to be a dot after the third note, which does not fit the bar; typed D B A as sixteenth, sixteenth, eighth.
+	REMARKS:
+	- the book writes 'Fine - or fade' at bar 19 and the chord G7 for the whole tune.
+{% endif %}
+{% if part == "ChordsReal" %}\chordmode {
+	\startChords
+	\startSong
+
+	\myMark "Intro"
+	\startPart
+	g1:7 | g:7 | g:7 | \myEndLine
+	\endPart
+
+	\myMark "A"
+	\startPart
+	g1:7 | g:7 | g:7 | \myEndLine
+	g:7 | g:7 | g:7 | \myEndLine
+	g:7 | g:7 | g:7 | \myEndLine
+	\endPart
+
+	\myMark "A'"
+	\startPart
+	g1:7 | g:7 | g:7 | g:7 | \myEndLine
+	g:7 | g:7 | g:7 | g:7 | \myEndLine
+	\endPart
+
+	\endSong
+	\endChords
+}
+{% endif %}
+{% if part == "VoiceReal" %}{
+	\tempo "Allegro" 4 = 138
+	\time 4/4
+	\key c \major
+
+	% part "Intro"
+	\clef bass
+	g,4^\markup { Bass } r8. c16 d8 g g f16 d | g,4 r8. c16 d8 g g f16 d | g,4 r8. c16 d8 g g f16 d |
+	\clef treble
+
+	% part "A"
+	r2 d''16 d d d bes16 b g8~ | g8 e g4 r2 | r8 f'8 bes,16 b g8~ g8 e16 g d'16 e bes8~ |
+	bes8 g r4 r8 g16 g c16 d bes8~ | bes8 g e4 r4 d'16 e8. | g16 bes,8. c16 d e,8~ e8 g a16 g8. |
+	<a c e>16-^ d8. <a c e>16-^ d8. <a c e>16-^ d16 g,8 c16 d bes8~ | bes4 r4 r8 g'8 des16 c d8~ | d16 b a8 g4 r2 |
+
+	% part "A'"
+	f'16 f f f ais, b g8~ g8 e16 g <b d>8. g16~ | g4 r4 r8 g'8 ais,16 <c e>-^ <b d>8-^~ | <b d>8 g e4 r2 | r8 f8 bes16 ees a,8 c16 a b8 d16 e f8 |
+	<c f g>4 <c f g> <c f g> <c f g> | <c f g>4 <c f g> r8. g16 bes16 b g8~ | g1^\markup { \italic { Fine - or fade } } | r1 |
+}
+{% endif %}

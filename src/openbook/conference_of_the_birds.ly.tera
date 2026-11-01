@@ -1,0 +1,111 @@
+{#
+default_version = "Real"
+
+[attributes]
+title = "Conference Of The Birds"
+style = "Jazz"
+composer = "Dave Holland"
+piece = "Medium"
+typesetter = "Mark Veltzer <mark.veltzer@gmail.com>"
+completion = "5"
+uuid = "c2614072-d57e-11f1-8000-046874d194b7"
+structure = "A"
+location = "rbk1:91"
+
+[[youtube]]
+id = "v-a8LQxAjPE"
+remark = "The original from Dave Holland's album 'Conference Of The Birds' (1972)"
+
+[[youtube]]
+id = "uyLlyM3KMec"
+remark = "Dave Holland Quartet live in Sao Paulo"
+
+[versions.Real]
+doChords = true
+doVoice = true
+doLyrics = false
+doLyricsmore = false
+doLyricsmoremore = false
+doChordBars = false
+doGuitar = false
+doExtra = false
+doPrep = false
+doOwn = false
+#}
+{% if part == "Vars" %}
+{% endif %}
+{% if part == "Doc" %}	DONE:
+	- added the meta data from the real book.
+	- put in the tunes structure.
+	- put in the chords (real book).
+	- put in the tune (real book).
+	- the real book cites the recording Dave Holland - 'Conference Of The Birds'.
+	- added youtube performances.
+	TODO:
+	- check the chords (real book).
+	- check the tune (real book).
+	- hear the tune to check that it is right and adjust the tempo.
+	- the page prints only a metronome mark (quarter = 120) and no style word; the piece word is a guess.
+	- the page is a three staff arrangement (soprano, flute, bass); only the soprano line is the melody here. The intro is the open bass solo followed by the bass double stops vamp (played 4 times, with a slide into the first one), written here in the bass clef.
+	- the endings print no chord symbols; D- is assumed (as in the intro).
+	- the second ending is marked '(fermata)' and Fine; the page says 'solo on entire form'.
+{% endif %}
+{% if part == "ChordsReal" %}\chordmode {
+	\startChords
+	\startSong
+
+	\myMark "Intro"
+	\startPart
+	d4*5:m | \myEndLine
+	\repeat volta 4 {
+		d2.:m f2 | bes2. ees2 |
+	}
+	\myEndLine
+	\endPart
+
+	\myMark "A"
+	\startPart
+	\repeat volta 2 {
+		d2.:m f2 | bes2. ees2 | d2.:m f2 | \myEndLine
+		bes2. ees2 | d2.:m f2 | bes2. ees2 | d4.:m c g2/b | \myEndLine
+	} \alternative {
+		{
+			d4*5:m | s2 | \myEndLineVoltaNotLast
+		}
+		{
+			d4*5:m | s2 | \myEndLineVoltaLast
+		}
+	}
+	\endPart
+
+	\endSong
+	\endChords
+}
+{% endif %}
+{% if part == "VoiceReal" %}{
+	\tempo "Moderato" 4 = 120
+	\time 5/4
+	\key c \major
+
+	% part "Intro"
+	\clef bass
+	R4*5^\markup { Open bass solo (no time) } |
+	\repeat volta 4 {
+		<d, a'>4.^\markup { 4x } <d a'>4. <c f>4 <c f>-. | <f bes>4. <f bes>4. <bes, ees>4 <bes ees> |
+	}
+
+	% part "A"
+	\clef treble
+	\repeat volta 2 {
+		\once \omit Staff.TimeSignature \time 5/4 d''4. a4. a8 bes a4 | d4. f8~ f4 ees8 d bes4 | d4. a4. a8 bes a4 |
+		d4. f8~ f4 ees8 d bes4 | d4. a4. a8 bes a4 | d4. f8~ f4 ees8 d bes4 | f4. e'4. d2~ |
+	} \alternative {
+		{
+			d1~ d4~ | \time 2/4 d4 r4 |
+		}
+		{
+			\time 5/4 d1~ d4~ | \time 2/4 d4\fermata^\markup { \italic { Fine } } r4 |
+		}
+	}
+}
+{% endif %}

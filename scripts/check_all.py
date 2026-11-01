@@ -36,6 +36,8 @@ AUTHORS_AND = re.compile(r"(composer|poet)\s*=\s*\".* and .*\"")
 # tera part blocks, e.g. {% if part == "VoiceReal" %}
 PART_IF = re.compile(r"\{%-?\s*if part == \"(\w+)\"")
 PART_END = re.compile(r"\{%-?\s*endif")
+# every song has a uuid of its own (front matter line `uuid = "..."`)
+UUID_LINE = re.compile(r"^uuid\s*=\s*\"([^\"]*)\"")
 
 
 @dataclass(frozen=True)
@@ -52,6 +54,8 @@ class Checker:
 
     def __init__(self) -> None:
         self.findings: list[Finding] = []
+        # uuid -> first file that declared it, for the cross-file check
+        self.uuids: dict[str, str] = {}
 
     @property
     def errors(self) -> int:
@@ -90,6 +94,12 @@ class Checker:
         if LEGACY_YOUTUBE.match(line):
             self.error(file, num, "legacy idyoutube* attr; use [[youtube]]", line)
 
+    def check_uuid(self, file: str, num: int, uuid: str) -> None:
+        """ a uuid may appear in one song only """
+        first = self.uuids.setdefault(uuid, file)
+        if first != file:
+            self.error(file, num, f"duplicate uuid (also in {first})", uuid)
+
     def check_jazz_line(self, file: str, num: int, line: str) -> None:
         """ per-line checks that only apply to the jazz tunes """
         if "\\key" in line and "major" not in line and "minor" not in line:
@@ -125,6 +135,8 @@ class Checker:
             elif PART_END.search(line):
                 part = None
             self.check_line(file, num, line)
+            if match := UUID_LINE.match(line):
+                self.check_uuid(file, num, match.group(1))
             if jazz:
                 self.check_jazz_line(file, num, line)
             if part is not None and part.startswith("Voice") and "\\myEndLine" in line:

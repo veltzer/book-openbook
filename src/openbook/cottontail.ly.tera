@@ -1,0 +1,115 @@
+{#
+default_version = "Real"
+
+[attributes]
+title = "Cottontail"
+style = "Jazz"
+composer = "Duke Ellington"
+piece = "Fast"
+typesetter = "Mark Veltzer <mark.veltzer@gmail.com>"
+completion = "5"
+uuid = "c337af8e-d57b-11f1-8000-046874d194b7"
+structure = "AABA"
+location = "rbk1:95"
+
+[[youtube]]
+id = "qAZWFafX6o8"
+remark = "The 1940 original by Duke Ellington with Ben Webster"
+
+[[youtube]]
+id = "b_yvQ2PI-Ns"
+remark = "Ella Fitzgerald with Duke Ellington, Milan 1966"
+
+[versions.Real]
+doChords = true
+doVoice = true
+doLyrics = false
+doLyricsmore = false
+doLyricsmoremore = false
+doChordBars = false
+doGuitar = false
+doExtra = false
+doPrep = false
+doOwn = false
+#}
+{% if part == "Vars" %}
+{% endif %}
+{% if part == "Doc" %}	DONE:
+	- added the meta data from the real book.
+	- put in the tunes structure.
+	- put in the chords (real book).
+	- put in the tune (real book).
+	- the real book cites the recording Duke - 'The Golden Duke'.
+	- added youtube performances.
+	TODO:
+	- check the chords (real book).
+	- check the tune (real book).
+	- hear the tune to check that it is right and adjust the tempo.
+	- the bridge is printed as slashes only (no melody); check it against a recording.
+	- the accidentals in the eighth note runs of bar 7 and of both endings (and the last bar) are hard to read in the handwriting (fis/e natural/d natural), check them.
+	- bar 8 first ending: the chord is printed as 'F7 - Bb-7 Eb7', check the rhythm of the chords.
+{% endif %}
+{% if part == "ChordsReal" %}\chordmode {
+	\startChords
+	\startSong
+
+	\myMark "A"
+	\startPart
+	\repeat volta 2 {
+		aes2:maj7 f:m7 | bes:m7 ees:7 | c:m7 f:m7 | bes:m7 ees:7 | \myEndLine
+		aes1:7 | des2 d:dim | aes ees:7 |
+	} \alternative {
+		{
+			f2:7 bes4:m7 ees:7 | \myEndLineVoltaNotLast
+		}
+		{
+			aes1 | \myEndLineVoltaLast
+		}
+	}
+	\endPart
+
+	\myMark "B"
+	\startPart
+	c1*2:7 | f1*2:7 | \myEndLine
+	bes1*2:7 | ees1*2:7 | \myEndLine
+	\endPart
+
+	\myMark "A"
+	\startPart
+	aes2:maj7 f:m7 | bes:m7 ees:7 | c:m7 f:m7 | bes:m7 ees:7 | \myEndLine
+	aes1:7 | des | aes2 ees:7 | aes1 | \myEndLine
+	\endPart
+
+	\endSong
+	\endChords
+}
+{% endif %}
+{% if part == "VoiceReal" %}{
+	\tempo "Allegro" 4 = 220
+	\time 4/4
+	\key aes \major
+
+	% part "A"
+	\repeat volta 2 {
+		r8 bes'4. f8 aes c4 | bes4. bes8 r2 | r8 bes4 r8 bes4. c8 | bes aes f4-. ees2 |
+		r4 d'4~ d4. f8 | ees des4 c8-^ r8 bes4 aes8 | aes f fis g g ees e f~ |
+	} \alternative {
+		{
+			f8 des d ees~ ees4 r4 |
+		}
+		{
+			f8\repeatTie fis g aes~ aes4 r4 |
+		}
+	}
+
+	% part "B"
+	\improvisationOn
+	b4 b b b | b b b b | b b b b | b b b b |
+	b4 b b b | b b b b | b b b b | b b b b |
+	\improvisationOff
+
+	% part "A"
+	r8 bes4. f8 aes c4 | bes4. bes8 r2 | r8 bes4 r8 bes4. c8 | bes aes f4-. ees2 |
+	r4 d'4~ d4. f8 | ees des4 c8-^ r8 bes4 aes8 | aes f fis g g ees e f~ | f fis g aes r2 |
+}
+{% endif %}

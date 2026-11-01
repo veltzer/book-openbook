@@ -1,0 +1,208 @@
+{#
+default_version = "Real"
+
+[attributes]
+title = "Brainville"
+style = "Jazz"
+composer = "Sun Ra"
+piece = "Med. Up"
+typesetter = "Mark Veltzer <mark.veltzer@gmail.com>"
+completion = "3"
+uuid = "9c060a48-d57b-11f1-8000-046874d194b7"
+structure = "AABBCDEF"
+location = "rbk1:62-63"
+
+[[youtube]]
+id = "Sw75Z1dshEs"
+remark = "Sun Ra and his Arkestra"
+
+[[youtube]]
+id = "UmRsWk1tOoM"
+remark = "Sun Ra in another upload"
+
+[versions.Real]
+doChords = true
+doVoice = true
+doLyrics = false
+doLyricsmore = false
+doLyricsmoremore = false
+doChordBars = false
+doGuitar = false
+doExtra = false
+doPrep = false
+doOwn = false
+#}
+{% if part == "Vars" %}
+{% endif %}
+{% if part == "Doc" %}	DONE:
+	- added the meta data from the real book.
+	- put in the tunes structure.
+	- put in the chords (real book).
+	- put in the tune (real book).
+	- added youtube performances.
+	TODO:
+	- check the chords (real book).
+	- check the tune (real book).
+	- hear the tune to check that it is right and adjust the tempo.
+	- the book prints a second (bass) staff under the A, C and E sections; only the top staff is written here. Add the bass lines.
+	- the book prints chords in the A section only for bars 1-2 (and their two bar repeat); the other A bars and the C section have no chord symbols.
+	- the book has no key signature from the B section on (the A section has one flat); the key of F is kept for the whole tune, check the B and D sections (bars 1 and 3 were read as B flat).
+	- B/D bar 4: the last eighth was read as E (bar 2 has C at that place).
+	- solos, bar 22: the book writes B7 (the head has Bmaj7).
+	- solos: the book writes the Fmaj7 D-7 / G-7 C7 line as two bars followed by three bars with two bar repeat signs; it is written here as eight bars.
+	REMARKS:
+	- the book's sections E and F are marked 'Instr' and 'Break' here, the solo section 'Ad Lib'.
+	- the book says to play E between the solos; the coda (E-7) is reached from the end of E.
+{% endif %}
+{% if part == "ChordsReal" %}\chordmode {
+	\startChords
+	\startSong
+
+	\myMark "A"
+	\startPart
+	\repeat volta 2 {
+		bes1:m7+ | aes:m7+ | bes:m7+ | aes:m7+ | s1 | s1 | \myEndLine
+		s1 | s1 | s1 | s1 | \myEndLine
+		s1 | s1 | s1 | s1 | \myEndLine
+	}
+	\endPart
+
+	\myMark "B"
+	\startPart
+	\repeat volta 2 {
+		bes1:m7+ | aes:m7+ | bes:m7+ | aes:m7+ | \myEndLine
+		fis:7 | b:maj7 | e:maj7 |
+	} \alternative {
+		{
+			a:7.9+ | \myEndLineVoltaNotLast
+		}
+		{
+			a:7.9+ | \myEndLineVoltaLast
+		}
+	}
+	\endPart
+
+	\myMark "C"
+	\startPart
+	\repeat volta 4 {
+		s1 | s1 | s1 |
+	} \alternative {
+		{
+			s1 | \myEndLineVoltaNotLast
+		}
+		{
+			s1 | \myEndLineVoltaLast
+		}
+	}
+	\endPart
+
+	\myMark "D"
+	\startPart
+	bes1:m7+ | aes:m7+ | bes:m7+ | aes:m7+ | \myEndLine
+	fis:7 | b:maj7 | e:maj7 | a:7.5-.9+ | \myEndLine
+	\endPart
+
+	\myMark "Instr"
+	\startPart
+	\repeat volta 4 {
+		f1:maj7 | f:maj7 | f:maj7 | f:maj7 | \myEndLine
+	}
+	\endPart
+
+	\myMark "Break"
+	\startPart
+	\repeat volta 2 {
+		g1:m7 | g:m7 | g:m7 | g:m7 | \myEndLine
+	}
+	\endPart
+
+	\myMark "Ad Lib"
+	\startPart
+	\repeat volta 2 {
+		bes1:m7+ | aes:m7+ | bes:m7+ | aes:m7+ | \myEndLine
+		fis:7 | b:maj7 | e:maj7 |
+	} \alternative {
+		{
+			a:7.5-.9+ | \myEndLineVoltaNotLast
+		}
+		{
+			g2:m7 c:7 | \myEndLineVoltaLast
+		}
+	}
+	f2:maj7 d:m7 | g:m7 c:7 | f:maj7 d:m7 | g:m7 c:7 | \myEndLine
+	f2:maj7 d:m7 | g:m7 c:7 | f:maj7 d:m7 | g:m7 c:7 | \myEndLine
+	bes1:m7+ | aes:m7+ | bes:m7+ | aes:m7+ | \myEndLine
+	fis:7 | b:7 | e:maj7 | a:7.5-.9+ | \myEndLine
+	\endPart
+
+	\myMark "Coda"
+	\startPart
+	e1:m7 | e:m7 | e:m7 | g:m7 | \myEndLine
+	\endPart
+
+	\endSong
+	\endChords
+}
+{% endif %}
+{% if part == "VoiceReal" %}{
+	\tempo "Allegro" 4 = 192
+	\time 4/4
+	\key f \major
+
+	% part "A"
+	\repeat volta 2 {
+		<des f a>4 r8 <des f a>8 r2 | <ces ees g>4 r8 <ces ees g>8 r2 | <des f a>4 r8 <des f a>8 r2 | <ces ees g>4 r8 <ces ees g>8 r2 | r1 | r1 |
+		<c' e>4 <b d>8 <c e> r2 | <c e>8 <b d> <c e> <b d> r2 | <c e>4 <b d> r2 | <c e>8 <b d> <c e> <b d> r2 |
+		<c e>4 <b d>8 <c e> r2 | <c e>8 <b d> <c e> <b d> r2 | <c e>4 <b d> r2 | <c e>8 <b d> <c e> r8 gis8 a4 c8 |
+	}
+
+	% part "B"
+	\repeat volta 2 {
+		r8 bes4.~ bes2 | c2 gis8 a4 c8 | r8 bes4.~ bes2 | c2 gis8 a4 e'8 |
+		r8 cis4.~ cis4. ais'8 | r8 fis4.~ fis4. ais8 | r8 gis4.~ gis4. a8 |
+	} \alternative {
+		{ r2 gis,8 a4 c8 | }
+		{ r1 | }
+	}
+
+	% part "C"
+	\repeat volta 4 {
+		g8 e d c d e g e | d8 c d e g e d c | d8 e g e d c d e |
+	} \alternative {
+		{ g8 e c4 r2 | }
+		{ g'8 e c4 gis'8 a4 c8 | }
+	}
+
+	% part "D"
+	r8 bes4.~ bes2 | c2 gis8 a4 c8 | r8 bes4.~ bes2 | c2 gis8 a4 e'8 |
+	r8 cis4.~ cis4. ais'8 | r8 fis4.~ fis4. ais8 | r8 gis4.~ gis4. a8 | r1 |
+
+	% part "Instr"
+	\repeat volta 4 {
+		a,8 c4 a8 c4 a8 c | c8 a c4 a8 c4 a8 | c4 a8 c c a c4 | a8 c4 a8 c4 r4^\markup { To Coda \musicglyph #"scripts.coda" } |
+	}
+
+	% part "Break"
+	\repeat volta 2 {
+		r8 f,4. a8 f d4 | r8 f4. a8 f d4 | r8 f4. a8 f d4 | f4^\markup { (Break) } r4 r2 |
+	}
+
+	% part "Ad Lib"
+	\improvisationOn
+	\repeat volta 2 {
+		b4^\markup { Solos } b b b | b b b b | b b b b | b b b b |
+		b4 b b b | b b b b | b b b b |
+	} \alternative {
+		{ b4 b b b | }
+		{ b4 b b b | }
+	}
+	b4 b b b | b b b b | b b b b | b b b b |
+	b4 b b b | b b b b | b b b b | b b b b |
+	b4 b b b | b b b b | b b b b | b b b b |
+	b4 b b b | b b b b | b b b b | b b b b^\markup { \column { "Play Instr" "between solos" } } |
+	\improvisationOff
+
+	% part "Coda"
+	r8 f4.^\markup { \musicglyph #"scripts.coda" } a8 f d4 | r8 f4. a8 f d4 | r8 f4. a8 f d4 | f4 r4 r2 |
+}
+{% endif %}

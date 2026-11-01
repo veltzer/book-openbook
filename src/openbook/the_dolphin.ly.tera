@@ -1,0 +1,132 @@
+{#
+default_version = "Real"
+
+[attributes]
+title = "The Dolphin"
+style = "Latin"
+composer = "Luiz Eca"
+piece = "Bossa"
+typesetter = "Mark Veltzer <mark.veltzer@gmail.com>"
+completion = "3"
+uuid = "514de92b-d581-11f1-8000-046874d194b7"
+structure = "ABCA"
+location = "rbk1:121"
+
+[[youtube]]
+id = "WZMXerWCH8Y"
+remark = "Bill Evans, From Left To Right (1970), the recording the real book refers to"
+
+[[youtube]]
+id = "A06RW_MZ8wA"
+remark = "Luiz Eca"
+
+[versions.Real]
+doChords = true
+doVoice = true
+doLyrics = false
+doLyricsmore = false
+doLyricsmoremore = false
+doChordBars = false
+doGuitar = false
+doExtra = false
+doPrep = false
+doOwn = false
+#}
+{% if part == "Vars" %}
+{% endif %}
+{% if part == "Doc" %}	DONE:
+	- added the meta data from the real book.
+	- put in the tunes structure.
+	- put in the chords (real book).
+	- put in the tune (real book).
+	- added youtube performances (the real book refers to Bill Evans - 'From Left To Right').
+	TODO:
+	- check the chords (real book).
+	- check the tune (real book).
+	- hear the tune to check that it is right and adjust the tempo.
+	- the handwriting of the melody is very crowded and hard to read; every bar needs checking against a recording, especially the ones below.
+	- intro: the book prints F#maj7 and G7(#11) followed by two bars each marked with a two bar repeat sign, then F#maj7 and the E7 pickup bar. This is typed as F#maj7, G7(#11), F#maj7, G7(#11), F#maj7, E7.
+	- A bar 2 (and the same bar of the last A): the sixteenth note figure is hard to read and does not add up to four beats as printed; the tied C sharp is typed as a half note.
+	- B bar 2 (A7sus4) and B bar 3 (Dmaj7): pitches and accidentals are unclear (the accidental before the first note of B bar 3 is typed as a sharp).
+	- the double bar at the end of B seems to carry repeat dots, with no start repeat sign; B is not repeated here.
+	- C bar 4 (F#7 alt): the rhythm and the low notes are unclear.
+	- C bars 12 and 14 (F#7 alt, E7 alt) and the bars around them: the book writes a second, lower voice (long notes and some eighths) under the melody; only the upper voice is typed.
+	- C bar 11 (C#7 alt): the book draws a short dash under the staff that is not typed.
+	- last A bars 5-6 (F#7, B7): the tied note is drawn between G and A, typed as G.
+	REMARKS:
+	- the book writes '7 alt.' chords, which are written here as 7#5#9.
+	- the book has no section letters; the sections here follow the double bars and repeat signs of the page.
+{% endif %}
+{% if part == "ChordsReal" %}\chordmode {
+	\startChords
+	\startSong
+
+	\myMark "Intro"
+	\startPart
+	fis1:maj7 | g:7.11+ | fis:maj7 | g:7.11+ | \myEndLine
+	fis1:maj7 | e:7 | \myEndLine
+	\endPart
+
+	\myMark "A"
+	\startPart
+	\repeat volta 2 {
+		a1:maj7 | b:7/a | aes:7.5+.9+ | des:7.5+.9+ | \myEndLine
+		c1:maj7 | c:maj7/g | fis:m7.5- | b:7 | \myEndLine
+	}
+	\endPart
+
+	\myMark "B"
+	\startPart
+	e1:m7 | a:7sus4 | d:maj7 | f:7.5+.9+ | \myEndLine
+	bes1:m7+ | bes:m7 | bes:m6 | a:7.5+.9+ | \myEndLine
+	\endPart
+
+	\myMark "C"
+	\startPart
+	d1:maj7 | e:m7 | cis:m7 | fis:7.5+.9+ | \myEndLine
+	b1:m7.5- | e:7sus4.9-.13- | d:m7 | g:7 | \myEndLine
+	b1:m7 | e:7 | cis:7.5+.9+ | fis:7.5+.9+ | \myEndLine
+	b1:7.5+.9+ | e:7.5+.9+ | \myEndLine
+	\endPart
+
+	\myMark "A"
+	\startPart
+	a1:maj7 | b:7/a | gis:7.5+.9+ | cis:7.5+.9+ | \myEndLine
+	fis1:7 | b:7 | e:maj7 | c:7 | \myEndLine
+	e1:maj7 | c:7 | b:maj7 | e:maj7 | \myEndLine
+	\endPart
+
+	\endSong
+	\endChords
+}
+{% endif %}
+{% if part == "VoiceReal" %}{
+	\tempo "Moderato" 4 = 120
+	\time 4/4
+	\key c \major
+
+	% part "Intro"
+	R1 | R1 | R1 | R1 | R1 | r8 cis8 d e fis gis a b |
+
+	% part "A"
+	\repeat volta 2 {
+		cis8 b cis2.~ | cis2 cis16 d cis dis~ dis8 b16 a | b8 a b2.~ | b2. r4 |
+		b8 a b2.~ | b2 b8 c a g | a8 g a2.~ | a2 r2 |
+	}
+
+	% part "B"
+	d8 cis d2.~ | d8 e e e~ e4. ais,16 b | cis8 b cis2~ cis8 fis,8 | cis'1 |
+	c8 bes c2.~ | c4. des8~ des4. b16 aes | bes8 aes c2.~ | c2 c8 b a g |
+
+	% part "C"
+	a1 | g8 fis g4 fis4. a8 | e1 | r8 cis8 r4 f8 d cis d~ |
+	d1 | r8 d8 e f a c e c | f8 e f2.~ | f8 f \tuplet 3/2 { g8 gis a } aes4. f8 |
+	e1~ | e4 e,8 g gis b d b | e8 d e4 r8 a, a a | r4 fis'4~ fis4 d8 c |
+	d8 c d2. | r4 f4~ f4. c16 b |
+
+	% part "A"
+	cis8 b cis2.~ | cis2 cis16 d cis dis~ dis8 b16 a | b8 a b2.~ | b2. r8 a8 |
+	gis8 fis g2.~ | g2 g8 b gis e | fis1~ | fis2~ fis8 g fis e |
+	fis1~ | fis2~ fis8 g fis e | fis1~ | fis1 |
+}
+{% endif %}

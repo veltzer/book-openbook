@@ -1,0 +1,108 @@
+{#
+default_version = "Real"
+
+[attributes]
+title = "A Child Is Born"
+style = "Jazz"
+composer = "Thad Jones"
+piece = "Ballad"
+typesetter = "Mark Veltzer <mark.veltzer@gmail.com>"
+completion = "3"
+uuid = "c6fec482-d57a-11f1-8000-046874d194b7"
+structure = "AAB"
+location = "rbk1:2"
+
+[[youtube]]
+id = "-M2ADUgffFE"
+remark = "The Thad Jones / Mel Lewis Jazz Orchestra, the recording the real book refers to"
+
+[[youtube]]
+id = "KBEGABdyXRU"
+remark = "Bill Evans"
+
+[versions.Real]
+doChords = true
+doVoice = true
+doLyrics = false
+doLyricsmore = false
+doLyricsmoremore = false
+doChordBars = false
+doGuitar = false
+doExtra = false
+doPrep = false
+doOwn = false
+#}
+{% if part == "Vars" %}
+{% endif %}
+{% if part == "Doc" %}	DONE:
+	- added the meta data from the real book.
+	- put in the tunes structure.
+	- put in the chords (real book).
+	- put in the tune (real book).
+	- added youtube performances (the real book refers to Thad Jones - Mel Lewis - "Jones/Lewis").
+	TODO:
+	- check the chords (real book).
+	- check the tune (real book).
+	- hear the tune to check that it is right and adjust the tempo.
+	- bar 6: the book writes "Eb-/B - Bb", typed here as Eb-/Bb then Bb on beat 3. Check.
+	- bar 8: the book writes a lower voice under the held c (typed here as f eb f). Check these notes.
+	- bar 16: the book writes a d f dyad tied to an eighth, followed by an eighth that is hard to read (typed here as c). Check.
+	- bar 20 of the B part (Ab9 - C-7b5): the eighth after the rest is hard to read (typed here as g). Check.
+	- add the lyrics.
+	REMARKS:
+	- the book writes "D7 alt." which is written here as D7#5#9.
+{% endif %}
+{% if part == "ChordsReal" %}\chordmode {
+	\startChords
+	\startSong
+
+	\myMark "A"
+	\startPart
+	\repeat volta 2 {
+		bes2.:maj7 | ees:m/bes | bes:maj7 | ees:m6/bes | \myEndLine
+		bes:maj9 | ees2:m/bes bes4 | a2.:m7.5- | d:7.9+ | \myEndLine
+		g:m7 | d:7.5+ | g:m7 | d:7.5+ | \myEndLine
+		g:m7 | c:9 | f:7sus4 | f:7.13 | \myEndLine
+	}
+	\endPart
+
+	\myMark "B"
+	\startPart
+	bes:maj7 | ees:m/bes | bes:maj7 | ees:m/bes | \myEndLine
+	bes:maj9 | d:7.5+.9+ | ees:maj7 | aes2:9 c4:m7.5- | \myEndLine
+	bes2./f | ges:6.11+ | g:m7 | c:9 | \myEndLine
+	f:7sus4 | f:7.13 | \myEndLine
+	\endPart
+
+	\myMark "Coda"
+	\startPart
+	f:7sus4 | f:7.9- | bes:maj7 | ees:7 | bes:maj7 | \myEndLine
+	\endPart
+
+	\endSong
+	\endChords
+}
+{% endif %}
+{% if part == "VoiceReal" %}{
+	\tempo "Adagio" 4 = 80
+	\time 3/4
+	\key bes \major
+
+	% part "A"
+	\repeat volta 2 {
+		d2. | ees4 f c' | d,2. | ees4 f c' |
+		d,2. | ees4 f c' | c2. | << { c2. } \\ { f,4 ees f } >> |
+		d2. | ees4 f c' | d,2. | ees4 f c' |
+		d,2. | e!4 g c | c2. | <d, f>2~ <d f>8 c |
+	}
+
+	% part "B"
+	d2. | ees4 f c' | d,2. | ees4 f c' |
+	d,2. | f4 bes d | d2. | ees2 r8 g, |
+	f2. | ees4 f c' | d,2. | e!4 g c^\markup { To Coda \musicglyph #"scripts.coda" } |
+	c2. | f,2.^\markup { D.C. al Coda } |
+
+	% part "Coda"
+	c'2. | a2. | c2.\fermata | c2.\fermata | d2.\fermata |
+}
+{% endif %}

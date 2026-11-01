@@ -7,7 +7,7 @@ style = "Rock"
 copyright = "-- no copyright notice for study materials --"
 typesetter = "Mark Veltzer <mark.veltzer@gmail.com>"
 completion = "5"
-uuid = "d54f6d36-6d29-11e0-a6dd-0019d11e5a41"
+uuid = "0a099b8a-d57b-11f1-8000-046874d194b7"
 
 [versions.Own]
 doChords = false

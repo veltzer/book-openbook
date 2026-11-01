@@ -1,0 +1,158 @@
+{#
+default_version = "Real"
+
+[attributes]
+title = "Beauty And The Beast"
+style = "Fusion"
+composer = "Wayne Shorter"
+piece = "Funky"
+typesetter = "Mark Veltzer <mark.veltzer@gmail.com>"
+completion = "3"
+uuid = "3e64a106-d57b-11f1-8000-046874d194b7"
+structure = "Intro-ABC-Coda"
+location = "rbk1:40"
+
+[[youtube]]
+id = "8DTTx_hb_Gs"
+remark = "Wayne Shorter from the album Native Dancer (1975)"
+
+[[youtube]]
+id = "KC_suaFPEOQ"
+remark = "John Beasley with Herbie Hancock live at International Jazz Day 2019"
+
+[versions.Real]
+doChords = true
+doVoice = true
+doLyrics = false
+doLyricsmore = false
+doLyricsmoremore = false
+doChordBars = false
+doGuitar = false
+doExtra = false
+doPrep = false
+doOwn = false
+#}
+{% if part == "Vars" %}
+{% endif %}
+{% if part == "Doc" %}	DONE:
+	- added the meta data from the real book.
+	- put in the tunes structure.
+	- put in the chords (real book).
+	- put in the tune (real book).
+	- added youtube performances (the real book names Wayne Shorter, Native Dancer as the recording).
+	TODO:
+	- check the chords (real book).
+	- check the tune (real book).
+	- hear the tune to check that it is right and adjust the tempo.
+	- the tempo mark at the top left of the page is hard to read (60 or 160). The intro and vamps are marked Funky, the B part Med. Bossa.
+	- the funk vamp after the B part (second ending here) has its own repeat signs in the real book.
+	- bars 7-8 and the matching bars of the second ending are marked Stop Time.
+	- bars 10 and 12: three sixteenths are squeezed into the half beat after the eighth rest, typed as a sixteenth triplet (no 3 is printed).
+	- bars 14-15 are hard to read in the scan, check the pitches and rhythm.
+	- the sixteenth note run after the C7alt bar (bar 25 of the C part) and the run in the third bar of the coda are not legible in the scan, they are rests here. Put them in.
+	- the F7 (funk) bars after the runs have a written bass figure under the slashes in the real book, only the slashes are here.
+	- coda, second bar: a high eighth note with a flat at the end of the bar is not legible, it is a rest here.
+	- the open solo on F7 is one repeated bar with a wavy line in the real book.
+{% endif %}
+{% if part == "ChordsReal" %}\chordmode {
+	\startChords
+	\startSong
+
+	\myMark "Intro"
+	\startPart
+	f1*4:7 | \myEndLine
+	\endPart
+
+	\myMark "A"
+	\startPart
+	\repeat volta 2 {
+		f1*3:7 | f2:7sus4 e:7.5+.9+ | \myEndLine
+	}
+	\endPart
+
+	\myMark "B"
+	\startPart
+	\repeat volta 2 {
+		a1:m7 | b2:7.5+.9+ e:7.5+.9+ | a1:m7 | g2:m7 c:7.9+ | \myEndLine
+		f1:m7 | ees2:m7 aes:7 | des1:maj7 |
+	} \alternative {
+		{
+			c1:7.5+.9+ | \myEndLineVoltaNotLast
+		}
+		{
+			f1*3:7 | f2:7sus4 e:7.5+.9+ | \myEndLineVoltaLast
+		}
+	}
+	\endPart
+
+	\myMark "C"
+	\startPart
+	c1:7.5+.9+ | b2:m7 e:7 | a2:m7 d:7 | c1:7.5+.9+ | \myEndLine
+	s1 | f1*2:7 | \myEndLine
+	\repeat volta 2 {
+		f1:7 | \myEndLine
+	}
+	\endPart
+
+	\myMark "Coda"
+	\startPart
+	a2:m7 d:7 | c1:7.5+.9+ | s1 | f1*2:7 | \myEndLine
+	\endPart
+
+	\endSong
+	\endChords
+}
+{% endif %}
+{% if part == "VoiceReal" %}{
+	\tempo "Moderato" 4 = 120
+	\time 4/4
+	\key c \major
+
+	% part "Intro"
+	\improvisationOn
+	b'4 b b b | b8 b b4 b b | b4 b b b | b8 b b4 b b |
+	\improvisationOff
+
+	% part "A"
+	\repeat volta 2 {
+		\improvisationOn
+		b4^\markup { \musicglyph #"scripts.segno" } b b b | b4 b b b | b4^\markup { Stop Time } b b b |
+		\improvisationOff
+		r8. g16~ g8 a16 g bes8. g16 b!8. g16 |
+	}
+
+	% part "B"
+	\repeat volta 2 {
+		e1^\markup { Med. Bossa } | r4 r8 \tuplet 3/2 { g16 a g } bes8. g16 b!8. g16 | e1 | r4 r8 \tuplet 3/2 { c'16 d c } ees8. c16 ees8. c16 |
+		aes1 | c8. a16 a2~ a16 c ees f | f8~ f8~ f16 c aes8~ aes2 |
+	} \alternative {
+		{
+			\improvisationOn
+			b4^\markup { Drum fill } b b b |
+			\improvisationOff
+		}
+		{
+			\improvisationOn
+			b4^\markup { Funk } b b b | b4 b b b | b4^\markup { Stop Time } b b b |
+			\improvisationOff
+			r8. g16~ g8 a16 g bes8. g16 b!8. g16 |
+		}
+	}
+
+	% part "C"
+	r8. a!16 bes8. a16 b!8. a16 c8. ees16 | e!4.. b16 b4. c8^\markup { To Coda \musicglyph #"scripts.coda" } | d4.. a16 a4.. bes16 | c2. r4 |
+	r1 |
+	\improvisationOn
+	b4^\markup { Funk } b b b | b4 b b b |
+	\improvisationOff
+	\repeat volta 2 {
+		r1^\markup { Open solo on F7, D.S. al Coda } |
+	}
+
+	% part "Coda"
+	d4..^\markup { \musicglyph #"scripts.coda" } a'16 a4.. bes16 | c2. r4 | r1 |
+	\improvisationOn
+	b,4 b b b | b4 b b b^\markup { Fade } |
+	\improvisationOff
+}
+{% endif %}

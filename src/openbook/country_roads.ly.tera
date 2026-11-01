@@ -1,0 +1,96 @@
+{#
+default_version = "Real"
+
+[attributes]
+title = "Country Roads"
+style = "Jazz"
+composer = "Gary Burton, Steve Swallow"
+piece = "Slow Funk"
+typesetter = "Mark Veltzer <mark.veltzer@gmail.com>"
+completion = "1"
+uuid = "072e7d68-d57b-11f1-8000-046874d194b7"
+structure = "Blues"
+location = "rbk1:98"
+
+[[youtube]]
+id = "LGCNaBuabSI"
+remark = "Gary Burton, Country Roads (1968), the recording the real book refers to"
+
+[[youtube]]
+id = "HR4GiU9ttjc"
+remark = "The Gary Burton Quartet, another upload of the original recording"
+
+[versions.Real]
+doChords = true
+doVoice = false
+doLyrics = false
+doLyricsmore = false
+doLyricsmoremore = false
+doChordBars = false
+doGuitar = false
+doExtra = false
+doPrep = false
+doOwn = false
+#}
+{% if part == "Vars" %}
+{% endif %}
+{% if part == "Doc" %}	DONE:
+	- added the meta data from the real book.
+	- put in the tunes structure.
+	- put in the chords (real book).
+	- added youtube performances (the real book refers to Gary Burton - 'Country Roads').
+	TODO:
+	- check the chords (real book).
+	- put in the tune (real book). The book prints this tune as a two staff piano arrangement (melody in two and three note voicings with sixteenth note runs over a written out bass line) and the rhythms of the top line could not be read reliably from the handwritten page, so only the chords are typed for now.
+	- put in the rubato intro (one free bar of piano chords with fermatas, no chord symbols) and the one bar bass fill that leads into the head.
+	- hear the tune to check that it is right and adjust the tempo.
+	REMARKS:
+	- the book marks the head 'Slow Funk'. It has a key signature of two flats.
+	- the last bar of the head (marked Fine) has no chord symbol, only the same piano voicings as the intro; it is left empty here. In the solo section the book writes a repeat sign (Bb7) for that bar.
+{% endif %}
+{% if part == "ChordsReal" %}\chordmode {
+	\startChords
+	\startSong
+
+	\myMark "A"
+	\startPart
+	\repeat volta 2 {
+		bes1:7 | ees:7 | bes:7 | bes:7 | \myEndLine
+		ees:7 | ees:7 | bes2:7 f:7 | bes:7 g:7 | \myEndLine
+		ges1:7 | f:7 | bes:7 | s1 | \myEndLine
+	}
+	\endPart
+
+	\myMark "Instr"
+	\startPart
+	\repeat volta 2 {
+		bes1:7 | ees:7 | bes:7 | bes:7 | \myEndLine
+		ees:7 | ees:7 | bes2:7 f:7 | bes:7 g:7 | \myEndLine
+		ges1:7 | f:7 | bes:7 | bes:7 | \myEndLine
+	}
+	\endPart
+
+	\endSong
+	\endChords
+}
+{% endif %}
+{% if part == "VoiceReal" %}{
+	\tempo "Andante" 4 = 80
+	\time 4/4
+	\key bes \major
+
+	% part "A"
+	\repeat volta 2 {
+		r1 | r1 | r1 | r1 |
+		r1 | r1 | r1 | r1 |
+		r1 | r1 | r1 | r1^\markup { \italic { Fine } } |
+	}
+
+	% part "Instr"
+	\repeat volta 2 {
+		r1^\markup { Solos } | r1 | r1 | r1 |
+		r1 | r1 | r1 | r1 |
+		r1 | r1 | r1 | r1 |
+	}
+}
+{% endif %}

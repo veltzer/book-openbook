@@ -1,0 +1,94 @@
+{#
+default_version = "Real"
+
+[attributes]
+title = "Beneath It All"
+style = "Jazz"
+composer = "Gary Anderson"
+piece = "Med. Ballad"
+typesetter = "Mark Veltzer <mark.veltzer@gmail.com>"
+completion = "5"
+uuid = "3e64a104-d57b-11f1-8000-046874d194b7"
+structure = "ABC"
+location = "rbk1:41"
+
+[[youtube]]
+id = "h5eEyp-g7K4"
+remark = "Bob Ravenscroft Trio"
+
+[[youtube]]
+id = "cmdPrz06_MQ"
+remark = "Solo jazz piano version from the real book"
+
+[versions.Real]
+doChords = true
+doVoice = true
+doLyrics = false
+doLyricsmore = false
+doLyricsmoremore = false
+doChordBars = false
+doGuitar = false
+doExtra = false
+doPrep = false
+doOwn = false
+#}
+{% if part == "Vars" %}
+{% endif %}
+{% if part == "Doc" %}	DONE:
+	- added the meta data from the real book.
+	- put in the tunes structure.
+	- put in the chords (real book).
+	- put in the tune (real book).
+	- added youtube performances.
+	TODO:
+	- check the chords (real book).
+	- check the tune (real book).
+	- hear the tune to check that it is right and adjust the tempo.
+	- the real book prints "FINE" under the first bar of the last line (the Dbmaj7#11 bar) although the tune ends with a final bar four bars later. Check what is meant.
+	- bars 11-12: the half notes are written a little high, typed as D (could be read as E).
+	- bar 20: the half note tied from the F sharp of bar 19 is written a little high (could be read as G).
+{% endif %}
+{% if part == "ChordsReal" %}\chordmode {
+	\startChords
+	\startSong
+
+	\myMark "A"
+	\startPart
+	aes2.*2:maj7.11+ | g2.*2:m7 | \myEndLine
+	aes2.*2:maj7.11+ | c2.*2:m7+.5- | \myEndLine
+	\endPart
+
+	\myMark "B"
+	\startPart
+	e2.*2:maj7.11+ | d2.*2:maj7 | \myEndLine
+	bes2.*2:maj7.11+ | a2.*2:7.9+ | \myEndLine
+	\endPart
+
+	\myMark "C"
+	\startPart
+	bes2.*2:maj7.11+ | c2.*2:maj7.11+ | \myEndLine
+	des2.*4:maj7.11+ | \myEndLine
+	\endPart
+
+	\endSong
+	\endChords
+}
+{% endif %}
+{% if part == "VoiceReal" %}{
+	\tempo "Andante" 4 = 90
+	\time 3/4
+	\key c \major
+
+	% part "A"
+	r2 ees4 | d'2 c4 | bes8 c d2~ | d2. |
+	r2 ees,4 | d'2 c4 | b!2.~ | b2. |
+
+	% part "B"
+	r2 bes4 | a'2 g4 | gis8 e d2~ | d2 e4 |
+	f!2. | e4. d | c2. | bes4. c |
+
+	% part "C"
+	a2.~ | a2 g4 | fis2.~ | fis2 e4 |
+	ees2.~ | ees2.~ | ees2.~ | ees2. |
+}
+{% endif %}

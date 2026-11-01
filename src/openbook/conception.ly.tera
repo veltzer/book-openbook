@@ -1,0 +1,107 @@
+{#
+default_version = "Real"
+
+[attributes]
+title = "Conception"
+style = "Jazz"
+composer = "George Shearing"
+piece = "Med. Swing"
+typesetter = "Mark Veltzer <mark.veltzer@gmail.com>"
+completion = "3"
+uuid = "cfaa4cc0-d57d-11f1-8000-046874d194b7"
+structure = "AABA"
+location = "rbk1:90"
+
+[[youtube]]
+id = "pj6gRlKmDuA"
+remark = "Miles Davis, the recording the real book cites"
+
+[[youtube]]
+id = "51g7hRIL1ZE"
+remark = "Bill Evans on 'New Jazz Conceptions', also cited by the real book"
+
+[versions.Real]
+doChords = true
+doVoice = true
+doLyrics = false
+doLyricsmore = false
+doLyricsmoremore = false
+doChordBars = false
+doGuitar = false
+doExtra = false
+doPrep = false
+doOwn = false
+#}
+{% if part == "Vars" %}
+{% endif %}
+{% if part == "Doc" %}	DONE:
+	- added the meta data from the real book.
+	- put in the tunes structure.
+	- put in the chords (real book).
+	- put in the tune (real book).
+	- the real book cites the recordings Miles Davis - 'Conception' and Bill Evans - 'New Jazz Conceptions'.
+	- added youtube performances.
+	TODO:
+	- check the chords (real book).
+	- check the tune (real book).
+	- hear the tune to check that it is right and adjust the tempo.
+	- the page prints no style word; the piece and tempo are a guess.
+	- the handwriting is very dense and many accidentals are hard to tell apart (sharp or natural), check every bar against a recording.
+	- bars 3, 10, B2, B3, B6 and B8 (the sixteenth and triplet figures) are the most doubtful readings, check their rhythm and pitches.
+	- the first ending note is read as a low a flat and the second ending as c then d flat, check them.
+	- B6 ends on b which is slurred into the g whole note of B7 on the page, check whether it is a tie.
+{% endif %}
+{% if part == "ChordsReal" %}\chordmode {
+	\startChords
+	\startSong
+
+	\myMark "A"
+	\startPart
+	\repeat volta 2 {
+		ees1:m7.5- | aes:7.9- | des2:maj7 b:m7 | \myEndLine
+		a2:maj7 aes4:maj7 aes:m7 | aes2:m7 des:7 | ges:7 f:7 | bes:7 a:7 | \myEndLine
+		aes:7 g:7 | fis:m7 b:7 | e:maj7 a:maj7 | ees:m7 aes:7 | \myEndLine
+	} \alternative {
+		{
+			des1:maj7 | \myEndLineVoltaNotLast
+		}
+		{
+			des1:maj7 | \myEndLineVoltaLast
+		}
+	}
+	\endPart
+
+	\myMark "B"
+	\startPart
+	fis1:m7 | b:7.5+.9+ | e2:maj7 fis:m7 | aes:m7 des:7 | \myEndLine
+	g:m7 c:7 | fis:m7 b:7 | e1:m7 | a:7 | \myEndLine
+	\endPart
+
+	\endSong
+	\endChords
+}
+{% endif %}
+{% if part == "VoiceReal" %}{
+	\tempo "Moderato" 4 = 160
+	\time 4/4
+	\key des \major
+
+	% part "A"
+	\repeat volta 2 {
+		ges8 a des f aes b a e | r4 r8 ges8~ ges aes4 a8 | aes4 aes8 aes cis b e, e |
+		gis4 gis8 gis~ gis4 gis~ | gis4 gis8 g aes c4. | ges4 ges8 ges~ ges4 des8 f | f8 ges f f~ f ges f f~ |
+		f8 ges f f~ f4 des8 f | e8 fis e fis gis4 a8 b~ | b4 gis8 \tuplet 3/2 { fis8 gis fis } e8 b cis | ees4 ees8 d ees f4. |
+	} \alternative {
+		{
+			aes,2. r4^\markup { \italic { Fine } } |
+		}
+		{
+			c2. des4 |
+		}
+	}
+
+	% part "B"
+	des'2 \tuplet 3/2 { b16 cis b } gis8 a b | d8 c b r g~ g f16 ees d c | b8. cis16 dis8 e fis gis a b | \tuplet 3/2 { bes4 des ces } g4 gis8 a |
+	\tuplet 3/2 { a4 c bes } f4 g8 g~ | g4 \tuplet 3/2 { bes4 a8 } f8 f f b | g1 | \tuplet 3/2 { a16 b a } f8 e cis f e c a^\markup { \italic { D.C. al Fine } } |
+}
+{% endif %}

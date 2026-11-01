@@ -1,0 +1,93 @@
+{#
+default_version = "Real"
+
+[attributes]
+title = "Black Narcissus"
+style = "Jazz"
+composer = "Joe Henderson"
+typesetter = "Mark Veltzer <mark.veltzer@gmail.com>"
+completion = "5"
+uuid = "9a833832-d57c-11f1-8000-046874d194b7"
+structure = "ABC"
+location = "rbk1:47"
+
+[[youtube]]
+id = "u_F1jKsZrCw"
+remark = "Joe Henderson, the original recording"
+
+[[youtube]]
+id = "lR-lR6pvqlk"
+remark = "Christian McBride Big Band featuring Makoto Ozone"
+
+[versions.Real]
+doChords = true
+doVoice = true
+doLyrics = false
+doLyricsmore = false
+doLyricsmoremore = false
+doChordBars = false
+doGuitar = false
+doExtra = false
+doPrep = false
+doOwn = false
+#}
+{% if part == "Vars" %}
+{% endif %}
+{% if part == "Doc" %}	DONE:
+	- added the meta data from the real book.
+	- put in the tunes structure.
+	- put in the chords (real book).
+	- put in the tune (real book).
+	- added youtube performances.
+	- the real book prints no style word for this tune, so there is no piece attribute.
+	- the real book marks the first section "Ab pedal" and the second "Gb pedal".
+	TODO:
+	- check the chords (real book).
+	- check the tune (real book).
+	- hear the tune to check that it is right and adjust the tempo.
+	- the real book writes "fine" at the end, there is no repeat or D.C. sign to go with it.
+{% endif %}
+{% if part == "ChordsReal" %}\chordmode {
+	\startChords
+	\startSong
+
+	\myMark "A"
+	\startPart
+	aes2.:m7 | des:7 | aes:m7 | des:7 | \myEndLine
+	aes:m7 | des:7 | aes:m7 | des:7 | \myEndLine
+	\endPart
+
+	\myMark "B"
+	\startPart
+	ges:m7 | ces:7 | ges:m7 | ces:7 | \myEndLine
+	ges:m7 | ces:7 | ges:m7 | ces:7 | \myEndLine
+	\endPart
+
+	\myMark "C"
+	\startPart
+	ees:maj7.11+ | f:maj7.11+ | bes:maj7.11+ | c:maj7 | \myEndLine
+	ees:maj7.11+ | f:maj7.11+ | bes:maj7.11+ | bes4:maj7.11+ c2:maj7 | \myEndLine
+	\endPart
+
+	\endSong
+	\endChords
+}
+{% endif %}
+{% if part == "VoiceReal" %}{
+	\tempo "Moderato" 4 = 140
+	\time 3/4
+	\key c \major
+
+	% part "A"
+	bes'2. | bes | aes | aes |
+	bes4. ees | des4. bes | aes4. ges | bes2 ces,4 |
+
+	% part "B"
+	ges'2. | ges | ges | ges |
+	aes4. des | ces4. aes | ges4. fes | ees8 ces des4 des8 a |
+
+	% part "C"
+	d?2. | e8 a,4 e' g8 | \tuplet 3/2 { a8 bes g } a2 | d8 b!4.~ b4 |
+	r4 r8 d,4. | e8 a,4 e' g8 | \tuplet 3/2 { a8 bes g } a2 | c4-^ d2-> |
+}
+{% endif %}

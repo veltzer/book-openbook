@@ -1,0 +1,186 @@
+{#
+default_version = "Real"
+
+[attributes]
+title = "Butterfly"
+style = "Fusion"
+composer = "Herbie Hancock"
+piece = "Med. Funk"
+typesetter = "Mark Veltzer <mark.veltzer@gmail.com>"
+completion = "3"
+uuid = "4122ba32-d587-11f1-8000-046874d194b7"
+structure = "Intro-AB-C"
+location = "rbk1:68-69"
+
+[[youtube]]
+id = "-_mSzscIhyg"
+remark = "Herbie Hancock, the original studio recording (Thrust, 1974)"
+
+[[youtube]]
+id = "5knsdyW9OqY"
+remark = "Herbie Hancock and the Headhunters live in 1974"
+
+[versions.Real]
+doChords = true
+doVoice = true
+doLyrics = false
+doLyricsmore = false
+doLyricsmoremore = false
+doChordBars = false
+doGuitar = false
+doExtra = false
+doPrep = false
+doOwn = false
+#}
+{% if part == "Vars" %}
+{% endif %}
+{% if part == "Doc" %}	DONE:
+	- added the meta data from the real book.
+	- put in the tunes structure.
+	- put in the chords (real book).
+	- put in the tune (real book).
+	- the real book prints the recording reference 'Herbie Hancock - Thrust'.
+	- the concert edition is hard to read; the Bb edition of the real book (pages 68-69, a clearer copy)
+	was used to disambiguate, transposed back down a major second.
+	- the A section melody staff has two voices: long pedal notes (G, then C) played every time and an
+	upper line of dyads marked '2nd x'; both are transcribed, as two voices.
+	- the intro riff has a sustained high note over it marked '1st x' (in the Bb edition 'last x');
+	it is left out.
+	- the B section prints optional whole notes in parentheses above the melody; they are left out.
+	- the written bass staff (bass line and drum cues) is left out.
+	- the backing chord voicings of the cue bar and of the '1st solo' ending are left out (rests in the voice).
+	- the 'last solo' ending prints no chord symbols; the chords of the intro riff are used there.
+	- added youtube performances.
+	TODO:
+	- check the chords (real book).
+	- check the tune (real book).
+	- hear the tune to check that it is right and adjust the tempo.
+	- A bar 7 (second line, third bar): the Bb edition shows one dyad less than the concert edition; the concert reading is used.
+	- A bar 2 and bar 6: a wavy line between the two dyads (a slide?) is not notated.
+	- A bar 9: the accented b flat has a fall drawn after it, not notated.
+	- A bars 9-12 and the '1st solo' ending: the book prints no chord symbols there.
+	- B bar 6: the accidentals of the last two notes are hard to read (a flat and b flat were assumed from the harmony).
+	- 2nd ending bar 4: the parallel thirds were read from the Bb edition, check them.
+	- the 2nd ending and the 'last solo' ending carry their own repeat signs in the book (vamps), not notated.
+	- the cue section: the dyad at the start of the 'last solo' ending (c and d) is unclear.
+{% endif %}
+{% if part == "ChordsReal" %}\chordmode {
+	\startChords
+	\startSong
+
+	\partial 8 s8 |
+
+	\mySegno
+	\startPart
+	\repeat volta 3 {
+		f1:m7 | a:m7 |
+	}
+	s1 | s1 | \myEndLine
+	\endPart
+
+	\myMark "A"
+	\startPart
+	\repeat volta 2 {
+		f1:m7 | a:m7 | f:m7 | d:m7 | \myEndLine
+		f:m7 | a:m7 | f:m7 | d:m7 | \myEndLine
+		s1 | s1 | s1 | s1 | \myEndLine
+
+		\myMark "B"
+		bes1:7sus4 | bes:7sus4 | bes:7sus4 | bes:13 | \myEndLine
+		bes:m7 | bes:m7 | ees:7.9+ | ees:7.9+ | aes:sus4 | aes:sus4 | \myEndLine
+	} \alternative {
+		{
+			f1:m7 | a:m7 | f:m7 | a:m7 | \myEndLine
+			f:m7 | a:m7 | f:m7 | a:m7 | \myEndLineVoltaNotLast
+		}
+		{
+			f1:m7 | f:m7 | f:m7 | f:m7 | \myEndLineVoltaLast
+		}
+	}
+	\endPart
+
+	\myMark "C"
+	\startPart
+	\repeat volta 2 {
+		f1:m7 | f:m7 | f:m7 | \myEndLine
+	}
+	\endPart
+
+	\startPart
+	\repeat volta 2 {
+		bes1*15:7sus4 | bes4:7sus4 a2.:maj7.11+ | \myEndLine
+	} \alternative {
+		{
+			s1 | s1 | s1 | s1 | \myEndLineVoltaNotLast
+		}
+		{
+			f1:m7 | a:m7 | \myEndLineVoltaLast
+		}
+	}
+	\endPart
+
+	\endSong
+	\endChords
+}
+{% endif %}
+{% if part == "VoiceReal" %}{
+	\tempo "Moderato" 4 = 100
+	\time 4/4
+	\key c \major
+
+	\partial 8 c8 |
+
+	% part "Intro"
+	\repeat volta 3 {
+		ees8 ees c ees ees c4 ees8~ | ees8 c g'4-> r4 r8 c,8 |
+	}
+	R1 | r2^\markup { Melody } c4 ees4 |
+
+	% part "A"
+	\repeat volta 2 {
+		<<
+			{
+				\voiceOne
+				r4^\markup { 2nd x } <ees g>4 <ees g>8 <g bes>4 <bes d>8~ | <bes d>4 <g b>2. | r2 <ees g>8 <g bes>4 <d' f>8 | s2 r4 r8 g,16 ees16 |
+				<ees g>8 \tuplet 3/2 { <f aes>16 <ees g> <d f> } <ees g>4 <ees g>8 <g bes>4 <bes d>8~ | <bes d>4 <g b>2. | r4 <ees g>4 <g bes>8 <bes d>4 <d f>8 | s2 r4 r8 c,8~ |
+			}
+			\new Voice {
+				\voiceTwo
+				g'1~ | g1~ | g1~ | g2 s2 |
+				c,1~ | c1~ | c1~ | c2 s2 |
+			}
+		>>
+		\oneVoice
+		c8 ees g4~ g8 bes4-> r8 | R1^\markup { Drums } | R1 | r4 f2~ f8 ees8~ |
+
+		% part "B"
+		ees8 c8~ c2.~ | c1~ | c1~ | c4 r4 f8 aes4 c8~ |
+		c1~ | c2 bes8 aes4 aes8-> | g1~ | g2 f4 ees8 des8~ | des1 | ees2 c4-- ees4->^\markup { Fine } |
+	} \alternative {
+		{
+			r4 r8 c8 ees ees c ees~ | ees8 c g'4-> r4 r8 c,8 | ees8 ees c ees ees c4 ees8~ | ees8 c g'4-> r4 r8 c,8 |
+			ees8 ees c ees ees c4 ees8~ | ees8 c g'4-> r4 r8 c,8 | ees8 ees c ees ees c4 ees8~ | ees8 c g'4-> r4 r8 c,16 ees16 |
+		}
+		{
+			r1^\markup { Intro into solo } | r1 | r1 | <d' f>8-- <bes d>-. <bes d>-- <g bes>-. <g bes>-- <ees g>-. <ees g>-- <c ees>-. |
+		}
+	}
+
+	% part "C"
+	\repeat volta 2 {
+		r1^\markup { Open for solo } | r1 | r1 |
+	}
+
+	% part "Cue"
+	\repeat volta 2 {
+		R1*15^\markup { On cue: solo } | r1 |
+	} \alternative {
+		{
+			r1^\markup { 1st solo } | r1 | r1 | r1 |
+		}
+		{
+			<c g'>4^\markup { Last solo } r8 <c d>8 ees ees c ees~ | ees8 c g'4-> r4 r8 c,8^\markup { D.S. al Fine, 2nd x thru head } |
+		}
+	}
+}
+{% endif %}

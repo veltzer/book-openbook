@@ -1,0 +1,75 @@
+{#
+default_version = "Real"
+
+[attributes]
+title = "Coral"
+style = "Jazz"
+composer = "Keith Jarrett"
+piece = "Ballad"
+typesetter = "Mark Veltzer <mark.veltzer@gmail.com>"
+completion = "5"
+uuid = "2bc06efe-d57e-11f1-8000-046874d194b7"
+structure = "A"
+location = "rbk1:93"
+
+[[youtube]]
+id = "nASCDk-dv-4"
+remark = "Gary Burton with Keith Jarrett, the recording the real book cites"
+
+[[youtube]]
+id = "thyzNQPvZ_g"
+remark = "Duo Clavis"
+
+[versions.Real]
+doChords = true
+doVoice = true
+doLyrics = false
+doLyricsmore = false
+doLyricsmoremore = false
+doChordBars = false
+doGuitar = false
+doExtra = false
+doPrep = false
+doOwn = false
+#}
+{% if part == "Vars" %}
+{% endif %}
+{% if part == "Doc" %}	DONE:
+	- added the meta data from the real book.
+	- put in the tunes structure.
+	- put in the chords (real book).
+	- put in the tune (real book).
+	- the real book cites the recording Gary Burton and Keith Jarrett.
+	- added youtube performances.
+	TODO:
+	- check the chords (real book).
+	- check the tune (real book).
+	- hear the tune to check that it is right and adjust the tempo.
+	- the real book prints '(Fine)' under the first note and a double bar (no repeat sign) at the end; check how the form is played.
+	- bar 7 is printed as 'Gb lyd.' and 'Gb7 sus4', written here as Gbmaj7#11 and Gb7sus4.
+	- bar 8 is printed as 'F-7(9 11)' followed by '(D-7b5 G7b9)' in parentheses (a turnaround), check its rhythm.
+{% endif %}
+{% if part == "ChordsReal" %}\chordmode {
+	\startChords
+	\startSong
+
+	\myMark "A"
+	\startPart
+	c2:m7 f:7 | d/bes bes:maj7 | a:m7.5- d:7.9- | g:m7 c:9 | \myEndLine
+	b:maj7 fis:maj7/ais | gis:m7 b:maj7/fis | ges:maj7.11+ ges:7sus4 | f:m11 d4:m7.5- g:7.9- | \myEndLine
+	\endPart
+
+	\endSong
+	\endChords
+}
+{% endif %}
+{% if part == "VoiceReal" %}{
+	\tempo "Adagio" 4 = 66
+	\time 4/4
+	\key c \major
+
+	% part "A"
+	ees4_\markup { \italic { (Fine) } } f8 g~ g a4 d,8~ | d4. f8 \tuplet 3/2 { bes4 c d } | \tuplet 3/2 { f4 ees d8 ees } d4. c8 | g4. a16 bes a8 g bes d, |
+	dis8 fis4. gis4 ais | b4 fis e dis | des8 aes'~ aes2. | g4 aes8 bes~ bes c aes4 |
+}
+{% endif %}

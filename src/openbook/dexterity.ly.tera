@@ -1,0 +1,117 @@
+{#
+default_version = "Real"
+
+[attributes]
+title = "Dexterity"
+style = "Jazz"
+composer = "Dexter Gordon"
+piece = "Bop"
+typesetter = "Mark Veltzer <mark.veltzer@gmail.com>"
+completion = "5"
+uuid = "514de929-d581-11f1-8000-046874d194b7"
+structure = "AABA"
+location = "rbk1:117"
+
+[[youtube]]
+id = "ofNF3Ar1TPs"
+remark = "Charlie Parker"
+
+[[youtube]]
+id = "gF7eZbPjxvU"
+remark = "Nicolas Dary and Alain Jean-Marie Quartet"
+
+[versions.Real]
+doChords = true
+doVoice = true
+doLyrics = false
+doLyricsmore = false
+doLyricsmoremore = false
+doChordBars = false
+doGuitar = false
+doExtra = false
+doPrep = false
+doOwn = false
+#}
+{% if part == "Vars" %}
+{% endif %}
+{% if part == "Doc" %}	DONE:
+	- added the meta data from the real book.
+	- put in the tunes structure.
+	- put in the chords (real book).
+	- put in the tune (real book).
+	- added youtube performances (the real book prints no recording reference for this tune).
+	TODO:
+	- check the chords (real book).
+	- check the tune (real book).
+	- hear the tune to check that it is right and adjust the tempo.
+	- the real book credits Dexter Gordon as the composer; check the composer credit.
+	- bridge bar 2: the notes are crowded and hard to read (E flat, E natural, G, B, F sharp, F sharp, D); check against a recording.
+	- bar 3 (and bar 27): the book puts a flat before the C (C flat over Bb), typed as printed.
+	- bridge bar 8: the three beamed notes after the first four (E flat, F, D) are typed as two sixteenths and an eighth.
+	- last bar of the first A ending 2 and of the last A: the third and fourth notes are drawn between B and C, typed as B flat.
+	REMARKS:
+	- the book writes 'F7 alt.' which is written here as F7#5#9.
+	- the book ends the tune with a 'Fine' after the last A.
+{% endif %}
+{% if part == "ChordsReal" %}\chordmode {
+	\startChords
+	\startSong
+
+	\myMark "A"
+	\startPart
+	\repeat volta 2 {
+		bes1 | c2:m7 f:7.9- | bes1 | c2:m7 f:7 | \myEndLine
+		bes2 bes:7 | ees aes:7 | \myEndLine
+	} \alternative {
+		{
+			d2:m7 des:7 | c:m7 f:7 | \myEndLineVoltaNotLast
+		}
+		{
+			c2:m7 f:7.5+.9+ | bes1 | \myEndLineVoltaLast
+		}
+	}
+	\endPart
+
+	\myMark "B"
+	\startPart
+	a2:m7 d:7 | a:m7 d:7 | d1:m7 | g:7 | \myEndLine
+	g1:m7 | c:7 | c:m7 | f:7 | \myEndLine
+	\endPart
+
+	\myMark "A"
+	\startPart
+	bes1 | c2:m7 f:7.9- | bes1 | c2:m7 f:7 | \myEndLine
+	bes2 bes:7 | ees aes:7 | c:m7 f:7.5+.9+ | bes1 | \myEndLine
+	\endPart
+
+	\endSong
+	\endChords
+}
+{% endif %}
+{% if part == "VoiceReal" %}{
+	\tempo "Allegro" 4 = 200
+	\time 4/4
+	\key bes \major
+
+	% part "A"
+	\repeat volta 2 {
+		r8 f bes d c bes a bes | c8 bes d ges,( g) a4 c8 | bes8 f4 d'8 ees d ces g | d'4 r8 d8 c b d c |
+		r4 r8 f,8 f bes4 fis8 | g8 bes c d \tuplet 3/2 { ees f ees } d a |
+	} \alternative {
+		{
+			a8 bes16 c a8 bes16 c aes4 r8 ges8 | g8 c bes g d' c r4 |
+		}
+		{
+			a8 bes16 c a8 bes16 c aes4 r8 g8 | bes8 c bes bes r2 |
+		}
+	}
+
+	% part "B"
+	g4 r8 e8 b' a fis d | ees8 e g16 b fis8 fis4 r8 d8 | g8 c \tuplet 3/2 { b16 c b } g8 c bes g f | f4 r4 r8 a4 g8 |
+	a4 r8 g8 c bes g d | f8 ees e a~ a4 r8 c,8 | g'4 r8 f8 c' bes g ees | ges8 a c d ees16 f d8 r4 |
+
+	% part "A"
+	r8 f,8 bes d c bes a bes | c8 bes d ges,( g) a4 c8 | bes8 f4 d'8 ees d ces g | d'4 r8 d8 c b d c |
+	r4 r8 f,8 f bes4 fis8 | g8 bes c d \tuplet 3/2 { ees f ees } d a | a8 bes16 c a8 bes16 c aes4 r8 g8 | bes8 c bes bes r2 |
+}
+{% endif %}

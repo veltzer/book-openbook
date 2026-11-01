@@ -1,0 +1,137 @@
+{#
+default_version = "Real"
+
+[attributes]
+title = "Crescent"
+style = "Jazz"
+composer = "John Coltrane"
+piece = "Rubato, A Tempo"
+typesetter = "Mark Veltzer <mark.veltzer@gmail.com>"
+completion = "3"
+uuid = "0730122c-d57b-11f1-8000-046874d194b7"
+structure = "AA'"
+location = "rbk1:99"
+
+[[youtube]]
+id = "0ddiVF4glbY"
+remark = "John Coltrane, Crescent (1964), the original recording"
+
+[[youtube]]
+id = "7M08aCScldw"
+remark = "Yvan Jacques, a jazz guitar and piano cover"
+
+[versions.Real]
+doChords = true
+doVoice = true
+doLyrics = false
+doLyricsmore = false
+doLyricsmoremore = false
+doChordBars = false
+doGuitar = false
+doExtra = false
+doPrep = false
+doOwn = false
+#}
+{% if part == "Vars" %}
+{% endif %}
+{% if part == "Doc" %}	DONE:
+	- added the meta data from the real book.
+	- put in the tunes structure.
+	- put in the chords (real book).
+	- put in the tune (real book).
+	- put in the double time vamp and the solo section as printed in the real book.
+	- added youtube performances (the real book refers to Coltrane - 'His Greatest Years - Vol. 3').
+	TODO:
+	- check the chords (real book).
+	- check the tune (real book).
+	- hear the tune to check that it is right and adjust the tempo.
+	- the rubato intro (bars 1-11) is handwritten with many ledger lines and is hard to read: check every note against a recording.
+	- intro bar 2: the first A flat looks like a quarter note in the book, which leaves the bar a beat short; it is typed as a half note.
+	- intro bar 3: the three beamed eighths have no triplet sign in the book; they are typed as a triplet so that the bar adds up.
+	- intro bar 8: the book writes plain A and E (not A flat and E flat) in this bar; typed as printed.
+	- A tempo bar 4: the book shows a half note E flat and a triplet starting with a rest, a beat short; the half note is typed dotted as in bar 12.
+	- A tempo bars 6 and 14: the first half note is written just above the staff with no ledger line; typed as G flat (bar 6) and G (bar 14).
+	REMARKS:
+	- the real book marks the intro 'Rubato:' and the head 'A Tempo'. The last note of the intro has a rising line (a rip/fall-off sign) after it which is not typed.
+	- the vamp after the head is marked 'Double X:' in the book with a circled 8 over a C-7 bar; it is typed as eight bars of C-7.
+{% endif %}
+{% if part == "ChordsReal" %}\chordmode {
+	\startChords
+	\startSong
+
+	\myMark "Intro"
+	\startPart
+	g1*4:7sus4.9- | \myEndLine
+	g1*2:7sus4.9- | g2:7sus4.9- d:7sus4.9- | d1:7sus4.9- | \myEndLine
+	d1*3:7sus4.9- | \myEndLine
+	\endPart
+
+	\repeat volta 2 {
+
+		\myMark "A"
+		\startPart
+		e2:m7.5- a:7 | d1:m7 | g2:7sus4.9- g:7 | c1:m7 | \myEndLine
+		bes2:7sus4 bes:7 | ees1:m7 | e2:m7 a:7.5+ | d1:7sus4.9- | \myEndLine
+		\endPart
+
+		\myMark "A'"
+		\startPart
+		e2:m7.5- a:7 | d1:m7 | g2:7sus4.9- g:7 | c1:m7 | \myEndLine
+		bes2:7sus4 bes:7 | ees2:maj7 a:7.5+ | d2:m7.5- g:7sus4.9- | c1:m7 | \myEndLine
+		\endPart
+
+	}
+
+	\myMark "Instr"
+	\startPart
+	c1*4:m7 | \myEndLine
+	c1*4:m7 | \myEndLine
+	\endPart
+
+	\myMark "Instr"
+	\startPart
+	\repeat volta 2 {
+		bes1:7sus4 | bes:7sus4 | ees:m7 | ees:m7 | \myEndLine
+		e:m7.5- | a:7.5+ | d:m7 | d:m7 | \myEndLine
+		g:7sus4.9- | g:7sus4.9- | c:m7 | c:m7 | \myEndLine
+	}
+	\endPart
+
+	\endSong
+	\endChords
+}
+{% endif %}
+{% if part == "VoiceReal" %}{
+	\tempo "Adagio" 4 = 70
+	\time 4/4
+	\key c \major
+
+	% part "Intro"
+	g''2~^\markup { Rubato } g8 f ees d | aes'2~ aes8 g bes aes | g4 f \tuplet 3/2 { d8 f d } c4 | aes8 c aes g f d f g |
+	f4 bes aes2 | c8 d f g bes g bes4~ | bes8 aes g f d'4.\fermata c8 | bes8 a ees4 \tuplet 3/2 { a8 g e! } \tuplet 3/2 { g e d } |
+	\tuplet 3/2 { c8 f ees } \tuplet 3/2 { d c a } \tuplet 3/2 { g ees d } \tuplet 3/2 { c a c } | d8 f g a c a c4 | a4 f' d2 |
+
+	\repeat volta 2 {
+
+		% part "A"
+		bes'2^\markup { A Tempo } a | g2. \tuplet 3/2 { g8 a g } | aes2 g | ees2. \tuplet 3/2 { r8 ees ees } |
+		ees2 g | ges aes | a! a | c2. \tuplet 3/2 { r8 c bes } |
+
+		% part "A'"
+		bes2 a | g2. \tuplet 3/2 { g8 a g } | aes2 g | ees2. ees4 |
+		ees2 g | g bes4. bes8 | c4 g f ees | c1^\markup { \italic { Fine } } |
+
+	}
+
+	% part "Instr"
+	r1^\markup { Double X } | r1 | r1 | r1 |
+	r1 | r1 | r1 | r1 |
+
+	% part "Instr"
+	\repeat volta 2 {
+		r1^\markup { Solos } | r1 | r1 | r1 |
+		r1 | r1 | r1 | r1 |
+		r1 | r1 | r1 | r1 |
+	}
+}
+{% endif %}

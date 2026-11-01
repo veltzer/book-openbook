@@ -1,0 +1,91 @@
+{#
+default_version = "Real"
+
+[attributes]
+title = "Ballet"
+style = "Jazz"
+composer = "Michael Gibbs"
+piece = "Bright"
+typesetter = "Mark Veltzer <mark.veltzer@gmail.com>"
+completion = "3"
+uuid = "3e64a105-d57b-11f1-8000-046874d194b7"
+structure = "A"
+location = "rbk1:37"
+
+[[youtube]]
+id = "SsPUz7gB11E"
+remark = "The Gary Burton Quartet from the album Duster (1967)"
+
+[[youtube]]
+id = "0zYo2HdPLkk"
+remark = "Solo jazz piano version from the real book"
+
+[versions.Real]
+doChords = true
+doVoice = true
+doLyrics = false
+doLyricsmore = false
+doLyricsmoremore = false
+doChordBars = false
+doGuitar = false
+doExtra = false
+doPrep = false
+doOwn = false
+#}
+{% if part == "Vars" %}
+{% endif %}
+{% if part == "Doc" %}	DONE:
+	- added the meta data from the real book.
+	- put in the tunes structure.
+	- put in the chords (real book).
+	- put in the tune (real book).
+	- added youtube performances (the real book names Gary Burton, Duster as the recording).
+	TODO:
+	- check the chords (real book).
+	- check the tune (real book).
+	- hear the tune to check that it is right and adjust the tempo.
+	- the composer name on the page is cut off after "Michael Gi", typed as Michael Gibbs.
+	- the high notes are handwritten with loose ledger lines; bars 3-5, 15 read as B natural, bars 7-9, 18 as E flat (two ledger lines), bar 13 as D flat and bar 20 as C. Check them.
+	- bar 3: the third note has a natural sign, typed as D natural (could be C).
+	- bar 20: a wavy line leads from the high C down to the E flat of bar 21, typed as a glissando.
+	- bar 22: the real book prints no chord, D7#9 from bar 21 is kept.
+	- bar 22: the held note has two accidentals in front of it (a sharp and what may be a natural), typed as G sharp.
+	- the real book puts a coda sign over bar 23 and writes a bass line for bars 23-25 (Eb7, N.C., E7 with a fermata) in the chord staff. Only the chords are here.
+	- the accent marks of the real book are not typed in.
+{% endif %}
+{% if part == "ChordsReal" %}\chordmode {
+	\startChords
+	\startSong
+
+	\myMark "A"
+	\startPart
+	\repeat volta 2 {
+		ees2.*2:7 | aes2.*2:7 | \myEndLine
+		aes2.:7 | ees2.*3:7 | \myEndLine
+		ees2.:7 | aes2.*3:7 | \myEndLine
+		aes2.:7 | ees2.*3:7 | \myEndLine
+		ees2.:7 | e2.*2:7.9+ | d2.*2:7.9+ | \myEndLine
+		d2.:7.9+ | ees2.:7 | s2. | e2.:7 | \myEndLine
+	}
+	\endPart
+
+	\endSong
+	\endChords
+}
+{% endif %}
+{% if part == "VoiceReal" %}{
+	\tempo "Allegro" 4 = 200
+	\time 3/4
+	\key ees \major
+
+	% part "A"
+	\repeat volta 2 {
+		g'8 des'4 bes'8~ bes4~ | bes4. e,!4. | e!8 aes, d b'!~ b4~ | b2.~ |
+		b2. | aes4 a,!8 ees'4 e!8 | ees'2.~ | ees2.~ |
+		ees2. | r8 c,4. bes'4 | ges4. d4. | a!2~ a8 ees'~ |
+		ees8 des'4 r8 r4 | r2 r8 g,,8 | des'8 b'!8~ b2 | ees,2.~ |
+		ees2. | r8 bes'8 d, ees' c,4 | r4 r8 bes8 aes'4 | c2.\glissando | ees,2. |
+		gis2.~ | gis2.~ | gis2.~ | gis2.\fermata |
+	}
+}
+{% endif %}

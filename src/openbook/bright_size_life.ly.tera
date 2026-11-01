@@ -1,0 +1,123 @@
+{#
+default_version = "Real"
+
+[attributes]
+title = "Bright Size Life"
+style = "Jazz"
+composer = "Pat Metheny"
+piece = "Med. Latin"
+typesetter = "Mark Veltzer <mark.veltzer@gmail.com>"
+completion = "3"
+uuid = "9c060a49-d57b-11f1-8000-046874d194b7"
+structure = "Intro AB"
+location = "rbk1:64"
+
+[[youtube]]
+id = "wWfu6bGEssI"
+remark = "Pat Metheny in the original recording (Bright Size Life, 1976)"
+
+[[youtube]]
+id = "kFMQSHgI4aA"
+remark = "Pat Metheny with Richard Bona and Antonio Sanchez"
+
+[versions.Real]
+doChords = true
+doVoice = true
+doLyrics = false
+doLyricsmore = false
+doLyricsmoremore = false
+doChordBars = false
+doGuitar = false
+doExtra = false
+doPrep = false
+doOwn = false
+#}
+{% if part == "Vars" %}
+{% endif %}
+{% if part == "Doc" %}	DONE:
+	- added the meta data from the real book.
+	- put in the tunes structure.
+	- put in the chords (real book).
+	- put in the tune (real book).
+	- added youtube performances.
+	TODO:
+	- check the chords (real book).
+	- check the tune (real book).
+	- hear the tune to check that it is right and adjust the tempo.
+	- bar 1: the last eighth has an accidental-like sign in front of it that is hard to read; typed B.
+	- first ending: the lower note of the first dyad is unclear (typed E flat); the book writes 'G/A' in the middle of the second bar and puts the intro figure on the lower staff under that bar (not written here).
+	- first ending: the last dyad is B and D over Bbmaj7 as printed, check if it should be B flat.
+	- second ending: the dyads are hard to read, check every one.
+	- B part bar 7: the last note may be D rather than C sharp.
+	- A bar 5: the book writes D(9) (an add9 chord); it is typed as d:9^7, check that it prints right.
+	REMARKS:
+	- the book writes the form as intro, A with two endings, B (repeated) and D.S. al Coda; the coda (A7, D) ends the tune (Fine).
+{% endif %}
+{% if part == "ChordsReal" %}\chordmode {
+	\startChords
+	\startSong
+
+	\myMark "Intro"
+	\startPart
+	s1 | \myEndLine
+	\endPart
+
+	\myMark "A"
+	\startPart
+	\repeat volta 2 {
+		g1:maj7 | g:maj7 | \myEndLine
+		bes1/a | bes/a | d:9^7 | d/c | \myEndLine
+	} \alternative {
+		{
+			bes1:maj7 | bes2:maj7 g/a | \myEndLineVoltaNotLast
+		}
+		{
+			g1 | d | \myEndLineVoltaLast
+		}
+	}
+	\endPart
+
+	\myMark "B"
+	\startPart
+	\repeat volta 2 {
+		g1/a | g/a | f/g | f/g | \myEndLine
+		a/e | a/e | d/fis | d/fis | \myEndLine
+	}
+	\endPart
+
+	\myMark "Coda"
+	\startPart
+	a1:7 | d | \myEndLine
+	\endPart
+
+	\endSong
+	\endChords
+}
+{% endif %}
+{% if part == "VoiceReal" %}{
+	\tempo "Moderato" 4 = 132
+	\time 4/4
+	\key g \major
+
+	% part "Intro"
+	e8 b' a e' d b' a d, |
+
+	% part "A"
+	\repeat volta 2 {
+		d2..^\markup { \musicglyph #"scripts.segno" } b'8~ | b4. b16 a \tuplet 3/2 { g8 a b } \tuplet 3/2 { g a b } |
+		d,1 | e4 r8 g8~ g4. fis16 e | e16 fis d8~ d2.~ | d1^\markup { To Coda \musicglyph #"scripts.coda" } |
+	} \alternative {
+		{ <ees, c'>8 <g d'> r8 <a f'>8 r8 <a e'>8 <b d>4~ | <b d>2 r2 | }
+		{ <d b'>8 <b b'> r8 <a g'>8 r8 <g b'>8 <b fis'>4~ | <b fis'>2. r4 | }
+	}
+
+	% part "B"
+	\repeat volta 2 {
+		r4 r8 b8 d, fis a, e''~ | e8 d b2. | e4. d16 c b4 d8 a~ | a1 |
+		r2 c8 cis, fis a, | c'4 b8 a~ a g4. | fis8 a r d~ d cis4. | e,8 b' a e' d b' a d,^\markup { D.S. al Coda } |
+	}
+
+	% part "Coda"
+	cis4.^\markup { \musicglyph #"scripts.coda" } b8 a4. g8 | fis4 <cis' d>2.-^^\markup { \italic { Fine } } |
+}
+{% endif %}

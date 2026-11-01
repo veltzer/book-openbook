@@ -1,0 +1,137 @@
+{#
+default_version = "Real"
+
+[attributes]
+title = "Crystal Silence"
+style = "Jazz"
+composer = "Chick Corea"
+piece = "Ballad"
+typesetter = "Mark Veltzer <mark.veltzer@gmail.com>"
+completion = "5"
+uuid = "07319c8c-d57b-11f1-8000-046874d194b7"
+structure = "ABCA"
+location = "rbk1:100"
+
+[[youtube]]
+id = "0Epv4Zk6stQ"
+remark = "Chick Corea, Return To Forever (1972), the first recording the real book refers to"
+
+[[youtube]]
+id = "omEfkqS35uY"
+remark = "Gary Burton and Chick Corea, Crystal Silence (1973), the duo recording the real book refers to"
+
+[versions.Real]
+doChords = true
+doVoice = true
+doLyrics = false
+doLyricsmore = false
+doLyricsmoremore = false
+doChordBars = false
+doGuitar = false
+doExtra = false
+doPrep = false
+doOwn = false
+#}
+{% if part == "Vars" %}
+{% endif %}
+{% if part == "Doc" %}	DONE:
+	- added the meta data from the real book.
+	- put in the tunes structure.
+	- put in the chords (real book).
+	- put in the tune (real book).
+	- added youtube performances (the real book refers to Chick Corea - 'Return To Forever' and Gary Burton and Chick Corea - 'Crystal Silence').
+	TODO:
+	- check the chords (real book).
+	- check the tune (real book).
+	- hear the tune to check that it is right and adjust the tempo.
+	- the book draws two start repeat signs in the left margin (before the B7(b13) bar and before the last line) with no matching end repeat; they are not typed. Check the form against a recording.
+	REMARKS:
+	- the book has no section letters; the sections here follow the double bars of the page.
+	- the book prints a segno at the start of the last line and an 'Ending:' of two chord bars (Fmaj7/A bass, A- with a fermata) with no melody; it is typed as an End part after the last bar.
+{% endif %}
+{% if part == "ChordsReal" %}\chordmode {
+	\startChords
+	\startSong
+
+	\partial 4 s4 |
+
+	\myMark "A"
+	\startPart
+	\repeat volta 2 {
+		a1:m | e:m | f:maj7.11+ | b:m7 | \myEndLine
+		bes:maj7 | a:m | \myEndLine
+	} \alternative {
+		{
+			b4:m c d:7sus4 e:7.9- | a1:m | bes:maj7.11+ | \myEndLineVoltaNotLast
+		}
+		{
+			d1:m | e:7.9+ | \myEndLineVoltaLast
+		}
+	}
+	\endPart
+
+	\myMark "B"
+	\startPart
+	d1:m | e:7.9+ | f:maj7 | g:7sus4 | \myEndLine
+	a:m | a:m | \myEndLine
+	\endPart
+
+	\myMark "C"
+	\startPart
+	d1 | a:m | bes | f:m7 | \myEndLine
+	c | g:m7 | b:7.13- | e2:7sus4 e:7 | \myEndLine
+	\endPart
+
+	\myMark "A"
+	\startPart
+	a1:m7 | e:m | f:maj7.11+ | b:m7 | \myEndLine
+	bes:maj7 | a:m | b4:m c d:7sus4 e:7.9- | a1:m | \myEndLine
+	bes:maj7 | b4:m c d:7sus4 e:7.9- | a1:m | \myEndLine
+	\endPart
+
+	\myMark "End"
+	\startPart
+	f1:maj7/a | a:m | \myEndLine
+	\endPart
+
+	\endSong
+	\endChords
+}
+{% endif %}
+{% if part == "VoiceReal" %}{
+	\tempo "Adagio" 4 = 60
+	\time 4/4
+	\key a \minor
+
+	\partial 4 a''4 |
+
+	% part "A"
+	\repeat volta 2 {
+		g2. e8 b | d2 b4. c8 | \tuplet 3/2 { d4 c b } a4. g8 | e2. e4 |
+		e4 d \tuplet 3/2 { g4 c e } | d2 c4. d8 |
+	} \alternative {
+		{
+			e4 d c b8 a16 g | a1~ | a2 r4 a'4 |
+		}
+		{
+			e4 d c4. a8 | d2. c8 d |
+		}
+	}
+
+	% part "B"
+	e4 d c4. a8 | d2 c4. d8 | \tuplet 3/2 { e4 d c } b4 g | \tuplet 3/2 { d'4 c b } a4. g8 |
+	a1~ | a2. g'4 |
+
+	% part "C"
+	fis2. a4 | e2. g4 | d2. f4 | c2. ees4 |
+	b2. d4 | a2. d4 | g,2. fis4 | e2. a'4 |
+
+	% part "A"
+	g2. e8 b | d2 b4. c8 | \tuplet 3/2 { d4 c b } a4. g8 | e2. e4 |
+	e4 d \tuplet 3/2 { g4 c e } | d2 c4. d8 | e4 d c b8 a16 g | a1~ |
+	a2 c4. d8 | e4 d c b8 a16 g | a1 |
+
+	% part "End"
+	r1^\markup { Ending } | r1\fermata |
+}
+{% endif %}

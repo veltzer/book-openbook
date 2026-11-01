@@ -1,0 +1,90 @@
+{#
+default_version = "Real"
+
+[attributes]
+title = "Domino Biscuit"
+style = "Jazz"
+composer = "Steve Swallow"
+piece = "Moderate"
+typesetter = "Mark Veltzer <mark.veltzer@gmail.com>"
+completion = "3"
+uuid = "514de92c-d581-11f1-8000-046874d194b7"
+structure = "A"
+location = "rbk1:123"
+
+[[youtube]]
+id = "jcFoLdlpBz8"
+remark = "Gary Burton and Steve Swallow, Hotel Hello (1975), the recording the real book refers to"
+
+[[youtube]]
+id = "eayWPViYZsU"
+remark = "Deidre Rodman"
+
+[versions.Real]
+doChords = true
+doVoice = true
+doLyrics = false
+doLyricsmore = false
+doLyricsmoremore = false
+doChordBars = false
+doGuitar = false
+doExtra = false
+doPrep = false
+doOwn = false
+#}
+{% if part == "Vars" %}
+{% endif %}
+{% if part == "Doc" %}	DONE:
+	- added the meta data from the real book.
+	- put in the tunes structure.
+	- put in the chords (real book).
+	- put in the tune (real book).
+	- added youtube performances (the real book refers to Gary Burton and Steve Swallow - 'Hotel Hello').
+	TODO:
+	- check the chords (real book).
+	- check the tune (real book).
+	- hear the tune to check that it is right and adjust the tempo.
+	- the book prints three staves: chord symbols with slashes marked 'Solo:', chord voicings in dotted half notes (bars 3 and 4 add a second chord in parentheses marked '1 X only'), and a bass line. The voice here is the bass line; the voicings are not typed (the chord symbols give the harmony).
+	- the chord symbols of bars 7-9 and 10 are drawn as a circled letter without a clear flat (maj7 #11 and maj7); they are read as Gb (as in bar 5) but could be D or G. Check against the voicings and a recording.
+	- the intro bars have no chord symbol; Db is taken from the voicing.
+	REMARKS:
+	- the book marks 'Fine' at the end of bar 4 and 'Last x ritard' under bars 3-4.
+{% endif %}
+{% if part == "ChordsReal" %}\chordmode {
+	\startChords
+	\startSong
+
+	\myMark "Intro"
+	\startPart
+	des2. | des2. | \myEndLine
+	\endPart
+
+	\myMark "A"
+	\startPart
+	\repeat volta 2 {
+		des2. | des2. | \myEndLine
+		ges2.:maj7 | ges:maj7 | ges:maj7.11+ | ges:maj7.11+ | \myEndLine
+		ges2.:maj7.11+ | ges:maj7 | des | aes:7 | \myEndLine
+	}
+	\endPart
+
+	\endSong
+	\endChords
+}
+{% endif %}
+{% if part == "VoiceReal" %}{
+	\tempo "Moderato" 4 = 120
+	\time 3/4
+	\key des \major
+
+	% part "Intro"
+	\clef bass
+	r4 r4 ges4^\markup { Bass } | ges4. f8 ees4 |
+
+	% part "A"
+	\repeat volta 2 {
+		f4. ees8 des4 | ees2.^\markup { \italic Fine } | r4 r4 f4 | f4. ees8 des4 | ees2. |
+		ees4. f8 ges4 | ges4. f8 ees4 | ees2. | f4. ees8 des4 | ees4. f8 ges4 |
+	}
+}
+{% endif %}

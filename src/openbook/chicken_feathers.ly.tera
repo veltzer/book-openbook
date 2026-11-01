@@ -1,0 +1,108 @@
+{#
+default_version = "Real"
+
+[attributes]
+title = "Chicken Feathers"
+style = "Jazz"
+composer = "Steve Kuhn"
+piece = "Bright"
+typesetter = "Mark Veltzer <mark.veltzer@gmail.com>"
+completion = "5"
+uuid = "6b4ec1a4-d57b-11f1-8000-046874d194b7"
+structure = "AABA"
+location = "rbk1:79"
+
+[[youtube]]
+id = "hIT9xe1rUjo"
+remark = "Steve Kuhn, the original from the album 'Chickenfeathers' (1972)"
+
+[[youtube]]
+id = "a_SMFho5eUI"
+remark = "The Steve Kuhn Trio"
+
+[versions.Real]
+doChords = true
+doVoice = true
+doLyrics = false
+doLyricsmore = false
+doLyricsmoremore = false
+doChordBars = false
+doGuitar = false
+doExtra = false
+doPrep = false
+doOwn = false
+#}
+{% if part == "Vars" %}
+{% endif %}
+{% if part == "Doc" %}	DONE:
+	- added the meta data from the real book.
+	- put in the tunes structure.
+	- put in the chords (real book).
+	- put in the tune (real book).
+	- added youtube performances (the book refers to Steve Kuhn - 'Chickenfeathers').
+	TODO:
+	- check the chords (real book).
+	- check the tune (real book).
+	- hear the tune to check that it is right and adjust the tempo.
+	- bar 1: the accidental before the third note is hard to read, typed cis (as in the low version of bar 19).
+	- bars 4/22: the last eighth hangs past the end of the line; typed bes tied over the bar line (in bar 4 it may be an a flat).
+	- bar 16: the page shows three quarters and a half (five beats), typed four quarters.
+{% endif %}
+{% if part == "ChordsReal" %}\chordmode {
+	\startChords
+	\startSong
+
+	\myMark "A"
+	\startPart
+	\repeat volta 2 {
+		g1:m | bes:7 | ees:maj7 | a2:m7.5- d:7 | \myEndLine
+		g1:m | e:m7.5- |
+	} \alternative {
+		{
+			a1:m7.5- | d:7 | \myEndLineVoltaNotLast
+		}
+		{
+			a1:m7.5- | d:7 | \myEndLineVoltaLast
+		}
+	}
+	\endPart
+
+	\myMark "B"
+	\startPart
+	d1*2:m7.5- | e1*2:m7.5- | \myEndLine
+	f1*2:m7 | a1:m7.5- | d:7.9- | \myEndLine
+	\endPart
+
+	\myMark "A"
+	\startPart
+	g1:m | bes:7 | ees:maj7 | a2:m7.5- d:7 | \myEndLine
+	g1:m | e:m7.5- | a:m7.5- | d:7 | g:m | \myEndLine
+	\endPart
+
+	\endSong
+	\endChords
+}
+{% endif %}
+{% if part == "VoiceReal" %}{
+	\tempo "Allegro" 4 = 200
+	\time 4/4
+	\key g \minor
+
+	% part "A"
+	\repeat volta 2 {
+		d'4. ees8 cis d4. | f4. ees8~ ees2 | c4. d8 b! c4. | ees2 d4 c8 bes~ |
+		bes1~ | \tuplet 3/2 { bes4 a bes } d c |
+	} \alternative {
+		{ g1( | a1) | }
+		{ a2 gis4 a | c2 bes | }
+	}
+
+	% part "B"
+	g1~ | g2 \tuplet 3/2 { f4 g f } | g1~ | g2 \tuplet 3/2 { f4 bes f } |
+	g2. f4 | d' c bes g | f1 | ees1 |
+
+	% part "A"
+	d4. ees8 cis d4. | f4. ees8~ ees2 | c'4. d8 b! c4. | ees2 d4 c8 bes~ |
+	bes1~ | \tuplet 3/2 { bes4 a bes } d c | a2 gis4 a | c2 bes | g1\fermata |
+}
+{% endif %}

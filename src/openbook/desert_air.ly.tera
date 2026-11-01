@@ -1,0 +1,123 @@
+{#
+default_version = "Real"
+
+[attributes]
+title = "Desert Air"
+style = "Jazz"
+composer = "Chick Corea"
+typesetter = "Mark Veltzer <mark.veltzer@gmail.com>"
+completion = "5"
+uuid = "4a0f17a8-d587-11f1-8000-046874d194b7"
+structure = "AB"
+location = "rbk1:114-115"
+
+[[youtube]]
+id = "hR1kg7RLQEY"
+remark = "Gary Burton and Chick Corea, from 'Crystal Silence' (the recording the real book cites)"
+
+[[youtube]]
+id = "Iv2vteKvh8M"
+remark = "Chick Corea, a livestream version"
+
+[versions.Real]
+doChords = true
+doVoice = true
+doLyrics = false
+doLyricsmore = false
+doLyricsmoremore = false
+doChordBars = false
+doGuitar = false
+doExtra = false
+doPrep = false
+doOwn = false
+#}
+{% if part == "Vars" %}
+{% endif %}
+{% if part == "Doc" %}	DONE:
+	- added the meta data from the real book.
+	- put in the tunes structure.
+	- put in the chords (real book).
+	- put in the tune (real book).
+	- the real book cites the recording Gary Burton, Chick Corea - 'Crystal Silence'.
+	- added youtube performances.
+	TODO:
+	- check the chords (real book).
+	- check the tune (real book).
+	- hear the tune to check that it is right and adjust the tempo.
+	- put in the ending: the real book prints an 'Ending' bar with a fermata chord voiced on a treble and a bass staff (no chord symbol); it is not written here.
+	- bar 31 (first ending, Bb-7b5): the book writes E flat, E, D flat and D (with a natural sign); the second ending (bar 35) and the transposed (Bb) real book have C as the last note. Check it.
+	- bar 27 (Bmaj7): the book draws a tie from the F sharp to the G of bar 28; it is left out here.
+	REMARKS:
+	- the real book prints the tempo as 104 (written here for a dotted half) and no style word, so there is no piece attribute.
+	- the bracketed '4' over four quarter notes in a 3/4 bar is written here as a quadruplet (4 in the time of 3).
+	- the last eight F- bars end with a repeat sign (back to the start) in the book.
+	- many bars are repeat signs in the book; they are written out here.
+{% endif %}
+{% if part == "ChordsReal" %}\chordmode {
+	\startChords
+	\startSong
+
+	\myMark "A"
+	\startPart
+	\repeat volta 2 {
+		ges2.:maj7/f | aes:m7+/f | aes:m7+/f | ges:maj7/f | \myEndLine
+		f:m | f:m | c:maj7 | des:maj7 | \myEndLine
+		e:7.9+ | e:7.9+ | f:m7 | f:m7 | f:m7 | \myEndLine
+		f:m7 | g:maj7 | c:m7+ | c:m7+ | \myEndLine
+		g:maj7 | aes:maj7 | aes:maj7 | e:maj7 | \myEndLine
+		a:m/e | a:m/e | e:maj7 | a:m/e | a:m/e | \myEndLine
+		b:maj7 | c:maj7.11+/b | c:maj7.11+/b | c:maj7.11+/b | \myEndLine
+	} \alternative {
+		{
+			bes:m7.5- | bes:m7.5- | bes:m7.5- | c:7.9- | \myEndLineVoltaNotLast
+		}
+		{
+			bes:m7.5- | ees:7.9- | aes:m7.5- | des:7.9- | \myEndLineVoltaLast
+		}
+	}
+	\endPart
+
+	\myMark "B"
+	\startPart
+	fis2.:m7.5- | a:m7 | c:m7+ | ees:dim | \myEndLine
+	e:m | g:m | bes:m6 | des:m7.5- | \myEndLine
+	d:m | b:m7.5- | bes:maj7.11+ | bes:m7 | \myEndLine
+	f:m | f:m | f:m | f:m | \myEndLine
+	f:m | f:m | f:m | f:m | \myEndLine
+	\endPart
+
+	\endSong
+	\endChords
+}
+{% endif %}
+{% if part == "VoiceReal" %}{
+	\tempo "Allegro" 2. = 104
+	\time 3/4
+	\key c \major
+
+	% part "A"
+	\repeat volta 2 {
+		c'2~ c8 bes8 | g2.~ | g2. | bes2~ bes8 aes8 |
+		f2.~ | f2. | e'4 b8 c4 d8 | aes4 bes c |
+		g2 cis8 b8 | d4 ais b | \tuplet 4/3 { g'2 f4 ees4 } | g,2.~ | g2. |
+		r2. | d'4 b8 c4 d8 | g,2.~ | g2. |
+		r4 d'8 e4 fis8 | c2.~ | c2. | b2 cis8 dis8 |
+		a2 b4~ | b4 c4. d8 | dis2 e8 fis8 | c2 d4~ | d4 e4 e8 fis8 |
+		fis2. | g2.~ | g2.~ | g2. |
+	} \alternative {
+		{
+			\tuplet 4/3 { ees4 e des d } | ees2.~ | ees2. | r4 r8 des4. |
+		}
+		{
+			ees4 e8 des4 c8 | ees2 d?4 | des4 d8 ces4 bes8 | des2 c?4 |
+		}
+	}
+
+	% part "B"
+	b4 c8 a4 e8 | c'2.~ | c2. | \tuplet 4/3 { a4 b ees, a } |
+	g2.~ | g2.~ | g2. | r4 r8 ges4. |
+	\tuplet 4/3 { f4 e g ges } | \tuplet 4/3 { f4 a d e } | \tuplet 4/3 { e4 f d a } | \tuplet 4/3 { c4 des bes g } |
+	f2.~ | f2.~ | f2.~ | f2.~ |
+	f2.~ | f2.~ | f2.~ | f2. |
+}
+{% endif %}

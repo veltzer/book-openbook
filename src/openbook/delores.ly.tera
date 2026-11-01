@@ -1,0 +1,117 @@
+{#
+default_version = "Real"
+
+[attributes]
+title = "Delores"
+style = "Jazz"
+composer = "Wayne Shorter"
+piece = "Swing"
+typesetter = "Mark Veltzer <mark.veltzer@gmail.com>"
+completion = "5"
+uuid = "937c990e-d584-11f1-8000-046874d194b7"
+structure = "AABCA"
+location = "rbk1:109"
+
+[[youtube]]
+id = "iKbeYk8EWKg"
+remark = "Miles Davis, from 'Miles Smiles' (the recording the real book cites)"
+
+[[youtube]]
+id = "tAMkaUSM_AQ"
+remark = "Miles Davis, a live version"
+
+[versions.Real]
+doChords = true
+doVoice = true
+doLyrics = false
+doLyricsmore = false
+doLyricsmoremore = false
+doChordBars = false
+doGuitar = false
+doExtra = false
+doPrep = false
+doOwn = false
+#}
+{% if part == "Vars" %}
+{% endif %}
+{% if part == "Doc" %}	DONE:
+	- added the meta data from the real book.
+	- put in the tunes structure.
+	- put in the chords (real book).
+	- put in the tune (real book).
+	- the real book cites the recording Miles Davis - 'Miles Smiles' (where the tune is called 'Dolores').
+	- added youtube performances.
+	TODO:
+	- check the chords (real book).
+	- check the tune (real book).
+	- hear the tune to check that it is right and adjust the tempo.
+	- the second A section (bars 9-16) and the C section (bars 23-30) are printed with chord symbols only (no melody); they are written here as rests. Check against a recording what is played there.
+	- bar 27: the book writes F-7 Bb-7 (a minor Bb) where the A sections have F-7 Bb7. Check it.
+	- bar 22 (A7): the book writes A, A flat, G and G with a natural sign. Check the accidentals.
+	REMARKS:
+	- the title is spelled 'Delores' in the real book; the recording spells it 'Dolores'.
+{% endif %}
+{% if part == "ChordsReal" %}\chordmode {
+	\startChords
+	\startSong
+
+	\myMark "A"
+	\startPart
+	d1:m7 | ges2:7 e:7.9- | ees1:maj7 | a2:m7 d:7 | \myEndLine
+	f2:m7 bes:7 | a:m7.5- d:7.9+ | des1:13 | des:13 | \myEndLine
+	\endPart
+
+	\myMark "A"
+	\startPart
+	d1:m7 | ges2:7 e:7.9- | ees1:maj7 | a2:m7 d:7 | \myEndLine
+	f2:m7 bes:7 | a:m7.5- d:7.9+ | des1:13 | des:13 | \myEndLine
+	\endPart
+
+	\myMark "B"
+	\startPart
+	c1:7sus4 | a2:m7 d:7 | g1:m7 | a2:m7 d:7 | \myEndLine
+	e1:m7.5- | a:7 | \myEndLine
+	\endPart
+
+	\myMark "C"
+	\startPart
+	c1:7 | b2:m7.5- e:7 | ees1:maj7 | a2:m7 d:7 | \myEndLine
+	f2:m7 bes:m7 | a:m7.5- d:7 | des1:13 | des:13 | \myEndLine
+	\endPart
+
+	\myMark "A"
+	\startPart
+	d1:m7 | ges2:7 e:7 | ees1:maj7 | a2:m7 d:7 | \myEndLine
+	f2:m7 bes:7 | a:m7.5- d:7.9+ | des1:13 | des:13 | \myEndLine
+	\endPart
+
+	\endSong
+	\endChords
+}
+{% endif %}
+{% if part == "VoiceReal" %}{
+	\tempo "Allegro" 4 = 160
+	\time 4/4
+	\key c \major
+
+	% part "A"
+	f2 r8 f g a | c4 e, g f8 d~ | d2 r8 d'8 d c | d4 a c b8 bes |
+	b2 r8 f e d | ees4 c f fes8 ees~ | ees1~ | ees1 |
+
+	% part "A"
+	r1 | r1 | r1 | r1 |
+	r1 | r1 | r1 | r2. bes'4 |
+
+	% part "B"
+	a2~ a8 g a bes | c4 d c bes8 c~ | c2~ c8 g a bes | c4 f d bes8 a~ |
+	a1~ | a2 aes4 g8 g |
+
+	% part "C"
+	r1 | r1 | r1 | r1 |
+	r1 | r1 | r1 | r1 |
+
+	% part "A"
+	f2~ f8 a g f | a4 e g f8 d'~ | d2~ d8 d d c | d4 a c b8 bes |
+	b2~ b8 f e d | ees4 c f fes8 ees~ | ees1~ | ees1 |
+}
+{% endif %}

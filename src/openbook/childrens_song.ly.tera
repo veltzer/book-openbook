@@ -1,0 +1,105 @@
+{#
+default_version = "Real"
+
+[attributes]
+title = "Children's Song"
+style = "Jazz"
+composer = "Chick Corea"
+piece = "Gently And Evenly"
+typesetter = "Mark Veltzer <mark.veltzer@gmail.com>"
+completion = "3"
+uuid = "e373920e-d57b-11f1-8000-046874d194b7"
+structure = "AB"
+location = "rbk1:80"
+
+[[youtube]]
+id = "kdWWKywse5g"
+remark = "Chick Corea"
+
+[[youtube]]
+id = "RmjhNVZDsFc"
+remark = "Chick Corea, Children's Songs: No. 1"
+
+[versions.Real]
+doChords = false
+doVoice = true
+doLyrics = false
+doLyricsmore = false
+doLyricsmoremore = false
+doChordBars = false
+doGuitar = false
+doExtra = false
+doPrep = false
+doOwn = false
+#}
+{% if part == "Vars" %}
+{% endif %}
+{% if part == "Doc" %}	DONE:
+	- added the meta data from the real book.
+	- put in the tunes structure.
+	- put in the tune (real book).
+	- added youtube performances.
+	TODO:
+	- add the chords (the real book prints no chord symbols and no other book in the archive has this tune).
+	- add the bass/piano ostinato: the real book prints it on a bass clef staff under the whole tune, it is not typed in.
+	- check the tune (real book).
+	- hear the tune to check that it is right and adjust the tempo.
+	- the B part ends with a repeat sign but the page shows no matching start repeat sign (only a double bar), check the repeat.
+	- the page says 'D.S. al Coda' and puts a coda sign after the A part but prints no coda: the tune probably ends at the coda sign.
+{% endif %}
+{% if part == "ChordsReal" %}\chordmode {
+	\startChords
+	\startSong
+
+	\myMark "Intro"
+	\startPart
+	\repeat volta 2 {
+		s2.*4 | \myEndLine
+	}
+	\endPart
+
+	\myMark "A"
+	\startPart
+	\repeat volta 2 {
+		s2.*5 | \myEndLine
+		s2.*5 | \myEndLine
+	}
+	\endPart
+
+	\myMark "B"
+	\startPart
+	\repeat volta 2 {
+		s2.*5 | \myEndLine
+		s2.*5 | \myEndLine
+		s2.*2 | \myEndLine
+	}
+	\endPart
+
+	\endSong
+	\endChords
+}
+{% endif %}
+{% if part == "VoiceReal" %}{
+	\tempo "Andante" 4. = 60
+	\time 6/8
+	\key c \major
+
+	% part "Intro"
+	\repeat volta 2 {
+		r2. | r2. | r2. | r2. |
+	}
+
+	% part "A"
+	\repeat volta 2 {
+		g''2.^\markup { \musicglyph #"scripts.segno" } | r8 bes,4~ bes4. | gis'2. | r8 b,!4~ b4. | e2. |
+		r8 a,4~ a4.~ | a2.~ | a2.~ | a2. | r2.^\markup { \musicglyph #"scripts.coda" } |
+	}
+
+	% part "B"
+	\repeat volta 2 {
+		g'8 b,4 g'8 c, b | g'8 c,4 g'8 d4 | g8 b,4 g'8 c, b | g'8 c,4 g'8 d4 | g8 b,4 g'8 c, b |
+		g'8 c,4 g'8 d4~ | d2.~ | d2. | a2.~ | a2.~ |
+		a2. | r2.^\markup { \italic { D.S. al Coda } } |
+	}
+}
+{% endif %}

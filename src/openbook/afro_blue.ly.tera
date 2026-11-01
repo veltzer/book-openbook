@@ -1,0 +1,132 @@
+{#
+default_version = "Real"
+
+[attributes]
+title = "Afro Blue"
+style = "Latin"
+composer = "Mongo Santamaria"
+piece = "Med. Fast"
+typesetter = "Mark Veltzer <mark.veltzer@gmail.com>"
+completion = "5"
+uuid = "c6fce266-d57a-11f1-8000-046874d194b7"
+structure = "ABAB"
+location = "rbk1:9"
+
+[[youtube]]
+id = "kq2ptW12A6o"
+remark = "John Coltrane, Live At Birdland (1963), the recording the real book refers to"
+
+[[youtube]]
+id = "0BlViAjBKmI"
+remark = "Mongo Santamaria, the composer, in the original recording"
+
+[versions.Real]
+doChords = true
+doVoice = true
+doLyrics = false
+doLyricsmore = false
+doLyricsmoremore = false
+doChordBars = false
+doGuitar = false
+doExtra = false
+doPrep = false
+doOwn = false
+#}
+{% if part == "Vars" %}
+{% endif %}
+{% if part == "Doc" %}	DONE:
+	- added the meta data from the real book.
+	- put in the tunes structure.
+	- put in the chords (real book).
+	- put in the tune (real book).
+	- put in the solo section as printed in the real book (16 bars of F-7, 8 bars of Eb7#9 / C7#9, 8 bars of F-7).
+	- added youtube performances (the real book refers to John Coltrane - "Live At Birdland").
+	TODO:
+	- check the chords (real book).
+	- check the tune (real book).
+	- hear the tune to check that it is right and adjust the tempo.
+	- add the lyrics.
+	REMARKS:
+	- the real book credits the tune to John Coltrane (whose recording it refers to). The composer is Mongo Santamaria.
+	- the real book writes the tune without a key signature with the flats written in. It is typeset here in F minor.
+{% endif %}
+{% if part == "ChordsReal" %}\chordmode {
+	\startChords
+	\startSong
+
+	\myMark "A"
+	\startPart
+	f2.:m7 | g:m7 | aes:maj7 | g:m7 | \myEndLine
+	f:m7 | g:m7 | aes4.:maj7 g:m7 | f2.:m7 | \myEndLine
+	\endPart
+
+	\myMark "B"
+	\startPart
+	ees2.:7sus4 | ees:7sus4 | des4.:7sus4 ees:7sus4 | f2.:m7 | \myEndLine
+	ees2.:7sus4 | ees:7sus4 | des4.:7sus4 ees:7sus4 | f2.:m7 | \myEndLine
+	\endPart
+
+	\myMark "A"
+	\startPart
+	f2.:m7 | g:m7 | aes:maj7 | g:m7 | \myEndLine
+	f:m7 | g:m7 | aes4.:maj7 g:m7 | f2.:m7 | \myEndLine
+	\endPart
+
+	\myMark "B"
+	\startPart
+	ees2.:7sus4 | ees:7sus4 | des4.:7sus4 ees:7sus4 | f2.:m7 | \myEndLine
+	ees2.:7sus4 | ees:7sus4 | des4.:7sus4 ees:7sus4 | f2.:m7 | \myEndLine
+	\endPart
+
+	\myMark "Instr"
+	\startPart
+	\repeat volta 2 {
+		f2.:m7 | f:m7 | f:m7 | f:m7 | \myEndLine
+		f:m7 | f:m7 | f:m7 | f:m7 | \myEndLine
+		f:m7 | f:m7 | f:m7 | f:m7 | \myEndLine
+		f:m7 | f:m7 | f:m7 | f:m7 | \myEndLine
+		ees:7.9+ | ees:7.9+ | c:7.9+ | c:7.9+ | \myEndLine
+		ees:7.9+ | ees:7.9+ | c:7.9+ | c:7.9+ | \myEndLine
+		f:m7 | f:m7 | f:m7 | f:m7 | \myEndLine
+		f:m7 | f:m7 | f:m7 | f:m7 | \myEndLine
+	}
+	\endPart
+
+	\endSong
+	\endChords
+}
+{% endif %}
+{% if part == "VoiceReal" %}{
+	\tempo "Allegro" 4 = 180
+	\time 3/4
+	\key f \minor
+
+	% part "A"
+	f4 c'4. aes8 | bes2. | aes4. bes4. | f2 r8 c8 |
+	f4 c'4. aes8 | bes2. | aes4. bes4. | f2. |
+
+	% part "B"
+	ees4 ees g | ees2. | des4. ees4. | f2. |
+	ees4 ees g | ees2. | des4. aes'4. | f2 f8 aes |
+
+	% part "A"
+	c8 ees r ees4 des8 | c4 c bes8 g | aes aes r g4 ees8 | f2 f8 aes |
+	c8 ees r ees4 des8 | c4 c bes8 g | aes aes r g4 ees8 | f2. |
+
+	% part "B"
+	ees4 ees g | ees2. | des4. ees4. | f2. |
+	ees4 ees g | ees2. | des4. aes'4. | f2. |
+
+	% part "Instr"
+	\repeat volta 2 {
+		r2.^\markup { Solos } | r2. | r2. | r2. |
+		r2. | r2. | r2. | r2. |
+		r2. | r2. | r2. | r2. |
+		r2. | r2. | r2. | r2. |
+		r2. | r2. | r2. | r2. |
+		r2. | r2. | r2. | r2. |
+		r2. | r2. | r2. | r2. |
+		r2. | r2. | r2. | r2. |
+	}
+}
+{% endif %}

@@ -1,0 +1,126 @@
+{#
+default_version = "Real"
+
+[attributes]
+title = "All My Tomorrows"
+style = "Jazz"
+composer = "Jimmy Van Heusen"
+poet = "Sammy Cahn"
+typesetter = "Mark Veltzer <mark.veltzer@gmail.com>"
+completion = "5"
+uuid = "4af6a140-d57d-11f1-8000-046874d194b7"
+structure = "AABA"
+location = "rbk1:15"
+
+[[youtube]]
+id = "L-5qMan4cj4"
+remark = "Frank Sinatra in the original recording (1959)"
+
+[[youtube]]
+id = "sprDy0IF3E8"
+remark = "Shirley Horn"
+
+[versions.Real]
+doChords = true
+doVoice = true
+doLyrics = false
+doLyricsmore = false
+doLyricsmoremore = false
+doChordBars = false
+doGuitar = false
+doExtra = false
+doPrep = false
+doOwn = false
+#}
+{% if part == "Vars" %}
+{% endif %}
+{% if part == "Doc" %}	DONE:
+	- added the meta data from the real book.
+	- put in the tunes structure.
+	- put in the chords (real book).
+	- put in the tune (real book).
+	- added youtube performances.
+	TODO:
+	- check the chords (real book).
+	- check the tune (real book).
+	- hear the tune to check that it is right and adjust the tempo.
+	- the real book prints no style word and no recording for this tune.
+	- the B7 alt chord of the book (bridge, bar 7) is written as B7#5#9.
+	- the first note of the second ending is drawn between D and E, it was typed as E like the other two times this phrase appears.
+	- bar 6 of the last A: the real book draws the last two notes as sixteenths which leaves the bar half a beat short, they were typed as eighths like bar 6 of the first A.
+	- add the lyrics.
+{% endif %}
+{% if part == "ChordsReal" %}\chordmode {
+	\startChords
+	\startSong
+
+	\partial 4 s4 |
+
+	\myMark "A"
+	\startPart
+	\repeat volta 2 {
+		a1:m7 | f:7 | g:maj7/b | bes:dim7 | \myEndLine
+		a:m7 | b2:m7 e:7.9- |
+	} \alternative {
+		{
+			a2:m7 d:7.9- | b:m7.5- e:7.9- | \myEndLineVoltaNotLast
+		}
+		{
+			a2:m7 d:7.9- | g:7sus4 g:7 | \myEndLineVoltaLast
+		}
+	}
+	\endPart
+
+	\myMark "B"
+	\startPart
+	c1:maj7 | f:7sus4 | g:maj7 | cis2:m7.5- c:m | \myEndLine
+	g1/b | a:m7 | b2:7.5+.9+ e4:7sus4 e:7 | a2:m7 b4:m7.5- e:7.9- | \myEndLine
+	\endPart
+
+	\myMark "A"
+	\startPart
+	a1:m7 | f:7 | g:maj7/b | bes:dim7 | \myEndLine
+	a:m7 | b2:m7 e:7.9- | a:m7 d:7.9- | b:m7.5- e:7.9- | \myEndLine
+	\endPart
+
+	\myMark "End"
+	\startPart
+	a4:m7 b:m9 g2:maj7 | a:m7 d:7.9- | g1:6 | \myEndLine
+	\endPart
+
+	\endSong
+	\endChords
+}
+{% endif %}
+{% if part == "VoiceReal" %}{
+	\tempo "Andante" 4 = 80
+	\time 4/4
+	\key g \major
+
+	\partial 4 e4 |
+
+	% part "A"
+	\repeat volta 2 {
+		b'8 b b a b4. a8 | b8 a ees2 r8 fis8 | a8 a4 a16 g a4. g8 | cis,2. r8 d8 |
+		g8 g g g g4. fis16 e | fis8 d e f4. e8 d |
+	} \alternative {
+		{
+			e8 c4 d8 ees4. d8 | d2. r8 dis16 e |
+		}
+		{
+			e8 c4 d8 ees4. fis8 | d1 |
+		}
+	}
+
+	% part "B"
+	r4 e fis g | bes8 a4 g8 g bes4 a16 g | b!8 a4 g8 g4. a8 | b1 |
+	r4 g a b | d8 c4 b8 b d c b | d8 c4 b8 b4 b | d,2. r8 e8 |
+
+	% part "A"
+	b'8 b b a b4. a8 | b8 a ees2 r8 fis8 | a8 a4 a16 g a4. g8 | cis,2. r8 d8 |
+	g8 g g g g4. fis16 e | fis8 d e f4. e8 d | e8 c4 d8 ees4. d8 | b'2. r8 d,8 |
+
+	% part "End"
+	b'8 b b b a a4 b8 | c2. fis,4 | g1 |
+}
+{% endif %}

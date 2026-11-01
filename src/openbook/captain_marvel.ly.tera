@@ -1,0 +1,163 @@
+{#
+default_version = "Real"
+
+[attributes]
+title = "Captain Marvel"
+style = "Latin"
+composer = "Chick Corea"
+piece = "Samba (Fast)"
+typesetter = "Mark Veltzer <mark.veltzer@gmail.com>"
+completion = "3"
+uuid = "e4304528-d57d-11f1-8000-046874d194b7"
+structure = "Intro-ABCD-Instr-Coda"
+location = "rbk1:70-71"
+
+[[youtube]]
+id = "ru6E_OOX0NU"
+remark = "Chick Corea and Return To Forever, from the album Light As A Feather (1973)"
+
+[[youtube]]
+id = "1AAYUHCjsDA"
+remark = "Stan Getz with Chick Corea, from the album Captain Marvel"
+
+[versions.Real]
+doChords = true
+doVoice = true
+doLyrics = false
+doLyricsmore = false
+doLyricsmoremore = false
+doChordBars = false
+doGuitar = false
+doExtra = false
+doPrep = false
+doOwn = false
+#}
+{% if part == "Vars" %}
+{% endif %}
+{% if part == "Doc" %}	DONE:
+	- added the meta data from the real book.
+	- put in the tunes structure.
+	- put in the chords (real book).
+	- put in the tune (real book).
+	- the real book names the recordings Chick Corea - Light As A Feather and Stan Getz - Captain Marvel.
+	- added youtube performances.
+	TODO:
+	- check the chords (real book).
+	- check the tune (real book).
+	- hear the tune to check that it is right and adjust the tempo.
+	- the high ledger line notes (intro, the Bb- bars of A and the A- bars at the end of Instr) are hard to read in the handwritten scan, check them.
+	- the vamp figure at the start of Instr (and the first bar of the coda) is written in the book as low two note chords; only the top note is typed here. Put in the full voicing.
+	- the chords of the last bar of D, the chord bar in Instr and the last bar of the coda are low voicings; only the top notes are typed in Instr and in the coda. Check them.
+	- the coda notes are written as diamond (harmonic) heads on B with no flat; typed as bes because the harmony implies it.
+	- the book has repeat dots at the end of the last line of D and of Instr too; their meaning is unclear (not typed).
+{% endif %}
+{% if part == "ChordsReal" %}\chordmode {
+	\startChords
+	\startSong
+
+	\myMark "Intro"
+	\startPart
+	s1*2 | \myEndLine
+	\endPart
+
+	\myMark "A"
+	\startPart
+	\repeat volta 2 {
+		e1*2:m | b:m | \myEndLine
+		fis:m | bes1:m | bes:m/aes | \myEndLine
+		g:m7.5- | c:7 | des:maj7 | ges:maj7 | \myEndLine
+		f1*2:7 | \myEndLine
+	}
+	\endPart
+
+	\myMark "B"
+	\startPart
+	\repeat volta 2 {
+		bes1*2 | ees | \myEndLine
+	}
+	\endPart
+
+	\myMark "C"
+	\startPart
+	\repeat volta 2 {
+		d1:m | des:7 | c:m7 | f:7 | \myEndLine
+		g1*2:m | aes:maj7 | \myEndLine
+	}
+	\endPart
+
+	\myMark "D"
+	\startPart
+	\repeat volta 2 {
+		d1:m | ees:maj7 | e:m7.5- | ees:maj7 | \myEndLine
+	}
+	d1:m7 | des:7 | c:m7 | f:7sus4 | \myEndLine
+	\endPart
+
+	\myMark "Instr"
+	\startPart
+	\repeat volta 2 {
+		g1*4:m | \myEndLine
+	}
+	g1*2:m7 | f:m7+ | \myEndLine
+	f1*2/g | a:m | \myEndLine
+	\endPart
+
+	\myMark "Coda"
+	\startPart
+	g1:m | ees1*2:maj7 | e1:m7.5- | \myEndLine
+	e1:m7.5- | c1*3:m7/f | \myEndLine
+	c1:m7/f | s1 | \myEndLine
+	\endPart
+
+	\endSong
+	\endChords
+}
+{% endif %}
+{% if part == "VoiceReal" %}{
+	\tempo "Allegro" 4 = 200
+	\time 4/4
+	\key c \major
+
+	% part "Intro"
+	r4. e'8 d'4 b8 d | d4 c8 b d4 b |
+
+	% part "A"
+	\repeat volta 2 {
+		g4.^\markup { \musicglyph #"scripts.segno" } e8 e2~ | e2. b4 | d4. fis8 fis2~ | fis2. a4 |
+		a4. fis8 fis2~ | fis1 | r4 r8 ges8 ees'4 des8 ees | ges4 ees8 des ees4 bes |
+		bes4. des,8~ des2~ | des8 ees4 ees ees ees8 | c4 bes8 ees8~ ees2 | r4 des c ces |
+		bes4 g8 c8~ c2~ | c2. des8 f |
+	}
+
+	% part "B"
+	\repeat volta 2 {
+		c4 bes8 d8~ d2~ | d4 c bes a | a4 g8 c8~ c2~ | c4 bes a g |
+	}
+
+	% part "C"
+	\repeat volta 2 {
+		g4 f8 bes a f4 f8~ | f8 ees4 ees d d8~ | d4 c8 ees8~ ees2 | r4 d c bes |
+		d4 r r2 | r2 r4 d | c4. ees8~ ees2~ | ees2. f4 |
+	}
+
+	% part "D"
+	\repeat volta 2 {
+		g2 g8 f4 g8~ | g2~ g8 f4 g8 | bes4 a g8 f4 g8~ | g2 g8 g f4 |
+	}
+
+	g4 g a8 g f g~ | g2 f4 g | <ees c'>4 <d bes'> <c a'>8 <bes g'>4 <ees bes'>8~ | <ees bes'>2 r8 <f, bes c ees>4. |
+
+	% part "Instr"
+	\repeat volta 2 {
+		g'2 f4. f8~ | f4 f2. | g2^\markup { To Coda \musicglyph #"scripts.coda" (2nd time only) } f4. f8~ | f4 f2. |
+	}
+
+	r1 | r1 | r1 | r1 |
+	r1 | r4 e'4 d4. c8-^ | r4 r8 e8 d'4 b8 d | d4 c8 b d4 b^\markup { D.S. al Coda } |
+
+	% part "Coda"
+	g,2^\markup { \musicglyph #"scripts.coda" } f4. bes8~ | bes1~ | bes2 r4 r8 bes8~ | bes1~ |
+	bes2 r4 r8 bes8~ | bes1~ | bes1 | r4 r8 d,8 bes'4 a8 bes |
+	c4. bes8-^ r8 f'4-^ g8-^ | r1^\markup { \italic { Fine } } |
+}
+{% endif %}

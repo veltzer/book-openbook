@@ -1,0 +1,138 @@
+{#
+default_version = "Real"
+
+[attributes]
+title = "De Pois Do Amor O Vazio"
+style = "Latin"
+composer = "Wayne Shorter"
+piece = "Latin"
+typesetter = "Mark Veltzer <mark.veltzer@gmail.com>"
+completion = "5"
+uuid = "a84b9032-d585-11f1-8000-046874d194b7"
+structure = "Intro-A-B-Instr"
+location = "rbk1:110-111"
+
+[[youtube]]
+id = "a1_aMSsJ2k0"
+remark = "Wayne Shorter, the composer"
+
+[[youtube]]
+id = "RIEdXblkwCw"
+remark = "Dayna Stephens"
+
+[versions.Real]
+doChords = true
+doVoice = true
+doLyrics = false
+doLyricsmore = false
+doLyricsmoremore = false
+doChordBars = false
+doGuitar = false
+doExtra = false
+doPrep = false
+doOwn = false
+#}
+{% if part == "Vars" %}
+{% endif %}
+{% if part == "Doc" %}	DONE:
+	- added the meta data from the real book.
+	- put in the tunes structure.
+	- put in the chords (real book).
+	- put in the tune (real book).
+	- added youtube performances.
+	TODO:
+	- check the chords (real book).
+	- check the tune (real book).
+	- hear the tune to check that it is right and adjust the tempo.
+	- intro bar 2 (A7#9) is rubato and holds four half notes and two quarters; it is written here as a 10/4 bar. The second E of the bar has no accidental of its own and is written as E flat (the flat earlier in the bar). Check it.
+	- intro: after 'A tempo' the book prints a 4/4 bar with a wavy line and a '(4)' in it, read here as four bars of vamp before the head (written as rests, no chords printed). Check it against a recording.
+	REMARKS:
+	- the index of the real book spells the title 'De Pois De Amor O Vazio'; the page spells it 'De Pois Do Amor O Vazio'.
+	- the real book prints no recording reference for this tune.
+	- the book prints the repeated A and B sections with the segno, a first ending of twelve bars and a second ending of four bars, then a B- (maj7) solo section of four bars with a repeat sign and '(D.S.)'.
+	- many bars are repeat signs in the book; they are written out here.
+{% endif %}
+{% if part == "ChordsReal" %}\chordmode {
+	\startChords
+	\startSong
+
+	\myMark "Intro"
+	\startPart
+	e1:7.9+ | a2*5:7.9+ | aes1:5+.11+ | g2:7.5- fis:7.5- | \myEndLine
+	f1:7.5+ | s1*4 | \myEndLine
+	\endPart
+
+	\myMark "A"
+	\startPart
+	\repeat volta 2 {
+		ees1:maj7.11+ | ees:maj7.11+ | d:m7 | d:m7 | \myEndLine
+		c:m7 | c:m7 | f:7 | f:7 | \myEndLine
+		e:maj7.11+ | e:maj7.11+ | b:maj7 | bes:7 | \myEndLine
+		ees:maj7.11+ | ees:maj7.11+ | d:7.9+ | d:7.9+ | \myEndLine
+		g:m7 | g:m7 | a:7sus4 | a:7sus4 | \myEndLine
+	} \alternative {
+		{
+			c:m7 | c:m7 | f:7 | f:7 | \myEndLine
+			b:m7.5- | b:m7.5- | e:7.9- | e:7.9- | \myEndLine
+			ees:m7 | ees:m7 | ees:m7 | ees:m7 | \myEndLineVoltaNotLast
+		}
+		{
+			ees:m7 | ees:m7 | f:m7 | f:m7 | \myEndLineVoltaLast
+		}
+	}
+	\endPart
+
+	\myMark "B"
+	\startPart
+	g1:m7 | g:m7 | a:7sus4 | a:7sus4 | \myEndLine
+	d:m7 | d:m7 | d:m7 | d:m7 | \myEndLine
+	\endPart
+
+	\myMark "Instr"
+	\startPart
+	\repeat volta 2 {
+		b1:m7+ | b:m7+ | b:m7+ | b:m7+ | \myEndLine
+	}
+	\endPart
+
+	\endSong
+	\endChords
+}
+{% endif %}
+{% if part == "VoiceReal" %}{
+	\tempo "Moderato" 4 = 120
+	\time 4/4
+	\key c \major
+
+	% part "Intro"
+	c'2^\markup { Rubato } e,4 g | \time 10/4 c2 ees b! ees d,4 e | \time 4/4 c'2 d | cis2 c! |
+	cis1 | r1^\markup { A tempo } | r1 | r1 | r1 |
+
+	% part "A"
+	\repeat volta 2 {
+		d1~^\markup { \musicglyph #"scripts.segno" } | d~ | d~ | d2 \tuplet 3/2 { r4 d,4 ees } |
+		d'1~ | d~ | d~ | d |
+		ais1~ | ais~ | ais~ | ais2 r8 d4 a8~ |
+		a1~ | a~ | a | r2 \tuplet 3/2 { r4 g a } |
+		bes1~ | bes | r1 | r2 \tuplet 3/2 { r4 d, ees } |
+	} \alternative {
+		{
+			f1~ | f~ | f~ | f |
+			f'1~ | f~ | f | r2 \tuplet 3/2 { r4 d bes } |
+			des1~ | des~ | des~ | des |
+		}
+		{
+			f,1 | f2.. bes8 | g4 bes8 g~ g2~ | g1 |
+		}
+	}
+
+	% part "B"
+	a'1~ | a~ | a~ | a2 \tuplet 3/2 { g4 e f } |
+	d1~ | d~ | d~ | d |
+
+	% part "Instr"
+	\repeat volta 2 {
+		r1^\markup { Solo } | r1 | r1 | r1^\markup { D.S. } |
+	}
+}
+{% endif %}

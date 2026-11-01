@@ -1,0 +1,103 @@
+{#
+default_version = "Real"
+
+[attributes]
+title = "Broadway Blues"
+style = "Jazz"
+composer = "Ornette Coleman"
+piece = "Jazz"
+typesetter = "Mark Veltzer <mark.veltzer@gmail.com>"
+completion = "3"
+uuid = "9c060a4a-d57b-11f1-8000-046874d194b7"
+structure = "AB"
+location = "rbk1:65"
+
+[[youtube]]
+id = "ue0XTgUx24o"
+remark = "Ornette Coleman in the original recording (New York Is Now!, 1968)"
+
+[[youtube]]
+id = "FBFxDR8DZZ0"
+remark = "Pat Metheny Group"
+
+[versions.Real]
+doChords = false
+doVoice = true
+doLyrics = false
+doLyricsmore = false
+doLyricsmoremore = false
+doChordBars = false
+doGuitar = false
+doExtra = false
+doPrep = false
+doOwn = false
+#}
+{% if part == "Vars" %}
+{% endif %}
+{% if part == "Doc" %}	DONE:
+	- added the meta data from the real book.
+	- put in the tunes structure.
+	- put in the tune (real book).
+	- the real book prints no chords and no style word for this tune, so doChords is false.
+	- added youtube performances.
+	TODO:
+	- add the chords.
+	- check the tune (real book).
+	- hear the tune to check that it is right and adjust the tempo.
+	- the key signature is hard to read in the handwritten scan; it was read as two flats.
+	- the accidental in front of the G (A bars 7, 8, 9, 10 and B bar 7) was read as a flat; check.
+	- A bars 2 and 4: the second note was read as B flat (it could be an A).
+	- the 6/4 bars (A bar 11 and B bar 5): the four eighths after the triplet and the low quarter are hard to read; the curved sign at the end of these bars was read as a quarter rest.
+	- A bars 12-13: the heads with ledger lines were read as C4.
+	- B bar 8: the triplet accidentals are unclear.
+	- B bar 9: the low notes are hard to read and the last note is printed in parentheses (typed as a parenthesized G); the book writes a 'C' like sign over the final bar line.
+	- the book has a start repeat sign after the pickup but the end repeat is unclear; the whole tune is written here as one repeat.
+{% endif %}
+{% if part == "ChordsReal" %}\chordmode {
+	\startChords
+	\startSong
+
+	\partial 8 s8 |
+
+	\myMark "A"
+	\startPart
+	\repeat volta 2 {
+		s1 | s1 | s1 | s1 | \myEndLine
+		s1 | s1 | s1 | s1 | \myEndLine
+		s1 | s1 | s1. | \myEndLine
+		s1 | s1 | \myEndLine
+		\endPart
+
+		\myMark "B"
+		\startPart
+		s1 | s1 | \myEndLine
+		s1 | s1 | s1. | \myEndLine
+		s1 | s1 | s1 | s1 | \myEndLine
+	}
+	\endPart
+
+	\endSong
+	\endChords
+}
+{% endif %}
+{% if part == "VoiceReal" %}{
+	\tempo "Moderato" 4 = 120
+	\time 4/4
+	\key bes \major
+
+	\partial 8 g'8 |
+
+	% part "A"
+	\repeat volta 2 {
+		g4 bes ees-. ees,8 ees | g4 bes8 ees-. r4 ees,8 ees | g4 bes ees-. ees,8 ees | g4 bes8 ees-. r4 ees,8 ees |
+		g4 bes ees-. ees,8 ees | g4 bes8 ees-. r4 ees,8 ees | ges8 ees a ees a4-. ees8 ees | ges4 a8 c-. r4 ees,8 ees |
+		ges8 ees a ees bes' bes ees, ees | ges4 a8 c-. r2 | \time 6/4 r8 a8~ \tuplet 3/2 { a8 g f } f8 ees d c bes4 r4 |
+		\time 4/4 c8 d f c d f c d | a'8 f-. c4-. f4 r4 |
+
+		% part "B"
+		e!4 g c-. c,8 c | e!4 g8 c-. r4 c,8 c |
+		e!4 g c-. c,8 c | e!4 g8 c-. r2 | \time 6/4 r8 a8~ \tuplet 3/2 { a8 g f } ees8 d c bes a4 r4 |
+		\time 4/4 c'4 c a ees8 ees | ges4 a8 a r4. c8 | \tuplet 3/2 { bes16 c bes } a8 bes g a e! f d | e!4 a,8 c r4 \parenthesize g'4 |
+	}
+}
+{% endif %}

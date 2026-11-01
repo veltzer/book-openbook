@@ -1,0 +1,143 @@
+{#
+default_version = "Real"
+
+[attributes]
+title = "Blessed Relief"
+style = "Jazz"
+composer = "Frank Zappa"
+piece = "Jazz Waltz"
+typesetter = "Mark Veltzer <mark.veltzer@gmail.com>"
+completion = "3"
+uuid = "06c9ded6-d57f-11f1-8000-046874d194b7"
+structure = "ABCD"
+location = "rbk1:50"
+
+[[youtube]]
+id = "2zXp4ZfRGsA"
+remark = "Frank Zappa, the original recording from The Grand Wazoo (1972)"
+
+[[youtube]]
+id = "D5_zPD05ONY"
+remark = "Zappa Plays Zappa, live in Baltimore 2010"
+
+[versions.Real]
+doChords = true
+doVoice = true
+doLyrics = false
+doLyricsmore = false
+doLyricsmoremore = false
+doChordBars = false
+doGuitar = false
+doExtra = false
+doPrep = false
+doOwn = false
+#}
+{% if part == "Vars" %}
+{% endif %}
+{% if part == "Doc" %}	DONE:
+	- added the meta data from the real book.
+	- put in the tunes structure.
+	- put in the chords (real book).
+	- put in the tune (real book).
+	- added youtube performances.
+	- the real book names the recording: Frank Zappa - "Grand Wazoo".
+	- the intro is a bass line in the bass clef, the real book says "solo over bass line" and, after the solos, "end by soloing over intro".
+	- the solo section is marked "E" in the real book, here it is marked "Instr".
+	TODO:
+	- check the chords (real book).
+	- check the tune (real book).
+	- hear the tune to check that it is right and adjust the tempo.
+	- intro bar 3 has a natural on the b (not a flat as in bar 1), check it.
+	- the last note of the intro has a fall (a wavy line down), it is put in as a bend.
+	- the half notes at the end of bars 2, 4 and 8 of the A section hang below the staff without a ledger line, they are read as d (they could be c).
+	- the two-note chords in bars 6 and 7 of the D section are hard to read (read as e-g and c-e), check them.
+	- each bar of the solo section has a wavy line with a "4" in it in the real book (probably four bars of each chord), here it is one bar of slashes per chord.
+{% endif %}
+{% if part == "ChordsReal" %}\chordmode {
+	\startChords
+	\startSong
+
+	\myMark "Intro"
+	\startPart
+	\repeat volta 2 {
+		bes2.:maj7.11+ | bes:maj7.11+ | bes:maj7.11+ | bes:maj7.11+ | \myEndLine
+	}
+	\endPart
+
+	\myMark "A"
+	\startPart
+	f2.:maj7 | g:m7 | a:m7 | ees:maj7 | \myEndLine
+	f:maj7 | g:m7 | a:m7 | ees:maj7 | \myEndLine
+	\endPart
+
+	\myMark "B"
+	\startPart
+	bes:maj7 | c:7/bes | g:m7 | c:7 | \myEndLine
+	bes:maj7 | c:7/bes | g:m7 | c:7 | \myEndLine
+	\endPart
+
+	\myMark "C"
+	\startPart
+	bes:maj7 | a:m7 | g:m7 | e:m7.5- | \myEndLine
+	bes:maj7 | a:m7 | g:m7 | e:m7.5- | \myEndLine
+	bes:maj7 | a:m7 | g:m7 | e:m7.5- | \myEndLine
+	\endPart
+
+	\myMark "D"
+	\startPart
+	a:m7 | a:m7 | a:m7 | a:m7 | \myEndLine
+	g:m7 | g:m7 | g:m7 | g:m7 | \myEndLine
+	\endPart
+
+	\myMark "Instr"
+	\startPart
+	\repeat volta 2 {
+		fis:m7 | e:maj7 | fis:m7 | e:maj7 | \myEndLine
+		a:m7 | g:m7 | \myEndLine
+	}
+	\endPart
+
+	\endSong
+	\endChords
+}
+{% endif %}
+{% if part == "VoiceReal" %}{
+	\tempo "Moderato" 4 = 132
+	\time 3/4
+	\key c \major
+
+	\clef bass
+
+	% part "Intro"
+	\repeat volta 2 {
+		bes,4~ bes8 f' bes8. f16 | c'8. f,16 c'4 r8 f,8 | b,!4~ b8 f' bes8. f16 | c'2.\bendAfter #-4 |
+	}
+
+	\clef treble
+
+	% part "A"
+	c'16 a8. a16 r8 g16 g8. a16 | e4 d2 | a16 c8. c16 r8 a16 c8. d16 | f4 d2 |
+	c'16 a8. a16 r8 g16 g8. a16 | e4 d4. c8 | a16 c8. c16 r8 a16 c8. d16 | f16 d8. d2 |
+
+	% part "B"
+	\tuplet 3/2 { f8 e f~ } f2 | \tuplet 3/2 { g8 f g~ } g2 | a4. \tuplet 3/2 { bes16 a g } a8. bes16 | c2. |
+	\tuplet 3/2 { f,8 e f~ } f2 | \tuplet 3/2 { g8 f g~ } g2 | a4. \tuplet 3/2 { bes16 a g } a8. bes16 | c4. f,16 g a bes g a |
+
+	% part "C"
+	d,2~ d8. d16 | c2~ c8. c16 | bes2. | g4. f'16 g a bes g a |
+	d,2~ d8. d16 | c2~ c8. c16 | bes2. | g4. f'16 g a bes g a |
+	d,2~ d8. d16 | c2~ c8. c16 | bes2. | g2. |
+
+	% part "D"
+	r4 b'!4. g8 | b8. d16 b4. g8 | b8. g16 g4. e8 | g4 e2 |
+	r4 a4. f8 | <e' g>8. <c e>16 <c e>4. f,8 | <e' g>8. <c e>16 <c e>4. d8 | \tuplet 3/2 { c8 b! a } \tuplet 3/2 { g f e } \tuplet 3/2 { d c bes } |
+
+	% part "Instr"
+	\repeat volta 2 {
+		\improvisationOn
+		b'4 b b | b b b | b b b | b b b |
+		b4 b b | b b b |
+		\improvisationOff
+	}
+}
+{% endif %}

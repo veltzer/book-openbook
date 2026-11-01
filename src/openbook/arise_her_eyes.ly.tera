@@ -1,0 +1,92 @@
+{#
+default_version = "Real"
+
+[attributes]
+title = "Arise, Her Eyes"
+style = "Jazz"
+composer = "Steve Swallow"
+piece = "Ballad"
+typesetter = "Mark Veltzer <mark.veltzer@gmail.com>"
+completion = "3"
+uuid = "50865846-d57b-11f1-8000-046874d194b7"
+structure = "AB"
+location = "rbk1:28-29"
+
+[[youtube]]
+id = "FnARlFAU-0w"
+remark = "Gary Burton, from 'Alone At Last', the recording the real book refers to"
+
+[[youtube]]
+id = "hzBHwPOfwJM"
+remark = "Chick Corea and Gary Burton, from 'Crystal Silence'"
+
+[versions.Real]
+doChords = true
+doVoice = true
+doLyrics = false
+doLyricsmore = false
+doLyricsmoremore = false
+doChordBars = false
+doGuitar = false
+doExtra = false
+doPrep = false
+doOwn = false
+#}
+{% if part == "Vars" %}
+{% endif %}
+{% if part == "Doc" %}	DONE:
+	- added the meta data from the real book.
+	- put in the tunes structure.
+	- put in the chords (real book).
+	- put in the tune (real book).
+	- added youtube performances (the real book refers to Gary Burton - "Alone At Last" and Gary Burton/Chick Corea - "Crystal Silence").
+	TODO:
+	- check the chords (real book).
+	- check the tune (real book).
+	- hear the tune to check that it is right and adjust the tempo.
+	- the real book prints the piece as melody plus a piano part (chord voicings and bass); only the melody and the chord names were put in.
+	- bar 3: the six sixteenths are hard to read in the book; the last two notes may be g flat and a flat.
+	- bar 10: the triplet sixteenths are hard to read in the book (several flats); check them. The eighth after the first note has no flat in the book (c, not c flat).
+	- bar 11: the first note sits between e flat and d flat in the book; typed as d flat.
+	- bar 15: the second note is hard to read; typed as e flat.
+	- bar 24: the book adds a parenthesized f natural (dotted quarter) after the last note, and says "rit. last x" and "Fine"; check how to show this.
+	- the Ab-7(add4) chord of bar 10 is written as Ab-7(11).
+{% endif %}
+{% if part == "ChordsReal" %}\chordmode {
+	\startChords
+	\startSong
+
+	\myMark "A"
+	\startPart
+	c2. | f:m | c:dim | c:7 | \myEndLine
+	des:dim | ges:m | ges:m | des | \myEndLine
+	ges | aes:m7.11 | ges:dim | ges | \myEndLine
+	\endPart
+
+	\myMark "B"
+	\startPart
+	aes:dim | bes:m | bes:m | f | \myEndLine
+	e:dim | e:7 | a:dim | a | \myEndLine
+	d:dim | d:7 | g:dim | g | \myEndLine
+	\endPart
+
+	\endSong
+	\endChords
+}
+{% endif %}
+{% if part == "VoiceReal" %}{
+	\tempo "Adagio" 4. = 46
+	\time 6/8
+	\key c \major
+
+	% part "A"
+	r4 b''8 bes,4 ees8 | ees8 f, c'~ c4. | r4 d8 ees,16 c ees f ges' g | e2. |
+	r4 e8 ees,4 ees'8~ | ees4 c,8~ c des ees | ges'4.~ ges8 f ees | ees4. des~ |
+	des4 des8 e,4.~ | e4 c'8 \tuplet 3/2 { f16 ees des } ees8 ees,8 | des4 d'8 f4 ees8 | ees4 des8~ des4 aes'8 |
+
+	% part "B"
+	g,4. a'4 aes8 | g,4.~ g4 aes8 | f'8 ees4 c,4 bes'8 | a4. r4 g'8 |
+	g8 fis,4~ fis e16 g | gis4.~ gis4 b,8 | fis'2. | e2. |
+	r4 e8 fis'4.~ | fis4 e8 d4. | r4 fis,8 g'4.~ | g2.^\markup { \italic { Fine } } |
+}
+{% endif %}

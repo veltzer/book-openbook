@@ -1,0 +1,117 @@
+{#
+default_version = "Real"
+
+[attributes]
+title = "Dear Old Stockholm"
+style = "Jazz"
+composer = "Traditional"
+typesetter = "Mark Veltzer <mark.veltzer@gmail.com>"
+completion = "5"
+uuid = "6e653370-d583-11f1-8000-046874d194b7"
+structure = "Intro-A-B-Coda"
+location = "rbk1:108"
+
+[[youtube]]
+id = "my6OUXB0e-A"
+remark = "Miles Davis (the recording the real book cites)"
+
+[[youtube]]
+id = "bNwgEwZDSZo"
+remark = "John Coltrane"
+
+[versions.Real]
+doChords = true
+doVoice = true
+doLyrics = false
+doLyricsmore = false
+doLyricsmoremore = false
+doChordBars = false
+doGuitar = false
+doExtra = false
+doPrep = false
+doOwn = false
+#}
+{% if part == "Vars" %}
+{% endif %}
+{% if part == "Doc" %}	DONE:
+	- added the meta data from the real book.
+	- put in the tunes structure.
+	- put in the chords (real book).
+	- put in the tune (real book).
+	- the real book cites the recording Miles Davis - 'Miles Davis Vol. 2'.
+	- added youtube performances.
+	TODO:
+	- check the chords (real book).
+	- check the tune (real book).
+	- hear the tune to check that it is right and adjust the tempo.
+	- the intro/vamp figure (bars 1-4 and the end of the A section) is written on the bottom line of the staff (E) in this book; the transposed (Bb) real book seems to write it one step lower (concert D). Check against a recording.
+	- the page shows no key signature (only the time signature); it is written here in D minor (one flat), as the B flats under G-7, A7b9 and E-7b5 B flat7 imply and as the transposed (Bb) real book has it.
+	- bar 9 (G-7): the first four eighths are hard to read (written here as A G F# G), and the B flat pair is written here as a dotted eighth and a sixteenth. Check them.
+	REMARKS:
+	- the real book prints 'Varmland' where the composer usually goes: this is the traditional Swedish song 'Ack Varmeland, du skona'.
+	- the real book prints no style word for this tune, so there is no piece attribute.
+	- form as printed: a four bar intro vamp with a repeat sign, then a repeated A section (with the segno) ending with the vamp, then the B section with 'D.S. al Coda'. The coda sign is printed at bar 10 (the second D- bar of A).
+	- the third and fourth bars of the intro (and of the vamp, and the fourth and fifth bars of the coda) are a two bar repeat sign in the book; they are written out here.
+	- the A7 alt chord of the coda is written here as A7#5#9.
+	- the two last bars of the coda are rests (D-).
+{% endif %}
+{% if part == "ChordsReal" %}\chordmode {
+	\startChords
+	\startSong
+
+	\myMark "Intro"
+	\startPart
+	\repeat volta 2 {
+		d1:m7 | d:m6 | d:m7 | d:m6 | \myEndLine
+	}
+	\endPart
+
+	\myMark "A"
+	\startPart
+	\repeat volta 2 {
+		d1:m | e2:m7.5- a:7.9- | d:m a:7.9+ | d1:m | \myEndLine
+		g:m7 | d:m | e:m7.5- | a:7.9- | \myEndLine
+		d:m7 | d:m6 | d:m7 | d:m6 | \myEndLine
+	}
+	\endPart
+
+	\myMark "B"
+	\startPart
+	f1 | g2:m7 c:7 | f1 | e2:m7.5- bes4:7 a:7 | \myEndLine
+	\endPart
+
+	\myMark "Coda"
+	\startPart
+	d1:m | c:7sus4 | c:7sus4 | c:7sus4 | c:7sus4 | \myEndLine
+	c:7sus4 | c2:7sus4 a:7.5+.9+ | g:m7 a:7.9- | d1:m | d:m | \myEndLine
+	\endPart
+
+	\endSong
+	\endChords
+}
+{% endif %}
+{% if part == "VoiceReal" %}{
+	\tempo "Moderato" 4 = 120
+	\time 4/4
+	\key d \minor
+
+	% part "Intro"
+	\repeat volta 2 {
+		r4 r8 e8~ e2 | r4 r8 e8~ e8 e4. | r4 r8 e8~ e2 | r4 r8 e8~ e8 e4. |
+	}
+
+	% part "A"
+	\repeat volta 2 {
+		d4^\markup { \musicglyph #"scripts.segno" } r8 e8 f4 g8 a8~ | a2 r4 d8 e8~ | e4 d8 c8~ c4 bes8 a8~ | a1 |
+		a8 g fis g bes8. bes16 a8 g | f2~^\markup { \musicglyph #"scripts.coda" } f8 a f e~ | e1~ | e2 r8 ees4. |
+		r4 r8 e8~ e2 | r4 r8 e8~ e8 e4. | r4 r8 e8~ e2 | r4 r8 e8~ e8 e4. |
+	}
+
+	% part "B"
+	r8 f4. f8 e f a~ | a8 c bes g a2 | r8 f4. f8 e f c'~ | \tuplet 3/2 { c4 bes g } des'8 c4.^\markup { D.S. al Coda } |
+
+	% part "Coda"
+	f,2~ f8 c' f, c | r8 f4. f4-^ g-^ | a4. a8-^ r2 | r8 f4. f4-^ g-^ | a4. a8-^ r2 |
+	r8 f4. f4 g | a4. g8~ g4. f8~ | f2 g4 r8 f8 | R1 | R1 |
+}
+{% endif %}

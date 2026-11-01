@@ -1,0 +1,129 @@
+{#
+default_version = "Real"
+
+[attributes]
+title = "All In Love Is Fair"
+style = "Jazz"
+composer = "Stevie Wonder"
+piece = "Ballad"
+typesetter = "Mark Veltzer <mark.veltzer@gmail.com>"
+completion = "5"
+uuid = "dfb86a40-d57b-11f1-8000-046874d194b7"
+structure = "AAB"
+location = "rbk1:14"
+
+[[youtube]]
+id = "1surYguNfEg"
+remark = "Stevie Wonder in the original recording (Innervisions, 1973)"
+
+[[youtube]]
+id = "cJCh5ryRaH0"
+remark = "Barbra Streisand"
+
+[versions.Real]
+doChords = true
+doVoice = true
+doLyrics = false
+doLyricsmore = false
+doLyricsmoremore = false
+doChordBars = false
+doGuitar = false
+doExtra = false
+doPrep = false
+doOwn = false
+#}
+{% if part == "Vars" %}
+{% endif %}
+{% if part == "Doc" %}	DONE:
+	- added the meta data from the real book.
+	- put in the tunes structure.
+	- put in the chords (real book).
+	- put in the tune (real book).
+	- the real book names the recording: Stevie Wonder - Innervisions.
+	- added youtube performances.
+	TODO:
+	- check the chords (real book).
+	- check the tune (real book).
+	- hear the tune to check that it is right and adjust the tempo.
+	- the A7 alt chord of the book (bar 20) is written as A7#5#9.
+	- the real book shows a scoop (glissando from below) into the first A of bar 22, it is not notated.
+	- bar 20: the ledger line note over the A7 alt chord is drawn between A and B, it was typed as A.
+	- add the lyrics.
+{% endif %}
+{% if part == "ChordsReal" %}\chordmode {
+	\startChords
+	\startSong
+
+	\myMark "Intro"
+	\startPart
+	d1:m | d:m/c | bes2:maj7 aes:maj7 | g:7sus4 c:7sus4 | \myEndLine
+	\endPart
+
+	\myMark "A"
+	\startPart
+	\repeat volta 2 {
+		d1:m | d:m/c | b:m7.5- | bes:maj7 | \myEndLine
+		a:m7.5- | d:7 | g:m7 | c:7sus4 | \myEndLine
+
+		\myMark "A"
+		d1:m | d:m/c | b:m7.5- | bes:maj7 | \myEndLine
+		a:m7.5- | d:7.9+ | g:m7 | a2:7sus4 a:7.5+.9+ | \myEndLine
+
+		\myMark "B"
+		d1:m | d:m/c | b:m7.5- | bes2:m6 ees:9 | \myEndLine
+		f/c d:7 | g:9 c:7sus4 | f1 |
+	} \alternative {
+		{
+			a1:7.9- | \myEndLineVoltaNotLast
+		}
+		{
+			bes2:m6 ees:9 | f/c d:7 | g:7 c:7sus4 | \myEndLineVoltaLast
+		}
+	}
+	\endPart
+
+	\myMark "End"
+	\startPart
+	f2. | f2.:7/ees | bes2/d a:7/cis | d1:m | \myEndLine
+	\endPart
+
+	\endSong
+	\endChords
+}
+{% endif %}
+{% if part == "VoiceReal" %}{
+	\tempo "Adagio" 4 = 66
+	\time 4/4
+	\key d \minor
+
+	% part "Intro"
+	r1 | r1 | r1 | r2 g'8 a f a |
+
+	% part "A"
+	\repeat volta 2 {
+		a2. r4 | r2 g8 a f f | d'2. r4 | r4 r8 d8 d d bes c |
+		c2. r4 | r4 r8 a8 a a bes c | a2. r4 | r4 r8 c,8 g' a f f |
+
+		% part "A"
+		a2. r4 | r4 r8 c,8 g' a f f | d'2. r4 | r4 r8 f,8 c' bes c d |
+		ees16 c d bes c2. | r4 r8 fis,8 d' c d f! | f2. r4 | r4 r8 b,8 g' a f f |
+
+		% part "B"
+		a2. r4 | r4 r8 a8 \tuplet 3/2 { a8 g f } f4~ | f2. r4 | r4 r8 ees8 f bes, bes c |
+		c4. a8 a a bes c | a4. c,8 g' a f f | f1 |
+	} \alternative {
+		{
+			r2 g8 a f f |
+		}
+		{
+			r4 r8 ees'8 f c bes c | c4. f,8 a f g bes | a4. c,8 g' a f f |
+		}
+	}
+
+	% part "End"
+	\time 3/4
+	f'2.~ | f2.~ |
+	\time 4/4
+	f2 r2 | r1\fermata |
+}
+{% endif %}

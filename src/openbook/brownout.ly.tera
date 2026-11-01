@@ -1,0 +1,103 @@
+{#
+default_version = "Real"
+
+[attributes]
+title = "Brownout"
+style = "Jazz"
+composer = "Gary Burton"
+piece = "Jazz"
+typesetter = "Mark Veltzer <mark.veltzer@gmail.com>"
+completion = "3"
+uuid = "87dd1206-d582-11f1-8000-046874d194b7"
+structure = "AB"
+location = "rbk1:66"
+
+[[youtube]]
+id = "NaShvGa_orY"
+remark = "Gary Burton, The New Quartet (1973), the recording the real book refers to"
+
+[[youtube]]
+id = "_IH2pzwkpxk"
+remark = "A solo jazz piano version from the real book"
+
+[versions.Real]
+doChords = true
+doVoice = true
+doLyrics = false
+doLyricsmore = false
+doLyricsmoremore = false
+doChordBars = false
+doGuitar = false
+doExtra = false
+doPrep = false
+doOwn = false
+#}
+{% if part == "Vars" %}
+{% endif %}
+{% if part == "Doc" %}	DONE:
+	- added the meta data from the real book.
+	- put in the tunes structure.
+	- put in the chords (real book).
+	- put in the tune (real book).
+	- added youtube performances (the real book refers to Gary Burton - 'New Quartet').
+	- used the Bb edition of the real book (page 66) to disambiguate the ledger line notes of bars 3-16 and the pitches of bars 17-24.
+	TODO:
+	- check the chords (real book).
+	- check the tune (real book).
+	- hear the tune to check that it is right and adjust the tempo (the book prints no tempo or style word).
+	- the ledger line notes of bars 4-12 are drawn loosely; each was read from the number of ledger lines in both the C and the Bb edition. Check them against the recording, especially bars 5-7.
+	- bar 4-5: the d flat at the end of bar 4 is tied into bar 5; the first note of bar 5 has no accidental and was typed as the tied d flat.
+	- bar 8: the sign before the e flat (sixth eighth) looks more like a natural than a flat; it was typed as e flat as the Bb edition implies.
+	- bar 12: the last note of the triplet could be g or a; typed as g.
+	- bar 21: the chord is printed as 'C-/D bass' (the Bb edition prints D7/C there); typed as C minor over D.
+	REMARKS:
+	- the D7 alt chord of the book is written as D7#5#9.
+	- bars 13-16 are written in two voices in the book (vibraphone): a held b flat over a moving lower line. The book writes bar 16 as a repeat of bar 15.
+	- the book has a start repeat at bar 1 and an end repeat after bar 16 (typed); it has a second end repeat after bar 26 with no matching start repeat (not typed).
+{% endif %}
+{% if part == "ChordsReal" %}\chordmode {
+	\startChords
+	\startSong
+
+	\repeat volta 2 {
+
+		\myMark "A"
+		\startPart
+		g1:7 | g:7 | g:7 | \myEndLine
+		g:7 | g:7 | g:7 | g:7 | \myEndLine
+		g:7 | ees:7 | ees:7 | d:7.5+.9+ | \myEndLine
+		d:7.5+.9+ | g:7 | g:7 | g:7 | g:7 | \myEndLine
+		\endPart
+
+	}
+
+	\myMark "B"
+	\startPart
+	g1:m7 | g:m7 | e:m7 | e:m7 | c:m/d | \myEndLine
+	c:m/d | d:7sus4 | d:7sus4 | d:7.5+.9+ | d:7.5+.9+ | \myEndLine
+	\endPart
+
+	\endSong
+	\endChords
+}
+{% endif %}
+{% if part == "VoiceReal" %}{
+	\tempo "Moderato" 4 = 132
+	\time 4/4
+	\key c \major
+
+	\repeat volta 2 {
+
+		% part "A"
+		r2 \tuplet 3/2 { cis'4 d e } | d4. cis8 a4 c8 b8~ | b4. d8 g8 a4 fis8~ |
+		fis4 bes8 f8~ f8 des'4.~ | des8 b16 a16 b2.~ | b4. c8 cis8 e4 cis8~ | cis8 cis4 a8~ a2 |
+		r8 bes8 f8 c8 aes'8 ees8 d8 g8 | c2~ c8 des4. | fis,4. c8~ c4 bes'4->~ | bes2. c4~ |
+		c2 \tuplet 3/2 { d,4 e g } | << { bes1~ | bes1~ | bes1~ | bes1 } \\ { s1 | f4. e8 e4 d4~ | d1~ | d1 } >> |
+
+	}
+
+	% part "B"
+	d=''4. d8 d4 d4->~ | d1 | r4 b2.->~ | b1 | r4 d4-> d8-> d4-> d8->~ |
+	d1 | d1~ | d1 | R1 | R1 |
+}
+{% endif %}

@@ -1,0 +1,109 @@
+{#
+default_version = "Real"
+
+[attributes]
+title = "Deluge"
+style = "Jazz"
+composer = "Wayne Shorter"
+piece = "Jazz"
+typesetter = "Mark Veltzer <mark.veltzer@gmail.com>"
+completion = "3"
+uuid = "514de928-d581-11f1-8000-046874d194b7"
+structure = "ABC"
+location = "rbk1:116"
+
+[[youtube]]
+id = "RI2kiCxaVx4"
+remark = "Wayne Shorter, Ju-Ju (1964), the recording the real book refers to"
+
+[[youtube]]
+id = "TuLlFa5RaMI"
+remark = "Modern Jazz Hot Club"
+
+[versions.Real]
+doChords = true
+doVoice = true
+doLyrics = false
+doLyricsmore = false
+doLyricsmoremore = false
+doChordBars = false
+doGuitar = false
+doExtra = false
+doPrep = false
+doOwn = false
+#}
+{% if part == "Vars" %}
+{% endif %}
+{% if part == "Doc" %}	DONE:
+	- added the meta data from the real book.
+	- put in the tunes structure.
+	- put in the chords (real book).
+	- put in the tune (real book).
+	- added youtube performances (the real book refers to Wayne Shorter - 'Ju-Ju').
+	TODO:
+	- check the chords (real book).
+	- check the tune (real book).
+	- hear the tune to check that it is right and adjust the tempo.
+	- intro bar 2: the book prints only three beats of notes (four eighths and a quarter) in this rubato bar, a quarter rest was added to fill the bar.
+	- intro bar 1: the C sharp at the top of the wavy line (glissando) carries a fermata; the bar is rubato.
+	- the book draws a start repeat sign at the start of the first line of B with no matching end repeat sign (B is written out twice), it is not typed. Check the form against a recording.
+	- the start repeat sign at the start of A has no matching end repeat sign either, it is not typed.
+	REMARKS:
+	- the book has no section letters and no style word; the sections here follow the double bars of the page (A is the four bar line marked 'Tempo').
+	- the book prints the chords on a second staff under the melody.
+	- the book prints no key signature.
+{% endif %}
+{% if part == "ChordsReal" %}\chordmode {
+	\startChords
+	\startSong
+
+	\myMark "Intro"
+	\startPart
+	bes2:7.5- b:m7 | b1:m7 | \myEndLine
+	\endPart
+
+	\myMark "A"
+	\startPart
+	ees1:m7 | e:maj7.11+ | ees:m7 | e:maj7.11+ | \myEndLine
+	\endPart
+
+	\myMark "B"
+	\startPart
+	ees1:m7 | e:maj7.11+ | ees:m7 | e:maj7.11+ | \myEndLine
+	ees1:m7 | e:maj7.11+ | ees:m7 | e:maj7.11+ | \myEndLine
+	\endPart
+
+	\myMark "C"
+	\startPart
+	\repeat volta 2 {
+		aes1:7.11+ | fis2:m7 b:7 | ees1:m7 | a:7.11+ | \myEndLine
+		aes1:7.11+ | fis2:m7 b:7 | ees1:m7 | e:maj7.11+ | \myEndLine
+	}
+	\endPart
+
+	\endSong
+	\endChords
+}
+{% endif %}
+{% if part == "VoiceReal" %}{
+	\tempo "Moderato" 4 = 120
+	\time 4/4
+	\key c \major
+
+	% part "Intro"
+	f8^\markup { Rubato } bes ees ces bes4\glissando cis'4\fermata | b,8 b' bes bes, aes'4 r4 |
+
+	% part "A"
+	ges4 r8 ees8~ ees2~ | ees1 | R1 | r2 r4 r8 ees8 |
+
+	% part "B"
+	ees'4. des,8 des'4. bes,8 | bes'4. aes,8 aes'2 | ges4 r8 ees8~ ees2~ | ees2.. ees8 |
+	ees'4. des,8 des'4. bes,8 | bes'4. aes,8 aes'2 | ges4 r8 ees8~ ees2~ | ees2. r8 f16 ges |
+
+	% part "C"
+	\repeat volta 2 {
+		d2.. ees16 ges | a8 ges a4 g ees | des4 r8 ees8~ ees2~ | ees2.. f16 ges |
+		d2.. ees16 ges | a8 ges a4 g ees | des4 r8 ees8~ ees2~ | ees1 |
+	}
+}
+{% endif %}

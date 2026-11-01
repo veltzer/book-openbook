@@ -288,9 +288,6 @@ book generation tweaks:
 checking of tunes:
 ==================
 - look for \endSong and then a newline between it and \endChords.
-- cat * | grep uuid | sort | uniq | wc -l
-	is used to check that each tune has a unique uuid. do it this way or some other
-	way but check this as part of check_all also.
 
 openbook website:
 =================

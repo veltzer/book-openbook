@@ -1,0 +1,101 @@
+{#
+default_version = "Real"
+
+[attributes]
+title = "A Call For All Demons"
+style = "Jazz"
+composer = "Sun Ra"
+piece = "Jazz Mambo"
+typesetter = "Mark Veltzer <mark.veltzer@gmail.com>"
+completion = "3"
+uuid = "c70298c8-d57a-11f1-8000-046874d194b7"
+structure = "A"
+location = "rbk1:1"
+
+[[youtube]]
+id = "vuz8noSQ3dk"
+remark = "Sun Ra, Angels And Demons At Play, the recording the real book refers to"
+
+[[youtube]]
+id = "vvDwyI4TfDA"
+remark = "The New England Conservatory"
+
+[versions.Real]
+doChords = false
+doVoice = true
+doLyrics = false
+doLyricsmore = false
+doLyricsmoremore = false
+doChordBars = false
+doGuitar = false
+doExtra = false
+doPrep = false
+doOwn = false
+#}
+{% if part == "Vars" %}
+{% endif %}
+{% if part == "Doc" %}	DONE:
+	- added the meta data from the real book.
+	- put in the tunes structure.
+	- put in the tune (real book).
+	- the real book prints no chords ("no chords", "free solos - or use F blues") so doChords is false.
+	- added youtube performances (the real book refers to Sun Ra - "Angels And Demons At Play").
+	TODO:
+	- check the tune (real book).
+	- hear the tune to check that it is right and adjust the tempo.
+	- the real book writes a bass line (a repeating figure in bass clef) under the whole tune. It is not typed here.
+	- bar 10: the first two notes are hard to read (typed here as b and b flat). Check.
+	- bars 13-14: the notes above the staff are hard to read (typed here as a flat and b flat). Check.
+	- bar 15: the low notes are hard to read (typed here as b, b, c). Check.
+	- bars 19-20: the real book writes two voices here, partly hard to read. Check them.
+{% endif %}
+{% if part == "ChordsReal" %}\chordmode {
+	\startChords
+	\startSong
+
+	\partial 4 s4 |
+
+	\myMark "Intro"
+	\startPart
+	\repeat volta 2 {
+		s1 | s1 | s1 | s1 | \myEndLine
+	}
+	\endPart
+
+	\myMark "A"
+	\startPart
+	\repeat volta 2 {
+		s1 | s1 | s1 | s1 | \myEndLine
+		s1 | s1 | s1 | s1 | \myEndLine
+		s1 | s1 | s1 | s1 | \myEndLine
+		s1 | s1 | s1 | s1 | \myEndLine
+	}
+	\endPart
+
+	\endSong
+	\endChords
+}
+{% endif %}
+{% if part == "VoiceReal" %}{
+	\tempo "Allegro" 4 = 176
+	\time 4/4
+	\key c \major
+
+	\partial 4 r4 |
+
+	% part "Intro"
+	\repeat volta 2 {
+		r1 | r1 | r1 | r2^\markup { Even 8ths } r8 c8 d f |
+	}
+
+	% part "A"
+	\repeat volta 2 {
+		g8 f d f aes2~ | aes2. r8 g | g f~ f2.~ | f2 f8 c d f |
+		g8 f d f bes2 | b8 bes f a bes a r4 | c8 ees~ ees2. | f8 ees4. f8 ees f ees |
+		c2. aes'4~ | aes2 bes | a8 f c g f b,4 b16 c | des2~ des8 c d f |
+		d'1~ | d4 f8 g~ \tuplet 3/2 { g16 bes a } g8 f e |
+		<< { e2~ e4 s4 } \\ { f,8 d4 f8 d4 g8 d } >> |
+		<< { e'2 s2 } \\ { d,8 d cis4 r8 c d f_\markup { Free solos, or use F blues } } >> |
+	}
+}
+{% endif %}

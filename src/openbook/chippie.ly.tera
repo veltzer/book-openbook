@@ -1,0 +1,130 @@
+{#
+default_version = "Real"
+
+[attributes]
+title = "Chippie"
+style = "Jazz"
+composer = "Ornette Coleman"
+piece = "Fast"
+typesetter = "Mark Veltzer <mark.veltzer@gmail.com>"
+completion = "5"
+uuid = "c1cca036-d57c-11f1-8000-046874d194b7"
+structure = "AABA"
+location = "rbk1:85"
+
+[[youtube]]
+id = "g06TAviik8c"
+remark = "Ornette Coleman, the original from 'Something Else!!!!' (1958)"
+
+[[youtube]]
+id = "5oos9HhaOxY"
+remark = "Ornette Coleman (1958)"
+
+[versions.Real]
+doChords = true
+doVoice = true
+doLyrics = false
+doLyricsmore = false
+doLyricsmoremore = false
+doChordBars = false
+doGuitar = false
+doExtra = false
+doPrep = false
+doOwn = false
+#}
+{% if part == "Vars" %}
+{% endif %}
+{% if part == "Doc" %}	DONE:
+	- added the meta data from the real book.
+	- put in the tunes structure.
+	- put in the chords (real book).
+	- put in the tune (real book).
+	- added youtube performances.
+	TODO:
+	- check the chords (real book).
+	- check the tune (real book).
+	- hear the tune to check that it is right and adjust the tempo.
+	- the intro is played 3 times, a different horn each time (as the book says).
+	- the book prints a bass staff under the intro (an F on the first beat), it is not typed in.
+	- bar 2 (and the intro): the middle note of the triplet is hard to read.
+	- bar 3: the last three eighths (c a a) are hard to read.
+	- bar 6: the accidentals of the eighths are hard to read.
+	- the B part is open (slashes) in the book.
+{% endif %}
+{% if part == "ChordsReal" %}\chordmode {
+	\startChords
+	\startSong
+
+	\partial 8 s8 |
+
+	\myMark "Intro"
+	\startPart
+	\repeat volta 3 {
+		f1 | s1 | \myEndLine
+	}
+	\endPart
+
+	\myMark "A"
+	\startPart
+	\repeat volta 2 {
+		f2:maj7 g:m7 | a:m7 g:m7 | ees:7 d:7 | g:m7.5- c:7 | \myEndLine
+		f1:7 | bes2:7 b:dim7 | f:7/c d:7 |
+	} \alternative {
+		{
+			g2:m7 c:7 | \myEndLineVoltaNotLast
+		}
+		{
+			g2:m7 c:7 | \myEndLineVoltaLast
+		}
+	}
+	\endPart
+
+	\myMark "B"
+	\startPart
+	f1*2:7 | bes1*2:7 | \myEndLine
+	g1*2:7 | c1*2:7 | \myEndLine
+	\endPart
+
+	\myMark "A"
+	\startPart
+	f2:maj7 g:m7 | a:m7 g:m7 | ees:7 d:7 | g:m7.5- c:7 | \myEndLine
+	f1:7 | bes2:7 b:dim7 | f:7/c d:7 | g:m7 c4. f8 | \myEndLine
+	\endPart
+
+	\endSong
+	\endChords
+}
+{% endif %}
+{% if part == "VoiceReal" %}{
+	\tempo "Presto" 4 = 260
+	\time 4/4
+	\key f \major
+
+	\partial 8 c8 |
+
+	% part "Intro"
+	\repeat volta 3 {
+		f8 a g f bes4 g8 f | \tuplet 3/2 { a8 bes bes } c bes a f d c |
+	}
+
+	% part "A"
+	\repeat volta 2 {
+		f8 a g f bes4 g8 f | \tuplet 3/2 { a8 bes bes } c bes a f d c | ees g f ees d c a a | bes des c bes g4 c |
+		r4 bes'8 f gis a r8 \grace c8 f~ | f4 ees8 bes b! d r8 f, | \tuplet 3/2 { bes8 c bes } g e f f' d c |
+	} \alternative {
+		{ bes8 g' ges f e4 r8 c, | }
+		{ bes'8 g' ges f e4 r4 | }
+	}
+
+	% part "B"
+	\improvisationOn
+	b4 b b b | b b b b | b b b b | b b b b |
+	b4 b b b | b b b b | b b b b | b b b r8
+	\improvisationOff
+	c,8 |
+
+	% part "A"
+	f8 a g f bes4 g8 f | \tuplet 3/2 { a8 bes bes } c bes a f d c | ees g f ees d c a a | bes des c bes g4 c |
+	r4 bes'8 f gis a r8 \grace c8 f~ | f4 ees8 bes b! d r8 f, | \tuplet 3/2 { bes8 c bes } g e f f' d c | bes8 g' ges f e4 r8 f^\markup { \italic { Fine } } |
+}
+{% endif %}

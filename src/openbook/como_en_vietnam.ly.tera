@@ -1,0 +1,104 @@
+{#
+default_version = "Real"
+
+[attributes]
+title = "Como En Vietnam"
+style = "Latin"
+composer = "Steve Swallow"
+piece = "Latin"
+typesetter = "Mark Veltzer <mark.veltzer@gmail.com>"
+completion = "3"
+uuid = "a01264fa-d57f-11f1-8000-046874d194b7"
+structure = "AB"
+location = "rbk1:86-87"
+
+[[youtube]]
+id = "x2d0YycEL6o"
+remark = "Gary Burton and Keith Jarrett, the recording the real book cites"
+
+[[youtube]]
+id = "_Vt_HK9uve8"
+remark = "Gary Burton with Pat Metheny (1976)"
+
+[versions.Real]
+doChords = true
+doVoice = true
+doLyrics = false
+doLyricsmore = false
+doLyricsmoremore = false
+doChordBars = false
+doGuitar = false
+doExtra = false
+doPrep = false
+doOwn = false
+#}
+{% if part == "Vars" %}
+{% endif %}
+{% if part == "Doc" %}	DONE:
+	- added the meta data from the real book.
+	- put in the tunes structure.
+	- put in the chords (real book).
+	- put in the tune (real book).
+	- the real book cites the recording Gary Burton and Keith Jarrett.
+	- added youtube performances.
+	TODO:
+	- check the chords (real book).
+	- check the tune (real book).
+	- hear the tune to check that it is right and adjust the tempo.
+	- the A section is printed as a three staff piano arrangement (voiced melody, comping and bass); only the top note of the voiced melody is written here. The intro (four bars of comping and bass on Bb-, the melody staff resting) is written as rests.
+	- in bars 6-9 the melody note is written as f flat (as in the book), the same pitch as the e natural of bar 9.
+	- the top notes of the B section bar 3 (Db7) are hard to read, check them.
+	- the page does not say where to go after the B section; it ends with an 'Ending' bar of Bb- with a fermata.
+{% endif %}
+{% if part == "ChordsReal" %}\chordmode {
+	\startChords
+	\startSong
+
+	\myMark "Intro"
+	\startPart
+	bes1*4:m | \myEndLine
+	\endPart
+
+	\myMark "A"
+	\startPart
+	bes1*4:m | \myEndLine
+	e1*4:maj7 | \myEndLine
+	e1*2:7 | a1*2:7.9- | \myEndLine
+	\endPart
+
+	\myMark "B"
+	\startPart
+	ees1:7 | aes:7 | des:7 | ges:7 | \myEndLine
+	ees:7 | aes:7 | des:7 | ges2:7 f:7 | \myEndLine
+	\endPart
+
+	\myMark "End"
+	\startPart
+	bes1:m | \myEndLine
+	\endPart
+
+	\endSong
+	\endChords
+}
+{% endif %}
+{% if part == "VoiceReal" %}{
+	\tempo "Allegro" 4 = 180
+	\time 4/4
+	\key bes \minor
+
+	% part "Intro"
+	R1*4 |
+
+	% part "A"
+	r4 r8 des'8 des4 c8 c~ | c4 bes a c | c4. bes8~ bes2~ | bes1 |
+	r4 r8 aes8 aes4 ges8 ges~ | ges4 fes fes2~ | fes2 fes8 fes4 fes8~ | fes1~ |
+	fes2 e4 d8 d~ | d1 | r2 des4 des8 c~ | c1 |
+
+	% part "B"
+	ees4 f8 g \tuplet 3/2 { g4 aes bes } | c4 des8 ees \tuplet 3/2 { f4 f ges } | f4 des8 des des c4 bes8 | c1 |
+	ees,4 f8 g \tuplet 3/2 { g4 aes bes } | c4 des8 ees \tuplet 3/2 { f4 f ges } | f4. des8~ des2 | des8-> des4-> des8-> des8-> c4.-> |
+
+	% part "End"
+	R1\fermata |
+}
+{% endif %}
