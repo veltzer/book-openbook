@@ -1,0 +1,118 @@
+{#
+default_version = "Real"
+
+[attributes]
+title = "12-4 2-4 (Duplicities)"
+style = "Jazz"
+composer = "Jack Stock"
+piece = "Open Feel"
+typesetter = "Mark Veltzer <mark.veltzer@gmail.com>"
+completion = "3"
+uuid = "3d05b5e4-d59b-11f1-8000-046874d194b7"
+structure = "AB-Solos"
+location = "rbk1:128"
+
+[[youtube]]
+id = "1w4Yy3-maKg"
+remark = "Budo Saurus, solo jazz piano from the real book"
+
+[[youtube]]
+id = "E9Faw3BfmB8"
+remark = "Yvan Jacques, jazz guitar and piano cover"
+
+[versions.Real]
+doChords = true
+doVoice = true
+doLyrics = false
+doLyricsmore = false
+doLyricsmoremore = false
+doChordBars = false
+doGuitar = false
+doExtra = false
+doPrep = false
+doOwn = false
+#}
+{% if part == "Vars" %}
+{% endif %}
+{% if part == "Doc" %}	DONE:
+	- added the meta data from the real book.
+	- put in the tunes structure.
+	- put in the chords (real book).
+	- put in the tune (real book).
+	- added youtube performances (the real book prints no recording reference).
+	TODO:
+	- check the chords (real book).
+	- check the tune (real book).
+	- hear the tune to check that it is right and adjust the tempo.
+	- the title is printed as 12-4 2-4/Duplicities. The page marks the start Open Feel (dotted quarter = 60) and the B part Latin.
+	- the real book handwriting has many dotted eighths against the 6/8 beat. The rest in the first bar of lines 1 and 2 is typed as a dotted eighth rest (it looks like a dotted quarter rest, which does not fit the bar).
+	- bar 5 (Abmaj7): the first note is read as an A flat on the first ledger line above the staff, the Bb edition seems to read it differently, check it.
+	- bar 12: the a flat is printed as a dotted half note, which does not fit the bar with the two sixteenth triplets after it, typed as a dotted quarter tied to an eighth.
+	- the B flat vamp at the end of the B part: its second and third bars have only rhythm figures for the band (repeat signs) and no melody, they are rests here.
+	- the parenthesized pickup at the end of the vamp is hard to read, check it.
+	- the band rhythm figures under the vamp and under the Latin bars of the solos are not typed in.
+	- the two bars of the solos with diamond note heads (A-7, Ab lydian) are typed as plain b notes, check them against the Bb edition (which reads them a tone lower).
+	- the solos end with D.C. al Fine; the Ending only bar is the Fine.
+{% endif %}
+{% if part == "ChordsReal" %}\chordmode {
+	\startChords
+	\startSong
+
+	\myMark "A"
+	\startPart
+	a2.:m7 | a:m7 | bes:maj7.11+ | c/bes | \myEndLine
+	aes:maj7 | g:7.5+.9+ | ces:maj7/ges | a:maj7/e | \myEndLine
+	e:m7 | a4.:m7 bes:m7 | d2.:m7 | des:maj7 | \myEndLine
+	\endPart
+
+	\myMark "B"
+	\startPart
+	e2.:maj7/b | b:7sus4 | e:maj7/b | b:7sus4 | \myEndLine
+	a:m7 | aes:maj7 | bes | bes:7sus4 | bes | bes:7sus4 | \myEndLine
+	ees:maj7 | \myEndLine
+	\endPart
+
+	\myMark "C"
+	\startPart
+	\repeat volta 2 {
+		ees2.:maj7/bes | ges:maj7/bes | a:m7 | bes4. c/bes | aes2.:maj7.11+ | \myEndLine
+		g:7.5+.9+ | ces:maj7/ges | a:maj7/e | e:m7 | a:m | \myEndLine
+		d:m | des:maj7.11+ | e:maj7/b | b:7sus4 | e:maj7/b | b:7sus4 | \myEndLine
+		a:m7 | aes:maj7.11+ | c:maj7/g | g:7sus4 | c:maj7/g | g:7sus4 | \myEndLine
+	}
+	\endPart
+
+	\endSong
+	\endChords
+}
+{% endif %}
+{% if part == "VoiceReal" %}{
+	\tempo "Andante" 4. = 60
+	\time 6/8
+	\key c \major
+
+	% part "A"
+	r8.^\markup { Open feel } fis'8. b,4.~ | b4~ b16 fis'16 b,8. g'8. | c,8. d8. g,4.~ | g2. |
+	r8. aes'8. ees4. | e8. f8. bes,4~ bes16 ees16 | aes,4~ aes16 des16 aes8. ges8. | ees2. |
+	r4 r8 r8 e'8 fis8 | g8 b d, ees f bes, | c4. f,4~ \tuplet 3/2 { f16 fis g } | aes4.~ aes8 \tuplet 3/2 { des,16 ees f } \tuplet 3/2 { ges aes bes } |
+
+	% part "B"
+	b4.~^\markup { Latin } b8. e,8. | fis4. r8 e'8 fis8 | b,4.~ b8. e,8. | fis4. r8 b8 cis8 |
+	d4~ d16 b16 g8. a8. | bes4. ees,4. | f2. | r2. | r2. | r4. ees'8 f8 g8 |
+	bes,2.\fermata^\markup { Ending only, Fine } |
+
+	% part "C"
+	\repeat volta 2 {
+		bes2.^\markup { Solos } |
+		\improvisationOn
+		b4. b | b4. b | b4. b | b4. b |
+		b4. b | b4. b | b4. b | b4. b | b4. b |
+		b4. b | b4. b | b4.^\markup { Latin } b | b4. b | b4. b | b4. b |
+		\improvisationOff
+		b2. | b2. |
+		\improvisationOn
+		b4. b | b4. b | b4. b | b4. b^\markup { D.C. al Fine } |
+		\improvisationOff
+	}
+}
+{% endif %}
