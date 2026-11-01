@@ -4,7 +4,7 @@ default_version = "Real"
 [attributes]
 title = "Dexterity"
 style = "Jazz"
-composer = "Dexter Gordon"
+composer = "Charlie Parker"
 piece = "Bop"
 typesetter = "Mark Veltzer <mark.veltzer@gmail.com>"
 completion = "5"
@@ -44,7 +44,7 @@ doOwn = false
 	- check the chords (real book).
 	- check the tune (real book).
 	- hear the tune to check that it is right and adjust the tempo.
-	- the real book credits Dexter Gordon as the composer; check the composer credit.
+	- the real book credits Dexter Gordon as the composer, but the tune is by Charlie Parker; composer set to Charlie Parker.
 	- bridge bar 2: the notes are crowded and hard to read (E flat, E natural, G, B, F sharp, F sharp, D); check against a recording.
 	- bar 3 (and bar 27): the book puts a flat before the C (C flat over Bb), typed as printed.
 	- bridge bar 8: the three beamed notes after the first four (E flat, F, D) are typed as two sixteenths and an eighth.
