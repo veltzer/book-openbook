@@ -1,0 +1,93 @@
+{#
+default_version = "Wikifonia"
+
+[attributes]
+title = "Dark Eyes"
+style = "Gypsy Jazz"
+composer = "Traditional"
+piece = "Swing"
+copyright = "Public domain composition"
+copyrightextra = "Source MusicXML marked Public Domain; instrumental lead sheet."
+typesetter = "OpenBook contributors (MusicXML import)"
+completion = "3"
+uuid = "3efb9cee-f166-4178-b07f-31acef2af286"
+structure = "A"
+location = "Fakebook_Django:49"
+
+[versions.Wikifonia]
+doChords = true
+doVoice = true
+doLyrics = false
+doLyricsmore = false
+doLyricsmoremore = false
+doChordBars = false
+doGuitar = false
+doExtra = false
+doPrep = false
+doOwn = false
+#}
+{% if part == "Vars" %}
+{% endif %}
+{% if part == "Doc" %}
+	DONE:
+	- imported melody and chords from real_books_archive.gi/Wikifonia.tar.xz: Wikifonia/Traditional - Dark Eyes.mxl.
+	- source edition explicitly declares Public Domain; imported without lyrics.
+	- retained the written form, pickups, repeats and chord durations.
+	- source revision: http://wikifonia.org/node/17879/revisions/23699/view.
+	- tempo is an editorial practice suggestion, not a verified recording tempo.
+	TODO:
+	- proofread against a historical edition and check by ear.
+{% endif %}
+{% if part == "ChordsWikifonia" %}\chordmode {
+	\startChords
+	\startSong
+
+	\myMark "A"
+	\startPart
+	a4.:7 s8 s2 |
+	s4 s8 s8 s4 s4 |
+	d4.:m s8 s2 |
+	s2 s4 s4 | \myEndLine
+	a4.:7 s8 s2 |
+	s8 s4. s4 s4 |
+	bes4. s8 s2 |
+	s2 s4 s4 | \myEndLine
+	g4.:m6 s8 s4 s4 |
+	s2 s4 s4 |
+	d4.:m s8 s4 s4 |
+	s4. s8 s4 s4 | \myEndLine
+	a2:7 s2 |
+	s2 s2 |
+	d1:m |
+	s1 | \myEndLine
+	\endBar
+	\endPart
+
+	\endSong
+	\endChords
+}
+{% endif %}
+{% if part == "VoiceWikifonia" %}\absolute {
+	\tempo "Swing" 4 = 144
+	\time 4/4
+	\key f \major
+
+	bes'4. a'8 ~ a'2 |
+	r4 r8 a'8 gis'4 a'4 |
+	bes'4. a'8 ~ a'2 |
+	r2 a'4 d''4 |
+	d''4. cis''8 ~ cis''2 |
+	r8 e''4. f''4 cis''4 |
+	e''4. d''8 ~ d''2 |
+	r2 f''4 g''4 |
+	f''4. e''8 ~ e''4 bes'4 ~ |
+	bes'2 e''4 f''4 |
+	e''4. d''8 ~ d''4 a'4 ~ |
+	a'4. a'8 gis'4 a'4 |
+	bes'2 a'2 |
+	e''2 f''2 |
+	d''1 ~ |
+	d''1 |
+	\endBar
+}
+{% endif %}

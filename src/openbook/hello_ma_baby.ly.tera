@@ -1,0 +1,93 @@
+{#
+default_version = "Wikifonia"
+
+[attributes]
+title = "Hello! Ma Baby"
+style = "Ragtime"
+composer = "Joseph E. Howard, Ida Emerson"
+piece = "Allegro"
+copyright = "Public domain composition"
+copyrightextra = "Source MusicXML marked Public Domain; instrumental lead sheet."
+typesetter = "OpenBook contributors (MusicXML import)"
+completion = "3"
+uuid = "6bcd8687-18c4-4147-82e4-5a70c3c6fa0b"
+structure = "A"
+location = "Wikifonia"
+
+[versions.Wikifonia]
+doChords = true
+doVoice = true
+doLyrics = false
+doLyricsmore = false
+doLyricsmoremore = false
+doChordBars = false
+doGuitar = false
+doExtra = false
+doPrep = false
+doOwn = false
+#}
+{% if part == "Vars" %}
+{% endif %}
+{% if part == "Doc" %}
+	DONE:
+	- imported melody and chords from real_books_archive.gi/Wikifonia.tar.xz: Wikifonia/Ida Emerson, Joseph. E. Howard - Hello My Baby.mxl.
+	- source edition explicitly declares Public Domain; imported without lyrics.
+	- retained the written form, pickups, repeats and chord durations.
+	- source revision: http://wikifonia.org/node/14494/revisions/21085/view.
+	- tempo is an editorial practice suggestion, not a verified recording tempo.
+	TODO:
+	- proofread against a historical edition and check by ear.
+{% endif %}
+{% if part == "ChordsWikifonia" %}\chordmode {
+	\startChords
+	\startSong
+
+	\myMark "A"
+	\startPart
+	c8:6 s4 s8 s4 s4 |
+	s8 s8 s8 s8 s4 s4 |
+	d8:7 s4 s8 s4 s4 |
+	s2 s8 s8 s4 | \myEndLine
+	g8:7 s4 s8 s4 s4 |
+	s2 s8 s8 s4 |
+	c8:6 s4 b8:7 b4:7 s4 |
+	c2 s8 g8:7/+d g4:7/+d | \myEndLine
+	c8:6 s4 s8 s4 s4 |
+	s8 s8 s8 s8 s4 s4 |
+	d8:7 s4 s8 s4 s4 |
+	s4 s4 s4 s4 | \myEndLine
+	g8:7 s8 s4 s4 s8 s8 |
+	s4 s4 s4 s4 |
+	c4 s8 c8:6 c4.:6 s8 |
+	s4. s8 s4 s4 | \myEndLine
+	\endBar
+	\endPart
+
+	\endSong
+	\endChords
+}
+{% endif %}
+{% if part == "VoiceWikifonia" %}\absolute {
+	\tempo "Allegro" 4 = 120
+	\time 4/4
+	\key c \major
+
+	g''8 ^ "150" a''4 g''8 a''4 g''4 |
+	r8 e''8 f''8 e''8 f''4 e''4 |
+	d''8 e''4 d''8 e''4 d''4 |
+	a'2 ~ a'8 r8 r4 |
+	e''8 d''4 cis''8 e''4 d''4 |
+	g'2 ~ g'8 r8 r4 |
+	c''8 e''4 g''8 b''4 a''4 |
+	g''2 ~ - "C#dim" g''8 r8 r4 |
+	g''8 a''4 g''8 a''4 g''4 |
+	r8 e''8 f''8 e''8 f''4 e''4 |
+	d''8 e''4 d''8 e''4 d''4 |
+	a'4 a'4 b'4 c''4 |
+	e''8 e''8 d''4 r4 r8 cis''8 |
+	e''4 d''4 e''4 d''4 |
+	c''4 r8 g''8 _ "" a''4. g''8 |
+	a''4. g''8 a''4 g''4 |
+	\endBar
+}
+{% endif %}

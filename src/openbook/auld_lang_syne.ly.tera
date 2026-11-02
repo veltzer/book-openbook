@@ -1,0 +1,127 @@
+{#
+default_version = "Wikifonia"
+
+[attributes]
+title = "Auld Lang Syne"
+style = "Ballad"
+composer = "Traditional"
+piece = "Moderato"
+copyright = "Public domain composition"
+copyrightextra = "Source MusicXML marked Public Domain; instrumental lead sheet."
+typesetter = "OpenBook contributors (MusicXML import)"
+completion = "3"
+uuid = "041e3959-57ba-43aa-b124-f008a9b0233b"
+structure = "A"
+location = "Ultimate-Fake-Book-C:57, TheBook:325"
+
+[versions.Wikifonia]
+doChords = true
+doVoice = true
+doLyrics = false
+doLyricsmore = false
+doLyricsmoremore = false
+doChordBars = false
+doGuitar = false
+doExtra = false
+doPrep = false
+doOwn = false
+#}
+{% if part == "Vars" %}
+{% endif %}
+{% if part == "Doc" %}
+	DONE:
+	- imported melody and chords from real_books_archive.gi/Wikifonia.tar.xz: Wikifonia/Traditional, Robert Burns - Auld Lang Syne.mxl.
+	- source edition explicitly declares Public Domain; imported without lyrics.
+	- retained the written form, pickups, repeats and chord durations.
+	- source revision: http://wikifonia.org/node/870/revisions/1155/view.
+	- tempo is an editorial practice suggestion, not a verified recording tempo.
+	TODO:
+	- proofread against a historical edition and check by ear.
+{% endif %}
+{% if part == "ChordsWikifonia" %}\chordmode {
+	\startChords
+	\startSong
+
+	\myMark "A"
+	\startPart
+	\partial 4 s4 |
+	f4. s8 s4 s4 |
+	c4.:7 s8 s4 s4 |
+	f4. s8 s4 s4 | \myEndLine
+	bes2. s4 |
+	f4. s8 s4 s4 |
+	c4.:7 s8 a4:7 s4 |
+	bes4. s8 c4:7 s4 | \myEndLine
+	f2. s4 |
+	s4. s8 s4 s4 |
+	c4.:7 s8 s4 s4 |
+	f4. s8 s4 s4 | \myEndLine
+	bes2. s4 |
+	f4. s8 s4 s4 |
+	c4.:7 s8 a4:7 s4 |
+	bes4. s8 c4:7 s4 | \myEndLine
+	f2. s4 |
+	s4. s8 s4 s4 |
+	c4.:7 s8 s4 s4 |
+	f4. s8 s4 s4 | \myEndLine
+	bes2. s4 |
+	f4. s8 s4 s4 |
+	c4.:7 s8 a4:7 s4 |
+	bes4. s8 c4:7 s4 | \myEndLine
+	f2. s4 |
+	s4. s8 s4 s4 |
+	c4.:7 s8 s4 s4 |
+	f4. s8 s4 s4 | \myEndLine
+	bes2. s4 |
+	f4. s8 s4 s4 |
+	c4.:7 s8 a4:7 s4 |
+	bes4. s8 c4:7 s4 | \myEndLine
+	f2. s4 |
+	\endBar
+	\endPart
+
+	\endSong
+	\endChords
+}
+{% endif %}
+{% if part == "VoiceWikifonia" %}\absolute {
+	\tempo "Moderato" 4 = 88
+	\time 4/4
+	\key f \major
+
+	\partial 4 c'4 |
+	f'4. e'8 f'4 a'4 |
+	g'4. f'8 g'4 a'4 |
+	f'4. f'8 a'4 c''4 |
+	d''2. d''4 |
+	c''4. a'8 a'4 f'4 |
+	g'4. f'8 g'4 a'4 |
+	f'4. d'8 d'4 c'4 |
+	f'2. d''4 |
+	c''4. ( a'8 ) a'4 ( f'4 ) |
+	g'4. f'8 g'4 d''4 |
+	c''4. ( a'8 ) a'4 ( c''4 ) |
+	d''2. d''4 |
+	c''4. a'8 a'4 f'4 |
+	g'4. f'8 g'4 a'4 |
+	f'4. ( d'8 ) d'4 ( c'4 ) |
+	f'2. c'4 |
+	f'4. e'8 f'4 a'4 |
+	g'4. f'8 g'4 a'4 |
+	f'4. f'8 a'4 c''4 |
+	d''2. d''4 |
+	c''4. a'8 a'4 f'4 |
+	g'4. f'8 g'4 a'4 |
+	f'4. ( d'8 ) d'4 ( c'4 ) |
+	f'2. d''4 |
+	c''4. ( a'8 ) a'4 ( f'4 ) |
+	g'4. f'8 g'4 d''4 |
+	c''4. ( a'8 ) a'4 ( c''4 ) |
+	d''2. d''4 |
+	c''4. a'8 a'4 f'4 |
+	g'4. f'8 g'4 a'4 |
+	f'4. ( d'8 ) d'4 ( c'4 ) |
+	f'2. r4 |
+	\endBar
+}
+{% endif %}

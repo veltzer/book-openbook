@@ -1,0 +1,152 @@
+{#
+default_version = "Wikifonia"
+
+[attributes]
+title = "El Choclo"
+style = "Tango"
+composer = "Angel Villoldo"
+piece = "Tango"
+copyright = "Public domain composition"
+copyrightextra = "Source MusicXML marked Public Domain; instrumental lead sheet."
+typesetter = "OpenBook contributors (MusicXML import)"
+completion = "3"
+uuid = "db2647e1-b833-48d9-9589-c0b432e08c5e"
+structure = "A"
+location = "Wikifonia"
+
+[versions.Wikifonia]
+doChords = true
+doVoice = true
+doLyrics = false
+doLyricsmore = false
+doLyricsmoremore = false
+doChordBars = false
+doGuitar = false
+doExtra = false
+doPrep = false
+doOwn = false
+#}
+{% if part == "Vars" %}
+{% endif %}
+{% if part == "Doc" %}
+	DONE:
+	- imported melody and chords from real_books_archive.gi/Wikifonia.tar.xz: Wikifonia/Angel Villoldo - El Choclo.mxl.
+	- source edition explicitly declares Public Domain; imported without lyrics.
+	- retained the written form, pickups, repeats and chord durations.
+	- normalized missing forward-repeat markers and the unlabeled first ending before the printed second ending.
+	- source revision: http://wikifonia.org/node/9415/revisions/12881/view.
+	- tempo is an editorial practice suggestion, not a verified recording tempo.
+	TODO:
+	- proofread against a historical edition and check by ear.
+{% endif %}
+{% if part == "ChordsWikifonia" %}\chordmode {
+	\startChords
+	\startSong
+
+	\myMark "A"
+	\startPart
+	\repeat volta 2 {
+	s2 s8 s8 s8 s8 |
+	d8:m s8 s8 s8 s8 s8 s8 s8 |
+	s4 s4 s8 s8 s8 s8 |
+	s8 s8 s8 s8 s8 s8 s8 s8 | \myEndLine
+	a4:7 s4 s8 s8 s8 s8 |
+	s8 s8 s8 s8 s8 s8 s8 s8 |
+	s4 s4 s8 s8 s8 s8 |
+	s8 s8 s8 s8 s8 s8 s8 s8 | \myEndLine
+	d4:m s4 s8 s8 s8 s8 |
+	s8 s8 s8 s8 s8 s8 s8 s8 |
+	s4 s4 s8 s8 s8 s8 |
+	d8:7 s8 s8 s8 s8 s8 s8 s8 | \myEndLine
+	g4:m s4 s8 s8 s4 |
+	s8 s8 s8 s8 s8 s8 s8 s8 |
+	d4:m s4 s8 s8 s8 s8 |
+	a4:7 s4 s8 s8 s8 s8 | \myEndLine
+	d2:m s8 s8 s8 s8 |
+	c8:7 s4 s8 s8 s8 s8 s8 |
+	f8 s4 s8 s8 s8 s8 s8 |
+	c8:7 s4 s8 s8 s8 s8 s8 | \myEndLine
+	f4 s4 s8 s8 s4 |
+	a8:7 s4 s8 s8 s8 s8 s8 |
+	d4:m s4 s8 s8 s8 s8 |
+	e8:7 s8 s8 s8 s8 s8 s8 s8 | \myEndLine
+	a2 s8 s8 s8 s8 |
+	}
+	\repeat volta 2 {
+	a2 s8 s8 s8 s8 |
+	d8 s4 s8 s8 s8 s8 s8 |
+	a4:7 s4 s8 s8 s8 s8 | \myEndLine
+	s8 s4 s8 s8 s8 s8 s8 |
+	d4 s4 s8 s8 s8 s8 |
+	b8:7 s8 s8 s8 s8 s8 s8 s8 |
+	e4:m s4 s8 s8 s8 s8 | \myEndLine
+	e4:7 s4 s8 s8 s8 s8 |
+	} \alternative {
+	{
+	a4 s4 s8 s8 s8 s8 | \myEndLineVoltaNotLast
+	}
+	{
+	e8 s8 s8 s8 a8:7 s8 s8 s8 | \myEndLineVoltaLast
+	}
+	}
+	d2 s2 | \myEndLine
+	\endBar
+	\endPart
+
+	\endSong
+	\endChords
+}
+{% endif %}
+{% if part == "VoiceWikifonia" %}\absolute {
+	\tempo "Tango" 4 = 112
+	\time 4/4
+	\key f \major
+
+	\repeat volta 2 {
+	r2 r8 a'8 a'8 bes'8 |
+	bes'8 a'8 a'8 d''8 d''8 f''8 f''8 bes''8 |
+	bes''4 a''4 r8 a''8 a''8 d'''8 |
+	d'''8 a''8 a''8 f''8 f''8 g''8 g''8 f''8 |
+	f''4 e''4 r8 a'8 a'8 bes'8 |
+	bes'8 a'8 a'8 cis''8 cis''8 e''8 e''8 bes''8 |
+	bes''4 a''4 r8 a''8 gis''8 a''8 |
+	e'''8 cis'''8 cis'''8 a''8 a''8 g''8 g''8 f''8 |
+	e''4 d''4 r8 a'8 a'8 bes'8 |
+	bes'8 a'8 a'8 d''8 d''8 f''8 f''8 bes''8 |
+	bes''4 a''4 r8 a''8 a''8 d'''8 |
+	d'''8 a''8 a''8 fis''8 fis''8 a''8 a''8 c'''8 |
+	c'''4 bes''4 b'8 b'8 bes''8 s8 |
+	bes''8 a''8 a''8 g''8 g''8 f''8 f''8 e''8 |
+	e''4 d''4 d''8 f''8 e''8 d''8 |
+	d''4 cis''4 e''8 g''8 f''8 e''8 |
+	d''2 _\markup{ \bold\tiny {Fine} } r8 c''8 b'8 c''8 |
+	bes''8 bes''4 bes''8 c'''8 bes''8 a''8 g''8 |
+	bes''8 a''4 e''8 g''8 f''8 e''8 d''8 |
+	f''8 e''4 bes'8 e''8 d''8 c''8 b'8 |
+	d''4 c''4 a'8 gis'8 a'8 s8 |
+	g''8 g''4 g''8 a''8 g''8 f''8 e''8 |
+	g''4 f''4 r8 f''8 g''8 f''8 |
+	e''8 d''8 cis''8 d''8 e''8 f''8 g''8 gis''8 |
+	a''2 r8 c''8 b'8 c''8 |
+	}
+	\repeat volta 2 {
+	a''2 r8 a'8 a''8 fis''8 |
+	dis''8 a'4 f''8 dis''8 a'8 dis''8 f''8 |
+	g''4 e''4 r8 a'8 g''8 e''8 |
+	c''8 a'4 c''8 a'8 c''8 e''8 g''8 |
+	\key d \major fis''4 d''4 r8 a'8 fis''8 e''8 |
+	dis''8 b'8 ais'8 b'8 cis''8 dis''8 e''8 fis''8 |
+	a''4 g''4 r8 e''8 dis''8 e''8 |
+	fis''4 e''4 r8 d''8 e''8 d''8 |
+	} \alternative {
+	{
+	d''4 cis''4 r8 a'8 a''8 fis''8 |
+	}
+	{
+	fis''8 e''8 dis''8 e''8 b'8 d''8 cis''8 e''8 |
+	}
+	}
+	d''2 r2 _\markup{ \bold\tiny {D.C. al Fine} } |
+	\endBar
+}
+{% endif %}

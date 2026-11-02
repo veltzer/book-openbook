@@ -1,0 +1,95 @@
+{#
+default_version = "Wikifonia"
+
+[attributes]
+title = "Hard Times Come Again No More"
+style = "Folk"
+composer = "Stephen Foster"
+piece = "Moderato"
+copyright = "Public domain composition"
+copyrightextra = "Source MusicXML marked Public Domain; instrumental lead sheet."
+typesetter = "OpenBook contributors (MusicXML import)"
+completion = "3"
+uuid = "10e8c42f-2be9-4ab0-bccb-5e33c62556ea"
+structure = "A"
+location = "Wikifonia"
+
+[versions.Wikifonia]
+doChords = true
+doVoice = true
+doLyrics = false
+doLyricsmore = false
+doLyricsmoremore = false
+doChordBars = false
+doGuitar = false
+doExtra = false
+doPrep = false
+doOwn = false
+#}
+{% if part == "Vars" %}
+{% endif %}
+{% if part == "Doc" %}
+	DONE:
+	- imported melody and chords from real_books_archive.gi/Wikifonia.tar.xz: Wikifonia/Stephen Foster - Hard Times Come Again No More.mxl.
+	- source edition explicitly declares Public Domain; imported without lyrics.
+	- retained the written form, pickups, repeats and chord durations.
+	- source revision: http://wikifonia.org/node/18331/revisions/24283/view.
+	- tempo is an editorial practice suggestion, not a verified recording tempo.
+	TODO:
+	- proofread against a historical edition and check by ear.
+{% endif %}
+{% if part == "ChordsWikifonia" %}\chordmode {
+	\startChords
+	\startSong
+
+	\myMark "A"
+	\startPart
+	s2 s4 s8 s8 |
+	c4 s8 s8 s8 s4 s8 |
+	f8 s8 g8 s8 c4 s8. s16 |
+	s4 s4 g8 s8 s8. s16 | \myEndLine
+	c2 s4 s8 s8 |
+	s4 s8 s8 s8 s4 s8 |
+	f8 s8 g8 s8 c4 s4 |
+	s4 s4 g8 s8 s8. s16 | \myEndLine
+	c2 s4 s8 s8 |
+	s4 s8 s8 s4 s8 s8 |
+	f2 c4 s4 |
+	s4 s4 f4 c4 | \myEndLine
+	s8 s8 s8. s16 g4 s8 s8 |
+	c4 s8 s8 s8 s4 s8 |
+	f8. s16 g8 s8 c4 s4 |
+	s4 s4 g8 s8 s8. s16 | \myEndLine
+	c2 s2 |
+	\endBar
+	\endPart
+
+	\endSong
+	\endChords
+}
+{% endif %}
+{% if part == "VoiceWikifonia" %}\absolute {
+	\tempo "Moderato" 4 = 88
+	\time 4/4
+	\key c \major
+
+	r2 ^ "Verse" r4 c'8 d'8 |
+	e'4 e'8 e'8 e'8 g'4 e'8 |
+	d'8 c'8 c'8 d'8 e'4 a'8. g'16 |
+	g'4 e'4 e'8 c'8 d'8. d'16 |
+	c'2 r4 c'8 d'8 |
+	e'4 e'8 e'8 e'8 g'4 e'8 |
+	d'8 c'8 c'8 d'8 e'4 a'4 |
+	g'4 e'4 e'8 c'8 d'8. d'16 |
+	c'2 r4 e'8 f'8 |
+	g'4 ^ "Chorus" r8 g'8 g'4 fis'8 g'8 |
+	a'2 g'4 r4 |
+	c''4 g'4 a'4 g'4 |
+	e'8 e'8 d'8. c'16 d'4 c'8 d'8 |
+	e'4 e'8 e'8 e'8 g'4 e'8 |
+	d'8. c'16 c'8 d'8 e'4 a'4 |
+	g'4 e'4 e'8 c'8 d'8. c'16 |
+	c'2 r2 |
+	\endBar
+}
+{% endif %}

@@ -1,0 +1,125 @@
+{#
+default_version = "Wikifonia"
+
+[attributes]
+title = "Golliwog's Cakewalk"
+style = "Ragtime"
+composer = "Claude Debussy"
+piece = "Allegro"
+copyright = "Public domain composition"
+copyrightextra = "Source MusicXML marked Public Domain; instrumental lead sheet."
+typesetter = "OpenBook contributors (MusicXML import)"
+completion = "3"
+uuid = "a3ac28eb-4020-414f-8e43-bba8ec7a5882"
+structure = "A"
+location = "Wikifonia"
+
+[versions.Wikifonia]
+doChords = true
+doVoice = true
+doLyrics = false
+doLyricsmore = false
+doLyricsmoremore = false
+doChordBars = false
+doGuitar = false
+doExtra = false
+doPrep = false
+doOwn = false
+#}
+{% if part == "Vars" %}
+{% endif %}
+{% if part == "Doc" %}
+	DONE:
+	- imported melody and chords from real_books_archive.gi/Wikifonia.tar.xz: Wikifonia/Claude Debussy - Golliwog's Cakewalk.mxl.
+	- source edition explicitly declares Public Domain; imported without lyrics.
+	- retained the written form, pickups, repeats and chord durations.
+	- source revision: http://wikifonia.org/node/666/revisions/872/view.
+	- tempo is an editorial practice suggestion, not a verified recording tempo.
+	TODO:
+	- proofread against a historical edition and check by ear.
+{% endif %}
+{% if part == "ChordsWikifonia" %}\chordmode {
+	\startChords
+	\startSong
+
+	\myMark "A"
+	\startPart
+	f16:m7.5-/+es s8 s16 s8 s8 |
+	s16 s8 s16 s8 s8 |
+	es16:3.5.9 s8 s16 s8 s8 |
+	s2 | \myEndLine
+	f16:m/+es s8 s16 s8 s8 |
+	f16:m7.5-/+es s8 s16 s8 s8 |
+	s16 s8 s16 s8 s8 |
+	s8 s8 s8 s8 | \myEndLine
+	f16:m7.5-/+es s8 s16 s8 s8 |
+	s16 s8 s16 s8 s8 |
+	es16:3.5.9 s8 s16 s8 s8 |
+	s2 | \myEndLine
+	ges16:3.5.9 s8 s16 s8 s8 |
+	s8 s8 s8 s8 |
+	f16:7 s8 s16 s8 s8 |
+	bes4 s8 s8 | \myEndLine
+	as16/+bes s8 s16 s8 s8 |
+	bes2:sus4.7 |
+	es16:6/+g s8 s16 s8 s8 |
+	s8 s8 s8 s8 | \myEndLine
+	as16/+bes s8 s16 s8 s8 |
+	s16 s8 s16 s8 s8 |
+	bes16:6 s8 s16 s8 s8 |
+	s16 s16 s16 s16 s8 s8 | \myEndLine
+	as16/+bes s8 s16 s8 s8 |
+	bes2:7 |
+	es16:6 s8 s16 s8 s8 |
+	s8 s8 s8 s8 | \myEndLine
+	f16:m7.5-/+b s8 s16 s8 s8 |
+	s16 s8 s16 s4 |
+	s16 s16 s16 s16 s8 s8 |
+	es4 s4 | \myEndLine
+	\endBar
+	\endPart
+
+	\endSong
+	\endChords
+}
+{% endif %}
+{% if part == "VoiceWikifonia" %}\absolute {
+	\tempo "Allegro" 4 = 108
+	\time 2/4
+	\key es \major
+
+	bes'16 as'8 bes'16 f'8 bes'8 |
+	as'16 f'8 es'16 ces'8 es'8 |
+	bes16 bes8 c'16 bes8 bes'8 |
+	bes2 |
+	bes16 as8 bes16 c'8 as8 |
+	bes16 as8 bes16 ces'8 as8 |
+	bes16 ^ "N.C." g8 f16 es8 d8 |
+	c8 g,8 c8 d8 |
+	bes'16 as'8 bes'16 f'8 bes'8 |
+	as'16 f'8 es'16 ces'8 es'8 |
+	bes16 bes8 c'16 bes8 bes'8 |
+	bes2 |
+	bes16 bes8 c'16 bes8 des'8 |
+	es'8 f'8 es'8 ges'8 |
+	f'16 f'8 g'16 f'8 d''8 |
+	bes'4 bes''8 r8 |
+	es'16 f'8 g'16 f'8 es'8 |
+	f'2 |
+	es'16 f'8 g'16 f'8 es'8 |
+	f'8 es'8 f'8 c''8 |
+	bes,16 c8 d16 c8 bes,8 |
+	bes,16 c8 d16 c8 bes,8 |
+	bes,16 c8 d16 c8 bes,8 |
+	r16 ^ "N.C." bes,16 c16 d16 c8 bes,8 |
+	es'16 f'8 g'16 f'8 es'8 |
+	f'2 |
+	es'16 f'8 g'16 f'8 es'8 |
+	f'8 es'8 f'8 c''8 |
+	bes''16 as''8 bes''16 f''8 bes''8 |
+	as''16 f''8 es''16 ces''4 |
+	r16 ^ "N.C." as'16 f'16 es'16 ces'8 g8 |
+	es,4 r4 |
+	\endBar
+}
+{% endif %}

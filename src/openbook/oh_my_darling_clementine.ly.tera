@@ -1,0 +1,127 @@
+{#
+default_version = "Wikifonia"
+
+[attributes]
+title = "Oh My Darling, Clementine"
+style = "Waltz"
+composer = "Percy Montrose"
+piece = "Moderato"
+copyright = "Public domain composition"
+copyrightextra = "Source MusicXML marked Public Domain; instrumental lead sheet."
+typesetter = "OpenBook contributors (MusicXML import)"
+completion = "3"
+uuid = "85726a37-8740-4deb-860a-53e96f4899f6"
+structure = "A"
+location = "Wikifonia"
+
+[versions.Wikifonia]
+doChords = true
+doVoice = true
+doLyrics = false
+doLyricsmore = false
+doLyricsmoremore = false
+doChordBars = false
+doGuitar = false
+doExtra = false
+doPrep = false
+doOwn = false
+#}
+{% if part == "Vars" %}
+{% endif %}
+{% if part == "Doc" %}
+	DONE:
+	- imported melody and chords from real_books_archive.gi/Wikifonia.tar.xz: Wikifonia/Traditional adapted by Vernon Dalhart, Percy Montrose or Bradford Barker (disputed) - Oh My Darling, Clementine.mxl.
+	- source edition explicitly declares Public Domain; imported without lyrics.
+	- retained the written form, pickups, repeats and chord durations.
+	- source revision: http://wikifonia.org/node/4388/revisions/15987/view.
+	- tempo is an editorial practice suggestion, not a verified recording tempo.
+	TODO:
+	- proofread against a historical edition and check by ear.
+{% endif %}
+{% if part == "ChordsWikifonia" %}\chordmode {
+	\startChords
+	\startSong
+
+	\myMark "A"
+	\startPart
+	s2 s8 s8 |
+	f4 s4 s8 s8 |
+	s4 s4 s8 s8 |
+	s4. s8 s8 s8 | \myEndLine
+	c2:7 s8 s8 |
+	s4 s4 s8 s8 |
+	f4 s4 s8 s8 |
+	c4.:7 s8 s8 s8 | \myEndLine
+	f2 s8 s8 |
+	f4 s4 s8 s8 |
+	s4 s4 s8 s8 |
+	s4. s8 s8 s8 | \myEndLine
+	c2:7 s8 s8 |
+	s4 s4 s8 s8 |
+	f4 s4 s8 s8 |
+	c4.:7 s8 s8 s8 | \myEndLine
+	f2 s8 s8 |
+	f4 s4 s8 s8 |
+	s4 s4 s8 s8 |
+	s4. s8 s8 s8 | \myEndLine
+	c2:7 s8 s8 |
+	s4 s4 s8 s8 |
+	f4 s4 s8 s8 |
+	c4.:7 s8 s8 s8 | \myEndLine
+	f2 s8 s8 |
+	f4 s4 s8 s8 |
+	s4 s4 s8 s8 |
+	s4. s8 s8 s8 | \myEndLine
+	c2:7 s8 s8 |
+	s4 s4 s8 s8 |
+	f4 s4 s8 s8 |
+	c4.:7 s8 s8 s8 | \myEndLine
+	f2 s4 |
+	\endBar
+	\endPart
+
+	\endSong
+	\endChords
+}
+{% endif %}
+{% if part == "VoiceWikifonia" %}\absolute {
+	\tempo "Moderato" 4 = 108
+	\time 3/4
+	\key c \major
+
+	r2 f'8 f'8 |
+	f'4 c'4 a'8 a'8 |
+	a'4 f'4 f'8 a'8 |
+	c''4. c''8 bes'8 a'8 |
+	g'2 g'8 a'8 |
+	bes'4 bes'4 a'8 g'8 |
+	a'4 f'4 f'8 a'8 |
+	g'4. c'8 e'8 g'8 |
+	f'2 f'8 - "N.C." f'8 |
+	f'4 c'4 a'8 a'8 |
+	a'4 f'4 f'8 a'8 |
+	c''4. c''8 bes'8 a'8 |
+	g'2 g'8 a'8 |
+	bes'4 bes'4 a'8 g'8 |
+	a'4 f'4 f'8 a'8 |
+	g'4. c'8 e'8 g'8 |
+	f'2 f'8 - "N.C." f'8 |
+	f'4 c'4 a'8 a'8 |
+	a'4 f'4 f'8 a'8 |
+	c''4. c''8 bes'8 a'8 |
+	g'2 g'8 a'8 |
+	bes'4 bes'4 a'8 g'8 |
+	a'4 f'4 f'8 a'8 |
+	g'4. c'8 e'8 g'8 |
+	f'2 f'8 f'8 |
+	f'4 c'4 a'8 a'8 |
+	a'4 f'4 f'8 a'8 |
+	c''4. c''8 bes'8 a'8 |
+	g'2 g'8 a'8 |
+	bes'4 bes'4 a'8 g'8 |
+	a'4 f'4 f'8 a'8 |
+	g'4. c'8 e'8 g'8 |
+	f'2 r4 |
+	\endBar
+}
+{% endif %}

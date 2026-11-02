@@ -1,0 +1,113 @@
+{#
+default_version = "Wikifonia"
+
+[attributes]
+title = "Two Guitars"
+style = "Gypsy Jazz"
+composer = "Traditional"
+piece = "Moderato"
+copyright = "Public domain composition"
+copyrightextra = "Source MusicXML marked Public Domain; instrumental lead sheet."
+typesetter = "OpenBook contributors (MusicXML import)"
+completion = "3"
+uuid = "667465ba-158c-497c-a3da-a1e63001b38e"
+structure = "A"
+location = "Fakebook_Django:232"
+
+[versions.Wikifonia]
+doChords = true
+doVoice = true
+doLyrics = false
+doLyricsmore = false
+doLyricsmoremore = false
+doChordBars = false
+doGuitar = false
+doExtra = false
+doPrep = false
+doOwn = false
+#}
+{% if part == "Vars" %}
+{% endif %}
+{% if part == "Doc" %}
+	DONE:
+	- imported melody and chords from real_books_archive.gi/Wikifonia.tar.xz: Wikifonia/Traditional - Two Guitars.mxl.
+	- source edition explicitly declares Public Domain; imported without lyrics.
+	- retained the written form, pickups, repeats and chord durations.
+	- source revision: http://wikifonia.org/node/18380/revisions/24361/view.
+	- tempo is an editorial practice suggestion, not a verified recording tempo.
+	TODO:
+	- proofread against a historical edition and check by ear.
+{% endif %}
+{% if part == "ChordsWikifonia" %}\chordmode {
+	\startChords
+	\startSong
+
+	\myMark "A"
+	\startPart
+	\repeat volta 2 {
+	g8:m6 s8 s8 s8 s4 s4 |
+	d8:m s8 s8 s8 s4 s4 |
+	a8:7 s8 s8 s8 s4 s4 |
+	d8:m s8 s8 s8 s8 s8 s8 s8 | \myEndLine
+	g8:m6 s8 s8 s8 s4 s4 |
+	d8:m s8 s8 s8 s4 s4 |
+	a8:7 s8 s8 s8 s8 s8 s8 s8 |
+	d2:m s4 s4 | \myEndLine
+	}
+	a4:7 s4 s8 s8 s8 s8 |
+	s2 s2 |
+	d4:m s4 s8 s8 s8 s8 |
+	s2 s2 | \myEndLine
+	a4:7 s4 s8 s8 s8 s8 |
+	s2 s2 |
+	d4:m s4 s8 s8 s8 s8 |
+	s2 s2 | \myEndLine
+	g4:m s4 s8 s8 s8 s8 |
+	s4 s4 s4 s4 |
+	d4:m s4 s4 s4 |
+	s4 s4 s4. s8 | \myEndLine
+	g4:m s4 s4 s4 |
+	a4:7 s4 s4 s4 |
+	d1:m |
+	s1 | \myEndLine
+	\endBar
+	\endPart
+
+	\endSong
+	\endChords
+}
+{% endif %}
+{% if part == "VoiceWikifonia" %}\absolute {
+	\tempo "Moderato" 4 = 120
+	\time 4/4
+	\key f \major
+
+	\repeat volta 2 {
+	\mark \markup { \box { A } } r8 g'8 bes'8 d''8 e''4 d''4 |
+	r8 f'8 a'8 d''8 e''4 d''4 |
+	r8 g'8 a'8 cis''8 e''4 cis''4 |
+	d''8 f''8 e''8 d''8 a'8 f'8 e'8 d'8 |
+	r8 g'8 bes'8 d''8 e''4 d''4 |
+	r8 f'8 a'8 d''8 e''4 d''4 |
+	r8 g'8 a'8 cis''8 e''8 cis''8 e''8 cis''8 |
+	d''2 d''4 r4 |
+	}
+	\mark \markup { \box { B } } r4 a'4 ~ a'8 a'8 gis'8 a'8 |
+	bes'2 a'2 |
+	r4 a'4 ~ a'8 a'8 gis'8 a'8 |
+	bes'2 a'2 |
+	r4 a'4 ~ a'8 a'8 gis'8 a'8 |
+	bes'2 a'2 |
+	r4 a'4 ~ a'8 a'8 gis'8 a'8 |
+	bes'2 a'2 |
+	r4 bes'4 ~ bes'8 bes'8 a'8 bes'8 |
+	c''4 bes'4 c''4 bes'4 |
+	bes'4 a'4 gis'4 a'4 |
+	bes'4 a'4 bes'4. a'8 |
+	a'4 g'4 fis'4 g'4 |
+	a'4 g'4 f'4 e'4 |
+	d'1 ~ |
+	d'1 |
+	\endBar
+}
+{% endif %}

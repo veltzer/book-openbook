@@ -1,0 +1,137 @@
+{#
+default_version = "Wikifonia"
+
+[attributes]
+title = "Choucoune"
+style = "Latin"
+composer = "Michel Mauleart Monton"
+piece = "Moderato"
+copyright = "Public domain composition"
+copyrightextra = "Source MusicXML marked Public Domain; instrumental lead sheet."
+typesetter = "OpenBook contributors (MusicXML import)"
+completion = "3"
+uuid = "2dbc649d-a374-42b4-97b8-8756c10de7f9"
+structure = "A"
+location = "Wikifonia"
+
+[versions.Wikifonia]
+doChords = true
+doVoice = true
+doLyrics = false
+doLyricsmore = false
+doLyricsmoremore = false
+doChordBars = false
+doGuitar = false
+doExtra = false
+doPrep = false
+doOwn = false
+#}
+{% if part == "Vars" %}
+{% endif %}
+{% if part == "Doc" %}
+	DONE:
+	- imported melody and chords from real_books_archive.gi/Wikifonia.tar.xz: Wikifonia/Michel Maul?art Monton, Oswald Durand - Choucoune.mxl.
+	- source edition explicitly declares Public Domain; imported without lyrics.
+	- retained the written form, pickups, repeats and chord durations.
+	- source revision: http://wikifonia.org/node/1895/revisions/2430/view.
+	- tempo is an editorial practice suggestion, not a verified recording tempo.
+	TODO:
+	- proofread against a historical edition and check by ear.
+{% endif %}
+{% if part == "ChordsWikifonia" %}\chordmode {
+	\startChords
+	\startSong
+
+	\myMark "A"
+	\startPart
+	\partial 8 s8 |
+	\repeat volta 2 {
+	c4 s8 s4 g8:7 s4 |
+	c2. s8 s8 |
+	c4 s8 s4 s8 s4 | \myEndLine
+	g2 s4 s4 |
+	g4 s8 s4 s8 s4 |
+	d2:m s4 s4 |
+	g4:7 s8 s4 s8 s4 | \myEndLine
+	c2. s8 s8 |
+	e4:7 s8 s4 s8 s4 |
+	a2.:m a4:7 |
+	d4:7 s8 s4 s8 s4 | \myEndLine
+	g1:7 |
+	c2. s4 |
+	s2. s4 |
+	d4:m s8 g4:7 s8 s4 | \myEndLine
+	c2. s4 |
+	c2. s4 |
+	s2. s4 |
+	d4:m s8 g4:7 s8 s4 | \myEndLine
+	c1 |
+	f4 s8 s4 s8 s4 |
+	c4 s8 s4 s8 s4 |
+	g4:7 s8 s4 s8 s4 | \myEndLine
+	c4 s8 s4 s8 c4:7 |
+	f4 s8 s4 s8 s4 |
+	c4 s8 s4 s8 s4 |
+	g4:7 s8 s4 s8 s4 | \myEndLine
+	} \alternative {
+	{
+	c2. s4 | \myEndLineVoltaNotLast
+	}
+	{
+	c1 | \myEndLineVoltaLast
+	}
+	}
+	s4 s4 s2 |
+	\endBar
+	\endPart
+
+	\endSong
+	\endChords
+}
+{% endif %}
+{% if part == "VoiceWikifonia" %}\absolute {
+	\tempo "Moderato" 4 = 100
+	\time 2/2
+	\key c \major
+
+	\partial 8  g'8 |
+	\repeat volta 2 {
+	e''4 d''8 c''4 b'8 d''4 |
+	c''2. r8 e''8 |
+	g''4 g''8 g''4 g''8 a''4 |
+	d''2 r4 g'4 |
+	g'4 g'8 g'4 b'8 d''4 |
+	f''2 r4 g''4 |
+	g'4 a'8 b'4 c''8 d''4 |
+	e''2. r8 e''8 |
+	e''4 e''8 e''4 a''8 a''4 |
+	a'2. g''4 |
+	fis''4 fis''8 fis''4 e''8 fis''4 |
+	g''1 |
+	g''2. fis''4 |
+	g''2. e''4 |
+	f''4 f''8 e''4 f''8 g''4 |
+	e''2. r4 |
+	g''2. fis''4 |
+	g''2. e''4 |
+	f''4 f''8 e''4 f''8 g''4 |
+	e''1 |
+	a'4 a'8 c''4 f''8 a''4 |
+	g'4 g'8 c''4 e''8 g''4 |
+	g'4 g'8 b'4 d''8 f''4 |
+	g'4 g'8 c''4 e''8 g''4 |
+	a'4 a'8 c''4 f''8 a''4 |
+	g'4 g'8 c''4 e''8 g''4 |
+	r4 g'8 f''4 e''8 d''4 |
+	} \alternative {
+	{
+	c''2. g'4 |
+	}
+	{
+	c''1 ~ |
+	}
+	}
+	c''4 r4 r2 |
+	\endBar
+}
+{% endif %}

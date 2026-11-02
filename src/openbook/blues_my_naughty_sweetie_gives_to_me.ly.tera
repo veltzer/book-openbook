@@ -1,0 +1,129 @@
+{#
+default_version = "Wikifonia"
+
+[attributes]
+title = "Blues My Naughty Sweetie Gives to Me"
+subtitle = "Simplified Changes"
+style = "Jazz"
+composer = "Charles McCarron, Carey Morgan"
+piece = "Allegro"
+copyright = "Public domain composition"
+copyrightextra = "Source MusicXML marked Public Domain; instrumental lead sheet."
+typesetter = "OpenBook contributors (MusicXML import)"
+completion = "3"
+uuid = "7cbe944f-f32b-4924-87df-c89006e2777f"
+structure = "AB"
+location = "Wikifonia"
+
+[versions.Wikifonia]
+doChords = true
+doVoice = true
+doLyrics = false
+doLyricsmore = false
+doLyricsmoremore = false
+doChordBars = false
+doGuitar = false
+doExtra = false
+doPrep = false
+doOwn = false
+#}
+{% if part == "Vars" %}
+{% endif %}
+{% if part == "Doc" %}
+	DONE:
+	- imported melody and chords from real_books_archive.gi/Wikifonia.tar.xz: Wikifonia/McGarron, Morgan, Swanstrom - Blues My Naughty Sweetie Gives To Me (Simplified Changes).mxl.
+	- source edition explicitly declares Public Domain; imported without lyrics.
+	- retained the written form, pickups, repeats and chord durations.
+	- source revision: http://wikifonia.org/node/978/revisions/2483/view.
+	- tempo is an editorial practice suggestion, not a verified recording tempo.
+	- removed invalid source ties between different pitches in measure 11.
+	TODO:
+	- proofread against a historical edition and check by ear.
+{% endif %}
+{% if part == "ChordsWikifonia" %}\chordmode {
+	\startChords
+	\startSong
+
+	\myMark "A"
+	\startPart
+	\partial 2. s4 s8 s4. |
+	e1:m |
+	s4 s8 s8 s8 s4. |
+	s4. s8 s2 | \myEndLine
+	e4:7 s4 s8 s4. |
+	a1:m |
+	s4 s8 s8 s8 s4. |
+	a1:m | \myEndLine
+	s4 s4 s4 s4 |
+	b4:7 s4 s4 s4 |
+	s8 s4 s4. s4 |
+	e4:m s4 s4 s4 | \myEndLine
+	s8 s4 s4. s4 |
+	f4:m7.5- s4 s4 s4 |
+	s4 s4 s2 |
+	b1:7 | \myEndLine
+	s4 s4 s8 s4. |
+	e1:m |
+	s4 s8 s8 s4 s4 |
+	s4. s8 s2 | \myEndLine
+	e4:7 s4 s8 s4. |
+	a1:m |
+	s4 s4 s4 s4 |
+	b1:7 | \myEndLine
+	s2 s4 s8 s8 |
+	e4:7 s4 s4 s4 |
+	s8 s4 s8 s4 s4 |
+	a4:7 s4 s4 s4 | \myEndLine
+	s8 s4 s8 s4 s8 s8 |
+	d4:7 s4 s4 s4 |
+	s8 s4 s8 s4 s4 |
+	g1 | \myEndLine
+	f4:m7.5- s4 b2:7 |
+	\endBar
+	\endPart
+
+	\endSong
+	\endChords
+}
+{% endif %}
+{% if part == "VoiceWikifonia" %}\absolute {
+	\tempo "Allegro" 4 = 180
+	\time 4/4
+	\key g \major
+
+	\partial 2. \mark \markup { \box { A } } r4 fis'8 g'4. |
+	e'1 |
+	r4 e'8 e'8 fis'8 g'4. |
+	e'4. e'8 ~ e'2 |
+	r4 a'4 b'8 c''4. |
+	a'1 |
+	r4 a'8 a'8 b'8 c''4. |
+	a'1 |
+	r4 gis'4 a'4 ais'4 |
+	b'4 fis'4 g'4 a'4 |
+	b'8 c''4 b'4. r4 |
+	e'4 fis'4 g'4 fis'4 |
+	g'8 fis'4 e'4. e'4 |
+	fis'4 fis'4 fis'4 g'4 ~ |
+	g'4 f'4 fis'2 |
+	b'1 ~ |
+	b'4 r4 fis'8 g'4. |
+	\mark \markup { \box { B } } e'1 ~ |
+	e'4 e'8 e'8 fis'4 g'4 |
+	e'4. e'8 e'2 ~ |
+	e'4 r4 b'8 c''4. |
+	a'1 ~ |
+	a'4 fis'4 g'4 a'4 |
+	b'1 ~ |
+	b'2 r4 b'8 ais'8 |
+	b'4 gis'4 a'4 ais'4 |
+	b'8 c''4 b'8 ~ b'4 r4 |
+	e'4 fis'4 g'4 a'4 |
+	g'8 fis'4 e'8 ~ e'4 r8 b'8 |
+	d''4 c''4 a'4 fis'4 |
+	e'8 fis'4 e'8 ~ e'4 d'4 |
+	g'1 ~ |
+	g'4 r4 r2 |
+	\endBar
+}
+{% endif %}

@@ -1,0 +1,93 @@
+{#
+default_version = "Wikifonia"
+
+[attributes]
+title = "Ach, Du Lieber Augustin"
+style = "Waltz"
+composer = "Traditional"
+piece = "Moderato"
+copyright = "Public domain composition"
+copyrightextra = "Source MusicXML marked Public Domain; instrumental lead sheet."
+typesetter = "OpenBook contributors (MusicXML import)"
+completion = "3"
+uuid = "add5efa8-97c6-406b-aa30-6be6a865f2a0"
+structure = "A"
+location = "Wikifonia"
+
+[versions.Wikifonia]
+doChords = true
+doVoice = true
+doLyrics = false
+doLyricsmore = false
+doLyricsmoremore = false
+doChordBars = false
+doGuitar = false
+doExtra = false
+doPrep = false
+doOwn = false
+#}
+{% if part == "Vars" %}
+{% endif %}
+{% if part == "Doc" %}
+	DONE:
+	- imported melody and chords from real_books_archive.gi/Wikifonia.tar.xz: Wikifonia/Marx Augustin - Ach, Du Lieber Augustin.mxl.
+	- source edition explicitly declares Public Domain; imported without lyrics.
+	- retained the written form, pickups, repeats and chord durations.
+	- source revision: http://www.wikifonia.org/node/2029/revisions/2605/view.
+	- tempo is an editorial practice suggestion, not a verified recording tempo.
+	TODO:
+	- proofread against a historical edition and check by ear.
+{% endif %}
+{% if part == "ChordsWikifonia" %}\chordmode {
+	\startChords
+	\startSong
+
+	\myMark "A"
+	\startPart
+	f4. s8 s8 s8 |
+	s4 s4 s4 |
+	c4:7 s4 s4 |
+	f4 s4 s4 | \myEndLine
+	s4. s8 s8 s8 |
+	s4 s4 s4 |
+	c4:7 s4 s4 |
+	f2. | \myEndLine
+	c4:7 s4 s4 |
+	f4 s4 s4 |
+	c4:7 s4 s4 |
+	f4 s4 s4 | \myEndLine
+	s4. s8 s8 s8 |
+	s4 s4 s4 |
+	c4:7 s4 s4 |
+	f2. | \myEndLine
+	\endBar
+	\endPart
+
+	\endSong
+	\endChords
+}
+{% endif %}
+{% if part == "VoiceWikifonia" %}\absolute {
+	\tempo "Moderato" 4 = 120
+	\time 3/4
+	\key f \major
+
+	c''4. d''8 c''8 bes'8 |
+	a'4 f'4 f'4 |
+	g'4 c'4 c'4 |
+	a'4 f'4 f'4 |
+	c''4. d''8 c''8 bes'8 |
+	a'4 f'4 f'4 |
+	g'4 c'4 c'4 |
+	f'2. |
+	g'4 c'4 c'4 |
+	a'4 f'4 f'4 |
+	g'4 c'4 c'4 |
+	a'4 f'4 f'4 |
+	c''4. d''8 c''8 bes'8 |
+	a'4 f'4 f'4 |
+	g'4 c'4 c'4 |
+	f'2. |
+	\endBar
+}
+{% endif %}

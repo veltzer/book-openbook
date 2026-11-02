@@ -1,0 +1,107 @@
+{#
+default_version = "Wikifonia"
+
+[attributes]
+title = "God Rest Ye Merry, Gentlemen"
+style = "Christmas"
+composer = "Traditional"
+piece = "Moderato"
+copyright = "Public domain composition"
+copyrightextra = "Source MusicXML marked Public Domain; instrumental lead sheet."
+typesetter = "OpenBook contributors (MusicXML import)"
+completion = "3"
+uuid = "a94b5b24-a73e-48ce-a7b5-d60a9e7d3622"
+structure = "A"
+location = "Wikifonia"
+
+[versions.Wikifonia]
+doChords = true
+doVoice = true
+doLyrics = false
+doLyricsmore = false
+doLyricsmoremore = false
+doChordBars = false
+doGuitar = false
+doExtra = false
+doPrep = false
+doOwn = false
+#}
+{% if part == "Vars" %}
+{% endif %}
+{% if part == "Doc" %}
+	DONE:
+	- imported melody and chords from real_books_archive.gi/Wikifonia.tar.xz: Wikifonia/Traditional English - God Rest Ye Merry, Gentlemen.mxl.
+	- source edition explicitly declares Public Domain; imported without lyrics.
+	- retained the written form, pickups, repeats and chord durations.
+	- source revision: http://wikifonia.org/node/3150/revisions/15884/view.
+	- tempo is an editorial practice suggestion, not a verified recording tempo.
+	TODO:
+	- proofread against a historical edition and check by ear.
+{% endif %}
+{% if part == "ChordsWikifonia" %}\chordmode {
+	\startChords
+	\startSong
+
+	\myMark "A"
+	\startPart
+	\partial 4 s4 |
+	\repeat volta 2 {
+	e4:m s4 s4 s4 |
+	e4:m s4 s4 s4 |
+	e4:m s4 s4 s4 | \myEndLine
+	e2.:m s4 |
+	e4:m s4 s4 s4 |
+	e4:m s4 s4 s4 |
+	e4:m s4 s4 s4 | \myEndLine
+	e2.:m s4 |
+	a4:m s4 s4 s4 |
+	b4:m7 s4 b4:7/+dis s4 |
+	e4:m s4 s4 s4 | \myEndLine
+	d2/+fis s4 s4 |
+	g2 c4/+g g4 |
+	b4:7/+dis s4 b4:7 s4 |
+	e2:m c8 s8 s4 | \myEndLine
+	d2/+fis s4 s4 |
+	g4 s4 s4 c4 |
+	b4:7/+dis s4 b4:7 s4 |
+	e2.:m a4:m | \myEndLine
+	e2.:m s4 |
+	}
+	\endBar
+	\endPart
+
+	\endSong
+	\endChords
+}
+{% endif %}
+{% if part == "VoiceWikifonia" %}\absolute {
+	\tempo "Moderato" 4 = 108
+	\time 4/4
+	\key g \major
+
+	\partial 4 e'4 |
+	\repeat volta 2 {
+	e'4 b'4 b'4 a'4 |
+	g'4 fis'4 e'4 d'4 |
+	e'4 fis'4 g'4 a'4 |
+	b'2. e'4 |
+	e'4 b'4 b'4 a'4 |
+	g'4 fis'4 e'4 d'4 |
+	e'4 fis'4 g'4 a'4 |
+	b'2. b'4 |
+	c''4 a'4 b'4 c''4 |
+	d''4 e''4 b'4 a'4 |
+	g'4 e'4 fis'4 g'4 |
+	a'2 g'4 a'4 |
+	b'2 c''4 b'4 |
+	b'4 a'4 g'4 fis'4 |
+	e'2 g'8 fis'8 e'4 |
+	a'2 g'4 a'4 |
+	b'4 c''4 d''4 e''4 |
+	b'4 a'4 g'4 fis'4 |
+	e'2. ~ e'4 ~ |
+	e'2. e'4 |
+	}
+	\endBar
+}
+{% endif %}

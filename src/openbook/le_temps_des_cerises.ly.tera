@@ -1,0 +1,127 @@
+{#
+default_version = "Wikifonia"
+
+[attributes]
+title = "Le Temps des Cerises"
+style = "Waltz"
+composer = "Antoine Renard"
+piece = "Moderato"
+copyright = "Public domain composition"
+copyrightextra = "Source MusicXML marked Public Domain; instrumental lead sheet."
+typesetter = "OpenBook contributors (MusicXML import)"
+completion = "3"
+uuid = "379ec3e5-e45f-47e4-9b90-f4eddfcf9145"
+structure = "A"
+location = "Wikifonia"
+
+[versions.Wikifonia]
+doChords = true
+doVoice = true
+doLyrics = false
+doLyricsmore = false
+doLyricsmoremore = false
+doChordBars = false
+doGuitar = false
+doExtra = false
+doPrep = false
+doOwn = false
+#}
+{% if part == "Vars" %}
+{% endif %}
+{% if part == "Doc" %}
+	DONE:
+	- imported melody and chords from real_books_archive.gi/Wikifonia.tar.xz: Wikifonia/Antoine Renard, Jean-Baptiste Cl?ment - Le Temps Des Cerises.mxl.
+	- source edition explicitly declares Public Domain; imported without lyrics.
+	- retained the written form, pickups, repeats and chord durations.
+	- source revision: http://wikifonia.org/node/1335/revisions/1747/view.
+	- tempo is an editorial practice suggestion, not a verified recording tempo.
+	TODO:
+	- proofread against a historical edition and check by ear.
+{% endif %}
+{% if part == "ChordsWikifonia" %}\chordmode {
+	\startChords
+	\startSong
+
+	\myMark "A"
+	\startPart
+	s4 s4 s4 |
+	\repeat volta 2 {
+	g4 s4 s4 |
+	s2 s4 |
+	d4 s4 s4 | \myEndLine
+	s4 s4 s4 |
+	g4 s4 s4 |
+	g2:7 s4 |
+	c4 s4 s4 | \myEndLine
+	s2 s4 |
+	g4 s4 s4 |
+	s2. |
+	d2.:7 | \myEndLine
+	g4 s4 g4:7 |
+	c4 s4 s4 |
+	s2 s4 |
+	s4 s4 s4 | \myEndLine
+	g4 s4 s4 |
+	s4 s4 s4 |
+	s2 s4 |
+	s4 s4 s4 | \myEndLine
+	d2.:7 |
+	s4 s4 s4 |
+	g4 s4 s4 |
+	s2 s4 | \myEndLine
+	d4:7 s4 s4 |
+	s4 s4 s4 |
+	g4 s4 s4 |
+	s2 s4 | \myEndLine
+	d4:7 s4 s4 |
+	g2. |
+	s4 s4 s4 |
+	}
+	\endBar
+	\endPart
+
+	\endSong
+	\endChords
+}
+{% endif %}
+{% if part == "VoiceWikifonia" %}\absolute {
+	\tempo "Moderato" 4 = 100
+	\time 3/4
+	\key g \major
+
+	r4 r4 d'4 |
+	\repeat volta 2 {
+	g'4 g'4 g'4 |
+	g'2 g'4 |
+	a'4 a'4 a'4 |
+	a'4 a'4 a'4 |
+	b'4 b'4 b'4 |
+	b'2 b'4 |
+	c''4 c''4 c''4 |
+	c''2 b'4 |
+	b'4 b'4 c''4 |
+	b'2. ( |
+	a'2. ) |
+	g'4 r4 g'4 |
+	c''4 c''4 c''4 |
+	c''2 c''4 |
+	c''4 e''4 c''4 |
+	c''4 b'4 b'4 |
+	b'4 b'4 b'4 |
+	d''2 b'4 |
+	b'4 a'4 g'4 |
+	a'2. ~ |
+	a'4 r4 d'4 |
+	g'4 g'4 g'4 |
+	g'2 g'4 |
+	a'4 a'4 a'4 |
+	a'4 a'4 a'4 |
+	b'4 b'4 b'4 |
+	d''2 b'4 |
+	b'4 a'4 fis'4 |
+	g'2. ~ |
+	g'4 r4 - "4x Fine" d'4 |
+	}
+	\endBar
+}
+{% endif %}

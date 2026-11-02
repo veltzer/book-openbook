@@ -1,0 +1,145 @@
+{#
+default_version = "Wikifonia"
+
+[attributes]
+title = "When Irish Eyes Are Smiling"
+style = "Waltz"
+composer = "Ernest Ball"
+piece = "Moderato"
+copyright = "Public domain composition"
+copyrightextra = "Source MusicXML marked Public Domain; instrumental lead sheet."
+typesetter = "OpenBook contributors (MusicXML import)"
+completion = "3"
+uuid = "9db60a7f-d089-40f1-b78c-0b8cf6a2a64f"
+structure = "A"
+location = "Ultimate-Fake-Book-C:721, TheBook:483"
+
+[versions.Wikifonia]
+doChords = true
+doVoice = true
+doLyrics = false
+doLyricsmore = false
+doLyricsmoremore = false
+doChordBars = false
+doGuitar = false
+doExtra = false
+doPrep = false
+doOwn = false
+#}
+{% if part == "Vars" %}
+{% endif %}
+{% if part == "Doc" %}
+	DONE:
+	- imported melody and chords from real_books_archive.gi/Wikifonia.tar.xz: Wikifonia/Ernest Ball, Chauncey Olcott, George Graff Jr. - When Irish Eyes Are Smiling.mxl.
+	- source edition explicitly declares Public Domain; imported without lyrics.
+	- retained the written form, pickups, repeats and chord durations.
+	- source revision: http://wikifonia.org/node/732/revisions/970/view.
+	- tempo is an editorial practice suggestion, not a verified recording tempo.
+	TODO:
+	- proofread against a historical edition and check by ear.
+{% endif %}
+{% if part == "ChordsWikifonia" %}\chordmode {
+	\startChords
+	\startSong
+
+	\myMark "A"
+	\startPart
+	\partial 4 s4 |
+	\repeat volta 2 {
+	d2 s4 |
+	d2:maj9 s4 |
+	d4 s2 | \myEndLine
+	d4:7 s4 s4 |
+	g2 s4 |
+	s2 s4 |
+	d2. | \myEndLine
+	s2 s8 s8 |
+	g2 s4 |
+	s2 s4 |
+	d4 s2 | \myEndLine
+	b2:7 s4 |
+	e2:7 s4 |
+	s2 s4 |
+	a2.:7 | \myEndLine
+	s4 s4 s4 |
+	d2 s4 |
+	d2:maj9 s4 |
+	d4 s2 | \myEndLine
+	d4:7 s4 s4 |
+	g2 s4 |
+	s2 s4 |
+	d2. | \myEndLine
+	s4 s4 s4 |
+	g2 s4 |
+	gis2:dim s4 |
+	d2. | \myEndLine
+	b4:7 s4 s4 |
+	e4:7 s4 s4 |
+	a2:7 s4 |
+	} \alternative {
+	{
+	d4 s4 s4 | \myEndLine
+	s4 s4 s4 | \myEndLineVoltaNotLast
+	}
+	{
+	d2. |
+	s4 s4 s4 | \myEndLineVoltaLast
+	}
+	}
+	\endBar
+	\endPart
+
+	\endSong
+	\endChords
+}
+{% endif %}
+{% if part == "VoiceWikifonia" %}\absolute {
+	\tempo "Moderato" 4 = 100
+	\time 3/4
+	\key d \major
+
+	\partial 4 a'4 |
+	\repeat volta 2 {
+	fis'2 fis'4 |
+	e'2 d'4 |
+	fis'4 a'2 ~ |
+	a'4 fis'4 d'4 |
+	g'2 b'4 |
+	d''2 b'4 |
+	a'2. ~ |
+	a'2 b'8 cis''8 |
+	d''2 cis''4 |
+	d''2 cis''4 |
+	b'4 a'2 |
+	g'2 fis'4 |
+	b'2 e'4 |
+	e'2 fis'4 |
+	e'2. ~ |
+	e'4 r4 a'4 |
+	fis'2 fis'4 |
+	e'2 d'4 |
+	fis'4 a'2 ~ |
+	a'4 fis'4 d'4 |
+	g'2 b'4 |
+	d''2 b'4 |
+	a'2. ~ |
+	a'4 b'4 cis''4 |
+	d''2 cis''4 |
+	e''2 d''4 |
+	fis''2. |
+	a'4 gis'4 a'4 |
+	b'4 cis''4 d''4 |
+	e''2 d''4 |
+	} \alternative {
+	{
+	d''4 r4 r4 |
+	r4 r4 a'4 |
+	}
+	{
+	d''2. ~ |
+	d''4 r4 r4 |
+	}
+	}
+	\endBar
+}
+{% endif %}

@@ -1,0 +1,127 @@
+{#
+default_version = "Wikifonia"
+
+[attributes]
+title = "O Christmas Tree"
+style = "Waltz"
+composer = "Traditional"
+piece = "Moderato"
+copyright = "Public domain composition"
+copyrightextra = "Source MusicXML marked Public Domain; instrumental lead sheet."
+typesetter = "OpenBook contributors (MusicXML import)"
+completion = "3"
+uuid = "e6f5b612-f259-46ba-b6db-6830c3264c3e"
+structure = "A"
+location = "Wikifonia"
+
+[versions.Wikifonia]
+doChords = true
+doVoice = true
+doLyrics = false
+doLyricsmore = false
+doLyricsmoremore = false
+doChordBars = false
+doGuitar = false
+doExtra = false
+doPrep = false
+doOwn = false
+#}
+{% if part == "Vars" %}
+{% endif %}
+{% if part == "Doc" %}
+	DONE:
+	- imported melody and chords from real_books_archive.gi/Wikifonia.tar.xz: Wikifonia/Traditional - O Christmas Tree.mxl.
+	- source edition explicitly declares Public Domain; imported without lyrics.
+	- retained the written form, pickups, repeats and chord durations.
+	- source revision: http://wikifonia.org/node/874/revisions/4436/view.
+	- tempo is an editorial practice suggestion, not a verified recording tempo.
+	TODO:
+	- proofread against a historical edition and check by ear.
+{% endif %}
+{% if part == "ChordsWikifonia" %}\chordmode {
+	\startChords
+	\startSong
+
+	\myMark "A"
+	\startPart
+	\partial 4 s4 |
+	f8 s8 s4 c4:7 |
+	f8 s8 s4. s8 |
+	g8:m s8 c4:7 s4 | \myEndLine
+	f4 s4 s4 |
+	s8 s8 s4 c4:7 |
+	f8 s8 s4. s8 |
+	g8:m s8 c4:7 s4 | \myEndLine
+	f4 s4. s8 |
+	s8 s8 s4. s8 |
+	g8:m s8 s4. s8 |
+	c8:7 s8 s4. s8 | \myEndLine
+	f8 s8 s4 s4 |
+	s8 s8 s4 c4:7 |
+	f8 s8 s4. s8 |
+	g8:m s8 c4:7 s4 | \myEndLine
+	f4 s4 s4 |
+	s8 s8 s4 c4:7 |
+	f8 s8 s4. s8 |
+	g8:m s8 c4:7 s4 | \myEndLine
+	f4 s4 s4 |
+	s8 s8 s4 c4:7 |
+	f8 s8 s4. s8 |
+	g8:m s8 c4:7 s4 | \myEndLine
+	f4 s4. s8 |
+	s8 s8 s4. s8 |
+	g8:m s8 s4. s8 |
+	c8:7 s8 s4. s8 | \myEndLine
+	f8 s8 s4 s4 |
+	s8 s8 s4 c4:7 |
+	f8 s8 f4.:aug s8 |
+	g8:m s8 ces4:7 s4 | \myEndLine
+	f4 s4 s4 |
+	\endBar
+	\endPart
+
+	\endSong
+	\endChords
+}
+{% endif %}
+{% if part == "VoiceWikifonia" %}\absolute {
+	\tempo "Moderato" 4 = 90
+	\time 3/4
+	\key f \major
+
+	\partial 4 c'4 |
+	f'8 f'8 f'4 g'4 |
+	a'8 a'8 a'4. a'8 |
+	g'8 a'8 bes'4 e'4 |
+	g'4 f'4 c'4 |
+	f'8 f'8 f'4 g'4 |
+	a'8 a'8 a'4. a'8 |
+	g'8 a'8 bes'4 e'4 |
+	g'4 f'4. c''8 |
+	c''8 a'8 d''4. c''8 |
+	c''8 bes'8 bes'4. bes'8 |
+	bes'8 g'8 c''4. bes'8 |
+	bes'8 a'8 a'4 c'4 |
+	f'8 f'8 f'4 g'4 |
+	a'8 a'8 a'4. a'8 |
+	g'8 a'8 bes'4 e'4 |
+	g'4 f'4 c'4 |
+	f'8 f'8 f'4 g'4 |
+	a'8 a'8 a'4. a'8 |
+	g'8 a'8 bes'4 e'4 |
+	g'4 f'4 c'4 |
+	f'8 f'8 f'4 g'4 |
+	a'8 a'8 a'4. a'8 |
+	g'8 a'8 bes'4 e'4 |
+	g'4 f'4. c''8 |
+	c''8 a'8 d''4. c''8 |
+	c''8 bes'8 bes'4. bes'8 |
+	bes'8 g'8 c''4. bes'8 |
+	bes'8 a'8 a'4 c'4 |
+	f'8 f'8 f'4 g'4 |
+	a'8 a'8 a'4. a'8 |
+	g'8 a'8 bes'4 e'4 |
+	g'4 f'4 r4 |
+	\endBar
+}
+{% endif %}

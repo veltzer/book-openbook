@@ -1,0 +1,93 @@
+{#
+default_version = "Wikifonia"
+
+[attributes]
+title = "Deck the Halls"
+style = "Swing"
+composer = "Traditional"
+piece = "Allegro"
+copyright = "Public domain composition"
+copyrightextra = "Source MusicXML marked Public Domain; instrumental lead sheet."
+typesetter = "OpenBook contributors (MusicXML import)"
+completion = "3"
+uuid = "79d95989-05ad-46ee-b365-9e4b4d70524d"
+structure = "A"
+location = "Wikifonia"
+
+[versions.Wikifonia]
+doChords = true
+doVoice = true
+doLyrics = false
+doLyricsmore = false
+doLyricsmoremore = false
+doChordBars = false
+doGuitar = false
+doExtra = false
+doPrep = false
+doOwn = false
+#}
+{% if part == "Vars" %}
+{% endif %}
+{% if part == "Doc" %}
+	DONE:
+	- imported melody and chords from real_books_archive.gi/Wikifonia.tar.xz: Wikifonia/Traditional - Deck the halls.mxl.
+	- source edition explicitly declares Public Domain; imported without lyrics.
+	- retained the written form, pickups, repeats and chord durations.
+	- source revision: http://wikifonia.org/node/875/revisions/4435/view.
+	- tempo is an editorial practice suggestion, not a verified recording tempo.
+	TODO:
+	- proofread against a historical edition and check by ear.
+{% endif %}
+{% if part == "ChordsWikifonia" %}\chordmode {
+	\startChords
+	\startSong
+
+	\myMark "A"
+	\startPart
+	d4. s8 s4 s4 |
+	b4:m s4 s4 s4 |
+	a8:7 s8 s8 s8 d4. s8 |
+	s4 a4:7 d2 | \myEndLine
+	s4. s8 s4 s4 |
+	b4:m s4 s4 s4 |
+	a8:7 s8 s8 s8 d4. s8 |
+	s4 a4:7 d2 | \myEndLine
+	a4.:7 s8 s4 s4 |
+	d4. s8 s4 s4 |
+	d8 s8 s4 b8:m s8 s4 |
+	a4 e4:7 a2 | \myEndLine
+	d4. s8 s4 s4 |
+	b4:m s4 s4 s4 |
+	g8 s8 s8 s8 d4. s8 |
+	s4 a4:7 d2 | \myEndLine
+	\endBar
+	\endPart
+
+	\endSong
+	\endChords
+}
+{% endif %}
+{% if part == "VoiceWikifonia" %}\absolute {
+	\tempo "Allegro" 4 = 120
+	\time 4/4
+	\key d \major
+
+	a'4. g'8 fis'4 e'4 |
+	d'4 e'4 fis'4 d'4 |
+	e'8 fis'8 g'8 e'8 fis'4. e'8 |
+	d'4 cis'4 d'2 |
+	a'4. g'8 fis'4 e'4 |
+	d'4 e'4 fis'4 d'4 |
+	e'8 fis'8 g'8 e'8 fis'4. e'8 |
+	d'4 cis'4 d'2 |
+	e'4. fis'8 g'4 e'4 |
+	fis'4. g'8 a'4 e'4 |
+	fis'8 gis'8 a'4 b'8 cis''8 d''4 |
+	cis''4 b'4 a'2 |
+	a'4. g'8 fis'4 e'4 |
+	d'4 e'4 fis'4 d'4 |
+	b'8 b'8 b'8 b'8 a'4. g'8 |
+	fis'4 e'4 d'2 |
+	\endBar
+}
+{% endif %}

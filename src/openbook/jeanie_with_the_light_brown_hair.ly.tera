@@ -1,0 +1,145 @@
+{#
+default_version = "Wikifonia"
+
+[attributes]
+title = "Jeanie with the Light Brown Hair"
+style = "Ballad"
+composer = "Stephen Foster"
+piece = "Andante"
+copyright = "Public domain composition"
+copyrightextra = "Source MusicXML marked Public Domain; instrumental lead sheet."
+typesetter = "OpenBook contributors (MusicXML import)"
+completion = "3"
+uuid = "cb82ac83-9a80-44bb-9cfe-bab05cd05fbc"
+structure = "A"
+location = "Wikifonia"
+
+[versions.Wikifonia]
+doChords = true
+doVoice = true
+doLyrics = false
+doLyricsmore = false
+doLyricsmoremore = false
+doChordBars = false
+doGuitar = false
+doExtra = false
+doPrep = false
+doOwn = false
+#}
+{% if part == "Vars" %}
+{% endif %}
+{% if part == "Doc" %}
+	DONE:
+	- imported melody and chords from real_books_archive.gi/Wikifonia.tar.xz: Wikifonia/Stephen Foster , Stephen Foster 1854 - Jeanie With The Light Brown Hair.mxl.
+	- source edition explicitly declares Public Domain; imported without lyrics.
+	- retained the written form, pickups, repeats and chord durations.
+	- source revision: http://wikifonia.org/node/4391/revisions/15984/view.
+	- tempo is an editorial practice suggestion, not a verified recording tempo.
+	TODO:
+	- proofread against a historical edition and check by ear.
+{% endif %}
+{% if part == "ChordsWikifonia" %}\chordmode {
+	\startChords
+	\startSong
+
+	\myMark "A"
+	\startPart
+	s2 s2 |
+	\repeat volta 2 {
+	f2. s4 |
+	bes4 s4 s4 s4 |
+	f2 c4 s4 | \myEndLine
+	f1 |
+	s2 s4 s4 |
+	bes2 s2 |
+	f4. s8 g4:7 s4 | \myEndLine
+	c2. s4 |
+	f2. s4 |
+	bes4 s4 s4 s4 |
+	f2 c4 s4 | \myEndLine
+	f1 |
+	g4:7 s4 s4 s4 |
+	c4 s4 f4 s4 |
+	c2 g4:7 s4 | \myEndLine
+	c2 s2 |
+	s4 s4 s4 s4 |
+	s2 s4 s4 |
+	f4 s4 s4 s4 | \myEndLine
+	s1 |
+	bes4 s4 s4 s4 |
+	f2 s4 s4 |
+	d2:m g4.:7 s8 | \myEndLine
+	c2. s4 |
+	f2. s4 |
+	bes4 s4 s4 s4 |
+	f2 c4 s4 | \myEndLine
+	f1 |
+	bes4 s4 s4. s8 |
+	f4 s4 bes4. s8 |
+	} \alternative {
+	{
+	f2 c4 s4 | \myEndLine
+	f2. s4 | \myEndLineVoltaNotLast
+	}
+	{
+	f2 c4 s4 |
+	f2 s2 | \myEndLineVoltaLast
+	}
+	}
+	\endBar
+	\endPart
+
+	\endSong
+	\endChords
+}
+{% endif %}
+{% if part == "VoiceWikifonia" %}\absolute {
+	\tempo "Andante" 4 = 80
+	\time 4/4
+	\key c \major
+
+	r2 d''2 ^ "N.C." |
+	\repeat volta 2 {
+	c''2. a'4 |
+	bes'4 a'4 g'4 f'4 |
+	a'2 c'4 d'4 |
+	f'1 |
+	f'2 g'4 a'4 |
+	f''2 d''2 |
+	c''4. a'8 g'4 f'4 |
+	g'2. d''4 ^ "N.C." |
+	c''2. a'4 |
+	bes'4 a'4 g'4 f'4 |
+	a'2 c'4 d'4 |
+	f'1 |
+	g'4 b'4 c''4 d''4 |
+	e''4 f''4 a'4 d''4 |
+	c''2 b'4 b'4 |
+	c''2 r2 |
+	g'4 a'4 g'4 f'4 |
+	g'2 a'4 g'4 |
+	f'4 e'4 f'4 a'4 |
+	c''1 |
+	d''4 c''4 d''4 f''4 |
+	c''2 a'4 g'4 |
+	f'2 d'4. d'8 |
+	c'2. d''4 ^ "N.C." |
+	c''2. a'4 |
+	bes'4 a'4 g'4 f'4 |
+	a'2 c'4 d'4 |
+	f'1 |
+	g'4 a'4 f''4. d''8 |
+	c''4 d''4 f'4. g'8 |
+	} \alternative {
+	{
+	a'2 a'4 g'4 |
+	f'2. d''4 ^ "N.C." |
+	}
+	{
+	a'2 a'4 g'4 |
+	f'2 r2 |
+	}
+	}
+	\endBar
+}
+{% endif %}

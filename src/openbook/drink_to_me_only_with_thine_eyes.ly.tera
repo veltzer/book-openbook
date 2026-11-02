@@ -1,0 +1,121 @@
+{#
+default_version = "Wikifonia"
+
+[attributes]
+title = "Drink to Me Only with Thine Eyes"
+style = "Ballad"
+composer = "Traditional"
+piece = "Andante"
+copyright = "Public domain composition"
+copyrightextra = "Source MusicXML marked Public Domain; instrumental lead sheet."
+typesetter = "OpenBook contributors (MusicXML import)"
+completion = "3"
+uuid = "340313df-eb2c-4478-9c4e-0fce2521b5b7"
+structure = "A"
+location = "Wikifonia"
+
+[versions.Wikifonia]
+doChords = true
+doVoice = true
+doLyrics = false
+doLyricsmore = false
+doLyricsmoremore = false
+doChordBars = false
+doGuitar = false
+doExtra = false
+doPrep = false
+doOwn = false
+#}
+{% if part == "Vars" %}
+{% endif %}
+{% if part == "Doc" %}
+	DONE:
+	- imported melody and chords from real_books_archive.gi/Wikifonia.tar.xz: Wikifonia/John Wall Callcott, Ben Jonson - Drink To Me Only With Thine Eyes.mxl.
+	- source edition explicitly declares Public Domain; imported without lyrics.
+	- retained the written form, pickups, repeats and chord durations.
+	- source revision: http://wikifonia.org/node/5377/revisions/7306/view.
+	- tempo is an editorial practice suggestion, not a verified recording tempo.
+	TODO:
+	- proofread against a historical edition and check by ear.
+{% endif %}
+{% if part == "ChordsWikifonia" %}\chordmode {
+	\startChords
+	\startSong
+
+	\myMark "A"
+	\startPart
+	c4 s4 s4 |
+	g2 s4 |
+	c4 s4 s4 |
+	f4 s4 s4 | \myEndLine
+	c4 s4 s4 |
+	g2 s4 |
+	c2. |
+	s2. | \myEndLine
+	s4 s4 s4 |
+	g2 s4 |
+	c4 s4 s4 |
+	f4 s4 s4 | \myEndLine
+	c4 s4 s4 |
+	g2 s4 |
+	c2. |
+	s4 s4 s4 | \myEndLine
+	s4 s2 |
+	s4 s4 s4 |
+	s4 s2 |
+	s4 f2 | \myEndLine
+	s4 s4 s4 |
+	s4 g2 |
+	s2. |
+	c4 s4 s4 | \myEndLine
+	g2 s4 |
+	c4 s4 s4 |
+	f4 s4 s4 |
+	c4 s4 s4 | \myEndLine
+	g2 s4 |
+	c2. |
+	\endBar
+	\endPart
+
+	\endSong
+	\endChords
+}
+{% endif %}
+{% if part == "VoiceWikifonia" %}\absolute {
+	\tempo "Andante" 4 = 80
+	\time 3/4
+	\key c \major
+
+	e'4 e'4 e'4 |
+	f'2 f'4 |
+	g'4 f'4 e'4 |
+	d'4 ( e'4 ) f'4 |
+	g'4 ( c'4 ) f'4 |
+	e'2 d'4 |
+	c'2. ~ |
+	c'2. |
+	e'4 e'4 e'4 |
+	f'2 f'4 |
+	g'4 ( f'4 ) e'4 |
+	d'4 ( e'4 ) f'4 |
+	g'4 ( c'4 ) f'4 |
+	e'2 d'4 |
+	c'2. |
+	g'4 g'4 ( e'4 ) |
+	g'4 c''2 |
+	g'4 g'4 ( e'4 ) |
+	g'4 g'2 |
+	g'4 a'2 |
+	g'4 g'4 ( f'4 ) |
+	e'4 e'2 ( |
+	d'2. ) |
+	e'4 e'4 e'4 |
+	f'2 f'4 |
+	g'4 f'4 e'4 |
+	d'4 ( e'4 ) f'4 |
+	g'4 c'4 f'4 |
+	e'2 d'4 |
+	c'2. |
+	\endBar
+}
+{% endif %}

@@ -1,0 +1,147 @@
+{#
+default_version = "Wikifonia"
+
+[attributes]
+title = "Beautiful Dreamer"
+style = "Ballad"
+composer = "Stephen Foster"
+piece = "Andante"
+copyright = "Public domain composition"
+copyrightextra = "Source MusicXML marked Public Domain; instrumental lead sheet."
+typesetter = "OpenBook contributors (MusicXML import)"
+completion = "3"
+uuid = "e73adfc3-1e42-4499-9a70-69b677f0176d"
+structure = "A"
+location = "Wikifonia"
+
+[versions.Wikifonia]
+doChords = true
+doVoice = true
+doLyrics = false
+doLyricsmore = false
+doLyricsmoremore = false
+doChordBars = false
+doGuitar = false
+doExtra = false
+doPrep = false
+doOwn = false
+#}
+{% if part == "Vars" %}
+{% endif %}
+{% if part == "Doc" %}
+	DONE:
+	- imported melody and chords from real_books_archive.gi/Wikifonia.tar.xz: Wikifonia/Stephen Foster - Beautiful Dreamer.mxl.
+	- source edition explicitly declares Public Domain; imported without lyrics.
+	- retained the written form, pickups, repeats and chord durations.
+	- source revision: http://wikifonia.org/node/4386/revisions/14466/view.
+	- tempo is an editorial practice suggestion, not a verified recording tempo.
+	TODO:
+	- proofread against a historical edition and check by ear.
+{% endif %}
+{% if part == "ChordsWikifonia" %}\chordmode {
+	\startChords
+	\startSong
+
+	\myMark "A"
+	\startPart
+	\repeat volta 2 {
+	c4 s4 s4 |
+	s2. |
+	s2. |
+	d4:m s4 s4 | \myEndLine
+	s2. |
+	s2. |
+	g4:7 s4 s4 |
+	s4 s4 s4 | \myEndLine
+	s4 s4 s4 |
+	} \alternative {
+	{
+	c2. |
+	s2. |
+	s2. | \myEndLineVoltaNotLast
+	}
+	{
+	c2. | \myEndLineVoltaLast
+	}
+	}
+	s2. |
+	s2. |
+	g4:7 s4 s4 | \myEndLine
+	s2. |
+	s2. |
+	c4 s4 s4 |
+	s2. | \myEndLine
+	s2. |
+	d4:7 s4 s4 |
+	s2. |
+	s2 s4 | \myEndLine
+	s4 s4 s4 |
+	g2.:7 |
+	s2. |
+	c2. | \myEndLine
+	s2. |
+	s2. |
+	f4 s4 s4 |
+	c4 s4 s4 | \myEndLine
+	g4:7 s4 s4 |
+	c2. |
+	s2. |
+	s2. | \myEndLine
+	\endBar
+	\endPart
+
+	\endSong
+	\endChords
+}
+{% endif %}
+{% if part == "VoiceWikifonia" %}\absolute {
+	\tempo "Andante" 4 = 80
+	\time 3/4
+	\key c \major
+
+	\repeat volta 2 {
+	c''4 b'4 c''4 |
+	g'2. |
+	e'2. |
+	d'4 cis'4 d'4 |
+	a'2. ~ |
+	a'2. |
+	g'4 b'4 a'4 |
+	a'4 g'4 f'4 |
+	f'4 e'4 d'4 |
+	} \alternative {
+	{
+	e'2. ~ |
+	e'2. ~ |
+	e'2. |
+	}
+	{
+	c'2. ~ |
+	}
+	}
+	c'2. ~ |
+	c'2. |
+	g'4 f'4 d'4 |
+	b2. |
+	a'2. |
+	a'4 g'4 e'4 |
+	c'2. ~ |
+	c'2. |
+	c''4 b'4 c''4 |
+	a'2. |
+	d''2 c''4 |
+	b'4 c''4 a'4 |
+	g'2. ~ |
+	g'2. ^ "D.C. al Coda" |
+	\mark \markup { \musicglyph "scripts.coda" } e'2. ~ |
+	e'2. ~ |
+	e'2. |
+	a'4 b'4 c''4 |
+	c''4 g'4 e'4 |
+	f'4 e'4 d'4 |
+	c'2. ~ |
+	c'2. ~ |
+	c'2. |
+	\endBar
+}
+{% endif %}
