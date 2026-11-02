@@ -1,0 +1,121 @@
+{#
+default_version = "Wikifonia"
+
+[attributes]
+title = "Jelly Roll"
+style = "Jazz"
+composer = "Charles Mingus"
+piece = "Jazz"
+typesetter = "OpenBook contributors (MusicXML import)"
+completion = "3"
+uuid = "bfed84af-3281-5708-b810-3e00e2abf15c"
+location = "Real_Book_1:256"
+copyright = "All Rights Reserved"
+
+[versions.Wikifonia]
+doChords = true
+doVoice = true
+doLyrics = false
+doLyricsmore = false
+doLyricsmoremore = false
+doChordBars = false
+doGuitar = false
+doExtra = false
+doPrep = false
+doOwn = false
+#}
+{% if part == "Vars" %}
+{% endif %}
+{% if part == "Doc" %}
+	DONE:
+	- imported melody and chord changes from real_books_archive.gi/Wikifonia.tar.xz: Wikifonia/Charles Mingus - Jelly Roll.mxl.
+	- source revision: http://wikifonia.org/node/3744/revisions/4884/view.
+	- PDF reference: real_books_archive.gi/The Real Book of Jazz Volume I.pdf, PDF page 256.
+	- retained the original copyright notice where printed; the underlying music is not relicensed.
+	- retained written measures, pickups, repeats and endings; lyrics omitted.
+	- tempo is an editorial practice suggestion.
+	TODO:
+	- proofread the music against the referenced PDF and check by ear.
+	- verify the copyright notice against the scan; no readable per-tune notice was recovered, so the archived rights notice is retained where available.
+{% endif %}
+{% if part == "ChordsWikifonia" %}\chordmode {
+	\startChords
+	\startSong
+
+	\myMark "A"
+	\startPart
+	\repeat volta 2 {
+	ees1:7 |
+	s1 |
+	s1 |
+	s1 | \myEndLine
+	aes1:7 |
+	s1 |
+	des1:7 |
+	s1 | \myEndLine
+	s8 aes1*5/8:7 ges4:7 |
+	f1:7 |
+	s1 |
+	ees1:7 | \myEndLine
+	aes1:7 |
+	s1 |
+	}
+	ees1:7 |
+	s1 | \myEndLine
+	s1 |
+	s1 |
+	aes1:7 |
+	s1 | \myEndLine
+	des1:7 |
+	s1 |
+	s8 aes4.:7 ges2:7 |
+	f1:7 | \myEndLine
+	s1 |
+	ees1:7 |
+	aes1:7 |
+	s1 | \myEndLine
+	\endBar
+	\endPart
+
+	\endSong
+	\endChords
+}
+{% endif %}
+{% if part == "VoiceWikifonia" %}\absolute {
+	\tempo "Moderato" 4 = 120
+	\time 4/4
+	\key as \major
+
+	\repeat volta 2 {
+	es''8 d''8 des''8 c''8 ~ c''8 ces''8 bes'4 |
+	es''8 d''8 des''8 c''8 ~ c''2 |
+	es''8 d''8 des''8 c''8 ~ c''8 ces''8 bes'4 |
+	es''8 d''8 des''8 c''8 ~ c''2 |
+	as'8 bes'8 b'8 c''8 r8 c''4. |
+	as'8 bes'8 b'8 c''8 ~ c''2 |
+	as'8 a'8 bes'8 ces''8 r8 ces''4. |
+	as'8 a'8 bes'8 ces''8 ~ ces''2 |
+	r8 ges''4. es''4 ^ "G+7" des''4 |
+	c''4 bes'8 a'8 ~ a'4. des''8 |
+	c''8 ^ "Bb-7" des''8 c''8 des''8 c''8 es'4 des''8 |
+	c''8 des''8 c''8 des''8 c''8 es'8 f'8 as'8 ~ |
+	as'1 ~ |
+	as'1 |
+	}
+	r1 |
+	r1 |
+	r1 |
+	r1 |
+	r1 |
+	r1 |
+	r1 |
+	r1 |
+	r8 r8 r4 ^ "G+7" r2 |
+	R1 |
+	R1 ^ "Bb-7" |
+	R1 |
+	r1 |
+	r1 |
+	\endBar
+}
+{% endif %}

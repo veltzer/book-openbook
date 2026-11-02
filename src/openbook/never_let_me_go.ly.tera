@@ -1,0 +1,132 @@
+{#
+default_version = "Wikifonia"
+
+[attributes]
+title = "Never Let Me Go"
+style = "Jazz"
+composer = "Jay Livingston, Ray Evans"
+piece = "Jazz"
+typesetter = "OpenBook contributors (MusicXML import)"
+completion = "3"
+uuid = "760e1804-c1d0-5843-b612-bd65e9aa0f13"
+location = "Real_Book_3:215"
+copyright = "All Rights Reserved"
+
+[versions.Wikifonia]
+doChords = true
+doVoice = true
+doLyrics = false
+doLyricsmore = false
+doLyricsmoremore = false
+doChordBars = false
+doGuitar = false
+doExtra = false
+doPrep = false
+doOwn = false
+#}
+{% if part == "Vars" %}
+{% endif %}
+{% if part == "Doc" %}
+	DONE:
+	- imported melody and chord changes from real_books_archive.gi/Wikifonia.tar.xz: Wikifonia/Jay Livingston, Ray Evans - Never Let Me Go.mxl.
+	- source revision: http://wikifonia.org/node/4244/revisions/8831/view.
+	- PDF reference: real_books_archive.gi/The Real Book of Jazz Volume III.pdf, PDF page 215.
+	- retained the original copyright notice where printed; the underlying music is not relicensed.
+	- retained written measures, pickups, repeats and endings; lyrics omitted.
+	- tempo is an editorial practice suggestion.
+	TODO:
+	- proofread the music against the referenced PDF and check by ear.
+	- verify editorial chord spacing in measures 27; the archive places successive symbols at the same offset.
+	- verify the copyright notice against the scan; no readable per-tune notice was recovered, so the archived rights notice is retained where available.
+{% endif %}
+{% if part == "ChordsWikifonia" %}\chordmode {
+	\startChords
+	\startSong
+
+	\myMark "A"
+	\startPart
+	\repeat volta 2 {
+	g1:m7 |
+	c1:7 |
+	f1:m7 |
+	bes1:7 | \myEndLine
+	ees1:maj7 |
+	a2:dim7 d2:7 |
+	des1:maj7 |
+	g2:m7 c2:7 | \myEndLine
+	c1:m7 |
+	f1:7 |
+	bes1:m7+ |
+	ees1:7.11+ | \myEndLine
+	aes1:maj7 |
+	d2:dim7 g2:7.9- |
+	c1:maj7 |
+	a2:m7 d2:7 | \myEndLine
+	g1:m7 |
+	c1:7 |
+	f1:m7 |
+	bes1:7 | \myEndLine
+	ees1:maj7 |
+	a2:dim7 d2:7 |
+	g1:m7 |
+	c1:7 | \myEndLine
+	c1:m7 |
+	f1:7.9- |
+	} \alternative {
+	{
+	bes4:maj7 a2:dim7 d4:7 | \myEndLineVoltaNotLast
+	}
+	{
+	bes1:maj7 | \myEndLineVoltaLast
+	}
+	}
+	\endBar
+	\endPart
+
+	\endSong
+	\endChords
+}
+{% endif %}
+{% if part == "VoiceWikifonia" %}\absolute {
+	\tempo "Moderato" 4 = 120
+	\time 4/4
+	\key bes \major
+
+	\repeat volta 2 {
+	g'8 a'8 d'8 a'8 g'2 |
+	\times 2/3 { r4 bes'4 a'4 } g'8 f'8 e'4 |
+	f'8 g'8 c'8 g'8 f'2 |
+	\times 2/3 { r4 as'4 g'4 } f'8 es'8 d'4 |
+	\times 2/3 { c'4 d'4 c'4 } d'4. bes8 |
+	c'8 d'4. ~ d'4 r8 bes8 |
+	c'8 des'4 c'8 des'4. as8 |
+	bes8 c'4. ~ c'2 |
+	c''8 d''8 a'8 d''8 c''2 |
+	r8 c''8 d''8 c''8 d''4. c''8 |
+	a'4 \once \omit TupletBracket \times 2/3 { a'8 bes'8 c''8 } a'2 ~ |
+	a'4 r8 f'8 a'8 f'8 a'8 as'8 |
+	g'4 \once \omit TupletBracket \times 2/3 { g'8 a'8 bes'8 } g'2 |
+	g'4 r8 f'8 as'8 as'4 g'8 |
+	e'1 |
+	r8 c'8 e'8 g'8 bes'8 a'8 bes'8 a'8 |
+	g'8 a'8 d'8 a'8 g'2 |
+	\times 2/3 { r4 bes'4 a'4 } g'8 f'8 e'4 |
+	f'8 g'8 c'8 g'8 f'2 |
+	\times 2/3 { r4 as'4 g'4 } f'8 es'8 d'4 |
+	c'4 \once \omit TupletBracket \times 2/3 { c'8 d'8 c'8 } d'8 bes4. |
+	d'8 c'4. c'2 |
+	bes'4 \once \omit TupletBracket \times 2/3 { bes'8 c''8 bes'8 } c''8 bes'4. |
+	cis''8 d''4. d''2 |
+	c''8 d''8 g'8 d''8 c''2 |
+	c''2 bes'8 c''8 ges'8 c''8 |
+	} \alternative {
+	{
+	bes'1 |
+	}
+	{
+	bes'1 |
+	}
+	}
+	\endBar
+}
+{% endif %}

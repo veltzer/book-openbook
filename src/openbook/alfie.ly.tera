@@ -1,0 +1,151 @@
+{#
+default_version = "Wikifonia"
+
+[attributes]
+title = "Alfie"
+style = "Jazz"
+composer = "Burt Bacharach"
+piece = "Jazz"
+typesetter = "OpenBook contributors (MusicXML import)"
+completion = "3"
+uuid = "7c02dad6-0fc1-5faa-934d-0ba0e1e6e3b8"
+location = "Real_Book_1:498"
+copyright = "All Rights Reserved"
+
+[versions.Wikifonia]
+doChords = true
+doVoice = true
+doLyrics = false
+doLyricsmore = false
+doLyricsmoremore = false
+doChordBars = false
+doGuitar = false
+doExtra = false
+doPrep = false
+doOwn = false
+#}
+{% if part == "Vars" %}
+{% endif %}
+{% if part == "Doc" %}
+	DONE:
+	- imported melody and chord changes from real_books_archive.gi/Wikifonia.tar.xz: Wikifonia/Burt Bacharach - Alfie.mxl.
+	- source revision: http://wikifonia.org/node/14603/revisions/19562/view.
+	- PDF reference: real_books_archive.gi/The Real Book of Jazz Volume I.pdf, PDF page 498.
+	- retained the original copyright notice where printed; the underlying music is not relicensed.
+	- retained written measures, pickups, repeats and endings; lyrics omitted.
+	- tempo taken from archived MusicXML.
+	TODO:
+	- proofread the music against the referenced PDF and check by ear.
+	- verify the copyright notice against the scan; no readable per-tune notice was recovered, so the archived rights notice is retained where available.
+{% endif %}
+{% if part == "ChordsWikifonia" %}\chordmode {
+	\startChords
+	\startSong
+
+	\myMark "A"
+	\startPart
+	\repeat volta 2 {
+	c1:maj7 |
+	g1:sus4.7.9.11.13 |
+	c2:maj7 f2:9 |
+	e2:m7 a2:7.9- | \myEndLine
+	d2:m7 f2:m7 |
+	e2:m7 a2:7.9- |
+	d2:m7 g2:13 |
+	fis1:dim7 | \myEndLine
+	d1:m7 |
+	g2:sus4.7.9.11.13 g2:aug7 |
+	c1:maj7 |
+	g1:sus4.7.9.11.13 | \myEndLine
+	c2:maj7 a2:m7 |
+	d2:3.5.9/fis f4:m7 e8:m7 ees8:13 |
+	d1:m7 |
+	e2:m7 a2:aug7 | \myEndLine
+	d2:m7 g2:7 |
+	fis2.:m7.5- f4:7 |
+	b1:m7 |
+	c2:m7 a2:m7 | \myEndLine
+	b2:m7 e2:7.9- |
+	des2:m7 ges4:9 c8:m7 f8:9 |
+	b1:m7 |
+	c2:m7 a2:m7 | \myEndLine
+	d1:m9 |
+	g2:sus4.7.9.11.13 g2:aug7 |
+	c1:maj7 |
+	g1:sus4.7.9.11.13 | \myEndLine
+	fis2:m7.5- f2:7 |
+	e2:m7 a2:m7 |
+	fis2:m7.5- f2:7 |
+	e2:m7 a2:m7 | \myEndLine
+	d1:7.11+ |
+	g1:sus4.7.9.11.13 |
+	fis2.:m7.5- f4:7 |
+	g1:sus4.7.9.11.13 | \myEndLine
+	cis1:dim7 |
+	g1:sus4.7.9.11.13 |
+	cis1:dim7 |
+	g1:7 | \myEndLine
+	}
+	\repeat volta 2 {
+	c1:maj7 |
+	}
+	\endBar
+	\endPart
+
+	\endSong
+	\endChords
+}
+{% endif %}
+{% if part == "VoiceWikifonia" %}\absolute {
+	\tempo "Moderato" 4 = 78
+	\time 4/4
+	\key c \major
+
+	\repeat volta 2 {
+	g'16 f'16 e'16 f'16 g'2. |
+	f'8 c''4. ~ c''4 g'8 a'8 |
+	g'4 c'8 b'8 a'8 b8 ~ b8 c'8 |
+	d'2 r4 e'8 g'8 |
+	e''8 c''8 c''4 ~ c''16 d''16 c''8 b'8 c''8 |
+	d''8 g'8 g'4 r2 |
+	a'8 d'8 e'4 f'8 g'8 a'4 |
+	a'8 d''8 b'2 c''4 |
+	a'8 d'8 e'4 f'8 g'8 a'4 ~ |
+	a'4 a'4 a'2 |
+	g'16 f'16 e'16 f'16 g'2. |
+	f'8 c''4. ~ c''4 g'8 a'8 |
+	g'4 c'8 b'8 a'8 b8 ~ b8 c'8 |
+	d'2 r4 e'8 g'8 |
+	e''8 c''8 c''4 ~ c''16 d''16 c''8 b'8 c''8 |
+	d''8 g'8 g'4 r4 r8 c''8 |
+	a'8 d'8 e'4 f'8 g'8 a'4 |
+	a'8 d''8 b'2 r8 c''8 |
+	d''4. b'8 \times 2/3 { fis'4 a'4 g'4 } |
+	es'2 d'8 e'8 \times 2/3 { g'8 b'8 d''8 } |
+	e''4. b'8 b'2 |
+	r2 r4 r8 d'8 |
+	d''4. b'8 \times 2/3 { fis'4 a'4 g'4 } |
+	es'2 d'8 e'8 g'8 b'8 |
+	c''4. b'8 c''4. b'8 |
+	b'4. a'8 b'4 a'4 |
+	g'16 f'16 e'16 f'16 g'2. |
+	f'8 c''4. ~ c''2 |
+	r8 a'8 b'8 c''8 d'8 c'8 d''8 c''8 |
+	g'2 d''4 c''4 |
+	r8 a'8 b'8 c''8 d'8 c'8 d''8 c''8 |
+	g'4. a'8 b'8 c''8 ~ c''4 |
+	d''4 e''2. ^\fermata |
+	a'8 d'8 e'4 f'8 g'8 a'4 |
+	a'8 d''8 b'2 c''4 |
+	a'8 d'8 e'4 f'8 g'8 a'4 |
+	a'8 g'8 g'2. |
+	R1 |
+	a'8 g'8 g'2. |
+	R1 |
+	}
+	\repeat volta 2 {
+	R1 - "Last x" |
+	}
+	\endBar
+}
+{% endif %}

@@ -1,0 +1,143 @@
+{#
+default_version = "Wikifonia"
+
+[attributes]
+title = "You're The Top"
+style = "Jazz"
+composer = "Cole Porter"
+piece = "Jazz"
+typesetter = "OpenBook contributors (MusicXML import)"
+completion = "3"
+uuid = "3d4869b1-d1c3-5368-8565-6b4132043652"
+location = "StandardsBook:548"
+copyright = "1034 Warner Bros Ine (Renewed) All Richrs Reserved Used by Permission"
+
+[versions.Wikifonia]
+doChords = true
+doVoice = true
+doLyrics = false
+doLyricsmore = false
+doLyricsmoremore = false
+doChordBars = false
+doGuitar = false
+doExtra = false
+doPrep = false
+doOwn = false
+#}
+{% if part == "Vars" %}
+{% endif %}
+{% if part == "Doc" %}
+	DONE:
+	- imported melody and chord changes from real_books_archive.gi/Wikifonia.tar.xz: Wikifonia/Cole Porter - You're The Top.mxl.
+	- source revision: http://wikifonia.org/node/5345/revisions/13727/view.
+	- PDF reference: real_books_archive.gi/The Standards Real Book.pdf, PDF page 548.
+	- retained the original copyright notice where printed; the underlying music is not relicensed.
+	- retained written measures, pickups, repeats and endings; lyrics omitted.
+	- tempo is an editorial practice suggestion.
+	TODO:
+	- proofread the music against the referenced PDF and check by ear.
+	- verify editorial chord spacing in measures 16, 32, 34; the archive places successive symbols at the same offset.
+{% endif %}
+{% if part == "ChordsWikifonia" %}\chordmode {
+	\startChords
+	\startSong
+
+	\myMark "A"
+	\startPart
+	\repeat volta 2 {
+	ees2 b2:dim |
+	ees2 e2:dim |
+	bes1:7 |
+	s2 g2:m | \myEndLine
+	ees1 |
+	c1:m |
+	g1:7 |
+	s1 | \myEndLine
+	aes1 |
+	f2:m7 bes2:7 |
+	ees2. bes4 |
+	c1:m | \myEndLine
+	d4 g2.:m |
+	c4:7 f2.:7 |
+	bes2:9 e2:dim |
+	bes2:7 bes2:aug | \myEndLine
+	ees2 b2:dim |
+	ees2 e2:dim |
+	bes1:7 |
+	s2 g2:m | \myEndLine
+	ees1 |
+	c1:m |
+	ees1:7 |
+	s2 ees2:9 | \myEndLine
+	aes1 |
+	bes2:7 ees2 |
+	e2:m c2:7 |
+	f1:7 | \myEndLine
+	f2:m ees2 |
+	aes2 bes2:7 |
+	} \alternative {
+	{
+	ees1 |
+	bes2:7 bes2:aug | \myEndLineVoltaNotLast
+	}
+	{
+	ees4 e4:dim bes2:7 | \myEndLineVoltaLast
+	}
+	}
+	fis2:dim e2 |
+	\endBar
+	\endPart
+
+	\endSong
+	\endChords
+}
+{% endif %}
+{% if part == "VoiceWikifonia" %}\absolute {
+	\tempo "Moderato" 4 = 120
+	\time 2/2
+	\key es \major
+
+	\repeat volta 2 {
+	r2 r8 as'4 g'8 |
+	bes'4 r4 r2 |
+	r2 r8 as'4 g'8 |
+	bes'4 c''4 g'8 bes'4 r8 |
+	r2 r8 f'4 es'8 |
+	g'4 r4 r2 |
+	r2 r8 f'4 es'8 |
+	f'4 g'4 d'8 f'4 r8 |
+	r2 r8 d'4 c'8 |
+	es'4 c'8 d'8 ~ d'4 es'8 f'8 |
+	as'4 f'8 g'8 ~ g'4 bes'4 |
+	c''2. bes'8 c''8 |
+	d''4 d''8 d''8 ~ d''8 d''4 d''8 |
+	d''4 d''8 d''8 ~ d''8 d''4 d''8 |
+	f''8 c''4 c''8 ~ c''2 |
+	R1 |
+	r2 r8 as'4 g'8 |
+	bes'4 r4 r2 |
+	r2 r8 as'4 g'8 |
+	bes'4 c''4 g'8 bes'4 r8 |
+	r2 r8 f'4 es'8 |
+	g'4 r4 r2 |
+	r2 r8 f'4 es'8 |
+	f'4 g'4 des'8 f'4 r8 |
+	r2 r8 d'4 c'8 |
+	es'4 d'8 f'8 ~ f'4 es'8 es'8 |
+	g'4 f'8 as'8 ~ as'4 g'4 |
+	d''4 r4 r4 c''8 d''8 |
+	es''8 es''4 es''8 ~ es''4. es''8 |
+	es''8 es''4 es''8 ~ es''4. es''8 |
+	} \alternative {
+	{
+	es''4 r4 r2 |
+	R1 |
+	}
+	{
+	es''4 r4 r2 |
+	}
+	}
+	R1 |
+	\endBar
+}
+{% endif %}

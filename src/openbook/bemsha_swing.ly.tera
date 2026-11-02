@@ -1,0 +1,111 @@
+{#
+default_version = "Wikifonia"
+
+[attributes]
+title = "Bemsha Swing"
+style = "Jazz"
+composer = "Thelonious Monk"
+piece = "Jazz"
+typesetter = "OpenBook contributors (MusicXML import)"
+completion = "3"
+uuid = "3159ae4a-29b0-5c15-9886-75d336aade00"
+location = "557_Standards:37, Jazz_LTD:29"
+copyright = "All Rights Reserved"
+
+[versions.Wikifonia]
+doChords = true
+doVoice = true
+doLyrics = false
+doLyricsmore = false
+doLyricsmoremore = false
+doChordBars = false
+doGuitar = false
+doExtra = false
+doPrep = false
+doOwn = false
+#}
+{% if part == "Vars" %}
+{% endif %}
+{% if part == "Doc" %}
+	DONE:
+	- imported melody and chord changes from real_books_archive.gi/Wikifonia.tar.xz: Wikifonia/Thelonious Monk - Bemsha Swing.mxl.
+	- source revision: http://wikifonia.org/node/20199/revisions/26752/view.
+	- PDF reference: real_books_archive.gi/Guitar - 557 Standards.pdf, PDF page 37.
+	- retained the original copyright notice where printed; the underlying music is not relicensed.
+	- retained written measures, pickups, repeats and endings; lyrics omitted.
+	- tempo taken from archived MusicXML.
+	TODO:
+	- proofread the music against the referenced PDF and check by ear.
+	- verify the copyright notice against the scan; no readable per-tune notice was recovered, so the archived rights notice is retained where available.
+{% endif %}
+{% if part == "ChordsWikifonia" %}\chordmode {
+	\startChords
+	\startSong
+
+	\myMark "A"
+	\startPart
+	\partial 4 s4 |
+	\repeat volta 2 {
+	c2.:6 a4:m7 |
+	aes2:maj7 des2:9.5- |
+	c2:6 ees2:13 | \myEndLine
+	d2:9 des2:9 |
+	c2.:6 a4:m7 |
+	aes2:maj7 des2:9.5- |
+	c2:6 b2:7.9- | \myEndLine
+	aes2:9 g4:9 c4:9 |
+	f2.:6 d4:m7 |
+	des2:maj7 ges2:9.5- |
+	f2:6 aes2:9 | \myEndLine
+	g2:9 des2:9.5- |
+	c2.:6 a4:m7 |
+	aes2:maj7 des2:9.5- |
+	c2:6 des2:maj7 | \myEndLine
+	} \alternative {
+	{
+	aes2:9 des2:9.5- | \myEndLineVoltaNotLast
+	}
+	{
+	s1 | \myEndLineVoltaLast
+	}
+	}
+	\endBar
+	\endPart
+
+	\endSong
+	\endChords
+}
+{% endif %}
+{% if part == "VoiceWikifonia" %}\absolute {
+	\tempo "Moderato" 4 = 120
+	\time 4/4
+	\key c \major
+
+	\partial 4 g'4 |
+	\repeat volta 2 {
+	c''2. r8 fis'8 |
+	g'8 c''8 bes'8 as'8 g'8 g'8 f'4 |
+	e'8 e'8 b4 c'2 |
+	r2 r4 g'4 |
+	c''2. r8 fis'8 |
+	g'8 c''8 bes'8 as'8 g'8 g'8 f'4 |
+	e'8 e'8 b4 c'2 |
+	r2 r4 c''4 |
+	f''2. r8 b'8 |
+	c''8 f''8 es''8 des''8 c''8 c''8 bes'4 |
+	a'8 a'8 e'4 f'2 |
+	r2 r4 g'4 |
+	c''2. r8 fis'8 |
+	g'8 c''8 bes'8 as'8 g'8 g'8 f'4 |
+	e'8 e'8 b4 c'2 |
+	} \alternative {
+	{
+	r2 r4 g'4 |
+	}
+	{
+	R1 |
+	}
+	}
+	\endBar
+}
+{% endif %}

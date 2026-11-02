@@ -1,0 +1,113 @@
+{#
+default_version = "Wikifonia"
+
+[attributes]
+title = "Little Rootie Tootie"
+style = "Jazz"
+composer = "Thelonious Monk"
+piece = "Jazz"
+typesetter = "OpenBook contributors (MusicXML import)"
+completion = "3"
+uuid = "2519a509-fad7-5642-9e1e-a898d3d848d3"
+location = "Real_Book_2:416"
+copyright = "All Rights Reserved"
+
+[versions.Wikifonia]
+doChords = true
+doVoice = true
+doLyrics = false
+doLyricsmore = false
+doLyricsmoremore = false
+doChordBars = false
+doGuitar = false
+doExtra = false
+doPrep = false
+doOwn = false
+#}
+{% if part == "Vars" %}
+{% endif %}
+{% if part == "Doc" %}
+	DONE:
+	- imported melody and chord changes from real_books_archive.gi/Wikifonia.tar.xz: Wikifonia/Thelonious Monk - Little Rootie Tootie.mxl.
+	- source revision: http://wikifonia.org/node/20699/revisions/27369/view.
+	- PDF reference: real_books_archive.gi/The Real Book of Jazz Volume II.pdf, PDF page 416.
+	- retained the original copyright notice where printed; the underlying music is not relicensed.
+	- retained written measures, pickups, repeats and endings; lyrics omitted.
+	- tempo taken from archived MusicXML.
+	TODO:
+	- proofread the music against the referenced PDF and check by ear.
+	- verify the copyright notice against the scan; no readable per-tune notice was recovered, so the archived rights notice is retained where available.
+{% endif %}
+{% if part == "ChordsWikifonia" %}\chordmode {
+	\startChords
+	\startSong
+
+	\myMark "A"
+	\startPart
+	\repeat volta 2 {
+	aes2:7 des2:7 |
+	bes2.:m7 ees4:7.9+ |
+	aes2:7 des2:7 |
+	bes2:m7 ees2:7.9+ | \myEndLine
+	aes2:7 des2:7 |
+	bes2:m7 ees2:7.9+ |
+	aes2:7 a2:7.5+ |
+	aes1 | \myEndLine
+	}
+	a2:7 aes2:7 |
+	des4.:6 ees4:m7 e8:m7 f4:m7 |
+	a2:7 aes2:7 |
+	g2:7.5- c2:7.5- | \myEndLine
+	f2:7.5- f2:11 |
+	s4 bes4:9 bes2:7.9- |
+	des2:m7 ges2:13 |
+	b2:7 bes4:7 a4:7 | \myEndLine
+	aes2:7 des2:7 |
+	bes2:m7 e2:7.9+ |
+	aes2:7 des2:7 |
+	bes2:m7 ees2:7.9+ | \myEndLine
+	aes2:7 des2:7 |
+	bes2:m7 ees2:7.9+ |
+	aes2:7 a2:7.5+ |
+	aes1:13 | \myEndLine
+	\endBar
+	\endPart
+
+	\endSong
+	\endChords
+}
+{% endif %}
+{% if part == "VoiceWikifonia" %}\absolute {
+	\tempo "Moderato" 4 = 120
+	\time 4/4
+	\key as \major
+
+	\repeat volta 2 {
+	r8 as8 \times 2/3 { c'8 es'8 ges'8 } f'8 des'8 \times 2/3 { f'8 as'8 ces''8 } |
+	bes'4 as'8 f'8 r4 r4 |
+	r8 as8 \times 2/3 { c'8 es'8 ges'8 } f'8 des'8 \times 2/3 { f'8 as'8 ces''8 } |
+	bes'4 as'8 f'8 r2 |
+	r8 as8 \times 2/3 { c'8 es'8 ges'8 } f'8 des'8 \times 2/3 { f'8 as'8 ces''8 } |
+	bes'4 as'8 f'8 r2 |
+	r8 as8 \times 2/3 { c'8 es'8 ges'8 } f'8 es'8 a8 as8 ~ |
+	as1 |
+	}
+	r8 as8 \times 2/3 { a8 des'8 a'8 } as'4 f'8 des'8 ~ |
+	des'4. fis8 ~ fis8 g8 as4 |
+	r8 as8 \times 2/3 { a8 des'8 a'8 } as'4 bes'8 des''8 ~ |
+	des''4 f'8 ges'8 ~ ges'2 |
+	r8 as8 \times 2/3 { a8 f'8 b'8 } bes'4 g'8 f'8 ~ |
+	f'1 |
+	r8 es'8 \times 2/3 { e'8 b'8 e''8 } es''2 |
+	r8 bes8 \times 2/3 { b8 fis'8 b'8 } bes'2 |
+	r8 as8 \times 2/3 { c'8 es'8 ges'8 } f'8 des'8 \times 2/3 { f'8 as'8 ces''8 } |
+	bes'4 as'8 f'8 r2 |
+	r8 as8 \times 2/3 { c'8 es'8 ges'8 } f'8 des'8 \times 2/3 { f'8 as'8 ces''8 } |
+	bes'4 as'8 f'8 r2 |
+	r8 as8 \times 2/3 { c'8 es'8 ges'8 } f'8 des'8 \times 2/3 { f'8 as'8 ces''8 } |
+	bes'4 as'8 f'8 r2 |
+	r8 as8 \times 2/3 { c'8 es'8 ges'8 } f'8 es'8 a8 as8 ~ |
+	as1 |
+	\endBar
+}
+{% endif %}

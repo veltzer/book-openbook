@@ -1,0 +1,98 @@
+{#
+default_version = "Wikifonia"
+
+[attributes]
+title = "Feel Like Makin' Love"
+style = "Jazz"
+composer = "Eugene McDaniels"
+piece = "Jazz"
+typesetter = "OpenBook contributors (MusicXML import)"
+completion = "3"
+uuid = "e5853d26-e836-5b86-8286-1f61b2d841f0"
+location = "New_Real_1:96"
+copyright = "1952, renewed 1980 Raybird Music Inc & Art Farmer Music. International Copyright Secured Used By Permission"
+
+[versions.Wikifonia]
+doChords = true
+doVoice = true
+doLyrics = false
+doLyricsmore = false
+doLyricsmoremore = false
+doChordBars = false
+doGuitar = false
+doExtra = false
+doPrep = false
+doOwn = false
+#}
+{% if part == "Vars" %}
+{% endif %}
+{% if part == "Doc" %}
+	DONE:
+	- imported melody and chord changes from real_books_archive.gi/Wikifonia.tar.xz: Wikifonia/Eugene McDaniels - Feel Like Makin' Love.mxl.
+	- source revision: http://wikifonia.org/node/1047/revisions/1394/view.
+	- PDF reference: real_books_archive.gi/New Real Book 1.pdf, PDF page 102.
+	- retained the original copyright notice where printed; the underlying music is not relicensed.
+	- retained written measures, pickups, repeats and endings; lyrics omitted.
+	- tempo is an editorial practice suggestion.
+	TODO:
+	- proofread the music against the referenced PDF and check by ear.
+{% endif %}
+{% if part == "ChordsWikifonia" %}\chordmode {
+	\startChords
+	\startSong
+
+	\myMark "A"
+	\startPart
+	\repeat volta 2 {
+	f1:m9 |
+	bes1:sus4.7.9.11.13 |
+	ees2..:maj7 des8:7 |
+	s4. c1*5/8:7 | \myEndLine
+	f1:m9 |
+	bes1:sus4.7.9.11.13 |
+	ees1:maj7 |
+	s1 | \myEndLine
+	aes1:maj7 |
+	g1:m7 |
+	f1:m7 |
+	c1:m7 | \myEndLine
+	aes1:maj7 |
+	g1:m7 |
+	des1:7 |
+	c1*5/8:m7 ees8:7 e8:7 f8:7 | \myEndLine
+	s1 |
+	}
+	\endBar
+	\endPart
+
+	\endSong
+	\endChords
+}
+{% endif %}
+{% if part == "VoiceWikifonia" %}\absolute {
+	\tempo "Moderato" 4 = 120
+	\time 4/4
+	\key es \major
+
+	\repeat volta 2 {
+	r4 es'8 es'16 g'16 ~ g'16 g'16 es'8 ~ es'4 |
+	r4 es'16 f'8 g'16 ~ g'16 f'8 es'16 ~ es'16 f'8 g'16 ~ |
+	g'2. r8 r8 |
+	r4 r8 r8 r2 |
+	r4 es'8 es'16 g'16 ~ g'16 g'16 es'8 ~ es'4 |
+	r4 es'16 f'8 g'16 ~ g'16 f'8 es'16 ~ es'16 f'8 g'16 ~ |
+	g'1 |
+	R1 - "A7(b5)" |
+	r4 g'8 c'16 es'16 ~ es'4 r4 |
+	r4 r8. bes16 bes'8 bes'8 g'16 ( f'16 ) es'16 f'16 ~ |
+	f'2. es'8 g'8 ~ |
+	g'2 r2 |
+	r4 g'8 c'16 es'16 ~ es'4 r4 |
+	r4 r8. bes16 bes'8 bes'8 g'16 ( f'16 ) es'16 f'16 ~ |
+	f'2. f'8 es'8 |
+	c'2 r8 ges'8 ( f'8 ) f'8 ~ |
+	f'8 f'8 r4 r2 |
+	}
+	\endBar
+}
+{% endif %}

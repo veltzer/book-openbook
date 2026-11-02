@@ -1,0 +1,145 @@
+{#
+default_version = "Wikifonia"
+
+[attributes]
+title = "Unless It's You"
+style = "Jazz"
+composer = "Johnny Mandel"
+piece = "Jazz"
+typesetter = "OpenBook contributors (MusicXML import)"
+completion = "3"
+uuid = "51c27431-f8c0-50ca-927d-81a7104c3a84"
+location = "New_Real_2:412"
+copyright = "TRO ©1967 and 1969 Ludlow Music, New York, N.Y. International Copyrieht Secured Made in U.S.A. All Richts Reserved Inchidine"
+copyrightextra = "Public Performance"
+
+[versions.Wikifonia]
+doChords = true
+doVoice = true
+doLyrics = false
+doLyricsmore = false
+doLyricsmoremore = false
+doChordBars = false
+doGuitar = false
+doExtra = false
+doPrep = false
+doOwn = false
+#}
+{% if part == "Vars" %}
+{% endif %}
+{% if part == "Doc" %}
+	DONE:
+	- imported melody and chord changes from real_books_archive.gi/Wikifonia.tar.xz: Wikifonia/Johnny Mandel, Morgan Ames - Unless It's You.mxl.
+	- source revision: http://wikifonia.org/node/20573/revisions/27194/view.
+	- PDF reference: real_books_archive.gi/newreal2.pdf, PDF page 412.
+	- retained the original copyright notice where printed; the underlying music is not relicensed.
+	- retained written measures, pickups, repeats and endings; lyrics omitted.
+	- tempo is an editorial practice suggestion.
+	TODO:
+	- proofread the music against the referenced PDF and check by ear.
+{% endif %}
+{% if part == "ChordsWikifonia" %}\chordmode {
+	\startChords
+	\startSong
+
+	\myMark "A"
+	\startPart
+	\repeat volta 2 {
+	\partial 2. s2. |
+	c1:6.9 |
+	f2./g g4:13 |
+	c1:6.9 | \myEndLine
+	f2/g g2:7.9- |
+	bes2:maj7/c c2:7 |
+	bes2/c c2:7.9- |
+	f2:maj7 c2:13.9- | \myEndLine
+	f2:maj7 d2:m7 |
+	f4:m des2.:maj7/f |
+	f1:m6 |
+	e4:13 bes2.:13.5- | \myEndLine
+	a2:13 bes2:dim |
+	b2:m7 e2:7.5-.9- |
+	a2:m9 d2:aug7 |
+	f2:6/g g2:13 | \myEndLine
+	f2/g g4:7.9- g4:13.9- |
+	c1:6.9 |
+	f2./g g4:13 |
+	c1:6.9 | \myEndLine
+	f2/g g2:7.9- |
+	bes2:maj7/c c2:7 |
+	bes2/c c2:7.9- |
+	f2:maj7 c2:13.9- | \myEndLine
+	f2:maj7 d2:m7 |
+	f4:m des2.:maj7/f |
+	f2:m6 f2:m7 |
+	e4:13 bes2.:13.5- | \myEndLine
+	a2:13 bes2:dim |
+	b2:m7 e2:7.5-.9- |
+	f2/g g2:7.9- |
+	} \alternative {
+	{
+	c1:6.9 | \myEndLine
+	f2/g g4:7.9- g4:13.9- | \myEndLineVoltaNotLast
+	}
+	{
+	c1:6.9 |
+	s1 | \myEndLineVoltaLast
+	}
+	}
+	\endBar
+	\endPart
+
+	\endSong
+	\endChords
+}
+{% endif %}
+{% if part == "VoiceWikifonia" %}\absolute {
+	\tempo "Moderato" 4 = 120
+	\time 4/4
+	\key c \major
+
+	\repeat volta 2 {
+	\partial 2. e'4 f'4 g'4 |
+	c''1 ~ |
+	c''4 b4 c'4 a'4 |
+	g'1 ~ |
+	g'4 e'4 f'4 d''4 |
+	c''1 ~ |
+	c''4 c'4 des'4 bes'4 |
+	a'1 |
+	r4 a'4 c''4 g''4 |
+	f''1 ~ |
+	f''4 g'4 as'4 f''4 |
+	e''1 ~ |
+	e''4 fis'4 g'4 e''4 |
+	d''4. e''8 d''4. e''8 |
+	d''4. e''8 d''4. e''8 |
+	d''1 |
+	r4 e'4 f'4 d''4 |
+	c''1 ~ |
+	c''4 b4 c'4 a'4 |
+	g'1 ~ |
+	g'4 e'4 f'4 d''4 |
+	c''1 ~ |
+	c''4 c'4 des'4 bes'4 |
+	a'1 |
+	r4 a'4 c''4 g''4 |
+	f''1 ~ |
+	f''4 g'4 as'4 f''4 |
+	e''1 ~ |
+	e''4 fis'4 g'4 e''4 |
+	d''4. e''8 d''2 ~ |
+	d''4 e'4 f'4 d''4 |
+	} \alternative {
+	{
+	c''1 |
+	r4 e'4 f'4 d''4 |
+	}
+	{
+	c''1 ~ |
+	c''1 |
+	}
+	}
+	\endBar
+}
+{% endif %}

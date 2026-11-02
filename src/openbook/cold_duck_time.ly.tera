@@ -1,0 +1,97 @@
+{#
+default_version = "Wikifonia"
+
+[attributes]
+title = "Cold Duck Time"
+style = "Jazz"
+composer = "Eddie Harris"
+piece = "Jazz"
+typesetter = "OpenBook contributors (MusicXML import)"
+completion = "3"
+uuid = "a5f6668b-3b83-57b2-8b7c-839c29a6e8e6"
+location = "New_Real_2:68"
+copyright = "All Rights Reserved"
+
+[versions.Wikifonia]
+doChords = true
+doVoice = true
+doLyrics = false
+doLyricsmore = false
+doLyricsmoremore = false
+doChordBars = false
+doGuitar = false
+doExtra = false
+doPrep = false
+doOwn = false
+#}
+{% if part == "Vars" %}
+{% endif %}
+{% if part == "Doc" %}
+	DONE:
+	- imported melody and chord changes from real_books_archive.gi/Wikifonia.tar.xz: Wikifonia/Eddie Harris - Cold Duck Time.mxl.
+	- source revision: http://wikifonia.org/node/12458/revisions/24770/view.
+	- PDF reference: real_books_archive.gi/newreal2.pdf, PDF page 68.
+	- retained the original copyright notice where printed; the underlying music is not relicensed.
+	- retained written measures, pickups, repeats and endings; lyrics omitted.
+	- tempo taken from archived MusicXML.
+	TODO:
+	- proofread the music against the referenced PDF and check by ear.
+	- verify the copyright notice against the scan; no readable per-tune notice was recovered, so the archived rights notice is retained where available.
+{% endif %}
+{% if part == "ChordsWikifonia" %}\chordmode {
+	\startChords
+	\startSong
+
+	\myMark "A"
+	\startPart
+	\partial 1*5/8 s1*5/8 |
+	\repeat volta 2 {
+	f2.:7 |
+	s4 bes2:7 |
+	s2 f4:7 | \myEndLine
+	s2. |
+	bes2.:7 |
+	s4 f2:7 |
+	s2 bes4:7 | \myEndLine
+	s2. |
+	f2.:7 |
+	s4 bes2:7 |
+	s2 des4:7 | \myEndLine
+	s2. |
+	ees2.:3.5.9 |
+	s8 f1*5/8:7 |
+	s2. | \myEndLine
+	}
+	\endBar
+	\endPart
+
+	\endSong
+	\endChords
+}
+{% endif %}
+{% if part == "VoiceWikifonia" %}\absolute {
+	\tempo "Moderato" 4 = 120
+	\time 3/4
+	\key es \major
+
+	\partial 8*5 c'8 es'8 f'8 f'8 as'8 ~ |
+	\repeat volta 2 {
+	as'4. c'8 es'8 f'8 |
+	f'8 as8 ~ as4. c'8 |
+	es'8 f'8 f'8 as'4 bes'8 |
+	r8 c''8 as'4 f'8 es'8 |
+	f'4. c'8 es'8 f'8 |
+	f'8 as'8 ~ as'4. c'8 |
+	es'8 f'8 f'8 as4. ~ |
+	as8 c'8 es'8 f'8 f'8 as'8 ~ |
+	as'8 bes'8 r8 c''8 as'4 |
+	f'8 es'8 f'4. c'8 |
+	es'8 f'8 f'8 as'4. ~ |
+	as'2 ~ as'8 f'8 ~ |
+	f'2. ~ |
+	f'8 f'8 r4 r4 |
+	r8 c'8 es'8 f'8 f'8 as'8 ~ |
+	}
+	\endBar
+}
+{% endif %}

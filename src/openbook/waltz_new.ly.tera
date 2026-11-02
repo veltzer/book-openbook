@@ -1,0 +1,151 @@
+{#
+default_version = "Wikifonia"
+
+[attributes]
+title = "Waltz New"
+style = "Jazz"
+composer = "James S. Hall"
+piece = "Jazz"
+typesetter = "OpenBook contributors (MusicXML import)"
+completion = "3"
+uuid = "02dc526b-f573-5973-aef7-e55d8cf14b19"
+location = "New_Real_1:389"
+copyright = "TRO . ©1964, 1965 Acorn Music as New York, NY. +\\\" (atempo) C ped fal — — Rights Reserved Including Public Performance For Profit"
+copyrightextra = "Used By Pernussion"
+
+[versions.Wikifonia]
+doChords = true
+doVoice = true
+doLyrics = false
+doLyricsmore = false
+doLyricsmoremore = false
+doChordBars = false
+doGuitar = false
+doExtra = false
+doPrep = false
+doOwn = false
+#}
+{% if part == "Vars" %}
+{% endif %}
+{% if part == "Doc" %}
+	DONE:
+	- imported melody and chord changes from real_books_archive.gi/Wikifonia.tar.xz: Wikifonia/James S. Hall - Waltz New.mxl.
+	- source revision: http://wikifonia.org/node/3213/revisions/4093/view.
+	- PDF reference: real_books_archive.gi/New Real Book 1.pdf, PDF page 395.
+	- retained the original copyright notice where printed; the underlying music is not relicensed.
+	- retained written measures, pickups, repeats and endings; lyrics omitted.
+	- tempo taken from archived MusicXML.
+	TODO:
+	- proofread the music against the referenced PDF and check by ear.
+{% endif %}
+{% if part == "ChordsWikifonia" %}\chordmode {
+	\startChords
+	\startSong
+
+	\myMark "A"
+	\startPart
+	\repeat volta 2 {
+	bes2.:6 |
+	d2.:aug7 |
+	ees2.:maj7 |
+	g2.:aug7 | \myEndLine
+	c2.:m7 |
+	g2.:aug7 |
+	c2.:m7 |
+	f2.:7 | \myEndLine
+	d2.:m7 |
+	cis2.:dim7 |
+	c2.:m7 |
+	f2.:7 | \myEndLine
+	d2.:m7 |
+	des2:m7 ges4:7 |
+	ces2.:maj7 |
+	c2:m7 f4:7 | \myEndLine
+	bes2.:6 |
+	d2.:aug7 |
+	ees2.:maj7 |
+	g2.:aug7 | \myEndLine
+	c2.:m7 |
+	g2.:aug7 |
+	c2.:7 |
+	f2.:7 | \myEndLine
+	f2.:m9 |
+	bes2.:13 |
+	ees2.:maj7 |
+	a2.:7 | \myEndLine
+	d2:m7 g4:7 |
+	c2:m7 f4:7 |
+	bes2.:maj7 |
+	c2.:m7 | \myEndLine
+	}
+	bes2. |
+	ees2. |
+	bes2./d |
+	c2.:m7 | \myEndLine
+	bes2.:sus4 |
+	d2.:7 |
+	ees2.:6 |
+	e2.:m7.5+ | \myEndLine
+	f2.:sus4 |
+	f2. |
+	bes2. |
+	\endBar
+	\endPart
+
+	\endSong
+	\endChords
+}
+{% endif %}
+{% if part == "VoiceWikifonia" %}\absolute {
+	\tempo "Moderato" 4 = 320
+	\time 3/4
+	\key bes \major
+
+	\repeat volta 2 {
+	\mark \markup { \box { A } } a'8 _ "Adagio" bes'8 c''8 a'8 f'8 d'8 |
+	c'8 bes8 d'4 r8 bes8 |
+	a8 g8 c'8 d'8 es'4 |
+	r4 r8 es'4 d'8 |
+	r8 c'8 b8 c'8 es'8 g'8 |
+	as'8 ( g'8 ) g'8 ( f'8 ) f'8 ( es'8 ) |
+	es'8 ( d'8 ) c'8 d'8 es'8 f'8 |
+	d'8 bes8 f4 d'8 es'8 |
+	f'2. |
+	cis'8 e'8 a'4 r8 g'8 |
+	f'8 es'8 bes'8 f'8 c'8 bes8 |
+	b8 fis'8 cis''4 r4 |
+	d''8 f'8 bes'8 d''8 c''8 bes'8 |
+	as'8 des''8 es'8 fes'8 ges'8 as'8 |
+	bes'8 ces'8 ges'8 bes'8 a'8 as'8 |
+	g'16 a'16 bes'8 b'8 c''8 d''8 es''8 |
+	\mark \markup { \box { B } } e''8 f''8 f''8 d''8 bes'8 f'8 |
+	f'8 fis'8 f'4 r8 f'8 |
+	fis'8 g'8 g'4 r8 g'8 |
+	g'8 as'8 a'8 b'8 bes'8 ( c''8 ) |
+	c''8 d''8 es''8 g'8 es''4 |
+	r8 f'8 es''4 r8 f'8 |
+	f'8 d''8 e'8 g'8 bes'8 d''8 |
+	fis''2. |
+	g''4 es''8 c''8 as'8 ( g'8 ) |
+	g'8 f'8 bes'4 r8 bes8 |
+	c'8 d'8 es'8 e'8 f'8 fis'8 |
+	g'8 gis'8 a'4 r8 g'8 |
+	e'8 f'8 d''4 r8 f'8 |
+	f'8 es'8 c''4 r8 a8 |
+	a8 bes8 c'8 bes8 d'8 f'8 ^ "To Coda" |
+	bes'2. ^ "D.C. al Coda" |
+	}
+	\mark \markup { \musicglyph "scripts.coda" } bes'2. ^\fermata |
+	g'2. |
+	f'2. |
+	es'2. |
+	f'2. |
+	fis'2. |
+	g'2. |
+	d''4 c''4 bes'4 ~ |
+	bes'2. |
+	c''4 bes'4 a'4 |
+	bes'2. ^\fermata |
+	\endBar
+}
+{% endif %}

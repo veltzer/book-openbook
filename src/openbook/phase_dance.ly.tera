@@ -1,0 +1,129 @@
+{#
+default_version = "Wikifonia"
+
+[attributes]
+title = "Phase Dance"
+style = "Jazz"
+composer = "Pat Metheny"
+piece = "Jazz"
+typesetter = "OpenBook contributors (MusicXML import)"
+completion = "3"
+uuid = "55e9562b-260e-5472-bcc1-1d5b38c04e2a"
+location = "Real_Book_2:303"
+copyright = "All Rights Reserved"
+
+[versions.Wikifonia]
+doChords = true
+doVoice = true
+doLyrics = false
+doLyricsmore = false
+doLyricsmoremore = false
+doChordBars = false
+doGuitar = false
+doExtra = false
+doPrep = false
+doOwn = false
+#}
+{% if part == "Vars" %}
+{% endif %}
+{% if part == "Doc" %}
+	DONE:
+	- imported melody and chord changes from real_books_archive.gi/Wikifonia.tar.xz: Wikifonia/Pat Metheny - Phase Dance.mxl.
+	- source revision: http://wikifonia.org/node/1466/revisions/1886/view.
+	- PDF reference: real_books_archive.gi/The Real Book of Jazz Volume II.pdf, PDF page 303.
+	- retained the original copyright notice where printed; the underlying music is not relicensed.
+	- retained written measures, pickups, repeats and endings; lyrics omitted.
+	- tempo is an editorial practice suggestion.
+	TODO:
+	- proofread the music against the referenced PDF and check by ear.
+	- verify the copyright notice against the scan; no readable per-tune notice was recovered, so the archived rights notice is retained where available.
+{% endif %}
+{% if part == "ChordsWikifonia" %}\chordmode {
+	\startChords
+	\startSong
+
+	\myMark "A"
+	\startPart
+	b1:m7 |
+	s1 |
+	s1 |
+	s1 | \myEndLine
+	s1 |
+	s1 |
+	s1 |
+	s1 | \myEndLine
+	\repeat volta 2 {
+	b1:m7 |
+	s1 |
+	s1 |
+	s1 | \myEndLine
+	s1 |
+	s1 |
+	s1 |
+	s1 | \myEndLine
+	b1:m7 |
+	s1 |
+	s1 |
+	s1 | \myEndLine
+	s1 |
+	s1 |
+	s1 |
+	s1 | \myEndLine
+	g1/a |
+	s1 |
+	s1 |
+	s1 | \myEndLine
+	g1 |
+	s1 |
+	s1 |
+	s1 | \myEndLine
+	}
+	\endBar
+	\endPart
+
+	\endSong
+	\endChords
+}
+{% endif %}
+{% if part == "VoiceWikifonia" %}\absolute {
+	\tempo "Moderato" 4 = 120
+	\time 4/4
+	\key c \major
+
+	<cis'' e''>4 a''8 <d'' fis''>8 ~ ~ <d'' fis''>8 a''4 <cis'' e''>8 ~ ~ |
+	<cis'' e''>8 a''4 <d'' fis''>8 <d'' fis''>4 a''4 |
+	<cis'' e''>4 a''8 <d'' fis''>8 ~ ~ <d'' fis''>8 a''4 <cis'' e''>8 ~ ~ |
+	<cis'' e''>8 a''4 <d'' fis''>8 <d'' fis''>4 a''4 |
+	<c'' f''>4 - "Bb^(#11)" a''8 <d'' f''>8 ~ ~ <d'' f''>8 a''4 <c'' e''>8 ~ ~ |
+	<c'' e''>8 a''4 <d'' f''>8 <d'' f''>4 a''4 |
+	<c'' f''>4 a''8 <d'' f''>8 ~ ~ <d'' f''>8 a''4 <c'' e''>8 ~ ~ |
+	<c'' e''>8 a''4 <d'' f''>8 <d'' f''>4 a''4 |
+	\repeat volta 2 {
+	cis'''1 ~ |
+	cis'''1 ~ |
+	cis'''1 |
+	r2 \times 2/3 { r4 d'''4 cis'''4 } |
+	c'''4. - "Bb^(#11)" a''8 ~ a''2 ~ |
+	a''2. e''8 f''8 |
+	<a' d'' e'' f''>1 \arpeggio \arpeggio \arpeggio \arpeggio |
+	r2 e''4 f''4 |
+	\times 2/3 { cis'''4 d'''4 e'''4 } cis'''2 ~ |
+	cis'''1 ~ |
+	cis'''1 |
+	r2 \times 2/3 { r4 d'''4 cis'''4 } |
+	c'''4 - "Bb^(#11)" a''8 e''8 ~ e''8 g''8 f''4 ~ |
+	f''1 |
+	<a' d'' e'' f''>1 \arpeggio \arpeggio \arpeggio \arpeggio |
+	r4 r8 f''8 r8 g''8 a''8 c'''8 |
+	d'''4 d'''8 d'''8 d'''4 d'''8 d'''8 ~ |
+	d'''8 d'''8 d'''8 d'''8 d'''4 d'''8 d'''8 |
+	d'''4 d'''8 d'''8 d'''8 d'''8 d'''8 d'''8 ~ |
+	d'''8 d'''8 d'''4 d'''8 e'''4 d'''8 |
+	<a'' cis'''>8 <e'' a''>4 <fis'' a''>8 ~ ~ <fis'' a''>2 ~ ~ |
+	<fis'' a''>1 ~ ~ |
+	<fis'' a''>1 |
+	R1 |
+	}
+	\endBar
+}
+{% endif %}

@@ -1,0 +1,190 @@
+{#
+default_version = "Wikifonia"
+
+[attributes]
+title = "I Get A Kick Out Of You"
+style = "Jazz"
+composer = "Cole Porter"
+piece = "Jazz"
+typesetter = "OpenBook contributors (MusicXML import)"
+completion = "3"
+uuid = "c4fdca0e-7156-5900-9b13-9cef054475df"
+location = "Real_Book_2:165, 557_Standards:151, StandardsBook:190, Just_Standards_Real_Book:162"
+copyright = "All Rights Reserved"
+
+[versions.Wikifonia]
+doChords = true
+doVoice = true
+doLyrics = false
+doLyricsmore = false
+doLyricsmoremore = false
+doChordBars = false
+doGuitar = false
+doExtra = false
+doPrep = false
+doOwn = false
+#}
+{% if part == "Vars" %}
+{% endif %}
+{% if part == "Doc" %}
+	DONE:
+	- imported melody and chord changes from real_books_archive.gi/Wikifonia.tar.xz: Wikifonia/Cole Porter - I Get A Kick Out Of You.mxl.1.
+	- source revision: http://wikifonia.org/node/14235/revisions/19191/view.
+	- PDF reference: real_books_archive.gi/The Standards Real Book.pdf, PDF page 190.
+	- retained the original copyright notice where printed; the underlying music is not relicensed.
+	- retained written measures, pickups, repeats and endings; lyrics omitted.
+	- tempo is an editorial practice suggestion.
+	TODO:
+	- proofread the music against the referenced PDF and check by ear.
+	- verify editorial chord spacing in measures 4, 15, 20, 27, 52; the archive places successive symbols at the same offset.
+	- verify the copyright notice against the scan; no readable per-tune notice was recovered, so the archived rights notice is retained where available.
+{% endif %}
+{% if part == "ChordsWikifonia" %}\chordmode {
+	\startChords
+	\startSong
+
+	\myMark "A"
+	\startPart
+	f1:m7 |
+	bes1:7 |
+	ees1 |
+	g2:m7 c2:7.9- | \myEndLine
+	f1:m7 |
+	bes1:7.9- |
+	ees1 |
+	g2.:m7 c4:7.9- | \myEndLine
+	f1:m7 |
+	bes1*2/3:7 aes1*1/3:7 |
+	g1:7 |
+	c1:7 | \myEndLine
+	f1:m7 |
+	bes1:7.9- |
+	ees2 aes2:7 |
+	g2:m7 c2:7.9- | \myEndLine
+	f1:m7 |
+	bes1:7.9- |
+	ees1 |
+	g2:m7 c2:7.9- | \myEndLine
+	f1:m7 |
+	bes1:7 |
+	g1:m |
+	c1:7.9- | \myEndLine
+	f1:m7 |
+	bes1:7 |
+	d2:m7.5- g2:7 |
+	g2:m7.5- c2:7.9- | \myEndLine
+	f1:m7 |
+	bes1:7.9- |
+	ees1 |
+	s1 | \myEndLine
+	bes1:m/ees |
+	s1 |
+	bes1:m7+/ees |
+	s1 | \myEndLine
+	bes1:m/ees |
+	ees1:7 |
+	g1:m7.5- |
+	c1:7.9- | \myEndLine
+	f1:m |
+	d1:m7.5- |
+	g1:m7.5- |
+	c1:7.9- | \myEndLine
+	f1:7 |
+	s1 |
+	f1:m7.5- |
+	bes1:7 | \myEndLine
+	f1:m7 |
+	bes1:7.9- |
+	ees1 |
+	g2:m7 c2:7.9- | \myEndLine
+	f1:m7 |
+	bes1:7.9- |
+	ees1*2/3 g1*1/3:m/d |
+	c1:m7 | \myEndLine
+	f1:m7 |
+	bes1*2/3:7 aes1*1/3:7 |
+	g1:aug7 |
+	c1:7.9- | \myEndLine
+	f1:m7 |
+	bes1:7 |
+	ees1 |
+	g2:m7 c2:7 | \myEndLine
+	\endBar
+	\endPart
+
+	\endSong
+	\endChords
+}
+{% endif %}
+{% if part == "VoiceWikifonia" %}\absolute {
+	\tempo "Moderato" 4 = 120
+	\time 4/4
+	\key es \major
+
+	r4 ^ "[A]" c'4 d'4 es'4 |
+	\times 2/3 { f'2 g'2 as'2 } |
+	bes'1 ~ |
+	bes'1 ^ "" |
+	r4 c'4 d'4 es'4 |
+	\times 2/3 { f'2 g'2 as'2 } |
+	\times 2/3 { bes'2 as'2 g'2 } |
+	g'2. g'4 |
+	\times 2/3 { as'2 g'2 f'2 } |
+	\times 2/3 { f'2 es'2 f'2 } |
+	g'1 ~ |
+	g'2 r4 c'4 |
+	f'4 g'4 as'4 bes'4 ~ |
+	bes'4 as'2 g'4 |
+	es'1 ~ |
+	es'4 r4 r2 |
+	r4 ^ "[B]" c'4 d'4 es'4 |
+	\times 2/3 { f'2 g'2 as'2 } |
+	bes'1 ~ |
+	bes'1 |
+	r4 c'4 d'4 es'4 |
+	\times 2/3 { f'2 g'2 as'2 } |
+	\times 2/3 { bes'2 c''2 a'2 } |
+	\times 2/3 { bes'2 c''2 a'2 } |
+	\times 2/3 { bes'2 c''2 a'2 } |
+	\times 2/3 { bes'2 a'2 as'2 } |
+	g'1 ~ |
+	g'2 r4 c'4 |
+	f'4 g'4 as'4 bes'4 ~ |
+	bes'4 as'2 g'4 |
+	es'1 ~ |
+	es'4 r4 r2 |
+	r4 ^ "[C]" es'4 f'4 g'4 |
+	\times 2/3 { as'2 bes'2 c''2 } |
+	des''2. c''4 |
+	des''2 r4 c''4 |
+	c''2. bes'4 |
+	c''2. bes'4 |
+	bes'1 |
+	c'1 |
+	r4 ^ "" c'4 d'4 e'4 |
+	\times 2/3 { f'2 g'2 as'2 } |
+	bes'2. as'4 |
+	bes'2 r4 as'4 |
+	g'2. f'4 |
+	f'4 c''2 f'4 |
+	es'1 |
+	d'1 |
+	r4 ^ "[D]" c'4 d'4 es'4 |
+	\times 2/3 { f'2 g'2 as'2 } |
+	bes'1 ~ |
+	bes'1 |
+	r4 c'4 d'4 es'4 |
+	\times 2/3 { f'2 g'2 as'2 } |
+	\times 2/3 { bes'2 c''2 d''2 } |
+	\times 2/3 { es''2 f''2 d''2 } |
+	\times 2/3 { es''2 d''2 c''2 } |
+	\times 2/3 { d''2 c''2 bes'2 } |
+	g'1 ~ |
+	g'2 r4 c'4 |
+	\times 2/3 { f'2 g'2 as'2 } |
+	bes'4 c''2 d''4 |
+	es''1 ~ |
+	es''4 ^ "(" ^ ")" r4 r2 |
+	\endBar
+}
+{% endif %}

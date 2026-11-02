@@ -1,0 +1,149 @@
+{#
+default_version = "Wikifonia"
+
+[attributes]
+title = "Night Train"
+style = "Jazz"
+composer = "Jimmy Forrest"
+piece = "Jazz"
+typesetter = "OpenBook contributors (MusicXML import)"
+completion = "3"
+uuid = "7176f597-e456-58ba-9acd-8bf424c6eb2d"
+location = "557_Standards:275, Colorado:86, Colorado_Cookbook:86, Jazz_LTD:247"
+copyright = "All Rights Reserved"
+
+[versions.Wikifonia]
+doChords = true
+doVoice = true
+doLyrics = false
+doLyricsmore = false
+doLyricsmoremore = false
+doChordBars = false
+doGuitar = false
+doExtra = false
+doPrep = false
+doOwn = false
+#}
+{% if part == "Vars" %}
+{% endif %}
+{% if part == "Doc" %}
+	DONE:
+	- imported melody and chord changes from real_books_archive.gi/Wikifonia.tar.xz: Wikifonia/Jimmy Forrest, Oscar Washington, Lewis C. Simpkins - Night Train.mxl.
+	- source revision: http://wikifonia.org/node/16507/revisions/21948/view.
+	- PDF reference: real_books_archive.gi/Guitar - 557 Standards.pdf, PDF page 275.
+	- retained the original copyright notice where printed; the underlying music is not relicensed.
+	- retained written measures, pickups, repeats and endings; lyrics omitted.
+	- tempo is an editorial practice suggestion.
+	TODO:
+	- proofread the music against the referenced PDF and check by ear.
+	- verify the copyright notice against the scan; no readable per-tune notice was recovered, so the archived rights notice is retained where available.
+{% endif %}
+{% if part == "ChordsWikifonia" %}\chordmode {
+	\startChords
+	\startSong
+
+	\myMark "A"
+	\startPart
+	bes1 |
+	s1 |
+	s1 |
+	bes1:13 | \myEndLine
+	ees1:7 |
+	s1 |
+	bes1 |
+	bes1:13 | \myEndLine
+	f1:7 |
+	ees1:7 |
+	bes1 |
+	bes1:6 | \myEndLine
+	bes1:7 |
+	ees1:7 |
+	bes1:6 |
+	bes1:13 | \myEndLine
+	ees1:7 |
+	s1 |
+	bes1:6 |
+	s1 | \myEndLine
+	ees1:7 |
+	s1 |
+	bes1:6 |
+	s1 | \myEndLine
+	bes1 |
+	ees1:m |
+	bes1:7 |
+	s1 | \myEndLine
+	ees1 |
+	ees1:7 |
+	bes1:7 |
+	s2 f2:13 | \myEndLine
+	bes1 |
+	s1 |
+	s1 |
+	bes1:13 | \myEndLine
+	ees1:7 |
+	s1 |
+	bes1 |
+	bes1:13 | \myEndLine
+	f1:7 |
+	ees1:7 |
+	bes1 |
+	bes1:6 | \myEndLine
+	\endBar
+	\endPart
+
+	\endSong
+	\endChords
+}
+{% endif %}
+{% if part == "VoiceWikifonia" %}\absolute {
+	\tempo "Moderato" 4 = 120
+	\time 4/4
+	\key bes \major
+
+	d''2. ~ d''8 d''8 ~ |
+	d''2. r8 bes'8 |
+	d''8. c''16 bes'8. as'16 f'8. es'16 des'8. c'16 ~ |
+	c'2. r4 |
+	des''2. ~ des''8 des''8 ~ |
+	des''2. r8 bes'8 |
+	d''8. c''16 bes'8. as'16 f'8. es'16 des'8. c'16 ~ |
+	c'2. r4 |
+	des''2. ~ des''8 des''8 ~ |
+	des''2. r8 bes'8 |
+	d''8. c''16 bes'8. as'16 f'8. es'16 des'8. c'16 ~ |
+	c'2. r8 f'8 |
+	bes'8. bes'16 des''8. des''16 bes'8. bes'16 g'8. f'16 |
+	bes'8. bes'16 des''8. des''16 bes'8. bes'16 g'8. f'16 |
+	bes'8 bes'8 r4 bes4 r4 |
+	bes4 r8 bes8 ~ bes4. f'8 |
+	bes'8. bes'16 des''8. des''16 bes'8. bes'16 g'8. f'16 |
+	bes'8. bes'16 d''8. d''16 bes'8. bes'16 g'8. f'16 |
+	bes'8 bes'8 r4 bes4 r4 |
+	bes4 r8 bes8 ~ bes4. f'8 |
+	bes'8. bes'16 des''8. des''16 bes'8. bes'16 g'8. f'16 |
+	bes'8. bes'16 des''8. des''16 bes'8. bes'16 g'8. f'16 |
+	bes'8 bes'8 r4 bes4 r4 |
+	bes4 r8 bes8 ~ bes4. g'8 |
+	f'2. g'8 bes'8 |
+	f''8 es''8 ~ es''4 ~ es''8 d''8 bes'8 f'8 |
+	as'2 ~ as'8 g'8 f'8 es'8 |
+	d'2. f'8 fis'8 |
+	g'2. bes'8 d''8 |
+	g''8 f''8 ~ f''4 ~ f''8 des''8 bes'8 f'8 |
+	bes'2 ~ bes'8 as'8 f'8 es'8 |
+	d'2 r4 r4 ^ "D.C. al Fine" |
+	d''2. ~ d''8 d''8 ~ |
+	d''2. r8 bes'8 |
+	d''8. c''16 bes'8. as'16 f'8. es'16 des'8. c'16 ~ |
+	c'2. r4 |
+	des''2. ~ des''8 des''8 ~ |
+	des''2. r8 bes'8 |
+	d''8. c''16 bes'8. as'16 f'8. es'16 des'8. c'16 ~ |
+	c'2. r4 |
+	des''2. ~ des''8 des''8 ~ |
+	des''2. r8 bes'8 |
+	des''8. c''16 bes'8. as'16 f'8. es'16 des'8. c'16 ~ |
+	c'2. r8 r8 ^ "Fine" |
+	\endBar
+}
+{% endif %}

@@ -1,0 +1,124 @@
+{#
+default_version = "Wikifonia"
+
+[attributes]
+title = "I Didn't Know About You"
+style = "Jazz"
+composer = "Duke Ellington"
+piece = "Jazz"
+typesetter = "OpenBook contributors (MusicXML import)"
+completion = "3"
+uuid = "d8ebe05f-4272-5703-ac73-1529b0a6f528"
+location = "557_Standards:145, Jazz_LTD:164, StandardsBook:186, Just_Standards_Real_Book:158"
+copyright = "1944 EMI Robbins Catalog Inc. ORenewed 1972 EMI Robbins Catalog Inc. and Harrison Music Corp. in the USA. All Rights outside the"
+copyrightextra = "USA Controlled by EMI"
+
+[versions.Wikifonia]
+doChords = true
+doVoice = true
+doLyrics = false
+doLyricsmore = false
+doLyricsmoremore = false
+doChordBars = false
+doGuitar = false
+doExtra = false
+doPrep = false
+doOwn = false
+#}
+{% if part == "Vars" %}
+{% endif %}
+{% if part == "Doc" %}
+	DONE:
+	- imported melody and chord changes from real_books_archive.gi/Wikifonia.tar.xz: Wikifonia/Duke Ellington, Bob Russell - I Didn't Know About You.mxl.
+	- source revision: http://wikifonia.org/node/14557/revisions/27119/view.
+	- PDF reference: real_books_archive.gi/The Standards Real Book.pdf, PDF page 186.
+	- retained the original copyright notice where printed; the underlying music is not relicensed.
+	- retained written measures, pickups, repeats and endings; lyrics omitted.
+	- tempo is an editorial practice suggestion.
+	TODO:
+	- proofread the music against the referenced PDF and check by ear.
+	- verify editorial chord spacing in measures 7, 15, 16; the archive places successive symbols at the same offset.
+{% endif %}
+{% if part == "ChordsWikifonia" %}\chordmode {
+	\startChords
+	\startSong
+
+	\myMark "A"
+	\startPart
+	g2:m7 c2:9 |
+	s4. f1*5/8:6 |
+	bes2:7 a2:7 |
+	c4.:m6 d1*5/8:7 | \myEndLine
+	g2:9 g2:7 |
+	g2:m7/c c2:7 |
+	f2:maj7 g2:m7 |
+	a2:m7 ees4:7 d4:7 | \myEndLine
+	g2:m7 c2:9 |
+	f4.:maj7 f1*5/8:6 |
+	bes4.:7 a1*5/8:7 |
+	c4.:m6/ees d1*5/8:7 | \myEndLine
+	g1:9 |
+	g2:m7 g4:m7/c c4:7.9- |
+	f2:6 ees2:6 |
+	f2:6 c4:m7 f4:7 | \myEndLine
+	c2:m7 f2:9 |
+	c2:m7 f2:9 |
+	bes1:6 |
+	ees1:9 | \myEndLine
+	bes2:m7 ees2:9 |
+	bes2:m9 ees2:7 |
+	aes1:6 |
+	g2:7 c2:aug7 | \myEndLine
+	g4.:m7 c1*5/8:9 |
+	f4.:maj7 f1*5/8:6 |
+	bes4.:7 a1*5/8:7 |
+	c4.:m6/ees d1*5/8:7 | \myEndLine
+	g2:9 g2:7 |
+	g2:m7 g4:m7/c c4:7.9- |
+	f1:6 |
+	\endBar
+	\endPart
+
+	\endSong
+	\endChords
+}
+{% endif %}
+{% if part == "VoiceWikifonia" %}\absolute {
+	\tempo "Moderato" 4 = 120
+	\time 4/4
+	\key f \major
+
+	a'8 a'8 a'8 e'8 ~ e'4 f'8 fis'8 |
+	g'8 - "FMA77" g'8 g'8 d'8 ~ d'4. d'8 |
+	f'8 f'8 f'8 e'8 ~ e'4. e'8 |
+	g'8 g'8 g'8 fis'8 ~ fis'8 a'8 bes'8 c''8 |
+	cis''8 e''8 d''8 d'8 ~ d'2 ~ |
+	d'8 d'8 f'8 a'8 c''8 b'8 bes'4 |
+	a'1 ~ |
+	a'2 cis''4 d''4 |
+	a'8 a'8 a'8 e'8 ~ e'4 f'8 fis'8 |
+	g'8 g'8 g'8 d'8 ~ d'4. d'8 |
+	f'8 f'8 f'8 e'8 ~ e'4. e'8 |
+	g'8 g'8 g'8 fis'8 ~ fis'8 a'8 bes'8 c''8 |
+	cis''8 e''8 d''8 d'8 ~ d'2 ~ |
+	d'8 d'8 f'8 g'8 a'8 f'8 a'4 |
+	f'1 ~ |
+	f'2. f'8 f'8 |
+	d''4. c''8 d''4. c''8 |
+	d''4. c''8 \times 2/3 { d''4 c''4 bes'4 } |
+	a'8 f'8 g'2. |
+	a'8 f'8 g'2. |
+	c''4. bes'8 c''4. bes'8 |
+	c''4. bes'8 \times 2/3 { es''4 c''4 g'4 } |
+	f'2. f'4 |
+	g'2 gis'2 |
+	a'8 a'8 a'8 e'8 ~ e'4 f'8 fis'8 |
+	g'8 g'8 g'8 d'8 ~ d'4. d'8 |
+	f'8 f'8 f'8 e'8 ~ e'4. e'8 |
+	g'8 g'8 g'8 fis'8 ~ fis'8 a'8 bes'8 c''8 |
+	cis''8 e''8 d''8 d'8 ~ d'2 ~ |
+	d'8 d'8 f'8 g'8 a'8 f'8 a'4 |
+	f'1 |
+	\endBar
+}
+{% endif %}

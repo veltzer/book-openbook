@@ -1,0 +1,131 @@
+{#
+default_version = "Wikifonia"
+
+[attributes]
+title = "Groove Merchant"
+style = "Jazz"
+composer = "Jerome Richardson"
+piece = "Jazz"
+typesetter = "OpenBook contributors (MusicXML import)"
+completion = "3"
+uuid = "093a4eb2-c0dc-5e3a-a5af-19a1a75d02f7"
+location = "Real_Book_2:135"
+copyright = "All Rights Reserved"
+
+[versions.Wikifonia]
+doChords = true
+doVoice = true
+doLyrics = false
+doLyricsmore = false
+doLyricsmoremore = false
+doChordBars = false
+doGuitar = false
+doExtra = false
+doPrep = false
+doOwn = false
+#}
+{% if part == "Vars" %}
+{% endif %}
+{% if part == "Doc" %}
+	DONE:
+	- imported melody and chord changes from real_books_archive.gi/Wikifonia.tar.xz: Wikifonia/Jerome Richardson - Groove Merchant.mxl.
+	- source revision: http://wikifonia.org/node/412/revisions/619/view.
+	- PDF reference: real_books_archive.gi/The Real Book of Jazz Volume II.pdf, PDF page 135.
+	- retained the original copyright notice where printed; the underlying music is not relicensed.
+	- retained written measures, pickups, repeats and endings; lyrics omitted.
+	- tempo is an editorial practice suggestion.
+	TODO:
+	- proofread the music against the referenced PDF and check by ear.
+	- verify the copyright notice against the scan; no readable per-tune notice was recovered, so the archived rights notice is retained where available.
+{% endif %}
+{% if part == "ChordsWikifonia" %}\chordmode {
+	\startChords
+	\startSong
+
+	\myMark "A"
+	\startPart
+	\partial 2 s2 |
+	\repeat volta 2 {
+	bes1:7 |
+	ees1:7 |
+	bes1:7 | \myEndLine
+	s2 f2:7 |
+	bes4 bes2./aes |
+	g2:m7 c2:7 |
+	f2:7 c2:7 | \myEndLine
+	f1:7 |
+	bes1:7 |
+	s1 |
+	ees1:7 | \myEndLine
+	e1 |
+	bes2/f d2:7/fis |
+	} \alternative {
+	{
+	g2:m7 ees2:7 |
+	c2:m7 f2:7 | \myEndLine
+	bes1 | \myEndLineVoltaNotLast
+	}
+	{
+	s2 ees2:7 |
+	bes2/f d2:7/fis | \myEndLineVoltaLast
+	}
+	}
+	g2:m7 ees2:7 | \myEndLine
+	bes2/f d2:7/fis |
+	g2:m7 ees2:7 |
+	c2:m7 f2:7 |
+	bes1 | \myEndLine
+	s1 |
+	c1:m7 |
+	f1:7 |
+	bes1:7 | \myEndLine
+	\endBar
+	\endPart
+
+	\endSong
+	\endChords
+}
+{% endif %}
+{% if part == "VoiceWikifonia" %}\absolute {
+	\tempo "Moderato" 4 = 120
+	\time 4/4
+	\key bes \major
+
+	\partial 2 \grace { fis'8 ( } g'8 ) bes'8 bes'8 g'8 |
+	\repeat volta 2 {
+	d''4 r4 r2 |
+	r4 f'8 fis'8 g'8 bes'8 bes'8 g'8 |
+	bes'4 ^^ r4 r2 |
+	r2 g'8 bes'8 bes'8 g'8 |
+	\grace { cis''8 ( } d''8 ) f''8 ~ f''2. |
+	r4 g''4 ^^ des''16 c''8. bes'8 g'8 |
+	c''4 r4 r2 |
+	r2 d''8 f''8 f''8 d''8 |
+	g''8 f''8 f''4 ~ f''4 d''8 bes'8 |
+	r2 \grace { fis'8 ( } g'8 ) bes'8 bes'8 g'8 |
+	c''8 bes'8 ~ bes'2 g'8 bes'8 |
+	r2 g'8 bes'8 g''8 ges''8 |
+	f''4 r8 fis''8 r2 |
+	} \alternative {
+	{
+	g''8 f''8 d''8 c''8 bes'4 des''8 bes'8 |
+	e''16 es''8. des''16 bes'8. as'16 f'8. es'16 des'8. |
+	bes4 r4 g'8 bes'8 bes'8 g'8 |
+	}
+	{
+	g''8 - "Gmè7" - "on head only" f''8 d''8 c''8 bes'4 g''8 ges''8 |
+	f''4 r8 fis''8 r2 |
+	}
+	}
+	g''8 f''8 d''8 c''8 bes'4 g''8 ges''8 |
+	f''4 r8 fis''8 r2 |
+	g''8 f''8 d''8 c''8 bes'4 des''8 bes'8 |
+	e''16 es''8. des''16 bes'8. as'16 f'8. es'16 des'8. |
+	bes4 r4 r2 |
+	R1 - "CODA LAST X" |
+	e''8 es''4. des''8 bes'4. |
+	as'8 f'4. es'8 des'4. |
+	bes1 \fermata |
+	\endBar
+}
+{% endif %}

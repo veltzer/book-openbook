@@ -1,0 +1,118 @@
+{#
+default_version = "Wikifonia"
+
+[attributes]
+title = "In the Wee Small Hours of the Morning"
+style = "Jazz"
+composer = "David Mann"
+piece = "Jazz"
+typesetter = "OpenBook contributors (MusicXML import)"
+completion = "3"
+uuid = "07329554-38a5-5a8d-859d-ddbbcc8df5b4"
+location = "New_Real_2:168"
+copyright = "1955 Bourne Corn and Redd Fvans Music Corn. Convricht Renewed. All Richts Reserved. International Convricht Secured. [Jsed by"
+copyrightextra = "Permission. Rights for"
+
+[versions.Wikifonia]
+doChords = true
+doVoice = true
+doLyrics = false
+doLyricsmore = false
+doLyricsmoremore = false
+doChordBars = false
+doGuitar = false
+doExtra = false
+doPrep = false
+doOwn = false
+#}
+{% if part == "Vars" %}
+{% endif %}
+{% if part == "Doc" %}
+	DONE:
+	- imported melody and chord changes from real_books_archive.gi/Wikifonia.tar.xz: Wikifonia/David Mann, Bob Hilliard - In The Wee Small Hours Of The Morning.mxl.
+	- source revision: http://wikifonia.org/node/1585/revisions/14031/view.
+	- PDF reference: real_books_archive.gi/newreal2.pdf, PDF page 168.
+	- retained the original copyright notice where printed; the underlying music is not relicensed.
+	- retained written measures, pickups, repeats and endings; lyrics omitted.
+	- tempo is an editorial practice suggestion.
+	TODO:
+	- proofread the music against the referenced PDF and check by ear.
+	- verify editorial chord spacing in measures 9, 13, 15; the archive places successive symbols at the same offset.
+{% endif %}
+{% if part == "ChordsWikifonia" %}\chordmode {
+	\startChords
+	\startSong
+
+	\myMark "A"
+	\startPart
+	\partial 4 s4 |
+	\repeat volta 2 {
+	c2:maj7 c2:aug |
+	c2:6 c2:aug |
+	c2 c2:aug | \myEndLine
+	d1:m7 |
+	s2 g2:9 |
+	e2:m7.5- a2:7 |
+	fis2:m7.5- b2:7 | \myEndLine
+	e2:m g2:7 |
+	c2:maj7 c2:aug |
+	c2:6 c2:aug |
+	c2:maj7 e2:m7.5- | \myEndLine
+	a2:aug7 a2:7 |
+	d2:m7 dis2:dim7 |
+	c4 g2:m6 a4:7 |
+	} \alternative {
+	{
+	d2.:m7 g4:7.9- | \myEndLine
+	c1 | \myEndLineVoltaNotLast
+	}
+	{
+	d1:m7 | \myEndLineVoltaLast
+	}
+	}
+	d2:7 g2:7.9- |
+	c1 | \myEndLine
+	s1 |
+	\endBar
+	\endPart
+
+	\endSong
+	\endChords
+}
+{% endif %}
+{% if part == "VoiceWikifonia" %}\absolute {
+	\tempo "Moderato" 4 = 120
+	\time 4/4
+	\key c \major
+
+	\partial 4 c'8 d'8 |
+	\repeat volta 2 {
+	e'4 e'4 c'8 ( d'8 ) e'8 f'8 |
+	e'8 c'8 ~ c'4 ~ c'4 c'8 d'8 |
+	e'4 e'4 c'8 d'8 e'8 f'8 |
+	d'2. r8 d'8 |
+	a'4 a'4 a'4. a'8 |
+	g'8 f'8 e'8 f'8 g'4. g'8 |
+	fis'8 e'8 dis'8 e'8 fis'8 b8 b'8 a'8 |
+	g'2. c'8 d'8 |
+	e'4 e'4 c'8 d'8 e'8 f'8 |
+	e'8 c'8 ~ c'4 ~ c'4 e'8 f'8 |
+	g'4. g'8 d''8 g'8 g'8 g'8 |
+	a'2. a'8 b'8 |
+	c''4 c''4 a'8 ( b'8 ) c''8 d''8 |
+	c''8 g'8 ~ g'2 f'8 e'8 |
+	} \alternative {
+	{
+	f'8 c''8 a'8 f'8 d'4 e'4 |
+	c'2. c'8 d'8 |
+	}
+	{
+	f'4 c''4 a'4 f'4 |
+	}
+	}
+	d'2 e'2 |
+	c'1 ~ |
+	c'2. r4 |
+	\endBar
+}
+{% endif %}

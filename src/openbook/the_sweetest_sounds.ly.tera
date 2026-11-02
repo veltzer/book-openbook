@@ -1,0 +1,144 @@
+{#
+default_version = "Wikifonia"
+
+[attributes]
+title = "The Sweetest Sounds"
+style = "Jazz"
+composer = "Richard Rodgers"
+piece = "Jazz"
+typesetter = "OpenBook contributors (MusicXML import)"
+completion = "3"
+uuid = "8bef3ac8-ec95-55ca-96f9-617e284b32e5"
+location = "Real_Book_2:359"
+copyright = "All Rights Reserved"
+
+[versions.Wikifonia]
+doChords = true
+doVoice = true
+doLyrics = false
+doLyricsmore = false
+doLyricsmoremore = false
+doChordBars = false
+doGuitar = false
+doExtra = false
+doPrep = false
+doOwn = false
+#}
+{% if part == "Vars" %}
+{% endif %}
+{% if part == "Doc" %}
+	DONE:
+	- imported melody and chord changes from real_books_archive.gi/Wikifonia.tar.xz: Wikifonia/Richard Rodgers - The Sweetest Sounds.mxl.
+	- source revision: http://www.wikifonia.org/node/2516/revisions/3148/view.
+	- PDF reference: real_books_archive.gi/The Real Book of Jazz Volume II.pdf, PDF page 359.
+	- retained the original copyright notice where printed; the underlying music is not relicensed.
+	- retained written measures, pickups, repeats and endings; lyrics omitted.
+	- tempo taken from archived MusicXML.
+	TODO:
+	- proofread the music against the referenced PDF and check by ear.
+	- verify editorial chord spacing in measures 16; the archive places successive symbols at the same offset.
+	- verify the copyright notice against the scan; no readable per-tune notice was recovered, so the archived rights notice is retained where available.
+{% endif %}
+{% if part == "ChordsWikifonia" %}\chordmode {
+	\startChords
+	\startSong
+
+	\myMark "A"
+	\startPart
+	\partial 4 s4 |
+	d2:m |
+	s2 |
+	g2:m | \myEndLine
+	s2 |
+	e2:7 |
+	a2:7 |
+	d2:m | \myEndLine
+	s2 |
+	d2:m |
+	s2 |
+	g2:m | \myEndLine
+	s2 |
+	s2 |
+	c2:7 |
+	f4:maj7 f4:6 | \myEndLine
+	e4:m7.5- a4:7 |
+	d2:m |
+	s2 |
+	g2:m | \myEndLine
+	s2 |
+	e2:7 |
+	a2:7 |
+	c2:m7 | \myEndLine
+	f2:7 |
+	bes2 |
+	g4:7/b b4:dim7 |
+	f2/c | \myEndLine
+	s2 |
+	g2:m7 |
+	c2:7 |
+	f2:maj7 | \myEndLine
+	f2:7 |
+	bes2 |
+	s2 |
+	g2:m7 | \myEndLine
+	c4:sus4.7 c4:7 |
+	f2 |
+	ges2:6 |
+	f2:6 | \myEndLine
+	s2 |
+	\endBar
+	\endPart
+
+	\endSong
+	\endChords
+}
+{% endif %}
+{% if part == "VoiceWikifonia" %}\absolute {
+	\tempo "Moderato" 4 = 60
+	\time 2/4
+	\key f \major
+
+	\partial 4 a'4 _ "Brightly" |
+	gis'4. a'8 |
+	e'4. f'8 |
+	a'4. g'8 |
+	g'4. f'8 |
+	e'4. f'8 |
+	dis'4. e'8 |
+	d'2 ~ |
+	d'4 r8 a'8 |
+	gis'4. a'8 |
+	e'4. f'8 |
+	a'4. g'8 |
+	g'4. bes'8 |
+	a'4. bes'8 |
+	a'4. bes'8 |
+	a'2 ~ |
+	a'4 r8 a'8 |
+	gis'4. a'8 |
+	e'4. f'8 |
+	a'4. g'8 |
+	g'4. f'8 |
+	e'4. f'8 |
+	dis'4. e'8 |
+	c''2 ~ |
+	c''8 r8 bes'8 c''8 |
+	d''4 d''4 |
+	d''4 d''4 |
+	d''4. c''8 |
+	c''4. f'8 |
+	bes'4 bes'4 |
+	bes'8 a'8 ~ a'8 g'8 |
+	a'2 ~ |
+	a'8 r8 c''4 |
+	g'4 g'4 |
+	d''4 d''4 |
+	r4 g'4 |
+	f'4 e'4 |
+	f'2 ~ |
+	f'2 ~ |
+	f'2 ~ |
+	f'8 r8 r4 |
+	\endBar
+}
+{% endif %}

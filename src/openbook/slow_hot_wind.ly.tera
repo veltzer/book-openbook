@@ -1,0 +1,133 @@
+{#
+default_version = "Wikifonia"
+
+[attributes]
+title = "Slow Hot Wind"
+style = "Jazz"
+composer = "Henry Mancini"
+piece = "Jazz"
+typesetter = "OpenBook contributors (MusicXML import)"
+completion = "3"
+uuid = "a79e7c24-6b31-5055-afeb-d0ce6edae3ee"
+location = "Real_Book_2:335, StandardsBook:380, Just_Standards_Real_Book:312"
+copyright = "All Rights Reserved"
+
+[versions.Wikifonia]
+doChords = true
+doVoice = true
+doLyrics = false
+doLyricsmore = false
+doLyricsmoremore = false
+doChordBars = false
+doGuitar = false
+doExtra = false
+doPrep = false
+doOwn = false
+#}
+{% if part == "Vars" %}
+{% endif %}
+{% if part == "Doc" %}
+	DONE:
+	- imported melody and chord changes from real_books_archive.gi/Wikifonia.tar.xz: Wikifonia/Henry Mancini, Norman Gimbel - Slow Hot Wind.mxl.
+	- source revision: http://wikifonia.org/node/21895/revisions/28915/view.
+	- PDF reference: real_books_archive.gi/The Standards Real Book.pdf, PDF page 380.
+	- retained the original copyright notice where printed; the underlying music is not relicensed.
+	- retained written measures, pickups, repeats and endings; lyrics omitted.
+	- tempo is an editorial practice suggestion.
+	TODO:
+	- proofread the music against the referenced PDF and check by ear.
+	- verify the copyright notice against the scan; no readable per-tune notice was recovered, so the archived rights notice is retained where available.
+{% endif %}
+{% if part == "ChordsWikifonia" %}\chordmode {
+	\startChords
+	\startSong
+
+	\myMark "A"
+	\startPart
+	\repeat volta 2 {
+	a1:m |
+	s1 |
+	s1 |
+	s1 | \myEndLine
+	d1:m7 |
+	s1 |
+	a1:m |
+	} \alternative {
+	{
+	s1 | \myEndLineVoltaNotLast
+	}
+	{
+	s1 | \myEndLineVoltaLast
+	}
+	}
+	f1:maj7 |
+	s2 e2:maj7 |
+	ees1:maj7 | \myEndLine
+	s1 |
+	ees4:m7 ees2.:m7/aes |
+	d1:maj7 |
+	c1:maj7 | \myEndLine
+	s1 |
+	a1:m |
+	s1 |
+	s1 | \myEndLine
+	s1 |
+	d1:m7 |
+	s1 |
+	a1:m | \myEndLine
+	s1 |
+	s1 |
+	s1 |
+	a1:m | \myEndLine
+	s1 |
+	\endBar
+	\endPart
+
+	\endSong
+	\endChords
+}
+{% endif %}
+{% if part == "VoiceWikifonia" %}\absolute {
+	\tempo "Moderato" 4 = 120
+	\time 4/4
+	\key c \major
+
+	\repeat volta 2 {
+	e'2 b'2 ~ |
+	b'2. a'4 |
+	\times 2/3 { dis'4 e'4 d''4 } b'2 ~ |
+	b'2 a'2 |
+	e'1 ~ |
+	e'2 c'2 |
+	b1 ~ |
+	} \alternative {
+	{
+	b1 |
+	}
+	{
+	b2 b8 c'8 e'8 g'8 |
+	}
+	}
+	\times 2/3 { e''4 d''4 c''4 } b'2 ~ |
+	b'4 c''8 d''8 dis''4 gis'4 |
+	gis'2 d''2 ~ |
+	d''4 g'4 bes'4 c''4 |
+	des''4 f''4 ~ \times 2/3 { f''4 es''4 des''4 } |
+	c''2. f'4 |
+	e'2 b'2 ~ |
+	b'2 ~ - "Bmi7" b'2 - "E7-9" |
+	e'2 b'2 ~ |
+	b'2. a'4 |
+	\times 2/3 { dis'4 e'4 d''4 } b'2 ~ |
+	b'2 a'2 |
+	e'1 ~ |
+	e'2 c'2 |
+	b1 ~ |
+	b2 r4 b'4 |
+	e''1 ~ - "Dmi9" |
+	e''2 c''2 |
+	b'1 ~ |
+	b'1 |
+	\endBar
+}
+{% endif %}

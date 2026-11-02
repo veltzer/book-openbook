@@ -1,0 +1,149 @@
+{#
+default_version = "Wikifonia"
+
+[attributes]
+title = "Close Enough For Love"
+style = "Jazz"
+composer = "Johnny Mandel"
+piece = "Jazz"
+typesetter = "OpenBook contributors (MusicXML import)"
+completion = "3"
+uuid = "56919b27-9cc5-5cb0-b96a-788f4da234c0"
+location = "Real_Book_3:59, StandardsBook:89"
+copyright = "1978 First Artists Music Co. All Rights Administered hy WB Music Carn All Riohre Recarued | led bes Deemeiceieee"
+
+[versions.Wikifonia]
+doChords = true
+doVoice = true
+doLyrics = false
+doLyricsmore = false
+doLyricsmoremore = false
+doChordBars = false
+doGuitar = false
+doExtra = false
+doPrep = false
+doOwn = false
+#}
+{% if part == "Vars" %}
+{% endif %}
+{% if part == "Doc" %}
+	DONE:
+	- imported melody and chord changes from real_books_archive.gi/Wikifonia.tar.xz: Wikifonia/Johnny Mandel, Paul Williams - Close Enough For Love.mxl.
+	- source revision: http://wikifonia.org/node/11690/revisions/15696/view.
+	- PDF reference: real_books_archive.gi/The Standards Real Book.pdf, PDF page 89.
+	- retained the original copyright notice where printed; the underlying music is not relicensed.
+	- retained written measures, pickups, repeats and endings; lyrics omitted.
+	- tempo is an editorial practice suggestion.
+	TODO:
+	- proofread the music against the referenced PDF and check by ear.
+	- verify editorial chord spacing in measures 11, 12; the archive places successive symbols at the same offset.
+{% endif %}
+{% if part == "ChordsWikifonia" %}\chordmode {
+	\startChords
+	\startSong
+
+	\myMark "A"
+	\startPart
+	f1:m7 |
+	g2:m7.5+ c2:7.9- |
+	f2:m7 bes2:9 |
+	ees2:sus4.7 aes2:7.9- | \myEndLine
+	des2:6/ees bes2:m7 |
+	g2:13 c2:13 |
+	f2:13 bes2:13 |
+	ees2:sus4.7.9 aes2:13 | \myEndLine
+	des2:6/ees g2:13 |
+	g2:m7.5- c2:aug7 |
+	f2:m d2:aug7 |
+	g2:7.9- c2:sus4.7 | \myEndLine
+	f1:m7 |
+	g2:m7.5+ c2:7.9- |
+	f4.:m7 bes1*5/8:9 |
+	ees2:sus4.7 aes2:7.9- | \myEndLine
+	des2:6/ees bes2:m7 |
+	g2:13 c2:13 |
+	f2:13 bes2:13 |
+	ees2:sus4.7.9 aes2:13 | \myEndLine
+	des2:6/ees g2:13 |
+	g2:m7.5- c2:aug7 |
+	f1:m |
+	c2:m7 f2:7.9- | \myEndLine
+	bes1:m7 |
+	ees2:sus4.7.9 ees2:7.9- |
+	aes2:maj7 f2:m7 |
+	d2:m7.5- g4:sus4.7.9 g4:7.9- | \myEndLine
+	e2:m7 a2:13 |
+	d2:m7 g2:13 |
+	c2:13 des2:13 |
+	c2:sus4.7 c2:aug7 | \myEndLine
+	f2:m d2:aug7 |
+	g2:m7.5+ c2:sus4.7.9 |
+	f2:m7 bes2:9 |
+	ees2:sus4.7.9 aes2:13 | \myEndLine
+	des2:6/ees bes2:m7 |
+	g2:13 c2:13 |
+	f2:13 bes2:13 |
+	ees2:sus4.7.9 aes2:13 | \myEndLine
+	des2:6/ees g2:13 |
+	g2:m7.5- c2:7.9- |
+	f1:m |
+	s1 | \myEndLine
+	\endBar
+	\endPart
+
+	\endSong
+	\endChords
+}
+{% endif %}
+{% if part == "VoiceWikifonia" %}\absolute {
+	\tempo "Moderato" 4 = 120
+	\time 4/4
+	\key as \major
+
+	f'4 g'4 as'4. c''8 |
+	bes'4 as'4 g'2 |
+	r4 as'8 bes'8 c''4. f''8 |
+	es''4. des''8 c''2 |
+	r4 des''8 es''8 f''4. as''8 |
+	g''4. f''8 e''4. g''8 |
+	f''4. es''8 d''4. f''8 |
+	es''4. des''8 c''4. es''8 |
+	des''4 c''4 b'4. g'8 |
+	bes'4. a'8 as'4 e'4 |
+	f'1 ~ |
+	f'1 |
+	f'4. g'8 as'8 c''4. |
+	bes'4. as'8 g'2 |
+	r4 as'8 bes'8 c''4. f''8 |
+	es''4. des''8 c''2 |
+	r4 des''8 es''8 f''4. as''8 |
+	g''4. f''8 e''4. g''8 |
+	f''4. es''8 d''4. f''8 |
+	es''4. des''8 c''4. es''8 |
+	des''4 c''4 b'4. g'8 |
+	bes'4. a'8 as'4 e'4 |
+	f'1 |
+	r4 f'8 g'8 a'8 c''4. |
+	r8 des''4 c''8 bes'2 |
+	r4 es'8 f'8 g'4 des''4 |
+	c''4. bes'8 as'2 |
+	r4 as'8 bes'8 c''4 as''4 |
+	g''4 f''4 e''4. a''8 |
+	f''4. e''8 des''4 g''4 |
+	e''2 des''2 |
+	des''2 c''2 |
+	f'4. g'8 as'8 c''4. |
+	bes'4. as'8 g'2 |
+	r4 as'8 bes'8 c''4. f''8 |
+	es''4. des''8 c''4. as'8 |
+	des''4. es''8 f''4. as''8 |
+	g''4. f''8 e''4. g''8 |
+	f''4. es''8 d''8 f''4. |
+	r8 es''4 des''8 c''4. es''8 |
+	des''4 c''4 b'4. g'8 |
+	bes'4 a'4 as'4 as''4 |
+	f''1 ~ |
+	f''2. r4 |
+	\endBar
+}
+{% endif %}

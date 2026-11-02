@@ -1,0 +1,107 @@
+{#
+default_version = "Wikifonia"
+
+[attributes]
+title = "Nostalgia in Times Square"
+style = "Jazz"
+composer = "Charles Mingus"
+piece = "Jazz"
+typesetter = "OpenBook contributors (MusicXML import)"
+completion = "3"
+uuid = "693d17ca-68e6-5ea5-827d-bb8471b40e62"
+location = "Real_Book_1:339"
+copyright = "All Rights Reserved"
+
+[versions.Wikifonia]
+doChords = true
+doVoice = true
+doLyrics = false
+doLyricsmore = false
+doLyricsmoremore = false
+doChordBars = false
+doGuitar = false
+doExtra = false
+doPrep = false
+doOwn = false
+#}
+{% if part == "Vars" %}
+{% endif %}
+{% if part == "Doc" %}
+	DONE:
+	- imported melody and chord changes from real_books_archive.gi/Wikifonia.tar.xz: Wikifonia/Charles Mingus - Nostalgia in Times Square.mxl.
+	- source revision: http://wikifonia.org/node/13263/revisions/18452/view.
+	- PDF reference: real_books_archive.gi/The Real Book of Jazz Volume I.pdf, PDF page 339.
+	- retained the original copyright notice where printed; the underlying music is not relicensed.
+	- retained written measures, pickups, repeats and endings; lyrics omitted.
+	- tempo taken from archived MusicXML.
+	TODO:
+	- proofread the music against the referenced PDF and check by ear.
+	- verify the copyright notice against the scan; no readable per-tune notice was recovered, so the archived rights notice is retained where available.
+{% endif %}
+{% if part == "ChordsWikifonia" %}\chordmode {
+	\startChords
+	\startSong
+
+	\myMark "A"
+	\startPart
+	\partial 8 s8 |
+	\repeat volta 2 {
+	f2:7 ees2:7 |
+	f2:7 ees2:7 |
+	f2:7 ees2:7 | \myEndLine
+	f2:7 ees2:7 |
+	aes2:m7 des2:7 |
+	aes2:m7 des2:7 |
+	f2:7 ees2:7 | \myEndLine
+	f2:7 ees2:7 |
+	d2:m7 g2:7 |
+	c2:m7 f2:7 |
+	bes2:m7 ees2:7 | \myEndLine
+	} \alternative {
+	{
+	f1 | \myEndLineVoltaNotLast
+	}
+	{
+	f1 | \myEndLineVoltaLast
+	}
+	}
+	\repeat volta 2 {
+	}
+	\endBar
+	\endPart
+
+	\endSong
+	\endChords
+}
+{% endif %}
+{% if part == "VoiceWikifonia" %}\absolute {
+	\tempo "Moderato" 4 = 120
+	\time 4/4
+	\key f \major
+
+	\partial 8 c'8 |
+	\repeat volta 2 {
+	f'8 f'8 ~ f'2 r8 c'8 |
+	f'8 f'8 ~ f'2 r8 c'8 |
+	\times 2/3 { f'8 f'8 f'8 } as'8 as'8 f'8 f'8 es'8 c'8 |
+	f'8 f'8 ~ f'2 r8 f'8 |
+	bes'8 bes'8 ~ bes'2 r8 f'8 |
+	bes'8 bes'8 ~ bes'2 r8 c'8 |
+	\times 2/3 { f'8 f'8 f'8 } as'8 as'8 f'8 f'8 es'8 c'8 |
+	f'8 f'8 ~ f'2 r8 f'8 |
+	c''8 f''8 c''8 f'8 b'4 r8 f'8 |
+	bes'4 c''8 a'8 r4 r8 f'8 |
+	as'4 as'8 as'8 f'8 g'4 f'8 |
+	} \alternative {
+	{
+	r4 d''8 des''8 c''8 a'8 f'8 c'8 |
+	}
+	{
+	R1 |
+	}
+	}
+	\repeat volta 2 {
+	}
+	\endBar
+}
+{% endif %}

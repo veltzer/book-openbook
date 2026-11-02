@@ -1,0 +1,105 @@
+{#
+default_version = "Wikifonia"
+
+[attributes]
+title = "Ballad for Trane"
+style = "Jazz"
+composer = "Kenny Werner"
+piece = "Jazz"
+typesetter = "OpenBook contributors (MusicXML import)"
+completion = "3"
+uuid = "05712811-19ba-57cd-a9a3-7857afbeecd9"
+location = "Real_Book_3:21"
+copyright = "All Rights Reserved"
+
+[versions.Wikifonia]
+doChords = true
+doVoice = true
+doLyrics = false
+doLyricsmore = false
+doLyricsmoremore = false
+doChordBars = false
+doGuitar = false
+doExtra = false
+doPrep = false
+doOwn = false
+#}
+{% if part == "Vars" %}
+{% endif %}
+{% if part == "Doc" %}
+	DONE:
+	- imported melody and chord changes from real_books_archive.gi/Wikifonia.tar.xz: Wikifonia/Kenny Werner - Ballad for Trane.mxl.
+	- source revision: http://wikifonia.org/node/688/revisions/899/view.
+	- PDF reference: real_books_archive.gi/The Real Book of Jazz Volume III.pdf, PDF page 21.
+	- retained the original copyright notice where printed; the underlying music is not relicensed.
+	- retained written measures, pickups, repeats and endings; lyrics omitted.
+	- tempo is an editorial practice suggestion.
+	TODO:
+	- proofread the music against the referenced PDF and check by ear.
+	- verify the copyright notice against the scan; no readable per-tune notice was recovered, so the archived rights notice is retained where available.
+{% endif %}
+{% if part == "ChordsWikifonia" %}\chordmode {
+	\startChords
+	\startSong
+
+	\myMark "A"
+	\startPart
+	ees1:maj7 |
+	aes1/ees |
+	s16 ees2...:maj7 |
+	aes1:maj7/ees | \myEndLine
+	g1:7 |
+	c2:m7 c2:7.9- |
+	f1:m7 |
+	des1:7.11+ | \myEndLine
+	ees1:maj7/bes |
+	aes1/bes |
+	s8 ees2..:maj7 |
+	aes1:maj7/ees | \myEndLine
+	b1:maj7/des |
+	ges2:maj7 aes2:maj7/bes |
+	ees1:maj7 |
+	ges1:maj7/aes | \myEndLine
+	g1:7.9+ |
+	c1:m7 |
+	b1:aug7 |
+	aes1:maj7/bes | \myEndLine
+	s8 ees2..:maj7 |
+	s1 |
+	\endBar
+	\endPart
+
+	\endSong
+	\endChords
+}
+{% endif %}
+{% if part == "VoiceWikifonia" %}\absolute {
+	\tempo "Moderato" 4 = 120
+	\time 4/4
+	\key es \major
+
+	d''4 bes'4 g'8 as'16 bes'16 c''4 |
+	as'16 d'8. ~ d'8 es'16 f'16 g'4. f'8 |
+	d'16 bes8. ~ bes4 c''4 bes'4 |
+	f'8 c'8 d'2. |
+	r4 \times 2/3 { r8 c'8 d'8 } bes4 f'8. g'16 |
+	d'2 e'16 c''8. ~ c''8. g'16 |
+	g'16 bes'16 as'8 as'2 r4 |
+	r2 r8 \once \omit TupletBracket \times 2/3 { f'16 g'16 as'16 } bes'8 f'8 ~ |
+	f'1 ~ |
+	f'2 f'4 c'4 |
+	d'8 es'16 f'16 g'4 r8 as'8 as'4 ~ |
+	as'8. g'16 fis'16 g'16 bes'8 ~ bes'2 |
+	r4 r8 bes'8 ~ bes'4. as'8 |
+	ges'16 des'16 r16 des'16 ~ des'4 ges'8. f'16 es'16 c'16 des'16 ges'16 |
+	bes4 r4 bes4. des'8 |
+	ges'8 bes'8 as'8 c'8 as'16 es'16 f'16 as'16 g'16 bes16 r16 bes16 ~ |
+	bes2. r4 |
+	r4 \once \omit TupletBracket \times 2/3 { es'8 f'8 g'8 } bes'16 a'8. as'16 es''16 g'8 ~ |
+	g'2 r4 r8 es'8 |
+	d''4 bes'4 g'8 as'16 bes'16 c''4 |
+	as'8 d'8 ~ d'8 d'16 bes'16 g'2 ~ |
+	g'1 |
+	\endBar
+}
+{% endif %}

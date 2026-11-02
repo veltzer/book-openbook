@@ -1,0 +1,136 @@
+{#
+default_version = "Wikifonia"
+
+[attributes]
+title = "The Second Time Around"
+style = "Jazz"
+composer = "James Van Heusen"
+piece = "Jazz"
+typesetter = "OpenBook contributors (MusicXML import)"
+completion = "3"
+uuid = "54f6af18-7e09-5bf1-a3cf-af646fe41523"
+location = "New_Real_3:342, Just_Standards_Real_Book:295"
+copyright = "1967 Twentieth Century Music c/o EMI Miller Catalog, Inc. Used by Permission of CPP/Belwin, Inc., Miami, FL All Rights Reserved"
+
+[versions.Wikifonia]
+doChords = true
+doVoice = true
+doLyrics = false
+doLyricsmore = false
+doLyricsmoremore = false
+doChordBars = false
+doGuitar = false
+doExtra = false
+doPrep = false
+doOwn = false
+#}
+{% if part == "Vars" %}
+{% endif %}
+{% if part == "Doc" %}
+	DONE:
+	- imported melody and chord changes from real_books_archive.gi/Wikifonia.tar.xz: Wikifonia/James Van Heusen, Sammy Cahn - The Second Time Around.mxl.
+	- source revision: http://wikifonia.org/node/3555/revisions/27246/view.
+	- PDF reference: real_books_archive.gi/newreal3.pdf, PDF page 342.
+	- retained the original copyright notice where printed; the underlying music is not relicensed.
+	- retained written measures, pickups, repeats and endings; lyrics omitted.
+	- tempo is an editorial practice suggestion.
+	TODO:
+	- proofread the music against the referenced PDF and check by ear.
+{% endif %}
+{% if part == "ChordsWikifonia" %}\chordmode {
+	\startChords
+	\startSong
+
+	\myMark "A"
+	\startPart
+	s2 g2:7.9- |
+	c1 |
+	c2/ees ees2:dim |
+	d1:m | \myEndLine
+	s2 g4:7.9- g4:7 |
+	c2:maj7 c2:6 |
+	c1:aug |
+	d1:m6 | \myEndLine
+	e2.:9 e4:7 |
+	a1:m |
+	c4:7 g4:m7 c4:7 c4:aug7 |
+	f1:7 | \myEndLine
+	s2 des4:7 f4 |
+	a1:m7 |
+	d2.:7 d4:aug7 |
+	g1 | \myEndLine
+	g1:7 |
+	s2 f2:m6 |
+	c1 |
+	c2/ees e2:dim | \myEndLine
+	d1:m |
+	s2 g4:7.9- g4:7 |
+	c2:maj7 c2:6 |
+	c1:aug | \myEndLine
+	d1:m6 |
+	e2.:9 e4:7 |
+	a1:m |
+	c2.:7 c4:aug7 | \myEndLine
+	f2 a2:7.5- |
+	d2:7 ees2:dim |
+	d1:m7 |
+	g2:7 b4:dim d4:m6 | \myEndLine
+	e1:sus4.7 |
+	a1:7 |
+	a2:m7 d2:7 |
+	d2:m7 f2:m6 | \myEndLine
+	c1 |
+	s1 |
+	\endBar
+	\endPart
+
+	\endSong
+	\endChords
+}
+{% endif %}
+{% if part == "VoiceWikifonia" %}\absolute {
+	\tempo "Moderato" 4 = 120
+	\time 4/4
+	\key c \major
+
+	r2 b'4 c''4 |
+	g'4 g'4 g'4. c''8 |
+	b'4 c''4 b'4 c''4 |
+	f'1 ~ |
+	f'2 ais'4 b'4 |
+	e'4 e'4 e'4. a'8 |
+	gis'4 a'4 gis'4 a'4 |
+	d'1 ~ |
+	d'2 dis'4 e'4 |
+	c'4 c'4 c'4. d'8 |
+	e'4 f'4 g'4 gis'4 |
+	a'1 ~ |
+	a'2 gis'4 a'4 |
+	d'4 d'4 d'4. e'8 |
+	fis'4 g'4 a'4 bes'4 |
+	b'4 ais'4 b'4 ais'4 |
+	b'1 ~ |
+	b'2 b'4 c''4 |
+	g'4 g'4 g'4. c''8 |
+	b'4 c''4 b'4 c''4 |
+	f'1 ~ |
+	f'2 ais'4 b'4 |
+	e'4 e'4 e'4. a'8 |
+	gis'4 a'4 gis'4 a'4 |
+	d'1 ~ |
+	d'2 dis'4 e'4 |
+	c'2. d'4 |
+	e'4 f'4 g'4 gis'4 |
+	a'4 a'4 a'4 a'4 |
+	b'2 b'4 c''4 |
+	g'4 g'4 g'2 ~ |
+	g'4 a'4 gis'4 a'4 |
+	e'4 e'4 e'2 ~ |
+	e'4 g'4 fis'4 g'4 |
+	d'4 d'4 d'4. d'8 |
+	d'4 e'4 c'4 c'4 |
+	c'1 ~ |
+	c'1 |
+	\endBar
+}
+{% endif %}

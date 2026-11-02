@@ -1,0 +1,113 @@
+{#
+default_version = "Wikifonia"
+
+[attributes]
+title = "Haunted Ballroom"
+style = "Jazz"
+composer = "Victor Feldman"
+piece = "Jazz"
+typesetter = "OpenBook contributors (MusicXML import)"
+completion = "3"
+uuid = "f28c2c35-13ef-5594-a320-9115634f1da9"
+location = "New_Real_1:134"
+copyright = "All Rights Reserved"
+
+[versions.Wikifonia]
+doChords = true
+doVoice = true
+doLyrics = false
+doLyricsmore = false
+doLyricsmoremore = false
+doChordBars = false
+doGuitar = false
+doExtra = false
+doPrep = false
+doOwn = false
+#}
+{% if part == "Vars" %}
+{% endif %}
+{% if part == "Doc" %}
+	DONE:
+	- imported melody and chord changes from real_books_archive.gi/Wikifonia.tar.xz: Wikifonia/Victor Feldman, Milo Adamo - Haunted Ballroom.mxl.
+	- source revision: http://wikifonia.org/node/3900/revisions/5152/view.
+	- PDF reference: real_books_archive.gi/New Real Book 1.pdf, PDF page 140.
+	- retained the original copyright notice where printed; the underlying music is not relicensed.
+	- retained written measures, pickups, repeats and endings; lyrics omitted.
+	- tempo is an editorial practice suggestion.
+	TODO:
+	- proofread the music against the referenced PDF and check by ear.
+	- verify the copyright notice against the scan; no readable per-tune notice was recovered, so the archived rights notice is retained where available.
+{% endif %}
+{% if part == "ChordsWikifonia" %}\chordmode {
+	\startChords
+	\startSong
+
+	\myMark "A"
+	\startPart
+	\repeat volta 2 {
+	f2:maj7 d2:7.9- |
+	g2:m7 c2:9 |
+	a4.:m7 d1*5/8:7.9- |
+	g4.:m7 c1*5/8:9 | \myEndLine
+	bes2:m7 ees2:13.11+ |
+	aes4.:m7 des1*5/8:13.11+ |
+	fis2:m7 b4:13 c4:sus4.7.13 |
+	g4.:m7 des8:9 c8:7 c4.:13.11+ | \myEndLine
+	}
+	bes2:m7 c2:m7 |
+	des2:maj7 ees2:7.9- |
+	aes2:maj7 des2:m7 |
+	c2:m7 f2:7.9- | \myEndLine
+	bes2:m7 c2:m7 |
+	des2:maj7 ees2:7.9- |
+	aes2 ees2/g |
+	f2:m7 f2:m7/ees | \myEndLine
+	d2:m7 e2:m7 |
+	f1*5/8:maj7 g4.:7.9- |
+	e1:m7 |
+	a1:7.9- | \myEndLine
+	d1:m7 |
+	g1:13 |
+	g1:sus4.7.9 |
+	c1:13.9- | \myEndLine
+	\endBar
+	\endPart
+
+	\endSong
+	\endChords
+}
+{% endif %}
+{% if part == "VoiceWikifonia" %}\absolute {
+	\tempo "Moderato" 4 = 120
+	\time 4/4
+	\key f \major
+
+	\repeat volta 2 {
+	\mark \markup { \box { A } } gis'8 a'8 r8 c''8 ~ c''2 |
+	gis'8 a'8 r8 d'8 ~ d'2 |
+	gis'8 a'8 r8 d''8 r8 d''4. |
+	gis'8 a'8 r8 d'8 ~ d'2 |
+	c'8 des'8 r8 c''8 ~ c''2 |
+	bes8 b8 r8 bes'8 ~ bes'2 |
+	gis8 a8 ~ \once \omit TupletBracket \times 2/3 { a8 cis'8 e'8 } gis'4 a'4 ~ |
+	a'8 c''8 bes'8 g'8 r8 a'4. ^ "Fine" |
+	}
+	\mark \markup { \box { B } } r2 r8 f'8 bes'8 es''8 |
+	c''4 as'8 f'8 r8 bes'4. |
+	es'2 ~ es'2 |
+	r2 r2 |
+	r2 \times 2/3 { f'4 bes'4 es''4 } |
+	c''4 as'8 f'8 r8 g'4 es'8 |
+	bes4 es'8 c'8 ~ c'2 ~ |
+	c'2 r2 |
+	r2 r8 d'8 g'8 c''8 |
+	a'4 f'8 d'8 r8 g'4. |
+	e'2 ~ e'8 f'8 g'8 a'8 ~ |
+	a'2 r8 g'4. |
+	f'2 ~ f'8 g'8 a'8 b'8 ~ |
+	b'2 r8 g'4. |
+	d''2 ~ d''8 bes'8 g'8 c''8 ~ |
+	c''1 ^ "D.C. al Fine" |
+	\endBar
+}
+{% endif %}

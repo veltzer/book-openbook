@@ -1,0 +1,140 @@
+{#
+default_version = "Wikifonia"
+
+[attributes]
+title = "When The Sun Comes Out"
+style = "Jazz"
+composer = "Harold Arlen"
+piece = "Jazz"
+typesetter = "OpenBook contributors (MusicXML import)"
+completion = "3"
+uuid = "45598506-add5-55bf-8c97-4028283b2c53"
+location = "Real_Book_3:344"
+copyright = "All Rights Reserved"
+
+[versions.Wikifonia]
+doChords = true
+doVoice = true
+doLyrics = false
+doLyricsmore = false
+doLyricsmoremore = false
+doChordBars = false
+doGuitar = false
+doExtra = false
+doPrep = false
+doOwn = false
+#}
+{% if part == "Vars" %}
+{% endif %}
+{% if part == "Doc" %}
+	DONE:
+	- imported melody and chord changes from real_books_archive.gi/Wikifonia.tar.xz: Wikifonia/Harold Arlen, Ted Arlen  - When The Sun Comes Out.mxl.
+	- source revision: http://wikifonia.org/node/7265/revisions/10011/view.
+	- PDF reference: real_books_archive.gi/The Real Book of Jazz Volume III.pdf, PDF page 344.
+	- retained the original copyright notice where printed; the underlying music is not relicensed.
+	- retained written measures, pickups, repeats and endings; lyrics omitted.
+	- tempo is an editorial practice suggestion.
+	TODO:
+	- proofread the music against the referenced PDF and check by ear.
+	- verify editorial chord spacing in measures 36; the archive places successive symbols at the same offset.
+	- verify the copyright notice against the scan; no readable per-tune notice was recovered, so the archived rights notice is retained where available.
+{% endif %}
+{% if part == "ChordsWikifonia" %}\chordmode {
+	\startChords
+	\startSong
+
+	\myMark "A"
+	\startPart
+	s1 |
+	f2:7 fis2:dim7 |
+	s2. g4:aug7 |
+	f2:7 fis2:dim7 | \myEndLine
+	d2:m7 g2:7 |
+	g2:m7 c2:7.9- |
+	f2:maj7 bes2:7 |
+	e2:m7 a2:7.9- | \myEndLine
+	d2:m7 g2:aug7 |
+	f2:7 fis2:dim7 |
+	s2. g4:aug7 |
+	f2:7 fis2:dim7 | \myEndLine
+	d2:m7 g2:7 |
+	g2:m7 c2:7.9- |
+	f2:maj7 bes2:7 |
+	e2:m7 a2:7.9- | \myEndLine
+	d2:m7 g2:aug7 |
+	c2:maj7 f2:7.11+ |
+	e2:m7 a2:m7 |
+	g1:m7 | \myEndLine
+	e2:m7.5- a2:aug7 |
+	d1:m7 |
+	g2:7 c2:maj7 |
+	d2:m7 g2:7 | \myEndLine
+	d2:m7 g2:aug7 |
+	f2:7 fis2:dim7 |
+	d2.:m7 g4:aug7 |
+	f2:7 fis2:dim7 | \myEndLine
+	d2:m7 g2:7 |
+	g2:m7 c2:7.9- |
+	f2:maj7 bes2:7 |
+	e2:m7 a2:7.9- | \myEndLine
+	d2:m7 g2:aug7 |
+	c2:maj7 e2:7.9- |
+	a2:m7 f4:m7 bes4:7 |
+	e2:aug7 a2:9 | \myEndLine
+	d2:7 d4:m7 g4:7.9- |
+	c1:6 |
+	s1 |
+	\endBar
+	\endPart
+
+	\endSong
+	\endChords
+}
+{% endif %}
+{% if part == "VoiceWikifonia" %}\absolute {
+	\tempo "Moderato" 4 = 120
+	\time 2/2
+	\key c \major
+
+	r2 r4 g'8. a'16 |
+	es''2 c''2 |
+	a'16 ( g'16 a'8 ~ a'2 ) g'8. a'16 |
+	es''8. es''16 es''8. d''16 es''8. d''16 c''8. bes'16 |
+	a'2 ~ \times 2/3 { a'4 g'4 a'4 } |
+	c''2 a'2 |
+	c'2 ~ c'4 d'8. e'16 |
+	g'8. g'16 g'8. g'16 g'4 g'8. g'16 |
+	a'8. a'16 a'8. g'16 a'4 g'8. a'16 |
+	es''2 c''2 |
+	a'16 ( g'16 a'8 ~ a'2 ) g'8. a'16 |
+	es''8. es''16 es''8. d''16 es''8. d''16 c''8. bes'16 |
+	a'2 ~ \times 2/3 { a'4 g'4 a'4 } |
+	c''2 a'2 |
+	c'2 ~ c'4 d'8. e'16 |
+	g'8. g'16 g'8. e'16 g'4 g'8. g'16 |
+	a'8. a'16 a'8. g'16 a'4 g'8. a'16 |
+	b'2 b'2 |
+	b'8. g'16 a'8. b'16 c''8. b'16 c''8. b'16 |
+	bes'2 bes'2 |
+	b'8. g'16 gis'8. a'16 b'8. a'16 b'8. a'16 |
+	g'2 g'2 |
+	b'8. a'16 c''8. a'16 g'4 e'4 |
+	d'2 ~ d'4. g'8 |
+	a'8. a'16 a'8. g'16 a'4 g'8. a'16 |
+	es''2 c''2 |
+	a'16 ( g'16 a'8 ~ a'2 ) g'8. a'16 |
+	es''8. es''16 es''8. d''16 es''8. d''16 c''8. bes'16 |
+	a'2 ~ \times 2/3 { a'4 g'4 a'4 } |
+	c''2 a'2 |
+	c'2 ~ c'4 d'8. e'16 |
+	g'8. g'16 g'8. g'16 g'4 g'8. g'16 |
+	a'8. a'16 a'8. g'16 a'4 a'8. a'16 |
+	b'8. b'16 b'8. a'16 b'4 b'8. b'16 |
+	c''8. c''16 c''8. b'16 c''4 c''8. d''16 |
+	e''1 ~ |
+	e''4 c''8. d''16 e''8. ( c''16 ) d''4 ^\fermata |
+	c''1 ~ |
+	c''2. r4 |
+	\endBar
+}
+{% endif %}

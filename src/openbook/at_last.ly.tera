@@ -1,0 +1,164 @@
+{#
+default_version = "Wikifonia"
+
+[attributes]
+title = "At Last"
+style = "Jazz"
+composer = "Harry Warren"
+piece = "Jazz"
+typesetter = "OpenBook contributors (MusicXML import)"
+completion = "3"
+uuid = "3900603e-f49e-5fb8-a590-8c90c6db968e"
+location = "Jazz_LTD:22, StandardsBook:46, Just_Standards_Real_Book:34"
+copyright = "1942 (Renewed 1970) Twentieth Century Music Corp. All Right Controlled by EMI Feist Catalog Inc. (Publishing) and Warner Bros."
+copyrightextra = "Publications U.S. Inc. (Print) All Rights Recerved [lead ky Darmicean"
+
+[versions.Wikifonia]
+doChords = true
+doVoice = true
+doLyrics = false
+doLyricsmore = false
+doLyricsmoremore = false
+doChordBars = false
+doGuitar = false
+doExtra = false
+doPrep = false
+doOwn = false
+#}
+{% if part == "Vars" %}
+{% endif %}
+{% if part == "Doc" %}
+	DONE:
+	- imported melody and chord changes from real_books_archive.gi/Wikifonia.tar.xz: Wikifonia/Harry Warren, Mack Gordon - At Last.mxl.
+	- source revision: http://wikifonia.org/node/1366/revisions/16916/view.
+	- PDF reference: real_books_archive.gi/The Standards Real Book.pdf, PDF page 46.
+	- retained the original copyright notice where printed; the underlying music is not relicensed.
+	- retained written measures, pickups, repeats and endings; lyrics omitted.
+	- tempo is an editorial practice suggestion.
+	TODO:
+	- proofread the music against the referenced PDF and check by ear.
+	- verify editorial chord spacing in measures 8, 18, 20, 24, 26, 28, 32, 42, 44, 48; the archive places successive symbols at the same offset.
+{% endif %}
+{% if part == "ChordsWikifonia" %}\chordmode {
+	\startChords
+	\startSong
+
+	\myMark "A"
+	\startPart
+	e2:m7 a2:7.9- |
+	d1:m7 |
+	d2:m7.5- g2:7.5+.9- |
+	c1:maj7 | \myEndLine
+	e2:m7.5- a2:7.9- |
+	d1:m7 |
+	g2:sus4.7.9 g2:7 |
+	e4:m7 a4:7.9- d4:m7 g4:7.9- | \myEndLine
+	e2:m7 a2:7.9- |
+	d1:m7 |
+	d2:m7.5- g2:7.5+.9- |
+	c1:maj7 | \myEndLine
+	e1:m7 |
+	cis2:m7.5- b2:9 |
+	e2:m7 a2:7 |
+	d2:m7 g2:7.5+.9- | \myEndLine
+	s1 |
+	\repeat volta 2 {
+	c2:6.9 a2:m7 |
+	d2:m7 g2:aug7 |
+	c2:maj7 a2:m7 | \myEndLine
+	d2:m7 g2:7.5+.9+ |
+	e2:m7 a2:7.9- |
+	d2:m7 g2:7.9- |
+	c2:6 a2:m7 | \myEndLine
+	aes2:9 g2:aug7 |
+	c2:6.9 a2:m7 |
+	d2:m7 g2:aug7 |
+	c2:maj7 a2:m7 | \myEndLine
+	d2:m7 g2:7.5+.9+ |
+	e2:m7 a2:7.9- |
+	d2:m7 g2:7.9- |
+	c2:6 f2:m6 | \myEndLine
+	c2:6 a2:m7 |
+	d2:m7 g2:13.9- |
+	c1:maj7 |
+	fis2:m7.5- b4:7.5+.9- b4:7.9- | \myEndLine
+	e1:m7 |
+	a2:m7.5- d2:7.9- |
+	g2:maj7 e2:7.9- |
+	a2:m7 d2:7.9- | \myEndLine
+	d2:m7 g2:7 |
+	c2:6.9 a2:m7 |
+	d2:m7 g2:aug7 |
+	c2:maj7 a2:m7 | \myEndLine
+	d2:m7 g2:7.5+.9+ |
+	e2:m7 a2:m7 |
+	d2:m7 g2:13 |
+	c2:6 a2:m7 | \myEndLine
+	d2:m7 g2:7 |
+	}
+	\endBar
+	\endPart
+
+	\endSong
+	\endChords
+}
+{% endif %}
+{% if part == "VoiceWikifonia" %}\absolute {
+	\tempo "Moderato" 4 = 120
+	\time 2/2
+	\key c \major
+
+	\mark \markup { \box { A } } g'4 a'4 bes'4. a'8 |
+	g'4 f'2. |
+	f'4 g'4 as'4. g'8 |
+	e'1 |
+	e'4 f'4 g'4. f'8 |
+	e'4 d'2 d'4 |
+	a'4 f'4 d'4 b4 |
+	g'1 |
+	g'4 a'4 bes'4. a'8 |
+	g'4 f'2. |
+	f'4 g'4 as'4. g'8 |
+	e'2. e'4 |
+	e'4 fis'4 g'4 a'4 |
+	b'4 b4 cis'4 dis'4 |
+	e'4 e'4 g'4. e'8 |
+	f'4 f'4 as'4 ^\fermata s4 |
+	\mark \markup { \box { B } } g'4 s2. |
+	\repeat volta 2 {
+	\mark \markup { \musicglyph "scripts.segno" } c''1 ~ |
+	c''4 d''8 es''8 ~ es''8 d''8 c''8 a'8 |
+	g'1 |
+	r4 a'8 bes'8 ~ bes'8 a'8 g'8 f'8 |
+	e'2 e'2 |
+	r4 e'8 g'8 ~ g'8 f'8 e'8 d'8 |
+	c'1 ~ |
+	c'2 r4 g'4 |
+	c''1 ~ |
+	c''4 d''8 es''8 ~ es''8 d''8 c''8 a'8 |
+	g'1 |
+	r4 a'8 bes'8 ~ bes'8 a'8 g'8 f'8 |
+	e'2 e'2 |
+	r4 e'8 g'8 ~ g'8 f'8 e'8 d'8 |
+	c'1 |
+	r4 c'4 d'4 e'4 |
+	\mark \markup { \box { C } } g'4 f'4 e'4 d'4 |
+	e'4 e'4 ~ e'8 e'8 fis'8 g'8 |
+	b'4 a'4 g'4 fis'4 |
+	g'2 r8 g'8 a'8 b'8 |
+	d''4 c''4 b'4 a'4 |
+	b'4 b'4 ~ b'4 c''4 |
+	a'4 a'4 a'8 b'4. |
+	g'2 ~ g'4 g'4 |
+	\mark \markup { \box { D } } c''1 ~ |
+	c''4 d''8 es''8 ~ es''8 d''8 c''8 a'8 |
+	g'1 |
+	r4 a'8 bes'8 ~ bes'8 a'8 g'8 f'8 |
+	e'2 c''2 |
+	r8 c''8 e''8 c''8 e''4 g'4 |
+	c''1 ^ "Fine" |
+	r2 r4 g'4 ^ "D.S. al Fine" |
+	}
+	\endBar
+}
+{% endif %}

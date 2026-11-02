@@ -1,0 +1,132 @@
+{#
+default_version = "Wikifonia"
+
+[attributes]
+title = "I Surrender, Dear"
+style = "Jazz"
+composer = "Gordon Clifford"
+piece = "Jazz"
+typesetter = "OpenBook contributors (MusicXML import)"
+completion = "3"
+uuid = "5a6e196e-a1c3-587e-9d5f-3b38da686b6e"
+location = "557_Standards:184, Jazz_LTD:174, Fakebook_Django:91"
+copyright = "All Rights Reserved"
+
+[versions.Wikifonia]
+doChords = true
+doVoice = true
+doLyrics = false
+doLyricsmore = false
+doLyricsmoremore = false
+doChordBars = false
+doGuitar = false
+doExtra = false
+doPrep = false
+doOwn = false
+#}
+{% if part == "Vars" %}
+{% endif %}
+{% if part == "Doc" %}
+	DONE:
+	- imported melody and chord changes from real_books_archive.gi/Wikifonia.tar.xz: Wikifonia/Gordon Clifford, Harry Barris - I Surrender, Dear.mxl.
+	- source revision: http://wikifonia.org/node/4868/revisions/6594/view.
+	- PDF reference: real_books_archive.gi/Guitar - 557 Standards.pdf, PDF page 184.
+	- retained the original copyright notice where printed; the underlying music is not relicensed.
+	- retained written measures, pickups, repeats and endings; lyrics omitted.
+	- tempo is an editorial practice suggestion.
+	TODO:
+	- proofread the music against the referenced PDF and check by ear.
+	- verify editorial chord spacing in measures 8, 20, 24, 32; the archive places successive symbols at the same offset.
+	- verify the copyright notice against the scan; no readable per-tune notice was recovered, so the archived rights notice is retained where available.
+{% endif %}
+{% if part == "ChordsWikifonia" %}\chordmode {
+	\startChords
+	\startSong
+
+	\myMark "A"
+	\startPart
+	\repeat volta 2 {
+	s8 d2..:m |
+	a2:7 a2:m9 |
+	d2:m e2:7 |
+	a2:m d2:9 | \myEndLine
+	c2 a2:m |
+	d1:9 |
+	d2:m g4:7 g4:aug |
+	c4 c2:7 a4:7 | \myEndLine
+	d1:m |
+	a2:7 a2:m9 |
+	d2:m e2:7 |
+	a2:m d2:9 | \myEndLine
+	c2 a2:m |
+	d1:9 |
+	d2:m g4:7 g4:aug |
+	c1 | \myEndLine
+	e1:7 |
+	f4 a2.:m |
+	e1:7 |
+	f2 a2:m | \myEndLine
+	e1:7 |
+	f4 a2.:m |
+	d1:9 |
+	g4:9 d2:m7 g4:7 | \myEndLine
+	d1:m |
+	a2:7 a2:m9 |
+	d2:m e2:7 |
+	a2:m d2:9 | \myEndLine
+	c2 a2:m |
+	d1:9 |
+	d2:m g4:7 g4:aug |
+	c4 a2:aug a4:7 | \myEndLine
+	}
+	c1 |
+	\endBar
+	\endPart
+
+	\endSong
+	\endChords
+}
+{% endif %}
+{% if part == "VoiceWikifonia" %}\absolute {
+	\tempo "Moderato" 4 = 120
+	\time 4/4
+	\key c \major
+
+	\repeat volta 2 {
+	r8 f'8 f'8 f'8 a'2 |
+	r8 g'8 g'8 g'8 bes'2 |
+	r8 a'8 a'8 a'8 b'2 |
+	r8 c''8 c''8 c''8 e''2 |
+	r8 e''8 e''8 c''8 c''8 a'8 a'8 e'8 |
+	e'1 |
+	r4 d'8 e'8 g'4 g'4 |
+	g'1 |
+	r8 f'8 f'8 f'8 a'2 |
+	r8 g'8 g'8 g'8 bes'2 |
+	r8 a'8 a'8 a'8 b'2 |
+	r8 c''8 c''8 c''8 e''2 |
+	r8 e''8 e''8 c''8 c''8 a'8 a'8 e'8 |
+	e'1 |
+	r4 d'8 e'8 g'4 g'4 |
+	g'1 |
+	b'8 b'4 b'8 b'8 c''4 d''8 |
+	c''8 c''8 ~ c''2. |
+	b'8 b'4 b'8 b'8 c''4 d''8 |
+	c''1 |
+	b'8 b'4 b'8 b'8 c''4 d''8 |
+	c''8 c''8 ~ c''2 c''8 c''8 |
+	e''4 e''4 e''4 a'4 |
+	d''1 |
+	r8 f'8 f'8 f'8 a'2 |
+	r8 g'8 g'8 g'8 bes'2 |
+	r8 a'8 a'8 a'8 b'2 |
+	r8 c''8 c''8 c''8 e''2 |
+	r8 e''8 e''8 c''8 c''8 a'8 a'8 e'8 |
+	e'1 |
+	r4 d'8 e'8 g'4 g'4 |
+	g'1 |
+	}
+	g'2. r4 |
+	\endBar
+}
+{% endif %}

@@ -1,0 +1,140 @@
+{#
+default_version = "Wikifonia"
+
+[attributes]
+title = "Warm Valley"
+style = "Jazz"
+composer = "Duke Ellington"
+piece = "Jazz"
+typesetter = "OpenBook contributors (MusicXML import)"
+completion = "3"
+uuid = "d7f79882-bdcd-56e5-a6e0-e380c66d02e8"
+location = "New_Real_3:417"
+copyright = "1941 (renewed 1969) c/o EMI Robbins Catalog, Inc. Used by Permission of CPP/Belwin, Inc., Miami, FL All Rights Reserved"
+
+[versions.Wikifonia]
+doChords = true
+doVoice = true
+doLyrics = false
+doLyricsmore = false
+doLyricsmoremore = false
+doChordBars = false
+doGuitar = false
+doExtra = false
+doPrep = false
+doOwn = false
+#}
+{% if part == "Vars" %}
+{% endif %}
+{% if part == "Doc" %}
+	DONE:
+	- imported melody and chord changes from real_books_archive.gi/Wikifonia.tar.xz: Wikifonia/Duke Ellington - Warm Valley.mxl.
+	- source revision: http://wikifonia.org/node/21589/revisions/28539/view.
+	- PDF reference: real_books_archive.gi/newreal3.pdf, PDF page 417.
+	- retained the original copyright notice where printed; the underlying music is not relicensed.
+	- retained written measures, pickups, repeats and endings; lyrics omitted.
+	- tempo is an editorial practice suggestion.
+	TODO:
+	- proofread the music against the referenced PDF and check by ear.
+{% endif %}
+{% if part == "ChordsWikifonia" %}\chordmode {
+	\startChords
+	\startSong
+
+	\myMark "A"
+	\startPart
+	\repeat volta 2 {
+	bes1:maj7 |
+	e1:7 |
+	ees2:7 e4:m7.5- a4:7 |
+	d1:7 | \myEndLine
+	d2:m7.5- g2:7 |
+	c1:m7.5- |
+	bes2:maj7 c4:m7 f4:sus4.7.9 |
+	bes1:6 | \myEndLine
+	bes1:maj7 |
+	e1:7 |
+	ees2:7 e4:m7.5- a4:7 |
+	d1:7 | \myEndLine
+	d2:m7.5- g2:7 |
+	c1:m7.5- |
+	bes2:maj7 c4:m7 f4:sus4.7.9 |
+	bes2:6 fis4:maj7 b4:7 | \myEndLine
+	e1:maj7 |
+	gis2:m7 g2:dim7 |
+	fis2:m7 b2:7 |
+	b2:m7 e2:7 | \myEndLine
+	a1:maj7 |
+	bes2:13 a2:7 |
+	d2:maj7 cis2:m7 |
+	c2:m7.5- f2:7 | \myEndLine
+	bes1:maj7 |
+	e1:7 |
+	ees2:7 e4:m7.5- a4:7 |
+	d1:7 | \myEndLine
+	d2:m7.5- g2:7 |
+	c1:m7.5- |
+	bes2:maj7 c4:m7 f4:sus4.7.9 |
+	} \alternative {
+	{
+	bes4:6 c2:m7 f4:7 | \myEndLineVoltaNotLast
+	}
+	{
+	bes1:6 | \myEndLineVoltaLast
+	}
+	}
+	\endBar
+	\endPart
+
+	\endSong
+	\endChords
+}
+{% endif %}
+{% if part == "VoiceWikifonia" %}\absolute {
+	\tempo "Moderato" 4 = 120
+	\time 4/4
+	\key bes \major
+
+	\repeat volta 2 {
+	a'2. bes'4 |
+	gis'1 |
+	g'4 a'8 bes'8 a'4 g'4 |
+	fis'1 |
+	f'2. g'4 |
+	es'1 |
+	r8 d'8 f'8 a'8 bes'4 bes'4 |
+	g'2. r4 |
+	a'2. bes'4 |
+	gis'1 |
+	g'4 a'8 bes'8 a'4 g'4 |
+	fis'1 |
+	f'2. g'4 |
+	es'1 |
+	r8 d'8 f'8 a'8 bes'4 bes'4 |
+	bes'2 r4 r4 |
+	dis''2 ~ dis''8 cis''8 b'8 gis'8 |
+	fis'2. e'4 |
+	b'2 b'4 cis''4 |
+	b'1 |
+	cis''2 ~ cis''8 b'8 a'8 gis'8 |
+	g'2. a'4 |
+	fis'2 fis'2 |
+	ges'2 f'4 g'4 |
+	a'2. bes'4 |
+	gis'1 |
+	g'4 a'8 bes'8 a'4 g'4 |
+	fis'1 |
+	f'2. g'4 |
+	es'1 |
+	r8 d'8 f'8 g'8 bes'4 bes'4 |
+	} \alternative {
+	{
+	bes'2. r4 |
+	}
+	{
+	bes'2. r4 |
+	}
+	}
+	\endBar
+}
+{% endif %}

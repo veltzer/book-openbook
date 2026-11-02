@@ -1,0 +1,153 @@
+{#
+default_version = "Wikifonia"
+
+[attributes]
+title = "It's De-lovely"
+style = "Jazz"
+composer = "Cole Porter"
+piece = "Jazz"
+typesetter = "OpenBook contributors (MusicXML import)"
+completion = "3"
+uuid = "c0e27ca4-24e6-51b1-946b-7323a0a4b9d6"
+location = "StandardsBook:249"
+copyright = "1936 Chappell & Co. Copyright Renewed, Assigned to Robert H. Montgomery, Trustee of the Cole Porter Musical & Literary Property"
+copyrightextra = "Trusts. Chappell & Co., Owner of Publication and Allied Rights throughout the World. All Riohre Reserved | Ieed hu Permiccian"
+
+[versions.Wikifonia]
+doChords = true
+doVoice = true
+doLyrics = false
+doLyricsmore = false
+doLyricsmoremore = false
+doChordBars = false
+doGuitar = false
+doExtra = false
+doPrep = false
+doOwn = false
+#}
+{% if part == "Vars" %}
+{% endif %}
+{% if part == "Doc" %}
+	DONE:
+	- imported melody and chord changes from real_books_archive.gi/Wikifonia.tar.xz: Wikifonia/Cole Porter - It's De-lovely.mxl.
+	- source revision: http://www.wikifonia.org/node/2315/revisions/2926/view.
+	- PDF reference: real_books_archive.gi/The Standards Real Book.pdf, PDF page 249.
+	- retained the original copyright notice where printed; the underlying music is not relicensed.
+	- retained written measures, pickups, repeats and endings; lyrics omitted.
+	- tempo is an editorial practice suggestion.
+	TODO:
+	- proofread the music against the referenced PDF and check by ear.
+{% endif %}
+{% if part == "ChordsWikifonia" %}\chordmode {
+	\startChords
+	\startSong
+
+	\myMark "A"
+	\startPart
+	\partial 4 s4 |
+	\repeat volta 2 {
+	f1 |
+	f1:aug |
+	f1 | \myEndLine
+	s1 |
+	s1 |
+	fis1:dim7 |
+	c1:7 | \myEndLine
+	s2. d4:7 |
+	g1:m |
+	g1:m5+ |
+	g1:m6 | \myEndLine
+	g1:m |
+	s1 |
+	gis1:dim7 |
+	f1 | \myEndLine
+	c1:7 |
+	f1:7 |
+	s1 |
+	bes2 f4:7 f4:aug | \myEndLine
+	bes1 |
+	bes1:m6 |
+	s1 |
+	c1:7 | \myEndLine
+	s1 |
+	f1 |
+	f1:aug |
+	f1 | \myEndLine
+	s8 f4:aug f1*5/8 |
+	s1 |
+	f1/e |
+	a1:m7.5-/ees | \myEndLine
+	d1:7 |
+	g2.:7/des c4:7 |
+	s1 |
+	} \alternative {
+	{
+	g4.:m/f f1*5/8 | \myEndLine
+	s2. c4:aug | \myEndLineVoltaNotLast
+	}
+	{
+	g4.:m/f f1*5/8 |
+	s1 | \myEndLineVoltaLast
+	}
+	}
+	\endBar
+	\endPart
+
+	\endSong
+	\endChords
+}
+{% endif %}
+{% if part == "VoiceWikifonia" %}\absolute {
+	\tempo "Moderato" 4 = 120
+	\time 2/2
+	\key f \major
+
+	\partial 4 c''4 ^ "Moderately" |
+	\repeat volta 2 {
+	\time 4/4 c'4 c'8 c'8 ~ c'4. c'8 |
+	cis'4 cis'8 cis'8 ~ cis'4. cis'8 |
+	d'4 d'8 d'8 ~ d'8 des'8 cis'4 |
+	a'8 a'4 a'8 ~ a'8 c''4 a'8 |
+	c''4. a'8 a'8 c''4 a'8 |
+	c''4. a'8 ~ a'8 c''4 a'8 |
+	c''4. bes'8 ~ bes'2 |
+	r2 r4 d''4 |
+	d'4 d'8 d'8 ~ d'4. d'8 |
+	es'4 es'8 es'8 ~ es'4. es'8 |
+	e'4 e'8 e'8 ~ e'8 es'8 d'4 |
+	bes'8 bes'4 bes'8 ~ bes'8 d''4 bes'8 |
+	d''4. bes'8 ~ bes'8 d''4 bes'8 |
+	d''4. b'8 ~ b'8 d''4 b'8 |
+	d''4. c''8 ~ c''2 |
+	r2 r8 d''4 c''8 |
+	es''2 c''8 a'4 g'8 ~ |
+	g'2 r8 f'4 es'8 |
+	d'4. es'8 ~ es'4 e'4 |
+	f'8 g'8 bes'8 d''8 ~ d''8 c''4 bes'8 |
+	des''2 bes'8 g'4 f'8 |
+	des'8 bes'4 g'8 ~ g'8 f'8 des'4 |
+	c'2 ~ c'8 c''4 c''8 ~ |
+	c''8 c''4 c''8 ~ c''4 c''4 |
+	c'4 c'8 c'8 ~ c'4. c'8 |
+	cis'4 cis'8 cis'8 ~ cis'4. cis'8 |
+	d'4 d'8 d'8 ~ d'8 des'8 cis'4 |
+	a'8 a'4 a'8 ~ a'8 c''4 a'8 |
+	c''4. a'8 ~ a'8 c''4 a'8 |
+	c''4. a'8 a'8 c''4 a'8 |
+	c''4 c''8 a'8 ~ a'8 c''4 a'8 |
+	c''4 c''8 a'8 ~ a'8 c''4 a'8 |
+	c''8 a'4 c''8 ~ c''8 a'8 c''8 a'8 |
+	r8 c''4 a'8 c''8 d''4 c''8 |
+	} \alternative {
+	{
+	d''4. f'8 ~ f'2 ~ |
+	f'4 r4 r4 c''4 |
+	}
+	{
+	f''4. f''8 ~ f''2 ~ |
+	f''2. r4 |
+	}
+	}
+	\endBar
+}
+{% endif %}

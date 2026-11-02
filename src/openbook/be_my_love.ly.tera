@@ -1,0 +1,153 @@
+{#
+default_version = "Wikifonia"
+
+[attributes]
+title = "Be My Love"
+style = "Jazz"
+composer = "Nicholas Brodszky"
+piece = "Jazz"
+typesetter = "OpenBook contributors (MusicXML import)"
+completion = "3"
+uuid = "7cbf43c1-623d-50ec-9691-b313f66bfed9"
+location = "Real_Book_3:23, 557_Standards:35"
+copyright = "All Rights Reserved"
+
+[versions.Wikifonia]
+doChords = true
+doVoice = true
+doLyrics = false
+doLyricsmore = false
+doLyricsmoremore = false
+doChordBars = false
+doGuitar = false
+doExtra = false
+doPrep = false
+doOwn = false
+#}
+{% if part == "Vars" %}
+{% endif %}
+{% if part == "Doc" %}
+	DONE:
+	- imported melody and chord changes from real_books_archive.gi/Wikifonia.tar.xz: Wikifonia/Nicholas Brodszky, Sammy Cahn - Be My Love.mxl.
+	- source revision: http://wikifonia.org/node/4884/revisions/6619/view.
+	- PDF reference: real_books_archive.gi/The Real Book of Jazz Volume III.pdf, PDF page 23.
+	- retained the original copyright notice where printed; the underlying music is not relicensed.
+	- retained written measures, pickups, repeats and endings; lyrics omitted.
+	- tempo is an editorial practice suggestion.
+	TODO:
+	- proofread the music against the referenced PDF and check by ear.
+	- verify the copyright notice against the scan; no readable per-tune notice was recovered, so the archived rights notice is retained where available.
+{% endif %}
+{% if part == "ChordsWikifonia" %}\chordmode {
+	\startChords
+	\startSong
+
+	\myMark "A"
+	\startPart
+	s1 |
+	\repeat volta 2 {
+	g1 |
+	s1 |
+	a1:m6 | \myEndLine
+	b2:aug b2:7 |
+	s4 e2.:m |
+	e1:m |
+	e2.:m6 fis4:7.5- | \myEndLine
+	b2.:7 e4:7.9- |
+	e2:dim a2:m |
+	s1 |
+	bes2:dim g2 | \myEndLine
+	s4 d4:7 e4:m b4:7 |
+	e1:m |
+	a1:7 |
+	a1:m7 | \myEndLine
+	d1:9 |
+	g1 |
+	s1 |
+	a1:m6 | \myEndLine
+	b2:aug b2:7 |
+	e1:m |
+	s1 |
+	e2.:m6 fis4:7.5- | \myEndLine
+	b2.:7 e4:7.5- |
+	e2:dim a2:m |
+	a1:m |
+	bes2:dim g2 | \myEndLine
+	b4:7 e4:m b4:7 e4:m |
+	a1:m7 |
+	s2. d4:7 |
+	d1:m7 | \myEndLine
+	b2.:m7 e4:7 |
+	a1:m7 |
+	s2 d2:7.9- |
+	} \alternative {
+	{
+	g2. g4:dim | \myEndLine
+	d1:7 | \myEndLineVoltaNotLast
+	}
+	{
+	g1 | \myEndLineVoltaLast
+	}
+	}
+	s1 |
+	\endBar
+	\endPart
+
+	\endSong
+	\endChords
+}
+{% endif %}
+{% if part == "VoiceWikifonia" %}\absolute {
+	\tempo "Moderato" 4 = 120
+	\time 2/2
+	\key g \major
+
+	r2 cis'4 d'4 |
+	\repeat volta 2 {
+	c''2. b'4 |
+	a'4 g'4 fis'4 g'4 |
+	b'2. a'4 |
+	g'2 fis'2 |
+	r4 b4 a'4 g'4 |
+	fis'4 e'4 dis'4 e'4 |
+	g'2. fis'4 |
+	b2. b4 |
+	b4. d'8 c'2 ~ |
+	c'4 c'4 c'4 c'4 |
+	cis'4. e'8 d'2 ~ |
+	d'4 d'4 e'4 fis'4 |
+	g'4 a'4 b'2 ~ |
+	b'4 b'4 a'4 g'4 |
+	b'4. e'8 a'2 ~ |
+	a'2 cis'4 d'4 |
+	c''2. b'4 |
+	a'4 g'4 fis'4 g'4 |
+	b'2. a'4 |
+	g'2 fis'2 |
+	r4 b4 a'4 g'4 |
+	fis'4 e'4 dis'4 e'4 |
+	g'2. fis'4 |
+	b2. b4 |
+	b4. d'8 c'2 ~ |
+	c'4 c'4 c'4 c'4 |
+	cis'4. e'8 d'4 e'4 |
+	fis'4 g'4 a'4 b'4 |
+	d''2. b'4 |
+	d'2. d'4 |
+	d''2. b'4 |
+	d'2. d'4 |
+	d''2. b'4 |
+	d'2 b'2 |
+	} \alternative {
+	{
+	g'2 ~ g'4 r4 |
+	r2 cis'4 d'4 |
+	}
+	{
+	g'1 ~ |
+	}
+	}
+	g'2 r2 |
+	\endBar
+}
+{% endif %}

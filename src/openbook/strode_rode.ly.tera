@@ -1,0 +1,121 @@
+{#
+default_version = "Wikifonia"
+
+[attributes]
+title = "Strode Rode"
+style = "Jazz"
+composer = "Sonny Rollins"
+piece = "Jazz"
+typesetter = "OpenBook contributors (MusicXML import)"
+completion = "3"
+uuid = "7c93dfb2-6ef9-5a2c-8080-5969dac9e3f5"
+location = "Real_Book_2:352, 557_Standards:354"
+copyright = "All Rights Reserved"
+
+[versions.Wikifonia]
+doChords = true
+doVoice = true
+doLyrics = false
+doLyricsmore = false
+doLyricsmoremore = false
+doChordBars = false
+doGuitar = false
+doExtra = false
+doPrep = false
+doOwn = false
+#}
+{% if part == "Vars" %}
+{% endif %}
+{% if part == "Doc" %}
+	DONE:
+	- imported melody and chord changes from real_books_archive.gi/Wikifonia.tar.xz: Wikifonia/Sonny Rollins - Strode Rode.mxl.
+	- source revision: http://wikifonia.org/node/12229/revisions/22411/view.
+	- PDF reference: real_books_archive.gi/The Real Book of Jazz Volume II.pdf, PDF page 352.
+	- retained the original copyright notice where printed; the underlying music is not relicensed.
+	- retained written measures, pickups, repeats and endings; lyrics omitted.
+	- tempo is an editorial practice suggestion.
+	TODO:
+	- proofread the music against the referenced PDF and check by ear.
+	- verify the copyright notice against the scan; no readable per-tune notice was recovered, so the archived rights notice is retained where available.
+{% endif %}
+{% if part == "ChordsWikifonia" %}\chordmode {
+	\startChords
+	\startSong
+
+	\myMark "A"
+	\startPart
+	\repeat volta 2 {
+	f1:m |
+	s1 |
+	s1 |
+	s1 | \myEndLine
+	f1:m |
+	g2:m7.5- c2:7 |
+	f1:m |
+	g2:m7.5- c2:7 | \myEndLine
+	des1:7 |
+	c1:7 |
+	f1:m |
+	g2:m7.5- c2:7 | \myEndLine
+	}
+	bes1:m7 |
+	ees1:7 |
+	aes1:m7 |
+	des2:7 c2:7 | \myEndLine
+	f1:m |
+	s1 |
+	s1 |
+	s1 | \myEndLine
+	f1:m |
+	g2:m7.5- c2:7 |
+	f1:m |
+	g2:m7.5- c2:7 | \myEndLine
+	des1:7 |
+	c1:7 |
+	f1:m |
+	s1 | \myEndLine
+	\endBar
+	\endPart
+
+	\endSong
+	\endChords
+}
+{% endif %}
+{% if part == "VoiceWikifonia" %}\absolute {
+	\tempo "Moderato" 4 = 120
+	\time 4/4
+	\key as \major
+
+	\repeat volta 2 {
+	r4 c''4 c''2 |
+	c''4. c''4. c''4 |
+	r8 c''8 r4 r8 c''4. |
+	c''4 des''4 as'4 bes'4 |
+	c''1 |
+	r2 r2 |
+	R1 |
+	r2 r4 r8 f'8 |
+	ces''8 bes'2. f'8 |
+	\times 2/3 { as'4 bes'4 as'4 } \times 2/3 { f'4 es'4 c'4 } |
+	es'8 f'8 ~ f'2. |
+	r2 r2 |
+	}
+	r8 f'8 a'8 des''8 f''8 des''8 a''8 c'''8 |
+	bes''8 as''8 g''8 f''8 es''8 d''8 des''8 f''8 |
+	es''8 b'8 bes'8 as'8 bes'8 g'8 as'8 bes'8 |
+	b'8 des''8 es''8 c''8 bes''8 g''4. |
+	r4 c''4 c''2 |
+	c''4. c''4. c''4 |
+	r8 c''8 r4 r8 c''4. |
+	c''4 des''4 as'4 bes'4 |
+	c''1 |
+	r2 r2 |
+	R1 |
+	r2 r4 r8 f'8 |
+	ces''8 bes'2. f'8 |
+	\times 2/3 { as'4 bes'4 as'4 } \times 2/3 { f'4 es'4 c'4 } |
+	es'8 f'8 ~ f'2. |
+	R1 |
+	\endBar
+}
+{% endif %}

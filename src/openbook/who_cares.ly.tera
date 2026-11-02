@@ -1,0 +1,134 @@
+{#
+default_version = "Wikifonia"
+
+[attributes]
+title = "Who Cares"
+style = "Jazz"
+composer = "George Gershwin"
+piece = "Jazz"
+typesetter = "OpenBook contributors (MusicXML import)"
+completion = "3"
+uuid = "d01cde46-3c35-5e10-b4e9-f20ae49a1644"
+location = "Jazz_LTD:386, StandardsBook:520"
+copyright = "1931, 1952 WB Music Corp. (Renewed) All Rights Reserved. Used by Permission"
+
+[versions.Wikifonia]
+doChords = true
+doVoice = true
+doLyrics = false
+doLyricsmore = false
+doLyricsmoremore = false
+doChordBars = false
+doGuitar = false
+doExtra = false
+doPrep = false
+doOwn = false
+#}
+{% if part == "Vars" %}
+{% endif %}
+{% if part == "Doc" %}
+	DONE:
+	- imported melody and chord changes from real_books_archive.gi/Wikifonia.tar.xz: Wikifonia/George Gershwin, Ira Gershwin - Who Cares.mxl.
+	- source revision: http://wikifonia.org/node/18671/revisions/24706/view.
+	- PDF reference: real_books_archive.gi/The Standards Real Book.pdf, PDF page 520.
+	- retained the original copyright notice where printed; the underlying music is not relicensed.
+	- retained written measures, pickups, repeats and endings; lyrics omitted.
+	- tempo is an editorial practice suggestion.
+	TODO:
+	- proofread the music against the referenced PDF and check by ear.
+{% endif %}
+{% if part == "ChordsWikifonia" %}\chordmode {
+	\startChords
+	\startSong
+
+	\myMark "A"
+	\startPart
+	s2 g2:7 |
+	\repeat volta 2 {
+	c1:7 |
+	g1:aug |
+	c1:aug | \myEndLine
+	s2. e4:7 |
+	f1:aug |
+	s2. a4:7 |
+	f1:m | \myEndLine
+	s1 |
+	c2 d4:m e4:m |
+	s4 c2.:dim7 |
+	d2.:m7 e4:m | \myEndLine
+	s2 g2:7 |
+	c2 g4:7 a4:m7 |
+	s4 e2:7 a4:m |
+	aes1:7 | \myEndLine
+	d2:aug g2:7 |
+	c1:7 |
+	s4 g2.:aug |
+	c1:aug | \myEndLine
+	s1 |
+	a1:m |
+	s1 |
+	d1:7 | \myEndLine
+	s2. aes4:7 |
+	c1 |
+	s2 c2:dim7 |
+	d2.:m7 e4:m | \myEndLine
+	s2 a2:7 |
+	d1:m |
+	s2 g2:7 |
+	c1 | \myEndLine
+	s2 g2:7 |
+	}
+	c1 |
+	s1 |
+	\endBar
+	\endPart
+
+	\endSong
+	\endChords
+}
+{% endif %}
+{% if part == "VoiceWikifonia" %}\absolute {
+	\tempo "Moderato" 4 = 120
+	\time 2/2
+	\key c \major
+
+	r2 g'2 |
+	\repeat volta 2 {
+	b'1 |
+	r4 b'2 a'4 |
+	c''1 |
+	r4 c''2 b'4 |
+	f'1 |
+	r4 f'2 e'4 |
+	g'1 ~ |
+	g'2 r4 f'4 |
+	e'2 f'4 g'4 ~ |
+	g'4 b'2 a'4 |
+	g'2. g'4 ~ |
+	g'1 |
+	e'2 f'4 g'4 ~ |
+	g'4 d''2 c''4 |
+	es''2 es''2 |
+	es''2 g'2 |
+	b'1 |
+	r4 b'2 a'4 |
+	c''1 |
+	r4 c''2 b'4 |
+	d''4 r4 d''2 ~ |
+	d''4 d''2 c''4 |
+	e''1 |
+	r4 c''4 d''4 dis''4 |
+	e''2. c''4 ~ |
+	c''2 a'2 |
+	g'1 ~ |
+	g'2 a'2 |
+	c''2. g'4 ~ |
+	g'2 e'2 |
+	c'1 ~ |
+	c'4 r4 g'2 |
+	}
+	c'1 ~ |
+	c'2 ~ c'4 r4 |
+	\endBar
+}
+{% endif %}

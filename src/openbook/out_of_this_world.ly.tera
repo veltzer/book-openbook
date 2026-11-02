@@ -1,0 +1,207 @@
+{#
+default_version = "Wikifonia"
+
+[attributes]
+title = "Out of This World"
+style = "Jazz"
+composer = "Harold Arlen"
+piece = "Jazz"
+typesetter = "OpenBook contributors (MusicXML import)"
+completion = "3"
+uuid = "7a2c2676-00df-543d-8042-5b5c47d0777b"
+location = "Real_Book_3:231, New_Real_1:255"
+copyright = "1943, 1987 Harwin Music Co., © ®Renewed 1971 Harwin Music Co., International Copynght Secured. All Rights Reserved. Used By"
+copyrightextra = "Permission."
+
+[versions.Wikifonia]
+doChords = true
+doVoice = true
+doLyrics = false
+doLyricsmore = false
+doLyricsmoremore = false
+doChordBars = false
+doGuitar = false
+doExtra = false
+doPrep = false
+doOwn = false
+#}
+{% if part == "Vars" %}
+{% endif %}
+{% if part == "Doc" %}
+	DONE:
+	- imported melody and chord changes from real_books_archive.gi/Wikifonia.tar.xz: Wikifonia/Harold Arlen, Johnny Mercer - Out of This World.mxl.
+	- source revision: http://wikifonia.org/node/11376/revisions/15335/view.
+	- PDF reference: real_books_archive.gi/New Real Book 1.pdf, PDF page 261.
+	- retained the original copyright notice where printed; the underlying music is not relicensed.
+	- retained written measures, pickups, repeats and endings; lyrics omitted.
+	- tempo is an editorial practice suggestion.
+	TODO:
+	- proofread the music against the referenced PDF and check by ear.
+{% endif %}
+{% if part == "ChordsWikifonia" %}\chordmode {
+	\startChords
+	\startSong
+
+	\myMark "A"
+	\startPart
+	s1 |
+	bes1:m |
+	ges1:maj7 |
+	ees1:7 | \myEndLine
+	ges1:maj7 |
+	bes1:m |
+	ges1:maj7 |
+	bes1:m7 | \myEndLine
+	ees1:9 |
+	ges1:maj7 |
+	ees1:m6 |
+	b1:maj7 | \myEndLine
+	aes1:7 |
+	ees1:6 |
+	e1:dim |
+	f1:m7 | \myEndLine
+	bes1:aug |
+	bes1:m |
+	ges1:maj7 |
+	ees1:7 | \myEndLine
+	ges1:maj7 |
+	bes1:m |
+	ges1:maj7 |
+	bes1:m | \myEndLine
+	ees1:9 |
+	ges1:maj7 |
+	ees1:m6 |
+	b1:maj7 | \myEndLine
+	aes1:7 |
+	ees1:6 |
+	e1:dim |
+	f1:m7 | \myEndLine
+	bes1:9 |
+	ees1 |
+	s1 |
+	s1 | \myEndLine
+	s2 aes4:7 g4:7 |
+	c1:m |
+	s1 |
+	s1 | \myEndLine
+	s1 |
+	s1 |
+	c1:dim |
+	aes1:9 | \myEndLine
+	g1:7.9- |
+	c1:m7 |
+	aes1:maj7 |
+	c1:m6 | \myEndLine
+	aes1:7 |
+	c1:m |
+	aes1:7 |
+	g1:9 | \myEndLine
+	s1 |
+	c1:9 |
+	f2.:7 bes4:7 |
+	bes1:m | \myEndLine
+	ges1:maj7 |
+	ees1:7 |
+	ges1:maj7 |
+	bes1:m | \myEndLine
+	ges1:maj7 |
+	bes1:m7 |
+	ees1:9 |
+	ges1:maj7 | \myEndLine
+	s2 ees2:m6 |
+	b1:maj7 |
+	aes1:dim |
+	ees1:6 | \myEndLine
+	e1:dim |
+	s1 |
+	s1 |
+	ees1 | \myEndLine
+	s1 |
+	\endBar
+	\endPart
+
+	\endSong
+	\endChords
+}
+{% endif %}
+{% if part == "VoiceWikifonia" %}\absolute {
+	\tempo "Moderato" 4 = 120
+	\time 2/2
+	\key es \major
+
+	r2 r4 bes'4 |
+	des''1 ~ |
+	des''2 \times 2/3 { c''4 des''4 c''4 } |
+	bes'1 ~ |
+	bes'2 bes'4 r4 |
+	des''1 ~ |
+	des''2 \times 2/3 { c''4 des''4 c''4 } |
+	bes'1 ~ |
+	bes'2 r4 es'4 |
+	bes'1 ~ |
+	bes'2 \times 2/3 { as'4 bes'4 as'4 } |
+	ges'1 ~ |
+	ges'2 r4 as'4 |
+	bes'4 bes'4 bes'4 bes'4 |
+	bes'4 bes'4 bes'4 bes'4 |
+	bes'4 ( c''2. ) ~ |
+	c''2 r4 bes'4 |
+	des''1 ~ |
+	des''2 \times 2/3 { c''4 des''4 c''4 } |
+	bes'1 ~ |
+	bes'2 r4 bes'4 |
+	es''4 es''4 es''4 es''4 |
+	es''4 es''4 \times 2/3 { des''4 es''4 des''4 } |
+	bes'1 ~ |
+	bes'2 r4 es'4 |
+	bes'4 bes'4 bes'2 |
+	bes'2 \times 2/3 { as'4 bes'4 as'4 } |
+	ges'1 ~ |
+	ges'2 r4 as'4 |
+	bes'4 bes'4 bes'4 bes'4 |
+	bes'4 bes'4 bes'4 bes'4 |
+	bes'4 ( c''2. ) ~ |
+	c''2 d''2 |
+	d''4 ( es''2. ) ~ |
+	es''1 ~ |
+	es''2 r2 |
+	r2 es'4 f'4 |
+	g'2 g'4 g'4 |
+	g'2 a'4 b'4 |
+	b'4 a'2. ~ |
+	a'2 es'4 f'4 |
+	g'2 g'4 g'4 |
+	a'2 b'4 c''4 |
+	d''1 ~ |
+	d''2 c''4 d''4 |
+	es''2 es''4 es''4 |
+	es''4. c''8 d''4 c''4 |
+	d''2 d''2 ~ |
+	d''2 f''4 es''4 |
+	d''2 d''2 ~ |
+	d''2 f''4 d''4 |
+	d''1 ~ |
+	d''1 ~ |
+	d''2 r2 |
+	r2 r4 bes'4 |
+	des''1 ~ |
+	des''2 \times 2/3 { c''4 des''4 c''4 } |
+	bes'1 ~ |
+	bes'2 r4 bes'4 |
+	des''1 ~ |
+	des''2 \times 2/3 { c''4 des''4 c''4 } |
+	bes'1 ~ |
+	bes'2 r4 es'4 |
+	bes'4 bes'4 bes'2 ~ |
+	bes'2 \times 2/3 { as'4 bes'4 as'4 } |
+	ges'1 ~ |
+	ges'2 r4 as'4 |
+	bes'4 bes'4 bes'4 bes'4 |
+	bes'4 bes'4 bes'4 bes'4 |
+	bes'4 ( c''2. ) ~ |
+	c''2 d''2 |
+	d''4 ( es''2. ) ~ - "" |
+	es''2. r4 |
+	\endBar
+}
+{% endif %}

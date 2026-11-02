@@ -1,0 +1,125 @@
+{#
+default_version = "Wikifonia"
+
+[attributes]
+title = "In A Mellow Tone"
+style = "Jazz"
+composer = "Duke Ellington"
+piece = "Jazz"
+typesetter = "OpenBook contributors (MusicXML import)"
+completion = "3"
+uuid = "4f8c2718-2580-5638-8474-d2455c14c2f0"
+location = "Real_Book_1:235, New_Real_3:180, 557_Standards:171, Colorado:110, Colorado_Cookbook:110"
+copyright = "1940, 1942 (renewed 1968) EMI Robbins Catalog, Inc. Used by Permission of CPP/Belwin, Inc., Miami, FL. International Copyright"
+copyrightextra = "Secured All Rights Reserved"
+
+[versions.Wikifonia]
+doChords = true
+doVoice = true
+doLyrics = false
+doLyricsmore = false
+doLyricsmoremore = false
+doChordBars = false
+doGuitar = false
+doExtra = false
+doPrep = false
+doOwn = false
+#}
+{% if part == "Vars" %}
+{% endif %}
+{% if part == "Doc" %}
+	DONE:
+	- imported melody and chord changes from real_books_archive.gi/Wikifonia.tar.xz: Wikifonia/Duke Ellington - In A Mellow Tone.mxl.
+	- source revision: http://wikifonia.org/node/883/revisions/17553/view.
+	- PDF reference: real_books_archive.gi/newreal3.pdf, PDF page 180.
+	- retained the original copyright notice where printed; the underlying music is not relicensed.
+	- retained written measures, pickups, repeats and endings; lyrics omitted.
+	- tempo taken from archived MusicXML.
+	TODO:
+	- proofread the music against the referenced PDF and check by ear.
+{% endif %}
+{% if part == "ChordsWikifonia" %}\chordmode {
+	\startChords
+	\startSong
+
+	\myMark "A"
+	\startPart
+	\partial 2. s2. |
+	c1:7 |
+	f1:7 |
+	bes1 | \myEndLine
+	bes1 |
+	f1:m |
+	bes1:7 |
+	ees1 | \myEndLine
+	ees1 |
+	ees1 |
+	ees2.:m aes4:7 |
+	bes1 | \myEndLine
+	g1:7 |
+	c1:7 |
+	c1:7 |
+	c1:m | \myEndLine
+	f1:7 |
+	c1:7 |
+	f1:7 |
+	bes1 | \myEndLine
+	bes1 |
+	f1:m |
+	bes1:7 |
+	ees1 | \myEndLine
+	ees1 |
+	ees1 |
+	e1:dim |
+	bes1 | \myEndLine
+	g1:7 |
+	c1:7 |
+	f1:7 |
+	bes1 | \myEndLine
+	\endBar
+	\endPart
+
+	\endSong
+	\endChords
+}
+{% endif %}
+{% if part == "VoiceWikifonia" %}\absolute {
+	\tempo "Moderato" 4 = 120
+	\time 4/4
+	\key bes \major
+
+	\partial 2. a'8 f'8 g'8 a'4 bes'8 ~ |
+	bes'1 |
+	r4 a'8 f'8 g'8 a'4 bes'8 ~ |
+	bes'1 |
+	r4 a'8 f'8 g'8 a'4 bes'8 ~ |
+	bes'1 |
+	r4 c''8 g'8 bes'8 c''4 d''8 ~ |
+	d''1 |
+	r4 c''8 g'8 bes'8 c''4 g'8 ~ |
+	g'1 |
+	r4 bes'8 c''8 ~ c''4 bes'8 d''8 ~ |
+	d''1 |
+	r4 a'8 f'8 g'8 a'4 bes'8 ~ |
+	bes'1 |
+	r4 bes'8 d''8 ~ d''4 bes'8 f'8 ~ |
+	f'1 |
+	r4 a'8 f'8 g'8 a'4 bes'8 ~ |
+	bes'1 |
+	r4 a'8 f'8 g'8 a'4 bes'8 ~ |
+	bes'1 |
+	r4 a'8 f'8 g'8 a'4 bes'8 ~ |
+	bes'1 |
+	r4 c''8 g'8 bes'8 c''4 d''8 ~ |
+	d''1 |
+	r4 cis''8 g''8 ~ g''4 cis''8 g'8 ~ |
+	g'1 |
+	r4 cis''8 g''8 ~ g''4 cis''8 g'8 ~ |
+	g'1 |
+	r4 cis''8 g''8 ~ g''4 cis''8 g'8 ~ |
+	g'1 |
+	r4 a'8 f'8 g'8 a'4 bes'8 ~ |
+	bes'1 |
+	\endBar
+}
+{% endif %}

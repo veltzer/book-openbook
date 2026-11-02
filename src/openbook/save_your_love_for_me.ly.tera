@@ -1,0 +1,152 @@
+{#
+default_version = "Wikifonia"
+
+[attributes]
+title = "Save Your Love For Me"
+style = "Jazz"
+composer = "Buddy Johnson"
+piece = "Jazz"
+typesetter = "OpenBook contributors (MusicXML import)"
+completion = "3"
+uuid = "5e2d0f42-9d52-5a8b-be70-40140abcc98e"
+location = "New_Real_1:309"
+copyright = "1972 Contemporary Music. Used By Permission."
+
+[versions.Wikifonia]
+doChords = true
+doVoice = true
+doLyrics = false
+doLyricsmore = false
+doLyricsmoremore = false
+doChordBars = false
+doGuitar = false
+doExtra = false
+doPrep = false
+doOwn = false
+#}
+{% if part == "Vars" %}
+{% endif %}
+{% if part == "Doc" %}
+	DONE:
+	- imported melody and chord changes from real_books_archive.gi/Wikifonia.tar.xz: Wikifonia/Buddy Johnson - Save Your Love For Me.mxl.
+	- source revision: http://wikifonia.org/node/20088/revisions/27688/view.
+	- PDF reference: real_books_archive.gi/New Real Book 1.pdf, PDF page 315.
+	- retained the original copyright notice where printed; the underlying music is not relicensed.
+	- retained written measures, pickups, repeats and endings; lyrics omitted.
+	- tempo is an editorial practice suggestion.
+	TODO:
+	- proofread the music against the referenced PDF and check by ear.
+{% endif %}
+{% if part == "ChordsWikifonia" %}\chordmode {
+	\startChords
+	\startSong
+
+	\myMark "A"
+	\startPart
+	\repeat volta 2 {
+	a1:m7 |
+	s1 |
+	c1:m7 |
+	f1:7 | \myEndLine
+	a1:m7 |
+	d1:7 |
+	g1:maj7 |
+	b2:m7 e2:7 | \myEndLine
+	a1:m7 |
+	s1 |
+	c1:m7 |
+	f1:7 | \myEndLine
+	a1:m7 |
+	d1:7 |
+	g2:maj7 c2:7 |
+	g1:maj7 | \myEndLine
+	c1:7 |
+	s1 |
+	g1:maj7 |
+	g1:7 | \myEndLine
+	c1:7 |
+	s1 |
+	g2:maj7 bes2:7 |
+	a2:m7 d2:7 | \myEndLine
+	a1:m7 |
+	s1 |
+	c1:m7 |
+	f1:7 | \myEndLine
+	a1:m7 |
+	d1:7 |
+	b1:7 |
+	e1:7 | \myEndLine
+	a1:m7 |
+	c1:m7 |
+	d1:7 |
+	} \alternative {
+	{
+	g1:maj7 | \myEndLine
+	b2:m7 e2:7 | \myEndLineVoltaNotLast
+	}
+	{
+	g1:maj7 |
+	s1 | \myEndLineVoltaLast
+	}
+	}
+	\endBar
+	\endPart
+
+	\endSong
+	\endChords
+}
+{% endif %}
+{% if part == "VoiceWikifonia" %}\absolute {
+	\tempo "Moderato" 4 = 120
+	\time 4/4
+	\key g \major
+
+	\repeat volta 2 {
+	b'4. e'8 g'2 ~ |
+	g'4 r4 c'8 e'8 g'8 b'8 |
+	d''4. g'8 bes'2 ~ |
+	bes'4. g'8 es'8 f'8 g'8 a'8 |
+	b'4. e'8 g'2 |
+	r8 e'8 g'8 a'8 b'8 g'8 e'8 d'8 |
+	g'1 ~ |
+	g'2 r2 |
+	b'4. e'8 g'2 ~ |
+	g'4. e'8 c'8 e'8 g'8 b'8 |
+	d''4. g'8 bes'2 ~ |
+	bes'4. g'8 es'8 f'8 g'8 a'8 |
+	b'4. e'8 g'2 |
+	r8 e'8 g'8 a'8 b'8 g'8 e'8 d'8 |
+	g'1 ~ |
+	g'2 r4 g'8 g'8 |
+	bes'8 c''8 r4 r8 bes'8 c''8 bes'8 |
+	d''4 g'8 bes'8 ~ bes'8 g'4 e'8 |
+	g'8 b'8 r4 r8 e''8 d''8 b'8 |
+	a'8 g'4 \once \omit TupletBracket \times 2/3 { g'8 e'8 ( d'8 ) } g'8 g'8 g'8 |
+	bes'4 c''8 d''8 r8 g'8 bes'8 c''8 |
+	r8 d''8 g'8 bes'8 ~ bes'4. g'8 |
+	b'8 d''8 d''8 d''8 ~ d''8 e''8 e''8 d''8 |
+	r8 e''8 e''8 d''8 ~ d''2 |
+	b'4. e'8 g'2 ~ |
+	g'4. e'8 c'8 e'8 g'8 b'8 |
+	d''4. g'8 bes'2 ~ |
+	bes'4. g'8 es'8 f'8 g'8 a'8 |
+	b'4. e'8 g'2 |
+	r8 e'8 g'8 a'8 b'8 g'8 e'8 d'8 |
+	b'1 ~ |
+	b'4 b'4 c''4 d''4 |
+	\times 2/3 { b'4 g'4 e'4 } b'4. g'16 e'16 |
+	\times 2/3 { d''4 bes'4 g'4 } d''2 ~ |
+	d''8 d''8 c''8 d''8 f''8 d''8 \once \omit TupletBracket \times 2/3 { f''8 ( d''8 ) c''8 } |
+	} \alternative {
+	{
+	d''1 ~ |
+	d''2 r2 |
+	}
+	{
+	d''1 ~ |
+	d''2 r2 |
+	}
+	}
+	\endBar
+}
+{% endif %}

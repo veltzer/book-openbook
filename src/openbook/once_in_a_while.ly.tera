@@ -1,0 +1,140 @@
+{#
+default_version = "Wikifonia"
+
+[attributes]
+title = "Once In A While"
+style = "Jazz"
+composer = "Michael Edwards"
+piece = "Jazz"
+typesetter = "OpenBook contributors (MusicXML import)"
+completion = "3"
+uuid = "cab37954-8334-5af5-a1dc-881a4bc5f5ce"
+location = "Real_Book_2:281, New_Real_2:290, 557_Standards:284, Firehouse_Jazz_Band:186, Just_Standards_Real_Book:271"
+copyright = "All Rights Reserved"
+
+[versions.Wikifonia]
+doChords = true
+doVoice = true
+doLyrics = false
+doLyricsmore = false
+doLyricsmoremore = false
+doChordBars = false
+doGuitar = false
+doExtra = false
+doPrep = false
+doOwn = false
+#}
+{% if part == "Vars" %}
+{% endif %}
+{% if part == "Doc" %}
+	DONE:
+	- imported melody and chord changes from real_books_archive.gi/Wikifonia.tar.xz: Wikifonia/Michael Edwards, Bud Green - Once In A While .mxl.
+	- source revision: http://wikifonia.org/node/3511/revisions/17554/view.
+	- PDF reference: real_books_archive.gi/newreal2.pdf, PDF page 290.
+	- retained the original copyright notice where printed; the underlying music is not relicensed.
+	- retained written measures, pickups, repeats and endings; lyrics omitted.
+	- tempo is an editorial practice suggestion.
+	TODO:
+	- proofread the music against the referenced PDF and check by ear.
+	- verify editorial chord spacing in measures 4, 7, 8, 12, 15, 24, 28, 31; the archive places successive symbols at the same offset.
+	- verify the copyright notice against the scan; no readable per-tune notice was recovered, so the archived rights notice is retained where available.
+{% endif %}
+{% if part == "ChordsWikifonia" %}\chordmode {
+	\startChords
+	\startSong
+
+	\myMark "A"
+	\startPart
+	\repeat volta 2 {
+	ees2:maj7 aes2:13 |
+	ees1:maj7 |
+	g2:m7 d2:aug7 |
+	g2:m7 c2:9 | \myEndLine
+	f2:m7 c2:7 |
+	f2:m7 bes2:7 |
+	g2:m7 c2:7 |
+	f2:m7 bes2:7 | \myEndLine
+	ees2:maj7 aes2:13 |
+	ees1:maj7 |
+	g2:m7 d2:aug7 |
+	g2:m7 c2:9 | \myEndLine
+	f2:m7 c2:7 |
+	f2:m7 bes2:7 |
+	ees2:6 aes2:m7 |
+	ees2:6 a4:m7 d4:7 | \myEndLine
+	g2:maj7 e2:m7 |
+	a4:m7 d2.:7 |
+	b2:m7 bes2:dim7 |
+	a2.:m7 d4:7 | \myEndLine
+	g2:maj7 e2:m7 |
+	a4:m7 d2.:7 |
+	g2:6 c2:7.9- |
+	f2:m7 bes2:7 | \myEndLine
+	ees2:maj7 aes2:13 |
+	ees1:maj7 |
+	g2:m7 d2:aug7 |
+	g2:m7 c2:9 | \myEndLine
+	f2:m7 c2:7 |
+	f2:m7 bes2:7 |
+	} \alternative {
+	{
+	c4:m7 f2:m7 bes4:7 | \myEndLineVoltaNotLast
+	}
+	{
+	e1 | \myEndLineVoltaLast
+	}
+	}
+	\endBar
+	\endPart
+
+	\endSong
+	\endChords
+}
+{% endif %}
+{% if part == "VoiceWikifonia" %}\absolute {
+	\tempo "Moderato" 4 = 120
+	\time 4/4
+	\key es \major
+
+	\repeat volta 2 {
+	\times 2/3 { es'4 es'4 es'4 } f'2 ~ |
+	\times 2/3 { f'4 es'4 f'4 } \times 2/3 { g'4 bes'4 c''4 } |
+	\times 2/3 { d''4 d''4 d''4 } c''4 bes'4 |
+	d''1 |
+	\times 2/3 { c''4 c''4 c''4 } bes'4 as'4 |
+	c''2 \times 2/3 { d'4 es'4 f'4 } |
+	bes'1 ~ |
+	bes'1 |
+	\times 2/3 { es'4 es'4 es'4 } f'2 ~ |
+	\times 2/3 { f'4 es'4 f'4 } \times 2/3 { g'4 bes'4 c''4 } |
+	\times 2/3 { d''4 d''4 d''4 } c''4 bes'4 |
+	d''1 |
+	\times 2/3 { c''4 c''4 c''4 } bes'4 as'4 |
+	c''2 \times 2/3 { d'4 es'4 f'4 } |
+	es'1 ~ |
+	es'2 r4 d'4 |
+	d''2 \times 2/3 { g'4 as'4 b'4 } |
+	c''4 c''2. |
+	b'2 \times 2/3 { e'4 fis'4 g'4 } |
+	as'2. d'4 |
+	d''2 \times 2/3 { g'4 a'4 b'4 } |
+	c''4 c''2 b'4 |
+	g'4 g'4 bes'4 bes'4 |
+	f'1 |
+	\times 2/3 { es'4 es'4 es'4 } f'2 ~ |
+	\times 2/3 { f'4 es'4 f'4 } \times 2/3 { g'4 bes'4 c''4 } |
+	\times 2/3 { d''4 d''4 d''4 } c''4 bes'4 |
+	d''1 |
+	\times 2/3 { c''4 c''4 c''4 } bes'4 as'4 |
+	c''2 \times 2/3 { d'4 es'4 f'4 } |
+	} \alternative {
+	{
+	es'1 |
+	}
+	{
+	es'1 |
+	}
+	}
+	\endBar
+}
+{% endif %}

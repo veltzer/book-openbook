@@ -1,0 +1,131 @@
+{#
+default_version = "Wikifonia"
+
+[attributes]
+title = "Love Is A Many Splendored Thing"
+style = "Jazz"
+composer = "Sammy Fain"
+piece = "Jazz"
+typesetter = "OpenBook contributors (MusicXML import)"
+completion = "3"
+uuid = "5d45ab97-1b08-5b70-8c75-bf0f9364b90e"
+location = "StandardsBook:276, Just_Standards_Real_Book:232"
+copyright = "1955 Twentieth Century Music Corp. Copyright Renewed and Assigned to EMI Miller Catalog Inc. All Rights Controlled by EMI Miller"
+copyrightextra = "Catalog Inc (Publishing)"
+
+[versions.Wikifonia]
+doChords = true
+doVoice = true
+doLyrics = false
+doLyricsmore = false
+doLyricsmoremore = false
+doChordBars = false
+doGuitar = false
+doExtra = false
+doPrep = false
+doOwn = false
+#}
+{% if part == "Vars" %}
+{% endif %}
+{% if part == "Doc" %}
+	DONE:
+	- imported melody and chord changes from real_books_archive.gi/Wikifonia.tar.xz: Wikifonia/Sammy Fain, Paul Francis Webster - Love Is A Many Splendored Thing.mxl.
+	- source revision: http://wikifonia.org/node/3374/revisions/22331/view.
+	- PDF reference: real_books_archive.gi/The Standards Real Book.pdf, PDF page 276.
+	- retained the original copyright notice where printed; the underlying music is not relicensed.
+	- retained written measures, pickups, repeats and endings; lyrics omitted.
+	- tempo is an editorial practice suggestion.
+	TODO:
+	- proofread the music against the referenced PDF and check by ear.
+{% endif %}
+{% if part == "ChordsWikifonia" %}\chordmode {
+	\startChords
+	\startSong
+
+	\myMark "A"
+	\startPart
+	ees1 |
+	c1:m |
+	g1:m |
+	s2 bes4:m7 ees4:7 | \myEndLine
+	aes2 aes2:maj7 |
+	aes2:7 f2:m6 |
+	c1:m |
+	s1 | \myEndLine
+	f1:m7 |
+	s1 |
+	d1:m7 |
+	g1:7 | \myEndLine
+	c2:m c2:m7 |
+	d1:7 |
+	g1 |
+	bes1:7 | \myEndLine
+	ees1 |
+	s4 c2.:m |
+	g1:m |
+	s2 bes4:m7 ees4:7 | \myEndLine
+	aes2 aes2:m7 |
+	aes2:6 aes2 |
+	g2:m7 c2:7 |
+	s2 bes2:m7 | \myEndLine
+	aes2 f2:m |
+	f2:m/b g2:aug7 |
+	ees2/c d4 d4:7 |
+	f2:m7 aes4:m aes4:dim | \myEndLine
+	ees2 c2:m |
+	f2.:m7 f4:m |
+	f4:dim ees2. |
+	s1 | \myEndLine
+	s1 |
+	s1 |
+	s1 |
+	\endBar
+	\endPart
+
+	\endSong
+	\endChords
+}
+{% endif %}
+{% if part == "VoiceWikifonia" %}\absolute {
+	\tempo "Moderato" 4 = 120
+	\time 4/4
+	\key es \major
+
+	es''1 ~ |
+	es''4 c''8 d''8 es''4 c''4 |
+	d''4. bes'8 g'2 ~ |
+	g'2 as'4 bes'4 |
+	c''4 c''4 c''4. c''8 |
+	c''4 c''4 c''4 bes'8 as'8 |
+	g'4. es'8 c'2 ~ |
+	c'2 d'4 es'4 |
+	f'4 f'4 f'4 f'4 |
+	f'4 c''2 es'4 |
+	d'4 d'4 d'4 d'4 |
+	d'4 as'2 d'4 |
+	es'4 f'4 g'4 c''4 |
+	fis'4 g'4 a'4 d''4 |
+	d''1 ~ |
+	d''1 |
+	es''1 ~ |
+	es''4 c''8 d''8 es''4 c''4 |
+	d''4. bes'8 g'2 ~ |
+	g'2 as'4 bes'4 |
+	c''4 c''4 c''4. c''8 |
+	c''4 c''4 c''4 bes'8 as'8 |
+	g'4. es'8 g'2 ~ |
+	g'2 f'4 g'4 |
+	as'4 as'4 as'4 as'4 |
+	as'4 g'8 as'8 es''4 d''4 |
+	as'4 g'4 d''4 c''4 |
+	es''2 ~ es''4 f'4 |
+	g'2 es''2 ~ |
+	es''4. es''8 d''8 es''8 c''4 |
+	d''4 es''2. ~ |
+	es''1 |
+	r1 |
+	r1 |
+	r1 |
+	\endBar
+}
+{% endif %}

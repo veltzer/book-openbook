@@ -1,0 +1,143 @@
+{#
+default_version = "Wikifonia"
+
+[attributes]
+title = "Too Marvelous For Words"
+style = "Jazz"
+composer = "Richard A Whiting"
+piece = "Jazz"
+typesetter = "OpenBook contributors (MusicXML import)"
+completion = "3"
+uuid = "b34baedc-7d45-5f40-8e20-adb6b1f37884"
+location = "Real_Book_3:328, 557_Standards:397, StandardsBook:474, Just_Standards_Real_Book:354"
+copyright = "All Rights Reserved"
+
+[versions.Wikifonia]
+doChords = true
+doVoice = true
+doLyrics = false
+doLyricsmore = false
+doLyricsmoremore = false
+doChordBars = false
+doGuitar = false
+doExtra = false
+doPrep = false
+doOwn = false
+#}
+{% if part == "Vars" %}
+{% endif %}
+{% if part == "Doc" %}
+	DONE:
+	- imported melody and chord changes from real_books_archive.gi/Wikifonia.tar.xz: Wikifonia/Richard A Whiting, Johnny Mercer - Too Marvelous For Words.mxl.
+	- source revision: http://wikifonia.org/node/4122/revisions/5472/view.
+	- PDF reference: real_books_archive.gi/The Standards Real Book.pdf, PDF page 474.
+	- retained the original copyright notice where printed; the underlying music is not relicensed.
+	- retained written measures, pickups, repeats and endings; lyrics omitted.
+	- tempo is an editorial practice suggestion.
+	TODO:
+	- proofread the music against the referenced PDF and check by ear.
+	- verify the copyright notice against the scan; no readable per-tune notice was recovered, so the archived rights notice is retained where available.
+{% endif %}
+{% if part == "ChordsWikifonia" %}\chordmode {
+	\startChords
+	\startSong
+
+	\myMark "A"
+	\startPart
+	s1 |
+	\repeat volta 2 {
+	a1:m7 |
+	d1:9 |
+	a1:m7 | \myEndLine
+	d1:9 |
+	fis4 g2. |
+	c1:9 |
+	g2 c2:7 | \myEndLine
+	fis2. e4:m7 |
+	a1:m7 |
+	d1:9 |
+	a1:m7 | \myEndLine
+	d1:9 |
+	g1 |
+	c1:9 |
+	b2:maj7 cis4:m7 fis4:9 | \myEndLine
+	b1:6 |
+	d1:m7 |
+	g2.:9 d4:m7 |
+	b2:m7.5- d2:m7/a | \myEndLine
+	d4:m7.5- g2.:aug7 |
+	c2.:maj7 g4:aug |
+	c2.:6 g4:aug |
+	c2:maj7 g2 | \myEndLine
+	a4:m7 d2.:7 |
+	a2.:m7 d4:9 |
+	a4:m7 d2.:9 |
+	fis4 g4 d2:m6 | \myEndLine
+	e2.:7 d4:dim |
+	e4:m7 e4:dim a2:m |
+	c2.:m6 g4:aug |
+	c4:m6 c4:m c4 d4:7 | \myEndLine
+	} \alternative {
+	{
+	g1 | \myEndLineVoltaNotLast
+	}
+	{
+	g1 | \myEndLineVoltaLast
+	}
+	}
+	\endBar
+	\endPart
+
+	\endSong
+	\endChords
+}
+{% endif %}
+{% if part == "VoiceWikifonia" %}\absolute {
+	\tempo "Moderato" 4 = 120
+	\time 4/4
+	\key g \major
+
+	r2 r4 e'4 |
+	\repeat volta 2 {
+	a'2. e'4 |
+	b'8. b'16 b'2 e'4 |
+	a'4 b'4 a'4 e'4 |
+	b'2. a'4 |
+	fis'4 g'8 e'8 ~ e'2 |
+	fis'4 g'8 e'8 ~ e'4. fis'8 |
+	b4 d'4 e'4 g'4 |
+	fis'8 g'8 e'2 d'4 |
+	a'2. e'4 |
+	b'8. b'16 b'2 e'4 |
+	a'4 b'4 a'4 e'4 |
+	b'2. a'4 |
+	fis'4 g'8 e'8 ~ e'2 |
+	fis'4 g'8 e'8 ~ e'4. fis'8 |
+	dis'4 fis'4 gis'4 cis''4 |
+	b'8 cis''8 b'2 b'4 |
+	d''2. a'4 |
+	c''2. b'4 |
+	d''4 d''4 d''4 a'4 |
+	c''4 c''2 g'4 |
+	b'2. g'4 |
+	a'2. g'4 |
+	b'4 a'4 g'4 fis'4 |
+	e'4 fis'2 d'4 |
+	a'2. e'4 |
+	b'8. b'16 b'2 a'4 |
+	fis'4 g'4 a'4 b'4 |
+	d''2. b'4 |
+	d''4 des''4 c''4 e'4 |
+	d''8. des''16 c''2 b'4 |
+	a'4 b'4 g'4 a'4 |
+	} \alternative {
+	{
+	g'2. d'4 |
+	}
+	{
+	g'2. r4 |
+	}
+	}
+	\endBar
+}
+{% endif %}

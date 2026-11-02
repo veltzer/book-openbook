@@ -1,0 +1,89 @@
+{#
+default_version = "Wikifonia"
+
+[attributes]
+title = "Cool Blues"
+style = "Jazz"
+composer = "Charlie Parker"
+piece = "Jazz"
+typesetter = "OpenBook contributors (MusicXML import)"
+completion = "3"
+uuid = "d59a524c-807e-5306-b55f-cd68a99bedb1"
+location = "Real_Book_2:71, 557_Standards:66"
+copyright = "All Rights Reserved"
+
+[versions.Wikifonia]
+doChords = true
+doVoice = true
+doLyrics = false
+doLyricsmore = false
+doLyricsmoremore = false
+doChordBars = false
+doGuitar = false
+doExtra = false
+doPrep = false
+doOwn = false
+#}
+{% if part == "Vars" %}
+{% endif %}
+{% if part == "Doc" %}
+	DONE:
+	- imported melody and chord changes from real_books_archive.gi/Wikifonia.tar.xz: Wikifonia/Charlie Parker - Cool Blues.mxl.
+	- source revision: http://wikifonia.org/node/150/revisions/154/view.
+	- PDF reference: real_books_archive.gi/The Real Book of Jazz Volume II.pdf, PDF page 71.
+	- retained the original copyright notice where printed; the underlying music is not relicensed.
+	- retained written measures, pickups, repeats and endings; lyrics omitted.
+	- tempo taken from archived MusicXML.
+	TODO:
+	- proofread the music against the referenced PDF and check by ear.
+	- verify the copyright notice against the scan; no readable per-tune notice was recovered, so the archived rights notice is retained where available.
+{% endif %}
+{% if part == "ChordsWikifonia" %}\chordmode {
+	\startChords
+	\startSong
+
+	\myMark "A"
+	\startPart
+	\repeat volta 2 {
+	s1*85/1024 bes1*939/1024:7 |
+	ees1:7 |
+	bes1:7 |
+	s1 | \myEndLine
+	s1*85/1024 ees1*939/1024:7 |
+	s1 |
+	bes1:7 |
+	s1*119/1024 d1*649/1024:m7 des4:m7 | \myEndLine
+	s8 c2..:m7 |
+	s32. f1*61/64:7 |
+	bes1:7 |
+	s1 | \myEndLine
+	}
+	\endBar
+	\endPart
+
+	\endSong
+	\endChords
+}
+{% endif %}
+{% if part == "VoiceWikifonia" %}\absolute {
+	\tempo "Moderato" 4 = 140
+	\time 4/4
+	\key bes \major
+
+	\repeat volta 2 {
+	\times 2/3 { f'8 g'8 f'8 } d'8 es'8 f'8 bes'8 a'8 g'8 |
+	f'8 es'8 c'8 g8 d'4 f'8 c'8 ~ |
+	c'8 r8 c'2. ~ |
+	c'2. r4 |
+	\times 2/3 { f'8 g'8 f'8 } des'8 es'8 f'8 bes'8 a'8 g'8 |
+	f'8 es'8 c'8 g8 d'4 f'8 c'8 ~ |
+	c'8 r8 c'2. ~ |
+	c'2. r4 |
+	\times 2/3 { f'8 g'8 f'8 } d'8 es'8 f'8 bes'8 a'8 g'8 |
+	f'8 es'8 c'8 g8 d'4 f'8 c'8 ~ |
+	c'8 r8 c'2. ~ |
+	c'2. r4 |
+	}
+	\endBar
+}
+{% endif %}

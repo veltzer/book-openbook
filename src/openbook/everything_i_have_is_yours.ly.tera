@@ -1,0 +1,126 @@
+{#
+default_version = "Wikifonia"
+
+[attributes]
+title = "Everything I Have Is Yours"
+style = "Jazz"
+composer = "Burton Lane"
+piece = "Jazz"
+typesetter = "OpenBook contributors (MusicXML import)"
+completion = "3"
+uuid = "934d3564-13ee-575b-846f-1252cf63d572"
+location = "Real_Book_2:96, New_Real_3:128, 557_Standards:97"
+copyright = "1933 (renewed 1961) Metro-Goldyn-Mayer Inc. c/o EMI Robbins Catalog. Inc. Used by Permission of CPP/Belwin, Inc.. Miami. FL. All"
+copyrightextra = "Rights Reserved"
+
+[versions.Wikifonia]
+doChords = true
+doVoice = true
+doLyrics = false
+doLyricsmore = false
+doLyricsmoremore = false
+doChordBars = false
+doGuitar = false
+doExtra = false
+doPrep = false
+doOwn = false
+#}
+{% if part == "Vars" %}
+{% endif %}
+{% if part == "Doc" %}
+	DONE:
+	- imported melody and chord changes from real_books_archive.gi/Wikifonia.tar.xz: Wikifonia/Burton Lane, Harold Adamson - Everything I Have Is Yours.mxl.
+	- source revision: http://wikifonia.org/node/3513/revisions/4535/view.
+	- PDF reference: real_books_archive.gi/newreal3.pdf, PDF page 128.
+	- retained the original copyright notice where printed; the underlying music is not relicensed.
+	- retained written measures, pickups, repeats and endings; lyrics omitted.
+	- tempo is an editorial practice suggestion.
+	TODO:
+	- proofread the music against the referenced PDF and check by ear.
+	- verify editorial chord spacing in measures 16; the archive places successive symbols at the same offset.
+{% endif %}
+{% if part == "ChordsWikifonia" %}\chordmode {
+	\startChords
+	\startSong
+
+	\myMark "A"
+	\startPart
+	c1:maj7 |
+	ees2.:m7 aes4:7 |
+	d2:m7 g2:7 |
+	d2:m7 g2:aug7 | \myEndLine
+	c1:maj7 |
+	ees2.:m7 aes4:7 |
+	d2:m7 g2:7 |
+	b2:m7 e2:aug7 | \myEndLine
+	a1:m |
+	f1:m6 |
+	c2:maj7 a2:m7 |
+	d1:9 | \myEndLine
+	e1:m7 |
+	a1:7 |
+	a2.:m7 d4:7 |
+	d2:m7 g2:aug7 | \myEndLine
+	c1:maj7 |
+	ees2.:m7 aes4:7 |
+	d2:m7 g2:7 |
+	d2:m7 g2:aug7 | \myEndLine
+	c1:maj7 |
+	g2.:m7 c4:7.9- |
+	f1:maj7 |
+	b2:m7 e2:aug7 | \myEndLine
+	a1:m |
+	f1:m6 |
+	c1:6/e |
+	d1:7 | \myEndLine
+	c1:maj7 |
+	ees2.:m7 aes4:7 |
+	d2:m7 g2:7 |
+	c1 | \myEndLine
+	\endBar
+	\endPart
+
+	\endSong
+	\endChords
+}
+{% endif %}
+{% if part == "VoiceWikifonia" %}\absolute {
+	\tempo "Moderato" 4 = 120
+	\time 4/4
+	\key c \major
+
+	r4 g'8 a'8 b'8 d''8 c''8 b'8 |
+	bes'2. bes'4 |
+	g'4 g'8 g'8 ~ g'2 ~ |
+	g'2 r2 |
+	r4 g'8 a'8 b'8 d''8 c''8 b'8 |
+	bes'2. bes'4 |
+	g'4 g'8 g'8 ~ g'2 ~ |
+	g'2 r2 |
+	r4 c'8. d'16 e'8. d'16 c'8. d'16 |
+	e'4 c'8 c'8 ~ c'2 |
+	r4 c'8. d'16 e'8. d'16 c'8. d'16 |
+	e'1 |
+	r4 e'8. fis'16 g'8. fis'16 e'8. fis'16 |
+	g'4 e'8 e'8 ~ e'4 g'8 b'8 |
+	d''2. d'4 |
+	g'1 |
+	r4 g'8 a'8 b'8 d''8 c''8 b'8 |
+	bes'2. bes'4 |
+	g'4 g'8 g'8 ~ g'2 ~ |
+	g'2 r2 |
+	r4 g'8 a'8 b'8 d''8 c''8 b'8 |
+	bes'2. c''4 |
+	a'1 ~ |
+	a'2 r2 |
+	r4 c'8. d'16 e'8. d'16 c'8. d'16 |
+	e'4 c'8 c'8 ~ c'2 |
+	r4 c'8. d'16 e'8. g'16 a'8. c''16 |
+	d''1 |
+	r4 g'8 a'8 b'8 d''8 c''8 b'8 |
+	bes'2. bes'4 |
+	g'2 g'2 |
+	c''1 |
+	\endBar
+}
+{% endif %}

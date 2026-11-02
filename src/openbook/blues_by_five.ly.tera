@@ -1,0 +1,91 @@
+{#
+default_version = "Wikifonia"
+
+[attributes]
+title = "Blues By Five"
+style = "Jazz"
+composer = "Red Garland"
+piece = "Jazz"
+typesetter = "OpenBook contributors (MusicXML import)"
+completion = "3"
+uuid = "df255879-22f5-5006-b82d-2a2d77aaf980"
+location = "Real_Book_2:40"
+copyright = "Creative Commons BY"
+
+[versions.Wikifonia]
+doChords = true
+doVoice = true
+doLyrics = false
+doLyricsmore = false
+doLyricsmoremore = false
+doChordBars = false
+doGuitar = false
+doExtra = false
+doPrep = false
+doOwn = false
+#}
+{% if part == "Vars" %}
+{% endif %}
+{% if part == "Doc" %}
+	DONE:
+	- imported melody and chord changes from real_books_archive.gi/Wikifonia.tar.xz: Wikifonia/Red Garland - Blues By Five.mxl.
+	- source revision: http://www.wikifonia.org/node/2227/revisions/2828/view.
+	- PDF reference: real_books_archive.gi/The Real Book of Jazz Volume II.pdf, PDF page 40.
+	- retained the original copyright notice where printed; the underlying music is not relicensed.
+	- retained written measures, pickups, repeats and endings; lyrics omitted.
+	- tempo is an editorial practice suggestion.
+	TODO:
+	- proofread the music against the referenced PDF and check by ear.
+	- verify the copyright notice against the scan; no readable per-tune notice was recovered, so the archived rights notice is retained where available.
+{% endif %}
+{% if part == "ChordsWikifonia" %}\chordmode {
+	\startChords
+	\startSong
+
+	\myMark "A"
+	\startPart
+	\partial 4 s4 |
+	\repeat volta 2 {
+	bes1:7 |
+	s1 |
+	s1 | \myEndLine
+	s1 |
+	ees1:7 |
+	s1 |
+	bes1:7 | \myEndLine
+	s1 |
+	f1:7 |
+	s1 |
+	bes1:7 | \myEndLine
+	f1:7 |
+	}
+	\endBar
+	\endPart
+
+	\endSong
+	\endChords
+}
+{% endif %}
+{% if part == "VoiceWikifonia" %}\absolute {
+	\tempo "Moderato" 4 = 120
+	\time 4/4
+	\key bes \major
+
+	\partial 4 f'4 |
+	\repeat volta 2 {
+	as'4. bes'8 ~ bes'4 f'4 |
+	as'4. bes'8 ~ bes'4 f'4 |
+	as'8 bes'8 as'4 bes'4 as'4 |
+	r2 r4 bes'4 |
+	des''4. es''8 ~ es''4 bes'4 |
+	des''4. es''8 ~ es''4 f'4 |
+	as'8 bes'8 as'4 bes'4 as'8 f'8 |
+	r2 r4 bes'4 |
+	des''4. bes'8 ~ bes'4 des''4 ~ |
+	des''8 bes'4. as'8 f'8 a'8 bes'8 |
+	R1 |
+	R1 |
+	}
+	\endBar
+}
+{% endif %}

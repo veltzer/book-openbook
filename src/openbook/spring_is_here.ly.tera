@@ -1,0 +1,143 @@
+{#
+default_version = "Wikifonia"
+
+[attributes]
+title = "Spring Is Here"
+style = "Jazz"
+composer = "Richard Rodgers"
+piece = "Jazz"
+typesetter = "OpenBook contributors (MusicXML import)"
+completion = "3"
+uuid = "30b7ae33-886e-5feb-8108-a26ab1b037c3"
+location = "Real_Book_1:419, New_Real_3:359, 557_Standards:344"
+copyright = "1938 (renewed 1966) EMI Robbins Catalog, Inc. Used by Permission of CPP/Belwin, Inc., Miami, FL. All Rights Reserved"
+
+[versions.Wikifonia]
+doChords = true
+doVoice = true
+doLyrics = false
+doLyricsmore = false
+doLyricsmoremore = false
+doChordBars = false
+doGuitar = false
+doExtra = false
+doPrep = false
+doOwn = false
+#}
+{% if part == "Vars" %}
+{% endif %}
+{% if part == "Doc" %}
+	DONE:
+	- imported melody and chord changes from real_books_archive.gi/Wikifonia.tar.xz: Wikifonia/Richard Rodgers, Lorenz Hart - Spring Is Here.mxl.
+	- source revision: http://wikifonia.org/node/9519/revisions/13009/view.
+	- PDF reference: real_books_archive.gi/newreal3.pdf, PDF page 359.
+	- retained the original copyright notice where printed; the underlying music is not relicensed.
+	- retained written measures, pickups, repeats and endings; lyrics omitted.
+	- tempo is an editorial practice suggestion.
+	TODO:
+	- proofread the music against the referenced PDF and check by ear.
+	- verify editorial chord spacing in measures 33; the archive places successive symbols at the same offset.
+{% endif %}
+{% if part == "ChordsWikifonia" %}\chordmode {
+	\startChords
+	\startSong
+
+	\myMark "A"
+	\startPart
+	\repeat volta 2 {
+	aes2.:dim aes4 |
+	s1 |
+	aes1:dim |
+	aes1:6 | \myEndLine
+	aes1:7.9- |
+	ees1:9 |
+	s1 |
+	ees1:9 | \myEndLine
+	aes1 |
+	s1 |
+	des1 |
+	aes1 | \myEndLine
+	f1:m |
+	s1 |
+	bes1:7 |
+	ees1:7 | \myEndLine
+	aes2.:dim aes4 |
+	s1 |
+	aes1:dim |
+	aes1:6 | \myEndLine
+	aes1:7.9- |
+	ees1:9 |
+	aes1:7.9- |
+	ees1:9 | \myEndLine
+	aes1 |
+	s1 |
+	bes1:7 |
+	ees1:7 | \myEndLine
+	c2.:m f4:m |
+	bes2.:m7 ees4:7 |
+	} \alternative {
+	{
+	aes1 |
+	ees1:7 | \myEndLineVoltaNotLast
+	}
+	{
+	aes4 aes2:7 des4 | \myEndLineVoltaLast
+	}
+	}
+	aes1 |
+	\endBar
+	\endPart
+
+	\endSong
+	\endChords
+}
+{% endif %}
+{% if part == "VoiceWikifonia" %}\absolute {
+	\tempo "Moderato" 4 = 120
+	\time 2/2
+	\key as \major
+
+	\repeat volta 2 {
+	g'2. as'4 |
+	f'1 |
+	g'4 \once \omit TupletBracket \times 2/3 { g'8 g'8 g'8 } g'4 as'4 |
+	f'4 f'2. |
+	es'2. f'4 |
+	des'1 |
+	es'4 - "Ab79" \once \omit TupletBracket \times 2/3 { es'8 es'8 es'8 } es'4 f'4 |
+	des'4 des'2. |
+	c'4 des'4 es'4 f'4 |
+	g'4 as'4 bes'4 c''4 |
+	f'1 |
+	as'1 |
+	c'4 d'4 e'4 f'4 |
+	g'4 as'4 bes'4 c''4 |
+	d''1 |
+	es''1 |
+	g'2. as'4 |
+	f'1 |
+	g'4 \once \omit TupletBracket \times 2/3 { g'8 g'8 g'8 } g'4 as'4 |
+	f'4 f'2. |
+	es'2. f'4 |
+	des'1 |
+	es'4 \once \omit TupletBracket \times 2/3 { es'8 es'8 es'8 } es'4 f'4 |
+	des'4 des'2. |
+	c'4 des'4 es'4 f'4 |
+	g'4 as'4 bes'4 c''4 |
+	d''1 |
+	es''1 |
+	es''2. as'4 |
+	c''2. bes'4 |
+	} \alternative {
+	{
+	as'1 |
+	R1 |
+	}
+	{
+	as'1 ~ |
+	}
+	}
+	as'2 ~ as'4 r4 |
+	\endBar
+}
+{% endif %}

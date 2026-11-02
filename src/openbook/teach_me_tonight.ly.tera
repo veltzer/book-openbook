@@ -1,0 +1,146 @@
+{#
+default_version = "Wikifonia"
+
+[attributes]
+title = "Teach Me Tonight"
+style = "Jazz"
+composer = "Gene DePaul"
+piece = "Jazz"
+typesetter = "OpenBook contributors (MusicXML import)"
+completion = "3"
+uuid = "f31f6e11-7cfc-573b-9ce1-2664d6d17bcb"
+location = "Real_Book_3:302, 557_Standards:369, Colorado:236, Colorado_Cookbook:236, StandardsBook:343, Just_Standards_Real_Book:342"
+copyright = "1987, 1988 WB Music Corp., Rutland Road Music, Dwarf Village Music and Colgems-EMI Music Inc.. All Rights on behalf of Rutland"
+copyrightextra = "Road Music Administered by"
+
+[versions.Wikifonia]
+doChords = true
+doVoice = true
+doLyrics = false
+doLyricsmore = false
+doLyricsmoremore = false
+doChordBars = false
+doGuitar = false
+doExtra = false
+doPrep = false
+doOwn = false
+#}
+{% if part == "Vars" %}
+{% endif %}
+{% if part == "Doc" %}
+	DONE:
+	- imported melody and chord changes from real_books_archive.gi/Wikifonia.tar.xz: Wikifonia/Gene DePaul, Sammy Cahn - Teach Me Tonight.mxl.
+	- source revision: http://wikifonia.org/node/3821/revisions/13811/view.
+	- PDF reference: real_books_archive.gi/The Standards Real Book.pdf, PDF page 343.
+	- retained the original copyright notice where printed; the underlying music is not relicensed.
+	- retained written measures, pickups, repeats and endings; lyrics omitted.
+	- tempo is an editorial practice suggestion.
+	TODO:
+	- proofread the music against the referenced PDF and check by ear.
+	- verify editorial chord spacing in measures 16, 32, 34; the archive places successive symbols at the same offset.
+{% endif %}
+{% if part == "ChordsWikifonia" %}\chordmode {
+	\startChords
+	\startSong
+
+	\myMark "A"
+	\startPart
+	s4 f4:m7 bes2:7 |
+	\repeat volta 2 {
+	ees1:maj7 |
+	g2:m7 c2:7 |
+	f4:m7 bes2.:7 | \myEndLine
+	g2:m7.5- c2:7 |
+	f1:m |
+	bes1:7 |
+	ees1 | \myEndLine
+	f2:m7 bes2:7 |
+	ees4 ees2.:6 |
+	g2:m7 c2:7 |
+	f4:m7 bes2.:7 | \myEndLine
+	g2:m7 c2:7 |
+	f1:m |
+	bes1:7 |
+	ees2:6/g f2:m7 | \myEndLine
+	ees2 g4:m7 ges4:m7 |
+	f2:m7 bes2:7 |
+	ees4:maj7 e2.:dim7 |
+	f2:m7 bes2:7 | \myEndLine
+	ees1 |
+	a2:m7.5- d2:7 |
+	g2.:m7 c4:7 |
+	c2:m7 f2:9 | \myEndLine
+	bes4:7 f4:m7 bes2:7 |
+	ees1 |
+	g2:m7 c2:7 |
+	f4:m7 bes2.:7 | \myEndLine
+	g2:m7 c2:7 |
+	f1:m |
+	bes1:7 |
+	} \alternative {
+	{
+	ees2 ges2:dim7 | \myEndLine
+	bes4:7 f4:m7 bes2:7 | \myEndLineVoltaNotLast
+	}
+	{
+	ees2 aes2:7 | \myEndLineVoltaLast
+	}
+	}
+	ees1 |
+	\endBar
+	\endPart
+
+	\endSong
+	\endChords
+}
+{% endif %}
+{% if part == "VoiceWikifonia" %}\absolute {
+	\tempo "Moderato" 4 = 120
+	\time 4/4
+	\key es \major
+
+	r4 c''8 c''8 c''8 c''8 c''8 c''8 |
+	\repeat volta 2 {
+	c''8 bes'8 bes'2. ~ |
+	bes'4 c''8 c''8 c''8 c''8 c''8 c''8 |
+	c''8 bes'8 bes'2. |
+	r4 des''8 es''8 c''8 des''8 bes'8 c''8 |
+	as'8 g'8 f'2. |
+	bes'4 f'2 as'4 |
+	g'1 |
+	r4 c''8 c''8 c''8 c''8 c''8 c''8 |
+	c''8 bes'8 bes'2. ~ |
+	bes'4 c''8 c''8 c''8 c''8 c''8 c''8 |
+	c''8 bes'8 bes'2. |
+	r4 des''8 es''8 c''8 des''8 bes'8 c''8 |
+	as'8 g'8 f'2. |
+	bes'4 f'2 g'4 |
+	es'1 |
+	r4 es'4 f'4 e'4 |
+	es'4 es'4 c''4. bes'8 |
+	g'4 g'2 g'8 bes'8 |
+	as'4 as'4 d''4. c''8 |
+	bes'2 ~ bes'8 bes'8 c''8 bes'8 |
+	a'4. a'8 es''4. d''8 |
+	bes'4 bes'2 bes'4 |
+	d''8 es''8 d''8 es''8 c''4. d''8 |
+	bes'4 c''8 c''8 c''8 c''8 c''8 c''8 |
+	c''8 bes'8 bes'2. ~ |
+	bes'4 c''8 c''8 c''8 c''8 c''8 c''8 |
+	c''8 bes'8 bes'2. |
+	r4 des''8 es''8 c''8 des''8 bes'8 c''8 |
+	as'8 g'8 f'2. |
+	bes'4 f'2 g'4 |
+	} \alternative {
+	{
+	es'1 |
+	r4 c''8 c''8 c''8 c''8 c''8 c''8 |
+	}
+	{
+	es'1 ~ |
+	}
+	}
+	es'2. r4 |
+	\endBar
+}
+{% endif %}

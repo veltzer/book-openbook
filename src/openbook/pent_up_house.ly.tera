@@ -1,0 +1,111 @@
+{#
+default_version = "Wikifonia"
+
+[attributes]
+title = "Pent-Up House"
+style = "Jazz"
+composer = "Sonny Rollins"
+piece = "Jazz"
+typesetter = "OpenBook contributors (MusicXML import)"
+completion = "3"
+uuid = "537635e7-85a3-5706-9dcd-441174ff06bc"
+location = "Real_Book_1:359, New_Real_1:265, 557_Standards:316, Colorado:177, Colorado_Cookbook:177"
+copyright = "All Rights Reserved"
+
+[versions.Wikifonia]
+doChords = true
+doVoice = true
+doLyrics = false
+doLyricsmore = false
+doLyricsmoremore = false
+doChordBars = false
+doGuitar = false
+doExtra = false
+doPrep = false
+doOwn = false
+#}
+{% if part == "Vars" %}
+{% endif %}
+{% if part == "Doc" %}
+	DONE:
+	- imported melody and chord changes from real_books_archive.gi/Wikifonia.tar.xz: Wikifonia/Sonny Rollins - Pent Up House.mxl.
+	- source revision: http://wikifonia.org/node/245/revisions/25574/view.
+	- PDF reference: real_books_archive.gi/New Real Book 1.pdf, PDF page 271.
+	- retained the original copyright notice where printed; the underlying music is not relicensed.
+	- retained written measures, pickups, repeats and endings; lyrics omitted.
+	- tempo is an editorial practice suggestion.
+	TODO:
+	- proofread the music against the referenced PDF and check by ear.
+	- verify the copyright notice against the scan; no readable per-tune notice was recovered, so the archived rights notice is retained where available.
+{% endif %}
+{% if part == "ChordsWikifonia" %}\chordmode {
+	\startChords
+	\startSong
+
+	\myMark "A"
+	\startPart
+	s1 |
+	\repeat volta 2 {
+	a1:m7 |
+	d1:7 |
+	g1 | \myEndLine
+	s1 |
+	a1:m7 |
+	d1:7 |
+	g1 | \myEndLine
+	s1 |
+	d1:m7 |
+	g1:7 |
+	c1:m7 | \myEndLine
+	f1:7 |
+	a1:m7 |
+	d1:7 |
+	g1 | \myEndLine
+	} \alternative {
+	{
+	s1 | \myEndLineVoltaNotLast
+	}
+	{
+	s1 | \myEndLineVoltaLast
+	}
+	}
+	\endBar
+	\endPart
+
+	\endSong
+	\endChords
+}
+{% endif %}
+{% if part == "VoiceWikifonia" %}\absolute {
+	\tempo "Moderato" 4 = 120
+	\time 4/4
+	\key g \major
+
+	r8 d'8 e'8 fis'8 g'8 a'8 b'8 c''8 |
+	\repeat volta 2 {
+	d''8 b'8 r8 d''8 bes'4 -. d''8 b'8 |
+	r8 d''8 bes'4 -. d''8 bes'4 -. d''8 |
+	a'2 bes'4. a'8 |
+	r8 d'8 e'8 fis'8 g'8 a'8 b'8 c''8 |
+	d''8 b'8 r8 d''8 bes'4 -. d''8 b'8 |
+	r8 d''8 bes'4 -. d''8 bes'4 -. d''8 |
+	a'2 bes'4. a'8 |
+	r8 d'8 a'8 fis'8 g'8 a'8 b'8 d''8 |
+	g''8 e''8 r8 g''8 es''4 -. g''8 e''8 |
+	r8 g''8 es''4 -. g''8 es''4 -. g''8 |
+	d''2. r4 |
+	f''8 d''8 r8 f''8 des''2 |
+	d''8 b'8 r8 d''8 bes'4 -. d''8 b'8 |
+	r8 d''8 bes'4 -. d''8 bes'4 -. d''8 |
+	a'2. r4 |
+	} \alternative {
+	{
+	r8 d'8 e'8 fis'8 g'8 a'8 b'8 c''8 |
+	}
+	{
+	R1 |
+	}
+	}
+	\endBar
+}
+{% endif %}

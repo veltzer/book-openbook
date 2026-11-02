@@ -1,0 +1,143 @@
+{#
+default_version = "Wikifonia"
+
+[attributes]
+title = "Blue Gardenia"
+style = "Jazz"
+composer = "Lester Lee"
+piece = "Jazz"
+typesetter = "OpenBook contributors (MusicXML import)"
+completion = "3"
+uuid = "d6ae0a29-3353-5d3c-ba02-d5467f0bf684"
+location = "StandardsBook:70"
+copyright = "All Rights Reserved"
+
+[versions.Wikifonia]
+doChords = true
+doVoice = true
+doLyrics = false
+doLyricsmore = false
+doLyricsmoremore = false
+doChordBars = false
+doGuitar = false
+doExtra = false
+doPrep = false
+doOwn = false
+#}
+{% if part == "Vars" %}
+{% endif %}
+{% if part == "Doc" %}
+	DONE:
+	- imported melody and chord changes from real_books_archive.gi/Wikifonia.tar.xz: Wikifonia/Lester Lee, Bob Russell - Blue Gardenia.mxl.
+	- source revision: http://wikifonia.org/node/21637/revisions/28624/view.
+	- PDF reference: real_books_archive.gi/The Standards Real Book.pdf, PDF page 70.
+	- retained the original copyright notice where printed; the underlying music is not relicensed.
+	- retained written measures, pickups, repeats and endings; lyrics omitted.
+	- tempo is an editorial practice suggestion.
+	TODO:
+	- proofread the music against the referenced PDF and check by ear.
+	- verify the copyright notice against the scan; no readable per-tune notice was recovered, so the archived rights notice is retained where available.
+{% endif %}
+{% if part == "ChordsWikifonia" %}\chordmode {
+	\startChords
+	\startSong
+
+	\myMark "A"
+	\startPart
+	\repeat volta 2 {
+	a1:m7 |
+	d1:7 |
+	g1:maj7 |
+	cis2:m7.5- fis2:7 | \myEndLine
+	f1:maj7 |
+	b2:m7 e2:7 |
+	a2:m7 d2:7.9- |
+	g2:maj7 e2:7.9- | \myEndLine
+	a1:m7 |
+	d1:7 |
+	g1:maj7 |
+	cis2:m7.5- fis2:7 | \myEndLine
+	f1:maj7 |
+	b2:m7 e2:7 |
+	a2:m7 d2:7.9- |
+	a2:m7 d2:7.9- | \myEndLine
+	g1:maj7 |
+	d4:7.5- d2.:7 |
+	g2:maj7 e2:m |
+	cis2:m7 fis2:7 | \myEndLine
+	b2:maj7 gis2:m7 |
+	cis4:m7 fis2.:7 |
+	b2:7 e2:7.9- |
+	e2:m7 a2:7 | \myEndLine
+	a1:m7 |
+	d1:7 |
+	g1:maj7 |
+	b2:m7.5- e2:7.9- | \myEndLine
+	a1:m7 |
+	d2:sus4.7.9 aes2:7 |
+	} \alternative {
+	{
+	g2:6 e2:m7 |
+	a2:m7 d2:7.9- | \myEndLineVoltaNotLast
+	}
+	{
+	g1:6 |
+	s1 | \myEndLineVoltaLast
+	}
+	}
+	\endBar
+	\endPart
+
+	\endSong
+	\endChords
+}
+{% endif %}
+{% if part == "VoiceWikifonia" %}\absolute {
+	\tempo "Moderato" 4 = 120
+	\time 2/2
+	\key g \major
+
+	\repeat volta 2 {
+	a'2. b'4 |
+	d''4 b'2. |
+	fis'4 g'8 a'8 fis'4 d'4 |
+	fis'1 |
+	e'4 f'8 g'8 e'4 c'4 |
+	e'1 |
+	e'4 e'4 \times 2/3 { fis'4 g'4 a'4 } |
+	b'2 d''4 b'4 |
+	a'2. b'4 |
+	d''4 b'2. |
+	fis'4 g'8 a'8 fis'4 d'4 |
+	fis'1 |
+	e'4 f'8 g'8 e'4 c'4 |
+	e'1 |
+	e'4 e'4 \times 2/3 { fis'4 g'4 a'4 } |
+	b'1 |
+	d'2 e'4 fis'8 g'8 |
+	gis'4 ( a'2. ) |
+	r4 c''4 \times 2/3 { b'4 a'4 g'4 } |
+	fis'1 |
+	fis'2 gis'4 ais'8 b'8 |
+	c''4 cis''2. |
+	cis''4 cis''4 cis''8 b'4. |
+	a'1 |
+	a'2. b'4 |
+	d''4 b'2. |
+	fis'4 g'8 a'8 fis'4 d'4 |
+	d''2. b'4 |
+	a'4 b'8 c''8 a'4 c''4 |
+	e'2 fis'2 |
+	} \alternative {
+	{
+	g'1 |
+	R1 |
+	}
+	{
+	g'1 ~ |
+	g'1 |
+	}
+	}
+	\endBar
+}
+{% endif %}

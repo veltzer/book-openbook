@@ -1,0 +1,128 @@
+{#
+default_version = "Wikifonia"
+
+[attributes]
+title = "No Me Esqueca"
+style = "Jazz"
+composer = "Joe Henderson"
+piece = "Jazz"
+typesetter = "OpenBook contributors (MusicXML import)"
+completion = "3"
+uuid = "209d10d5-f6fb-5768-beda-c6ceacd8e93c"
+location = "Real_Book_2:270, New_Real_1:241"
+copyright = "1982 Tomi Music. Used By Permission."
+
+[versions.Wikifonia]
+doChords = true
+doVoice = true
+doLyrics = false
+doLyricsmore = false
+doLyricsmoremore = false
+doChordBars = false
+doGuitar = false
+doExtra = false
+doPrep = false
+doOwn = false
+#}
+{% if part == "Vars" %}
+{% endif %}
+{% if part == "Doc" %}
+	DONE:
+	- imported melody and chord changes from real_books_archive.gi/Wikifonia.tar.xz: Wikifonia/Joe Henderson - No Me Esqueca.mxl.1.
+	- source revision: http://wikifonia.org/node/474/revisions/4828/view.
+	- PDF reference: real_books_archive.gi/New Real Book 1.pdf, PDF page 247.
+	- retained the original copyright notice where printed; the underlying music is not relicensed.
+	- retained written measures, pickups, repeats and endings; lyrics omitted.
+	- tempo is an editorial practice suggestion.
+	TODO:
+	- proofread the music against the referenced PDF and check by ear.
+{% endif %}
+{% if part == "ChordsWikifonia" %}\chordmode {
+	\startChords
+	\startSong
+
+	\myMark "A"
+	\startPart
+	s1 |
+	s1 |
+	s1 |
+	s1 | \myEndLine
+	s1 |
+	s1 |
+	s1 |
+	s1 | \myEndLine
+	s1 |
+	s1 |
+	\repeat volta 2 {
+	d1:sus4.7.13 |
+	s1 | \myEndLine
+	a1:m7 |
+	s1 |
+	f1:sus4.7.13 |
+	s1 | \myEndLine
+	c1:m7 |
+	f1:13 |
+	bes1 |
+	bes2:m7 ees2:7 | \myEndLine
+	aes1 |
+	aes2:m7 des2:7 |
+	ges1 |
+	s1 | \myEndLine
+	f1 |
+	} \alternative {
+	{
+	s1 | \myEndLineVoltaNotLast
+	}
+	{
+	s1 | \myEndLineVoltaLast
+	}
+	}
+	\endBar
+	\endPart
+
+	\endSong
+	\endChords
+}
+{% endif %}
+{% if part == "VoiceWikifonia" %}\absolute {
+	\tempo "Moderato" 4 = 120
+	\time 2/2
+	\key c \major
+
+	a'4. b''8 r8 a''4 e''8 |
+	a'8 e''8 b''4 -. a''4. e''8 |
+	a'4. b''8 r8 a''4 e''8 |
+	a'8 e''8 b''4 -. g''4. d''8 |
+	a'4. c'''8 r8 a''4 e''8 |
+	g''8 a''8 e''8 c''8 d''4. c''8 |
+	f'4. g''8 r8 f''4 d''8 |
+	bes'8 f''8 c'''4 -. bes''4. e''8 |
+	a''4. g''8 r8 g''8 r8 a''8 |
+	r4 r8 e'8 -. b'8 c''8 e'8 c'8 |
+	\repeat volta 2 {
+	fis'2 r8 g'8 a'8 b'8 |
+	b'4 a'8 b'8 r8 c''8 e'8 c'8 |
+	fis'8 g'4 a'8 ~ a'8 b'4 b'8 ~ |
+	b'8 a'8 b'8 a'8 d''8 es''8 g'8 es'8 |
+	a'2 r8 bes'8 c''8 d''8 |
+	d''4 c''8 d''8 r8 es''8 g'8 es'8 |
+	a'8 bes'4 c''8 ~ c''8 d''4 d''8 |
+	r4 r8 c''8 d''4. c''8 |
+	f'1 |
+	r8 e'8 f'8 c''8 ~ c''4. bes'8 |
+	es'2 ~ es'8 d'8 es'8 bes'8 ~ |
+	bes'2 as'4 -. f'8 des'8 ~ |
+	des'1 |
+	r4 - "Gb7(#9#11)" ^ "" a'2 ~ a'8 g'8 |
+	c'4. c'8 r8 c'8 g'4 ~ |
+	} \alternative {
+	{
+	g'4 - "E7(#5#9)" r8 e'8 -. b'8 c''8 e'8 c'8 |
+	}
+	{
+	g'1 |
+	}
+	}
+	\endBar
+}
+{% endif %}

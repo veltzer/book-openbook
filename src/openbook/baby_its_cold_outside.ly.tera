@@ -1,0 +1,132 @@
+{#
+default_version = "Wikifonia"
+
+[attributes]
+title = "Baby It's Cold Outside"
+style = "Jazz"
+composer = "Frank Loesser"
+piece = "Jazz"
+typesetter = "OpenBook contributors (MusicXML import)"
+completion = "3"
+uuid = "127e02f1-cdd6-5f08-922c-32bc69e012d8"
+location = "New_Real_2:25"
+copyright = "1948, (renewed 1976), 1991 Frank Music Corp. International Copyright Secured. All Rights Reserved. Used by Permission."
+
+[versions.Wikifonia]
+doChords = true
+doVoice = true
+doLyrics = false
+doLyricsmore = false
+doLyricsmoremore = false
+doChordBars = false
+doGuitar = false
+doExtra = false
+doPrep = false
+doOwn = false
+#}
+{% if part == "Vars" %}
+{% endif %}
+{% if part == "Doc" %}
+	DONE:
+	- imported melody and chord changes from real_books_archive.gi/Wikifonia.tar.xz: Wikifonia/Frank Loesser - Baby It's Cold Outside.mxl.
+	- source revision: http://wikifonia.org/node/6419/revisions/20988/view.
+	- PDF reference: real_books_archive.gi/newreal2.pdf, PDF page 25.
+	- retained the original copyright notice where printed; the underlying music is not relicensed.
+	- retained written measures, pickups, repeats and endings; lyrics omitted.
+	- tempo is an editorial practice suggestion.
+	TODO:
+	- proofread the music against the referenced PDF and check by ear.
+{% endif %}
+{% if part == "ChordsWikifonia" %}\chordmode {
+	\startChords
+	\startSong
+
+	\myMark "A"
+	\startPart
+	s1 |
+	\repeat volta 2 {
+	ees1:6 |
+	s2. c4:m7 |
+	f2:m7 bes2:7 | \myEndLine
+	f2:m7 bes2:7 |
+	ees1:6 |
+	s2 c2:m7 |
+	bes1:m7 | \myEndLine
+	ees1:7 |
+	aes2 aes2:6 |
+	aes8:maj7 aes2..:6 |
+	aes2:m aes2:m6 | \myEndLine
+	aes2.:m7 des4:9 |
+	ees1:6 |
+	c1:m7 |
+	f1:7 | \myEndLine
+	bes1:7 |
+	ees1:6 |
+	s2 c2:m7 |
+	f2:m7 bes2:7 | \myEndLine
+	f2.:m7 bes4:7 |
+	ees1:6 |
+	s2 c2:m7 |
+	bes1:m7 | \myEndLine
+	ees1:7 |
+	aes2 aes2:6 |
+	aes2:maj7 aes2:6 |
+	c2:m7 f2:7 | \myEndLine
+	f2.:m7 bes4:7 |
+	ees1:6 |
+	g2:m7 c2:7 |
+	f2:7 bes2:7 | \myEndLine
+	ees2:6 bes2:7 |
+	}
+	ees1:6 |
+	\endBar
+	\endPart
+
+	\endSong
+	\endChords
+}
+{% endif %}
+{% if part == "VoiceWikifonia" %}\absolute {
+	\tempo "Moderato" 4 = 120
+	\time 4/4
+	\key es \major
+
+	r2 r4 r8 bes8 |
+	\repeat volta 2 {
+	g'8 f'8 es'8 bes'8 ~ bes'2 ~ |
+	bes'2 r4 r8 bes8 |
+	as'8 g'8 f'8 bes'8 ~ bes'2 ~ |
+	bes'2 r4 r8 bes8 |
+	g'8 f'8 es'8 bes'8 ~ bes'2 ~ |
+	bes'4 bes'4 g'4 es'4 |
+	f'1 ~ |
+	f'2 r4 r8 es'8 |
+	c''8 es'8 es'4 es'4 es'4 |
+	es'8 es'4. r4 r8 es'8 |
+	ces''8 es'8 es'8 es'8 es'8 es'8 es'4 |
+	es'2. r8 es'8 |
+	c''8 es'8 es'4 es'4 es'4 |
+	es'8 es'4. r4 r8 es'8 |
+	c''8 f'8 f'8 f'8 f'8 f'8 f'4 |
+	f'2. r8 bes8 |
+	g'8 f'8 es'8 bes'8 ~ bes'2 ~ |
+	bes'2 r4 r8 bes8 |
+	as'8 g'8 f'8 bes'8 ~ bes'2 ~ |
+	bes'2 r4 r8 bes8 |
+	g'8 f'8 es'8 bes'8 ~ bes'2 ~ |
+	bes'4 bes'4 g'4 es'4 |
+	f'1 ~ |
+	f'2 r4 r8 es'8 |
+	c''8 es'8 es'4 es'4 es'4 |
+	es'8 es'4. r4 r8 es'8 |
+	c''8 f'8 f'8 f'8 f'8 f'8 f'4 |
+	f'2. r8 bes8 |
+	g'8 f'8 es'8 bes'8 ~ bes'2 ~ |
+	bes'2 g'8 as'8 bes'8 c''8 ~ |
+	c''2 d'2 |
+	es'2 r4 r8 bes8 |
+	}
+	es'2. r4 |
+	\endBar
+}
+{% endif %}

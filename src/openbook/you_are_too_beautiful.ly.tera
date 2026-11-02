@@ -1,0 +1,142 @@
+{#
+default_version = "Wikifonia"
+
+[attributes]
+title = "You Are Too Beautiful"
+style = "Jazz"
+composer = "Richard Rodgers"
+piece = "Jazz"
+typesetter = "OpenBook contributors (MusicXML import)"
+completion = "3"
+uuid = "16ccc824-3ea1-51fc-ac25-53823959614b"
+location = "Real_Book_1:488, 557_Standards:437, StandardsBook:530"
+copyright = "19332 Warmer Bros. Inc. (Renewed). Rights for the Extended Term in the US Controlled by The Estate of Lorenz Hart and Williamson"
+copyrightextra = "Music. All Rights on behalf of The Estate of Loren: Hart Administered by WB Masic Corp. All Rights Reserved. Used by Permission"
+
+[versions.Wikifonia]
+doChords = true
+doVoice = true
+doLyrics = false
+doLyricsmore = false
+doLyricsmoremore = false
+doChordBars = false
+doGuitar = false
+doExtra = false
+doPrep = false
+doOwn = false
+#}
+{% if part == "Vars" %}
+{% endif %}
+{% if part == "Doc" %}
+	DONE:
+	- imported melody and chord changes from real_books_archive.gi/Wikifonia.tar.xz: Wikifonia/Richard Rodgers, Lorenz Hart - You Are Too Beautiful.mxl.
+	- source revision: http://wikifonia.org/node/4025/revisions/5341/view.
+	- PDF reference: real_books_archive.gi/The Standards Real Book.pdf, PDF page 530.
+	- retained the original copyright notice where printed; the underlying music is not relicensed.
+	- retained written measures, pickups, repeats and endings; lyrics omitted.
+	- tempo is an editorial practice suggestion.
+	TODO:
+	- proofread the music against the referenced PDF and check by ear.
+	- verify editorial chord spacing in measures 4, 8, 12, 15, 16, 24, 28, 31, 32; the archive places successive symbols at the same offset.
+{% endif %}
+{% if part == "ChordsWikifonia" %}\chordmode {
+	\startChords
+	\startSong
+
+	\myMark "A"
+	\startPart
+	\repeat volta 2 {
+	d2:m7 g2:7 |
+	e2:m7 a2:aug7 |
+	d2:m7 g2:7.9- |
+	c4:maj7 g2:m7 c4:7 | \myEndLine
+	f2:m7 bes2:7 |
+	c2:maj7 ees2:dim7 |
+	d2:m7 g2:7 |
+	c2:maj7 e2:m7.5- | \myEndLine
+	d2:m7 g2:7 |
+	e2:m7.5- a2:7.9- |
+	d2:m7 g2:7.9- |
+	c4:maj7 g2:m7 c4:7 | \myEndLine
+	f2:maj7 bes2:7 |
+	c2:maj7 ees2:dim7 |
+	d4:7 d2:m7 g4:7 |
+	c4 g2:m7 c4:7 | \myEndLine
+	f2:maj7 fis2:dim7 |
+	c4/g a2.:7 |
+	d2.:m7 g4:7 |
+	c1:maj7 | \myEndLine
+	b2:m7.5- e2:7 |
+	a1:m7 |
+	d1:7 |
+	d2:m7 g2:7 | \myEndLine
+	d2:m7 g2:7 |
+	e2:m7 a2:7.9- |
+	d2:m7 g2:7.9- |
+	c4:maj7 g2:m7 c4:7 | \myEndLine
+	f2:maj7 bes2:7 |
+	c2:maj7 ees2:dim |
+	d4:7 d2:m7 g4:7 |
+	} \alternative {
+	{
+	c4 e2:m7 a4:7 | \myEndLineVoltaNotLast
+	}
+	{
+	c1:maj7 | \myEndLineVoltaLast
+	}
+	}
+	\endBar
+	\endPart
+
+	\endSong
+	\endChords
+}
+{% endif %}
+{% if part == "VoiceWikifonia" %}\absolute {
+	\tempo "Moderato" 4 = 120
+	\time 2/2
+	\key c \major
+
+	\repeat volta 2 {
+	a'4 b'8 c''8 d''8 c''8 b'8 a'8 |
+	g'4 g'8 a'8 bes'4. g'8 |
+	f'4 f'8 g'8 as'4. g'8 |
+	e'4 g'2. |
+	c'4 d'8 e'8 g'8 f'8 e'8 d'8 |
+	\times 2/3 { c'4 e'4 g'4 } b'4 c''4 |
+	\times 2/3 { c'4 e'4 g'4 } b'4 d''4 |
+	g'1 |
+	a'4 b'8 c''8 d''8 c''8 b'8 a'8 |
+	g'4 g'8 a'8 bes'4. g'8 |
+	f'4 f'8 g'8 as'4. g'8 |
+	e'4 g'2. |
+	c'4 d'8 e'8 g'8 f'8 e'8 d'8 |
+	\times 2/3 { c'4 e'4 g'4 } b'4 c''4 |
+	d''1 |
+	c''1 |
+	b'4 a'4 c''4 b'4 |
+	a'4 g'2. |
+	g'4 f'2 g'4 |
+	e'1 |
+	e'4 d'4 f'4 e'4 |
+	d'4 c'2. |
+	\times 2/3 { c'4 e'4 g'4 } b'4 c''4 |
+	d''1 |
+	a'4 b'8 c''8 d''8 c''8 b'8 a'8 |
+	g'4 g'8 a'8 bes'4. g'8 |
+	f'4 f'8 g'8 as'4. g'8 |
+	e'4 g'2. |
+	c'4 d'8 e'8 g'8 f'8 e'8 d'8 |
+	\times 2/3 { c'4 e'4 g'4 } b'4 c''4 |
+	d''1 |
+	} \alternative {
+	{
+	c''1 |
+	}
+	{
+	c''2. r4 |
+	}
+	}
+	\endBar
+}
+{% endif %}

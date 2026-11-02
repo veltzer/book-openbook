@@ -1,0 +1,146 @@
+{#
+default_version = "Wikifonia"
+
+[attributes]
+title = "The Boy Next Door"
+style = "Jazz"
+composer = "Ralph Blane"
+piece = "Jazz"
+typesetter = "OpenBook contributors (MusicXML import)"
+completion = "3"
+uuid = "048a1d09-0c39-51e5-90e9-b478e01c04c8"
+location = "Real_Book_3:42, New_Real_2:46, 557_Standards:55"
+copyright = "All Rights Reserved"
+
+[versions.Wikifonia]
+doChords = true
+doVoice = true
+doLyrics = false
+doLyricsmore = false
+doLyricsmoremore = false
+doChordBars = false
+doGuitar = false
+doExtra = false
+doPrep = false
+doOwn = false
+#}
+{% if part == "Vars" %}
+{% endif %}
+{% if part == "Doc" %}
+	DONE:
+	- imported melody and chord changes from real_books_archive.gi/Wikifonia.tar.xz: Wikifonia/Ralph Blane, Hugh Martin - The Boy Next Door.mxl.
+	- source revision: http://wikifonia.org/node/12486/revisions/16849/view.
+	- PDF reference: real_books_archive.gi/newreal2.pdf, PDF page 46.
+	- retained the original copyright notice where printed; the underlying music is not relicensed.
+	- retained written measures, pickups, repeats and endings; lyrics omitted.
+	- tempo is an editorial practice suggestion.
+	TODO:
+	- proofread the music against the referenced PDF and check by ear.
+	- verify editorial chord spacing in measures 32, 33; the archive places successive symbols at the same offset.
+	- verify the copyright notice against the scan; no readable per-tune notice was recovered, so the archived rights notice is retained where available.
+{% endif %}
+{% if part == "ChordsWikifonia" %}\chordmode {
+	\startChords
+	\startSong
+
+	\myMark "A"
+	\startPart
+	\repeat volta 2 {
+	s2. |
+	bes2.:maj7 |
+	g2.:7.11+ |
+	c2.:m7 | \myEndLine
+	f2.:7.11+ |
+	bes2.:maj7 |
+	g2.:m9 |
+	c2.:9 | \myEndLine
+	c2.:7 |
+	c2.:m7 |
+	f2:9 f4:9/ees |
+	d2.:7.9- | \myEndLine
+	g2:m9 g4:m9/f |
+	e2.:m7.5- |
+	a2.:7.5+.9- |
+	d2:7.9- g4:aug7 | \myEndLine
+	c2:9 f4:13 |
+	bes2.:maj7 |
+	g2.:7.11+ |
+	c2.:m7 | \myEndLine
+	f2.:13.11+ |
+	bes2:maj7 fis4:dim7 |
+	g2.:m9 |
+	c2.:13 | \myEndLine
+	cis2.:dim7 |
+	bes2.:maj7/f |
+	s2. |
+	e2.:m7.5- | \myEndLine
+	c2.:7.11+ |
+	ges2.:13 |
+	f2.:13 |
+	} \alternative {
+	{
+	bes2:6 g4:aug7 | \myEndLine
+	c2:m7 f4:7 | \myEndLineVoltaNotLast
+	}
+	{
+	bes2.:6 |
+	s2. | \myEndLineVoltaLast
+	}
+	}
+	\endBar
+	\endPart
+
+	\endSong
+	\endChords
+}
+{% endif %}
+{% if part == "VoiceWikifonia" %}\absolute {
+	\tempo "Moderato" 4 = 120
+	\time 3/4
+	\key bes \major
+
+	\repeat volta 2 {
+	r2 d'8 es'8 |
+	f'2 cis''4 |
+	cis''2 d''4 |
+	es'2 b'4 |
+	b'2 c''4 |
+	d'2 a'4 |
+	a'4. bes'8 c''8 bes'8 |
+	c'2. ~ |
+	c'2. |
+	r4 c'8 d'8 es'8 f'8 |
+	g'2 g'4 |
+	r4 d'8 es'8 f'8 g'8 |
+	a'2 a'4 |
+	r4 e'8 f'8 g'8 a'8 |
+	bes'2 c''4 |
+	a'2 bes'4 |
+	g'2 d'8 es'8 |
+	f'2 cis''4 |
+	cis''2 d''4 |
+	es'2 b'4 |
+	b'2 c''4 |
+	d'2 a'4 |
+	a'4. bes'8 c''8 bes'8 |
+	d''2. ~ |
+	d''4 r4 d''4 |
+	d''2 f'4 |
+	e'4 f'4 fis'8 g'8 |
+	d''2 g'4 |
+	fis'4 g'4 r8 g'8 |
+	as'2. |
+	a'2. |
+	} \alternative {
+	{
+	bes'2. |
+	r2 d'8 es'8 |
+	}
+	{
+	bes'2. ~ |
+	bes'2. |
+	}
+	}
+	\endBar
+}
+{% endif %}

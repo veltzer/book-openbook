@@ -1,0 +1,140 @@
+{#
+default_version = "Wikifonia"
+
+[attributes]
+title = "Emily"
+style = "Jazz"
+composer = "Johnny Mandel"
+piece = "Jazz"
+typesetter = "OpenBook contributors (MusicXML import)"
+completion = "3"
+uuid = "781648b9-a323-5b8e-8483-7f8c143197d5"
+location = "Real_Book_3:79, New_Real_3:127, 557_Standards:95, Just_Standards_Real_Book:110"
+copyright = "1964 (renewed 1992) MGM/EMI Miller Catalog, Inc. Used by Permission of CPP/Belwin, Inc., Miami, FL All Rights Reserved"
+
+[versions.Wikifonia]
+doChords = true
+doVoice = true
+doLyrics = false
+doLyricsmore = false
+doLyricsmoremore = false
+doChordBars = false
+doGuitar = false
+doExtra = false
+doPrep = false
+doOwn = false
+#}
+{% if part == "Vars" %}
+{% endif %}
+{% if part == "Doc" %}
+	DONE:
+	- imported melody and chord changes from real_books_archive.gi/Wikifonia.tar.xz: Wikifonia/Johnny Mandel, Johnny Mercer - Emily.mxl.
+	- source revision: http://wikifonia.org/node/15764/revisions/20977/view.
+	- PDF reference: real_books_archive.gi/newreal3.pdf, PDF page 127.
+	- retained the original copyright notice where printed; the underlying music is not relicensed.
+	- retained written measures, pickups, repeats and endings; lyrics omitted.
+	- tempo is an editorial practice suggestion.
+	TODO:
+	- proofread the music against the referenced PDF and check by ear.
+{% endif %}
+{% if part == "ChordsWikifonia" %}\chordmode {
+	\startChords
+	\startSong
+
+	\myMark "A"
+	\startPart
+	c2.:6 |
+	a2.:m7 |
+	d2.:m7 |
+	g2.:7 | \myEndLine
+	c2.:6 |
+	g4:m7 c2:7 |
+	f2.:maj7 |
+	bes2.:9 | \myEndLine
+	a2.:maj7 |
+	fis2.:m7 |
+	b2.:m7 |
+	e2. | \myEndLine
+	a2.:m7 |
+	d2.:7 |
+	d2.:m7 |
+	g2.:aug | \myEndLine
+	c2.:6 |
+	a2.:m7 |
+	d2.:m7 |
+	g2.:7 | \myEndLine
+	c2.:maj7 |
+	c2.:aug |
+	f2.:maj7 |
+	e2.:7.9- | \myEndLine
+	a2.:m7 |
+	b2.:7.9- |
+	e2.:m7 |
+	a2.:7 | \myEndLine
+	d2.:m7 |
+	g2.:7 |
+	bes2.:7 |
+	a2.:7 | \myEndLine
+	fis2.:m7.5- |
+	f2.:m7 |
+	e2.:m7 |
+	a2.:7 | \myEndLine
+	d2.:m7 |
+	g2.:7 |
+	c2.:6 |
+	s2. | \myEndLine
+	\endBar
+	\endPart
+
+	\endSong
+	\endChords
+}
+{% endif %}
+{% if part == "VoiceWikifonia" %}\absolute {
+	\tempo "Moderato" 4 = 120
+	\time 3/4
+	\key c \major
+
+	e'8 b'8 g'2 |
+	e'8 b'8 g'2 |
+	e'8 b'8 g'2 ~ |
+	g'4 e'4. d'8 |
+	c'4. d'8 e'4 |
+	a'2 g'4 |
+	c'2. ~ |
+	c'2 d'4 |
+	e'8 a8 a2 |
+	e'8 a8 a2 |
+	e'8 a8 a2 ~ |
+	a4 a4 b4 |
+	c'4 d'4 e'4 |
+	d''4 c''4 a'4 |
+	d'2. |
+	dis'2. |
+	e'8 b'8 g'2 |
+	e'8 b'8 g'2 |
+	e'8 b'8 g'2 ~ |
+	g'4 e'4. d'8 |
+	c'4. d'8 e'4 |
+	e''4. d''8 c''4 |
+	a'2. |
+	b'2. |
+	c''4 b'4 a'4 |
+	g'2 fis'4 |
+	g'8 a'8 b'2 ~ |
+	b'4 a'4 g'4 |
+	g'4 a'2 |
+	a'4 g'4. f'8 |
+	e'8 f'8 g'2 |
+	g'4 a'4 b'4 |
+	c''4 b'4 a'4 |
+	g'2 f'4 |
+	e'8 b'8 g'2 |
+	g'4 g'4 f'4 |
+	e'8 b'8 g'2 |
+	e'8 b'8 g'2 |
+	c''2. |
+	c''2 r4 |
+	\endBar
+}
+{% endif %}

@@ -1,0 +1,123 @@
+{#
+default_version = "Wikifonia"
+
+[attributes]
+title = "Stairway To The Stars"
+style = "Jazz"
+composer = "Matt Malneck, Frank Signorelli"
+piece = "Jazz"
+typesetter = "OpenBook contributors (MusicXML import)"
+completion = "3"
+uuid = "a421942b-f9de-55b9-a369-87de26c69628"
+location = "New_Real_3:360, 557_Standards:336, Jazz_LTD:340"
+copyright = "1960 (renewed 1988) EMI Unart Catalog, Inc., Used by Permission of CPP/Belwin, Inc., Miami, FL All Rights Reserved"
+
+[versions.Wikifonia]
+doChords = true
+doVoice = true
+doLyrics = false
+doLyricsmore = false
+doLyricsmoremore = false
+doChordBars = false
+doGuitar = false
+doExtra = false
+doPrep = false
+doOwn = false
+#}
+{% if part == "Vars" %}
+{% endif %}
+{% if part == "Doc" %}
+	DONE:
+	- imported melody and chord changes from real_books_archive.gi/Wikifonia.tar.xz: Wikifonia/Matt Malneck, Frank Signorelli, Mitchell Parish - Stairway To The Stars.mxl.
+	- source revision: http://wikifonia.org/node/3519/revisions/4543/view.
+	- PDF reference: real_books_archive.gi/newreal3.pdf, PDF page 360.
+	- retained the original copyright notice where printed; the underlying music is not relicensed.
+	- retained written measures, pickups, repeats and endings; lyrics omitted.
+	- tempo is an editorial practice suggestion.
+	TODO:
+	- proofread the music against the referenced PDF and check by ear.
+	- verify editorial chord spacing in measures 7, 8, 16, 20, 24; the archive places successive symbols at the same offset.
+{% endif %}
+{% if part == "ChordsWikifonia" %}\chordmode {
+	\startChords
+	\startSong
+
+	\myMark "A"
+	\startPart
+	c2 g4:7.9- g4:9.5+ |
+	g2:m7 c2:9 |
+	f1:maj7 |
+	d2:m7 a2:aug | \myEndLine
+	c2/g a4.:m6 d8:9 |
+	d2:m7 g2:7 |
+	c2 a2:7 |
+	aes2:9 g2:7 | \myEndLine
+	c2 g4:7.9- g4:9.5+ |
+	g2:m7 c2:9 |
+	f1:maj7 |
+	f2:m6 aes2:aug | \myEndLine
+	c2 a4.:m6 d8:9 |
+	d2:7 g2:7 |
+	c1:6 |
+	fis2:m7 b2:7 | \myEndLine
+	e1:m7 |
+	e2:m7 b2:7 |
+	e2:m7 b2:7.9+ |
+	e2:m7.5- a2:7 | \myEndLine
+	d2:m d2:m7 |
+	g2:7 g2:m7 |
+	d2:m7 d2:7 |
+	d2:m7 g2:7 | \myEndLine
+	c2 g4:7.9- g4:9.5+ |
+	g2:m11 c2:13.9- |
+	f1:maj7 |
+	bes2:13 bes2:9 | \myEndLine
+	a2:m7 d2:9 |
+	d2:m11 g2:7 |
+	c1 |
+	\endBar
+	\endPart
+
+	\endSong
+	\endChords
+}
+{% endif %}
+{% if part == "VoiceWikifonia" %}\absolute {
+	\tempo "Moderato" 4 = 120
+	\time 2/2
+	\key c \major
+
+	r4 g'4 gis'4 a'4 |
+	c''8 c''8 c''8 c''8 a'2 |
+	r4 e'4 e'4 e'4 |
+	g'8 g'8 g'8 g'8 e'2 |
+	r8 c'8 c'8 c'8 c'8 e'4 c'8 |
+	g'4 g'8 g'8 ~ g'8 gis'8 a'4 |
+	e'1 |
+	R1 |
+	r4 g'4 gis'4 a'4 |
+	c''8 c''8 c''8 c''8 a'2 |
+	r4 e'4 e'4 e'4 |
+	g'8 g'8 g'8 g'8 e'2 |
+	r8 c'8 c'8 c'8 c'8 e'4 c'8 |
+	g'4 g'8 g'8 ~ g'8 gis'8 a'4 |
+	c''1 |
+	R1 |
+	b'8 b'8 b'8 b'8 b'2 |
+	b'8 a'8 g'8 fis'8 e'8 fis'8 g'8 a'8 |
+	\times 2/3 { b'4 b'4 b'4 } \times 2/3 { b'4 g'4 fis'4 } |
+	e'1 |
+	a'8 a'8 a'8 a'8 a'2 |
+	a'8 g'8 f'8 e'8 d'8 e'8 f'8 g'8 |
+	\times 2/3 { a'4 a'4 a'4 } \times 2/3 { c''4 c''4 c''4 } |
+	d''1 |
+	r4 g'4 gis'4 a'4 |
+	c''8 c''8 c''8 c''8 a'2 |
+	r4 e'4 e'4 e'4 |
+	g'8 g'8 g'8 g'8 e'2 |
+	r8 c'8 c'8 c'8 c'8 e'4 c'8 |
+	g'4 g'8 g'8 ~ g'8 gis'8 a'4 |
+	c''1 |
+	\endBar
+}
+{% endif %}

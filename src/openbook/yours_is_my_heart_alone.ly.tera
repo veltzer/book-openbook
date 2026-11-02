@@ -1,0 +1,144 @@
+{#
+default_version = "Wikifonia"
+
+[attributes]
+title = "Yours Is My Heart Alone"
+style = "Jazz"
+composer = "Franz Lehar"
+piece = "Jazz"
+typesetter = "OpenBook contributors (MusicXML import)"
+completion = "3"
+uuid = "8fc66391-5413-5c38-b3ea-c2af071bcd92"
+location = "Real_Book_3:364, 557_Standards:442, Colorado:280, Colorado_Cookbook:280, StandardsBook:550"
+copyright = "All Rights Reserved"
+
+[versions.Wikifonia]
+doChords = true
+doVoice = true
+doLyrics = false
+doLyricsmore = false
+doLyricsmoremore = false
+doChordBars = false
+doGuitar = false
+doExtra = false
+doPrep = false
+doOwn = false
+#}
+{% if part == "Vars" %}
+{% endif %}
+{% if part == "Doc" %}
+	DONE:
+	- imported melody and chord changes from real_books_archive.gi/Wikifonia.tar.xz: Wikifonia/Franz Lehar, Fritz Lohner, Harry B. Smith , Ludwig Herzer - Yours Is My Heart Alone.mxl.
+	- source revision: http://wikifonia.org/node/6878/revisions/24895/view.
+	- PDF reference: real_books_archive.gi/The Standards Real Book.pdf, PDF page 550.
+	- retained the original copyright notice where printed; the underlying music is not relicensed.
+	- retained written measures, pickups, repeats and endings; lyrics omitted.
+	- tempo is an editorial practice suggestion.
+	TODO:
+	- proofread the music against the referenced PDF and check by ear.
+	- verify editorial chord spacing in measures 7; the archive places successive symbols at the same offset.
+	- verify the copyright notice against the scan; no readable per-tune notice was recovered, so the archived rights notice is retained where available.
+{% endif %}
+{% if part == "ChordsWikifonia" %}\chordmode {
+	\startChords
+	\startSong
+
+	\myMark "A"
+	\startPart
+	\repeat volta 2 {
+	b1:dim7 |
+	e1:7.9- |
+	a1:m7 |
+	d1:7 | \myEndLine
+	g1:m7 |
+	c1:7 |
+	a2:m7 d2:7 |
+	g2:m7 c2:7 | \myEndLine
+	b1:dim7 |
+	e1:7.9- |
+	a1:m7 |
+	d1:7 | \myEndLine
+	d1:m7 |
+	g1:7 |
+	g1:m7 |
+	c1:7 | \myEndLine
+	a1:dim7 |
+	d1:7.9- |
+	g1:m7 |
+	s1 | \myEndLine
+	bes1:m7 |
+	ees1:7 |
+	f1:maj7 |
+	s1 | \myEndLine
+	b1:dim7 |
+	e1:7.9- |
+	a1:m7 |
+	d1:7 | \myEndLine
+	g1:m7 |
+	c1:7 |
+	} \alternative {
+	{
+	f1:6 |
+	g2:m7 c2:7 | \myEndLineVoltaNotLast
+	}
+	{
+	f1:6 | \myEndLineVoltaLast
+	}
+	}
+	s1 |
+	\endBar
+	\endPart
+
+	\endSong
+	\endChords
+}
+{% endif %}
+{% if part == "VoiceWikifonia" %}\absolute {
+	\tempo "Moderato" 4 = 120
+	\time 2/2
+	\key f \major
+
+	\repeat volta 2 {
+	f'1 ~ |
+	f'2 e'4 f'4 |
+	e'4 d'4 c'2 ~ |
+	c'4 d'4 a4 bes4 |
+	c'1 ~ |
+	c'4 d'4 bes4 a4 |
+	c'1 ~ |
+	c'2 r2 |
+	f'1 ~ |
+	f'2 e'4 f'4 |
+	e'4 d'4 c'2 ~ |
+	c'4 d'4 e'4 f'4 |
+	g'1 ~ |
+	g'4 a'4 f'4 e'4 |
+	g'1 ~ |
+	g'2 r2 |
+	c''1 ~ |
+	c''2 bes'4 a'4 |
+	\times 2/3 { bes'4 a'4 g'4 } d'2 ~ |
+	d'4 d'4 e'4 f'4 |
+	bes'1 ~ |
+	bes'2 a'4 g'4 |
+	\times 2/3 { a'4 g'4 f'4 } a2 ~ |
+	a4 bes4 b4 c'4 |
+	f'1 ~ |
+	f'2 e'4 f'4 |
+	e'4 d'4 c'2 ~ |
+	c'4 d'4 a4 bes4 |
+	c'4 d'4 f'4 a'4 |
+	g'2 a'2 |
+	} \alternative {
+	{
+	f'1 ~ |
+	f'2 r2 |
+	}
+	{
+	f'1 ~ |
+	}
+	}
+	f'2 r2 |
+	\endBar
+}
+{% endif %}

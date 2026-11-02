@@ -1,0 +1,145 @@
+{#
+default_version = "Wikifonia"
+
+[attributes]
+title = "Jeepers Creepers"
+style = "Jazz"
+composer = "Harry Warren"
+piece = "Jazz"
+typesetter = "OpenBook contributors (MusicXML import)"
+completion = "3"
+uuid = "4577ec5a-84e3-5d6c-9035-e405ef3270ec"
+location = "557_Standards:199, Fakebook_Django:105"
+copyright = "All Rights Reserved"
+
+[versions.Wikifonia]
+doChords = true
+doVoice = true
+doLyrics = false
+doLyricsmore = false
+doLyricsmoremore = false
+doChordBars = false
+doGuitar = false
+doExtra = false
+doPrep = false
+doOwn = false
+#}
+{% if part == "Vars" %}
+{% endif %}
+{% if part == "Doc" %}
+	DONE:
+	- imported melody and chord changes from real_books_archive.gi/Wikifonia.tar.xz: Wikifonia/Harry Warren, Johnny Mercer - Jeepers Creepers.mxl.
+	- source revision: http://wikifonia.org/node/9313/revisions/15140/view.
+	- PDF reference: real_books_archive.gi/Guitar - 557 Standards.pdf, PDF page 199.
+	- retained the original copyright notice where printed; the underlying music is not relicensed.
+	- retained written measures, pickups, repeats and endings; lyrics omitted.
+	- tempo is an editorial practice suggestion.
+	TODO:
+	- proofread the music against the referenced PDF and check by ear.
+	- verify the copyright notice against the scan; no readable per-tune notice was recovered, so the archived rights notice is retained where available.
+{% endif %}
+{% if part == "ChordsWikifonia" %}\chordmode {
+	\startChords
+	\startSong
+
+	\myMark "A"
+	\startPart
+	\repeat volta 2 {
+	b2:m d2 |
+	b2:m7 g2:6 |
+	d2:7 d4:9 d4:7 |
+	g2:6 g2 | \myEndLine
+	b2:m d2:7 |
+	b2:m7 g2:6 |
+	d2:7 d4:9 d4:7 |
+	g1 | \myEndLine
+	b2:m d2 |
+	b2:m7 g2:6 |
+	d2:7 d4:9 d4:7 |
+	g2:6 g2 | \myEndLine
+	b2:m d2:7 |
+	b2:m7 g2:6 |
+	d2:7 d2:9 |
+	g1 | \myEndLine
+	d2:m7 g2:6 |
+	c1:6 |
+	d2.:m7 g4:7 |
+	c4:maj7 c4 c2:6 | \myEndLine
+	e2:m7 fis2:m |
+	d1:6 |
+	e2:m7 fis4:m a4:7 |
+	d4:9 d2.:7 | \myEndLine
+	b2:m d2:7 |
+	b2:m7 g2:6 |
+	d2:7 d4:9 d4:7 |
+	g2:6 g2 | \myEndLine
+	b2:m d2:7 |
+	b2:m7 g2:6 |
+	d2:7 d4:9 d4:7 |
+	g2 b2:m | \myEndLine
+	a2:m7 d4:9 d4:7 |
+	} \alternative {
+	{
+	g1 | \myEndLineVoltaNotLast
+	}
+	{
+	g1 | \myEndLineVoltaLast
+	}
+	}
+	\endBar
+	\endPart
+
+	\endSong
+	\endChords
+}
+{% endif %}
+{% if part == "VoiceWikifonia" %}\absolute {
+	\tempo "Moderato" 4 = 120
+	\time 2/2
+	\key g \major
+
+	\repeat volta 2 {
+	b'2 a'2 |
+	a'2 g'2 |
+	r8 a'4 a'8 g'4 fis'4 |
+	e'4. d'8 ~ d'2 |
+	b'2 a'2 |
+	a'2 g'2 |
+	r8 a'4 a'8 g'4 fis'4 |
+	g'1 |
+	b'2 a'2 |
+	a'2 g'2 |
+	r8 a'4 a'8 g'4 fis'4 |
+	e'4. d'8 ~ d'2 |
+	b'2 a'2 |
+	a'2 g'2 |
+	r8 a'4 a'8 g'4 fis'4 |
+	g'1 |
+	g'2 e'2 |
+	g'1 |
+	r8 g'4 f'8 e'4 d'4 |
+	b4 c'8 a8 ~ a2 |
+	a'2 fis'2 |
+	a'1 |
+	r8 a'4 g'8 fis'4 e'4 |
+	e'4 fis'8 d'8 ~ d'2 |
+	b'2 a'2 |
+	a'2 g'2 |
+	r8 a'4 a'8 g'4 fis'4 |
+	e'4. d'8 ~ d'2 |
+	b'2 a'2 |
+	a'2 g'2 |
+	r8 a'4 a'8 g'4 fis'4 |
+	g'2 b'2 |
+	r8 a'4 a'8 g'4 fis'4 |
+	} \alternative {
+	{
+	g'2. r4 |
+	}
+	{
+	g'2. r4 |
+	}
+	}
+	\endBar
+}
+{% endif %}

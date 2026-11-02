@@ -1,0 +1,144 @@
+{#
+default_version = "Wikifonia"
+
+[attributes]
+title = "Time Was"
+style = "Jazz"
+composer = "Miguel Prado"
+piece = "Jazz"
+typesetter = "OpenBook contributors (MusicXML import)"
+completion = "3"
+uuid = "d9fd8bde-62f7-5900-b30f-b5372fcc7eec"
+location = "Real_Book_3:323"
+copyright = "All Rights Reserved"
+
+[versions.Wikifonia]
+doChords = true
+doVoice = true
+doLyrics = false
+doLyricsmore = false
+doLyricsmoremore = false
+doChordBars = false
+doGuitar = false
+doExtra = false
+doPrep = false
+doOwn = false
+#}
+{% if part == "Vars" %}
+{% endif %}
+{% if part == "Doc" %}
+	DONE:
+	- imported melody and chord changes from real_books_archive.gi/Wikifonia.tar.xz: Wikifonia/Miguel Prado, S. K. Russell - Time Was.mxl.
+	- source revision: http://wikifonia.org/node/14476/revisions/19402/view.
+	- PDF reference: real_books_archive.gi/The Real Book of Jazz Volume III.pdf, PDF page 323.
+	- retained the original copyright notice where printed; the underlying music is not relicensed.
+	- retained written measures, pickups, repeats and endings; lyrics omitted.
+	- tempo is an editorial practice suggestion.
+	TODO:
+	- proofread the music against the referenced PDF and check by ear.
+	- verify editorial chord spacing in measures 7, 15, 31; the archive places successive symbols at the same offset.
+	- verify the copyright notice against the scan; no readable per-tune notice was recovered, so the archived rights notice is retained where available.
+{% endif %}
+{% if part == "ChordsWikifonia" %}\chordmode {
+	\startChords
+	\startSong
+
+	\myMark "A"
+	\startPart
+	\repeat volta 2 {
+	g2 b2:m |
+	a2:m7 d2:7 |
+	g2:maj7 g2:7 |
+	c2:maj7 c2:m6 | \myEndLine
+	g2/b g2:dim/bes |
+	a2.:m7 d4:7 |
+	g2:6 e2:7 |
+	a2:m7 d2:7 | \myEndLine
+	g2 b2:m |
+	a2:m7 d2:7 |
+	g2:maj7 g2:7 |
+	c2:maj7 c2:m6 | \myEndLine
+	g2/b g2:dim/bes |
+	a2:m7 d4:7 d4:7.9- |
+	g2:6 c2:maj7 |
+	g2.:6 fis4:7 | \myEndLine
+	b2 b2:dim |
+	cis2:m7 fis2:7 |
+	b2:6 c2:dim |
+	cis2.:m7 fis4:7 | \myEndLine
+	d2 c2:m6/ees |
+	e2:m11 a2:7 |
+	a1:m7 |
+	d2.:7 d4:7.9- | \myEndLine
+	g2 b2:m |
+	a2:m7 d2:7 |
+	g2:maj7 g2:7 |
+	c2:maj7 c2:m6 | \myEndLine
+	g2/b g2:dim/bes |
+	a2:m7 d4:7 d4:7.9- |
+	} \alternative {
+	{
+	g2:6 e2:m7 |
+	a2.:7 d4:9 | \myEndLineVoltaNotLast
+	}
+	{
+	g1:6 |
+	s1 | \myEndLineVoltaLast
+	}
+	}
+	\endBar
+	\endPart
+
+	\endSong
+	\endChords
+}
+{% endif %}
+{% if part == "VoiceWikifonia" %}\absolute {
+	\tempo "Moderato" 4 = 120
+	\time 4/4
+	\key g \major
+
+	\repeat volta 2 {
+	d''2 d''2 |
+	\times 2/3 { d''4 c''4 d''4 } \times 2/3 { c''4 d''4 c''4 } |
+	b'4 b'4 b'2 |
+	\times 2/3 { b'4 a'4 b'4 } \times 2/3 { a'4 b'4 a'4 } |
+	g'4 g'4 g'2 |
+	\times 2/3 { g'4 e'4 g'4 } b'4 b'4 |
+	e'1 ~ |
+	e'4 r4 r2 |
+	d''2 d''2 |
+	\times 2/3 { d''4 c''4 d''4 } \times 2/3 { c''4 d''4 c''4 } |
+	b'4 b'4 b'2 |
+	\times 2/3 { b'4 a'4 b'4 } \times 2/3 { a'4 b'4 a'4 } |
+	g'4 g'4 g'2 |
+	\times 2/3 { g'4 e'4 g'4 } b'4 b'4 |
+	g'1 ~ |
+	g'2. r4 |
+	\times 2/3 { fis'4 fis'4 fis'4 } \times 2/3 { gis'4 gis'4 gis'4 } |
+	\times 2/3 { b'4 ais'4 gis'4 } \times 2/3 { ais'4 gis'4 fis'4 } |
+	gis'2 dis'4 e'4 |
+	fis'2. r4 |
+	\times 2/3 { fis'4 fis'4 fis'4 } \times 2/3 { g'4 g'4 g'4 } |
+	\times 2/3 { a'4 a'4 a'4 } \times 2/3 { cis''4 b'4 a'4 } |
+	b'4 a'8 b'8 c''8 d''4 b'8 |
+	a'2. r4 |
+	d''2 d''2 |
+	\times 2/3 { d''4 c''4 d''4 } \times 2/3 { c''4 d''4 c''4 } |
+	b'4 b'4 b'2 |
+	\times 2/3 { b'4 a'4 b'4 } \times 2/3 { a'4 b'4 a'4 } |
+	g'4 g'4 g'2 |
+	\times 2/3 { g'4 e'4 g'4 } b'4 b'4 |
+	} \alternative {
+	{
+	g'1 ~ |
+	g'2. r4 |
+	}
+	{
+	g'1 ~ |
+	g'2. r4 |
+	}
+	}
+	\endBar
+}
+{% endif %}

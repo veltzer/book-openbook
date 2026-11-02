@@ -1,0 +1,131 @@
+{#
+default_version = "Wikifonia"
+
+[attributes]
+title = "Simone"
+style = "Jazz"
+composer = "Frank Foster"
+piece = "Jazz"
+typesetter = "OpenBook contributors (MusicXML import)"
+completion = "3"
+uuid = "2fad922c-fee8-578d-8f8f-64ad2fad2010"
+location = "Real_Book_2:328"
+copyright = "All Rights Reserved"
+
+[versions.Wikifonia]
+doChords = true
+doVoice = true
+doLyrics = false
+doLyricsmore = false
+doLyricsmoremore = false
+doChordBars = false
+doGuitar = false
+doExtra = false
+doPrep = false
+doOwn = false
+#}
+{% if part == "Vars" %}
+{% endif %}
+{% if part == "Doc" %}
+	DONE:
+	- imported melody and chord changes from real_books_archive.gi/Wikifonia.tar.xz: Wikifonia/Frank Foster - Simone.mxl.
+	- source revision: http://wikifonia.org/node/9836/revisions/13387/view.
+	- PDF reference: real_books_archive.gi/The Real Book of Jazz Volume II.pdf, PDF page 328.
+	- retained the original copyright notice where printed; the underlying music is not relicensed.
+	- retained written measures, pickups, repeats and endings; lyrics omitted.
+	- tempo is an editorial practice suggestion.
+	TODO:
+	- proofread the music against the referenced PDF and check by ear.
+	- verify the copyright notice against the scan; no readable per-tune notice was recovered, so the archived rights notice is retained where available.
+{% endif %}
+{% if part == "ChordsWikifonia" %}\chordmode {
+	\startChords
+	\startSong
+
+	\myMark "A"
+	\startPart
+	\repeat volta 2 {
+	ees2.:7.5- |
+	d2.:m7 |
+	e2.:m9/a |
+	d2.:m7 | \myEndLine
+	ees2.:7.5- |
+	d2.:m7 |
+	e2.:m9/a |
+	a2.:m7/d | \myEndLine
+	d2.:7 |
+	g2.:m7 |
+	a2.:m7 |
+	b2.:m7 | \myEndLine
+	ees2.:7.5- |
+	d2.:m7 |
+	e2.:m7 |
+	f2.:maj7 | \myEndLine
+	fis2.:m7 |
+	f2.:m7 |
+	bes2.:7 |
+	e2.:m7 | \myEndLine
+	s8 a1*5/8:7 |
+	} \alternative {
+	{
+	d2.:m7 |
+	e2.:m9/a |
+	d2.:m7 | \myEndLine
+	ees2.:7.5- | \myEndLineVoltaNotLast
+	}
+	{
+	d2.:m7 | \myEndLineVoltaLast
+	}
+	}
+	e2.:m7/a |
+	d2.:m7 | \myEndLine
+	\endBar
+	\endPart
+
+	\endSong
+	\endChords
+}
+{% endif %}
+{% if part == "VoiceWikifonia" %}\absolute {
+	\tempo "Moderato" 4 = 120
+	\time 3/4
+	\key c \major
+
+	\repeat volta 2 {
+	d'4 f'4 a'4 |
+	c''4. b'8 ~ b'8 d''8 |
+	a'2. ~ |
+	a'4. f'8 ~ f'8 c'8 |
+	g'8 es'4 bes8 ~ bes8 f'8 |
+	e'4. c'4. |
+	d'2. ~ |
+	d'2. ~ |
+	d'4 \once \omit TupletBracket \times 2/3 { d'8 es'8 f'8 } \once \omit TupletBracket \times 2/3 { g'8 a'8 bes'8 } |
+	c''8 a'4 e''8 c''4 ~ |
+	c''2. ~ |
+	c''2 bes8 es'8 |
+	g'8 c''4 a'8 ~ a'8 f'8 |
+	d'8 g'4 e'8 ~ e'8 d'8 |
+	a2. ~ |
+	a2. ~ |
+	a4 \once \omit TupletBracket \times 2/3 { b8 des'8 es'8 } \once \omit TupletBracket \times 2/3 { f'8 ges'8 as'8 } |
+	bes'4. g'8 ~ g'8 f'8 |
+	g'2 ~ g'8 bes'16 c''16 |
+	a'4. f'8 ~ f'8 c'8 |
+	g'8 es'4 bes8 ~ bes8 f'8 |
+	} \alternative {
+	{
+	a'2. ~ |
+	a'2. ~ |
+	a'2. |
+	d'4 f'4 a'4 |
+	}
+	{
+	a'2. ~ |
+	}
+	}
+	a'2. ~ |
+	a'2. |
+	\endBar
+}
+{% endif %}

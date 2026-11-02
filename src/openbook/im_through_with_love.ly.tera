@@ -1,0 +1,128 @@
+{#
+default_version = "Wikifonia"
+
+[attributes]
+title = "I'm Through With Love"
+style = "Jazz"
+composer = "Matt Malneck, Fud Livingston"
+piece = "Jazz"
+typesetter = "OpenBook contributors (MusicXML import)"
+completion = "3"
+uuid = "6b7aa981-b948-599b-b047-f97c21e33551"
+location = "Real_Book_3:139, New_Real_3:175"
+copyright = "1931 (renewed 1959} Metro-Goldwyn-Mayer Inc. c/o EMI Robbins Catalog Inc. Used by Permission of CPP/Belwin, Inc., Miami, FL. All"
+copyrightextra = "Rights Reserved"
+
+[versions.Wikifonia]
+doChords = true
+doVoice = true
+doLyrics = false
+doLyricsmore = false
+doLyricsmoremore = false
+doChordBars = false
+doGuitar = false
+doExtra = false
+doPrep = false
+doOwn = false
+#}
+{% if part == "Vars" %}
+{% endif %}
+{% if part == "Doc" %}
+	DONE:
+	- imported melody and chord changes from real_books_archive.gi/Wikifonia.tar.xz: Wikifonia/Matt Malneck, Fud Livingston, Gus Kahn - I'm Through With Love.mxl.
+	- source revision: http://wikifonia.org/node/6638/revisions/9177/view.
+	- PDF reference: real_books_archive.gi/newreal3.pdf, PDF page 175.
+	- retained the original copyright notice where printed; the underlying music is not relicensed.
+	- retained written measures, pickups, repeats and endings; lyrics omitted.
+	- tempo is an editorial practice suggestion.
+	TODO:
+	- proofread the music against the referenced PDF and check by ear.
+	- verify editorial chord spacing in measures 9, 17; the archive places successive symbols at the same offset.
+{% endif %}
+{% if part == "ChordsWikifonia" %}\chordmode {
+	\startChords
+	\startSong
+
+	\myMark "A"
+	\startPart
+	s1 |
+	ees2:dim7 c2:m7 |
+	f2:m7 bes2 |
+	bes2:m7 ees2 | \myEndLine
+	aes2:dim7 des2:7 |
+	g2:m7 c2:7.9- |
+	f2:m7 c2:aug7 |
+	f2:m7 bes2:7 | \myEndLine
+	ees2:dim7 f4:m7 bes4:7 |
+	ees2:dim7 c2:m7 |
+	f2:m7 bes2 |
+	bes2:m7 ees2 | \myEndLine
+	aes2:dim7 des2:7 |
+	g2:m7 c2:7.9- |
+	f2:m7 c2:aug7 |
+	f2:m7 bes2:7 | \myEndLine
+	a2:m7.5- d2:7.9- |
+	g1:m |
+	g1:m6 |
+	g1:m | \myEndLine
+	g1:m6 |
+	bes2/f g2:m7 |
+	bes4/f g2.:m7 |
+	bes4.:7 aes1*5/8/ees | \myEndLine
+	f2:m7 bes2:7 |
+	ees2:dim7 c2:m7 |
+	f2:m7 bes2:7 |
+	bes2:m7 ees2:7 | \myEndLine
+	aes2:dim7 des2:7 |
+	g2:m7 c2:7.9- |
+	f2:m7 c2:aug7 |
+	f2:m7 bes2:7 | \myEndLine
+	ees1:6/f |
+	\endBar
+	\endPart
+
+	\endSong
+	\endChords
+}
+{% endif %}
+{% if part == "VoiceWikifonia" %}\absolute {
+	\tempo "Moderato" 4 = 120
+	\time 4/4
+	\key es \major
+
+	r2 r4 r8 es'8 |
+	d'4. c'8 es'4. c'8 |
+	d'8 c'8 \once \omit TupletBracket \times 2/3 { es'8 c'8 d'8 ~ } d'4 ~ \once \omit TupletBracket \times 2/3 { d'8 es'8 e'8 } |
+	f'4. es'8 g'4. es'8 |
+	f'8 es'8 \once \omit TupletBracket \times 2/3 { g'8 es'8 f'8 ~ } f'4 ~ \once \omit TupletBracket \times 2/3 { f'8 g'8 as'8 } |
+	bes'4 g'8 des''8 ~ des''4. c''8 |
+	bes'8 as'4. ~ as'2 |
+	r8 c'8 b8 c'8 as'4 g'8 bes'8 ~ |
+	bes'2. r8 es'8 |
+	d'4. c'8 es'4. c'8 |
+	d'8 c'8 \once \omit TupletBracket \times 2/3 { es'8 c'8 d'8 ~ } d'4 ~ \once \omit TupletBracket \times 2/3 { d'8 es'8 e'8 } |
+	f'4. es'8 g'4. es'8 |
+	f'8 es'8 \once \omit TupletBracket \times 2/3 { g'8 es'8 f'8 ~ } f'4 ~ \once \omit TupletBracket \times 2/3 { f'8 g'8 as'8 } |
+	bes'4 g'8 des''8 ~ des''4. c''8 |
+	bes'8 as'4. ~ as'2 |
+	r8 c'8 b8 c'8 as'4 g'8 es'8 ~ |
+	es'1 |
+	r8 g'8 a'8 g'8 bes'8 bes'4 g'8 |
+	a'8 a'8 g'8 bes'8 ~ bes'2 |
+	r8 g'8 a'8 g'8 bes'8 bes'4 g'8 |
+	a'8 a'8 g'8 bes'8 ~ bes'2 |
+	r8 bes'8 c''8 bes'8 d''8 d''4 bes'8 |
+	c''8 c''8 bes'8 d''8 ~ d''4. g'8 |
+	bes'4 - "" bes'8 as'8 as'4. as'8 |
+	g'8 g'4 g'8 f'4. es'8 |
+	d'4. c'8 es'4. c'8 |
+	d'8 c'8 \once \omit TupletBracket \times 2/3 { es'8 c'8 d'8 ~ } d'4 ~ \once \omit TupletBracket \times 2/3 { d'8 es'8 e'8 } |
+	f'4. es'8 g'4. es'8 |
+	f'8 es'8 \once \omit TupletBracket \times 2/3 { g'8 es'8 f'8 ~ } f'4 ~ \once \omit TupletBracket \times 2/3 { f'8 g'8 as'8 } |
+	bes'4 g'8 des''8 ~ des''4. c''8 |
+	bes'8 as'4. ~ as'2 |
+	r8 c'8 b8 c'8 as'4 g'4 - "" |
+	es'1 |
+	\endBar
+}
+{% endif %}

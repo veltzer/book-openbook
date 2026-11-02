@@ -1,0 +1,147 @@
+{#
+default_version = "Wikifonia"
+
+[attributes]
+title = "Like A Lover"
+style = "Jazz"
+composer = "Dory Caymmi"
+piece = "Jazz"
+typesetter = "OpenBook contributors (MusicXML import)"
+completion = "3"
+uuid = "8d8f0191-60c6-5822-8e0a-3f7a3d1780d9"
+location = "New_Real_2:193"
+copyright = "All Rights Reserved"
+
+[versions.Wikifonia]
+doChords = true
+doVoice = true
+doLyrics = false
+doLyricsmore = false
+doLyricsmoremore = false
+doChordBars = false
+doGuitar = false
+doExtra = false
+doPrep = false
+doOwn = false
+#}
+{% if part == "Vars" %}
+{% endif %}
+{% if part == "Doc" %}
+	DONE:
+	- imported melody and chord changes from real_books_archive.gi/Wikifonia.tar.xz: Wikifonia/Dory Caymmi, Nelson Mota, English by  Alan and Marilyn Bergman - Like A Lover.mxl.
+	- source revision: http://wikifonia.org/node/18008/revisions/23844/view.
+	- PDF reference: real_books_archive.gi/newreal2.pdf, PDF page 193.
+	- retained the original copyright notice where printed; the underlying music is not relicensed.
+	- retained written measures, pickups, repeats and endings; lyrics omitted.
+	- tempo is an editorial practice suggestion.
+	TODO:
+	- proofread the music against the referenced PDF and check by ear.
+	- verify the copyright notice against the scan; no readable per-tune notice was recovered, so the archived rights notice is retained where available.
+{% endif %}
+{% if part == "ChordsWikifonia" %}\chordmode {
+	\startChords
+	\startSong
+
+	\myMark "A"
+	\startPart
+	\repeat volta 2 {
+	c1:maj7 |
+	g1:sus4.7 |
+	c1:maj7 |
+	d1/c | \myEndLine
+	b2:m7 e2:m7 |
+	a2:sus4.7.13 a2:9 |
+	d1:maj7 |
+	g2:13 g2:aug7 | \myEndLine
+	f1:maj7 |
+	g1/f |
+	c1:maj7 |
+	g1:sus4.7 | \myEndLine
+	c1:maj7 |
+	g1:sus4.7 |
+	}
+	c2:maj7 f2:m6/c |
+	c1:maj7 | \myEndLine
+	d1/c |
+	s1 |
+	b2:m7 b2:7.9- |
+	e1:m7 | \myEndLine
+	fis1:m7.5- |
+	b2:13 b2:aug7 |
+	e1:m7 |
+	a4.:m7 g4.:m7 d4/fis | \myEndLine
+	s1 |
+	g1:sus4.7 |
+	s1 |
+	c1:maj7 | \myEndLine
+	g1:sus4.7 |
+	c1:maj7 |
+	d1/c |
+	b2:m7 e2:m7 | \myEndLine
+	a2:sus4.7.13 a2:9 |
+	d1:maj7 |
+	g2:13 g2:aug7 |
+	f1:maj7 | \myEndLine
+	g1/f |
+	c1:maj7 |
+	g1:sus4.7 |
+	c1:maj7 | \myEndLine
+	g1:sus4.7 |
+	\endBar
+	\endPart
+
+	\endSong
+	\endChords
+}
+{% endif %}
+{% if part == "VoiceWikifonia" %}\absolute {
+	\tempo "Moderato" 4 = 120
+	\time 4/4
+	\key c \major
+
+	\repeat volta 2 {
+	r4 c'8 d'8 e'8 e'4 g'8 |
+	f'4 e'8 d'8 ~ d'2 |
+	r4 c'8 d'8 e'8 e'4 g'8 |
+	fis'4 fis'8 e'8 ~ e'8 e'4 d'8 ~ |
+	d'2 r4 g'4 |
+	fis'4 fis'8 e'8 ~ e'8 e'4 fis'8 ~ |
+	fis'8 d'8 a8 d'8 fis'8 a'8 g'4 ~ |
+	g'4 g'8 g'8 ~ g'8 g'4 c''8 ~ |
+	c''1 |
+	b'2 a'8 g'4 e'8 ~ |
+	e'4 c'8 d'8 e'8 e'4 g'8 |
+	f'4 e'8 d'8 ~ d'4 c'8 c'8 ~ |
+	c'1 |
+	R1 |
+	}
+	r4 e'8 d'8 f'8 f'4 e'8 |
+	d'4 d'8 c'8 ~ c'8 b4 a8 ~ |
+	a4 fis'8 e'8 g'4 fis'4 ~ |
+	fis'2 ~ fis'8 d'4 b8 ~ |
+	b4 a'8 g'8 b'8 b'4 a'8 |
+	g'4 g'8 a'8 ~ a'8 g'8 a'4 ~ |
+	a'4 b'8 a'8 c''4 b'4 ~ |
+	\times 2/3 { b'4 b'4 a'4 } c''8 b'4 g'8 ~ |
+	g'4 g'8 fis'8 \times 2/3 { a'4 a'4 g'4 } |
+	c'4 c'8 d'8 ~ d'8 c'8 d'4 ~ |
+	d'4. c'8 e'4 d'4 ~ |
+	d'1 ~ |
+	d'1 |
+	r4 c'8 d'8 e'8 e'4 g'8 |
+	f'4 e'8 d'8 ~ d'2 |
+	r4 c'8 d'8 e'8 e'4 g'8 |
+	fis'4 fis'8 e'8 ~ e'8 e'4 d'8 ~ |
+	d'2 r4 g'4 |
+	fis'4 fis'8 e'8 ~ e'8 e'4 fis'8 ~ |
+	fis'8 d'8 a8 d'8 fis'8 a'8 g'4 ~ |
+	g'4 g'8 g'8 ~ g'8 g'4 c''8 ~ |
+	c''1 |
+	b'2 a'8 g'4 e'8 ~ |
+	e'4 c'8 d'8 e'8 e'4 g'8 |
+	f'4 e'8 d'8 ~ d'4 c'8 c'8 ~ |
+	c'1 |
+	R1 |
+	\endBar
+}
+{% endif %}

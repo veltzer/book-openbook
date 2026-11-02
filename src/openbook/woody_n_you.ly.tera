@@ -1,0 +1,113 @@
+{#
+default_version = "Wikifonia"
+
+[attributes]
+title = "Woody 'n' You"
+style = "Jazz"
+composer = "Dizzy Gillespie"
+piece = "Jazz"
+typesetter = "OpenBook contributors (MusicXML import)"
+completion = "3"
+uuid = "be8c64be-e677-554f-ad1e-2d56df801def"
+location = "Real_Book_1:483, New_Real_2:448, 557_Standards:433, Colorado:274, Colorado_Cookbook:274"
+copyright = "1943, 1991 Edwin H. Morris & Co., A Division of MPL Communications. Renewed 1971 Edwin H. Morris & Co., A Division of MPL"
+copyrightextra = "Communications,"
+
+[versions.Wikifonia]
+doChords = true
+doVoice = true
+doLyrics = false
+doLyricsmore = false
+doLyricsmoremore = false
+doChordBars = false
+doGuitar = false
+doExtra = false
+doPrep = false
+doOwn = false
+#}
+{% if part == "Vars" %}
+{% endif %}
+{% if part == "Doc" %}
+	DONE:
+	- imported melody and chord changes from real_books_archive.gi/Wikifonia.tar.xz: Wikifonia/Dizzy Gillespie - Woody n' You.mxl.
+	- source revision: http://wikifonia.org/node/7875/revisions/10786/view.
+	- PDF reference: real_books_archive.gi/newreal2.pdf, PDF page 448.
+	- retained the original copyright notice where printed; the underlying music is not relicensed.
+	- retained written measures, pickups, repeats and endings; lyrics omitted.
+	- tempo is an editorial practice suggestion.
+	TODO:
+	- proofread the music against the referenced PDF and check by ear.
+{% endif %}
+{% if part == "ChordsWikifonia" %}\chordmode {
+	\startChords
+	\startSong
+
+	\myMark "A"
+	\startPart
+	\repeat volta 2 {
+	g1:m7.5- |
+	c1:7.9+ |
+	f1:m7.5- |
+	bes1:7.9+ | \myEndLine
+	ees1:m7.5- |
+	aes1:7.9+ |
+	des2:maj7 aes2:7 |
+	des1:6 | \myEndLine
+	}
+	aes2:m7 des2:7 |
+	aes2:m7 des2:7 |
+	aes2:m7 des2:7 |
+	ges1:maj7 | \myEndLine
+	bes2:m7 ees2:7 |
+	bes2:m7 ees2:7 |
+	bes2:m7 ees2:7 |
+	aes1:maj7 | \myEndLine
+	g1:m7.5- |
+	c1:7.9+ |
+	f1:m7.5- |
+	bes1:7.9+ | \myEndLine
+	ees1:m7.5- |
+	aes1:7.9+ |
+	des2:maj7 aes2:7 |
+	des1:6 | \myEndLine
+	\endBar
+	\endPart
+
+	\endSong
+	\endChords
+}
+{% endif %}
+{% if part == "VoiceWikifonia" %}\absolute {
+	\tempo "Moderato" 4 = 120
+	\time 4/4
+	\key des \major
+
+	\repeat volta 2 {
+	\mark \markup { \box { A } } r4 f''4 g''4. f''8 |
+	es''8 c''8 r4 r2 |
+	r4 es''4 f''4. es''8 |
+	des''8 bes'8 r4 r2 |
+	r4 des''4 es''4. des''8 |
+	ces''8 as'8 r4 r4 ges'8 e'8 |
+	f'8 as'8 c''8 es''8 ~ es''4 d''8 c''8 |
+	des''8 bes'8 r4 r2 |
+	}
+	\mark \markup { \box { B } } bes'4 as'8 ges'8 f'4 ges'8 as'8 |
+	bes'4 as'8 ges'8 f'4 ges'8 as'8 |
+	bes'8 ges'8 es'8 ces'8 d'8 a'8 r8 des'8 |
+	bes'1 |
+	c''4 bes'8 as'8 g'4 as'8 bes'8 |
+	c''4 bes'8 as'8 g'4 as'8 bes'8 |
+	c''8 as'8 ges'8 des'8 e'8 b'8 r8 es'8 |
+	c''1 |
+	\mark \markup { \box { A } } r4 f''4 g''4. f''8 |
+	es''8 c''8 r4 r2 |
+	r4 es''4 f''4. es''8 |
+	des''8 bes'8 r4 r2 |
+	r4 des''4 es''4. des''8 |
+	ces''8 as'8 r4 r4 ges'8 e'8 |
+	f'8 as'8 c''8 es''8 ~ es''4 d''8 c''8 |
+	des''8 bes'8 r4 r2 |
+	\endBar
+}
+{% endif %}

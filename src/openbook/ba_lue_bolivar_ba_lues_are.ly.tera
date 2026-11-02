@@ -1,0 +1,103 @@
+{#
+default_version = "Wikifonia"
+
+[attributes]
+title = "Ba-Lue Bolivar Ba-Lues Are"
+style = "Jazz"
+composer = "Thelonious Monk"
+piece = "Jazz"
+typesetter = "OpenBook contributors (MusicXML import)"
+completion = "3"
+uuid = "1714642b-35b5-5d2d-8b49-3c7f67e9332d"
+location = "Real_Book_2:27"
+copyright = "All Rights Reserved"
+
+[versions.Wikifonia]
+doChords = true
+doVoice = true
+doLyrics = false
+doLyricsmore = false
+doLyricsmoremore = false
+doChordBars = false
+doGuitar = false
+doExtra = false
+doPrep = false
+doOwn = false
+#}
+{% if part == "Vars" %}
+{% endif %}
+{% if part == "Doc" %}
+	DONE:
+	- imported melody and chord changes from real_books_archive.gi/Wikifonia.tar.xz: Wikifonia/Thelonious Monk - Ba-Lue Bolivar Ba-Lues Are.mxl.
+	- source revision: http://wikifonia.org/node/20817/revisions/27520/view.
+	- PDF reference: real_books_archive.gi/The Real Book of Jazz Volume II.pdf, PDF page 27.
+	- retained the original copyright notice where printed; the underlying music is not relicensed.
+	- retained written measures, pickups, repeats and endings; lyrics omitted.
+	- tempo taken from archived MusicXML.
+	TODO:
+	- proofread the music against the referenced PDF and check by ear.
+	- verify the copyright notice against the scan; no readable per-tune notice was recovered, so the archived rights notice is retained where available.
+{% endif %}
+{% if part == "ChordsWikifonia" %}\chordmode {
+	\startChords
+	\startSong
+
+	\myMark "A"
+	\startPart
+	\partial 4 s4 |
+	\repeat volta 2 {
+	bes1:7 |
+	ees1:7 |
+	bes1:7 | \myEndLine
+	bes1:7 |
+	ees1:7 |
+	aes1:7 |
+	ees1:7 | \myEndLine
+	ees2.:7 g4:7 |
+	c1:m7 |
+	f1:7 |
+	bes1:7.11+ | \myEndLine
+	} \alternative {
+	{
+	s1 | \myEndLineVoltaNotLast
+	}
+	{
+	bes1:7.11+ | \myEndLineVoltaLast
+	}
+	}
+	\endBar
+	\endPart
+
+	\endSong
+	\endChords
+}
+{% endif %}
+{% if part == "VoiceWikifonia" %}\absolute {
+	\tempo "Moderato" 4 = 120
+	\time 4/4
+	\key bes \major
+
+	\partial 4 r8 bes8 |
+	\repeat volta 2 {
+	d'8 f'8 g'4 as'4 f'8 bes8 |
+	g'8 bes'8 c''8 des''8 ~ des''4 r8 bes8 |
+	d'8 f'8 g'4 as'4 f'8 as8 ~ |
+	as2 r4 r8 es'8 |
+	g'8 bes'8 c''4 des''4 bes'8 es'8 |
+	c''8 es''8 f''8 ges''8 ~ ges''4 r8 es'8 |
+	g'8 bes'8 c''4 des''4 bes'8 des'8 ~ |
+	des'2 r4 r8 bes8 |
+	es'8 g'8 bes'4 des''8 bes8 es'8 g'8 |
+	bes'4 des''8 bes8 d'8 f'8 bes'4 |
+	e''2. bes'4 ~ |
+	} \alternative {
+	{
+	bes'2. r8 bes8 |
+	}
+	{
+	bes'2. r4 |
+	}
+	}
+	\endBar
+}
+{% endif %}

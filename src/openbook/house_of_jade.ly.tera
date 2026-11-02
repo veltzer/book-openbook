@@ -1,0 +1,112 @@
+{#
+default_version = "Wikifonia"
+
+[attributes]
+title = "House of Jade"
+style = "Jazz"
+composer = "Wayne Shorter"
+piece = "Jazz"
+typesetter = "OpenBook contributors (MusicXML import)"
+completion = "3"
+uuid = "8b8ed05e-0d20-5985-9cd6-4b85a308d2f1"
+location = "Real_Book_1:214"
+copyright = "All Rights Reserved"
+
+[versions.Wikifonia]
+doChords = true
+doVoice = true
+doLyrics = false
+doLyricsmore = false
+doLyricsmoremore = false
+doChordBars = false
+doGuitar = false
+doExtra = false
+doPrep = false
+doOwn = false
+#}
+{% if part == "Vars" %}
+{% endif %}
+{% if part == "Doc" %}
+	DONE:
+	- imported melody and chord changes from real_books_archive.gi/Wikifonia.tar.xz: Wikifonia/Wayne Shorter - House of Jade.mxl.
+	- source revision: http://wikifonia.org/node/8453/revisions/11709/view.
+	- PDF reference: real_books_archive.gi/The Real Book of Jazz Volume I.pdf, PDF page 214.
+	- retained the original copyright notice where printed; the underlying music is not relicensed.
+	- retained written measures, pickups, repeats and endings; lyrics omitted.
+	- tempo is an editorial practice suggestion.
+	TODO:
+	- proofread the music against the referenced PDF and check by ear.
+	- verify the copyright notice against the scan; no readable per-tune notice was recovered, so the archived rights notice is retained where available.
+{% endif %}
+{% if part == "ChordsWikifonia" %}\chordmode {
+	\startChords
+	\startSong
+
+	\myMark "A"
+	\startPart
+	\partial 4 s4 |
+	d2:m7.5- des2:maj7 |
+	c2:m7 des2:7.11+ |
+	ees2:7 f2:7 | \myEndLine
+	des2:7 c2:m7 |
+	d2:m7.5- des2:maj7 |
+	c2:m7 f2:7 |
+	ees2:7 f2:7 | \myEndLine
+	des2:7 c2:m7 |
+	bes1:m9/ees |
+	s1 |
+	s1 | \myEndLine
+	s1 |
+	a1:m9/d |
+	s2 d2:7 |
+	e1:m7 | \myEndLine
+	ees1:7.11+ |
+	d2:m7.5- des2:maj7 |
+	c2:m7 des2:7.11+ |
+	ees2:7 f2:7 | \myEndLine
+	des2:7 c2:m7 |
+	d2:m7.5- des2:maj7 |
+	c2:m7 f2:7 |
+	ees2:7 f2:7 | \myEndLine
+	des2:7 c2:m7 |
+	\endBar
+	\endPart
+
+	\endSong
+	\endChords
+}
+{% endif %}
+{% if part == "VoiceWikifonia" %}\absolute {
+	\tempo "Moderato" 4 = 120
+	\time 4/4
+	\key es \major
+	\clef bass
+
+	\partial 4 a4 |
+	as4 bes8 c'8 ~ c'8 c'4 es'8 |
+	d'4 bes8 g8 ~ g2 |
+	c'8 es'8 ~ \once \omit TupletBracket \times 2/3 { es'8 c'8 bes8 } g4. f8 |
+	bes4 f8 g8 ~ g4. f8 |
+	as4 bes8 c'8 ~ c'8 c'4 es'8 |
+	f'4 d'8 c'8 ~ c'2 |
+	c'8 es'8 \once \omit TupletBracket \times 2/3 { es'8 c'8 bes8 } g4. f8 |
+	bes4 f8 g8 ~ g2 |
+	c'1 ~ |
+	c'4 ~ \once \omit TupletBracket \times 2/3 { c'8 g8 es8 } f8 g8 ~ \once \omit TupletBracket \times 2/3 { g8 as8 bes8 } |
+	c'1 ~ |
+	c'4 ~ \once \omit TupletBracket \times 2/3 { c'8 as8 f8 } g8 as8 ~ \once \omit TupletBracket \times 2/3 { as8 bes8 c'8 } |
+	d'1 |
+	r8 e'4. d'4 bes8 a8 ~ |
+	a1 |
+	a2. r8 a8 |
+	as4 bes8 c'8 ~ c'8 c'4 es'8 |
+	d'4 bes8 g8 ~ g2 |
+	c'8 es'8 \once \omit TupletBracket \times 2/3 { es'8 c'8 bes8 } g4. f8 |
+	bes4 f8 g8 ~ g4. f8 |
+	as4 bes8 c'8 ~ c'8 c'4 es'8 |
+	f'4 d'8 c'8 ~ c'2 |
+	c'8 es'8 \once \omit TupletBracket \times 2/3 { es'8 c'8 bes8 } g4. f8 |
+	bes4 f8 g8 ~ g2 |
+	\endBar
+}
+{% endif %}

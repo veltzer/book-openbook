@@ -1,0 +1,105 @@
+{#
+default_version = "Wikifonia"
+
+[attributes]
+title = "Some Other Blues"
+style = "Jazz"
+composer = "John Coltrane"
+piece = "Jazz"
+typesetter = "OpenBook contributors (MusicXML import)"
+completion = "3"
+uuid = "1ee9cbd1-c907-5ac1-830a-3b69a4dba404"
+location = "Real_Book_2:326, New_Real_2:344, Colorado:211, Colorado_Cookbook:211"
+copyright = "All Rights Reserved"
+
+[versions.Wikifonia]
+doChords = true
+doVoice = true
+doLyrics = false
+doLyricsmore = false
+doLyricsmoremore = false
+doChordBars = false
+doGuitar = false
+doExtra = false
+doPrep = false
+doOwn = false
+#}
+{% if part == "Vars" %}
+{% endif %}
+{% if part == "Doc" %}
+	DONE:
+	- imported melody and chord changes from real_books_archive.gi/Wikifonia.tar.xz: Wikifonia/John Coltrane - Some Other Blues.mxl.
+	- source revision: http://wikifonia.org/node/891/revisions/1183/view.
+	- PDF reference: real_books_archive.gi/newreal2.pdf, PDF page 344.
+	- retained the original copyright notice where printed; the underlying music is not relicensed.
+	- retained written measures, pickups, repeats and endings; lyrics omitted.
+	- tempo is an editorial practice suggestion.
+	TODO:
+	- proofread the music against the referenced PDF and check by ear.
+	- verify the copyright notice against the scan; no readable per-tune notice was recovered, so the archived rights notice is retained where available.
+{% endif %}
+{% if part == "ChordsWikifonia" %}\chordmode {
+	\startChords
+	\startSong
+
+	\myMark "A"
+	\startPart
+	\repeat volta 2 {
+	\partial 8 s8 |
+	f1:7 |
+	bes1:7 |
+	f1:7 | \myEndLine
+	s1 |
+	bes1:7 |
+	ees1:7 |
+	aes1:7 | \myEndLine
+	des1:7 |
+	c1:7 |
+	bes1:7 |
+	} \alternative {
+	{
+	f1:7 | \myEndLine
+	s1 | \myEndLineVoltaNotLast
+	}
+	{
+	f1:7 |
+	s1 | \myEndLineVoltaLast
+	}
+	}
+	\endBar
+	\endPart
+
+	\endSong
+	\endChords
+}
+{% endif %}
+{% if part == "VoiceWikifonia" %}\absolute {
+	\tempo "Moderato" 4 = 120
+	\time 4/4
+	\key f \major
+
+	\repeat volta 2 {
+	\partial 8 c''8 |
+	f''8 f''8 g''8 es''8 f''8 f''8 g''8 c''8 |
+	es''8 es''8 f''8 c''8 es''8 es''8 f''8 c''8 ~ |
+	c''2 ~ c''8 a'8 f'8 es'8 |
+	R1 |
+	cis''8 d''8 bes'8 a'8 as'8 c''8 d''8 f''8 |
+	fis''8 g''8 es''8 d''8 des''8 bes'8 es''8 c''8 ~ |
+	c''2 ~ c''8 bes'8 ges'8 es'8 |
+	R1 |
+	c''4 c''8 e''8 g''8 c''8 e''8 g''8 |
+	f''4 -- d''4 -. bes'4 -- g'4 -- |
+	} \alternative {
+	{
+	f'2 f'4 -. f'4 -- |
+	R1 |
+	}
+	{
+	f'4. es'8 r8 f'8 r4 |
+	R1 |
+	}
+	}
+	\endBar
+}
+{% endif %}

@@ -1,0 +1,117 @@
+{#
+default_version = "Wikifonia"
+
+[attributes]
+title = "502 Blues"
+style = "Jazz"
+composer = "James Rowles"
+piece = "Jazz"
+typesetter = "OpenBook contributors (MusicXML import)"
+completion = "3"
+uuid = "830712b8-8769-54be-978c-280a1a1609ab"
+location = "Real_Book_1:166"
+copyright = "All Rights Reserved"
+
+[versions.Wikifonia]
+doChords = true
+doVoice = true
+doLyrics = false
+doLyricsmore = false
+doLyricsmoremore = false
+doChordBars = false
+doGuitar = false
+doExtra = false
+doPrep = false
+doOwn = false
+#}
+{% if part == "Vars" %}
+{% endif %}
+{% if part == "Doc" %}
+	DONE:
+	- imported melody and chord changes from real_books_archive.gi/Wikifonia.tar.xz: Wikifonia/James Rowles - 502 Blues.mxl.
+	- source revision: http://wikifonia.org/node/8833/revisions/12184/view.
+	- PDF reference: real_books_archive.gi/The Real Book of Jazz Volume I.pdf, PDF page 166.
+	- retained the original copyright notice where printed; the underlying music is not relicensed.
+	- retained written measures, pickups, repeats and endings; lyrics omitted.
+	- tempo is an editorial practice suggestion.
+	TODO:
+	- proofread the music against the referenced PDF and check by ear.
+	- verify the copyright notice against the scan; no readable per-tune notice was recovered, so the archived rights notice is retained where available.
+{% endif %}
+{% if part == "ChordsWikifonia" %}\chordmode {
+	\startChords
+	\startSong
+
+	\myMark "A"
+	\startPart
+	\partial 8 s8 |
+	\repeat volta 2 {
+	a2.:m7 |
+	des2.:maj7.5+ |
+	b2.:m7.5- | \myEndLine
+	e2.:7.9- |
+	a2.:m7 |
+	des2.:maj7.5+ |
+	b2.:m7.5- | \myEndLine
+	e2.:7.9+ |
+	c2.:m7 |
+	f2.:7 |
+	bes2:maj7 a4:m7 | \myEndLine
+	aes2:m7 des4:7 |
+	} \alternative {
+	{
+	fis2.:m7.5- |
+	b2.:7.9- |
+	e2.:maj7 | \myEndLine
+	s1*7/12 e1*1/6:aug7 | \myEndLineVoltaNotLast
+	}
+	{
+	fis2.:m7.5- |
+	b2.:7.9- |
+	e2.:m7 | \myEndLine
+	s2. | \myEndLineVoltaLast
+	}
+	}
+	\endBar
+	\endPart
+
+	\endSong
+	\endChords
+}
+{% endif %}
+{% if part == "VoiceWikifonia" %}\absolute {
+	\tempo "Moderato" 4 = 120
+	\time 3/4
+	\key c \major
+
+	\partial 8 e''8 |
+	\repeat volta 2 {
+	a''2 ~ \once \omit TupletBracket \times 2/3 { a''8 b''8 a''8 } |
+	c'''2 ~ \once \omit TupletBracket \times 2/3 { c'''8 b''8 a''8 } |
+	g''8 e''4. ~ e''4 ~ |
+	e''4 r4 r8 e''8 |
+	a''2 ~ \once \omit TupletBracket \times 2/3 { a''8 b''8 a''8 } |
+	c'''2 ~ \once \omit TupletBracket \times 2/3 { c'''8 b''8 a''8 } |
+	g''8 e''4. ~ e''4 ~ |
+	e''4 r4 r8 g''8 |
+	c'''2 ~ \once \omit TupletBracket \times 2/3 { c'''8 d'''8 c'''8 } |
+	es'''2 ~ \once \omit TupletBracket \times 2/3 { es'''8 d'''8 f''8 } |
+	bes''4 c'''8 bes''8 a''8 bes''8 |
+	des'''4 es''8 bes''8 ~ bes''4 |
+	} \alternative {
+	{
+	b''8 a''8 gis''8 a''8 c'''4 ~ |
+	\times 3/4 { c'''4 dis''4 gis''4 c'''4 } |
+	dis'''2. ~ |
+	dis'''4 r4 \times 2/3 { r8 d'''8 c'''8 } |
+	}
+	{
+	b''8 a''8 gis''8 a''8 c'''8 dis'''8 |
+	\times 3/4 { gis'''4 c'''4 dis'''4 gis''4 } |
+	g''2. ~ |
+	g''2. |
+	}
+	}
+	\endBar
+}
+{% endif %}

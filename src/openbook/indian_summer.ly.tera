@@ -1,0 +1,125 @@
+{#
+default_version = "Wikifonia"
+
+[attributes]
+title = "Indian Summer"
+style = "Jazz"
+composer = "Victor Herbert"
+piece = "Jazz"
+typesetter = "OpenBook contributors (MusicXML import)"
+completion = "3"
+uuid = "1a698ac8-c6e5-5e70-8b04-c58b852d4edf"
+location = "Real_Book_3:153, 557_Standards:172, StandardsBook:237"
+copyright = "All Rights Reserved"
+
+[versions.Wikifonia]
+doChords = true
+doVoice = true
+doLyrics = false
+doLyricsmore = false
+doLyricsmoremore = false
+doChordBars = false
+doGuitar = false
+doExtra = false
+doPrep = false
+doOwn = false
+#}
+{% if part == "Vars" %}
+{% endif %}
+{% if part == "Doc" %}
+	DONE:
+	- imported melody and chord changes from real_books_archive.gi/Wikifonia.tar.xz: Wikifonia/Victor Herbert, Al Dubin - Indian Summer.mxl.
+	- source revision: http://wikifonia.org/node/3463/revisions/4458/view.
+	- PDF reference: real_books_archive.gi/The Standards Real Book.pdf, PDF page 237.
+	- retained the original copyright notice where printed; the underlying music is not relicensed.
+	- retained written measures, pickups, repeats and endings; lyrics omitted.
+	- tempo is an editorial practice suggestion.
+	TODO:
+	- proofread the music against the referenced PDF and check by ear.
+	- verify the copyright notice against the scan; no readable per-tune notice was recovered, so the archived rights notice is retained where available.
+{% endif %}
+{% if part == "ChordsWikifonia" %}\chordmode {
+	\startChords
+	\startSong
+
+	\myMark "A"
+	\startPart
+	c1 |
+	s4. g1*5/8:7 |
+	c1 |
+	s2 g2:7 | \myEndLine
+	c1 |
+	s1 |
+	d1:m7 |
+	s1 | \myEndLine
+	g1:7 |
+	e1:7 |
+	a1:m |
+	s1 | \myEndLine
+	s1 |
+	d1:7 |
+	g1:7 |
+	s1 | \myEndLine
+	c1 |
+	s2 g2:7 |
+	c1 |
+	s2 g2:7 | \myEndLine
+	c1 |
+	s1 |
+	f1 |
+	s2. d4:m | \myEndLine
+	c1 |
+	e4:7 a2.:m |
+	f1:m |
+	bes4 aes2.:7 | \myEndLine
+	c1 |
+	s2 g2:7 |
+	c1 |
+	s1 | \myEndLine
+	\endBar
+	\endPart
+
+	\endSong
+	\endChords
+}
+{% endif %}
+{% if part == "VoiceWikifonia" %}\absolute {
+	\tempo "Moderato" 4 = 120
+	\time 4/4
+	\key c \major
+
+	e'8 g'4. ~ g'2 ~ |
+	g'4. r4 a'8 \once \omit TupletBracket \times 2/3 { b'8 a'8 b'8 } |
+	e'8 g'4. ~ g'2 |
+	r2 \times 2/3 { r8 g'8 a'8 } \once \omit TupletBracket \times 2/3 { b'8 a'8 b'8 } |
+	e''8 b'4. ~ b'2 |
+	d''8 a'4. ~ a'2 |
+	c''8 f'4. ~ f'2 |
+	r2 \times 2/3 { r8 f'8 g'8 } \once \omit TupletBracket \times 2/3 { a'8 g''8 f''8 } |
+	e''8 g''4. ~ g''2 |
+	d''8 e''4. ~ e''2 |
+	c''8 a'4. ~ a'2 |
+	r2 \times 2/3 { r8 a'8 b'8 } \once \omit TupletBracket \times 2/3 { c''8 b'8 c''8 } |
+	e''8 b''4. ~ b''2 |
+	e''8 a''4. ~ a''2 |
+	e''8 g''4. ~ g''2 |
+	r2 \times 2/3 { r8 e''8 d''8 } \once \omit TupletBracket \times 2/3 { b'8 a'8 b'8 } |
+	e'8 g'4. ~ g'2 |
+	r2 a'4 \once \omit TupletBracket \times 2/3 { b'8 a'8 b'8 } |
+	e'8 g'4. ~ g'2 |
+	r2 \times 2/3 { r8 g'8 a'8 } \once \omit TupletBracket \times 2/3 { b'8 a'8 b'8 } |
+	e''8 b'4. ~ b'2 |
+	d''8 a'4. ~ a'2 |
+	c''8 f'4. ~ f'2 |
+	r2 \times 2/3 { r8 d''8 e''8 } \once \omit TupletBracket \times 2/3 { f''8 e''8 d''8 } |
+	\once \omit TupletBracket \times 2/3 { g''8 a''8 g''8 } e''2 r4 |
+	\once \omit TupletBracket \times 2/3 { d''8 e''8 d''8 } c''2 r4 |
+	\once \omit TupletBracket \times 2/3 { es''8 f''8 es''8 } c''2 r4 |
+	\once \omit TupletBracket \times 2/3 { bes'8 c''8 bes'8 } as'2 r4 |
+	e'8 g'4. ~ g'2 |
+	r2 \times 2/3 { r8 g'8 a'8 } \once \omit TupletBracket \times 2/3 { b'8 a'8 b'8 } |
+	a'8 c''4. ~ c''2 ~ |
+	c''2 r2 |
+	\endBar
+}
+{% endif %}

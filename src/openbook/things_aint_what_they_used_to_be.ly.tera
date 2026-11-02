@@ -1,0 +1,113 @@
+{#
+default_version = "Wikifonia"
+
+[attributes]
+title = "Things Ain't What They Used to Be"
+style = "Jazz"
+composer = "Mercer Ellington"
+piece = "Jazz"
+typesetter = "OpenBook contributors (MusicXML import)"
+completion = "3"
+uuid = "1393caac-0727-5833-b1ca-108b2a91ae47"
+location = "Real_Book_2:372, Real_Book_3:313, 557_Standards:383, Colorado:238, Colorado_Cookbook:238"
+copyright = "All Rights Reserved"
+
+[versions.Wikifonia]
+doChords = true
+doVoice = true
+doLyrics = false
+doLyricsmore = false
+doLyricsmoremore = false
+doChordBars = false
+doGuitar = false
+doExtra = false
+doPrep = false
+doOwn = false
+#}
+{% if part == "Vars" %}
+{% endif %}
+{% if part == "Doc" %}
+	DONE:
+	- imported melody and chord changes from real_books_archive.gi/Wikifonia.tar.xz: Wikifonia/Mercer Ellington - Things Ain't What They Used To Be.mxl.1.
+	- source revision: http://wikifonia.org/node/19944/revisions/26315/view.
+	- PDF reference: real_books_archive.gi/The Real Book of Jazz Volume III.pdf, PDF page 313.
+	- retained the original copyright notice where printed; the underlying music is not relicensed.
+	- retained written measures, pickups, repeats and endings; lyrics omitted.
+	- tempo is an editorial practice suggestion.
+	TODO:
+	- proofread the music against the referenced PDF and check by ear.
+	- verify the copyright notice against the scan; no readable per-tune notice was recovered, so the archived rights notice is retained where available.
+{% endif %}
+{% if part == "ChordsWikifonia" %}\chordmode {
+	\startChords
+	\startSong
+
+	\myMark "A"
+	\startPart
+	ees1:7 |
+	s1 |
+	s1 |
+	s1 | \myEndLine
+	aes1:7 |
+	s4. aes1*5/8:m7 |
+	ees1:7 |
+	s1 | \myEndLine
+	f1:m7 |
+	s2. bes4:7 |
+	ees1:7 |
+	f1:m7 | \myEndLine
+	ees1:7 |
+	s1 |
+	s1 |
+	s1 | \myEndLine
+	aes1:7 |
+	s1 |
+	ees1:7 |
+	s1 | \myEndLine
+	f1:m7 |
+	s2 bes2:7 |
+	ees1:7 |
+	f2:m7 bes2:7 | \myEndLine
+	ees1:7 |
+	s1 |
+	\endBar
+	\endPart
+
+	\endSong
+	\endChords
+}
+{% endif %}
+{% if part == "VoiceWikifonia" %}\absolute {
+	\tempo "Moderato" 4 = 120
+	\time 4/4
+	\key es \major
+
+	\times 2/3 { r8 bes8 es'8 } \once \omit TupletBracket \times 2/3 { g'8 bes'8 c''8 } bes'4 c''8 es'8 ~ |
+	es'4. g'8 ~ g'4 r4 |
+	\times 2/3 { r8 bes8 es'8 } \once \omit TupletBracket \times 2/3 { g'8 bes'8 c''8 } bes'4 c''8 es'8 ~ |
+	es'4. g'8 ~ g'4 r4 |
+	\times 2/3 { r8 es'8 as'8 } \once \omit TupletBracket \times 2/3 { c''8 es''8 f''8 } es''4 f''8 as'8 ~ |
+	as'4. ces''8 r8 ces''8 bes'8 g'8 ~ |
+	\once \omit TupletBracket \times 2/3 { g'8 bes8 es'8 } \once \omit TupletBracket \times 2/3 { g'8 bes'8 c''8 } bes'4 c''8 es'8 ~ |
+	es'4. g'8 r4 r8 bes'8 |
+	\once \omit TupletBracket \times 2/3 { es''8 des''8 bes'8 ~ } bes'2 r8 bes'8 |
+	\once \omit TupletBracket \times 2/3 { es''8 des''8 bes'8 } \once \omit TupletBracket \times 2/3 { es''8 des''8 bes'8 } des''4 d''8 es''8 ~ ^ "To Coda" |
+	es''1 ~ |
+	es''2 r8 - "bB7" bes8 c'8 es'8 |
+	a'8 bes'8 ~ bes'2. |
+	a'8 bes'8 a'8 bes'8 g'4 \once \omit TupletBracket \times 2/3 { bes8 c'8 es'8 } |
+	a'8 bes'8 ~ bes'2. |
+	a'8 bes'8 a'8 bes'8 g'4 es'8 bes8 |
+	a'8 bes'8 ~ bes'2. |
+	a'8 bes'8 a'8 bes'8 g'4 es'8 bes8 |
+	a'8 bes'8 ~ bes'2. |
+	a'8 bes'8 a'8 bes'8 g'4 r8 bes'8 |
+	\once \omit TupletBracket \times 2/3 { es''8 des''8 bes'8 ~ } bes'2 r8 bes'8 |
+	\once \omit TupletBracket \times 2/3 { es''8 des''8 bes'8 } \once \omit TupletBracket \times 2/3 { es''8 des''8 bes'8 } des''4 d''8 es''8 ~ |
+	es''1 ~ |
+	es''2 r2 ^ "D.C. al Coda" |
+	\mark \markup { \musicglyph "scripts.coda" } es''1 ~ |
+	es''2 r2 |
+	\endBar
+}
+{% endif %}

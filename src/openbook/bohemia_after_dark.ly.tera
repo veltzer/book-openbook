@@ -1,0 +1,124 @@
+{#
+default_version = "Wikifonia"
+
+[attributes]
+title = "Bohemia After Dark"
+style = "Jazz"
+composer = "Oscar Pettiford"
+piece = "Jazz"
+typesetter = "OpenBook contributors (MusicXML import)"
+completion = "3"
+uuid = "aefd5a1d-20cc-5916-ac07-461c3a96f870"
+location = "Real_Book_2:413"
+copyright = "All Rights Reserved"
+
+[versions.Wikifonia]
+doChords = true
+doVoice = true
+doLyrics = false
+doLyricsmore = false
+doLyricsmoremore = false
+doChordBars = false
+doGuitar = false
+doExtra = false
+doPrep = false
+doOwn = false
+#}
+{% if part == "Vars" %}
+{% endif %}
+{% if part == "Doc" %}
+	DONE:
+	- imported melody and chord changes from real_books_archive.gi/Wikifonia.tar.xz: Wikifonia/Oscar Pettiford - Bohemia After Dark.mxl.
+	- source revision: http://wikifonia.org/node/7115/revisions/16739/view.
+	- PDF reference: real_books_archive.gi/The Real Book of Jazz Volume II.pdf, PDF page 413.
+	- retained the original copyright notice where printed; the underlying music is not relicensed.
+	- retained written measures, pickups, repeats and endings; lyrics omitted.
+	- tempo is an editorial practice suggestion.
+	TODO:
+	- proofread the music against the referenced PDF and check by ear.
+	- verify editorial chord spacing in measures 17; the archive places successive symbols at the same offset.
+	- verify the copyright notice against the scan; no readable per-tune notice was recovered, so the archived rights notice is retained where available.
+{% endif %}
+{% if part == "ChordsWikifonia" %}\chordmode {
+	\startChords
+	\startSong
+
+	\myMark "A"
+	\startPart
+	\repeat volta 2 {
+	a1:m6 |
+	b2:m7.5- e2:7.9- |
+	a1:m6 |
+	b2:m7.5- e2:7.9- | \myEndLine
+	a1:m6 |
+	b2:m7.5- e2:7.9- |
+	a1:m6 |
+	b2:m7.5- e2:7.9- | \myEndLine
+	}
+	\repeat volta 2 {
+	a1:m6 |
+	a1:m9 |
+	a1:m9 |
+	s1 | \myEndLine
+	s1 |
+	s1 |
+	a1:m6 |
+	s1 | \myEndLine
+	f2:7 e2:7.9- |
+	a1:m6 |
+	b2:m7.5- e2:7.9- |
+	a1:m6 | \myEndLine
+	} \alternative {
+	{
+	b2:m7.5- e2:7.9- | \myEndLineVoltaNotLast
+	}
+	{
+	b2:m7.5- e2:7.9- | \myEndLineVoltaLast
+	}
+	}
+	\endBar
+	\endPart
+
+	\endSong
+	\endChords
+}
+{% endif %}
+{% if part == "VoiceWikifonia" %}\absolute {
+	\tempo "Moderato" 4 = 120
+	\time 4/4
+	\key c \major
+
+	\repeat volta 2 {
+	r8 gis8 a8 b8 c'8 e'8 a'8 c''8 |
+	e''8 d''4. ~ d''2 |
+	r8 gis8 a8 b8 c'8 e'8 a'8 c''8 |
+	es''8 d''8 c''8 a'8 d''8 c''8 a'4 |
+	r8 gis8 a8 b8 c'8 e'8 a'8 c''8 |
+	e''8 d''4. ~ d''4 r8 a'8 |
+	dis''8 e''8 a''8 es''8 d''8 c''8 a'8 c''8 |
+	d''4 c''8 a'8 ~ a'2 |
+	}
+	\repeat volta 2 {
+	a'2 r8 a'8 c''8 a'8 |
+	d''8 a'8 c''8 a'8 d''8 c''8 a'4 ~ |
+	a'2 r8 c''8 e''8 c''8 |
+	c''8 a'8 d''8 a'8 e''8 a'8 g'4 ~ |
+	g'2 r8 a'8 d''8 a'8 |
+	c''8 a'8 d''8 e''8 d''8 a'8 e''4 ~ |
+	e''2 r8 d''8 a'8 d''8 |
+	e''8 a'8 d''8 g'8 e'8 a'8 b'4 ~ |
+	b'1 |
+	r8 gis8 a8 b8 c'8 e'8 a'8 c''8 |
+	e''8 d''4. ~ d''4 r8 a'8 |
+	dis''8 e''8 a''8 es''8 d''8 c''8 a'8 c''8 |
+	} \alternative {
+	{
+	d''4 c''8 a'8 ~ a'2 ^ "D.C. al Fine" |
+	}
+	{
+	d''4 c''8 a'8 ~ a'2 ^ "Fine" ^ "Fine" |
+	}
+	}
+	\endBar
+}
+{% endif %}

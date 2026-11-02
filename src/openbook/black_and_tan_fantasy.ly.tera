@@ -1,0 +1,119 @@
+{#
+default_version = "Wikifonia"
+
+[attributes]
+title = "Black And Tan Fantasy"
+style = "Jazz"
+composer = "Duke Ellington, Bub Miley"
+piece = "Jazz"
+typesetter = "OpenBook contributors (MusicXML import)"
+completion = "3"
+uuid = "5add17fd-bb7b-58dd-ab10-144640768abe"
+location = "Real_Book_2:35"
+copyright = "All Rights Reserved"
+
+[versions.Wikifonia]
+doChords = true
+doVoice = true
+doLyrics = false
+doLyricsmore = false
+doLyricsmoremore = false
+doChordBars = false
+doGuitar = false
+doExtra = false
+doPrep = false
+doOwn = false
+#}
+{% if part == "Vars" %}
+{% endif %}
+{% if part == "Doc" %}
+	DONE:
+	- imported melody and chord changes from real_books_archive.gi/Wikifonia.tar.xz: Wikifonia/Duke Ellington, Bub Miley - Black And Tan Fantasy.mxl.
+	- source revision: http://wikifonia.org/node/12343/revisions/16666/view.
+	- PDF reference: real_books_archive.gi/The Real Book of Jazz Volume II.pdf, PDF page 35.
+	- retained the original copyright notice where printed; the underlying music is not relicensed.
+	- retained written measures, pickups, repeats and endings; lyrics omitted.
+	- tempo is an editorial practice suggestion.
+	TODO:
+	- proofread the music against the referenced PDF and check by ear.
+	- verify the copyright notice against the scan; no readable per-tune notice was recovered, so the archived rights notice is retained where available.
+{% endif %}
+{% if part == "ChordsWikifonia" %}\chordmode {
+	\startChords
+	\startSong
+
+	\myMark "A"
+	\startPart
+	s1 |
+	bes1:m7 |
+	s1 |
+	s1 | \myEndLine
+	s1 |
+	ees1:m7 |
+	s1 |
+	bes1:m7 | \myEndLine
+	s1 |
+	f1:7 |
+	s1 |
+	bes1:m7 | \myEndLine
+	ges2:7 f2:7 |
+	ges1:7 |
+	s1 |
+	bes1 | \myEndLine
+	d2:m7 des2:dim7 |
+	c4.:m7 ees4.:m7 bes4 |
+	c2:7 f2:7 |
+	bes4:7 g4:aug7 c4:7 f4:7 | \myEndLine
+	bes4:7 ees4:7 aes4:7 des4:7 |
+	ges1:7 |
+	ges1:7 |
+	bes1 | \myEndLine
+	d2:m7 des2:dim7 |
+	c4.:m7 ees4.:m7 bes4 |
+	c2:7 f2:7 |
+	bes1:7 | \myEndLine
+	s1 |
+	\endBar
+	\endPart
+
+	\endSong
+	\endChords
+}
+{% endif %}
+{% if part == "VoiceWikifonia" %}\absolute {
+	\tempo "Moderato" 4 = 120
+	\time 4/4
+	\key des \major
+
+	r2 r4 f'4 |
+	bes'1 |
+	f'4 r4 r4 f'4 |
+	des''8 c''8 des''4 ~ des''2 |
+	bes'4 r4 r4 bes'4 |
+	bes'2 bes'4. a'8 |
+	bes'2 es''2 |
+	des''1 |
+	bes'4 r4 r4 des''4 |
+	c''2. a'4 |
+	f'2 des''4 c''4 |
+	bes'1 ~ |
+	bes'2 r2 |
+	fes'8 ges'8 fes'8 ges'8 as'2 |
+	r8 fes'8 ges'8 as'8 bes'16 as'16 bes'8 as'8 ges'8 |
+	f'8 g'8 bes'8 d''8 f''2 |
+	r8 d''8 c''8 bes'8 a'8 c''8 bes'8 a'16 as'16 |
+	g'8 bes'8 f''8 ges'8 -> bes'8 es''8 f'8 bes'8 |
+	d''8 e'8 bes'8 des''8 c''8 bes'8 g'8 bes'8 ~ |
+	bes'4 es''8 d''8 a'8 g'8 d''8 c''8 |
+	g'8 f'8 c''8 bes'8 f'8 es'8 bes'8 as'8 |
+	fes'8 ges'8 fes'8 ges'8 as'2 |
+	r8 fes'8 ges'8 as'8 bes'16 as'16 bes'8 as'8 ges'8 |
+	f'8 g'8 bes'8 d''8 f''2 |
+	r8 d''8 c''8 bes'8 a'8 c''8 bes'8 a'16 as'16 |
+	g'8 -> bes'8 f''8 ges'8 -> bes'8 es''8 f'8 -> bes'8 |
+	d''8 e'8 -> bes'8 des''8 c''8 -> bes'8 g'8 bes'8 ~ |
+	bes'4 r4 r2 |
+	R1 |
+	\endBar
+}
+{% endif %}

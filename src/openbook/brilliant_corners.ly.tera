@@ -1,0 +1,119 @@
+{#
+default_version = "Wikifonia"
+
+[attributes]
+title = "Brilliant Corners"
+style = "Jazz"
+composer = "Thelonious Monk"
+piece = "Jazz"
+typesetter = "OpenBook contributors (MusicXML import)"
+completion = "3"
+uuid = "2a97e147-3fae-5396-b32e-cee34147819e"
+location = "Real_Book_2:52"
+copyright = "All Rights Reserved"
+
+[versions.Wikifonia]
+doChords = true
+doVoice = true
+doLyrics = false
+doLyricsmore = false
+doLyricsmoremore = false
+doChordBars = false
+doGuitar = false
+doExtra = false
+doPrep = false
+doOwn = false
+#}
+{% if part == "Vars" %}
+{% endif %}
+{% if part == "Doc" %}
+	DONE:
+	- imported melody and chord changes from real_books_archive.gi/Wikifonia.tar.xz: Wikifonia/Thelonious Monk - Brilliant Corners.mxl.1.
+	- source revision: http://wikifonia.org/node/20728/revisions/27406/view.
+	- PDF reference: real_books_archive.gi/The Real Book of Jazz Volume II.pdf, PDF page 52.
+	- retained the original copyright notice where printed; the underlying music is not relicensed.
+	- retained written measures, pickups, repeats and endings; lyrics omitted.
+	- tempo taken from archived MusicXML.
+	TODO:
+	- proofread the music against the referenced PDF and check by ear.
+	- verify the copyright notice against the scan; no readable per-tune notice was recovered, so the archived rights notice is retained where available.
+{% endif %}
+{% if part == "ChordsWikifonia" %}\chordmode {
+	\startChords
+	\startSong
+
+	\myMark "A"
+	\startPart
+	bes2:maj7 des2:7 |
+	s1 |
+	bes2:maj7 des2:7 |
+	s4 ges4:7 f2:7 | \myEndLine
+	\repeat volta 2 {
+	bes4 a4:m7 aes4:m7 des4:7 |
+	s8 ges4.:7 f2:7.5- |
+	bes2:13 aes2:13 |
+	ges4:7 f2.:7.5- | \myEndLine
+	bes4 a4:m7 aes4:m7 des4:9 |
+	s8 ges4.:7 f2:7.5- |
+	bes1 |
+	bes1:7.5- | \myEndLine
+	d1:sus4.7.9 |
+	d4:7 des4:7 ges2:7.5- |
+	g4:m7 ges4:7 f4:7 e4:7 |
+	ees4.:7 aes1*5/8:maj7 | \myEndLine
+	ees4.:7.5- ees1*5/8:9.5- |
+	aes2:m11 g2:m11 |
+	ges2:m11 f2:aug7.9+ |
+	bes4 a4:m7 aes4:m7 des4:7 | \myEndLine
+	s8 ges4.:7 f2:7.5- |
+	bes2:13 aes2:13 |
+	ges4:7 f2.:7.5- |
+	bes4 a4:m7 aes4:m7 des4:7 | \myEndLine
+	s8 ges4.:7 f2:7.5- |
+	bes1 |
+	s1*1/3 bes1*2/3:7.5- |
+	}
+	\endBar
+	\endPart
+
+	\endSong
+	\endChords
+}
+{% endif %}
+{% if part == "VoiceWikifonia" %}\absolute {
+	\tempo "Moderato" 4 = 120
+	\time 4/4
+	\key bes \major
+
+	bes4 a8 d'8 es'8 es'8 es'8 es'8 |
+	es'8 ces'8 es'8 ces'8 es'8 ces'4. |
+	bes4 a8 d'8 es'8 es'8 es'8 es'8 |
+	es'8 ces'8 ges'8 bes8 f'8 a4. |
+	\repeat volta 2 {
+	bes4 a8 d'8 des'4. r8 |
+	r8 cis'8 dis'8 e'8 cis'8 dis'8 b8 f8 |
+	bes2 as2 |
+	ges8 f8 b2. |
+	bes4 a8 d'8 des'4. r8 |
+	r8 cis'8 dis'8 e'8 cis'8 dis'8 b8 f8 |
+	\times 2/3 { bes4 d'4 f'4 } \times 2/3 { bes'4 bes4 d'4 } |
+	\times 2/3 { f'4 bes'4 e''4 } r2 |
+	\times 2/3 { a4 d'4 e'4 } a8 d'8 e'8 fis'8 |
+	a8 d'8 as8 d'8 ges8 des'8 es'8 e'8 |
+	g8 d'4 e'8 r2 |
+	bes8 des'4 es'8 ~ es'8 r8 r4 |
+	a8 des'4 es'8 ~ es'8 r8 r4 |
+	\times 2/3 { as4 des'4 es'4 } \times 2/3 { g4 c'4 d'4 } |
+	\times 2/3 { fis4 b4 cis'4 } r4 as'16 ges'16 f'16 ces'16 |
+	bes4 a8 d'8 des'4. r8 |
+	r8 cis'8 dis'8 e'8 cis'8 dis'8 b8 f8 |
+	bes2 as2 |
+	ges8 f8 b2. |
+	bes4 a8 d'8 des'4. r8 |
+	r8 cis'8 dis'8 e'8 cis'8 dis'8 b8 f8 |
+	\times 2/3 { bes4 d'4 f'4 } \times 2/3 { bes'4 bes4 d'4 } |
+	\times 2/3 { f'4 bes'4 e''4 } r2 _\markup{ \italic {Double Time Repeat} } |
+	}
+	\endBar
+}
+{% endif %}

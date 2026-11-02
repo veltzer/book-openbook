@@ -1,0 +1,146 @@
+{#
+default_version = "Wikifonia"
+
+[attributes]
+title = "There Goes My Heart"
+style = "Jazz"
+composer = "Abner Silver"
+piece = "Jazz"
+typesetter = "OpenBook contributors (MusicXML import)"
+completion = "3"
+uuid = "32f9a162-6767-58e9-92ce-a6129c408b8b"
+location = "Real_Book_3:309"
+copyright = "All Rights Reserved"
+
+[versions.Wikifonia]
+doChords = true
+doVoice = true
+doLyrics = false
+doLyricsmore = false
+doLyricsmoremore = false
+doChordBars = false
+doGuitar = false
+doExtra = false
+doPrep = false
+doOwn = false
+#}
+{% if part == "Vars" %}
+{% endif %}
+{% if part == "Doc" %}
+	DONE:
+	- imported melody and chord changes from real_books_archive.gi/Wikifonia.tar.xz: Wikifonia/Abner Silver, Benny Davis - There Goes My Heart.mxl.
+	- source revision: http://wikifonia.org/node/9353/revisions/12808/view.
+	- PDF reference: real_books_archive.gi/The Real Book of Jazz Volume III.pdf, PDF page 309.
+	- retained the original copyright notice where printed; the underlying music is not relicensed.
+	- retained written measures, pickups, repeats and endings; lyrics omitted.
+	- tempo is an editorial practice suggestion.
+	TODO:
+	- proofread the music against the referenced PDF and check by ear.
+	- verify editorial chord spacing in measures 12, 32, 34; the archive places successive symbols at the same offset.
+	- verify the copyright notice against the scan; no readable per-tune notice was recovered, so the archived rights notice is retained where available.
+{% endif %}
+{% if part == "ChordsWikifonia" %}\chordmode {
+	\startChords
+	\startSong
+
+	\myMark "A"
+	\startPart
+	bes1 |
+	\repeat volta 2 {
+	bes1:maj7 |
+	s4 bes2 g4:aug |
+	c1:m | \myEndLine
+	s1 |
+	c1:m7 |
+	s4 f2.:7 |
+	bes1 | \myEndLine
+	s1 |
+	f2:m g2:7 |
+	s1 |
+	c2:m g2:7 | \myEndLine
+	c1:m |
+	g2:m7 c2:7 |
+	s1 |
+	c1:m7 | \myEndLine
+	f4:7 bes2. |
+	bes1:maj7 |
+	s4 bes2 g4:aug |
+	c1:m | \myEndLine
+	s1 |
+	c1:m7 |
+	s4 f2.:7 |
+	bes1 | \myEndLine
+	s1 |
+	f2:m g2:7 |
+	s2 d4:m7 g4:7 |
+	c1:m | \myEndLine
+	ees1:m6 |
+	bes1 |
+	c2:m7 f4:7 ees4:m7 |
+	} \alternative {
+	{
+	bes2 e2:dim | \myEndLine
+	f4:7 bes2. | \myEndLineVoltaNotLast
+	}
+	{
+	bes2 ees2:6 | \myEndLineVoltaLast
+	}
+	}
+	bes1 |
+	\endBar
+	\endPart
+
+	\endSong
+	\endChords
+}
+{% endif %}
+{% if part == "VoiceWikifonia" %}\absolute {
+	\tempo "Moderato" 4 = 120
+	\time 2/2
+	\key bes \major
+
+	r4 d'4 f'4 d''4 |
+	\repeat volta 2 {
+	c''1 ~ |
+	c''4 bes'4 a'4 g'4 |
+	f'4. es'8 g'2 ~ |
+	g'4 c'4 g'4 c''4 |
+	bes'1 ~ |
+	bes'4 a'4 g'4 f'4 |
+	es'4. d'8 f'2 ~ |
+	f'4 d'4 f'4 g'4 |
+	as'4. g'8 g'2 ~ |
+	g'4 f'4 es'4 d'4 |
+	g'1 ~ |
+	g'4 g'4 a'4 bes'4 |
+	d''4. c''8 c''2 ~ |
+	c''4 bes'4 a'4 g'4 |
+	c''1 ~ |
+	c''4 d'4 f'4 d''4 |
+	c''1 ~ |
+	c''4 bes'4 a'4 g'4 |
+	f'4. es'8 g'2 ~ |
+	g'4 c'4 g'4 c''4 |
+	bes'1 ~ |
+	bes'4 a'4 g'4 f'4 |
+	es'4. d'8 f'2 ~ |
+	f'4 d'4 f'4 g'4 |
+	as'4. g'8 g'2 ~ |
+	g'4 g'4 c''4 d''4 |
+	es''1 ~ |
+	es''4 es''4 d''4 c''4 |
+	d''2. bes'4 |
+	c''2 ~ c''4 bes'4 |
+	} \alternative {
+	{
+	bes'1 |
+	r4 d'4 f'4 d''4 |
+	}
+	{
+	bes'1 ~ |
+	}
+	}
+	bes'2. r4 |
+	\endBar
+}
+{% endif %}

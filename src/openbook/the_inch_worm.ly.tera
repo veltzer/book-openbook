@@ -1,0 +1,103 @@
+{#
+default_version = "Wikifonia"
+
+[attributes]
+title = "The Inch Worm"
+style = "Jazz"
+composer = "Frank Loesser"
+piece = "Jazz"
+typesetter = "OpenBook contributors (MusicXML import)"
+completion = "3"
+uuid = "bd551204-d2db-5ca3-96f3-a16c585f8ed7"
+location = "Real_Book_1:237, 557_Standards:188"
+copyright = "All Rights Reserved"
+
+[versions.Wikifonia]
+doChords = true
+doVoice = true
+doLyrics = false
+doLyricsmore = false
+doLyricsmoremore = false
+doChordBars = false
+doGuitar = false
+doExtra = false
+doPrep = false
+doOwn = false
+#}
+{% if part == "Vars" %}
+{% endif %}
+{% if part == "Doc" %}
+	DONE:
+	- imported melody and chord changes from real_books_archive.gi/Wikifonia.tar.xz: Wikifonia/Frank Loesser - The Inch Worm.mxl.
+	- source revision: http://wikifonia.org/node/6342/revisions/8793/view.
+	- PDF reference: real_books_archive.gi/The Real Book of Jazz Volume I.pdf, PDF page 237.
+	- retained the original copyright notice where printed; the underlying music is not relicensed.
+	- retained written measures, pickups, repeats and endings; lyrics omitted.
+	- tempo is an editorial practice suggestion.
+	TODO:
+	- proofread the music against the referenced PDF and check by ear.
+	- verify the copyright notice against the scan; no readable per-tune notice was recovered, so the archived rights notice is retained where available.
+{% endif %}
+{% if part == "ChordsWikifonia" %}\chordmode {
+	\startChords
+	\startSong
+
+	\myMark "A"
+	\startPart
+	\repeat volta 2 {
+	f2.:maj7 |
+	ees2.:maj7 |
+	f2.:maj7 |
+	ees2.:maj7 | \myEndLine
+	f2:maj7 f4:7 |
+	bes2:maj7 bes4:m6 |
+	} \alternative {
+	{
+	f2:maj7 g4:7 |
+	g2:m7 c4:7 | \myEndLineVoltaNotLast
+	}
+	{
+	f2:6 c4:7.9- |
+	f2.:6 | \myEndLineVoltaLast
+	}
+	}
+	\repeat volta 2 {
+	f2.:13 |
+	ees2.:13 | \myEndLine
+	}
+	\endBar
+	\endPart
+
+	\endSong
+	\endChords
+}
+{% endif %}
+{% if part == "VoiceWikifonia" %}\absolute {
+	\tempo "Moderato" 4 = 120
+	\time 3/4
+	\key f \major
+
+	\repeat volta 2 {
+	c''4 a''4 r4 |
+	bes'4 g''4 r4 |
+	c''8 a''8 a''4 a''4 |
+	bes'8 g''8 g''4 r4 |
+	c''8 a''8 a''4 a''4 |
+	c'''8 f''8 f''4 f''4 |
+	} \alternative {
+	{
+	c'''8 f''8 f''4 f''4 |
+	g''2 ~ g''4 |
+	}
+	{
+	c'''8 f''8 f''4 e''4 |
+	f''2. ^ "Fine" |
+	}
+	}
+	\repeat volta 2 {
+	\once \override NoteHead.style = #'slash f''4 _ "Solos. After solos, D.C. Al Fine" \once \override NoteHead.style = #'slash f''4 \once \override NoteHead.style = #'slash f''4 |
+	\once \override NoteHead.style = #'slash es''4 \once \override NoteHead.style = #'slash es''4 \once \override NoteHead.style = #'slash es''4 |
+	}
+	\endBar
+}
+{% endif %}

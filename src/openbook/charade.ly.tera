@@ -1,0 +1,196 @@
+{#
+default_version = "Wikifonia"
+
+[attributes]
+title = "Charade"
+style = "Jazz"
+composer = "Henry Mancini"
+piece = "Jazz"
+typesetter = "OpenBook contributors (MusicXML import)"
+completion = "3"
+uuid = "89b41a00-723b-5ec5-854b-79ffc058f163"
+location = "StandardsBook:86, Just_Standards_Real_Book:78"
+copyright = "1963 by Northridge Music Co. and Northern Music Corp. Copvyricht Renewed. All Richre Receruad [end he Dermriccine,"
+
+[versions.Wikifonia]
+doChords = true
+doVoice = true
+doLyrics = false
+doLyricsmore = false
+doLyricsmoremore = false
+doChordBars = false
+doGuitar = false
+doExtra = false
+doPrep = false
+doOwn = false
+#}
+{% if part == "Vars" %}
+{% endif %}
+{% if part == "Doc" %}
+	DONE:
+	- imported melody and chord changes from real_books_archive.gi/Wikifonia.tar.xz: Wikifonia/Henry Mancini, Johnny Mercer - Charade.mxl.
+	- source revision: http://wikifonia.org/node/6813/revisions/29647/view.
+	- PDF reference: real_books_archive.gi/The Standards Real Book.pdf, PDF page 86.
+	- retained the original copyright notice where printed; the underlying music is not relicensed.
+	- retained written measures, pickups, repeats and endings; lyrics omitted.
+	- tempo is an editorial practice suggestion.
+	TODO:
+	- proofread the music against the referenced PDF and check by ear.
+{% endif %}
+{% if part == "ChordsWikifonia" %}\chordmode {
+	\startChords
+	\startSong
+
+	\myMark "A"
+	\startPart
+	a2.:m |
+	a2.:m5+ |
+	a2.:m6 |
+	a2.:m5+ | \myEndLine
+	a2.:m |
+	s2. |
+	b2.:m7.5- |
+	e2.:7 | \myEndLine
+	b2.:m7.5- |
+	e2.:7 |
+	b2.:m7.5- |
+	e2.:7 | \myEndLine
+	b2.:m7.5- |
+	e2.:7.9- |
+	a2.:m |
+	s2. | \myEndLine
+	a2.:m |
+	a2.:m5+ |
+	a2.:m6 |
+	a2.:m5+ | \myEndLine
+	a2.:m |
+	s2. |
+	b2.:m7.5- |
+	e2.:7 | \myEndLine
+	b2.:m7.5- |
+	e2.:7 |
+	b2.:m7.5- |
+	e2.:7 | \myEndLine
+	b2.:m7.5- |
+	e2.:7.9- |
+	a2.:m |
+	s2. | \myEndLine
+	d2.:m7 |
+	g2.:9 |
+	c2.:maj7 |
+	a2.:m7 | \myEndLine
+	d2.:m7 |
+	g2.:7 |
+	c2.:maj7 |
+	a2.:7.9- | \myEndLine
+	d2.:m7 |
+	g2.:9 |
+	c2.:maj7 |
+	a2.:m7 | \myEndLine
+	d2.:9 |
+	s2. |
+	b2.:m7.5- |
+	e2.:7 | \myEndLine
+	a2.:m |
+	a2.:m5+ |
+	a2.:m6 |
+	a2.:m5+ | \myEndLine
+	a2.:m |
+	s2. |
+	b2.:m7.5- |
+	e2.:7 | \myEndLine
+	b2.:m7.5- |
+	e2.:7 |
+	b2.:m7.5- |
+	e2.:7 | \myEndLine
+	b2.:m7.5- |
+	e2.:7.9- |
+	s2. |
+	s2 e4:7.9- | \myEndLine
+	a2.:m |
+	s2. |
+	s2. |
+	s2. | \myEndLine
+	\endBar
+	\endPart
+
+	\endSong
+	\endChords
+}
+{% endif %}
+{% if part == "VoiceWikifonia" %}\absolute {
+	\tempo "Moderato" 4 = 120
+	\time 3/4
+	\key c \major
+
+	e'4 f'4 e'4 |
+	b'2 a'4 |
+	e'2. ~ |
+	e'2. |
+	e'4 f'4 e'4 |
+	d'2 c'4 |
+	e'4 b2 ~ |
+	b2. |
+	d'4 e'4 d'4 |
+	b2. |
+	d'4 e'4 d'4 |
+	b2. |
+	d'4 e'4. d'8 |
+	c'2 b4 |
+	a2. ~ |
+	a2. |
+	e'4 f'4 e'4 |
+	b'2 a'4 |
+	e'2. ~ |
+	e'2. |
+	e'4 f'4 e'4 |
+	d'2 c'4 |
+	e'4 b2 ~ |
+	b2. |
+	d'4 e'4 d'4 |
+	b2. |
+	d'4 e'4 d'4 |
+	b2. |
+	d'4 e'4. d'8 |
+	c'2 b4 |
+	a2. ~ |
+	a2. |
+	a'2. ~ |
+	a'4 b'4 c''4 |
+	b'2 g'4 |
+	e'2 c'4 |
+	a2. |
+	f'4 d'4 b4 |
+	g'2. ~ |
+	g'2. |
+	a'2. ~ |
+	a'4 b'4 c''4 |
+	b'2 g'4 |
+	e'2 c'4 |
+	b2 a4 |
+	b2 c'4 |
+	d'2. ~ |
+	d'2. |
+	e'4 f'4 e'4 |
+	b'2 a'4 |
+	e'2. ~ |
+	e'2. |
+	e'4 f'4 e'4 |
+	d'2 c'4 |
+	e'4 b2 ~ |
+	b2. |
+	d'4 e'4 d'4 |
+	b2. |
+	d'4 e'4 d'4 |
+	b2. |
+	d'4 e'4. d'8 |
+	c''2. ~ |
+	c''2. ~ |
+	c''2 b'4 |
+	a'2. ~ |
+	a'2. ~ |
+	a'2. ~ |
+	a'2. |
+	\endBar
+}
+{% endif %}

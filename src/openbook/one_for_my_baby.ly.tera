@@ -1,0 +1,180 @@
+{#
+default_version = "Wikifonia"
+
+[attributes]
+title = "One For My Baby"
+style = "Jazz"
+composer = "Harold Arlen"
+piece = "Jazz"
+typesetter = "OpenBook contributors (MusicXML import)"
+completion = "3"
+uuid = "c1665e56-4ee9-53e9-b741-4e12c96df4f1"
+location = "New_Real_1:253, 557_Standards:285, Jazz_LTD:257"
+copyright = "All Rights Reserved"
+
+[versions.Wikifonia]
+doChords = true
+doVoice = true
+doLyrics = false
+doLyricsmore = false
+doLyricsmoremore = false
+doChordBars = false
+doGuitar = false
+doExtra = false
+doPrep = false
+doOwn = false
+#}
+{% if part == "Vars" %}
+{% endif %}
+{% if part == "Doc" %}
+	DONE:
+	- imported melody and chord changes from real_books_archive.gi/Wikifonia.tar.xz: Wikifonia/Harold Arlen, Johnny Mercer - One For My Baby.mxl.
+	- source revision: http://wikifonia.org/node/1119/revisions/29143/view.
+	- PDF reference: real_books_archive.gi/New Real Book 1.pdf, PDF page 259.
+	- retained the original copyright notice where printed; the underlying music is not relicensed.
+	- retained written measures, pickups, repeats and endings; lyrics omitted.
+	- tempo is an editorial practice suggestion.
+	TODO:
+	- proofread the music against the referenced PDF and check by ear.
+	- verify editorial chord spacing in measures 5, 13, 21, 25, 29, 37, 45, 49, 53, 56, 59; the archive places successive symbols at the same offset.
+	- verify the copyright notice against the scan; no readable per-tune notice was recovered, so the archived rights notice is retained where available.
+{% endif %}
+{% if part == "ChordsWikifonia" %}\chordmode {
+	\startChords
+	\startSong
+
+	\myMark "A"
+	\startPart
+	\partial 4 s4 |
+	ees2:maj7 bes2:m7 |
+	ees2:maj7 f4:m7 bes4:7 |
+	ees2:maj7 bes2:m7 | \myEndLine
+	ees2:maj7 bes2:m7 |
+	ees2:maj7 bes2:m7 |
+	ees2:maj7 f4:m7 bes4:7 |
+	ees4.:maj7 bes1*5/8:m7 | \myEndLine
+	bes2.:m7 ees4:7 |
+	aes4.:maj7 ges1*5/8:maj7 |
+	aes2:maj7 des2:13 |
+	ees2:maj7 f2:m7 | \myEndLine
+	g4:m7 f2:m7 ees4:maj7 |
+	g2:aug7 c2:7.9+.11+ |
+	f4:m7 g4:m7 aes4:6 bes4:sus4.7.9 |
+	ees1:6 | \myEndLine
+	a2:m7.5- d2:7 |
+	g4.:maj7 d1*5/8:m7 |
+	g2:maj7 a4:m7 d4:7 |
+	g4.:maj7 d1*5/8:m7 | \myEndLine
+	g2:maj7 d2:m7 |
+	g4.:maj7 d1*5/8:m7 |
+	g2:maj7 a4:m7 d4:7 |
+	g4.:maj7 d1*5/8:m7 | \myEndLine
+	d2:m7 g2:7 |
+	c4.:maj7 bes1*5/8:maj7 |
+	c2:maj7 f2:13 |
+	g2:maj7 a2:m7 | \myEndLine
+	b4:m7 a2:m7 g4:maj7 |
+	b2:aug7 e2:7.9+.11+ |
+	a4:m7 b4:m7 c4:6 d4:sus4.7.9 |
+	g1:6 | \myEndLine
+	d2:m7 g2:7 |
+	c2:sus4.7.9 c2:9 |
+	c2:sus4.7.9 c2:9 |
+	b8:aug7 e4.:7 a4:7 d4:sus4.7.9 | \myEndLine
+	g2:6 g2:7 |
+	c2:sus4.7.9 c2:9 |
+	c2:sus4.7.9 c2:9 |
+	a2:7 ees2:9.11+ | \myEndLine
+	d1:aug7 |
+	g4.:maj7 d1*5/8:m7 |
+	g2:maj7 a4:m7 d4:7 |
+	g4.:maj7 d1*5/8:m7 | \myEndLine
+	g2:maj7 d2:m7 |
+	g4.:maj7 d1*5/8:m7 |
+	g2:maj7 a4:m7 d4:7 |
+	g4.:maj7 d1*5/8:m7 | \myEndLine
+	d2:m7 g2:7 |
+	c4.:maj7 bes1*5/8:maj7 |
+	c2:maj7 f2:13 |
+	g2:maj7 a2:m7 | \myEndLine
+	b4:m7 a2:m7 g4:maj7 |
+	b2:aug7 e2:7.9+.11+ |
+	a4:m7 b4:m7 c4:6 d4:sus4.7.9 |
+	b4:aug7 b4:7 e4:7.9- a4:7 | \myEndLine
+	d2:sus4.7.9.13 d2:13 |
+	g1:6 |
+	f2:9 bes2:13 |
+	\endBar
+	\endPart
+
+	\endSong
+	\endChords
+}
+{% endif %}
+{% if part == "VoiceWikifonia" %}\absolute {
+	\tempo "Moderato" 4 = 120
+	\time 4/4
+	\key es \major
+
+	\partial 4 fis'4 |
+	\mark \markup { \box { A } } g'8 fis'8 g'8 f'8 ~ f'4. fis'8 |
+	g'8 fis'8 g'8 as'8 bes'4 as'4 |
+	g'8 fis'8 g'8 f'8 ~ f'2 ~ |
+	f'2. ~ f'8 fis'8 |
+	g'8 fis'8 g'8 f'8 ~ f'4. fis'8 |
+	g'8 fis'8 g'8 as'8 bes'4 as'4 |
+	g'8 fis'8 g'8 f'8 ~ f'2 ~ |
+	f'2. ~ f'8 b'8 |
+	c''8 b'8 c''8 bes'8 ~ bes'2 |
+	c''4 ces''8 bes'8 ~ bes'8 as'8 f'4 |
+	g'8 as'8 a'8 bes'8 ~ bes'2 ~ |
+	bes'2. es'8 es'8 |
+	g'8 g'4 bes'8 ges'16 ( f'16 ) es'4 es'8 |
+	as'4 g'4 es'4 es'4 |
+	es'1 |
+	r2 r4 r8 ais'8 |
+	\key g \major \mark \markup { \box { B } } b'8 ais'8 b'8 a'8 ~ a'4. ais'8 |
+	b'8 ais'8 b'8 c''8 d''4 c''4 |
+	b'8 ais'8 b'8 a'8 ~ a'2 ~ |
+	a'2. ~ a'8 ais'8 |
+	b'8 ais'8 b'8 a'8 ~ a'4. ais'8 |
+	b'8 ais'8 b'8 c''8 d''4 c''4 |
+	b'8 ais'8 b'8 a'8 ~ a'2 ~ |
+	a'2. ~ a'8 dis''8 |
+	e''8 dis''8 e''8 d''8 ~ d''2 |
+	e''4 es''8 d''8 ~ d''8 c''8 a'4 |
+	b'8 c''8 cis''8 d''8 ~ d''2 ~ |
+	d''2. g'8 g'8 |
+	b'8 b'4 d''8 bes'16 ( a'16 ) g'4 g'8 |
+	c''4 b'4 g'4 g'4 |
+	g'1 |
+	r2 r4 g'4 |
+	\mark \markup { \box { C } } c''4. bes'8 d''8 g'4 g'8 |
+	c''16 bes'16 c''16 bes'16 c''8 bes'8 d''8 g'8 g'8 g'8 |
+	b'16 d''16 c''4 b'8 g'4 g'4 |
+	g'2. ~ g'8 g'8 |
+	c''4. bes'8 d''8 g'4 g'8 |
+	c''16 bes'16 c''16 bes'16 c''8 bes'8 d''8 g'4 g'8 |
+	a'4. g'8 a'4. g'8 |
+	bes'2. ~ bes'8 bes'8 |
+	\mark \markup { \box { D } } b'8 ais'8 b'8 a'8 ~ a'4. ais'8 |
+	b'8 ais'8 b'8 c''8 d''4 c''4 |
+	b'8 ais'8 b'8 a'8 ~ a'2 ~ |
+	a'2. ~ a'8 ais'8 |
+	b'8 ais'8 b'8 a'8 ~ a'4. ais'8 |
+	b'8 ais'8 b'8 c''8 d''4 c''4 |
+	b'8 ais'8 b'8 a'8 ~ a'2 ~ |
+	a'2. ~ a'8 dis''8 |
+	e''8 dis''8 e''8 d''8 ~ d''2 |
+	e''4 es''8 d''8 ~ d''8 c''8 a'4 |
+	b'8 c''8 cis''8 d''8 ~ d''2 ~ |
+	d''2. g'8 g'8 |
+	b'8 b'4 d''8 bes'16 ( a'16 ) g'4 g'8 |
+	c''4 b'4 g'4 g'4 |
+	b'2. g'4 |
+	b'2 b'2 |
+	g'1 |
+	R1 |
+	\endBar
+}
+{% endif %}

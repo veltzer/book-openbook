@@ -1,0 +1,186 @@
+{#
+default_version = "Wikifonia"
+
+[attributes]
+title = "What A Little Moonlight Can Do"
+style = "Jazz"
+composer = "Harry Woods"
+piece = "Jazz"
+typesetter = "OpenBook contributors (MusicXML import)"
+completion = "3"
+uuid = "4867cd33-6415-52d4-8764-e44d9c384b8f"
+location = "New_Real_2:423"
+copyright = "All Rights Reserved"
+
+[versions.Wikifonia]
+doChords = true
+doVoice = true
+doLyrics = false
+doLyricsmore = false
+doLyricsmoremore = false
+doChordBars = false
+doGuitar = false
+doExtra = false
+doPrep = false
+doOwn = false
+#}
+{% if part == "Vars" %}
+{% endif %}
+{% if part == "Doc" %}
+	DONE:
+	- imported melody and chord changes from real_books_archive.gi/Wikifonia.tar.xz: Wikifonia/Harry Woods - What A Little Moonlight Can Do.mxl.
+	- source revision: http://wikifonia.org/node/8307/revisions/11494/view.
+	- PDF reference: real_books_archive.gi/newreal2.pdf, PDF page 423.
+	- retained the original copyright notice where printed; the underlying music is not relicensed.
+	- retained written measures, pickups, repeats and endings; lyrics omitted.
+	- tempo is an editorial practice suggestion.
+	TODO:
+	- proofread the music against the referenced PDF and check by ear.
+	- verify editorial chord spacing in measures 10, 58; the archive places successive symbols at the same offset.
+	- verify the copyright notice against the scan; no readable per-tune notice was recovered, so the archived rights notice is retained where available.
+{% endif %}
+{% if part == "ChordsWikifonia" %}\chordmode {
+	\startChords
+	\startSong
+
+	\myMark "A"
+	\startPart
+	c1:6 |
+	s1 |
+	e1:m7 |
+	a1:7 | \myEndLine
+	d1:m7 |
+	g1:7 |
+	d1:m7 |
+	g1:7 | \myEndLine
+	d1:m7 |
+	d2:m7 a2:7 |
+	d1:m7 |
+	g1:7 | \myEndLine
+	c1:6 |
+	s1 |
+	g1:m7 |
+	c1:7 | \myEndLine
+	f1:maj7 |
+	s1 |
+	bes1:9 |
+	s1 | \myEndLine
+	c1:6 |
+	d1:m7 |
+	e1:m7 |
+	a1:7 | \myEndLine
+	d1:9 |
+	s1 |
+	s1 |
+	s1 | \myEndLine
+	d1:m7 |
+	cis1:dim7 |
+	d1:m7 |
+	ees1:dim7 | \myEndLine
+	c1:6 |
+	s1 |
+	e1:m7 |
+	a1:7 | \myEndLine
+	d1:m7 |
+	g1:7 |
+	d1:m7 |
+	g1:7 | \myEndLine
+	d1:m7 |
+	s1 |
+	b1:m7.5- |
+	e1:7 | \myEndLine
+	a1:m7 |
+	aes1:7 |
+	g1:m7 |
+	c1:7 | \myEndLine
+	f1:maj7 |
+	s1 |
+	bes1:9 |
+	s1 | \myEndLine
+	c1:6 |
+	d1:m7 |
+	e1:m7 |
+	a1:7 | \myEndLine
+	d1:m7 |
+	e2:m7 a2:7 |
+	d1:m7 |
+	g1:7 | \myEndLine
+	c1:6 |
+	s1 |
+	\endBar
+	\endPart
+
+	\endSong
+	\endChords
+}
+{% endif %}
+{% if part == "VoiceWikifonia" %}\absolute {
+	\tempo "Moderato" 4 = 120
+	\time 4/4
+	\key c \major
+
+	g'2 g'4. g'8 ~ |
+	g'1 |
+	r4 g'8 g'8 g'4 g'4 |
+	g'4 a'2 e'4 |
+	g'2 ( f'4 b4 ) ~ |
+	b1 ~ |
+	b1 ~ |
+	b2. r4 |
+	a'2 a'4. a'8 ~ |
+	a'1 |
+	r4 a'8 a'8 a'4 a'4 |
+	a'4 b'2 g'4 |
+	a'2 g'4 c'4 ~ |
+	c'1 ~ |
+	c'1 ~ |
+	c'2. r4 |
+	c''2 a'4 c''4 ~ |
+	c''1 |
+	r4 c''4 c''4 c''4 |
+	c''4 d''2 c''4 |
+	g'2 e'4 g'4 ~ |
+	g'1 |
+	r4 g'4 g'4 g'4 |
+	g'4 a'2 g'4 |
+	e'2 e'4. e'8 ~ |
+	e'1 |
+	r4 a'4 a'4 a'4 |
+	a'4 b'2 a'4 |
+	d'1 |
+	e'1 |
+	f'1 |
+	fis'1 |
+	g'2 g'4. g'8 ~ |
+	g'1 |
+	r4 g'8 g'8 g'4 g'4 |
+	g'4 a'2 e'4 |
+	g'2 f'4 b4 ~ |
+	b1 ~ |
+	b1 ~ |
+	b2. r4 |
+	a'2 f'4 a'4 ~ |
+	a'1 |
+	r4 a'8 a'8 a'4 a'4 |
+	a'4 b'2 e'4 |
+	c''1 ~ |
+	c''2 a'2 |
+	c''1 ~ |
+	c''2. r4 |
+	c''2 c''4. c''8 ~ |
+	c''1 |
+	r4 c''4 c''4 c''4 |
+	c''4 d''2 c''4 |
+	g'2 e'4 g'4 ~ |
+	g'1 |
+	r4 g'4 g'4 g'4 |
+	g'4 a'2 e'4 |
+	g'2 f'4 b4 ~ |
+	b1 |
+	r4 g'8 g'8 fis'4 g'4 |
+	a'4 b'2 g'4 |
+	c''1 ~ |
+	c''1 |
+	\endBar
+}
+{% endif %}

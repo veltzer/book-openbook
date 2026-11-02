@@ -1,0 +1,186 @@
+{#
+default_version = "Wikifonia"
+
+[attributes]
+title = "Dream Dancing"
+style = "Jazz"
+composer = "Cole Porter"
+piece = "Jazz"
+typesetter = "OpenBook contributors (MusicXML import)"
+completion = "3"
+uuid = "ef6bfc6f-f0d1-58a0-96a7-dd24244f9d23"
+location = "Real_Book_3:76"
+copyright = "All Rights Reserved"
+
+[versions.Wikifonia]
+doChords = true
+doVoice = true
+doLyrics = false
+doLyricsmore = false
+doLyricsmoremore = false
+doChordBars = false
+doGuitar = false
+doExtra = false
+doPrep = false
+doOwn = false
+#}
+{% if part == "Vars" %}
+{% endif %}
+{% if part == "Doc" %}
+	DONE:
+	- imported melody and chord changes from real_books_archive.gi/Wikifonia.tar.xz: Wikifonia/Cole Porter - Dream Dancing.mxl.
+	- source revision: http://wikifonia.org/node/14556/revisions/19502/view.
+	- PDF reference: real_books_archive.gi/The Real Book of Jazz Volume III.pdf, PDF page 76.
+	- retained the original copyright notice where printed; the underlying music is not relicensed.
+	- retained written measures, pickups, repeats and endings; lyrics omitted.
+	- tempo is an editorial practice suggestion.
+	TODO:
+	- proofread the music against the referenced PDF and check by ear.
+	- verify editorial chord spacing in measures 52; the archive places successive symbols at the same offset.
+	- verify the copyright notice against the scan; no readable per-tune notice was recovered, so the archived rights notice is retained where available.
+{% endif %}
+{% if part == "ChordsWikifonia" %}\chordmode {
+	\startChords
+	\startSong
+
+	\myMark "A"
+	\startPart
+	s1 |
+	\repeat volta 2 {
+	e1:aug |
+	s1 |
+	a1:7 | \myEndLine
+	s1 |
+	d1:m7 |
+	g1:7 |
+	c1:maj7 | \myEndLine
+	c1:6 |
+	f1:maj7 |
+	f1:m |
+	c2 e2:7 | \myEndLine
+	a1:7 |
+	aes1:7 |
+	g1:7 |
+	c1:maj7 | \myEndLine
+	s1 |
+	e1:aug |
+	s1 |
+	a1:7 | \myEndLine
+	s1 |
+	d1:m7 |
+	g1:7 |
+	c1:maj7 | \myEndLine
+	c1:7 |
+	f1:maj7 |
+	fis1:dim7 |
+	c2/g e2:7 | \myEndLine
+	a1:7 |
+	aes1:7 |
+	g1:7 |
+	c1:maj7 | \myEndLine
+	g2.:aug7 c4:maj7 |
+	f1 |
+	f1:m6 |
+	c2 g2:aug7 | \myEndLine
+	c1:6 |
+	d1:7 |
+	a2:m7.5- d2:7 |
+	g1:7 | \myEndLine
+	s2 d4:m7 g4:7 |
+	c1 |
+	c1:7 |
+	f2 e2:7 | \myEndLine
+	a1:7 |
+	aes1:7 |
+	g1:7 |
+	aes1:7 | \myEndLine
+	g1:7 |
+	aes1:7 |
+	f4./g f1*5/8:m/g |
+	} \alternative {
+	{
+	c2 aes2:7 | \myEndLine
+	g2.:7 c4 | \myEndLineVoltaNotLast
+	}
+	{
+	c1:6 |
+	s1 | \myEndLineVoltaLast
+	}
+	}
+	\endBar
+	\endPart
+
+	\endSong
+	\endChords
+}
+{% endif %}
+{% if part == "VoiceWikifonia" %}\absolute {
+	\tempo "Moderato" 4 = 120
+	\time 2/2
+	\key c \major
+
+	r2 r4 e'4 |
+	\repeat volta 2 {
+	e'2. c'4 |
+	c'2. e'4 |
+	e'2. cis'4 |
+	cis'2. a'4 |
+	a'2. f'4 |
+	f'2 \times 2/3 { g'4 a'4 b'4 } |
+	e''1 ~ |
+	e''2. e''4 |
+	e''2. c''4 |
+	c''2. b'4 |
+	b'8 d''8 c''4 b'4 c''8 a'8 ~ |
+	a'1 |
+	bes'1 |
+	g'4. g'8 ~ g'4 g'4 |
+	g'1 ~ |
+	g'2 r4 e'4 |
+	e'2. c'4 |
+	c'2. e'4 |
+	e'2. cis'4 |
+	cis'2. a'4 |
+	a'2. f'4 |
+	f'2 \times 2/3 { g'4 a'4 b'4 } |
+	e''1 ~ |
+	e''2. e''4 |
+	e''2. c''4 |
+	c''2. b'4 |
+	b'8 d''8 c''4 b'4 c''8 a'8 ~ |
+	a'1 |
+	bes'1 |
+	g'4. g'8 ~ g'4 g'4 |
+	g'1 ~ |
+	g'2. r4 |
+	c''1 |
+	c'4. c'8 ~ c'4 r4 |
+	c'8 d'8 e'8 g'8 ~ g'8 a'8 b'4 |
+	a'1 |
+	\times 2/3 { d'4 e'4 fis'4 } \times 2/3 { a'4 b'4 c''4 } |
+	es''2 ~ es''8 d''8 es''4 |
+	d''1 ~ |
+	d''4 g'4 c''4 d''4 |
+	e''2. d''4 |
+	c''2. b'4 |
+	b'8 d''8 c''4 b'4 c''8 a'8 ~ |
+	a'1 |
+	bes'1 |
+	g'4. g'8 ~ g'2 |
+	r4 bes'8 bes'8 ~ bes'8 c''8 bes'4 |
+	g'4. g'8 ~ g'2 |
+	es''1 |
+	c''4. c''8 ~ c''4 c''4 |
+	} \alternative {
+	{
+	c''1 ~ |
+	c''2. e'4 |
+	}
+	{
+	c''1 ~ |
+	c''2 ~ c''4 r4 |
+	}
+	}
+	\endBar
+}
+{% endif %}

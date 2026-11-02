@@ -1,0 +1,123 @@
+{#
+default_version = "Wikifonia"
+
+[attributes]
+title = "Virgo"
+style = "Jazz"
+composer = "Wayne Shorter"
+piece = "Jazz"
+typesetter = "OpenBook contributors (MusicXML import)"
+completion = "3"
+uuid = "23eb4b00-3979-57e5-9d13-f85455d2cfb2"
+location = "Real_Book_1:457"
+copyright = "All Rights Reserved"
+
+[versions.Wikifonia]
+doChords = true
+doVoice = true
+doLyrics = false
+doLyricsmore = false
+doLyricsmoremore = false
+doChordBars = false
+doGuitar = false
+doExtra = false
+doPrep = false
+doOwn = false
+#}
+{% if part == "Vars" %}
+{% endif %}
+{% if part == "Doc" %}
+	DONE:
+	- imported melody and chord changes from real_books_archive.gi/Wikifonia.tar.xz: Wikifonia/Wayne Shorter - Virgo.mxl.
+	- source revision: http://wikifonia.org/node/7019/revisions/24940/view.
+	- PDF reference: real_books_archive.gi/The Real Book of Jazz Volume I.pdf, PDF page 457.
+	- retained the original copyright notice where printed; the underlying music is not relicensed.
+	- retained written measures, pickups, repeats and endings; lyrics omitted.
+	- tempo is an editorial practice suggestion.
+	TODO:
+	- proofread the music against the referenced PDF and check by ear.
+	- verify the copyright notice against the scan; no readable per-tune notice was recovered, so the archived rights notice is retained where available.
+{% endif %}
+{% if part == "ChordsWikifonia" %}\chordmode {
+	\startChords
+	\startSong
+
+	\myMark "A"
+	\startPart
+	f1:maj7 |
+	bes2:m7 ees2:7 |
+	d2:m7.5- bes2:7.11+ |
+	a1:maj7 | \myEndLine
+	a1:m7 |
+	f2:m7 bes2:7 |
+	e2:m7.5- ees2:7.11+ |
+	d1:maj7 | \myEndLine
+	d1:m7 |
+	c2:m7 f2:7 |
+	ees2:7 d2:7 |
+	g2:m7 aes2:7 | \myEndLine
+	des1:maj7 |
+	d2:m7 g2:7 |
+	g1:m7 |
+	cis2:m7 fis2:7 | \myEndLine
+	f1:maj7 |
+	bes2:m7 ees2:7 |
+	d2:m7.5- bes2:7.11+ |
+	a1:maj7 | \myEndLine
+	a1:m7 |
+	f2:m7 bes2:7 |
+	e2:m7.5- ees2:7.11+ |
+	d2:m7 des2:7.5+ | \myEndLine
+	c2:m7 f2:7 |
+	bes1:maj7 |
+	e2:7.5+ a2:7.5+ |
+	d1:m7 | \myEndLine
+	g2:m7 c2:7 |
+	e2:7.5+ a2:7.5+ |
+	a1:m7/d |
+	\endBar
+	\endPart
+
+	\endSong
+	\endChords
+}
+{% endif %}
+{% if part == "VoiceWikifonia" %}\absolute {
+	\tempo "Moderato" 4 = 120
+	\time 4/4
+	\key c \major
+
+	r8 ^ "(ballad)" c'''4. f''4. g''8 |
+	as''8 cis''4. ~ cis''4 es''8 e''8 ~ |
+	e''4 ~ \once \omit TupletBracket \times 2/3 { e''8 as'8 c''8 } e''8 g''4. |
+	e''1 |
+	r8 e''4. a'4. b'8 |
+	c''8 f'4. ~ f'4 g'8 a'8 ~ |
+	a'4 ~ \once \omit TupletBracket \times 2/3 { a'8 d''8 f''8 } a''8 c'''4. |
+	a''1 |
+	r8 a''4. a''4 ~ \once \omit TupletBracket \times 2/3 { a''8 g''8 f''8 } |
+	g''8 c'''4. ~ c'''4 ~ \once \omit TupletBracket \times 2/3 { c'''8 bes''8 a''8 } |
+	g''8 es'''4. ~ es'''4 fis''8 d'''8 ~ |
+	d'''2 bes''2 |
+	f''2. \once \omit TupletBracket \times 2/3 { f''8 ges''8 as''8 } |
+	a''8 d'''4. b''4 g''8 c'''8 ~ |
+	c'''2. ~ \once \omit TupletBracket \times 2/3 { c'''8 d'''8 c'''8 } |
+	b''4. gis''8 cis'''4. ais''8 |
+	r8 c'''4. f''4. g''8 |
+	as''8 cis''4. ~ cis''4 es''8 e''8 ~ |
+	e''4 ~ \once \omit TupletBracket \times 2/3 { e''8 as'8 c''8 } e''8 g''4. |
+	e''1 |
+	r8 e''4. a'4. b'8 |
+	c''8 f'4. ~ f'4 g'8 a'8 ~ |
+	a'4 ~ \once \omit TupletBracket \times 2/3 { a'8 d''8 f''8 } a''8 c'''4. |
+	a''8 a'8 ~ \once \omit TupletBracket \times 2/3 { a'8 d''8 e''8 } a''8 c'''4. |
+	a''8 a'8 ~ \once \omit TupletBracket \times 2/3 { a'8 d''8 f''8 } a''8 c'''4. |
+	a''1 - "To Coda" |
+	r8 c'''8 ~ \once \omit TupletBracket \times 2/3 { c'''8 a''8 f''8 } g''8 f''8 cis''8 e''8 ~ |
+	e''1 |
+	d''2 r2 - "D.C. al Coda" |
+	r8 c'''8 \once \omit TupletBracket \times 2/3 { c'''8 a''8 f''8 } g''2 \fermata |
+	\once \omit TupletBracket \times 2/3 { e''8 d''8 e''8 ~ } e''2. \fermata |
+	\endBar
+}
+{% endif %}

@@ -1,0 +1,150 @@
+{#
+default_version = "Wikifonia"
+
+[attributes]
+title = "I'm A Fool To Want You"
+style = "Jazz"
+composer = "Frank Sinatra, Jack Wolf, Joel Herron"
+piece = "Jazz"
+typesetter = "OpenBook contributors (MusicXML import)"
+completion = "3"
+uuid = "121bd971-f81b-51ff-b932-d32a5d0007e2"
+location = "Real_Book_2:168, StandardsBook:230"
+copyright = "All Rights Reserved"
+
+[versions.Wikifonia]
+doChords = true
+doVoice = true
+doLyrics = false
+doLyricsmore = false
+doLyricsmoremore = false
+doChordBars = false
+doGuitar = false
+doExtra = false
+doPrep = false
+doOwn = false
+#}
+{% if part == "Vars" %}
+{% endif %}
+{% if part == "Doc" %}
+	DONE:
+	- imported melody and chord changes from real_books_archive.gi/Wikifonia.tar.xz: Wikifonia/Frank Sinatra, Jack Wolf, Joel Herron - I'm A Fool To Want You.mxl.
+	- source revision: http://wikifonia.org/node/1531/revisions/29256/view.
+	- PDF reference: real_books_archive.gi/The Standards Real Book.pdf, PDF page 230.
+	- retained the original copyright notice where printed; the underlying music is not relicensed.
+	- retained written measures, pickups, repeats and endings; lyrics omitted.
+	- tempo is an editorial practice suggestion.
+	TODO:
+	- proofread the music against the referenced PDF and check by ear.
+	- verify editorial chord spacing in measures 16; the archive places successive symbols at the same offset.
+	- verify the copyright notice against the scan; no readable per-tune notice was recovered, so the archived rights notice is retained where available.
+{% endif %}
+{% if part == "ChordsWikifonia" %}\chordmode {
+	\startChords
+	\startSong
+
+	\myMark "A"
+	\startPart
+	\partial 2. s2. |
+	\repeat volta 2 {
+	e1:m |
+	s2 e2:7.9- |
+	a1:m | \myEndLine
+	s4 a4:m/c b4:dim7 a4:m |
+	e1:m |
+	c1:7 |
+	} \alternative {
+	{
+	s1 | \myEndLine
+	b2:7 b2:7.9- | \myEndLineVoltaNotLast
+	}
+	{
+	e2:m b2:7 | \myEndLineVoltaLast
+	}
+	}
+	e1:m |
+	a2:m a2:m7 | \myEndLine
+	d2:9 d2:9.5+ |
+	g1 |
+	s1 |
+	a2:m a4:m5+ a4:m7 | \myEndLine
+	d1:7 |
+	g1:maj7 |
+	g1:6 |
+	fis1:m7.5- | \myEndLine
+	b1:7 |
+	e1:m |
+	s2 e2:m7 |
+	c1:7 | \myEndLine
+	s1 |
+	b1:7 |
+	s2 b2:7.9- |
+	e1:m | \myEndLine
+	s2 e2:7.9- |
+	a1:m |
+	s4 a4:m/c b4:dim7 a4:m |
+	e1:m | \myEndLine
+	c1:7 |
+	a1:m |
+	fis2:m b4:7 b4:7.9- |
+	e1:m | \myEndLine
+	s1 |
+	\endBar
+	\endPart
+
+	\endSong
+	\endChords
+}
+{% endif %}
+{% if part == "VoiceWikifonia" %}\absolute {
+	\tempo "Moderato" 4 = 120
+	\time 4/4
+	\key g \major
+
+	\partial 2. bes8 b8 g'4. dis'8 |
+	\repeat volta 2 {
+	fis'8 e'8 ~ e'2. |
+	r4 dis'8 e'8 c''4. gis'8 |
+	b'8 a'8 ~ a'2. |
+	r4 a'4 b'4 c''4 |
+	c''4 b'4 fis'4 g'4 |
+	a'4. e'8 fis'4 g'4 |
+	} \alternative {
+	{
+	a'4. g'8 fis'8 e'4 fis'8 ~ |
+	fis'4 bes8 b8 g'4. dis'8 |
+	}
+	{
+	b'4. b'8 b'8 fis'4 g'8 |
+	}
+	}
+	e'1 |
+	e''4. e''8 e''4. e''8 |
+	e''4. r8 \times 2/3 { e''4 e''4 e''4 } |
+	e''4 d''2. ~ |
+	d''2. r4 |
+	c''4. c''8 c''4. c''8 |
+	c''4. r8 \times 2/3 { c''4 d''4 c''4 } |
+	b'1 ~ |
+	b'2 r4 b'4 |
+	a'4. a'8 a'4. a'8 |
+	a'4. a'8 a'4. a'8 |
+	a'4 g'2. ~ |
+	g'2 r4 e'4 |
+	g'4. g'8 g'4. g'8 |
+	g'4 e'4 fis'4 e'4 |
+	fis'1 ~ |
+	fis'4 bes8 b8 g'4. dis'8 |
+	fis'8 e'8 ~ e'2. |
+	r4 dis'8 e'8 c''4. gis'8 |
+	b'8 a'8 ~ a'2. |
+	r4 a'4 b'4 c''4 |
+	c''4. b'8 fis'4 g'4 |
+	a'4. e'8 fis'4 g'4 |
+	d''4. d''8 \times 2/3 { c''4 d''4 c''4 } |
+	b'2 ~ b'8 fis'8 g'4 |
+	e'1 ~ |
+	e'2. ^\fermata r4 |
+	\endBar
+}
+{% endif %}

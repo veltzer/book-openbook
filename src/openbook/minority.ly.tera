@@ -1,0 +1,93 @@
+{#
+default_version = "Wikifonia"
+
+[attributes]
+title = "Minority"
+style = "Jazz"
+composer = "Gigi Gryce"
+piece = "Jazz"
+typesetter = "OpenBook contributors (MusicXML import)"
+completion = "3"
+uuid = "91e6fd21-de00-5899-8958-8fa74b3bbf61"
+location = "Real_Book_1:308, Colorado:137, Colorado_Cookbook:137"
+copyright = "All Rights Reserved"
+
+[versions.Wikifonia]
+doChords = true
+doVoice = true
+doLyrics = false
+doLyricsmore = false
+doLyricsmoremore = false
+doChordBars = false
+doGuitar = false
+doExtra = false
+doPrep = false
+doOwn = false
+#}
+{% if part == "Vars" %}
+{% endif %}
+{% if part == "Doc" %}
+	DONE:
+	- imported melody and chord changes from real_books_archive.gi/Wikifonia.tar.xz: Wikifonia/Gigi Gryce - Minority.mxl.
+	- source revision: http://wikifonia.org/node/9539/revisions/13030/view.
+	- PDF reference: real_books_archive.gi/The Real Book of Jazz Volume I.pdf, PDF page 308.
+	- retained the original copyright notice where printed; the underlying music is not relicensed.
+	- retained written measures, pickups, repeats and endings; lyrics omitted.
+	- tempo is an editorial practice suggestion.
+	TODO:
+	- proofread the music against the referenced PDF and check by ear.
+	- verify the copyright notice against the scan; no readable per-tune notice was recovered, so the archived rights notice is retained where available.
+{% endif %}
+{% if part == "ChordsWikifonia" %}\chordmode {
+	\startChords
+	\startSong
+
+	\myMark "A"
+	\startPart
+	f1:m6 |
+	s1 |
+	g1:m7 |
+	c1:7 | \myEndLine
+	f1:m6 |
+	s1 |
+	c1:m7 |
+	f1:7 | \myEndLine
+	bes1:m7 |
+	ees1:7 |
+	aes1:m7 |
+	des1:7 | \myEndLine
+	fis1:m7 |
+	b1:7 |
+	g1:m7 |
+	d1:aug7 | \myEndLine
+	\endBar
+	\endPart
+
+	\endSong
+	\endChords
+}
+{% endif %}
+{% if part == "VoiceWikifonia" %}\absolute {
+	\tempo "Moderato" 4 = 120
+	\time 4/4
+	\key as \major
+
+	g''2. ~ g''8 f''8 |
+	r2 d''8 e''8 f''8 g''8 |
+	a''2 a''4. g''8 |
+	a''8 c'''8 r8 a''8 ~ a''2 |
+	g''2. ~ g''8 f''8 |
+	r2 f''8 g''8 bes''8 c'''8 |
+	d'''2 d'''4. c'''8 |
+	d'''8 f'''8 r8 d'''8 ~ d'''2 |
+	c'''4 r4 c'''4. bes''8 |
+	c'''8 es'''8 r8 c'''8 ~ c'''2 |
+	r8 bes''8 r4 bes''4. as''8 |
+	bes''8 des'''8 r8 bes''8 ~ bes''4 r4 |
+	as''2 as''4. as''8 |
+	r2 f''8 ges''8 r8 as''8 |
+	a''2 a''4. a''8 |
+	r2 c'''8 as''8 e''8 c''8 |
+	\endBar
+}
+{% endif %}

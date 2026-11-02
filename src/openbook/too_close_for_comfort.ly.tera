@@ -1,0 +1,161 @@
+{#
+default_version = "Wikifonia"
+
+[attributes]
+title = "Too Close For Comfort"
+style = "Jazz"
+composer = "George Weiss, Jerry Bock, Larry Holofcener"
+piece = "Jazz"
+typesetter = "OpenBook contributors (MusicXML import)"
+completion = "3"
+uuid = "71f771ee-436d-5e05-b18e-4f972b8b3083"
+location = "Real_Book_3:327, 557_Standards:395"
+copyright = "All Rights Reserved"
+
+[versions.Wikifonia]
+doChords = true
+doVoice = true
+doLyrics = false
+doLyricsmore = false
+doLyricsmoremore = false
+doChordBars = false
+doGuitar = false
+doExtra = false
+doPrep = false
+doOwn = false
+#}
+{% if part == "Vars" %}
+{% endif %}
+{% if part == "Doc" %}
+	DONE:
+	- imported melody and chord changes from real_books_archive.gi/Wikifonia.tar.xz: Wikifonia/George Weiss, Jerry Bock, Larry Holofcener - Too Close For Comfort.mxl.
+	- source revision: http://wikifonia.org/node/4812/revisions/6530/view.
+	- PDF reference: real_books_archive.gi/The Real Book of Jazz Volume III.pdf, PDF page 327.
+	- retained the original copyright notice where printed; the underlying music is not relicensed.
+	- retained written measures, pickups, repeats and endings; lyrics omitted.
+	- tempo is an editorial practice suggestion.
+	TODO:
+	- proofread the music against the referenced PDF and check by ear.
+	- verify the copyright notice against the scan; no readable per-tune notice was recovered, so the archived rights notice is retained where available.
+{% endif %}
+{% if part == "ChordsWikifonia" %}\chordmode {
+	\startChords
+	\startSong
+
+	\myMark "A"
+	\startPart
+	\repeat volta 2 {
+	s1 |
+	c1:6 |
+	c1:m6 |
+	g1:m6 | \myEndLine
+	a2:7 a4:aug a4:7 |
+	f1:m6 |
+	g2:7 g4:sus4.7 g4:7 |
+	c1 | \myEndLine
+	d2.:m11 g4:13.9- |
+	c1:6 |
+	c1:m6 |
+	g1:m6 | \myEndLine
+	a2:7 a4:aug a4:7 |
+	f1:m6 |
+	g2:7 g4:sus4.7 g4:7 |
+	c2 aes2:dim7 | \myEndLine
+	c2:6 c2:aug |
+	f2:6 f2:7 |
+	f2.:m6 g4:7.9- |
+	c1 | \myEndLine
+	c1:7 |
+	f2:6 f2:7 |
+	f2.:m6 g4:7.9- |
+	aes1:7 | \myEndLine
+	g2.:7 g4:13.9- |
+	c1:6 |
+	c1:m6 |
+	g1:m6 | \myEndLine
+	a2:7 a4:aug a4:7 |
+	f1:m6 |
+	g2:7 g4:sus4.7 g4:7 |
+	c2 aes2:dim7 | \myEndLine
+	c2:6 c2:9.5+ |
+	s4 f4:6 f4.:7 f8:m6 |
+	s8 f1*5/8:m7 g4:7.9- |
+	c1:m9 | \myEndLine
+	d1:7.9- |
+	aes1:9.11+ |
+	g2:aug7 g4:sus4.7 g4:7.9- |
+	} \alternative {
+	{
+	c1:m | \myEndLine
+	d2:7 g2:7 | \myEndLineVoltaNotLast
+	}
+	{
+	c1:m | \myEndLineVoltaLast
+	}
+	}
+	s1 |
+	\endBar
+	\endPart
+
+	\endSong
+	\endChords
+}
+{% endif %}
+{% if part == "VoiceWikifonia" %}\absolute {
+	\tempo "Moderato" 4 = 120
+	\time 4/4
+	\key es \major
+
+	\repeat volta 2 {
+	r2 r4 e'4 |
+	g'2. e'4 |
+	g'2. a'4 |
+	bes'2. d'4 |
+	cis'2 f'4 g'4 |
+	as'2. c'4 |
+	b2 c'4 d'4 |
+	e'4. g'8 ~ g'2 |
+	r2 r4 e'4 |
+	g'2. e'4 |
+	g'2. a'4 |
+	bes'2. d'4 |
+	cis'2 f'4 g'4 |
+	as'2. c'4 |
+	b2 c'4 d'4 |
+	e'4 r4 g'4 r4 |
+	a'4 r4 c''4 r4 |
+	r4 d''4 es''4. d''8 ~ |
+	d''8 es''4 d''8 c''4 b'4 |
+	c''2 g'4 a'8 bes'8 ~ |
+	bes'1 |
+	r4 d''4 es''4. d''8 ~ |
+	d''8 es''4 d''8 c''4 b'4 |
+	c''2 bes'4 as'8 g'8 ~ |
+	g'2 r4 e'4 |
+	g'2. e'4 |
+	g'2. a'4 |
+	bes'2. d'4 |
+	cis'2 f'4 g'4 |
+	as'2. c'4 |
+	b2 c'4 d'4 |
+	e'2 g'2 |
+	a'2 c''2 |
+	r4 d''4 es''4. d''8 |
+	r8 es''4 d''8 c''4 b'4 |
+	r4 d''4 es''4. d''8 |
+	r8 es''4 d''8 c''4 <g, b'>4 |
+	r4 d''4 es''4. d''8 |
+	r8 es''4 d''8 c''4 b'4 |
+	} \alternative {
+	{
+	c''1 ~ |
+	c''4 r4 r4 es'4 |
+	}
+	{
+	c''1 ~ |
+	}
+	}
+	c''4 r4 r2 |
+	\endBar
+}
+{% endif %}

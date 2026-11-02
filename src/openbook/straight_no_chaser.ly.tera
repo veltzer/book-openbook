@@ -1,0 +1,87 @@
+{#
+default_version = "Wikifonia"
+
+[attributes]
+title = "Straight, No Chaser"
+style = "Jazz"
+composer = "Thelonious Monk"
+piece = "Jazz"
+typesetter = "OpenBook contributors (MusicXML import)"
+completion = "3"
+uuid = "beeac6be-03f2-5bf4-a3f1-aea34f26a1d8"
+location = "Real_Book_1:425, 557_Standards:342, Colorado:159, Colorado_Cookbook:159"
+copyright = "All Rights Reserved"
+
+[versions.Wikifonia]
+doChords = true
+doVoice = true
+doLyrics = false
+doLyricsmore = false
+doLyricsmoremore = false
+doChordBars = false
+doGuitar = false
+doExtra = false
+doPrep = false
+doOwn = false
+#}
+{% if part == "Vars" %}
+{% endif %}
+{% if part == "Doc" %}
+	DONE:
+	- imported melody and chord changes from real_books_archive.gi/Wikifonia.tar.xz: Wikifonia/Thelonious Monk - Straight, No Chaser.mxl.
+	- source revision: http://wikifonia.org/node/127/revisions/27300/view.
+	- PDF reference: real_books_archive.gi/The Real Book of Jazz Volume I.pdf, PDF page 425.
+	- retained the original copyright notice where printed; the underlying music is not relicensed.
+	- retained written measures, pickups, repeats and endings; lyrics omitted.
+	- tempo taken from archived MusicXML.
+	TODO:
+	- proofread the music against the referenced PDF and check by ear.
+	- verify the copyright notice against the scan; no readable per-tune notice was recovered, so the archived rights notice is retained where available.
+{% endif %}
+{% if part == "ChordsWikifonia" %}\chordmode {
+	\startChords
+	\startSong
+
+	\myMark "A"
+	\startPart
+	\partial 8 s8 |
+	s8 f2..:7 |
+	s8 bes2..:7 |
+	s8 f2..:7 | \myEndLine
+	s1 |
+	bes1:7 |
+	s1 |
+	f1:7 | \myEndLine
+	s8 a4.:m7 d2:7 |
+	s8 g2..:m7 |
+	s8 c2..:7 |
+	s8 f2..:7 | \myEndLine
+	s1 |
+	\endBar
+	\endPart
+
+	\endSong
+	\endChords
+}
+{% endif %}
+{% if part == "VoiceWikifonia" %}\absolute {
+	\tempo "Moderato" 4 = 96
+	\time 4/4
+	\key f \major
+
+	\partial 8 c'8 |
+	f'8 g'8 gis'8 a'8 ~ a'8 c'8 f'8 g'8 |
+	gis'8 a'8 bes'8 as'8 ~ as'4. c'8 |
+	f'8 g'8 gis'8 a'8 ~ a'8 c'8 f'8 g'8 |
+	gis'8 a'8 bes'8 c'8 f'8 g'8 as'4 |
+	r8 c'8 f'8 g'8 gis'8 a'8 bes'8 as'8 ~ |
+	as'1 |
+	r8 c'8 f'8 g'8 gis'8 a'4 c'8 |
+	f'8 g'8 gis'8 a'8 ~ a'8 c'8 f'8 g'8 |
+	gis'8 a'8 bes'8 c'8 cis'8 d'8 es'8 e'8 ~ |
+	e'8 f'8 fis'8 g'8 gis'8 a'8 bes'8 c'8 |
+	f'8 g'8 gis'8 a'8 ~ a'2 ~ |
+	a'1 |
+	\endBar
+}
+{% endif %}

@@ -1,0 +1,127 @@
+{#
+default_version = "Wikifonia"
+
+[attributes]
+title = "Hey there"
+style = "Jazz"
+composer = "Jerry Ross, Richard Adler"
+piece = "Jazz"
+typesetter = "OpenBook contributors (MusicXML import)"
+completion = "3"
+uuid = "9a04c17d-5a6d-534a-a141-4fffda69cd93"
+location = "Real_Book_1:207, StandardsBook:166, Just_Standards_Real_Book:139"
+copyright = "1954 Frank Music Corp. ©Renewed 1982 Lakshmi Puja Music Ltd. and J & J Ross Co. All Rights Administered by The Songwriters Guild"
+copyrightextra = "of America. All Rights Reserved."
+
+[versions.Wikifonia]
+doChords = true
+doVoice = true
+doLyrics = false
+doLyricsmore = false
+doLyricsmoremore = false
+doChordBars = false
+doGuitar = false
+doExtra = false
+doPrep = false
+doOwn = false
+#}
+{% if part == "Vars" %}
+{% endif %}
+{% if part == "Doc" %}
+	DONE:
+	- imported melody and chord changes from real_books_archive.gi/Wikifonia.tar.xz: Wikifonia/Jerry Ross, Richard Adler - Hey there.mxl.
+	- source revision: http://wikifonia.org/node/4621/revisions/28551/view.
+	- PDF reference: real_books_archive.gi/The Standards Real Book.pdf, PDF page 166.
+	- retained the original copyright notice where printed; the underlying music is not relicensed.
+	- retained written measures, pickups, repeats and endings; lyrics omitted.
+	- tempo is an editorial practice suggestion.
+	TODO:
+	- proofread the music against the referenced PDF and check by ear.
+{% endif %}
+{% if part == "ChordsWikifonia" %}\chordmode {
+	\startChords
+	\startSong
+
+	\myMark "A"
+	\startPart
+	\repeat volta 2 {
+	f1 |
+	g2:m7 c2:7 |
+	f1 |
+	g2:m7 c2:7 | \myEndLine
+	d1:7 |
+	g2:m7 c2:7 |
+	f1 |
+	s1 | \myEndLine
+	a1 |
+	b2:m7 e2:7 |
+	a1 |
+	s2 e2:7 | \myEndLine
+	a1:7 |
+	d1:7 |
+	g1:m7 |
+	c1:7 | \myEndLine
+	}
+	g2:m7 c2:7 |
+	f1 |
+	s4 f2.:7 |
+	bes1 | \myEndLine
+	s1 |
+	f1 |
+	c2:m d2:7 |
+	g1:m7 | \myEndLine
+	bes1:m |
+	f1 |
+	c2.:m d4:7 |
+	g1:m7 | \myEndLine
+	c1:7 |
+	f1 |
+	s1 |
+	\endBar
+	\endPart
+
+	\endSong
+	\endChords
+}
+{% endif %}
+{% if part == "VoiceWikifonia" %}\absolute {
+	\tempo "Moderato" 4 = 120
+	\time 4/4
+	\key c \major
+
+	\repeat volta 2 {
+	f'4 f'2. |
+	f'4 a'8 c''8 e'4 f'8 g'8 |
+	f'1 |
+	f'4 a'8 c''8 e'4. e'8 |
+	fis'8 fis'8 fis'2. ^ "To Coda" |
+	g'4 a'8 bes'8 c''4 g'4 |
+	a'1 ~ |
+	a'2. r4 |
+	a'4 a'2. |
+	a'4 cis''8 e''8 gis'4 a'8 b'8 |
+	a'1 |
+	a'4 cis''8 e''8 gis'4. gis'8 |
+	cis''8 cis''8 cis''2 a'4 |
+	d''8 d''8 d''2 a'4 |
+	bes'8 bes'8 bes'2. ~ |
+	bes'2 bes'8 a'8 g'8 r8 |
+	}
+	\mark \markup { \musicglyph "scripts.coda" } g'4 a'8 bes'8 c''4 c''4 |
+	d''1 ~ |
+	d''4 r4 bes'4 c''4 |
+	d''4 d''8 d''8 d''4. d''8 |
+	d''4 d''4 e''4. d''8 |
+	c''4 c''2. ~ |
+	c''4 c''4 bes'4 a'4 |
+	g'4 g'8 g'8 g'4. a'8 |
+	bes'2. a'8 g'8 |
+	a'4 a'8 a'8 a'4 bes'4 |
+	c''2. bes'8 a'8 |
+	bes'4 bes'8 bes'8 bes'4 c''4 |
+	d''2 e'4 e'8 e'8 |
+	e'4 f'2. ~ |
+	f'2. r4 |
+	\endBar
+}
+{% endif %}

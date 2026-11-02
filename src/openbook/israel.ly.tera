@@ -1,0 +1,85 @@
+{#
+default_version = "Wikifonia"
+
+[attributes]
+title = "Israel"
+style = "Jazz"
+composer = "John Carisi"
+piece = "Jazz"
+typesetter = "OpenBook contributors (MusicXML import)"
+completion = "3"
+uuid = "d916d491-45f8-5ea7-8a31-d45e0a345e8f"
+location = "Real_Book_1:253, 557_Standards:178"
+copyright = "All Rights Reserved"
+
+[versions.Wikifonia]
+doChords = true
+doVoice = true
+doLyrics = false
+doLyricsmore = false
+doLyricsmoremore = false
+doChordBars = false
+doGuitar = false
+doExtra = false
+doPrep = false
+doOwn = false
+#}
+{% if part == "Vars" %}
+{% endif %}
+{% if part == "Doc" %}
+	DONE:
+	- imported melody and chord changes from real_books_archive.gi/Wikifonia.tar.xz: Wikifonia/John Carisi - Isra?l.mxl.
+	- source revision: http://wikifonia.org/node/784/revisions/1033/view.
+	- PDF reference: real_books_archive.gi/The Real Book of Jazz Volume I.pdf, PDF page 253.
+	- retained the original copyright notice where printed; the underlying music is not relicensed.
+	- retained written measures, pickups, repeats and endings; lyrics omitted.
+	- tempo is an editorial practice suggestion.
+	TODO:
+	- proofread the music against the referenced PDF and check by ear.
+	- verify the copyright notice against the scan; no readable per-tune notice was recovered, so the archived rights notice is retained where available.
+{% endif %}
+{% if part == "ChordsWikifonia" %}\chordmode {
+	\startChords
+	\startSong
+
+	\myMark "A"
+	\startPart
+	d1:m |
+	s1 |
+	d1:m6 |
+	d1:7.9- | \myEndLine
+	g1:m |
+	g2:m6 a2:7.13- |
+	d1:maj7 |
+	f1:maj7 | \myEndLine
+	bes1:maj7 |
+	a1:7 |
+	d2:m f2:7 |
+	bes2:7 a2:7 | \myEndLine
+	\endBar
+	\endPart
+
+	\endSong
+	\endChords
+}
+{% endif %}
+{% if part == "VoiceWikifonia" %}\absolute {
+	\tempo "Moderato" 4 = 120
+	\time 4/4
+	\key d \minor
+
+	r4 g''8 a''8 e''8 d''4 a''8 ~ |
+	a''8 - "Dm(b6)" a''8 \times 2/3 { g''8 f''8 e''8 } d''4 c''8 a'8 ~ |
+	a'2 c''4 e''8 a'8 ~ |
+	a'2 ~ a'8 a'8 d''8 f''8 ~ |
+	f''8 g''4. r2 - "Gm(b6)" |
+	r8 g''8 \times 2/3 { f''8 e''8 d''8 } c''4 e''8 a'8 ~ |
+	a'2 ~ a'8 e''8 d''8 e'8 ~ |
+	e'4. a''8 ~ a''4 g''4 |
+	\times 2/3 { r4 d'4 g'4 } \times 2/3 { c''4 f'4 bes'4 } |
+	es''4. cis''8 ~ cis''8 e''8 f''8 g''8 |
+	\times 2/3 { a'4 bes'4 a'4 } g''4. f''8 |
+	\times 2/3 { e''8 f''8 e''8 } gis'4 ~ gis'8 a'8 cis''8 d''8 |
+	\endBar
+}
+{% endif %}

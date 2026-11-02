@@ -1,0 +1,141 @@
+{#
+default_version = "Wikifonia"
+
+[attributes]
+title = "Where Are You?"
+style = "Jazz"
+composer = "Jimmy McHugh"
+piece = "Jazz"
+typesetter = "OpenBook contributors (MusicXML import)"
+completion = "3"
+uuid = "344b7483-1f08-5452-aad6-a09ed7b9feb5"
+location = "Real_Book_1:476, New_Real_3:429, 557_Standards:424"
+copyright = "1936 (renewed 1964) Universal Music c/o EMI Feist Catalog, Inc., Used by Permission of CPP/Belwin, Inc., Miami, FL All Rights"
+copyrightextra = "Reserved"
+
+[versions.Wikifonia]
+doChords = true
+doVoice = true
+doLyrics = false
+doLyricsmore = false
+doLyricsmoremore = false
+doChordBars = false
+doGuitar = false
+doExtra = false
+doPrep = false
+doOwn = false
+#}
+{% if part == "Vars" %}
+{% endif %}
+{% if part == "Doc" %}
+	DONE:
+	- imported melody and chord changes from real_books_archive.gi/Wikifonia.tar.xz: Wikifonia/Jimmy McHugh, Harold Adamson - Where Are You?.mxl.
+	- source revision: http://wikifonia.org/node/18606/revisions/28207/view.
+	- PDF reference: real_books_archive.gi/newreal3.pdf, PDF page 429.
+	- retained the original copyright notice where printed; the underlying music is not relicensed.
+	- retained written measures, pickups, repeats and endings; lyrics omitted.
+	- tempo is an editorial practice suggestion.
+	TODO:
+	- proofread the music against the referenced PDF and check by ear.
+{% endif %}
+{% if part == "ChordsWikifonia" %}\chordmode {
+	\startChords
+	\startSong
+
+	\myMark "A"
+	\startPart
+	\repeat volta 2 {
+	g1 |
+	b2:m fis2 |
+	a2.:m7 d4:7 |
+	g4:dim7 g2. | \myEndLine
+	a1:7 |
+	g4:dim7 g2. |
+	a2:m d2:7 |
+	g1 | \myEndLine
+	s1 |
+	b2:m fis2 |
+	a2.:m7 d4:7 |
+	g4:dim7 g2. | \myEndLine
+	a1:7 |
+	g4:dim7 g2. |
+	a2:m d2:7 |
+	g4 c2:m g4 | \myEndLine
+	c2 a2:m7 |
+	b2:sus4.7 b2:7 |
+	e2:m a2:7 |
+	d4:7 a2:m7 d4:7 | \myEndLine
+	c2 a2:m7 |
+	b2:sus4.7 b2:7 |
+	e2:m a2:7 |
+	d4:7 a4:m d2:7 | \myEndLine
+	g1 |
+	b2:m fis2 |
+	a2.:m7 d4:7 |
+	g4:dim7 g2. | \myEndLine
+	a1:7 |
+	g4:dim7 g2. |
+	a2.:m7 d4:7 |
+	} \alternative {
+	{
+	g2 a2:m7 | \myEndLineVoltaNotLast
+	}
+	{
+	g1 | \myEndLineVoltaLast
+	}
+	}
+	\endBar
+	\endPart
+
+	\endSong
+	\endChords
+}
+{% endif %}
+{% if part == "VoiceWikifonia" %}\absolute {
+	\tempo "Moderato" 4 = 120
+	\time 2/2
+	\key g \major
+
+	\repeat volta 2 {
+	d''2. g'4 |
+	fis'1 |
+	\times 2/3 { e'4 e'4 e'4 } g'4. fis'8 |
+	cis'4 d'2. |
+	\times 2/3 { fis'4 fis'4 fis'4 } a'4. g'8 |
+	cis'4 d'2. |
+	c''2. d''4 |
+	b'2. r4 |
+	d''2. g'4 |
+	fis'1 |
+	\times 2/3 { e'4 e'4 e'4 } g'4. fis'8 |
+	cis'4 d'2. |
+	\times 2/3 { fis'4 fis'4 fis'4 } a'4. g'8 |
+	cis'4 d'2. |
+	d''2. b'4 |
+	g'2. r4 |
+	e'4 fis'4 g'4 a'4 |
+	b'4 b'2. |
+	g'4 a'4 b'4 c''4 |
+	d''2. r4 |
+	e'4 fis'4 g'4 a'4 |
+	b'4 b'2. |
+	g'4 a'4 b'4 cis''4 |
+	d''2. r4 |
+	d''2. g'4 |
+	fis'1 |
+	\times 2/3 { e'4 e'4 e'4 } g'4. fis'8 |
+	cis'4 d'2. |
+	\times 2/3 { fis'4 fis'4 fis'4 } a'4. g'8 |
+	cis'4 d'2. |
+	d''2. b'4 |
+	} \alternative {
+	{
+	g'2. r4 |
+	}
+	{
+	g'2. r4 |
+	}
+	}
+	\endBar
+}
+{% endif %}

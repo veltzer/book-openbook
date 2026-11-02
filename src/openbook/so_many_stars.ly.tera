@@ -1,0 +1,152 @@
+{#
+default_version = "Wikifonia"
+
+[attributes]
+title = "So Many Stars"
+style = "Jazz"
+composer = "Sergio Mendes"
+piece = "Jazz"
+typesetter = "OpenBook contributors (MusicXML import)"
+completion = "3"
+uuid = "20c1c027-05e9-5bc1-8437-ff9ff0c73292"
+location = "New_Real_2:341"
+copyright = "All Rights Reserved"
+
+[versions.Wikifonia]
+doChords = true
+doVoice = true
+doLyrics = false
+doLyricsmore = false
+doLyricsmoremore = false
+doChordBars = false
+doGuitar = false
+doExtra = false
+doPrep = false
+doOwn = false
+#}
+{% if part == "Vars" %}
+{% endif %}
+{% if part == "Doc" %}
+	DONE:
+	- imported melody and chord changes from real_books_archive.gi/Wikifonia.tar.xz: Wikifonia/Sergio Mendes, Alan and Marilyn Bergman - So Many Stars.mxl.
+	- source revision: http://wikifonia.org/node/15308/revisions/20401/view.
+	- PDF reference: real_books_archive.gi/newreal2.pdf, PDF page 341.
+	- retained the original copyright notice where printed; the underlying music is not relicensed.
+	- retained written measures, pickups, repeats and endings; lyrics omitted.
+	- tempo is an editorial practice suggestion.
+	TODO:
+	- proofread the music against the referenced PDF and check by ear.
+	- verify editorial chord spacing in measures 36; the archive places successive symbols at the same offset.
+	- verify the copyright notice against the scan; no readable per-tune notice was recovered, so the archived rights notice is retained where available.
+{% endif %}
+{% if part == "ChordsWikifonia" %}\chordmode {
+	\startChords
+	\startSong
+
+	\myMark "A"
+	\startPart
+	s1 |
+	f1/g |
+	g1:7.9- |
+	g1:m7 | \myEndLine
+	c1:7.9- |
+	f1:maj7 |
+	bes1:13 |
+	e1*5/8:m c4./e | \myEndLine
+	e2.:m6 e4:m7 |
+	e2:m7+ e2:m7 |
+	a1:7.9+ |
+	d1:m7 | \myEndLine
+	g1:7.9- |
+	c1:6/d |
+	a2.:sus4.7 a4:7.9+ |
+	f1/g | \myEndLine
+	g1:7.9- |
+	g1:m7 |
+	c1:7.9- |
+	f1:maj7 | \myEndLine
+	bes1:13 |
+	e1*5/8:m c4./e |
+	e2.:m6 e4:m7 |
+	e2:m7+ e2:m7 | \myEndLine
+	a1:7.9+ |
+	d1:m7 |
+	g1:7.9- |
+	c1:6.9 | \myEndLine
+	c2.:6 f4:maj7 |
+	fis1:m9 |
+	f1:7.11+ |
+	e1:m9 | \myEndLine
+	a1:7.9- |
+	d1:m9 |
+	g1:7.9- |
+	e2:13 e2:aug7 | \myEndLine
+	a1*5/8:sus4.7 a4.:7.9- |
+	f1/g |
+	g1:7.9- |
+	e1:m9 | \myEndLine
+	a1 |
+	d1:m9 |
+	g1:7.9- |
+	c1:6.9 | \myEndLine
+	s1 |
+	\endBar
+	\endPart
+
+	\endSong
+	\endChords
+}
+{% endif %}
+{% if part == "VoiceWikifonia" %}\absolute {
+	\tempo "Moderato" 4 = 120
+	\time 4/4
+	\key c \major
+
+	r2 r4 g4 |
+	e'2 ~ e'8 f'8 e'8 g8 |
+	e'2 ~ e'8 f'8 e'8 g8 |
+	e'2 ~ e'8 f'8 e'8 g8 |
+	e'2 \times 2/3 { a'4 g'4 e'4 } |
+	e'4. c'8 c'2 ~ |
+	c'2. g4 |
+	g'2 ~ g'8 a'8 fis'8 e'8 |
+	g'2 ~ g'8 a'8 fis'8 e'8 |
+	g'4 a'8 fis'8 ~ fis'8 e'8 g'4 ~ |
+	g'2 \times 2/3 { a'4 g'4 g4 } |
+	e'2 ~ e'8 f'8 e'8 g8 |
+	e'2 ~ e'8 f'8 e'8 g8 |
+	e'1 ~ |
+	e'2 r4 g4 |
+	e'2 ~ e'8 f'8 e'8 g8 |
+	e'2 ~ e'8 f'8 e'8 g8 |
+	e'2 ~ e'8 f'8 e'8 g8 |
+	e'2 \times 2/3 { a'4 g'4 e'4 } |
+	e'4. c'8 c'2 ~ |
+	c'2. g4 |
+	g'2 ~ g'8 a'8 fis'8 e'8 |
+	g'2 ~ g'8 a'8 fis'8 e'8 |
+	g'4 a'8 fis'8 ~ fis'8 e'8 g'4 ~ |
+	g'2 \times 2/3 { a'4 g'4 g4 } |
+	e'2 ~ e'8 f'8 e'8 g8 |
+	e'2 ~ e'8 f'8 e'8 g8 |
+	e'1 ~ |
+	e'2 r4 g4 |
+	b'2 ~ b'8 c''8 b'8 b8 |
+	b'2 ~ b'8 c''8 b'8 b8 |
+	a'2 ~ a'8 bes'8 a'8 a8 |
+	a'2 ~ a'8 bes'8 a'8 a8 |
+	g'2 ~ g'8 a'8 g'8 g8 |
+	g'2 ~ g'8 a'8 g'8 g8 |
+	e'1 ~ |
+	e'2 ~ e'8 f'8 e'8 g8 |
+	e'2 ~ e'8 f'8 e'8 g8 |
+	e'2 ~ e'8 f'8 e'8 f'8 |
+	fis'2 ~ fis'8 g'8 fis'8 a8 |
+	a'2 ~ \times 2/3 { a'4 g'4 f'4 } |
+	e'2 ~ e'8 f'8 e'8 g8 |
+	e'2 ~ e'8 f'8 e'8 g8 |
+	e'1 ~ |
+	e'1 |
+	\endBar
+}
+{% endif %}

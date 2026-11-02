@@ -1,0 +1,141 @@
+{#
+default_version = "Wikifonia"
+
+[attributes]
+title = "That Old Feeling"
+style = "Jazz"
+composer = "Sammy Fain"
+piece = "Jazz"
+typesetter = "OpenBook contributors (MusicXML import)"
+completion = "3"
+uuid = "2f2c8fa2-1e77-5a88-b1e6-fb2c669c9c8a"
+location = "Real_Book_3:305, New_Real_3:391, New_Real_3:390, 557_Standards:375"
+copyright = "1937 (renewed 1965) EMI Feist Catalog, Inc., Used by Permission of CPP/Belwin, Inc., Miami, FL All Rights Reserved"
+
+[versions.Wikifonia]
+doChords = true
+doVoice = true
+doLyrics = false
+doLyricsmore = false
+doLyricsmoremore = false
+doChordBars = false
+doGuitar = false
+doExtra = false
+doPrep = false
+doOwn = false
+#}
+{% if part == "Vars" %}
+{% endif %}
+{% if part == "Doc" %}
+	DONE:
+	- imported melody and chord changes from real_books_archive.gi/Wikifonia.tar.xz: Wikifonia/Sammy Fain, Lew Brown - That old feeling.mxl.
+	- source revision: http://wikifonia.org/node/1063/revisions/1414/view.
+	- PDF reference: real_books_archive.gi/newreal3.pdf, PDF page 391.
+	- retained the original copyright notice where printed; the underlying music is not relicensed.
+	- retained written measures, pickups, repeats and endings; lyrics omitted.
+	- tempo is an editorial practice suggestion.
+	TODO:
+	- proofread the music against the referenced PDF and check by ear.
+	- verify editorial chord spacing in measures 16, 28, 32; the archive places successive symbols at the same offset.
+{% endif %}
+{% if part == "ChordsWikifonia" %}\chordmode {
+	\startChords
+	\startSong
+
+	\myMark "A"
+	\startPart
+	\repeat volta 2 {
+	c1:maj7 |
+	c1:6 |
+	e1:m7.5- |
+	a1:7 | \myEndLine
+	d2:m d2:m7+ |
+	d1:m7 |
+	d1:m7.5- |
+	g2:7 gis2:dim7 | \myEndLine
+	a1:m7 |
+	e1:7/b |
+	g1:m6/bes |
+	a1:7 | \myEndLine
+	a1:m7 |
+	d1:13 |
+	aes1:7 |
+	d2:m7/g g2:7 | \myEndLine
+	c1:maj7 |
+	c1:6 |
+	e1:m7.5- |
+	a1:7 | \myEndLine
+	d2:m d2:m7+ |
+	d1:m7 |
+	f1:7 |
+	e1:aug7 | \myEndLine
+	e1:m7.5- |
+	a2:7.9- a2:7 |
+	d1:m7 |
+	f2:m7 bes2:7 | \myEndLine
+	a1:m7 |
+	d1:9 |
+	d2:m7 g2:13 |
+	} \alternative {
+	{
+	c2:6 g2:7.9- | \myEndLineVoltaNotLast
+	}
+	{
+	c1:6.9 | \myEndLineVoltaLast
+	}
+	}
+	\endBar
+	\endPart
+
+	\endSong
+	\endChords
+}
+{% endif %}
+{% if part == "VoiceWikifonia" %}\absolute {
+	\tempo "Moderato" 4 = 120
+	\time 4/4
+	\key c \major
+
+	\repeat volta 2 {
+	e'4 g'4 e'8 g'4 e'8 ~ |
+	e'4 c'4 e'4 g'4 |
+	bes'1 |
+	a'4 e'2. |
+	f'4 a'4 f'8 a'4 f'8 ~ |
+	f'4 d'4 f'4 g'4 |
+	as'1 |
+	g'4 e'4 ~ e'2 |
+	r4 c'4 c'8 c'8 c'4 |
+	e'4 e'4 e'2 |
+	r4 e'4 e'4 e'4 |
+	a'1 |
+	r4 a'4 a'4 a'4 |
+	b'4 b'4 b'2 |
+	r4 c''4 c''4 c''4 |
+	d'1 |
+	e'4 g'4 e'8 g'4 e'8 ~ |
+	e'4 c'4 e'4 g'4 |
+	bes'1 |
+	a'4 e'2. |
+	f'4 a'4 f'8 a'4 f'8 ~ |
+	f'4 d'4 f'4 a'4 |
+	c''1 |
+	c''4 c''2. |
+	r4 bes'4 bes'4 bes'4 |
+	bes'4 a'8 g'8 ~ g'8 f'8 e'4 |
+	r4 g'4 \times 2/3 { g'4 ges'4 f'4 } |
+	c''2. c'8 d'8 |
+	e'1 |
+	e'4 a'2 r4 |
+	r4 c'4 e'8 c'8 e'4 |
+	} \alternative {
+	{
+	c'1 |
+	}
+	{
+	c'2 r2 |
+	}
+	}
+	\endBar
+}
+{% endif %}

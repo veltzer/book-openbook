@@ -1,0 +1,133 @@
+{#
+default_version = "Wikifonia"
+
+[attributes]
+title = "Baubles, Bangles and Beads"
+style = "Jazz"
+composer = "George Forrest, Robert Wright"
+piece = "Jazz"
+typesetter = "OpenBook contributors (MusicXML import)"
+completion = "3"
+uuid = "d81dfdda-d57b-5eec-8db1-bd033a145702"
+location = "557_Standards:33"
+copyright = "All Rights Reserved"
+
+[versions.Wikifonia]
+doChords = true
+doVoice = true
+doLyrics = false
+doLyricsmore = false
+doLyricsmoremore = false
+doChordBars = false
+doGuitar = false
+doExtra = false
+doPrep = false
+doOwn = false
+#}
+{% if part == "Vars" %}
+{% endif %}
+{% if part == "Doc" %}
+	DONE:
+	- imported melody and chord changes from real_books_archive.gi/Wikifonia.tar.xz: Wikifonia/George Forrest, Robert Wright - Baubles, Bangles and Beads.mxl.
+	- source revision: http://wikifonia.org/node/4579/revisions/6237/view.
+	- PDF reference: real_books_archive.gi/Guitar - 557 Standards.pdf, PDF page 33.
+	- retained the original copyright notice where printed; the underlying music is not relicensed.
+	- retained written measures, pickups, repeats and endings; lyrics omitted.
+	- tempo is an editorial practice suggestion.
+	TODO:
+	- proofread the music against the referenced PDF and check by ear.
+	- verify the copyright notice against the scan; no readable per-tune notice was recovered, so the archived rights notice is retained where available.
+{% endif %}
+{% if part == "ChordsWikifonia" %}\chordmode {
+	\startChords
+	\startSong
+
+	\myMark "A"
+	\startPart
+	g2.:m7 |
+	c2.:7 |
+	f2. |
+	s2. | \myEndLine
+	g2.:m7 |
+	c2.:7 |
+	f2. |
+	s2. | \myEndLine
+	e2. |
+	s2. |
+	a2. |
+	s2. | \myEndLine
+	e2. |
+	s2. |
+	a2. |
+	s2. | \myEndLine
+	aes2.:7 |
+	s2. |
+	des2. |
+	s2. | \myEndLine
+	c2.:7 |
+	s2. |
+	f2. |
+	s2. | \myEndLine
+	g2.:m7 |
+	c2.:7 |
+	f2. |
+	d2.:7 | \myEndLine
+	g2.:m7 |
+	c2.:7 |
+	f2. |
+	d2.:7 | \myEndLine
+	g2.:m7 |
+	c2.:7 |
+	f2. |
+	s2. | \myEndLine
+	\endBar
+	\endPart
+
+	\endSong
+	\endChords
+}
+{% endif %}
+{% if part == "VoiceWikifonia" %}\absolute {
+	\tempo "Moderato" 4 = 120
+	\time 3/4
+	\key c \major
+
+	d'4 g'2 |
+	d'4 g'2 |
+	e'4 a'4. c'8 |
+	f'4 e'8 f'8 e'8 d'8 |
+	d'4 g'2 |
+	d'4 g'2 |
+	e'4 a'4. c'8 |
+	a'2. |
+	fis'4 b'2 |
+	fis'4 b'2 |
+	gis'4 cis''4. e'8 |
+	a'4 gis'8 a'8 gis'8 fis'8 |
+	fis'4 b'2 |
+	fis'4 b'2 |
+	gis'4 cis''4. e'8 |
+	cis''2. |
+	bes'2. |
+	c''4 bes'4 c''4 |
+	as'2. |
+	f'2. |
+	bes'2. |
+	c''4 bes'4 c''4 |
+	a'2. |
+	c'2 cis'4 |
+	d'4 g'2 |
+	d'4 g'2 |
+	e'4 a'4. c'8 |
+	c''4 bes'8 c''8 bes'8 a'8 |
+	d'4 a'2 |
+	d'4 a'4. d'8 |
+	a'2. ~ |
+	a'4 bes'4 a'4 |
+	d'4 a'2 |
+	d'4 d''4. e'8 |
+	f'2. ~ |
+	f'4 r2 |
+	\endBar
+}
+{% endif %}

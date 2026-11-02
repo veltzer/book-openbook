@@ -1,0 +1,217 @@
+{#
+default_version = "Wikifonia"
+
+[attributes]
+title = "So In Love"
+style = "Jazz"
+composer = "Cole Porter"
+piece = "Jazz"
+typesetter = "OpenBook contributors (MusicXML import)"
+completion = "3"
+uuid = "bab17683-27cb-53c4-88df-ed616ec72498"
+location = "Real_Book_3:275, StandardsBook:381"
+copyright = "1948 Cole Porter. Copyright Renewed, Assigned to John E Whatron, Trustee of the Cole Porter Musical & Literary Property Trusts."
+copyrightextra = "Chappell & Co., Owner of Publication and Allied Rights throughout the World. All Rights Reserved. Used by Permission"
+
+[versions.Wikifonia]
+doChords = true
+doVoice = true
+doLyrics = false
+doLyricsmore = false
+doLyricsmoremore = false
+doChordBars = false
+doGuitar = false
+doExtra = false
+doPrep = false
+doOwn = false
+#}
+{% if part == "Vars" %}
+{% endif %}
+{% if part == "Doc" %}
+	DONE:
+	- imported melody and chord changes from real_books_archive.gi/Wikifonia.tar.xz: Wikifonia/Cole  Porter - So In Love.mxl.
+	- source revision: http://wikifonia.org/node/5364/revisions/7287/view.
+	- PDF reference: real_books_archive.gi/The Standards Real Book.pdf, PDF page 381.
+	- retained the original copyright notice where printed; the underlying music is not relicensed.
+	- retained written measures, pickups, repeats and endings; lyrics omitted.
+	- tempo is an editorial practice suggestion.
+	TODO:
+	- proofread the music against the referenced PDF and check by ear.
+{% endif %}
+{% if part == "ChordsWikifonia" %}\chordmode {
+	\startChords
+	\startSong
+
+	\myMark "A"
+	\startPart
+	\repeat volta 2 {
+	f1:m |
+	s1 |
+	c1:7 |
+	s1 | \myEndLine
+	f1:m |
+	s1 |
+	bes1:m |
+	s1 | \myEndLine
+	ees1 |
+	ees1:7.9- |
+	aes1 |
+	aes1:7 | \myEndLine
+	des1 |
+	g1:7 |
+	c1 |
+	s2. c4:7.9- | \myEndLine
+	f1:m |
+	s1 |
+	c1:7 |
+	s1 | \myEndLine
+	f1:m |
+	s1 |
+	bes1:m |
+	s1 | \myEndLine
+	ees1 |
+	des1/f |
+	des1:m/e |
+	s1 | \myEndLine
+	aes1/ees |
+	ees1:7 |
+	aes1 |
+	s1 | \myEndLine
+	des1/aes |
+	ees1:7/aes |
+	aes1 |
+	s1 | \myEndLine
+	des1/aes |
+	ees1:7/aes |
+	aes1 |
+	s1 | \myEndLine
+	des1/aes |
+	ees1:7/aes |
+	aes1 |
+	s2 c2:7/e | \myEndLine
+	f2.:m f4:m7/ees |
+	d2.:m7.5- g4:7 |
+	c1 |
+	s2. c4:7.9- | \myEndLine
+	f1:m |
+	s1 |
+	c1:7 |
+	s1 | \myEndLine
+	f1:m |
+	s1 |
+	bes1:m |
+	s1 | \myEndLine
+	ees1 |
+	ees1:7/des |
+	c1:m7.5- |
+	f1:7 | \myEndLine
+	bes1:m |
+	bes1:m7.5- |
+	aes1/ees |
+	s2 aes2:m/ees | \myEndLine
+	aes1:dim/ees |
+	s1 |
+	bes1:m7/ees |
+	ees1:7 | \myEndLine
+	aes1 |
+	s1 |
+	s1 |
+	s2 c2:7/g | \myEndLine
+	}
+	aes1 |
+	s1 |
+	s1 |
+	s1 | \myEndLine
+	\endBar
+	\endPart
+
+	\endSong
+	\endChords
+}
+{% endif %}
+{% if part == "VoiceWikifonia" %}\absolute {
+	\tempo "Moderato" 4 = 120
+	\time 4/4
+	\key as \major
+
+	\repeat volta 2 {
+	c'2 des'2 ~ |
+	des'2. c'4 |
+	c'2 des'2 ~ |
+	des'2. c'4 |
+	c'2 g'2 ~ |
+	g'2. f'4 |
+	f'2 c''2 ~ |
+	c''2. bes'4 |
+	bes'1 |
+	des''2. c''4 |
+	c''1 ~ |
+	c''2 bes'4. as'8 |
+	bes'2. as'4 |
+	as'2. g'4 |
+	g'1 ~ |
+	g'2. r4 |
+	c'2 des'2 ~ |
+	des'2. c'4 |
+	c'2 des'2 ~ |
+	des'2. c'4 |
+	c'2 g'2 ~ |
+	g'2. f'4 |
+	f'2 c''2 ~ |
+	c''2. bes'4 |
+	bes'1 |
+	es''2. des''4 |
+	des''1 ~ |
+	des''2 c''4. b'8 |
+	c''1 ~ |
+	c''4 bes'4 as'4 g'4 |
+	as'1 ~ |
+	as'2. as'4 |
+	bes'2 c''4 des''4 |
+	es''2. es''4 |
+	es''4. des''8 c''2 ~ |
+	c''2. as'4 |
+	bes'2 as'4 g'4 |
+	es'2. es'4 |
+	f'1 ~ |
+	f'2. as'4 |
+	bes'2 c''4 des''4 |
+	e''2. es''4 |
+	es''4. des''8 c''2 ~ |
+	c''2 c''4. bes'8 |
+	as'2. g'4 |
+	f'2. g'4 |
+	g'1 ~ |
+	g'2. c'4 |
+	c'2 des'2 ~ |
+	des'2. c'4 |
+	c'2 des'2 ~ |
+	des'2. c'4 |
+	c'2 g'2 ~ |
+	g'2. f'4 |
+	f'2 c''2 ~ |
+	c''2. bes'4 |
+	bes'1 |
+	f''2. es''4 |
+	es''1 ~ |
+	es''2 des''4. c''8 |
+	des''1 ~ |
+	des''2 c''4. b'8 |
+	c''1 ~ |
+	c''2 b'4. bes'8 |
+	b'2. b'4 |
+	b'2. bes'4 |
+	bes'1 ~ |
+	bes'2. as'4 |
+	as'1 ~ |
+	as'1 ~ |
+	as'1 ~ |
+	as'4 r4 r2 |
+	}
+	as'1 ~ |
+	as'1 ~ |
+	as'1 ~ |
+	as'4 r4 r2 |
+	\endBar
+}
+{% endif %}

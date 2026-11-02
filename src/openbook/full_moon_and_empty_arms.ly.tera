@@ -1,0 +1,140 @@
+{#
+default_version = "Wikifonia"
+
+[attributes]
+title = "Full Moon And Empty Arms"
+style = "Jazz"
+composer = "Buddy Kaye, Ted Mossman"
+piece = "Jazz"
+typesetter = "OpenBook contributors (MusicXML import)"
+completion = "3"
+uuid = "11fcc47b-2104-5d3f-8d5c-c75708683c71"
+location = "Real_Book_3:100"
+copyright = "All Rights Reserved"
+
+[versions.Wikifonia]
+doChords = true
+doVoice = true
+doLyrics = false
+doLyricsmore = false
+doLyricsmoremore = false
+doChordBars = false
+doGuitar = false
+doExtra = false
+doPrep = false
+doOwn = false
+#}
+{% if part == "Vars" %}
+{% endif %}
+{% if part == "Doc" %}
+	DONE:
+	- imported melody and chord changes from real_books_archive.gi/Wikifonia.tar.xz: Wikifonia/Buddy Kaye, Ted Mossman - Full Moon And Empty Arms.mxl.
+	- source revision: http://wikifonia.org/node/4392/revisions/5908/view.
+	- PDF reference: real_books_archive.gi/The Real Book of Jazz Volume III.pdf, PDF page 100.
+	- retained the original copyright notice where printed; the underlying music is not relicensed.
+	- retained written measures, pickups, repeats and endings; lyrics omitted.
+	- tempo is an editorial practice suggestion.
+	TODO:
+	- proofread the music against the referenced PDF and check by ear.
+	- verify editorial chord spacing in measures 3, 7, 13, 19, 23, 31; the archive places successive symbols at the same offset.
+	- verify the copyright notice against the scan; no readable per-tune notice was recovered, so the archived rights notice is retained where available.
+{% endif %}
+{% if part == "ChordsWikifonia" %}\chordmode {
+	\startChords
+	\startSong
+
+	\myMark "A"
+	\startPart
+	\repeat volta 2 {
+	c1 |
+	g1:m7.5- |
+	c2 g2:7 |
+	c2. c4 | \myEndLine
+	aes2 c2 |
+	d2:m7 g2:7 |
+	c2 g2:7 |
+	c1 | \myEndLine
+	e1:7 |
+	a2:m f2:m |
+	g2:7 c2 |
+	s2 e2:m | \myEndLine
+	a2:m a2:m7 |
+	d1:7 |
+	s1 |
+	g1:9 | \myEndLine
+	c1 |
+	g1:m7.5- |
+	c2 g2:7 |
+	c1 | \myEndLine
+	s2 c2 |
+	d2:m7 g2:7 |
+	c4 d2:m g4:7 |
+	c1 | \myEndLine
+	e1:7 |
+	a2:m f2:m |
+	g2:7 c2 |
+	c2.:maj7 d4:m | \myEndLine
+	e1:7 |
+	f2 d4:m7 g4:7 |
+	} \alternative {
+	{
+	c4 d4:m9 d4:m7 g4:7 | \myEndLineVoltaNotLast
+	}
+	{
+	c1 | \myEndLineVoltaLast
+	}
+	}
+	\endBar
+	\endPart
+
+	\endSong
+	\endChords
+}
+{% endif %}
+{% if part == "VoiceWikifonia" %}\absolute {
+	\tempo "Moderato" 4 = 120
+	\time 4/4
+	\key c \major
+
+	\repeat volta 2 {
+	r4 g'4 c''2 ~ |
+	c''4 bes'4 g'4 f'4 |
+	g'1 ~ |
+	g'4 e'4 f'4 e'4 |
+	as'4 g'4 f'4 e'4 |
+	g'4 f'4 e'4 d'4 |
+	g'1 ~ |
+	g'4 c'4 d'4 dis'4 |
+	e'1 ~ |
+	e'4 c'4 e'4 f'4 |
+	g'4 f'4 e'2 ~ |
+	e'4 e'4 fis'4 g'4 |
+	a'1 ~ |
+	a'4 a'4 b'4 c''4 |
+	d''2. - "D m7/G" f'4 |
+	a'1 |
+	r4 g'4 c''2 ~ |
+	c''4 bes'4 g'4 f'4 |
+	g'1 ~ |
+	g'4 e'4 f'4 e'4 |
+	as'4 - "CAb" g'4 f'4 e'4 |
+	g'4 f'4 e'4 d'4 |
+	g'1 ~ |
+	g'4 c'4 d'4 dis'4 |
+	e'1 ~ |
+	e'4 c'4 e'4 f'4 |
+	g'4 f'4 e'2 ~ |
+	e'4 g'4 c''4 d''4 |
+	e''4 f''2. ~ |
+	f''4 e''4 c''4 d''4 |
+	} \alternative {
+	{
+	c''1 |
+	}
+	{
+	c''1 |
+	}
+	}
+	\endBar
+}
+{% endif %}

@@ -1,0 +1,128 @@
+{#
+default_version = "Wikifonia"
+
+[attributes]
+title = "The Midnight Sun Will Never Set"
+style = "Jazz"
+composer = "Quincy Jones, Henri Salvador"
+piece = "Jazz"
+typesetter = "OpenBook contributors (MusicXML import)"
+completion = "3"
+uuid = "0fa004c6-9ba7-5b99-81d3-2a1b4753fb6b"
+location = "New_Real_1:208"
+copyright = "All Rights Reserved"
+
+[versions.Wikifonia]
+doChords = true
+doVoice = true
+doLyrics = false
+doLyricsmore = false
+doLyricsmoremore = false
+doChordBars = false
+doGuitar = false
+doExtra = false
+doPrep = false
+doOwn = false
+#}
+{% if part == "Vars" %}
+{% endif %}
+{% if part == "Doc" %}
+	DONE:
+	- imported melody and chord changes from real_books_archive.gi/Wikifonia.tar.xz: Wikifonia/Quincy Jones, Henri Salvador , Dorcas Cochran - The Midnight Sun WIll Never Set.mxl.
+	- source revision: http://wikifonia.org/node/11203/revisions/15127/view.
+	- PDF reference: real_books_archive.gi/New Real Book 1.pdf, PDF page 214.
+	- retained the original copyright notice where printed; the underlying music is not relicensed.
+	- retained written measures, pickups, repeats and endings; lyrics omitted.
+	- tempo is an editorial practice suggestion.
+	TODO:
+	- proofread the music against the referenced PDF and check by ear.
+	- verify editorial chord spacing in measures 2, 4, 19, 21; the archive places successive symbols at the same offset.
+	- verify the copyright notice against the scan; no readable per-tune notice was recovered, so the archived rights notice is retained where available.
+{% endif %}
+{% if part == "ChordsWikifonia" %}\chordmode {
+	\startChords
+	\startSong
+
+	\myMark "A"
+	\startPart
+	\repeat volta 2 {
+	s8 c2..:9 |
+	f2:maj7 g2:m7 |
+	a2:m7 d2:7 |
+	g2:m7 a2:m7 | \myEndLine
+	bes2:maj7 c2:9 |
+	c2:m7 f2:7.9- |
+	bes2:maj7 e4.:m7.5- a8:7 |
+	} \alternative {
+	{
+	d4:m7 g2.:7 | \myEndLineVoltaNotLast
+	}
+	{
+	d4:m7 g4:7 c4:9 ges4:9 | \myEndLineVoltaLast
+	}
+	}
+	f1:6 |
+	f1:m7 |
+	bes1:9 | \myEndLine
+	ees1 |
+	s4 g4:m7 aes4:7 a4:m7 |
+	bes2:m ges2 |
+	bes2:m des2:7 | \myEndLine
+	g1:m7 |
+	c1:sus4.7.9 |
+	f2:maj7 g2:m7 |
+	a2:m7 d2:7 | \myEndLine
+	g2:m7 a2:m7 |
+	bes2:maj7 c2:9 |
+	c2:m7 f2:7.9- |
+	bes2:maj7 e2:m7.5- | \myEndLine
+	d4:m7 g4:9 g4:m7 c4:7.9- |
+	f1 |
+	\endBar
+	\endPart
+
+	\endSong
+	\endChords
+}
+{% endif %}
+{% if part == "VoiceWikifonia" %}\absolute {
+	\tempo "Moderato" 4 = 120
+	\time 4/4
+	\key f \major
+
+	\repeat volta 2 {
+	r8 c'8 f'8 g'8 bes'8 a'8 g'8 f'8 |
+	d'1 |
+	r8 c'8 f'8 a'8 d''8 c''8 a'8 bes'8 |
+	g'1 |
+	r8 f''8 f''8 d''8 d''8 c''8 bes'8 a'8 |
+	g'4. d''8 a'4. c''8 |
+	f'4. bes'8 e'4. a'8 |
+	} \alternative {
+	{
+	e''8 d''8 g'2. |
+	}
+	{
+	e''8 d''8 a'4 ~ a'8 bes'8 des''8 e''8 |
+	}
+	}
+	f''2 r8 f''8 f''8 f''8 |
+	f''4. es''8 es''4. d''8 |
+	d''4. c''8 c''4. bes'8 |
+	d''4. g'8 g'2 ~ |
+	g'8 r8 c''4 c''4 c''4 |
+	des''4. c''8 c''4. bes'8 |
+	bes'4. as'8 a'4 g'4 |
+	c''1 ~ |
+	c''8 c'8 f'8 g'8 bes'8 a'8 g'8 f'8 |
+	c'1 |
+	r8 c'8 f'8 a'8 d''8 c''8 a'8 bes'8 |
+	g'1 |
+	r8 f''8 f''8 d''8 d''8 c''8 bes'8 a'8 |
+	g'4. d''8 a'4. c''8 |
+	f'4. bes'8 e'4. a'8 |
+	e''8 d''8 a'4 ~ a'8 bes'8 des''8 e''8 |
+	f''1 |
+	\endBar
+}
+{% endif %}

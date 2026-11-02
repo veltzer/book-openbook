@@ -1,0 +1,142 @@
+{#
+default_version = "Wikifonia"
+
+[attributes]
+title = "Mr. Lucky"
+style = "Jazz"
+composer = "Henry Mancini"
+piece = "Jazz"
+typesetter = "OpenBook contributors (MusicXML import)"
+completion = "3"
+uuid = "9c63f3e0-edb5-5791-adaf-5703444a29f6"
+location = "StandardsBook:310"
+copyright = "1959 (Renewed 1987) Northridge Music Co. and Warner Bros. Music. Ali Rights Reserved. Used by Permission."
+
+[versions.Wikifonia]
+doChords = true
+doVoice = true
+doLyrics = false
+doLyricsmore = false
+doLyricsmoremore = false
+doChordBars = false
+doGuitar = false
+doExtra = false
+doPrep = false
+doOwn = false
+#}
+{% if part == "Vars" %}
+{% endif %}
+{% if part == "Doc" %}
+	DONE:
+	- imported melody and chord changes from real_books_archive.gi/Wikifonia.tar.xz: Wikifonia/Henry Mancini, Jay Livingston and Ray Evans - Mr. Lucky.mxl.
+	- source revision: http://wikifonia.org/node/5287/revisions/28344/view.
+	- PDF reference: real_books_archive.gi/The Standards Real Book.pdf, PDF page 310.
+	- retained the original copyright notice where printed; the underlying music is not relicensed.
+	- retained written measures, pickups, repeats and endings; lyrics omitted.
+	- tempo is an editorial practice suggestion.
+	TODO:
+	- proofread the music against the referenced PDF and check by ear.
+{% endif %}
+{% if part == "ChordsWikifonia" %}\chordmode {
+	\startChords
+	\startSong
+
+	\myMark "A"
+	\startPart
+	s1 |
+	\repeat volta 2 {
+	d1:13 |
+	s2. d4:9 |
+	d1:m9 | \myEndLine
+	g1:9.5+ |
+	c1:m9 |
+	f2:13 f2:aug7 |
+	bes1:maj7 | \myEndLine
+	s1 |
+	a1:m11 |
+	d2.:9.5- d4:9 |
+	b1:m7 | \myEndLine
+	s4 e2.:m7 |
+	c1:m11 |
+	a2.:m11 d4:7 |
+	d1:m7 | \myEndLine
+	g1:7 |
+	d1:13 |
+	s2. d4:9 |
+	d1:m9 | \myEndLine
+	g1:9.5+ |
+	c1:m9 |
+	f2:13 f2:aug7 |
+	bes1:maj7 | \myEndLine
+	e2.:aug7 bes4:7/d |
+	ees2 c2:m7/g |
+	d1:9 |
+	b1:m7 | \myEndLine
+	bes1:9 |
+	a1:m9 |
+	a1:m7/d |
+	} \alternative {
+	{
+	g1:6 | \myEndLine
+	s1 | \myEndLineVoltaNotLast
+	}
+	{
+	g1:6 | \myEndLineVoltaLast
+	}
+	}
+	\endBar
+	\endPart
+
+	\endSong
+	\endChords
+}
+{% endif %}
+{% if part == "VoiceWikifonia" %}\absolute {
+	\tempo "Moderato" 4 = 120
+	\time 4/4
+	\key g \major
+
+	r4 g'4 a'4 c''4 |
+	\repeat volta 2 {
+	dis''4 e''2. ~ |
+	e''2 b'4 a'4 |
+	e'1 ~ |
+	e'2 g'4 es'4 |
+	d'1 ~ |
+	d'2 f'4 des'4 |
+	c'1 ~ |
+	c'2 bes4 c'4 |
+	d'4 c'4 e'4 g'4 |
+	gis'2. a'4 |
+	a'1 ~ |
+	a'4 g'4 d'4 e'4 |
+	f'4 d'4 bes4 c'4 |
+	d'2. c'4 |
+	d'1 ~ |
+	d'4 g'4 a'4 - "N.C." c''4 |
+	dis''4 e''2. ~ |
+	e''2 b'4 a'4 |
+	e'1 ~ |
+	e'2 g'4 es'4 |
+	d'1 ~ |
+	d'2 f'4 des'4 |
+	c'1 ~ |
+	c'2. bes4 |
+	d'4 c'4 es'4 g'4 |
+	gis'4 a'4 b'4 c''4 |
+	d''1 ~ |
+	d''2. c''4 |
+	b'2. a'4 |
+	e'2 e'2 |
+	} \alternative {
+	{
+	g'1 |
+	r4 g'4 a'4 c''4 |
+	}
+	{
+	g'1 |
+	}
+	}
+	\endBar
+}
+{% endif %}

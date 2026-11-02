@@ -1,0 +1,125 @@
+{#
+default_version = "Wikifonia"
+
+[attributes]
+title = "With Every Breath I Take"
+style = "Jazz"
+composer = "Ralph Rainger"
+piece = "Jazz"
+typesetter = "OpenBook contributors (MusicXML import)"
+completion = "3"
+uuid = "a0c21d31-4819-5779-a0e4-8c32e3b5bb22"
+location = "Real_Book_3:352"
+copyright = "All Rights Reserved"
+
+[versions.Wikifonia]
+doChords = true
+doVoice = true
+doLyrics = false
+doLyricsmore = false
+doLyricsmoremore = false
+doChordBars = false
+doGuitar = false
+doExtra = false
+doPrep = false
+doOwn = false
+#}
+{% if part == "Vars" %}
+{% endif %}
+{% if part == "Doc" %}
+	DONE:
+	- imported melody and chord changes from real_books_archive.gi/Wikifonia.tar.xz: Wikifonia/Ralph Rainger, Leo Robin - With Every Breath I Take.mxl.
+	- source revision: http://wikifonia.org/node/6679/revisions/9225/view.
+	- PDF reference: real_books_archive.gi/The Real Book of Jazz Volume III.pdf, PDF page 352.
+	- retained the original copyright notice where printed; the underlying music is not relicensed.
+	- retained written measures, pickups, repeats and endings; lyrics omitted.
+	- tempo is an editorial practice suggestion.
+	TODO:
+	- proofread the music against the referenced PDF and check by ear.
+	- verify the copyright notice against the scan; no readable per-tune notice was recovered, so the archived rights notice is retained where available.
+{% endif %}
+{% if part == "ChordsWikifonia" %}\chordmode {
+	\startChords
+	\startSong
+
+	\myMark "A"
+	\startPart
+	f1:maj7 |
+	s1 |
+	g1:m7 |
+	s1 | \myEndLine
+	c1:7 |
+	s1 |
+	f1:maj7 |
+	g2:m7 c2:7 | \myEndLine
+	f1:maj7 |
+	s1 |
+	g1:m7 |
+	s1 | \myEndLine
+	c1:7 |
+	s1 |
+	f1:maj7 |
+	bes2:m7.5- e2:7 | \myEndLine
+	a2:m7 e2:m7 |
+	a1:m7 |
+	s2 e2:m7 |
+	a2.:m7 bes4:7 | \myEndLine
+	c2:maj7 bes2:7 |
+	c2:maj7 g2:7 |
+	g1:m7 |
+	c1:aug7 | \myEndLine
+	f1:maj7 |
+	s1 |
+	g1:m7 |
+	s1 | \myEndLine
+	s1 |
+	s1 |
+	f1:maj7 |
+	s1 | \myEndLine
+	\endBar
+	\endPart
+
+	\endSong
+	\endChords
+}
+{% endif %}
+{% if part == "VoiceWikifonia" %}\absolute {
+	\tempo "Moderato" 4 = 120
+	\time 4/4
+	\key f \major
+
+	r8 c'8 d'8 e'8 f'8 g'8 \once \omit TupletBracket \times 2/3 { a'8 c''8 d''8 ~ } |
+	d''4. a'8 a'2 |
+	r8 d'8 g'8 a'8 g'8 d'8 \once \omit TupletBracket \times 2/3 { g'8 a'8 g'8 ~ } |
+	g'2. ges'8 f'8 |
+	e'8 d''8 d''8 d''8 ~ d''4 \times 2/3 { r8 d'8 des'8 } |
+	c'8 a'8 a'8 a'8 ~ a'4 gis'4 |
+	a'1 ~ |
+	a'4 r4 r2 |
+	r8 c'8 d'8 e'8 f'8 g'8 \once \omit TupletBracket \times 2/3 { a'8 c''8 d''8 ~ } |
+	d''4. a'8 a'2 |
+	r8 d'8 g'8 a'8 g'8 d'8 \once \omit TupletBracket \times 2/3 { g'8 a'8 g'8 ~ } |
+	g'2. ges'8 f'8 |
+	e'8 d''8 d''8 d''8 ~ d''4 \times 2/3 { r8 d'8 des'8 } |
+	c'8 a'8 a'8 a'8 ~ a'4 d'4 |
+	f'1 ~ |
+	f'2 d''8 c''8 a'8 f'8 |
+	e'4. e'8 g'4. g'8 |
+	e'4 e'2 c'8 d'8 |
+	\times 2/3 { e'4 e'4 e'4 } g'4 g'4 |
+	e'2. f'4 |
+	g'4. g'8 bes'4. bes'8 |
+	g'4 g'4 \times 2/3 { a'4 g'4 a'4 } |
+	c''2. d''4 |
+	gis'4 c''4 d'2 |
+	r8 c'8 d'8 e'8 f'8 g'8 \once \omit TupletBracket \times 2/3 { a'8 c''8 d''8 ~ } |
+	d''4. a'8 a'2 |
+	r8 d'8 g'8 a'8 g'8 d'8 \once \omit TupletBracket \times 2/3 { g'8 a'8 g'8 ~ } |
+	g'2. ges'8 f'8 |
+	e'8 d''8 d''8 d''8 ~ d''4 \times 2/3 { r8 d'8 des'8 } |
+	c'8 a'8 a'8 a'8 ~ a'4 a'4 |
+	f'1 ~ |
+	f'2 r2 |
+	\endBar
+}
+{% endif %}

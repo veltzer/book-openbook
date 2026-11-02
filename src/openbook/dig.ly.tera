@@ -1,0 +1,133 @@
+{#
+default_version = "Wikifonia"
+
+[attributes]
+title = "Dig"
+style = "Jazz"
+composer = "Miles Davis"
+piece = "Jazz"
+typesetter = "OpenBook contributors (MusicXML import)"
+completion = "3"
+uuid = "0f23384f-400d-5a8d-afd3-02b8a2bbd29e"
+location = "Real_Book_3:69, New_Real_1:70"
+copyright = "All Rights Reserved"
+
+[versions.Wikifonia]
+doChords = true
+doVoice = true
+doLyrics = false
+doLyricsmore = false
+doLyricsmoremore = false
+doChordBars = false
+doGuitar = false
+doExtra = false
+doPrep = false
+doOwn = false
+#}
+{% if part == "Vars" %}
+{% endif %}
+{% if part == "Doc" %}
+	DONE:
+	- imported melody and chord changes from real_books_archive.gi/Wikifonia.tar.xz: Wikifonia/Miles Davis - Dig.mxl.
+	- source revision: http://wikifonia.org/node/5028/revisions/6826/view.
+	- PDF reference: real_books_archive.gi/New Real Book 1.pdf, PDF page 76.
+	- retained the original copyright notice where printed; the underlying music is not relicensed.
+	- retained written measures, pickups, repeats and endings; lyrics omitted.
+	- tempo taken from archived MusicXML.
+	TODO:
+	- proofread the music against the referenced PDF and check by ear.
+	- verify the copyright notice against the scan; no readable per-tune notice was recovered, so the archived rights notice is retained where available.
+{% endif %}
+{% if part == "ChordsWikifonia" %}\chordmode {
+	\startChords
+	\startSong
+
+	\myMark "A"
+	\startPart
+	\repeat volta 2 {
+	f1:7 |
+	s1 |
+	s1 |
+	s1 | \myEndLine
+	bes1:7 |
+	s1 |
+	s1 |
+	s1 | \myEndLine
+	ees1:7 |
+	s1 |
+	s1 |
+	s1 | \myEndLine
+	aes1:maj7 |
+	bes2:m7 ees2:7 |
+	aes1:maj7 |
+	g2:m7 c2:7 | \myEndLine
+	f1:7 |
+	s1 |
+	s1 |
+	s1 | \myEndLine
+	bes1:7 |
+	s1 |
+	s1 |
+	s1 | \myEndLine
+	f1:m |
+	c1:7 |
+	f1:m |
+	s1*5/8 ees4.:7 | \myEndLine
+	aes1:maj7 |
+	f1:7 |
+	bes2:m7 ees2:7 |
+	aes1:6 | \myEndLine
+	}
+	bes2:m7 ees2:7 |
+	aes1:maj7 |
+	\endBar
+	\endPart
+
+	\endSong
+	\endChords
+}
+{% endif %}
+{% if part == "VoiceWikifonia" %}\absolute {
+	\tempo "Moderato" 4 = 240
+	\time 4/4
+	\key as \major
+
+	\repeat volta 2 {
+	\mark \markup { \box { A } } f'2 ~ ^ "Medium-Up Swing =240" f'8 c'4 d'8 |
+	es'4 -. es'8 es'8 ~ es'8 d'8 c'8 as8 |
+	b8 d'8 c'8 bes8 f'8 des'8 es'8 c'8 |
+	r2 r8 as'4 as'8 |
+	r8 c'4 d'8 ~ d'8 es'4 g'8 |
+	r8 f'8 es'8 c'8 d'8 bes8 r4 |
+	f'8 as'8 g'8 f'8 bes'8 g'8 as'8 f'8 |
+	r2 r4 r8 c'8 |
+	des'8 c'8 des'8 es'8 f'8 des'8 c'8 bes8 |
+	es'8 des'8 c'8 bes8 a4 c'4 ~ |
+	c'4. f'16 as'16 c''8 es''8 des''8 a'8 ~ |
+	a'2. bes'4 -. |
+	\once \override NoteHead.style = #'slash bes'4 ^ "Horn Fill" \once \override NoteHead.style = #'slash bes'4 \once \override NoteHead.style = #'slash bes'4 \once \override NoteHead.style = #'slash bes'4 |
+	\once \override NoteHead.style = #'slash bes'4 \once \override NoteHead.style = #'slash bes'4 \once \override NoteHead.style = #'slash bes'4 \once \override NoteHead.style = #'slash bes'4 |
+	\once \override NoteHead.style = #'slash bes'4 \once \override NoteHead.style = #'slash bes'4 \once \override NoteHead.style = #'slash bes'4 \once \override NoteHead.style = #'slash bes'4 |
+	\once \override NoteHead.style = #'slash bes'4 \once \override NoteHead.style = #'slash bes'4 \once \override NoteHead.style = #'slash bes'4 \once \override NoteHead.style = #'slash bes'4 |
+	\mark \markup { \box { B } } f'2 ~ f'8 c'4 d'8 |
+	es'4 -. es'8 es'8 ~ es'8 d'8 c'8 as8 |
+	b8 d'8 c'8 bes8 f'8 des'8 es'8 c'8 |
+	r2 r8 as'4 ^^ as'8 ^^ |
+	r8 c'4 d'8 ~ d'8 es'4 g'8 |
+	r8 f'8 es'8 c'8 d'8 bes8 r4 |
+	f'8 as'8 g'8 f'8 bes'8 g'8 as'8 f'8 |
+	r2 r4 r8 c'8 |
+	\once \omit TupletBracket \times 2/3 { f'8 g'8 f'8 } c'8 f'8 as'8 g'8 f'8 es'8 |
+	e'8 g8 bes8 des'8 c'4 -. bes8 as8 ~ |
+	as4. c'16 es'16 g'8 f'8 r4 |
+	r2 r8 es''4 es''8 ~ |
+	es''8 des''4 c''8 c''8 bes'4 a'8 ~ |
+	a'8 c''4 ges'8 ~ ges'8 f'4 r8 ^ "To Coda" |
+	r8 c'8 \once \omit TupletBracket \times 2/3 { des'8 f'8 as'8 } c''4 -. g'8 as'8 |
+	R1 _ "Solo break 1st x" |
+	}
+	\mark \markup { \musicglyph "scripts.coda" } r8 c'8 \once \omit TupletBracket \times 2/3 { des'8 f'8 as'8 } c''4 -. g'8 bes'8 ~ |
+	bes'1 |
+	\endBar
+}
+{% endif %}

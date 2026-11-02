@@ -1,0 +1,158 @@
+{#
+default_version = "Wikifonia"
+
+[attributes]
+title = "Bouncin' with Bud"
+style = "Jazz"
+composer = "Bud Powell"
+piece = "Jazz"
+typesetter = "OpenBook contributors (MusicXML import)"
+completion = "3"
+uuid = "261f2557-0a82-5a3c-9366-b42d90d2f9ad"
+location = "New_Real_1:37"
+copyright = "1983 Grand Street Music. Used By Permission."
+
+[versions.Wikifonia]
+doChords = true
+doVoice = true
+doLyrics = false
+doLyricsmore = false
+doLyricsmoremore = false
+doChordBars = false
+doGuitar = false
+doExtra = false
+doPrep = false
+doOwn = false
+#}
+{% if part == "Vars" %}
+{% endif %}
+{% if part == "Doc" %}
+	DONE:
+	- imported melody and chord changes from real_books_archive.gi/Wikifonia.tar.xz: Wikifonia/Bud Powell - Bouncin' with Bud.mxl.
+	- source revision: http://wikifonia.org/node/890/revisions/1182/view.
+	- PDF reference: real_books_archive.gi/New Real Book 1.pdf, PDF page 43.
+	- retained the original copyright notice where printed; the underlying music is not relicensed.
+	- retained written measures, pickups, repeats and endings; lyrics omitted.
+	- tempo is an editorial practice suggestion.
+	TODO:
+	- proofread the music against the referenced PDF and check by ear.
+{% endif %}
+{% if part == "ChordsWikifonia" %}\chordmode {
+	\startChords
+	\startSong
+
+	\myMark "A"
+	\startPart
+	bes1:6 |
+	s1 |
+	b1:7.5- |
+	s1 | \myEndLine
+	bes1:6 |
+	s1 |
+	b1:7.5- |
+	s1 | \myEndLine
+	bes2:6 c2:m7 |
+	d2:m7 ees2:m7 |
+	d2:m7 g2:7 |
+	c2:m7 d2:7 | \myEndLine
+	g1:m7 |
+	cis1:dim7 |
+	c2:m7 f2:7 |
+	bes2:6 f2:7.5- | \myEndLine
+	bes2:6 c2:m7 |
+	d2:m7 ees2:6 |
+	d2:m7 g2:7 |
+	c2:m7 d2:7 | \myEndLine
+	g1:m7 |
+	cis1:dim7 |
+	c2:m7 f2:7 |
+	bes2.:6 d4:7 | \myEndLine
+	g1:m |
+	s1 |
+	a1:m7.5- |
+	d1:7.9+.5+ | \myEndLine
+	g1:13.11+ |
+	fis1:13 |
+	c1:m9 |
+	f1:7^5.9-.9+.11+.13- | \myEndLine
+	bes2:6 c2:m7 |
+	d2:m7 ees2:m7 |
+	d2:m7 g2:7 |
+	c2:m7 d2:7 | \myEndLine
+	g1:m7 |
+	cis1:dim7 |
+	c2:m7 f2:7 |
+	bes1:6 | \myEndLine
+	d2:7/fis g4.:m d8:7 |
+	s4. g1*5/8:m |
+	b2:dim7 c4.:m7 g8:7.9- |
+	s4. c4.:m7 ges8:9 f8:9 | \myEndLine
+	f1:9 |
+	s2. f8:7.9-.5- bes8:6 |
+	s1 |
+	s1 | \myEndLine
+	bes2:6 r2 |
+	\endBar
+	\endPart
+
+	\endSong
+	\endChords
+}
+{% endif %}
+{% if part == "VoiceWikifonia" %}\absolute {
+	\tempo "Moderato" 4 = 120
+	\time 4/4
+	\key bes \major
+
+	r8 f'8 bes'8 f''8 ~ f''4. f'8 |
+	bes'8 f''8 ~ f''2. |
+	r8 f'8 b'8 f''8 ~ f''4. f'8 |
+	b'8 f''8 ~ f''2. |
+	r8 f'8 bes'8 f''8 ~ f''4. f'8 |
+	bes'8 f''8 ~ f''2. |
+	r8 f'8 b'8 f''8 ~ f''4. f'8 |
+	b'8 f''8 ~ f''2 r8 es''8 |
+	\mark \markup { \box { [A] } } d''8 c''8 bes'8 a'8 c''8 bes'8 a'8 g'8 |
+	f'8 d'8 es'8 ges'8 ~ ges'4 f'8 es'8 |
+	d'8 c'8 f'8 b8 r4 r8 g'8 ~ -> |
+	g'4 es'8 c'8 a'4 fis'8 d'8 |
+	bes'8 g'8 r4 r4 r8 a'8 |
+	bes'8 g'8 r4 r4 r8 a'8 |
+	bes'8 g'8 a'8 bes'8 g'8 es'8 d'8 c'8 |
+	f'4 r4 r4 r8 es''8 |
+	d''8 a'8 r8 c''8 r8 bes'8 r8 d'8 |
+	r8 a'8 r8 fis'8 g'8 f'8 es'8 d'8 |
+	f'8 b8 r4 r4 r8 f'8 |
+	fis'8 g'8 es'8 c'8 gis'8 a'8 fis'8 d'8 |
+	bes'8 g'8 r4 r4 r8 a'8 |
+	bes'8 g'8 r4 r4 r8 a'8 |
+	bes'8 g'8 a'8 bes'8 g'8 es'8 d'8 c'8 |
+	f'8 bes8 r4 f'8 d'8 fis'8 g'8 ~ |
+	\mark \markup { \box { [B] } } g'8 g'8 r8 a'8 r8 bes'8 r8 d''8 ~ |
+	d''4 bes'8 a'8 r8 g'8 r8 d''8 ~ |
+	d''2 ~ d''8 d''8 \times 2/3 { a'8 g'8 es'8 } |
+	\times 2/3 { f''8 es''8 f''8 ~ } f''2 es''8 e''8 ~ |
+	e''2 r8 e''8 \times 2/3 { cis''8 a'8 f'8 } |
+	\times 2/3 { dis''8 cis''8 dis''8 ~ } dis''2 cis''8 d''8 |
+	r8 d''4. bes'8 g'8 \times 2/3 { es'8 g'8 bes'8 } |
+	cis''8 b'8 ~ b'2 r8 es''8 |
+	\mark \markup { \box { [C] } } d''8 c''8 bes'8 a'8 c''8 bes'8 a'8 g'8 |
+	f'8 d'8 es'8 ges'8 ~ ges'4 f'8 es'8 |
+	d'8 c'8 f'8 b8 r4 r8 g'8 ~ -> |
+	g'4 es'8 c'8 a'4 fis'8 d'8 |
+	bes'8 g'8 r4 r4 r8 a'8 |
+	bes'8 g'8 r4 r4 r8 a'8 |
+	bes'8 g'8 a'8 bes'8 g'8 es'8 d'8 c'8 \mark \markup { \musicglyph "scripts.coda" } |
+	f'8 bes8 r4 r2 |
+	c''4 -. c''4 -. bes'4 -. r8 a'8 |
+	r8 a'8 r8 g'8 r2 |
+	d''4 -. f''4 -. es''4 -. r8 b'8 ~ |
+	\times 2/3 { b'8 c''8 cis''8 } d''8 c''8 r4 as'8 g'8 ~ |
+	g'1 ~ |
+	g'2. b'8 bes'8 |
+	r1 |
+	r1 - "solo break" |
+	\mark \markup { \musicglyph "scripts.coda" } f'8 bes8 r8 e''8 f''8 bes''8 r4 |
+	\endBar
+}
+{% endif %}

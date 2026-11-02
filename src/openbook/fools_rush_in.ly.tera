@@ -1,0 +1,125 @@
+{#
+default_version = "Wikifonia"
+
+[attributes]
+title = "Fools rush in"
+style = "Jazz"
+composer = "Rube Bloom"
+piece = "Jazz"
+typesetter = "OpenBook contributors (MusicXML import)"
+completion = "3"
+uuid = "44cda35f-5ffa-5e8a-b6aa-9dc57ce73908"
+location = "Real_Book_2:114, 557_Standards:109"
+copyright = "All Rights Reserved"
+
+[versions.Wikifonia]
+doChords = true
+doVoice = true
+doLyrics = false
+doLyricsmore = false
+doLyricsmoremore = false
+doChordBars = false
+doGuitar = false
+doExtra = false
+doPrep = false
+doOwn = false
+#}
+{% if part == "Vars" %}
+{% endif %}
+{% if part == "Doc" %}
+	DONE:
+	- imported melody and chord changes from real_books_archive.gi/Wikifonia.tar.xz: Wikifonia/Rube Bloom, Johnny Mercer - Fools rush in.mxl.
+	- source revision: http://wikifonia.org/node/3222/revisions/4601/view.
+	- PDF reference: real_books_archive.gi/The Real Book of Jazz Volume II.pdf, PDF page 114.
+	- retained the original copyright notice where printed; the underlying music is not relicensed.
+	- retained written measures, pickups, repeats and endings; lyrics omitted.
+	- tempo is an editorial practice suggestion.
+	TODO:
+	- proofread the music against the referenced PDF and check by ear.
+	- verify the copyright notice against the scan; no readable per-tune notice was recovered, so the archived rights notice is retained where available.
+{% endif %}
+{% if part == "ChordsWikifonia" %}\chordmode {
+	\startChords
+	\startSong
+
+	\myMark "A"
+	\startPart
+	d1:m7 |
+	g1:7 |
+	c1 |
+	a1:m7 | \myEndLine
+	d1:m7 |
+	g1:7 |
+	c1 |
+	s1 | \myEndLine
+	f1 |
+	d4:m7 g2.:7 |
+	c1 |
+	s4 a2.:m7 | \myEndLine
+	cis2:m d2:m7 |
+	d1:7 |
+	d1:m7 |
+	g1:7 | \myEndLine
+	d1:m7 |
+	g1:7 |
+	c1 |
+	s4 a2.:m7 | \myEndLine
+	d1:m7 |
+	g1:7 |
+	bes1:7.5- |
+	a1:7 | \myEndLine
+	d1:m7 |
+	f1:m6 |
+	e1:m7 |
+	a1:m7 | \myEndLine
+	d1:m7 |
+	s4 g2.:7 |
+	c1 |
+	s1 | \myEndLine
+	\endBar
+	\endPart
+
+	\endSong
+	\endChords
+}
+{% endif %}
+{% if part == "VoiceWikifonia" %}\absolute {
+	\tempo "Moderato" 4 = 120
+	\time 4/4
+	\key c \major
+
+	a'4. a'8 a'2 ~ |
+	a'4 b'4 e''8 d''8 b'8 a'8 |
+	g'1 ~ |
+	g'4 a'4 c''8 b'8 a'8 g'8 |
+	f'4. f'8 f'2 ~ |
+	f'4 g'4 b'8 a'8 g'8 f'8 |
+	e'1 ~ |
+	e'2 a'4 e'4 |
+	d'1 ~ |
+	d'4 a'4 g'4 e'4 |
+	c'1 ~ |
+	c'4 d'4 e'4 g'4 |
+	gis'4. a'8 a'2 ~ |
+	a'4 a'4 b'4 c''4 |
+	d''1 ~ |
+	d''1 |
+	a'4. a'8 a'2 ~ |
+	a'4 b'4 e''8 d''8 b'8 a'8 |
+	g'1 ~ |
+	g'4 a'4 c''8 b'8 a'8 g'8 |
+	f'4. f'8 f'2 ~ |
+	f'4 g'4 b'8 a'8 g'8 f'8 |
+	e'1 ~ |
+	e'1 |
+	d'4. d'8 d'2 ~ |
+	d'4 f'4 as'4 c''4 |
+	e''4. e''8 e''2 ~ |
+	e''4 e''4 d''8 c''8 a'8 c''8 |
+	d''4. d''8 d''2 ~ |
+	d''4 d''4 c''4 b'4 |
+	c''1 ~ |
+	c''2 r2 |
+	\endBar
+}
+{% endif %}

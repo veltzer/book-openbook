@@ -1,0 +1,163 @@
+{#
+default_version = "Wikifonia"
+
+[attributes]
+title = "Estate"
+style = "Jazz"
+composer = "Bruno Martino"
+piece = "Jazz"
+typesetter = "OpenBook contributors (MusicXML import)"
+completion = "3"
+uuid = "259b573d-e2c8-5f25-a276-e966a87a7580"
+location = "Real_Book_3:83"
+copyright = "All Rights Reserved"
+
+[versions.Wikifonia]
+doChords = true
+doVoice = true
+doLyrics = false
+doLyricsmore = false
+doLyricsmoremore = false
+doChordBars = false
+doGuitar = false
+doExtra = false
+doPrep = false
+doOwn = false
+#}
+{% if part == "Vars" %}
+{% endif %}
+{% if part == "Doc" %}
+	DONE:
+	- imported melody and chord changes from real_books_archive.gi/Wikifonia.tar.xz: Wikifonia/Bruno Brighetti, Bruno Martino - Estate.mxl.
+	- source revision: http://wikifonia.org/node/2365/revisions/29955/view.
+	- PDF reference: real_books_archive.gi/The Real Book of Jazz Volume III.pdf, PDF page 83.
+	- retained the original copyright notice where printed; the underlying music is not relicensed.
+	- retained written measures, pickups, repeats and endings; lyrics omitted.
+	- tempo is an editorial practice suggestion.
+	TODO:
+	- proofread the music against the referenced PDF and check by ear.
+	- verify the copyright notice against the scan; no readable per-tune notice was recovered, so the archived rights notice is retained where available.
+{% endif %}
+{% if part == "ChordsWikifonia" %}\chordmode {
+	\startChords
+	\startSong
+
+	\myMark "A"
+	\startPart
+	\partial 4 s4 |
+	\repeat volta 2 {
+	a1:m7 |
+	s1 |
+	d1:m7 | \myEndLine
+	e1:7.5+.9+.11+ |
+	a1:m7 |
+	s1 |
+	d1:m7 | \myEndLine
+	g1:7 |
+	g1:m7/c |
+	c1:7 |
+	f1 | \myEndLine
+	bes1:7.5- |
+	b1:m7/e |
+	} \alternative {
+	{
+	e1:7.5+.9+.11+ | \myEndLineVoltaNotLast
+	}
+	{
+	e1:7 | \myEndLineVoltaLast
+	}
+	}
+	a1 |
+	s1 |
+	ees1:m7.5- |
+	aes1:7 | \myEndLine
+	des1:7 |
+	fis1:7 |
+	d1:m7 |
+	g1:7 | \myEndLine
+	g1:m7 |
+	c1:7 |
+	f1 |
+	bes1:7.5- | \myEndLine
+	b1:m7/e |
+	s1 |
+	e1:7 |
+	a1:m7 | \myEndLine
+	d1:m7 |
+	e1:7.5+.9+.11+ |
+	a1:m7 |
+	s1 | \myEndLine
+	d1:m7 |
+	g1:7 |
+	g1:m7/c |
+	c1:7 | \myEndLine
+	f1 |
+	bes1:sus4.7 |
+	b1:m7/e |
+	e1:7.9- | \myEndLine
+	\endBar
+	\endPart
+
+	\endSong
+	\endChords
+}
+{% endif %}
+{% if part == "VoiceWikifonia" %}\absolute {
+	\tempo "Moderato" 4 = 120
+	\time 4/4
+	\key c \major
+
+	\partial 4 r8 f'8 |
+	\repeat volta 2 {
+	e'8 e'8 ~ e'2. ~ |
+	e'2. r8 e'8 |
+	f'4. f'8 a'8 a'4 c''8 ~ |
+	c''8 c''4 b'8 b'8 ~ b'4 e'8 ~ |
+	e'8 e'8 ~ e'2. ~ |
+	e'2. r8 e'8 |
+	f'8 f'4 a'8 ~ a'8 a'4 e''8 ~ |
+	e''8 e''4 d''8 ~ d''8 d''4 g'8 ~ |
+	g'8 g'8 ~ g'2. ~ |
+	g'2. r8 g'8 |
+	a'4 a'8 c''8 ~ c''8 c''4 g''8 ~ |
+	g''4. f''8 c''8 d''4 e''8 ~ |
+	e''1 ~ |
+	} \alternative {
+	{
+	e''2. r8 e'8 |
+	}
+	{
+	\times 2/3 { e''4 e''4 fis''4 } \times 2/3 { gis''4 fis''4 gis''4 } |
+	}
+	}
+	e''1 ~ |
+	e''2. r8 e''8 |
+	fis''4 g''4 a''4 a''4 |
+	gis''4 gis''4 fis''4 gis''4 |
+	e''4 ~ e''2. |
+	r2 r4 r8 e''8 |
+	d''4. d''8 f''4 f''4 |
+	e''4 e''4 d''4 e''4 |
+	g'2 g'2 ~ |
+	g'4 r4 r4 g'4 |
+	a'4 a'4 c''4 c''4 |
+	g''4 f''4 c''4 d''4 |
+	e''1 ~ |
+	e''2. r8 e'8 |
+	e'8 e'8 ~ e'2. ~ |
+	e'2. r8 e'8 |
+	f'4. f'8 a'8 a'4 c''8 ~ |
+	c''8 c''4 b'8 ~ b'8 b'4 e'8 ~ |
+	e'8 e'8 ~ e'2. ~ |
+	e'2. r8 e'8 |
+	f'8 f'4 a'8 ~ a'8 a'4 e''8 ~ |
+	e''8 e''4 d''8 ~ d''8 d''4 g'8 ~ |
+	g'8 g'8 ~ g'2. ~ |
+	g'2. r8 g'8 |
+	a'4 a'8 c''8 ~ c''8 c''4 g''8 ~ |
+	g''4. f''8 c''8 d''4 e''8 ~ |
+	e''1 ~ |
+	e''2. r4 |
+	\endBar
+}
+{% endif %}

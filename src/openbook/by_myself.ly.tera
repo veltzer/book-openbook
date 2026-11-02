@@ -1,0 +1,157 @@
+{#
+default_version = "Wikifonia"
+
+[attributes]
+title = "By Myself"
+style = "Jazz"
+composer = "Arthur Schwartz"
+piece = "Jazz"
+typesetter = "OpenBook contributors (MusicXML import)"
+completion = "3"
+uuid = "d996b033-d7ae-55fd-b84c-ffe14d7964ea"
+location = "Real_Book_3:48"
+copyright = "All Rights Reserved"
+
+[versions.Wikifonia]
+doChords = true
+doVoice = true
+doLyrics = false
+doLyricsmore = false
+doLyricsmoremore = false
+doChordBars = false
+doGuitar = false
+doExtra = false
+doPrep = false
+doOwn = false
+#}
+{% if part == "Vars" %}
+{% endif %}
+{% if part == "Doc" %}
+	DONE:
+	- imported melody and chord changes from real_books_archive.gi/Wikifonia.tar.xz: Wikifonia/Arthur Schwartz, Howard Dietz - By Myself.mxl.
+	- source revision: http://wikifonia.org/node/11109/revisions/15002/view.
+	- PDF reference: real_books_archive.gi/The Real Book of Jazz Volume III.pdf, PDF page 48.
+	- retained the original copyright notice where printed; the underlying music is not relicensed.
+	- retained written measures, pickups, repeats and endings; lyrics omitted.
+	- tempo is an editorial practice suggestion.
+	TODO:
+	- proofread the music against the referenced PDF and check by ear.
+	- verify the copyright notice against the scan; no readable per-tune notice was recovered, so the archived rights notice is retained where available.
+{% endif %}
+{% if part == "ChordsWikifonia" %}\chordmode {
+	\startChords
+	\startSong
+
+	\myMark "A"
+	\startPart
+	g2.:m7 |
+	s2. |
+	a2.:7.9- |
+	s2. | \myEndLine
+	cis2.:9 |
+	b2.:7.9- |
+	a2.:11 |
+	a2.:7 | \myEndLine
+	f2.:7 |
+	f2.:7.9- |
+	bes2. |
+	g2.:m7 | \myEndLine
+	des2.:7 |
+	c2:11 c4:7.9- |
+	f2. |
+	bes2. | \myEndLine
+	g2.:m7 |
+	s2. |
+	a2.:7.9- |
+	s2. | \myEndLine
+	cis2.:9 |
+	b2.:7.9- |
+	a2.:7 |
+	s2. | \myEndLine
+	f2.:7 |
+	s2. |
+	bes2. |
+	g2.:m7 | \myEndLine
+	des2.:7 |
+	c2.:7 |
+	f2. |
+	s2. | \myEndLine
+	fis2.:9 |
+	f2.:7 |
+	e2.:7.9+ |
+	e2.:7 | \myEndLine
+	ees2.:7.9+ |
+	ees2.:7 |
+	d2.:7.9+ |
+	d2.:7 | \myEndLine
+	des2.:7 |
+	s2. |
+	f2. |
+	d2.:m7 | \myEndLine
+	g2.:m7 |
+	ges2.:9 |
+	f2. |
+	s2. | \myEndLine
+	\endBar
+	\endPart
+
+	\endSong
+	\endChords
+}
+{% endif %}
+{% if part == "VoiceWikifonia" %}\absolute {
+	\tempo "Moderato" 4 = 120
+	\time 3/4
+	\key f \major
+
+	g'2. |
+	g'4 f'4 g'4 |
+	a'2 g'4 |
+	e'2. |
+	g'4 g'4 g'4 |
+	g'4 f'4 g'4 |
+	a'2. ~ |
+	a'2. |
+	a'2. |
+	a'4 g'4 a'4 |
+	c''2 a'4 |
+	g'2. |
+	bes'2 g'4 |
+	f'4 g'4 a'4 |
+	c''2. ~ |
+	c''2. |
+	g'2. |
+	g'4 f'4 g'4 |
+	a'2 g'4 |
+	e'2. |
+	g'4 g'4 g'4 |
+	g'4 f'4 g'4 |
+	a'2. ~ |
+	a'2. |
+	a'2. |
+	a'4 g'4 a'4 |
+	c''2 a'4 |
+	g'2. |
+	bes'2 g'4 |
+	f'4 g'4 a'4 |
+	c''2. ~ |
+	c''2. |
+	d''2. |
+	d''4 c''4 d''4 |
+	e''2. ~ |
+	e''2. |
+	c''4 c''4 c''4 |
+	c''4 bes'4 a'4 |
+	d''2. ~ |
+	d''2. |
+	c''4 c''4 c''4 |
+	c''4 bes'4 a'4 |
+	c''2 a'4 |
+	g'2 f'4 |
+	d''2 a'4 |
+	g'2 f'4 |
+	f'2. ~ |
+	f'2. |
+	\endBar
+}
+{% endif %}

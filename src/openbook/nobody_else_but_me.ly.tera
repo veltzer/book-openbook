@@ -1,0 +1,135 @@
+{#
+default_version = "Wikifonia"
+
+[attributes]
+title = "Nobody Else but Me"
+style = "Jazz"
+composer = "Jerome Kern"
+piece = "Jazz"
+typesetter = "OpenBook contributors (MusicXML import)"
+completion = "3"
+uuid = "21d72c41-06ea-5dad-b8ef-394c49eae4c6"
+location = "Real_Book_3:219"
+copyright = "All Rights Reserved"
+
+[versions.Wikifonia]
+doChords = true
+doVoice = true
+doLyrics = false
+doLyricsmore = false
+doLyricsmoremore = false
+doChordBars = false
+doGuitar = false
+doExtra = false
+doPrep = false
+doOwn = false
+#}
+{% if part == "Vars" %}
+{% endif %}
+{% if part == "Doc" %}
+	DONE:
+	- imported melody and chord changes from real_books_archive.gi/Wikifonia.tar.xz: Wikifonia/Oscar Hammerstein, Jerome Kern - Nobody Else but Me.mxl.
+	- source revision: http://wikifonia.org/node/19502/revisions/25747/view.
+	- PDF reference: real_books_archive.gi/The Real Book of Jazz Volume III.pdf, PDF page 219.
+	- retained the original copyright notice where printed; the underlying music is not relicensed.
+	- retained written measures, pickups, repeats and endings; lyrics omitted.
+	- tempo is an editorial practice suggestion.
+	TODO:
+	- proofread the music against the referenced PDF and check by ear.
+	- verify the copyright notice against the scan; no readable per-tune notice was recovered, so the archived rights notice is retained where available.
+{% endif %}
+{% if part == "ChordsWikifonia" %}\chordmode {
+	\startChords
+	\startSong
+
+	\myMark "A"
+	\startPart
+	\partial 4 s4 |
+	c2:maj7 f2:7 |
+	e2.:m7 a4:7 |
+	d1:m7 | \myEndLine
+	g1:7 |
+	d4:m7 g2.:7 |
+	cis2:m7 fis2:7 |
+	b1:maj7 | \myEndLine
+	fis2:m7 b2:7 |
+	e1:maj7 |
+	f1:dim7 |
+	b2..:maj7/fis ees8:7/g | \myEndLine
+	s1 |
+	a1:m7 |
+	d1:7 |
+	d1:m7 | \myEndLine
+	g1:7 |
+	c2:maj7 f2:7 |
+	e2.:m7 a4:7 |
+	d1:m7 | \myEndLine
+	g1:7 |
+	d2:m7 e2:7 |
+	a4.:m7 aes1*5/8:7 |
+	g1:m7 | \myEndLine
+	c1:7 |
+	f1:maj7 |
+	f2:m7 bes2:7 |
+	c2:maj7 a2:7 | \myEndLine
+	d1*5/8:7 des4.:7 |
+	c1:maj7 |
+	cis1:dim7 |
+	d1:m7 | \myEndLine
+	dis1:dim7 |
+	d1:m7 |
+	aes2:7 g2:7 |
+	c1:6 | \myEndLine
+	s1 |
+	\endBar
+	\endPart
+
+	\endSong
+	\endChords
+}
+{% endif %}
+{% if part == "VoiceWikifonia" %}\absolute {
+	\tempo "Moderato" 4 = 120
+	\time 4/4
+	\key c \major
+
+	\partial 4 g'8 gis'8 |
+	a'4. gis'8 a'8 g'8 a'8 c'8 ~ |
+	c'2. g'8 gis'8 |
+	a'4. gis'8 a'8 g'8 a'8 b8 ~ |
+	b1 |
+	a'8 gis'8 a'8 ais'8 b'4 r4 |
+	gis'4. ais'8 ~ ais'8 fis'4 dis'8 ~ |
+	dis'2. fis'4 |
+	b'1 |
+	r4 b'2 b'4 |
+	d'2. d'4 |
+	dis'2 b'8 ais'8 b'8 dis'8 ~ |
+	dis'1 |
+	r2 b'4 a'8 b'8 ~ |
+	b'4 a'2. |
+	r2 a'4 g'8 a'8 ~ |
+	a'4 g'2 g'8 gis'8 |
+	a'4. gis'8 a'8 g'8 a'8 c'8 ~ |
+	c'2. g'8 gis'8 |
+	a'4. gis'8 a'8 g'8 a'8 b8 ~ |
+	b1 |
+	a'8 gis'8 a'8 ais'8 b'4 r4 |
+	c''8 b'8 c''8 cis''8 ~ cis''2 |
+	d''2. d''8 dis''8 |
+	e''1 |
+	r4 d''4 c''4 g'8 f'8 ~ |
+	f'1 |
+	e'2 g'4 a'4 |
+	b'2 r8 b'4 g'8 |
+	a'4 r4 r8 a'4 gis'8 |
+	a'4 r4 r8 b'4 g'8 |
+	a'4 r4 r8 a'4 gis'8 |
+	a'4 r4 r4 c''8 es''8 ~ |
+	es''8 c''8 es''4 c''2 |
+	r4 d'8 dis'8 e'8 g'8 a'4 |
+	c''2 r2 |
+	R1 |
+	\endBar
+}
+{% endif %}

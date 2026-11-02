@@ -1,0 +1,142 @@
+{#
+default_version = "Wikifonia"
+
+[attributes]
+title = "Can't We Be Friends?"
+style = "Jazz"
+composer = "Kay Swift"
+piece = "Jazz"
+typesetter = "OpenBook contributors (MusicXML import)"
+completion = "3"
+uuid = "6c8455cc-f474-5337-bbd5-da9af701282f"
+location = "Real_Book_2:59, 557_Standards:61"
+copyright = "All Rights Reserved"
+
+[versions.Wikifonia]
+doChords = true
+doVoice = true
+doLyrics = false
+doLyricsmore = false
+doLyricsmoremore = false
+doChordBars = false
+doGuitar = false
+doExtra = false
+doPrep = false
+doOwn = false
+#}
+{% if part == "Vars" %}
+{% endif %}
+{% if part == "Doc" %}
+	DONE:
+	- imported melody and chord changes from real_books_archive.gi/Wikifonia.tar.xz: Wikifonia/Kay Swift, Paul James - Can't We Be Friends?.mxl.
+	- source revision: http://wikifonia.org/node/7052/revisions/9741/view.
+	- PDF reference: real_books_archive.gi/The Real Book of Jazz Volume II.pdf, PDF page 59.
+	- retained the original copyright notice where printed; the underlying music is not relicensed.
+	- retained written measures, pickups, repeats and endings; lyrics omitted.
+	- tempo is an editorial practice suggestion.
+	TODO:
+	- proofread the music against the referenced PDF and check by ear.
+	- verify editorial chord spacing in measures 8, 16, 23, 24, 32, 33; the archive places successive symbols at the same offset.
+	- verify the copyright notice against the scan; no readable per-tune notice was recovered, so the archived rights notice is retained where available.
+{% endif %}
+{% if part == "ChordsWikifonia" %}\chordmode {
+	\startChords
+	\startSong
+
+	\myMark "A"
+	\startPart
+	\repeat volta 2 {
+	g1:7 |
+	c1:7 |
+	f2 des2:7 |
+	d2.:m7 des4:7 | \myEndLine
+	c2.:7 d4:m |
+	g2:7 c2:7 |
+	f4 bes4:7 f2 |
+	d2:m d2:m7 | \myEndLine
+	g1:7 |
+	c1:7 |
+	f2 des2:7 |
+	d2.:m7 des4:7 | \myEndLine
+	c2.:7 d4:m |
+	g2:7 c2:7 |
+	f4 bes4:7 f2 |
+	d2:m f2:7 | \myEndLine
+	bes2.:7 c4 |
+	bes2:9 bes2:7 |
+	f1*5/8 f4.:dim |
+	f2 f4:aug f4:m6 | \myEndLine
+	c1:m |
+	ees2 c4:m7 ees4:7 |
+	d4:aug d4 d4:7 a4:aug |
+	d4 ges2:6 d4:7 | \myEndLine
+	g1:7 |
+	c1:7 |
+	f2 des2:7 |
+	d2:m7 d4:m des4:7 | \myEndLine
+	c2.:7 d4:m |
+	g2:7 c2:7 |
+	f4 bes4:7 f2 |
+	} \alternative {
+	{
+	c2 aes2:7 | \myEndLineVoltaNotLast
+	}
+	{
+	f2 f2:6 | \myEndLineVoltaLast
+	}
+	}
+	\endBar
+	\endPart
+
+	\endSong
+	\endChords
+}
+{% endif %}
+{% if part == "VoiceWikifonia" %}\absolute {
+	\tempo "Moderato" 4 = 120
+	\time 4/4
+	\key f \major
+
+	\repeat volta 2 {
+	c''2 d'8. e'16 f'8. g'16 |
+	a'8 bes'8 c''8 c''8 ~ c''2 |
+	d''4. e''8 des''2 |
+	d''8 c''8 a'8 f'8 d'8 des'8 ~ des'4 |
+	c'2 r8 cis'8 d'8 f'8 |
+	a'4 d''8 a'8 ~ a'8 gis'8 g'4 |
+	f'8 g'8 f'8 f'8 ~ f'2 |
+	R1 |
+	c''2 d'8. e'16 f'8. g'16 |
+	a'8 bes'8 c''8 c''8 ~ c''2 |
+	d''4. e''8 des''2 |
+	d''8 c''8 a'8 f'8 d'8 des'8 ~ des'4 |
+	c'2 r8 cis'8 d'8 f'8 |
+	a'4 d''8 a'8 ~ a'8 gis'8 g'4 |
+	f'8 g'8 f'8 f'8 ~ f'2 |
+	R1 |
+	d''2 ~ d''8 es''8 e''4 |
+	f''2 ~ f''8 e''4 d''8 |
+	c''2 ~ c''8 b'4 bes'8 |
+	a'4 c''4 cis''4 d''4 |
+	es''2 ~ es''8 fis'8 g'8 bes'8 ~ |
+	bes'4 bes'4 c''4 cis''4 |
+	d''2 ~ d''2 |
+	R1 |
+	c''2 d'8. e'16 f'8. g'16 |
+	a'8 bes'8 c''8 c''8 ~ c''2 |
+	d''4. e''8 des''2 |
+	d''8 c''8 a'8 f'8 d'8 des'8 ~ des'4 |
+	c'2 r8 cis'8 d'8 f'8 |
+	a'4 d''8 a'8 ~ a'8 gis'8 g'4 |
+	f'8 g'8 f'8 f'8 ~ f'2 |
+	} \alternative {
+	{
+	R1 |
+	}
+	{
+	R1 |
+	}
+	}
+	\endBar
+}
+{% endif %}

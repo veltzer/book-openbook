@@ -1,0 +1,127 @@
+{#
+default_version = "Wikifonia"
+
+[attributes]
+title = "If I Loved You"
+style = "Jazz"
+composer = "Richard Rodgers"
+piece = "Jazz"
+typesetter = "OpenBook contributors (MusicXML import)"
+completion = "3"
+uuid = "ccf41c55-19eb-5ac2-b18f-76321519c5e8"
+location = "Real_Book_2:161"
+copyright = "All Rights Reserved"
+
+[versions.Wikifonia]
+doChords = true
+doVoice = true
+doLyrics = false
+doLyricsmore = false
+doLyricsmoremore = false
+doChordBars = false
+doGuitar = false
+doExtra = false
+doPrep = false
+doOwn = false
+#}
+{% if part == "Vars" %}
+{% endif %}
+{% if part == "Doc" %}
+	DONE:
+	- imported melody and chord changes from real_books_archive.gi/Wikifonia.tar.xz: Wikifonia/Oscar Hammerstein II, Richard Rodgers - If I Loved You.mxl.
+	- source revision: http://wikifonia.org/node/6045/revisions/8360/view.
+	- PDF reference: real_books_archive.gi/The Real Book of Jazz Volume II.pdf, PDF page 161.
+	- retained the original copyright notice where printed; the underlying music is not relicensed.
+	- retained written measures, pickups, repeats and endings; lyrics omitted.
+	- tempo is an editorial practice suggestion.
+	TODO:
+	- proofread the music against the referenced PDF and check by ear.
+	- verify the copyright notice against the scan; no readable per-tune notice was recovered, so the archived rights notice is retained where available.
+{% endif %}
+{% if part == "ChordsWikifonia" %}\chordmode {
+	\startChords
+	\startSong
+
+	\myMark "A"
+	\startPart
+	\repeat volta 2 {
+	f1 |
+	e1 |
+	f1 |
+	d1:m | \myEndLine
+	g1:m |
+	e1 |
+	c1 |
+	c1:7 | \myEndLine
+	}
+	f1 |
+	s2 a2:7 |
+	d1:m |
+	g1:m | \myEndLine
+	e1:7 |
+	s1 |
+	d1:m |
+	g1:m | \myEndLine
+	g1:7 |
+	c1:7 |
+	s1 |
+	f1 | \myEndLine
+	e1 |
+	f1 |
+	d1:m |
+	g1:m | \myEndLine
+	e1 |
+	f1 |
+	d1:7 |
+	g2:m d2:7 | \myEndLine
+	g2:m c2 |
+	f1 |
+	s1 |
+	\endBar
+	\endPart
+
+	\endSong
+	\endChords
+}
+{% endif %}
+{% if part == "VoiceWikifonia" %}\absolute {
+	\tempo "Moderato" 4 = 120
+	\time 4/4
+	\key c \major
+
+	\repeat volta 2 {
+	f'2 a'2 |
+	d''4 d''2. |
+	f''4 ~ \once \omit TupletBracket \times 2/3 { f''8 e''8 d''8 } c''4 ~ \once \omit TupletBracket \times 2/3 { c''8 bes'8 g'8 } |
+	g'4 f'4 a'2 |
+	g'2 bes'2 |
+	e''4 e''2 f''4 |
+	c''1 ~ |
+	c''1 |
+	}
+	f''1 ~ |
+	f''2 r2 |
+	f''2 e''4 d''4 |
+	c''4 bes'4 c''4 d''4 |
+	e''2 e''2 |
+	e''1 |
+	f''2 e''4 d''4 |
+	c''4 bes'4 c''4 d''4 |
+	g''2 g''2 |
+	g''1 |
+	R1 |
+	f''2 a'2 |
+	d''4 d''2. |
+	f''4 ~ \once \omit TupletBracket \times 2/3 { f''8 e''8 d''8 } c''4 ~ \once \omit TupletBracket \times 2/3 { c''8 b'8 a'8 } |
+	g'4 f'4 a'2 |
+	g'2 bes'2 |
+	e''4 e''2 f''4 |
+	a''1 ~ |
+	a''1 |
+	g''2 a''2 |
+	bes''4 bes''4 d''4 e''4 |
+	f''2 f''2 ~ |
+	f''2 r2 |
+	\endBar
+}
+{% endif %}

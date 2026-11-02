@@ -1,0 +1,129 @@
+{#
+default_version = "Wikifonia"
+
+[attributes]
+title = "Tricotism"
+style = "Jazz"
+composer = "Oscar Pettiford"
+piece = "Jazz"
+typesetter = "OpenBook contributors (MusicXML import)"
+completion = "3"
+uuid = "240f55ca-c64c-5728-b24c-5d630ab48862"
+location = "557_Standards:399"
+copyright = "All Rights Reserved"
+
+[versions.Wikifonia]
+doChords = true
+doVoice = true
+doLyrics = false
+doLyricsmore = false
+doLyricsmoremore = false
+doChordBars = false
+doGuitar = false
+doExtra = false
+doPrep = false
+doOwn = false
+#}
+{% if part == "Vars" %}
+{% endif %}
+{% if part == "Doc" %}
+	DONE:
+	- imported melody and chord changes from real_books_archive.gi/Wikifonia.tar.xz: Wikifonia/Oscar Pettiford - Tricotism.mxl.
+	- source revision: http://wikifonia.org/node/22700/revisions/30272/view.
+	- PDF reference: real_books_archive.gi/Guitar - 557 Standards.pdf, PDF page 399.
+	- retained the original copyright notice where printed; the underlying music is not relicensed.
+	- retained written measures, pickups, repeats and endings; lyrics omitted.
+	- tempo taken from archived MusicXML.
+	TODO:
+	- proofread the music against the referenced PDF and check by ear.
+	- verify the copyright notice against the scan; no readable per-tune notice was recovered, so the archived rights notice is retained where available.
+{% endif %}
+{% if part == "ChordsWikifonia" %}\chordmode {
+	\startChords
+	\startSong
+
+	\myMark "A"
+	\startPart
+	\partial 8 s8 |
+	\repeat volta 2 {
+	des1 |
+	s1 |
+	ees1:7 | \myEndLine
+	s1 |
+	ges2:7 g2:dim |
+	des2/aes bes2:7 |
+	} \alternative {
+	{
+	a1:7 | \myEndLine
+	aes1:7 | \myEndLineVoltaNotLast
+	}
+	{
+	ees2:m7 aes2:7 | \myEndLineVoltaLast
+	}
+	}
+	des1 |
+	a1:7 | \myEndLine
+	s1 |
+	des1 |
+	c2:m7.5- f2:7 |
+	bes2:m7 f2:7 | \myEndLine
+	bes1:m7 |
+	ees1:m7 |
+	a2:7 aes2:7 |
+	des1 | \myEndLine
+	s1 |
+	ees1:7 |
+	s1 |
+	ges2:7 g2:dim | \myEndLine
+	des2/aes bes2:7 |
+	ees2 aes2:7 |
+	des1 |
+	\endBar
+	\endPart
+
+	\endSong
+	\endChords
+}
+{% endif %}
+{% if part == "VoiceWikifonia" %}\absolute {
+	\tempo "Moderato" 4 = 165
+	\time 4/4
+	\key des \major
+
+	\partial 8 as'8 |
+	\repeat volta 2 {
+	\mark \markup { \box { A } } bes'8 c''8 bes'8 as'8 r4 r8 f'8 |
+	es'8 f'8 es'8 des'8 r4 r8 f'8 |
+	c''8 bes'8 g'8 f'8 d'8 es'8 g'8 c''8 |
+	bes'8 g'8 es''8 f''8 r4 r8 des'8 |
+	ges'8 ges'8 des'8 ges'8 g'8 g'8 des'8 g'8 |
+	as'4 \times 2/3 { as'8 g'8 ges'8 } f'8 b'8 a'8 bes'8 |
+	} \alternative {
+	{
+	a8 cis'8 e'8 g'8 fis'8 e'8 b'8 a'8 |
+	as'4 r2 r8 as'8 |
+	}
+	{
+	d'8 es'8 ges'8 bes'8 a'8 f'8 as'8 c'8 |
+	}
+	}
+	des'1 |
+	\mark \markup { \box { B } } r8 a'8 \times 2/3 { c'8 cis'8 e'8 } g'8 fis'8 e'8 d'8 |
+	cis'8 e'8 g'8 b'8 ~ b'4 r8 g'8 |
+	as'8 as'8 g'8 as'8 c''8 bes'8 as'8 ges'8 |
+	f'4 \times 2/3 { as'8 g'8 ges'8 } f'8 es'8 des'8 c'8 |
+	bes8 des'8 f'8 bes'8 a'8 f'8 des'8 es'8 |
+	f'8 des'8 bes8 c'8 des'4 r8 ges'8 ~ |
+	ges'8 bes8 es'8 ges'8 f'8 es'8 d'8 f'8 |
+	es'8 bes8 \times 2/3 { c'8 es'8 ges'8 } b'8 a'8 r8 as'8 |
+	\mark \markup { \box { C } } bes'8 c''8 bes'8 as'8 r4 r8 f'8 |
+	es'8 f'8 es'8 des'8 r4 r8 f'8 |
+	c''8 bes'8 g'8 f'8 d'8 es'8 g'8 c''8 |
+	bes'8 g'8 es''8 f''8 r4 r8 des'8 |
+	ges'8 ges'8 des'8 ges'8 g'8 g'8 des'8 g'8 |
+	as'4 \times 2/3 { as'8 g'8 ges'8 } f'8 b'8 a'8 bes'8 |
+	d'8 es'8 g'8 bes'8 a'8 g'8 as'8 c'8 |
+	des'1 |
+	\endBar
+}
+{% endif %}

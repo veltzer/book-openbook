@@ -1,0 +1,137 @@
+{#
+default_version = "Wikifonia"
+
+[attributes]
+title = "Sandu"
+style = "Jazz"
+composer = "Clifford Brown"
+piece = "Jazz"
+typesetter = "OpenBook contributors (MusicXML import)"
+completion = "3"
+uuid = "a5eb825f-ac2e-5ee8-b981-3db42c1d9e76"
+location = "Real_Book_2:319, New_Real_1:307, 557_Standards:323, Colorado:191, Colorado_Cookbook:191"
+copyright = "All Rights Reserved"
+
+[versions.Wikifonia]
+doChords = true
+doVoice = true
+doLyrics = false
+doLyricsmore = false
+doLyricsmoremore = false
+doChordBars = false
+doGuitar = false
+doExtra = false
+doPrep = false
+doOwn = false
+#}
+{% if part == "Vars" %}
+{% endif %}
+{% if part == "Doc" %}
+	DONE:
+	- imported melody and chord changes from real_books_archive.gi/Wikifonia.tar.xz: Wikifonia/Clifford Brown - Sandu.mxl.
+	- source revision: http://wikifonia.org/node/21760/revisions/28761/view.
+	- PDF reference: real_books_archive.gi/New Real Book 1.pdf, PDF page 313.
+	- retained the original copyright notice where printed; the underlying music is not relicensed.
+	- retained written measures, pickups, repeats and endings; lyrics omitted.
+	- tempo taken from archived MusicXML.
+	TODO:
+	- proofread the music against the referenced PDF and check by ear.
+	- verify the copyright notice against the scan; no readable per-tune notice was recovered, so the archived rights notice is retained where available.
+{% endif %}
+{% if part == "ChordsWikifonia" %}\chordmode {
+	\startChords
+	\startSong
+
+	\myMark "A"
+	\startPart
+	\partial 2. s2. |
+	\repeat volta 2 {
+	ees1:7 |
+	aes1:7 |
+	ees1:7 | \myEndLine
+	s1 |
+	aes1:7 |
+	s1 |
+	ees1:7 | \myEndLine
+	s8 ees4.:7 c2:7.9+ |
+	bes1 |
+	s2.. ees8:7 |
+	} \alternative {
+	{
+	s4. f2:m7 ees8:7.9+ | \myEndLine
+	s1 | \myEndLineVoltaNotLast
+	}
+	{
+	s1 | \myEndLineVoltaLast
+	}
+	}
+	s1 |
+	\repeat volta 2 {
+	ees1:7 | \myEndLine
+	aes1:7 |
+	ees1:7 |
+	s1 |
+	aes1:7 | \myEndLine
+	s1 |
+	ees1:6 |
+	g2.:m7 c4:7 |
+	f1:m7 | \myEndLine
+	bes1:7 |
+	ees2:6 c2:7 |
+	f2:m7 bes2:7 |
+	}
+	s2.. ees8:9.11+ | \myEndLine
+	s1 |
+	\endBar
+	\endPart
+
+	\endSong
+	\endChords
+}
+{% endif %}
+{% if part == "VoiceWikifonia" %}\absolute {
+	\tempo "Moderato" 4 = 150
+	\time 4/4
+	\key es \major
+
+	\partial 2. r8 ^ "138" ^ "Medium Swing" es'8 g'8 bes'8 \times 2/3 { c''8 bes'8 es''8 } |
+	\repeat volta 2 {
+	r4 r8 es'8 g'4 bes'8 as'8 |
+	r4 r8 es''8 ~ \once \override Glissando.style = #'zigzag es''4 \glissando ges'8 es'8 |
+	es''4 r8 es'8 g'4 bes'8 es''8 |
+	r4 r8 des''8 ~ des''8 bes'8 as'8 es'8 |
+	\times 2/3 { ges'8 es'8 as'8 ~ } as'2 ges'4 |
+	r8 es''8 ~ es''8 des''8 bes'8 as'8 ges'8 es'8 |
+	\times 2/3 { as'8 es'8 g'8 ~ } g'2 es'4 |
+	r8 es''8 ~ es''8 des''8 bes'8 as'8 ges'8 es'8 |
+	<fis' a'>8 <fis' a'>8 ^ "pedal" <f' as'>8 <f' as'>8 <es' ges'>4 <c' es'>8 ^\markup{ \italic {last time} } bes8 \mark \markup { \musicglyph "scripts.coda" } |
+	des'4 bes4 des'8 _\prall bes8 d'8 es'8 |
+	} \alternative {
+	{
+	r8 g'8 ges'8 f'8 r8 g'8 as'8 bes'8 |
+	r4 ^ "break" r8 es'8 g'8 bes'8 \times 2/3 { c''8 bes'8 es''8 } |
+	}
+	{
+	r1 |
+	}
+	}
+	r1 ^ "solo break" |
+	\repeat volta 2 {
+	R1 ^ "solos" |
+	R1 |
+	r1 |
+	r1 |
+	r1 |
+	r1 |
+	R1 |
+	R1 |
+	R1 |
+	R1 |
+	R1 |
+	R1 _ "after solos, D.C. al Coda" |
+	}
+	\mark \markup { \musicglyph "scripts.coda" } des'4 bes4 des'8 es'8 r8 <a a'>8 ~ ~ |
+	<a a'>1 ^\fermata |
+	\endBar
+}
+{% endif %}

@@ -1,0 +1,139 @@
+{#
+default_version = "Wikifonia"
+
+[attributes]
+title = "A Time For Love"
+style = "Jazz"
+composer = "Johnny Mandel"
+piece = "Jazz"
+typesetter = "OpenBook contributors (MusicXML import)"
+completion = "3"
+uuid = "f41e6573-da3b-53a7-bbd4-a9cb9ae3a39f"
+location = "StandardsBook:466"
+copyright = "1966 Warner Bros. Inc. (Renewed) All Rights Reserved. Used by Permission"
+
+[versions.Wikifonia]
+doChords = true
+doVoice = true
+doLyrics = false
+doLyricsmore = false
+doLyricsmoremore = false
+doChordBars = false
+doGuitar = false
+doExtra = false
+doPrep = false
+doOwn = false
+#}
+{% if part == "Vars" %}
+{% endif %}
+{% if part == "Doc" %}
+	DONE:
+	- imported melody and chord changes from real_books_archive.gi/Wikifonia.tar.xz: Wikifonia/Johnny Mandel, Paul Francis Webster - A Time For Love.mxl.
+	- source revision: http://wikifonia.org/node/7932/revisions/10924/view.
+	- PDF reference: real_books_archive.gi/The Standards Real Book.pdf, PDF page 466.
+	- retained the original copyright notice where printed; the underlying music is not relicensed.
+	- retained written measures, pickups, repeats and endings; lyrics omitted.
+	- tempo is an editorial practice suggestion.
+	TODO:
+	- proofread the music against the referenced PDF and check by ear.
+	- verify editorial chord spacing in measures 8, 16, 24; the archive places successive symbols at the same offset.
+{% endif %}
+{% if part == "ChordsWikifonia" %}\chordmode {
+	\startChords
+	\startSong
+
+	\myMark "A"
+	\startPart
+	s1 |
+	bes1:maj7 |
+	aes1:7 |
+	bes1:maj7 | \myEndLine
+	c1:7 |
+	c1:m7 |
+	ees1:maj7 |
+	a2:m/d d2:7 | \myEndLine
+	a2:m7.5- d2:7 |
+	bes1:maj7 |
+	aes1:7 |
+	bes1:maj7 | \myEndLine
+	c1:7 |
+	c1:m7 |
+	ees1:maj7 |
+	a2:m/d d2:7 | \myEndLine
+	d1:7 |
+	g2:m7 a4:m7.5- d4:7 |
+	g2:m7 c2:7 |
+	f2:maj7 a2:7 | \myEndLine
+	d2:m7 d2:7 |
+	g1:m7 |
+	e2:m7.5- a2:7 |
+	d2:maj7 b2:m7 | \myEndLine
+	c2:m7 f2:7 |
+	bes1*5/8:dim7 bes4.:maj7 |
+	a2:m7.5- d2:7 |
+	g1:m7 | \myEndLine
+	c1:7 |
+	c1:m7 |
+	ees1:maj7 |
+	a1:m7 | \myEndLine
+	d1:7 |
+	g1:m7 |
+	c1:7 |
+	c1:m7 | \myEndLine
+	c2:m7/f f2:7 |
+	bes1 |
+	s1 |
+	\endBar
+	\endPart
+
+	\endSong
+	\endChords
+}
+{% endif %}
+{% if part == "VoiceWikifonia" %}\absolute {
+	\tempo "Moderato" 4 = 120
+	\time 4/4
+	\key bes \major
+
+	r2 r4 f'4 |
+	a'2 ~ a'8 bes'8 c''8 d''8 |
+	es''2. d''4 |
+	c''8 d''8 c''2 bes'4 |
+	a'8 bes'8 a'2 g'4 |
+	f'8 g'8 f'2 es'4 |
+	d'8 es'8 d'2 c'4 |
+	a1 ~ |
+	a2 r4 d'4 |
+	a'2 ~ a'8 bes'8 c''8 d''8 |
+	es''2. d''4 |
+	c''8 d''8 c''2 bes'4 |
+	a'8 bes'8 a'2 g'4 |
+	f'8 ( g'8 ) f'2 es'4 |
+	d'8 es'8 d'2 c'4 |
+	a'1 ~ |
+	a'4 a'4 bes'4 c''4 |
+	d''4 g'4 g'4 fis'4 |
+	g'4 d''4 ~ d''8 d''8 c''8 bes'8 |
+	c''4 f'4 f'4 e'4 |
+	f'4 c''4 ~ c''8 c''8 bes'8 a'8 |
+	bes'4. e'8 e'4 es'4 |
+	e'4. bes'8 a'4 g'4 |
+	a'1 ~ |
+	a'2 r4 f'4 |
+	a'2 ~ a'8 bes'8 c''8 d''8 |
+	es''2 ~ es''4 r8 d''8 |
+	c''8 d''8 c''2 bes'4 |
+	a'8 bes'8 a'2 g'4 |
+	f'8 g'8 f'2 es'4 |
+	d'8 es'8 d'2 c'4 |
+	c''1 ~ |
+	c''4 c''4 es''4. d''8 |
+	c''8 d''8 c''2 bes'4 |
+	a'8 bes'8 a'2 g'4 |
+	f'8 g'8 f'2 es'4 |
+	d'2 c''2 |
+	bes'1 ~ |
+	bes'2 r2 |
+	\endBar
+}
+{% endif %}

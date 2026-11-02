@@ -1,0 +1,142 @@
+{#
+default_version = "Wikifonia"
+
+[attributes]
+title = "Bye Bye Baby"
+style = "Jazz"
+composer = "Jule Styne"
+piece = "Jazz"
+typesetter = "OpenBook contributors (MusicXML import)"
+completion = "3"
+uuid = "92136a4d-41d0-500a-9b76-5639e26a97ef"
+location = "Real_Book_3:49"
+copyright = "All Rights Reserved"
+
+[versions.Wikifonia]
+doChords = true
+doVoice = true
+doLyrics = false
+doLyricsmore = false
+doLyricsmoremore = false
+doChordBars = false
+doGuitar = false
+doExtra = false
+doPrep = false
+doOwn = false
+#}
+{% if part == "Vars" %}
+{% endif %}
+{% if part == "Doc" %}
+	DONE:
+	- imported melody and chord changes from real_books_archive.gi/Wikifonia.tar.xz: Wikifonia/Jule Styne, Leo Robin - Bye Bye Baby.mxl.
+	- source revision: http://wikifonia.org/node/13069/revisions/17534/view.
+	- PDF reference: real_books_archive.gi/The Real Book of Jazz Volume III.pdf, PDF page 49.
+	- retained the original copyright notice where printed; the underlying music is not relicensed.
+	- retained written measures, pickups, repeats and endings; lyrics omitted.
+	- tempo is an editorial practice suggestion.
+	TODO:
+	- proofread the music against the referenced PDF and check by ear.
+	- verify editorial chord spacing in measures 8, 10, 15, 24, 26, 34; the archive places successive symbols at the same offset.
+	- verify the copyright notice against the scan; no readable per-tune notice was recovered, so the archived rights notice is retained where available.
+{% endif %}
+{% if part == "ChordsWikifonia" %}\chordmode {
+	\startChords
+	\startSong
+
+	\myMark "A"
+	\startPart
+	bes1/d |
+	ges1:7/des |
+	bes2/d g2:m |
+	c4:m7 f2.:7 | \myEndLine
+	bes1 |
+	f2..:9 d8/fis |
+	g2:m c2:7 |
+	f4:7 ees4 aes4:m7 f4:7 | \myEndLine
+	bes2 f2:9.5+ |
+	bes4 g2:aug7 g4:7 |
+	c2:m g4:aug g4 |
+	c2:m7 f2:aug7 | \myEndLine
+	bes2 bes2:dim |
+	bes2. g4:m7 |
+	c2:7 c2:aug7 |
+	f4:9 f4:7 ees4 f4:7 | \myEndLine
+	bes2 d2:7 |
+	g1*5/8:m bes4.:7 |
+	ees2 g2:7 |
+	c1:m | \myEndLine
+	f2:7 bes2:dim |
+	f2:7 f2:aug7 |
+	bes2 bes2:dim |
+	c2:m7 f2:7 | \myEndLine
+	bes2 f2:9 |
+	bes4 g2:aug7 g4:7 |
+	c2:m g4:aug g4 |
+	c2:m7 f2:aug7 | \myEndLine
+	bes2 bes2:dim |
+	bes4 g2.:m7 |
+	a1:m7 |
+	d2:7 g4:m d4:7 | \myEndLine
+	g2:m a2:dim |
+	f2:m7 bes2:7 |
+	ees2 ees4:dim ees4 |
+	c2.:m bes4:dim | \myEndLine
+	bes2/f cis2:dim7 |
+	c2.:m7 f4:aug7 |
+	bes1 |
+	s1 | \myEndLine
+	\endBar
+	\endPart
+
+	\endSong
+	\endChords
+}
+{% endif %}
+{% if part == "VoiceWikifonia" %}\absolute {
+	\tempo "Moderato" 4 = 120
+	\time 4/4
+	\key bes \major
+
+	f'4 bes'4 bes'4 f'4 |
+	fes'4 bes'4 bes'2 |
+	f'4 d''4 bes'4 g'4 |
+	f'8 g'8 f'2 d'4 |
+	bes4 g'2 f'8 bes8 |
+	a4 g'2 f'8 d'8 |
+	bes4 bes'4 a'4 g'4 |
+	es'8 f'8 es'2. |
+	d'2 cis'2 |
+	d'4 g'2. |
+	r4 es'4 es'4 d'4 |
+	es'4 c''4 a'4 g'4 |
+	f'2 e'2 |
+	f'4 d''2 bes'4 |
+	c''1 ~ |
+	c''4 a'4 bes'4 c''4 |
+	d''2 a'8 c''4 bes'8 ~ |
+	bes'2 f'8 as'4 g'8 ~ |
+	g'2 d'8 f'4 es'8 ~ |
+	es'2. c''4 |
+	c''2 g'8 bes'4 a'8 ~ |
+	a'2 es'8 g'4 f'8 ~ |
+	f'2 g'8 f'4 es'8 ~ |
+	es'1 |
+	d'2 cis'2 |
+	d'4 g'2. |
+	r4 es'4 es'4 d'4 |
+	es'4 c''4 a'4 g'4 |
+	f'2 e'2 |
+	f'4 d''2 bes'4 |
+	c''1 ~ |
+	c''4 a'4 bes'4 c''4 |
+	d''2 es''8 d''4 c''8 ~ |
+	c''1 |
+	r4 bes'4 a'4 bes'4 |
+	c''4 bes'4 a'4 g'4 |
+	f'2 e'2 |
+	es'4 c''4 bes'4 a'4 |
+	bes'1 ~ |
+	bes'1 |
+	\endBar
+}
+{% endif %}

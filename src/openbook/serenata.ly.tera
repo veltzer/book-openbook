@@ -1,0 +1,140 @@
+{#
+default_version = "Wikifonia"
+
+[attributes]
+title = "Serenata"
+style = "Jazz"
+composer = "Leroy Anderson"
+piece = "Jazz"
+typesetter = "OpenBook contributors (MusicXML import)"
+completion = "3"
+uuid = "cd85fe29-293a-57f4-b35b-4c6a63dcec47"
+location = "New_Real_3:343, Jazz_LTD:315"
+copyright = "1949 (renewed 1977) Mills Music c/o EMI Music Publishing. Used by Permission of CPP/Belwin, Inc., Miami, FL All Rights Reserved"
+
+[versions.Wikifonia]
+doChords = true
+doVoice = true
+doLyrics = false
+doLyricsmore = false
+doLyricsmoremore = false
+doChordBars = false
+doGuitar = false
+doExtra = false
+doPrep = false
+doOwn = false
+#}
+{% if part == "Vars" %}
+{% endif %}
+{% if part == "Doc" %}
+	DONE:
+	- imported melody and chord changes from real_books_archive.gi/Wikifonia.tar.xz: Wikifonia/Leroy Anderson, Mitchell Parish - Serenata.mxl.
+	- source revision: http://wikifonia.org/node/13061/revisions/17558/view.
+	- PDF reference: real_books_archive.gi/newreal3.pdf, PDF page 343.
+	- retained the original copyright notice where printed; the underlying music is not relicensed.
+	- retained written measures, pickups, repeats and endings; lyrics omitted.
+	- tempo is an editorial practice suggestion.
+	TODO:
+	- proofread the music against the referenced PDF and check by ear.
+{% endif %}
+{% if part == "ChordsWikifonia" %}\chordmode {
+	\startChords
+	\startSong
+
+	\myMark "A"
+	\startPart
+	s1 |
+	\repeat volta 2 {
+	f1 |
+	s2 fis2:dim |
+	g2:m7 c2:7 | \myEndLine
+	s1 |
+	f1:maj9 |
+	s2 d2:m7 |
+	s4 g2.:7 | \myEndLine
+	b1:dim |
+	f1:6 |
+	s4 bes2 c4:7 |
+	} \alternative {
+	{
+	f1 | \myEndLine
+	g2. a4:9 |
+	d1 |
+	a1:dim |
+	bes1:m6 | \myEndLine
+	c1:7 | \myEndLineVoltaNotLast
+	}
+	{
+	c1:m6 | \myEndLineVoltaLast
+	}
+	}
+	c4 d2.:9 |
+	f1 | \myEndLine
+	g4:7 des2 b4:9 |
+	f1 |
+	s2 c2:7 |
+	f1:m | \myEndLine
+	bes2:m7 c2:m7 |
+	f1:m |
+	g2:m7 c2:7 |
+	f1 | \myEndLine
+	g2:m7 c2:7 |
+	f1 |
+	ees1:m6 |
+	f1 | \myEndLine
+	f1 |
+	\endBar
+	\endPart
+
+	\endSong
+	\endChords
+}
+{% endif %}
+{% if part == "VoiceWikifonia" %}\absolute {
+	\tempo "Moderato" 4 = 120
+	\time 4/4
+	\key f \major
+
+	r2 r4 c'4 |
+	\repeat volta 2 {
+	c''1 ~ |
+	c''2 \times 2/3 { a'4 bes'4 c''4 } |
+	c''4 d''4 bes'2 ~ |
+	bes'2 c''4 r8 as'8 |
+	g'1 ~ |
+	g'2 \times 2/3 { f'4 d'4 f'4 } |
+	g'4 a'4 e'2 ~ |
+	e'2 \times 2/3 { g'4 f'4 e'4 } |
+	d'4 f'4 a'4 d''4 |
+	c''4 d''2 bes'4 |
+	} \alternative {
+	{
+	a'1 |
+	a'4 b'2 g'4 |
+	fis'1 |
+	fis'4 a'2 g'4 |
+	des'1 ~ |
+	des'4 r2 c'4 |
+	}
+	{
+	a'1 |
+	}
+	}
+	c''4 e''2 a'4 |
+	g'1 |
+	as'4 des''2 g'4 |
+	f'1 ~ |
+	f'2 \times 2/3 { g'4 f'4 g'4 } |
+	as'1 ~ |
+	as'2 g'2 |
+	f'1 ~ |
+	f'2 \times 2/3 { g'4 f'4 g'4 } |
+	a'1 ~ |
+	a'2 bes'2 |
+	c''1 ~ |
+	c''1 ~ |
+	c''1 ~ |
+	c''1 |
+	\endBar
+}
+{% endif %}

@@ -1,0 +1,117 @@
+{#
+default_version = "Wikifonia"
+
+[attributes]
+title = "Interplay"
+style = "Jazz"
+composer = "Bill Evans"
+piece = "Jazz"
+typesetter = "OpenBook contributors (MusicXML import)"
+completion = "3"
+uuid = "f44e5593-6e94-5a1b-8135-5a1d3b705602"
+location = "Real_Book_1:243, Bill_Evans_FakeBook:35"
+copyright = "All Rights Reserved"
+
+[versions.Wikifonia]
+doChords = true
+doVoice = true
+doLyrics = false
+doLyricsmore = false
+doLyricsmoremore = false
+doChordBars = false
+doGuitar = false
+doExtra = false
+doPrep = false
+doOwn = false
+#}
+{% if part == "Vars" %}
+{% endif %}
+{% if part == "Doc" %}
+	DONE:
+	- imported melody and chord changes from real_books_archive.gi/Wikifonia.tar.xz: Wikifonia/Bill Evans - Interplay.mxl.
+	- source revision: http://wikifonia.org/node/3441/revisions/4407/view.
+	- PDF reference: real_books_archive.gi/The Real Book of Jazz Volume I.pdf, PDF page 243.
+	- retained the original copyright notice where printed; the underlying music is not relicensed.
+	- retained written measures, pickups, repeats and endings; lyrics omitted.
+	- tempo is an editorial practice suggestion.
+	TODO:
+	- proofread the music against the referenced PDF and check by ear.
+	- verify the copyright notice against the scan; no readable per-tune notice was recovered, so the archived rights notice is retained where available.
+{% endif %}
+{% if part == "ChordsWikifonia" %}\chordmode {
+	\startChords
+	\startSong
+
+	\myMark "A"
+	\startPart
+	\repeat volta 2 {
+	s1 |
+	s1 |
+	s1 |
+	s1 | \myEndLine
+	s1 |
+	s1 |
+	s1 |
+	s1 | \myEndLine
+	s1 |
+	s1 |
+	s1 |
+	s1 | \myEndLine
+	}
+	\repeat volta 2 {
+	f1:m6 |
+	bes1:m6 |
+	f1:m6 |
+	f1:aug7.9- | \myEndLine
+	bes1:m7 |
+	bes1:m7 |
+	f1:m6 |
+	aes1:7 | \myEndLine
+	g1:m7.5- |
+	c1:aug7 |
+	f2:m6 d2:m7.5- |
+	des2:maj7 ges2:maj7 | \myEndLine
+	}
+	\endBar
+	\endPart
+
+	\endSong
+	\endChords
+}
+{% endif %}
+{% if part == "VoiceWikifonia" %}\absolute {
+	\tempo "Moderato" 4 = 120
+	\time 4/4
+	\key f \minor
+
+	\repeat volta 2 {
+	f'4. ^\markup{ \bold {Medium swing} } c''8 r8 as'4 -. f'8 |
+	bes'8 c''8 ~ \times 2/3 { c''8 g'8 es'8 } f'4 r8 as'8 |
+	g'8 f'8 bes'8 as'8 des''8 c''8 as'8 f'8 |
+	des'8 f'8 \times 2/3 { g'8 es'8 f'8 } r4 f''4 ~ -> |
+	f''4. c''8 bes'4 des''8 f''8 |
+	c''8 bes'8 ~ \times 2/3 { bes'8 es''8 f''8 } bes'4 -. r8 des''8 |
+	es''8 f''8 c''8 des''8 bes'8 es''8 \times 2/3 { c''8 as'8 f''8 ~ } |
+	\times 2/3 { f''8 des''8 bes'8 } \times 2/3 { c''8 as'8 f'8 } r4 c''4 ~ -> |
+	c''4 bes'4 ~ bes'8 g'8 c''4 ~ |
+	c''8 des''8 ~ \times 2/3 { des''8 bes'8 g'8 } c''4 -. r4 |
+	des''8 c''8 \times 2/3 { as'8 f'8 c'8 } \times 2/3 { des'8 f'8 as'8 } \times 2/3 { c''8 g'8 f'8 } |
+	\times 2/3 { bes'8 as'8 f'8 } \times 2/3 { g'8 as'8 f'8 } r2 - "Fine" |
+	}
+	\repeat volta 2 {
+	\once \override NoteHead.style = #'slash bes'4 - "Solos (F minor blues)" \once \override NoteHead.style = #'slash bes'4 \once \override NoteHead.style = #'slash bes'4 \once \override NoteHead.style = #'slash bes'4 |
+	\once \override NoteHead.style = #'slash bes'4 \once \override NoteHead.style = #'slash bes'4 \once \override NoteHead.style = #'slash bes'4 \once \override NoteHead.style = #'slash bes'4 |
+	\once \override NoteHead.style = #'slash bes'4 \once \override NoteHead.style = #'slash bes'4 \once \override NoteHead.style = #'slash bes'4 \once \override NoteHead.style = #'slash bes'4 |
+	\once \override NoteHead.style = #'slash bes'4 \once \override NoteHead.style = #'slash bes'4 \once \override NoteHead.style = #'slash bes'4 \once \override NoteHead.style = #'slash bes'4 |
+	\once \override NoteHead.style = #'slash bes'4 \once \override NoteHead.style = #'slash bes'4 \once \override NoteHead.style = #'slash bes'4 \once \override NoteHead.style = #'slash bes'4 |
+	\once \override NoteHead.style = #'slash bes'4 \once \override NoteHead.style = #'slash bes'4 \once \override NoteHead.style = #'slash bes'4 \once \override NoteHead.style = #'slash bes'4 |
+	\once \override NoteHead.style = #'slash bes'4 \once \override NoteHead.style = #'slash bes'4 \once \override NoteHead.style = #'slash bes'4 \once \override NoteHead.style = #'slash bes'4 |
+	\once \override NoteHead.style = #'slash bes'4 \once \override NoteHead.style = #'slash bes'4 \once \override NoteHead.style = #'slash bes'4 \once \override NoteHead.style = #'slash bes'4 |
+	\once \override NoteHead.style = #'slash bes'4 \once \override NoteHead.style = #'slash bes'4 \once \override NoteHead.style = #'slash bes'4 \once \override NoteHead.style = #'slash bes'4 |
+	\once \override NoteHead.style = #'slash bes'4 \once \override NoteHead.style = #'slash bes'4 \once \override NoteHead.style = #'slash bes'4 \once \override NoteHead.style = #'slash bes'4 |
+	\once \override NoteHead.style = #'slash bes'4 \once \override NoteHead.style = #'slash bes'4 \once \override NoteHead.style = #'slash bes'4 \once \override NoteHead.style = #'slash bes'4 |
+	\once \override NoteHead.style = #'slash bes'4 \once \override NoteHead.style = #'slash bes'4 \once \override NoteHead.style = #'slash bes'4 \once \override NoteHead.style = #'slash bes'4 |
+	}
+	\endBar
+}
+{% endif %}

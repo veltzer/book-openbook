@@ -1,0 +1,112 @@
+{#
+default_version = "Wikifonia"
+
+[attributes]
+title = "Chameleon"
+style = "Jazz"
+composer = "Herbie Hancock"
+piece = "Jazz"
+typesetter = "OpenBook contributors (MusicXML import)"
+completion = "3"
+uuid = "e9b25cf6-7c36-552a-a51e-01a964195af5"
+location = "Real_Book_2:65"
+copyright = "All Rights Reserved"
+
+[versions.Wikifonia]
+doChords = true
+doVoice = true
+doLyrics = false
+doLyricsmore = false
+doLyricsmoremore = false
+doChordBars = false
+doGuitar = false
+doExtra = false
+doPrep = false
+doOwn = false
+#}
+{% if part == "Vars" %}
+{% endif %}
+{% if part == "Doc" %}
+	DONE:
+	- imported melody and chord changes from real_books_archive.gi/Wikifonia.tar.xz: Wikifonia/Herbie Hancock - Chameleon.mxl.
+	- source revision: http://wikifonia.org/node/1646/revisions/27046/view.
+	- PDF reference: real_books_archive.gi/The Real Book of Jazz Volume II.pdf, PDF page 65.
+	- retained the original copyright notice where printed; the underlying music is not relicensed.
+	- retained written measures, pickups, repeats and endings; lyrics omitted.
+	- tempo is an editorial practice suggestion.
+	TODO:
+	- proofread the music against the referenced PDF and check by ear.
+	- verify the copyright notice against the scan; no readable per-tune notice was recovered, so the archived rights notice is retained where available.
+{% endif %}
+{% if part == "ChordsWikifonia" %}\chordmode {
+	\startChords
+	\startSong
+
+	\myMark "A"
+	\startPart
+	\partial 4. s4. |
+	\repeat volta 2 {
+	s1 |
+	s1 |
+	}
+	\repeat volta 2 {
+	bes1:m7 | \myEndLine
+	ees1:7 |
+	bes1:m7 |
+	ees1:7 |
+	bes1:m7 | \myEndLine
+	ees1:7 |
+	bes1:m7 |
+	ees1:7 |
+	}
+	\repeat volta 2 {
+	bes1:m7 | \myEndLine
+	ees1:7 |
+	b1:m7 |
+	ees1:7 |
+	}
+	bes1:m7 | \myEndLine
+	ees1:7 |
+	s1 |
+	s1 |
+	\endBar
+	\endPart
+
+	\endSong
+	\endChords
+}
+{% endif %}
+{% if part == "VoiceWikifonia" %}\absolute {
+	\tempo "Moderato" 4 = 120
+	\time 4/4
+	\key as \major
+	\clef bass
+
+	\partial 4. g,8 as,8 a,8 |
+	\repeat volta 2 {
+	bes,8 r16 as16 r8 bes8 r8 c8 des8 d8 |
+	es8 r16 bes16 r8 des'8 r8 g,8 as,8 a,8 |
+	}
+	\repeat volta 2 {
+	bes'16 bes'16 r8 as'16 as'16 r8 bes'16 bes'16 r8 des''4 |
+	bes'4 r4 r4 bes'16 as'16 f'16 as'16 ~ |
+	as'8 bes'8 r4 r4 r8 des''8 ~ |
+	des''8 es''8 r4 r2 |
+	bes'16 bes'16 r8 as'16 as'16 r8 bes'16 bes'16 r8 des''4 |
+	bes'4 r4 r4 bes'16 as'16 f'16 as'16 ~ |
+	as'8 bes'8 r4 r4 r8 des''8 ~ |
+	des''8 es''8 r4 r2 |
+	}
+	\repeat volta 2 {
+	r8 f''8 es''4 es''8 des''4 des''16 es''16 |
+	des''16 bes'16 as'16 des'16 ~ des'8 bes8 ~ bes4 bes'16 as'16 f'16 as'16 ~ |
+	as'8 bes'8 r4 r4 r8 des''8 ~ |
+	des''8 es''8 r4 r2 |
+	}
+	r8 f''8 es''4 es''8 des''4 des''16 es''16 |
+	des''16 bes'16 as'16 des'16 ~ des'8 bes8 ~ bes2 ~ |
+	bes1 ~ |
+	bes1 |
+	\endBar
+}
+{% endif %}

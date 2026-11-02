@@ -1,0 +1,85 @@
+{#
+default_version = "Wikifonia"
+
+[attributes]
+title = "Sonnymoon for Two"
+style = "Jazz"
+composer = "Sonny Rollins"
+piece = "Jazz"
+typesetter = "OpenBook contributors (MusicXML import)"
+completion = "3"
+uuid = "4c5f78e5-4d14-5de1-8ed6-951953269416"
+location = "Real_Book_3:281, 557_Standards:339, Colorado:208, Colorado_Cookbook:208"
+copyright = "All Rights Reserved"
+
+[versions.Wikifonia]
+doChords = true
+doVoice = true
+doLyrics = false
+doLyricsmore = false
+doLyricsmoremore = false
+doChordBars = false
+doGuitar = false
+doExtra = false
+doPrep = false
+doOwn = false
+#}
+{% if part == "Vars" %}
+{% endif %}
+{% if part == "Doc" %}
+	DONE:
+	- imported melody and chord changes from real_books_archive.gi/Wikifonia.tar.xz: Wikifonia/Sonny Rollins - Sonnymoon for two.mxl.
+	- source revision: http://wikifonia.org/node/892/revisions/10068/view.
+	- PDF reference: real_books_archive.gi/The Real Book of Jazz Volume III.pdf, PDF page 281.
+	- retained the original copyright notice where printed; the underlying music is not relicensed.
+	- retained written measures, pickups, repeats and endings; lyrics omitted.
+	- tempo is an editorial practice suggestion.
+	TODO:
+	- proofread the music against the referenced PDF and check by ear.
+	- verify the copyright notice against the scan; no readable per-tune notice was recovered, so the archived rights notice is retained where available.
+{% endif %}
+{% if part == "ChordsWikifonia" %}\chordmode {
+	\startChords
+	\startSong
+
+	\myMark "A"
+	\startPart
+	bes1:7 |
+	ees1:7 |
+	bes1:7 |
+	s1 | \myEndLine
+	ees1:7 |
+	s1 |
+	bes1:7 |
+	s1 | \myEndLine
+	c1:m7 |
+	f1:7 |
+	bes1:7 |
+	s1 | \myEndLine
+	\endBar
+	\endPart
+
+	\endSong
+	\endChords
+}
+{% endif %}
+{% if part == "VoiceWikifonia" %}\absolute {
+	\tempo "Moderato" 4 = 120
+	\time 4/4
+	\key bes \major
+
+	r8 bes'4. as'4 f'4 |
+	es'4 des'4 bes8 bes4 bes8 |
+	r8 bes8 des'8 es'8 ~ es'4 des'8 bes8 ~ |
+	bes8 bes8 des'8 es'8 ~ es'4 des'8 bes8 |
+	r8 bes'4. as'4 f'4 |
+	es'4 des'4 bes8 bes4 bes8 |
+	r8 bes8 des'8 es'8 ~ es'4 des'8 bes8 ~ |
+	bes8 bes8 des'8 es'8 ~ es'4 des'8 bes8 |
+	r8 bes'4. as'4 f'4 |
+	es'4 des'4 bes8 bes4 bes8 |
+	r8 bes8 des'8 es'8 ~ es'4 des'8 bes8 ~ |
+	bes8 bes8 des'8 es'8 ~ es'4 des'8 bes8 |
+	\endBar
+}
+{% endif %}

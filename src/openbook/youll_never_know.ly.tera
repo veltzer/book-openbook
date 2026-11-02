@@ -1,0 +1,142 @@
+{#
+default_version = "Wikifonia"
+
+[attributes]
+title = "You'll Never Know"
+style = "Jazz"
+composer = "Harry Warren"
+piece = "Jazz"
+typesetter = "OpenBook contributors (MusicXML import)"
+completion = "3"
+uuid = "a6697f3b-48e3-5d8b-8e63-5a7ea196356e"
+location = "StandardsBook:546"
+copyright = "1943 WB Music Corn, (Renewed). All Rishts Reserved. Used by Permission"
+
+[versions.Wikifonia]
+doChords = true
+doVoice = true
+doLyrics = false
+doLyricsmore = false
+doLyricsmoremore = false
+doChordBars = false
+doGuitar = false
+doExtra = false
+doPrep = false
+doOwn = false
+#}
+{% if part == "Vars" %}
+{% endif %}
+{% if part == "Doc" %}
+	DONE:
+	- imported melody and chord changes from real_books_archive.gi/Wikifonia.tar.xz: Wikifonia/Harry Warren, Mack Gordon - You'll Never Know.mxl.1.
+	- source revision: http://wikifonia.org/node/22434/revisions/29539/view.
+	- PDF reference: real_books_archive.gi/The Standards Real Book.pdf, PDF page 546.
+	- retained the original copyright notice where printed; the underlying music is not relicensed.
+	- retained written measures, pickups, repeats and endings; lyrics omitted.
+	- tempo is an editorial practice suggestion.
+	TODO:
+	- proofread the music against the referenced PDF and check by ear.
+{% endif %}
+{% if part == "ChordsWikifonia" %}\chordmode {
+	\startChords
+	\startSong
+
+	\myMark "A"
+	\startPart
+	\repeat volta 2 {
+	f1 |
+	a2:m7 des2:7/aes |
+	g2:m g2:m7+ |
+	g2:m7 c2:7 | \myEndLine
+	g2:m g2:m7+ |
+	g2:m7 c2:7 |
+	f1:maj7 |
+	g2:m7 c2:7 | \myEndLine
+	f1:maj7 |
+	a2:m7 aes2:dim7 |
+	g2:m g2:m7+ |
+	g2:m7 d2:7.9- | \myEndLine
+	g2:m7 c2:sus4.7.9 |
+	g2:m7 c4:sus4.7.9 bes4:9 |
+	a2.:m7 aes4:m7 |
+	g2:m7 c4:sus4.7.9 c4:7.9- | \myEndLine
+	f2:maj7 g2:m7 |
+	a2:m7 des2:7/aes |
+	g1:m |
+	g2:m7 c2:7 | \myEndLine
+	g1:m7 |
+	g2:m7 c2:7 |
+	d4:7 a2:m7 d4:dim |
+	d2:7 d4:dim d4:7 | \myEndLine
+	g2..:m7 d8 |
+	g4.:m7.5- bes1*5/8:m6 |
+	f2/c a2:7/e |
+	c2:m/ees d2:7 | \myEndLine
+	g1:m7 |
+	c2:sus4.7.9 c2:7 |
+	} \alternative {
+	{
+	f2 aes2:dim |
+	g2:m7 c2:7.5- | \myEndLineVoltaNotLast
+	}
+	{
+	f1 |
+	s1 | \myEndLineVoltaLast
+	}
+	}
+	\endBar
+	\endPart
+
+	\endSong
+	\endChords
+}
+{% endif %}
+{% if part == "VoiceWikifonia" %}\absolute {
+	\tempo "Moderato" 4 = 120
+	\time 4/4
+	\key f \major
+
+	\repeat volta 2 {
+	c'8. f'16 a'8 c''8 ~ c''8. a'16 f'8 c'8 ~ |
+	c'2 des'2 |
+	d'2 g'2 ~ |
+	g'1 |
+	d'8. g'16 bes'8 d''8 ~ d''8. bes'16 g'8 f'8 ~ |
+	f'2 e'2 |
+	c''1 ~ |
+	c''1 |
+	c''8. a'16 f'8 e'8 ~ e'4. d'8 |
+	c''8. a'16 f'8 e'8 ~ e'4. d'8 |
+	bes'2 bes'2 |
+	bes'1 |
+	d''8. bes'16 g'8 f'8 ~ f'4. e'8 |
+	d''8. bes'16 g'8 f'8 ~ f'4 e'4 |
+	c''2. des''4 |
+	d''8. bes'16 g'8 d'8 ~ d'4 e'4 |
+	c'8. f'16 a'8 c''8 ~ c''8. a'16 f'8 c'8 ~ |
+	c'2 des'2 |
+	d'2 g'2 ~ |
+	g'1 |
+	d'8. g'16 bes'8 d''8 ~ d''8. bes'16 g'8 f'8 ~ |
+	f'2 e'2 |
+	d''1 ~ |
+	d''4 a'4 gis'4 a'4 |
+	c''8. bes'16 c''8 bes'8 ~ bes'4. a'8 |
+	c''8. bes'16 c''8 bes'8 ~ bes'8 f'4 g'8 |
+	a'4 a'4 a'8 a'4 a'8 ~ |
+	a'1 |
+	d'8. g'16 bes'8 d''8 ~ d''8 bes'8 g'8 d'8 ~ |
+	d'2 e'2 |
+	} \alternative {
+	{
+	f'1 ~ |
+	f'2 r2 |
+	}
+	{
+	f'1 ~ |
+	f'2. r4 |
+	}
+	}
+	\endBar
+}
+{% endif %}

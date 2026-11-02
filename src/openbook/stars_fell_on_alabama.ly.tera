@@ -1,0 +1,126 @@
+{#
+default_version = "Wikifonia"
+
+[attributes]
+title = "Stars Fell On Alabama"
+style = "Jazz"
+composer = "Frank Perkins"
+piece = "Jazz"
+typesetter = "OpenBook contributors (MusicXML import)"
+completion = "3"
+uuid = "9319e411-8c7c-5574-a9b1-24fc2b41a698"
+location = "New_Real_3:364, 557_Standards:348, Firehouse_Jazz_Band:303, Just_Standards_Real_Book:328"
+copyright = "1934 (renewed 1962) EMI Mills, Inc., USA. Campbell Connelly & Co. Ltd., 8/9 Frith St., London W1. Used by Permission of"
+copyrightextra = "CPP/Belwin, Inc., Miami, FL and Music Sales Ltd. All Rights Reserved. International Copyright Secured."
+
+[versions.Wikifonia]
+doChords = true
+doVoice = true
+doLyrics = false
+doLyricsmore = false
+doLyricsmoremore = false
+doChordBars = false
+doGuitar = false
+doExtra = false
+doPrep = false
+doOwn = false
+#}
+{% if part == "Vars" %}
+{% endif %}
+{% if part == "Doc" %}
+	DONE:
+	- imported melody and chord changes from real_books_archive.gi/Wikifonia.tar.xz: Wikifonia/Frank Perkins, Mitchell Parish - Stars Fell On Alabama .mxl.
+	- source revision: http://wikifonia.org/node/2489/revisions/15131/view.
+	- PDF reference: real_books_archive.gi/newreal3.pdf, PDF page 364.
+	- retained the original copyright notice where printed; the underlying music is not relicensed.
+	- retained written measures, pickups, repeats and endings; lyrics omitted.
+	- tempo is an editorial practice suggestion.
+	TODO:
+	- proofread the music against the referenced PDF and check by ear.
+	- verify editorial chord spacing in measures 7, 8, 9, 32; the archive places successive symbols at the same offset.
+{% endif %}
+{% if part == "ChordsWikifonia" %}\chordmode {
+	\startChords
+	\startSong
+
+	\myMark "A"
+	\startPart
+	c2:maj7 a2:7 |
+	d2.:7 g4:aug7 |
+	c2:maj7 d2:m7 |
+	e2.:m7 a4:7.9- | \myEndLine
+	d1:m7 |
+	g2.:13 g4:7 |
+	c2:maj7 a2:7.9- |
+	d2:m7 g2:7.9- | \myEndLine
+	c4 g4:7 a2:7.9- |
+	d2.:7 g4:aug7 |
+	c2:maj7 d2:m7 |
+	e2.:m7 a4:7.9- | \myEndLine
+	d1:m7 |
+	g2.:13 g4:7 |
+	c1:6 |
+	s2 a2:7.9- | \myEndLine
+	d2:m7 g2:7 |
+	e2:m7 ees2:dim7 |
+	d2:m7 g2:7 |
+	c2:6 a2:7.9- | \myEndLine
+	d2:m7 g2:7 |
+	a1*5/8:m7 g4. |
+	fis2:m b2:9 |
+	e2 g2:7 | \myEndLine
+	c2 a2:7.9- |
+	d2.:7 g4:aug7 |
+	c2:maj7 d2:m7 |
+	e2.:m7 a4:7.9- | \myEndLine
+	d1:m7 |
+	g1:13 |
+	c1:6 |
+	f2:m c2 | \myEndLine
+	\endBar
+	\endPart
+
+	\endSong
+	\endChords
+}
+{% endif %}
+{% if part == "VoiceWikifonia" %}\absolute {
+	\tempo "Moderato" 4 = 120
+	\time 4/4
+	\key c \major
+
+	e'2 dis'8 e'8 dis'8 e'8 |
+	a'4 a'2 a'4 |
+	e''2 dis''8 e''8 dis''8 e''8 |
+	b'2. bes'4 |
+	a'2 gis'8 a'8 gis'8 a'8 |
+	e'4 e'2 d'4 |
+	g'1 |
+	R1 |
+	e'2 dis'8 e'8 dis'8 e'8 |
+	a'4 a'2 g'4 |
+	e''2 dis''8 e''8 dis''8 e''8 |
+	b'2. bes'4 |
+	a'2 gis'8 a'8 gis'8 a'8 |
+	e'4 e'2 e'4 |
+	c'1 |
+	r2 r8 e'8 f'8 g'8 |
+	a'4. a'8 g'8 f'8 e'8 d'8 |
+	b'4 b'4 ~ b'8 c''8 d''8 c''8 |
+	g'4 g'4 ~ g'8 a'8 b'8 a'8 |
+	e'2 ~ e'8 e'8 f'8 g'8 |
+	a'4. a'8 g'8 f'8 e'8 d'8 |
+	c''4 c''4 ~ c''8 d''8 e''8 c''8 |
+	b'4 b'4 ~ b'8 cis''8 dis''8 b'8 |
+	gis'2 g'2 |
+	e'2 dis'8 e'8 dis'8 e'8 |
+	a'4 a'2 g'4 |
+	e''2 dis''8 e''8 dis''8 e''8 |
+	b'2. bes'4 |
+	a'2 gis'8 a'8 gis'8 a'8 |
+	e'4 e'2 e'4 |
+	c'1 ~ |
+	c'2 r2 |
+	\endBar
+}
+{% endif %}

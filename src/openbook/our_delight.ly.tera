@@ -1,0 +1,127 @@
+{#
+default_version = "Wikifonia"
+
+[attributes]
+title = "Our Delight"
+style = "Jazz"
+composer = "Tadd Dameron"
+piece = "Jazz"
+typesetter = "OpenBook contributors (MusicXML import)"
+completion = "3"
+uuid = "a24afc99-6ebe-5e52-a204-321a1a3ebf05"
+location = "Real_Book_3:233, 557_Standards:291, Colorado:174, Colorado_Cookbook:174, StandardsBook:337"
+copyright = "All Rights Reserved"
+
+[versions.Wikifonia]
+doChords = true
+doVoice = true
+doLyrics = false
+doLyricsmore = false
+doLyricsmoremore = false
+doChordBars = false
+doGuitar = false
+doExtra = false
+doPrep = false
+doOwn = false
+#}
+{% if part == "Vars" %}
+{% endif %}
+{% if part == "Doc" %}
+	DONE:
+	- imported melody and chord changes from real_books_archive.gi/Wikifonia.tar.xz: Wikifonia/Tadd Dameron - Our Delight.mxl.
+	- source revision: http://wikifonia.org/node/22467/revisions/29581/view.
+	- PDF reference: real_books_archive.gi/The Standards Real Book.pdf, PDF page 337.
+	- retained the original copyright notice where printed; the underlying music is not relicensed.
+	- retained written measures, pickups, repeats and endings; lyrics omitted.
+	- tempo is an editorial practice suggestion.
+	TODO:
+	- proofread the music against the referenced PDF and check by ear.
+	- verify the copyright notice against the scan; no readable per-tune notice was recovered, so the archived rights notice is retained where available.
+{% endif %}
+{% if part == "ChordsWikifonia" %}\chordmode {
+	\startChords
+	\startSong
+
+	\myMark "A"
+	\startPart
+	\partial 2 b2:7.11+ |
+	bes1:13 |
+	ees1:7.9+ |
+	aes1:maj7 | \myEndLine
+	f1:7 |
+	bes1:7 |
+	bes2:m7 b2 |
+	aes4 c4 b2 | \myEndLine
+	bes4.:m7 ees4:13 b4.:7.9+ |
+	bes1:13 |
+	ees1:7.9+ |
+	aes1:maj7 | \myEndLine
+	f1:7 |
+	bes1:7 |
+	bes2:m7 b2 |
+	aes4 c4 b2 | \myEndLine
+	ees2:7 aes2:maj7 |
+	ees1:m7 |
+	aes1 |
+	des1:maj7 | \myEndLine
+	s1 |
+	des2:m7 ges2:7 |
+	c2:m7 f2:7 |
+	b2:m7 e2:7 | \myEndLine
+	ees2:7 b2:7.11+ |
+	bes1:13 |
+	ees1:7.9+ |
+	aes1:maj7 | \myEndLine
+	f1:7 |
+	bes1:7 |
+	bes2:m7 b2 |
+	aes4 c4 b2 | \myEndLine
+	ees2:7 aes2:maj7 |
+	\endBar
+	\endPart
+
+	\endSong
+	\endChords
+}
+{% endif %}
+{% if part == "VoiceWikifonia" %}\absolute {
+	\tempo "Moderato" 4 = 120
+	\time 4/4
+	\key as \major
+
+	\partial 2 r8 f'4. |
+	g'8 g'8 r4 r2 |
+	r8 ges'4. e'4 ges'8 es'8 ~ |
+	es'2 g'4. g'8 ~ |
+	g'2. f'4 |
+	c''8 c''8 r4 r2 |
+	as'4 as'4 as'8 as'8 - "dim7" r8 as'8 ~ |
+	as'4. as'8 ~ as'4. - "dim7" as'8 ~ |
+	as'4. c''8 r8 f'4. |
+	g'8 g'8 r4 r2 |
+	r8 ges'4. e'4 ges'8 es'8 ~ |
+	es'2 g'4. g'8 ~ |
+	g'2. f'4 |
+	c''8 c''8 r4 r2 |
+	as'4 as'4 as'8 as'8 - "dim7" r8 as'8 ~ |
+	as'4. as'8 ~ as'4. - "dim7" as'8 ~ |
+	as'4 c''8 - "sus4" es''8 r2 |
+	bes'8 bes'8 bes'8 bes'8 ~ bes'8 bes'8 bes'8 b'8 ~ |
+	b'8 b'8 - "+7b9" b'8 b'8 ~ b'8 b'8 b'8 c''8 ~ |
+	c''4 bes'4 bes'4 as'4 |
+	as'4 f'8 f'8 r2 |
+	des''4 r8 es''8 ~ es''2 |
+	c''4 r8 d''8 ~ d''2 |
+	b'4 r8 cis''8 ~ cis''4 b'8 bes'8 |
+	r2 r8 f'4. |
+	g'8 g'8 r4 r2 |
+	r8 ges'4. e'4 ges'8 es'8 ~ |
+	es'2 g'4. g'8 ~ |
+	g'2. f'4 |
+	c''8 c''8 r4 r2 |
+	as'4 as'4 as'8 as'8 - "dim7" r8 as'8 ~ |
+	as'4. as'8 ~ as'4. - "dim7" as'8 ~ |
+	as'4 c''8 - "sus4" es''8 r2 |
+	\endBar
+}
+{% endif %}

@@ -1,0 +1,152 @@
+{#
+default_version = "Wikifonia"
+
+[attributes]
+title = "I Remember You"
+style = "Jazz"
+composer = "Victor Schertzinger"
+piece = "Jazz"
+typesetter = "OpenBook contributors (MusicXML import)"
+completion = "3"
+uuid = "8000a113-1375-5e6b-9620-0900e5bfd3fe"
+location = "Real_Book_2:176, 557_Standards:180, Colorado:100, Colorado_Cookbook:100"
+copyright = "All Rights Reserved"
+
+[versions.Wikifonia]
+doChords = true
+doVoice = true
+doLyrics = false
+doLyricsmore = false
+doLyricsmoremore = false
+doChordBars = false
+doGuitar = false
+doExtra = false
+doPrep = false
+doOwn = false
+#}
+{% if part == "Vars" %}
+{% endif %}
+{% if part == "Doc" %}
+	DONE:
+	- imported melody and chord changes from real_books_archive.gi/Wikifonia.tar.xz: Wikifonia/Victor  Schertzinger, Johnny Mercer - I Remember You.mxl.
+	- source revision: http://wikifonia.org/node/4901/revisions/20484/view.
+	- PDF reference: real_books_archive.gi/The Real Book of Jazz Volume II.pdf, PDF page 176.
+	- retained the original copyright notice where printed; the underlying music is not relicensed.
+	- retained written measures, pickups, repeats and endings; lyrics omitted.
+	- tempo is an editorial practice suggestion.
+	TODO:
+	- proofread the music against the referenced PDF and check by ear.
+	- verify editorial chord spacing in measures 23, 35, 36, 37, 38; the archive places successive symbols at the same offset.
+	- verify the copyright notice against the scan; no readable per-tune notice was recovered, so the archived rights notice is retained where available.
+{% endif %}
+{% if part == "ChordsWikifonia" %}\chordmode {
+	\startChords
+	\startSong
+
+	\myMark "A"
+	\startPart
+	\repeat volta 2 {
+	f1:maj7 |
+	e1:7 |
+	f1:maj7 |
+	ees2/g f4:sus4.7 f4:7 | \myEndLine
+	bes2.:maj7 bes4:6 |
+	bes2:m7 c2:7.9- |
+	f1 |
+	c2.:sus4.7 c4:7 | \myEndLine
+	f1:maj7 |
+	e1:7 |
+	f1 |
+	ees2/g f4:sus4.7 f4:7 | \myEndLine
+	bes1:maj7 |
+	bes2:m7 c2:7.9- |
+	f1 |
+	c2.:m7 f4:aug7 | \myEndLine
+	bes1:maj7 |
+	e2:11 a2:7 |
+	d1 |
+	a2:sus4.7 a2:7 | \myEndLine
+	d2.:maj7 d4:6 |
+	d2:m7 g2:7 |
+	c2:maj7 c2 |
+	c1:7 | \myEndLine
+	f1:maj7 |
+	e1:7 |
+	f1:maj7 |
+	a2:m7.5- d2:7.9- | \myEndLine
+	g1:m |
+	bes2:m bes2:m6 |
+	f1 |
+	g1:9 | \myEndLine
+	f2. aes4:dim7 |
+	g2:m c2:7.9- |
+	} \alternative {
+	{
+	f2 g2:9 |
+	c4:7 c4:7.9- c4:9 c4:7.5- | \myEndLineVoltaNotLast
+	}
+	{
+	f2 g2:7.9- | \myEndLineVoltaLast
+	}
+	}
+	s2 c4:9 f4 |
+	\endBar
+	\endPart
+
+	\endSong
+	\endChords
+}
+{% endif %}
+{% if part == "VoiceWikifonia" %}\absolute {
+	\tempo "Moderato" 4 = 120
+	\time 4/4
+	\key f \major
+
+	\repeat volta 2 {
+	e'4 f'4 c'4 d'4 |
+	e'1 |
+	e'4 f'4 c'4 d'4 |
+	es'4 f'4 bes4 c'4 |
+	d'2. f'4 |
+	des'2 \times 2/3 { des'4 es'4 des'4 } |
+	c'1 ~ |
+	c'2. r4 |
+	e'4 f'4 c'4 d'4 |
+	e'1 |
+	e'4 f'4 c'4 d'4 |
+	es'4 f'4 bes4 c'4 |
+	d'2. f'4 |
+	des'2 \times 2/3 { des'4 es'4 des'4 } |
+	c'1 ~ |
+	c'2. r4 |
+	a'4 bes'4 f'4 g'4 |
+	a'4. a'8 a'4 g'4 |
+	fis'1 |
+	r4 a'4 a'4 g'4 |
+	fis'2. d'4 |
+	f'2 \times 2/3 { f'4 g'4 f'4 } |
+	e'1 ~ |
+	e'2. r4 |
+	e'4 f'4 c'4 d'4 |
+	e'1 |
+	e'4 f'4 e'4 f'4 |
+	c''4 c''4 c''4. b'8 |
+	bes'1 |
+	r4 bes'4 \times 2/3 { bes'4 c''4 bes'4 } |
+	a'1 |
+	r4 a'4 g'4 f'4 |
+	e'4 f'4 c'4 d'4 |
+	f'2 g'2 |
+	} \alternative {
+	{
+	f'1 ~ |
+	f'4 r4 r2 |
+	}
+	{
+	f'1 ~ |
+	}
+	}
+	f'2 r2 |
+	\endBar
+}
+{% endif %}

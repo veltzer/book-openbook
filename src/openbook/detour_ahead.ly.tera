@@ -1,0 +1,129 @@
+{#
+default_version = "Wikifonia"
+
+[attributes]
+title = "Detour Ahead"
+style = "Jazz"
+composer = "Herb Ellis, John Frigo, Lou Carter"
+piece = "Jazz"
+typesetter = "OpenBook contributors (MusicXML import)"
+completion = "3"
+uuid = "ea84fcae-2be0-5b9f-a8be-830d2bb15049"
+location = "New_Real_2:80"
+copyright = "All Rights Reserved"
+
+[versions.Wikifonia]
+doChords = true
+doVoice = true
+doLyrics = false
+doLyricsmore = false
+doLyricsmoremore = false
+doChordBars = false
+doGuitar = false
+doExtra = false
+doPrep = false
+doOwn = false
+#}
+{% if part == "Vars" %}
+{% endif %}
+{% if part == "Doc" %}
+	DONE:
+	- imported melody and chord changes from real_books_archive.gi/Wikifonia.tar.xz: Wikifonia/Herb Ellis, John Frigo, Lou Carter - Detour Ahead.mxl.
+	- source revision: http://wikifonia.org/node/15448/revisions/20560/view.
+	- PDF reference: real_books_archive.gi/newreal2.pdf, PDF page 80.
+	- retained the original copyright notice where printed; the underlying music is not relicensed.
+	- retained written measures, pickups, repeats and endings; lyrics omitted.
+	- tempo taken from archived MusicXML.
+	TODO:
+	- proofread the music against the referenced PDF and check by ear.
+	- verify the copyright notice against the scan; no readable per-tune notice was recovered, so the archived rights notice is retained where available.
+{% endif %}
+{% if part == "ChordsWikifonia" %}\chordmode {
+	\startChords
+	\startSong
+
+	\myMark "A"
+	\startPart
+	\repeat volta 2 {
+	c2.:maj7 fis4:7.9- |
+	b1:7.5+ |
+	f4:maj7 e4:m7 a8:m7 a4.:m7 |
+	d2:7 d4:m7 g4:7 | \myEndLine
+	s8 g4.:m7 c2:7 |
+	f4.:maj7 bes1*5/8:7 |
+	c2:maj7 a2:m7 |
+	} \alternative {
+	{
+	s4 aes4:7.5- d4:m7 g4:7 | \myEndLineVoltaNotLast
+	}
+	{
+	s4 fis4:m7.5- b2:7 | \myEndLineVoltaLast
+	}
+	}
+	e1:m7 |
+	b1:7^5.9-.9+.11+.13- |
+	e1:maj7 | \myEndLine
+	fis2:m7.5- b2:7 |
+	e1:m7 |
+	b1:7^5.9-.9+.11+.13- |
+	e1:maj7 | \myEndLine
+	des1:9.11+ |
+	c2:maj7 fis2:7.9- |
+	b1:7.5+ |
+	f4:maj7 e4:m7 a8:m7 a4.:m7 | \myEndLine
+	d2:7 d4:m7 g4:7 |
+	s8 g4.:m7 c2:7 |
+	f2:maj7 bes2:7 |
+	c2:maj7 e2:7.9+ | \myEndLine
+	a2:m7 ees2:7 |
+	d2.:7 g4:sus4.7 |
+	c1:6 |
+	\endBar
+	\endPart
+
+	\endSong
+	\endChords
+}
+{% endif %}
+{% if part == "VoiceWikifonia" %}\absolute {
+	\tempo "Moderato" 4 = 120
+	\time 4/4
+	\key c \major
+
+	\repeat volta 2 {
+	e'4 g'2. |
+	b'4 g'2 ~ g'8 g'8 |
+	a'8 c''8 b'8 g'8 a'16 g'16 e'4. |
+	\times 2/3 { d'4 e'4 d'4 } e'2 |
+	r8 g'8 g'8 a'8 bes'8 a'8 g'8 e'8 |
+	c'4. c'8 g'8 f'4. |
+	c'8 d'8 e'8 a'8 e'8 c'4 e'8 |
+	} \alternative {
+	{
+	d'1 |
+	}
+	{
+	c'2 r4 r8 b'8 |
+	}
+	}
+	\times 2/3 { b'4 g'4 a'4 } b'8 c''4 b'8 |
+	a'8 g'8 f'8 g'8 a'8 b'4 a'8 |
+	gis'2 r8 e'8 fis'8 gis'8 |
+	fis'4 fis'2 r8 b'8 |
+	\times 2/3 { b'4 g'4 a'4 } b'4 c''8 b'8 |
+	a'8 g'8 f'8 g'8 a'4. b'8 |
+	gis'4 gis'2 gis'4 |
+	g'4 g'2. |
+	e'4 g'2. |
+	b'4 g'2 ~ g'8 g'8 |
+	a'8 c''8 b'8 g'8 a'16 g'16 e'4. |
+	\times 2/3 { d'4 e'4 d'4 } e'2 |
+	r8 g'8 g'8 a'8 bes'8 a'8 g'8 e'8 |
+	c'4. c'8 g'8 f'4. |
+	e'4 g'2. |
+	a'4 c''2 r8 a'8 |
+	a'4 c'2 c'4 |
+	c'1 - "(G7#5)" |
+	\endBar
+}
+{% endif %}

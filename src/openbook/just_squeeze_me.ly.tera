@@ -1,0 +1,141 @@
+{#
+default_version = "Wikifonia"
+
+[attributes]
+title = "Just Squeeze Me"
+style = "Jazz"
+composer = "Duke Ellington"
+piece = "Jazz"
+typesetter = "OpenBook contributors (MusicXML import)"
+completion = "3"
+uuid = "4eaf4db8-9ba5-564a-85e3-08e1807050ac"
+location = "Real_Book_3:168, New_Real_3:204, 557_Standards:209, Colorado:221, Colorado_Cookbook:221"
+copyright = "1946 (renewed 1974) EMI Robbins Catalog, Inc. Used by Permission of CPP/Belwin, Inc., Miami, FL. International Copyright Secured"
+copyrightextra = "All Rights Reserved"
+
+[versions.Wikifonia]
+doChords = true
+doVoice = true
+doLyrics = false
+doLyricsmore = false
+doLyricsmoremore = false
+doChordBars = false
+doGuitar = false
+doExtra = false
+doPrep = false
+doOwn = false
+#}
+{% if part == "Vars" %}
+{% endif %}
+{% if part == "Doc" %}
+	DONE:
+	- imported melody and chord changes from real_books_archive.gi/Wikifonia.tar.xz: Wikifonia/Duke Ellington, Lee Gaines - Just Squeeze Me.mxl.
+	- source revision: http://wikifonia.org/node/20813/revisions/27516/view.
+	- PDF reference: real_books_archive.gi/newreal3.pdf, PDF page 204.
+	- retained the original copyright notice where printed; the underlying music is not relicensed.
+	- retained written measures, pickups, repeats and endings; lyrics omitted.
+	- tempo is an editorial practice suggestion.
+	TODO:
+	- proofread the music against the referenced PDF and check by ear.
+{% endif %}
+{% if part == "ChordsWikifonia" %}\chordmode {
+	\startChords
+	\startSong
+
+	\myMark "A"
+	\startPart
+	\repeat volta 2 {
+	f2:maj7 g2:m7 |
+	a2:m7 c2:13 |
+	f2:maj7 bes2:maj7 |
+	a2:m7 d2:7.9- | \myEndLine
+	g1:m7 |
+	c2:sus4.7.9 c2:7 |
+	f2:maj7 d2:7 |
+	g2:m7 c2:7 | \myEndLine
+	f2:maj7 g2:m7 |
+	a2:m7 c2:13 |
+	f2:maj7 bes2:maj7 |
+	a2:m7 d2:7.9- | \myEndLine
+	g1:m7 |
+	c2:sus4.7.9 c2:7 |
+	f1:maj7 |
+	s2 c2:7.9+ | \myEndLine
+	f1:7 |
+	s1 |
+	bes1:maj7 |
+	s2 aes2:9 | \myEndLine
+	g1:7 |
+	s1 |
+	g1:m7 |
+	c2:sus4.7.9 c2:9 | \myEndLine
+	f2:maj7 g2:m7 |
+	a2:m7 c2:13 |
+	f2:maj7 bes2:maj7 |
+	a2:m7 d2:7.9- | \myEndLine
+	g1:m7 |
+	c2:sus4.7.9 c2:7 |
+	} \alternative {
+	{
+	f2:maj7 d2:7 |
+	g2:m7 c2:7 | \myEndLineVoltaNotLast
+	}
+	{
+	f1:maj7 | \myEndLineVoltaLast
+	}
+	}
+	\endBar
+	\endPart
+
+	\endSong
+	\endChords
+}
+{% endif %}
+{% if part == "VoiceWikifonia" %}\absolute {
+	\tempo "Moderato" 4 = 120
+	\time 4/4
+	\key f \major
+
+	\repeat volta 2 {
+	a'4 a'4 a'8 bes'4 c''8 ~ |
+	c''4. c''8 ~ c''2 |
+	a'4 a'4 a'8 bes'4 c''8 ~ |
+	c''4. c''8 ~ c''4. c''8 ~ |
+	c''4. bes'8 ~ bes'2 |
+	r8 c''4. c''4 c''4 |
+	c''4. a'8 ~ a'2 |
+	r2 r2 |
+	a'4 a'4 a'8 bes'4 c''8 ~ |
+	c''4. c''8 ~ c''2 |
+	a'4 a'4 a'8 bes'4 c''8 ~ |
+	c''4. c''8 ~ c''4. c''8 ~ |
+	c''4. bes'8 ~ bes'2 |
+	r8 c''4. c''4 c''4 |
+	c''4. a'8 ~ a'2 |
+	r2 r2 |
+	\once \omit TupletBracket \times 2/3 { a'8 bes'8 b'8 } c''8 c''8 c''8 d''8 c''4 |
+	\once \omit TupletBracket \times 2/3 { a'8 bes'8 b'8 } c''8 c''8 c''8 d''8 c''4 |
+	\once \omit TupletBracket \times 2/3 { bes'8 c''8 cis''8 } d''8 es''8 d''8 bes'8 g'8 bes'8 ~ |
+	bes'2 ~ bes'2 |
+	\once \omit TupletBracket \times 2/3 { b'8 c''8 cis''8 } d''8 d''8 d''8 e''8 d''4 |
+	\once \omit TupletBracket \times 2/3 { b'8 c''8 cis''8 } d''8 d''8 d''8 e''8 d''4 |
+	f''2 d''4. fis'8 |
+	g'8 e''4 d''8 ~ d''2 |
+	a'4 a'4 a'8 bes'4 c''8 ~ |
+	c''4. c''8 ~ c''2 |
+	a'4 a'4 a'8 bes'4 c''8 ~ |
+	c''4. c''8 ~ c''4. c''8 ~ |
+	c''4. bes'8 ~ bes'2 |
+	r8 c''4. c''4 c''4 |
+	} \alternative {
+	{
+	c''4. a'8 ~ a'2 |
+	R1 |
+	}
+	{
+	c''4. a'8 ~ a'2 |
+	}
+	}
+	\endBar
+}
+{% endif %}

@@ -1,0 +1,206 @@
+{#
+default_version = "Wikifonia"
+
+[attributes]
+title = "I'm All Smiles"
+style = "Jazz"
+composer = "Michael Leonard"
+piece = "Jazz"
+typesetter = "OpenBook contributors (MusicXML import)"
+completion = "3"
+uuid = "4fe8b85a-8008-5fee-9189-f192f1975b9b"
+location = "Real_Book_1:229, New_Real_1:153"
+copyright = "1937 by Irving Berlin, Inc., now Bourne Co. and, in US only, Williamson Music. Copyright Renewed. International Copyright"
+copyrightextra = "Secured. All Rights Reserved. Used By Permission. Rights for Germany, Austria, Switzerland & CSSR assigned to Melodie Der Welt,"
+copyrightextraextra = "J. Michel KG, Musikverlag The nghts for Japanassigned to High Note Publishing Co., Ltd; used by permission of JASRAC License #8670719"
+
+[versions.Wikifonia]
+doChords = true
+doVoice = true
+doLyrics = false
+doLyricsmore = false
+doLyricsmoremore = false
+doChordBars = false
+doGuitar = false
+doExtra = false
+doPrep = false
+doOwn = false
+#}
+{% if part == "Vars" %}
+{% endif %}
+{% if part == "Doc" %}
+	DONE:
+	- imported melody and chord changes from real_books_archive.gi/Wikifonia.tar.xz: Wikifonia/Michael Leonard, Herbert Martin - I'm All Smiles.mxl.
+	- source revision: http://wikifonia.org/node/11071/revisions/14950/view.
+	- PDF reference: real_books_archive.gi/New Real Book 1.pdf, PDF page 159.
+	- retained the original copyright notice where printed; the underlying music is not relicensed.
+	- retained written measures, pickups, repeats and endings; lyrics omitted.
+	- tempo is an editorial practice suggestion.
+	TODO:
+	- proofread the music against the referenced PDF and check by ear.
+{% endif %}
+{% if part == "ChordsWikifonia" %}\chordmode {
+	\startChords
+	\startSong
+
+	\myMark "A"
+	\startPart
+	\repeat volta 2 {
+	d2.:9.5+ |
+	g2.:m7 |
+	cis2.:9.5+ |
+	b4:dim c2 | \myEndLine
+	a2.:m7 |
+	d2.:7 |
+	b2.:m7 |
+	e2.:7 | \myEndLine
+	cis2.:m7 |
+	ges2.:9 |
+	b2.:maj7 |
+	bes4 b2 | \myEndLine
+	} \alternative {
+	{
+	e2.:m7 |
+	a2.:9 |
+	d2.:maj7 |
+	s2. | \myEndLineVoltaNotLast
+	}
+	{
+	e2.:m7 |
+	a2.:11 |
+	fis2.:m7 |
+	d2.:6 | \myEndLineVoltaLast
+	}
+	}
+	ges2.:maj7 |
+	aes2.:7 |
+	f2.:m7 |
+	bes2.:7 | \myEndLine
+	g2.:m7.5- |
+	c2.:7.5- |
+	f2.:maj7 |
+	s2. | \myEndLine
+	g2. |
+	a2.:9 |
+	d2.:maj7 |
+	s2. | \myEndLine
+	g2.:maj7 |
+	b2.:7 |
+	bes2.:7.5- |
+	s2. | \myEndLine
+	d2.:9.5+ |
+	g2.:m7 |
+	des2.:9.5+ |
+	b4:dim c2 | \myEndLine
+	a2.:m7 |
+	d2.:7 |
+	b2.:m7 |
+	e2.:7 | \myEndLine
+	cis2.:m7 |
+	ges2.:9 |
+	b2.:maj7 |
+	bes4 b2 | \myEndLine
+	e2.:m7 |
+	a2.:11 |
+	cis4 d2 |
+	d2.:7 | \myEndLine
+	fis4 g2 |
+	e2. |
+	a2.:7 |
+	s2. | \myEndLine
+	fis2.:m7 |
+	b2.:m7 |
+	e2.:m7 |
+	a2.:11 | \myEndLine
+	fis2.:7 |
+	b2.:m7 |
+	e2.:m7 |
+	a2.:11 | \myEndLine
+	d2. |
+	\endBar
+	\endPart
+
+	\endSong
+	\endChords
+}
+{% endif %}
+{% if part == "VoiceWikifonia" %}\absolute {
+	\tempo "Moderato" 4 = 120
+	\time 3/4
+	\key d \major
+
+	\repeat volta 2 {
+	e'2. |
+	d'2. |
+	e'2. |
+	b4 c'2 |
+	g'2. |
+	e'2. |
+	fis'2. ~ |
+	fis'2 fis'4 |
+	b'2. |
+	gis'2. |
+	ais'2. |
+	f'4 fis'2 |
+	} \alternative {
+	{
+	g'4 g'4 fis'4 |
+	g'4 g'4 fis'4 |
+	e'2. ~ |
+	e'4 r2 |
+	}
+	{
+	g'4 g'4 fis'4 |
+	g'2 e'4 |
+	a'2. ~ |
+	a'2 r4 |
+	}
+	}
+	bes'4 bes'4 bes'4 |
+	bes'4 c'4 bes'4 |
+	bes'4 as'2 ~ |
+	as'2 as'4 |
+	bes'4 bes'4 bes'4 |
+	bes'4 c'4 bes'4 |
+	a'2. ~ |
+	a'2 a'4 |
+	a'4 a'4 a'4 |
+	a'4 g'4 a'4 |
+	b'4 fis'2 ~ |
+	fis'2. |
+	cis''4 a'4 fis'4 |
+	b'2 f'4 |
+	e'2. ~ |
+	e'4 d'8 cis'8 d'8 e'8 |
+	f'2. |
+	d'2. |
+	e'2. |
+	b4 c'2 |
+	g'2. |
+	e'2. |
+	fis'2. ~ |
+	fis'2 r4 |
+	b'2. |
+	gis'2. |
+	ais'2. |
+	f'4 fis'2 |
+	g'4 g'4 fis'4 |
+	g'2 e'4 |
+	gis'4 a'4 a'4 |
+	a'2 d'4 |
+	ais'4 b'4 b'4 |
+	b'2 e'4 |
+	cis''4 cis''4. cis''8 |
+	cis''4 b'4 cis''4 |
+	e''4 d''4. cis''8 |
+	d''2 a'4 |
+	d''4 d''4 d''4 |
+	d''4 b'4. cis''8 |
+	\times 2/3 { e''2 d''4 } cis''4 |
+	d''2 g'4 |
+	d''2 d''4 |
+	d''4 b'4 cis''4 |
+	d''2. |
+	\endBar
+}
+{% endif %}

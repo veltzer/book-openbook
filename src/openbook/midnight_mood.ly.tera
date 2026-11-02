@@ -1,0 +1,113 @@
+{#
+default_version = "Wikifonia"
+
+[attributes]
+title = "Midnight Mood"
+style = "Jazz"
+composer = "Joe Zawinul"
+piece = "Jazz"
+typesetter = "OpenBook contributors (MusicXML import)"
+completion = "3"
+uuid = "be5afef9-610c-5be4-8187-d81bf9229410"
+location = "Real_Book_1:306"
+copyright = "All Rights Reserved"
+
+[versions.Wikifonia]
+doChords = true
+doVoice = true
+doLyrics = false
+doLyricsmore = false
+doLyricsmoremore = false
+doChordBars = false
+doGuitar = false
+doExtra = false
+doPrep = false
+doOwn = false
+#}
+{% if part == "Vars" %}
+{% endif %}
+{% if part == "Doc" %}
+	DONE:
+	- imported melody and chord changes from real_books_archive.gi/Wikifonia.tar.xz: Wikifonia/Josef Zawinul - Midnight Mood.mxl.
+	- source revision: http://wikifonia.org/node/6899/revisions/9518/view.
+	- PDF reference: real_books_archive.gi/The Real Book of Jazz Volume I.pdf, PDF page 306.
+	- retained the original copyright notice where printed; the underlying music is not relicensed.
+	- retained written measures, pickups, repeats and endings; lyrics omitted.
+	- tempo is an editorial practice suggestion.
+	TODO:
+	- proofread the music against the referenced PDF and check by ear.
+	- verify the copyright notice against the scan; no readable per-tune notice was recovered, so the archived rights notice is retained where available.
+{% endif %}
+{% if part == "ChordsWikifonia" %}\chordmode {
+	\startChords
+	\startSong
+
+	\myMark "A"
+	\startPart
+	\repeat volta 2 {
+	des2.:maj7 |
+	ees2.:m7.5-/des |
+	des2.:maj7 |
+	ees2.:m7.5-/des | \myEndLine
+	des2.:maj7 |
+	ees2.:m7.5-/des |
+	des2.:maj7 |
+	g2.:7.5-.9- | \myEndLine
+	ges2.:maj7 |
+	c2.:7.9+ |
+	f2.:m7 |
+	bes2.:m7 | \myEndLine
+	ees2.:m7 |
+	ees2.:m7/aes |
+	aes2.:m7/des |
+	s2 g4:7.5-.9- | \myEndLine
+	ges2.:maj7 |
+	c2.:7.9+ |
+	f2.:m7 |
+	bes2.:7.9+ | \myEndLine
+	ees2.:m7 |
+	aes2.:7 |
+	des2.:maj7 |
+	ees2.:m7.5-/des | \myEndLine
+	}
+	\endBar
+	\endPart
+
+	\endSong
+	\endChords
+}
+{% endif %}
+{% if part == "VoiceWikifonia" %}\absolute {
+	\tempo "Moderato" 4 = 120
+	\time 3/4
+	\key des \major
+
+	\repeat volta 2 {
+	es'''2 r8 des'''8 |
+	ges''2 as''4 |
+	bes''2 \once \omit TupletBracket \times 2/3 { as''8 ges''8 f''8 } |
+	es''2 as'4 |
+	f''2 r8 es''8 |
+	ges''2 as''4 |
+	bes''2 \once \omit TupletBracket \times 2/3 { as''8 ges''8 f''8 } |
+	des'''2. |
+	bes''4 c'''4 des'''4 |
+	es'''4. des'''8 c'''8 bes''8 |
+	bes''2 as''4 |
+	des'''2 as''4 |
+	as''2 ges''4 |
+	des'''2 ges''4 |
+	ges''2 f''4 |
+	des'''2 ~ des'''8 ~ des'''8 |
+	bes''4 c'''4 des'''4 |
+	es'''4. des'''8 c'''8 bes''8 |
+	bes''2 as''4 |
+	des'''2 f''4 |
+	f''2 ges''4 |
+	bes''2 c''4 |
+	des''2. ~ ^ "Fine" |
+	des''2. |
+	}
+	\endBar
+}
+{% endif %}

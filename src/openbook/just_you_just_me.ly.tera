@@ -1,0 +1,126 @@
+{#
+default_version = "Wikifonia"
+
+[attributes]
+title = "Just You, Just Me"
+style = "Jazz"
+composer = "Jesse Greer"
+piece = "Jazz"
+typesetter = "OpenBook contributors (MusicXML import)"
+completion = "3"
+uuid = "fe9ed65f-460f-589f-aba5-b0d593dc82ed"
+location = "Real_Book_2:200, New_Real_3:206, 557_Standards:202"
+copyright = "1929 (renewed 1957) Metro-Goldyn-Mayer Inc. c/o EMI Robbins Catalog, Inc. Used by Permission of CPP/Belwin, Inc., Miami, FL. All"
+copyrightextra = "Rights Reserved"
+
+[versions.Wikifonia]
+doChords = true
+doVoice = true
+doLyrics = false
+doLyricsmore = false
+doLyricsmoremore = false
+doChordBars = false
+doGuitar = false
+doExtra = false
+doPrep = false
+doOwn = false
+#}
+{% if part == "Vars" %}
+{% endif %}
+{% if part == "Doc" %}
+	DONE:
+	- imported melody and chord changes from real_books_archive.gi/Wikifonia.tar.xz: Wikifonia/Jesse Greer, Raymond Klages - Just You, Just Me.mxl.
+	- source revision: http://wikifonia.org/node/9952/revisions/19354/view.
+	- PDF reference: real_books_archive.gi/newreal3.pdf, PDF page 206.
+	- retained the original copyright notice where printed; the underlying music is not relicensed.
+	- retained written measures, pickups, repeats and endings; lyrics omitted.
+	- tempo is an editorial practice suggestion.
+	TODO:
+	- proofread the music against the referenced PDF and check by ear.
+	- verify editorial chord spacing in measures 18; the archive places successive symbols at the same offset.
+{% endif %}
+{% if part == "ChordsWikifonia" %}\chordmode {
+	\startChords
+	\startSong
+
+	\myMark "A"
+	\startPart
+	c2 e2:m7.5- |
+	a1:7 |
+	d2:m d2:m7.5- |
+	g1 | \myEndLine
+	c1 |
+	f2 f2:m |
+	c2 d4:7 g4:7 |
+	c1 | \myEndLine
+	s2 e2:m7.5- |
+	a1:7 |
+	d2:m d2:m7.5- |
+	g1 | \myEndLine
+	c1 |
+	f2 f2:m |
+	c2 d4:7 g4:7 |
+	c1 | \myEndLine
+	s2 c2:dim |
+	d2:m g2:7 |
+	f1 |
+	f1:m | \myEndLine
+	c1 |
+	gis2:dim a2:m |
+	d1:7 |
+	g2. g4:7.9- | \myEndLine
+	c2 g2:m6 |
+	a1:7 |
+	d2:m d2:m7.5- |
+	g1 | \myEndLine
+	c1 |
+	f2 f2:m |
+	c2 d4:7 g4:7 |
+	s1 | \myEndLine
+	\endBar
+	\endPart
+
+	\endSong
+	\endChords
+}
+{% endif %}
+{% if part == "VoiceWikifonia" %}\absolute {
+	\tempo "Moderato" 4 = 120
+	\time 2/2
+	\key c \major
+
+	r2 g'2 |
+	a'1 |
+	r2 f'2 |
+	g'1 |
+	r4 e'4 e'4 e'4 |
+	e'4 g'4 f'2 |
+	r4 e'4 d'8 c'8 d'4 |
+	c'1 |
+	r2 g'2 |
+	a'1 |
+	r2 f'2 |
+	g'1 |
+	r4 e'4 e'4 e'4 |
+	e'4 g'4 f'2 |
+	r4 e'4 d'8 c'8 d'4 |
+	c'1 ~ |
+	c'4 r4 c''2 |
+	d''1 |
+	r4 c''4 a'4 f'4 |
+	e'2 d'2 |
+	r4 c''4 g'4 e'4 |
+	d'2 c'2 |
+	r4 b'4 a'4 b'4 |
+	d''4 b'4 a'4 as'4 |
+	r2 g'2 |
+	a'1 |
+	r2 f'2 |
+	g'1 |
+	r4 e'4 e'4 e'4 |
+	e'4 g'4 f'2 |
+	r4 e'4 d'8 c'8 d'4 |
+	c'1 |
+	\endBar
+}
+{% endif %}

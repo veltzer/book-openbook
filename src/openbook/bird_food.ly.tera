@@ -1,0 +1,148 @@
+{#
+default_version = "Wikifonia"
+
+[attributes]
+title = "Bird Food"
+style = "Jazz"
+composer = "Ornette Coleman"
+piece = "Jazz"
+typesetter = "OpenBook contributors (MusicXML import)"
+completion = "3"
+uuid = "9d316fe8-52c8-5bf1-a663-80fee814e434"
+location = "New_Real_1:18"
+copyright = "1961,1988 by MJQ Music Inc., Rights assigned to Essex Musikvertrieb Gmbh, Koln for Germany, Austria, Switzerland, Hungary,"
+copyrightextra = "Bulgaria, Rumania, Czechoslovia, Yugoslavia, Poland, Greece, Turkey, Saudi Arabia, Iraq and Jordan. All Rights Reserved"
+copyrightextraextra = "Including Publ Perform- ance For Profit. International Copynght Secured. Used By Permission."
+
+[versions.Wikifonia]
+doChords = true
+doVoice = true
+doLyrics = false
+doLyricsmore = false
+doLyricsmoremore = false
+doChordBars = false
+doGuitar = false
+doExtra = false
+doPrep = false
+doOwn = false
+#}
+{% if part == "Vars" %}
+{% endif %}
+{% if part == "Doc" %}
+	DONE:
+	- imported melody and chord changes from real_books_archive.gi/Wikifonia.tar.xz: Wikifonia/Ornette Coleman - Bird Food.mxl.
+	- source revision: http://wikifonia.org/node/4242/revisions/5664/view.
+	- PDF reference: real_books_archive.gi/New Real Book 1.pdf, PDF page 24.
+	- retained the original copyright notice where printed; the underlying music is not relicensed.
+	- retained written measures, pickups, repeats and endings; lyrics omitted.
+	- tempo taken from archived MusicXML.
+	TODO:
+	- proofread the music against the referenced PDF and check by ear.
+{% endif %}
+{% if part == "ChordsWikifonia" %}\chordmode {
+	\startChords
+	\startSong
+
+	\myMark "A"
+	\startPart
+	\repeat volta 2 {
+	s1 |
+	s1 |
+	s1 |
+	bes2:6 g2:m7 | \myEndLine
+	c1*5/8:m7 f4.:7.9- |
+	bes1:6 |
+	f2:m7 bes2:7 |
+	ees1:6 | \myEndLine
+	s1 |
+	bes1:6 |
+	d2:m7 g2:7 |
+	c1:m7.5- | \myEndLine
+	} \alternative {
+	{
+	f2:7 | \myEndLineVoltaNotLast
+	}
+	{
+	f2:7 bes2:6 |
+	s1 | \myEndLineVoltaLast
+	}
+	}
+	d1:7 | \myEndLine
+	s1 |
+	g1:7 |
+	s1 |
+	c1:7 | \myEndLine
+	s1 |
+	f1:7 |
+	s1 |
+	bes2:6 g2:m7 | \myEndLine
+	c2:m7 f2:7.9- |
+	bes1:6 |
+	f2:m7 bes2:7 |
+	ees1:6 | \myEndLine
+	s1 |
+	bes1:6 |
+	d2:m7 g2:7 |
+	c1:m7.5- | \myEndLine
+	f2:7 bes2:6 |
+	s1 |
+	f2:7 bes2:6 |
+	s1*5/8 bes4.:6 | \myEndLine
+	\endBar
+	\endPart
+
+	\endSong
+	\endChords
+}
+{% endif %}
+{% if part == "VoiceWikifonia" %}\absolute {
+	\tempo "Moderato" 4 = 320
+	\time 4/4
+	\key bes \major
+
+	\repeat volta 2 {
+	r2 ^ "( alto & trumpet )" ^ "" r4 r8 c''8 |
+	\once \omit TupletBracket \times 2/3 { e''8 f''8 fis''8 } g''8 e''8 f''8 c''8 a'8 f'8 |
+	bes'4 a'8 f'8 r2 |
+	\mark \markup { \box { A } } f''4. ^ "Add bs. & drum" bes'8 ~ bes'4 g''8 f''8 |
+	f''4 g'8 ges'8 r8 d''4 -. a'8 |
+	bes'4 -. r8 ges''8 r8 ges''8 f''4 -. |
+	r8 ces''4 -. es''8 d''8 as'8 r8 ces''8 |
+	bes'4 es'8 as'8 r2 |
+	es''4 es''8 bes'8 d''4 g''8 bes'8 ~ |
+	bes'4 e'8 f'8 r4 r8 f'8 |
+	r8 c''4 -. a'8 f''4 -. es''8 f'8 |
+	ges'4 d''8 c''8 ~ c''4 d'8 f'8 |
+	} \alternative {
+	{
+	\time 2/4 a'8 f'8 g'8 e'8 |
+	}
+	{
+	\time 4/4 a'8 f'8 g'8 e'8 f'8 bes8 ~ bes4 |
+	R1 |
+	}
+	}
+	\mark \markup { \box { B } } r8 ^ "( Sample Alto Solo )" d'8 b8 d'8 e'4 fis'8 d'8 |
+	g'4. a'8 ~ a'8 g'8 b'4 ~ |
+	b'4 d''8 d'8 ~ d'4 e'8 c'8 ~ |
+	c'2 r2 |
+	r4 r8 e'8 ~ e'4 g'8 e'8 |
+	bes'8 ces''8 bes'8 es'8 r2 |
+	r8 c''4. b'8 g'8 es'8 c'8 |
+	as'4. g''8 ~ g''4 r4 ^ "(End Solo)" |
+	\mark \markup { \box { C } } f''4. bes'8 ~ bes'4 g''8 f''8 |
+	es''4 g'8 ges'8 r8 d''4 a'8 |
+	bes'4 r8 ges''8 r8 ges''8 f''4 |
+	r8 ces''4 -. es''8 d''8 as'8 r8 c''8 |
+	bes'4 es'8 as'8 r2 |
+	es''4 es''8 bes'8 d''4 f''8 bes'8 ~ |
+	bes'4 e'8 f'8 r4 r8 f'8 |
+	r8 c''4 -. a'8 f''4 -. es''8 f'8 |
+	ges'4 d''8 c''8 ~ c''4 d'8 f'8 ^ "To Coda" |
+	a'8 f'8 g'8 e'8 f'8 bes8 ~ bes4 |
+	R1 |
+	\mark \markup { \musicglyph "scripts.coda" } a'8 f'8 g'8 e'8 f'8 bes4 f'8 |
+	\once \omit TupletBracket \times 2/3 { a'8 bes'8 b'8 } c''8 a'8 bes'8 bes8 r4 |
+	\endBar
+}
+{% endif %}

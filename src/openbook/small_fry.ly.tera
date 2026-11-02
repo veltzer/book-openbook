@@ -1,0 +1,133 @@
+{#
+default_version = "Wikifonia"
+
+[attributes]
+title = "Small Fry"
+style = "Jazz"
+composer = "Hoagy Carmichael"
+piece = "Jazz"
+typesetter = "OpenBook contributors (MusicXML import)"
+completion = "3"
+uuid = "008547d1-9953-5ed0-8723-45da0c74d56e"
+location = "557_Standards:326"
+copyright = "All Rights Reserved"
+
+[versions.Wikifonia]
+doChords = true
+doVoice = true
+doLyrics = false
+doLyricsmore = false
+doLyricsmoremore = false
+doChordBars = false
+doGuitar = false
+doExtra = false
+doPrep = false
+doOwn = false
+#}
+{% if part == "Vars" %}
+{% endif %}
+{% if part == "Doc" %}
+	DONE:
+	- imported melody and chord changes from real_books_archive.gi/Wikifonia.tar.xz: Wikifonia/Hoagy Carmichael, Frank Loesser - Small Fry.mxl.
+	- source revision: http://wikifonia.org/node/16909/revisions/22443/view.
+	- PDF reference: real_books_archive.gi/Guitar - 557 Standards.pdf, PDF page 326.
+	- retained the original copyright notice where printed; the underlying music is not relicensed.
+	- retained written measures, pickups, repeats and endings; lyrics omitted.
+	- tempo is an editorial practice suggestion.
+	TODO:
+	- proofread the music against the referenced PDF and check by ear.
+	- verify the copyright notice against the scan; no readable per-tune notice was recovered, so the archived rights notice is retained where available.
+{% endif %}
+{% if part == "ChordsWikifonia" %}\chordmode {
+	\startChords
+	\startSong
+
+	\myMark "A"
+	\startPart
+	f2 d2:7 |
+	g2:7 c2:7 |
+	f2 d2:7 |
+	g2:7 c2:7 | \myEndLine
+	f1 |
+	bes2:7 d2:7 |
+	g1:7 |
+	g2:m7 c2:7 | \myEndLine
+	f2 d2:7 |
+	g2:7 c2:7 |
+	f2 d2:7 |
+	g2:7 c2:7 | \myEndLine
+	f2 f2:7 |
+	bes2:7 d2:7 |
+	g2:7 bes4 g4:m7 |
+	f2 c4:m7 f4:7 | \myEndLine
+	bes2:7 f2 |
+	a4.:7 d1*5/8:m7 |
+	g2:m7 c2:7 |
+	f2 c4:m7 f4:7 | \myEndLine
+	bes2:9 f2 |
+	a4.:7 d1*5/8:m7 |
+	g1:7 |
+	g2:m7 c2:7 | \myEndLine
+	f2 d2:7 |
+	g2:7 c2:7 |
+	f2 d2:7 |
+	g2:7 c2:7 | \myEndLine
+	f2 f2:7 |
+	bes2:7 d2:7 |
+	g2:7 c2:7 |
+	f2 c4:m7 f4:7 | \myEndLine
+	bes2:7 f2 |
+	a4.:7 d1*5/8:m7 |
+	g2:m7 c2:7 |
+	f1 | \myEndLine
+	\endBar
+	\endPart
+
+	\endSong
+	\endChords
+}
+{% endif %}
+{% if part == "VoiceWikifonia" %}\absolute {
+	\tempo "Moderato" 4 = 120
+	\time 4/4
+	\key f \major
+
+	c''2 a'2 |
+	gis'8 a'8 f'8 g'8 gis'8 a'4. |
+	c''2 a'2 |
+	gis'8 a'8 f'8 g'8 gis'8 a'4. |
+	f'2 f''4. f''8 |
+	e''8 d''8 e''8 f''8 c''4. a'8 |
+	f'8 f'8 f'8 f'8 d'8 f'8 a'8 d''8 |
+	c''1 |
+	c''2 a'2 |
+	gis'8 a'8 f'8 g'8 gis'8 a'4. |
+	c''2 a'2 |
+	gis'8 a'8 f'8 g'8 gis'8 a'4. |
+	f'2 f''4. f''8 |
+	e''8 d''8 e''8 f''8 c''4. a'8 |
+	f'8 e'8 f'8 d''8 c''8 a'8 f'8 d'8 |
+	f'2 ~ f'8 f''8 f''8 f''8 |
+	e''8 d''8 e''8 f''8 c''8 a'8 a'8 a'8 |
+	g'8 gis'8 a'8 f'8 ~ f'4 e''8 d''8 ~ |
+	d''4 bes'8 a'8 ~ a'4 g'8 f'8 ~ |
+	f'2 ~ f'8 f''8 f''8 f''8 |
+	e''8 d''8 e''8 f''8 c''8 a'8 a'8 a'8 |
+	g'8 gis'8 a'8 f'8 ~ f'8 g'8 a'8 c''8 |
+	d''8 e''8 g''2 e''4 |
+	c''2 d''2 |
+	c''2 a'4. a'8 |
+	gis'8 a'8 f'8 g'8 gis'8 a'4. |
+	c''2 a'4. a'8 |
+	gis'8 a'8 f'8 g'8 gis'8 a'4. |
+	f'2 f''4. f''8 |
+	e''8 d''8 e''8 f''8 c''4. a'8 |
+	f'8 e'8 f'8 d''8 c''8 a'8 f'8 d'8 |
+	f'2 ~ f'8 f''8 f''8 f''8 |
+	e''8 d''8 e''8 f''8 c''8 a'8 a'8 a'8 |
+	g'8 gis'8 a'8 f'8 ~ f'4 e''8 d''8 ~ |
+	d''4 bes'8 a'8 ~ a'4 g'4 |
+	f'2. r4 |
+	\endBar
+}
+{% endif %}

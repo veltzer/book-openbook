@@ -1,0 +1,143 @@
+{#
+default_version = "Wikifonia"
+
+[attributes]
+title = "My Heart Stood Still"
+style = "Jazz"
+composer = "Richard Rodgers"
+piece = "Jazz"
+typesetter = "OpenBook contributors (MusicXML import)"
+completion = "3"
+uuid = "69a1d47f-162d-5853-88a0-ca91a6996d70"
+location = "Real_Book_3:213, 557_Standards:256, StandardsBook:313"
+copyright = "1927 Warer Bros. Inc. (Renewed) All Rights Reserved. Used by Permission"
+
+[versions.Wikifonia]
+doChords = true
+doVoice = true
+doLyrics = false
+doLyricsmore = false
+doLyricsmoremore = false
+doChordBars = false
+doGuitar = false
+doExtra = false
+doPrep = false
+doOwn = false
+#}
+{% if part == "Vars" %}
+{% endif %}
+{% if part == "Doc" %}
+	DONE:
+	- imported melody and chord changes from real_books_archive.gi/Wikifonia.tar.xz: Wikifonia/Richard Rodgers, Lorenz Hart  - My Heart Stood Still.mxl.
+	- source revision: http://wikifonia.org/node/3923/revisions/5182/view.
+	- PDF reference: real_books_archive.gi/The Standards Real Book.pdf, PDF page 313.
+	- retained the original copyright notice where printed; the underlying music is not relicensed.
+	- retained written measures, pickups, repeats and endings; lyrics omitted.
+	- tempo is an editorial practice suggestion.
+	TODO:
+	- proofread the music against the referenced PDF and check by ear.
+	- verify editorial chord spacing in measures 7, 15, 24, 31, 32; the archive places successive symbols at the same offset.
+{% endif %}
+{% if part == "ChordsWikifonia" %}\chordmode {
+	\startChords
+	\startSong
+
+	\myMark "A"
+	\startPart
+	\repeat volta 2 {
+	f2. gis4:dim7 |
+	g2:m7 c2:7 |
+	f2. f4:aug |
+	g2:m7 c2:7 | \myEndLine
+	f2. f4:aug |
+	g2:m7 c2:7 |
+	a2:m7 d2:7 |
+	g2.:m7 c4:7 | \myEndLine
+	f2. gis4:dim7 |
+	g2:m7 c2:7 |
+	f2. f4:aug |
+	g2:m7 c2:7 | \myEndLine
+	f2. f4:aug |
+	g2:m7 c2:7 |
+	f2:6 bes2:6 |
+	f1 | \myEndLine
+	f1:m |
+	bes1:7 |
+	c2:aug c2 |
+	c1:7 | \myEndLine
+	d2:m7.5- g2:7 |
+	s1 |
+	c1:7 |
+	g2:m7 e2:m7.5- | \myEndLine
+	f2 a4:m gis4:dim7 |
+	g2:m7 c2:7 |
+	f2. f4:aug |
+	bes1 | \myEndLine
+	g1:m7 |
+	f2/c c2:7 |
+	f2 d2:m7 |
+	} \alternative {
+	{
+	a2:m c2:7 | \myEndLineVoltaNotLast
+	}
+	{
+	f1 | \myEndLineVoltaLast
+	}
+	}
+	s1 |
+	\endBar
+	\endPart
+
+	\endSong
+	\endChords
+}
+{% endif %}
+{% if part == "VoiceWikifonia" %}\absolute {
+	\tempo "Moderato" 4 = 120
+	\time 4/4
+	\key f \major
+
+	\repeat volta 2 {
+	r4 f'4 e'4 d'4 |
+	g'2 f'4 e'4 |
+	r4 a'4 g'4 f'4 |
+	bes'2 a'4 g'4 |
+	r4 c''4 bes'4 a'4 |
+	f'2 d'2 |
+	c'1 ~ |
+	c'2. r4 |
+	r4 f'4 e'4 d'4 |
+	g'2 f'4 e'4 |
+	r4 a'4 g'4 f'4 |
+	bes'2 a'4 g'4 |
+	r4 c''4 bes'4 a'4 |
+	f'2 d'2 |
+	f'1 ~ |
+	f'4 c'4 f'4 g'4 |
+	as'4 bes'4 c''4 d''4 |
+	d''4 c''4 bes'4 as'4 |
+	as'2 g'4 g'4 ~ |
+	g'4 c'4 e'4 g'4 |
+	as'2 g'4 g'4 ~ |
+	g'4 d'4 e'4 f'4 |
+	as'2 g'4 g'4 ~ |
+	g'1 |
+	r4 f'4 e'4 d'4 |
+	g'4 r4 f'4 e'4 |
+	r4 a'4 g'4 f'4 |
+	d''2 c''4 bes'4 |
+	a'4 g'4 f'4 g'4 |
+	c'2 g'2 |
+	f'1 |
+	} \alternative {
+	{
+	R1 |
+	}
+	{
+	f'1 ~ |
+	}
+	}
+	f'4 r4 r2 |
+	\endBar
+}
+{% endif %}

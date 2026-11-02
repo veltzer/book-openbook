@@ -1,0 +1,152 @@
+{#
+default_version = "Wikifonia"
+
+[attributes]
+title = "Black Coffee"
+style = "Jazz"
+composer = "Sonny Burke"
+piece = "Jazz"
+typesetter = "OpenBook contributors (MusicXML import)"
+completion = "3"
+uuid = "ec5ca07d-41b6-5e25-9892-266dd91e862b"
+location = "New_Real_2:35"
+copyright = "All Rights Reserved"
+
+[versions.Wikifonia]
+doChords = true
+doVoice = true
+doLyrics = false
+doLyricsmore = false
+doLyricsmoremore = false
+doChordBars = false
+doGuitar = false
+doExtra = false
+doPrep = false
+doOwn = false
+#}
+{% if part == "Vars" %}
+{% endif %}
+{% if part == "Doc" %}
+	DONE:
+	- imported melody and chord changes from real_books_archive.gi/Wikifonia.tar.xz: Wikifonia/Paul Francis Webber, Sonny Burke - Black Coffee.mxl.
+	- source revision: http://wikifonia.org/node/10039/revisions/13619/view.
+	- PDF reference: real_books_archive.gi/newreal2.pdf, PDF page 35.
+	- retained the original copyright notice where printed; the underlying music is not relicensed.
+	- retained written measures, pickups, repeats and endings; lyrics omitted.
+	- tempo is an editorial practice suggestion.
+	TODO:
+	- proofread the music against the referenced PDF and check by ear.
+	- verify editorial chord spacing in measures 8, 9, 12, 20, 24, 40, 44; the archive places successive symbols at the same offset.
+	- verify the copyright notice against the scan; no readable per-tune notice was recovered, so the archived rights notice is retained where available.
+{% endif %}
+{% if part == "ChordsWikifonia" %}\chordmode {
+	\startChords
+	\startSong
+
+	\myMark "A"
+	\startPart
+	\partial 8 s8 |
+	c2:7 des2:7.5- |
+	c1:7 |
+	c2:7 des2:7.5- | \myEndLine
+	c2.:7 ges4:7.5- |
+	f1:7 |
+	s1 |
+	c2:7 des2:7.5- | \myEndLine
+	c2:7 a2:7.9+ |
+	d1:m7 |
+	d2:m7 g2:7 |
+	c2:7 des2:7.5- | \myEndLine
+	c2.:7 des4:7.5- |
+	c2:7 des2:7.5- |
+	c1*5/12:7 des1*7/12:7.5- |
+	c2:7 des2:7.5- | \myEndLine
+	c2:7 ges2:7.5- |
+	f1:7 |
+	s1 |
+	c2:7 des2:7.5- | \myEndLine
+	c2.:7 a4:7.9+ |
+	d1:m7 |
+	d2:m7 g2:7 |
+	c2:7 des2:7.5- | \myEndLine
+	s2 c4:7 ges4:7.5- |
+	f1:m |
+	c1:m |
+	f2:m7 d4:m7.5- g4:7.9+ | \myEndLine
+	c1 |
+	ees2:m7 aes2:7 |
+	f2.:m7.5- bes4:7 |
+	ees2:m7 aes2:7 | \myEndLine
+	d2:m7 g2:7 |
+	c2:7 des2:7.5- |
+	c1*5/12:7 des1*7/12:7.5- |
+	c2:7 des2:7.5- | \myEndLine
+	c2:7 ges2:7.5- |
+	f1:7 |
+	s1 |
+	c2:7 d2:m7 | \myEndLine
+	e2:m7 a2:7.9- |
+	d1:m7 |
+	d2:m7 g2:7 |
+	c2:7 des2:7.5- | \myEndLine
+	c1:7 |
+	\endBar
+	\endPart
+
+	\endSong
+	\endChords
+}
+{% endif %}
+{% if part == "VoiceWikifonia" %}\absolute {
+	\tempo "Moderato" 4 = 120
+	\time 4/4
+	\key c \major
+
+	\partial 8 g'8 ^ "Slow Blues Ballad" |
+	c''8 c''8 c''8 g'8 bes'8 g'4. |
+	c''8 c''8 \once \omit TupletBracket \times 2/3 { c''8 g'8 bes'8 ~ } bes'4 r8 g'8 |
+	c''8 c''8 c''8 g'8 \once \omit TupletBracket \times 2/3 { bes'8 bes'8 bes'8 ~ } bes'8 g'8 |
+	c''8 c''8 c''8 g'8 bes'4 c''4 |
+	es''8 a'8 ~ a'2. |
+	\times 2/3 { r4 g''4 f''4 } \times 2/3 { es''4 c''4 a'4 } |
+	g'1 ~ |
+	g'2. r8 g'8 |
+	d''8 e''8 f''8 g''8 e''8 c''4. |
+	r4 \once \omit TupletBracket \times 2/3 { a'8 es''8 d''8 ~ } d''8 c''4 c''8 ~ |
+	c''1 ~ |
+	c''2. r8 g'8 |
+	c''8 c''8 c''8 g'8 bes'8 g'4 g'8 |
+	c''8 c''8 \once \omit TupletBracket \times 2/3 { c''8 g'8 bes'8 ~ } bes'4 r8 g'8 |
+	c''8 c''8 c''8 g'8 \once \omit TupletBracket \times 2/3 { bes'8 bes'8 bes'8 ~ } bes'8 g'8 |
+	c''8 c''8 c''8 g'8 bes'4 c''4 |
+	es''8 a'8 ~ a'2. |
+	\times 2/3 { r4 g''4 f''4 } \times 2/3 { es''4 c''4 a'4 } |
+	g'1 ~ |
+	g'2. r8 g'8 |
+	d''8 e''8 f''8 g''8 e''8 c''4. |
+	r8 a'8 \once \omit TupletBracket \times 2/3 { a'8 es''8 d''8 ~ } d''4 c''8 c''8 ~ |
+	c''1 ~ |
+	c''2 r4 c''8 c''8 |
+	f''8 es''8 f''8 es''8 f''4. g''8 |
+	es''8 c''8 ~ c''2 r8 c''8 |
+	f''8 es''8 f''8 g''8 as''4 bes''8 g''8 ~ |
+	g''2 ~ g''8 r8 g''4 |
+	as''8 as''8 as''8 as''8 as''4. c'''8 |
+	as''8 as''8 ~ as''2 r8 f''8 |
+	as''8 as''8 as''8 as''8 as'4. as''8 |
+	\once \omit TupletBracket \times 2/3 { g''8 g''8 g''8 } \once \omit TupletBracket \times 2/3 { g''8 g''8 g'8 ~ } g'4 r8 g'8 |
+	c''8 c''8 c''8 g'8 b'8 g'4. |
+	c''8 c''8 \once \omit TupletBracket \times 2/3 { c''8 g'8 bes'8 } bes'4 r8 g'8 |
+	c''8 c''8 c''8 g'8 \once \omit TupletBracket \times 2/3 { bes'8 bes'8 bes'8 ~ } bes'8 g'8 |
+	c''8 c''8 c''8 g'8 bes'4 c''4 |
+	es''8 a'8 ~ a'2. |
+	\times 2/3 { r4 g''4 f''4 } \times 2/3 { es''4 c''4 a'4 } |
+	g'1 |
+	r8 a'8 \once \omit TupletBracket \times 2/3 { c''8 e''8 g''8 } bes''8 a''4 e''8 |
+	f''8 e''8 f''8 g''8 e''8 c''4. |
+	r8 a'8 \once \omit TupletBracket \times 2/3 { c''8 es''8 d''8 ~ } d''4 c''8 c''8 ~ |
+	c''1 ~ |
+	c''2. r4 |
+	\endBar
+}
+{% endif %}

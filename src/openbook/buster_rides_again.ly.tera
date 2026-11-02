@@ -1,0 +1,111 @@
+{#
+default_version = "Wikifonia"
+
+[attributes]
+title = "Buster Rides Again"
+style = "Jazz"
+composer = "Bud Powell"
+piece = "Jazz"
+typesetter = "OpenBook contributors (MusicXML import)"
+completion = "3"
+uuid = "53182779-05e2-5c29-9cc9-683ab2e71ba0"
+location = "Real_Book_2:44"
+copyright = "All Rights Reserved"
+
+[versions.Wikifonia]
+doChords = true
+doVoice = true
+doLyrics = false
+doLyricsmore = false
+doLyricsmoremore = false
+doChordBars = false
+doGuitar = false
+doExtra = false
+doPrep = false
+doOwn = false
+#}
+{% if part == "Vars" %}
+{% endif %}
+{% if part == "Doc" %}
+	DONE:
+	- imported melody and chord changes from real_books_archive.gi/Wikifonia.tar.xz: Wikifonia/Bud Powell - Buster Rides Again.mxl.
+	- source revision: http://wikifonia.org/node/6718/revisions/9319/view.
+	- PDF reference: real_books_archive.gi/The Real Book of Jazz Volume II.pdf, PDF page 44.
+	- retained the original copyright notice where printed; the underlying music is not relicensed.
+	- retained written measures, pickups, repeats and endings; lyrics omitted.
+	- tempo is an editorial practice suggestion.
+	TODO:
+	- proofread the music against the referenced PDF and check by ear.
+	- verify the copyright notice against the scan; no readable per-tune notice was recovered, so the archived rights notice is retained where available.
+{% endif %}
+{% if part == "ChordsWikifonia" %}\chordmode {
+	\startChords
+	\startSong
+
+	\myMark "A"
+	\startPart
+	s1 |
+	\repeat volta 2 {
+	c1:7 |
+	s1 |
+	c1:7 | \myEndLine
+	s1 |
+	c1:7 |
+	s1 |
+	c1:7 | \myEndLine
+	s1 |
+	f1:7 |
+	c1:7 |
+	f1:7 | \myEndLine
+	c1:7 |
+	f1:7 |
+	c1:7 |
+	aes1:7 | \myEndLine
+	} \alternative {
+	{
+	g1:7 | \myEndLineVoltaNotLast
+	}
+	{
+	s1 | \myEndLineVoltaLast
+	}
+	}
+	\endBar
+	\endPart
+
+	\endSong
+	\endChords
+}
+{% endif %}
+{% if part == "VoiceWikifonia" %}\absolute {
+	\tempo "Moderato" 4 = 120
+	\time 4/4
+	\key c \major
+
+	r2. ^ "Latin" g'4 |
+	\repeat volta 2 {
+	c''4 c''8 bes'8 ~ bes'8 g'8 c''4 |
+	r2. g'4 |
+	c''4 c''8 bes'8 r4 g'4 |
+	r2. g'4 |
+	c''4 c''8 bes'8 ~ bes'8 g'8 c''4 |
+	r2. g'4 |
+	c''4 c''8 bes'8 r4 g'4 |
+	r2. c'4 |
+	g'2 ^ "Swing" f'8 g'4 es'8 ~ |
+	es'8 c'4 r8 r8 c'4. |
+	g'2 f'8 g'4 e'8 |
+	r2. c'4 |
+	g'2 f'8 g'4 es'8 ~ |
+	es'8 c'4 r8 r8 c'4. |
+	es'4 r4 es'8 c'4 d'8 |
+	} \alternative {
+	{
+	r2. g'4 _ "(fade latin section (A) to end)" |
+	}
+	{
+	R1 |
+	}
+	}
+	\endBar
+}
+{% endif %}

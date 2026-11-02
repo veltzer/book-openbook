@@ -1,0 +1,157 @@
+{#
+default_version = "Wikifonia"
+
+[attributes]
+title = "Jump Monk"
+style = "Jazz"
+composer = "Charles Mingus"
+piece = "Jazz"
+typesetter = "OpenBook contributors (MusicXML import)"
+completion = "3"
+uuid = "d2294415-dce4-540b-b6f7-4e9583d9f8f8"
+location = "Real_Book_1:263"
+copyright = "All Rights Reserved"
+
+[versions.Wikifonia]
+doChords = true
+doVoice = true
+doLyrics = false
+doLyricsmore = false
+doLyricsmoremore = false
+doChordBars = false
+doGuitar = false
+doExtra = false
+doPrep = false
+doOwn = false
+#}
+{% if part == "Vars" %}
+{% endif %}
+{% if part == "Doc" %}
+	DONE:
+	- imported melody and chord changes from real_books_archive.gi/Wikifonia.tar.xz: Wikifonia/Charles Mingus - Jump Monk.mxl.
+	- source revision: http://wikifonia.org/node/8169/revisions/11317/view.
+	- PDF reference: real_books_archive.gi/The Real Book of Jazz Volume I.pdf, PDF page 263.
+	- retained the original copyright notice where printed; the underlying music is not relicensed.
+	- retained written measures, pickups, repeats and endings; lyrics omitted.
+	- tempo is an editorial practice suggestion.
+	TODO:
+	- proofread the music against the referenced PDF and check by ear.
+	- verify the copyright notice against the scan; no readable per-tune notice was recovered, so the archived rights notice is retained where available.
+{% endif %}
+{% if part == "ChordsWikifonia" %}\chordmode {
+	\startChords
+	\startSong
+
+	\myMark "A"
+	\startPart
+	f1:m |
+	des1:maj7 |
+	g1:m7.5- |
+	c1:7 | \myEndLine
+	f1:m |
+	des1:maj7 |
+	g1:m7.5- |
+	c1:7 | \myEndLine
+	f1:m |
+	f1:m/ees |
+	des1:7 |
+	c1:7 | \myEndLine
+	bes1:m |
+	bes1:m/aes |
+	g1:m7.5- |
+	ges1:7 | \myEndLine
+	bes1:m |
+	ges1:maj7 |
+	c1:m7.5- |
+	f1:7 | \myEndLine
+	bes1:m |
+	ges1:maj7 |
+	c1:m7.5- |
+	f1:7 | \myEndLine
+	bes1:m |
+	ges1:maj7 |
+	c1:m7.5- |
+	f1:7 | \myEndLine
+	bes1:m7 |
+	aes1:7 |
+	g1:m7.5- |
+	c1:7 | \myEndLine
+	f1:m |
+	des1:maj7 |
+	g1:m7.5- |
+	c1:7 | \myEndLine
+	f1:m |
+	des1:maj7 |
+	g1:m7.5- |
+	s1 | \myEndLine
+	f1:m |
+	f1:m/ees |
+	des1:7 |
+	c1:7 | \myEndLine
+	bes1:m |
+	bes1:m/aes |
+	g1:m7.5- |
+	ges1:7 | \myEndLine
+	\endBar
+	\endPart
+
+	\endSong
+	\endChords
+}
+{% endif %}
+{% if part == "VoiceWikifonia" %}\absolute {
+	\tempo "Moderato" 4 = 120
+	\time 4/4
+	\key es \major
+
+	r8 c'''4 bes''8 as''8 f''8 es''8 c''8 |
+	b''8 ais''8 gis''8 f''8 es''8 c''8 bes'8 as'8 |
+	es''8 c''8 gis'8 e'8 dis'8 cis'8 gis8 bes8 |
+	c'8 fis2. c'''8 ~ |
+	c'''8 c'''4 bes''8 as''8 f''8 es''8 c''8 |
+	b''8 ais''8 gis''8 f''8 es''8 c''8 bes'8 as'8 |
+	es''8 c''8 gis'8 e'8 dis'8 cis'8 gis8 ais8 |
+	c'2 r2 |
+	R1 |
+	R1 |
+	R1 |
+	R1 |
+	R1 |
+	R1 |
+	R1 |
+	R1 |
+	r8 a8 bes8 c'8 des'8 es'8 f'8 ges'8 |
+	a'8 bes'8 c''8 f''4 r4. |
+	r8 f''8 fis''8 b'8 c''8 ges'4 r8 |
+	R1 |
+	r8 f'8 f'8 c''8 c''8 bes'8 bes'8 a'8 |
+	a'2 r2 |
+	r8 f'8 f'8 es'8 es'8 des'8 des'8 c'8 |
+	c'8 dis''8 dis''8 cis''8 cis''8 b'8 b'4 ~ |
+	b'8 a8 bes8 c'8 des'8 es'8 f'8 ges'8 |
+	a'8 bes'8 c''8 f''4 r4. |
+	r8 f''8 fis''8 b'8 c''8 ges'4 r8 |
+	R1 |
+	r8 f'4 fis'4 gis'4 a'8 ~ |
+	a'8 bes'4 c''4 d''4. ~ |
+	d''8 r4 d''4 a'4 e'8 ~ |
+	e'8 r2.. |
+	r8 c'''4 bes''8 as''8 f''8 es''8 c''8 |
+	b''8 ais''8 gis''8 f''8 es''8 c''8 bes'8 as'8 |
+	es''8 c''8 gis'8 e'8 dis'8 cis'8 gis8 ais8 |
+	c'8 fis2. c'''8 ~ |
+	c'''8 c'''4 bes''8 as''8 f''8 es''8 c''8 |
+	b''8 ais''8 gis''8 f''8 es''8 c''8 bes'8 as'8 |
+	es''8 c''8 gis'8 e'8 dis'8 cis'8 gis8 ais8 |
+	c'2 r2 |
+	R1 |
+	R1 |
+	R1 |
+	R1 |
+	R1 |
+	R1 |
+	R1 |
+	R1 |
+	\endBar
+}
+{% endif %}

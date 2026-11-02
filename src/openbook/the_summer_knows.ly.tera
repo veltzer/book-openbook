@@ -1,0 +1,136 @@
+{#
+default_version = "Wikifonia"
+
+[attributes]
+title = "The Summer Knows"
+style = "Jazz"
+composer = "Michel Legrand"
+piece = "Jazz"
+typesetter = "OpenBook contributors (MusicXML import)"
+completion = "3"
+uuid = "05551e33-946a-50bc-a945-d26017ea3eb8"
+location = "Real_Book_2:357, StandardsBook:415"
+copyright = "1971 WB Music Corp. (Renewed) All Rights Reserved. Used by Permission"
+
+[versions.Wikifonia]
+doChords = true
+doVoice = true
+doLyrics = false
+doLyricsmore = false
+doLyricsmoremore = false
+doChordBars = false
+doGuitar = false
+doExtra = false
+doPrep = false
+doOwn = false
+#}
+{% if part == "Vars" %}
+{% endif %}
+{% if part == "Doc" %}
+	DONE:
+	- imported melody and chord changes from real_books_archive.gi/Wikifonia.tar.xz: Wikifonia/Michel LeGrand, Alan Bergman, Marilyn Bergman - The Summer Knows.mxl.
+	- source revision: http://wikifonia.org/node/9821/revisions/19118/view.
+	- PDF reference: real_books_archive.gi/The Standards Real Book.pdf, PDF page 415.
+	- retained the original copyright notice where printed; the underlying music is not relicensed.
+	- retained written measures, pickups, repeats and endings; lyrics omitted.
+	- tempo is an editorial practice suggestion.
+	TODO:
+	- proofread the music against the referenced PDF and check by ear.
+{% endif %}
+{% if part == "ChordsWikifonia" %}\chordmode {
+	\startChords
+	\startSong
+
+	\myMark "A"
+	\startPart
+	s1 |
+	\repeat volta 2 {
+	f1:m |
+	f1:m/e |
+	f1:m/ees | \myEndLine
+	d1:m7.5- |
+	bes1:m |
+	bes1:m/a |
+	bes2:m/aes g2:m7.5- | \myEndLine
+	c2.:sus4 c4:7.9- |
+	f1 |
+	bes1:m6/f |
+	f1 | \myEndLine
+	c1:m7/f |
+	bes4:maj7 bes2.:6 |
+	d2.:m6 e4:7.9- |
+	a2:maj7 e2:7.9- | \myEndLine
+	a2:maj7 ees2:7.9- |
+	aes2:maj7 ees2:7.9- |
+	aes2:maj7 d2:7.9- |
+	g1 | \myEndLine
+	g1:m7.5- |
+	f1/c |
+	g1:m7.5-/c |
+	f1/c | \myEndLine
+	bes1:m6/c |
+	f2.:m/c f4:dim/c |
+	g1:m7.5- |
+	} \alternative {
+	{
+	f1:m | \myEndLine
+	s1 | \myEndLineVoltaNotLast
+	}
+	{
+	f1:m | \myEndLineVoltaLast
+	}
+	}
+	s1 |
+	\endBar
+	\endPart
+
+	\endSong
+	\endChords
+}
+{% endif %}
+{% if part == "VoiceWikifonia" %}\absolute {
+	\tempo "Moderato" 4 = 120
+	\time 4/4
+	\key as \major
+
+	r2 r4. c'8 |
+	\repeat volta 2 {
+	g'8 as'8 f'2 ~ f'8 c'8 |
+	g'8 as'8 bes'2 r8 c'8 |
+	g'8 as'8 f'2 ~ f'8 c'8 |
+	g'8 as'8 c''2 r8 f'8 |
+	c''8 des''8 bes'2 ~ bes'8 f'8 |
+	c''8 des''8 es''2 r8 f'8 |
+	\once \omit TupletBracket \times 2/3 { c''8 des''8 bes'8 ~ } bes'8 f'8 \once \omit TupletBracket \times 2/3 { c''8 des''8 bes'8 ~ } bes'8 f'8 |
+	\once \omit TupletBracket \times 2/3 { as'8 bes'8 g'8 ~ } g'2 r8 c'8 |
+	\key f \major g'8 a'8 f'2 ~ f'8 c'8 |
+	g'8 a'8 bes'2 r8 c'8 |
+	g'8 a'8 f'2 ~ f'8 c'8 |
+	g'8 a'8 c''2 r8 f'8 |
+	c''8 d''8 bes'2 ~ bes'8 f'8 |
+	c''8 d''8 f''2 e''8 d''8 |
+	cis''4 e'4 f'4 e''8 d''8 |
+	cis''4 e'4 es''4 des''4 |
+	c''4 es'4 fes'4 es''8 des''8 |
+	c''4 es'4 d''4 c''4 |
+	c''4 b'4 a'4 g'4 |
+	c''8 bes'8 a'8 g'8 des'4 ^\fermata r8 c'8 |
+	g'8 a'8 f'2 ~ f'8 c'8 |
+	g'8 a'8 bes'2 r8 f'8 |
+	bes'8 c''8 a'2 ~ a'8 f'8 |
+	bes'8 c''8 des''2 r8 c'8 |
+	\key as \major g'8 as'8 f'2 ~ f'8 c'8 |
+	g'8 as'8 f'2 f'4 |
+	} \alternative {
+	{
+	f'1 ~ |
+	f'2. r8 c'8 |
+	}
+	{
+	f'1 ~ |
+	}
+	}
+	f'2. r4 |
+	\endBar
+}
+{% endif %}

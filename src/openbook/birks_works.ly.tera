@@ -1,0 +1,103 @@
+{#
+default_version = "Wikifonia"
+
+[attributes]
+title = "Birk's Works"
+style = "Jazz"
+composer = "Dizzy Gillespie"
+piece = "Jazz"
+typesetter = "OpenBook contributors (MusicXML import)"
+completion = "3"
+uuid = "9fddab09-32b6-5f09-8099-32c4923559bf"
+location = "Real_Book_2:44, 557_Standards:39, Colorado:38, Colorado_Cookbook:38"
+copyright = "All Rights Reserved"
+
+[versions.Wikifonia]
+doChords = true
+doVoice = true
+doLyrics = false
+doLyricsmore = false
+doLyricsmoremore = false
+doChordBars = false
+doGuitar = false
+doExtra = false
+doPrep = false
+doOwn = false
+#}
+{% if part == "Vars" %}
+{% endif %}
+{% if part == "Doc" %}
+	DONE:
+	- imported melody and chord changes from real_books_archive.gi/Wikifonia.tar.xz: Wikifonia/Dizzy Gillespie - Birk's Works.mxl.1.
+	- source revision: http://wikifonia.org/node/6716/revisions/9277/view.
+	- PDF reference: real_books_archive.gi/The Real Book of Jazz Volume II.pdf, PDF page 44.
+	- retained the original copyright notice where printed; the underlying music is not relicensed.
+	- retained written measures, pickups, repeats and endings; lyrics omitted.
+	- tempo is an editorial practice suggestion.
+	TODO:
+	- proofread the music against the referenced PDF and check by ear.
+	- verify the copyright notice against the scan; no readable per-tune notice was recovered, so the archived rights notice is retained where available.
+{% endif %}
+{% if part == "ChordsWikifonia" %}\chordmode {
+	\startChords
+	\startSong
+
+	\myMark "A"
+	\startPart
+	s1 |
+	\repeat volta 2 {
+	f1:m7 |
+	g2:dim c2:7 |
+	f1:m7 | \myEndLine
+	c2:dim f2:7 |
+	bes1:m7 |
+	s1 |
+	f1:m7 | \myEndLine
+	s1 |
+	aes2:m7 des2:9 |
+	g1:7.5- |
+	f1:m7 | \myEndLine
+	} \alternative {
+	{
+	s1 | \myEndLineVoltaNotLast
+	}
+	{
+	s1 | \myEndLineVoltaLast
+	}
+	}
+	\endBar
+	\endPart
+
+	\endSong
+	\endChords
+}
+{% endif %}
+{% if part == "VoiceWikifonia" %}\absolute {
+	\tempo "Moderato" 4 = 120
+	\time 4/4
+	\key as \major
+
+	r2 r8 f'8 as'8 bes'8 |
+	\repeat volta 2 {
+	b'8 c''8 b'8 bes'8 as'8 f'8 as'8 bes'8 |
+	bes'4 as'8 c''8 r8 f'8 as'8 bes'8 |
+	b'8 c''8 b'8 bes'8 as'8 f'8 as'8 bes'8 |
+	r2 r8 f'8 as'8 bes'8 |
+	b'8 c''8 b'8 bes'8 as'8 f'8 as'8 bes'8 |
+	bes'4 as'8 b'8 r8 f'8 as'8 b'8 |
+	b'8 c''8 b'8 bes'8 as'8 f'8 as'8 bes'8 |
+	r2 r8 f'8 as'8 bes'8 ~ |
+	bes'8 bes'4. r8 f'8 as'8 bes'8 ~ |
+	bes'8 bes'4. \once \omit TupletBracket \times 2/3 { as'16 bes'16 as'16 } f'8 es'8 f'8 ~ |
+	f'4 r4 r2 |
+	} \alternative {
+	{
+	r2 r8 f'8 as'8 bes'8 |
+	}
+	{
+	R1 |
+	}
+	}
+	\endBar
+}
+{% endif %}

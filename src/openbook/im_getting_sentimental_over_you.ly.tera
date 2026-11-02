@@ -1,0 +1,131 @@
+{#
+default_version = "Wikifonia"
+
+[attributes]
+title = "I'm Getting Sentimental Over You"
+style = "Jazz"
+composer = "George Bassman, Ned Washington 1932"
+piece = "Jazz"
+typesetter = "OpenBook contributors (MusicXML import)"
+completion = "3"
+uuid = "e13ce130-3dcf-5930-90cc-4d91716c89fe"
+location = "New_Real_3:172, 557_Standards:170"
+copyright = "1932 (renewed 1960) Mills Music Inc., USA, c/o EMI Music Publishing. Dash Music Co. Ltd., 8/9 Frith St., London W1. Used by"
+copyrightextra = "Permission of CPP/ Belwin, Inc., Miami, FL and Music Sales Ltd. All Rights Reserved. International Copyright Secured."
+
+[versions.Wikifonia]
+doChords = true
+doVoice = true
+doLyrics = false
+doLyricsmore = false
+doLyricsmoremore = false
+doChordBars = false
+doGuitar = false
+doExtra = false
+doPrep = false
+doOwn = false
+#}
+{% if part == "Vars" %}
+{% endif %}
+{% if part == "Doc" %}
+	DONE:
+	- imported melody and chord changes from real_books_archive.gi/Wikifonia.tar.xz: Wikifonia/George Bassman & Ned Washington 1932 - I'm Getting Sentimental Over You.mxl.
+	- source revision: http://wikifonia.org/node/20075/revisions/26516/view.
+	- PDF reference: real_books_archive.gi/newreal3.pdf, PDF page 172.
+	- retained the original copyright notice where printed; the underlying music is not relicensed.
+	- retained written measures, pickups, repeats and endings; lyrics omitted.
+	- tempo taken from archived MusicXML.
+	TODO:
+	- proofread the music against the referenced PDF and check by ear.
+{% endif %}
+{% if part == "ChordsWikifonia" %}\chordmode {
+	\startChords
+	\startSong
+
+	\myMark "A"
+	\startPart
+	f1 |
+	e1:7 |
+	c1:m |
+	d2.:7.5+ d4:7 | \myEndLine
+	g1:7 |
+	c1:7 |
+	f2 d2:7.9- |
+	g2:m7 c2:7 | \myEndLine
+	f1 |
+	e1:7 |
+	c1:m |
+	d2.:7.5+ d4:7 | \myEndLine
+	g1:7 |
+	c2:7 c2:7.5+ |
+	f2 bes2 |
+	f2 e2:7 | \myEndLine
+	s1 |
+	s1 |
+	s1 |
+	s1 | \myEndLine
+	s1 |
+	s1 |
+	s1 |
+	s1 | \myEndLine
+	f1 |
+	e1:7 |
+	c1:m |
+	d2.:7.5+ d4:7 | \myEndLine
+	g1:7 |
+	c1:7 |
+	f2 c2:m/ees |
+	d2.:7.5+ d4:7 | \myEndLine
+	g1:7 |
+	s2 c2:7.5+ |
+	f1 |
+	\endBar
+	\endPart
+
+	\endSong
+	\endChords
+}
+{% endif %}
+{% if part == "VoiceWikifonia" %}\absolute {
+	\tempo "Moderato" 4 = 70
+	\time 4/4
+	\key f \major
+
+	e'4 f'4 a'4 c''4 |
+	e''2. d''8 des''8 |
+	c''4 g'4 es'4 c'4 |
+	d'2. c'4 |
+	b4 a'4 f'4 d'4 |
+	bes4 g'4 e'4 c'4 |
+	d'2 ~ d'2 ~ |
+	d'2 r2 |
+	e'4 f'4 a'4 c''4 |
+	e''2. d''8 des''8 |
+	c''4 g'4 es'4 c'4 |
+	d'2. c'4 |
+	b4 a'4 f'4 d'4 |
+	bes4 as'4 as'4 g'4 |
+	f'2 ~ f'2 ~ |
+	f'2 r2 |
+	e'4 a'4 b'4 c''4 |
+	b'4 a'4 b'4 c''4 |
+	dis''2 dis''4 b'4 |
+	d''1 |
+	e'4 fis'4 gis'4 b'4 |
+	e''4 e''2 d''4 |
+	\times 2/3 { c''4 cis''4 d''4 } \times 2/3 { c''4 cis''4 d''4 } |
+	c''1 |
+	e'4 f'4 a'4 c''4 |
+	e''2. d''8 des''8 |
+	c''4 g'4 es'4 c'4 |
+	d'2. c'4 |
+	b4 a'4 f'4 d'4 |
+	bes4 g'2 gis'4 |
+	a'2 bes'4 c''4 |
+	d''2. c'4 |
+	b4 a'4 f'4 d'4 |
+	bes4 as'4 as'4 g'4 |
+	f'1 |
+	\endBar
+}
+{% endif %}

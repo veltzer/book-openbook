@@ -1,0 +1,150 @@
+{#
+default_version = "Wikifonia"
+
+[attributes]
+title = "Love Is Just Around The Corner"
+style = "Jazz"
+composer = "Leo Robin, Lewis E. Gensler"
+piece = "Jazz"
+typesetter = "OpenBook contributors (MusicXML import)"
+completion = "3"
+uuid = "d2b8b24f-edaa-5036-bb24-daa59342a3f7"
+location = "557_Standards:224"
+copyright = "All Rights Reserved"
+
+[versions.Wikifonia]
+doChords = true
+doVoice = true
+doLyrics = false
+doLyricsmore = false
+doLyricsmoremore = false
+doChordBars = false
+doGuitar = false
+doExtra = false
+doPrep = false
+doOwn = false
+#}
+{% if part == "Vars" %}
+{% endif %}
+{% if part == "Doc" %}
+	DONE:
+	- imported melody and chord changes from real_books_archive.gi/Wikifonia.tar.xz: Wikifonia/Leo Robin, Lewis E. Gensler - Love Is Just Around The Corner.mxl.
+	- source revision: http://wikifonia.org/node/3987/revisions/5282/view.
+	- PDF reference: real_books_archive.gi/Guitar - 557 Standards.pdf, PDF page 224.
+	- retained the original copyright notice where printed; the underlying music is not relicensed.
+	- retained written measures, pickups, repeats and endings; lyrics omitted.
+	- tempo is an editorial practice suggestion.
+	TODO:
+	- proofread the music against the referenced PDF and check by ear.
+	- verify editorial chord spacing in measures 6, 14, 32; the archive places successive symbols at the same offset.
+	- verify the copyright notice against the scan; no readable per-tune notice was recovered, so the archived rights notice is retained where available.
+{% endif %}
+{% if part == "ChordsWikifonia" %}\chordmode {
+	\startChords
+	\startSong
+
+	\myMark "A"
+	\startPart
+	\repeat volta 2 {
+	g2:7 c2:7 |
+	f1:maj7 |
+	g2:7 c2:7 |
+	f1:maj7 | \myEndLine
+	g2:7 c2:7 |
+	f2.:maj7 a8:m7.5- d8:7 |
+	g2:7 c2:7 |
+	f1:maj7 | \myEndLine
+	g2:7 c2:7 |
+	f1:maj7 |
+	g2:7 c2:7 |
+	f1:maj7 | \myEndLine
+	g2:7 c2:7 |
+	f2.:maj7 a8:m7.5- d8:7 |
+	g1*11/16:7 c1*5/16:7 |
+	f1:maj7 | \myEndLine
+	a1:7 |
+	d1:m7 |
+	a1:7 |
+	d1:m7 | \myEndLine
+	g2:7 cis2:dim7 |
+	g2:7 cis2:dim7 |
+	g4:7 d4:dim7 g4:9 g4:7 |
+	c1:7 | \myEndLine
+	g2:7 c2:7 |
+	f1:maj7 |
+	g2:7 c2:7 |
+	f1:maj7 | \myEndLine
+	g2:7 c2:7 |
+	f4 a2:m7.5- d4:7 |
+	g2:9 c2:7 |
+	} \alternative {
+	{
+	f2 g4:9 c4:7 | \myEndLineVoltaNotLast
+	}
+	{
+	f1:maj7 | \myEndLineVoltaLast
+	}
+	}
+	f4 e4 ees4 d4 |
+	cis4 d4 ees4 e4 |
+	f1 | \myEndLine
+	s1 |
+	\endBar
+	\endPart
+
+	\endSong
+	\endChords
+}
+{% endif %}
+{% if part == "VoiceWikifonia" %}\absolute {
+	\tempo "Moderato" 4 = 120
+	\time 4/4
+	\key f \major
+
+	\repeat volta 2 {
+	g'4 g'4 g'8. fis'16 g'8. a'16 |
+	f'4 c''2. |
+	r4 g'8. fis'16 g'8. fis'16 g'8. a'16 |
+	f'4 c'2. |
+	r4 g'8. fis'16 g'8. fis'16 g'8. a'16 |
+	f'4 c''2 d''4 |
+	a'2 r8. f'16 g'4 |
+	f'1 |
+	g'4 g'4 g'8. fis'16 g'8. a'16 |
+	f'4 c''2. |
+	r4 g'8. fis'16 g'8. fis'16 g'8. a'16 |
+	f'4 c'2. |
+	r4 g'8. fis'16 g'8. fis'16 g'8. a'16 |
+	f'4 c''2 d''4 |
+	a'2 r8. f'16 g'4 |
+	f'2. r4 |
+	a'2 a'4. g'8 |
+	f'4 d'2 a'4 |
+	gis'4 a'4 gis'4 a'4 |
+	d'2. r8. fis'16 |
+	g'8 g'4 g'8 g'8 g'4 g'8 |
+	g'8 g'4 g'8 g'8 g'4 g'8 |
+	g'4 gis'4 a'4 b'4 |
+	c''2. c'4 |
+	g'4 g'4 g'8. fis'16 g'8. a'16 |
+	f'4 c''2. |
+	r4 g'8. fis'16 g'8. fis'16 g'8. a'16 |
+	f'4 c'2. |
+	r4 g'8. fis'16 g'8. fis'16 g'8. a'16 |
+	f'4 c''2 d''4 |
+	a'2 r8. f'16 g'4 |
+	} \alternative {
+	{
+	f'2 r2 |
+	}
+	{
+	f'2. r4 |
+	}
+	}
+	c''4 b'4 bes'4 a'4 |
+	gis'4 a'4 bes'4 b'4 |
+	c''1 ~ |
+	c''1 |
+	\endBar
+}
+{% endif %}
