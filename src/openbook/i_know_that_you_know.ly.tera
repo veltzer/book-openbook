@@ -1,0 +1,130 @@
+{#
+default_version = "Wikifonia"
+
+[attributes]
+title = "I Know That You Know"
+style = "Jazz"
+composer = "Vincent Youmans"
+piece = "Swing"
+copyright = "Original composition (1926); public domain in the US"
+copyrightextra = "Instrumental lead sheet; later lyrics and arrangements are excluded."
+typesetter = "OpenBook contributors (MusicXML import)"
+completion = "3"
+uuid = "571c2b13-0d5f-5fbd-9f6d-7f81f4d9e79f"
+location = "557_Standards:150"
+remark = "Copyright status outside the US may differ."
+
+[versions.Wikifonia]
+doChords = true
+doVoice = true
+doLyrics = false
+doLyricsmore = false
+doLyricsmoremore = false
+doChordBars = false
+doGuitar = false
+doExtra = false
+doPrep = false
+doOwn = false
+#}
+{% if part == "Vars" %}
+{% endif %}
+{% if part == "Doc" %}
+	DONE:
+	- imported the historic melody and chord changes of the 1926 composition.
+	- local source: real_books_archive.gi/Wikifonia.tar.xz: Wikifonia/Vincent Youmans, Anne Caldwell - I Know That You Know.mxl.
+	- jazz real/fake-book references: 557_Standards:150.
+	- source revision: http://wikifonia.org/node/20834/revisions/27539/view.
+	- retained written measures, pickups, repeats and endings; lyrics and accompaniment omitted.
+	- the original composition is public domain in the US; no claim is made about later editions.
+	- US term reference: https://cspd.law.duke.edu/publicdomainday/2026.
+	- tempo is an editorial practice suggestion.
+	TODO:
+	- proofread against a historic edition and check by ear.
+{% endif %}
+{% if part == "ChordsWikifonia" %}\chordmode {
+	\startChords
+	\startSong
+
+	\myMark "A"
+	\startPart
+	s4 b4:7 c4:7 cis4:7 |
+	d1:7 |
+	s1 |
+	g1:7 | \myEndLine
+	s1 |
+	a2.:m7 b4:7 |
+	s2. g4 |
+	a2.:m7 f4:aug | \myEndLine
+	s2. a4:m7 |
+	d1:7 |
+	s1 |
+	g1:7 | \myEndLine
+	s1 |
+	c1 |
+	s2 f2:m |
+	c2 g4:7 g4 | \myEndLine
+	s4 a4:m c2:m6 |
+	d1:7 |
+	s1 |
+	g1:7 | \myEndLine
+	s1 |
+	a2.:m7 b4:7 |
+	s2 g2:m6 |
+	a2.:7 d4:7 | \myEndLine
+	s2 c4:dim b4 |
+	a2.:m7 f4:aug |
+	s2. a4:7 |
+	d1:7 | \myEndLine
+	f2:m g2:7 |
+	c2. f4 |
+	g4:7 f4 g2:7 |
+	c2 c4:aug f4:m | \myEndLine
+	c1 |
+	\endBar
+	\endPart
+
+	\endSong
+	\endChords
+}
+{% endif %}
+{% if part == "VoiceWikifonia" %}\absolute {
+	\tempo "Swing" 4 = 144
+	\time 2/2
+	\key c \major
+
+	r4 b4 c'4 cis'4 |
+	e'2. e'4 ~ |
+	e'2. d'4 |
+	e'2. e'4 ~ |
+	e'2. d'4 |
+	a'2. a'4 ~ |
+	a'2. g'4 |
+	a'2. a'4 ~ |
+	a'2. g'4 |
+	e'2. e'4 ~ |
+	e'2. d'4 |
+	e'2. e'4 ~ |
+	e'2. d'4 |
+	c'4 d'4 e'4 f'4 |
+	g'4 a'4 b'4 c''4 |
+	e''2 b'4 d''4 ~ |
+	d''4 a'4 c''2 |
+	e'2. e'4 ~ |
+	e'2. d'4 |
+	e'2. e'4 ~ |
+	e'2. d'4 |
+	a'2. a'4 ~ |
+	a'2. g'4 |
+	e''2. e''4 ~ |
+	e''4 d''4 c''4 b'4 |
+	a'2. a'4 ~ |
+	a'2. g'4 |
+	e'2. e'4 ~ |
+	e'2. d'4 |
+	c'4 d'4 e'4 f'4 |
+	g'4 a'4 b'4 d''4 |
+	c''1 ~ |
+	c''4 r4 r2 |
+	\endBar
+}
+{% endif %}

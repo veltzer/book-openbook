@@ -1,0 +1,147 @@
+{#
+default_version = "Wikifonia"
+
+[attributes]
+title = "Time on My Hands"
+style = "Jazz"
+composer = "Vincent Youmans"
+piece = "Swing"
+copyright = "Original composition (1930); public domain in the US"
+copyrightextra = "Instrumental lead sheet; later lyrics and arrangements are excluded."
+typesetter = "OpenBook contributors (MusicXML import)"
+completion = "3"
+uuid = "78919eb3-7490-52e3-80ce-06e93fc3d55a"
+location = "557_Standards:392, StandardsBook:468"
+remark = "Copyright status outside the US may differ."
+
+[versions.Wikifonia]
+doChords = true
+doVoice = true
+doLyrics = false
+doLyricsmore = false
+doLyricsmoremore = false
+doChordBars = false
+doGuitar = false
+doExtra = false
+doPrep = false
+doOwn = false
+#}
+{% if part == "Vars" %}
+{% endif %}
+{% if part == "Doc" %}
+	DONE:
+	- imported the historic melody and chord changes of the 1930 composition.
+	- local source: real_books_archive.gi/Wikifonia.tar.xz: Wikifonia/Mack Gordon, Vincent Youmans, Harold Adamson - Time On My Hands.mxl.
+	- jazz real/fake-book references: 557_Standards:392, StandardsBook:468.
+	- source revision: http://wikifonia.org/node/4959/revisions/28803/view.
+	- retained written measures, pickups, repeats and endings; lyrics and accompaniment omitted.
+	- the original composition is public domain in the US; no claim is made about later editions.
+	- US term reference: https://cspd.law.duke.edu/publicdomainday/2026.
+	- tempo is an editorial practice suggestion.
+	TODO:
+	- proofread against a historic edition and check by ear.
+	- verify editorial chord spacing in measures 31, 33; the archive places successive symbols at the same offset.
+{% endif %}
+{% if part == "ChordsWikifonia" %}\chordmode {
+	\startChords
+	\startSong
+
+	\myMark "A"
+	\startPart
+	\repeat volta 2 {
+	f2 f2:maj7 |
+	s1 |
+	e1:7 |
+	s1 | \myEndLine
+	g1:m7 |
+	s2 bes2:m6 |
+	g1:m7 |
+	c1:7.9- | \myEndLine
+	f2 f2:maj7 |
+	s1 |
+	e1:7 |
+	s1 | \myEndLine
+	g1:m7 |
+	s2 bes2:7 |
+	a1:7 |
+	a2.:aug7 a4:7 | \myEndLine
+	d1:aug7 |
+	s2 d2:7 |
+	g2.:9 g4:m7 |
+	s2 c2:9 | \myEndLine
+	f2 d2:m7 |
+	g1:7 |
+	g1:m7 |
+	c2:9 c4:aug7 c4:7.9- | \myEndLine
+	f2 f2:maj7 |
+	s2 f2 |
+	d1:aug7 |
+	s2 d2:7 | \myEndLine
+	g1:9 |
+	g2:m7 c2:7.9- |
+	} \alternative {
+	{
+	f2 d2:m7 |
+	g4:7 c4:aug7 c2:7.9- | \myEndLineVoltaNotLast
+	}
+	{
+	f2 bes2:9 | \myEndLineVoltaLast
+	}
+	}
+	f1:maj7 |
+	\endBar
+	\endPart
+
+	\endSong
+	\endChords
+}
+{% endif %}
+{% if part == "VoiceWikifonia" %}\absolute {
+	\tempo "Swing" 4 = 144
+	\time 2/2
+	\key f \major
+
+	\repeat volta 2 {
+	\times 2/3 { e'4 f'4 d'4 } e'2 ~ |
+	e'2. r4 |
+	\times 2/3 { e'4 f'4 d'4 } e'2 ~ |
+	e'2. r4 |
+	\times 2/3 { d'4 e'4 c'4 } d'2 ~ |
+	d'2 f'2 |
+	a'1 ~ |
+	a'2. r4 |
+	\times 2/3 { e'4 f'4 d'4 } e'2 ~ |
+	e'2. r4 |
+	\times 2/3 { e'4 f'4 d'4 } e'2 ~ |
+	e'2. r4 |
+	\times 2/3 { d'4 e'4 c'4 } d'2 ~ |
+	d'2 f'2 |
+	a'1 ~ |
+	a'2. r4 |
+	\times 2/3 { bes'4 c''4 a'4 } bes'2 ~ |
+	bes'2 c''2 |
+	cis''4 e''4 d''4 c''4 ~ |
+	c''2 a'2 |
+	\times 2/3 { g'4 a'4 f'4 } g'2 ~ |
+	g'2 e'2 |
+	d'1 ~ |
+	d'4 c''4 gis'4 a'4 |
+	\times 2/3 { e'4 f'4 d'4 } e'2 ~ |
+	e'2 f'2 |
+	\times 2/3 { bes'4 c''4 a'4 } bes'2 ~ |
+	bes'2 c''2 |
+	\times 2/3 { cis''4 e''4 d''4 } a'2 |
+	a'2 a'2 |
+	} \alternative {
+	{
+	f'1 ~ |
+	f'4 r4 r2 |
+	}
+	{
+	f'1 ~ |
+	}
+	}
+	f'2. r4 |
+	\endBar
+}
+{% endif %}

@@ -1,0 +1,141 @@
+{#
+default_version = "Wikifonia"
+
+[attributes]
+title = "My Ideal"
+style = "Jazz"
+composer = "Richard Whiting, Newell Chase"
+piece = "Swing"
+copyright = "Original composition (1930); public domain in the US"
+copyrightextra = "Instrumental lead sheet; later lyrics and arrangements are excluded."
+typesetter = "OpenBook contributors (MusicXML import)"
+completion = "3"
+uuid = "9c9129ce-442c-5403-9c42-8b94c93fbbf6"
+location = "557_Standards:252, Jazz_LTD:245"
+remark = "Copyright status outside the US may differ."
+
+[versions.Wikifonia]
+doChords = true
+doVoice = true
+doLyrics = false
+doLyricsmore = false
+doLyricsmoremore = false
+doChordBars = false
+doGuitar = false
+doExtra = false
+doPrep = false
+doOwn = false
+#}
+{% if part == "Vars" %}
+{% endif %}
+{% if part == "Doc" %}
+	DONE:
+	- imported the historic melody and chord changes of the 1930 composition.
+	- local source: real_books_archive.gi/Wikifonia.tar.xz: Wikifonia/Richard Whiting, Newell Chase, Leo Robin - My Ideal.mxl.
+	- jazz real/fake-book references: 557_Standards:252, Jazz_LTD:245.
+	- source revision: http://wikifonia.org/node/4019/revisions/5334/view.
+	- retained written measures, pickups, repeats and endings; lyrics and accompaniment omitted.
+	- the original composition is public domain in the US; no claim is made about later editions.
+	- US term reference: https://cspd.law.duke.edu/publicdomainday/2026.
+	- tempo is an editorial practice suggestion.
+	TODO:
+	- proofread against a historic edition and check by ear.
+	- verify editorial chord spacing in measures 6, 12, 28; the archive places successive symbols at the same offset.
+{% endif %}
+{% if part == "ChordsWikifonia" %}\chordmode {
+	\startChords
+	\startSong
+
+	\myMark "A"
+	\startPart
+	ees2/bes bes2:7 |
+	ees2/g ees4:7/f c4:7 |
+	f2.:m bes4:7 |
+	ees1 | \myEndLine
+	f2:m7 bes4:7 bes4:aug |
+	ees2 bes2:aug |
+	ees2/bes bes2:7 |
+	c4:m d4:7 g2:m | \myEndLine
+	s2 g2:m7 |
+	c1:7 |
+	bes4. c4.:m7 f4:7 |
+	f2:m7 bes2:aug | \myEndLine
+	\repeat volta 2 {
+	ees2:maj7 c2:7 |
+	f1:m7 |
+	des2:7 c2:7 |
+	f1:7 | \myEndLine
+	f2:m7 bes2:7 |
+	bes2:7 g2:7 |
+	c2:m7 f2:7 |
+	b4:7 bes2.:7 | \myEndLine
+	ees2:maj7 c2:7 |
+	f1:m7 |
+	des2:7 c2:7 |
+	f1:7 | \myEndLine
+	f2:m7 f2:m7.5- |
+	ees4/bes d4:7 des4:7 c4:7 |
+	f2:m7 bes2:7 |
+	} \alternative {
+	{
+	ees2 f4:m7 bes4:7 | \myEndLineVoltaNotLast
+	}
+	{
+	ees1:maj7 | \myEndLineVoltaLast
+	}
+	}
+	f2:m bes2:7 |
+	ees1 |
+	\endBar
+	\endPart
+
+	\endSong
+	\endChords
+}
+{% endif %}
+{% if part == "VoiceWikifonia" %}\absolute {
+	\tempo "Swing" 4 = 144
+	\time 4/4
+	\key es \major
+
+	bes'8 c''8 d''8 es''8 d''8 c''8 bes'4 |
+	g'8 as'8 bes'8 c''8 bes'8 as'8 g'8 c'8 |
+	f'8 g'8 f'8 g'8 ~ g'4 g'4 |
+	es'1 |
+	as'8 bes'8 as'8 bes'8 ~ bes'4 bes'4 |
+	c''1 |
+	bes'8 c''8 d''8 es''8 d''8 c''8 bes'4 |
+	a'8 bes'8 c''8 d''8 c''8 bes'8 a'8 a'8 |
+	g'8 a'8 g'8 bes'8 ~ bes'4 bes'4 |
+	g'1 |
+	f'8 g'8 f'8 g'8 ~ g'4 g'4 |
+	bes'1 |
+	\repeat volta 2 {
+	c''8. bes'16 g'8. es'16 d''4. c''8 |
+	bes'8 as'8 bes'8 as'8 ~ as'4. c'8 |
+	as'8 g'8 as'8 g'8 ~ g'4 c'4 |
+	g'1 |
+	g'8. f'16 d'8. bes16 as'4. g'8 |
+	bes'8 g'8 bes'8 g'8 ~ g'2 |
+	es'8. f'16 g'8. bes'16 c''8 c''4. |
+	ces''8 ges'8 as'8 bes'8 ~ bes'2 |
+	c''8. bes'16 g'8. es'16 d''4. c''8 |
+	bes'8 as'8 bes'8 as'8 ~ as'4. c'8 |
+	as'8 g'8 as'8 g'8 ~ g'4 c'4 |
+	c''2. c'4 |
+	g'8. f'16 es'8. c'16 bes'4. as'8 |
+	g'8. bes'16 d''8. c''16 bes'8. es''16 es'8. c'16 |
+	f'2 g'2 |
+	} \alternative {
+	{
+	es'2. r4 |
+	}
+	{
+	bes'1 |
+	}
+	}
+	f'2 g'2 |
+	es'1 |
+	\endBar
+}
+{% endif %}

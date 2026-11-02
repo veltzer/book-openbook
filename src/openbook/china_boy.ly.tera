@@ -1,0 +1,128 @@
+{#
+default_version = "Wikifonia"
+
+[attributes]
+title = "China Boy"
+style = "Jazz"
+composer = "Phil Boutelje, Dick Winfree"
+piece = "Swing"
+copyright = "Original composition (1922); public domain in the US"
+copyrightextra = "Instrumental lead sheet; later lyrics and arrangements are excluded."
+typesetter = "OpenBook contributors (MusicXML import)"
+completion = "3"
+uuid = "b681f700-6eda-5949-8c4e-8516af2c34af"
+location = "Firehouse_Jazz_Band:29, Fakebook_Django:38"
+remark = "Copyright status outside the US may differ."
+
+[versions.Wikifonia]
+doChords = true
+doVoice = true
+doLyrics = false
+doLyricsmore = false
+doLyricsmoremore = false
+doChordBars = false
+doGuitar = false
+doExtra = false
+doPrep = false
+doOwn = false
+#}
+{% if part == "Vars" %}
+{% endif %}
+{% if part == "Doc" %}
+	DONE:
+	- imported the historic melody and chord changes of the 1922 composition.
+	- local source: real_books_archive.gi/Wikifonia.tar.xz: Wikifonia/Phil Boutelje & Dick Winfree - China Boy.mxl.
+	- jazz real/fake-book references: Firehouse_Jazz_Band:29, Fakebook_Django:38.
+	- source revision: http://wikifonia.org/node/20830/revisions/27534/view.
+	- retained written measures, pickups, repeats and endings; lyrics and accompaniment omitted.
+	- the original composition is public domain in the US; no claim is made about later editions.
+	- US term reference: https://cspd.law.duke.edu/publicdomainday/2026.
+	- tempo is an editorial practice suggestion.
+	TODO:
+	- proofread against a historic edition and check by ear.
+{% endif %}
+{% if part == "ChordsWikifonia" %}\chordmode {
+	\startChords
+	\startSong
+
+	\myMark "A"
+	\startPart
+	f2. c4:aug |
+	f2. c4:aug |
+	f1 |
+	s1 | \myEndLine
+	s2. c4:aug |
+	f2. des4:7 |
+	f1 |
+	d1:m7 | \myEndLine
+	g1:9 |
+	s1 |
+	g1:7 |
+	s1 | \myEndLine
+	bes1:m |
+	s1 |
+	f1 |
+	c1:7 | \myEndLine
+	aes1 |
+	ees1:7 |
+	aes1 |
+	s1 | \myEndLine
+	s1 |
+	ees1:7 |
+	aes1 |
+	c1:7 | \myEndLine
+	f2. c4:aug |
+	f2. c4:aug |
+	g1:7 |
+	bes1:m | \myEndLine
+	f1 |
+	g2.:9 c4:7 |
+	f1 |
+	s1 | \myEndLine
+	\endBar
+	\endPart
+
+	\endSong
+	\endChords
+}
+{% endif %}
+{% if part == "VoiceWikifonia" %}\absolute {
+	\tempo "Swing" 4 = 144
+	\time 2/2
+	\key f \major
+
+	a'2. c''4 |
+	a'2. c''4 |
+	a'1 ~ |
+	a'1 |
+	a'2. c''4 |
+	a'2. gis'4 |
+	a'1 ~ |
+	a'1 |
+	f'2. a'4 |
+	f'2. a'4 |
+	f'1 ~ |
+	f'1 |
+	f'2. g'4 |
+	f'2. g'4 |
+	f'1 |
+	c''1 |
+	c''2. as'4 |
+	bes'2. es'4 |
+	as'1 ~ |
+	as'1 |
+	c''2. as'4 |
+	bes'2. es'4 |
+	es''1 |
+	c''1 |
+	a'2. c''4 |
+	a'2. c''4 |
+	d''1 |
+	f''1 |
+	a'2. c''4 |
+	a'2. c''4 |
+	f''1 ~ |
+	f''2. r4 |
+	\endBar
+}
+{% endif %}

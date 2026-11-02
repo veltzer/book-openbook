@@ -1,0 +1,131 @@
+{#
+default_version = "Wikifonia"
+
+[attributes]
+title = "How Long Has This Been Going On?"
+style = "Jazz"
+composer = "George Gershwin"
+piece = "Swing"
+copyright = "Original composition (1928); public domain in the US"
+copyrightextra = "Instrumental lead sheet; later lyrics and arrangements are excluded."
+typesetter = "OpenBook contributors (MusicXML import)"
+completion = "3"
+uuid = "6ec0ec20-1af4-5469-9f83-e1d1d872f380"
+location = "Real_Book_3:121, 557_Standards:136, StandardsBook:176"
+remark = "Copyright status outside the US may differ."
+
+[versions.Wikifonia]
+doChords = true
+doVoice = true
+doLyrics = false
+doLyricsmore = false
+doLyricsmoremore = false
+doChordBars = false
+doGuitar = false
+doExtra = false
+doPrep = false
+doOwn = false
+#}
+{% if part == "Vars" %}
+{% endif %}
+{% if part == "Doc" %}
+	DONE:
+	- imported the historic melody and chord changes of the 1928 composition.
+	- local source: real_books_archive.gi/Wikifonia.tar.xz: Wikifonia/George Gershwin, Ira Gershwin - How Long Has This Been Going On.mxl.
+	- jazz real/fake-book references: Real_Book_3:121, 557_Standards:136, StandardsBook:176.
+	- source revision: http://wikifonia.org/node/1310/revisions/13082/view.
+	- retained written measures, pickups, repeats and endings; lyrics and accompaniment omitted.
+	- the original composition is public domain in the US; no claim is made about later editions.
+	- US term reference: https://cspd.law.duke.edu/publicdomainday/2026.
+	- tempo is an editorial practice suggestion.
+	TODO:
+	- proofread against a historic edition and check by ear.
+	- verify editorial chord spacing in measures 8, 10, 14, 18; the archive places successive symbols at the same offset.
+{% endif %}
+{% if part == "ChordsWikifonia" %}\chordmode {
+	\startChords
+	\startSong
+
+	\myMark "A"
+	\startPart
+	\repeat volta 2 {
+	a1:m7 |
+	aes1:dim7 |
+	g2:sus4.7.9 g2:7.9- |
+	c4.:maj7 f1*5/8:7 | \myEndLine
+	g2/b bes2:dim7 |
+	a2:m7 aes2:dim7 |
+	} \alternative {
+	{
+	a2:m7 ees4.:9 d8:9 |
+	b2:m7 e2:7.9- | \myEndLineVoltaNotLast
+	}
+	{
+	a2:m7 ees4.:9 d8:9 | \myEndLineVoltaLast
+	}
+	}
+	g2:maj7 g2:aug7 |
+	c2:maj7 f2:7 |
+	c4.:maj7 f1*5/8:7 | \myEndLine
+	c2:maj7 f2:7 |
+	c2:maj7 cis4:m7.5- fis4:7.9- |
+	b2:m7 fis2:7.9- |
+	b2:m7 fis2:7.9- | \myEndLine
+	b2:m7 fis2:7.9- |
+	b2:m7 bes2:13 |
+	a1:m7 |
+	aes1:dim7 | \myEndLine
+	g2:sus4.7.9 g2:7.9- |
+	c4.:maj7 f1*5/8:7 |
+	g2/b bes2:dim7 |
+	a2:m7 aes2:dim7 | \myEndLine
+	a2:m7 ees4:9 d4:9 |
+	g1:6.9 |
+	\endBar
+	\endPart
+
+	\endSong
+	\endChords
+}
+{% endif %}
+{% if part == "VoiceWikifonia" %}\absolute {
+	\tempo "Swing" 4 = 144
+	\time 4/4
+	\key g \major
+
+	\repeat volta 2 {
+	\mark \markup { \box { A } } d''8 e''4 e''8 ~ e''2 |
+	e''8 d''4 d''8 ~ d''2 |
+	d''4 e''4 e''4 d''4 |
+	a'8 g'4 g'8 ~ g'2 |
+	g'8 a'4 a'8 ~ a'4 g'4 |
+	e'8 d'4 d'8 ~ d'4. d'8 |
+	} \alternative {
+	{
+	e'8 g'8 a'8 g'8 bes'8 b'4 d''8 ~ |
+	d''1 |
+	}
+	{
+	e'8 g'8 a'8 g'8 bes'8 a'4 g'8 ~ |
+	}
+	}
+	g'1 |
+	\mark \markup { \box { B } } b'2 a'8 c''4 a'8 |
+	b'4 g'8 a'8 ~ a'2 |
+	b'4 b'4 a'8 c''4 a'8 |
+	b'2. r4 |
+	d''2 cis''8 e''4 cis''8 |
+	d''4 b'8 cis''8 ~ cis''2 |
+	d''4 d''4 cis''8 e''4 cis''8 |
+	d''2. r4 |
+	\mark \markup { \box { C } } d''8 e''4 e''8 ~ e''2 |
+	e''8 d''4 d''8 ~ d''2 |
+	d''4 e''4 e''4 d''4 |
+	a'8 g'4 g'8 ~ g'2 |
+	g'8 a'4 a'8 ~ a'4 g'4 |
+	e'8 d'4 d'8 ~ d'4. d'8 |
+	e'8 g'8 a'8 g'8 bes'8 a'8 ~ a'8 g'8 ~ |
+	g'1 |
+	\endBar
+}
+{% endif %}

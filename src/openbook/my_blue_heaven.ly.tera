@@ -1,0 +1,134 @@
+{#
+default_version = "Wikifonia"
+
+[attributes]
+title = "My Blue Heaven"
+style = "Jazz"
+composer = "Walter Donaldson"
+piece = "Swing"
+copyright = "Original composition (1927); public domain in the US"
+copyrightextra = "Instrumental lead sheet; later lyrics and arrangements are excluded."
+typesetter = "OpenBook contributors (MusicXML import)"
+completion = "3"
+uuid = "5d4657bf-efcf-5894-892f-5e66cd403638"
+location = "Firehouse_Jazz_Band:273, Fakebook_Django:147"
+remark = "Copyright status outside the US may differ."
+
+[versions.Wikifonia]
+doChords = true
+doVoice = true
+doLyrics = false
+doLyricsmore = false
+doLyricsmoremore = false
+doChordBars = false
+doGuitar = false
+doExtra = false
+doPrep = false
+doOwn = false
+#}
+{% if part == "Vars" %}
+{% endif %}
+{% if part == "Doc" %}
+	DONE:
+	- imported the historic melody and chord changes of the 1927 composition.
+	- local source: real_books_archive.gi/Wikifonia.tar.xz: Wikifonia/Walter Donaldson, George Whiting - My Blue Heaven.mxl.
+	- jazz real/fake-book references: Firehouse_Jazz_Band:273, Fakebook_Django:147.
+	- source revision: http://wikifonia.org/node/991/revisions/2401/view.
+	- retained written measures, pickups, repeats and endings; lyrics and accompaniment omitted.
+	- the original composition is public domain in the US; no claim is made about later editions.
+	- US term reference: https://cspd.law.duke.edu/publicdomainday/2026.
+	- tempo taken from archived MusicXML.
+	TODO:
+	- proofread against a historic edition and check by ear.
+{% endif %}
+{% if part == "ChordsWikifonia" %}\chordmode {
+	\startChords
+	\startSong
+
+	\myMark "A"
+	\startPart
+	\partial 2. s2. |
+	\repeat volta 2 {
+	ees1 |
+	s1 |
+	s1 | \myEndLine
+	c1:7 |
+	f1:7 |
+	bes1:7 |
+	ees1 | \myEndLine
+	f2:m7 bes2:7 |
+	ees1 |
+	s1 |
+	s1 | \myEndLine
+	c1:7 |
+	f1:7 |
+	bes1:7 |
+	ees1 | \myEndLine
+	bes2:m7 ees2:7 |
+	aes1 |
+	c1:7 |
+	f1:m | \myEndLine
+	s1 |
+	bes1:7 |
+	s1 |
+	ees2 e2:dim7 | \myEndLine
+	f2:m7 bes2:7 |
+	ees1 |
+	s1 |
+	s1 | \myEndLine
+	c1:7 |
+	f1:7 |
+	bes1:7 |
+	ees2 aes2 | \myEndLine
+	ees2 bes2:7 |
+	}
+	\endBar
+	\endPart
+
+	\endSong
+	\endChords
+}
+{% endif %}
+{% if part == "VoiceWikifonia" %}\absolute {
+	\tempo "Swing" 4 = 40
+	\time 4/4
+	\key es \major
+
+	\partial 2. g'4 ^ "Moderately" bes'8 c''8 es''4 |
+	\repeat volta 2 {
+	c''1 ~ |
+	c''4 es'4 g'8 bes'8 c''4 |
+	bes'1 ~ |
+	bes'4 bes4 c'8 es'8 g'4 |
+	f'1 |
+	g'1 |
+	f'4 es'4 ~ es'2 |
+	r4 g'4 bes'8 c''8 es''4 |
+	c''1 ~ |
+	c''4 es'4 g'8 bes'8 c''4 |
+	bes'1 ~ |
+	bes'4 bes4 c'8 es'8 g'4 |
+	f'1 |
+	g'1 |
+	f'4 es'4 ~ es'2 |
+	r4 es''4 es''4 es''4 |
+	es''4 d''4 d''4 c''4 |
+	c''4 bes'4 bes'4 c''4 |
+	bes'4 as'4 c''2 ~ |
+	c''2. d''4 |
+	bes'4 bes'4 c''4 bes'4 |
+	bes'4 as'4 as'4 bes'4 |
+	as'4 g'4 bes'2 ~ |
+	bes'4 g'4 bes'8 c''8 es''4 |
+	c''1 ~ |
+	c''4 es'4 g'8 bes'8 c''4 |
+	bes'1 ~ |
+	bes'4 bes4 c'8 es'8 g'4 |
+	f'1 |
+	g'1 |
+	f'4 es'4 ~ es'2 |
+	r4 g'4 ^ "(" bes'8 c''8 es''4 ^ ")" |
+	}
+	\endBar
+}
+{% endif %}

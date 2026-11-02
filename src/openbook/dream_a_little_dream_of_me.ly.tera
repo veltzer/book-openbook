@@ -1,0 +1,132 @@
+{#
+default_version = "Wikifonia"
+
+[attributes]
+title = "Dream a Little Dream of Me"
+style = "Jazz"
+composer = "Fabian Andre, Wilbur Schwandt"
+piece = "Swing"
+copyright = "Original composition (1930); public domain in the US"
+copyrightextra = "Instrumental lead sheet; later lyrics and arrangements are excluded."
+typesetter = "OpenBook contributors (MusicXML import)"
+completion = "3"
+uuid = "8dc2bfee-0dbd-545a-b14a-69cbd176eadc"
+location = "Great_Gig_Book:154, Ultimate-Fake-Book-C:164"
+remark = "Copyright status outside the US may differ."
+
+[versions.Wikifonia]
+doChords = true
+doVoice = true
+doLyrics = false
+doLyricsmore = false
+doLyricsmoremore = false
+doChordBars = false
+doGuitar = false
+doExtra = false
+doPrep = false
+doOwn = false
+#}
+{% if part == "Vars" %}
+{% endif %}
+{% if part == "Doc" %}
+	DONE:
+	- imported the historic melody and chord changes of the 1930 composition.
+	- local source: real_books_archive.gi/Wikifonia.tar.xz: Wikifonia/Wilbur Schwandt and Fabian Andre, Gus Kahn - Dream A Little Dream Of Me.mxl.
+	- jazz real/fake-book references: Great_Gig_Book:154, Ultimate-Fake-Book-C:164.
+	- source revision: http://wikifonia.org/node/3770/revisions/28321/view.
+	- retained written measures, pickups, repeats and endings; lyrics and accompaniment omitted.
+	- the original composition is public domain in the US; no claim is made about later editions.
+	- US term reference: https://cspd.law.duke.edu/publicdomainday/2026.
+	- tempo is an editorial practice suggestion.
+	TODO:
+	- proofread against a historic edition and check by ear.
+{% endif %}
+{% if part == "ChordsWikifonia" %}\chordmode {
+	\startChords
+	\startSong
+
+	\myMark "A"
+	\startPart
+	\repeat volta 2 {
+	g1 |
+	ees2:9 d2:9 |
+	g1 |
+	e2:7 b4:m7.5- e4:7 | \myEndLine
+	a1:m |
+	c1:m6 |
+	g2 a2:7 |
+	d1:7 | \myEndLine
+	g1 |
+	ees2:9 d2:9 |
+	g1 |
+	e2:7 b4:m7.5- e4:7 | \myEndLine
+	a1:m |
+	c1:m6 |
+	g4 f4:9 ees4:9 d4:9 |
+	g2 fes4:9 bes4:9 | \myEndLine
+	ees2 c2:m7 |
+	f2:m7 bes2:9 |
+	ees2 c2:m7 |
+	f2:m7 bes2:9 | \myEndLine
+	ees2 c2:m7 |
+	f2:m7 bes2:9 |
+	ees2 c2:m7 |
+	a2:m7 d2:9 | \myEndLine
+	g1 |
+	ees2:9 d2:9 |
+	g1 |
+	e2:7 b4:m7.5- e4:7 | \myEndLine
+	a1:m |
+	c1:m6 |
+	g4 f4:9 bes4:9 d4:9 |
+	g1 | \myEndLine
+	}
+	\endBar
+	\endPart
+
+	\endSong
+	\endChords
+}
+{% endif %}
+{% if part == "VoiceWikifonia" %}\absolute {
+	\tempo "Swing" 4 = 144
+	\time 4/4
+	\key g \major
+
+	\repeat volta 2 {
+	\mark \markup { \box { A } } g'2 fis'8 g'8 fis'8 e'8 |
+	g'2 fis'2 |
+	g'2 fis'8 g'8 fis'8 e'8 |
+	\times 2/3 { gis'4 b'4 gis'4 } f'4 e'4 |
+	a'2 g'8 a'8 g'8 e'8 |
+	\times 2/3 { a'4 g'4 es'4 } g'2 |
+	d'8 e'8 g'8 a'8 b'4 e''4 |
+	d''1 |
+	g'2 fis'8 g'8 fis'8 e'8 |
+	g'2 fis'2 |
+	g'2 fis'8 g'8 fis'8 e'8 |
+	\times 2/3 { gis'4 b'4 gis'4 } f'4 e'4 |
+	a'2 g'8 a'8 g'8 e'8 |
+	\times 2/3 { a'4 g'4 es'4 } g'2 |
+	d'8 e'8 g'8 a'8 bes'4 a'4 |
+	g'2 r2 |
+	\mark \markup { \box { B } } es''2 \times 2/3 { c''4 es''4 c''4 } |
+	\times 2/3 { bes'4 g'4 bes'4 } c'4 d'4 |
+	es''2 \times 2/3 { c''4 es''4 c''4 } |
+	bes'1 |
+	es''2 \times 2/3 { c''4 es''4 c''4 } |
+	\times 2/3 { bes'4 g'4 bes'4 } c'4 d'4 |
+	es''2 bes'4 c''4 |
+	d''1 |
+	\mark \markup { \box { C } } g'2 ^ "" fis'8 g'8 fis'8 e'8 |
+	g'2 fis'2 |
+	g'2 fis'8 g'8 fis'8 e'8 |
+	\times 2/3 { gis'4 b'4 gis'4 } f'4 e'4 |
+	a'2 g'8 a'8 g'8 e'8 |
+	\times 2/3 { a'4 g'4 es'4 } g'2 |
+	d'8 e'8 g'8 a'8 bes'4 a'4 |
+	g'1 |
+	}
+	\endBar
+}
+{% endif %}

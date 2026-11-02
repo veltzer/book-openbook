@@ -1,0 +1,128 @@
+{#
+default_version = "Wikifonia"
+
+[attributes]
+title = "Limehouse Blues"
+style = "Jazz"
+composer = "Philip Braham"
+piece = "Swing"
+copyright = "Original composition (1922); public domain in the US"
+copyrightextra = "Instrumental lead sheet; later lyrics and arrangements are excluded."
+typesetter = "OpenBook contributors (MusicXML import)"
+completion = "3"
+uuid = "82034476-2758-5d0c-9ab9-664fe52530a4"
+location = "Real_Book_1:276, 557_Standards:212, Firehouse_Jazz_Band:253, Colorado:128, Colorado_Cookbook:128, Fakebook_Django:124, Just_Standards_Real_Book:225"
+remark = "Copyright status outside the US may differ."
+
+[versions.Wikifonia]
+doChords = true
+doVoice = true
+doLyrics = false
+doLyricsmore = false
+doLyricsmoremore = false
+doChordBars = false
+doGuitar = false
+doExtra = false
+doPrep = false
+doOwn = false
+#}
+{% if part == "Vars" %}
+{% endif %}
+{% if part == "Doc" %}
+	DONE:
+	- imported the historic melody and chord changes of the 1922 composition.
+	- local source: real_books_archive.gi/Wikifonia.tar.xz: Wikifonia/Philip Braham , Douglas Furber - Limehouse Blues.mxl.
+	- jazz real/fake-book references: Real_Book_1:276, 557_Standards:212, Firehouse_Jazz_Band:253, Colorado:128, Colorado_Cookbook:128, Fakebook_Django:124, Just_Standards_Real_Book:225.
+	- source revision: http://wikifonia.org/node/7942/revisions/10951/view.
+	- retained written measures, pickups, repeats and endings; lyrics and accompaniment omitted.
+	- the original composition is public domain in the US; no claim is made about later editions.
+	- US term reference: https://cspd.law.duke.edu/publicdomainday/2026.
+	- tempo is an editorial practice suggestion.
+	TODO:
+	- proofread against a historic edition and check by ear.
+{% endif %}
+{% if part == "ChordsWikifonia" %}\chordmode {
+	\startChords
+	\startSong
+
+	\myMark "A"
+	\startPart
+	des1:7 |
+	s1 |
+	s1 |
+	s1 | \myEndLine
+	bes1:7 |
+	s1 |
+	s1 |
+	s1 | \myEndLine
+	aes1 |
+	s1 |
+	c2.:7 f4:m |
+	s1 | \myEndLine
+	bes1:7 |
+	s1 |
+	ees1:7 |
+	s1 | \myEndLine
+	des1:7 |
+	s1 |
+	s1 |
+	s1 | \myEndLine
+	bes1:7 |
+	s1 |
+	s1 |
+	s1 | \myEndLine
+	aes2./ees f4:7 |
+	s1 |
+	bes2.:m des4:m6 |
+	s1 | \myEndLine
+	s2. ees4:7 |
+	s1 |
+	aes2 des4:m aes4 |
+	s1 | \myEndLine
+	\endBar
+	\endPart
+
+	\endSong
+	\endChords
+}
+{% endif %}
+{% if part == "VoiceWikifonia" %}\absolute {
+	\tempo "Swing" 4 = 144
+	\time 4/4
+	\key as \major
+
+	f'4 g'4 as'4 f'4 ~ |
+	f'4 g'2 as'4 |
+	f'4 g'4 as'4 f'4 ~ |
+	f'1 |
+	f'4 g'4 as'4 f'4 ~ |
+	f'4 g'2 as'4 |
+	f'4 g'4 as'4 f'4 ~ |
+	f'1 |
+	es'4 f'4 g'4 as'4 ~ |
+	as'4 bes'2 b'4 |
+	c''4 b'4 bes'4 as'4 ~ |
+	as'1 |
+	f'4 g'4 as'4 a'4 ~ |
+	a'4 bes'2 c''4 |
+	bes'4 a'4 as'4 g'4 ~ |
+	g'1 |
+	f'4 g'4 as'4 f'4 ~ |
+	f'4 g'2 as'4 |
+	f'4 g'4 as'4 f'4 ~ |
+	f'1 |
+	as'4 bes'4 c''4 as'4 ~ |
+	as'4 bes'2 c''4 |
+	as'4 bes'4 c''4 as'4 ~ |
+	as'1 |
+	es''4 d''4 es''4 f''4 ~ |
+	f''4 es''2 c''4 |
+	des''4 c''4 des''4 bes'4 ~ |
+	bes'1 |
+	des''4 c''4 des''4 es''4 ~ |
+	es''4 c''2 bes'4 |
+	as'4 as'4 as'4 as'4 ~ |
+	as'1 |
+	\endBar
+}
+{% endif %}

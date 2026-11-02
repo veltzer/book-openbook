@@ -1,0 +1,132 @@
+{#
+default_version = "Wikifonia"
+
+[attributes]
+title = "Nobody Knows You When You're Down and Out"
+style = "Jazz"
+composer = "Jimmie Cox"
+piece = "Swing"
+copyright = "Original composition (1923); public domain in the US"
+copyrightextra = "Instrumental lead sheet; later lyrics and arrangements are excluded."
+typesetter = "OpenBook contributors (MusicXML import)"
+completion = "3"
+uuid = "16a51acd-da5d-55de-9457-fd5c59718020"
+location = "Firehouse_Jazz_Band:183, The_Real_Book_Of_Blues:186"
+remark = "Copyright status outside the US may differ."
+
+[versions.Wikifonia]
+doChords = true
+doVoice = true
+doLyrics = false
+doLyricsmore = false
+doLyricsmoremore = false
+doChordBars = false
+doGuitar = false
+doExtra = false
+doPrep = false
+doOwn = false
+#}
+{% if part == "Vars" %}
+{% endif %}
+{% if part == "Doc" %}
+	DONE:
+	- imported the historic melody and chord changes of the 1923 composition.
+	- local source: real_books_archive.gi/Wikifonia.tar.xz: Wikifonia/Jimmie Cox - Nobody Knows You When You're Down And Out.mxl.
+	- jazz real/fake-book references: Firehouse_Jazz_Band:183, The_Real_Book_Of_Blues:186.
+	- source revision: http://wikifonia.org/node/12852/revisions/19954/view.
+	- retained written measures, pickups, repeats and endings; lyrics and accompaniment omitted.
+	- the original composition is public domain in the US; no claim is made about later editions.
+	- US term reference: https://cspd.law.duke.edu/publicdomainday/2026.
+	- tempo is an editorial practice suggestion.
+	TODO:
+	- proofread against a historic edition and check by ear.
+{% endif %}
+{% if part == "ChordsWikifonia" %}\chordmode {
+	\startChords
+	\startSong
+
+	\myMark "A"
+	\startPart
+	f2 a2:7 |
+	d1:7 |
+	g2:m d2:7 |
+	g1:m | \myEndLine
+	bes2 e2:7 |
+	f2 d2:7 |
+	g1:9 |
+	g2:m9 c2:7 | \myEndLine
+	f2 a2:7 |
+	d1:7 |
+	g2:m d2:7 |
+	g1:m | \myEndLine
+	bes2 e2:7 |
+	f2 d2:7 |
+	g1:9 |
+	g2:m7 c2:7 | \myEndLine
+	f4 a2.:7 |
+	d1:7 |
+	g2:m d2:7 |
+	g1:m | \myEndLine
+	bes2 e2:7 |
+	f2 d2:7 |
+	g1:9 |
+	g2:m9 c2:7 | \myEndLine
+	f2 a2:7 |
+	d1:7 |
+	g2:m d2:7 |
+	g1:m | \myEndLine
+	bes2 e2:7 |
+	f2 d2:7 |
+	g1:9 |
+	c2:7 f4 d4:7 | \myEndLine
+	g2:7 c2:7 |
+	f1 |
+	\endBar
+	\endPart
+
+	\endSong
+	\endChords
+}
+{% endif %}
+{% if part == "VoiceWikifonia" %}\absolute {
+	\tempo "Swing" 4 = 144
+	\time 4/4
+	\key f \major
+
+	a'8 a'8 a'8 a'8 g'4 ~ \once \omit TupletBracket \times 2/3 { g'8 a'8 g'8 } |
+	fis'8 fis'8 d'2. |
+	r8 d''8 d''8 d''8 c''8 c''4 c''8 |
+	bes'8 bes'8 g'2 r8 g'8 |
+	d''8 d''8 d''8 e''8 ~ e''8 d''4. |
+	r8 c''8 cis''8 d''8 a'4. d'16 d'16 |
+	a'8 a'4 a'8 ~ a'8 a'4. |
+	\times 2/3 { a'4 a'4 f'4 } a'8 ( g'4. ) |
+	r8 a'8 a'8 a'8 g'4. g'8 |
+	fis'4 fis'8 d'8 ~ d'4 r8 d''8 |
+	d''8 d''8 d''8 d''8 c''4. c''8 |
+	bes'8 bes'8 bes'8 g'8 ~ g'4 r8 g'16 g'16 |
+	d''8 d''8 d''8 e''8 ~ e''4 ~ \once \omit TupletBracket \times 2/3 { e''8 d''8 a'8 } |
+	c''8 cis''8 d''8 a'8 ~ a'4. d'16 d'16 |
+	a'8 a'4. a'8 a'8 ~ \once \omit TupletBracket \times 2/3 { a'8 d''8 a'8 } |
+	d''4 d''8 c''8 ~ c''4 r4 |
+	r8 a'8 ~ a'2 ~ \once \omit TupletBracket \times 2/3 { a'8 g'8 a'8 } |
+	fis'4. d'8 ~ d'2 |
+	r8 d''8 d''8 c''8 ~ c''4 bes'8 g'8 ~ |
+	g'1 |
+	r8 d''8 d''8 e''8 ~ e''8 d''4. |
+	\times 2/3 { r4 c''4 d''4 } a'8 d'4. |
+	r8 a'8 a'8 a'8 ~ a'8 d'4. |
+	r8 a'8 d'8 a'8 ~ a'8 g'8 r8 c'16 c'16 |
+	a'8 a'8 a'8 g'8 ~ g'4 ~ \once \omit TupletBracket \times 2/3 { g'8 a'8 g'8 } |
+	fis'4 fis'8 d'8 ~ d'2 |
+	r8 bes'8 bes'8 a'8 ~ a'4. a'8 |
+	g'4 a'8 bes'8 ~ bes'2 |
+	r8 f'8 d''8 d''8 e''8 ( d''4. ) |
+	r8 c''8 cis''8 d''8 a'8 ( d'4. ) |
+	r8 a'8 f'8 d'8 a'8 g'8 f'8 d'8 |
+	r8 a'4 d''8 a'8 ( f'8 ) d''8 d''8 ~ |
+	d''8 d''8 d''8 c''8 ( ~ c''8 d''8 ~ \once \omit TupletBracket \times 2/3 { d''8 ) as'8 ( g'8 ) } |
+	f'2. r4 |
+	\endBar
+}
+{% endif %}

@@ -1,0 +1,149 @@
+{#
+default_version = "Wikifonia"
+
+[attributes]
+title = "The Birth of the Blues"
+style = "Jazz"
+composer = "Ray Henderson"
+piece = "Swing"
+copyright = "Original composition (1926); public domain in the US"
+copyrightextra = "Instrumental lead sheet; later lyrics and arrangements are excluded."
+typesetter = "OpenBook contributors (MusicXML import)"
+completion = "3"
+uuid = "38fbb144-f136-5520-8be8-af33bd9eac14"
+location = "Real_Book_2:32, 557_Standards:40, Firehouse_Jazz_Band:87, Just_Standards_Real_Book:58"
+remark = "Copyright status outside the US may differ."
+
+[versions.Wikifonia]
+doChords = true
+doVoice = true
+doLyrics = false
+doLyricsmore = false
+doLyricsmoremore = false
+doChordBars = false
+doGuitar = false
+doExtra = false
+doPrep = false
+doOwn = false
+#}
+{% if part == "Vars" %}
+{% endif %}
+{% if part == "Doc" %}
+	DONE:
+	- imported the historic melody and chord changes of the 1926 composition.
+	- local source: real_books_archive.gi/Wikifonia.tar.xz: Wikifonia/Ray Henderson, Buddy DeSylva, Lew Brown - The Birth Of The Blues.mxl.
+	- jazz real/fake-book references: Real_Book_2:32, 557_Standards:40, Firehouse_Jazz_Band:87, Just_Standards_Real_Book:58.
+	- source revision: http://wikifonia.org/node/10040/revisions/13620/view.
+	- retained written measures, pickups, repeats and endings; lyrics and accompaniment omitted.
+	- the original composition is public domain in the US; no claim is made about later editions.
+	- US term reference: https://cspd.law.duke.edu/publicdomainday/2026.
+	- tempo is an editorial practice suggestion.
+	TODO:
+	- proofread against a historic edition and check by ear.
+	- verify editorial chord spacing in measures 20, 34; the archive places successive symbols at the same offset.
+{% endif %}
+{% if part == "ChordsWikifonia" %}\chordmode {
+	\startChords
+	\startSong
+
+	\myMark "A"
+	\startPart
+	\repeat volta 2 {
+	s4 a4:7 aes4:7 g4:7 |
+	c2.. g8:7 |
+	s1*5/8 g4.:aug |
+	c2 e2:7 | \myEndLine
+	f2 d2:7 |
+	g1:7 |
+	s1 |
+	c1 | \myEndLine
+	s4 a4:7 aes4:7 g4:7 |
+	c2.. g8:7 |
+	s1*5/8 g4.:aug |
+	c2 e2:7 | \myEndLine
+	f2 d2:7 |
+	g1:7 |
+	s1 |
+	c1 | \myEndLine
+	s1 |
+	e2:7 b4.:m7.5- e8 |
+	s2 b2:m7.5- |
+	e4 b4:m7 e2:7 | \myEndLine
+	b2:m7 e2:7 |
+	a1:7 |
+	s1 |
+	a2:m7 d2:7 | \myEndLine
+	g4:7 a4:m7 aes4:7 g4:7 |
+	c2.. g8:7 |
+	s1*5/8 g4.:aug |
+	c2 e2:7 | \myEndLine
+	f2 d2:7 |
+	g1:7 |
+	s1 |
+	} \alternative {
+	{
+	c1 | \myEndLine
+	s2 aes4:7 g4:7 | \myEndLineVoltaNotLast
+	}
+	{
+	c2 bes2:7 | \myEndLineVoltaLast
+	}
+	}
+	aes2.:7 c4 |
+	\endBar
+	\endPart
+
+	\endSong
+	\endChords
+}
+{% endif %}
+{% if part == "VoiceWikifonia" %}\absolute {
+	\tempo "Swing" 4 = 144
+	\time 2/2
+	\key c \major
+
+	\repeat volta 2 {
+	r4 g'4 ges'4 f'4 |
+	e'2 a'8 g'4 f'8 ~ |
+	f'2 b'8 a'4 g'8 ~ |
+	g'2 c''8 b'4 a'8 ~ |
+	a'2 d''8 c''4 b'8 ~ |
+	b'2 b'2 ~ |
+	b'4 b'8 b'8 ~ b'8 c''8 d''4 |
+	c''1 ~ |
+	c''4 g'4 ges'4 f'4 |
+	e'2 a'8 g'4 f'8 ~ |
+	f'2 b'8 a'4 g'8 ~ |
+	g'2 c''8 b'4 a'8 ~ |
+	a'2 d''8 c''4 b'8 ~ |
+	b'2 b'2 ~ |
+	b'4 b'8 b'8 ~ b'8 c''8 d''4 |
+	c''1 ~ |
+	c''2 b'8 c''8 d''8 dis''8 |
+	e''2 d''8 b'8 d''8 b'8 ~ |
+	b'2 d''8 b'8 d''8 b'8 ~ |
+	b'2 b'2 ~ |
+	b'2 b'8 c''8 d''8 dis''8 |
+	e''2 cis''8 a'8 cis''8 a'8 ~ |
+	a'2 cis''8 a'8 cis''8 a'8 ~ |
+	a'2 a'2 ~ |
+	a'4 g'4 ges'4 f'4 |
+	e'2 a'8 g'4 f'8 ~ |
+	f'2 b'8 a'4 g'8 ~ |
+	g'2 c''8 b'4 a'8 ~ |
+	a'2 d''8 c''4 b'8 ~ |
+	b'2 b'2 ~ |
+	b'4 b'8 b'8 ~ b'8 c''8 d''4 |
+	} \alternative {
+	{
+	c''1 ~ |
+	c''4 g'4 ges'4 f'4 |
+	}
+	{
+	c''1 |
+	}
+	}
+	c''2. r4 |
+	\endBar
+}
+{% endif %}

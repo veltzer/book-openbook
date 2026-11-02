@@ -1,0 +1,129 @@
+{#
+default_version = "Wikifonia"
+
+[attributes]
+title = "Am I Blue?"
+style = "Jazz"
+composer = "Harry Akst"
+piece = "Swing"
+copyright = "Original composition (1929); public domain in the US"
+copyrightextra = "Instrumental lead sheet; later lyrics and arrangements are excluded."
+typesetter = "OpenBook contributors (MusicXML import)"
+completion = "3"
+uuid = "df2eef47-1c03-59e3-b86b-d21735d84912"
+location = "557_Standards:21, Firehouse_Jazz_Band:760, StandardsBook:35, Just_Standards_Real_Book:26"
+remark = "Copyright status outside the US may differ."
+
+[versions.Wikifonia]
+doChords = true
+doVoice = true
+doLyrics = false
+doLyricsmore = false
+doLyricsmoremore = false
+doChordBars = false
+doGuitar = false
+doExtra = false
+doPrep = false
+doOwn = false
+#}
+{% if part == "Vars" %}
+{% endif %}
+{% if part == "Doc" %}
+	DONE:
+	- imported the historic melody and chord changes of the 1929 composition.
+	- local source: real_books_archive.gi/Wikifonia.tar.xz: Wikifonia/Harry Akst, Grant Clarke - Am I Blue?.mxl.
+	- jazz real/fake-book references: 557_Standards:21, Firehouse_Jazz_Band:760, StandardsBook:35, Just_Standards_Real_Book:26.
+	- source revision: http://wikifonia.org/node/11307/revisions/15249/view.
+	- retained written measures, pickups, repeats and endings; lyrics and accompaniment omitted.
+	- the original composition is public domain in the US; no claim is made about later editions.
+	- US term reference: https://cspd.law.duke.edu/publicdomainday/2026.
+	- tempo is an editorial practice suggestion.
+	TODO:
+	- proofread against a historic edition and check by ear.
+	- verify editorial chord spacing in measures 16; the archive places successive symbols at the same offset.
+{% endif %}
+{% if part == "ChordsWikifonia" %}\chordmode {
+	\startChords
+	\startSong
+
+	\myMark "A"
+	\startPart
+	s2.. f8 |
+	s1 |
+	s2.. c8:9 |
+	s1 | \myEndLine
+	s1 |
+	f2 a8:7.5- d4.:7 |
+	g2:7 des8:7 c4:7 f8 |
+	f2.:6 fis4:dim | \myEndLine
+	c1:7 |
+	f1 |
+	s2.. c8:9 |
+	s1 | \myEndLine
+	s2.. f8 |
+	s2 a8:7.5- d4:7 g8:7 |
+	s2 des8:7 c4:7 f8 |
+	bes2 bes2:m | \myEndLine
+	f2.. a8:m |
+	s1 |
+	s1 |
+	e2:7 d2:m6 | \myEndLine
+	e1:7 |
+	s1 |
+	s1 |
+	a2:m fis2:dim | \myEndLine
+	g4:m7 c1*5/8:7 f8 |
+	s1 |
+	s1 |
+	c1:9 | \myEndLine
+	s2.. f8 |
+	s2 fis8:dim d4:7 g8:7 |
+	s2 des8:7 c4:7 f8 |
+	s1 | \myEndLine
+	\endBar
+	\endPart
+
+	\endSong
+	\endChords
+}
+{% endif %}
+{% if part == "VoiceWikifonia" %}\absolute {
+	\tempo "Swing" 4 = 144
+	\time 2/2
+	\key f \major
+
+	r2 c'8 d'4 a'8 ~ |
+	a'1 ~ |
+	a'2 c'8 d'4 bes'8 ~ |
+	bes'1 ~ |
+	bes'2 c'8 d'4 c''8 ~ |
+	c''2 cis''8 d''4 f'8 ~ |
+	f'2 as'8 g'4 f'8 ~ |
+	f'2. r4 |
+	r2 c'8 d'4 a'8 ~ |
+	a'1 ~ |
+	a'2 c'8 d'4 bes'8 ~ |
+	bes'1 ~ |
+	bes'2 c'8 d'4 c''8 ~ |
+	c''2 cis''8 d''4 f'8 ~ |
+	f'2 as'8 g'4 f'8 ~ |
+	f'1 ~ |
+	f'2 dis'8 e'4 c''8 ~ |
+	c''1 ~ |
+	c''4 e''4 d''4 c''4 |
+	b'8 d''4 b'8 ~ b'2 ~ |
+	b'2 dis'8 e'4 b'8 ~ |
+	b'1 ~ |
+	b'4 d''4 c''4 b'4 |
+	a'8 c''4 c''8 ~ c''2 |
+	a'4 g'8 r8 c'8 d'4 a'8 ~ |
+	a'1 ~ |
+	a'2 c'8 d'4 bes'8 ~ |
+	bes'1 ~ |
+	bes'2 c'8 d'4 c''8 ~ |
+	c''2 es''8 d''4 f'8 ~ |
+	f'2 as'8 g'4 f'8 ~ |
+	f'2 r2 |
+	\endBar
+}
+{% endif %}

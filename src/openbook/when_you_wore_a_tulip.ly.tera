@@ -1,0 +1,132 @@
+{#
+default_version = "Wikifonia"
+
+[attributes]
+title = "When You Wore a Tulip"
+style = "Jazz"
+composer = "Percy Wenrich"
+piece = "Swing"
+copyright = "Original composition (1914); public domain in the US"
+copyrightextra = "Instrumental lead sheet; later lyrics and arrangements are excluded."
+typesetter = "OpenBook contributors (MusicXML import)"
+completion = "3"
+uuid = "ed037320-5833-5725-9e33-3f772235482e"
+location = "Firehouse_Jazz_Band:210"
+remark = "Copyright status outside the US may differ."
+
+[versions.Wikifonia]
+doChords = true
+doVoice = true
+doLyrics = false
+doLyricsmore = false
+doLyricsmoremore = false
+doChordBars = false
+doGuitar = false
+doExtra = false
+doPrep = false
+doOwn = false
+#}
+{% if part == "Vars" %}
+{% endif %}
+{% if part == "Doc" %}
+	DONE:
+	- imported the historic melody and chord changes of the 1914 composition.
+	- local source: real_books_archive.gi/Wikifonia.tar.xz: Wikifonia/Peter Wenrich, Jack Mahoney - When you wore a tulip.mxl.
+	- jazz real/fake-book references: Firehouse_Jazz_Band:210.
+	- source revision: http://wikifonia.org/node/3279/revisions/4173/view.
+	- retained written measures, pickups, repeats and endings; lyrics and accompaniment omitted.
+	- the original composition is public domain in the US; no claim is made about later editions.
+	- US term reference: https://cspd.law.duke.edu/publicdomainday/2026.
+	- tempo is an editorial practice suggestion.
+	TODO:
+	- proofread against a historic edition and check by ear.
+{% endif %}
+{% if part == "ChordsWikifonia" %}\chordmode {
+	\startChords
+	\startSong
+
+	\myMark "A"
+	\startPart
+	s2. g4 |
+	s1 |
+	s1 |
+	s1 | \myEndLine
+	s2. g4:7 |
+	c1 |
+	s1 |
+	g1 | \myEndLine
+	s1 |
+	c1 |
+	s1 |
+	g1 | \myEndLine
+	s2 e2:7 |
+	a1:7 |
+	s1 |
+	d1:7 | \myEndLine
+	s1 |
+	g1 |
+	s1 |
+	s1 | \myEndLine
+	s2. g4:7 |
+	c1 |
+	s1 |
+	b1:7 | \myEndLine
+	s1 |
+	e1:7 |
+	s1 |
+	a1:7 | \myEndLine
+	s1 |
+	d1:7 |
+	s1 |
+	g1 | \myEndLine
+	s1 |
+	s1 |
+	\endBar
+	\endPart
+
+	\endSong
+	\endChords
+}
+{% endif %}
+{% if part == "VoiceWikifonia" %}\absolute {
+	\tempo "Swing" 4 = 144
+	\time 4/4
+	\key g \major
+
+	r2 r4 d'4 |
+	d'4 d'2 e'4 |
+	g'4 g'2 a'4 |
+	b'4 b'2 a'4 |
+	g'4 b'2 a'4 |
+	g'4 g'2 fis'4 |
+	g'2 e'2 |
+	d'1 ~ |
+	d'1 |
+	e'4 c''2 b'4 |
+	c''4 e'2 es'4 |
+	d'4 b'2 ais'4 |
+	b'4 d'4 e'4 d'4 |
+	cis'4 a'2 g'4 |
+	a'4 b'2. |
+	a'1 ~ |
+	a'4 r4 r2 |
+	d'4 d'2 e'4 |
+	g'4 g'2 a'4 |
+	b'4 b'2 a'4 |
+	g'4 b'2 a'4 |
+	g'4 g'2 fis'4 |
+	g'2 a'2 |
+	fis'1 ~ |
+	fis'4 fis'4 g'4 fis'4 |
+	e'4 b'2 ais'4 |
+	b'4 c''2 b'4 |
+	e'4 a'2 gis'4 |
+	a'4 b'2 e'4 |
+	g'4 fis'2 e'4 |
+	fis'4 g'4 a'2 |
+	g'1 ~ |
+	g'1 |
+	R1 |
+	\endBar
+}
+{% endif %}

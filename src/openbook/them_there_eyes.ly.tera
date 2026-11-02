@@ -1,0 +1,130 @@
+{#
+default_version = "Wikifonia"
+
+[attributes]
+title = "Them There Eyes"
+style = "Jazz"
+composer = "Maceo Pinkard"
+piece = "Swing"
+copyright = "Original composition (1930); public domain in the US"
+copyrightextra = "Instrumental lead sheet; later lyrics and arrangements are excluded."
+typesetter = "OpenBook contributors (MusicXML import)"
+completion = "3"
+uuid = "ea66fbcc-bbee-5641-aeb2-08547c499a2e"
+location = "New_Real_2:377, 557_Standards:377, Fakebook_Django:221"
+remark = "Copyright status outside the US may differ."
+
+[versions.Wikifonia]
+doChords = true
+doVoice = true
+doLyrics = false
+doLyricsmore = false
+doLyricsmoremore = false
+doChordBars = false
+doGuitar = false
+doExtra = false
+doPrep = false
+doOwn = false
+#}
+{% if part == "Vars" %}
+{% endif %}
+{% if part == "Doc" %}
+	DONE:
+	- imported the historic melody and chord changes of the 1930 composition.
+	- local source: real_books_archive.gi/Wikifonia.tar.xz: Wikifonia/Maceo Pinkard, Doris Tauber, William Tracy - Them There Eyes.mxl.
+	- jazz real/fake-book references: New_Real_2:377, 557_Standards:377, Fakebook_Django:221.
+	- source revision: http://wikifonia.org/node/3225/revisions/18904/view.
+	- retained written measures, pickups, repeats and endings; lyrics and accompaniment omitted.
+	- the original composition is public domain in the US; no claim is made about later editions.
+	- US term reference: https://cspd.law.duke.edu/publicdomainday/2026.
+	- tempo is an editorial practice suggestion.
+	TODO:
+	- proofread against a historic edition and check by ear.
+{% endif %}
+{% if part == "ChordsWikifonia" %}\chordmode {
+	\startChords
+	\startSong
+
+	\myMark "A"
+	\startPart
+	c1 |
+	s1 |
+	s2 g2 |
+	c1 | \myEndLine
+	s1 |
+	s1 |
+	d1:7 |
+	s1 | \myEndLine
+	g1:7 |
+	s1 |
+	e1:m7 |
+	a1:m | \myEndLine
+	d1:7 |
+	s1 |
+	g1:7 |
+	s1 | \myEndLine
+	c1 |
+	s1 |
+	s2 g2 |
+	c1 | \myEndLine
+	c1:7 |
+	s1 |
+	f1 |
+	e1:7 | \myEndLine
+	f1 |
+	s1 |
+	c1 |
+	c2 g2:7 | \myEndLine
+	s1 |
+	s1 |
+	d1:7 |
+	g1:7 | \myEndLine
+	c1 |
+	\endBar
+	\endPart
+
+	\endSong
+	\endChords
+}
+{% endif %}
+{% if part == "VoiceWikifonia" %}\absolute {
+	\tempo "Swing" 4 = 144
+	\time 4/4
+	\key c \major
+
+	g'4 e'8 d'8 c'8 d'8 e'4 |
+	g'4 e'8 d'8 c'8 d'8 e'4 |
+	a'2 a'2 |
+	a'1 |
+	g'4 e'8 d'8 c'8 d'8 e'4 |
+	g'4 e'8 d'8 c'8 d'8 e'4 |
+	a'2 a'2 |
+	a'1 |
+	r4 a'4 g'4 f'4 |
+	r4 a'4 g'4 f'4 |
+	r4 a'4 g'4 e'4 |
+	c'1 |
+	r4 c''4 b'4 a'4 |
+	r4 c''4 b'4 a'4 |
+	b'8 c''8 cis''8 d''8 d'8 d'4 e'8 |
+	f'4 cis'8 e'8 d'4 r4 |
+	g'4 e'8 d'8 c'8 d'8 e'4 |
+	g'4 e'8 d'8 c'8 d'8 e'4 |
+	a'2 a'2 |
+	a'1 |
+	r4 c''4 c''4 c''4 |
+	c''4 a'4 g'4 e'4 |
+	d'1 ~ |
+	d'1 |
+	r4 c''4 b'4 a'4 |
+	r4 c''4 b'4 a'4 |
+	c''4 e'8 dis'8 e'8 g'8 a'8 g'8 |
+	b'4 a'8 b'8 a'8 g'4. |
+	g'4. e'8 d'8 c'8 d'8 e'8 |
+	g'4 e'8 d'8 c'8 d'8 e'8 r8 |
+	a'1 |
+	b'1 |
+	c''1 |
+	\endBar
+}
+{% endif %}

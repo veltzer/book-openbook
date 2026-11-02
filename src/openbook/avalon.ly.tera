@@ -1,0 +1,130 @@
+{#
+default_version = "Wikifonia"
+
+[attributes]
+title = "Avalon"
+style = "Jazz"
+composer = "Vincent Rose"
+piece = "Swing"
+copyright = "Original composition (1920); public domain in the US"
+copyrightextra = "Instrumental lead sheet; later lyrics and arrangements are excluded."
+typesetter = "OpenBook contributors (MusicXML import)"
+completion = "3"
+uuid = "b8689452-3cd2-56f4-8b93-cc60e757ea6a"
+location = "Real_Book_2:20, 557_Standards:26, Firehouse_Jazz_Band:391, Colorado:28, Colorado_Cookbook:28, Fakebook_Django:13"
+remark = "Copyright status outside the US may differ."
+
+[versions.Wikifonia]
+doChords = true
+doVoice = true
+doLyrics = false
+doLyricsmore = false
+doLyricsmoremore = false
+doChordBars = false
+doGuitar = false
+doExtra = false
+doPrep = false
+doOwn = false
+#}
+{% if part == "Vars" %}
+{% endif %}
+{% if part == "Doc" %}
+	DONE:
+	- imported the historic melody and chord changes of the 1920 composition.
+	- local source: real_books_archive.gi/Wikifonia.tar.xz: Wikifonia/Vincent Rose, Al Jolson, B.G.De Sylva - Avalon.mxl.
+	- jazz real/fake-book references: Real_Book_2:20, 557_Standards:26, Firehouse_Jazz_Band:391, Colorado:28, Colorado_Cookbook:28, Fakebook_Django:13.
+	- source revision: http://wikifonia.org/node/5909/revisions/8048/view.
+	- retained written measures, pickups, repeats and endings; lyrics and accompaniment omitted.
+	- the original composition is public domain in the US; no claim is made about later editions.
+	- US term reference: https://cspd.law.duke.edu/publicdomainday/2026.
+	- tempo is an editorial practice suggestion.
+	TODO:
+	- proofread against a historic edition and check by ear.
+{% endif %}
+{% if part == "ChordsWikifonia" %}\chordmode {
+	\startChords
+	\startSong
+
+	\myMark "A"
+	\startPart
+	s1 |
+	c1:7 |
+	s1 |
+	s1 | \myEndLine
+	s1 |
+	f1 |
+	s2 c2:7 |
+	f1 | \myEndLine
+	s1 |
+	c2:7 g2:m7 |
+	c2:7 g2:m7 |
+	c1:7 | \myEndLine
+	s1 |
+	f1 |
+	s2 c2:7 |
+	f1 | \myEndLine
+	s1 |
+	d1:7 |
+	s1 |
+	s1 | \myEndLine
+	s1 |
+	s1 |
+	s2 d2:7 |
+	g1:m | \myEndLine
+	s1 |
+	f1 |
+	s1 |
+	d1:7 | \myEndLine
+	s1 |
+	g1:m |
+	c1:7 |
+	f1 | \myEndLine
+	s1 |
+	\endBar
+	\endPart
+
+	\endSong
+	\endChords
+}
+{% endif %}
+{% if part == "VoiceWikifonia" %}\absolute {
+	\tempo "Swing" 4 = 144
+	\time 4/4
+	\key c \major
+
+	r2 r4 c'4 - "N.C." |
+	g'2 a'2 |
+	bes'2 c''2 |
+	bes'4 a'4 g'2 ~ |
+	g'2 c'2 |
+	f'1 ~ |
+	f'2 g'2 |
+	a'1 ~ |
+	a'2 c'2 |
+	e'2 f'2 |
+	g'2 f'2 |
+	e'4 d'4 c'2 ~ |
+	c'2 d'2 |
+	a'1 ~ |
+	a'2 d'2 |
+	a'1 ~ |
+	a'2 d'2 |
+	a'2 bes'2 |
+	c''2 d''2 |
+	c''4 bes'4 a'2 ~ |
+	a'2 d'2 |
+	g'1 ~ |
+	g'2 a'2 |
+	bes'1 ~ |
+	bes'4 r4 d'2 |
+	c'2 f'2 |
+	a'2 c''2 |
+	e''4 d''4 e''2 ~ |
+	e''4 r4 d''2 |
+	bes'1 |
+	a'1 |
+	f'1 ~ |
+	f'2. r4 |
+	\endBar
+}
+{% endif %}

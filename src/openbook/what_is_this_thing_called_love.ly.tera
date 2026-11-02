@@ -1,0 +1,167 @@
+{#
+default_version = "Wikifonia"
+
+[attributes]
+title = "What Is This Thing Called Love?"
+style = "Jazz"
+composer = "Cole Porter"
+piece = "Swing"
+copyright = "Original composition (1929); public domain in the US"
+copyrightextra = "Instrumental lead sheet; later lyrics and arrangements are excluded."
+typesetter = "OpenBook contributors (MusicXML import)"
+completion = "3"
+uuid = "79dafbd1-449f-5436-a0fa-3982450d9801"
+location = "557_Standards:420, Colorado_Cookbook:268, StandardsBook:506, Just_Standards_Real_Book:366"
+remark = "Copyright status outside the US may differ."
+
+[versions.Wikifonia]
+doChords = true
+doVoice = true
+doLyrics = false
+doLyricsmore = false
+doLyricsmoremore = false
+doChordBars = false
+doGuitar = false
+doExtra = false
+doPrep = false
+doOwn = false
+#}
+{% if part == "Vars" %}
+{% endif %}
+{% if part == "Doc" %}
+	DONE:
+	- imported the historic melody and chord changes of the 1929 composition.
+	- local source: real_books_archive.gi/Wikifonia.tar.xz: Wikifonia/Cole Porter - What Is This Thing Called Love?.mxl.
+	- jazz real/fake-book references: 557_Standards:420, Colorado_Cookbook:268, StandardsBook:506, Just_Standards_Real_Book:366.
+	- source revision: http://www.wikifonia.org/node/2330/revisions/2941/view.
+	- retained written measures, pickups, repeats and endings; lyrics and accompaniment omitted.
+	- the original composition is public domain in the US; no claim is made about later editions.
+	- US term reference: https://cspd.law.duke.edu/publicdomainday/2026.
+	- tempo is an editorial practice suggestion.
+	TODO:
+	- proofread against a historic edition and check by ear.
+	- verify editorial chord spacing in measures 4, 12; the archive places successive symbols at the same offset.
+{% endif %}
+{% if part == "ChordsWikifonia" %}\chordmode {
+	\startChords
+	\startSong
+
+	\myMark "A"
+	\startPart
+	c2 cis2:dim7/c |
+	c1:dim7 |
+	f2:m6/c b2:dim7/c |
+	c2:maj7 c2:7 | \myEndLine
+	f2:7 bes2:7 |
+	ees2:maj7 ees2:7 |
+	f2.:m6 fis4:dim7 |
+	g1 | \myEndLine
+	g1 |
+	a1:7/g |
+	c2:m6/g ees2:dim7/g |
+	g2:maj7 g2:7 | \myEndLine
+	c1:7 |
+	f2:7 d2:m7.5- |
+	f2:m6/aes g2:7.5+.9- |
+	c1:6 | \myEndLine
+	c1:7 |
+	\repeat volta 2 {
+	g1:m7.5- |
+	c1:7.9- |
+	f1:m6 | \myEndLine
+	s1 |
+	d1:m7.5- |
+	g1:aug7 |
+	c1:maj7 | \myEndLine
+	s1 |
+	g1:m7.5- |
+	c1:7.9- |
+	f1:m6 | \myEndLine
+	s1 |
+	d1:m7.5- |
+	g1:aug7 |
+	c1:6 | \myEndLine
+	s1 |
+	c1:m7 |
+	f1:7 |
+	bes1:maj7 | \myEndLine
+	s1 |
+	aes1:9 |
+	s1 |
+	d1:m7.5- | \myEndLine
+	g1:7 |
+	g1:m7.5- |
+	c1:7.9- |
+	f1:m6 | \myEndLine
+	s1 |
+	d1:m7.5- |
+	g1:aug7 |
+	c1:6 | \myEndLine
+	s1 |
+	}
+	\endBar
+	\endPart
+
+	\endSong
+	\endChords
+}
+{% endif %}
+{% if part == "VoiceWikifonia" %}\absolute {
+	\tempo "Swing" 4 = 144
+	\time 2/2
+	\key c \major
+
+	g'4 g'8 g'8 bes'4 bes'4 |
+	a'4 a'2. |
+	f'4 f'8 f'8 as'4 as'4 |
+	g'2. g'4 |
+	c''4 c''4 f'4 g'8 as'8 |
+	bes'8 c''8 bes'4 ~ bes'4 g'4 |
+	f'8 as'4 g'8 f'4 es'4 |
+	d'1 |
+	b'4 b'8 b'8 d''4 d''4 |
+	cis''4 cis''2. |
+	a'4 a'8 a'8 c''4 c''4 |
+	b'2. b'4 |
+	g'4 g'4 bes'4. g'8 |
+	a'8 c''8 a'8 f'8 as'2 |
+	d'4 d'4 es'4 es'4 |
+	c'2. s4 |
+	bes'4 s2. |
+	\repeat volta 2 {
+	\mark \markup { \box { A } } bes'4 g'4 g'2 ~ |
+	g'2 bes'2 |
+	as'1 |
+	r2 r4 as'4 |
+	as'8 g'4 g'8 ~ g'2 ~ |
+	g'2 dis'2 |
+	e'1 |
+	r2 r4 bes'4 |
+	bes'4 g'4 g'2 ~ |
+	g'4 bes'4 bes'4. a'8 |
+	as'1 |
+	r2 r4 as'4 |
+	as'8 g'4 g'8 ~ g'2 ~ |
+	g'4 es'4 es'8 es'4. |
+	c'1 |
+	r2 r4 es''4 |
+	\mark \markup { \box { B } } es''4 c''4 c''2 ~ |
+	c''4 es''4 \times 2/3 { es''4 f''4 es''4 } |
+	d''1 |
+	r2 r4 d''4 |
+	c''4 as'4 as'2 ~ |
+	as'4 c''4 \times 2/3 { c''4 bes'4 as'4 } |
+	g'1 |
+	r4 bes'4 bes'4 bes'4 |
+	\mark \markup { \box { C } } bes'4 g'4 g'2 ~ |
+	g'4 bes'4 bes'8 c''4 bes'8 |
+	as'1 |
+	r2 r4 as'4 |
+	as'4 g'4 g'2 ~ |
+	g'2 es''2 |
+	c''1 |
+	R1 |
+	}
+	\endBar
+}
+{% endif %}

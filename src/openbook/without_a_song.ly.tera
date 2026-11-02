@@ -1,0 +1,139 @@
+{#
+default_version = "Wikifonia"
+
+[attributes]
+title = "Without a Song"
+style = "Jazz"
+composer = "Vincent Youmans"
+piece = "Swing"
+copyright = "Original composition (1929); public domain in the US"
+copyrightextra = "Instrumental lead sheet; later lyrics and arrangements are excluded."
+typesetter = "OpenBook contributors (MusicXML import)"
+completion = "3"
+uuid = "e954c493-bfb1-595e-85ae-be28c25576cd"
+location = "New_Real_2:491, 557_Standards:431"
+remark = "Copyright status outside the US may differ."
+
+[versions.Wikifonia]
+doChords = true
+doVoice = true
+doLyrics = false
+doLyricsmore = false
+doLyricsmoremore = false
+doChordBars = false
+doGuitar = false
+doExtra = false
+doPrep = false
+doOwn = false
+#}
+{% if part == "Vars" %}
+{% endif %}
+{% if part == "Doc" %}
+	DONE:
+	- imported the historic melody and chord changes of the 1929 composition.
+	- local source: real_books_archive.gi/Wikifonia.tar.xz: Wikifonia/Vincent Youmans, William Rose, Edward Eliscu - Without A Song.mxl.
+	- jazz real/fake-book references: New_Real_2:491, 557_Standards:431.
+	- source revision: http://wikifonia.org/node/5144/revisions/6979/view.
+	- retained written measures, pickups, repeats and endings; lyrics and accompaniment omitted.
+	- the original composition is public domain in the US; no claim is made about later editions.
+	- US term reference: https://cspd.law.duke.edu/publicdomainday/2026.
+	- tempo is an editorial practice suggestion.
+	TODO:
+	- proofread against a historic edition and check by ear.
+	- verify editorial chord spacing in measures 16, 21; the archive places successive symbols at the same offset.
+{% endif %}
+{% if part == "ChordsWikifonia" %}\chordmode {
+	\startChords
+	\startSong
+
+	\myMark "A"
+	\startPart
+	s2 bes4:7 bes4:aug7 |
+	ees1:maj7 |
+	aes1/ees |
+	ees1:maj7 | \myEndLine
+	aes2:6 aes2 |
+	ees1/bes |
+	bes2:7 bes2:11 |
+	ees1 | \myEndLine
+	f4:m7 bes2:7 bes4:aug7 |
+	ees1:maj7 |
+	aes1/ees |
+	ees1:maj7 | \myEndLine
+	aes2:6 aes2 |
+	s1*5/8 ees4./bes |
+	bes1:7 |
+	ees2 ees2:6 | \myEndLine
+	s2 bes4:m7 ees4:7 |
+	aes2 ees4:7 aes4 |
+	ees2:7 aes4 ees4:7 |
+	aes4 bes4:7 ees2 | \myEndLine
+	bes2:7 ees4 f4:9 |
+	g2:m d4:7/fis g4:m7/f |
+	c4:7/e ees4 g4:m/d f4:9 |
+	bes4:7 ees4 bes2:9 | \myEndLine
+	ees2:maj7 f4:m7 bes4:aug7 |
+	ees1:maj7 |
+	aes2/ees f2:m7 |
+	ees1:maj7 | \myEndLine
+	aes2:6 aes2 |
+	ees1:maj7 |
+	bes2:7 bes2:11 |
+	ees2 ees2:maj7 | \myEndLine
+	ees2.:9 ees4:aug |
+	aes4:6 f2.:9 |
+	ees1/bes |
+	bes1*5/8:7 a8:dim bes8:9 b8:7 | \myEndLine
+	ees1:6 |
+	\endBar
+	\endPart
+
+	\endSong
+	\endChords
+}
+{% endif %}
+{% if part == "VoiceWikifonia" %}\absolute {
+	\tempo "Swing" 4 = 144
+	\time 4/4
+	\key es \major
+
+	r2 r8 bes'8 c''8 d''8 |
+	d''2 ~ d''8 bes'8 bes'8 g'8 |
+	g'8 es'8 es'4 r8 g'8 g'8 bes'8 |
+	bes'2 ~ bes'8 g'8 g'8 es'8 |
+	es'8 c'8 c'4 r8 es'8 es'8 g'8 |
+	g'2 ~ g'8 es'8 es'8 c'8 |
+	c'8 bes8 bes4 r8 c'8 c'8 es'8 |
+	es'1 ~ |
+	es'4 r4 r8 bes'8 bes'8 d''8 |
+	d''2 ~ d''8 bes'8 bes'8 g'8 |
+	g'8 es'8 es'4 r8 g'8 g'8 bes'8 |
+	bes'2 ~ bes'8 g'8 g'8 es'8 |
+	es'8 c'8 c'4 r8 es'8 es'8 g'8 |
+	g'2 ~ g'8 es'8 es'8 c'8 |
+	c'8 bes8 bes4 r8 c'8 c'8 es'8 |
+	es'1 ~ |
+	es'8 r8 es'4 f'4 g'4 |
+	as'4 g'8 f'8 g'4 as'4 |
+	bes'4 as'8 g'8 as'4 bes'4 |
+	c''4 bes'8 as'8 bes'2 ~ |
+	bes'2. r4 |
+	bes'4 a'8 g'8 a'4 bes'4 |
+	c''4 bes'8 a'8 bes'4 c''4 |
+	d''4 es''8 c''8 f''2 ~ |
+	f''2 r8 bes'8 bes'8 d''8 |
+	d''2 ~ d''8 bes'8 bes'8 g'8 |
+	g'8 es'8 es'4 r8 g'8 g'8 bes'8 |
+	bes'2 ~ bes'8 g'8 g'8 es'8 |
+	es'8 c'8 c'4 r8 es'8 es'8 g'8 |
+	g'2 ~ g'8 es'8 es'8 c'8 |
+	c'8 bes8 bes4 r8 c'8 c'8 es'8 |
+	es'2 ~ es'8 g'8 g'8 bes'8 |
+	bes'2 ~ bes'8 g'8 g'8 es'8 |
+	es'8 c'8 c'4 ~ c'8 es'8 es'8 g'8 |
+	g'2 ~ g'8 es'8 g'8 c''8 |
+	c''8 bes'8 bes'4 ~ bes'8 c''8 c''8 es''8 |
+	es''1 ^\fermata |
+	\endBar
+}
+{% endif %}

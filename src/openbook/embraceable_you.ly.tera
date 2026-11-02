@@ -1,0 +1,147 @@
+{#
+default_version = "Wikifonia"
+
+[attributes]
+title = "Embraceable You"
+style = "Jazz"
+composer = "George Gershwin"
+piece = "Swing"
+copyright = "Original composition (1930); public domain in the US"
+copyrightextra = "Instrumental lead sheet; later lyrics and arrangements are excluded."
+typesetter = "OpenBook contributors (MusicXML import)"
+completion = "3"
+uuid = "571d20e9-f4a6-557d-b59d-b2e78efcee8f"
+location = "Real_Book_2:92, 557_Standards:97, Fakebook_Django:63, StandardsBook:132, Just_Standards_Real_Book:108"
+remark = "Copyright status outside the US may differ."
+
+[versions.Wikifonia]
+doChords = true
+doVoice = true
+doLyrics = false
+doLyricsmore = false
+doLyricsmoremore = false
+doChordBars = false
+doGuitar = false
+doExtra = false
+doPrep = false
+doOwn = false
+#}
+{% if part == "Vars" %}
+{% endif %}
+{% if part == "Doc" %}
+	DONE:
+	- imported the historic melody and chord changes of the 1930 composition.
+	- local source: real_books_archive.gi/Wikifonia.tar.xz: Wikifonia/George Gershwin, Ira Gershwin - Embraceable You.mxl.
+	- jazz real/fake-book references: Real_Book_2:92, 557_Standards:97, Fakebook_Django:63, StandardsBook:132, Just_Standards_Real_Book:108.
+	- source revision: http://wikifonia.org/node/4055/revisions/23426/view.
+	- retained written measures, pickups, repeats and endings; lyrics and accompaniment omitted.
+	- the original composition is public domain in the US; no claim is made about later editions.
+	- US term reference: https://cspd.law.duke.edu/publicdomainday/2026.
+	- tempo is an editorial practice suggestion.
+	TODO:
+	- proofread against a historic edition and check by ear.
+	- verify editorial chord spacing in measures 4, 12, 16, 20, 24, 31, 32; the archive places successive symbols at the same offset.
+{% endif %}
+{% if part == "ChordsWikifonia" %}\chordmode {
+	\startChords
+	\startSong
+
+	\myMark "A"
+	\startPart
+	\repeat volta 2 {
+	g1 |
+	cis1:dim |
+	d2:7 c2 |
+	d2:dim d2:7 | \myEndLine
+	a1:m |
+	f2:7 d2:7 |
+	g2 d2:sus4.7 |
+	g1 | \myEndLine
+	e2:m e2:m7 |
+	e2:m6 fis2:7 |
+	b2:m bes2:aug |
+	b2:m7 e2:7 | \myEndLine
+	d2 ees2:dim |
+	a1:7 |
+	d2:7 g4 d4:7 |
+	g2 d2:7 | \myEndLine
+	g1 |
+	cis1:dim |
+	d2:7 c2 |
+	d2:dim d2:7 | \myEndLine
+	a1 |
+	e2:7 d2:7 |
+	g2:7 d2:sus4.7 |
+	cis2:dim g2:7 | \myEndLine
+	c1 |
+	a2:m/fis d2:7 |
+	e2.:m ees4:aug |
+	g4 e2.:m6 | \myEndLine
+	g1 |
+	c2:m/a d2:7 |
+	} \alternative {
+	{
+	g2 ees2 |
+	a2 d2:7 | \myEndLineVoltaNotLast
+	}
+	{
+	g1 | \myEndLineVoltaLast
+	}
+	}
+	s1 |
+	\endBar
+	\endPart
+
+	\endSong
+	\endChords
+}
+{% endif %}
+{% if part == "VoiceWikifonia" %}\absolute {
+	\tempo "Swing" 4 = 144
+	\time 4/4
+	\key g \major
+
+	\repeat volta 2 {
+	r4 e'4 fis'4 g'4 |
+	r4 e'4 fis'4 g'4 |
+	a'8 r4 d'8 d'4 d'4 ~ |
+	d'1 |
+	r4 a'4 b'4 c''4 |
+	r4 a'4 b'4 c''4 |
+	d''8 r4 g'8 g'4 g'4 ~ |
+	g'1 |
+	b'4 g'4 a'4 g'4 |
+	b'4 g'4 a'4 g'4 |
+	b'8 r4 fis'8 fis'4 fis'4 ~ |
+	fis'1 |
+	a'4 fis'4 g'4 fis'4 |
+	g'4 a'4 b'4 cis''4 |
+	d''8 r4 d'8 d'4 d'4 ~ |
+	d'1 |
+	r4 e'4 fis'4 g'4 |
+	r4 e'4 fis'4 g'4 |
+	a'8 r4 d'8 d'4 d'4 ~ |
+	d'1 |
+	r4 a'4 b'4 c''4 |
+	r4 a'4 b'4 c''4 |
+	d''8 r4 g'8 g'4 g'4 ~ |
+	g'1 |
+	r4 d''4 c''4 b'4 |
+	c''4 b'4 a'4 b'4 |
+	r4 g'8 g'8 g'8 g'8 g'8 g'8 |
+	g'8 g'8 b'2. |
+	r4 b'4 c''4 d''4 |
+	es''8 r4 g'8 fis'2 |
+	} \alternative {
+	{
+	g'1 |
+	R1 |
+	}
+	{
+	g'1 ~ |
+	}
+	}
+	g'4 r4 r2 |
+	\endBar
+}
+{% endif %}

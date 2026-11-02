@@ -1,0 +1,147 @@
+{#
+default_version = "Wikifonia"
+
+[attributes]
+title = "My Baby Just Cares For Me"
+style = "Jazz"
+composer = "Walter Donaldson"
+piece = "Swing"
+copyright = "Original composition (1930); public domain in the US"
+copyrightextra = "Instrumental lead sheet; later lyrics and arrangements are excluded."
+typesetter = "OpenBook contributors (MusicXML import)"
+completion = "3"
+uuid = "6620fd0d-9a5c-55ec-aafd-47264fdd8e61"
+location = "Colorado:148, Colorado_Cookbook:148"
+remark = "Copyright status outside the US may differ."
+
+[versions.Wikifonia]
+doChords = true
+doVoice = true
+doLyrics = false
+doLyricsmore = false
+doLyricsmoremore = false
+doChordBars = false
+doGuitar = false
+doExtra = false
+doPrep = false
+doOwn = false
+#}
+{% if part == "Vars" %}
+{% endif %}
+{% if part == "Doc" %}
+	DONE:
+	- imported the historic melody and chord changes of the 1930 composition.
+	- local source: real_books_archive.gi/Wikifonia.tar.xz: Wikifonia/Walter Donaldson, Gus Kahn - My Baby Just Cares For Me.mxl.
+	- jazz real/fake-book references: Colorado:148, Colorado_Cookbook:148.
+	- source revision: http://wikifonia.org/node/4906/revisions/6647/view.
+	- retained written measures, pickups, repeats and endings; lyrics and accompaniment omitted.
+	- the original composition is public domain in the US; no claim is made about later editions.
+	- US term reference: https://cspd.law.duke.edu/publicdomainday/2026.
+	- tempo is an editorial practice suggestion.
+	TODO:
+	- proofread against a historic edition and check by ear.
+	- verify editorial chord spacing in measures 7, 23, 28, 31; the archive places successive symbols at the same offset.
+{% endif %}
+{% if part == "ChordsWikifonia" %}\chordmode {
+	\startChords
+	\startSong
+
+	\myMark "A"
+	\startPart
+	\repeat volta 2 {
+	g2:maj7 d2:aug7 |
+	g2:maj7 d2:aug7 |
+	g2:maj7 d2:aug7 |
+	g2:maj7 d2:aug7 | \myEndLine
+	g2 c2:9.11+ |
+	b2:m bes2:dim7 |
+	a2:m7 e2:aug7 |
+	a1:m7 | \myEndLine
+	fis1:m7.5- |
+	b2:sus4.7 b2:7 |
+	e1:m |
+	s1 | \myEndLine
+	a1:7 |
+	a2:7.5- a2:9 |
+	d1:7 |
+	d1:7 | \myEndLine
+	g2 d2:aug7 |
+	g2:maj7 d2:aug7 |
+	g2 d2:aug7 |
+	g2:maj7 d2:aug7 | \myEndLine
+	e1:7.9- |
+	b2/e e2:7 |
+	a2:m f2/a |
+	a1:m6 | \myEndLine
+	c1:maj7 |
+	fis1:7 |
+	b1:m |
+	e2:7 e2:aug7 | \myEndLine
+	a1:m7 |
+	a2:7 d2:7 |
+	} \alternative {
+	{
+	g2 gis2:dim7 |
+	a2.:m7 d4:aug7 | \myEndLineVoltaNotLast
+	}
+	{
+	g1 | \myEndLineVoltaLast
+	}
+	}
+	s1 |
+	\endBar
+	\endPart
+
+	\endSong
+	\endChords
+}
+{% endif %}
+{% if part == "VoiceWikifonia" %}\absolute {
+	\tempo "Swing" 4 = 144
+	\time 2/2
+	\key g \major
+
+	\repeat volta 2 {
+	r4 g'4 fis'8 fis'8 e'4 |
+	fis'4 g'4 fis'4 r4 |
+	r4 g'4 fis'8 fis'8 e'4 |
+	fis'4 g'4 fis'4 r4 |
+	r4 g'4 fis'8 fis'8 g'4 |
+	fis'2 e'2 |
+	c''1 ~ |
+	c''1 |
+	r4 c''4 c''8 b'8 c''4 |
+	b'2 fis'2 |
+	a'4. g'8 ~ g'2 |
+	a'4. g'8 ~ g'2 |
+	r4 a'4 a'8 gis'8 a'4 |
+	dis'2 e'2 |
+	b'4. d''8 ~ d''2 |
+	b'4. a'8 ~ a'2 |
+	r4 g'4 fis'8 fis'8 e'4 |
+	fis'4 g'4 fis'4 r4 |
+	r4 g'4 fis'8 fis'8 e'4 |
+	fis'4 g'4 fis'4 r4 |
+	r4 f'4 f'8 f'8 e'4 |
+	dis'2 e'2 |
+	c''1 ~ |
+	c''1 |
+	r4 e''4 e''8 dis''8 e''4 |
+	fis''2 cis''2 |
+	d''1 |
+	e''1 |
+	r4 c''4 c''8 e''8 e'4 |
+	b'2 b'2 |
+	} \alternative {
+	{
+	g'1 ~ |
+	g'2. r4 |
+	}
+	{
+	g'1 ~ |
+	}
+	}
+	g'2. r4 |
+	\endBar
+}
+{% endif %}

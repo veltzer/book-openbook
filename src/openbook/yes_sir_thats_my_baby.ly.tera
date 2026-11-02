@@ -1,0 +1,146 @@
+{#
+default_version = "Wikifonia"
+
+[attributes]
+title = "Yes Sir, That's My Baby"
+style = "Jazz"
+composer = "Walter Donaldson"
+piece = "Swing"
+copyright = "Original composition (1925); public domain in the US"
+copyrightextra = "Instrumental lead sheet; later lyrics and arrangements are excluded."
+typesetter = "OpenBook contributors (MusicXML import)"
+completion = "3"
+uuid = "b58787b3-7bf8-54b9-9611-b75a45fed442"
+location = "557_Standards:435"
+remark = "Copyright status outside the US may differ."
+
+[versions.Wikifonia]
+doChords = true
+doVoice = true
+doLyrics = false
+doLyricsmore = false
+doLyricsmoremore = false
+doChordBars = false
+doGuitar = false
+doExtra = false
+doPrep = false
+doOwn = false
+#}
+{% if part == "Vars" %}
+{% endif %}
+{% if part == "Doc" %}
+	DONE:
+	- imported the historic melody and chord changes of the 1925 composition.
+	- local source: real_books_archive.gi/Wikifonia.tar.xz: Wikifonia/Walter Donaldson, Gus Kahn - Yes Sir, That's My Baby.mxl.
+	- jazz real/fake-book references: 557_Standards:435.
+	- source revision: http://www.wikifonia.org/node/2547/revisions/3190/view.
+	- retained written measures, pickups, repeats and endings; lyrics and accompaniment omitted.
+	- the original composition is public domain in the US; no claim is made about later editions.
+	- US term reference: https://cspd.law.duke.edu/publicdomainday/2026.
+	- tempo is an editorial practice suggestion.
+	TODO:
+	- proofread against a historic edition and check by ear.
+{% endif %}
+{% if part == "ChordsWikifonia" %}\chordmode {
+	\startChords
+	\startSong
+
+	\myMark "A"
+	\startPart
+	\repeat volta 2 {
+	ees1 |
+	s2 e2:dim7 |
+	bes1:7 |
+	s1 | \myEndLine
+	s1 |
+	s1 |
+	ees1 |
+	s1 | \myEndLine
+	s1 |
+	s2. e4:dim7 |
+	bes1:7 |
+	s1 | \myEndLine
+	s1 |
+	s1 |
+	ees1 |
+	s2 b4:7 bes4:7 | \myEndLine
+	ees1:7 |
+	s1 |
+	aes1 |
+	s2 g4:7 ges4:7 | \myEndLine
+	f1:7 |
+	s1 |
+	bes1:7 |
+	s1 | \myEndLine
+	ees1 |
+	s2 e2:dim7 |
+	bes1:7 |
+	s1 | \myEndLine
+	s1 |
+	s1 |
+	} \alternative {
+	{
+	ees1 |
+	f2:m7/bes bes2:7 | \myEndLineVoltaNotLast
+	}
+	{
+	ees1 |
+	s1 | \myEndLineVoltaLast
+	}
+	}
+	\endBar
+	\endPart
+
+	\endSong
+	\endChords
+}
+{% endif %}
+{% if part == "VoiceWikifonia" %}\absolute {
+	\tempo "Swing" 4 = 144
+	\time 2/2
+	\key es \major
+
+	\repeat volta 2 {
+	bes'2 c''2 |
+	bes'4 c''4 c''4 bes'4 |
+	bes'2 c''2 |
+	bes'4 c''4 c''4 bes'4 |
+	bes'2 c''2 |
+	bes'4 c''4 g'4 f'4 |
+	es'1 ~ |
+	es'1 |
+	bes'2 c''2 |
+	bes'4 c''4 c''4 bes'4 |
+	bes'2 c''2 |
+	bes'4 c''4 c''4 bes'4 |
+	bes'2 c''2 |
+	bes'4 c''4 g'4 f'4 |
+	es'1 ~ |
+	es'2 fis'4 g'4 |
+	es'1 ~ |
+	es'2 b'4 c''4 |
+	as'1 ~ |
+	as'2 g'4 ges'4 |
+	f'2 f'2 |
+	es''4 c''4 es''2 |
+	d''1 ~ |
+	d''4 r4 r2 |
+	bes'2 c''2 |
+	bes'4 c''4 c''4 bes'4 |
+	bes'2 c''2 |
+	bes'4 c''4 c''4 bes'4 |
+	bes'2 c''2 |
+	bes'4 c''4 g'4 f'4 |
+	} \alternative {
+	{
+	es'1 ~ |
+	es'2 r2 |
+	}
+	{
+	es'1 ~ |
+	es'4 r4 r2 |
+	}
+	}
+	\endBar
+}
+{% endif %}

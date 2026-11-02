@@ -1,0 +1,116 @@
+{#
+default_version = "Wikifonia"
+
+[attributes]
+title = "When the Saints Go Marching In"
+style = "Jazz"
+composer = "Traditional"
+piece = "Swing"
+copyright = "Traditional composition; public domain in the US"
+copyrightextra = "Instrumental lead sheet; later lyrics and arrangements are excluded."
+typesetter = "OpenBook contributors (MusicXML import)"
+completion = "3"
+uuid = "5e25d157-d337-52bc-b992-e2e510282a5a"
+location = "Firehouse_Jazz_Band:338"
+remark = "Copyright status outside the US may differ."
+
+[versions.Wikifonia]
+doChords = true
+doVoice = true
+doLyrics = false
+doLyricsmore = false
+doLyricsmoremore = false
+doChordBars = false
+doGuitar = false
+doExtra = false
+doPrep = false
+doOwn = false
+#}
+{% if part == "Vars" %}
+{% endif %}
+{% if part == "Doc" %}
+	DONE:
+	- imported the historic melody and chord changes of the traditional tune.
+	- local source: real_books_archive.gi/Wikifonia.tar.xz: Wikifonia/Traditional - When the Saints go Marching-in.mxl.
+	- jazz real/fake-book references: Firehouse_Jazz_Band:338.
+	- source revision: http://wikifonia.org/node/5813/revisions/24013/view.
+	- retained written measures, pickups, repeats and endings; lyrics and accompaniment omitted.
+	- the original composition is public domain in the US; no claim is made about later editions.
+	- US term reference: https://cspd.law.duke.edu/publicdomainday/2026.
+	- tempo is an editorial practice suggestion.
+	TODO:
+	- proofread against a historic edition and check by ear.
+{% endif %}
+{% if part == "ChordsWikifonia" %}\chordmode {
+	\startChords
+	\startSong
+
+	\myMark "A"
+	\startPart
+	s1 |
+	\repeat volta 2 {
+	f1 |
+	s1 |
+	s1 | \myEndLine
+	s1 |
+	s1 |
+	s1 |
+	c1:7 | \myEndLine
+	s1 |
+	f1 |
+	f1:7 |
+	bes1 | \myEndLine
+	bes1:m |
+	f2 d2:7 |
+	g2:m7 c2:7 |
+	} \alternative {
+	{
+	f1 | \myEndLine
+	c1:7 | \myEndLineVoltaNotLast
+	}
+	{
+	f1 | \myEndLineVoltaLast
+	}
+	}
+	s1 |
+	\endBar
+	\endPart
+
+	\endSong
+	\endChords
+}
+{% endif %}
+{% if part == "VoiceWikifonia" %}\absolute {
+	\tempo "Swing" 4 = 144
+	\time 4/4
+	\key f \major
+
+	r4 f'4 a'4 bes'4 |
+	\repeat volta 2 {
+	c''2. r4 |
+	r4 f'4 a'4 bes'4 |
+	c''2. r4 |
+	r4 f'4 a'4 bes'4 |
+	c''2 a'2 |
+	f'2 a'2 |
+	g'2. r4 |
+	r4 a'4 a'4 g'4 |
+	f'2. f'4 |
+	a'2 c''2 |
+	c''4 bes'2. |
+	r4 bes'4 a'4 bes'4 |
+	c''2 a'2 |
+	f'2 g'2 |
+	} \alternative {
+	{
+	f'2. r4 |
+	r4 f'4 a'4 bes'4 |
+	}
+	{
+	f'1 ~ |
+	}
+	}
+	f'4 r4 r2 |
+	\endBar
+}
+{% endif %}

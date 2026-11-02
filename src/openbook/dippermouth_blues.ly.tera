@@ -1,0 +1,216 @@
+{#
+default_version = "Wikifonia"
+
+[attributes]
+title = "Dippermouth Blues"
+style = "Jazz"
+composer = "Joe Oliver"
+piece = "Swing"
+copyright = "Original composition (1923); public domain in the US"
+copyrightextra = "Instrumental lead sheet; later lyrics and arrangements are excluded."
+typesetter = "OpenBook contributors (MusicXML import)"
+completion = "3"
+uuid = "fb084368-caff-5ccf-9003-b31250ad33a0"
+location = "Firehouse_Jazz_Band:43"
+remark = "Copyright status outside the US may differ."
+
+[versions.Wikifonia]
+doChords = true
+doVoice = true
+doLyrics = false
+doLyricsmore = false
+doLyricsmoremore = false
+doChordBars = false
+doGuitar = false
+doExtra = false
+doPrep = false
+doOwn = false
+#}
+{% if part == "Vars" %}
+{% endif %}
+{% if part == "Doc" %}
+	DONE:
+	- imported the historic melody and chord changes of the 1923 composition.
+	- local source: real_books_archive.gi/Wikifonia.tar.xz: Wikifonia/Joseph Oliver - Dippermouth Blues.mxl.
+	- jazz real/fake-book references: Firehouse_Jazz_Band:43.
+	- source revision: http://wikifonia.org/node/8255/revisions/20011/view.
+	- retained written measures, pickups, repeats and endings; lyrics and accompaniment omitted.
+	- the original composition is public domain in the US; no claim is made about later editions.
+	- US term reference: https://cspd.law.duke.edu/publicdomainday/2026.
+	- tempo is an editorial practice suggestion.
+	TODO:
+	- proofread against a historic edition and check by ear.
+{% endif %}
+{% if part == "ChordsWikifonia" %}\chordmode {
+	\startChords
+	\startSong
+
+	\myMark "A"
+	\startPart
+	bes1 |
+	s1 |
+	f2:7 c2:m7 |
+	f2:dim f2:7 | \myEndLine
+	bes1 |
+	ees1:7 |
+	bes1:6 |
+	bes1:7 | \myEndLine
+	ees1:9 |
+	s1 |
+	bes1:6 |
+	s1 | \myEndLine
+	f1:7 |
+	s1 |
+	bes2:6 c8:maj7 cis4.:dim |
+	bes1:6 | \myEndLine
+	bes1 |
+	ees1:9 |
+	bes1 |
+	bes1:7 | \myEndLine
+	ees1:9 |
+	s1 |
+	bes1 |
+	s1 | \myEndLine
+	f1:7 |
+	s1 |
+	bes2 c4:maj7 cis4:dim |
+	bes1 | \myEndLine
+	bes1:m |
+	bes1 |
+	bes1:m |
+	bes1:7 | \myEndLine
+	ees1:9 |
+	s1 |
+	bes1 |
+	s1 | \myEndLine
+	f1:7 |
+	s1 |
+	bes2 f2:7 |
+	bes1:6 | \myEndLine
+	bes1 |
+	s1 |
+	s1 |
+	bes1:9 | \myEndLine
+	s2. ees4:9 |
+	s2. ees4:9 |
+	s1 |
+	bes1:6 | \myEndLine
+	c1:m7 |
+	f1:7 |
+	bes2:6 ees2:7 |
+	bes1 | \myEndLine
+	bes1 |
+	ees1:9 |
+	bes1 |
+	bes1:7 | \myEndLine
+	s2. ees4:9 |
+	s2. ees4:9 |
+	s1 |
+	bes1 | \myEndLine
+	c1:m7 |
+	s8 f2..:7 |
+	bes1 |
+	s1 | \myEndLine
+	s1 |
+	s1 |
+	s1 |
+	bes1:7 | \myEndLine
+	ees1:9 |
+	s1 |
+	bes1 |
+	s1 | \myEndLine
+	c1:m7 |
+	f1:7 |
+	s1 |
+	bes1 | \myEndLine
+	\endBar
+	\endPart
+
+	\endSong
+	\endChords
+}
+{% endif %}
+{% if part == "VoiceWikifonia" %}\absolute {
+	\tempo "Swing" 4 = 144
+	\time 4/4
+	\key bes \major
+
+	des''2 ~ des''8 bes'8 g'8 e'8 |
+	bes'8 g'8 e'8 cis'8 g'8 e'8 cis'8 bes8 |
+	f'4 r4 g'4 r4 |
+	gis'4. a'8 ~ a'8 f'8 g'4 |
+	bes'4 g'4 d'8 f'4. |
+	des''8 bes'8 c''8 bes'8 c''8 bes'4. |
+	r8 bes'8 g'8 cis'8 d'8 f'8 g'4 |
+	as'4 g'8 f'8 ~ f'4 r4 |
+	des''4 c''4 g'8 bes'4. |
+	des''4 c''8 c''4 bes'4 bes'8 ~ |
+	bes'2 g'8 cis'8 d'4 |
+	bes'8 g'4. cis'8 d'8 f'8 g'8 |
+	as'8 f'8 g'8 f'8 ~ f'2 |
+	r8 f''4 r8 des''8 c''8 bes'8 g'8 |
+	bes'4 bes'4 bes'8 bes'4 bes'8 ~ |
+	bes'2 r4 r8 bes'8 |
+	d''4 f''4 d''8 f''8 r4 |
+	r2 \once \omit TupletBracket \times 2/3 { es''8 e''8 f''8 } \once \omit TupletBracket \times 2/3 { es''8 e''8 f''8 } |
+	d''8 bes'8 g'8 bes'8 ~ bes'2 |
+	r2 bes'8 bes'4 bes'8 |
+	des''4 c''4 g'8 bes'8 r4 |
+	des''4 c''8 c''8 ~ c''4 bes'8 bes'8 ~ |
+	bes'8 g'8 bes'8 g'8 ~ g'2 |
+	r4 f'8 g'8 bes'8 d''4 d''8 |
+	es''4 d''8 es''8 ~ es''8 d''8 es''8 d''8 |
+	es''8 f''8 d''2 r8 bes'8 ~ |
+	bes'8 bes'4. bes'4 bes'8 bes'8 |
+	bes'8 bes'8 bes'4 des''4 des''4 |
+	des''1 |
+	bes'2. r4 |
+	des''1 |
+	bes'2 r8 des''4. |
+	des''4 c''4 c''8 bes'4. |
+	des''4 c''4 c''8 bes'4 bes'8 ~ |
+	bes'2 as'4. f'8 ~ |
+	f'2 r8 des''4. |
+	des''4 c''4 c''8 bes'4 f''8 ~ |
+	f''4 cis''8 d''8 bes'8 c''4 bes'8 ~ |
+	bes'2 g'8 d'4 f'8 ~ |
+	f'2 r8 cis''8 d''4 |
+	f''8 d''8 r4 r4 r8 d''8 |
+	f''8 d''8 r4 r4 r8 d''8 |
+	f''4 f''4 f''4 g''4 |
+	as''4 g''8 f''8 ~ f''4 d''4 |
+	des''4 - "N.C." bes'8 c''8 bes'4 r4 |
+	des''4 - "N.C." bes'8 c''8 bes'4 r4 |
+	g''4 - "N.C" des''4 bes'8 c''8 bes'4 |
+	bes'2 r8 cis''8 d''4 |
+	es''4 es''4 es''8 f''4. |
+	r4 cis''8 d''8 \once \omit TupletBracket \times 2/3 { f''8 d''8 des''8 } c''8 bes'8 ~ |
+	bes'4 f'8 g'8 f'4 es'8 d'8 ~ |
+	d'4 r4 g''8 g''4 f''8 |
+	g''8 g''4 g''8 g''8 g''4 g''8 |
+	g''8 g''4 g''8 g''8 g''4 g''8 |
+	g''8 g''4 g''8 g''4 f''8 f''8 |
+	as''8 as''8 g''4 f''8 d''4 des''8 ~ |
+	des''4 - "N.C." bes'8 c''8 bes'4 r4 |
+	des''4 - "N.C." bes'8 c''8 bes'4 r4 |
+	g''4 - "N.C." des''4 bes'8 c''8 bes'4 |
+	bes'2. \glissando bes''4 |
+	as''4 g''4 f''8 es''8 r4 |
+	r8 cis''8 d''8 f''8 d''2 |
+	bes'4 d''4 r2 |
+	r2 r4 r8 bes'8 |
+	bes'8 f'8 g'4 bes'4 r4 |
+	r4 f''4 f''4 g''4 |
+	f''8 d''8 r4 r2 |
+	r4 as''2. |
+	f''4 es''4 d''4 es''4 |
+	f''8 es''4 ges''4 f''4 f''8 ~ |
+	f''4 r4 r2 |
+	r2 r8 f''4 f''8 |
+	f''4 f''4 d''8 f''4 d''8 ~ |
+	d''2 r8 cis''4 d''8 |
+	f''4 fis''4 g''4 a''4 |
+	bes''2. \glissando bes'4 |
+	\endBar
+}
+{% endif %}

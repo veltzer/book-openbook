@@ -1,0 +1,146 @@
+{#
+default_version = "Wikifonia"
+
+[attributes]
+title = "Whispering"
+style = "Jazz"
+composer = "John Schonberger, Vincent Rose"
+piece = "Swing"
+copyright = "Original composition (1920); public domain in the US"
+copyrightextra = "Instrumental lead sheet; later lyrics and arrangements are excluded."
+typesetter = "OpenBook contributors (MusicXML import)"
+completion = "3"
+uuid = "ae93b0d3-8ef4-560a-891f-319f3981b0b8"
+location = "Firehouse_Jazz_Band:101, Fakebook_Django:242"
+remark = "Copyright status outside the US may differ."
+
+[versions.Wikifonia]
+doChords = true
+doVoice = true
+doLyrics = false
+doLyricsmore = false
+doLyricsmoremore = false
+doChordBars = false
+doGuitar = false
+doExtra = false
+doPrep = false
+doOwn = false
+#}
+{% if part == "Vars" %}
+{% endif %}
+{% if part == "Doc" %}
+	DONE:
+	- imported the historic melody and chord changes of the 1920 composition.
+	- local source: real_books_archive.gi/Wikifonia.tar.xz: Wikifonia/John Schonberger, Richard Coburn, Vincent Rose - Whispering.mxl.
+	- jazz real/fake-book references: Firehouse_Jazz_Band:101, Fakebook_Django:242.
+	- source revision: http://wikifonia.org/node/2996/revisions/13302/view.
+	- retained written measures, pickups, repeats and endings; lyrics and accompaniment omitted.
+	- the original composition is public domain in the US; no claim is made about later editions.
+	- US term reference: https://cspd.law.duke.edu/publicdomainday/2026.
+	- tempo is an editorial practice suggestion.
+	TODO:
+	- proofread against a historic edition and check by ear.
+{% endif %}
+{% if part == "ChordsWikifonia" %}\chordmode {
+	\startChords
+	\startSong
+
+	\myMark "A"
+	\startPart
+	\repeat volta 2 {
+	c1 |
+	s1 |
+	b1:7 |
+	s1 | \myEndLine
+	c1 |
+	s1 |
+	a1:7 |
+	s1 | \myEndLine
+	d1:7 |
+	s1 |
+	g1:7 |
+	s1 | \myEndLine
+	c1 |
+	d1:m |
+	g1:7 |
+	s1 | \myEndLine
+	c1 |
+	s1 |
+	b1:7 |
+	s1 | \myEndLine
+	c1 |
+	s1 |
+	a1:7 |
+	s1 | \myEndLine
+	d1:7 |
+	s1 |
+	g1:7 |
+	s1 | \myEndLine
+	d1:m |
+	f2 f2:m |
+	} \alternative {
+	{
+	c1 |
+	g1:7 | \myEndLineVoltaNotLast
+	}
+	{
+	c1 |
+	s1 | \myEndLineVoltaLast
+	}
+	}
+	\endBar
+	\endPart
+
+	\endSong
+	\endChords
+}
+{% endif %}
+{% if part == "VoiceWikifonia" %}\absolute {
+	\tempo "Swing" 4 = 144
+	\time 4/4
+	\key c \major
+
+	\repeat volta 2 {
+	c''2 b'4 c''4 |
+	d''4 c''4 b'4 c''4 |
+	b'1 |
+	a'1 |
+	g'2 fis'4 g'4 |
+	a'4 g'4 fis'4 g'4 |
+	f'1 |
+	e'1 |
+	e'2 d'4 e'4 |
+	a'4 e'4 d'4 e'4 |
+	e'1 |
+	d'1 |
+	c'2 d'4 e'4 |
+	g'2 a'4 b'4 |
+	a'2 g'4 b'4 |
+	a'2 g'2 |
+	c''2 b'4 c''4 |
+	d''4 c''4 b'4 c''4 |
+	b'1 |
+	a'1 |
+	g'2 fis'4 g'4 |
+	a'4 g'4 fis'4 g'4 |
+	f'1 |
+	e'1 |
+	e'2 d'4 e'4 |
+	a'4 e'4 d'4 e'4 |
+	e'1 |
+	d'1 |
+	d'4 e'4 f'4 g'4 |
+	a'2 c''2 |
+	} \alternative {
+	{
+	c''2 e''4 d''4 |
+	c''4 b'4 a'4 g'4 |
+	}
+	{
+	c''1 ~ |
+	c''2 r2 |
+	}
+	}
+	\endBar
+}
+{% endif %}

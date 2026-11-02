@@ -1,0 +1,98 @@
+{#
+default_version = "Wikifonia"
+
+[attributes]
+title = "Trouble In Mind"
+style = "Jazz"
+composer = "Richard M. Jones"
+piece = "Swing"
+copyright = "Original composition (1924); public domain in the US"
+copyrightextra = "Instrumental lead sheet; later lyrics and arrangements are excluded."
+typesetter = "OpenBook contributors (MusicXML import)"
+completion = "3"
+uuid = "d23a8384-b21e-57b6-9e0b-7a341ed12705"
+location = "Firehouse_Jazz_Band:526"
+remark = "Copyright status outside the US may differ."
+
+[versions.Wikifonia]
+doChords = true
+doVoice = true
+doLyrics = false
+doLyricsmore = false
+doLyricsmoremore = false
+doChordBars = false
+doGuitar = false
+doExtra = false
+doPrep = false
+doOwn = false
+#}
+{% if part == "Vars" %}
+{% endif %}
+{% if part == "Doc" %}
+	DONE:
+	- imported the historic melody and chord changes of the 1924 composition.
+	- local source: real_books_archive.gi/Wikifonia.tar.xz: Wikifonia/Richard M. Jones - Trouble In Mind.mxl.
+	- jazz real/fake-book references: Firehouse_Jazz_Band:526.
+	- source revision: http://wikifonia.org/node/15363/revisions/20787/view.
+	- retained written measures, pickups, repeats and endings; lyrics and accompaniment omitted.
+	- the original composition is public domain in the US; no claim is made about later editions.
+	- US term reference: https://cspd.law.duke.edu/publicdomainday/2026.
+	- tempo is an editorial practice suggestion.
+	TODO:
+	- proofread against a historic edition and check by ear.
+{% endif %}
+{% if part == "ChordsWikifonia" %}\chordmode {
+	\startChords
+	\startSong
+
+	\myMark "A"
+	\startPart
+	s1 |
+	g1 |
+	d1:7 |
+	g1:7 | \myEndLine
+	c2. cis4:dim |
+	g2/d e2:7 |
+	a1:7 |
+	a1:m7/d | \myEndLine
+	d1:7 |
+	g1 |
+	d1:7 |
+	g1:7 | \myEndLine
+	c2. cis4:dim |
+	g2/d e2:m |
+	a2:7 d2:7 |
+	g2 c2:7 | \myEndLine
+	g1 |
+	\endBar
+	\endPart
+
+	\endSong
+	\endChords
+}
+{% endif %}
+{% if part == "VoiceWikifonia" %}\absolute {
+	\tempo "Swing" 4 = 144
+	\time 4/4
+	\key g \major
+
+	r2 r4 \once \omit TupletBracket \times 2/3 { d'8 e'8 d'8 } |
+	b'2 ~ b'4 b'8 a'8 ~ |
+	a'2. b'8 c''8 |
+	d''4 d''4 bes'8 ( a'8 ) g'8 c'8 ~ |
+	c'2. g'8 g'8 |
+	b'2 ~ b'8 b'8 b'8 b'8 ~ |
+	b'8 g'8 a'8 g'8 bes'8 ( a'8 ) g'8 a'8 ~ |
+	a'1 ~ |
+	a'4 r4 r8 d'8 e'8 d'8 |
+	b'2. b'8 a'8 ~ |
+	a'2. b'8 c''8 |
+	d''4 d''4 bes'8 a'8 g'8 c'8 ~ |
+	c'2 r8 g'8 a'8 g'8 |
+	b'8 ~ b'8 b'8 g'8 ~ g'2 ~ |
+	g'4 a'8 g'8 bes'8 a'8 ( g'8 ) g'8 ~ |
+	g'1 ~ |
+	g'4 r4 r2 |
+	\endBar
+}
+{% endif %}

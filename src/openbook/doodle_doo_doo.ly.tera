@@ -1,0 +1,96 @@
+{#
+default_version = "Wikifonia"
+
+[attributes]
+title = "Doodle-Doo-Doo"
+style = "Jazz"
+composer = "Art Kassel, Con Conrad"
+piece = "Swing"
+copyright = "Original composition (1924); public domain in the US"
+copyrightextra = "Instrumental lead sheet; later lyrics and arrangements are excluded."
+typesetter = "OpenBook contributors (MusicXML import)"
+completion = "3"
+uuid = "8b4f1336-6047-5402-910b-b47554d5969a"
+location = "Firehouse_Jazz_Band:11"
+remark = "Copyright status outside the US may differ."
+
+[versions.Wikifonia]
+doChords = true
+doVoice = true
+doLyrics = false
+doLyricsmore = false
+doLyricsmoremore = false
+doChordBars = false
+doGuitar = false
+doExtra = false
+doPrep = false
+doOwn = false
+#}
+{% if part == "Vars" %}
+{% endif %}
+{% if part == "Doc" %}
+	DONE:
+	- imported the historic melody and chord changes of the 1924 composition.
+	- local source: real_books_archive.gi/Wikifonia.tar.xz: Wikifonia/Art Kassel, Mel Stitzel - Doodle Doo Doo.mxl.
+	- jazz real/fake-book references: Firehouse_Jazz_Band:11.
+	- source revision: http://wikifonia.org/node/17963/revisions/23792/view.
+	- retained written measures, pickups, repeats and endings; lyrics and accompaniment omitted.
+	- the original composition is public domain in the US; no claim is made about later editions.
+	- US term reference: https://cspd.law.duke.edu/publicdomainday/2026.
+	- tempo is an editorial practice suggestion.
+	TODO:
+	- proofread against a historic edition and check by ear.
+{% endif %}
+{% if part == "ChordsWikifonia" %}\chordmode {
+	\startChords
+	\startSong
+
+	\myMark "A"
+	\startPart
+	g1 |
+	s1 |
+	e2:m7 a2:7 |
+	e2:m7 a2:7 | \myEndLine
+	d1:7 |
+	s1 |
+	g2:6 g2 |
+	g2:6 g2 | \myEndLine
+	c1 |
+	s1 |
+	g1 |
+	s4. e1*5/8:7 | \myEndLine
+	e2:m7 a2:7 |
+	e2:m7 a2:7 |
+	a2:m7 d2:7 |
+	g1 | \myEndLine
+	\endBar
+	\endPart
+
+	\endSong
+	\endChords
+}
+{% endif %}
+{% if part == "VoiceWikifonia" %}\absolute {
+	\tempo "Swing" 4 = 144
+	\time 2/2
+	\key g \major
+
+	g'8 d'8 g'8 c''8 ~ c''4 b'4 |
+	b'8 d'8 g'8 c''8 ~ c''4 b'4 |
+	b'8 ais'8 b'8 a'8 ~ a'2 |
+	b'8 ais'8 b'8 a'8 ~ a'2 |
+	a'8 d'8 fis'8 b'8 ~ b'4 a'4 |
+	a'8 d'8 fis'8 b'8 ~ b'4 a'4 |
+	a'8 g'8 a'8 g'8 ~ g'2 |
+	a'8 g'8 a'8 g'8 ~ g'2 |
+	c''8 b'8 c''8 e'8 ~ e'4. g'8 |
+	c''8 b'8 c''8 d''8 ~ d''4 c''4 |
+	b'8 ais'8 b'8 d'8 ~ d'4. g'8 |
+	b'8 ais'8 b'8 c''8 ~ c''4 b'4 |
+	b'8 ais'8 b'8 a'8 ~ a'4. a'8 |
+	b'8 ais'8 b'8 a'8 ~ a'4. b'8 |
+	c''8 d''8 c''8 b'8 ~ b'8. bes'16 a'4 |
+	g'2. r4 |
+	\endBar
+}
+{% endif %}

@@ -1,0 +1,130 @@
+{#
+default_version = "Wikifonia"
+
+[attributes]
+title = "I Can't Believe That You're in Love with Me"
+style = "Jazz"
+composer = "Jimmy McHugh"
+piece = "Swing"
+copyright = "Original composition (1926); public domain in the US"
+copyrightextra = "Instrumental lead sheet; later lyrics and arrangements are excluded."
+typesetter = "OpenBook contributors (MusicXML import)"
+completion = "3"
+uuid = "df9915ed-7b69-50f8-ba86-091453bf2909"
+location = "Firehouse_Jazz_Band:433, Fakebook_Django:76"
+remark = "Copyright status outside the US may differ."
+
+[versions.Wikifonia]
+doChords = true
+doVoice = true
+doLyrics = false
+doLyricsmore = false
+doLyricsmoremore = false
+doChordBars = false
+doGuitar = false
+doExtra = false
+doPrep = false
+doOwn = false
+#}
+{% if part == "Vars" %}
+{% endif %}
+{% if part == "Doc" %}
+	DONE:
+	- imported the historic melody and chord changes of the 1926 composition.
+	- local source: real_books_archive.gi/Wikifonia.tar.xz: Wikifonia/Clarence Gaskill, Jimmy McHugh - I Can't Believe That You're In Love With Me.mxl.
+	- jazz real/fake-book references: Firehouse_Jazz_Band:433, Fakebook_Django:76.
+	- source revision: http://wikifonia.org/node/2662/revisions/17903/view.
+	- retained written measures, pickups, repeats and endings; lyrics and accompaniment omitted.
+	- the original composition is public domain in the US; no claim is made about later editions.
+	- US term reference: https://cspd.law.duke.edu/publicdomainday/2026.
+	- tempo taken from archived MusicXML.
+	TODO:
+	- proofread against a historic edition and check by ear.
+{% endif %}
+{% if part == "ChordsWikifonia" %}\chordmode {
+	\startChords
+	\startSong
+
+	\myMark "A"
+	\startPart
+	\partial 4 s4 |
+	f1 |
+	f1:m |
+	c1 | \myEndLine
+	d1:7 |
+	d1:m7 |
+	g1:7 |
+	c1 | \myEndLine
+	c1:7 |
+	f1 |
+	f1:m |
+	c1 | \myEndLine
+	d1:7 |
+	d1:m7 |
+	g1:7 |
+	c1 | \myEndLine
+	s1 |
+	e1:7 |
+	s1 |
+	a1:7 | \myEndLine
+	s1 |
+	d1:7 |
+	s1 |
+	g1:7 | \myEndLine
+	g2:m7 c2:7 |
+	f1 |
+	f1:m |
+	c1 | \myEndLine
+	d1:7 |
+	d1:m7 |
+	g1:7 |
+	c1 | \myEndLine
+	f2. c4 |
+	\endBar
+	\endPart
+
+	\endSong
+	\endChords
+}
+{% endif %}
+{% if part == "VoiceWikifonia" %}\absolute {
+	\tempo "Swing" 4 = 120
+	\time 4/4
+	\key c \major
+
+	\partial 4 c''4 ^ "N.C." |
+	d''4. c''8 a'4. c''8 |
+	d''4. c''8 as'4. c''8 |
+	d''4. c''8 g'4. e''8 |
+	d''4. c''8 a'4. e'8 |
+	g'4. e'8 d'4. e'8 |
+	g'4. e'8 d'4. e'8 |
+	g'1 ~ |
+	g'2. c''4 |
+	d''4. c''8 a'4. c''8 |
+	d''4. c''8 as'4. c''8 |
+	d''4. c''8 g'4. e''8 |
+	d''4. c''8 a'4. e'8 |
+	g'4. e'8 d'4. e'8 |
+	g'4. e'8 g'4. a'8 |
+	c''1 ~ |
+	c''2. r4 |
+	e''4. cis''4 b'4 cis''8 |
+	e''4 cis''8 b'4. e'8 r8 |
+	b'1 |
+	a'1 |
+	d''4. b'8 a'4. b'8 |
+	d''4. b'8 a'4. d'8 |
+	a'1 |
+	g'2. c''4 ^ "N.C." |
+	d''4. c''8 a'4. c''8 |
+	d''4. c''8 as'4. c''8 |
+	d''4. c''8 g'4. e''8 |
+	d''4. c''8 a'4. e'8 |
+	g'4. e'8 d'4. e'8 |
+	g'4. e'8 g'4. a'8 |
+	c''1 ~ |
+	c''2. r4 |
+	\endBar
+}
+{% endif %}

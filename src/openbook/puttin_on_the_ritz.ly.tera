@@ -1,0 +1,179 @@
+{#
+default_version = "Wikifonia"
+
+[attributes]
+title = "Puttin' on the Ritz"
+style = "Jazz"
+composer = "Irving Berlin"
+piece = "Swing"
+copyright = "Original composition (1929); public domain in the US"
+copyrightextra = "Instrumental lead sheet; later lyrics and arrangements are excluded."
+typesetter = "OpenBook contributors (MusicXML import)"
+completion = "3"
+uuid = "96efdf85-2bfb-55cf-b9b2-2b388d2e2564"
+location = "Firehouse_Jazz_Band:309"
+remark = "Copyright status outside the US may differ."
+
+[versions.Wikifonia]
+doChords = true
+doVoice = true
+doLyrics = false
+doLyricsmore = false
+doLyricsmoremore = false
+doChordBars = false
+doGuitar = false
+doExtra = false
+doPrep = false
+doOwn = false
+#}
+{% if part == "Vars" %}
+{% endif %}
+{% if part == "Doc" %}
+	DONE:
+	- imported the historic melody and chord changes of the 1929 composition.
+	- local source: real_books_archive.gi/Wikifonia.tar.xz: Wikifonia/Irving Berlin - Puttin' On The Ritz.mxl.
+	- jazz real/fake-book references: Firehouse_Jazz_Band:309.
+	- source revision: http://wikifonia.org/node/9170/revisions/27432/view.
+	- retained written measures, pickups, repeats and endings; lyrics and accompaniment omitted.
+	- the original composition is public domain in the US; no claim is made about later editions.
+	- US term reference: https://cspd.law.duke.edu/publicdomainday/2026.
+	- tempo is an editorial practice suggestion.
+	TODO:
+	- proofread against a historic edition and check by ear.
+	- verify editorial chord spacing in measures 16, 23, 31, 48, 49; the archive places successive symbols at the same offset.
+{% endif %}
+{% if part == "ChordsWikifonia" %}\chordmode {
+	\startChords
+	\startSong
+
+	\myMark "A"
+	\startPart
+	f2/a aes2:dim |
+	g4.:m7 c1*5/8:7 |
+	f2/a aes2:dim |
+	g4.:m7 c1*5/8:7 | \myEndLine
+	aes2/c b2:dim |
+	ees4.:7/bes ees1*5/8:7 |
+	aes2/c b2:dim |
+	ees4.:7/bes ees1*5/8:7 | \myEndLine
+	c2:6/g cis2:dim |
+	d2:m7 g2:7 |
+	c2:6 cis2:dim |
+	d2:m7 g2:7 | \myEndLine
+	a2:m a2:m7 |
+	d1:7 |
+	g1:7 |
+	c4:7.9- c2:aug7 c4:7 | \myEndLine
+	\repeat volta 2 {
+	f1:m |
+	s1 |
+	s1 |
+	s4 c2.:7 | \myEndLine
+	c1:7.9- |
+	s1 |
+	f2:m f2:m/ees |
+	des2:9 c2:7 | \myEndLine
+	f1:m |
+	s1 |
+	s1 |
+	s4 c2.:7 | \myEndLine
+	c1:7.9- |
+	s1 |
+	f2:m f2:m/ees |
+	des2 f2:7/c | \myEndLine
+	bes1:m |
+	s2 ges4:9 f4:9 |
+	bes1:m6 |
+	ees2 ees2:7 | \myEndLine
+	aes2:6 f2:m7 |
+	bes2:m7 ees2:7 |
+	aes1:6 |
+	des1*5/8:9 c4.:9 | \myEndLine
+	f1:m |
+	s1 |
+	s1 |
+	s4 c2.:7 | \myEndLine
+	c1:7.9- |
+	s1 |
+	} \alternative {
+	{
+	f1:m |
+	des4:7 c4:7.9- c2:9 | \myEndLineVoltaNotLast
+	}
+	{
+	f2:m bes2:m6 |
+	f1:6 | \myEndLineVoltaLast
+	}
+	}
+	\endBar
+	\endPart
+
+	\endSong
+	\endChords
+}
+{% endif %}
+{% if part == "VoiceWikifonia" %}\absolute {
+	\tempo "Swing" 4 = 144
+	\time 4/4
+	\key f \major
+
+	c'4 d'4 f'4 d'4 |
+	f'8 e'4 g'8 ~ g'2 |
+	c'4 d'4 f'4 d'4 |
+	f'8 e'4 g'8 ~ g'2 |
+	es'4 f'4 as'4 f'4 |
+	as'8 g'4 bes'8 ~ bes'2 |
+	es'4 f'4 as'4 f'4 |
+	as'8 g'4 bes'8 ~ bes'2 |
+	c''2 g'4. e'8 |
+	g'4 f'4 e'8 d'4. |
+	c''2 g'4. e'8 |
+	g'4 f'4 e'8 d'4. |
+	a'4 a'4 e'4 e'4 |
+	a'1 |
+	b'4 b'4 b'8 a'8 g'4 |
+	c''1 |
+	\repeat volta 2 {
+	\key as \major f'4 as'4 c''4 c'8 f'8 ~ |
+	f'8 as'8 c''4 c'4 f'4 |
+	as'4 c''4 c'8 f'4 as'8 |
+	c''4 c'4 e'4 g'4 |
+	bes'1 ~ |
+	bes'2 c''8 bes'8 as'8 g'8 |
+	f'1 |
+	r2 r2 |
+	f'4 as'4 c''4 c'8 f'8 ~ |
+	f'8 as'8 c''4 c'4 f'4 |
+	as'4 c''4 c'8 f'4 as'8 |
+	c''4 c'4 e'4 g'4 |
+	bes'1 ~ |
+	bes'2 c''8 bes'8 as'8 g'8 |
+	f'1 |
+	r2 r2 |
+	bes'4 c''4 des''4 es''4 |
+	f''4 es''4 des''4 c''4 |
+	bes'4 r8 bes'8 ~ bes'2 |
+	r2 r2 |
+	as'4 bes'4 c''4 des''4 |
+	es''4 des''4 c''4 bes'4 |
+	as'4 r8 as'8 ~ as'2 |
+	as'8 as'4 as'8 ~ as'8 g'4. |
+	f'4 as'4 c''4 c'8 f'8 ~ |
+	f'8 as'8 c''4 c'4 f'4 |
+	as'4 c''4 c'8 f'4 as'8 |
+	c''4 c'4 e'4 g'4 |
+	bes'1 ~ |
+	bes'2 c''8 bes'8 as'8 g'8 |
+	} \alternative {
+	{
+	f'1 ~ |
+	f'2 r2 |
+	}
+	{
+	f'1 ~ |
+	f'2. r4 |
+	}
+	}
+	\endBar
+}
+{% endif %}

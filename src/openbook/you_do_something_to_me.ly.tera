@@ -1,0 +1,145 @@
+{#
+default_version = "Wikifonia"
+
+[attributes]
+title = "You Do Something to Me"
+style = "Jazz"
+composer = "Cole Porter"
+piece = "Swing"
+copyright = "Original composition (1929); public domain in the US"
+copyrightextra = "Instrumental lead sheet; later lyrics and arrangements are excluded."
+typesetter = "OpenBook contributors (MusicXML import)"
+completion = "3"
+uuid = "b9138d09-a0f9-5825-89a1-d1ac287cff83"
+location = "Real_Book_3:355, 557_Standards:441, StandardsBook:532, Just_Standards_Real_Book:388"
+remark = "Copyright status outside the US may differ."
+
+[versions.Wikifonia]
+doChords = true
+doVoice = true
+doLyrics = false
+doLyricsmore = false
+doLyricsmoremore = false
+doChordBars = false
+doGuitar = false
+doExtra = false
+doPrep = false
+doOwn = false
+#}
+{% if part == "Vars" %}
+{% endif %}
+{% if part == "Doc" %}
+	DONE:
+	- imported the historic melody and chord changes of the 1929 composition.
+	- local source: real_books_archive.gi/Wikifonia.tar.xz: Wikifonia/Cole Porter - You Do Something To Me.mxl.
+	- jazz real/fake-book references: Real_Book_3:355, 557_Standards:441, StandardsBook:532, Just_Standards_Real_Book:388.
+	- source revision: http://wikifonia.org/node/4153/revisions/18298/view.
+	- retained written measures, pickups, repeats and endings; lyrics and accompaniment omitted.
+	- the original composition is public domain in the US; no claim is made about later editions.
+	- US term reference: https://cspd.law.duke.edu/publicdomainday/2026.
+	- tempo is an editorial practice suggestion.
+	TODO:
+	- proofread against a historic edition and check by ear.
+	- verify editorial chord spacing in measures 17, 31, 32; the archive places successive symbols at the same offset.
+{% endif %}
+{% if part == "ChordsWikifonia" %}\chordmode {
+	\startChords
+	\startSong
+
+	\myMark "A"
+	\startPart
+	\repeat volta 2 {
+	ees1:6 |
+	d1:7 |
+	ees4:6 ees2:maj7 ees4:dim |
+	ees1:6 | \myEndLine
+	ees4:6 ees2.:maj7 |
+	ees2:6 e2:dim |
+	f1:m7 |
+	bes1:7 | \myEndLine
+	f1:m |
+	e1:dim |
+	f2.:m aes4:m6 |
+	c1:7 | \myEndLine
+	f4:7 c2.:m7 |
+	f1:7 |
+	f1:m7 |
+	bes1:7 | \myEndLine
+	g2:m7 ees2 |
+	fis1:dim |
+	bes1:7 |
+	c1:7 | \myEndLine
+	b1 |
+	bes2. bes4:dim |
+	aes2. aes4:m6 |
+	g2.:m bes4:7 | \myEndLine
+	ees1:6 |
+	d1:7 |
+	ees2.:6 g4:m7 |
+	c1:7 | \myEndLine
+	f4:7.5- f2.:7 |
+	f2:m7 bes2:7 |
+	} \alternative {
+	{
+	ees4 f2:m7 bes4:7 | \myEndLineVoltaNotLast
+	}
+	{
+	ees2 des2:7 | \myEndLineVoltaLast
+	}
+	}
+	ees1 |
+	\endBar
+	\endPart
+
+	\endSong
+	\endChords
+}
+{% endif %}
+{% if part == "VoiceWikifonia" %}\absolute {
+	\tempo "Swing" 4 = 144
+	\time 2/2
+	\key es \major
+
+	\repeat volta 2 {
+	es'1 |
+	d'1 |
+	es'4 f'2 d'4 |
+	c'1 |
+	c'4 d'2 bes4 |
+	c'4 es'4 g'4 bes'4 |
+	bes'1 |
+	d'1 |
+	as'1 |
+	g'1 |
+	as'4 c''2 as'4 |
+	g'1 |
+	f'4 g'2 c'4 |
+	f'4 g'4 a'4 d''4 |
+	c''1 |
+	bes'2. r4 |
+	bes'1 |
+	es''1 |
+	d''2 as'4 bes'4 |
+	c''1 |
+	b'4. fis'8 ~ fis'4 gis'4 |
+	bes'4. f'8 ~ f'4 g'4 |
+	as'4. es'8 ~ es'4 f'4 |
+	g'2. f'4 |
+	es'1 |
+	d'1 |
+	es'4 f'2 d'4 |
+	c'2. c''4 |
+	b'4 c''2 g'4 |
+	f'2 g'2 |
+	} \alternative {
+	{
+	es'1 |
+	}
+	{
+	es'1 ~ |
+	}
+	}
+	es'2. r4 |
+	\endBar
+}
+{% endif %}

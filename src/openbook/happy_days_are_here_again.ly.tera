@@ -1,0 +1,150 @@
+{#
+default_version = "Wikifonia"
+
+[attributes]
+title = "Happy Days Are Here Again"
+style = "Jazz"
+composer = "Milton Ager"
+piece = "Swing"
+copyright = "Original composition (1929); public domain in the US"
+copyrightextra = "Instrumental lead sheet; later lyrics and arrangements are excluded."
+typesetter = "OpenBook contributors (MusicXML import)"
+completion = "3"
+uuid = "bbccb2f2-43e7-5841-bde5-e9857794bd2b"
+location = "Just_Standards_Real_Book:134"
+remark = "Copyright status outside the US may differ."
+
+[versions.Wikifonia]
+doChords = true
+doVoice = true
+doLyrics = false
+doLyricsmore = false
+doLyricsmoremore = false
+doChordBars = false
+doGuitar = false
+doExtra = false
+doPrep = false
+doOwn = false
+#}
+{% if part == "Vars" %}
+{% endif %}
+{% if part == "Doc" %}
+	DONE:
+	- imported the historic melody and chord changes of the 1929 composition.
+	- local source: real_books_archive.gi/Wikifonia.tar.xz: Wikifonia/Milton Ager, Jack Yellen - Happy Days are Here Again.mxl.
+	- jazz real/fake-book references: Just_Standards_Real_Book:134.
+	- source revision: http://wikifonia.org/node/18737/revisions/24791/view.
+	- retained written measures, pickups, repeats and endings; lyrics and accompaniment omitted.
+	- the original composition is public domain in the US; no claim is made about later editions.
+	- US term reference: https://cspd.law.duke.edu/publicdomainday/2026.
+	- tempo is an editorial practice suggestion.
+	TODO:
+	- proofread against a historic edition and check by ear.
+{% endif %}
+{% if part == "ChordsWikifonia" %}\chordmode {
+	\startChords
+	\startSong
+
+	\myMark "A"
+	\startPart
+	s1 |
+	s1 |
+	c1 |
+	s1 | \myEndLine
+	c1 |
+	s1 |
+	s1 |
+	s1 | \myEndLine
+	c1 |
+	s2. c4:dim |
+	g1:7 |
+	s1 | \myEndLine
+	s1 |
+	s1 |
+	c1 |
+	f1 | \myEndLine
+	c1 |
+	s1 |
+	c1 |
+	s1 | \myEndLine
+	s1 |
+	c1 |
+	s1 |
+	s1 | \myEndLine
+	s1 |
+	c1 |
+	s2. c4:dim |
+	g1:7 | \myEndLine
+	s1 |
+	s1 |
+	s1 |
+	c1 | \myEndLine
+	f1 |
+	c2. f4 |
+	c2 a2:m6 |
+	e1 | \myEndLine
+	b1:7 |
+	c1:m6 |
+	s2 c2:m6 |
+	g1 | \myEndLine
+	d1:7 |
+	g1:7 |
+	s1 |
+	\endBar
+	\endPart
+
+	\endSong
+	\endChords
+}
+{% endif %}
+{% if part == "VoiceWikifonia" %}\absolute {
+	\tempo "Swing" 4 = 144
+	\time 4/4
+	\key c \major
+
+	c''4 ^ "Brightly" c''8 c''8 c''4 c''4 |
+	c''4 r4 g'2 |
+	\mark \markup { \musicglyph "scripts.segno" } c'4 r4 e'4 e'4 ( |
+	e'4 ) g'2. - "Gaug" |
+	g'4 r4 c''4 c''4 ( |
+	c''4 ) e''2. |
+	e''4 r4 c''4 c''4 ( |
+	c''4 ) g'2. - "Gaug" |
+	g'4 r4 e'4 e'4 ( |
+	e'4 ) e''2 es''4 |
+	d''4 r4 b'4 b'4 ( |
+	b'4 ) g'2. |
+	g'4 r4 f'4 f'4 ( |
+	f'4 ) d''2 e''4 |
+	c''2 c''2 |
+	c''2 c''2 |
+	c''2 r4 a'4 |
+	g'4 f'4 e'4 d'4 |
+	c''2. r4 ^ "Fine" |
+	c'4 r4 e'4 e'4 ( |
+	e'4 ) g'2. - "Gaug" |
+	g'4 r4 c''4 c''4 ( |
+	c''4 ) e''2. |
+	e''4 r4 c''4 c''4 ( |
+	c''4 ) g'2. - "Gaug" |
+	g'4 r4 e'4 e'4 ( |
+	e'4 ) e''2 es''4 |
+	d''4 r4 b'4 b'4 ( |
+	b'4 ) g'2. |
+	g'4 r4 f'4 f'4 ( |
+	f'4 ) d''2 e''4 |
+	c''2 c''2 |
+	c''2 c''2 |
+	c''4 r4 g'8 g'8 a'4 |
+	c''4 r4 c''2 |
+	b'2 e'2 |
+	fis'4 gis'2 a'4 |
+	b'1 ( |
+	b'2 ) c''2 |
+	d''2 g'2 |
+	a'4 b'2 c''4 |
+	d''1 ( |
+	d''4 ) f'4 e'4 ^ "D.S.al fine" d'4 |
+	\endBar
+}
+{% endif %}

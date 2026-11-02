@@ -1,0 +1,147 @@
+{#
+default_version = "Wikifonia"
+
+[attributes]
+title = "You're Driving Me Crazy"
+style = "Jazz"
+composer = "Walter Donaldson"
+piece = "Swing"
+copyright = "Original composition (1930); public domain in the US"
+copyrightextra = "Instrumental lead sheet; later lyrics and arrangements are excluded."
+typesetter = "OpenBook contributors (MusicXML import)"
+completion = "3"
+uuid = "f007268d-9a87-5e80-bbdd-e95d8cbc609c"
+location = "557_Standards:443"
+remark = "Copyright status outside the US may differ."
+
+[versions.Wikifonia]
+doChords = true
+doVoice = true
+doLyrics = false
+doLyricsmore = false
+doLyricsmoremore = false
+doChordBars = false
+doGuitar = false
+doExtra = false
+doPrep = false
+doOwn = false
+#}
+{% if part == "Vars" %}
+{% endif %}
+{% if part == "Doc" %}
+	DONE:
+	- imported the historic melody and chord changes of the 1930 composition.
+	- local source: real_books_archive.gi/Wikifonia.tar.xz: Wikifonia/Walter Donaldson - You're Driving Me Crazy.mxl.
+	- jazz real/fake-book references: 557_Standards:443.
+	- source revision: http://wikifonia.org/node/4026/revisions/28530/view.
+	- retained written measures, pickups, repeats and endings; lyrics and accompaniment omitted.
+	- the original composition is public domain in the US; no claim is made about later editions.
+	- US term reference: https://cspd.law.duke.edu/publicdomainday/2026.
+	- tempo is an editorial practice suggestion.
+	TODO:
+	- proofread against a historic edition and check by ear.
+	- verify editorial chord spacing in measures 31, 33; the archive places successive symbols at the same offset.
+{% endif %}
+{% if part == "ChordsWikifonia" %}\chordmode {
+	\startChords
+	\startSong
+
+	\myMark "A"
+	\startPart
+	\repeat volta 2 {
+	f1:maj7 |
+	a2:m7 d2:7 |
+	g2:m7 c2:7 |
+	c1:7 | \myEndLine
+	g1:m7 |
+	c1:7 |
+	f1:maj7 |
+	g2.:m7 gis4:dim7 | \myEndLine
+	f1:maj7 |
+	a2:m7 d2:7 |
+	g2:m7 c2:7 |
+	s1 | \myEndLine
+	g1:m7 |
+	c1:7 |
+	f1:maj7 |
+	b2.:m7 e4:7 | \myEndLine
+	a2. a4:m/c |
+	b2:m7 e2:7 |
+	a1:maj7 |
+	b2.:m7 e4:7 | \myEndLine
+	a2.:maj7 a4:m/c |
+	b2:m7 e2:7 |
+	a2:7 d2:7 |
+	c2:7 c2:aug | \myEndLine
+	f1:maj7 |
+	a2:m7 d2:7 |
+	g2:m7 c2:7 |
+	s1 | \myEndLine
+	g1:m7 |
+	c1:7 |
+	} \alternative {
+	{
+	f2 aes2:dim7 |
+	c2:7 c2:aug | \myEndLineVoltaNotLast
+	}
+	{
+	f2:maj7 des2:7 | \myEndLineVoltaLast
+	}
+	}
+	f1 |
+	\endBar
+	\endPart
+
+	\endSong
+	\endChords
+}
+{% endif %}
+{% if part == "VoiceWikifonia" %}\absolute {
+	\tempo "Swing" 4 = 144
+	\time 4/4
+	\key f \major
+
+	\repeat volta 2 {
+	c''1 ~ |
+	c''4 d''4 d''8. c''16 d''4 |
+	d''2 c''2 ~ |
+	c''2 bes'8 a'8 g'8 d'8 ~ |
+	d'1 ~ |
+	d'2 bes'8 a'8 g'8 d'8 ~ |
+	d'1 ~ |
+	d'4 a'4 bes'4 b'4 |
+	c''1 ~ |
+	c''4 d''4 d''8. c''16 d''4 |
+	d''2 c''2 ~ |
+	c''2 bes'8 a'8 g'8 d'8 ~ |
+	d'1 |
+	e'1 |
+	f'1 ~ |
+	f'2. e''4 |
+	e''2. e'8. f'16 |
+	fis'8 fis'4 g'8 gis'8 gis'4 g'8 |
+	fis'8 fis'4 g'8 gis'8 g'8 gis'8 fis'8 ~ |
+	fis'2. e''4 |
+	e''2. e'8. f'16 |
+	fis'8 fis'4 g'8 gis'8 gis'4 e'8 |
+	a'8 a'4 gis'8 a'8 g'8 a'8 c''8 ~ |
+	c''2 c''2 |
+	c''1 ~ |
+	c''4 d''4 d''8. c''16 d''4 |
+	d''2 c''2 ~ |
+	c''2 bes'8 a'8 g'8 d'8 ~ |
+	d'1 |
+	e'1 |
+	} \alternative {
+	{
+	f'1 |
+	r2 c''2 |
+	}
+	{
+	f'1 ~ |
+	}
+	}
+	f'2. r4 |
+	\endBar
+}
+{% endif %}

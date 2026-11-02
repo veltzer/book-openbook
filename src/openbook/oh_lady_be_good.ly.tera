@@ -1,0 +1,147 @@
+{#
+default_version = "Wikifonia"
+
+[attributes]
+title = "Oh, Lady Be Good!"
+style = "Jazz"
+composer = "George Gershwin"
+piece = "Swing"
+copyright = "Original composition (1924); public domain in the US"
+copyrightextra = "Instrumental lead sheet; later lyrics and arrangements are excluded."
+typesetter = "OpenBook contributors (MusicXML import)"
+completion = "3"
+uuid = "3cc03f3b-0a11-50d9-bcb5-edeccaaacdb3"
+location = "Firehouse_Jazz_Band:327, Colorado:164, Colorado_Cookbook:164, StandardsBook:326"
+remark = "Copyright status outside the US may differ."
+
+[versions.Wikifonia]
+doChords = true
+doVoice = true
+doLyrics = false
+doLyricsmore = false
+doLyricsmoremore = false
+doChordBars = false
+doGuitar = false
+doExtra = false
+doPrep = false
+doOwn = false
+#}
+{% if part == "Vars" %}
+{% endif %}
+{% if part == "Doc" %}
+	DONE:
+	- imported the historic melody and chord changes of the 1924 composition.
+	- local source: real_books_archive.gi/Wikifonia.tar.xz: Wikifonia/George Gershwin, Ira Gershwin - Oh Lady Be Good.mxl.
+	- jazz real/fake-book references: Firehouse_Jazz_Band:327, Colorado:164, Colorado_Cookbook:164, StandardsBook:326.
+	- source revision: http://wikifonia.org/node/3840/revisions/17331/view.
+	- retained written measures, pickups, repeats and endings; lyrics and accompaniment omitted.
+	- the original composition is public domain in the US; no claim is made about later editions.
+	- US term reference: https://cspd.law.duke.edu/publicdomainday/2026.
+	- tempo is an editorial practice suggestion.
+	TODO:
+	- proofread against a historic edition and check by ear.
+	- verify editorial chord spacing in measures 31, 33; the archive places successive symbols at the same offset.
+{% endif %}
+{% if part == "ChordsWikifonia" %}\chordmode {
+	\startChords
+	\startSong
+
+	\myMark "A"
+	\startPart
+	\repeat volta 2 {
+	g2 d4:7 g4 |
+	c1:7 |
+	g1 |
+	s2 gis2:dim | \myEndLine
+	d1:7 |
+	s1 |
+	g1 |
+	s1 | \myEndLine
+	s2 d4:7 g4 |
+	c1:7 |
+	g1 |
+	s2 gis2:dim | \myEndLine
+	d1:7 |
+	s1 |
+	g1 |
+	s2 g2:7 | \myEndLine
+	c1 |
+	d1:7 |
+	c2:6 g2 |
+	s2 d2:7 | \myEndLine
+	e2:m b2:aug |
+	e2:m a2:7 |
+	a2:m7 d2:7 |
+	e2:m a4:m7 a4:7.5- | \myEndLine
+	g2 d4:7 g4 |
+	c1:7 |
+	g1 |
+	s2 gis2:dim | \myEndLine
+	d1:7 |
+	s1 |
+	g2 d2:7 |
+	} \alternative {
+	{
+	a2:m7 d2:7 | \myEndLineVoltaNotLast
+	}
+	{
+	g2 c2:7 | \myEndLineVoltaLast
+	}
+	}
+	g1 |
+	\endBar
+	\endPart
+
+	\endSong
+	\endChords
+}
+{% endif %}
+{% if part == "VoiceWikifonia" %}\absolute {
+	\tempo "Swing" 4 = 144
+	\time 4/4
+	\key g \major
+
+	\repeat volta 2 {
+	d''2 c''4 b'4 |
+	d''2 d''2 |
+	\times 2/3 { d''4 b'4 g'4 } d'2 ~ |
+	d'2 d''2 |
+	\times 2/3 { d''4 c''4 a'4 } d'2 ~ |
+	d'2 b'2 |
+	g'1 ~ |
+	g'2. r4 |
+	d''2 c''4 b'4 |
+	d''2 d''2 |
+	\times 2/3 { d''4 b'4 g'4 } d'2 ~ |
+	d'2 d''2 |
+	\times 2/3 { d''4 c''4 a'4 } d'2 ~ |
+	d'2 b'2 |
+	g'1 ~ |
+	g'2 r2 |
+	e''1 |
+	r4 e''4 e''4 e''4 |
+	e''2 d''2 ~ |
+	d''2 r2 |
+	r4 b'4 b'4 b'4 |
+	b'4 b'4 b'4 b'4 |
+	b'2 a'2 |
+	r4 b'4 c''4 cis''4 |
+	d''2 c''4 b'4 |
+	d''2 d''2 |
+	\times 2/3 { d''4 b'4 g'4 } d'2 ~ |
+	d'2 d''2 |
+	\times 2/3 { d''4 c''4 a'4 } d'2 ~ |
+	d'2 b'2 |
+	g'1 ~ |
+	} \alternative {
+	{
+	g'4 r4 r2 |
+	}
+	{
+	g'1 ~ |
+	}
+	}
+	g'2 r2 |
+	\endBar
+}
+{% endif %}

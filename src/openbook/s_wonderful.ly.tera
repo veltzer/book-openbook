@@ -1,0 +1,129 @@
+{#
+default_version = "Wikifonia"
+
+[attributes]
+title = "'S Wonderful"
+style = "Jazz"
+composer = "George Gershwin"
+piece = "Swing"
+copyright = "Original composition (1927); public domain in the US"
+copyrightextra = "Instrumental lead sheet; later lyrics and arrangements are excluded."
+typesetter = "OpenBook contributors (MusicXML import)"
+completion = "3"
+uuid = "a74e1dd7-f6e0-597e-a981-ed1ddb1f1d78"
+location = "557_Standards:364, StandardsBook:364, Just_Standards_Real_Book:292"
+remark = "Copyright status outside the US may differ."
+
+[versions.Wikifonia]
+doChords = true
+doVoice = true
+doLyrics = false
+doLyricsmore = false
+doLyricsmoremore = false
+doChordBars = false
+doGuitar = false
+doExtra = false
+doPrep = false
+doOwn = false
+#}
+{% if part == "Vars" %}
+{% endif %}
+{% if part == "Doc" %}
+	DONE:
+	- imported the historic melody and chord changes of the 1927 composition.
+	- local source: real_books_archive.gi/Wikifonia.tar.xz: Wikifonia/George Gershwin, Ira Gershwin - 'S Wonderful!.mxl.
+	- jazz real/fake-book references: 557_Standards:364, StandardsBook:364, Just_Standards_Real_Book:292.
+	- source revision: http://wikifonia.org/node/4090/revisions/15964/view.
+	- retained written measures, pickups, repeats and endings; lyrics and accompaniment omitted.
+	- the original composition is public domain in the US; no claim is made about later editions.
+	- US term reference: https://cspd.law.duke.edu/publicdomainday/2026.
+	- tempo is an editorial practice suggestion.
+	TODO:
+	- proofread against a historic edition and check by ear.
+	- verify editorial chord spacing in measures 7, 20, 28; the archive places successive symbols at the same offset.
+{% endif %}
+{% if part == "ChordsWikifonia" %}\chordmode {
+	\startChords
+	\startSong
+
+	\myMark "A"
+	\startPart
+	ees1 |
+	s1 |
+	e1:dim |
+	s1 | \myEndLine
+	f1:m7 |
+	s2 bes2:7 |
+	ees2 c2:7.9- |
+	f2.:9 bes4:7.5- | \myEndLine
+	s1 |
+	s1 |
+	e1:dim |
+	s1 | \myEndLine
+	f1:m7 |
+	s2 bes2:7 |
+	ees1 |
+	s2 a2:m7.5- | \myEndLine
+	g1/d |
+	d1:7/c |
+	g1/b |
+	a2:m7 d2:7 | \myEndLine
+	g1:9 |
+	s1 |
+	f1:9 |
+	bes2:13 bes2:7.9- | \myEndLine
+	ees1 |
+	s1 |
+	c2:m f2:9 |
+	c2:m f2:7 | \myEndLine
+	f2:m7 c2:7.9- |
+	f2:m7 bes2:13 |
+	ees1 |
+	s1 | \myEndLine
+	\endBar
+	\endPart
+
+	\endSong
+	\endChords
+}
+{% endif %}
+{% if part == "VoiceWikifonia" %}\absolute {
+	\tempo "Swing" 4 = 144
+	\time 4/4
+	\key es \major
+
+	bes'4. bes'8 g'2 ~ |
+	g'1 |
+	bes'4. bes'8 g'2 ~ |
+	g'1 |
+	bes'4. bes'8 g'2 ~ |
+	g'2 bes'2 |
+	es'1 ~ |
+	es'2. r4 |
+	bes'4. ^ "En" bes'8 g'2 ~ |
+	g'1 |
+	bes'4. bes'8 g'2 ~ |
+	g'1 |
+	bes'4. bes'8 g'2 ~ |
+	g'2 bes'2 |
+	c''1 ~ |
+	c''2 es''2 |
+	d''1 |
+	r4 d''4 d''4 d''4 |
+	e''4. d''8 d''2 ~ |
+	d''1 |
+	r4 d''4 d''4 d''4 |
+	d''4 d''4 d''4 d''4 |
+	d''4. c''8 c''2 ~ |
+	c''2 ces''2 |
+	bes'4. bes'8 g'2 ~ |
+	g'1 |
+	es''4. es''8 c''2 ~ |
+	c''1 |
+	r8 es''4. as'4 g'4 |
+	bes'2 g'2 |
+	es'1 ~ |
+	es'2. r4 |
+	\endBar
+}
+{% endif %}

@@ -1,0 +1,130 @@
+{#
+default_version = "Wikifonia"
+
+[attributes]
+title = "That's a Plenty"
+style = "Jazz"
+composer = "Lew Pollack"
+piece = "Swing"
+copyright = "Original composition (1914); public domain in the US"
+copyrightextra = "Instrumental lead sheet; later lyrics and arrangements are excluded."
+typesetter = "OpenBook contributors (MusicXML import)"
+completion = "3"
+uuid = "02bedd16-828d-5c3b-b95a-9c3e271c923d"
+location = "Firehouse_Jazz_Band:356"
+remark = "Copyright status outside the US may differ."
+
+[versions.Wikifonia]
+doChords = true
+doVoice = true
+doLyrics = false
+doLyricsmore = false
+doLyricsmoremore = false
+doChordBars = false
+doGuitar = false
+doExtra = false
+doPrep = false
+doOwn = false
+#}
+{% if part == "Vars" %}
+{% endif %}
+{% if part == "Doc" %}
+	DONE:
+	- imported the historic melody and chord changes of the 1914 composition.
+	- local source: real_books_archive.gi/Wikifonia.tar.xz: Wikifonia/Lew Pollack - That's-A-Plenty.mxl.
+	- jazz real/fake-book references: Firehouse_Jazz_Band:356.
+	- source revision: http://wikifonia.org/node/19716/revisions/26018/view.
+	- retained written measures, pickups, repeats and endings; lyrics and accompaniment omitted.
+	- the original composition is public domain in the US; no claim is made about later editions.
+	- US term reference: https://cspd.law.duke.edu/publicdomainday/2026.
+	- tempo is an editorial practice suggestion.
+	TODO:
+	- proofread against a historic edition and check by ear.
+{% endif %}
+{% if part == "ChordsWikifonia" %}\chordmode {
+	\startChords
+	\startSong
+
+	\myMark "A"
+	\startPart
+	\repeat volta 2 {
+	d1:m |
+	s1 |
+	s1 |
+	s1 | \myEndLine
+	a1:7 |
+	s1 |
+	} \alternative {
+	{
+	d2:m d2:m7/c |
+	bes2:7 a2:7 | \myEndLineVoltaNotLast
+	}
+	{
+	d2:m e4:m7.5- a4:7 | \myEndLineVoltaLast
+	}
+	}
+	d1:m |
+	g1:m7 |
+	c1:7 | \myEndLine
+	f1 |
+	f2:maj7 f2:6 |
+	g1:m7 |
+	c1:7 | \myEndLine
+	f2 aes2:dim |
+	g2:m7.5- f2:6 |
+	g1:m7 |
+	c1:7 | \myEndLine
+	f1 |
+	f2:maj7 f2:6 |
+	gis1:dim |
+	f4:7 ees4:7 d2:7 | \myEndLine
+	g2:m7 c2:7 |
+	f2 bes4:7 a4:7 |
+	\endBar
+	\endPart
+
+	\endSong
+	\endChords
+}
+{% endif %}
+{% if part == "VoiceWikifonia" %}\absolute {
+	\tempo "Swing" 4 = 144
+	\time 2/2
+	\key f \major
+
+	\repeat volta 2 {
+	d''4 cis''4 d''4 cis''4 |
+	d''4 cis''8 c''8 ~ c''8 c''8 b'8 b'8 |
+	bes'4 a'4 bes'4 a'4 |
+	bes'4 a'8 g'8 ~ g'8 g'8 f'8 f'8 |
+	e'8 bes'4 a'8 ~ a'4 r4 |
+	r8 e'4 bes'8 a'4 r8 a'8 ~ |
+	} \alternative {
+	{
+	a'8 d''4 a'8 \once \omit TupletBracket \times 2/3 { f'8 g'8 gis'8 } a'8. f'16 |
+	d'8 f'8 d'8 e'8 ~ e'8 a'4 r8 |
+	}
+	{
+	a'8 d''4 a'8 g'4 f'8 d'8 ~ |
+	}
+	}
+	d'2 d''4 \once \omit TupletBracket \times 2/3 { dis'8 fis'8 a'8 } ^ "Fine" |
+	bes'8 g'4 bes'8 ~ bes'4 r8 g'8 |
+	bes'8 g'8 bes'8 g'8 ~ g'8 c''4 bes'8 |
+	a'4 f'4 a'4 r8 f'8 |
+	a'8 f'8 a'8 f'8 ~ f'8 d''4 c''8 |
+	bes'4 g'8 bes'8 ~ bes'4 r8 g'8 |
+	bes'8 g'8 bes'8 g'8 ~ g'8 c''4 bes'8 |
+	r8 c''4 d''8 f''8 d''4 f''8 |
+	des''8 bes'4 g'8 f'4 r4 |
+	bes'8 g'4 bes'8 ~ bes'4 r8 g'8 |
+	bes'8 g'8 bes'8 g'8 ~ g'8 c''4 bes'8 |
+	a'4 f'4 a'4 r8 f'8 |
+	a'8 f'8 a'8 f'8 ~ f'8 d''4 c''8 |
+	b'4 gis'8 f'8 d'8 f'8 gis'8 b'8 |
+	c''8 b'8 bes'8 a'8 ~ a'8 e''4 d''8 |
+	c''8 bes'8 c''8 bes'8 a'8 a'4 f'8 ~ |
+	f'4. bes'4 a'4 r8 ^ "D.C. al Fine" |
+	\endBar
+}
+{% endif %}

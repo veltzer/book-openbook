@@ -1,0 +1,147 @@
+{#
+default_version = "Wikifonia"
+
+[attributes]
+title = "With a Song in My Heart"
+style = "Jazz"
+composer = "Richard Rodgers"
+piece = "Swing"
+copyright = "Original composition (1929); public domain in the US"
+copyrightextra = "Instrumental lead sheet; later lyrics and arrangements are excluded."
+typesetter = "OpenBook contributors (MusicXML import)"
+completion = "3"
+uuid = "0ef52b5f-cd15-56ca-a129-affc103ba885"
+location = "557_Standards:431, StandardsBook:524, Just_Standards_Real_Book:384"
+remark = "Copyright status outside the US may differ."
+
+[versions.Wikifonia]
+doChords = true
+doVoice = true
+doLyrics = false
+doLyricsmore = false
+doLyricsmoremore = false
+doChordBars = false
+doGuitar = false
+doExtra = false
+doPrep = false
+doOwn = false
+#}
+{% if part == "Vars" %}
+{% endif %}
+{% if part == "Doc" %}
+	DONE:
+	- imported the historic melody and chord changes of the 1929 composition.
+	- local source: real_books_archive.gi/Wikifonia.tar.xz: Wikifonia/Richard Rodgers, Lorenz hart - With A Song In My Heart.mxl.
+	- jazz real/fake-book references: 557_Standards:431, StandardsBook:524, Just_Standards_Real_Book:384.
+	- source revision: http://wikifonia.org/node/3815/revisions/24826/view.
+	- retained written measures, pickups, repeats and endings; lyrics and accompaniment omitted.
+	- the original composition is public domain in the US; no claim is made about later editions.
+	- US term reference: https://cspd.law.duke.edu/publicdomainday/2026.
+	- tempo is an editorial practice suggestion.
+	TODO:
+	- proofread against a historic edition and check by ear.
+	- verify editorial chord spacing in measures 15, 16, 26, 31; the archive places successive symbols at the same offset.
+{% endif %}
+{% if part == "ChordsWikifonia" %}\chordmode {
+	\startChords
+	\startSong
+
+	\myMark "A"
+	\startPart
+	\repeat volta 2 {
+	c1 |
+	g1:7 |
+	c1 |
+	g1:7 | \myEndLine
+	c1 |
+	e1:7 |
+	a1:m |
+	e1:7 | \myEndLine
+	a2:m a2:m7 |
+	a1:m6 |
+	f2 d2:m7 |
+	c1:6 | \myEndLine
+	b1:7 |
+	d2:m b2:7 |
+	e2:7 a2:7 |
+	d2:m7 g2:7 | \myEndLine
+	c1 |
+	g1:7 |
+	c1 |
+	g1:7 | \myEndLine
+	c1 |
+	e1:7 |
+	a1:m |
+	e1:7 | \myEndLine
+	a2:m a2:m7 |
+	a2:m6 d2:7 |
+	c1 |
+	d1:7 | \myEndLine
+	c1 |
+	d2:m7 g2:7 |
+	} \alternative {
+	{
+	c2 c2:dim |
+	cis2:7 g2:7 | \myEndLineVoltaNotLast
+	}
+	{
+	c1 | \myEndLineVoltaLast
+	}
+	}
+	s1 |
+	\endBar
+	\endPart
+
+	\endSong
+	\endChords
+}
+{% endif %}
+{% if part == "VoiceWikifonia" %}\absolute {
+	\tempo "Swing" 4 = 144
+	\time 2/2
+	\key c \major
+
+	\repeat volta 2 {
+	r4 g'8 fis'8 a'4 g'8 fis'8 |
+	g'1 ~ |
+	g'4 g'8 fis'8 a'4 g'8 fis'8 |
+	g'4 f'8 e'8 f'2 ~ |
+	f'4 e'8 dis'8 f'4 e'8 dis'8 |
+	e'1 ~ |
+	e'4 e'8 dis'8 f'4 e'8 dis'8 |
+	e'4 d'8 cis'8 d'2 ~ |
+	d'4 c'8 b8 d'4 c'4 |
+	a'1 ~ |
+	a'4 a'4 \times 2/3 { a'4 b'4 c''4 } |
+	a'1 ~ |
+	a'4 a'4 \times 2/3 { a'4 b'4 c''4 } |
+	a'2 b'2 |
+	e'1 |
+	f'1 |
+	r4 g'8 fis'8 a'4 g'8 fis'8 |
+	g'1 ~ |
+	g'4 g'8 fis'8 a'4 g'8 fis'8 |
+	g'4 f'8 e'8 f'2 ~ |
+	f'4 e'8 dis'8 f'4 e'8 dis'8 |
+	e'1 ~ |
+	e'4 e'8 dis'8 f'4 e'8 dis'8 |
+	e'4 d'8 cis'8 d'2 |
+	r4 c'8 b8 d'4 c'4 |
+	a'1 ~ |
+	a'4 g'8 fis'8 a'4 g'4 |
+	c''1 ~ |
+	c''4 c''8 b'8 d''4 c''8 b'8 |
+	c''2 d''2 |
+	} \alternative {
+	{
+	c''1 ~ |
+	c''4 r4 r2 |
+	}
+	{
+	c''1 ~ |
+	}
+	}
+	c''2 ~ c''4 r4 |
+	\endBar
+}
+{% endif %}

@@ -1,0 +1,191 @@
+{#
+default_version = "Wikifonia"
+
+[attributes]
+title = "St. Louis Blues"
+style = "Jazz"
+composer = "W. C. Handy"
+piece = "Swing"
+copyright = "Original composition (1914); public domain in the US"
+copyrightextra = "Instrumental lead sheet; later lyrics and arrangements are excluded."
+typesetter = "OpenBook contributors (MusicXML import)"
+completion = "3"
+uuid = "c2871b53-98aa-5e3d-a5df-75cca513eb4a"
+location = "Real_Book_2:349, 557_Standards:350, Firehouse_Jazz_Band:352"
+remark = "Copyright status outside the US may differ."
+
+[versions.Wikifonia]
+doChords = true
+doVoice = true
+doLyrics = false
+doLyricsmore = false
+doLyricsmoremore = false
+doChordBars = false
+doGuitar = false
+doExtra = false
+doPrep = false
+doOwn = false
+#}
+{% if part == "Vars" %}
+{% endif %}
+{% if part == "Doc" %}
+	DONE:
+	- imported the historic melody and chord changes of the 1914 composition.
+	- local source: real_books_archive.gi/Wikifonia.tar.xz: Wikifonia/W. C. Handy - St. Louis Blues.mxl.
+	- jazz real/fake-book references: Real_Book_2:349, 557_Standards:350, Firehouse_Jazz_Band:352.
+	- source revision: http://wikifonia.org/node/2648/revisions/25690/view.
+	- retained written measures, pickups, repeats and endings; lyrics and accompaniment omitted.
+	- the original composition is public domain in the US; no claim is made about later editions.
+	- US term reference: https://cspd.law.duke.edu/publicdomainday/2026.
+	- tempo is an editorial practice suggestion.
+	TODO:
+	- proofread against a historic edition and check by ear.
+	- verify editorial chord spacing in measures 52, 53, 56, 57; the archive places successive symbols at the same offset.
+{% endif %}
+{% if part == "ChordsWikifonia" %}\chordmode {
+	\startChords
+	\startSong
+
+	\myMark "A"
+	\startPart
+	\partial 4. s4. |
+	g1:m |
+	c1:m |
+	d1:7 | \myEndLine
+	s1 |
+	s1 |
+	s1 |
+	g2:m a2:7 | \myEndLine
+	d2 d2:7 |
+	\repeat volta 2 {
+	g1:7 |
+	c1 |
+	g1 | \myEndLine
+	g1:7 |
+	c1 |
+	s1 |
+	g1 | \myEndLine
+	s1 |
+	d1:7 |
+	d1:aug7 |
+	g1 | \myEndLine
+	s1 |
+	g1:7 |
+	c1 |
+	g1 | \myEndLine
+	g1:7 |
+	c1 |
+	s1 |
+	g1 | \myEndLine
+	s1 |
+	d1:7 |
+	d1:aug7 |
+	g1 | \myEndLine
+	s1 |
+	g1:m |
+	c1*5/8:m cis4.:dim7 |
+	d1:7 | \myEndLine
+	s1 |
+	s1 |
+	s1 |
+	g1:m | \myEndLine
+	s1 |
+	s1 |
+	c1*5/8:m7 cis4.:dim7 |
+	d1:7 | \myEndLine
+	s1 |
+	s1 |
+	s1 |
+	g2:m a2:7/e | \myEndLine
+	d1:7 |
+	g4 g4:6 g4 g4:6 |
+	g4 g4:6 g4 g4:6 |
+	g2 g2:6 | \myEndLine
+	g2 g2:6 |
+	c1 |
+	s1 |
+	g2 g2:6 | \myEndLine
+	g2 c2/g |
+	g1/d |
+	d1:7 |
+	g1 | \myEndLine
+	s1 |
+	}
+	\endBar
+	\endPart
+
+	\endSong
+	\endChords
+}
+{% endif %}
+{% if part == "VoiceWikifonia" %}\absolute {
+	\tempo "Swing" 4 = 144
+	\time 4/4
+	\key g \major
+
+	\partial 4. d''8 d''8 d''8 |
+	d''8 d''8 ~ d''2. |
+	r8 c''8 c''8 cis''8 d''8 ais'4. |
+	a'1 ~ |
+	a'2 ~ a'8 c''8 c''8 c''8 |
+	c''8 c''8 ~ c''2. |
+	r8 c''8 c''8 cis''8 d''8 a'4. |
+	g'2 a'2 |
+	d''2 c''2 ^\fermata |
+	\repeat volta 2 {
+	b'8 d''8 b'8 g'8 ~ g'2 |
+	r8 dis'8 e'8 g'8 bes'4. a'8 |
+	g'1 ~ |
+	g'2. r4 |
+	r8 e'8 g'8 a'8 ~ a'2 |
+	r8 e'8 g'8 a'8 bes'4. a'8 |
+	g'1 ~ |
+	g'2 r2 |
+	fis'8 a'8 fis'8 d'8 ~ d'2 |
+	r4 bes'8 bes'8 bes'4. a'8 |
+	g'1 ~ |
+	g'2 r2 |
+	b'8 d''8 b'8 g'8 ~ g'8 g'4. |
+	r8 dis'8 e'8 g'8 bes'4. a'8 |
+	g'1 ~ |
+	g'4 r4 r2 |
+	r8 e'8 g'8 a'8 ~ a'8 a'4. |
+	r8 dis'8 e'8 g'8 bes'4. a'8 |
+	g'1 ~ |
+	g'2 r2 |
+	fis'8 a'8 fis'8 d'8 ~ d'2 |
+	r4 bes'8 bes'8 bes'4. a'8 |
+	g'1 ~ |
+	g'2 r8 d''8 d''8 d''8 |
+	d''8 d''8 d''2. |
+	r8 c''8 c''8 cis''8 d''8 ais'4. |
+	a'1 ~ |
+	a'2 ~ a'8 c''4 c''8 |
+	c''8 c''8 ~ c''2. |
+	r4 c''8 cis''8 d''8 a'4. |
+	g'1 ~ |
+	g'2 r4 d''8 d''8 |
+	d''8 d''8 ~ d''2. |
+	r8 c''8 c''8 cis''8 d''8 ais'4. |
+	a'1 ~ |
+	a'2 r4 c''8 c''8 |
+	c''8 c''4 c''8 ~ c''2 |
+	r4 c''8 cis''8 d''4 a'4 |
+	g'2 a'2 |
+	d''2. ^\fermata ais'8 b'8 |
+	g'4 ais'8 b'8 g'4 ais'8 b'8 |
+	g'4 ais'8 b'8 g'8 ais'8 b'8 g'8 ~ |
+	g'1 ~ |
+	g'2. ais'8 b'8 |
+	a'4 g'8 e'8 g'4 a'8 bes'8 |
+	a'4 g'8 e'8 g'8 ais'8 b'8 g'8 ~ |
+	g'1 ~ |
+	g'2. ais'8 b'8 |
+	d''4 ais'8 b'8 d'8 ais'8 b'8 c'8 ~ |
+	c'8 ais'8 b'8 d'8 ~ d'8 ais'8 b'8 g'8 ~ |
+	g'1 ~ |
+	g'1 |
+	}
+	\endBar
+}
+{% endif %}

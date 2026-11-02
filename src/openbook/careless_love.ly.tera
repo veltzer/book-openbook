@@ -1,0 +1,128 @@
+{#
+default_version = "Wikifonia"
+
+[attributes]
+title = "Careless Love"
+style = "Jazz"
+composer = "Traditional"
+piece = "Swing"
+copyright = "Traditional composition; public domain in the US"
+copyrightextra = "Instrumental lead sheet; later lyrics and arrangements are excluded."
+typesetter = "OpenBook contributors (MusicXML import)"
+completion = "3"
+uuid = "6d7bc0ef-5ba8-5c65-9190-a92d7bf0d2f8"
+location = "Real_Book_2:62, Firehouse_Jazz_Band:405"
+remark = "Copyright status outside the US may differ."
+
+[versions.Wikifonia]
+doChords = true
+doVoice = true
+doLyrics = false
+doLyricsmore = false
+doLyricsmoremore = false
+doChordBars = false
+doGuitar = false
+doExtra = false
+doPrep = false
+doOwn = false
+#}
+{% if part == "Vars" %}
+{% endif %}
+{% if part == "Doc" %}
+	DONE:
+	- imported the historic melody and chord changes of the traditional tune.
+	- local source: real_books_archive.gi/Wikifonia.tar.xz: Wikifonia/Traditional - Careless Love.mxl.
+	- jazz real/fake-book references: Real_Book_2:62, Firehouse_Jazz_Band:405.
+	- source revision: http://wikifonia.org/node/3863/revisions/13957/view.
+	- retained written measures, pickups, repeats and endings; lyrics and accompaniment omitted.
+	- the original composition is public domain in the US; no claim is made about later editions.
+	- US term reference: https://cspd.law.duke.edu/publicdomainday/2026.
+	- tempo is an editorial practice suggestion.
+	TODO:
+	- proofread against a historic edition and check by ear.
+{% endif %}
+{% if part == "ChordsWikifonia" %}\chordmode {
+	\startChords
+	\startSong
+
+	\myMark "A"
+	\startPart
+	f1 |
+	c1:7 |
+	f1 |
+	s1 | \myEndLine
+	f1 |
+	s1 |
+	c1:7 |
+	s1 | \myEndLine
+	f1 |
+	s1 |
+	bes1 |
+	s1 | \myEndLine
+	f1 |
+	c1:7 |
+	f1 |
+	s2 c2:7 | \myEndLine
+	f1 |
+	c1:7 |
+	f1 |
+	s2 c2:7 | \myEndLine
+	f1 |
+	s1 |
+	c1:7 |
+	s1 | \myEndLine
+	f1 |
+	s1 |
+	bes1 |
+	s1 | \myEndLine
+	f1 |
+	c1:7 |
+	f1 |
+	f1 | \myEndLine
+	\endBar
+	\endPart
+
+	\endSong
+	\endChords
+}
+{% endif %}
+{% if part == "VoiceWikifonia" %}\absolute {
+	\tempo "Swing" 4 = 144
+	\time 4/4
+	\key f \major
+
+	a'2. f'4 |
+	e'4 c'4 e'4 g'4 |
+	f'1 |
+	r4 c''4 b'4 bes'4 |
+	a'2. bes'4 |
+	c''4 c''4 d''4 c''4 |
+	g'1 |
+	r4 e'4 f'4 g'4 |
+	a'2. bes'4 |
+	c''2 cis''2 |
+	d''2 bes'2 |
+	f'2. g'4 |
+	a'2. f'4 |
+	e'4 c'4 e'4 g'4 |
+	f'1 |
+	r4 d''4 c''4 bes'4 |
+	a'2. f'4 |
+	e'4 c'8 c'8 e'4 g'4 |
+	f'1 |
+	r4 c'4 f'4 g'4 |
+	a'2. bes'4 |
+	c''4 c''4 d''4 c''4 |
+	g'1 |
+	r4 c'4 f'4 g'4 |
+	a'2. bes'4 |
+	c''2 cis''2 |
+	d''2 bes'2 |
+	f'2. g'4 |
+	a'2. f'4 |
+	e'4 c'4 e'4 g'4 |
+	f'2 e''2 |
+	f''2. r4 |
+	\endBar
+}
+{% endif %}

@@ -1,0 +1,128 @@
+{#
+default_version = "Wikifonia"
+
+[attributes]
+title = "Ain't She Sweet"
+style = "Jazz"
+composer = "Milton Ager"
+piece = "Swing"
+copyright = "Original composition (1927); public domain in the US"
+copyrightextra = "Instrumental lead sheet; later lyrics and arrangements are excluded."
+typesetter = "OpenBook contributors (MusicXML import)"
+completion = "3"
+uuid = "7b57d65c-2be1-55cc-a799-4c6d7d25fe69"
+location = "557_Standards:11, Just_Standards_Real_Book:12"
+remark = "Copyright status outside the US may differ."
+
+[versions.Wikifonia]
+doChords = true
+doVoice = true
+doLyrics = false
+doLyricsmore = false
+doLyricsmoremore = false
+doChordBars = false
+doGuitar = false
+doExtra = false
+doPrep = false
+doOwn = false
+#}
+{% if part == "Vars" %}
+{% endif %}
+{% if part == "Doc" %}
+	DONE:
+	- imported the historic melody and chord changes of the 1927 composition.
+	- local source: real_books_archive.gi/Wikifonia.tar.xz: Wikifonia/Milton Ager, Jack Yellen - Ain't She Sweet.mxl.
+	- jazz real/fake-book references: 557_Standards:11, Just_Standards_Real_Book:12.
+	- source revision: http://wikifonia.org/node/5726/revisions/25054/view.
+	- retained written measures, pickups, repeats and endings; lyrics and accompaniment omitted.
+	- the original composition is public domain in the US; no claim is made about later editions.
+	- US term reference: https://cspd.law.duke.edu/publicdomainday/2026.
+	- tempo is an editorial practice suggestion.
+	TODO:
+	- proofread against a historic edition and check by ear.
+{% endif %}
+{% if part == "ChordsWikifonia" %}\chordmode {
+	\startChords
+	\startSong
+
+	\myMark "A"
+	\startPart
+	c1 |
+	g1:7 |
+	c2 aes2 |
+	g1:7 | \myEndLine
+	g2 d2:7 |
+	a1:7 |
+	d2:7 g2:7 |
+	c1 | \myEndLine
+	s2 aes2 |
+	g1:7 |
+	c2 aes2 |
+	g1:7 | \myEndLine
+	c2 e2:7 |
+	a1:7 |
+	d2:7 g2:7 |
+	c1 | \myEndLine
+	f1 |
+	s1 |
+	c1 |
+	s1 | \myEndLine
+	f1 |
+	s1 |
+	c1 |
+	g1:7 | \myEndLine
+	c2 aes2 |
+	g1:7 |
+	c2 aes2 |
+	g1:7 | \myEndLine
+	c2 e2:7 |
+	a1:7 |
+	d2:7 g2:7 |
+	c1 | \myEndLine
+	\endBar
+	\endPart
+
+	\endSong
+	\endChords
+}
+{% endif %}
+{% if part == "VoiceWikifonia" %}\absolute {
+	\tempo "Swing" 4 = 144
+	\time 4/4
+	\key c \major
+
+	a'2 gis'2 |
+	g'2 r4 a'8 g'8 |
+	a'4 a'4 gis'4 gis'4 |
+	g'2 r4 a'8 g'8 |
+	c''4 c''4 b'4 b'4 |
+	a'4 a'4 a'8 g'8 f'4 |
+	e'2 d'2 |
+	c'2. r4 |
+	a'2 gis'2 |
+	g'2 r4 a'8 g'8 |
+	a'4 a'4 gis'4 gis'4 |
+	g'2 r4 a'8 g'8 |
+	c''4 c''4 b'4 b'4 |
+	a'4 a'4 a'8 g'8 f'4 |
+	e'2 d'2 |
+	c'4 c''4 ^ "N.C." c''4 c''4 |
+	c''1 ~ |
+	c''4 c''4 c''4 c''4 |
+	c''2 g'2 |
+	r4 c''4 c''4 c''4 |
+	c''1 ~ |
+	c''4 c''4 c''4 c''4 |
+	c''2 g'2 ~ |
+	g'1 |
+	a'2 gis'2 |
+	g'2 r4 a'8 g'8 |
+	a'4 a'4 gis'4 gis'4 |
+	g'2 r4 a'8 g'8 |
+	c''4 c''4 b'4 b'4 |
+	a'4 a'4 a'8 g'8 f'4 |
+	e'2 d'2 |
+	c'2 r2 |
+	\endBar
+}
+{% endif %}

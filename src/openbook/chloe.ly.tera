@@ -1,0 +1,161 @@
+{#
+default_version = "Wikifonia"
+
+[attributes]
+title = "Chloe"
+style = "Jazz"
+composer = "Neil Moret"
+piece = "Swing"
+copyright = "Original composition (1927); public domain in the US"
+copyrightextra = "Instrumental lead sheet; later lyrics and arrangements are excluded."
+typesetter = "OpenBook contributors (MusicXML import)"
+completion = "3"
+uuid = "6dfa701d-9dd8-5093-89d3-2347c4337c65"
+location = "Firehouse_Jazz_Band:463"
+remark = "Copyright status outside the US may differ."
+
+[versions.Wikifonia]
+doChords = true
+doVoice = true
+doLyrics = false
+doLyricsmore = false
+doLyricsmoremore = false
+doChordBars = false
+doGuitar = false
+doExtra = false
+doPrep = false
+doOwn = false
+#}
+{% if part == "Vars" %}
+{% endif %}
+{% if part == "Doc" %}
+	DONE:
+	- imported the historic melody and chord changes of the 1927 composition.
+	- local source: real_books_archive.gi/Wikifonia.tar.xz: Wikifonia/Gus Kahn & Neil Moret - Chloe.mxl.
+	- jazz real/fake-book references: Firehouse_Jazz_Band:463.
+	- source revision: http://wikifonia.org/node/18152/revisions/24084/view.
+	- retained written measures, pickups, repeats and endings; lyrics and accompaniment omitted.
+	- the original composition is public domain in the US; no claim is made about later editions.
+	- US term reference: https://cspd.law.duke.edu/publicdomainday/2026.
+	- tempo is an editorial practice suggestion.
+	TODO:
+	- proofread against a historic edition and check by ear.
+	- verify editorial chord spacing in measures 10; the archive places successive symbols at the same offset.
+{% endif %}
+{% if part == "ChordsWikifonia" %}\chordmode {
+	\startChords
+	\startSong
+
+	\myMark "A"
+	\startPart
+	a1:m |
+	e1:7 |
+	a1:m |
+	d1:dim | \myEndLine
+	a2:m e2:m |
+	f2 c2 |
+	f2:7 c2:7 |
+	f2:7 e2:7 | \myEndLine
+	a1:m |
+	f2:7 e2:7 |
+	a1:m |
+	d1:dim | \myEndLine
+	a2:m e2:m |
+	f2 c2 |
+	d1:7 |
+	g2.:9 g4:dim | \myEndLine
+	d2.:m7 g4:7 |
+	s1 |
+	d2:m7 g2:7 |
+	d2:m7 g2:7 | \myEndLine
+	g2:m7 c2:7 |
+	s1 |
+	g2:m7 c2:7 |
+	s2 c2:aug | \myEndLine
+	f1 |
+	d2:m7 g2:7 |
+	c1 |
+	a1:m | \myEndLine
+	d1:7 |
+	s2 d2:m7 |
+	g2:7 d2:m7 |
+	g1:7 | \myEndLine
+	d2:m7 g2:7 |
+	s1 |
+	d2:m7 g2:7 |
+	d2:m7 g2:7 | \myEndLine
+	g2:m7 c2:7 |
+	s1 |
+	f2 f2:6 |
+	s1 | \myEndLine
+	a1:m7 |
+	d1:7 |
+	c1 |
+	a1:7 | \myEndLine
+	d2:m7 g2:7 |
+	s1 |
+	d2:m7 d4:7 g4:7 |
+	c1 | \myEndLine
+	\endBar
+	\endPart
+
+	\endSong
+	\endChords
+}
+{% endif %}
+{% if part == "VoiceWikifonia" %}\absolute {
+	\tempo "Swing" 4 = 144
+	\time 2/2
+	\key c \major
+
+	a8. ^ "" ^ "in a tragic manner" c'16 e'8. a'16 c''8. a'16 \once \omit TupletBracket \times 2/3 { c''8 e''8 a''8 } |
+	c''2 b'2 |
+	\once \omit TupletBracket \times 2/3 { a8 c'8 e'8 } a'8. c''16 e''8. c''16 \once \omit TupletBracket \times 2/3 { e''8 a''8 c'''8 } |
+	e''2 d''2 |
+	c''4 c''4 b'8 g'4. |
+	a'4 a'4 e'2 |
+	a'4 a'4 e'4 e'4 |
+	a'4 a'4 e'2 |
+	a8. c'16 e'8. a'16 c''8. a'16 \once \omit TupletBracket \times 2/3 { c''8 e''8 a''8 } |
+	c''2 b'2 |
+	\once \omit TupletBracket \times 2/3 { a8 c'8 e'8 } a'8. c''16 e''8. c''16 \once \omit TupletBracket \times 2/3 { e''8 a''8 c'''8 } |
+	e''2 d''2 |
+	c''4 c''4 e''4 e''4 |
+	a'4 a'4 c''2 |
+	e'4 e'4 b'4 b'4 |
+	a'4 cis'4 d'4 e'8 e'8 |
+	f'2. e'4 |
+	e'8 d'4 d'8 ~ d'4 r8 e'8 |
+	f'8. g'16 f'4 e'8 e'4 d'8 ~ |
+	d'1 |
+	bes'2. a'4 |
+	a'8 g'4 g'8 ~ g'4 r8 a'8 |
+	bes'8. c''16 bes'4 a'8 a'4 g'8 ~ |
+	g'2. c''4 |
+	c''4. a'8 ~ a'4 f'4 |
+	e'4 d'4 e'8 f'4. |
+	g'2 ~ g'8 e'8 g'4 |
+	c''1 |
+	a'4. e'8 ~ e'2 |
+	d'4 c'4 d'8 e'4. |
+	g'4 g'4 a'8 d''4 g'8 ~ |
+	g'1 |
+	f'2. e'4 |
+	e'8 d'4 d'8 ~ d'4 r8 e'8 |
+	f'8. g'16 f'4 e'8 e'4 d'8 ~ |
+	d'1 |
+	bes'2. a'4 |
+	a'4 g'4 fis'8 g'4. |
+	c''2 ~ c''8 gis'8 a'4 |
+	c''1 |
+	e''2 c''2 |
+	b'4 a'4 gis'8 a'4. |
+	c''2 g'2 |
+	f'4 e'4 dis'8 e'4. |
+	f'2. e'4 |
+	e'8 d'4 d'8 ~ d'4 r8 e'8 |
+	f'8. g'16 f'4 e'4 g'4 |
+	c''2. r4 |
+	\endBar
+}
+{% endif %}

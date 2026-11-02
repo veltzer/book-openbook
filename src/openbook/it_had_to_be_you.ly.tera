@@ -1,0 +1,149 @@
+{#
+default_version = "Wikifonia"
+
+[attributes]
+title = "It Had To Be You"
+style = "Jazz"
+composer = "Isham Jones"
+piece = "Swing"
+copyright = "Original composition (1924); public domain in the US"
+copyrightextra = "Instrumental lead sheet; later lyrics and arrangements are excluded."
+typesetter = "OpenBook contributors (MusicXML import)"
+completion = "3"
+uuid = "d64ba0fe-26aa-57b1-9f1b-b29ff40363e2"
+location = "Real_Book_2:180, Fakebook_Django:93, StandardsBook:242, Just_Standards_Real_Book:204"
+remark = "Copyright status outside the US may differ."
+
+[versions.Wikifonia]
+doChords = true
+doVoice = true
+doLyrics = false
+doLyricsmore = false
+doLyricsmoremore = false
+doChordBars = false
+doGuitar = false
+doExtra = false
+doPrep = false
+doOwn = false
+#}
+{% if part == "Vars" %}
+{% endif %}
+{% if part == "Doc" %}
+	DONE:
+	- imported the historic melody and chord changes of the 1924 composition.
+	- local source: real_books_archive.gi/Wikifonia.tar.xz: Wikifonia/Isham Jones, Gus Kahn - It Had To Be You.mxl.
+	- jazz real/fake-book references: Real_Book_2:180, Fakebook_Django:93, StandardsBook:242, Just_Standards_Real_Book:204.
+	- source revision: http://wikifonia.org/node/3842/revisions/18712/view.
+	- retained written measures, pickups, repeats and endings; lyrics and accompaniment omitted.
+	- the original composition is public domain in the US; no claim is made about later editions.
+	- US term reference: https://cspd.law.duke.edu/publicdomainday/2026.
+	- tempo is an editorial practice suggestion.
+	TODO:
+	- proofread against a historic edition and check by ear.
+	- verify editorial chord spacing in measures 2, 4, 8, 12, 18, 20, 24, 32, 34; the archive places successive symbols at the same offset.
+{% endif %}
+{% if part == "ChordsWikifonia" %}\chordmode {
+	\startChords
+	\startSong
+
+	\myMark "A"
+	\startPart
+	d2:7 d2:aug |
+	\repeat volta 2 {
+	g2:maj7 d2:7 |
+	g2:maj7 f2:9 |
+	e2:7 b2:m | \myEndLine
+	e2..:7 a8:9 |
+	a2:9 e2:m7 |
+	a2:9 e2:m7 |
+	a2:9 e2:m7 | \myEndLine
+	a1:9 |
+	d1:7 |
+	s2 dis2:dim |
+	e2:m7 b2:7 | \myEndLine
+	e2:m7 bes2:7 |
+	a2:7 e2:m7 |
+	a1:7 |
+	a1:m7 | \myEndLine
+	d2:7 d2:aug |
+	g2:maj7 d2:aug |
+	g2:maj7 f2:9 |
+	e2:7 b2:m | \myEndLine
+	e2..:7 a8:9 |
+	s2 e2:m7 |
+	a2:9 e2:m7 |
+	a2:9 e2:m7 | \myEndLine
+	cis1:dim |
+	a2:m c2 |
+	a2:dim7 d2:7 |
+	g2 dis4.:dim e8:m | \myEndLine
+	s2 cis2:dim |
+	d2:7 aes2:dim7 |
+	d2:7 b2:m |
+	g2 bes2:7 | \myEndLine
+	} \alternative {
+	{
+	d2:7 d2:aug | \myEndLineVoltaNotLast
+	}
+	{
+	g2 d2:7 | \myEndLineVoltaLast
+	}
+	}
+	g1:maj7 |
+	\endBar
+	\endPart
+
+	\endSong
+	\endChords
+}
+{% endif %}
+{% if part == "VoiceWikifonia" %}\absolute {
+	\tempo "Swing" 4 = 144
+	\time 2/2
+	\key g \major
+
+	r4 d'4 e'8 d'8 e'8 fis'8 ~ |
+	\repeat volta 2 {
+	fis'1 ~ |
+	fis'4 fis'4 g'8 fis'8 g'8 gis'8 ~ |
+	gis'1 ~ |
+	gis'4 gis'4 a'8 gis'8 a'8 b'8 ~ |
+	b'4. g'8 a'8 gis'8 a'8 b'8 ~ |
+	b'4. g'8 a'8 gis'8 a'8 b'8 ~ |
+	b'1 ~ |
+	b'4 a'4 b'8 a'8 b'8 d''8 ~ |
+	d''1 ~ |
+	d''4 b'4 a'8 b'8 a'8 g'8 ~ |
+	g'1 ~ |
+	g'4 g'4 g'8 fis'8 g'8 a'8 ~ |
+	a'2 g'8 fis'8 g'8 a'8 ~ |
+	a'2 b'8 e''8 b'8 a'8 ~ |
+	a'1 ~ |
+	a'4 d'4 e'8 d'8 e'8 fis'8 ~ |
+	fis'1 ~ |
+	fis'4 fis'4 g'8 fis'8 g'8 gis'8 ~ |
+	gis'1 ~ |
+	gis'4 gis'4 a'8 gis'8 a'8 b'8 ~ |
+	b'4. g'8 a'8 gis'8 a'8 b'8 ~ |
+	b'4. g'8 a'8 gis'8 a'8 b'8 ~ |
+	b'1 ~ |
+	b'4 b'4 b'8 c''8 d''8 e''8 ~ |
+	e''2 e'8 fis'8 g'8 a'8 ~ |
+	a'2 a'8 b'8 c''8 d''8 ~ |
+	d''2 a'8 b'8 a'8 g'8 ~ |
+	g'4 fis'4 e'8 d'8 e'8 fis'8 ~ |
+	fis'2 e'8 d'8 e'8 fis'8 ~ |
+	fis'2 b'8 d''8 b'8 g'8 ~ |
+	g'1 |
+	} \alternative {
+	{
+	r4 d'4 e'8 d'8 e'8 fis'8 |
+	}
+	{
+	g'1 ~ |
+	}
+	}
+	g'2. r4 |
+	\endBar
+}
+{% endif %}

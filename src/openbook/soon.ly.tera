@@ -1,0 +1,146 @@
+{#
+default_version = "Wikifonia"
+
+[attributes]
+title = "Soon"
+style = "Jazz"
+composer = "George Gershwin"
+piece = "Swing"
+copyright = "Original composition (1930); public domain in the US"
+copyrightextra = "Instrumental lead sheet; later lyrics and arrangements are excluded."
+typesetter = "OpenBook contributors (MusicXML import)"
+completion = "3"
+uuid = "ba587996-e157-5d3e-853c-4903c0e1aec1"
+location = "Real_Book_3:282, 557_Standards:339, Firehouse_Jazz_Band:137, StandardsBook:401"
+remark = "Copyright status outside the US may differ."
+
+[versions.Wikifonia]
+doChords = true
+doVoice = true
+doLyrics = false
+doLyricsmore = false
+doLyricsmoremore = false
+doChordBars = false
+doGuitar = false
+doExtra = false
+doPrep = false
+doOwn = false
+#}
+{% if part == "Vars" %}
+{% endif %}
+{% if part == "Doc" %}
+	DONE:
+	- imported the historic melody and chord changes of the 1930 composition.
+	- local source: real_books_archive.gi/Wikifonia.tar.xz: Wikifonia/George Gershwin, Ira Gershwin - Soon.mxl.
+	- jazz real/fake-book references: Real_Book_3:282, 557_Standards:339, Firehouse_Jazz_Band:137, StandardsBook:401.
+	- source revision: http://wikifonia.org/node/4135/revisions/5485/view.
+	- retained written measures, pickups, repeats and endings; lyrics and accompaniment omitted.
+	- the original composition is public domain in the US; no claim is made about later editions.
+	- US term reference: https://cspd.law.duke.edu/publicdomainday/2026.
+	- tempo is an editorial practice suggestion.
+	TODO:
+	- proofread against a historic edition and check by ear.
+{% endif %}
+{% if part == "ChordsWikifonia" %}\chordmode {
+	\startChords
+	\startSong
+
+	\myMark "A"
+	\startPart
+	\repeat volta 2 {
+	ees1 |
+	s2. c4:m7.5- |
+	g1:m7.5- |
+	c2:aug7 c2:7 | \myEndLine
+	f1:m |
+	s2. c4:7 |
+	f1:m7.5- |
+	bes2:aug7 bes2:7 | \myEndLine
+	ees2 bes4:7 ees4 |
+	s4 ees4:7 c4:m ees4:7.5- |
+	aes1:6 |
+	s1 | \myEndLine
+	f2:m c4:7 f4:m |
+	d2:m7.5- g2:7 |
+	c1:m7 |
+	f2:m7 bes2:7 | \myEndLine
+	ees1 |
+	s2. c4:m7.5- |
+	g1:m7.5- |
+	c2:aug7 c2:7 | \myEndLine
+	f1:m |
+	s2. c4:aug7 |
+	f1:m7.5- |
+	bes2:7.5- bes2:7 | \myEndLine
+	ees2 bes4:7 ees4 |
+	ees2.:7 ees4:aug7 |
+	aes1 |
+	f1:m7.5- | \myEndLine
+	ees1 |
+	aes2:6 bes2:7 |
+	} \alternative {
+	{
+	ees1 |
+	b2.:7 bes4:7 | \myEndLineVoltaNotLast
+	}
+	{
+	ees1 | \myEndLineVoltaLast
+	}
+	}
+	s1 |
+	\endBar
+	\endPart
+
+	\endSong
+	\endChords
+}
+{% endif %}
+{% if part == "VoiceWikifonia" %}\absolute {
+	\tempo "Swing" 4 = 144
+	\time 2/2
+	\key es \major
+
+	\repeat volta 2 {
+	bes'1 ~ |
+	bes'4 g'4 bes'4 c''4 |
+	des''2 bes'4 des''4 |
+	as'2 g'2 |
+	as'1 ~ |
+	as'4 f'4 as'4 bes'4 |
+	ces''2 as'4 ces''4 |
+	ges'2 f'2 |
+	r4 g'4 as'4 bes'4 |
+	es''4 es''4 es''4 es''4 |
+	es''4 r8 f'8 f'2 ~ |
+	f'1 |
+	r4 f'4 g'4 as'4 |
+	d''4 d''4 d''4 d''4 |
+	d''4 r8 es'8 es'2 ~ |
+	es'2 f'2 |
+	bes'1 ~ |
+	bes'4 g'4 bes'4 c''4 |
+	des''2 bes'4 des''4 |
+	as'2 g'2 |
+	as'1 ~ |
+	as'4 f'4 as'4 bes'4 |
+	ces''2 as'4 ces''4 |
+	ges'2 f'2 |
+	r4 g'4 as'4 bes'4 |
+	f''4 f''4 f''4 f''4 |
+	f''4 r8 as'8 as'2 ~ |
+	as'1 |
+	r4 g'4 bes'4 es''4 |
+	f'2 g'2 |
+	} \alternative {
+	{
+	es'1 ~ |
+	es'2. r4 |
+	}
+	{
+	es'1 ~ |
+	}
+	}
+	es'2. r4 |
+	\endBar
+}
+{% endif %}

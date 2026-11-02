@@ -1,0 +1,128 @@
+{#
+default_version = "Wikifonia"
+
+[attributes]
+title = "Tea for Two"
+style = "Jazz"
+composer = "Vincent Youmans"
+piece = "Swing"
+copyright = "Original composition (1924); public domain in the US"
+copyrightextra = "Instrumental lead sheet; later lyrics and arrangements are excluded."
+typesetter = "OpenBook contributors (MusicXML import)"
+completion = "3"
+uuid = "930f8750-13b5-5f0f-8e48-6edb4ab0ee89"
+location = "Real_Book_3:303, 557_Standards:368, Fakebook_Django:219, StandardsBook:432, Just_Standards_Real_Book:340"
+remark = "Copyright status outside the US may differ."
+
+[versions.Wikifonia]
+doChords = true
+doVoice = true
+doLyrics = false
+doLyricsmore = false
+doLyricsmoremore = false
+doChordBars = false
+doGuitar = false
+doExtra = false
+doPrep = false
+doOwn = false
+#}
+{% if part == "Vars" %}
+{% endif %}
+{% if part == "Doc" %}
+	DONE:
+	- imported the historic melody and chord changes of the 1924 composition.
+	- local source: real_books_archive.gi/Wikifonia.tar.xz: Wikifonia/Vincent Youmans, Irving Caesar - Tea for two.mxl.
+	- jazz real/fake-book references: Real_Book_3:303, 557_Standards:368, Fakebook_Django:219, StandardsBook:432, Just_Standards_Real_Book:340.
+	- source revision: http://wikifonia.org/node/8863/revisions/27921/view.
+	- retained written measures, pickups, repeats and endings; lyrics and accompaniment omitted.
+	- the original composition is public domain in the US; no claim is made about later editions.
+	- US term reference: https://cspd.law.duke.edu/publicdomainday/2026.
+	- tempo is an editorial practice suggestion.
+	TODO:
+	- proofread against a historic edition and check by ear.
+{% endif %}
+{% if part == "ChordsWikifonia" %}\chordmode {
+	\startChords
+	\startSong
+
+	\myMark "A"
+	\startPart
+	g2:m c2:7 |
+	g2:m c2:7 |
+	f1 |
+	s1 | \myEndLine
+	g2:m c2:7 |
+	g2:m c2:7 |
+	f1 |
+	s1 | \myEndLine
+	d2 d2:7 |
+	d2 d2:7 |
+	a1 |
+	s1 | \myEndLine
+	d2 e2:7 |
+	d2 e2:7 |
+	a1 |
+	c1:7 | \myEndLine
+	g2:m c2:7 |
+	g2:m c2:7 |
+	f1 |
+	s1 | \myEndLine
+	g2:m c2:7 |
+	g2:m c2:7 |
+	a1:m |
+	d1:7 | \myEndLine
+	g2:m d2 |
+	g2:m d2:7 |
+	s2 g2:m |
+	bes1 | \myEndLine
+	g2:m c2:7 |
+	g2:m c2:7 |
+	f1 |
+	s1 | \myEndLine
+	\endBar
+	\endPart
+
+	\endSong
+	\endChords
+}
+{% endif %}
+{% if part == "VoiceWikifonia" %}\absolute {
+	\tempo "Swing" 4 = 144
+	\time 4/4
+	\key c \major
+
+	f'4. d'8 e'4. d'8 |
+	f'4. d'8 e'4. c'8 |
+	e'4. c'8 d'4. c'8 |
+	e'4. c'8 d'4. c'8 |
+	f'4. d'8 e'4. d'8 |
+	f'4. d'8 e'4. c'8 |
+	a'1 ~ |
+	a'4 r4 r2 |
+	a'4 a'8 fis'8 gis'4 gis'8 fis'8 |
+	a'4 a'8 fis'8 gis'4 gis'8 e'8 |
+	gis'4 gis'8 e'8 fis'4 fis'8 e'8 |
+	gis'4 gis'8 e'8 fis'4 fis'8 e'8 |
+	a'4 a'8 fis'8 gis'4 gis'8 fis'8 |
+	a'4 a'8 fis'8 gis'4 gis'4 |
+	cis''1 |
+	c''2 r2 |
+	f'4. d'8 e'4. d'8 |
+	f'4. d'8 e'4. c'8 |
+	e'4. c'8 d'4. c'8 |
+	e'4. c'8 d'4. c'8 |
+	f'4. d'8 e'4. d'8 |
+	f'4. d'8 e'4. c'8 |
+	c''1 ~ |
+	c''2 r2 |
+	d''4. d''8 c''4. c''8 |
+	bes'4. bes'8 a'4. a'8 |
+	c''4. c''8 bes'4. bes'8 |
+	a'4. a'8 g'4. g'8 |
+	f'4. d'8 e'4. d'8 |
+	f'4. d'8 e'4. a'8 |
+	f'1 ~ |
+	f'2. r4 |
+	\endBar
+}
+{% endif %}

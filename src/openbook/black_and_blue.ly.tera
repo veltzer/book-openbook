@@ -1,0 +1,128 @@
+{#
+default_version = "Wikifonia"
+
+[attributes]
+title = "Black and Blue"
+style = "Jazz"
+composer = "Fats Waller, Harry Brooks"
+piece = "Swing"
+copyright = "Original composition (1929); public domain in the US"
+copyrightextra = "Instrumental lead sheet; later lyrics and arrangements are excluded."
+typesetter = "OpenBook contributors (MusicXML import)"
+completion = "3"
+uuid = "917b2031-da8b-5afa-b8b5-a3b22f9d3270"
+location = "New_Real_2:34, 557_Standards:42"
+remark = "Copyright status outside the US may differ."
+
+[versions.Wikifonia]
+doChords = true
+doVoice = true
+doLyrics = false
+doLyricsmore = false
+doLyricsmoremore = false
+doChordBars = false
+doGuitar = false
+doExtra = false
+doPrep = false
+doOwn = false
+#}
+{% if part == "Vars" %}
+{% endif %}
+{% if part == "Doc" %}
+	DONE:
+	- imported the historic melody and chord changes of the 1929 composition.
+	- local source: real_books_archive.gi/Wikifonia.tar.xz: Wikifonia/Thomas , Harry  Brooks, Andy Razaf - Black And Blue.mxl.
+	- jazz real/fake-book references: New_Real_2:34, 557_Standards:42.
+	- source revision: http://wikifonia.org/node/18019/revisions/23858/view.
+	- retained written measures, pickups, repeats and endings; lyrics and accompaniment omitted.
+	- the original composition is public domain in the US; no claim is made about later editions.
+	- US term reference: https://cspd.law.duke.edu/publicdomainday/2026.
+	- tempo is an editorial practice suggestion.
+	TODO:
+	- proofread against a historic edition and check by ear.
+{% endif %}
+{% if part == "ChordsWikifonia" %}\chordmode {
+	\startChords
+	\startSong
+
+	\myMark "A"
+	\startPart
+	a1:m |
+	d1:m/a |
+	a1:m |
+	d1:9 | \myEndLine
+	c2/g cis2:dim |
+	g2:7/d d4:m7 g4:9.5+ |
+	c2 c2:maj7 |
+	e2:9/b e4:aug7 e4:7 | \myEndLine
+	a1:m |
+	d1:m/a |
+	a1:m |
+	d1:9 | \myEndLine
+	c2/g cis2:dim |
+	g2:7/d aes4:7 g4:7 |
+	c1 |
+	s1 | \myEndLine
+	aes2.:7 g8:7 aes8:7 |
+	s2. g8:7 aes8:7 |
+	c4 c4:dim c2 |
+	ees1:7 | \myEndLine
+	aes1:7 |
+	s1 |
+	a4:m a4:m/g d4:7/fis f4:7 |
+	s2 e2:7 | \myEndLine
+	a1:m |
+	d1:m/a |
+	a1:m |
+	d1:9 | \myEndLine
+	c2/g cis2:dim |
+	g2:7/d aes4:9 g4:9 |
+	c2 f2:7 |
+	c1 | \myEndLine
+	\endBar
+	\endPart
+
+	\endSong
+	\endChords
+}
+{% endif %}
+{% if part == "VoiceWikifonia" %}\absolute {
+	\tempo "Swing" 4 = 144
+	\time 2/2
+	\key c \major
+
+	e'8 a'8 b'8 c''8 ~ c''2 |
+	f'8 a'8 b'8 c''8 ~ c''2 |
+	e'8 a'8 b'8 c''8 ~ c''2 |
+	fis'8 a'8 b'8 c''8 ~ c''2 |
+	g'8 a'8 e'8 g'8 ~ g'2 ~ |
+	g'8. g'16 a'8. g'16 a'4 a'4 |
+	e'1 |
+	R1 |
+	e'8 a'8 b'8 c''8 ~ c''2 |
+	f'8 a'8 b'8 c''8 ~ c''2 |
+	e'8 a'8 b'8 c''8 ~ c''2 |
+	fis'8 a'8 b'8 c''8 ~ c''2 |
+	g'8 a'8 e'8 g'8 ~ g'2 ~ |
+	g'8. g'16 a'8. g'16 es''4 d''4 |
+	c''1 ~ |
+	c''4 r4 r2 |
+	c''4. as'8 ~ as'4. r8 |
+	c''4. as'8 ~ as'4. as'8 |
+	c''4 a'4 g'8 e'4 g'8 ~ |
+	g'1 |
+	c''4. as'8 ~ as'2 |
+	c''4. as'8 ~ as'2 |
+	c''4 c''4 d''4 es''4 |
+	e''2 - "E+7" e''2 |
+	e'8 a'8 b'8 c''8 ~ c''2 |
+	f'8 a'8 b'8 c''8 ~ c''2 |
+	e'8 a'8 b'8 c''8 ~ c''2 |
+	fis'8 a'8 b'8 c''8 ~ c''2 |
+	g'8 a'8 e'8 g'8 ~ g'2 ~ |
+	g'8. g'16 a'8. g'16 es''4 d''4 |
+	c''1 ~ |
+	c''2. r4 |
+	\endBar
+}
+{% endif %}

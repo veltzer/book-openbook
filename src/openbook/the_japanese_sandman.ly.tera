@@ -1,0 +1,152 @@
+{#
+default_version = "Wikifonia"
+
+[attributes]
+title = "The Japanese Sandman"
+style = "Jazz"
+composer = "Richard A. Whiting"
+piece = "Swing"
+copyright = "Original composition (1920); public domain in the US"
+copyrightextra = "Instrumental lead sheet; later lyrics and arrangements are excluded."
+typesetter = "OpenBook contributors (MusicXML import)"
+completion = "3"
+uuid = "97141238-6ab6-5c6c-94b3-eebc0162346d"
+location = "Firehouse_Jazz_Band:157, Fakebook_Django:103"
+remark = "Copyright status outside the US may differ."
+
+[versions.Wikifonia]
+doChords = true
+doVoice = true
+doLyrics = false
+doLyricsmore = false
+doLyricsmoremore = false
+doChordBars = false
+doGuitar = false
+doExtra = false
+doPrep = false
+doOwn = false
+#}
+{% if part == "Vars" %}
+{% endif %}
+{% if part == "Doc" %}
+	DONE:
+	- imported the historic melody and chord changes of the 1920 composition.
+	- local source: real_books_archive.gi/Wikifonia.tar.xz: Wikifonia/Richard A. Whiting, Raymond B. Egan - The Japanese Sandman.mxl.
+	- jazz real/fake-book references: Firehouse_Jazz_Band:157, Fakebook_Django:103.
+	- source revision: http://wikifonia.org/node/18678/revisions/24714/view.
+	- retained written measures, pickups, repeats and endings; lyrics and accompaniment omitted.
+	- the original composition is public domain in the US; no claim is made about later editions.
+	- US term reference: https://cspd.law.duke.edu/publicdomainday/2026.
+	- tempo is an editorial practice suggestion.
+	TODO:
+	- proofread against a historic edition and check by ear.
+{% endif %}
+{% if part == "ChordsWikifonia" %}\chordmode {
+	\startChords
+	\startSong
+
+	\myMark "A"
+	\startPart
+	s1 |
+	\repeat volta 2 {
+	f1 |
+	s1 |
+	d1:7 | \myEndLine
+	s1 |
+	g2:7 c2 |
+	s1 |
+	f1 | \myEndLine
+	f1 |
+	s1 |
+	s1 |
+	a1 | \myEndLine
+	s1 |
+	e1:7 |
+	s1 |
+	a2 a2:dim | \myEndLine
+	g4:m c2.:7 |
+	f1 |
+	f1:7 |
+	bes1 | \myEndLine
+	s1 |
+	bes1:m |
+	s1 |
+	g1:m | \myEndLine
+	c1:7 |
+	f1 |
+	s1 |
+	d2:m bes2 | \myEndLine
+	g1:7 |
+	f2 g2:7 |
+	c1:7 |
+	} \alternative {
+	{
+	f1 | \myEndLine
+	s1 | \myEndLineVoltaNotLast
+	}
+	{
+	f2:m bes2:m | \myEndLineVoltaLast
+	}
+	}
+	f2:m des4:7 b4:7 |
+	f1 | \myEndLine
+	s1 |
+	\endBar
+	\endPart
+
+	\endSong
+	\endChords
+}
+{% endif %}
+{% if part == "VoiceWikifonia" %}\absolute {
+	\tempo "Swing" 4 = 144
+	\time 2/2
+	\key f \major
+
+	r4 c''8 a'8 c''8 a'8 c''4 |
+	\repeat volta 2 {
+	a'2 a'2 ~ |
+	a'4 c''8 a'8 c''8 a'8 c''4 |
+	a'4 e'8 d'8 e'4 e'8 d'8 |
+	e'4 c''8 a'8 c''8 a'8 c''4 |
+	d''2 c''2 ~ |
+	c''8 a'8 c''8 a'8 c''8 a'8 g'4 |
+	f'4 a''8 f''8 d''8 c''8 a'8 f'8 |
+	c'4 c''8 a'8 c''8 a'8 c''4 |
+	a'2 a'2 ~ |
+	a'4 c''8 a'8 c''8 a'8 c''4 |
+	cis''4 e''8 cis''8 e''4 e''8 cis''8 |
+	e''4 e''8 cis''8 e''8 cis''8 e''4 |
+	cis''2 b'2 ~ |
+	b'4 b'8 gis'8 b'8 gis'8 b'4 |
+	a'4 a'8 fis'8 a'4 a'8 fis'8 |
+	a'8 r8 c''8 a'8 c''8 a'8 c''4 |
+	a'2 a'2 ~ |
+	a'4 c''8 d''8 c''8 a'8 g'4 |
+	f'4 d'8 cis'8 d'4 d'8 cis'8 |
+	d'4 a'8 f'8 a'8 f'8 a'4 |
+	f'2 f'2 |
+	f'4 a'8 f'8 a'8 f'8 a'4 |
+	g'4 d'8 e'8 d'4 d'8 e'8 |
+	c'4 c''8 a'8 c''8 a'8 c''4 |
+	a'2 a'2 ~ |
+	a'4 c''8 a'8 c''8 a'8 c''4 |
+	f''4 f''8 d''8 f''4 f''8 d''8 |
+	f''8 r8 d''8 a'8 d''8 a'8 d''4 |
+	a'2 a'2 ~ |
+	a'8 r8 c''8 a'8 c''8 a'8 g'4 |
+	} \alternative {
+	{
+	f'4 c''8 a'8 c''4 c''8 a'8 |
+	f'4 c''8 a'8 c''8 a'8 c''4 |
+	}
+	{
+	f'8 g'8 as'8 bes'8 c''8 bes'8 as'8 g'8 |
+	}
+	}
+	f'8 e'8 f'8 es'8 ~ es'4 cis'4 |
+	c'1 ~ |
+	c'4 r4 r2 |
+	\endBar
+}
+{% endif %}

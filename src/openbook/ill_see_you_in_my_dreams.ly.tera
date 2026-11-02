@@ -1,0 +1,130 @@
+{#
+default_version = "Wikifonia"
+
+[attributes]
+title = "I'll See You In My Dreams"
+style = "Jazz"
+composer = "Isham Jones"
+piece = "Swing"
+copyright = "Original composition (1924); public domain in the US"
+copyrightextra = "Instrumental lead sheet; later lyrics and arrangements are excluded."
+typesetter = "OpenBook contributors (MusicXML import)"
+completion = "3"
+uuid = "5109c25f-39ac-565d-9668-e567a275705f"
+location = "Fakebook_Django:81, Just_Standards_Real_Book:185"
+remark = "Copyright status outside the US may differ."
+
+[versions.Wikifonia]
+doChords = true
+doVoice = true
+doLyrics = false
+doLyricsmore = false
+doLyricsmoremore = false
+doChordBars = false
+doGuitar = false
+doExtra = false
+doPrep = false
+doOwn = false
+#}
+{% if part == "Vars" %}
+{% endif %}
+{% if part == "Doc" %}
+	DONE:
+	- imported the historic melody and chord changes of the 1924 composition.
+	- local source: real_books_archive.gi/Wikifonia.tar.xz: Wikifonia/Isham Jones, Gus Kahn - I'll See You In My Dreams.mxl.
+	- jazz real/fake-book references: Fakebook_Django:81, Just_Standards_Real_Book:185.
+	- source revision: http://wikifonia.org/node/3775/revisions/14231/view.
+	- retained written measures, pickups, repeats and endings; lyrics and accompaniment omitted.
+	- the original composition is public domain in the US; no claim is made about later editions.
+	- US term reference: https://cspd.law.duke.edu/publicdomainday/2026.
+	- tempo is an editorial practice suggestion.
+	TODO:
+	- proofread against a historic edition and check by ear.
+{% endif %}
+{% if part == "ChordsWikifonia" %}\chordmode {
+	\startChords
+	\startSong
+
+	\myMark "A"
+	\startPart
+	s2 f2:maj7 |
+	bes1 |
+	s1 |
+	bes1:m6 | \myEndLine
+	s1 |
+	f1 |
+	f1:dim |
+	f1:6 | \myEndLine
+	s1 |
+	d1:7 |
+	s1 |
+	s1 | \myEndLine
+	s1 |
+	g1:7 |
+	s1 |
+	c1:7 | \myEndLine
+	s1 |
+	bes1:6 |
+	s1 |
+	bes1:m6 | \myEndLine
+	s1 |
+	f1 |
+	f1:dim |
+	f1:6 | \myEndLine
+	s1 |
+	d1:7 |
+	s1 |
+	g2:m7 ees2:7 | \myEndLine
+	d1:m |
+	bes1:6 |
+	bes2:m6 c2:13 |
+	f1:6 | \myEndLine
+	s1 |
+	\endBar
+	\endPart
+
+	\endSong
+	\endChords
+}
+{% endif %}
+{% if part == "VoiceWikifonia" %}\absolute {
+	\tempo "Swing" 4 = 144
+	\time 4/4
+	\key f \major
+
+	r2 e'2 |
+	d'2 f'2 |
+	g'2 a'2 |
+	g'1 ~ |
+	g'1 |
+	a'2 c''2 |
+	d''2 e''2 |
+	d''1 ~ |
+	d''1 |
+	d''2 d'2 |
+	e'2 fis'2 |
+	c''4 a'4 c''4 a'4 ~ |
+	a'1 |
+	a'2 d'2 |
+	e'2 f'2 |
+	a'4 g'4 a'4 g'4 ~ |
+	g'1 |
+	d'2 f'2 |
+	g'2 a'2 |
+	g'1 ~ |
+	g'1 |
+	a'2 c''2 |
+	d''2 e''2 |
+	d''1 ~ |
+	d''1 |
+	es''2 d''2 |
+	c''2. d'4 |
+	a'2 g'2 |
+	f'2. e'4 |
+	d'2 f'2 |
+	g'2 a'2 |
+	f'1 ~ |
+	f'1 |
+	\endBar
+}
+{% endif %}

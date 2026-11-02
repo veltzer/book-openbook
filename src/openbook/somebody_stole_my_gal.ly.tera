@@ -1,0 +1,196 @@
+{#
+default_version = "Wikifonia"
+
+[attributes]
+title = "Somebody Stole My Gal"
+style = "Jazz"
+composer = "Leo Wood"
+piece = "Swing"
+copyright = "Original composition (1918); public domain in the US"
+copyrightextra = "Instrumental lead sheet; later lyrics and arrangements are excluded."
+typesetter = "OpenBook contributors (MusicXML import)"
+completion = "3"
+uuid = "34e96cb5-6f9f-56bb-85db-6f21fb709b94"
+location = "Firehouse_Jazz_Band:204"
+remark = "Copyright status outside the US may differ."
+
+[versions.Wikifonia]
+doChords = true
+doVoice = true
+doLyrics = false
+doLyricsmore = false
+doLyricsmoremore = false
+doChordBars = false
+doGuitar = false
+doExtra = false
+doPrep = false
+doOwn = false
+#}
+{% if part == "Vars" %}
+{% endif %}
+{% if part == "Doc" %}
+	DONE:
+	- imported the historic melody and chord changes of the 1918 composition.
+	- local source: real_books_archive.gi/Wikifonia.tar.xz: Wikifonia/Leo Wood - Somebody Stole My Gal.mxl.
+	- jazz real/fake-book references: Firehouse_Jazz_Band:204.
+	- source revision: http://wikifonia.org/node/5560/revisions/7583/view.
+	- retained written measures, pickups, repeats and endings; lyrics and accompaniment omitted.
+	- the original composition is public domain in the US; no claim is made about later editions.
+	- US term reference: https://cspd.law.duke.edu/publicdomainday/2026.
+	- tempo is an editorial practice suggestion.
+	TODO:
+	- proofread against a historic edition and check by ear.
+{% endif %}
+{% if part == "ChordsWikifonia" %}\chordmode {
+	\startChords
+	\startSong
+
+	\myMark "A"
+	\startPart
+	c1 |
+	s2 a2:dim |
+	g1:7 |
+	s1 | \myEndLine
+	c1 |
+	s2 a2:m |
+	g1:7 |
+	s1 | \myEndLine
+	a1:7 |
+	s1 |
+	d2:7 des4:7 d4:7 |
+	s1 | \myEndLine
+	d2:7 des4:7 d4:7 |
+	s1 |
+	e4:m des2:dim g4:7 |
+	s2 des2:dim | \myEndLine
+	d2.:m a4:7 |
+	s1 |
+	d1:m |
+	d1:m7 | \myEndLine
+	d1:7 |
+	s1 |
+	g2:7 c2:m |
+	des2:dim g2:7 | \myEndLine
+	\repeat volta 2 {
+	c1 |
+	s2 c2:dim |
+	d1:m7 |
+	g1:7 | \myEndLine
+	s1 |
+	d2:m7 aes2:7 |
+	c1 |
+	s1 | \myEndLine
+	a1:7 |
+	s1 |
+	d1:7 |
+	s1 | \myEndLine
+	s1 |
+	s1 |
+	g1:7 |
+	d2:m7 g2:aug7 | \myEndLine
+	c1 |
+	s2 c2:dim |
+	d1:m7 |
+	s2 g2:7 | \myEndLine
+	s1 |
+	d2:m7 b2:7.5- |
+	e1 |
+	s4 g2.:7 | \myEndLine
+	c1 |
+	s1 |
+	c1:7 |
+	s1 | \myEndLine
+	f1 |
+	s1 |
+	f1:m |
+	s1 | \myEndLine
+	c2 a2:dim |
+	aes2:dim c2 |
+	d1:7 |
+	s1 | \myEndLine
+	d1:m7 |
+	g1:7 |
+	c1 |
+	s4 g2.:7 | \myEndLine
+	}
+	\endBar
+	\endPart
+
+	\endSong
+	\endChords
+}
+{% endif %}
+{% if part == "VoiceWikifonia" %}\absolute {
+	\tempo "Swing" 4 = 144
+	\time 4/4
+	\key c \major
+
+	r4 c'4 d'4 e'4 |
+	g'2 a'2 |
+	f'4 e'4 d'4 g'4 ~ |
+	g'1 |
+	r4 c'4 - "" d'4 e'4 |
+	g'2 a'2 |
+	f'4 e'4 d'4 g'4 ~ |
+	g'1 |
+	r4 a4 b4 cis'4 |
+	f'2 cis'2 |
+	e'4 d'4 cis'4 d'4 ~ |
+	d'2. d'4 |
+	e'4 d'4 cis'4 e'4 ~ |
+	e'2 d'2 |
+	e'4 cis'4 d'4 g'4 ~ |
+	g'2 ~ g'2 |
+	f'4 a'4 f'4 a'4 ~ |
+	a'4 e'2 a'4 |
+	d'1 ~ |
+	d'1 |
+	e'4 d'4 c'4 e'4 ~ |
+	e'4 d'2 c'4 |
+	g'2 ~ g'2 ~ |
+	g'2 ~ g'4 r4 |
+	\repeat volta 2 {
+	r4 ^ "CHORUS" c''4 b'4 a'4 |
+	g'2 fis'2 |
+	f'1 ~ |
+	f'2. r4 |
+	r4 b'4 a'4 g'4 |
+	f'2 dis'2 |
+	e'1 ~ |
+	e'2. r4 |
+	r4 a'4 g'4 f'4 |
+	e'2 cis'2 |
+	e'4 d'4 cis'4 d'4 ~ |
+	d'1 |
+	r4 c''4 b'4 c''4 |
+	b'2 a'2 |
+	r4 b'4 a'4 b'4 |
+	a'2 g'2 |
+	r4 c''4 b'4 a'4 |
+	g'2 fis'2 |
+	f'1 ~ |
+	f'2 ~ f'4 r4 |
+	r4 b'4 a'4 g'4 |
+	f'2 dis'2 |
+	e'1 ~ |
+	e'4 g'2 r4 |
+	c''1 ~ |
+	c''4 b'4 c''4 b'4 |
+	ais'1 ~ |
+	ais'4 b'4 c''4 bes'4 |
+	a'1 ~ |
+	a'4 a'4 c''4 a'4 |
+	gis'1 ~ |
+	gis'4 r4 gis'2 |
+	g'2 a'2 |
+	b'2 c''2 |
+	r4 c''2 a'4 |
+	a'1 |
+	r4 c''4 b'4 a'4 |
+	b'2 g'2 |
+	c''1 ~ |
+	c''4 r2*3/2 |
+	}
+	\endBar
+}
+{% endif %}

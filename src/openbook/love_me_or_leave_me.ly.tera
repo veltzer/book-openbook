@@ -1,0 +1,147 @@
+{#
+default_version = "Wikifonia"
+
+[attributes]
+title = "Love Me Or Leave Me"
+style = "Jazz"
+composer = "Walter Donaldson"
+piece = "Swing"
+copyright = "Original composition (1928); public domain in the US"
+copyrightextra = "Instrumental lead sheet; later lyrics and arrangements are excluded."
+typesetter = "OpenBook contributors (MusicXML import)"
+completion = "3"
+uuid = "6d5877b4-477f-5a80-be29-6f80916539a9"
+location = "557_Standards:222, Firehouse_Jazz_Band:578, StandardsBook:278"
+remark = "Copyright status outside the US may differ."
+
+[versions.Wikifonia]
+doChords = true
+doVoice = true
+doLyrics = false
+doLyricsmore = false
+doLyricsmoremore = false
+doChordBars = false
+doGuitar = false
+doExtra = false
+doPrep = false
+doOwn = false
+#}
+{% if part == "Vars" %}
+{% endif %}
+{% if part == "Doc" %}
+	DONE:
+	- imported the historic melody and chord changes of the 1928 composition.
+	- local source: real_books_archive.gi/Wikifonia.tar.xz: Wikifonia/Walter Donaldson, Gus Kahn - Love Me Or Leave Me.mxl.1.
+	- jazz real/fake-book references: 557_Standards:222, Firehouse_Jazz_Band:578, StandardsBook:278.
+	- source revision: http://wikifonia.org/node/4018/revisions/15956/view.
+	- retained written measures, pickups, repeats and endings; lyrics and accompaniment omitted.
+	- the original composition is public domain in the US; no claim is made about later editions.
+	- US term reference: https://cspd.law.duke.edu/publicdomainday/2026.
+	- tempo is an editorial practice suggestion.
+	TODO:
+	- proofread against a historic edition and check by ear.
+	- verify editorial chord spacing in measures 15, 24, 32, 33; the archive places successive symbols at the same offset.
+{% endif %}
+{% if part == "ChordsWikifonia" %}\chordmode {
+	\startChords
+	\startSong
+
+	\myMark "A"
+	\startPart
+	\repeat volta 2 {
+	d1:m7 |
+	e4.:m7 a1*5/8:7 |
+	d1:m7 |
+	e2:m7 a2:7 | \myEndLine
+	f2:maj7 d2:m7 |
+	g2:m7 c2:7 |
+	f1:maj7 |
+	e2:m7.5- a2:7 | \myEndLine
+	d1:m7 |
+	e2:m7 a2:7 |
+	d1:m7 |
+	e2:m7 a2:7 | \myEndLine
+	f2:maj7 d2:m7 |
+	g2:m7 c2:7 |
+	f2:maj7 bes2:7 |
+	f1:maj7 | \myEndLine
+	a1:m7 |
+	d1:7 |
+	g2:m7 d2:7 |
+	g1:m7 | \myEndLine
+	c1:7 |
+	c1:7 |
+	a2:m7 aes2:dim7 |
+	g2:m7 c2:7 | \myEndLine
+	d1:m7 |
+	e2:m7 a2:7 |
+	d1:m7 |
+	e2:m7 a2:7 | \myEndLine
+	f2:maj7 d2:m7 |
+	g2:7 c2:7 |
+	} \alternative {
+	{
+	f2 e2:7 |
+	e2:m7 a2:7 | \myEndLineVoltaNotLast
+	}
+	{
+	f2 bes2:m6 | \myEndLineVoltaLast
+	}
+	}
+	f1 |
+	\endBar
+	\endPart
+
+	\endSong
+	\endChords
+}
+{% endif %}
+{% if part == "VoiceWikifonia" %}\absolute {
+	\tempo "Swing" 4 = 144
+	\time 4/4
+	\key c \major
+
+	\repeat volta 2 {
+	a'8 a'4 a'8 a8 a4 a8 |
+	b8 b4 b8 cis'8 cis'4. |
+	a'8 a'4 a'8 a8 a4 a8 |
+	b8 b4 b8 cis'8 cis'4 a'8 |
+	c''8 c''4 c''8 c'8 c'4 c'8 |
+	d'8 d'4 d'8 g'8 f'8 g'8 f'8 ~ |
+	f'1 ~ |
+	f'4 r4 r4 g'4 |
+	a'8 a'4 a'8 a8 a4 a8 |
+	b8 b4 b8 cis'8 cis'4 cis'8 |
+	a'8 a'4 a'8 a8 a4 a8 |
+	b8 b4 b8 cis'8 cis'4 a'8 |
+	c''8 c''4 c''8 c'8 c'4 c'8 |
+	d'8 d'4 d'8 g'8 f'8 g'8 f'8 ~ |
+	f'1 ~ |
+	f'2 r2 |
+	a'4 c''8 a'8 ~ a'8 c''8 a'4 |
+	fis'4 d'8 e'8 ~ e'8 fis'8 d'4 |
+	bes'2 a'2 |
+	bes'1 |
+	g'4 ais'8 g'8 ~ g'8 ais'8 g'4 |
+	e'4 g'8 d'8 ~ d'8 e'8 c'4 |
+	c''2 ( b'2 ) |
+	bes'1 |
+	a'8 a'4 a'8 a8 a4 a8 |
+	b8 b4 b8 cis'8 cis'4 cis'8 |
+	a'8 a'4 a'8 a8 a4 a8 |
+	b8 b4 b8 cis'8 cis'4 a'8 |
+	c''8 c''4 c''8 c'8 c'4 c'8 |
+	d'8 d'4 d'8 g'8 f'8 g'8 f'8 ~ |
+	} \alternative {
+	{
+	f'4 r4 r2 |
+	r2 r2 |
+	}
+	{
+	f'1 ( ~ |
+	}
+	}
+	f'2. ) r4 |
+	\endBar
+}
+{% endif %}
