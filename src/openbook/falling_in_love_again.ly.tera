@@ -1,0 +1,177 @@
+{#
+default_version = "Wikifonia"
+
+[attributes]
+title = "Falling In Love Again"
+style = "Jazz"
+composer = "Friedrich Hollander, English Lyrics by Reg Connelly"
+piece = "Standard"
+typesetter = "OpenBook contributors (MusicXML import)"
+completion = "3"
+uuid = "8aa1b2fe-76b5-5d35-8e5b-771554c2605a"
+location = "Great_Gig_Book:265"
+copyright = "All Rights Reserved"
+copyrightextra = "Archived MusicXML notice retained; underlying music is not relicensed."
+
+[versions.Wikifonia]
+doChords = true
+doVoice = true
+doLyrics = false
+doLyricsmore = false
+doLyricsmoremore = false
+doChordBars = false
+doGuitar = false
+doExtra = false
+doPrep = false
+doOwn = false
+#}
+{% if part == "Vars" %}
+{% endif %}
+{% if part == "Doc" %}
+	DONE:
+	- imported melody and chord changes from real_books_archive.gi/Wikifonia.tar.xz: Wikifonia/Friedrich Hollander, English Lyrics by Reg Connelly - Falling In Love Again (Ich bin von Kopf bis Fu Auf Liebe eingestellt,).mxl.
+	- source revision: http://wikifonia.org/node/18239/revisions/24168/view.
+	- book index reference: Great_Gig_Book:265 (real_books_archive.gi/index); index pagination is not a verified PDF page number.
+	- retained the archived MusicXML rights notice; no redistribution permission is asserted.
+	- retained written melody, chord changes, pickups, repeats and numbered endings; lyrics, slurs, dynamics and articulations other than fermatas omitted.
+	- tempo is an editorial practice suggestion.
+	TODO:
+	- proofread the complete melody, harmony and form against a printed edition and check by ear.
+	- verify source attribution, copyright notice and reuse terms; only the archived MusicXML notice is retained.
+	- locate the tune in a local PDF edition; the book-index page number may differ.
+{% endif %}
+{% if part == "ChordsWikifonia" %}\chordmode {
+	\startChords
+	\startSong
+
+	\myMark "A"
+	\startPart
+	d2. |
+	fis2:m7 f4:dim |
+	a2.:7 |
+	a4:9 a2:dim | \myEndLine
+	a2.:7 |
+	a2:9 a4:aug7 |
+	d2. |
+	a2.:aug7 | \myEndLine
+	d2. |
+	fis2:m7 d4:m |
+	a2. |
+	a2.:9 | \myEndLine
+	d2. |
+	e2.:9 |
+	fis2.:m |
+	a2.:7 | \myEndLine
+	\repeat volta 2 {
+	d4 d4:maj7 d4:7 |
+	g4 g2:m |
+	d4:sus4 d4 d4:maj7 |
+	d4:6 d4:maj7 d4 | \myEndLine
+	e2:m7 g4:m |
+	a2.:7 |
+	d4:sus4 d2 |
+	gis2:dim a4:7 | \myEndLine
+	d4 d4:maj7 d4:7 |
+	g2 g4:m |
+	d4:sus4 d4 d4:maj7 |
+	d4:6 d4:aug7 d4 | \myEndLine
+	e2:m7 g4:m |
+	a2.:7 |
+	d4:sus4 d2 |
+	b4:m cis2:7 | \myEndLine
+	fis2.:7 |
+	s2. |
+	b2.:m |
+	s2. | \myEndLine
+	e2.:7 |
+	d4:m/e e4 e4:7 |
+	a2:7 dis4:dim |
+	a4:7 a2:aug | \myEndLine
+	d2 d4:7 |
+	g2 g4:m |
+	d4:sus4 d4 d4:maj7 |
+	d4:6 d4:maj7 d4 | \myEndLine
+	e2:m7 g4:m |
+	a2.:7 |
+	} \alternative {
+	{
+	d4:sus4 d2 |
+	g4:maj7 a2:7 | \myEndLineVoltaNotLast
+	}
+	{
+	d4:sus4 d2 |
+	s2. | \myEndLineVoltaLast
+	}
+	}
+	\endBar
+	\endPart
+
+	\endSong
+	\endChords
+}
+{% endif %}
+{% if part == "VoiceWikifonia" %}\absolute {
+	\tempo "Moderato" 4 = 120
+	\time 3/4
+	\key d \major
+
+	r8. fis'16 g'8. fis'16 a'8. fis'16 |
+	e'2 d'4 |
+	r8. cis''16 d''8. cis''16 e''8. cis''16 |
+	b'2. |
+	r8. cis''16 d''8. cis''16 e''8. cis''16 |
+	b'2 a'4 |
+	fis'4 d'4 fis'4 |
+	b'8 bes'8 a'2 |
+	r8. fis'16 g'8. fis'16 a'8. fis'16 |
+	e'2 d'4 |
+	r8. cis''16 d''8. cis''16 e''8. cis''16 |
+	b'2. |
+	r8. d'16 a'8. d'16 fis'8. a'16 |
+	fis'2 d'4 |
+	fis'4 e'8 eis'8 fis'4 |
+	a'2 eis'4 |
+	\repeat volta 2 {
+	fis'4 a'4 a'4 |
+	a'8 b'8 g'4 g'4 |
+	g'8 a'8 fis'4 fis'4 |
+	fis'2 fis'4 |
+	fis'8 g'8 e'4 e'4 |
+	e'4. eis'8 fis'4 |
+	e'4 d'2 ~ |
+	d'4 r2 |
+	fis'4 a'4 a'4 |
+	a'8 b'8 g'4 g'4 |
+	g'8 a'8 fis'4 fis'4 |
+	fis'2 fis'4 |
+	fis'8 g'8 e'4 e'4 |
+	e'4. eis'8 fis'4 |
+	e'4 d'2 ~ |
+	d'4 r4 r4 |
+	fis'4 ais'4 cis''4 |
+	e''4 d''4 cis''4 |
+	cis''8 d''8 b'4 b'4 |
+	b'2 eis'4 |
+	e'4 gis'4 b'4 |
+	d''4 cis''4 b'4 |
+	b'8 cis''8 a'4 a'4 |
+	a'2. |
+	fis'4 a'4 a'4 |
+	a'8 b'8 g'4 g'4 |
+	g'8 a'8 fis'4 fis'4 |
+	fis'2 fis'4 |
+	fis'8 g'8 e'4 e'4 |
+	e'4. eis'8 fis'4 |
+	} \alternative {
+	{
+	e'4 d'2 ~ |
+	d'4 r4 eis'4 |
+	}
+	{
+	e'4 d'2 ~ |
+	d'4 r2 |
+	}
+	}
+	\endBar
+}
+{% endif %}

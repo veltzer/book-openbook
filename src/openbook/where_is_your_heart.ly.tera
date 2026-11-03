@@ -1,0 +1,129 @@
+{#
+default_version = "Wikifonia"
+
+[attributes]
+title = "Where is Your Heart"
+style = "Jazz"
+composer = "Georges Aurick, William Engvick"
+piece = "Standard"
+typesetter = "OpenBook contributors (MusicXML import)"
+completion = "3"
+uuid = "e25d56e6-e8e7-523b-8a3b-66933bc37de0"
+location = "Great_Gig_Book:263"
+copyright = "All Rights Reserved"
+copyrightextra = "Archived MusicXML notice retained; underlying music is not relicensed."
+
+[versions.Wikifonia]
+doChords = true
+doVoice = true
+doLyrics = false
+doLyricsmore = false
+doLyricsmoremore = false
+doChordBars = false
+doGuitar = false
+doExtra = false
+doPrep = false
+doOwn = false
+#}
+{% if part == "Vars" %}
+{% endif %}
+{% if part == "Doc" %}
+	DONE:
+	- imported melody and chord changes from real_books_archive.gi/Wikifonia.tar.xz: Wikifonia/Georges Aurick, William Engvick - Where is Your Heart.mxl.
+	- source revision: http://wikifonia.org/node/4369/revisions/5876/view.
+	- book index reference: Great_Gig_Book:263 (real_books_archive.gi/index); index pagination is not a verified PDF page number.
+	- retained the archived MusicXML rights notice; no redistribution permission is asserted.
+	- retained written melody, chord changes, pickups, repeats and numbered endings; lyrics, slurs, dynamics and articulations other than fermatas omitted.
+	- tempo is an editorial practice suggestion.
+	TODO:
+	- proofread the complete melody, harmony and form against a printed edition and check by ear.
+	- verify source attribution, copyright notice and reuse terms; only the archived MusicXML notice is retained.
+	- locate the tune in a local PDF edition; the book-index page number may differ.
+{% endif %}
+{% if part == "ChordsWikifonia" %}\chordmode {
+	\startChords
+	\startSong
+
+	\myMark "A"
+	\startPart
+	s2. |
+	f2. |
+	a2.:m |
+	g2. | \myEndLine
+	c2.:7 |
+	s2. |
+	s2. |
+	s2. | \myEndLine
+	f2. |
+	s2. |
+	a2.:m |
+	g2. | \myEndLine
+	c2. |
+	s2. |
+	s2. |
+	s2. | \myEndLine
+	f2. |
+	c2.:7 |
+	f2. |
+	a2.:7 | \myEndLine
+	d2.:m |
+	s2. |
+	a2.:m |
+	g2.:7 | \myEndLine
+	c2.:7 |
+	f2. |
+	a2.:m |
+	g2. | \myEndLine
+	c2.:7 |
+	s2. |
+	s2. |
+	s2. | \myEndLine
+	f2. |
+	\endBar
+	\endPart
+
+	\endSong
+	\endChords
+}
+{% endif %}
+{% if part == "VoiceWikifonia" %}\absolute {
+	\tempo "Moderato" 4 = 120
+	\time 3/4
+	\key c \major
+
+	r2 c'4 |
+	f'4. a'8 f'4 |
+	c''2 c'4 |
+	f'4. g'8 e'4 |
+	d'4 c'4 c'4 |
+	g'4. a'8 g'4 |
+	c''2 g'8 a'8 |
+	bes'4 a'4 g'4 |
+	f'2 c'4 |
+	f'4. a'8 f'4 |
+	c''2 c'4 |
+	f'4. g'8 e'4 |
+	d'4 c'4 c'4 |
+	g'4. a'8 g'4 |
+	c''2 g'8 a'8 |
+	bes'4 a'4 g'4 |
+	f'2 g'8 a'8 |
+	bes'4 bes'8 a'8 g'8 bes'8 |
+	a'2 f'4 |
+	g'8 bes'8 a'8 g'8 f'8 e'8 |
+	f'2 d'8 e'8 |
+	f'4 f'8 e'8 d'8 f'8 |
+	e'2 e'4 |
+	f'8 e'8 d'8 e'8 f'8 d'8 |
+	g'2 c'4 |
+	f'4. a'8 f'4 |
+	c''2 c'4 |
+	f'4. g'8 e'4 |
+	d'4 c'4 c'4 |
+	g'4. a'8 g'4 |
+	c''4 g'4 a'4 |
+	bes'4 a'4 g'4 |
+	f'2 r4 |
+	\endBar
+}
+{% endif %}

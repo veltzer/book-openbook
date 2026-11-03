@@ -1,0 +1,132 @@
+{#
+default_version = "Wikifonia"
+
+[attributes]
+title = "This I Dig of You"
+style = "Jazz"
+composer = "Hank Mobley"
+piece = "Standard"
+typesetter = "OpenBook contributors (MusicXML import)"
+completion = "3"
+uuid = "92288114-42cb-58f1-a8e2-381014da8876"
+location = "Real_Book_2:374"
+copyright = "All Rights Reserved"
+copyrightextra = "Archived MusicXML notice retained; underlying music is not relicensed."
+
+[versions.Wikifonia]
+doChords = true
+doVoice = true
+doLyrics = false
+doLyricsmore = false
+doLyricsmoremore = false
+doChordBars = false
+doGuitar = false
+doExtra = false
+doPrep = false
+doOwn = false
+#}
+{% if part == "Vars" %}
+{% endif %}
+{% if part == "Doc" %}
+	DONE:
+	- imported melody and chord changes from real_books_archive.gi/Wikifonia.tar.xz: Wikifonia/Hank Mobley - This I Dig of You.mxl.
+	- source revision: http://wikifonia.org/node/12226/revisions/16525/view.
+	- book index reference: Real_Book_2:374 (real_books_archive.gi/index); index pagination is not a verified PDF page number.
+	- retained the archived MusicXML rights notice; no redistribution permission is asserted.
+	- retained written melody, chord changes, pickups, repeats and numbered endings; lyrics, slurs, dynamics and articulations other than fermatas omitted.
+	- tempo is an editorial practice suggestion.
+	TODO:
+	- proofread the complete melody, harmony and form against a printed edition and check by ear.
+	- verify source attribution, copyright notice and reuse terms; only the archived MusicXML notice is retained.
+	- locate the tune in a local PDF edition; the book-index page number may differ.
+	- check source measures 8, 24: the MusicXML ties a note to a different pitch (or to nothing); the tie was dropped.
+{% endif %}
+{% if part == "ChordsWikifonia" %}\chordmode {
+	\startChords
+	\startSong
+
+	\myMark "A"
+	\startPart
+	s1 |
+	bes1:maj7 |
+	c1:m7 |
+	d1:m7 | \myEndLine
+	c1:m7 |
+	des1:maj7 |
+	c1:m7 |
+	d1:m7 | \myEndLine
+	f2.:m7 bes4:7 |
+	ees1:maj7 |
+	e2:m7 a2:7 |
+	d1:m7 | \myEndLine
+	g1:7 |
+	des1:m7 |
+	ges1:7 |
+	c1:m7 | \myEndLine
+	f1:7 |
+	bes1:maj7 |
+	c1:m7 |
+	d1:m7 | \myEndLine
+	g1:m7 |
+	des1:maj7 |
+	c1:m7 |
+	d1:m7 | \myEndLine
+	f2.:m7 bes4:7 |
+	s1 |
+	ees1:maj7 |
+	e2:m7 a2:7 | \myEndLine
+	d1:m7 |
+	g1:7 |
+	c1:m7 |
+	f1:7 | \myEndLine
+	bes1:maj7 |
+	s1 |
+	\endBar
+	\endPart
+
+	\endSong
+	\endChords
+}
+{% endif %}
+{% if part == "VoiceWikifonia" %}\absolute {
+	\tempo "Moderato" 4 = 120
+	\time 4/4
+	\key bes \major
+
+	r2. r8 f8 |
+	d'2. r8 f'8 |
+	es'2. r8 g'8 |
+	f'2. r8 a'8 |
+	g'2. es'8. g'16 |
+	f'2. d'8. f'16 |
+	es'2. c'8. es'16 |
+	d'2. bes8 as8 |
+	a2. bes8 g'8 ~ |
+	g'2. fis'8 g'8 |
+	a'2 g'2 |
+	f'2 r8 d'8 f'8 g'8 ~ |
+	g'2. r4 |
+	r8 as8 r8 es'8 r8 des'8 r8 ges'8 |
+	es'4. des'8 es'8 des'8 r4 |
+	r8 g8 r8 c'8 r8 f'8 r4 |
+	d'4 r2 r8 f8 |
+	d'2. r8 f'8 |
+	es'2. r8 g'8 |
+	f'2. r8 a'8 |
+	g'2. es'8. g'16 |
+	f'2. d'8. f'16 |
+	es'2. c'8. es'16 |
+	d'2. bes8 as8 |
+	a2. bes8 g'8 ~ |
+	g'2. r4 |
+	g'2. fis'8 g'8 |
+	a'2 g'2 |
+	f'2 r8 d'8 f'8 g'8 ~ |
+	g'2. r8 d''8 ~ |
+	d''8 bes'4 g'8 bes'8 g'8 bes'8 d''8 |
+	es''8 d''4. bes'8 g'8 a'8 bes'8 |
+	r1 |
+	r1 |
+	\endBar
+}
+{% endif %}

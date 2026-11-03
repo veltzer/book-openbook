@@ -1,0 +1,151 @@
+{#
+default_version = "Wikifonia"
+
+[attributes]
+title = "Under Paris Skies"
+style = "Jazz"
+composer = "Hubert Giraud, Kim Gannon, Jean Drejac"
+piece = "Standard"
+typesetter = "OpenBook contributors (MusicXML import)"
+completion = "3"
+uuid = "e8259910-79bc-57a6-829b-9b75cb19cfc1"
+location = "TheBook:435"
+copyright = "All Rights Reserved"
+copyrightextra = "Archived MusicXML notice retained; underlying music is not relicensed."
+
+[versions.Wikifonia]
+doChords = true
+doVoice = true
+doLyrics = false
+doLyricsmore = false
+doLyricsmoremore = false
+doChordBars = false
+doGuitar = false
+doExtra = false
+doPrep = false
+doOwn = false
+#}
+{% if part == "Vars" %}
+{% endif %}
+{% if part == "Doc" %}
+	DONE:
+	- imported melody and chord changes from real_books_archive.gi/Wikifonia.tar.xz: Wikifonia/Hubert Giraud, Kim Gannon, Jean Drejac - Under Paris Skies.mxl.
+	- source revision: http://wikifonia.org/node/6089/revisions/8464/view.
+	- book index reference: TheBook:435 (real_books_archive.gi/index); index pagination is not a verified PDF page number.
+	- retained the archived MusicXML rights notice; no redistribution permission is asserted.
+	- retained written melody, chord changes, pickups, repeats and numbered endings; lyrics, slurs, dynamics and articulations other than fermatas omitted.
+	- tempo is an editorial practice suggestion.
+	TODO:
+	- proofread the complete melody, harmony and form against a printed edition and check by ear.
+	- verify source attribution, copyright notice and reuse terms; only the archived MusicXML notice is retained.
+	- locate the tune in a local PDF edition; the book-index page number may differ.
+{% endif %}
+{% if part == "ChordsWikifonia" %}\chordmode {
+	\startChords
+	\startSong
+
+	\myMark "A"
+	\startPart
+	\repeat volta 2 {
+	d2.:m |
+	s2. |
+	s2. |
+	s2. | \myEndLine
+	g2.:m |
+	s2. |
+	s2. |
+	s2. | \myEndLine
+	a2.:7 |
+	s2. |
+	s2. |
+	s2. | \myEndLine
+	d2.:m |
+	g2.:m |
+	d2.:m |
+	} \alternative {
+	{
+	a2.:7 | \myEndLineVoltaNotLast
+	}
+	{
+	s2. | \myEndLineVoltaLast
+	}
+	}
+	g2.:m |
+	s2. |
+	s2. |
+	c2.:7 | \myEndLine
+	f2. |
+	s2. |
+	s2. |
+	s2. | \myEndLine
+	bes2. |
+	s2. |
+	g2.:m |
+	s2. | \myEndLine
+	a2.:7 |
+	s2. |
+	s2. |
+	s2. | \myEndLine
+	d2.:m |
+	g2.:m |
+	d2.:m |
+	s2. | \myEndLine
+	\endBar
+	\endPart
+
+	\endSong
+	\endChords
+}
+{% endif %}
+{% if part == "VoiceWikifonia" %}\absolute {
+	\tempo "Moderato" 4 = 120
+	\time 3/4
+	\key c \major
+
+	\repeat volta 2 {
+	a'4 d''4 e''4 |
+	f''2 g''4 |
+	a''4 g''4 f''4 |
+	e''4 d''4 c''4 |
+	bes'2. |
+	a''2. |
+	g''2. ~ |
+	g''2 r4 |
+	a'4 cis''4 d''4 |
+	e''2 f''4 |
+	g''4 bes''4 a''4 |
+	g''4 f''4 e''4 |
+	d''2. ~ |
+	d''2. ~ |
+	d''2 r4 |
+	} \alternative {
+	{
+	R2. |
+	}
+	{
+	e''4 f''4 e''4 |
+	}
+	}
+	d''2. |
+	d''2. |
+	d''2. |
+	e''4 f''4 e''4 |
+	d''2. |
+	d''2. |
+	d''2. |
+	e''4 f''4 e''4 |
+	d''2 e''4 |
+	f''2 g''4 |
+	a''4 bes''4 c'''4 |
+	bes''4 a''4 g''4 |
+	a''2. ~ |
+	a''2. ~ |
+	a''2. ~ |
+	a''2 r4 _\markup{ \bold\tiny {D.C. al Coda} } |
+	\textMark \markup { \musicglyph "scripts.coda" } d''2. ~ |
+	d''2. ~ |
+	d''2. ~ |
+	d''4 r2 |
+	\endBar
+}
+{% endif %}

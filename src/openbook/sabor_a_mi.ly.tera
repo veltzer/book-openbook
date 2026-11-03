@@ -1,0 +1,129 @@
+{#
+default_version = "Wikifonia"
+
+[attributes]
+title = "Sabor A Mi"
+style = "Jazz"
+composer = "Alvaro Carrillo, Alvaro Carrillo"
+piece = "Standard"
+typesetter = "OpenBook contributors (MusicXML import)"
+completion = "3"
+uuid = "be398335-ffc2-5353-a210-05e190bb8b00"
+location = "Great_Gig_Book:324"
+copyright = "All Rights Reserved"
+copyrightextra = "Archived MusicXML notice retained; underlying music is not relicensed."
+
+[versions.Wikifonia]
+doChords = true
+doVoice = true
+doLyrics = false
+doLyricsmore = false
+doLyricsmoremore = false
+doChordBars = false
+doGuitar = false
+doExtra = false
+doPrep = false
+doOwn = false
+#}
+{% if part == "Vars" %}
+{% endif %}
+{% if part == "Doc" %}
+	DONE:
+	- imported melody and chord changes from real_books_archive.gi/Wikifonia.tar.xz: Wikifonia/Alvaro Carrillo - Sabor A Mi.mxl.
+	- source revision: http://wikifonia.org/node/5104/revisions/15299/view.
+	- book index reference: Great_Gig_Book:324 (real_books_archive.gi/index); index pagination is not a verified PDF page number.
+	- retained the archived MusicXML rights notice; no redistribution permission is asserted.
+	- retained written melody, chord changes, pickups, repeats and numbered endings; lyrics, slurs, dynamics and articulations other than fermatas omitted.
+	- tempo is an editorial practice suggestion.
+	TODO:
+	- proofread the complete melody, harmony and form against a printed edition and check by ear.
+	- verify source attribution, copyright notice and reuse terms; only the archived MusicXML notice is retained.
+	- locate the tune in a local PDF edition; the book-index page number may differ.
+{% endif %}
+{% if part == "ChordsWikifonia" %}\chordmode {
+	\startChords
+	\startSong
+
+	\myMark "A"
+	\startPart
+	s2 gis2:dim |
+	a1:m7 |
+	f1:7 |
+	g2:6 a2:m7 | \myEndLine
+	b2:m7 bes2:dim |
+	a1:m7 |
+	d1:7 |
+	g1 | \myEndLine
+	s2 gis2:dim |
+	a1:m7 |
+	f1:7 |
+	g2:6 a2:m7 | \myEndLine
+	b2:m7 bes2:dim |
+	a1:m7 |
+	d1:7 |
+	g1 | \myEndLine
+	s1 |
+	g1:7 |
+	s1 |
+	c1 | \myEndLine
+	s1 |
+	e1:m7 |
+	a1:7 |
+	a1:m7 | \myEndLine
+	d2:7 gis2:dim |
+	a1:m7 |
+	f1:7 |
+	g2:maj7 a2:m7 | \myEndLine
+	b2:m7 bes2:dim |
+	a1:m7 |
+	d1:7 |
+	g1 | \myEndLine
+	s1 |
+	\endBar
+	\endPart
+
+	\endSong
+	\endChords
+}
+{% endif %}
+{% if part == "VoiceWikifonia" %}\absolute {
+	\tempo "Moderato" 4 = 120
+	\time 4/4
+	\key g \major
+
+	r4 b'8 c''8 d''8 c''8 b'8 a'8 |
+	b'8 e'8 b'8 e'8 b'2 |
+	r4 a'8 b'8 c''8 b'8 a'8 g'8 |
+	a'8 d'8 a'8 d'8 a'2 |
+	r4 fis'8 g'8 a'8 g'8 fis'8 e'8 |
+	g'4 e'8 fis'8 g'8 fis'8 e'8 d'8 |
+	fis'2 \times 2/3 { e'4 g'4 fis'4 } |
+	e'1 |
+	r4 b'8 c''8 d''8 c''8 b'8 a'8 |
+	b'8 e'8 b'8 e'8 b'2 |
+	r4 a'8 b'8 c''8 b'8 a'8 g'8 |
+	a'8 d'8 a'8 d'8 a'2 |
+	r4 fis'8 g'8 a'8 g'8 fis'8 e'8 |
+	g'4 e'8 fis'8 g'8 fis'8 e'8 d'8 |
+	fis'2 \times 2/3 { e'4 b'4 d'4 } |
+	g'1 ~ |
+	g'2 r4 a'8 g'8 |
+	a'4 f'2 a'8 g'8 |
+	a'4 f'2 b'8 g'8 |
+	a'8 g'8 b'8 g'8 a'8 g'8 b'8 g'8 |
+	a'2 r4 e'8 fis'8 |
+	g'4 a'2 e'8 fis'8 |
+	g'4 b'2 fis'8 g'8 |
+	a'8 b'8 a'8 b'8 a'8 b'8 c''8 b'8 |
+	a'4 b'8 c''8 d''8 c''8 b'8 a'8 |
+	b'8 e'8 b'8 e'8 b'2 |
+	r4 a'8 b'8 c''8 b'8 a'8 g'8 |
+	a'8 d'8 a'8 d'8 a'2 |
+	r4 fis'8 g'8 a'8 g'8 fis'8 e'8 |
+	g'4 e'8 fis'8 g'8 fis'8 e'8 d'8 |
+	fis'2 \times 2/3 { e'4 b'4 d'4 } |
+	g'1 ~ |
+	g'4 r4 r2 |
+	\endBar
+}
+{% endif %}

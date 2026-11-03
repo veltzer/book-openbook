@@ -1,0 +1,129 @@
+{#
+default_version = "Wikifonia"
+
+[attributes]
+title = "Harbor Lights"
+style = "Jazz"
+composer = "Hugh Williams, Jimmy Kennedy"
+piece = "Standard"
+typesetter = "OpenBook contributors (MusicXML import)"
+completion = "3"
+uuid = "28e82a5c-e3ba-5582-beba-0202bd989a83"
+location = "Great_Gig_Book:70"
+copyright = "All Rights Reserved"
+copyrightextra = "Archived MusicXML notice retained; underlying music is not relicensed."
+
+[versions.Wikifonia]
+doChords = true
+doVoice = true
+doLyrics = false
+doLyricsmore = false
+doLyricsmoremore = false
+doChordBars = false
+doGuitar = false
+doExtra = false
+doPrep = false
+doOwn = false
+#}
+{% if part == "Vars" %}
+{% endif %}
+{% if part == "Doc" %}
+	DONE:
+	- imported melody and chord changes from real_books_archive.gi/Wikifonia.tar.xz: Wikifonia/Hugh Williams, Jimmy Kennedy - Harbor Lights.mxl.
+	- source revision: http://wikifonia.org/node/4016/revisions/5332/view.
+	- book index reference: Great_Gig_Book:70 (real_books_archive.gi/index); index pagination is not a verified PDF page number.
+	- retained the archived MusicXML rights notice; no redistribution permission is asserted.
+	- retained written melody, chord changes, pickups, repeats and numbered endings; lyrics, slurs, dynamics and articulations other than fermatas omitted.
+	- tempo is an editorial practice suggestion.
+	TODO:
+	- proofread the complete melody, harmony and form against a printed edition and check by ear.
+	- verify source attribution, copyright notice and reuse terms; only the archived MusicXML notice is retained.
+	- locate the tune in a local PDF edition; the book-index page number may differ.
+{% endif %}
+{% if part == "ChordsWikifonia" %}\chordmode {
+	\startChords
+	\startSong
+
+	\myMark "A"
+	\startPart
+	s1 |
+	g1:7 |
+	s1 |
+	c1 | \myEndLine
+	s1 |
+	d1:m7 |
+	g1:7 |
+	c1 | \myEndLine
+	s1 |
+	g1:7 |
+	s1 |
+	c1 | \myEndLine
+	s1 |
+	d1:m7 |
+	g1:7 |
+	c1 | \myEndLine
+	s1 |
+	f1 |
+	f1:m |
+	c1 | \myEndLine
+	s1 |
+	d1:7 |
+	s1 |
+	g1:7 | \myEndLine
+	s1 |
+	g1:7 |
+	s1 |
+	c1 | \myEndLine
+	s1 |
+	d1:m7 |
+	g1:7 |
+	c1 | \myEndLine
+	s1 |
+	\endBar
+	\endPart
+
+	\endSong
+	\endChords
+}
+{% endif %}
+{% if part == "VoiceWikifonia" %}\absolute {
+	\tempo "Moderato" 4 = 120
+	\time 4/4
+	\key c \major
+
+	r4 c'4 e'4 g'4 |
+	b'4. b'8 a'2 |
+	r8 a'8 gis'8 a'8 b'8 a'8 b'8 a'8 |
+	fis'2 g'2 |
+	r4 g4 c'4 e'4 |
+	g'4. g'8 f'2 |
+	r8 f'8 e'8 f'8 a'4 g'4 |
+	e'1 |
+	r4 c'4 e'4 g'4 |
+	b'4. b'8 a'2 |
+	r8 a'8 g'8 a'8 b'8 a'8 b'8 a'8 |
+	fis'2 g'2 |
+	r4 g4 c'4 e'4 |
+	g'4. g'8 f'2 |
+	r8 f'8 e'8 f'8 a'4 b4 |
+	c'1 ~ |
+	c'4 c'4 d'4 e'4 |
+	g'4. f'8 a4 c'4 |
+	g'4 f'4 c'4 d'4 |
+	e'1 ~ |
+	e'4 a4 b4 c'4 |
+	e'4. d'8 d'4 c'4 |
+	a'4 e'4 d'4. c'8 |
+	d'1 ~ |
+	d'4 c'4 e'4 g'4 |
+	b'4. b'8 a'2 |
+	r8 a'8 gis'8 a'8 b'8 a'8 b'8 a'8 |
+	fis'2 g'2 |
+	r4 g4 c'4 e'4 |
+	g'4. g'8 f'2 |
+	r8 f'8 e'8 f'8 a'4 b4 |
+	c'1 ~ |
+	c'4 r4 r2 |
+	\endBar
+}
+{% endif %}

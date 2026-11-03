@@ -1,0 +1,133 @@
+{#
+default_version = "Wikifonia"
+
+[attributes]
+title = "The Happy Wanderer"
+style = "Jazz"
+composer = "Friedr.W.Moller, Antonia Ridge"
+piece = "Standard"
+typesetter = "OpenBook contributors (MusicXML import)"
+completion = "3"
+uuid = "b3054e8e-2270-5564-bca1-67411c85c591"
+location = "Great_Gig_Book:274"
+copyright = "All Rights Reserved"
+copyrightextra = "Archived MusicXML notice retained; underlying music is not relicensed."
+
+[versions.Wikifonia]
+doChords = true
+doVoice = true
+doLyrics = false
+doLyricsmore = false
+doLyricsmoremore = false
+doChordBars = false
+doGuitar = false
+doExtra = false
+doPrep = false
+doOwn = false
+#}
+{% if part == "Vars" %}
+{% endif %}
+{% if part == "Doc" %}
+	DONE:
+	- imported melody and chord changes from real_books_archive.gi/Wikifonia.tar.xz: Wikifonia/Friedr.W.Moller, Antonia Ridge - The Happy Wanderer.mxl.
+	- source revision: http://wikifonia.org/node/10692/revisions/18547/view.
+	- book index reference: Great_Gig_Book:274 (real_books_archive.gi/index); index pagination is not a verified PDF page number.
+	- retained the archived MusicXML rights notice; no redistribution permission is asserted.
+	- retained written melody, chord changes, pickups, repeats and numbered endings; lyrics, slurs, dynamics and articulations other than fermatas omitted.
+	- tempo is an editorial practice suggestion.
+	TODO:
+	- proofread the complete melody, harmony and form against a printed edition and check by ear.
+	- verify source attribution, copyright notice and reuse terms; only the archived MusicXML notice is retained.
+	- locate the tune in a local PDF edition; the book-index page number may differ.
+{% endif %}
+{% if part == "ChordsWikifonia" %}\chordmode {
+	\startChords
+	\startSong
+
+	\myMark "A"
+	\startPart
+	\repeat volta 2 {
+	s1 |
+	bes1 |
+	s1 |
+	s1 | \myEndLine
+	s1 |
+	s1 |
+	s1 |
+	f1:7 | \myEndLine
+	s1 |
+	s1 |
+	s1 |
+	bes1 | \myEndLine
+	s1 |
+	ees2 c2:m |
+	bes2 f2:7 |
+	bes1 | \myEndLine
+	s1 |
+	f1:7 |
+	s1 |
+	bes1 | \myEndLine
+	s1 |
+	f1:7 |
+	s1 |
+	bes1 | \myEndLine
+	s1 |
+	f1:7 |
+	s1 |
+	bes1 | \myEndLine
+	s1 |
+	ees2 c2:m |
+	bes2 f2:7 |
+	bes1 | \myEndLine
+	s1 |
+	}
+	\endBar
+	\endPart
+
+	\endSong
+	\endChords
+}
+{% endif %}
+{% if part == "VoiceWikifonia" %}\absolute {
+	\tempo "Moderato" 4 = 120
+	\time 4/4
+	\key bes \major
+
+	\repeat volta 2 {
+	r2 f'2 |
+	f'2 f'2 |
+	f'2. es'4 |
+	es'2 d'2 |
+	d'2. d'4 |
+	d'2 d'2 |
+	f'2 d'2 |
+	es'1 ~ |
+	es'2 f'2 |
+	f'2 a'2 |
+	a'2. a'4 |
+	bes'2 f'2 |
+	f'2. f'4 |
+	g'2 es'2 |
+	d'2 c'2 |
+	bes1 ~ |
+	bes4 r4 f'4. f'8 |
+	a'2 f'8 g'8 a'8 bes'8 |
+	c''2 f'4. f'8 |
+	bes'2 f'8 g'8 bes'8 c''8 |
+	d''2 f'4. f'8 |
+	c''2 f'8 g'8 a'8 c''8 |
+	es''2 f'4. f'8 |
+	d''4 c''4 bes'4 a'4 |
+	bes'4 a'4 g'4 f'4 |
+	a'2 f'8 g'8 a'8 bes'8 |
+	c''2 f'4. f'8 |
+	bes'2 f'8 g'8 bes'8 c''8 |
+	bes'2 f'2 |
+	g'2 es'2 |
+	d'2 c'2 |
+	bes1 ~ |
+	bes4 r4 r2 |
+	}
+	\endBar
+}
+{% endif %}

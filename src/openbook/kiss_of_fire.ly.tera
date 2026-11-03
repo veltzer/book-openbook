@@ -1,0 +1,149 @@
+{#
+default_version = "Wikifonia"
+
+[attributes]
+title = "Kiss Of Fire"
+style = "Jazz"
+composer = "Robert Hill, Lester Hallen"
+piece = "Standard"
+typesetter = "OpenBook contributors (MusicXML import)"
+completion = "3"
+uuid = "f5472321-d12f-5b27-992c-77f16067d858"
+location = "Great_Gig_Book:344"
+copyright = "All Rights Reserved"
+copyrightextra = "Archived MusicXML notice retained; underlying music is not relicensed."
+
+[versions.Wikifonia]
+doChords = true
+doVoice = true
+doLyrics = false
+doLyricsmore = false
+doLyricsmoremore = false
+doChordBars = false
+doGuitar = false
+doExtra = false
+doPrep = false
+doOwn = false
+#}
+{% if part == "Vars" %}
+{% endif %}
+{% if part == "Doc" %}
+	DONE:
+	- imported melody and chord changes from real_books_archive.gi/Wikifonia.tar.xz: Wikifonia/Robert Hill, Lester Hallen - Kiss Of Fire.mxl.
+	- source revision: http://wikifonia.org/node/9322/revisions/12772/view.
+	- book index reference: Great_Gig_Book:344 (real_books_archive.gi/index); index pagination is not a verified PDF page number.
+	- retained the archived MusicXML rights notice; no redistribution permission is asserted.
+	- retained written melody, chord changes, pickups, repeats and numbered endings; lyrics, slurs, dynamics and articulations other than fermatas omitted.
+	- tempo is an editorial practice suggestion.
+	TODO:
+	- proofread the complete melody, harmony and form against a printed edition and check by ear.
+	- verify source attribution, copyright notice and reuse terms; only the archived MusicXML notice is retained.
+	- locate the tune in a local PDF edition; the book-index page number may differ.
+{% endif %}
+{% if part == "ChordsWikifonia" %}\chordmode {
+	\startChords
+	\startSong
+
+	\myMark "A"
+	\startPart
+	s1 |
+	\repeat volta 2 {
+	f1:m |
+	s1 |
+	s1 | \myEndLine
+	c1:7 |
+	s1 |
+	s1 |
+	s1 | \myEndLine
+	f1:m |
+	s1 |
+	s1 |
+	f1:7 | \myEndLine
+	bes1:m |
+	s1 |
+	f1:m |
+	c1:7 | \myEndLine
+	f8:m c4.:7 f2:m |
+	ees1:7 |
+	aes2 aes4:/c b4:dim |
+	ees1:7 | \myEndLine
+	aes1 |
+	c1:7 |
+	f1:m |
+	des1:7 | \myEndLine
+	c2. des4:7 |
+	c2.:7 des4:7 |
+	s1 |
+	f1:m | \myEndLine
+	s1 |
+	f1:7 |
+	bes1:m |
+	s1 | \myEndLine
+	f1:m |
+	c1:7 |
+	} \alternative {
+	{
+	f1:m | \myEndLineVoltaNotLast
+	}
+	{
+	f1:m | \myEndLineVoltaLast
+	}
+	}
+	\endBar
+	\endPart
+
+	\endSong
+	\endChords
+}
+{% endif %}
+{% if part == "VoiceWikifonia" %}\absolute {
+	\tempo "Moderato" 2 = 80
+	\time 2/2
+	\key as \major
+
+	r2 r8 c'8 c'8 des'8 |
+	\repeat volta 2 {
+	es'8 c'8 c'8 f'8 f'8 as'8 as'8 des''8 |
+	des''8 c''4. r8 c''8 c''8 f''8 |
+	f''8 c''8 c''8 as'8 as'8 bes'8 bes'8 as'8 |
+	as'8 g'4. r8 c'8 c'8 des'8 |
+	des'8 c'8 c'8 e'8 e'8 g'8 g'8 des''8 |
+	des''8 c''4. r8 c''8 b'8 c''8 |
+	g''8 e''8 e''8 c''8 c''8 bes'8 bes'8 as'8 |
+	g'8 f'4. r8 c'8 c'8 des'8 |
+	des'8 c'8 c'8 f'8 f'8 as'8 as'8 des''8 |
+	des''8 c''4. r8 c''8 c''8 f''8 |
+	f''8 c''8 c''8 a'8 a'8 c''8 c''8 es''8 |
+	es''8 des''4. r8 f'8 bes'8 des''8 |
+	des''8 c''8 c''8 bes'8 bes'8 as'8 as'8 g'8 |
+	g'8 f'4. r8 as'8 g'8 f'8 |
+	f'8 e'4 g'8 g'8 g'8 bes'8 as'8 |
+	g'8 f'4. r8 es'8 d'8 es'8 |
+	des''8 des''4 des''8 es''8 des''8 c''8 b'8 |
+	des''8 c''4 g'8 bes'8 as'8 g'8 f'8 |
+	as'8 g'4 des'8 g'8 f'8 es'8 d'8 |
+	f'8 es'4. r8 c'8 b8 c'8 |
+	bes'8 bes'4 bes'8 c''8 bes'8 as'8 g'8 |
+	bes'8 as'4. r8 as'8 bes'8 as'8 |
+	g'8 f'8 e'8 f'8 g'8 as'8 bes'8 b'8 |
+	c''2 r8 c''8 es''8 des''8 |
+	c''2 r8 c''8 es''8 des''8 |
+	c''2 r8 c'8 c'8 des'8 |
+	des'8 c'8 c'8 f'8 f'8 as'8 as'8 des''8 |
+	des''8 c''4. r8 c''8 c''8 f''8 |
+	f''8 c''8 c''8 a'8 a'8 c''8 c''8 es''8 |
+	es''8 des''4. r8 f'8 bes'8 des''8 |
+	des''8 c''8 c''8 bes'8 bes'8 as'8 as'8 g'8 |
+	g'8 f'4. r8 as'8 g'8 f'8 |
+	f'8 e'4. r8 bes'8 as'8 g'8 |
+	} \alternative {
+	{
+	f'2 r8 c'8 c'8 des'8 |
+	}
+	{
+	f'2. r4 |
+	}
+	}
+	\endBar
+}
+{% endif %}

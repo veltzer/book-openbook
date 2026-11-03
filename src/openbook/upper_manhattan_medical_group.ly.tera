@@ -1,0 +1,147 @@
+{#
+default_version = "Wikifonia"
+
+[attributes]
+title = "Upper Manhattan Medical Group"
+style = "Jazz"
+composer = "Billy Strayhorn"
+piece = "Standard"
+typesetter = "OpenBook contributors (MusicXML import)"
+completion = "3"
+uuid = "b890d1f6-eff5-56db-a903-afc0ae965eea"
+location = "557_Standards:402"
+copyright = "All Rights Reserved"
+copyrightextra = "Archived MusicXML notice retained; underlying music is not relicensed."
+
+[versions.Wikifonia]
+doChords = true
+doVoice = true
+doLyrics = false
+doLyricsmore = false
+doLyricsmoremore = false
+doChordBars = false
+doGuitar = false
+doExtra = false
+doPrep = false
+doOwn = false
+#}
+{% if part == "Vars" %}
+{% endif %}
+{% if part == "Doc" %}
+	DONE:
+	- imported melody and chord changes from real_books_archive.gi/Wikifonia.tar.xz: Wikifonia/Billy Strayhorn - Upper Manhattan Medical Group.mxl.
+	- source revision: http://wikifonia.org/node/7025/revisions/9683/view.
+	- book index reference: 557_Standards:402 (real_books_archive.gi/index); index pagination is not a verified PDF page number.
+	- retained the archived MusicXML rights notice; no redistribution permission is asserted.
+	- retained written melody, chord changes, pickups, repeats and numbered endings; lyrics, slurs, dynamics and articulations other than fermatas omitted.
+	- tempo is an editorial practice suggestion.
+	TODO:
+	- proofread the complete melody, harmony and form against a printed edition and check by ear.
+	- verify source attribution, copyright notice and reuse terms; only the archived MusicXML notice is retained.
+	- locate the tune in a local PDF edition; the book-index page number may differ.
+{% endif %}
+{% if part == "ChordsWikifonia" %}\chordmode {
+	\startChords
+	\startSong
+
+	\myMark "A"
+	\startPart
+	\repeat volta 2 {
+	f1:m7.5- |
+	bes1:7.9- |
+	ees1:m7 |
+	aes1:7 | \myEndLine
+	des2:dim7 des2:6 |
+	} \alternative {
+	{
+	des1:maj7 |
+	des1:m7 |
+	ges1:7 | \myEndLineVoltaNotLast
+	}
+	{
+	des1:maj7 |
+	aes2.:m7 des4:7 |
+	aes2:m7 des2:7 | \myEndLineVoltaLast
+	}
+	}
+	g1:m7.5- |
+	c1:7 |
+	f1:maj7 |
+	s1 | \myEndLine
+	aes1:m7.5- |
+	des1:7 |
+	ges1:m7 |
+	ees2:m7 aes2:7 | \myEndLine
+	f1:m7.5- |
+	bes1:7.9- |
+	ees1:m7 |
+	aes1:7 | \myEndLine
+	des1:dim7 |
+	des1:maj7 |
+	des1:dim7 |
+	des1:maj7 | \myEndLine
+	des1:dim7 |
+	s1 |
+	des1:maj7 |
+	s1 | \myEndLine
+	des1:dim7 |
+	s1 |
+	des1:maj7 |
+	s1 | \myEndLine
+	\endBar
+	\endPart
+
+	\endSong
+	\endChords
+}
+{% endif %}
+{% if part == "VoiceWikifonia" %}\absolute {
+	\tempo "Moderato" 4 = 120
+	\time 4/4
+	\key des \major
+
+	\repeat volta 2 {
+	bes''2. as''8 b''8 ~ |
+	b''4. bes''8 ~ bes''2 |
+	r8 as''4. ~ as''4 ges''8 f''8 ~ |
+	f''2 r8 es''4. |
+	a'4. bes'8 ~ bes'4. c''8 ~ |
+	} \alternative {
+	{
+	c''4 des''4 \times 2/3 { f''4 as''4 c'''4 } |
+	es'''2. bes''8 g''8 ~ |
+	g''2 as''2 |
+	}
+	{
+	c''4 des''4 \times 2/3 { f''4 as''4 des'''4 } |
+	ges'''2. f'''8 ges'''8 ~ |
+	ges'''2 f'''2 |
+	}
+	}
+	f''2. e''4 |
+	c'''4 bes''4 as''4 g''4 |
+	g''2. f''8 e''8 ~ |
+	e''4. f''8 ~ f''2 |
+	ges''2. f''4 |
+	des'''4 bes''4 a''4 as''4 |
+	as''2. ges''8 f''8 ~ |
+	f''2 ~ f''2 |
+	bes''2. as''8 bes''8 ~ |
+	bes''4. bes''8 ~ bes''2 |
+	r8 as''4. ~ as''4 ges''8 f''8 ~ |
+	f''2 r8 es''4. _\markup{ \bold\tiny {To Coda} } |
+	a''2. des'''8 bes''8 ~ |
+	bes''1 |
+	a''2. des'''8 bes''8 ~ |
+	bes''1 _\markup{ \bold\tiny {D.C. al Coda} } |
+	\textMark \markup { \musicglyph "scripts.coda" } a''1 ~ |
+	a''2. des'''8 bes''8 ~ |
+	bes''1 ~ |
+	bes''1 |
+	a''1 ~ |
+	a''2. des'''8 bes''8 ~ |
+	bes''1 ~ |
+	bes''1 |
+	\endBar
+}
+{% endif %}

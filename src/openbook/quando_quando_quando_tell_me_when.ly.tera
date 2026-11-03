@@ -1,0 +1,217 @@
+{#
+default_version = "Wikifonia"
+
+[attributes]
+title = "Quando, Quando, Quando (Tell Me When)"
+style = "Jazz"
+composer = "Tony Renis 1962, Italian: Alberto Testa; English: Ervin Drake 1962"
+piece = "Standard"
+typesetter = "OpenBook contributors (MusicXML import)"
+completion = "3"
+uuid = "84029f33-a0a5-51ce-a42e-912194da308e"
+location = "Just_Standards_Real_Book:286"
+copyright = "All Rights Reserved"
+copyrightextra = "Archived MusicXML notice retained; underlying music is not relicensed."
+
+[versions.Wikifonia]
+doChords = true
+doVoice = true
+doLyrics = false
+doLyricsmore = false
+doLyricsmoremore = false
+doChordBars = false
+doGuitar = false
+doExtra = false
+doPrep = false
+doOwn = false
+#}
+{% if part == "Vars" %}
+{% endif %}
+{% if part == "Doc" %}
+	DONE:
+	- imported melody and chord changes from real_books_archive.gi/Wikifonia.tar.xz: Wikifonia/Tony Renis 1962, Italian: Alberto Testa;  English:  Ervin Drake 1962 - Quando, Quando, Quando (Tell Me When).mxl.
+	- source revision: http://wikifonia.org/node/3422/revisions/15900/view.
+	- book index reference: Just_Standards_Real_Book:286 (real_books_archive.gi/index); index pagination is not a verified PDF page number.
+	- retained the archived MusicXML rights notice; no redistribution permission is asserted.
+	- retained written melody, chord changes, pickups, repeats and numbered endings; lyrics, slurs, dynamics and articulations other than fermatas omitted.
+	- tempo is an editorial practice suggestion.
+	TODO:
+	- proofread the complete melody, harmony and form against a printed edition and check by ear.
+	- verify source attribution, copyright notice and reuse terms; only the archived MusicXML notice is retained.
+	- locate the tune in a local PDF edition; the book-index page number may differ.
+{% endif %}
+{% if part == "ChordsWikifonia" %}\chordmode {
+	\startChords
+	\startSong
+
+	\myMark "A"
+	\startPart
+	\partial 2 s2 |
+	bes1 |
+	\repeat volta 2 {
+	c1:m7 |
+	f1:7 | \myEndLine
+	s1 |
+	c2:m7 f2:7 |
+	bes1 |
+	s1 | \myEndLine
+	ees1 |
+	bes1 |
+	c1:m7 |
+	f1:7 | \myEndLine
+	s1 |
+	c2:m7 f2:7 |
+	bes1 |
+	s1 | \myEndLine
+	s1 |
+	s2 b2 |
+	c1:m7 |
+	f1:7 | \myEndLine
+	f1:7 |
+	c2:m7 f2:7 |
+	bes1 |
+	s1 | \myEndLine
+	s1 |
+	s1 |
+	c1:m7 |
+	f1:7 | \myEndLine
+	s1 |
+	c2:m7 f2:7 |
+	bes1 |
+	s1 | \myEndLine
+	s1 |
+	s1 |
+	f1:m7 |
+	s1 | \myEndLine
+	bes1:7 |
+	s1 |
+	ees1 |
+	s1 | \myEndLine
+	s1 |
+	g1:m7 |
+	s1 |
+	c1:7 | \myEndLine
+	s1 |
+	g2:m7 c2:7 |
+	c1:m7 |
+	f1:7 | \myEndLine
+	c1:m7 |
+	bes1 |
+	c1:m7 |
+	f1:7 | \myEndLine
+	s1 |
+	c2:m7 f2:7 |
+	bes1 |
+	s1 | \myEndLine
+	c1:m7 |
+	bes1 |
+	c1:m7 |
+	f1:7 | \myEndLine
+	s1 |
+	c2:m7 f2:7 |
+	} \alternative {
+	{
+	bes1 |
+	s1 | \myEndLine
+	s1 |
+	s1 | \myEndLineVoltaNotLast
+	}
+	{
+	s1 | \myEndLineVoltaLast
+	}
+	}
+	s1 |
+	c1:m7 |
+	bes1 |
+	\endBar
+	\endPart
+
+	\endSong
+	\endChords
+}
+{% endif %}
+{% if part == "VoiceWikifonia" %}\absolute {
+	\tempo "Moderato" 4 = 120
+	\time 4/4
+	\key bes \major
+
+	\partial 2 d'4 f'4 |
+	c''4 bes'4 f'4. d'8 |
+	\repeat volta 2 {
+	es'1 ~ |
+	es'1 ~ |
+	es'4 r4 c''4 d''4 |
+	c''4 d''4 c''4 d''4 |
+	bes'1 |
+	g'1 ~ |
+	g'4 r4 f'4 g'4 |
+	d''4 bes'4 f'4. d'8 |
+	es'1 ~ |
+	es'1 ~ |
+	es'4 r4 c''4 d''4 |
+	c''4 d''4 bes'4 g'4 |
+	bes'1 ~ |
+	bes'1 ~ |
+	bes'2 d'4 f'4 |
+	c''4 bes'4 f'4. d'8 |
+	es'1 ~ |
+	es'1 ~ |
+	es'4 r4 c''4 d''4 |
+	c''4 d''4 c''4 d''4 |
+	bes'1 |
+	g'1 ~ |
+	g'4 r4 f'4 g'4 |
+	d''4 bes'4 f'4. d'8 |
+	es'1 ~ |
+	es'1 ~ |
+	es'4 r4 c''4 d''4 |
+	c''4 es''4 bes'4 g'4 |
+	bes'1 ~ |
+	bes'1 ~ |
+	bes'4 r4 bes'4 c''4 |
+	d''2 c''4 bes'4 |
+	c''1 ~ |
+	c''1 ~ |
+	c''4 r4 bes'4 c''4 |
+	d''2 c''4 bes'4 |
+	c''1 |
+	c''1 ~ |
+	c''4 r4 bes'4 c''4 |
+	d''2 c''4 bes'4 |
+	c''1 ~ |
+	c''1 ~ |
+	c''4 r4 g'4 a'4 |
+	bes'4 c''4 d''4 bes'4 |
+	c''1 ~ |
+	c''1 ~ |
+	c''4 r4 d'4 f'4 |
+	c''4 bes'4 f'4. d'8 |
+	es'1 ~ |
+	es'1 ~ |
+	es'4 r4 c''4 d''4 |
+	c''4 d''4 c''4 d''4 |
+	bes'1 |
+	g'1 ~ |
+	g'4 r4 f'4 g'4 |
+	d''4 bes'4 f'4. d'8 |
+	es'1 ~ |
+	es'1 ~ |
+	es'4 r4 c''4 d''4 |
+	c''4 d''4 bes'4 g'4 |
+	} \alternative {
+	{
+	bes'1 ~ |
+	bes'1 ~ |
+	bes'4 r4 d'4 f'4 |
+	c''4 bes'4 f'4. d'8 |
+	}
+	{
+	r2 bes'2 |
+	}
+	}
+	bes'1 ~ |
+	bes'1 ~ |
+	bes'2. r4 |
+	\endBar
+}
+{% endif %}

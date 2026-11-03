@@ -1,0 +1,107 @@
+{#
+default_version = "Wikifonia"
+
+[attributes]
+title = "Blue Train"
+style = "Jazz"
+composer = "John Coltrane"
+piece = "Standard"
+typesetter = "OpenBook contributors (MusicXML import)"
+completion = "3"
+uuid = "25f24412-6082-5ff8-88d4-aab1e90cf522"
+location = "Real_Book_1:71"
+copyright = "All Rights Reserved"
+copyrightextra = "Archived MusicXML notice retained; underlying music is not relicensed."
+
+[versions.Wikifonia]
+doChords = true
+doVoice = true
+doLyrics = false
+doLyricsmore = false
+doLyricsmoremore = false
+doChordBars = false
+doGuitar = false
+doExtra = false
+doPrep = false
+doOwn = false
+#}
+{% if part == "Vars" %}
+{% endif %}
+{% if part == "Doc" %}
+	DONE:
+	- imported melody and chord changes from real_books_archive.gi/Wikifonia.tar.xz: Wikifonia/John Coltrane - Blue Train.mxl.
+	- source revision: http://wikifonia.org/node/1444/revisions/18512/view.
+	- book index reference: Real_Book_1:71 (real_books_archive.gi/index); index pagination is not a verified PDF page number.
+	- retained the archived MusicXML rights notice; no redistribution permission is asserted.
+	- retained written melody, chord changes, pickups, repeats and numbered endings; lyrics, slurs, dynamics and articulations other than fermatas omitted.
+	- tempo is an editorial practice suggestion.
+	TODO:
+	- proofread the complete melody, harmony and form against a printed edition and check by ear.
+	- verify source attribution, copyright notice and reuse terms; only the archived MusicXML notice is retained.
+	- locate the tune in a local PDF edition; the book-index page number may differ.
+{% endif %}
+{% if part == "ChordsWikifonia" %}\chordmode {
+	\startChords
+	\startSong
+
+	\myMark "A"
+	\startPart
+	\partial 1*5/8 s1*5/8 |
+	\repeat volta 2 {
+	ees1:7.9+ |
+	s1 |
+	s1 | \myEndLine
+	s1 |
+	ees1:7.11+ |
+	s1 |
+	ees1:7.9+ | \myEndLine
+	s1 |
+	bes1:7.9+ |
+	s1 |
+	} \alternative {
+	{
+	ees1:7.9+ | \myEndLine
+	s1 | \myEndLineVoltaNotLast
+	}
+	{
+	ees1:7.9+ |
+	s1 | \myEndLineVoltaLast
+	}
+	}
+	\endBar
+	\endPart
+
+	\endSong
+	\endChords
+}
+{% endif %}
+{% if part == "VoiceWikifonia" %}\absolute {
+	\tempo "Moderato" 4 = 120
+	\time 4/4
+	\key es \major
+
+	\partial 1*5/8 bes'8 des''8 f''8 des''8 es''8 ~ |
+	\repeat volta 2 {
+	es''1 |
+	r4 r8 bes'8 des''8 f''8 des''8 es''8 ~ |
+	es''1 |
+	r4 r8 es'8 ges'8 bes'8 ges'8 as'8 ~ |
+	as'1 |
+	r4 r8 bes'8 des''8 f''8 des''8 es''8 ~ |
+	es''1 |
+	r4 r8 bes'8 des''8 ges''8 es''8 des''8 ~ |
+	des''1 |
+	r4 r8 bes'8 des''8 f''8 des''8 es''8 ~ |
+	} \alternative {
+	{
+	es''1 |
+	r4 r8 bes'8 des''8 f''8 des''8 es''8 |
+	}
+	{
+	es''1 |
+	R1 |
+	}
+	}
+	\endBar
+}
+{% endif %}

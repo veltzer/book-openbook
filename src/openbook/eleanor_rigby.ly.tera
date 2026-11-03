@@ -1,0 +1,115 @@
+{#
+default_version = "Wikifonia"
+
+[attributes]
+title = "Eleanor Rigby"
+style = "Jazz"
+composer = "John Lennon, Paul McCartney"
+piece = "Standard"
+typesetter = "OpenBook contributors (MusicXML import)"
+completion = "3"
+uuid = "006d8353-f0ac-5cbe-bf13-9fd2b13dcedd"
+location = "TheBook:244"
+copyright = "All Rights Reserved"
+copyrightextra = "Archived MusicXML notice retained; underlying music is not relicensed."
+
+[versions.Wikifonia]
+doChords = true
+doVoice = true
+doLyrics = false
+doLyricsmore = false
+doLyricsmoremore = false
+doChordBars = false
+doGuitar = false
+doExtra = false
+doPrep = false
+doOwn = false
+#}
+{% if part == "Vars" %}
+{% endif %}
+{% if part == "Doc" %}
+	DONE:
+	- imported melody and chord changes from real_books_archive.gi/Wikifonia.tar.xz: Wikifonia/John Lennon, Paul McCartney - Eleanor Rigby.mxl.
+	- source revision: http://wikifonia.org/node/151/revisions/20827/view.
+	- book index reference: TheBook:244 (real_books_archive.gi/index); index pagination is not a verified PDF page number.
+	- retained the archived MusicXML rights notice; no redistribution permission is asserted.
+	- retained written melody, chord changes, pickups, repeats and numbered endings; lyrics, slurs, dynamics and articulations other than fermatas omitted.
+	- tempo is an editorial practice suggestion.
+	TODO:
+	- proofread the complete melody, harmony and form against a printed edition and check by ear.
+	- verify source attribution, copyright notice and reuse terms; only the archived MusicXML notice is retained.
+	- locate the tune in a local PDF edition; the book-index page number may differ.
+{% endif %}
+{% if part == "ChordsWikifonia" %}\chordmode {
+	\startChords
+	\startSong
+
+	\myMark "A"
+	\startPart
+	c1 |
+	s1 |
+	e1:m |
+	s1 | \myEndLine
+	c1 |
+	s1 |
+	e1:m |
+	s1 | \myEndLine
+	e1:m |
+	s1 |
+	s1 |
+	c1 | \myEndLine
+	s2 e2:m |
+	s1 |
+	s1 |
+	s1 | \myEndLine
+	c1 |
+	s2 e2:m |
+	s1*49/512 e1*463/512:m7 |
+	e1:m6 | \myEndLine
+	c1:/e |
+	e1:m |
+	s1*49/512 e1*463/512:m7 |
+	e1:m6 | \myEndLine
+	c1:/e |
+	e1:m |
+	\endBar
+	\endPart
+
+	\endSong
+	\endChords
+}
+{% endif %}
+{% if part == "VoiceWikifonia" %}\absolute {
+	\tempo "Moderato" 4 = 120
+	\time 4/4
+	\key g \major
+
+	e''2 ~ e''8 fis''8 g''8 a''8 ~ |
+	a''8 g''4 fis''8 ~ fis''8 e''4 b'8 ~ |
+	b'8 g'4. ~ g'4 a'8 b'8 |
+	g'8 b'8 fis'8 b'8 g'8 b'8 e'8 b'8 |
+	e''2 ~ e''8 fis''8 g''8 a''8 ~ |
+	a''8 g''4 fis''8 ~ fis''8 e''4 b'8 ~ |
+	b'8 g'4. ~ g'4 a'8 b'8 |
+	g'8 b'8 fis'8 b'8 g'8 b'8 e'8 b'8 |
+	g'8 a'8 b'8 g'8 ~ g'8 e'4. |
+	g'8 a'8 b'8 d''8 ~ d''8 cis''8 b'8 cis''8 ~ |
+	cis''8 b'8 a'8 b'8 ~ b'8 a'8 g'8 a'8 ~ |
+	a'2 r2 |
+	g'8 a'8 b'8 c''8 ~ c''4 b'4 |
+	g'8 a'8 b'8 g'8 ~ g'8 e'4. |
+	g'8 a'8 b'8 d''8 ~ d''8 cis''8 b'8 cis''8 ~ |
+	cis''8 b'8 a'8 b'8 ~ b'8 a'8 g'8 a'8 ~ |
+	a'2 r2 |
+	g'8 a'8 b'8 c''8 ~ c''4 b'4 |
+	a'4 g'8 a'8 ~ a'4 b'8 g'8 ~ |
+	g'8 e'4. r4 e'8 e''8 ~ |
+	e''4 b'8 a'8 ~ a'8 g'8 g'8 e'8 ~ |
+	e'1 |
+	a'4 g'8 a'8 ~ a'4 b'8 g'8 ~ |
+	g'8 e'4. r4 e'8 e''8 ~ |
+	e''4 b'8 a'8 ~ a'8 g'8 g'8 e'8 ~ |
+	e'1 |
+	\endBar
+}
+{% endif %}

@@ -1,0 +1,177 @@
+{#
+default_version = "Wikifonia"
+
+[attributes]
+title = "Tarantella"
+style = "Jazz"
+composer = "Italian Traditional"
+piece = "Standard"
+typesetter = "OpenBook contributors (MusicXML import)"
+completion = "3"
+uuid = "1b245fb6-b39a-5d00-9e90-dcddd11475c1"
+location = "TheBook:471"
+copyright = "All Rights Reserved"
+copyrightextra = "Archived MusicXML notice retained; underlying music is not relicensed."
+
+[versions.Wikifonia]
+doChords = true
+doVoice = true
+doLyrics = false
+doLyricsmore = false
+doLyricsmoremore = false
+doChordBars = false
+doGuitar = false
+doExtra = false
+doPrep = false
+doOwn = false
+#}
+{% if part == "Vars" %}
+{% endif %}
+{% if part == "Doc" %}
+	DONE:
+	- imported melody and chord changes from real_books_archive.gi/Wikifonia.tar.xz: Wikifonia/Italian Traditional - Tarantella.mxl.
+	- source revision: http://wikifonia.org/node/12041/revisions/16309/view.
+	- book index reference: TheBook:471 (real_books_archive.gi/index); index pagination is not a verified PDF page number.
+	- retained the archived MusicXML rights notice; no redistribution permission is asserted.
+	- retained written melody, chord changes, pickups, repeats and numbered endings; lyrics, slurs, dynamics and articulations other than fermatas omitted.
+	- tempo is an editorial practice suggestion.
+	TODO:
+	- proofread the complete melody, harmony and form against a printed edition and check by ear.
+	- verify source attribution, copyright notice and reuse terms; only the archived MusicXML notice is retained.
+	- locate the tune in a local PDF edition; the book-index page number may differ.
+{% endif %}
+{% if part == "ChordsWikifonia" %}\chordmode {
+	\startChords
+	\startSong
+
+	\myMark "A"
+	\startPart
+	s2. |
+	g2.:m |
+	s2. |
+	c2.:m | \myEndLine
+	g2.:m |
+	d2.:7 |
+	g2.:m |
+	d2.:7 | \myEndLine
+	g2.:m |
+	s2. |
+	s2. |
+	c2.:m | \myEndLine
+	g2.:m |
+	d2.:7 |
+	g2.:m |
+	d2.:7 | \myEndLine
+	g2.:m |
+	bes2. |
+	f2.:7 |
+	s2. | \myEndLine
+	bes2. |
+	g2.:7 |
+	c2.:m |
+	f2.:7 | \myEndLine
+	bes2. |
+	s2. |
+	f2.:7 |
+	s2. | \myEndLine
+	bes2. |
+	g2.:7 |
+	c2.:m |
+	f2.:7 | \myEndLine
+	bes4. g4.:m |
+	s4. c4.:m |
+	g4.:m c4.:m |
+	g4.:m d4.:7 | \myEndLine
+	g2.:m |
+	g4.:m c4.:m |
+	g4.:m c4.:m |
+	g4.:m d4.:7 | \myEndLine
+	s2. |
+	s4. c4.:m |
+	g4.:m c4.:m |
+	g4.:m d4.:7 | \myEndLine
+	g2.:m |
+	g4.:m c4.:m |
+	g4.:m c4.:m |
+	g4.:m d4.:7 | \myEndLine
+	g4.:m f4.:7 |
+	bes2. |
+	s2. |
+	f2.:7 | \myEndLine
+	bes2. |
+	s2. |
+	s2. |
+	f2.:7 | \myEndLine
+	bes2. |
+	\endBar
+	\endPart
+
+	\endSong
+	\endChords
+}
+{% endif %}
+{% if part == "VoiceWikifonia" %}\absolute {
+	\tempo "Moderato" 4. = 80
+	\time 6/8
+	\key bes \major
+
+	r4. g''4 g''8 |
+	d''4 d''8 g''4 g''8 |
+	d''4. c''4 d''8 |
+	es''4 es''8 es''8 f''8 es''8 |
+	d''4. d''4 es''8 |
+	d''4 c''8 c''4 d''8 |
+	c''4 bes'8 bes'4 c''8 |
+	bes'4 a'8 bes'4 a'8 |
+	g'4 r8 g''4 g''8 |
+	d''4 d''8 g''4 g''8 |
+	d''4. c''4 d''8 |
+	es''4 es''8 es''8 f''8 es''8 |
+	d''4. d''4 es''8 |
+	d''4 c''8 c''4 d''8 |
+	c''4 bes'8 bes'4 c''8 |
+	bes'4 a'8 bes'4 a'8 |
+	g'4 r8 d''4 es''8 |
+	f''4 f''8 g''4 f''8 |
+	es''4 d''8 c''4 d''8 |
+	es''4 es''8 f''4 es''8 |
+	d''4 c''8 bes'4 d''8 |
+	f''4 f''8 g''4 f''8 |
+	es''4 d''8 c''4 d''8 |
+	es''8 f''8 es''8 d''4 c''8 |
+	bes'4 r8 d''4 es''8 |
+	f''4 f''8 g''4 f''8 |
+	es''4 d''8 c''4 d''8 |
+	es''4 es''8 f''4 es''8 |
+	d''4 c''8 bes'4 d''8 |
+	f''4 f''8 g''4 f''8 |
+	es''4 d''8 c''4 d''8 |
+	es''8 f''8 es''8 d''4 c''8 |
+	bes'4 r8 g'4 a'8 |
+	bes'8 a'8 bes'8 c''8 bes'8 a'8 |
+	bes'8 a'8 bes'8 c''8 bes'8 a'8 |
+	bes'8 a'8 g'8 fis'8 g'8 a'8 |
+	g'4 r8 g'4 a'8 |
+	bes'8 a'8 bes'8 c''8 bes'8 c''8 |
+	d''8 c''8 d''8 es''8 d''8 c''8 |
+	bes'8 a'8 g'8 fis'8 g'8 a'8 |
+	g'4 r8 g'4 a'8 |
+	bes'8 a'8 bes'8 c''8 bes'8 a'8 |
+	bes'8 a'8 bes'8 c''8 bes'8 a'8 |
+	bes'8 a'8 g'8 fis'8 g'8 a'8 |
+	g'4 r8 g'4 a'8 |
+	bes'8 a'8 bes'8 c''8 bes'8 c''8 |
+	d''8 c''8 d''8 es''8 d''8 c''8 |
+	bes'8 a'8 g'8 fis'8 g'8 a'8 |
+	g'4 r8 f'8 g'8 a'8 |
+	bes'8 a'8 bes'8 d''8 cis''8 d''8 |
+	f''4 f''8 f''8 g''8 f''8 |
+	f''4 es''8 es''8 f''8 es''8 |
+	es''4 d''8 f'8 g'8 a'8 |
+	bes'8 a'8 bes'8 d''8 cis''8 d''8 |
+	f''4 f''8 f''8 e''8 f''8 |
+	a''8 g''8 f''8 es''8 d''8 c''8 |
+	bes'4. bes'4 r8 |
+	\endBar
+}
+{% endif %}

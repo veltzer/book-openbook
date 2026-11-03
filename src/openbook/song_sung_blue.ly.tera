@@ -1,0 +1,129 @@
+{#
+default_version = "Wikifonia"
+
+[attributes]
+title = "Song Sung Blue"
+style = "Jazz"
+composer = "Neil Diamond"
+piece = "Standard"
+typesetter = "OpenBook contributors (MusicXML import)"
+completion = "3"
+uuid = "89d0b655-d190-5b2d-b74a-abf622e53752"
+location = "Great_Gig_Book:175"
+copyright = "All Rights Reserved"
+copyrightextra = "Archived MusicXML notice retained; underlying music is not relicensed."
+
+[versions.Wikifonia]
+doChords = true
+doVoice = true
+doLyrics = false
+doLyricsmore = false
+doLyricsmoremore = false
+doChordBars = false
+doGuitar = false
+doExtra = false
+doPrep = false
+doOwn = false
+#}
+{% if part == "Vars" %}
+{% endif %}
+{% if part == "Doc" %}
+	DONE:
+	- imported melody and chord changes from real_books_archive.gi/Wikifonia.tar.xz: Wikifonia/Neil Diamond - Song Sung Blue.mxl.
+	- source revision: http://wikifonia.org/node/3973/revisions/5276/view.
+	- book index reference: Great_Gig_Book:175 (real_books_archive.gi/index); index pagination is not a verified PDF page number.
+	- retained the archived MusicXML rights notice; no redistribution permission is asserted.
+	- retained written melody, chord changes, pickups, repeats and numbered endings; lyrics, slurs, dynamics and articulations other than fermatas omitted.
+	- tempo is an editorial practice suggestion.
+	TODO:
+	- proofread the complete melody, harmony and form against a printed edition and check by ear.
+	- verify source attribution, copyright notice and reuse terms; only the archived MusicXML notice is retained.
+	- locate the tune in a local PDF edition; the book-index page number may differ.
+{% endif %}
+{% if part == "ChordsWikifonia" %}\chordmode {
+	\startChords
+	\startSong
+
+	\myMark "A"
+	\startPart
+	f1 |
+	s1 |
+	c1 |
+	s1 | \myEndLine
+	c1:7 |
+	s1 |
+	f1 |
+	s1 | \myEndLine
+	f1:7 |
+	s1 |
+	s1 |
+	bes1 | \myEndLine
+	s1 |
+	c1 |
+	s1 |
+	f1 | \myEndLine
+	s1 |
+	g1:m |
+	s1 |
+	c1 | \myEndLine
+	s1 |
+	bes1 |
+	s1 |
+	c1 | \myEndLine
+	s1 |
+	f1 |
+	c1:7 |
+	\repeat volta 2 {
+	f1 | \myEndLine
+	s1 |
+	c1:7 |
+	s1 |
+	}
+	\endBar
+	\endPart
+
+	\endSong
+	\endChords
+}
+{% endif %}
+{% if part == "VoiceWikifonia" %}\absolute {
+	\tempo "Moderato" 4 = 120
+	\time 4/4
+	\key c \major
+
+	a'2 f'2 |
+	c''2 bes'8 a'8 g'8 f'8 |
+	g'4 c''2. ~ |
+	c''1 |
+	g'2 c'2 |
+	c''2 bes'8 a'8 g'8 a'8 |
+	f'4 c''2. ~ |
+	c''1 |
+	r2 es''4 a'4 |
+	f''4. a'8 es''4 a'4 _\markup{ \bold\tiny {To Coda} } |
+	f''2. f'4 |
+	d''8 d''8 d''4 d''2 ~ |
+	d''2. c'4 |
+	c'8 c'8 e'8 e'8 g'8 g'8 bes'8 bes'8 |
+	c''2 c'4 c''8 bes'8 |
+	bes'8 a'8 a'2. ~ |
+	a'2. a'8 a'8 |
+	a'8 g'8 g'2. ~ |
+	g'2 r2 |
+	c'2 g'2 _\markup{ \bold\tiny {D.C. al Coda} } |
+	\textMark \markup { \musicglyph "scripts.coda" } f''4 es''4 d''4 es''4 |
+	d''8 d''8 d''4 d''2 ~ |
+	d''1 |
+	c'8 c'8 e'8 g'8 g'8 g'8 bes'8 bes'8 |
+	bes'8 bes'8 c''4 c'4 c''8 bes'8 |
+	bes'8 a'8 a'2. |
+	R1 |
+	\repeat volta 2 {
+	a'2 f'2 |
+	c''1 |
+	g'2 c'2 |
+	c''1 |
+	}
+	\endBar
+}
+{% endif %}

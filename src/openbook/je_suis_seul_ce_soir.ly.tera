@@ -1,0 +1,131 @@
+{#
+default_version = "Wikifonia"
+
+[attributes]
+title = "(Je suis) Seul ce soir"
+style = "Jazz"
+composer = "Jean Sablon, Jean Sablon"
+piece = "Standard"
+typesetter = "OpenBook contributors (MusicXML import)"
+completion = "3"
+uuid = "1853912b-a1ab-5f4b-aa2d-aee064791474"
+location = "Fakebook_Django:183"
+copyright = "All Rights Reserved"
+copyrightextra = "Archived MusicXML notice retained; underlying music is not relicensed."
+
+[versions.Wikifonia]
+doChords = true
+doVoice = true
+doLyrics = false
+doLyricsmore = false
+doLyricsmoremore = false
+doChordBars = false
+doGuitar = false
+doExtra = false
+doPrep = false
+doOwn = false
+#}
+{% if part == "Vars" %}
+{% endif %}
+{% if part == "Doc" %}
+	DONE:
+	- imported melody and chord changes from real_books_archive.gi/Wikifonia.tar.xz: Wikifonia/Jean Sablon - (Je suis) Seul ce soir.mxl.
+	- source revision: http://wikifonia.org/node/10913/revisions/26871/view.
+	- book index reference: Fakebook_Django:183 (real_books_archive.gi/index); index pagination is not a verified PDF page number.
+	- retained the archived MusicXML rights notice; no redistribution permission is asserted.
+	- retained written melody, chord changes, pickups, repeats and numbered endings; lyrics, slurs, dynamics and articulations other than fermatas omitted.
+	- tempo is an editorial practice suggestion.
+	TODO:
+	- proofread the complete melody, harmony and form against a printed edition and check by ear.
+	- verify source attribution, copyright notice and reuse terms; only the archived MusicXML notice is retained.
+	- locate the tune in a local PDF edition; the book-index page number may differ.
+{% endif %}
+{% if part == "ChordsWikifonia" %}\chordmode {
+	\startChords
+	\startSong
+
+	\myMark "A"
+	\startPart
+	s1 |
+	c1 |
+	s1 |
+	b1:7 | \myEndLine
+	s1 |
+	c1 |
+	s1 |
+	a1:7 | \myEndLine
+	s1 |
+	d1:m7 |
+	g1:7 |
+	c1 | \myEndLine
+	a1:m7 |
+	b1:7 |
+	s1 |
+	e1:m7 | \myEndLine
+	d2:m7 g2:7 |
+	c1 |
+	s1 |
+	b1:7 | \myEndLine
+	s1 |
+	c1 |
+	s1 |
+	a1:7 | \myEndLine
+	s1 |
+	f1 |
+	f1:m |
+	c1 | \myEndLine
+	a1:7 |
+	d1:m7 |
+	g1:7 |
+	c1 | \myEndLine
+	s1 |
+	s1 |
+	\endBar
+	\endPart
+
+	\endSong
+	\endChords
+}
+{% endif %}
+{% if part == "VoiceWikifonia" %}\absolute {
+	\tempo "Moderato" 4 = 120
+	\time 4/4
+	\key c \major
+
+	r2 e'4 g'4 |
+	c''4. c''8 c''2 ~ |
+	c''2 \times 2/3 { c'4 e'4 g'4 } |
+	b'4. b'8 b'2 ~ |
+	b'2 a'4 as'4 |
+	g'4 g'8 g'8 ~ g'2 ~ |
+	g'2 ges'4 f'8 e'8 ~ |
+	e'1 ~ |
+	e'2 d'4 e'8 f'8 ~ |
+	f'1 ~ |
+	f'2 \times 2/3 { d'4 e'4 f'4 } |
+	g'4 ~ g'8 g'8 g'2 ~ |
+	g'2 fis'4 g'8 a'8 ~ |
+	a'1 ~ |
+	a'2 \times 2/3 { fis'4 g'4 a'4 } |
+	b'1 ~ |
+	b'2 e'4 g'4 |
+	c''4. c''8 c''2 ~ |
+	c''2 \times 2/3 { c'4 e'4 g'4 } |
+	b'4. b'8 b'2 ~ |
+	b'2 a'4 as'4 |
+	g'4 c''4 g'2 ~ |
+	g'2 ges'4 f'8 e'8 ~ |
+	e'1 ~ |
+	e'2 d'4 e'4 |
+	f'2 a'4 c''4 |
+	e''2. es''4 |
+	d''2 \times 2/3 { c''4 g'4 ges'4 } |
+	f'2. e'4 |
+	e'4 d'4 f'4 a'4 |
+	e''2 \times 2/3 { b'4 c''4 d''4 } |
+	c''2 r2 |
+	R1 |
+	R1 |
+	\endBar
+}
+{% endif %}

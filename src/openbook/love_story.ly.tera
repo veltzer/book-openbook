@@ -1,0 +1,151 @@
+{#
+default_version = "Wikifonia"
+
+[attributes]
+title = "Love Story"
+style = "Jazz"
+composer = "Francis Lai"
+piece = "Standard"
+typesetter = "OpenBook contributors (MusicXML import)"
+completion = "3"
+uuid = "da902b66-ff60-55d5-89f7-5dbf7c2e4744"
+location = "Great_Gig_Book:95"
+copyright = "All Rights Reserved"
+copyrightextra = "Archived MusicXML notice retained; underlying music is not relicensed."
+
+[versions.Wikifonia]
+doChords = true
+doVoice = true
+doLyrics = false
+doLyricsmore = false
+doLyricsmoremore = false
+doChordBars = false
+doGuitar = false
+doExtra = false
+doPrep = false
+doOwn = false
+#}
+{% if part == "Vars" %}
+{% endif %}
+{% if part == "Doc" %}
+	DONE:
+	- imported melody and chord changes from real_books_archive.gi/Wikifonia.tar.xz: Wikifonia/Francis Lai - Love Story.mxl.
+	- source revision: http://wikifonia.org/node/2709/revisions/23081/view.
+	- book index reference: Great_Gig_Book:95 (real_books_archive.gi/index); index pagination is not a verified PDF page number.
+	- retained the archived MusicXML rights notice; no redistribution permission is asserted.
+	- retained written melody, chord changes, pickups, repeats and numbered endings; lyrics, slurs, dynamics and articulations other than fermatas omitted.
+	- tempo is an editorial practice suggestion.
+	TODO:
+	- proofread the complete melody, harmony and form against a printed edition and check by ear.
+	- verify source attribution, copyright notice and reuse terms; only the archived MusicXML notice is retained.
+	- locate the tune in a local PDF edition; the book-index page number may differ.
+{% endif %}
+{% if part == "ChordsWikifonia" %}\chordmode {
+	\startChords
+	\startSong
+
+	\myMark "A"
+	\startPart
+	g1:m |
+	s1 |
+	d1:7 |
+	s1 | \myEndLine
+	g2:m g2:m7/f |
+	ees1:maj7 |
+	s8 d2..:7 |
+	s1 | \myEndLine
+	g1:m |
+	s1 |
+	g1:m |
+	s1 | \myEndLine
+	d1:7 |
+	s1 |
+	g2:m g2:m7/f |
+	ees1:maj7 | \myEndLine
+	d1:7 |
+	s1 |
+	g1:maj7 |
+	g1:7 | \myEndLine
+	c1:m |
+	f1:7 |
+	bes1:maj7 |
+	ees1:maj7 | \myEndLine
+	a2:m7.5- d2:7 |
+	g1:m |
+	c1:m |
+	f1:7 | \myEndLine
+	bes1:maj7 |
+	ees1:maj7 |
+	a1:7 |
+	d1:maj7 | \myEndLine
+	d1:7 |
+	g1:m |
+	s1 |
+	d1:7 | \myEndLine
+	s1 |
+	g2:m g2:m7/f |
+	ees1:maj7 |
+	d1:7 | \myEndLine
+	s1 |
+	g1:m |
+	s1 |
+	s1 | \myEndLine
+	\endBar
+	\endPart
+
+	\endSong
+	\endChords
+}
+{% endif %}
+{% if part == "VoiceWikifonia" %}\absolute {
+	\tempo "Moderato" 4 = 120
+	\time 4/4
+	\key bes \major
+
+	bes'8 d'8 d'8 bes'8 bes'2 ~ |
+	bes'8 d'8 d'8 bes'8 bes'8 d'8 es'8 d'8 |
+	c'8 c'8 c'8 a'8 a'2 ~ |
+	a'8 c'8 c'8 a'8 a'8 c'8 d'8 c'8 |
+	bes8 bes8 bes8 g'8 g'2 ~ |
+	g'8 bes8 bes8 g'8 g'8 bes8 c'8 bes8 |
+	a8 a8 a8 fis'8 fis'2 ~ |
+	fis'4 g'4 a'4 es'4 |
+	d'1 |
+	R1 |
+	bes'8 d'8 d'8 bes'8 bes'2 ~ |
+	bes'8 d'8 d'8 bes'8 bes'8 d'8 es'8 d'8 |
+	c'8 c'8 c'8 a'8 a'2 ~ |
+	a'8 c'8 c'8 a'8 a'8 c'8 d'8 c'8 |
+	bes8 bes8 bes8 g'8 g'2 ~ |
+	g'8 bes8 bes8 g'8 g'8 bes8 c'8 bes8 |
+	a8 a8 a8 fis'8 fis'2 ~ |
+	fis'4 g'4 a'4 fis'4 |
+	b'1 ~ |
+	b'4 c''4 d''4 g'4 |
+	es''2 ~ es''8 g'8 c''8 g'8 |
+	g'8 a'8 a'4 ~ a'8 c''8 es''8 c''8 |
+	d''2 ~ d''8 f'8 d''8 f'8 |
+	f'8 g'8 g'4 ~ g'8 bes'8 d''8 bes'8 |
+	c''2 ~ c''8 a'8 c''8 a'8 |
+	bes'4 ~ bes'8 c''8 d''8 g'8 bes'8 d''8 |
+	es''2 ~ es''8 f'8 g'8 bes'8 |
+	bes'8 a'8 a'4 ~ a'8 bes'8 c''8 es'8 |
+	d'2 ~ d'8 d'8 es'8 f'8 |
+	a'8 g'8 g'4 ~ g'8 g'8 \times 2/3 { f'8 es'8 d'8 } |
+	cis'2 ~ cis'8 e'8 g'8 e'8 |
+	fis'1 ~ |
+	fis'4 r4 r2 |
+	bes'8 d'8 d'8 bes'8 bes'2 ~ |
+	bes'8 d'8 d'8 bes'8 bes'8 d'8 es'8 d'8 |
+	c'8 c'8 c'8 a'8 a'2 ~ |
+	a'8 c'8 c'8 a'8 a'8 c'8 d'8 c'8 |
+	bes8 bes8 bes8 g'8 g'2 ~ |
+	g'8 bes8 bes8 g'8 g'8 bes8 c'8 bes8 |
+	a8 a8 a8 fis'8 fis'2 ~ |
+	fis'4 g'4 a'4 fis'4 |
+	g'1 ~ |
+	g'1 ~ |
+	g'4 \fermata r4 r2 |
+	\endBar
+}
+{% endif %}

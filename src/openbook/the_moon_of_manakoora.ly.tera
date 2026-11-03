@@ -1,0 +1,147 @@
+{#
+default_version = "Wikifonia"
+
+[attributes]
+title = "The Moon Of Manakoora"
+style = "Jazz"
+composer = "Alfred Newman, Frank Loesser"
+piece = "Standard"
+typesetter = "OpenBook contributors (MusicXML import)"
+completion = "3"
+uuid = "5a44cf7f-0f37-51c4-8e4c-1bb5602803b9"
+location = "TheBook:505"
+copyright = "All Rights Reserved"
+copyrightextra = "Archived MusicXML notice retained; underlying music is not relicensed."
+
+[versions.Wikifonia]
+doChords = true
+doVoice = true
+doLyrics = false
+doLyricsmore = false
+doLyricsmoremore = false
+doChordBars = false
+doGuitar = false
+doExtra = false
+doPrep = false
+doOwn = false
+#}
+{% if part == "Vars" %}
+{% endif %}
+{% if part == "Doc" %}
+	DONE:
+	- imported melody and chord changes from real_books_archive.gi/Wikifonia.tar.xz: Wikifonia/Alfred Newman, Frank Loesser - The Moon Of Manakoora.mxl.
+	- source revision: http://wikifonia.org/node/5392/revisions/7333/view.
+	- book index reference: TheBook:505 (real_books_archive.gi/index); index pagination is not a verified PDF page number.
+	- retained the archived MusicXML rights notice; no redistribution permission is asserted.
+	- retained written melody, chord changes, pickups, repeats and numbered endings; lyrics, slurs, dynamics and articulations other than fermatas omitted.
+	- tempo is an editorial practice suggestion.
+	TODO:
+	- proofread the complete melody, harmony and form against a printed edition and check by ear.
+	- verify source attribution, copyright notice and reuse terms; only the archived MusicXML notice is retained.
+	- locate the tune in a local PDF edition; the book-index page number may differ.
+{% endif %}
+{% if part == "ChordsWikifonia" %}\chordmode {
+	\startChords
+	\startSong
+
+	\myMark "A"
+	\startPart
+	s2. |
+	\repeat volta 2 {
+	f2. |
+	f2.:m |
+	c2. | \myEndLine
+	s2. |
+	f2. |
+	f2.:m |
+	c2. | \myEndLine
+	s2. |
+	g2.:7 |
+	f2.:m |
+	d2.:m | \myEndLine
+	d2.:7 |
+	d2.:m |
+	g2.:7 |
+	c2. | \myEndLine
+	s2. |
+	f2. |
+	f2.:m |
+	s2. | \myEndLine
+	s2. |
+	f2. |
+	f2.:m |
+	c2. | \myEndLine
+	s2. |
+	g2.:7 |
+	f2.:m |
+	d2.:m | \myEndLine
+	g2.:7 |
+	d2.:m |
+	f2.:m |
+	} \alternative {
+	{
+	s2. | \myEndLine
+	s2. | \myEndLineVoltaNotLast
+	}
+	{
+	s2. |
+	s2. | \myEndLineVoltaLast
+	}
+	}
+	\endBar
+	\endPart
+
+	\endSong
+	\endChords
+}
+{% endif %}
+{% if part == "VoiceWikifonia" %}\absolute {
+	\tempo "Moderato" 4 = 120
+	\time 3/4
+	\key c \major
+
+	r2 c'4 |
+	\repeat volta 2 {
+	c''4. b'8 bes'8 a'8 |
+	as'2 c''4 |
+	g'2 a'4 |
+	g'2 c'4 |
+	c''4. b'8 bes'8 a'8 |
+	as'2 c''4 |
+	g'2. ~ |
+	g'2 g4 |
+	g'4. fis'8 f'8 e'8 |
+	es'2 as'4 |
+	d'2 e'4 |
+	d'2 g4 |
+	g'4. fis'8 f'8 e'8 |
+	d'2 es'4 |
+	e'2. ~ |
+	e'2 c'4 |
+	c''4. b'8 bes'8 a'8 |
+	as'2 c''4 |
+	g'2 a'4 |
+	g'2 c'4 |
+	c''4. b'8 bes'8 a'8 |
+	as'2 c''4 |
+	g'2. ~ |
+	g'2 g4 |
+	g'4. fis'8 f'8 e'8 |
+	es'2 as'4 |
+	d'2 e'4 |
+	d'2 g4 |
+	g'4. fis'8 f'8 e'8 |
+	es'2 d'4 |
+	} \alternative {
+	{
+	c'2. ~ |
+	c'2 c'4 |
+	}
+	{
+	c'2. ~ |
+	c'2 r4 |
+	}
+	}
+	\endBar
+}
+{% endif %}

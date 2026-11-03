@@ -1,0 +1,129 @@
+{#
+default_version = "Wikifonia"
+
+[attributes]
+title = "Boogie woogie bugle boy"
+style = "Jazz"
+composer = "Don Raye, Hughie Prince"
+piece = "Standard"
+typesetter = "OpenBook contributors (MusicXML import)"
+completion = "3"
+uuid = "4ea023c5-40c1-57ed-a5cf-789e93137ae8"
+location = "Just_Standards_Real_Book:66"
+copyright = "All Rights Reserved"
+copyrightextra = "Archived MusicXML notice retained; underlying music is not relicensed."
+
+[versions.Wikifonia]
+doChords = true
+doVoice = true
+doLyrics = false
+doLyricsmore = false
+doLyricsmoremore = false
+doChordBars = false
+doGuitar = false
+doExtra = false
+doPrep = false
+doOwn = false
+#}
+{% if part == "Vars" %}
+{% endif %}
+{% if part == "Doc" %}
+	DONE:
+	- imported melody and chord changes from real_books_archive.gi/Wikifonia.tar.xz: Wikifonia/Don Raye, Hughie Prince - Boogie woogie bugle boy.mxl.
+	- source revision: http://wikifonia.org/node/7670/revisions/23831/view.
+	- book index reference: Just_Standards_Real_Book:66 (real_books_archive.gi/index); index pagination is not a verified PDF page number.
+	- retained the archived MusicXML rights notice; no redistribution permission is asserted.
+	- retained written melody, chord changes, pickups, repeats and numbered endings; lyrics, slurs, dynamics and articulations other than fermatas omitted.
+	- tempo is an editorial practice suggestion.
+	TODO:
+	- proofread the complete melody, harmony and form against a printed edition and check by ear.
+	- verify source attribution, copyright notice and reuse terms; only the archived MusicXML notice is retained.
+	- locate the tune in a local PDF edition; the book-index page number may differ.
+{% endif %}
+{% if part == "ChordsWikifonia" %}\chordmode {
+	\startChords
+	\startSong
+
+	\myMark "A"
+	\startPart
+	s1 |
+	\repeat volta 2 {
+	c1 |
+	s1 |
+	s1 | \myEndLine
+	c1:7 |
+	f1 |
+	s1 |
+	c1 | \myEndLine
+	s1 |
+	g1:7 |
+	f1:7 |
+	c1 | \myEndLine
+	} \alternative {
+	{
+	s1 | \myEndLineVoltaNotLast
+	}
+	{
+	s1 | \myEndLineVoltaLast
+	}
+	}
+	s1 |
+	s1 |
+	s1 |
+	c1:7 | \myEndLine
+	f1 |
+	s1 |
+	c1 |
+	s1 | \myEndLine
+	g1:7 |
+	f1:7 |
+	c1 |
+	s4. c1*5/8 | \myEndLine
+	\endBar
+	\endPart
+
+	\endSong
+	\endChords
+}
+{% endif %}
+{% if part == "VoiceWikifonia" %}\absolute {
+	\tempo "Moderato" 4 = 120
+	\time 4/4
+	\key c \major
+
+	r2 r8 c'8 c'8 c'8 |
+	\repeat volta 2 {
+	c'8 g'8 gis'8 a'8 e'8 c'8 g'8 f'8 |
+	e'8 c'8 r8 e'8 ~ e'4 r8 c'8 |
+	c'8 g'8 gis'8 a'8 e'8 c'8 g'8 f'8 |
+	e'8 c'8 r8 c'8 ~ c'8 c'8 d'8 c'8 |
+	f'4 f'4 d'8 c'4 f'8 ~ |
+	f'2 r8 e'8 f'8 fis'8 |
+	g'8 c'8 c'8 c'8 c'8 e'8 f'8 fis'8 |
+	g'8 c'8 c'8 c'8 ~ c'8 c'8 d'8 d'8 |
+	g'8 g'8 g'4 r8 g'8 g'8 g'8 |
+	f'8 f'8 f'8 r8 g'4 dis'4 |
+	e'8 g'8 a'8 dis'8 e'8 g'8 a'8 dis'8 |
+	} \alternative {
+	{
+	e'8 g'8 a'8 c'8 ~ c'4 r8 c'8 |
+	}
+	{
+	e'8 g'8 a'8 c'8 ~ c'4 r8 g'8 |
+	}
+	}
+	c''4 r8 g'8 e''4 r8 g'8 |
+	c''8 e''16 c''16 g'8 c''8 e''8 g''8 f''8 e''8 |
+	c''8 c''8 c''8 c''8 ~ c''2 |
+	r8 g'8 f'8 e'8 c'8 e'4 c'8 |
+	f'4 a'8 f'8 c'8 c'8 c'8 c'8 |
+	f'8 a'8 f'8 c'8 ~ c'8 g'8 f'8 e'8 |
+	c'8 e'8 ~ e'2 r4 |
+	g'8 g'8 g'8 g'8 r8 c'8 d'8 c'8 |
+	g'8 g'8 g'4 r8 g'8 g'8 g'8 |
+	f'8 f'8 f'4 r8 g'4 dis'8 |
+	e'8 g'8 a'8 dis'8 e'8 g'8 a'8 dis'8 |
+	e'8 g'8 a'8 c''8 ~ c''2 |
+	\endBar
+}
+{% endif %}

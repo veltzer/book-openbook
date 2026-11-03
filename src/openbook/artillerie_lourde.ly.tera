@@ -1,0 +1,129 @@
+{#
+default_version = "Wikifonia"
+
+[attributes]
+title = "Artillerie Lourde"
+style = "Jazz"
+composer = "Django Reinhardt"
+piece = "Standard"
+typesetter = "OpenBook contributors (MusicXML import)"
+completion = "3"
+uuid = "e71bc208-caa8-5895-9367-15b9bd835eaf"
+location = "Fakebook_Django:12"
+copyright = "Creative Commons BY-NC-SA"
+copyrightextra = "Archived MusicXML notice retained; underlying music is not relicensed."
+
+[versions.Wikifonia]
+doChords = true
+doVoice = true
+doLyrics = false
+doLyricsmore = false
+doLyricsmoremore = false
+doChordBars = false
+doGuitar = false
+doExtra = false
+doPrep = false
+doOwn = false
+#}
+{% if part == "Vars" %}
+{% endif %}
+{% if part == "Doc" %}
+	DONE:
+	- imported melody and chord changes from real_books_archive.gi/Wikifonia.tar.xz: Wikifonia/Django Reinhardt - Artillerie Lourde.mxl.
+	- source revision: http://wikifonia.org/node/935/revisions/2438/view.
+	- book index reference: Fakebook_Django:12 (real_books_archive.gi/index); index pagination is not a verified PDF page number.
+	- retained the archived MusicXML rights notice; no redistribution permission is asserted.
+	- retained written melody, chord changes, pickups, repeats and numbered endings; lyrics, slurs, dynamics and articulations other than fermatas omitted.
+	- tempo is an editorial practice suggestion.
+	TODO:
+	- proofread the complete melody, harmony and form against a printed edition and check by ear.
+	- verify source attribution, copyright notice and reuse terms; only the archived MusicXML notice is retained.
+	- locate the tune in a local PDF edition; the book-index page number may differ.
+{% endif %}
+{% if part == "ChordsWikifonia" %}\chordmode {
+	\startChords
+	\startSong
+
+	\myMark "A"
+	\startPart
+	\partial 4. s4. |
+	c2 a2:m7 |
+	aes2:7 g2:7 |
+	c2 a2:m7 | \myEndLine
+	aes2:7 g2:7 |
+	c2 a2:m7 |
+	aes2:7 g2:7 |
+	c2 g2:7 | \myEndLine
+	c1 |
+	c2 a2:m7 |
+	aes2:7 g2:7 |
+	c2 a2:m7 | \myEndLine
+	aes2:7 g2:7 |
+	c2 a2:m7 |
+	aes2:7 g2:7 |
+	c2 g2:7 | \myEndLine
+	c1 |
+	c1:7 |
+	s1 |
+	bes1:7 | \myEndLine
+	s1 |
+	aes1:7 |
+	s1 |
+	g1:7 | \myEndLine
+	s1 |
+	c2 a2:m7 |
+	aes2:7 g2:7 |
+	c2 a2:m7 | \myEndLine
+	aes2:7 g2:7 |
+	c2 a2:m7 |
+	aes2:7 g2:7 |
+	c2 g2:7 | \myEndLine
+	c1 |
+	\endBar
+	\endPart
+
+	\endSong
+	\endChords
+}
+{% endif %}
+{% if part == "VoiceWikifonia" %}\absolute {
+	\tempo "Moderato" 4 = 120
+	\time 4/4
+	\key c \major
+
+	\partial 4. g'8 b'4 |
+	c''4 r4 r4 c''8 es''8 ~ |
+	es''8. d''16 c''8 g'8 ~ g'16 r16 g'8 b'4 |
+	c''4 r4 r4 c''8 es''8 ~ |
+	es''8. d''16 c''8 g'8 ~ g'16 r16 g'8 b'4 |
+	c''4 r4 r4 c''8 es''8 ~ |
+	es''8. d''16 c''8 g'8 ~ g'16 r16 g'8 b'4 |
+	c''4 r4 r4 g'4 |
+	b'8 c''4 r4 g'8 b'4 |
+	c''4 r4 r4 c''8 es''8 ~ |
+	es''8. d''16 c''8 g'8 ~ g'16 r16 g'8 b'4 |
+	c''4 r4 r4 c''8 es''8 ~ |
+	es''8. d''16 c''8 g'8 ~ g'16 r16 g'8 b'4 |
+	c''4 r4 r4 c''8 es''8 ~ |
+	es''8. d''16 c''8 g'8 ~ g'16 r16 g'8 b'4 |
+	c''4 r4 r4 g'4 |
+	b'8 c''4 r8 r2 |
+	r2 r2 |
+	r2 r2 |
+	r2 r2 |
+	r2 r2 |
+	r2 r2 |
+	r2 r2 |
+	r2 r2 |
+	r2 r8 g'8 b'4 |
+	c''4 r4 r4 c''8 es''8 ~ |
+	es''8. d''16 c''8 g'8 ~ g'16 r16 g'8 b'4 |
+	c''4 r4 r4 c''8 es''8 ~ |
+	es''8. d''16 c''8 g'8 ~ g'16 r16 g'8 b'4 |
+	c''4 r4 r4 c''8 es''8 ~ |
+	es''8. d''16 c''8 g'8 ~ g'16 r16 g'8 b'4 |
+	c''4 r4 r4 g'4 |
+	b'8 c''4 r8 r2 |
+	\endBar
+}
+{% endif %}

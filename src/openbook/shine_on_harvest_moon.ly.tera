@@ -1,0 +1,129 @@
+{#
+default_version = "Wikifonia"
+
+[attributes]
+title = "Shine On Harvest Moon"
+style = "Jazz"
+composer = "Nora Bayes, Jack Norworth"
+piece = "Standard"
+typesetter = "OpenBook contributors (MusicXML import)"
+completion = "3"
+uuid = "faf324a4-a266-5369-9dcb-8cd94fcba382"
+location = "TheBook:109"
+copyright = "All Rights Reserved"
+copyrightextra = "Archived MusicXML notice retained; underlying music is not relicensed."
+
+[versions.Wikifonia]
+doChords = true
+doVoice = true
+doLyrics = false
+doLyricsmore = false
+doLyricsmoremore = false
+doChordBars = false
+doGuitar = false
+doExtra = false
+doPrep = false
+doOwn = false
+#}
+{% if part == "Vars" %}
+{% endif %}
+{% if part == "Doc" %}
+	DONE:
+	- imported melody and chord changes from real_books_archive.gi/Wikifonia.tar.xz: Wikifonia/Nora Bayes, Jack Norworth - Shine On Harvest Moon.mxl.
+	- source revision: http://wikifonia.org/node/9770/revisions/13313/view.
+	- book index reference: TheBook:109 (real_books_archive.gi/index); index pagination is not a verified PDF page number.
+	- retained the archived MusicXML rights notice; no redistribution permission is asserted.
+	- retained written melody, chord changes, pickups, repeats and numbered endings; lyrics, slurs, dynamics and articulations other than fermatas omitted.
+	- tempo is an editorial practice suggestion.
+	TODO:
+	- proofread the complete melody, harmony and form against a printed edition and check by ear.
+	- verify source attribution, copyright notice and reuse terms; only the archived MusicXML notice is retained.
+	- locate the tune in a local PDF edition; the book-index page number may differ.
+{% endif %}
+{% if part == "ChordsWikifonia" %}\chordmode {
+	\startChords
+	\startSong
+
+	\myMark "A"
+	\startPart
+	s1 |
+	e1:7 |
+	s1 |
+	a1:7 | \myEndLine
+	s1 |
+	d1:7 |
+	s1 |
+	g4 d4:7 cis4:7 b4:m | \myEndLine
+	c4 g4 cis4:7 g4 |
+	e1:7 |
+	s1 |
+	a1:7 | \myEndLine
+	s1 |
+	d1:7 |
+	s1 |
+	g2 c2 | \myEndLine
+	g1 |
+	e1:7 |
+	s1 |
+	a1:7 | \myEndLine
+	s1 |
+	d1:7 |
+	s1 |
+	g4 d4:7 cis4:7 b4:m | \myEndLine
+	c4 g4 cis4:7 g4 |
+	e1:7 |
+	s1 |
+	a1:7 | \myEndLine
+	s1 |
+	d1:7 |
+	s1 |
+	g2 c2 | \myEndLine
+	g1 |
+	\endBar
+	\endPart
+
+	\endSong
+	\endChords
+}
+{% endif %}
+{% if part == "VoiceWikifonia" %}\absolute {
+	\tempo "Moderato" 2 = 80
+	\time 2/2
+	\key g \major
+
+	r2 r4 b'4 |
+	c''2 b'2 |
+	c''4 b'4 gis'4 e'4 |
+	cis'2 ~ cis'8. bis16 cis'8. b'16 |
+	a'2. r4 |
+	b'2 a'2 |
+	b'4 a'8 d''8 ~ d''8 b'8 a'4 |
+	g'8. e'16 d'8. fis'16 g'8. e'16 d'8. e'16 |
+	g'8. e'16 d'8 g'8 ~ g'4 r4 |
+	c''2 b'2 |
+	c''4 b'4 gis'4 e'4 |
+	cis'2 ~ cis'8. bis16 cis'8. b'16 |
+	a'2. a'4 |
+	b'2 a'2 |
+	b'4 a'8 d''8 ~ d''8 b'4. |
+	g'4. d'8 e'8 d'8 e'8 g'8 ~ |
+	g'2. b'4 |
+	c''2 b'2 |
+	c''4 b'4 gis'4 e'4 |
+	cis'2 ~ cis'8. bis16 cis'8. b'16 |
+	a'2. r4 |
+	b'2 a'2 |
+	b'4 a'8 d''8 ~ d''8 b'8 a'4 |
+	g'8. e'16 d'8. fis'16 g'8. e'16 d'8. e'16 |
+	g'8. e'16 d'8 g'8 ~ g'4 r4 |
+	c''2 b'2 |
+	c''4 b'4 gis'4 e'4 |
+	cis'2 ~ cis'8. bis16 cis'8. b'16 |
+	a'2. a'4 |
+	b'2 a'2 |
+	b'4 a'8 d''8 ~ d''8 b'4. |
+	g'4. d'8 e'8 d'8 e'8 g'8 ~ |
+	g'2. r4 |
+	\endBar
+}
+{% endif %}

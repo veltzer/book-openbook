@@ -1,0 +1,325 @@
+{#
+default_version = "Wikifonia"
+
+[attributes]
+title = "Just The Way You Are"
+style = "Jazz"
+composer = "Billy Joel"
+piece = "Standard"
+typesetter = "OpenBook contributors (MusicXML import)"
+completion = "3"
+uuid = "425c37f8-dfda-55b4-8f86-099349b20b7e"
+location = "TheBook:63"
+copyright = "All Rights Reserved"
+copyrightextra = "Archived MusicXML notice retained; underlying music is not relicensed."
+
+[versions.Wikifonia]
+doChords = true
+doVoice = true
+doLyrics = false
+doLyricsmore = false
+doLyricsmoremore = false
+doChordBars = false
+doGuitar = false
+doExtra = false
+doPrep = false
+doOwn = false
+#}
+{% if part == "Vars" %}
+{% endif %}
+{% if part == "Doc" %}
+	DONE:
+	- imported melody and chord changes from real_books_archive.gi/Wikifonia.tar.xz: Wikifonia/Billy Joel - Just The Way You Are.mxl.
+	- source revision: http://wikifonia.org/node/624/revisions/13420/view.
+	- book index reference: TheBook:63 (real_books_archive.gi/index); index pagination is not a verified PDF page number.
+	- retained the archived MusicXML rights notice; no redistribution permission is asserted.
+	- retained written melody, chord changes, pickups, repeats and numbered endings; lyrics, slurs, dynamics and articulations other than fermatas omitted.
+	- tempo is an editorial practice suggestion.
+	TODO:
+	- proofread the complete melody, harmony and form against a printed edition and check by ear.
+	- verify source attribution, copyright notice and reuse terms; only the archived MusicXML notice is retained.
+	- locate the tune in a local PDF edition; the book-index page number may differ.
+{% endif %}
+{% if part == "ChordsWikifonia" %}\chordmode {
+	\startChords
+	\startSong
+
+	\myMark "A"
+	\startPart
+	ees2 aes2:m6 |
+	ees2 aes4:/ees ees4 |
+	ees2 aes2:m6 |
+	ees2 aes4:/ees ees4 | \myEndLine
+	ees1 |
+	c1:m6 |
+	aes1:maj7 |
+	c2:m ees2:7 | \myEndLine
+	aes1:maj7 |
+	aes1:m |
+	ees1:/g |
+	bes2:m7 ees2:7 | \myEndLine
+	aes1:maj7 |
+	aes1:m |
+	ees1:/g |
+	c1:m7 | \myEndLine
+	c1:m7/f |
+	f1:9 |
+	aes1:/bes |
+	s1 | \myEndLine
+	ees1 |
+	c1:m6 |
+	aes1:maj7 |
+	c2:m ees2:7 | \myEndLine
+	aes1:maj7 |
+	aes1:m |
+	ees1:/g |
+	bes2:m7 ees2:7 | \myEndLine
+	aes1:maj7 |
+	aes1:m6 |
+	ees1:/g |
+	c1:m7 | \myEndLine
+	f1:m7 |
+	aes1:/bes |
+	ees2 aes2:m6 |
+	ees2 aes4:/ees ees4 | \myEndLine
+	ees1*123/256 aes1*133/256:m6 |
+	ees2 aes4:/ees ees4 |
+	ees1 |
+	c1:m6 | \myEndLine
+	aes1:maj7 |
+	c2:m7 ees2:7 |
+	aes1:maj7 |
+	aes1:m | \myEndLine
+	ees1:/g |
+	bes4.:m7 ees1*5/8:7 |
+	aes1:maj7 |
+	aes1:m | \myEndLine
+	ees1:/g |
+	c1:m7 |
+	c1:m7/f |
+	f1:9 | \myEndLine
+	aes1:/bes |
+	s1 |
+	ees1 |
+	c1:m6 | \myEndLine
+	aes1:maj7 |
+	c2:m ees2:7 |
+	aes1:maj7 |
+	aes1:m | \myEndLine
+	ees1:/g |
+	bes2:m7 ees2:7 |
+	aes1:maj7 |
+	aes1:m | \myEndLine
+	ees1:/g |
+	c1:m7 |
+	f1:m7 |
+	aes1:/bes | \myEndLine
+	ees2 aes2:m6/ees |
+	ees2 aes4:/ees ees4 |
+	ees2 aes2:m6/ees |
+	ees2 ees2:7 | \myEndLine
+	aes1 |
+	bes1 |
+	g1:m7 |
+	c1:7 | \myEndLine
+	f1:m7 |
+	bes1 |
+	ees1 |
+	s1*5/8 bes4.:m/des | \myEndLine
+	ces1 |
+	des1 |
+	bes1:m7 |
+	ees2 ees2:7 | \myEndLine
+	aes1:m7 |
+	des1 |
+	aes1:/bes |
+	s1 | \myEndLine
+	ees1 |
+	c1:m6 |
+	aes1:maj7 |
+	c2:m ees2:7 | \myEndLine
+	aes1:maj7 |
+	aes2:m aes2:m6 |
+	ees1:/g |
+	bes2:m7 ees2:7 | \myEndLine
+	aes1:maj7 |
+	aes1:m6 |
+	ees1:/g |
+	c1:m7 | \myEndLine
+	f1:m7 |
+	aes1:/bes |
+	ees2 aes2:m6 |
+	ees2 aes4:/ees ees4 | \myEndLine
+	ees2 aes2:m6 |
+	ees2 aes4:/ees ees4 |
+	ees1:/f |
+	f1:9 | \myEndLine
+	aes1:/bes |
+	s1 |
+	ees1 |
+	c1:m6 | \myEndLine
+	aes1:7 |
+	c2:m ees2:7 |
+	aes1:maj7 |
+	aes1:m | \myEndLine
+	ees1:/g |
+	bes4.:m7 ees1*5/8:7 |
+	aes1:maj7 |
+	aes1:m6 | \myEndLine
+	ees1:/g |
+	c1:m7 |
+	f1:m7 |
+	aes1:/bes | \myEndLine
+	ces1 |
+	des1 |
+	bes1:m7 |
+	ees1:7 | \myEndLine
+	aes1:m7 |
+	bes1:7 |
+	ees1:maj7 |
+	\endBar
+	\endPart
+
+	\endSong
+	\endChords
+}
+{% endif %}
+{% if part == "VoiceWikifonia" %}\absolute {
+	\tempo "Moderato" 2 = 80
+	\time 2/2
+	\key es \major
+
+	r1 |
+	r1 |
+	r1 |
+	r1 |
+	r2 es''8 g''4. |
+	es''8 c''4. ~ c''2 |
+	r4 r8 g'8 c''8 es''4. |
+	c''8 g'4. ~ g'2 |
+	r4 r8 g'8 as'8 bes'4. |
+	g'4 es'8 es'8 ~ es'4 ces'8 g'8 ~ |
+	g'1 |
+	as'4 bes'8 g'8 ~ g'4 f'8 g'8 ~ |
+	g'2 g'4 g'8 f'8 ~ |
+	f'8 es'8 ~ es'2. |
+	r4 r8 es'8 g'4 bes'8 d''8 ~ |
+	d''8 es''8 ~ es''2. |
+	r4 r8 es'8 c''8 d''4 es''8 ~ |
+	es''8 f''4. ~ f''8 d''4 c''8 |
+	bes'1 ~ |
+	bes'4 r4 r4 es''4 ~ |
+	es''4. es''8 ~ es''8 g''4. |
+	es''8 c''8 ~ c''2. |
+	r4 r8 g'8 c''4 es''4 |
+	c''8 g'4. ~ g'2 |
+	r4 r8 g'8 as'8 bes'4. |
+	g'8 es'4 es'8 ~ es'4 ces'8 g'8 ~ |
+	g'2. r8 es'8 |
+	as'4 bes'8 g'8 ~ g'4 es'4 |
+	r4 r8 g'8 g'4 es'8 f'8 ~ |
+	f'8 es'4. ~ es'4 r4 |
+	r4 es'4 g'4 bes'8 d''8 ~ |
+	d''8 es''8 ~ es''2. |
+	r4 r8 c''8 c''8 d''4 es''8 ~ |
+	es''4 g''8 c''8 ~ c''4 d''8 es''8 ~ |
+	es''1 ~ |
+	es''2. r4 |
+	r1 |
+	r1 |
+	r2 es''8 g''4. |
+	es''8 c''4. ~ c''2 |
+	r4 r8 c''8 ~ c''4 es''8 c''8 ~ |
+	c''8 g'4. ~ g'2 |
+	r4 g'4 as'4 bes'8 g'8 ~ |
+	g'8 es'4. es'4 ces'8 g'8 ~ |
+	g'1 |
+	as'4 bes'8 g'8 ~ g'4 f'8 g'8 ~ |
+	g'4 g'8 g'8 ~ g'8 g'4. |
+	f'4 es'2. |
+	r4 es'4 g'4 bes'8 d''8 ~ |
+	d''8 es''8 ~ es''2. |
+	r4 r8 c''8 c''8 d''4 es''8 ~ |
+	es''8 f''4. d''4 c''8 bes'8 ~ |
+	bes'1 ~ |
+	bes'4 r4 r8 es''4. ~ |
+	es''4. es''8 ~ es''8 g''4. |
+	es''8 c''8 ~ c''2. |
+	r4 r8 c''8 ~ c''4. es''8 |
+	c''8 g'8 ~ g'2. |
+	r4 r8 g'8 as'8 bes'4. |
+	g'4 es'8 es'8 ~ es'4 ces'8 g'8 ~ |
+	g'1 |
+	as'4 bes'8 g'8 ~ g'4 f'8 g'8 ~ |
+	g'4. g'8 g'8 g'4. |
+	f'8 es'4. ~ es'2 |
+	r4 r8 es'8 g'8 bes'4 d''8 ~ |
+	d''8 es''8 ~ es''2. |
+	r4 r8 c''8 c''8 d''4 es''8 ~ |
+	es''4 g''8 c''8 ~ c''4 d''8 es''8 ~ |
+	es''1 ~ |
+	es''2. r4 |
+	r1 |
+	R1 |
+	r4 r8 es'8 c''4 es''8 d''8 ~ |
+	d''8 c''4 bes'8 ~ bes'8 as'4 bes'8 ~ |
+	bes'2 ~ bes'8 d''4 c''8 ~ |
+	c''1 |
+	r4 r8 f'8 as'8 c''4 bes'8 ~ |
+	bes'8 as'4. g'4 es'8 g'8 ~ |
+	g'1 |
+	r2 r8 es''4. |
+	r8 es''4 es''8 ~ es''8 ges''4 f''8 ~ |
+	f''8 es''4 des''8 ~ des''8 ces''4 des''8 ~ |
+	des''2 ~ des''8 f''4 es''8 ~ |
+	es''2 r2 |
+	r4 r8 ces''8 ces''4 es''8 des''8 ~ |
+	des''4 ces''8 bes'8 ~ bes'8 as'4 bes'8 ~ |
+	bes'1 ~ |
+	bes'4 r8 es''8 ~ es''2 ~ |
+	\textMark \markup { \musicglyph "scripts.segno" } es''4 ^\markup{ \bold\small {voice tacet on D.S.} } es''4 ~ es''8 g''4. |
+	es''8 c''4. ~ c''2 |
+	r4 r8 c''8 c''4 es''8 c''8 ~ |
+	c''8 g'4. ~ g'2 |
+	r4 r8 g'8 c''8 bes'4. |
+	g'8 es'4. es'4 ces'8 g'8 ~ |
+	g'2 r2 |
+	as'4 bes'8 g'8 ~ g'4 f'8 g'8 ~ |
+	g'4. g'8 g'8 g'4 f'8 ~ |
+	f'8 es'8 ~ es'2. |
+	r4 r8 es'8 ~ es'8 f'8 g'8 bes'8 |
+	d''8 es''8 ~ es''2. \textMark \markup { \musicglyph "scripts.coda" } |
+	r4 r8 c''8 c''8 d''4 es''8 ~ |
+	es''4 g''8 c''8 ~ c''4 d''8 es''8 ~ |
+	es''1 ~ |
+	es''2. r4 |
+	r1 |
+	r1 _\markup{ \bold\tiny {D.S. al Coda} } |
+	\textMark \markup { \musicglyph "scripts.coda" } R1 ^\markup{ \bold\small {Coda} } |
+	R1 |
+	R1 |
+	es''1 ~ |
+	es''4. es''8 ~ es''8 g''4. |
+	es''8 c''4. ~ c''2 |
+	r8 ges''8 f''8 es''8 ~ es''8 c''4 es''8 ~ |
+	es''8 g'4. r2 |
+	r4 r8 g'8 c''8 bes'4. |
+	g'8 f'8 es'8 es'8 ~ es'4 ces'8 g'8 ~ |
+	g'1 |
+	as'4 bes'8 g'8 ~ g'8 f'8 es'4 |
+	r4 r8 es'8 g'8 g'4. |
+	f'8 es'8 ~ es'2. |
+	r4 r8 es'8 g'8 bes'4 d''8 ~ |
+	d''8 es''8 ~ es''2. |
+	r4 r8 c''8 c''8 d''4 es''8 ~ |
+	es''8 g''4 f''8 ~ f''8 es''4 es''8 ~ |
+	es''2 ~ es''8 es''8 ces''8 des''8 ~ |
+	des''2 ~ des''8 des''8 ces''8 des''8 ~ |
+	des''2. des''8 es''8 ~ |
+	es''8 des''4 ces''8 ~ ces''8 bes'4. |
+	as'1 |
+	r1 |
+	r1 \fermata |
+	\endBar
+}
+{% endif %}

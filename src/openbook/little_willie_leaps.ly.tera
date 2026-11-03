@@ -1,0 +1,119 @@
+{#
+default_version = "Wikifonia"
+
+[attributes]
+title = "Little Willie Leaps"
+style = "Jazz"
+composer = "Miles Davis"
+piece = "Standard"
+typesetter = "OpenBook contributors (MusicXML import)"
+completion = "3"
+uuid = "d8f74118-37d8-5375-a209-d09b09e39a20"
+location = "Real_Book_3:176"
+copyright = "All Rights Reserved"
+copyrightextra = "Archived MusicXML notice retained; underlying music is not relicensed."
+
+[versions.Wikifonia]
+doChords = true
+doVoice = true
+doLyrics = false
+doLyricsmore = false
+doLyricsmoremore = false
+doChordBars = false
+doGuitar = false
+doExtra = false
+doPrep = false
+doOwn = false
+#}
+{% if part == "Vars" %}
+{% endif %}
+{% if part == "Doc" %}
+	DONE:
+	- imported melody and chord changes from real_books_archive.gi/Wikifonia.tar.xz: Wikifonia/Miles Davis - Little Willie Leaps.mxl.
+	- source revision: http://wikifonia.org/node/2269/revisions/18708/view.
+	- book index reference: Real_Book_3:176 (real_books_archive.gi/index); index pagination is not a verified PDF page number.
+	- retained the archived MusicXML rights notice; no redistribution permission is asserted.
+	- retained written melody, chord changes, pickups, repeats and numbered endings; lyrics, slurs, dynamics and articulations other than fermatas omitted.
+	- tempo is an editorial practice suggestion.
+	TODO:
+	- proofread the complete melody, harmony and form against a printed edition and check by ear.
+	- verify source attribution, copyright notice and reuse terms; only the archived MusicXML notice is retained.
+	- locate the tune in a local PDF edition; the book-index page number may differ.
+{% endif %}
+{% if part == "ChordsWikifonia" %}\chordmode {
+	\startChords
+	\startSong
+
+	\myMark "A"
+	\startPart
+	\repeat volta 2 {
+	f1 |
+	g2:m7 c2:7 |
+	f2 d2:7 |
+	g2:m7 c2:7 | \myEndLine
+	f1 |
+	g2:m7 c2:7 |
+	f1 |
+	d1:7 | \myEndLine
+	b2:m7 e2:7 |
+	a2:m7 d2:7 |
+	s8 g4.:m7 c2:7 |
+	} \alternative {
+	{
+	f1 | \myEndLine
+	e2:m7 a2:7 |
+	d1:m |
+	bes2:m7 ees2:7 |
+	g2:m7 c2:7 | \myEndLineVoltaNotLast
+	}
+	{
+	f1 | \myEndLineVoltaLast
+	}
+	}
+	g1*5/8:m7 c4.:7 |
+	g2:m7 c2:7 |
+	f1 |
+	s1 | \myEndLine
+	\endBar
+	\endPart
+
+	\endSong
+	\endChords
+}
+{% endif %}
+{% if part == "VoiceWikifonia" %}\absolute {
+	\tempo "Moderato" 4 = 120
+	\time 4/4
+	\key f \major
+
+	\repeat volta 2 {
+	r8 c'8 f'8 g'8 a'8 bes'8 a'8 f'8 |
+	g'4 r8 g'8 a'8 bes'8 a'8 g'8 |
+	c''8 bes'8 a'8 g'8 fis'8 es''8 d''8 c''8 |
+	bes'8 g'8 f'8 dis'8 e'8 des''8 c''8 bes'8 |
+	a'8 r8 r4 r4 r8 a'8 |
+	bes'8 c'8 d'8 f'8 a'8 g'8 e'8 c'8 |
+	c''4 a'8 c''8 as'8 e'4. |
+	fis'8 a'8 c''8 es''8 d''8 b'8 \times 2/3 { c''8 b'8 c''8 } |
+	d''8 c''8 b'8 a'8 gis'8 b8 d'8 f'8 |
+	e'8 c''8 b'8 a'8 gis'8 fis'8 e'8 d'8 |
+	g'8 a'8 bes'8 fis'8 \times 2/3 { bes'8 a'8 g'8 } ges'8 e'8 |
+	} \alternative {
+	{
+	f'8 r8 r4 r8 c''8 a'8 g'8 |
+	e'8 d'8 \times 2/3 { cis'8 e'8 g'8 } \times 2/3 { bes'8 c''8 bes'8 } a'8 e'8 |
+	f'4 e'4 f'8 g'8 e'8 d'8 |
+	des'8 r8 r4 r2 |
+	\times 2/3 { d''8 es''8 d''8 } des''8 c''8 bes'8 a'8 g'4 |
+	}
+	{
+	f'8 r8 r4 r4 c''8 bes'8 |
+	}
+	}
+	r2 r8 cis'8 d'8 f'8 |
+	a'8 a'8 as'8 as'8 g'8 g'8 ges'8 ges'8 |
+	f'8 r8 r4 r2 |
+	r1 |
+	\endBar
+}
+{% endif %}

@@ -1,0 +1,131 @@
+{#
+default_version = "Wikifonia"
+
+[attributes]
+title = "Spanish Eyes"
+style = "Jazz"
+composer = "Bert Kaempfert, Charles Singleton, Eddie Snyder"
+piece = "Standard"
+typesetter = "OpenBook contributors (MusicXML import)"
+completion = "3"
+uuid = "34f358de-fe73-5561-9162-325685fc7f9c"
+location = "TheBook:262"
+copyright = "All Rights Reserved"
+copyrightextra = "Archived MusicXML notice retained; underlying music is not relicensed."
+
+[versions.Wikifonia]
+doChords = true
+doVoice = true
+doLyrics = false
+doLyricsmore = false
+doLyricsmoremore = false
+doChordBars = false
+doGuitar = false
+doExtra = false
+doPrep = false
+doOwn = false
+#}
+{% if part == "Vars" %}
+{% endif %}
+{% if part == "Doc" %}
+	DONE:
+	- imported melody and chord changes from real_books_archive.gi/Wikifonia.tar.xz: Wikifonia/Bert Kaempfert, Charles Singleton, Eddie Snyder - Spanish Eyes.mxl.
+	- source revision: http://wikifonia.org/node/5233/revisions/7128/view.
+	- book index reference: TheBook:262 (real_books_archive.gi/index); index pagination is not a verified PDF page number.
+	- retained the archived MusicXML rights notice; no redistribution permission is asserted.
+	- retained written melody, chord changes, pickups, repeats and numbered endings; lyrics, slurs, dynamics and articulations other than fermatas omitted.
+	- tempo is an editorial practice suggestion.
+	TODO:
+	- proofread the complete melody, harmony and form against a printed edition and check by ear.
+	- verify source attribution, copyright notice and reuse terms; only the archived MusicXML notice is retained.
+	- locate the tune in a local PDF edition; the book-index page number may differ.
+{% endif %}
+{% if part == "ChordsWikifonia" %}\chordmode {
+	\startChords
+	\startSong
+
+	\myMark "A"
+	\startPart
+	c1 |
+	s1 |
+	s1 |
+	s1 | \myEndLine
+	s1 |
+	s1 |
+	g1:7 |
+	s1 | \myEndLine
+	s1 |
+	s1 |
+	s1 |
+	s1 | \myEndLine
+	s1 |
+	s1 |
+	c1 |
+	s1 | \myEndLine
+	s1 |
+	s1 |
+	s1 |
+	s1 | \myEndLine
+	s1 |
+	s1 |
+	c1:7 |
+	f1 | \myEndLine
+	s1 |
+	f1:m |
+	s1 |
+	c1 | \myEndLine
+	s1 |
+	f1 |
+	g1:7 |
+	c1 | \myEndLine
+	s1 |
+	s1 |
+	\endBar
+	\endPart
+
+	\endSong
+	\endChords
+}
+{% endif %}
+{% if part == "VoiceWikifonia" %}\absolute {
+	\tempo "Moderato" 4 = 120
+	\time 4/4
+	\key c \major
+
+	e'1 ~ |
+	e'2 e'4 f'4 |
+	g'1 ~ |
+	g'2. r4 |
+	e'8 e'4 f'8 g'4 a'4 |
+	b'4 c''4 d''4 e''4 |
+	f''1 ~ |
+	f''2. r4 |
+	d'1 ~ |
+	d'2 d'4 e'4 |
+	f'1 ~ |
+	f'1 |
+	d'4 e'4 f'4 g'4 |
+	a'4 b'4 c''4 d''4 |
+	e''1 ~ |
+	e''2. r4 |
+	e'1 ~ |
+	e'2 e'4 f'4 |
+	g'1 ~ |
+	g'2. r4 |
+	R1 |
+	e'8 e'4 f'8 g'4 a'4 |
+	bes'4 c''4 d''4 c''4 |
+	a''1 ~ |
+	a''2. r4 |
+	as''1 ~ |
+	as''2 g''4 f''4 |
+	e''1 ~ |
+	e''2 r4 e''4 |
+	f''8 f''4 e''8 d''4 c''4 |
+	b'4. c''8 d''4 b'4 |
+	c''2. r4 |
+	g''1 |
+	R1 |
+	\endBar
+}
+{% endif %}

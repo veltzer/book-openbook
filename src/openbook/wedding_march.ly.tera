@@ -1,0 +1,95 @@
+{#
+default_version = "Wikifonia"
+
+[attributes]
+title = "Wedding March"
+style = "Jazz"
+composer = "F. Mendelssohn"
+piece = "Standard"
+typesetter = "OpenBook contributors (MusicXML import)"
+completion = "3"
+uuid = "defc0a7e-7271-5aa4-917d-8fddde6fafc1"
+location = "Great_Gig_Book:287"
+copyright = "All Rights Reserved"
+copyrightextra = "Archived MusicXML notice retained; underlying music is not relicensed."
+
+[versions.Wikifonia]
+doChords = true
+doVoice = true
+doLyrics = false
+doLyricsmore = false
+doLyricsmoremore = false
+doChordBars = false
+doGuitar = false
+doExtra = false
+doPrep = false
+doOwn = false
+#}
+{% if part == "Vars" %}
+{% endif %}
+{% if part == "Doc" %}
+	DONE:
+	- imported melody and chord changes from real_books_archive.gi/Wikifonia.tar.xz: Wikifonia/F. Mendelssohn - Wedding March.mxl.
+	- source revision: http://wikifonia.org/node/16593/revisions/22050/view.
+	- book index reference: Great_Gig_Book:287 (real_books_archive.gi/index); index pagination is not a verified PDF page number.
+	- retained the archived MusicXML rights notice; no redistribution permission is asserted.
+	- retained written melody, chord changes, pickups, repeats and numbered endings; lyrics, slurs, dynamics and articulations other than fermatas omitted.
+	- tempo is an editorial practice suggestion.
+	TODO:
+	- proofread the complete melody, harmony and form against a printed edition and check by ear.
+	- verify source attribution, copyright notice and reuse terms; only the archived MusicXML notice is retained.
+	- locate the tune in a local PDF edition; the book-index page number may differ.
+{% endif %}
+{% if part == "ChordsWikifonia" %}\chordmode {
+	\startChords
+	\startSong
+
+	\myMark "A"
+	\startPart
+	a2:m6 b2 |
+	s4 e4:m d2:m |
+	c2 g2:7 |
+	c1 | \myEndLine
+	a2:m6 b2 |
+	s4 e4:m d2:m |
+	c2 g2:7 |
+	s2 c2 | \myEndLine
+	c1 |
+	g1:7 |
+	c1 |
+	g1:7 | \myEndLine
+	c1 |
+	a2:m7 d4:m a4:m |
+	d4:m a4:aug d2:7 |
+	g1:7 | \myEndLine
+	\endBar
+	\endPart
+
+	\endSong
+	\endChords
+}
+{% endif %}
+{% if part == "VoiceWikifonia" %}\absolute {
+	\tempo "Moderato" 4 = 120
+	\time 4/4
+	\key c \major
+
+	\textMark \markup { \musicglyph "scripts.segno" } c'''2 b''4. fis''8 ~ |
+	fis''8 a''8 g''4 f''4 d''4 |
+	c''2 d''4 g'8. d''16 |
+	e''4 c'8 e'8 g'8 c''8 e''8 g''8 |
+	c'''2 b''4. fis''8 |
+	a''4 g''4 f''4 d''4 |
+	c''2 e''4 d''8. e''16 |
+	d''2 c''4 r4 _\markup{ \bold\tiny {Fine} } |
+	c''2 c''4. c''8 |
+	e''4 d''4 b'4 g'4 |
+	g'4. c''8 c''4 e''4 |
+	e''4 d''4 b'4 g'4 |
+	g'4. e''8 e''4 g''4 |
+	g''2 f''4 e''4 |
+	d''4 cis''8. e''16 d''4 fis'8. c''16 |
+	b'4 g''4 a''4 b''4 _\markup{ \bold\tiny {D.S. al Fine} } |
+	\endBar
+}
+{% endif %}

@@ -1,0 +1,195 @@
+{#
+default_version = "Wikifonia"
+
+[attributes]
+title = "Helena Polka"
+style = "Jazz"
+composer = "unknown"
+piece = "Standard"
+typesetter = "OpenBook contributors (MusicXML import)"
+completion = "3"
+uuid = "f1562ebb-8515-5195-b33a-c97cf613d0c4"
+location = "Great_Gig_Book:274"
+copyright = "All Rights Reserved"
+copyrightextra = "Archived MusicXML notice retained; underlying music is not relicensed."
+
+[versions.Wikifonia]
+doChords = true
+doVoice = true
+doLyrics = false
+doLyricsmore = false
+doLyricsmoremore = false
+doChordBars = false
+doGuitar = false
+doExtra = false
+doPrep = false
+doOwn = false
+#}
+{% if part == "Vars" %}
+{% endif %}
+{% if part == "Doc" %}
+	DONE:
+	- imported melody and chord changes from real_books_archive.gi/Wikifonia.tar.xz: Wikifonia/unknown - Helena Polka.mxl.
+	- source revision: http://wikifonia.org/node/3865/revisions/21743/view.
+	- book index reference: Great_Gig_Book:274 (real_books_archive.gi/index); index pagination is not a verified PDF page number.
+	- retained the archived MusicXML rights notice; no redistribution permission is asserted.
+	- retained written melody, chord changes, pickups, repeats and numbered endings; lyrics, slurs, dynamics and articulations other than fermatas omitted.
+	- tempo is an editorial practice suggestion.
+	TODO:
+	- proofread the complete melody, harmony and form against a printed edition and check by ear.
+	- verify source attribution, copyright notice and reuse terms; only the archived MusicXML notice is retained.
+	- locate the tune in a local PDF edition; the book-index page number may differ.
+{% endif %}
+{% if part == "ChordsWikifonia" %}\chordmode {
+	\startChords
+	\startSong
+
+	\myMark "A"
+	\startPart
+	\repeat volta 2 {
+	c1 |
+	g1:7 |
+	c1 |
+	s1 | \myEndLine
+	g1:7 |
+	s1 |
+	c1 |
+	s1 | \myEndLine
+	s1 |
+	g1:7 |
+	c1 |
+	s1 | \myEndLine
+	g1:7 |
+	s1 |
+	s1 |
+	c1 | \myEndLine
+	}
+	g1 |
+	s1 |
+	d1:7 |
+	g1 | \myEndLine
+	s1 |
+	s1 |
+	d1:7 |
+	g2 g2:7 | \myEndLine
+	c1 |
+	g1:7 |
+	c1 |
+	s1 | \myEndLine
+	g1:7 |
+	s1 |
+	c1 |
+	s1 | \myEndLine
+	s1 |
+	g1:7 |
+	c1 |
+	s1 | \myEndLine
+	g1:7 |
+	s1 |
+	s1 |
+	c1 | \myEndLine
+	\repeat volta 2 {
+	f1 |
+	s1 |
+	s1 |
+	s1 | \myEndLine
+	c1:7 |
+	s1 |
+	f1 |
+	s1 | \myEndLine
+	f1 |
+	s1 |
+	s1 |
+	s1 | \myEndLine
+	c1:7 |
+	s1 |
+	f1 |
+	} \alternative {
+	{
+	s1 | \myEndLineVoltaNotLast
+	}
+	{
+	s1 | \myEndLineVoltaLast
+	}
+	}
+	\endBar
+	\endPart
+
+	\endSong
+	\endChords
+}
+{% endif %}
+{% if part == "VoiceWikifonia" %}\absolute {
+	\tempo "Moderato" 4 = 120
+	\time 4/4
+	\key c \major
+
+	\repeat volta 2 {
+	g''4 g''4 g''4 g''4 |
+	g''4 g''4 g''4 f''4 |
+	f''4 e''4 e''4 e''4 |
+	e''2. g'4 |
+	e''4 d''4 d''4 d''4 |
+	d''2. g'4 |
+	f''4 e''4 e''4 e''4 |
+	e''2. g'4 |
+	g''4 g''4 g''4 g''4 |
+	g''4 g''4 g''4 f''4 |
+	f''4 e''4 e''4 e''4 |
+	e''2. g'4 |
+	e''4 d''4 d''4 d''4 |
+	d''2. d''4 |
+	g''4 g''4 b'4 b'4 |
+	c''4 c''4 c''4 r4 |
+	}
+	d''4 d''4 g''4 b''4 |
+	d''4 d''4 g''4 b''4 |
+	a''4 a''4 d'''4 d'''4 |
+	c'''4 b''4 b''8 a''8 g''4 |
+	d''4 d''4 g''4 b''4 |
+	d''4 d''4 g''4 b''4 |
+	a''4 d'''4 a''4 d'''4 |
+	g''4 r4 g''2 |
+	g''4 g''4 g''4 g''4 |
+	g''4 g''4 g''4 f''4 |
+	f''4 e''4 e''4 e''4 |
+	e''2. g'4 |
+	e''4 d''4 d''4 d''4 |
+	d''2. g'4 |
+	f''4 e''4 e''4 e''4 |
+	e''2. g'4 |
+	g''4 g''4 g''4 g''4 |
+	g''4 g''4 g''4 f''4 |
+	f''4 e''4 e''4 e''4 |
+	e''2. g'4 |
+	e''4 d''4 d''4 d''4 |
+	d''2. d''4 |
+	g''4 g''4 b'4 b'4 |
+	c''4 c''4 c''4 r4 |
+	\repeat volta 2 {
+	c''1 |
+	b'4 c''4 d''4 c''4 |
+	f''1 |
+	r4 f''4 e''4 d''4 |
+	c''1 |
+	e''2 g''2 |
+	d''2 c''2 |
+	r4 a'4 b'4 b'4 |
+	c''1 |
+	b'4 c''4 d''4 c''4 |
+	f''1 |
+	r4 f''4 e''4 d''4 |
+	c''2 e''2 |
+	a''2 g''2 |
+	f''4 r4 f''4. f''8 |
+	} \alternative {
+	{
+	f''4 a'4 b'4 b'4 |
+	}
+	{
+	f''4 r4 r2 |
+	}
+	}
+	\endBar
+}
+{% endif %}

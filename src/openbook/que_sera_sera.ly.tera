@@ -1,0 +1,135 @@
+{#
+default_version = "Wikifonia"
+
+[attributes]
+title = "Que Sera, Sera"
+style = "Jazz"
+composer = "Jay Livingston, Ray Evans, Jay Livingston, Ray Evans"
+piece = "Standard"
+typesetter = "OpenBook contributors (MusicXML import)"
+completion = "3"
+uuid = "05d24a8b-4fef-5dd3-9e1f-f7e761c3afbd"
+location = "Great_Gig_Book:264"
+copyright = "All Rights Reserved"
+copyrightextra = "Archived MusicXML notice retained; underlying music is not relicensed."
+
+[versions.Wikifonia]
+doChords = true
+doVoice = true
+doLyrics = false
+doLyricsmore = false
+doLyricsmoremore = false
+doChordBars = false
+doGuitar = false
+doExtra = false
+doPrep = false
+doOwn = false
+#}
+{% if part == "Vars" %}
+{% endif %}
+{% if part == "Doc" %}
+	DONE:
+	- imported melody and chord changes from real_books_archive.gi/Wikifonia.tar.xz: Wikifonia/Jay Livingston, Ray Evans - Que Sera, Sera.mxl.
+	- source revision: http://wikifonia.org/node/3206/revisions/4069/view.
+	- book index reference: Great_Gig_Book:264 (real_books_archive.gi/index); index pagination is not a verified PDF page number.
+	- retained the archived MusicXML rights notice; no redistribution permission is asserted.
+	- retained written melody, chord changes, pickups, repeats and numbered endings; lyrics, slurs, dynamics and articulations other than fermatas omitted.
+	- tempo is an editorial practice suggestion.
+	TODO:
+	- proofread the complete melody, harmony and form against a printed edition and check by ear.
+	- verify source attribution, copyright notice and reuse terms; only the archived MusicXML notice is retained.
+	- locate the tune in a local PDF edition; the book-index page number may differ.
+{% endif %}
+{% if part == "ChordsWikifonia" %}\chordmode {
+	\startChords
+	\startSong
+
+	\myMark "A"
+	\startPart
+	s2. |
+	c2. |
+	s2. |
+	s2. | \myEndLine
+	s2. |
+	s2. |
+	s2. |
+	g2.:7 | \myEndLine
+	s2. |
+	s2. |
+	s2. |
+	s2. | \myEndLine
+	s2. |
+	s2. |
+	s2. |
+	c2. | \myEndLine
+	s2. |
+	f2. |
+	s2. |
+	s2. | \myEndLine
+	s2. |
+	c2. |
+	s2. |
+	s2. | \myEndLine
+	s2. |
+	g2.:7 |
+	s2. |
+	s2. | \myEndLine
+	s2. |
+	c2. |
+	s2. |
+	s4 g2:7 | \myEndLine
+	s2. |
+	c2. |
+	f2. |
+	c2. | \myEndLine
+	\endBar
+	\endPart
+
+	\endSong
+	\endChords
+}
+{% endif %}
+{% if part == "VoiceWikifonia" %}\absolute {
+	\tempo "Moderato" 4 = 120
+	\time 3/4
+	\key c \major
+
+	c'4 d'4 e'4 |
+	g'2 e'4 |
+	g'2 e'4 |
+	g'2. |
+	e'4 g'4 e'4 |
+	a'4 g'2 |
+	a'4 g'4 e'4 |
+	f'2. ~ |
+	f'2. |
+	b'4 c''4 d''4 |
+	c''4 b'2 |
+	a'4 b'4 c''4 |
+	b'2. |
+	f'4 g'4 a'4 |
+	g'2 b4 |
+	c'2. ~ |
+	c'4 c''4 bes'4 |
+	a'2 f'4 |
+	a'2. ~ |
+	a'2 b'4 |
+	d''4 c''4 a'4 |
+	g'2 c'4 |
+	e'2. ~ |
+	e'2 f'4 |
+	a'4 g'4 e'4 |
+	g'2 d'4 |
+	g'2. ~ |
+	g'4 d'4 e'4 |
+	f'2 b4 |
+	c'2. ~ |
+	c'2. ~ |
+	c'4 d'4 e'4 |
+	f'2 b4 |
+	c'2. ~ |
+	c'2. ~ |
+	c'2. |
+	\endBar
+}
+{% endif %}

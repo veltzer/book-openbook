@@ -1,0 +1,123 @@
+{#
+default_version = "Wikifonia"
+
+[attributes]
+title = "Gingerbread Boy"
+style = "Jazz"
+composer = "Jimmy Heath"
+piece = "Standard"
+typesetter = "OpenBook contributors (MusicXML import)"
+completion = "3"
+uuid = "ce5a4de8-3d44-5465-b2a8-595987fb4bd0"
+location = "Great_Gig_Book:383"
+copyright = "All Rights Reserved"
+copyrightextra = "Archived MusicXML notice retained; underlying music is not relicensed."
+
+[versions.Wikifonia]
+doChords = true
+doVoice = true
+doLyrics = false
+doLyricsmore = false
+doLyricsmoremore = false
+doChordBars = false
+doGuitar = false
+doExtra = false
+doPrep = false
+doOwn = false
+#}
+{% if part == "Vars" %}
+{% endif %}
+{% if part == "Doc" %}
+	DONE:
+	- imported melody and chord changes from real_books_archive.gi/Wikifonia.tar.xz: Wikifonia/Jimmy Heath - Gingerbread Boy.mxl.
+	- source revision: http://wikifonia.org/node/22294/revisions/29470/view.
+	- book index reference: Great_Gig_Book:383 (real_books_archive.gi/index); index pagination is not a verified PDF page number.
+	- retained the archived MusicXML rights notice; no redistribution permission is asserted.
+	- retained written melody, chord changes, pickups, repeats and numbered endings; lyrics, slurs, dynamics and articulations other than fermatas omitted.
+	- tempo is an editorial practice suggestion.
+	TODO:
+	- proofread the complete melody, harmony and form against a printed edition and check by ear.
+	- verify source attribution, copyright notice and reuse terms; only the archived MusicXML notice is retained.
+	- locate the tune in a local PDF edition; the book-index page number may differ.
+{% endif %}
+{% if part == "ChordsWikifonia" %}\chordmode {
+	\startChords
+	\startSong
+
+	\myMark "A"
+	\startPart
+	\partial 4 s4 |
+	bes1:7 |
+	s2 bes2:7.9+ |
+	s1 | \myEndLine
+	s1 |
+	ees2:7 e2:7 |
+	ees2.:7 bes4:7.9+ |
+	s1 | \myEndLine
+	s1 |
+	s1 |
+	bes1:7 |
+	g1:7 | \myEndLine
+	c1:7 |
+	f1:7 |
+	bes1:7.9+ |
+	s1 | \myEndLine
+	s1 |
+	s1 |
+	bes1:7 |
+	s1 | \myEndLine
+	s1 |
+	s1 |
+	ees1:7 |
+	s1 | \myEndLine
+	bes1:7 |
+	s1 |
+	f1:7 |
+	s1 | \myEndLine
+	bes1:7 |
+	f1:7 |
+	\endBar
+	\endPart
+
+	\endSong
+	\endChords
+}
+{% endif %}
+{% if part == "VoiceWikifonia" %}\absolute {
+	\tempo "Moderato" 4 = 120
+	\time 4/4
+	\key bes \major
+
+	\partial 4 r8 bes8 |
+	f'8 bes'8 g'8 es'8 f'4. es'8 |
+	d'8 f'8 c'8 bes8 r2 |
+	r4 a'4 a'8 a'4 a'8 ~ |
+	a'4 a'4 a'4 a'4 |
+	r8 bes8 es'8 g'8 e'8 fis'8 gis'8 b'8 |
+	bes'8 g'8 es'8 f'8 r2 |
+	r4 a'4 a'8 a'4 a'8 ~ |
+	a'4 a'4 a'4 a'4 |
+	r2 r8 f'8 bes'4 |
+	des''4 c''8 b'8 bes'4 as'4 |
+	g'8 ges'8 f'4 r2 |
+	des''4 c''8 b'8 bes'4 as'4 |
+	g'8 ges'8 f'4 r2 |
+	r4 a'4 a'8 a'4 a'8 |
+	a'4 a'4 a'4 a'4 |
+	r4 a'4 a'8 a'4 a'8 |
+	a'4 a'4 a'4 a'4 |
+	r4 r4 r4 r4 |
+	r4 r4 r4 r4 |
+	r4 r4 r4 r4 |
+	r4 r4 r4 r4 |
+	r4 r4 r4 r4 |
+	r4 r4 r4 r4 |
+	r4 r4 r4 r4 |
+	r4 r4 r4 r4 |
+	r4 r4 r4 r4 |
+	r4 r4 r4 r4 |
+	r4 r4 r4 r4 |
+	r4 r4 r4 r4 |
+	\endBar
+}
+{% endif %}

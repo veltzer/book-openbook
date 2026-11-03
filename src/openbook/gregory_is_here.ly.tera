@@ -1,0 +1,176 @@
+{#
+default_version = "Wikifonia"
+
+[attributes]
+title = "Gregory is Here"
+style = "Jazz"
+composer = "Horace Silver"
+piece = "Standard"
+typesetter = "OpenBook contributors (MusicXML import)"
+completion = "3"
+uuid = "6a0505c7-cbcc-5934-9202-f594903d822a"
+location = "Real_Book_2:133"
+copyright = "All Rights Reserved"
+copyrightextra = "Archived MusicXML notice retained; underlying music is not relicensed."
+
+[versions.Wikifonia]
+doChords = true
+doVoice = true
+doLyrics = false
+doLyricsmore = false
+doLyricsmoremore = false
+doChordBars = false
+doGuitar = false
+doExtra = false
+doPrep = false
+doOwn = false
+#}
+{% if part == "Vars" %}
+{% endif %}
+{% if part == "Doc" %}
+	DONE:
+	- imported melody and chord changes from real_books_archive.gi/Wikifonia.tar.xz: Wikifonia/Horace Silver - Gregory is Here.mxl.
+	- source revision: http://wikifonia.org/node/12459/revisions/16814/view.
+	- book index reference: Real_Book_2:133 (real_books_archive.gi/index); index pagination is not a verified PDF page number.
+	- retained the archived MusicXML rights notice; no redistribution permission is asserted.
+	- retained written melody, chord changes, pickups, repeats and numbered endings; lyrics, slurs, dynamics and articulations other than fermatas omitted.
+	- tempo is an editorial practice suggestion.
+	TODO:
+	- proofread the complete melody, harmony and form against a printed edition and check by ear.
+	- verify source attribution, copyright notice and reuse terms; only the archived MusicXML notice is retained.
+	- locate the tune in a local PDF edition; the book-index page number may differ.
+	- check source measure 23: the MusicXML ties a note to a different pitch (or to nothing); the tie was dropped.
+{% endif %}
+{% if part == "ChordsWikifonia" %}\chordmode {
+	\startChords
+	\startSong
+
+	\myMark "A"
+	\startPart
+	\partial 4 ees4:6 |
+	e2.:13 |
+	s2. |
+	s2 f4:m11 | \myEndLine
+	s2. |
+	s2. |
+	s4 e2:13 |
+	s2. | \myEndLine
+	s2. |
+	f2.:m11 |
+	s2. |
+	s2 d4:m7 | \myEndLine
+	s2. |
+	g2.:7 |
+	s4 c2:m7 |
+	s2 f4:9 | \myEndLine
+	s2. |
+	f2.:m9 |
+	s4 e2:7 |
+	s2 ees4:maj7 | \myEndLine
+	s2. |
+	s2. |
+	s2. |
+	s2 aes4:m7 | \myEndLine
+	s2. |
+	des2.:7 |
+	s4 ges2:maj7 |
+	s2 ees4:m7 | \myEndLine
+	s2. |
+	aes2.:m7 |
+	s4 des2:7 |
+	s2 f4:m11 | \myEndLine
+	s2. |
+	bes2.:13 |
+	s4 e2:13 |
+	s2. | \myEndLine
+	s2. |
+	f2.:m11 |
+	s2. |
+	s2 e4:13 | \myEndLine
+	s2. |
+	s2. |
+	s4 f2:m11 |
+	s2. | \myEndLine
+	s2. |
+	d2.:m7 |
+	s4 g2:7 |
+	s2 c4:m7 | \myEndLine
+	s2. |
+	f2.:9 |
+	s4 f2:m9 |
+	s2 e4:7 | \myEndLine
+	s2. |
+	ees2.:maj7 |
+	s2. |
+	s2. | \myEndLine
+	\endBar
+	\endPart
+
+	\endSong
+	\endChords
+}
+{% endif %}
+{% if part == "VoiceWikifonia" %}\absolute {
+	\tempo "Moderato" 4 = 120
+	\time 3/4
+	\key es \major
+
+	\partial 4 bes'8 des''8 ~ |
+	des''8 bes'8 ~ bes'2 ~ |
+	bes'4 r4 bes'8 des''8 ~ |
+	des''8 bes'4 bes'4. ~ |
+	bes'2. ~ |
+	bes'2 r4 |
+	bes'8 des''4 bes'4. ~ |
+	bes'2 r4 |
+	bes'8 des''4 bes'4 bes'8 ~ |
+	bes'2. ~ |
+	bes'2. |
+	r4 g'8 bes'4 g'8 ~ |
+	g'2. |
+	r4 g'8 bes'4 g'8 ~ |
+	g'8 g'8 ~ g'2 ~ |
+	g'2. ~ |
+	g'4 r4 g'8 bes'8 ~ |
+	bes'8 g'8 ~ g'2 ~ |
+	g'4 r4 d'8 f'8 ~ |
+	f'8 d'4 d'4. ~ |
+	d'2. ~ |
+	d'2 r4 |
+	bes'8 des''8 d'2 |
+	r4 es'8 es''4. ~ |
+	es''2. ~ |
+	es''4 des''8 ces''8 bes'8 as'8 |
+	bes'8 ces''8 des''2 ~ |
+	des''2. |
+	ces''8 bes'8 as'8 ges'8 as'8 bes'8 |
+	ces''2. ~ |
+	ces''4 ~ \times 2/3 { ces''4 ces''4 ces''4 } |
+	\times 2/3 { ces''4 des''4 ces''4 } bes'4 ~ |
+	bes'2. ~ |
+	bes'4. r8 r4 |
+	bes'8 des''4 bes'4. ~ |
+	bes'2 r4 |
+	bes'8 des''4 bes'4 bes'8 ~ |
+	bes'2. ~ |
+	bes'2. |
+	r4 bes'8 des''4 bes'8 ~ |
+	bes'2. |
+	r4 bes'8 des''4 bes'8 ~ |
+	bes'8 bes'8 ~ bes'2 ~ |
+	bes'2. ~ |
+	bes'4 r4 g'8 bes'8 ~ |
+	bes'8 g'8 ~ g'2 ~ |
+	g'4 r4 g'8 bes'8 ~ |
+	bes'8 g'4 g'4. ~ |
+	g'2. ~ |
+	g'2 r4 |
+	g'8 bes'4 g'4. ~ |
+	g'2 r4 |
+	d'8 f'4 d'4 d'8 ~ |
+	d'2. ~ |
+	d'2. |
+	r4 r4 r4 |
+	\endBar
+}
+{% endif %}

@@ -1,0 +1,131 @@
+{#
+default_version = "Wikifonia"
+
+[attributes]
+title = "Winter Wonderland"
+style = "Jazz"
+composer = "Felix Bernard, Richard B. Smith"
+piece = "Standard"
+typesetter = "OpenBook contributors (MusicXML import)"
+completion = "3"
+uuid = "d741bfd9-d6cd-50ee-8454-694f2971452f"
+location = "Just_Standards_Real_Book:375"
+copyright = "All Rights Reserved"
+copyrightextra = "Archived MusicXML notice retained; underlying music is not relicensed."
+
+[versions.Wikifonia]
+doChords = true
+doVoice = true
+doLyrics = false
+doLyricsmore = false
+doLyricsmoremore = false
+doChordBars = false
+doGuitar = false
+doExtra = false
+doPrep = false
+doOwn = false
+#}
+{% if part == "Vars" %}
+{% endif %}
+{% if part == "Doc" %}
+	DONE:
+	- imported melody and chord changes from real_books_archive.gi/Wikifonia.tar.xz: Wikifonia/Felix Bernard, Richard B. Smith - Winter Wonderland.mxl.
+	- source revision: http://wikifonia.org/node/3559/revisions/25222/view.
+	- book index reference: Just_Standards_Real_Book:375 (real_books_archive.gi/index); index pagination is not a verified PDF page number.
+	- retained the archived MusicXML rights notice; no redistribution permission is asserted.
+	- retained written melody, chord changes, pickups, repeats and numbered endings; lyrics, slurs, dynamics and articulations other than fermatas omitted.
+	- tempo is an editorial practice suggestion.
+	TODO:
+	- proofread the complete melody, harmony and form against a printed edition and check by ear.
+	- verify source attribution, copyright notice and reuse terms; only the archived MusicXML notice is retained.
+	- locate the tune in a local PDF edition; the book-index page number may differ.
+{% endif %}
+{% if part == "ChordsWikifonia" %}\chordmode {
+	\startChords
+	\startSong
+
+	\myMark "A"
+	\startPart
+	\partial 4 s4 |
+	c1 |
+	s1 |
+	g1:7 | \myEndLine
+	s1 |
+	s1 |
+	s1 |
+	d2:7 g2:7 | \myEndLine
+	c1 |
+	s1 |
+	s1 |
+	g1:7 | \myEndLine
+	s1 |
+	s1 |
+	s1 |
+	d2:7 g2:7 | \myEndLine
+	c1 |
+	f2 g2:m |
+	f1 |
+	s2 g2:m | \myEndLine
+	f1 |
+	g2 a2:m |
+	g1 |
+	s2 d2:7 | \myEndLine
+	g1 |
+	c1 |
+	s1 |
+	g1:7 | \myEndLine
+	s1 |
+	s1 |
+	s1 |
+	d2:7 g2:7 | \myEndLine
+	c1 |
+	s1 |
+	\endBar
+	\endPart
+
+	\endSong
+	\endChords
+}
+{% endif %}
+{% if part == "VoiceWikifonia" %}\absolute {
+	\tempo "Moderato" 4 = 120
+	\time 4/4
+	\key c \major
+
+	\partial 4 g'8 g'8 |
+	g'2. g'8 g'8 |
+	e'4 g'2 g'8 g'8 |
+	g'2. g'8 g'8 |
+	f'4 g'2 g'4 |
+	b'8 b'8 b'4 a'4 a'4 |
+	g'8 g'8 g'4 f'2 |
+	e'8 e'8 e'8 e'8 d'8 d'8 d'8 d'8 |
+	c'2. g'8 g'8 |
+	g'2. g'8 g'8 |
+	e'4 g'2 g'8 g'8 |
+	g'2. g'8 g'8 |
+	f'4 g'2 g'4 |
+	b'8 b'8 b'4 a'4 a'4 |
+	g'8 g'8 g'4 f'2 |
+	e'8 e'8 e'8 e'8 d'8 d'8 d'8 d'8 |
+	c'1 |
+	c'8 c'8 a'8 a'8 d'8 d'8 bes'8 bes'8 |
+	a'4 f'2. |
+	c'8 c'8 a'8 a'8 d'8 d'8 bes'8 bes'8 |
+	a'1 |
+	d'8 d'8 b'8 b'8 e'8 e'8 c''8 c''8 |
+	b'4 g'2 a'4 |
+	b'8 b'8 d'8 d'8 a'8 a'8 d'8 d'8 |
+	g'2. g'8 g'8 |
+	g'2. g'8 g'8 |
+	e'4 g'2 g'8 g'8 |
+	g'2. g'8 g'8 |
+	f'4 g'2 g'4 |
+	b'8 b'8 b'4 a'4 a'4 |
+	g'8 g'8 g'4 f'2 |
+	e'8 e'8 e'8 e'8 d'8 d'8 d'8 d'8 |
+	c'1 ~ |
+	c'1 |
+	\endBar
+}
+{% endif %}

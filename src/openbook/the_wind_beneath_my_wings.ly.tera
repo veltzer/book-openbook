@@ -1,0 +1,133 @@
+{#
+default_version = "Wikifonia"
+
+[attributes]
+title = "The Wind Beneath My Wings"
+style = "Jazz"
+composer = "Larry Henley, Jeff Silbar, Larry Henley, Jeff Silbar"
+piece = "Standard"
+typesetter = "OpenBook contributors (MusicXML import)"
+completion = "3"
+uuid = "2c3f1768-febc-55eb-a944-79113ec0c583"
+location = "Just_Standards_Real_Book:380"
+copyright = "All Rights Reserved"
+copyrightextra = "Archived MusicXML notice retained; underlying music is not relicensed."
+
+[versions.Wikifonia]
+doChords = true
+doVoice = true
+doLyrics = false
+doLyricsmore = false
+doLyricsmoremore = false
+doChordBars = false
+doGuitar = false
+doExtra = false
+doPrep = false
+doOwn = false
+#}
+{% if part == "Vars" %}
+{% endif %}
+{% if part == "Doc" %}
+	DONE:
+	- imported melody and chord changes from real_books_archive.gi/Wikifonia.tar.xz: Wikifonia/Larry Henley, Jeff Silbar - The Wind Beneath My Wings.mxl.
+	- source revision: http://wikifonia.org/node/6306/revisions/8754/view.
+	- book index reference: Just_Standards_Real_Book:380 (real_books_archive.gi/index); index pagination is not a verified PDF page number.
+	- retained the archived MusicXML rights notice; no redistribution permission is asserted.
+	- retained written melody, chord changes, pickups, repeats and numbered endings; lyrics, slurs, dynamics and articulations other than fermatas omitted.
+	- tempo is an editorial practice suggestion.
+	TODO:
+	- proofread the complete melody, harmony and form against a printed edition and check by ear.
+	- verify source attribution, copyright notice and reuse terms; only the archived MusicXML notice is retained.
+	- locate the tune in a local PDF edition; the book-index page number may differ.
+{% endif %}
+{% if part == "ChordsWikifonia" %}\chordmode {
+	\startChords
+	\startSong
+
+	\myMark "A"
+	\startPart
+	\repeat volta 2 {
+	s4 g2. |
+	s1 |
+	c1 |
+	s1 | \myEndLine
+	s4 g2. |
+	s1 |
+	c1 |
+	s1 | \myEndLine
+	a1:m |
+	s1 |
+	d1:7 |
+	s1 | \myEndLine
+	a1:m |
+	s1 |
+	d1:7 |
+	s1 | \myEndLine
+	}
+	s4 e2.:m |
+	c1 |
+	g1 |
+	d1:7 | \myEndLine
+	e1:m |
+	c1 |
+	g1 |
+	d1:7 | \myEndLine
+	e1:m |
+	c1 |
+	g1 |
+	e1:m | \myEndLine
+	a1:m |
+	d1:7 |
+	c1 |
+	ees1 | \myEndLine
+	g1 |
+	\endBar
+	\endPart
+
+	\endSong
+	\endChords
+}
+{% endif %}
+{% if part == "VoiceWikifonia" %}\absolute {
+	\tempo "Moderato" 4 = 120
+	\time 4/4
+	\key g \major
+
+	\repeat volta 2 {
+	r4 r8 d'8 b'8 c''8 d''8 c''8 ~ |
+	c''4 b'4 a'4 g'4 |
+	g'2 e'2 ~ |
+	e'1 |
+	r4 r8 d'8 b'8 c''8 d''8 c''8 ~ |
+	c''4 b'4 a'4 g'4 |
+	g'1 ~ |
+	g'1 |
+	r2 a'8 b'8 c''8 b'8 ~ |
+	b'4 a'4 g'4 a'4 |
+	a'1 ~ |
+	a'1 |
+	r2 a'8 b'8 c''8 b'8 ~ |
+	b'4 a'4 g'4 a'4 |
+	a'1 ~ |
+	a'1 |
+	}
+	r4 r8 b'8 e''8 fis''8 g''8 fis''8 ~ |
+	fis''4 e''4 d''4 c''4 |
+	d''2 d''2 ~ |
+	d''1 |
+	r2 e''8 fis''8 g''8 fis''8 |
+	fis''4 e''4 d''4 c''4 |
+	d''2. r4 |
+	r4 a'4 g'8 fis'4. |
+	g'4 r4 e''8 fis''8 g''8 fis''8 ~ |
+	fis''4 e''4 d''4 c''4 |
+	d''2. e''4 |
+	b'8 a'8 g'8 ~ g'4. r4 |
+	r4 r8 d'8 a'8 b'8 c''8 b'8 ~ |
+	b'4 a'4 g'4 fis'4 |
+	g'1 ~ |
+	g'1 |
+	g''1 |
+	\endBar
+}
+{% endif %}

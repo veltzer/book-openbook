@@ -1,0 +1,137 @@
+{#
+default_version = "Wikifonia"
+
+[attributes]
+title = "My Way"
+style = "Jazz"
+composer = "My Way, Paul Anka"
+piece = "Standard"
+typesetter = "OpenBook contributors (MusicXML import)"
+completion = "3"
+uuid = "0e4215c7-56d8-54c3-84a8-23a914d64932"
+location = "Just_Standards_Real_Book:264"
+copyright = "All Rights Reserved"
+copyrightextra = "Archived MusicXML notice retained; underlying music is not relicensed."
+
+[versions.Wikifonia]
+doChords = true
+doVoice = true
+doLyrics = false
+doLyricsmore = false
+doLyricsmoremore = false
+doChordBars = false
+doGuitar = false
+doExtra = false
+doPrep = false
+doOwn = false
+#}
+{% if part == "Vars" %}
+{% endif %}
+{% if part == "Doc" %}
+	DONE:
+	- imported melody and chord changes from real_books_archive.gi/Wikifonia.tar.xz: Wikifonia/Paul Anka - My Way .mxl.
+	- source revision: http://wikifonia.org/node/2975/revisions/28472/view.
+	- book index reference: Just_Standards_Real_Book:264 (real_books_archive.gi/index); index pagination is not a verified PDF page number.
+	- retained the archived MusicXML rights notice; no redistribution permission is asserted.
+	- retained written melody, chord changes, pickups, repeats and numbered endings; lyrics, slurs, dynamics and articulations other than fermatas omitted.
+	- tempo is an editorial practice suggestion.
+	TODO:
+	- proofread the complete melody, harmony and form against a printed edition and check by ear.
+	- verify source attribution, copyright notice and reuse terms; only the archived MusicXML notice is retained.
+	- locate the tune in a local PDF edition; the book-index page number may differ.
+{% endif %}
+{% if part == "ChordsWikifonia" %}\chordmode {
+	\startChords
+	\startSong
+
+	\myMark "A"
+	\startPart
+	s1 |
+	\repeat volta 2 {
+	f1 |
+	a1:m |
+	c1:m | \myEndLine
+	d1:7 |
+	g1:m |
+	g1:m7 |
+	c1:7 | \myEndLine
+	f1 |
+	s1 |
+	f1:7 |
+	bes1 | \myEndLine
+	bes1:m |
+	f1 |
+	s4 c2.:7 |
+	bes1:m | \myEndLine
+	f1 |
+	s1 |
+	f1:7 |
+	bes1 | \myEndLine
+	s1 |
+	g1:m7 |
+	c1:7 |
+	a1:m7 | \myEndLine
+	d1:m |
+	g1:m7 |
+	c1:7 |
+	bes1:m | \myEndLine
+	} \alternative {
+	{
+	f1 | \myEndLineVoltaNotLast
+	}
+	{
+	f1 | \myEndLineVoltaLast
+	}
+	}
+	\endBar
+	\endPart
+
+	\endSong
+	\endChords
+}
+{% endif %}
+{% if part == "VoiceWikifonia" %}\absolute {
+	\tempo "Moderato" 4 = 120
+	\time 4/4
+	\key f \major
+
+	r4 r4 r4 c'4 |
+	\repeat volta 2 {
+	a'2 r8 c'8 a'8 g'8 |
+	a'2 r8 c'8 a'8 g'8 |
+	a'2 r8 g'8 a'8 g'8 |
+	g'4 fis'2 d'4 |
+	bes'2 r8 d'8 bes'8 a'8 |
+	bes'2 r8 d'8 bes'8 a'8 |
+	bes'2 r8 c''8 g'8 g'8 |
+	bes'4 a'2 r8 b'8 |
+	c''2 r8 b'8 c''8 d''8 |
+	c''2 r8 d''8 a'8 c''8 |
+	bes'2 r8 bes'8 bes'8 a'8 |
+	c''4 bes'2 bes'4 |
+	a'2 r8 c'8 bes'8 a'8 |
+	g'2 e'4 f'8 g'8 |
+	g'1 |
+	f'2 a'4 bes'8 c''8 |
+	c''2 r8 d''8 c''8 b'8 |
+	c''2 r8 bes'8 c''8 d''8 |
+	d''2 c''8 c''8 d''8 c''8 |
+	d''2 r8 d''8 e''8 f''8 |
+	f''2 r8 d''8 f''8 d''8 |
+	e''2 r8 e''8 f''8 g''8 |
+	g''2 r8 a''8 e''8 g''8 |
+	f''2 r8 d''8 e''8 f''8 |
+	f''2 r8 d''8 f''8 d''8 |
+	e''2 r8 e''8 f''8 g''8 |
+	g''1 |
+	} \alternative {
+	{
+	f''2. c'4 |
+	}
+	{
+	f''2. r4 |
+	}
+	}
+	\endBar
+}
+{% endif %}

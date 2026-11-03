@@ -1,0 +1,115 @@
+{#
+default_version = "Wikifonia"
+
+[attributes]
+title = "Dansero"
+style = "Jazz"
+composer = "Richard Hayman, Lee Daniels, Sol Parker, Richard Hayman, Lee Daniels, Sol Parker"
+piece = "Standard"
+typesetter = "OpenBook contributors (MusicXML import)"
+completion = "3"
+uuid = "6e7ca687-9ac7-52a3-912f-6f0c6d7f3971"
+location = "Great_Gig_Book:341"
+copyright = "All Rights Reserved"
+copyrightextra = "Archived MusicXML notice retained; underlying music is not relicensed."
+
+[versions.Wikifonia]
+doChords = true
+doVoice = true
+doLyrics = false
+doLyricsmore = false
+doLyricsmoremore = false
+doChordBars = false
+doGuitar = false
+doExtra = false
+doPrep = false
+doOwn = false
+#}
+{% if part == "Vars" %}
+{% endif %}
+{% if part == "Doc" %}
+	DONE:
+	- imported melody and chord changes from real_books_archive.gi/Wikifonia.tar.xz: Wikifonia/Richard Hayman, Lee Daniels, Sol Parker - Dansero.mxl.
+	- source revision: http://wikifonia.org/node/11140/revisions/15048/view.
+	- book index reference: Great_Gig_Book:341 (real_books_archive.gi/index); index pagination is not a verified PDF page number.
+	- retained the archived MusicXML rights notice; no redistribution permission is asserted.
+	- retained written melody, chord changes, pickups, repeats and numbered endings; lyrics, slurs, dynamics and articulations other than fermatas omitted.
+	- tempo is an editorial practice suggestion.
+	TODO:
+	- proofread the complete melody, harmony and form against a printed edition and check by ear.
+	- verify source attribution, copyright notice and reuse terms; only the archived MusicXML notice is retained.
+	- locate the tune in a local PDF edition; the book-index page number may differ.
+{% endif %}
+{% if part == "ChordsWikifonia" %}\chordmode {
+	\startChords
+	\startSong
+
+	\myMark "A"
+	\startPart
+	\repeat volta 2 {
+	g2:m7 c2:7 |
+	f2:maj7 f2:6 |
+	g1*5/8:m7 c4.:7 |
+	f4.:maj7 f1*5/8:6 | \myEndLine
+	g4.:m7 c1*5/8:7 |
+	c4.:m d1*5/8:7 |
+	g2:7 c2:7.9- |
+	f1 | \myEndLine
+	}
+	a2:7 a2:13 |
+	a2:aug7 a2:7 |
+	d4.:9 d1*5/8:9.5- |
+	s1 | \myEndLine
+	g2:7 g2:13 |
+	g2:aug7 g2:7 |
+	c4.:9 c1*5/8:9.5- |
+	g2:m7 c2:7 | \myEndLine
+	g2:m7 c2:7 |
+	f2:maj7 f2:6 |
+	g1*5/8:m7 c4.:7 |
+	f4.:maj7 f1*5/8:6 | \myEndLine
+	g4.:m7 c1*5/8:7 |
+	c4.:m d1*5/8:7 |
+	g2:7 c2:7.9- |
+	f1 | \myEndLine
+	\endBar
+	\endPart
+
+	\endSong
+	\endChords
+}
+{% endif %}
+{% if part == "VoiceWikifonia" %}\absolute {
+	\tempo "Moderato" 4 = 120
+	\time 4/4
+	\key f \major
+
+	\repeat volta 2 {
+	f'4 bes'8 e'8 ~ e'4. dis'8 |
+	e'4 a'8 d'8 ~ d'2 |
+	f'4 bes'8 e'8 ~ e'8 e'4 dis'8 |
+	e'4 a'8 d'8 ~ d'2 |
+	f'4 bes'8 e'8 ~ e'2 |
+	g'4 a'8 fis'8 ~ fis'2 |
+	f'8 d'8 e'8 f'8 as'4 as'4 |
+	g'4. f'8 ~ f'2 |
+	}
+	a'8 a'8 a'8 a'8 a'8 a'8 a'8 a'8 |
+	a'4 a'8 a'8 ~ a'8 a'8 a'8 a'8 |
+	a'4 b'8 gis'8 ~ gis'2 ~ |
+	gis'1 |
+	r8 g'8 g'8 g'8 g'8 g'8 g'8 g'8 |
+	g'4 g'8 g'8 ~ g'8 g'8 g'8 g'8 |
+	g'4 a'8 fis'8 ~ fis'2 |
+	r8 f'8 bes'8 d''8 c''2 |
+	f'4 bes'8 e'8 ~ e'4. dis'8 |
+	e'4 a'8 d'8 ~ d'2 |
+	f'4 bes'8 e'8 ~ e'8 e'4 dis'8 |
+	e'4 a'8 d'8 ~ d'2 |
+	f'4 bes'8 e'8 ~ e'2 |
+	g'4 a'8 fis'8 ~ fis'2 |
+	f'8 d'8 e'8 f'8 as'4 as'4 |
+	g'4. f'8 ~ f'2 |
+	\endBar
+}
+{% endif %}

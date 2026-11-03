@@ -1,0 +1,161 @@
+{#
+default_version = "Wikifonia"
+
+[attributes]
+title = "The Sound of Music"
+style = "Jazz"
+composer = "Richard Rodgers, Oscar Hammerstein II"
+piece = "Standard"
+typesetter = "OpenBook contributors (MusicXML import)"
+completion = "3"
+uuid = "f43a3a0a-1fa9-54ec-8394-57e44657bf00"
+location = "TheBook:78"
+copyright = "All Rights Reserved"
+copyrightextra = "Archived MusicXML notice retained; underlying music is not relicensed."
+
+[versions.Wikifonia]
+doChords = true
+doVoice = true
+doLyrics = false
+doLyricsmore = false
+doLyricsmoremore = false
+doChordBars = false
+doGuitar = false
+doExtra = false
+doPrep = false
+doOwn = false
+#}
+{% if part == "Vars" %}
+{% endif %}
+{% if part == "Doc" %}
+	DONE:
+	- imported melody and chord changes from real_books_archive.gi/Wikifonia.tar.xz: Wikifonia/Richard Rodgers, Oscar Hammerstein II - The Sound of Music.mxl.
+	- source revision: http://wikifonia.org/node/3861/revisions/5075/view.
+	- book index reference: TheBook:78 (real_books_archive.gi/index); index pagination is not a verified PDF page number.
+	- retained the archived MusicXML rights notice; no redistribution permission is asserted.
+	- retained written melody, chord changes, pickups, repeats and numbered endings; lyrics, slurs, dynamics and articulations other than fermatas omitted.
+	- tempo is an editorial practice suggestion.
+	TODO:
+	- proofread the complete melody, harmony and form against a printed edition and check by ear.
+	- verify source attribution, copyright notice and reuse terms; only the archived MusicXML notice is retained.
+	- locate the tune in a local PDF edition; the book-index page number may differ.
+{% endif %}
+{% if part == "ChordsWikifonia" %}\chordmode {
+	\startChords
+	\startSong
+
+	\myMark "A"
+	\startPart
+	s1 |
+	f1 |
+	s1 |
+	e1 | \myEndLine
+	s1 |
+	f1 |
+	s1 |
+	bes1 | \myEndLine
+	c1:7 |
+	f1 |
+	s1 |
+	e1 | \myEndLine
+	s1 |
+	f2 bes2 |
+	c2. c4:7 |
+	f1 | \myEndLine
+	s1 |
+	bes1 |
+	f1 |
+	bes1 | \myEndLine
+	f1 |
+	bes1 |
+	f2 d2:m7 |
+	g1:7 | \myEndLine
+	c1 |
+	bes1 |
+	f1 |
+	bes1 | \myEndLine
+	f1 |
+	d1:m |
+	a1:m |
+	d2:m7 g2:7 | \myEndLine
+	c1:7 |
+	f1 |
+	s1 |
+	e1 | \myEndLine
+	s1 |
+	f1 |
+	s1 |
+	bes1 | \myEndLine
+	s2. des4 |
+	f1 |
+	a1:m |
+	bes1 | \myEndLine
+	g1:m |
+	a1:m |
+	c1:7 |
+	f1 | \myEndLine
+	s1 |
+	\endBar
+	\endPart
+
+	\endSong
+	\endChords
+}
+{% endif %}
+{% if part == "VoiceWikifonia" %}\absolute {
+	\tempo "Moderato" 4 = 120
+	\time 4/4
+	\key f \major
+
+	r2 r4 c''4 |
+	d''4 c''8 bes'8 a'2 |
+	r4 g'8 f'8 e'4 d'4 |
+	e'2 e'2 ~ |
+	e'2 r4 f'4 |
+	g'4 f'8 e'8 d'2 |
+	r4 e'8 f'8 g'4 a'4 |
+	bes'1 ~ |
+	bes'2 c''4 r4 |
+	d''4 c''8 bes'8 a'2 |
+	r4 g'8 f'8 e'4 d'4 |
+	e'2 e'2 ~ |
+	e'2 r4 e'4 |
+	f'4 g'8 a'8 bes'4 c''8 d''8 |
+	e'2. f'4 |
+	f'1 ~ |
+	f'4 f'4 f'4 e'8 es'8 |
+	d'4 d'8 d'8 e'4 e'8 e'8 |
+	f'4 f'4 a'4 f'8 e'8 |
+	d'2 e'4 e'4 |
+	f'2. e'4 |
+	d'4 d'8 d'8 e'4 e'8 e'8 |
+	f'4 f'4 c''4 a'8 f'8 |
+	g'2 g'4 g'4 |
+	g'2. f'4 |
+	d'4 d'8 d'8 e'4 e'8 e'8 |
+	f'4 f'4 a'4 f'8 e'8 |
+	d'2 e'4 e'4 |
+	f'2. f'4 |
+	a'2 f'4 a'4 |
+	e'2. e'8 e'8 |
+	f'4 g'8 a'8 b'4 c''8 d''8 |
+	c''2. c''4 |
+	d''4 c''8 bes'8 a'2 |
+	r4 g'8 f'8 e'4 d'4 |
+	e'2 e'2 ~ |
+	e'2 r4 f'4 |
+	g'4 f'8 e'8 d'2 |
+	r4 e'8 f'8 g'4 a'4 |
+	bes'1 ~ |
+	bes'2. b'4 |
+	c''4 a'8 bes'8 c''2 |
+	r4 a'8 bes'8 c''4 c''4 |
+	c''2 f'2 ~ |
+	f'2 f'4 bes'4 |
+	e'1 |
+	e'1 |
+	f'2 d''8 c''8 b'8 c''8 |
+	a''2. r4 |
+	\endBar
+}
+{% endif %}

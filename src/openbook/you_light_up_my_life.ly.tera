@@ -1,0 +1,207 @@
+{#
+default_version = "Wikifonia"
+
+[attributes]
+title = "You Light Up My Life"
+style = "Jazz"
+composer = "Joe Brooks, Joe Brooks"
+piece = "Standard"
+typesetter = "OpenBook contributors (MusicXML import)"
+completion = "3"
+uuid = "3da15e10-430e-58cd-9b45-e136986e68be"
+location = "TheBook:355"
+copyright = "All Rights Reserved"
+copyrightextra = "Archived MusicXML notice retained; underlying music is not relicensed."
+
+[versions.Wikifonia]
+doChords = true
+doVoice = true
+doLyrics = false
+doLyricsmore = false
+doLyricsmoremore = false
+doChordBars = false
+doGuitar = false
+doExtra = false
+doPrep = false
+doOwn = false
+#}
+{% if part == "Vars" %}
+{% endif %}
+{% if part == "Doc" %}
+	DONE:
+	- imported melody and chord changes from real_books_archive.gi/Wikifonia.tar.xz: Wikifonia/Joe Brooks - You Light Up My Life.mxl.
+	- source revision: http://wikifonia.org/node/5062/revisions/6874/view.
+	- book index reference: TheBook:355 (real_books_archive.gi/index); index pagination is not a verified PDF page number.
+	- retained the archived MusicXML rights notice; no redistribution permission is asserted.
+	- retained written melody, chord changes, pickups, repeats and numbered endings; lyrics, slurs, dynamics and articulations other than fermatas omitted.
+	- tempo is an editorial practice suggestion.
+	TODO:
+	- proofread the complete melody, harmony and form against a printed edition and check by ear.
+	- verify source attribution, copyright notice and reuse terms; only the archived MusicXML notice is retained.
+	- locate the tune in a local PDF edition; the book-index page number may differ.
+{% endif %}
+{% if part == "ChordsWikifonia" %}\chordmode {
+	\startChords
+	\startSong
+
+	\myMark "A"
+	\startPart
+	d2.:m |
+	g2. |
+	c2. |
+	a2.:m | \myEndLine
+	bes2. |
+	e2.:7 |
+	a2.:m |
+	a2.:7 | \myEndLine
+	d2.:m |
+	g2. |
+	c2. |
+	a2.:m | \myEndLine
+	b2. |
+	s2. |
+	d2.:7 |
+	s2. | \myEndLine
+	g2. |
+	s2. |
+	s2. |
+	s2. | \myEndLine
+	e2.:7 |
+	s2. |
+	a2.:m |
+	s2. | \myEndLine
+	d2.:7 |
+	s2. |
+	g2. |
+	e2.:m | \myEndLine
+	a2.:m |
+	d2.:7 |
+	d2.:m |
+	g2. | \myEndLine
+	c2. |
+	a2.:m |
+	b2.:m |
+	e2.:7 | \myEndLine
+	a2.:m |
+	a2.:7 |
+	d2.:m |
+	g2. | \myEndLine
+	c2. |
+	a2.:m |
+	b2. |
+	s2. | \myEndLine
+	d2.:7 |
+	s2. |
+	g2. |
+	s2. | \myEndLine
+	s2. |
+	s2. |
+	e2.:7 |
+	s2. | \myEndLine
+	a2.:m |
+	s2. |
+	d2.:7 |
+	s2. | \myEndLine
+	b2. |
+	s2. |
+	e2.:m |
+	a2. | \myEndLine
+	g2. |
+	b2. |
+	e2.:m |
+	a2. | \myEndLine
+	g2. |
+	a2.:m |
+	d2. |
+	s2. | \myEndLine
+	c2. |
+	s2. |
+	g2. |
+	s2. | \myEndLine
+	\endBar
+	\endPart
+
+	\endSong
+	\endChords
+}
+{% endif %}
+{% if part == "VoiceWikifonia" %}\absolute {
+	\tempo "Moderato" 4 = 120
+	\time 3/4
+	\key c \major
+
+	f'4 f'4. g'8 |
+	d'2 r8 d'8 |
+	e'4 e'4. d'8 |
+	c'4 e'2 |
+	d'4 d'4. e'8 |
+	d'8 b8 b4. d'8 |
+	c'4 c'4 d'4 |
+	e'2. |
+	g'4 f'4. e'8 |
+	d'2 r8 d'8 |
+	e'4 e'4 d'4 |
+	c'4 e'4. e'8 |
+	dis'4 dis'4 e'4 |
+	fis'2 e'8 fis'8 |
+	fis'4 fis'4 g'4 |
+	a'2 r8 d'8 |
+	b'2. |
+	b'4 c''4 d''4 |
+	b'2. |
+	b'4 c''4 d''4 |
+	b'2. |
+	gis'4 a'4 b'4 |
+	c''2 r8 a'8 |
+	c''4 d''4 e''4 |
+	c''2. |
+	c''4 d''4 a'4 |
+	b'2. ~ |
+	b'2 r8 c''8 |
+	a'2. ~ |
+	a'4 r2 |
+	f'4 f'4. g'8 |
+	d'2 r8 d'8 |
+	e'4 e'4. d'8 |
+	c'4 e'2 |
+	d'4 d'4. e'8 |
+	d'8 b8 b4. d'8 |
+	c'4 c'4 d'4 |
+	e'2. |
+	g'4 f'4. e'8 |
+	d'2 r8 d'8 |
+	e'4 e'4 d'4 |
+	c'4 e'4. e'8 |
+	dis'4 dis'4 e'4 |
+	fis'2 e'8 fis'8 |
+	fis'4 fis'4 g'4 |
+	a'2 r8 d'8 |
+	b'2. |
+	b'4 c''4 d''4 |
+	b'2. |
+	b'4 c''4 d''4 |
+	b'2. |
+	gis'4 a'4 b'4 |
+	c''2 r8 a'8 |
+	c''4 d''4 e''4 |
+	c''2. |
+	c''4 d''4 a'4 |
+	b'2. |
+	dis''2. |
+	e''2. |
+	e''4 e''4 e''4 |
+	d''2 d''8 b'8 |
+	b'4 b'4 a'4 |
+	g'2. ~ |
+	g'2 e'4 |
+	d'2. ~ |
+	d'2. ~ |
+	d'2 d'4 |
+	c''4 b'4 a'4 |
+	g'2. ~ |
+	g'2. ~ |
+	g'2. ~ |
+	g'2. |
+	\endBar
+}
+{% endif %}

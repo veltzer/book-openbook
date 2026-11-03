@@ -1,0 +1,127 @@
+{#
+default_version = "Wikifonia"
+
+[attributes]
+title = "Goodnight Sweetheart"
+style = "Jazz"
+composer = "Jimmy Campbell, Reginald Connelly, Ray Noble, Jimmy Campbell, Reginald Connelly, Ray Noble"
+piece = "Standard"
+typesetter = "OpenBook contributors (MusicXML import)"
+completion = "3"
+uuid = "9310080a-e39e-5518-8a1b-dafe3ab74969"
+location = "Great_Gig_Book:65"
+copyright = "All Rights Reserved"
+copyrightextra = "Archived MusicXML notice retained; underlying music is not relicensed."
+
+[versions.Wikifonia]
+doChords = true
+doVoice = true
+doLyrics = false
+doLyricsmore = false
+doLyricsmoremore = false
+doChordBars = false
+doGuitar = false
+doExtra = false
+doPrep = false
+doOwn = false
+#}
+{% if part == "Vars" %}
+{% endif %}
+{% if part == "Doc" %}
+	DONE:
+	- imported melody and chord changes from real_books_archive.gi/Wikifonia.tar.xz: Wikifonia/Jimmy Campbell, Reginald Connelly, Ray Noble - Goodnight Sweetheart.mxl.
+	- source revision: http://wikifonia.org/node/3704/revisions/4812/view.
+	- book index reference: Great_Gig_Book:65 (real_books_archive.gi/index); index pagination is not a verified PDF page number.
+	- retained the archived MusicXML rights notice; no redistribution permission is asserted.
+	- retained written melody, chord changes, pickups, repeats and numbered endings; lyrics, slurs, dynamics and articulations other than fermatas omitted.
+	- tempo is an editorial practice suggestion.
+	TODO:
+	- proofread the complete melody, harmony and form against a printed edition and check by ear.
+	- verify source attribution, copyright notice and reuse terms; only the archived MusicXML notice is retained.
+	- locate the tune in a local PDF edition; the book-index page number may differ.
+{% endif %}
+{% if part == "ChordsWikifonia" %}\chordmode {
+	\startChords
+	\startSong
+
+	\myMark "A"
+	\startPart
+	c1 |
+	s1 |
+	s1 |
+	s1 | \myEndLine
+	g1:7 |
+	s1 |
+	s1 |
+	s1 | \myEndLine
+	a1:m |
+	s1 |
+	d1:m |
+	s1 | \myEndLine
+	c1:maj7 |
+	s1 |
+	d2.:m7 g4:7 |
+	s1 | \myEndLine
+	c1 |
+	s1 |
+	s1 |
+	c1 | \myEndLine
+	g1:7 |
+	s1 |
+	s1 |
+	s1 | \myEndLine
+	a1:m |
+	s1 |
+	d1:7 |
+	s1 | \myEndLine
+	c1 |
+	g1:7 |
+	c1 |
+	s1 | \myEndLine
+	\endBar
+	\endPart
+
+	\endSong
+	\endChords
+}
+{% endif %}
+{% if part == "VoiceWikifonia" %}\absolute {
+	\tempo "Moderato" 4 = 120
+	\time 4/4
+	\key c \major
+
+	e'2 e'2 |
+	dis'4 e'2. |
+	dis'4 e'4 dis'4 e'4 |
+	f'2 e'2 |
+	g'2 g'2 |
+	fis'4 g'2. |
+	fis'4 g'4 fis'4 g'4 |
+	a'2 g'2 |
+	c''2 c''2 |
+	b'4 c''2 c''4 |
+	c''4 a'4 f'4 d'4 ~ |
+	d'1 |
+	b'4 g'4 e'4 c'4 ~ |
+	c'2. c'4 |
+	a'4 f'4 d'4 b4 ~ |
+	b4 g'4 fis'4 f'4 |
+	e'2 e'2 |
+	dis'4 e'2. |
+	dis'4 e'4 dis'4 e'4 |
+	f'2 e'2 |
+	g'2 g'2 |
+	fis'4 g'2. |
+	fis'4 g'4 fis'4 g'4 |
+	a'2 g'2 |
+	c''2 c''2 |
+	b'4 c''2. |
+	e''4 c''4 b'4 c''4 |
+	b'4 a'2. |
+	g'2 g'2 |
+	fis'4 g'2 e''4 |
+	c''1 ~ |
+	c''4 r4 r2 |
+	\endBar
+}
+{% endif %}

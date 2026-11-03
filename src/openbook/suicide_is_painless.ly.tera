@@ -1,0 +1,127 @@
+{#
+default_version = "Wikifonia"
+
+[attributes]
+title = "Suicide is Painless"
+style = "Jazz"
+composer = "Johnny Mandel, Mike Altman"
+piece = "Standard"
+typesetter = "OpenBook contributors (MusicXML import)"
+completion = "3"
+uuid = "6fac15ef-dbb7-5e0e-a2a8-c81b9aabadee"
+location = "TheBook:114"
+copyright = "All Rights Reserved"
+copyrightextra = "Archived MusicXML notice retained; underlying music is not relicensed."
+
+[versions.Wikifonia]
+doChords = true
+doVoice = true
+doLyrics = false
+doLyricsmore = false
+doLyricsmoremore = false
+doChordBars = false
+doGuitar = false
+doExtra = false
+doPrep = false
+doOwn = false
+#}
+{% if part == "Vars" %}
+{% endif %}
+{% if part == "Doc" %}
+	DONE:
+	- imported melody and chord changes from real_books_archive.gi/Wikifonia.tar.xz: Wikifonia/Johnny Mandel, Mike Altman - Suicide is Painless.mxl.
+	- source revision: http://wikifonia.org/node/4368/revisions/5871/view.
+	- book index reference: TheBook:114 (real_books_archive.gi/index); index pagination is not a verified PDF page number.
+	- retained the archived MusicXML rights notice; no redistribution permission is asserted.
+	- retained written melody, chord changes, pickups, repeats and numbered endings; lyrics, slurs, dynamics and articulations other than fermatas omitted.
+	- tempo is an editorial practice suggestion.
+	TODO:
+	- proofread the complete melody, harmony and form against a printed edition and check by ear.
+	- verify source attribution, copyright notice and reuse terms; only the archived MusicXML notice is retained.
+	- locate the tune in a local PDF edition; the book-index page number may differ.
+{% endif %}
+{% if part == "ChordsWikifonia" %}\chordmode {
+	\startChords
+	\startSong
+
+	\myMark "A"
+	\startPart
+	s1 |
+	\repeat volta 2 {
+	g1:m |
+	c1:7 |
+	f1 | \myEndLine
+	s1 |
+	g1:m |
+	c1 |
+	f1 | \myEndLine
+	s1 |
+	d1:7 |
+	s1 |
+	g1:m | \myEndLine
+	c1:7 |
+	f1 |
+	s1 |
+	s1 | \myEndLine
+	g1:m |
+	} \alternative {
+	{
+	d1:m |
+	s1 | \myEndLineVoltaNotLast
+	}
+	{
+	d1:m | \myEndLineVoltaLast
+	}
+	}
+	s1 |
+	f1 |
+	g1:m |
+	d1:m | \myEndLine
+	s1 |
+	\endBar
+	\endPart
+
+	\endSong
+	\endChords
+}
+{% endif %}
+{% if part == "VoiceWikifonia" %}\absolute {
+	\tempo "Moderato" 4 = 120
+	\time 4/4
+	\key c \major
+
+	r4 r4 r4 c''4 |
+	\repeat volta 2 {
+	bes'4 a'4 bes'4 a'4 |
+	bes'4 a'4 g'2 |
+	a'4 g'4 a'4 g'4 |
+	a'4 g'4 f'4. a'8 |
+	g'4 f'4 g'4 f'4 |
+	g'4 f'4 e'4. g'8 |
+	f'4 e'4 f'4 e'4 |
+	f'4 g'4 a'2 ~ |
+	a'1 ~ |
+	a'2. c''4 |
+	d''4 c''4 d''4 c''4 |
+	d''4 c''2 c''4 |
+	d''4 c''4 d''4 c''4 |
+	d''4 c''2 c''4 |
+	a'4 c''4 d''4 f''4 |
+	g''4 f''4 d''4 c''4 |
+	} \alternative {
+	{
+	d''1 ~ |
+	d''2. c''4 |
+	}
+	{
+	d''1 ~ |
+	}
+	}
+	d''2. c''4 |
+	a'4 c''4 d''4 f''4 |
+	g''4 f''4 d''4 c''4 |
+	d''2 d''4 d''4 |
+	d''2. r4 |
+	\endBar
+}
+{% endif %}

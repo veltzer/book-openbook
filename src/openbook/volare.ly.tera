@@ -1,0 +1,171 @@
+{#
+default_version = "Wikifonia"
+
+[attributes]
+title = "Volare"
+style = "Jazz"
+composer = "Domenico Modugno, Mitchell Parish"
+piece = "Standard"
+typesetter = "OpenBook contributors (MusicXML import)"
+completion = "3"
+uuid = "7f7b8bc0-cb8c-5677-ba30-3fca5ce9604b"
+location = "TheBook:460"
+copyright = "All Rights Reserved"
+copyrightextra = "Archived MusicXML notice retained; underlying music is not relicensed."
+
+[versions.Wikifonia]
+doChords = true
+doVoice = true
+doLyrics = false
+doLyricsmore = false
+doLyricsmoremore = false
+doChordBars = false
+doGuitar = false
+doExtra = false
+doPrep = false
+doOwn = false
+#}
+{% if part == "Vars" %}
+{% endif %}
+{% if part == "Doc" %}
+	DONE:
+	- imported melody and chord changes from real_books_archive.gi/Wikifonia.tar.xz: Wikifonia/Domenico Modugno, Mitchell Parish - Volare.mxl.
+	- source revision: http://wikifonia.org/node/4508/revisions/22569/view.
+	- book index reference: TheBook:460 (real_books_archive.gi/index); index pagination is not a verified PDF page number.
+	- retained the archived MusicXML rights notice; no redistribution permission is asserted.
+	- retained written melody, chord changes, pickups, repeats and numbered endings; lyrics, slurs, dynamics and articulations other than fermatas omitted.
+	- tempo is an editorial practice suggestion.
+	TODO:
+	- proofread the complete melody, harmony and form against a printed edition and check by ear.
+	- verify source attribution, copyright notice and reuse terms; only the archived MusicXML notice is retained.
+	- locate the tune in a local PDF edition; the book-index page number may differ.
+{% endif %}
+{% if part == "ChordsWikifonia" %}\chordmode {
+	\startChords
+	\startSong
+
+	\myMark "A"
+	\startPart
+	bes1 |
+	b1:dim |
+	c2:m c2:m7 |
+	s2 f2:7 | \myEndLine
+	c1:m7 |
+	f1:7 |
+	bes2 f2:7 |
+	bes2:maj7 bes2:6 | \myEndLine
+	bes1:/d |
+	des1:dim |
+	c1:m |
+	s1 | \myEndLine
+	c1:7 |
+	g2:m7 c2:7 |
+	c1:m7/f |
+	f2:7 g2:7.9- | \myEndLine
+	c1:m7 |
+	s2 g2:7.9- |
+	c1:m6 |
+	s2 f2:7.9- | \myEndLine
+	bes2:9 bes2:maj7 |
+	bes2:6 f2:7 |
+	g1:m |
+	s1 | \myEndLine
+	c2:m7 f2:9 |
+	bes1 |
+	c4.:m7 f1*5/8:9 |
+	bes1 | \myEndLine
+	g2:m g2:m7+ |
+	g2:m7 g2:m6 |
+	d2:m a2:aug7 |
+	d1:m7 | \myEndLine
+	d2:7 c2:m/ees |
+	d1:7 |
+	g1:m |
+	ees2:/g g2:m | \myEndLine
+	ees2:m bes2:aug |
+	ees2:m7 aes2:7 |
+	des1 |
+	f2:7 g2:7.9- | \myEndLine
+	c1:m7 |
+	s2 g2:7.9- |
+	c1:m7 |
+	s2 f2:7.9- | \myEndLine
+	bes2:6 bes2:maj7 |
+	bes2:6 f2:7 |
+	g1:m |
+	s1 | \myEndLine
+	c2:m7 f2:9 |
+	bes1 |
+	c2:m7 f2:9 |
+	bes1 | \myEndLine
+	c2:m7 f2:9 |
+	bes1 |
+	\endBar
+	\endPart
+
+	\endSong
+	\endChords
+}
+{% endif %}
+{% if part == "VoiceWikifonia" %}\absolute {
+	\tempo "Moderato" 4 = 120
+	\time 4/4
+	\key bes \major
+
+	\times 2/3 { d'4 d'4 d'4 } \times 2/3 { d'4 d'4 d'4 } |
+	\times 2/3 { d'4 d'4 d'4 } \times 2/3 { f'4 es'4 d'4 } |
+	c'2 r2 |
+	r2 r2 |
+	\times 2/3 { c'4 c'4 c'4 } \times 2/3 { c'4 c'4 c'4 } |
+	\times 2/3 { c'4 c'4 c'4 } \times 2/3 { es'4 d'4 c'4 } |
+	bes2 r2 |
+	r2 r2 |
+	\times 2/3 { bes'4 bes'4 bes'4 } \times 2/3 { c''4 c''4 c''4 } |
+	\times 2/3 { a'4 a'4 a'4 } \times 2/3 { bes'4 bes'4 bes'4 } |
+	g'2 g'2 ~ |
+	g'1 |
+	\times 2/3 { c''4 c''4 c''4 } \times 2/3 { d''4 d''4 d''4 } |
+	\times 2/3 { bes'4 bes'4 bes'4 } \times 2/3 { bes'4 a'4 bes'4 } |
+	c''2 c''2 ~ |
+	c''2 d''2 |
+	c''2 g'2 ~ |
+	g'2 d''2 |
+	c''1 ~ |
+	c''2 c''2 |
+	bes'2 f'2 ~ |
+	f'2 \times 2/3 { f'4 a'4 c''4 } |
+	bes'1 ~ |
+	bes'2 r4 bes'4 |
+	g'4. bes'8 \times 2/3 { a'4 bes'4 c''4 } |
+	bes'4 r4 r4 bes'4 |
+	g'8 g'4 bes'8 \times 2/3 { a'4 bes'4 c''4 } |
+	bes'4 r4 r4 g'8 a'8 |
+	\times 2/3 { bes'4 g'4 a'4 } \times 2/3 { bes'4 g'4 a'4 } |
+	\times 2/3 { bes'4 g'4 a'4 } \times 2/3 { bes'4 c''4. bes'8 } |
+	\times 2/3 { a'4 f'4 g'4 } \times 2/3 { a'4 f'4 g'4 } |
+	a'2. a'8 bes'8 |
+	\times 2/3 { c''4 a'4 bes'4 } \times 2/3 { c''4 a'4. bes'8 } |
+	\times 2/3 { c''4 a'4 bes'4 } \times 2/3 { c''4 bes'4 a'4 } |
+	bes'1 ~ |
+	bes'2 r4 g'8 a'8 |
+	\times 2/3 { bes'4 ges'4 as'4 } \times 2/3 { bes'4 ges'4 as'4 } |
+	\times 2/3 { bes'4 ges'4 as'4 } \times 2/3 { bes'4 as'4 f'4 } |
+	f'1 ~ |
+	f'4 r4 d''2 |
+	c''2 g'2 |
+	g'2 d''2 |
+	c''1 |
+	c''2 c''2 |
+	bes'2 f'2 |
+	f'2 \times 2/3 { f'4 a'4 c''4 } |
+	bes'1 |
+	bes'2 r4 bes'4 |
+	g'4. bes'8 \times 2/3 { a'4 bes'4 c''4 } |
+	bes'4 r4 r4 bes'4 |
+	g'4. bes'8 \times 2/3 { a'4 bes'4 c''4 } |
+	bes'4 r4 r4 bes'4 |
+	g'4. bes'8 \times 2/3 { a'4 bes'4 c''4 } |
+	bes'2. r4 |
+	\endBar
+}
+{% endif %}

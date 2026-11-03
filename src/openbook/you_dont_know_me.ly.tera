@@ -1,0 +1,135 @@
+{#
+default_version = "Wikifonia"
+
+[attributes]
+title = "You Don't Know Me"
+style = "Jazz"
+composer = "Eddy Arnold, Cindy Walker"
+piece = "Standard"
+typesetter = "OpenBook contributors (MusicXML import)"
+completion = "3"
+uuid = "1fbc9927-aaf1-57cc-b43f-e3a834bdb6f3"
+location = "Great_Gig_Book:105"
+copyright = "All Rights Reserved"
+copyrightextra = "Archived MusicXML notice retained; underlying music is not relicensed."
+
+[versions.Wikifonia]
+doChords = true
+doVoice = true
+doLyrics = false
+doLyricsmore = false
+doLyricsmoremore = false
+doChordBars = false
+doGuitar = false
+doExtra = false
+doPrep = false
+doOwn = false
+#}
+{% if part == "Vars" %}
+{% endif %}
+{% if part == "Doc" %}
+	DONE:
+	- imported melody and chord changes from real_books_archive.gi/Wikifonia.tar.xz: Wikifonia/Eddy Arnold, Cindy Walker - You Don't Know Me.mxl.
+	- source revision: http://wikifonia.org/node/3466/revisions/19234/view.
+	- book index reference: Great_Gig_Book:105 (real_books_archive.gi/index); index pagination is not a verified PDF page number.
+	- retained the archived MusicXML rights notice; no redistribution permission is asserted.
+	- retained written melody, chord changes, pickups, repeats and numbered endings; lyrics, slurs, dynamics and articulations other than fermatas omitted.
+	- tempo is an editorial practice suggestion.
+	TODO:
+	- proofread the complete melody, harmony and form against a printed edition and check by ear.
+	- verify source attribution, copyright notice and reuse terms; only the archived MusicXML notice is retained.
+	- locate the tune in a local PDF edition; the book-index page number may differ.
+{% endif %}
+{% if part == "ChordsWikifonia" %}\chordmode {
+	\startChords
+	\startSong
+
+	\myMark "A"
+	\startPart
+	s2. g4:aug7 |
+	\repeat volta 2 {
+	c1 |
+	s2. c4:7 |
+	f1 | \myEndLine
+	s2. fis4:dim |
+	c1 |
+	d1:m7 |
+	c1 | \myEndLine
+	d2:7 g4:7 g4:aug7 |
+	c1 |
+	s2. c4:7 |
+	f1 | \myEndLine
+	s2. fis4:dim |
+	c1 |
+	d1:m7 |
+	c2 f2 | \myEndLine
+	c2. c4:7 |
+	f1 |
+	c2 cis2:dim |
+	d2:m g2:7 | \myEndLine
+	c1 |
+	a1:m |
+	e1:m |
+	d1:7 | \myEndLine
+	s2 g4:7 g4:aug7 |
+	c1 |
+	s2. c4:7 |
+	f1 | \myEndLine
+	s2. fis4:dim |
+	c1 |
+	d1:m7 |
+	c2 f2 | \myEndLine
+	c2 g4:7 g4:aug |
+	}
+	c1 |
+	\endBar
+	\endPart
+
+	\endSong
+	\endChords
+}
+{% endif %}
+{% if part == "VoiceWikifonia" %}\absolute {
+	\tempo "Moderato" 2 = 80
+	\time 2/2
+	\key c \major
+
+	r2 r8 g'8 g'8. a'16 |
+	\repeat volta 2 {
+	a'8. g'16 g'4. g8 c'8. e'16 |
+	a'8. g'16 g'4. c''8 c''8. d''16 |
+	d''8. c''16 c''4. c'8 f'8. a'16 |
+	d''8. c''16 c''4. c''8 b'8. a'16 |
+	a'8. g'16 g'4. e'8 a'8. g'16 |
+	g'8. f'16 f'4. b8 d'8. f'16 |
+	f'8 e'4. ~ e'2 |
+	r2 r8 a'8 a'8. a'16 |
+	a'8. g'16 g'4. g8 c'8. e'16 |
+	a'8. g'16 g'4. c''8 c''8. d''16 |
+	d''8. c''16 c''4. c'8 f'8. a'16 |
+	d''8. c''16 c''4. c''8 b'8. a'16 |
+	a'8. g'16 g'4. e'8 a'8. g'16 |
+	g'8. f'16 f'4. b8 d'8. f'16 |
+	d'8 c'4. ~ c'2 ~ |
+	c'2 r4 r8. c'16 |
+	a'4 a'8 b'8 c''4. c''8 |
+	b'8 b'4 a'16 g'16 g'4 a'8. g'16 |
+	\times 2/3 { f'4 e'4 f'4 } a'4. f'8 |
+	e'8 g'4. ~ g'4. e'8 |
+	c''4. c''8 c''4. c''8 |
+	b'8. b'16 b'8. b'16 b'4. g'8 |
+	a'4. a'8 a'8. g'16 fis'8. a'16 |
+	g'2 r8 g'8 g'8. a'16 |
+	a'8. g'16 g'4. g8 c'8. e'16 |
+	a'8. g'16 g'4. c''8 c''8. d''16 |
+	d''8. c''16 c''4. c'8 f'8. a'16 |
+	d''8. c''16 c''4. c''8 b'8. a'16 |
+	a'8. g'16 g'4. e'8 a'8. g'16 |
+	g'8. f'16 f'4. b8 b8. d'16 |
+	d'8 c'4. ~ c'2 ~ |
+	c'4 r4 r8 g'8 g'8. a'16 |
+	}
+	c'1 |
+	\endBar
+}
+{% endif %}

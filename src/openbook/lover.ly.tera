@@ -1,0 +1,191 @@
+{#
+default_version = "Wikifonia"
+
+[attributes]
+title = "Lover"
+style = "Jazz"
+composer = "Richard Rodgers, Lorenz Hart"
+piece = "Standard"
+typesetter = "OpenBook contributors (MusicXML import)"
+completion = "3"
+uuid = "4db3bb4c-09d3-5d05-b545-655ea8cb86df"
+location = "557_Standards:225"
+copyright = "All Rights Reserved"
+copyrightextra = "Archived MusicXML notice retained; underlying music is not relicensed."
+
+[versions.Wikifonia]
+doChords = true
+doVoice = true
+doLyrics = false
+doLyricsmore = false
+doLyricsmoremore = false
+doChordBars = false
+doGuitar = false
+doExtra = false
+doPrep = false
+doOwn = false
+#}
+{% if part == "Vars" %}
+{% endif %}
+{% if part == "Doc" %}
+	DONE:
+	- imported melody and chord changes from real_books_archive.gi/Wikifonia.tar.xz: Wikifonia/Richard Rodgers, Lorenz Hart - Lover.mxl.
+	- source revision: http://wikifonia.org/node/5239/revisions/16017/view.
+	- book index reference: 557_Standards:225 (real_books_archive.gi/index); index pagination is not a verified PDF page number.
+	- retained the archived MusicXML rights notice; no redistribution permission is asserted.
+	- retained written melody, chord changes, pickups, repeats and numbered endings; lyrics, slurs, dynamics and articulations other than fermatas omitted.
+	- tempo is an editorial practice suggestion.
+	TODO:
+	- proofread the complete melody, harmony and form against a printed edition and check by ear.
+	- verify source attribution, copyright notice and reuse terms; only the archived MusicXML notice is retained.
+	- locate the tune in a local PDF edition; the book-index page number may differ.
+{% endif %}
+{% if part == "ChordsWikifonia" %}\chordmode {
+	\startChords
+	\startSong
+
+	\myMark "A"
+	\startPart
+	c2. |
+	s2. |
+	fis2.:m7 |
+	b2.:7 | \myEndLine
+	f2.:m7 |
+	bes2.:7 |
+	e2.:m7 |
+	a2.:7 | \myEndLine
+	ees2.:m7 |
+	aes2.:7 |
+	d2.:m7 |
+	g2.:7 | \myEndLine
+	e2.:m7 |
+	ees2.:7 |
+	d2.:m7 |
+	des2.:7 | \myEndLine
+	c2. |
+	s2. |
+	fis2.:m7 |
+	b2.:7 | \myEndLine
+	f2.:m7 |
+	bes2.:7 |
+	e2.:m7 |
+	a2.:7 | \myEndLine
+	ees2.:m7 |
+	aes2.:7 |
+	d2.:m7 |
+	des2.:7 | \myEndLine
+	c2.:maj7 |
+	c2.:6 |
+	fis2.:m7 |
+	b2.:7 | \myEndLine
+	e2.:maj7 |
+	f2.:dim |
+	fis2.:m7 |
+	b2.:7 | \myEndLine
+	e2.:maj7 |
+	f2.:dim |
+	fis2.:m7 |
+	b2.:7 | \myEndLine
+	g2.:maj7 |
+	gis2.:dim |
+	a2.:m7 |
+	d2.:7 | \myEndLine
+	d2.:m7 |
+	g2.:7 |
+	d2.:m7 |
+	des2.:7 | \myEndLine
+	c2. |
+	s2. |
+	fis2.:m7 |
+	b2.:7 | \myEndLine
+	f2.:m7 |
+	bes2.:7 |
+	e2.:m7 |
+	a2.:7 | \myEndLine
+	ees2.:m7 |
+	aes2.:7 |
+	d2.:m7 |
+	g2.:7 | \myEndLine
+	c2. |
+	des2.:maj7 |
+	c2. |
+	s2. | \myEndLine
+	\endBar
+	\endPart
+
+	\endSong
+	\endChords
+}
+{% endif %}
+{% if part == "VoiceWikifonia" %}\absolute {
+	\tempo "Moderato" 4 = 120
+	\time 3/4
+	\key c \major
+
+	c''4 r4 c''4 ~ |
+	c''4 b'4. c''8 |
+	b'4 r4 b'4 ~ |
+	b'4 ais'4. b'8 |
+	bes'4 r4 bes'4 ~ |
+	bes'4 a'4. bes'8 |
+	a'2. ~ |
+	a'2. |
+	as'4 r4 as'4 ~ |
+	as'4 g'4. as'8 |
+	g'4 r4 g'4 ~ |
+	g'4 a'4 b'4 |
+	g'2. ~ |
+	g'2. ~ |
+	g'2. ~ |
+	g'2. |
+	c''4 r4 c''4 ~ |
+	c''4 b'4. c''8 |
+	b'4 r4 b'4 ~ |
+	b'4 ais'4. b'8 |
+	bes'4 r4 bes'4 ~ |
+	bes'4 a'4. bes'8 |
+	a'2. ~ |
+	a'2. |
+	as'4 r4 as'4 ~ |
+	as'4 g'4. as'8 |
+	g'4 r4 g'4 ~ |
+	g'4 f'4 g'4 |
+	e'2. ~ |
+	e'2. |
+	r2. |
+	r2. |
+	r8 gis'8 a'4 gis'4 |
+	a'4 gis'4 a'4 |
+	b'2 b'4 |
+	r8 dis'8 fis'4 a'4 |
+	gis'4 a'4 gis'4 |
+	a'4 gis'4 a'4 |
+	b'2 gis'4 |
+	f'4 fis'2 |
+	b'4 c''4 b'4 |
+	c''4 b'4 c''4 |
+	d''2 d''4 ~ |
+	d''4 dis''4 e''4 |
+	g'2. ~ |
+	g'2. ~ |
+	g'2. ~ |
+	g'2 r4 |
+	c''4 r4 c''4 ~ |
+	c''4 b'4. c''8 |
+	b'4 r4 b'4 ~ |
+	b'4 ais'4. b'8 |
+	bes'4 r4 bes'4 ~ |
+	bes'4 a'4. bes'8 |
+	a'2. ~ |
+	a'2. |
+	as'4 r4 as'4 ~ |
+	as'4 g'4. as'8 |
+	g'4 r4 g'4 ~ |
+	g'4 d''4 e''4 |
+	c''2. ~ |
+	c''2. ~ |
+	c''2. ~ |
+	c''4 r2 |
+	\endBar
+}
+{% endif %}

@@ -1,0 +1,209 @@
+{#
+default_version = "Wikifonia"
+
+[attributes]
+title = "Something's Gotta Give"
+style = "Jazz"
+composer = "Johnny Mercer 1954, Johnny Mercer"
+piece = "Standard"
+typesetter = "OpenBook contributors (MusicXML import)"
+completion = "3"
+uuid = "10fdd61c-1975-5332-96e7-6aa5f2c798f9"
+location = "TheBook:155"
+copyright = "All Rights Reserved"
+copyrightextra = "Archived MusicXML notice retained; underlying music is not relicensed."
+
+[versions.Wikifonia]
+doChords = true
+doVoice = true
+doLyrics = false
+doLyricsmore = false
+doLyricsmoremore = false
+doChordBars = false
+doGuitar = false
+doExtra = false
+doPrep = false
+doOwn = false
+#}
+{% if part == "Vars" %}
+{% endif %}
+{% if part == "Doc" %}
+	DONE:
+	- imported melody and chord changes from real_books_archive.gi/Wikifonia.tar.xz: Wikifonia/Johnny Mercer 1954, Johnny Mercer - Something's Gotta Give.mxl.
+	- source revision: http://wikifonia.org/node/5782/revisions/16052/view.
+	- book index reference: TheBook:155 (real_books_archive.gi/index); index pagination is not a verified PDF page number.
+	- retained the archived MusicXML rights notice; no redistribution permission is asserted.
+	- retained written melody, chord changes, pickups, repeats and numbered endings; lyrics, slurs, dynamics and articulations other than fermatas omitted.
+	- tempo is an editorial practice suggestion.
+	TODO:
+	- proofread the complete melody, harmony and form against a printed edition and check by ear.
+	- verify source attribution, copyright notice and reuse terms; only the archived MusicXML notice is retained.
+	- locate the tune in a local PDF edition; the book-index page number may differ.
+{% endif %}
+{% if part == "ChordsWikifonia" %}\chordmode {
+	\startChords
+	\startSong
+
+	\myMark "A"
+	\startPart
+	\repeat volta 2 {
+	d2:m f4 d4:m7 |
+	s1*5/8 g4. |
+	c1:maj7 |
+	s1 | \myEndLine
+	d2:m f4 d4:m7 |
+	s2 f2 |
+	d2 c2 |
+	s1 | \myEndLine
+	d1:m |
+	s2 d2:m7 |
+	a1:m |
+	c1 | \myEndLine
+	d1:m7 |
+	s1 |
+	c1 |
+	s2. a4:7 | \myEndLine
+	d2:m f4 d4:m7 |
+	s2 g2 |
+	c1 |
+	s1 | \myEndLine
+	d2:m f4 d4:m7 |
+	s2 g2 |
+	d2 c2 |
+	s1 | \myEndLine
+	d1:m |
+	s1 |
+	a1:m |
+	c1 | \myEndLine
+	d1:m7 |
+	s1 |
+	c1 |
+	s1 | \myEndLine
+	g1:m7 |
+	s2 c2 |
+	s1 |
+	f1:maj7 | \myEndLine
+	e4.:m g4. e4:m |
+	s2 a2 |
+	d1:m |
+	s1 | \myEndLine
+	a1:m7 |
+	s2 d2 |
+	d1:7 |
+	g1:maj7 | \myEndLine
+	a1:m |
+	s2 d2 |
+	d1:m7 |
+	s1 | \myEndLine
+	d2:m f4 d4:m7 |
+	s2 g2 |
+	c1 |
+	s1 | \myEndLine
+	d1*5/8:m f4 d8:m7 |
+	s2 g2 |
+	d2 c2 |
+	c1:maj7 | \myEndLine
+	d2.:m d4:m7 |
+	s1 |
+	a1:m |
+	a1:m7 | \myEndLine
+	d1:m7 |
+	s1 |
+	} \alternative {
+	{
+	c1 |
+	a1:7 | \myEndLineVoltaNotLast
+	}
+	{
+	c1 |
+	d2.:m7 c4 | \myEndLineVoltaLast
+	}
+	}
+	\endBar
+	\endPart
+
+	\endSong
+	\endChords
+}
+{% endif %}
+{% if part == "VoiceWikifonia" %}\absolute {
+	\tempo "Moderato" 4 = 120
+	\time 4/4
+	\key c \major
+
+	\repeat volta 2 {
+	a'4. a'8 ~ a'4 a'4 ~ |
+	a'8 a'4. a'8 a'8 a'4 |
+	a'2 g'4 fis'8 g'8 ~ |
+	g'1 |
+	f'4. f'8 ~ f'4 f'4 ~ |
+	f'8 f'4. f'8 f'8 f'4 |
+	f'2 e'4 dis'8 e'8 ~ |
+	e'1 |
+	d'4. d'8 ~ d'4 d'4 ~ |
+	d'8 d'4. d'4 f'8 a'8 |
+	c''1 ~ |
+	c''1 |
+	d'8 d'8 d'8 d'8 d'4 d'8 d'8 |
+	d'8 d'8 d'4 d'8 c'8 c'8 c'8 |
+	c'1 ~ |
+	c'2. r4 |
+	a'4. a'8 a'4 a'4 ~ |
+	a'8 a'4. a'8 a'8 a'4 |
+	a'2 g'4 fis'8 g'8 ~ |
+	g'1 |
+	f'4. f'8 ~ f'4 f'4 ~ |
+	f'8 f'4. f'8 f'8 f'4 |
+	f'2 e'4 dis'8 e'8 ~ |
+	e'1 |
+	d'4. d'8 ~ d'4 d'4 ~ |
+	d'8 d'4. d'4 f'8 a'8 |
+	c''1 ~ |
+	c''1 |
+	d'4 d'4 d'4 d'4 |
+	d'4 d'4 d'8 c'8 c'8 c'8 ~ |
+	c'1 ~ |
+	c'2 e'4 g'4 |
+	d''1 ~ |
+	d''4 bes'8 bes'8 bes'8 bes'8 bes'4 |
+	bes'2 fis'4 g'8 a'8 ~ |
+	a'1 |
+	g'4. g'8 ~ g'4 g'4 ~ |
+	g'8 g'4. g'4 dis'8 e'8 |
+	f'1 ~ |
+	f'2 gis'4 a'4 |
+	e''1 ~ |
+	e''4 c''8 c''8 ~ c''8 c''8 c''4 |
+	c''2 gis'4 a'8 b'8 ~ |
+	b'1 |
+	a'4. a'8 ~ a'4 a'4 ~ |
+	a'8 a'4. a'4 b'8 c''8 |
+	d''1 ~ |
+	d''4. r8 r2 |
+	a'4. a'8 ~ a'4 a'4 ~ |
+	a'8 a'4. a'8 a'8 a'4 |
+	a'2 g'4 fis'8 g'8 ~ |
+	g'1 |
+	f'4. r8 f'8 ~ f'4 f'8 ~ |
+	f'8 f'4. f'8 f'8 f'4 |
+	f'2 e'4 dis'8 e'8 ~ |
+	e'1 |
+	d'4. d'8 ~ d'4 d'4 ~ |
+	d'8 d'4. d'4 f'8 a'8 |
+	c''1 ~ |
+	c''1 |
+	d''8 d''8 d''8 d''8 d''4 d''8 d''8 |
+	d''8 d''8 d''4 d''8 c''8 c''8 c''8 |
+	} \alternative {
+	{
+	c''1 ~ |
+	c''4. r8 r2 |
+	}
+	{
+	c''1 ~ |
+	c''2. r4 |
+	}
+	}
+	\endBar
+}
+{% endif %}

@@ -1,0 +1,119 @@
+{#
+default_version = "Wikifonia"
+
+[attributes]
+title = "The Little Drummer Boy"
+style = "Jazz"
+composer = "Harry Simeone, Henry Onorati, Katherine Davis"
+piece = "Standard"
+typesetter = "OpenBook contributors (MusicXML import)"
+completion = "3"
+uuid = "6c0a28ac-e89a-58a8-95d4-ca72833d1dd6"
+location = "Just_Standards_Real_Book:228"
+copyright = "All Rights Reserved"
+copyrightextra = "Archived MusicXML notice retained; underlying music is not relicensed."
+
+[versions.Wikifonia]
+doChords = true
+doVoice = true
+doLyrics = false
+doLyricsmore = false
+doLyricsmoremore = false
+doChordBars = false
+doGuitar = false
+doExtra = false
+doPrep = false
+doOwn = false
+#}
+{% if part == "Vars" %}
+{% endif %}
+{% if part == "Doc" %}
+	DONE:
+	- imported melody and chord changes from real_books_archive.gi/Wikifonia.tar.xz: Wikifonia/Harry Simeone, Henry Onorati, Katherine Davis - The Little Drummer Boy.mxl.
+	- source revision: http://wikifonia.org/node/13759/revisions/24139/view.
+	- book index reference: Just_Standards_Real_Book:228 (real_books_archive.gi/index); index pagination is not a verified PDF page number.
+	- retained the archived MusicXML rights notice; no redistribution permission is asserted.
+	- retained written melody, chord changes, pickups, repeats and numbered endings; lyrics, slurs, dynamics and articulations other than fermatas omitted.
+	- tempo is an editorial practice suggestion.
+	TODO:
+	- proofread the complete melody, harmony and form against a printed edition and check by ear.
+	- verify source attribution, copyright notice and reuse terms; only the archived MusicXML notice is retained.
+	- locate the tune in a local PDF edition; the book-index page number may differ.
+{% endif %}
+{% if part == "ChordsWikifonia" %}\chordmode {
+	\startChords
+	\startSong
+
+	\myMark "A"
+	\startPart
+	\repeat volta 2 {
+	f1 |
+	s1 |
+	f1 |
+	s1 | \myEndLine
+	s1 |
+	s1 |
+	f1 |
+	s1 | \myEndLine
+	s1 |
+	s1 |
+	c1 |
+	s1 | \myEndLine
+	s1 |
+	s1 |
+	c1 |
+	s2 f4 bes4 | \myEndLine
+	f2:7 bes2 |
+	s2 f2 |
+	s2 c2 |
+	s1 | \myEndLine
+	f1 |
+	s1 |
+	s1 |
+	s1 | \myEndLine
+	c2 f2 |
+	s1 |
+	}
+	\endBar
+	\endPart
+
+	\endSong
+	\endChords
+}
+{% endif %}
+{% if part == "VoiceWikifonia" %}\absolute {
+	\tempo "Moderato" 4 = 120
+	\time 4/4
+	\key f \major
+
+	\repeat volta 2 {
+	r2 r2 |
+	r2 r2 |
+	f'2. g'4 |
+	a'2 a'4 a'4 |
+	bes'8 a'8 bes'4 a'2 ~ |
+	a'2. r4 |
+	r4 f'4 f'4 g'4 |
+	a'4 a'4 a'4 a'4 |
+	bes'8 a'8 bes'4 a'2 ~ |
+	a'2. r4 |
+	r4 g'4 a'4 bes'4 |
+	c''4 c''4 c''4 d''4 |
+	c''8 bes'8 a'4 g'2 ~ |
+	g'2. r4 |
+	r4 g'4 a'4 bes'4 |
+	c''4 c''4 c''4 d''4 |
+	es''8 d''8 c''4 bes'2 |
+	d''8 c''8 bes'4 a'2 |
+	c''8 bes'8 a'4 g'2 ~ |
+	g'2. r4 |
+	f'2. g'4 |
+	a'4 a'4 a'4 a'4 |
+	bes'8 a'8 bes'4 a'2 ~ |
+	a'2. r4 |
+	g'8 f'8 g'4 f'2 ~ |
+	f'2. r4 |
+	}
+	\endBar
+}
+{% endif %}

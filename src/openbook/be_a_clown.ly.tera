@@ -1,0 +1,163 @@
+{#
+default_version = "Wikifonia"
+
+[attributes]
+title = "Be A Clown"
+style = "Jazz"
+composer = "Cole Porter, Cole Porter"
+piece = "Standard"
+typesetter = "OpenBook contributors (MusicXML import)"
+completion = "3"
+uuid = "da628398-7696-58b2-a423-ef924ab70945"
+location = "Just_Standards_Real_Book:42"
+copyright = "All Rights Reserved"
+copyrightextra = "Archived MusicXML notice retained; underlying music is not relicensed."
+
+[versions.Wikifonia]
+doChords = true
+doVoice = true
+doLyrics = false
+doLyricsmore = false
+doLyricsmoremore = false
+doChordBars = false
+doGuitar = false
+doExtra = false
+doPrep = false
+doOwn = false
+#}
+{% if part == "Vars" %}
+{% endif %}
+{% if part == "Doc" %}
+	DONE:
+	- imported melody and chord changes from real_books_archive.gi/Wikifonia.tar.xz: Wikifonia/Cole Porter - Be A Clown.mxl.
+	- source revision: http://wikifonia.org/node/19833/revisions/26176/view.
+	- book index reference: Just_Standards_Real_Book:42 (real_books_archive.gi/index); index pagination is not a verified PDF page number.
+	- retained the archived MusicXML rights notice; no redistribution permission is asserted.
+	- retained written melody, chord changes, pickups, repeats and numbered endings; lyrics, slurs, dynamics and articulations other than fermatas omitted.
+	- tempo is an editorial practice suggestion.
+	TODO:
+	- proofread the complete melody, harmony and form against a printed edition and check by ear.
+	- verify source attribution, copyright notice and reuse terms; only the archived MusicXML notice is retained.
+	- locate the tune in a local PDF edition; the book-index page number may differ.
+{% endif %}
+{% if part == "ChordsWikifonia" %}\chordmode {
+	\startChords
+	\startSong
+
+	\myMark "A"
+	\startPart
+	s1 |
+	\repeat volta 2 {
+	c1 |
+	s2 g2:7 |
+	c1:6 | \myEndLine
+	s1 |
+	s1 |
+	s2 g2:7 |
+	c1 | \myEndLine
+	s1 |
+	d1:m7.11 |
+	g2:7 e2 |
+	a1:m | \myEndLine
+	s1 |
+	g2. d4:7 |
+	s4 g4:7 d2:9 |
+	g1 | \myEndLine
+	s2 f4 g4:7 |
+	c1 |
+	s2 g2:7 |
+	c1:6 | \myEndLine
+	s1 |
+	c1:7 |
+	s1 |
+	f1:6 | \myEndLine
+	s2 g2:7 |
+	c4 b4 c2 |
+	g1:7 |
+	c2.:dim g4:9 | \myEndLine
+	s1 |
+	c4 b4 c2 |
+	g1:7 |
+	fis2.:dim7 g4:7 | \myEndLine
+	s1 |
+	c4 b4 c2 |
+	a4:7 a4:dim7 a2:7 |
+	d2.:m f4:m/d | \myEndLine
+	s2 f2:m |
+	c1 |
+	g2:7 f4 g4:7 |
+	} \alternative {
+	{
+	c1 | \myEndLine
+	g1:7 | \myEndLineVoltaNotLast
+	}
+	{
+	c1 |
+	s1 | \myEndLineVoltaLast
+	}
+	}
+	\endBar
+	\endPart
+
+	\endSong
+	\endChords
+}
+{% endif %}
+{% if part == "VoiceWikifonia" %}\absolute {
+	\tempo "Moderato" 2 = 80
+	\time 2/2
+	\key c \major
+
+	r2 c''4 d''4 |
+	\repeat volta 2 {
+	e''1 ~ |
+	e''2 d''4 b'4 |
+	a'1 ~ |
+	a'2 g'4 a'4 |
+	c''1 ~ |
+	c''2 b'4 g'4 |
+	e'1 ~ |
+	e'2 d'4 e'4 |
+	g'1 ~ |
+	g'2 f'4 e'4 |
+	c'1 ~ |
+	c'2 d'4 e'4 |
+	g'2 d'4 a'4 ~ |
+	a'4 b'4 c''2 |
+	d''1 ~ |
+	d''2 c''4 d''4 |
+	e''1 ~ |
+	e''2 d''4 b'4 |
+	a'1 ~ |
+	a'2 g'4 a'4 |
+	c''2 a'4 c''4 ~ |
+	c''4 a'4 c''2 |
+	d'1 ~ |
+	d'2 g'2 |
+	e'4 dis'4 e'4 c'4 |
+	f'4 e'4 f'4 d'4 |
+	fis'4 eis'4 fis'4 a'4 ~ |
+	a'2. g'4 |
+	e'4 dis'4 e'4 c'4 |
+	f'4 e'4 f'4 d'4 |
+	fis'4 eis'4 fis'4 a'4 ~ |
+	a'2. g'4 |
+	c''4 b'4 c''4 g'4 |
+	cis''4 bis'4 cis''4 a'4 |
+	d''4 cis''4 d''4 f''4 ~ |
+	f''2 c''4 d''4 |
+	e''2 d''4 c''4 |
+	d''2 c''4 b'4 |
+	} \alternative {
+	{
+	c''1 ~ |
+	c''4 r4 c''4 d''4 |
+	}
+	{
+	c''1 ~ |
+	c''4 r4 r2 |
+	}
+	}
+	\endBar
+}
+{% endif %}

@@ -1,0 +1,115 @@
+{#
+default_version = "Wikifonia"
+
+[attributes]
+title = "Cherry Pink And Apple Blossom White"
+style = "Jazz"
+composer = "Louiguy (Louis Guglielmi) 1950, French lyrics: Jacques Larue, English lyrics: Mack David"
+piece = "Standard"
+typesetter = "OpenBook contributors (MusicXML import)"
+completion = "3"
+uuid = "3f1948c0-6038-5f59-ad56-5a8e9c7a2363"
+location = "Just_Standards_Real_Book:80"
+copyright = "All Rights Reserved"
+copyrightextra = "Archived MusicXML notice retained; underlying music is not relicensed."
+
+[versions.Wikifonia]
+doChords = true
+doVoice = true
+doLyrics = false
+doLyricsmore = false
+doLyricsmoremore = false
+doChordBars = false
+doGuitar = false
+doExtra = false
+doPrep = false
+doOwn = false
+#}
+{% if part == "Vars" %}
+{% endif %}
+{% if part == "Doc" %}
+	DONE:
+	- imported melody and chord changes from real_books_archive.gi/Wikifonia.tar.xz: Wikifonia/Louiguy (Louis Guglielmi) 1950, French lyrics: Jacques Larue, English lyrics: Mack  David - Cherry  Pink And Apple Blossom White.mxl.
+	- source revision: http://wikifonia.org/node/2836/revisions/15879/view.
+	- book index reference: Just_Standards_Real_Book:80 (real_books_archive.gi/index); index pagination is not a verified PDF page number.
+	- retained the archived MusicXML rights notice; no redistribution permission is asserted.
+	- retained written melody, chord changes, pickups, repeats and numbered endings; lyrics, slurs, dynamics and articulations other than fermatas omitted.
+	- tempo is an editorial practice suggestion.
+	TODO:
+	- proofread the complete melody, harmony and form against a printed edition and check by ear.
+	- verify source attribution, copyright notice and reuse terms; only the archived MusicXML notice is retained.
+	- locate the tune in a local PDF edition; the book-index page number may differ.
+{% endif %}
+{% if part == "ChordsWikifonia" %}\chordmode {
+	\startChords
+	\startSong
+
+	\myMark "A"
+	\startPart
+	\partial 2.. s2.. |
+	f1:m7 |
+	bes1:7 |
+	ees1 | \myEndLine
+	s1 |
+	f1:m7 |
+	bes1:7 |
+	ees1 | \myEndLine
+	s1 |
+	f1:m7 |
+	bes1:7 |
+	ees1 | \myEndLine
+	s1 |
+	f1:m7 |
+	bes1:7 |
+	ees1 | \myEndLine
+	bes1:7 |
+	ees1 |
+	bes1:7 |
+	ees1 | \myEndLine
+	bes1:7 |
+	ees1 |
+	bes1:7 |
+	ees1 | \myEndLine
+	ees1 |
+	s1 |
+	\endBar
+	\endPart
+
+	\endSong
+	\endChords
+}
+{% endif %}
+{% if part == "VoiceWikifonia" %}\absolute {
+	\tempo "Moderato" 4 = 120
+	\time 4/4
+	\key es \major
+
+	\partial 2.. bes8 es'8 g'8 bes'8 as'8 g'8 as'8 |
+	\textMark \markup { \musicglyph "scripts.segno" } g'4 f'8 as'8 ~ as'2 |
+	r8 bes'8 c''8 d''8 c''8 bes'8 as'8 g'8 |
+	bes'1 |
+	r8 bes8 es'8 g'8 bes'8 as'8 g'8 as'8 |
+	g'4 f'8 c''8 ~ c''2 |
+	r4 bes'4 g'4 f'4 _\markup{ \bold\tiny {To Coda} } |
+	es'1 |
+	r8 bes8 es'8 g'8 bes'8 as'8 g'8 as'8 |
+	g'4 f'8 as'8 ~ as'2 |
+	r8 bes'8 c''8 d''8 c''8 bes'8 as'8 g'8 |
+	bes'1 |
+	r8 bes8 es'8 g'8 bes'8 as'8 g'8 as'8 |
+	g'4 f'8 c''8 ~ c''2 |
+	r4 bes'4 g'4 f'4 |
+	es'2 r8 es''8 es''8 es''8 |
+	es''8 d''8 d''8 d''8 r8 c''8 c''8 c''8 |
+	c''8 bes'8 bes'8 bes'8 r8 c''8 c''8 c''8 |
+	c''8 bes'8 bes'8 bes'8 r8 as'8 as'8 as'8 |
+	as'8 g'8 g'8 g'8 r8 es''8 es''8 es''8 |
+	es''8 d''8 d''8 d''8 r8 c''8 c''8 c''8 |
+	c''8 bes'8 bes'8 bes'8 r8 c''8 c''8 c''8 |
+	c''8 bes'8 bes'8 bes'8 r8 as'8 g'8 f'8 |
+	es'8 bes8 es'8 g'8 bes'8 as'8 g'8 as'8 _\markup{ \bold\tiny {D.S. al Coda} } |
+	\textMark \markup { \musicglyph "scripts.coda" } es'1 ~ |
+	es'2. r4 |
+	\endBar
+}
+{% endif %}

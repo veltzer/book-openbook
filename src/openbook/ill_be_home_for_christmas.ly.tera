@@ -1,0 +1,143 @@
+{#
+default_version = "Wikifonia"
+
+[attributes]
+title = "I'll Be Home For Christmas"
+style = "Jazz"
+composer = "Shayne, Mercer"
+piece = "Standard"
+typesetter = "OpenBook contributors (MusicXML import)"
+completion = "3"
+uuid = "8c4b13b1-8560-5d64-beee-de2e58b6cc66"
+location = "Great_Gig_Book:295"
+copyright = "All Rights Reserved"
+copyrightextra = "Archived MusicXML notice retained; underlying music is not relicensed."
+
+[versions.Wikifonia]
+doChords = true
+doVoice = true
+doLyrics = false
+doLyricsmore = false
+doLyricsmoremore = false
+doChordBars = false
+doGuitar = false
+doExtra = false
+doPrep = false
+doOwn = false
+#}
+{% if part == "Vars" %}
+{% endif %}
+{% if part == "Doc" %}
+	DONE:
+	- imported melody and chord changes from real_books_archive.gi/Wikifonia.tar.xz: Wikifonia/Shayne, Mercer - I'll Be Home For Christmas.mxl.
+	- source revision: http://wikifonia.org/node/13153/revisions/25557/view.
+	- book index reference: Great_Gig_Book:295 (real_books_archive.gi/index); index pagination is not a verified PDF page number.
+	- retained the archived MusicXML rights notice; no redistribution permission is asserted.
+	- retained written melody, chord changes, pickups, repeats and numbered endings; lyrics, slurs, dynamics and articulations other than fermatas omitted.
+	- tempo is an editorial practice suggestion.
+	TODO:
+	- proofread the complete melody, harmony and form against a printed edition and check by ear.
+	- verify source attribution, copyright notice and reuse terms; only the archived MusicXML notice is retained.
+	- locate the tune in a local PDF edition; the book-index page number may differ.
+{% endif %}
+{% if part == "ChordsWikifonia" %}\chordmode {
+	\startChords
+	\startSong
+
+	\myMark "A"
+	\startPart
+	s1 |
+	ees2 d2:m7 |
+	c2:m7 g2:m7 |
+	c2:m7 ces2 | \myEndLine
+	bes1:maj7 |
+	ees2 d2:m7 |
+	c2:m7 g2:m7 |
+	c1:7 | \myEndLine
+	f1 |
+	bes1 |
+	d1:m7 |
+	c2:m7 f2 | \myEndLine
+	s1 |
+	d1:m7.5- |
+	g1:7 |
+	c1:m7 | \myEndLine
+	s1 |
+	ees1:m |
+	f1:7.9- |
+	bes1:maj7 | \myEndLine
+	g1:m7 |
+	c1:7 |
+	ges1:dim |
+	c1:m7/f | \myEndLine
+	f1:7 |
+	bes1 |
+	des1:dim |
+	c1:m7/f | \myEndLine
+	s1 |
+	d1:m7.5- |
+	g1:7 |
+	c1:m7 | \myEndLine
+	s1 |
+	ees1:6 |
+	ees1:m6 |
+	d1:m7 | \myEndLine
+	g1:7 |
+	c1:7 |
+	c2:m7 f2:7.9- |
+	bes1 | \myEndLine
+	\endBar
+	\endPart
+
+	\endSong
+	\endChords
+}
+{% endif %}
+{% if part == "VoiceWikifonia" %}\absolute {
+	\tempo "Moderato" 4 = 120
+	\time 4/4
+	\key bes \major
+
+	r2 r4 bes'4 |
+	d''8. d''16 ~ d''8 c''8 a'4 as'8 a'8 |
+	c''4 bes'4 g'4 ges'8 g'8 |
+	bes'8. bes'16 ~ bes'8 g'8 a'8. a'16 ~ a'8 f'8 |
+	d'2. bes'4 |
+	d''8. d''16 ~ d''8 c''8 a'4 as'8 a'8 |
+	c''4 bes'4 g'2 |
+	r4 g'4 bes'4 d''4 |
+	c''1 |
+	bes'2. a'4 |
+	c''2. bes'4 |
+	f'2 f'2 |
+	R1 |
+	g'2. f'4 |
+	as'2 r4 g'4 |
+	c'1 |
+	R1 |
+	c'2. d'4 |
+	f'2. es'4 |
+	d'2. f'4 |
+	bes'2. a'4 |
+	c''2 c''2 |
+	a'2. a'4 |
+	g'1 |
+	g'1 |
+	bes'2. a'4 |
+	c''2. bes'4 |
+	f'4 f'2. |
+	R1 |
+	g'2. f'4 |
+	as'2 r4 g'4 |
+	es'1 |
+	R1 |
+	c''2. bes'4 |
+	c''2. bes'4 |
+	f'1 |
+	g'2. g'4 |
+	c''2 d''2 |
+	bes'2 c''2 |
+	bes'1 |
+	\endBar
+}
+{% endif %}

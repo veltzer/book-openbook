@@ -1,0 +1,238 @@
+{#
+default_version = "Wikifonia"
+
+[attributes]
+title = "Penny Arcade"
+style = "Jazz"
+composer = "Sammy King"
+piece = "Standard"
+typesetter = "OpenBook contributors (MusicXML import)"
+completion = "3"
+uuid = "60ccf775-3531-56aa-8344-8d421f2de4d0"
+location = "Real_Book_2:294"
+copyright = "All Rights Reserved"
+copyrightextra = "Archived MusicXML notice retained; underlying music is not relicensed."
+
+[versions.Wikifonia]
+doChords = true
+doVoice = true
+doLyrics = false
+doLyricsmore = false
+doLyricsmoremore = false
+doChordBars = false
+doGuitar = false
+doExtra = false
+doPrep = false
+doOwn = false
+#}
+{% if part == "Vars" %}
+{% endif %}
+{% if part == "Doc" %}
+	DONE:
+	- imported melody and chord changes from real_books_archive.gi/Wikifonia.tar.xz: Wikifonia/Sammy King - Penny Arcade.mxl.
+	- source revision: http://wikifonia.org/node/4710/revisions/6391/view.
+	- book index reference: Real_Book_2:294 (real_books_archive.gi/index); index pagination is not a verified PDF page number.
+	- retained the archived MusicXML rights notice; no redistribution permission is asserted.
+	- retained written melody, chord changes, pickups, repeats and numbered endings; lyrics, slurs, dynamics and articulations other than fermatas omitted.
+	- tempo is an editorial practice suggestion.
+	TODO:
+	- proofread the complete melody, harmony and form against a printed edition and check by ear.
+	- verify source attribution, copyright notice and reuse terms; only the archived MusicXML notice is retained.
+	- locate the tune in a local PDF edition; the book-index page number may differ.
+	- check source measure 8: the MusicXML ties a note to a different pitch (or to nothing); the tie was dropped.
+{% endif %}
+{% if part == "ChordsWikifonia" %}\chordmode {
+	\startChords
+	\startSong
+
+	\myMark "A"
+	\startPart
+	s1 |
+	\repeat volta 2 {
+	g1 |
+	g1:maj7 |
+	c1 | \myEndLine
+	s1 |
+	a1:7 |
+	s1 |
+	s2 d2 | \myEndLine
+	s1 |
+	g1*5/8 g4.:maj7 |
+	s1*5/8 c4. |
+	s1 | \myEndLine
+	a1:7 |
+	s1 |
+	d1:7 |
+	g1 | \myEndLine
+	s1 |
+	s1 |
+	s1 |
+	s1 | \myEndLine
+	s1 |
+	d1 |
+	s1 |
+	d1:7 | \myEndLine
+	s1 |
+	s1 |
+	s1 |
+	s1 | \myEndLine
+	s1 |
+	g1 |
+	s1 |
+	c1 | \myEndLine
+	s1 |
+	s1 |
+	g1 |
+	s1 | \myEndLine
+	s1 |
+	c1 |
+	s1 |
+	d1 | \myEndLine
+	d1:7 |
+	s4 g2. |
+	d1:7 |
+	} \alternative {
+	{
+	g1 | \myEndLineVoltaNotLast
+	}
+	{
+	g1 | \myEndLineVoltaLast
+	}
+	}
+	g1 |
+	s1 |
+	s1 |
+	s1 | \myEndLine
+	s1 |
+	s1 |
+	d1 |
+	s1 | \myEndLine
+	d1:7 |
+	s1 |
+	s1 |
+	s1 | \myEndLine
+	s1 |
+	s1 |
+	g1 |
+	s1 | \myEndLine
+	s1 |
+	c1 |
+	s1 |
+	s1 | \myEndLine
+	g1 |
+	s1 |
+	s1 |
+	c1 | \myEndLine
+	s1 |
+	d1 |
+	d1:7 |
+	s4 g2. | \myEndLine
+	d1:7 |
+	s4 g2. |
+	d1:7 |
+	s4 g2. | \myEndLine
+	d1:7 |
+	g1 |
+	s1 |
+	\endBar
+	\endPart
+
+	\endSong
+	\endChords
+}
+{% endif %}
+{% if part == "VoiceWikifonia" %}\absolute {
+	\tempo "Moderato" 4 = 120
+	\time 4/4
+	\key g \major
+
+	r2 r4 r8 d'8 |
+	\repeat volta 2 {
+	b'4 ~ b'4 a'8 g'4 a'8 |
+	b'2 a'8 g'4 fis'8 ~ |
+	fis'4. g'8 e'2 ~ |
+	e'1 |
+	a'2 g'8 fis'4 g'8 |
+	a'2 g'8 fis'4 e'8 |
+	e'2 d'2 ~ |
+	d'2. r8 d'8 |
+	b'4 ~ b'8 a'8 g'8 b'4 ~ b'8 |
+	a'4. g'8 fis'8 fis'8 ~ fis'8 g'8 |
+	e'2. r8 e'8 |
+	a'4. a'8 g'4 fis'8 g'8 |
+	a'4. g'8 g'8 g'8 fis'8 e'8 |
+	d'1 |
+	d'2 d'4 e'4 |
+	g'2 g'4 a'4 |
+	b'2 b'4 a'4 |
+	g'2 g'4 a'4 |
+	b'2 b'4 a'4 |
+	g'4 g'4 fis'8 fis'8 e'4 |
+	d'1 ~ |
+	d'1 |
+	a'2 a'4 b'4 |
+	c''2 c''4 b'4 |
+	a'2 a'4 b'4 |
+	c''2 c''4 b'4 |
+	a'2 a'4 g'4 |
+	fis'8 g'4. fis'4 e'4 |
+	d'1 ~ |
+	d'4 d'4 b'4 a'4 |
+	g'1 ~ |
+	g'1 ~ |
+	g'4 g'8 a'8 g'8 g'8 e'4 |
+	d'1 ~ |
+	d'1 ~ |
+	d'2 g'4 fis'4 |
+	e'2 c'4 d'4 |
+	e'1 |
+	a'2 fis'4 g'4 |
+	a'1 |
+	r4 b'4 b'4 b'4 |
+	c''4 c''4 a'2 |
+	} \alternative {
+	{
+	g'2. ~ g'8 d'8 |
+	}
+	{
+	g'2. r4 |
+	}
+	}
+	d'2 d'4 e'4 |
+	g'2 g'4 a'4 |
+	b'2 b'4 a'4 |
+	g'2 g'4 a'4 |
+	b'2 b'4 a'4 |
+	g'4 g'4 fis'8 fis'8 e'4 |
+	d'1 ~ |
+	d'1 |
+	a'2 a'4 b'4 |
+	c''2 c''4 b'4 |
+	a'2 a'4 b'4 |
+	c''2 c''4 b'4 |
+	a'2 a'4 g'4 |
+	fis'8 g'4. fis'4 e'4 |
+	d'1 ~ |
+	d'1 ~ |
+	d'4 d'4 b'4 a'4 |
+	g'1 ~ |
+	g'1 ~ |
+	g'4 g'8 a'8 g'8 g'8 e'4 |
+	d'1 ~ |
+	d'1 ~ |
+	d'2 g'4 fis'4 |
+	e'2 c'4 d'4 |
+	e'1 |
+	a'2 fis'4 g'4 |
+	a'1 |
+	r4 b'4 b'4 b'4 |
+	c''4 c''4 a'2 |
+	r4 b'4 b'4 b'4 |
+	c''4 c''4 a'2 |
+	r4 b'4 b'4 b'4 |
+	c''4 c''4 a'2 |
+	g'1 |
+	R1 |
+	\endBar
+}
+{% endif %}

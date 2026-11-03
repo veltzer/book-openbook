@@ -1,0 +1,133 @@
+{#
+default_version = "Wikifonia"
+
+[attributes]
+title = "Sleigh Ride"
+style = "Jazz"
+composer = "Leroy Anderson"
+piece = "Standard"
+typesetter = "OpenBook contributors (MusicXML import)"
+completion = "3"
+uuid = "2b4272e7-44a8-5f27-bfa8-898e55937e68"
+location = "Just_Standards_Real_Book:310"
+copyright = "All Rights Reserved"
+copyrightextra = "Archived MusicXML notice retained; underlying music is not relicensed."
+
+[versions.Wikifonia]
+doChords = true
+doVoice = true
+doLyrics = false
+doLyricsmore = false
+doLyricsmoremore = false
+doChordBars = false
+doGuitar = false
+doExtra = false
+doPrep = false
+doOwn = false
+#}
+{% if part == "Vars" %}
+{% endif %}
+{% if part == "Doc" %}
+	DONE:
+	- imported melody and chord changes from real_books_archive.gi/Wikifonia.tar.xz: Wikifonia/Leroy Anderson - Sleigh Ride.mxl.
+	- source revision: http://wikifonia.org/node/19168/revisions/25330/view.
+	- book index reference: Just_Standards_Real_Book:310 (real_books_archive.gi/index); index pagination is not a verified PDF page number.
+	- retained the archived MusicXML rights notice; no redistribution permission is asserted.
+	- retained written melody, chord changes, pickups, repeats and numbered endings; lyrics, slurs, dynamics and articulations other than fermatas omitted.
+	- tempo is an editorial practice suggestion.
+	TODO:
+	- proofread the complete melody, harmony and form against a printed edition and check by ear.
+	- verify source attribution, copyright notice and reuse terms; only the archived MusicXML notice is retained.
+	- locate the tune in a local PDF edition; the book-index page number may differ.
+{% endif %}
+{% if part == "ChordsWikifonia" %}\chordmode {
+	\startChords
+	\startSong
+
+	\myMark "A"
+	\startPart
+	s1 |
+	\repeat volta 2 {
+	f2:maj7 f2:6 |
+	g2:m7 c2:7 |
+	f1 | \myEndLine
+	g2:m7 c2:7 |
+	f2:maj7 f2:6 |
+	g2:m7 g2:m7/c |
+	f1 | \myEndLine
+	aes2 c2:7 |
+	f2:maj7 f2:6 |
+	g2:m7 c2:7 |
+	f1 | \myEndLine
+	g2:m7 c2:7 |
+	f2:maj7 f2:6 |
+	g2:m7 g2:m7/c |
+	f1 | \myEndLine
+	bes2:/f f2 |
+	b1:m |
+	s2 e2:7 |
+	a1 | \myEndLine
+	a1:6 |
+	b1:m7 |
+	s2 e2:7 |
+	a1 | \myEndLine
+	s1 |
+	a1:m7 |
+	s2 d2:7 |
+	g1 | \myEndLine
+	g1:6 |
+	g1:m7 |
+	s1 |
+	c1:11 | \myEndLine
+	s1 |
+	}
+	\endBar
+	\endPart
+
+	\endSong
+	\endChords
+}
+{% endif %}
+{% if part == "VoiceWikifonia" %}\absolute {
+	\tempo "Moderato" 4 = 120
+	\time 4/4
+	\key c \major
+
+	r4 c''4 c''4 c''4 |
+	\repeat volta 2 {
+	c''4 d''8 c''8 ~ c''8 a'8 f'4 |
+	g'4 a'8 g'8 ~ g'8 e'8 d'4 |
+	c'1 ~ |
+	c'4 d'4 e'4 g'4 |
+	c''4 d''8 c''8 ~ c''8 a'8 g'8 f'8 |
+	g'4 g'8 a'8 g'8 f'8 d'4 |
+	f'1 ~ |
+	f'4 c''4 c''4 c''4 |
+	c''4 d''8 c''8 ~ c''8 a'8 f'4 |
+	g'4 a'8 g'8 ~ g'8 e'8 d'4 |
+	c'1 ~ |
+	c'4 d'4 e'4. g'8 |
+	c''4 d''8 c''8 ~ c''8 a'8 g'8 f'8 |
+	g'4 g'8 a'8 g'8 f'8 d'4 |
+	f'1 ~ |
+	f'2 r4 cis'8 d'8 |
+	a'4 cis'8 d'8 a'4 cis'8 d'8 |
+	a'8 b'4 gis'8 ~ gis'2 |
+	r4 r8 a'8 gis'8 e'8 cis'8 fis'8 ~ |
+	fis'1 |
+	r4 gis'4 fis'8 d'8 b8 d'8 |
+	fis'8 a'4 r8 gis'8 b'4 e'8 ~ |
+	e'1 ~ |
+	e'2. b8 cis'8 |
+	g'4 b8 c'8 g'4 b8 c'8 |
+	g'8 a'4 fis'8 ~ fis'2 |
+	r4 r8 g'8 fis'8 d'8 b8 e'8 ~ |
+	e'1 |
+	r4 g'4 d'8 c'8 g4 |
+	c'4 d'8 g'8 d'4 c'8 g8 |
+	c'8 d'8 g'4 c''4 g'4 |
+	c'8 c''4 c''8 c''4 r4 |
+	}
+	\endBar
+}
+{% endif %}

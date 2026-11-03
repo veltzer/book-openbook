@@ -1,0 +1,127 @@
+{#
+default_version = "Wikifonia"
+
+[attributes]
+title = "Dream"
+style = "Jazz"
+composer = "Johnny Mercer"
+piece = "Standard"
+typesetter = "OpenBook contributors (MusicXML import)"
+completion = "3"
+uuid = "a8020bf2-9832-53aa-bd6b-3d3ada65765a"
+location = "Great_Gig_Book:64"
+copyright = "All Rights Reserved"
+copyrightextra = "Archived MusicXML notice retained; underlying music is not relicensed."
+
+[versions.Wikifonia]
+doChords = true
+doVoice = true
+doLyrics = false
+doLyricsmore = false
+doLyricsmoremore = false
+doChordBars = false
+doGuitar = false
+doExtra = false
+doPrep = false
+doOwn = false
+#}
+{% if part == "Vars" %}
+{% endif %}
+{% if part == "Doc" %}
+	DONE:
+	- imported melody and chord changes from real_books_archive.gi/Wikifonia.tar.xz: Wikifonia/Johnny Mercer - Dream .mxl.
+	- source revision: http://wikifonia.org/node/3403/revisions/27286/view.
+	- book index reference: Great_Gig_Book:64 (real_books_archive.gi/index); index pagination is not a verified PDF page number.
+	- retained the archived MusicXML rights notice; no redistribution permission is asserted.
+	- retained written melody, chord changes, pickups, repeats and numbered endings; lyrics, slurs, dynamics and articulations other than fermatas omitted.
+	- tempo is an editorial practice suggestion.
+	TODO:
+	- proofread the complete melody, harmony and form against a printed edition and check by ear.
+	- verify source attribution, copyright notice and reuse terms; only the archived MusicXML notice is retained.
+	- locate the tune in a local PDF edition; the book-index page number may differ.
+{% endif %}
+{% if part == "ChordsWikifonia" %}\chordmode {
+	\startChords
+	\startSong
+
+	\myMark "A"
+	\startPart
+	bes1 |
+	s1 |
+	s1 |
+	a1:7 | \myEndLine
+	bes1:6 |
+	s1 |
+	d1:m7 |
+	g1:7 | \myEndLine
+	c1:m |
+	s2 ees2:m |
+	bes2:maj7 c2:m7 |
+	d1:m7 | \myEndLine
+	c2.:7 c4:9 |
+	s1 |
+	c4:m7 f4:7 c2:m7 |
+	s2 f2:7.9- | \myEndLine
+	bes1 |
+	s1 |
+	s1 |
+	a1:7 | \myEndLine
+	bes1:6 |
+	s1 |
+	d1:m7 |
+	g1:7 | \myEndLine
+	c1:m |
+	s2 ees2:m |
+	bes2. c4:m7 |
+	d1:m7 | \myEndLine
+	c1:m7 |
+	f1:7 |
+	bes1 |
+	s1 | \myEndLine
+	\endBar
+	\endPart
+
+	\endSong
+	\endChords
+}
+{% endif %}
+{% if part == "VoiceWikifonia" %}\absolute {
+	\tempo "Moderato" 4 = 120
+	\time 4/4
+	\key bes \major
+
+	bes'1 ~ |
+	bes'4 c''8 bes'8 c''4 bes'4 |
+	a'1 ~ |
+	a'1 |
+	g'1 ~ |
+	g'4 a'8 g'8 a'4 g'4 |
+	f'1 ~ |
+	f'1 |
+	es'1 ~ |
+	es'4 f'8 es'8 f'4 es'4 |
+	r4 d'4 f'4 g'4 |
+	a'1 |
+	e'4 g'2 a'4 |
+	bes'2. a'4 |
+	g'4 a'4 bes'4 c''4 ~ |
+	c''2 d''2 |
+	bes'1 ~ |
+	bes'4 c''8 bes'8 c''4 bes'4 |
+	a'1 ~ |
+	a'1 |
+	g'1 ~ |
+	g'4 a'8 g'8 a'4 g'4 |
+	f'1 ~ |
+	f'1 |
+	es'1 ~ |
+	es'4 f'8 es'8 f'4 es'4 |
+	d'4 f'2 g'4 |
+	a'2. g'4 |
+	c''1 |
+	d''1 |
+	bes'1 ~ |
+	bes'2. r4 |
+	\endBar
+}
+{% endif %}

@@ -1,0 +1,210 @@
+{#
+default_version = "Wikifonia"
+
+[attributes]
+title = "When a Man Loves a Woman"
+style = "Jazz"
+composer = "Andrew Wright, Calvin Lewis"
+piece = "Standard"
+typesetter = "OpenBook contributors (MusicXML import)"
+completion = "3"
+uuid = "1b010f38-a4ed-521b-a6bf-0810876af52c"
+location = "StandardsBook:512"
+copyright = "All Rights Reserved"
+copyrightextra = "Archived MusicXML notice retained; underlying music is not relicensed."
+
+[versions.Wikifonia]
+doChords = true
+doVoice = true
+doLyrics = false
+doLyricsmore = false
+doLyricsmoremore = false
+doChordBars = false
+doGuitar = false
+doExtra = false
+doPrep = false
+doOwn = false
+#}
+{% if part == "Vars" %}
+{% endif %}
+{% if part == "Doc" %}
+	DONE:
+	- imported melody and chord changes from real_books_archive.gi/Wikifonia.tar.xz: Wikifonia/Andrew Wright, Calvin Lewis - When a Man Loves a Woman.mxl.
+	- source revision: http://wikifonia.org/node/7818/revisions/10811/view.
+	- book index reference: StandardsBook:512 (real_books_archive.gi/index); index pagination is not a verified PDF page number.
+	- retained the archived MusicXML rights notice; no redistribution permission is asserted.
+	- retained written melody, chord changes, pickups, repeats and numbered endings; lyrics, slurs, dynamics and articulations other than fermatas omitted.
+	- tempo is an editorial practice suggestion.
+	TODO:
+	- proofread the complete melody, harmony and form against a printed edition and check by ear.
+	- verify source attribution, copyright notice and reuse terms; only the archived MusicXML notice is retained.
+	- locate the tune in a local PDF edition; the book-index page number may differ.
+	- check source measures 2, 10, 13, 27, 32, 40, 46, 53, 61: the MusicXML ties a note to a different pitch (or to nothing); the tie was dropped.
+{% endif %}
+{% if part == "ChordsWikifonia" %}\chordmode {
+	\startChords
+	\startSong
+
+	\myMark "A"
+	\startPart
+	s2. |
+	\repeat volta 2 {
+	f2. |
+	c2.:/e |
+	d2.:m7 | \myEndLine
+	f2.:/c |
+	bes2. |
+	c2.:7 |
+	f2. | \myEndLine
+	c2.:7 |
+	f2. |
+	c2.:/e |
+	d2.:m7 | \myEndLine
+	f2.:/c |
+	bes2. |
+	} \alternative {
+	{
+	c2.:7 |
+	f2. | \myEndLine
+	c2.:7 | \myEndLineVoltaNotLast
+	}
+	{
+	c2.:7 | \myEndLineVoltaLast
+	}
+	}
+	f2. |
+	f2.:9 |
+	bes2. |
+	bes2. | \myEndLine
+	f2. |
+	f2.:9 |
+	bes2. |
+	bes2. | \myEndLine
+	f2. |
+	f2.:9 |
+	bes2. |
+	bes2. | \myEndLine
+	f4. c4.:/e |
+	d2.:m7 |
+	g2. |
+	g2.:7 | \myEndLine
+	g2.:m7 |
+	f2. |
+	g2. |
+	d2. | \myEndLine
+	e2.:m7 |
+	g2.:/d |
+	c2. |
+	d2.:7 | \myEndLine
+	g2. |
+	d2.:7 |
+	g2. |
+	d2. | \myEndLine
+	e2.:m7 |
+	g2.:/d |
+	c2. |
+	d2.:7 | \myEndLine
+	g2. |
+	d2.:7 |
+	g2. |
+	d2. | \myEndLine
+	e2.:m7 |
+	g2.:/d |
+	c2. |
+	s2. | \myEndLine
+	d2.:7 |
+	s2. |
+	\repeat volta 2 {
+	g2. |
+	d2. | \myEndLine
+	e2.:m7 |
+	d2.:7 |
+	}
+	\endBar
+	\endPart
+
+	\endSong
+	\endChords
+}
+{% endif %}
+{% if part == "VoiceWikifonia" %}\absolute {
+	\tempo "Moderato" 4. = 80
+	\time 6/8
+	\key f \major
+
+	r4. r8 d''8 d''8 |
+	\repeat volta 2 {
+	d''4 c''8 c''8 c''8 a'8 |
+	c''4 d''8 r4. |
+	r4. a'8 a'8 g'8 |
+	f'8 f'8 f'16 d'16 f'4. |
+	r4. a'8 g'8. f'16 |
+	g'4 c'16 c'16 d'8 f'8 d'8 |
+	f'2. |
+	r4. d''8 d''8 d''8 |
+	d''4 c''8 c''8 c''8 a'8 |
+	c''4 d''8 r4. |
+	r4. a'4 g'8 |
+	g'8 f'8 d'8 g'8 f'8 r8 |
+	r4. a'8 g'8 \times 2/3 { g'16 f'16 d'16 } |
+	} \alternative {
+	{
+	f'8 g'4 r4 c'16 c'16 |
+	d'8 f'8 f'8 ~ f'4. |
+	r4. r8 d''8 d''8 |
+	}
+	{
+	g'4. ~ g'8 c'8 d'16 f'16 |
+	}
+	}
+	f'4. r4. |
+	R2. |
+	r4. r8 bes'8 bes'8 |
+	d''4 d''8 ~ d''4 f'8 |
+	a'8 c''4 ~ c''4. |
+	R2. |
+	r4. bes'8 bes'8 c''8 |
+	d''4 d''8 e''4 d''8 |
+	d''8 c''4 c''8 r8 r8 |
+	R2. |
+	r4. bes'8 bes'8 bes'8 |
+	d''4 d''8 ~ d''4 d''8 |
+	c''4. c''8 d''4 |
+	a'16 g'16 f'4 r4. |
+	d''4 d''8 r8 f''8 d''8 |
+	f''4 e''8 e''4 d''8 |
+	d''4 c''8 ~ c''4. |
+	r4. r8 e''8 e''8 |
+	\key g \major e''4 d''8 ~ d''8 d''8 b'8 |
+	d''4 e''8 r4. |
+	r4. b'8 a'8 a'16 a'16 |
+	a'8 g'4 r4. |
+	r4. r8 b'8 a'8 |
+	b'8 a'4 ~ a'4 d'8 |
+	e'8 g'8 g'8 ~ g'4. |
+	r4. e''8 e''8 e''8 |
+	e''4 d''8 d''8 d''8 b'8 |
+	d''4 e''8 r4. |
+	r4. b'4 a'8 |
+	a'8 g'8 d'8 g'4. |
+	r4. r8 b'8 a'8 |
+	a'4. r16 a'16 b'8 a'8 |
+	g'4. r4. |
+	r4. e''8 e''8 e''8 |
+	e''4 d''8 d''8 g''8 fis''8 |
+	e''8 d''4 r4. |
+	r4 b'8 b'8. a'16 b'16 a'16 |
+	a'8 g'8 g'8 ~ g'4. |
+	r4. r4 g'8 |
+	d''8 d''4 r4. |
+	e''8 d''8 b'16 a'16 b'16 a'16 g'16 g'8. |
+	r4. \fermata e''8 e''8 r8 |
+	\repeat volta 2 {
+	e''4 d''8 d''8 d''8 b'8 |
+	d''4 e''8 r4. |
+	R2. |
+	r4. r8 e''8 e''8 |
+	}
+	\endBar
+}
+{% endif %}

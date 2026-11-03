@@ -1,0 +1,145 @@
+{#
+default_version = "Wikifonia"
+
+[attributes]
+title = "I Like The Likes Of You"
+style = "Jazz"
+composer = "Vernon duke, E. Y. Harburg"
+piece = "Standard"
+typesetter = "OpenBook contributors (MusicXML import)"
+completion = "3"
+uuid = "ca29ba9a-b742-588a-8d9a-923638e51446"
+location = "Great_Gig_Book:237"
+copyright = "All Rights Reserved"
+copyrightextra = "Archived MusicXML notice retained; underlying music is not relicensed."
+
+[versions.Wikifonia]
+doChords = true
+doVoice = true
+doLyrics = false
+doLyricsmore = false
+doLyricsmoremore = false
+doChordBars = false
+doGuitar = false
+doExtra = false
+doPrep = false
+doOwn = false
+#}
+{% if part == "Vars" %}
+{% endif %}
+{% if part == "Doc" %}
+	DONE:
+	- imported melody and chord changes from real_books_archive.gi/Wikifonia.tar.xz: Wikifonia/Vernon duke, E. Y. Harburg - I Like The Likes Of You.mxl.
+	- source revision: http://wikifonia.org/node/21685/revisions/28678/view.
+	- book index reference: Great_Gig_Book:237 (real_books_archive.gi/index); index pagination is not a verified PDF page number.
+	- retained the archived MusicXML rights notice; no redistribution permission is asserted.
+	- retained written melody, chord changes, pickups, repeats and numbered endings; lyrics, slurs, dynamics and articulations other than fermatas omitted.
+	- tempo is an editorial practice suggestion.
+	TODO:
+	- proofread the complete melody, harmony and form against a printed edition and check by ear.
+	- verify source attribution, copyright notice and reuse terms; only the archived MusicXML notice is retained.
+	- locate the tune in a local PDF edition; the book-index page number may differ.
+{% endif %}
+{% if part == "ChordsWikifonia" %}\chordmode {
+	\startChords
+	\startSong
+
+	\myMark "A"
+	\startPart
+	\repeat volta 2 {
+	ees2 c2:m7 |
+	f2:m7 bes2:7 |
+	ees2 c2:m7 |
+	f2:m7 bes2:7 | \myEndLine
+	ees2 c2:m7 |
+	f2:7/a bes2:7 |
+	e1:6 |
+	f2:m7 bes2:7 | \myEndLine
+	ees2 c2:m7 |
+	f2:m7 bes2:7 |
+	ees2 c2:m7 |
+	f2:m7 bes2:7 | \myEndLine
+	ees2 c2:m7 |
+	f2:7/a bes2:7 |
+	e1:6 |
+	bes2.:m7 ees4:7 | \myEndLine
+	aes1:6 |
+	s1 |
+	ees1:6 |
+	s1 | \myEndLine
+	f1:9 |
+	s1 |
+	f2:m7 bes2:7.9- |
+	f2:9 e2:7.11+ | \myEndLine
+	ees2 c2:m7 |
+	f2:m7 bes2:7 |
+	ees2 c2:m7 |
+	f2:m7 bes2:7 | \myEndLine
+	ees2 c2:m7 |
+	f2:7/a bes2:7 |
+	} \alternative {
+	{
+	ees1*5/8 e8 f4 |
+	fis4 g4 f4:7 fis4:dim | \myEndLineVoltaNotLast
+	}
+	{
+	ees2 f4:m6 ees4 |
+	f4:m bes4:7 ees2 | \myEndLineVoltaLast
+	}
+	}
+	\endBar
+	\endPart
+
+	\endSong
+	\endChords
+}
+{% endif %}
+{% if part == "VoiceWikifonia" %}\absolute {
+	\tempo "Moderato" 4 = 120
+	\time 4/4
+	\key es \major
+
+	\repeat volta 2 {
+	bes'2 es''4. bes'8 |
+	as'4 es''4 g'4. f'8 |
+	g'4 es''4 f'4. es'8 |
+	f'1 |
+	g'2 c''4. g'8 |
+	f'4 c''4 es'4 d'4 |
+	es'1 |
+	f'4 g'4 as'4 a'4 |
+	bes'2 es''4. bes'8 |
+	as'4 es''4 g'4. f'8 |
+	g'4 es''4 f'4. es'8 |
+	f'1 |
+	g'2 c''4. g'8 |
+	f'4 c''4 es'4 d'4 |
+	es'1 |
+	r2 r4 es'4 |
+	c''2 ~ c''8 des''8 es''8 e''8 |
+	f''4 e''8 es''8 ~ es''8 d''8 des''4 |
+	c''2 ~ c''8 des''8 es''8 e''8 |
+	f''4 e''8 es''8 ~ es''8 d''8 des''4 |
+	c''2 ~ c''8 des''8 es''8 e''8 |
+	f''4 e''8 es''8 ~ es''8 d''8 des''4 |
+	c''2 bes'2 |
+	c''2 d''2 |
+	bes'2 es''4. bes'8 |
+	as'4 es''4 g'4. f'8 |
+	g'4 es''4 f'4. es'8 |
+	f'1 |
+	g'2 c''4. g'8 |
+	f'4 c''4 es'4 d'4 |
+	} \alternative {
+	{
+	es'2 ~ es'8 es'4 f'8 |
+	fis'4 g'4 as'4 a'4 |
+	}
+	{
+	es'1 ~ |
+	es'4 r4 r2 |
+	}
+	}
+	\endBar
+}
+{% endif %}

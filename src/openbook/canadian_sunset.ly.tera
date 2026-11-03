@@ -1,0 +1,177 @@
+{#
+default_version = "Wikifonia"
+
+[attributes]
+title = "Canadian Sunset"
+style = "Jazz"
+composer = "Eddie Heywood, Norman Gimbel"
+piece = "Standard"
+typesetter = "OpenBook contributors (MusicXML import)"
+completion = "3"
+uuid = "dceae098-7dfa-574a-9342-64368472e39b"
+location = "Great_Gig_Book:140"
+copyright = "All Rights Reserved"
+copyrightextra = "Archived MusicXML notice retained; underlying music is not relicensed."
+
+[versions.Wikifonia]
+doChords = true
+doVoice = true
+doLyrics = false
+doLyricsmore = false
+doLyricsmoremore = false
+doChordBars = false
+doGuitar = false
+doExtra = false
+doPrep = false
+doOwn = false
+#}
+{% if part == "Vars" %}
+{% endif %}
+{% if part == "Doc" %}
+	DONE:
+	- imported melody and chord changes from real_books_archive.gi/Wikifonia.tar.xz: Wikifonia/Eddie Heywood, Norman Gimbel - Canadian Sunset.mxl.
+	- source revision: http://wikifonia.org/node/3319/revisions/4235/view.
+	- book index reference: Great_Gig_Book:140 (real_books_archive.gi/index); index pagination is not a verified PDF page number.
+	- retained the archived MusicXML rights notice; no redistribution permission is asserted.
+	- retained written melody, chord changes, pickups, repeats and numbered endings; lyrics, slurs, dynamics and articulations other than fermatas omitted.
+	- tempo is an editorial practice suggestion.
+	TODO:
+	- proofread the complete melody, harmony and form against a printed edition and check by ear.
+	- verify source attribution, copyright notice and reuse terms; only the archived MusicXML notice is retained.
+	- locate the tune in a local PDF edition; the book-index page number may differ.
+{% endif %}
+{% if part == "ChordsWikifonia" %}\chordmode {
+	\startChords
+	\startSong
+
+	\myMark "A"
+	\startPart
+	\repeat volta 2 {
+	f1 |
+	s1 |
+	a1 |
+	s1 | \myEndLine
+	f1 |
+	s1 |
+	s1 |
+	s1 | \myEndLine
+	g1 |
+	s2. bes4 |
+	s1 |
+	s2 ees2 | \myEndLine
+	f1 |
+	s1 |
+	} \alternative {
+	{
+	g1:m7 |
+	c1:7 | \myEndLineVoltaNotLast
+	}
+	{
+	f1 | \myEndLineVoltaLast
+	}
+	}
+	s1 |
+	g1:m7 |
+	c1 |
+	f1 | \myEndLine
+	s1 |
+	g2.:m7 d4:7 |
+	c8 g4.:m7 c2 |
+	f1 | \myEndLine
+	s1 |
+	s4 g2.:m7 |
+	c4 g4:m7 c2:7 |
+	s4 f2. | \myEndLine
+	s1 |
+	a1:m |
+	f1:7 |
+	a2.:m f4 | \myEndLine
+	g1:7 |
+	f1 |
+	s1 |
+	f1 | \myEndLine
+	s1 |
+	f1 |
+	s1 |
+	s1 | \myEndLine
+	s1 |
+	g1:7 |
+	s2. bes4 |
+	s1 | \myEndLine
+	s2 ees2 |
+	f1 |
+	s1 |
+	f1 | \myEndLine
+	s1 |
+	\endBar
+	\endPart
+
+	\endSong
+	\endChords
+}
+{% endif %}
+{% if part == "VoiceWikifonia" %}\absolute {
+	\tempo "Moderato" 4 = 120
+	\time 4/4
+	\key f \major
+
+	\repeat volta 2 {
+	c''1 ~ |
+	c''2 r4 \times 2/3 { c''8 a'8 g'8 } |
+	a'1 |
+	r1 |
+	c''1 ~ |
+	c''2 r4 \times 2/3 { c''8 a'8 g'8 } |
+	a'1 |
+	R1 |
+	a'4 f'2. ~ |
+	f'2 f'4 g'4 |
+	as'4 f'2. ~ |
+	f'2 g'4 f'4 |
+	c''1 ~ |
+	c''2 r4 \times 2/3 { a'8 f'8 d'8 } |
+	} \alternative {
+	{
+	g'1 |
+	R1 |
+	}
+	{
+	f'1 ~ |
+	}
+	}
+	f'1 |
+	r4 r4 g'4 \times 2/3 { g'8 a'8 bes'8 } |
+	g'4 f'8 e'8 ~ e'2 |
+	r4 g'4 f'4 g'4 |
+	a'1 |
+	bes'2. a'8 g'8 ~ |
+	g'8 f'8 e'8 ~ e'8 d''4 c''4 ~ |
+	c''2 r2 |
+	R1 |
+	r4 r4 g'4 \times 2/3 { g'8 a'8 bes'8 } |
+	g'4 f'8 e'8 ~ e'4 r4 |
+	r4 g'4 f'4 g'4 |
+	a'2. b'4 |
+	c''2. a'4 |
+	b'2. gis'4 |
+	a'2 r4 \times 2/3 { a'8 fis'8 a'8 } |
+	bes'1 |
+	c''1 ~ |
+	c''2 r4 \times 2/3 { c''8 a'8 g'8 } |
+	a'1 |
+	R1 |
+	c''1 ~ |
+	c''2 r4 \times 2/3 { c''8 a'8 g'8 } |
+	a'1 |
+	R1 |
+	a'4 f'2. ~ |
+	f'2 f'4 g'4 |
+	as'4 f'2. ~ |
+	f'2 g'4 f'4 |
+	c''1 ~ |
+	c''2 r4 \times 2/3 { a'8 f'8 d'8 } |
+	f'1 |
+	R1 _\markup{ \bold\tiny {D.C.} } |
+	\endBar
+}
+{% endif %}

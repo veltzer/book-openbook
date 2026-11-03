@@ -1,0 +1,127 @@
+{#
+default_version = "Wikifonia"
+
+[attributes]
+title = "We're All Alone"
+style = "Jazz"
+composer = "William Scaggs, William Scaggs"
+piece = "Standard"
+typesetter = "OpenBook contributors (MusicXML import)"
+completion = "3"
+uuid = "6daeb326-a654-54fb-9b5d-3010a020fc88"
+location = "TheBook:326"
+copyright = "All Rights Reserved"
+copyrightextra = "Archived MusicXML notice retained; underlying music is not relicensed."
+
+[versions.Wikifonia]
+doChords = true
+doVoice = true
+doLyrics = false
+doLyricsmore = false
+doLyricsmoremore = false
+doChordBars = false
+doGuitar = false
+doExtra = false
+doPrep = false
+doOwn = false
+#}
+{% if part == "Vars" %}
+{% endif %}
+{% if part == "Doc" %}
+	DONE:
+	- imported melody and chord changes from real_books_archive.gi/Wikifonia.tar.xz: Wikifonia/William Scaggs - We're All Alone.mxl.
+	- source revision: http://wikifonia.org/node/5281/revisions/18618/view.
+	- book index reference: TheBook:326 (real_books_archive.gi/index); index pagination is not a verified PDF page number.
+	- retained the archived MusicXML rights notice; no redistribution permission is asserted.
+	- retained written melody, chord changes, pickups, repeats and numbered endings; lyrics, slurs, dynamics and articulations other than fermatas omitted.
+	- tempo is an editorial practice suggestion.
+	TODO:
+	- proofread the complete melody, harmony and form against a printed edition and check by ear.
+	- verify source attribution, copyright notice and reuse terms; only the archived MusicXML notice is retained.
+	- locate the tune in a local PDF edition; the book-index page number may differ.
+{% endif %}
+{% if part == "ChordsWikifonia" %}\chordmode {
+	\startChords
+	\startSong
+
+	\myMark "A"
+	\startPart
+	\repeat volta 2 {
+	g2 b2:7 |
+	e1*5/8:m g4.:7 |
+	c1 |
+	g2 bes2 | \myEndLine
+	a2:m7 d2:7 |
+	b2:m7 e2:m7 |
+	a1:m7 |
+	d1:7 | \myEndLine
+	}
+	g2 a2:m7 |
+	g2 b2:7 |
+	e2:m g2:7 |
+	c1 | \myEndLine
+	g2 bes2 |
+	a2:m7 d2:7 |
+	g1 |
+	b4:m a2.:m7 | \myEndLine
+	g2 b2:7 |
+	s2 g2:7 |
+	c1 |
+	g2 bes2 | \myEndLine
+	a2:m7 d2:7 |
+	b2:m7 e2:m7 |
+	a1:m7 |
+	d1:7 | \myEndLine
+	a2:m7 d2:7 |
+	b1*5/8:m7 e4.:m7 |
+	a1:m7 |
+	s1 | \myEndLine
+	d1:7 |
+	g1:maj7 |
+	\endBar
+	\endPart
+
+	\endSong
+	\endChords
+}
+{% endif %}
+{% if part == "VoiceWikifonia" %}\absolute {
+	\tempo "Moderato" 4 = 120
+	\time 4/4
+	\key g \major
+
+	\repeat volta 2 {
+	r4 r8 d'8 b'8 c''8 b'8 a'16 g'16 ~ |
+	g'4 r8 b'8 a'8 g'8 g''8 f''8 |
+	e''2. r8 e''8 |
+	d''8 fis''8 g''4 des''8 des''8 g''8 g''8 |
+	c''4. g''8 fis''8 e''8 d''8 c''8 |
+	d''2 r4 r8 b'8 |
+	b'8 c''8 c''2 r8 b'8 |
+	b'8 a'8 a'2. |
+	}
+	b'4. d''8 fis''8 g''8 fis''8 g''8 |
+	d''4. g''8 fis''8 fis''8 g''8 fis''8 |
+	e''4. g''8 f''8 g''8 a''8 g''8 |
+	e''1 |
+	d''8 fis''8 g''4 des''8 fis''8 g''8 g''8 |
+	c''2 g''8 fis''8 e''8 fis''8 |
+	g''1 ~ |
+	g''8 r8 r4 r2 |
+	r4 r8 d'8 b'8 c''8 b'8 a'16 g'16 ~ |
+	g'4 r8 b'8 a'8 g'8 g''8 f''8 |
+	e''2. r8 e''8 |
+	d''8 fis''8 g''4 des''8 des''8 g''8 g''8 |
+	c''4. g''8 fis''8 e''8 d''8 c''8 |
+	d''2 r4 r8 b'8 |
+	b'8 c''8 c''2 r8 b'8 |
+	b'8 a'8 a'2. |
+	c''2 fis''8 e''8 d''8 e''8 |
+	e''8 d''4 a''4 g''4. ~ |
+	g''2. r8 e''8 |
+	e''8 d''8 e''4 d''2 ~ |
+	d''1 |
+	fis'1 |
+	\endBar
+}
+{% endif %}

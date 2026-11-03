@@ -1,0 +1,129 @@
+{#
+default_version = "Wikifonia"
+
+[attributes]
+title = "Wearing Of The Green"
+style = "Jazz"
+composer = "Traditional Irish, Dion Boucicault 1864"
+piece = "Standard"
+typesetter = "OpenBook contributors (MusicXML import)"
+completion = "3"
+uuid = "9053c8ff-6bef-526d-bcb0-9e3f5c5047fc"
+location = "TheBook:488"
+copyright = "All Rights Reserved"
+copyrightextra = "Archived MusicXML notice retained; underlying music is not relicensed."
+
+[versions.Wikifonia]
+doChords = true
+doVoice = true
+doLyrics = false
+doLyricsmore = false
+doLyricsmoremore = false
+doChordBars = false
+doGuitar = false
+doExtra = false
+doPrep = false
+doOwn = false
+#}
+{% if part == "Vars" %}
+{% endif %}
+{% if part == "Doc" %}
+	DONE:
+	- imported melody and chord changes from real_books_archive.gi/Wikifonia.tar.xz: Wikifonia/Traditional Irish,  Dion Boucicault 1864 - Wearing Of The Green.mxl.
+	- source revision: http://wikifonia.org/node/3942/revisions/15946/view.
+	- book index reference: TheBook:488 (real_books_archive.gi/index); index pagination is not a verified PDF page number.
+	- retained the archived MusicXML rights notice; no redistribution permission is asserted.
+	- retained written melody, chord changes, pickups, repeats and numbered endings; lyrics, slurs, dynamics and articulations other than fermatas omitted.
+	- tempo is an editorial practice suggestion.
+	TODO:
+	- proofread the complete melody, harmony and form against a printed edition and check by ear.
+	- verify source attribution, copyright notice and reuse terms; only the archived MusicXML notice is retained.
+	- locate the tune in a local PDF edition; the book-index page number may differ.
+{% endif %}
+{% if part == "ChordsWikifonia" %}\chordmode {
+	\startChords
+	\startSong
+
+	\myMark "A"
+	\startPart
+	s1 |
+	g1 |
+	s1 |
+	d1 | \myEndLine
+	s1 |
+	c1 |
+	g1 |
+	c1 | \myEndLine
+	g1 |
+	s1 |
+	s1 |
+	d1 | \myEndLine
+	s1 |
+	c1 |
+	g1 |
+	c1 | \myEndLine
+	g1 |
+	c2 g2 |
+	s1 |
+	s1 | \myEndLine
+	s1 |
+	c2 g2 |
+	s1 |
+	a1:7 | \myEndLine
+	d1 |
+	g1 |
+	s1 |
+	d1 | \myEndLine
+	s1 |
+	c1 |
+	g1 |
+	c1 | \myEndLine
+	g1 |
+	\endBar
+	\endPart
+
+	\endSong
+	\endChords
+}
+{% endif %}
+{% if part == "VoiceWikifonia" %}\absolute {
+	\tempo "Moderato" 4 = 120
+	\time 4/4
+	\key g \major
+
+	r2 r4 g'8 a'8 |
+	b'4 b'4 b'4 b'4 |
+	b'4 d''4 d''4 b'4 |
+	b'4 a'4 a'4 a'4 |
+	a'2. d''4 |
+	e''4 c''4 g''4 fis''4 |
+	e''4 d''4 b'4 g'4 |
+	a'4 g'4 g'4 g'4 |
+	g'2 g'4 a'4 |
+	b'4 b'4 b'4 b'4 |
+	b'4 d''4 d''4 b'4 |
+	b'4 a'4 a'4 a'4 |
+	a'2. d''4 |
+	e''4 c''4 g''4 fis''4 |
+	e''4 d''4 b'4 g'4 |
+	a'4 g'4 g'4 g'4 |
+	g'2 g''4 fis''4 |
+	e''4 e''4 d''4 b'4 |
+	d''4 b'4 g'4 a'4 |
+	b'4 a'4 b'4 c''4 |
+	b'2 g''4 fis''4 |
+	e''4 e''4 d''4 b'4 |
+	d''2 g'4 b'4 |
+	a'4 g'4 fis'4 e'4 |
+	d'2 g'4 a'4 |
+	b'4 b'4 b'4 b'4 |
+	b'4 d''2 b'4 |
+	b'4 a'4 a'4 a'4 |
+	a'2. d''4 |
+	e''4 c''4 g''4 fis''4 |
+	e''4 d''4 b'4 g'4 |
+	a'4 g'4 g'4 g'4 |
+	g'2. r4 |
+	\endBar
+}
+{% endif %}

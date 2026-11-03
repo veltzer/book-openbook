@@ -1,0 +1,155 @@
+{#
+default_version = "Wikifonia"
+
+[attributes]
+title = "Weekend In New England"
+style = "Jazz"
+composer = "Randy Edelman, Randy Edelman"
+piece = "Standard"
+typesetter = "OpenBook contributors (MusicXML import)"
+completion = "3"
+uuid = "c40fc8fe-7920-5134-86d6-5e1b11d4010e"
+location = "TheBook:339"
+copyright = "All Rights Reserved"
+copyrightextra = "Archived MusicXML notice retained; underlying music is not relicensed."
+
+[versions.Wikifonia]
+doChords = true
+doVoice = true
+doLyrics = false
+doLyricsmore = false
+doLyricsmoremore = false
+doChordBars = false
+doGuitar = false
+doExtra = false
+doPrep = false
+doOwn = false
+#}
+{% if part == "Vars" %}
+{% endif %}
+{% if part == "Doc" %}
+	DONE:
+	- imported melody and chord changes from real_books_archive.gi/Wikifonia.tar.xz: Wikifonia/Randy Edelman - Weekend In New England.mxl.
+	- source revision: http://www.wikifonia.org/node/2302/revisions/2913/view.
+	- book index reference: TheBook:339 (real_books_archive.gi/index); index pagination is not a verified PDF page number.
+	- retained the archived MusicXML rights notice; no redistribution permission is asserted.
+	- retained written melody, chord changes, pickups, repeats and numbered endings; lyrics, slurs, dynamics and articulations other than fermatas omitted.
+	- tempo is an editorial practice suggestion.
+	TODO:
+	- proofread the complete melody, harmony and form against a printed edition and check by ear.
+	- verify source attribution, copyright notice and reuse terms; only the archived MusicXML notice is retained.
+	- locate the tune in a local PDF edition; the book-index page number may differ.
+{% endif %}
+{% if part == "ChordsWikifonia" %}\chordmode {
+	\startChords
+	\startSong
+
+	\myMark "A"
+	\startPart
+	\repeat volta 2 {
+	c2. |
+	e2.:m7 |
+	f2. |
+	} \alternative {
+	{
+	g2. | \myEndLineVoltaNotLast
+	}
+	{
+	g2. | \myEndLineVoltaLast
+	}
+	}
+	f2. |
+	c2. |
+	d2.:m7 |
+	g2.:11 | \myEndLine
+	c2. |
+	f2 g4 |
+	c2. |
+	f2 g4 | \myEndLine
+	c2. |
+	f2 e4:7 |
+	a2.:m7 |
+	d2:sus4.7 d4:7 | \myEndLine
+	d2.:m7 |
+	g2.:11 |
+	c1*5/8 f8 |
+	c2. | \myEndLine
+	f2. |
+	c2. |
+	f2. |
+	c2. | \myEndLine
+	f2. |
+	bes2. |
+	c4 d4:m7 c4:7 |
+	f2. | \myEndLine
+	c2. |
+	d2.:m7 |
+	c4 d4.:m7 c8:7 |
+	f2. | \myEndLine
+	c2. |
+	d4:9 c4 d4:7 |
+	g2.:11 |
+	s2. | \myEndLine
+	s2. |
+	s2. |
+	\endBar
+	\endPart
+
+	\endSong
+	\endChords
+}
+{% endif %}
+{% if part == "VoiceWikifonia" %}\absolute {
+	\tempo "Moderato" 4 = 120
+	\time 3/4
+	\key c \major
+
+	\repeat volta 2 {
+	e'4 c''4. e'8 |
+	e'8 d''8 b'2 |
+	r4 a'8 b'4 c''8 |
+	} \alternative {
+	{
+	b'2 r8 d'8 |
+	}
+	{
+	b'2 r8 a'8 |
+	}
+	}
+	a'8 b'8 c''2 |
+	g'8 b'8 c''2 |
+	a'8 c''4 e''8 ~ e''8 d''8 ~ |
+	d''4. c''8 a'8 g'8 |
+	\textMark \markup { \musicglyph "scripts.segno" } e'4 c''4. e'8 |
+	f'4 d''4 ~ d''4 |
+	r8 e'8 ~ e'8 c''4 e'8 |
+	f'4 d''4 ~ d''4 |
+	r8 e'8 ~ e'8 c''4 e'8 |
+	f'2 d''8 e''16 c''16 ~ |
+	c''2. ~ |
+	c''2 r8 e'8 |
+	f'2 f'16 e'8. |
+	f'4 d''4 ~ d''8 e''8 |
+	c''2 r8 c''8 _\markup{ \bold\tiny {Fine} } |
+	c''4. g'8 c''4 |
+	c''16 a'8. ~ a'2 |
+	r8 c''8 c''8 g'8 c''4 |
+	c''4 r4 r4 |
+	r8 c''8 c''8 g'4 c''8 |
+	c''8 a'4. r8 c''8 |
+	e''8 e''4 e''8 ~ e''8 e''16 d''16 |
+	c''4 e''16 d''16 c''8 ~ c''8 c''8 |
+	c''2 a'8 c''8 |
+	c''8 g'4. a'8 c''8 |
+	c''2 d''8 c''8 |
+	c''4 ~ c''4 r8 c''8 |
+	c''4. a'8 ~ a'8 c''8 |
+	c''16 g'8. ~ g'4 r8 c''8 |
+	e''4 d''4 c''16 d''8 d''16 ~ |
+	d''2. ~ |
+	d''2. ~ |
+	d''2. |
+	r8 c''8 c''4 d''8 c''8 _\markup{ \bold\tiny {D.C. al Fine} } |
+	\endBar
+}
+{% endif %}

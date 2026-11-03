@@ -1,0 +1,129 @@
+{#
+default_version = "Wikifonia"
+
+[attributes]
+title = "A Pretty Girl Is Like a Melody"
+style = "Jazz"
+composer = "Irving Berlin"
+piece = "Standard"
+typesetter = "OpenBook contributors (MusicXML import)"
+completion = "3"
+uuid = "c4edd3e4-ec69-5939-9b54-d624c58017ec"
+location = "Real_Book_3:248"
+copyright = "All Rights Reserved"
+copyrightextra = "Archived MusicXML notice retained; underlying music is not relicensed."
+
+[versions.Wikifonia]
+doChords = true
+doVoice = true
+doLyrics = false
+doLyricsmore = false
+doLyricsmoremore = false
+doChordBars = false
+doGuitar = false
+doExtra = false
+doPrep = false
+doOwn = false
+#}
+{% if part == "Vars" %}
+{% endif %}
+{% if part == "Doc" %}
+	DONE:
+	- imported melody and chord changes from real_books_archive.gi/Wikifonia.tar.xz: Wikifonia/Irving Berlin - A Pretty Girl Is Like a Melody.mxl.
+	- source revision: http://wikifonia.org/node/7745/revisions/10825/view.
+	- book index reference: Real_Book_3:248 (real_books_archive.gi/index); index pagination is not a verified PDF page number.
+	- retained the archived MusicXML rights notice; no redistribution permission is asserted.
+	- retained written melody, chord changes, pickups, repeats and numbered endings; lyrics, slurs, dynamics and articulations other than fermatas omitted.
+	- tempo is an editorial practice suggestion.
+	TODO:
+	- proofread the complete melody, harmony and form against a printed edition and check by ear.
+	- verify source attribution, copyright notice and reuse terms; only the archived MusicXML notice is retained.
+	- locate the tune in a local PDF edition; the book-index page number may differ.
+{% endif %}
+{% if part == "ChordsWikifonia" %}\chordmode {
+	\startChords
+	\startSong
+
+	\myMark "A"
+	\startPart
+	s1 |
+	g1:7 |
+	s1 |
+	c1:m7 | \myEndLine
+	s2 c2:7 |
+	e2 f2 |
+	e2 c2:7 |
+	f1 | \myEndLine
+	s1 |
+	f1:7 |
+	bes1 |
+	s1 | \myEndLine
+	f1 |
+	g1:7 |
+	s1 |
+	c2.:7 g4:m7 | \myEndLine
+	c1 |
+	g1:7 |
+	s1 |
+	c1:m7 | \myEndLine
+	s2 c2:7 |
+	e2 f2 |
+	c2:m7 f2:7 |
+	bes1 | \myEndLine
+	g1:m |
+	e1:7 |
+	a1:7 |
+	d1:7 | \myEndLine
+	g1:m |
+	s2 ees2 |
+	c1:7 |
+	f1 | \myEndLine
+	s1 |
+	\endBar
+	\endPart
+
+	\endSong
+	\endChords
+}
+{% endif %}
+{% if part == "VoiceWikifonia" %}\absolute {
+	\tempo "Moderato" 4 = 120
+	\time 4/4
+	\key c \major
+
+	r4 c'4 cis'4 d'4 |
+	f'1 ~ |
+	f'4 d'4 dis'4 e'4 |
+	a'4 a'4 a'2 ~ |
+	a'2 g'2 |
+	e'2 f'2 |
+	gis'2 a'2 |
+	c''1 ~ |
+	c''2. r4 |
+	d''4 c''2 f'4 |
+	bes'2. a'8 bes'8 |
+	c''4 bes'2 f'4 |
+	a'2. bes'4 |
+	b'8 d''8 b'2 a'4 |
+	g'8 a'8 g'2 f'4 |
+	e'8 g'8 d'2 e'4 |
+	d'4 c'4 cis'4 d'4 |
+	f'1 ~ |
+	f'4 d'4 dis'4 e'4 |
+	a'4 a'4 a'2 ~ |
+	a'2 g'2 |
+	e'2 f'2 |
+	g'2 f'2 |
+	d''1 ~ |
+	d''2 cis''4 d''4 |
+	e''4 d''2 e''4 |
+	cis''1 |
+	d''4 c''2 d''4 |
+	bes'2. d'4 |
+	bes'4 bes'4 bes'4 bes'4 |
+	bes'4 a'8 bes'8 g'4 a'4 |
+	f'1 ~ |
+	f'4 r4 r2 |
+	\endBar
+}
+{% endif %}

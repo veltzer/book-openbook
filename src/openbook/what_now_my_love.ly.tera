@@ -1,0 +1,138 @@
+{#
+default_version = "Wikifonia"
+
+[attributes]
+title = "What Now, My Love?"
+style = "Jazz"
+composer = "Gilbert Bécaud 1961, Pierre French: Delanoë, English: Carl Sigman 1961"
+piece = "Standard"
+typesetter = "OpenBook contributors (MusicXML import)"
+completion = "3"
+uuid = "a6a8fb43-6508-529a-98bb-6e1bdc6e505e"
+location = "Great_Gig_Book:151"
+copyright = "All Rights Reserved"
+copyrightextra = "Archived MusicXML notice retained; underlying music is not relicensed."
+
+[versions.Wikifonia]
+doChords = true
+doVoice = true
+doLyrics = false
+doLyricsmore = false
+doLyricsmoremore = false
+doChordBars = false
+doGuitar = false
+doExtra = false
+doPrep = false
+doOwn = false
+#}
+{% if part == "Vars" %}
+{% endif %}
+{% if part == "Doc" %}
+	DONE:
+	- imported melody and chord changes from real_books_archive.gi/Wikifonia.tar.xz: Wikifonia/Gilbert Becaud 1961,  Pierre French: Delanoe, English: Carl Sigman 1961 - What Now, My Love?.mxl.
+	- source revision: http://wikifonia.org/node/5932/revisions/16073/view.
+	- book index reference: Great_Gig_Book:151 (real_books_archive.gi/index); index pagination is not a verified PDF page number.
+	- retained the archived MusicXML rights notice; no redistribution permission is asserted.
+	- retained written melody, chord changes, pickups, repeats and numbered endings; lyrics, slurs, dynamics and articulations other than fermatas omitted.
+	- tempo is an editorial practice suggestion.
+	TODO:
+	- proofread the complete melody, harmony and form against a printed edition and check by ear.
+	- verify source attribution, copyright notice and reuse terms; only the archived MusicXML notice is retained.
+	- locate the tune in a local PDF edition; the book-index page number may differ.
+	- check source measure 20: the MusicXML ties a note to a different pitch (or to nothing); the tie was dropped.
+{% endif %}
+{% if part == "ChordsWikifonia" %}\chordmode {
+	\startChords
+	\startSong
+
+	\myMark "A"
+	\startPart
+	s1 |
+	\repeat volta 2 {
+	g1 |
+	s1 |
+	c2 g2 | \myEndLine
+	s1 |
+	a1:m7 |
+	s2 d2:7 |
+	g1 | \myEndLine
+	s1 |
+	}
+	g1 |
+	s1 |
+	a1:m7 | \myEndLine
+	d1:7 |
+	g1 |
+	s1 |
+	a1:m7 | \myEndLine
+	d1:7 |
+	g1 |
+	s1 |
+	f1:7 | \myEndLine
+	s1 |
+	bes1 |
+	s1 |
+	c1:m | \myEndLine
+	s2 ees2:7 |
+	d1:7 |
+	s1 |
+	g1 | \myEndLine
+	s1 |
+	c2 g2 |
+	s1 |
+	a1:m7 | \myEndLine
+	s2 d2:7 |
+	g1 |
+	s1 |
+	\endBar
+	\endPart
+
+	\endSong
+	\endChords
+}
+{% endif %}
+{% if part == "VoiceWikifonia" %}\absolute {
+	\tempo "Moderato" 4 = 120
+	\time 4/4
+	\key c \major
+
+	r2 r4 \times 2/3 { g'8 g'8 b'8 } |
+	\repeat volta 2 {
+	b'1 ~ |
+	b'2 r4 \times 2/3 { g'8 g'8 b'8 } |
+	c''2 b'2 ~ |
+	b'2 r4 \times 2/3 { g'8 g'8 g'8 } |
+	a'1 ~ |
+	a'4 b'8 a'8 g'4 a'4 |
+	b'1 ~ |
+	b'2 r4 \times 2/3 { g'8 g'8 b'8 } |
+	}
+	b'1 ~ |
+	b'4 r4 r4 \times 2/3 { g'8 g'8 e''8 } |
+	e''1 ~ |
+	e''4 fis'4 fis'4 d''4 |
+	d''1 ~ |
+	d''2 r4 \times 2/3 { g'8 g'8 c''8 } |
+	c''2. b'8 c''8 |
+	d''2. c''4 |
+	d''1 ~ |
+	d''4 g'4 g'4 es''4 |
+	es''1 |
+	e''4 f'4 f'4 d''4 |
+	d''1 ~ |
+	d''4 r4 r4 \times 2/3 { g'8 g'8 c''8 } |
+	c''1 ~ |
+	c''2 bes'2 |
+	a'1 ~ |
+	a'2 r4 \times 2/3 { g'8 g'8 b'8 } |
+	b'1 ~ |
+	b'2 r4 \times 2/3 { g'8 g'8 g'8 } |
+	c''2 b'2 ~ |
+	b'4 r4 r4 \times 2/3 { g'8 g'8 g'8 } |
+	a'1 ~ |
+	a'2 a'2 |
+	b'1 ~ |
+	b'2 r2 |
+	\endBar
+}
+{% endif %}

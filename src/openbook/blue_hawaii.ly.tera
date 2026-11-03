@@ -1,0 +1,127 @@
+{#
+default_version = "Wikifonia"
+
+[attributes]
+title = "Blue Hawaii"
+style = "Jazz"
+composer = "Leo Robin, Ralph Rainger"
+piece = "Standard"
+typesetter = "OpenBook contributors (MusicXML import)"
+completion = "3"
+uuid = "cbba36b4-cc7f-5903-bb42-99287e943f6c"
+location = "Great_Gig_Book:70"
+copyright = "All Rights Reserved"
+copyrightextra = "Archived MusicXML notice retained; underlying music is not relicensed."
+
+[versions.Wikifonia]
+doChords = true
+doVoice = true
+doLyrics = false
+doLyricsmore = false
+doLyricsmoremore = false
+doChordBars = false
+doGuitar = false
+doExtra = false
+doPrep = false
+doOwn = false
+#}
+{% if part == "Vars" %}
+{% endif %}
+{% if part == "Doc" %}
+	DONE:
+	- imported melody and chord changes from real_books_archive.gi/Wikifonia.tar.xz: Wikifonia/Leo Robin, Ralph Rainger - Blue Hawaii.mxl.
+	- source revision: http://wikifonia.org/node/4045/revisions/27625/view.
+	- book index reference: Great_Gig_Book:70 (real_books_archive.gi/index); index pagination is not a verified PDF page number.
+	- retained the archived MusicXML rights notice; no redistribution permission is asserted.
+	- retained written melody, chord changes, pickups, repeats and numbered endings; lyrics, slurs, dynamics and articulations other than fermatas omitted.
+	- tempo is an editorial practice suggestion.
+	TODO:
+	- proofread the complete melody, harmony and form against a printed edition and check by ear.
+	- verify source attribution, copyright notice and reuse terms; only the archived MusicXML notice is retained.
+	- locate the tune in a local PDF edition; the book-index page number may differ.
+{% endif %}
+{% if part == "ChordsWikifonia" %}\chordmode {
+	\startChords
+	\startSong
+
+	\myMark "A"
+	\startPart
+	g1 |
+	c1 |
+	g1 |
+	s2 e2:7 | \myEndLine
+	a1:7 |
+	d1:7 |
+	g1 |
+	d2 d2:7 | \myEndLine
+	g1 |
+	c1 |
+	g1 |
+	s2 e2:7 | \myEndLine
+	a1:7 |
+	d1:7 |
+	g1 |
+	c4 g2. | \myEndLine
+	c1 |
+	s2 g2 |
+	s1 |
+	s1 | \myEndLine
+	a1:7 |
+	s1 |
+	d1 |
+	s1 | \myEndLine
+	g1 |
+	c1 |
+	g1 |
+	s2 e2:7 | \myEndLine
+	a1:7 |
+	d1:7 |
+	g2 c2 |
+	g1 | \myEndLine
+	\endBar
+	\endPart
+
+	\endSong
+	\endChords
+}
+{% endif %}
+{% if part == "VoiceWikifonia" %}\absolute {
+	\tempo "Moderato" 4 = 120
+	\time 4/4
+	\key g \major
+
+	d'4 cis'4 d'2 |
+	r4 dis'4 e'4. es'8 |
+	d'4 ~ \times 2/3 { d'8 cis'8 c'8 } b2 |
+	r4 b'4 c''4. b'8 |
+	a'4. cis'8 e'2 |
+	r4 a'8 ais'8 b'4. a'8 |
+	\times 2/3 { g'8 g'8 e'8 } d'2. |
+	r4 a'4 g'4 e'4 |
+	d'4 cis'4 d'2 |
+	r4 dis'4 e'4. es'8 |
+	d'4 \times 2/3 { d'8 cis'8 c'8 } b2 |
+	r4 b'4 c''4. b'8 |
+	a'4. cis'8 e'2 |
+	r4 a'8 ais'8 b'4. fis'8 |
+	g'1 ~ |
+	g'4 r2 r4 |
+	e'4. b'8 a'2 ~ |
+	a'4 f'4 g'4 e'4 |
+	g'8 e'8 g'8 e'8 d'2 ~ |
+	d'2 r4 dis'4 |
+	e'4. b'8 a'2 ~ |
+	a'4 g'4 e'4 g'4 |
+	a'1 ~ |
+	a'2. r4 |
+	d'4 cis'4 d'2 |
+	r4 dis'4 e'4. es'8 |
+	d'4 ~ \times 2/3 { d'8 cis'8 c'8 } b2 |
+	r4 b'4 c''4. b'8 |
+	a'4. cis'8 e'2 |
+	r4 a'8 ais'8 b'4. fis'8 |
+	g'4. fis'8 g'4. fis'8 |
+	g'2 g''2 |
+	\endBar
+}
+{% endif %}
