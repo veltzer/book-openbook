@@ -1,8 +1,9 @@
 # Imported Tune Proofreading Register
 
 Status recorded on **2026-11-03**. The initial 328 imports were reviewed at
-source snapshot `412ab688`; two additional 200-tune archive batches were added on the same day.
-Scope: the **728 MusicXML imports** in `src/openbook`, not the rest of the book.
+source snapshot `412ab688`; two additional 200-tune archive batches and a
+100-tune third batch were added on the same day.
+Scope: the **828 MusicXML imports** in `src/openbook`, not the rest of the book.
 No tune in this register has completed full musical proofreading.
 
 This is a historical record of checks actually performed, not a claim that the
@@ -14,12 +15,12 @@ musical review is complete.
 
 | Code | Check performed | Limits |
 | --- | --- | --- |
-| M | Compared the LilyPond melody's written-order pitched-note sequence with that tune's archived MusicXML: note count, note names, octaves, alterations, and metered durations as exact fractions. All 728 tunes matched, totaling 88,408 pitched-note events (36,961 initial, 26,006 in batch 1, and 25,441 in batch 2). | Grace-note pitches were included, but their unmetered performance durations were not compared. This did not compare rests, ties, articulation, note onset positions, or the unfolded performance order. Agreement with an import source does not prove that source is musically correct. |
+| M | Compared the LilyPond melody's written-order pitched-note sequence with that tune's archived MusicXML: note count, note names, octaves, alterations, and metered durations as exact fractions. All 828 tunes matched, totaling 101,025 pitched-note events (36,961 initial, 26,006 in batch 1, 25,441 in batch 2, and 12,617 in batch 3). | Grace-note pitches were included, but their unmetered performance durations were not compared. This did not compare rests, ties, articulation, note onset positions, or the unfolded performance order. Agreement with an import source does not prove that source is musically correct. |
 | S | Ran `uv run python -m scripts.check_all --inputs src/openbook/*.ly.tera`. | Source conventions and UUID consistency, not musical correctness. |
 | B | Regenerated the integrated book PDF, its index, and embedded bookmarks. | Successful engraving, not a manual inspection of every page or a playback review. |
 | A | Checked the corrected altered-dominant chords against the archived `7alt` symbols, verified their actual LilyPond pitch-class sets, and confirmed altered-chord labels in rendered output. | Only the four corrected chords detailed below; other harmonies remain unreviewed. |
 | V | Restored the specified repeat endings from the archived MusicXML and checked the unfolded lengths of both melody and chord streams. | Only the corrected volta structures, not D.C./D.S./coda/Fine playback routing. |
-| E | Compiled the individual tune's PDF with `scripts.wrapper_lilypond_song`, directly or through rsconstruct. | The five initially corrected tunes and all 400 subsequent imports; compilation is not full visual proofreading. |
+| E | Compiled the individual tune's PDF with `scripts.wrapper_lilypond_song`, directly or through rsconstruct. | The five initially corrected tunes and all 500 subsequent imports; compilation is not full visual proofreading. |
 | P | Visually inspected the corrected ending brackets in the individual PDF; also inspected the integrated book page for September in the Rain. | Only the affected ending notation, not every symbol on the page. |
 | I | Matched Bouncin' with Bud's source-page reference and printed copyright notice to the scanned page. | Transcription of the notice, not permission to redistribute or a legal determination. |
 
@@ -59,7 +60,7 @@ measure positions, including any pickup**, not unfolded performance bar numbers.
       applicable reuse terms. I verifies one printed notice, not reuse rights.
 
 These pending checks apply to **every inventory row**, including the five
-initially corrected tunes and both additional 200-tune batches. A, V, P, and I
+initially corrected tunes and all three additional batches. A, V, P, and I
 record narrowly scoped work; they do not close a whole-tune review item.
 
 ## Additional archive batches
@@ -68,17 +69,30 @@ record narrowly scoped work; they do not close a whole-tune review item.
 | --- | --- | --- | --- |
 | Batch 1 (200) | 200 | 26,006 | M, S, B, E |
 | Batch 2 (200) | 200 | 25,441 | M, S, B, E |
+| Batch 3 (100) | 100 | 12,617 | M, S, B, E |
 
-Both batches use notation from the local Wikifonia archive and references
+All three batches use notation from the local Wikifonia archive and references
 from the local real/fake-book PDF indexes. Batch 2 additionally uses the
 searchable contents of `Hal Leonard Real Jazz Book.pdf` and an OCR reading
 of the contents of `The Ultimate Broadway Fakebook.pdf`; its Jazz Fakebook
 index mapping was checked against a scanned tune page. These index checks
 identify repertoire, not a complete comparison of the music or its editions.
-Neither batch is restricted to public-domain compositions. Source rights
+No batch is restricted to public-domain compositions. Source rights
 notices are retained, lyrics are omitted, and no redistribution permission
 is asserted. Book-index page numbers are not claimed to be verified PDF
 page numbers. Full musical proofreading remains open for all entries.
+
+Batch 3 was converted with a strict converter that rejects, rather than
+approximates, any MusicXML it cannot represent exactly: multiple voices or
+parts, chord notes, grace notes, transposed or non-treble parts, unsupported
+chord kinds, two chord symbols at one offset, irregular measures other than
+a pickup or a short final bar, and repeat endings other than a plain
+numbered 1, 2, ... sequence. Its references come only from the
+`real_books_archive.gi/index` CSV files. Candidates whose title is already
+in the book under another name were excluded by hand (e.g. Stardust, Over
+the Rainbow, Corcovado, No More Blues, What a Difference a Day Makes).
+Every batch 3 tune was compiled individually with LilyPond and produced no
+tune-specific warnings.
 
 ## Tune inventory
 
@@ -94,29 +108,38 @@ Additional pending-review labels:
 - **Notice**: compare the per-tune notice with the referenced scan. Initial
   imports lack a recovered readable notice; additional batches retain the
   MusicXML notice without a scan comparison.
-  There are 531 tunes with this flag.
+  There are 631 tunes with this flag.
 - **Page**: locate the tune in the exact local PDF edition; only its index
-  reference is recorded. All 400 additional imports have this flag.
+  reference is recorded. All 500 additional imports have this flag.
 - **Route**: source navigation markers warrant a complete performance-order
   review. These are review prompts, not confirmed defects.
 - **Endings**: unusual/unlabeled source ending markers need comparison with
   a scan, including confirmation of normalization already made during import.
+- **Ties**: the source MusicXML ties a note to a different pitch, or to
+  nothing; the tie was dropped at the listed source measures and the
+  intended notation (tie, slur, or neither) must be checked.
 
 <!-- tune-inventory -->
 
 | Tune | Batch | Completed checks | Additional pending review |
 | --- | --- | --- | --- |
 | ['S Wonderful](../src/openbook/s_wonderful.ly.tera) | Initial 328 | M, S, B | Spacing: 7, 20, 28 |
+| [(Je suis) Seul ce soir](../src/openbook/je_suis_seul_ce_soir.ly.tera) | Batch 3 (100) | M, S, B, E | Notice; Page |
 | [(Sittin' On) The Dock of the Bay](../src/openbook/sittin_on_the_dock_of_the_bay.ly.tera) | Batch 2 (200) | M, S, B, E | Notice; Page; Route: to coda at 14, D.C. at 26, coda at 27 |
 | [502 Blues](../src/openbook/502_blues.ly.tera) | Initial 328 | M, S, B | Notice |
 | [A Blossom Fell](../src/openbook/a_blossom_fell.ly.tera) | Batch 2 (200) | M, S, B, E | Notice; Page |
+| [A Handful Of Stars](../src/openbook/a_handful_of_stars.ly.tera) | Batch 3 (100) | M, S, B, E | Notice; Page |
 | [A House Is Not A Home](../src/openbook/a_house_is_not_a_home.ly.tera) | Batch 1 (200) | M, S, B, E | Spacing: 34; Notice; Page |
 | [A Hundred Years From Today](../src/openbook/a_hundred_years_from_today.ly.tera) | Batch 2 (200) | M, S, B, E | Spacing: 8, 24; Notice; Page; Route: segno at 9, to coda at 15, D.S. at 24, coda at 25 |
 | [A Lovely Way To Spend An Evening](../src/openbook/a_lovely_way_to_spend_an_evening.ly.tera) | Batch 2 (200) | M, S, B, E | Notice; Page |
+| [A Portrait of Jennie](../src/openbook/a_portrait_of_jennie.ly.tera) | Batch 3 (100) | M, S, B, E | Notice; Page |
+| [A Pretty Girl Is Like a Melody](../src/openbook/a_pretty_girl_is_like_a_melody.ly.tera) | Batch 3 (100) | M, S, B, E | Notice; Page |
 | [A Ship Without A Sail](../src/openbook/a_ship_without_a_sail.ly.tera) | Batch 2 (200) | M, S, B, E | Notice; Page |
 | [A Sleepin' Bee](../src/openbook/a_sleepin_bee.ly.tera) | Batch 2 (200) | M, S, B, E | Spacing: 32; Notice; Page |
 | [A Song For You](../src/openbook/a_song_for_you.ly.tera) | Batch 1 (200) | M, S, B, E | Notice; Page |
+| [A Summer Place](../src/openbook/a_summer_place.ly.tera) | Batch 3 (100) | M, S, B, E | Notice; Page |
 | [A Time For Love](../src/openbook/a_time_for_love.ly.tera) | Initial 328 | M, S, B | Spacing: 8, 16, 24 |
+| [A Weaver of Dreams](../src/openbook/a_weaver_of_dreams.ly.tera) | Batch 3 (100) | M, S, B, E | Notice; Page |
 | [Ach, Du Lieber Augustin](../src/openbook/ach_du_lieber_augustin.ly.tera) | Initial 328 | M, S, B | - |
 | [Adios](../src/openbook/adios.ly.tera) | Batch 2 (200) | M, S, B, E | Spacing: 2, 6, 12, 14, 25, 27, 31, 39; Notice; Page |
 | [After the Ball](../src/openbook/after_the_ball.ly.tera) | Initial 328 | M, S, B | - |
@@ -138,6 +161,7 @@ Additional pending-review labels:
 | [Almost Like Being in Love](../src/openbook/almost_like_being_in_love.ly.tera) | Initial 328 | M, S, B | Spacing: 37 |
 | [Alone Too Long](../src/openbook/alone_too_long.ly.tera) | Batch 2 (200) | M, S, B, E | Spacing: 8, 16, 32; Notice; Page |
 | [Always And Forever](../src/openbook/always_and_forever.ly.tera) | Batch 1 (200) | M, S, B, E | Notice; Page; Route: segno at 9, to coda at 16, D.S. at 27, coda at 28 |
+| [Always in my Heart](../src/openbook/always_in_my_heart.ly.tera) | Batch 3 (100) | M, S, B, E | Notice; Page |
 | [Always True to You in my Fashion](../src/openbook/always_true_to_you_in_my_fashion.ly.tera) | Batch 2 (200) | M, S, B, E | Notice; Page |
 | [Am I Blue?](../src/openbook/am_i_blue.ly.tera) | Initial 328 | M, S, B | Spacing: 16 |
 | [American Patrol](../src/openbook/american_patrol.ly.tera) | Batch 1 (200) | M, S, B, E | Notice; Page |
@@ -155,6 +179,7 @@ Additional pending-review labels:
 | [Are You Havin' Any Fun](../src/openbook/are_you_havin_any_fun.ly.tera) | Batch 2 (200) | M, S, B, E | Spacing: 2, 8, 10, 16, 26; Notice; Page |
 | [Around The World](../src/openbook/around_the_world.ly.tera) | Batch 1 (200) | M, S, B, E | Notice; Page |
 | [Arrivederci,  Roma (Goodbye To Rome)](../src/openbook/arrivederci_roma_goodbye_to_rome.ly.tera) | Batch 2 (200) | M, S, B, E | Notice; Page |
+| [Artillerie Lourde](../src/openbook/artillerie_lourde.ly.tera) | Batch 3 (100) | M, S, B, E | Notice; Page |
 | [As Long As He Needs Me](../src/openbook/as_long_as_he_needs_me.ly.tera) | Batch 1 (200) | M, S, B, E | Notice; Page |
 | [Ask Me Now](../src/openbook/ask_me_now.ly.tera) | Initial 328 | M, S, B | Notice |
 | [At A Georgia Camp Meeting](../src/openbook/at_a_georgia_camp_meeting.ly.tera) | Batch 1 (200) | M, S, B, E | Notice; Page; Route: segno at 22, Fine at 38, D.S. at 55 |
@@ -173,6 +198,7 @@ Additional pending-review labels:
 | [Ballad of the Sad Young Men](../src/openbook/ballad_of_the_sad_young_men.ly.tera) | Batch 2 (200) | M, S, B, E | Spacing: 10, 12, 26, 28, 47, 52; Notice; Page |
 | [Baltimore Oriole](../src/openbook/baltimore_oriole.ly.tera) | Batch 1 (200) | M, S, B, E | Notice; Page |
 | [Baubles, Bangles and Beads](../src/openbook/baubles_bangles_and_beads.ly.tera) | Initial 328 | M, S, B | Notice |
+| [Be A Clown](../src/openbook/be_a_clown.ly.tera) | Batch 3 (100) | M, S, B, E | Notice; Page |
 | [Be My Love](../src/openbook/be_my_love.ly.tera) | Initial 328 | M, S, B | Notice |
 | [Beautiful Dreamer](../src/openbook/beautiful_dreamer.ly.tera) | Initial 328 | M, S, B | Route: D.C. at 27, coda at 28 |
 | [Beer Barrel Polka](../src/openbook/beer_barrel_polka.ly.tera) | Batch 1 (200) | M, S, B, E | Notice; Page |
@@ -188,16 +214,21 @@ Additional pending-review labels:
 | [Black and Blue](../src/openbook/black_and_blue.ly.tera) | Initial 328 | M, S, B | - |
 | [Black And Tan Fantasy](../src/openbook/black_and_tan_fantasy.ly.tera) | Initial 328 | M, S, B | Notice |
 | [Black Coffee](../src/openbook/black_coffee.ly.tera) | Initial 328 | M, S, B | Spacing: 8, 9, 12, 20, 24, 40, 44; Notice |
+| [Black Orpheus](../src/openbook/black_orpheus.ly.tera) | Batch 3 (100) | M, S, B, E | Notice; Page; Route: coda at 32, coda at 34 |
 | [Blame It On My Youth](../src/openbook/blame_it_on_my_youth.ly.tera) | Initial 328 | M, S, B | Spacing: 4, 8, 12, 20, 24, 28, 32 |
 | [Blue](../src/openbook/blue.ly.tera) | Batch 2 (200) | M, S, B, E | Notice; Page |
 | [Blue Gardenia](../src/openbook/blue_gardenia.ly.tera) | Initial 328 | M, S, B | Notice |
+| [Blue Hawaii](../src/openbook/blue_hawaii.ly.tera) | Batch 3 (100) | M, S, B, E | Notice; Page |
 | [Blue Moon](../src/openbook/blue_moon.ly.tera) | Initial 328 | M, S, B | - |
 | [Blue Prelude](../src/openbook/blue_prelude.ly.tera) | Batch 1 (200) | M, S, B, E | Notice; Page |
 | [Blue Star (The "Medic" Theme)](../src/openbook/blue_star_the_medic_theme.ly.tera) | Batch 2 (200) | M, S, B, E | Notice; Page |
+| [Blue Tango](../src/openbook/blue_tango.ly.tera) | Batch 3 (100) | M, S, B, E | Notice; Page |
+| [Blue Train](../src/openbook/blue_train.ly.tera) | Batch 3 (100) | M, S, B, E | Notice; Page |
 | [Bluebird](../src/openbook/bluebird.ly.tera) | Batch 1 (200) | M, S, B, E | Notice; Page |
 | [Blues By Five](../src/openbook/blues_by_five.ly.tera) | Initial 328 | M, S, B | Notice |
 | [Blues My Naughty Sweetie Gives to Me](../src/openbook/blues_my_naughty_sweetie_gives_to_me.ly.tera) | Initial 328 | M, S, B | - |
 | [Bohemia After Dark](../src/openbook/bohemia_after_dark.ly.tera) | Initial 328 | M, S, B | Spacing: 17; Notice; Route: D.C. at 21, Fine at 22 |
+| [Boogie woogie bugle boy](../src/openbook/boogie_woogie_bugle_boy.ly.tera) | Batch 3 (100) | M, S, B, E | Notice; Page |
 | [Bouncin' with Bud](../src/openbook/bouncin_with_bud.ly.tera) | Initial 328 | M, S, B, A, E, I | - |
 | [Bourbon Street Parade](../src/openbook/bourbon_street_parade.ly.tera) | Batch 1 (200) | M, S, B, E | Notice; Page |
 | [Brazil](../src/openbook/brazil.ly.tera) | Batch 1 (200) | M, S, B, E | Spacing: 2, 3, 6, 7, 10, 11, 14, 48, 50, 52, 54, 56, 57, 58, 60; Notice; Page |
@@ -214,6 +245,7 @@ Additional pending-review labels:
 | [Can't Smile Without You](../src/openbook/cant_smile_without_you.ly.tera) | Batch 1 (200) | M, S, B, E | Notice; Page |
 | [Can't We Be Friends?](../src/openbook/cant_we_be_friends.ly.tera) | Initial 328 | M, S, B | Spacing: 8, 16, 23, 24, 32, 33; Notice |
 | [Can't We Talk It Over](../src/openbook/cant_we_talk_it_over.ly.tera) | Initial 328 | M, S, B | Notice |
+| [Canadian Sunset](../src/openbook/canadian_sunset.ly.tera) | Batch 3 (100) | M, S, B, E | Notice; Page; Route: "D.C." at 50 |
 | [Careless Love](../src/openbook/careless_love.ly.tera) | Initial 328 | M, S, B | - |
 | [Cast Your Fate To The Wind](../src/openbook/cast_your_fate_to_the_wind.ly.tera) | Batch 2 (200) | M, S, B, E | Notice; Page; Route: segno at 39 |
 | [Centerpiece](../src/openbook/centerpiece.ly.tera) | Batch 2 (200) | M, S, B, E | Notice; Page |
@@ -222,12 +254,15 @@ Additional pending-review labels:
 | [Change Partners](../src/openbook/change_partners.ly.tera) | Batch 2 (200) | M, S, B, E | Spacing: 32, 36; Notice; Page |
 | [Charade](../src/openbook/charade.ly.tera) | Initial 328 | M, S, B | - |
 | [Chattanooga Choo-Choo](../src/openbook/chattanooga_choo_choo.ly.tera) | Batch 1 (200) | M, S, B, E | Notice; Page |
+| [Cherry Pink And Apple Blossom White](../src/openbook/cherry_pink_and_apple_blossom_white.ly.tera) | Batch 3 (100) | M, S, B, E | Notice; Page; Route: segno at 2, "To Coda" at 7, "D.S. al Coda" at 24, coda at 25 |
 | [Chicago](../src/openbook/chicago.ly.tera) | Initial 328 | M, S, B | - |
 | [China Boy](../src/openbook/china_boy.ly.tera) | Initial 328 | M, S, B | - |
 | [Chinatown, My Chinatown](../src/openbook/chinatown_my_chinatown.ly.tera) | Batch 1 (200) | M, S, B, E | Notice; Page |
 | [Chloe](../src/openbook/chloe.ly.tera) | Initial 328 | M, S, B | Spacing: 10 |
 | [Choucoune](../src/openbook/choucoune.ly.tera) | Initial 328 | M, S, B | - |
+| [Christmas Time Is Here](../src/openbook/christmas_time_is_here.ly.tera) | Batch 3 (100) | M, S, B, E | Notice; Page |
 | [Ciao, ciao, bambino](../src/openbook/ciao_ciao_bambino.ly.tera) | Batch 1 (200) | M, S, B, E | Notice; Page |
+| [Cielito Lindo](../src/openbook/cielito_lindo.ly.tera) | Batch 3 (100) | M, S, B, E | Notice; Page |
 | [Ciribiribin](../src/openbook/ciribiribin.ly.tera) | Batch 1 (200) | M, S, B, E | Notice; Page |
 | [Civilization (Bongo, Bongo, Bongo)](../src/openbook/civilization_bongo_bongo_bongo.ly.tera) | Batch 2 (200) | M, S, B, E | Notice; Page |
 | [Clarinet polka](../src/openbook/clarinet_polka.ly.tera) | Batch 1 (200) | M, S, B, E | Notice; Page |
@@ -250,6 +285,7 @@ Additional pending-review labels:
 | [Daisy Bell](../src/openbook/daisy_bell.ly.tera) | Initial 328 | M, S, B | - |
 | [Dancing In The Dark](../src/openbook/dancing_in_the_dark.ly.tera) | Batch 1 (200) | M, S, B, E | Spacing: 31; Notice; Page |
 | [Danny Boy](../src/openbook/danny_boy.ly.tera) | Batch 1 (200) | M, S, B, E | Notice; Page |
+| [Dansero](../src/openbook/dansero.ly.tera) | Batch 3 (100) | M, S, B, E | Notice; Page |
 | [Dardanella](../src/openbook/dardanella.ly.tera) | Initial 328 | M, S, B | - |
 | [Dark Eyes](../src/openbook/dark_eyes.ly.tera) | Initial 328 | M, S, B | - |
 | [Darktown Strutters' Ball](../src/openbook/darktown_strutters_ball.ly.tera) | Initial 328 | M, S, B | - |
@@ -257,6 +293,7 @@ Additional pending-review labels:
 | [Day by Day](../src/openbook/day_by_day.ly.tera) | Initial 328 | M, S, B | Notice |
 | [Day Dream](../src/openbook/day_dream.ly.tera) | Initial 328 | M, S, B | - |
 | [Day in, Day out](../src/openbook/day_in_day_out.ly.tera) | Initial 328 | M, S, B | Notice |
+| [Dear Heart](../src/openbook/dear_heart.ly.tera) | Batch 3 (100) | M, S, B, E | Notice; Page |
 | [Deck the Halls](../src/openbook/deck_the_halls.ly.tera) | Initial 328 | M, S, B | - |
 | [Dedicated To You](../src/openbook/dedicated_to_you.ly.tera) | Batch 1 (200) | M, S, B, E | Spacing: 6, 14, 16, 20, 32; Notice; Page |
 | [Deep Purple](../src/openbook/deep_purple.ly.tera) | Initial 328 | M, S, B | - |
@@ -279,15 +316,18 @@ Additional pending-review labels:
 | [Doodle-Doo-Doo](../src/openbook/doodle_doo_doo.ly.tera) | Initial 328 | M, S, B | - |
 | [Down Among The Sheltering Palms](../src/openbook/down_among_the_sheltering_palms.ly.tera) | Batch 1 (200) | M, S, B, E | Notice; Page |
 | [Down With Love](../src/openbook/down_with_love.ly.tera) | Batch 2 (200) | M, S, B, E | Notice; Page |
+| [Dream](../src/openbook/dream.ly.tera) | Batch 3 (100) | M, S, B, E | Notice; Page |
 | [Dream a Little Dream of Me](../src/openbook/dream_a_little_dream_of_me.ly.tera) | Initial 328 | M, S, B | - |
 | [Dream Dancing](../src/openbook/dream_dancing.ly.tera) | Initial 328 | M, S, B | Spacing: 52; Notice |
 | [Dreamsville](../src/openbook/dreamsville.ly.tera) | Batch 1 (200) | M, S, B, E | Spacing: 6, 14, 30; Notice; Page |
 | [Drink to Me Only with Thine Eyes](../src/openbook/drink_to_me_only_with_thine_eyes.ly.tera) | Initial 328 | M, S, B | - |
 | [Easy Street](../src/openbook/easy_street.ly.tera) | Batch 1 (200) | M, S, B, E | Notice; Page |
+| [Ebb Tide](../src/openbook/ebb_tide.ly.tera) | Batch 3 (100) | M, S, B, E | Notice; Page |
 | [Edelweiss](../src/openbook/edelweiss.ly.tera) | Batch 1 (200) | M, S, B, E | Notice; Page |
 | [Eight Days A Week](../src/openbook/eight_days_a_week.ly.tera) | Batch 1 (200) | M, S, B, E | Notice; Page; Route: to coda at 16, D.S. at 25, coda at 26 |
 | [El Choclo](../src/openbook/el_choclo.ly.tera) | Initial 328 | M, S, B | Endings: 25, 34 |
 | [El Relicario](../src/openbook/el_relicario.ly.tera) | Batch 1 (200) | M, S, B, E | Notice; Page |
+| [Eleanor Rigby](../src/openbook/eleanor_rigby.ly.tera) | Batch 3 (100) | M, S, B, E | Notice; Page |
 | [Elvira](../src/openbook/elvira.ly.tera) | Batch 1 (200) | M, S, B, E | Notice; Page |
 | [Embraceable You](../src/openbook/embraceable_you.ly.tera) | Initial 328 | M, S, B | Spacing: 4, 12, 16, 20, 24, 31, 32 |
 | [Emily](../src/openbook/emily.ly.tera) | Initial 328 | M, S, B | - |
@@ -297,6 +337,7 @@ Additional pending-review labels:
 | [Evergreen](../src/openbook/evergreen.ly.tera) | Batch 1 (200) | M, S, B, E | Spacing: 44; Notice; Page |
 | [Everything I Have Is Yours](../src/openbook/everything_i_have_is_yours.ly.tera) | Initial 328 | M, S, B | Spacing: 16 |
 | [Exodus](../src/openbook/exodus.ly.tera) | Batch 1 (200) | M, S, B, E | Notice; Page |
+| [Falling In Love Again](../src/openbook/falling_in_love_again.ly.tera) | Batch 3 (100) | M, S, B, E | Notice; Page |
 | [Farmer's Market](../src/openbook/farmers_market.ly.tera) | Batch 2 (200) | M, S, B, E | Notice; Page; Route: segno at 6, Fine at 28 |
 | [Fascinating Rhythm](../src/openbook/fascinating_rhythm.ly.tera) | Initial 328 | M, S, B | Spacing: 8, 24 |
 | [Fascination](../src/openbook/fascination.ly.tera) | Batch 1 (200) | M, S, B, E | Spacing: 8, 24; Notice; Page |
@@ -311,12 +352,14 @@ Additional pending-review labels:
 | [For The Good Times](../src/openbook/for_the_good_times.ly.tera) | Batch 1 (200) | M, S, B, E | Spacing: 34; Notice; Page |
 | [Four on Six](../src/openbook/four_on_six.ly.tera) | Initial 328 | M, S, B | Notice |
 | [Frenesi](../src/openbook/frenesi.ly.tera) | Batch 1 (200) | M, S, B, E | Spacing: 32; Notice; Page |
+| [From A Distance](../src/openbook/from_a_distance.ly.tera) | Batch 3 (100) | M, S, B, E | Notice; Page |
 | [Full Moon And Empty Arms](../src/openbook/full_moon_and_empty_arms.ly.tera) | Initial 328 | M, S, B | Spacing: 3, 7, 13, 19, 23, 31; Notice |
 | [Fun To Be Fooled](../src/openbook/fun_to_be_fooled.ly.tera) | Batch 1 (200) | M, S, B, E | Notice; Page |
 | [Funny girl](../src/openbook/funny_girl.ly.tera) | Batch 2 (200) | M, S, B, E | Notice; Page |
 | [Get Happy](../src/openbook/get_happy.ly.tera) | Initial 328 | M, S, B | Spacing: 33 |
 | [Get Me to the Church on Time](../src/openbook/get_me_to_the_church_on_time.ly.tera) | Batch 2 (200) | M, S, B, E | Notice; Page |
 | [Gigi](../src/openbook/gigi.ly.tera) | Batch 2 (200) | M, S, B, E | Notice; Page |
+| [Gingerbread Boy](../src/openbook/gingerbread_boy.ly.tera) | Batch 3 (100) | M, S, B, E | Notice; Page |
 | [Girl Of My Dreams (I Love You)](../src/openbook/girl_of_my_dreams_i_love_you.ly.tera) | Batch 2 (200) | M, S, B, E | Spacing: 24, 34; Notice; Page |
 | [Give Me the Simple Life](../src/openbook/give_me_the_simple_life.ly.tera) | Batch 1 (200) | M, S, B, E | Notice; Page |
 | [Give My Regards To Broadway](../src/openbook/give_my_regards_to_broadway.ly.tera) | Batch 2 (200) | M, S, B, E | Notice; Page |
@@ -326,20 +369,27 @@ Additional pending-review labels:
 | [Gonna Build A Mountain](../src/openbook/gonna_build_a_mountain.ly.tera) | Batch 2 (200) | M, S, B, E | Notice; Page |
 | [Good Morning Heartache](../src/openbook/good_morning_heartache.ly.tera) | Initial 328 | M, S, B | Spacing: 8 |
 | [Goodbye](../src/openbook/goodbye.ly.tera) | Initial 328 | M, S, B | Spacing: 18; Notice |
+| [Goodnight Sweetheart](../src/openbook/goodnight_sweetheart.ly.tera) | Batch 3 (100) | M, S, B, E | Notice; Page |
 | [Green Eyes](../src/openbook/green_eyes.ly.tera) | Batch 1 (200) | M, S, B, E | Spacing: 24, 32; Notice; Page |
+| [Gregory is Here](../src/openbook/gregory_is_here.ly.tera) | Batch 3 (100) | M, S, B, E | Notice; Page; Ties: 23 |
 | [Groove Merchant](../src/openbook/groove_merchant.ly.tera) | Initial 328 | M, S, B | Notice |
 | [Guantanamera](../src/openbook/guantanamera.ly.tera) | Batch 1 (200) | M, S, B, E | Spacing: 4, 21; Notice; Page; Route: to coda at 7, coda at 21 |
 | [Guess I'll Hang My Tears Out To Dry](../src/openbook/guess_ill_hang_my_tears_out_to_dry.ly.tera) | Batch 2 (200) | M, S, B, E | Spacing: 4, 12, 28; Notice; Page |
 | [Guys And Dolls](../src/openbook/guys_and_dolls.ly.tera) | Batch 2 (200) | M, S, B, E | Spacing: 8, 24, 34; Notice; Page |
 | [Happiness Is A Thing Called Joe](../src/openbook/happiness_is_a_thing_called_joe.ly.tera) | Batch 1 (200) | M, S, B, E | Spacing: 17; Notice; Page |
 | [Happy Days Are Here Again](../src/openbook/happy_days_are_here_again.ly.tera) | Initial 328 | M, S, B | Route: segno at 3, Fine at 19 |
+| [Harbor Lights](../src/openbook/harbor_lights.ly.tera) | Batch 3 (100) | M, S, B, E | Notice; Page |
 | [Hard Times Come Again No More](../src/openbook/hard_times_come_again_no_more.ly.tera) | Initial 328 | M, S, B | - |
 | [Haunted Ballroom](../src/openbook/haunted_ballroom.ly.tera) | Initial 328 | M, S, B | Notice; Route: Fine at 8, D.C. at 24 |
+| [Hava Nagilah](../src/openbook/hava_nagilah.ly.tera) | Batch 3 (100) | M, S, B, E | Notice; Page; Route: "Fine" at 8, "D.C. al Fine" at 32; Ties: 3 |
+| [Have Yourself A Merry Little Christmas](../src/openbook/have_yourself_a_merry_little_christmas.ly.tera) | Batch 3 (100) | M, S, B, E | Notice; Page |
 | [He Was Too Good To Me](../src/openbook/he_was_too_good_to_me.ly.tera) | Initial 328 | M, S, B | Spacing: 6, 16, 20, 23, 25, 27, 32, 36, 39, 40, 45; Notice |
 | [Heat Wave](../src/openbook/heat_wave.ly.tera) | Batch 1 (200) | M, S, B, E | Notice; Page |
+| [Helena Polka](../src/openbook/helena_polka.ly.tera) | Batch 3 (100) | M, S, B, E | Notice; Page |
 | [Hello! Ma Baby](../src/openbook/hello_ma_baby.ly.tera) | Initial 328 | M, S, B | - |
 | [Hey there](../src/openbook/hey_there.ly.tera) | Initial 328 | M, S, B | Route: to coda at 5, coda at 17 |
 | [Hey, Look Me Over](../src/openbook/hey_look_me_over.ly.tera) | Batch 1 (200) | M, S, B, E | Notice; Page |
+| [High Hopes](../src/openbook/high_hopes.ly.tera) | Batch 3 (100) | M, S, B, E | Notice; Page; Ties: 12 |
 | [Hindustan](../src/openbook/hindustan.ly.tera) | Initial 328 | M, S, B | - |
 | [Hokey Pokey](../src/openbook/hokey_pokey.ly.tera) | Batch 2 (200) | M, S, B, E | Notice; Page |
 | [Home](../src/openbook/home.ly.tera) | Batch 1 (200) | M, S, B, E | Spacing: 1, 2, 3, 4, 30, 31, 32; Notice; Page; Route: segno at 13, to coda at 21, D.S. at 33, coda at 34 |
@@ -369,6 +419,7 @@ Additional pending-review labels:
 | [I Hear a Rhapsody](../src/openbook/i_hear_a_rhapsody.ly.tera) | Initial 328 | M, S, B | Spacing: 21 |
 | [I Hear Music](../src/openbook/i_hear_music.ly.tera) | Initial 328 | M, S, B | Notice |
 | [I Know That You Know](../src/openbook/i_know_that_you_know.ly.tera) | Initial 328 | M, S, B | - |
+| [I Like The Likes Of You](../src/openbook/i_like_the_likes_of_you.ly.tera) | Batch 3 (100) | M, S, B, E | Notice; Page |
 | [I may be wrong](../src/openbook/i_may_be_wrong.ly.tera) | Batch 1 (200) | M, S, B, E | Notice; Page |
 | [I Only Have Eyes For You](../src/openbook/i_only_have_eyes_for_you.ly.tera) | Initial 328 | M, S, B | Spacing: 4, 8, 53; Notice |
 | [I Remember It Well](../src/openbook/i_remember_it_well.ly.tera) | Batch 2 (200) | M, S, B, E | Notice; Page; Route: Fine at 32 |
@@ -387,6 +438,7 @@ Additional pending-review labels:
 | [I Won't Send Roses](../src/openbook/i_wont_send_roses.ly.tera) | Batch 2 (200) | M, S, B, E | Notice; Page |
 | [I Wonder Where My Baby Is Tonight](../src/openbook/i_wonder_where_my_baby_is_tonight.ly.tera) | Initial 328 | M, S, B | - |
 | [I Write the Songs](../src/openbook/i_write_the_songs.ly.tera) | Batch 2 (200) | M, S, B, E | Notice; Page |
+| [I'll Be Home For Christmas](../src/openbook/ill_be_home_for_christmas.ly.tera) | Batch 3 (100) | M, S, B, E | Notice; Page |
 | [I'll Build A Stairway To Paradise](../src/openbook/ill_build_a_stairway_to_paradise.ly.tera) | Batch 2 (200) | M, S, B, E | Spacing: 8, 16, 17; Notice; Page |
 | [I'll Never Stop Loving You](../src/openbook/ill_never_stop_loving_you.ly.tera) | Batch 1 (200) | M, S, B, E | Spacing: 5, 6, 24; Notice; Page |
 | [I'll See You In My Dreams](../src/openbook/ill_see_you_in_my_dreams.ly.tera) | Initial 328 | M, S, B | - |
@@ -456,10 +508,14 @@ Additional pending-review labels:
 | [June in January](../src/openbook/june_in_january.ly.tera) | Batch 2 (200) | M, S, B, E | Spacing: 21, 32, 34; Notice; Page |
 | [Just A Gigolo](../src/openbook/just_a_gigolo.ly.tera) | Batch 1 (200) | M, S, B, E | Notice; Page |
 | [Just Squeeze Me](../src/openbook/just_squeeze_me.ly.tera) | Initial 328 | M, S, B | - |
+| [Just The Way You Are](../src/openbook/just_the_way_you_are.ly.tera) | Batch 3 (100) | M, S, B, E | Notice; Page; Route: segno at 89, "voice tacet on D.S." at 89, coda at 100, "D.S. al Coda" at 106, coda at 107, "Coda" at 107 |
 | [Just You, Just Me](../src/openbook/just_you_just_me.ly.tera) | Initial 328 | M, S, B | Spacing: 18 |
 | [King Of The Road](../src/openbook/king_of_the_road.ly.tera) | Batch 2 (200) | M, S, B, E | Notice; Page; Route: Fine at 16, D.C. at 25 |
+| [Kiss Of Fire](../src/openbook/kiss_of_fire.ly.tera) | Batch 3 (100) | M, S, B, E | Notice; Page |
 | [L-O-V-E](../src/openbook/l_o_v_e.ly.tera) | Batch 2 (200) | M, S, B, E | Notice; Page |
 | [La Comparsa](../src/openbook/la_comparsa.ly.tera) | Batch 1 (200) | M, S, B, E | Notice; Page |
+| [La Cumparsita](../src/openbook/la_cumparsita.ly.tera) | Batch 3 (100) | M, S, B, E | Notice; Page; Route: "(fine)" at 18, "D.C.alfine" at 34 |
+| [La Paloma](../src/openbook/la_paloma.ly.tera) | Batch 3 (100) | M, S, B, E | Notice; Page |
 | [Lady Sings The Blues](../src/openbook/lady_sings_the_blues.ly.tera) | Batch 1 (200) | M, S, B, E | Spacing: 32; Notice; Page |
 | [Last Night When We Were Young](../src/openbook/last_night_when_we_were_young.ly.tera) | Batch 2 (200) | M, S, B, E | Notice; Page |
 | [Lazy River](../src/openbook/lazy_river.ly.tera) | Batch 2 (200) | M, S, B, E | Notice; Page |
@@ -476,6 +532,7 @@ Additional pending-review labels:
 | [Little B's Poem](../src/openbook/little_bs_poem.ly.tera) | Initial 328 | M, S, B | Notice |
 | [Little Rootie Tootie](../src/openbook/little_rootie_tootie.ly.tera) | Initial 328 | M, S, B | Notice |
 | [Little White Lies](../src/openbook/little_white_lies.ly.tera) | Initial 328 | M, S, B | Spacing: 33 |
+| [Little Willie Leaps](../src/openbook/little_willie_leaps.ly.tera) | Batch 3 (100) | M, S, B, E | Notice; Page |
 | [Liza (All the Clouds'll Roll Away)](../src/openbook/liza_all_the_cloudsll_roll_away.ly.tera) | Initial 328 | M, S, B | Spacing: 15, 16, 18, 22, 26, 30, 34, 35, 38, 39, 46, 50 |
 | [Lonnie's Lament](../src/openbook/lonnies_lament.ly.tera) | Initial 328 | M, S, B, A, E | Notice |
 | [Lookin' For Love](../src/openbook/lookin_for_love.ly.tera) | Batch 2 (200) | M, S, B, E | Notice; Page |
@@ -487,8 +544,10 @@ Additional pending-review labels:
 | [Love Letters](../src/openbook/love_letters.ly.tera) | Batch 1 (200) | M, S, B, E | Spacing: 12, 16, 24, 31; Notice; Page |
 | [Love Makes The World Go Round](../src/openbook/love_makes_the_world_go_round.ly.tera) | Batch 2 (200) | M, S, B, E | Notice; Page |
 | [Love Me Or Leave Me](../src/openbook/love_me_or_leave_me.ly.tera) | Initial 328 | M, S, B | Spacing: 15, 24, 32, 33 |
+| [Love Story](../src/openbook/love_story.ly.tera) | Batch 3 (100) | M, S, B, E | Notice; Page |
 | [Love You Madly](../src/openbook/love_you_madly.ly.tera) | Batch 2 (200) | M, S, B, E | Notice; Page |
 | [Lovely Hula Hands](../src/openbook/lovely_hula_hands.ly.tera) | Batch 2 (200) | M, S, B, E | Notice; Page |
+| [Lover](../src/openbook/lover.ly.tera) | Batch 3 (100) | M, S, B, E | Notice; Page |
 | [Lover, Come Back To Me](../src/openbook/lover_come_back_to_me.ly.tera) | Batch 1 (200) | M, S, B, E | Notice; Page |
 | [Lucky to Be Me](../src/openbook/lucky_to_be_me.ly.tera) | Batch 1 (200) | M, S, B, E | Notice; Page |
 | [Lulu's Back in Town](../src/openbook/lulus_back_in_town.ly.tera) | Initial 328 | M, S, B | Spacing: 17; Notice |
@@ -516,8 +575,10 @@ Additional pending-review labels:
 | [Minority](../src/openbook/minority.ly.tera) | Initial 328 | M, S, B | Notice |
 | [Misirlou](../src/openbook/misirlou.ly.tera) | Batch 2 (200) | M, S, B, E | Notice; Page |
 | [Mission: Impossible Theme](../src/openbook/mission_impossible_theme.ly.tera) | Batch 2 (200) | M, S, B, E | Notice; Page |
+| [Moments To Remember](../src/openbook/moments_to_remember.ly.tera) | Batch 3 (100) | M, S, B, E | Notice; Page |
 | [Mona Lisa](../src/openbook/mona_lisa.ly.tera) | Batch 2 (200) | M, S, B, E | Spacing: 5; Notice; Page |
 | [Monk's Dream](../src/openbook/monks_dream.ly.tera) | Batch 1 (200) | M, S, B, E | Notice; Page |
+| [Monk's Mood](../src/openbook/monks_mood.ly.tera) | Batch 3 (100) | M, S, B, E | Notice; Page; Ties: 22 |
 | [Moon and Sand](../src/openbook/moon_and_sand.ly.tera) | Initial 328 | M, S, B | Spacing: 1, 5, 7, 8, 15, 19, 29, 31, 32, 39, 40 |
 | [Moon Over Miami](../src/openbook/moon_over_miami.ly.tera) | Batch 2 (200) | M, S, B, E | Spacing: 20, 24; Notice; Page |
 | [Moondance](../src/openbook/moondance.ly.tera) | Batch 1 (200) | M, S, B, E | Notice; Page |
@@ -540,6 +601,7 @@ Additional pending-review labels:
 | [My Life](../src/openbook/my_life.ly.tera) | Batch 2 (200) | M, S, B, E | Notice; Page |
 | [My Old Flame](../src/openbook/my_old_flame.ly.tera) | Initial 328 | M, S, B | Notice |
 | [My Silent Love](../src/openbook/my_silent_love.ly.tera) | Batch 1 (200) | M, S, B, E | Spacing: 7, 8, 16, 20, 24, 31, 32, 33; Notice; Page |
+| [My Way](../src/openbook/my_way.ly.tera) | Batch 3 (100) | M, S, B, E | Notice; Page |
 | [My Wild Irish Rose](../src/openbook/my_wild_irish_rose.ly.tera) | Batch 2 (200) | M, S, B, E | Notice; Page |
 | [Nagasaki](../src/openbook/nagasaki.ly.tera) | Batch 1 (200) | M, S, B, E | Notice; Page |
 | [Nancy](../src/openbook/nancy.ly.tera) | Batch 1 (200) | M, S, B, E | Notice; Page |
@@ -559,11 +621,13 @@ Additional pending-review labels:
 | [Now It Can Be Told](../src/openbook/now_it_can_be_told.ly.tera) | Batch 2 (200) | M, S, B, E | Notice; Page |
 | [Nuages](../src/openbook/nuages.ly.tera) | Batch 1 (200) | M, S, B, E | Notice; Page |
 | [O Christmas Tree](../src/openbook/o_christmas_tree.ly.tera) | Initial 328 | M, S, B | - |
+| [O Sole Mio](../src/openbook/o_sole_mio.ly.tera) | Batch 3 (100) | M, S, B, E | Notice; Page |
 | [Oh My Darling, Clementine](../src/openbook/oh_my_darling_clementine.ly.tera) | Initial 328 | M, S, B | - |
 | [Oh, Lady Be Good!](../src/openbook/oh_lady_be_good.ly.tera) | Initial 328 | M, S, B | Spacing: 31, 33 |
 | [Oh, You Crazy Moon](../src/openbook/oh_you_crazy_moon.ly.tera) | Batch 1 (200) | M, S, B, E | Spacing: 4, 12, 28; Notice; Page |
 | [Okie from Muskogee](../src/openbook/okie_from_muskogee.ly.tera) | Batch 2 (200) | M, S, B, E | Notice; Page |
 | [Oklahoma](../src/openbook/oklahoma.ly.tera) | Batch 2 (200) | M, S, B, E | Spacing: 39, 47, 51, 56; Notice; Page |
+| [Old Cape Cod](../src/openbook/old_cape_cod.ly.tera) | Batch 3 (100) | M, S, B, E | Notice; Page |
 | [On A Misty Night](../src/openbook/on_a_misty_night.ly.tera) | Batch 2 (200) | M, S, B, E | Spacing: 7, 15, 30, 31; Notice; Page; Route: segno at 1, to coda at 28, D.S. at 32, coda at 33 |
 | [On Broadway](../src/openbook/on_broadway.ly.tera) | Batch 2 (200) | M, S, B, E | Spacing: 4; Notice; Page |
 | [On the Alamo](../src/openbook/on_the_alamo.ly.tera) | Initial 328 | M, S, B | - |
@@ -573,6 +637,7 @@ Additional pending-review labels:
 | [Once In Love With Amy](../src/openbook/once_in_love_with_amy.ly.tera) | Batch 2 (200) | M, S, B, E | Notice; Page |
 | [One](../src/openbook/one.ly.tera) | Batch 2 (200) | M, S, B, E | Spacing: 16; Notice; Page |
 | [One For My Baby](../src/openbook/one_for_my_baby.ly.tera) | Initial 328 | M, S, B | Spacing: 5, 13, 21, 25, 29, 37, 45, 49, 53, 56, 59; Notice |
+| [Our Day Will Come](../src/openbook/our_day_will_come.ly.tera) | Batch 3 (100) | M, S, B, E | Notice; Page |
 | [Our Delight](../src/openbook/our_delight.ly.tera) | Initial 328 | M, S, B | Notice |
 | [Out Of My Dreams](../src/openbook/out_of_my_dreams.ly.tera) | Batch 2 (200) | M, S, B, E | Notice; Page; Route: Fine at 44, D.C. at 78 |
 | [Out of This World](../src/openbook/out_of_this_world.ly.tera) | Initial 328 | M, S, B | - |
@@ -583,6 +648,7 @@ Additional pending-review labels:
 | [Peg O' My Heart](../src/openbook/peg_o_my_heart.ly.tera) | Batch 2 (200) | M, S, B, E | Notice; Page |
 | [Pennsylvania 6-5000](../src/openbook/pennsylvania_6_5000.ly.tera) | Batch 2 (200) | M, S, B, E | Notice; Page |
 | [Pennsylvania Polka](../src/openbook/pennsylvania_polka.ly.tera) | Batch 2 (200) | M, S, B, E | Notice; Page |
+| [Penny Arcade](../src/openbook/penny_arcade.ly.tera) | Batch 3 (100) | M, S, B, E | Notice; Page; Ties: 8 |
 | [Pent-Up House](../src/openbook/pent_up_house.ly.tera) | Initial 328 | M, S, B | Notice |
 | [Penthouse Serenade](../src/openbook/penthouse_serenade.ly.tera) | Batch 2 (200) | M, S, B, E | Notice; Page |
 | [Perfidia](../src/openbook/perfidia.ly.tera) | Batch 2 (200) | M, S, B, E | Notice; Page |
@@ -596,6 +662,8 @@ Additional pending-review labels:
 | [Pretty Baby](../src/openbook/pretty_baby.ly.tera) | Batch 1 (200) | M, S, B, E | Notice; Page |
 | [Pussy Cat Dues](../src/openbook/pussy_cat_dues.ly.tera) | Initial 328 | M, S, B | Notice |
 | [Puttin' on the Ritz](../src/openbook/puttin_on_the_ritz.ly.tera) | Initial 328 | M, S, B | Spacing: 16, 23, 31, 48, 49 |
+| [Quando, Quando, Quando (Tell Me When)](../src/openbook/quando_quando_quando_tell_me_when.ly.tera) | Batch 3 (100) | M, S, B, E | Notice; Page |
+| [Que Sera, Sera](../src/openbook/que_sera_sera.ly.tera) | Batch 3 (100) | M, S, B, E | Notice; Page |
 | [Question Mark](../src/openbook/question_mark.ly.tera) | Batch 1 (200) | M, S, B, E | Notice; Page; Route: segno at 2, Fine at 5, D.S. at 14 |
 | [Rainbow Connection](../src/openbook/rainbow_connection.ly.tera) | Batch 2 (200) | M, S, B, E | Notice; Page |
 | [Ramblin' Rose](../src/openbook/ramblin_rose.ly.tera) | Batch 2 (200) | M, S, B, E | Notice; Page |
@@ -615,11 +683,14 @@ Additional pending-review labels:
 | [Runnin' Wild](../src/openbook/runnin_wild.ly.tera) | Initial 328 | M, S, B | - |
 | [Russian Lullaby](../src/openbook/russian_lullaby.ly.tera) | Initial 328 | M, S, B | - |
 | [S'posin'](../src/openbook/sposin.ly.tera) | Batch 2 (200) | M, S, B, E | Notice; Page |
+| [Sabor A Mi](../src/openbook/sabor_a_mi.ly.tera) | Batch 3 (100) | M, S, B, E | Notice; Page |
 | [San Antonio Rose](../src/openbook/san_antonio_rose.ly.tera) | Batch 2 (200) | M, S, B, E | Notice; Page |
 | [San Francisco](../src/openbook/san_francisco.ly.tera) | Batch 2 (200) | M, S, B, E | Spacing: 15, 20, 24; Notice; Page |
 | [San Francisco Bay Blues](../src/openbook/san_francisco_bay_blues.ly.tera) | Batch 1 (200) | M, S, B, E | Notice; Page |
 | [Sandu](../src/openbook/sandu.ly.tera) | Initial 328 | M, S, B | Notice; Route: to coda at 10, coda at 28 |
 | [Save Your Love For Me](../src/openbook/save_your_love_for_me.ly.tera) | Initial 328 | M, S, B | - |
+| [Say It With Music](../src/openbook/say_it_with_music.ly.tera) | Batch 3 (100) | M, S, B, E | Notice; Page |
+| [Scotch and Soda](../src/openbook/scotch_and_soda.ly.tera) | Batch 3 (100) | M, S, B, E | Notice; Page |
 | [Secret Love](../src/openbook/secret_love.ly.tera) | Initial 328 | M, S, B | Notice |
 | [See See Rider](../src/openbook/see_see_rider.ly.tera) | Batch 1 (200) | M, S, B, E | Spacing: 19, 20, 23, 24, 25, 26; Notice; Page |
 | [Seems Like Old Times](../src/openbook/seems_like_old_times.ly.tera) | Batch 1 (200) | M, S, B, E | Spacing: 9, 16, 48, 50; Notice; Page |
@@ -629,12 +700,16 @@ Additional pending-review labels:
 | [Seventy Six Trombones](../src/openbook/seventy_six_trombones.ly.tera) | Batch 2 (200) | M, S, B, E | Notice; Page |
 | [Shall we Dance](../src/openbook/shall_we_dance.ly.tera) | Batch 2 (200) | M, S, B, E | Notice; Page |
 | [Shchedryk](../src/openbook/shchedryk.ly.tera) | Initial 328 | M, S, B | - |
+| [Shine On Harvest Moon](../src/openbook/shine_on_harvest_moon.ly.tera) | Batch 3 (100) | M, S, B, E | Notice; Page |
+| [Silver Bells](../src/openbook/silver_bells.ly.tera) | Batch 3 (100) | M, S, B, E | Notice; Page; Ties: 36 |
 | [Silver Dollar](../src/openbook/silver_dollar.ly.tera) | Batch 1 (200) | M, S, B, E | Notice; Page |
 | [Simone](../src/openbook/simone.ly.tera) | Initial 328 | M, S, B | Notice |
 | [Since I Fell For You](../src/openbook/since_i_fell_for_you.ly.tera) | Initial 328 | M, S, B | Spacing: 1, 3, 5, 7, 9, 11, 13, 26, 28, 30, 33 |
+| [Sing](../src/openbook/sing.ly.tera) | Batch 3 (100) | M, S, B, E | Notice; Page |
 | [Sing You Sinners](../src/openbook/sing_you_sinners.ly.tera) | Batch 1 (200) | M, S, B, E | Notice; Page |
 | [Sixteen Going On Seventeen](../src/openbook/sixteen_going_on_seventeen.ly.tera) | Batch 2 (200) | M, S, B, E | Spacing: 4, 18; Notice; Page |
 | [Sleepy Time Gal](../src/openbook/sleepy_time_gal.ly.tera) | Initial 328 | M, S, B | Spacing: 32 |
+| [Sleigh Ride](../src/openbook/sleigh_ride.ly.tera) | Batch 3 (100) | M, S, B, E | Notice; Page |
 | [Slow Hot Wind](../src/openbook/slow_hot_wind.ly.tera) | Initial 328 | M, S, B | Notice |
 | [Small Fry](../src/openbook/small_fry.ly.tera) | Initial 328 | M, S, B | Notice |
 | [Smile](../src/openbook/smile.ly.tera) | Batch 1 (200) | M, S, B, E | Spacing: 16, 33; Notice; Page |
@@ -652,14 +727,19 @@ Additional pending-review labels:
 | [Someone to Light up My Life](../src/openbook/someone_to_light_up_my_life.ly.tera) | Initial 328 | M, S, B | - |
 | [Something I Dreamed Last Night](../src/openbook/something_i_dreamed_last_night.ly.tera) | Batch 2 (200) | M, S, B, E | Spacing: 8, 16, 18, 20; Notice; Page |
 | [Something Wonderful](../src/openbook/something_wonderful.ly.tera) | Batch 2 (200) | M, S, B, E | Spacing: 41; Notice; Page |
+| [Something's Gotta Give](../src/openbook/somethings_gotta_give.ly.tera) | Batch 3 (100) | M, S, B, E | Notice; Page |
 | [Somewhere Along The Way](../src/openbook/somewhere_along_the_way.ly.tera) | Batch 2 (200) | M, S, B, E | Notice; Page |
+| [Song Sung Blue](../src/openbook/song_sung_blue.ly.tera) | Batch 3 (100) | M, S, B, E | Notice; Page; Route: "To Coda" at 10, "D.C. al Coda" at 20, coda at 21 |
 | [Sonnymoon for Two](../src/openbook/sonnymoon_for_two.ly.tera) | Initial 328 | M, S, B | Notice |
 | [Soon](../src/openbook/soon.ly.tera) | Initial 328 | M, S, B | - |
 | [Soon It's Gonna Rain](../src/openbook/soon_its_gonna_rain.ly.tera) | Batch 2 (200) | M, S, B, E | Spacing: 24; Notice; Page |
+| [Spanish Eyes](../src/openbook/spanish_eyes.ly.tera) | Batch 3 (100) | M, S, B, E | Notice; Page |
 | [Speak No Evil](../src/openbook/speak_no_evil.ly.tera) | Initial 328 | M, S, B | Notice |
+| [Speedball](../src/openbook/speedball.ly.tera) | Batch 3 (100) | M, S, B, E | Notice; Page |
 | [Spring Is Here](../src/openbook/spring_is_here.ly.tera) | Initial 328 | M, S, B | Spacing: 33 |
 | [St. Louis Blues](../src/openbook/st_louis_blues.ly.tera) | Initial 328 | M, S, B | Spacing: 52, 53, 56, 57 |
 | [Stairway To The Stars](../src/openbook/stairway_to_the_stars.ly.tera) | Initial 328 | M, S, B | Spacing: 7, 8, 16, 20, 24 |
+| [Star Spangled Banner](../src/openbook/star_spangled_banner.ly.tera) | Batch 3 (100) | M, S, B, E | Notice; Page |
 | [Stardreams](../src/openbook/stardreams.ly.tera) | Batch 2 (200) | M, S, B, E | Notice; Page |
 | [Stars Fell On Alabama](../src/openbook/stars_fell_on_alabama.ly.tera) | Initial 328 | M, S, B | Spacing: 7, 8, 9, 32 |
 | [Steppin' Out With My Baby](../src/openbook/steppin_out_with_my_baby.ly.tera) | Batch 2 (200) | M, S, B, E | Notice; Page |
@@ -672,6 +752,7 @@ Additional pending-review labels:
 | [Stumbling](../src/openbook/stumbling.ly.tera) | Batch 1 (200) | M, S, B, E | Notice; Page |
 | [Suddenly It's Spring](../src/openbook/suddenly_its_spring.ly.tera) | Batch 2 (200) | M, S, B, E | Notice; Page |
 | [Sugar Blues](../src/openbook/sugar_blues.ly.tera) | Initial 328 | M, S, B | - |
+| [Suicide is Painless](../src/openbook/suicide_is_painless.ly.tera) | Batch 3 (100) | M, S, B, E | Notice; Page |
 | [Sunday](../src/openbook/sunday.ly.tera) | Initial 328 | M, S, B | - |
 | [Sunday in New York](../src/openbook/sunday_in_new_york.ly.tera) | Batch 2 (200) | M, S, B, E | Spacing: 8, 24; Notice; Page |
 | [Sunny](../src/openbook/sunny.ly.tera) | Batch 1 (200) | M, S, B, E | Spacing: 4, 8; Notice; Page |
@@ -681,7 +762,9 @@ Additional pending-review labels:
 | [Sway](../src/openbook/sway.ly.tera) | Batch 2 (200) | M, S, B, E | Notice; Page |
 | [Sweet Lorraine](../src/openbook/sweet_lorraine.ly.tera) | Initial 328 | M, S, B | - |
 | [Taking A Chance On Love](../src/openbook/taking_a_chance_on_love.ly.tera) | Initial 328 | M, S, B | Spacing: 8 |
+| [Tales From The Vienna Woods](../src/openbook/tales_from_the_vienna_woods.ly.tera) | Batch 3 (100) | M, S, B, E | Notice; Page |
 | [Tangerine](../src/openbook/tangerine.ly.tera) | Initial 328 | M, S, B | Notice |
+| [Tarantella](../src/openbook/tarantella.ly.tera) | Batch 3 (100) | M, S, B, E | Notice; Page |
 | [Tea for Two](../src/openbook/tea_for_two.ly.tera) | Initial 328 | M, S, B | - |
 | [Teach Me Tonight](../src/openbook/teach_me_tonight.ly.tera) | Initial 328 | M, S, B | Spacing: 16, 32, 34 |
 | [Thanks For The Memory](../src/openbook/thanks_for_the_memory.ly.tera) | Batch 1 (200) | M, S, B, E | Spacing: 16, 32, 37; Notice; Page |
@@ -690,6 +773,7 @@ Additional pending-review labels:
 | [That Old Feeling](../src/openbook/that_old_feeling.ly.tera) | Initial 328 | M, S, B | Spacing: 16, 28, 32 |
 | [That Sunday (That Summer)](../src/openbook/that_sunday_that_summer.ly.tera) | Batch 1 (200) | M, S, B, E | Spacing: 9; Notice; Page |
 | [That's a Plenty](../src/openbook/thats_a_plenty.ly.tera) | Initial 328 | M, S, B | Route: Fine at 10, D.C. at 26 |
+| [That's Amore](../src/openbook/thats_amore.ly.tera) | Batch 3 (100) | M, S, B, E | Notice; Page |
 | [That's My Weakness Now](../src/openbook/thats_my_weakness_now.ly.tera) | Batch 1 (200) | M, S, B, E | Notice; Page |
 | [That's What Friends Are For](../src/openbook/thats_what_friends_are_for.ly.tera) | Batch 1 (200) | M, S, B, E | Notice; Page |
 | [The Anniversary Song](../src/openbook/the_anniversary_song.ly.tera) | Batch 1 (200) | M, S, B, E | Spacing: 48; Notice; Page; Route: Fine at 33, D.C. at 50 |
@@ -703,16 +787,22 @@ Additional pending-review labels:
 | [The Face I Love](../src/openbook/the_face_i_love.ly.tera) | Batch 2 (200) | M, S, B, E | Notice; Page |
 | [The Flat Foot Floogie](../src/openbook/the_flat_foot_floogie.ly.tera) | Batch 1 (200) | M, S, B, E | Notice; Page |
 | [The Folks Who Live on the Hill](../src/openbook/the_folks_who_live_on_the_hill.ly.tera) | Batch 2 (200) | M, S, B, E | Spacing: 24; Notice; Page |
+| [The Greatest Love Of All](../src/openbook/the_greatest_love_of_all.ly.tera) | Batch 3 (100) | M, S, B, E | Notice; Page |
+| [The Happy Wanderer](../src/openbook/the_happy_wanderer.ly.tera) | Batch 3 (100) | M, S, B, E | Notice; Page |
 | [The Hawaiian Wedding Song](../src/openbook/the_hawaiian_wedding_song.ly.tera) | Batch 1 (200) | M, S, B, E | Notice; Page |
 | [The Inch Worm](../src/openbook/the_inch_worm.ly.tera) | Initial 328 | M, S, B | Notice; Route: Fine at 10 |
 | [The Irish Washerwoman](../src/openbook/the_irish_washerwoman.ly.tera) | Batch 2 (200) | M, S, B, E | Notice; Page |
 | [The Japanese Sandman](../src/openbook/the_japanese_sandman.ly.tera) | Initial 328 | M, S, B | - |
 | [The Lady's In Love With You](../src/openbook/the_ladys_in_love_with_you.ly.tera) | Batch 2 (200) | M, S, B, E | Notice; Page |
+| [The Late Late Show](../src/openbook/the_late_late_show.ly.tera) | Batch 3 (100) | M, S, B, E | Notice; Page |
+| [The Little Drummer Boy](../src/openbook/the_little_drummer_boy.ly.tera) | Batch 3 (100) | M, S, B, E | Notice; Page |
 | [The Loco-motion](../src/openbook/the_loco_motion.ly.tera) | Batch 1 (200) | M, S, B, E | Notice; Page |
+| [The Look Of Love](../src/openbook/the_look_of_love.ly.tera) | Batch 3 (100) | M, S, B, E | Notice; Page |
 | [The Love Nest](../src/openbook/the_love_nest.ly.tera) | Batch 1 (200) | M, S, B, E | Notice; Page |
 | [The Lullaby Of Broadway](../src/openbook/the_lullaby_of_broadway.ly.tera) | Batch 1 (200) | M, S, B, E | Spacing: 29, 30, 37, 38; Notice; Page |
 | [The Man on the Flying Trapeze](../src/openbook/the_man_on_the_flying_trapeze.ly.tera) | Initial 328 | M, S, B | - |
 | [The Midnight Sun Will Never Set](../src/openbook/the_midnight_sun_will_never_set.ly.tera) | Initial 328 | M, S, B | Spacing: 2, 4, 19, 21; Notice |
+| [The Moon Of Manakoora](../src/openbook/the_moon_of_manakoora.ly.tera) | Batch 3 (100) | M, S, B, E | Notice; Page |
 | [The Moontrane](../src/openbook/the_moontrane.ly.tera) | Initial 328 | M, S, B | Notice |
 | [The Music Goes Round and Round](../src/openbook/the_music_goes_round_and_round.ly.tera) | Batch 2 (200) | M, S, B, E | Notice; Page |
 | [The Night Has A Thousand Eyes](../src/openbook/the_night_has_a_thousand_eyes.ly.tera) | Batch 1 (200) | M, S, B, E | Notice; Page |
@@ -723,19 +813,26 @@ Additional pending-review labels:
 | [The Second Time Around](../src/openbook/the_second_time_around.ly.tera) | Initial 328 | M, S, B | - |
 | [The Single Petal Of A Rose](../src/openbook/the_single_petal_of_a_rose.ly.tera) | Batch 2 (200) | M, S, B, E | Notice; Page; Route: segno at 1, Fine at 16, D.S. at 40 |
 | [The Song Is Ended](../src/openbook/the_song_is_ended.ly.tera) | Batch 2 (200) | M, S, B, E | Notice; Page |
+| [The Sound of Music](../src/openbook/the_sound_of_music.ly.tera) | Batch 3 (100) | M, S, B, E | Notice; Page |
 | [The Summer Knows](../src/openbook/the_summer_knows.ly.tera) | Initial 328 | M, S, B | - |
 | [The Sweetest Sounds](../src/openbook/the_sweetest_sounds.ly.tera) | Initial 328 | M, S, B | Spacing: 16; Notice |
 | [The Sweetheart Of Sigma Chi](../src/openbook/the_sweetheart_of_sigma_chi.ly.tera) | Batch 1 (200) | M, S, B, E | Spacing: 8, 13, 16, 17, 23, 24, 31, 34; Notice; Page |
+| [The Swingin' Shepherd Blues](../src/openbook/the_swingin_shepherd_blues.ly.tera) | Batch 3 (100) | M, S, B, E | Notice; Page |
+| [The Twelfth Of Never](../src/openbook/the_twelfth_of_never.ly.tera) | Batch 3 (100) | M, S, B, E | Notice; Page |
 | [The Very Thought Of You](../src/openbook/the_very_thought_of_you.ly.tera) | Initial 328 | M, S, B | Spacing: 13; Notice |
 | [The Whiffenpoof Song](../src/openbook/the_whiffenpoof_song.ly.tera) | Batch 1 (200) | M, S, B, E | Notice; Page |
 | [The White Cliffs of Dover](../src/openbook/the_white_cliffs_of_dover.ly.tera) | Batch 2 (200) | M, S, B, E | Notice; Page |
+| [The Wind Beneath My Wings](../src/openbook/the_wind_beneath_my_wings.ly.tera) | Batch 3 (100) | M, S, B, E | Notice; Page |
 | [Them There Eyes](../src/openbook/them_there_eyes.ly.tera) | Initial 328 | M, S, B | - |
+| [Theme From New York, New York](../src/openbook/theme_from_new_york_new_york.ly.tera) | Batch 3 (100) | M, S, B, E | Notice; Page |
 | [There Goes My Heart](../src/openbook/there_goes_my_heart.ly.tera) | Initial 328 | M, S, B | Spacing: 12, 32, 34; Notice |
 | [There's No You](../src/openbook/theres_no_you.ly.tera) | Batch 1 (200) | M, S, B, E | Spacing: 4, 24; Notice; Page |
 | [They Say It's Wonderful](../src/openbook/they_say_its_wonderful.ly.tera) | Initial 328 | M, S, B | Spacing: 31; Notice |
 | [Things Ain't What They Used to Be](../src/openbook/things_aint_what_they_used_to_be.ly.tera) | Initial 328 | M, S, B | Notice; Route: to coda at 10, D.C. at 24, coda at 25 |
 | [Thinking Of You](../src/openbook/thinking_of_you.ly.tera) | Batch 1 (200) | M, S, B, E | Spacing: 1, 9, 16, 23, 25; Notice; Page |
 | [This Heart of Mine](../src/openbook/this_heart_of_mine.ly.tera) | Batch 1 (200) | M, S, B, E | Notice; Page |
+| [This I Dig of You](../src/openbook/this_i_dig_of_you.ly.tera) | Batch 3 (100) | M, S, B, E | Notice; Page; Ties: 8, 24 |
+| [This Is All I Ask](../src/openbook/this_is_all_i_ask.ly.tera) | Batch 3 (100) | M, S, B, E | Notice; Page |
 | [This Masquerade](../src/openbook/this_masquerade.ly.tera) | Batch 2 (200) | M, S, B, E | Notice; Page; Route: segno at 3, D.S. at 34, coda at 35 |
 | [Thou Swell](../src/openbook/thou_swell.ly.tera) | Initial 328 | M, S, B | - |
 | [Three Little Words](../src/openbook/three_little_words.ly.tera) | Initial 328 | M, S, B | - |
@@ -750,6 +847,7 @@ Additional pending-review labels:
 | [Too Close For Comfort](../src/openbook/too_close_for_comfort.ly.tera) | Initial 328 | M, S, B | Notice |
 | [Too Late Now](../src/openbook/too_late_now.ly.tera) | Batch 2 (200) | M, S, B, E | Spacing: 8; Notice; Page |
 | [Too Marvelous For Words](../src/openbook/too_marvelous_for_words.ly.tera) | Initial 328 | M, S, B | Notice |
+| [Too-ra-loo-ra-loo-ral](../src/openbook/too_ra_loo_ra_loo_ral.ly.tera) | Batch 3 (100) | M, S, B, E | Notice; Page |
 | [Toot, Toot, Tootsie](../src/openbook/toot_toot_tootsie.ly.tera) | Batch 1 (200) | M, S, B, E | Spacing: 3, 5, 7, 20, 36, 48, 52; Notice; Page |
 | [Topsy](../src/openbook/topsy.ly.tera) | Batch 1 (200) | M, S, B, E | Spacing: 4, 8, 28; Notice; Page |
 | [Tricotism](../src/openbook/tricotism.ly.tera) | Initial 328 | M, S, B | Notice |
@@ -759,10 +857,13 @@ Additional pending-review labels:
 | [Two for the Road](../src/openbook/two_for_the_road.ly.tera) | Initial 328 | M, S, B | - |
 | [Two Guitars](../src/openbook/two_guitars.ly.tera) | Initial 328 | M, S, B | - |
 | [Two Sleepy People](../src/openbook/two_sleepy_people.ly.tera) | Batch 1 (200) | M, S, B, E | Spacing: 32; Notice; Page |
+| [Under Paris Skies](../src/openbook/under_paris_skies.ly.tera) | Batch 3 (100) | M, S, B, E | Notice; Page; Route: "D.C. al Coda" at 33, coda at 34 |
 | [Unless It's You](../src/openbook/unless_its_you.ly.tera) | Initial 328 | M, S, B | - |
 | [Until It's Time For You To Go](../src/openbook/until_its_time_for_you_to_go.ly.tera) | Batch 1 (200) | M, S, B, E | Notice; Page; Route: Fine at 16, D.C. at 49 |
 | [Up Jumped Spring](../src/openbook/up_jumped_spring.ly.tera) | Initial 328 | M, S, B | Notice |
+| [Upper Manhattan Medical Group](../src/openbook/upper_manhattan_medical_group.ly.tera) | Batch 3 (100) | M, S, B, E | Notice; Page; Route: "To Coda" at 23, "D.C. al Coda" at 27, coda at 28 |
 | [Virgo](../src/openbook/virgo.ly.tera) | Initial 328 | M, S, B | Notice |
+| [Volare](../src/openbook/volare.ly.tera) | Batch 3 (100) | M, S, B, E | Notice; Page |
 | [Wabash Blues](../src/openbook/wabash_blues.ly.tera) | Batch 1 (200) | M, S, B, E | Notice; Page |
 | [Walk On By](../src/openbook/walk_on_by.ly.tera) | Batch 1 (200) | M, S, B, E | Notice; Page |
 | [Waltz New](../src/openbook/waltz_new.ly.tera) | Initial 328 | M, S, B | Route: to coda at 31, D.C. at 32, coda at 33 |
@@ -771,7 +872,11 @@ Additional pending-review labels:
 | [We Need A Little Christmas](../src/openbook/we_need_a_little_christmas.ly.tera) | Batch 2 (200) | M, S, B, E | Notice; Page |
 | [We Wish You a Merry Christmas](../src/openbook/we_wish_you_a_merry_christmas.ly.tera) | Initial 328 | M, S, B | - |
 | [We'll Be Together Again](../src/openbook/well_be_together_again.ly.tera) | Initial 328 | M, S, B | Spacing: 9, 33; Notice |
+| [We're All Alone](../src/openbook/were_all_alone.ly.tera) | Batch 3 (100) | M, S, B, E | Notice; Page |
+| [Wearing Of The Green](../src/openbook/wearing_of_the_green.ly.tera) | Batch 3 (100) | M, S, B, E | Notice; Page |
 | [Wedding Bells](../src/openbook/wedding_bells.ly.tera) | Batch 2 (200) | M, S, B, E | Notice; Page |
+| [Wedding March](../src/openbook/wedding_march.ly.tera) | Batch 3 (100) | M, S, B, E | Notice; Page; Route: segno at 1, "Fine" at 8, "D.S. al Fine" at 16 |
+| [Weekend In New England](../src/openbook/weekend_in_new_england.ly.tera) | Batch 3 (100) | M, S, B, E | Notice; Page; Route: segno at 10, "Fine" at 20, "D.C. al Fine" at 39 |
 | [Well, Did You Evah?](../src/openbook/well_did_you_evah.ly.tera) | Batch 2 (200) | M, S, B, E | Notice; Page |
 | [What A Little Moonlight Can Do](../src/openbook/what_a_little_moonlight_can_do.ly.tera) | Initial 328 | M, S, B | Spacing: 10, 58; Notice |
 | [What Am I Here For](../src/openbook/what_am_i_here_for.ly.tera) | Initial 328 | M, S, B | - |
@@ -780,33 +885,41 @@ Additional pending-review labels:
 | [What I Did For Love](../src/openbook/what_i_did_for_love.ly.tera) | Batch 2 (200) | M, S, B, E | Notice; Page |
 | [What is There to Say](../src/openbook/what_is_there_to_say.ly.tera) | Batch 1 (200) | M, S, B, E | Notice; Page |
 | [What Is This Thing Called Love?](../src/openbook/what_is_this_thing_called_love.ly.tera) | Initial 328 | M, S, B | Spacing: 4, 12 |
+| [What Now, My Love?](../src/openbook/what_now_my_love.ly.tera) | Batch 3 (100) | M, S, B, E | Notice; Page; Ties: 20 |
 | [What The World Needs Now Is Love](../src/openbook/what_the_world_needs_now_is_love.ly.tera) | Batch 1 (200) | M, S, B, E | Notice; Page |
 | [What Will I Tell My Heart](../src/openbook/what_will_i_tell_my_heart.ly.tera) | Batch 2 (200) | M, S, B, E | Notice; Page |
 | [What'll I Do?](../src/openbook/whatll_i_do.ly.tera) | Batch 2 (200) | M, S, B, E | Notice; Page |
+| [When a Man Loves a Woman](../src/openbook/when_a_man_loves_a_woman.ly.tera) | Batch 3 (100) | M, S, B, E | Notice; Page; Ties: 2, 10, 13, 27, 32, 40, 46, 53, 61 |
 | [When Day Is Done](../src/openbook/when_day_is_done.ly.tera) | Batch 1 (200) | M, S, B, E | Notice; Page |
 | [When Did I Fall In Love](../src/openbook/when_did_i_fall_in_love.ly.tera) | Batch 2 (200) | M, S, B, E | Notice; Page |
 | [When I Look In Your Eyes](../src/openbook/when_i_look_in_your_eyes.ly.tera) | Initial 328 | M, S, B | Spacing: 7, 8, 15, 23 |
 | [When Irish Eyes Are Smiling](../src/openbook/when_irish_eyes_are_smiling.ly.tera) | Initial 328 | M, S, B | - |
 | [When It's Sleepy Time Down South](../src/openbook/when_its_sleepy_time_down_south.ly.tera) | Batch 1 (200) | M, S, B, E | Notice; Page |
+| [When lights are low](../src/openbook/when_lights_are_low.ly.tera) | Batch 3 (100) | M, S, B, E | Notice; Page |
 | [When Sunny Gets Blue](../src/openbook/when_sunny_gets_blue.ly.tera) | Initial 328 | M, S, B | Spacing: 5, 9, 13, 17, 29, 33, 34; Notice |
 | [When the Saints Go Marching In](../src/openbook/when_the_saints_go_marching_in.ly.tera) | Initial 328 | M, S, B | - |
 | [When The Sun Comes Out](../src/openbook/when_the_sun_comes_out.ly.tera) | Initial 328 | M, S, B | Spacing: 36; Notice |
 | [When the World Was Young](../src/openbook/when_the_world_was_young.ly.tera) | Batch 1 (200) | M, S, B, E | Spacing: 34, 36; Notice; Page |
 | [When You Wore a Tulip](../src/openbook/when_you_wore_a_tulip.ly.tera) | Initial 328 | M, S, B | - |
 | [Where Are You?](../src/openbook/where_are_you.ly.tera) | Initial 328 | M, S, B | - |
+| [Where is Your Heart](../src/openbook/where_is_your_heart.ly.tera) | Batch 3 (100) | M, S, B, E | Notice; Page |
 | [Whispering](../src/openbook/whispering.ly.tera) | Initial 328 | M, S, B | - |
 | [Who Cares](../src/openbook/who_cares.ly.tera) | Initial 328 | M, S, B | - |
 | [Who's Sorry Now](../src/openbook/whos_sorry_now.ly.tera) | Initial 328 | M, S, B | - |
 | [Why Don't You Do Right](../src/openbook/why_dont_you_do_right.ly.tera) | Batch 2 (200) | M, S, B, E | Notice; Page |
 | [Why Try To Change Me Now](../src/openbook/why_try_to_change_me_now.ly.tera) | Batch 1 (200) | M, S, B, E | Notice; Page |
 | [Why Was I Born](../src/openbook/why_was_i_born.ly.tera) | Batch 2 (200) | M, S, B, E | Spacing: 6, 15, 22; Notice; Page |
+| [Winter Wonderland](../src/openbook/winter_wonderland.ly.tera) | Batch 3 (100) | M, S, B, E | Notice; Page |
 | [With a Song in My Heart](../src/openbook/with_a_song_in_my_heart.ly.tera) | Initial 328 | M, S, B | Spacing: 15, 16, 26, 31 |
 | [With Every Breath I Take](../src/openbook/with_every_breath_i_take.ly.tera) | Initial 328 | M, S, B | Notice |
 | [Without a Song](../src/openbook/without_a_song.ly.tera) | Initial 328 | M, S, B | Spacing: 16, 21 |
 | [Wives And Lovers](../src/openbook/wives_and_lovers.ly.tera) | Batch 2 (200) | M, S, B, E | Notice; Page |
+| [Wonderful Copenhagen](../src/openbook/wonderful_copenhagen.ly.tera) | Batch 3 (100) | M, S, B, E | Notice; Page |
 | [Woody 'n' You](../src/openbook/woody_n_you.ly.tera) | Initial 328 | M, S, B | - |
 | [Words](../src/openbook/words.ly.tera) | Batch 1 (200) | M, S, B, E | Notice; Page |
 | [Wunderbar](../src/openbook/wunderbar.ly.tera) | Batch 2 (200) | M, S, B, E | Notice; Page |
+| [Yellow Bird](../src/openbook/yellow_bird.ly.tera) | Batch 3 (100) | M, S, B, E | Notice; Page |
+| [Yellow Days](../src/openbook/yellow_days.ly.tera) | Batch 3 (100) | M, S, B, E | Notice; Page |
 | [Yes or No](../src/openbook/yes_or_no.ly.tera) | Batch 2 (200) | M, S, B, E | Notice; Page; Route: segno at 2, coda at 13, coda at 34 |
 | [Yes Sir, That's My Baby](../src/openbook/yes_sir_thats_my_baby.ly.tera) | Initial 328 | M, S, B | - |
 | [Yes We Have No Bananas](../src/openbook/yes_we_have_no_bananas.ly.tera) | Batch 1 (200) | M, S, B, E | Notice; Page |
@@ -818,10 +931,13 @@ Additional pending-review labels:
 | [You Are So Beautiful](../src/openbook/you_are_so_beautiful.ly.tera) | Batch 1 (200) | M, S, B, E | Notice; Page |
 | [You are the sunshine of my life](../src/openbook/you_are_the_sunshine_of_my_life.ly.tera) | Batch 1 (200) | M, S, B, E | Notice; Page |
 | [You Are Too Beautiful](../src/openbook/you_are_too_beautiful.ly.tera) | Initial 328 | M, S, B | Spacing: 4, 8, 12, 15, 16, 24, 28, 31, 32 |
+| [You Belong To My Heart](../src/openbook/you_belong_to_my_heart.ly.tera) | Batch 3 (100) | M, S, B, E | Notice; Page |
 | [You Brought A New Kind Of Love To Me](../src/openbook/you_brought_a_new_kind_of_love_to_me.ly.tera) | Batch 2 (200) | M, S, B, E | Spacing: 16, 34; Notice; Page |
 | [You Can Depend On Me](../src/openbook/you_can_depend_on_me.ly.tera) | Batch 1 (200) | M, S, B, E | Spacing: 16; Notice; Page |
 | [You Do Something to Me](../src/openbook/you_do_something_to_me.ly.tera) | Initial 328 | M, S, B | Spacing: 17, 31, 32 |
+| [You Don't Know Me](../src/openbook/you_dont_know_me.ly.tera) | Batch 3 (100) | M, S, B, E | Notice; Page |
 | [You Leave Me Breathless](../src/openbook/you_leave_me_breathless.ly.tera) | Batch 2 (200) | M, S, B, E | Notice; Page |
+| [You Light Up My Life](../src/openbook/you_light_up_my_life.ly.tera) | Batch 3 (100) | M, S, B, E | Notice; Page |
 | [You Make Me Feel Brand New](../src/openbook/you_make_me_feel_brand_new.ly.tera) | Batch 1 (200) | M, S, B, E | Notice; Page |
 | [You Make Me Feel So Young](../src/openbook/you_make_me_feel_so_young.ly.tera) | Initial 328 | M, S, B | Spacing: 2, 10, 20, 31, 33 |
 | [You Must Believe In Spring](../src/openbook/you_must_believe_in_spring.ly.tera) | Initial 328 | M, S, B | Spacing: 8, 16 |
@@ -833,4 +949,5 @@ Additional pending-review labels:
 | [You're Driving Me Crazy](../src/openbook/youre_driving_me_crazy.ly.tera) | Initial 328 | M, S, B | Spacing: 31, 33 |
 | [You're My Thrill](../src/openbook/youre_my_thrill.ly.tera) | Batch 1 (200) | M, S, B, E | Notice; Page |
 | [You're The Top](../src/openbook/youre_the_top.ly.tera) | Initial 328 | M, S, B | Spacing: 16, 32, 34 |
+| [Yours](../src/openbook/yours.ly.tera) | Batch 3 (100) | M, S, B, E | Notice; Page |
 | [Yours Is My Heart Alone](../src/openbook/yours_is_my_heart_alone.ly.tera) | Initial 328 | M, S, B | Spacing: 7; Notice |
