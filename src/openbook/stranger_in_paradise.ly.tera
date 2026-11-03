@@ -4,7 +4,7 @@ default_version = "Wikifonia"
 [attributes]
 title = "Stranger In Paradise"
 style = "Standard"
-composer = "adapted by George Forrest from Borodin's Polovetsian Dances (Gliding Dance Of The Maidens)"
+composer = "Alexander Borodin, George Forrest"
 piece = "Standard"
 typesetter = "OpenBook contributors (MusicXML import)"
 completion = "3"
@@ -31,6 +31,7 @@ doOwn = false
 	DONE:
 	- imported melody and chord changes from real_books_archive.gi/Wikifonia.tar.xz: Wikifonia/adapted by George Forrest from Borodin's Polovetsian Dances (Gliding Dance Of The Maidens), George Forrest, Robert Wright - Stra.mxl.
 	- source revision: http://wikifonia.org/node/4589/revisions/15994/view.
+	- original source composer credit: adapted by George Forrest from Borodin's Polovetsian Dances (Gliding Dance Of The Maidens); shortened the display credit to the named composer and adapter.
 	- local PDF: real_books_archive.gi/The Ultimate Broadway Fakebook.pdf.
 	- book index reference: Ultimate_Broadway_Fakebook:237; index pagination is not a verified PDF page number.
 	- retained the archived MusicXML rights notice; no redistribution permission is asserted.
