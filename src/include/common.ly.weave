@@ -517,7 +517,6 @@ Lyricsmoremore=<%include file="/${file}" args="part=Lyricsmoremore"/>
 		\smaller \smaller { "${attributes['copyrightextraextra']}" }
 	}
 %endif
-${self.youtubeLinks()}
 
 % if gattr['book']:
 	\fill-line {

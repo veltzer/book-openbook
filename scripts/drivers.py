@@ -299,22 +299,6 @@ class DriverEmitter:
         # a space and let the left-trim marker remove it from the output
         return line.replace("{{%", "{ {%-")
 
-    def youtube_links_block(self) -> str:
-        """ tera loop over the current song's [[youtube]] blocks.
-
-        Emits one \\fill-line per video with a \\with-url link. Label is
-        the remark when present, else the video id. Rendered inside the
-        per-song scope where `meta` names the derived toml. """
-        return (
-            '{% for video in meta.youtube | default(value=[]) %}'
-            '\t\\fill-line {\n'
-            '\t\t\\smaller \\smaller {'
-            ' \\with-url #"https://youtu.be/{{ video.id }}"'
-            ' "{{ video.remark | default(value=video.id) }}" }\n'
-            '\t}\n'
-            '{% endfor %}'
-        )
-
     def splice_part(self, part_expr: str) -> str:
         """ render one part of the current song, as mako's include did """
         if part_expr.startswith("'"):
@@ -392,9 +376,6 @@ class DriverEmitter:
                 continue
             if "${self.clearVars()}" in line:
                 self.emit(self.eval_def_body(self.clearvars_body) + "\n")
-                continue
-            if "${self.youtubeLinks()}" in line:
-                self.emit(self.youtube_links_block())
                 continue
             self.emit(self.substitute(line))
 
