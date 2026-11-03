@@ -10,7 +10,7 @@ typesetter = "OpenBook contributors (MusicXML import)"
 completion = "3"
 uuid = "261f2557-0a82-5a3c-9366-b42d90d2f9ad"
 location = "New_Real_1:37"
-copyright = "1983 Grand Street Music. Used By Permission."
+copyright = "1947 (Renewed) By Embassy Music Corp. (BMI). International Copyright Secured. All Rights Reserved. Used By Permission."
 
 [versions.Wikifonia]
 doChords = true
@@ -30,9 +30,10 @@ doOwn = false
 	DONE:
 	- imported melody and chord changes from real_books_archive.gi/Wikifonia.tar.xz: Wikifonia/Bud Powell - Bouncin' with Bud.mxl.
 	- source revision: http://wikifonia.org/node/890/revisions/1182/view.
-	- PDF reference: real_books_archive.gi/New Real Book 1.pdf, PDF page 43.
+	- PDF reference: real_books_archive.gi/New Real Book 1.pdf, PDF page 45 (printed page 37).
 	- retained the original copyright notice where printed; the underlying music is not relicensed.
 	- retained written measures, pickups, repeats and endings; lyrics omitted.
+	- restored the archived 7alt chord using the book's altered-dominant notation.
 	- tempo is an editorial practice suggestion.
 	TODO:
 	- proofread the music against the referenced PDF and check by ear.
@@ -74,7 +75,7 @@ doOwn = false
 	g1:13.11+ |
 	fis1:13 |
 	c1:m9 |
-	f1:7^5.9-.9+.11+.13- | \myEndLine
+	f1:7.3-.5-.9-.11-.13- | \myEndLine
 	bes2:6 c2:m7 |
 	d2:m7 ees2:m7 |
 	d2:m7 g2:7 |

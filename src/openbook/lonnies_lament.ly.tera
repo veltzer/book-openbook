@@ -33,6 +33,7 @@ doOwn = false
 	- PDF reference: real_books_archive.gi/The Real Book of Jazz Volume I.pdf, PDF page 286.
 	- retained the original copyright notice where printed; the underlying music is not relicensed.
 	- retained written measures, pickups, repeats and endings; lyrics omitted.
+	- restored the archived 7alt chord using the book's altered-dominant notation.
 	- tempo taken from archived MusicXML.
 	TODO:
 	- proofread the music against the referenced PDF and check by ear.
@@ -57,7 +58,7 @@ doOwn = false
 	c2:m7 bes2:7 |
 	ees2:maj7 aes2:maj7 |
 	aes2:7 a2:7 | \myEndLine
-	aes2:7 g2:7^5.9-.9+.11+.13- |
+	aes2:7 g2:7.3-.5-.9-.11-.13- |
 	c2:m7 d2:m7 |
 	ees2:maj7/g g2:7 |
 	c2:m7 d2:m7 | \myEndLine

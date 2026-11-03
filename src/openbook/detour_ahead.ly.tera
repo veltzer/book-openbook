@@ -33,6 +33,7 @@ doOwn = false
 	- PDF reference: real_books_archive.gi/newreal2.pdf, PDF page 80.
 	- retained the original copyright notice where printed; the underlying music is not relicensed.
 	- retained written measures, pickups, repeats and endings; lyrics omitted.
+	- restored the archived 7alt chords using the book's altered-dominant notation.
 	- tempo taken from archived MusicXML.
 	TODO:
 	- proofread the music against the referenced PDF and check by ear.
@@ -61,11 +62,11 @@ doOwn = false
 	}
 	}
 	e1:m7 |
-	b1:7^5.9-.9+.11+.13- |
+	b1:7.3-.5-.9-.11-.13- |
 	e1:maj7 | \myEndLine
 	fis2:m7.5- b2:7 |
 	e1:m7 |
-	b1:7^5.9-.9+.11+.13- |
+	b1:7.3-.5-.9-.11-.13- |
 	e1:maj7 | \myEndLine
 	des1:9.11+ |
 	c2:maj7 fis2:7.9- |
