@@ -1,0 +1,125 @@
+{#
+default_version = "Wikifonia"
+
+[attributes]
+title = "Exodus"
+style = "Jazz"
+composer = "Ernest Gold"
+piece = "Standard"
+typesetter = "OpenBook contributors (MusicXML import)"
+completion = "3"
+uuid = "659e4862-13f7-59bb-a7b2-a38e86a467d9"
+location = "Jazz_LTD:122"
+copyright = "All Rights Reserved"
+copyrightextra = "Archived MusicXML notice retained; underlying music is not relicensed."
+
+[versions.Wikifonia]
+doChords = true
+doVoice = true
+doLyrics = false
+doLyricsmore = false
+doLyricsmoremore = false
+doChordBars = false
+doGuitar = false
+doExtra = false
+doPrep = false
+doOwn = false
+#}
+{% if part == "Vars" %}
+{% endif %}
+{% if part == "Doc" %}
+	DONE:
+	- imported melody and chord changes from real_books_archive.gi/Wikifonia.tar.xz: Wikifonia/Ernest Gold - Exodus.mxl.
+	- source revision: http://wikifonia.org/node/12444/revisions/22276/view.
+	- local PDF: real_books_archive.gi/jazz_ltd.pdf.
+	- book index reference: Jazz_LTD:122; index pagination is not a verified PDF page number.
+	- retained the archived MusicXML rights notice; no redistribution permission is asserted.
+	- retained written melody, chord changes, pickups, repeats and numbered endings; lyrics omitted.
+	- imported explicit 7alt symbols using the book's altered-dominant notation where present.
+	- tempo is an editorial practice suggestion.
+	TODO:
+	- proofread the complete melody, harmony and form against the referenced PDF and check by ear.
+	- verify source attribution, copyright notice and reuse terms against the scan; only the archived MusicXML notice is retained.
+	- locate the tune in the exact local PDF edition; book-index page numbers may differ.
+{% endif %}
+{% if part == "ChordsWikifonia" %}\chordmode {
+	\startChords
+	\startSong
+
+	\myMark "A"
+	\startPart
+	\partial 4 s4 |
+	c2:m f2 |
+	aes4 bes4 c2:m |
+	g2:m ees4 f4 | \myEndLine
+	g2. g4:m |
+	c2. c4:m |
+	g2.:m f4:m |
+	s4 g4:m bes4 c4:m | \myEndLine
+	g1 |
+	\repeat volta 2 {
+	c2:m f2 |
+	aes4 bes4 c2:m |
+	g2:m ees4 f4 | \myEndLine
+	g2. g4:m |
+	c2. c4:m |
+	g2.:m f4:m |
+	s4 g4:m aes4 bes4 | \myEndLine
+	} \alternative {
+	{
+	c1:m | \myEndLineVoltaNotLast
+	}
+	{
+	s4 c2.:m | \myEndLineVoltaLast
+	}
+	}
+	g4:m g2.:m7 |
+	c4 c2.:m | \myEndLine
+	g2:m g2:m7 |
+	c2 c2:m6 |
+	g1 |
+	\endBar
+	\endPart
+
+	\endSong
+	\endChords
+}
+{% endif %}
+{% if part == "VoiceWikifonia" %}\absolute {
+	\tempo "Moderato" 4 = 120
+	\time 4/4
+	\key es \major
+
+	\partial 4 r8 g8 |
+	c'4. g'8 f'4. c'8 |
+	es'8 f'8 d'8. bes16 c'4. g'8 |
+	bes'4. a'8 bes'8 c''8 a'8. f'16 |
+	g'2 r8 g'8 bes'8 d''8 |
+	c''8. <g' g' g'>16 g'4 ~ g'8 c''8 g'8 c''8 |
+	d''8. g'16 g'2 f'8 g'8 |
+	as'8 bes'8 g'8. es'16 f'8 g'8 es'8. c'16 |
+	d'2. r8 g8 |
+	\repeat volta 2 {
+	c'4. g'8 f'4. c'8 |
+	es'8 f'8 d'8. bes16 c'4. g'8 |
+	bes'4. a'8 bes'8 c''8 a'8. f'16 |
+	g'2 r8 g'8 bes'8 d''8 |
+	c''8. <g' g' g'>16 g'4 ~ g'8 c''8 g'8 c''8 |
+	d''8. g'16 g'2 f'8 g'8 |
+	as'8 bes'8 g'8. f'16 es'8 f'8 d'8 bes'8 |
+	} \alternative {
+	{
+	c''2 r4 r8 g8 |
+	}
+	{
+	c''2. c''4 |
+	}
+	}
+	bes'16 c''16 bes'16 g'16 bes'4 ~ bes'4. g'8 |
+	c''8 d''8 f''4 ~ f''8 es''8 d''8 c''8 |
+	bes'16 c''16 bes'16 g'16 bes'4 ~ bes'4. g'8 |
+	c''8 d''8 g''4 ~ g''8 f''8 d''8. c''16 |
+	d''1 |
+	\endBar
+}
+{% endif %}

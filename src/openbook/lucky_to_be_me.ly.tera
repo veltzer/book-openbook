@@ -1,0 +1,159 @@
+{#
+default_version = "Wikifonia"
+
+[attributes]
+title = "Lucky to Be Me"
+style = "Jazz"
+composer = "Leonard Bernstein"
+piece = "Standard"
+typesetter = "OpenBook contributors (MusicXML import)"
+completion = "3"
+uuid = "53dc570a-a001-5fbd-b4d8-b671c1a41592"
+location = "StandardsBook:288"
+copyright = "All Rights Reserved"
+copyrightextra = "Archived MusicXML notice retained; underlying music is not relicensed."
+
+[versions.Wikifonia]
+doChords = true
+doVoice = true
+doLyrics = false
+doLyricsmore = false
+doLyricsmoremore = false
+doChordBars = false
+doGuitar = false
+doExtra = false
+doPrep = false
+doOwn = false
+#}
+{% if part == "Vars" %}
+{% endif %}
+{% if part == "Doc" %}
+	DONE:
+	- imported melody and chord changes from real_books_archive.gi/Wikifonia.tar.xz: Wikifonia/Leonard Bernstein, Betty Comden and Adolph Green - Lucky to Be Me.mxl.
+	- source revision: http://wikifonia.org/node/11613/revisions/15605/view.
+	- local PDF: real_books_archive.gi/The Standards Real Book.pdf.
+	- book index reference: StandardsBook:288; index pagination is not a verified PDF page number.
+	- retained the archived MusicXML rights notice; no redistribution permission is asserted.
+	- retained written melody, chord changes, pickups, repeats and numbered endings; lyrics omitted.
+	- imported explicit 7alt symbols using the book's altered-dominant notation where present.
+	- tempo is an editorial practice suggestion.
+	TODO:
+	- proofread the complete melody, harmony and form against the referenced PDF and check by ear.
+	- verify source attribution, copyright notice and reuse terms against the scan; only the archived MusicXML notice is retained.
+	- locate the tune in the exact local PDF edition; book-index page numbers may differ.
+{% endif %}
+{% if part == "ChordsWikifonia" %}\chordmode {
+	\startChords
+	\startSong
+
+	\myMark "A"
+	\startPart
+	s8 f2.. |
+	bes1:9 |
+	d1 |
+	s8 f2.. | \myEndLine
+	bes1:9 |
+	d1 |
+	d1:9 |
+	c2:m7 d2:m7 | \myEndLine
+	c2:m7 ees2:7 |
+	aes1 |
+	des1:7 |
+	f1 | \myEndLine
+	s1 |
+	\repeat volta 2 {
+	f1 |
+	bes2 c2:7 |
+	f1 | \myEndLine
+	g2:m a2:7 |
+	d2:m d2:m7 |
+	g1:9 |
+	g1:m7 | \myEndLine
+	} \alternative {
+	{
+	f2:6 c2:aug7 | \myEndLineVoltaNotLast
+	}
+	{
+	f2:6 f2:7 | \myEndLineVoltaLast
+	}
+	}
+	c1 |
+	d1:m | \myEndLine
+	g1:7 |
+	c1 |
+	aes1 |
+	bes1:m | \myEndLine
+	ees1:7 |
+	c1:7 |
+	f1 |
+	bes2. c4:7 | \myEndLine
+	f1 |
+	g2:m a2:7 |
+	d2:m d2:m7 |
+	g1:9 | \myEndLine
+	g1:m7 |
+	c1:9 |
+	f1 |
+	s1 | \myEndLine
+	\endBar
+	\endPart
+
+	\endSong
+	\endChords
+}
+{% endif %}
+{% if part == "VoiceWikifonia" %}\absolute {
+	\tempo "Moderato" 4 = 120
+	\time 4/4
+	\key f \major
+
+	r8 c''8 d''8 a'8 c''8 g'8 a'8 f'8 |
+	g'8 c'8 c'2. |
+	\once \omit TupletBracket \times 2/3 { d'8 d'8 d'8 } d'8 d'8 d'2 |
+	r8 c''8 d''8 a'8 c''8 g'8 a'8 f'8 |
+	g'8 g'8 c'8 d'8 ~ d'4 d'4 |
+	d'8 d'8 d'8 d'8 \times 2/3 { d'4 d'4 d'4 } |
+	\times 2/3 { a'4 d'4 d'4 ~ } d'4 r8 d'8 |
+	es'8 f'8 g'8 bes'8 f'4. f'8 |
+	g'8 a'8 bes'8 d''8 c''2 |
+	r8 es''8 f''8 c''8 es''8 bes'8 c''8 as'8 |
+	bes'8 es'8 f'4 \once \omit TupletBracket \times 2/3 { as'8 as'8 as'8 } as'8 as'8 |
+	a'1 ~ |
+	a'1 |
+	\repeat volta 2 {
+	c''4 a'4 c'2 |
+	d'4 f'4 d''4 c''4 |
+	c''4 a'4 c'2 |
+	bes4 d'4 a'4 g'4 |
+	f'4 g'4 a'4 e''4 |
+	d''2. d'8 f'8 |
+	g'4 a'4 f'4 f'4 |
+	} \alternative {
+	{
+	f'2 r2 |
+	}
+	{
+	f'2 r2 |
+	}
+	}
+	e'4 f'4 fis'4 g'4 |
+	gis'4. a'8 a'2 |
+	ais'4. b'8 b'2 |
+	b'4. c''8 c''2 |
+	c'4 cis'4 d'4 dis'4 |
+	e'4 f'4 f'2 |
+	fis'4 g'4 gis'4 a'4 |
+	b'4 c''4 c''2 ^ "" |
+	c''4 a'4 c'2 |
+	c'4 f'4 d''4 c''4 |
+	c''4 a'4 c'2 |
+	bes4 d'4 a'4 g'4 |
+	f'4 g'4 a'4 e''4 |
+	d''2. d'8 f'8 |
+	g'4 a'4 f'4 d'8 f'8 |
+	g'4 a'4 f'4 f'4 |
+	f'1 ~ |
+	f'1 |
+	\endBar
+}
+{% endif %}

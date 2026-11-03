@@ -1,0 +1,95 @@
+{#
+default_version = "Wikifonia"
+
+[attributes]
+title = "Sticks"
+style = "Jazz"
+composer = "Cannonbal Adderly"
+piece = "Standard"
+typesetter = "OpenBook contributors (MusicXML import)"
+completion = "3"
+uuid = "98a2748e-c94e-5657-98c8-a309a41aae2f"
+location = "Colorado:226, Colorado_Cookbook:226"
+copyright = "All Rights Reserved"
+copyrightextra = "Archived MusicXML notice retained; underlying music is not relicensed."
+
+[versions.Wikifonia]
+doChords = true
+doVoice = true
+doLyrics = false
+doLyricsmore = false
+doLyricsmoremore = false
+doChordBars = false
+doGuitar = false
+doExtra = false
+doPrep = false
+doOwn = false
+#}
+{% if part == "Vars" %}
+{% endif %}
+{% if part == "Doc" %}
+	DONE:
+	- imported melody and chord changes from real_books_archive.gi/Wikifonia.tar.xz: Wikifonia/Cannonbal Adderly - Sticks.mxl.
+	- source revision: http://wikifonia.org/node/12164/revisions/16442/view.
+	- local PDF: real_books_archive.gi/Colorado Cookbook.pdf.
+	- book index reference: Colorado:226; index pagination is not a verified PDF page number.
+	- retained the archived MusicXML rights notice; no redistribution permission is asserted.
+	- retained written melody, chord changes, pickups, repeats and numbered endings; lyrics omitted.
+	- imported explicit 7alt symbols using the book's altered-dominant notation where present.
+	- tempo is an editorial practice suggestion.
+	TODO:
+	- proofread the complete melody, harmony and form against the referenced PDF and check by ear.
+	- verify source attribution, copyright notice and reuse terms against the scan; only the archived MusicXML notice is retained.
+	- locate the tune in the exact local PDF edition; book-index page numbers may differ.
+{% endif %}
+{% if part == "ChordsWikifonia" %}\chordmode {
+	\startChords
+	\startSong
+
+	\myMark "A"
+	\startPart
+	\partial 4 s4 |
+	bes1:7 |
+	ees1:7 |
+	bes1:7 | \myEndLine
+	s1 |
+	ees1:7 |
+	s1 |
+	bes1:7 | \myEndLine
+	s1 |
+	ees4.:7 e4.:7 f4:7 |
+	s1 |
+	ees4.:7 e4.:7 f4:7 | \myEndLine
+	s1 |
+	ees2.:7 f4:7 |
+	s2. bes8:7 aes8:7 |
+	\endBar
+	\endPart
+
+	\endSong
+	\endChords
+}
+{% endif %}
+{% if part == "VoiceWikifonia" %}\absolute {
+	\tempo "Moderato" 4 = 120
+	\time 4/4
+	\key bes \major
+
+	\partial 4 bes'8 ^ "blues shuffle" as'8 |
+	bes'4 r4 r4 r8 bes'8 |
+	R1 |
+	r4 bes'8 bes'8 des''8 es''8 ~ es''4 |
+	f''8 as''8 ~ as''4 \once \omit TupletBracket \times 2/3 { fes''8 es''8 des''8 } bes'8 as'8 |
+	bes'4 r4 r4 r8 bes'8 |
+	R1 |
+	r4 bes'8 bes'8 des''8 es''8 ~ es''4 |
+	f''8 as''8 ~ as''4 \once \omit TupletBracket \times 2/3 { fes''8 es''8 des''8 } bes'8 as'8 |
+	es''4 r8 e''4 r8 f''4 |
+	R1 ^ "drum fill" |
+	es''4 r8 e''4 r8 - "" f''4 - "" |
+	R1 ^ "drum fill" |
+	es''4 r4 ^ "drum fill" r4 f''4 |
+	r2 _ "Solo on Bb 12 bar Blues" r4 bes'8 <as' a'>8 |
+	\endBar
+}
+{% endif %}

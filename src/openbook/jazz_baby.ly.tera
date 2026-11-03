@@ -1,0 +1,107 @@
+{#
+default_version = "Wikifonia"
+
+[attributes]
+title = "Jazz Baby"
+style = "Jazz"
+composer = "Blanche Merrill, M.K. Jerome"
+piece = "Standard"
+typesetter = "OpenBook contributors (MusicXML import)"
+completion = "3"
+uuid = "4ccdaee3-80dc-5bc7-a31d-5a42af0229a7"
+location = "Firehouse_Jazz_Band:682"
+copyright = "All Rights Reserved"
+copyrightextra = "Archived MusicXML notice retained; underlying music is not relicensed."
+
+[versions.Wikifonia]
+doChords = true
+doVoice = true
+doLyrics = false
+doLyricsmore = false
+doLyricsmoremore = false
+doChordBars = false
+doGuitar = false
+doExtra = false
+doPrep = false
+doOwn = false
+#}
+{% if part == "Vars" %}
+{% endif %}
+{% if part == "Doc" %}
+	DONE:
+	- imported melody and chord changes from real_books_archive.gi/Wikifonia.tar.xz: Wikifonia/Blanche Merrill, M.K. Jerome - Jazz Baby.mxl.
+	- source revision: http://wikifonia.org/node/5866/revisions/9548/view.
+	- local PDF: real_books_archive.gi/Dixieland - The Firehouse Jazz Band - Dixieland Fake Book - 778 S Noten Sheets Score Songs Lieder.pdf.
+	- book index reference: Firehouse_Jazz_Band:682; index pagination is not a verified PDF page number.
+	- retained the archived MusicXML rights notice; no redistribution permission is asserted.
+	- retained written melody, chord changes, pickups, repeats and numbered endings; lyrics omitted.
+	- imported explicit 7alt symbols using the book's altered-dominant notation where present.
+	- tempo is an editorial practice suggestion.
+	TODO:
+	- proofread the complete melody, harmony and form against the referenced PDF and check by ear.
+	- verify source attribution, copyright notice and reuse terms against the scan; only the archived MusicXML notice is retained.
+	- locate the tune in the exact local PDF edition; book-index page numbers may differ.
+{% endif %}
+{% if part == "ChordsWikifonia" %}\chordmode {
+	\startChords
+	\startSong
+
+	\myMark "A"
+	\startPart
+	s1 |
+	c1 |
+	s1 |
+	d2:7 g2:7 | \myEndLine
+	c1 |
+	g1:7 |
+	s1 |
+	c2 d2:7 | \myEndLine
+	g1:7 |
+	c1 |
+	s1 |
+	c1:7 | \myEndLine
+	f1 |
+	s1 |
+	s2 f2:m |
+	c1 | \myEndLine
+	s2 g2:7 |
+	c1 |
+	s1 |
+	d2:7 g2:7 | \myEndLine
+	c1 |
+	\endBar
+	\endPart
+
+	\endSong
+	\endChords
+}
+{% endif %}
+{% if part == "VoiceWikifonia" %}\absolute {
+	\tempo "Moderato" 4 = 120
+	\time 4/4
+	\key c \major
+
+	r2 r4 a'8 g'8 |
+	c''2. r4 |
+	a'8 g'4. r2 |
+	e''8 d''8 c''8 b'8 ~ b'8 c''8 d''4 |
+	c''2 r8 c''8 b'8 ais'8 |
+	b'4 b'4 b'4 b'8 ais'8 |
+	b'8 a'4 g'8 ~ g'4 r8 g'8 |
+	c''8 b'8 c''8 b'8 a'8 b'8 c''8 a'8 |
+	b'8 c''4 d''8 ~ d''8 g'8 a'8 g'8 |
+	c''2. r4 |
+	a'8 g'4. r2 |
+	c''8 b'8 c''8 b'8 c''8 d''4. |
+	d''2. r8 d''8 |
+	e''8 e''8 d''8 d''8 c''8 c''8 a'8 a'8 |
+	c''8 b'8 c''8 d''8 ~ d''4 r8 dis''8 |
+	e''8 e''8 d''8 d''8 c''8 c''8 a'8 a'8 |
+	g'8 e'8 g'8 a'8 ~ a'8 g'8 a'8 g'8 |
+	c''2. r4 |
+	a'8 g'4. r2 |
+	e''8 d''8 c''8 b'8 ~ b'8 c''8 d''4 |
+	c''2. r4 |
+	\endBar
+}
+{% endif %}

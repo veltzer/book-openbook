@@ -1,0 +1,129 @@
+{#
+default_version = "Wikifonia"
+
+[attributes]
+title = "Mambo Inn"
+style = "Jazz"
+composer = "Mario Bauza, Grace Sampson, Bobby Woodlen"
+piece = "Standard"
+typesetter = "OpenBook contributors (MusicXML import)"
+completion = "3"
+uuid = "e419c507-85b4-5435-b026-39007b95f755"
+location = "Latin_Real_Book:340"
+copyright = "All Rights Reserved"
+copyrightextra = "Archived MusicXML notice retained; underlying music is not relicensed."
+
+[versions.Wikifonia]
+doChords = true
+doVoice = true
+doLyrics = false
+doLyricsmore = false
+doLyricsmoremore = false
+doChordBars = false
+doGuitar = false
+doExtra = false
+doPrep = false
+doOwn = false
+#}
+{% if part == "Vars" %}
+{% endif %}
+{% if part == "Doc" %}
+	DONE:
+	- imported melody and chord changes from real_books_archive.gi/Wikifonia.tar.xz: Wikifonia/Mario Bauza, Grace Sampson, Bobby Woodlen - Mambo Inn.mxl.
+	- source revision: http://wikifonia.org/node/16197/revisions/21549/view.
+	- local PDF: real_books_archive.gi/The Latin Real Book.pdf.
+	- book index reference: Latin_Real_Book:340; index pagination is not a verified PDF page number.
+	- retained the archived MusicXML rights notice; no redistribution permission is asserted.
+	- retained written melody, chord changes, pickups, repeats and numbered endings; lyrics omitted.
+	- imported explicit 7alt symbols using the book's altered-dominant notation where present.
+	- tempo is an editorial practice suggestion.
+	TODO:
+	- proofread the complete melody, harmony and form against the referenced PDF and check by ear.
+	- verify source attribution, copyright notice and reuse terms against the scan; only the archived MusicXML notice is retained.
+	- locate the tune in the exact local PDF edition; book-index page numbers may differ.
+{% endif %}
+{% if part == "ChordsWikifonia" %}\chordmode {
+	\startChords
+	\startSong
+
+	\myMark "A"
+	\startPart
+	\repeat volta 2 {
+	g2:m7 c2:9 |
+	f2:maj7 d2:7 |
+	g2:m7 c2:9 |
+	f2:maj7 a4:m7 aes4:m7 | \myEndLine
+	g2:m7 c2:9 |
+	a2:m7 d2:7 |
+	g2:m7 c2:9 |
+	} \alternative {
+	{
+	f2:maj7 d2:7.9+ | \myEndLineVoltaNotLast
+	}
+	{
+	f2:maj7 fis4:m b4:7 | \myEndLineVoltaLast
+	}
+	}
+	bes1:m7 |
+	ees1:9 |
+	aes2:maj7 g2:7.9+ | \myEndLine
+	ges2:maj7 e2:maj7.5- |
+	d1:m7 |
+	g1:7 |
+	g1:m7 | \myEndLine
+	c2:9 d2:7.9+ |
+	g2:m7 c2:9 |
+	f2:maj7 d2:7 |
+	g2:m7 c2:9 | \myEndLine
+	f2:maj7 a4:m7 aes4:m7 |
+	g2:m7 c2:9 |
+	f2:maj7 d2:7 |
+	g2:m7 c2:9 | \myEndLine
+	f1:maj7 |
+	\endBar
+	\endPart
+
+	\endSong
+	\endChords
+}
+{% endif %}
+{% if part == "VoiceWikifonia" %}\absolute {
+	\tempo "Moderato" 4 = 120
+	\time 4/4
+	\key f \major
+
+	\repeat volta 2 {
+	d'4 f'4 g'4. e'8 ~ |
+	e'4. f'8 r8 a'4 d''8 |
+	c''2 a'4. c''8 ~ |
+	c''1 |
+	d'4 f'4 g'4. e'8 ~ |
+	e'4. f'8 r8 a'4 d''8 |
+	c''2 a'4. f'8 ~ |
+	} \alternative {
+	{
+	f'1 |
+	}
+	{
+	f'1 |
+	}
+	}
+	f'4. c''8 r8 bes'4 c''8 ~ |
+	c''1 |
+	es'4. bes'8 r8 as'4 bes'8 ~ |
+	bes'1 |
+	g'4. e''8 r8 d''4 e''8 ~ |
+	e''1 |
+	g'4. a'8 r8 g'4 a'8 ~ |
+	a'4. bes'8 ~ bes'2 |
+	d'4 f'4 g'4. e'8 ~ |
+	e'4. f'8 r8 a'4 d''8 |
+	c''2 a'4. c''8 ~ |
+	c''1 |
+	d'4 f'4 g'4. e'8 ~ |
+	e'4. f'8 r8 a'4 d''8 |
+	c''2 a'4. f'8 |
+	R1 |
+	\endBar
+}
+{% endif %}

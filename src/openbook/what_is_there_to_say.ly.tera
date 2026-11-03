@@ -1,0 +1,151 @@
+{#
+default_version = "Wikifonia"
+
+[attributes]
+title = "What is There to Say"
+style = "Jazz"
+composer = "Vernon Duke"
+piece = "Standard"
+typesetter = "OpenBook contributors (MusicXML import)"
+completion = "3"
+uuid = "f4f41b41-3f0d-52ee-be66-d745160edcfc"
+location = "557_Standards:418"
+copyright = "All Rights Reserved"
+copyrightextra = "Archived MusicXML notice retained; underlying music is not relicensed."
+
+[versions.Wikifonia]
+doChords = true
+doVoice = true
+doLyrics = false
+doLyricsmore = false
+doLyricsmoremore = false
+doChordBars = false
+doGuitar = false
+doExtra = false
+doPrep = false
+doOwn = false
+#}
+{% if part == "Vars" %}
+{% endif %}
+{% if part == "Doc" %}
+	DONE:
+	- imported melody and chord changes from real_books_archive.gi/Wikifonia.tar.xz: Wikifonia/Vernon Duke, E. Y. Harburg - What is There to Say.mxl.
+	- source revision: http://wikifonia.org/node/11351/revisions/15306/view.
+	- local PDF: real_books_archive.gi/Guitar - 557 Standards.pdf.
+	- book index reference: 557_Standards:418; index pagination is not a verified PDF page number.
+	- retained the archived MusicXML rights notice; no redistribution permission is asserted.
+	- retained written melody, chord changes, pickups, repeats and numbered endings; lyrics omitted.
+	- imported explicit 7alt symbols using the book's altered-dominant notation where present.
+	- tempo is an editorial practice suggestion.
+	TODO:
+	- proofread the complete melody, harmony and form against the referenced PDF and check by ear.
+	- verify source attribution, copyright notice and reuse terms against the scan; only the archived MusicXML notice is retained.
+	- locate the tune in the exact local PDF edition; book-index page numbers may differ.
+{% endif %}
+{% if part == "ChordsWikifonia" %}\chordmode {
+	\startChords
+	\startSong
+
+	\myMark "A"
+	\startPart
+	ees2 ees2:dim |
+	bes1:7 |
+	ees1 |
+	bes1:7 | \myEndLine
+	ees2 g4:m g4:dim |
+	f2.:m bes4:7 |
+	ees1 |
+	f2.:m7 bes4:7 | \myEndLine
+	ees2 ees2:dim |
+	bes2.:7 des4:7 |
+	ges2 ees2:dim |
+	des1:7 | \myEndLine
+	ges2 bes4:aug g4:dim |
+	aes4.:m des1*5/8:7 |
+	bes2:m ees2:m |
+	aes2:m bes2:7 | \myEndLine
+	\repeat volta 2 {
+	ees1 |
+	f2.:m7 bes4:7 |
+	ees1 |
+	f1:m7 | \myEndLine
+	ees2 c2:m7 |
+	f2:m7 bes2:7 |
+	ees1 |
+	bes1:7 | \myEndLine
+	}
+	s1 |
+	f2.:m7 c4:dim |
+	ees2. e4:m7.5- |
+	f2:m7 c2:dim | \myEndLine
+	ees2 d2:7 |
+	g2.:m bes4:m7 |
+	c1:7 |
+	f1:7 | \myEndLine
+	bes1:aug7 |
+	ees1 |
+	f2.:m7 bes4:7 |
+	ees1 | \myEndLine
+	f2.:m7 bes4:aug |
+	ees2 c2:m7 |
+	f2:m7 bes2:7 |
+	ees1 | \myEndLine
+	s1 |
+	\endBar
+	\endPart
+
+	\endSong
+	\endChords
+}
+{% endif %}
+{% if part == "VoiceWikifonia" %}\absolute {
+	\tempo "Moderato" 4 = 120
+	\time 4/4
+	\key es \major
+
+	es'4 ^ "Verse" es'4 es'8 d'8 es'8. f'16 |
+	es'4 d'2 es'8 f'8 |
+	g'4 g'4 g'8 f'8 g'8. as'16 |
+	g'4 f'2 g'8 as'8 |
+	bes'4 bes'4 bes'4 bes'4 |
+	bes'8 as'8 bes'8 c''8 ~ c''8 es'8 f'4 |
+	g'1 ~ |
+	g'2. r4 |
+	es'4 es'4 es'8 d'8 es'8. f'16 |
+	es'4 d'2 es'8 f'8 |
+	ges'4 ges'4 ges'8 f'8 ges'8. as'16 |
+	ges'4 f'2 ges'8 as'8 |
+	bes'4 bes'4 bes'4 bes'4 |
+	des''8 b'8 bes'8 as'8 ~ as'8 ges'8 as'4 |
+	bes'2 as'2 |
+	as'2 f'2 |
+	\repeat volta 2 {
+	bes4 ^ "Refrain" c'4 es'4 g'4 |
+	g'2. f'4 |
+	d'4 es'4 g'4 c''4 |
+	c''2. bes'4 |
+	\times 2/3 { es''4 c''4 d''4 } \times 2/3 { bes'4 c''4 g'4 } |
+	\times 2/3 { bes'4 f'4 g'4 } \times 2/3 { es'4 f'4 c'4 } |
+	es'1 ~ |
+	es'2. r4 |
+	}
+	r2 r8 es''8 es''8 es''8 |
+	es''8. c''16 c''2 d''4 |
+	es''8. c''16 c''2 d''4 |
+	\times 2/3 { es''4 c''4 d''4 } \times 2/3 { es''4 c''4 d''4 } |
+	es''8. c''16 c''4 r8 c''8 c''8 c''8 |
+	bes'8. g'16 g'2 as'4 |
+	bes'8. g'16 g'2 as'4 |
+	f'1 |
+	fis'1 |
+	bes4 c'4 es'4 g'4 |
+	g'2. f'4 |
+	d'4 es'4 g'4 c''4 |
+	c''2. bes'4 |
+	\times 2/3 { es''4 c''4 d''4 } \times 2/3 { bes'4 c''4 g'4 } |
+	\times 2/3 { bes'4 f'4 g'4 } \times 2/3 { es'4 f'4 c'4 } |
+	es'1 ~ |
+	es'2. r4 |
+	\endBar
+}
+{% endif %}

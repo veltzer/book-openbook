@@ -1,0 +1,129 @@
+{#
+default_version = "Wikifonia"
+
+[attributes]
+title = "I'm Just A Lucky So And So"
+style = "Jazz"
+composer = "Mac David"
+piece = "Standard"
+typesetter = "OpenBook contributors (MusicXML import)"
+completion = "3"
+uuid = "1685a23e-baa2-53cf-8712-fc05189fec9f"
+location = "557_Standards:167"
+copyright = "All Rights Reserved"
+copyrightextra = "Archived MusicXML notice retained; underlying music is not relicensed."
+
+[versions.Wikifonia]
+doChords = true
+doVoice = true
+doLyrics = false
+doLyricsmore = false
+doLyricsmoremore = false
+doChordBars = false
+doGuitar = false
+doExtra = false
+doPrep = false
+doOwn = false
+#}
+{% if part == "Vars" %}
+{% endif %}
+{% if part == "Doc" %}
+	DONE:
+	- imported melody and chord changes from real_books_archive.gi/Wikifonia.tar.xz: Wikifonia/Mac David, Duke Ellington - I'm Just A Lucky So And So.mxl.
+	- source revision: http://wikifonia.org/node/12008/revisions/16261/view.
+	- local PDF: real_books_archive.gi/Guitar - 557 Standards.pdf.
+	- book index reference: 557_Standards:167; index pagination is not a verified PDF page number.
+	- retained the archived MusicXML rights notice; no redistribution permission is asserted.
+	- retained written melody, chord changes, pickups, repeats and numbered endings; lyrics omitted.
+	- imported explicit 7alt symbols using the book's altered-dominant notation where present.
+	- tempo is an editorial practice suggestion.
+	TODO:
+	- proofread the complete melody, harmony and form against the referenced PDF and check by ear.
+	- verify source attribution, copyright notice and reuse terms against the scan; only the archived MusicXML notice is retained.
+	- locate the tune in the exact local PDF edition; book-index page numbers may differ.
+{% endif %}
+{% if part == "ChordsWikifonia" %}\chordmode {
+	\startChords
+	\startSong
+
+	\myMark "A"
+	\startPart
+	g1 |
+	c1 |
+	g1 |
+	d1:m7 | \myEndLine
+	c2:7 a2:7 |
+	a2:m7 d2:9 |
+	g1:6 |
+	a2:m7 d2:7 | \myEndLine
+	g1:6 |
+	c1:maj7 |
+	g1:6 |
+	d1:m7 | \myEndLine
+	c2:7 a2:7 |
+	a2:m7 d2:9 |
+	g1:6 |
+	g1:6 | \myEndLine
+	c1:9 |
+	g1:maj7 |
+	c1:9 |
+	g1:maj7 | \myEndLine
+	a2:m6 b2:7 |
+	e1:m7 |
+	a1:7 |
+	a2:m7 d2:9 | \myEndLine
+	g1:6 |
+	c1:maj7 |
+	g1:6 |
+	d1:m7 | \myEndLine
+	c2:7 a2:7 |
+	a2:m7 d2:9 |
+	g1:6 |
+	s1 | \myEndLine
+	\endBar
+	\endPart
+
+	\endSong
+	\endChords
+}
+{% endif %}
+{% if part == "VoiceWikifonia" %}\absolute {
+	\tempo "Moderato" 4 = 120
+	\time 4/4
+	\key g \major
+
+	r8 d'8 e'8 g'8 \once \omit TupletBracket \times 2/3 { b'8 e'8 g'8 ~ } g'4 |
+	r8 c'8 e'8 g'8 \once \omit TupletBracket \times 2/3 { bes'8 g'8 bes'8 ~ } bes'4 |
+	r8 d'8 e'8 g'8 b'8 g'8 b'8 a'8 ~ |
+	a'1 |
+	r4 g'4 a'4 g'4 |
+	e''8 e'8 g'8 fis'8 b'4 d'8 g'8 ~ |
+	g'1 ~ |
+	g'4 r4 r2 |
+	r8 d'8 e'8 g'8 \once \omit TupletBracket \times 2/3 { b'8 e'8 g'8 ~ } g'4 |
+	r8 c'8 e'8 g'8 \once \omit TupletBracket \times 2/3 { bes'8 g'8 bes'8 ~ } bes'4 |
+	r8 d'8 e'8 g'8 b'8 g'8 b'8 a'8 ~ |
+	a'1 |
+	r4 g'4 a'4 g'4 |
+	e''8 e'8 g'8 fis'8 b'4 d'8 g'8 ~ |
+	g'1 ~ |
+	g'2 ~ g'8 g'8 g'8 g'8 |
+	a'8 a'8 a'8 a'8 a'2 |
+	fis'8 fis'8 fis'8 fis'8 fis'4. g'8 |
+	a'8 a'8 a'8 a'8 ~ a'4 a'8 a'8 |
+	fis'8 fis'4. ~ fis'4 g'4 |
+	a'8 a'8 a'8 a'8 a'2 |
+	b'8 b'8 b'8 b'8 b'8 b'8 fis'8 b'8 |
+	a'2. fis'8 fis'8 |
+	e'8 e'4. ~ e'2 |
+	r8 d'8 e'8 g'8 \once \omit TupletBracket \times 2/3 { b'8 g'8 b'8 ~ } b'4 |
+	r8 c'8 e'8 g'8 \once \omit TupletBracket \times 2/3 { b'8 g'8 b'8 ~ } b'4 |
+	r8 d'8 e'8 g'8 b'8 g'8 b'8 a'8 ~ |
+	a'1 |
+	r4 g'4 a'4 g'4 |
+	e''8 e'8 g'8 fis'8 b'4 d'8 g'8 ~ |
+	g'1 ~ |
+	g'1 ^\fermata |
+	\endBar
+}
+{% endif %}

@@ -1,0 +1,167 @@
+{#
+default_version = "Wikifonia"
+
+[attributes]
+title = "The Anniversary Song"
+style = "Standard"
+composer = "Josef Ivanovici"
+piece = "Standard"
+typesetter = "OpenBook contributors (MusicXML import)"
+completion = "3"
+uuid = "73866296-1c7c-5576-a854-3d957cb14e63"
+location = "TheBook:369"
+copyright = "All Rights Reserved"
+copyrightextra = "Archived MusicXML notice retained; underlying music is not relicensed."
+
+[versions.Wikifonia]
+doChords = true
+doVoice = true
+doLyrics = false
+doLyricsmore = false
+doLyricsmoremore = false
+doChordBars = false
+doGuitar = false
+doExtra = false
+doPrep = false
+doOwn = false
+#}
+{% if part == "Vars" %}
+{% endif %}
+{% if part == "Doc" %}
+	DONE:
+	- imported melody and chord changes from real_books_archive.gi/Wikifonia.tar.xz: Wikifonia/Josef Ivanovici, Al Jolson, Saul Chaplin - The Anniversary Song.mxl.
+	- source revision: http://wikifonia.org/node/8794/revisions/12152/view.
+	- local PDF: real_books_archive.gi/The Book.pdf.
+	- book index reference: TheBook:369; index pagination is not a verified PDF page number.
+	- retained the archived MusicXML rights notice; no redistribution permission is asserted.
+	- retained written melody, chord changes, pickups, repeats and numbered endings; lyrics omitted.
+	- imported explicit 7alt symbols using the book's altered-dominant notation where present.
+	- tempo is an editorial practice suggestion.
+	TODO:
+	- proofread the complete melody, harmony and form against the referenced PDF and check by ear.
+	- verify source attribution, copyright notice and reuse terms against the scan; only the archived MusicXML notice is retained.
+	- locate the tune in the exact local PDF edition; book-index page numbers may differ.
+	- verify editorial chord spacing in measures 48; the archive places successive symbols at the same offset.
+	- verify complete D.C./D.S./coda/Fine navigation and playback; printed directions are not a playback guarantee.
+{% endif %}
+{% if part == "ChordsWikifonia" %}\chordmode {
+	\startChords
+	\startSong
+
+	\myMark "A"
+	\startPart
+	b2.:7 |
+	s2. |
+	s2. |
+	s2. | \myEndLine
+	e2.:m |
+	s2. |
+	s2. |
+	s2. | \myEndLine
+	a2.:m |
+	s2. |
+	e2.:m |
+	s4 b4:7 e4:m | \myEndLine
+	b2.:7 |
+	s4 b4:aug b4:7 |
+	e2.:m |
+	s2. | \myEndLine
+	b2.:7 |
+	s2. |
+	s2. |
+	s2. | \myEndLine
+	e2.:m |
+	s2. |
+	s2. |
+	s2. | \myEndLine
+	a2.:m |
+	s2. |
+	e2.:m |
+	s4 b4:7 e4:m | \myEndLine
+	b2.:7 |
+	s4 b4:aug b4:7 |
+	e2.:m |
+	d2.:7 | \myEndLine
+	e2.:m |
+	s2. |
+	d2.:9 |
+	s2. | \myEndLine
+	s4 g2 |
+	d2.:7 |
+	d2.:7 |
+	s2. | \myEndLine
+	s4 g2 |
+	s2. |
+	b2.:7 |
+	s2. | \myEndLine
+	c4:dim e4:m b4:7 |
+	e2.:m |
+	a4:m a2:m6 |
+	e4:m e4:dim b4:7 | \myEndLine
+	e2.:m |
+	s2. |
+	\endBar
+	\endPart
+
+	\endSong
+	\endChords
+}
+{% endif %}
+{% if part == "VoiceWikifonia" %}\absolute {
+	\tempo "Moderato" 4 = 120
+	\time 3/4
+	\key g \major
+
+	b2. ~ |
+	b4 dis'4 e'4 |
+	fis'2. ~ |
+	fis'4 dis'4 b4 |
+	g'2. ~ |
+	g'4 fis'4 e'4 |
+	b'2. ~ |
+	b'4 r4 b'4 |
+	c''2. ~ |
+	c''4 b'4 a'4 |
+	b'2. ~ |
+	b'4 a'4 g'4 |
+	fis'2. ~ |
+	fis'4 g'4 fis'4 |
+	e'2. ~ |
+	e'4 r4 b4 |
+	b2. ~ |
+	b4 dis'4 e'4 |
+	fis'2. ~ |
+	fis'4 dis'4 b4 |
+	g'2. ~ |
+	g'4 fis'4 e'4 |
+	b'2. ~ |
+	b'4 r4 b'4 |
+	c''2. ~ |
+	c''4 b'4 a'4 |
+	b'2. ~ |
+	b'4 a'4 g'4 |
+	fis'2. ~ |
+	fis'4 g'4 fis'4 |
+	e'2. |
+	fis'8 g'8 a'8 b'8 c''8 d''8 |
+	e'2. ~ ^ "Fine" |
+	e'2 r4 |
+	e''4 e''4 e''4 |
+	e''4 e''4 e''4 |
+	e''4 d''4. cis''8 |
+	d''2. |
+	c''4 c''4 c''4 |
+	c''4 c''4 c''4 |
+	c''4 b'4. ais'8 |
+	b'2 b'4 |
+	a'4 a'4 a'4 |
+	a'4 a'4 a'4 |
+	a'4 g'4 fis'4 |
+	e'2 e''4 |
+	c''4 a'4 fis'4 |
+	g'2 fis'4 |
+	e'2. ~ |
+	e'4 r4 b4 ^ "D.C. al Fine" |
+	\endBar
+}
+{% endif %}

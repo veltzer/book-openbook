@@ -1,0 +1,121 @@
+{#
+default_version = "Wikifonia"
+
+[attributes]
+title = "Minnie the Moocher"
+style = "Jazz"
+composer = "Cab Calloway, Irving Mills"
+piece = "Standard"
+typesetter = "OpenBook contributors (MusicXML import)"
+completion = "3"
+uuid = "78d47b10-7476-56ae-a6f5-95479defb9cd"
+location = "Firehouse_Jazz_Band:624"
+copyright = "All Rights Reserved"
+copyrightextra = "Archived MusicXML notice retained; underlying music is not relicensed."
+
+[versions.Wikifonia]
+doChords = true
+doVoice = true
+doLyrics = false
+doLyricsmore = false
+doLyricsmoremore = false
+doChordBars = false
+doGuitar = false
+doExtra = false
+doPrep = false
+doOwn = false
+#}
+{% if part == "Vars" %}
+{% endif %}
+{% if part == "Doc" %}
+	DONE:
+	- imported melody and chord changes from real_books_archive.gi/Wikifonia.tar.xz: Wikifonia/Cab Calloway, Irving Mills - Minnie the Moocher.mxl.
+	- source revision: http://wikifonia.org/node/2025/revisions/17745/view.
+	- local PDF: real_books_archive.gi/Dixieland - The Firehouse Jazz Band - Dixieland Fake Book - 778 S Noten Sheets Score Songs Lieder.pdf.
+	- book index reference: Firehouse_Jazz_Band:624; index pagination is not a verified PDF page number.
+	- retained the archived MusicXML rights notice; no redistribution permission is asserted.
+	- retained written melody, chord changes, pickups, repeats and numbered endings; lyrics omitted.
+	- imported explicit 7alt symbols using the book's altered-dominant notation where present.
+	- tempo is an editorial practice suggestion.
+	TODO:
+	- proofread the complete melody, harmony and form against the referenced PDF and check by ear.
+	- verify source attribution, copyright notice and reuse terms against the scan; only the archived MusicXML notice is retained.
+	- locate the tune in the exact local PDF edition; book-index page numbers may differ.
+{% endif %}
+{% if part == "ChordsWikifonia" %}\chordmode {
+	\startChords
+	\startSong
+
+	\myMark "A"
+	\startPart
+	s1 |
+	\repeat volta 2 {
+	e1:m |
+	a2:m e2:m |
+	b1:7 | \myEndLine
+	e2:m b2:7 |
+	e1:m |
+	a4.:m e2:m b8:7/fis |
+	e4:m/g a4:m6/fis b2:7 | \myEndLine
+	e4:m b8:7 e1*5/8:m |
+	e1:m |
+	s1 |
+	e1:m | \myEndLine
+	s1 |
+	e1:m |
+	s1 |
+	} \alternative {
+	{
+	e4:m b4:7 e2:m | \myEndLine
+	s4 a4:m6/fis e4:m b4:7 | \myEndLineVoltaNotLast
+	}
+	{
+	s4 b8:7 e1*5/8:m |
+	s2. b4:7 |
+	e4:m a4:m6/fis b4:7 b4:7 | \myEndLine
+	e1:m | \myEndLineVoltaLast
+	}
+	}
+	\endBar
+	\endPart
+
+	\endSong
+	\endChords
+}
+{% endif %}
+{% if part == "VoiceWikifonia" %}\absolute {
+	\tempo "Moderato" 4 = 120
+	\time 4/4
+	\key g \major
+
+	r4 r4 r4 b'4 |
+	\repeat volta 2 {
+	e'4 g'4 b'8 b'4 b'8 |
+	e''8 e''4 c''8 b'8 g'4. |
+	b'8 b'4 c''8 b'4 a'4 |
+	g'4 c''4 b'8 fis'4. |
+	e'8 e'4 g'8 b'8 b'4. |
+	e''8 c''4 b'2 b'8 |
+	e''8 e''8 c''8 c''8 b'4 a'4 - "Ddim" |
+	g'8 e'8 fis'8 e'8 ~ e'8 e''4 b'8 |
+	e''8 b'4 e''8 ~ e''2 ~ |
+	e''2 ~ e''8 b'4 g'8 |
+	b'8 g'4 b'8 ~ b'2 ~ |
+	b'2 ~ b'8 e''4 b'8 |
+	e''8 b'4 e''8 ~ e''2 ~ |
+	e''2 ~ e''8 g'4 e'8 |
+	} \alternative {
+	{
+	g'8 e'8 fis'8 e'8 ~ e'2 ~ |
+	e'4 ~ e'4 ~ e'4 b'4 |
+	}
+	{
+	g'8 e'8 fis'8 e'8 ~ e'2 ~ |
+	e'2. g'4 |
+	e'4 c''4 b'4 b'4 |
+	e''1 |
+	}
+	}
+	\endBar
+}
+{% endif %}

@@ -1,0 +1,144 @@
+{#
+default_version = "Wikifonia"
+
+[attributes]
+title = "All My Loving"
+style = "Standard"
+composer = "John Lennon, Paul McCartney"
+piece = "Standard"
+typesetter = "OpenBook contributors (MusicXML import)"
+completion = "3"
+uuid = "0f747d21-6dd8-5283-9f27-9b9e2cf40fde"
+location = "TheBook:243"
+copyright = "All Rights Reserved"
+copyrightextra = "Archived MusicXML notice retained; underlying music is not relicensed."
+
+[versions.Wikifonia]
+doChords = true
+doVoice = true
+doLyrics = false
+doLyricsmore = false
+doLyricsmoremore = false
+doChordBars = false
+doGuitar = false
+doExtra = false
+doPrep = false
+doOwn = false
+#}
+{% if part == "Vars" %}
+{% endif %}
+{% if part == "Doc" %}
+	DONE:
+	- imported melody and chord changes from real_books_archive.gi/Wikifonia.tar.xz: Wikifonia/John Lennon, Paul McCartney - All My Loving.mxl.
+	- source revision: http://www.wikifonia.org/node/3012/revisions/3819/view.
+	- local PDF: real_books_archive.gi/The Book.pdf.
+	- book index reference: TheBook:243; index pagination is not a verified PDF page number.
+	- retained the archived MusicXML rights notice; no redistribution permission is asserted.
+	- retained written melody, chord changes, pickups, repeats and numbered endings; lyrics omitted.
+	- imported explicit 7alt symbols using the book's altered-dominant notation where present.
+	- tempo is an editorial practice suggestion.
+	TODO:
+	- proofread the complete melody, harmony and form against the referenced PDF and check by ear.
+	- verify source attribution, copyright notice and reuse terms against the scan; only the archived MusicXML notice is retained.
+	- locate the tune in the exact local PDF edition; book-index page numbers may differ.
+	- verify complete D.C./D.S./coda/Fine navigation and playback; printed directions are not a playback guarantee.
+{% endif %}
+{% if part == "ChordsWikifonia" %}\chordmode {
+	\startChords
+	\startSong
+
+	\myMark "A"
+	\startPart
+	\partial 2 s2 |
+	\repeat volta 2 {
+	d1:m |
+	g1:7 |
+	c1 | \myEndLine
+	a1:m |
+	f1 |
+	d1:m |
+	b1 | \myEndLine
+	s1 |
+	d1:m |
+	g1:7 |
+	c1 | \myEndLine
+	a1:m |
+	d1:m7 |
+	g2..:7 c8 |
+	} \alternative {
+	{
+	s1 | \myEndLine
+	s1 | \myEndLineVoltaNotLast
+	}
+	{
+	s1 | \myEndLineVoltaLast
+	}
+	}
+	a1:m |
+	c1 | \myEndLine
+	c1 |
+	s1 |
+	a1:m |
+	c1 | \myEndLine
+	c1 |
+	s1 |
+	s1 |
+	s1 | \myEndLine
+	a1:m |
+	s1 |
+	c1 |
+	s1 | \myEndLine
+	\endBar
+	\endPart
+
+	\endSong
+	\endChords
+}
+{% endif %}
+{% if part == "VoiceWikifonia" %}\absolute {
+	\tempo "Moderato" 4 = 120
+	\time 4/4
+	\key c \major
+
+	\partial 2 f'4 e'4 |
+	\repeat volta 2 {
+	d'2 e'4 f'4 |
+	g'4 a'2 b'4 |
+	c''2 c''4 b'4 |
+	a'4 e'2 a'4 |
+	a'2 a'4 g'4 |
+	f'4. e'8 ~ e'4 c'4 |
+	d'1 ~ |
+	d'4 r4 f'4 e'4 |
+	d'2 e'4 f'8 g'8 ~ |
+	g'2 a'4 b'4 |
+	c''2 c''4 b'8 a'8 ~ |
+	a'8 e'8 e'8 e'8 a'8 a'4. |
+	a'2 a'4 g'4 |
+	f'8 e'4. ~ e'4 d'8 c'8 ~ |
+	} \alternative {
+	{
+	c'2 r2 |
+	c'4 f'4 e'4 r4 |
+	}
+	{
+	c'4 r4 c''4 b'4 |
+	}
+	}
+	a'8 e'8 ~ e'2. |
+	e'4 d'4 c'4 d'8 e'8 |
+	e'1 ~ |
+	e'4 r4 c''4 b'4 |
+	a'8 e'8 ~ e'2. |
+	e'4 d'4 d'4 c'8 c'8 |
+	c'1 ~ ^ "To Coda" |
+	c'4 r4 f'4 e'4 |
+	\mark \markup { \musicglyph "scripts.coda" } R1 |
+	c'4 r4 c''4 b'4 |
+	a'8 e'8 ~ e'2. |
+	e''4 d''4 c''4 d''8 c''8 ~ |
+	c''1 ~ |
+	c''2. r4 |
+	\endBar
+}
+{% endif %}

@@ -1,0 +1,129 @@
+{#
+default_version = "Wikifonia"
+
+[attributes]
+title = "Easy Street"
+style = "Jazz"
+composer = "Alan Rankin Jones"
+piece = "Standard"
+typesetter = "OpenBook contributors (MusicXML import)"
+completion = "3"
+uuid = "ce113285-bb59-5715-84a6-5c602d9ccd96"
+location = "557_Standards:100"
+copyright = "All Rights Reserved"
+copyrightextra = "Archived MusicXML notice retained; underlying music is not relicensed."
+
+[versions.Wikifonia]
+doChords = true
+doVoice = true
+doLyrics = false
+doLyricsmore = false
+doLyricsmoremore = false
+doChordBars = false
+doGuitar = false
+doExtra = false
+doPrep = false
+doOwn = false
+#}
+{% if part == "Vars" %}
+{% endif %}
+{% if part == "Doc" %}
+	DONE:
+	- imported melody and chord changes from real_books_archive.gi/Wikifonia.tar.xz: Wikifonia/Alan Rankin Jones - Easy Street.mxl.
+	- source revision: http://wikifonia.org/node/11145/revisions/15053/view.
+	- local PDF: real_books_archive.gi/Guitar - 557 Standards.pdf.
+	- book index reference: 557_Standards:100; index pagination is not a verified PDF page number.
+	- retained the archived MusicXML rights notice; no redistribution permission is asserted.
+	- retained written melody, chord changes, pickups, repeats and numbered endings; lyrics omitted.
+	- imported explicit 7alt symbols using the book's altered-dominant notation where present.
+	- tempo is an editorial practice suggestion.
+	TODO:
+	- proofread the complete melody, harmony and form against the referenced PDF and check by ear.
+	- verify source attribution, copyright notice and reuse terms against the scan; only the archived MusicXML notice is retained.
+	- locate the tune in the exact local PDF edition; book-index page numbers may differ.
+{% endif %}
+{% if part == "ChordsWikifonia" %}\chordmode {
+	\startChords
+	\startSong
+
+	\myMark "A"
+	\startPart
+	ees8 g4:7 c1*5/8:7 |
+	s8. f1*5/16:m g8:m bes4.:7 |
+	ees8 e4:7 ees1*5/8:9 |
+	s8. aes1*5/16:m bes2:7 | \myEndLine
+	ees8 g4:7 c1*5/8:7 |
+	f2:m g4:m bes4:7 |
+	ees1:maj9 |
+	f2:9 aes8 bes4.:7 | \myEndLine
+	ees8 g4:7 c1*5/8:7 |
+	s8. f1*5/16:m g8:m bes4.:7 |
+	ees8 e4:7 ees1*5/8:9 |
+	s8. aes1*5/16:m bes2:7 | \myEndLine
+	ees8 g4:7 c1*5/8:7 |
+	f2:m g4:m bes4:7 |
+	ees1:9 |
+	s1 | \myEndLine
+	aes2.:maj7 aes4:6 |
+	aes2:m9 aes2:m6 |
+	g4:m7 ges4:m7 f4:m9 e8:7 ees8:9 |
+	s2 ees2:9 | \myEndLine
+	aes2:maj9 aes2:6 |
+	aes2:m9 aes2:m6 |
+	ees4.. f1*9/16:9 |
+	bes2:7 bes2:aug7 | \myEndLine
+	ees8 g4:7 c1*5/8:7 |
+	s8. f1*5/16:m g8:m bes4.:7 |
+	ees8 e4:7 ees1*5/8:9 |
+	s8. aes1*5/16:m bes2:7 | \myEndLine
+	ees8 g4:7 c1*5/8:7 |
+	b2:7 bes2:aug7 |
+	ees2 aes2:6 |
+	ees1 | \myEndLine
+	\endBar
+	\endPart
+
+	\endSong
+	\endChords
+}
+{% endif %}
+{% if part == "VoiceWikifonia" %}\absolute {
+	\tempo "Moderato" 4 = 120
+	\time 4/4
+	\key es \major
+
+	g'8 d'4 c'8 ~ c'2 |
+	r8. c''16 bes'8. as'16 g'8 f'4. |
+	es''8 g'4 f'8 ~ f'2 |
+	r8. ces''16 bes'8. as'16 ges'8 f'4. |
+	bes'8 d'4 c'8 ~ c'2 |
+	r8. es''16 d''8. c''16 bes'4 g'4 |
+	f'2. r8 g'8 |
+	g'8. g'16 fis'8. g'16 es'8 f'4. |
+	g'8 d'4 c'8 ~ c'2 |
+	r8. c''16 bes'8. as'16 g'8 f'4. |
+	es''8 g'4 f'8 ~ f'2 |
+	r8. ces''16 bes'8. as'16 ges'8 f'4. |
+	bes'8 d'4 c'8 ~ c'2 |
+	r8. es''16 d''8. c''16 bes'4 g'4 |
+	g'1 ~ |
+	g'2 r8. es'16 f'8. g'16 |
+	bes'8. bes'16 bes'8. bes'16 bes'8. as'16 es'8. f'16 |
+	bes'8. bes'16 bes'8. bes'16 bes'8. as'16 es'8. f'16 |
+	g'4 g'4 g'4 d'8 f'8 ~ |
+	f'2 r8. es'16 f'8. g'16 |
+	bes'8. bes'16 bes'8. bes'16 bes'8. as'16 es'8. f'16 |
+	bes'8. bes'16 bes'8. bes'16 bes'8. as'16 es'8. f'16 |
+	g'4 g'8. es''16 ~ es''8 d''8 c''4 |
+	f'2 fis'2 |
+	g'8 d'4 c'8 ~ c'2 |
+	r8. c''16 bes'8. as'16 g'8 f'4. |
+	es''8 g'4 f'8 ~ f'2 |
+	r8. ces''16 bes'8. as'16 ges'8 f'4. |
+	bes'8 d'4 c'8 ~ c'4. es''8 |
+	es''8. es''16 des''8. des''16 bes'4 fis'4 |
+	es'4. f'8 es'4. f'8 |
+	es'1 |
+	\endBar
+}
+{% endif %}

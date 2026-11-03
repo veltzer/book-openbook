@@ -1,0 +1,147 @@
+{#
+default_version = "Wikifonia"
+
+[attributes]
+title = "If You Were The Only Girl In The World"
+style = "Jazz"
+composer = "Nat D. Ayer"
+piece = "Standard"
+typesetter = "OpenBook contributors (MusicXML import)"
+completion = "3"
+uuid = "b4d64128-4152-5b2a-9c77-d97bcdf43c75"
+location = "Firehouse_Jazz_Band:264"
+copyright = "All Rights Reserved"
+copyrightextra = "Archived MusicXML notice retained; underlying music is not relicensed."
+
+[versions.Wikifonia]
+doChords = true
+doVoice = true
+doLyrics = false
+doLyricsmore = false
+doLyricsmoremore = false
+doChordBars = false
+doGuitar = false
+doExtra = false
+doPrep = false
+doOwn = false
+#}
+{% if part == "Vars" %}
+{% endif %}
+{% if part == "Doc" %}
+	DONE:
+	- imported melody and chord changes from real_books_archive.gi/Wikifonia.tar.xz: Wikifonia/Nat D. Ayer, Clifford Grey - If You Were The Only Girl In The World.mxl.
+	- source revision: http://wikifonia.org/node/3184/revisions/4031/view.
+	- local PDF: real_books_archive.gi/Dixieland - The Firehouse Jazz Band - Dixieland Fake Book - 778 S Noten Sheets Score Songs Lieder.pdf.
+	- book index reference: Firehouse_Jazz_Band:264; index pagination is not a verified PDF page number.
+	- retained the archived MusicXML rights notice; no redistribution permission is asserted.
+	- retained written melody, chord changes, pickups, repeats and numbered endings; lyrics omitted.
+	- imported explicit 7alt symbols using the book's altered-dominant notation where present.
+	- tempo is an editorial practice suggestion.
+	TODO:
+	- proofread the complete melody, harmony and form against the referenced PDF and check by ear.
+	- verify source attribution, copyright notice and reuse terms against the scan; only the archived MusicXML notice is retained.
+	- locate the tune in the exact local PDF edition; book-index page numbers may differ.
+{% endif %}
+{% if part == "ChordsWikifonia" %}\chordmode {
+	\startChords
+	\startSong
+
+	\myMark "A"
+	\startPart
+	\partial 4 s4 |
+	c2. |
+	a2.:7 |
+	d2.:7 | \myEndLine
+	s2. |
+	g2.:7 |
+	s2. |
+	c2. | \myEndLine
+	g2.:7 |
+	c2. |
+	s2. |
+	f2. | \myEndLine
+	s2. |
+	g2.:7 |
+	s2. |
+	c2. | \myEndLine
+	s2. |
+	s2. |
+	a2.:7 |
+	d2.:7 | \myEndLine
+	s2. |
+	g2.:7 |
+	s2. |
+	c2. | \myEndLine
+	g2.:7 |
+	c2. |
+	s2. |
+	e2.:m | \myEndLine
+	s2. |
+	f2. |
+	g2.:7 |
+	c4 bes2 | \myEndLine
+	a2.:7 |
+	f2. |
+	f2.:m |
+	c2. | \myEndLine
+	a2.:7 |
+	d2.:7 |
+	g2.:7 |
+	c2. | \myEndLine
+	s2. |
+	\endBar
+	\endPart
+
+	\endSong
+	\endChords
+}
+{% endif %}
+{% if part == "VoiceWikifonia" %}\absolute {
+	\tempo "Moderato" 4 = 120
+	\time 3/4
+	\key c \major
+
+	\partial 4 e'4 |
+	g'2 a'8 b'8 |
+	a'2 g'4 |
+	a2 c'8 e'8 |
+	d'2 e'4 |
+	g'2 e'8 g'8 |
+	e'2 d'4 |
+	g'2. ~ |
+	g'2. |
+	c''4 ~ c''8 a'8 c''8 a'8 |
+	c''4 ~ c''8 a'8 c''8 a'8 |
+	c''2 f'4 |
+	f'2. |
+	b'4 ~ b'8 g'8 b'8 g'8 |
+	b'4 ~ b'8 g'8 b'8 g'8 |
+	b'2 e'4 |
+	e'2 e'4 |
+	g'2 a'8 b'8 |
+	a'2 g'4 |
+	a2 c'8 e'8 |
+	d'2 e'4 |
+	g'2 e'8 g'8 |
+	e'2 d'4 |
+	g'2. ~ |
+	g'2. |
+	c''2 c''4 |
+	c''2 c''4 |
+	\once \omit TupletBracket \times 2/3 { b'8 a'8 g'8 } b'4 b'4 |
+	g'2. |
+	a'2 a'4 |
+	a'2 a'4 |
+	\once \omit TupletBracket \times 2/3 { g'8 f'8 e'8 } g'4 g'4 |
+	e'2 e'4 |
+	d'2 e'8 f'8 |
+	c''2 c''4 |
+	b'2 a'8 g'8 |
+	f'2 e'4 |
+	e'2 d'8 e'8 |
+	g'2 e'4 |
+	c'2. ~ |
+	c'4 r2 |
+	\endBar
+}
+{% endif %}

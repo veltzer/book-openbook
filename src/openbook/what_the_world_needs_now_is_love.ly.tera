@@ -1,0 +1,151 @@
+{#
+default_version = "Wikifonia"
+
+[attributes]
+title = "What The World Needs Now Is Love"
+style = "Jazz"
+composer = "Burt Bacharach"
+piece = "Standard"
+typesetter = "OpenBook contributors (MusicXML import)"
+completion = "3"
+uuid = "10e4317e-78a2-5475-86c6-b6d616c1a806"
+location = "StandardsBook:508"
+copyright = "All Rights Reserved"
+copyrightextra = "Archived MusicXML notice retained; underlying music is not relicensed."
+
+[versions.Wikifonia]
+doChords = true
+doVoice = true
+doLyrics = false
+doLyricsmore = false
+doLyricsmoremore = false
+doChordBars = false
+doGuitar = false
+doExtra = false
+doPrep = false
+doOwn = false
+#}
+{% if part == "Vars" %}
+{% endif %}
+{% if part == "Doc" %}
+	DONE:
+	- imported melody and chord changes from real_books_archive.gi/Wikifonia.tar.xz: Wikifonia/Burt Bacharach, Hal David - What The World Needs Now Is Love.mxl.
+	- source revision: http://wikifonia.org/node/5996/revisions/8841/view.
+	- local PDF: real_books_archive.gi/The Standards Real Book.pdf.
+	- book index reference: StandardsBook:508; index pagination is not a verified PDF page number.
+	- retained the archived MusicXML rights notice; no redistribution permission is asserted.
+	- retained written melody, chord changes, pickups, repeats and numbered endings; lyrics omitted.
+	- imported explicit 7alt symbols using the book's altered-dominant notation where present.
+	- tempo is an editorial practice suggestion.
+	TODO:
+	- proofread the complete melody, harmony and form against the referenced PDF and check by ear.
+	- verify source attribution, copyright notice and reuse terms against the scan; only the archived MusicXML notice is retained.
+	- locate the tune in the exact local PDF edition; book-index page numbers may differ.
+{% endif %}
+{% if part == "ChordsWikifonia" %}\chordmode {
+	\startChords
+	\startSong
+
+	\myMark "A"
+	\startPart
+	s2. |
+	\repeat volta 2 {
+	b2.:m7 |
+	e2.:m7 |
+	b2.:m7 | \myEndLine
+	e2.:m7 |
+	c2. |
+	s2. |
+	b2.:m | \myEndLine
+	d2.:7 |
+	b2.:m7 |
+	e2.:m7 |
+	b2.:m7 | \myEndLine
+	e2.:m7 |
+	c2. |
+	s2. |
+	s2. | \myEndLine
+	b2.:7 |
+	e2.:m7 |
+	s2. |
+	s2. | \myEndLine
+	s2. |
+	d2.:m |
+	g2. |
+	c2.:maj7 | \myEndLine
+	c2. |
+	d2.:m7 |
+	g2. |
+	c2.:maj7 | \myEndLine
+	e2.:m7 |
+	a2.:7 |
+	d2. |
+	s2. | \myEndLine
+	}
+	b2. |
+	e2.:7 |
+	c2. |
+	s2. | \myEndLine
+	b2.:m7 |
+	c2.:maj7 |
+	d2.:7 |
+	g2. | \myEndLine
+	s2. |
+	\endBar
+	\endPart
+
+	\endSong
+	\endChords
+}
+{% endif %}
+{% if part == "VoiceWikifonia" %}\absolute {
+	\tempo "Moderato" 4 = 120
+	\time 3/4
+	\key g \major
+
+	r4 e'4 g'4 |
+	\repeat volta 2 {
+	d''2 d''4 |
+	b'2 d'4 |
+	d''2 d''4 |
+	b'2. |
+	a'8 g'8 a'8 e'8 g'4 ~ |
+	g'4 e'4 g'4 |
+	b'2 b'8 d'8 |
+	b'8 a'8 a'4 e'8 g'8 |
+	d''2 d''4 |
+	b'2 d'4 |
+	d''2 d''4 |
+	b'2. |
+	a'8 g'8 a'8 e'8 g'4 ~ |
+	g'4 e'4 g'4 |
+	b'8 a'8 b'2 ~ |
+	b'2. |
+	r4 r8 fis'8 fis'8 fis'8 |
+	fis'4 g'4 a'8 b'8 |
+	fis'4 fis'2 ~ |
+	fis'4 b'4. fis'8 |
+	e'4 g'4. b'8 |
+	a'4 b'4. g'8 |
+	d'8 e'8 e'2 ~ |
+	e'4 g'4. d'8 |
+	e'4 g'4. b'8 |
+	a'4 b'4. g'8 |
+	d'8 e'8 e'4 ~ e'8 fis'8 |
+	g'8 g'8 g'2 |
+	r4 e'8 e'8 fis'8 g'8 |
+	a'2. ~ |
+	a'4 e'4 g'4 |
+	}
+	b'8 a'8 b'2 ~ |
+	b'2. |
+	a'8 g'8 a'8 e'8 g'4 ~ |
+	g'4 e'4 g'4 |
+	d''2 e''4 |
+	b'2. |
+	a'2 e'8 d'8 |
+	e'8 g'8 g'2 ~ |
+	g'4 r2 |
+	\endBar
+}
+{% endif %}

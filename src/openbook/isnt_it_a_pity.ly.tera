@@ -1,0 +1,178 @@
+{#
+default_version = "Wikifonia"
+
+[attributes]
+title = "Isn't It A Pity"
+style = "Jazz"
+composer = "George Gershwin"
+piece = "Standard"
+typesetter = "OpenBook contributors (MusicXML import)"
+completion = "3"
+uuid = "54ab5890-00a1-56b2-9824-ef764c74c25b"
+location = "StandardsBook:238"
+copyright = "All Rights Reserved"
+copyrightextra = "Archived MusicXML notice retained; underlying music is not relicensed."
+
+[versions.Wikifonia]
+doChords = true
+doVoice = true
+doLyrics = false
+doLyricsmore = false
+doLyricsmoremore = false
+doChordBars = false
+doGuitar = false
+doExtra = false
+doPrep = false
+doOwn = false
+#}
+{% if part == "Vars" %}
+{% endif %}
+{% if part == "Doc" %}
+	DONE:
+	- imported melody and chord changes from real_books_archive.gi/Wikifonia.tar.xz: Wikifonia/George Gershwin, Ira Gershwin - Isn't It A Pity.mxl.
+	- source revision: http://wikifonia.org/node/13720/revisions/18395/view.
+	- local PDF: real_books_archive.gi/The Standards Real Book.pdf.
+	- book index reference: StandardsBook:238; index pagination is not a verified PDF page number.
+	- retained the archived MusicXML rights notice; no redistribution permission is asserted.
+	- retained written melody, chord changes, pickups, repeats and numbered endings; lyrics omitted.
+	- imported explicit 7alt symbols using the book's altered-dominant notation where present.
+	- tempo is an editorial practice suggestion.
+	TODO:
+	- proofread the complete melody, harmony and form against the referenced PDF and check by ear.
+	- verify source attribution, copyright notice and reuse terms against the scan; only the archived MusicXML notice is retained.
+	- locate the tune in the exact local PDF edition; book-index page numbers may differ.
+	- verify editorial chord spacing in measures 4, 6, 12, 30, 47, 48; the archive places successive symbols at the same offset.
+{% endif %}
+{% if part == "ChordsWikifonia" %}\chordmode {
+	\startChords
+	\startSong
+
+	\myMark "A"
+	\startPart
+	a1:m6 |
+	d1:m7.5- |
+	c1 |
+	d2:m9 g2:7 | \myEndLine
+	c1 |
+	f2 g2:7 |
+	c2/e b2:7 |
+	bes2:7 a2:7 | \myEndLine
+	d1:9 |
+	d1:m7.5- |
+	c1 |
+	fis2:m7.5- b2:7 | \myEndLine
+	e1*5/8:m a4.:m |
+	e1*5/8:m7 a4.:7 |
+	d2:sus4.7 d2:7 |
+	g2.:7 g4:aug7 | \myEndLine
+	\repeat volta 2 {
+	c2 e2:m7 |
+	f2 b2:aug7 |
+	e2:m a2:7 |
+	d2:m g2:7 | \myEndLine
+	c2 c2:9/e |
+	f2 d4:m7 g4:7 |
+	c2./e a4:dim7 |
+	c2 e2:m7 | \myEndLine
+	f2 b2:aug7 |
+	e2:m a2:7 |
+	d2:m7 g2:7 |
+	c2 c2:9/e | \myEndLine
+	f4 c4/e d4:m7 g4:7 |
+	c2. d8:m7 g8:7 |
+	c4 d2:m9 a4:m6 |
+	e2:m/b e2:m | \myEndLine
+	fis4:7 b2.:7 |
+	e1:m |
+	a1:7 |
+	g2.:6/d g4 | \myEndLine
+	a4:m6 d2.:7 |
+	g1:7 |
+	f2:9 f2:7 |
+	c2 e2:m7 | \myEndLine
+	f2 b2:aug7 |
+	e2:m a2:7 |
+	d2:m g2:7 |
+	c1*5/8 c4.:9.5+ | \myEndLine
+	f4:maj7 e4:m7 d4:m7 g4:9 |
+	} \alternative {
+	{
+	c1 |
+	d4:m7 g2:7 g4:aug7 | \myEndLineVoltaNotLast
+	}
+	{
+	c4 c2:aug7 g4:7 | \myEndLine
+	c1 | \myEndLineVoltaLast
+	}
+	}
+	\endBar
+	\endPart
+
+	\endSong
+	\endChords
+}
+{% endif %}
+{% if part == "VoiceWikifonia" %}\absolute {
+	\tempo "Moderato" 4 = 120
+	\time 4/4
+	\key c \major
+
+	c''4 b'8. c''16 b'8 a'4. |
+	c''8. c''16 bes'8. c''16 bes'8 as'4. |
+	g'4 a'4 c''4 e''4 |
+	f'1 |
+	e'4 g'4 a'8. a'16 c''4 |
+	d'1 |
+	e'8. f'16 g'8. e'16 a'8 a'4 ~ a'8 |
+	e'8. f'16 g'8. e'16 a'2 |
+	c''4 b'8. c''16 b'8 a'4. |
+	c''8. c''16 bes'8. c''16 bes'8 as'4. |
+	g'4 a'4 c''4 e''4 |
+	fis'1 |
+	g'4 a'8. g'16 a'8 b'4. |
+	g'8. g'16 a'8. g'16 a'8 ( b'4. ) |
+	d''2 d''2 |
+	d''2. r4 |
+	\repeat volta 2 {
+	e'8. f'16 g'8. a'16 b'2 |
+	r8 a'8 \once \omit TupletBracket \times 2/3 { c''8 b'8 a'8 ~ } a'2 |
+	r8 g'8 \once \omit TupletBracket \times 2/3 { b'8 a'8 g'8 ~ } g'2 |
+	r8 f'8 \once \omit TupletBracket \times 2/3 { a'8 g'8 f'8 ~ } f'2 |
+	e'8. f'16 g'8. b'16 d''8 d''4. |
+	r8 c''8 \once \omit TupletBracket \times 2/3 { e''8 d''8 c''8 ~ } c''4 c''4 |
+	g'2. r4 |
+	e'8. f'16 g'8. a'16 b'2 |
+	r8 a'8 \once \omit TupletBracket \times 2/3 { c''8 b'8 a'8 ~ } a'2 |
+	r8 g'8 \once \omit TupletBracket \times 2/3 { b'8 a'8 g'8 ~ } g'2 |
+	r8 f'8 \once \omit TupletBracket \times 2/3 { a'8 g'8 f'8 ~ } f'2 |
+	e'8. f'16 g'8. b'16 d''8 d''4. |
+	r8 c''8 \once \omit TupletBracket \times 2/3 { e''8 d''8 c''8 ~ } c''4 c''4 |
+	c''2. r4 |
+	r8. c''16 d''8. c''16 d''4 c''4 |
+	b'4 e'4 fis'4 g'4 |
+	b'4 b'2. |
+	b'4 a'8. b'16 a'8 g'4. |
+	b'8. b'16 a'8. b'16 a'8 g'4. |
+	r4 d'4 e'4 g'4 |
+	d''4 d''2. |
+	e''4 d''8. e''16 d''8 c''4. |
+	b'8. b'16 a'8. b'16 a'8 g'4. |
+	e'8. f'16 g'8. a'16 b'2 |
+	r8 a'8 \once \omit TupletBracket \times 2/3 { c''8 b'8 a'8 ~ } a'2 |
+	r8 g'8 \once \omit TupletBracket \times 2/3 { b'8 a'8 g'8 ~ } g'2 |
+	r8 f'8 \once \omit TupletBracket \times 2/3 { a'8 g'8 f'8 ~ } f'2 |
+	e'8. f'16 g'8. b'16 d''8 d''4 c''8 |
+	e''8. e''16 d''8. d''16 c''4 b'4 |
+	} \alternative {
+	{
+	c''1 |
+	R1 |
+	}
+	{
+	c''1 ~ |
+	c''4 r4 r2 |
+	}
+	}
+	\endBar
+}
+{% endif %}

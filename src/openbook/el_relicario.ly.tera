@@ -1,0 +1,159 @@
+{#
+default_version = "Wikifonia"
+
+[attributes]
+title = "El Relicario"
+style = "Standard"
+composer = "Jose Padilla"
+piece = "Standard"
+typesetter = "OpenBook contributors (MusicXML import)"
+completion = "3"
+uuid = "9abe5e1d-d96b-58fe-9a33-225ab77648a1"
+location = "TheBook:303"
+copyright = "All Rights Reserved"
+copyrightextra = "Archived MusicXML notice retained; underlying music is not relicensed."
+
+[versions.Wikifonia]
+doChords = true
+doVoice = true
+doLyrics = false
+doLyricsmore = false
+doLyricsmoremore = false
+doChordBars = false
+doGuitar = false
+doExtra = false
+doPrep = false
+doOwn = false
+#}
+{% if part == "Vars" %}
+{% endif %}
+{% if part == "Doc" %}
+	DONE:
+	- imported melody and chord changes from real_books_archive.gi/Wikifonia.tar.xz: Wikifonia/Jose Padilla - El Relicario.mxl.
+	- source revision: http://wikifonia.org/node/21635/revisions/28621/view.
+	- local PDF: real_books_archive.gi/The Book.pdf.
+	- book index reference: TheBook:303; index pagination is not a verified PDF page number.
+	- retained the archived MusicXML rights notice; no redistribution permission is asserted.
+	- retained written melody, chord changes, pickups, repeats and numbered endings; lyrics omitted.
+	- imported explicit 7alt symbols using the book's altered-dominant notation where present.
+	- tempo is an editorial practice suggestion.
+	TODO:
+	- proofread the complete melody, harmony and form against the referenced PDF and check by ear.
+	- verify source attribution, copyright notice and reuse terms against the scan; only the archived MusicXML notice is retained.
+	- locate the tune in the exact local PDF edition; book-index page numbers may differ.
+{% endif %}
+{% if part == "ChordsWikifonia" %}\chordmode {
+	\startChords
+	\startSong
+
+	\myMark "A"
+	\startPart
+	d2.:m |
+	s2. |
+	a2.:7 |
+	d2.:m | \myEndLine
+	s2. |
+	c2.:7 |
+	f2. |
+	g2.:m | \myEndLine
+	a2. |
+	s2. |
+	g2.:m6 |
+	s2. | \myEndLine
+	a2. |
+	s2. |
+	g2.:m6 |
+	s2. | \myEndLine
+	a2. |
+	s2. |
+	e2.:7 |
+	a2. | \myEndLine
+	e2.:7 |
+	a2. |
+	s2. |
+	e2.:7 | \myEndLine
+	s2. |
+	a2. |
+	c2.:7 |
+	f2. | \myEndLine
+	g2.:m |
+	a2. |
+	s2. |
+	a2.:7 | \myEndLine
+	s2. |
+	d2. |
+	s2. |
+	a2.:7 | \myEndLine
+	s2. |
+	d2. |
+	s2. |
+	a2.:7 | \myEndLine
+	s2. |
+	d2. |
+	b2.:7 |
+	e2.:m | \myEndLine
+	a2.:7 |
+	d2. |
+	s2. |
+	\endBar
+	\endPart
+
+	\endSong
+	\endChords
+}
+{% endif %}
+{% if part == "VoiceWikifonia" %}\absolute {
+	\tempo "Moderato" 4 = 120
+	\time 3/4
+	\key f \major
+
+	r8 d'8 e'8 f'8 g'8 f'8 |
+	e'4 d'8 e'8 f'8 g'8 |
+	a'4 gis'8 a'8 c''8 bes'8 |
+	a'2. ~ |
+	a'4. a'8 gis'8 a'8 |
+	\once \omit TupletBracket \times 4/5 { c''16 d''16 c''16 bes'16 a'16 } g'8 a'8 bes'8 c''8 |
+	a'16 bes'16 a'16 g'16 f'8 f'8 e'8 f'8 |
+	bes'16 a'16 g'16 f'16 e'8 d'8 e'8. d'16 |
+	a'2. ~ |
+	a'4 r8 e'8 e'8 e'8 |
+	bes'4 bes'2 ~ |
+	bes'4. e'8 e'8 e'8 |
+	a'4 a'2 ~ |
+	a'4. e'8 e'8 e'8 |
+	bes'4 bes'2 ~ |
+	bes'4. bes'8 bes'8. e'16 |
+	a'2. ~ |
+	a'2. |
+	gis'4 fis'4 gis'4 |
+	fis'4 a'4 gis'4 |
+	b'2 gis'4 |
+	\once \omit TupletBracket \times 2/3 { fis'8 gis'8 fis'8 } e'2 |
+	a'4 gis'4 fis'4 |
+	gis'4 a'4 b'4 |
+	b'4 a'4 gis'4 |
+	\once \omit TupletBracket \times 2/3 { b'8 cis''8 b'8 } a'8 a'8 gis'8 a'8 |
+	\once \omit TupletBracket \times 4/5 { c''16 d''16 c''16 bes'16 a'16 } g'8 a'8 bes'8 c''8 |
+	a'16 bes'16 a'16 g'16 f'8 f'8 e'8 f'8 |
+	bes'16 a'16 g'16 f'16 e'8 d'8 cis'8 d'8 |
+	a'2. ~ |
+	a'4 r8 d'8 e'8 fis'8 |
+	\key d \major g'4 a'2 |
+	g'4 a'4 g'4 |
+	a'4 b'2 |
+	a'4 b'4 a'4 |
+	b'4 cis''8 d''8 cis''8 b'8 |
+	a'4 b'8 cis''8 b'8 a'8 |
+	fis'2. ~ |
+	fis'4 r8 d'8 e'8 fis'8 |
+	g'4 a'2 |
+	g'4 a'4 g'4 |
+	a'4 b'2 |
+	a'4 b'4 fis'4 |
+	a'4 g'8 a'8 b'8 g'8 |
+	fis'4 e'8 g'8 fis'8 e'8 |
+	d'2. ~ |
+	d'4 r4 r4 |
+	\endBar
+}
+{% endif %}

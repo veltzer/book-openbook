@@ -1,0 +1,150 @@
+{#
+default_version = "Wikifonia"
+
+[attributes]
+title = "Don't Worry 'Bout Me"
+style = "Jazz"
+composer = "Rube Bloom"
+piece = "Standard"
+typesetter = "OpenBook contributors (MusicXML import)"
+completion = "3"
+uuid = "3f21b9eb-e8b1-52e4-889a-c7cf84d69adb"
+location = "557_Standards:91"
+copyright = "All Rights Reserved"
+copyrightextra = "Archived MusicXML notice retained; underlying music is not relicensed."
+
+[versions.Wikifonia]
+doChords = true
+doVoice = true
+doLyrics = false
+doLyricsmore = false
+doLyricsmoremore = false
+doChordBars = false
+doGuitar = false
+doExtra = false
+doPrep = false
+doOwn = false
+#}
+{% if part == "Vars" %}
+{% endif %}
+{% if part == "Doc" %}
+	DONE:
+	- imported melody and chord changes from real_books_archive.gi/Wikifonia.tar.xz: Wikifonia/Rube Bloom, Ted Koehler - Don't Worry 'Bout Me.mxl.
+	- source revision: http://wikifonia.org/node/4416/revisions/5946/view.
+	- local PDF: real_books_archive.gi/Guitar - 557 Standards.pdf.
+	- book index reference: 557_Standards:91; index pagination is not a verified PDF page number.
+	- retained the archived MusicXML rights notice; no redistribution permission is asserted.
+	- retained written melody, chord changes, pickups, repeats and numbered endings; lyrics omitted.
+	- imported explicit 7alt symbols using the book's altered-dominant notation where present.
+	- tempo is an editorial practice suggestion.
+	TODO:
+	- proofread the complete melody, harmony and form against the referenced PDF and check by ear.
+	- verify source attribution, copyright notice and reuse terms against the scan; only the archived MusicXML notice is retained.
+	- locate the tune in the exact local PDF edition; book-index page numbers may differ.
+	- verify editorial chord spacing in measures 34, 35; the archive places successive symbols at the same offset.
+{% endif %}
+{% if part == "ChordsWikifonia" %}\chordmode {
+	\startChords
+	\startSong
+
+	\myMark "A"
+	\startPart
+	s2. aes4 |
+	\repeat volta 2 {
+	ees1:7.9- |
+	s1 |
+	aes2:maj7 aes2:6 | \myEndLine
+	aes2.:maj7 aes4:6 |
+	ees1:7.9- |
+	s1 |
+	aes1:6 | \myEndLine
+	s2 b2:dim |
+	bes1:m7 |
+	s1 |
+	bes1:m7.5- | \myEndLine
+	s2 bes2:m6 |
+	f1:m |
+	bes1:7 |
+	bes2:m7 ees2:sus4.7 | \myEndLine
+	fis2.:dim ees4:7 |
+	ees1:7.9- |
+	s1 |
+	aes2:maj9 aes2:6 | \myEndLine
+	aes2. ees4:7 |
+	aes1 |
+	aes2.:7 aes4:aug7 |
+	des1 | \myEndLine
+	s1 |
+	s1 |
+	des1:m6 |
+	aes2 ees2:7 | \myEndLine
+	aes2. a4:dim |
+	bes1:m7 |
+	ees1:7.9- |
+	} \alternative {
+	{
+	a2:6 b2:dim7 | \myEndLine
+	bes2:m7 ees2:7 | \myEndLineVoltaNotLast
+	}
+	{
+	aes2 f2:m | \myEndLineVoltaLast
+	}
+	}
+	bes4:m7 ees2:7 aes4 |
+	\endBar
+	\endPart
+
+	\endSong
+	\endChords
+}
+{% endif %}
+{% if part == "VoiceWikifonia" %}\absolute {
+	\tempo "Moderato" 4 = 120
+	\time 4/4
+	\key as \major
+
+	r2 r4 es'4 |
+	\repeat volta 2 {
+	\times 2/3 { es''4 es''4 es''4 } es''2 ~ |
+	es''2 des''2 |
+	c''4. c''8 c''2 ~ |
+	c''2. es'4 |
+	\times 2/3 { c''4 c''4 c''4 } c''2 ~ |
+	c''4 ces''4 \times 2/3 { bes'4 as'4 g'4 } |
+	f'1 ~ |
+	f'4 f'4 as'4 g'4 |
+	\times 2/3 { f'4 g'4 es'4 } f'4 as'4 |
+	\times 2/3 { bes'4 c''4 as'4 } bes'4 c''4 |
+	des''4. e'8 e'2 ~ |
+	e'2 f'4 g'4 |
+	\times 2/3 { as'4 bes'4 g'4 } as'4 bes'4 |
+	\times 2/3 { b'4 c''4 as'4 } bes'4 c''4 |
+	bes'4. es'8 es'2 ~ |
+	es'2. es'4 |
+	\times 2/3 { es''4 es''4 es''4 } es''2 ~ |
+	es''2 des''2 |
+	c''4. c''8 c''2 ~ |
+	c''2 c''4 des''4 |
+	\times 2/3 { es''4 es''4 es''4 } \times 2/3 { es''4 d''4 des''4 } |
+	\times 2/3 { c''4 c''4 c''4 } c''4 bes'4 |
+	as'4. as'8 as'2 ~ |
+	as'2 f'4 g'4 |
+	\times 2/3 { as'4 bes'4 g'4 } as'4 bes'4 |
+	\times 2/3 { c''4 des''4 bes'4 } c''4 des''4 |
+	es''4. es'8 es'2 ~ |
+	es'2. es'4 |
+	\times 2/3 { es''4 es''4 es''4 } es''2 ~ |
+	es''4 c''4 \times 2/3 { c''4 c''4 c''4 } |
+	} \alternative {
+	{
+	as'2 r2 |
+	r2 r4 es'4 |
+	}
+	{
+	as'1 ~ |
+	}
+	}
+	as'1 |
+	\endBar
+}
+{% endif %}

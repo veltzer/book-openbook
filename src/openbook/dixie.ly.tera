@@ -1,0 +1,147 @@
+{#
+default_version = "Wikifonia"
+
+[attributes]
+title = "Dixie"
+style = "Standard"
+composer = "Daniel Decatur Emmett"
+piece = "Standard"
+typesetter = "OpenBook contributors (MusicXML import)"
+completion = "3"
+uuid = "a47cfe35-ff49-5737-b5e5-714e7fa76fec"
+location = "TheBook:440"
+copyright = "All Rights Reserved"
+copyrightextra = "Archived MusicXML notice retained; underlying music is not relicensed."
+
+[versions.Wikifonia]
+doChords = true
+doVoice = true
+doLyrics = false
+doLyricsmore = false
+doLyricsmoremore = false
+doChordBars = false
+doGuitar = false
+doExtra = false
+doPrep = false
+doOwn = false
+#}
+{% if part == "Vars" %}
+{% endif %}
+{% if part == "Doc" %}
+	DONE:
+	- imported melody and chord changes from real_books_archive.gi/Wikifonia.tar.xz: Wikifonia/Daniel Decatur Emmett  - Dixie.mxl.
+	- source revision: http://wikifonia.org/node/3283/revisions/6245/view.
+	- local PDF: real_books_archive.gi/The Book.pdf.
+	- book index reference: TheBook:440; index pagination is not a verified PDF page number.
+	- retained the archived MusicXML rights notice; no redistribution permission is asserted.
+	- retained written melody, chord changes, pickups, repeats and numbered endings; lyrics omitted.
+	- imported explicit 7alt symbols using the book's altered-dominant notation where present.
+	- tempo is an editorial practice suggestion.
+	TODO:
+	- proofread the complete melody, harmony and form against the referenced PDF and check by ear.
+	- verify source attribution, copyright notice and reuse terms against the scan; only the archived MusicXML notice is retained.
+	- locate the tune in the exact local PDF edition; book-index page numbers may differ.
+{% endif %}
+{% if part == "ChordsWikifonia" %}\chordmode {
+	\startChords
+	\startSong
+
+	\myMark "A"
+	\startPart
+	\repeat volta 2 {
+	s1 |
+	c1 |
+	s1 |
+	f1 | \myEndLine
+	s1 |
+	c1 |
+	s1 |
+	g1:7 | \myEndLine
+	c1 |
+	s1 |
+	s1 |
+	f1 | \myEndLine
+	s1 |
+	c1 |
+	s1 |
+	g1:7 | \myEndLine
+	c1 |
+	s1 |
+	f1 |
+	d1:7 | \myEndLine
+	g1:7 |
+	c1 |
+	a1 |
+	c1 | \myEndLine
+	g1:7 |
+	c1 |
+	g1:7 |
+	c1 | \myEndLine
+	s1 |
+	s1 |
+	g1:7 |
+	c1 | \myEndLine
+	} \alternative {
+	{
+	g4:7 c2. | \myEndLineVoltaNotLast
+	}
+	{
+	g4:7 c2. | \myEndLineVoltaLast
+	}
+	}
+	\endBar
+	\endPart
+
+	\endSong
+	\endChords
+}
+{% endif %}
+{% if part == "VoiceWikifonia" %}\absolute {
+	\tempo "Moderato" 4 = 120
+	\time 4/4
+	\key c \major
+
+	\repeat volta 2 {
+	r2 r4 g'8 e'8 |
+	c'4 c'4 c'8 d'8 e'8 f'8 |
+	g'4 g'4 g'4 e'4 |
+	a'4 a'4 a'4 g'4 |
+	a'4 g'4 a'8 b'8 c''8 d''8 |
+	e''2. c''8 g'8 |
+	c''2. g'8 e'8 |
+	g'2. d'8 e'8 |
+	c'2. g'8 e'8 |
+	c'4 c'4 c'8 d'8 e'8 f'8 |
+	g'4 g'4 g'4 e'4 |
+	a'4 a'4 a'4 g'4 |
+	a'4 g'4 a'8 b'8 c''8 d''8 |
+	e''2. c''8 g'8 |
+	c''2. g'8 e'8 |
+	g'2. d'8 e'8 |
+	c'2. g'4 |
+	c''4 e''4 d''4 c''4 |
+	a'4 c''2 a'4 |
+	d''2. a'4 |
+	d''2. g'4 |
+	c''4 e''4 d''4 c''4 |
+	a'4 b'4 c''4 a'4 |
+	g'4 e'4 c''4 e'4 |
+	e'4 d'2 e'4 |
+	c'2. e'4 |
+	d'2. a'4 |
+	g'4 e'4 e''4 c''4 |
+	d''4 c''2 e'4 |
+	c'2. e'4 |
+	d'2. a'4 |
+	g'4 e'4 e''4 c''4 |
+	} \alternative {
+	{
+	d''4 c''2 g'8 - "N.C." e'8 |
+	}
+	{
+	d''4 c''2 r4 |
+	}
+	}
+	\endBar
+}
+{% endif %}

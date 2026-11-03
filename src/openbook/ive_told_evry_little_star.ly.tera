@@ -1,0 +1,129 @@
+{#
+default_version = "Wikifonia"
+
+[attributes]
+title = "I've Told Ev'ry Little Star"
+style = "Jazz"
+composer = "Jerome Kern"
+piece = "Standard"
+typesetter = "OpenBook contributors (MusicXML import)"
+completion = "3"
+uuid = "4cf4e2ee-9125-565d-9c92-83465dc54e69"
+location = "557_Standards:194"
+copyright = "All Rights Reserved"
+copyrightextra = "Archived MusicXML notice retained; underlying music is not relicensed."
+
+[versions.Wikifonia]
+doChords = true
+doVoice = true
+doLyrics = false
+doLyricsmore = false
+doLyricsmoremore = false
+doChordBars = false
+doGuitar = false
+doExtra = false
+doPrep = false
+doOwn = false
+#}
+{% if part == "Vars" %}
+{% endif %}
+{% if part == "Doc" %}
+	DONE:
+	- imported melody and chord changes from real_books_archive.gi/Wikifonia.tar.xz: Wikifonia/Jerome Kern, Oscar Hammerstein II - I've Told Ev'ry Little Star.mxl.
+	- source revision: http://wikifonia.org/node/3540/revisions/4591/view.
+	- local PDF: real_books_archive.gi/Guitar - 557 Standards.pdf.
+	- book index reference: 557_Standards:194; index pagination is not a verified PDF page number.
+	- retained the archived MusicXML rights notice; no redistribution permission is asserted.
+	- retained written melody, chord changes, pickups, repeats and numbered endings; lyrics omitted.
+	- imported explicit 7alt symbols using the book's altered-dominant notation where present.
+	- tempo is an editorial practice suggestion.
+	TODO:
+	- proofread the complete melody, harmony and form against the referenced PDF and check by ear.
+	- verify source attribution, copyright notice and reuse terms against the scan; only the archived MusicXML notice is retained.
+	- locate the tune in the exact local PDF edition; book-index page numbers may differ.
+{% endif %}
+{% if part == "ChordsWikifonia" %}\chordmode {
+	\startChords
+	\startSong
+
+	\myMark "A"
+	\startPart
+	f1 |
+	g2:m c2:7 |
+	s2 f2 |
+	g2:m c2:7 | \myEndLine
+	f1 |
+	g2:m c2 |
+	f1 |
+	s1 | \myEndLine
+	s1 |
+	g2:m c2:7 |
+	s2 f2 |
+	g2:m c2:7 | \myEndLine
+	f1 |
+	g2:m c2:7 |
+	f1 |
+	s1 | \myEndLine
+	c1 |
+	g1:7 |
+	c1 |
+	d1:7 | \myEndLine
+	g1:7 |
+	a1:m |
+	d2:m g2:7 |
+	g1:m | \myEndLine
+	f1 |
+	g2:m c2:7 |
+	s2 f2 |
+	g2:m c2:7 | \myEndLine
+	f1 |
+	g2:m c2:7 |
+	f1 |
+	s1 | \myEndLine
+	\endBar
+	\endPart
+
+	\endSong
+	\endChords
+}
+{% endif %}
+{% if part == "VoiceWikifonia" %}\absolute {
+	\tempo "Moderato" 4 = 120
+	\time 4/4
+	\key f \major
+
+	f'2 c'2 |
+	a'8 a'8 a'8 a'8 g'2 |
+	bes'4. bes'8 a'4. a'8 |
+	c''4 c''4 bes'2 |
+	a'2 g'4 f'4 |
+	c'2 g'2 |
+	f'1 ~ |
+	f'2 r2 |
+	f'2 c'2 |
+	a'8 a'8 a'8 a'8 g'2 |
+	bes'4. bes'8 a'4. a'8 |
+	c''4 c''4 bes'2 |
+	a'2 g'4 f'4 |
+	c'2 g'2 |
+	f'1 ~ |
+	f'2. r4 |
+	g'4 fis'4 g'4. g'8 |
+	g'4 fis'4 g'4. g'8 |
+	g'4 fis'4 g'4 e''4 |
+	es''1 |
+	f'4 e'4 f'4 d''4 |
+	c''1 |
+	d'4 cis'4 d'4 a'4 |
+	g'1 |
+	f'2 c'2 |
+	a'8 a'8 a'8 a'8 g'2 |
+	bes'4. bes'8 a'4. a'8 |
+	c''4 c''4 bes'2 |
+	a'2 g'4 f'4 |
+	c'2 g'2 |
+	f'1 ~ |
+	f'2. r4 |
+	\endBar
+}
+{% endif %}

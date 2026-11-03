@@ -1,0 +1,158 @@
+{#
+default_version = "Wikifonia"
+
+[attributes]
+title = "How Do You Keep The Music Playing"
+style = "Jazz"
+composer = "Michel LeGrand"
+piece = "Standard"
+typesetter = "OpenBook contributors (MusicXML import)"
+completion = "3"
+uuid = "add20a22-7936-5dd3-b4ee-27a8a4477b91"
+location = "StandardsBook:171"
+copyright = "All Rights Reserved"
+copyrightextra = "Archived MusicXML notice retained; underlying music is not relicensed."
+
+[versions.Wikifonia]
+doChords = true
+doVoice = true
+doLyrics = false
+doLyricsmore = false
+doLyricsmoremore = false
+doChordBars = false
+doGuitar = false
+doExtra = false
+doPrep = false
+doOwn = false
+#}
+{% if part == "Vars" %}
+{% endif %}
+{% if part == "Doc" %}
+	DONE:
+	- imported melody and chord changes from real_books_archive.gi/Wikifonia.tar.xz: Wikifonia/Michel LeGrand, Alan Bergman, Marilyn Bergman - How Do You Keep The Music Playing.mxl.
+	- source revision: http://wikifonia.org/node/9098/revisions/12499/view.
+	- local PDF: real_books_archive.gi/The Standards Real Book.pdf.
+	- book index reference: StandardsBook:171; index pagination is not a verified PDF page number.
+	- retained the archived MusicXML rights notice; no redistribution permission is asserted.
+	- retained written melody, chord changes, pickups, repeats and numbered endings; lyrics omitted.
+	- imported explicit 7alt symbols using the book's altered-dominant notation where present.
+	- tempo is an editorial practice suggestion.
+	TODO:
+	- proofread the complete melody, harmony and form against the referenced PDF and check by ear.
+	- verify source attribution, copyright notice and reuse terms against the scan; only the archived MusicXML notice is retained.
+	- locate the tune in the exact local PDF edition; book-index page numbers may differ.
+	- verify editorial chord spacing in measures 16; the archive places successive symbols at the same offset.
+{% endif %}
+{% if part == "ChordsWikifonia" %}\chordmode {
+	\startChords
+	\startSong
+
+	\myMark "A"
+	\startPart
+	f1:m7 |
+	bes4:sus4.7 bes2.:7 |
+	ees1:maj7 |
+	c1:m7 | \myEndLine
+	f1:m7 |
+	bes4:sus4.7 bes2.:7 |
+	ees1:maj7 |
+	g1:m/d | \myEndLine
+	c1:m7 |
+	f4:sus4.7 f2.:7 |
+	bes1:maj7 |
+	g1:m7 | \myEndLine
+	a1:m7.5- |
+	d4:sus4.7 d2.:7 |
+	g1:m |
+	g2:m7.5- c2:7.9- | \myEndLine
+	f1:m7 |
+	bes4:sus4.7 bes2.:7 |
+	ees1:maj7 |
+	c1:m7 | \myEndLine
+	aes2:maj7 g2:m7 |
+	f1:m7 |
+	f1:m7/bes |
+	bes1:7 | \myEndLine
+	ees1 |
+	s1 |
+	c2.:m c4:m7 |
+	f2:sus4.7 f2:7 | \myEndLine
+	bes1:maj7 |
+	ees1:maj7 |
+	a1:m7.5- |
+	d2:sus4.7 g2:7.9- | \myEndLine
+	g2.:m7.5- g4:7 |
+	c4:sus4.7 c2.:7.9- |
+	f1:m7 |
+	bes1:7 | \myEndLine
+	ees2 ees2:maj7 |
+	c1:m7 |
+	aes2:maj7 g2:m7 |
+	g2:m7/c c2:7.9- | \myEndLine
+	f1:m9 |
+	f1:m7.5- |
+	bes1:sus4.7 |
+	bes1:7 | \myEndLine
+	aes1/ees |
+	ees1 |
+	\endBar
+	\endPart
+
+	\endSong
+	\endChords
+}
+{% endif %}
+{% if part == "VoiceWikifonia" %}\absolute {
+	\tempo "Moderato" 4 = 120
+	\time 4/4
+	\key es \major
+
+	r8 as'8 g'8 f'8 g'8 as'8 f'8 es'8 |
+	es'4 f'2. |
+	r8 g'8 f'8 es'8 f'4 g'4 |
+	c'1 |
+	r8 c''8 bes'8 as'8 bes'8 c''8 as'8 g'8 |
+	as'4 bes'2 f'4 |
+	g'1 ~ |
+	g'1 |
+	r8 es''8 d''8 c''8 d''8 es''8 c''8 bes'8 |
+	bes'4 c''2. |
+	r8 d''8 c''8 bes'8 c''4 d''4 |
+	g'1 |
+	r8 c''8 bes'8 a'8 bes'8 c''8 a'8 g'8 |
+	g'4 a'2 d'4 |
+	bes'1 ~ |
+	bes'1 |
+	r8 as'8 g'8 f'8 g'8 as'8 f'8 es'8 |
+	es'4 f'2. |
+	r8 g'8 f'8 es'8 f'4 g'4 |
+	c'1 |
+	r8 c''8 bes'8 as'8 bes'8 c''8 as'8 g'8 |
+	as'8 bes'8 g'8 f'8 g'8 as'8 f'8 es'8 |
+	f'2 ~ f'8 g'8 as'8 bes'8 |
+	f'2 es'2 |
+	es'1 ~ |
+	es'2 r4 es'4 |
+	es''2. r8 es''8 |
+	es''8 d''8 d''8 c''8 c''8 bes'8 bes'8 c''8 |
+	c''4 d''2 r8 d''8 |
+	d''8 c''8 c''8 bes'8 bes'8 a'8 a'8 bes'8 |
+	c''2. r8 c''8 |
+	c''8 bes'8 bes'8 a'8 a'8 g'8 g'8 a'8 |
+	a'4 bes'2 r8 a'8 |
+	a'4 bes'2. |
+	r8 as'8 g'8 f'8 g'8 as'8 f'8 es'8 |
+	es'4 f'2. |
+	r8 g'8 f'8 es'8 f'4 g'4 |
+	c'1 |
+	r8 es''8 d''8 c''8 d''8 es''8 c''8 bes'8 |
+	c''8 d''8 bes'8 as'8 bes'8 c''8 as'8 g'8 |
+	as'1 |
+	r8 bes'8 g'8 f'8 g'8 as'8 f'8 es'8 |
+	f'2 ~ f'8 g'8 as'8 bes'8 |
+	f'2 es'2 |
+	es'1 ~ |
+	es'1 |
+	\endBar
+}
+{% endif %}

@@ -1,0 +1,146 @@
+{#
+default_version = "Wikifonia"
+
+[attributes]
+title = "Two Sleepy People"
+style = "Jazz"
+composer = "Hoagy Carmichael"
+piece = "Standard"
+typesetter = "OpenBook contributors (MusicXML import)"
+completion = "3"
+uuid = "62794839-d6fc-5b12-888e-d93b00611a78"
+location = "557_Standards:401"
+copyright = "All Rights Reserved"
+copyrightextra = "Archived MusicXML notice retained; underlying music is not relicensed."
+
+[versions.Wikifonia]
+doChords = true
+doVoice = true
+doLyrics = false
+doLyricsmore = false
+doLyricsmoremore = false
+doChordBars = false
+doGuitar = false
+doExtra = false
+doPrep = false
+doOwn = false
+#}
+{% if part == "Vars" %}
+{% endif %}
+{% if part == "Doc" %}
+	DONE:
+	- imported melody and chord changes from real_books_archive.gi/Wikifonia.tar.xz: Wikifonia/Hoagy Carmichael, Frank Loesser - Two Sleepy People.mxl.
+	- source revision: http://wikifonia.org/node/3908/revisions/5162/view.
+	- local PDF: real_books_archive.gi/Guitar - 557 Standards.pdf.
+	- book index reference: 557_Standards:401; index pagination is not a verified PDF page number.
+	- retained the archived MusicXML rights notice; no redistribution permission is asserted.
+	- retained written melody, chord changes, pickups, repeats and numbered endings; lyrics omitted.
+	- imported explicit 7alt symbols using the book's altered-dominant notation where present.
+	- tempo is an editorial practice suggestion.
+	TODO:
+	- proofread the complete melody, harmony and form against the referenced PDF and check by ear.
+	- verify source attribution, copyright notice and reuse terms against the scan; only the archived MusicXML notice is retained.
+	- locate the tune in the exact local PDF edition; book-index page numbers may differ.
+	- verify editorial chord spacing in measures 32; the archive places successive symbols at the same offset.
+{% endif %}
+{% if part == "ChordsWikifonia" %}\chordmode {
+	\startChords
+	\startSong
+
+	\myMark "A"
+	\startPart
+	\repeat volta 2 {
+	ees2:maj7 fis2:dim7 |
+	f2:m7 bes2:7 |
+	ees2:maj7 c2:7 |
+	f2:m7 bes2:7 | \myEndLine
+	ees2:maj7 c2:7 |
+	f2:m7 des2:7 |
+	ees2:maj7 f2:7 |
+	f2.:m7 bes4:7 | \myEndLine
+	ees2:maj7 fis2:dim7 |
+	f2:m7 bes2:7 |
+	ees2:maj7 c2:7 |
+	f2:m7 bes2:7 | \myEndLine
+	ees2:maj7 c2:7 |
+	f2:m7 des2:7 |
+	ees2:maj7 f4:m7 bes4:7 |
+	ees1:maj7 | \myEndLine
+	f2:m7 bes2:7 |
+	ees1:maj7 |
+	s1 |
+	f2.:m7 bes4:7 | \myEndLine
+	ees2:maj7 bes2:7 |
+	ees2:maj7 c2:7 |
+	f1:7 |
+	f2:m7 bes2:7 | \myEndLine
+	ees2:maj7 fis2:dim7 |
+	f2:m7 bes2:7 |
+	ees2:maj7 c2:7 |
+	f2:m7 bes2:7 | \myEndLine
+	ees2:maj7 c2:7 |
+	f2:m7 des2:7 |
+	ees2:maj7 f4:m7 bes4:7 |
+	} \alternative {
+	{
+	ees2.:maj7 f8:m7 bes8:7 | \myEndLineVoltaNotLast
+	}
+	{
+	s1 | \myEndLineVoltaLast
+	}
+	}
+	\endBar
+	\endPart
+
+	\endSong
+	\endChords
+}
+{% endif %}
+{% if part == "VoiceWikifonia" %}\absolute {
+	\tempo "Moderato" 4 = 120
+	\time 4/4
+	\key es \major
+
+	\repeat volta 2 {
+	es'4. bes'8 d'2 |
+	c'8 d'8 \once \omit TupletBracket \times 2/3 { es'8 f'8 g'8 ~ } g'2 |
+	es'8 f'8 \once \omit TupletBracket \times 2/3 { g'8 as'8 bes'8 ~ } bes'8 bes'4. |
+	f'8 g'8 \once \omit TupletBracket \times 2/3 { as'8 bes'8 c''8 ~ } c''2 |
+	d''4 d''8 c''8 bes'8 as'4 g'8 |
+	c''4 bes'8 as'8 g'4. f'8 |
+	bes'4 as'8 g'8 f'8 es'8 d'8 es'8 |
+	f'2. r4 |
+	es'4. bes'8 d'2 |
+	c'8 d'8 \once \omit TupletBracket \times 2/3 { es'8 f'8 g'8 ~ } g'2 |
+	es'8 f'8 \once \omit TupletBracket \times 2/3 { g'8 as'8 bes'8 } bes'8 ~ bes'4. |
+	f'8 g'8 \once \omit TupletBracket \times 2/3 { as'8 bes'8 c''8 ~ } c''2 |
+	d''4 d''8 c''8 bes'8 as'4 g'8 |
+	c''4 bes'8 as'8 g'4. f'8 |
+	bes'4 as'8 g'8 f'8 es'8 d'8 f'8 |
+	es'2. \once \omit TupletBracket \times 2/3 { es'8 f'8 e'8 } |
+	es'8 c''4 es'8 d'8 f'8 as'8 c''8 |
+	bes'8 c''8 \once \omit TupletBracket \times 2/3 { as'8 bes'8 g'8 ~ } g'2 |
+	g'8 as'8 f'8 g'8 es'4 d'8 es'8 |
+	c'2. \once \omit TupletBracket \times 2/3 { bes8 c'8 d'8 } |
+	es'8 bes'4 es'8 d'8 f'8 as'8 c''8 |
+	bes'8 c''8 as'8 bes'8 g'4. c'8 |
+	f'8 f'8 \once \omit TupletBracket \times 2/3 { f'8 c'8 f'8 ~ } f'4. c'8 |
+	f'8 g'8 as'8 bes'8 c''4 bes'4 |
+	es'4. bes'8 d'2 |
+	c'8 d'8 \once \omit TupletBracket \times 2/3 { es'8 f'8 g'8 ~ } g'2 |
+	es'8 f'8 \once \omit TupletBracket \times 2/3 { g'8 as'8 bes'8 ~ } bes'8 bes'4. |
+	f'8 g'8 \once \omit TupletBracket \times 2/3 { as'8 bes'8 c''8 ~ } c''2 |
+	d''4 d''8 c''8 bes'8 as'4 g'8 |
+	c''4 bes'8 as'8 g'4. f'8 |
+	bes'4 as'8 g'8 f'8 es'8 d'8 f'8 |
+	} \alternative {
+	{
+	es'2. r4 |
+	}
+	{
+	es'1 |
+	}
+	}
+	\endBar
+}
+{% endif %}

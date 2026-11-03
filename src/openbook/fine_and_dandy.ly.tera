@@ -1,0 +1,148 @@
+{#
+default_version = "Wikifonia"
+
+[attributes]
+title = "Fine And Dandy"
+style = "Jazz"
+composer = "Kay Swift"
+piece = "Standard"
+typesetter = "OpenBook contributors (MusicXML import)"
+completion = "3"
+uuid = "3c28abb9-c9eb-5eb6-8073-e7b45a691acc"
+location = "557_Standards:102, Jazz_LTD:126"
+copyright = "All Rights Reserved"
+copyrightextra = "Archived MusicXML notice retained; underlying music is not relicensed."
+
+[versions.Wikifonia]
+doChords = true
+doVoice = true
+doLyrics = false
+doLyricsmore = false
+doLyricsmoremore = false
+doChordBars = false
+doGuitar = false
+doExtra = false
+doPrep = false
+doOwn = false
+#}
+{% if part == "Vars" %}
+{% endif %}
+{% if part == "Doc" %}
+	DONE:
+	- imported melody and chord changes from real_books_archive.gi/Wikifonia.tar.xz: Wikifonia/Kay Swift, Paul James - Fine And Dandy.mxl.
+	- source revision: http://wikifonia.org/node/13522/revisions/18148/view.
+	- local PDF: real_books_archive.gi/Guitar - 557 Standards.pdf.
+	- book index reference: 557_Standards:102; index pagination is not a verified PDF page number.
+	- retained the archived MusicXML rights notice; no redistribution permission is asserted.
+	- retained written melody, chord changes, pickups, repeats and numbered endings; lyrics omitted.
+	- imported explicit 7alt symbols using the book's altered-dominant notation where present.
+	- tempo is an editorial practice suggestion.
+	TODO:
+	- proofread the complete melody, harmony and form against the referenced PDF and check by ear.
+	- verify source attribution, copyright notice and reuse terms against the scan; only the archived MusicXML notice is retained.
+	- locate the tune in the exact local PDF edition; book-index page numbers may differ.
+	- verify editorial chord spacing in measures 32, 33; the archive places successive symbols at the same offset.
+{% endif %}
+{% if part == "ChordsWikifonia" %}\chordmode {
+	\startChords
+	\startSong
+
+	\myMark "A"
+	\startPart
+	\repeat volta 2 {
+	f1 |
+	aes1:dim7 |
+	g2.:m7 c4:7 |
+	s1 | \myEndLine
+	f1 |
+	aes1:dim7 |
+	g2.:m7 c4:7 |
+	s1 | \myEndLine
+	f1:7 |
+	s1 |
+	bes1:7 |
+	s1 | \myEndLine
+	ees1:7 |
+	s1 |
+	aes1:7 |
+	c1:7 | \myEndLine
+	f1 |
+	aes1:dim7 |
+	g2.:m7 c4:7 |
+	s1 | \myEndLine
+	f1 |
+	aes1:dim7 |
+	g2.:m7 c4:7 |
+	s1 | \myEndLine
+	c2.:m7 f4:7 |
+	s1 |
+	bes2. bes4:m |
+	s1 | \myEndLine
+	f2 d2:m |
+	g4:7 c2.:7 |
+	} \alternative {
+	{
+	f2 ees2 |
+	aes2 c2:7 | \myEndLineVoltaNotLast
+	}
+	{
+	f2 bes2:7 |
+	f1 | \myEndLineVoltaLast
+	}
+	}
+	\endBar
+	\endPart
+
+	\endSong
+	\endChords
+}
+{% endif %}
+{% if part == "VoiceWikifonia" %}\absolute {
+	\tempo "Moderato" 4 = 120
+	\time 2/2
+	\key f \major
+
+	\repeat volta 2 {
+	e'2 d'4 f'4 ~ |
+	f'1 |
+	f'2 d'4 a'4 ~ |
+	a'4 a'2. |
+	e'2 d'4 f'4 ~ |
+	f'4 f'2 d'4 |
+	a'2 f'4 c''4 ~ |
+	c''1 |
+	c''2 b'4 d''4 ~ |
+	d''4 c''4 a'4 f'4 |
+	d'2 d'4 d'4 ~ |
+	d'2 r2 |
+	bes'2 a'4 c''4 ~ |
+	c''4 bes'4 g'4 es'4 |
+	c'2 c'4 c'4 ~ |
+	c'2 r2 |
+	e'2 d'4 f'4 ~ |
+	f'1 |
+	f'2 d'4 a'4 ~ |
+	a'4 a'2. |
+	e'2 d'4 f'4 ~ |
+	f'4 f'2 d'4 |
+	a'2 f'4 c''4 ~ |
+	c''1 |
+	c''2 g'4 d''4 ~ |
+	d''4 d''2 a'4 |
+	c''2 g'4 bes'4 ~ |
+	bes'4 bes'2 f'4 |
+	a'4 f'4 a'4 f'4 |
+	a'4 a'2. |
+	} \alternative {
+	{
+	f'2 r2 |
+	R1 |
+	}
+	{
+	f'1 ~ |
+	f'2 r2 |
+	}
+	}
+	\endBar
+}
+{% endif %}

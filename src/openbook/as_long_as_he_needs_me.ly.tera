@@ -1,0 +1,155 @@
+{#
+default_version = "Wikifonia"
+
+[attributes]
+title = "As Long As He Needs Me"
+style = "Standard"
+composer = "Lionel Bart"
+piece = "Standard"
+typesetter = "OpenBook contributors (MusicXML import)"
+completion = "3"
+uuid = "008fcc35-dae3-553f-a7ac-695ddd8a6bc5"
+location = "TheBook:76"
+copyright = "All Rights Reserved"
+copyrightextra = "Archived MusicXML notice retained; underlying music is not relicensed."
+
+[versions.Wikifonia]
+doChords = true
+doVoice = true
+doLyrics = false
+doLyricsmore = false
+doLyricsmoremore = false
+doChordBars = false
+doGuitar = false
+doExtra = false
+doPrep = false
+doOwn = false
+#}
+{% if part == "Vars" %}
+{% endif %}
+{% if part == "Doc" %}
+	DONE:
+	- imported melody and chord changes from real_books_archive.gi/Wikifonia.tar.xz: Wikifonia/Lionel Bart - As Long As He Needs Me.mxl.1.
+	- source revision: http://www.wikifonia.org/node/2550/revisions/3199/view.
+	- local PDF: real_books_archive.gi/The Book.pdf.
+	- book index reference: TheBook:76; index pagination is not a verified PDF page number.
+	- retained the archived MusicXML rights notice; no redistribution permission is asserted.
+	- retained written melody, chord changes, pickups, repeats and numbered endings; lyrics omitted.
+	- imported explicit 7alt symbols using the book's altered-dominant notation where present.
+	- tempo is an editorial practice suggestion.
+	TODO:
+	- proofread the complete melody, harmony and form against the referenced PDF and check by ear.
+	- verify source attribution, copyright notice and reuse terms against the scan; only the archived MusicXML notice is retained.
+	- locate the tune in the exact local PDF edition; book-index page numbers may differ.
+{% endif %}
+{% if part == "ChordsWikifonia" %}\chordmode {
+	\startChords
+	\startSong
+
+	\myMark "A"
+	\startPart
+	c2 cis2:dim |
+	d1:m7 |
+	d2:m7 g2:7 |
+	c1 | \myEndLine
+	s2 e2:m7 |
+	f2 d2:7 |
+	d1:m7 |
+	g1:7 | \myEndLine
+	\repeat volta 2 {
+	c2 c2:maj7 |
+	c1:6 |
+	cis1:dim |
+	d2:m7 g2:7 | \myEndLine
+	d2:m bes2 |
+	g1:7 |
+	f2:m g2:7 |
+	c1 | \myEndLine
+	c2:maj7 c2:6 |
+	s1 |
+	s2 cis2:dim |
+	d2:m7 g2:7 | \myEndLine
+	d2:m bes2 |
+	g1:7 |
+	f2:m g2:7 |
+	c1 | \myEndLine
+	f2 g2:7 |
+	c1 |
+	a2:m d2:7 |
+	d2:m7 g2:7 | \myEndLine
+	c2 c2:maj7 |
+	c1:6 |
+	s2 cis2:dim |
+	d2:m7 g2:7 | \myEndLine
+	d1:m7 |
+	d1:7 |
+	d2:m7 g2:7 |
+	} \alternative {
+	{
+	c1 | \myEndLineVoltaNotLast
+	}
+	{
+	d2:m g2:7 | \myEndLineVoltaLast
+	}
+	}
+	c1 |
+	\endBar
+	\endPart
+
+	\endSong
+	\endChords
+}
+{% endif %}
+{% if part == "VoiceWikifonia" %}\absolute {
+	\tempo "Moderato" 4 = 120
+	\time 4/4
+	\key c \major
+
+	r8 e'8 e'8 f'8 g'4 g'4 |
+	g'8 a'8 d'2 ^ "G7" s4 |
+	r8 d'8 d'8 e'8 f'4 f'4 |
+	f'8 g'8 e'2 s4 |
+	r8 e'8 f'8 g'8 b'4 s8 a'8 |
+	a'4 s8 a'8 e''4 s8 d''8 |
+	d''1 ~ |
+	d''2 ~ d''8 c''8 b'8 g'8 |
+	\repeat volta 2 {
+	e'2 e'2 |
+	e'2 ~ e'8 c''8 b'8 g'8 |
+	e'2 e'2 |
+	f'2 ~ f'8 d''8 c''8 a'8 |
+	f'2 f'2 |
+	f'2 ~ f'8 d'8 e'8 f'8 |
+	as'2 g'2 |
+	g'2 ~ g'8 c''8 b'8 g'8 |
+	e'2 e'2 |
+	e'2 ~ e'8 c''8 b'8 g'8 |
+	e'2 e'2 |
+	f'2 ~ f'8 d''8 c''8 a'8 |
+	f'2 f'2 |
+	f'2 ~ f'8 d'8 e'8 f'8 |
+	as'2 g'2 |
+	g'2 ~ g'8 c'8 e'8 g'8 |
+	bes'4 a'4 ~ a'8 a'8 g'8 f'8 |
+	g'2 ~ g'8 f'8 a'8 c''8 |
+	d''4 c''4 ~ c''8 a'8 b'8 c''8 |
+	d''2 ~ d''8 c''8 b'8 g'8 |
+	e'2 e'2 |
+	e'2 ~ e'8 c''8 b'8 g'8 |
+	e'2 e'2 |
+	f'2 ~ f'8 d''8 c''8 a'8 |
+	f'2 a'2 |
+	c''2 ~ c''8 a'8 b'8 c''8 |
+	d''2 d''2 |
+	} \alternative {
+	{
+	c''2 ~ c''8 c''8 b'8 g'8 |
+	}
+	{
+	d''2 e''2 |
+	}
+	}
+	<c'' e'' g''>2 s4 r4 |
+	\endBar
+}
+{% endif %}

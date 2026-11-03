@@ -1,0 +1,163 @@
+{#
+default_version = "Wikifonia"
+
+[attributes]
+title = "Elvira"
+style = "Standard"
+composer = "Dallas Frazier"
+piece = "Standard"
+typesetter = "OpenBook contributors (MusicXML import)"
+completion = "3"
+uuid = "b92da2e9-c774-5c09-8b15-2b3953892150"
+location = "TheBook:45"
+copyright = "All Rights Reserved"
+copyrightextra = "Archived MusicXML notice retained; underlying music is not relicensed."
+
+[versions.Wikifonia]
+doChords = true
+doVoice = true
+doLyrics = false
+doLyricsmore = false
+doLyricsmoremore = false
+doChordBars = false
+doGuitar = false
+doExtra = false
+doPrep = false
+doOwn = false
+#}
+{% if part == "Vars" %}
+{% endif %}
+{% if part == "Doc" %}
+	DONE:
+	- imported melody and chord changes from real_books_archive.gi/Wikifonia.tar.xz: Wikifonia/Dallas Frazier - Elvira.mxl.1.
+	- source revision: http://wikifonia.org/node/5894/revisions/8032/view.
+	- local PDF: real_books_archive.gi/The Book.pdf.
+	- book index reference: TheBook:45; index pagination is not a verified PDF page number.
+	- retained the archived MusicXML rights notice; no redistribution permission is asserted.
+	- retained written melody, chord changes, pickups, repeats and numbered endings; lyrics omitted.
+	- imported explicit 7alt symbols using the book's altered-dominant notation where present.
+	- tempo is an editorial practice suggestion.
+	TODO:
+	- proofread the complete melody, harmony and form against the referenced PDF and check by ear.
+	- verify source attribution, copyright notice and reuse terms against the scan; only the archived MusicXML notice is retained.
+	- locate the tune in the exact local PDF edition; book-index page numbers may differ.
+{% endif %}
+{% if part == "ChordsWikifonia" %}\chordmode {
+	\startChords
+	\startSong
+
+	\myMark "A"
+	\startPart
+	s1 |
+	c1 |
+	s1 |
+	s1 | \myEndLine
+	s1 |
+	s1 |
+	g1:7 |
+	c1 | \myEndLine
+	s1 |
+	\repeat volta 2 {
+	c1 |
+	s1 |
+	s1 | \myEndLine
+	s1 |
+	s1 |
+	s1 |
+	g1:7 | \myEndLine
+	s1 |
+	c1 |
+	s1 |
+	f1:7 | \myEndLine
+	s1 |
+	c1 |
+	f1:7 |
+	s1 | \myEndLine
+	s1 |
+	s1 |
+	s1 |
+	s1 | \myEndLine
+	s1 |
+	s1 |
+	g1:7 |
+	c1 | \myEndLine
+	s1 |
+	s1 |
+	s1 |
+	s1 | \myEndLine
+	s1 |
+	s1 |
+	g1:7 |
+	c1 | \myEndLine
+	} \alternative {
+	{
+	s1 | \myEndLineVoltaNotLast
+	}
+	{
+	s1 | \myEndLineVoltaLast
+	}
+	}
+	\endBar
+	\endPart
+
+	\endSong
+	\endChords
+}
+{% endif %}
+{% if part == "VoiceWikifonia" %}\absolute {
+	\tempo "Moderato" 4 = 120
+	\time 4/4
+	\key c \major
+
+	r2 r4 e'4 - "N.C." |
+	c'4 e'4 r2 |
+	r2 r4 e'4 |
+	c'4 e'4 r2 |
+	r2 r4 c'4 |
+	e'2. e'4 |
+	d'4 d'4 d'4 e'4 |
+	c'4 e'4 r2 |
+	R1 |
+	\repeat volta 2 {
+	c'4 c'4 c'4 c'4 |
+	c'4 c'2 r4 |
+	c'4 c'4 c'4 c'4 |
+	e'2 r4 c'4 |
+	e'4 e'4 e'4 e'4 |
+	e'4 e'4 e'8 dis'8 e'4 |
+	f'8 e'8 d'2 e'8 d'8 |
+	e'8 g'8 r4 r2 |
+	g'4 g'8 g'8 a'4 g'4 |
+	e'4 c'2 r4 |
+	g'4 c'4 es'4 c'4 |
+	c'2 r2 |
+	e'4 e'4 e'4 c'4 |
+	d'4 e'4 e'4 d'4 |
+	e'8 d'8 c'2. |
+	r4 - "Chorus:" e'4 e'8 dis'8 e'4 |
+	c'4 e'4 r2 |
+	r2 r4 e'4 |
+	c'4 e'4 r2 |
+	r2 r4 c'4 |
+	e'2. e'4 |
+	e'4 d'4 d'4 e'4 |
+	c'4 e'4 r2 |
+	R1 |
+	e'8 e'8 e'8 g8 c'4 c'8 b8 |
+	c'4 c'8 c'8 b4 c'4 |
+	e'8 e'8 e'8 g8 c'4 c'8 b8 |
+	c'4 c'8 c'8 b4 c'4 |
+	e'2. e'4 |
+	e'4 d'4 r4 e'4 |
+	e'8 d'8 c'2. |
+	} \alternative {
+	{
+	r2 r4 c'4 |
+	}
+	{
+	r2 r4 - "D,S,andfade" e'4 |
+	}
+	}
+	\endBar
+}
+{% endif %}

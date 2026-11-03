@@ -1,0 +1,149 @@
+{#
+default_version = "Wikifonia"
+
+[attributes]
+title = "Back In Your Own Backyard"
+style = "Jazz"
+composer = "Dave Dreyer"
+piece = "Standard"
+typesetter = "OpenBook contributors (MusicXML import)"
+completion = "3"
+uuid = "63d01808-dafd-5e77-9567-04283b43309d"
+location = "Firehouse_Jazz_Band:706"
+copyright = "All Rights Reserved"
+copyrightextra = "Archived MusicXML notice retained; underlying music is not relicensed."
+
+[versions.Wikifonia]
+doChords = true
+doVoice = true
+doLyrics = false
+doLyricsmore = false
+doLyricsmoremore = false
+doChordBars = false
+doGuitar = false
+doExtra = false
+doPrep = false
+doOwn = false
+#}
+{% if part == "Vars" %}
+{% endif %}
+{% if part == "Doc" %}
+	DONE:
+	- imported melody and chord changes from real_books_archive.gi/Wikifonia.tar.xz: Wikifonia/Dave Dreyer, Billy Rose - Back In Your Own Backyard.mxl.
+	- source revision: http://wikifonia.org/node/5946/revisions/8207/view.
+	- local PDF: real_books_archive.gi/Dixieland - The Firehouse Jazz Band - Dixieland Fake Book - 778 S Noten Sheets Score Songs Lieder.pdf.
+	- book index reference: Firehouse_Jazz_Band:706; index pagination is not a verified PDF page number.
+	- retained the archived MusicXML rights notice; no redistribution permission is asserted.
+	- retained written melody, chord changes, pickups, repeats and numbered endings; lyrics omitted.
+	- imported explicit 7alt symbols using the book's altered-dominant notation where present.
+	- tempo is an editorial practice suggestion.
+	TODO:
+	- proofread the complete melody, harmony and form against the referenced PDF and check by ear.
+	- verify source attribution, copyright notice and reuse terms against the scan; only the archived MusicXML notice is retained.
+	- locate the tune in the exact local PDF edition; book-index page numbers may differ.
+{% endif %}
+{% if part == "ChordsWikifonia" %}\chordmode {
+	\startChords
+	\startSong
+
+	\myMark "A"
+	\startPart
+	s1 |
+	\repeat volta 2 {
+	g1 |
+	s2 ees2:7 |
+	a1:m | \myEndLine
+	s1 |
+	d1:7 |
+	s1 |
+	g1 | \myEndLine
+	s1 |
+	s1 |
+	s2 ees2:7 |
+	a1:m | \myEndLine
+	s1 |
+	d1:7 |
+	s1 |
+	g1 | \myEndLine
+	s1 |
+	b1:m |
+	s1 |
+	e1:7 | \myEndLine
+	s1 |
+	a1:7 |
+	s1 |
+	a1:m | \myEndLine
+	s1 |
+	g1 |
+	s2 ees2:7 |
+	a1:m | \myEndLine
+	s1 |
+	d1:7 |
+	s1 |
+	} \alternative {
+	{
+	g1 | \myEndLine
+	d1:7 | \myEndLineVoltaNotLast
+	}
+	{
+	g1 | \myEndLineVoltaLast
+	}
+	}
+	c4:m g2. |
+	\endBar
+	\endPart
+
+	\endSong
+	\endChords
+}
+{% endif %}
+{% if part == "VoiceWikifonia" %}\absolute {
+	\tempo "Moderato" 4 = 120
+	\time 4/4
+	\key c \major
+
+	r4 d''4 d''4 d''4 |
+	\repeat volta 2 {
+	d''4 dis'4 e'4 d''4 ~ |
+	d''2 cis''2 |
+	c''4 dis'4 e'4 c''4 ~ |
+	c''1 |
+	b'4 cis'4 d'4 a'4 ~ |
+	a'2 fis'2 |
+	e'1 ~ |
+	e'4 d''4 d''4 d''4 |
+	d''4 dis'4 e'4 d''4 ~ |
+	d''2 cis''2 |
+	c''4 dis'4 e'4 c''4 ~ |
+	c''1 |
+	b'4 cis'4 d'4 a'4 ~ |
+	a'2 b'2 |
+	g'1 ~ |
+	g'4 d''4 d''4 d''4 |
+	d''4 b'8 cis''8 d''2 |
+	d''4 b'8 cis''8 d''4 d''4 |
+	d''4 cis''4 b'4 e'4 ~ |
+	e'1 |
+	b'4 g'8 a'8 b'2 |
+	b'4 g'8 a'8 b'4 e''4 |
+	a'1 ~ |
+	a'4 d''4 d''4 d''4 |
+	d''4 dis'4 e'4 d''4 ~ |
+	d''2 cis''2 |
+	c''4 dis'4 e'4 c''4 ~ |
+	c''1 |
+	b'4 cis'4 d'4 a'4 ~ |
+	a'2 b'2 |
+	} \alternative {
+	{
+	g'2. r4 |
+	r4 d''4 d''4 d''4 |
+	}
+	{
+	g'1 ~ |
+	}
+	}
+	g'4 r4 r2 |
+	\endBar
+}
+{% endif %}

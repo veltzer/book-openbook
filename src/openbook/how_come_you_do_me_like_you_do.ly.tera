@@ -1,0 +1,99 @@
+{#
+default_version = "Wikifonia"
+
+[attributes]
+title = "How Come You Do Me Like You Do?"
+style = "Jazz"
+composer = "Gene Austin, Roy Bergere"
+piece = "Standard"
+typesetter = "OpenBook contributors (MusicXML import)"
+completion = "3"
+uuid = "e0778bee-8bd6-5d0d-8fae-309bb4b61b86"
+location = "Firehouse_Jazz_Band:610"
+copyright = "All Rights Reserved"
+copyrightextra = "Archived MusicXML notice retained; underlying music is not relicensed."
+
+[versions.Wikifonia]
+doChords = true
+doVoice = true
+doLyrics = false
+doLyricsmore = false
+doLyricsmoremore = false
+doChordBars = false
+doGuitar = false
+doExtra = false
+doPrep = false
+doOwn = false
+#}
+{% if part == "Vars" %}
+{% endif %}
+{% if part == "Doc" %}
+	DONE:
+	- imported melody and chord changes from real_books_archive.gi/Wikifonia.tar.xz: Wikifonia/Gene Austin, Roy Bergere - How Come You Do Me Like You Do?.mxl.
+	- source revision: http://wikifonia.org/node/5861/revisions/8163/view.
+	- local PDF: real_books_archive.gi/Dixieland - The Firehouse Jazz Band - Dixieland Fake Book - 778 S Noten Sheets Score Songs Lieder.pdf.
+	- book index reference: Firehouse_Jazz_Band:610; index pagination is not a verified PDF page number.
+	- retained the archived MusicXML rights notice; no redistribution permission is asserted.
+	- retained written melody, chord changes, pickups, repeats and numbered endings; lyrics omitted.
+	- imported explicit 7alt symbols using the book's altered-dominant notation where present.
+	- tempo is an editorial practice suggestion.
+	TODO:
+	- proofread the complete melody, harmony and form against the referenced PDF and check by ear.
+	- verify source attribution, copyright notice and reuse terms against the scan; only the archived MusicXML notice is retained.
+	- locate the tune in the exact local PDF edition; book-index page numbers may differ.
+{% endif %}
+{% if part == "ChordsWikifonia" %}\chordmode {
+	\startChords
+	\startSong
+
+	\myMark "A"
+	\startPart
+	s8 c4. f2 |
+	c2 a2:7 |
+	d2:7 g2:7 |
+	c1 | \myEndLine
+	s2 f2 |
+	c4. a1*5/8:7 |
+	d1:7 |
+	g1:7 | \myEndLine
+	c1 |
+	c1:7 |
+	f2 f2:m |
+	s1 | \myEndLine
+	c2 f2 |
+	c2 a2:7 |
+	d2:7 g2:7 |
+	c1 | \myEndLine
+	s1 |
+	\endBar
+	\endPart
+
+	\endSong
+	\endChords
+}
+{% endif %}
+{% if part == "VoiceWikifonia" %}\absolute {
+	\tempo "Moderato" 4 = 120
+	\time 4/4
+	\key c \major
+
+	r8 e''8 e''8 c''8 d''8 c''8 a'8 c''8 |
+	g'4 gis'8 a'8 ~ a'2 |
+	r8 c''8 c''8 a'8 a'8 g'8 dis''8 e''8 |
+	c''1 |
+	r8 e''8 e''8 c''8 d''8 c''8 a'8 c''8 |
+	g'4 gis'8 a'8 ~ a'2 |
+	r8 c''8 c''8 c''8 c''8 d''8 e''4 |
+	d''1 |
+	e''8 e''4 c''8 ~ c''8 c''8 d''8 c''8 |
+	e''8 e''4 c''8 c''4. c''8 |
+	d''8 c''8 d''8 c''8 d''8 c''8 d''8 c''8 |
+	e''4. d''8 c''2 |
+	r8 e''8 e''8 c''8 d''8 c''8 a'8 c''8 |
+	g'4 gis'8 a'8 ~ a'2 |
+	r8 c''8 c''8 a'8 a'8 g'8 dis''8 e''8 |
+	c''1 ~ |
+	c''2 r2 |
+	\endBar
+}
+{% endif %}

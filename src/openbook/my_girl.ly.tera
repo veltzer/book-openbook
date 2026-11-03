@@ -1,0 +1,188 @@
+{#
+default_version = "Wikifonia"
+
+[attributes]
+title = "My Girl"
+style = "Jazz"
+composer = "Ronald White, William Smokey Robinson"
+piece = "Standard"
+typesetter = "OpenBook contributors (MusicXML import)"
+completion = "3"
+uuid = "0b8a0516-61f6-5fd7-96fb-47e8aba76f74"
+location = "New_Real_3:265"
+copyright = "All Rights Reserved"
+copyrightextra = "Archived MusicXML notice retained; underlying music is not relicensed."
+
+[versions.Wikifonia]
+doChords = true
+doVoice = true
+doLyrics = false
+doLyricsmore = false
+doLyricsmoremore = false
+doChordBars = false
+doGuitar = false
+doExtra = false
+doPrep = false
+doOwn = false
+#}
+{% if part == "Vars" %}
+{% endif %}
+{% if part == "Doc" %}
+	DONE:
+	- imported melody and chord changes from real_books_archive.gi/Wikifonia.tar.xz: Wikifonia/Ronald White, William Smokey Robinson - My Girl.mxl.
+	- source revision: http://wikifonia.org/node/4343/revisions/15983/view.
+	- local PDF: real_books_archive.gi/newreal3.pdf.
+	- book index reference: New_Real_3:265; index pagination is not a verified PDF page number.
+	- retained the archived MusicXML rights notice; no redistribution permission is asserted.
+	- retained written melody, chord changes, pickups, repeats and numbered endings; lyrics omitted.
+	- imported explicit 7alt symbols using the book's altered-dominant notation where present.
+	- tempo taken from archived MusicXML.
+	TODO:
+	- proofread the complete melody, harmony and form against the referenced PDF and check by ear.
+	- verify source attribution, copyright notice and reuse terms against the scan; only the archived MusicXML notice is retained.
+	- locate the tune in the exact local PDF edition; book-index page numbers may differ.
+	- verify editorial chord spacing in measures 45; the archive places successive symbols at the same offset.
+{% endif %}
+{% if part == "ChordsWikifonia" %}\chordmode {
+	\startChords
+	\startSong
+
+	\myMark "A"
+	\startPart
+	s1 |
+	f1 |
+	bes1 |
+	f1 | \myEndLine
+	bes1 |
+	f1 |
+	bes1 |
+	f1 | \myEndLine
+	bes1 |
+	f2 g2:m |
+	bes2 c2 |
+	f2 g2:m | \myEndLine
+	bes2 c2 |
+	f1 |
+	s1 |
+	bes1 | \myEndLine
+	c1:7 |
+	f1 |
+	bes1 |
+	f1 | \myEndLine
+	bes1 |
+	f1 |
+	bes1 |
+	f1 | \myEndLine
+	bes1 |
+	f2 g2:m |
+	bes2 c2 |
+	f2 g2:m | \myEndLine
+	bes2 c2 |
+	f1 |
+	s1 |
+	bes1 | \myEndLine
+	c1:7 |
+	f1 |
+	bes1 |
+	f1 | \myEndLine
+	bes1 |
+	f1 |
+	bes1 |
+	f1 | \myEndLine
+	bes1 |
+	f2 g2:m |
+	bes2 c2 |
+	f2 g2:m | \myEndLine
+	f4 bes4 c2 |
+	f1 |
+	s1 |
+	bes1 | \myEndLine
+	c1:7 |
+	f1 |
+	s1 |
+	g1:m | \myEndLine
+	c1:7 |
+	f1 |
+	s1 |
+	g1:m | \myEndLine
+	c1:7 |
+	f1 |
+	g1:m |
+	c1:7 | \myEndLine
+	f1 |
+	\endBar
+	\endPart
+
+	\endSong
+	\endChords
+}
+{% endif %}
+{% if part == "VoiceWikifonia" %}\absolute {
+	\tempo "Moderato" 4 = 320
+	\time 4/4
+	\key f \major
+
+	r2 ^ "Rock or 8bt." r4 a'8 ^ "N.C." g'8 |
+	a'8 f'4. ~ f'2 |
+	r4 f'8 g'8 f'4. d'8 |
+	c'1 |
+	r2 r4 f'8 g'8 |
+	a'4. f'8 f'2 |
+	r4 r8 g'8 f'8 d'8 f'8 d'8 |
+	c'1 |
+	R1 |
+	c'2 d'2 |
+	f'2 g'2 |
+	c'4 c'4 d'4 d'4 |
+	f'4 f'4 g'2 |
+	f'8 c'4. ~ c'2 ~ |
+	c'4 r4 c'8 d'8 f'4 |
+	f'8 ( g'4 ) f'8 ( ~ f'8 ) d'8 f'4 |
+	r2 \times 2/3 { r4 g'4 a'4 } |
+	d''2. a'4 |
+	g'8 f'4 d'8 f'4 f'8 d'8 |
+	c'1 |
+	r2 d'4 f'8 g'8 |
+	a'8 g'8 f'8 ( d'8 ) c'2 |
+	r4 f'8 g'8 f'4 f'8 d'8 |
+	c'1 |
+	r2 r4 a'4 |
+	c'2 d'2 |
+	f'2 g'2 |
+	c'4 c'4 d'4 d'4 |
+	f'4 f'4 g'2 |
+	f'8 c'4. ~ c'2 ~ |
+	c'4 r4 c'8 d'8 f'4 |
+	f'8 ( g'4 ) f'8 ( ~ f'8 ) d'8 f'4 |
+	r2 \times 2/3 { r4 a'4 a'4 } |
+	a'4. g'8 a'8 f'4. |
+	r2 \times 2/3 { a'4 f'4 d'4 } |
+	c'1 |
+	r2 \times 2/3 { r4 a'4 g'4 } |
+	f'8 d'8 f'8 d'8 f'8 ( g'8 ) a'4 |
+	r2 g'8 f'4 e'8 |
+	c'2 r2 |
+	r2 r4 a'4 |
+	c'2 d'2 |
+	f'2 g'2 |
+	c'4 c'4 d'4 d'4 |
+	f'4 f'4 g'2 |
+	f'8 c'4. ~ c'2 ~ |
+	c'4 r4 c'8 d'8 f'4 |
+	f'8 ( g'4 ) f'8 ( ~ f'8 ) d'8 f'4 |
+	R1 |
+	r4 a'8 a'8 a'8 f'8 f'8 g'8 |
+	a'4. g'8 a'8 ( f'4 ) f'8 |
+	g'8 f'4. ~ f'4. d'8 |
+	a'8 g'8 g'8 f'8 a'8 g'8 g'8 f'8 |
+	d'8 c'4. ~ c'2 |
+	r2 a'8 g'8 g'8 ( f'8 ) |
+	a'8 g'8 g'8 ( f'8 ) a'8 g'8 g'8 ( f'8 ) |
+	g'4 f'8 ( d'8 ) f'4 d''4 ~ |
+	d''4 d'8 c'8 ~ c'2 |
+	r4 g'8 a'8 ~ a'8 g'8 f'4 |
+	a'8 g'8 f'4 d'8 g'4. |
+	f'2. r4 |
+	\endBar
+}
+{% endif %}

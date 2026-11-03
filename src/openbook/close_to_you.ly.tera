@@ -1,0 +1,132 @@
+{#
+default_version = "Wikifonia"
+
+[attributes]
+title = "Close to You"
+style = "Jazz"
+composer = "Al Hoffman"
+piece = "Standard"
+typesetter = "OpenBook contributors (MusicXML import)"
+completion = "3"
+uuid = "9d88098b-706c-52cd-af5f-dfcfc5659e2b"
+location = "StandardsBook:91"
+copyright = "All Rights Reserved"
+copyrightextra = "Archived MusicXML notice retained; underlying music is not relicensed."
+
+[versions.Wikifonia]
+doChords = true
+doVoice = true
+doLyrics = false
+doLyricsmore = false
+doLyricsmoremore = false
+doChordBars = false
+doGuitar = false
+doExtra = false
+doPrep = false
+doOwn = false
+#}
+{% if part == "Vars" %}
+{% endif %}
+{% if part == "Doc" %}
+	DONE:
+	- imported melody and chord changes from real_books_archive.gi/Wikifonia.tar.xz: Wikifonia/Al Hoffman, Carl Lampl, Jerry Livingston - Close to You.mxl.
+	- source revision: http://wikifonia.org/node/10320/revisions/21621/view.
+	- local PDF: real_books_archive.gi/The Standards Real Book.pdf.
+	- book index reference: StandardsBook:91; index pagination is not a verified PDF page number.
+	- retained the archived MusicXML rights notice; no redistribution permission is asserted.
+	- retained written melody, chord changes, pickups, repeats and numbered endings; lyrics omitted.
+	- imported explicit 7alt symbols using the book's altered-dominant notation where present.
+	- tempo is an editorial practice suggestion.
+	TODO:
+	- proofread the complete melody, harmony and form against the referenced PDF and check by ear.
+	- verify source attribution, copyright notice and reuse terms against the scan; only the archived MusicXML notice is retained.
+	- locate the tune in the exact local PDF edition; book-index page numbers may differ.
+	- verify editorial chord spacing in measures 2, 18, 32; the archive places successive symbols at the same offset.
+{% endif %}
+{% if part == "ChordsWikifonia" %}\chordmode {
+	\startChords
+	\startSong
+
+	\myMark "A"
+	\startPart
+	s1 |
+	a2:m c2:m6 |
+	d1:7 |
+	g1 | \myEndLine
+	s1 |
+	b1:7 |
+	s1 |
+	e1:m | \myEndLine
+	s2. g4:7 |
+	c1 |
+	s2 c2:m |
+	g2 b2:m | \myEndLine
+	c1:aug |
+	a2:7 a2:9 |
+	c2.:dim a4:9 |
+	d1:9 | \myEndLine
+	d2:aug d2:7 |
+	a2:m c2:m6 |
+	d1:7 |
+	g1 | \myEndLine
+	s1 |
+	b1:7 |
+	s1 |
+	e1:m | \myEndLine
+	s2. g4:7 |
+	c1 |
+	s2 c2:m |
+	g2 d2:m | \myEndLine
+	e1:7 |
+	a2:m aes2:aug |
+	a2:m7 d2:9 |
+	g4 c2:9 ees4:7 | \myEndLine
+	g2:m7 g2:6 |
+	\endBar
+	\endPart
+
+	\endSong
+	\endChords
+}
+{% endif %}
+{% if part == "VoiceWikifonia" %}\absolute {
+	\tempo "Moderato" 4 = 120
+	\time 4/4
+	\key g \major
+
+	r2 b'4. a'8 |
+	c''1 ~ |
+	c''2 d'8 fis'8 a'8 d''8 |
+	b'1 ~ |
+	b'2 g'4. fis'8 |
+	a'1 ~ |
+	a'2 b8 dis'8 fis'8 a'8 |
+	g'1 ~ |
+	g'2. g'4 |
+	\times 2/3 { g'4 a'4 g'4 } c''2 ~ |
+	c''4 d''4 \times 2/3 { c''4 g'4 a'4 } |
+	b'2 d''4 d'8 e'8 ~ |
+	e'1 |
+	cis''2 e''4 g'8 b'8 ~ |
+	b'2. fis'8 g'8 |
+	a'4 a'4 a'4 d''4 |
+	ais'2 b'4. a'8 |
+	c''1 ~ |
+	c''2 d'8 fis'8 a'8 d''8 |
+	b'1 ~ |
+	b'2 g'4. fis'8 |
+	a'1 ~ |
+	a'2 b8 dis'8 fis'8 a'8 |
+	g'1 ~ |
+	g'2. g'4 |
+	\times 2/3 { g'4 a'4 g'4 } c''2 ~ |
+	c''4 d''4 \times 2/3 { c''4 g'4 a'4 } |
+	b'2 \times 2/3 { b'4 c''4 d''4 } |
+	b'2. e'4 |
+	c''4 c''4 c''4 c''4 |
+	c''2 a'4. b'8 |
+	g'1 ~ |
+	g'2 ~ g'4 r4 |
+	\endBar
+}
+{% endif %}

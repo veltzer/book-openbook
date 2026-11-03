@@ -1,0 +1,145 @@
+{#
+default_version = "Wikifonia"
+
+[attributes]
+title = "Silver Dollar"
+style = "Jazz"
+composer = "Clarke Van Ness, Jack Palmer"
+piece = "Standard"
+typesetter = "OpenBook contributors (MusicXML import)"
+completion = "3"
+uuid = "b4e2c8f7-5c28-5932-a052-dcfd250261d3"
+location = "Firehouse_Jazz_Band:609"
+copyright = "All Rights Reserved"
+copyrightextra = "Archived MusicXML notice retained; underlying music is not relicensed."
+
+[versions.Wikifonia]
+doChords = true
+doVoice = true
+doLyrics = false
+doLyricsmore = false
+doLyricsmoremore = false
+doChordBars = false
+doGuitar = false
+doExtra = false
+doPrep = false
+doOwn = false
+#}
+{% if part == "Vars" %}
+{% endif %}
+{% if part == "Doc" %}
+	DONE:
+	- imported melody and chord changes from real_books_archive.gi/Wikifonia.tar.xz: Wikifonia/Clarke Van Ness, Jack Palmer - Silver Dollar.mxl.
+	- source revision: http://wikifonia.org/node/14594/revisions/21700/view.
+	- local PDF: real_books_archive.gi/Dixieland - The Firehouse Jazz Band - Dixieland Fake Book - 778 S Noten Sheets Score Songs Lieder.pdf.
+	- book index reference: Firehouse_Jazz_Band:609; index pagination is not a verified PDF page number.
+	- retained the archived MusicXML rights notice; no redistribution permission is asserted.
+	- retained written melody, chord changes, pickups, repeats and numbered endings; lyrics omitted.
+	- imported explicit 7alt symbols using the book's altered-dominant notation where present.
+	- tempo taken from archived MusicXML.
+	TODO:
+	- proofread the complete melody, harmony and form against the referenced PDF and check by ear.
+	- verify source attribution, copyright notice and reuse terms against the scan; only the archived MusicXML notice is retained.
+	- locate the tune in the exact local PDF edition; book-index page numbers may differ.
+{% endif %}
+{% if part == "ChordsWikifonia" %}\chordmode {
+	\startChords
+	\startSong
+
+	\myMark "A"
+	\startPart
+	s1 |
+	\repeat volta 2 {
+	g1 |
+	e1:7 |
+	a2:7 e2:m | \myEndLine
+	a1:7 |
+	d1:7 |
+	a2:m d2:7 |
+	g2 bes2 | \myEndLine
+	d1:7 |
+	g1 |
+	e1:7 |
+	a2:7 e2:m | \myEndLine
+	a1:7 |
+	c2 cis2 |
+	g2 e2:7 |
+	a2:9 a4:m d4:7 | \myEndLine
+	g2 e2:7 |
+	a2:9 a4:m d4:7 |
+	g1 |
+	g1 | \myEndLine
+	g1 |
+	d1:7 |
+	a1 |
+	g1:7 | \myEndLine
+	c1 |
+	g2 e2:m |
+	a1 |
+	d2.:7 g4:7 | \myEndLine
+	g1 |
+	d1:7 |
+	s1 |
+	g1 | \myEndLine
+	c2 cis2:dim |
+	g2 e2:7 |
+	a2 a4:m d4:7 |
+	g1 | \myEndLine
+	a2. d4:7 |
+	g1 |
+	}
+	\endBar
+	\endPart
+
+	\endSong
+	\endChords
+}
+{% endif %}
+{% if part == "VoiceWikifonia" %}\absolute {
+	\tempo "Moderato" 4 = 120
+	\time 4/4
+	\key g \major
+
+	r2 d'4 g'4 |
+	\repeat volta 2 {
+	b'8. ais'16 b'8. ais'16 b'8 b'8 r4 |
+	b'8. b'16 ais'8. b'16 c''8. c''16 b'8. bes'16 |
+	a'2 ~ a'8. a'16 b'8. bes'16 |
+	a'2. r8 gis'8 |
+	a'8. gis'16 a'8. gis'16 a'4 a'8. gis'16 |
+	a'8 gis'4 a'8 b'4. a'8 |
+	g'4 g'4 fis'8 e'4 d'8 ~ |
+	d'2. r8 ais'8 |
+	b'8 b'4 ais'8 b'8 b'8 r4 |
+	b'8. ais'16 b'8 c''8 ~ c''4. b'8 |
+	a'4 a'8. b'16 a'8 g'4 e'8 ~ |
+	e'2. r8 g'8 |
+	a'8. g'16 a'8. g'16 bes'8. g'16 a'8. g'16 |
+	r8 b'4 b'8 c''4. b'8 |
+	b'8. a'16 g'8. e'16 g'4 a'8 g'8 ~ |
+	g'2 r4 r8 ais'8 |
+	b'8. a'16 g'8. e'16 g'4 a'8 g'8 ~ |
+	g'2 r4 d'4 |
+	g'2 ~ g'8 r8 r4 ^\markup{ \bold\small {Fine} } |
+	d'2 ~ d'8. g'16 b'8. c''16 |
+	b'8 a'4. ~ a'8. fis'16 e'8. es'16 |
+	d'2 ~ ^- d'8. fis'16 a'8. b'16 |
+	g'2. _\fermata d'4 |
+	e'2 ~ e'8. fis'16 g'8. e'16 |
+	d'8 g'4. ~ g'4 b'8. ais'16 |
+	b'4 a'4 a'4 b'8 a'8 ~ |
+	a'2. d'4 |
+	d'2 ~ d'8. g'16 b'8. c''16 |
+	b'8 a'4. ~ a'8. fis'16 e'8. es'16 |
+	d'2 ~ d'8. fis'16 a'8. b'16 |
+	g'2 r8 g'8 fis'8. f'16 |
+	e'4 fis'4 g'4 e'8. es'16 |
+	d'8 g'4 b'8 ~ b'4 b'8. ais'16 |
+	b'8 a'4 gis'8 a'4 b'8 g'8 ~ |
+	g'2 r4 r8 ais'8 |
+	b'8 a'4 gis'8 a'4 b'8 g'8 ~ |
+	g'4 r4 d'4 g'4 |
+	}
+	\endBar
+}
+{% endif %}

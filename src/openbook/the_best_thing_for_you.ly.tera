@@ -1,0 +1,154 @@
+{#
+default_version = "Wikifonia"
+
+[attributes]
+title = "The Best Thing For You"
+style = "Jazz"
+composer = "Irving Berlin"
+piece = "Standard"
+typesetter = "OpenBook contributors (MusicXML import)"
+completion = "3"
+uuid = "5d349eaa-f4a4-5b44-bac8-e2fca7d62bb7"
+location = "557_Standards:30"
+copyright = "All Rights Reserved"
+copyrightextra = "Archived MusicXML notice retained; underlying music is not relicensed."
+
+[versions.Wikifonia]
+doChords = true
+doVoice = true
+doLyrics = false
+doLyricsmore = false
+doLyricsmoremore = false
+doChordBars = false
+doGuitar = false
+doExtra = false
+doPrep = false
+doOwn = false
+#}
+{% if part == "Vars" %}
+{% endif %}
+{% if part == "Doc" %}
+	DONE:
+	- imported melody and chord changes from real_books_archive.gi/Wikifonia.tar.xz: Wikifonia/Irving Berlin - The Best Thing For You.mxl.
+	- source revision: http://wikifonia.org/node/4247/revisions/5665/view.
+	- local PDF: real_books_archive.gi/Guitar - 557 Standards.pdf.
+	- book index reference: 557_Standards:30; index pagination is not a verified PDF page number.
+	- retained the archived MusicXML rights notice; no redistribution permission is asserted.
+	- retained written melody, chord changes, pickups, repeats and numbered endings; lyrics omitted.
+	- imported explicit 7alt symbols using the book's altered-dominant notation where present.
+	- tempo is an editorial practice suggestion.
+	TODO:
+	- proofread the complete melody, harmony and form against the referenced PDF and check by ear.
+	- verify source attribution, copyright notice and reuse terms against the scan; only the archived MusicXML notice is retained.
+	- locate the tune in the exact local PDF edition; book-index page numbers may differ.
+	- verify editorial chord spacing in measures 7, 35; the archive places successive symbols at the same offset.
+{% endif %}
+{% if part == "ChordsWikifonia" %}\chordmode {
+	\startChords
+	\startSong
+
+	\myMark "A"
+	\startPart
+	\repeat volta 2 {
+	b1:7 |
+	s1 |
+	e2:m7 a2:7 |
+	d2:m7 g2:7 | \myEndLine
+	c2:maj7 a2:m7 |
+	d2:m7 g2:7 |
+	c2:maj7 a2:7 |
+	d2:m7 g2:7 | \myEndLine
+	b1:7 |
+	s1 |
+	e2:m7 a2:7 |
+	d2:m7 g2:7 | \myEndLine
+	c2:maj7 a2:m7 |
+	d1:m7 |
+	c1:maj7 |
+	b2:m7 ees2:7 | \myEndLine
+	aes1:maj7 |
+	s1 |
+	bes1:m7 |
+	ees1:7 | \myEndLine
+	f1:m7 |
+	f1:m7/ees |
+	d1:m7 |
+	g1:7 | \myEndLine
+	b1:7 |
+	b1:7 |
+	e2:m7 a2:7 |
+	d2:m7 g2:7 | \myEndLine
+	c1:maj7 |
+	a1:m7 |
+	d1:7 |
+	f2:m7 bes2:7 | \myEndLine
+	c2:maj7 a2:7 |
+	d2:m7 g2:7 |
+	} \alternative {
+	{
+	c2:maj7 a2:m7 |
+	d2:m7 g2:7 | \myEndLineVoltaNotLast
+	}
+	{
+	c1:maj7 | \myEndLineVoltaLast
+	}
+	}
+	\endBar
+	\endPart
+
+	\endSong
+	\endChords
+}
+{% endif %}
+{% if part == "VoiceWikifonia" %}\absolute {
+	\tempo "Moderato" 4 = 120
+	\time 4/4
+	\key c \major
+
+	\repeat volta 2 {
+	b2 dis'4 fis'4 |
+	a'2 g'4 fis'4 |
+	g'2 f'4 e'4 |
+	f'2 e'4 d'4 |
+	e'2 d'4 c'4 |
+	f'2 d'4 b4 |
+	g'1 ~ |
+	g'2 r2 |
+	b2 dis'4 fis'4 |
+	a'2 g'4 fis'4 |
+	g'2 f'4 e'4 |
+	f'2 e'4 d'4 |
+	e'2 d'4 c'4 |
+	f'2 d'4 b4 |
+	c'1 ~ |
+	c'2 r2 |
+	c''4. as'8 es'2 ~ |
+	es'2 des''4 c''4 |
+	c''4. bes'8 es'2 ~ |
+	es'2 r2 |
+	b'4. as'8 c'2 ~ |
+	c'2 \times 2/3 { as'4 bes'4 as'4 } |
+	g'1 ~ |
+	g'2 r2 |
+	b2 dis'4 fis'4 |
+	a'2 g'4 fis'4 |
+	g'2 f'4 e'4 |
+	f'2 e'4 d'4 |
+	e'2 f'4 g'4 ~ |
+	g'4 a'4 ~ a'8 b'8 c''4 |
+	d''1 ~ |
+	d''2 c''4 b'4 |
+	c''2 g'4 e'4 |
+	g'2 d'4 e'4 |
+	} \alternative {
+	{
+	c'1 ~ |
+	c'2 r2 |
+	}
+	{
+	c'1 |
+	}
+	}
+	\endBar
+}
+{% endif %}

@@ -1,0 +1,102 @@
+{#
+default_version = "Wikifonia"
+
+[attributes]
+title = "Sunny"
+style = "Jazz"
+composer = "Bobby Hebb"
+piece = "Standard"
+typesetter = "OpenBook contributors (MusicXML import)"
+completion = "3"
+uuid = "b03e0d66-ddf7-5f18-918a-6980a6a6305d"
+location = "Real_Book_3:294, 557_Standards:359, TheBook:208"
+copyright = "All Rights Reserved"
+copyrightextra = "Archived MusicXML notice retained; underlying music is not relicensed."
+
+[versions.Wikifonia]
+doChords = true
+doVoice = true
+doLyrics = false
+doLyricsmore = false
+doLyricsmoremore = false
+doChordBars = false
+doGuitar = false
+doExtra = false
+doPrep = false
+doOwn = false
+#}
+{% if part == "Vars" %}
+{% endif %}
+{% if part == "Doc" %}
+	DONE:
+	- imported melody and chord changes from real_books_archive.gi/Wikifonia.tar.xz: Wikifonia/Bobby Hebb - Sunny.mxl.
+	- source revision: http://wikifonia.org/node/963/revisions/25415/view.
+	- local PDF: real_books_archive.gi/The Real Book of Jazz Volume III.pdf.
+	- book index reference: Real_Book_3:294; index pagination is not a verified PDF page number.
+	- retained the archived MusicXML rights notice; no redistribution permission is asserted.
+	- retained written melody, chord changes, pickups, repeats and numbered endings; lyrics omitted.
+	- imported explicit 7alt symbols using the book's altered-dominant notation where present.
+	- tempo is an editorial practice suggestion.
+	TODO:
+	- proofread the complete melody, harmony and form against the referenced PDF and check by ear.
+	- verify source attribution, copyright notice and reuse terms against the scan; only the archived MusicXML notice is retained.
+	- locate the tune in the exact local PDF edition; book-index page numbers may differ.
+	- verify editorial chord spacing in measures 4, 8; the archive places successive symbols at the same offset.
+{% endif %}
+{% if part == "ChordsWikifonia" %}\chordmode {
+	\startChords
+	\startSong
+
+	\myMark "A"
+	\startPart
+	\repeat volta 2 {
+	a1:m7 |
+	g2:m7 c2 |
+	f1:maj7 |
+	b2:m7 e2 | \myEndLine
+	a1:m7 |
+	g2:m7 c2 |
+	f1:maj7 |
+	b2:m7 e2 | \myEndLine
+	a1:m7 |
+	g2:m7 c2 |
+	f1:maj7 |
+	bes1 | \myEndLine
+	b1:m7.5- |
+	e1:7.9+ |
+	a1:m7 |
+	e1:7.9+ | \myEndLine
+	}
+	\endBar
+	\endPart
+
+	\endSong
+	\endChords
+}
+{% endif %}
+{% if part == "VoiceWikifonia" %}\absolute {
+	\tempo "Moderato" 4 = 120
+	\time 4/4
+	\key c \major
+
+	\repeat volta 2 {
+	e'4. e'8 ~ e'2 ~ |
+	e'2 c''8 a'8 g'8 e'8 |
+	d'4 c'8 a8 c'8 d'4 e'8 ~ |
+	e'2. r4 |
+	e'4. e'8 ~ e'2 ~ |
+	e'2 c''8 a'8 g'8 e'8 |
+	d'4 c'8 a8 c'8 d'4 e'8 ~ |
+	e'2. e'8 d'8 |
+	e'8 c'8 d'8 c'8 ~ c'4 d'4 |
+	e'8 c'8 d'8 c'8 ~ c'4. d'8 |
+	e'8 d'4 c'8 ~ c'4 d'8 c'8 |
+	e'8 c'8 d'8 c'8 ~ c'4. r8 |
+	r4 e'8 e'8 e'8 e'4 d'8 ~ |
+	d'4 r4 d'8 d'4 c'8 ~ |
+	c'2. r4 |
+	R1 |
+	}
+	\endBar
+}
+{% endif %}

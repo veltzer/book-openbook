@@ -1,0 +1,171 @@
+{#
+default_version = "Wikifonia"
+
+[attributes]
+title = "The Night Has A Thousand Eyes"
+style = "Jazz"
+composer = "Jerry Brainin"
+piece = "Standard"
+typesetter = "OpenBook contributors (MusicXML import)"
+completion = "3"
+uuid = "62fc99e9-d9af-55aa-b3f5-1ef4fcf7e7e7"
+location = "Real_Book_1:335, 557_Standards:274, Colorado:239, Colorado_Cookbook:239"
+copyright = "All Rights Reserved"
+copyrightextra = "Archived MusicXML notice retained; underlying music is not relicensed."
+
+[versions.Wikifonia]
+doChords = true
+doVoice = true
+doLyrics = false
+doLyricsmore = false
+doLyricsmoremore = false
+doChordBars = false
+doGuitar = false
+doExtra = false
+doPrep = false
+doOwn = false
+#}
+{% if part == "Vars" %}
+{% endif %}
+{% if part == "Doc" %}
+	DONE:
+	- imported melody and chord changes from real_books_archive.gi/Wikifonia.tar.xz: Wikifonia/Jerry Brainin, Buddy Bernier - The Night Has A Thousand Eyes.mxl.1.
+	- source revision: http://wikifonia.org/node/20163/revisions/26625/view.
+	- local PDF: real_books_archive.gi/The Real Book of Jazz Volume I.pdf.
+	- book index reference: Real_Book_1:335; index pagination is not a verified PDF page number.
+	- retained the archived MusicXML rights notice; no redistribution permission is asserted.
+	- retained written melody, chord changes, pickups, repeats and numbered endings; lyrics omitted.
+	- imported explicit 7alt symbols using the book's altered-dominant notation where present.
+	- tempo is an editorial practice suggestion.
+	TODO:
+	- proofread the complete melody, harmony and form against the referenced PDF and check by ear.
+	- verify source attribution, copyright notice and reuse terms against the scan; only the archived MusicXML notice is retained.
+	- locate the tune in the exact local PDF edition; book-index page numbers may differ.
+{% endif %}
+{% if part == "ChordsWikifonia" %}\chordmode {
+	\startChords
+	\startSong
+
+	\myMark "A"
+	\startPart
+	\partial 4 s4 |
+	g1:maj7 |
+	s1 |
+	a1:m7 | \myEndLine
+	d1:7 |
+	g1:maj7 |
+	s1 |
+	a1:m7 | \myEndLine
+	d1:7 |
+	d1:m7 |
+	g1:7.9- |
+	c1:maj7 | \myEndLine
+	f1:7 |
+	g1:maj7 |
+	d1:7 |
+	g1 | \myEndLine
+	a2:m7 d2:7 |
+	g1:maj7 |
+	s1 |
+	a1:m7 | \myEndLine
+	d1:7 |
+	g1:maj7 |
+	s1 |
+	a1:m7 | \myEndLine
+	d1:7 |
+	d1:m7 |
+	g1:7.9- |
+	c1:maj7 | \myEndLine
+	f1:7 |
+	g1:maj7 |
+	d1:7 |
+	g1 | \myEndLine
+	s1 |
+	c1:m7 |
+	s2 f2:aug7 |
+	bes1:maj7 | \myEndLine
+	s1 |
+	bes1:m7 |
+	s2 ees2:aug7 |
+	aes1:maj7 | \myEndLine
+	s1 |
+	a1:m7 |
+	d1:sus4.7 |
+	g1:maj7 | \myEndLine
+	e1:m7 |
+	a1:m7 |
+	d1:7 |
+	g1:maj7 | \myEndLine
+	s1 |
+	a1:m7 |
+	d1:7 |
+	g1 | \myEndLine
+	s1 |
+	\endBar
+	\endPart
+
+	\endSong
+	\endChords
+}
+{% endif %}
+{% if part == "VoiceWikifonia" %}\absolute {
+	\tempo "Moderato" 4 = 120
+	\time 4/4
+	\key g \major
+
+	\partial 4 d'4 |
+	a'4 a'4 a'4. a'8 |
+	a'2 fis'4. d'8 |
+	e'1 ~ |
+	e'2. d'4 |
+	a'4 a'4 a'4 a'4 |
+	b'2. fis'8 d'8 |
+	e'4 c'8 a8 d'2 ~ |
+	d'2. d'4 |
+	d''1 ~ |
+	d''4 c''8 b'8 c''4 d''4 |
+	b'1 ~ |
+	b'2. a'8 g'8 |
+	fis'4 fis'4 fis'4 fis'4 |
+	fis'4 d'4 c'4 d'4 |
+	g'1 ~ |
+	g'2. d'4 |
+	a'4 a'4 a'4. a'8 |
+	a'2 fis'4. d'8 |
+	e'1 ~ |
+	e'2. d'4 |
+	a'4 a'4 a'4 a'4 |
+	b'2. fis'8 d'8 |
+	e'4 c'8 a8 d'2 ~ |
+	d'2. d'4 |
+	d''1 ~ |
+	d''4 c''8 b'8 c''4 d''4 |
+	b'1 ~ |
+	b'2. a'8 g'8 |
+	fis'4 fis'4 fis'4 fis'4 |
+	fis'4 d'4 c'4 d'4 |
+	g'1 ~ |
+	g'2. g'4 |
+	bes'4. bes'8 bes'2 ~ |
+	bes'4 bes'8 bes'8 des''4. c''8 |
+	a'1 ~ |
+	a'2 f'4 f'4 |
+	as'4 as'4 as'4 as'4 |
+	as'4 as'4 ces''8 ces''4 bes'8 |
+	g'1 ~ |
+	g'2. es'4 |
+	g'4 g'4 g'2 ~ |
+	g'4 g'4 a'4. g'8 |
+	d''1 ~ |
+	d''2. d'8 d'8 |
+	d'4 d'4 d'2 ~ |
+	d'4 fis'8 d'8 c'4 d'4 |
+	g'1 ~ |
+	g'2. d'4 |
+	d'1 ~ |
+	d'4 fis'8 d'8 c'4 d'4 |
+	g'1 ~ |
+	g'4 r4 r2 |
+	\endBar
+}
+{% endif %}

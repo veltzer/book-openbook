@@ -1,0 +1,162 @@
+{#
+default_version = "Wikifonia"
+
+[attributes]
+title = "A House Is Not A Home"
+style = "Jazz"
+composer = "Burt Bacharach"
+piece = "Standard"
+typesetter = "OpenBook contributors (MusicXML import)"
+completion = "3"
+uuid = "ae5c8df3-dfe2-5045-aecf-fc1a5815f36f"
+location = "StandardsBook:167"
+copyright = "All Rights Reserved"
+copyrightextra = "Archived MusicXML notice retained; underlying music is not relicensed."
+
+[versions.Wikifonia]
+doChords = true
+doVoice = true
+doLyrics = false
+doLyricsmore = false
+doLyricsmoremore = false
+doChordBars = false
+doGuitar = false
+doExtra = false
+doPrep = false
+doOwn = false
+#}
+{% if part == "Vars" %}
+{% endif %}
+{% if part == "Doc" %}
+	DONE:
+	- imported melody and chord changes from real_books_archive.gi/Wikifonia.tar.xz: Wikifonia/Burt Bacharach, Hal David - A House Is Not A Home.mxl.1.
+	- source revision: http://wikifonia.org/node/12550/revisions/17356/view.
+	- local PDF: real_books_archive.gi/The Standards Real Book.pdf.
+	- book index reference: StandardsBook:167; index pagination is not a verified PDF page number.
+	- retained the archived MusicXML rights notice; no redistribution permission is asserted.
+	- retained written melody, chord changes, pickups, repeats and numbered endings; lyrics omitted.
+	- imported explicit 7alt symbols using the book's altered-dominant notation where present.
+	- tempo taken from archived MusicXML.
+	TODO:
+	- proofread the complete melody, harmony and form against the referenced PDF and check by ear.
+	- verify source attribution, copyright notice and reuse terms against the scan; only the archived MusicXML notice is retained.
+	- locate the tune in the exact local PDF edition; book-index page numbers may differ.
+	- verify editorial chord spacing in measures 34; the archive places successive symbols at the same offset.
+{% endif %}
+{% if part == "ChordsWikifonia" %}\chordmode {
+	\startChords
+	\startSong
+
+	\myMark "A"
+	\startPart
+	s1 |
+	\repeat volta 2 {
+	des2:maj7 ges2:6/des |
+	s1 |
+	des1:maj7 | \myEndLine
+	des2:sus4.7 des2:9 |
+	ges2:maj7 f2:aug7 |
+	bes2:m7 aes4:m7 des4:7 |
+	ges1:maj7 | \myEndLine
+	ees1:m7 |
+	aes1:11 |
+	des1:maj7 |
+	s2 ges2:6/des | \myEndLine
+	s1 |
+	des1:maj7 |
+	des2:sus4.7 des2:9 |
+	ges2:maj7 f2:aug7 | \myEndLine
+	bes2:m7 aes4:m7 des4:7 |
+	ges1:maj7 |
+	ees1:m7 |
+	aes1:11 | \myEndLine
+	des1:maj7 |
+	ges1 |
+	ees1:m7 |
+	des2. | \myEndLine
+	s2. |
+	s1 |
+	f2.:m9 |
+	s2. | \myEndLine
+	ees2:m9 aes2:7.9- |
+	des2:maj7 ees2:m7/des |
+	s1 |
+	s1 | \myEndLine
+	des2:sus4.7 des2:9 |
+	ges2:maj7 f4:aug7 f4:7.9- |
+	bes2:m7 aes4:m7 des4:7.9- |
+	ges1:maj7 | \myEndLine
+	ees1:m7 |
+	aes1:11 |
+	} \alternative {
+	{
+	des1:maj7 | \myEndLineVoltaNotLast
+	}
+	{
+	des1:maj7 | \myEndLine
+	s1 | \myEndLineVoltaLast
+	}
+	}
+	\endBar
+	\endPart
+
+	\endSong
+	\endChords
+}
+{% endif %}
+{% if part == "VoiceWikifonia" %}\absolute {
+	\tempo "Moderato" 4 = 96
+	\time 4/4
+	\key des \major
+
+	r2 r4. f'8 |
+	\repeat volta 2 {
+	as'8 f'8 as'8 c''8 es'2 ~ |
+	es'4 es'8 ges'8 ges'8 bes'8 bes'8 des''8 |
+	f''8 c''8 c''2. |
+	r2 f''4 as''4 |
+	as''8 f''8 ges''8 as''8 ges''4. f''16 f''16 |
+	as''8 f''8 ges''8 as''8 ges''4 f''8 as''8 |
+	f''8 des''8 des''4 ~ des''8 des''8 f''8 ges''8 |
+	f''4. es''8 f''8 des''8 des''4 |
+	ges''8 f''8 des''2 bes'4 |
+	as'2. r8 f'8 |
+	as'8 - "Dbmaj.7" f'8 as'8 c''8 es'2 ~ |
+	es'4 es'8 ges'8 ges'8 bes'8 bes'8 des''8 |
+	f''8 c''8 c''2. |
+	r2 f''4 as''4 |
+	as''8 f''8 ges''8 as''8 ges''4. f''16 f''16 |
+	as''8 f''8 ges''8 as''8 ges''4 f''8 as''8 |
+	f''8 des''8 des''4 ~ des''8 des''8 f''8 ges''8 |
+	f''4. es''8 f''8 des''8 des''4 |
+	ges''8 f''8 des''2 bes'4 |
+	as'1 |
+	c''8 bes'8 es''2 des''4 |
+	bes'8 f''8 es''2 des''4 |
+	\time 3/4 g'8 as'8 bes'8 c''8 des''8 f''8 |
+	g''2. |
+	\time 4/4 f''8 - "Ebmaj.7 " es''8 bes'4 ~ bes'8 bes'8 g''8 f''8 |
+	\time 3/4 g''2. |
+	f''8 - "Ebmaj.7" es''8 bes'4. bes'8 |
+	\time 4/4 f''4. ^ "Ritard." es''8 f''2 ^\fermata |
+	as'8 f'8 as'8 c''8 es'2 ~ |
+	es'4 es'8 ges'8 ges'8 bes'8 bes'8 des''8 |
+	f''8 - "Dbmaj.7" c''8 c''2. |
+	r2 f''4 as''4 |
+	as''8 f''8 ges''8 as''8 ges''4. f''16 f''16 |
+	as''8 f''8 ges''8 as''8 ges''4 f''8 as''8 |
+	f''8 des''8 des''4 ~ des''8 des''8 f''8 ges''8 |
+	f''4. es''8 f''8 des''8 des''4 |
+	ges''8 f''8 des''2 bes'4 |
+	} \alternative {
+	{
+	as'2. r8 f'8 |
+	}
+	{
+	as'1 ~ |
+	as'4 r4 r2 |
+	}
+	}
+	\endBar
+}
+{% endif %}

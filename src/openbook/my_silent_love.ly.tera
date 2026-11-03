@@ -1,0 +1,148 @@
+{#
+default_version = "Wikifonia"
+
+[attributes]
+title = "My Silent Love"
+style = "Jazz"
+composer = "Dana Suesse"
+piece = "Standard"
+typesetter = "OpenBook contributors (MusicXML import)"
+completion = "3"
+uuid = "efb4b020-81ac-5e92-850b-336eaab056f4"
+location = "557_Standards:263"
+copyright = "All Rights Reserved"
+copyrightextra = "Archived MusicXML notice retained; underlying music is not relicensed."
+
+[versions.Wikifonia]
+doChords = true
+doVoice = true
+doLyrics = false
+doLyricsmore = false
+doLyricsmoremore = false
+doChordBars = false
+doGuitar = false
+doExtra = false
+doPrep = false
+doOwn = false
+#}
+{% if part == "Vars" %}
+{% endif %}
+{% if part == "Doc" %}
+	DONE:
+	- imported melody and chord changes from real_books_archive.gi/Wikifonia.tar.xz: Wikifonia/Dana Suesse, Edward Heyman - My Silent Love.mxl.1.
+	- source revision: http://wikifonia.org/node/14443/revisions/19360/view.
+	- local PDF: real_books_archive.gi/Guitar - 557 Standards.pdf.
+	- book index reference: 557_Standards:263; index pagination is not a verified PDF page number.
+	- retained the archived MusicXML rights notice; no redistribution permission is asserted.
+	- retained written melody, chord changes, pickups, repeats and numbered endings; lyrics omitted.
+	- imported explicit 7alt symbols using the book's altered-dominant notation where present.
+	- tempo is an editorial practice suggestion.
+	TODO:
+	- proofread the complete melody, harmony and form against the referenced PDF and check by ear.
+	- verify source attribution, copyright notice and reuse terms against the scan; only the archived MusicXML notice is retained.
+	- locate the tune in the exact local PDF edition; book-index page numbers may differ.
+	- verify editorial chord spacing in measures 7, 8, 16, 20, 24, 31, 32, 33; the archive places successive symbols at the same offset.
+{% endif %}
+{% if part == "ChordsWikifonia" %}\chordmode {
+	\startChords
+	\startSong
+
+	\myMark "A"
+	\startPart
+	\repeat volta 2 {
+	ees1:maj7 |
+	bes1:aug7 |
+	ees1:maj7 |
+	g2:m7.5- c2:7.9- | \myEndLine
+	f1:m7 |
+	des2:7 bes2:7 |
+	g2:m7 c2:7 |
+	f2:m7 bes2:7 | \myEndLine
+	ees1:maj7 |
+	bes1:aug7 |
+	ees1:maj7 |
+	g2:m7.5- c2:7.9- | \myEndLine
+	f1:m7 |
+	des2:7 bes2:7 |
+	ees1:maj7 |
+	bes2:m7 ees2:7 | \myEndLine
+	aes1:maj7 |
+	des1:7 |
+	ees1:maj7 |
+	bes2:m7 ees2:7 | \myEndLine
+	aes1:maj7 |
+	des1:7 |
+	f1:7 |
+	f2:m7 bes2:7 | \myEndLine
+	ees1:maj7 |
+	bes1:aug7 |
+	ees1:maj7 |
+	g2:m7.5- c2:7.9- | \myEndLine
+	f1:m7 |
+	des2:7 bes2:7 |
+	} \alternative {
+	{
+	ees2 c2:m7 |
+	f2:7 bes2:7 | \myEndLineVoltaNotLast
+	}
+	{
+	ees2 aes2:m6 |
+	ees1 | \myEndLineVoltaLast
+	}
+	}
+	\endBar
+	\endPart
+
+	\endSong
+	\endChords
+}
+{% endif %}
+{% if part == "VoiceWikifonia" %}\absolute {
+	\tempo "Moderato" 4 = 120
+	\time 2/2
+	\key es \major
+
+	\repeat volta 2 {
+	es'2 ~ \times 2/3 { es'4 f'4 es'4 } |
+	\times 2/3 { d'4 fis'4 bes'4 } \times 2/3 { d''4 d''4 des''4 } |
+	c''1 |
+	\times 2/3 { bes'4 c''4 des''4 } \times 2/3 { des''4 c''4 bes'4 } |
+	as'1 |
+	\times 2/3 { g'4 as'4 bes'4 } \times 2/3 { c''4 c'4 d'4 } |
+	g'1 |
+	R1 |
+	es'2 ~ \times 2/3 { es'4 f'4 es'4 } |
+	\times 2/3 { d'4 fis'4 bes'4 } \times 2/3 { d''4 d''4 des''4 } |
+	c''1 |
+	\times 2/3 { bes'4 c''4 des''4 } \times 2/3 { des''4 c''4 bes'4 } |
+	as'1 |
+	\times 2/3 { g'4 as'4 bes'4 } \times 2/3 { c''4 c'4 d'4 } |
+	es'1 |
+	R1 |
+	c'2 g'2 |
+	g'4. ges'8 f'2 |
+	f'4 e'4 \times 2/3 { es'4 d'4 des'4 } |
+	c'1 |
+	c'2 c''2 |
+	bes'4. a'8 as'2 |
+	g'4 ges'4 \times 2/3 { f'4 e'4 es'4 } |
+	d'1 |
+	es'2 ~ \times 2/3 { es'4 f'4 es'4 } |
+	\times 2/3 { d'4 fis'4 bes'4 } \times 2/3 { d''4 d''4 des''4 } |
+	c''1 |
+	\times 2/3 { bes'4 c''4 des''4 } \times 2/3 { des''4 c''4 bes'4 } |
+	as'1 |
+	\times 2/3 { g'4 as'4 bes'4 } \times 2/3 { c''4 c'4 d'4 } |
+	} \alternative {
+	{
+	es'1 |
+	R1 |
+	}
+	{
+	es'1 ~ |
+	es'2. r4 |
+	}
+	}
+	\endBar
+}
+{% endif %}

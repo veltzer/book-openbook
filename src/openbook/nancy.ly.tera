@@ -1,0 +1,149 @@
+{#
+default_version = "Wikifonia"
+
+[attributes]
+title = "Nancy"
+style = "Jazz"
+composer = "Jimmy van Heusen"
+piece = "Standard"
+typesetter = "OpenBook contributors (MusicXML import)"
+completion = "3"
+uuid = "98ee8b20-858e-5a7b-9935-edc2ceb22afd"
+location = "557_Standards:270"
+copyright = "All Rights Reserved"
+copyrightextra = "Archived MusicXML notice retained; underlying music is not relicensed."
+
+[versions.Wikifonia]
+doChords = true
+doVoice = true
+doLyrics = false
+doLyricsmore = false
+doLyricsmoremore = false
+doChordBars = false
+doGuitar = false
+doExtra = false
+doPrep = false
+doOwn = false
+#}
+{% if part == "Vars" %}
+{% endif %}
+{% if part == "Doc" %}
+	DONE:
+	- imported melody and chord changes from real_books_archive.gi/Wikifonia.tar.xz: Wikifonia/Jimmy van Heusen, Phil Silvers - Nancy.mxl.
+	- source revision: http://wikifonia.org/node/18652/revisions/24683/view.
+	- local PDF: real_books_archive.gi/Guitar - 557 Standards.pdf.
+	- book index reference: 557_Standards:270; index pagination is not a verified PDF page number.
+	- retained the archived MusicXML rights notice; no redistribution permission is asserted.
+	- retained written melody, chord changes, pickups, repeats and numbered endings; lyrics omitted.
+	- imported explicit 7alt symbols using the book's altered-dominant notation where present.
+	- tempo is an editorial practice suggestion.
+	TODO:
+	- proofread the complete melody, harmony and form against the referenced PDF and check by ear.
+	- verify source attribution, copyright notice and reuse terms against the scan; only the archived MusicXML notice is retained.
+	- locate the tune in the exact local PDF edition; book-index page numbers may differ.
+{% endif %}
+{% if part == "ChordsWikifonia" %}\chordmode {
+	\startChords
+	\startSong
+
+	\myMark "A"
+	\startPart
+	\repeat volta 2 {
+	s2. g4:dim |
+	f1:m7 |
+	bes1:7 |
+	ees1 | \myEndLine
+	s2 d4 fis4:m |
+	f1:m |
+	f2:m6 g2:7 |
+	c4:m g4:m7 f2:7 | \myEndLine
+	f4:m7 bes4:7 g2:dim |
+	f1:m7 |
+	bes1:7 |
+	ees1 | \myEndLine
+	s2 d4 fis4:m |
+	f1:m |
+	f2:m6 g2:7 |
+	c2:m aes2:m | \myEndLine
+	ees2. g4:7 |
+	c1:m |
+	ees1:aug |
+	c1:m7 | \myEndLine
+	f2:9 f4:m9.5- aes4:m |
+	ees1 |
+	f2:m7 bes4:7 g4:aug7 |
+	c4:m c4:m7 f2:7 | \myEndLine
+	f4:m7 bes4:7 g2:dim |
+	f1:m7 |
+	bes1:7 |
+	ees1 | \myEndLine
+	s2 d4 fis4:m |
+	f1:m |
+	f2:m6 g2:7 |
+	} \alternative {
+	{
+	c2:m aes2:m | \myEndLine
+	ees2 g2:dim | \myEndLineVoltaNotLast
+	}
+	{
+	c2:m aes2:m |
+	ees1 | \myEndLineVoltaLast
+	}
+	}
+	\endBar
+	\endPart
+
+	\endSong
+	\endChords
+}
+{% endif %}
+{% if part == "VoiceWikifonia" %}\absolute {
+	\tempo "Moderato" 4 = 120
+	\time 4/4
+	\key es \major
+
+	\repeat volta 2 {
+	r2 r8 bes'8 bes'8 bes'8 |
+	as'8. as'16 as'8. as'16 ~ as'4 bes'4 |
+	g'4 g'2. |
+	f'8. es'16 f'8. es'16 ~ es'4. d'8 |
+	f'4 es'4 d'4 des'4 |
+	r8. c'16 b8. c'16 bes'8. bes'16 as'8 f'8 ~ |
+	f'2 g'2 |
+	f'8. es'16 f'8. es'16 f'8 g'4 bes8 ~ |
+	bes2 r8 bes'8 bes'8 a'8 |
+	as'8. as'16 as'8. as'16 ~ as'4 bes'4 |
+	g'4 g'2. |
+	f'8. es'16 f'8. es'16 ~ es'4. d'8 |
+	f'4 es'4 d'4 des'4 |
+	r8. c'16 b8. c'16 bes'8. bes'16 as'8 f'8 ~ |
+	f'2 g'2 |
+	f'8. es'16 f'8. g'16 es'8 es'4 es'8 ~ |
+	es'2 ~ es'4 es'8 f'8 |
+	g'8. d''16 c''8. g'16 ~ g'8. es'16 f'8 g'8 ~ |
+	g'4 g'2 es'8 f'8 |
+	g'8. d''16 c''8. g'16 ~ g'8. es'16 f'8 g'8 ~ |
+	g'4 g'2 g'8 as'8 |
+	bes'8. f''16 es''8 bes'8 ~ bes'8. g'16 as'8 bes'8 ~ |
+	bes'4 bes'2 g'4 |
+	f'4 es'4 f'4 g'4 |
+	bes2 r8 bes'8 bes'8 a'8 |
+	as'8. as'16 as'8. as'16 ~ as'4 bes'4 |
+	g'4 g'2. |
+	f'8. es'16 f'8. es'16 ~ es'4. d'8 |
+	f'4 es'4 d'4 des'4 |
+	r8. c'16 b8. c'16 bes'8. bes'16 as'8 f'8 ~ |
+	f'2 g'2 |
+	} \alternative {
+	{
+	f'8. es'16 f'8. g'16 es'8 es'4 es'8 ~ |
+	es'2 r8 bes'8 bes'8 a'8 |
+	}
+	{
+	f'8. es'16 f'8. g'16 es'8 es'4 es'8 ~ |
+	es'1 |
+	}
+	}
+	\endBar
+}
+{% endif %}

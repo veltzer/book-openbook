@@ -1,0 +1,153 @@
+{#
+default_version = "Wikifonia"
+
+[attributes]
+title = "Bourbon Street Parade"
+style = "Jazz"
+composer = "Paul Barbarin"
+piece = "Standard"
+typesetter = "OpenBook contributors (MusicXML import)"
+completion = "3"
+uuid = "80df3134-3443-5c14-9365-7ddeefd512ec"
+location = "Firehouse_Jazz_Band:238"
+copyright = "All Rights Reserved"
+copyrightextra = "Archived MusicXML notice retained; underlying music is not relicensed."
+
+[versions.Wikifonia]
+doChords = true
+doVoice = true
+doLyrics = false
+doLyricsmore = false
+doLyricsmoremore = false
+doChordBars = false
+doGuitar = false
+doExtra = false
+doPrep = false
+doOwn = false
+#}
+{% if part == "Vars" %}
+{% endif %}
+{% if part == "Doc" %}
+	DONE:
+	- imported melody and chord changes from real_books_archive.gi/Wikifonia.tar.xz: Wikifonia/Paul Barbarin - Bourbon Street Parade.mxl.
+	- source revision: http://wikifonia.org/node/20729/revisions/27407/view.
+	- local PDF: real_books_archive.gi/Dixieland - The Firehouse Jazz Band - Dixieland Fake Book - 778 S Noten Sheets Score Songs Lieder.pdf.
+	- book index reference: Firehouse_Jazz_Band:238; index pagination is not a verified PDF page number.
+	- retained the archived MusicXML rights notice; no redistribution permission is asserted.
+	- retained written melody, chord changes, pickups, repeats and numbered endings; lyrics omitted.
+	- imported explicit 7alt symbols using the book's altered-dominant notation where present.
+	- tempo is an editorial practice suggestion.
+	TODO:
+	- proofread the complete melody, harmony and form against the referenced PDF and check by ear.
+	- verify source attribution, copyright notice and reuse terms against the scan; only the archived MusicXML notice is retained.
+	- locate the tune in the exact local PDF edition; book-index page numbers may differ.
+{% endif %}
+{% if part == "ChordsWikifonia" %}\chordmode {
+	\startChords
+	\startSong
+
+	\myMark "A"
+	\startPart
+	s1 |
+	s1 |
+	s1 |
+	s1 | \myEndLine
+	\repeat volta 2 {
+	f1 |
+	s1 |
+	s1 |
+	f1 | \myEndLine
+	s1 |
+	s1 |
+	c1:7 |
+	s1 | \myEndLine
+	s1 |
+	s1 |
+	s1 |
+	c1:7 | \myEndLine
+	s1 |
+	s1 |
+	f1 |
+	s2 c2:7 | \myEndLine
+	s1 |
+	s1 |
+	s1 |
+	c1:7 | \myEndLine
+	s1 |
+	f1:7 |
+	bes1 |
+	s1 | \myEndLine
+	bes1 |
+	b1:dim |
+	f1 |
+	d1:7 | \myEndLine
+	g1:7 |
+	c1:7 |
+	} \alternative {
+	{
+	f1 |
+	c1:7 | \myEndLineVoltaNotLast
+	}
+	{
+	f1 | \myEndLineVoltaLast
+	}
+	}
+	\endBar
+	\endPart
+
+	\endSong
+	\endChords
+}
+{% endif %}
+{% if part == "VoiceWikifonia" %}\absolute {
+	\tempo "Moderato" 4 = 120
+	\time 4/4
+	\key f \major
+
+	\times 2/3 { f'4 ^ "INTRO: Horns Only" c'4 f'4 } \times 2/3 { a'4 f'4 a'4 } |
+	c''1 |
+	a'8 c''4 a'8 f'8 a'4 f'8 |
+	c'4 c'4 d'4 e'4 |
+	\repeat volta 2 {
+	r2 a'2 |
+	e'4. f'8 ~ f'2 |
+	r2 a'2 |
+	e'4. f'8 ~ f'2 |
+	r2 a'2 |
+	e'2 f'4. bes'8 ~ |
+	bes'1 ~ |
+	bes'1 |
+	r2 bes'2 |
+	fis'4. g'8 ~ g'2 |
+	r2 bes'2 |
+	fis'4. g'8 ~ g'2 |
+	r2 c''2 |
+	c''2 bes'4. a'8 ~ |
+	a'1 ~ |
+	a'1 |
+	r2 a'2 |
+	e'4. f'8 ~ f'2 |
+	r2 a'2 |
+	e'4. f'8 ~ f'2 |
+	a'2. a'4 |
+	g'2 f'4. d''8 ~ |
+	d''1 ~ |
+	d''1 |
+	f'4. f'8 e'4 f'4 |
+	g'4. f'8 ~ f'2 |
+	a'4. a'8 gis'4 a'4 |
+	bes'4. a'8 ~ a'2 |
+	d'2 a'2 |
+	e'2 a'2 |
+	} \alternative {
+	{
+	f'4 r4 r2 |
+	R1 |
+	}
+	{
+	f'4 r4 r2 |
+	}
+	}
+	\endBar
+}
+{% endif %}

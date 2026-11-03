@@ -1,0 +1,129 @@
+{#
+default_version = "Wikifonia"
+
+[attributes]
+title = "I may be wrong"
+style = "Jazz"
+composer = "Henry Sullivan"
+piece = "Standard"
+typesetter = "OpenBook contributors (MusicXML import)"
+completion = "3"
+uuid = "95f7aa42-463d-5337-a25a-1ee6fb4adb2c"
+location = "StandardsBook:208"
+copyright = "All Rights Reserved"
+copyrightextra = "Archived MusicXML notice retained; underlying music is not relicensed."
+
+[versions.Wikifonia]
+doChords = true
+doVoice = true
+doLyrics = false
+doLyricsmore = false
+doLyricsmoremore = false
+doChordBars = false
+doGuitar = false
+doExtra = false
+doPrep = false
+doOwn = false
+#}
+{% if part == "Vars" %}
+{% endif %}
+{% if part == "Doc" %}
+	DONE:
+	- imported melody and chord changes from real_books_archive.gi/Wikifonia.tar.xz: Wikifonia/Henry Sullivan, Henry Ruskin - I may be wrong.mxl.
+	- source revision: http://wikifonia.org/node/5916/revisions/8197/view.
+	- local PDF: real_books_archive.gi/The Standards Real Book.pdf.
+	- book index reference: StandardsBook:208; index pagination is not a verified PDF page number.
+	- retained the archived MusicXML rights notice; no redistribution permission is asserted.
+	- retained written melody, chord changes, pickups, repeats and numbered endings; lyrics omitted.
+	- imported explicit 7alt symbols using the book's altered-dominant notation where present.
+	- tempo is an editorial practice suggestion.
+	TODO:
+	- proofread the complete melody, harmony and form against the referenced PDF and check by ear.
+	- verify source attribution, copyright notice and reuse terms against the scan; only the archived MusicXML notice is retained.
+	- locate the tune in the exact local PDF edition; book-index page numbers may differ.
+{% endif %}
+{% if part == "ChordsWikifonia" %}\chordmode {
+	\startChords
+	\startSong
+
+	\myMark "A"
+	\startPart
+	f1 |
+	s2 f2:7 |
+	bes1 |
+	bes1:m | \myEndLine
+	f1 |
+	g1:7 |
+	c1:7 |
+	f1 | \myEndLine
+	s1 |
+	s2 f2:7 |
+	bes1 |
+	bes1:m | \myEndLine
+	f1 |
+	g1:7 |
+	c1:7 |
+	f1 | \myEndLine
+	g2:m7 c2:7 |
+	f1 |
+	g2:m7 c2:7 |
+	e1:7 | \myEndLine
+	a1:m |
+	d1:m |
+	g1:7 |
+	c1 | \myEndLine
+	c4:7 f2. |
+	s2 f2:7 |
+	bes1 |
+	bes1:m | \myEndLine
+	f1 |
+	g1:7 |
+	c1:7 |
+	f1 | \myEndLine
+	\endBar
+	\endPart
+
+	\endSong
+	\endChords
+}
+{% endif %}
+{% if part == "VoiceWikifonia" %}\absolute {
+	\tempo "Moderato" 4 = 120
+	\time 4/4
+	\key c \major
+
+	r4 c''4 c''4 c''4 |
+	c''2 c''2 |
+	r4 c''4 c''4 c''4 |
+	c''4. bes'8 bes'2 |
+	r4 a'4 a'4 a'4 |
+	a'2 a'2 |
+	r4 g'4 g'4 f'4 |
+	f'1 |
+	r4 c''4 c''4 c''4 |
+	c''2 c''2 |
+	r4 c''4 c''4 c''4 |
+	c''4. bes'8 bes'2 |
+	r4 a'4 a'4 a'4 |
+	a'2 a'2 |
+	r4 g'4 g'4 f'4 |
+	f'1 |
+	g'8 g'8 f'4 e'8 f'8 g'4 |
+	a'4 a'2. |
+	bes'8 bes'8 a'4 g'8 a'8 bes'4 |
+	b'1 |
+	c''8 c''8 b'4 a'8 b'8 c''4 |
+	d''4 d''2. |
+	d''4 e''8 g''8 g''8 e''8 d''4 |
+	c''1 |
+	r4 c''4 c''4 c''4 |
+	c''2 c''2 |
+	r4 c''4 c''4 c''4 |
+	c''4. bes'8 bes'2 |
+	r4 a'4 a'4 a'4 |
+	a'2 d''2 |
+	r4 g'4 g'4 f'4 |
+	f'2. r4 |
+	\endBar
+}
+{% endif %}

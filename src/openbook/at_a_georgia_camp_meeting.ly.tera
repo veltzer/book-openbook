@@ -1,0 +1,190 @@
+{#
+default_version = "Wikifonia"
+
+[attributes]
+title = "At A Georgia Camp Meeting"
+style = "Jazz"
+composer = "Kerry Mills"
+piece = "Standard"
+typesetter = "OpenBook contributors (MusicXML import)"
+completion = "3"
+uuid = "62e9fe07-83c2-5f8b-9c49-39e1f4215d08"
+location = "Firehouse_Jazz_Band:469"
+copyright = "All Rights Reserved"
+copyrightextra = "Archived MusicXML notice retained; underlying music is not relicensed."
+
+[versions.Wikifonia]
+doChords = true
+doVoice = true
+doLyrics = false
+doLyricsmore = false
+doLyricsmoremore = false
+doChordBars = false
+doGuitar = false
+doExtra = false
+doPrep = false
+doOwn = false
+#}
+{% if part == "Vars" %}
+{% endif %}
+{% if part == "Doc" %}
+	DONE:
+	- imported melody and chord changes from real_books_archive.gi/Wikifonia.tar.xz: Wikifonia/Kerry Mills - At A Georgia Camp Meeting.mxl.
+	- source revision: http://wikifonia.org/node/17438/revisions/23127/view.
+	- local PDF: real_books_archive.gi/Dixieland - The Firehouse Jazz Band - Dixieland Fake Book - 778 S Noten Sheets Score Songs Lieder.pdf.
+	- book index reference: Firehouse_Jazz_Band:469; index pagination is not a verified PDF page number.
+	- retained the archived MusicXML rights notice; no redistribution permission is asserted.
+	- retained written melody, chord changes, pickups, repeats and numbered endings; lyrics omitted.
+	- imported explicit 7alt symbols using the book's altered-dominant notation where present.
+	- tempo is an editorial practice suggestion.
+	TODO:
+	- proofread the complete melody, harmony and form against the referenced PDF and check by ear.
+	- verify source attribution, copyright notice and reuse terms against the scan; only the archived MusicXML notice is retained.
+	- locate the tune in the exact local PDF edition; book-index page numbers may differ.
+	- verify complete D.C./D.S./coda/Fine navigation and playback; printed directions are not a playback guarantee.
+{% endif %}
+{% if part == "ChordsWikifonia" %}\chordmode {
+	\startChords
+	\startSong
+
+	\myMark "A"
+	\startPart
+	s1 |
+	c1 |
+	g2:7 c2 |
+	s2 g2:7 | \myEndLine
+	c1 |
+	c1 |
+	s1 |
+	f1 | \myEndLine
+	c1 |
+	s1 |
+	s1 |
+	d1:7 | \myEndLine
+	g1:7 |
+	c1 |
+	s1 |
+	f1 | \myEndLine
+	c1 |
+	s1 |
+	g2:7 c2 |
+	g1:7 | \myEndLine
+	c1 |
+	\repeat volta 2 {
+	g1:7 |
+	s1 |
+	c1 | \myEndLine
+	s1 |
+	g1:7 |
+	s1 |
+	c1 | \myEndLine
+	s1 |
+	g1:7 |
+	s1 |
+	c1 | \myEndLine
+	s1 |
+	f1 |
+	c2 a2:7 |
+	d2:7 g2:7 | \myEndLine
+	} \alternative {
+	{
+	c1 | \myEndLineVoltaNotLast
+	}
+	{
+	c1 | \myEndLineVoltaLast
+	}
+	}
+	f1 |
+	s1 | \myEndLine
+	bes1 |
+	f1 |
+	c1:7 |
+	f1 | \myEndLine
+	g1:7 |
+	c1:7 |
+	f1 |
+	s1 | \myEndLine
+	bes1 |
+	a1:7 |
+	g1:m |
+	f1 | \myEndLine
+	g2:7 c2:7 |
+	f1 |
+	f1 |
+	\endBar
+	\endPart
+
+	\endSong
+	\endChords
+}
+{% endif %}
+{% if part == "VoiceWikifonia" %}\absolute {
+	\tempo "Moderato" 4 = 120
+	\time 2/2
+	\key c \major
+
+	r2 r4 g'4 |
+	a'8 c''4 g'8 a'8 c''4 g'8 |
+	a'8 b'8 a'8 g'8 a'8 c''4. |
+	g'8 g'4 g'8 g'4 g'4 |
+	c''4 r4 c''4 g'8 g'8 |
+	a'8 g'4 e'8 g'4 a'8 b'8 |
+	c''8 e''4 c''8 e''2 |
+	d''4 c''2 a'4 |
+	g'4 c''2 g'8 g'8 |
+	a'8 g'4 e'8 g'4 a'8 b'8 |
+	c''8 e''4 c''8 e''2 |
+	d''4 c''2 a'4 |
+	e''4 d''4 b'4 g'4 |
+	a'8 g'4 e'8 g'4 a'8 b'8 |
+	c''8 e''4 c''8 e''2 |
+	d''4 c''2 a'4 |
+	g'4 c''2 g'8 g'8 |
+	a'8 c''4 g'8 a'8 c''4 g'8 |
+	a'8 b'8 a'8 g'8 a'8 c''4 c''8 |
+	g'8 g'4 g'8 g'4 g'4 |
+	c''4 g'8 g'8 g'4 g'4 |
+	\repeat volta 2 {
+	\mark \markup { \musicglyph "scripts.segno" } g'4 a'4 b'4 d''4 |
+	g''8 f''4 d''8 a'4 b'4 |
+	a'1 ~ |
+	a'4 g'8 a'8 b'8 c''4 a'8 |
+	b'1 ~ |
+	b'4 g'8 a'8 b'8 c''4 b'8 |
+	a'1 |
+	g'4 g'8 g'8 g'4 g'4 |
+	g'4 a'4 b'4 d''4 |
+	g''8 f''4 d''8 a'4 b'4 |
+	a'1 |
+	g'4. c''8 c''4 b'4 |
+	a'8 c''4 a'8 c''4 a'4 |
+	g'8 c''4 e''8 f''4 f''4 |
+	e''8 d''4 cis''8 e''4 d''4 |
+	} \alternative {
+	{
+	c''4 g'8 g'8 g'4 g'4 |
+	}
+	{
+	c''2 c''4 r4 ^ "Fine" |
+	}
+	}
+	\key f \major c''4 d''4 c''2 |
+	f''4 g''4 f''2 |
+	d''4 f''4 e''4 d''4 |
+	c''1 |
+	bes'4 c''4 d''4 e''4 |
+	f''4 g''4 a''2 |
+	g''4. fis''8 g''4 a''4 |
+	g''1 |
+	c''4 d''4 c''2 |
+	f''4 g''4 f''2 |
+	d''4 e''4 f''4 g''4 |
+	a''1 |
+	bes'4 c''4 d''4 e''4 |
+	f''4 g''4 a''4 f''4 |
+	g''2 b'2 |
+	f''4 c''8 c''8 c''4 c''4 |
+	f''4 r4 f''4 r4 ^ "D.S. al Fine" |
+	\endBar
+}
+{% endif %}

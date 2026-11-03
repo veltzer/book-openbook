@@ -1,0 +1,228 @@
+{#
+default_version = "Wikifonia"
+
+[attributes]
+title = "Aquarius"
+style = "Jazz"
+composer = "Galt MacDermot"
+piece = "Standard"
+typesetter = "OpenBook contributors (MusicXML import)"
+completion = "3"
+uuid = "4d699417-46cc-5d75-a502-3ede3ae1de1e"
+location = "Jazz_LTD:20"
+copyright = "All Rights Reserved"
+copyrightextra = "Archived MusicXML notice retained; underlying music is not relicensed."
+
+[versions.Wikifonia]
+doChords = true
+doVoice = true
+doLyrics = false
+doLyricsmore = false
+doLyricsmoremore = false
+doChordBars = false
+doGuitar = false
+doExtra = false
+doPrep = false
+doOwn = false
+#}
+{% if part == "Vars" %}
+{% endif %}
+{% if part == "Doc" %}
+	DONE:
+	- imported melody and chord changes from real_books_archive.gi/Wikifonia.tar.xz: Wikifonia/Galt MacDermot, James Rado & Gerome Ragni - Aquarius.mxl.
+	- source revision: http://wikifonia.org/node/17732/revisions/23520/view.
+	- local PDF: real_books_archive.gi/jazz_ltd.pdf.
+	- book index reference: Jazz_LTD:20; index pagination is not a verified PDF page number.
+	- retained the archived MusicXML rights notice; no redistribution permission is asserted.
+	- retained written melody, chord changes, pickups, repeats and numbered endings; lyrics omitted.
+	- imported explicit 7alt symbols using the book's altered-dominant notation where present.
+	- tempo taken from archived MusicXML.
+	TODO:
+	- proofread the complete melody, harmony and form against the referenced PDF and check by ear.
+	- verify source attribution, copyright notice and reuse terms against the scan; only the archived MusicXML notice is retained.
+	- locate the tune in the exact local PDF edition; book-index page numbers may differ.
+	- verify complete D.C./D.S./coda/Fine navigation and playback; printed directions are not a playback guarantee.
+{% endif %}
+{% if part == "ChordsWikifonia" %}\chordmode {
+	\startChords
+	\startSong
+
+	\myMark "A"
+	\startPart
+	\partial 2 s2 |
+	d1:m9 |
+	g1:7 |
+	a1:m | \myEndLine
+	s1 |
+	d1:m9 |
+	g1:7 |
+	a1:m | \myEndLine
+	s1 |
+	d1:m9 |
+	g1:7 |
+	a1:m | \myEndLine
+	s1 |
+	f1 |
+	g1:7 |
+	c1 | \myEndLine
+	s1 |
+	bes1 |
+	s1 |
+	s1 | \myEndLine
+	s1 |
+	d1:m |
+	s1 |
+	g1:7 | \myEndLine
+	s1 |
+	s1 |
+	s1 |
+	d1:m | \myEndLine
+	s1 |
+	s1 |
+	s1 |
+	c2..:7 f8 | \myEndLine
+	s1 |
+	c1:7 |
+	f1 |
+	c1:7 | \myEndLine
+	f1 |
+	d4.:m e1*5/8:dim |
+	f1 |
+	s2 a2:7/e | \myEndLine
+	d1:m |
+	d2:m7 g2:m |
+	a1:m |
+	g1:m | \myEndLine
+	s1 |
+	s1 |
+	s1 |
+	d1:m | \myEndLine
+	s1 |
+	s1 |
+	s1 |
+	d1:m9 | \myEndLine
+	g1:7 |
+	a1:m |
+	s1 |
+	d1:m9 | \myEndLine
+	g1:7 |
+	a1:m |
+	s1 |
+	d1:m9 | \myEndLine
+	g1:7 |
+	a1:m |
+	s1 |
+	f1 | \myEndLine
+	g1:7 |
+	c1 |
+	s1 |
+	bes1 | \myEndLine
+	s1 |
+	s1 |
+	s1 |
+	d1:m | \myEndLine
+	s1 |
+	g1:7 |
+	s1 |
+	s1 | \myEndLine
+	s1 |
+	d1:m |
+	s1 |
+	s1 | \myEndLine
+	s1 |
+	\endBar
+	\endPart
+
+	\endSong
+	\endChords
+}
+{% endif %}
+{% if part == "VoiceWikifonia" %}\absolute {
+	\tempo "Moderato" 4 = 100
+	\time 4/4
+	\key c \major
+
+	\partial 2  a'4 ^ "from Broadway musical 'Hair'" _\mp b'4 |
+	c''1 ~ |
+	c''4 d''4 c''4 b'8 a'8 ~ |
+	a'8 g'4 a'8 ~ a'2 ~ |
+	a'2. g'4 |
+	a'8 b'4 b'8 ~ b'2 ~ |
+	b'4 a'4 a'8 g'4 g'8 |
+	a'1 ~ |
+	a'2. b'4 |
+	c''1 ~ |
+	c''4 d''4 c''8 ( b'8 ) a'8 ( g'8 ) |
+	g'4 a'2. ~ |
+	a'2 r4 g'4 |
+	a'1 |
+	r4 b'4 b'4 b'8 c''8 ~ |
+	c''4 c''4 ^ "Tacet" _ "cres. poco a poco" d''4 c''8 e''8 ~ |
+	e''4 d''4 c''4 bes'4 |
+	bes'2 _\mf bes'4 a'4 |
+	bes'4 c''8 d''8 ~ d''4 r8 c''8 |
+	bes'2 bes'4 a'4 |
+	bes'4 c''8 d''8 ~ d''2 ~ |
+	d''1 ~ |
+	d''2. c''4 |
+	d''4. f''8 g''2 ~ |
+	g''1 ~ |
+	g''1 ~ |
+	g''2. f''4 |
+	g''4 f''4 d''2 ~ |
+	d''1 ~ |
+	d''1 ~ |
+	d''1 |
+	c''8 _\f d''8 c''8 bes'8 a'8 g'4 bes'8 ~ |
+	bes'8 a'4. r2 |
+	bes'8 c''8 bes'8 a'8 g'4 f'8 ( g'8 ~ |
+	g'8 f'8 d'8 ) f'8 ~ f'2 |
+	c''8 d''8 c''8 bes'8 a'4 g'8 bes'8 ~ |
+	bes'8 a'4. bes'4 a'4 |
+	bes'8 a'4 c''8 ~ c''8 bes'4. |
+	a'8 g'4. a'4 g'4 |
+	a'4 g'4 bes'4 a'8 g'8 ~ |
+	g'8 f'4. g'4 f'8 g'8 ~ |
+	g'4 f'4 a'8 g'4 f'8 ( ~ |
+	f'8 e'4 ) d'8 ~ d'4 c'4 |
+	d'4. f'8 g'2 ( |
+	bes'1 |
+	d''1 |
+	g''2 ) r4 f''4 |
+	g''2 f''4 d''4 ~ |
+	d''1 ~ |
+	d''1 ~ |
+	d''4 r4 a'4 _\mp b'4 |
+	c''1 ~ |
+	c''4 d''4 c''4 b'8 a'8 ~ |
+	a'8 g'4 a'8 ~ a'2 ~ |
+	a'2. g'4 |
+	a'8 b'4 b'8 ~ b'2 ~ |
+	b'4 a'4 a'8 g'4 g'8 |
+	a'1 ~ |
+	a'2. b'4 |
+	c''1 ~ |
+	c''4 d''4 c''8 ( b'8 ) a'8 ( g'8 ) |
+	g'4 a'2. ~ |
+	a'2 r4 g'4 |
+	a'1 |
+	r4 b'4 b'4 b'8 c''8 ~ |
+	c''4 c''4 ^ "Tacet" _ "cres. poco a poco" d''4 c''8 e''8 ~ |
+	e''4 d''4 c''4 bes'4 |
+	bes'2 _\mf bes'4 a'4 |
+	bes'4 c''8 d''8 ~ d''4 r8 c''8 |
+	bes'2 bes'4 a'4 |
+	bes'4 c''8 d''8 ~ d''2 ~ |
+	d''1 ~ |
+	d''2. c''4 |
+	d''4. f''8 g''2 ~ |
+	g''1 ~ |
+	g''1 ~ |
+	g''2. f''4 |
+	g''4 f''4 d''2 ~ |
+	d''1 ~ |
+	d''1 ~ |
+	d''1 |
+	\endBar
+}
+{% endif %}

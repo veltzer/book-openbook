@@ -1,0 +1,148 @@
+{#
+default_version = "Wikifonia"
+
+[attributes]
+title = "I'll Never Stop Loving You"
+style = "Jazz"
+composer = "Nicholas Brodszky"
+piece = "Standard"
+typesetter = "OpenBook contributors (MusicXML import)"
+completion = "3"
+uuid = "070d5940-0afc-5455-9d01-767ebb253878"
+location = "557_Standards:137"
+copyright = "All Rights Reserved"
+copyrightextra = "Archived MusicXML notice retained; underlying music is not relicensed."
+
+[versions.Wikifonia]
+doChords = true
+doVoice = true
+doLyrics = false
+doLyricsmore = false
+doLyricsmoremore = false
+doChordBars = false
+doGuitar = false
+doExtra = false
+doPrep = false
+doOwn = false
+#}
+{% if part == "Vars" %}
+{% endif %}
+{% if part == "Doc" %}
+	DONE:
+	- imported melody and chord changes from real_books_archive.gi/Wikifonia.tar.xz: Wikifonia/Nicholas Brodszky, Sammy Cahn - I'll Never Stop Loving You.mxl.
+	- source revision: http://wikifonia.org/node/4883/revisions/6618/view.
+	- local PDF: real_books_archive.gi/Guitar - 557 Standards.pdf.
+	- book index reference: 557_Standards:137; index pagination is not a verified PDF page number.
+	- retained the archived MusicXML rights notice; no redistribution permission is asserted.
+	- retained written melody, chord changes, pickups, repeats and numbered endings; lyrics omitted.
+	- imported explicit 7alt symbols using the book's altered-dominant notation where present.
+	- tempo is an editorial practice suggestion.
+	TODO:
+	- proofread the complete melody, harmony and form against the referenced PDF and check by ear.
+	- verify source attribution, copyright notice and reuse terms against the scan; only the archived MusicXML notice is retained.
+	- locate the tune in the exact local PDF edition; book-index page numbers may differ.
+	- verify editorial chord spacing in measures 5, 6, 24; the archive places successive symbols at the same offset.
+{% endif %}
+{% if part == "ChordsWikifonia" %}\chordmode {
+	\startChords
+	\startSong
+
+	\myMark "A"
+	\startPart
+	\repeat volta 2 {
+	c2 c4:6 c4:maj7 |
+	d2:m7 g2:7 |
+	c2:maj7 a4:m c4:maj7 |
+	b2:m7 e2:7 | \myEndLine
+	a2:m f4 e4 |
+	c2:7 g4:m7 c4:7 |
+	f4.:maj7 f8:6 d2:m7 |
+	g1:7 | \myEndLine
+	c2 c4:6 c4:maj7 |
+	d2:m7 g2:7 |
+	c2:maj7 a4:m c4:maj7 |
+	b2:m7 e2:7 | \myEndLine
+	a1 |
+	fis1:m |
+	b2:m e2:7 |
+	a1 | \myEndLine
+	g1:m7 |
+	s2 fis2:dim |
+	g1:m7 |
+	ges1:7 | \myEndLine
+	f2.:maj7 f4:6 |
+	g2:m6 a2:7 |
+	d1:7 |
+	d2:m7 g2:7 | \myEndLine
+	c2 c4:6 c4:maj7 |
+	d2:m7 g2:7 |
+	c2:maj7 c2:7 |
+	g2:m6 a4:aug7 a4:7 | \myEndLine
+	d1:m7 |
+	s2 des2:maj7 |
+	} \alternative {
+	{
+	c1 |
+	d2.:m7 g4:7 | \myEndLineVoltaNotLast
+	}
+	{
+	c1 | \myEndLineVoltaLast
+	}
+	}
+	s1 |
+	\endBar
+	\endPart
+
+	\endSong
+	\endChords
+}
+{% endif %}
+{% if part == "VoiceWikifonia" %}\absolute {
+	\tempo "Moderato" 4 = 120
+	\time 4/4
+	\key c \major
+
+	\repeat volta 2 {
+	r4 g'4 c''4 g'4 |
+	g'4 f'8 e'8 f'2 |
+	r4 e'4 g'4 e'4 |
+	e'4 d'8 cis'8 d'4 e'4 |
+	cis'2. e'4 |
+	cis'2. cis'4 |
+	a'4. g'8 f'8 e'8 d'8 c'8 |
+	d'1 |
+	r4 g'4 c''4 g'4 |
+	g'4 f'8 e'8 f'2 |
+	r4 e'4 g'4 e'4 |
+	e'4 d'8 cis'8 d'4 e'4 |
+	cis'2. e'4 |
+	cis'2. cis'4 |
+	d'4. e'8 fis'8 gis'8 a'8 b'8 |
+	a'2. a'4 |
+	c''2. g'8 a'8 |
+	\times 2/3 { bes'4 c''4 d''4 } \times 2/3 { c''4 a'4 bes'4 } |
+	c''2. g'8 a'8 |
+	bes'2. e'4 |
+	a'2. e'8 f'8 |
+	\times 2/3 { g'4 a'4 bes'4 } \times 2/3 { a'4 g'4 e'4 } |
+	d'2. e'8 c'8 |
+	d'1 |
+	r4 g'4 c''4 g'4 |
+	g'4 f'8 e'8 f'2 |
+	r4 g'4 e''4 bes'4 |
+	bes'4 a'8 gis'8 a'4 a'4 |
+	c''4 a'2 c''8 d''8 |
+	e''4 c''8 c''8 c''4 c''4 |
+	} \alternative {
+	{
+	c''1 ~ |
+	c''2. r4 |
+	}
+	{
+	c''1 ~ |
+	}
+	}
+	c''2. r4 |
+	\endBar
+}
+{% endif %}

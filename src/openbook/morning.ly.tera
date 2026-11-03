@@ -1,0 +1,135 @@
+{#
+default_version = "Wikifonia"
+
+[attributes]
+title = "Morning"
+style = "Jazz"
+composer = "Greig"
+piece = "Standard"
+typesetter = "OpenBook contributors (MusicXML import)"
+completion = "3"
+uuid = "6c58426d-d594-5105-b3b9-5dea030053c1"
+location = "Real_Book_2:255, Colorado:143, Colorado_Cookbook:143"
+copyright = "All Rights Reserved"
+copyrightextra = "Archived MusicXML notice retained; underlying music is not relicensed."
+
+[versions.Wikifonia]
+doChords = true
+doVoice = true
+doLyrics = false
+doLyricsmore = false
+doLyricsmoremore = false
+doChordBars = false
+doGuitar = false
+doExtra = false
+doPrep = false
+doOwn = false
+#}
+{% if part == "Vars" %}
+{% endif %}
+{% if part == "Doc" %}
+	DONE:
+	- imported melody and chord changes from real_books_archive.gi/Wikifonia.tar.xz: Wikifonia/Greig - Morning .mxl.
+	- source revision: http://wikifonia.org/node/20239/revisions/26753/view.
+	- local PDF: real_books_archive.gi/The Real Book of Jazz Volume II.pdf.
+	- book index reference: Real_Book_2:255; index pagination is not a verified PDF page number.
+	- retained the archived MusicXML rights notice; no redistribution permission is asserted.
+	- retained written melody, chord changes, pickups, repeats and numbered endings; lyrics omitted.
+	- imported explicit 7alt symbols using the book's altered-dominant notation where present.
+	- tempo is an editorial practice suggestion.
+	TODO:
+	- proofread the complete melody, harmony and form against the referenced PDF and check by ear.
+	- verify source attribution, copyright notice and reuse terms against the scan; only the archived MusicXML notice is retained.
+	- locate the tune in the exact local PDF edition; book-index page numbers may differ.
+{% endif %}
+{% if part == "ChordsWikifonia" %}\chordmode {
+	\startChords
+	\startSong
+
+	\myMark "A"
+	\startPart
+	e2. |
+	e2. |
+	e4./b cis4.:m |
+	e2. | \myEndLine
+	e2. |
+	e2. |
+	e4./b cis4.:m |
+	gis2. | \myEndLine
+	gis2. |
+	gis2. |
+	gis4. cis4.:m |
+	gis2. | \myEndLine
+	gis2. |
+	gis2. |
+	gis4. cis4.:m |
+	b2. | \myEndLine
+	b2. |
+	b2. |
+	b4. b4.:7/a |
+	b4.:7/fis b4.:7 | \myEndLine
+	e2. |
+	e2. |
+	e4./b cis4.:m |
+	fis2.:m | \myEndLine
+	fis2.:m |
+	fis2.:m |
+	fis4.:m dis4.:dim |
+	b4./dis cis4.:m | \myEndLine
+	e4./gis fis4.:m |
+	gis2. |
+	e2. |
+	e2. | \myEndLine
+	e4./b cis4.:m |
+	b2. |
+	e2. |
+	\endBar
+	\endPart
+
+	\endSong
+	\endChords
+}
+{% endif %}
+{% if part == "VoiceWikifonia" %}\absolute {
+	\tempo "Moderato" 4 = 120
+	\time 6/8
+	\key e \major
+
+	b'8 gis'8 fis'8 e'8 fis'8 gis'8 |
+	b'8 gis'8 fis'8 e'8 fis'16 gis'16 fis'16 gis'16 |
+	b'8 gis'8 b'8 cis''8 gis'8 cis''8 |
+	b'8 gis'8 fis'8 e'4 ~ e'8 |
+	b'8 gis'8 fis'8 e'8 fis'8 gis'8 |
+	b'8 gis'8 fis'8 e'8 fis'16 gis'16 fis'16 gis'16 |
+	b'8 gis'8 b'8 cis''8 gis'8 cis''8 |
+	dis''8 c''8 ais'8 gis'4 ~ gis'8 |
+	dis''8 c''8 ais'8 gis'8 ais'8 c''8 |
+	dis''8 c''8 ais'8 gis'8 ais'16 c''16 bes'16 c''16 |
+	dis''8 bis'8 dis''8 e''8 cis''8 e''8 |
+	dis''8 bis'8 ais'8 gis'4 ~ gis'8 |
+	dis''8 c''8 ais'8 gis'8 ais'8 c''8 |
+	dis''8 c''8 ais'8 gis'8 ais'16 c''16 bes'16 c''16 |
+	dis''8 bis'8 dis''8 e''8 cis''8 e''8 |
+	fis''8 dis''8 cis''8 b'4 ~ b'8 |
+	fis''8 dis''8 cis''8 b'8 cis''16 dis''16 cis''16 dis''16 |
+	fis''8 dis''8 cis''8 b'8 cis''16 dis''16 cis''16 dis''16 |
+	fis''8 dis''8 b'8 fis''8 dis''8 b'8 |
+	fis''8 dis''8 b'8 fis''8 dis''8 b'8 |
+	b''8 gis''8 fis''8 e''8 fis''8 gis''8 |
+	b''8 gis''8 fis''8 e''8 fis''16 gis''16 fis''16 gis''16 |
+	b''8 gis''8 b''8 cis'''8 gis''8 cis'''8 |
+	cis'''8 a''8 gis''8 fis''4 ~ fis''8 |
+	cis''8 a'8 gis'8 fis'8 gis'8 a'8 |
+	cis''8 a'8 gis'8 fis'8 gis'16 a'16 gis'16 a'16 |
+	cis''8 a'8 cis''8 dis''8 a'8 dis''8 |
+	dis''8 b'8 dis''8 e''8 b'8 e''8 |
+	e''8 cis''8 e''8 fis''8 cis''8 fis''8 |
+	gis''2 ~ gis''8 ~ gis''16 ~ gis''32 r32 |
+	b'8 gis'8 fis'8 e'8 fis'8 gis'8 |
+	b'8 gis'8 fis'8 e'8 fis'16 gis'16 fis'16 gis'16 |
+	b'8 gis'8 b'8 cis''8 gis'8 cis''8 |
+	dis''2. |
+	e''2. |
+	\endBar
+}
+{% endif %}

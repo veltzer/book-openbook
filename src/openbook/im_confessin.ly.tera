@@ -1,0 +1,129 @@
+{#
+default_version = "Wikifonia"
+
+[attributes]
+title = "I'm confessin'"
+style = "Jazz"
+composer = "Al Neiburg, Doc Dougherty, Ellis Reynolds"
+piece = "Standard"
+typesetter = "OpenBook contributors (MusicXML import)"
+completion = "3"
+uuid = "d7d0e4b0-e9b2-58bb-9017-8a51ac6ffba0"
+location = "557_Standards:160"
+copyright = "All Rights Reserved"
+copyrightextra = "Archived MusicXML notice retained; underlying music is not relicensed."
+
+[versions.Wikifonia]
+doChords = true
+doVoice = true
+doLyrics = false
+doLyricsmore = false
+doLyricsmoremore = false
+doChordBars = false
+doGuitar = false
+doExtra = false
+doPrep = false
+doOwn = false
+#}
+{% if part == "Vars" %}
+{% endif %}
+{% if part == "Doc" %}
+	DONE:
+	- imported melody and chord changes from real_books_archive.gi/Wikifonia.tar.xz: Wikifonia/Al Neiburg, Doc Dougherty, Ellis Reynolds - I'm confessin'.mxl.
+	- source revision: http://wikifonia.org/node/2744/revisions/18522/view.
+	- local PDF: real_books_archive.gi/Guitar - 557 Standards.pdf.
+	- book index reference: 557_Standards:160; index pagination is not a verified PDF page number.
+	- retained the archived MusicXML rights notice; no redistribution permission is asserted.
+	- retained written melody, chord changes, pickups, repeats and numbered endings; lyrics omitted.
+	- imported explicit 7alt symbols using the book's altered-dominant notation where present.
+	- tempo is an editorial practice suggestion.
+	TODO:
+	- proofread the complete melody, harmony and form against the referenced PDF and check by ear.
+	- verify source attribution, copyright notice and reuse terms against the scan; only the archived MusicXML notice is retained.
+	- locate the tune in the exact local PDF edition; book-index page numbers may differ.
+{% endif %}
+{% if part == "ChordsWikifonia" %}\chordmode {
+	\startChords
+	\startSong
+
+	\myMark "A"
+	\startPart
+	g1 |
+	s1 |
+	s1 |
+	e1:7 | \myEndLine
+	a1:7 |
+	d1:7 |
+	g1 |
+	e2:m d2:7 | \myEndLine
+	g1 |
+	s1 |
+	s1 |
+	e1:7 | \myEndLine
+	a1:7 |
+	d1:7 |
+	g1 |
+	s1 | \myEndLine
+	s1 |
+	d1:m |
+	c1 |
+	s1 | \myEndLine
+	a1:7 |
+	s1 |
+	d1:7 |
+	s1 | \myEndLine
+	g1 |
+	s1 |
+	s1 |
+	e1:7 | \myEndLine
+	a1:7 |
+	d1:7 |
+	g1 |
+	s1 | \myEndLine
+	\endBar
+	\endPart
+
+	\endSong
+	\endChords
+}
+{% endif %}
+{% if part == "VoiceWikifonia" %}\absolute {
+	\tempo "Moderato" 4 = 120
+	\time 4/4
+	\key g \major
+
+	d'8 e'8 fis'8 g'8 fis'4 d'4 |
+	fis'4 fis'2. |
+	d'8 e'8 fis'8 g'8 fis'4 d'4 |
+	fis'1 |
+	e'8 fis'8 g'8 b'8 a'4 g'4 |
+	a'4 a'4 a'8 g'8 fis'4 |
+	g'1 |
+	e'8 g'8 e'8 g'8 b'8 b'8 ~ b'8 r8 |
+	d'8 e'8 fis'8 g'8 fis'4 d'4 |
+	fis'4 fis'2. |
+	d'8 e'8 fis'8 g'8 fis'4 d'4 |
+	fis'1 |
+	e'8 fis'8 g'8 b'8 a'4 g'4 |
+	a'4 a'4 a'8 g'8 fis'4 |
+	g'1 ~ |
+	g'2 r2 |
+	f'8 g'8 a'8 c''8 b'4 f'4 |
+	a'4 a'2. |
+	g'8 a'8 b'8 c''8 b'4 g'4 |
+	a'1 |
+	a'8 b'8 cis''8 d''8 cis''4 g'4 |
+	b'4 b'2. |
+	a'8 b'8 d''8 e''8 c''4 b'4 |
+	a'1 |
+	d'8 e'8 fis'8 g'8 fis'4 d'4 |
+	fis'4 fis'2 r4 |
+	d'8 e'8 fis'8 g'8 fis'4 d'4 |
+	fis'1 |
+	e'8 fis'8 g'8 b'8 a'4 g'4 |
+	a'4 a'4 a'8 g'8 fis'4 |
+	g'1 ~ |
+	g'4 r4 r2 |
+	\endBar
+}
+{% endif %}

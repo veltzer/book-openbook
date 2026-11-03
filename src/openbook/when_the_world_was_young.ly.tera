@@ -1,0 +1,144 @@
+{#
+default_version = "Wikifonia"
+
+[attributes]
+title = "When the World Was Young"
+style = "Jazz"
+composer = "M. Phillippe-Gerard"
+piece = "Standard"
+typesetter = "OpenBook contributors (MusicXML import)"
+completion = "3"
+uuid = "e27c446d-1bbf-556d-ad20-4fe76df2a14e"
+location = "StandardsBook:514"
+copyright = "All Rights Reserved"
+copyrightextra = "Archived MusicXML notice retained; underlying music is not relicensed."
+
+[versions.Wikifonia]
+doChords = true
+doVoice = true
+doLyrics = false
+doLyricsmore = false
+doLyricsmoremore = false
+doChordBars = false
+doGuitar = false
+doExtra = false
+doPrep = false
+doOwn = false
+#}
+{% if part == "Vars" %}
+{% endif %}
+{% if part == "Doc" %}
+	DONE:
+	- imported melody and chord changes from real_books_archive.gi/Wikifonia.tar.xz: Wikifonia/M. Phillippe-Gerard, Johnny Mercer - When the World Was Young.mxl.
+	- source revision: http://wikifonia.org/node/11669/revisions/15673/view.
+	- local PDF: real_books_archive.gi/The Standards Real Book.pdf.
+	- book index reference: StandardsBook:514; index pagination is not a verified PDF page number.
+	- retained the archived MusicXML rights notice; no redistribution permission is asserted.
+	- retained written melody, chord changes, pickups, repeats and numbered endings; lyrics omitted.
+	- imported explicit 7alt symbols using the book's altered-dominant notation where present.
+	- tempo is an editorial practice suggestion.
+	TODO:
+	- proofread the complete melody, harmony and form against the referenced PDF and check by ear.
+	- verify source attribution, copyright notice and reuse terms against the scan; only the archived MusicXML notice is retained.
+	- locate the tune in the exact local PDF edition; book-index page numbers may differ.
+	- verify editorial chord spacing in measures 34, 36; the archive places successive symbols at the same offset.
+{% endif %}
+{% if part == "ChordsWikifonia" %}\chordmode {
+	\startChords
+	\startSong
+
+	\myMark "A"
+	\startPart
+	\repeat volta 2 {
+	s2. |
+	d4.:m a4.:7 |
+	d4.:m a4.:7 |
+	d4.:m c4. | \myEndLine
+	bes4.:7 a4.:7 |
+	f4. c4. |
+	f4. c4.:7 |
+	d4.:m a4.:7 | \myEndLine
+	bes4.:7 a4.:7 |
+	c4.:dim g4.:m |
+	c4.:dim g4.:m |
+	bes4.:9 bes4.:7 | \myEndLine
+	bes4.:9.5- a4.:7 |
+	bes4.:9 bes4.:7 |
+	bes4.:9.5- a4.:7 |
+	ees4. bes4. | \myEndLine
+	g4.:m6 a4.:7 |
+	d2. |
+	c2.:dim |
+	e2:m e4:m7 | \myEndLine
+	a2.:7 |
+	d2. |
+	b2.:dim |
+	e2.:m7 | \myEndLine
+	a2.:7 |
+	d2. |
+	fis2:7 b4:7 |
+	e2.:m | \myEndLine
+	fis2.:7 |
+	b2.:m |
+	e2.:7 |
+	e2.:m7 | \myEndLine
+	a2.:7 |
+	d2 bes4:9 |
+	g2:m6 a4:7 |
+	}
+	d2 bes4 | \myEndLine
+	d2. |
+	\endBar
+	\endPart
+
+	\endSong
+	\endChords
+}
+{% endif %}
+{% if part == "VoiceWikifonia" %}\absolute {
+	\tempo "Moderato" 4 = 120
+	\time 6/8
+	\key f \major
+
+	\repeat volta 2 {
+	r2 r8 d'8 |
+	d'8 d'8 d'8 e'4 e'8 |
+	f'8 f'8 f'8 e'4 e'8 |
+	d'8 d'8 d'8 e'4 e'8 |
+	f'8 f'8 f'8 e'4 e'8 |
+	f'8 f'8 f'8 g'4 g'8 |
+	a'8 a'8 a'8 g'4 g'8 |
+	f'8 f'8 f'8 e'4 e'8 |
+	f'8 f'8 f'8 e'4 a'8 |
+	a'8 a'8 a'8 g'4 g'8 |
+	a'8 a'8 a'8 g'4 d''8 |
+	d''8 d''8 d''8 d''4 d''8 |
+	e''8 e''8 e''8 a'4 d''8 |
+	d''8 d''8 d''8 d''4 d''8 |
+	e''8 e''8 e''8 a'4 a'8 |
+	g'8 g'8 g'8 f'4 f'8 |
+	g'8 g'8 g'8 a'4. |
+	\time 3/4 \key d \major a'4. b'8 a'8 b'8 |
+	a'2. |
+	g'4. a'8 g'8 a'8 |
+	g'2. |
+	fis'2 a'4 |
+	d''2 b'4 |
+	a'2. |
+	e'4. fis'8 g'8 a'8 |
+	fis'2. |
+	fis'4. g'8 fis'8 g'8 |
+	e'2. |
+	e'4. fis'8 e'8 fis'8 |
+	d'2. |
+	d'4. e'8 fis'8 d'8 |
+	e'2. |
+	cis'4. d'8 e'8 cis'8 |
+	d'2. ~ |
+	d'4 r4 r8 d'8 |
+	}
+	d'2. ~ |
+	d'2 r4 |
+	\endBar
+}
+{% endif %}

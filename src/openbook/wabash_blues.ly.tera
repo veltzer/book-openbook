@@ -1,0 +1,129 @@
+{#
+default_version = "Wikifonia"
+
+[attributes]
+title = "Wabash Blues"
+style = "Jazz"
+composer = "Fred Meinken"
+piece = "Standard"
+typesetter = "OpenBook contributors (MusicXML import)"
+completion = "3"
+uuid = "2bc16b5a-e463-517a-a989-77e833cf4745"
+location = "Firehouse_Jazz_Band:64"
+copyright = "All Rights Reserved"
+copyrightextra = "Archived MusicXML notice retained; underlying music is not relicensed."
+
+[versions.Wikifonia]
+doChords = true
+doVoice = true
+doLyrics = false
+doLyricsmore = false
+doLyricsmoremore = false
+doChordBars = false
+doGuitar = false
+doExtra = false
+doPrep = false
+doOwn = false
+#}
+{% if part == "Vars" %}
+{% endif %}
+{% if part == "Doc" %}
+	DONE:
+	- imported melody and chord changes from real_books_archive.gi/Wikifonia.tar.xz: Wikifonia/Fred Meinken, Dave Ringle - Wabash Blues.mxl.
+	- source revision: http://wikifonia.org/node/9737/revisions/13269/view.
+	- local PDF: real_books_archive.gi/Dixieland - The Firehouse Jazz Band - Dixieland Fake Book - 778 S Noten Sheets Score Songs Lieder.pdf.
+	- book index reference: Firehouse_Jazz_Band:64; index pagination is not a verified PDF page number.
+	- retained the archived MusicXML rights notice; no redistribution permission is asserted.
+	- retained written melody, chord changes, pickups, repeats and numbered endings; lyrics omitted.
+	- imported explicit 7alt symbols using the book's altered-dominant notation where present.
+	- tempo is an editorial practice suggestion.
+	TODO:
+	- proofread the complete melody, harmony and form against the referenced PDF and check by ear.
+	- verify source attribution, copyright notice and reuse terms against the scan; only the archived MusicXML notice is retained.
+	- locate the tune in the exact local PDF edition; book-index page numbers may differ.
+{% endif %}
+{% if part == "ChordsWikifonia" %}\chordmode {
+	\startChords
+	\startSong
+
+	\myMark "A"
+	\startPart
+	bes1:7 |
+	s1 |
+	ees1 |
+	s2. g4:dim | \myEndLine
+	bes1:7 |
+	s1 |
+	ees1 |
+	s2. ees4:7 | \myEndLine
+	aes1 |
+	s1 |
+	ees1 |
+	s1 | \myEndLine
+	ces1 |
+	s1 |
+	bes1 |
+	s1 | \myEndLine
+	bes1:7 |
+	s1 |
+	ees1 |
+	s2. g4:dim | \myEndLine
+	bes1:7 |
+	s1 |
+	ees1 |
+	s2. ees4:7 | \myEndLine
+	aes1 |
+	s1 |
+	ees1 |
+	s2. g4:dim | \myEndLine
+	bes1:7 |
+	s1 |
+	ees1 |
+	s1 | \myEndLine
+	\endBar
+	\endPart
+
+	\endSong
+	\endChords
+}
+{% endif %}
+{% if part == "VoiceWikifonia" %}\absolute {
+	\tempo "Moderato" 4 = 120
+	\time 2/2
+	\key es \major
+
+	bes'1 ~ |
+	bes'4 f'4 as'8 g'4. |
+	es'1 ~ |
+	es'2. g'4 |
+	bes'1 ~ |
+	bes'4 f'4 as'8 g'4. |
+	es'1 ~ |
+	es'2 r4 es''4 |
+	es''1 ~ |
+	es''4 f''4 es''8 c''4. |
+	bes'1 ~ |
+	bes'2 r4 bes'4 |
+	ces''1 ~ |
+	ces''4 ges'4 as'4 a'4 |
+	bes'1 ~ |
+	bes'2. r4 |
+	bes'1 ~ |
+	bes'4 f'4 as'8 g'4. |
+	es'1 ~ |
+	es'2. g'4 |
+	bes'1 ~ |
+	bes'4 f'4 as'8 g'4. |
+	es'1 ~ |
+	es'2 r4 es''4 |
+	es''1 ~ |
+	es''4 f''4 es''8 c''4. |
+	bes'1 ~ |
+	bes'2. g'4 |
+	bes'1 ~ |
+	bes'4 f'4 as'8 g'4. |
+	es'1 ~ |
+	es'2. r4 |
+	\endBar
+}
+{% endif %}

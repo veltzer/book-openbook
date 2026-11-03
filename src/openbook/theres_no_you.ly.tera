@@ -1,0 +1,146 @@
+{#
+default_version = "Wikifonia"
+
+[attributes]
+title = "There's No You"
+style = "Jazz"
+composer = "Hal Hopper"
+piece = "Standard"
+typesetter = "OpenBook contributors (MusicXML import)"
+completion = "3"
+uuid = "aff370a0-97e2-5457-94b1-11b4431f699e"
+location = "StandardsBook:446"
+copyright = "All Rights Reserved"
+copyrightextra = "Archived MusicXML notice retained; underlying music is not relicensed."
+
+[versions.Wikifonia]
+doChords = true
+doVoice = true
+doLyrics = false
+doLyricsmore = false
+doLyricsmoremore = false
+doChordBars = false
+doGuitar = false
+doExtra = false
+doPrep = false
+doOwn = false
+#}
+{% if part == "Vars" %}
+{% endif %}
+{% if part == "Doc" %}
+	DONE:
+	- imported melody and chord changes from real_books_archive.gi/Wikifonia.tar.xz: Wikifonia/Hal Hopper, Tom Adair - There's No You.mxl.
+	- source revision: http://wikifonia.org/node/11796/revisions/15830/view.
+	- local PDF: real_books_archive.gi/The Standards Real Book.pdf.
+	- book index reference: StandardsBook:446; index pagination is not a verified PDF page number.
+	- retained the archived MusicXML rights notice; no redistribution permission is asserted.
+	- retained written melody, chord changes, pickups, repeats and numbered endings; lyrics omitted.
+	- imported explicit 7alt symbols using the book's altered-dominant notation where present.
+	- tempo is an editorial practice suggestion.
+	TODO:
+	- proofread the complete melody, harmony and form against the referenced PDF and check by ear.
+	- verify source attribution, copyright notice and reuse terms against the scan; only the archived MusicXML notice is retained.
+	- locate the tune in the exact local PDF edition; book-index page numbers may differ.
+	- verify editorial chord spacing in measures 4, 24; the archive places successive symbols at the same offset.
+{% endif %}
+{% if part == "ChordsWikifonia" %}\chordmode {
+	\startChords
+	\startSong
+
+	\myMark "A"
+	\startPart
+	f1:maj7 |
+	f1:6 |
+	f1:maj7 |
+	c2:m7 f2:7 | \myEndLine
+	bes2:maj7 ees2:7 |
+	a2:m7 d2:m7 |
+	g1:9 |
+	c2.:9 c4:7.9- | \myEndLine
+	f1:maj7 |
+	ees1:9 |
+	f1:maj9 |
+	des1:9 | \myEndLine
+	f1:maj7 |
+	a2:m7 aes2:dim7 |
+	g1:m7 |
+	c2.:sus4.7.9 c4:7.9- | \myEndLine
+	f1:maj7 |
+	ees1:9 |
+	f1:maj9 |
+	des1:9 | \myEndLine
+	f1:maj7 |
+	a2:m7 aes2:dim7 |
+	g2:m7 c2:7.9- |
+	f2:6 d4:m7 des4:9 | \myEndLine
+	c2:m7 f2:7 |
+	c2:m7 f2:7 |
+	bes2:maj7 f2:aug7 |
+	bes1:maj7 | \myEndLine
+	d2:m7 g2:7 |
+	d2:m7 g2:7 |
+	c1:7 |
+	g2.:m7 c4:7.9- | \myEndLine
+	f1:maj7 |
+	ees1:9 |
+	s1 |
+	des1:9 | \myEndLine
+	f1:maj7 |
+	a2:m7 aes2:dim7 |
+	g2:m7 c2:7.9- |
+	f1:6 | \myEndLine
+	\endBar
+	\endPart
+
+	\endSong
+	\endChords
+}
+{% endif %}
+{% if part == "VoiceWikifonia" %}\absolute {
+	\tempo "Moderato" 4 = 120
+	\time 2/2
+	\key f \major
+
+	c'8 d'4. a'8 g'8 f'8 e'8 |
+	d'8 e'8 d'2. |
+	c'8 d'4. a'8 g'8 f'8 e'8 |
+	es'1 |
+	d'8 bes'4 des'8 ~ des'2 |
+	c'8 a'4 f'8 ~ f'2 |
+	d'8 e'8 f'8 g'8 f'8 e'8 d'8 e'8 |
+	g'2. a'4 |
+	c''2 ~ c''8 a'8 g'8 f'8 |
+	des'2. f'4 |
+	g'8 g'4 f'8 g'8 g'4 f'8 |
+	es'8 es'8 des'8 es'8 ~ es'8 es'4 des'8 |
+	c'2 ~ c'8 d'8 f'8 a'8 |
+	c''8 a'8 c''8 b'8 ~ b'8 as'8 b'8 bes'8 ~ |
+	bes'2 d'4 f'4 |
+	g'2. a'4 |
+	c''2 ~ c''8 a'8 g'8 f'8 |
+	des'2. f'4 |
+	g'8 g'4 f'8 g'8 g'4 f'8 |
+	es'8 es'8 des'8 es'8 ~ es'8 es'4 des'8 |
+	c'2 ~ c'8 d'8 f'8 a'8 |
+	c''8 a'8 c''8 b'8 ~ b'8 as'8 b'8 bes'8 ~ |
+	bes'2 e'4 e'4 |
+	f'2. r8 f'8 |
+	es'8 es'8 es'8 f'8 ~ f'8 f'4 f'8 |
+	es'8 es'8 es'8 f'8 ~ f'8 f'4 f'8 |
+	d'8 d'8 d'8 f'8 ~ f'8 f'8 f'8 d'8 ~ |
+	d'2. r8 d'8 |
+	f'8 f'8 f'8 g'8 ~ g'8 g'4 g'8 |
+	f'8 f'8 f'8 g'8 ~ g'8 g'4 g'8 |
+	e'8 e'8 e'8 g'8 ~ g'8 g'8 g'8 bes'8 ~ |
+	bes'2. a'4 |
+	c''2 ~ c''8 a'8 g'8 f'8 |
+	des'2. f'4 |
+	g'8 - "FMj9" g'4 f'8 g'8 g'4 f'8 |
+	es'8 es'8 des'8 es'8 ~ es'8 es'4 des'8 |
+	c'2 ~ c'8 d'8 f'8 a'8 |
+	c''8 a'8 c''8 b'8 ~ b'8 as'8 b'8 bes'8 ~ |
+	bes'2 e'4 e'4 |
+	f'2. r4 |
+	\endBar
+}
+{% endif %}

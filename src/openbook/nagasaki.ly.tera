@@ -1,0 +1,129 @@
+{#
+default_version = "Wikifonia"
+
+[attributes]
+title = "Nagasaki"
+style = "Jazz"
+composer = "Harry Warren, Mort Dixon"
+piece = "Standard"
+typesetter = "OpenBook contributors (MusicXML import)"
+completion = "3"
+uuid = "95926c5b-96a6-5ecd-91d6-b40dcb504a1e"
+location = "Firehouse_Jazz_Band:175"
+copyright = "All Rights Reserved"
+copyrightextra = "Archived MusicXML notice retained; underlying music is not relicensed."
+
+[versions.Wikifonia]
+doChords = true
+doVoice = true
+doLyrics = false
+doLyricsmore = false
+doLyricsmoremore = false
+doChordBars = false
+doGuitar = false
+doExtra = false
+doPrep = false
+doOwn = false
+#}
+{% if part == "Vars" %}
+{% endif %}
+{% if part == "Doc" %}
+	DONE:
+	- imported melody and chord changes from real_books_archive.gi/Wikifonia.tar.xz: Wikifonia/Harry Warren & Mort Dixon - Nagasaki.mxl.
+	- source revision: http://wikifonia.org/node/20855/revisions/27565/view.
+	- local PDF: real_books_archive.gi/Dixieland - The Firehouse Jazz Band - Dixieland Fake Book - 778 S Noten Sheets Score Songs Lieder.pdf.
+	- book index reference: Firehouse_Jazz_Band:175; index pagination is not a verified PDF page number.
+	- retained the archived MusicXML rights notice; no redistribution permission is asserted.
+	- retained written melody, chord changes, pickups, repeats and numbered endings; lyrics omitted.
+	- imported explicit 7alt symbols using the book's altered-dominant notation where present.
+	- tempo is an editorial practice suggestion.
+	TODO:
+	- proofread the complete melody, harmony and form against the referenced PDF and check by ear.
+	- verify source attribution, copyright notice and reuse terms against the scan; only the archived MusicXML notice is retained.
+	- locate the tune in the exact local PDF edition; book-index page numbers may differ.
+{% endif %}
+{% if part == "ChordsWikifonia" %}\chordmode {
+	\startChords
+	\startSong
+
+	\myMark "A"
+	\startPart
+	c2 g2:dim |
+	g1:7 |
+	c2 g2:dim |
+	g1:7 | \myEndLine
+	c4 b4:dim a4:m e4:7 |
+	f4 e4:dim d4:m aes4:7 |
+	c2 aes8:7 g4.:7 |
+	c1 | \myEndLine
+	c2 g2:dim |
+	g1:7 |
+	c2 g2:dim |
+	g1:7 | \myEndLine
+	c4 b4:dim a4:m e4:7 |
+	f4 e4:dim d4:m aes4:7 |
+	c2 aes8:7 g4.:7 |
+	c1 | \myEndLine
+	f1 |
+	f1:m |
+	c1 |
+	c1:7 | \myEndLine
+	f1 |
+	f1:m |
+	c4 f4 c4 f4 |
+	ees4:7 d4:7 g2:7 | \myEndLine
+	c2 g2:dim |
+	g1:7 |
+	c1*5/8 g4.:dim |
+	g1:7 | \myEndLine
+	c4 b4:dim a4:m e4:7 |
+	f4 e4:dim d4:m aes4:7 |
+	c2 aes8:7 g4.:7 |
+	c1 | \myEndLine
+	\endBar
+	\endPart
+
+	\endSong
+	\endChords
+}
+{% endif %}
+{% if part == "VoiceWikifonia" %}\absolute {
+	\tempo "Moderato" 4 = 120
+	\time 2/2
+	\key c \major
+
+	r4 g'4 g'8 g'4 g'8 |
+	g'4 g'8 d''8 ~ d''2 |
+	r4 g'4 g'8 g'4 g'8 |
+	g'4 g'8 d''8 ~ d''2 |
+	e''8 e''8 b'8 b'8 c''8 c''8 gis'8 gis'8 |
+	a'8 a'8 e'8 e'8 f'8 f'8 fis'8 fis'8 |
+	g'8 a'8 fis'8 g'8 es''8 d''4. |
+	c''2. r4 |
+	r4 g'4 g'8 g'4 g'8 |
+	g'4 g'8 d''8 ~ d''2 |
+	r4 g'4 g'8 g'4 g'8 |
+	g'4 g'8 d''8 ~ d''2 |
+	e''8 e''8 b'8 b'8 c''8 c''8 gis'8 gis'8 |
+	a'8 a'8 e'8 e'8 f'8 f'8 fis'8 fis'8 |
+	g'8 a'8 fis'8 g'8 es''8 d''4. |
+	c''2. r4 |
+	r8 c''8 d''8 e''8 d''8 c''4. |
+	r8 c''8 d''8 e''8 d''8 c''4. |
+	r8 c''8 d''8 e''8 d''8 c''8 e'8 g'8 ~ |
+	g'1 |
+	r8 c''8 d''8 e''8 d''8 c''4. |
+	r8 c''8 d''8 e''8 d''8 c''4 as'8 |
+	g'4 a'4 g'4 a'4 |
+	bes'4 fis'8. a'16 g'2 |
+	r4 g'4 g'8 g'4 g'8 |
+	g'4 g'8 d''8 ~ d''2 |
+	r4 g'4 g'8 g'4 g'8 |
+	g'4 g'8 d''8 ~ d''2 |
+	e''8 e''8 b'8 b'8 c''8 c''8 gis'8 gis'8 |
+	a'8 a'8 e'8 e'8 f'8 f'8 fis'8 fis'8 |
+	g'8 a'8 fis'8 g'8 es''8 d''4. |
+	c''2. r4 |
+	\endBar
+}
+{% endif %}

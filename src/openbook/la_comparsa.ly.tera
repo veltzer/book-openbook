@@ -1,0 +1,209 @@
+{#
+default_version = "Wikifonia"
+
+[attributes]
+title = "La Comparsa"
+style = "Jazz"
+composer = "Ernesto Lecuona"
+piece = "Standard"
+typesetter = "OpenBook contributors (MusicXML import)"
+completion = "3"
+uuid = "9bb94229-8ecc-5554-9b11-c7802af20280"
+location = "Latin_Real_Book:282"
+copyright = "All Rights Reserved"
+copyrightextra = "Archived MusicXML notice retained; underlying music is not relicensed."
+
+[versions.Wikifonia]
+doChords = true
+doVoice = true
+doLyrics = false
+doLyricsmore = false
+doLyricsmoremore = false
+doChordBars = false
+doGuitar = false
+doExtra = false
+doPrep = false
+doOwn = false
+#}
+{% if part == "Vars" %}
+{% endif %}
+{% if part == "Doc" %}
+	DONE:
+	- imported melody and chord changes from real_books_archive.gi/Wikifonia.tar.xz: Wikifonia/Ernesto Lecuona - La Comparsa.mxl.
+	- source revision: http://wikifonia.org/node/17835/revisions/23648/view.
+	- local PDF: real_books_archive.gi/The Latin Real Book.pdf.
+	- book index reference: Latin_Real_Book:282; index pagination is not a verified PDF page number.
+	- retained the archived MusicXML rights notice; no redistribution permission is asserted.
+	- retained written melody, chord changes, pickups, repeats and numbered endings; lyrics omitted.
+	- imported explicit 7alt symbols using the book's altered-dominant notation where present.
+	- tempo taken from archived MusicXML.
+	TODO:
+	- proofread the complete melody, harmony and form against the referenced PDF and check by ear.
+	- verify source attribution, copyright notice and reuse terms against the scan; only the archived MusicXML notice is retained.
+	- locate the tune in the exact local PDF edition; book-index page numbers may differ.
+{% endif %}
+{% if part == "ChordsWikifonia" %}\chordmode {
+	\startChords
+	\startSong
+
+	\myMark "A"
+	\startPart
+	s2 |
+	fis2:m |
+	fis2:m |
+	fis2:m | \myEndLine
+	fis2:m |
+	fis2:7 |
+	fis2:7 |
+	b2:m | \myEndLine
+	b2:m |
+	gis2:m7 |
+	gis2:m7 |
+	fis2:m | \myEndLine
+	fis2:m |
+	cis2:7 |
+	cis2:7 |
+	fis2:m | \myEndLine
+	fis2:m |
+	fis2:m |
+	fis2:m |
+	fis2:m | \myEndLine
+	fis2:m |
+	fis2:7 |
+	fis2:7 |
+	b2:m | \myEndLine
+	b2:m |
+	cis2:7 |
+	cis2:7 |
+	fis2:m | \myEndLine
+	fis2:m |
+	cis2:7 |
+	cis2:7 |
+	fis2:m | \myEndLine
+	s2 |
+	fis2 |
+	fis2 |
+	cis2:7 | \myEndLine
+	cis2:7 |
+	cis2:7 |
+	cis2:7 |
+	cis4:7 fis4 | \myEndLine
+	fis2 |
+	dis2:7 |
+	dis2:7 |
+	gis2:m | \myEndLine
+	gis2:m |
+	cis2:7 |
+	cis2:7 |
+	cis4:7 fis4 | \myEndLine
+	fis2 |
+	fis2 |
+	fis2 |
+	cis2:7 | \myEndLine
+	cis2:7 |
+	cis2:7 |
+	cis2:7 |
+	cis2:7 | \myEndLine
+	cis2:7 |
+	dis2:7 |
+	dis2:7 |
+	gis2:m | \myEndLine
+	gis2:m |
+	cis2:7 |
+	cis2:7 |
+	cis2:7 | \myEndLine
+	fis2:m |
+	fis2:m |
+	b2:m |
+	cis2 | \myEndLine
+	fis2 |
+	s2 |
+	s2 |
+	s2 | \myEndLine
+	\endBar
+	\endPart
+
+	\endSong
+	\endChords
+}
+{% endif %}
+{% if part == "VoiceWikifonia" %}\absolute {
+	\tempo "Moderato" 4 = 120
+	\time 2/4
+	\key a \major
+
+	r4 r8 cis'8 |
+	a'2 ( |
+	a'4 ) gis'8 a'8 |
+	fis'2 ( |
+	fis'4 ) fis'4 |
+	e''2 ( |
+	e''4 ) d''8 cis''8 |
+	d''2 ( |
+	d''4 ) d''4 |
+	cis''2 |
+	cis''4 gis'8 a'8 |
+	fis'2 ( |
+	fis'4 ) \times 2/3 { gis'8 a'8 b'8 } |
+	cis''4 cis''8 d''32 cis''32 bis'32 cis''32 |
+	a''16 gis''16 eis''16 cis''16 b'16 a'16 a'16 cis''16 |
+	fis'2 ( |
+	fis'4 ) cis'4 |
+	a'2 |
+	gis'8. b'16 b'8 a'8 |
+	fis'2 ( |
+	fis'4 ) fis'4 |
+	e''2 ( |
+	e''4 ) d''8 cis''8 |
+	d''2 ( |
+	d''4 ) d''4 |
+	cis''2 ( |
+	cis''4 ) gis'8 a'8 |
+	fis'2 ( |
+	fis'4 ) \times 2/3 { gis'8 a'8 b'8 } |
+	cis''4 cis''8 d''32 cis''32 bis'32 cis''32 |
+	a''16 gis''16 eis''16 cis''16 b'16 a'16 a'16 cis''16 |
+	fis'2 ( |
+	fis'4 ) cis''4 |
+	\key fis \major fis'2 |
+	gis'4 fis'4 |
+	eis'2 |
+	eis'4 b8 cis'8 |
+	dis'2 |
+	fis'4 eis'4 |
+	dis'8. cis'16 cis'4 |
+	cis'4 \times 2/3 { ais8 b8 cis'8 } |
+	dis'2 |
+	dis'4 cis'4 |
+	cis'8. b16 b4 |
+	b8 gis8 \times 2/3 { ais8 b8 cis'8 } |
+	cis'2 |
+	b4 cis'8 b8 |
+	b4 ais4 |
+	cis'4 fis'4 |
+	fis'2 |
+	gis'4 fis'4 |
+	eis'2 |
+	eis'4 b8 cis'8 |
+	dis'2 |
+	fis'4 eis'4 |
+	dis'8. cis'16 cis'4 |
+	cis'4 \times 2/3 { ais8 b8 cis'8 } |
+	dis'2 |
+	dis'4 cis'4 |
+	cis'8. b16 b4 |
+	b8 gis8 \times 2/3 { ais8 b8 cis'8 } |
+	cis'2 |
+	gis'2 ( |
+	gis'2 ) |
+	fis'8. ( fis'4 ) fis'16 |
+	fis'2 |
+	d'2 |
+	cis'2 |
+	fis'4 r4 |
+	r2 |
+	r2 |
+	r2 |
+	\endBar
+}
+{% endif %}

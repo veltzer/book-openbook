@@ -1,0 +1,131 @@
+{#
+default_version = "Wikifonia"
+
+[attributes]
+title = "C'est Magnifique"
+style = "Standard"
+composer = "Cole Porter"
+piece = "Standard"
+typesetter = "OpenBook contributors (MusicXML import)"
+completion = "3"
+uuid = "e8203017-d94e-5a38-8b2d-8d71ba372143"
+location = "TheBook:424"
+copyright = "All Rights Reserved"
+copyrightextra = "Archived MusicXML notice retained; underlying music is not relicensed."
+
+[versions.Wikifonia]
+doChords = true
+doVoice = true
+doLyrics = false
+doLyricsmore = false
+doLyricsmoremore = false
+doChordBars = false
+doGuitar = false
+doExtra = false
+doPrep = false
+doOwn = false
+#}
+{% if part == "Vars" %}
+{% endif %}
+{% if part == "Doc" %}
+	DONE:
+	- imported melody and chord changes from real_books_archive.gi/Wikifonia.tar.xz: Wikifonia/Cole Porter - C'est Magnifique.mxl.
+	- source revision: http://wikifonia.org/node/4291/revisions/26106/view.
+	- local PDF: real_books_archive.gi/The Book.pdf.
+	- book index reference: TheBook:424; index pagination is not a verified PDF page number.
+	- retained the archived MusicXML rights notice; no redistribution permission is asserted.
+	- retained written melody, chord changes, pickups, repeats and numbered endings; lyrics omitted.
+	- imported explicit 7alt symbols using the book's altered-dominant notation where present.
+	- tempo taken from archived MusicXML.
+	TODO:
+	- proofread the complete melody, harmony and form against the referenced PDF and check by ear.
+	- verify source attribution, copyright notice and reuse terms against the scan; only the archived MusicXML notice is retained.
+	- locate the tune in the exact local PDF edition; book-index page numbers may differ.
+{% endif %}
+{% if part == "ChordsWikifonia" %}\chordmode {
+	\startChords
+	\startSong
+
+	\myMark "A"
+	\startPart
+	\partial 4 s4 |
+	c1 |
+	s1 |
+	s1 | \myEndLine
+	s1 |
+	e1:m7 |
+	ees1:dim |
+	d1:m | \myEndLine
+	g2:7 a2:7 |
+	d1:m |
+	s1 |
+	d1:m7 | \myEndLine
+	s1 |
+	d1:m7 |
+	dis1:dim |
+	c1 | \myEndLine
+	g1:13 |
+	c1 |
+	s1 |
+	s1 | \myEndLine
+	s1 |
+	s2 c2:maj7 |
+	c1:7 |
+	f1 | \myEndLine
+	s1 |
+	s1 |
+	f1:m |
+	e1:m | \myEndLine
+	a1:m7 |
+	d1:7 |
+	g1:7 |
+	c1 | \myEndLine
+	s1 |
+	\endBar
+	\endPart
+
+	\endSong
+	\endChords
+}
+{% endif %}
+{% if part == "VoiceWikifonia" %}\absolute {
+	\tempo "Moderato" 4 = 60
+	\time 4/4
+	\key c \major
+
+	\partial 4 g'4 ^ "Foxtrot" |
+	c''2. d''4 |
+	e''2. b'4 |
+	a'4 b'4 a'4 b'4 |
+	a'4 g'4 g'4 g'8 g'8 ~ |
+	g'1 |
+	r4 a'4 a'4 a'4 |
+	a'2 f'2 ~ |
+	f'2 r4 a'4 |
+	d''2. e''4 |
+	f''2. c''4 |
+	b'4 c''4 b'4 c''4 |
+	b'4 a'4 a'4 a'8 a'8 ~ |
+	a'1 |
+	r4 b'4 b'4 g'4 |
+	a'2 e'2 ~ |
+	e'2. g'4 |
+	c''2. d''4 |
+	e''2. b'4 |
+	a'4 b'4 a'4 b'4 |
+	a'4 g'4 g'4 g'8 g'8 ~ |
+	g'1 |
+	r4 c''8 d''8 e''4 c''4 |
+	e''2 d''2 ~ |
+	d''2. a'4 |
+	d''2. e''4 |
+	f''2. d''4 |
+	e''4 d''4 c''4 a'4 |
+	g'4 e'4 g'4 e''4 |
+	d''1 |
+	e''1 |
+	c''1 ~ |
+	c''2. r4 |
+	\endBar
+}
+{% endif %}

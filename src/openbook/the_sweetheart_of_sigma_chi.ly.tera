@@ -1,0 +1,150 @@
+{#
+default_version = "Wikifonia"
+
+[attributes]
+title = "The Sweetheart Of Sigma Chi"
+style = "Jazz"
+composer = "F. Dudleigh Vernor"
+piece = "Standard"
+typesetter = "OpenBook contributors (MusicXML import)"
+completion = "3"
+uuid = "477e8ff7-df7e-5511-b4a4-2a67239da77c"
+location = "Firehouse_Jazz_Band:237"
+copyright = "All Rights Reserved"
+copyrightextra = "Archived MusicXML notice retained; underlying music is not relicensed."
+
+[versions.Wikifonia]
+doChords = true
+doVoice = true
+doLyrics = false
+doLyricsmore = false
+doLyricsmoremore = false
+doChordBars = false
+doGuitar = false
+doExtra = false
+doPrep = false
+doOwn = false
+#}
+{% if part == "Vars" %}
+{% endif %}
+{% if part == "Doc" %}
+	DONE:
+	- imported melody and chord changes from real_books_archive.gi/Wikifonia.tar.xz: Wikifonia/F. Dudleigh Vernor, Byron D. Stokes - The Sweetheart Of Sigma Chi.mxl.
+	- source revision: http://wikifonia.org/node/9985/revisions/13556/view.
+	- local PDF: real_books_archive.gi/Dixieland - The Firehouse Jazz Band - Dixieland Fake Book - 778 S Noten Sheets Score Songs Lieder.pdf.
+	- book index reference: Firehouse_Jazz_Band:237; index pagination is not a verified PDF page number.
+	- retained the archived MusicXML rights notice; no redistribution permission is asserted.
+	- retained written melody, chord changes, pickups, repeats and numbered endings; lyrics omitted.
+	- imported explicit 7alt symbols using the book's altered-dominant notation where present.
+	- tempo is an editorial practice suggestion.
+	TODO:
+	- proofread the complete melody, harmony and form against the referenced PDF and check by ear.
+	- verify source attribution, copyright notice and reuse terms against the scan; only the archived MusicXML notice is retained.
+	- locate the tune in the exact local PDF edition; book-index page numbers may differ.
+	- verify editorial chord spacing in measures 8, 13, 16, 17, 23, 24, 31, 34; the archive places successive symbols at the same offset.
+{% endif %}
+{% if part == "ChordsWikifonia" %}\chordmode {
+	\startChords
+	\startSong
+
+	\myMark "A"
+	\startPart
+	s2. |
+	\repeat volta 2 {
+	f2. |
+	a2:7 a4:7.5- |
+	d2.:7 | \myEndLine
+	a2:dim d4:7 |
+	g2:m cis4:dim |
+	d2.:7 |
+	g2:m bes4:m6 | \myEndLine
+	g2:m7+ bes4:m6 |
+	a2:m c4:7 |
+	s2 c4:aug |
+	f2:6 f4 | \myEndLine
+	a2:7 c4:dim |
+	g2:7 e4:m |
+	g2.:7 |
+	c2:7 g4:m7 | \myEndLine
+	c2:7 g8:m7 c8:7 |
+	f2. |
+	a2:7 a4:7.5- |
+	d2.:7 | \myEndLine
+	a2:dim d4:7 |
+	g2:m cis4:dim |
+	d4:aug g4:dim d4:7 |
+	g2:m d4:7 | \myEndLine
+	g2.:m |
+	f2.:dim |
+	e2:7 f4:dim |
+	f2 f4:7 | \myEndLine
+	d2:aug7 d4:7 |
+	g2:7 g4:aug7 |
+	c4:7 g4:m7 c4:7 |
+	} \alternative {
+	{
+	f2 f4:dim | \myEndLine
+	g4:m7 c4:7 c4:aug | \myEndLineVoltaNotLast
+	}
+	{
+	f2 bes4:m6 | \myEndLineVoltaLast
+	}
+	}
+	f2.:6 |
+	\endBar
+	\endPart
+
+	\endSong
+	\endChords
+}
+{% endif %}
+{% if part == "VoiceWikifonia" %}\absolute {
+	\tempo "Moderato" 4 = 120
+	\time 3/4
+	\key f \major
+
+	r2 c'4 |
+	\repeat volta 2 {
+	a'2 a'8 a'8 |
+	a'2 a'8 a'8 |
+	a'2 fis'4 |
+	es'2 d'4 |
+	g'2 bes'4 |
+	a'2 fis'4 |
+	g'2. ~ |
+	g'2 g'4 |
+	a'2 g'4 |
+	c''2 d''8 e''8 |
+	d''2 c''4 |
+	a'2. |
+	g'4 d'4 e'4 |
+	f'2 a'4 |
+	g'2. ~ |
+	g'2 c'4 |
+	a'2 a'8 a'8 |
+	a'2 a'8 a'8 |
+	a'4 a'4 fis'4 |
+	es'2 d'8 d'8 |
+	g'2 bes'8 bes'8 |
+	bes'2 a'4 |
+	d''2. ~ |
+	d''2 d'8 e'8 |
+	f'2 gis'4 |
+	e''2 ^\fermata d''8 d''8 |
+	c''4 a'4 f'4 |
+	bes'2 ^\fermata a'8 a'8 |
+	g'4 d'4 a'4 |
+	g'2 c'4 |
+	} \alternative {
+	{
+	f'2 r4 |
+	r4 r4 c'4 |
+	}
+	{
+	f'2. ~ |
+	}
+	}
+	f'2 r4 |
+	\endBar
+}
+{% endif %}

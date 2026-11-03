@@ -1,0 +1,134 @@
+{#
+default_version = "Wikifonia"
+
+[attributes]
+title = "All The Way"
+style = "Jazz"
+composer = "James Van Heusen"
+piece = "Standard"
+typesetter = "OpenBook contributors (MusicXML import)"
+completion = "3"
+uuid = "fe67dc30-059e-5194-9994-0779a224c346"
+location = "StandardsBook:29"
+copyright = "All Rights Reserved"
+copyrightextra = "Archived MusicXML notice retained; underlying music is not relicensed."
+
+[versions.Wikifonia]
+doChords = true
+doVoice = true
+doLyrics = false
+doLyricsmore = false
+doLyricsmoremore = false
+doChordBars = false
+doGuitar = false
+doExtra = false
+doPrep = false
+doOwn = false
+#}
+{% if part == "Vars" %}
+{% endif %}
+{% if part == "Doc" %}
+	DONE:
+	- imported melody and chord changes from real_books_archive.gi/Wikifonia.tar.xz: Wikifonia/James Van Heusen, Sammy Cahn - All The Way.mxl.
+	- source revision: http://wikifonia.org/node/1158/revisions/18817/view.
+	- local PDF: real_books_archive.gi/The Standards Real Book.pdf.
+	- book index reference: StandardsBook:29; index pagination is not a verified PDF page number.
+	- retained the archived MusicXML rights notice; no redistribution permission is asserted.
+	- retained written melody, chord changes, pickups, repeats and numbered endings; lyrics omitted.
+	- imported explicit 7alt symbols using the book's altered-dominant notation where present.
+	- tempo is an editorial practice suggestion.
+	TODO:
+	- proofread the complete melody, harmony and form against the referenced PDF and check by ear.
+	- verify source attribution, copyright notice and reuse terms against the scan; only the archived MusicXML notice is retained.
+	- locate the tune in the exact local PDF edition; book-index page numbers may differ.
+	- verify editorial chord spacing in measures 8, 12, 16, 24, 28, 31, 32; the archive places successive symbols at the same offset.
+{% endif %}
+{% if part == "ChordsWikifonia" %}\chordmode {
+	\startChords
+	\startSong
+
+	\myMark "A"
+	\startPart
+	ees1:maj7 |
+	g1:aug7 |
+	c1:m9 |
+	f1:9 | \myEndLine
+	bes2:7 f2:m7/c |
+	des2:m6 bes2:7/d |
+	ees1:6.9 |
+	bes2:m7 ees2:7 | \myEndLine
+	aes1:maj7 |
+	bes2:9 d2:m7.5- |
+	g2:sus4.7 g2:7 |
+	c4:m7 bes2:m7 ees4:aug7 | \myEndLine
+	aes1:maj7 |
+	bes2:9 b2:dim7 |
+	c1:m7 |
+	aes2:m6/ces bes2:7 | \myEndLine
+	ees1:maj7 |
+	g1:aug7 |
+	c1:m9 |
+	f1:9 | \myEndLine
+	bes2:7 f2:m7/c |
+	des2:m6 bes2:7/d |
+	ees1:6.9 |
+	bes2:m7 ees2:7 | \myEndLine
+	aes1:maj7 |
+	bes2:9 d2:m7.5- |
+	g2:sus4.7 g2:7 |
+	c2:m7 aes2:m6/ces | \myEndLine
+	ees1:maj7/bes |
+	des2:9.11+ c2:7.9- |
+	a2:m7.5- bes2:9/aes |
+	g2:m7.5- c2:7.9- | \myEndLine
+	f2:m7 bes2:7 |
+	ees1:6.9 |
+	\endBar
+	\endPart
+
+	\endSong
+	\endChords
+}
+{% endif %}
+{% if part == "VoiceWikifonia" %}\absolute {
+	\tempo "Moderato" 4 = 120
+	\time 2/2
+	\key es \major
+
+	\mark \markup { \box { A } } g'8 as'8 as'8 g'8 g'8 bes8 c'8 es'8 |
+	g'8 as'8 as'8 g'8 g'8 b4. |
+	r2 d''4 c''4 |
+	g'1 |
+	bes'8 c''8 c''8 bes'8 bes'8 f'8 g'8 as'8 |
+	bes'8 c''8 c''8 bes'8 bes'8 f'4. |
+	r2 f'4 es'4 |
+	bes'1 |
+	c''8 c''4. ~ c''4 b'8 c''8 |
+	d''4 c''4 bes'4 as'4 |
+	g'8 g'4 as'8 g'4 f'4 |
+	es'1 |
+	\mark \markup { \box { B } } c''8 c''4. ~ c''4 b'8 c''8 |
+	d''4 c''4 bes'4 as'4 |
+	g'8 f'8 \once \omit TupletBracket \times 2/3 { es'8 d'8 es'8 ~ } es'4 f'8 g'8 |
+	as'1 |
+	g'8 as'8 as'8 g'8 g'8 bes8 c'8 es'8 |
+	g'8 as'8 as'8 g'8 g'8 b4. |
+	r2 d''4 c''4 |
+	g'1 |
+	bes'8 c''8 c''8 bes'8 bes'8 f'8 g'8 as'8 |
+	bes'8 c''8 c''8 bes'8 bes'8 f'4. |
+	r2 f'4 es'4 |
+	bes'1 |
+	c''8 c''4. ~ c''4 b'8 c''8 |
+	d''4 c''4 bes'4 as'4 |
+	g'8 g'4 as'8 g'4 f'4 |
+	es'2. f'4 |
+	g'8 as'8 as'8 g'8 g'8 bes8 c'8 es'8 |
+	g'8 as'8 as'8 g'8 g'8 bes'4. |
+	c''2. f'4 |
+	bes'1 |
+	as'2 d'2 |
+	es'1 |
+	\endBar
+}
+{% endif %}

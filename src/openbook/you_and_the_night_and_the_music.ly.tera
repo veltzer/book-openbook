@@ -1,0 +1,132 @@
+{#
+default_version = "Wikifonia"
+
+[attributes]
+title = "You And The Night And The Music"
+style = "Jazz"
+composer = "Arthur Schwartz"
+piece = "Standard"
+typesetter = "OpenBook contributors (MusicXML import)"
+completion = "3"
+uuid = "027a196c-15e2-56fc-b452-a0f0d229835a"
+location = "StandardsBook:526, 557_Standards:448"
+copyright = "All Rights Reserved"
+copyrightextra = "Archived MusicXML notice retained; underlying music is not relicensed."
+
+[versions.Wikifonia]
+doChords = true
+doVoice = true
+doLyrics = false
+doLyricsmore = false
+doLyricsmoremore = false
+doChordBars = false
+doGuitar = false
+doExtra = false
+doPrep = false
+doOwn = false
+#}
+{% if part == "Vars" %}
+{% endif %}
+{% if part == "Doc" %}
+	DONE:
+	- imported melody and chord changes from real_books_archive.gi/Wikifonia.tar.xz: Wikifonia/Arthur Schwartz, Howard Dietz - You And The Night And The Music.mxl.
+	- source revision: http://wikifonia.org/node/4141/revisions/5491/view.
+	- local PDF: real_books_archive.gi/The Standards Real Book.pdf.
+	- book index reference: StandardsBook:526; index pagination is not a verified PDF page number.
+	- retained the archived MusicXML rights notice; no redistribution permission is asserted.
+	- retained written melody, chord changes, pickups, repeats and numbered endings; lyrics omitted.
+	- imported explicit 7alt symbols using the book's altered-dominant notation where present.
+	- tempo is an editorial practice suggestion.
+	TODO:
+	- proofread the complete melody, harmony and form against the referenced PDF and check by ear.
+	- verify source attribution, copyright notice and reuse terms against the scan; only the archived MusicXML notice is retained.
+	- locate the tune in the exact local PDF edition; book-index page numbers may differ.
+	- verify editorial chord spacing in measures 4, 12, 21, 25, 29; the archive places successive symbols at the same offset.
+{% endif %}
+{% if part == "ChordsWikifonia" %}\chordmode {
+	\startChords
+	\startSong
+
+	\myMark "A"
+	\startPart
+	c1:m |
+	d4:m7.5- g2.:7 |
+	g2:m7.5- c2:7 |
+	f2:m7 f2:m6 | \myEndLine
+	d1:m7.5- |
+	des1:7 |
+	c1:maj7 |
+	c1:6 | \myEndLine
+	c1:m |
+	d4:m7.5- g2.:7 |
+	g2:m7.5- c2:7 |
+	f2:m7 f2:m6 | \myEndLine
+	d1:m7.5- |
+	des1:7 |
+	c1:maj7 |
+	c1:6 | \myEndLine
+	c1:6 |
+	aes1:9 |
+	d1:7.9- |
+	g1 | \myEndLine
+	f2:6 e2:7 |
+	ees2:6 aes2:maj7 |
+	a2.:m7 d4:7 |
+	g2 d2:m7.5- | \myEndLine
+	g2:aug7 g2:7.9- |
+	c1:m |
+	d4:m7.5- g2.:7 |
+	g2:m7.5- c2:7 | \myEndLine
+	f2:m7 f2:m6 |
+	d1:m7.5- |
+	c4:m fis4:dim f4:dim c4:m |
+	d2:aug7 g2:9 | \myEndLine
+	c1:m6 |
+	\endBar
+	\endPart
+
+	\endSong
+	\endChords
+}
+{% endif %}
+{% if part == "VoiceWikifonia" %}\absolute {
+	\tempo "Moderato" 4 = 120
+	\time 4/4
+	\key es \major
+
+	\times 2/3 { g'4 as'4 fis'4 } \times 2/3 { g'4 as'4 fis'4 } |
+	g'4 g'2. |
+	\times 2/3 { g'4 as'4 fis'4 } g'8 c''4 g'8 |
+	f'1 |
+	\times 2/3 { f'4 g'4 e'4 } \times 2/3 { f'4 g'4 e'4 } |
+	f'4 f'2 g'4 |
+	e'1 |
+	R1 |
+	\times 2/3 { g'4 as'4 fis'4 } \times 2/3 { g'4 as'4 fis'4 } |
+	g'4 g'2. |
+	\times 2/3 { g'4 as'4 fis'4 } g'8 c''4 g'8 |
+	f'1 |
+	\times 2/3 { f'4 g'4 e'4 } \times 2/3 { f'4 g'4 e'4 } |
+	f'4 f'2 g'4 |
+	e'1 |
+	R1 |
+	r4 g'4 a'4 c''4 |
+	\times 2/3 { es''4 f''4 d''4 } \times 2/3 { es''4 f''4 d''4 } |
+	es''4 es''2 c''4 |
+	\times 2/3 { d''4 es''4 cis''4 } \times 2/3 { d''4 es''4 cis''4 } |
+	d''1 |
+	\times 2/3 { c''4 d''4 b'4 } \times 2/3 { c''4 d''4 b'4 } |
+	c''4 c''2 d''4 |
+	b'4. g'8 as'4. f'8 |
+	g'1 |
+	\times 2/3 { g'4 as'4 fis'4 } \times 2/3 { g'4 as'4 fis'4 } |
+	g'4 g'2. |
+	\times 2/3 { g'4 as'4 fis'4 } g'8 c''4 as'8 |
+	f'1 |
+	\times 2/3 { f'4 g'4 e'4 } \times 2/3 { f'4 g'4 as'4 } |
+	g'4 a'4 b'4 c''4 |
+	es''2 d''2 |
+	c''2. r4 |
+	\endBar
+}
+{% endif %}

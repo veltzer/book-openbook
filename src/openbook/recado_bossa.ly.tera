@@ -1,0 +1,177 @@
+{#
+default_version = "Wikifonia"
+
+[attributes]
+title = "Recado Bossa"
+style = "Jazz"
+composer = "Djalma Ferreira"
+piece = "Standard"
+typesetter = "OpenBook contributors (MusicXML import)"
+completion = "3"
+uuid = "b0179462-7b30-5d66-9740-6fd349e04b2c"
+location = "Colorado:180, Colorado_Cookbook:180"
+copyright = "All Rights Reserved"
+copyrightextra = "Archived MusicXML notice retained; underlying music is not relicensed."
+
+[versions.Wikifonia]
+doChords = true
+doVoice = true
+doLyrics = false
+doLyricsmore = false
+doLyricsmoremore = false
+doChordBars = false
+doGuitar = false
+doExtra = false
+doPrep = false
+doOwn = false
+#}
+{% if part == "Vars" %}
+{% endif %}
+{% if part == "Doc" %}
+	DONE:
+	- imported melody and chord changes from real_books_archive.gi/Wikifonia.tar.xz: Wikifonia/Djalma Ferreira - Recado Bossa.mxl.
+	- source revision: http://wikifonia.org/node/15998/revisions/21308/view.
+	- local PDF: real_books_archive.gi/Colorado Cookbook.pdf.
+	- book index reference: Colorado:180; index pagination is not a verified PDF page number.
+	- retained the archived MusicXML rights notice; no redistribution permission is asserted.
+	- retained written melody, chord changes, pickups, repeats and numbered endings; lyrics omitted.
+	- imported explicit 7alt symbols using the book's altered-dominant notation where present.
+	- tempo is an editorial practice suggestion.
+	TODO:
+	- proofread the complete melody, harmony and form against the referenced PDF and check by ear.
+	- verify source attribution, copyright notice and reuse terms against the scan; only the archived MusicXML notice is retained.
+	- locate the tune in the exact local PDF edition; book-index page numbers may differ.
+{% endif %}
+{% if part == "ChordsWikifonia" %}\chordmode {
+	\startChords
+	\startSong
+
+	\myMark "A"
+	\startPart
+	s1 |
+	s1 |
+	s1 |
+	s1 | \myEndLine
+	\repeat volta 2 {
+	d1:m7 |
+	s1 |
+	a1:7 |
+	s1 | \myEndLine
+	d1:7 |
+	s1 |
+	g1:m7 |
+	s1 | \myEndLine
+	s1 |
+	g1*5/8:m6 a4.:7 |
+	d1:m7 |
+	s1 | \myEndLine
+	} \alternative {
+	{
+	e1:7 |
+	s1 |
+	a1:7 |
+	a1:7.5+.9- | \myEndLineVoltaNotLast
+	}
+	{
+	d1:m7 | \myEndLineVoltaLast
+	}
+	}
+	c1:m7 |
+	a1:7 |
+	d1:m7 | \myEndLine
+	s1 |
+	d1:7 |
+	s1 |
+	g1:m7 | \myEndLine
+	s1 |
+	e1:7 |
+	s1 |
+	a1:m7 | \myEndLine
+	a1:7.5+.9- |
+	d1:m7 |
+	s1 |
+	a1:7 | \myEndLine
+	s1 |
+	d1:7 |
+	s1 |
+	g1:m7 | \myEndLine
+	s1 |
+	s1 |
+	g1*5/8:m6 a4.:7 |
+	d1:m7 | \myEndLine
+	d1:m7 |
+	c1:m7 |
+	a1:7 |
+	d1:m7 | \myEndLine
+	s2 a2:7.5+.9- |
+	\endBar
+	\endPart
+
+	\endSong
+	\endChords
+}
+{% endif %}
+{% if part == "VoiceWikifonia" %}\absolute {
+	\tempo "Moderato" 4 = 120
+	\time 4/4
+	\key f \major
+
+	d'4 <f' a'>4 a8 c'4 b8 |
+	<f' a'>4. b8 c'4 cis'4 |
+	d'4 <f' a'>4 a8 c'4 b8 |
+	<f' a'>4. b8 r8 d4 ^ "On Cue" d8 ( |
+	\repeat volta 2 {
+	d2 ) ( ^ "A" d8 ) bes4 a8 ( |
+	a2 ) f8 d4 cis8 ( |
+	cis2. ) bes4 |
+	a1 |
+	r4 c4 d8 fis4 a8 ( |
+	a4 ) fis4 d8 c4 bes,8 ( |
+	bes,2 ) ( bes,8 ) a4 g8 ( |
+	g1 ) |
+	r4 g4 a8 bes4 c'8 ( |
+	c'2 ) bes8 a4 g8 ( |
+	g2 ) f8 e4 d8 ( |
+	d2 ) f8 f4 e8 ( |
+	} \alternative {
+	{
+	e4 ) b,4 e2 ( |
+	e2 ) r8 e4 e8 ( |
+	e4 ) bes,4 e2 ( |
+	e2 ) r8 d4 d8 |
+	}
+	{
+	d4 e4 f8 d4 es8 ( |
+	}
+	}
+	es4 ) bes4 g8 es4 d8 |
+	cis2 ( cis8 ) d8 e8 f8 |
+	d1 ( |
+	d2 ) r4 d4 |
+	es4 ^ "B" d4 cis8 d4 g8 ( |
+	g4 ) fis4 eis8 fis4 a8 ( |
+	a1 ) |
+	g2 r4 e4 |
+	f4 e4 dis8 e4 a8 ( |
+	a4 ) gis4 g8 gis4 b8 ( |
+	b1 ) |
+	a2 r8 d4 d8 ( |
+	d2 ) ( ^ "C" d8 ) bes4 a8 ( |
+	a2 ) f8 d4 cis8 ( |
+	cis2. ) bes4 |
+	a1 |
+	r4 c4 d8 fis4 a8 ( |
+	a4 ) fis4 d8 c4 bes,8 ( |
+	bes,2 ) ( bes,8 ) a4 g8 ( |
+	g1 ) |
+	r4 g4 a8 bes4 c'8 ( |
+	c'2 ) bes8 a4 g8 ( |
+	g2 ) f8 e4 d8 ( |
+	d4 ) _ "Schluß: wie Einleitung Fade Out" e4 f8 d4 es8 ( |
+	es4 ) bes4 g8 es4 d8 |
+	cis2 ( cis8 ) d8 e8 f8 |
+	d1 ( _ "Schluß" |
+	d4 ) _ "To" r4 r8 _ "A" d4 d8 |
+	\endBar
+}
+{% endif %}

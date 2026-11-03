@@ -1,0 +1,132 @@
+{#
+default_version = "Wikifonia"
+
+[attributes]
+title = "Anything Goes"
+style = "Jazz"
+composer = "Cole Porter"
+piece = "Standard"
+typesetter = "OpenBook contributors (MusicXML import)"
+completion = "3"
+uuid = "6055fd0d-ee12-5ec9-a56a-f972f24d3bbe"
+location = "StandardsBook:38, 557_Standards:27, Firehouse_Jazz_Band:53, TheBook:195"
+copyright = "All Rights Reserved"
+copyrightextra = "Archived MusicXML notice retained; underlying music is not relicensed."
+
+[versions.Wikifonia]
+doChords = true
+doVoice = true
+doLyrics = false
+doLyricsmore = false
+doLyricsmoremore = false
+doChordBars = false
+doGuitar = false
+doExtra = false
+doPrep = false
+doOwn = false
+#}
+{% if part == "Vars" %}
+{% endif %}
+{% if part == "Doc" %}
+	DONE:
+	- imported melody and chord changes from real_books_archive.gi/Wikifonia.tar.xz: Wikifonia/Cole Porter - Anything Goes.mxl.
+	- source revision: http://wikifonia.org/node/3197/revisions/5503/view.
+	- local PDF: real_books_archive.gi/The Standards Real Book.pdf.
+	- book index reference: StandardsBook:38; index pagination is not a verified PDF page number.
+	- retained the archived MusicXML rights notice; no redistribution permission is asserted.
+	- retained written melody, chord changes, pickups, repeats and numbered endings; lyrics omitted.
+	- imported explicit 7alt symbols using the book's altered-dominant notation where present.
+	- tempo is an editorial practice suggestion.
+	TODO:
+	- proofread the complete melody, harmony and form against the referenced PDF and check by ear.
+	- verify source attribution, copyright notice and reuse terms against the scan; only the archived MusicXML notice is retained.
+	- locate the tune in the exact local PDF edition; book-index page numbers may differ.
+	- verify editorial chord spacing in measures 6, 8, 14, 30, 32; the archive places successive symbols at the same offset.
+{% endif %}
+{% if part == "ChordsWikifonia" %}\chordmode {
+	\startChords
+	\startSong
+
+	\myMark "A"
+	\startPart
+	s1 |
+	c1 |
+	c1:6 |
+	c1:maj7 | \myEndLine
+	a2:m g4:m7 c4:7 |
+	f2:6 e2:m7 |
+	d2:m7 d2:m7.5- |
+	c2 f2:maj7 | \myEndLine
+	e2:m7 d4:m7 des4:9 |
+	c1 |
+	c1:6 |
+	c1:maj7 | \myEndLine
+	a2:m g4:m7 c4:7 |
+	f2:6 e2:m7 |
+	d2:m7 d2:m7.5- |
+	c1 | \myEndLine
+	fis2:7.5- b2:7 |
+	e1 |
+	b2:9/fis b2:7 |
+	e1:7 | \myEndLine
+	b2:7/fis b2:7 |
+	e1:m |
+	e1:m7 |
+	cis4:dim c4:dim cis4:dim d4:m7 | \myEndLine
+	s2 g2:7 |
+	c1 |
+	c1:6 |
+	c1:maj7 | \myEndLine
+	a2:m g4:m7 c4:7 |
+	f2:6 e2:m7 |
+	d2:m7 d2:m7/g |
+	c4 f4:maj7 e4:m7 d4:m7 | \myEndLine
+	c1 |
+	\endBar
+	\endPart
+
+	\endSong
+	\endChords
+}
+{% endif %}
+{% if part == "VoiceWikifonia" %}\absolute {
+	\tempo "Moderato" 4 = 120
+	\time 4/4
+	\key c \major
+
+	r2 r4 g'4 |
+	g'4 a'4 e'4 g'4 |
+	a'4 g'8 a'8 ~ a'8 g'8 e'4 |
+	g'8 a'4 e'8 g'4 a'8 c''8 ~ |
+	c''8 a'8 c''4 d''4 e''4 |
+	d''1 ~ |
+	d''4 r4 c''8 c''8 c''4 |
+	c''1 ~ |
+	c''4 r4 r4 g'4 |
+	g'4 a'4 e'4 g'4 |
+	a'4 g'8 a'8 ~ a'8 g'8 e'4 |
+	g'8 a'4 e'8 g'4 a'8 c''8 ~ |
+	c''8 a'8 c''4 d''4 e''4 |
+	d''1 ~ |
+	d''4 r4 c''8 c''8 c''4 |
+	c''1 |
+	r4 b'8 b'8 ~ b'8 b'8 b'4 |
+	b'4 b'8 b'8 ~ b'8 b'8 b'4 |
+	cis''4 b'8 b'8 ~ b'8 b'8 b'4 |
+	d''4 b'8 b'8 ~ b'8 b'8 b'4 |
+	dis''4 b'8 b'8 ~ b'8 b'8 b'4 |
+	e''4 b'8 b'8 ~ b'8 ais'8 b'8 ais'8 |
+	b'4 e'8 e'8 ~ e'8 dis'8 e'4 |
+	e'8 e'8 dis'4 e'4 g'4 ~ |
+	g'2 r4 g'4 |
+	g'4 a'4 e'4 g'4 |
+	a'4 g'8 a'8 ~ a'8 g'8 e'4 |
+	g'8 a'4 e'8 g'4 a'8 c''8 ~ |
+	c''8 a'8 c''4 d''4 e''4 |
+	d''1 ~ |
+	d''4 r4 e''8 d''8 c''4 |
+	c''1 ~ |
+	c''2. r4 |
+	\endBar
+}
+{% endif %}

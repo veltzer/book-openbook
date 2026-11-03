@@ -1,0 +1,203 @@
+{#
+default_version = "Wikifonia"
+
+[attributes]
+title = "Can't Smile Without You"
+style = "Standard"
+composer = "Chris Arnold, David Martin And Geoff Morrow"
+piece = "Standard"
+typesetter = "OpenBook contributors (MusicXML import)"
+completion = "3"
+uuid = "33cce7e5-b6c5-52aa-aacf-9561e8eb4f9d"
+location = "TheBook:333"
+copyright = "All Rights Reserved"
+copyrightextra = "Archived MusicXML notice retained; underlying music is not relicensed."
+
+[versions.Wikifonia]
+doChords = true
+doVoice = true
+doLyrics = false
+doLyricsmore = false
+doLyricsmoremore = false
+doChordBars = false
+doGuitar = false
+doExtra = false
+doPrep = false
+doOwn = false
+#}
+{% if part == "Vars" %}
+{% endif %}
+{% if part == "Doc" %}
+	DONE:
+	- imported melody and chord changes from real_books_archive.gi/Wikifonia.tar.xz: Wikifonia/Chris Arnold, David Martin And Geoff Morrow - Can't Smile Without You.mxl.
+	- source revision: http://wikifonia.org/node/9365/revisions/12821/view.
+	- local PDF: real_books_archive.gi/The Book.pdf.
+	- book index reference: TheBook:333; index pagination is not a verified PDF page number.
+	- retained the archived MusicXML rights notice; no redistribution permission is asserted.
+	- retained written melody, chord changes, pickups, repeats and numbered endings; lyrics omitted.
+	- imported explicit 7alt symbols using the book's altered-dominant notation where present.
+	- tempo is an editorial practice suggestion.
+	TODO:
+	- proofread the complete melody, harmony and form against the referenced PDF and check by ear.
+	- verify source attribution, copyright notice and reuse terms against the scan; only the archived MusicXML notice is retained.
+	- locate the tune in the exact local PDF edition; book-index page numbers may differ.
+{% endif %}
+{% if part == "ChordsWikifonia" %}\chordmode {
+	\startChords
+	\startSong
+
+	\myMark "A"
+	\startPart
+	s1 |
+	g1 |
+	s1 |
+	e1:m | \myEndLine
+	s1 |
+	a1:m |
+	s1 |
+	c1/d | \myEndLine
+	d1:7 |
+	g1 |
+	s1 |
+	e1:m | \myEndLine
+	s1 |
+	a1:m |
+	s1 |
+	c1/d | \myEndLine
+	s1 |
+	g1 |
+	c1/d |
+	g2:9 g2 | \myEndLine
+	e1:m7 |
+	a1:m7 |
+	c2/d d2:7 |
+	g2:9 g2 | \myEndLine
+	e1:m7 |
+	a1:m7 |
+	d2:7 c8/e d4.:7/fis |
+	g1 | \myEndLine
+	s1 |
+	e1:m |
+	s1 |
+	a1:m | \myEndLine
+	s1 |
+	c1/d |
+	s4. des1*5/8/ees |
+	aes1 | \myEndLine
+	s1 |
+	f1:m |
+	s1 |
+	bes1:m | \myEndLine
+	s1 |
+	des1/ees |
+	s1 |
+	ees1:m7 | \myEndLine
+	s1 |
+	aes1:7 |
+	des1:maj7 |
+	des1:m | \myEndLine
+	s1 |
+	ees1:sus4.7 |
+	e1:sus4.7 |
+	a1 | \myEndLine
+	s1 |
+	fis1:m |
+	s1 |
+	b1:m | \myEndLine
+	s1 |
+	d1/e |
+	s4. ees1*5/8/f |
+	\repeat volta 2 {
+	bes1 | \myEndLine
+	s1 |
+	g1:m |
+	s1 |
+	c1:m | \myEndLine
+	s1 |
+	ees1/f |
+	s1 |
+	}
+	\endBar
+	\endPart
+
+	\endSong
+	\endChords
+}
+{% endif %}
+{% if part == "VoiceWikifonia" %}\absolute {
+	\tempo "Moderato" 4 = 120
+	\time 4/4
+	\key g \major
+
+	r4 fis'4 g'4 a'4 |
+	a'2 g'4. fis'8 |
+	fis'2 g'2 |
+	r8 d'8 a'4 g'4. fis'8 |
+	fis'2 g'4. d'8 |
+	b'2 a'4 \times 2/3 { r8 e'8 g'8 } |
+	b'2 a'4. e'8 |
+	b'8 a'8 b'8 a'8 ~ a'4. e'8 |
+	b'8 a'8 b'8 d''8 ~ d''8 b'8 a'16 g'8. |
+	a'2 g'4. fis'8 |
+	fis'2 g'2 |
+	r8 d'8 a'4 g'4. fis'8 |
+	fis'2 g'4. d'8 |
+	b'4 ~ \once \omit TupletBracket \times 2/3 { b'8 c''8 b'8 } a'4. e'8 |
+	b'4 ~ \once \omit TupletBracket \times 2/3 { b'8 c''8 b'8 } a'2 |
+	r4 r8 b'8 a'4 b'4 |
+	d''2 ~ d''8 b'8 b'4 |
+	g'1 |
+	R1 |
+	b8 d'8 a'8 g'8 ~ g'2 |
+	b8 d'8 a'8 g'8 ~ g'4. b8 |
+	c'8 e'8 b'8 a'8 ~ a'2 |
+	r4 \once \omit TupletBracket \times 2/3 { b'8 a'8 b'8 } b'8 a'8 g'8 d'8 |
+	b8 d'8 a'8 g'8 ~ g'2 |
+	b8 d'8 a'4 g'2 |
+	\times 2/3 { c'4 e'4 b'4 } a'2 |
+	r8 fis'8 fis'8 fis'8 g'8 a'4. |
+	a'2 g'4. fis'8 |
+	fis'2 g'2 |
+	r8 d'8 a'4 g'4. fis'8 |
+	fis'2 g'4. d'8 |
+	b'2 a'4 \times 2/3 { r8 e'8 g'8 } |
+	b'2 a'4. e'8 |
+	b'8 a'8 b'8 b'8 ~ b'4. a'8 |
+	b'8 a'8 b'8 es''8 ~ es''8 es'8 f'16 as'8. |
+	\key as \major bes'2 as'4. g'8 |
+	g'2 as'2 |
+	r8 es'8 bes'4 as'4. g'8 |
+	g'2 as'4. es'8 |
+	c''4 ~ \once \omit TupletBracket \times 2/3 { c''8 des''8 c''8 } bes'4. f'8 |
+	c''4 ~ \once \omit TupletBracket \times 2/3 { c''8 des''8 c''8 } bes'2 |
+	r4 r8 c''8 bes'8 c''4. |
+	es''2 ~ es''4. es''8 |
+	es''8 des''8 es''8 des''8 ~ des''2 |
+	es''8 des''8 es''8 des''8 ~ des''4 r4 |
+	des''4 ~ \once \omit TupletBracket \times 2/3 { des''8 c''8 des''8 } c''4 bes'8 es'8 ( |
+	f'16 as'8. ~ as'2 ) \times 2/3 { r8 des''8 des''8 } |
+	des''8 c''8 des''8 c''8 ~ c''2 |
+	des''8 c''8 des''4 c''4 bes'8 es''8 ~ |
+	es''1 |
+	e''2 \times 2/3 { r8 e''8 e''8 } \times 2/3 { e''8 e''4 } |
+	\key a \major b'2 a'4. gis'8 |
+	gis'2 a'2 |
+	r8 b'8 b'4 a'4. gis'8 |
+	gis'2 a'4. a'8 |
+	cis''2 b'4 \times 2/3 { r8 fis'8 a'8 } |
+	cis''2 b'4. b'8 |
+	cis''8 b'8 cis''4 cis''4 r8 b'8 |
+	cis''8 b'8 cis''8 f''8 ~ f''8 f'8 gis'16 bes'8. |
+	\repeat volta 2 {
+	\key bes \major c''2 bes'4. a'8 |
+	a'2 bes'2 |
+	r8 g'8 c''4 bes'4. a'8 |
+	a'2 bes'4. g'8 |
+	d''4 ~ \once \omit TupletBracket \times 2/3 { d''8 es''8 d''8 } c''4. g'8 |
+	d''4 ~ \once \omit TupletBracket \times 2/3 { d''8 es''8 d''8 } c''4 r4 |
+	r4 r8 d''8 c''8 d''4. |
+	f''2 f''8 ^ "Repeat and fade" f''4. |
+	}
+	\endBar
+}
+{% endif %}

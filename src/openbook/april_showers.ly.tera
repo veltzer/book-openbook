@@ -1,0 +1,180 @@
+{#
+default_version = "Wikifonia"
+
+[attributes]
+title = "April Showers"
+style = "Jazz"
+composer = "Louis Silvers"
+piece = "Standard"
+typesetter = "OpenBook contributors (MusicXML import)"
+completion = "3"
+uuid = "95d02a38-8e77-5fb7-8489-b875d016284f"
+location = "557_Standards:8, TheBook:223"
+copyright = "All Rights Reserved"
+copyrightextra = "Archived MusicXML notice retained; underlying music is not relicensed."
+
+[versions.Wikifonia]
+doChords = true
+doVoice = true
+doLyrics = false
+doLyricsmore = false
+doLyricsmoremore = false
+doChordBars = false
+doGuitar = false
+doExtra = false
+doPrep = false
+doOwn = false
+#}
+{% if part == "Vars" %}
+{% endif %}
+{% if part == "Doc" %}
+	DONE:
+	- imported melody and chord changes from real_books_archive.gi/Wikifonia.tar.xz: Wikifonia/Louis Silvers, B.G.De Sylva - April Showers.mxl.
+	- source revision: http://wikifonia.org/node/4985/revisions/27258/view.
+	- local PDF: real_books_archive.gi/Guitar - 557 Standards.pdf.
+	- book index reference: 557_Standards:8; index pagination is not a verified PDF page number.
+	- retained the archived MusicXML rights notice; no redistribution permission is asserted.
+	- retained written melody, chord changes, pickups, repeats and numbered endings; lyrics omitted.
+	- imported explicit 7alt symbols using the book's altered-dominant notation where present.
+	- tempo is an editorial practice suggestion.
+	TODO:
+	- proofread the complete melody, harmony and form against the referenced PDF and check by ear.
+	- verify source attribution, copyright notice and reuse terms against the scan; only the archived MusicXML notice is retained.
+	- locate the tune in the exact local PDF edition; book-index page numbers may differ.
+	- verify editorial chord spacing in measures 47; the archive places successive symbols at the same offset.
+{% endif %}
+{% if part == "ChordsWikifonia" %}\chordmode {
+	\startChords
+	\startSong
+
+	\myMark "A"
+	\startPart
+	g2 a2:m7 |
+	b2:m d2:7 |
+	g1 |
+	d1:7 | \myEndLine
+	g2 a2:m7 |
+	b2:m d2:7 |
+	g1 |
+	s1 | \myEndLine
+	b2:m e2:m |
+	b2:m f2:aug |
+	b1:m |
+	e1:7 | \myEndLine
+	d1 |
+	a1:7 |
+	d1:7 |
+	s1 | \myEndLine
+	\repeat volta 2 {
+	d1:7 |
+	s1 |
+	g1 |
+	s1 | \myEndLine
+	d1:7 |
+	s1 |
+	g1 |
+	s1 | \myEndLine
+	e1:7 |
+	s1 |
+	a1:m |
+	s1 | \myEndLine
+	e1:m |
+	s1 |
+	d4:7 cis4 a4:m d4:dim |
+	d1:7 | \myEndLine
+	s1 |
+	s1 |
+	g1 |
+	s1 | \myEndLine
+	e1:7 |
+	s1 |
+	a1:m |
+	s1 | \myEndLine
+	s1 |
+	c1:m |
+	g2 e2:m |
+	a1:7 | \myEndLine
+	a2:m a2:m7 |
+	d1:7 |
+	} \alternative {
+	{
+	g2 e2:m6 |
+	d1:7 | \myEndLineVoltaNotLast
+	}
+	{
+	g1 |
+	s1 | \myEndLineVoltaLast
+	}
+	}
+	\endBar
+	\endPart
+
+	\endSong
+	\endChords
+}
+{% endif %}
+{% if part == "VoiceWikifonia" %}\absolute {
+	\tempo "Moderato" 4 = 120
+	\time 4/4
+	\key g \major
+
+	g'4 g'4 a'4 a'4 |
+	b'4 b'4 a'4 c''4 |
+	b'2 d''2 ~ |
+	d''2. r4 |
+	g'4 g'4 a'4 a'4 |
+	b'4 b'4 a'4 c''4 |
+	b'1 ~ |
+	b'2. r4 |
+	b'4 b'4 cis''4 cis''4 |
+	d''4 d''4 cis''4 cis''4 |
+	b'2 fis'2 ~ |
+	fis'2. r4 |
+	fis'4 fis'4 a'4 a'4 |
+	e'4 e'4 fis'4 g'4 |
+	a'1 ~ |
+	a'4 d'4 cis'4 d'4 |
+	\repeat volta 2 {
+	a'2 a'2 ~ |
+	a'4 d'4 cis'4 d'4 |
+	b'1 ~ |
+	b'4 d'4 cis'4 d'4 |
+	c''2 c''2 ~ |
+	c''4 d'4 cis'4 d'4 |
+	d''1 ~ |
+	d''4 b'4 c''4 d''4 |
+	d''2 e'2 ~ |
+	e'4 d''4 c''4 b'4 |
+	c''1 ~ |
+	c''4 e'4 fis'4 g'4 |
+	b'4 e''4 e''4 b'4 |
+	b'4 e''4 e''4 b'4 |
+	d''4 cis''4 c''4 b'4 |
+	a'8 r8 d'4 cis'4 d'4 |
+	a'2 a'2 ~ |
+	a'4 d'4 cis'4 d'4 |
+	b'1 ~ |
+	b'4 e'4 dis'4 e'4 |
+	b'2 b'2 ~ |
+	b'4 e'4 dis'4 e'4 |
+	c''1 ~ |
+	c''4 e'4 dis'4 e'4 |
+	d''4 c''4 d''4 c''4 |
+	d''4 c''2 a'4 |
+	b'4 d''4 g'4 a'4 |
+	b'2. g'4 |
+	e'4 fis'4 e'4 fis'4 |
+	e'4 d'4 a'4 b'4 |
+	} \alternative {
+	{
+	g'1 ~ |
+	g'8 r8 d'4 cis'4 d'4 |
+	}
+	{
+	g'1 ~ |
+	g'4 r4 r2 |
+	}
+	}
+	\endBar
+}
+{% endif %}

@@ -1,0 +1,150 @@
+{#
+default_version = "Wikifonia"
+
+[attributes]
+title = "Green Eyes"
+style = "Standard"
+composer = "Nilo Mendez"
+piece = "Standard"
+typesetter = "OpenBook contributors (MusicXML import)"
+completion = "3"
+uuid = "7e0a4694-dd8b-5bba-8231-85c6654d539b"
+location = "TheBook:266"
+copyright = "All Rights Reserved"
+copyrightextra = "Archived MusicXML notice retained; underlying music is not relicensed."
+
+[versions.Wikifonia]
+doChords = true
+doVoice = true
+doLyrics = false
+doLyricsmore = false
+doLyricsmoremore = false
+doChordBars = false
+doGuitar = false
+doExtra = false
+doPrep = false
+doOwn = false
+#}
+{% if part == "Vars" %}
+{% endif %}
+{% if part == "Doc" %}
+	DONE:
+	- imported melody and chord changes from real_books_archive.gi/Wikifonia.tar.xz: Wikifonia/Nilo Mendez, Adolfo Utrera - Green Eyes.mxl.
+	- source revision: http://wikifonia.org/node/14401/revisions/19302/view.
+	- local PDF: real_books_archive.gi/The Book.pdf.
+	- book index reference: TheBook:266; index pagination is not a verified PDF page number.
+	- retained the archived MusicXML rights notice; no redistribution permission is asserted.
+	- retained written melody, chord changes, pickups, repeats and numbered endings; lyrics omitted.
+	- imported explicit 7alt symbols using the book's altered-dominant notation where present.
+	- tempo is an editorial practice suggestion.
+	TODO:
+	- proofread the complete melody, harmony and form against the referenced PDF and check by ear.
+	- verify source attribution, copyright notice and reuse terms against the scan; only the archived MusicXML notice is retained.
+	- locate the tune in the exact local PDF edition; book-index page numbers may differ.
+	- verify editorial chord spacing in measures 24, 32; the archive places successive symbols at the same offset.
+{% endif %}
+{% if part == "ChordsWikifonia" %}\chordmode {
+	\startChords
+	\startSong
+
+	\myMark "A"
+	\startPart
+	\repeat volta 2 {
+	s1 |
+	ees2:maj7 ees2 |
+	s1 |
+	ees4.:6 ees1*5/8:maj7 | \myEndLine
+	s1 |
+	ees4. ees1*5/8:6 |
+	e1:dim7 |
+	bes1:7 | \myEndLine
+	s1 |
+	bes2:7 aes2/bes |
+	s1 |
+	bes1:7 | \myEndLine
+	s1 |
+	c4.:aug c1*5/8:7 |
+	f1:7 |
+	bes1:7 | \myEndLine
+	s1 |
+	ees2:maj7 ees2 |
+	s1 |
+	ees2:6 ees2:maj7 | \myEndLine
+	s1 |
+	e2:dim7 c2:7/e |
+	c1:7 |
+	f2:m c2:7 | \myEndLine
+	f1:m |
+	aes4.:6 aes1*5/8:maj7 |
+	s2. a4:dim7 |
+	ees2/bes bes2:m6/des | \myEndLine
+	c1:7 |
+	f1:7 |
+	bes1:7 |
+	} \alternative {
+	{
+	ees4 ees2:6 e4:dim7 | \myEndLine
+	bes1:7 | \myEndLineVoltaNotLast
+	}
+	{
+	ees1 |
+	s1 | \myEndLineVoltaLast
+	}
+	}
+	\endBar
+	\endPart
+
+	\endSong
+	\endChords
+}
+{% endif %}
+{% if part == "VoiceWikifonia" %}\absolute {
+	\tempo "Moderato" 4 = 120
+	\time 4/4
+	\key es \major
+
+	\repeat volta 2 {
+	r4 - "N.C." r8 bes8 es'8 f'8 g'8 bes'8 |
+	d''4. es''8 ~ es''2 ~ |
+	es''4 r8 d''8 es''8 d''8 c''8 bes'8 |
+	c''4. d''8 ~ d''2 ~ |
+	d''4 r8 bes8 es'8 f'8 g'8 as'8 |
+	bes'4. c''8 ~ c''2 ~ |
+	c''4 r8 bes'8 c''8 bes'8 as'8 g'8 |
+	bes'1 ~ |
+	bes'4 r8 bes8 f'8 g'8 as'8 bes'8 |
+	d''4. es''8 ~ es''2 ~ |
+	es''4 r8 d''8 es''8 d''8 c''8 bes'8 |
+	c''4. d''8 ~ d''2 ~ |
+	d''4 r8 c''8 d''8 c''8 bes'8 a'8 |
+	as'4. g'8 ~ g'2 ~ |
+	g'8 f'4 g'8 a'4 bes'8 c''8 |
+	d''1 ~ |
+	d''4 r8 bes8 es'8 f'8 g'8 bes'8 |
+	d''4. es''8 ~ es''2 ~ |
+	es''4 r8 d''8 es''8 d''8 c''8 bes'8 |
+	c''4. d''8 ~ d''2 ~ |
+	d''4 r8 bes8 es'8 f'8 g'8 as'8 |
+	bes'4. c''8 ~ c''2 ~ |
+	c''4 r8 bes'8 c''8 bes'8 as'8 g'8 |
+	c''1 ~ |
+	c''4 r8 c'8 f'8 g'8 as'8 c''8 |
+	f''4. g''8 ~ g''2 ~ |
+	g''4. f''8 g''8 f''8 es''8 c''8 |
+	es''4. bes'8 ~ bes'2 |
+	r4 r8 bes'8 c''8 bes'8 as'8 g'8 |
+	c''4. d''8 ~ d''4 es''4 |
+	f''2 es''8 d''8 c''8 d''8 |
+	} \alternative {
+	{
+	es''1 |
+	r4 r8 bes8 es'8 f'8 g'8 bes'8 |
+	}
+	{
+	es''1 ~ |
+	es''2 ~ es''4 r4 |
+	}
+	}
+	\endBar
+}
+{% endif %}

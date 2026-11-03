@@ -1,0 +1,131 @@
+{#
+default_version = "Wikifonia"
+
+[attributes]
+title = "American Patrol"
+style = "Jazz"
+composer = "F.W. Meacham"
+piece = "Standard"
+typesetter = "OpenBook contributors (MusicXML import)"
+completion = "3"
+uuid = "f4ebf102-9e59-5715-a724-85577cbbb399"
+location = "Firehouse_Jazz_Band:631, TheBook:383"
+copyright = "All Rights Reserved"
+copyrightextra = "Archived MusicXML notice retained; underlying music is not relicensed."
+
+[versions.Wikifonia]
+doChords = true
+doVoice = true
+doLyrics = false
+doLyricsmore = false
+doLyricsmoremore = false
+doChordBars = false
+doGuitar = false
+doExtra = false
+doPrep = false
+doOwn = false
+#}
+{% if part == "Vars" %}
+{% endif %}
+{% if part == "Doc" %}
+	DONE:
+	- imported melody and chord changes from real_books_archive.gi/Wikifonia.tar.xz: Wikifonia/F.W. Meacham - American Patrol.mxl.
+	- source revision: http://wikifonia.org/node/9451/revisions/16882/view.
+	- local PDF: real_books_archive.gi/Dixieland - The Firehouse Jazz Band - Dixieland Fake Book - 778 S Noten Sheets Score Songs Lieder.pdf.
+	- book index reference: Firehouse_Jazz_Band:631; index pagination is not a verified PDF page number.
+	- retained the archived MusicXML rights notice; no redistribution permission is asserted.
+	- retained written melody, chord changes, pickups, repeats and numbered endings; lyrics omitted.
+	- imported explicit 7alt symbols using the book's altered-dominant notation where present.
+	- tempo is an editorial practice suggestion.
+	TODO:
+	- proofread the complete melody, harmony and form against the referenced PDF and check by ear.
+	- verify source attribution, copyright notice and reuse terms against the scan; only the archived MusicXML notice is retained.
+	- locate the tune in the exact local PDF edition; book-index page numbers may differ.
+{% endif %}
+{% if part == "ChordsWikifonia" %}\chordmode {
+	\startChords
+	\startSong
+
+	\myMark "A"
+	\startPart
+	s1 |
+	f1 |
+	s1 |
+	s1 | \myEndLine
+	s1 |
+	c1:7 |
+	f1 |
+	g1:7 | \myEndLine
+	c1:7 |
+	f1 |
+	s1 |
+	s1 | \myEndLine
+	s1 |
+	bes1 |
+	g1:m |
+	c1:7 | \myEndLine
+	f1 |
+	c1:7 |
+	s1 |
+	f1 | \myEndLine
+	s1 |
+	c1 |
+	s1 |
+	f1 | \myEndLine
+	s1 |
+	bes1 |
+	f1 |
+	c1:7 | \myEndLine
+	d1:m |
+	bes1 |
+	f1 |
+	c1:7 | \myEndLine
+	f1 |
+	\endBar
+	\endPart
+
+	\endSong
+	\endChords
+}
+{% endif %}
+{% if part == "VoiceWikifonia" %}\absolute {
+	\tempo "Moderato" 4 = 120
+	\time 4/4
+	\key c \major
+
+	r2 r4 \once \omit TupletBracket \times 2/3 { c'8 d'8 e'8 } |
+	f'4 f'4 f'8 e'8 f'8 g'8 |
+	a'4 a'4 a'8 gis'8 a'8 bes'8 |
+	c''4 c''4 c''8 b'8 c''8 f''8 |
+	c''2. a'4 |
+	bes'4 bes'8 a'8 g'4 bes'4 |
+	a'4 a'8 g'8 f'4 a'4 |
+	g'4 d'4 e'4 f'4 |
+	g'2. \once \omit TupletBracket \times 2/3 { c'8 d'8 e'8 } |
+	f'4 f'4 f'8 e'8 f'8 g'8 |
+	a'4 a'4 a'8 gis'8 a'8 bes'8 |
+	c''4 c''4 c''8 b'8 c''8 f''8 |
+	c''2. f'4 |
+	d''4 c''4 bes'4 a'4 |
+	g'4 f'4 e'4 f'4 |
+	g'4 a'8 bes'8 a'4 g'4 |
+	f'4 c'8 d'8 e'8 f'8 g'8 a'8 |
+	bes'4 bes'4 bes'4 bes'4 |
+	bes'8 a'8 bes'2 bes'4 |
+	c''4 c''4 c''8 bes'8 a'8 bes'8 |
+	c''2. a'4 |
+	bes'4 bes'4 bes'4 bes'4 |
+	bes'8 a'8 bes'2 bes'4 |
+	c''4 c''4 c''8 bes'8 a'8 bes'8 |
+	c''2. c''4 |
+	d''4 d''4 f''4. d''8 |
+	c''4 c''4 c''8 bes'8 a'4 |
+	bes'4 bes'4 e'4 bes'4 |
+	a'4 a'4 a'8 g'8 f'4 |
+	d''4 d''4 f''4. d''8 |
+	c''4 c''4 c''8 bes'8 a'4 |
+	bes'4 bes'4 e'4 g'4 |
+	f'4. r8 r2 |
+	\endBar
+}
+{% endif %}

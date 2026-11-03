@@ -1,0 +1,179 @@
+{#
+default_version = "Wikifonia"
+
+[attributes]
+title = "Come Fly With Me"
+style = "Jazz"
+composer = "James Van Heusen"
+piece = "Standard"
+typesetter = "OpenBook contributors (MusicXML import)"
+completion = "3"
+uuid = "7163a86e-9533-5acb-9df0-6c6fb00cbc73"
+location = "StandardsBook:93"
+copyright = "All Rights Reserved"
+copyrightextra = "Archived MusicXML notice retained; underlying music is not relicensed."
+
+[versions.Wikifonia]
+doChords = true
+doVoice = true
+doLyrics = false
+doLyricsmore = false
+doLyricsmoremore = false
+doChordBars = false
+doGuitar = false
+doExtra = false
+doPrep = false
+doOwn = false
+#}
+{% if part == "Vars" %}
+{% endif %}
+{% if part == "Doc" %}
+	DONE:
+	- imported melody and chord changes from real_books_archive.gi/Wikifonia.tar.xz: Wikifonia/James Van Heusen, Sammy Cahn - Come Fly With Me.mxl.1.
+	- source revision: http://wikifonia.org/node/21961/revisions/28995/view.
+	- local PDF: real_books_archive.gi/The Standards Real Book.pdf.
+	- book index reference: StandardsBook:93; index pagination is not a verified PDF page number.
+	- retained the archived MusicXML rights notice; no redistribution permission is asserted.
+	- retained written melody, chord changes, pickups, repeats and numbered endings; lyrics omitted.
+	- imported explicit 7alt symbols using the book's altered-dominant notation where present.
+	- tempo is an editorial practice suggestion.
+	TODO:
+	- proofread the complete melody, harmony and form against the referenced PDF and check by ear.
+	- verify source attribution, copyright notice and reuse terms against the scan; only the archived MusicXML notice is retained.
+	- locate the tune in the exact local PDF edition; book-index page numbers may differ.
+{% endif %}
+{% if part == "ChordsWikifonia" %}\chordmode {
+	\startChords
+	\startSong
+
+	\myMark "A"
+	\startPart
+	\partial 4 s4 |
+	c2:maj7 c2:6 |
+	e2:m7 ees2:dim7 |
+	d1:m7 | \myEndLine
+	g1:7 |
+	c2:maj7 c2:6 |
+	g2:m7 c2:7 |
+	f1:maj7 | \myEndLine
+	bes1:7 |
+	c2:maj7 c2:6 |
+	f1:9 |
+	e2:7 a2:7.9- | \myEndLine
+	d2:9 g2:13 |
+	c2:maj7 c2:6 |
+	e2:m7 ees2:dim7 |
+	d1:m7 | \myEndLine
+	g1:7 |
+	c2:maj7 c2:6 |
+	g2:m7 c2:7 |
+	f1:maj7 | \myEndLine
+	bes1:7 |
+	c2:maj7 c2:6 |
+	f2:9 g2:sus4.7 |
+	c2:6 g2:sus4.7 | \myEndLine
+	c1:6 |
+	aes1:maj7 |
+	aes1:aug |
+	des1:maj7 | \myEndLine
+	bes1:m7 |
+	ees1:sus4.7 |
+	s1 |
+	aes1:6 | \myEndLine
+	bes2:m7 ees2:sus4.7 |
+	aes1:maj7 |
+	aes1:aug |
+	g1:maj7 | \myEndLine
+	e1:m7 |
+	a1:m7 |
+	d1:7 |
+	g2 g2:sus4.7 | \myEndLine
+	g1:7 |
+	c2:maj7 c2:6 |
+	e2:m7 ees2:dim7 |
+	d1:m7 | \myEndLine
+	g1:7 |
+	c2:maj7 c2:6 |
+	g2:m7 c2:7 |
+	f1:maj7 | \myEndLine
+	bes1:9 |
+	c2:maj7 c2:6 |
+	f1:9 |
+	e2:m7.5- bes2:9 | \myEndLine
+	a1:7.9- |
+	d1:9 |
+	d2:m7 g2:9 |
+	c1:6 | \myEndLine
+	s1 |
+	\endBar
+	\endPart
+
+	\endSong
+	\endChords
+}
+{% endif %}
+{% if part == "VoiceWikifonia" %}\absolute {
+	\tempo "Moderato" 4 = 120
+	\time 4/4
+	\key c \major
+
+	\partial 4 g'4 |
+	d''8 c''4 c''8 ~ c''4 g'8 d''8 ~ |
+	d''4 c''8 d''8 ~ d''4 c''8 f'8 ~ |
+	f'1 ~ |
+	f'2. g'4 |
+	b'8 a'4 a'8 ~ a'8 b'4 bes'8 |
+	a'8 g'4 g'8 ~ g'8 a'4 as'8 |
+	g'4 r8 f'8 c''4 c''4 |
+	c''2. c'4 |
+	e'4 g'8 c'8 ~ c'4 d'8 es'8 ~ |
+	es'4 g'8 c'8 ~ c'4 d'8 e'8 ~ |
+	e'1 ~ |
+	e'2. g'4 |
+	d''8 c''4 c''8 ~ c''4 g'8 d''8 ~ |
+	d''4 c''8 d''8 ~ d''4 c''8 f'8 ~ |
+	f'1 ~ |
+	f'2. g'4 |
+	b'8 a'4 a'8 ~ a'8 b'4 ais'8 |
+	a'8 g'4 g'8 ~ g'8 a'4 as'8 |
+	g'4 r8 f'8 c''4 c''4 |
+	c''2. c'4 |
+	e'4 g'8 c'8 ~ c'4 d'8 es'8 ~ |
+	es'4 g'8 c'8 ~ c'4 d'8 c'8 ~ |
+	c'1 |
+	r4 c'8 d'8 e'4 g'4 |
+	c''4. c''8 ~ c''2 |
+	r8 c''4 bes'8 as'4 bes'4 |
+	c''2 c''4 des'4 ~ |
+	des'1 |
+	bes'2 bes'4 des'4 ~ |
+	des'1 |
+	as'2 as'4 c'4 ~ |
+	c'4 c'8 des'8 es'4 as'4 |
+	c''4. c''8 ~ c''2 |
+	r8 c''4 b'8 c''4 cis''4 |
+	d''2 d''4 d'4 ~ |
+	d'1 |
+	d''2 d''4 d'4 ~ |
+	d'1 |
+	d''4 des''4 c''4 r8 b'8 ~ |
+	b'8 d''8 bes'4 a'4 b'4 |
+	d''8 c''4 c''8 ~ c''4 g'8 d''8 ~ |
+	d''4 c''8 d''8 ~ d''4 c''8 f'8 ~ |
+	f'1 ~ |
+	f'2. g'4 |
+	b'8 a'4 a'8 ~ a'8 b'4 bes'8 |
+	a'8 g'4 g'8 ~ g'8 a'4 as'8 |
+	g'4 r8 f'8 c''4 c''4 |
+	c''2. c'4 |
+	e'4 g'8 c'8 ~ c'4 d'8 es'8 ~ |
+	es'4 g'8 c'8 ~ c'4 d'4 |
+	e'2 f'2 |
+	g'2 a'2 |
+	c''4 e''8 a'8 ~ a'4 b'8 c''8 ~ |
+	c''4 e''8 a'8 ~ a'4 b'4 |
+	c''1 ~ |
+	c''2 r2 |
+	\endBar
+}
+{% endif %}

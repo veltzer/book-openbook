@@ -1,0 +1,150 @@
+{#
+default_version = "Wikifonia"
+
+[attributes]
+title = "You Can Depend On Me"
+style = "Jazz"
+composer = "Charles Carpenter, Earl Hines, Louis Dunlap"
+piece = "Standard"
+typesetter = "OpenBook contributors (MusicXML import)"
+completion = "3"
+uuid = "82f9a628-6caa-58fa-8c41-678e765fe16b"
+location = "Firehouse_Jazz_Band:550"
+copyright = "All Rights Reserved"
+copyrightextra = "Archived MusicXML notice retained; underlying music is not relicensed."
+
+[versions.Wikifonia]
+doChords = true
+doVoice = true
+doLyrics = false
+doLyricsmore = false
+doLyricsmoremore = false
+doChordBars = false
+doGuitar = false
+doExtra = false
+doPrep = false
+doOwn = false
+#}
+{% if part == "Vars" %}
+{% endif %}
+{% if part == "Doc" %}
+	DONE:
+	- imported melody and chord changes from real_books_archive.gi/Wikifonia.tar.xz: Wikifonia/Charles Carpenter, Earl Hines, Louis Dunlap - You Can Depend On Me.mxl.
+	- source revision: http://wikifonia.org/node/4221/revisions/28801/view.
+	- local PDF: real_books_archive.gi/Dixieland - The Firehouse Jazz Band - Dixieland Fake Book - 778 S Noten Sheets Score Songs Lieder.pdf.
+	- book index reference: Firehouse_Jazz_Band:550; index pagination is not a verified PDF page number.
+	- retained the archived MusicXML rights notice; no redistribution permission is asserted.
+	- retained written melody, chord changes, pickups, repeats and numbered endings; lyrics omitted.
+	- imported explicit 7alt symbols using the book's altered-dominant notation where present.
+	- tempo is an editorial practice suggestion.
+	TODO:
+	- proofread the complete melody, harmony and form against the referenced PDF and check by ear.
+	- verify source attribution, copyright notice and reuse terms against the scan; only the archived MusicXML notice is retained.
+	- locate the tune in the exact local PDF edition; book-index page numbers may differ.
+	- verify editorial chord spacing in measures 16; the archive places successive symbols at the same offset.
+{% endif %}
+{% if part == "ChordsWikifonia" %}\chordmode {
+	\startChords
+	\startSong
+
+	\myMark "A"
+	\startPart
+	\repeat volta 2 {
+	s1 |
+	g2:m7 fis2:dim7 |
+	g2.:m7 c4:7 |
+	f1:maj7 | \myEndLine
+	a2.:m7 aes4:dim7 |
+	g1:7 |
+	c1:7 |
+	f1:maj7 | \myEndLine
+	a2:m7 d2:7 |
+	g2:m7 fis2:dim7 |
+	g2.:m7 c4:7 |
+	a1:m7 | \myEndLine
+	a2.:m7 aes4:dim7 |
+	g1:m7 |
+	c1:7 |
+	f2:maj7 bes2:7 | \myEndLine
+	f1:maj7 |
+	c1:m7 |
+	f1:7 |
+	bes1:maj7 | \myEndLine
+	s1 |
+	g1:7 |
+	s1 |
+	g1:m7 | \myEndLine
+	c1:7 |
+	g2:m7 fis2:dim7 |
+	g1:m7 |
+	f1:maj7 | \myEndLine
+	a2.:m7 aes4:dim7 |
+	g1:m7 |
+	c1:7 |
+	} \alternative {
+	{
+	f1:maj7 | \myEndLine
+	a2:m7 d2:7 | \myEndLineVoltaNotLast
+	}
+	{
+	f1:maj7 | \myEndLineVoltaLast
+	}
+	}
+	s1 |
+	\endBar
+	\endPart
+
+	\endSong
+	\endChords
+}
+{% endif %}
+{% if part == "VoiceWikifonia" %}\absolute {
+	\tempo "Moderato" 4 = 120
+	\time 4/4
+	\key f \major
+
+	\repeat volta 2 {
+	r2 r4 d'4 |
+	bes'2 a'4 c''4 |
+	a'2. e'4 |
+	g'2 f'4 c''4 |
+	g'2. d'4 |
+	f'2 e'4 f'4 |
+	e'2 c'2 |
+	d'1 ~ |
+	d'2 r4 d'4 |
+	bes'2 a'4 c''4 |
+	a'2. e'4 |
+	g'2 f'4 c''4 |
+	g'2. d'4 |
+	f'2 e'4 f'4 |
+	e'2 c'2 |
+	f'1 |
+	f'2 r4 f'4 |
+	c''2 bes'4 a'4 |
+	c''1 |
+	bes'4 bes'4 a'4 g'4 |
+	bes'2. d'4 |
+	a'2 g'4 f'4 |
+	e'2 d'4 f'4 |
+	a'1 |
+	g'2. d'4 |
+	bes'2 a'4 c''4 |
+	a'2. e'4 |
+	g'2 f'4 c''4 |
+	g'2. d'4 |
+	f'2 e'4 f'4 |
+	e'2 c'2 |
+	} \alternative {
+	{
+	f'1 ~ |
+	f'2 r4 d'4 |
+	}
+	{
+	f'1 ~ |
+	}
+	}
+	f'2 r2 |
+	\endBar
+}
+{% endif %}

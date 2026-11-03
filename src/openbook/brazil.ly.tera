@@ -1,0 +1,202 @@
+{#
+default_version = "Wikifonia"
+
+[attributes]
+title = "Brazil"
+style = "Standard"
+composer = "Ary Barroso"
+piece = "Standard"
+typesetter = "OpenBook contributors (MusicXML import)"
+completion = "3"
+uuid = "9e966bc9-b973-5baa-8ef0-4abe105491b4"
+location = "TheBook:283"
+copyright = "All Rights Reserved"
+copyrightextra = "Archived MusicXML notice retained; underlying music is not relicensed."
+
+[versions.Wikifonia]
+doChords = true
+doVoice = true
+doLyrics = false
+doLyricsmore = false
+doLyricsmoremore = false
+doChordBars = false
+doGuitar = false
+doExtra = false
+doPrep = false
+doOwn = false
+#}
+{% if part == "Vars" %}
+{% endif %}
+{% if part == "Doc" %}
+	DONE:
+	- imported melody and chord changes from real_books_archive.gi/Wikifonia.tar.xz: Wikifonia/Ary Barroso, S. K. Russell - Brazil.mxl.
+	- source revision: http://wikifonia.org/node/5063/revisions/27612/view.
+	- local PDF: real_books_archive.gi/The Book.pdf.
+	- book index reference: TheBook:283; index pagination is not a verified PDF page number.
+	- retained the archived MusicXML rights notice; no redistribution permission is asserted.
+	- retained written melody, chord changes, pickups, repeats and numbered endings; lyrics omitted.
+	- imported explicit 7alt symbols using the book's altered-dominant notation where present.
+	- tempo is an editorial practice suggestion.
+	TODO:
+	- proofread the complete melody, harmony and form against the referenced PDF and check by ear.
+	- verify source attribution, copyright notice and reuse terms against the scan; only the archived MusicXML notice is retained.
+	- locate the tune in the exact local PDF edition; book-index page numbers may differ.
+	- verify editorial chord spacing in measures 2, 3, 6, 7, 10, 11, 14, 48, 50, 52, 54, 56, 57, 58, 60; the archive places successive symbols at the same offset.
+{% endif %}
+{% if part == "ChordsWikifonia" %}\chordmode {
+	\startChords
+	\startSong
+
+	\myMark "A"
+	\startPart
+	s2 fis2:dim |
+	\repeat volta 2 {
+	g2 g2:aug |
+	g2:6 g2:aug |
+	g2 g2:aug | \myEndLine
+	g2:6 g2:aug |
+	a2:m a2:m5+ |
+	a2:m6 a2:m5+ |
+	a2:m a2:m5+ | \myEndLine
+	a2:m6 a2:m5+ |
+	a2:m a2:m5+ |
+	a2:m6 a2:m5+ |
+	a2:m a2:m5+ | \myEndLine
+	a2:m6 a4.:m fis8:dim |
+	g2 g2:aug |
+	g2:6 g2:maj7.5+ |
+	a1:m | \myEndLine
+	a2:m6 fis2:dim |
+	g2 g2:7 |
+	ges2:7 f2:7 |
+	e1:7 | \myEndLine
+	b1:m7.5- |
+	e1:7 |
+	s1 |
+	s1 | \myEndLine
+	b1:m7.5- |
+	e1:7 |
+	e1:7 |
+	s1 | \myEndLine
+	b1:m7.5- |
+	e1:7 |
+	s1 |
+	a1:m | \myEndLine
+	a1:m5+ |
+	a1:m6 |
+	a1:m5+ |
+	a1:m | \myEndLine
+	a1:m5+ |
+	a1:m |
+	c2:m fis2:dim |
+	g1 | \myEndLine
+	s1 |
+	s2 d2:7 |
+	g1*5/8 bes4.:dim |
+	a1:m7 | \myEndLine
+	s1 |
+	s2. ees4:9.5- |
+	d2:7 d2:11 |
+	g2 g2:aug | \myEndLine
+	g2:6 g2:maj7.5+ |
+	a2:m a2:m5+ |
+	a2:m6 fis2:dim |
+	g2 g2:aug | \myEndLine
+	g2:6 g2:maj7.5+ |
+	a2:m a2:m5+ |
+	} \alternative {
+	{
+	a2:m6 fis2:dim |
+	g2 g2:aug | \myEndLine
+	g2:6 g2:aug |
+	a2:m a2:m5+ |
+	a2:m6 fis2:dim | \myEndLineVoltaNotLast
+	}
+	{
+	g2 g2:aug | \myEndLineVoltaLast
+	}
+	}
+	g1:6 |
+	\endBar
+	\endPart
+
+	\endSong
+	\endChords
+}
+{% endif %}
+{% if part == "VoiceWikifonia" %}\absolute {
+	\tempo "Moderato" 4 = 120
+	\time 2/2
+	\key g \major
+
+	r2 fis'2 |
+	\repeat volta 2 {
+	b'1 ~ |
+	b'1 ~ |
+	b'4 d''4 d''4 b'4 |
+	b'4 a'4 a'8 g'4 a'8 ~ |
+	a'1 ~ |
+	a'1 ~ |
+	a'4 d''4 d''4 b'4 |
+	b'4 a'4 a'8 g'4 a'8 ~ |
+	a'1 ~ |
+	a'1 ~ |
+	a'4 d''4 d''4 b'4 |
+	b'4 a'4 a'8 g'4 b'8 ~ |
+	b'1 ~ |
+	b'2 fis'2 |
+	e'1 ~ |
+	e'2 fis'2 |
+	b'2 b'2 |
+	bes'2 a'2 |
+	d''1 ~ |
+	d''1 ~ |
+	d''4 d''4 d''4 des''4 |
+	c''4 b'4 ais'8 b'4 d''8 ~ |
+	d''1 ~ |
+	d''1 ~ |
+	d''4 d''4 d''4 des''4 |
+	c''4 b'4 ais'8 b'4 d''8 ~ |
+	d''1 ~ |
+	d''1 ~ |
+	d''4 d''4 d''4 des''4 |
+	c''4 b'4 a'8 b'4 c''8 ~ |
+	c''1 ~ |
+	c''1 ~ |
+	c''1 ~ |
+	c''1 |
+	c''1 ~ |
+	c''1 ~ |
+	c''4 c''4 b'4 b'4 |
+	a'4 a'4 g'8 fis'4 a'8 ~ |
+	a'1 ~ |
+	a'1 ~ |
+	a'4 g'4 a'4 b'4 |
+	d''2 b'8 g'4 g'8 ~ |
+	g'1 ~ |
+	g'1 |
+	a'2 a'4 a'4 |
+	a'2 a'8 g'4 b'8 ~ |
+	b'1 ~ |
+	b'2 fis'2 |
+	e'1 ~ |
+	e'2 fis'2 |
+	b'1 ~ |
+	b'2 fis'2 |
+	e'1 ~ |
+	} \alternative {
+	{
+	e'2 fis'2 |
+	b'1 ( ~ |
+	b'1 ) |
+	a'1 ~ |
+	a'4 r4 fis'2 |
+	}
+	{
+	b'1 ~ |
+	}
+	}
+	b'4 r4 r2 |
+	\endBar
+}
+{% endif %}
