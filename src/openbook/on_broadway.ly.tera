@@ -1,0 +1,120 @@
+{#
+default_version = "Wikifonia"
+
+[attributes]
+title = "On Broadway"
+style = "Jazz"
+composer = "Barry Mann, Cynthia Weil, Jerry Lieber, Mike Stroller"
+piece = "Standard"
+typesetter = "OpenBook contributors (MusicXML import)"
+completion = "3"
+uuid = "a100e6e0-3b74-5cba-8339-cf5d79e22538"
+location = "Hal_Leonard_Real_Jazz_Book:265"
+copyright = "All Rights Reserved"
+copyrightextra = "Archived MusicXML notice retained; underlying music is not relicensed."
+
+[versions.Wikifonia]
+doChords = true
+doVoice = true
+doLyrics = false
+doLyricsmore = false
+doLyricsmoremore = false
+doChordBars = false
+doGuitar = false
+doExtra = false
+doPrep = false
+doOwn = false
+#}
+{% if part == "Vars" %}
+{% endif %}
+{% if part == "Doc" %}
+	DONE:
+	- imported melody and chord changes from real_books_archive.gi/Wikifonia.tar.xz: Wikifonia/Barry Mann, Cynthia Weil, Jerry Lieber, Mike Stroller - On Broadway.mxl.
+	- source revision: http://wikifonia.org/node/2374/revisions/5453/view.
+	- local PDF: real_books_archive.gi/Hal Leonard Real Jazz Book.pdf.
+	- book index reference: Hal_Leonard_Real_Jazz_Book:265; index pagination is not a verified PDF page number.
+	- retained the archived MusicXML rights notice; no redistribution permission is asserted.
+	- retained written melody, chord changes, pickups, repeats and numbered endings; lyrics omitted.
+	- imported explicit 7alt symbols using the book's altered-dominant notation where present.
+	- tempo is an editorial practice suggestion.
+	TODO:
+	- proofread the complete melody, harmony and form against the referenced PDF and check by ear.
+	- verify source attribution, copyright notice and reuse terms against the scan; only the archived MusicXML notice is retained.
+	- locate the tune in the exact local PDF edition; book-index page numbers may differ.
+	- verify editorial chord spacing in measures 4; the archive places successive symbols at the same offset.
+{% endif %}
+{% if part == "ChordsWikifonia" %}\chordmode {
+	\startChords
+	\startSong
+
+	\myMark "A"
+	\startPart
+	\repeat volta 2 {
+	s8 des4. b2/des |
+	des4. b1*5/8/des |
+	des4. b1*5/8/des |
+	des2 b2/des | \myEndLine
+	des2 b2/des |
+	des4. b1*5/8/des |
+	des1 |
+	des1 | \myEndLine
+	ges2 e2/ges |
+	ges4. e1*5/8/ges |
+	ges2 e2/ges |
+	ges4. aes1*5/8 | \myEndLine
+	des2 b2/des |
+	} \alternative {
+	{
+	des4. b1*5/8/des |
+	des2. b4/des |
+	des4. b1*5/8/des | \myEndLineVoltaNotLast
+	}
+	{
+	des4. b1*5/8/des | \myEndLineVoltaLast
+	}
+	}
+	s4. des1*5/8 |
+	s1 |
+	s1 | \myEndLine
+	\endBar
+	\endPart
+
+	\endSong
+	\endChords
+}
+{% endif %}
+{% if part == "VoiceWikifonia" %}\absolute {
+	\tempo "Moderato" 4 = 120
+	\time 4/4
+	\key des \major
+
+	\repeat volta 2 {
+	r8 as8 f'8 des'8 es'8 as'4. |
+	f'4 des'8 c'4. es'4 |
+	des'4. as8 ~ as2 ~ |
+	as1 |
+	r8 as8 f'8 des'8 es'8 as'4. |
+	f'4 des'8 ces'4. des'8 as8 ~ |
+	as1 ~ |
+	as1 |
+	r8 des'8 bes'8 ges'8 as'8 des''4. |
+	bes'4 ges'8 as'8 ~ as'2 |
+	r8 des'8 bes'8 ges'8 as'8 des''4. |
+	bes'4 ges'8 as'8 ~ as'2 |
+	r8 as8 f'8 des'8 es'8 as'4. |
+	} \alternative {
+	{
+	f'4 des'8 ces'4. des'8 as8 ~ |
+	as2. es'4 |
+	des'4. as8 ~ as2 |
+	}
+	{
+	f'4 des'8 ces'4. as4 |
+	}
+	}
+	ces'4. des'2 r8 |
+	r1 |
+	r1 |
+	\endBar
+}
+{% endif %}

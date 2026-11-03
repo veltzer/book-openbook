@@ -1,0 +1,142 @@
+{#
+default_version = "Wikifonia"
+
+[attributes]
+title = "Nobody Does It Better"
+style = "Standard"
+composer = "Marvin Hamlisch"
+piece = "Standard"
+typesetter = "OpenBook contributors (MusicXML import)"
+completion = "3"
+uuid = "ced3a6be-ee24-5dea-a3ac-7029a78b4a73"
+location = "TheBook:139"
+copyright = "All Rights Reserved"
+copyrightextra = "Archived MusicXML notice retained; underlying music is not relicensed."
+
+[versions.Wikifonia]
+doChords = true
+doVoice = true
+doLyrics = false
+doLyricsmore = false
+doLyricsmoremore = false
+doChordBars = false
+doGuitar = false
+doExtra = false
+doPrep = false
+doOwn = false
+#}
+{% if part == "Vars" %}
+{% endif %}
+{% if part == "Doc" %}
+	DONE:
+	- imported melody and chord changes from real_books_archive.gi/Wikifonia.tar.xz: Wikifonia/Marvin Hamlisch, Carol Bayer Sager - Nobody Does It Better.mxl.
+	- source revision: http://wikifonia.org/node/19906/revisions/27331/view.
+	- local PDF: real_books_archive.gi/The Book.pdf.
+	- book index reference: TheBook:139; index pagination is not a verified PDF page number.
+	- retained the archived MusicXML rights notice; no redistribution permission is asserted.
+	- retained written melody, chord changes, pickups, repeats and numbered endings; lyrics omitted.
+	- imported explicit 7alt symbols using the book's altered-dominant notation where present.
+	- tempo is an editorial practice suggestion.
+	TODO:
+	- proofread the complete melody, harmony and form against the referenced PDF and check by ear.
+	- verify source attribution, copyright notice and reuse terms against the scan; only the archived MusicXML notice is retained.
+	- locate the tune in the exact local PDF edition; book-index page numbers may differ.
+	- verify complete D.C./D.S./coda/Fine navigation and playback; printed directions are not a playback guarantee.
+{% endif %}
+{% if part == "ChordsWikifonia" %}\chordmode {
+	\startChords
+	\startSong
+
+	\myMark "A"
+	\startPart
+	\repeat volta 2 {
+	c2 c2:m |
+	g1:7 |
+	c2 c2:m |
+	g2 g2:7 | \myEndLine
+	c2 c2:m |
+	b2:7 e2:m |
+	a1*11/20:m d1*9/20:7 |
+	g2 c4:m d4:7 | \myEndLine
+	g1 |
+	c1 |
+	g1*11/20 g1*9/20:7 |
+	a2 aes2 | \myEndLine
+	g2 g2:7 |
+	c1*11/20 c1*9/20:7 |
+	a2:m d2:7 |
+	} \alternative {
+	{
+	g1 | \myEndLineVoltaNotLast
+	}
+	{
+	g1 | \myEndLineVoltaLast
+	}
+	}
+	c2 c2:m |
+	g1:7 |
+	c2 c2:m | \myEndLine
+	g1:7 |
+	c2 c2:m |
+	b2:7 e2:m |
+	a2:m e2:m | \myEndLine
+	c2 d2:7 |
+	g4 c2:m d4:7 |
+	g1 |
+	a2:m g2 | \myEndLine
+	c2 d2:7 |
+	g2 c4:m d4:7 |
+	g1 |
+	\endBar
+	\endPart
+
+	\endSong
+	\endChords
+}
+{% endif %}
+{% if part == "VoiceWikifonia" %}\absolute {
+	\tempo "Moderato" 4 = 120
+	\time 4/4
+	\key g \major
+
+	\repeat volta 2 {
+	r4 \once \omit TupletBracket \times 2/3 { fis'8 e'8 fis'8 } g'4. g8 |
+	b8 d'4. ~ d'4 r4 |
+	r4 \once \omit TupletBracket \times 2/3 { fis'8 e'8 fis'8 } g'4 a'8 g'8 |
+	b1 |
+	r4 \once \omit TupletBracket \times 2/3 { fis'8 e'8 fis'8 } g'8 a'4. |
+	c''4. b'8 a'8 b'8 g'4 |
+	r4 \once \omit TupletBracket \times 3/5 { e'8 g'8 b'8 a'8 g'8 } a'4. |
+	g'1 |
+	r4 \once \omit TupletBracket \times 3/5 { b8 ~ b8 d'8 b8 a'8 } g'4. |
+	r8 g8 \once \omit TupletBracket \times 2/3 { g8 a8 b8 } d'8 c'4. |
+	r4 \once \omit TupletBracket \times 3/5 { b8 b8 d'8 b8 a'8 } g'4 g'8 |
+	e'2 es'2 |
+	\times 2/3 { r8 b8 b8 } \once \omit TupletBracket \times 2/3 { b8 d'8 b8 } a'8 g'4. |
+	r4 \once \omit TupletBracket \times 3/5 { g8 g8 a8 g8 d'8 } c'4 c''8 |
+	b'8 c''8 b'8 c''8 b'8 a'8 g'8 a'8 |
+	} \alternative {
+	{
+	g'2. r4 |
+	}
+	{
+	g'2 r4 g4 |
+	}
+	}
+	\textMark \markup { \musicglyph "scripts.segno" } r4 \once \omit TupletBracket \times 2/3 { fis'8 e'8 fis'8 } g'4. g8 |
+	b8 d'4. ~ d'4 r4 |
+	r4 \once \omit TupletBracket \times 2/3 { fis'8 e'8 fis'8 } g'4 a'8 g'8 |
+	b1 |
+	r4 \once \omit TupletBracket \times 2/3 { fis'8 e'8 fis'8 } g'8 a'4. |
+	c''4. b'8 a'8 b'8 g'4 ^ "To Coda" |
+	r4 b'8 a'8 g'8 a'4. |
+	r4 b'8 a'8 g'8 a'4. |
+	g'1 |
+	R1 ^ "D.S. al Coda" |
+	\textMark \markup { \musicglyph "scripts.coda" } r4 b'8 a'8 g'8 a'4. |
+	r4 d''8 b'8 g'8 a'4. |
+	g'1 |
+	R1 |
+	\endBar
+}
+{% endif %}

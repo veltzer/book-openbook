@@ -1,0 +1,121 @@
+{#
+default_version = "Wikifonia"
+
+[attributes]
+title = "Last Night When We Were Young"
+style = "Jazz"
+composer = "Harold Arlen"
+piece = "Standard"
+typesetter = "OpenBook contributors (MusicXML import)"
+completion = "3"
+uuid = "1dd57600-7d76-5098-9402-9f83584605d1"
+location = "Hal_Leonard_Real_Jazz_Book:199"
+copyright = "All Rights Reserved"
+copyrightextra = "Archived MusicXML notice retained; underlying music is not relicensed."
+
+[versions.Wikifonia]
+doChords = true
+doVoice = true
+doLyrics = false
+doLyricsmore = false
+doLyricsmoremore = false
+doChordBars = false
+doGuitar = false
+doExtra = false
+doPrep = false
+doOwn = false
+#}
+{% if part == "Vars" %}
+{% endif %}
+{% if part == "Doc" %}
+	DONE:
+	- imported melody and chord changes from real_books_archive.gi/Wikifonia.tar.xz: Wikifonia/Harold Arlen, E. Y. Harburg - Last Night When We Were Young.mxl.
+	- source revision: http://wikifonia.org/node/11049/revisions/24023/view.
+	- local PDF: real_books_archive.gi/Hal Leonard Real Jazz Book.pdf.
+	- book index reference: Hal_Leonard_Real_Jazz_Book:199; index pagination is not a verified PDF page number.
+	- retained the archived MusicXML rights notice; no redistribution permission is asserted.
+	- retained written melody, chord changes, pickups, repeats and numbered endings; lyrics omitted.
+	- imported explicit 7alt symbols using the book's altered-dominant notation where present.
+	- tempo is an editorial practice suggestion.
+	TODO:
+	- proofread the complete melody, harmony and form against the referenced PDF and check by ear.
+	- verify source attribution, copyright notice and reuse terms against the scan; only the archived MusicXML notice is retained.
+	- locate the tune in the exact local PDF edition; book-index page numbers may differ.
+{% endif %}
+{% if part == "ChordsWikifonia" %}\chordmode {
+	\startChords
+	\startSong
+
+	\myMark "A"
+	\startPart
+	s1 |
+	\repeat volta 2 {
+	g1 |
+	e1*5/8:dim e4.:9 |
+	a2.:9 e4:dim | \myEndLine
+	c1 |
+	g2.:9 d4:dim |
+	c2:m c2:dim |
+	s1 | \myEndLine
+	f2. d4:7 |
+	}
+	d1:m |
+	c4:dim b4.:7 e4.:7 |
+	a2.:7 b4:aug | \myEndLine
+	g1:m |
+	d1:m |
+	s4 f2.:aug |
+	g2.:m g4:dim | \myEndLine
+	ees4:m d2.:9 |
+	g1 |
+	e1*5/8:dim d4.:dim |
+	d2.:m e4:dim | \myEndLine
+	s4 b2:7 d4:dim |
+	s2. g4:m |
+	a2:m7.5- d2:9 |
+	g1 | \myEndLine
+	s1 |
+	s1 |
+	\endBar
+	\endPart
+
+	\endSong
+	\endChords
+}
+{% endif %}
+{% if part == "VoiceWikifonia" %}\absolute {
+	\tempo "Moderato" 4 = 120
+	\time 4/4
+	\key g \major
+
+	r2 r4 d'4 |
+	\repeat volta 2 {
+	a'2 ~ a'8 g'8 a'8 g'8 |
+	fis'2 r8 c''8 b'8 g'8 |
+	fis'2 ~ fis'8 eis'8 fis'8 f'8 |
+	e'2 r8 b'8 a'8 f'8 |
+	e'2 ~ e'8 dis'8 e'8 f'8 |
+	es'2 \times 2/3 { bes'4 a'4 es'4 } |
+	d'2. - "G E7" e'4 |
+	d'2. d'4 |
+	}
+	d''2 r8 b'8 \once \omit TupletBracket \times 2/3 { c''8 d''8 des''8 } |
+	c''4 b'4 r8 e'8 fis'8 e'8 |
+	fis'2 r8 fis'8 g'8 fis'8 |
+	g'2. e'4 |
+	e''2 e''8 cis''8 \once \omit TupletBracket \times 2/3 { d''8 e''8 es''8 } |
+	d''4 cis''4 r8 a'8 bes'8 a'8 |
+	bes'2 r8 e'8 \once \omit TupletBracket \times 2/3 { e'8 g'8 a'8 } |
+	bes'4 b'2 d'4 |
+	a'2 ~ a'8 g'8 a'8 g'8 |
+	fis'2 r8 fis'8 f'8 e'8 |
+	d''2 r8 b'8 \once \omit TupletBracket \times 2/3 { c''8 d''8 cis''8 } |
+	c''4 <b' b'>4 r8 e'8 f'8 e'8 |
+	e''2 - "Gm6 A7" r8 fis'8 g'8 fis'8 |
+	g'2 a'2 |
+	g'1 ~ |
+	g'1 ~ |
+	g'1 |
+	\endBar
+}
+{% endif %}

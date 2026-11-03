@@ -1,0 +1,147 @@
+{#
+default_version = "Wikifonia"
+
+[attributes]
+title = "The Face I Love"
+style = "Jazz"
+composer = "Marcos Valle"
+piece = "Standard"
+typesetter = "OpenBook contributors (MusicXML import)"
+completion = "3"
+uuid = "7a636af0-e6e9-5c2f-a7d6-5e81cd75f3ca"
+location = "Hal_Leonard_Real_Jazz_Book:120"
+copyright = "All Rights Reserved"
+copyrightextra = "Archived MusicXML notice retained; underlying music is not relicensed."
+
+[versions.Wikifonia]
+doChords = true
+doVoice = true
+doLyrics = false
+doLyricsmore = false
+doLyricsmoremore = false
+doChordBars = false
+doGuitar = false
+doExtra = false
+doPrep = false
+doOwn = false
+#}
+{% if part == "Vars" %}
+{% endif %}
+{% if part == "Doc" %}
+	DONE:
+	- imported melody and chord changes from real_books_archive.gi/Wikifonia.tar.xz: Wikifonia/Marcos Valle, Ray Gilbert - The Face I Love.mxl.
+	- source revision: http://wikifonia.org/node/11124/revisions/15032/view.
+	- local PDF: real_books_archive.gi/Hal Leonard Real Jazz Book.pdf.
+	- book index reference: Hal_Leonard_Real_Jazz_Book:120; index pagination is not a verified PDF page number.
+	- retained the archived MusicXML rights notice; no redistribution permission is asserted.
+	- retained written melody, chord changes, pickups, repeats and numbered endings; lyrics omitted.
+	- imported explicit 7alt symbols using the book's altered-dominant notation where present.
+	- tempo is an editorial practice suggestion.
+	TODO:
+	- proofread the complete melody, harmony and form against the referenced PDF and check by ear.
+	- verify source attribution, copyright notice and reuse terms against the scan; only the archived MusicXML notice is retained.
+	- locate the tune in the exact local PDF edition; book-index page numbers may differ.
+{% endif %}
+{% if part == "ChordsWikifonia" %}\chordmode {
+	\startChords
+	\startSong
+
+	\myMark "A"
+	\startPart
+	s2. |
+	\repeat volta 2 {
+	g2.:maj7 |
+	g2.:6.9 |
+	s4 g2:maj9 | \myEndLine
+	g2.:6.9 |
+	g2.:m9 |
+	c2.:7 |
+	g2.:m9 | \myEndLine
+	c2.:7 |
+	f2.:maj7 |
+	f2.:6.9 |
+	s4 f2:maj7 | \myEndLine
+	f2.:6 |
+	f2.:m7 |
+	bes2.:7 |
+	e2.:m7 | \myEndLine
+	a2.:7.9- |
+	} \alternative {
+	{
+	f2.:maj7 |
+	f2.:6 |
+	e2.:m | \myEndLine
+	a2.:m7 |
+	s2. |
+	d2.:9 |
+	a2.:m7 | \myEndLine
+	d2.:7.9- | \myEndLineVoltaNotLast
+	}
+	{
+	f2.:maj7 | \myEndLineVoltaLast
+	}
+	}
+	f2.:6 |
+	e2.:m | \myEndLine
+	a2.:m7 |
+	f2:maj7 d4:m7 |
+	g2:13 g4:aug7 |
+	c2.:maj9 | \myEndLine
+	f2.:13 |
+	c2.:maj9 |
+	\endBar
+	\endPart
+
+	\endSong
+	\endChords
+}
+{% endif %}
+{% if part == "VoiceWikifonia" %}\absolute {
+	\tempo "Moderato" 4 = 120
+	\time 3/4
+	\key g \major
+
+	r2 d'4 |
+	\repeat volta 2 {
+	b'2 fis'4 |
+	e'2 d'4 ~ |
+	d'4 b'4 fis'4 |
+	e'2 d'4 |
+	bes'2 f'4 |
+	e'2 d'4 ~ |
+	d'4 bes'4 f'4 |
+	e'2 c'4 |
+	a'2 e'4 |
+	d'2 c'4 ~ |
+	c'4 a'4 e'4 |
+	d'2 c'4 |
+	as'4 as'4 as'4 |
+	bes'4 as'4 bes'4 |
+	g'2. ~ |
+	g'4 a'4 g'4 |
+	} \alternative {
+	{
+	e'4. c'8 c'4 |
+	c'4 a'4 g'4 |
+	e'4. c'8 c'4 |
+	c'2. |
+	e'4 c'4 e'4 |
+	d'4 e'4 fis'4 |
+	g'4 fis'4 g'4 |
+	gis'4 a'4 d'4 |
+	}
+	{
+	e'4. c'8 c'4 |
+	}
+	}
+	c'4 a'4 g'4 |
+	e'4. c'8 c'4 |
+	c'2. |
+	e'2 g'4 |
+	a'2 dis'4 |
+	d'2. ~ |
+	d'2. ~ |
+	d'2. |
+	\endBar
+}
+{% endif %}

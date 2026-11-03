@@ -1,0 +1,136 @@
+{#
+default_version = "Wikifonia"
+
+[attributes]
+title = "Soon It's Gonna Rain"
+style = "Standard"
+composer = "Harvey Schmidt"
+piece = "Standard"
+typesetter = "OpenBook contributors (MusicXML import)"
+completion = "3"
+uuid = "78e3e701-7cd5-51de-af7f-c9d8bd343cee"
+location = "Ultimate_Broadway_Fakebook:104"
+copyright = "All Rights Reserved"
+copyrightextra = "Archived MusicXML notice retained; underlying music is not relicensed."
+
+[versions.Wikifonia]
+doChords = true
+doVoice = true
+doLyrics = false
+doLyricsmore = false
+doLyricsmoremore = false
+doChordBars = false
+doGuitar = false
+doExtra = false
+doPrep = false
+doOwn = false
+#}
+{% if part == "Vars" %}
+{% endif %}
+{% if part == "Doc" %}
+	DONE:
+	- imported melody and chord changes from real_books_archive.gi/Wikifonia.tar.xz: Wikifonia/Harvey Schmidt, Tom Jones - Soon It's Gonna Rain.mxl.
+	- source revision: http://wikifonia.org/node/12559/revisions/16948/view.
+	- local PDF: real_books_archive.gi/The Ultimate Broadway Fakebook.pdf.
+	- book index reference: Ultimate_Broadway_Fakebook:104; index pagination is not a verified PDF page number.
+	- retained the archived MusicXML rights notice; no redistribution permission is asserted.
+	- retained written melody, chord changes, pickups, repeats and numbered endings; lyrics omitted.
+	- imported explicit 7alt symbols using the book's altered-dominant notation where present.
+	- tempo is an editorial practice suggestion.
+	TODO:
+	- proofread the complete melody, harmony and form against the referenced PDF and check by ear.
+	- verify source attribution, copyright notice and reuse terms against the scan; only the archived MusicXML notice is retained.
+	- locate the tune in the exact local PDF edition; book-index page numbers may differ.
+	- verify editorial chord spacing in measures 24; the archive places successive symbols at the same offset.
+{% endif %}
+{% if part == "ChordsWikifonia" %}\chordmode {
+	\startChords
+	\startSong
+
+	\myMark "A"
+	\startPart
+	c2:maj9 c2:6 |
+	c2.:maj9 c4:6 |
+	c2:maj9 c2:6 |
+	e2:m7/a a2:7 | \myEndLine
+	d2:m9 d2:9 |
+	d2:m7 f4 g4:7.9- |
+	c1:6 |
+	c1:6 | \myEndLine
+	c2:maj9 c2:6 |
+	c2.:maj9 c4:6 |
+	c2:maj9 c2:6 |
+	e2:m7 a2:7 | \myEndLine
+	d2:m7 d2:9 |
+	d2.:m7 g4:7.9- |
+	c1:6 |
+	s1 | \myEndLine
+	d2.:m7 e4:m7 |
+	f2:6 g2:7 |
+	c1:maj9 |
+	e2:m7 a2:m7 | \myEndLine
+	d1:m7 |
+	f1:maj7 |
+	a2:m7 d2:9 |
+	d2:m7 g2:7 | \myEndLine
+	c2:maj9 c2:6 |
+	c2.:maj9 c4:6 |
+	c1:maj9 |
+	c2:6 a2:7 | \myEndLine
+	d2:m7 d2:9 |
+	d2.:m7 g4:7.9- |
+	e1:m7 |
+	a1:9 | \myEndLine
+	d2:m7 e2:m7 |
+	f2:6 g4:7 g4:7.9- |
+	c1:6 |
+	\endBar
+	\endPart
+
+	\endSong
+	\endChords
+}
+{% endif %}
+{% if part == "VoiceWikifonia" %}\absolute {
+	\tempo "Moderato" 4 = 120
+	\time 4/4
+	\key c \major
+
+	g'8 g'8 g'8 g'8 e'2 |
+	g'4 b'4 g'4 e'4 |
+	g'8 g'8 g'8 g'8 e'2 |
+	g'4 b'4 a'2 |
+	e'8 e'8 e'8 e'8 c'2 |
+	e'8 e'8 d'4 c'4 b4 |
+	c'1 ~ |
+	c'2. r4 |
+	g'8 g'8 g'8 g'8 e'2 |
+	g'4 b'4 g'4 e'4 |
+	g'8 g'8 g'8 g'8 e'2 |
+	g'4 b'4 a'2 |
+	e'8 e'8 e'8 e'8 c'2 |
+	e'8 e'8 d'4 c'4 b4 |
+	c'1 ~ |
+	c'2 r4 e'4 |
+	d'2. e'4 |
+	f'4 g'8 a'8 b'4 a'4 |
+	e'2. f'4 |
+	g'4 a'8 b'8 c''4 a'4 |
+	f'2. g'4 |
+	a'8 b'8 c''4 d''4. b'8 |
+	a'4 a'4 a'4 e'4 |
+	d'1 |
+	g'8 g'8 g'8 g'8 e'2 |
+	g'4 b'4 g'4 e'4 |
+	g'8 g'8 g'8 g'8 e'2 |
+	g'4 b'4 a'2 |
+	e'8 e'8 e'8 e'8 c'2 |
+	e'8 e'8 d'8 d'8 c'4 b4 |
+	a'1 ~ |
+	a'2 r4 r8 b'8 |
+	c''4 a'4 b'4. g'8 |
+	a'4 e'4 g'4 b4 |
+	c'1 |
+	\endBar
+}
+{% endif %}

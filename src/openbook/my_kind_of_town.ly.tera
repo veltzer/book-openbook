@@ -1,0 +1,241 @@
+{#
+default_version = "Wikifonia"
+
+[attributes]
+title = "My Kind of Town"
+style = "Standard"
+composer = "Jimmy van Heusen"
+piece = "Standard"
+typesetter = "OpenBook contributors (MusicXML import)"
+completion = "3"
+uuid = "7195308b-d567-5be8-8926-78e270e15136"
+location = "TheBook:237"
+copyright = "All Rights Reserved"
+copyrightextra = "Archived MusicXML notice retained; underlying music is not relicensed."
+
+[versions.Wikifonia]
+doChords = true
+doVoice = true
+doLyrics = false
+doLyricsmore = false
+doLyricsmoremore = false
+doChordBars = false
+doGuitar = false
+doExtra = false
+doPrep = false
+doOwn = false
+#}
+{% if part == "Vars" %}
+{% endif %}
+{% if part == "Doc" %}
+	DONE:
+	- imported melody and chord changes from real_books_archive.gi/Wikifonia.tar.xz: Wikifonia/Jimmy van Heusen, Sammy Cahn - My Kind of Town.mxl.
+	- source revision: http://wikifonia.org/node/11615/revisions/19506/view.
+	- local PDF: real_books_archive.gi/The Book.pdf.
+	- book index reference: TheBook:237; index pagination is not a verified PDF page number.
+	- retained the archived MusicXML rights notice; no redistribution permission is asserted.
+	- retained written melody, chord changes, pickups, repeats and numbered endings; lyrics omitted.
+	- imported explicit 7alt symbols using the book's altered-dominant notation where present.
+	- tempo is an editorial practice suggestion.
+	TODO:
+	- proofread the complete melody, harmony and form against the referenced PDF and check by ear.
+	- verify source attribution, copyright notice and reuse terms against the scan; only the archived MusicXML notice is retained.
+	- locate the tune in the exact local PDF edition; book-index page numbers may differ.
+{% endif %}
+{% if part == "ChordsWikifonia" %}\chordmode {
+	\startChords
+	\startSong
+
+	\myMark "A"
+	\startPart
+	s1 |
+	aes1 |
+	s1 |
+	s4 aes2.:7 | \myEndLine
+	s1 |
+	aes1 |
+	s1 |
+	aes1:dim | \myEndLine
+	s1 |
+	ees1 |
+	s1 |
+	aes1:m6 | \myEndLine
+	s1 |
+	c1:m |
+	b1:dim |
+	bes1:m9 | \myEndLine
+	a2:9 g2:7 |
+	\repeat volta 2 {
+	aes1 |
+	g2:7 ges2:9 |
+	f2:7 f2:9 | \myEndLine
+	s1 |
+	bes1:m |
+	ees2:dim ees2:7 |
+	aes2 aes4:dim aes4:7 | \myEndLine
+	s2 c2:7.5- |
+	des1:6 |
+	d1:dim |
+	aes2 e4:dim f4:m | \myEndLine
+	s1 |
+	bes2:9 g4:m bes4:7 |
+	s1 |
+	ees2:9 ees2:dim | \myEndLine
+	ees2:9 g2:7 |
+	aes1 |
+	g2:7 ges2:9 |
+	f2:7 f2:9 | \myEndLine
+	s1 |
+	bes1:m |
+	ees2:dim ees2:7 |
+	aes2 aes4:dim aes4:7 | \myEndLine
+	s2 c2:7.5- |
+	} \alternative {
+	{
+	des1:6 |
+	d1:dim |
+	aes2 aes4:7 f4:aug7 | \myEndLine
+	s2 f2:7 |
+	bes1:9 |
+	s1 |
+	bes1:m9 | \myEndLine
+	ees1:7.9- |
+	aes1 |
+	bes1:m7 |
+	s1 | \myEndLine
+	s2 aes2:dim | \myEndLineVoltaNotLast
+	}
+	{
+	s4 des2.:6 | \myEndLineVoltaLast
+	}
+	}
+	d1:dim |
+	aes2. aes4:dim | \myEndLine
+	aes2 c2:7.5- |
+	des1:6 |
+	d1:dim |
+	aes2. aes4:dim | \myEndLine
+	aes2 c2:7.5- |
+	des1:6 |
+	d1:dim |
+	aes2. aes4:dim | \myEndLine
+	aes2 c2:7.5- |
+	des1:6 |
+	d1:dim |
+	aes2. aes4:dim | \myEndLine
+	aes2 c2:7.5- |
+	des1:6 |
+	d1:dim |
+	aes2 aes4:7 f4:aug7 | \myEndLine
+	s2 f2:7 |
+	bes1:9 |
+	s1 |
+	bes1:m7 | \myEndLine
+	ees1:7.9- |
+	aes1:6 |
+	s1 |
+	s1 | \myEndLine
+	s1 |
+	\endBar
+	\endPart
+
+	\endSong
+	\endChords
+}
+{% endif %}
+{% if part == "VoiceWikifonia" %}\absolute {
+	\tempo "Moderato" 4 = 120
+	\time 4/4
+	\key as \major
+
+	r2 r4 es'4 |
+	as'4 es'4 as'4 es'4 |
+	as'4 c''4 as'4 es'4 |
+	as'4 ges'4 ges'2 ~ |
+	ges'2 r4 es'4 |
+	as'4 es'4 as'4 es'4 |
+	as'4 c''4 as'4 es'4 |
+	bes'1 ~ |
+	bes'4 r4 bes'2 |
+	bes'4 es'4 bes'4 es'4 |
+	bes'4 es''4 bes'4 es'4 |
+	bes'4 as'4 as'2 ~ |
+	as'2. r4 |
+	g'4 g'4 g'4 g'4 |
+	bes'4 as'4 as'4 as'4 |
+	c''1 |
+	cis''2 d''2 |
+	\repeat volta 2 {
+	r4 es''2. |
+	b'2 c''2 |
+	f'2 g'4 ges'4 ~ |
+	ges'4 ges'4 f'2 |
+	r4 des''2. |
+	a'2 bes'2 |
+	es'2 d'4 es'4 ~ |
+	es'4 es'4 e'2 |
+	r4 f'2. |
+	as'2 as'2 |
+	c''2 bes'4 as'4 ~ |
+	as'1 |
+	c''2 bes'4 as'4 ~ |
+	as'1 |
+	bes'2 c''2 |
+	des''2 d''2 |
+	r4 es''2. |
+	b'2 c''2 |
+	f'2 g'4 ges'4 ~ |
+	ges'4 ges'4 f'2 |
+	r4 des''2. |
+	a'2 bes'2 |
+	es'2 d'4 es'4 ~ |
+	es'4 es'4 e'2 |
+	} \alternative {
+	{
+	r4 f'2. |
+	g'2 as'2 |
+	c''4 bes'4 as'4 des''4 ~ |
+	des''2 c''2 |
+	f''1 ~ |
+	f''1 |
+	c''1 |
+	c''1 |
+	as'1 ~ |
+	as'1 ~ |
+	as'2. r4 |
+	des''2 d''2 |
+	}
+	{
+	r4 f'2. |
+	}
+	}
+	g'2 as'2 |
+	c''4 as'2 d'4 |
+	es'4 es'4 e'2 |
+	r4 f'2. |
+	g'2 as'2 |
+	c''4 as'2 d'4 |
+	es'4 es'4 e'2 |
+	r4 f'2. |
+	g'2 as'2 |
+	c''4 as'2 d'4 |
+	es'4 es'4 e'2 |
+	r4 f'2. |
+	g'2 as'2 |
+	c''4 as'2 d'4 |
+	es'4 es'4 e'2 |
+	r4 f'2. |
+	g'2 as'2 |
+	c''4 bes'4 as'4 des''4 ~ |
+	des''2 c''2 |
+	f''1 ~ |
+	f''1 |
+	es''1 |
+	c''1 |
+	as'1 ~ |
+	as'1 ~ |
+	as'1 ~ |
+	as'2. r4 |
+	\endBar
+}
+{% endif %}

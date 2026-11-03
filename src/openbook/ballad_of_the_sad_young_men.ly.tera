@@ -1,0 +1,186 @@
+{#
+default_version = "Wikifonia"
+
+[attributes]
+title = "Ballad of the Sad Young Men"
+style = "Standard"
+composer = "Tommy Wolf"
+piece = "Standard"
+typesetter = "OpenBook contributors (MusicXML import)"
+completion = "3"
+uuid = "ef04dc23-a82f-5cf8-b3d5-5dda22ba64b3"
+location = "Ultimate_Broadway_Fakebook:308"
+copyright = "All Rights Reserved"
+copyrightextra = "Archived MusicXML notice retained; underlying music is not relicensed."
+
+[versions.Wikifonia]
+doChords = true
+doVoice = true
+doLyrics = false
+doLyricsmore = false
+doLyricsmoremore = false
+doChordBars = false
+doGuitar = false
+doExtra = false
+doPrep = false
+doOwn = false
+#}
+{% if part == "Vars" %}
+{% endif %}
+{% if part == "Doc" %}
+	DONE:
+	- imported melody and chord changes from real_books_archive.gi/Wikifonia.tar.xz: Wikifonia/Tommy Wolf, Fran Landesman - Ballad of the Sad Young Men.mxl.
+	- source revision: http://wikifonia.org/node/11671/revisions/28277/view.
+	- local PDF: real_books_archive.gi/The Ultimate Broadway Fakebook.pdf.
+	- book index reference: Ultimate_Broadway_Fakebook:308; index pagination is not a verified PDF page number.
+	- retained the archived MusicXML rights notice; no redistribution permission is asserted.
+	- retained written melody, chord changes, pickups, repeats and numbered endings; lyrics omitted.
+	- imported explicit 7alt symbols using the book's altered-dominant notation where present.
+	- tempo is an editorial practice suggestion.
+	TODO:
+	- proofread the complete melody, harmony and form against the referenced PDF and check by ear.
+	- verify source attribution, copyright notice and reuse terms against the scan; only the archived MusicXML notice is retained.
+	- locate the tune in the exact local PDF edition; book-index page numbers may differ.
+	- verify editorial chord spacing in measures 10, 12, 26, 28, 47, 52; the archive places successive symbols at the same offset.
+{% endif %}
+{% if part == "ChordsWikifonia" %}\chordmode {
+	\startChords
+	\startSong
+
+	\myMark "A"
+	\startPart
+	\repeat volta 2 {
+	ees1 |
+	aes2 ees2 |
+	f1:m7 |
+	bes1:13 | \myEndLine
+	ees1 |
+	aes2 ees2 |
+	f2:m7 bes2:9 |
+	ees1 | \myEndLine
+	aes2 f2:m7 |
+	a2:m7 d2:7 |
+	g2:m g2:m7 |
+	bes2:m7 ees2:7 | \myEndLine
+	aes1 |
+	f2.:m7 bes4:9 |
+	g1:m7 |
+	c1:7.9- | \myEndLine
+	f1:m7 |
+	d2:m7 g2:aug7 |
+	c1:m |
+	f1:7 | \myEndLine
+	f1:m7 |
+	bes2:7 bes2:9 |
+	g1:m |
+	c1:7.9- | \myEndLine
+	aes2 f2:m7 |
+	a2:m7 d2:7 |
+	g2:m g2:m7 |
+	bes2:m7 ees2:7 | \myEndLine
+	aes1 |
+	f2.:m7 bes4:13 |
+	g1:m7 |
+	c1:7.9- | \myEndLine
+	f1:m7 |
+	d2:m7 g2:aug7 |
+	c1:m |
+	} \alternative {
+	{
+	f1:7 | \myEndLine
+	f1:m7 |
+	bes1:7 |
+	ees1 |
+	aes1 | \myEndLine
+	f1:m7 |
+	bes1:9 | \myEndLineVoltaNotLast
+	}
+	{
+	f1:7 | \myEndLineVoltaLast
+	}
+	}
+	f1:m7 | \myEndLine
+	g1:m |
+	aes1 |
+	g2:m7 c2:7.9- |
+	f2:m e2:dim | \myEndLine
+	f2:m7 bes2:7 |
+	ees1 |
+	aes1 |
+	f2:m7 bes2:9 | \myEndLine
+	ees1 |
+	\endBar
+	\endPart
+
+	\endSong
+	\endChords
+}
+{% endif %}
+{% if part == "VoiceWikifonia" %}\absolute {
+	\tempo "Moderato" 4 = 120
+	\time 4/4
+	\key es \major
+
+	\repeat volta 2 {
+	es'4. f'8 g'4 es'4 |
+	c'4 d'4 es'2 |
+	f'4 bes'4 bes'4 d''4 |
+	bes'1 |
+	es'4. f'8 g'4 es'4 |
+	c'4 d'4 es'2 |
+	bes4 es'4 g'4. f'8 |
+	es'1 |
+	f'4 g'4 as'4 es'4 |
+	d'1 |
+	g'4 a'4 bes'4. f'8 |
+	es'1 |
+	as'4 bes'4 c''4 d''4 |
+	c''2. bes'8 a'8 |
+	bes'4 c''4 bes'2 ~ |
+	bes'2 as'4 g'4 |
+	as'4 bes'4 as'2 |
+	g'4 as'4 g'4. f'8 |
+	es'1 ~ |
+	es'2 f'8 f'8 g'8 c''8 |
+	bes'1 ~ |
+	bes'2 c'8 d'8 es'8 f'8 |
+	bes1 ~ |
+	bes1 |
+	f'4 g'4 as'4 es'4 |
+	d'1 |
+	g'4 a'4 bes'4. f'8 |
+	es'1 |
+	as'4 bes'4 c''4 d''4 |
+	c''2. bes'8 a'8 |
+	bes'4 c''4 c''2 ~ |
+	c''2 as'4 g'4 |
+	as'4 bes'4 as'2 |
+	g'4 as'4 g'4 f'4 |
+	es'1 ~ |
+	} \alternative {
+	{
+	es'2 es'8 f'8 g'8 c''8 |
+	bes'1 ~ |
+	bes'2 c'8 d'8 es'8 f'8 |
+	es'1 ~ |
+	es'1 ~ |
+	es'1 ~ |
+	es'1 |
+	}
+	{
+	es'2 d'4 es'4 |
+	}
+	}
+	es''2. d''4 |
+	bes'2 d''4 es''4 |
+	f''2. es''4 |
+	bes'1 |
+	f'2 g'2 |
+	as'2 d''2 |
+	es''1 ~ |
+	es''1 ~ |
+	es''1 |
+	es''1 |
+	\endBar
+}
+{% endif %}

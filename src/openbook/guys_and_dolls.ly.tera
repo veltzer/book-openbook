@@ -1,0 +1,150 @@
+{#
+default_version = "Wikifonia"
+
+[attributes]
+title = "Guys And Dolls"
+style = "Standard"
+composer = "Frank Loesser"
+piece = "Standard"
+typesetter = "OpenBook contributors (MusicXML import)"
+completion = "3"
+uuid = "afa2de05-b2e5-5132-91a9-64e585d9c847"
+location = "Ultimate_Broadway_Fakebook:176"
+copyright = "All Rights Reserved"
+copyrightextra = "Archived MusicXML notice retained; underlying music is not relicensed."
+
+[versions.Wikifonia]
+doChords = true
+doVoice = true
+doLyrics = false
+doLyricsmore = false
+doLyricsmoremore = false
+doChordBars = false
+doGuitar = false
+doExtra = false
+doPrep = false
+doOwn = false
+#}
+{% if part == "Vars" %}
+{% endif %}
+{% if part == "Doc" %}
+	DONE:
+	- imported melody and chord changes from real_books_archive.gi/Wikifonia.tar.xz: Wikifonia/Frank Loesser - Guys And Dolls.mxl.
+	- source revision: http://wikifonia.org/node/4422/revisions/5957/view.
+	- local PDF: real_books_archive.gi/The Ultimate Broadway Fakebook.pdf.
+	- book index reference: Ultimate_Broadway_Fakebook:176; index pagination is not a verified PDF page number.
+	- retained the archived MusicXML rights notice; no redistribution permission is asserted.
+	- retained written melody, chord changes, pickups, repeats and numbered endings; lyrics omitted.
+	- imported explicit 7alt symbols using the book's altered-dominant notation where present.
+	- tempo is an editorial practice suggestion.
+	TODO:
+	- proofread the complete melody, harmony and form against the referenced PDF and check by ear.
+	- verify source attribution, copyright notice and reuse terms against the scan; only the archived MusicXML notice is retained.
+	- locate the tune in the exact local PDF edition; book-index page numbers may differ.
+	- verify editorial chord spacing in measures 8, 24, 34; the archive places successive symbols at the same offset.
+{% endif %}
+{% if part == "ChordsWikifonia" %}\chordmode {
+	\startChords
+	\startSong
+
+	\myMark "A"
+	\startPart
+	s2 c4 d4:dim |
+	\repeat volta 2 {
+	d2:m7 g4:13 c4 |
+	s2. d4:dim |
+	d2:m7 g4:7 c4 | \myEndLine
+	s2 c4:maj7 c4:9 |
+	f2 cis4.:m7 c8:maj7 |
+	s2 d4:m7 g4:9 |
+	c2 b2:aug | \myEndLine
+	bes2:13 a2:aug7 |
+	d2:m cis2:aug |
+	d2:m7 b4:aug b4:7 |
+	e1:7 | \myEndLine
+	e2:7.5- a2:7 |
+	d2:m d2:m7 |
+	e2:7.5- a2:7 |
+	d2:m7.5- g2:7 | \myEndLine
+	s2 c4 d4:dim |
+	d2:m7 g4:13 c4 |
+	s2. d4:dim |
+	d2:m7 g4:7 c4 | \myEndLine
+	s2 c4:maj7 c4:9 |
+	f2 g4.:7 c8:maj7 |
+	s2 d4:m7 g4:9 |
+	c2 b2:aug | \myEndLine
+	bes2:13 a2:aug7 |
+	d2:m d2:m7 |
+	b4:aug b2.:7 |
+	c2 bes4.:maj7 a8:aug | \myEndLine
+	s8 a4.:7 a2:aug7 |
+	d2:m cis2:aug |
+	d4:m7 g4:9 d4:m7 g4:7 |
+	} \alternative {
+	{
+	c2. g4:9.5- | \myEndLine
+	g2:9 c4 d4:dim | \myEndLineVoltaNotLast
+	}
+	{
+	c2 bes2:9 | \myEndLineVoltaLast
+	}
+	}
+	c1 |
+	\endBar
+	\endPart
+
+	\endSong
+	\endChords
+}
+{% endif %}
+{% if part == "VoiceWikifonia" %}\absolute {
+	\tempo "Moderato" 4 = 120
+	\time 2/2
+	\key c \major
+
+	r2 c'4 d'4 |
+	\repeat volta 2 {
+	f'2 e'4 c'4 ~ |
+	c'2 c'4 d'4 |
+	f'4 a'4 g'4 e'4 ~ |
+	e'2 e'4 g'4 |
+	c''4 r4 f'4 a'8 g'8 ~ |
+	g'8 e'8 c'4 f'4 a'4 |
+	g'1 ~ |
+	g'2 a'4 f'4 |
+	d'2 f'2 |
+	a'2 b'4 a'4 |
+	\times 2/3 { gis'4 a'4 b'4 } e'2 ~ |
+	e'2 a'4 g'4 |
+	\times 2/3 { f'4 g'4 a'4 } d'4. f'8 |
+	\times 2/3 { e'4 f'4 g'4 } cis'4. e'8 |
+	\times 2/3 { d'4 e'4 f'4 } b2 ~ |
+	b2 c'4 d'4 |
+	f'2 e'4 c'4 ~ |
+	c'2 c'4 d'4 |
+	f'4 a'4 g'4 e'4 ~ |
+	e'2 e'4 g'4 |
+	c''2 f'4 a'8 g'8 ~ |
+	g'8 e'8 c'4 f'4 a'4 |
+	g'1 ~ |
+	g'2 a'4 f'4 |
+	d'2 f'4 a'4 |
+	b'4 a'2 b'8 a'8 |
+	g'8 fis'8 g'4 a'4 g'8 f'8 ~ |
+	f'8 e'4. a'4 f'4 |
+	d'2 f'4 a'4 |
+	d'8 f'8 a'4 c''4 d''4 |
+	} \alternative {
+	{
+	c''2. a'8 g'8 |
+	a'8 a'8 a'4 c'4 d'4 |
+	}
+	{
+	c''1 |
+	}
+	}
+	c''2 r2 |
+	\endBar
+}
+{% endif %}

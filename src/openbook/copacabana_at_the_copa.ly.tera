@@ -1,0 +1,123 @@
+{#
+default_version = "Wikifonia"
+
+[attributes]
+title = "Copacabana (At The Copa)"
+style = "Standard"
+composer = "Barry Manilow,Bruce Sussman,& Jack Feldman"
+piece = "Standard"
+typesetter = "OpenBook contributors (MusicXML import)"
+completion = "3"
+uuid = "3f1f4c41-dfeb-517a-b3ad-a91ff29ebf09"
+location = "TheBook:327"
+copyright = "All Rights Reserved"
+copyrightextra = "Archived MusicXML notice retained; underlying music is not relicensed."
+
+[versions.Wikifonia]
+doChords = true
+doVoice = true
+doLyrics = false
+doLyricsmore = false
+doLyricsmoremore = false
+doChordBars = false
+doGuitar = false
+doExtra = false
+doPrep = false
+doOwn = false
+#}
+{% if part == "Vars" %}
+{% endif %}
+{% if part == "Doc" %}
+	DONE:
+	- imported melody and chord changes from real_books_archive.gi/Wikifonia.tar.xz: Wikifonia/Barry Manilow, Bruce Sussman, & Jack Feldman - Copacabana (At The Copa).mxl.
+	- source revision: http://wikifonia.org/node/20188/revisions/26658/view.
+	- local PDF: real_books_archive.gi/The Book.pdf.
+	- book index reference: TheBook:327; index pagination is not a verified PDF page number.
+	- retained the archived MusicXML rights notice; no redistribution permission is asserted.
+	- retained written melody, chord changes, pickups, repeats and numbered endings; lyrics omitted.
+	- imported explicit 7alt symbols using the book's altered-dominant notation where present.
+	- tempo is an editorial practice suggestion.
+	TODO:
+	- proofread the complete melody, harmony and form against the referenced PDF and check by ear.
+	- verify source attribution, copyright notice and reuse terms against the scan; only the archived MusicXML notice is retained.
+	- locate the tune in the exact local PDF edition; book-index page numbers may differ.
+{% endif %}
+{% if part == "ChordsWikifonia" %}\chordmode {
+	\startChords
+	\startSong
+
+	\myMark "A"
+	\startPart
+	\repeat volta 2 {
+	g1:m9 |
+	f1:m9 |
+	g1:m9 |
+	s1 | \myEndLine
+	f2:m7 f2:m7/bes |
+	ees1:maj7 |
+	a2:m7.5- d2:7 |
+	g1:m9 | \myEndLine
+	f2:m7 f2:m7/bes |
+	ees1:maj7 |
+	a2:m7.5- d2:7 |
+	g1:m9 | \myEndLine
+	d2:7.9- g2:m |
+	d2:7.9- g2:m |
+	c2:m7 d2:7 |
+	g4:m d4:7/fis bes2:7/f | \myEndLine
+	f2:m7 f2:m7/bes |
+	ees1:maj7 |
+	f2:m7 f2:m7/bes |
+	ees1:maj7 | \myEndLine
+	f2:m7 f2:m7/bes |
+	g2:m7 c2 |
+	f2:m7 bes2:7 |
+	g2:m7 c2:7 | \myEndLine
+	f1:m7 |
+	d1:7 |
+	s1 |
+	}
+	\endBar
+	\endPart
+
+	\endSong
+	\endChords
+}
+{% endif %}
+{% if part == "VoiceWikifonia" %}\absolute {
+	\tempo "Moderato" 4 = 120
+	\time 4/4
+	\key es \major
+
+	\repeat volta 2 {
+	a''4 g''8 d''8 ~ d''2 |
+	g''4 f''8 c''8 ~ c''2 |
+	a''4 g''8 d''8 ~ d''2 |
+	f''16 ^ "no chord" g''8 f''16 g''8 f''16 g''16 r8 g'8 bes'8 c''8 |
+	es''8. as'16 ~ as'4 ( as'8 ) es''8 d''8 c''8 |
+	d''8. g'16 ~ g'4 ~ g'8 g'8 bes'8 c''8 |
+	d''8 es''8 d''8 es''8 d''4 bes'8 g'8 |
+	a'8 a'8 a'8 g'16 a'16 ~ a'8 g'8 bes'8 c''8 |
+	es''8. as'16 ~ as'4 ~ as'8 es''8 d''8 c''8 |
+	d''8. g'16 ~ g'4 ~ g'8 g'8 bes'8 c''8 |
+	d''8 es''8 d''8 es''8 d''4 bes'8 fis'8 |
+	g'8 a'8 bes'8 c''8 d''8 bes'8 g'8 d'8 |
+	fis'8. a'16 ~ a'8 g'8 ( g'8 ) bes'8 g'8 d'8 |
+	fis'8. a'16 ~ a'8 bes'8 ~ bes'8 r8 g'8 d'8 |
+	es'16 f'8 g'16 ( g'8 ) a'16 bes'16 c''8 a'8 bes'8 c''8 |
+	d''4 d''4 d''8 r8 c''8 d''8 |
+	es''8. as'16 ~ as'4 ~ as'8 es''8 d''8 c''8 |
+	d''4. c''8 ~ c''2 |
+	as'8. bes'16 ~ bes'8 c''8 es''8. d''16 d''8 c''8 |
+	d''8. g'16 r4 d''4. c''8 |
+	es''8. as'16 ~ as'4 ~ as'8 es''8 d''8 c''8 |
+	d''4. c''8 ~ c''2 |
+	\times 2/3 { es''4 d''4 es''4 } \times 2/3 { d''4 c''4 d''4 } |
+	\times 2/3 { c''4 bes'4 c''4 } d''8 bes'8 c''8 d''8 |
+	es''4. c''8 ~ c''2 |
+	es''4 d''2 c''4 |
+	d''2 r2 |
+	}
+	\endBar
+}
+{% endif %}

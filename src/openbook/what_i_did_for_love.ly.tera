@@ -1,0 +1,155 @@
+{#
+default_version = "Wikifonia"
+
+[attributes]
+title = "What I Did For Love"
+style = "Standard"
+composer = "Marvin Hamlisch"
+piece = "Standard"
+typesetter = "OpenBook contributors (MusicXML import)"
+completion = "3"
+uuid = "81d16af7-8caf-5d12-9c76-b29041203881"
+location = "TheBook:115, Ultimate_Broadway_Fakebook:73"
+copyright = "All Rights Reserved"
+copyrightextra = "Archived MusicXML notice retained; underlying music is not relicensed."
+
+[versions.Wikifonia]
+doChords = true
+doVoice = true
+doLyrics = false
+doLyricsmore = false
+doLyricsmoremore = false
+doChordBars = false
+doGuitar = false
+doExtra = false
+doPrep = false
+doOwn = false
+#}
+{% if part == "Vars" %}
+{% endif %}
+{% if part == "Doc" %}
+	DONE:
+	- imported melody and chord changes from real_books_archive.gi/Wikifonia.tar.xz: Wikifonia/Marvin Hamlisch, Edward Kleban - What I Did For Love.mxl.
+	- source revision: http://wikifonia.org/node/3788/revisions/30274/view.
+	- local PDF: real_books_archive.gi/The Book.pdf.
+	- book index reference: TheBook:115; index pagination is not a verified PDF page number.
+	- retained the archived MusicXML rights notice; no redistribution permission is asserted.
+	- retained written melody, chord changes, pickups, repeats and numbered endings; lyrics omitted.
+	- imported explicit 7alt symbols using the book's altered-dominant notation where present.
+	- tempo is an editorial practice suggestion.
+	TODO:
+	- proofread the complete melody, harmony and form against the referenced PDF and check by ear.
+	- verify source attribution, copyright notice and reuse terms against the scan; only the archived MusicXML notice is retained.
+	- locate the tune in the exact local PDF edition; book-index page numbers may differ.
+{% endif %}
+{% if part == "ChordsWikifonia" %}\chordmode {
+	\startChords
+	\startSong
+
+	\myMark "A"
+	\startPart
+	s1 |
+	c1 |
+	a2:m a2:7 |
+	d1:m7 | \myEndLine
+	f1:m |
+	c2 g2 |
+	d1:9 |
+	s1 | \myEndLine
+	f1:m |
+	s1 |
+	g1 |
+	g1:7 | \myEndLine
+	c1 |
+	a1:7 |
+	d1:m7 |
+	f1:m | \myEndLine
+	c2 g2 |
+	d1:9 |
+	s1 |
+	f1:m | \myEndLine
+	s1 |
+	g1 |
+	g2 |
+	a1:m | \myEndLine
+	f2:maj7 e2:7 |
+	s1 |
+	s2 b2:7 |
+	e1:m | \myEndLine
+	g2 a2:7 |
+	f1:m |
+	g1:7 |
+	c1 | \myEndLine
+	s4 a2.:7 |
+	d1:m7 |
+	f1:m |
+	c2 g2 | \myEndLine
+	a1:m |
+	d1:7 |
+	f2 c2 |
+	d2:m7 g2:7 | \myEndLine
+	c1 |
+	f1:m |
+	c1 |
+	f1:m | \myEndLine
+	c1 |
+	\endBar
+	\endPart
+
+	\endSong
+	\endChords
+}
+{% endif %}
+{% if part == "VoiceWikifonia" %}\absolute {
+	\tempo "Moderato" 4 = 120
+	\time 4/4
+	\key c \major
+
+	r2 e'8 e'16 a'16 ~ a'8 e'16 g'16 ~ |
+	g'1 ~ |
+	g'4 r8 e'8 a'8 g'8 f'8 e'8 |
+	f'8 d'8 ~ d'2. ~ |
+	d'4 r4 as'8 g'16 g'16 ~ g'8 f'8 |
+	e'2 g'2 |
+	c''1 ~ |
+	c''4 ^ "N.C." r4 e'8 e'8 a'8 e'16 d'16 ~ |
+	d'8 r8 d'8 e'8 f'8 as'4 d'8 ~ |
+	d'8 r8 d'8 e'8 f'8 c''8 ~ c''4 |
+	b'1 ~ |
+	b'4 r4 _ "N.C." e'8 e'16 a'16 ~ a'8 e'8 |
+	g'1 ~ |
+	g'4 r8 e'8 a'8 g'8 f'8 e'8 |
+	f'8 d'8 ~ d'2. ~ |
+	d'4 r4 as'8 g'16 g'16 ~ g'8 f'8 |
+	e'2 g'2 |
+	c''1 ~ |
+	c''4 ^ "N.C." r4 e'8 e'8 a'8 e'16 d'16 ~ |
+	d'8 r8 d'8 e'8 f'8 as'4 d'8 ~ |
+	d'8 r8 d'8 e'8 f'8 c''8 ~ c''4 |
+	b'1 ~ |
+	\time 2/4 b'2 |
+	\time 4/4 c''1 ~ |
+	c''4 r4 b'8 c''8 d''8 b'8 |
+	c''1 ~ - "Ajm" |
+	c''4 r4 a'8 b'8 c''8 a'8 |
+	b'1 ~ |
+	b'4 r4 g'8 a'8 bes'8 g'8 |
+	as'2 g'2 |
+	r2 e'8 ^ "N.C." e'16 a'16 ~ a'8 e'16 g'16 ~ |
+	g'1 ~ |
+	g'4 r8 e'8 a'8 g'8 f'8 e'8 |
+	f'8 d'8 ~ d'2. ~ |
+	d'4 r4 as'8 g'16 g'16 ~ g'8 f'16 e'16 ~ |
+	e'2 g'2 |
+	c''1 ~ |
+	c''2 r4 e''8 d''16 c''16 ~ |
+	c''4 e''8 d''16 c''16 ~ c''4 e''8 d''16 c''16 ~ |
+	c''2 d''2 |
+	c''1 |
+	r4 d'8 e'8 f'8 b'8 ~ b'4 |
+	c''1 |
+	r4 d'8 e'8 f'8 b'8 ~ b'4 |
+	c''1 |
+	\endBar
+}
+{% endif %}

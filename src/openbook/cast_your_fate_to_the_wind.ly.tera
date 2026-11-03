@@ -1,0 +1,180 @@
+{#
+default_version = "Wikifonia"
+
+[attributes]
+title = "Cast Your Fate To The Wind"
+style = "Jazz"
+composer = "Vince Guaraldi"
+piece = "Standard"
+typesetter = "OpenBook contributors (MusicXML import)"
+completion = "3"
+uuid = "b7e0fc65-126e-5b97-8619-d0c929b45ae1"
+location = "Hal_Leonard_Real_Jazz_Book:76"
+copyright = "All Rights Reserved"
+copyrightextra = "Archived MusicXML notice retained; underlying music is not relicensed."
+
+[versions.Wikifonia]
+doChords = true
+doVoice = true
+doLyrics = false
+doLyricsmore = false
+doLyricsmoremore = false
+doChordBars = false
+doGuitar = false
+doExtra = false
+doPrep = false
+doOwn = false
+#}
+{% if part == "Vars" %}
+{% endif %}
+{% if part == "Doc" %}
+	DONE:
+	- imported melody and chord changes from real_books_archive.gi/Wikifonia.tar.xz: Wikifonia/Vince Guaraldi, Carel Werver - Cast Your Fate To The Wind.mxl.
+	- source revision: http://wikifonia.org/node/9372/revisions/12833/view.
+	- local PDF: real_books_archive.gi/Hal Leonard Real Jazz Book.pdf.
+	- book index reference: Hal_Leonard_Real_Jazz_Book:76; index pagination is not a verified PDF page number.
+	- retained the archived MusicXML rights notice; no redistribution permission is asserted.
+	- retained written melody, chord changes, pickups, repeats and numbered endings; lyrics omitted.
+	- imported explicit 7alt symbols using the book's altered-dominant notation where present.
+	- tempo is an editorial practice suggestion.
+	TODO:
+	- proofread the complete melody, harmony and form against the referenced PDF and check by ear.
+	- verify source attribution, copyright notice and reuse terms against the scan; only the archived MusicXML notice is retained.
+	- locate the tune in the exact local PDF edition; book-index page numbers may differ.
+	- verify complete D.C./D.S./coda/Fine navigation and playback; printed directions are not a playback guarantee.
+{% endif %}
+{% if part == "ChordsWikifonia" %}\chordmode {
+	\startChords
+	\startSong
+
+	\myMark "A"
+	\startPart
+	s1 |
+	c1 |
+	f1 |
+	c1*2/3/f bes1*1/3/f | \myEndLine
+	s1 |
+	c1/f |
+	f1 |
+	bes2 c2:7 | \myEndLine
+	f2 bes2 |
+	c2 bes2 |
+	f2 bes2 |
+	c2 bes2 | \myEndLine
+	c1/f |
+	f1 |
+	c1*2/3/f bes1*1/3/f |
+	s1 | \myEndLine
+	c1/f |
+	f1 |
+	bes2 c2:7 |
+	f2 bes2 | \myEndLine
+	c2 bes2 |
+	f2 bes2 |
+	c2 bes2 |
+	f1*5/8 c4.:7 | \myEndLine
+	f1 |
+	bes1*5/8 c4.:7 |
+	f1 |
+	bes1*5/8 c4.:7 | \myEndLine
+	f1 |
+	bes1*5/8 c4.:7 |
+	f1 |
+	s2 c2:9 | \myEndLine
+	f1 |
+	bes2 c2:7 |
+	f1 |
+	bes2 c2:7 | \myEndLine
+	f1 |
+	s1 |
+	\repeat volta 2 {
+	c1/f |
+	f1 | \myEndLine
+	c1/f |
+	bes1/f |
+	c1/f |
+	f1 | \myEndLine
+	bes2 c2:7 |
+	} \alternative {
+	{
+	f2 bes2 |
+	c2 bes2 |
+	f2 bes2 | \myEndLine
+	c2 bes2 | \myEndLineVoltaNotLast
+	}
+	{
+	f1 | \myEndLineVoltaLast
+	}
+	}
+	\endBar
+	\endPart
+
+	\endSong
+	\endChords
+}
+{% endif %}
+{% if part == "VoiceWikifonia" %}\absolute {
+	\tempo "Moderato" 4 = 120
+	\time 2/2
+	\key f \major
+
+	r2 r4. e'8 |
+	e''4 c''8 g'8 ~ g'4 r8 a8 |
+	a'4 f'8 c'8 ~ c'4 r8 e'8 |
+	\times 2/3 { e''4 c''4 g'4 } \times 2/3 { g'4 bes'4 f'4 } |
+	d'2. r8 e'8 |
+	e''4 c''8 g'8 ~ g'4 r8 a16 a16 |
+	a'4 f'8 c'8 ~ c'8 a8 c'8 f'8 |
+	d'4 f'8 d'8 ~ d'8 e'8 g'8 f'8 ~ |
+	f'2 r2 |
+	r2 r2 |
+	r2 r2 |
+	r2 r4. e'8 |
+	e''4 c''8 g'8 ~ g'4 r8 a8 |
+	a'4 f'8 c'8 ~ c'4 r8 e'8 |
+	\times 2/3 { e''4 c''4 g'4 } \times 2/3 { g'4 bes'4 f'4 } |
+	d'2. r8 e'8 |
+	e''4 c''8 g'8 ~ g'4 r8 a8 |
+	a'4 f'8 c'8 ~ c'8 a8 c'8 f'8 |
+	d'4 f'8 d'8 ~ d'8 e'8 g'8 f'8 ~ |
+	f'2 r2 |
+	r2 r2 |
+	r2 r2 |
+	r2 r2 |
+	r2 r8 - "" c'4. |
+	d'4 a'4 a'8 g'8 f'4 |
+	g'4 f'8 d'8 r8 c'4. |
+	d'4 a'4 a'8 ( g'8 ) f'4 |
+	g'4 f'8 d'8 r8 c'4. |
+	d'4 a'4 a'8 ( g'8 ) f'4 |
+	g'4 f'8 ( d'8 ) r8 c'4. |
+	d'4 a'4 a'8 ( g'8 ) f'4 |
+	g'4 f'8 ( d'8 ) r2 |
+	r8 d'4. d'4 r4 |
+	r2 r2 |
+	r8 d'4. d'4 r4 |
+	r2 r2 |
+	r2 r2 |
+	r2 r4. e'8 |
+	\repeat volta 2 {
+	\textMark \markup { \musicglyph "scripts.segno" } e''4 c''8 g'8 ~ g'4 r8 a8 |
+	a'4 f'8 c'8 ~ c'4 r8 e'8 |
+	\times 2/3 { e''4 c''4 g'4 } \times 2/3 { g'4 bes'4 f'4 } |
+	d'2. r8 e'8 |
+	e''4 c''8 g'8 ~ g'4 r8 a8 |
+	a'4 f'8 c'8 ~ c'8 a8 c'8 f'8 |
+	d'4 f'8 d'8 ~ d'8 e'8 g'8 f'8 ~ |
+	} \alternative {
+	{
+	f'2 r2 |
+	r2 r2 |
+	r2 r2 |
+	r2 r4. e'8 |
+	}
+	{
+	f'2 r2 |
+	}
+	}
+	\endBar
+}
+{% endif %}

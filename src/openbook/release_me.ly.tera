@@ -1,0 +1,129 @@
+{#
+default_version = "Wikifonia"
+
+[attributes]
+title = "Release Me"
+style = "Standard"
+composer = "Dub Williams, Eddie Miller, Robert Yount"
+piece = "Standard"
+typesetter = "OpenBook contributors (MusicXML import)"
+completion = "3"
+uuid = "19b7433d-65e2-50cd-bbac-681f15167910"
+location = "TheBook:390"
+copyright = "All Rights Reserved"
+copyrightextra = "Archived MusicXML notice retained; underlying music is not relicensed."
+
+[versions.Wikifonia]
+doChords = true
+doVoice = true
+doLyrics = false
+doLyricsmore = false
+doLyricsmoremore = false
+doChordBars = false
+doGuitar = false
+doExtra = false
+doPrep = false
+doOwn = false
+#}
+{% if part == "Vars" %}
+{% endif %}
+{% if part == "Doc" %}
+	DONE:
+	- imported melody and chord changes from real_books_archive.gi/Wikifonia.tar.xz: Wikifonia/Dub Williams, Eddie Miller, Robert Yount - Release Me.mxl.
+	- source revision: http://wikifonia.org/node/6052/revisions/8384/view.
+	- local PDF: real_books_archive.gi/The Book.pdf.
+	- book index reference: TheBook:390; index pagination is not a verified PDF page number.
+	- retained the archived MusicXML rights notice; no redistribution permission is asserted.
+	- retained written melody, chord changes, pickups, repeats and numbered endings; lyrics omitted.
+	- imported explicit 7alt symbols using the book's altered-dominant notation where present.
+	- tempo is an editorial practice suggestion.
+	TODO:
+	- proofread the complete melody, harmony and form against the referenced PDF and check by ear.
+	- verify source attribution, copyright notice and reuse terms against the scan; only the archived MusicXML notice is retained.
+	- locate the tune in the exact local PDF edition; book-index page numbers may differ.
+{% endif %}
+{% if part == "ChordsWikifonia" %}\chordmode {
+	\startChords
+	\startSong
+
+	\myMark "A"
+	\startPart
+	c1 |
+	c1:7 |
+	f1 |
+	s1 | \myEndLine
+	g1:7 |
+	s1 |
+	c1 |
+	s1 | \myEndLine
+	s1 |
+	c1:7 |
+	f1 |
+	s1 | \myEndLine
+	c1 |
+	s2 g2:7 |
+	c1 |
+	f1 | \myEndLine
+	c1 |
+	c1:7 |
+	f1 |
+	s1 | \myEndLine
+	g1:7 |
+	s1 |
+	c1 |
+	s1 | \myEndLine
+	s1 |
+	c1:7 |
+	f1 |
+	s1 | \myEndLine
+	c1 |
+	s2 g2:7 |
+	c1 |
+	f2. c4 | \myEndLine
+	\endBar
+	\endPart
+
+	\endSong
+	\endChords
+}
+{% endif %}
+{% if part == "VoiceWikifonia" %}\absolute {
+	\tempo "Moderato" 4 = 120
+	\time 4/4
+	\key c \major
+
+	g''2. fis''4 |
+	f''4 e''4 g''4 f''4 |
+	a'1 ~ |
+	a'2. a'4 |
+	b'2. a'4 |
+	g'4 f''4 f''4 g''4 |
+	e''1 ~ |
+	e''2 r4 g''4 |
+	g''2. fis''4 |
+	f''4 e''4 g''4 f''4 |
+	a'1 ~ |
+	a'2 r4 a''4 |
+	g''4 e''2 f''4 |
+	e''4 g'4 b'4 d''4 |
+	c''1 ~ |
+	c''2. r4 |
+	g''2. fis''4 |
+	f''4 e''4 g''4 f''4 |
+	a'1 ~ |
+	a'2. a'4 |
+	b'2. a'4 |
+	g'4 f''4 f''4 g''4 |
+	e''1 ~ |
+	e''2 r4 g''4 |
+	g''2 r4 fis''4 |
+	f''4 e''4 g''4 f''4 |
+	a'1 ~ |
+	a'2 r4 a''4 |
+	g''4 e''2 f''4 |
+	e''4 g'4 b'4 d''4 |
+	c''1 ~ |
+	c''2. r4 |
+	\endBar
+}
+{% endif %}

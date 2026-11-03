@@ -1,0 +1,143 @@
+{#
+default_version = "Wikifonia"
+
+[attributes]
+title = "MacNamara's Band"
+style = "Standard"
+composer = "Shamus O'Connor"
+piece = "Standard"
+typesetter = "OpenBook contributors (MusicXML import)"
+completion = "3"
+uuid = "a1bd7bf8-f20d-5670-bb54-5c729fe6a133"
+location = "TheBook:492"
+copyright = "All Rights Reserved"
+copyrightextra = "Archived MusicXML notice retained; underlying music is not relicensed."
+
+[versions.Wikifonia]
+doChords = true
+doVoice = true
+doLyrics = false
+doLyricsmore = false
+doLyricsmoremore = false
+doChordBars = false
+doGuitar = false
+doExtra = false
+doPrep = false
+doOwn = false
+#}
+{% if part == "Vars" %}
+{% endif %}
+{% if part == "Doc" %}
+	DONE:
+	- imported melody and chord changes from real_books_archive.gi/Wikifonia.tar.xz: Wikifonia/Shamus O'Connor, John J. Stamford - MacNamara's Band.mxl.
+	- source revision: http://wikifonia.org/node/14665/revisions/28440/view.
+	- local PDF: real_books_archive.gi/The Book.pdf.
+	- book index reference: TheBook:492; index pagination is not a verified PDF page number.
+	- retained the archived MusicXML rights notice; no redistribution permission is asserted.
+	- retained written melody, chord changes, pickups, repeats and numbered endings; lyrics omitted.
+	- imported explicit 7alt symbols using the book's altered-dominant notation where present.
+	- tempo is an editorial practice suggestion.
+	TODO:
+	- proofread the complete melody, harmony and form against the referenced PDF and check by ear.
+	- verify source attribution, copyright notice and reuse terms against the scan; only the archived MusicXML notice is retained.
+	- locate the tune in the exact local PDF edition; book-index page numbers may differ.
+{% endif %}
+{% if part == "ChordsWikifonia" %}\chordmode {
+	\startChords
+	\startSong
+
+	\myMark "A"
+	\startPart
+	\partial 4. s4. |
+	f2. |
+	s2. |
+	s2. | \myEndLine
+	s2. |
+	s2. |
+	bes2. |
+	f2. | \myEndLine
+	s2. |
+	c4. c4. |
+	s2. |
+	f2. | \myEndLine
+	s2. |
+	f2. |
+	s2. |
+	s2. | \myEndLine
+	bes2. |
+	f2. |
+	s4. c4. |
+	f2. | \myEndLine
+	s2. |
+	f2. |
+	s2. |
+	s2. | \myEndLine
+	f2. |
+	s2. |
+	bes2. |
+	s4 f2 | \myEndLine
+	s2. |
+	c4. c4. |
+	f2. |
+	s2. | \myEndLine
+	s2. |
+	f2. |
+	s2. |
+	bes2. | \myEndLine
+	f2. |
+	s4. c4. |
+	f4.
+	\endBar
+	\endPart
+
+	\endSong
+	\endChords
+}
+{% endif %}
+{% if part == "VoiceWikifonia" %}\absolute {
+	\tempo "Moderato" 4 = 120
+	\time 6/8
+	\key f \major
+
+	\partial 4. c''4 ^ "" ^ "Verse" c''8 |
+	a'4 a'8 a'4 a'8 |
+	a'4 a'8 a'4 a'8 |
+	a'4 a'8 g'4 f'8 |
+	c'4. ( c'4 ) s8 |
+	a'8 s8*5 |
+	bes'4 bes'8 bes'4 bes'8 |
+	c''4 c''8 f'4 g'8 |
+	a'4 a'8 g'4 f'8 |
+	g'4. s4. |
+	c''4. s4. |
+	a'4 a'8 a'4 a'8 |
+	a'4 a'8 a'4 a'8 |
+	a'4 a'8 g'4 f'8 |
+	c'4. ( c'4 ) s8 |
+	a'8 s8*5 |
+	bes'4 bes'8 bes'4 bes'8 |
+	c''4 c''8 f'4 g'8 |
+	a'4 a'8 g'4 g'8 |
+	f'4. s4. |
+	c''4 ^ "Refrain" c''8 s4. |
+	a'4 a'8 a'8 a'8 a'8 |
+	a'4 a'8 a'8 a'8 a'8 |
+	a'4 a'8 g'4 f'8 |
+	c'4. ( c'4 ) s8 |
+	a'8 s8*5 |
+	bes'4 bes'8 bes'4 bes'8 |
+	c''4 c''8 f'4 g'8 |
+	a'4 a'8 g'4 f'8 |
+	g'4. c''4. |
+	a'8 a'8 a'8 a'8 a'8 a'8 |
+	a'8 a'8 a'8 a'8 a'8 a'8 |
+	a'8 a'8 a'8 g'4 f'8 |
+	c'4. ( c'4 ) s8 |
+	a'8 s8*5 |
+	bes'4 bes'8 bes'4 bes'8 |
+	c''4. f'4 g'8 |
+	a'4 a'8 g'4 g'8 |
+	f'4.
+	\endBar
+}
+{% endif %}

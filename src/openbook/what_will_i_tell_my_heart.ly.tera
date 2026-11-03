@@ -1,0 +1,131 @@
+{#
+default_version = "Wikifonia"
+
+[attributes]
+title = "What Will I Tell My Heart"
+style = "Jazz"
+composer = "Jack Lawrence, Pete Tinturin"
+piece = "Standard"
+typesetter = "OpenBook contributors (MusicXML import)"
+completion = "3"
+uuid = "264242c1-79e1-5bd4-9d02-bd2b7cc89bd8"
+location = "Hal_Leonard_Real_Jazz_Book:366"
+copyright = "All Rights Reserved"
+copyrightextra = "Archived MusicXML notice retained; underlying music is not relicensed."
+
+[versions.Wikifonia]
+doChords = true
+doVoice = true
+doLyrics = false
+doLyricsmore = false
+doLyricsmoremore = false
+doChordBars = false
+doGuitar = false
+doExtra = false
+doPrep = false
+doOwn = false
+#}
+{% if part == "Vars" %}
+{% endif %}
+{% if part == "Doc" %}
+	DONE:
+	- imported melody and chord changes from real_books_archive.gi/Wikifonia.tar.xz: Wikifonia/Jack Lawrence & Pete Tinturin, Irving Gordon - What Will I Tell My Heart.mxl.
+	- source revision: http://wikifonia.org/node/22618/revisions/29757/view.
+	- local PDF: real_books_archive.gi/Hal Leonard Real Jazz Book.pdf.
+	- book index reference: Hal_Leonard_Real_Jazz_Book:366; index pagination is not a verified PDF page number.
+	- retained the archived MusicXML rights notice; no redistribution permission is asserted.
+	- retained written melody, chord changes, pickups, repeats and numbered endings; lyrics omitted.
+	- imported explicit 7alt symbols using the book's altered-dominant notation where present.
+	- tempo is an editorial practice suggestion.
+	TODO:
+	- proofread the complete melody, harmony and form against the referenced PDF and check by ear.
+	- verify source attribution, copyright notice and reuse terms against the scan; only the archived MusicXML notice is retained.
+	- locate the tune in the exact local PDF edition; book-index page numbers may differ.
+{% endif %}
+{% if part == "ChordsWikifonia" %}\chordmode {
+	\startChords
+	\startSong
+
+	\myMark "A"
+	\startPart
+	s1 |
+	bes1:maj7 |
+	f2:m7 bes2:7 |
+	ees1:6 | \myEndLine
+	c1:m7.5- |
+	bes1/f |
+	g1:7 |
+	s2 f4:7 f4:aug7 | \myEndLine
+	bes2:maj7 c4:m7 f4:7.9- |
+	bes1:maj7 |
+	f2:m7 bes2:7 |
+	ees1:6 | \myEndLine
+	c1:m7.5- |
+	bes1/f |
+	g1:7 |
+	s2 f2:7 | \myEndLine
+	bes1 |
+	f1:m7 |
+	bes1:aug7 |
+	ees2:6 bes2:aug7 | \myEndLine
+	ees1:6 |
+	g1:m7 |
+	c1:aug7 |
+	f1:9 | \myEndLine
+	f1:9.5+ |
+	bes1:maj7 |
+	f2:m7 bes2:7 |
+	ees1:6 | \myEndLine
+	c1:m7.5- |
+	bes1/f |
+	g1:7 |
+	s2 f2:7 | \myEndLine
+	bes1 |
+	\endBar
+	\endPart
+
+	\endSong
+	\endChords
+}
+{% endif %}
+{% if part == "VoiceWikifonia" %}\absolute {
+	\tempo "Moderato" 4 = 120
+	\time 4/4
+	\key bes \major
+
+	r2 r4 r8 f'8 |
+	d''8 d''8 d''8 d''8 ~ d''4. cis''8 |
+	c''8 c''4. ~ c''4. f'8 |
+	c''8 c''8 c''8 c''8 ~ c''8 bes'8 g'8 es'8 ~ |
+	es'2 ~ es'4. es'8 |
+	d'8 es'8 f'8 a'8 ~ a'4. gis'8 |
+	g'8 g'4. ~ g'4. d'8 |
+	es'8 - "Vm7" g'8 bes'8 d''8 ~ d''4 cis''8 d''8 ~ |
+	d''2 r4 r8 f'8 |
+	d''8 d''8 d''8 d''8 ~ d''4. cis''8 |
+	c''8 c''4. ~ c''4. f'8 |
+	c''8 c''8 c''8 c''8 ~ c''8 bes'8 g'8 es'8 ~ |
+	es'2 ~ es'4. es'8 |
+	d'8 es'8 f'8 a'8 ~ a'4. gis'8 |
+	g'8 g'4. ~ g'4. d'8 |
+	es'8 - "Vm7" g'8 bes'8 d''8 ~ d''4 d''8 bes'8 ~ |
+	bes'2. d''8. cis''16 |
+	c''8. d''16 f'2 d''8. cis''16 |
+	c''8. d''16 fis'2 fis'8. g'16 |
+	bes'2. fis'8. g'16 |
+	bes'2. d''8. cis''16 |
+	c''8. d''16 g'2 d''8. cis''16 |
+	c''8. d''16 gis'2 gis'8. a'16 |
+	c''2. e'8. f'16 |
+	cis''2 ~ cis''4. f'8 |
+	d''8 d''8 d''8 d''8 ~ d''4. cis''8 |
+	c''8 c''4. ~ c''4. f'8 |
+	c''8 c''8 c''8 c''8 ~ c''8 bes'8 g'8 es'8 ~ |
+	es'2 ~ es'4. es'8 |
+	d'8 es'8 f'8 a'8 ~ a'4. gis'8 |
+	g'8 g'4. ~ g'4. d'8 |
+	es'8 - "Vm7" g'8 bes'8 d''8 ~ d''4 d''8 bes'8 ~ |
+	bes'2. r4 |
+	\endBar
+}
+{% endif %}

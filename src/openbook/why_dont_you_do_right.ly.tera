@@ -1,0 +1,95 @@
+{#
+default_version = "Wikifonia"
+
+[attributes]
+title = "Why Don't You Do Right"
+style = "Jazz"
+composer = "Kansas Joe McCoy"
+piece = "Standard"
+typesetter = "OpenBook contributors (MusicXML import)"
+completion = "3"
+uuid = "01794aaf-d053-5c11-9057-392c5066fbe7"
+location = "Hal_Leonard_Real_Jazz_Book:369"
+copyright = "All Rights Reserved"
+copyrightextra = "Archived MusicXML notice retained; underlying music is not relicensed."
+
+[versions.Wikifonia]
+doChords = true
+doVoice = true
+doLyrics = false
+doLyricsmore = false
+doLyricsmoremore = false
+doChordBars = false
+doGuitar = false
+doExtra = false
+doPrep = false
+doOwn = false
+#}
+{% if part == "Vars" %}
+{% endif %}
+{% if part == "Doc" %}
+	DONE:
+	- imported melody and chord changes from real_books_archive.gi/Wikifonia.tar.xz: Wikifonia/Kansas Joe McCoy - Why Don't You Do Right.mxl.
+	- source revision: http://wikifonia.org/node/14102/revisions/28327/view.
+	- local PDF: real_books_archive.gi/Hal Leonard Real Jazz Book.pdf.
+	- book index reference: Hal_Leonard_Real_Jazz_Book:369; index pagination is not a verified PDF page number.
+	- retained the archived MusicXML rights notice; no redistribution permission is asserted.
+	- retained written melody, chord changes, pickups, repeats and numbered endings; lyrics omitted.
+	- imported explicit 7alt symbols using the book's altered-dominant notation where present.
+	- tempo is an editorial practice suggestion.
+	TODO:
+	- proofread the complete melody, harmony and form against the referenced PDF and check by ear.
+	- verify source attribution, copyright notice and reuse terms against the scan; only the archived MusicXML notice is retained.
+	- locate the tune in the exact local PDF edition; book-index page numbers may differ.
+{% endif %}
+{% if part == "ChordsWikifonia" %}\chordmode {
+	\startChords
+	\startSong
+
+	\myMark "A"
+	\startPart
+	\partial 4 s4 |
+	\repeat volta 2 {
+	d2:m d2:m7 |
+	bes2:7 a2:7 |
+	d2:m d2:m7 | \myEndLine
+	bes2:7 a2:7 |
+	g1:m7 |
+	s2 a2:7 |
+	d2:m d2:m7 | \myEndLine
+	bes2:7 a2:7 |
+	g2:m7 a2:7 |
+	g2:m7 a2:7 |
+	d2:m d2:m7 | \myEndLine
+	bes2:7 a2:7 |
+	}
+	\endBar
+	\endPart
+
+	\endSong
+	\endChords
+}
+{% endif %}
+{% if part == "VoiceWikifonia" %}\absolute {
+	\tempo "Moderato" 4 = 120
+	\time 2/2
+	\key f \major
+
+	\partial 4 r8 a8 |
+	\repeat volta 2 {
+	\mark \markup { \box { A } } f'4 ^ "" f'8 f'8 d'8 e'8 d'8 b8 |
+	r8 f'8 d'8 e'8 ~ e'4. a8 |
+	f'4 f'8 f'8 d'8 e'8 d'8 b8 |
+	r8 f'8 d'8 e'8 ~ e'8 d'8 e'8 d'8 |
+	\mark \markup { \box { B } } f'8 d'4. ~ d'2 ~ |
+	d'8 f'4 e'8 d'8 d'8 e'4 |
+	d'1 ( |
+	d'1 ) |
+	r8 f'8 f'8 d'8 e'4. cis'8 |
+	r8 f'8 f'8 cis'8 d'4 e'8 d'8 ( |
+	d'1 ) ( |
+	d'2. ) r8 a8 |
+	}
+	\endBar
+}
+{% endif %}

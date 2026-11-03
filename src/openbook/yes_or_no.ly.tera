@@ -1,0 +1,150 @@
+{#
+default_version = "Wikifonia"
+
+[attributes]
+title = "Yes or No"
+style = "Jazz"
+composer = "Wayne Shorter"
+piece = "Standard"
+typesetter = "OpenBook contributors (MusicXML import)"
+completion = "3"
+uuid = "0b49f1ca-dc01-5922-b6b3-fb42d1e53b0e"
+location = "New_Real_1:408"
+copyright = "All Rights Reserved"
+copyrightextra = "Archived MusicXML notice retained; underlying music is not relicensed."
+
+[versions.Wikifonia]
+doChords = true
+doVoice = true
+doLyrics = false
+doLyricsmore = false
+doLyricsmoremore = false
+doChordBars = false
+doGuitar = false
+doExtra = false
+doPrep = false
+doOwn = false
+#}
+{% if part == "Vars" %}
+{% endif %}
+{% if part == "Doc" %}
+	DONE:
+	- imported melody and chord changes from real_books_archive.gi/Wikifonia.tar.xz: Wikifonia/Wayne Shorter - Yes and No.mxl.
+	- source revision: http://wikifonia.org/node/3867/revisions/5083/view.
+	- local PDF: real_books_archive.gi/New Real Book 1.pdf.
+	- book index reference: New_Real_1:408; index pagination is not a verified PDF page number.
+	- retained the archived MusicXML rights notice; no redistribution permission is asserted.
+	- retained written melody, chord changes, pickups, repeats and numbered endings; lyrics omitted.
+	- imported explicit 7alt symbols using the book's altered-dominant notation where present.
+	- tempo taken from archived MusicXML.
+	TODO:
+	- proofread the complete melody, harmony and form against the referenced PDF and check by ear.
+	- verify source attribution, copyright notice and reuse terms against the scan; only the archived MusicXML notice is retained.
+	- locate the tune in the exact local PDF edition; book-index page numbers may differ.
+	- verify complete D.C./D.S./coda/Fine navigation and playback; printed directions are not a playback guarantee.
+{% endif %}
+{% if part == "ChordsWikifonia" %}\chordmode {
+	\startChords
+	\startSong
+
+	\myMark "A"
+	\startPart
+	\partial 2 s2 |
+	\repeat volta 2 {
+	d1:sus4.7.13 |
+	s1 |
+	s1 | \myEndLine
+	s1 |
+	d1:maj9 |
+	s1 |
+	s1 | \myEndLine
+	s1 |
+	a2:m7 d2:7 |
+	g2:maj7 c2:m7 |
+	bes1:maj7 | \myEndLine
+	s1 |
+	} \alternative {
+	{
+	e1:m9 |
+	s1 | \myEndLineVoltaNotLast
+	}
+	{
+	e1:m9 | \myEndLine
+	s1 | \myEndLineVoltaLast
+	}
+	}
+	a1:m7.5- |
+	s1 |
+	d1:7.9- | \myEndLine
+	s1 |
+	g1:m9 |
+	s1 |
+	c1:13 | \myEndLine
+	s1 |
+	f1:m9 |
+	s1 |
+	bes1:13 | \myEndLine
+	s1 |
+	ees1:maj7 |
+	s1 |
+	a1:m9 | \myEndLine
+	s1 |
+	bes1:maj7 |
+	e1:m9 |
+	\endBar
+	\endPart
+
+	\endSong
+	\endChords
+}
+{% endif %}
+{% if part == "VoiceWikifonia" %}\absolute {
+	\tempo "Moderato" 4 = 260
+	\time 4/4
+	\key c \major
+
+	\partial 2 b'8 ^ "=260" a'8 d''8 g''8 |
+	\repeat volta 2 {
+	\textMark \markup { \musicglyph "scripts.segno" } \mark \markup { \box { A } } e''1 ~ |
+	e''1 ~ |
+	e''1 ~ |
+	e''2 b'8 a'8 d''8 fis''8 |
+	e''1 ~ |
+	e''1 ~ |
+	e''1 ~ |
+	e''2 a''8 gis''8 a''8 b''8 |
+	c'''4. d'''16 c'''16 b''4 fis''8 a''8 |
+	a''4. d''8 a''8 f''8 es''8 f''8 |
+	d''1 ~ |
+	\textMark \markup { \musicglyph "scripts.coda" } d''1 ~ |
+	} \alternative {
+	{
+	d''1 ~ |
+	d''2 b'8 a'8 d''8 g''8 |
+	}
+	{
+	d''1 ~ |
+	d''1 |
+	}
+	}
+	\mark \markup { \box { B } } d''2 es''4. g''8 ~ |
+	g''2 r8 bes''4. |
+	a''2 fis''4. es''8 ~ |
+	es''2 r8 bes''4. |
+	a''2 f''4. d''8 ~ |
+	d''2 r8 bes''4. |
+	a''1 ~ |
+	a''2 r8 as''4. |
+	g''2 as''4. c'''8 ~ |
+	c'''2 r8 es'''4. |
+	d'''2 bes''4. g''8 ~ |
+	g''2 r8 es''4. |
+	d'''2 bes''4. g''8 |
+	g''2 es''4. g''8 ~ |
+	g''1 ~ |
+	g''2 b'8 a'8 d''8 f''8 |
+	\textMark \markup { \musicglyph "scripts.coda" } d''2 e''8 g''8 b''8 g''8 |
+	d'''1 ^\fermata |
+	\endBar
+}
+{% endif %}

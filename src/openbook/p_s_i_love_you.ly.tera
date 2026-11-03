@@ -1,0 +1,134 @@
+{#
+default_version = "Wikifonia"
+
+[attributes]
+title = "P. S. I Love You"
+style = "Jazz"
+composer = "Gordon Hll Jenkins"
+piece = "Standard"
+typesetter = "OpenBook contributors (MusicXML import)"
+completion = "3"
+uuid = "3045b863-1e0b-5036-96f8-7927e8462a4d"
+location = "Hal_Leonard_Real_Jazz_Book:285"
+copyright = "All Rights Reserved"
+copyrightextra = "Archived MusicXML notice retained; underlying music is not relicensed."
+
+[versions.Wikifonia]
+doChords = true
+doVoice = true
+doLyrics = false
+doLyricsmore = false
+doLyricsmoremore = false
+doChordBars = false
+doGuitar = false
+doExtra = false
+doPrep = false
+doOwn = false
+#}
+{% if part == "Vars" %}
+{% endif %}
+{% if part == "Doc" %}
+	DONE:
+	- imported melody and chord changes from real_books_archive.gi/Wikifonia.tar.xz: Wikifonia/Gordon Hll Jenkins, Johnny Mercer - P. S. I Love You.mxl.
+	- source revision: http://wikifonia.org/node/9120/revisions/12576/view.
+	- local PDF: real_books_archive.gi/Hal Leonard Real Jazz Book.pdf.
+	- book index reference: Hal_Leonard_Real_Jazz_Book:285; index pagination is not a verified PDF page number.
+	- retained the archived MusicXML rights notice; no redistribution permission is asserted.
+	- retained written melody, chord changes, pickups, repeats and numbered endings; lyrics omitted.
+	- imported explicit 7alt symbols using the book's altered-dominant notation where present.
+	- tempo is an editorial practice suggestion.
+	TODO:
+	- proofread the complete melody, harmony and form against the referenced PDF and check by ear.
+	- verify source attribution, copyright notice and reuse terms against the scan; only the archived MusicXML notice is retained.
+	- locate the tune in the exact local PDF edition; book-index page numbers may differ.
+	- verify editorial chord spacing in measures 28; the archive places successive symbols at the same offset.
+{% endif %}
+{% if part == "ChordsWikifonia" %}\chordmode {
+	\startChords
+	\startSong
+
+	\myMark "A"
+	\startPart
+	ees1 |
+	g1*11/16:m c1*5/16:7 |
+	f2:m bes2:7 |
+	c1:7 | \myEndLine
+	f1:7 |
+	bes1:7 |
+	ees2 f2:m |
+	bes1:7 | \myEndLine
+	ees1 |
+	g1*11/16:m c1*5/16:7 |
+	f2:m bes2:7 |
+	c1:7 | \myEndLine
+	f1:7 |
+	bes1:7 |
+	ees2 f2:m |
+	bes1 | \myEndLine
+	ees2:7 f2:m7 |
+	ees1:7 |
+	s8. aes1*13/16 |
+	s1 | \myEndLine
+	f1:7 |
+	s1 |
+	bes2:7 c2:7 |
+	f2:7 bes2:7 | \myEndLine
+	ees1 |
+	g2:m c2:7 |
+	f2:m bes2:7 |
+	bes2:m7 c2:7 | \myEndLine
+	f1:7 |
+	bes1:7 |
+	ees2 des2:7 |
+	ees4:maj7 ees2. | \myEndLine
+	aes2 e4:maj7 bes4:7.9- |
+	ees1:maj9 |
+	\endBar
+	\endPart
+
+	\endSong
+	\endChords
+}
+{% endif %}
+{% if part == "VoiceWikifonia" %}\absolute {
+	\tempo "Moderato" 4 = 120
+	\time 2/2
+	\key es \major
+
+	r4 es'8. f'16 g'8. bes'16 c''8. es''16 |
+	d''2 r8. c''16 bes'8. as'16 |
+	c''2 r8. bes'16 as'8. g'16 |
+	bes'1 |
+	r4 c'8. d'16 es'8. f'16 g'8. c''16 |
+	g'1 |
+	r4 es'4 es'4. es'8 |
+	es'4 f'2. |
+	r4 es'8. f'16 g'8. bes'16 c''8. es''16 |
+	d''2 r8. c''16 bes'8. as'16 |
+	c''2 r8. bes'16 as'8. g'16 |
+	bes'1 |
+	r4 c'8. d'16 es'8. f'16 g'8. c''16 |
+	g'1 |
+	r4 es'4 es'4. es'8 |
+	f'4 es'2. |
+	bes'4 bes'8. g'16 as'4 ~ as'8. f'16 |
+	g'8. g'16 es'8. f'16 f'8. g'16 ~ g'4 |
+	r8. bes'16 bes'8. bes'16 as'4 c'8 es'8 ~ |
+	es'1 |
+	c''4 c''8. a'16 bes'4 bes'8. f'16 |
+	a'8. a'16 f'8. g'16 ~ g'8. a'16 ~ a'4 |
+	r8. bes'16 bes'8. bes'16 c''4. c''8 |
+	es'4 es'8 f'8 ~ f'2 |
+	r4 es'8. f'16 g'8. bes'16 c''8. es''16 |
+	d''2 r8. c''16 bes'8. as'16 |
+	c''2 r8. bes'16 as'8. g'16 |
+	bes'1 |
+	r4 c'8. d'16 es'8. f'16 g'8. c''16 |
+	g'4 g'2. |
+	r4 es'4 es'4. es'8 |
+	f'4 es'2. |
+	c'4 es'4 as'4 ces''4 |
+	bes'1 |
+	\endBar
+}
+{% endif %}

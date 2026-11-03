@@ -1,0 +1,131 @@
+{#
+default_version = "Wikifonia"
+
+[attributes]
+title = "Don't You Know I Care"
+style = "Jazz"
+composer = "Duke Ellington"
+piece = "Standard"
+typesetter = "OpenBook contributors (MusicXML import)"
+completion = "3"
+uuid = "7644a496-0b4e-5e33-8698-e59ac7806d29"
+location = "Hal_Leonard_Real_Jazz_Book:98"
+copyright = "All Rights Reserved"
+copyrightextra = "Archived MusicXML notice retained; underlying music is not relicensed."
+
+[versions.Wikifonia]
+doChords = true
+doVoice = true
+doLyrics = false
+doLyricsmore = false
+doLyricsmoremore = false
+doChordBars = false
+doGuitar = false
+doExtra = false
+doPrep = false
+doOwn = false
+#}
+{% if part == "Vars" %}
+{% endif %}
+{% if part == "Doc" %}
+	DONE:
+	- imported melody and chord changes from real_books_archive.gi/Wikifonia.tar.xz: Wikifonia/Duke Ellington, Mack David - Don't You Know I Care.mxl.
+	- source revision: http://wikifonia.org/node/20562/revisions/27180/view.
+	- local PDF: real_books_archive.gi/Hal Leonard Real Jazz Book.pdf.
+	- book index reference: Hal_Leonard_Real_Jazz_Book:98; index pagination is not a verified PDF page number.
+	- retained the archived MusicXML rights notice; no redistribution permission is asserted.
+	- retained written melody, chord changes, pickups, repeats and numbered endings; lyrics omitted.
+	- imported explicit 7alt symbols using the book's altered-dominant notation where present.
+	- tempo is an editorial practice suggestion.
+	TODO:
+	- proofread the complete melody, harmony and form against the referenced PDF and check by ear.
+	- verify source attribution, copyright notice and reuse terms against the scan; only the archived MusicXML notice is retained.
+	- locate the tune in the exact local PDF edition; book-index page numbers may differ.
+{% endif %}
+{% if part == "ChordsWikifonia" %}\chordmode {
+	\startChords
+	\startSong
+
+	\myMark "A"
+	\startPart
+	\partial 2 s2 |
+	ees2:maj7 bes2:7.9- |
+	bes2:m7 ees2:7 |
+	f2:7 bes2:7 | \myEndLine
+	ees1:maj7 |
+	f2:m7 e2:7 |
+	ees2:maj7 c2:7.9- |
+	f2:m7 bes2:7.9- | \myEndLine
+	ees2:maj7 f4:m7 bes4:7 |
+	ees2:maj7 bes2:7.9- |
+	bes2:m7 ees2:7 |
+	f2:7 bes2:7 | \myEndLine
+	ees1:maj7 |
+	f2:m7 e2:7 |
+	ees2:maj7 c2:7.9- |
+	f2:m7 e2:7 | \myEndLine
+	ees2:maj7 a4.:m7.5- d8:7 |
+	g1:m7 |
+	a2:m7.5- d2:7 |
+	g2:m7 fis2:7 | \myEndLine
+	b1:maj7 |
+	ees1:m7 |
+	a1:dim7 |
+	b1:7 | \myEndLine
+	f2:m7 bes2:7 |
+	ees2:maj7 bes2:7.9- |
+	bes2:m7 ees2:7 |
+	f2:7 bes2:7 | \myEndLine
+	ees1:maj7 |
+	f2:m7 e2:7 |
+	ees2:maj7 c2:7.9- |
+	f2:m7 bes2:7.9- | \myEndLine
+	ees1:6 |
+	\endBar
+	\endPart
+
+	\endSong
+	\endChords
+}
+{% endif %}
+{% if part == "VoiceWikifonia" %}\absolute {
+	\tempo "Moderato" 4 = 120
+	\time 4/4
+	\key es \major
+
+	\partial 2 g'4 as'4 |
+	bes'2 b'2 |
+	c''1 |
+	\times 2/3 { b'4 c''4 b'4 } bes'4 g'8 c'8 ~ |
+	c'2 d'4 es'4 |
+	f'2 fis'2 |
+	g'1 |
+	\times 2/3 { g'4 bes'4 g'4 } ces''4 bes'8 g'8 ~ |
+	g'2 g'4 as'4 |
+	bes'2 b'2 |
+	c''1 |
+	\times 2/3 { b'4 c''4 b'4 } bes'4 g'8 c'8 ~ |
+	c'2 d'4 es'4 |
+	f'2 fis'2 |
+	g'1 |
+	\times 2/3 { as'4 bes'4 as'4 } ces''4 des''8 bes'8 ~ |
+	bes'2 ~ bes'4. es''8 |
+	d''8 bes'8 c''8 d''8 ~ d''4. des''8 |
+	c''8 a'8 bes'8 c''8 ~ c''4. ces''8 |
+	bes'8 bes'8 bes'8 bes'8 ~ bes'8 as'8 ges'8 es'8 ~ |
+	es'2. r8 f'8 |
+	ges'8 es'8 f'8 ges'8 ~ ges'4. as'8 |
+	ges'8 es'8 f'8 ges'8 ~ ges'2 |
+	r4 ges'8 f'8 as'4 ges'4 |
+	f'2 g'4 as'4 |
+	bes'2 b'2 |
+	c''1 |
+	\times 2/3 { b'4 c''4 b'4 } bes'4 g'8 c'8 ~ |
+	c'2 d'4 es'4 |
+	f'2 fis'2 |
+	g'1 |
+	\times 2/3 { as'4 bes'4 as'4 } ces''4 d'8 es'8 ~ |
+	es'2. r4 |
+	\endBar
+}
+{% endif %}

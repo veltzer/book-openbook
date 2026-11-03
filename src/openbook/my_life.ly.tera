@@ -1,0 +1,175 @@
+{#
+default_version = "Wikifonia"
+
+[attributes]
+title = "My Life"
+style = "Standard"
+composer = "Billy Joel"
+piece = "Standard"
+typesetter = "OpenBook contributors (MusicXML import)"
+completion = "3"
+uuid = "79760b4a-1f9d-5bbb-a497-730414561747"
+location = "TheBook:97"
+copyright = "All Rights Reserved"
+copyrightextra = "Archived MusicXML notice retained; underlying music is not relicensed."
+
+[versions.Wikifonia]
+doChords = true
+doVoice = true
+doLyrics = false
+doLyricsmore = false
+doLyricsmoremore = false
+doChordBars = false
+doGuitar = false
+doExtra = false
+doPrep = false
+doOwn = false
+#}
+{% if part == "Vars" %}
+{% endif %}
+{% if part == "Doc" %}
+	DONE:
+	- imported melody and chord changes from real_books_archive.gi/Wikifonia.tar.xz: Wikifonia/Billy Joel - My Life.mxl.
+	- source revision: http://wikifonia.org/node/5990/revisions/8274/view.
+	- local PDF: real_books_archive.gi/The Book.pdf.
+	- book index reference: TheBook:97; index pagination is not a verified PDF page number.
+	- retained the archived MusicXML rights notice; no redistribution permission is asserted.
+	- retained written melody, chord changes, pickups, repeats and numbered endings; lyrics omitted.
+	- imported explicit 7alt symbols using the book's altered-dominant notation where present.
+	- tempo is an editorial practice suggestion.
+	TODO:
+	- proofread the complete melody, harmony and form against the referenced PDF and check by ear.
+	- verify source attribution, copyright notice and reuse terms against the scan; only the archived MusicXML notice is retained.
+	- locate the tune in the exact local PDF edition; book-index page numbers may differ.
+{% endif %}
+{% if part == "ChordsWikifonia" %}\chordmode {
+	\startChords
+	\startSong
+
+	\myMark "A"
+	\startPart
+	\repeat volta 2 {
+	s4 c2. |
+	s1 |
+	f1 |
+	s1 | \myEndLine
+	g1 |
+	s1 |
+	c1 |
+	f1 | \myEndLine
+	c1 |
+	s1 |
+	f1 |
+	g1 | \myEndLine
+	s1 |
+	} \alternative {
+	{
+	c1 |
+	s1 | \myEndLineVoltaNotLast
+	}
+	{
+	a1:m | \myEndLineVoltaLast
+	}
+	}
+	s1 |
+	e1 |
+	s1 |
+	c1:7 | \myEndLine
+	s1 |
+	d1:7 |
+	s1 |
+	f1 | \myEndLine
+	s1 |
+	e1 |
+	a1:m |
+	d1:7 | \myEndLine
+	s1 |
+	f2 g2 |
+	f2 g2 |
+	c1 | \myEndLine
+	s1 |
+	f1 |
+	g1 |
+	s1 | \myEndLine
+	c1 |
+	f1 |
+	g1 |
+	s1 | \myEndLine
+	f1 |
+	s1 |
+	\repeat volta 2 {
+	g1 |
+	s1 | \myEndLine
+	c1 |
+	s1 |
+	}
+	\endBar
+	\endPart
+
+	\endSong
+	\endChords
+}
+{% endif %}
+{% if part == "VoiceWikifonia" %}\absolute {
+	\tempo "Moderato" 4 = 120
+	\time 4/4
+	\key c \major
+
+	\repeat volta 2 {
+	r4 e''8 e''8 e''4 c''8 c''8 |
+	c''8 g'8 g'8 g'8 g'8 g'8 e'4 |
+	f'4 a'4 r2 |
+	R1 |
+	r4 d''8 d''8 d''4 b'8 b'8 |
+	b'8 g'8 g'4 b'8 a'8 g'4 |
+	g'2 r2 |
+	R1 |
+	r4 e''8 e''8 e''4 c''8 c''8 |
+	c''8 g'8 g'8 g'8 g'8 f'8 e'4 |
+	f'4 a'4 r2 |
+	r4 d''8 d''8 d''4 b'8 b'8 |
+	b'8 g'8 g'4 b'8 c''8 c''4 |
+	} \alternative {
+	{
+	c''1 |
+	R1 |
+	}
+	{
+	c''2 c''4 c''8 c''8 |
+	}
+	}
+	c''8 a'8 a'8 a'8 a'8 f'8 d'8 c'8 |
+	d'4 e'4 e'2 ~ |
+	e'4 r4 r2 |
+	r2 c'4 c''8 c''8 |
+	c''8 a'8 a'8 a'8 a'8 e'8 c'4 |
+	d'4 e'4 d'4 c'4 ~ |
+	c'2 r2 |
+	r4 f'4 g'4 a'4 |
+	g'1 |
+	r4 gis'4 a'4 b'4 |
+	c''1 |
+	r2 a'4 b'4 |
+	c''4 d''4 b'4. a'8 |
+	a'2 g'2 |
+	a'2 b'2 |
+	r4 e''8 e''8 e''4 c''8 c''8 |
+	c''4 g'8 g'8 g'8 f'8 e'4 |
+	f'2 a'4 r4 |
+	r2 r4 d''8 d''8 |
+	d''4 b'8 b'8 b'8 a'8 g'4 |
+	g'1 |
+	R1 |
+	r4 e''8 e''8 e''4 c''8 c''8 |
+	c''4 g'8 g'8 g'8 f'8 e'4 |
+	f'2 a'4 r4 |
+	R1 |
+	\repeat volta 2 {
+	r4 d''8 d''8 d''8 b'8 b'4 |
+	b'4 g'4 e''8 d''8 c''4 |
+	c''1 ~ |
+	c''1 ^ "Repeat and fade" |
+	}
+	\endBar
+}
+{% endif %}

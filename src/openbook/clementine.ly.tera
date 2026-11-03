@@ -1,0 +1,105 @@
+{#
+default_version = "Wikifonia"
+
+[attributes]
+title = "Clementine"
+style = "Jazz"
+composer = "Percy Montrose (1884)"
+piece = "Standard"
+typesetter = "OpenBook contributors (MusicXML import)"
+completion = "3"
+uuid = "b90c05f6-db35-5c6e-9101-0d8daeb5aa0e"
+location = "Firehouse_Jazz_Band:465"
+copyright = "All Rights Reserved"
+copyrightextra = "Archived MusicXML notice retained; underlying music is not relicensed."
+
+[versions.Wikifonia]
+doChords = true
+doVoice = true
+doLyrics = false
+doLyricsmore = false
+doLyricsmoremore = false
+doChordBars = false
+doGuitar = false
+doExtra = false
+doPrep = false
+doOwn = false
+#}
+{% if part == "Vars" %}
+{% endif %}
+{% if part == "Doc" %}
+	DONE:
+	- imported melody and chord changes from real_books_archive.gi/Wikifonia.tar.xz: Wikifonia/Percy Montrose (1884) - Clementine.mxl.
+	- source revision: http://wikifonia.org/node/18735/revisions/24829/view.
+	- local PDF: real_books_archive.gi/Dixieland - The Firehouse Jazz Band - Dixieland Fake Book - 778 S Noten Sheets Score Songs Lieder.pdf.
+	- book index reference: Firehouse_Jazz_Band:465; index pagination is not a verified PDF page number.
+	- retained the archived MusicXML rights notice; no redistribution permission is asserted.
+	- retained written melody, chord changes, pickups, repeats and numbered endings; lyrics omitted.
+	- imported explicit 7alt symbols using the book's altered-dominant notation where present.
+	- tempo is an editorial practice suggestion.
+	TODO:
+	- proofread the complete melody, harmony and form against the referenced PDF and check by ear.
+	- verify source attribution, copyright notice and reuse terms against the scan; only the archived MusicXML notice is retained.
+	- locate the tune in the exact local PDF edition; book-index page numbers may differ.
+{% endif %}
+{% if part == "ChordsWikifonia" %}\chordmode {
+	\startChords
+	\startSong
+
+	\myMark "A"
+	\startPart
+	\repeat volta 2 {
+	\partial 4 s4 |
+	g2. |
+	s2. |
+	s2. | \myEndLine
+	d2.:7 |
+	s2. |
+	g2. |
+	d2.:7 | \myEndLine
+	g2. |
+	s2. |
+	g2. |
+	s2. | \myEndLine
+	s2. |
+	d2.:7 |
+	s2. |
+	g2. | \myEndLine
+	d2.:7 |
+	g2
+	}
+	\endBar
+	\endPart
+
+	\endSong
+	\endChords
+}
+{% endif %}
+{% if part == "VoiceWikifonia" %}\absolute {
+	\tempo "Moderato" 4 = 120
+	\time 3/4
+	\key g \major
+
+	\repeat volta 2 {
+	\partial 4 g'8. ^ "Moderately" ^ "VERSES:" g'16 |
+	g'4 d'4 b'8. b'16 |
+	b'4 g'4 g'8. b'16 |
+	d''4 d''4 c''8. b'16 |
+	a'2 a'8. b'16 |
+	c''4 c''4 b'8. a'16 |
+	b'4 g'4 g'8. b'16 |
+	a'4 d'4 fis'8. a'16 |
+	g'2 s4 |
+	g'8. ^ "CHORUS:" g'16 s2 |
+	g'4 d'4 b'8. b'16 |
+	b'4 g'4 g'8. b'16 |
+	d''4 d''4 c''8. b'16 |
+	a'2 a'8. b'16 |
+	c''4 c''4 b'8. a'16 |
+	b'4 g'4 g'8. b'16 |
+	a'4 d'4 fis'8. a'16 |
+	g'2
+	}
+	\endBar
+}
+{% endif %}

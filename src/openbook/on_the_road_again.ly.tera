@@ -1,0 +1,177 @@
+{#
+default_version = "Wikifonia"
+
+[attributes]
+title = "On The Road Again"
+style = "Standard"
+composer = "Willie Nelson"
+piece = "Standard"
+typesetter = "OpenBook contributors (MusicXML import)"
+completion = "3"
+uuid = "f8778bf4-72cc-5c2b-bdf2-abf1002d9eeb"
+location = "TheBook:160"
+copyright = "All Rights Reserved"
+copyrightextra = "Archived MusicXML notice retained; underlying music is not relicensed."
+
+[versions.Wikifonia]
+doChords = true
+doVoice = true
+doLyrics = false
+doLyricsmore = false
+doLyricsmoremore = false
+doChordBars = false
+doGuitar = false
+doExtra = false
+doPrep = false
+doOwn = false
+#}
+{% if part == "Vars" %}
+{% endif %}
+{% if part == "Doc" %}
+	DONE:
+	- imported melody and chord changes from real_books_archive.gi/Wikifonia.tar.xz: Wikifonia/Willie Nelson - On The Road Again.mxl.
+	- source revision: http://wikifonia.org/node/5001/revisions/13797/view.
+	- local PDF: real_books_archive.gi/The Book.pdf.
+	- book index reference: TheBook:160; index pagination is not a verified PDF page number.
+	- retained the archived MusicXML rights notice; no redistribution permission is asserted.
+	- retained written melody, chord changes, pickups, repeats and numbered endings; lyrics omitted.
+	- imported explicit 7alt symbols using the book's altered-dominant notation where present.
+	- tempo is an editorial practice suggestion.
+	TODO:
+	- proofread the complete melody, harmony and form against the referenced PDF and check by ear.
+	- verify source attribution, copyright notice and reuse terms against the scan; only the archived MusicXML notice is retained.
+	- locate the tune in the exact local PDF edition; book-index page numbers may differ.
+{% endif %}
+{% if part == "ChordsWikifonia" %}\chordmode {
+	\startChords
+	\startSong
+
+	\myMark "A"
+	\startPart
+	s1 |
+	\repeat volta 2 {
+	g1 |
+	s1 |
+	s1 | \myEndLine
+	s1 |
+	b1:7 |
+	s1 |
+	s1 | \myEndLine
+	s1 |
+	c1 |
+	s1 |
+	s1 | \myEndLine
+	d1:7 |
+	g1 |
+	} \alternative {
+	{
+	s1 | \myEndLineVoltaNotLast
+	}
+	{
+	s1 | \myEndLineVoltaLast
+	}
+	}
+	c1 |
+	s1 |
+	s1 |
+	s1 | \myEndLine
+	g1 |
+	s1 |
+	c1 |
+	s1 | \myEndLine
+	s1 |
+	s1 |
+	g1 |
+	s1 | \myEndLine
+	d1:7 |
+	s1 |
+	g1 |
+	s1 | \myEndLine
+	s1 |
+	s1 |
+	b1:7 |
+	s1 | \myEndLine
+	s1 |
+	s1 |
+	c1 |
+	s1 | \myEndLine
+	s1 |
+	d1:7 |
+	g1 |
+	s1 | \myEndLine
+	c1 |
+	d1:7 |
+	g1 |
+	s2 d2:7 | \myEndLine
+	g1 |
+	\endBar
+	\endPart
+
+	\endSong
+	\endChords
+}
+{% endif %}
+{% if part == "VoiceWikifonia" %}\absolute {
+	\tempo "Moderato" 4 = 120
+	\time 4/4
+	\key g \major
+
+	r2 d'4 d'4 |
+	\repeat volta 2 {
+	b'4 b'4 b'2 ~ |
+	b'1 ~ |
+	b'4 r4 bes'4 b'4 |
+	c''8 c''8 b'4 a'4 g'4 |
+	b'4 b'4 b'2 ~ |
+	b'1 ~ |
+	b'4 r4 bes'4 b'4 |
+	c''4 b'4 a'4 g'4 |
+	b'4 a'4 a'4 e'4 |
+	a'2. a'4 |
+	c''4 c''4 c''8 c''8 d''4 |
+	b'4 b'4 b'8 a'8 g'4 |
+	g'1 ~ |
+	} \alternative {
+	{
+	g'4 r4 d'4 d'4 |
+	}
+	{
+	g'4 r4 g'4 g'4 |
+	}
+	}
+	e''4 e''4 e''2 ~ |
+	e''2 e''4 fis''4 |
+	g''4 g''4 g''4 fis''4 |
+	fis''4 e''4 e''4 d''4 |
+	d''4 b'2. ~ |
+	b'2 g'4 g'4 |
+	e''4 e''4 e''2 ~ |
+	e''2. fis''4 |
+	g''4 g''4 g''4 fis''4 |
+	fis''4 e''4 e''4 d''4 |
+	d''4 b'2. ~ |
+	b'2. c''4 |
+	b'4 a'2. ~ |
+	a'4 d'4 d'4 d'4 |
+	b'4 b'4 b'2 ~ |
+	b'1 ~ |
+	b'4 r4 bes'4 b'4 |
+	c''8 c''8 b'4 a'4 g'4 |
+	b'4 b'4 b'2 ~ |
+	b'1 ~ |
+	b'4 r4 bes'4 b'4 |
+	c''4 b'4 a'4 g'4 |
+	b'4 a'4 a'4 e'4 |
+	a'2. a'4 |
+	c''4 c''4 c''8 c''8 d''4 |
+	b'4 b'4 b'8 a'8 g'4 |
+	g'1 ~ |
+	g'2. d'4 |
+	c''4 c''4 c''8 c''8 d''4 |
+	b'4 b'4 b'8 a'8 g'4 |
+	g'1 ~ |
+	g'4 r4 d''8 e''8 fis''4 |
+	g''2 r2 |
+	\endBar
+}
+{% endif %}

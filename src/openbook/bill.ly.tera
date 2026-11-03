@@ -1,0 +1,131 @@
+{#
+default_version = "Wikifonia"
+
+[attributes]
+title = "Bill"
+style = "Jazz"
+composer = "Jerome Kern"
+piece = "Standard"
+typesetter = "OpenBook contributors (MusicXML import)"
+completion = "3"
+uuid = "162f8ee4-e1ab-5a80-afa8-de6bcdd6c946"
+location = "Hal_Leonard_Real_Jazz_Book:45"
+copyright = "All Rights Reserved"
+copyrightextra = "Archived MusicXML notice retained; underlying music is not relicensed."
+
+[versions.Wikifonia]
+doChords = true
+doVoice = true
+doLyrics = false
+doLyricsmore = false
+doLyricsmoremore = false
+doChordBars = false
+doGuitar = false
+doExtra = false
+doPrep = false
+doOwn = false
+#}
+{% if part == "Vars" %}
+{% endif %}
+{% if part == "Doc" %}
+	DONE:
+	- imported melody and chord changes from real_books_archive.gi/Wikifonia.tar.xz: Wikifonia/Jerome Kern, P.G.Wodehouse, Oscar Hammerstein II - Bill.mxl.
+	- source revision: http://wikifonia.org/node/4633/revisions/6287/view.
+	- local PDF: real_books_archive.gi/Hal Leonard Real Jazz Book.pdf.
+	- book index reference: Hal_Leonard_Real_Jazz_Book:45; index pagination is not a verified PDF page number.
+	- retained the archived MusicXML rights notice; no redistribution permission is asserted.
+	- retained written melody, chord changes, pickups, repeats and numbered endings; lyrics omitted.
+	- imported explicit 7alt symbols using the book's altered-dominant notation where present.
+	- tempo is an editorial practice suggestion.
+	TODO:
+	- proofread the complete melody, harmony and form against the referenced PDF and check by ear.
+	- verify source attribution, copyright notice and reuse terms against the scan; only the archived MusicXML notice is retained.
+	- locate the tune in the exact local PDF edition; book-index page numbers may differ.
+{% endif %}
+{% if part == "ChordsWikifonia" %}\chordmode {
+	\startChords
+	\startSong
+
+	\myMark "A"
+	\startPart
+	s1 |
+	c2 a2:m7 |
+	d2:m7 g2:7 |
+	c2 a2:m7 | \myEndLine
+	d2.:m7 g4:7 |
+	d2.:m7 g4:7 |
+	c1 |
+	a2:m7 d2:7 | \myEndLine
+	g1:7 |
+	c2 a2:m7 |
+	d2:m7 g2:7 |
+	c1:7 | \myEndLine
+	f1 |
+	d1:m7 |
+	c2 a2:m7 |
+	d2:m7 g2:7 | \myEndLine
+	c1 |
+	c2 a2:m7 |
+	d2:m7 g2:7 |
+	c2 a2:m7 | \myEndLine
+	d2.:m7 g4:7 |
+	d2.:m7 g4:7 |
+	c1 |
+	a2:m7 d2:7 | \myEndLine
+	g1:7 |
+	c2 a2:m7 |
+	d2:m7 g2:7 |
+	c1:7 | \myEndLine
+	f1 |
+	d1:7 |
+	c2 a2:m7 |
+	d2:m7 g2:7 | \myEndLine
+	c1 |
+	\endBar
+	\endPart
+
+	\endSong
+	\endChords
+}
+{% endif %}
+{% if part == "VoiceWikifonia" %}\absolute {
+	\tempo "Moderato" 4 = 120
+	\time 4/4
+	\key c \major
+
+	r2 r4 g'8 ^ "N.C." g'8 |
+	e''4 g'4 a'4 e''4 |
+	d''8 e''8 d''8 e''8 d''4 g'4 |
+	c''8 d''8 c''8 d''8 c''8 b'8 a'8 b'8 |
+	g'8 a'8 g'2 a'4 |
+	f'8 e'8 d'2 b'4 |
+	g'8 f'8 e'2 g'4 |
+	c''8 d''8 e''4 e''8 d''4 c''8 |
+	b'8 c''8 d''4 c''8 b'8 a'8 g'8 |
+	e''4 g'4 a'4 e''4 |
+	d''8 e''8 d''8 e''8 d''4 g'4 |
+	c''2 e'2 |
+	a'2. a'4 |
+	c''4 d'4 ~ d'8 f'8 a'8 c''8 |
+	e''8 g'8 a'4 ~ a'8 g'8 a'8 c''8 |
+	d''2 e''2 |
+	c''2. g'4 |
+	e''4 g'4 a'4 e''4 |
+	d''8 e''8 d''8 e''8 d''4 g'4 |
+	c''8 d''8 c''8 d''8 c''8 b'8 a'8 b'8 |
+	g'8 a'8 g'2 a'4 |
+	f'8 e'8 d'2 b'4 |
+	g'8 f'8 e'2 g'4 |
+	c''8 d''8 e''4 e''8 d''4 c''8 |
+	b'8 c''8 d''4 c''8 b'8 a'8 g'8 |
+	e''4 g'4 a'4 e''4 |
+	d''8 e''8 d''8 e''8 d''4 g'4 |
+	c''2 e'2 |
+	a'2. a'4 |
+	c''4 d'4 ~ d'8 ^ "N.C." f'8 a'8 c''8 |
+	e''8 g'8 a'4 ~ a'8 g'8 a'8 c''8 |
+	d''2 e''2 |
+	c''2. r4 |
+	\endBar
+}
+{% endif %}

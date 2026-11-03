@@ -1,0 +1,164 @@
+{#
+default_version = "Wikifonia"
+
+[attributes]
+title = "I Got It Bad And That Ain't Good"
+style = "Jazz"
+composer = "Duke Ellington"
+piece = "Standard"
+typesetter = "OpenBook contributors (MusicXML import)"
+completion = "3"
+uuid = "87d0f89d-5642-58bf-a63d-e596e6b5990e"
+location = "Hal_Leonard_Real_Jazz_Book:157"
+copyright = "All Rights Reserved"
+copyrightextra = "Archived MusicXML notice retained; underlying music is not relicensed."
+
+[versions.Wikifonia]
+doChords = true
+doVoice = true
+doLyrics = false
+doLyricsmore = false
+doLyricsmoremore = false
+doChordBars = false
+doGuitar = false
+doExtra = false
+doPrep = false
+doOwn = false
+#}
+{% if part == "Vars" %}
+{% endif %}
+{% if part == "Doc" %}
+	DONE:
+	- imported melody and chord changes from real_books_archive.gi/Wikifonia.tar.xz: Wikifonia/Duke Ellington, Paul Francis Webster - I Got It Bad And That Ain't Good.mxl.
+	- source revision: http://wikifonia.org/node/6470/revisions/8959/view.
+	- local PDF: real_books_archive.gi/Hal Leonard Real Jazz Book.pdf.
+	- book index reference: Hal_Leonard_Real_Jazz_Book:157; index pagination is not a verified PDF page number.
+	- retained the archived MusicXML rights notice; no redistribution permission is asserted.
+	- retained written melody, chord changes, pickups, repeats and numbered endings; lyrics omitted.
+	- imported explicit 7alt symbols using the book's altered-dominant notation where present.
+	- tempo is an editorial practice suggestion.
+	TODO:
+	- proofread the complete melody, harmony and form against the referenced PDF and check by ear.
+	- verify source attribution, copyright notice and reuse terms against the scan; only the archived MusicXML notice is retained.
+	- locate the tune in the exact local PDF edition; book-index page numbers may differ.
+	- verify editorial chord spacing in measures 5, 24, 32; the archive places successive symbols at the same offset.
+{% endif %}
+{% if part == "ChordsWikifonia" %}\chordmode {
+	\startChords
+	\startSong
+
+	\myMark "A"
+	\startPart
+	s1 |
+	g2:6.9 c2:9 |
+	b2.:m7 e4:7.9- |
+	a2:m7 d4:9 c4:9 | \myEndLine
+	b2.:m7.5- e16:7.9- a8:m7 d16:9.5+ |
+	g2:6.9 c2:9 |
+	b2.:m7 e4:7.9- |
+	a1:m9 | \myEndLine
+	g1:6.9 |
+	d2:m7 g2:9 |
+	c2:maj7 a2:m7 |
+	b2:7 e2:7.9+ | \myEndLine
+	a2:7 ees4:9 d4:9 |
+	g2:maj7 c2:9 |
+	g2:6.9 c2:9 |
+	d2:6/a c4.:9 b8:7 | \myEndLine
+	e4:m7 a4:13 d2:7 |
+	g1:6 |
+	b2:7 e2:m7 |
+	a2:13 e2:m9 | \myEndLine
+	a1:13 |
+	a1:m7 |
+	b4:aug7 e4:7.5- a4:7.9- d4:13 |
+	g2 e2:m7 | \myEndLine
+	a2:m7 d2:7 |
+	g1:6 |
+	b2:7 e2:m7 |
+	a2:9 e2:m7 | \myEndLine
+	a1:13 |
+	a1:m7 |
+	b4:aug7 e4:7.9- a4:7.9- d4:13 |
+	g2:6 cis2:dim7 | \myEndLine
+	d2:m7 g2:aug7 |
+	c1:maj13 |
+	s1 |
+	f1:7 | \myEndLine
+	s1 |
+	g1:maj7 |
+	b2.:m7 e4:7 |
+	a1:m7 | \myEndLine
+	d4:13 d2.:7.9- |
+	g1:6 |
+	b2:7 e2:m7 |
+	a2:13 e2:m9 | \myEndLine
+	a1:13 |
+	a1:m9 |
+	b4:aug7 e4:7.9- a4:7 d4:7.9- |
+	ges1 | \myEndLine
+	g1/d |
+	\endBar
+	\endPart
+
+	\endSong
+	\endChords
+}
+{% endif %}
+{% if part == "VoiceWikifonia" %}\absolute {
+	\tempo "Moderato" 4 = 120
+	\time 4/4
+	\key g \major
+
+	r2 ^ "VERSE" r4 d'4 |
+	e'8 fis'8 fis'8 e'8 e'8 fis'8 a'8 g'8 |
+	d'2. b4 |
+	c'8 e'8 b'8 a'16 g'16 ~ g'8 e'16 g'16 fis'8 e'8 |
+	d'2. d'4 |
+	e'8 fis'8 fis'8 e'8 e'8 fis'8 a'8 g'8 |
+	d'2. b4 |
+	c'8 e'8 b'8 a'16 g'16 ~ g'8 e'16 g'16 fis'8 e'8 |
+	d'2. b4 |
+	d'8 e'8 \once \omit TupletBracket \times 2/3 { f'8 g'8 a'8 } b'8 a'4 g'8 |
+	e'8 g'8 a'8 b'8 d''8 ( c''4. ) |
+	b'8 b'8 c''8 d''8 c''8 d''8 c''8 b'8 |
+	e'8 fis'8 g'8 a'8 \once \omit TupletBracket \times 2/3 { bes'8 a'8 g'8 } a'8 es'8 |
+	d'8 e'8 e'8 d'8 e'8 fis'8 a'8 g'16 fis'16 |
+	e'8 fis'8 fis'8 e'8 e'4 ~ e'8 fis'16 g'16 |
+	a'8 a'8 b'8 d'8 a'4. fis'8 |
+	a'4 fis'4 d'2 |
+	cis'4 ^ "CHORUS" d'4 e''4 d''4 |
+	fis'4 g'4 a'4 g'4 |
+	r4 b'4 g'4 a'4 |
+	b'1 |
+	r4 b'4 g'4 a'4 |
+	b'4 d''4 g'4 b'4 |
+	g'1 |
+	r2 r2 |
+	cis'4 d'4 e''4 d''4 |
+	fis'4 g'4 a'4 g'4 |
+	r4 b'4 g'4 a'4 |
+	b'1 |
+	r4 b'4 g'4 a'4 |
+	b'4 d''4 g'4 b'4 |
+	g'1 ~ |
+	g'2 r4 g'4 |
+	a'4 b'4 d''4 c''4 |
+	b'4 a'2 g'4 |
+	a'4 b'4 d''4 c''4 |
+	a'2. g'4 |
+	fis'4 g'4 b'4 d''4 |
+	fis''4 e''2 b'4 |
+	d''4 c''2 e'4 |
+	b'4 a'2. |
+	cis'4 d'4 e''4 d''4 |
+	fis'4 g'4 a'4 g'4 |
+	r4 b'4 g'4 a'4 |
+	b'1 |
+	r4 b'4 g'4 a'4 |
+	b'4 d''4 g'4 b'4 |
+	g'1 |
+	R1 |
+	\endBar
+}
+{% endif %}

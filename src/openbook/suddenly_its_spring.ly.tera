@@ -1,0 +1,147 @@
+{#
+default_version = "Wikifonia"
+
+[attributes]
+title = "Suddenly It's Spring"
+style = "Jazz"
+composer = "James Van Heusen"
+piece = "Standard"
+typesetter = "OpenBook contributors (MusicXML import)"
+completion = "3"
+uuid = "f51f890d-f11c-5c6e-a27c-00573d6f297b"
+location = "Hal_Leonard_Real_Jazz_Book:334"
+copyright = "All Rights Reserved"
+copyrightextra = "Archived MusicXML notice retained; underlying music is not relicensed."
+
+[versions.Wikifonia]
+doChords = true
+doVoice = true
+doLyrics = false
+doLyricsmore = false
+doLyricsmoremore = false
+doChordBars = false
+doGuitar = false
+doExtra = false
+doPrep = false
+doOwn = false
+#}
+{% if part == "Vars" %}
+{% endif %}
+{% if part == "Doc" %}
+	DONE:
+	- imported melody and chord changes from real_books_archive.gi/Wikifonia.tar.xz: Wikifonia/James Van Heusen, Johnny Burke - Suddenly It's Spring.mxl.
+	- source revision: http://wikifonia.org/node/4214/revisions/5617/view.
+	- local PDF: real_books_archive.gi/Hal Leonard Real Jazz Book.pdf.
+	- book index reference: Hal_Leonard_Real_Jazz_Book:334; index pagination is not a verified PDF page number.
+	- retained the archived MusicXML rights notice; no redistribution permission is asserted.
+	- retained written melody, chord changes, pickups, repeats and numbered endings; lyrics omitted.
+	- imported explicit 7alt symbols using the book's altered-dominant notation where present.
+	- tempo is an editorial practice suggestion.
+	TODO:
+	- proofread the complete melody, harmony and form against the referenced PDF and check by ear.
+	- verify source attribution, copyright notice and reuse terms against the scan; only the archived MusicXML notice is retained.
+	- locate the tune in the exact local PDF edition; book-index page numbers may differ.
+{% endif %}
+{% if part == "ChordsWikifonia" %}\chordmode {
+	\startChords
+	\startSong
+
+	\myMark "A"
+	\startPart
+	\repeat volta 2 {
+	c1:m7 |
+	a2.:dim7 d4:7 |
+	g1:m7 |
+	c1:7 | \myEndLine
+	c1:m7 |
+	f1:7 |
+	bes1:maj7 |
+	d2:dim7 g2:7 | \myEndLine
+	c1:m7 |
+	a2.:dim7 d4:7 |
+	g1:m7 |
+	c4:7 cis2.:dim7 | \myEndLine
+	d1:maj7 |
+	e2:m7 a2:7 |
+	d1:maj7 |
+	s1 | \myEndLine
+	f2:m7 bes2:7 |
+	ees4:maj7 c2.:7 |
+	f4:m7 bes2.:7 |
+	ees1:maj7 | \myEndLine
+	d2:m7 g2:7 |
+	c1:m7 |
+	d1:dim7 |
+	g1:7 | \myEndLine
+	c1:m7 |
+	a2.:dim7 d4:7 |
+	g1:m7 |
+	c1:7 | \myEndLine
+	c1:m7 |
+	f1:7 |
+	} \alternative {
+	{
+	bes1:maj7 |
+	d2:dim7 g2:7 | \myEndLineVoltaNotLast
+	}
+	{
+	bes1:maj7 | \myEndLineVoltaLast
+	}
+	}
+	s1 |
+	\endBar
+	\endPart
+
+	\endSong
+	\endChords
+}
+{% endif %}
+{% if part == "VoiceWikifonia" %}\absolute {
+	\tempo "Moderato" 4 = 120
+	\time 4/4
+	\key bes \major
+
+	\repeat volta 2 {
+	c'4 d'4 es'4 f'4 |
+	fis'4 d''2 a'4 |
+	c''2 bes'2 |
+	c'4 a'2 g'4 |
+	es'4 g'4 bes'4. g'8 |
+	es'4 g'4 c''4 a'4 |
+	f'1 ~ |
+	f'2 r2 |
+	c'4 d'4 es'4 f'4 |
+	fis'4 d''2 a'4 |
+	c''2 bes'2 |
+	c'4 a'2 g'4 |
+	fis'4 a'4 b'4. a'8 |
+	g'4 b'4 cis''4 a'4 |
+	d''1 ~ |
+	d''2 r2 |
+	c''2 f'4. c''8 |
+	ces''4 bes'2. |
+	a'4 as'2. |
+	as'4 g'2. |
+	g'2 d'4. g'8 |
+	f'4 es'2. |
+	e'4 f'2. |
+	es'4 d'2. |
+	c'4 d'4 es'4 f'4 |
+	fis'4 d''2 a'4 |
+	c''2 bes'2 |
+	c'4 a'2 g'4 |
+	es'4 g'4 bes'4. g'8 |
+	es'4 g'4 c''4 g'4 |
+	} \alternative {
+	{
+	bes'1 ~ |
+	bes'2 r2 |
+	}
+	{
+	bes'1 ~ |
+	}
+	}
+	bes'2 r2 |
+	\endBar
+}
+{% endif %}

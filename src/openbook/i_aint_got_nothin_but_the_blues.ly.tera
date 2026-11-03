@@ -1,0 +1,150 @@
+{#
+default_version = "Wikifonia"
+
+[attributes]
+title = "I Ain't Got Nothin' But The Blues"
+style = "Jazz"
+composer = "Duke Ellington"
+piece = "Standard"
+typesetter = "OpenBook contributors (MusicXML import)"
+completion = "3"
+uuid = "a8657b17-255c-585f-94f9-c9fbcabe4d27"
+location = "Hal_Leonard_Real_Jazz_Book:154"
+copyright = "All Rights Reserved"
+copyrightextra = "Archived MusicXML notice retained; underlying music is not relicensed."
+
+[versions.Wikifonia]
+doChords = true
+doVoice = true
+doLyrics = false
+doLyricsmore = false
+doLyricsmoremore = false
+doChordBars = false
+doGuitar = false
+doExtra = false
+doPrep = false
+doOwn = false
+#}
+{% if part == "Vars" %}
+{% endif %}
+{% if part == "Doc" %}
+	DONE:
+	- imported melody and chord changes from real_books_archive.gi/Wikifonia.tar.xz: Wikifonia/Duke Ellington, Don George - I Ain't Got Nothin' But The Blues.mxl.
+	- source revision: http://wikifonia.org/node/9104/revisions/12509/view.
+	- local PDF: real_books_archive.gi/Hal Leonard Real Jazz Book.pdf.
+	- book index reference: Hal_Leonard_Real_Jazz_Book:154; index pagination is not a verified PDF page number.
+	- retained the archived MusicXML rights notice; no redistribution permission is asserted.
+	- retained written melody, chord changes, pickups, repeats and numbered endings; lyrics omitted.
+	- imported explicit 7alt symbols using the book's altered-dominant notation where present.
+	- tempo is an editorial practice suggestion.
+	TODO:
+	- proofread the complete melody, harmony and form against the referenced PDF and check by ear.
+	- verify source attribution, copyright notice and reuse terms against the scan; only the archived MusicXML notice is retained.
+	- locate the tune in the exact local PDF edition; book-index page numbers may differ.
+	- verify editorial chord spacing in measures 8, 16, 34; the archive places successive symbols at the same offset.
+{% endif %}
+{% if part == "ChordsWikifonia" %}\chordmode {
+	\startChords
+	\startSong
+
+	\myMark "A"
+	\startPart
+	s1 |
+	\repeat volta 2 {
+	f4:dim f2. |
+	s1 |
+	bes1:9 | \myEndLine
+	s2 d4:7 des4:9 |
+	g4:m7/c c2.:7 |
+	s1 |
+	f4 f4:7 f4:dim bes4:m6 | \myEndLine
+	f2/c d4:dim7 bes4:m/des |
+	f4:dim f2. |
+	s1 |
+	bes1:9 | \myEndLine
+	s2 d4:7 des4:9 |
+	g4:m7/c c2.:7 |
+	s1 |
+	f4 f4:7 f4:dim bes4:m6 | \myEndLine
+	f1 |
+	a1:7 |
+	s1 |
+	d1:7 | \myEndLine
+	s1 |
+	g1:9 |
+	s2. g4:7.5-/des |
+	c2:7 d4:7 des4:9 | \myEndLine
+	s1 |
+	f4:dim f2. |
+	s1 |
+	bes1:9 | \myEndLine
+	s2 d4:7 des4:9 |
+	g4:m7/c c2.:7 |
+	s1 |
+	} \alternative {
+	{
+	f2 des2:9 | \myEndLine
+	c1:7 | \myEndLineVoltaNotLast
+	}
+	{
+	f2 bes2:m6 | \myEndLineVoltaLast
+	}
+	}
+	f1:6 |
+	\endBar
+	\endPart
+
+	\endSong
+	\endChords
+}
+{% endif %}
+{% if part == "VoiceWikifonia" %}\absolute {
+	\tempo "Moderato" 4 = 120
+	\time 2/2
+	\key f \major
+
+	r8 c'8 d'8 f'8 as'8 g'8 f'8 d'8 ~ |
+	\repeat volta 2 {
+	d'8 c'8 ~ c'2. |
+	r8 c'8 d'8 f'8 as'8 g'8 f'8 d'8 ~ |
+	d'1 |
+	r8 c'8 d'8 c'8 d'8. c'16 es'8 d'8 ~ |
+	d'8 c'8 ~ c'2. |
+	r8 c''8 bes'8 a'8 f'8 c'8 e'8 g'8 |
+	f'1 ~ |
+	f'8 c'8 d'8 f'8 as'8 g'8 f'8 d'8 ~ |
+	d'8 c'8 ~ c'2. |
+	r8 c'8 d'8 f'8 as'8 g'8 f'8 d'8 ~ |
+	d'1 |
+	r8 c'8 d'8 c'8 d'8. c'16 es'8 d'8 ~ |
+	d'8 c'8 ~ c'2. |
+	r8 c''8 bes'8 a'8 f'8 c'8 e'8 g'8 |
+	f'1 ~ |
+	f'2 r8. f'16 f'8. f'16 |
+	a'8. b'16 ~ b'4 ~ b'8. e'16 e'8. e'16 |
+	a'8. b'16 ~ b'2. |
+	r8. a'16 a'8. a'16 a'8. a'16 a'8. b'16 ~ |
+	b'2 r8. d'16 d'8. d'16 |
+	g'8. a'16 ~ a'4 ~ a'8. d'16 d'8. d'16 |
+	g'8. a'16 ~ a'2 g'8. a'16 |
+	c''8. c'16 c'8. c'16 d'8. c'16 es'8. d'16 ~ |
+	d'8 c'8 d'8 f'8 as'8 g'8 f'8 d'8 ~ |
+	d'8 c'8 ~ c'2. |
+	r8 c'8 d'8 f'8 as'8 g'8 f'8 d'8 ~ |
+	d'1 |
+	r8 c'8 d'8 c'8 d'8. c'16 es'8 d'8 ~ |
+	d'8 c'8 ~ c'2. |
+	r8 c''8 bes'8 a'8 f'8 c'8 e'8 g'8 |
+	} \alternative {
+	{
+	f'2 r2 |
+	r8 c'8 d'8 f'8 as'8 g'8 f'8 d'8 |
+	}
+	{
+	f'1 ~ |
+	}
+	}
+	f'2 r2 |
+	\endBar
+}
+{% endif %}

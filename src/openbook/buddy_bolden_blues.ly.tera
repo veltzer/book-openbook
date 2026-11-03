@@ -1,0 +1,100 @@
+{#
+default_version = "Wikifonia"
+
+[attributes]
+title = "Buddy Bolden Blues"
+style = "Jazz"
+composer = "Jelly Roll Morton"
+piece = "Standard"
+typesetter = "OpenBook contributors (MusicXML import)"
+completion = "3"
+uuid = "7a4ae97b-7f35-58e7-b4bb-cf8ec75f92ae"
+location = "Firehouse_Jazz_Band:286"
+copyright = "All Rights Reserved"
+copyrightextra = "Archived MusicXML notice retained; underlying music is not relicensed."
+
+[versions.Wikifonia]
+doChords = true
+doVoice = true
+doLyrics = false
+doLyricsmore = false
+doLyricsmoremore = false
+doChordBars = false
+doGuitar = false
+doExtra = false
+doPrep = false
+doOwn = false
+#}
+{% if part == "Vars" %}
+{% endif %}
+{% if part == "Doc" %}
+	DONE:
+	- imported melody and chord changes from real_books_archive.gi/Wikifonia.tar.xz: Wikifonia/Jelly Roll Morton - Buddy Bolden Blues.mxl.
+	- source revision: http://wikifonia.org/node/22174/revisions/29251/view.
+	- local PDF: real_books_archive.gi/Dixieland - The Firehouse Jazz Band - Dixieland Fake Book - 778 S Noten Sheets Score Songs Lieder.pdf.
+	- book index reference: Firehouse_Jazz_Band:286; index pagination is not a verified PDF page number.
+	- retained the archived MusicXML rights notice; no redistribution permission is asserted.
+	- retained written melody, chord changes, pickups, repeats and numbered endings; lyrics omitted.
+	- imported explicit 7alt symbols using the book's altered-dominant notation where present.
+	- tempo is an editorial practice suggestion.
+	TODO:
+	- proofread the complete melody, harmony and form against the referenced PDF and check by ear.
+	- verify source attribution, copyright notice and reuse terms against the scan; only the archived MusicXML notice is retained.
+	- locate the tune in the exact local PDF edition; book-index page numbers may differ.
+{% endif %}
+{% if part == "ChordsWikifonia" %}\chordmode {
+	\startChords
+	\startSong
+
+	\myMark "A"
+	\startPart
+	\partial 8 s8 |
+	s1 |
+	s1 |
+	s2 a2:dim | \myEndLine
+	s1 |
+	s2 a2:dim |
+	s2 c2:7 |
+	s2 c4:7 f4:7 | \myEndLine
+	s1 |
+	s1 |
+	s1 |
+	s2 a2:dim | \myEndLine
+	s1 |
+	s2 a2:dim |
+	s2 c2:7 |
+	f1:7 | \myEndLine
+	s1 |
+	\endBar
+	\endPart
+
+	\endSong
+	\endChords
+}
+{% endif %}
+{% if part == "VoiceWikifonia" %}\absolute {
+	\tempo "Moderato" 4 = 120
+	\time 4/4
+	\key es \major
+	\clef bass
+
+	\partial 8 es8 |
+	bes8 - "E" bes4. a4 - "Edim" as8 as8 - "B" |
+	g8 - "E" g4 f8 ~ f4. - "E7" es8 |
+	f8 - "A" es4 es8 fis8 es4. |
+	g8 - "E" fis8 g8 es8 ~ es4. - "E7" es8 |
+	\once \omit TupletBracket \times 2/3 { f8 - "A" f8 es8 ~ } es8 es8 fis8 es4. |
+	g8 - "E" fis8 g8 bes8 ~ bes4. d8 |
+	f8 - "B" fis4. - "G7" g4 a8 bes8 ~ |
+	bes2. - "B7" r8 bes,8 |
+	bes8 - "E" bes4 a8 ~ a4 - "EDim" as8 - "B7" as8 |
+	g8 - "E" g4 f8 ~ f2 - "E7" |
+	f8 - "A" f8 f8 es8 \once \omit TupletBracket \times 2/3 { ges8 ges8 f8 } es8 es8 |
+	g4 - "E" g8 es8 ~ es2 - "E7" |
+	f8 - "A" f8 f8 es8 \once \omit TupletBracket \times 2/3 { ges8 ges8 f8 } es8 c8 |
+	g4 - "E" g8 bes8 ~ bes4 g4 |
+	es8 c4. fis8 - "B7" fis16 es16 \once \omit TupletBracket \times 2/3 { g8 f8 es8 ~ } |
+	es2. - "E" r4 |
+	\endBar
+}
+{% endif %}

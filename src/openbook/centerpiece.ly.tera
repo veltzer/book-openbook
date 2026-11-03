@@ -1,0 +1,115 @@
+{#
+default_version = "Wikifonia"
+
+[attributes]
+title = "Centerpiece"
+style = "Jazz"
+composer = "Sweets Edison"
+piece = "Standard"
+typesetter = "OpenBook contributors (MusicXML import)"
+completion = "3"
+uuid = "965947d8-1c95-58c6-89e2-18266895e192"
+location = "Colorado:53, Colorado_Cookbook:53"
+copyright = "All Rights Reserved"
+copyrightextra = "Archived MusicXML notice retained; underlying music is not relicensed."
+
+[versions.Wikifonia]
+doChords = true
+doVoice = true
+doLyrics = false
+doLyricsmore = false
+doLyricsmoremore = false
+doChordBars = false
+doGuitar = false
+doExtra = false
+doPrep = false
+doOwn = false
+#}
+{% if part == "Vars" %}
+{% endif %}
+{% if part == "Doc" %}
+	DONE:
+	- imported melody and chord changes from real_books_archive.gi/Wikifonia.tar.xz: Wikifonia/Sweets Edison - Centerpiece.mxl.
+	- source revision: http://wikifonia.org/node/21306/revisions/28271/view.
+	- local PDF: real_books_archive.gi/Colorado Cookbook.pdf.
+	- book index reference: Colorado:53; index pagination is not a verified PDF page number.
+	- retained the archived MusicXML rights notice; no redistribution permission is asserted.
+	- retained written melody, chord changes, pickups, repeats and numbered endings; lyrics omitted.
+	- imported explicit 7alt symbols using the book's altered-dominant notation where present.
+	- tempo is an editorial practice suggestion.
+	TODO:
+	- proofread the complete melody, harmony and form against the referenced PDF and check by ear.
+	- verify source attribution, copyright notice and reuse terms against the scan; only the archived MusicXML notice is retained.
+	- locate the tune in the exact local PDF edition; book-index page numbers may differ.
+{% endif %}
+{% if part == "ChordsWikifonia" %}\chordmode {
+	\startChords
+	\startSong
+
+	\myMark "A"
+	\startPart
+	\partial 8 s8 |
+	bes1:7 |
+	s4 ees2.:7 |
+	bes1:7 | \myEndLine
+	bes1:7 |
+	ees1:7 |
+	s1 |
+	bes1:7 | \myEndLine
+	bes1:7 |
+	c1:m7 |
+	f1:7 |
+	bes1:7 | \myEndLine
+	f1:7 |
+	bes1:7 |
+	ees1:7 |
+	bes1:7 | \myEndLine
+	bes1:7 |
+	ees1:7 |
+	s1 |
+	bes1:7 | \myEndLine
+	bes1:7 |
+	c1:m7 |
+	f1:7 |
+	bes1:7 | \myEndLine
+	f1:7 |
+	\endBar
+	\endPart
+
+	\endSong
+	\endChords
+}
+{% endif %}
+{% if part == "VoiceWikifonia" %}\absolute {
+	\tempo "Moderato" 4 = 120
+	\time 4/4
+	\key bes \major
+
+	\partial 8 g'8 |
+	bes'8 ^ "A" c''8 des''8 c''8 bes'4 g'4 |
+	bes'4. c''8 r4 r8 g'8 |
+	bes'8 c''8 des''8 c''8 bes'4 as'8 f'8 |
+	r2 r4 r8 g'8 |
+	bes'8 c''8 des''8 c''8 bes'4 g'4 |
+	bes'4. c''8 r4 r8 g'8 |
+	bes'8 c''8 des''8 c''8 bes'4 as'8 f'8 |
+	r2 r4 r8 g'8 |
+	bes'8 c''8 des''8 c''8 bes'4 g'4 |
+	bes'4. c''8 r4 r8 g'8 |
+	bes'8 c''8 des''8 c''8 bes'4 as'8 f'8 |
+	r2 r4 r8 <g' bes'>8 |
+	<bes' des''>8 ^ "B" <c'' es''>8 <cis'' e''>8 <c'' es''>8 <bes' des''>4 <g' bes'>4 |
+	<bes' des''>4. <c'' es''>8 r4 r8 <g' bes'>8 |
+	<bes' des''>8 <c'' es''>4 <cis'' e''>4 <c'' es''>4 <bes' d''>8 ~ |
+	<bes' d''>8 <g' bes'>4 <f' as'>8 ~ <f' as'>4. <g' bes'>8 |
+	<bes' des''>8 <c'' es''>8 <cis'' e''>8 <c'' es''>8 <bes' des''>4 <g' bes'>4 |
+	<bes' des''>4. <c'' es''>8 r4 r8 <g' bes'>8 |
+	<bes' des''>8 <c'' es''>4 <cis'' e''>4 <c'' es''>4 <bes' d''>8 ~ |
+	<bes' d''>8 <g' bes'>4 <f' as'>8 ~ <f' as'>4. <g' bes'>8 |
+	<bes' des''>8 <c'' es''>8 <cis'' e''>8 <c'' es''>8 <bes' des''>4 <g' bes'>4 |
+	<bes' des''>4. <c'' es''>8 r4 r8 <g' bes'>8 |
+	<bes' des''>8 <c'' es''>4 <cis'' e''>4 <d'' f''>4 <dis'' fis''>8 |
+	<d'' fis''>8 <e'' g''>4 <f'' as''>4 <es'' a''>4 <d'' bes''>8 |
+	\endBar
+}
+{% endif %}

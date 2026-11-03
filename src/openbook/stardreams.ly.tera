@@ -1,0 +1,131 @@
+{#
+default_version = "Wikifonia"
+
+[attributes]
+title = "Stardreams"
+style = "Jazz"
+composer = "Charles Spivak"
+piece = "Standard"
+typesetter = "OpenBook contributors (MusicXML import)"
+completion = "3"
+uuid = "dbdb17f3-7130-5902-a014-647c675ef1e8"
+location = "Hal_Leonard_Real_Jazz_Book:327"
+copyright = "All Rights Reserved"
+copyrightextra = "Archived MusicXML notice retained; underlying music is not relicensed."
+
+[versions.Wikifonia]
+doChords = true
+doVoice = true
+doLyrics = false
+doLyricsmore = false
+doLyricsmoremore = false
+doChordBars = false
+doGuitar = false
+doExtra = false
+doPrep = false
+doOwn = false
+#}
+{% if part == "Vars" %}
+{% endif %}
+{% if part == "Doc" %}
+	DONE:
+	- imported melody and chord changes from real_books_archive.gi/Wikifonia.tar.xz: Wikifonia/Charles Spivak, Sonny Burke, Sylvia Dee - Stardreams.mxl.
+	- source revision: http://wikifonia.org/node/14471/revisions/19396/view.
+	- local PDF: real_books_archive.gi/Hal Leonard Real Jazz Book.pdf.
+	- book index reference: Hal_Leonard_Real_Jazz_Book:327; index pagination is not a verified PDF page number.
+	- retained the archived MusicXML rights notice; no redistribution permission is asserted.
+	- retained written melody, chord changes, pickups, repeats and numbered endings; lyrics omitted.
+	- imported explicit 7alt symbols using the book's altered-dominant notation where present.
+	- tempo is an editorial practice suggestion.
+	TODO:
+	- proofread the complete melody, harmony and form against the referenced PDF and check by ear.
+	- verify source attribution, copyright notice and reuse terms against the scan; only the archived MusicXML notice is retained.
+	- locate the tune in the exact local PDF edition; book-index page numbers may differ.
+{% endif %}
+{% if part == "ChordsWikifonia" %}\chordmode {
+	\startChords
+	\startSong
+
+	\myMark "A"
+	\startPart
+	s1 |
+	a2.:m7 d4:7 |
+	a4:m7.5- f2:7 aes4:7 |
+	g1 | \myEndLine
+	ees1:7 |
+	a1:m7 |
+	a2:7 aes2:7 |
+	g2. e4:7 | \myEndLine
+	ees2.:9.5- d4:7 |
+	a2.:m7 d4:7 |
+	a4:m7.5- f2:7 aes4:7 |
+	g1 | \myEndLine
+	ees1:7 |
+	a1:m7 |
+	a2:7 d2:7 |
+	g1 | \myEndLine
+	s1 |
+	aes1 |
+	aes1:dim7 |
+	bes2:m7 ees4:9 ees4:7.9- | \myEndLine
+	aes1 |
+	a1 |
+	a1:dim7 |
+	b2:m7 e4:9 e4:7.9- | \myEndLine
+	ees2:9.5- d4:aug b4:m |
+	a2.:m7 d4:7 |
+	a4:m7.5- f2:7 aes4:7 |
+	g1 | \myEndLine
+	ees1:7 |
+	a1:m7 |
+	a2:7 d2:7 |
+	g1 | \myEndLine
+	s1 |
+	\endBar
+	\endPart
+
+	\endSong
+	\endChords
+}
+{% endif %}
+{% if part == "VoiceWikifonia" %}\absolute {
+	\tempo "Moderato" 4 = 120
+	\time 4/4
+	\key g \major
+
+	r2 r4 d'4 |
+	d''2. d'4 |
+	es'4 d''2 c''4 |
+	b'2. d'4 |
+	des'4 c''2 bes'4 |
+	a'2 ~ a'8 g'8 e'8 g'8 |
+	b'2 ais'2 |
+	b'2. c''4 |
+	a'2. d'4 |
+	d''2. d'4 |
+	es'4 d''2 c''4 |
+	b'2. d'4 |
+	des'4 c''2 bes'4 |
+	a'2 ~ a'8 g'8 e'8 g'8 |
+	b'2 b'2 |
+	g'1 ~ |
+	g'2 d'8 e'8 fis'8 g'8 |
+	as'8 as'8 as'8 f'8 ~ f'4. f'8 |
+	as'8 as'8 as'8 f'8 ~ f'4. f'8 |
+	as'8 f'8 as'8 c''8 ~ c''4 c''8 as'8 ~ |
+	as'2 e'8 f'8 g'8 as'8 |
+	a'8 a'8 a'8 fis'8 ~ fis'4. fis'8 |
+	a'8 a'8 a'8 fis'8 ~ fis'4. fis'8 |
+	a'8 fis'8 a'8 cis''8 ~ cis''4 cis''4 |
+	a'2 ais'4 b'4 |
+	d''2. d'4 |
+	es'4 d''2 c''4 |
+	b'2. d'4 |
+	des'4 c''2 bes'4 |
+	a'2 ~ a'8 g'8 e'8 g'8 |
+	b'2 b'2 |
+	g'1 ~ |
+	g'1 ^\fermata |
+	\endBar
+}
+{% endif %}

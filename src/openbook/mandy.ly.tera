@@ -1,0 +1,168 @@
+{#
+default_version = "Wikifonia"
+
+[attributes]
+title = "Mandy"
+style = "Jazz"
+composer = "Scott English, Richard Kerr"
+piece = "Standard"
+typesetter = "OpenBook contributors (MusicXML import)"
+completion = "3"
+uuid = "791189fe-d1fb-525c-a15f-71b98f16b124"
+location = "Firehouse_Jazz_Band:571"
+copyright = "All Rights Reserved"
+copyrightextra = "Archived MusicXML notice retained; underlying music is not relicensed."
+
+[versions.Wikifonia]
+doChords = true
+doVoice = true
+doLyrics = false
+doLyricsmore = false
+doLyricsmoremore = false
+doChordBars = false
+doGuitar = false
+doExtra = false
+doPrep = false
+doOwn = false
+#}
+{% if part == "Vars" %}
+{% endif %}
+{% if part == "Doc" %}
+	DONE:
+	- imported melody and chord changes from real_books_archive.gi/Wikifonia.tar.xz: Wikifonia/Scott English, Richard Kerr - Mandy.mxl.
+	- source revision: http://www.wikifonia.org/node/2998/revisions/3802/view.
+	- local PDF: real_books_archive.gi/Dixieland - The Firehouse Jazz Band - Dixieland Fake Book - 778 S Noten Sheets Score Songs Lieder.pdf.
+	- book index reference: Firehouse_Jazz_Band:571; index pagination is not a verified PDF page number.
+	- retained the archived MusicXML rights notice; no redistribution permission is asserted.
+	- retained written melody, chord changes, pickups, repeats and numbered endings; lyrics omitted.
+	- imported explicit 7alt symbols using the book's altered-dominant notation where present.
+	- tempo is an editorial practice suggestion.
+	TODO:
+	- proofread the complete melody, harmony and form against the referenced PDF and check by ear.
+	- verify source attribution, copyright notice and reuse terms against the scan; only the archived MusicXML notice is retained.
+	- locate the tune in the exact local PDF edition; book-index page numbers may differ.
+	- verify complete D.C./D.S./coda/Fine navigation and playback; printed directions are not a playback guarantee.
+{% endif %}
+{% if part == "ChordsWikifonia" %}\chordmode {
+	\startChords
+	\startSong
+
+	\myMark "A"
+	\startPart
+	\repeat volta 2 {
+	c1 |
+	s1 |
+	s1 |
+	s1 | \myEndLine
+	d1:m |
+	} \alternative {
+	{
+	f1 |
+	bes1 |
+	g1:7 | \myEndLineVoltaNotLast
+	}
+	{
+	s1 | \myEndLineVoltaLast
+	}
+	}
+	\repeat volta 2 {
+	bes1 |
+	g1:7 |
+	c1 | \myEndLine
+	a2:m f2 |
+	g1 |
+	s1 |
+	c1 | \myEndLine
+	a2:m f2 |
+	g1 |
+	s1 |
+	} \alternative {
+	{
+	c1 | \myEndLine
+	s1 | \myEndLineVoltaNotLast
+	}
+	{
+	a1:m | \myEndLineVoltaLast
+	}
+	}
+	s1 |
+	d1:m | \myEndLine
+	s1 |
+	bes1 |
+	g1 |
+	\repeat volta 2 {
+	c1 | \myEndLine
+	a2:m f2 |
+	g1 |
+	s1 |
+	c1 | \myEndLine
+	a2:m f2 |
+	d1 |
+	s1 |
+	}
+	\endBar
+	\endPart
+
+	\endSong
+	\endChords
+}
+{% endif %}
+{% if part == "VoiceWikifonia" %}\absolute {
+	\tempo "Moderato" 4 = 120
+	\time 4/4
+	\key c \major
+
+	\repeat volta 2 {
+	g'8 a'8 c''8 a'8 e''4 g'4 |
+	g'1 |
+	g'8 a'8 c''8 a'8 e''4 g'4 |
+	g'1 |
+	\textMark \markup { \musicglyph "scripts.segno" } f''8 e''8 e''8 d''8 d''4. a'8 |
+	} \alternative {
+	{
+	f''4 e''8 f''8 e''4 d''4 |
+	f''8 e''8 e''8 e''8 d''4. g'8 |
+	f''4 g''4 e''4. d''8 |
+	}
+	{
+	f''4 e''4 e''4 d''8 a'8 |
+	}
+	}
+	\repeat volta 2 {
+	f''8 g''8 f''8 e''8 d''4. g'8 |
+	f''8 e''8 d''4 f''8 g''8 e''4 |
+	d''4 c''4 r8 r8 g'8 e''8 |
+	d''8 c''8 e''4 d''8 c''8 e''4 |
+	d''4 g'2 g'8 g'8 |
+	f''8 e''8 f''8 e''8 d''4 e''4 ^ "To Coda" |
+	d''4 c''4 ^ "Chorus" r4 g'8 e''8 |
+	d''8 c''8 e''4 d''8 c''8 e''4 |
+	d''8 b'8 g'4 r4 g'8 g'8 |
+	f''8 e''8 f''8 e''8 d''4 e''4 |
+	} \alternative {
+	{
+	d''4 c''2. |
+	r4 r4 r4 g'4 |
+	}
+	{
+	d''4 c''2. |
+	}
+	}
+	R1 |
+	f''8 e''8 e''8 d''8 d''4. a'8 |
+	f''4 e''4 e''4 d''8 a'8 |
+	f''8 g''8 f''8 e''8 d''4. g'8 |
+	f''8 e''8 d''4 f''8 g''8 e''4 ^ "D.S. al Coda" |
+	\repeat volta 2 {
+	\textMark \markup { \musicglyph "scripts.coda" } d''4 c''4 g'4 e''4 |
+	d''8 c''8 e''4 d''8 c''8 e''4 |
+	d''4 g'4 g'4 g'4 |
+	f''8 e''8 f''8 e''8 d''4 e''4 |
+	d''4 c''4 g'4 e''4 |
+	d''8 c''8 c''4 d''8 c''8 c''4 |
+	d''4 d''4 r4 g'8 g'8 |
+	f''8 e''8 f''8 e''8 d''4 e''4 |
+	}
+	\endBar
+}
+{% endif %}

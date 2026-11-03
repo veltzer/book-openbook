@@ -1,0 +1,191 @@
+{#
+default_version = "Wikifonia"
+
+[attributes]
+title = "We Need A Little Christmas"
+style = "Standard"
+composer = "Jerry Herman"
+piece = "Standard"
+typesetter = "OpenBook contributors (MusicXML import)"
+completion = "3"
+uuid = "7530de9d-4c73-5327-92f9-70cc77df8793"
+location = "Ultimate_Broadway_Fakebook:268"
+copyright = "All Rights Reserved"
+copyrightextra = "Archived MusicXML notice retained; underlying music is not relicensed."
+
+[versions.Wikifonia]
+doChords = true
+doVoice = true
+doLyrics = false
+doLyricsmore = false
+doLyricsmoremore = false
+doChordBars = false
+doGuitar = false
+doExtra = false
+doPrep = false
+doOwn = false
+#}
+{% if part == "Vars" %}
+{% endif %}
+{% if part == "Doc" %}
+	DONE:
+	- imported melody and chord changes from real_books_archive.gi/Wikifonia.tar.xz: Wikifonia/Jerry Herman - We Need A Little Christmas.mxl.
+	- source revision: http://wikifonia.org/node/7235/revisions/9973/view.
+	- local PDF: real_books_archive.gi/The Ultimate Broadway Fakebook.pdf.
+	- book index reference: Ultimate_Broadway_Fakebook:268; index pagination is not a verified PDF page number.
+	- retained the archived MusicXML rights notice; no redistribution permission is asserted.
+	- retained written melody, chord changes, pickups, repeats and numbered endings; lyrics omitted.
+	- imported explicit 7alt symbols using the book's altered-dominant notation where present.
+	- tempo is an editorial practice suggestion.
+	TODO:
+	- proofread the complete melody, harmony and form against the referenced PDF and check by ear.
+	- verify source attribution, copyright notice and reuse terms against the scan; only the archived MusicXML notice is retained.
+	- locate the tune in the exact local PDF edition; book-index page numbers may differ.
+{% endif %}
+{% if part == "ChordsWikifonia" %}\chordmode {
+	\startChords
+	\startSong
+
+	\myMark "A"
+	\startPart
+	\repeat volta 2 {
+	g1 |
+	s1 |
+	s1 |
+	s1 | \myEndLine
+	s1 |
+	s1 |
+	d1:m6 |
+	e1:7 | \myEndLine
+	a1:m7 |
+	d1:7 |
+	a1:m7 |
+	d1:7 | \myEndLine
+	a1:m |
+	s2 a2:m7.5- |
+	d1:7 |
+	s1 | \myEndLine
+	b1:m7.5- |
+	s1 |
+	e1:7 |
+	a2:m/fis e2:7/gis | \myEndLine
+	a1:m |
+	d1:7 |
+	g1 |
+	c1 | \myEndLine
+	a1:m |
+	d1:7 |
+	g1 |
+	s1 | \myEndLine
+	c1 |
+	a4:m7 d2.:7 |
+	g1 |
+	e1:m7 | \myEndLine
+	} \alternative {
+	{
+	a1:7 |
+	s1 |
+	d1:7 |
+	s1 | \myEndLineVoltaNotLast
+	}
+	{
+	a1:m | \myEndLineVoltaLast
+	}
+	}
+	a2:m7 d2:7 |
+	g2 e2:7 |
+	a2:m/fis e2:7/gis | \myEndLine
+	a1:m |
+	d1:7 |
+	g1 |
+	c1 | \myEndLine
+	a1:m |
+	d1:7 |
+	g1 |
+	s1 | \myEndLine
+	c1 |
+	a4:m7 d2.:7 |
+	g1 |
+	e1:m7 | \myEndLine
+	a1:m |
+	a2:m7 d2:7 |
+	g1 |
+	s1 | \myEndLine
+	\endBar
+	\endPart
+
+	\endSong
+	\endChords
+}
+{% endif %}
+{% if part == "VoiceWikifonia" %}\absolute {
+	\tempo "Moderato" 4 = 120
+	\time 2/2
+	\key g \major
+
+	\repeat volta 2 {
+	b1 |
+	d'2. g'4 |
+	b'2 b'2 ~ |
+	b'4 b4 d'4 g'4 |
+	b'2 b'2 |
+	b'2 b'2 |
+	r4 b'4 c''4 d''4 ~ |
+	d''4 c''4 b'2 |
+	c'1 |
+	d'2. fis'4 |
+	a'2 a'2 ~ |
+	a'4 c'4 d'4 fis'4 |
+	a'2 a'2 |
+	a'2 a'2 |
+	r4 a'4 b'4 c''4 ~ |
+	c''4 b'4 a'2 |
+	b'1 ~ |
+	b'1 ~ |
+	b'2 r2 |
+	c''2 d''2 |
+	e''4. e''8 e''4 e''4 |
+	e''4 a'2. |
+	d''4. d''8 d''4 d''4 |
+	d''4 g'2. |
+	c''4 c''4 c''4 c''4 |
+	c''4 fis'2. |
+	g'4 fis'4 g'4 a'4 |
+	b'4 c''4 d''4 dis''4 |
+	e''4. e''8 e''4 e''4 |
+	e''4 a'2. |
+	d''4. d''8 d''4 d''4 |
+	d''4 g'2 g'4 |
+	} \alternative {
+	{
+	a'4 b'4 - "N.C." cis''4 b'4 |
+	a'4 g'4 fis'8 fis'8 e'4 |
+	fis'4 g'4 - "N.C." a'4 g'4 |
+	fis'4 e'4 d'8 d'8 c'4 |
+	}
+	{
+	a'4 b'4 - "N.C." c''4 d''4 |
+	}
+	}
+	e''2 fis'2 |
+	g'2 r2 |
+	c''2 d''2 |
+	e''4. e''8 e''4 e''4 |
+	e''4 a'2. |
+	d''4. d''8 d''4 d''4 |
+	d''4 g'2. |
+	c''4 c''4 c''4 c''4 |
+	c''4 fis'2. |
+	g'4 fis'4 - "N.C." g'4 a'4 |
+	b'4 c''4 d''4 dis''4 |
+	e''4. e''8 e''4 e''4 |
+	e''4 a'2. |
+	d''4. d''8 d''4 d''4 |
+	d''4 g'2. |
+	a'4 b'4 - "N.C." c''4 d''4 |
+	e''2 fis'2 |
+	g'1 ~ |
+	g'4 r4 r2 |
+	\endBar
+}
+{% endif %}

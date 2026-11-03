@@ -1,0 +1,126 @@
+{#
+default_version = "Wikifonia"
+
+[attributes]
+title = "Sunday in New York"
+style = "Jazz"
+composer = "Peter Nero"
+piece = "Standard"
+typesetter = "OpenBook contributors (MusicXML import)"
+completion = "3"
+uuid = "a81020ae-0715-503d-b57e-3de0908c7fce"
+location = "Hal_Leonard_Real_Jazz_Book:336"
+copyright = "All Rights Reserved"
+copyrightextra = "Archived MusicXML notice retained; underlying music is not relicensed."
+
+[versions.Wikifonia]
+doChords = true
+doVoice = true
+doLyrics = false
+doLyricsmore = false
+doLyricsmoremore = false
+doChordBars = false
+doGuitar = false
+doExtra = false
+doPrep = false
+doOwn = false
+#}
+{% if part == "Vars" %}
+{% endif %}
+{% if part == "Doc" %}
+	DONE:
+	- imported melody and chord changes from real_books_archive.gi/Wikifonia.tar.xz: Wikifonia/Peter Nero, Carroll Coates - Sunday in New York.mxl.
+	- source revision: http://wikifonia.org/node/11631/revisions/15626/view.
+	- local PDF: real_books_archive.gi/Hal Leonard Real Jazz Book.pdf.
+	- book index reference: Hal_Leonard_Real_Jazz_Book:336; index pagination is not a verified PDF page number.
+	- retained the archived MusicXML rights notice; no redistribution permission is asserted.
+	- retained written melody, chord changes, pickups, repeats and numbered endings; lyrics omitted.
+	- imported explicit 7alt symbols using the book's altered-dominant notation where present.
+	- tempo is an editorial practice suggestion.
+	TODO:
+	- proofread the complete melody, harmony and form against the referenced PDF and check by ear.
+	- verify source attribution, copyright notice and reuse terms against the scan; only the archived MusicXML notice is retained.
+	- locate the tune in the exact local PDF edition; book-index page numbers may differ.
+	- verify editorial chord spacing in measures 8, 24; the archive places successive symbols at the same offset.
+{% endif %}
+{% if part == "ChordsWikifonia" %}\chordmode {
+	\startChords
+	\startSong
+
+	\myMark "A"
+	\startPart
+	\repeat volta 2 {
+	s8 d4.:m7 g2:7 |
+	d4.:m7 g1*5/8:7 |
+	d2:m7 g2:7 |
+	d4.:m7 g1*5/8:7 | \myEndLine
+	c2:m7 f2:7 |
+	c4.:m7 f2:7 a8:m7 |
+	s2 d2:7 |
+	g2:maj7 g2:6 | \myEndLine
+	}
+	c1:m7 |
+	s2 f4.:9 bes8 |
+	s2.. d8:m7 |
+	g1:7 | \myEndLine
+	c1:m7 |
+	s2 f2:9 |
+	bes4.:maj7 bes2:7 a8:m7 |
+	d1:9 | \myEndLine
+	d2:m7 g2:7 |
+	d4.:m7 g1*5/8:7 |
+	d2:m7 g2:7 |
+	d1:m | \myEndLine
+	c2:m7 f2:7 |
+	c4.:m7 f1*5/8:7 |
+	a2:m7 d2:7 |
+	d2:m6 e2:7 | \myEndLine
+	s8 a2..:m7 |
+	s2 d2:7.9- |
+	g1:6 |
+	s1 | \myEndLine
+	\endBar
+	\endPart
+
+	\endSong
+	\endChords
+}
+{% endif %}
+{% if part == "VoiceWikifonia" %}\absolute {
+	\tempo "Moderato" 4 = 120
+	\time 4/4
+	\key g \major
+
+	\repeat volta 2 {
+	r8 c''4. b'4 g'4 |
+	c''4. b'8 r2 |
+	r8 c''4. b'4 g'4 |
+	b'8 c''8 d''8 g'8 ~ g'2 |
+	r8 bes'4. a'4 f'4 |
+	bes'4. a'8 ~ a'8 g'8 f'8 d'8 ~ |
+	d'4 d'8 c'8 d'8 f'8 d'8 c'8 |
+	d'1 |
+	}
+	es'8 es'8 d'8 es'8 ~ es'8 es'8 f'8 g'8 ~ |
+	\times 2/3 { g'4 a'4 bes'4 } c''8 bes'8 c''8 d''8 ~ |
+	d''4 c''8 b'8 a'4 g'8 d'8 ~ |
+	d'1 |
+	es'8 es'8 d'8 es'8 ~ es'8 es'8 f'8 g'8 ~ |
+	\times 2/3 { g'4 a'4 bes'4 } c''8 bes'8 c''8 d''8 ~ |
+	d''8 bes'8 c''8 d''8 ~ d''8 bes'8 c''8 d''8 ~ |
+	d''1 |
+	r8 c''4. b'4 g'4 |
+	c''4. b'8 r2 |
+	r8 c''4. b'4 g'4 |
+	b'8 c''8 d''8 g'8 ~ g'2 |
+	r8 bes'4. a'4 f'4 |
+	bes'4. a'8 ~ a'8 g'8 f'8 d'8 ~ |
+	d'4 d'8 c'8 d'8 f'8 d'8 c'8 |
+	d'1 |
+	r8 c'4. e'4 g'4 |
+	c''8 b'4. g'4 a'8 g'8 ~ |
+	g'1 ~ |
+	g'2. r4 |
+	\endBar
+}
+{% endif %}

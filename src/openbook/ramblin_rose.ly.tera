@@ -1,0 +1,131 @@
+{#
+default_version = "Wikifonia"
+
+[attributes]
+title = "Ramblin' Rose"
+style = "Standard"
+composer = "Noel Sherman, Joe Sherman"
+piece = "Standard"
+typesetter = "OpenBook contributors (MusicXML import)"
+completion = "3"
+uuid = "6f4fd30b-6726-5df4-8ffa-bcf892c741c2"
+location = "TheBook:392"
+copyright = "All Rights Reserved"
+copyrightextra = "Archived MusicXML notice retained; underlying music is not relicensed."
+
+[versions.Wikifonia]
+doChords = true
+doVoice = true
+doLyrics = false
+doLyricsmore = false
+doLyricsmoremore = false
+doChordBars = false
+doGuitar = false
+doExtra = false
+doPrep = false
+doOwn = false
+#}
+{% if part == "Vars" %}
+{% endif %}
+{% if part == "Doc" %}
+	DONE:
+	- imported melody and chord changes from real_books_archive.gi/Wikifonia.tar.xz: Wikifonia/Noel Sherman, Joe Sherman - Ramblin' Rose.mxl.
+	- source revision: http://wikifonia.org/node/3767/revisions/4925/view.
+	- local PDF: real_books_archive.gi/The Book.pdf.
+	- book index reference: TheBook:392; index pagination is not a verified PDF page number.
+	- retained the archived MusicXML rights notice; no redistribution permission is asserted.
+	- retained written melody, chord changes, pickups, repeats and numbered endings; lyrics omitted.
+	- imported explicit 7alt symbols using the book's altered-dominant notation where present.
+	- tempo is an editorial practice suggestion.
+	TODO:
+	- proofread the complete melody, harmony and form against the referenced PDF and check by ear.
+	- verify source attribution, copyright notice and reuse terms against the scan; only the archived MusicXML notice is retained.
+	- locate the tune in the exact local PDF edition; book-index page numbers may differ.
+{% endif %}
+{% if part == "ChordsWikifonia" %}\chordmode {
+	\startChords
+	\startSong
+
+	\myMark "A"
+	\startPart
+	s1 |
+	g1:7 |
+	s1 |
+	c1 | \myEndLine
+	s1 |
+	d1:7 |
+	s1 |
+	g1:7 | \myEndLine
+	s2 c2:7 |
+	f1 |
+	s1 |
+	c1 | \myEndLine
+	s1 |
+	d1:m |
+	g1:7 |
+	c1 | \myEndLine
+	s1 |
+	g1:7 |
+	s1 |
+	c1 | \myEndLine
+	s1 |
+	d1:7 |
+	s1 |
+	g1:7 | \myEndLine
+	s2 c2:7 |
+	f1 |
+	s1 |
+	c1 | \myEndLine
+	s1 |
+	d1:m |
+	g1:7 |
+	c1 | \myEndLine
+	s1 |
+	\endBar
+	\endPart
+
+	\endSong
+	\endChords
+}
+{% endif %}
+{% if part == "VoiceWikifonia" %}\absolute {
+	\tempo "Moderato" 4 = 120
+	\time 4/4
+	\key c \major
+
+	g'2 c''2 |
+	b'1 ~ |
+	b'2 f'4 a'4 |
+	g'1 ~ |
+	g'2 g'4 e''4 |
+	d''2 d''2 ~ |
+	d''2 c''4 a'4 |
+	d''1 ~ |
+	d''2 e''4 d''4 |
+	c''2 a'2 ~ |
+	a'2 a'4 c''4 |
+	g'2 e'2 ~ |
+	e'2 e'4 g'4 |
+	f'2 d'2 ~ |
+	d'4 d'4 c'4 b4 |
+	c'1 ~ |
+	c'4 r4 g'4 - "N.C." c''4 |
+	b'1 ~ |
+	b'2 f'4 a'4 |
+	g'1 ~ |
+	g'2 g'4 e''4 |
+	d''2 d''2 ~ |
+	d''2 c''4 a'4 |
+	d''1 ~ |
+	d''2 e''4 d''4 |
+	c''2 a'2 ~ |
+	a'2 a'4 c''4 |
+	g'2 e'2 ~ |
+	e'2 e'4 g'4 |
+	f'2 d'2 ~ |
+	d'4 d''4 c''4 b'4 |
+	c''1 ~ |
+	c''4 r4 r2 |
+	\endBar
+}
+{% endif %}

@@ -1,0 +1,123 @@
+{#
+default_version = "Wikifonia"
+
+[attributes]
+title = "Maria"
+style = "Standard"
+composer = "Leonard Bernstein"
+piece = "Standard"
+typesetter = "OpenBook contributors (MusicXML import)"
+completion = "3"
+uuid = "d9d60eee-fb64-54b8-82cd-099e6d8e3f36"
+location = "Ultimate_Broadway_Fakebook:385"
+copyright = "All Rights Reserved"
+copyrightextra = "Archived MusicXML notice retained; underlying music is not relicensed."
+
+[versions.Wikifonia]
+doChords = true
+doVoice = true
+doLyrics = false
+doLyricsmore = false
+doLyricsmoremore = false
+doChordBars = false
+doGuitar = false
+doExtra = false
+doPrep = false
+doOwn = false
+#}
+{% if part == "Vars" %}
+{% endif %}
+{% if part == "Doc" %}
+	DONE:
+	- imported melody and chord changes from real_books_archive.gi/Wikifonia.tar.xz: Wikifonia/Leonard Bernstein, Stephen Sondheim - Maria.mxl.
+	- source revision: http://wikifonia.org/node/9199/revisions/12621/view.
+	- local PDF: real_books_archive.gi/The Ultimate Broadway Fakebook.pdf.
+	- book index reference: Ultimate_Broadway_Fakebook:385; index pagination is not a verified PDF page number.
+	- retained the archived MusicXML rights notice; no redistribution permission is asserted.
+	- retained written melody, chord changes, pickups, repeats and numbered endings; lyrics omitted.
+	- imported explicit 7alt symbols using the book's altered-dominant notation where present.
+	- tempo is an editorial practice suggestion.
+	TODO:
+	- proofread the complete melody, harmony and form against the referenced PDF and check by ear.
+	- verify source attribution, copyright notice and reuse terms against the scan; only the archived MusicXML notice is retained.
+	- locate the tune in the exact local PDF edition; book-index page numbers may differ.
+{% endif %}
+{% if part == "ChordsWikifonia" %}\chordmode {
+	\startChords
+	\startSong
+
+	\myMark "A"
+	\startPart
+	c4:m c4:m7 aes4 c4:m |
+	des1 |
+	g2:6 ees2:7 |
+	aes1 | \myEndLine
+	c4:m c4:m7 aes4 c4:m |
+	bes1 |
+	ees2:m ees2 |
+	aes1 | \myEndLine
+	c1 |
+	s1 |
+	g1 |
+	c2 g2 | \myEndLine
+	d1:m7 |
+	c1:maj7 |
+	c1 |
+	s1 | \myEndLine
+	g1 |
+	a2:m e2:m |
+	a2:m e2:m |
+	b1:m | \myEndLine
+	f1 |
+	s1 |
+	e1:m |
+	g1:m | \myEndLine
+	c1 |
+	bes1:9 |
+	s1 |
+	c1:6 | \myEndLine
+	s1 |
+	\endBar
+	\endPart
+
+	\endSong
+	\endChords
+}
+{% endif %}
+{% if part == "VoiceWikifonia" %}\absolute {
+	\tempo "Moderato" 4 = 120
+	\time 4/4
+	\key as \major
+
+	r4 \times 2/3 { r8 c'8 c'8 } \once \omit TupletBracket \times 2/3 { c'8 c'8 c'8 } c'8 c'8 |
+	des'8 as8 bes2 r8 bes8 |
+	es'8 des'4 bes8 \once \omit TupletBracket \times 2/3 { es'8 des'8 bes8 } \once \omit TupletBracket \times 2/3 { es'8 des'8 bes8 } |
+	es'8 c'4. ~ c'2 |
+	\times 2/3 { r8 c'8 c'8 } \once \omit TupletBracket \times 2/3 { c'8 c'8 c'8 } \once \omit TupletBracket \times 2/3 { c'8 c'8 c'8 } \once \omit TupletBracket \times 2/3 { c'8 c'8 c'8 } |
+	des'8 as8 bes2 r8 bes8 |
+	f'8 es'4 bes8 \once \omit TupletBracket \times 2/3 { f'8 es'8 bes8 } \once \omit TupletBracket \times 2/3 { f'8 es'8 bes8 } |
+	f'8 es'4 c'8 \once \omit TupletBracket \times 2/3 { f'8 es'8 c'8 } \once \omit TupletBracket \times 2/3 { f'8 es'8 c'8 } |
+	\key c \major fis'8 g'4. ~ g'4. c'8 |
+	\times 2/3 { fis'4 g'4 a'4 } \times 2/3 { fis'4 g'4 a'4 } |
+	fis'8 g'4. ~ g'4. g'8 |
+	fis'8 e'8 d'8 c'8 d'4. g'8 |
+	f'8 e'8 d'8 c'8 d'4 c'4 |
+	e'2. r8 c'8 |
+	fis'8 g'4. ~ g'4. c'8 |
+	\times 2/3 { fis'4 g'4 a'4 } \times 2/3 { fis'4 g'4 a'4 } |
+	b'8 g'4. ~ g'4. b'8 |
+	c''8 b'8 a'8 g'8 b'4. b'8 |
+	c''8 b'8 a'8 g'8 b'4 c''4 |
+	d''2. d''4 |
+	c''8 b'4. ~ b'4 d''8 c''8 |
+	\times 2/3 { b'4 a'4 b'4 } c''4 b'4 |
+	b'8 g'4. \times 2/3 { r4 g'4 a'4 } |
+	\times 2/3 { bes'4 a'4 g'4 } \times 2/3 { bes'4 a'4 g'4 } |
+	a'8 d'4. ~ d'4 d'4 |
+	f'8 c'4. ~ c'4. d'8 |
+	\times 2/3 { f'4 c'4 d'4 } \times 2/3 { f'4 c'4 d'4 } |
+	e'8 c''4. ~ c''2 ~ |
+	c''1 ^\fermata |
+	\endBar
+}
+{% endif %}

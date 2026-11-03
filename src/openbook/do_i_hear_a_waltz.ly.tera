@@ -1,0 +1,203 @@
+{#
+default_version = "Wikifonia"
+
+[attributes]
+title = "Do I Hear A Waltz"
+style = "Standard"
+composer = "Richard Rodgers"
+piece = "Standard"
+typesetter = "OpenBook contributors (MusicXML import)"
+completion = "3"
+uuid = "f3207866-0061-59d7-b0f6-914c36e5872b"
+location = "Ultimate_Broadway_Fakebook:90"
+copyright = "All Rights Reserved"
+copyrightextra = "Archived MusicXML notice retained; underlying music is not relicensed."
+
+[versions.Wikifonia]
+doChords = true
+doVoice = true
+doLyrics = false
+doLyricsmore = false
+doLyricsmoremore = false
+doChordBars = false
+doGuitar = false
+doExtra = false
+doPrep = false
+doOwn = false
+#}
+{% if part == "Vars" %}
+{% endif %}
+{% if part == "Doc" %}
+	DONE:
+	- imported melody and chord changes from real_books_archive.gi/Wikifonia.tar.xz: Wikifonia/Richard Rodgers, Stephen Sondheim - Do I Hear A Waltz.mxl.
+	- source revision: http://wikifonia.org/node/6084/revisions/8467/view.
+	- local PDF: real_books_archive.gi/The Ultimate Broadway Fakebook.pdf.
+	- book index reference: Ultimate_Broadway_Fakebook:90; index pagination is not a verified PDF page number.
+	- retained the archived MusicXML rights notice; no redistribution permission is asserted.
+	- retained written melody, chord changes, pickups, repeats and numbered endings; lyrics omitted.
+	- imported explicit 7alt symbols using the book's altered-dominant notation where present.
+	- tempo is an editorial practice suggestion.
+	TODO:
+	- proofread the complete melody, harmony and form against the referenced PDF and check by ear.
+	- verify source attribution, copyright notice and reuse terms against the scan; only the archived MusicXML notice is retained.
+	- locate the tune in the exact local PDF edition; book-index page numbers may differ.
+{% endif %}
+{% if part == "ChordsWikifonia" %}\chordmode {
+	\startChords
+	\startSong
+
+	\myMark "A"
+	\startPart
+	s2. |
+	g2. |
+	s2. |
+	s2. | \myEndLine
+	s2. |
+	d2.:7 |
+	s2. |
+	s2. | \myEndLine
+	s2. |
+	a2.:m |
+	s2. |
+	g2. | \myEndLine
+	d2.:7 |
+	g2. |
+	s2. |
+	d2.:7 | \myEndLine
+	s2. |
+	g2. |
+	s2. |
+	s2. | \myEndLine
+	s2. |
+	ees2. |
+	s2. |
+	s2. | \myEndLine
+	s2. |
+	a2.:m |
+	d2.:7 |
+	g2. | \myEndLine
+	s2. |
+	a2.:7 |
+	s2. |
+	s2. | \myEndLine
+	s2. |
+	c2. |
+	a2.:7 |
+	g2. | \myEndLine
+	s2. |
+	d2.:7 |
+	s2. |
+	g2. | \myEndLine
+	s2. |
+	c2. |
+	a2.:7 |
+	g2. | \myEndLine
+	s2. |
+	d2.:7 |
+	s2. |
+	d2.:7 | \myEndLine
+	s2. |
+	g2. |
+	s2. |
+	s2. | \myEndLine
+	s2. |
+	d2.:7 |
+	s2. |
+	s2. | \myEndLine
+	s2. |
+	a2.:m |
+	s2. |
+	s2. | \myEndLine
+	g2. |
+	g2.:m |
+	d2.:7 |
+	s2. | \myEndLine
+	d2.:7 |
+	s2. |
+	s2. |
+	s2. | \myEndLine
+	s2. |
+	\endBar
+	\endPart
+
+	\endSong
+	\endChords
+}
+{% endif %}
+{% if part == "VoiceWikifonia" %}\absolute {
+	\tempo "Moderato" 4 = 120
+	\time 3/4
+	\key c \major
+
+	r2 d'4 - "N.C." |
+	g'4 d'4 cis'4 |
+	d'2. ~ |
+	d'4 cis'4 d'4 |
+	e'4 cis'4 d'4 |
+	e'4 cis'4 d'4 ~ |
+	d'2. ~ |
+	d'2. ~ |
+	d'2 e'4 |
+	c''4 g'4 b'4 |
+	fis'4 a'4 e'4 |
+	g'4 e'4 fis'4 |
+	c'4 e'4 b4 |
+	d'2. ~ |
+	d'2. ~ |
+	d'2. ~ |
+	d'2 d'4 |
+	g'4 d'4 cis'4 |
+	d'2. ~ |
+	d'4 cis'4 d'4 |
+	e'4 cis'4 d'4 |
+	f'4 d'4 es'4 ~ |
+	es'2. ~ |
+	es'4 d'4 es'4 |
+	f'4 d'4 es'4 |
+	fis'2 fis'4 ~ |
+	fis'4 e'4 c'4 |
+	b2. ~ |
+	b2. |
+	a'2 a'4 ~ |
+	a'4 fis'4 e'4 |
+	d'2. ~ - "D&" |
+	d'2. |
+	a'4 gis'4 a'4 |
+	bes'4 a'4 bes'4 |
+	ais'4 b'4 d'4 ~ |
+	d'4 ais'4 b'4 |
+	d'2. ~ |
+	d'4 ais'4 b'4 |
+	d'2. ~ |
+	d'2. |
+	a'4 gis'4 a'4 |
+	bes'4 a'4 bes'4 |
+	ais'4 b'4 e'4 ~ |
+	e'4 ais'4 b'4 |
+	a'2. ~ |
+	a'4 ais'4 b'4 |
+	a'2. ~ |
+	a'2 d'4 |
+	g'4 d'4 cis'4 |
+	d'2. ~ |
+	d'4 cis'4 d'4 |
+	e'4 cis'4 d'4 |
+	e'4 cis'4 d'4 ~ |
+	d'2. ~ |
+	d'2. ~ |
+	d'4 r4 d'4 |
+	c''4 g'4 b'4 |
+	fis'4 a'4 e'4 |
+	e'2 r4 |
+	d''2. |
+	d''2. |
+	d''2 des''4 |
+	c''2 fis'4 |
+	g'2. ~ |
+	g'2. ~ |
+	g'2. |
+	r2 d'4 |
+	r4 r2 |
+	\endBar
+}
+{% endif %}

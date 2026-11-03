@@ -1,0 +1,142 @@
+{#
+default_version = "Wikifonia"
+
+[attributes]
+title = "Comedy Tonight"
+style = "Standard"
+composer = "Stephen Sondheim"
+piece = "Standard"
+typesetter = "OpenBook contributors (MusicXML import)"
+completion = "3"
+uuid = "714e239e-4907-5986-8944-ec732070beb1"
+location = "Ultimate_Broadway_Fakebook:147"
+copyright = "All Rights Reserved"
+copyrightextra = "Archived MusicXML notice retained; underlying music is not relicensed."
+
+[versions.Wikifonia]
+doChords = true
+doVoice = true
+doLyrics = false
+doLyricsmore = false
+doLyricsmoremore = false
+doChordBars = false
+doGuitar = false
+doExtra = false
+doPrep = false
+doOwn = false
+#}
+{% if part == "Vars" %}
+{% endif %}
+{% if part == "Doc" %}
+	DONE:
+	- imported melody and chord changes from real_books_archive.gi/Wikifonia.tar.xz: Wikifonia/Stephen Sondheim - Comedy Tonight.mxl.
+	- source revision: http://wikifonia.org/node/11655/revisions/15654/view.
+	- local PDF: real_books_archive.gi/The Ultimate Broadway Fakebook.pdf.
+	- book index reference: Ultimate_Broadway_Fakebook:147; index pagination is not a verified PDF page number.
+	- retained the archived MusicXML rights notice; no redistribution permission is asserted.
+	- retained written melody, chord changes, pickups, repeats and numbered endings; lyrics omitted.
+	- imported explicit 7alt symbols using the book's altered-dominant notation where present.
+	- tempo is an editorial practice suggestion.
+	TODO:
+	- proofread the complete melody, harmony and form against the referenced PDF and check by ear.
+	- verify source attribution, copyright notice and reuse terms against the scan; only the archived MusicXML notice is retained.
+	- locate the tune in the exact local PDF edition; book-index page numbers may differ.
+	- verify editorial chord spacing in measures 18; the archive places successive symbols at the same offset.
+{% endif %}
+{% if part == "ChordsWikifonia" %}\chordmode {
+	\startChords
+	\startSong
+
+	\myMark "A"
+	\startPart
+	\repeat volta 2 {
+	g1 |
+	c2 d2 |
+	g1 |
+	c2 d2 | \myEndLine
+	g1 |
+	c1 |
+	f1 |
+	d1:7 | \myEndLine
+	g1 |
+	c2 d2 |
+	g1 |
+	c2 d2 | \myEndLine
+	g1 |
+	c1 |
+	f1 |
+	d1:7 | \myEndLine
+	g1 |
+	c2 d2 |
+	b1 |
+	s1 | \myEndLine
+	f1 |
+	s2 g2 |
+	a2.:m b4 |
+	a1:m7 | \myEndLine
+	g1 |
+	c2 d2 |
+	g1 |
+	c2 d2 | \myEndLine
+	g1 |
+	a2:m g2 |
+	bes1:m7 |
+	s1 | \myEndLine
+	a1:m7 |
+	s1 |
+	s2. d4:7 |
+	g1 | \myEndLine
+	}
+	\endBar
+	\endPart
+
+	\endSong
+	\endChords
+}
+{% endif %}
+{% if part == "VoiceWikifonia" %}\absolute {
+	\tempo "Moderato" 4 = 120
+	\time 2/2
+	\key g \major
+
+	\repeat volta 2 {
+	d'4 g'2 d'4 |
+	g'2 a'2 |
+	d'4 g'2 d'4 |
+	c'2 a2 |
+	d'4 g'2 d'4 |
+	c''4. b'8 a'4 g'4 |
+	a'8 a'8 a'4 r4 g'4 |
+	a'4 r4 r2 |
+	d'4 g'2 d'4 |
+	g'2 a'2 |
+	d'4 g'2 d'4 |
+	c'2 a2 |
+	d'4 g'2 d'4 |
+	c''4. b'8 a'4 g'4 |
+	a'8 a'8 a'4 r4 g'4 |
+	a'4 r4 r2 |
+	d''4 d''2 c''4 |
+	d''1 |
+	b'4 b'2 a'4 |
+	b'1 |
+	c''4 c''2 b'4 |
+	c''2 d''2 |
+	c''4 c''2 b'4 |
+	g'2 ( e'2 ) |
+	d'4 g'2 d'4 |
+	g'2 a'2 |
+	d'4 g'2 d'4 |
+	c'2 a2 |
+	d'4 g'2 d'4 |
+	g'4 a'4 b'4 d''4 |
+	es''1 ~ |
+	es''2. r4 |
+	d''8 d''8 d''2 c''4 |
+	d''2 e''2 |
+	d''8 d''8 d''2 b'4 |
+	g'1 |
+	}
+	\endBar
+}
+{% endif %}

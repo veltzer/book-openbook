@@ -1,0 +1,156 @@
+{#
+default_version = "Wikifonia"
+
+[attributes]
+title = "It Only Happens When I Dance With You"
+style = "Jazz"
+composer = "Irving Berlin"
+piece = "Standard"
+typesetter = "OpenBook contributors (MusicXML import)"
+completion = "3"
+uuid = "8ac9dcd0-0104-5081-a182-079915da2ec7"
+location = "Hal_Leonard_Real_Jazz_Book:185"
+copyright = "All Rights Reserved"
+copyrightextra = "Archived MusicXML notice retained; underlying music is not relicensed."
+
+[versions.Wikifonia]
+doChords = true
+doVoice = true
+doLyrics = false
+doLyricsmore = false
+doLyricsmoremore = false
+doChordBars = false
+doGuitar = false
+doExtra = false
+doPrep = false
+doOwn = false
+#}
+{% if part == "Vars" %}
+{% endif %}
+{% if part == "Doc" %}
+	DONE:
+	- imported melody and chord changes from real_books_archive.gi/Wikifonia.tar.xz: Wikifonia/Irving  Berlin - It Only Happens When I Dance With You.mxl.
+	- source revision: http://wikifonia.org/node/12519/revisions/16895/view.
+	- local PDF: real_books_archive.gi/Hal Leonard Real Jazz Book.pdf.
+	- book index reference: Hal_Leonard_Real_Jazz_Book:185; index pagination is not a verified PDF page number.
+	- retained the archived MusicXML rights notice; no redistribution permission is asserted.
+	- retained written melody, chord changes, pickups, repeats and numbered endings; lyrics omitted.
+	- imported explicit 7alt symbols using the book's altered-dominant notation where present.
+	- tempo is an editorial practice suggestion.
+	TODO:
+	- proofread the complete melody, harmony and form against the referenced PDF and check by ear.
+	- verify source attribution, copyright notice and reuse terms against the scan; only the archived MusicXML notice is retained.
+	- locate the tune in the exact local PDF edition; book-index page numbers may differ.
+	- verify editorial chord spacing in measures 35; the archive places successive symbols at the same offset.
+{% endif %}
+{% if part == "ChordsWikifonia" %}\chordmode {
+	\startChords
+	\startSong
+
+	\myMark "A"
+	\startPart
+	\repeat volta 2 {
+	s4 c2.:maj7 |
+	a1:7.9- |
+	d1:m7 |
+	g1:7 | \myEndLine
+	c1:maj7 |
+	a1:7.9- |
+	d1:m7.5- |
+	g1:7 | \myEndLine
+	f1:maj7 |
+	f1:m6 |
+	c1:maj7 |
+	s1 | \myEndLine
+	e1:m7 |
+	a1:7.9- |
+	d1:m7 |
+	g1:7.9- | \myEndLine
+	c1:maj7 |
+	a1:7.9- |
+	d1:m7 |
+	g1:7 | \myEndLine
+	c1:maj7 |
+	a2:7.9- cis2:dim7 |
+	d1:m7.5- |
+	g1:7 | \myEndLine
+	f1:maj7 |
+	f1:m6 |
+	e1:m7.5- |
+	a1:aug7 | \myEndLine
+	d1:m7 |
+	g1:7 |
+	c2 e2:m7 |
+	a1:7 | \myEndLine
+	d1:m7 |
+	g2.:11 g4:7 |
+	} \alternative {
+	{
+	c2:6 a2:m9 |
+	d2.:m7 g4:7 | \myEndLineVoltaNotLast
+	}
+	{
+	c1:6 |
+	s1 | \myEndLineVoltaLast
+	}
+	}
+	\endBar
+	\endPart
+
+	\endSong
+	\endChords
+}
+{% endif %}
+{% if part == "VoiceWikifonia" %}\absolute {
+	\tempo "Moderato" 4 = 120
+	\time 4/4
+	\key c \major
+
+	\repeat volta 2 {
+	r4 e'4 dis'4 e'4 |
+	f'4 e'4 dis'4 e'4 |
+	f'2 e'4 g'4 ~ |
+	g'1 |
+	r4 g'4 fis'4 g'4 |
+	as'4 g'4 fis'4 g'4 |
+	as'2 g'4 b'4 ~ |
+	b'1 |
+	r4 a'4 b'4 c''4 |
+	\times 2/3 { d''4 e''4 d''4 } \times 2/3 { b'4 d''4 c''4 } |
+	g'4. g'8 g'2 ~ |
+	g'2 \times 2/3 { b'4 d''4 c''4 } |
+	e'4. e'8 e'2 ~ |
+	e'2 \times 2/3 { f'4 a'4 g'4 } |
+	d'1 ~ |
+	d'2 r2 |
+	r4 e'4 dis'4 e'4 |
+	f'4 e'4 dis'4 e'4 |
+	f'2 e'4 g'4 ~ |
+	g'1 |
+	r4 g'4 fis'4 g'4 |
+	as'4 g'4 fis'4 g'4 |
+	as'2 g'4 b'4 ~ |
+	b'1 |
+	r4 a'4 b'4 c''4 |
+	\times 2/3 { d''4 e''4 d''4 } \times 2/3 { b'4 d''4 c''4 } |
+	g'2 bes'2 |
+	a'1 |
+	r4 g'8 g'8 g'4 g'4 |
+	g'4 f'4 f'4 as'4 |
+	as'4 g'4 g'4 b'4 |
+	b'4 a'2. |
+	r4 d''4 d''4 d''4 |
+	d''4 c''2 b'4 |
+	} \alternative {
+	{
+	c''1 ~ |
+	c''2. r4 |
+	}
+	{
+	c''1 ~ |
+	c''2. r4 |
+	}
+	}
+	\endBar
+}
+{% endif %}

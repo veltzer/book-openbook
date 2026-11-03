@@ -1,0 +1,177 @@
+{#
+default_version = "Wikifonia"
+
+[attributes]
+title = "Norwegian Wood"
+style = "Jazz"
+composer = "John Lennon, Paul McCartney"
+piece = "Standard"
+typesetter = "OpenBook contributors (MusicXML import)"
+completion = "3"
+uuid = "51f06be2-482c-52f9-bdee-74a3e7c37d05"
+location = "TheBook:239, Hal_Leonard_Real_Jazz_Book:262"
+copyright = "All Rights Reserved"
+copyrightextra = "Archived MusicXML notice retained; underlying music is not relicensed."
+
+[versions.Wikifonia]
+doChords = true
+doVoice = true
+doLyrics = false
+doLyricsmore = false
+doLyricsmoremore = false
+doChordBars = false
+doGuitar = false
+doExtra = false
+doPrep = false
+doOwn = false
+#}
+{% if part == "Vars" %}
+{% endif %}
+{% if part == "Doc" %}
+	DONE:
+	- imported melody and chord changes from real_books_archive.gi/Wikifonia.tar.xz: Wikifonia/John Lennon, Paul McCartney - Norwegian Wood.mxl.
+	- source revision: http://wikifonia.org/node/4288/revisions/5743/view.
+	- local PDF: real_books_archive.gi/The Book.pdf.
+	- book index reference: TheBook:239; index pagination is not a verified PDF page number.
+	- retained the archived MusicXML rights notice; no redistribution permission is asserted.
+	- retained written melody, chord changes, pickups, repeats and numbered endings; lyrics omitted.
+	- imported explicit 7alt symbols using the book's altered-dominant notation where present.
+	- tempo taken from archived MusicXML.
+	TODO:
+	- proofread the complete melody, harmony and form against the referenced PDF and check by ear.
+	- verify source attribution, copyright notice and reuse terms against the scan; only the archived MusicXML notice is retained.
+	- locate the tune in the exact local PDF edition; book-index page numbers may differ.
+{% endif %}
+{% if part == "ChordsWikifonia" %}\chordmode {
+	\startChords
+	\startSong
+
+	\myMark "A"
+	\startPart
+	\repeat volta 2 {
+	e2. |
+	s2. |
+	s2. |
+	s2. | \myEndLine
+	s2. |
+	d2. |
+	} \alternative {
+	{
+	e2. |
+	s2. | \myEndLineVoltaNotLast
+	}
+	{
+	s2. | \myEndLineVoltaLast
+	}
+	}
+	\repeat volta 2 {
+	e2.:m |
+	s2. |
+	s2. | \myEndLine
+	s2. |
+	a2. |
+	s2. |
+	s2. | \myEndLine
+	s2. |
+	e2.:m |
+	s2. |
+	s2. | \myEndLine
+	s2. |
+	fis2.:m |
+	s2. |
+	s2. | \myEndLine
+	s2. |
+	e2. |
+	s2. |
+	s2. | \myEndLine
+	s2. |
+	s2. |
+	d2. |
+	e2. | \myEndLine
+	s2. |
+	s2. |
+	s2. |
+	s2. | \myEndLine
+	s2. |
+	s2. |
+	d2. |
+	e2. | \myEndLine
+	} \alternative {
+	{
+	s2. | \myEndLineVoltaNotLast
+	}
+	{
+	s2. | \myEndLineVoltaLast
+	}
+	}
+	\endBar
+	\endPart
+
+	\endSong
+	\endChords
+}
+{% endif %}
+{% if part == "VoiceWikifonia" %}\absolute {
+	\tempo "Moderato" 4 = 60
+	\time 3/4
+	\key e \major
+
+	\repeat volta 2 {
+	b'2. _ "Moderately" |
+	cis''4 b'4 a'4 |
+	gis'2. |
+	fis'4 a'4 gis'4 |
+	e'2. |
+	d'4 a'4 cis'4 |
+	} \alternative {
+	{
+	b2. ~ |
+	b2. |
+	}
+	{
+	b2 e'4 |
+	}
+	}
+	\repeat volta 2 {
+	b'4 b'4 b'4 |
+	b'4 a'4 a'4 |
+	a'4 g'4 g'4 |
+	g'4 a'4 g'4 |
+	a'2. ~ |
+	a'2. |
+	R2. |
+	r2 e'4 |
+	b'4 b'4 b'4 |
+	b'4 a'4 a'4 |
+	a'4 g'4 gis'4 |
+	g'4 a'4 g'4 |
+	a'2. ~ |
+	a'2. |
+	r2. |
+	r2. |
+	b'2. |
+	cis''4 b'4 b'4 |
+	gis'2. |
+	fis'4 a'4 gis'4 |
+	e'2. |
+	d'4 a'4 cis'4 |
+	b2. ~ |
+	b2. |
+	b'2. |
+	cis''4 b'4 a'4 |
+	gis'2. |
+	fis'4 a'4 gis'4 |
+	e'2. |
+	d'4 a'4 cis'4 |
+	b2. ~ |
+	} \alternative {
+	{
+	b2 e'4 |
+	}
+	{
+	b2 r4 |
+	}
+	}
+	\endBar
+}
+{% endif %}

@@ -1,0 +1,168 @@
+{#
+default_version = "Wikifonia"
+
+[attributes]
+title = "Believe"
+style = "Standard"
+composer = "Alan Silvestri"
+piece = "Standard"
+typesetter = "OpenBook contributors (MusicXML import)"
+completion = "3"
+uuid = "9292de41-ddfe-52bb-93c7-3c5f3c493d23"
+location = "Ultimate_Broadway_Fakebook:372"
+copyright = "All Rights Reserved"
+copyrightextra = "Archived MusicXML notice retained; underlying music is not relicensed."
+
+[versions.Wikifonia]
+doChords = true
+doVoice = true
+doLyrics = false
+doLyricsmore = false
+doLyricsmoremore = false
+doChordBars = false
+doGuitar = false
+doExtra = false
+doPrep = false
+doOwn = false
+#}
+{% if part == "Vars" %}
+{% endif %}
+{% if part == "Doc" %}
+	DONE:
+	- imported melody and chord changes from real_books_archive.gi/Wikifonia.tar.xz: Wikifonia/Alan Silvestri, Glen Ballard - Believe.mxl.
+	- source revision: http://wikifonia.org/node/17088/revisions/22674/view.
+	- local PDF: real_books_archive.gi/The Ultimate Broadway Fakebook.pdf.
+	- book index reference: Ultimate_Broadway_Fakebook:372; index pagination is not a verified PDF page number.
+	- retained the archived MusicXML rights notice; no redistribution permission is asserted.
+	- retained written melody, chord changes, pickups, repeats and numbered endings; lyrics omitted.
+	- imported explicit 7alt symbols using the book's altered-dominant notation where present.
+	- tempo is an editorial practice suggestion.
+	TODO:
+	- proofread the complete melody, harmony and form against the referenced PDF and check by ear.
+	- verify source attribution, copyright notice and reuse terms against the scan; only the archived MusicXML notice is retained.
+	- locate the tune in the exact local PDF edition; book-index page numbers may differ.
+	- verify complete D.C./D.S./coda/Fine navigation and playback; printed directions are not a playback guarantee.
+{% endif %}
+{% if part == "ChordsWikifonia" %}\chordmode {
+	\startChords
+	\startSong
+
+	\myMark "A"
+	\startPart
+	\repeat volta 2 {
+	e1 |
+	gis1:m/dis |
+	e1 |
+	gis1:m/dis | \myEndLine
+	fis1:m |
+	ees1 |
+	fis1:m |
+	a2 b2 | \myEndLine
+	e1 |
+	gis1:m/dis |
+	e1 |
+	gis1:m/dis | \myEndLine
+	fis1:m |
+	ees1 |
+	fis1:m |
+	a2 b2 | \myEndLine
+	gis1:m |
+	a1 |
+	d1/fis |
+	b2.:sus4 b4 | \myEndLine
+	e2 fis2:m11 |
+	e2:9/gis a2 |
+	e2 b2:sus4/dis |
+	fis2:m7 e4/b b4:sus4 | \myEndLine
+	e2 fis2:m11 |
+	e2:9/gis gis2:aug7 |
+	cis1:m |
+	fis1:m7 | \myEndLine
+	b1:sus4.7 |
+	e1 |
+	gis1:m/dis |
+	}
+	e2 fis2:m11 | \myEndLine
+	e2:9/gis a2 |
+	e2 b2:sus4/dis |
+	fis2:m11 e4/b b4:sus4 |
+	e2 fis2:m11 | \myEndLine
+	e2:9/gis a2 |
+	e2 b2:sus4/dis |
+	fis1*5/8:m7 e4/b b8:sus4 |
+	e2 bis2:m11 | \myEndLine
+	e2:9/gis a2 |
+	e2 b2:sus4/dis |
+	fis2:m7 e4/b b4:sus4 |
+	\repeat volta 2 {
+	e2 fis2:m11 | \myEndLine
+	e2:9/gis a2 |
+	e2 b2:sus4/dis |
+	fis2:m7 e4/b b4:sus4 |
+	}
+	\endBar
+	\endPart
+
+	\endSong
+	\endChords
+}
+{% endif %}
+{% if part == "VoiceWikifonia" %}\absolute {
+	\tempo "Moderato" 4 = 120
+	\time 4/4
+	\key e \major
+
+	\repeat volta 2 {
+	\textMark \markup { \musicglyph "scripts.segno" } e'4. b'8 ~ b'2 |
+	dis'4. b'8 ~ b'2 |
+	e'4 fis'8 gis'8 ~ gis'8 b4. |
+	dis'4. b8 ~ b2 |
+	r2 fis'4. cis'8 |
+	es'4. bes8 ~ bes2 |
+	r4 r8 cis'8 fis'8. gis'16 ~ gis'8 a'8 |
+	gis'4. ( fis'8 ) fis'2 |
+	e'4. b'8 ~ b'2 |
+	dis'4. b'8 ~ b'2 |
+	e'4 fis'8 gis'8 ~ gis'4 b8 dis'8 ~ |
+	dis'2 r2 |
+	r4 r8 cis'8 fis'4. cis'8 |
+	es'4. bes8 ~ bes2 |
+	r4 r8 cis'8 fis'8. gis'16 ~ gis'8 a'8 |
+	gis'4. ( fis'8 ) fis'2 |
+	gis'16 b'8 b'16 ~ b'8 b'16 b'16 ~ b'8 b'8 b'8 cis''8 |
+	e'2. r8. cis'16 |
+	a'8 a'16 a'16 ~ a'8 a'16 a'16 ~ a'8 gis'8 fis'8 e'16 ( fis'16 ) |
+	fis'2. r8. gis'16 |
+	\time 4/4 b'8 b'8 b'8 gis'16 b'16 ~ b'8 b'8 b'16 gis'8. |
+	b'8 b'16 b'16 ~ b'16 dis''8 e''16 ~ e''8 dis''8 b'16 a'8. |
+	gis'8 gis'8 gis'8 fis'16 gis'16 ( fis'4 ) \times 2/3 { r8 e'8 fis'8 } |
+	gis'8. a'16 gis'8 a'16 gis'16 ~ gis'4 r8. gis'16 |
+	b'8 b'8 b'8 gis'16 b'16 ~ b'8 b'8 b'16 ( gis'8 ) gis'16 |
+	b'8 b'8 b'8 dis''16 e''16 ~ e''4. dis''8 |
+	e''2. r4 |
+	cis''8 dis''16 e''16 ~ e''8 fis''8 cis''8. dis''16 ~ dis''8 e''8 ~ |
+	e''2 gis''8 fis''8 e''4 ~ ^ "To Coda" |
+	e''8 dis''8 e''2. |
+	R1 ^ "D.S. al Coda" |
+	}
+	\textMark \markup { \musicglyph "scripts.coda" } \textMark \markup { \musicglyph "scripts.coda" } e''8 dis''8 e''2. |
+	r2 gis''8 fis''8 e''4 ~ |
+	e''8 dis''8 e''2. |
+	r2 gis''8 fis''8 e''4 ~ |
+	e''8 dis''8 e''2. |
+	r2 cis'8 b8 cis'4 ~ |
+	cis'8 b8 b2. |
+	r2 r8 cis''4 b'8 |
+	b'1 |
+	r2 r4 fis'4 ~ |
+	fis'8 e'8 e'2. |
+	r2 r2 |
+	\repeat volta 2 {
+	a''4 b'8 b8 b'4 b'4 |
+	b'4 b'4 e''8 dis''8 cis''8 dis''8 |
+	b'4 b'8 b8 b'4 b'4 |
+	e''4 ^ "Repeat ad lib. and fade." b'8 b8 b'4 b'4 |
+	}
+	\endBar
+}
+{% endif %}

@@ -1,0 +1,187 @@
+{#
+default_version = "Wikifonia"
+
+[attributes]
+title = "Get Me to the Church on Time"
+style = "Standard"
+composer = "Frederick Loewe"
+piece = "Standard"
+typesetter = "OpenBook contributors (MusicXML import)"
+completion = "3"
+uuid = "4a35751a-7cfc-59bf-a0fc-7b332c68dbe6"
+location = "Ultimate_Broadway_Fakebook:298"
+copyright = "All Rights Reserved"
+copyrightextra = "Archived MusicXML notice retained; underlying music is not relicensed."
+
+[versions.Wikifonia]
+doChords = true
+doVoice = true
+doLyrics = false
+doLyricsmore = false
+doLyricsmoremore = false
+doChordBars = false
+doGuitar = false
+doExtra = false
+doPrep = false
+doOwn = false
+#}
+{% if part == "Vars" %}
+{% endif %}
+{% if part == "Doc" %}
+	DONE:
+	- imported melody and chord changes from real_books_archive.gi/Wikifonia.tar.xz: Wikifonia/Frederick Loewe, Alan Jay Lerner - Get Me to the Church on Time.mxl.
+	- source revision: http://wikifonia.org/node/7181/revisions/9904/view.
+	- local PDF: real_books_archive.gi/The Ultimate Broadway Fakebook.pdf.
+	- book index reference: Ultimate_Broadway_Fakebook:298; index pagination is not a verified PDF page number.
+	- retained the archived MusicXML rights notice; no redistribution permission is asserted.
+	- retained written melody, chord changes, pickups, repeats and numbered endings; lyrics omitted.
+	- imported explicit 7alt symbols using the book's altered-dominant notation where present.
+	- tempo is an editorial practice suggestion.
+	TODO:
+	- proofread the complete melody, harmony and form against the referenced PDF and check by ear.
+	- verify source attribution, copyright notice and reuse terms against the scan; only the archived MusicXML notice is retained.
+	- locate the tune in the exact local PDF edition; book-index page numbers may differ.
+{% endif %}
+{% if part == "ChordsWikifonia" %}\chordmode {
+	\startChords
+	\startSong
+
+	\myMark "A"
+	\startPart
+	g1 |
+	d1:7 |
+	g1 |
+	s1 | \myEndLine
+	g1 |
+	d1:7 |
+	g1 |
+	s1 | \myEndLine
+	a1:m7 |
+	d1:7 |
+	a1:m7 |
+	d1:7 | \myEndLine
+	a1:m7 |
+	cis2:7 d2:7 |
+	g1 |
+	s1 | \myEndLine
+	g1 |
+	d1:7 |
+	g1 |
+	s1 | \myEndLine
+	g1 |
+	d1:7 |
+	g1 |
+	s1 | \myEndLine
+	a1:m7 |
+	d1:7 |
+	a1:m7 |
+	d1:7 | \myEndLine
+	a1:m7 |
+	cis2:7 d2:7 |
+	g1 |
+	s1 | \myEndLine
+	c1 |
+	s1 |
+	g1 |
+	s1 | \myEndLine
+	a1:7 |
+	s1 |
+	d1:7 |
+	s1 | \myEndLine
+	g1 |
+	d1:7 |
+	g1 |
+	s1 | \myEndLine
+	g1 |
+	s1 |
+	s1 |
+	e1:7 | \myEndLine
+	a1:m |
+	s1 |
+	g1/d |
+	s1 | \myEndLine
+	b1:m |
+	e1:m |
+	b1:m |
+	a1:7 | \myEndLine
+	g1/d |
+	e1:m7 |
+	a1:m7 |
+	d1:7 | \myEndLine
+	g1 |
+	\endBar
+	\endPart
+
+	\endSong
+	\endChords
+}
+{% endif %}
+{% if part == "VoiceWikifonia" %}\absolute {
+	\tempo "Moderato" 4 = 120
+	\time 4/4
+	\key g \major
+
+	d'2 e'4. d'8 |
+	cis'4 d'4 cis'4 d'4 |
+	g'2 g'2 ~ |
+	g'1 |
+	d'2 e'4. d'8 |
+	b4 d'4 g'4 a'4 |
+	b'1 ~ |
+	b'1 |
+	a'2 b'4. a'8 |
+	gis'4 a'4 r4 r4 |
+	a'2 b'4. a'8 |
+	gis'4 a'4 r4 a'4 |
+	d''4 d''4 d''4 d''4 |
+	f'2 fis'2 |
+	g'1 ~ |
+	g'1 |
+	d'2 e'4. d'8 |
+	cis'4 d'4 cis'4 d'4 |
+	g'2 g'2 ~ |
+	g'1 |
+	d'2 e'4. d'8 |
+	b4 d'4 g'4 a'4 |
+	b'1 ~ |
+	b'1 |
+	a'2 b'4. a'8 |
+	gis'4 a'4 r4 r4 |
+	a'2 b'4. a'8 |
+	gis'4 a'4 r4 a'4 |
+	d''4 d''4 d''4 d''4 |
+	f'2 fis'2 |
+	g'1 ~ |
+	g'4 g'4 fis'4 g'4 |
+	e'4 g'2. ~ |
+	g'4 g'4 fis'4 g'4 |
+	d'1 ~ |
+	d'4 g'4 fis'4 g'4 |
+	e'4 a'2. |
+	a'4. g'8 fis'4 e'4 |
+	d'1 ~ |
+	d'2 e'2 |
+	d'2 e'4. d'8 |
+	cis'4 d'4 cis'4 d'4 |
+	g'2 g'2 ~ |
+	g'1 |
+	d'2 e'4. d'8 |
+	b4 d'4 g'4 a'4 |
+	b'1 ~ |
+	b'1 |
+	a'2 b'4. a'8 |
+	gis'4 a'4 r4 bes'4 |
+	b'2 c''4. b'8 |
+	ais'4 b'4 r4 b'4 |
+	d''4 d''4 d''4 d''4 |
+	g'1 |
+	d''4 d''4 d''4 d''4 |
+	g'2. b'4 |
+	d''2 d''2 |
+	d''4 b'4 g'4 e'4 |
+	g'1 |
+	a'1 |
+	g'1 |
+	\endBar
+}
+{% endif %}

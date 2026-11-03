@@ -1,0 +1,129 @@
+{#
+default_version = "Wikifonia"
+
+[attributes]
+title = "Blue"
+style = "Jazz"
+composer = "Lou Hardman"
+piece = "Standard"
+typesetter = "OpenBook contributors (MusicXML import)"
+completion = "3"
+uuid = "0ee42e71-f9cc-5df4-862c-0ea4c394cc1d"
+location = "557_Standards:45"
+copyright = "All Rights Reserved"
+copyrightextra = "Archived MusicXML notice retained; underlying music is not relicensed."
+
+[versions.Wikifonia]
+doChords = true
+doVoice = true
+doLyrics = false
+doLyricsmore = false
+doLyricsmoremore = false
+doChordBars = false
+doGuitar = false
+doExtra = false
+doPrep = false
+doOwn = false
+#}
+{% if part == "Vars" %}
+{% endif %}
+{% if part == "Doc" %}
+	DONE:
+	- imported melody and chord changes from real_books_archive.gi/Wikifonia.tar.xz: Wikifonia/Lou Hardman, Edgar Leslie, Grant Clarke - Blue.mxl.
+	- source revision: http://wikifonia.org/node/5852/revisions/8161/view.
+	- local PDF: real_books_archive.gi/Guitar - 557 Standards.pdf.
+	- book index reference: 557_Standards:45; index pagination is not a verified PDF page number.
+	- retained the archived MusicXML rights notice; no redistribution permission is asserted.
+	- retained written melody, chord changes, pickups, repeats and numbered endings; lyrics omitted.
+	- imported explicit 7alt symbols using the book's altered-dominant notation where present.
+	- tempo is an editorial practice suggestion.
+	TODO:
+	- proofread the complete melody, harmony and form against the referenced PDF and check by ear.
+	- verify source attribution, copyright notice and reuse terms against the scan; only the archived MusicXML notice is retained.
+	- locate the tune in the exact local PDF edition; book-index page numbers may differ.
+{% endif %}
+{% if part == "ChordsWikifonia" %}\chordmode {
+	\startChords
+	\startSong
+
+	\myMark "A"
+	\startPart
+	c1 |
+	s1 |
+	b1:7 |
+	s1 | \myEndLine
+	e1:7 |
+	s1 |
+	g1:m7 |
+	a1:7 | \myEndLine
+	d1:m |
+	f1 |
+	f1:m |
+	g1:7 | \myEndLine
+	c1 |
+	a1:m |
+	d1:7 |
+	g2:7 f2:7 | \myEndLine
+	c1 |
+	s1 |
+	b1:7 |
+	s1 | \myEndLine
+	e1:7 |
+	s1 |
+	g1:m7 |
+	a1:7 | \myEndLine
+	d1:m |
+	f2. f4:m |
+	c1 |
+	a1:m | \myEndLine
+	f1:m |
+	g1:7 |
+	c1 |
+	s1 | \myEndLine
+	\endBar
+	\endPart
+
+	\endSong
+	\endChords
+}
+{% endif %}
+{% if part == "VoiceWikifonia" %}\absolute {
+	\tempo "Moderato" 4 = 120
+	\time 4/4
+	\key c \major
+
+	e''1 ~ |
+	e''4 d''4 c''4 g'4 |
+	b'1 |
+	a'1 |
+	c''1 ~ |
+	c''4 b'4 gis'4 e'4 |
+	f'1 |
+	e'1 |
+	r4 d'4 e'4 f'4 |
+	a'4 c''2 a'4 |
+	c''1 |
+	b'1 |
+	r4 g'4 a'4 b'4 |
+	d''4 b'2 c''4 |
+	e''2 d''2 |
+	e''2 es''2 |
+	e''1 ~ |
+	e''4 d''4 c''4 g'4 |
+	b'1 |
+	a'1 |
+	c''1 ~ |
+	c''4 b'4 gis'4 e'4 |
+	f'1 |
+	e'1 |
+	r4 d'4 e'4 f'4 |
+	a'4 c''2 d''4 |
+	dis''4 e''4 b'4 c''4 |
+	gis'4 a'4 r4 c''4 |
+	f''1 |
+	e''1 |
+	c''1 ~ |
+	c''2. r4 |
+	\endBar
+}
+{% endif %}

@@ -1,0 +1,145 @@
+{#
+default_version = "Wikifonia"
+
+[attributes]
+title = "Passion Flower"
+style = "Jazz"
+composer = "Billy Strayhorn"
+piece = "Standard"
+typesetter = "OpenBook contributors (MusicXML import)"
+completion = "3"
+uuid = "dc1cae72-5c8c-5e00-8e2b-20a924e32223"
+location = "Hal_Leonard_Real_Jazz_Book:272"
+copyright = "All Rights Reserved"
+copyrightextra = "Archived MusicXML notice retained; underlying music is not relicensed."
+
+[versions.Wikifonia]
+doChords = true
+doVoice = true
+doLyrics = false
+doLyricsmore = false
+doLyricsmoremore = false
+doChordBars = false
+doGuitar = false
+doExtra = false
+doPrep = false
+doOwn = false
+#}
+{% if part == "Vars" %}
+{% endif %}
+{% if part == "Doc" %}
+	DONE:
+	- imported melody and chord changes from real_books_archive.gi/Wikifonia.tar.xz: Wikifonia/Billy Strayhorn - Passion Flower.mxl.
+	- source revision: http://wikifonia.org/node/20507/revisions/27108/view.
+	- local PDF: real_books_archive.gi/Hal Leonard Real Jazz Book.pdf.
+	- book index reference: Hal_Leonard_Real_Jazz_Book:272; index pagination is not a verified PDF page number.
+	- retained the archived MusicXML rights notice; no redistribution permission is asserted.
+	- retained written melody, chord changes, pickups, repeats and numbered endings; lyrics omitted.
+	- imported explicit 7alt symbols using the book's altered-dominant notation where present.
+	- tempo taken from archived MusicXML.
+	TODO:
+	- proofread the complete melody, harmony and form against the referenced PDF and check by ear.
+	- verify source attribution, copyright notice and reuse terms against the scan; only the archived MusicXML notice is retained.
+	- locate the tune in the exact local PDF edition; book-index page numbers may differ.
+{% endif %}
+{% if part == "ChordsWikifonia" %}\chordmode {
+	\startChords
+	\startSong
+
+	\myMark "A"
+	\startPart
+	\repeat volta 2 {
+	c1:aug |
+	b1:aug |
+	c1:aug |
+	b1:aug | \myEndLine
+	bes2:9 ees2:13 |
+	d2:sus4.7.9 d2:7.5- |
+	g2:6.9 aes2:9.5- |
+	} \alternative {
+	{
+	g1:6.9 | \myEndLineVoltaNotLast
+	}
+	{
+	g1:6.9 | \myEndLineVoltaLast
+	}
+	}
+	\repeat volta 2 {
+	cis1:aug |
+	c1:9.5- |
+	b1:9.5- | \myEndLine
+	bes1:aug7 |
+	a2.:aug7 a4:7.5- |
+	aes2:7 aes2:13.5- |
+	des1:6.9 | \myEndLine
+	s1 |
+	c1:aug |
+	b1:aug |
+	c1:aug | \myEndLine
+	b1:aug |
+	bes2:9 ees2:13 |
+	d2:sus4.7.9 d2:7.5- |
+	g2:6.9 aes2:9.5- | \myEndLine
+	} \alternative {
+	{
+	g1:6.9 | \myEndLineVoltaNotLast
+	}
+	{
+	g1:6.9 | \myEndLineVoltaLast
+	}
+	}
+	\endBar
+	\endPart
+
+	\endSong
+	\endChords
+}
+{% endif %}
+{% if part == "VoiceWikifonia" %}\absolute {
+	\tempo "Moderato" 4 = 120
+	\time 4/4
+	\key c \major
+
+	\repeat volta 2 {
+	c''2. r8 d''8 |
+	b'2. r8 b'8 |
+	c''4 c''8 c''8 c''4. d''8 |
+	b'2. r8 b'8 |
+	c''2 c''4 es''4 |
+	b'2. d''4 |
+	a'2. d''4 |
+	} \alternative {
+	{
+	a'1 |
+	}
+	{
+	a'1 |
+	}
+	}
+	\repeat volta 2 {
+	f''2. es''4 |
+	ges''2. r4 |
+	f''2. r8 es''8 |
+	ges''1 |
+	f''2. r8 es''8 |
+	ges''2. f''4 |
+	as''1 ~ |
+	as''2. r4 |
+	c''2. r8 d''8 |
+	b'2. r8 b'8 |
+	c''4 c''8 c''8 c''4. d''8 |
+	b'2. r8 b'8 |
+	c''2 c''4 es''4 |
+	b'2. d''4 |
+	a'2. d''4 |
+	} \alternative {
+	{
+	a'1 |
+	}
+	{
+	a'1 |
+	}
+	}
+	\endBar
+}
+{% endif %}

@@ -1,0 +1,153 @@
+{#
+default_version = "Wikifonia"
+
+[attributes]
+title = "L-O-V-E"
+style = "Standard"
+composer = "Bert Kaempfert, Milt Gabler"
+piece = "Standard"
+typesetter = "OpenBook contributors (MusicXML import)"
+completion = "3"
+uuid = "e30850df-c269-547f-842e-3a7df24ed861"
+location = "TheBook:175"
+copyright = "All Rights Reserved"
+copyrightextra = "Archived MusicXML notice retained; underlying music is not relicensed."
+
+[versions.Wikifonia]
+doChords = true
+doVoice = true
+doLyrics = false
+doLyricsmore = false
+doLyricsmoremore = false
+doChordBars = false
+doGuitar = false
+doExtra = false
+doPrep = false
+doOwn = false
+#}
+{% if part == "Vars" %}
+{% endif %}
+{% if part == "Doc" %}
+	DONE:
+	- imported melody and chord changes from real_books_archive.gi/Wikifonia.tar.xz: Wikifonia/Bert Kaempfert and Milt Gabler - L-O-V-E.mxl.
+	- source revision: http://wikifonia.org/node/1865/revisions/6009/view.
+	- local PDF: real_books_archive.gi/The Book.pdf.
+	- book index reference: TheBook:175; index pagination is not a verified PDF page number.
+	- retained the archived MusicXML rights notice; no redistribution permission is asserted.
+	- retained written melody, chord changes, pickups, repeats and numbered endings; lyrics omitted.
+	- imported explicit 7alt symbols using the book's altered-dominant notation where present.
+	- tempo taken from archived MusicXML.
+	TODO:
+	- proofread the complete melody, harmony and form against the referenced PDF and check by ear.
+	- verify source attribution, copyright notice and reuse terms against the scan; only the archived MusicXML notice is retained.
+	- locate the tune in the exact local PDF edition; book-index page numbers may differ.
+{% endif %}
+{% if part == "ChordsWikifonia" %}\chordmode {
+	\startChords
+	\startSong
+
+	\myMark "A"
+	\startPart
+	\repeat volta 2 {
+	g1 |
+	s1 |
+	a1:m7 |
+	d1:7 | \myEndLine
+	d1:7 |
+	s1 |
+	g1 |
+	s1 | \myEndLine
+	g1:7 |
+	s1 |
+	c1 |
+	s1 | \myEndLine
+	a1:7 |
+	s1 |
+	d1:7 |
+	s1 | \myEndLine
+	g1 |
+	s1 |
+	a1:m7 |
+	d1:7 | \myEndLine
+	d1:7 |
+	s1 |
+	g1 |
+	s1 | \myEndLine
+	g1:7 |
+	s1 |
+	c1 |
+	cis1:dim7 | \myEndLine
+	g1 |
+	d1:7 |
+	} \alternative {
+	{
+	g1 |
+	a2:m7 d2:7 | \myEndLineVoltaNotLast
+	}
+	{
+	g1 | \myEndLineVoltaLast
+	}
+	}
+	a2:m7 d2:7 |
+	g1 |
+	a2:m7 d2:7 | \myEndLine
+	g1 |
+	\endBar
+	\endPart
+
+	\endSong
+	\endChords
+}
+{% endif %}
+{% if part == "VoiceWikifonia" %}\absolute {
+	\tempo "Moderato" 4 = 120
+	\time 4/4
+	\key g \major
+
+	\repeat volta 2 {
+	\mark \markup { \box { A } } g'2. fis'4 |
+	fis'4 e'4 dis'4 e'4 |
+	g'2. fis'4 |
+	fis'1 |
+	fis'2. e'4 |
+	e'4 d'4 cis'4 d'4 |
+	fis'2. e'4 |
+	e'1 |
+	b'2. a'4 |
+	a'4 g'4 fis'4 g'4 |
+	b'2. a'4 |
+	a'4 g'4 fis'4 g'4 |
+	b'2. a'4 |
+	a'4 g'4 fis'4 g'4 |
+	b'4 a'4 ^ "N.C." a'4 g'4 |
+	g'4 fis'4 e'4 fis'4 |
+	\mark \markup { \box { A } } g'2. fis'4 |
+	fis'4 e'4 dis'4 e'4 |
+	g'2. fis'4 |
+	fis'1 |
+	fis'2. e'4 |
+	e'4 d'4 cis'4 d'4 |
+	fis'2. e'4 |
+	e'1 |
+	b'2. a'4 |
+	a'4 g'4 fis'4 g'4 |
+	b'4 a'4 a'4 g'4 |
+	g'4 fis'4 e'4 fis'4 |
+	g'2. fis'4 |
+	fis'4 e'4 fis'4 a'4 |
+	} \alternative {
+	{
+	g'1 ~ |
+	g'4 r4 r2 |
+	}
+	{
+	g'1 ~ |
+	}
+	}
+	g'4 e'4 fis'4 a'4 |
+	g'1 ~ |
+	g'4 e'4 fis'4 a'4 |
+	g'1 |
+	\endBar
+}
+{% endif %}

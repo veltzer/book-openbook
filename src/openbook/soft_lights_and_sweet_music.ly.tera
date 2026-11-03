@@ -1,0 +1,188 @@
+{#
+default_version = "Wikifonia"
+
+[attributes]
+title = "Soft Lights And Sweet Music"
+style = "Jazz"
+composer = "Irving Berlin"
+piece = "Standard"
+typesetter = "OpenBook contributors (MusicXML import)"
+completion = "3"
+uuid = "987e083a-75c6-520e-9346-a9b20a1c12aa"
+location = "Hal_Leonard_Real_Jazz_Book:316"
+copyright = "All Rights Reserved"
+copyrightextra = "Archived MusicXML notice retained; underlying music is not relicensed."
+
+[versions.Wikifonia]
+doChords = true
+doVoice = true
+doLyrics = false
+doLyricsmore = false
+doLyricsmoremore = false
+doChordBars = false
+doGuitar = false
+doExtra = false
+doPrep = false
+doOwn = false
+#}
+{% if part == "Vars" %}
+{% endif %}
+{% if part == "Doc" %}
+	DONE:
+	- imported melody and chord changes from real_books_archive.gi/Wikifonia.tar.xz: Wikifonia/Irving Berlin - Soft Lights And Sweet Music.mxl.
+	- source revision: http://wikifonia.org/node/13587/revisions/18226/view.
+	- local PDF: real_books_archive.gi/Hal Leonard Real Jazz Book.pdf.
+	- book index reference: Hal_Leonard_Real_Jazz_Book:316; index pagination is not a verified PDF page number.
+	- retained the archived MusicXML rights notice; no redistribution permission is asserted.
+	- retained written melody, chord changes, pickups, repeats and numbered endings; lyrics omitted.
+	- imported explicit 7alt symbols using the book's altered-dominant notation where present.
+	- tempo is an editorial practice suggestion.
+	TODO:
+	- proofread the complete melody, harmony and form against the referenced PDF and check by ear.
+	- verify source attribution, copyright notice and reuse terms against the scan; only the archived MusicXML notice is retained.
+	- locate the tune in the exact local PDF edition; book-index page numbers may differ.
+	- verify editorial chord spacing in measures 17, 31, 32, 35, 36, 51, 52; the archive places successive symbols at the same offset.
+{% endif %}
+{% if part == "ChordsWikifonia" %}\chordmode {
+	\startChords
+	\startSong
+
+	\myMark "A"
+	\startPart
+	f2:m c2:7 |
+	f1:m |
+	g1:7 |
+	s1 | \myEndLine
+	c1:7 |
+	s1 |
+	f1:m |
+	des1:7 | \myEndLine
+	f2:m c2:7 |
+	f1:m |
+	g1:7 |
+	s1 | \myEndLine
+	c1:7 |
+	s1 |
+	f1:m |
+	s2 bes2:m | \myEndLine
+	f2:m c2:7 |
+	f2:m bes2:m |
+	c1:7 |
+	s1 | \myEndLine
+	\repeat volta 2 {
+	f1:7 |
+	s1 |
+	d1:7 |
+	s1 | \myEndLine
+	g1:7 |
+	s1 |
+	b1:m7.5- |
+	bes1:7 | \myEndLine
+	f1 |
+	s2 fis2:dim |
+	c2:7 g2:m7/d |
+	ees2:dim c2:7/e | \myEndLine
+	c1:7 |
+	s2 c2:aug7 |
+	f2:6 g2:m7 |
+	gis2:dim f2/a | \myEndLine
+	f1:7 |
+	s1 |
+	d1:7 |
+	s1 | \myEndLine
+	g1:7 |
+	s1 |
+	b1:m7.5- |
+	bes1:7 | \myEndLine
+	f1 |
+	s2 d2:m7 |
+	g1:7 |
+	s1 | \myEndLine
+	c1:7 |
+	s1 |
+	} \alternative {
+	{
+	f2 aes2:dim |
+	g2:m7 c2:7 | \myEndLineVoltaNotLast
+	}
+	{
+	f1 |
+	s1 | \myEndLineVoltaLast
+	}
+	}
+	\endBar
+	\endPart
+
+	\endSong
+	\endChords
+}
+{% endif %}
+{% if part == "VoiceWikifonia" %}\absolute {
+	\tempo "Moderato" 4 = 120
+	\time 4/4
+	\key f \major
+
+	r4 c''4 c''4 c''4 |
+	c''4 c''4 \times 2/3 { c''4 e''4 d''4 } |
+	b'2 g'2 ~ |
+	g'1 |
+	r4 bes'4 bes'4 bes'4 |
+	bes'4 bes'4 \times 2/3 { bes'4 c''4 as'4 } |
+	f'1 ~ |
+	f'1 |
+	r4 c''4 c''4 c''4 |
+	c''4 c''4 \times 2/3 { c''4 e''4 d''4 } |
+	b'2 g'2 ~ |
+	g'1 |
+	r4 bes'4 bes'4 bes'4 |
+	bes'4 bes'4 \times 2/3 { bes'4 c''4 as'4 } |
+	f'1 ~ |
+	f'4 f'4 \times 2/3 { g'4 as'4 bes'4 } |
+	c''1 ~ |
+	c''4 f'4 \times 2/3 { g'4 as'4 bes'4 } |
+	c''1 ~ |
+	c''1 |
+	\repeat volta 2 {
+	es''2 c''2 ~ |
+	c''2 es''2 |
+	c''1 |
+	a'4 c''2 a'4 |
+	f'2 d'2 ~ |
+	d'2 f'2 |
+	d'1 ~ |
+	d'1 |
+	r4 c'4 d'4 f'4 |
+	a'4 c''4 d''4 d''4 ~ |
+	d''1 ~ |
+	d''1 |
+	r4 c'4 e'4 g'4 |
+	bes'4 c''4 d''4 d''4 ~ |
+	d''1 ~ |
+	d''1 |
+	es''2 c''2 ~ |
+	c''2 es''2 |
+	c''1 |
+	a'4 c''2 a'4 |
+	f'2 d'2 ~ |
+	d'2 f'2 |
+	d'1 ~ |
+	d'1 |
+	r4 c'4 d'4 f'4 |
+	a'4 c''4 d''4 f''4 |
+	g''1 |
+	e''4 d''2 a'4 |
+	c''2 a'2 ~ |
+	a'2 d'2 |
+	} \alternative {
+	{
+	f'1 |
+	R1 |
+	}
+	{
+	f'1 ~ |
+	f'2. r4 |
+	}
+	}
+	\endBar
+}
+{% endif %}

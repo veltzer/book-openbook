@@ -1,0 +1,133 @@
+{#
+default_version = "Wikifonia"
+
+[attributes]
+title = "Pennsylvania 6-5000"
+style = "Standard"
+composer = "Jerry Gray"
+piece = "Standard"
+typesetter = "OpenBook contributors (MusicXML import)"
+completion = "3"
+uuid = "6a03e9b7-358d-548d-b834-772a5a66bd7d"
+location = "TheBook:417"
+copyright = "All Rights Reserved"
+copyrightextra = "Archived MusicXML notice retained; underlying music is not relicensed."
+
+[versions.Wikifonia]
+doChords = true
+doVoice = true
+doLyrics = false
+doLyricsmore = false
+doLyricsmoremore = false
+doChordBars = false
+doGuitar = false
+doExtra = false
+doPrep = false
+doOwn = false
+#}
+{% if part == "Vars" %}
+{% endif %}
+{% if part == "Doc" %}
+	DONE:
+	- imported melody and chord changes from real_books_archive.gi/Wikifonia.tar.xz: Wikifonia/Jerry Gray, Carl Sigman - Pennsylvania 6-5000.mxl.
+	- source revision: http://www.wikifonia.org/node/2124/revisions/2709/view.
+	- local PDF: real_books_archive.gi/The Book.pdf.
+	- book index reference: TheBook:417; index pagination is not a verified PDF page number.
+	- retained the archived MusicXML rights notice; no redistribution permission is asserted.
+	- retained written melody, chord changes, pickups, repeats and numbered endings; lyrics omitted.
+	- imported explicit 7alt symbols using the book's altered-dominant notation where present.
+	- tempo is an editorial practice suggestion.
+	TODO:
+	- proofread the complete melody, harmony and form against the referenced PDF and check by ear.
+	- verify source attribution, copyright notice and reuse terms against the scan; only the archived MusicXML notice is retained.
+	- locate the tune in the exact local PDF edition; book-index page numbers may differ.
+{% endif %}
+{% if part == "ChordsWikifonia" %}\chordmode {
+	\startChords
+	\startSong
+
+	\myMark "A"
+	\startPart
+	\repeat volta 2 {
+	g1 |
+	c1:9 |
+	g1 |
+	s4. d1*5/8:dim | \myEndLine
+	a1:m7 |
+	d1:7 |
+	g1 |
+	s1*5/8 d4.:aug7 | \myEndLine
+	g1 |
+	c1:9 |
+	g1 |
+	s4. d1*5/8:dim | \myEndLine
+	a1:m7 |
+	d1:7 |
+	g1 |
+	s1*5/8 a4.:m | \myEndLine
+	b4.:aug7 b1*5/8:7 |
+	e2.:m a4:m |
+	b4.:aug7 b1*5/8:7 |
+	e2:m e2:7.5- | \myEndLine
+	a1*5/8:13 a4.:7 |
+	d4 c8:7 b1*5/8:7 |
+	e2:9 a2:7 |
+	d8:7 ees4:9 d1*5/8:7 | \myEndLine
+	g1 |
+	c1:9 |
+	g1 |
+	s4. d1*5/8:dim | \myEndLine
+	a1:m7 |
+	d1:7 |
+	g1 |
+	s1*5/8 d4.:aug | \myEndLine
+	}
+	\endBar
+	\endPart
+
+	\endSong
+	\endChords
+}
+{% endif %}
+{% if part == "VoiceWikifonia" %}\absolute {
+	\tempo "Moderato" 4 = 120
+	\time 4/4
+	\key c \major
+
+	\repeat volta 2 {
+	d'8 e'8 g'4 b'8 g'8 e'4 |
+	d'4. e'8 ~ e'2 |
+	d'8 e'8 g'4 b'8 g'8 e'4 |
+	d'4. e'8 ~ e'2 |
+	d'8 e'8 g'4 c''8 g'8 e'4 |
+	d'4. e'8 ~ e'2 |
+	r2 d'8 - "N.C." d'8 d'8 d'8 |
+	d'4 d'8 d'4 d'4. |
+	d'8 e'8 g'4 b'8 g'8 e'4 |
+	d'4. e'8 ~ e'2 |
+	d'8 e'8 g'4 b'8 g'8 e'4 |
+	d'4. e'8 ~ e'2 |
+	d'8 e'8 g'4 c''8 g'8 e'4 |
+	d'4. e'8 ~ e'2 |
+	r2 d'8 - "N.C." d'8 d'8 d'8 |
+	d'4 d'8 d'4 d'4. |
+	b'8 c''4 b'4. a'8 g'8 ~ |
+	g'8 e'4. r8 f'8 g'8 a'8 - "" |
+	b'8 c''4 b'4. a'8 g'8 ~ |
+	g'2 r8 gis'4. |
+	a'8 bes'4 a'4 g'4. |
+	f'4 g'8 a'2 ais'8 |
+	b'8 d''8 b'8 c''8 cis''8 a'8 b'8 d''8 ~ |
+	d''8 c''4 a'8 ~ a'2 |
+	d'8 e'8 g'4 b'8 g'8 e'4 |
+	d'4. e'8 ~ e'2 |
+	d'8 e'8 g'4 b'8 g'8 e'4 |
+	d'4. e'8 ~ e'2 |
+	d'8 e'8 g'4 c''8 g'8 e'4 |
+	d'4. e'8 ~ e'2 |
+	r2 d'8 - "N.C." d'8 d'8 d'8 |
+	d'4 d'8 d'4 d'4. |
+	}
+	\endBar
+}
+{% endif %}

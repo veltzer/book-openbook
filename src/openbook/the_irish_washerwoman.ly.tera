@@ -1,0 +1,115 @@
+{#
+default_version = "Wikifonia"
+
+[attributes]
+title = "The Irish Washerwoman"
+style = "Standard"
+composer = "Jerimiah Dugan"
+piece = "Standard"
+typesetter = "OpenBook contributors (MusicXML import)"
+completion = "3"
+uuid = "2fda9d6b-4f6b-597c-9aff-cb8168ca8044"
+location = "TheBook:490"
+copyright = "All Rights Reserved"
+copyrightextra = "Archived MusicXML notice retained; underlying music is not relicensed."
+
+[versions.Wikifonia]
+doChords = true
+doVoice = true
+doLyrics = false
+doLyricsmore = false
+doLyricsmoremore = false
+doChordBars = false
+doGuitar = false
+doExtra = false
+doPrep = false
+doOwn = false
+#}
+{% if part == "Vars" %}
+{% endif %}
+{% if part == "Doc" %}
+	DONE:
+	- imported melody and chord changes from real_books_archive.gi/Wikifonia.tar.xz: Wikifonia/Jerimiah Dugan, Charles Hansen - The Irish Washerwoman.mxl.
+	- source revision: http://wikifonia.org/node/6006/revisions/8342/view.
+	- local PDF: real_books_archive.gi/The Book.pdf.
+	- book index reference: TheBook:490; index pagination is not a verified PDF page number.
+	- retained the archived MusicXML rights notice; no redistribution permission is asserted.
+	- retained written melody, chord changes, pickups, repeats and numbered endings; lyrics omitted.
+	- imported explicit 7alt symbols using the book's altered-dominant notation where present.
+	- tempo is an editorial practice suggestion.
+	TODO:
+	- proofread the complete melody, harmony and form against the referenced PDF and check by ear.
+	- verify source attribution, copyright notice and reuse terms against the scan; only the archived MusicXML notice is retained.
+	- locate the tune in the exact local PDF edition; book-index page numbers may differ.
+{% endif %}
+{% if part == "ChordsWikifonia" %}\chordmode {
+	\startChords
+	\startSong
+
+	\myMark "A"
+	\startPart
+	s2. |
+	\repeat volta 2 {
+	g2. |
+	s2. |
+	d2.:7 | \myEndLine
+	s2. |
+	g2. |
+	s2. |
+	d2.:7 | \myEndLine
+	g2. |
+	s2. |
+	s2. |
+	d2.:7 | \myEndLine
+	s2. |
+	c4. g4. |
+	c4. g4. |
+	d2.:7 | \myEndLine
+	} \alternative {
+	{
+	g2. | \myEndLineVoltaNotLast
+	}
+	{
+	g2. | \myEndLineVoltaLast
+	}
+	}
+	\endBar
+	\endPart
+
+	\endSong
+	\endChords
+}
+{% endif %}
+{% if part == "VoiceWikifonia" %}\absolute {
+	\tempo "Moderato" 4 = 120
+	\time 6/8
+	\key g \major
+
+	r2 d''8 c''8 |
+	\repeat volta 2 {
+	b'8 g'8 g'8 d'8 g'8 g'8 |
+	b'8 g'8 b'8 d''8 c''8 b'8 |
+	c''8 a'8 a'8 d'8 a'8 a'8 |
+	c''8 a'8 c''8 e''8 d''8 c''8 |
+	b'8 g'8 g'8 d'8 g'8 g'8 |
+	b'8 g'8 b'8 d''8 c''8 b'8 |
+	c''8 b'8 c''8 a'8 d''8 c''8 |
+	b'8 g'8 g'8 g'4 g'16 a'16 |
+	b'8 g'8 g'8 d'8 g'8 g'8 |
+	b'8 g'8 b'8 b'8 a'8 g'8 |
+	a'8 fis'8 fis'8 d'8 fis'8 fis'8 |
+	a'8 fis'8 a'8 a'8 g'8 fis'8 |
+	e'8 g'8 g'8 d'8 g'8 g'8 |
+	c'8 g'8 g'8 b8 g'8 g'8 |
+	a'8 b'8 c''8 a'8 d''8 c''8 |
+	} \alternative {
+	{
+	b'8 g'8 g'8 g'8 d''8 c''8 |
+	}
+	{
+	b'8 g'8 g'8 g'8 r4 |
+	}
+	}
+	\endBar
+}
+{% endif %}

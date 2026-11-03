@@ -1,0 +1,185 @@
+{#
+default_version = "Wikifonia"
+
+[attributes]
+title = "A Ship Without A Sail"
+style = "Jazz"
+composer = "Richard Rodgers"
+piece = "Standard"
+typesetter = "OpenBook contributors (MusicXML import)"
+completion = "3"
+uuid = "0d57d571-4386-5395-af77-c0a486fbb0fd"
+location = "Hal_Leonard_Real_Jazz_Book:306"
+copyright = "All Rights Reserved"
+copyrightextra = "Archived MusicXML notice retained; underlying music is not relicensed."
+
+[versions.Wikifonia]
+doChords = true
+doVoice = true
+doLyrics = false
+doLyricsmore = false
+doLyricsmoremore = false
+doChordBars = false
+doGuitar = false
+doExtra = false
+doPrep = false
+doOwn = false
+#}
+{% if part == "Vars" %}
+{% endif %}
+{% if part == "Doc" %}
+	DONE:
+	- imported melody and chord changes from real_books_archive.gi/Wikifonia.tar.xz: Wikifonia/Richard Rodgers, Lorenz Hart - A Ship Without A Sail.mxl.
+	- source revision: http://wikifonia.org/node/20745/revisions/27429/view.
+	- local PDF: real_books_archive.gi/Hal Leonard Real Jazz Book.pdf.
+	- book index reference: Hal_Leonard_Real_Jazz_Book:306; index pagination is not a verified PDF page number.
+	- retained the archived MusicXML rights notice; no redistribution permission is asserted.
+	- retained written melody, chord changes, pickups, repeats and numbered endings; lyrics omitted.
+	- imported explicit 7alt symbols using the book's altered-dominant notation where present.
+	- tempo is an editorial practice suggestion.
+	TODO:
+	- proofread the complete melody, harmony and form against the referenced PDF and check by ear.
+	- verify source attribution, copyright notice and reuse terms against the scan; only the archived MusicXML notice is retained.
+	- locate the tune in the exact local PDF edition; book-index page numbers may differ.
+{% endif %}
+{% if part == "ChordsWikifonia" %}\chordmode {
+	\startChords
+	\startSong
+
+	\myMark "A"
+	\startPart
+	\repeat volta 2 {
+	ees1 |
+	f1:m |
+	ees1 |
+	bes1:9 | \myEndLine
+	c1:m |
+	f1:7 |
+	f1:m7 |
+	bes1:7 | \myEndLine
+	ees1 |
+	s1 |
+	ees1 |
+	f1:m | \myEndLine
+	ees1 |
+	bes1:9 |
+	c1:m |
+	f1:7 | \myEndLine
+	aes1:6 |
+	g1:7 |
+	aes1 |
+	f1:m | \myEndLine
+	ees2 ees2:aug |
+	aes2 bes2:7 |
+	ees1 |
+	s1 | \myEndLine
+	ees2:7 aes2 |
+	bes2:7 ees2 |
+	ees2:7 aes2 |
+	bes2:7 ees2 | \myEndLine
+	aes2 g2:7 |
+	c2:m aes2:m |
+	ees2 bes2:m6 |
+	c1:7 | \myEndLine
+	f1:m |
+	s2 bes2:7 |
+	ees1 |
+	s1 | \myEndLine
+	bes1:7 |
+	s1 |
+	ees1 |
+	s1 | \myEndLine
+	bes1:7 |
+	s2 f4:m7 bes4:7 |
+	ees1 |
+	g1:7 | \myEndLine
+	ees2:7 aes2 |
+	bes2:7 ees2 |
+	ees2:7 aes2 |
+	bes2:7 ees2 | \myEndLine
+	aes2 g2:7 |
+	c2:m aes2:m |
+	ees2 bes2:m6 |
+	c1:7 | \myEndLine
+	f1:m |
+	s2 bes2:7 |
+	ees1 |
+	s1 | \myEndLine
+	}
+	ees1 |
+	s1 |
+	\endBar
+	\endPart
+
+	\endSong
+	\endChords
+}
+{% endif %}
+{% if part == "VoiceWikifonia" %}\absolute {
+	\tempo "Moderato" 4 = 120
+	\time 4/4
+	\key es \major
+
+	\repeat volta 2 {
+	bes'4 c''4 d''4 c''4 |
+	bes'4 bes'4 bes'4 bes'4 |
+	g'4 as'4 bes'4 as'4 |
+	g'2. g'4 |
+	es'4 f'4 g'4 f'4 |
+	es'4 es'4 es'4 es'4 |
+	c''2 c''2 |
+	d'2 d'2 |
+	es'1 ~ |
+	es'2 r4 bes'4 |
+	bes'4 c''4 d''4 c''4 |
+	bes'4 bes'2 bes'4 |
+	g'4 as'4 bes'4 as'4 |
+	g'2. g'4 |
+	es'4 f'4 g'4 f'4 |
+	es'4 es'2 es'4 |
+	c''2 c''2 |
+	d''2 d''2 |
+	es''1 ~ |
+	es''8 r8 c''4 bes'4 as'4 |
+	g'2 g'2 |
+	g'2 f'2 |
+	es'1 ~ |
+	es'2. r4 |
+	c''4 c''4 es'2 |
+	g'4 g'4 bes2 |
+	c''4 c''4 es'8 es'4 es'8 |
+	g'4 g'4 bes2 |
+	c'4 d'8 es'8 g'4 g'4 |
+	\once \omit TupletBracket \times 2/3 { f'8 ( g'8 f'8 ) } es'4 as'2 |
+	g'4 bes'8 c''8 des''8 ( bes'8 ) des''4 |
+	c''1 |
+	es''8 r8 as'4 g'4 as'4 |
+	f'2 g'2 |
+	es'1 ~ |
+	es'4 r4 g'8 as'4 g'8 |
+	f'2 f'2 |
+	f'8 g'4 f'8 es'4 f'4 |
+	es'1 ~ |
+	es'4 r4 g'8 as'4 g'8 |
+	f'2 f'2 |
+	f'8 g'4 f'8 es'4 f'4 |
+	bes'2. es'4 |
+	b'1 |
+	c''4 c''4 es'2 |
+	g'4 g'4 bes2 |
+	c''4 c''4 es'8 es'4 es'8 |
+	g'4 g'4 bes2 |
+	c'4 d'8 es'8 g'4 g'4 |
+	\once \omit TupletBracket \times 2/3 { f'8 g'8 f'8 } es'4 as'2 |
+	g'4 bes'8 c''8 des''8 bes'8 des''4 |
+	c''1 |
+	es''8 r8 as'4 g'4 as'4 |
+	c''2 d'2 |
+	es'1 ~ |
+	es'4 r4 r2 |
+	}
+	es'1 ~ |
+	es'4 r4 r2 |
+	\endBar
+}
+{% endif %}

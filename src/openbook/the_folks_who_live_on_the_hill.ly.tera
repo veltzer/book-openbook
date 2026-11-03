@@ -1,0 +1,152 @@
+{#
+default_version = "Wikifonia"
+
+[attributes]
+title = "The Folks Who Live on the Hill"
+style = "Jazz"
+composer = "Jerome Kern"
+piece = "Standard"
+typesetter = "OpenBook contributors (MusicXML import)"
+completion = "3"
+uuid = "befe54f0-0e9a-52a6-8629-9ab414db4b28"
+location = "Hal_Leonard_Real_Jazz_Book:126"
+copyright = "All Rights Reserved"
+copyrightextra = "Archived MusicXML notice retained; underlying music is not relicensed."
+
+[versions.Wikifonia]
+doChords = true
+doVoice = true
+doLyrics = false
+doLyricsmore = false
+doLyricsmoremore = false
+doChordBars = false
+doGuitar = false
+doExtra = false
+doPrep = false
+doOwn = false
+#}
+{% if part == "Vars" %}
+{% endif %}
+{% if part == "Doc" %}
+	DONE:
+	- imported melody and chord changes from real_books_archive.gi/Wikifonia.tar.xz: Wikifonia/Jerome Kern, Oscar Hammerstein II - The Folks Who Live on the Hill.mxl.
+	- source revision: http://wikifonia.org/node/7680/revisions/10594/view.
+	- local PDF: real_books_archive.gi/Hal Leonard Real Jazz Book.pdf.
+	- book index reference: Hal_Leonard_Real_Jazz_Book:126; index pagination is not a verified PDF page number.
+	- retained the archived MusicXML rights notice; no redistribution permission is asserted.
+	- retained written melody, chord changes, pickups, repeats and numbered endings; lyrics omitted.
+	- imported explicit 7alt symbols using the book's altered-dominant notation where present.
+	- tempo is an editorial practice suggestion.
+	TODO:
+	- proofread the complete melody, harmony and form against the referenced PDF and check by ear.
+	- verify source attribution, copyright notice and reuse terms against the scan; only the archived MusicXML notice is retained.
+	- locate the tune in the exact local PDF edition; book-index page numbers may differ.
+	- verify editorial chord spacing in measures 24; the archive places successive symbols at the same offset.
+{% endif %}
+{% if part == "ChordsWikifonia" %}\chordmode {
+	\startChords
+	\startSong
+
+	\myMark "A"
+	\startPart
+	c2 c2:7 |
+	f2 g2:7 |
+	c4./e c1*5/8:dim/ees |
+	g4.:7/d a1*5/8:m/c | \myEndLine
+	g2/b f2/a |
+	c2/g d4:m7 g4:7 |
+	c2 c2:7 |
+	f2 g2:7 | \myEndLine
+	g2:m/bes a2:7 |
+	d2:m7 g2:7 |
+	c1 |
+	s1 | \myEndLine
+	c2 c2:7 |
+	f2 g2:7 |
+	c4./e c1*5/8:dim/ees |
+	g4.:7/d a1*5/8:m/c | \myEndLine
+	g2/b f2/a |
+	c2/g d4:m7 g4:7 |
+	c2 c2:7 |
+	f2 g2:7 | \myEndLine
+	g2:m/bes a2:7 |
+	d2:m7 g2:7 |
+	c1 |
+	fis2:m7.5- b2:7 | \myEndLine
+	e1:m |
+	b1:7 |
+	e1:m |
+	e2:m7 a4:7 d4:7 | \myEndLine
+	g1 |
+	s2 g2:7 |
+	c2 c2:7 |
+	f2 g2:7 | \myEndLine
+	c4./e c1*5/8:dim/ees |
+	g4.:7/d a1*5/8:m/c |
+	g2/b f2/a |
+	c2/g d4:m7 g4:7 | \myEndLine
+	c2 c2:7 |
+	f2 g2:7 |
+	g2:m/bes a2:7 |
+	d2:m7 g2:7 | \myEndLine
+	e2:7 a2:7 |
+	d2:7 g2:7 |
+	c1 |
+	\endBar
+	\endPart
+
+	\endSong
+	\endChords
+}
+{% endif %}
+{% if part == "VoiceWikifonia" %}\absolute {
+	\tempo "Moderato" 4 = 120
+	\time 4/4
+	\key c \major
+
+	e'2 e'2 ~ |
+	e'8 f'8 g'8 a'8 c''8 c''4 b'8 |
+	d''4 a'8 c''8 ~ c''2 |
+	b'4 f'8 a'8 ~ a'2 |
+	g'8 a'8 g'4 c''4 c''4 |
+	e'8 f'8 e'4 a'4 g'4 |
+	e'2 ~ e'2 ~ |
+	e'8 f'8 g'8 a'8 b'8 a'8 b'4 |
+	g'2 ~ g'2 ~ |
+	g'8 f'8 g'8 a'8 d'8 c'8 d'4 |
+	c'1 ~ |
+	c'1 |
+	e'2 e'2 ~ |
+	e'8 f'8 g'8 a'8 c''8 c''4 b'8 |
+	d''4 a'8 c''2 c''8 |
+	b'4 f'8 a'8 ~ a'2 |
+	g'8 a'8 g'4 c''4 c''4 |
+	e'8 f'8 e'4 a'4 g'4 |
+	e'2 ~ e'2 ~ |
+	e'8 f'8 g'8 a'8 b'8 a'8 b'4 |
+	g'2 ~ g'2 ~ |
+	g'8 f'8 g'8 a'8 d'8 c'8 d'4 |
+	c'1 |
+	R1 |
+	g'2 ~ g'8 b'8 c''8 b'8 |
+	fis'8 b'8 c''8 b'8 b8 fis'8 g'8 fis'8 |
+	g'2 ~ g'8 g'8 a'8 g'8 |
+	b'8 g'8 a'8 g'8 b'8 g'8 a'4 |
+	g'1 ~ |
+	g'8 g'8 a'8 g'8 a'8 g'8 a'8 g'8 |
+	e'2 e'2 ~ |
+	e'8 f'8 g'8 a'8 c''8 c''4 b'8 |
+	d''4 a'8 c''8 ~ c''2 |
+	b'4 f'8 a'8 ~ a'2 |
+	g'8 a'8 g'4 c''4 c''4 |
+	e'8 f'8 e'4 a'4 g'4 |
+	e'2 ~ e'2 ~ |
+	e'8 f'8 g'8 a'8 b'8 a'8 b'4 |
+	g'2 ~ g'2 ~ |
+	g'8 f'8 g'8 a'8 d''8 c''8 d''4 |
+	e''2 ~ e''2 ~ |
+	e''8 c''8 d''8 e''8 d''8 c''8 d''4 |
+	c''1 |
+	\endBar
+}
+{% endif %}

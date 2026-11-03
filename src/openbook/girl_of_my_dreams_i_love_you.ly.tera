@@ -1,0 +1,150 @@
+{#
+default_version = "Wikifonia"
+
+[attributes]
+title = "Girl Of My Dreams (I Love You)"
+style = "Jazz"
+composer = "Sunny Clapp"
+piece = "Standard"
+typesetter = "OpenBook contributors (MusicXML import)"
+completion = "3"
+uuid = "7a8fecfc-0813-5cc6-a5a1-3bc10d6e87c2"
+location = "557_Standards:119, Firehouse_Jazz_Band:329"
+copyright = "All Rights Reserved"
+copyrightextra = "Archived MusicXML notice retained; underlying music is not relicensed."
+
+[versions.Wikifonia]
+doChords = true
+doVoice = true
+doLyrics = false
+doLyricsmore = false
+doLyricsmoremore = false
+doChordBars = false
+doGuitar = false
+doExtra = false
+doPrep = false
+doOwn = false
+#}
+{% if part == "Vars" %}
+{% endif %}
+{% if part == "Doc" %}
+	DONE:
+	- imported melody and chord changes from real_books_archive.gi/Wikifonia.tar.xz: Wikifonia/Sunny Clapp - Girl Of My Dreams (I Love You).mxl.
+	- source revision: http://wikifonia.org/node/8581/revisions/11858/view.
+	- local PDF: real_books_archive.gi/Guitar - 557 Standards.pdf.
+	- book index reference: 557_Standards:119; index pagination is not a verified PDF page number.
+	- retained the archived MusicXML rights notice; no redistribution permission is asserted.
+	- retained written melody, chord changes, pickups, repeats and numbered endings; lyrics omitted.
+	- imported explicit 7alt symbols using the book's altered-dominant notation where present.
+	- tempo is an editorial practice suggestion.
+	TODO:
+	- proofread the complete melody, harmony and form against the referenced PDF and check by ear.
+	- verify source attribution, copyright notice and reuse terms against the scan; only the archived MusicXML notice is retained.
+	- locate the tune in the exact local PDF edition; book-index page numbers may differ.
+	- verify editorial chord spacing in measures 24, 34; the archive places successive symbols at the same offset.
+{% endif %}
+{% if part == "ChordsWikifonia" %}\chordmode {
+	\startChords
+	\startSong
+
+	\myMark "A"
+	\startPart
+	s2. |
+	\repeat volta 2 {
+	c2 g4:7/d |
+	c2.:7/e |
+	f2. | \myEndLine
+	d2.:m7.5- |
+	c2./g |
+	g2.:aug |
+	c2. | \myEndLine
+	g2.:aug |
+	c2 g4:7/d |
+	c2:7/e c4:aug |
+	f2. | \myEndLine
+	aes2.:7/ges |
+	c2./g |
+	d2:7 g4:7 |
+	c2. | \myEndLine
+	s2. |
+	e2.:7 |
+	s2. |
+	a2.:m | \myEndLine
+	s2. |
+	d2.:7 |
+	s2. |
+	g2:7 f4:m6/aes | \myEndLine
+	g2.:7 |
+	c2 g4:7/d |
+	c2.:7/e |
+	f2. | \myEndLine
+	aes2.:7/ges |
+	c2./g |
+	d2.:7 |
+	} \alternative {
+	{
+	c2. | \myEndLine
+	d4:m7 g2:aug | \myEndLineVoltaNotLast
+	}
+	{
+	c4 f4:6 f4:m6 | \myEndLineVoltaLast
+	}
+	}
+	c2.:6 |
+	\endBar
+	\endPart
+
+	\endSong
+	\endChords
+}
+{% endif %}
+{% if part == "VoiceWikifonia" %}\absolute {
+	\tempo "Moderato" 4 = 120
+	\time 3/4
+	\key c \major
+
+	r2 \once \omit TupletBracket \times 2/3 { e'8 f'8 fis'8 } |
+	\repeat volta 2 {
+	g'4 c''4 b'4 |
+	bes'2. |
+	a'4 d''4 c''4 |
+	as'2. |
+	g'2. |
+	g'2 g'4 |
+	g'2. ~ |
+	g'2 \once \omit TupletBracket \times 2/3 { e'8 f'8 fis'8 } |
+	g'4 c''4 b'4 |
+	bes'2 gis'4 |
+	a'4 d''4 c''4 |
+	as'2. |
+	g'4 c''4 e''4 |
+	a'2 b'4 |
+	c''2. ~ |
+	c''4. b'8 c''8 d''8 |
+	e''2. |
+	b'2. |
+	c''4. d''8 e''8 c''8 |
+	a'2. |
+	d''2. |
+	a'4 e''4 es''4 |
+	d''2. ~ |
+	d''2 \once \omit TupletBracket \times 2/3 { e'8 f'8 fis'8 } |
+	g'4 c''4 b'4 |
+	bes'2. |
+	a'4 d''4 c''4 |
+	as'2. |
+	g'4 c''4 e''4 |
+	a'2 b'4 |
+	} \alternative {
+	{
+	c''2. ~ |
+	c''4 r4 \once \omit TupletBracket \times 2/3 { e'8 f'8 fis'8 } |
+	}
+	{
+	c''2. ~ |
+	}
+	}
+	c''2 r4 |
+	\endBar
+}
+{% endif %}

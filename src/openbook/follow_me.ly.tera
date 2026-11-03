@@ -1,0 +1,177 @@
+{#
+default_version = "Wikifonia"
+
+[attributes]
+title = "Follow me"
+style = "Standard"
+composer = "John Denver"
+piece = "Standard"
+typesetter = "OpenBook contributors (MusicXML import)"
+completion = "3"
+uuid = "a83b536f-154c-5da5-95ec-494cc21f317c"
+location = "Ultimate_Broadway_Fakebook:48"
+copyright = "All Rights Reserved"
+copyrightextra = "Archived MusicXML notice retained; underlying music is not relicensed."
+
+[versions.Wikifonia]
+doChords = true
+doVoice = true
+doLyrics = false
+doLyricsmore = false
+doLyricsmoremore = false
+doChordBars = false
+doGuitar = false
+doExtra = false
+doPrep = false
+doOwn = false
+#}
+{% if part == "Vars" %}
+{% endif %}
+{% if part == "Doc" %}
+	DONE:
+	- imported melody and chord changes from real_books_archive.gi/Wikifonia.tar.xz: Wikifonia/John Denver - Follow me.mxl.
+	- source revision: http://wikifonia.org/node/5544/revisions/7532/view.
+	- local PDF: real_books_archive.gi/The Ultimate Broadway Fakebook.pdf.
+	- book index reference: Ultimate_Broadway_Fakebook:48; index pagination is not a verified PDF page number.
+	- retained the archived MusicXML rights notice; no redistribution permission is asserted.
+	- retained written melody, chord changes, pickups, repeats and numbered endings; lyrics omitted.
+	- imported explicit 7alt symbols using the book's altered-dominant notation where present.
+	- tempo is an editorial practice suggestion.
+	TODO:
+	- proofread the complete melody, harmony and form against the referenced PDF and check by ear.
+	- verify source attribution, copyright notice and reuse terms against the scan; only the archived MusicXML notice is retained.
+	- locate the tune in the exact local PDF edition; book-index page numbers may differ.
+{% endif %}
+{% if part == "ChordsWikifonia" %}\chordmode {
+	\startChords
+	\startSong
+
+	\myMark "A"
+	\startPart
+	s1 |
+	a1:m |
+	g1 |
+	c1 | \myEndLine
+	s1 |
+	f2 e2:m7 |
+	d1:m7 |
+	g1:7 | \myEndLine
+	s1 |
+	\repeat volta 2 {
+	c1 |
+	d1:m7 |
+	c1 | \myEndLine
+	f1 |
+	s1 |
+	d1:m7 |
+	g1:7 | \myEndLine
+	s1 |
+	c1 |
+	d1:m7 |
+	c1 | \myEndLine
+	f1 |
+	c1 |
+	f2 g2:7 |
+	c1 | \myEndLine
+	s1 |
+	s1 |
+	g1 |
+	f1 | \myEndLine
+	c1 |
+	a1:m |
+	g1 |
+	f1 | \myEndLine
+	g1 |
+	f1 |
+	c1 |
+	f1 | \myEndLine
+	c1 |
+	f2 e2:m |
+	d1:m7 |
+	f1 | \myEndLine
+	g1:7 |
+	} \alternative {
+	{
+	s1 | \myEndLineVoltaNotLast
+	}
+	{
+	s1 | \myEndLineVoltaLast
+	}
+	}
+	c1 | \myEndLine
+	f1 |
+	c1 |
+	f2 g2:7 |
+	c1 | \myEndLine
+	s1 |
+	\endBar
+	\endPart
+
+	\endSong
+	\endChords
+}
+{% endif %}
+{% if part == "VoiceWikifonia" %}\absolute {
+	\tempo "Moderato" 4 = 120
+	\time 4/4
+	\key c \major
+
+	r2 e'4 - "N.C." e'4 |
+	e'4. e'8 e'4 e'4 |
+	g'4 g'4 g'4 a'4 |
+	g'1 ~ |
+	g'2. g'8 g'8 |
+	a'4. a'8 g'4. g'8 |
+	f'4. f'8 f'4 e'4 |
+	d'1 ~ |
+	d'2 e'4 f'4 |
+	\repeat volta 2 {
+	g'2 d''4 c''4 |
+	f'2 g'4 a'4 |
+	g'4. g'8 g'4 e'4 |
+	c'2 c'4 d'4 |
+	e'4 g'4 g'4. g'8 |
+	a'4. g'8 f'4. e'8 |
+	d'1 ~ |
+	d'2 e'4 d'4 |
+	c'2 e'4 g'4 |
+	f'2 a'8 - "toCoda" b'8 d''4 |
+	c''4. c''8 c''4 g'4 |
+	f'1 |
+	e'4 g'4 g'4. g'8 |
+	f'4. e'8 d'4 d'4 |
+	c'1 ~ |
+	c'2. g'4 |
+	g'4. g'8 g'4 a'4 |
+	g'2 g'4 g'8 g'8 |
+	f'4. f'8 f'4 f'4 |
+	e'2. e'4 |
+	e'4. e'8 e'4. e'8 |
+	g'4. g'8 g'4 g'4 |
+	a'4 a'4 a'8 g'8 f'4 |
+	g'2. g'4 |
+	a'4. a'8 c''4 c''4 |
+	c''4 g'2 g'4 |
+	a'4 a'4 a'4 a'4 |
+	g'4 e'4 f'4 g'4 |
+	a'4. a'8 g'4. g'8 |
+	f'4. f'8 e'4 e'4 |
+	f'4 f'8 f'8 e'4 d'4 |
+	g'1 ~ |
+	} \alternative {
+	{
+	g'2 e'4 f'4 |
+	}
+	{
+	g'2 e'4 - "D.S.alCoda" f'4 |
+	}
+	}
+	c''1 ~ - "Coda" |
+	c''1 |
+	e'4 g'4 g'4 g'4 |
+	f'4 e'4 d'4 d'4 |
+	c'1 ~ |
+	c'2 r2 |
+	\endBar
+}
+{% endif %}

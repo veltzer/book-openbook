@@ -1,0 +1,161 @@
+{#
+default_version = "Wikifonia"
+
+[attributes]
+title = "Stranger In Paradise"
+style = "Standard"
+composer = "adapted by George Forrest from Borodin's Polovetsian Dances (Gliding Dance Of The Maidens)"
+piece = "Standard"
+typesetter = "OpenBook contributors (MusicXML import)"
+completion = "3"
+uuid = "254a8d63-ccb8-5f9c-bfe5-a9e02e5d3b44"
+location = "Ultimate_Broadway_Fakebook:237"
+copyright = "All Rights Reserved"
+copyrightextra = "Archived MusicXML notice retained; underlying music is not relicensed."
+
+[versions.Wikifonia]
+doChords = true
+doVoice = true
+doLyrics = false
+doLyricsmore = false
+doLyricsmoremore = false
+doChordBars = false
+doGuitar = false
+doExtra = false
+doPrep = false
+doOwn = false
+#}
+{% if part == "Vars" %}
+{% endif %}
+{% if part == "Doc" %}
+	DONE:
+	- imported melody and chord changes from real_books_archive.gi/Wikifonia.tar.xz: Wikifonia/adapted by George Forrest from Borodin's Polovetsian Dances (Gliding Dance Of The Maidens), George Forrest, Robert Wright - Stra.mxl.
+	- source revision: http://wikifonia.org/node/4589/revisions/15994/view.
+	- local PDF: real_books_archive.gi/The Ultimate Broadway Fakebook.pdf.
+	- book index reference: Ultimate_Broadway_Fakebook:237; index pagination is not a verified PDF page number.
+	- retained the archived MusicXML rights notice; no redistribution permission is asserted.
+	- retained written melody, chord changes, pickups, repeats and numbered endings; lyrics omitted.
+	- imported explicit 7alt symbols using the book's altered-dominant notation where present.
+	- tempo is an editorial practice suggestion.
+	TODO:
+	- proofread the complete melody, harmony and form against the referenced PDF and check by ear.
+	- verify source attribution, copyright notice and reuse terms against the scan; only the archived MusicXML notice is retained.
+	- locate the tune in the exact local PDF edition; book-index page numbers may differ.
+{% endif %}
+{% if part == "ChordsWikifonia" %}\chordmode {
+	\startChords
+	\startSong
+
+	\myMark "A"
+	\startPart
+	d1:m7 |
+	g1:7 |
+	c1 |
+	s1 | \myEndLine
+	d1:m7 |
+	g1:7 |
+	c1 |
+	s1 | \myEndLine
+	d1:m7 |
+	g1:7 |
+	c1 |
+	s1 | \myEndLine
+	d1:m7 |
+	g1:7 |
+	c1 |
+	s1 | \myEndLine
+	aes1 |
+	s1 |
+	des1 |
+	s1 | \myEndLine
+	bes1:m |
+	c1:7 |
+	f1:m |
+	s1 | \myEndLine
+	e1:7 |
+	s1 |
+	a1 |
+	s1 | \myEndLine
+	d1:m |
+	g1:7 |
+	c1 |
+	a1:7 | \myEndLine
+	d1:m7 |
+	g1:7 |
+	c1 |
+	s1 | \myEndLine
+	d1:m7 |
+	g1:7 |
+	c1 |
+	s1 | \myEndLine
+	d1:7 |
+	g1:7 |
+	c1 |
+	a1:7 | \myEndLine
+	f2 d2:m |
+	g1:7 |
+	c1 |
+	s1 | \myEndLine
+	\endBar
+	\endPart
+
+	\endSong
+	\endChords
+}
+{% endif %}
+{% if part == "VoiceWikifonia" %}\absolute {
+	\tempo "Moderato" 4 = 120
+	\time 4/4
+	\key c \major
+
+	d''4 d''4 a''2 ~ |
+	a''4 g''8 a''8 f''4 e''8 d''8 |
+	e''8 f''8 g''2. |
+	r4 a''4 e''4 d''8 c''8 |
+	a'4 a'4 d''2 ~ |
+	d''4 e''4 d''4 c''8 b'8 |
+	c''8 b'8 a'2. |
+	r4 b'4 c''4 e''4 |
+	d''4 d''4 a''2 ~ |
+	a''4 g''8 a''8 f''4 e''8 d''8 |
+	e''8 f''8 g''2. |
+	r4 a''4 e''4 d''8 c''8 |
+	a'4 a'4 d''2 ~ |
+	d''4 e''4 d''4 c''8 b'8 |
+	c''1 |
+	r4 c''4 c''4 c''4 |
+	c''1 ~ |
+	c''4 c''4 des''4 es''4 |
+	es''2 f''2 ~ |
+	f''2 des''4 es''8 f''8 |
+	g''4. g''8 g''2 ~ |
+	g''2 g''4 f''8 g''8 |
+	as''1 |
+	r4 as''4 as''4 as''4 |
+	gis''1 ~ |
+	gis''4 gis''4 a''4 gis''4 |
+	b''2 fis''2 |
+	r4 fis''4 fis''4 fis''4 |
+	f''1 ~ |
+	f''8 f''8 g''8 a''4 g''8 f''8 r8 |
+	e''1 |
+	r4 e''8 f''8 g''4 f''8 e''8 |
+	d''4 d''4 a''2 ~ |
+	a''4 g''8 a''8 f''4 e''8 d''8 |
+	e''8 f''8 g''2. |
+	r4 a''4 e''4 d''8 c''8 |
+	a'4 a'4 d''2 ~ |
+	d''4 e''4 d''4 c''8 b'8 |
+	c''8 b'8 a'2. |
+	r4 b'4 c''4 d''8 e''8 |
+	d''4 d''4 a''2 ~ |
+	a''4 g''8 a''8 f''4 e''8 d''8 |
+	e''8 f''8 g''2. |
+	r4 a''4 g''4 f''8 e''8 |
+	a'4 a'4 d''2 ~ |
+	d''4 e''4 d''4 c''8 b'8 |
+	c''1 |
+	c''2. r4 |
+	\endBar
+}
+{% endif %}

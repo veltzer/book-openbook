@@ -1,0 +1,146 @@
+{#
+default_version = "Wikifonia"
+
+[attributes]
+title = "Adios"
+style = "Jazz"
+composer = "Enric Madriguera"
+piece = "Standard"
+typesetter = "OpenBook contributors (MusicXML import)"
+completion = "3"
+uuid = "fb39665d-8eb0-5e44-90eb-24aaeec1dadc"
+location = "Hal_Leonard_Real_Jazz_Book:17"
+copyright = "All Rights Reserved"
+copyrightextra = "Archived MusicXML notice retained; underlying music is not relicensed."
+
+[versions.Wikifonia]
+doChords = true
+doVoice = true
+doLyrics = false
+doLyricsmore = false
+doLyricsmoremore = false
+doChordBars = false
+doGuitar = false
+doExtra = false
+doPrep = false
+doOwn = false
+#}
+{% if part == "Vars" %}
+{% endif %}
+{% if part == "Doc" %}
+	DONE:
+	- imported melody and chord changes from real_books_archive.gi/Wikifonia.tar.xz: Wikifonia/Enric Madriguera,  Eddie Woods (English) - Adios.mxl.
+	- source revision: http://wikifonia.org/node/13919/revisions/18668/view.
+	- local PDF: real_books_archive.gi/Hal Leonard Real Jazz Book.pdf.
+	- book index reference: Hal_Leonard_Real_Jazz_Book:17; index pagination is not a verified PDF page number.
+	- retained the archived MusicXML rights notice; no redistribution permission is asserted.
+	- retained written melody, chord changes, pickups, repeats and numbered endings; lyrics omitted.
+	- imported explicit 7alt symbols using the book's altered-dominant notation where present.
+	- tempo is an editorial practice suggestion.
+	TODO:
+	- proofread the complete melody, harmony and form against the referenced PDF and check by ear.
+	- verify source attribution, copyright notice and reuse terms against the scan; only the archived MusicXML notice is retained.
+	- locate the tune in the exact local PDF edition; book-index page numbers may differ.
+	- verify editorial chord spacing in measures 2, 6, 12, 14, 25, 27, 31, 39; the archive places successive symbols at the same offset.
+{% endif %}
+{% if part == "ChordsWikifonia" %}\chordmode {
+	\startChords
+	\startSong
+
+	\myMark "A"
+	\startPart
+	s1 |
+	g2:m7 c2:7 |
+	f1 |
+	g2:m7 c4:7 c4:aug | \myEndLine
+	f1:6 |
+	g2:m7 c2:7 |
+	f1 |
+	g2:m7 c4:7 c4:aug | \myEndLine
+	f1:6 |
+	c1:7 |
+	f4. des4.:7 c4:7 |
+	g2:m7 c2:7 | \myEndLine
+	f1 |
+	g2:m7 c2:7 |
+	f1 |
+	g1:m7 | \myEndLine
+	f1 |
+	g2:m7 c4:7 c4:aug |
+	d4.:m d1*5/8:aug |
+	g4.:m7 c2:6 c8:7 | \myEndLine
+	f1 |
+	b2:m7.5- e2:7 |
+	a1:m |
+	d4.:m f4. b4:m7.5- | \myEndLine
+	e2:7 d2:m7 |
+	e1:7 |
+	a2:m a2:7 |
+	d4.:7 g1*5/8:9 | \myEndLine
+	g1:m7 |
+	c1:7 |
+	g2:m7 c2:7 |
+	f1 | \myEndLine
+	g2:m7 c4:7 c4:aug |
+	f1:6 |
+	g1:m7 |
+	d1:7 | \myEndLine
+	g4.:m7 c2:6 c8:7 |
+	f1 |
+	g2:m7 c2:7 |
+	f1 | \myEndLine
+	\endBar
+	\endPart
+
+	\endSong
+	\endChords
+}
+{% endif %}
+{% if part == "VoiceWikifonia" %}\absolute {
+	\tempo "Moderato" 4 = 120
+	\time 2/2
+	\key f \major
+
+	r2 r4 a'4 |
+	c''1 ~ |
+	c''1 ~ |
+	c''4. d''8 e''8 f''8 e''8 c''8 |
+	d''4 c''8 bes'8 ~ bes'8 a'4 bes'8 |
+	c''1 ~ |
+	c''1 ~ |
+	c''4. d''8 e''8 f''8 e''8 c''8 |
+	d''4 c''8 bes'8 ~ bes'8 a'4 bes'8 |
+	c''4 bes'8 a'8 ~ a'8 g'4 a'8 |
+	f'4 f'8 es'8 ~ es'8 des'8 c'4 ~ |
+	c'1 ~ |
+	c'1 ~ |
+	c'1 |
+	R1 |
+	r2 \times 2/3 { g'4 a'4 bes'4 } |
+	c''1 ~ |
+	c''4. d''8 e''8 f''8 e''8 c''8 |
+	d''4 c''8 bes'8 ~ bes'8 a'4 bes'8 |
+	c''4 bes'8 a'8 ~ a'8 g'4 a'8 |
+	f'1 ~ |
+	f'2 r2 |
+	e''1 |
+	d''8 c''8 b'8 a'8 ~ a'8 g'8 f'4 |
+	e'1 ~ |
+	e'2 r2 |
+	e''1 |
+	d''8 c''8 b'8 a'8 ~ a'8 g'8 a'4 |
+	g'1 ~ |
+	g'2 r4 a'4 |
+	c''1 ~ |
+	c''1 ~ |
+	c''4. d''8 e''8 f''8 e''8 c''8 |
+	d''4 c''8 bes'8 ~ bes'8 a'4 bes'8 |
+	c''1 |
+	d''4 c''8 bes'8 ~ bes'8 a'4 bes'8 |
+	c''4 bes'8 a'8 ~ a'8 g'4 a'8 |
+	f'1 ~ |
+	f'1 ~ |
+	f'4 r4 r2 |
+	\endBar
+}
+{% endif %}
