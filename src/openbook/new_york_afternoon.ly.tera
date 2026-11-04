@@ -26,8 +26,8 @@ remark = "Rare Silk"
 [versions.Fake]
 doChords = true
 doVoice = true
-doLyrics = false
-doLyricsmore = false
+doLyrics = true
+doLyricsmore = true
 doLyricsmoremore = false
 doChordBars = false
 doGuitar = false
@@ -43,6 +43,7 @@ doOwn = false
 	- put in the chords (fake book).
 	- put in the tune (fake book).
 	- added youtube performances.
+	- put in the lyrics (fake book).
 	TODO:
 	- check the chords (fake book).
 	- check the tune (fake book).
@@ -51,7 +52,7 @@ doOwn = false
 	- the segno part has two lyric lines in the book (first time and after the D.S.).
 	- the Funk part is voice scats; the Solos part is two bars of samba feel.
 	- the pickup in the first ending of the coda vamp is marked 'last x only' (in parentheses) in the book.
-	- add the lyrics.
+	- lyrics: the second bar of part A (both lines) and the fourth bar of the segno part (second line) print 12 syllables over 11 notes; squeezed two words onto the last note.
 {% endif %}
 {% if part == "ChordsFake" %}\chordmode {
 	\startChords
@@ -148,5 +149,47 @@ doOwn = false
 	\repeat volta 2 {
 		ees16 ees ees ees ees c8 des16 r16 f ees8~ ees4 | r2 r16^\markup { Vamp and fade } ees,16 f g aes bes c des |
 	}
+}
+{% endif %}
+{% if part == "LyricsFake" %}\lyricmode {
+
+	% part "Intro"
+	Groov -- in' on a New York Af -- ter -- noon, __ we're groov -- in' on a New York Af -- ter -- noon. __ On a
+
+	% part "A"
+	Sun -- day, __ went to the cit -- y hop -- ing this would be "the one" day, __ New York Af -- ter -- noon. __ Took a
+	sub -- way, __ went to the vill -- age, Chi -- na -- town and walked "down Broad" -- way, __ on a day in June. __
+
+	% part "B"
+	Stroll -- in' thru the park, what a love -- ly, love -- ly feel -- in', then I looked at you and my heart be -- gan a -- reel -- in'. This is our day, __
+	here in Man -- hat -- tan ev -- 'ry -- one is part of our play, __ New York Af -- ter -- noon. __
+	walked through the art show in Wash -- ing -- ton Square, heard some jazz on the low -- er east side.
+
+	% part "C"
+	We'll re -- mem -- ber __ when skies are gray and snow is fall -- ing in De -- cem -- ber, __ 'twas a New York Af -- ter -- noon. __
+
+	% part "Instr"
+	_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _
+
+	% part "Coda"
+	like a jewel. Our
+	love has come, __ start -- ing on a New York Af -- ter -- noon. __ My
+	It's such a love -- ly feel -- ing
+	groov -- in' on a New York Af -- ter -- noon. __ It's such a love -- ly feel -- ing
+}
+{% endif %}
+{% if part == "LyricsmoreFake" %}\lyricmode {
+
+	% part "Intro"
+	_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _
+
+	% part "A"
+	_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _
+	_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _
+
+	% part "B"
+	There's a lit -- tle rule that you'll find New York -- ers do share, may be true or not, but they say when you leave New York you've gone no -- where. __
+	All that I know, "it's giv" -- en us these mem -- or -- ies to share, __ got to get back soon. __
+	Watch -- ing the sun set a -- cross Cen -- tral Park as the sky -- line glows just like a jewel.
 }
 {% endif %}
