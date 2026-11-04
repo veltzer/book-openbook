@@ -26,7 +26,7 @@ remark = "Fats Domino in his famous recording (1956)"
 [versions.Fake]
 doChords = true
 doVoice = true
-doLyrics = false
+doLyrics = true
 doLyricsmore = false
 doLyricsmoremore = false
 doChordBars = false
@@ -43,8 +43,8 @@ doOwn = false
 	- put in the chords (fake book).
 	- put in the tune (fake book).
 	- added youtube performances.
+	- put in the lyrics (fake book).
 	TODO:
-	- add the lyrics.
 	- check the chords (fake book).
 	- check the tune (fake book).
 	- hear the tune to check that it is right and adjust the tempo.
@@ -125,5 +125,29 @@ doOwn = false
 			ees,1~ | ees2. r4 |
 		}
 	}
+}
+{% endif %}
+{% if part == "LyricsFake" %}\lyricmode {
+	I found my
+
+	% part "A"
+	thrill __ on Blue -- ber -- ry Hill, __ on Blue -- ber -- ry Hill __
+	when I found you. __ The moon stood
+
+	% part "A"
+	still __ on Blue -- ber -- ry Hill. __ And lin -- gered un -- til __
+	my dreams came true. __ The wind in the
+
+	% part "B"
+	wil -- low played __ love's sweet mel -- o -- dy; __ but all of those
+	vows we made __ were ne -- ver to be. __ Tho' we're a
+
+	% part "A"
+	part, __ you're part of me still __ for you were my
+	thrill __ on Blue -- ber -- ry Hill.
+
+	% part "Volta"
+	I found my
+	Hill. __
 }
 {% endif %}

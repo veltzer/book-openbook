@@ -26,7 +26,7 @@ remark = "Catherine Zeta-Jones from the film Chicago (2002)"
 [versions.Fake]
 doChords = true
 doVoice = true
-doLyrics = false
+doLyrics = true
 doLyricsmore = false
 doLyricsmoremore = false
 doChordBars = false
@@ -43,8 +43,8 @@ doOwn = false
 	- put in the chords (fake book).
 	- put in the tune (fake book).
 	- added youtube performances.
+	- put in the lyrics (fake book).
 	TODO:
-	- add the lyrics.
 	- check the chords (fake book).
 	- check the tune (fake book).
 	- hear the tune to check that it is right and adjust the tempo.
@@ -139,5 +139,37 @@ doOwn = false
 	b4 b8 ais b g a! ais | b8 g a! ais b g a! b | c8 aes ees c aes ees c'' b | c8 aes ees c aes ees r4 | r4 c'2 g4 |
 	a8 g4 a8~ a4 a | r4 c2 g4 | a4 g8 a~ a4 g | c1~ | c1 |
 	c1~ | c1 | ees8 d c2.~ | c1 | r1 | r4 \xNote e,4 \xNote e r4 |
+}
+{% endif %}
+{% if part == "LyricsFake" %}\lyricmode {
+
+	% part "A"
+	Come on, babe, __ why don't we paint the town, __ And All That Jazz! __ I'm gon -- na
+	rouge my knees __ and roll my stock -- ings down __ And All That Jazz! __ Start the car, __ I know a
+	whoop -- ee spot __ where the gin is cold __ but the pi -- an -- o's hot. __ It's just a
+	nois -- y hall __ where there's a night -- ly brawl __ And All That Jazz!
+
+	% part "B"
+	Slick your hair __ and wear your buck -- le shoes __ And All That Jazz! __ I hear that
+	Fa -- ther Dip __ is gon -- na blow the blues __ And All That Jazz! __ Hold on hon, __ were gon -- na
+	bun -- ny hug, __ I bought some as -- pi -- rin __ down at U -- nit -- ed Drug __ in case we
+	shake a -- part __ and want a brand new start __ to do that jazz! __
+
+	% part "C"
+	Oh, __ I'm gon -- na see my She -- ba shim -- my shake __ (And All That Jazz!) __
+	Oh, __ she's gon -- na shim -- my till her gar -- ters break. __ (And All That Jazz!) __
+	Show __ her where to park her gir -- dle. Oh, __ her moth -- er's blood -- d' cur -- dle if she'd hear __ her
+	ba -- by's queer __ for all that jazz! __
+
+	% part "A"
+	Find a flask, __ we're play -- ing fast and loose __ And All That Jazz! __ And All That Jazz! __
+	Right up here __ is where I store the juice, __ And All That Jazz! __ And All That Jazz! __
+	Come on babe __ we're gon -- na brush the sky. __ I bet -- cha luck -- y Lin -- dy nev -- er
+	flew so high, __ 'cause in the stra -- to -- sphere __ how could he lend an ear __ to all that
+
+	% part "Coda"
+	jazz! _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _
+	_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _
+	No, I'm no -- one's wife, __ but oh, I love my life __ And All __ That __ Jazz! __ _ _ That jazz!
 }
 {% endif %}

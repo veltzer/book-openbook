@@ -26,7 +26,7 @@ remark = "Oscar Peterson"
 [versions.Fake]
 doChords = true
 doVoice = true
-doLyrics = false
+doLyrics = true
 doLyricsmore = false
 doLyricsmoremore = false
 doChordBars = false
@@ -43,8 +43,8 @@ doOwn = false
 	- put in the chords (fake book).
 	- put in the tune (fake book).
 	- added youtube performances.
+	- put in the lyrics (fake book).
 	TODO:
-	- add the lyrics.
 	- check the chords (fake book).
 	- check the tune (fake book).
 	- hear the tune to check that it is right and adjust the tempo.
@@ -110,5 +110,23 @@ doOwn = false
 			d2. c4 | c1~ | c~ | c4 r r2 |
 		}
 	}
+}
+{% endif %}
+{% if part == "LyricsFake" %}\lyricmode {
+
+	% part "A"
+	I Love Par -- is in the spring -- time, __
+	I Love Par -- is in the fall, __
+	I Love Par -- is in the win -- ter when it driz -- zles,
+	I Love Par -- is in the sum -- mer when it siz -- zles.
+
+	% part "B"
+	I Love Par -- is ev -- 'ry mo -- ment, __
+	ev -- 'ry mo -- ment of the year. __
+	I Love Par -- is, why, oh why do I Love Par -- is?
+
+	% part "Volta"
+	Be -- cause my love is near. __
+	Be -- cause my love, __ be -- cause my love __ is near. __
 }
 {% endif %}

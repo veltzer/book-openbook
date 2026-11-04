@@ -25,9 +25,9 @@ remark = "Ella Fitzgerald from Ella Fitzgerald Sings the Harold Arlen Songbook (
 [versions.Fake]
 doChords = true
 doVoice = true
-doLyrics = false
-doLyricsmore = false
-doLyricsmoremore = false
+doLyrics = true
+doLyricsmore = true
+doLyricsmoremore = true
 doChordBars = false
 doGuitar = false
 doExtra = false
@@ -42,8 +42,8 @@ doOwn = false
 	- put in the chords (fake book).
 	- put in the tune (fake book).
 	- added youtube performances.
+	- put in the lyrics (fake book): the second verse line holds the words sung the second time (the A part after the D.S., the repeat of the C part), the third line holds the alternate words the book prints in braces (Hon!, man's gon-na sweet talk, man is a two-face, pig-tails).
 	TODO:
-	- add the lyrics (the A part has two verses, sung the second time after the D.S.; the C part has two verses for its repeat).
 	- check the chords (fake book).
 	- check the tune (fake book).
 	- hear the tune to check that it is right and adjust the tempo.
@@ -126,5 +126,53 @@ doOwn = false
 
 	% part "Coda"
 	bes,2. \tuplet 3/2 { r8 f' bes } | aes2.~ \tuplet 3/2 { aes8 g ees' } | des2~ des4. f,8 | \tuplet 3/2 { des'8 c des } bes8. bes16 f8 bes~ \tuplet 3/2 { bes8 g f } | bes,1 |
+}
+{% endif %}
+{% if part == "LyricsFake" %}\lyricmode {
+	My
+
+	% part "A"
+	ma -- ma done tol' me __ when I was in knee -- pants, __ my ma -- ma done tol' me, __ Son! __ A
+	wom -- an -- 'll sweet talk, __ and give ya the big eye, __ but when the sweet talk -- in's done __ a
+	wom -- man's a two -- face, __ a wor -- ri -- some thing who'll leave ya t' sing the Blues __ _ In The Night,
+
+	% part "B"
+	Now the rain's a -- fall -- in', hear the train a -- call -- in', whoo -- ee, __ "(my" ma -- ma done tol' "me.)" __
+	Hear dat lone -- some whis -- tle blow -- in' 'cross the tres -- tle, whoo -- ee, __ "(My" ma -- ma done tol' "me.)" __ A
+	whoo -- ee -- duh -- whoo -- ee, __ ol' click -- e -- ty clack's a -- ech -- o -- in' back th' Blues __ _ In The Night. __ The eve -- nin'
+
+	% part "C"
+	breeze -- 'll start the trees to cry -- in' and the moon -- 'll hide it's light,
+	when you get the
+	Blues __ In The Night. __
+	wrong __ and he's right. __ _ _ _ _ _ _ _ From
+
+	% part "Coda"
+	Night. _ _ _ _ _ _ My ma -- ma was right, there's Blues __ _ In The Night.
+}
+{% endif %}
+{% if part == "LyricsmoreFake" %}\lyricmode {
+	_
+
+	% part "A"
+	Nat -- chez to Mo -- bile, __ from Mem -- phis to St. Joe, __ where ev -- er the four winds __ blow; __ I
+	been in some big towns __ an' heard me some big talk, __ but there is one thing I know, __ a
+	_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _
+
+	% part "B"
+	_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _
+
+	% part "C"
+	Take my word, the mock -- in' bird -- 'll sing the sad -- dest kind o' song,
+	he knows things are
+}
+{% endif %}
+{% if part == "LyricsmoremoreFake" %}\lyricmode {
+	_
+
+	% part "A"
+	_ _ _ _ _ _ _ _ _ pig -- tails, __ _ _ _ _ _ _ Hon! __ _
+	man's gon -- na sweet talk, __ _ _ _ _ _ _ _ _ _ _ _ _ _ _
+	man is a two -- face, __
 }
 {% endif %}

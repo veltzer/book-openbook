@@ -26,8 +26,8 @@ remark = "Rita Coolidge live in Japan"
 [versions.Fake]
 doChords = true
 doVoice = true
-doLyrics = false
-doLyricsmore = false
+doLyrics = true
+doLyricsmore = true
 doLyricsmoremore = false
 doChordBars = false
 doGuitar = false
@@ -43,8 +43,8 @@ doOwn = false
 	- put in the chords (fake book).
 	- put in the tune (fake book).
 	- added youtube performances.
+	- put in the lyrics (fake book).
 	TODO:
-	- add the lyrics.
 	- check the chords (fake book).
 	- check the tune (fake book).
 	- hear the tune to check that it is right and adjust the tempo.
@@ -117,5 +117,30 @@ doOwn = false
 	% part "Coda"
 	c4~ c8. d16 b4. a16 b | a16 g e g~ g4 r a16 b8. |
 	c2 b16 a g e d4\fermata | a'16 g8.~ g2. | r1 |
+}
+{% endif %}
+{% if part == "LyricsFake" %}\lyricmode {
+
+	% part "A"
+	Oh I tried to make the best __ of __ _ _ all the sweet __ love __ _ that you gave __
+	may -- be I'm cra -- zy, but I keep on __ los -- ing ground __ _ _ Fool That I Am __
+
+	% part "B"
+	fool that I __ may -- be _ when will I ev -- er know __ what's __ _ true. __ _ _
+	And if I found __ out differ -- ent -- ly __ would I
+
+	% part "Volta"
+	still __ _ love __ _ _ _ _ you. __ _ Two hearts
+	still __ _ love you __ _ _ _ _ _ Fool That I Am
+
+	% part "Coda"
+	still __ _ love you __ _ _ _ _ _ would I still love __ _ _ _ _ you. __ _
+}
+{% endif %}
+{% if part == "LyricsmoreFake" %}\lyricmode {
+
+	% part "A"
+	_ _ break -- in' two hearts ach -- in' __ _ _ some -- one's tak -- in' more __ than they gave __
+	trust -- ing in some -- one who __ _ has no __ trust __ _ in me __ _
 }
 {% endif %}

@@ -25,7 +25,7 @@ remark = "Shorty Rogers and his Orchestra"
 [versions.Fake]
 doChords = true
 doVoice = true
-doLyrics = false
+doLyrics = true
 doLyricsmore = false
 doLyricsmoremore = false
 doChordBars = false
@@ -42,8 +42,8 @@ doOwn = false
 	- put in the chords (fake book).
 	- put in the tune (fake book).
 	- added youtube performances.
+	- put in the lyrics (fake book).
 	TODO:
-	- add the lyrics.
 	- check the chords (fake book).
 	- check the tune (fake book).
 	- hear the tune to check that it is right and adjust the tempo.
@@ -100,5 +100,19 @@ doOwn = false
 			c'4 c ees4. d8 | c bes a bes g4. a8 | g4. a8 g a c, d | f1~ | f2. r4 |
 		}
 	}
+}
+{% endif %}
+{% if part == "LyricsFake" %}\lyricmode {
+
+	% part "A"
+	It's Not For Me To Say __ you love me, __ It's Not For Me To Say __ you'll al -- ways
+	care. __ Oh, but here for the mo -- ment I can hold you fast __ and press your
+	lips to mine, __ and dream that love will last. As far as I can see, __ this is heav -- en __ and
+	speak -- ing just for me, __ it's ours to share. __ Per -- haps the glow of love will grow with
+	ev -- 'ry pass -- ing day, __
+
+	% part "Volta"
+	or we may nev -- er meet a -- gain, but then It's Not For Me To Say. It's
+	_ or we may nev -- er meet a -- gain, but then It's Not For Me To Say. __
 }
 {% endif %}

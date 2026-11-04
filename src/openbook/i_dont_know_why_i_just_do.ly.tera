@@ -26,7 +26,7 @@ remark = "Frank Sinatra (1943)"
 [versions.Fake]
 doChords = true
 doVoice = true
-doLyrics = false
+doLyrics = true
 doLyricsmore = false
 doLyricsmoremore = false
 doChordBars = false
@@ -43,8 +43,8 @@ doOwn = false
 	- put in the chords (fake book).
 	- put in the tune (fake book).
 	- added youtube performances.
+	- put in the lyrics (fake book).
 	TODO:
-	- add the lyrics.
 	- check the chords (fake book).
 	- check the tune (fake book).
 	- hear the tune to check that it is right and adjust the tempo.
@@ -115,5 +115,23 @@ doOwn = false
 			bes1 |
 		}
 	}
+}
+{% endif %}
+{% if part == "LyricsFake" %}\lyricmode {
+
+	% part "A"
+	I Don't Know Why __ I love you like I do, __ I Don't Know Why __ I Just Do.
+
+	% part "A"
+	I Don't Know Why __ you thrill me like you do, __ I Don't Know Why, __ you just do. You
+
+	% part "B"
+	nev -- er seem to want my ro -- manc -- ing, the on -- ly time you hold me is when we're danc -- ing,
+
+	% part "A"
+	I Don't Know Why __ I love you like I do, __ I Don't Know Why, __ I Just Do.
+
+	% part "Volta"
+	Do.
 }
 {% endif %}

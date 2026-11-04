@@ -26,7 +26,7 @@ remark = "Sarah Vaughan (1955)"
 [versions.Fake]
 doChords = true
 doVoice = true
-doLyrics = false
+doLyrics = true
 doLyricsmore = false
 doLyricsmoremore = false
 doChordBars = false
@@ -43,11 +43,11 @@ doOwn = false
 	- put in the chords (fake book).
 	- put in the tune (fake book).
 	- added youtube performances.
+	- put in the lyrics (fake book).
 	TODO:
 	- check the chords (fake book).
 	- check the tune (fake book).
 	- hear the tune to check that it is right and adjust the tempo.
-	- add the lyrics.
 {% endif %}
 {% if part == "ChordsFake" %}\chordmode {
 	\startChords
@@ -103,5 +103,25 @@ doOwn = false
 	c'4 b d4. c8 | b4 a c4. b8 | g8 g g g b4 b8 b | fis4 fis a2 |
 	\tuplet 3/2 { c,4 e g } b4 a | c2 b4 b | d1 | des1 |
 	\tuplet 3/2 { c4 c c } e,4 e | b'2 b4 b | g1~ | g2. r4 |
+}
+{% endif %}
+{% if part == "LyricsFake" %}\lyricmode {
+
+	% part "A"
+	East Of The Sun __ and west of the moon, __
+	We'll build a dream -- house __ of love, dear.
+
+	% part "B"
+	Near to the sun in the day, near to the moon at night we'll live in a love -- ly way, dear,
+	Liv -- ing on love and pale moon -- light.
+
+	% part "A"
+	Just you and I, __ for -- ev -- er and a day, __
+	Love will not die. __ We'll keep it that way. __
+
+	% part "C"
+	Up a -- mong the stars we'll find a har -- mon -- y of life to a love -- ly tune,
+	East Of The Sun and west of the moon, dear,
+	East Of The Sun and west of the moon. __
 }
 {% endif %}

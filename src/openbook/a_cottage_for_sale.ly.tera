@@ -30,7 +30,7 @@ remark = "The Nat King Cole Trio"
 [versions.Fake]
 doChords = true
 doVoice = true
-doLyrics = false
+doLyrics = true
 doLyricsmore = false
 doLyricsmoremore = false
 doChordBars = false
@@ -47,8 +47,8 @@ doOwn = false
 	- put in the chords (fake book).
 	- put in the tune (fake book).
 	- added youtube performances.
+	- put in the lyrics (fake book).
 	TODO:
-	- add the lyrics.
 	- check the chords (fake book).
 	- check the tune (fake book).
 	- hear the tune to check that it is right and adjust the tempo.
@@ -130,5 +130,31 @@ doOwn = false
 			ees,1 |
 		}
 	}
+}
+{% endif %}
+{% if part == "LyricsFake" %}\lyricmode {
+
+	Our
+
+	% part "A"
+	lit -- tle dream cas -- tle with ev -- 'ry dream gone __ is lone -- ly and si -- lent. The
+	shades are all drawn, __ and my heart is heav -- y as I gaze up -- on __ A Cot -- tage For
+
+	% part "A"
+	Sale. __ The lawn we were proud __ of is wav -- ing in hay; __ our beau -- ti -- ful gar -- den has
+	with -- ered a -- way. __ Where you plant -- ed ros -- es the weeds seem to say __ 'A Cot -- tage For
+
+	% part "B"
+	Sale.' From ev -- 'ry sin -- gle win -- dow, I see your face. But when I
+	reach a win -- dow, there's emp -- ty space. __ The
+
+	% part "A"
+	key's in the mail -- box the
+	same as be -- fore, __ but no one is wait -- ing for me an -- y -- more. __ The
+	end of our sto -- ry is told on the door, __ A Cot -- tage For
+
+	% part "Volta"
+	Sale. Our
+	Sale.
 }
 {% endif %}

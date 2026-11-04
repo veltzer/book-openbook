@@ -26,7 +26,7 @@ remark = "Jelly Roll Morton's New Orleans Jazzmen (1939)"
 [versions.Fake]
 doChords = true
 doVoice = true
-doLyrics = false
+doLyrics = true
 doLyricsmore = false
 doLyricsmoremore = false
 doChordBars = false
@@ -43,8 +43,8 @@ doOwn = false
 	- put in the chords (fake book).
 	- put in the tune (fake book).
 	- added youtube performances.
+	- put in the lyrics (fake book).
 	TODO:
-	- add the lyrics.
 	- check the chords (fake book).
 	- check the tune (fake book).
 	- hear the tune to check that it is right and adjust the tempo.
@@ -117,5 +117,25 @@ doOwn = false
 
 	% part "Coda"
 	c1~ | c1 |
+}
+{% endif %}
+{% if part == "LyricsFake" %}\lyricmode {
+
+	% part "A"
+	We're gon -- na be __ in High So -- ci -- e -- ty. __
+	We'll strut __ on down __ to the fin -- est part of town, __ I
+
+	% part "A"
+	don't __ have rings __ and all those fan -- cy things, __
+	but as long as you love me __ I'm in High So -- ci -- e -- ty! __ While
+
+	% part "B"
+	you go get your hat, I'll put pow -- der on my nose. While
+	I let in the cat, there's some win -- dows you can close. The
+	bed can stay that way; put the dish -- es in the sink. Leave the
+	ash -- es in the tray, I'll be read -- y in a wink. We're
+
+	% part "Coda"
+	ty!
 }
 {% endif %}

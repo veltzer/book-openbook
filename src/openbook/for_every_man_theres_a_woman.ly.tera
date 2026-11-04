@@ -26,8 +26,8 @@ remark = "Peggy Lee (1948)"
 [versions.Fake]
 doChords = true
 doVoice = true
-doLyrics = false
-doLyricsmore = false
+doLyrics = true
+doLyricsmore = true
 doLyricsmoremore = false
 doChordBars = false
 doGuitar = false
@@ -43,8 +43,8 @@ doOwn = false
 	- put in the chords (fake book).
 	- put in the tune (fake book).
 	- added youtube performances.
+	- put in the lyrics (fake book).
 	TODO:
-	- add the lyrics.
 	- check the chords (fake book).
 	- check the tune (fake book).
 	- hear the tune to check that it is right and adjust the tempo.
@@ -116,5 +116,30 @@ doOwn = false
 	f4 c' c bes8 aes | bes8 c4.~ c4. c,8 | f4 g aes c | bes1~ |
 	bes4 f8 g aes4 c | ees8 ees4 c8 bes4 g | f1 | r8 bes4 bes8 g2 | r8 c4 c8 aes2 |
 	bes2 g | f1~ | f1~ | f4 r r2 |
+}
+{% endif %}
+{% if part == "LyricsFake" %}\lyricmode {
+
+	% part "A"
+	For Ev -- 'ry Man There's A Wo -- man, for ev -- 'ry life there's a plan. __ And
+	wise men know it was ev -- er so, since the world be -- gan wom -- an was made for man.
+	Where is she, where is the
+	wom -- an for me? For
+	wom -- an for me?
+
+	% part "B"
+	Find the one, find the one, then to -- geth -- er you will find the sun. __ For
+
+	% part "A"
+	ev -- ry heart there's a mo -- ment, __ for ev -- 'ry hand a glove __
+	and for ev -- 'ry wo -- man a man to love.
+	Where is she? Where is the one for me? __
+}
+{% endif %}
+{% if part == "LyricsmoreFake" %}\lyricmode {
+
+	% part "A"
+	ev -- 'ry prince there's a prin -- cess, for ev -- 'ry Joe there's a Joan. __ And
+	if you wait you will meet the mate born for you a -- lone, hap -- py to be your own.
 }
 {% endif %}

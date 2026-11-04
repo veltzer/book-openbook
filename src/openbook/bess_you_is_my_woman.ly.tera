@@ -26,8 +26,8 @@ remark = "Miles Davis with Gil Evans from Porgy and Bess (1958)"
 [versions.Fake]
 doChords = true
 doVoice = true
-doLyrics = false
-doLyricsmore = false
+doLyrics = true
+doLyricsmore = true
 doLyricsmoremore = false
 doChordBars = false
 doGuitar = false
@@ -43,8 +43,8 @@ doOwn = false
 	- put in the chords (fake book).
 	- put in the tune (fake book).
 	- added youtube performances.
+	- put in the lyrics (fake book).
 	TODO:
-	- add the lyrics.
 	- check the chords (fake book).
 	- check the tune (fake book).
 	- hear the tune to check that it is right and adjust the tempo.
@@ -103,5 +103,34 @@ doOwn = false
 	b4. a8 b a4. | r8 d b a b a4 g8 | g4. fis8 g fis4. | r8 b fis d cis4. d8 | d'2. fis4 |
 	a,4 b c b | a2. fis'4 | a,4 b c b | a8 d, d d a' d, d d | a'8 d d d a d, d4 |
 	a'8 d, d d a' d, d d | a8 d d d a' d, d4 | a'1~ | a4 aes g fis | f1~ | f2. r4 |
+}
+{% endif %}
+{% if part == "LyricsFake" %}\lyricmode {
+
+	% part "A"
+	Bess, You Is My Wom -- an now, __ you is, __ you is! An'
+	you mus' laugh an' sing an' dance for two in -- stead of one. __
+
+	% part "A"
+	Want no wrin -- kle on yo' brow no -- how, be --
+	cause de sor -- row of the past is all done, done. Oh, Bess, my
+
+	% part "B"
+	Bess! De real __ _ hap -- pi -- ness is jes' be -- gun. __ _ _ _ _ _ _
+
+	% part "Coda"
+	I ain' go -- in', you hear me say -- in', if you ain' go -- in', wid you I'm stay -- in'! Por -- gy,
+	I's yo' wom -- an now! I's yours for -- ev -- er, morn -- in' time an' eve -- nin' time an' sum -- mer time an' win -- ter time.
+	Morn -- in' time an' eve -- nin' time an' sum -- mer time an' win -- ter time; Bess, __ you got yo' man. __
+}
+{% endif %}
+{% if part == "LyricsmoreFake" %}\lyricmode {
+
+	% part "A"
+	Por -- gy, I's yo' wom -- an now, __ I is, __ I is! An'
+	I ain' nev -- er go -- in' no -- where 'less you shares de fun. __
+
+	% part "A"
+	Dere's no wrin -- kle on my brow no -- how, but
 }
 {% endif %}

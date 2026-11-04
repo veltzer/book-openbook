@@ -26,7 +26,7 @@ remark = "Sam Cooke"
 [versions.Fake]
 doChords = true
 doVoice = true
-doLyrics = false
+doLyrics = true
 doLyricsmore = false
 doLyricsmoremore = false
 doChordBars = false
@@ -43,8 +43,8 @@ doOwn = false
 	- put in the chords (fake book).
 	- put in the tune (fake book).
 	- added youtube performances.
+	- put in the lyrics (fake book).
 	TODO:
-	- add the lyrics.
 	- check the chords (fake book).
 	- check the tune (fake book).
 	- hear the tune to check that it is right and adjust the tempo.
@@ -126,5 +126,28 @@ doOwn = false
 			f,1~ | f2. r4 |
 		}
 	}
+}
+{% endif %}
+{% if part == "LyricsFake" %}\lyricmode {
+
+	% part "A"
+	I love you __ For Sen -- ti -- men -- tal Rea -- sons, __ I hope you do be -- lieve me, __
+	I'll give you my heart. __ I
+
+	% part "A"
+	love you __ and you a -- lone were meant for me, __ please give your lov -- ing heart to me, __
+	and say we'll nev -- er part. __ I
+
+	% part "B"
+	think of you ev' -- ry morn -- ing dream of you ev' -- ry night.
+	Dar -- ling, I'm nev -- er lone -- ly when -- ev -- er __ you're in sight. I
+
+	% part "A"
+	love you __ For Sen -- ti -- men -- tal Rea -- sons, __ I hope you do be -- lieve me __
+	I've giv -- en you my
+
+	% part "Volta"
+	heart. __ I
+	heart. __
 }
 {% endif %}

@@ -26,7 +26,7 @@ remark = "Les Paul in his hit recording (1952)"
 [versions.Fake]
 doChords = true
 doVoice = true
-doLyrics = false
+doLyrics = true
 doLyricsmore = false
 doLyricsmoremore = false
 doChordBars = false
@@ -43,12 +43,12 @@ doOwn = false
 	- put in the chords (fake book).
 	- put in the tune (fake book).
 	- added youtube performances.
+	- put in the lyrics (fake book).
 	TODO:
 	- check the chords (fake book).
 	- check the tune (fake book).
 	- hear the tune to check that it is right and adjust the tempo.
 	- the C#dim7 in bars 2 of both B parts is printed in the middle of the bar; it was put on beat 3.
-	- add the lyrics.
 {% endif %}
 {% if part == "ChordsFake" %}\chordmode {
 	\startChords
@@ -107,5 +107,25 @@ doOwn = false
 	% part "B"
 	g1~ | g4 e8 f g a4 g8 | f2 d~ | d2. e4 |
 	f8 a4 e8 g4 d8 f~ | f8 c e4 b8 d4 a8 | c1~ | c4 r r2 |
+}
+{% endif %}
+{% if part == "LyricsFake" %}\lyricmode {
+	Say, have you seen that Ca -- ri --
+
+	% part "A"
+	o -- ca? __ It's not a fox -- trot or a pol -- ka. __ It has a lit -- tle bit of
+	new rhy -- thm, a blue rhy -- thm that sighs. __ It has a me -- ter that is
+
+	% part "A"
+	trick -- y __ A bit of wick -- ed, wack -- i -- wick -- y. __ But when you dance it with a
+	new love __ there'll be true love __ in her eyes. __ You'll
+
+	% part "B"
+	dream __ of the new Ca -- ri -- o -- ca. __ It's
+	theme __ is a kiss and a sigh. __ You'll
+
+	% part "B"
+	dream __ of the new Ca -- ri -- o -- ca, __ when
+	mu -- sic and lights are gone __ and we're say -- ing good -- bye. __
 }
 {% endif %}

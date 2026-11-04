@@ -26,8 +26,8 @@ remark = "Bob Wills and His Texas Playboys"
 [versions.Fake]
 doChords = true
 doVoice = true
-doLyrics = false
-doLyricsmore = false
+doLyrics = true
+doLyricsmore = true
 doLyricsmoremore = false
 doChordBars = false
 doGuitar = false
@@ -43,13 +43,14 @@ doOwn = false
 	- put in the chords (fake book).
 	- put in the tune (fake book).
 	- added youtube performances.
+	- put in the lyrics (fake book).
 	TODO:
-	- add the lyrics.
 	- check the chords (fake book).
 	- check the tune (fake book).
 	- hear the tune to check that it is right and adjust the tempo.
 	- in the C7 Cdim C7 bars the two f notes after the printed f sharp carry no accidental, they are typed as f sharp (the sharp holds through the bar and fits Cdim).
 	- the book prints C7 over the last eighth of bar 23 (anticipation), it is typed on bar 24.
+	- bar 11 of the second verse: the book squeezes 'their fri-jo-les in' onto three notes; typed as fri~jo and les~in (two syllables on one note).
 {% endif %}
 {% if part == "ChordsFake" %}\chordmode {
 	\startChords
@@ -127,5 +128,46 @@ doOwn = false
 			f2.\repeatTie r4 |
 		}
 	}
+}
+{% endif %}
+{% if part == "LyricsFake" %}\lyricmode {
+	A --
+
+	% part "A"
+	cross The Al -- ley From The Al -- a -- mo, __ Lived a pin -- to po -- ny and a Na -- va -- jo, __ Who
+	sang a sort of In -- di -- an Hi -- de -- ho __ to the peo -- ple pass -- ing by. __ The
+
+	% part "A"
+	pin -- to spent his time a -- swish -- in' flies __ and the Na -- va -- jo watched the la -- zy skies, __ And
+	ver -- y rare -- ly did they ev -- er rest their eyes __ on the peo -- ple pass -- ing by. __ One
+
+	% part "B"
+	day, they went a -- walk -- in' __ a -- long the rail -- road track, __ They were swish -- in' not __ _
+	look -- in'. __ Toot! Toot! __ they nev -- er came back. __ A --
+
+	% part "A"
+	cross The Al -- ley From The Al -- a -- mo, __ When the sum -- mer sun de -- cides to set -- tle low, __ A
+	fly sings an In -- di -- an Hi -- de -- ho __ to the peo -- ple pass -- ing by. __
+	A-
+}
+{% endif %}
+{% if part == "LyricsmoreFake" %}\lyricmode {
+	_
+
+	% part "A"
+	_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ Who
+	used to bake fri -- jol -- es in corn -- meal dough __ for the peo -- ple pass -- ing by. __ They
+
+	% part "A"
+	tho't that they would make some eas -- y bucks __ if they're wash -- in' their fri~jo -- les~in Duz and Lux; __ A
+	pair of ver -- y con -- sci -- _ _ en -- tious clucks __ to the peo -- ple pass -- ing by. __ Then~they
+
+	% part "B"
+	took this cheap va -- ca -- tion, __ their shoes were pol -- ish'd bright. __ No, they nev -- er heard the
+	whis -- tle. __ Toot! Toot! __ they're clear out of sight. __ A --
+
+	% part "A"
+	cross The Al -- ley From The Al -- a -- mo, __ When the sun -- light beams it's ten -- der ten -- der glow, __ The
+	beams go to sleep and there ain't no dough __ for the peo -- ple pass -- ing by. __
 }
 {% endif %}

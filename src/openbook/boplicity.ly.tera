@@ -26,7 +26,7 @@ remark = "Miles Davis with the Gil Evans Orchestra conducted by Quincy Jones, li
 [versions.Fake]
 doChords = true
 doVoice = true
-doLyrics = false
+doLyrics = true
 doLyricsmore = false
 doLyricsmoremore = false
 doChordBars = false
@@ -43,8 +43,10 @@ doOwn = false
 	- put in the chords (fake book).
 	- put in the tune (fake book).
 	- added youtube performances.
+	- put in the lyrics (fake book).
+	- removed the tie between the Bb of bar 2 and the Bb of bar 3 and the tie between the two D of bar 27: the book does not print them there (it does in bars 10-11 and 26) and the lyrics need the notes.
 	TODO:
-	- add the lyrics.
+	- bar 28: the book has four syllables (cer-tain-ly know,) for the five notes before the rest; the skip was put on the Db, check it.
 	- check the chords (fake book).
 	- check the tune (fake book).
 	- hear the tune to check that it is right and adjust the tempo.
@@ -88,7 +90,7 @@ doOwn = false
 	\key ees \major
 
 	% part "A"
-	c8 ees4 bes'8~ \tuplet 3/2 { bes4 g ees } | \tuplet 3/2 { f4 ees f } g4 r8 bes,8~ | bes4 g'8 d~ d ees g bes | c8 aes16 f des8 b'!8 r4 r8 g8 |
+	c8 ees4 bes'8~ \tuplet 3/2 { bes4 g ees } | \tuplet 3/2 { f4 ees f } g4 r8 bes,8 | bes4 g'8 d~ d ees g bes | c8 aes16 f des8 b'!8 r4 r8 g8 |
 	bes8 g \tuplet 3/2 { aes bes aes } g ees c bes | ees8 c ees g ees c ees g | \tuplet 3/2 { ees4 g bes } ees8 bes4 a!8~ | a1 |
 
 	% part "A"
@@ -100,7 +102,26 @@ doOwn = false
 	bes'8 ges16 ees b!8 a'!8 r4 r8 aes8 | bes4 \tuplet 3/2 { ges8 ees ces } a'!4 r8 f8 | aes8 aes4 aes8~ aes ges fes des | \tuplet 3/2 { g!4 aes bes } g2 |
 
 	% part "A"
-	c,8 ees4 bes'8~ bes g4 ees8 | \tuplet 3/2 { f4 ees f } g4 r8 bes,8~ | bes4 g'8 d~ d ees g bes | c8 aes16 f des8 b'!8 r4 r8 g8 |
+	c,8 ees4 bes'8~ bes g4 ees8 | \tuplet 3/2 { f4 ees f } g4 r8 bes,8~ | bes4 g'8 d d ees g bes | c8 aes16 f des8 b'!8 r4 r8 g8 |
 	bes8 g \tuplet 3/2 { aes bes aes } g ees c bes | ees8 c ees g ees c ees g | \tuplet 3/2 { ees4 g bes } ees8 bes4 a!8~ | a1 |
+}
+{% endif %}
+{% if part == "LyricsFake" %}\lyricmode {
+
+	% part "A"
+	It be -- gan __ as an ex -- per -- i -- ment, a lit -- tle new, __ but with the time clev -- er -- ly spent. It
+	woke up mus -- i -- cal minds and, boy, it sure __ _ made a dent __ _ and so we know that Be -- bop lives. __
+
+	% part "A"
+	Diz -- zy, Bird __ and Miles, they did it their way, swing -- time peo -- ple did -- n't fig -- ure it could stay, but
+	they split would -- n't you know be -- cause the time __ _ was pas -- sé __ _ and so they know that Be -- bop Lives. __ And
+
+	% part "B"
+	when there was a cat who then start -- ed to scat, it made im -- pres -- sions that, es -- tab -- lish -- ing a school, be -- came a
+	pop -- u -- lar pas -- time, for bop when in it's prime would dif -- fer -- en -- ti -- ate the hot from the cool.
+
+	% part "A"
+	Se -- cond, third __ gen -- er -- a -- tions still blow all __ the flat -- ted fifths that we cer -- tain -- ly _ know, like
+	'Ko -- ko,' don't for -- get 'Four' and then there's 'Night- __ _ In Tu -- ni -- _ sia,' so we know that Be -- bop Lives. __
 }
 {% endif %}

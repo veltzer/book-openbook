@@ -26,7 +26,7 @@ remark = "Ella Fitzgerald on Verve Records"
 [versions.Fake]
 doChords = true
 doVoice = true
-doLyrics = false
+doLyrics = true
 doLyricsmore = false
 doLyricsmoremore = false
 doChordBars = false
@@ -43,8 +43,8 @@ doOwn = false
 	- put in the chords (fake book).
 	- put in the tune (fake book).
 	- added youtube performances.
+	- put in the lyrics (fake book).
 	TODO:
-	- add the lyrics.
 	- check the chords (fake book).
 	- check the tune (fake book).
 	- hear the tune to check that it is right and adjust the tempo.
@@ -125,5 +125,28 @@ doOwn = false
 			ees1~ | ees1 |
 		}
 	}
+}
+{% endif %}
+{% if part == "LyricsFake" %}\lyricmode {
+
+	% part "A"
+	For You, For Me, For Ev -- er -- more, __ it's
+	bound to be for ev -- er -- more. __ It's
+
+	% part "B"
+	plain to see, we found by find -- ing each oth -- er, the
+	love we wait -- ed for. __ I'm
+
+	% part "A"
+	yours, you're mine, and in our hearts __ the
+	hap -- py end -- ing starts. __ What a
+
+	% part "C"
+	love -- ly world this world will be with a world of love in store For
+	You, For Me, For Ev -- er --
+
+	% part "Volta"
+	more! __ For
+	more! __
 }
 {% endif %}

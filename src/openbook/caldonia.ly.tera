@@ -27,7 +27,7 @@ remark = "Woody Herman (1945)"
 [versions.Fake]
 doChords = true
 doVoice = true
-doLyrics = false
+doLyrics = true
 doLyricsmore = false
 doLyricsmoremore = false
 doChordBars = false
@@ -44,13 +44,13 @@ doOwn = false
 	- put in the chords (fake book).
 	- put in the tune (fake book).
 	- added youtube performances.
+	- put in the lyrics (fake book).
 	TODO:
 	- check the chords (fake book).
 	- check the tune (fake book).
 	- hear the tune to check that it is right and adjust the tempo.
 	- bars 1-4: the fake book prints the flat only on the first b of each bar; the flat is carried through the bar (blue third over G).
 	- the fake book prints no chords in bars 12-16 of both parts and in the first four bars of part B; G is assumed.
-	- add the lyrics.
 {% endif %}
 {% if part == "ChordsFake" %}\chordmode {
 	\startChords
@@ -94,5 +94,17 @@ doOwn = false
 	% part "B"
 	r1 | r1 | r1 | r1 | r1 | r1 | r1 | r1 | r1 | r1 | r1 |
 	r2 r4 r8 d'8 | d8 d4. r4 r8 d8 | d8 d4. r2 | \tuplet 3/2 { d4 d d } \tuplet 3/2 { d d d } | d4 r r2 |
+}
+{% endif %}
+{% if part == "LyricsFake" %}\lyricmode {
+
+	% part "A"
+	Walk -- in' with mah ba -- by, she's got great big feet. __ She's long, lean and lan -- ky, ain't had noth -- in' to eat, but she's my
+	ba -- by __ and I love her just the same. __ _ Cra -- zy 'bout that wo -- man 'cause Cal -- don -- ia is __ _ her name. __ _
+	Cal -- don -- ia! Cal -- don -- ia! What makes your big head so hard? But I love you, __ love you just __ _ the same. __ _
+	Cra -- zy 'bout that wo -- man 'cause Cal -- don -- ia is __ _ her name. __
+
+	% part "B"
+	Cal -- don -- ia! Cal -- don -- ia! What makes your big head so hard?
 }
 {% endif %}

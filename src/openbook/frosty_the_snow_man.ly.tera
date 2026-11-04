@@ -26,8 +26,8 @@ remark = "Ella Fitzgerald"
 [versions.Fake]
 doChords = true
 doVoice = true
-doLyrics = false
-doLyricsmore = false
+doLyrics = true
+doLyricsmore = true
 doLyricsmoremore = false
 doChordBars = false
 doGuitar = false
@@ -43,12 +43,14 @@ doOwn = false
 	- put in the chords (fake book).
 	- put in the tune (fake book).
 	- added youtube performances.
+	- put in the lyrics (fake book).
 	TODO:
-	- add the lyrics.
 	- check the chords (fake book).
 	- check the tune (fake book).
 	- hear the tune to check that it is right and adjust the tempo.
 	- the fake book prints no chords in the tag after the second ending except G7 and the final C; the chords were carried over.
+	- lyrics bar 22: the book ties the two d's of 'head' but prints 'he' (first verse) under the second d; the first verse sings it via ignoreMelismata, the second verse holds 'when' over the tie as printed.
+	- lyrics bar 20: the book squeezes 'And he' (second verse) under the single e of 'For'; typed as one syllable 'And he'.
 {% endif %}
 {% if part == "ChordsFake" %}\chordmode {
 	\startChords
@@ -132,5 +134,51 @@ doOwn = false
 	% part "End"
 	g'8 g g4 g g | a8 g g4 g g | a4 g e g | d1 |
 	g8 g g4 g g | a8 g g4 g g | g8 g f4 e d | c2. r4 |
+}
+{% endif %}
+{% if part == "LyricsFake" %}\lyricmode {
+
+	% part "A"
+	Fros -- ty, The Snow Man was a jol -- ly, hap -- py soul, __ with a
+	corn cob pipe and a but -- ton nose __ and two eyes made out of coal.
+
+	% part "A"
+	Fros -- ty the snow man is a fair -- y tail they say, __ he was
+	made of snow but the chil -- dren know __ how he came to life one day. There
+
+	% part "B"
+	must have been some mag -- ic in that old silk hat they found. For
+	when they placed it \set ignoreMelismata = ##t on his head he \unset ignoreMelismata be -- gan to dance a -- round. Oh,
+
+	% part "A"
+	Fros -- ty The Snow Man was a -- live as he could be, __ and the
+	chil -- dren say he could laugh and play __ just the same as you and
+
+	% part "Volta"
+	me.
+	day.'
+
+	% part "End"
+	Thump -- e -- ty thump thump thump -- e -- ty thump thump look at Fros -- ty go.
+	Thump -- e -- ty thump thump thump -- e -- ty thump thump ov -- er the hills of snow.
+}
+{% endif %}
+{% if part == "LyricsmoreFake" %}\lyricmode {
+
+	% part "A"
+	Fros -- ty, The Snow Man knew the sun was hot that day, __ so he
+	said 'Lets run and we'll have some fun __ now be -- fore I melt a -- way.'
+
+	% part "A"
+	Down to the vil -- lage, with a broom -- stick in his hand, __ run -- ning
+	here and there all a -- round the square, __ say -- in', 'catch me if you can.' He
+
+	% part "B"
+	led them down the streets of town right to the traf -- fic cop. And_he
+	on -- ly paused a mo -- ment when __ he heard him hol -- ler 'Stop!' For
+
+	% part "A"
+	Fros -- ty The Snow Man had to hur -- ry on his way __ but he
+	waved good -- by say -- in', 'Don't you cry, __ I'll be back a -- gain some
 }
 {% endif %}

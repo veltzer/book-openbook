@@ -26,7 +26,7 @@ remark = "Billie Holiday on The Sound of Jazz television broadcast (1957)"
 [versions.Fake]
 doChords = true
 doVoice = true
-doLyrics = false
+doLyrics = true
 doLyricsmore = false
 doLyricsmoremore = false
 doChordBars = false
@@ -43,8 +43,8 @@ doOwn = false
 	- put in the chords (fake book).
 	- put in the tune (fake book).
 	- added youtube performances.
+	- put in the lyrics (fake book).
 	TODO:
-	- add the lyrics.
 	- check the chords (fake book).
 	- check the tune (fake book).
 	- hear the tune to check that it is right and adjust the tempo.
@@ -118,5 +118,32 @@ doOwn = false
 	% part "A"
 	aes4 g8 g g8 g4. | r4 aes8 aes g4. f8 | d8 c~ c2. | r1 | d8 f aes aes aes8 g4. | r4 d8 f g4. f8 | d8 c~ c2. |
 	r2 r8 gis'8 a a16 a | a8 a a4 g8 c,4. | r8 aes'8 aes4 aes g8 f | f2. r4 | r1 |
+}
+{% endif %}
+{% if part == "LyricsFake" %}\lyricmode {
+
+	% part "A"
+	My man don't love me, treats me oh so mean, __ _ my man he don't love __ me,
+	treats me aw -- ful mean, __ _ he's the low -- est man that I've ev -- er seen. He wears
+
+	% part "A"
+	high -- draped pants, __ stripes are real -- ly yel -- low; __ he wears high -- draped pants, __
+	stripes are real -- ly yel -- low. But when he starts in to love me he's so Fine And
+	Mel -- low. __ Love will
+
+	% part "A"
+	make you drink and gam -- ble, make you stay out all night long. __ _
+	Love will make you drink and gam -- ble, make you stay out all night long. __ _
+	Love will make you do things that you know is wrong. __ But if you
+
+	% part "A"
+	treat me right ba -- by, I'll stay home ev -- 'ry day; __ _
+	if you treat me right ba -- by, I'll stay home ev -- 'ry day. __ _
+	But you're so mean to me ba -- by, I know you're gon -- na drive me a -- way. Love is
+
+	% part "A"
+	just like a fau -- cet, it turns off and on; __ _
+	Love is like a fau -- cet it turns off and on. __ _
+	Some -- times when you think it's on ba -- by, it has turned off and gone.
 }
 {% endif %}

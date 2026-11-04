@@ -26,7 +26,7 @@ remark = "Connie Francis (1958)"
 [versions.Fake]
 doChords = true
 doVoice = true
-doLyrics = false
+doLyrics = true
 doLyricsmore = false
 doLyricsmoremore = false
 doChordBars = false
@@ -43,11 +43,11 @@ doOwn = false
 	- put in the chords (fake book).
 	- put in the tune (fake book).
 	- added youtube performances.
+	- put in the lyrics (fake book).
 	TODO:
 	- check the chords (fake book).
 	- check the tune (fake book).
 	- hear the tune to check that it is right and adjust the tempo.
-	- add the lyrics.
 {% endif %}
 {% if part == "ChordsFake" %}\chordmode {
 	\startChords
@@ -101,5 +101,24 @@ doOwn = false
 	% part "A"
 	b4~ b8. c16 cis8. d16 | g,2 fis4 | e2. | c'2. |
 	b4~ b8. a16 g8. b16 | a2 b4 | g2.~ | g2.\fermata |
+}
+{% endif %}
+{% if part == "LyricsFake" %}\lyricmode {
+
+	% part "A"
+	Car -- o -- lin -- a Moon keep shin -- ing,
+	shin -- ing on the one __ who waits for me. __
+
+	% part "A"
+	Car -- o -- lin -- a Moon I'm pin -- ing,
+	pin -- ing for the place __ I long to be. __ How I'm
+
+	% part "B"
+	hop -- ing to -- night you'll go, go to the right win -- dow,
+	scat -- ter your light, say I'm all right, please do. __ _
+
+	% part "A"
+	Tell __ her that I'm blue and lone -- ly,
+	dream -- y Car -- o -- lin -- a Moon. __
 }
 {% endif %}

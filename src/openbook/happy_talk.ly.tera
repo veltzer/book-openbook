@@ -27,7 +27,7 @@ remark = "Captain Sensible (1982)"
 [versions.Fake]
 doChords = true
 doVoice = true
-doLyrics = false
+doLyrics = true
 doLyricsmore = false
 doLyricsmoremore = false
 doChordBars = false
@@ -44,8 +44,8 @@ doOwn = false
 	- put in the chords (fake book).
 	- put in the tune (fake book).
 	- added youtube performances.
+	- put in the lyrics (fake book).
 	TODO:
-	- add the lyrics.
 	- check the chords (fake book).
 	- check the tune (fake book).
 	- hear the tune to check that it is right and adjust the tempo.
@@ -109,5 +109,22 @@ doOwn = false
 	f4^\markup { \italic { Trio } } e d c | c1 | f4 e d c | c1 |
 	d4 g d g | d4 g d g | c,1~ | c1 | f4 e d c | c1 |
 	f4 e d c | c1 | d4 g d g | d4 g d g | a1~ | a1^\markup { \italic { D.C. al Fine } } |
+}
+{% endif %}
+{% if part == "LyricsFake" %}\lyricmode {
+
+	% part "A"
+	Hap -- py Talk, keep talk -- in' Hap -- py Talk, __ _
+	Talk a -- bout things you'd like to do. __ You
+	got -- ta have a dream, __ if you don't have a dream __ how you gon -- na
+	have a dream come
+
+	% part "Volta"
+	true? __
+	true? __
+
+	% part "B"
+	Talk a -- bout a moon float -- in' in de sky, look -- in' like a lil -- y on a lake. __
+	Talk a -- bout a bird learn -- in' how to fly, Mak -- in, all de mu -- sic he can make. __
 }
 {% endif %}

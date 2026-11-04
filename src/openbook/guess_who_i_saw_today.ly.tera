@@ -26,7 +26,7 @@ remark = "Carmen McRae"
 [versions.Fake]
 doChords = true
 doVoice = true
-doLyrics = false
+doLyrics = true
 doLyricsmore = false
 doLyricsmoremore = false
 doChordBars = false
@@ -43,8 +43,8 @@ doOwn = false
 	- put in the chords (fake book).
 	- put in the tune (fake book).
 	- added youtube performances.
+	- put in the lyrics (fake book).
 	TODO:
-	- add the lyrics.
 	- check the chords (fake book).
 	- check the tune (fake book).
 	- hear the tune to check that it is right and adjust the tempo.
@@ -104,5 +104,25 @@ doOwn = false
 	% part "A"
 	r8 c bes a bes a g a | c,2~ c8 d f a | c8 g g g g d e g | d'8 a a a a2 |
 	r8 d e d c bes a g | f2~ f8 f g f | c'8 c c2 e,8 e | f1 |
+}
+{% endif %}
+{% if part == "LyricsFake" %}\lyricmode {
+
+	% part "A"
+	Guess Who I Saw To -- day, my dear! __ I went in town to shop a -- round for some -- thing new __ and thought I'd
+	stop and have a bite when I was through.
+
+	% part "A"
+	I looked a -- round for some -- place near, __ and it oc -- curred to me where I had parked the car __ I'd seen a
+	most at -- tract -- ive French ca -- fé and bar.
+
+	% part "B"
+	It real -- ly was -- n't ver -- y far. __ The wait -- er showed me to a dark, se -- clud -- ed cor -- ner, __ and when my
+	eyes be -- came ac -- cus -- tomed to the gloom, __ I saw two peo -- ple at the bar who were so
+	much in love __ that ev -- en I could spot it clear a -- cross the room.
+
+	% part "A"
+	Guess Who I Saw To -- day, my dear! __ I've nev -- er been so shocked be -- fore; I head -- ed blind -- ly for the door,
+	they did -- n't see me pass -- ing through. __ Guess Who I Saw To -- day! I saw you!
 }
 {% endif %}

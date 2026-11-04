@@ -26,7 +26,7 @@ remark = "Louis Armstrong and the All-Stars live"
 [versions.Fake]
 doChords = true
 doVoice = true
-doLyrics = false
+doLyrics = true
 doLyricsmore = false
 doLyricsmoremore = false
 doChordBars = false
@@ -43,8 +43,8 @@ doOwn = false
 	- put in the chords (fake book).
 	- put in the tune (fake book).
 	- added youtube performances.
+	- put in the lyrics (fake book).
 	TODO:
-	- add the lyrics.
 	- check the chords (fake book).
 	- check the tune (fake book).
 	- hear the tune to check that it is right and adjust the tempo.
@@ -106,5 +106,25 @@ doOwn = false
 	% part "A"
 	e8 g a b~ b4. c8 | b a g a~ a4. c8 | b a g a~ a4 c | e,2. r8 ees |
 	d8 cis d c'~ c4. b8 | d des c b bes a4. | e'8 c a e'~ e a, e'4 | c2. r4 |
+}
+{% endif %}
+{% if part == "LyricsFake" %}\lyricmode {
+	Do You
+
+	% part "A"
+	Know What It Means __ To Miss New Or -- leans, __ and miss it each night __ and day? I
+	know I'm not wrong, __ the feel -- in's get -- tin' strong -- er the long -- er I stay __ a -- way. __ Miss the
+
+	% part "A"
+	moss -- cov -- ered vines, __ the tall su -- gar pines __ where mock -- in' -- birds used __ to sing. And
+	I'd like to see __ the la -- zy Mis -- sis -- sip -- pi a hur -- ry -- in' in -- to spring. __ The
+
+	% part "B"
+	moon __ light on the bay -- ou, __ a cre -- ole tune __ that fills the air; I
+	dream __ a -- bout mag -- nol -- ias in June, __ and soon I'm wish -- in' that I __ was there. __ _ Do You
+
+	% part "A"
+	Know What It Means __ To Miss New Or -- leans __ when that's where you left __ your heart? And
+	there's some -- thing more: __ I miss the one I care for more than I miss __ New Or -- leans.
 }
 {% endif %}

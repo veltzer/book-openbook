@@ -31,7 +31,7 @@ remark = "Nancy Wilson live at the Newport Jazz Festival (1987)"
 [versions.Fake]
 doChords = true
 doVoice = true
-doLyrics = false
+doLyrics = true
 doLyricsmore = false
 doLyricsmoremore = false
 doChordBars = false
@@ -48,8 +48,8 @@ doOwn = false
 	- put in the chords (fake book).
 	- put in the tune (fake book).
 	- added youtube performances.
+	- put in the lyrics (fake book).
 	TODO:
-	- add the lyrics.
 	- check the chords (fake book).
 	- check the tune (fake book).
 	- hear the tune to check that it is right and adjust the tempo.
@@ -98,5 +98,24 @@ doOwn = false
 
 	% part "C"
 	g4 a c2~ | c1 | d,2 b'~ | b1 | g2 d4. e8 | f4 g2 e4 | c1~ | c2. r4 |
+}
+{% endif %}
+{% if part == "LyricsFake" %}\lyricmode {
+
+	% part "A"
+	Dear -- ly Be -- lov -- ed. How clear -- ly I see,
+	Some -- where in hea -- ven you were fash -- ioned for me,
+
+	% part "B"
+	An -- gels eyes __ knew you, __
+	An -- gel voic -- es led me to you; __
+
+	% part "A"
+	Noth -- ing can stop me fate gave me a sign;
+	I know that I'll be yours come show -- er or shine.
+
+	% part "C"
+	So I say __ mere -- ly. __
+	Dear -- ly Be -- lov -- ed be mine. __
 }
 {% endif %}

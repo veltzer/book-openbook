@@ -27,7 +27,7 @@ remark = "Deanna Durbin (1940)"
 [versions.Fake]
 doChords = true
 doVoice = true
-doLyrics = false
+doLyrics = true
 doLyricsmore = false
 doLyricsmoremore = false
 doChordBars = false
@@ -44,8 +44,8 @@ doOwn = false
 	- put in the chords (fake book).
 	- put in the tune (fake book).
 	- added youtube performances.
+	- put in the lyrics (fake book).
 	TODO:
-	- add the lyrics.
 	- check the chords (fake book).
 	- check the tune (fake book).
 	- hear the tune to check that it is right and adjust the tempo.
@@ -105,5 +105,20 @@ doOwn = false
 	% part "C"
 	ees1~ | ees4 r ees d | g,2 c~ | c4 r d c | f,2 bes~ | bes4 r c bes |
 	bes4 a gis a | c2. d4 | d8 c bes2.~ | bes4 r r2 |
+}
+{% endif %}
+{% if part == "LyricsFake" %}\lyricmode {
+
+	% part "A"
+	A -- ma -- po -- la __ my pret -- ty lit -- tle pop -- py. __ You're like that love -- ly flow'r so sweet and heav -- en -- ly __ since I
+
+	% part "B"
+	found you, __ My heart is wrapped a -- round you __ and lov -- ing you, it seems to beat a rhap -- so -- dy. __ A -- ma --
+
+	% part "A"
+	po -- la, __ the pret -- ty lit -- tle pop -- py __ must cop -- y its en -- dear -- ing charm from
+
+	% part "C"
+	you. __ A -- ma -- po -- la, __ A -- ma -- po -- la, __ how I long to hear you say 'I love __ _ you.'
 }
 {% endif %}

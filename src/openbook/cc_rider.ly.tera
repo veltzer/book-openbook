@@ -26,8 +26,8 @@ remark = "Ray Charles"
 [versions.Fake]
 doChords = true
 doVoice = true
-doLyrics = false
-doLyricsmore = false
+doLyrics = true
+doLyricsmore = true
 doLyricsmoremore = false
 doChordBars = false
 doGuitar = false
@@ -43,12 +43,13 @@ doOwn = false
 	- put in the chords (fake book).
 	- put in the tune (fake book).
 	- added youtube performances.
+	- put in the lyrics (fake book).
 	TODO:
 	- check the chords (fake book).
 	- check the tune (fake book).
 	- hear the tune to check that it is right and adjust the tempo.
 	- bar 10: the fake book prints a quarter rest for the first verse and an eighth rest plus an eighth note g for the second verse; only the first verse rhythm is typed.
-	- add the lyrics.
+	- bar 10: because of the above the second verse sings 'I won't' on the single g8 that is typed.
 {% endif %}
 {% if part == "ChordsFake" %}\chordmode {
 	\startChords
@@ -96,5 +97,29 @@ doOwn = false
 			ees,1~ | ees2. r4 |
 		}
 	}
+}
+{% endif %}
+{% if part == "LyricsFake" %}\lyricmode {
+	Yes
+
+	% part "A"
+	C. __ _ _ _ C. _ Ri -- _ _ _ _ der, girl __ _ see __ _ _ what you have done. __
+	Yes, yes, yes, C. C. Ri -- _ der, see what you have done. __
+	Girl, you made me _ love you, now your man __ _ has
+
+	% part "Volta"
+	come. __ Well, I'm
+}
+{% endif %}
+{% if part == "LyricsmoreFake" %}\lyricmode {
+	_
+
+	% part "A"
+	go -- _ _ ing a -- way ba -- _ _ _ _ by, and I won't __ _ _ be back 'til fall. __
+	Yes, dar -- ling, going a -- way ba -- by, won't be back 'til fall. __
+	If I find me a new girl, I_won't be back __ _ at
+
+	% part "Volta"
+	_ _ _ all. __
 }
 {% endif %}

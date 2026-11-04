@@ -26,7 +26,7 @@ remark = "John Coltrane from My Favorite Things (1961)"
 [versions.Fake]
 doChords = true
 doVoice = true
-doLyrics = false
+doLyrics = true
 doLyricsmore = false
 doLyricsmoremore = false
 doChordBars = false
@@ -43,8 +43,8 @@ doOwn = false
 	- put in the chords (fake book).
 	- put in the tune (fake book).
 	- added youtube performances.
+	- put in the lyrics (fake book).
 	TODO:
-	- add the lyrics.
 	- check the chords (fake book).
 	- check the tune (fake book).
 	- hear the tune to check that it is right and adjust the tempo.
@@ -123,5 +123,28 @@ doOwn = false
 			bes2. c4 | f2. c4 | ees1~ | ees2. r4 |
 		}
 	}
+}
+{% endif %}
+{% if part == "LyricsFake" %}\lyricmode {
+
+	% part "A"
+	Ev -- 'ry Time __ We Say Good -- bye I die __ a lit -- tle.
+	Ev -- 'ry Time __ We Say Good -- bye __ I won -- der why __ a lit -- tle.
+
+	% part "B"
+	Why the gods a -- bove me, who must be __ in the know,
+	think so lit -- tle of me they al -- low you to go. __ _
+
+	% part "A"
+	When you're near __ there's such an air of Spring __ a -- bout it.
+	I can hear __ a lark some -- where __ be -- gin to sing __ a -- bout it;
+
+	% part "C"
+	there's no love song fin -- er. But how strange the change from ma -- jor to mi -- nor
+	Ev -- 'ry Time __
+
+	% part "Volta"
+	We Say Good -- bye. __
+	_ We Say Good -- bye. Ev -- 'ry sin -- gle time we say good -- bye. __
 }
 {% endif %}

@@ -26,7 +26,7 @@ remark = "Sonny Rollins and Jim Hall from What's New? (1962)"
 [versions.Fake]
 doChords = true
 doVoice = true
-doLyrics = false
+doLyrics = true
 doLyricsmore = false
 doLyricsmoremore = false
 doChordBars = false
@@ -43,8 +43,8 @@ doOwn = false
 	- put in the chords (fake book).
 	- put in the tune (fake book).
 	- added youtube performances.
+	- put in the lyrics (fake book).
 	TODO:
-	- add the lyrics.
 	- check the chords (fake book).
 	- check the tune (fake book).
 	- hear the tune to check that it is right and adjust the tempo.
@@ -117,5 +117,30 @@ doOwn = false
 	ees4 f2 g4 | a4 bes2 c4 | d1~ | d4 d \tuplet 3/2 { d4 bes g } |
 	bes2 bes~ | \tuplet 3/2 { bes4 bes c } \tuplet 3/2 { d4 bes ges } | bes1~ | bes4 bes c8 d a bes |
 	c4 d2.~ | d2 a | bes1~ | bes1~ | bes2 r2 |
+}
+{% endif %}
+{% if part == "LyricsFake" %}\lyricmode {
+
+	% part "A"
+	If Ev -- er I Would Leave You __ it would -- n't be in sum -- mer. __ See -- ing you in
+	sum -- mer I nev -- er would go. __ Your hair streaked with
+	sun -- light, __ your lips red as flame, __ your face with a
+	lus -- tre __ that puts gold to shame! __ But if I'd ev -- er
+
+	% part "A"
+	leave you, __ it could -- n't be in au -- tumn. __ How I'd leave in
+	au -- tumn I ne -- ver will know. __ I've seen how you
+	spar -- kle, __ when fall nips the air. __ I know you in
+	au -- tumn __ and I must be there. And could I
+
+	% part "B"
+	leave you run -- ning mer -- ri -- ly through the snow? __ Or on a
+	win -- try eve -- ning when you catch the fi -- re's glow? __ If Ev -- er I Would
+
+	% part "A"
+	Leave You, __ how could it be in spring -- time, __ know -- ing how in
+	spring I'm be -- witched by you so? __ Oh, No! not in
+	spring -- time! __ Sum -- mer, win -- ter or fall! __ No, nev -- er could I
+	leave you __ at all! __
 }
 {% endif %}

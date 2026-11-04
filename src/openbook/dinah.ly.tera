@@ -26,8 +26,8 @@ remark = "Bing Crosby and The Mills Brothers (1932)"
 [versions.Fake]
 doChords = true
 doVoice = true
-doLyrics = false
-doLyricsmore = false
+doLyrics = true
+doLyricsmore = true
 doLyricsmoremore = false
 doChordBars = false
 doGuitar = false
@@ -43,8 +43,8 @@ doOwn = false
 	- put in the chords (fake book).
 	- put in the tune (fake book).
 	- added youtube performances.
+	- put in the lyrics (fake book).
 	TODO:
-	- add the lyrics.
 	- check the chords (fake book).
 	- check the tune (fake book).
 	- hear the tune to check that it is right and adjust the tempo.
@@ -109,5 +109,29 @@ doOwn = false
 	% part "A"
 	d,2 e~ | e4 d8. e16 g8. a16 b4 | d8 b4.~ b2~ | b4 g8. a16 b8. g16 a8. b16 |
 	d8 b4.~ b2~ | b4 a8. b16 d8. b16 a8. b16 | g1~ | g2. r4 |
+}
+{% endif %}
+{% if part == "LyricsFake" %}\lyricmode {
+
+	% part "A"
+	Din -- ah __ is there an -- y -- one fin -- er __ in the state of Car -- o -- lin -- a? __
+
+	% part "Volta"
+	If there is and you know 'er, __ show 'er to me. __
+	_ to the eyes of Din -- ah Lee. __
+
+	% part "B"
+	Ev -- 'ry night, __ why do I, __ shake with fright, __ be -- cause my Din -- ah might __
+	change her mind __ a -- bout me. __
+
+	% part "A"
+	Din -- ah, __ if she wan -- dered to Chi -- na, __ I would hop an o -- cean lin -- er, __
+	just to be with Din -- ah Lee! __
+}
+{% endif %}
+{% if part == "LyricsmoreFake" %}\lyricmode {
+
+	% part "A"
+	Din -- ah __ with her Dix -- ie eyes blaz -- in' __ how I love to sit and gaze in __
 }
 {% endif %}

@@ -26,7 +26,7 @@ remark = "Louis Armstrong and the All-Stars live at Symphony Hall, Boston, 1947"
 [versions.Fake]
 doChords = true
 doVoice = true
-doLyrics = false
+doLyrics = true
 doLyricsmore = false
 doLyricsmoremore = false
 doChordBars = false
@@ -43,8 +43,8 @@ doOwn = false
 	- put in the chords (fake book).
 	- put in the tune (fake book).
 	- added youtube performances.
+	- put in the lyrics (fake book).
 	TODO:
-	- add the lyrics.
 	- check the chords (fake book).
 	- check the tune (fake book).
 	- hear the tune to check that it is right and adjust the tempo.
@@ -100,5 +100,20 @@ doOwn = false
 			g4 \tuplet 3/2 { a8 ais b } fis8 e4. | a8. b16 c8. cis16 d4 b8 g~ | g2~ g8 r r4 |
 		}
 	}
+}
+{% endif %}
+{% if part == "LyricsFake" %}\lyricmode {
+
+	% part "A"
+	Ba -- by, Won't You Please Come Home, 'cause your mam -- ma's all a -- lone. __ _
+	I have tried __ in vain, nev -- er no more to call your name. __
+
+	% part "A"
+	When you left you broke my heart __ _ be -- cause I nev -- er thought we'd part. Ev' -- ry
+	hour in the day, __ you will hear me say, __ Ba -- by Won't You Please Come
+
+	% part "Volta"
+	Home.
+	Home, Dad -- dy needs mam -- ma, Ba -- by Won't You Please Come Home. __
 }
 {% endif %}

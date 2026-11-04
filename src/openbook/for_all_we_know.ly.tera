@@ -26,7 +26,7 @@ remark = "Billie Holiday with Ray Ellis and his Orchestra from Lady in Satin (19
 [versions.Fake]
 doChords = true
 doVoice = true
-doLyrics = false
+doLyrics = true
 doLyricsmore = false
 doLyricsmoremore = false
 doChordBars = false
@@ -43,8 +43,8 @@ doOwn = false
 	- put in the chords (fake book).
 	- put in the tune (fake book).
 	- added youtube performances.
+	- put in the lyrics (fake book).
 	TODO:
-	- add the lyrics.
 	- check the chords (fake book).
 	- check the tune (fake book).
 	- hear the tune to check that it is right and adjust the tempo.
@@ -125,5 +125,28 @@ doOwn = false
 			ees1~ | ees1 |
 		}
 	}
+}
+{% endif %}
+{% if part == "LyricsFake" %}\lyricmode {
+
+	% part "A"
+	For All We Know we may nev -- er meet a -- gain. __ Be --
+	fore you go make this mo -- ment sweet a -- gain. __ We
+
+	% part "B"
+	won't say good -- night un -- til the last min -- ute, I'll
+	hold out my hand and my heart will be in it. For
+
+	% part "A"
+	All We Know this may on -- ly be a dream, __ we
+	come and go like a rip -- ple on a stream. __ So
+
+	% part "C"
+	love me to -- night, to -- mor -- row was made for some. To --
+	mor -- row may nev -- er come, For All We
+
+	% part "Volta"
+	Know. For
+	Know. __
 }
 {% endif %}

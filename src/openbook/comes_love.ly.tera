@@ -26,8 +26,8 @@ remark = "Billie Holiday"
 [versions.Fake]
 doChords = true
 doVoice = true
-doLyrics = false
-doLyricsmore = false
+doLyrics = true
+doLyricsmore = true
 doLyricsmoremore = false
 doChordBars = false
 doGuitar = false
@@ -43,8 +43,8 @@ doOwn = false
 	- put in the chords (fake book).
 	- put in the tune (fake book).
 	- added youtube performances.
+	- put in the lyrics (fake book).
 	TODO:
-	- add the lyrics.
 	- check the chords (fake book).
 	- check the tune (fake book).
 	- hear the tune to check that it is right and adjust the tempo.
@@ -128,5 +128,51 @@ doOwn = false
 			g1~ | g2. r4 |
 		}
 	}
+}
+{% endif %}
+{% if part == "LyricsFake" %}\lyricmode {
+
+	Come a
+
+	% part "A"
+	rain -- storm, put your rub -- bers on your feet. Comes a snow -- storm, you can get a lit -- tle heat. Comes
+	Love, __ noth -- ing can be done. __ Comes a
+
+	% part "A"
+	fire, __ _ then you know just what to do. Blow a tire __ _ you can buy an -- oth -- er shoe. Comes
+	Love, __ noth -- ing can be done. __
+
+	% part "B"
+	Don't try __ hid -- in' __ 'cause there is -- n't a -- ny use. __
+	You'll start __ slid -- in' __ when your heart __ _ turns on __ the juice. __ Comes a
+
+	% part "A"
+	head -- ache, you can lose it in a day. Comes a tooth -- ache, see your den -- tist right a -- way. Comes
+	Love, __ noth -- ing can be
+
+	% part "Volta"
+	done! __ Comes a
+	done! __
+}
+{% endif %}
+{% if part == "LyricsmoreFake" %}\lyricmode {
+
+	_ _
+
+	% part "A"
+	heat wave, you can hur -- ry to the shore. Comes a sum -- mons, you can hide be -- hind the door. Comes
+	Love, __ noth -- ing can be done. __ Comes the
+
+	% part "A"
+	mea -- sles, you can quar -- an -- tine the room. Comes a 'Mous -- ie', you can chase it with a broom. Comes
+	Love, __ noth -- ing can be done. __
+
+	% part "B"
+	That's all, __ broth -- er, __ if you've ev -- er been in love. __
+	That's all, __ broth -- er! __ You know what __ _ I'm speak -- ing of! __ Comes a
+
+	% part "A"
+	night -- mare, you can al -- ways stay a -- wake. Comes de -- press -- ion, you may get an -- oth -- er break. Comes
+	Love, __ noth -- ing can be
 }
 {% endif %}

@@ -26,7 +26,7 @@ remark = "Billie Holiday with Teddy Wilson (1936)"
 [versions.Fake]
 doChords = true
 doVoice = true
-doLyrics = false
+doLyrics = true
 doLyricsmore = false
 doLyricsmoremore = false
 doChordBars = false
@@ -43,8 +43,8 @@ doOwn = false
 	- put in the chords (fake book).
 	- put in the tune (fake book).
 	- added youtube performances.
+	- put in the lyrics (fake book).
 	TODO:
-	- add the lyrics.
 	- check the chords (fake book).
 	- check the tune (fake book).
 	- hear the tune to check that it is right and adjust the tempo.
@@ -109,5 +109,23 @@ doOwn = false
 
 	% part "Coda"
 	f1~ | f2. r4 |
+}
+{% endif %}
+{% if part == "LyricsFake" %}\lyricmode {
+
+	% part "A"
+	I cried __ for you __ now it's your turn to cry o -- ver me. __
+
+	% part "B"
+	Ev' -- ry road has a turn -- ing, that's one thing you're learn -- ing.
+
+	% part "A"
+	I cried __ for you __ what a fool I used to be. __ Now I
+
+	% part "C"
+	found two eyes just a lit -- tle bit blu -- er, I found a heart just a lit -- tle bit tru -- er. _
+
+	% part "Coda"
+	me. __
 }
 {% endif %}

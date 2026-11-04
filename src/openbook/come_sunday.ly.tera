@@ -26,9 +26,9 @@ remark = "Duke Ellington, Come Sunday from Black, Brown and Beige"
 [versions.Fake]
 doChords = true
 doVoice = true
-doLyrics = false
-doLyricsmore = false
-doLyricsmoremore = false
+doLyrics = true
+doLyricsmore = true
+doLyricsmoremore = true
 doChordBars = false
 doGuitar = false
 doExtra = false
@@ -43,8 +43,8 @@ doOwn = false
 	- put in the chords (fake book).
 	- put in the tune (fake book).
 	- added youtube performances.
+	- put in the lyrics (fake book).
 	TODO:
-	- add the lyrics.
 	- check the chords (fake book).
 	- check the tune (fake book).
 	- hear the tune to check that it is right and adjust the tempo.
@@ -114,5 +114,44 @@ doOwn = false
 			bes1~ | bes1 |
 		}
 	}
+}
+{% endif %}
+{% if part == "LyricsFake" %}\lyricmode {
+
+	% part "A"
+	Lord, dear Lord a -- bove, God al -- might -- y, God of love, Please __ _ look down and
+	see my peo -- ple through. __
+
+	% part "B"
+	I be -- lieve that God put sun and moon up in the sky.
+	I don't mind the gray skies 'cause they're just clouds pass -- ing by. __ _ _
+
+	% part "A"
+	Lord, dear Lord a -- bove, God al -- might -- y, God of love, Please __ _ look down and
+	see my peo -- ple
+
+	% part "Volta"
+	through. __
+	through. __
+}
+{% endif %}
+{% if part == "LyricsmoreFake" %}\lyricmode {
+
+	% part "A"
+	_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _
+
+	% part "B"
+	Heav -- en is a good -- ness time. A bright -- er light on high.
+	"(spoken) 'Do" "unto" "others" "as you" "would have" "them do" "to you,'" And have a bright -- er by and by.
+}
+{% endif %}
+{% if part == "LyricsmoremoreFake" %}\lyricmode {
+
+	% part "A"
+	_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _
+
+	% part "B"
+	I be -- lieve God is now, was then and al -- ways will be.
+	With God's bless -- ing we can make it through e -- ter -- ni -- ty. __ _ _
 }
 {% endif %}

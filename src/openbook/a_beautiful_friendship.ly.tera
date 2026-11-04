@@ -26,7 +26,7 @@ remark = "Nat King Cole Trio"
 [versions.Fake]
 doChords = true
 doVoice = true
-doLyrics = false
+doLyrics = true
 doLyricsmore = false
 doLyricsmoremore = false
 doChordBars = false
@@ -43,8 +43,8 @@ doOwn = false
 	- put in the chords (fake book).
 	- put in the tune (fake book).
 	- added youtube performances.
+	- put in the lyrics (fake book).
 	TODO:
-	- add the lyrics.
 	- check the chords (fake book).
 	- check the tune (fake book).
 	- hear the tune to check that it is right and adjust the tempo.
@@ -122,5 +122,24 @@ doOwn = false
 			c1~ | c1 |
 		}
 	}
+}
+{% endif %}
+{% if part == "LyricsFake" %}\lyricmode {
+
+	% part "A"
+	This is the end of A Beau -- ti -- ful Friend -- ship, it end -- ed a mo -- ment a -- go. __
+
+	% part "A"
+	This is the end of A Beau -- ti -- ful Friend -- ship, I know for your eyes told me so. __
+
+	% part "B"
+	We were al -- ways like sis -- ter and bro -- ther, un -- til to -- night when we looked at each oth -- er.
+
+	% part "A"
+	That was the end of A Beau -- ti -- ful Friend -- ship and just the be -- gin -- ning of
+
+	% part "Volta"
+	love. __
+	love. __
 }
 {% endif %}

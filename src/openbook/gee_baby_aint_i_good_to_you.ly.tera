@@ -26,7 +26,7 @@ remark = "Nat King Cole Quartet (1943)"
 [versions.Fake]
 doChords = true
 doVoice = true
-doLyrics = false
+doLyrics = true
 doLyricsmore = false
 doLyricsmoremore = false
 doChordBars = false
@@ -43,8 +43,8 @@ doOwn = false
 	- put in the chords (fake book).
 	- put in the tune (fake book).
 	- added youtube performances.
+	- put in the lyrics (fake book).
 	TODO:
-	- add the lyrics.
 	- check the chords (fake book).
 	- check the tune (fake book).
 	- hear the tune to check that it is right and adjust the tempo.
@@ -106,5 +106,24 @@ doOwn = false
 			ees2. r4 |
 		}
 	}
+}
+{% endif %}
+{% if part == "LyricsFake" %}\lyricmode {
+
+	% part "A"
+	Love __ makes me treat you the way __ that I do,
+	Gee Ba -- by, Ain't I Good __ To You! There's
+	noth -- in' too good for a girl __ that's so true,
+	Gee Ba -- by, Ain't I Good __ To You!
+
+	% part "B"
+	Brought you a fur -- coat for Christ -- mas, a dia -- mond ring, __
+	a Cad -- il -- lac car, an' ev -- 'ry -- thing. __
+	Love __ makes me treat you the way __ that I do,
+	Gee Ba -- by, Ain't I Good __ To
+
+	% part "Volta"
+	You.
+	You.
 }
 {% endif %}

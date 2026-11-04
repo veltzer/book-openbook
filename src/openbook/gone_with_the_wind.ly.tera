@@ -26,7 +26,7 @@ remark = "Wes Montgomery from The Incredible Jazz Guitar of Wes Montgomery (1960
 [versions.Fake]
 doChords = true
 doVoice = true
-doLyrics = false
+doLyrics = true
 doLyricsmore = false
 doLyricsmoremore = false
 doChordBars = false
@@ -43,8 +43,8 @@ doOwn = false
 	- put in the chords (fake book).
 	- put in the tune (fake book).
 	- added youtube performances.
+	- put in the lyrics (fake book).
 	TODO:
-	- add the lyrics.
 	- check the chords (fake book).
 	- check the tune (fake book).
 	- hear the tune to check that it is right and adjust the tempo.
@@ -120,5 +120,28 @@ doOwn = false
 			bes1~ | bes2. r4 |
 		}
 	}
+}
+{% endif %}
+{% if part == "LyricsFake" %}\lyricmode {
+
+	% part "A"
+	Gone With The Wind, just like a leaf that has blown a -- way
+	Gone With The Wind. __ My ro -- mance has flown a -- way.
+
+	% part "B"
+	Yes -- ter -- day's kiss -- es are still on my lips, __
+	I had a life -- time of Heav -- en at my fin -- ger tips, but
+
+	% part "A"
+	now all is gone. Gone is the rap -- ture that thrilled my heart,
+	Gone With The Wind. __ The glad -- ness that filled my heart,
+
+	% part "C"
+	just like a flame, love burned bright -- ly then be -- came an
+	emp -- ty smoke dream that has gone, Gone With The
+
+	% part "Volta"
+	Wind.
+	Wind. __
 }
 {% endif %}

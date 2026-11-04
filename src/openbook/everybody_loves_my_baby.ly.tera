@@ -27,9 +27,9 @@ remark = "Fletcher Henderson and his Orchestra with Louis Armstrong (1924)"
 [versions.Fake]
 doChords = true
 doVoice = true
-doLyrics = false
-doLyricsmore = false
-doLyricsmoremore = false
+doLyrics = true
+doLyricsmore = true
+doLyricsmoremore = true
 doChordBars = false
 doGuitar = false
 doExtra = false
@@ -44,11 +44,11 @@ doOwn = false
 	- put in the chords (fake book).
 	- put in the tune (fake book).
 	- added youtube performances.
+	- put in the lyrics (fake book).
 	TODO:
 	- check the chords (fake book).
 	- check the tune (fake book).
 	- hear the tune to check that it is right and adjust the tempo.
-	- add the lyrics.
 {% endif %}
 {% if part == "ChordsFake" %}\chordmode {
 	\startChords
@@ -121,5 +121,48 @@ doOwn = false
 			f1~ | f4 r r2 |
 		}
 	}
+}
+{% endif %}
+{% if part == "LyricsFake" %}\lyricmode {
+
+	% part "A"
+	Ev' -- ry -- bod -- y Loves My Ba -- by, but my ba -- by don't love no -- bod -- y but me, __ _ no -- bod -- y but me.
+
+	% part "A"
+	Ev' -- ry -- bod -- y wants my ba -- by, but my ba -- by don't want no -- bod -- y but me, __ that's plain to see. She
+
+	% part "B"
+	is my sweet Pa -- too -- tie and __ I am her lov -- in' man, knows how to do her du -- ty, loves __ me like no oth -- er can. That's why
+
+	% part "A"
+	Ev' -- ry -- bod -- y Loves My Ba -- by, but my ba -- by don't love no -- bod -- y but me, __ _ no -- bod -- y but me.
+
+	% part "Volta"
+	me. __
+	me. __
+}
+{% endif %}
+{% if part == "LyricsmoreFake" %}\lyricmode {
+
+	% part "A"
+	_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _
+
+	% part "A"
+	_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ Say
+
+	% part "B"
+	when my ba -- by kiss -- es me __ up -- on my ros -- y cheeks. I just let those kiss -- es be, __ don't wash my face for weeks.
+}
+{% endif %}
+{% if part == "LyricsmoremoreFake" %}\lyricmode {
+
+	% part "A"
+	_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _
+
+	% part "A"
+	_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ She's
+
+	% part "B"
+	got a form like Ve -- nus, hon -- est, I ain't talk -- ing Greek. No one can come be -- tween us, she's __ my She -- ba, I'm her Sheik.
 }
 {% endif %}

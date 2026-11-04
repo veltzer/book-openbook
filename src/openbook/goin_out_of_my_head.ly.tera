@@ -25,8 +25,8 @@ remark = "Wes Montgomery (1965)"
 [versions.Fake]
 doChords = true
 doVoice = true
-doLyrics = false
-doLyricsmore = false
+doLyrics = true
+doLyricsmore = true
 doLyricsmoremore = false
 doChordBars = false
 doGuitar = false
@@ -42,12 +42,12 @@ doOwn = false
 	- put in the chords (fake book).
 	- put in the tune (fake book).
 	- added youtube performances.
+	- put in the lyrics (fake book).
 	TODO:
 	- check the chords (fake book).
 	- check the tune (fake book).
 	- hear the tune to check that it is right and adjust the tempo.
 	- the CM7/F6 bars in part B: the chord changes are placed under the syncopated notes as printed; check the exact placement.
-	- add the lyrics.
 {% endif %}
 {% if part == "ChordsFake" %}\chordmode {
 	\startChords
@@ -125,5 +125,40 @@ doOwn = false
 	\repeat volta 2 {
 		bes8 a bes a bes c a g~ | g2. g8 a |
 	}
+}
+{% endif %}
+{% if part == "LyricsFake" %}\lyricmode {
+	Well I
+
+	% part "A"
+	think I'm Go -- ing Out Of My Head, yes I think I'm Go -- ing Out Of My Head o -- ver
+	you, __ _ o -- ver you. __ _ I
+	want you to want me, I need you so bad -- ly, I can't think of an -- y -- thing but
+
+	% part "Volta"
+	you. __ And I
+	_
+
+	% part "B"
+	Go -- ing Out Of My Head o -- ver you, __ _ out of my head __ o -- ver
+	you. __ _ Out of my head day __ and night night and day and night wrong __ or right,
+	I must think of a way __ in -- to your heart. __ There's no rea -- son
+	why my be -- ing shy should keep us a -- part. __ And I
+
+	% part "End"
+	think I'm Go -- ing Out Of My Head __ Yes, I
+}
+{% endif %}
+{% if part == "LyricsmoreFake" %}\lyricmode {
+	_ _
+
+	% part "A"
+	think I'm Go -- ing Out Of My Head, 'cause I can't ex -- plain the tears that I shed o -- ver
+	you, __ _ o -- ver you. __ _ I
+	see you each morn -- ing, but you just walk past me, you don't e -- ven know that I ex-
+
+	% part "Volta"
+	_ _ _
+	ist. __
 }
 {% endif %}

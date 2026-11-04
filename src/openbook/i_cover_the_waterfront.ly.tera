@@ -25,7 +25,7 @@ remark = "Billie Holiday (1941)"
 [versions.Fake]
 doChords = true
 doVoice = true
-doLyrics = false
+doLyrics = true
 doLyricsmore = false
 doLyricsmoremore = false
 doChordBars = false
@@ -42,8 +42,8 @@ doOwn = false
 	- put in the chords (fake book).
 	- put in the tune (fake book).
 	- added youtube performances.
+	- put in the lyrics (fake book).
 	TODO:
-	- add the lyrics.
 	- check the chords (fake book).
 	- check the tune (fake book).
 	- hear the tune to check that it is right and adjust the tempo.
@@ -103,5 +103,24 @@ doOwn = false
 	% part "A"
 	r4 b \tuplet 3/2 { a4 g a } | b b8 b~ b2 | r4 d \tuplet 3/2 { d4 b g } | a2. e8 fis |
 	g8 g4 g8~ g4. a8 | b8 b4 b8~ b4 a | g1~ | g4 r r2 |
+}
+{% endif %}
+{% if part == "LyricsFake" %}\lyricmode {
+
+	% part "A"
+	I Cov -- er The Wat -- er -- Front, __ I'm watch -- ing the sea, will the one I love __ be
+	com -- ing back __ to me? __
+
+	% part "A"
+	I Cov -- er The Wat -- er -- Front __ in search of my love, and I'm cov -- ered by __ a
+	star -- less sky __ a -- bove. __
+
+	% part "B"
+	Here am I __ pa -- tient -- ly wait -- ing __ hop -- ing and long -- ing, __ oh! how I yearn!
+	Where are you? __ Are you for -- get -- ting? Do you re -- mem -- ber? Will you re -- turn?
+
+	% part "A"
+	I Cov -- er The Wat -- er -- Front, __ I'm watch -- ing the sea, for the one I love __ must
+	soon come back __ to me. __
 }
 {% endif %}

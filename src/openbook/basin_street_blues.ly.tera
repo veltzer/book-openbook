@@ -26,7 +26,7 @@ remark = "Miles Davis"
 [versions.Fake]
 doChords = true
 doVoice = true
-doLyrics = false
+doLyrics = true
 doLyricsmore = false
 doLyricsmoremore = false
 doChordBars = false
@@ -43,8 +43,8 @@ doOwn = false
 	- put in the tune (fake book).
 	- the fake book prints no chord symbols for this tune, took the chords from the Dixieland Fake Book of The Firehouse Jazz Band (pdf page 225, tune number 157), which is in B flat, and transposed them up a whole tone to the key of the fake book (C).
 	- added youtube performances.
+	- put in the lyrics (fake book).
 	TODO:
-	- add the lyrics.
 	- check the chords (they come from the Firehouse Jazz Band book and the melody of the fake book is a bit different in places).
 	- check the tune (fake book).
 	- hear the tune to check that it is right and adjust the tempo.
@@ -100,5 +100,22 @@ doOwn = false
 	% part "B"
 	e8 e4 e8~ e2 | b'8 b4 gis8~ gis4 e | e8 b'4 a8~ a2 | f8 f4 e8~ e4 e |
 	e8 b'4 a8~ a2 | r4 e g8 e d c~ | c1~ | c2. r4 |
+}
+{% endif %}
+{% if part == "LyricsFake" %}\lyricmode {
+
+	% part "Intro"
+	Won't -- cha come -- _ long with me to the Mis -- sis -- sip -- pi?
+	We'll take the boat __ to the lan' of dreams. __ Steam down the riv -- er down to New Or -- leans. __ The
+	band's there to meet us, old friends to greet us. We'll see the place the
+	folks all meet, __ this is Ba -- sin Street. __
+
+	% part "A"
+	Ba -- sin Street __ is the street __ where the e -- lite __ al -- ways meet __
+	in New Or -- leans, __ lan' of dreams. __ You'll nev -- er know how nice it seems or just how much it real -- ly means.
+
+	% part "B"
+	Glad to be, __ yes, sir -- ee __ where wel -- comes free; __ dear to me, __ where
+	I can lose, __ my Ba -- sin Street Blues. __
 }
 {% endif %}

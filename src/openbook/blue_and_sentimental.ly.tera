@@ -26,7 +26,7 @@ remark = "Ike Quebec from Blue & Sentimental (1961)"
 [versions.Fake]
 doChords = true
 doVoice = true
-doLyrics = false
+doLyrics = true
 doLyricsmore = false
 doLyricsmoremore = false
 doChordBars = false
@@ -43,8 +43,8 @@ doOwn = false
 	- put in the chords (fake book).
 	- put in the tune (fake book).
 	- added youtube performances.
+	- put in the lyrics (fake book).
 	TODO:
-	- add the lyrics.
 	- check the chords (fake book).
 	- check the tune (fake book).
 	- hear the tune to check that it is right and adjust the tempo.
@@ -97,5 +97,21 @@ doOwn = false
 	% part "A"
 	g8 aes a bes d c4. | r8. ees,16 ees8. c16 g'8 g4. | r8. ees16 ees8. c16 g'8 g4 f8 |
 	bes4 a aes g | c2 r8 bes bes g | f8 ees4.~ ees2 |
+}
+{% endif %}
+{% if part == "LyricsFake" %}\lyricmode {
+
+	% part "A"
+	Blue And Sen -- ti -- men -- tal, my dreams are blue dreams, Just won't come true dreams, I find.
+
+	% part "A"
+	Blue And Sen -- ti -- men -- tal, I can't for -- get you, My heart won't let you out of my mind. __ It
+
+	% part "B"
+	rains all the time since you said good -- bye. __ The skies, and my eyes, and my heart all cry. __
+
+	% part "A"
+	Blue And Sen -- ti -- men -- tal. If you don't want me. Why do you haunt me and
+	keep me feel -- ing Blue And Sen -- ti -- men -- tal? __
 }
 {% endif %}

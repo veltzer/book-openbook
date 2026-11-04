@@ -26,7 +26,7 @@ remark = "J.J. Johnson"
 [versions.Fake]
 doChords = true
 doVoice = true
-doLyrics = false
+doLyrics = true
 doLyricsmore = false
 doLyricsmoremore = false
 doChordBars = false
@@ -43,8 +43,8 @@ doOwn = false
 	- put in the chords (fake book).
 	- put in the tune (fake book).
 	- added youtube performances.
+	- put in the lyrics (fake book).
 	TODO:
-	- add the lyrics.
 	- check the chords (fake book).
 	- check the tune (fake book).
 	- hear the tune to check that it is right and adjust the tempo.
@@ -102,5 +102,24 @@ doOwn = false
 	% part "C"
 	d4 ees2 d4 | d4 ees2 d4 | d4 ees d8 c \tuplet 3/2 { bes aes g } | f2 fis |
 	g4 bes2 bes,8 c | des des bes' aes g2 | aes4 bes2 c4 | ees2. r4 |
+}
+{% endif %}
+{% if part == "LyricsFake" %}\lyricmode {
+
+	% part "A"
+	We'll be Close As Pag -- es In A Book, my love and I.
+	So close we can share a sin -- gle look, share ev 'ry sigh.
+
+	% part "B"
+	So close that be -- fore I hear your laugh, my laugh breaks through;
+	and when a tear starts to ap -- pear, my eyes grow mist -- y too. __ _
+
+	% part "A"
+	Our dreams won't come tumb -- ling to the ground, we'll hold them fast.
+	Darl -- ing, as the strong -- est book is bound, we're bound to last.
+
+	% part "C"
+	Your life is my life and while life beats a -- way in my heart, __ _
+	we'll be Close As Pag -- es In A Book, nev -- er to part.
 }
 {% endif %}

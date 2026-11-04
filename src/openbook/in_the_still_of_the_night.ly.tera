@@ -26,7 +26,7 @@ remark = "Ella Fitzgerald from the Cole Porter Song Book (1956)"
 [versions.Fake]
 doChords = true
 doVoice = true
-doLyrics = false
+doLyrics = true
 doLyricsmore = false
 doLyricsmoremore = false
 doChordBars = false
@@ -43,11 +43,12 @@ doOwn = false
 	- put in the chords (fake book).
 	- put in the tune (fake book).
 	- added youtube performances.
+	- put in the lyrics (fake book).
 	TODO:
-	- add the lyrics.
 	- check the chords (fake book).
 	- check the tune (fake book).
 	- hear the tune to check that it is right and adjust the tempo.
+	- the book ties the two whole notes of the 'chill, still' bars (bars 3-4 of the last line) yet prints 'still' under the second; the lyrics use ignoreMelismata there, check the tie.
 {% endif %}
 {% if part == "ChordsFake" %}\chordmode {
 	\startChords
@@ -124,5 +125,29 @@ doOwn = false
 			c1~ | c1~ | c1~ | c1~ | c4 r r2 |
 		}
 	}
+}
+{% endif %}
+{% if part == "LyricsFake" %}\lyricmode {
+
+	% part "A"
+	In The Still Of The Night, __ as I gaze from my win -- dow.
+	At the moon in it's flight, my thoughts all stray to you. __
+
+	% part "A"
+	In The Still Of The Night, __ While the world is in slum -- ber,
+	oh, the times with -- out num -- ber, dar -- ling, when I say to you; __
+
+	% part "B"
+	'Do __ you love me as I love you? __
+	Are you my life -- to -- be, my dream come true? __
+
+	% part "C"
+	Or will this dream of mine fade __ out of sight __ like the
+	moon, __ grow -- ing dim, __ on the rim __ of the
+	hill __ in the \set ignoreMelismata = ##t chill, __ still __ _ of \unset ignoreMelismata the
+
+	% part "Volta"
+	night? __
+	night? __
 }
 {% endif %}

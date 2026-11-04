@@ -26,7 +26,7 @@ remark = "Lola Albright"
 [versions.Fake]
 doChords = true
 doVoice = true
-doLyrics = false
+doLyrics = true
 doLyricsmore = false
 doLyricsmoremore = false
 doChordBars = false
@@ -43,8 +43,8 @@ doOwn = false
 	- put in the chords (fake book).
 	- put in the tune (fake book).
 	- added youtube performances.
+	- put in the lyrics (fake book).
 	TODO:
-	- add the lyrics.
 	- check the chords (fake book).
 	- check the tune (fake book).
 	- hear the tune to check that it is right and adjust the tempo.
@@ -88,5 +88,19 @@ doOwn = false
 	a2~ a8. e16 dis8. e16 | a2~ a8. e16 dis8. e16 | a2~ a8. d,16 cis8. d16 | a'2~ a8. gis16 a8. b16 | c4 c b a |
 	g4 gis8 a~ a4 g! | c8. a16 g8. e16 d8 c4. | c'8. a16 g8. e16 d8 c4. | c'8. c,16 d8. dis16 e8 c'4. |
 	dis,8 e4 c8~ c4 g'8 gis | a4 b a8 b4 a8~ | a4 b a g | c1~ | c2. r4 |
+}
+{% endif %}
+{% if part == "LyricsFake" %}\lyricmode {
+
+	A Good
+
+	% part "A"
+	Man __ Is Hard To Find; __ you al -- ways get __ the oth -- er kind. Just
+	when you think that he is your pal, __ you look for him and find him fool -- ing 'round some oth -- er gal. Then you
+
+	% part "A"
+	rave; __ you e -- ven crave __ to see him lay -- ing in his grave. __ So, if your man is nice, take
+	my ad -- vice __ and hug him in the morn -- ing, Kiss him ev -- 'ry night. __ _ Give him plen -- ty lov -- in',
+	treat him right. __ For a good man, now -- a -- days, __ is hard to find. __
 }
 {% endif %}

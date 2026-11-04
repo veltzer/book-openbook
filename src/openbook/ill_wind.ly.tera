@@ -26,8 +26,8 @@ remark = "Ella Fitzgerald on the Harold Arlen Song Book (1961)"
 [versions.Fake]
 doChords = true
 doVoice = true
-doLyrics = false
-doLyricsmore = false
+doLyrics = true
+doLyricsmore = true
 doLyricsmoremore = false
 doChordBars = false
 doGuitar = false
@@ -43,8 +43,8 @@ doOwn = false
 	- put in the chords (fake book).
 	- put in the tune (fake book).
 	- added youtube performances.
+	- put in the lyrics (fake book).
 	TODO:
-	- add the lyrics.
 	- check the chords (fake book).
 	- check the tune (fake book).
 	- hear the tune to check that it is right and adjust the tempo.
@@ -113,5 +113,28 @@ doOwn = false
 	bes1 | d4 c aes4. aes8 | g1 | des'4 c bes ges |
 	f2.~ f8 d' | f8 ees ges,2 ges4 | bes1~ | bes2 c |
 	bes1~ | bes2 aes | bes1~ | bes1 |
+}
+{% endif %}
+{% if part == "LyricsFake" %}\lyricmode {
+
+	% part "A"
+	Blow Ill Wind, blow a -- way, let me rest to -- day. __ You're
+	blow -- in' me no good, __ no good. __
+	and that's no good. __ _ You're
+
+	% part "B"
+	on -- ly mis -- lead -- in' the sun -- shine I'm need -- in'. Ain't that a shame? __ _ It's
+	so hard to keep up with trou -- bles that creep up from out of no -- where when love's to blame.
+
+	% part "A"
+	So, Ill Wind, blow a -- way, let me rest to -- day. __ You're
+	blow -- in' me no good, __ no good, __ no good. __
+}
+{% endif %}
+{% if part == "LyricsmoreFake" %}\lyricmode {
+
+	% part "A"
+	Go, Ill Wind, go a -- way; skies are, oh, so gray __ A --
+	round my neigh -- bor -- hood, __ _
 }
 {% endif %}

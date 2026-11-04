@@ -25,7 +25,7 @@ remark = "Count Basie Orchestra featuring Frank Wess on flute"
 [versions.Fake]
 doChords = true
 doVoice = true
-doLyrics = false
+doLyrics = true
 doLyricsmore = false
 doLyricsmoremore = false
 doChordBars = false
@@ -42,8 +42,8 @@ doOwn = false
 	- put in the chords (fake book).
 	- put in the tune (fake book).
 	- added youtube performances.
+	- put in the lyrics (fake book).
 	TODO:
-	- add the lyrics.
 	- check the chords (fake book).
 	- check the tune (fake book).
 	- hear the tune to check that it is right and adjust the tempo.
@@ -100,5 +100,24 @@ doOwn = false
 	% part "C"
 	r8 a4. b4 c8 d~ | d2 r | r8 g,4. a4 b8 c~ | c2 r |
 	r8 f,4. g4 a | c2 d4. c8~ | c1~ | c8 r r4 r2 |
+}
+{% endif %}
+{% if part == "LyricsFake" %}\lyricmode {
+
+	% part "A"
+	Mind if I say you're Cute! __
+	In ev -- 'ry way you're Cute! __
+
+	% part "B"
+	Those big blue eyes, __ that turned -- up nose, __
+	that cool and care -- free pose. __
+
+	% part "A"
+	I mean I like your style, __
+	that sly in -- tri -- guing smile, __
+
+	% part "C"
+	your ev -- 'ry mood, __ your at -- ti -- tude, __
+	just add up to you're Cute! __
 }
 {% endif %}

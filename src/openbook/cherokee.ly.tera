@@ -27,8 +27,8 @@ remark = "Clifford Brown and Max Roach Quintet from Study in Brown (1955)"
 [versions.Fake]
 doChords = true
 doVoice = true
-doLyrics = false
-doLyricsmore = false
+doLyrics = true
+doLyricsmore = true
 doLyricsmoremore = false
 doChordBars = false
 doGuitar = false
@@ -58,9 +58,9 @@ doOwn = false
 	- put in the tune (fake book).
 	- added youtube performances.
 	- wrote out the D.C. al Coda of the fake book as a last A section with the coda.
+	- put in the lyrics (fake book); the third verse (after the D.C.) sits under the written out last A section.
 	TODO:
 	- Laurent version: the source octaves drifted at the 2nd ending and the bridge, moved them up an octave (g' and dis'), check against a recording.
-	- add the lyrics.
 	- check the chords (fake book).
 	- check the tune (fake book).
 	- hear the tune to check that it is right and adjust the tempo (jazz players take this very fast).
@@ -132,6 +132,29 @@ doOwn = false
 	% part "A"
 	d1 | f2 g | bes1 | g1 | f1 | d2 f | d1 | c1 | bes1 | d2 f | d'1 | bes1 |
 	g1 | d1 | bes1~ | bes1 |
+}
+{% endif %}
+{% if part == "LyricsFake" %}\lyricmode {
+
+	% part "A"
+	Sweet In -- dian maid -- en, since first I met you, I can't for -- get you, Cher --
+
+	% part "Volta"
+	o -- kee sweet -- heart.
+	o -- kee. __
+
+	% part "B"
+	Dreams __ of sum -- mer -- time, __ of lov -- er -- time __ gone by, __
+	throng __ my mem -- o -- ry __ so ten -- der -- ly __ and sigh. My
+
+	% part "A"
+	sweet In -- dian maid -- en, one day I'll hold you, in my arms fold you, Cher -- o -- kee. __
+}
+{% endif %}
+{% if part == "LyricsmoreFake" %}\lyricmode {
+
+	% part "A"
+	Child of the prai -- rie, your love keeps call -- ing, my heart en -- thrall -- ing, "Cher-"
 }
 {% endif %}
 {% if part == "ChordsLaurent" %}\chordmode {

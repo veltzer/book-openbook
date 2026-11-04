@@ -26,7 +26,7 @@ remark = "Coleman Hawkins and his All Star Jam Band with Benny Carter and Django
 [versions.Fake]
 doChords = true
 doVoice = true
-doLyrics = false
+doLyrics = true
 doLyricsmore = false
 doLyricsmoremore = false
 doChordBars = false
@@ -43,8 +43,8 @@ doOwn = false
 	- put in the chords (fake book).
 	- put in the tune (fake book).
 	- added youtube performances.
+	- put in the lyrics (fake book).
 	TODO:
-	- add the lyrics.
 	- check the chords (fake book).
 	- check the tune (fake book).
 	- hear the tune to check that it is right and adjust the tempo.
@@ -101,5 +101,24 @@ doOwn = false
 	% part "A"
 	r8 a4 a8 g4 g | fis4 fis8 g~ g g r4 | r8 b4 b8 a4 a | gis4 gis8 a~ a a r4 |
 	r8 e'4 e8 d4 d | cis4 cis8 d~ d b4. | g1~ | g2. r4 |
+}
+{% endif %}
+{% if part == "LyricsFake" %}\lyricmode {
+
+	% part "A"
+	Cra -- zy Rhy -- thm, here's the door -- way, I'll go my way, you'll go your __ way;
+	Cra -- zy Rhy -- thm, from now on __ we're through. __
+
+	% part "A"
+	Here is where we have a show -- down, I'm too high -- hat, you're too low -- down;
+	Cra -- zy Rhy -- thm, here's good -- bye __ to you. __ They say that
+
+	% part "B"
+	when a high -- brow meets a low -- brow walk -- ing a -- long Broad -- way,
+	soon the high -- brow, he has no __ brow; ain't it a shame, and you're to blame.
+
+	% part "A"
+	What's the use of Pro -- hi -- bi -- tion? You pro -- duce the same con -- di -- tion,
+	Cra -- zy Rhy -- thm, I've gone cra -- zy, too. __
 }
 {% endif %}

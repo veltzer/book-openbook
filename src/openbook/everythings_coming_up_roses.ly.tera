@@ -27,8 +27,8 @@ remark = "Count Basie and his Orchestra"
 [versions.Fake]
 doChords = true
 doVoice = true
-doLyrics = false
-doLyricsmore = false
+doLyrics = true
+doLyricsmore = true
 doLyricsmoremore = false
 doChordBars = false
 doGuitar = false
@@ -44,12 +44,12 @@ doOwn = false
 	- put in the chords (fake book).
 	- put in the tune (fake book).
 	- added youtube performances.
+	- put in the lyrics (fake book).
 	TODO:
 	- check the chords (fake book).
 	- check the tune (fake book).
 	- hear the tune to check that it is right and adjust the tempo.
 	- the chord for the first bar of each ending is not written in the book (C assumed).
-	- add the lyrics.
 {% endif %}
 {% if part == "ChordsFake" %}\chordmode {
 	\startChords
@@ -137,5 +137,32 @@ doOwn = false
 	\tuplet 3/2 { a1 g2~ } | \tuplet 3/2 { g2 a1 } | \tuplet 3/2 { g1 a2~ } | \tuplet 3/2 { a2 g1 } |
 	\tuplet 3/2 { a1 g2~ } | \tuplet 3/2 { g2 a1 } | \tuplet 3/2 { g1 a2~ } | \tuplet 3/2 { a2 g1 } |
 	c1~ | c4 r r2 |
+}
+{% endif %}
+{% if part == "LyricsFake" %}\lyricmode {
+
+	% part "A"
+	Things look swell, __ things look great, __ gon -- na have the whole world __ on a plate. __ Start -- ing
+	here, __ start -- ing now, __ hon -- ey, Ev -- 'ry __ thing's Com -- ing __ Up Ros -- es! __
+
+	% part "Volta"
+	Clear the
+	_
+
+	% part "B"
+	Now's our __ in -- ning, __ stand the world on its ear! __ Set it __ spin -- ning, __
+	that -- 'll be just the be -- gin -- ning! __ Cur -- tain
+
+	% part "A"
+	up, __ light the lights, __ we got noth -- ing to hit, __ but the heights! __ We'll be
+	swell, __ we'll be great! __ I can tell, __ just you wait! __ That luck -- y star I talk a -- bout is due! __
+	Hon -- ey, Ev -- 'ry __ thing's Com -- ing __ Up Ros -- es __ for me and __ for you. __
+}
+{% endif %}
+{% if part == "LyricsmoreFake" %}\lyricmode {
+
+	% part "A"
+	_ _ decks, __ clear the tracks, __ we got noth -- ing to do __ but re -- lax. __ Blow a
+	kiss, __ take a bow, __ hon -- ey,
 }
 {% endif %}

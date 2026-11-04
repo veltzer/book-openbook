@@ -26,7 +26,7 @@ remark = "Charlie Parker"
 [versions.Fake]
 doChords = true
 doVoice = true
-doLyrics = false
+doLyrics = true
 doLyricsmore = false
 doLyricsmoremore = false
 doChordBars = false
@@ -43,8 +43,8 @@ doOwn = false
 	- put in the chords (fake book).
 	- put in the tune (fake book).
 	- added youtube performances.
+	- put in the lyrics (fake book).
 	TODO:
-	- add the lyrics.
 	- check the chords (fake book).
 	- check the tune (fake book).
 	- hear the tune to check that it is right and adjust the tempo.
@@ -123,5 +123,29 @@ doOwn = false
 			g1~ | g2. r4 |
 		}
 	}
+}
+{% endif %}
+{% if part == "LyricsFake" %}\lyricmode {
+
+	% part "A"
+	I __ Did -- n't Know What Time It Was, then __ I met you.
+	Oh, __ what a love -- ly time it was, how sub -- lime it was, too!
+
+	% part "A"
+	I __ did -- n't know what day it was. You __ held my hand,
+	warm __ like the month of May it was and I'll say it was grand,
+
+	% part "B"
+	Grand __ to be a -- live, to be young, to be mad, to be yours a -- lone!
+	Grand __ to see your face, feel your touch, hear your voice say I'm all your own!
+
+	% part "A"
+	I __ did -- n't know what year it was, life __ was no prize.
+	I __ want -- ed love and here it was shin -- ing out of your eyes. I'm
+	wise __ and I know what time it is
+
+	% part "Volta"
+	now!
+	now! __
 }
 {% endif %}

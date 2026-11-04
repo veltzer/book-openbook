@@ -26,8 +26,8 @@ remark = "Asleep at the Wheel"
 [versions.Fake]
 doChords = true
 doVoice = true
-doLyrics = false
-doLyricsmore = false
+doLyrics = true
+doLyricsmore = true
 doLyricsmoremore = false
 doChordBars = false
 doGuitar = false
@@ -43,8 +43,8 @@ doOwn = false
 	- put in the chords (fake book).
 	- put in the tune (fake book).
 	- added youtube performances.
+	- put in the lyrics (fake book).
 	TODO:
-	- add the lyrics.
 	- check the chords (fake book).
 	- check the tune (fake book).
 	- hear the tune to check that it is right and adjust the tempo.
@@ -108,5 +108,36 @@ doOwn = false
 			\tuplet 3/2 { c4 c c } \tuplet 3/2 { c d e } | f4 r f, r |
 		}
 	}
+}
+{% endif %}
+{% if part == "LyricsFake" %}\lyricmode {
+	I'm
+
+	% part "A"
+	head -- in' for the sta -- tion with my pack on my back, __ I'm
+	tired of trans -- port -- a -- tion in the back of a hack. __ I
+	love to hear the rhy -- thm of the click -- e -- ty clack, __ and
+	hear the lone -- some whis -- tle see the smoke from the stack. __ And
+	pal a -- round with dem -- o -- crat -- ic fel -- lows named 'Mac,' __ So
+	take me right back to the track, Jack!
+
+	% part "B"
+	Choo -- choo, __ Choo -- Choo Ch' -- Boo -- gie. woo -- woo __ boo -- gie woo -- gie,
+	Choo -- Choo. __ Choo -- Choo -- Ch' Boo -- gie;
+
+	% part "Volta"
+	take me right back to the track, Jack! I'm
+	take me right back to the track, Jack!
+}
+{% endif %}
+{% if part == "LyricsmoreFake" %}\lyricmode {
+	_
+
+	% part "A"
+	gon -- na set -- tle down be -- side the rail -- _ road track, __ and
+	live the life o' Ri -- ley in a beat -- en down shack. __ So
+	when I hear a whis -- tle I can peep thru the crack, __ and
+	watch the train a -- roll -- in' when it's ball -- in' the jack. __ For
+	I just love the rhy -- thm of the click -- e -- ty clack, __
 }
 {% endif %}

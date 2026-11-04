@@ -26,8 +26,8 @@ remark = "Illinois Jacquet"
 [versions.Fake]
 doChords = true
 doVoice = true
-doLyrics = false
-doLyricsmore = false
+doLyrics = true
+doLyricsmore = true
 doLyricsmoremore = false
 doChordBars = false
 doGuitar = false
@@ -43,8 +43,8 @@ doOwn = false
 	- put in the chords (fake book).
 	- put in the tune (fake book).
 	- added youtube performances.
+	- put in the lyrics (fake book).
 	TODO:
-	- add the lyrics.
 	- check the chords (fake book).
 	- check the tune (fake book).
 	- hear the tune to check that it is right and adjust the tempo.
@@ -131,5 +131,42 @@ doOwn = false
 	% part "A"
 	fis1~ | fis8 g d bes g4 bes8 d~ | d8 c~ c2.~ | c8 c g' c d4 ees8 b!~ | b1~ |
 	b8 c \tuplet 3/2 { bes g ees } des8 bes' a g~ | g1~ | g1~ | g4 r r2 | r1 |
+}
+{% endif %}
+{% if part == "LyricsFake" %}\lyricmode {
+	Deep mu -- sic fills the night, __
+
+	% part "A"
+	deep in the heart of Har -- lem. __ And tho' the stars are bright, __ the dark -- ness is taun -- ting me. __
+
+	% part "Volta"
+	Oh! what a sad re -- frain, __
+	The
+
+	% part "B"
+	mel -- o -- dy clings __ a -- round my heart strings. __ It won't let me go __ when I'm lone -- ly, __ I
+	hear it in dreams __ and some -- how it seems __ it makes __ _ me __ _ weep __ _ and __ _
+
+	% part "Volta"
+	I __ _ can't __ _ sleep. An
+	wails __ _ the __ _ long __ _ night __ _ thru. __ Tho' with the dawn it's gone, __
+
+	% part "A"
+	the mel -- o -- dy lives ev -- er __ for lone -- ly hearts to learn __ of love in a Har -- lem Noc -- turne. __
+}
+{% endif %}
+{% if part == "LyricsmoreFake" %}\lyricmode {
+	_ _ _ _ _ _
+
+	% part "A"
+	a noc -- turne born in Har -- lem. __ That mel -- an -- cho -- ly strain __ for -- ev -- er is haunt -- ing me. __
+
+	% part "Volta"
+	_ _ _ _ _ _
+	_
+
+	% part "B"
+	in -- di -- go tune __ it sings to the moon __ the lone -- some re -- frain __ of a lov -- er. __ The
+	mel -- o -- dy sighs, __ it laughs and it cries, __ a moan __ _ in __ _ blue __ _ that __ _
 }
 {% endif %}

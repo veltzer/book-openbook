@@ -25,8 +25,8 @@ remark = "WDR Big Band"
 [versions.Fake]
 doChords = true
 doVoice = true
-doLyrics = false
-doLyricsmore = false
+doLyrics = true
+doLyricsmore = true
 doLyricsmoremore = false
 doChordBars = false
 doGuitar = false
@@ -42,8 +42,8 @@ doOwn = false
 	- put in the chords (fake book).
 	- put in the tune (fake book).
 	- added youtube performances.
+	- put in the lyrics (fake book).
 	TODO:
-	- add the lyrics.
 	- check the chords (fake book).
 	- check the tune (fake book).
 	- hear the tune to check that it is right and adjust the tempo.
@@ -111,5 +111,35 @@ doOwn = false
 		}
 	}
 	bes,8 c d ees f bes4 f8 | ges4 ees8 f~ f4 r4 | r8 ges f4 ees8 des4 ges8 | f4 des8 bes~ bes r r4 |
+}
+{% endif %}
+{% if part == "LyricsFake" %}\lyricmode {
+
+	% part "A"
+	Who's the liv -- in' dol -- ly with the beau -- ti -- ful eyes? __
+	What a pair o' lips, I'd like to try 'em for size. __
+	I'll just tell her, 'Ba -- by, won't you swing it with me?' __
+	Hope she tells me 'may -- be,' what a wing it will be. __
+	So, I said po -- lite -- ly, 'Dar -- lin' may I in -- trude? __ She said, __
+	'Don't keep me wait -- in' when I'm In The Mood.' __
+
+	% part "B"
+	In The Mood, __ that's what she told me, In The Mood, __ and when she told me,
+	In The Mood, __ my heart was skip -- pin', it did -- n't take me long to say, 'I'm In The Mood __ now.'
+	In The Mood, __ for all her kiss -- in', In The Mood, __ her cra -- zy lov -- in'
+	In The Mood, __ what I was miss -- in'. It did -- n't take me long to say, 'I'm
+	In The Mood __ now.'
+	In The Mood __ now.
+}
+{% endif %}
+{% if part == "LyricsmoreFake" %}\lyricmode {
+
+	% part "A"
+	First I held her light -- ly and we start -- ed to dance __
+	then I held her tight -- ly what a dream -- y ro -- mance. __
+	And I said, 'Hey, ba -- by it's a quar -- ter to three. __
+	There's a mess of moon -- light won't -- cha share it with me?' __
+	'Well,' she ans -- wered, 'Mis -- ter don't -- cha know that it's rude? __ To keep __
+	my two lips wait -- in' when they're In The Mood.' __
 }
 {% endif %}

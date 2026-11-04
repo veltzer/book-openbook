@@ -26,8 +26,8 @@ remark = "Peggy Lee (1958)"
 [versions.Fake]
 doChords = true
 doVoice = true
-doLyrics = false
-doLyricsmore = false
+doLyrics = true
+doLyricsmore = true
 doLyricsmoremore = false
 doChordBars = false
 doGuitar = false
@@ -43,13 +43,15 @@ doOwn = false
 	- put in the chords (fake book).
 	- put in the tune (fake book).
 	- added youtube performances.
+	- put in the lyrics (fake book).
 	TODO:
-	- add the lyrics (five verses, the book prints verses 3-5 as additional lyrics below the tune).
 	- check the chords (fake book).
 	- check the tune (fake book).
 	- hear the tune to check that it is right and adjust the tempo.
 	- the book has three endings: 1,3,4 (back to the top), 2 (an eight bar section, then back to the top) and 5 (the end).
 	- the parenthesized note in the sixth bar is for the second verse only.
+	- verses 3-5 are printed in the book as additional lyrics below the tune (not aligned to notes), not put in.
+	- bar 6: after the two quarter notes the book has four eighth notes (a) a a a; typed here as a4 a8 a8, one note short, so the lyrics of both verses are squeezed ('I' and 'name,' sit on the parenthesized note).
 {% endif %}
 {% if part == "ChordsFake" %}\chordmode {
 	\startChords
@@ -103,5 +105,28 @@ doOwn = false
 			a4 r r2 |
 		}
 	}
+}
+{% endif %}
+{% if part == "LyricsFake" %}\lyricmode {
+
+	% part "A"
+	Nev -- er know how much I love you, nev -- er know how much __ _ I care.
+	When you put your arms a __ _ round me, I get a Fe -- ver that's so hard __ _ to
+	bear. You give me Fe -- ver when you kiss me, Fe -- ver when you hold __ _ me
+	tight Fe -- ver in the morn -- ing, Fe -- ver all through __ _ the
+
+	% part "Volta"
+	night.
+	Ev -- 'ry -- bod -- y's got the Fe -- ver, that is some -- thing you all know.
+	Fe -- ver is -- n't such a new thing, Fe -- ver start -- ed long __ _ a -- go.
+	burn.
+}
+{% endif %}
+{% if part == "LyricsmoreFake" %}\lyricmode {
+
+	% part "A"
+	Sun __ _ lights __ _ up the day -- time, moon __ _ lights __ _ up __ _ the night.
+	I __ _ light __ _ up when you call my name, and you know I'm gon -- na treat __ _ you
+	right.
 }
 {% endif %}

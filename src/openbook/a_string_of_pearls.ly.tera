@@ -26,8 +26,8 @@ remark = "Benny Goodman and his Orchestra (1942)"
 [versions.Fake]
 doChords = true
 doVoice = true
-doLyrics = false
-doLyricsmore = false
+doLyrics = true
+doLyricsmore = true
 doLyricsmoremore = false
 doChordBars = false
 doGuitar = false
@@ -43,12 +43,13 @@ doOwn = false
 	- put in the chords (fake book).
 	- put in the tune (fake book).
 	- added youtube performances.
+	- put in the lyrics (fake book).
 	TODO:
-	- add the lyrics.
 	- check the chords (fake book).
 	- check the tune (fake book).
 	- hear the tune to check that it is right and adjust the tempo.
 	- the chord changes of the line cliches (Eb, EbM7, Eb7, Eb6, Eb+ ...) were placed on the melody notes they are printed over; check their exact placement.
+	- the book prints alternative words in braces (you/I, my/your, just/else, you/I); the lyrics use the first of each.
 {% endif %}
 {% if part == "ChordsFake" %}\chordmode {
 	\startChords
@@ -113,5 +114,39 @@ doOwn = false
 			ees4. ees8~ ees2~ | ees2. r4 |
 		}
 	}
+}
+{% endif %}
+{% if part == "LyricsFake" %}\lyricmode {
+
+	% part "A"
+	Ba -- by __ here's __ a five and dime, ba -- by __ now's __ a -- bout the time
+	for A __ String __ Of Pearls a -- la Wool -- worth.
+
+	% part "B"
+	Ev -- 'ry __ pearl's __ a star a -- bove wrapped in __ dreams __ and filled with love
+	that old __ string __ of pearls a -- la Wool -- worth. __
+
+	% part "A"
+	'Till that __ hap -- py day in Spring when you __ buy __ the wed -- ding ring,
+	please A __ String __ Of Pearls a -- la
+
+	% part "Volta"
+	Wool -- worth.
+	Wool -- worth. __
+}
+{% endif %}
+{% if part == "LyricsmoreFake" %}\lyricmode {
+
+	% part "A"
+	Ba -- by __ you __ made quite a start, found the __ way __ right to my heart
+	with A __ String __ Of Pearls a -- la Wool -- worth.
+
+	% part "B"
+	Wait 'til __ the __ stars peek -- a -- boo. I've got __ some -- thing just for you
+	it's a __ string __ of kiss -- es for ba -- by. __
+
+	% part "A"
+	I found __ a __ love so sub -- lime, right in __ that __ old five and dime,
+	with A __ String __ Of Pearls a -- la
 }
 {% endif %}

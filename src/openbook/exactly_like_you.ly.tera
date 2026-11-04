@@ -25,7 +25,7 @@ remark = "Benny Goodman Trio"
 [versions.Fake]
 doChords = true
 doVoice = true
-doLyrics = false
+doLyrics = true
 doLyricsmore = false
 doLyricsmoremore = false
 doChordBars = false
@@ -42,8 +42,8 @@ doOwn = false
 	- put in the chords (fake book).
 	- put in the tune (fake book).
 	- added youtube performances.
+	- put in the lyrics (fake book).
 	TODO:
-	- add the lyrics.
 	- check the chords (fake book).
 	- check the tune (fake book).
 	- hear the tune to check that it is right and adjust the tempo.
@@ -102,5 +102,24 @@ doOwn = false
 	% part "A"
 	e'4 b d a | c4 c2. | e4 b d a | c1 |
 	b4 f a e | g4 g2 g4 | c4 c, c c~ | c2. r4 |
+}
+{% endif %}
+{% if part == "LyricsFake" %}\lyricmode {
+
+	% part "A"
+	I know why I've wait -- ed, know why I've been blue;
+	prayed each night for some -- one Ex -- act -- ly Like You. __
+
+	% part "A"
+	Why should we spend mon -- ey on a show or two?
+	No one does those love scenes Ex -- act -- ly Like You. __ You make me
+
+	% part "B"
+	feel so grand, __ I want to hand the world to you. __ You seem to
+	un -- der -- stand __ each fool -- ish lit -- tle scheme I'm schem -- ing, dream I'm dream -- ing.
+
+	% part "A"
+	Now I know why moth -- er taught me to be true.
+	She meant me for some -- one Ex -- act -- ly Like You. __
 }
 {% endif %}

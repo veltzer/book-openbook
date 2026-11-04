@@ -27,8 +27,8 @@ remark = "Sonny Rollins"
 [versions.Fake]
 doChords = true
 doVoice = true
-doLyrics = false
-doLyricsmore = false
+doLyrics = true
+doLyricsmore = true
 doLyricsmoremore = false
 doChordBars = false
 doGuitar = false
@@ -44,8 +44,8 @@ doOwn = false
 	- put in the chords (fake book).
 	- put in the tune (fake book).
 	- added youtube performances.
+	- put in the lyrics (fake book).
 	TODO:
-	- add the lyrics.
 	- check the chords (fake book).
 	- check the tune (fake book).
 	- hear the tune to check that it is right and adjust the tempo.
@@ -91,5 +91,28 @@ doOwn = false
 			d2. | d2.~ | d4 r r | d'2. | c2. | d2. | ees2. | f2. | f2.~ | f2.~ | f2.~ | f4 r r |
 		}
 	}
+}
+{% endif %}
+{% if part == "LyricsFake" %}\lyricmode {
+
+	% part "A"
+	Fall -- ing In Love With Love Is fall -- ing for make be -- lieve. __
+	Fall -- ing In Love With Love Is play -- ing the fool. __
+	Car -- ing too much is such a ju -- ve -- nile
+
+	% part "Volta"
+	fan -- cy. __ Learn -- ing to trust is just for chil -- dren in school. __
+}
+{% endif %}
+{% if part == "LyricsmoreFake" %}\lyricmode {
+
+	% part "A"
+	I fell in love with love one night when the moon was full, __
+	I was un -- wise with eyes un -- a -- ble to see. __
+	I fell in love with love with love ev -- er --
+
+	% part "Volta"
+	_ _ _ _ _ _ _ _ _ _ _ _ _
+	last -- ing, __ but love fell out with me. __
 }
 {% endif %}

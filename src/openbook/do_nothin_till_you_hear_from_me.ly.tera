@@ -25,7 +25,7 @@ remark = "Ella Fitzgerald and Duke Ellington on The Ed Sullivan Show"
 [versions.Fake]
 doChords = true
 doVoice = true
-doLyrics = false
+doLyrics = true
 doLyricsmore = false
 doLyricsmoremore = false
 doChordBars = false
@@ -42,8 +42,8 @@ doOwn = false
 	- put in the chords (fake book).
 	- put in the tune (fake book).
 	- added youtube performances.
+	- put in the lyrics (fake book).
 	TODO:
-	- add the lyrics.
 	- check the chords (fake book).
 	- check the tune (fake book).
 	- hear the tune to check that it is right and adjust the tempo.
@@ -128,5 +128,30 @@ doOwn = false
 			g1~ | g8 r r4 r2 |
 		}
 	}
+}
+{% endif %}
+{% if part == "LyricsFake" %}\lyricmode {
+	Do Noth -- in' 'Til You Hear From
+
+	% part "A"
+	Me. Pay no at -- ten -- tion to what's said, why peo -- ple tear the seam of
+	an -- y -- one's dream __ is o -- ver my head. __ Do Noth -- in' 'Til You Hear From
+
+	% part "A"
+	Me, at least con -- sid -- er our ro -- mance; if you should take the word of
+	oth -- ers you've heard __ I have -- n't a chance. __ True I've been
+
+	% part "B"
+	seen with some -- one new, __ but does that mean that I'm un -- true? __ When we're a --
+	part __ the words in my heart __ re -- veal how I feel __ a -- bout you. __
+	Some kiss may cloud my mem -- o --
+
+	% part "A"
+	ry, and oth -- er arms may hold a thrill. But please do noth -- in' 'til you
+	hear it from me __ and you nev -- er will. __
+
+	% part "Volta"
+	Do Noth -- in' 'Til You Hear From
+	_
 }
 {% endif %}

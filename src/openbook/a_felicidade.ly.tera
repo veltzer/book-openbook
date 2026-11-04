@@ -26,7 +26,7 @@ remark = "Joao Gilberto (1959)"
 [versions.Fake]
 doChords = true
 doVoice = true
-doLyrics = false
+doLyrics = true
 doLyricsmore = false
 doLyricsmoremore = false
 doChordBars = false
@@ -43,8 +43,8 @@ doOwn = false
 	- put in the chords (fake book).
 	- put in the tune (fake book).
 	- added youtube performances.
+	- put in the lyrics (fake book).
 	TODO:
-	- add the lyrics.
 	- check the chords (fake book).
 	- check the tune (fake book).
 	- hear the tune to check that it is right and adjust the tempo.
@@ -123,5 +123,28 @@ doOwn = false
 	c1~ | c2 r4 g' | c b! bes ees, | g fis8 f!~ f4 ees |
 	c1~ | c2 r4 g' | c1~ | c4 ees d bes |
 	g1~ | g1~ | g1~ | g1 | r1 |
+}
+{% endif %}
+{% if part == "LyricsFake" %}\lyricmode {
+
+	Tris --
+
+	% part "A"
+	te __ za não tem fim. __ Fe -- li -- ci -- da -- de sim. __
+	A __ fe -- li -- ci -- da -- de~e' co -- mo~a go -- ta. __ De~or -- val -- ha -- nu -- ma pe -- ta -- la de flor. __
+
+	% part "B"
+	Bril -- ha tran -- qui -- la de -- pois de le -- ve~os -- cil -- la. E cai co -- mo~u -- na la -- gri -- ma __ de~a -- mor. __
+
+	% part "C"
+	A fe -- li -- ci -- da -- de do po -- bre pa -- re -- ce. A gran -- de~i lu -- são do car -- na -- val. __
+	A gen -- te tra -- bal -- ha o a -- ho en -- tei -- ro. Por un mo -- men -- to de -- son -- ho. __
+	Pra -- fa -- zer a fan -- ta -- si -- a. De rei __ ou de pi -- ra -- ta~ou jar -- di -- nei -- ra. __
+	E tu -- do se~a ca -- bar na quar -- ta fei -- ra __ Tris --
+
+	% part "Coda"
+	rar. __ Pre -- ci -- sa que~ha -- ja ven -- to sem __ pa -- rar. __
+	Pre -- ci -- sa que~ha -- ja ven -- to sem __ pa -- rar. __
+	Tris -- te -- za não tem fim. __
 }
 {% endif %}

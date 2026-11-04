@@ -25,7 +25,7 @@ remark = "Ray Charles live"
 [versions.Fake]
 doChords = true
 doVoice = true
-doLyrics = false
+doLyrics = true
 doLyricsmore = false
 doLyricsmoremore = false
 doChordBars = false
@@ -42,8 +42,8 @@ doOwn = false
 	- put in the chords (fake book).
 	- put in the tune (fake book).
 	- added youtube performances.
+	- put in the lyrics (fake book).
 	TODO:
-	- add the lyrics.
 	- check the chords (fake book).
 	- check the tune (fake book).
 	- hear the tune to check that it is right and adjust the tempo.
@@ -129,5 +129,30 @@ doOwn = false
 			f1~ | f4 r r2 |
 		}
 	}
+}
+{% endif %}
+{% if part == "LyricsFake" %}\lyricmode {
+
+	% part "Intro"
+	Wo -- man don't you shed no croc -- o -- dile tears, __ _ Nev -- er take you back in a mil -- lion years. __
+
+	% part "A"
+	Don't Let The Sun __ Catch You Cry -- in' __ cry -- in' at my __ front door. __ _
+	You done dad -- dy dirt -- y he sure don't want you no more. __
+
+	% part "A"
+	Don't let the sun __ catch you ly -- in' __ ly -- in' at my __ front door, __ _
+	dad -- dy's done turned salt -- y ba -- by you made him so sore. __ You can
+
+	% part "B"
+	cry cry cry, __ _ yes ba -- by you can wail, beat your head on the pave -- ment __ till the
+	man comes and throws you in jail; __ But
+
+	% part "A"
+	Don't Let The Sun __ Catch You Cry -- in' __ cry -- in' at my __ front door, __ _
+	you done dad -- dy dirt -- y, he sure don't want you no more. __
+
+	% part "Volta"
+	_
 }
 {% endif %}

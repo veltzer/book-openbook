@@ -26,7 +26,7 @@ remark = "Louis Armstrong (1929)"
 [versions.Fake]
 doChords = true
 doVoice = true
-doLyrics = false
+doLyrics = true
 doLyricsmore = false
 doLyricsmoremore = false
 doChordBars = false
@@ -43,8 +43,8 @@ doOwn = false
 	- put in the chords (fake book).
 	- put in the tune (fake book).
 	- added youtube performances.
+	- put in the lyrics (fake book).
 	TODO:
-	- add the lyrics.
 	- check the chords (fake book).
 	- check the tune (fake book).
 	- hear the tune to check that it is right and adjust the tempo.
@@ -102,5 +102,20 @@ doOwn = false
 	% part "A"
 	r8 ees f ees bes'8 bes4. | r8 f g f c'2 | r8 bes c bes ees8 ees4 d8 | f8 ees c g~ g ges f4 |
 	r8 ees f ees bes'8 bes4. | r8 f g f c'8 c4 bes8 | ees1~ | ees2. r4 |
+}
+{% endif %}
+{% if part == "LyricsFake" %}\lyricmode {
+	% part "A"
+	No one to talk with, all by my -- self, no one to walk with, but I'm hap -- py on __ the shelf,
+	Ain't Mis -- be -- hav -- in' I'm sav -- in' my love for you. __
+	% part "A"
+	I know for cer -- tain the one I love, I'm thru with flir -- tin' it's just you I'm think __ in' of.
+	Ain't Mis -- be -- hav -- in' I'm sav -- in' my love for you. __
+	% part "B"
+	Like Jack Horn -- er in the cor -- ner, don't go no -- where, what do I care.
+	Your kiss -- es are worth wait -- in' for, be -- lieve me
+	% part "A"
+	I don't stay out late, don't care to go. I'm home a -- bout eight, just me and my ra __ di -- o,
+	Ain't Mis -- be -- hav -- in' I'm sav -- in' my love for you. __
 }
 {% endif %}

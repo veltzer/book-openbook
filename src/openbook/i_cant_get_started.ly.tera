@@ -26,8 +26,8 @@ remark = "Dizzy Gillespie Sextet"
 [versions.Fake]
 doChords = true
 doVoice = true
-doLyrics = false
-doLyricsmore = false
+doLyrics = true
+doLyricsmore = true
 doLyricsmoremore = false
 doChordBars = false
 doGuitar = false
@@ -43,8 +43,8 @@ doOwn = false
 	- put in the chords (fake book).
 	- put in the tune (fake book).
 	- added youtube performances.
+	- put in the lyrics (fake book).
 	TODO:
-	- add the lyrics.
 	- check the chords (fake book).
 	- check the tune (fake book).
 	- hear the tune to check that it is right and adjust the tempo.
@@ -125,5 +125,50 @@ doOwn = false
 			c1~ | c4 r r2 |
 		}
 	}
+}
+{% endif %}
+{% if part == "LyricsFake" %}\lyricmode {
+
+	% part "A"
+	I've flown a -- round the world __ in a plane; __ I've set -- tled re -- vo -- lu -- tions in Spain; the North Pole
+	I have char -- ted, but can't get start -- ed with you. __ A -- round a
+
+	% part "A"
+	golf course I'm __ un -- der par, __ and all the mov -- ies want __ me to star; I've got a
+	house, a show __ place, but I get no __ place with you. You're so su --
+
+	% part "B"
+	preme, lyr -- ics I write __ of you, scheme just for a sight __ of you,
+	dream both day and night __ of you and what good does it do? In nine -- teen
+
+	% part "A"
+	twen -- ty -- nine __ I sold short, __ in Eng -- land I'm pre -- sent -- ed at court, but you've got
+	me down -- heart -- ed 'cause I Can't Get Start -- ed With
+
+	% part "Volta"
+	You. I do a
+}
+{% endif %}
+{% if part == "LyricsmoreFake" %}\lyricmode {
+
+	% part "A"
+	_ _ _ hun -- dred yards __ in ten flat; __ the Prince of Wales has cop -- ied my hat; with queens I've
+	a -- la cart -- ed, but can't get start -- ed with you. __ The lead -- ing
+
+	% part "A"
+	tail -- ors fol -- low my styles, __ and tooth -- paste ads all fea -- ture my smiles; the As -- tor --
+	bilts I vis -- it, but say, what is __ it with you? When we first
+
+	% part "B"
+	met, how you e -- lat -- ed me! Pet, you dev -- as -- tat -- ed me!
+	Yet, now you've de -- flat -- ed me 'till you're my Wa -- ter -- loo. I've sold my
+
+	% part "A"
+	kiss -- es at __ a ba -- zaar, __ and af -- ter me they've named a ci -- gar; but late -- ly
+	how I've smart -- ed, 'cause I Can't Get Start -- ed With
+
+	% part "Volta"
+	_ _ _ _
+	You. __
 }
 {% endif %}

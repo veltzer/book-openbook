@@ -26,8 +26,8 @@ remark = "Frank Sinatra (1951)"
 [versions.Fake]
 doChords = true
 doVoice = true
-doLyrics = false
-doLyricsmore = false
+doLyrics = true
+doLyricsmore = true
 doLyricsmoremore = false
 doChordBars = false
 doGuitar = false
@@ -43,8 +43,8 @@ doOwn = false
 	- put in the chords (fake book).
 	- put in the tune (fake book).
 	- added youtube performances.
+	- put in the lyrics (fake book).
 	TODO:
-	- add the lyrics.
 	- check the chords (fake book).
 	- check the tune (fake book).
 	- hear the tune to check that it is right and adjust the tempo.
@@ -121,5 +121,30 @@ doOwn = false
 	d,2.~ | d2. | f4. f8 f4 | d4. d8 d4 | g4. a8 g4 | d2. |
 	d4 d d | d c b | e2.~ | e2. | f4 f f |
 	f4 g gis | gis2 a4 | a2. | a4 a a | bes bes b! | c2.~ | c4 r r |
+}
+{% endif %}
+{% if part == "LyricsFake" %}\lyricmode {
+
+	% part "A"
+	Hel -- lo Young Lov -- ers, who -- ev -- er you are, I hope your trou -- bles are few. __
+	All my good wish -- es go with you to -- night. I've been in love like
+	you. __ Be
+	you. __ I
+
+	% part "B"
+	know how it feels to have wings on your heels, and to fly down a street in a trance. __
+	You fly down a street on a chance that you'll meet and you meet not real -- ly by chance. __ Don't
+
+	% part "A"
+	cry young lov -- ers, what -- ev -- er you do, don't cry be -- cause I'm a -- lone. __
+	All of my mem -- 'ries are hap -- py to -- night, I've had a love of my own. __
+	I've had a love of my own like yours, I've had a love of my own. __
+}
+{% endif %}
+{% if part == "LyricsmoreFake" %}\lyricmode {
+
+	% part "A"
+	_ brave young lov -- ers and fol -- low your star, be brave and faith -- ful and true. __
+	Cling ver -- y close to each oth -- er to -- night, I've been in love like
 }
 {% endif %}

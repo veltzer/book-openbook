@@ -25,8 +25,8 @@ remark = "The Manhattan Transfer"
 [versions.Fake]
 doChords = true
 doVoice = true
-doLyrics = false
-doLyricsmore = false
+doLyrics = true
+doLyricsmore = true
 doLyricsmoremore = false
 doChordBars = false
 doGuitar = false
@@ -42,8 +42,8 @@ doOwn = false
 	- put in the chords (fake book).
 	- put in the tune (fake book).
 	- added youtube performances.
+	- put in the lyrics (fake book).
 	TODO:
-	- add the lyrics.
 	- check the chords (fake book).
 	- check the tune (fake book).
 	- hear the tune to check that it is right and adjust the tempo.
@@ -112,5 +112,28 @@ doOwn = false
 	% part "A"
 	f4 c8 d~ d2 | r4 e8 c d a c4 | f,4 c8 d~ d2 |
 	r4 des'8 aes bes f g4 | a!4 c,8 d~ d2 | r8 c' ces bes a c! d f~ | f1~ | f2.\fermata r4 |
+}
+{% endif %}
+{% if part == "LyricsFake" %}\lyricmode {
+
+	% part "A"
+	Blue Cham -- pagne, __ pur -- ple shad -- ows and Blue Cham -- pagne __ with the ech -- oes that still re -- main __
+	I keep a blue ren -- dez -- vous. __ _
+
+	% part "B"
+	All the plans we start -- ed.
+	all the songs we sang, each lit -- tle dream we knew seems to o -- ver -- take me like a boom -- er -- ang.
+	Blue is the spar -- kle, gone is the tang. Each
+
+	% part "A"
+	old re -- frain, __ keeps re -- turn -- ing as I re -- main __
+	with my mem -- 'ries and Blue Cham -- pagne __ to toast the dream that was you. __
+}
+{% endif %}
+{% if part == "LyricsmoreFake" %}\lyricmode {
+
+	% part "A"
+	Bub -- bles rise __ like a foun -- tain be -- fore my eyes __ and they sud -- den -- ly crys -- tal -- ize __
+	to form a vis -- ion of you. __
 }
 {% endif %}

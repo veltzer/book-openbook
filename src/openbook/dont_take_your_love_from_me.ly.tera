@@ -26,8 +26,8 @@ remark = "Doris Day"
 [versions.Fake]
 doChords = true
 doVoice = true
-doLyrics = false
-doLyricsmore = false
+doLyrics = true
+doLyricsmore = true
 doLyricsmoremore = false
 doChordBars = false
 doGuitar = false
@@ -43,8 +43,8 @@ doOwn = false
 	- put in the chords (fake book).
 	- put in the tune (fake book).
 	- added youtube performances.
+	- put in the lyrics (fake book).
 	TODO:
-	- add the lyrics.
 	- check the chords (fake book).
 	- check the tune (fake book).
 	- hear the tune to check that it is right and adjust the tempo.
@@ -120,5 +120,39 @@ doOwn = false
 	% part "Coda"
 	c,4^\markup { \musicglyph #"scripts.coda" } c' c2~ | c2. c4 | e4 d d c | c aes8 aes~ aes2 | r4 d8 c g4 e |
 	bes'4 c a2 | r4 c a f | e2 e | c1~ | c2. r4 |
+}
+{% endif %}
+{% if part == "LyricsFake" %}\lyricmode {
+
+	% part "Intro"
+	You could take my cas -- tle, that's if I had a cas -- tle and I'd
+	miss it for just a while.
+	face pov -- er -- ty with a smile.
+	But there's one thing I ask of you, one thing you must nev -- er do: Tear a
+
+	% part "A"
+	star from out the sky __ and the sky feels blue. __ Tear a
+	pet -- al from a rose __ and the rose weeps too. __
+
+	% part "B"
+	Take your heart a -- way from mine and mine will sure -- ly break. My
+	life is yours to make, so please keep the spark a -- wake. Would you
+
+	% part "Coda"
+	just a sigh? __ All this your heart won't let you do. __ This is what I
+	beg of you, Don't Take Your Love From Me. __
+}
+{% endif %}
+{% if part == "LyricsmoreFake" %}\lyricmode {
+
+	% part "Intro"
+	You could take my trea -- sure, that's if I had a trea -- sure and I'd
+	_ _ _ _ _ _
+	_ _ _ _ _ _ _
+	_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _
+
+	% part "A"
+	take the wings from birds __ so that they can't fly? __ Would you
+	take the o -- cean's roar __ and leave
 }
 {% endif %}

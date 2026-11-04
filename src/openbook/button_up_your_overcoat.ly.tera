@@ -27,8 +27,8 @@ remark = "Ruth Etting (1929)"
 [versions.Fake]
 doChords = true
 doVoice = true
-doLyrics = false
-doLyricsmore = false
+doLyrics = true
+doLyricsmore = true
 doLyricsmoremore = false
 doChordBars = false
 doGuitar = false
@@ -44,12 +44,12 @@ doOwn = false
 	- put in the chords (fake book).
 	- put in the tune (fake book).
 	- added youtube performances.
+	- put in the lyrics (fake book).
 	TODO:
 	- check the chords (fake book).
 	- check the tune (fake book).
 	- hear the tune to check that it is right and adjust the tempo.
 	- the last chord of bar 24 is hard to read in the scan (looks like C#dim7/D, could be C#7/D).
-	- add the lyrics.
 {% endif %}
 {% if part == "ChordsFake" %}\chordmode {
 	\startChords
@@ -125,5 +125,46 @@ doOwn = false
 			g2. r4 |
 		}
 	}
+}
+{% endif %}
+{% if part == "LyricsFake" %}\lyricmode {
+
+	% part "A"
+	But -- ton Up Your O -- ver -- coat __ when the wind is free.
+	Take good __ care of your -- self __ you be -- long to me! __
+
+	% part "A"
+	Eat an ap -- ple ev -- 'ry day; __ get to bed by three.
+	Take good __ care of your -- self __ you be -- long to me! __ Be care -- ful
+
+	% part "B"
+	cross -- ing streets, oo -- oo! Don't eat meats, oo -- oo!
+	Cut out sweets, oo -- oo! You'll get a pain and ru -- in your tum -- tum!
+
+	% part "A"
+	Keep a -- way from boot -- leg hootch __ when you're on a spree.
+	Take good __ care of your -- self __ you be -- long to
+
+	% part "Volta"
+	me.
+	me.
+}
+{% endif %}
+{% if part == "LyricsmoreFake" %}\lyricmode {
+
+	% part "A"
+	_ _ _ _ _ _ _ _ _ _ _ _
+	_ _ _ _ _ _ _ _ _ _ _
+
+	% part "A"
+	Wear your flan -- nel un -- der -- wear __ when you climb a tree.
+	Take good __ care of your -- self __ you be -- long to me! __ Don't sit on
+
+	% part "B"
+	hor -- nets' trails, oo -- oo! Or on nails, oo -- oo!
+	Or third rails, oo -- oo! You'll get a pain and ru -- in your tum -- tum!
+
+	% part "A"
+	Don't go out with col -- lege boys __ when you're on a spree.
 }
 {% endif %}

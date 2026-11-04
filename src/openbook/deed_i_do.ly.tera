@@ -30,7 +30,7 @@ remark = "Lester Young"
 [versions.Fake]
 doChords = true
 doVoice = true
-doLyrics = false
+doLyrics = true
 doLyricsmore = false
 doLyricsmoremore = false
 doChordBars = false
@@ -47,8 +47,8 @@ doOwn = false
 	- put in the chords (fake book).
 	- put in the tune (fake book).
 	- added youtube performances.
+	- put in the lyrics (fake book).
 	TODO:
-	- add the lyrics.
 	- check the chords (fake book).
 	- check the tune (fake book).
 	- hear the tune to check that it is right and adjust the tempo.
@@ -107,5 +107,21 @@ doOwn = false
 	% part "A"
 	a8 c4.~ c2 | a8 g4.~ g2 | e8 d4.~ d2 | e8 d4.~ d2 |
 	e8 g4.~ g2 | c,2 d | c1~ | c2 r |
+}
+{% endif %}
+{% if part == "LyricsFake" %}\lyricmode {
+
+	% part "A"
+	Do I __ want you? __ Oh my, __ do I? __ Hon -- ey, __ 'Deed I Do! __
+
+	% part "A"
+	Do I __ need you? __ Oh my, __ do I? __ Hon -- ey, __ 'Deed I Do! __
+
+	% part "B"
+	I'm glad that I'm the one who found you,
+	that's why I'm al -- ways hang -- in' 'round you.
+
+	% part "A"
+	Do I __ love you? __ Oh my, __ do I? __ Hon -- ey, __ 'Deed I Do! __
 }
 {% endif %}

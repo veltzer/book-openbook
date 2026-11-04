@@ -26,8 +26,8 @@ remark = "The Benny Goodman Trio"
 [versions.Fake]
 doChords = true
 doVoice = true
-doLyrics = false
-doLyricsmore = false
+doLyrics = true
+doLyricsmore = true
 doLyricsmoremore = false
 doChordBars = false
 doGuitar = false
@@ -43,8 +43,8 @@ doOwn = false
 	- put in the chords (fake book).
 	- put in the tune (fake book).
 	- added youtube performances.
+	- put in the lyrics (fake book).
 	TODO:
-	- add the lyrics.
 	- check the chords (fake book).
 	- check the tune (fake book).
 	- hear the tune to check that it is right and adjust the tempo.
@@ -109,5 +109,33 @@ doOwn = false
 			bes4\repeatTie r r2 |
 		}
 	}
+}
+{% endif %}
+{% if part == "LyricsFake" %}\lyricmode {
+
+	% part "A"
+	Af -- ter You've Gone, __ and left me cry -- ing; Af -- ter You've Gone __ There's no de -- ny -- ing
+	you'll feel blue, __ you'll feel sad. __ You'll miss the dear -- est pal you've ev -- er had. __
+
+	% part "A"
+	There'll come a time, __ now don't for -- get it. There'll come a time __ when you'll re -- gret it.
+
+	% part "B"
+	Some -- day when you grow lone -- ly, your heart will break like mine and you'll want me on -- ly.
+	Af -- ter You've Gone, Af -- ter You've Gone a -- way. __
+}
+{% endif %}
+{% if part == "LyricsmoreFake" %}\lyricmode {
+
+	% part "A"
+	Af -- ter I'm gone, __ af -- ter we break up; af -- ter I'm gone, __ You're gon -- na wake up
+	You will find, __ you were blind __ to let some -- bod -- y come and change your mind. __
+
+	% part "A"
+	Af -- ter the years __ we've been to -- geth -- er. Their joy and tears, __ all kinds of weath -- er.
+
+	% part "B"
+	Some -- day blue and down heart -- ed, you'll long to be with me right back where you start -- ed.
+	Af -- ter I'm gone, Af -- ter I'm gone a -- way. __
 }
 {% endif %}

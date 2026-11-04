@@ -26,9 +26,9 @@ remark = "Ben Webster"
 [versions.Fake]
 doChords = true
 doVoice = true
-doLyrics = false
-doLyricsmore = false
-doLyricsmoremore = false
+doLyrics = true
+doLyricsmore = true
+doLyricsmoremore = true
 doChordBars = false
 doGuitar = false
 doExtra = false
@@ -43,8 +43,8 @@ doOwn = false
 	- put in the chords (fake book).
 	- put in the tune (fake book).
 	- added youtube performances.
+	- put in the lyrics (fake book).
 	TODO:
-	- add the lyrics.
 	- check the chords (fake book).
 	- check the tune (fake book).
 	- hear the tune to check that it is right and adjust the tempo.
@@ -112,5 +112,41 @@ doOwn = false
 
 	% part "Coda"
 	c1~ | c2. r4 |
+}
+{% endif %}
+{% if part == "LyricsFake" %}\lyricmode {
+
+	I
+
+	% part "A"
+	need your love so bad -- ly, I love you, oh, so mad -- ly, but
+	I Don't Stand A Ghost Of A Chance With
+
+	% part "Volta"
+	You! __ I
+	You! __
+
+	% part "B"
+	If you'd sur -- rend -- er just for a tend -- er kiss or two, __
+	you might dis -- cov -- er that I'm the lov -- er meant for you, and I'd be true. But
+
+	% part "Coda"
+	You! __
+}
+{% endif %}
+{% if part == "LyricsmoreFake" %}\lyricmode {
+
+	_
+
+	% part "A"
+	thought at last I'd found you, but oth -- er loves sur -- round you, and
+}
+{% endif %}
+{% if part == "LyricsmoremoreFake" %}\lyricmode {
+
+	_
+
+	% part "A"
+	what's the good of schem -- ing, I know I must be dream -- ing, for
 }
 {% endif %}

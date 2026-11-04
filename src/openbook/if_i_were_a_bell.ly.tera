@@ -26,8 +26,8 @@ remark = "The Miles Davis Quintet from Relaxin' (1956)"
 [versions.Fake]
 doChords = true
 doVoice = true
-doLyrics = false
-doLyricsmore = false
+doLyrics = true
+doLyricsmore = true
 doLyricsmoremore = false
 doChordBars = false
 doGuitar = false
@@ -43,12 +43,12 @@ doOwn = false
 	- put in the chords (fake book).
 	- put in the tune (fake book).
 	- added youtube performances.
+	- put in the lyrics (fake book).
 	TODO:
 	- check the chords (fake book).
 	- check the tune (fake book).
 	- hear the tune to check that it is right and adjust the tempo.
 	- bar 15: the fake book prints no accidental on the second c; typed as c natural because it sits under the Bb7 chord, check.
-	- add the lyrics.
 {% endif %}
 {% if part == "ChordsFake" %}\chordmode {
 	\startChords
@@ -126,5 +126,43 @@ doOwn = false
 			f1~ | f2. r4 |
 		}
 	}
+}
+{% endif %}
+{% if part == "LyricsFake" %}\lyricmode {
+
+	% part "A"
+	Ask me how do I feel, __ ask me now that we're co -- sy and cling -- ing. __ Well sir,
+	all I can say __ is If I __ Were A Bell, __ I'd be ring -- ing. __ From the
+
+	% part "B"
+	mo -- ment we kissed to -- nite, __ that's the way I've just got to be -- have. __ Boy, if
+	I were a lamp I'd light, __ or if I __ were a ban -- ner I'd wave. __ Ask me
+
+	% part "A"
+	how do I feel, __ lit -- tle me with my qui -- et up -- bring -- ing. __ Well sir,
+	all I can say __ is if I __ were a gate __ I'd be swing -- ing. __ And if
+
+	% part "C"
+	I were a watch I'd start pop -- ping my spring, __ or If I Were A Bell __ I'd go
+	'ding dong, ding dong ding.' Ask me
+}
+{% endif %}
+{% if part == "LyricsmoreFake" %}\lyricmode {
+
+	% part "A"
+	_ _ how do I feel __ from this chem -- is -- try les -- son I'm learn -- ing. __ Well sir,
+	all I can say __ is if I __ were a bridge __ I'd be burn -- ing. __ Yes, I
+
+	% part "B"
+	knew my mor -- ale would crack __ from the won -- der -- ful way that you looked. __ Boy, if
+	I were a duck I'd quack, __ or if I __ were a goose __ I'd be cooked. __ Ask me
+
+	% part "A"
+	how do I feel, __ ask me now that we're fond -- ly ca -- ress -- ing. __ Pal, if
+	I were a sal -- ad I know __ I'd be splash -- ing my dress -- ing. __ Or if
+
+	% part "C"
+	I were a sea -- son I'd sure -- ly be spring, __ or If I Were A Bell __ I'd go
+	'ding dong, ding dong _ _ _ ding.' __
 }
 {% endif %}

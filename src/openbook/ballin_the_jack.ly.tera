@@ -26,7 +26,7 @@ remark = "Jelly Roll Morton and his New Orleans Jazzmen"
 [versions.Fake]
 doChords = true
 doVoice = true
-doLyrics = false
+doLyrics = true
 doLyricsmore = false
 doLyricsmoremore = false
 doChordBars = false
@@ -43,8 +43,8 @@ doOwn = false
 	- put in the chords (fake book).
 	- put in the tune (fake book).
 	- added youtube performances.
+	- put in the lyrics (fake book).
 	TODO:
-	- add the lyrics.
 	- check the chords (fake book).
 	- check the tune (fake book).
 	- hear the tune to check that it is right and adjust the tempo.
@@ -94,5 +94,24 @@ doOwn = false
 
 	% part "C"
 	des4 bes des bes | d!8 c4 bes8~ bes4 g | c d ees c | d8 cis d bes~ bes4 r |
+}
+{% endif %}
+{% if part == "LyricsFake" %}\lyricmode {
+
+	% part "A"
+	First you put your two knees close up tight, __ then you
+	sway 'em to the left, then you sway 'em to the right.
+
+	% part "B"
+	Step a -- round the floor kind of nice and light, __ then you
+	twis' a -- round and twis' a -- round with all __ _ your might. __
+
+	% part "A"
+	Stretch your lov -- in' arms straight out in space, __ then you
+	do the Ea -- gle Rock with __ _ style and grace. __ Swing your
+
+	% part "C"
+	foot way 'round then bring it back, __ now
+	that's what I call 'Ball -- in' The Jack.' __
 }
 {% endif %}

@@ -26,7 +26,7 @@ remark = "Bill Evans Trio live at the Village Vanguard (1961)"
 [versions.Fake]
 doChords = true
 doVoice = true
-doLyrics = false
+doLyrics = true
 doLyricsmore = false
 doLyricsmoremore = false
 doChordBars = false
@@ -43,8 +43,8 @@ doOwn = false
 	- put in the chords (fake book).
 	- put in the tune (fake book).
 	- added youtube performances.
+	- put in the lyrics (fake book).
 	TODO:
-	- add the lyrics.
 	- check the chords (fake book).
 	- check the tune (fake book).
 	- hear the tune to check that it is right and adjust the tempo.
@@ -126,5 +126,20 @@ doOwn = false
 			ees1~ | ees4 r r2 |
 		}
 	}
+}
+{% endif %}
+{% if part == "LyricsFake" %}\lyricmode {
+	I love the
+	% part "A"
+	looks of you, the lure of you, the sweet of you the pure of you; the
+	% part "B"
+	eyes, the arms, the mouth of you, the East, West, North and the South of you. __
+	I'd love to
+	% part "A"
+	gain com -- plete con -- trol of you, and han -- dle e -- ven the heart and soul of you. So
+	% part "C"
+	love, at least, a small per -- cent __ of me, do, __ for I love All Of
+	You. I love the
+	You. __
 }
 {% endif %}

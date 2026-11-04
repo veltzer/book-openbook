@@ -26,8 +26,8 @@ remark = "Peggy Lee (1959)"
 [versions.Fake]
 doChords = true
 doVoice = true
-doLyrics = false
-doLyricsmore = false
+doLyrics = true
+doLyricsmore = true
 doLyricsmoremore = false
 doChordBars = false
 doGuitar = false
@@ -43,8 +43,8 @@ doOwn = false
 	- put in the chords (fake book).
 	- put in the tune (fake book).
 	- added youtube performances.
+	- put in the lyrics (fake book).
 	TODO:
-	- add the lyrics.
 	- check the chords (fake book).
 	- check the tune (fake book).
 	- hear the tune to check that it is right and adjust the tempo.
@@ -119,5 +119,29 @@ doOwn = false
 	% part "Coda"
 	bes'4 r r8 ees4 ees8~ | ees8. c16 bes8. ges16 f4 ees8. ees16~ |
 	ees4 r r8. ees'16 ees8. ees16~ | ees4 r r ees8. ees16~ | ees4 r r ees8. ees16~ | ees1 | r1 |
+}
+{% endif %}
+{% if part == "LyricsFake" %}\lyricmode {
+	Well Al -- right, __
+	% part "A"
+	O -- kay, __ You Win, __ I'm in
+	love with you __ _ Well, Al -- right, __ O -- kay, __ You Win, __ _ Ba -- by,
+	what can I do? __ I'll __ do an -- y -- thing __ you say, __ it's
+	just got -- ta be that way. __
+	Well, Al -- right, __
+	% part "B"
+	All that __ I am ask -- in,' all I want __ _ from you, __
+	just love __ me like I love __ you an' it
+	won't be hard to do! __ Well, Al -- right, __ O -- kay, __ You Win __ I'm in
+	% part "Coda"
+	_ Sweet ba -- by take me by the hand, __
+	Well, Al -- right __ O -- kay, __ You Win. __
+}
+{% endif %}
+{% if part == "LyricsmoreFake" %}\lyricmode {
+	_ _ _
+	% part "A"
+	_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _
+	as long as it's me and you.
 }
 {% endif %}

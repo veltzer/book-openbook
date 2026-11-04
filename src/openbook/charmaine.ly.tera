@@ -26,8 +26,8 @@ remark = "Mantovani and his Orchestra in the famous 1951 version"
 [versions.Fake]
 doChords = true
 doVoice = true
-doLyrics = false
-doLyricsmore = false
+doLyrics = true
+doLyricsmore = true
 doLyricsmoremore = false
 doChordBars = false
 doGuitar = false
@@ -43,8 +43,8 @@ doOwn = false
 	- put in the chords (fake book).
 	- put in the tune (fake book).
 	- added youtube performances.
+	- put in the lyrics (fake book).
 	TODO:
-	- add the lyrics.
 	- check the chords (fake book).
 	- check the tune (fake book).
 	- hear the tune to check that it is right and adjust the tempo.
@@ -124,5 +124,43 @@ doOwn = false
 			ees2.~ | ees2\fermata r4 |
 		}
 	}
+}
+{% endif %}
+{% if part == "LyricsFake" %}\lyricmode {
+	I
+
+	% part "A"
+	won -- der why you keep me wait -- ing, Char -- maine __ cries in vain. __ I
+
+	% part "B"
+	won -- der when blue -- birds are mat -- ing will you come back a -- gain? __ I
+
+	% part "A"
+	won -- der if I keep on pray -- ing will our dreams be the same? __ I
+
+	% part "C"
+	won -- der if you ev -- er think of me, too? Char -- maine's wait -- ing, just wait -- ing for
+
+	% part "Volta"
+	you. __ I
+}
+{% endif %}
+{% if part == "LyricsmoreFake" %}\lyricmode {
+	_
+
+	% part "A"
+	won -- der why you keep me wait -- ing, Char -- maine, __ my Char -- maine. __ I
+
+	% part "B"
+	won -- der when blue -- birds are mat -- ing will you come back a -- gain? __ I
+
+	% part "A"
+	won -- der if I keep on pray -- ing will our dreams be the same? __ I
+
+	% part "C"
+	won -- der if you ev -- er think of me, too? I am wait -- ing, my Char -- maine, for
+
+	% part "Volta"
+	_ _ you. __
 }
 {% endif %}

@@ -26,9 +26,9 @@ remark = "Etta James"
 [versions.Fake]
 doChords = true
 doVoice = true
-doLyrics = false
-doLyricsmore = false
-doLyricsmoremore = false
+doLyrics = true
+doLyricsmore = true
+doLyricsmoremore = true
 doChordBars = false
 doGuitar = false
 doExtra = false
@@ -43,8 +43,8 @@ doOwn = false
 	- put in the chords (fake book).
 	- put in the tune (fake book).
 	- added youtube performances.
+	- put in the lyrics (fake book).
 	TODO:
-	- add the lyrics.
 	- check the chords (fake book).
 	- check the tune (fake book).
 	- hear the tune to check that it is right and adjust the tempo.
@@ -113,5 +113,45 @@ doOwn = false
 
 	% part "Coda"
 	f1~ | f2.\fermata r4 |
+}
+{% endif %}
+{% if part == "LyricsFake" %}\lyricmode {
+
+	I want A
+
+	% part "A"
+	Sun -- day Kind Of Love, __ a love to last past Sat -- ur -- day night. __
+	I'd like to know it's more than love at first sight. __ I want A Sun -- day Kind Of Love __
+
+	% part "Volta"
+	I want A
+	_ I
+
+	% part "B"
+	do my Sun -- day dream -- ing and all my Sun -- day schem -- ing ev' -- ry
+	min -- ute, ev' -- ry hour, of ev' -- ry day. I'm
+	hop -- ing to dis -- cov -- er a cer -- tain kind of lov -- er.
+	Who will show me the way? __ My arms need
+
+	% part "Coda"
+	_
+}
+{% endif %}
+{% if part == "LyricsmoreFake" %}\lyricmode {
+
+	_ _ _
+
+	% part "A"
+	love that's on the square, __ can't seem to find some -- bod -- y to care. __
+	I'm on a -- lone -- ly road that leads me no where. __ I need A Sun -- day Kind Of Love.
+}
+{% endif %}
+{% if part == "LyricsmoremoreFake" %}\lyricmode {
+
+	_ _ _
+
+	% part "A"
+	some -- one to en -- fold __ to keep me warm when Mon -- days are cold. __
+	A love for all my life to have and to hold. __ I want A Sun -- day Kind Of Love.
 }
 {% endif %}

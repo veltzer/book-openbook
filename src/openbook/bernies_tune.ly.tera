@@ -26,8 +26,8 @@ remark = "Gerry Mulligan Quartet with Chet Baker (1953)"
 [versions.Fake]
 doChords = true
 doVoice = true
-doLyrics = false
-doLyricsmore = false
+doLyrics = true
+doLyricsmore = true
 doLyricsmoremore = false
 doChordBars = false
 doGuitar = false
@@ -43,8 +43,8 @@ doOwn = false
 	- put in the chords (fake book).
 	- put in the tune (fake book).
 	- added youtube performances.
+	- put in the lyrics (fake book).
 	TODO:
-	- add the lyrics.
 	- check the chords (fake book).
 	- check the tune (fake book).
 	- hear the tune to check that it is right and adjust the tempo.
@@ -120,5 +120,45 @@ doOwn = false
 			r8 g4 fis8 g4. g8~ | g8 fis g4 a8 a a a | d1~ | d2 r2 |
 		}
 	}
+}
+{% endif %}
+{% if part == "LyricsFake" %}\lyricmode {
+
+	% part "A"
+	In the park, in __ the dark, un -- der -- neath the moon. __ _
+	Heard a boy and __ a girl hum -- min' Ber -- nie's Tune. __ _
+
+	% part "A"
+	Went to sleep count -- in' sheep, by a blue la -- goon. __ _
+	Heard a frog, on __ a log, croak -- in' Ber -- nie's Tune. __ _
+
+	% part "B"
+	It's so ea -- sy to whist -- le, __ it's so ea -- sy to sing. __
+	E -- ven hum -- ming -- birds hum __ it, __ it's the thing. __
+
+	% part "A"
+	Of -- fice clerks, so -- da jerks picked it up so soon. __ _
+
+	% part "Volta"
+	Mil -- lion -- aires, e -- ven squares, whis -- tle Ber -- nie's Tune. __ _
+	Take a tip, man __ get hip, make it Ber -- nie's Tune. __
+}
+{% endif %}
+{% if part == "LyricsmoreFake" %}\lyricmode {
+
+	% part "A"
+	Hark the lark, in __ the park, cra -- zy as a loon. __ _
+	In a tree skill -- ful -- ly sing -- in' Ber -- nie's Tune. __ _
+
+	% part "A"
+	Lit -- tle kids go __ to school sing -- in' Ber -- nie's Tune. __ _
+	Gurg -- lin' brooks, bub -- lin' pools, bab -- ble Ber -- nie's Tune. __ _
+
+	% part "B"
+	You don't have to read mu -- sic, __ you don't have to be smart. __
+	Ber -- nie said you can sing __ it, __ from the heart. __
+
+	% part "A"
+	So if you hap -- pen to get the urge to croon. __ _
 }
 {% endif %}

@@ -26,9 +26,9 @@ remark = "Chet Baker"
 [versions.Fake]
 doChords = true
 doVoice = true
-doLyrics = false
-doLyricsmore = false
-doLyricsmoremore = false
+doLyrics = true
+doLyricsmore = true
+doLyricsmoremore = true
 doChordBars = false
 doGuitar = false
 doExtra = false
@@ -43,8 +43,8 @@ doOwn = false
 	- put in the chords (fake book).
 	- put in the tune (fake book).
 	- added youtube performances.
+	- put in the lyrics (fake book).
 	TODO:
-	- add the lyrics.
 	- check the chords (fake book).
 	- check the tune (fake book).
 	- hear the tune to check that it is right and adjust the tempo.
@@ -109,5 +109,37 @@ doOwn = false
 
 	% part "Coda"
 	r8 c,8 d c ees c ees4 | c1 |
+}
+{% endif %}
+{% if part == "LyricsFake" %}\lyricmode {
+
+	% part "A"
+	Some folks were meant to live in clov -- er, __ but they are such a chos -- en few, and
+	clov -- er be -- ing green, __ _ is some -- thing I've nev -- er seen __ _
+
+	% part "Volta"
+	'cause I was Born To Be Blue.
+	'cause I was Born To Be Blue.
+
+	% part "B"
+	When I met you the world was bright and sun -- ny; when you left the cur -- tain fell. __
+	I'd like to laugh, __ but noth -- ing strikes me fun -- ny; now my world's a fad -- ed pas -- tel. Well,
+
+	% part "Coda"
+	'cause I was Born To Be Blue.
+}
+{% endif %}
+{% if part == "LyricsmoreFake" %}\lyricmode {
+
+	% part "A"
+	When there's a yel -- low moon a -- bove me, __ they say there's moon -- beams I should view, but
+	moon -- beams, be -- ing gold, __ _ are some -- thing I can't be -- hold __
+}
+{% endif %}
+{% if part == "LyricsmoremoreFake" %}\lyricmode {
+
+	% part "A"
+	I guess I'm luck -- i -- er than some folks; __ I've known the thrill of lov -- ing you, and
+	that a -- lone is more __ _ than I was cre -- at -- ed for __
 }
 {% endif %}

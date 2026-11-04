@@ -25,8 +25,8 @@ remark = "Rare Silk from New Weave (1983)"
 [versions.Fake]
 doChords = true
 doVoice = true
-doLyrics = false
-doLyricsmore = false
+doLyrics = true
+doLyricsmore = true
 doLyricsmoremore = false
 doChordBars = false
 doGuitar = false
@@ -42,8 +42,8 @@ doOwn = false
 	- put in the chords (fake book).
 	- put in the tune (fake book).
 	- added youtube performances.
+	- put in the lyrics (fake book).
 	TODO:
-	- add the lyrics.
 	- check the chords (fake book).
 	- check the tune (fake book).
 	- hear the tune to check that it is right and adjust the tempo.
@@ -111,5 +111,31 @@ doOwn = false
 	a4 fis8 cis~ cis2 | \tuplet 3/2 { r4 a b } \tuplet 3/2 { c!8 b a~ } a b | cis8 e~ e2.~ | e2. r4 |
 	e'16 e r8 cis4 a fis8 e~ | e2 \tuplet 3/2 { r8 a b } \tuplet 3/2 { c! b a~ } | a2 \tuplet 3/2 { r8 d, e } \tuplet 3/2 { f! e d } |
 	cis8 gis'~ gis4 fis f! | e fis! a b | e1\fermata |
+}
+{% endif %}
+{% if part == "LyricsFake" %}\lyricmode {
+
+	% part "A"
+	Time to hit the high -- way; __ time to move on my __ way. __ This
+	dream has passed; the road beck -- ons and I'll fol -- low. __
+	D. C. You've been so fine, __ I'll re -- turn a -- gain a new place and a
+
+	% part "Volta"
+	new time. Travel -- in'
+	fare -- well. __ _ _
+
+	% part "Coda"
+	Nine -- ty -- five will take __ me __ from this town of D. __ C. __ The
+	jazz I've played __ shall re -- main as I __ go roam -- in'. __
+	Fu -- tures are hard to tell, __ But for now, D. C., __ I must bid a fond
+	fare -- well __ un -- til then. __ _ _ _ _
+}
+{% endif %}
+{% if part == "LyricsmoreFake" %}\lyricmode {
+
+	% part "A"
+	Nine -- ty -- five will take __ me __ from this town of D. __ C. __ The
+	jazz I've played __ shall re -- main as I __ go roam -- in'. __
+	Fu -- tures are hard to tell, __ But for now, D. C. __ I must bid a fond
 }
 {% endif %}

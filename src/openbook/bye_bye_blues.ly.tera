@@ -26,7 +26,7 @@ remark = "Les Paul and Mary Ford (1953)"
 [versions.Fake]
 doChords = true
 doVoice = true
-doLyrics = false
+doLyrics = true
 doLyricsmore = false
 doLyricsmoremore = false
 doChordBars = false
@@ -43,11 +43,11 @@ doOwn = false
 	- put in the chords (fake book).
 	- put in the tune (fake book).
 	- added youtube performances.
+	- put in the lyrics (fake book).
 	TODO:
 	- check the chords (fake book).
 	- check the tune (fake book).
 	- hear the tune to check that it is right and adjust the tempo.
-	- add the lyrics.
 {% endif %}
 {% if part == "ChordsFake" %}\chordmode {
 	\startChords
@@ -121,5 +121,24 @@ doOwn = false
 			c1~ | c4 r r2 |
 		}
 	}
+}
+{% endif %}
+{% if part == "LyricsFake" %}\lyricmode {
+
+	% part "A"
+	Bye Bye Blues, __ Bye Bye Blues. __
+
+	% part "B"
+	Bells ring, birds sing, sun is shin -- ing, No more pin -- ing,
+
+	% part "A"
+	just we two __ smil -- ing thru. __
+
+	% part "C"
+	Don't sigh, don't cry Bye Bye
+
+	% part "Volta"
+	Blues. __
+	Blues. __
 }
 {% endif %}

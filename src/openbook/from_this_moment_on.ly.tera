@@ -26,8 +26,8 @@ remark = "Frank Sinatra with Nelson Riddle from A Swingin' Affair! (1957)"
 [versions.Fake]
 doChords = true
 doVoice = true
-doLyrics = false
-doLyricsmore = false
+doLyrics = true
+doLyricsmore = true
 doLyricsmoremore = false
 doChordBars = false
 doGuitar = false
@@ -43,12 +43,13 @@ doOwn = false
 	- put in the chords (fake book).
 	- put in the tune (fake book).
 	- added youtube performances.
+	- put in the lyrics (fake book).
 	TODO:
-	- add the lyrics.
 	- check the chords (fake book).
 	- check the tune (fake book).
 	- hear the tune to check that it is right and adjust the tempo.
 	- bars 22 and 49: the fake book places "Ebm7/Gb" and "Bbm7/Eb" over the last beat of the bar, before the chord of the next bar, check this.
+	- lyrics: the book prints the second ending's words ('Mo-ment On. For you've') once, on the second verse line; they are typed in the first verse so they are sung once and the second verse stops at 'from this'.
 {% endif %}
 {% if part == "ChordsFake" %}\chordmode {
 	\startChords
@@ -112,5 +113,30 @@ doOwn = false
 	r4 c2 d4 | f2 aes4 c~ | c1~ | c2. r4 | bes1 | aes1 | bes1 | c2. r4 |
 	c2. bes4~ | bes4 c2 bes4 | c1 | bes2. r4 |
 	r4 c2 bes4 | aes2 f4 ees~ | ees1~ | ees4 r f2 | aes2. c4~ | c2. bes4 | aes1~ | aes2. r4 |
+}
+{% endif %}
+{% if part == "LyricsFake" %}\lyricmode {
+
+	% part "A"
+	From This Mo -- ment On, __ you for me dear,
+	on -- ly __ two for tea, dear, From This
+	Mo -- ment On. __
+	Mo -- ment On. __ For you've
+
+	% part "B"
+	got the love __ I need so much, __ got the skin __ I love to touch. __
+	Got the arms __ to hold me tight, __ got the sweet lips __ to kiss me good -- night, __
+
+	% part "A"
+	From This Mo -- ment On, __ you and I, babe
+	we'll be __ rid -- in' high, babe.
+	Ev -- 'ry care is gone __ From This Mo __ ment On. __
+}
+{% endif %}
+{% if part == "LyricsmoreFake" %}\lyricmode {
+
+	% part "A"
+	From this hap -- py day __ no more blue songs,
+	on -- ly __ whoop -- dee -- doo songs, from this
 }
 {% endif %}

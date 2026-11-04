@@ -26,7 +26,7 @@ remark = "Sammy Davis Jr."
 [versions.Fake]
 doChords = true
 doVoice = true
-doLyrics = false
+doLyrics = true
 doLyricsmore = false
 doLyricsmoremore = false
 doChordBars = false
@@ -43,12 +43,13 @@ doOwn = false
 	- put in the chords (fake book).
 	- put in the tune (fake book).
 	- added youtube performances.
+	- put in the lyrics (fake book).
 	TODO:
 	- check the chords (fake book).
 	- check the tune (fake book).
 	- hear the tune to check that it is right and adjust the tempo.
 	- the fake book ends the tune with a bar of only two beats (the held last note), check it.
-	- add the lyrics.
+	- the book prints alternative words in braces (girls/boys, girls/guys, And there's wine/Siz-zlin' steaks); the lyrics use the first of each. In the 'Ev-'ry-thing' bar the book ties the two f's yet sings a syllable on each and prints no tie into the next bar; the lyrics use ignoreMelismata there, check the ties.
 {% endif %}
 {% if part == "ChordsFake" %}\chordmode {
 	\startChords
@@ -140,5 +141,31 @@ doOwn = false
 	d2 |
 	\time 2/2
 	c1~ | c2
+}
+{% endif %}
+{% if part == "LyricsFake" %}\lyricmode {
+
+	There are
+
+	% part "A"
+	girls just ripe __ for some kiss -- in' __ and I mean to kiss __ me a few! Oh, those
+	girls don't know __ what they're miss -- in', __ I've got A Lot Of Liv -- in' __ To Do! And there's
+
+	% part "A"
+	wine all read -- y for tast -- in', __ and there's Cad -- il -- lacs all shin -- y and new! Got -- ta
+	move, 'cause time __ is a -- wast -- in', __ there's such A Lot Of Liv -- in' __ To Do! There's
+
+	% part "B"
+	mu -- sic to play __ plac -- es to go! __ Peo -- ple to see! __
+	\set ignoreMelismata = ##t Ev -- 'ry -- thing __ for \unset ignoreMelismata you and me! __ _ Life's a
+
+	% part "A"
+	ball, if on -- ly you know it! __ And it's all just wait -- in' for you! You're a
+	live, so come on and show it! __ There's such A Lot Of
+
+	% part "Volta"
+	Liv -- in' __ To Do! There are
+	Liv -- in', __ such a lot of liv -- in', __
+	what A __ Lot Of __ Liv -- in' __ To Do! __
 }
 {% endif %}

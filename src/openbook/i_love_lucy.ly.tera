@@ -26,7 +26,7 @@ remark = "Barry Harris"
 [versions.Fake]
 doChords = true
 doVoice = true
-doLyrics = false
+doLyrics = true
 doLyricsmore = false
 doLyricsmoremore = false
 doChordBars = false
@@ -43,8 +43,8 @@ doOwn = false
 	- put in the chords (fake book).
 	- put in the tune (fake book).
 	- added youtube performances.
+	- put in the lyrics (fake book).
 	TODO:
-	- add the lyrics.
 	- check the chords (fake book).
 	- check the tune (fake book).
 	- hear the tune to check that it is right and adjust the tempo.
@@ -103,5 +103,20 @@ doOwn = false
 	b2 c4 b~ | b b c2 | d1~ | d4 r c2 |
 	e4 r c a~ | a a g2 | e'4 r c a~ | a a g2 |
 	e'2 c~ | c4 r d2 | c1~ | c2. r4 |
+}
+{% endif %}
+{% if part == "LyricsFake" %}\lyricmode {
+
+	% part "A"
+	I Love Lu -- cy and she loves me, __ we're as hap -- py as two can be, __ some --
+
+	% part "B"
+	times we quar -- rel but then __ how we love mak -- ing up a -- gain __ _
+
+	% part "A"
+	Lu -- cy kiss -- es like no one can, __ she's my mis -- sus and I'm her man; __ and
+
+	% part "C"
+	life is heav -- en you see, __ 'cause I Love Lu -- cy, yes, I Love Lu -- cy and Lu -- cy __ loves me. __
 }
 {% endif %}

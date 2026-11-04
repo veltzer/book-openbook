@@ -27,7 +27,7 @@ remark = "Mulgrew Miller"
 [versions.Fake]
 doChords = true
 doVoice = true
-doLyrics = false
+doLyrics = true
 doLyricsmore = false
 doLyricsmoremore = false
 doChordBars = false
@@ -44,11 +44,11 @@ doOwn = false
 	- put in the chords (fake book).
 	- put in the tune (fake book).
 	- added youtube performances.
+	- put in the lyrics (fake book).
 	TODO:
 	- check the chords (fake book).
 	- check the tune (fake book).
 	- hear the tune to check that it is right and adjust the tempo.
-	- add the lyrics.
 {% endif %}
 {% if part == "ChordsFake" %}\chordmode {
 	\startChords
@@ -108,5 +108,25 @@ doOwn = false
 	a2 a | \tuplet 3/2 { b8 c d } d4 d4. b8 | e2 e~ | e4 c a f |
 	e2 e | \tuplet 3/2 { e8 f g } g4 g2 | a2 a | \tuplet 3/2 { a8 b c } c4 c2 |
 	d1 | g,1 | c1~ | c2. r4 |
+}
+{% endif %}
+{% if part == "LyricsFake" %}\lyricmode {
+
+	% part "A"
+	Get -- ting To Know You, get -- ting to know all a -- bout you. __
+	Get -- ting to like you, get -- ting to hope you like me. __
+
+	% part "B"
+	Get -- ting to know you, put -- ting it my way, but nice -- ly __
+	you are pre -- cise -- ly __ my cup of tea! __
+
+	% part "A"
+	Get -- ting to know you, get -- ting to feel free and eas -- y __
+	when I am with you, get -- ting to know what to say. __
+
+	% part "C"
+	Have -- n't you no -- ticed? Sud -- den -- ly I'm bright and breez -- y, __
+	be -- cause of all the beau -- ti -- ful and new things I'm
+	learn -- ing a -- bout you day by day. __
 }
 {% endif %}

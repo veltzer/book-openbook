@@ -30,7 +30,7 @@ remark = "Al Hibbler"
 [versions.Fake]
 doChords = true
 doVoice = true
-doLyrics = false
+doLyrics = true
 doLyricsmore = false
 doLyricsmoremore = false
 doChordBars = false
@@ -47,8 +47,8 @@ doOwn = false
 	- put in the chords (fake book).
 	- put in the tune (fake book).
 	- added youtube performances.
+	- put in the lyrics (fake book).
 	TODO:
-	- add the lyrics.
 	- check the chords (fake book).
 	- check the tune (fake book).
 	- hear the tune to check that it is right and adjust the tempo.
@@ -106,5 +106,21 @@ doOwn = false
 			g1~ | g1\fermata |
 		}
 	}
+}
+{% endif %}
+{% if part == "LyricsFake" %}\lyricmode {
+
+	% part "A"
+	Count Ev -- 'ry Star __ in the mid -- night sky; count ev -- 'ry rose, __ ev -- 'ry
+	fire -- _ fly, for that's how man -- y times I miss you. Heav -- en knows I miss you.
+
+	% part "A"
+	Count ev -- 'ry leaf __ on a wil -- low tree; count ev -- 'ry wave __ on a
+	storm -- y sea. Count Ev -- 'ry Star and dar -- ling, when you do, you'll know the times I have
+	cried for
+
+	% part "Volta"
+	you. __
+	you. __
 }
 {% endif %}

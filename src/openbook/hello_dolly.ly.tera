@@ -25,8 +25,8 @@ remark = "Ella Fitzgerald live (1964)"
 [versions.Fake]
 doChords = true
 doVoice = true
-doLyrics = false
-doLyricsmore = false
+doLyrics = true
+doLyricsmore = true
 doLyricsmoremore = false
 doChordBars = false
 doGuitar = false
@@ -42,8 +42,8 @@ doOwn = false
 	- put in the chords (fake book).
 	- put in the tune (fake book).
 	- added youtube performances.
+	- put in the lyrics (fake book).
 	TODO:
-	- add the lyrics.
 	- check the chords (fake book).
 	- check the tune (fake book).
 	- hear the tune to check that it is right and adjust the tempo.
@@ -109,5 +109,28 @@ doOwn = false
 	}
 	d8 d d4 d d | d c ees r | d8 d d4 d d | d c ees d |
 	bes1~ | bes2. r4 |
+}
+{% endif %}
+{% if part == "LyricsFake" %}\lyricmode {
+
+	% part "A"
+	Hel -- lo, Dol -- ly, well, hel -- lo Dol -- ly. It's so
+	nice to have you back where you be -- long.
+	You're look -- ing swell, Dol -- ly, we can tell, Dol -- ly, you're still
+	glow -- in', you're still crow -- in', you're still go -- in' strong. We feel the
+	room sway -- in', for the band's play -- in' one of
+	your old fa -- v'rite songs from way back when. So
+	take her wrap, fel -- las, find her an emp -- ty lap, fel -- las,
+	Dol -- ly -- 'll nev -- er
+	go a -- way a -- gain! Hel --
+	go a -- way,
+	Dol -- ly -- 'll nev -- er go a -- way, Dol -- ly -- 'll nev -- er go a -- way a -- gain! __
+}
+{% endif %}
+{% if part == "LyricsmoreFake" %}\lyricmode {
+
+	% part "A"
+	_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _
+	gol -- ly gee, fel -- las, find her a va -- cant knee, fel -- las,
 }
 {% endif %}

@@ -25,9 +25,9 @@ remark = "Martin Denny (1962)"
 [versions.Fake]
 doChords = true
 doVoice = true
-doLyrics = false
-doLyricsmore = false
-doLyricsmoremore = false
+doLyrics = true
+doLyricsmore = true
+doLyricsmoremore = true
 doChordBars = false
 doGuitar = false
 doExtra = false
@@ -42,8 +42,8 @@ doOwn = false
 	- put in the chords (fake book).
 	- put in the tune (fake book).
 	- added youtube performances.
+	- put in the lyrics (fake book).
 	TODO:
-	- add the lyrics.
 	- check the chords (fake book).
 	- check the tune (fake book).
 	- hear the tune to check that it is right and adjust the tempo.
@@ -107,5 +107,33 @@ doOwn = false
 	}
 	d4 \tuplet 3/2 { r4 g g } | f2 g8 f | e8 c4. c4 | d2.~ | d4 \tuplet 3/2 { r4 bes' g } |
 	a2 a8 a | f'8 f \tuplet 3/2 { e4 f e } | d2.~ | d2. |
+}
+{% endif %}
+{% if part == "LyricsFake" %}\lyricmode {
+
+	% part "A"
+	Winds may blow o'ver the i -- cy sea, __ _ I'll take with me the __ _ warmth of
+	thee, A Taste Of Hon -- ey, __ a taste much sweet -- er than wine. __
+
+	% part "B"
+	I will re -- turn, __ _ I'll __ re -- turn, I'll come back for the hon -- ey and you. __
+	I'll
+	He __
+	I'll come back for the hon -- ey and you. __ I'll come
+	back for the hon -- ey, hon -- ey and you. __
+}
+{% endif %}
+{% if part == "LyricsmoreFake" %}\lyricmode {
+
+	% part "A"
+	leave be -- hind my __ _ heart to wear __ _ and may it e'er re -- _ mind you
+	of A Taste Of Hon -- ey, __ a taste much sweet -- er than wine. __
+}
+{% endif %}
+{% if part == "LyricsmoremoreFake" %}\lyricmode {
+
+	% part "A"
+	ne'er came back to his love so fair, __ _ and so she died dream -- ing of his
+	kiss. His kiss was hon -- ey, __ a taste much sweet -- er than wine. __
 }
 {% endif %}

@@ -26,8 +26,8 @@ remark = "Arthur Migliazza, solo piano"
 [versions.Fake]
 doChords = true
 doVoice = true
-doLyrics = false
-doLyricsmore = false
+doLyrics = true
+doLyricsmore = true
 doLyricsmoremore = false
 doChordBars = false
 doGuitar = false
@@ -43,8 +43,8 @@ doOwn = false
 	- put in the chords (fake book).
 	- put in the tune (fake book).
 	- added youtube performances.
+	- put in the lyrics (fake book).
 	TODO:
-	- add the lyrics.
 	- check the chords (fake book).
 	- check the tune (fake book).
 	- hear the tune to check that it is right and adjust the tempo.
@@ -125,5 +125,70 @@ doOwn = false
 		g'8. g16 \tuplet 3/2 { f8 ees c~ } c4 ees8 g~ | g2. r8 c,8 | g'8. g16 \tuplet 3/2 { f8 e c~ } c4 e8 g~ | g2. r8 d8 |
 		f8. e16 f8. e16 f8 g4 e8 | f8. g16 f8. e16 c8. g16 b8. d16 | c1~ | c2. r4 |
 	}
+}
+{% endif %}
+{% if part == "LyricsFake" %}\lyricmode {
+	Af -- ter
+
+	% part "A"
+	Hours, __ when it's time to close the doors and turn the light's down __ low, __
+	Af -- ter Hours, __ where the lone -- ly shad -- ows spend the night, that's where I __ go! __
+	You can find me __ walk -- in' with those Af -- ter Hours __ _ blues, Af -- ter Hours with the blues.
+
+	% part "B"
+	Look -- in' a -- round for a place to for -- get her, I keep com -- in' back to the one where we met. It's
+	dark and de -- sert -- ed, but some -- thing a -- bout it still makes me a -- ware that I care for her yet.
+	Out of the past comes a dim rec -- ol -- lec -- tion, she's sit -- tin' with me at a ta -- ble for two;
+	Then in the dark of a win -- dow's re -- flec -- tion, I see I'm a -- lone and I know that we're thru. And I
+	go on __ walk -- in' with those Af -- ter Hours __ _ blues, Af -- ter Hours, just the blues and me. __
+
+	% part "C"
+	I try to find some peace of mind; a friend -- ly voice, some -- one who's kind.
+	I close my eyes, try not to think, oh, Lord, __ got -- ta have a drink, Oh, Lord, __ please
+
+	% part "D"
+	help me to for -- get. __ Oh, Lord, __ my heart is heav -- y yet. __ Oh, Lord, __ I've
+	got to find a place __ where I __ won't see that haunt -- ing face. __ A place __ where
+	I can go to lose __ _ those mel -- an -- chol -- y Af -- ter Hours __ _ blues. __
+}
+{% endif %}
+{% if part == "LyricsmoreFake" %}\lyricmode {
+	_ _
+
+	% part "A"
+	_
+	_ _ _ _ _ _ _ _ _ _ _
+	_ _
+	_ _
+	_
+	_ _ _ _ _ _ _ _ _ _ _
+	_ _
+	_ _
+	_ _
+	_ _ _ _ _ _ _ _
+	_ _ _ _ _ _
+	_
+
+	% part "B"
+	_ _ _ _ _ _ _ _ _ _ _ _
+	_ _ _ _ _ _ _ _ _ _ _
+	_ _ _ _ _ _ _ _ _ _ _ _
+	_ _ _ _ _ _ _ _ _ _
+	_ _ _ _ _ _ _ _ _ _ _ _
+	_ _ _ _ _ _ _ _ _ _
+	_ _ _ _ _ _ _ _ _ _ _ _
+	_ _ _ _ _ _ _ _ _ _ _ _
+	_ _
+	_ _ _ _ _ _ _ _
+	_ _ _ _ _ _
+	_ _ _
+
+	% part "C"
+	The night is still, the streets are bare; and like the blues, she's ev -- 'ry -- where.
+	I close my eyes, but mem -- 'ries stay, oh, Lord, __ make them go a -- way. She's gone, __ why
+
+	% part "D"
+	can't she let me be? __ She's gone __ and yet she's here with me. __ So on __ I
+	go _ find a place __
 }
 {% endif %}

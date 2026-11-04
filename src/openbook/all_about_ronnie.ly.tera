@@ -26,8 +26,8 @@ remark = "A 1953 recording"
 [versions.Fake]
 doChords = true
 doVoice = true
-doLyrics = false
-doLyricsmore = false
+doLyrics = true
+doLyricsmore = true
 doLyricsmoremore = false
 doChordBars = false
 doGuitar = false
@@ -43,12 +43,13 @@ doOwn = false
 	- put in the chords (fake book).
 	- put in the tune (fake book).
 	- added youtube performances.
+	- put in the lyrics (fake book).
 	TODO:
-	- add the lyrics.
 	- check the chords (fake book).
 	- check the tune (fake book).
 	- hear the tune to check that it is right and adjust the tempo.
 	- bars 7-8: the exact beats of the A7 and Ab maj7 chords are hard to read in the fake book.
+	- the book prints alternative words in braces (her/him, Her/His, Her perfume/His whisper, I'm her/he's my); the second lyrics line carries the alternatives.
 {% endif %}
 {% if part == "ChordsFake" %}\chordmode {
 	\startChords
@@ -125,5 +126,32 @@ doOwn = false
 			bes1~ | bes2. r4 |
 		}
 	}
+}
+{% endif %}
+{% if part == "LyricsFake" %}\lyricmode {
+	All A -- bout
+	% part "A"
+	Ron -- nie, there's so much to tell, __ All A -- bout
+	Ron -- nie, I know her so well. __ Her
+	% part "B"
+	mag -- i -- cal fin -- gers, __ their sense of em -- brace. __ Her
+	per -- fume that lin -- gers __ car -- ess -- ing your face. __ All A -- bout
+	% part "A"
+	Ron -- nie, best told in a toast, __ Let me pro --
+	pose it. I'm her fav' -- rite host. __ We'll
+	% part "C"
+	drink from dry glass -- es, There's no need for wine, the cham -- pagne is Ron -- nie, __ And Ron -- nie is
+	mine. All A -- bout
+	mine. __
+}
+{% endif %}
+{% if part == "LyricsmoreFake" %}\lyricmode {
+	_ _ _
+	% part "A"
+	_ _ _ _ _ _ _ _ _ _ _ _ _ _ him _ _ His
+	% part "B"
+	_ _ _ _ _ _ _ _ _ _ His whis -- per _ _ _ _ _ _ _ _ _ _ _
+	% part "A"
+	_ _ _ _ _ _ _ _ _ _ _ _ he's my
 }
 {% endif %}

@@ -26,8 +26,8 @@ remark = "Nina Simone on The Ed Sullivan Show"
 [versions.Fake]
 doChords = true
 doVoice = true
-doLyrics = false
-doLyricsmore = false
+doLyrics = true
+doLyricsmore = true
 doLyricsmoremore = false
 doChordBars = false
 doGuitar = false
@@ -43,8 +43,9 @@ doOwn = false
 	- put in the chords (fake book).
 	- put in the tune (fake book).
 	- added youtube performances.
+	- put in the lyrics (fake book).
 	TODO:
-	- add the lyrics.
+	- bar 3, second verse: the fake book prints 'handle me' under the two notes that carry 'de-cent' in the first verse; typed with 'handle' unhyphenated on the first eighth as the book places it.
 	- check the chords (fake book).
 	- check the tune (fake book).
 	- hear the tune to check that it is right and adjust the tempo.
@@ -86,5 +87,25 @@ doOwn = false
 	% part "B"
 	r8 a8 b! c d e d c | a4 a c b! | r8 a8 b! c d e d c | e,4 e g2 |
 	r8 c8 d ees f g f ees | c8 c c c ees4 d | r8 e!8 e e f4 f | d8 d d d ees f, a c^\markup { \italic { D.S. al Fine } } |
+}
+{% endif %}
+{% if part == "LyricsFake" %}\lyricmode {
+	I wants to
+
+	% part "A"
+	stay here, but I ain't wor -- thy. You is too de -- cent to un -- der -- stan', for when I
+	see him he hyp -- no -- tize me, when he take hol' of me with his hot han'.
+
+	% part "B"
+	Some -- day, I know he's com -- in' back to call me, he's goin' to han -- dle me an' hol' me so.
+	It's goin' to be like dy -- in', Por -- gy, deep in -- side me. But when he calls, I know I have to go. I Loves You
+}
+{% endif %}
+{% if part == "LyricsmoreFake" %}\lyricmode {
+	_ _ _
+
+	% part "A"
+	Por -- gy, don't let him take me, don't let him handle me an' drive me mad. If you kin
+	keep me, I wants to stay here wid you for -- ev -- _ er, an' I'd be glad.
 }
 {% endif %}
