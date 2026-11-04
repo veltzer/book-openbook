@@ -26,8 +26,8 @@ remark = "Sonny Rollins"
 [versions.Fake]
 doChords = true
 doVoice = true
-doLyrics = false
-doLyricsmore = false
+doLyrics = true
+doLyricsmore = true
 doLyricsmoremore = false
 doChordBars = false
 doGuitar = false
@@ -43,8 +43,8 @@ doOwn = false
 	- put in the chords (fake book).
 	- put in the tune (fake book).
 	- added youtube performances.
+	- put in the lyrics (fake book).
 	TODO:
-	- add the lyrics.
 	- check the chords (fake book).
 	- check the tune (fake book).
 	- hear the tune to check that it is right and adjust the tempo.
@@ -101,5 +101,33 @@ doOwn = false
 			c2. r4 |
 		}
 	}
+}
+{% endif %}
+{% if part == "LyricsFake" %}\lyricmode {
+
+	% part "A"
+	Love Is A Sim -- ple Thing, love is a sil -- ver ring, shi -- ny as a rib -- bon bow, soft as a qui -- et snow.
+	Love is a nur -- ser -- y rhyme, old as the tick of time.
+
+	% part "B"
+	Love is so man -- y things, bright as an an -- gel's wings, Gen -- tle as the morn -- ing light, long as a win -- ter night.
+	Love makes an old heart sing and it fills ev -- 'ry emp -- ty space;
+	love is a warm -- ing place, Love Is A Sim -- ple
+	Thing.
+	Thing.
+}
+{% endif %}
+{% if part == "LyricsmoreFake" %}\lyricmode {
+
+	% part "A"
+	Love Is A Sim -- ple Thing, love is a mag -- ic ring, Much more fun than mis -- tle -- toe, gay as a pup -- pet show.
+	Love is the thun -- der and rain, swift as a soar -- ing plane.
+
+	% part "B"
+	Love is a sum -- mer moon, gay as a big bal -- loon, wild as a storm at sea, young as a ca -- li -- o -- pe.
+	Love is a touch of spring; it's as sweet as a first em -- brace.
+	Love is a spe -- cial face, Love Is A Sim -- ple
+	_
+	Thing.
 }
 {% endif %}

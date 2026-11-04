@@ -26,7 +26,7 @@ remark = "Nat King Cole and George Shearing from Nat King Cole Sings/George Shea
 [versions.Fake]
 doChords = true
 doVoice = true
-doLyrics = false
+doLyrics = true
 doLyricsmore = false
 doLyricsmoremore = false
 doChordBars = false
@@ -43,8 +43,8 @@ doOwn = false
 	- put in the chords (fake book).
 	- put in the tune (fake book).
 	- added youtube performances.
+	- put in the lyrics (fake book).
 	TODO:
-	- add the lyrics.
 	- check the chords (fake book).
 	- check the tune (fake book).
 	- hear the tune to check that it is right and adjust the tempo.
@@ -125,5 +125,27 @@ doOwn = false
 			ees,1~ | ees2 r |
 		}
 	}
+}
+{% endif %}
+{% if part == "LyricsFake" %}\lyricmode {
+	Let there be
+
+	% part "A"
+	you __ and let there be me, __ let there be
+	oy -- sters __ un -- der the sea. __ Let there be
+
+	% part "B"
+	wind, __ an oc -- ca -- sion -- al rain, __ chi -- le con
+	car -- ne __ and spark -- ling cham -- pagne. __ Let there be
+
+	% part "A"
+	birds __ to sing in the trees, __ some -- one to
+	bless me __ when -- ev -- er I sneeze. __ Let there be
+
+	% part "C"
+	cuck -- oos, __ a lark and a dove __ but first of all,
+	please __ Let There Be
+	Love. Let there be
+	Love. __
 }
 {% endif %}

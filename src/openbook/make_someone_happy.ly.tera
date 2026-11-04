@@ -26,7 +26,7 @@ remark = "Bill Evans Trio"
 [versions.Fake]
 doChords = true
 doVoice = true
-doLyrics = false
+doLyrics = true
 doLyricsmore = false
 doLyricsmoremore = false
 doChordBars = false
@@ -43,8 +43,8 @@ doOwn = false
 	- put in the chords (fake book).
 	- put in the tune (fake book).
 	- added youtube performances.
+	- put in the lyrics (fake book).
 	TODO:
-	- add the lyrics.
 	- check the chords (fake book).
 	- check the tune (fake book).
 	- hear the tune to check that it is right and adjust the tempo.
@@ -111,5 +111,28 @@ doOwn = false
 	% part "C"
 	ees1~ | ees4 d8 c bes4 aes | r d d d~ | d c8 bes aes4 g |
 	r c c2~ | c4 bes8 aes g4 f | ees1~ | ees2. r4 |
+}
+{% endif %}
+{% if part == "LyricsFake" %}\lyricmode {
+
+	% part "A"
+	Make __ Some -- one Hap -- py, make just one __ some -- one hap -- py.
+	Make just one __ heart the heart you sing to.
+
+	% part "B"
+	One __ smile that cheers you, one face that lights when it nears you.
+	One man you're ev -- 'ry -- thing to.
+
+	% part "A"
+	Fame, __ if you win it, comes and goes __ in a min -- ute.
+	Where's the real __ stuff in life to cling to?
+
+	% part "B"
+	Love __ is the an -- swer, some -- one to love is the an -- swer.
+	Once you've found him, build your world a -- round him.
+
+	% part "C"
+	Make __ Some -- one Hap -- py, make just one __ some -- one hap -- py
+	and you __ will be hap -- py too. __
 }
 {% endif %}

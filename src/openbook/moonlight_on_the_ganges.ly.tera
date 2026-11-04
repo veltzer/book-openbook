@@ -26,7 +26,7 @@ remark = "Frank Sinatra"
 [versions.Fake]
 doChords = true
 doVoice = true
-doLyrics = false
+doLyrics = true
 doLyricsmore = false
 doLyricsmoremore = false
 doChordBars = false
@@ -43,11 +43,11 @@ doOwn = false
 	- put in the chords (fake book).
 	- put in the tune (fake book).
 	- added youtube performances.
+	- put in the lyrics (fake book).
 	TODO:
 	- check the chords (fake book).
 	- check the tune (fake book).
 	- hear the tune to check that it is right and adjust the tempo.
-	- add the lyrics.
 {% endif %}
 {% if part == "ChordsFake" %}\chordmode {
 	\startChords
@@ -121,5 +121,21 @@ doOwn = false
 			c1~ | c4 r r2 |
 		}
 	}
+}
+{% endif %}
+{% if part == "LyricsFake" %}\lyricmode {
+
+	% part "A"
+	Moon -- light __ On The Gan -- ges __ and all stars __ in view, __ when I
+
+	% part "B"
+	whis -- per'd __ love's sweet mel -- o -- dy __ all our dreams and our schemes came true. __
+
+	% part "A"
+	Some -- day __ on the Gan -- ges __ I'll meet you __ once more. __ and I'll
+
+	% part "C"
+	kiss you __ and ca -- ress you __ where the wa -- ters kiss the si -- lent shore.
+	shore. __
 }
 {% endif %}

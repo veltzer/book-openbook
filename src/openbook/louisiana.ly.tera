@@ -145,7 +145,7 @@ doOwn = false
 	Lou -- ise, Lou -- ise, Lou -- ise, Lou -- ise -- i -- an -- a. __ "(Lou" -- ise, I'm go -- in' back __ "to)"
 	Lou -- ise, Lou -- ise, Lou -- ise, Lou -- is -- i -- an -- a, __ "(I'm" on my way __ "to)"
 	Lou -- ise, Lou -- ise, Lou -- ise, Lou -- ise, good -- bye. __ _ _
-	_ _
+	_ _ _
 }
 {% endif %}
 {% if part == "LyricsmoreFake" %}\lyricmode {

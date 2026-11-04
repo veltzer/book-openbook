@@ -26,7 +26,7 @@ remark = "Chuck Berry (1958)"
 [versions.Fake]
 doChords = true
 doVoice = true
-doLyrics = false
+doLyrics = true
 doLyricsmore = false
 doLyricsmoremore = false
 doChordBars = false
@@ -43,8 +43,8 @@ doOwn = false
 	- put in the chords (fake book).
 	- put in the tune (fake book).
 	- added youtube performances.
+	- put in the lyrics (fake book).
 	TODO:
-	- add the lyrics.
 	- check the chords (fake book).
 	- check the tune (fake book).
 	- hear the tune to check that it is right and adjust the tempo.
@@ -98,5 +98,23 @@ doOwn = false
 	c8 bes c bes gis8 a4 f8 | c'8 bes c a~ a4. f8 | c'8 bes c bes gis8 a4 f16 f | c'8 bes c a~ a4 c8 c |
 	c8 bes \tuplet 3/2 { c bes aes~ } aes8 d,4. | r8 f4 c'8~ c bes aes d, | gis4 a2.~ | a2 r8 c, f a |
 	bes8 a bes a bes c4 d,16 f | aes8 f f f~ f f \tuplet 3/2 { aes g f } | f1~ | f2. r4 |
+}
+{% endif %}
+{% if part == "LyricsFake" %}\lyricmode {
+
+	% part "A"
+	Mer -- ry Christ -- mas Ba -- by, you sure __ did treat me nice. __
+	Mer -- ry Christ -- mas Ba -- by, you sure __ did treat me nice. __ Gave me a
+	dia -- mond ring for Christ -- mas, now I'm liv -- in' in Par -- a -- dise. __ Well, I'm
+
+	% part "A"
+	feel -- in' might -- y fine, __ got good mu -- sic on my ra -- di -- o. __ Well, I'm
+	feel -- in' might -- y fine, __ got good mus -- ic on my ra -- di -- o. __ Well, I
+	want to kiss you ba -- by while you're stand -- in' 'neath the mis -- tle -- toe. __ Saint
+
+	% part "B"
+	Nick came down the chim -- ney 'bout half -- _ past three, __ left all these pret -- ty pres -- ents that you see be -- fore me. __ Mer -- ry
+	Christ -- mas lit -- tle ba -- by, you sure __ been good to me. __ I have -- n't
+	had a drink this morn -- in', but I'm all lit up like __ a Christ -- _ mas tree. __
 }
 {% endif %}

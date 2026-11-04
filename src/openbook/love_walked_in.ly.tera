@@ -26,7 +26,7 @@ remark = "Sarah Vaughan"
 [versions.Fake]
 doChords = true
 doVoice = true
-doLyrics = false
+doLyrics = true
 doLyricsmore = false
 doLyricsmoremore = false
 doChordBars = false
@@ -43,8 +43,8 @@ doOwn = false
 	- put in the chords (fake book).
 	- put in the tune (fake book).
 	- added youtube performances.
+	- put in the lyrics (fake book).
 	TODO:
-	- add the lyrics.
 	- check the chords (fake book).
 	- check the tune (fake book).
 	- hear the tune to check that it is right and adjust the tempo.
@@ -101,5 +101,20 @@ doOwn = false
 	% part "C"
 	ees1 |
 	ees,4 g bes ees | f2 ees | d4 c bes aes | g2. g4 | bes4 aes g f | ees1~ | ees4 r r2 |
+}
+{% endif %}
+{% if part == "LyricsFake" %}\lyricmode {
+
+	% part "A"
+	Love walked right in and drove the shad -- ows a -- way; love walked right in and brought my sun -- ni -- est day.
+
+	% part "B"
+	One ma -- gic mo -- ment and my heart seemed to know that love said 'Hel -- lo,' though not a word was spo -- ken.
+
+	% part "A"
+	One look and I for -- got the gloom of the past; one look and I had found my fu -- ture at last.
+
+	% part "C"
+	One look and I had found a world com -- plete -- ly new, when Love Walked In with you. __
 }
 {% endif %}

@@ -26,7 +26,7 @@ remark = "Fred Astaire in the film Three Little Words (1950)"
 [versions.Fake]
 doChords = true
 doVoice = true
-doLyrics = false
+doLyrics = true
 doLyricsmore = false
 doLyricsmoremore = false
 doChordBars = false
@@ -43,11 +43,11 @@ doOwn = false
 	- put in the chords (fake book).
 	- put in the tune (fake book).
 	- added youtube performances.
+	- put in the lyrics (fake book).
 	TODO:
 	- check the chords (fake book).
 	- check the tune (fake book).
 	- hear the tune to check that it is right and adjust the tempo.
-	- add the lyrics.
 {% endif %}
 {% if part == "ChordsFake" %}\chordmode {
 	\startChords
@@ -101,5 +101,24 @@ doOwn = false
 	% part "A"
 	bes8. bes16 bes8. a16~ a4. g8 | bes8. bes16 bes8. a16~ a4. g8 | a8. a16 a8. g16~ g4. f8 | aes8. aes16 aes8. g16~ g4. f8 |
 	g8. g16 g8. f16~ f8. e16 ees4 | d2 f | bes1~ | bes2. r4 |
+}
+{% endif %}
+{% if part == "LyricsFake" %}\lyricmode {
+
+	% part "A"
+	May -- be I'm right, __ and may -- be I'm wrong, And may -- be I'm weak __ and may -- be I'm strong: but
+	Nev -- er -- the -- less, __ I'm In Love With You.
+
+	% part "A"
+	May -- be I'll win __ and may -- be I'll lose, __ and may -- be I'm in; __ for cry -- in' the blues: __ but
+	Nev -- er -- the -- less, __ I'm In Love With You. __ Some -- how, I
+
+	% part "B"
+	know at a glance the ter -- ri -- ble chan -- es I'm tak -- ing:
+	fine at the start, __ then left with a heart __ that is break -- ing.
+
+	% part "A"
+	May -- be I'll live __ a life of re -- gret __ and may -- be I'll give __ much more than I'll get; __ but
+	Nev -- er -- the -- less __ I'm In Love With You. __
 }
 {% endif %}

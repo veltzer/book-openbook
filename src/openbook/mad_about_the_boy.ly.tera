@@ -26,8 +26,8 @@ remark = "Dinah Washington"
 [versions.Fake]
 doChords = true
 doVoice = true
-doLyrics = false
-doLyricsmore = false
+doLyrics = true
+doLyricsmore = true
 doLyricsmoremore = false
 doChordBars = false
 doGuitar = false
@@ -43,8 +43,8 @@ doOwn = false
 	- put in the chords (fake book).
 	- put in the tune (fake book).
 	- added youtube performances.
+	- put in the lyrics (fake book).
 	TODO:
-	- add the lyrics.
 	- check the chords (fake book).
 	- check the tune (fake book).
 	- hear the tune to check that it is right and adjust the tempo.
@@ -121,5 +121,47 @@ doOwn = false
 			d8 c c c c2~ | c2. r4 |
 		}
 	}
+}
+{% endif %}
+{% if part == "LyricsFake" %}\lyricmode {
+
+	% part "A"
+	Mad A -- bout The Boy, __ I know it's stu -- pid to be Mad A -- bout The Boy, __ I'm so a --
+	shamed of it, but must ad -- mit the sleep -- less nights I've had a -- bout the boy.
+
+	% part "A"
+	On the sil -- ver screen, __ he melts my fool -- ish heart in ev -- 'ry sin -- gle scene. __ Al -- though I'm
+	quite a -- ware that here and there are tra -- ces of the cad a -- bout the boy.
+
+	% part "B"
+	Lord knows I'm not a fool girl, I real -- ly should -- n't care;
+	Lord knows I'm not a school -- girl, in the flur -- ry of her first af -- fair.
+
+	% part "A"
+	Will it ev -- er cloy? __ This odd di -- ver -- si -- ty of mis -- er -- y and joy; __ I'm feel -- ing
+	quite in -- sane and young a -- gain, and all be -- cause I'm
+
+	% part "Volta"
+	Mad A -- bout The Boy. __
+	Mad A -- bout The Boy. __
+}
+{% endif %}
+{% if part == "LyricsmoreFake" %}\lyricmode {
+
+	% part "A"
+	Mad A -- bout The Boy, __ it's pret -- ty fun -- ny but I'm Mad A -- bout The Boy. __ He has a
+	gay ap -- peal that makes me feel there's may -- be some -- thing sad a -- bout the boy.
+
+	% part "A"
+	Walk -- ing down the street, __ his eyes look out at me from peo -- ple that I meet; __ I can't be --
+	lieve it's true, but when I'm blue in some strange way I'm glad a -- bout the boy.
+
+	% part "B"
+	I'm hard -- ly sen -- ti -- men -- tal, Love is -- n't so sub -- lime.
+	I have to pay my rent -- al and I can't af -- ford to waste much time.
+
+	% part "A"
+	If I could em -- ploy __ a lit -- tle mag -- ic that would fin -- al -- ly de -- stroy __ this dream that
+	pains me and en -- chains me, but I can't be -- cause I'm
 }
 {% endif %}

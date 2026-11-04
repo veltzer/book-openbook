@@ -26,7 +26,7 @@ remark = "Barbra Streisand"
 [versions.Fake]
 doChords = true
 doVoice = true
-doLyrics = false
+doLyrics = true
 doLyricsmore = false
 doLyricsmoremore = false
 doChordBars = false
@@ -43,8 +43,8 @@ doOwn = false
 	- put in the chords (fake book).
 	- put in the tune (fake book).
 	- added youtube performances.
+	- put in the lyrics (fake book).
 	TODO:
-	- add the lyrics.
 	- check the chords (fake book).
 	- check the tune (fake book).
 	- hear the tune to check that it is right and adjust the tempo.
@@ -106,5 +106,25 @@ doOwn = false
 	% part "A"
 	g2~ g8 g fis g | fis2 r4 e8 a | g g fis g fis fis e fis | e e d e d d c d |
 	c8 c b c \tuplet 3/2 { b4 b a } | b2 r4 b | e a fis fis | a d b b | b a2.~ | a2. r4 |
+}
+{% endif %}
+{% if part == "LyricsFake" %}\lyricmode {
+	It's a
+
+	% part "A"
+	La -- zy Af -- ter -- noon, and the bee -- tle bugs are zoom -- in' and the tu -- lip trees are bloom -- in', and there's
+	not an -- oth -- er hu -- man in view, __ but us two. __ It's a
+
+	% part "A"
+	La -- zy Af -- ter -- noon, and the farm -- er leaves his reap -- in', in the mea -- dow cows are sleep -- in', and the
+	speck -- led trout stop leap -- in' up -- stream __ as we dream. __ A
+
+	% part "B"
+	fat pink cloud hangs o -- ver the hill, un -- fold -- in' like a rose. If you
+	hold my hand and sit real still you can hear the grass as it grows. __ It's a
+
+	% part "A"
+	ha -- zy af -- ter -- noon, and I know a place that's qui -- et 'cept for dais -- ies run -- ning ri -- ot and there's
+	no one pass -- ing by it to see. Come spend this La -- zy Af -- ter -- noon with me. __
 }
 {% endif %}

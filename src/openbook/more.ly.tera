@@ -27,8 +27,8 @@ remark = "Frank Sinatra with Count Basie (1964)"
 [versions.Fake]
 doChords = true
 doVoice = true
-doLyrics = false
-doLyricsmore = false
+doLyrics = true
+doLyricsmore = true
 doLyricsmoremore = false
 doChordBars = false
 doGuitar = false
@@ -44,11 +44,11 @@ doOwn = false
 	- put in the chords (fake book).
 	- put in the tune (fake book).
 	- added youtube performances.
+	- put in the lyrics (fake book).
 	TODO:
 	- check the chords (fake book).
 	- check the tune (fake book).
 	- hear the tune to check that it is right and adjust the tempo.
-	- add the lyrics.
 {% endif %}
 {% if part == "ChordsFake" %}\chordmode {
 	\startChords
@@ -122,5 +122,31 @@ doOwn = false
 	% part "C"
 	g2. fis8 g | a4 g g fis | g2. fis8 g | a4 g g fis |
 	g2. fis8 g | a4 g g fis | g1~ | g2. r4 |
+}
+{% endif %}
+{% if part == "LyricsFake" %}\lyricmode {
+
+	% part "A"
+	More than the great -- est love the world has known;
+	this is the love I'll give to you a -- lone. _
+
+	% part "B"
+	More than you'll ev -- er know, my arms long to hold you so, my
+	life will be in your keep -- ing wak -- ing, sleep -- ing, laugh -- ing, weep -- ing.
+
+	% part "A"
+	Long -- er than al -- ways is a long long time,
+	but far be -- yond for -- ev -- er you'll be mine.
+
+	% part "C"
+	I know I nev -- er lived be -- fore and my heart is ve -- ry
+	sure no one else could love you more. __
+}
+{% endif %}
+{% if part == "LyricsmoreFake" %}\lyricmode {
+
+	% part "A"
+	More than the sim -- ple words I try to say;
+	I on -- ly live to love you more each _ day.
 }
 {% endif %}
