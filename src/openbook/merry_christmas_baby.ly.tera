@@ -103,8 +103,8 @@ doOwn = false
 {% if part == "LyricsFake" %}\lyricmode {
 
 	% part "A"
-	Mer -- ry Christ -- mas Ba -- by, you sure __ did treat me nice. __
-	Mer -- ry Christ -- mas Ba -- by, you sure __ did treat me nice. __ Gave me a
+	Mer -- ry Christ -- mas Ba -- by, you sure __ did treat me nice. __ _
+	Mer -- ry Christ -- mas Ba -- by, you sure __ did treat me nice. __ _ Gave me a
 	dia -- mond ring for Christ -- mas, now I'm liv -- in' in Par -- a -- dise. __ Well, I'm
 
 	% part "A"
@@ -114,7 +114,7 @@ doOwn = false
 
 	% part "B"
 	Nick came down the chim -- ney 'bout half -- _ past three, __ left all these pret -- ty pres -- ents that you see be -- fore me. __ Mer -- ry
-	Christ -- mas lit -- tle ba -- by, you sure __ been good to me. __ I have -- n't
+	Christ -- mas lit -- tle ba -- by, you sure __ been good to me. __ _ I have -- n't
 	had a drink this morn -- in', but I'm all lit up like __ a Christ -- _ mas tree. __
 }
 {% endif %}

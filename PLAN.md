@@ -183,6 +183,24 @@ quotes are not allowed in lyrics, use single quotes; a lyric that starts with
 a digit or contains special characters is written in double quotes as a
 lilypond string (`"500"`).
 
+Progress 2026-11-04 (end of day): 204 of the 396 fake book tunes with a
+poet now carry lyrics (about 160 added today). Work goes alphabetically; the
+L-O range is in progress, P-Z not started.
+
+Pages that print no lyrics (instrumental heads, nothing to add):
+`down_by_the_riverside`, `its_sand_man`, `johnnys_theme`.
+
+Not done because the assistant's output filter refuses to reproduce these
+particular lyrics (type them by hand from the page): `arent_you_glad_youre_you`
+(48), `god_bless_the_child` (131), `i_wont_dance` (166),
+`is_you_is_or_is_you_aint` (188), possibly `lazy_afternoon` (212).
+
+Melody edits made while adding lyrics (the book prints no tie/slur there):
+`boplicity` bars 2-3 and 27. Bars where the book's ties and the typed melody
+disagree are listed as TODO lines in the files (`fever`,
+`a_lot_of_livin_to_do`, `frosty_the_snow_man`, `im_glad_there_is_you`,
+`lets_get_away_from_it_all`, `do_you_know_what_it_means_to_miss_new_orleans`).
+
 Fake book tunes missing lyrics at the start (353):
 
 a_beautiful_friendship, a_cottage_for_sale, a_felicidade,
