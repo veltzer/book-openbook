@@ -27,8 +27,8 @@ remark = "Renee Fleming"
 [versions.Fake]
 doChords = true
 doVoice = true
-doLyrics = false
-doLyricsmore = false
+doLyrics = true
+doLyricsmore = true
 doLyricsmoremore = false
 doChordBars = false
 doGuitar = false
@@ -44,13 +44,13 @@ doOwn = false
 	- put in the chords (fake book).
 	- put in the tune (fake book).
 	- added youtube performances.
+	- put in the lyrics (fake book).
 	TODO:
 	- check the chords (fake book).
 	- check the tune (fake book).
 	- hear the tune to check that it is right and adjust the tempo.
 	- first ending: the book prints the chord as "A7sus9"; typed as A9sus4, check it.
-	- the book prints three verses of lyrics (the first ending is taken twice).
-	- add the lyrics.
+	- the book prints three verses of lyrics (the first ending is taken twice); verses 2 and 3 are printed as text only ("additional lyrics") and are not typed in.
 {% endif %}
 {% if part == "ChordsFake" %}\chordmode {
 	\startChords
@@ -102,5 +102,24 @@ doOwn = false
 
 	% part "B"
 	d1 | d,2 d | d1 | c2 e | g c | d1 | d | d~ | d2. r4 |
+}
+{% endif %}
+{% if part == "LyricsFake" %}\lyricmode {
+
+	% part "A"
+	June Is Bust -- in' Out All O -- _ ver! __ All o -- ver the mea -- dow and the hill! __
+	Buds 're bust -- in' out -- a bush -- es and the romp -- in' riv -- er push -- es ev -- 'ry
+	lit -- tle wheel that wheels be -- side a mill!
+	all the morn -- in' glo -- ries on the fence! __ Be -- cause it's June! __
+
+	% part "B"
+	June, June, June, jest be -- cause it's June! June! June! __
+}
+{% endif %}
+{% if part == "LyricsmoreFake" %}\lyricmode {
+
+	% part "A"
+	June Is Bust -- in' Out All O -- _ ver! __ The feel -- in' is get -- tin' so in -- tense __
+	that the young Vir -- gin -- ia creep -- ers hev been hug -- gin' the be -- jeep -- ers out -- a
 }
 {% endif %}

@@ -25,7 +25,7 @@ remark = "Thelonious Monk on Solo Monk (1965)"
 [versions.Fake]
 doChords = true
 doVoice = true
-doLyrics = false
+doLyrics = true
 doLyricsmore = false
 doLyricsmoremore = false
 doChordBars = false
@@ -42,8 +42,8 @@ doOwn = false
 	- put in the chords (fake book).
 	- put in the tune (fake book).
 	- added youtube performances.
+	- put in the lyrics (fake book).
 	TODO:
-	- add the lyrics.
 	- check the chords (fake book).
 	- check the tune (fake book).
 	- hear the tune to check that it is right and adjust the tempo.
@@ -112,5 +112,26 @@ doOwn = false
 			g1~ | g2. r4 |
 		}
 	}
+}
+{% endif %}
+{% if part == "LyricsFake" %}\lyricmode {
+
+	% part "A"
+	I'm Con -- fess -- in' that I love you, tell me, do you love me too?
+	I'm Con -- fess -- in' that I need you, hon -- est I do, need you ev -- 'ry mo -- ment.
+	In your eyes I read such strange things, but your lips de -- ny they're true.
+	Will your an -- swer real -- ly change things mak -- ing me blue? __
+
+	% part "B"
+	I'm a -- fraid some day you'll leave me, say -- ing 'Can't we still be friends?'
+	If you go, you know you'll grieve me; all in life on you de -- pends.
+
+	% part "A"
+	Am I guess -- in' that you love me, Dream -- ing dreams of you in vain,
+	I'm Con -- fess -- in' that I love you o -- ver a --
+
+	% part "Volta"
+	gain. __
+	gain. __
 }
 {% endif %}

@@ -26,7 +26,7 @@ remark = "Coleman Hawkins Quartet"
 [versions.Fake]
 doChords = true
 doVoice = true
-doLyrics = false
+doLyrics = true
 doLyricsmore = false
 doLyricsmoremore = false
 doChordBars = false
@@ -43,8 +43,8 @@ doOwn = false
 	- put in the chords (fake book).
 	- put in the tune (fake book).
 	- added youtube performances.
+	- put in the lyrics (fake book).
 	TODO:
-	- add the lyrics.
 	- check the chords (fake book).
 	- check the tune (fake book).
 	- hear the tune to check that it is right and adjust the tempo.
@@ -112,5 +112,29 @@ doOwn = false
 	e8. e16 e8. e16 d2 | f8. f16 f8. f16 e2 |
 	g8. g16 g8. g16 f2 | a8. a16 a8. a16 g2 | r4 c8. c16 e8. e16 d8. d16 |
 	bes2 a | r4 d,8 d \tuplet 3/2 { a'4 a a } | f1 |
+}
+{% endif %}
+{% if part == "LyricsFake" %}\lyricmode {
+
+	% part "A"
+	I can't show my face, can't go an -- y -- place, peo -- ple stop and stare,
+	it's so hard to bear. Ev -- 'ry -- bod -- y knows you left me,
+	It's The Talk Of The Town.
+
+	% part "A"
+	Ev -- 'ry -- time we meet, my heart skips a beat,
+	we don't stop to speak, tho' it's just a week. Ev -- 'ry -- bod -- y knows you left me,
+	It's The Talk Of The Town. We
+
+	% part "B"
+	sent out in -- vi -- ta -- tions to
+	friends and re -- la -- tions an -- nounc -- ing our wed -- ding day.
+	Friends and our re -- la -- tions gave con -- grat -- u -- la -- tions. How can you face them?
+	What can you say?
+
+	% part "A"
+	Let's make up, sweet -- heart, we can't stay a -- part,
+	don't let fool -- ish pride keep you from my side. How can love like ours be
+	end -- ed? It's The Talk Of The Town.
 }
 {% endif %}

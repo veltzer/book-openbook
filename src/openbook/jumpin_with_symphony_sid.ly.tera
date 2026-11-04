@@ -25,8 +25,8 @@ remark = "King Pleasure in a vocal version"
 [versions.Fake]
 doChords = true
 doVoice = true
-doLyrics = false
-doLyricsmore = false
+doLyrics = true
+doLyricsmore = true
 doLyricsmoremore = false
 doChordBars = false
 doGuitar = false
@@ -42,11 +42,11 @@ doOwn = false
 	- put in the chords (fake book).
 	- put in the tune (fake book).
 	- added youtube performances.
+	- put in the lyrics (fake book).
 	TODO:
 	- check the chords (fake book).
 	- check the tune (fake book).
 	- hear the tune to check that it is right and adjust the tempo.
-	- add the lyrics.
 {% endif %}
 {% if part == "ChordsFake" %}\chordmode {
 	\startChords
@@ -92,5 +92,29 @@ doOwn = false
 
 	% part "Coda"
 	c8 d f a~ a c d c~ | c2~ c8 c d f~ | f4 r r2 | c4 r r2 | c8 d e f r4 f~ | f1 |
+}
+{% endif %}
+{% if part == "LyricsFake" %}\lyricmode {
+
+	% part "A"
+	Got -- ta get hip __ and flip __ to the la -- test, peo -- ple who love __ to swing __ with the great -- est,
+	there is a Dee -- jay show __ at the sta -- tion, spin -- nin' the hot -- test tunes __ in the na -- tion,
+	Sym -- pho -- ny Sid, __ a jive __ talk -- in' dad -- dy; he's pick -- in' the good -- ies, nev -- er a bad -- die,
+
+	% part "A"
+	Out o' this world, __ a real __ sol -- id send -- er, fill -- in' the night __ with songs __ to re -- mem -- ber, with
+	rhy -- thm and blues __ or jazz __ and __ of course he real -- ly comes on __ _ with Good -- man or Dor -- sey, we
+	get all our kicks __ just dig -- gin' those licks __ and Jump -- in' with Sym -- pho -- ny Sid. __ _ _
+
+	% part "Coda"
+	"-in" with Sym -- pho -- ny Sid, __ _ all a -- board. __ Bop, ba -- ba du bop, yeah! __
+}
+{% endif %}
+{% if part == "LyricsmoreFake" %}\lyricmode {
+
+	% part "A"
+	Bet -- ter tune in __ this prince __ of the plat -- ters, play -- in' 'em all __ and that's __ all that mat -- ters,
+	Diz -- zy and Duke __ and James __ with a kil -- ler, El -- la and Bing __ or Ba -- sie and Mil -- ler,
+	get on the move, it's gon -- na be groo -- vy; "Jump-"
 }
 {% endif %}

@@ -26,8 +26,8 @@ remark = "Ella Fitzgerald from Ella Fitzgerald Sings the Harold Arlen Songbook (
 [versions.Fake]
 doChords = true
 doVoice = true
-doLyrics = false
-doLyricsmore = false
+doLyrics = true
+doLyricsmore = true
 doLyricsmoremore = false
 doChordBars = false
 doGuitar = false
@@ -43,8 +43,8 @@ doOwn = false
 	- put in the chords (fake book).
 	- put in the tune (fake book).
 	- added youtube performances.
+	- put in the lyrics (fake book).
 	TODO:
-	- add the lyrics.
 	- check the chords (fake book).
 	- check the tune (fake book).
 	- hear the tune to check that it is right and adjust the tempo.
@@ -94,5 +94,28 @@ doOwn = false
 
 	% part "Coda"
 	ees,1~ | ees4 r r2 |
+}
+{% endif %}
+{% if part == "LyricsFake" %}\lyricmode {
+
+	% part "A"
+	Love! Love! Hoo -- ray For Love! Who is ev -- er too bla -- sé for love? Make this a night for love.
+	If we have to fight, let's fight for love. Some sigh and cry for love. Ah, but in Pa -- ree they die for love.
+	Some waste a -- way for love. Just the same, Hoo -- ray For Love! __ It's the
+
+	% part "B"
+	won -- der of the world (or the blun -- der of the world). It's a rock -- et to the moon (with a touch of Claire De Lune). It
+	gets you high, it gets you low, but once you get that glow. Oh!
+
+	% part "Coda"
+	Love! __
+}
+{% endif %}
+{% if part == "LyricsmoreFake" %}\lyricmode {
+
+	% part "A"
+	some trust to fate for love; Oth -- ers have to take off weight for love. Some go ber -- serk for love,
+	Loaf -- ers e -- ven go to work for love. Sad songs are sobbed for love, Peo -- ple have their nos -- es bobbed for love.
+	Some say we pay for love. Just the same, Hoo -- ray For
 }
 {% endif %}

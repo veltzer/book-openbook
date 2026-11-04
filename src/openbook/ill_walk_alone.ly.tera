@@ -26,8 +26,8 @@ remark = "Frank Sinatra"
 [versions.Fake]
 doChords = true
 doVoice = true
-doLyrics = false
-doLyricsmore = false
+doLyrics = true
+doLyricsmore = true
 doLyricsmoremore = false
 doChordBars = false
 doGuitar = false
@@ -43,8 +43,8 @@ doOwn = false
 	- put in the chords (fake book).
 	- put in the tune (fake book).
 	- added youtube performances.
+	- put in the lyrics (fake book).
 	TODO:
-	- add the lyrics.
 	- check the chords (fake book).
 	- check the tune (fake book).
 	- hear the tune to check that it is right and adjust the tempo.
@@ -117,5 +117,37 @@ doOwn = false
 	% part "A"
 	d2~ d8. b16 c8. cis16 | d8. g16 a8 b~ b8. c16 b4 | a2 d,2~ | d4 d'8. cis16 d8. e16 d8 cis~ |
 	cis2 a2~ | a4 b c fis, | g1~ | g1 |
+}
+{% endif %}
+{% if part == "LyricsFake" %}\lyricmode {
+	I'll Walk A --
+
+	% part "A"
+	lone, __ be -- cause, to tell you the truth, __ I'll be lone -- ly. __
+	I don't mind be -- ing lone -- ly __ when my heart tells me you __ are lone -- ly
+
+	% part "Volta"
+	too. __ I'll Walk A --
+	_ I'll
+
+	% part "B"
+	al -- ways be near __ you, wher -- ev -- er you are, __ each night __ in ev -- 'ry prayer. If
+	you call I'll hear __ you, no mat -- ter how far; __ just close your eyes __ and I'll be there. __ Please walk a --
+
+	% part "A"
+	lone __ and send your love and your kiss -- es to guide me. __
+	'Till you're walk -- ing be -- side __ me, __ I'll Walk A -- lone. __
+}
+{% endif %}
+{% if part == "LyricsmoreFake" %}\lyricmode {
+	_ _ _
+
+	% part "A"
+	lone, __ they'll ask me why and I'll tell __ them I'd rath -- er; __
+	there are dreams I must gath -- er __ dreams we fash -- ioned the night __ you held me
+
+	% part "Volta"
+	_ _ _ _
+	tight.
 }
 {% endif %}

@@ -27,7 +27,7 @@ remark = "Louis Armstrong and the All-Stars"
 [versions.Fake]
 doChords = true
 doVoice = true
-doLyrics = false
+doLyrics = true
 doLyricsmore = false
 doLyricsmoremore = false
 doChordBars = false
@@ -44,8 +44,8 @@ doOwn = false
 	- put in the chords (fake book).
 	- put in the tune (fake book).
 	- added youtube performances.
+	- put in the lyrics (fake book).
 	TODO:
-	- add the lyrics.
 	- check the chords (fake book).
 	- check the tune (fake book).
 	- hear the tune to check that it is right and adjust the tempo.
@@ -99,5 +99,21 @@ doOwn = false
 
 	% part "C"
 	a4 gis a f | g a g e | f2 d~ | d e4 d | c2 f4 a | c g bes a | f1~ | f2. r4 |
+}
+{% endif %}
+{% if part == "LyricsFake" %}\lyricmode {
+	Back home a --
+
+	% part "A"
+	gain __ in In -- di -- an -- a, __ and it seems that I can see __ the gleam -- ing
+
+	% part "B"
+	can -- dle -- light __ still shin -- ing bright __ through the syc -- a -- mores __ for me; __ the new mown
+
+	% part "A"
+	hay __ sends all its fra -- grance __ from the fields I used to roam; __ when I
+
+	% part "C"
+	dream a -- bout the moon -- light on the Wa -- bash, __ then I long for my In -- di -- an -- a home. __
 }
 {% endif %}

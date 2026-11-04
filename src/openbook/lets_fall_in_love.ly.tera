@@ -26,7 +26,7 @@ remark = "Oscar Peterson"
 [versions.Fake]
 doChords = true
 doVoice = true
-doLyrics = false
+doLyrics = true
 doLyricsmore = false
 doLyricsmoremore = false
 doChordBars = false
@@ -43,8 +43,8 @@ doOwn = false
 	- put in the chords (fake book).
 	- put in the tune (fake book).
 	- added youtube performances.
+	- put in the lyrics (fake book).
 	TODO:
-	- add the lyrics.
 	- check the chords (fake book).
 	- check the tune (fake book).
 	- hear the tune to check that it is right and adjust the tempo.
@@ -121,5 +121,26 @@ doOwn = false
 			a2 f8 e d4 | c'1~ | c2 r2 |
 		}
 	}
+}
+{% endif %}
+{% if part == "LyricsFake" %}\lyricmode {
+
+	% part "A"
+	Let's Fall In Love, why should -- n't we __ fall in love? Our hearts are made __ of it.
+	Let's take a chance __ why be a -- fraid __ of it? __
+
+	% part "A"
+	Let's close our eyes, and make our own __ Par -- a -- dise. Lit -- tle we know __ of it,
+	still we can try __ to make a go __ of it. __
+
+	% part "B"
+	We might have been meant for each oth -- er. __ To be or not to be. Let our hearts dis -- cov -- er.
+
+	% part "A"
+	Let's Fall In Love, why should -- n't we __ fall in love? Now is the time __ for it while we are
+
+	% part "Volta"
+	young. Let's Fall In Love. __
+	young. Let's Fall In Love. __
 }
 {% endif %}

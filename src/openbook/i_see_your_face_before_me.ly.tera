@@ -26,7 +26,7 @@ remark = "John Coltrane from Settin' the Pace (1958)"
 [versions.Fake]
 doChords = true
 doVoice = true
-doLyrics = false
+doLyrics = true
 doLyricsmore = false
 doLyricsmoremore = false
 doChordBars = false
@@ -43,8 +43,8 @@ doOwn = false
 	- put in the chords (fake book).
 	- put in the tune (fake book).
 	- added youtube performances.
+	- put in the lyrics (fake book).
 	TODO:
-	- add the lyrics.
 	- check the chords (fake book).
 	- check the tune (fake book).
 	- hear the tune to check that it is right and adjust the tempo.
@@ -121,5 +121,24 @@ doOwn = false
 			r1 |
 		}
 	}
+}
+{% endif %}
+{% if part == "LyricsFake" %}\lyricmode {
+
+	% part "A"
+	I See Your Face Be -- fore Me crowd -- ing my ev' -- ry dream.
+	There is your face be -- fore me; you are my on -- ly theme.
+
+	% part "B"
+	It does -- n't mat -- ter where you are, I can see how fair you are.
+	I close my eyes and there you are, al -- ways.
+
+	% part "A"
+	If you could share the mag -- ic, if you could see me too.
+	There would be noth -- ing trag -- ic in all my dreams of you.
+
+	% part "C"
+	Would that my love could haunt you so; know -- ing I want you so,
+	I can't e -- rase your beau -- ti -- ful face be -- fore me.
 }
 {% endif %}

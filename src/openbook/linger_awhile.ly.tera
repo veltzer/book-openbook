@@ -26,7 +26,7 @@ remark = "Samara Joy with Pasquale Grasso"
 [versions.Fake]
 doChords = true
 doVoice = true
-doLyrics = false
+doLyrics = true
 doLyricsmore = false
 doLyricsmoremore = false
 doChordBars = false
@@ -43,8 +43,8 @@ doOwn = false
 	- put in the chords (fake book).
 	- put in the tune (fake book).
 	- added youtube performances.
+	- put in the lyrics (fake book).
 	TODO:
-	- add the lyrics.
 	- check the chords (fake book).
 	- check the tune (fake book).
 	- hear the tune to check that it is right and adjust the tempo.
@@ -105,5 +105,21 @@ doOwn = false
 	% part "A"
 	d f~ | f g | a c~ | c cis |
 	d c~ | c d | f1~ | f4 r r2 |
+}
+{% endif %}
+{% if part == "LyricsFake" %}\lyricmode {
+	The
+
+	% part "A"
+	stars shine __ a -- bove you, __ yet Lin -- ger __ A -- while. __ They
+
+	% part "B"
+	whis -- per __ 'I love you,' __ so Lin -- ger __ A -- while. __ And
+
+	% part "C"
+	when you __ have gone a -- way, __ each hour __ will seem a day. __ I've some thing __
+
+	% part "A"
+	to tell you, __ so Lin -- ger __ A -- while. __
 }
 {% endif %}

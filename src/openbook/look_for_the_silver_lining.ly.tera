@@ -26,7 +26,7 @@ remark = "Chet Baker"
 [versions.Fake]
 doChords = true
 doVoice = true
-doLyrics = false
+doLyrics = true
 doLyricsmore = false
 doLyricsmoremore = false
 doChordBars = false
@@ -43,11 +43,11 @@ doOwn = false
 	- put in the chords (fake book).
 	- put in the tune (fake book).
 	- added youtube performances.
+	- put in the lyrics (fake book).
 	TODO:
 	- check the chords (fake book).
 	- check the tune (fake book).
 	- hear the tune to check that it is right and adjust the tempo.
-	- add the lyrics.
 {% endif %}
 {% if part == "ChordsFake" %}\chordmode {
 	\startChords
@@ -101,5 +101,20 @@ doOwn = false
 	% part "C"
 	d2 b~ | b4 c a b | g2 g~ | g4 e b' a |
 	f2 f | f8 g e2 d4 | c1~ | c2. r4 |
+}
+{% endif %}
+{% if part == "LyricsFake" %}\lyricmode {
+
+	% part "A"
+	Look For __ The Sil -- ver Lin -- ing __ when -- e'er a cloud ap -- pears in the blue. __ Re -- mem -- ber
+
+	% part "B"
+	some -- where __ the sun is shin -- ing __ and so the right thing __ to do is make it shine for you. A
+
+	% part "A"
+	heart full __ of joy and glad -- ness __ will al -- ways ban -- ish sad -- ness and strife. __ So al -- ways
+
+	% part "C"
+	Look For __ The Sil -- ver Lin -- ing __ and try to find the sun -- ny side of life. __
 }
 {% endif %}

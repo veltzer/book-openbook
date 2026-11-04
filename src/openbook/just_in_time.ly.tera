@@ -26,7 +26,7 @@ remark = "Tony Bennett"
 [versions.Fake]
 doChords = true
 doVoice = true
-doLyrics = false
+doLyrics = true
 doLyricsmore = false
 doLyricsmoremore = false
 doChordBars = false
@@ -43,8 +43,8 @@ doOwn = false
 	- put in the chords (fake book).
 	- put in the tune (fake book).
 	- added youtube performances.
+	- put in the lyrics (fake book).
 	TODO:
-	- add the lyrics.
 	- check the chords (fake book).
 	- check the tune (fake book).
 	- hear the tune to check that it is right and adjust the tempo.
@@ -121,5 +121,24 @@ doOwn = false
 			bes1~ | bes2. r4 |
 		}
 	}
+}
+{% endif %}
+{% if part == "LyricsFake" %}\lyricmode {
+
+	% part "A"
+	Just In Time __ I found you Just In Time, __ be -- fore you came, my time __ was run -- ning low. __
+
+	% part "B"
+	I was lost, __ the los -- ing dice were tossed, __ my bridg -- es all were crossed, __ no -- where to go. __
+
+	% part "C"
+	Now you're here __ and now I know just where I'm go -- ing, no more doubt or fear __ I've found my way. __ For love came
+
+	% part "D"
+	Just In Time. __ You found me Just In Time __ and changed my lone -- ly life, that love -- ly
+
+	% part "Volta"
+	day. __
+	day. __
 }
 {% endif %}

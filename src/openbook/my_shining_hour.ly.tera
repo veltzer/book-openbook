@@ -26,7 +26,7 @@ remark = "John Coltrane on Coltrane Jazz (1961)"
 [versions.Fake]
 doChords = true
 doVoice = true
-doLyrics = false
+doLyrics = true
 doLyricsmore = false
 doLyricsmoremore = false
 doChordBars = false
@@ -43,11 +43,11 @@ doOwn = false
 	- put in the chords (fake book).
 	- put in the tune (fake book).
 	- added youtube performances.
+	- put in the lyrics (fake book).
 	TODO:
 	- check the chords (fake book).
 	- check the tune (fake book).
 	- hear the tune to check that it is right and adjust the tempo.
-	- add the lyrics.
 {% endif %}
 {% if part == "ChordsFake" %}\chordmode {
 	\startChords
@@ -101,5 +101,20 @@ doOwn = false
 	% part "A"
 	g2. aes4 | bes2 ees, | g2 aes | bes2 c |
 	ees2 ees, | aes4 g f2 | ees1~ | ees2. r4 |
+}
+{% endif %}
+{% if part == "LyricsFake" %}\lyricmode {
+
+	% part "A"
+	This will be My Shin -- ing Hour, __ _ calm and hap -- py and bright. __
+
+	% part "B"
+	In my dreams, your face will flow -- er through the dark -- ness of the night. __
+
+	% part "C"
+	Like the lights of home be -- fore me, or an an -- gel watch -- ing o'er me.
+
+	% part "A"
+	This will be My Shin -- ing Hour, __ _ 'til I'm with you a -- gain. __
 }
 {% endif %}

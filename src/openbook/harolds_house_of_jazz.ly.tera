@@ -25,8 +25,8 @@ remark = "Richie Cole live with Alto Madness (2015)"
 [versions.Fake]
 doChords = true
 doVoice = true
-doLyrics = false
-doLyricsmore = false
+doLyrics = true
+doLyricsmore = true
 doLyricsmoremore = false
 doChordBars = false
 doGuitar = false
@@ -42,8 +42,8 @@ doOwn = false
 	- put in the chords (fake book).
 	- put in the tune (fake book).
 	- added youtube performances.
+	- put in the lyrics (fake book).
 	TODO:
-	- add the lyrics.
 	- check the chords (fake book).
 	- check the tune (fake book).
 	- hear the tune to check that it is right and adjust the tempo.
@@ -133,5 +133,41 @@ doOwn = false
 	r8 c, d f d c d f | d c d f d c d f | a d, ees e!~ e2 | r2 r4 r8 f'8 |
 	r8 ees4 g,8 d'4 c | bes8 fis g aes~ aes g4 g'8 | r8 f4 a,8 e'!4 d | c8 a bes b! r8 f8 g4 |
 	bes4 r bes r | bes4 r8 bes r4 bes |
+}
+{% endif %}
+{% if part == "LyricsFake" %}\lyricmode {
+	_ _
+
+	% part "Intro"
+	_ _ _ _ _
+
+	% part "A"
+	Lis -- ten to that be -- bop mu -- sic, groov -- in' me out, mov -- in' me out ev' -- ry night
+	to a lit -- tle club on N Street. __ The band is close e -- nough to touch 'em at your ta -- ble, peo -- ple, what a rap -- port! __
+
+	% part "Volta"
+	Walk down the stairs and o -- pen the door, __ and ba -- by you're in Har -- old's House __ Of Jazz.
+	They're gon -- na be romp -- in', they're gon -- na be stomp -- in' __ to -- night. __
+
+	% part "B"
+	Real jazz __ is for the folks who feel jazz, __ real jazz is what the band is doin'. __
+	And now if you think you hear 'em play -- in' a Char -- lie Par -- ker tune, I'm al -- most cer -- tain that you
+	would -- n't be wrong, __ folks, 'cause 'Don -- na Lee' is Har -- old's fav -- o -- rite song, __ folks.
+
+	% part "A"
+	If you want to take me where the mu -- sic is hot, who do ya got? Pull my coat and I'll make a note to be there __
+	We'll stick a -- round and dig the sound un -- til it gives us ev' -- ry -- thing that it has. __ Stick with me a -- round
+	quart -- ter to four, __ then af -- ter hours we'll bang on the door down in Har -- old's House Of Jazz.
+}
+{% endif %}
+{% if part == "LyricsmoreFake" %}\lyricmode {
+	_ _
+
+	% part "Intro"
+	_ _ _ _ _
+
+	% part "A"
+	Rhy -- thm sec -- tion burn -- in', smok -- in', up on the stand, dig on the band do their thing,
+	and you know their thing is swing -- in'. __ So come and find a seat, take off your coat, feel in the beat and or -- der a bite. __
 }
 {% endif %}

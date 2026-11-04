@@ -25,7 +25,7 @@ remark = "The Modernaires in a soundie (1944)"
 [versions.Fake]
 doChords = true
 doVoice = true
-doLyrics = false
+doLyrics = true
 doLyricsmore = false
 doLyricsmoremore = false
 doChordBars = false
@@ -42,11 +42,11 @@ doOwn = false
 	- put in the chords (fake book).
 	- put in the tune (fake book).
 	- added youtube performances.
+	- put in the lyrics (fake book).
 	TODO:
 	- check the chords (fake book).
 	- check the tune (fake book).
 	- hear the tune to check that it is right and adjust the tempo.
-	- add the lyrics.
 {% endif %}
 {% if part == "ChordsFake" %}\chordmode {
 	\startChords
@@ -118,5 +118,25 @@ doOwn = false
 			f2. r4 |
 		}
 	}
+}
+{% endif %}
+{% if part == "LyricsFake" %}\lyricmode {
+
+	% part "A"
+	Mop -- pin' up so -- da pop rick -- eys __ to our heart's __ de -- light.
+	Danc -- in' to swing -- er -- oo quick -- ies, __ Juke Box Sat -- ur -- day Night. __
+
+	% part "A"
+	Good -- man and Ky -- ser and Mil -- ler __ help to make __ things bright,
+	mix -- in' hot licks __ with va -- nil -- la, __ Juke Box Sat -- ur -- day Night. __
+
+	% part "B"
+	They put noth -- in' past us, __ me and hon -- ey lamb, __
+	mak -- ing one __ coke last us __ 'til it's time to scram. __
+
+	% part "A"
+	Mon -- ey, we real -- ly don't need __ that, __ we make out __ all right,
+	let -- tin' the oth -- er guy feed __ that __ Juke Box Sat -- ur -- day Night. __
+	_
 }
 {% endif %}

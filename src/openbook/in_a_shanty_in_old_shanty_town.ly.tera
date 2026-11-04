@@ -26,7 +26,7 @@ remark = "Johnny Long and his Orchestra (1940)"
 [versions.Fake]
 doChords = true
 doVoice = true
-doLyrics = false
+doLyrics = true
 doLyricsmore = false
 doLyricsmoremore = false
 doChordBars = false
@@ -43,8 +43,8 @@ doOwn = false
 	- put in the chords (fake book).
 	- put in the tune (fake book).
 	- added youtube performances.
+	- put in the lyrics (fake book).
 	TODO:
-	- add the lyrics.
 	- check the chords (fake book).
 	- check the tune (fake book).
 	- hear the tune to check that it is right and adjust the tempo.
@@ -127,5 +127,28 @@ doOwn = false
 			f2.~ | f2. |
 		}
 	}
+}
+{% endif %}
+{% if part == "LyricsFake" %}\lyricmode {
+
+	% part "A"
+	It's on -- ly a shan -- ty in old Shan -- ty Town, __ the
+	roof is so slan -- ty it touch -- es the ground; but my
+
+	% part "B"
+	tum -- bled down shack by an old rail -- road track, like a
+	mil -- lion -- aire's man -- sion, is call -- ing me back. __ I'd
+
+	% part "A"
+	give up a pal -- ace, if I were a king; __ it's
+	more than a pal -- ace, it's my ev -- 'ry -- thing. There's a
+
+	% part "C"
+	queen wait -- ing there with a sil -- ver -- y crown, In A
+	Shan -- ty In Old Shan -- ty
+
+	% part "Volta"
+	Town. It's
+	Town. __
 }
 {% endif %}

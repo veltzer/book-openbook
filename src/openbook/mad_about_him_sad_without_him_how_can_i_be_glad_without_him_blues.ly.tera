@@ -26,7 +26,7 @@ remark = "Morgana King"
 [versions.Fake]
 doChords = true
 doVoice = true
-doLyrics = false
+doLyrics = true
 doLyricsmore = false
 doLyricsmoremore = false
 doChordBars = false
@@ -43,8 +43,8 @@ doOwn = false
 	- put in the chords (fake book).
 	- put in the tune (fake book).
 	- added youtube performances.
+	- put in the lyrics (fake book).
 	TODO:
-	- add the lyrics.
 	- check the chords (fake book).
 	- check the tune (fake book).
 	- hear the tune to check that it is right and adjust the tempo.
@@ -131,5 +131,32 @@ doOwn = false
 			c1~ | c2 r |
 		}
 	}
+}
+{% endif %}
+{% if part == "LyricsFake" %}\lyricmode {
+	I went to
+
+	% part "A"
+	bed last eve -- nin' feel -- in' blue as I could be. __ I could -- n't
+	sleep last eve -- nin' with what was wor -- ry -- in' me. __ Oh the
+	tears I've wast -- ed would sure -- ly fill the deep blue sea. __ I've got those
+
+	% part "B"
+	cry a -- bout him, die with -- out him Lor -- dy where am I with -- out him blues. __ He keeps me
+	walk -- in' on the floor and like a fool I ask for more. __ Al -- tho' I
+	know he is -- n't good I would -- n't leave him if I could ah no. __ I'm not the
+
+	% part "C"
+	first on his list, __ I'd nev -- er be missed, __ I wish I had a dime for ev' -- ry gal he's kissed I swear __
+	I'd be a mil -- lion -- aire. __ And yet I
+	would -- n't care __ as long as I could get my __ _ share. __ I've got those
+
+	% part "B"
+	Mad A -- bout Him Sad With -- out Him How Can I Be Glad With -- out Him Blues. __ He makes my
+	dreams go up in smoke, and then he treat it like a joke, __ He's just an
+	orn 'ry sort o' guy, and yet I'll love him 'til I die poor me. __
+
+	% part "Volta"
+	I went to
 }
 {% endif %}

@@ -26,7 +26,7 @@ remark = "Dinah Shore in her hit recording (1941)"
 [versions.Fake]
 doChords = true
 doVoice = true
-doLyrics = false
+doLyrics = true
 doLyricsmore = false
 doLyricsmoremore = false
 doChordBars = false
@@ -43,8 +43,8 @@ doOwn = false
 	- put in the chords (fake book).
 	- put in the tune (fake book).
 	- added youtube performances.
+	- put in the lyrics (fake book).
 	TODO:
-	- add the lyrics.
 	- check the chords (fake book).
 	- check the tune (fake book).
 	- hear the tune to check that it is right and adjust the tempo.
@@ -122,5 +122,25 @@ doOwn = false
 			c1~ | c2. r4 |
 		}
 	}
+}
+{% endif %}
+{% if part == "LyricsFake" %}\lyricmode {
+
+	% part "A"
+	Jim does -- n't ev -- er bring me pret -- ty flow -- ers, Jim nev -- er tries to cheer my lone -- ly hours. __ _
+	Don't know why I'm so cra -- zy for Jim. __
+
+	% part "A"
+	Jim nev -- er tells me I'm his heart's de -- si -- re. I nev -- er seem to set his love a -- fire. __ _
+	Gone are the years I've wast -- ed on him. __
+
+	% part "B"
+	Some -- times when I get feel -- ing low, I say 'Let's call it quits.'
+	Then I hang on and let him go, break -- ing my heart in bits.
+
+	% part "A"
+	Some -- day I know that Jim will up and leave me, but e -- ven if he does you can be -- lieve me,
+	I'll go on car -- ry -- ing a torch for Jim. __
+	Jim. __
 }
 {% endif %}

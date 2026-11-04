@@ -26,7 +26,7 @@ remark = "Cliff Edwards (Ukulele Ike) (1924)"
 [versions.Fake]
 doChords = true
 doVoice = true
-doLyrics = false
+doLyrics = true
 doLyricsmore = false
 doLyricsmoremore = false
 doChordBars = false
@@ -43,11 +43,11 @@ doOwn = false
 	- put in the chords (fake book).
 	- put in the tune (fake book).
 	- added youtube performances.
+	- put in the lyrics (fake book).
 	TODO:
 	- check the chords (fake book).
 	- check the tune (fake book).
 	- hear the tune to check that it is right and adjust the tempo.
-	- add the lyrics.
 {% endif %}
 {% if part == "ChordsFake" %}\chordmode {
 	\startChords
@@ -105,5 +105,21 @@ doOwn = false
 	% part "C"
 	c d~ | d ees | d a~ | a g |
 	c d~ | d f, | bes1~ | bes2. r4 |
+}
+{% endif %}
+{% if part == "LyricsFake" %}\lyricmode {
+	Just
+
+	% part "A"
+	give me __ a June Night, __ the moon -- light __ and you. __
+
+	% part "B"
+	In my arms, __ with all your charms __ 'neath stars a -- bove, __ and we'll make love. __ I'll
+
+	% part "A"
+	hold you, __ en -- fold you, __ then dreams will __ come true. __ So
+
+	% part "C"
+	give me __ a June Night, __ the moon -- light __ and you. __
 }
 {% endif %}

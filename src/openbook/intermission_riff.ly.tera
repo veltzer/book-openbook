@@ -26,8 +26,8 @@ remark = "Maxwell Davis"
 [versions.Fake]
 doChords = true
 doVoice = true
-doLyrics = false
-doLyricsmore = false
+doLyrics = true
+doLyricsmore = true
 doLyricsmoremore = false
 doChordBars = false
 doGuitar = false
@@ -43,8 +43,8 @@ doOwn = false
 	- put in the chords (fake book).
 	- put in the tune (fake book).
 	- added youtube performances.
+	- put in the lyrics (fake book).
 	TODO:
-	- add the lyrics.
 	- check the chords (fake book).
 	- check the tune (fake book).
 	- hear the tune to check that it is right and adjust the tempo.
@@ -99,5 +99,34 @@ doOwn = false
 			cis4 d2. |
 		}
 	}
+}
+{% endif %}
+{% if part == "LyricsFake" %}\lyricmode {
+
+	% part "A"
+	It's be -- gin -- ning, In -- ter -- mis -- sion Riff. Real -- ly spin -- ning, In -- ter -- mis -- sion Riff.
+	Keep __ that or -- gan go -- ing __ and keep that mu -- sic flow -- in'.
+
+	% part "A"
+	Hear that beat of In -- ter -- mis -- sion Riff. Feel that heat of In -- ter -- mis -- sion Riff.
+	Cool __ and oh, so groo -- vy, __ gee, how this tune can
+
+	% part "Volta"
+	move me.
+}
+{% endif %}
+{% if part == "LyricsmoreFake" %}\lyricmode {
+
+	% part "A"
+	Trum -- pets driv -- in' In -- ter -- mis -- sion Riff. Come a -- live in In -- ter -- mis -- sion Riff.
+	High -- er, go -- ing high -- er, __ those horns will catch on fire. __ _
+
+	% part "A"
+	Sax -- es rid -- din' In -- ter -- mis -- sion Riff. Trom -- bones slid -- in' In -- ter -- mis -- sion Riff.
+	Take __ an -- oth -- er cho -- rus, __ it's nev -- er too much
+
+	% part "Volta"
+	_ _
+	for us.
 }
 {% endif %}

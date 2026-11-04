@@ -26,7 +26,7 @@ remark = "The Bill Evans Trio from Explorations (1961)"
 [versions.Fake]
 doChords = true
 doVoice = true
-doLyrics = false
+doLyrics = true
 doLyricsmore = false
 doLyricsmoremore = false
 doChordBars = false
@@ -43,8 +43,8 @@ doOwn = false
 	- put in the chords (fake book).
 	- put in the tune (fake book).
 	- added youtube performances.
+	- put in the lyrics (fake book).
 	TODO:
-	- add the lyrics.
 	- check the chords (fake book).
 	- check the tune (fake book).
 	- hear the tune to check that it is right and adjust the tempo.
@@ -101,5 +101,19 @@ doOwn = false
 	c2 d | c1 | \tuplet 3/2 { c4 d ees } c4. bes8 | c2 ees, |
 	r4 f g f8 g | aes4 g8 aes bes2 | r4 bes c bes8 c |
 	d4 c8 d ees2 | r4 f \tuplet 3/2 { d4 c bes } | g2~ g8 f f4 | g2~ g8 f f4 | g1^\markup { \italic { D.C. al Fine } } |
+}
+{% endif %}
+{% if part == "LyricsFake" %}\lyricmode {
+
+	% part "A"
+	In the night __ though we're a -- part __ there's a ghost of you with -- in my Haunt -- ed Heart, __
+	ghost of you __ my lost ro -- mance. __ Lips that laugh, __ eyes that dance, __ Haunt -- ed Heart __
+	won't let me be. __ Dreams re -- peat a sweet but lone -- ly song to me. __ Dreams are dust, it's
+	you who must be -- long to me __ and thrill __ my Haunt -- ed Heart. __ Be still, __ my Haunt -- ed Heart. __
+
+	% part "B"
+	Time rolls on try -- ing in vain to cure me, you are gone, but you re -- main to lure me.
+	You're there in the dark and I call, you're there but you're not there at all.
+	Oh what will I do __ with -- out you, __ with -- out you.
 }
 {% endif %}

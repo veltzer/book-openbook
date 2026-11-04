@@ -26,8 +26,8 @@ remark = "Bing Crosby (1942)"
 [versions.Fake]
 doChords = true
 doVoice = true
-doLyrics = false
-doLyricsmore = false
+doLyrics = true
+doLyricsmore = true
 doLyricsmoremore = false
 doChordBars = false
 doGuitar = false
@@ -43,11 +43,11 @@ doOwn = false
 	- put in the chords (fake book).
 	- put in the tune (fake book).
 	- added youtube performances.
+	- put in the lyrics (fake book).
 	TODO:
 	- check the chords (fake book).
 	- check the tune (fake book).
 	- hear the tune to check that it is right and adjust the tempo.
-	- add the lyrics.
 	- the fake book prints no ledger lines for the low notes (they seem lost in the scan); the low notes of the triplet figures are read as b and c by their position.
 	- the c notes after the c sharp in the A7 triplet bars have no accidental in the book; they are typed as c sharp (the sharp carries through the bar and matches the A7 and A7/C# chords).
 {% endif %}
@@ -113,5 +113,35 @@ doOwn = false
 	% part "A"
 	\tuplet 3/2 { b,8 ais b } \tuplet 3/2 { c b c } d8 b'4 b,8 | a'4 b,8 g'~ g2 | \tuplet 3/2 { cis,8 bis cis } \tuplet 3/2 { d cis d } e8 b'4 cis,8 | a'4 cis,8 g'~ g2 |
 	\tuplet 3/2 { fis8 eis fis } \tuplet 3/2 { g fis g } a8 fis'4 fis,8 | e'4 fis,8 d'~ d2 | c4 e a, c | b8 a4 g8~ g2 |
+}
+{% endif %}
+{% if part == "LyricsFake" %}\lyricmode {
+
+	% part "A"
+	Cou -- pl -- 'a jig -- gers of moon -- light and add a star, __
+	Pour in the blue of a June night and one gui -- tar, __
+	mix in a cou -- pl -- 'a dream -- ers and there you are, __
+	Lov -- ers hail the 'Moon -- light Cock -- tail.'
+	Moon -- light cock -- tails need a few. __
+
+	% part "B"
+	Cool __ it in the sum -- mer breeze, __
+	serve it in the star -- light un -- der -- neath the trees; __
+	you'll __ dis -- cov -- er tricks like these __ are
+	sure to make your 'Moon -- light Cock -- tail' please. __
+
+	% part "A"
+	Fol -- low the sim -- ple di -- rec -- tions and they will bring, __
+	life of an -- oth -- er com -- plex -- ion, where you'll be king. __
+	You will a -- wake in the morn -- ing and start to sing, __
+	moon -- light cock -- tails are the thing. __
+}
+{% endif %}
+{% if part == "LyricsmoreFake" %}\lyricmode {
+
+	% part "A"
+	Now add a cou -- pl -- 'a flow -- ers, a drop of dew, __
+	Stir for a cou -- pl -- 'a ho -- urs 'till dreams come true, __
+	as to the num -- ber of kiss -- es, it's up to you, __
 }
 {% endif %}

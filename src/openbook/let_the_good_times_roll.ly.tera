@@ -26,9 +26,9 @@ remark = "Bunny Sigler (1967)"
 [versions.Fake]
 doChords = true
 doVoice = true
-doLyrics = false
-doLyricsmore = false
-doLyricsmoremore = false
+doLyrics = true
+doLyricsmore = true
+doLyricsmoremore = true
 doChordBars = false
 doGuitar = false
 doExtra = false
@@ -43,8 +43,8 @@ doOwn = false
 	- put in the chords (fake book).
 	- put in the tune (fake book).
 	- added youtube performances.
+	- put in the lyrics (fake book).
 	TODO:
-	- add the lyrics.
 	- check the chords (fake book).
 	- check the tune (fake book).
 	- hear the tune to check that it is right and adjust the tempo.
@@ -142,5 +142,47 @@ doOwn = false
 			a8 g f2.~ | f2. r4 |
 		}
 	}
+}
+{% endif %}
+{% if part == "LyricsFake" %}\lyricmode {
+
+	% part "A"
+	Come on ba -- by, Let The Good Times Roll, __ _ _ come on ba -- by, let me thrill your soul; __ _
+	come on, __ _ ba -- by, Let The Good Times Roll, __ _ _ roll on and on. __ _ _ _
+
+	% part "A"
+	Come on, ba -- by, let me hold you tight, __ _ _ tell me ev -- 'ry -- thing is right to -- night; __ _
+	come on, __ _ ba -- by, Let The Good Times Roll, __ _ _ roll __ _ on and
+	on. __ _ _
+	on. __ _ _
+
+	% part "B"
+	Feel so good __ _ in my arms, su -- gar ba -- by, you're my good luck charm.
+
+	% part "A"
+	Come on, ba -- by, Let The Good Times Roll, __ _ _ come on, ba -- by, let me thrill your soul; __ _
+	come on, __ _ ba -- by, Let The Good Times Roll, __ _ _ roll __ _ on and
+	on. __ _ _
+	on. __ _ _
+}
+{% endif %}
+{% if part == "LyricsmoreFake" %}\lyricmode {
+
+	% part "A"
+	Come on ba -- by, gon -- na have a ball, __ _ _ put our trou -- bles up a -- gainst the wall; __ _
+	come on, __ _ ba -- by, Let The Good Times Roll, __ _ _ roll on and on. __ _ _ _
+
+	% part "A"
+	Come on, ba -- by, let us paint the town, __ _ _ don't let noth -- in' ev -- er bring us down; __ _
+}
+{% endif %}
+{% if part == "LyricsmoremoreFake" %}\lyricmode {
+
+	% part "A"
+	_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _
+	_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _
+
+	% part "A"
+	Let's go, ba -- by, on a cra -- zy fling, __ _ _ love can be __ _ such a swing -- in' thing; __ _
 }
 {% endif %}

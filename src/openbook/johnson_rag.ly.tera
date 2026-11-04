@@ -26,7 +26,7 @@ remark = "Jimmy Dorsey and his Orchestra (1950)"
 [versions.Fake]
 doChords = true
 doVoice = true
-doLyrics = false
+doLyrics = true
 doLyricsmore = false
 doLyricsmoremore = false
 doChordBars = false
@@ -43,8 +43,8 @@ doOwn = false
 	- put in the chords (fake book).
 	- put in the tune (fake book).
 	- added youtube performances.
+	- put in the lyrics (fake book).
 	TODO:
-	- add the lyrics.
 	- check the chords (fake book).
 	- check the tune (fake book).
 	- hear the tune to check that it is right and adjust the tempo.
@@ -105,5 +105,25 @@ doOwn = false
 	% part "A"
 	b2 r8. g16 b8. g16 | e4 ees8 d~ d4 ais'4 | b2 r8. g16 b8. g16 | e4 ees8 d~ d4 b'4 |
 	c2 r8. a16 c8. a16 | c8. c16 a8 fis~ fis4 b8 c~ | c8 a b c~ c a c a | bes4 a8 g~ g4 r4 |
+}
+{% endif %}
+{% if part == "LyricsFake" %}\lyricmode {
+	Hep,
+
+	% part "A"
+	hep, there goes the John -- son Rag. __ Hoy, hoy, there goes the lat -- est shag. __ Ho,
+	ho, it real -- ly is -- n't a gag. __ Hep, hep, there goes the John -- son Rag. __ Jump,
+
+	% part "A"
+	jump, don't let your left foot drag. __ Jeep, jeep, it's like a game of tag. __ Juke,
+	juke, it's ev -- en good for a stag. __ Jump, jump and do the John -- son Rag. __
+
+	% part "B"
+	If you're feel -- in' in the groove, __ it sends you out of the world. __
+	Fun -- ny how it makes you move; __ I don't wan -- na coax __ but don't __ be a 'Mokes'. __ Zig,
+
+	% part "A"
+	zig, then add a zig zig sag. __ Zoop, zoop, just let your shoul -- ders wag. __ Zoom,
+	zoom, and now it's right in the bag. __ Get hep, __ and get hap -- py with the John -- son Rag. __
 }
 {% endif %}

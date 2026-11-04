@@ -26,7 +26,7 @@ remark = "Nina Simone (1961)"
 [versions.Fake]
 doChords = true
 doVoice = true
-doLyrics = false
+doLyrics = true
 doLyricsmore = false
 doLyricsmoremore = false
 doChordBars = false
@@ -43,8 +43,8 @@ doOwn = false
 	- put in the chords (fake book).
 	- put in the tune (fake book).
 	- added youtube performances.
+	- put in the lyrics (fake book).
 	TODO:
-	- add the lyrics.
 	- check the chords (fake book).
 	- check the tune (fake book).
 	- hear the tune to check that it is right and adjust the tempo.
@@ -95,5 +95,21 @@ doOwn = false
 	e8. g16 a8 g~ g4. a8 | b8. g16 b8 g~ g8 e4. | c8. d16 e8 g~ g8. ees16 a4 | e!1 |
 	e8. g16 a8 g~ g8. g16 fis8. g16 | c4 a f16 e d4. | e8. g16 a8 g~ g4 c,8 d |
 	e8. g16 a8 g~ g4 c,8 d | e8 g a c d16 c a8 g4 | c1 |
+}
+{% endif %}
+{% if part == "LyricsFake" %}\lyricmode {
+
+	% part "A"
+	Mem -- phis In June, __ a shad -- y ve -- ran -- da un -- der a Sun -- day blue sky.
+	Mem -- phis In June __ and cous -- in A -- man -- da's mak -- in' a rhu -- barb pie.
+
+	% part "B"
+	I can hear the clock in -- side a -- tick -- in' and tock -- in'. Ev -- 'ry -- thing is peace -- ful -- ly dan -- dy. __ _
+	I can see old gran -- ny 'cross the street still a -- rock -- in', watch -- in' the neigh -- bors go by.
+
+	% part "A"
+	Mem -- phis In June, __ with sweet o -- le -- an -- der blow -- ing per -- fume __ in the air.
+	Up jumps a moon __ to make it that much grand -- _ er. It's par -- a -- dise; __ broth -- er,
+	take my ad -- vice, __ noth -- in's half as nice as Mem -- _ phis In June.
 }
 {% endif %}

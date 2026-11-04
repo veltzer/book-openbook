@@ -26,9 +26,9 @@ remark = "Mike Kennedy, the 45 RPM single (1972)"
 [versions.Fake]
 doChords = true
 doVoice = true
-doLyrics = false
-doLyricsmore = false
-doLyricsmoremore = false
+doLyrics = true
+doLyricsmore = true
+doLyricsmoremore = true
 doChordBars = false
 doGuitar = false
 doExtra = false
@@ -43,8 +43,10 @@ doOwn = false
 	- put in the chords (fake book).
 	- put in the tune (fake book).
 	- added youtube performances.
+	- put in the lyrics (fake book).
 	TODO:
-	- add the lyrics.
+	- the fake book prints four verse lines but only three lyrics lines can be typed; the fourth verse (My girl, you'll al-ways be, noth-in' will change me, be with me, re-mem-ber I'm yours, bye, bye, bye, bye;) is not typed in.
+	- the three lyrics lines mirror the fake book layout: under the 2,4 ending the first line carries the continuation of the second verse (bye, bye, bye, bye, bye;) and the second line the continuation of the fourth (yours, bye, bye, bye, bye;).
 	- check the chords (fake book).
 	- check the tune (fake book).
 	- hear the tune to check that it is right and adjust the tempo.
@@ -128,5 +130,37 @@ doOwn = false
 			f8 d c2.~ | c8 r r4 r2 |
 		}
 	}
+}
+{% endif %}
+{% if part == "LyricsFake" %}\lyricmode {
+
+	% part "A"
+	Hey, girl, throw me a kiss, __ give me your hand, __ wish me good luck, __ and tell __ me, __ good --
+	bye, bye, bye, bye, __ _
+	bye, bye, bye, bye,
+	bye; __ _ _ 'cause to -- day I'm on __ my way __ to Lou -- is -- i -- an -- a.
+	And to -- mor -- row I'll __ be far __ a -- way from you. __ _ _ _ _
+
+	% part "B"
+	Lou -- ise, Lou -- ise, Lou -- ise, Lou -- ise -- i -- an -- a. __ "(Lou" -- ise, I'm go -- in' back __ "to)"
+	Lou -- ise, Lou -- ise, Lou -- ise, Lou -- is -- i -- an -- a, __ "(I'm" on my way __ "to)"
+	Lou -- ise, Lou -- ise, Lou -- ise, Lou -- ise, good -- bye. __ _ _
+	_ _
+}
+{% endif %}
+{% if part == "LyricsmoreFake" %}\lyricmode {
+
+	% part "A"
+	Hey, girl, op -- en your arms, __ reach out at me, __ show me your love, __ em -- brace __ me, __ "good-"
+	_ _ _ _ _
+	yours, bye, bye, bye,
+	bye;
+}
+{% endif %}
+{% if part == "LyricsmoremoreFake" %}\lyricmode {
+
+	% part "A"
+	Hey, girl, for -- get me not, __ lis -- ten to me, __ wor -- ry you not, __ I leave __ you, __ my
+	love, bye, bye, bye, __ _
 }
 {% endif %}

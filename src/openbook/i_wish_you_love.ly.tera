@@ -26,7 +26,7 @@ remark = "Nancy Wilson (1964)"
 [versions.Fake]
 doChords = true
 doVoice = true
-doLyrics = false
+doLyrics = true
 doLyricsmore = false
 doLyricsmoremore = false
 doChordBars = false
@@ -43,8 +43,8 @@ doOwn = false
 	- put in the chords (fake book).
 	- put in the tune (fake book).
 	- added youtube performances.
+	- put in the lyrics (fake book).
 	TODO:
-	- add the lyrics.
 	- check the chords (fake book).
 	- check the tune (fake book).
 	- hear the tune to check that it is right and adjust the tempo.
@@ -126,5 +126,27 @@ doOwn = false
 			c2 \tuplet 3/2 { d,4 d d } | ees1~ | ees2. r4 |
 		}
 	}
+}
+{% endif %}
+{% if part == "LyricsFake" %}\lyricmode {
+	I wish you
+
+	% part "A"
+	blue -- birds __ in the spring to give your heart a song to sing; and then a
+	kiss, but more than this I Wish You Love. __ And in Ju --
+
+	% part "A"
+	ly a lem -- on -- ade to cool you in some leaf -- y glade; I wish you
+	health and more than wealth, I Wish You Love. __ My break -- ing
+
+	% part "B"
+	heart and I a -- gree that you and I could nev -- er be so with my
+	best, my ver -- y best, I set you free. __ I wish you
+
+	% part "A"
+	shel -- ter __ from the storm, a co -- zy fire to keep you warm. But most of
+	all, when snow -- flakes
+	fall, I Wish You Love. I wish you
+	fall, I Wish You Love. __
 }
 {% endif %}

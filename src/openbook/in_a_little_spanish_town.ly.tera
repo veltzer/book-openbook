@@ -26,7 +26,7 @@ remark = "Bing Crosby (1956)"
 [versions.Fake]
 doChords = true
 doVoice = true
-doLyrics = false
+doLyrics = true
 doLyricsmore = false
 doLyricsmoremore = false
 doChordBars = false
@@ -43,8 +43,8 @@ doOwn = false
 	- put in the chords (fake book).
 	- put in the tune (fake book).
 	- added youtube performances.
+	- put in the lyrics (fake book).
 	TODO:
-	- add the lyrics.
 	- check the chords (fake book).
 	- check the tune (fake book).
 	- hear the tune to check that it is right and adjust the tempo.
@@ -120,5 +120,28 @@ doOwn = false
 			g2.~ | g2 r4 |
 		}
 	}
+}
+{% endif %}
+{% if part == "LyricsFake" %}\lyricmode {
+
+	% part "A"
+	In A Lit -- tle Span -- ish Town, 'twas on a night like this. __
+	Stars were peek -- a -- boo -- ing down, 'twas on a night like this. __
+
+	% part "B"
+	I whis -- pered 'Be true to me.' __ And she
+	sighed; 'Si, Si.' __
+
+	% part "A"
+	Man -- y skies have turned, to gray, be -- cause we're far a -- part. __
+	Man -- y moons have passed a -- way, and still she's in my heart. __
+
+	% part "C"
+	We made a prom -- ise and sealed it with a kiss,
+	In A Lit -- tle Span -- ish Town, 'twas on a night like
+
+	% part "Volta"
+	this. __
+	this. __
 }
 {% endif %}

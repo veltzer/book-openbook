@@ -25,7 +25,7 @@ remark = "Thelonious Monk solo piano"
 [versions.Fake]
 doChords = true
 doVoice = true
-doLyrics = false
+doLyrics = true
 doLyricsmore = false
 doLyricsmoremore = false
 doChordBars = false
@@ -42,11 +42,11 @@ doOwn = false
 	- put in the chords (fake book).
 	- put in the tune (fake book).
 	- added youtube performances.
+	- put in the lyrics (fake book).
 	TODO:
 	- check the chords (fake book).
 	- check the tune (fake book).
 	- hear the tune to check that it is right and adjust the tempo.
-	- add the lyrics.
 {% endif %}
 {% if part == "ChordsFake" %}\chordmode {
 	\startChords
@@ -120,5 +120,28 @@ doOwn = false
 			c1~ | c2~ c8 r r4 |
 		}
 	}
+}
+{% endif %}
+{% if part == "LyricsFake" %}\lyricmode {
+
+	% part "A"
+	I Should Care, I should go a -- round weep -- ing.
+	I Should Care, I should go with -- out sleep -- ing.
+
+	% part "B"
+	Strange -- ly e -- nough I sleep well 'cept for a dream or two,
+	but, then, I count my sheep well. Fun -- ny how sheep can lull you to sleep. So,
+
+	% part "A"
+	I Should Care, I should let it up -- set me.
+	I Should Care, but it just does -- n't get me.
+
+	% part "C"
+	May -- be I won't find some -- one as love -- ly as
+	you, but, I Should Care and I
+
+	% part "Volta"
+	do. __
+	do. __
 }
 {% endif %}

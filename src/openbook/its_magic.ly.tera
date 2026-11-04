@@ -26,7 +26,7 @@ remark = "Sarah Vaughan"
 [versions.Fake]
 doChords = true
 doVoice = true
-doLyrics = false
+doLyrics = true
 doLyricsmore = false
 doLyricsmoremore = false
 doChordBars = false
@@ -43,8 +43,8 @@ doOwn = false
 	- put in the chords (fake book).
 	- put in the tune (fake book).
 	- added youtube performances.
+	- put in the lyrics (fake book).
 	TODO:
-	- add the lyrics.
 	- check the chords (fake book).
 	- check the tune (fake book).
 	- hear the tune to check that it is right and adjust the tempo.
@@ -119,5 +119,28 @@ doOwn = false
 			bes1~ | bes2. r4 |
 		}
 	}
+}
+{% endif %}
+{% if part == "LyricsFake" %}\lyricmode {
+
+	% part "A"
+	You sigh, the song be -- gins, you speak and I hear vi -- o -- lins, It's Mag -- ic. __
+	The stars de -- sert the skies and rush to nes -- tle in your eyes, It's Mag -- ic. __ With -- out a
+
+	% part "B"
+	gold -- en wand __ or mys -- tic charms __ fan -- tas -- tic things be -- gin when
+	I am in your arms. __
+
+	% part "A"
+	When we walk hand in hand the world be -- comes a won -- der -- land, It's Mag -- ic. __
+	How else can I ex -- plain those rain -- bows when there is no rain, It's Mag -- ic? __ Why do I
+
+	% part "C"
+	tell my -- self __ these things that hap -- pen are all real -- ly true,
+	when in my heart I know the mag -- ic is my love for
+
+	% part "Volta"
+	you? __
+	you? __
 }
 {% endif %}

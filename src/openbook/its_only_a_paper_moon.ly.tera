@@ -26,7 +26,7 @@ remark = "Ella Fitzgerald (Verve Records 1960)"
 [versions.Fake]
 doChords = true
 doVoice = true
-doLyrics = false
+doLyrics = true
 doLyricsmore = false
 doLyricsmoremore = false
 doChordBars = false
@@ -43,8 +43,8 @@ doOwn = false
 	- put in the chords (fake book).
 	- put in the tune (fake book).
 	- added youtube performances.
+	- put in the lyrics (fake book).
 	TODO:
-	- add the lyrics.
 	- check the chords (fake book).
 	- check the tune (fake book).
 	- hear the tune to check that it is right and adjust the tempo.
@@ -119,5 +119,27 @@ doOwn = false
 			g2. r4 |
 		}
 	}
+}
+{% endif %}
+{% if part == "LyricsFake" %}\lyricmode {
+
+	% part "A"
+	Say, It's On -- ly A Pa -- per Moon __ sail -- ing o -- ver a card -- board sea, __
+	but it would -- n't be make be -- lieve __ if you __ be -- lieved __ in me. __
+
+	% part "A"
+	Yes, it's on -- ly a can -- vas sky __ hang -- ing o -- ver a mus -- lin tree, __
+	but it would -- n't be make be -- lieve, __ if you __ be -- lieved __ in me. __ With --
+
+	% part "B"
+	out your love, it's a hon -- ky -- tonk pa -- rade. With --
+	out your love, it's a mel -- o -- dy played in a pen -- ny ar -- cade.
+
+	% part "A"
+	It's a Bar -- num and Bai -- ley world, __ just as phon -- y as it can be, __
+	but it would -- n't be make be -- lieve __ if you __ be -- lieved __ in me. __
+
+	% part "Volta"
+	_
 }
 {% endif %}

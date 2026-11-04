@@ -25,7 +25,7 @@ remark = "Horace Silver Trio"
 [versions.Fake]
 doChords = true
 doVoice = true
-doLyrics = false
+doLyrics = true
 doLyricsmore = false
 doLyricsmoremore = false
 doChordBars = false
@@ -42,12 +42,12 @@ doOwn = false
 	- put in the chords (fake book).
 	- put in the tune (fake book).
 	- added youtube performances.
+	- put in the lyrics (fake book).
 	TODO:
 	- check the chords (fake book).
 	- check the tune (fake book).
 	- hear the tune to check that it is right and adjust the tempo.
 	- the fake book prints Fm7#5 in the second bar of the last A (Fm7b5 in the same place elsewhere), check it.
-	- add the lyrics.
 {% endif %}
 {% if part == "ChordsFake" %}\chordmode {
 	\startChords
@@ -103,5 +103,27 @@ doOwn = false
 	% part "A"
 	bes2 bes | bes bes | r4 \tuplet 3/2 { bes16 ces bes } a!16 bes des4. bes16 aes | bes1 |
 	r4 r16 aes aes ges aes4. bes8 | ges8 ees~ ees2. | r4 r16 ges \tuplet 3/2 { f32 ges f } ees16 des4. bes8 | aes'1 |
+}
+{% endif %}
+{% if part == "LyricsFake" %}\lyricmode {
+
+	% part "A"
+	In one room, deep gloom shel -- ter -- ing her from joys she once knew
+	there sits a Lone -- ly Wo -- man __ be -- liev -- ing her life __ _ is
+	through. Though she once lived for laugh -- ter
+
+	% part "A"
+	days bring no spring win -- ter is here to stay for a --
+	while too drained of tears for cry -- ing, __ she's too a -- lone to
+	smile long -- ing for her lov -- er
+
+	% part "B"
+	wish that I could tell her griev -- ing too can pass __ and so this
+	mood soon will lift like a veil then
+
+	% part "A"
+	some day she'll stray far from the som -- ber world of the
+	past no more a Lone -- ly Wo -- man __ she'll fol -- low __ _ the sun at
+	last.
 }
 {% endif %}

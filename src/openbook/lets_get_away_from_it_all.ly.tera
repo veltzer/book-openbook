@@ -25,7 +25,7 @@ remark = "Frank Sinatra on Come Fly With Me (1958)"
 [versions.Fake]
 doChords = true
 doVoice = true
-doLyrics = false
+doLyrics = true
 doLyricsmore = false
 doLyricsmoremore = false
 doChordBars = false
@@ -42,8 +42,8 @@ doOwn = false
 	- put in the chords (fake book).
 	- put in the tune (fake book).
 	- added youtube performances.
+	- put in the lyrics (fake book).
 	TODO:
-	- add the lyrics.
 	- check the chords (fake book).
 	- check the tune (fake book).
 	- hear the tune to check that it is right and adjust the tempo.
@@ -100,5 +100,24 @@ doOwn = false
 	% part "A"
 	g8 g g aes~ aes bes aes g~ | g8 ees4.~ ees2 | c'8 c c c~ c d c bes~ | bes1 |
 	aes8 aes g aes~ aes bes4 aes8 | g8 aes bes c~ c c4. | c8 c c d~ d d d ees~ | ees2. r4 |
+}
+{% endif %}
+{% if part == "LyricsFake" %}\lyricmode {
+
+	% part "A"
+	Let's take a boat __ to Ber -- mu -- da, __ let's take a plane __ to Saint Paul, __
+	let's take a kay -- ak to Quin -- cy or Ny -- ack, Let's Get A -- way __ From It All. __
+
+	% part "A"
+	Let's take a trip __ in a trail -- er, __ no need to come __ back at all. __
+	Let's take a pow -- der to Bos -- ton for chow -- der, Let's Get A -- way __ From It All. __ We'll
+
+	% part "B"
+	trav -- el 'round from town to town, __ we'll vis -- it ev __ 'ry state,
+	A -- las -- ka and Ha -- wa -- ii, too, __ then all the for -- ty eight. __ _
+
+	% part "A"
+	Let's go a -- gain __ to Ni -- a -- g'ra __ this time we'll look __ at the 'Fall.' __
+	Let's leave our hut, __ Dear, get out of our rut, __ Dear, Let's Get A -- way __ From It All. __
 }
 {% endif %}

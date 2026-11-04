@@ -26,8 +26,8 @@ remark = "Frank Sinatra"
 [versions.Fake]
 doChords = true
 doVoice = true
-doLyrics = false
-doLyricsmore = false
+doLyrics = true
+doLyricsmore = true
 doLyricsmoremore = false
 doChordBars = false
 doGuitar = false
@@ -43,8 +43,8 @@ doOwn = false
 	- put in the chords (fake book).
 	- put in the tune (fake book).
 	- added youtube performances.
+	- put in the lyrics (fake book).
 	TODO:
-	- add the lyrics.
 	- check the chords (fake book).
 	- check the tune (fake book).
 	- hear the tune to check that it is right and adjust the tempo.
@@ -101,5 +101,26 @@ doOwn = false
 			r4 a a a | a8 g bes a~ a4 e | f g a c | d2 e | c1~ | c2. r4 |
 		}
 	}
+}
+{% endif %}
+{% if part == "LyricsFake" %}\lyricmode {
+
+	% part "A"
+	It seems __ to me I've Heard That Song Be -- fore; __ it's from an old fa -- mil -- iar score, __
+	I know it
+
+	% part "Volta"
+	well, that mel -- o -- dy. __ It's fun -- ny how a theme __
+	re -- calls a fa -- vor -- ite dream, __ a dream that brought you so close __ to me. __
+	I know each
+	more's a mem -- o -- ry. __ Please have them play it a -- gain, __
+	and I'll re -- mem -- ber just when __ I heard that love -- ly song be -- fore. __
+}
+{% endif %}
+{% if part == "LyricsmoreFake" %}\lyricmode {
+
+	% part "A"
+	word __ be -- cause I've Heard That Song Be -- fore, __ the ly -- ric said, 'For -- ev -- er -- more.' __
+	For -- ev -- er
 }
 {% endif %}

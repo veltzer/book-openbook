@@ -26,7 +26,7 @@ remark = "Frank Sinatra (In the Wee Small Hours, 1955)"
 [versions.Fake]
 doChords = true
 doVoice = true
-doLyrics = false
+doLyrics = true
 doLyricsmore = false
 doLyricsmoremore = false
 doChordBars = false
@@ -43,8 +43,8 @@ doOwn = false
 	- put in the chords (fake book).
 	- put in the tune (fake book).
 	- added youtube performances.
+	- put in the lyrics (fake book).
 	TODO:
-	- add the lyrics.
 	- check the chords (fake book).
 	- check the tune (fake book).
 	- hear the tune to check that it is right and adjust the tempo.
@@ -124,5 +124,24 @@ doOwn = false
 			c1~ | c1 |
 		}
 	}
+}
+{% endif %}
+{% if part == "LyricsFake" %}\lyricmode {
+
+	% part "A"
+	I'll Be A -- round no mat -- ter how you treat me now, I'll Be A -- round from now on. __
+
+	% part "A"
+	Your lat -- est love can nev -- er last, and when it's past I'll Be A -- round when he's gone. __ Good --
+
+	% part "B"
+	bye a -- gain, and if you find a love like mine, just now and then drop a line __ to say you're feel -- ing fine. __ And
+
+	% part "A"
+	when things go wrong, per -- haps you'll see you're meant for me, so, I'll Be A -- round when he's
+
+	% part "Volta"
+	gone. __
+	gone. __
 }
 {% endif %}

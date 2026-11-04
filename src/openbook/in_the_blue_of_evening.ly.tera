@@ -26,7 +26,7 @@ remark = "Rossano Sportiello"
 [versions.Fake]
 doChords = true
 doVoice = true
-doLyrics = false
+doLyrics = true
 doLyricsmore = false
 doLyricsmoremore = false
 doChordBars = false
@@ -43,8 +43,8 @@ doOwn = false
 	- put in the chords (fake book).
 	- put in the tune (fake book).
 	- added youtube performances.
+	- put in the lyrics (fake book).
 	TODO:
-	- add the lyrics.
 	- check the chords (fake book).
 	- check the tune (fake book).
 	- hear the tune to check that it is right and adjust the tempo.
@@ -127,5 +127,28 @@ doOwn = false
 			g4 f2.~ | f2. r4 |
 		}
 	}
+}
+{% endif %}
+{% if part == "LyricsFake" %}\lyricmode {
+
+	% part "A"
+	In The Blue Of Eve -- ning, when you ap -- pear close to me, dear one, __
+	there in the dusk we'll share a dream __ re -- ve -- rie.
+
+	% part "A"
+	In The Blue Of Eve -- ning, while crick -- ets call and stars are fal -- ling, __
+	there 'neath the star -- lit sky you'll come to me. __ _
+
+	% part "B"
+	In the sha -- dows of the night we'll stand, I'll touch your hand and then
+	soft -- ly, as your love -- ly eyes en -- treat, our lips will meet a -- gain.
+
+	% part "A"
+	In The Blue Of Eve -- ning, night winds a -- bove whisp -- 'ring 'I love you.' __
+	There we will find ro -- mance, In The Blue Of
+
+	% part "Volta"
+	Eve -- ning.
+	Eve -- ning. __
 }
 {% endif %}

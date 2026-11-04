@@ -26,8 +26,8 @@ remark = "Nina Simone (1958)"
 [versions.Fake]
 doChords = true
 doVoice = true
-doLyrics = false
-doLyricsmore = false
+doLyrics = true
+doLyricsmore = true
 doLyricsmoremore = false
 doChordBars = false
 doGuitar = false
@@ -43,8 +43,8 @@ doOwn = false
 	- put in the chords (fake book).
 	- put in the tune (fake book).
 	- added youtube performances.
+	- put in the lyrics (fake book).
 	TODO:
-	- add the lyrics.
 	- check the chords (fake book).
 	- check the tune (fake book).
 	- hear the tune to check that it is right and adjust the tempo.
@@ -105,5 +105,26 @@ doOwn = false
 	e2. c'4 | c,4 d e g | a a2 c4 | a c a c | a a2 cis4 |
 	a cis a cis | a2 bes | g a |
 	f4 f2 f4 | a a g8 g g4 | f1~ | f2. r4 |
+}
+{% endif %}
+{% if part == "LyricsFake" %}\lyricmode {
+
+	% part "A"
+	Sit there and count your fin -- gers what can you do? Old girl you're through.
+	Sit there and count your lit -- tle fin -- gers; un -- luck -- y Lit -- tle Girl Blue. __
+
+	% part "Volta"
+	No use, old
+
+	% part "B"
+	girl you may as well sur -- ren -- der, your hope is get -- ting slen -- der,
+	why won't some -- bod -- y send a ten -- der blue boy to cheer a Lit -- tle Girl Blue? __
+}
+{% endif %}
+{% if part == "LyricsmoreFake" %}\lyricmode {
+
+	% part "A"
+	Sit there and count the rain -- drops fall -- ing on you. It's time you knew,
+	all you can count on is the rain -- drops that fall on Lit -- tle Girl Blue. __
 }
 {% endif %}

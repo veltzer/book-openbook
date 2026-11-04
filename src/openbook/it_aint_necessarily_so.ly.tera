@@ -26,8 +26,8 @@ remark = "Miles Davis and Gil Evans from Porgy and Bess (1958)"
 [versions.Fake]
 doChords = true
 doVoice = true
-doLyrics = false
-doLyricsmore = false
+doLyrics = true
+doLyricsmore = true
 doLyricsmoremore = false
 doChordBars = false
 doGuitar = false
@@ -43,8 +43,8 @@ doOwn = false
 	- put in the chords (fake book).
 	- put in the tune (fake book).
 	- added youtube performances.
+	- put in the lyrics (fake book).
 	TODO:
-	- add the lyrics.
 	- check the chords (fake book).
 	- check the tune (fake book).
 	- hear the tune to check that it is right and adjust the tempo.
@@ -175,5 +175,55 @@ doOwn = false
 	bes2. r8 g | \tuplet 3/2 { d'4 des g, } \tuplet 3/2 { bes g bes } | \tuplet 3/2 { g bes g } \tuplet 3/2 { bes g bes } | \tuplet 3/2 { g bes g } \tuplet 3/2 { f d f } | g1~ | g2 r4 g |
 	\tuplet 3/2 { a bes c } \tuplet 3/2 { a bes c } | d2~ \tuplet 3/2 { d4 r d, } | \tuplet 3/2 { e fis g } \tuplet 3/2 { gis b a } | \tuplet 3/2 { g! a ais } \tuplet 3/2 { b d c } |
 	\tuplet 3/2 { b c d } \tuplet 3/2 { e e e } | e1~ | e~ | e~ | e4 r r2 |
+}
+{% endif %}
+{% if part == "LyricsFake" %}\lyricmode {
+
+	It
+
+	% part "A"
+	Ain't Ne -- ces -- sa -- ri -- ly So, It Ain't Ne -- ces -- sa -- ri -- ly So, de
+	t'ings dat yo' li' -- ble to read in de Bi -- ble, It Ain't Ne -- ces -- sa -- ri -- ly
+	So. __ Li'l
+	my!
+
+	% part "B"
+	Wa -- doo, __ "(Wa" -- "doo,)" __ zim bam bod -- dle -- oo. "(zim" bam bod -- dle -- "oo.)"
+	Hoo -- dle ah da wa da, "(Hoo" -- dle ah da wa "da,)" scat -- ty wah. __ "(scat" -- ty "wah.)" Yeah! Oh,
+
+	% part "A"
+	Jo -- nah, he lives in de whale, oh, Jo -- nah, he lived in de whale. For
+	he made his home in dat fish -- 's ab -- do -- men, oh, Jo -- nah, he lived in de
+	whale. __ Li'l
+	stream.
+
+	% part "B"
+	Wa -- doo, __ "(Wa" -- "doo,)" __ zim bam bod -- dle -- oo. "(zim" bam bod -- dle -- "oo.)"
+	Hoo -- dle ah da wa da, "(Hood" -- dle ah da wa "da,)" Scat -- ty wah, __ "(Scat" ty "wah,)" __ Yeah! It
+
+	% part "C"
+	Ain't Ne -- ces -- sa -- ri -- ly So, It Ain't Ne -- ces -- sa -- ri -- ly So, dey
+	tell all you chil -- lun de deb -- ble's a vil -- lun, but 'tain't ne -- ces -- sa -- ri -- ly so. __ To get in -- to Heb -- ben don'
+	snap for a seb -- ben! Live clean! Don' have no fault. Oh I takes dat gos -- pel when --
+	ev -- er it's pos' -- ble, but wid a grain of salt. Me -- thus' -- lah lived nine hun -- dred years, Me -- thus' -- lah lived nine hun -- dred
+	years. But who calls dat liv -- in' when no gal 'll give in to no man what's nine hun -- dred years? __ I'm
+	preach -- in' dis ser -- mon to show, __ it ain't nes -- sa, ain't nes -- sa, ain't nes -- sa, ain't nes -- sa,
+	ain't nes -- ces -- sa -- ri -- ly so. __
+}
+{% endif %}
+{% if part == "LyricsmoreFake" %}\lyricmode {
+
+	Da --
+
+	% part "A"
+	vid was small, but oh _ my! Li'l Da -- vid was small, but oh my! He
+	fought big Go -- li -- ath who lay down and di -- eth! Li'l Da -- vid was small, but oh
+
+	% part "B"
+	_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _
+
+	% part "A"
+	Mo -- ses was found in a stream, Li'l Mo -- ses was found in a stream. He
+	float -- ed on wat -- er 'til ole Phar -- aoh's daugh -- ter she fished him, she says, from that
 }
 {% endif %}

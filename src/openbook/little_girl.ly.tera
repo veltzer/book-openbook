@@ -26,7 +26,7 @@ remark = "Nat King Cole Trio"
 [versions.Fake]
 doChords = true
 doVoice = true
-doLyrics = false
+doLyrics = true
 doLyricsmore = false
 doLyricsmoremore = false
 doChordBars = false
@@ -43,8 +43,8 @@ doOwn = false
 	- put in the chords (fake book).
 	- put in the tune (fake book).
 	- added youtube performances.
+	- put in the lyrics (fake book).
 	TODO:
-	- add the lyrics.
 	- check the chords (fake book).
 	- check the tune (fake book).
 	- hear the tune to check that it is right and adjust the tempo.
@@ -105,5 +105,21 @@ doOwn = false
 	% part "C"
 	f2 ees | d'2 a | c4 r bes d~ | d2 fis,4 g |
 	c2 fis,4 g | d'2 d | bes1~ | bes4 r r2 |
+}
+{% endif %}
+{% if part == "LyricsFake" %}\lyricmode {
+	Lit -- tle
+
+	% part "A"
+	Girl, __ you're the one girl for me, __ Lit -- tle Girl, __ you're as sweet as can be. __ Just a
+
+	% part "B"
+	glance at you meant love from the start, __ and oh what a thrill __ came in -- to my heart. __ Lit -- tle
+
+	% part "A"
+	Girl, __ with your cute lit -- tle ways, __ I am yours __ for the rest of my days. __ And this
+
+	% part "C"
+	great big world will be di -- vine, __ Lit -- tle Girl, when you're mine, all mine. __
 }
 {% endif %}

@@ -26,7 +26,7 @@ remark = "Jimmy Dorsey and his Orchestra (1942)"
 [versions.Fake]
 doChords = true
 doVoice = true
-doLyrics = false
+doLyrics = true
 doLyricsmore = false
 doLyricsmoremore = false
 doChordBars = false
@@ -43,8 +43,8 @@ doOwn = false
 	- put in the chords (fake book).
 	- put in the tune (fake book).
 	- added youtube performances.
+	- put in the lyrics (fake book).
 	TODO:
-	- add the lyrics.
 	- check the chords (fake book).
 	- check the tune (fake book).
 	- hear the tune to check that it is right and adjust the tempo.
@@ -105,5 +105,26 @@ doOwn = false
 	% part "A"
 	e8. g16 b8 r d4 c8 e,~ | e2. e8 f | fis8. a16 c8 r e4 d8 a~ | a2. a8 e |
 	f8. a16 b8 r e4 d8 a~ | a2. a8 dis, | e8. g16 a8. c16 bes4 aes8 c~ | c2. r4 |
+}
+{% endif %}
+{% if part == "LyricsFake" %}\lyricmode {
+
+	They
+
+	% part "A"
+	call it that Jer -- sey Bounce, __ a rhy -- thm that real -- ly counts. __ _ The tem --
+	per -- 'ture al -- ways mounts __ _ where -- ev -- er they play the fun -- ny rhy -- thm they play. __ _ It
+
+	% part "A"
+	start -- ed on Jour -- nal Square, __ and some -- bo -- dy heard it there. __ _ He put
+	it right on the air __ _ and now you hear it ev -- 'ry -- where. __ _
+
+	% part "B"
+	Up -- town __ gave it new licks, __ down -- town, __ add -- ed some tricks, __
+	no -- town, __ makes it sound the same __ as where it came from! __ So
+
+	% part "A"
+	if you don't feel so hot, __ go out to some Jer -- sey spot, __ _ and wheth --
+	er you're hep or not __ _ the Jer -- sey Bounce 'll make you swing. __ _
 }
 {% endif %}

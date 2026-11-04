@@ -26,7 +26,7 @@ remark = "Sarah Vaughan with Clifford Brown (1954)"
 [versions.Fake]
 doChords = true
 doVoice = true
-doLyrics = false
+doLyrics = true
 doLyricsmore = false
 doLyricsmoremore = false
 doChordBars = false
@@ -43,8 +43,8 @@ doOwn = false
 	- put in the chords (fake book).
 	- put in the tune (fake book).
 	- added youtube performances.
+	- put in the lyrics (fake book).
 	TODO:
-	- add the lyrics.
 	- check the chords (fake book).
 	- check the tune (fake book).
 	- hear the tune to check that it is right and adjust the tempo.
@@ -103,5 +103,25 @@ doOwn = false
 	e8 e4 e8~ e2~ | e4 e a8. a16 e8. e16 | ees8 ees4 ees8~ ees2~ | ees4 ees aes8. aes16 ees8. ees16 |
 	d8 d4 d8~ d2~ | d4 d \tuplet 3/2 { e4 f g } | c1~ | c2. c8. cis16 |
 	d8 f4. f2~ | f4 f, a8 a a4 | f1~ | f2. r4 |
+}
+{% endif %}
+{% if part == "LyricsFake" %}\lyricmode {
+
+	% part "A"
+	In this world __ of or -- di -- na -- ry peo -- ple, __ ex -- t'ro -- di -- na -- ry
+	peo -- ple, __ I'm glad there is you. __
+
+	% part "A"
+	In this world __ of o -- ver -- rat -- ed pleas -- ures, __ of un -- der -- rat -- ed
+	treas -- ures, __ I'm glad there is you. __ I'll live to
+
+	% part "B"
+	love, __ I'll love to live with you be -- side me. __ This role so
+	new, __ I'll mud -- dle thru' with you to guide me.
+
+	% part "A"
+	In this world __ where man -- y man -- y play at love, __ and hard -- ly an -- y
+	stay in love, __ I'm Glad There Is You. __ More than
+	ev -- er, __ _ I'm Glad There Is You. __
 }
 {% endif %}

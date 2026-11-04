@@ -26,7 +26,7 @@ remark = "John Coltrane from Blue Train (1957)"
 [versions.Fake]
 doChords = true
 doVoice = true
-doLyrics = false
+doLyrics = true
 doLyricsmore = false
 doLyricsmoremore = false
 doChordBars = false
@@ -43,12 +43,12 @@ doOwn = false
 	- put in the chords (fake book).
 	- put in the tune (fake book).
 	- added youtube performances.
+	- put in the lyrics (fake book).
 	TODO:
 	- check the chords (fake book).
 	- check the tune (fake book).
 	- hear the tune to check that it is right and adjust the tempo.
 	- check the placement of the Bb7b5 chord in bar 20 (beat 3 or beat 4 in the fake book).
-	- add the lyrics.
 {% endif %}
 {% if part == "ChordsFake" %}\chordmode {
 	\startChords
@@ -104,5 +104,25 @@ doOwn = false
 	f,2. c4 | c c2 c4 | a'2. c,4 | c c2 c4 |
 	c'4 d c f, | a2. g4 | c4 d c f, | a2. g4 |
 	c2. c,4 | c c2 c4 | f1~ | f2. r4 |
+}
+{% endif %}
+{% if part == "LyricsFake" %}\lyricmode {
+
+	% part "A"
+	I'm Old Fash -- ioned, I love the moon -- light, I
+	love the old fash -- ioned things; __ the
+
+	% part "B"
+	sound of rain up -- on a win -- dow pane, the
+	star -- ry song that A -- pril sings. __
+
+	% part "C"
+	This year's fan -- cies are pass -- ing fan -- cies, but
+	sigh -- ing sighs, hold -- ing hands there my heart un -- der -- stands.
+
+	% part "A"
+	I'm Old Fash -- ioned, but I don't mind it. That's
+	how I want to be as long as you a -- gree to
+	stay old fash -- ioned with me. __
 }
 {% endif %}

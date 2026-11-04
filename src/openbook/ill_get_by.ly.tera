@@ -26,7 +26,7 @@ remark = "Billie Holiday with Teddy Wilson and his Orchestra (1937)"
 [versions.Fake]
 doChords = true
 doVoice = true
-doLyrics = false
+doLyrics = true
 doLyricsmore = false
 doLyricsmoremore = false
 doChordBars = false
@@ -43,8 +43,8 @@ doOwn = false
 	- put in the chords (fake book).
 	- put in the tune (fake book).
 	- added youtube performances.
+	- put in the lyrics (fake book).
 	TODO:
-	- add the lyrics.
 	- check the chords (fake book).
 	- check the tune (fake book).
 	- hear the tune to check that it is right and adjust the tempo.
@@ -120,5 +120,24 @@ doOwn = false
 			c1~ | c2. r4 |
 		}
 	}
+}
+{% endif %}
+{% if part == "LyricsFake" %}\lyricmode {
+
+	% part "A"
+	I'll Get By __ as long as I __ have you. __ Tho' there be rain __ and
+
+	% part "B"
+	dark -- ness too, __ I'll not com -- plain, __ I'll see it through. __ Pov -- er -- ty __ may
+
+	% part "A"
+	come to me, __ that's true. __ But what care I, __ say I'll Get By __ as
+
+	% part "C"
+	long as I __ have
+
+	% part "Volta"
+	you. __
+	you. __
 }
 {% endif %}

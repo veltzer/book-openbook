@@ -26,8 +26,8 @@ remark = "Chet Baker"
 [versions.Fake]
 doChords = true
 doVoice = true
-doLyrics = false
-doLyricsmore = false
+doLyrics = true
+doLyricsmore = true
 doLyricsmoremore = false
 doChordBars = false
 doGuitar = false
@@ -43,11 +43,11 @@ doOwn = false
 	- put in the chords (fake book).
 	- put in the tune (fake book).
 	- added youtube performances.
+	- put in the lyrics (fake book).
 	TODO:
 	- check the chords (fake book).
 	- check the tune (fake book).
 	- hear the tune to check that it is right and adjust the tempo.
-	- add the lyrics.
 {% endif %}
 {% if part == "ChordsFake" %}\chordmode {
 	\startChords
@@ -93,5 +93,19 @@ doOwn = false
 			f2. f4 | f a e g | f1~ | f2. r4 |
 		}
 	}
+}
+{% endif %}
+{% if part == "LyricsFake" %}\lyricmode {
+
+	% part "A"
+	Long A -- go And Far A -- way, I dreamed a dream one day And now that dream is here be -- side me.
+	Long the skies were o -- ver -- cast, But now the clouds have passed: you're here at last! __
+	Just one look and then I knew __ That all I longed for, long a -- go was you. __
+}
+{% endif %}
+{% if part == "LyricsmoreFake" %}\lyricmode {
+
+	% part "A"
+	Chills run up and down my spine, A -- lad -- din's lamp is mine, The dream I dreamed was not de -- nied me.
 }
 {% endif %}

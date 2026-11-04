@@ -26,9 +26,9 @@ remark = "McCoy Tyner"
 [versions.Fake]
 doChords = true
 doVoice = true
-doLyrics = false
-doLyricsmore = false
-doLyricsmoremore = false
+doLyrics = true
+doLyricsmore = true
+doLyricsmoremore = true
 doChordBars = false
 doGuitar = false
 doExtra = false
@@ -43,8 +43,8 @@ doOwn = false
 	- put in the chords (fake book).
 	- put in the tune (fake book).
 	- added youtube performances.
+	- put in the lyrics (fake book).
 	TODO:
-	- add the lyrics.
 	- check the chords (fake book).
 	- check the tune (fake book).
 	- hear the tune to check that it is right and adjust the tempo.
@@ -117,5 +117,36 @@ doOwn = false
 	\time 4/4
 	c'8 c bes bes c c bes4 | d4 c8 bes~ bes4. a8 | bes8 bes a a bes bes a a | c4 bes8 a~ a4. g8 |
 	a8 a g g a a g g | bes4 a8 g~ g2 | f1 | r4 e8 f g4 d | e1~ | e2 gis4 a^\markup { \italic { D.S. al Fine } } |
+}
+{% endif %}
+{% if part == "LyricsFake" %}\lyricmode {
+	If it
+
+	% part "A"
+	takes for -- ev -- er I Will Wait For You, for a thou -- sand sum -- mers I Will Wait For
+	You, 'till you're back be -- side me, 'till I'm hold -- ing you, 'till I hear you sigh here in my
+	arms. An -- "y-"
+	you. __ The
+	love. __
+
+	% part "B"
+	clock will tick a -- way the hours one by one __ and then the time will come when all the wait -- ing's done __ The
+	time when you re -- turn and find me here and run __ straight to my wait -- ing arms. __ If it
+}
+{% endif %}
+{% if part == "LyricsmoreFake" %}\lyricmode {
+	_ _
+
+	% part "A"
+	where you wan -- der, an -- y -- where you go, ev -- 'ry day re -- mem -- ber how I love you
+	so, in your heart be -- lieve what in my heart I know, that for -- ev -- er more I'll wait for
+}
+{% endif %}
+{% if part == "LyricsmoremoreFake" %}\lyricmode {
+	_ _
+
+	% part "A"
+	takes for -- ev -- er I Will Wait For You, for a thou -- sand sum -- mers I Will Wait For
+	You, 'till you're back be -- side me, 'till I'm touch -- ing you, and for -- ev -- er more shar -- ing your
 }
 {% endif %}

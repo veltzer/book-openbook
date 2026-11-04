@@ -26,9 +26,9 @@ remark = "Ella Fitzgerald from Ella Wishes You a Swinging Christmas (1960)"
 [versions.Fake]
 doChords = true
 doVoice = true
-doLyrics = false
-doLyricsmore = false
-doLyricsmoremore = false
+doLyrics = true
+doLyricsmore = true
+doLyricsmoremore = true
 doChordBars = false
 doGuitar = false
 doExtra = false
@@ -43,8 +43,8 @@ doOwn = false
 	- put in the chords (fake book).
 	- put in the tune (fake book).
 	- added youtube performances.
+	- put in the lyrics (fake book).
 	TODO:
-	- add the lyrics.
 	- check the chords (fake book).
 	- check the tune (fake book).
 	- hear the tune to check that it is right and adjust the tempo.
@@ -111,5 +111,36 @@ doOwn = false
 	% part "B"
 	g8. a16 g4 e c' | g2. e8. bes'16 | f4 f8. e16 d4 c8. d16 | e2. e8. f16 |
 	g4 a8. g16 e4 c' | g1 | c8. b!16 a4 bes a8. bes16 | c2. c,4^\markup { \italic { D.S. al Fine } } |
+}
+{% endif %}
+{% if part == "LyricsFake" %}\lyricmode {
+	Oh the
+
+	% part "A"
+	weath -- er out -- side is fright -- ful, but the fire is so de -- light -- ful. _ And
+	since we've no place to go, Let It Snow! Let It Snow! Let It
+	Snow! It
+	Snow! When we
+	Snow!
+
+	% part "B"
+	fin -- al -- ly kiss good -- night, how I'll hate go -- ing out in the storm! But if
+	you'll real -- ly hold me tight, all the way home I'll be warm. The
+}
+{% endif %}
+{% if part == "LyricsmoreFake" %}\lyricmode {
+	does -- n't
+
+	% part "A"
+	show signs of stop -- ping, and I brought some corn for pop -- ping. _ The
+	lights are turned 'way down low,
+}
+{% endif %}
+{% if part == "LyricsmoremoreFake" %}\lyricmode {
+	fi -- re
+
+	% part "A"
+	is slow -- ly dy -- ing, and my dear, we're still good -- by -- ing. But as
+	long as you love me so,
 }
 {% endif %}

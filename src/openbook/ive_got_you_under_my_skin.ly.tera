@@ -26,7 +26,7 @@ remark = "Ella Fitzgerald from the Cole Porter Song Book (1956)"
 [versions.Fake]
 doChords = true
 doVoice = true
-doLyrics = false
+doLyrics = true
 doLyricsmore = false
 doLyricsmoremore = false
 doChordBars = false
@@ -43,8 +43,8 @@ doOwn = false
 	- put in the chords (fake book).
 	- put in the tune (fake book).
 	- added youtube performances.
+	- put in the lyrics (fake book).
 	TODO:
-	- add the lyrics.
 	- check the chords (fake book).
 	- check the tune (fake book).
 	- hear the tune to check that it is right and adjust the tempo.
@@ -136,5 +136,32 @@ doOwn = false
 			ees,2 r2 | r1 | r1 |
 		}
 	}
+}
+{% endif %}
+{% if part == "LyricsFake" %}\lyricmode {
+
+	% part "A"
+	I've Got You __ Un -- der My Skin, __ I've got you __ deep in the heart of me, __
+	so deep in my heart, __ you're real -- ly a part of me. __ I've Got You __ Un -- der My
+	Skin. __ I
+
+	% part "B"
+	tried so __ not to give in, __ I said to my -- self, 'this af --
+	fair nev -- er will go so well.' __ But why should I try to re -- sist when, dar -- ling, I know so well __
+	I've Got You __ Un -- der My Skin. __ I'd
+
+	% part "C"
+	sac -- ri -- fice an -- y -- thing, come what might, for the sake of hav -- ing you near, in spite of a warn -- ing voice that
+	comes in the night and re -- peats and re -- peats in my ear: __ 'Don't you know, lit -- tle fool, __
+	you nev -- er can win, __ use your men -- tal -- i -- ty, __ wake up to re -- al -- i -- ty.' __
+	But each
+
+	% part "D"
+	time I do, just the thought of you makes me stop be -- fore I be -- gin, 'cause I've
+	Got You __ Un -- der My
+
+	% part "Volta"
+	Skin. __ I've
+	Skin.
 }
 {% endif %}

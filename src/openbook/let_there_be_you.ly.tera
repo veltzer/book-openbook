@@ -26,7 +26,7 @@ remark = "The Five Keys (1957)"
 [versions.Fake]
 doChords = true
 doVoice = true
-doLyrics = false
+doLyrics = true
 doLyricsmore = false
 doLyricsmoremore = false
 doChordBars = false
@@ -43,8 +43,8 @@ doOwn = false
 	- put in the chords (fake book).
 	- put in the tune (fake book).
 	- added youtube performances.
+	- put in the lyrics (fake book).
 	TODO:
-	- add the lyrics.
 	- check the chords (fake book).
 	- check the tune (fake book).
 	- hear the tune to check that it is right and adjust the tempo.
@@ -101,5 +101,24 @@ doOwn = false
 	% part "A"
 	\tuplet 3/2 { c4 c c } c b8 a | c4 f,2. | \tuplet 3/2 { b4 b b } b4. g8 | b8 e, e4~ e4. g8 |
 	\tuplet 3/2 { a4 a a } a g8 e | f8 g a2. | c2 \tuplet 3/2 { b4 c d } | c1 |
+}
+{% endif %}
+{% if part == "LyricsFake" %}\lyricmode {
+
+	% part "A"
+	Let there be light, and there was a light. Let there be earth, and there was earth. __ If
+	I had my way, I would ask of Him, please Let There Be You.
+
+	% part "A"
+	Let there be rain, and there was rain. Let there be heav -- ens up a -- bove. __ If
+	I had my way, I would ask of Him, please Let There Be You.
+
+	% part "B"
+	You are the feel -- ing of spring. You're the be -- gin -- ning of dawn.
+	You are the mean -- ing of ev -- 'ry thing. __ How could an -- y -- one go wrong?
+
+	% part "A"
+	Let there be stars, and there were stars. Let there be moon, and there was moon. __ If
+	I had my way, I would ask of Him, please Let There Be You.
 }
 {% endif %}

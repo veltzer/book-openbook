@@ -26,7 +26,7 @@ remark = "Ethel Merman, who introduced the song in George White's Scandals of 19
 [versions.Fake]
 doChords = true
 doVoice = true
-doLyrics = false
+doLyrics = true
 doLyricsmore = false
 doLyricsmoremore = false
 doChordBars = false
@@ -43,8 +43,8 @@ doOwn = false
 	- put in the chords (fake book).
 	- put in the tune (fake book).
 	- added youtube performances.
+	- put in the lyrics (fake book).
 	TODO:
-	- add the lyrics.
 	- check the chords (fake book).
 	- check the tune (fake book).
 	- hear the tune to check that it is right and adjust the tempo.
@@ -89,5 +89,19 @@ doOwn = false
 
 	% part "B"
 	bes4. g8 bes8. g16 bes8. g16 | c4 g2 c4 | ees4. c8 c bes c4 | ees2. r4 |
+}
+{% endif %}
+{% if part == "LyricsFake" %}\lyricmode {
+
+	% part "A"
+	Life Is Just A Bowl Of Cher -- ries, __ don't make it se -- ri -- ous, __ life's too mys -- te -- ri -- ous. __
+	You work, you save, you wor -- ry so, but you can't take your dough when you go, go, go. So
+
+	% part "A"
+	keep re -- peat -- ing it's the ber -- ries. The strong -- est oak must fall. __ The
+	sweet things in life, __ to you were just loaned, __ so how can you lose __ what you've ne -- ver owned. __
+
+	% part "B"
+	Life Is Just A Bowl Of Cher -- ries, so live and laugh at it all.
 }
 {% endif %}

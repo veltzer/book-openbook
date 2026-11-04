@@ -26,7 +26,7 @@ remark = "Frank Sinatra on Swing Easy! (1954)"
 [versions.Fake]
 doChords = true
 doVoice = true
-doLyrics = false
+doLyrics = true
 doLyricsmore = false
 doLyricsmoremore = false
 doChordBars = false
@@ -43,8 +43,8 @@ doOwn = false
 	- put in the chords (fake book).
 	- put in the tune (fake book).
 	- added youtube performances.
+	- put in the lyrics (fake book).
 	TODO:
-	- add the lyrics.
 	- check the chords (fake book).
 	- check the tune (fake book).
 	- hear the tune to check that it is right and adjust the tempo.
@@ -124,5 +124,28 @@ doOwn = false
 			c'1~ | c2. r4 |
 		}
 	}
+}
+{% endif %}
+{% if part == "LyricsFake" %}\lyricmode {
+
+	% part "A"
+	I'm Gon -- na Sit Right Down And Write My -- self A Let -- ter __ and
+	make be -- lieve it came from you. __ I'm gon -- na
+
+	% part "B"
+	write words, oh, so sweet, they're gon -- na knock me off my feet. A lot of
+	kiss -- es on the bot -- tom, I'll be glad I got 'em. __ I'm gon -- na
+
+	% part "A"
+	smile and say, 'I hope you're feel -- ing bet -- ter,' __ and
+	close 'with love' the way you do. __ I'm Gon -- na
+
+	% part "C"
+	Sit Right Down And Write My -- self A Let -- ter __ and
+	make be -- lieve it came from
+
+	% part "Volta"
+	you. __ I'm Gon -- na
+	you. __
 }
 {% endif %}

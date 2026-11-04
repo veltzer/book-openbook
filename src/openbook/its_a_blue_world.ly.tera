@@ -26,7 +26,7 @@ remark = "Mel Torme"
 [versions.Fake]
 doChords = true
 doVoice = true
-doLyrics = false
+doLyrics = true
 doLyricsmore = false
 doLyricsmoremore = false
 doChordBars = false
@@ -43,8 +43,8 @@ doOwn = false
 	- put in the chords (fake book).
 	- put in the tune (fake book).
 	- added youtube performances.
+	- put in the lyrics (fake book).
 	TODO:
-	- add the lyrics.
 	- check the chords (fake book).
 	- check the tune (fake book).
 	- hear the tune to check that it is right and adjust the tempo.
@@ -117,5 +117,26 @@ doOwn = false
 			f1~ | f2. r4 |
 		}
 	}
+}
+{% endif %}
+{% if part == "LyricsFake" %}\lyricmode {
+
+	It's A
+
+	% part "A"
+	Blue World __ with -- out you. __ It's A Blue World __ a -- lone. __ My
+
+	% part "B"
+	days and nights that once were filled with hea -- ven. __ With you a -- way, how emp -- ty they have grown. __ It's A
+
+	% part "A"
+	Blue World __ from now on; __ it's a through world __ for me. __ The
+
+	% part "C"
+	sea, the sky, my heart and I, we're all an in -- di -- go hue, with -- out you it's a blue, blue
+
+	% part "Volta"
+	world. __ It's A
+	world. __
 }
 {% endif %}

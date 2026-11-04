@@ -26,8 +26,8 @@ remark = "McCoy Tyner Trio"
 [versions.Fake]
 doChords = true
 doVoice = true
-doLyrics = false
-doLyricsmore = false
+doLyrics = true
+doLyricsmore = true
 doLyricsmoremore = false
 doChordBars = false
 doGuitar = false
@@ -43,8 +43,8 @@ doOwn = false
 	- put in the chords (fake book).
 	- put in the tune (fake book).
 	- added youtube performances.
+	- put in the lyrics (fake book).
 	TODO:
-	- add the lyrics.
 	- check the chords (fake book).
 	- check the tune (fake book).
 	- hear the tune to check that it is right and adjust the tempo.
@@ -124,5 +124,35 @@ doOwn = false
 	bes4 c bes | a2 c4 | g2. | g4 f e |
 	f2.~ | f2.~ | f2. | g4 bes d |
 	e2.~ | e2 d4 | f2.~ | f2. |
+}
+{% endif %}
+{% if part == "LyricsFake" %}\lyricmode {
+
+	% part "A"
+	I'll Take __ Ro -- mance, __ while my heart is young and ea -- ger to fly, I'll give my heart a try,
+	I'll Take Ro --
+
+	% part "Volta"
+	mance. __
+	_
+
+	% part "B"
+	So my lov -- er when you want me, call me in the hush of the eve -- ning,
+	when you call me, in the hush of the eve -- ning I'll
+
+	% part "A"
+	rush to my first real __ ro -- mance, __ while my heart is young and ea -- ger and gay. I'll give my heart a --
+	way, I'll Take Ro -- mance, __ I'll take my own __ ro -- mance. __
+}
+{% endif %}
+{% if part == "LyricsmoreFake" %}\lyricmode {
+
+	% part "A"
+	I'll Take __ Ro -- mance, __ while my arms are strong and ea -- ger for you, I'll give my arms their cue,
+	I'll Take Ro --
+
+	% part "Volta"
+	_
+	mance. __
 }
 {% endif %}

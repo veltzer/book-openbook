@@ -26,8 +26,8 @@ remark = "Kenny Clarke"
 [versions.Fake]
 doChords = true
 doVoice = true
-doLyrics = false
-doLyricsmore = false
+doLyrics = true
+doLyricsmore = true
 doLyricsmoremore = false
 doChordBars = false
 doGuitar = false
@@ -43,8 +43,9 @@ doOwn = false
 	- put in the chords (fake book).
 	- put in the tune (fake book).
 	- added youtube performances.
+	- put in the lyrics (fake book).
 	TODO:
-	- add the lyrics.
+	- the fake book prints "Ah!" under the second of the tied whole notes after "crowd" (bar 63); the voice part ties all of them so the syllable cannot be placed and was left out - check.
 	- check the chords (fake book).
 	- check the tune (fake book).
 	- hear the tune to check that it is right and adjust the tempo.
@@ -129,5 +130,37 @@ doOwn = false
 	c1~ | c1~ | c1~ | c1~ | c1~ | c1~ | c1~ | c1~ |
 	c2 bes | a4. e8~ e f4. | g4. d8~ d e4. | f1 |
 	r1 | f4. g8~ g a4. | bes4. c8~ c2~ | c1~ | c1 | c4. c8~ c c4. | c4. c8~ c4 c | c1~ | c2 r2 |
+}
+{% endif %}
+{% if part == "LyricsFake" %}\lyricmode {
+
+	% part "A"
+	Poor John -- ny One -- Note __ sang out __ with gus -- to __ and just o -- ver -- load -- ed __ the place. __
+	Poor John -- ny One -- Note __ yelled wil -- ly -- nil -- ly, __ un -- til he __ was blue in __ the face, __
+	for hold -- ing __ one note was __ his ace. __ Could -- n't hear the brass, __ could -- n't hear the drum, __
+	he was in a class __ by him -- self, by gum! __
+	_
+
+	% part "B"
+	Cats and dogs stopped yap -- ping, li -- ons in the zoo all __ were jeal -- ous __ of John -- ny's __ big trill. __
+	Thun -- der claps stopped clap -- ping, traf -- fic ceased its roar, and __ they tell us __ Ni -- ag -- 'ra __ stood still. __
+	He stopped the train -- whist -- les, boat -- whist -- les, steam -- whist -- les, cop -- whist -- les;
+	all whist -- les bowed to __ his skill. __
+
+	% part "A"
+	Sing John -- ny One -- Note, __ sing out __ with gus -- to __ and just o -- ver -- whelm all __ the crowd. __
+	So sing, John -- ny One -- Note, __ out loud!
+	Sing John -- ny One -- Note! __
+	Sing, John -- ny One -- Note, __ out loud! __
+}
+{% endif %}
+{% if part == "LyricsmoreFake" %}\lyricmode {
+
+	% part "A"
+	Poor John -- ny One -- Note __ got in __ A -- i -- da, __ in -- deed a __ great chance to __ be brave. __
+	He took __ his one note __ howled like __ the North Wind, __ brought forth wind __ that made crit -- ics rave, __
+	while Ver -- di __ turned round in __ his grave! __ Could -- n't hear the flute __ or the big trom -- bone. __
+	Ev -- 'ry one was mute, __ John -- ny stood "a-"
+	_ lone.
 }
 {% endif %}

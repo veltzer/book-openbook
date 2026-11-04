@@ -26,7 +26,7 @@ remark = "Abbey Lincoln"
 [versions.Fake]
 doChords = true
 doVoice = true
-doLyrics = false
+doLyrics = true
 doLyricsmore = false
 doLyricsmoremore = false
 doChordBars = false
@@ -43,8 +43,8 @@ doOwn = false
 	- put in the chords (fake book).
 	- put in the tune (fake book).
 	- added youtube performances.
+	- put in the lyrics (fake book).
 	TODO:
-	- add the lyrics.
 	- check the chords (fake book).
 	- check the tune (fake book).
 	- hear the tune to check that it is right and adjust the tempo.
@@ -120,5 +120,26 @@ doOwn = false
 			c2.~ | c4 r r |
 		}
 	}
+}
+{% endif %}
+{% if part == "LyricsFake" %}\lyricmode {
+
+	% part "A"
+	E -- ven tho' you're on -- ly make -- be -- liev -- ing, Laugh! Clown! Laugh!
+	E -- ven tho' some -- thing in -- side is griev -- ing, Laugh! Clown! Laugh!
+
+	% part "B"
+	Don't let your heart grow too mel -- low, __ just be a real Pun -- chi -- nel -- lo, fel -- low.
+
+	% part "A"
+	You're sup -- posed to bright -- en up a place and Laugh! Clown! Laugh!
+	Paint a lot of smiles a -- round your face and Laugh Clown, don't frown.
+
+	% part "C"
+	Don't let the world know your sor __ _ _ row. Be a Pa -- gli -- ac -- cio, Laugh! Clown!
+
+	% part "Volta"
+	Laugh!
+	Laugh! __
 }
 {% endif %}

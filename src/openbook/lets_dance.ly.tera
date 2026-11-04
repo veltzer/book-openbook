@@ -26,7 +26,7 @@ remark = "Benny Goodman, album version"
 [versions.Fake]
 doChords = true
 doVoice = true
-doLyrics = false
+doLyrics = true
 doLyricsmore = false
 doLyricsmoremore = false
 doChordBars = false
@@ -43,8 +43,8 @@ doOwn = false
 	- put in the chords (fake book).
 	- put in the tune (fake book).
 	- added youtube performances.
+	- put in the lyrics (fake book).
 	TODO:
-	- add the lyrics.
 	- check the chords (fake book).
 	- check the tune (fake book).
 	- hear the tune to check that it is right and adjust the tempo.
@@ -105,5 +105,21 @@ doOwn = false
 	% part "C"
 	e1 | d4 c r8 b4. | bes1 | a4 f'2 e4 |
 	e1 | d | c~ | c4 r r2 |
+}
+{% endif %}
+{% if part == "LyricsFake" %}\lyricmode {
+	So,
+
+	% part "A"
+	Let's Dance, let's glide, lights are low. __ How I love you!
+
+	% part "B"
+	Stay by my side __ as we go where sweet mus -- ic weaves her spell o -- ver us.
+
+	% part "A"
+	Your cheek kiss -- ing mine, my sweet. Thrills me through dear.
+
+	% part "C"
+	Ah! Sweet mel -- o -- dy, come guide our feet; Let's Dance. __
 }
 {% endif %}

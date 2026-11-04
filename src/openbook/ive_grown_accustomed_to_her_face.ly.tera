@@ -26,8 +26,8 @@ remark = "Wes Montgomery"
 [versions.Fake]
 doChords = true
 doVoice = true
-doLyrics = false
-doLyricsmore = false
+doLyrics = true
+doLyricsmore = true
 doLyricsmoremore = false
 doChordBars = false
 doGuitar = false
@@ -43,8 +43,8 @@ doOwn = false
 	- put in the chords (fake book).
 	- put in the tune (fake book).
 	- added youtube performances.
+	- put in the lyrics (fake book).
 	TODO:
-	- add the lyrics.
 	- check the chords (fake book).
 	- check the tune (fake book).
 	- hear the tune to check that it is right and adjust the tempo.
@@ -108,5 +108,41 @@ doOwn = false
 			ees2. r4 |
 		}
 	}
+}
+{% endif %}
+{% if part == "LyricsFake" %}\lyricmode {
+
+	I've Grown Ac --
+
+	% part "A"
+	cus -- tomed To Her Face. __ She al -- most makes the day be -- gin. __ I've grown ac --
+	cus -- tomed to the tune, she whist -- les night and noon, her smiles, her frowns, her ups, her downs are se -- cond
+
+	% part "B"
+	na -- ture to me now; __ like breath -- ing out and breath -- ing in __ I was se --
+	rene -- ly in -- de -- pen -- dent and con -- tent be -- fore we met; sure -- ly I could al -- ways be that way a -- gain and yet, I've grown ac --
+	cus -- tomed to her looks; ac -- cus -- tomed to her voice; ac -- cus -- tomed to her
+
+	% part "Volta"
+	face. I've Grown Ac --
+	face.
+}
+{% endif %}
+{% if part == "LyricsmoreFake" %}\lyricmode {
+
+	_ _ _
+
+	% part "A"
+	cus -- tomed To Her Face. __ She al -- most makes the day be -- gin. __ I've got -- ten
+	used to hear her say: 'Good morn -- ing' ev -- 'ry day, her joys, her woes, her highs, her lows are se -- cond
+
+	% part "B"
+	na -- ture to me now; __ like breath -- ing out and breath -- ing in __ I'm ver -- y
+	grate -- ful she's a wo -- man and so eas -- y to for -- get; rath -- er like a ha -- bit one can al -- ways break and yet, I've grown ac --
+	cus -- tomed to the trace of some -- thing in the air; ac -- cus -- tomed to her
+
+	% part "Volta"
+	_ _ _ _
+	face.
 }
 {% endif %}

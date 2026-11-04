@@ -26,7 +26,7 @@ remark = "Brenda Lee"
 [versions.Fake]
 doChords = true
 doVoice = true
-doLyrics = false
+doLyrics = true
 doLyricsmore = false
 doLyricsmoremore = false
 doChordBars = false
@@ -43,8 +43,8 @@ doOwn = false
 	- put in the chords (fake book).
 	- put in the tune (fake book).
 	- added youtube performances.
+	- put in the lyrics (fake book).
 	TODO:
-	- add the lyrics.
 	- check the chords (fake book).
 	- check the tune (fake book).
 	- hear the tune to check that it is right and adjust the tempo.
@@ -122,5 +122,26 @@ doOwn = false
 			r4 c8 a b a g4 | r4 c8 a b c f4 | c2. r4 |
 		}
 	}
+}
+{% endif %}
+{% if part == "LyricsFake" %}\lyricmode {
+
+	% part "A"
+	Jin -- gle -- bell, jin -- gle -- bell, Jin -- gle -- Bell Rock jin -- gle -- bell swing and jin -- gle -- bells ring
+	snow -- in' and blow -- in' up bush -- els of fun now the jin -- gle -- hop has be -- gun,
+
+	% part "A"
+	jin -- gle -- bell, jin -- gle -- bell, Jin -- gle -- Bell -- Rock. jin -- gle -- bells chime in jin -- gle -- bell time,
+	dan -- cin' and pran -- cin' in Jin -- gle -- Bell Square in the fros -- ty air. What a
+
+	% part "B"
+	bright __ _ time, __ it's the right __ _ time __ to rock the night a -- way, jin -- gle --
+	bell -- _ time __ is a swell time __ to go glid -- in' in a one -- horse sleigh.
+
+	% part "A"
+	Gid -- dy -- ap, jin -- gle -- horse pick up your feet jin -- gle a -- round the clock;
+	mix and min -- gle in a jin -- gl -- in' beat that's the Jin -- gle -- Bell
+	Rock.
+	that's the jin -- gle -- bell, that's the Jin -- gle -- Bell Rock.
 }
 {% endif %}
