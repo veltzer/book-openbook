@@ -25,7 +25,7 @@ remark = "Billie Holiday (1955)"
 [versions.Fake]
 doChords = true
 doVoice = true
-doLyrics = false
+doLyrics = true
 doLyricsmore = false
 doLyricsmoremore = false
 doChordBars = false
@@ -42,8 +42,8 @@ doOwn = false
 	- put in the chords (fake book).
 	- put in the tune (fake book).
 	- added youtube performances.
+	- put in the lyrics (fake book).
 	TODO:
-	- add the lyrics.
 	- check the chords (fake book).
 	- check the tune (fake book).
 	- hear the tune to check that it is right and adjust the tempo.
@@ -121,5 +121,26 @@ doOwn = false
 			g1~ | g2 r2 |
 		}
 	}
+}
+{% endif %}
+{% if part == "LyricsFake" %}\lyricmode {
+
+	% part "A"
+	When you're a -- lone who cares for star -- lit skies?
+	When you're a -- lone the ma -- gic moon -- light dies.
+
+	% part "B"
+	At break of dawn there is no sun -- rise When Your Lov -- er Has Gone. __
+
+	% part "A"
+	What lone -- ly hours the eve -- ning shad -- ows bring.
+	What lone -- ly hours with mem -- 'ries lin -- ger -- ing.
+
+	% part "C"
+	Like fad -- ed flow'rs life can't mean an -- y -- thing When Your Lov -- er Has
+
+	Gone. __
+
+	Gone. __
 }
 {% endif %}

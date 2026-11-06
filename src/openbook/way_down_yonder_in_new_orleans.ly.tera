@@ -26,8 +26,8 @@ remark = "Louis Armstrong and the All-Stars"
 [versions.Fake]
 doChords = true
 doVoice = true
-doLyrics = false
-doLyricsmore = false
+doLyrics = true
+doLyricsmore = true
 doLyricsmoremore = false
 doChordBars = false
 doGuitar = false
@@ -43,8 +43,8 @@ doOwn = false
 	- put in the chords (fake book).
 	- put in the tune (fake book).
 	- added youtube performances.
+	- put in the lyrics (fake book).
 	TODO:
-	- add the lyrics.
 	- check the chords (fake book).
 	- check the tune (fake book).
 	- hear the tune to check that it is right and adjust the tempo.
@@ -114,5 +114,36 @@ doOwn = false
 			f1~ | f2~ f8 r r4 |
 		}
 	}
+}
+{% endif %}
+{% if part == "LyricsFake" %}\lyricmode {
+
+	% part "A"
+	'Way Down Yon -- der In New -- Or -- leans __ in the land __ _ of dream -- y scenes __
+	there's a gar -- den of E -- den that's what I mean. __
+
+	% part "B"
+	Cre -- ole ba -- bies with flash -- ing eyes __ soft -- ly whis -- per with ten -- der sights __
+	'Stop! Oh! won't you give your la -- dy fair __ a lit -- tle smile,'
+	Stop! You bet your life you'll lin -- ger there __ a lit -- tle while.
+
+	% part "C"
+	There is Heav -- en right here on earth __ with those beau -- ti -- ful queens
+	'Way Down Yon -- der In New Or --
+
+	% part "Volta"
+	leans. leans. __
+}
+{% endif %}
+{% if part == "LyricsmoreFake" %}\lyricmode {
+
+	% part "A"
+	_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _
+
+	% part "B"
+	_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _
+
+	% part "C"
+	They've got an -- gels right here on earth __ wear -- ing lit -- tle blue jeans
 }
 {% endif %}

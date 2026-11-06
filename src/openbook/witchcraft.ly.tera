@@ -26,7 +26,7 @@ remark = "Bill Evans Trio from Portrait in Jazz (1959)"
 [versions.Fake]
 doChords = true
 doVoice = true
-doLyrics = false
+doLyrics = true
 doLyricsmore = false
 doLyricsmoremore = false
 doChordBars = false
@@ -43,8 +43,8 @@ doOwn = false
 	- put in the chords (fake book).
 	- put in the tune (fake book).
 	- added youtube performances.
+	- put in the lyrics (fake book).
 	TODO:
-	- add the lyrics.
 	- check the chords (fake book).
 	- check the tune (fake book).
 	- hear the tune to check that it is right and adjust the tempo.
@@ -111,5 +111,28 @@ doOwn = false
 	% part "A"
 	r8 d,4. d4 e | e8 f4 f8~ f2 | r8 d4. d4 e | e8 f4 f8~ f2 |
 	r8 d4. d4 e | e8 f4 d'8~ d4 e, | f1~ | f1 |
+}
+{% endif %}
+{% if part == "LyricsFake" %}\lyricmode {
+
+	% part "A"
+	Those fin -- gers in my hair, __ that sly, come -- hith -- er stare __
+	that strips my con -- science bare, it's Witch -- craft. __
+
+	% part "B"
+	And I've got no de -- fense __ for it; the heat is too in -- tense __ for it.
+	What good would com -- mon sense __ for it do? __ 'Cause it's
+
+	% part "C"
+	Witch -- craft __ wick -- ed Witch -- craft. __
+	And __ al -- though I __ know __ it's strict -- ly ta -- boo, __
+
+	% part "D"
+	When you a -- rouse the need __ in me, my heart says, 'Yes, in -- deed' __ in me,
+	pro -- ceed with what you're lead -- in' me to!' __
+
+	% part "A"
+	It's such an an -- cient pitch, __ but one I would -- n't switch __
+	'Cause there's no nic -- er witch __ than you! __
 }
 {% endif %}

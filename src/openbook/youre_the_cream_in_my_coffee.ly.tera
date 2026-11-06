@@ -26,8 +26,8 @@ remark = "The Nat King Cole Trio"
 [versions.Fake]
 doChords = true
 doVoice = true
-doLyrics = false
-doLyricsmore = false
+doLyrics = true
+doLyricsmore = true
 doLyricsmoremore = false
 doChordBars = false
 doGuitar = false
@@ -43,8 +43,8 @@ doOwn = false
 	- put in the chords (fake book).
 	- put in the tune (fake book).
 	- added youtube performances.
+	- put in the lyrics (fake book).
 	TODO:
-	- add the lyrics.
 	- check the chords (fake book).
 	- check the tune (fake book).
 	- hear the tune to check that it is right and adjust the tempo.
@@ -121,5 +121,39 @@ doOwn = false
 			ees'2. r4 |
 		}
 	}
+}
+{% endif %}
+{% if part == "LyricsFake" %}\lyricmode {
+
+	% part "A"
+	You're The Cream __ In My Cof -- fee. You're the salt __ in my stew.
+	You will al -- ways be my ne -- ces -- si -- ty, I'd be lost __ with -- out you.
+
+	% part "A"
+	You're the starch __ in my col -- lar, you're the lace __ in my shoe.
+	You will al -- ways be my ne -- ces -- si -- ty, I'd be lost __ with -- out you.
+
+	% part "B"
+	Most men __ tell love -- tales __ and each __ phase dove -- tails. __
+	You've heard __ each known way, this way __ is __ my own __ way.
+
+	% part "A"
+	You're the sail __ of my love -- boat you're the cap -- tain and crew.
+	You will al -- ways be my nec -- es -- si -- ty I'd be lost __ with -- out
+	you.
+	you.
+}
+{% endif %}
+{% if part == "LyricsmoreFake" %}\lyricmode {
+
+	% part "A"
+	_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _
+
+	% part "A"
+	_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _
+
+	% part "B"
+	You give __ life sav -- or, __ bring out __ its fla -- vor. __
+	So this __ is clear, dear, you're my __ Wor -- cester -- shire, __ dear.
 }
 {% endif %}

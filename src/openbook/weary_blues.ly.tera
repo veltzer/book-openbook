@@ -26,8 +26,8 @@ remark = "The New Orleans Rhythm Kings (1923)"
 [versions.Fake]
 doChords = true
 doVoice = true
-doLyrics = false
-doLyricsmore = false
+doLyrics = true
+doLyricsmore = true
 doLyricsmoremore = false
 doChordBars = false
 doGuitar = false
@@ -43,8 +43,8 @@ doOwn = false
 	- put in the chords (fake book).
 	- put in the tune (fake book).
 	- added youtube performances.
+	- put in the lyrics (fake book).
 	TODO:
-	- add the lyrics.
 	- check the chords (fake book).
 	- check the tune (fake book).
 	- hear the tune to check that it is right and adjust the tempo.
@@ -121,5 +121,38 @@ doOwn = false
 	g2 r8 g4 g8 | g2 r4 r8 g | \tuplet 3/2 { g4 g g } \tuplet 3/2 { g g g } | g4 g g g |
 	g1~ | g4 a g f | e1~ | e4 g g g | a1~ | a4 c c a | g1~ | g4 g g g |
 	g1~ | g4 f e d | c1~ | c4 g' g g | g1~ | g4 g b d | d8 c~ c2.~ | c4 r r2 |
+}
+{% endif %}
+{% if part == "LyricsFake" %}\lyricmode {
+
+	Wish I could
+
+	% part "A"
+	lose __ these Wea -- ry Blues. __ _ My ti -- red heart __ can't love no
+	more, __ can't love the way __ it did be --
+
+	fore. __ My love was
+	blues. __
+
+	% part "B"
+	Want -- cha in the morn -- in' and I want -- cha in the eve -- nin', yes I want -- cha, yes I want -- cha but it didn't do no good. __
+	Miss ya when it's rain -- in' and I miss ya when it's shin -- in', and I wish that I could kiss ya and I would if I could. But my
+
+	% part "C"
+	heart can't for -- get the run -- a -- round it used to get! oh, can't you
+	see __ I'm ti -- red of __ this old un -- fair __ one -- si -- ded love. __ Come back to
+	me, __ please don't re -- fuse, __ and help me lose __ these Wea -- ry Blues. __ _
+}
+{% endif %}
+{% if part == "LyricsmoreFake" %}\lyricmode {
+
+	_ _ _
+
+	% part "A"
+	big, __ your love was small, __ _ and now I've got __ no love at
+	all. __ Wish I could lose __ these wea -- ry
+
+	_ _ _ _
+	blues. __
 }
 {% endif %}

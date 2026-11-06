@@ -26,7 +26,7 @@ remark = "Billie Holiday and her Orchestra (Commodore, 1939)"
 [versions.Fake]
 doChords = true
 doVoice = true
-doLyrics = false
+doLyrics = true
 doLyricsmore = false
 doLyricsmoremore = false
 doChordBars = false
@@ -43,8 +43,8 @@ doOwn = false
 	- put in the chords (fake book).
 	- put in the tune (fake book).
 	- added youtube performances.
+	- put in the lyrics (fake book).
 	TODO:
-	- add the lyrics.
 	- check the chords (fake book).
 	- check the tune (fake book).
 	- hear the tune to check that it is right and adjust the tempo.
@@ -83,5 +83,16 @@ doOwn = false
 	% part "B"
 	a4. f8 g2 | a4. f8 g2 | d8 e f g gis a b c | f4. b,8 e2 | f4. a,8 e'2 |
 	e4. g,8 d'2 | d4. a8 c bes f g | a2 a4 a | a1~ | a1 |
+}
+{% endif %}
+{% if part == "LyricsFake" %}\lyricmode {
+
+	% part "A"
+	Yes -- ter -- days, Yes -- ter -- days, days I knew as hap -- py, sweet se -- ques -- tered days.
+	Old -- en days, gold -- en days, days of mad ro -- mance and love. Then gay
+
+	% part "B"
+	youth was mine, truth was mine, joy -- ous free and flam -- ing life, for -- sooth, was mine.
+	Sad am I, glad am I for to -- day I'm dream -- ing of Yes -- ter -- days. __
 }
 {% endif %}

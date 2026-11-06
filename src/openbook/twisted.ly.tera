@@ -25,7 +25,7 @@ remark = "Lambert, Hendricks and Ross"
 [versions.Fake]
 doChords = true
 doVoice = true
-doLyrics = false
+doLyrics = true
 doLyricsmore = false
 doLyricsmoremore = false
 doChordBars = false
@@ -42,8 +42,8 @@ doOwn = false
 	- put in the chords (fake book).
 	- put in the tune (fake book).
 	- added youtube performances.
+	- put in the lyrics (fake book).
 	TODO:
-	- add the lyrics.
 	- check the chords (fake book).
 	- check the tune (fake book).
 	- hear the tune to check that it is right and adjust the tempo.
@@ -170,5 +170,42 @@ doOwn = false
 			r4 des'4 des c8 g | bes4 r8 f'16 f e8 bes ees d | des8 f, bes aes~ aes2\fermata |
 		}
 	}
+}
+{% endif %}
+{% if part == "LyricsFake" %}\lyricmode {
+
+	% part "Intro"
+	_ _ _ _ _ _ _ My an -- al -- yst
+
+	% part "A"
+	told me that I was right out of my head. The way he de -- scribed it, he said I'd be bet -- ter dead than
+	live. I did -- n't lis -- ten to his jive. I knew all a -- long that he was all wrong, and I knew that he thought
+	I was cra -- zy. But I'm not. Oh, no.
+	My an -- al -- yst
+	They
+
+	% part "B"
+	say as a child I ap -- peared a lit -- tle bit wild with all my cra -- zy i -- deas. __ But
+	I knew what was hap' -- nin'; I knew I was a gen -- ius.
+	What's so strange when you know that you're a wiz -- ard at three? __
+	I knew that this was meant for me. I
+
+	% part "C"
+	heard lit -- tle chil -- dren were sup -- posed to sleep tight, that's why I drank a fifth of vod -- ka one night. __ My
+	par -- ents got fran -- tic, did -- n't know what to do; __ but I saw some cra -- zy scenes be -- fore I came to. __ Now, do
+	you think I was cra -- zy? I may have been on -- ly three, but I was swing -- in'. They all laughed at
+
+	% part "D"
+	A. Gra -- ham Bell; __ They all laughed at Ed -- i -- son and al -- so at Ein -- stein. __ So
+	why should I feel sor -- ry if they just could -- n't un -- der -- stand the rea -- son -- ing and the log -- ic that went on in my head? __
+	I had a brain, it was in -- sane. So, I just let them laugh at me when I re -- fused to ride on all those
+	dou -- ble deck -- er bus -- es; all be -- cause there was no driv -- er on the top.
+	My an -- al -- yst
+
+	% part "A"
+	told me that I was right out of my head. The way he de -- scribed it, he said I'd be bet -- ter dead than
+	live. I did -- n't lis -- ten to his jive. I knew all a -- long _ he was all wrong and I knew that he thought
+	I was cra -- zy but I'm not. Oh, no. My an -- al -- yst
+	huh, huh, I've got two.' And you know, two heads are bet -- ter than one. __
 }
 {% endif %}

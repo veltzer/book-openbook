@@ -26,7 +26,7 @@ remark = "Rosemary Clooney"
 [versions.Fake]
 doChords = true
 doVoice = true
-doLyrics = false
+doLyrics = true
 doLyricsmore = false
 doLyricsmoremore = false
 doChordBars = false
@@ -43,8 +43,8 @@ doOwn = false
 	- put in the chords (fake book).
 	- put in the tune (fake book).
 	- added youtube performances.
+	- put in the lyrics (fake book).
 	TODO:
-	- add the lyrics.
 	- check the chords (fake book).
 	- check the tune (fake book).
 	- hear the tune to check that it is right and adjust the tempo.
@@ -127,5 +127,31 @@ doOwn = false
 			ees1~ | ees2. r4 |
 		}
 	}
+}
+{% endif %}
+{% if part == "LyricsFake" %}\lyricmode {
+
+	You Came A Long Way From St.
+
+	% part "A"
+	Lou -- is, __ You climbed the lad -- der of suc -- cess.
+	I've seen the Town and Coun -- try Cars that were parked __ out in front __ of your fan -- cy ad -- dress. __
+	You Came A Long Way From St.
+
+	% part "A"
+	Lou -- is, __ you broke a lot -- ta hearts be -- tween.
+	I've seen a gang of gloom -- y guys who were do -- in' all right __ 'til you came __ on the scene. __
+	You came here from the mid -- dle
+
+	% part "B"
+	West, and cer -- tain -- ly im -- pressed the pop -- u -- la -- tion here -- a -- bouts. __
+	Well, ba -- by, I got news for you, I'm from Mis -- sou -- ri, too, so natch -- er -- ly I got my doubts.
+	You got -- 'em drop -- pin' by the
+
+	% part "A"
+	way -- side, __ a feel -- in' I ain't gon -- na know.
+	You Came A Long Way From St. Lou -- is, but ba -- by, you still __ got a long __ way to go. __
+
+	You Came A Long Way From St.
 }
 {% endif %}

@@ -25,8 +25,8 @@ remark = "Della Simone and George Colligan live at The 1905"
 [versions.Fake]
 doChords = true
 doVoice = true
-doLyrics = false
-doLyricsmore = false
+doLyrics = true
+doLyricsmore = true
 doLyricsmoremore = false
 doChordBars = false
 doGuitar = false
@@ -42,13 +42,14 @@ doOwn = false
 	- put in the chords (fake book).
 	- put in the tune (fake book).
 	- added youtube performances.
+	- put in the lyrics (fake book).
 	TODO:
-	- add the lyrics.
 	- check the chords (fake book).
 	- check the tune (fake book).
 	- hear the tune to check that it is right and adjust the tempo.
 	- first ending: the fake book prints the FM7 over the second (rest) bar; the first bar is left on the DbM7; check.
 	- the fake book prints the C7 in the bar before the Fm of part B over the end of the bar; typed on beat 3.
+	- part C bar 2: the fake book prints 'Bor-da-gar-ay' over a tied note; 'Bor' and 'da' share the first note; check.
 {% endif %}
 {% if part == "ChordsFake" %}\chordmode {
 	\startChords
@@ -134,5 +135,45 @@ doOwn = false
 	% part "Coda"
 	r2 \tuplet 3/2 { g4 g g } | c4 g2. |
 	r2 \tuplet 3/2 { g'4 g g } | c4 g2.\fermata | r4 f g aes | aes1 | g1~ | g1\fermata |
+}
+{% endif %}
+{% if part == "LyricsFake" %}\lyricmode {
+
+	% part "Intro"
+	_ _ _ _ _ _ _ _ _ _
+
+	% part "A"
+	Heen -- ie Ma -- jes -- ki, John -- ny Gee, __ Ed -- die Joost, John -- ny Pes -- ky, Thorn -- ton Lee,
+	Dan -- ny Gar -- del -- la, Van Ling -- le Mung -- o. o.
+
+	% part "B"
+	Au -- gie Ber -- ga -- mo, Sig -- mund Jac -- kuck -- i, Big John -- ny
+	Mize, and Bar -- ney Mc -- Cos -- ky, Hal Tros -- ky... Au -- gie Ga -- lan and Pink -- y May,
+
+	% part "C"
+	Stan Hack and French -- y Bor~da -- gar -- ay... Phil Cav -- a -- ret -- ta, George Mc -- Quinn, How -- ie Pol -- let and Ear --
+	ly Wynn... Art Pa -- sa -- rel -- la... Van Ling -- le Mung -- o...
+
+	% part "Coda"
+	Ern -- ie Lom -- bard -- i
+	Hugh -- ie Mul -- ca -- hy Van Ling -- le Mung -- o. __
+}
+{% endif %}
+{% if part == "LyricsmoreFake" %}\lyricmode {
+
+	% part "Intro"
+	_ _ _ _ _ _ _ _ _ _
+
+	% part "A"
+	Whi -- tey Ku -- row -- ski, Max La -- nier, __ Ed -- die Wait -- kus and John -- ny Van -- der -- meer,
+	Bob Es -- ta -- lel -- la, _ _ _ _ _ _
+
+	% part "B"
+	_ _ _ _ _ _ _ _ _ _ _ _
+	_ _ _ _ _ _ _ _ _ _ _ John An -- to -- nel -- li, Fer -- ris Fain,
+
+	% part "C"
+	Frank -- ie Cro -- set -- ti, John -- ny Sain... Har -- ry Bre -- cheen, and Lou __ Bou -- dreau, Frank -- ie Gus -- tine and Claude __
+	Pas -- seau.. Ed -- die Ba -- sin -- ski...
 }
 {% endif %}

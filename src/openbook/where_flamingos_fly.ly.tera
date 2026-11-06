@@ -26,7 +26,7 @@ remark = "Stan Getz"
 [versions.Fake]
 doChords = true
 doVoice = true
-doLyrics = false
+doLyrics = true
 doLyricsmore = false
 doLyricsmoremore = false
 doChordBars = false
@@ -43,8 +43,8 @@ doOwn = false
 	- put in the chords (fake book).
 	- put in the tune (fake book).
 	- added youtube performances.
+	- put in the lyrics (fake book).
 	TODO:
-	- add the lyrics.
 	- check the chords (fake book).
 	- check the tune (fake book).
 	- hear the tune to check that it is right and adjust the tempo.
@@ -124,5 +124,30 @@ doOwn = false
 			e'4 c c2~ | c2. r4 |
 		}
 	}
+}
+{% endif %}
+{% if part == "LyricsFake" %}\lyricmode {
+
+	Walk the
+
+	% part "A"
+	wa -- ter -- front __ hear the sea -- gulls cry; __ _ watch that
+	boat take my ba -- by far a -- way Where Fla -- min -- gos Fly. __ Said he'd
+
+	% part "A"
+	send for me, __ if he don't I'll die; __ _ thou -- sand
+	miles to my ba -- by, to the place Where Fla -- min -- gos Fly. __
+
+	% part "B"
+	'You broke the law,' they told him. __ 'Got -- ta have pass -- port to stay.
+	You're ship -- pin' back to the Is -- _ lands __ on a freight -- er that's leav -- in' to -- day.' _ Now my
+
+	% part "A"
+	ba -- by's gone, __ hear the wat -- er sigh. __ _ Took my
+	heart a -- long with him to the place Where Fla --
+
+	min -- gos Fly. __ Walk the
+
+	min -- gos Fly. __
 }
 {% endif %}

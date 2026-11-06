@@ -26,7 +26,7 @@ remark = "Kenny Burrell"
 [versions.Fake]
 doChords = true
 doVoice = true
-doLyrics = false
+doLyrics = true
 doLyricsmore = false
 doLyricsmoremore = false
 doChordBars = false
@@ -43,8 +43,8 @@ doOwn = false
 	- put in the chords (fake book).
 	- put in the tune (fake book).
 	- added youtube performances.
+	- put in the lyrics (fake book).
 	TODO:
-	- add the lyrics.
 	- check the chords (fake book).
 	- check the tune (fake book).
 	- hear the tune to check that it is right and adjust the tempo.
@@ -107,5 +107,26 @@ doOwn = false
 	% part "C"
 	c8. bes16 des8 c~ c8. bes16 des8 c~ | c4. bes8~ bes2 | bes8. a16 c8. a16 f8. a16 f8 d~ | d2. r4 |
 	d8. c16 ees8 d~ d8. c16 ees8 d~ | d8. a'16 a8. a16 a8. gis16 a8 f~ | f1~ | f4 r r2 |
+}
+{% endif %}
+{% if part == "LyricsFake" %}\lyricmode {
+
+	You Turned The Ta -- bles On Me, __
+
+	% part "A"
+	and now I'm fall -- ing for you. __ You Turned The Ta -- bles On Me __
+	I can't be -- lieve that it's true. __ _ I al -- ways
+
+	% part "B"
+	thought when you brought the love -- ly pre -- sents you bought why had -- n't you brought me more. __ But
+	now if you'd come I'd wel -- come an -- y -- thing from the five __ and ten __ cent store. __ You used to call me the top; __
+
+	% part "A"
+	you put me up on a throne. You let me fall with a drop __
+	and now I'm out on my own. __ _ But af -- ter
+
+	% part "C"
+	think -- ing it o -- ver and o -- ver, __ I got what was com -- ing to me. __
+	Just like the sting __ of a bee __ You Turned The Ta -- bles On Me. __
 }
 {% endif %}

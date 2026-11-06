@@ -26,7 +26,7 @@ remark = "Tony Bennett and Bill Evans"
 [versions.Fake]
 doChords = true
 doVoice = true
-doLyrics = false
+doLyrics = true
 doLyricsmore = false
 doLyricsmoremore = false
 doChordBars = false
@@ -43,8 +43,8 @@ doOwn = false
 	- put in the chords (fake book).
 	- put in the tune (fake book).
 	- added youtube performances.
+	- put in the lyrics (fake book).
 	TODO:
-	- add the lyrics.
 	- check the chords (fake book).
 	- check the tune (fake book).
 	- hear the tune to check that it is right and adjust the tempo.
@@ -102,5 +102,24 @@ doOwn = false
 	% part "C"
 	b4 c c b | b c2. | c4 d d c | e2. e4 |
 	e4 c a f | d4. d'8 \tuplet 3/2 { d4 c b } | c1~ | c2 r2 |
+}
+{% endif %}
+{% if part == "LyricsFake" %}\lyricmode {
+
+	% part "A"
+	Young And Fool -- ish, why is it wrong to be
+	Young And Fool -- ish? We have -- n't long to be.
+
+	% part "B"
+	Soon e -- nough the care -- free days, the sun -- lit days go by.
+	Soon e -- nough the blue -- bird has to fly. __
+
+	% part "A"
+	We were fool -- ish, one day we fell in love.
+	Now we won -- der what we were dream -- ing of?
+
+	% part "C"
+	Smil -- ing in the sun -- light, laugh -- ing in the rain, I
+	wish that we were Young And Fool -- ish a -- gain! __
 }
 {% endif %}

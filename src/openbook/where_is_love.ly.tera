@@ -26,8 +26,8 @@ remark = "Lionel Bart (remastered)"
 [versions.Fake]
 doChords = true
 doVoice = true
-doLyrics = false
-doLyricsmore = false
+doLyrics = true
+doLyricsmore = true
 doLyricsmoremore = false
 doChordBars = false
 doGuitar = false
@@ -43,8 +43,8 @@ doOwn = false
 	- put in the chords (fake book).
 	- put in the tune (fake book).
 	- added youtube performances.
+	- put in the lyrics (fake book).
 	TODO:
-	- add the lyrics.
 	- check the chords (fake book).
 	- check the tune (fake book).
 	- hear the tune to check that it is right and adjust the tempo.
@@ -105,5 +105,32 @@ doOwn = false
 			c1~ | c1 |
 		}
 	}
+}
+{% endif %}
+{% if part == "LyricsFake" %}\lyricmode {
+
+	% part "A"
+	Where __ _ _ _ _ Is Love? Does it fall from skies a -- bove? Is it un -- der -- neath the
+	wil -- low tree __ that I've been dream -- ing of?
+
+	% part "B"
+	Who can say where she may hide? Must I tra -- vel far and wide?
+	'Til I am be -- side the some -- one who I can mean some -- thing to?
+	Where, __ _ _ _ _ Where __ _ _ _ _ Is
+
+	Love? __
+
+	Love? __
+}
+{% endif %}
+{% if part == "LyricsmoreFake" %}\lyricmode {
+
+	% part "A"
+	Where __ _ _ _ _ is she who I close my eyes to see? Will I ev -- er know the
+	sweet 'Hel -- lo,' __ that's meant for on -- ly me?
+
+	% part "B"
+	Ev -- 'ry night I kneel and pray: let to -- mor -- row be the day
+	when I see the face of
 }
 {% endif %}

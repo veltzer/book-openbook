@@ -26,8 +26,8 @@ remark = "Shelly Manne and his Friends (My Fair Lady, 1956)"
 [versions.Fake]
 doChords = true
 doVoice = true
-doLyrics = false
-doLyricsmore = false
+doLyrics = true
+doLyricsmore = true
 doLyricsmoremore = false
 doChordBars = false
 doGuitar = false
@@ -43,8 +43,8 @@ doOwn = false
 	- put in the chords (fake book).
 	- put in the tune (fake book).
 	- added youtube performances.
+	- put in the lyrics (fake book).
 	TODO:
-	- add the lyrics.
 	- check the chords (fake book).
 	- check the tune (fake book).
 	- hear the tune to check that it is right and adjust the tempo.
@@ -113,5 +113,38 @@ doOwn = false
 	b8 ais b4 r a!4 | g2 e'4. d8 | c4 a g a | e r d r | c r r2 | r2 e'4. dis8 | e8 d! d4 r2 |
 	r2 d4. cis8 | d8 c! c4 r2 | r2 e4. dis8 | e8 d! d4 r d | d d c d | c4 r r2 | r2 e4. dis8 |
 	e8 d d4 r2 | r2 d4. cis8 | d8 c! c4 r2 | r2 c4. d8 | e4 c e c | d2 d | c1~ | c4 r r2 |
+}
+{% endif %}
+{% if part == "LyricsFake" %}\lyricmode {
+
+	The Lord a --
+
+	% part "A"
+	bove gave man an arm of i -- ron __ so he could do his job and nev -- er shirk. __
+	The Lord a -- bove gave man an arm of i -- ron. But With A Lit -- tle Bit Of
+	Luck, With A Lit -- tle Bit Of Luck, Some -- one else -- 'll do the blink -- in' work. __
+	With a lit -- tle bit with a lit -- tle bit, With A Lit -- tle Bit Of Luck, you'll nev -- er work.
+
+	The Lord a --
+
+	Oh, you can walk the straight and nar -- row, __ but With A Lit -- tle Bit Of Luck you'll run a -- mok.
+
+	% part "A"
+	The gen -- tle sex was made for man to mar -- ry; __ to tend his needs and see his food is cooked. __
+	The gen -- tle sex was made for man to mar -- ry; But With A Lit -- tle Bit Of
+	Luck, With A Lit -- tle Bit Of Luck, you can have it all and not get hooked.
+	With a lit -- tle bit, with a lit -- tle bit. With A Lit -- tle Bit Of Luck you won't get hooked.
+	With a lit -- tle bit, with a lit -- tle bit, with a lit -- tle bit of bloom -- ing luck. __
+}
+{% endif %}
+{% if part == "LyricsmoreFake" %}\lyricmode {
+
+	_ _ _
+
+	% part "A"
+	bove made man to help his neigh -- bor __ no mat -- ter where on land or sea and foam. __
+	The Lord a -- bove made man to help his neigh -- bor. _ _ _ _ _ _ _
+	_ _ _ _ _ _ _ _ When the comes a -- round you won't be home. __
+	_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ you won't be home.
 }
 {% endif %}

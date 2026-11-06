@@ -26,8 +26,8 @@ remark = "Bill Evans at the Munch Museum (1967)"
 [versions.Fake]
 doChords = true
 doVoice = true
-doLyrics = false
-doLyricsmore = false
+doLyrics = true
+doLyricsmore = true
 doLyricsmoremore = false
 doChordBars = false
 doGuitar = false
@@ -43,8 +43,8 @@ doOwn = false
 	- put in the chords (fake book).
 	- put in the tune (fake book).
 	- added youtube performances.
+	- put in the lyrics (fake book).
 	TODO:
-	- add the lyrics.
 	- check the chords (fake book).
 	- check the tune (fake book).
 	- hear the tune to check that it is right and adjust the tempo.
@@ -88,5 +88,24 @@ doOwn = false
 	fis2 b,4 | bes f'2 | aes4. f8 ees des | c4 g'2 | ais2 cis,4 | c!4 a'!4. g8 | e2. | r2. |
 	ees'2 aes,4 | e!4 b'2 | d2 g,4 | ees bes'2 | g2 e!4 |
 	c4 d2 | g4 e2 | c2 d4 | g4. f8 e d~ | d4 c d | dis2.~ | dis2. |
+}
+{% endif %}
+{% if part == "LyricsFake" %}\lyricmode {
+
+	% part "A"
+	Ver -- y Ear -- ly love came quick -- ly when I first saw you. __ You were all I
+	ev -- er want -- ed, strange how ear -- ly I knew! __
+
+	% part "B"
+	Now the ear -- ly rain beats on my win -- dow, sweet the sound rain can make.
+	Nice to lie here, soft -- ly sigh here, you and
+	I here wait -- ing for the Ver -- y Ear -- ly __ sun to wake. __
+}
+{% endif %}
+{% if part == "LyricsmoreFake" %}\lyricmode {
+
+	% part "A"
+	Ver -- y Ear -- ly I came run -- ning like an ea -- ger child; __ love was all I
+	ev -- er asked for love came won -- drous and wild! __
 }
 {% endif %}

@@ -25,8 +25,8 @@ remark = "Ray Charles (1958)"
 [versions.Fake]
 doChords = true
 doVoice = true
-doLyrics = false
-doLyricsmore = false
+doLyrics = true
+doLyricsmore = true
 doLyricsmoremore = false
 doChordBars = false
 doGuitar = false
@@ -42,8 +42,8 @@ doOwn = false
 	- put in the chords (fake book).
 	- put in the tune (fake book).
 	- added youtube performances.
+	- put in the lyrics (fake book).
 	TODO:
-	- add the lyrics.
 	- check the chords (fake book).
 	- check the tune (fake book).
 	- hear the tune to check that it is right and adjust the tempo.
@@ -115,5 +115,36 @@ doOwn = false
 			f2 r |
 		}
 	}
+}
+{% endif %}
+{% if part == "LyricsFake" %}\lyricmode {
+
+	Yes In --
+
+	% part "Intro"
+	deed, __ Yes In -- deed __ I've got that feel -- in' in me, Yes In -- deed. __ You will
+
+	% part "A"
+	shout when it hits you Yes In -- deed. __ Yes you'll shout, when it hits you Yes In -- deed;
+	when the spir -- it
+
+	% part "B"
+	moves you, you'll shout 'Hal -- le -- lu -- jah.' __ When it hits you, __ you'll hol -- la 'Yes In -- deed' __
+	It comes _
+}
+{% endif %}
+{% if part == "LyricsmoreFake" %}\lyricmode {
+
+	_ _
+
+	% part "Intro"
+	_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _
+
+	% part "A"
+	out if it's in you Yes In -- deed. __ Makes you shout, 'Jack it sends you,' Yes In -- deed;
+	when that jive starts
+
+	% part "B"
+	jump -- in', you'll shout 'Let me in there.' __ When it hits you, __ you'll hol -- la 'Yes In -- deed' __
 }
 {% endif %}

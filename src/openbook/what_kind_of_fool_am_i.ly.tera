@@ -26,9 +26,9 @@ remark = "Bill Evans Trio from Moon Beams (1962)"
 [versions.Fake]
 doChords = true
 doVoice = true
-doLyrics = false
-doLyricsmore = false
-doLyricsmoremore = false
+doLyrics = true
+doLyricsmore = true
+doLyricsmoremore = true
 doChordBars = false
 doGuitar = false
 doExtra = false
@@ -43,8 +43,8 @@ doOwn = false
 	- put in the chords (fake book).
 	- put in the tune (fake book).
 	- added youtube performances.
+	- put in the lyrics (fake book).
 	TODO:
-	- add the lyrics.
 	- check the chords (fake book).
 	- check the tune (fake book).
 	- hear the tune to check that it is right and adjust the tempo.
@@ -125,5 +125,67 @@ doOwn = false
 			ees'1~ | ees2. r4 |
 		}
 	}
+}
+{% endif %}
+{% if part == "LyricsFake" %}\lyricmode {
+
+	What Kind Of
+
+	% part "A"
+	Fool Am I? __ Who nev -- er fell in love; __ it seems that I'm the on -- ly
+	one that I have been think -- ing of. __ What kind of
+
+	% part "B"
+	man is this? __ An emp -- ty shell, __ a lone -- ly cell in which an emp -- ty heart must dwell. __ What kind of
+
+	% part "A"
+	lips are these __ that lied with ev -- 'ry kiss? __ That whis -- pered emp -- ty words of
+	love that left me a -- lone like this. __ Why can't I
+
+	% part "C"
+	fall in love __ like an -- y oth -- er man, __ and may -- be then I'll know what
+	kind of fool I
+
+	am. What Kind Of
+
+	am. __
+}
+{% endif %}
+{% if part == "LyricsmoreFake" %}\lyricmode {
+
+	_ _ _
+
+	% part "A"
+	_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _
+	_ _ _ _ _ _ _ _ _ _ _
+
+	% part "B"
+	_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ What kind of
+
+	% part "A"
+	clown am I? __ What do I know of life? __ Why can't I cast a -- way the
+	mask of play __ _ and live my life? __ Why can't I
+
+	% part "C"
+	fall in love __ 'til I don't give a damn, __
+}
+{% endif %}
+{% if part == "LyricsmoremoreFake" %}\lyricmode {
+
+	_ _ _
+
+	% part "A"
+	_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _
+	_ _ _ _ _ _ _ _ _ _ _
+
+	% part "B"
+	_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _
+
+	% part "A"
+	_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _
+	_ _ _ _ _ _ _ _ _ _ _
+
+	% part "C"
+	_ _ _ "(like" oth -- er peo -- ple "can)"
 }
 {% endif %}

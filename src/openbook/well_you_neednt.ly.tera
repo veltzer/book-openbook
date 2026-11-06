@@ -25,8 +25,8 @@ remark = "Miles Davis Quintet from Steamin' (1956)"
 [versions.Fake]
 doChords = true
 doVoice = true
-doLyrics = false
-doLyricsmore = false
+doLyrics = true
+doLyricsmore = true
 doLyricsmoremore = false
 doChordBars = false
 doGuitar = false
@@ -42,11 +42,11 @@ doOwn = false
 	- put in the chords (fake book).
 	- put in the tune (fake book).
 	- added youtube performances.
+	- put in the lyrics (fake book).
 	TODO:
 	- check the chords (fake book).
 	- check the tune (fake book).
 	- hear the tune to check that it is right and adjust the tempo.
-	- add the lyrics.
 	- bridge bar 2: the last eighth has no accidental in the book after the Eb in the same bar, so it is read as Eb (the sequence a half step up in bar 4 has E).
 	- bridge bar 5: the last two eighths have no accidental after the F# in the same bar, so they are read as F# (the bar is the first half of the bar a half step up).
 {% endif %}
@@ -126,5 +126,53 @@ doOwn = false
 			c4 r r2 |
 		}
 	}
+}
+{% endif %}
+{% if part == "LyricsFake" %}\lyricmode {
+
+	You're
+
+	% part "A"
+	talk -- in' so sweet, Well You Need -- n't. You say you won't cheat, Well You Need -- n't. You're
+	tap -- pin' your feet, Well You Need -- n't. It's O -- ver Now, It's O -- ver Now. You're
+
+	% part "A"
+	dress -- in' with class, Well You Need -- n't. You're hold -- in' your sass, Well You Need -- n't. You
+	think you're a gas, Well You Need -- n't. It's O -- ver Now, It's O -- ver Now. It's
+
+	% part "B"
+	O -- ver Now, It's O -- ver Now. You had your fun, so take a bow. You
+	ought -- a know, you lost the glow, the beat is slow, the shad -- ows grow, the lights are low, it's time to go, let's close the show down. __ You're
+
+	% part "A"
+	tak -- in' off weight, Well You Need -- n't. You're look -- ing just great, Well You Need -- n't. You're
+	set -- tin' the bait, Well You Need -- n't. It's O -- ver Now, It's O -- ver
+
+	% part "Volta"
+	Now. You're
+}
+{% endif %}
+{% if part == "LyricsmoreFake" %}\lyricmode {
+
+	_
+
+	% part "A"
+	play -- in' a game, Well You Need -- n't. It's more of the same, Well You Need -- n't. You're
+	com -- in' up lame, Well You Need -- n't. It's O -- ver Now, It's O -- ver Now. You're
+
+	% part "A"
+	bend -- in' my ear, Well You Need -- n't. You're call -- in' me dear, Well You Need -- n't. You're
+	act -- in' sin -- cere, Well You Need -- n't. It's O -- ver Now, It's O -- ver Now. It's
+
+	% part "B"
+	O -- ver Now, It's O -- ver Now. Don't want a scene, don't need a row. You
+	had your day, a mat -- i -- nee, you had to stray, you know they say, you're gon -- na play, you got to pay, so find a way out! __ You
+
+	% part "A"
+	say that you'll try, Well You Need -- n't. You say you won't lie, Well You Need -- n't. You're
+	start -- in' to cry, Well You Need -- n't. It's O -- ver Now, It's O -- ver
+
+	% part "Volta"
+	_ _ Now.
 }
 {% endif %}

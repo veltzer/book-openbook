@@ -26,7 +26,7 @@ remark = "Sonny Rollins"
 [versions.Fake]
 doChords = true
 doVoice = true
-doLyrics = false
+doLyrics = true
 doLyricsmore = false
 doLyricsmoremore = false
 doChordBars = false
@@ -43,8 +43,8 @@ doOwn = false
 	- put in the chords (fake book).
 	- put in the tune (fake book).
 	- added youtube performances.
+	- put in the lyrics (fake book).
 	TODO:
-	- add the lyrics.
 	- check the chords (fake book).
 	- check the tune (fake book).
 	- hear the tune to check that it is right and adjust the tempo.
@@ -101,5 +101,24 @@ doOwn = false
 	% part "A"
 	r4 c c bes8 a | g4 a2. | r4 bes bes a8 g | c,1~ |
 	c4 c' c e,8 f | g4 c2 bes4 | a1~ | a2. a4 | a2 f4. g8 | a4 c2 e,4 | f1~ | f2. r4 |
+}
+{% endif %}
+{% if part == "LyricsFake" %}\lyricmode {
+
+	% part "A"
+	We Kiss In A Sha -- dow, we hide from the moon. our meet -- ings are few and o -- ver too
+	soon. __
+
+	% part "A"
+	We speak in a whis -- per, a -- fraid to be heard; when peo -- ple are
+	near, we speak not a word. __
+
+	% part "B"
+	A -- lone in our se -- cret, to -- geth -- er we sigh for
+	one smil -- ing day to be free: __
+
+	% part "A"
+	To kiss in the sun -- light and say to the sky, __
+	'Be -- hold and be -- lieve what you see! __ be -- hold how my lov -- 'er loves me!' __
 }
 {% endif %}

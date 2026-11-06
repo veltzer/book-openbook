@@ -26,8 +26,8 @@ remark = "Lucy Yeghiazaryan and the Grant Stewart Quintet"
 [versions.Fake]
 doChords = true
 doVoice = true
-doLyrics = false
-doLyricsmore = false
+doLyrics = true
+doLyricsmore = true
 doLyricsmoremore = false
 doChordBars = false
 doGuitar = false
@@ -43,8 +43,8 @@ doOwn = false
 	- put in the chords (fake book).
 	- put in the tune (fake book).
 	- added youtube performances.
+	- put in the lyrics (fake book).
 	TODO:
-	- add the lyrics.
 	- check the chords (fake book).
 	- check the tune (fake book).
 	- hear the tune to check that it is right and adjust the tempo.
@@ -97,5 +97,27 @@ doOwn = false
 			\tuplet 3/2 { d'8 b c } ees2 r8 cis | \tuplet 3/2 { d8 f, d' } c8 bes~ bes2 | \tuplet 3/2 { c8 ees, c' } bes8 a~ a2 | bes8. bes16 g8. g16 bes8. bes16 g8. g16 | bes4 g8 bes~ bes4 r4 |
 		}
 	}
+}
+{% endif %}
+{% if part == "LyricsFake" %}\lyricmode {
+
+	Fair -- y
+
+	% part "A"
+	tales __ can come true, __ it can hap -- pen to you if you're Young At Heart. __ For it's
+	hard, __ you will find, __ to be nar -- row of mind if you're Young At Heart. __ You can
+	go __ to ex -- tremes __ with im -- pos -- si -- ble schemes, you can laugh __ when your dreams __ fall a --
+	part at the seams and life gets more ex -- cit -- ing with each pass -- ing day, __ and love is eith -- er in your heart or on the way. __ Don't you
+	be -- ing a -- live, and here is the best part, __ you have a head start __ if you are a -- mong the ver -- y Young At Heart. __
+}
+{% endif %}
+{% if part == "LyricsmoreFake" %}\lyricmode {
+
+	_ _
+
+	% part "A"
+	know __ that it's worth __ ev -- 'ry trea -- sure on earth to be Young At Heart. __ For as
+	rich __ as you are, __ it's much bet -- ter by far to be Young At Heart. __ And if
+	you __ should sur -- vive __ to a hun -- dred and five look at all __ you'll de -- rive __ out of
 }
 {% endif %}

@@ -26,7 +26,7 @@ remark = "Art Pepper from Art Pepper Meets The Rhythm Section (1957)"
 [versions.Fake]
 doChords = true
 doVoice = true
-doLyrics = false
+doLyrics = true
 doLyricsmore = false
 doLyricsmoremore = false
 doChordBars = false
@@ -43,8 +43,8 @@ doOwn = false
 	- put in the chords (fake book).
 	- put in the tune (fake book).
 	- added youtube performances.
+	- put in the lyrics (fake book).
 	TODO:
-	- add the lyrics.
 	- check the chords (fake book).
 	- check the tune (fake book).
 	- hear the tune to check that it is right and adjust the tempo.
@@ -105,5 +105,26 @@ doOwn = false
 	% part "C"
 	a1 | g2 r8 a4 b8 | d2. c4 | a2 c4 d |
 	e2 ees~ | ees2 d | c1~ | c2 r |
+}
+{% endif %}
+{% if part == "LyricsFake" %}\lyricmode {
+
+	You'd Be
+
+	% part "A"
+	So Nice __ To Come Home To, __ you'd be
+	so nice __ by the fire. __ While the
+
+	% part "B"
+	breeze on high, __ sang a lull -- a by, __ you'd be
+	all that I could de -- sire. __ Un -- der
+
+	% part "A"
+	stars, chilled __ by the win -- ter, __ un -- der an
+	Aug -- ust moon, burn -- ing a -- bove. __ You'd be
+
+	% part "C"
+	so nice, you'd be par -- a -- dise to come
+	home to __ and love. __
 }
 {% endif %}

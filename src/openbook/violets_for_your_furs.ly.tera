@@ -25,8 +25,8 @@ remark = "John Coltrane Quartet from Coltrane (1957)"
 [versions.Fake]
 doChords = true
 doVoice = true
-doLyrics = false
-doLyricsmore = false
+doLyrics = true
+doLyricsmore = true
 doLyricsmoremore = false
 doChordBars = false
 doGuitar = false
@@ -42,8 +42,8 @@ doOwn = false
 	- put in the chords (fake book).
 	- put in the tune (fake book).
 	- added youtube performances.
+	- put in the lyrics (fake book).
 	TODO:
-	- add the lyrics.
 	- check the chords (fake book).
 	- check the tune (fake book).
 	- hear the tune to check that it is right and adjust the tempo.
@@ -92,5 +92,28 @@ doOwn = false
 	d'4 d8 des c4 cis8 d! | bes2 r4 d,4 |
 	f4 g a bes | g4 g2 g4 | a4 bes c d | a2. a4 | aes4 aes8 aes aes4. g8 |
 	g4 f r8 d e f | a4 a8 a \tuplet 3/2 { a8 aes g } f8 e | f1 |
+}
+{% endif %}
+{% if part == "LyricsFake" %}\lyricmode {
+
+	% part "A"
+	I bought you Vi -- o -- lets For Your Furs and it was spring for a while, re -- mem -- ber?
+	I bought you Vi -- o -- lets For Your Furs, and there was A -- pril in that De -- cem -- ber. The
+
+	% part "B"
+	snow drift -- ed down on the flow -- ers, and melt -- ed where it lay; the
+	snow looked like dew on the blos -- soms, as on a sum -- mer day.
+
+	% part "Coda"
+	lift to the crowds pass -- ing by. You
+	smiled at me so sweet -- ly; since then one thought oc -- curs: that we fell in love com --
+	plete -- ly the day that I bought you Vi -- o -- lets For Your Furs.
+}
+{% endif %}
+{% if part == "LyricsmoreFake" %}\lyricmode {
+
+	% part "A"
+	_ _ _ _ _ _ _ _ _ and there was blue in the win -- try sky. __ _
+	you pinned the vi -- o -- lets to your furs and gave a
 }
 {% endif %}

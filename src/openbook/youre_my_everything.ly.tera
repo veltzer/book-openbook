@@ -26,7 +26,7 @@ remark = "Freddie Hubbard"
 [versions.Fake]
 doChords = true
 doVoice = true
-doLyrics = false
+doLyrics = true
 doLyricsmore = false
 doLyricsmoremore = false
 doChordBars = false
@@ -43,8 +43,8 @@ doOwn = false
 	- put in the chords (fake book).
 	- put in the tune (fake book).
 	- added youtube performances.
+	- put in the lyrics (fake book).
 	TODO:
-	- add the lyrics.
 	- check the chords (fake book).
 	- check the tune (fake book).
 	- hear the tune to check that it is right and adjust the tempo.
@@ -125,5 +125,28 @@ doOwn = false
 			c1~ | c1 |
 		}
 	}
+}
+{% endif %}
+{% if part == "LyricsFake" %}\lyricmode {
+
+	You're My
+
+	% part "A"
+	Ev -- 'ry -- thing __ un -- der -- neath the sun; __ You're My
+	Ev -- 'ry -- thing __ rolled up in -- to one. __ You're my
+
+	% part "B"
+	on -- ly dream, my on -- ly real re -- al -- i -- ty; __ you're my
+	i -- dea of a per -- fect per -- son -- al -- i -- ty. __ You're My
+
+	% part "A"
+	Ev -- 'ry -- thing, __ ev -- 'ry -- thing I need; __ you're the
+	song I sing __ and the book I read. __ you're a
+
+	% part "C"
+	way be -- yond be -- lief and just to make it brief, __ you're my
+	win -- ter, sum -- mer, spring, my ev -- 'ry --
+	thing. You're My
+	thing. __
 }
 {% endif %}

@@ -26,7 +26,7 @@ remark = "Frank Sinatra"
 [versions.Fake]
 doChords = true
 doVoice = true
-doLyrics = false
+doLyrics = true
 doLyricsmore = false
 doLyricsmoremore = false
 doChordBars = false
@@ -43,8 +43,8 @@ doOwn = false
 	- put in the chords (fake book).
 	- put in the tune (fake book).
 	- added youtube performances.
+	- put in the lyrics (fake book).
 	TODO:
-	- add the lyrics.
 	- check the chords (fake book).
 	- check the tune (fake book).
 	- hear the tune to check that it is right and adjust the tempo.
@@ -89,5 +89,20 @@ doOwn = false
 	a2 g4 a | b2. b4 | c2 b4 c | d2 c4 d |
 	e2 c | g2 e | a1~ | a2 b | c2 c | c2 c | c2 b4 c | d2 c4 d |
 	e2 e | e2 e | e1~ | e2 b | g'2 e | c2 a | g1~ | g1~ | g1~ | g2 r2 |
+}
+{% endif %}
+{% if part == "LyricsFake" %}\lyricmode {
+
+	When you
+
+	% part "A"
+	walk through a storm hold your head up high and don't be a -- fraid of the
+	dark. __ At the end of the storm is a gold -- en sky and the sweet sil -- ver
+	song of a lark. __ Walk
+
+	% part "B"
+	on through the wind, walk on through the rain, tho' your
+	dreams be tossed and blown. __ Walk on, walk on with hope in your heart and you'll
+	Nev -- er Walk A -- lone, __ You'll Nev -- er Walk A -- lone. __
 }
 {% endif %}

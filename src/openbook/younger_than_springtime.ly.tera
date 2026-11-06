@@ -27,7 +27,7 @@ remark = "Art Farmer"
 [versions.Fake]
 doChords = true
 doVoice = true
-doLyrics = false
+doLyrics = true
 doLyricsmore = false
 doLyricsmoremore = false
 doChordBars = false
@@ -44,8 +44,8 @@ doOwn = false
 	- put in the chords (fake book).
 	- put in the tune (fake book).
 	- added youtube performances.
+	- put in the lyrics (fake book).
 	TODO:
-	- add the lyrics.
 	- check the chords (fake book).
 	- check the tune (fake book).
 	- hear the tune to check that it is right and adjust the tempo.
@@ -102,5 +102,24 @@ doOwn = false
 	% part "A"
 	e8 f g4 a c, | r4 d e2 | d8 e f4 g b, | r4 c d2 |
 	e8 f g4 a b | c b8 a g4 a | d1 | d1 | c1~ | c2. r4 |
+}
+{% endif %}
+{% if part == "LyricsFake" %}\lyricmode {
+
+	% part "A"
+	Young -- er Than Spring -- time are you, soft -- er than star -- light are you.
+	Warm -- er than winds of June are the gen -- tle lips you gave me.
+
+	% part "A"
+	Gay -- er than laugh -- ter are you, sweet -- er than mu -- sic are you.
+	An -- gel and lov -- er, heav -- en and earth are you to me. And when your
+
+	% part "B"
+	youth and joy in -- vade my arms and fill my
+	heart as now they do, then
+
+	% part "A"
+	Young -- er Than Spring -- time am I, gay -- er than laugh -- ter am I,
+	an -- gel and lov -- er, heav -- en and earth am I with you! __
 }
 {% endif %}

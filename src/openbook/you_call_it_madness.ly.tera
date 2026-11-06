@@ -26,7 +26,7 @@ remark = "The Nat King Cole Trio"
 [versions.Fake]
 doChords = true
 doVoice = true
-doLyrics = false
+doLyrics = true
 doLyricsmore = false
 doLyricsmoremore = false
 doChordBars = false
@@ -43,8 +43,8 @@ doOwn = false
 	- put in the chords (fake book).
 	- put in the tune (fake book).
 	- added youtube performances.
+	- put in the lyrics (fake book).
 	TODO:
-	- add the lyrics.
 	- check the chords (fake book).
 	- check the tune (fake book).
 	- hear the tune to check that it is right and adjust the tempo.
@@ -105,5 +105,26 @@ doOwn = false
 	% part "A"
 	b4. a8 b4. a8 | c4 c2 b4 | a4. g8 a4. g8 | fis2. r8 d |
 	e4. fis8 e4. d8 | a'4 a2 b4 | g4 g2 g4 | g2~ g8 r r4 |
+}
+{% endif %}
+{% if part == "LyricsFake" %}\lyricmode {
+
+	I can't for --
+
+	% part "A"
+	get the night I met you, that's all I'm think -- ing of; and
+	now You Call It Mad -- ness, but I call it love. You made a
+
+	% part "A"
+	prom -- ise to be faith -- ful by all the stars a -- bove; and
+	now You Call It Mad -- ness, I still call it love.
+
+	% part "B"
+	My heart is beat -- ing, it keeps re -- peat -- ing for you con -- stant -- ly.
+	You're all I'm need -- ing, and so I'm plead -- ing, 'Please, come back to me!' You made a
+
+	% part "A"
+	play -- thing out of ro -- mance! What do you know of love? That's
+	why You Call It Mad -- ness, but I call it love. __
 }
 {% endif %}

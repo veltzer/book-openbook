@@ -25,8 +25,8 @@ remark = "John Coltrane from Ballads (1962)"
 [versions.Fake]
 doChords = true
 doVoice = true
-doLyrics = false
-doLyricsmore = false
+doLyrics = true
+doLyricsmore = true
 doLyricsmoremore = false
 doChordBars = false
 doGuitar = false
@@ -42,8 +42,8 @@ doOwn = false
 	- put in the chords (fake book).
 	- put in the tune (fake book).
 	- added youtube performances.
+	- put in the lyrics (fake book).
 	TODO:
-	- add the lyrics.
 	- check the chords (fake book).
 	- check the tune (fake book).
 	- hear the tune to check that it is right and adjust the tempo.
@@ -113,5 +113,35 @@ doOwn = false
 	% part "A"
 	c1 | r4 \tuplet 3/2 { c8 bes aes } g f e ees~ | ees1~ | ees8 d ees d cis4 d |
 	g1 | r8 f g f ees4 d | d8 c c c~ c2~ | c2. r4 |
+}
+{% endif %}
+{% if part == "LyricsFake" %}\lyricmode {
+
+	What's New? __
+
+	% part "A"
+	How is the world treat -- ing you? __ You have -- n't changed a bit;
+	love -- ly as ev -- er, I must ad -- mit, __
+	What's New?
+	_ _
+
+	% part "B"
+	Prob -- ab -- ly I'm bor -- ing you, __ but see -- ing you is grand,
+	and you were sweet to of -- fer your hand; __ I un -- der -- stand, __ a -- dieu!
+
+	% part "A"
+	Par -- don my ask -- ing What's New. __ of course you could -- n't know,
+	I have -- n't changed, I still love you so. __
+}
+{% endif %}
+{% if part == "LyricsmoreFake" %}\lyricmode {
+
+	_ _
+
+	% part "A"
+	How did that ro -- mance come through? __ We have -- n't met since then,
+	gee! but it's nice to see you a -- gain. __
+	_ _
+	What's New? __
 }
 {% endif %}

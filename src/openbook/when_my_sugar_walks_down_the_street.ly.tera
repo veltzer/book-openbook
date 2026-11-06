@@ -26,7 +26,7 @@ remark = "Ella Fitzgerald (1944)"
 [versions.Fake]
 doChords = true
 doVoice = true
-doLyrics = false
+doLyrics = true
 doLyricsmore = false
 doLyricsmoremore = false
 doChordBars = false
@@ -43,8 +43,8 @@ doOwn = false
 	- put in the chords (fake book).
 	- put in the tune (fake book).
 	- added youtube performances.
+	- put in the lyrics (fake book).
 	TODO:
-	- add the lyrics.
 	- check the chords (fake book).
 	- check the tune (fake book).
 	- hear the tune to check that it is right and adjust the tempo.
@@ -93,5 +93,20 @@ doOwn = false
 
 	% part "C"
 	r4 e'8. dis16 e8. d!16 b4 | c4 b a8 b c cis | d8 e d4 b a | g2. r4 |
+}
+{% endif %}
+{% if part == "LyricsFake" %}\lyricmode {
+
+	% part "A"
+	When My Su -- gar Walks Down The Street, all the lit -- tle bird -- ies go tweet, tweet, tweet.
+
+	% part "B"
+	And in the ev -- 'ning when the sun goes down, __ it's nev -- er dark when she's a -- round. __
+
+	% part "A"
+	She's so af -- fec -- tion -- ate and I'll say this, that when she kiss -- es me I sure stay kissed,
+
+	% part "C"
+	When My Su -- gar Walks Down The Street, the lit -- tle bird -- ies go tweet, tweet, tweet.
 }
 {% endif %}
