@@ -26,7 +26,7 @@ remark = "Ray Brown"
 [versions.Fake]
 doChords = true
 doVoice = true
-doLyrics = false
+doLyrics = true
 doLyricsmore = false
 doLyricsmoremore = false
 doChordBars = false
@@ -43,11 +43,12 @@ doOwn = false
 	- put in the chords (fake book).
 	- put in the tune (fake book).
 	- added youtube performances.
+	- put in the lyrics (fake book).
 	TODO:
 	- check the chords (fake book).
 	- check the tune (fake book).
 	- hear the tune to check that it is right and adjust the tempo.
-	- add the lyrics.
+	- the voice and chords have one "lit-tle foot, put your" bar more than the book prints, both in the first A (bar 3) and in the last A (bar 11 of the part); the lyrics repeat the phrase there; check and drop those bars.
 {% endif %}
 {% if part == "ChordsFake" %}\chordmode {
 	\startChords
@@ -114,5 +115,29 @@ doOwn = false
 			g2 r4 |
 		}
 	}
+}
+{% endif %}
+{% if part == "LyricsFake" %}\lyricmode {
+	Put your
+
+	% part "A"
+	lit -- tle foot, put your lit -- tle foot, put your lit -- tle foot, Put Your Lit -- tle Foot Right Out. Put your
+	lit -- tle foot, put your lit -- tle foot, Put Your Lit -- tle Foot Right Out. Put your
+	arm a -- round, put your arm a -- round, put your arm a -- round my waist. Keep your
+	arm a -- round, keep your arm a -- round keep your arm a -- round my waist. Take a
+
+	% part "B"
+	step to the side, take a step to the rear; take a step to the side, but for -- ev -- er stay near. As we
+	dance through the night and the morn -- ing draws near, by the dawn's ear -- ly light all our cares dis -- ap -- pear. Do a
+
+	% part "A"
+	lit -- tle whirl, do a lit -- tle whirl, do a lit -- tle whirl a -- bout. Do a
+	lit -- tle twirl, do a lit -- tle twirl, do a lit -- tle twirl a -- bout. Walk a
+	lit -- tle bit, talk a lit -- tle bit, put your lit -- tle foot, Put Your Lit -- tle Foot Right Out. Sing a
+	lit -- tle bit, swing a lit -- tle bit, Put Your Lit -- tle Foot Right
+
+	% part "Volta"
+	Out. Take a
+	Out.
 }
 {% endif %}

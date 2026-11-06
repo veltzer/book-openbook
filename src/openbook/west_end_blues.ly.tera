@@ -26,8 +26,8 @@ remark = "King Oliver and his Dixie Syncopators (1928)"
 [versions.Fake]
 doChords = true
 doVoice = true
-doLyrics = false
-doLyricsmore = false
+doLyrics = true
+doLyricsmore = true
 doLyricsmoremore = false
 doChordBars = false
 doGuitar = false
@@ -43,13 +43,15 @@ doOwn = false
 	- put in the chords (fake book).
 	- put in the tune (fake book).
 	- added youtube performances.
+	- put in the lyrics (fake book).
 	TODO:
-	- add the lyrics.
 	- check the chords (fake book).
 	- check the tune (fake book).
 	- hear the tune to check that it is right and adjust the tempo.
 	- verse bars 5 and 6 are printed with two rhythms (one per verse) on shared stems; the first verse rhythm was typed.
 	- verse bar 8: the book prints double notes (b flat under d flat); typed as printed.
+	- verse bar 4 lyrics: the book sings 'I've' on the last d flat, which is typed as tied; 'I've got' is therefore one note late.
+	- verse bars 5 and 6 lyrics: the two verses are set to their own rhythms in the book; the syllable placement on the typed notes is a best guess.
 {% endif %}
 {% if part == "ChordsFake" %}\chordmode {
 	\startChords
@@ -111,5 +113,35 @@ doOwn = false
 
 	% part "Coda"
 	des'4 \tuplet 3/2 { c8 bes bes } c16 bes8.~ bes8 bes | ees4 bes8 aes g bes, g'4 | g16 ees8.~ ees2.~ | ees4 r4 r2 |
+}
+{% endif %}
+{% if part == "LyricsFake" %}\lyricmode {
+
+	% part "Intro"
+	I got the blues __ _ from my head to my shoes, __ _ I'm blue to --
+	day. __ _ I've got a mean e _ _ vil feel -- in' my bel -- ly's full __ _ of
+	gin. __ _ I'm on __ _ _ my __ way to the West End, __ _ and that's where trou -- bles will "be-"
+	gin. My
+
+	% part "A"
+	gal, my pal, low down mean
+	houn'; __ _ they're in town, __ _ they're cut -- tin' it up. __ _ Yes, __ they're __ run -- nin' 'round. __ _
+	Soon I'm gon -- na take a walk __ _ and knock up -- on __ _ her door. __ _ Now those __ _
+
+	% part "B"
+	folks __ in West End, folks __ in West End, they're __ _ gon -- _ na
+	see __ _ some shoot -- in' like __ they __ nev -- er saw be -- fore. __ _ My
+	gal and my __ _ best __ _ pal __ _ will nev -- er cheat in West End an -- y more. __ _ I got the
+
+	% part "Coda"
+	way to the West End __ _ to lose those West __ _ End Blues. __ _ _
+}
+{% endif %}
+{% if part == "LyricsmoreFake" %}\lyricmode {
+
+	% part "Intro"
+	_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _
+	low _ down _ feel -- in' I'm gon -- na hear _ bad
+	news. __ _
 }
 {% endif %}

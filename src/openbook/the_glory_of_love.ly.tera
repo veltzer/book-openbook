@@ -25,7 +25,7 @@ remark = "Jimmy Durante"
 [versions.Fake]
 doChords = true
 doVoice = true
-doLyrics = false
+doLyrics = true
 doLyricsmore = false
 doLyricsmoremore = false
 doChordBars = false
@@ -42,13 +42,13 @@ doOwn = false
 	- put in the chords (fake book).
 	- put in the tune (fake book).
 	- added youtube performances.
+	- put in the lyrics (fake book).
 	TODO:
 	- check the chords (fake book).
 	- check the tune (fake book).
 	- hear the tune to check that it is right and adjust the tempo.
 	- the pickup is printed as d8 e8. d16 while the same figure inside the tune is d16 e8. d16; check which is right.
 	- bar 24: the rest before the pickup to the last A is hard to read; typed as a sixteenth so the bar adds up.
-	- add the lyrics.
 {% endif %}
 {% if part == "ChordsFake" %}\chordmode {
 	\startChords
@@ -128,5 +128,24 @@ doOwn = false
 			g1~ | g2. r4 |
 		}
 	}
+}
+{% endif %}
+{% if part == "LyricsFake" %}\lyricmode {
+	You've got to
+	% part "A"
+	give a lit -- tle, take a lit -- tle and let your poor heart break a lit -- tle;
+	that's the sto -- ry of, that's The Glo -- ry Of Love. __ You've got to
+	% part "A"
+	laugh a lit -- tle, cry a lit -- tle be -- fore the clouds roll by a lit -- tle;
+	that's the sto -- ry of, that's The Glo -- ry Of Love. __ As
+	% part "B"
+	long as there's the two of us, we've got the world and all it's charms. __ And
+	when the world is through with us we've got each oth -- er's arms. __ You've got to
+	% part "A"
+	win a lit -- tle, lose a lit -- tle and al -- ways have the blues a lit -- tle;
+	that's the sto -- ry of, that's The Glo -- ry Of
+	% part "Volta"
+	Love. __ You've got to
+	Love. __
 }
 {% endif %}

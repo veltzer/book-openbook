@@ -26,9 +26,9 @@ remark = "Billie Holiday"
 [versions.Fake]
 doChords = true
 doVoice = true
-doLyrics = false
-doLyricsmore = false
-doLyricsmoremore = false
+doLyrics = true
+doLyricsmore = true
+doLyricsmoremore = true
 doChordBars = false
 doGuitar = false
 doExtra = false
@@ -43,8 +43,8 @@ doOwn = false
 	- put in the chords (fake book).
 	- put in the tune (fake book).
 	- added youtube performances.
+	- put in the lyrics (fake book).
 	TODO:
-	- add the lyrics.
 	- check the chords (fake book).
 	- check the tune (fake book).
 	- hear the tune to check that it is right and adjust the tempo.
@@ -111,5 +111,37 @@ doOwn = false
 
 	% part "Coda"
 	g1~^\markup { \musicglyph #"scripts.coda" } | g1 |
+}
+{% endif %}
+{% if part == "LyricsFake" %}\lyricmode {
+	In my
+
+	% part "A"
+	Sol -- i -- tude __ you haunt me with re -- ver -- ies __ of days gone by. __
+
+	% part "Volta"
+	In my
+	die. __ I
+
+	% part "B"
+	sit in my chair, I'm filled with de -- spair, there's no -- one could be so sad. __ With
+	gloom ev -- 'ry -- where, I sit and I stare, I know that I'll soon go mad. In my
+
+	% part "Coda"
+	love. __
+}
+{% endif %}
+{% if part == "LyricsmoreFake" %}\lyricmode {
+	_ _
+
+	% part "A"
+	Sol -- i -- tude __ you taunt me with mem -- o -- ries __ that nev -- er
+}
+{% endif %}
+{% if part == "LyricsmoremoreFake" %}\lyricmode {
+	_ _
+
+	% part "A"
+	Sol -- i -- tude __ I'm pray -- ing, dear Lord a -- bove __ send back my
 }
 {% endif %}

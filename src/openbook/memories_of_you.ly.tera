@@ -26,7 +26,7 @@ remark = "Benny Goodman Sextet (1940)"
 [versions.Fake]
 doChords = true
 doVoice = true
-doLyrics = false
+doLyrics = true
 doLyricsmore = false
 doLyricsmoremore = false
 doChordBars = false
@@ -43,8 +43,8 @@ doOwn = false
 	- put in the chords (fake book).
 	- put in the tune (fake book).
 	- added youtube performances.
+	- put in the lyrics (fake book).
 	TODO:
-	- add the lyrics.
 	- check the chords (fake book).
 	- check the tune (fake book).
 	- hear the tune to check that it is right and adjust the tempo.
@@ -123,5 +123,28 @@ doOwn = false
 			ees2. r4 |
 		}
 	}
+}
+{% endif %}
+{% if part == "LyricsFake" %}\lyricmode {
+
+	% part "A"
+	Wak -- ing skies at sun -- rise, ev -- 'ry sun -- set too
+	seems to be bring -- ing me Mem -- o -- ries Of You.
+
+	% part "A"
+	Here and there, ev -- 'ry -- where, scenes that we once knew,
+	and they all just re -- call Mem -- o -- ries Of You.
+
+	% part "B"
+	How I wish I could for -- get those hap -- py yes -- ter -- years
+	that have left a ro -- sa -- ry of tears. __
+
+	% part "A"
+	Your face beams in my dreams 'spite of all I do.
+	Ev -- 'ry -- thing seems to bring Mem -- o -- ries Of
+
+	% part "Volta"
+	You.
+	You.
 }
 {% endif %}

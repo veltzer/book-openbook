@@ -26,7 +26,7 @@ remark = "Diana Krall"
 [versions.Fake]
 doChords = true
 doVoice = true
-doLyrics = false
+doLyrics = true
 doLyricsmore = false
 doLyricsmoremore = false
 doChordBars = false
@@ -43,8 +43,8 @@ doOwn = false
 	- put in the chords (fake book).
 	- put in the tune (fake book).
 	- added youtube performances.
+	- put in the lyrics (fake book).
 	TODO:
-	- add the lyrics.
 	- check the chords (fake book).
 	- check the tune (fake book).
 	- hear the tune to check that it is right and adjust the tempo.
@@ -122,5 +122,25 @@ doOwn = false
 			d1 | r1 |
 		}
 	}
+}
+{% endif %}
+{% if part == "LyricsFake" %}\lyricmode {
+
+	% part "A"
+	No Moon At All __ what a night, __ ev -- en light -- nin' bugs have dimmed their light. __
+	Stars have dis -- ap -- peared from sight and there's No __ Moon At All. __
+
+	% part "A"
+	Don't make a sound, __ it's so dark, __ ev -- en Fi -- do is a -- fraid to bark. __
+	What a per -- fect chance to park and there's No __ Moon At All. __
+
+	% part "B"
+	Should we want at -- mos -- phere, __ for in -- spir -- a -- tion, dear, __
+	one kiss will make __ it clear, __ that to -- night is right and bright moon -- light might in -- ter -- fere. __
+
+	% part "A"
+	No Moon At All __ up a -- bove. __ This is noth -- ing like they told us of. __
+	Just to think we fell in love and there's No __ Moon At All. __
+	_
 }
 {% endif %}

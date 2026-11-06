@@ -26,8 +26,8 @@ remark = "Sarah Vaughan (Columbia, 1953)"
 [versions.Fake]
 doChords = true
 doVoice = true
-doLyrics = false
-doLyricsmore = false
+doLyrics = true
+doLyricsmore = true
 doLyricsmoremore = false
 doChordBars = false
 doGuitar = false
@@ -43,8 +43,8 @@ doOwn = false
 	- put in the chords (fake book).
 	- put in the tune (fake book).
 	- added youtube performances.
+	- put in the lyrics (fake book).
 	TODO:
-	- add the lyrics.
 	- check the chords (fake book).
 	- check the tune (fake book).
 	- hear the tune to check that it is right and adjust the tempo.
@@ -99,5 +99,23 @@ doOwn = false
 			bes2. bes,4 | c2~ c8. bes16 c8. bes16 | c'2. d,4 | ees1~ | ees~ | ees |
 		}
 	}
+}
+{% endif %}
+{% if part == "LyricsFake" %}\lyricmode {
+
+	% part "A"
+	Spring Will Be __ A Lit -- tle Late This Year, __ a lit -- tle late ar --
+	riv -- ing in my lone -- ly world o -- ver here. For you have
+	left me, and where is our Ap -- ril of old? You have left me, and win -- ter con -- tin -- ues
+	cold. As if to say
+	all things, so I need -- n't cling to this fear. It's mere -- ly that
+	Spring Will Be __ A Lit -- tle Late This Year. __
+}
+{% endif %}
+{% if part == "LyricsmoreFake" %}\lyricmode {
+
+	% part "A"
+	spring will be __ a lit -- tle slow to start, __ a lit -- tle slow re --
+	viv -- ing that mu -- sic it made in my heart. Yes, time heals
 }
 {% endif %}

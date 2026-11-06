@@ -26,8 +26,8 @@ remark = "Chet Baker"
 [versions.Fake]
 doChords = true
 doVoice = true
-doLyrics = false
-doLyricsmore = false
+doLyrics = true
+doLyricsmore = true
 doLyricsmoremore = false
 doChordBars = false
 doGuitar = false
@@ -43,8 +43,8 @@ doOwn = false
 	- put in the chords (fake book).
 	- put in the tune (fake book).
 	- added youtube performances.
+	- put in the lyrics (fake book).
 	TODO:
-	- add the lyrics.
 	- check the chords (fake book).
 	- check the tune (fake book).
 	- hear the tune to check that it is right and adjust the tempo.
@@ -113,5 +113,32 @@ doOwn = false
 	% part "A"
 	ees8 ees ees c~ c4~ \tuplet 3/2 { c8 aes g } | fis8 d'4 c8~ c4 d8 bes | d4. d8 bes4. c8 | d4~ \tuplet 3/2 { d8 bes g } e!2 |
 	r8 c' aes bes g4. f8 | ees g f' d~ d2 | c8 ees c aes \tuplet 3/2 { g bes g~ } g f | c ees~ ees2. |
+}
+{% endif %}
+{% if part == "LyricsFake" %}\lyricmode {
+	Ole
+
+	% part "A"
+	Fath -- er Time checked __ so there'd be no doubt; __ Called on the north wind to come on out,
+	then cupped his hands so proud -- ly to shout __ La -- de -- da -- de -- da -- de -- dum, __ 'Tis
+	Au -- tumn. __ The
+	Au -- tumn. __ Then the
+
+	% part "B"
+	birds got to -- geth -- er to chirp a -- bout the weath -- er __ _ Mmm __ _ _ _ _ _ _ _ Af -- ter
+	mak -- ing their de -- cis -- ion in bird -- y like pre -- cis -- ion, __ turned a -- bout __ and made a
+	bee -- line __ to the south. My
+
+	% part "A"
+	hold -- ing you close __ real -- ly is no crime, __ ask the birds, the trees and Ole __ Fath -- er Time
+	It's just to help the mer -- cu -- ry climb __ La -- de -- da -- de -- da -- de -- dum __ 'Tis Au -- tumn. __
+}
+{% endif %}
+{% if part == "LyricsmoreFake" %}\lyricmode {
+	_
+
+	% part "A"
+	trees say they're tired, __ they've borne too much fruit; __ Charmed all the way -- side there's no dis -- pute.
+	Now, shed -- ding leaves, they don't give a hoot, __ La -- de -- da -- de -- da -- de -- dum __ 'Tis
 }
 {% endif %}

@@ -26,7 +26,7 @@ remark = "Frank Sinatra with Count Basie and his Orchestra (It Might As Well Be 
 [versions.Fake]
 doChords = true
 doVoice = true
-doLyrics = false
+doLyrics = true
 doLyricsmore = false
 doLyricsmoremore = false
 doChordBars = false
@@ -43,8 +43,8 @@ doOwn = false
 	- put in the chords (fake book).
 	- put in the tune (fake book).
 	- added youtube performances.
+	- put in the lyrics (fake book).
 	TODO:
-	- add the lyrics.
 	- check the chords (fake book).
 	- check the tune (fake book).
 	- hear the tune to check that it is right and adjust the tempo.
@@ -105,5 +105,25 @@ doOwn = false
 	% part "A"
 	c,8 g'4 c,8 ges'4 c,8 f~ | f8 c e!4 c8 ees4 c8 | ees8 c4.~ c2~ | c2. r4 |
 	f8 c'4 f,8 b!4 f8 bes~ | bes8 b!4 aes8 b bes aes4 | aes1~ | aes1 |
+}
+{% endif %}
+{% if part == "LyricsFake" %}\lyricmode {
+
+	% part "A"
+	Out of the tree of life __ I just picked me a plum. __ _
+	You came a -- long and ev -- 'ry -- thing's start -- in' to hum. __ _
+	Still it's a real good bet __ The Best Is Yet To Come. __ _
+
+	% part "B"
+	The Best Is Yet To Come __ and babe, won't it be fine. __ _
+	You think you've seen the sun, __ but you ain't seen it shine. __ _
+
+	% part "C"
+	Wait 'til the warm -- up's un -- der way. __ Wait 'til our lips have met. __
+	Wait 'til you see that sun -- shine day; __ you ain't seen noth -- in' yet! __
+
+	% part "A"
+	The Best Is Yet To Come __ and babe, won't it be fine. __ _
+	The Best Is Yet To Come, __ come the day __ _ you're mine. __
 }
 {% endif %}

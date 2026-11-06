@@ -26,8 +26,8 @@ remark = "Melissa Manchester live on The Midnight Special"
 [versions.Fake]
 doChords = true
 doVoice = true
-doLyrics = false
-doLyricsmore = false
+doLyrics = true
+doLyricsmore = true
 doLyricsmoremore = false
 doChordBars = false
 doGuitar = false
@@ -43,11 +43,12 @@ doOwn = false
 	- put in the chords (fake book).
 	- put in the tune (fake book).
 	- added youtube performances.
+	- put in the lyrics (fake book).
 	TODO:
-	- add the lyrics.
 	- check the chords (fake book).
 	- check the tune (fake book).
 	- hear the tune to check that it is right and adjust the tempo.
+	- the book prints no lyrics under the first four bars of C (after the "For" of the second ending); typed as skips.
 {% endif %}
 {% if part == "ChordsFake" %}\chordmode {
 	\startChords
@@ -130,5 +131,41 @@ doOwn = false
 	\repeat volta 2 {
 		a8 g~ g2. | r4 g,8 g c c e a~ | a8 g~ g2. | r4 g,8 g c c e a~ |
 	}
+}
+{% endif %}
+{% if part == "LyricsFake" %}\lyricmode {
+	What --
+
+	% part "A"
+	ev -- er it is, __ it -- 'll keep __ till the morn -- ing. Have -- n't we both __ got bet -- ter things __ _ to do? __ _
+	Mid -- night Blue. __
+
+	% part "B"
+	E -- ven though sim -- ple things __ be -- come rough. Have -- n't we had __ e -- nough? __ And I think we can make __
+	it __ one more time __ if we try, __ _
+	one more time for all __ the old times. __
+
+	% part "Volta"
+	_
+	_ For
+
+	% part "C"
+	_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _
+	_ Think we can make __ it, __ think we can make __ it. __
+	Would -- n't you give __ your heart __ to a friend? Think of me as __ your friend. __ _ And I think we can make __
+
+	% part "End"
+	it. __ And I think we can make __ it, __ and I think we can make __
+}
+{% endif %}
+{% if part == "LyricsmoreFake" %}\lyricmode {
+	_
+
+	% part "A"
+	all of the times __ you told __ _ me you need me, need -- ing me now __ is some -- thing I __ _ could use. __ _
+	Mid -- night Blue. __
+
+	% part "B"
+	Would -- n't you give __ your hand __ to a friend? May -- be it's not __ the end. __
 }
 {% endif %}

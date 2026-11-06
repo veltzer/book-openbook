@@ -26,7 +26,7 @@ remark = "Mel Torme, the composer, singing his song"
 [versions.Fake]
 doChords = true
 doVoice = true
-doLyrics = false
+doLyrics = true
 doLyricsmore = false
 doLyricsmoremore = false
 doChordBars = false
@@ -43,8 +43,8 @@ doOwn = false
 	- put in the chords (fake book).
 	- put in the tune (fake book).
 	- added youtube performances.
+	- put in the lyrics (fake book).
 	TODO:
-	- add the lyrics.
 	- check the chords (fake book).
 	- check the tune (fake book).
 	- hear the tune to check that it is right and adjust the tempo.
@@ -101,5 +101,20 @@ doOwn = false
 	% part "A"
 	ees4 ees' d8 c bes aes | g4 g g4. g8 | ees4 c' bes8 aes g f | ees2. r8 d |
 	ees4 d8 ees f4 ees8 f | g4 bes8 c d4 ees8 c | bes4 ees,2 f4 | ees2. r4 |
+}
+{% endif %}
+{% if part == "LyricsFake" %}\lyricmode {
+	% part "A"
+	Chest -- nuts roast -- ing on an op -- en fire, Jack Frost nip -- ping at your nose.
+	Yule -- tide car -- ols be -- ing sung by a choir and folks dressed up like Es -- ki -- mos. Ev -- 'ry -- bo -- dy
+	% part "A"
+	knows a tur -- key and some mis -- tle -- toe __ help to make the sea -- son bright.
+	Ti -- ny tots with their eyes all a -- glow will find it hard to sleep to -- night. They know that
+	% part "B"
+	San -- ta's on his way; he's load -- ed lots of toys and good -- ies on his sleigh. And ev -- 'ry
+	moth -- er's child __ is gon -- na spy __ to see if rein -- deer __ real -- ly know how to fly. And
+	% part "A"
+	so, I'm of -- fer -- ing this sim -- ple phrase to kids from one to nine -- ty -- two. Al --
+	though it's been said ma -- ny times, ma -- ny ways: 'Mer -- ry Christ -- mas to you.'
 }
 {% endif %}

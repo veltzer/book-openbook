@@ -26,8 +26,8 @@ remark = "Ella Fitzgerald from the Cole Porter Song Book (1956)"
 [versions.Fake]
 doChords = true
 doVoice = true
-doLyrics = false
-doLyricsmore = false
+doLyrics = true
+doLyricsmore = true
 doLyricsmoremore = false
 doChordBars = false
 doGuitar = false
@@ -43,8 +43,8 @@ doOwn = false
 	- put in the chords (fake book).
 	- put in the tune (fake book).
 	- added youtube performances.
+	- put in the lyrics (fake book).
 	TODO:
-	- add the lyrics.
 	- check the chords (fake book).
 	- check the tune (fake book).
 	- hear the tune to check that it is right and adjust the tempo.
@@ -102,5 +102,32 @@ doOwn = false
 			e4 r r2 |
 		}
 	}
+}
+{% endif %}
+{% if part == "LyricsFake" %}\lyricmode {
+	It's
+
+	% part "A"
+	Too Darn Hot, it's Too Darn Hot. I'd like to sup __ with my ba -- by to -- night, __
+	and play the pup __ with my ba -- by to -- night. __ I'd
+
+	% part "B"
+	like to sup __ with my ba -- by to -- night, __ and play the pup __ with my ba -- by to -- night. __
+	but I ain't up __ _ to my ba -- by to -- night, __ 'cause it's Too Darn
+	Hot. It's
+}
+{% endif %}
+{% if part == "LyricsmoreFake" %}\lyricmode {
+	_
+
+	% part "A"
+	Too Darn Hot, it's Too Darn Hot. I'd like to stop __ for my ba -- by to -- night, __
+	and blow my top __ with my ba -- by to -- night. __ I'd
+
+	% part "B"
+	like to stop __ for my ba -- by to -- night, and blow my top __ with my ba -- by to -- night.
+	but I'd be a flop __ with my ba -- by to -- night, 'cause it's Too Darn
+	_ _
+	Hot.
 }
 {% endif %}

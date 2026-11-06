@@ -26,8 +26,8 @@ remark = "Miles Davis Quintet on Steamin' with the Miles Davis Quintet"
 [versions.Fake]
 doChords = true
 doVoice = true
-doLyrics = false
-doLyricsmore = false
+doLyrics = true
+doLyricsmore = true
 doLyricsmoremore = false
 doChordBars = false
 doGuitar = false
@@ -44,8 +44,8 @@ doOwn = false
 	- put in the tune (fake book).
 	- added youtube performances.
 	- the book subtitles the tune (From 'OKLAHOMA').
+	- put in the lyrics (fake book).
 	TODO:
-	- add the lyrics.
 	- check the chords (fake book).
 	- check the tune (fake book).
 	- hear the tune to check that it is right and adjust the tempo.
@@ -112,5 +112,32 @@ doOwn = false
 	d,4 d d d | d4 d8 cis d g r4 | d4 d d d | d4 d8 cis d a' r4 |
 	d,4 d d d | d4 d8 cis d b' a g | a2 b | c2 b4 a |
 	d,8 d d d d d d d | c'2 e,4 fis | g1~ | g2. r4 |
+}
+{% endif %}
+{% if part == "LyricsFake" %}\lyricmode {
+
+	% part "A"
+	Chicks and ducks and geese bet -- ter scur -- ry when I take you out in the sur -- rey,
+	when I take you out in The Sur -- ry With The Fringe On
+
+	% part "Volta"
+	Top!
+	pop! The
+
+	% part "B"
+	wheels are yel -- ler, the up -- hol -- ster -- y's brown, the dash -- board's gen -- u -- ine leath -- er,
+	with is -- in -- glass cur -- tains, you can roll right down, in case there's a change in the weath -- er.
+
+	% part "A"
+	Two bright side -- lights wink -- in' and blink -- in', ain't no fin -- er rig I'm a -- think -- in'.
+	You can keep your rig if you're think -- in' 'at I'd keer to swap fer that
+	shin -- y, lit -- tle sur -- rey with the fringe on the top. __
+}
+{% endif %}
+{% if part == "LyricsmoreFake" %}\lyricmode {
+
+	% part "A"
+	Watch that fringe and see how it flut -- ters when I drive them high step -- pin' strut -- ters.
+	Nos -- ey pokes 'll peek thru their shut -- ters and their eyes will
 }
 {% endif %}

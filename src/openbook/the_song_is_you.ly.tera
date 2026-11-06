@@ -26,7 +26,7 @@ remark = "Stan Getz Quintet"
 [versions.Fake]
 doChords = true
 doVoice = true
-doLyrics = false
+doLyrics = true
 doLyricsmore = false
 doLyricsmoremore = false
 doChordBars = false
@@ -43,12 +43,12 @@ doOwn = false
 	- put in the chords (fake book).
 	- put in the tune (fake book).
 	- added youtube performances.
+	- put in the lyrics (fake book).
 	TODO:
 	- check the chords (fake book).
 	- check the tune (fake book).
 	- hear the tune to check that it is right and adjust the tempo.
 	- bars 21-23: the later d and f notes have no accidental in the book; typed sharp (carried from the start of the bar, fits the harmony) - check.
-	- add the lyrics.
 {% endif %}
 {% if part == "ChordsFake" %}\chordmode {
 	\startChords
@@ -102,5 +102,24 @@ doOwn = false
 	% part "C"
 	b8 c c b b c c b | f'2~ f8 a, \tuplet 3/2 { a aes g } | g8 a a g g a a g |
 	c2~ c8 f, \tuplet 3/2 { f dis e } | g2~ g8 e f e | a2~ a8 g a g | c1~ | c2. r4 |
+}
+{% endif %}
+{% if part == "LyricsFake" %}\lyricmode {
+
+	% part "A"
+	I hear mu -- sic when I look at you; __ a beau -- ti -- ful theme of ev -- 'ry dream I ev -- er knew. __ Down deep in my
+	heart __ I hear it play. __ I feel it start, __ then melt a -- way.
+
+	% part "A"
+	I hear mu -- sic when I touch your hand; __ a beau -- ti -- ful mel -- o -- dy from some en -- chant -- ed land. __ Down deep in my
+	heart, __ I hear it say, __ is this the day?
+
+	% part "B"
+	I a -- lone __ have heard this love -- ly strain, I a -- lone __ have heard this glad re -- frain:
+	Must it be __ for ev -- er in -- side of me, __ why can't I let it go, __ why can't I let you know, __ why can't I
+
+	% part "C"
+	let you know the song my heart would sing? __ That beau -- ti -- ful rhap -- so -- dy of love and youth and
+	spring, __ the mu -- sic is sweet, __ the words are true. __ The Song Is You. __
 }
 {% endif %}

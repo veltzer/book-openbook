@@ -27,7 +27,7 @@ remark = "Marilyn Monroe (Let's Make Love, 1960)"
 [versions.Fake]
 doChords = true
 doVoice = true
-doLyrics = false
+doLyrics = true
 doLyricsmore = false
 doLyricsmoremore = false
 doChordBars = false
@@ -44,8 +44,8 @@ doOwn = false
 	- put in the chords (fake book).
 	- put in the tune (fake book).
 	- added youtube performances.
+	- put in the lyrics (fake book).
 	TODO:
-	- add the lyrics.
 	- check the chords (fake book).
 	- check the tune (fake book).
 	- hear the tune to check that it is right and adjust the tempo.
@@ -108,5 +108,24 @@ doOwn = false
 	% part "C"
 	e4 e8 e~ e4. d8 | d8 c4 r8 r4 c8 d | e4 e8 e~ \tuplet 3/2 { e4 d c } | a2. aes8 a |
 	c4 c8 bes~ bes4. aes8 | aes8 g4.~ g8 r e f | \tuplet 3/2 { g4 g g } \tuplet 3/2 { f4 ees d } | c2. r4 |
+}
+{% endif %}
+{% if part == "LyricsFake" %}\lyricmode {
+
+	% part "A"
+	While tear -- ing off __ a game of golf __ I may make a play for the cad -- dy; but
+	when I do __ I don't fol -- low through 'cause My Heart Be -- longs __ To Dad -- dy. If
+
+	% part "A"
+	I in -- vite __ a boy some -- night __ to dine on my fine fin -- nan had -- die, I
+	just a -- dore __ his ask -- ing for more, __ but My Heart Be -- longs __ To Dad -- dy. Yes, My
+
+	% part "B"
+	Heart Be -- longs __ To Dad -- dy, so I sim -- ply could -- n't be bad. Yes, My
+	Heart Be -- longs __ To Dad -- dy, da -- da, da -- da -- da, da -- da -- da -- _ _ ad! So I
+
+	% part "C"
+	want to warn __ you, lad -- die tho' I know you're per -- fect -- ly swell, that My
+	Heart Be -- longs __ To Dad -- dy __ 'cause my dad -- dy, he treats it so well.
 }
 {% endif %}

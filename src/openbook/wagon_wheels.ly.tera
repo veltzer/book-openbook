@@ -26,7 +26,7 @@ remark = "Sonny Rollins from Way Out West (1957)"
 [versions.Fake]
 doChords = true
 doVoice = true
-doLyrics = false
+doLyrics = true
 doLyricsmore = false
 doLyricsmoremore = false
 doChordBars = false
@@ -43,8 +43,8 @@ doOwn = false
 	- put in the chords (fake book).
 	- put in the tune (fake book).
 	- added youtube performances.
+	- put in the lyrics (fake book).
 	TODO:
-	- add the lyrics.
 	- check the chords (fake book).
 	- check the tune (fake book).
 	- hear the tune to check that it is right and adjust the tempo.
@@ -103,5 +103,21 @@ doOwn = false
 	ees2. f4 | g1 | g4 f ees2 | f4 ees d2 |
 	ees2 c | bes g | g4 f ees2 | f4 ees d2 |
 	ees1~ | ees1~ | ees2. r4 |
+}
+{% endif %}
+{% if part == "LyricsFake" %}\lyricmode {
+
+	% part "A"
+	Wa -- gon Wheels, Wa -- gon Wheels keep on a turn -- in', Wa -- gon Wheels.
+
+	% part "A"
+	Roll a -- long, sing your song; car -- ry me o -- ver the hill. __
+
+	% part "B"
+	Go 'long, mule, __ there's a steam -- er at the land -- in' wait -- in' for this cot -- ton to load.
+	Go 'long, mule, __ the Boss is un -- der -- stand -- in' there's a pas -- ture at the end of each road.
+
+	% part "Coda"
+	sing your song, Wa -- gon Wheels car -- ry me ho -- o -- o -- ome. Wa -- gon Wheels car -- ry me home. __
 }
 {% endif %}

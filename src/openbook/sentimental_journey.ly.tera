@@ -26,8 +26,8 @@ remark = "Rosemary Clooney"
 [versions.Fake]
 doChords = true
 doVoice = true
-doLyrics = false
-doLyricsmore = false
+doLyrics = true
+doLyricsmore = true
 doLyricsmoremore = false
 doChordBars = false
 doGuitar = false
@@ -43,8 +43,8 @@ doOwn = false
 	- put in the chords (fake book).
 	- put in the tune (fake book).
 	- added youtube performances.
+	- put in the lyrics (fake book).
 	TODO:
-	- add the lyrics.
 	- check the chords (fake book).
 	- check the tune (fake book).
 	- hear the tune to check that it is right and adjust the tempo.
@@ -95,5 +95,27 @@ doOwn = false
 	% part "A"
 	r8 e4 c8 e4. c8 | e8. c16 e8. c16 e8 c4. | r8 e4 c8 e4. f8 | e4 ees8 d~ d2 |
 	r8 e!4 c8 e4. c8 | ees8. c16 ees8. c16 ees8 d4. | r8 e!4 c8 e f4. | e8. ees16 d8 c~ c2 |
+}
+{% endif %}
+{% if part == "LyricsFake" %}\lyricmode {
+
+	% part "A"
+	Gon -- na take a Sen -- ti -- men -- tal Jour -- ney, gon -- na set my heart at ease. __
+	Gon -- na make a Sen -- ti -- men -- tal Jour -- ney to re -- new old mem -- o -- ries. __ _
+
+	% part "B"
+	Sev -- en, __ that's the time we leave, at sev -- en. __ I'll be wait -- in' up for
+	Heav -- en, __ count -- in' ev -- 'ry mile of rail -- road track __ that takes me back. __
+
+	% part "A"
+	Nev -- er thought my heart could be so 'yeam -- y.' Why did I de -- cide to roam? __
+	Got -- ta take this Sen -- ti -- men -- tal Jour -- ney, Sen -- ti -- men -- tal Jour -- ney home. __ _
+}
+{% endif %}
+{% if part == "LyricsmoreFake" %}\lyricmode {
+
+	% part "A"
+	Got my bag, I got my res -- er -- va -- tion, spent each dime I could af -- ford.
+	Like a child in wild an -- ti -- ci -- pa -- tion, long to hear that 'All __ _ a -- board.'
 }
 {% endif %}

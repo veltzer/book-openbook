@@ -26,7 +26,7 @@ remark = "Johnny Hamp and his Kentucky Serenaders with Frank Luther (1929)"
 [versions.Fake]
 doChords = true
 doVoice = true
-doLyrics = false
+doLyrics = true
 doLyricsmore = false
 doLyricsmoremore = false
 doChordBars = false
@@ -43,8 +43,8 @@ doOwn = false
 	- put in the chords (fake book).
 	- put in the tune (fake book).
 	- added youtube performances.
+	- put in the lyrics (fake book).
 	TODO:
-	- add the lyrics.
 	- check the chords (fake book).
 	- check the tune (fake book).
 	- hear the tune to check that it is right and adjust the tempo.
@@ -102,5 +102,24 @@ doOwn = false
 	% part "C"
 	d4 r c d,~ | d4 e f2 | d'4 r c e,~ | e4 f g2 |
 	c4 r a b~ | b4 c d2 | c4 r r2 | c2 c4 r |
+}
+{% endif %}
+{% if part == "LyricsFake" %}\lyricmode {
+
+	% part "A"
+	Keep your Sun -- ny Side Up. Up!
+	Hide the side __ that gets blue. __
+
+	% part "B"
+	If you have nine sons in a row, __
+	Base -- ball teams make mon -- ey, you know! __
+
+	% part "A"
+	Keep your Sun -- ny side up. Up!
+	Let your laugh -- ter come thru, do!
+
+	% part "C"
+	Stand up -- on your legs, be like two __ fried eggs,
+	keep your Sun -- ny Side Up! _ _
 }
 {% endif %}

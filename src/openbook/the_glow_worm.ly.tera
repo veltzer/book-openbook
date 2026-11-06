@@ -25,9 +25,9 @@ remark = "Johnny Mercer"
 [versions.Fake]
 doChords = true
 doVoice = true
-doLyrics = false
-doLyricsmore = false
-doLyricsmoremore = false
+doLyrics = true
+doLyricsmore = true
+doLyricsmoremore = true
 doChordBars = false
 doGuitar = false
 doExtra = false
@@ -42,13 +42,15 @@ doOwn = false
 	- put in the chords (fake book).
 	- put in the tune (fake book).
 	- added youtube performances.
+	- put in the lyrics (fake book).
 	TODO:
 	- check the chords (fake book).
 	- check the tune (fake book).
 	- hear the tune to check that it is right and adjust the tempo.
 	- bars 2 and 10: the book prints no accidental on the g that follows the g sharp in the same bar; typed as g natural to fit the G7 chord.
 	- the fake book prints the first ending as "1,2", the second ending as "Fine for 3rd Chorus" and the last two bars as "Fine for 4th Chorus"; here they are written as a three time repeat with two endings followed by an End part. Check how the choruses should be laid out.
-	- add the lyrics.
+	- the book prints a fourth lyric line (the original chorus by Lilla Cayley Robinson); only three lyric lines are supported, so it is not typed.
+	- bars 4 and 5: the second and third lyric lines in the book have one syllable more than there are notes ("swim-mer", "tic-al", "ne-on"); typed as one syllable on the last note.
 {% endif %}
 {% if part == "ChordsFake" %}\chordmode {
 	\startChords
@@ -114,5 +116,40 @@ doOwn = false
 
 	% part "End"
 	g4 g d' c | c2. r4 |
+}
+{% endif %}
+{% if part == "LyricsFake" %}\lyricmode {
+	% part "A"
+	Glow, lit -- tle glow -- worm, fly of fire, __ _ Glow __ like an in -- can -- des -- cent __ _ wire, __
+	Glow for the fe -- male of the spe -- cie, turn on the A C and the D __ C;
+	% part "B"
+	This night could use a lit -- tle bright -- nin'. light __ up you li'l ol' bug of light -- nin',
+	When you got -- ta glow, you got -- ta glow, __
+	% part "Volta"
+	glow, lit -- tle glow -- worm, glow.
+	Glow, lit -- tle glow -- worm, __ Put __ on a show __ worm, __
+	Glow lit -- tle glow -- worm, glow. __ _
+	% part "End"
+	lead us on to love!
+}
+{% endif %}
+{% if part == "LyricsmoreFake" %}\lyricmode {
+	% part "A"
+	Glow, lit -- tle glow -- worm, glow and glim -- mer, Swim __ thru the sea of night, lit -- tle "swim-mer;"
+	Thou aer -- o -- nau -- "tic-al" boll __ _ wee -- vil, il -- lu -- mi -- nate yon woods pri -- me -- val;
+	% part "B"
+	See how the sha -- dows deep and dark -- en, you __ and your chick should get to spar -- kin',
+	I got __ _ a gal that I love so, __
+	% part "Volta"
+	glow, lit -- tle glow -- worm, glow.
+}
+{% endif %}
+{% if part == "LyricsmoremoreFake" %}\lyricmode {
+	% part "A"
+	Glow, lit -- tle glow -- worm, turn the key on, You __ are e -- quipped with tail -- light __ _ "ne-on;"
+	You got a cute vest pock -- et Maz -- da which you can make both slow or 'faz -- da;'
+	% part "B"
+	I don't know who you took a shine to, or __ who you're out to make a sign to,
+	I got __ _ a gal that I love so, __
 }
 {% endif %}

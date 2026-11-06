@@ -26,7 +26,7 @@ remark = "Sacha Distel (1964)"
 [versions.Fake]
 doChords = true
 doVoice = true
-doLyrics = false
+doLyrics = true
 doLyricsmore = false
 doLyricsmoremore = false
 doChordBars = false
@@ -43,11 +43,11 @@ doOwn = false
 	- put in the chords (fake book).
 	- put in the tune (fake book).
 	- added youtube performances.
+	- put in the lyrics (fake book).
 	TODO:
 	- check the chords (fake book).
 	- check the tune (fake book).
 	- hear the tune to check that it is right and adjust the tempo.
-	- add the lyrics.
 {% endif %}
 {% if part == "ChordsFake" %}\chordmode {
 	\startChords
@@ -105,5 +105,21 @@ doOwn = false
 	% part "C"
 	aes8 aes4.~ aes4~ \tuplet 3/2 { aes8 g aes } | bes8 bes4.~ bes4~ \tuplet 3/2 { bes8 aes bes } | c8 c4.~ c4~ \tuplet 3/2 { c8 b! c } | c2.~ \tuplet 3/2 { c8 bes aes } |
 	aes8 aes4.~ aes4~ \tuplet 3/2 { aes8 des c } | aes8 aes4.~ aes4 bes | aes1~ | aes2.\fermata r4 |
+}
+{% endif %}
+{% if part == "LyricsFake" %}\lyricmode {
+	Oh, The
+	% part "A"
+	Good Life __ full of fun __ seems to be __ the i -- deal. __ Yes, The
+	Good Life __ lets you hide __ all the sad __ ness you fell. __ You won't
+	% part "B"
+	real -- ly __ fall in love __ for you can't take the chance. __ So be
+	hon -- est __ with your -- self, don't try to fake ro -- mance. __ It's The
+	% part "A"
+	Good Life __ to be free __ and ex -- plore __ the un -- known. __ Like the
+	heart -- aches __ when you learn __ you must face __ them a -- lone, __ Please re --
+	% part "C"
+	mem -- ber __ I still want you, __ and in case you __ won -- der why. __ Well, just
+	wake up; __ kiss The Good Life __ good -- bye. __
 }
 {% endif %}

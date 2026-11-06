@@ -26,8 +26,8 @@ remark = "Charlie Parker with Dizzy Gillespie and Thelonious Monk (1950)"
 [versions.Fake]
 doChords = true
 doVoice = true
-doLyrics = false
-doLyricsmore = false
+doLyrics = true
+doLyricsmore = true
 doLyricsmoremore = false
 doChordBars = false
 doGuitar = false
@@ -43,8 +43,8 @@ doOwn = false
 	- put in the chords (fake book).
 	- put in the tune (fake book).
 	- added youtube performances.
+	- put in the lyrics (fake book).
 	TODO:
-	- add the lyrics (two verses and the chorus).
 	- check the chords (fake book).
 	- check the tune (fake book).
 	- hear the tune to check that it is right and adjust the tempo.
@@ -124,5 +124,35 @@ doOwn = false
 			ees,2. r4 |
 		}
 	}
+}
+{% endif %}
+{% if part == "LyricsFake" %}\lyricmode {
+
+	% part "Intro"
+	Come sweet -- heart mine, __ don't sit and pine. __ Tell me of the cares that make you feel so blue.
+	What have I done? __ An -- swer me hon', __ have I ev -- er said an un -- kind word to you?
+	My love is true, __ and just for you, __ I'd do al -- most an -- y -- thing at an -- y -- time.
+	Dear, when you sigh __ or when you cry, __ some -- thing seems to grip this ver -- y heart of mine.
+
+	% part "A"
+	Come to me, My Mel -- an -- chol -- y Ba -- by, cud -- dle up and don't be blue;
+	all your fears are fool -- ish fan -- cy, may -- be, you know, dear that I'm in love with you.
+
+	% part "A"
+	Ev' -- ry cloud must have a sil -- ver lin -- ing, wait un -- til the sun shines through.
+	smile my hon -- ey dear, while I kiss a -- way each tear, or else I shall be mel -- an -- chol -- y
+
+	% part "Volta"
+	too. Now won't you
+	too.
+}
+{% endif %}
+{% if part == "LyricsmoreFake" %}\lyricmode {
+
+	% part "Intro"
+	Birds in the trees, __ whis -- per -- ing breeze __ should not fall to lull you in -- to peace -- ful dreams.
+	So tell me why __ sad -- ly you sigh, __ sit -- ting at the win -- dow when the pale moon beams.
+	You should -- n't grieve, __ try and be -- lieve; __ life is al -- ways sun -- shine when the heart beats true.
+	Be of good cheer, __ smile thro' your tears, __ when you're sad it makes me feel the same as you.
 }
 {% endif %}

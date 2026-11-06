@@ -26,8 +26,8 @@ remark = "Caterina Valente (1955)"
 [versions.Fake]
 doChords = true
 doVoice = true
-doLyrics = false
-doLyricsmore = false
+doLyrics = true
+doLyricsmore = true
 doLyricsmoremore = false
 doChordBars = false
 doGuitar = false
@@ -43,8 +43,8 @@ doOwn = false
 	- put in the chords (fake book).
 	- put in the tune (fake book).
 	- added youtube performances.
+	- put in the lyrics (fake book).
 	TODO:
-	- add the lyrics.
 	- check the chords (fake book).
 	- check the tune (fake book).
 	- hear the tune to check that it is right and adjust the tempo.
@@ -114,5 +114,20 @@ doOwn = false
 	% part "C"
 	\tuplet 3/2 { f2 g aes } | \tuplet 3/2 { c2 ees d } | g2 \tuplet 3/2 { f4 g f } | \tuplet 3/2 { d4 c bes } \tuplet 3/2 { g f ees } |
 	c2. d4~ | d2 bes2 | ees1~ | ees4 c d4. bes8 | ees1~ | ees2. r4 |
+}
+{% endif %}
+{% if part == "LyricsFake" %}\lyricmode {
+	% part "A"
+	The Breeze And I are say -- ing with a sigh __ that you __ no long -- er care. __
+	The _
+	% part "B"
+	Ours was a love song that seemed con -- stant as the moon, end -- ing in a strange, mourn -- ful tune; __
+	% part "C"
+	and all a -- bout me, they know you have de -- part -- ed with -- out me and we won -- der why, __ The Breeze And I. __
+}
+{% endif %}
+{% if part == "LyricsmoreFake" %}\lyricmode {
+	% part "A"
+	_ Breeze And I are whis -- per -- ing good -- bye __ to dreams __ we used to share. __
 }
 {% endif %}

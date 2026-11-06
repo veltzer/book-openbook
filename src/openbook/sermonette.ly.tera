@@ -25,7 +25,7 @@ remark = "Lambert, Hendricks and Ross in the vocal version"
 [versions.Fake]
 doChords = true
 doVoice = true
-doLyrics = false
+doLyrics = true
 doLyricsmore = false
 doLyricsmoremore = false
 doChordBars = false
@@ -42,8 +42,8 @@ doOwn = false
 	- put in the chords (fake book).
 	- put in the tune (fake book).
 	- added youtube performances.
+	- put in the lyrics (fake book).
 	TODO:
-	- add the lyrics.
 	- check the chords (fake book).
 	- check the tune (fake book).
 	- hear the tune to check that it is right and adjust the tempo.
@@ -111,5 +111,25 @@ doOwn = false
 			f2. r4 |
 		}
 	}
+}
+{% endif %}
+{% if part == "LyricsFake" %}\lyricmode {
+	I heard me a
+
+	% part "A"
+	Ser -- mon -- ette, __ have you heard it yet __ with that
+	soul -- ful mes -- sage that you won't soon for -- get? It tells a -- bout real, true love __
+	peo -- ple lost sight of __ through their sin -- ful liv -- in' 'n'
+	scorn -- in' heav'n a -- bove. __ It tells you to
+
+	% part "B"
+	love one 'noth -- er, __ to feel that each man's your
+	broth -- er, __ live right 'cause you __ know that you reap what you sow. And so to have
+	no re -- gret __ and to find what you're miss -- in', bow your head an, lis --
+	ten to this Ser -- mon -- ette. __
+
+	% alternatives
+	I heard me a
+	_
 }
 {% endif %}

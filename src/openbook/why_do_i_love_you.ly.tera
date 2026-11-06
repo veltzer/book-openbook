@@ -26,7 +26,7 @@ remark = "Jerry Hadley and Frederica von Stade"
 [versions.Fake]
 doChords = true
 doVoice = true
-doLyrics = false
+doLyrics = true
 doLyricsmore = false
 doLyricsmoremore = false
 doChordBars = false
@@ -43,8 +43,8 @@ doOwn = false
 	- put in the chords (fake book).
 	- put in the tune (fake book).
 	- added youtube performances.
+	- put in the lyrics (fake book).
 	TODO:
-	- add the lyrics.
 	- check the chords (fake book).
 	- check the tune (fake book).
 	- hear the tune to check that it is right and adjust the tempo.
@@ -120,5 +120,28 @@ doOwn = false
 			aes1~ | aes4 r r2 |
 		}
 	}
+}
+{% endif %}
+{% if part == "LyricsFake" %}\lyricmode {
+
+	% part "A"
+	Why Do I Love You? Why do you love me?
+	Why should there be two hap -- py as we? __
+
+	% part "B"
+	Can you see __ the why or where -- for,
+	I should be __ the one you care for?
+
+	% part "A"
+	You're a luck -- y boy, I am luck -- y too;
+	All our dreams of joy seem to come true. __
+
+	% part "C"
+	May -- be that's __ be -- cause you love me;
+	may -- be that's why I love
+
+	% part "Volta"
+	you! __
+	you! __
 }
 {% endif %}

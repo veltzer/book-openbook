@@ -25,8 +25,8 @@ remark = "Count Basie and his Orchestra live (Masters of American Music)"
 [versions.Fake]
 doChords = true
 doVoice = true
-doLyrics = false
-doLyricsmore = false
+doLyrics = true
+doLyricsmore = true
 doLyricsmoremore = false
 doChordBars = false
 doGuitar = false
@@ -42,8 +42,8 @@ doOwn = false
 	- put in the chords (fake book).
 	- put in the tune (fake book).
 	- added youtube performances.
+	- put in the lyrics (fake book).
 	TODO:
-	- add the lyrics.
 	- check the chords (fake book).
 	- check the tune (fake book).
 	- hear the tune to check that it is right and adjust the tempo.
@@ -133,5 +133,38 @@ doOwn = false
 	bes8 bes aes4 ges f8 ees~ | ees8 ees~ ees2. | bes'8 bes aes4 ges f8 ees~ | ees8 ees~ ees2. |
 	bes'8 bes aes4 ges f8 ees~ | ees8 ees~ ees2. | bes'8 bes aes4 ges f8 ees~ | ees8 ees~ ees2. |
 	bes'8 bes aes4 ges f8 c'~ | c8 c~ c2. | bes8 bes b!4 c d8 ees~ | ees8 ees~ ees2. |
+}
+{% endif %}
+{% if part == "LyricsFake" %}\lyricmode {
+
+	% part "A"
+	Ev -- 'ry -- time blues bring sad -- ness, __ chase 'em a -- way with glad -- ness. __
+	Cry and those blues -- 'll grieve __ you, __ swing and those blues -- 'll leave __ you. __
+	Real -- ly ain't noth -- in' to __ it, __ Swing -- in' The Blues -- 'll do __
+	it. __
+	_ it. The
+
+	% part "B"
+	blues mean sad -- ness, they can't stand glad -- ness, stop cry -- in,' 'cause tears can lead __ to mad -- ness.
+	Say, swing __ those blues __ a --
+
+	% part "C"
+	way! __ When the blues come 'round, don't feel bad, __ just swing the blues, you'll feel glad. __ When
+	blues can't cause you trou -- ble __ that's when __ _ they go way mad. __ Say swing __ those blues __ a way! __
+
+	% part "D"
+	You get the blues, you pay the dues, you got -- ta swing 'em, or you're real -- ly gon -- na lose.
+
+	% part "A"
+	Trav -- el -- in' down life's high -- way, __ Swing -- in' The Blues is my __ way. __
+	Ev -- 'ry -- one gets blues one __ time, __ swing and en -- joy 'em some __ time. __
+	Real -- ly ain't noth -- in' to __ it, __ Swing -- in' The Blues -- 'll do __ it! __
+}
+{% endif %}
+{% if part == "LyricsmoreFake" %}\lyricmode {
+
+	% part "A"
+	Soon as I feel 'em com -- in,' __ right a -- way I start hum -- min.'
+	Ev -- 'ry -- things free and eas -- y __ 'long as you're feel -- in' breeze -- y. __
 }
 {% endif %}

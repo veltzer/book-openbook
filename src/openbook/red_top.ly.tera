@@ -26,7 +26,7 @@ remark = "Gene Ammons (1947)"
 [versions.Fake]
 doChords = true
 doVoice = true
-doLyrics = false
+doLyrics = true
 doLyricsmore = false
 doLyricsmoremore = false
 doChordBars = false
@@ -43,12 +43,12 @@ doOwn = false
 	- put in the chords (fake book).
 	- put in the tune (fake book).
 	- added youtube performances.
+	- put in the lyrics (fake book).
 	TODO:
 	- check the chords (fake book).
 	- check the tune (fake book).
 	- hear the tune to check that it is right and adjust the tempo.
 	- the fake book prints a pickup of five eighths (b8 d8. e16 g4); check it against a recording.
-	- add the lyrics.
 {% endif %}
 {% if part == "ChordsFake" %}\chordmode {
 	\startChords
@@ -90,5 +90,19 @@ doOwn = false
 	b4 r r2 | r8. b16 d,8. e16 g8 b4. | g8 e~ e2. | r2 r4 g4 | \tuplet 3/2 { d'4 g, bes~ } bes2 |
 	r8. b!16 d,8. e16 g8 b4. | g4 r r2 | r1 | r8 b4. g8. e16 \tuplet 3/2 { c8 e g } |
 	\tuplet 3/2 { d'8 des c } b2 d,4 | g8. a16 g8 g~ g8. a16 g8 g~ | g8. a16 g8 g~ g4 r |
+}
+{% endif %}
+{% if part == "LyricsFake" %}\lyricmode {
+	My lit -- tle Red
+
+	% part "A"
+	Top see how you got me spin -- ning, __ go -- ing
+	'round and 'round __ and I don't want to stop. You've got me so if I
+	don't go a -- round I'm sure gon -- na drop, __ gon -- na drop, __ gon -- na drop, __ So Red Top __
+
+	% part "A"
+	you just go right on spin -- ning, __ go 'round and 'round __
+	and don't you ev -- er stop. Re -- mem -- ber, that if you
+	don't go a -- round we're sure gon -- na drop, __ gon -- na drop, __ gon -- na drop. __
 }
 {% endif %}

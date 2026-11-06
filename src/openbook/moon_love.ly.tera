@@ -26,7 +26,7 @@ remark = "Chet Baker (1953)"
 [versions.Fake]
 doChords = true
 doVoice = true
-doLyrics = false
+doLyrics = true
 doLyricsmore = false
 doLyricsmoremore = false
 doChordBars = false
@@ -43,8 +43,8 @@ doOwn = false
 	- put in the chords (fake book).
 	- put in the tune (fake book).
 	- added youtube performances.
+	- put in the lyrics (fake book).
 	TODO:
-	- add the lyrics.
 	- check the chords (fake book).
 	- check the tune (fake book).
 	- hear the tune to check that it is right and adjust the tempo.
@@ -105,5 +105,21 @@ doOwn = false
 	% part "A"
 	f2 e~ | e2 \tuplet 3/2 { c4 d e } | g2 f~ | f2 \tuplet 3/2 { a4 bes c } |
 	d2 d,4. d8 | a'2 e4 e | f1~ | f2. r4 |
+}
+{% endif %}
+{% if part == "LyricsFake" %}\lyricmode {
+	Will this be
+
+	% part "A"
+	Moon Love, __ noth -- ing but Moon Love? __ Will you be gone when the dawn comes steal -- ing through? __ Are these just
+
+	% part "B"
+	moon dreams, __ grand while the moon beams? __ But, when the moon fades a -- way will my dreams come true? __ Much as I
+
+	% part "C"
+	love you, __ don't let me love you __ if I must pay for your kiss with lone -- ly tears. __ Say it's not
+
+	% part "A"
+	Moon Love, __ Tell me it's true love, __ say you'll be mine when the moon dis -- ap -- pears. __
 }
 {% endif %}

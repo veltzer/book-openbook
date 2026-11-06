@@ -26,7 +26,7 @@ remark = "Connee Boswell (1942)"
 [versions.Fake]
 doChords = true
 doVoice = true
-doLyrics = false
+doLyrics = true
 doLyricsmore = false
 doLyricsmoremore = false
 doChordBars = false
@@ -43,8 +43,8 @@ doOwn = false
 	- put in the chords (fake book).
 	- put in the tune (fake book).
 	- added youtube performances.
+	- put in the lyrics (fake book).
 	TODO:
-	- add the lyrics.
 	- check the chords (fake book).
 	- check the tune (fake book).
 	- hear the tune to check that it is right and adjust the tempo.
@@ -101,5 +101,24 @@ doOwn = false
 	% part "A"
 	c'4 g8. e16 b'4 g8. e16 | bes'8. g16 e8 a~ a4 r | aes4 f8. d16 g4 e8. c16 | a'!8. f16 d8. b16 c8 b'4 a8 |
 	e1~ | e8. c16 e8. a16 g8. f16 g8 e~ | e1~ | e8. c16 e8. a16 g8. a16 g8 c~ | c1~ | c2. r4 |
+}
+{% endif %}
+{% if part == "LyricsFake" %}\lyricmode {
+
+	% part "A"
+	Sweet El -- o -- ise, sing the birds in the trees. __ When she is near you can
+	hear them sing -- ing sweet mel -- o -- dies, __ they're just for my El -- o -- ise __
+
+	% part "A"
+	Sweet El -- o -- ise is a beau -- ti -- ful sight; __ ole mis -- ter moon comes a -- round to look at her ev -- 'ry
+	night. __ Her smile's a warm sum -- mer breeze, __ the smile of El -- o -- ise. __ And tho' there
+
+	% part "B"
+	may be clouds in the skies __ there's al -- ways sun shine deep in her eyes. __ In case you
+	did -- n't know, ro -- ses grow ho -- pin some day __ they'll be pressed and ca -- ressed in her bou -- quet. __
+
+	% part "A"
+	Sweet El -- o -- ise is so love -- ly to love; __ you will a -- gree she's the on -- ly girl that you're dream -- in'
+	of. __ But you'll be was -- tin' your time, __ 'cause El -- o -- ise is all mine. __
 }
 {% endif %}

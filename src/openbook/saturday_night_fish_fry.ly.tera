@@ -26,8 +26,8 @@ remark = "Louis Jordan live"
 [versions.Fake]
 doChords = true
 doVoice = true
-doLyrics = false
-doLyricsmore = false
+doLyrics = true
+doLyricsmore = true
 doLyricsmoremore = false
 doChordBars = false
 doGuitar = false
@@ -43,13 +43,14 @@ doOwn = false
 	- put in the chords (fake book).
 	- put in the tune (fake book).
 	- added youtube performances.
+	- put in the lyrics (fake book).
 	TODO:
 	- check the chords (fake book).
 	- check the tune (fake book).
 	- hear the tune to check that it is right and adjust the tempo.
 	- in the fake book some chords of the verse are printed half a beat early (bars 8, 12 and 16), here they are on the beat.
 	- the fake book has small cue notes for the second verse (bars 14 and 15), only the first verse is typed in.
-	- add the lyrics.
+	- lyrics: the verse rhythm of the book does not fit the typed notes everywhere (bars 2, 5, 7, 10, 11, 13 and 15 of the verse), the syllables there are placed by eye; the second verse has more syllables than notes in bars 5 and 15 (cue notes not typed).
 {% endif %}
 {% if part == "ChordsFake" %}\chordmode {
 	\startChords
@@ -115,5 +116,30 @@ doOwn = false
 			bes1~ | bes2. r4 |
 		}
 	}
+}
+{% endif %}
+{% if part == "LyricsFake" %}\lyricmode {
+
+	% part "A"
+	Now if you've ev -- er been down to New Or -- leans, __ _ then you can un -- der -- stand __ just
+	what I mean. __ Now all thru the week _ it's _ _ quiet as a mouse, but on Sat -- ur -- day night they go from
+	house to house. You don't have to pay the us -- ual ad -- mis -- sion if you're _ a cook or a wait -- er or a
+	good mu -- si -- cian, so if you hap -- pen to be just pass -- in' by __ stop in at the Sat -- ur -- day
+	Night Fish Fry. __ It was
+
+	% part "B"
+	rock -- in', it was rock -- in', you nev -- er see such scuf -- flin' and shov -- in' 'til the break of day. __
+	It was rock -- in', it was rock -- in', you nev -- er see such scuf -- flin' and shov -- in' 'til the break of dawn. __
+	Now my
+}
+{% endif %}
+{% if part == "LyricsmoreFake" %}\lyricmode {
+
+	% part "A"
+	_ _ _ bud -- dy and me was on the main stem, __ _ _ _ fool -- in' 'round __ just
+	me and him. __ We de -- cid -- ed we could use_a lit -- tle some -- thing to eat, so we went to a house _ on _
+	Ram -- part Street. We knocked on the door and it op -- ened with ease, and _ _ a lush lit -- tle miss _ said, _
+	'Come in please.' And be -- fore _ we _ _ could __ _ bat an eye, __ we_were right in the mid -- dle of_a
+	big fish fry.
 }
 {% endif %}

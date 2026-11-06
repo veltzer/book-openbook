@@ -25,7 +25,7 @@ remark = "Louis Armstrong and his Orchestra (1929)"
 [versions.Fake]
 doChords = true
 doVoice = true
-doLyrics = false
+doLyrics = true
 doLyricsmore = false
 doLyricsmoremore = false
 doChordBars = false
@@ -42,11 +42,11 @@ doOwn = false
 	- put in the chords (fake book).
 	- put in the tune (fake book).
 	- added youtube performances.
+	- put in the lyrics (fake book).
 	TODO:
 	- check the chords (fake book).
 	- check the tune (fake book).
 	- hear the tune to check that it is right and adjust the tempo.
-	- add the lyrics.
 {% endif %}
 {% if part == "ChordsFake" %}\chordmode {
 	\startChords
@@ -122,5 +122,28 @@ doOwn = false
 			g4 r r2 |
 		}
 	}
+}
+{% endif %}
+{% if part == "LyricsFake" %}\lyricmode {
+	Some Of These
+
+	% part "A"
+	Days __ you'll miss __ me hon -- ey, __ Some Of These
+	Days __ you'll feel __ so lone -- ly. __ You'll miss my
+
+	% part "B"
+	hugg -- ing, __ you'll miss my kiss -- es; __ you'll miss me,
+	hon -- ey, __ when you go a -- way. __ I feel so
+
+	% part "C"
+	lone -- ly __ just for you on -- ly, __ for you know,
+	hon -- ey, __ you've had your way. __ And when you
+
+	% part "D"
+	leave me __ I know 'twill grieve me, __ you'll miss __ your lit -- tle
+	ba -- by; yes Some __ Of These Days. __
+
+	% part "Volta"
+	Some Of These
 }
 {% endif %}

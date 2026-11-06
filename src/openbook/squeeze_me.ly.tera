@@ -26,7 +26,7 @@ remark = "Louis Armstrong and His Hot Five (1928)"
 [versions.Fake]
 doChords = true
 doVoice = true
-doLyrics = false
+doLyrics = true
 doLyricsmore = false
 doLyricsmoremore = false
 doChordBars = false
@@ -43,8 +43,8 @@ doOwn = false
 	- put in the chords (fake book).
 	- put in the tune (fake book).
 	- added youtube performances.
+	- put in the lyrics (fake book).
 	TODO:
-	- add the lyrics.
 	- check the chords (fake book).
 	- check the tune (fake book).
 	- hear the tune to check that it is right and adjust the tempo.
@@ -115,5 +115,24 @@ doOwn = false
 			c8 a4 f8~ f4 r |
 		}
 	}
+}
+{% endif %}
+{% if part == "LyricsFake" %}\lyricmode {
+	Dad -- dy
+
+	% part "A"
+	you've been dog gone sweet to me, __ dad -- dy you're the on -- ly one I see. __ You know I
+	need but you, __ 'cause you're my man. __ You love me like __ no one
+	can. Some -- thing 'bout you I can't re -- sist, __ when you kiss me, dad -- dy I stay kissed. __
+	Oh, dad -- dy
+
+	% part "B"
+	Squeeze Me and Squeeze Me a -- gain __ _ oh, hon -- ey,
+	don't stop, 'til I tell you when. __ _ Now, ba -- by, Squeeze Me and kiss me some more, __ _
+	just like you did be -- fore. Your ba -- by cu -- pid is stand -- ing close by, __ _ oh, dad -- dy
+	don't let your sweet ba -- by cry. Just pick me up __ on your knee, __ I
+	feel so good -- y good -- y when __ _
+	you kiss me. __ Oh, dad -- dy
+	you kiss me. __
 }
 {% endif %}

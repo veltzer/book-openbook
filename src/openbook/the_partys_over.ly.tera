@@ -26,7 +26,7 @@ remark = "Tony Bennett"
 [versions.Fake]
 doChords = true
 doVoice = true
-doLyrics = false
+doLyrics = true
 doLyricsmore = false
 doLyricsmoremore = false
 doChordBars = false
@@ -43,8 +43,8 @@ doOwn = false
 	- put in the chords (fake book).
 	- put in the tune (fake book).
 	- added youtube performances.
+	- put in the lyrics (fake book).
 	TODO:
-	- add the lyrics.
 	- check the chords (fake book).
 	- check the tune (fake book).
 	- hear the tune to check that it is right and adjust the tempo.
@@ -106,5 +106,25 @@ doOwn = false
 	% part "C"
 	ees4 aes,2.~ | aes4 d d4. d8 | g,1~ | g4 c c c | c4 f,2.~ |
 	f4 f ees d | g4 g2.~ | g2 f4 ees | aes4 aes2.~ | aes2 d, | ees1~ | ees4 r r2 |
+}
+{% endif %}
+{% if part == "LyricsFake" %}\lyricmode {
+	The Par -- ty's
+
+	% part "A"
+	O -- ver, __ it's time to call it a day. __ They've burst your pret -- ty bal -- loon and
+	tak -- en the moon a -- way. __ It's time to
+
+	% part "B"
+	wind up __ the mas -- quer -- ade. __ Just make your
+	mind up __ the pi -- per must be paid. The Par -- ty's
+
+	% part "A"
+	O -- ver. __ The can -- dles flick -- er and dim. __ You danced and
+	dreamed through the night, it seemed to be right just be -- ing with him. __ Now you must
+
+	% part "C"
+	wake up, __ all dreams must end. __ Take off your
+	make -- up, __ The Par -- ty's O -- ver. __ It's all o -- ver __ my friend. __
 }
 {% endif %}

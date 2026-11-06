@@ -26,7 +26,7 @@ remark = "Wingy Manone's Dixieland Band"
 [versions.Fake]
 doChords = true
 doVoice = true
-doLyrics = false
+doLyrics = true
 doLyricsmore = false
 doLyricsmoremore = false
 doChordBars = false
@@ -43,8 +43,8 @@ doOwn = false
 	- put in the chords (fake book).
 	- put in the tune (fake book).
 	- added youtube performances.
+	- put in the lyrics (fake book).
 	TODO:
-	- add the lyrics.
 	- check the chords (fake book).
 	- check the tune (fake book).
 	- hear the tune to check that it is right and adjust the tempo.
@@ -122,5 +122,23 @@ doOwn = false
 			ees,1~ | ees2. r4 |
 		}
 	}
+}
+{% endif %}
+{% if part == "LyricsFake" %}\lyricmode {
+	When wa -- gons
+
+	% part "A"
+	meet on the street, the traf -- fic stops; __ they have to call the cops, __ you ain't heard noth -- in' pops! __ The band that's
+
+	% part "A"
+	loud draws the crowd, and that ain't all; __ they tag a -- long 'til they start the ball __ down at the Ea -- gle's Hall. __ When the wag -- on
+
+	% part "B"
+	starts put the tail -- gate down. Watch the band -- pa -- rade all a -- round this town. Give the trom -- bone man room to move his slide.
+	And we'll sing and play 'round the coun -- try side. Was -- n't long a -- go I was in my teens and we played that way down in New Or --
+
+	% part "Volta"
+	leans. When the wag -- on
+	leans. __
 }
 {% endif %}

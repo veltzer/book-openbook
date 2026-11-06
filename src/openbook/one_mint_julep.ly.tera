@@ -26,8 +26,8 @@ remark = "Ray Charles in the hit instrumental recording (1961)"
 [versions.Fake]
 doChords = true
 doVoice = true
-doLyrics = false
-doLyricsmore = false
+doLyrics = true
+doLyricsmore = true
 doLyricsmoremore = false
 doChordBars = false
 doGuitar = false
@@ -43,8 +43,8 @@ doOwn = false
 	- put in the chords (fake book).
 	- put in the tune (fake book).
 	- added youtube performances.
+	- put in the lyrics (fake book).
 	TODO:
-	- add the lyrics.
 	- check the chords (fake book).
 	- check the tune (fake book).
 	- hear the tune to check that it is right and adjust the tempo.
@@ -130,5 +130,38 @@ doOwn = false
 	% part "B"
 	fis4 fis8 gis fis4 fis | r8 fis4 fis8 fis fis fis fis | f!4 f f g | r8 f!4 f8 f f f4 |
 	e4 e e8 e e4 | r8 e4 e8 e e gis gis | a4 a a8 a4. | c!8 a b a a4 b^\markup { D.S. al Fine } |
+}
+{% endif %}
+{% if part == "LyricsFake" %}\lyricmode {
+
+	% part "A"
+	One ear -- ly morn -- in' as I was walk -- in', I met a wom -- an and start -- ed talk -- in'.
+	Went in a tav -- ern to get a few nips, but all I had was a mint ju -- lep, One Mint Ju -- lep
+	was the cause of it all. __
+
+	% part "Volta"
+	_ The
+
+	% part "B"
+	lights were burn -- ing low there in the tav -- ern when thru the swing -- in' door, up popped her fa -- ther. He
+	said; 'I saw you when you kissed my daugh -- ter. Got to wed her right now, or face a slaugh -- ter.'
+
+	% part "A"
+	I did -- n't know just what I was do -- in'; I had to mar -- ry or face ru -- in.
+
+	% part "C"
+	A mint ju -- lep, a mint ju -- lep, a mint ju -- lep, a mint ju -- lep,
+	One Mint Ju -- lep was the cause of it all. __ I
+
+	% part "B"
+	don't want to bore you with my trou -- ble, but from now on I'll be think -- ing dou -- ble. I'll
+	buy her ro -- ses or may -- be tu -- lips, I got too much trou -- ble from __ _ buy -- ing ju -- leps.
+}
+{% endif %}
+{% if part == "LyricsmoreFake" %}\lyricmode {
+
+	% part "A"
+	I don't re -- mem -- ber just how it start -- ed, but all I know is we should have part -- ed.
+	I stole a kiss, _ and then an -- oth -- er, I did -- n't mean to take it fur -- ther,
 }
 {% endif %}

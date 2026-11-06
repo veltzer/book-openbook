@@ -26,7 +26,7 @@ remark = "Django Reinhardt (1940)"
 [versions.Fake]
 doChords = true
 doVoice = true
-doLyrics = false
+doLyrics = true
 doLyricsmore = false
 doLyricsmoremore = false
 doChordBars = false
@@ -43,8 +43,8 @@ doOwn = false
 	- put in the chords (fake book).
 	- put in the tune (fake book).
 	- added youtube performances.
+	- put in the lyrics (fake book).
 	TODO:
-	- add the lyrics.
 	- check the chords (fake book).
 	- check the tune (fake book).
 	- hear the tune to check that it is right and adjust the tempo.
@@ -105,5 +105,25 @@ doOwn = false
 	% part "C"
 	c f e f | c2 a4 bes | c d c d | e2. d4 |
 	bes2 bes | bes4 a2 g4 | f1~ | f2. r4 |
+}
+{% endif %}
+{% if part == "LyricsFake" %}\lyricmode {
+	My lit -- tle
+
+	% part "A"
+	Mar -- gie, I'm al -- ways think -- ing of you
+	Mar -- gie, I'll tell the world I love you.
+
+	% part "B"
+	Don't for -- get your prom -- ise to me; __
+	I have bought a home and ring and ev -- 'ry -- thing for
+
+	% part "A"
+	Mar -- gie, you've been my in -- spir -- a -- tion,
+	days are nev -- er blue. __ Af -- ter
+
+	% part "C"
+	all is said and done, there is real -- ly on -- ly one, oh!
+	Mar -- gie, Mar -- gie, it's you. __
 }
 {% endif %}

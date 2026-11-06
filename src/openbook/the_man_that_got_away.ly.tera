@@ -26,8 +26,8 @@ remark = "Frank Sinatra as The Gal That Got Away (1954)"
 [versions.Fake]
 doChords = true
 doVoice = true
-doLyrics = false
-doLyricsmore = false
+doLyrics = true
+doLyricsmore = true
 doLyricsmoremore = false
 doChordBars = false
 doGuitar = false
@@ -43,8 +43,8 @@ doOwn = false
 	- put in the chords (fake book).
 	- put in the tune (fake book).
 	- added youtube performances.
+	- put in the lyrics (fake book).
 	TODO:
-	- add the lyrics.
 	- check the chords (fake book).
 	- check the tune (fake book).
 	- hear the tune to check that it is right and adjust the tempo.
@@ -116,5 +116,33 @@ doOwn = false
 	d4 ees e!8 c4 c8 | d8. d16 ees8. ees16 e!8 c4 c8 | d4 ees e!8 c4 c8 | d8. d16 ees8. ees16 e!8 c4 c8 |
 	f4 g a8 f4 c8 | f4 g a f | d'1~ | d2~ d8 d4 bes8 | d4 d d8 d4 d8~ | d2~ d8 d4 c8 |
 	d4 d d8 f,4 bes8~ | bes2. a4 | f4 g a8 a f d | f8. f16 g8. g16 a4 f | f1~ | f2. r4 |
+}
+{% endif %}
+{% if part == "LyricsFake" %}\lyricmode {
+	The
+
+	% part "A"
+	night is bit -- ter, the stars have lost their glit -- ter; the winds grow cold -- er and
+	sud -- den -- ly you're old -- er, and all be -- cause of The
+
+	% part "Volta"
+	Man That Got A -- way. __ No more his eag -- er call; __ the writ -- ing's on __ the wall, __ the
+	dreams you dream'd have all __ gone a -- stray. __ The
+	all a cra -- zy game! __ No more that all __ time thrill, __ for you've been through __ the
+	mill, and nev -- er a new love will be the same. __ Good rid -- dance! Good -- bye! Ev -- 'ry
+	trick of his you're on to; but, fools __ will be fools, and where's he gone to? __ The
+
+	% part "A"
+	road gets rough -- er, it's lone -- li -- er and tough -- er; with hope you burn up, to -- mor -- row he may turn up. There's
+	just no let -- up the live -- long night and day! __ Ev -- er since this world be -- gan __ there is
+	noth -- ing sad -- der than __ a one man wo -- man look -- ing for The Man That Got A -- way. __
+}
+{% endif %}
+{% if part == "LyricsmoreFake" %}\lyricmode {
+	_
+
+	% part "A"
+	man that won you has run off and un -- done you. That great be -- gin -- ning has
+	seen the fi -- nal in -- ning. Don't know what hap -- pened, it's
 }
 {% endif %}

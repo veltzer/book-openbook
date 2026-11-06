@@ -26,7 +26,7 @@ remark = "Billie Holiday (1936)"
 [versions.Fake]
 doChords = true
 doVoice = true
-doLyrics = false
+doLyrics = true
 doLyricsmore = false
 doLyricsmoremore = false
 doChordBars = false
@@ -43,8 +43,8 @@ doOwn = false
 	- put in the chords (fake book).
 	- put in the tune (fake book).
 	- added youtube performances.
+	- put in the lyrics (fake book).
 	TODO:
-	- add the lyrics.
 	- check the chords (fake book).
 	- check the tune (fake book).
 	- hear the tune to check that it is right and adjust the tempo.
@@ -103,5 +103,24 @@ doOwn = false
 	% part "C"
 	r4 f, a c | e e e ees | d d d8 cis c b~ | b2. b8 bes |
 	\tuplet 3/2 { a4 f a } \tuplet 3/2 { c a c } | d2 e | c1~ | c |
+}
+{% endif %}
+{% if part == "LyricsFake" %}\lyricmode {
+
+	% part "A"
+	Ev -- 'ry -- time it rains it rains Pen -- nies From Heav -- en. __
+	Don't you know each cloud con -- tains Pen -- nies From Heav -- en? __
+
+	% part "B"
+	You'll find your for -- tune fall -- ing all o -- ver town.
+	Be sure that your um -- brel -- la is up -- side -- down.
+
+	% part "A"
+	Trade them for a pack -- age of sun -- shine and flow -- ers. __
+	If you want the things you love, you must have show -- ers. __
+
+	% part "C"
+	So when you hear it thun -- der, don't run un -- der a tree, __ there'll be
+	Pen -- nies From Heav -- en for you and me. __
 }
 {% endif %}

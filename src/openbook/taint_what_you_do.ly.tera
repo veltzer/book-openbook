@@ -26,8 +26,8 @@ remark = "Ella Fitzgerald with the Chick Webb Orchestra (1939)"
 [versions.Fake]
 doChords = true
 doVoice = true
-doLyrics = false
-doLyricsmore = false
+doLyrics = true
+doLyricsmore = true
 doLyricsmoremore = false
 doChordBars = false
 doGuitar = false
@@ -43,11 +43,12 @@ doOwn = false
 	- put in the chords (fake book).
 	- put in the tune (fake book).
 	- added youtube performances.
+	- put in the lyrics (fake book).
 	TODO:
-	- add the lyrics.
 	- check the chords (fake book).
 	- check the tune (fake book).
 	- hear the tune to check that it is right and adjust the tempo.
+	- bar 25, second verse: the fake book prints "sat" (a misprint), typeset as "say".
 {% endif %}
 {% if part == "ChordsFake" %}\chordmode {
 	\startChords
@@ -121,5 +122,43 @@ doOwn = false
 			aes8 r r4 r2 |
 		}
 	}
+}
+{% endif %}
+{% if part == "LyricsFake" %}\lyricmode {
+
+	% part "A"
+	Tain't What You Do, it's the way that -- cha do it, Tain't What You Do, it's the way that -- cha do it,
+	Tain't What You Do, it's the way that -- cha do it, that's what gets __ _ re -- sults __
+
+	% part "A"
+	Tain't What You Do, it's the time that -- cha do it, Tain't What You Do, it's the time that -- cha do it,
+	Tain't What You Do, it's the time that -- cha do it, that's what gets __ _ re -- sults. __ You can
+
+	% part "B"
+	try hard __ don't mean a thing, __ take it ea -- sy __ then your jive will swing. __
+
+	% part "A"
+	Tain't What You Do, it's the place that -- cha do it, Tain't What You Do, it's the time that -- cha do it,
+	Tain't What You Do, it's the way that -- cha do it, that's what gets __ _ re -- sults. __
+	_
+}
+{% endif %}
+{% if part == "LyricsmoreFake" %}\lyricmode {
+
+	% part "A"
+	Tain't What You Do, it's the way that -- cha do it, tain't what you say, it's the way that -- cha say it,
+	tain't what you say, it's the way that -- cha say it, that's what gets __ _ re -- sults __
+
+	% part "A"
+	tain't what you croon it's the way that -- cha croon it, tain't what you croon it's the way that -- cha croon it,
+	tain't what you croon it's the way that -- cha croon it, that's what gets __ _ re -- sults. __ If you're
+
+	% part "B"
+	lone -- some __ and on the shelf __ it's your own fault, __ so just blame your -- self. __
+
+	% part "A"
+	Tain't what you say, it's the place that -- cha say it, tain't what you croon it's the time that -- cha croon it,
+	Tain't What You Do, it's the way that -- cha do it, that's what gets __ _ re -- sults. __
+	_
 }
 {% endif %}

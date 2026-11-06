@@ -26,7 +26,7 @@ remark = "Count Basie and his Orchestra"
 [versions.Fake]
 doChords = true
 doVoice = true
-doLyrics = false
+doLyrics = true
 doLyricsmore = false
 doLyricsmoremore = false
 doChordBars = false
@@ -43,8 +43,8 @@ doOwn = false
 	- put in the chords (fake book).
 	- put in the tune (fake book).
 	- added youtube performances.
+	- put in the lyrics (fake book).
 	TODO:
-	- add the lyrics.
 	- check the chords (fake book).
 	- check the tune (fake book).
 	- hear the tune to check that it is right and adjust the tempo.
@@ -127,5 +127,26 @@ doOwn = false
 			f1~ | f2. r4 |
 		}
 	}
+}
+{% endif %}
+{% if part == "LyricsFake" %}\lyricmode {
+	I'm Trav' -- lin' Light __
+
+	% part "A"
+	be -- cause my man __ has gone, __ and from now on __
+	I'm Trav' -- lin' Light. __ He said 'God -- bye' __
+
+	% part "A"
+	and took my heart __ a -- way. __ So from to -- day __
+	I'm Trav' -- lin' Light. __ No one to see __
+
+	% part "B"
+	I'm free __ _ as the breeze; __ no one but me __
+	and my __ _ mem -- o -- ries. __ Some luck -- y night __
+
+	% part "A"
+	he may come back __ a -- gain, __ but un -- til then __
+	I'm Trav' -- lin' Light. __
+	I'm Trav' -- lin' Light.
 }
 {% endif %}

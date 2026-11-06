@@ -26,7 +26,7 @@ remark = "Chet Baker"
 [versions.Fake]
 doChords = true
 doVoice = true
-doLyrics = false
+doLyrics = true
 doLyricsmore = false
 doLyricsmoremore = false
 doChordBars = false
@@ -43,8 +43,8 @@ doOwn = false
 	- put in the chords (fake book).
 	- put in the tune (fake book).
 	- added youtube performances.
+	- put in the lyrics (fake book).
 	TODO:
-	- add the lyrics.
 	- check the chords (fake book).
 	- check the tune (fake book).
 	- hear the tune to check that it is right and adjust the tempo.
@@ -115,5 +115,25 @@ doOwn = false
 			c'1~ | c2 r4
 		}
 	}
+}
+{% endif %}
+{% if part == "LyricsFake" %}\lyricmode {
+	The
+
+	% part "A"
+	Touch Of Your Lips __ up -- on my brow; __ your lips that are cool __ and sweet. __ Such
+
+	% part "B"
+	ten -- der -- ness __ lies in their soft ca -- ress, __ my heart for -- gets to beat. __ The
+
+	% part "A"
+	touch of your hands __ up -- on my head, __ the love in your eyes __ a -- shine; __ and
+
+	% part "C"
+	now at last __ the mo -- ment di -- vine, __ The Touch Of Your Lips __ on
+
+	% part "Volta"
+	mine. __ The
+	mine. __
 }
 {% endif %}

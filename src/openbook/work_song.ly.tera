@@ -25,9 +25,9 @@ remark = "Cannonball Adderley Quintet from Them Dirty Blues (1960)"
 [versions.Fake]
 doChords = true
 doVoice = true
-doLyrics = false
-doLyricsmore = false
-doLyricsmoremore = false
+doLyrics = true
+doLyricsmore = true
+doLyricsmoremore = true
 doChordBars = false
 doGuitar = false
 doExtra = false
@@ -42,8 +42,9 @@ doOwn = false
 	- put in the chords (fake book).
 	- put in the tune (fake book).
 	- added youtube performances.
+	- put in the lyrics (fake book).
 	TODO:
-	- add the lyrics.
+	- the fake book prints a fourth verse for the A part that has no lyrics slot: Wan-na see my sweet hon-ey ba-by, wan-na break this chain off an run; wan-na lay down some-where it's shad-y, Lawd, it sure is hot in the sun.
 	- check the chords (fake book).
 	- check the tune (fake book).
 	- hear the tune to check that it is right and adjust the tempo.
@@ -100,5 +101,30 @@ doOwn = false
 			c2. r4 |
 		}
 	}
+}
+{% endif %}
+{% if part == "LyricsFake" %}\lyricmode {
+
+	% part "A"
+	Break -- in' up big rocks __ on uh chain gang, break -- in' rocks an' serv -- in' my time.
+	Break -- in' rocks ou' chere __ on the chain gang 'cause I been con -- vict -- ed o' crime.
+
+	% part "B"
+	Hol' it ste -- a -- dy right there __ while I hit it. There I rec -- kon that __ ought -- ta git it. Been
+	work -- in', an' work -- in', but I still __ got so terri -- ble long to go! __
+}
+{% endif %}
+{% if part == "LyricsmoreFake" %}\lyricmode {
+
+	% part "A"
+	I com -- mit the crime, __ Lawd o' need -- in', crime o' be -- in' hun -- gry and poor.
+	Left the gro -- cer store __ man a' bleed -- in', when he caught me rob -- bin' his store.
+}
+{% endif %}
+{% if part == "LyricsmoremoreFake" %}\lyricmode {
+
+	% part "A"
+	Judge he say, 'Five years __ hard __ _ la -- bor, on the chain -- gang you goin' t' go.'
+	Heard the judge say 'Five __ years o' lab -- or.' Heard my wo -- man scream __ 'Law -- dy, no!'
 }
 {% endif %}

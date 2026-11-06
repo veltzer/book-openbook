@@ -25,7 +25,7 @@ remark = "Sarah Vaughan with the Count Basie Orchestra"
 [versions.Fake]
 doChords = true
 doVoice = true
-doLyrics = false
+doLyrics = true
 doLyricsmore = false
 doLyricsmoremore = false
 doChordBars = false
@@ -42,11 +42,11 @@ doOwn = false
 	- put in the chords (fake book).
 	- put in the tune (fake book).
 	- added youtube performances.
+	- put in the lyrics (fake book).
 	TODO:
 	- check the chords (fake book).
 	- check the tune (fake book).
 	- hear the tune to check that it is right and adjust the tempo.
-	- add the lyrics.
 {% endif %}
 {% if part == "ChordsFake" %}\chordmode {
 	\startChords
@@ -104,5 +104,21 @@ doOwn = false
 	% part "C"
 	d4 d f f | a a c4. c8 | e4 e b b | a a gis a |
 	d2. a4 | c b a b | c1~ | c2. r4 |
+}
+{% endif %}
+{% if part == "LyricsFake" %}\lyricmode {
+	A heart that's
+
+	% part "A"
+	true __ There Are Such Things. __ A dream for two, __ There Are Such Things. __ Some --
+
+	% part "B"
+	one to whis -- per 'Dar -- ling you're my guid -- ing star.' __ Not car -- ing what you own __ but just what you are. __ A peace -- ful
+
+	% part "A"
+	sky, __ There Are Such Things. __ A rain -- bow high __ where heav -- en sings. __ So
+
+	% part "C"
+	have a lit -- tle faith and trust in what to -- mor -- row brings, you'll reach a star be -- cause There Are Such Things. __
 }
 {% endif %}

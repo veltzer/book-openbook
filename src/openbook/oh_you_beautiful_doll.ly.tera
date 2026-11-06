@@ -26,7 +26,7 @@ remark = "Al Jolson"
 [versions.Fake]
 doChords = true
 doVoice = true
-doLyrics = false
+doLyrics = true
 doLyricsmore = false
 doLyricsmoremore = false
 doChordBars = false
@@ -43,12 +43,12 @@ doOwn = false
 	- put in the chords (fake book).
 	- put in the tune (fake book).
 	- added youtube performances.
+	- put in the lyrics (fake book).
 	TODO:
 	- check the chords (fake book).
 	- check the tune (fake book).
 	- hear the tune to check that it is right and adjust the tempo.
 	- the fake book prints no chords in bars 4, 6, 14 and 16; they are left empty.
-	- add the lyrics.
 {% endif %}
 {% if part == "ChordsFake" %}\chordmode {
 	\startChords
@@ -105,5 +105,20 @@ doOwn = false
 			f2. r4 |
 		}
 	}
+}
+{% endif %}
+{% if part == "LyricsFake" %}\lyricmode {
+
+	% part "A"
+	Oh! You Beau -- ti -- ful Doll, __ you great big beau -- ti -- ful doll! __
+	Let __ me put my arms a -- bout you, I __ could nev -- er live with -- out you.
+
+	% part "A"
+	Oh! You Beau -- ti -- ful Doll, __ you great big beau -- ti -- ful doll! __ If you
+	ev -- er leave __ me, how my heart will ache, __ I want to hug __ you but I fear you'd break. __
+	Oh! oh! oh! oh! Oh! You Beau -- ti -- ful
+
+	% part "Volta"
+	Doll! Doll!
 }
 {% endif %}

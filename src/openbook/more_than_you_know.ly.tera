@@ -26,7 +26,7 @@ remark = "Thelonious Monk and Sonny Rollins Quartet (1954)"
 [versions.Fake]
 doChords = true
 doVoice = true
-doLyrics = false
+doLyrics = true
 doLyricsmore = false
 doLyricsmoremore = false
 doChordBars = false
@@ -43,8 +43,8 @@ doOwn = false
 	- put in the chords (fake book).
 	- put in the tune (fake book).
 	- added youtube performances.
+	- put in the lyrics (fake book).
 	TODO:
-	- add the lyrics.
 	- check the chords (fake book).
 	- check the tune (fake book).
 	- hear the tune to check that it is right and adjust the tempo.
@@ -125,5 +125,25 @@ doOwn = false
 			ees1~ | ees2. r4 |
 		}
 	}
+}
+{% endif %}
+{% if part == "LyricsFake" %}\lyricmode {
+
+	% part "A"
+	More Than You Know, More Than You Know, man o' my heart, I love you so. Late -- ly I find you're on my mind, More Than You Know. __
+
+	% part "A"
+	Wheth -- er you're right wheth -- er you're wrong, man o' my heart, I'll string a -- long. You need me so more than you'll ev -- er know. __
+
+	% part "B"
+	Lov -- ing you the way that I do there's noth -- ing I can do a -- bout it; __
+	lov -- ing may be all you can give but hon -- ey I can't live with -- out it. Oh, how I'd
+
+	% part "A"
+	cry, oh, how I'd cry, if you got tired and said 'good -- bye,' more than I'd show more than I'd ev -- er
+
+	% part "Volta"
+	know. __ More Than You
+	Know. __
 }
 {% endif %}

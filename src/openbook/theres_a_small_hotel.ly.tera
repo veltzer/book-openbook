@@ -27,7 +27,7 @@ remark = "Ella Fitzgerald from the Rodgers and Hart Songbook"
 [versions.Fake]
 doChords = true
 doVoice = true
-doLyrics = false
+doLyrics = true
 doLyricsmore = false
 doLyricsmoremore = false
 doChordBars = false
@@ -44,8 +44,8 @@ doOwn = false
 	- put in the chords (fake book).
 	- put in the tune (fake book).
 	- added youtube performances.
+	- put in the lyrics (fake book).
 	TODO:
-	- add the lyrics.
 	- check the chords (fake book).
 	- check the tune (fake book).
 	- hear the tune to check that it is right and adjust the tempo.
@@ -104,5 +104,22 @@ doOwn = false
 	a'2 g | a4 b g2 | fis e | fis4 g e fis |
 	d e b c | d2~ d8. d16 dis8. e16 | f!4 g d ees | f!2~ f8. f16 e8. ees16 |
 	d4 e b c | d2. d4 | d'2 d~ | d2. r4 |
+}
+{% endif %}
+{% if part == "LyricsFake" %}\lyricmode {
+
+	% part "A"
+	There's A Small Ho -- tel with a wish -- ing well; I wish that we were there to -- geth -- er. __
+
+	% part "A"
+	There's a brid -- al suite; one room bright and neat, com -- plete for us to share to -- geth -- er. __
+
+	% part "B"
+	Look -- ing through the win -- dow you can see a dis -- tant steep -- ple;
+	not a sign of peo -- ple, who wants peo -- ple?
+
+	% part "A"
+	When the stee -- ple bell says, 'Good -- night, sleep well,' we'll thank the small ho -- tel. __
+	We'll creep in -- to our lit -- tle shell __ and we will thank the small ho -- tel to -- geth -- er. __
 }
 {% endif %}

@@ -26,8 +26,8 @@ remark = "Wes Montgomery from A Day in the Life (1967)"
 [versions.Fake]
 doChords = true
 doVoice = true
-doLyrics = false
-doLyricsmore = false
+doLyrics = true
+doLyricsmore = true
 doLyricsmoremore = false
 doChordBars = false
 doGuitar = false
@@ -43,8 +43,8 @@ doOwn = false
 	- put in the chords (fake book).
 	- put in the tune (fake book).
 	- added youtube performances.
+	- put in the lyrics (fake book).
 	TODO:
-	- add the lyrics.
 	- check the chords (fake book).
 	- check the tune (fake book).
 	- hear the tune to check that it is right and adjust the tempo.
@@ -113,5 +113,28 @@ doOwn = false
 	g4. g8 g2~ | g4 c,8 ees \tuplet 3/2 { g4 f ees } | g1 | \tuplet 3/2 { r4 c, ees } \tuplet 3/2 { g f ees } |
 	g1~ | \tuplet 3/2 { g4 c, ees } \tuplet 3/2 { g f ees } | ees2. ees4 | e e d d |
 	ees2. ees4 | e e d d | ees1~ | ees1~ | ees1 |
+}
+{% endif %}
+{% if part == "LyricsFake" %}\lyricmode {
+
+	% part "A"
+	Let some -- one __ start be -- liev -- ing in you let him hold out his hand let him touch you and
+	Watch What Hap -- pens
+	_ _ _ _
+
+	% part "B"
+	cold, no I won't be -- lieve your heart is cold __ may -- be just a -- fraid __ to be bro -- ken a -- gain __
+
+	% part "A"
+	let some -- one __ with a deep love to give. Give that deep love to you __ and what mag -- ic you'll
+	see; let some -- one give his heart, some -- one who cares like me. __
+}
+{% endif %}
+{% if part == "LyricsmoreFake" %}\lyricmode {
+
+	% part "A"
+	One some -- one __ who can look in your eyes and see in to your heart let him find you and
+	_ _ _ _
+	Watch What Hap -- pens
 }
 {% endif %}

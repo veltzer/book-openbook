@@ -26,8 +26,8 @@ remark = "The Mills Brothers"
 [versions.Fake]
 doChords = true
 doVoice = true
-doLyrics = false
-doLyricsmore = false
+doLyrics = true
+doLyricsmore = true
 doLyricsmoremore = false
 doChordBars = false
 doGuitar = false
@@ -43,8 +43,8 @@ doOwn = false
 	- put in the chords (fake book).
 	- put in the tune (fake book).
 	- added youtube performances.
+	- put in the lyrics (fake book).
 	TODO:
-	- add the lyrics.
 	- check the chords (fake book).
 	- check the tune (fake book).
 	- hear the tune to check that it is right and adjust the tempo.
@@ -107,5 +107,35 @@ doOwn = false
 	c,8 ees c g'~ g4. c,8 | ces8 f g f~ f4. bes,8 | ees1~ | ees2 bes' |
 	g8 bes g bes~ bes4. g8 | fis8 bes c ees~ ees4 ees | ees1~ | ees8 r g,4 f ees |
 	c8 ees c g'~ g4. c,8 | ces8 f g f~ f4 \tuplet 3/2 { bes,8 bes bes } | ees1~ | ees1 |
+}
+{% endif %}
+{% if part == "LyricsFake" %}\lyricmode {
+
+	% part "A"
+	Where do they go __ the Smoke Rings I blow __ each night? __
+	What do they do __ those cir -- cles of blue __ and white? __ Oh!
+	why do they seem __ to pic -- ture a dream __ a -- bove? Then
+	why do they fade __ my phan -- tom pa -- rade __ of love? __
+
+	% part "B"
+	Puff, puff, puff, puff your cares a -- way. __
+	Puff, puff, puff night and day. __
+	Blow, blow them in -- to air silk -- y lit -- tle rings. __
+	Blow, blow them ev -- 'ry -- where, give your trou -- bles wings. __
+
+	% part "A"
+	What do they tell __ and what is the spell __ they cast? __
+	Some of them fall __ and seem to re -- call __ the past. __ But
+	most of them rise __ a -- way to the skies __ of blue. __ Oh, lit -- tle
+	Smoke Rings I love __ please take me a -- bove, __ take me with you! __
+}
+{% endif %}
+{% if part == "LyricsmoreFake" %}\lyricmode {
+
+	% part "A"
+	Where do they end __ the Smoke Rings I send __ on high? __
+	Where are they hurled __ when they've kissed the world __ good -- bye? __ Oh!
+	I'd give my life __ to laugh at this strife __ be -- low. I'd
+	be __ _ a king. __ I'd fol -- low each ring __ I blow. __
 }
 {% endif %}

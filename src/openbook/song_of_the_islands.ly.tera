@@ -26,8 +26,8 @@ remark = "Mike Holland, Hawaiian style lap steel guitar"
 [versions.Fake]
 doChords = true
 doVoice = true
-doLyrics = false
-doLyricsmore = false
+doLyrics = true
+doLyricsmore = true
 doLyricsmoremore = false
 doChordBars = false
 doGuitar = false
@@ -43,11 +43,11 @@ doOwn = false
 	- put in the chords (fake book).
 	- put in the tune (fake book).
 	- added youtube performances.
+	- put in the lyrics (fake book).
 	TODO:
 	- check the chords (fake book).
 	- check the tune (fake book).
 	- hear the tune to check that it is right and adjust the tempo.
-	- add the lyrics.
 {% endif %}
 {% if part == "ChordsFake" %}\chordmode {
 	\startChords
@@ -93,5 +93,19 @@ doOwn = false
 			f,2 f'2 |
 		}
 	}
+}
+{% endif %}
+{% if part == "LyricsFake" %}\lyricmode {
+
+	% part "A"
+	Ha -- wai -- i isles of beau -- ty __ where skies are blue and love is true. __ Where balm -- y
+	airs and gold -- en moon -- light __ ca -- ress the wav -- ing palms of Ho -- no -- lu -- lu. Your
+}
+{% endif %}
+{% if part == "LyricsmoreFake" %}\lyricmode {
+
+	% part "A"
+	val -- leys with their rain -- bows __ your moun -- tains green, the a -- zure sea. __ Your fra -- grant
+	flow'rs en -- chant -- ing mu -- sic __ u -- nite and sing a -- lo -- ha oe to _ _ _ _ me. __ _
 }
 {% endif %}

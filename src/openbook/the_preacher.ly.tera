@@ -25,9 +25,9 @@ remark = "Horace Silver Quintet with Jon Hendricks, live in Frankfurt, 1968"
 [versions.Fake]
 doChords = true
 doVoice = true
-doLyrics = false
-doLyricsmore = false
-doLyricsmoremore = false
+doLyrics = true
+doLyricsmore = true
+doLyricsmoremore = true
 doChordBars = false
 doGuitar = false
 doExtra = false
@@ -42,12 +42,13 @@ doOwn = false
 	- put in the chords (fake book).
 	- put in the tune (fake book).
 	- added youtube performances.
+	- put in the lyrics (fake book).
 	TODO:
 	- check the chords (fake book).
 	- check the tune (fake book).
 	- hear the tune to check that it is right and adjust the tempo.
 	- the fake book prints the words with the credit "By Horace Silver"; check who wrote the lyrics.
-	- add the lyrics.
+	- the fake book is unclear where "in one might-y chord" (verse 3, bars 4-5 of part B) sits on the notes; check against a recording.
 {% endif %}
 {% if part == "ChordsFake" %}\chordmode {
 	\startChords
@@ -115,5 +116,42 @@ doOwn = false
 			f2. r4 | r1 | r1 | r1 | r1 |
 		}
 	}
+}
+{% endif %}
+{% if part == "LyricsFake" %}\lyricmode {
+	Gath -- er 'round and
+
+	% part "A"
+	hear the Preach -- er, hear the Preach -- er, hear the Preach -- er, Preach -- er man. They used to
+
+	% part "B"
+	call him the Preach -- er, this was __ _ true __ for, he would teach from his heart 'bout the on -- ly thing he knew. __
+	He would stand up there in the pul -- pit, horn in his hand, __ and let that mel -- o -- dy take __ you to the Prom -- _ ised land. __
+
+	% part "Volta"
+	He played one
+	_ Gath -- er 'round and hear the Preach -- er, hear the Preach -- er, hear the Preach -- er, Preach -- er man. Now the __ _
+}
+{% endif %}
+{% if part == "LyricsmoreFake" %}\lyricmode {
+	_ _ _ _
+
+	% part "A"
+	_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _
+
+	% part "B"
+	hymn for the lad -- ies, one for the men. __ Then he would turn right a -- round and __ _ play 'em both a -- gain. __
+	When they all got to swing -- in' and clap -- pin' hands, __ _ _ I had the swing -- in -- est con -- vo -- ca -- tion in __ _ the land. __
+}
+{% endif %}
+{% if part == "LyricsmoremoreFake" %}\lyricmode {
+	_ _ _ _
+
+	% part "A"
+	_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _
+
+	% part "B"
+	ser -- mon was o -- ver, He'd leave the town __ and trav -- el on to the next to __ _ lay his gos -- pel down. __
+	So, bow your head and we'll join in one might -- y chord __ _ to say a prayer for the Preach -- er, gone to his __ _ re -- ward. __
 }
 {% endif %}

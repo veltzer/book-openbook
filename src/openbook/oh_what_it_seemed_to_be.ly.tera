@@ -26,7 +26,7 @@ remark = "Frank Sinatra (1946)"
 [versions.Fake]
 doChords = true
 doVoice = true
-doLyrics = false
+doLyrics = true
 doLyricsmore = false
 doLyricsmoremore = false
 doChordBars = false
@@ -43,12 +43,12 @@ doOwn = false
 	- put in the chords (fake book).
 	- put in the tune (fake book).
 	- added youtube performances.
+	- put in the lyrics (fake book).
 	TODO:
 	- check the chords (fake book).
 	- check the tune (fake book).
 	- hear the tune to check that it is right and adjust the tempo.
 	- the fake book prints no chords in bars 2, 5-7, 10, 14, 29-30; they are left empty.
-	- add the lyrics.
 {% endif %}
 {% if part == "ChordsFake" %}\chordmode {
 	\startChords
@@ -133,5 +133,27 @@ doOwn = false
 			ees,1 |
 		}
 	}
+}
+{% endif %}
+{% if part == "LyricsFake" %}\lyricmode {
+	It was
+
+	% part "A"
+	just a neigh -- bor -- hood dance, that's all __ that it was, but Oh! __ What It Seemed To Be! It was
+	like a mas -- quer -- ade ball with cos -- tumes and all 'cause you were at the dance __ with me. __ It was
+
+	% part "A"
+	just a ride on a train, that's all __ that it was, but Oh! __ What It Seemed To Be! It was
+	like a trip to the stars, to Ve -- nus and Mars, 'cause you were on the train __ with me. __ And when I kissed
+
+	% part "B"
+	you, __ dar -- ling, __ it was more than just a thrill for me; __ it was the
+	prom -- ise, __ dar -- ling, __ of the things that fate had willed for me. It was
+
+	% part "A"
+	just a wed -- ding in June, that's all __ that it was, but Oh! __ What It Seemed To Be! It was
+	like a roy -- al af -- fair with ev -- 'ry one there, 'cause you said 'Yes, I do,' to me. __
+	It was
+	_
 }
 {% endif %}

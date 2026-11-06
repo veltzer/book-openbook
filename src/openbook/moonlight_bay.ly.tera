@@ -26,7 +26,7 @@ remark = "Doris Day"
 [versions.Fake]
 doChords = true
 doVoice = true
-doLyrics = false
+doLyrics = true
 doLyricsmore = false
 doLyricsmoremore = false
 doChordBars = false
@@ -43,11 +43,11 @@ doOwn = false
 	- put in the chords (fake book).
 	- put in the tune (fake book).
 	- added youtube performances.
+	- put in the lyrics (fake book).
 	TODO:
 	- check the chords (fake book).
 	- check the tune (fake book).
 	- hear the tune to check that it is right and adjust the tempo.
-	- add the lyrics.
 {% endif %}
 {% if part == "ChordsFake" %}\chordmode {
 	\startChords
@@ -85,5 +85,17 @@ doOwn = false
 	% part "A'"
 	f,1~ | f4 fis g8 ees'4. | d1~ | d2 ees4 d |
 	c4 f, c' f, | c'4 f, c'8 ees4. | d1~ | d4 r r2 |
+}
+{% endif %}
+{% if part == "LyricsFake" %}\lyricmode {
+	We were sail -- ing a --
+
+	% part "A"
+	long __ on Moon -- light Bay. __ We could hear the voic -- es
+	ring -- ing, __ they seemed to say: __ 'You have stol -- en my
+
+	% part "A'"
+	heart, __ now don't go 'way!' __ As we
+	sang loves old sweet song on Moon -- light Bay. __
 }
 {% endif %}

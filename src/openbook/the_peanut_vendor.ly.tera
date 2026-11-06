@@ -27,8 +27,8 @@ remark = "Stan Kenton and his Orchestra"
 [versions.Fake]
 doChords = true
 doVoice = true
-doLyrics = false
-doLyricsmore = false
+doLyrics = true
+doLyricsmore = true
 doLyricsmoremore = false
 doChordBars = false
 doGuitar = false
@@ -44,8 +44,8 @@ doOwn = false
 	- put in the chords (fake book).
 	- put in the tune (fake book).
 	- added youtube performances.
+	- put in the lyrics (fake book).
 	TODO:
-	- add the lyrics (the book prints two verses under the repeat, the first marked 1,3).
 	- check the chords (fake book).
 	- check the tune (fake book).
 	- hear the tune to check that it is right and adjust the tempo.
@@ -107,5 +107,41 @@ doOwn = false
 	% part "Coda"
 	r4 b d2~ | d8 fis,4 e8~ e e d4 | r4 b' d2~ | d8 fis,4 e8~ e e d4 |
 	r4 b' d2~ | d8 fis,4 e8~ e e d4 | r8 fis4 e8~ e e d4 | r8 fis4 e8~ e e d4 | g8 r r4 r2 |
+}
+{% endif %}
+{% if part == "LyricsFake" %}\lyricmode {
+
+	% part "A"
+	In Cu -- ba, each mer -- ry maid wakes up with this se -- re -- nade; pea -- nuts! __
+	They're nice __ and hot, pea -- nuts! __ I sell __ a -- lot. If you have -- n't got ba -- na -- nas, don't __ be blue,
+	pea -- nuts in a lit -- tle bag are call -- ing you. Don't waste them, no tum -- my ache, you'll taste them
+	when you __ a -- wake. For at the ve -- ry break __ of day, the pea -- nut ven -- dor's on __ his way. __
+
+	% part "B"
+	At dawn -- ing that whist -- le blows through ev -- 'ry ci -- ty, town, __ and coun -- try lane,
+	you'll hear him sing his plain -- tive lit -- tle strain, and as he goes by __ to you __ he'll say: __
+	'Big jum -- bo's, big doub -- le ones, come buy those pea -- nuts roast -- ed to -- day, __ come try those
+	fresh -- ly roast -- ed to -- day!' __ If you're look -- ing for a mor -- al to __ this song, fif -- ty mil -- lion lit -- tle
+	mon -- keys can't __ be wrong.
+
+	% part "Coda"
+	'Pea -- nuts! __ we'll meet __ a -- gain, pea -- nuts! __ this street __ a -- gain,
+	pea -- nuts! __ you'll eat __ a -- gain, your pea -- nut man.' That pea -- nut man's gone.
+}
+{% endif %}
+{% if part == "LyricsmoreFake" %}\lyricmode {
+
+	% part "A"
+	In Cu -- ba, his smil -- ing face is wel -- come most ev -- 'ry place; pea -- nuts! __
+	They hear __ him cry, pea -- nuts! __ They all __ re -- ply. If you're look -- ing for an ear -- ly morn -- ing treat,
+	get some dou -- ble joint -- ed pea -- nuts good __ to eat. For break -- fast or din -- ner time, for sup -- per,
+	most an -- y -- time. A mer -- ry twin -- kle in __ his eye, he's got a way __ that makes you buy. __
+
+	% part "B"
+	Each mor -- ning that whist -- le blows the lit -- tle child -- ren like __ to trail __ a -- long,
+	they love to hear the pea -- nut ven -- dor's song. They all laugh with glee __ when he __ will say: __
+	'They're roast -- ed, no ti -- ny ones, they're toast -- ed, pea -- nuts hot in the shell, __ come buy some,
+	I eat more than I sell!' __ If an ap -- ple keeps the doc -- tor from __ your door, pea -- nuts ought to keep him
+	from you ev -- er more.
 }
 {% endif %}

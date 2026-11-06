@@ -27,7 +27,7 @@ remark = "Miles Davis with Gil Evans from Porgy and Bess (1958)"
 [versions.Fake]
 doChords = true
 doVoice = true
-doLyrics = false
+doLyrics = true
 doLyricsmore = false
 doLyricsmoremore = false
 doChordBars = false
@@ -44,11 +44,11 @@ doOwn = false
 	- put in the chords (fake book).
 	- put in the tune (fake book).
 	- added youtube performances.
+	- put in the lyrics (fake book).
 	TODO:
 	- check the chords (fake book).
 	- check the tune (fake book).
 	- hear the tune to check that it is right and adjust the tempo.
-	- add the lyrics.
 	- the fake book prints 'Sporting life' (the singing character) where the tempo word usually is; the tempo is a guess.
 	- bars 23-24 (Gm Eb): the c sharp at the start of each bar is carried through the bar as the notation says (also under the Eb chords); check against a recording.
 	- bar 24: the fake book places the chords Gm, Eb, Gm loosely; put in as Gm on beat 1, Eb on beat 2 and Gm on beat 4.
@@ -125,5 +125,28 @@ doOwn = false
 	d4 d c8 bes4. | f'8 d4. bes4 g | g8 f4.~ f2 | aes2. g4 |
 	\grace g8 f8 ees4.~ ees2 | d4 f bes d | ges1~ | ges2. r4 |
 	f8 f4.~ f2 | f4 f f f\fermata | bes,1~ | bes~ | bes2. r4 | r1 |
+}
+{% endif %}
+{% if part == "LyricsFake" %}\lyricmode {
+	There's A
+
+	% part "A"
+	Boat Dat's Leav -- in' Soon __ _ For New York. __ _ Come wid me, __ _ dat's where we be -- long, sis -- ter. __ You an'
+
+	% part "A"
+	me kin live dat high life in New York. __ _ Come wid me, __ _ dere you can't go wrong, sis -- ter. __ I'll
+
+	% part "B"
+	buy you de swell -- est man -- sion up on up -- per Fi'th Av -- en -- ue, an' through
+	Har -- lem we'll go strut -- tin' we'll go a -- strut -- tin' an dere'll be nut -- tin' too good for you. I'll
+	dress you in silks and sat -- tins in de lat -- est Pa -- ris styles. All de
+	blues you'll be for -- get -- tin', you'll be for -- get -- tin', there'll be no fret -- tin' jes' noth -- in' -- but smiles. __ Come a --
+
+	% part "C"
+	long wid me, __ dat's de place, __ don't be a fool, __ come a -- long, come a -- long. __ There's A
+
+	% part "A"
+	Boat Dat's Leav -- in' Soon __ _ For New York. __ _ Come wid me, __ _ dat's where we be -- long, __
+	sis -- ter, __ dat's where we be -- long. __
 }
 {% endif %}

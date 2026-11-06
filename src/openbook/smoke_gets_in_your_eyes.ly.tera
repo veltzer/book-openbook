@@ -26,8 +26,8 @@ remark = "Thelonious Monk from 'Monk'"
 [versions.Fake]
 doChords = true
 doVoice = true
-doLyrics = false
-doLyricsmore = false
+doLyrics = true
+doLyricsmore = true
 doLyricsmoremore = false
 doChordBars = false
 doGuitar = false
@@ -43,8 +43,8 @@ doOwn = false
 	- put in the fake book chords.
 	- put in the fake book tune.
 	- added youtube performances.
+	- put in the lyrics (fake book).
 	TODO:
-	- add the lyrics.
 	- check the fake book chords.
 	- check the fake book tune.
 	- hear the tune to check that it is right and adjust the tempo.
@@ -112,5 +112,29 @@ doOwn = false
 	% part "A"
 	ees2 d8 f ees c | aes'2 g8 bes aes f | ees'1~ | ees2 f8 ees b c |
 	d2 c8 bes \tuplet 3/2 { c,8 ees g } | bes2 c8 bes bes, c | ees1~ | ees2. r4 |
+}
+{% endif %}
+{% if part == "LyricsFake" %}\lyricmode {
+
+	% part "A"
+	They asked me how I knew my true love was true? __
+	I of course re -- plied, 'Some -- thing here in -- side, can -- not be de -- nied.' __ _
+	_
+
+	% part "B"
+	So I chaffed __ them and I gay -- ly laughed, __ to think they could doubt my love.
+	Yet to -- day, __ my love has flown a -- way, __ I am with -- out my love.
+
+	% part "A"
+	Now laugh -- ing friends de -- ride, tears I can -- not hide, __
+	so I smile and say, 'When a love -- ly flame dies, Smoke Gets In Your Eyes.' __
+}
+{% endif %}
+{% if part == "LyricsmoreFake" %}\lyricmode {
+
+	% part "A"
+	They said some -- day you'll find, all who love are blind. __
+	When your heart's on fire, you must re -- al -- ize. Smoke Gets In Your _ _
+	Eyes. __
 }
 {% endif %}

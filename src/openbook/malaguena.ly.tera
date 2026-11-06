@@ -25,9 +25,9 @@ remark = "Stan Kenton and his Orchestra"
 [versions.Fake]
 doChords = true
 doVoice = true
-doLyrics = false
-doLyricsmore = false
-doLyricsmoremore = false
+doLyrics = true
+doLyricsmore = true
+doLyricsmoremore = true
 doChordBars = false
 doGuitar = false
 doExtra = false
@@ -42,13 +42,13 @@ doOwn = false
 	- put in the chords (fake book).
 	- put in the tune (fake book).
 	- added youtube performances.
+	- put in the lyrics (fake book): verse 1 is the first English verse, verse 2 the Spanish verse (lyric by Ernesto Lecuona, sung both times), verse 3 the second English verse (English lyric by Marian Banks); the coda prints only 'heart.' and 'rer.'.
 	TODO:
-	- add the lyrics (the book prints two English verses and a Spanish verse; Spanish lyric by Ernesto Lecuona, English lyric by Marian Banks).
 	- check the chords (fake book).
 	- check the tune (fake book).
 	- hear the tune to check that it is right and adjust the tempo.
 	- the tune spans jfb:238-239.
-	- bar 36: the book prints a quarter note f for the English verses and two eighth notes f f for the Spanish verse; the quarter note is typed.
+	- bar 36: the book prints a quarter note f for the English verses and two eighth notes f f for the Spanish verse; the quarter note is typed, so the Spanish 'so-le' sits on it as one syllable.
 	- bars 54 and 58: the beaming of the opening sixteenths is unclear in the scan; typed as a16 a16 a8 a8 a8 followed by four eighths.
 	- the book's tempo changes (Flamenco tempo-in 4, Broadly-in 3, Fast-in 1) are typed as markups.
 {% endif %}
@@ -123,5 +123,58 @@ doOwn = false
 	cis4 a''8 bes c bes | a4 e8 g f e | f4 d8 cis d e | f8 e g f e d |
 	cis4 a' a, | a a, r | r4\fermata^\markup { Broadly - in 3 } a' cis | cis( bes a) | cis( bes a) |
 	d2.~^\markup { Fast - in 1 } | d2.~ | d4 r2 | r2. |
+}
+{% endif %}
+{% if part == "LyricsFake" %}\lyricmode {
+
+	% part "Intro"
+	'Fly a -- way!' Said my care -- free heart. 'To the place where the day -- dreams start. 'Fly a -- way!' Said my heart to
+	me. 'To the shore of the moon -- lit sea.' 'Tis the gyp -- sy code to be fan -- cy free; when I see a
+	road, oh that's the road for me! _ _ _ _
+	_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _
+
+	% part "A"
+	My Ma -- la -- gue -- ña, your eyes shamed the pur -- ple sky. __ You were as fair as I dreamed you would be; __
+	I loved and left you, for I nev -- er could de -- ny the gyp -- sy strain in __ _ me. __
+
+	% part "B"
+	_ Light -- ly as a song, go -- ing where I please; jour -- ney -- ing a -- long with ev -- 'ry va -- grant __ _ _
+	breese. Up a hill, down a stream, I fol -- low in a dream. __
+	_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _
+
+	% part "Coda"
+	heart. _ _ _ _
+	_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _
+	Ma -- la -- gue __ _ ña! __
+}
+{% endif %}
+{% if part == "LyricsmoreFake" %}\lyricmode {
+
+	% part "Intro"
+	_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _
+
+	% part "A"
+	Ma -- la -- gue -- ña de_o -- jos ne -- _ _ _ _ gros, __ Ma -- la -- gue -- ña de mis sue -- _ _ ños. __
+	Me_es -- toy mu -- rien -- do de pe -- _ _ _ _ na por tu so_le tu que -- _ rer. __
+
+	% part "B"
+	La la la la la la, la la la la la, la la la la la la la la la la la la,
+	Ma -- la -- gue -- ña re -- bo -- ni -- ta te quei -- ro be -- sar. __
+	_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _
+
+	% part "Coda"
+	rer. _ _ _ _
+	_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _
+	Ma -- la -- gue __ _ ña! __
+}
+{% endif %}
+{% if part == "LyricsmoremoreFake" %}\lyricmode {
+
+	% part "Intro"
+	_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _
+
+	% part "A"
+	Long have I trav -- eled, my love, since the night we met. __ Seek -- ing in wan -- d'ring a way to for -- get. __
+	But it's no mat -- ter by what path I may de -- part, I can't es -- cape from my
 }
 {% endif %}

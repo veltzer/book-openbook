@@ -26,7 +26,7 @@ remark = "Shelly Manne and his Friends from My Fair Lady (1956)"
 [versions.Fake]
 doChords = true
 doVoice = true
-doLyrics = false
+doLyrics = true
 doLyricsmore = false
 doLyricsmoremore = false
 doChordBars = false
@@ -43,8 +43,8 @@ doOwn = false
 	- put in the chords (fake book).
 	- put in the tune (fake book).
 	- added youtube performances.
+	- put in the lyrics (fake book).
 	TODO:
-	- add the lyrics.
 	- check the chords (fake book).
 	- check the tune (fake book).
 	- hear the tune to check that it is right and adjust the tempo.
@@ -106,5 +106,26 @@ doOwn = false
 	r4 f f g | g a a bes | c2 f, | bes2. a4 |
 	g8 f f2. | d'8 c c2. | g8 f f2. | c'8 bes bes2. |
 	a8 f f2.~ | f4 r r2 |
+}
+{% endif %}
+{% if part == "LyricsFake" %}\lyricmode {
+
+	% part "A"
+	All I want is a room some -- where, far a -- way from the cold night air,
+	with one e -- nor -- mous chair; oh, Would __ n't It Be Lov -- er -- ly?
+
+	% part "A"
+	Lots of choc' -- late for me to eat; lots of coal mak -- in' lots of heat;
+	warm face, warm hands, warm feet, oh, Would __ n't It Be Lov -- er -- ly.
+
+	% part "B"
+	Oh, so lov -- er -- ly sit -- tin' ab -- so -- bloom -- in' -- lute -- ly still!
+	I would nev -- er budge 'til spring crept o -- ver the win -- dow sill.
+
+	% part "A"
+	Some -- one's head rest -- in' on my knee; warm and ten -- der as he can be;
+	who takes good care of me. Oh, Would -- n't It Be
+	Lov -- er -- ly? Lov -- er -- ly! Lov -- er -- ly! Lov -- er -- ly!
+	Lov -- er -- ly! __
 }
 {% endif %}

@@ -26,7 +26,7 @@ remark = "Cannonball Adderley"
 [versions.Fake]
 doChords = true
 doVoice = true
-doLyrics = false
+doLyrics = true
 doLyricsmore = false
 doLyricsmoremore = false
 doChordBars = false
@@ -43,8 +43,8 @@ doOwn = false
 	- put in the chords (fake book).
 	- put in the tune (fake book).
 	- added youtube performances.
+	- put in the lyrics (fake book).
 	TODO:
-	- add the lyrics.
 	- check the chords (fake book).
 	- check the tune (fake book).
 	- hear the tune to check that it is right and adjust the tempo.
@@ -98,5 +98,22 @@ doOwn = false
 
 	% part "C"
 	c2 g'~ | g2. a8 b | c4 d d2~ | d2. r4 | e2 dis4 e | d2 cis4 d | c!1~ | c2. r4 |
+}
+{% endif %}
+{% if part == "LyricsFake" %}\lyricmode {
+
+	% part "A"
+	Don't throw __ bou -- quets at me, __ Don't please __ my folks too much. __
+	Don't laugh __ at my jokes too much. __ Peo -- ple Will Say We're In Love! __
+
+	% part "A"
+	Don't sigh __ and gaze at me; __ your sighs __ are so like mine. __
+	Your eyes __ must -- n't glow like mine, __ Peo -- ple Will Say We're In Love! __
+
+	% part "B"
+	Don't start __ col -- lect -- ing things, __ give me my rose and my glove. __
+
+	% part "C"
+	Sweet heart, __ they're sus -- pect -- ing things, __ Peo -- ple Will Say We're In Love. __
 }
 {% endif %}

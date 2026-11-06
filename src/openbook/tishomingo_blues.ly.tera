@@ -26,7 +26,7 @@ remark = "Duke Ellington and His Orchestra (1928)"
 [versions.Fake]
 doChords = true
 doVoice = true
-doLyrics = false
+doLyrics = true
 doLyricsmore = false
 doLyricsmoremore = false
 doChordBars = false
@@ -43,8 +43,8 @@ doOwn = false
 	- put in the chords (fake book).
 	- put in the tune (fake book).
 	- added youtube performances.
+	- put in the lyrics (fake book).
 	TODO:
-	- add the lyrics.
 	- check the chords (fake book).
 	- check the tune (fake book).
 	- hear the tune to check that it is right and adjust the tempo.
@@ -125,5 +125,27 @@ doOwn = false
 			g,2. r4 |
 		}
 	}
+}
+{% endif %}
+{% if part == "LyricsFake" %}\lyricmode {
+	I'm
+
+	% part "A"
+	goin' to Tish -- o -- min -- go be -- cause I'm sad to -- day, __
+	I wish to lin -- ger 'way down old Dix -- ie way. __
+
+	% part "B"
+	Oh my wea -- ry heart cries out in pain, oh how I wish that I was back a -- gain __
+	with a race __ in a place __ Where they make you wel -- come all the time. 'Way
+
+	% part "A"
+	down in Mis -- si -- sip -- pi a -- mong the cy -- press trees, __
+	They get you dip -- py, with their strange mel -- o -- dies. __ To re --
+
+	% part "C"
+	sist temp -- ta -- tion, I just can't re -- fuse,
+	in Tish -- o -- min -- go I wish to lin -- ger, where they play the wea -- ry
+	blues. I'm
+	blues.
 }
 {% endif %}

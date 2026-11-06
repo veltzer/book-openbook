@@ -26,7 +26,7 @@ remark = "Art Tatum (1955)"
 [versions.Fake]
 doChords = true
 doVoice = true
-doLyrics = false
+doLyrics = true
 doLyricsmore = false
 doLyricsmoremore = false
 doChordBars = false
@@ -43,8 +43,8 @@ doOwn = false
 	- put in the chords (fake book).
 	- put in the tune (fake book).
 	- added youtube performances.
+	- put in the lyrics (fake book).
 	TODO:
-	- add the lyrics.
 	- check the chords (fake book).
 	- check the tune (fake book).
 	- hear the tune to check that it is right and adjust the tempo.
@@ -103,5 +103,24 @@ doOwn = false
 	% part "A"
 	r4 r8 e8 g e g4 | b4 b2. | r4 r8 e,8 g e g4 | b1 |
 	r4 r8 e,8 g e g4 | b4 b2. | r8 g4. g4 g | g4 g8 g~ g4 r |
+}
+{% endif %}
+{% if part == "LyricsFake" %}\lyricmode {
+
+	% part "A"
+	It must have been Moon -- glow, way up in the blue; it must have been
+	Moon -- glow that led me straight to you. __
+
+	% part "A"
+	I still hear you say -- ing. 'Dear one hold me fast.' And I start in
+	pray -- ing: oh Lord, please let this last. __
+
+	% part "B"
+	We __ seemed to float right thru the air, __
+	hea -- ven -- ly songs __ seemed to come from ev' -- ry -- where.
+
+	% part "A"
+	And now when there's Moon -- glow way up in the blue,
+	I al -- ways re -- mem -- ber that Moon -- glow gave me you. __
 }
 {% endif %}

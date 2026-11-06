@@ -26,7 +26,7 @@ remark = "Astrud Gilberto (1966)"
 [versions.Fake]
 doChords = true
 doVoice = true
-doLyrics = false
+doLyrics = true
 doLyricsmore = false
 doLyricsmoremore = false
 doChordBars = false
@@ -43,8 +43,8 @@ doOwn = false
 	- put in the chords (fake book).
 	- put in the tune (fake book).
 	- added youtube performances.
+	- put in the lyrics (fake book).
 	TODO:
-	- add the lyrics.
 	- check the chords (fake book).
 	- check the tune (fake book).
 	- hear the tune to check that it is right and adjust the tempo.
@@ -120,5 +120,28 @@ doOwn = false
 			f!1~ | f2. r4 |
 		}
 	}
+}
+{% endif %}
+{% if part == "LyricsFake" %}\lyricmode {
+
+	% part "A"
+	Some -- one to hold me tight, that would be ver -- y nice. Some -- one to love me right that would be ver -- y nice.
+	Some -- one to un -- der -- stand each lit -- tle dream __ in me. Some -- one to take my hand, to be a team __ with me.
+
+	% part "B"
+	So Nice, __ life would be So Nice __ if one day I'd find __ some -- one who would
+	take my hand and sam -- ba thru life __ with me.
+
+	% part "A"
+	Some -- one to cling to me, stay with me right __ or wrong, some -- one to sing to me some lit -- tle sam -- ba song.
+	Some -- one to take my heart, then give his heart __ to me. Some -- one who's read -- y to give love a start __ with me.
+
+	% part "C"
+	Oh, yes, __ that would be So Nice. __
+	Should it be you and me, I could see it would be
+
+	% part "Volta"
+	nice.
+	nice. __
 }
 {% endif %}

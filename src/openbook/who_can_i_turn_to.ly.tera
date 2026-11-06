@@ -27,7 +27,7 @@ remark = "Bill Evans Trio live at Town Hall, New York (1966)"
 [versions.Fake]
 doChords = true
 doVoice = true
-doLyrics = false
+doLyrics = true
 doLyricsmore = false
 doLyricsmoremore = false
 doChordBars = false
@@ -44,8 +44,8 @@ doOwn = false
 	- put in the chords (fake book).
 	- put in the tune (fake book).
 	- added youtube performances.
+	- put in the lyrics (fake book).
 	TODO:
-	- add the lyrics.
 	- check the chords (fake book).
 	- check the tune (fake book).
 	- hear the tune to check that it is right and adjust the tempo.
@@ -91,5 +91,20 @@ doOwn = false
 	g'4 g8 fis g4 aes | bes4 bes8 a! bes4 c | des4 des8 c des4 f,~ | f2 r4 ees4 |
 	c'4 c8 b! c4 d~ | d2 r4 g,4 | d'4 d8 c d4 ees~ | ees2 r4 c4 |
 	ees4 ees8 d ees4 ees8 f | g2 d4 d | ees1~ | ees4 r4 r2 |
+}
+{% endif %}
+{% if part == "LyricsFake" %}\lyricmode {
+
+	% part "A"
+	Who Can I Turn To __ when no -- bod -- y needs me? __
+	My heart wants to know and so I must go where des -- ti -- ny leads me. __
+	With no star to guide me, __ and no -- one be -- side me, __
+	I'll go on my way and af -- ter the day, the dark -- ness will hide me. __
+
+	% part "A"
+	And may -- be to -- mor -- row __ I'll find what I'm af -- ter, __
+	I'll throw off my sor -- row, beg steal or bor -- row my share of laugh -- ter. __
+	With you I could learn to, __ with you on a new day, __
+	but Who Can I Turn To if you turn a -- way? __
 }
 {% endif %}

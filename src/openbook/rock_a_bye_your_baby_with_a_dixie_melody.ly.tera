@@ -26,7 +26,7 @@ remark = "Judy Garland live at Carnegie Hall (1961)"
 [versions.Fake]
 doChords = true
 doVoice = true
-doLyrics = false
+doLyrics = true
 doLyricsmore = false
 doLyricsmoremore = false
 doChordBars = false
@@ -43,11 +43,11 @@ doOwn = false
 	- put in the chords (fake book).
 	- put in the tune (fake book).
 	- added youtube performances.
+	- put in the lyrics (fake book).
 	TODO:
 	- check the chords (fake book).
 	- check the tune (fake book).
 	- hear the tune to check that it is right and adjust the tempo.
-	- add the lyrics.
 {% endif %}
 {% if part == "ChordsFake" %}\chordmode {
 	\startChords
@@ -121,5 +121,28 @@ doOwn = false
 			c2. r4 |
 		}
 	}
+}
+{% endif %}
+{% if part == "LyricsFake" %}\lyricmode {
+
+	% part "A"
+	Rock -- A -- Bye Your Ba -- by With __ A Dix -- ie Mel -- o -- dy;
+	when you croon __ croon a tune, __ from the heart __ of Dix -- _ _ ie. __
+
+	% part "B"
+	Just hang my cra -- dle, Mam -- my mine, __ right on that Mas -- on Dix -- on Line; __
+	and swing it from Vir -- gin -- ia, to Ten -- nes -- see with all the love that's in __ yer.
+
+	% part "A"
+	Weep no more my la -- dy, sing __ that song a -- gain for me; and
+	Old Black Joe, __ just as though __ you had __ me on your knee.
+
+	% part "C"
+	A mil -- lon ba -- by kiss -- es I'll de -- liv -- er, the min -- ute that you sing the Swan -- ee Riv -- er
+	Rock -- A -- Bye Your Rock -- A -- Bye Ba -- by With A Dix -- ie Mel -- o
+
+	% part "Volta"
+	dy. __
+	dy.
 }
 {% endif %}

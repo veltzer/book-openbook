@@ -25,7 +25,7 @@ remark = "Glenn Miller and his Orchestra (1939)"
 [versions.Fake]
 doChords = true
 doVoice = true
-doLyrics = false
+doLyrics = true
 doLyricsmore = false
 doLyricsmoremore = false
 doChordBars = false
@@ -42,8 +42,8 @@ doOwn = false
 	- put in the chords (fake book).
 	- put in the tune (fake book).
 	- added youtube performances.
+	- put in the lyrics (fake book).
 	TODO:
-	- add the lyrics.
 	- check the chords (fake book).
 	- check the tune (fake book).
 	- hear the tune to check that it is right and adjust the tempo.
@@ -111,5 +111,22 @@ doOwn = false
 			c2. r4 |
 		}
 	}
+}
+{% endif %}
+{% if part == "LyricsFake" %}\lyricmode {
+	Good
+
+	% part "A"
+	morn -- in' good morn -- in' you sleep -- y head, __ it's dawn -- in', stop yawn in', get out of that bed. __ Say the
+	air is soft as silk, __ it's time to get the morn -- in' milk, come on __ Wake up! __ Get up! __ Look at the grass __
+
+	% part "B"
+	sil -- ver in the sun __ heav -- y with the dew, __ look at the buds __
+	you can al -- most see __ how they're break -- in' thru; __ look at the birds __
+	feed -- in' all their young __ in the sy ca -- mores __ but you bet -- ter get on with your morn -- in' chores. __ Just take a breath __
+	of that new mown hay __ and the su -- gar cane; __ looks like to -- night __
+	there should be a moon __ down in lov -- er's lane. __ There you
+	go day dream -- ing when it's time that you o -- beyed that Sun -- rise Ser -- e -- nade. __
+	_
 }
 {% endif %}

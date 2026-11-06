@@ -26,7 +26,7 @@ remark = "Fletcher Henderson and his Orchestra"
 [versions.Fake]
 doChords = true
 doVoice = true
-doLyrics = false
+doLyrics = true
 doLyricsmore = false
 doLyricsmoremore = false
 doChordBars = false
@@ -43,8 +43,8 @@ doOwn = false
 	- put in the chords (fake book).
 	- put in the tune (fake book).
 	- added youtube performances.
+	- put in the lyrics (fake book).
 	TODO:
-	- add the lyrics.
 	- check the chords (fake book).
 	- check the tune (fake book).
 	- hear the tune to check that it is right and adjust the tempo.
@@ -93,5 +93,20 @@ doOwn = false
 	bes8 ees,8~ ees2 r8 g8 | bes8 ees,8~ ees2 r4 | bes'8 g bes g bes4 g | g8 ees8~ ees2 ges4 |
 	ges8 ees8~ ees2 r4 | ges8 ees ges ees bes'4 ges | ees1~ | ees2. bes'8 a! |
 	bes4 aes8 ees8~ ees2 | r8 bes'8 aes ees bes' ees, g4 | ees1~ | ees2. r4 |
+}
+{% endif %}
+{% if part == "LyricsFake" %}\lyricmode {
+
+	% part "Intro"
+	Be -- side the riv -- er, be -- side the riv -- er down in Dix -- ie land; __
+	Ban -- joes are ring -- in'; dark -- ies are sing -- in'; ev -- 'ry -- thing is grand. __
+	Just lis -- ten to that plan -- ta -- tion stomp down band. __
+	When they start danc -- in'; Stomp -- in' and pran -- cin' the dance called su -- gar foot stomp;
+	the Swa -- nee Riv -- er just seems to whis -- per 'Let your dog -- gies romp.' __
+	High step -- pin' mam -- mas keep shout -- in' all night long: __ 'Oh,
+
+	% part "A"
+	dad -- dy __ sweet dad -- dy, __ rock your mam -- ma like a cra -- dle, __ sweet pa -- pa. __
+	I must let my dog -- gies romp; __ do the dance with me __ they call the sug -- ar foot stomp. __
 }
 {% endif %}

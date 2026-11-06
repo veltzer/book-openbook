@@ -26,8 +26,8 @@ remark = "Jimmy Witherspoon (1949)"
 [versions.Fake]
 doChords = true
 doVoice = true
-doLyrics = false
-doLyricsmore = false
+doLyrics = true
+doLyricsmore = true
 doLyricsmoremore = false
 doChordBars = false
 doGuitar = false
@@ -43,8 +43,8 @@ doOwn = false
 	- put in the chords (fake book).
 	- put in the tune (fake book).
 	- added youtube performances.
+	- put in the lyrics (fake book).
 	TODO:
-	- add the lyrics.
 	- check the chords (fake book).
 	- check the tune (fake book).
 	- hear the tune to check that it is right and adjust the tempo.
@@ -133,5 +133,52 @@ doOwn = false
 			bes1~ | bes2. r4^\markup { D.C. al 2nd Ending } |
 		}
 	}
+}
+{% endif %}
+{% if part == "LyricsFake" %}\lyricmode {
+
+	% part "Intro"
+	There ain't noth -- in' I can do, nor noth -- in' I can say. That folks don't crit -- i -- cize me;
+	but I'm gon -- na do just as I want to an -- y -- way. I don't care if they all de -- spise me.
+
+	% part "A"
+	If I should take a no -- tion to jump in -- to __ _ the o -- cean,
+	'Tain't No -- bod -- y's Biz -- ness __ If I Do. __
+
+	% part "A"
+	Rath -- er than per -- se -- cute me, I choose that you would shoot me,
+	'Tain't No -- bod -- y's Biz -- ness If __ _ I __ _ Do. __
+
+	% part "A"
+	If I should get the feel -- in' to dance up -- on __ _ the ceil -- in'
+	'Tain't No -- bod -- y's Biz -- ness If I Do. __ If
+
+	% part "A"
+	I let my best com -- pan -- ion drive me right in -- to the can -- yon,
+	'Tain't No -- bod -- y's Biz -- ness __ If I
+	Do.
+	Do. __
+}
+{% endif %}
+{% if part == "LyricsmoreFake" %}\lyricmode {
+
+	% part "Intro"
+	Af -- ter all the way to do is do just as you please, Re -- gard -- less of their talk -- in,'
+	oft -- en -- times the ones that talk will get down on their knees, And beg your par -- don for their squawk -- in.'
+
+	% part "A"
+	If I dis -- like my lov -- er and leave her for __ _ an -- oth -- er,
+	_ _ _ _ _ _ _ _ _
+
+	% part "A"
+	If I~go to church on Sun -- day, Then cab -- a -- ret on Mon -- day,
+	_ _ _ _ _ _ _ _ _ _ _
+
+	% part "A"
+	If my~friend ain't got no mon -- ey and I say 'take all mine hon -- ey,'
+	_ _ _ _ _ _ _ _ _ If
+
+	% part "A"
+	I give her my last nick -- el and it leaves me in a pick -- le,
 }
 {% endif %}

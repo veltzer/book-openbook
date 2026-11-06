@@ -26,7 +26,7 @@ remark = "Sonny Rollins"
 [versions.Fake]
 doChords = true
 doVoice = true
-doLyrics = false
+doLyrics = true
 doLyricsmore = false
 doLyricsmoremore = false
 doChordBars = false
@@ -43,8 +43,8 @@ doOwn = false
 	- put in the chords (fake book).
 	- put in the tune (fake book).
 	- added youtube performances.
+	- put in the lyrics (fake book).
 	TODO:
-	- add the lyrics.
 	- check the chords (fake book).
 	- check the tune (fake book).
 	- hear the tune to check that it is right and adjust the tempo.
@@ -106,5 +106,25 @@ doOwn = false
 	% part "A"
 	e4 d b d | g g2 d4 | e d b d | a'2. d,4 |
 	e4 c' b a | d2 \tuplet 3/2 { e,4 e e } | e4 c' a2~ | a2 b | g1~ | g2. r4 |
+}
+{% endif %}
+{% if part == "LyricsFake" %}\lyricmode {
+	The
+
+	% part "A"
+	Last Time I Saw Par -- is, her heart was warm and gay, I
+	heard the laugh -- ter of her heart in ev -- 'ry street ca -- fe. The
+
+	% part "A"
+	Last Time I Saw Par -- is, her trees were dressed for spring, and
+	lov -- ers walked be -- neath those trees, and birds found songs to sing. I
+
+	% part "B"
+	dodged the same old tax -- i -- cabs that I had dodged for years; the
+	cho -- rus of their squeak -- y horns was mu -- sic to my ears. The
+
+	% part "A"
+	Last Time I Saw Par -- is, her heart was warm and gay. No
+	mat -- ter how they change her, I'll re -- mem -- ber her __ that way. __
 }
 {% endif %}

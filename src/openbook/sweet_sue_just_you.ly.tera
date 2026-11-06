@@ -25,7 +25,7 @@ remark = "The Benny Goodman Quartet (1936)"
 [versions.Fake]
 doChords = true
 doVoice = true
-doLyrics = false
+doLyrics = true
 doLyricsmore = false
 doLyricsmoremore = false
 doChordBars = false
@@ -42,8 +42,8 @@ doOwn = false
 	- put in the chords (fake book).
 	- put in the tune (fake book).
 	- added youtube performances.
+	- put in the lyrics (fake book).
 	TODO:
-	- add the lyrics.
 	- check the chords (fake book).
 	- check the tune (fake book).
 	- hear the tune to check that it is right and adjust the tempo.
@@ -123,5 +123,20 @@ doOwn = false
 			g1~ | g2. r4 |
 		}
 	}
+}
+{% endif %}
+{% if part == "LyricsFake" %}\lyricmode {
+
+	% part "A"
+	Ev -- 'ry star a -- bove __ knows the one I love, __ Sweet Sue, __ Just You. __ And the
+
+	% part "A"
+	moon up high __ knows the rea -- son why __ Sweet Sue, __ it's you. __ No one
+
+	% part "B"
+	else it seems __ ev -- er shares my dreams, __ and with -- out you, dear, I don't know what I'd do. __ In this
+
+	% part "A"
+	heart of mine __ you live all the time, __ Sweet Sue, __ Just You. __ Ev -- 'ry You. __
 }
 {% endif %}

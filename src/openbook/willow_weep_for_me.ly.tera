@@ -26,7 +26,7 @@ remark = "Wes Montgomery with the Wynton Kelly Trio, live at the Half Note (1965
 [versions.Fake]
 doChords = true
 doVoice = true
-doLyrics = false
+doLyrics = true
 doLyricsmore = false
 doLyricsmoremore = false
 doChordBars = false
@@ -43,8 +43,8 @@ doOwn = false
 	- put in the chords (fake book).
 	- put in the tune (fake book).
 	- added youtube performances.
+	- put in the lyrics (fake book).
 	TODO:
-	- add the lyrics.
 	- check the chords (fake book).
 	- check the tune (fake book).
 	- hear the tune to check that it is right and adjust the tempo.
@@ -103,5 +103,27 @@ doOwn = false
 	% part "A"
 	d8. d,16 \tuplet 3/2 { e8 g e~ } e2 | d'8. d,16 \tuplet 3/2 { e8 g e~ } e2 | d'8. d,16 \tuplet 3/2 { e8 g e~ } e8. d16 \tuplet 3/2 { e8 g b~ } | b8. g16 \tuplet 3/2 { e8 g e~ } e2 |
 	d'8 c bes a g2 | d'8. c16 \tuplet 3/2 { bes8 a g } d'8 d,4 d8~ | d2. r4 |
+}
+{% endif %}
+{% if part == "LyricsFake" %}\lyricmode {
+
+	% part "A"
+	Wil -- low Weep For Me, __ Wil -- low Weep For Me, __
+	Bend your branch -- es green, __ a -- long the stream __ that runs to sea. __
+	Lis -- ten to my plea, lis -- ten wil -- low and weep for me. __
+
+	% part "A"
+	Gone my lov -- er's dream, __ love -- ly sum -- mer dream. __
+	Gone and left me here __ to weep my tears __ in -- to the stream.
+	Sad as I can be, hear me wil -- low and weep for me. __
+
+	% part "B"
+	Whis -- per to the wind, __ and say that love has sinned __ to leave my heart a -- break -- ing and mak -- ing a moan, __
+	mur -- mur to the night, __ to hide her star -- ry light, __ so none will find me sigh -- ing and cry -- ing all a -- lone. Oh
+
+	% part "A"
+	weep -- ing wil -- low tree, __ weep, in sym -- pa -- thy, __
+	bend your branch -- es down __ a -- long the ground __ and cov -- er me, __
+	When the shad -- ows fall, bend oh wil -- low and weep for me. __
 }
 {% endif %}

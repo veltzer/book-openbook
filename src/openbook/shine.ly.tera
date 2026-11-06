@@ -26,7 +26,7 @@ remark = "Bing Crosby with the Mills Brothers (1932)"
 [versions.Fake]
 doChords = true
 doVoice = true
-doLyrics = false
+doLyrics = true
 doLyricsmore = false
 doLyricsmoremore = false
 doChordBars = false
@@ -43,8 +43,8 @@ doOwn = false
 	- put in the chords (fake book).
 	- put in the tune (fake book).
 	- added youtube performances.
+	- put in the lyrics (fake book).
 	TODO:
-	- add the lyrics.
 	- check the chords (fake book).
 	- check the tune (fake book).
 	- hear the tune to check that it is right and adjust the tempo.
@@ -121,5 +121,27 @@ doOwn = false
 			ees1~ | ees2. r4 |
 		}
 	}
+}
+{% endif %}
+{% if part == "LyricsFake" %}\lyricmode {
+	% part "A"
+	Shine __ a -- way your blues -- ies. __
+	Shine, __ start with your shoes -- ies, __
+
+	% part "B"
+	Shine each place up, make it look __ like new.
+	Shine your face up, wear a smile __ or two.
+
+	% part "A"
+	Shine __ your these and tho -- sies, __
+	you'll find that ev -- 'ry -- thing will turn out fine.
+
+	% part "C"
+	Folks will shine up to __ ya, ev -- 'ry -- one will how -- dy -- do __ ya,
+	you'll make the whole world
+
+	% alternatives
+	shine.
+	shine! __
 }
 {% endif %}

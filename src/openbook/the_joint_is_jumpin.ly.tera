@@ -26,8 +26,8 @@ remark = "Nell Carter from the cast recording of Ain't Misbehavin'"
 [versions.Fake]
 doChords = true
 doVoice = true
-doLyrics = false
-doLyricsmore = false
+doLyrics = true
+doLyricsmore = true
 doLyricsmoremore = false
 doChordBars = false
 doGuitar = false
@@ -43,13 +43,13 @@ doOwn = false
 	- put in the chords (fake book).
 	- put in the tune (fake book).
 	- added youtube performances.
+	- put in the lyrics (fake book).
 	TODO:
 	- check the chords (fake book).
 	- check the tune (fake book).
 	- hear the tune to check that it is right and adjust the tempo.
 	- the spoken words (bar 12 and the first ending) are typed as x note heads, as printed.
 	- next to last bar: the fourth note has no accidental in the book; typed as c sharp (the sharp earlier in the bar carries through), check it.
-	- add the lyrics.
 {% endif %}
 {% if part == "ChordsFake" %}\chordmode {
 	\startChords
@@ -133,5 +133,52 @@ doOwn = false
 	r4 f f8 f4 f8~ | f g4. r2 | r4 f aes8 aes4 g8~ | g f4. r2 |
 	bes8 bes4 bes8~ bes4 bes8 bes | bes bes4 bes8~ bes bes4 c8~ | c4 bes des8 des4 c8~ | c bes4. r8 cis4 bes8 |
 	des4 des bes r | des4. bes8 r bes c cis | d cis d cis d f4. | des4. bes8 r bes4. |
+}
+{% endif %}
+{% if part == "LyricsFake" %}\lyricmode {
+
+	% part "A"
+	This joint is jump -- in', it's real -- ly jump -- in'.
+	Come in cats __ an' check __ your hats, __ I mean __ this joint __ is jump -- in'.
+
+	% part "B"
+	The pi -- an -- o's thump -- in', the danc -- ers bump -- in'. _
+	This here spot __ is more than hot, __ in fact The Joint Is Jump -- in'.
+
+	% part "C"
+	Check your weap -- ons at the door, __ be sure to pay your quar -- ter.
+	Burn your leath -- er on the floor, __ grab an -- y __ _ bod -- y's daugh -- ter.
+
+	% part "A"
+	The roof is rock -- in', the neigh -- bor's knock -- in'.
+	We're all bums __ when the wag -- on comes __ I mean __
+
+	% part "Volta"
+	this joint is jump -- in'. Let it beat! __
+	_ this joint is jump -- in'.
+
+	% part "End"
+	This joint is jump -- in', It's real -- ly jump -- in'.
+	We're all bums __ when the wag -- on comes. __ I mean __ this joint is jump -- in'.
+	_ _ Don't give your right name. No, no, no!
+}
+{% endif %}
+{% if part == "LyricsmoreFake" %}\lyricmode {
+
+	% part "A"
+	This joint is jump -- in', it's real -- ly jump -- in'.
+	Ev -- 'ry Mose __ is on __ his toes, __ I mean __ The Joint __ Is Jump -- in'.
+
+	% part "B"
+	No __ _ time for talk -- in', it's time __ for walk -- in'. "(Yes!)"
+	Grab a jug __ and cut the rug, __ I mean this joint is jump -- in'.
+
+	% part "C"
+	Get your pig feet, beer and gin, __ there's plen -- ty in the kitch -- en.
+	Who is that that just came in? __ Just look at the way he's switch -- in'.
+
+	% part "A"
+	Don't mind the hour, __ _ 'cause I'm in pow -- er.
+	I got bail __ if we go to jail __ I mean
 }
 {% endif %}

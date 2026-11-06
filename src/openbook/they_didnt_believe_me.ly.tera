@@ -26,7 +26,7 @@ remark = "Dinah Washington"
 [versions.Fake]
 doChords = true
 doVoice = true
-doLyrics = false
+doLyrics = true
 doLyricsmore = false
 doLyricsmoremore = false
 doChordBars = false
@@ -43,8 +43,8 @@ doOwn = false
 	- put in the chords (fake book).
 	- put in the tune (fake book).
 	- added youtube performances.
+	- put in the lyrics (fake book).
 	TODO:
-	- add the lyrics.
 	- check the chords (fake book).
 	- check the tune (fake book).
 	- hear the tune to check that it is right and adjust the tempo.
@@ -105,5 +105,21 @@ doOwn = false
 	% part "C"
 	a2 a~ | a4 a a8 b c4 | d,2 d~ | d4 d dis e |
 	c'4 e, fis g | a2 b | g1~ | g4 r r2 |
+}
+{% endif %}
+{% if part == "LyricsFake" %}\lyricmode {
+	And when I
+
+	% part "A"
+	told them __ how beau -- ti -- ful you are, __ They Did -- n't Be -- lieve Me, __ They Did -- n't Be -- lieve Me! __ Your lips your
+
+	% part "B"
+	eyes, your cheeks, your hair are in a class be -- yond com -- pare; you're the love -- li -- est girl __ that one could see! __ And when I
+
+	% part "A"
+	tell them, __ and I cert -- n'ly am goin' to tell them __ that I'm the man whose wife one day you'll be. __ They'll nev -- er be --
+
+	% part "C"
+	lieve me, __ they'll nev -- er be -- lieve me __ that from this great big world you've cho -- sen me! __
 }
 {% endif %}

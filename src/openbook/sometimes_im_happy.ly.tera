@@ -26,7 +26,7 @@ remark = "Lester Young Quartet (1943)"
 [versions.Fake]
 doChords = true
 doVoice = true
-doLyrics = false
+doLyrics = true
 doLyricsmore = false
 doLyricsmoremore = false
 doChordBars = false
@@ -43,12 +43,12 @@ doOwn = false
 	- put in the chords (fake book).
 	- put in the tune (fake book).
 	- added youtube performances.
+	- put in the lyrics (fake book).
 	TODO:
 	- check the chords (fake book).
 	- check the tune (fake book).
 	- hear the tune to check that it is right and adjust the tempo.
 	- the Db#11 chord of the book (bar 16) is written as Db7#11.
-	- add the lyrics.
 {% endif %}
 {% if part == "ChordsFake" %}\chordmode {
 	\startChords
@@ -120,5 +120,28 @@ doOwn = false
 			f1~ | f2 r |
 		}
 	}
+}
+{% endif %}
+{% if part == "LyricsFake" %}\lyricmode {
+
+	% part "A"
+	Some -- times I'm Hap -- py, some -- times I'm blue, __ _
+	my dis -- po -- si -- tion de -- pends on you. __ _
+
+	% part "B"
+	I nev -- er mind the rain from the skies, __
+	if I can find the sun in your eyes. __
+
+	% part "A"
+	Some -- times I love you, some -- times I hate you;
+	but when I hate you, it's 'cause I love you.
+
+	% part "C"
+	That's how I am so what can I do? __
+	I'm hap -- py when I'm with
+
+	% part "Volta"
+	you. __
+	you. __
 }
 {% endif %}

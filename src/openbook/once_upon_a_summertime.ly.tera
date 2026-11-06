@@ -26,7 +26,7 @@ remark = "Miles Davis and Gil Evans from Quiet Nights (1962)"
 [versions.Fake]
 doChords = true
 doVoice = true
-doLyrics = false
+doLyrics = true
 doLyricsmore = false
 doLyricsmoremore = false
 doChordBars = false
@@ -43,8 +43,8 @@ doOwn = false
 	- put in the chords (fake book).
 	- put in the tune (fake book).
 	- added youtube performances.
+	- put in the lyrics (fake book).
 	TODO:
-	- add the lyrics.
 	- check the chords (fake book).
 	- check the tune (fake book).
 	- hear the tune to check that it is right and adjust the tempo.
@@ -123,5 +123,28 @@ doOwn = false
 			f2.~ | f2. |
 		}
 	}
+}
+{% endif %}
+{% if part == "LyricsFake" %}\lyricmode {
+
+	% part "A"
+	Once Up -- on A Sum -- mer -- time, if you re -- call, we stopped be -- side a lit -- tle flow -- er
+	stall. A bunch of bright for -- get -- me -- nots was all I'd let you buy me.
+
+	% part "B"
+	Once Up -- on A Sum -- mer -- time, just like to -- day, we laughed the hap -- py af -- ter -- noon a -- way, and stole a
+	kiss in ev -- 'ry street ca -- fe. __
+
+	% part "C"
+	You were sweet -- er than the blos -- soms on the tree. I was as proud as an -- y girl could
+	be. As if the Mayor had of -- fered me the key to Par -- is!
+
+	% part "B"
+	Now, an -- oth -- er win -- ter -- time has come and gone. The pig -- eons feed -- ing in the square have flown, but I re --
+	mem -- ber when the ves -- pers chime. You loved me Once Up -- on A Sum -- mer --
+
+	% part "Volta"
+	time. __
+	time. __
 }
 {% endif %}

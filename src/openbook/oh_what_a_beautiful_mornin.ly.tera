@@ -26,9 +26,9 @@ remark = "Gordon MacRae in the film Oklahoma! (1955)"
 [versions.Fake]
 doChords = true
 doVoice = true
-doLyrics = false
-doLyricsmore = false
-doLyricsmoremore = false
+doLyrics = true
+doLyricsmore = true
+doLyricsmoremore = true
 doChordBars = false
 doGuitar = false
 doExtra = false
@@ -43,13 +43,13 @@ doOwn = false
 	- put in the chords (fake book).
 	- put in the tune (fake book).
 	- added youtube performances.
+	- put in the lyrics (fake book).
 	TODO:
 	- check the chords (fake book).
 	- check the tune (fake book).
 	- hear the tune to check that it is right and adjust the tempo.
 	- the tune runs over two pages in the fake book (280 and the top of 281).
 	- the fake book prints no chords in bars 18 and 26; they are left empty.
-	- add the lyrics.
 {% endif %}
 {% if part == "ChordsFake" %}\chordmode {
 	\startChords
@@ -116,5 +116,35 @@ doOwn = false
 			ees2. | f2. | ees'4 bes g | d' aes f | ees2.~ | ees4 r r |
 		}
 	}
+}
+{% endif %}
+{% if part == "LyricsFake" %}\lyricmode {
+	There's a
+
+	% part "A"
+	bright gold -- en haze on the mead -- ow, __ there's a bright gold -- en haze on the mead -- ow. __ The
+	corn is as high as an el -- e -- phant's eye, an' it looks like it's climb -- in' clear up to the sky.
+
+	% part "B"
+	Oh, What A Beau -- ti -- ful Morn -- in', oh, what a beau -- ti -- ful day. __
+	I got a beau -- ti -- ful feel -- in' ev -- 'ry -- thing's go -- in' my
+	way. __ All the
+	way. __ _ Oh, what a beau -- ti -- ful day! __
+}
+{% endif %}
+{% if part == "LyricsmoreFake" %}\lyricmode {
+	_ _
+
+	% part "A"
+	cat -- tle are stand -- in' like stat -- ues, __ all the cat -- tle are stand -- in' like stat -- ues. __ They
+	don't turn their heads as they see me ride by, but a lit -- tle brown mav' -- rick is wink -- in' her eye.
+}
+{% endif %}
+{% if part == "LyricsmoremoreFake" %}\lyricmode {
+	_ _
+
+	% part "A"
+	sounds of the earth are like mu -- sic, __ all the sounds of the earth are like mu -- sic. __ The
+	breeze is so bus -- y it don't miss a tree, and an ol' weep -- in' wil -- ler is laugh -- in' at me!
 }
 {% endif %}

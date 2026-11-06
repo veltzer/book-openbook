@@ -26,7 +26,7 @@ remark = "Gerry Mulligan Quartet"
 [versions.Fake]
 doChords = true
 doVoice = true
-doLyrics = false
+doLyrics = true
 doLyricsmore = false
 doLyricsmoremore = false
 doChordBars = false
@@ -43,8 +43,8 @@ doOwn = false
 	- put in the chords (fake book).
 	- put in the tune (fake book).
 	- added youtube performances.
+	- put in the lyrics (fake book).
 	TODO:
-	- add the lyrics.
 	- check the chords (fake book).
 	- check the tune (fake book).
 	- hear the tune to check that it is right and adjust the tempo.
@@ -122,5 +122,29 @@ doOwn = false
 			g,8 bes4 aes8 g bes c ees~ | ees2. r4 |
 		}
 	}
+}
+{% endif %}
+{% if part == "LyricsFake" %}\lyricmode {
+
+	% part "A"
+	In -- side out and up -- side down, __ the sound of big -- town has me turned a -- round. __ I yearn for
+	wa -- ter -- falls. __ The O -- pen Coun -- try calls. __ Sub --
+
+	% part "A"
+	ur -- ban life's too high fa -- lut -- in' for a small front yard, I find com -- mut -- in' on the
+	late, late train, __ too __ much strain. __ I'm __ just a yo -- kel, you see.
+
+	% part "B"
+	No fence, no wall, will ev -- er en -- close __ me. __
+	While fate can still ex -- pose __ me to the right con -- di -- tion for a fine days fish -- in'.
+
+	% part "A"
+	Who needs skies all full of 'scra -- pers, not a soul on earth needs smog -- gy va -- pors. Come a --
+	long with me, __ live __ a -- while. __ Why __ not be __ na -- ture's child? __ Fan -- cy free, __
+	that's my style. Wide __
+
+	% part "Volta"
+	O -- pen Coun -- try for me. __
+	_ O -- pen Coun -- try for me. __
 }
 {% endif %}

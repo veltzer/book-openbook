@@ -26,7 +26,7 @@ remark = "Barbra Streisand"
 [versions.Fake]
 doChords = true
 doVoice = true
-doLyrics = false
+doLyrics = true
 doLyricsmore = false
 doLyricsmoremore = false
 doChordBars = false
@@ -43,12 +43,12 @@ doOwn = false
 	- put in the chords (fake book).
 	- put in the tune (fake book).
 	- added youtube performances.
+	- put in the lyrics (fake book).
 	TODO:
 	- check the chords (fake book).
 	- check the tune (fake book).
 	- hear the tune to check that it is right and adjust the tempo.
 	- bar 15: the G#dim is printed close to the Am7 in the fake book; typed on beat 3.
-	- add the lyrics.
 {% endif %}
 {% if part == "ChordsFake" %}\chordmode {
 	\startChords
@@ -108,5 +108,26 @@ doOwn = false
 	a'2 fis~ | fis2 g4 b | e2 b~ | b2 ais4 b |
 	c2 b | g4 c r b | g4 c r b | g4 c r b |
 	g1 | a1 | g1~ | g2 r2 |
+}
+{% endif %}
+{% if part == "LyricsFake" %}\lyricmode {
+	On A
+
+	% part "A"
+	Clear Day __ rise and look a -- round you __ and you'll see who __ you are. __
+	On A
+
+	% part "B"
+	Clear Day __ how it will as -- tound you __ that the glow of your be -- ing out --
+	shines ev -- 'ry star. You feel
+
+	% part "C"
+	part of __ ev -- 'ry moun -- tain, sea and shore. __ You can
+	hear, from far and near, a world you've nev -- er heard be -- fore. __ And On A
+
+	% part "A"
+	Clear Day, __ on that clear day __ you can
+	see for -- ev -- er and ev -- er and ev -- er and
+	ev -- er -- more! __
 }
 {% endif %}

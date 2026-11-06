@@ -25,8 +25,8 @@ remark = "Horace Silver with Bill Henderson in the vocal version (1958)"
 [versions.Fake]
 doChords = true
 doVoice = true
-doLyrics = false
-doLyricsmore = false
+doLyrics = true
+doLyricsmore = true
 doLyricsmoremore = false
 doChordBars = false
 doGuitar = false
@@ -42,8 +42,8 @@ doOwn = false
 	- put in the chords (fake book).
 	- put in the tune (fake book).
 	- added youtube performances.
+	- put in the lyrics (fake book).
 	TODO:
-	- add the lyrics.
 	- check the chords (fake book).
 	- check the tune (fake book).
 	- hear the tune to check that it is right and adjust the tempo.
@@ -134,5 +134,46 @@ doOwn = false
 			\clef bass ees,4 bes'8 ees ees des | ees4 des8 ees des bes | ees,8 r r r4 r8 | R2. |
 		}
 	}
+}
+{% endif %}
+{% if part == "LyricsFake" %}\lyricmode {
+
+	% part "A"
+	Se -- ñor Blues __ _ _ is what they call __ him, __
+	'way down Mex __ _ _ -- i -- cal -- ly Way. __
+	Se -- ñor -- i __ _ _ -- tas fall -- in' for __ him __
+	with the hope __ _ _ that he will stay. __
+
+	% part "B"
+	By the time that they love __ him, __
+	Se -- ñor Blues __ _ _ done gone a -- way. __
+
+	% part "C"
+	Well, he's tall and good look -- in', and he al -- ways knows just what to say.
+	Yes, he's tall and good look -- in', and he al -- ways knows just what to say.
+
+	% part "Coda"
+	_
+	I __ don't know why, don't know why, don't know why. __
+	I'm a won -- der -- in', wan -- der -- in' guy, __
+	with no one gal to lay my head by. __
+}
+{% endif %}
+{% if part == "LyricsmoreFake" %}\lyricmode {
+
+	% part "A"
+	_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _
+
+	% part "B"
+	_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _
+
+	% part "C"
+	_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _
+
+	% part "Coda"
+	_
+	Ooo __ I'm so tir -- ed and lone -- ly and blue. __
+	'Cause the one man I love won't be true. __
+	Got the blues and it's all 'cause of you. __
 }
 {% endif %}

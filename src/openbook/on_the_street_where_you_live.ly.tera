@@ -26,9 +26,9 @@ remark = "Shelly Manne and André Previn from My Fair Lady (1956)"
 [versions.Fake]
 doChords = true
 doVoice = true
-doLyrics = false
-doLyricsmore = false
-doLyricsmoremore = false
+doLyrics = true
+doLyricsmore = true
+doLyricsmoremore = true
 doChordBars = false
 doGuitar = false
 doExtra = false
@@ -43,8 +43,8 @@ doOwn = false
 	- put in the chords (fake book).
 	- put in the tune (fake book).
 	- added youtube performances.
+	- put in the lyrics (fake book).
 	TODO:
-	- add the lyrics.
 	- check the chords (fake book).
 	- check the tune (fake book).
 	- hear the tune to check that it is right and adjust the tempo.
@@ -119,5 +119,44 @@ doOwn = false
 	% part "Coda"
 	ees4^\markup { \musicglyph #"scripts.coda" } d' d2~ | d4 r ees d | c bes bes2~ | bes4 r d c |
 	bes2 c4 bes | a2 bes4 c | bes1~ | bes2 r |
+}
+{% endif %}
+{% if part == "LyricsFake" %}\lyricmode {
+	I have
+
+	% part "A"
+	of -- ten walked __ down this street be -- fore. __ but the pave -- ment al -- ways
+	stayed be -- neath my feet be -- fore. __ All at once am I __ sev -- 'ral stor -- ies high, __
+	know -- ing I'm On The Street
+
+	% part "Volta"
+	Where You Live. __ Are there
+	Street Where You Live. __ And
+
+	% part "B"
+	oh, __ the tow -- er -- ing feel -- ing, __ just to
+	know __ some -- how you are near! __ The o __ ver -- pow -- er -- ing
+	feel -- ing __ that an -- y se -- cond you may sud -- den -- ly ap -- pear! __ Peo -- ple
+
+	% part "Coda"
+	time go by, __ I won't care if I __ can be
+	here On The Street Where You Live. __
+}
+{% endif %}
+{% if part == "LyricsmoreFake" %}\lyricmode {
+	_ _
+
+	% part "A"
+	li -- lac trees __ in the heart of town? __ Can you hear a lark in
+	an -- y oth -- er part of town? __ Does en -- chant -- ment pour __ out of ev -- 'ry door? __
+	No, it's just On The
+}
+{% endif %}
+{% if part == "LyricsmoremoreFake" %}\lyricmode {
+	_ _
+
+	% part "A"
+	stop and stare, __ they don't both -- er me. __ For there's no -- where else on
+	earth that I would rath -- er be. __ Let the
 }
 {% endif %}

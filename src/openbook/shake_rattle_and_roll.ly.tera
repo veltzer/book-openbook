@@ -26,7 +26,7 @@ remark = "Bill Haley and his Comets (1954)"
 [versions.Fake]
 doChords = true
 doVoice = true
-doLyrics = false
+doLyrics = true
 doLyricsmore = false
 doLyricsmoremore = false
 doChordBars = false
@@ -43,8 +43,8 @@ doOwn = false
 	- put in the chords (fake book).
 	- put in the tune (fake book).
 	- added youtube performances.
+	- put in the lyrics (fake book).
 	TODO:
-	- add the lyrics.
 	- check the chords (fake book).
 	- check the tune (fake book).
 	- hear the tune to check that it is right and adjust the tempo.
@@ -109,5 +109,27 @@ doOwn = false
 
 	% part "Coda"
 	c1~^\markup { \musicglyph #"scripts.coda" } | c2. r4 |
+}
+{% endif %}
+{% if part == "LyricsFake" %}\lyricmode {
+	Get out __
+
+	% part "A"
+	from that kitch -- en and rat -- tle those pots and pans. __
+	Get out __ from that kitch -- en and rat -- tle those pots and pans. __
+	Well, roll my break -- fast, 'cause __ _ I'm a hun -- gry man. __
+
+	% part "B"
+	Shake Rat -- tle And Roll, __ Shake Rat -- tle And Roll, __
+	Shake Rat -- tle And Roll, __ Shake Rat -- tle And Roll. __ You
+	nev -- er do noth -- in' to save your dog -- gone soul. __
+
+	% part "C"
+	Wear -- in' those dress -- es, your hair done up so right. __
+	Wear -- in' those dress -- es, your hair done up so right. __ You
+	look so warm, __ but your heart is cold __ as ice. __
+
+	% part "Coda"
+	soul. __
 }
 {% endif %}

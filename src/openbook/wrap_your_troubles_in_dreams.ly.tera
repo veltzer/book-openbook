@@ -26,7 +26,7 @@ remark = "Louis Armstrong and his Orchestra (1931)"
 [versions.Fake]
 doChords = true
 doVoice = true
-doLyrics = false
+doLyrics = true
 doLyricsmore = false
 doLyricsmoremore = false
 doChordBars = false
@@ -43,8 +43,8 @@ doOwn = false
 	- put in the chords (fake book).
 	- put in the tune (fake book).
 	- added youtube performances.
+	- put in the lyrics (fake book).
 	TODO:
-	- add the lyrics.
 	- check the chords (fake book).
 	- check the tune (fake book).
 	- hear the tune to check that it is right and adjust the tempo.
@@ -124,5 +124,29 @@ doOwn = false
 			c2. r4 |
 		}
 	}
+}
+{% endif %}
+{% if part == "LyricsFake" %}\lyricmode {
+	When
+
+	% part "A"
+	skies are clou -- dy and gray, they're on -- ly gray for a day, So
+	Wrap Your Trou -- bles In Dreams and dream your trou -- bles a -- way. Un --
+
+	% part "A"
+	til that sun -- shine peeps thru, there's on -- ly one thing to do, just
+	Wrap Your Trou -- bles In Dreams and dream your trou -- bles a -- way. Your
+
+	% part "B"
+	cas -- tles may tum -- ble, that's Fate, af -- ter all, __ life's real -- ly fun -- ny that way.
+	No use to grum -- ble, just smile as they fall, __ Were -- n't you King __ for a day? Say!
+
+	% part "A"
+	Just re -- mem -- ber that sun -- shine al -- ways fol -- lows the rain. So
+	Wrap Your Trou -- bles In Dreams and dream your trou -- bles a --
+
+	% part "Volta"
+	way. When
+	way.
 }
 {% endif %}

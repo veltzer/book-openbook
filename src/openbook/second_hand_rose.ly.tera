@@ -26,8 +26,8 @@ remark = "Barbra Streisand (1965)"
 [versions.Fake]
 doChords = true
 doVoice = true
-doLyrics = false
-doLyricsmore = false
+doLyrics = true
+doLyricsmore = true
 doLyricsmoremore = false
 doChordBars = false
 doGuitar = false
@@ -43,13 +43,14 @@ doOwn = false
 	- put in the chords (fake book).
 	- put in the tune (fake book).
 	- added youtube performances.
+	- put in the lyrics (fake book).
 	TODO:
 	- check the chords (fake book).
 	- check the tune (fake book).
 	- hear the tune to check that it is right and adjust the tempo.
 	- the fake book splits notes for the second verse (bar 6: two quarters instead of a half, bar 28: a pickup note instead of the rest), only the first verse rhythm is typed in.
 	- the exact beat of the C7b9 in bar 28 and of the Bdim7 in the first ending is hard to read in the fake book.
-	- add the lyrics.
+	- lyrics: because of the untyped second verse rhythm, "me their" (bar 6) and "Oh! look" (bar 30) of the second verse sit on one note each.
 {% endif %}
 {% if part == "ChordsFake" %}\chordmode {
 	\startChords
@@ -135,5 +136,46 @@ doOwn = false
 			f1~ | f2. r4 |
 		}
 	}
+}
+{% endif %}
+{% if part == "LyricsFake" %}\lyricmode {
+
+	% part "A"
+	I'm wear -- ing sec -- ond hand hats, __ sec -- ond hand clothes __ that's why they call __ me
+	Sec -- ond Hand Rose. __
+
+	% part "B"
+	E -- ven our pi -- an -- o in the par -- lor, Fa -- ther bought for ten cents on the dol -- lar.
+
+	% part "A"
+	Sec -- ond hand pearls, __ I'm wear -- ing sec -- ond hand curls. __ I
+	nev -- er get a sin -- gle thing that's new. __
+
+	% part "C"
+	E -- ven Jake the plum -- ber, he's the man I a -- dore, __
+	had the nerve to tell me he's been mar -- ried be -- fore. __
+
+	% part "A"
+	Ev -- 'ry -- one knows __ that I'm just Sec -- ond Hand Rose __ from Sec -- ond Av -- en --
+	ue. I'm wear -- ing
+	ue. __
+}
+{% endif %}
+{% if part == "LyricsmoreFake" %}\lyricmode {
+
+	% part "A"
+	_ _ _ sec -- ond hand shoes, __ sec -- ond hand hose; __ all the girls hand __ me_their
+	sec -- ond hand beaux. __
+
+	% part "B"
+	E -- ven my pa -- ja -- mas when I don 'em have some -- bod -- y el -- se's 'ni -- tials on 'em.
+
+	% part "A"
+	Sec -- ond hand rings, __ I'm sick of sec -- ond hand things. __ I
+	nev -- er get what oth -- er girl -- ies do. __
+
+	% part "C"
+	Once while stoll -- ing through the Ritz a girl got my goat, __
+	she nudged her friend and said 'Oh!_look there's my old fur coat.' __
 }
 {% endif %}

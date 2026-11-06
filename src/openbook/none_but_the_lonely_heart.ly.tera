@@ -26,7 +26,7 @@ remark = "Al Hirt"
 [versions.Fake]
 doChords = true
 doVoice = true
-doLyrics = false
+doLyrics = true
 doLyricsmore = false
 doLyricsmoremore = false
 doChordBars = false
@@ -43,8 +43,8 @@ doOwn = false
 	- put in the chords (fake book).
 	- put in the tune (fake book).
 	- added youtube performances.
+	- put in the lyrics (fake book).
 	TODO:
-	- add the lyrics.
 	- check the chords (fake book).
 	- check the tune (fake book).
 	- hear the tune to check that it is right and adjust the tempo.
@@ -103,5 +103,21 @@ doOwn = false
 	c2 d,4 d | c'4. ees,8 ees2 | r4 f g aes | bes2 bes |
 	r4 des c bes | aes g f c' | bes2. aes4 | g2 aes4 bes |
 	c2 d,4 d | c'4. d,8 d4 d | ees1~ | ees1 |
+}
+{% endif %}
+{% if part == "LyricsFake" %}\lyricmode {
+
+	% part "A"
+	None But The Lone -- ly Heart can know my sor -- row as I keep search -- ing for my love in vain.
+
+	% part "A"
+	Is there a lone -- ly heart that I could bor -- row, a heart to sing with me love's sweet re -- frain?
+
+	% part "B"
+	What good are stars that shine when they are wast -- ed, what good are lips like mine that go un -- tast -- ed?
+
+	% part "A"
+	Night aft -- er night I pray I'll find my lov -- er and when I do my heart will feel that glow, some -- thing
+	None But The Lone -- ly Heart could know. __
 }
 {% endif %}

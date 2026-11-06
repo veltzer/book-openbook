@@ -26,7 +26,7 @@ remark = "Anita O'Day"
 [versions.Fake]
 doChords = true
 doVoice = true
-doLyrics = false
+doLyrics = true
 doLyricsmore = false
 doLyricsmoremore = false
 doChordBars = false
@@ -43,8 +43,8 @@ doOwn = false
 	- put in the chords (fake book).
 	- put in the tune (fake book).
 	- added youtube performances.
+	- put in the lyrics (fake book).
 	TODO:
-	- add the lyrics.
 	- check the chords (fake book).
 	- check the tune (fake book).
 	- hear the tune to check that it is right and adjust the tempo.
@@ -110,5 +110,25 @@ doOwn = false
 	bes4 bes8 c bes a g4 | a4 a c4. a8 | g4 g bes4. g8 | f4 f a4. f8 | c8 c c4 c r4 |
 	c8 c4 c8 c c4 c8 | c8 c c4 c r4 | c8 c4 c8 c c4 c8 | c8 c c4 c r4 |
 	c8 c4 c8 c c4 c8 | c4 c g'8 f e4 | f4 r r2 |
+}
+{% endif %}
+{% if part == "LyricsFake" %}\lyricmode {
+
+	% part "A"
+	Noth -- ing's im -- pos -- si -- ble I have found. For when my chin is on the ground I
+	pick my -- self up, dust my -- self off, start all o -- ver a -- gain.
+
+	% part "B"
+	Don't lose your con -- fi -- dence if you slip, be grate -- ful for a pleas -- ant trip, and
+	pick your -- self up, dust your -- self off, start all o -- ver a -- gain.
+
+	% part "C"
+	Work like a soul in -- spi -- red 'til the bat -- tle of the day is won.
+	You may be sick and ti -- red, but you'll be a man my son!
+
+	% part "A"
+	Will you re -- mem -- ber the fa -- mous men who had to fall to rise a -- gain? So
+	take a deep breath, _ _ _ _ _ _ pick your -- self up, _ _ _ _ _ _ dust your -- self off,
+	_ _ _ _ _ _ start all o -- ver a -- gain.
 }
 {% endif %}

@@ -26,7 +26,7 @@ remark = "Frank Sinatra"
 [versions.Fake]
 doChords = true
 doVoice = true
-doLyrics = false
+doLyrics = true
 doLyricsmore = false
 doLyricsmoremore = false
 doChordBars = false
@@ -43,8 +43,8 @@ doOwn = false
 	- put in the chords (fake book).
 	- put in the tune (fake book).
 	- added youtube performances.
+	- put in the lyrics (fake book).
 	TODO:
-	- add the lyrics.
 	- check the chords (fake book).
 	- check the tune (fake book).
 	- hear the tune to check that it is right and adjust the tempo.
@@ -105,5 +105,20 @@ doOwn = false
 			f2~ f8 r r4 |
 		}
 	}
+}
+{% endif %}
+{% if part == "LyricsFake" %}\lyricmode {
+
+	% part "A"
+	I'm goin' to buy a Pa -- per Doll that I can call my own, a doll that oth -- er fel -- lows can -- not steal. And then the
+	flir -- ty, flir -- ty guys with their flir -- ty, flir -- ty eyes will have to flirt with dol -- lies that are real. When
+
+	% part "B"
+	I come home at night she will be wait -- ing, __ she'll be the tru -- est doll in all this world. I'd
+	rath -- er have a Pa -- per Doll to call my own, than have a fick -- le -- mind -- ed real live
+
+	% part "Volta"
+	girl. I'm goin' to
+	girl. __
 }
 {% endif %}

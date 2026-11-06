@@ -26,8 +26,8 @@ remark = "Teddy Wilson, solo piano"
 [versions.Fake]
 doChords = true
 doVoice = true
-doLyrics = false
-doLyricsmore = false
+doLyrics = true
+doLyricsmore = true
 doLyricsmoremore = false
 doChordBars = false
 doGuitar = false
@@ -43,8 +43,8 @@ doOwn = false
 	- put in the chords (fake book).
 	- put in the tune (fake book).
 	- added youtube performances.
+	- put in the lyrics (fake book).
 	TODO:
-	- add the lyrics.
 	- check the chords (fake book).
 	- check the tune (fake book).
 	- hear the tune to check that it is right and adjust the tempo.
@@ -114,5 +114,30 @@ doOwn = false
 	% part "A"
 	c4 c2.~ | c2 e4 d | a4 a2.~ | a2 e'4 d |
 	a4 a2 d,4 | a'4 a2 d,4 | f1~ | f2 r |
+}
+{% endif %}
+{% if part == "LyricsFake" %}\lyricmode {
+	Ro --
+
+	% part "A"
+	set -- ta, __ my Ro -- set -- ta, __ in my heart, dear, there's
+
+	% part "Volta"
+	no one but you. __ You
+	some -- bod -- y new.
+
+	% part "B"
+	You've made my whole life a dream; __
+	I pray you'll make it come true. __ Ro --
+
+	% part "A"
+	set -- ta, __ my Ro -- set -- ta, __ Please say I'm just the one dear for you. __
+}
+{% endif %}
+{% if part == "LyricsmoreFake" %}\lyricmode {
+	_
+
+	% part "A"
+	told me, __ that you loved me, nev -- er leave me for
 }
 {% endif %}

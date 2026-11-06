@@ -26,8 +26,8 @@ remark = "Earl Hines piano solo (1928)"
 [versions.Fake]
 doChords = true
 doVoice = true
-doLyrics = false
-doLyricsmore = false
+doLyrics = true
+doLyricsmore = true
 doLyricsmoremore = false
 doChordBars = false
 doGuitar = false
@@ -43,8 +43,8 @@ doOwn = false
 	- put in the chords (fake book).
 	- put in the tune (fake book).
 	- added youtube performances.
+	- put in the lyrics (fake book; the girl words of the first A are typed as the second verse).
 	TODO:
-	- add the lyrics (the book prints separate boy and girl words in the first A).
 	- check the chords (fake book).
 	- check the tune (fake book).
 	- hear the tune to check that it is right and adjust the tempo.
@@ -127,5 +127,30 @@ doOwn = false
 			bes1~ | bes2.
 		}
 	}
+}
+{% endif %}
+{% if part == "LyricsFake" %}\lyricmode {
+
+	% part "A"
+	Now, don't for -- get our Mon -- day date, __ ba -- by be read -- y __ when I come by. __ And
+
+	% part "A"
+	when the clock strikes half past eight, __ I'll be there wait -- in' __ with a kiss and a sigh. I'm gon -- na
+
+	% part "B"
+	hold you so fast __ when we dance cheek to cheek; __ store up e -- nough love to last __ us the rest of the week. __ So,
+
+	% part "A"
+	don't for -- get our Mon -- day Date, __ Ba -- by, I prom -- ise __ nei -- ther will
+
+	% part "Volta"
+	I. Now,
+	I. __
+}
+{% endif %}
+{% if part == "LyricsmoreFake" %}\lyricmode {
+
+	% part "A"
+	_ _ _ _ _ _ _ _ gon -- na be read -- y __ when you come by. __
 }
 {% endif %}

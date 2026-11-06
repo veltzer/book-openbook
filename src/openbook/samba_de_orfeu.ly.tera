@@ -26,7 +26,7 @@ remark = "Stan Getz"
 [versions.Fake]
 doChords = true
 doVoice = true
-doLyrics = false
+doLyrics = true
 doLyricsmore = false
 doLyricsmoremore = false
 doChordBars = false
@@ -43,12 +43,12 @@ doOwn = false
 	- put in the chords (fake book).
 	- put in the tune (fake book).
 	- added youtube performances.
+	- put in the lyrics (fake book).
 	TODO:
 	- check the chords (fake book).
 	- check the tune (fake book).
 	- hear the tune to check that it is right and adjust the tempo.
 	- in the fake book the second ending bracket covers only its first bar, the rest of the tune follows it.
-	- add the lyrics.
 {% endif %}
 {% if part == "ChordsFake" %}\chordmode {
 	\startChords
@@ -122,5 +122,23 @@ doOwn = false
 	b8 b4 b8 b b4 b8~ | b4 a8 g~ g e4 g8~ | g2 d2~ | d4 d8 f~ f a4 c8~ |
 	c1 | a2 f8 e4 d8~ | d1~ | d4. f8 a c4 b8~ |
 	b8 b4 g8 b b4 g8 | b4. g8 e' d4 c8~ | c1~ | c4 r r2 |
+}
+{% endif %}
+{% if part == "LyricsFake" %}\lyricmode {
+
+	% part "A"
+	Que -- ro __ vi -- ver, __ que -- ro __ sam -- bar __ a -- té __ sen -- tir __
+	a_es -- sen -- cia da vi -- da, me __ fal -- ta __ ar. __ Que -- ro __ sam -- bar, __
+	que -- ro vi -- ver __ de -- pois do sam -- ba, ta bem meu a --
+	mor pos -- so mor -- rer. __ Que -- ro __ vi -- \set ignoreMelismata = ##t ver,
+	mor, \unset ignoreMelismata pos -- so mor -- rer. __
+
+	% part "B"
+	Quem -- qui -- zer __ gos -- tar __ de mim, __ Se qui -- zer __ vai -- ser __ as -- sim __ va -- mos __ vi -- ver, __
+
+	% part "A"
+	va -- mos __ sam -- bar __ Se_a fan -- ta -- sia __ ras -- gar, meu a -- mor, __
+	eu com -- pro ou -- tra. __ Va -- mos __ sam -- bar, __ va -- mos vi -- ver __
+	o sam -- ba é __ livre, eu sou livre tam -- bem, a -- té mor -- rer. __
 }
 {% endif %}

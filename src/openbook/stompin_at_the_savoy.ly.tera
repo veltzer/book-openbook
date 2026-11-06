@@ -26,8 +26,8 @@ remark = "Ella Fitzgerald and Louis Armstrong"
 [versions.Fake]
 doChords = true
 doVoice = true
-doLyrics = false
-doLyricsmore = false
+doLyrics = true
+doLyricsmore = true
 doLyricsmoremore = false
 doChordBars = false
 doGuitar = false
@@ -43,8 +43,8 @@ doOwn = false
 	- put in the chords (fake book).
 	- put in the tune (fake book).
 	- added youtube performances.
+	- put in the lyrics (fake book).
 	TODO:
-	- add the lyrics.
 	- check the chords (fake book).
 	- check the tune (fake book).
 	- hear the tune to check that it is right and adjust the tempo.
@@ -114,5 +114,31 @@ doOwn = false
 	% part "A"
 	c8 c, d a' e4 c8 d~ | d4 r a'4. c8~ | c8 c, d a' e4 c8 d~ | d4 r a'4. c8~ |
 	c8 c, d f bes4 f8 e~ | e4 r a4. f8~ | f4 r r2 | r1 |
+}
+{% endif %}
+{% if part == "LyricsFake" %}\lyricmode {
+	Sav -- voy, __
+
+	% part "A"
+	the home of sweet ro -- mance; Sa -- voy, __ it wins you at a glance; __ Sa -- voy, __
+	gives hap -- py feet a chance __ to dance. __
+	Your form
+	_
+
+	% part "B"
+	How my heart is sing -- in' __ while the band is swing -- in'! __
+	Nev -- er tired of romp -- in' __ and stomp -- in' with you __ at the Sa -- voy. What joy! __
+
+	% part "A"
+	A per -- fect hol -- i -- day! __ Sa -- voy, __ where we can glide and sway; __ Sa -- voy, __
+	there let me stomp a -- way __ with you. __
+}
+{% endif %}
+{% if part == "LyricsmoreFake" %}\lyricmode {
+	_
+
+	% part "A"
+	just like a cling -- in' vine; __ your lips __ so warm and sweet as wine, __ your cheek __
+	so soft and close to mine, __ di -- vine! __
 }
 {% endif %}

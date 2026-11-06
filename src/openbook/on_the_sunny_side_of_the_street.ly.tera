@@ -26,7 +26,7 @@ remark = "Dizzy Gillespie, Sonny Rollins and Sonny Stitt from Sonny Side Up (195
 [versions.Fake]
 doChords = true
 doVoice = true
-doLyrics = false
+doLyrics = true
 doLyricsmore = false
 doLyricsmoremore = false
 doChordBars = false
@@ -43,8 +43,8 @@ doOwn = false
 	- put in the chords (fake book).
 	- put in the tune (fake book).
 	- added youtube performances.
+	- put in the lyrics (fake book).
 	TODO:
-	- add the lyrics.
 	- check the chords (fake book).
 	- check the tune (fake book).
 	- hear the tune to check that it is right and adjust the tempo.
@@ -124,5 +124,29 @@ doOwn = false
 			c2. r4 |
 		}
 	}
+}
+{% endif %}
+{% if part == "LyricsFake" %}\lyricmode {
+	Grab your
+
+	% part "A"
+	coat and get your hat, leave your wor -- ry on the door -- step,
+	just di -- rect your feet to the sun -- ny side __ of the street. Can't you
+
+	% part "A"
+	hear a pit -- ter -- pat? And that hap -- py tune is your step,
+	life can be so sweet On The Sun -- ny Side __ Of The Street. I used to
+
+	% part "B"
+	walk in the shade __ with those blues on pa -- rade. __ But
+	I'm not a -- fraid __ this Ro -- ver crossed o -- ver. If I
+
+	% part "A"
+	nev -- er have a cent I'll be rich as Rock -- e -- fel -- ler,
+	gold -- dust at my feet On The Sun -- ny Side __ Of The
+
+	% part "Volta"
+	Street. Grab your
+	Street.
 }
 {% endif %}

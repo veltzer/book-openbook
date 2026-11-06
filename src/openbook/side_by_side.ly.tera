@@ -26,8 +26,8 @@ remark = "Kay Starr (1953)"
 [versions.Fake]
 doChords = true
 doVoice = true
-doLyrics = false
-doLyricsmore = false
+doLyrics = true
+doLyricsmore = true
 doLyricsmoremore = false
 doChordBars = false
 doGuitar = false
@@ -43,8 +43,8 @@ doOwn = false
 	- put in the chords (fake book).
 	- put in the tune (fake book).
 	- added youtube performances.
+	- put in the lyrics (fake book).
 	TODO:
-	- add the lyrics.
 	- check the chords (fake book).
 	- check the tune (fake book).
 	- hear the tune to check that it is right and adjust the tempo.
@@ -119,5 +119,33 @@ doOwn = false
 			ees'2 r |
 		}
 	}
+}
+{% endif %}
+{% if part == "LyricsFake" %}\lyricmode {
+	Oh! we
+
+	% part "A"
+	ain't got a bar -- rel of mon -- ey, may -- be we're rag -- ged and fun -- ny, but we'll
+	trav -- el a -- long __ sing -- in' a song __ Side By Side.
+
+	% part "B"
+	Thru all kinds of wea -- ther what if the sky should fall? __
+	Just as long as we're to -- geth -- er, it does -- n't mat -- ter at all. __
+
+	% part "A"
+	When they've all had their quar -- rels and part -- ed, we'll be the same as we start -- ed, just
+	trav -- 'lin' a -- long __ sing -- in' a song __ Side By
+
+	% alternatives
+	Side. __ Oh! we
+	Side.
+}
+{% endif %}
+{% if part == "LyricsmoreFake" %}\lyricmode {
+	_ _
+
+	% part "A"
+	Don't know what's com -- in, to -- mor -- row, may -- be it's trou -- ble and sor -- row, but we'll
+	trav -- el the road __ shar -- in' our load __ Side By Side.
 }
 {% endif %}

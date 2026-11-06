@@ -26,7 +26,7 @@ remark = "Lester Young (1944)"
 [versions.Fake]
 doChords = true
 doVoice = true
-doLyrics = false
+doLyrics = true
 doLyricsmore = false
 doLyricsmoremore = false
 doChordBars = false
@@ -43,8 +43,8 @@ doOwn = false
 	- put in the chords (fake book).
 	- put in the tune (fake book).
 	- added youtube performances.
+	- put in the lyrics (fake book).
 	TODO:
-	- add the lyrics.
 	- check the chords (fake book).
 	- check the tune (fake book).
 	- hear the tune to check that it is right and adjust the tempo.
@@ -120,5 +120,27 @@ doOwn = false
 			ees2. r4 |
 		}
 	}
+}
+{% endif %}
+{% if part == "LyricsFake" %}\lyricmode {
+
+	% part "A"
+	A cig -- a -- rette that bears a lip -- stick's tra -- ces, an air -- line tick -- et to ro -- man -- tic pla -- ces,
+	and still my heart has wings. __ These Fool -- ish Things re -- mind me of you.
+
+	% part "A"
+	A tink -- ling pia -- no in the next a -- part -- ment, those stumb -- ling words that told you what my heart meant,
+	a fair -- ground's paint -- ed swings __ These Fool -- ish Things re -- mind me of you.
+
+	% part "B"
+	You came, you saw, you con -- quer'd me; when you did that to me, I knew some -- how this had to be.
+
+	% part "A"
+	The winds of March that makes my heart a danc -- er, a tel -- e -- phone that rings but who's to an -- swer?
+	Oh, how the ghost of you clings! These Fool -- ish Things re -- mind me of
+
+	% part "Volta"
+	you.
+	you.
 }
 {% endif %}

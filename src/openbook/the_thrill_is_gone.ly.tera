@@ -26,7 +26,7 @@ remark = "Chet Baker"
 [versions.Fake]
 doChords = true
 doVoice = true
-doLyrics = false
+doLyrics = true
 doLyricsmore = false
 doLyricsmoremore = false
 doChordBars = false
@@ -43,8 +43,8 @@ doOwn = false
 	- put in the chords (fake book).
 	- put in the tune (fake book).
 	- added youtube performances.
+	- put in the lyrics (fake book).
 	TODO:
-	- add the lyrics.
 	- check the chords (fake book).
 	- check the tune (fake book).
 	- hear the tune to check that it is right and adjust the tempo.
@@ -100,5 +100,20 @@ doOwn = false
 	% part "B"
 	f'2. e4 | f2. e4 | e2. d4 | e2. d4 | c2. bes4 |
 	a2. g4 | a1~ | a4 e g a | d,1~ | d2. r4 |
+}
+{% endif %}
+{% if part == "LyricsFake" %}\lyricmode {
+	The
+
+	% part "A"
+	Thrill Is Gone! __ The Thrill Is Gone! __
+	I can see it in your eyes, I can hear it in your sighs, feel your touch and re -- al -- ize The Thrill Is Gone. The
+
+	% part "A"
+	nights are cold __ for love is old, __
+	love was grand when love was new, birds were sing -- ing, skies were blue. Now it don't ap -- peal to you, The Thrill Is Gone. This
+
+	% part "B"
+	is the end, so why pre -- tend and let it lin -- ger on. __ The Thrill Is Gone! __
 }
 {% endif %}

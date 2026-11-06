@@ -25,8 +25,8 @@ remark = "Bix Beiderbecke and his Gang (1927)"
 [versions.Fake]
 doChords = true
 doVoice = true
-doLyrics = false
-doLyricsmore = false
+doLyrics = true
+doLyricsmore = true
 doLyricsmoremore = false
 doChordBars = false
 doGuitar = false
@@ -42,8 +42,8 @@ doOwn = false
 	- put in the chords (fake book).
 	- put in the tune (fake book).
 	- added youtube performances.
+	- put in the lyrics (fake book).
 	TODO:
-	- add the lyrics.
 	- check the chords (fake book).
 	- check the tune (fake book).
 	- hear the tune to check that it is right and adjust the tempo.
@@ -139,5 +139,48 @@ doOwn = false
 		bes4 r bes8 c cis d | bes8 bes4 bes8~ bes4 r | bes4 r bes8 c cis d | g,8 g4 g8~ g4 r |
 		g4 r bes8 c cis d | f,8 f4 f8~ f r r4 | bes4 r bes r | c4 bes bes r |
 	}
+}
+{% endif %}
+{% if part == "LyricsFake" %}\lyricmode {
+
+	% part "A"
+	No use of talk -- in', no use of talk -- in', you'll start in dog -- walk -- in' no mat -- ter where __
+	there's jazz -- co -- pa -- tion, blues mod -- u -- la -- tion just like a Hai -- tian you'll rip and tear. __
+	Most ev -- 'ry -- bo -- dy likes the blues, __
+
+	% part "A"
+	here's why I'm ra -- vin', __ _ here's why I'm ra -- vin', if it's blues you are cra -- vin' just come on down. __
+	You'll hear 'em play -- in', you'll hear 'em play -- in', soon you'll be say -- in', 'Hon, jazz me 'round,' __
+	be -- cause your feet they can't re -- fuse. __
+
+	% part "B"
+	What's that fa -- mil -- iar strain, that true blue note re -- frain? It's driv -- in' me in -- sane.
+	Can't keep still tho' it's a -- gainst my will. __ I'm on my P's and Q's, __
+	I just can't __ re -- fuse. __
+	_ the Roy -- al Gar -- den Blues. __
+
+	% part "C"
+	Ev -- 'ry bo -- dy grab some -- bo -- dy and start jazz -- ing 'round.
+
+	% part "D"
+	Hon, don't you hear that tromb -- bone moan? __ Just lis -- ten to that sax -- o -- phone. __
+	Gee, hear that cla -- ri -- net and flute; __ cor -- net a -- jazz -- in' with a mute __
+	makes me just throw my -- self a -- way __ when I hear 'em play.
+}
+{% endif %}
+{% if part == "LyricsmoreFake" %}\lyricmode {
+
+	% part "A"
+	_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _
+
+	% part "B"
+	There goes that mel -- o -- dy it sounds so good to me, and I am up a tree.
+	It's a shame you don't __ _ know the name. __ It's __ _ a brand new blues, __
+	_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _
+
+	% part "D"
+	That weep -- _ in' mel -- an -- cho -- \set ignoreMelismata = ##t ly strain, \unset ignoreMelismata say but it's __ _ sooth -- ing to \set ignoreMelismata = ##t the brain. \unset ignoreMelismata
+	Just wan -- na __ _ get right up \set ignoreMelismata = ##t and dance. \unset ignoreMelismata Don't care I'll take most an -- y chance. __
+	No oth -- er blues I'd care to choose, __ but Royal Gar -- den Blues.
 }
 {% endif %}

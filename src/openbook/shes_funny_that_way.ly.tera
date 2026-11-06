@@ -27,8 +27,8 @@ remark = "Frank Sinatra"
 [versions.Fake]
 doChords = true
 doVoice = true
-doLyrics = false
-doLyricsmore = false
+doLyrics = true
+doLyricsmore = true
 doLyricsmoremore = false
 doChordBars = false
 doGuitar = false
@@ -44,8 +44,8 @@ doOwn = false
 	- put in the chords (fake book).
 	- put in the tune (fake book).
 	- added youtube performances.
+	- put in the lyrics (fake book).
 	TODO:
-	- add the lyrics.
 	- check the chords (fake book).
 	- check the tune (fake book).
 	- hear the tune to check that it is right and adjust the tempo.
@@ -127,5 +127,49 @@ doOwn = false
 			r4 ees f8 ees f4 | ees1 |
 		}
 	}
+}
+{% endif %}
+{% if part == "LyricsFake" %}\lyricmode {
+	I'm
+
+	% part "A"
+	not much to look __ at, noth -- in' to see, __ just glad I'm liv __ in' and luck -- y to be, __
+	I got a wo -- man, cra -- zy for me, __ She's Fun -- ny That Way. I
+
+	% part "A"
+	can't save a dol __ lar, ain't worth a cent, __ she does -- n't hol __ ler, she'd live in a tent, __
+	I got a wo -- man, cra -- zy for me, __ She's Fun -- ny That Way.
+
+	% part "B"
+	Tho' she loves to work and slave for me ev -- 'ry day,
+	she'd be so much bet -- ter off if I went a -- way; but
+
+	% part "A"
+	why should I leave __ her, why should I go, __ she'd be un -- hap __ py with -- out me I know, __
+	I got a wo -- man, cra -- zy for me, __
+
+	% alternatives
+	She's Fun -- ny That Way. I
+	She's Fun -- ny That Way.
+}
+{% endif %}
+{% if part == "LyricsmoreFake" %}\lyricmode {
+	_
+
+	% part "A"
+	nev -- er had noth __ in; no one to care, __ that's why I seem __ to have more than my share, __
+	I got a wo -- man, cra -- zy for me, __ She's Fun -- ny That Way. When
+
+	% part "A"
+	I hurt her feel __ ings, once in a while, __ her on -- ly ans __ wer is one lit -- tle smile, __
+	I got a wo -- man, cra -- zy for me, __ She's Fun -- ny That Way.
+
+	% part "B"
+	I can see no oth -- er way and no bet -- ter plan,
+	end it all and let her go to some bet -- ter man; but
+
+	% part "A"
+	I'm on -- ly hu __ man, cow -- ard at best, __ I'm more than cer __ tain she'd fol -- low me west, __
+	I got a wo -- man, cra -- zy for me, __
 }
 {% endif %}

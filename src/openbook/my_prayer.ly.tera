@@ -25,7 +25,7 @@ remark = "The Platters in their number one hit (1956)"
 [versions.Fake]
 doChords = true
 doVoice = true
-doLyrics = false
+doLyrics = true
 doLyricsmore = false
 doLyricsmoremore = false
 doChordBars = false
@@ -42,12 +42,12 @@ doOwn = false
 	- put in the chords (fake book).
 	- put in the tune (fake book).
 	- added youtube performances.
+	- put in the lyrics (fake book).
 	TODO:
 	- check the chords (fake book).
 	- check the tune (fake book).
 	- hear the tune to check that it is right and adjust the tempo.
 	- bar 18: the book prints no flat on the third and fifth notes (strictly d natural) but the Eb7 chord implies d flat, which was typed.
-	- add the lyrics.
 {% endif %}
 {% if part == "ChordsFake" %}\chordmode {
 	\startChords
@@ -126,5 +126,25 @@ doOwn = false
 			f1~ | f2. r4 |
 		}
 	}
+}
+{% endif %}
+{% if part == "LyricsFake" %}\lyricmode {
+
+	% part "A"
+	My Prayer __ is to lin -- ger with you __ _ at the end of the day __ in a dream that's di -- vine. __ My
+
+	% part "A"
+	Prayer __ is a rap -- ture in blue __ with the world far a -- way __ and your lips close to mine. __ To --
+
+	% part "B"
+	night __ while our hearts are a -- glow __ oh! tell me the words __ that I'm long -- ing to know. __ My
+
+	% part "A"
+	Prayer __ and the an -- swer you give, __ may they still be the same __ for as long as we live: __
+	That you'll al -- ways be there __ _ at the end of My
+
+	% part "Volta"
+	Prayer. __ My
+	Prayer. __
 }
 {% endif %}

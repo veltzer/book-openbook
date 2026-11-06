@@ -27,7 +27,7 @@ remark = "Jim Reeves (1964)"
 [versions.Fake]
 doChords = true
 doVoice = true
-doLyrics = false
+doLyrics = true
 doLyricsmore = false
 doLyricsmoremore = false
 doChordBars = false
@@ -44,11 +44,12 @@ doOwn = false
 	- put in the chords (fake book).
 	- put in the tune (fake book).
 	- added youtube performances.
+	- put in the lyrics (fake book).
 	TODO:
 	- check the chords (fake book).
 	- check the tune (fake book).
 	- hear the tune to check that it is right and adjust the tempo.
-	- add the lyrics.
+	- in bar 27 the book misprints "Rose - es"; typed as "Ros - es" like bar 3.
 {% endif %}
 {% if part == "ChordsFake" %}\chordmode {
 	\startChords
@@ -122,5 +123,24 @@ doOwn = false
 			f1~ | f4 r r2 |
 		}
 	}
+}
+{% endif %}
+{% if part == "LyricsFake" %}\lyricmode {
+
+	% part "A"
+	Moon -- light And Ros -- es __ brings won -- der -- ful mem -- ries of you. __
+
+	% part "B"
+	My heart re -- pos -- es __ in beau -- ti -- ful thoughts so true. __
+
+	% part "A"
+	June -- light dis -- clos -- es __ loves old -- en dreams spark -- ling a -- new. __
+
+	% part "C"
+	Moon -- light And Ros -- es __ bring mem -- ries __ of
+
+	% part "Volta"
+	you. __
+	you. __
 }
 {% endif %}

@@ -25,8 +25,8 @@ remark = "Ella Fitzgerald"
 [versions.Fake]
 doChords = true
 doVoice = true
-doLyrics = false
-doLyricsmore = false
+doLyrics = true
+doLyricsmore = true
 doLyricsmoremore = false
 doChordBars = false
 doGuitar = false
@@ -42,8 +42,8 @@ doOwn = false
 	- put in the chords (fake book).
 	- put in the tune (fake book).
 	- added youtube performances.
+	- put in the lyrics (fake book).
 	TODO:
-	- add the lyrics.
 	- check the chords (fake book).
 	- check the tune (fake book).
 	- hear the tune to check that it is right and adjust the tempo.
@@ -120,5 +120,50 @@ doOwn = false
 			f1~ | f2. r4 |
 		}
 	}
+}
+{% endif %}
+{% if part == "LyricsFake" %}\lyricmode {
+
+	% part "A"
+	We'll have Man -- hat -- tan the Bronx and Stat -- en Is -- land too; __ it's love -- ly
+	go -- ing through __ the Zoo. __
+
+	% part "B"
+	It's ver -- y fan -- cy on old De -- lan -- cey Street, you know; __ the sub -- way
+	charms us so, __ when balm -- y breez -- es blow to and fro,
+
+	% part "A"
+	and tell me what street com -- pares with Mott Street in Ju -- ly, __ sweet push carts
+	gent -- ly glid __ ing by. __ The great big
+
+	% part "C"
+	cit -- y's a wond -- 'rous toy just made for a girl and boy.
+	We'll turn Man -- hat -- tan in -- to an isle of
+
+	% part "Volta"
+	joy. __
+}
+{% endif %}
+{% if part == "LyricsmoreFake" %}\lyricmode {
+
+	% part "A"
+	We'll go to Green -- wich where mod -- ern men itch to be free; __ and Bowl -- ing
+	Green you'll see __ with me. __
+
+	% part "B"
+	We'll bathe at Bright -- on, the fish you'll fright -- en when you're in __ your bath -- ing
+	suit so thin __ will make the shell -- fish grin fin to fin.
+
+	% part "A"
+	I'd like to take a sail on Ja -- mai -- ca Bay with you; __ and fair Can --
+	ar -- sie's Lakes __ we'll view. __ The ci -- ty's
+
+	% part "C"
+	bus -- tle can -- not des -- troy the dreams of a girl and boy.
+	We'll turn Man -- hat -- tan in -- to an isle of
+
+	% part "Volta"
+	_
+	joy. __
 }
 {% endif %}

@@ -25,7 +25,7 @@ remark = "Harry James and his Orchestra with Frank Sinatra (1939)"
 [versions.Fake]
 doChords = true
 doVoice = true
-doLyrics = false
+doLyrics = true
 doLyricsmore = false
 doLyricsmoremore = false
 doChordBars = false
@@ -42,13 +42,13 @@ doOwn = false
 	- put in the chords (fake book).
 	- put in the tune (fake book).
 	- added youtube performances.
+	- put in the lyrics (fake book).
 	TODO:
 	- check the chords (fake book).
 	- check the tune (fake book).
 	- hear the tune to check that it is right and adjust the tempo.
 	- bar 22: the Fm is printed between beats 3 and 4 and the Dm7 slightly before bar 23 in the fake book; typed on beat 3 and on bar 23.
 	- the fake book prints no chord in bar 20; it is left empty.
-	- add the lyrics.
 {% endif %}
 {% if part == "ChordsFake" %}\chordmode {
 	\startChords
@@ -123,5 +123,28 @@ doOwn = false
 			c1~ | c1~ | c1 |
 		}
 	}
+}
+{% endif %}
+{% if part == "LyricsFake" %}\lyricmode {
+
+	% part "A"
+	On __ A Lit -- tle Street In Sin -- ga -- pore __ we'd
+	meet __ be -- side a lo -- tus cov -- ered door. __ A
+
+	% part "A"
+	veil __ of moon -- light on her lone -- ly face, __ how
+	pale __ the hands that held me in em -- brace. __ My
+
+	% part "B"
+	sails to -- night are filled with per -- fume of Shal -- i -- mar __ with
+	tem -- ple bells to guide me to the shore. __ And then I'll hold her in my
+
+	% part "A"
+	arms __ and love the way I loved be -- fore, __
+	On __ A Lit -- tle Street In Sin -- ga --
+
+	% part "Volta"
+	pore. __
+	pore. __
 }
 {% endif %}

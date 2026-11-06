@@ -25,8 +25,8 @@ remark = "Frank Sinatra (1953)"
 [versions.Fake]
 doChords = true
 doVoice = true
-doLyrics = false
-doLyricsmore = false
+doLyrics = true
+doLyricsmore = true
 doLyricsmoremore = false
 doChordBars = false
 doGuitar = false
@@ -42,11 +42,11 @@ doOwn = false
 	- put in the chords (fake book).
 	- put in the tune (fake book).
 	- added youtube performances.
+	- put in the lyrics (fake book).
 	TODO:
 	- check the chords (fake book).
 	- check the tune (fake book).
 	- hear the tune to check that it is right and adjust the tempo.
-	- add the lyrics.
 {% endif %}
 {% if part == "ChordsFake" %}\chordmode {
 	\startChords
@@ -126,5 +126,40 @@ doOwn = false
 	% part "End"
 	d1~ | d2 \tuplet 3/2 { bes4 d f } | ees1~ | ees2 \tuplet 3/2 { bes4 c bes } |
 	d1~ | d2 \tuplet 3/2 { bes4 d f } | ees1~ | ees1 |
+}
+{% endif %}
+{% if part == "LyricsFake" %}\lyricmode {
+	South Of The
+
+	% part "A"
+	Bor -- der __ down Mex -- i -- co way, __ that's where I fell in love when
+	stars a -- bove came out to play. __ And now as I wan -- der __ my thoughts ev -- er stray __
+	South Of The Bor -- der __ down Mex -- i -- co
+	way. __ She was a
+	_ _ _
+
+	% part "B"
+	sighed as she whis -- pered 'ma -- ña -- na,' nev -- er dream -- ing that we were part -- ing. And I lied as I whis -- pered 'ma --
+	ña -- na,' __ for our to -- mor -- row nev -- er came. South Of The
+
+	% part "A"
+	Bor -- der __ I rode back one day. __
+	There in a veil of white by can -- dle -- light she knelt to pray. __ The mis -- sion bells told me __
+	that I must -- n't stay __ South Of The Bor -- der __ down Mex -- i -- co way. __ Ay! Ay! Ay!
+
+	% part "End"
+	Ay! __ Ay! Ay! Ay! Ay! __ Ay! Ay! Ay!
+	Ay! __ Ay! Ay! Ay! Ay! __
+}
+{% endif %}
+{% if part == "LyricsmoreFake" %}\lyricmode {
+	_ _ _
+
+	% part "A"
+	pic -- ture __ in old Span -- ish lace, __ just for a ten -- der while I
+	kissed the smile up -- on her face. __ For it was fi -- es -- ta __ and we were so gay __
+	South Of The Bor -- der __ down Mex -- i -- co
+	_ _ _ _
+	way. __ Then she
 }
 {% endif %}

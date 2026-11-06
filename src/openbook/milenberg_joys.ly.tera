@@ -26,7 +26,7 @@ remark = "Jelly Roll Morton"
 [versions.Fake]
 doChords = true
 doVoice = true
-doLyrics = false
+doLyrics = true
 doLyricsmore = false
 doLyricsmoremore = false
 doChordBars = false
@@ -43,11 +43,12 @@ doOwn = false
 	- put in the chords (fake book).
 	- put in the tune (fake book).
 	- added youtube performances.
+	- put in the lyrics (fake book).
 	TODO:
-	- add the lyrics.
 	- check the chords (fake book).
 	- check the tune (fake book).
 	- hear the tune to check that it is right and adjust the tempo.
+	- the spoken asides printed in the book (Stomp it!, Turn it on., Won't be long now.) are not typed, they are not sung on notes.
 {% endif %}
 {% if part == "ChordsFake" %}\chordmode {
 	\startChords
@@ -102,5 +103,25 @@ doOwn = false
 	bes8 bes4 bes8~ bes2 | r4 bes4 c8 bes c4 | bes1~ | bes4 r4 r2 |
 	des8 des4 des8~ des4 bes4 | des8 des4 bes8~ bes2 | f8 f4 f8~ f4 cis8 d | g8 g4 g8~ g2 |
 	g8 g4 g8~ g2 | r8 cis,8 d g f g f4 | bes1~ | bes4 r4 r2 |
+}
+{% endif %}
+{% if part == "LyricsFake" %}\lyricmode {
+
+	% part "A"
+	Rock my soul __ with the Mil -- en -- berg Joys. __
+	Rock my soul __ with the Mil -- en -- berg Joys. __ _ _
+
+	% part "B"
+	Play 'em dad -- dy, don't re -- fuse; __ sep -- a -- rate me from the wea -- ry blues. __
+	Hey! Hey! Hey!
+
+	% part "A"
+	Sweet boy syn -- co -- pate your ma -- ma all night long __ with that Dix -- ie -- land
+	strain. __
+
+	% part "C"
+	Play it down, __ then do it a -- gain. __
+	Ev -- 'ry -- time __ I hear that tune __ good luck says, __ 'I'll be with you soon.' __
+	That's just why __ I've got the Mil -- en -- berg Joys. __
 }
 {% endif %}

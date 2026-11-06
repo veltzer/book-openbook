@@ -26,8 +26,8 @@ remark = "Connie Francis (1961)"
 [versions.Fake]
 doChords = true
 doVoice = true
-doLyrics = false
-doLyricsmore = false
+doLyrics = true
+doLyricsmore = true
 doLyricsmoremore = false
 doChordBars = false
 doGuitar = false
@@ -43,8 +43,8 @@ doOwn = false
 	- put in the chords (fake book).
 	- put in the tune (fake book).
 	- added youtube performances.
+	- put in the lyrics (fake book).
 	TODO:
-	- add the lyrics.
 	- check the chords (fake book).
 	- check the tune (fake book).
 	- hear the tune to check that it is right and adjust the tempo.
@@ -94,5 +94,22 @@ doOwn = false
 			g4 f2~ | f4 r r |
 		}
 	}
+}
+{% endif %}
+{% if part == "LyricsFake" %}\lyricmode {
+	% part "A"
+	We strolled the lane, To -- geth -- er __ Laughed at the rain, To -- geth -- er __
+	Sang love's re -- frain, To -- geth -- er. __ And we'd both pre -- tend it would nev -- er end.
+	One day we cried To -- geth -- er, __ Cast love a -- side To -- geth -- er. __
+	You're gone from me, But in my mem -- o -- ry We al -- ways will be To --
+	geth -- er.
+	geth -- er. __
+}
+{% endif %}
+{% if part == "LyricsmoreFake" %}\lyricmode {
+	% part "A"
+	_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _
+	We knew long a -- go that our love would grow.
+	Through storm and sun To -- geth -- er, __ Our hearts as one To -- geth -- er. __
 }
 {% endif %}

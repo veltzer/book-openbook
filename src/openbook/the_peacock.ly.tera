@@ -26,7 +26,7 @@ remark = "Franco Rivero plays Pavo real"
 [versions.Fake]
 doChords = true
 doVoice = true
-doLyrics = false
+doLyrics = true
 doLyricsmore = false
 doLyricsmoremore = false
 doChordBars = false
@@ -43,8 +43,8 @@ doOwn = false
 	- put in the chords (fake book).
 	- put in the tune (fake book).
 	- added youtube performances.
+	- put in the lyrics (fake book).
 	TODO:
-	- add the lyrics.
 	- check the chords (fake book).
 	- check the tune (fake book).
 	- hear the tune to check that it is right and adjust the tempo.
@@ -118,5 +118,28 @@ doOwn = false
 	% part "C"
 	g4 r d e | fis2 g4 a | b2 c4 d | dis2 e~ | e2 e4 fis | a2 g4 fis | e2 fis4 g | fis2 e4 d |
 	fis2. e4 | d2 c4 e, | b'2 b | g'1~ | g1~ | g1~ | g4 r r2 | r1 | r1 |
+}
+{% endif %}
+{% if part == "LyricsFake" %}\lyricmode {
+	Once
+
+	% part "A"
+	in a gar -- den fash -- ioned all of dreams __ a pea -- cock sad -- ly clam -- ored, loud and long, __ and
+	wide -- ly spread its rain -- bow -- feath -- ered train, __ and poured it's heart out to its love in song: __ Pea -- cock
+
+	% part "B"
+	mine, __ of my dream -- ing, __ your ca -- ress and your kiss are but seem -- ing. __ I am griev -- ing __
+	at your leav -- ing __ for I love you __ past be -- liev -- ing. __ Pea -- cock mine, __
+
+	% part "C"
+	should I doubt you? __ Life would be but one long night with -- out you. __ Though il -- lu -- sion it
+	seems, I will love you in dreams for -- ev -- er, sweet pea -- \set associatedVoice = "2" cock \set associatedVoice = "Voice" mine. _ _ _ _ _ _
+
+	% part "Instr"
+	_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ Pea -- cock mine, __ I a -- dore you, __
+
+	% part "C"
+	for your love, for your kiss I im -- plore you. __ Should you fly far a -- way I would die in a
+	day of long -- ing, sweet pea -- cock mine. __
 }
 {% endif %}

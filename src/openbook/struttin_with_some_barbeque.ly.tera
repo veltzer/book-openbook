@@ -26,7 +26,7 @@ remark = "Louis Armstrong on The Ed Sullivan Show"
 [versions.Fake]
 doChords = true
 doVoice = true
-doLyrics = false
+doLyrics = true
 doLyricsmore = false
 doLyricsmoremore = false
 doChordBars = false
@@ -43,8 +43,8 @@ doOwn = false
 	- put in the chords (fake book).
 	- put in the tune (fake book).
 	- added youtube performances.
+	- put in the lyrics (fake book).
 	TODO:
-	- add the lyrics.
 	- check the chords (fake book).
 	- check the tune (fake book).
 	- hear the tune to check that it is right and adjust the tempo.
@@ -117,5 +117,23 @@ doOwn = false
 			c1~ | c2.\fermata r4 |
 		}
 	}
+}
+{% endif %}
+{% if part == "LyricsFake" %}\lyricmode {
+	Strut -- tin' With Some
+
+	% part "A"
+	Bar -- be -- cue, __ swing -- in' with the band; like the hap -- py
+	peo -- ple do __ way down in dix -- ie land. Hear that ol' trom -- bone __
+	and the trum -- pet ad __ _ lib. Love __ to hear the lick while I do my
+	pick -- in', __ pick -- in' on a juic -- y rib. 'Cause I'm Strut -- tin' With Some
+
+	% part "A"
+	Bar -- be -- cue, __ feel -- in' might -- y grand; pass an -- oth -- er
+	help -- in', please, __ of that good ol' __ dix -- ie land. __ And mis -- ter
+	wait -- er, __ if you please, __ an -- oth -- er rib or two; __ and I'll go
+	strut, strut, stut -- tin', Strut -- tin' With Some Bar -- be -- cue __
+	Strut -- tin' With Some
+	_
 }
 {% endif %}

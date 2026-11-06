@@ -26,7 +26,7 @@ remark = "Django Reinhardt, Paris (1937)"
 [versions.Fake]
 doChords = true
 doVoice = true
-doLyrics = false
+doLyrics = true
 doLyricsmore = false
 doLyricsmoremore = false
 doChordBars = false
@@ -43,8 +43,8 @@ doOwn = false
 	- put in the chords (fake book).
 	- put in the tune (fake book).
 	- added youtube performances.
+	- put in the lyrics (fake book).
 	TODO:
-	- add the lyrics.
 	- check the chords (fake book).
 	- check the tune (fake book).
 	- hear the tune to check that it is right and adjust the tempo.
@@ -101,5 +101,21 @@ doOwn = false
 
 	% part "C"
 	ees2. d4 | ees2. d4 | d1~ | d2. a4 | g2. a4 | f2. c'4 | bes1~ | bes2. r4 |
+}
+{% endif %}
+{% if part == "LyricsFake" %}\lyricmode {
+	I'm The
+
+	% part "A"
+	Sheik Of Ar -- a -- by, __ your love be -- longs to me. __ At
+
+	% part "B"
+	night when you're a -- sleep __ in -- to your tent I'll creep. __ The
+
+	% part "A"
+	stars that shine a -- bove, __ will light our way to love. __ You'll
+
+	% part "C"
+	rule this land with me; __ The Sheik Of Ar -- a -- by. __
 }
 {% endif %}

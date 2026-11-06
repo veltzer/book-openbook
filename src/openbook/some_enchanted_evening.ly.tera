@@ -26,8 +26,8 @@ remark = "Frank Sinatra"
 [versions.Fake]
 doChords = true
 doVoice = true
-doLyrics = false
-doLyricsmore = false
+doLyrics = true
+doLyricsmore = true
 doLyricsmoremore = false
 doChordBars = false
 doGuitar = false
@@ -43,8 +43,8 @@ doOwn = false
 	- put in the chords (fake book).
 	- put in the tune (fake book).
 	- added youtube performances.
+	- put in the lyrics (fake book).
 	TODO:
-	- add the lyrics.
 	- check the chords (fake book).
 	- check the tune (fake book).
 	- hear the tune to check that it is right and adjust the tempo.
@@ -126,5 +126,37 @@ doOwn = false
 	% part "C"
 	f,4 f8 f e4 e | d8 d d d c2 | f4 f8 f e4 e | d2 f |
 	a2 c | e2. r4 |
+}
+{% endif %}
+{% if part == "LyricsFake" %}\lyricmode {
+
+	% part "A"
+	Some En -- chant -- ed Eve -- ning __ you may see a stran -- ger, __ you may see a stran -- ger, __ a -- cross a crowd -- ed room.
+	And some -- how you know, __ you know e -- ven then __ that some -- where you'll see her a -- gain and a --
+
+	% part "Volta"
+	gain. __
+	_
+
+	% part "B"
+	Who can ex -- plain it? Who can tell you why? Fools give you rea -- sons, wise men nev -- er try. __
+
+	% part "A"
+	Some En -- chant -- ed Eve -- ning __ when you find your true love, __ when you feel her call you __ a -- cross a crowd -- ed room.
+	Then fly to her side __ and make her your own, __ or all through your life you may dream all a -- lone. __
+
+	% part "C"
+	Once you have found her, nev -- er let her go. Once you have found her, nev -- er let her go!
+}
+{% endif %}
+{% if part == "LyricsmoreFake" %}\lyricmode {
+
+	% part "A"
+	Some En -- chant -- ed Eve -- ning __ some -- one may be laugh -- ing, __ you may hear her laugh -- ing __ a -- cross a crowd -- ed room.
+	And night af -- ter night, __ as strange as it seems __ the sound of her laugh -- ter will sing in your
+
+	% part "Volta"
+	_
+	dreams. __
 }
 {% endif %}

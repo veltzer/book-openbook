@@ -26,7 +26,7 @@ remark = "Ella Fitzgerald from the Rodgers and Hart Song Book (1956)"
 [versions.Fake]
 doChords = true
 doVoice = true
-doLyrics = false
+doLyrics = true
 doLyricsmore = false
 doLyricsmoremore = false
 doChordBars = false
@@ -43,8 +43,8 @@ doOwn = false
 	- put in the chords (fake book).
 	- put in the tune (fake book).
 	- added youtube performances.
+	- put in the lyrics (fake book).
 	TODO:
-	- add the lyrics.
 	- check the chords (fake book).
 	- check the tune (fake book).
 	- hear the tune to check that it is right and adjust the tempo.
@@ -111,5 +111,23 @@ doOwn = false
 	% part "C"
 	ees2. | c2. | d2. | bes2. |
 	c4 c4. aes8 | g2 f4 | ees2.~ | ees2 r4 |
+}
+{% endif %}
+{% if part == "LyricsFake" %}\lyricmode {
+
+	% part "A"
+	Wait Till You See Her, see how she looks, Wait till you hear her laugh. __
+
+	% part "A"
+	Paint -- ers of paint -- ings, writ -- ers of books, Nev -- er could tell the half. __
+
+	% part "B"
+	Wait till you feel the warmth of her glance, Pen -- sive and sweet and wise. __
+
+	% part "A"
+	All of it love -- ly, all of it thrill -- ing; I'll nev -- er be will -- ing to free her,
+
+	% part "C"
+	when you see her, you won't be -- lieve your eyes. __
 }
 {% endif %}

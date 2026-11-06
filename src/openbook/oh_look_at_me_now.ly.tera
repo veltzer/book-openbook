@@ -26,7 +26,7 @@ remark = "Frank Sinatra"
 [versions.Fake]
 doChords = true
 doVoice = true
-doLyrics = false
+doLyrics = true
 doLyricsmore = false
 doLyricsmoremore = false
 doChordBars = false
@@ -43,8 +43,8 @@ doOwn = false
 	- put in the chords (fake book).
 	- put in the tune (fake book).
 	- added youtube performances.
+	- put in the lyrics (fake book).
 	TODO:
-	- add the lyrics.
 	- check the chords (fake book).
 	- check the tune (fake book).
 	- hear the tune to check that it is right and adjust the tempo.
@@ -126,5 +126,26 @@ doOwn = false
 			ees1~ | ees4 r r2 |
 		}
 	}
+}
+{% endif %}
+{% if part == "LyricsFake" %}\lyricmode {
+	For
+
+	% part "A"
+	I'm not the guy __ who cared a -- bout love, __ and I'm not the guy __ who cared a -- bout for -- tunes and such, __ _
+	nev -- er cared much, __ but, look at me now. __
+
+	% part "A"
+	I nev -- er knew __ the tech -- nique of kiss -- in', I nev -- er knew __ the thrill I could get __ from your touch, __ _
+	nev -- er knew much. __ Oh! Look At Me Now. __
+
+	% part "B"
+	I'm a new man, bet -- ter than __ Cas -- a -- no -- va at his best. __
+	With a new heart, brand new start, __ I'm so proud I'm bust -- in' my vest. __ So,
+
+	% part "A"
+	I am the guy __ who turned out a lov -- er, so, I'm the guy, __ who laughed at those blue __ dia -- mond rings, __ _
+	one of those things. __ Oh! Look At Me Now. __
+	Now. __
 }
 {% endif %}

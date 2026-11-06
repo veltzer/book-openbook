@@ -27,7 +27,7 @@ remark = "The scene from the film My Fair Lady (1964)"
 [versions.Fake]
 doChords = true
 doVoice = true
-doLyrics = false
+doLyrics = true
 doLyricsmore = false
 doLyricsmoremore = false
 doChordBars = false
@@ -44,8 +44,8 @@ doOwn = false
 	- put in the chords (fake book).
 	- put in the tune (fake book).
 	- added youtube performances.
+	- put in the lyrics (fake book).
 	TODO:
-	- add the lyrics.
 	- check the chords (fake book).
 	- check the tune (fake book).
 	- hear the tune to check that it is right and adjust the tempo.
@@ -96,5 +96,21 @@ doOwn = false
 	% part "A"
 	c'4. b8 c4 a | bes4. a8 bes4 e, | g8 f4.~ f8 r r4 | r2 r4 c4 |
 	c'4. b8 c4 a | c4. cis8 d4 e | f1~ | f2.
+}
+{% endif %}
+{% if part == "LyricsFake" %}\lyricmode {
+	The
+
+	% part "A"
+	Rain In Spain stays main -- ly in the plain! __ _ The
+	Rain In Spain stays main -- ly in the plain! __ _
+
+	% part "B"
+	Now once a -- gain, where does it rain? __ On the plain! On the plain! And
+	where's that blast -- ed plain? __ In Spain! In Spain! __ The
+
+	% part "A"
+	Rain In Spain stays main -- ly in the plain! __ _ The
+	Rain In Spain stays main -- ly in the plain! __ _
 }
 {% endif %}

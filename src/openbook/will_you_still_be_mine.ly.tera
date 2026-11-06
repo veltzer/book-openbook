@@ -25,8 +25,8 @@ remark = "Miles Davis (The Musings of Miles, 1955)"
 [versions.Fake]
 doChords = true
 doVoice = true
-doLyrics = false
-doLyricsmore = false
+doLyrics = true
+doLyricsmore = true
 doLyricsmoremore = false
 doChordBars = false
 doGuitar = false
@@ -42,8 +42,8 @@ doOwn = false
 	- put in the chords (fake book).
 	- put in the tune (fake book).
 	- added youtube performances.
+	- put in the lyrics (fake book).
 	TODO:
-	- add the lyrics.
 	- check the chords (fake book).
 	- check the tune (fake book).
 	- hear the tune to check that it is right and adjust the tempo.
@@ -98,5 +98,29 @@ doOwn = false
 
 	% part "Coda"
 	a1~ | a2 g4 bes | d1 | d | bes1~ | bes2. r4 |
+}
+{% endif %}
+{% if part == "LyricsFake" %}\lyricmode {
+
+	% part "A"
+	When lov -- ers make no ren -- dez -- vous __ to stroll a -- long Fifth Av -- e -- nue. __
+	When this fa -- mil -- iar world is thru, __ Will You Still Be Mine? __
+
+	% part "A"
+	When cabs don't drive a -- round the park, __ no win -- dows light the sum -- mer dark. __
+	When love has lost its sec -- ret spark, __ Will You Still Be Mine? __ When moon -- light
+
+	% part "B"
+	on the Hud -- son's not ro -- man -- cy __ and spring no lon -- ger turns a young man's fan -- cy.
+
+	% part "Coda"
+	arms, __ Will You Still Be Mine? __
+}
+{% endif %}
+{% if part == "LyricsmoreFake" %}\lyricmode {
+
+	% part "A"
+	When glam -- our girls have lost their charms, __ when si -- rens just mean false a -- larms. __
+	When lov -- ers heed no call to
 }
 {% endif %}

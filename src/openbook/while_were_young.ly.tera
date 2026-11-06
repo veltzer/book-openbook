@@ -26,8 +26,8 @@ remark = "Meredith d'Ambrosio"
 [versions.Fake]
 doChords = true
 doVoice = true
-doLyrics = false
-doLyricsmore = false
+doLyrics = true
+doLyricsmore = true
 doLyricsmoremore = false
 doChordBars = false
 doGuitar = false
@@ -43,8 +43,8 @@ doOwn = false
 	- put in the chords (fake book).
 	- put in the tune (fake book).
 	- added youtube performances.
+	- put in the lyrics (fake book).
 	TODO:
-	- add the lyrics.
 	- check the chords (fake book).
 	- check the tune (fake book).
 	- hear the tune to check that it is right and adjust the tempo.
@@ -91,5 +91,27 @@ doOwn = false
 	% part "Coda"
 	g2. | ees'2 d4 | des2.~ | des2. | ees,2. | c'2 ees,4 | f2.~ | f2 r4 |
 	ees2 d4 | c2 ees4 | c'2. | c,2 d4 | ees2.~ | ees2.~ | ees2.~ | ees4 r r |
+}
+{% endif %}
+{% if part == "LyricsFake" %}\lyricmode {
+
+	% part "A"
+	Songs were made to sing While We're Young. __
+	Ev -- 'ry day is spring While We're Young. __
+
+	% part "B"
+	None can re -- fuse __ time flies so fast, __
+	too dear to lose __ and too sweet to last. __
+
+	% part "Coda"
+	So blue the skies, __ all sweet sur -- prise __
+	shines be -- fore our eyes While We're Young. __
+}
+{% endif %}
+{% if part == "LyricsmoreFake" %}\lyricmode {
+
+	% part "A"
+	Though it may be just for to -- day, __
+	Share our love we must, while we may. __
 }
 {% endif %}

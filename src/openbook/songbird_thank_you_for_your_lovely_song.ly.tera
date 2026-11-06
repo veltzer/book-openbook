@@ -26,7 +26,7 @@ remark = "Marlene VerPlanck"
 [versions.Fake]
 doChords = true
 doVoice = true
-doLyrics = false
+doLyrics = true
 doLyricsmore = false
 doLyricsmoremore = false
 doChordBars = false
@@ -43,13 +43,13 @@ doOwn = false
 	- put in the chords (fake book).
 	- put in the tune (fake book).
 	- added youtube performances.
+	- put in the lyrics (fake book).
 	TODO:
 	- check the chords (fake book).
 	- check the tune (fake book).
 	- hear the tune to check that it is right and adjust the tempo.
 	- check the placement of the C7b9 and C9 chords in bar 19 (the book prints C9 between the third and fourth beat).
 	- the last note of bars 7, 15 and 17 has no accidental in the book; typed as g flat (carried from earlier in the bar, fits the Ab7/D7 harmony) - check.
-	- add the lyrics.
 {% endif %}
 {% if part == "ChordsFake" %}\chordmode {
 	\startChords
@@ -101,5 +101,23 @@ doOwn = false
 	% part "A"
 	f4 g bes,8 bes' aes g | aes f des2 ees4 | c8 ees g bes aes g ees f | g2. d4 |
 	c8 ees g bes aes g f ees | c'4. aes8 ees4. f8 | g bes d, ees c' ees ees,8. f16 | ees2. r4 |
+}
+{% endif %}
+{% if part == "LyricsFake" %}\lyricmode {
+
+	% part "A"
+	Song -- bird, Thank You For Your Love -- ly Song! You've light -- ed all the cor -- ners of the day.
+	But tell me how a ti -- ny Song -- bird learned so much of life and love and all the games we play?
+
+	% part "A"
+	Song -- bird, thank you for your hymn to joy! I lis -- tened and you changed my life for me.
+	For in your song I see a world more beau -- ti -- ful, more gen -- tle -- ness in ev -- 'ry face I see.
+
+	% part "B"
+	Oh, who can ev -- er count the love -- ly songs you've sung or know a -- bout the man -- y old hearts you have made young?
+
+	% part "A"
+	Song -- bird, Thank You For Your Love -- ly Song, and if you ev -- er have to fly a -- way,
+	I know that I'll re -- mem -- ber ev -- 'ry song you sang, as well as I re -- mem -- ber them to -- day.
 }
 {% endif %}

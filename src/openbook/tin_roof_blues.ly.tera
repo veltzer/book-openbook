@@ -26,8 +26,8 @@ remark = "Louis Armstrong"
 [versions.Fake]
 doChords = true
 doVoice = true
-doLyrics = false
-doLyricsmore = false
+doLyrics = true
+doLyricsmore = true
 doLyricsmoremore = false
 doChordBars = false
 doGuitar = false
@@ -43,8 +43,8 @@ doOwn = false
 	- put in the chords (fake book).
 	- put in the tune (fake book).
 	- added youtube performances.
+	- put in the lyrics (fake book).
 	TODO:
-	- add the lyrics (two verses under the first twelve bars).
 	- check the chords (fake book).
 	- check the tune (fake book).
 	- hear the tune to check that it is right and adjust the tempo.
@@ -107,5 +107,33 @@ doOwn = false
 		ees'8. d16 des8. c16 ees8. d16 des8. c16 | ees4 aes,8 c~ c2 | bes8. a16 aes8. g16 bes8. a16 aes8. g16 | e'4 g,8 c~ c2 |
 		ees1~ | ees8 fis, fis g bes4 g | ees1~ | ees4 r r r |
 	}
+}
+{% endif %}
+{% if part == "LyricsFake" %}\lyricmode {
+	I have
+
+	% part "A"
+	seen __ the bright lights burn -- ing up and down old Broad -- way.
+	Seen 'em in gay Ha -- van -- a, Burm -- ing -- ham, Al -- a -- bam -- a, and say, __
+	they just can't com -- pare with __ my home -- town New Or -- leans. __ 'Cause
+
+	% part "B"
+	there you'll find the old Tin Roof Ca -- fé, __ where they play the blues 'til break of day. __
+	Fas -- cin -- at -- in' ba -- bies hang -- in' 'round, __ danc -- in' to the mean -- est band in town. __
+	Lawd, __ how they can play the blues, __ and
+
+	% part "C"
+	when that lead -- er man __ _ starts __ _ play -- in' low, __ folks get up and start __ _ to __ _ walk it slow. __
+	Do a lot of move -- ments __ _ _ hard to beat. __ 'Til that old floor -- man __ _ says __ _ 'Move your feet,' __
+	Lawd, __ I've got those Tin Roof Blues. __
+}
+{% endif %}
+{% if part == "LyricsmoreFake" %}\lyricmode {
+	Ev -- 'ry
+
+	% part "A"
+	day __ my ba -- by writes to me and says Dad -- dy, please,
+	don't keep your mam -- ma griev -- in'. Tell me you'll soon be leav -- in', and please __
+	bring your danc -- in' shoes and __ come on back home to me. __
 }
 {% endif %}

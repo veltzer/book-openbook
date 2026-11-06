@@ -26,7 +26,7 @@ remark = "Bob Gibson live at Amazingrace, Evanston (1973)"
 [versions.Fake]
 doChords = true
 doVoice = true
-doLyrics = false
+doLyrics = true
 doLyricsmore = false
 doLyricsmoremore = false
 doChordBars = false
@@ -43,13 +43,15 @@ doOwn = false
 	- put in the chords (fake book).
 	- put in the tune (fake book).
 	- added youtube performances.
+	- put in the lyrics (fake book).
 	TODO:
 	- check the chords (fake book).
 	- check the tune (fake book).
 	- hear the tune to check that it is right and adjust the tempo.
 	- the book labels the endings '1-5' and '6.' for its nine verses; here they are plain first and second endings.
 	- the last bar has only a dotted half in the book; a quarter rest was added to fill it.
-	- add the lyrics (nine verses).
+	- the book prints verses 2-9 as plain text (additional lyrics) under the music, not under the notes; only verse 1 is typed.
+	- bar 6: the book prints 'Lord, she laid' over two notes ('Lord,' sits under the eighth rest); typed 'Lord, she' on the first note, check it.
 {% endif %}
 {% if part == "ChordsFake" %}\chordmode {
 	\startChords
@@ -99,5 +101,18 @@ doOwn = false
 			d4 c8. d16 c8 d4 f8~ | f1~ | f2. r4 |
 		}
 	}
+}
+{% endif %}
+{% if part == "LyricsFake" %}\lyricmode {
+	Now
+
+	% part "A"
+	Frank -- ie, she was a fine look -- in' wo -- man, had a man named John -- nie and she
+	loved him "Lord, she" laid down a hun -- dred for a suit of clothes. __ _ Don't you see them
+	walk -- in' arm in arm down a -- long Can -- al __ Street, Frank -- ie loved John -- nie,
+
+	% part "Volta"
+	Lord, ev -- 'ry -- bod -- y knows. __ Now
+	Lord, ev -- 'ry -- bod -- y knows, __ hey, hey. Frank -- ie loved John -- nie, Lord, ev -- 'ry -- bod -- y knows. __
 }
 {% endif %}

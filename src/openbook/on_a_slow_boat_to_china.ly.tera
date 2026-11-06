@@ -26,7 +26,7 @@ remark = "Sonny Rollins from The Complete Prestige Recordings (1951)"
 [versions.Fake]
 doChords = true
 doVoice = true
-doLyrics = false
+doLyrics = true
 doLyricsmore = false
 doLyricsmoremore = false
 doChordBars = false
@@ -43,8 +43,8 @@ doOwn = false
 	- put in the chords (fake book).
 	- put in the tune (fake book).
 	- added youtube performances.
+	- put in the lyrics (fake book).
 	TODO:
-	- add the lyrics.
 	- check the chords (fake book).
 	- check the tune (fake book).
 	- hear the tune to check that it is right and adjust the tempo.
@@ -102,5 +102,24 @@ doOwn = false
 	% part "C"
 	c2 d4 c | d8 c4.~ c4 a8. bes16 | d2 ees4 d | ees8 d4.~ d2 |
 	c2 fis,4 g | d'2 d | bes1~ | bes1 |
+}
+{% endif %}
+{% if part == "LyricsFake" %}\lyricmode {
+
+	% part "A"
+	I'd love to get you __ On A Slow Boat To Chi -- na, __
+	all to my -- self, __ a -- lone. __
+
+	% part "B"
+	Get you and keep you __ in my arms ev -- er -- more, __
+	leave all your lov -- ers __ weep -- ing on the far -- a -- way shore. __
+
+	% part "A"
+	Out on the brin -- y __ with a moon big and shin -- y, __
+	melt -- ing your heart __ of stone, __
+
+	% part "C"
+	I'd love to get you __ On A Slow Boat To Chi -- na, __
+	all to my -- self, a -- lone. __
 }
 {% endif %}

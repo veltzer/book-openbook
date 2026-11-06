@@ -26,7 +26,7 @@ remark = "Bobby Troup, the composer"
 [versions.Fake]
 doChords = true
 doVoice = true
-doLyrics = false
+doLyrics = true
 doLyricsmore = false
 doLyricsmoremore = false
 doChordBars = false
@@ -43,8 +43,8 @@ doOwn = false
 	- put in the chords (fake book).
 	- put in the tune (fake book).
 	- added youtube performances.
+	- put in the lyrics (fake book).
 	TODO:
-	- add the lyrics.
 	- check the chords (fake book).
 	- check the tune (fake book).
 	- hear the tune to check that it is right and adjust the tempo.
@@ -113,5 +113,28 @@ doOwn = false
 	f2~ f8 f f4 | f4 f c e8 f~ | f2 r2 | r2 r4 f8 f~ |
 	f2 f4 f | f4 f f c8 f~ | f2 r2 | r2 r8 f f4 |
 	a2. f4 | a8 c4. a4 c,8 f~ | f1~ | f2. r4 |
+}
+{% endif %}
+{% if part == "LyricsFake" %}\lyricmode {
+
+	% part "A"
+	If you __ ev -- er plan to mo -- tor west, __
+	Trav -- el my way, take the high -- way that's the best. __
+	Get your kicks on Route __ _ Six -- ty -- six! __ It
+
+	% part "A"
+	winds __ from Chi -- ca -- go to L. A., __
+	more than two __ thou -- sand miles all the way. __
+	Get your kicks on Route __ _ Six -- ty -- six! __ Now you
+
+	% part "B"
+	go thru Saint Loo -- ey and Jop -- lin, Mis -- sour -- i and Ok -- la -- hom -- a Cit -- y is might -- y pret -- ty. You'll see __
+	Am -- ar -- il -- lo; __ Gal -- up, New Mex -- i -- co; __
+	Flag -- staff, Ar -- i -- zon -- a; don't for -- get Wi -- no -- na, King -- man, Bar -- stow, San Ber -- nar -- din -- o. Won't
+
+	% part "A"
+	you __ get hip to this time -- ly tip: __
+	when you __ make that Cal -- i -- for -- nia trip, __
+	get your kicks on Route __ _ Six -- ty -- six! __
 }
 {% endif %}

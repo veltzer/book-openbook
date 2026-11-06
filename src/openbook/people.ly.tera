@@ -26,7 +26,7 @@ remark = "Duke Ellington with Johnny Hodges on alto sax"
 [versions.Fake]
 doChords = true
 doVoice = true
-doLyrics = false
+doLyrics = true
 doLyricsmore = false
 doLyricsmoremore = false
 doChordBars = false
@@ -43,8 +43,8 @@ doOwn = false
 	- put in the chords (fake book).
 	- put in the tune (fake book).
 	- added youtube performances.
+	- put in the lyrics (fake book).
 	TODO:
-	- add the lyrics.
 	- check the chords (fake book).
 	- check the tune (fake book).
 	- hear the tune to check that it is right and adjust the tempo.
@@ -101,5 +101,23 @@ doOwn = false
 	c4 r g ges | f g2.~ | g4 g b,8 c d ees | f4 g2.~ | g4 f g f | bes,4 bes8 bes bes2~ |
 	bes4 f' g f | bes,4 bes8 bes bes2~ | bes4 r a' g | \tuplet 3/2 { bes,4 bes bes } bes4 r8 bes | c8 r d ees f g a bes |
 	c4 d2.~ | d2 c8 d c bes | c4 d2.~ | d4 r bes c | \tuplet 3/2 { ees4 d c } ees4 d | bes2 bes | bes1~ | bes2. r4 |
+}
+{% endif %}
+{% if part == "LyricsFake" %}\lyricmode {
+
+	% part "A"
+	Peo -- ple, __ Peo -- ple who need Peo -- ple __ are the luck -- i -- est Peo -- ple __ in the world. __
+	We're chil -- dren __ need -- ing oth -- er chil -- dren __ and yet let -- ting our grown -- up pride
+
+	% part "B"
+	hide all the need in -- side, act -- ing more like chil -- dren, than chil -- dren. __ Lov -- ers __
+
+	% part "A"
+	are ver -- y spec -- ial Peo -- ple, __ they're the luck -- i -- est Peo -- ple __ in the world. __
+
+	% part "C"
+	With one per -- son, __ one ver -- y spec -- ial per -- son, __ a feel -- ing deep in your soul __
+	says: you were half now you're whole. __ No more hun -- ger and thirst, but first, be a per -- son who needs
+	Peo -- ple. __ Peo -- ple who need Peo -- ple __ are the luck -- i -- est Peo -- ple in the world. __
 }
 {% endif %}

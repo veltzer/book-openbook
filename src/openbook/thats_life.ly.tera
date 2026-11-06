@@ -25,7 +25,7 @@ remark = "Aretha Franklin (1967)"
 [versions.Fake]
 doChords = true
 doVoice = true
-doLyrics = false
+doLyrics = true
 doLyricsmore = false
 doLyricsmoremore = false
 doChordBars = false
@@ -42,11 +42,11 @@ doOwn = false
 	- put in the chords (fake book).
 	- put in the tune (fake book).
 	- added youtube performances.
+	- put in the lyrics (fake book).
 	TODO:
 	- check the chords (fake book).
 	- check the tune (fake book).
 	- hear the tune to check that it is right and adjust the tempo.
-	- add the lyrics.
 	- bar 5 (G CM7 B7#5): the fake book puts CM7 over the second sixteenth and B7#5 over the dotted quarter right after it; put in here as G for two beats, CM7 and B7#5 one beat each.
 	- several chords are printed over the last eighth of a bar (Bb7 in bar 3, F7 in bar 13, Cm6 in bar 28, B7 in bar 29, D7 in bar 31) and were put in that way; check against a recording.
 	- bar 31: the b eighth after the b flat has no accidental in the fake book; kept as b flat (fits A7b9).
@@ -129,5 +129,27 @@ doOwn = false
 			a8 g~ g2. | g2. r4 |
 		}
 	}
+}
+{% endif %}
+{% if part == "LyricsFake" %}\lyricmode {
+
+	% part "A"
+	That's Life, That's what peo -- ple say. You're rid -- in' high in A -- pril, shot down in May.
+	But I know I'm gon -- na change that tune, when I'm back on top in June. That's
+
+	% part "A"
+	Life, fun -- ny as it seems. Some peo -- ple get their kicks, step -- pin' on dreams;
+	but I don't let it get me down, 'cause this ol' word keeps __ go -- ing a -- round. I've been a
+
+	% part "B"
+	pup -- pet, a pau -- per, a pi -- rate, a po -- et, a pawn and a king. __ I've been
+	up and down and o -- ver and out and I know one thing: __
+	each time I find my -- self flat on my face, __ I pick my -- self up and get back in the race. __ That's
+
+	% part "A"
+	Life, I can't de -- ny it, I thought of quit -- ting, but my heart just won't buy it.
+	If I did -- n't think it was worth a try, __ _ I'd roll my -- self up in a big ball and
+	die. __ _ That's
+	die. __ _ _
 }
 {% endif %}

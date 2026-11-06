@@ -25,7 +25,7 @@ remark = "Sonny Rollins with The Modern Jazz Quartet"
 [versions.Fake]
 doChords = true
 doVoice = true
-doLyrics = false
+doLyrics = true
 doLyricsmore = false
 doLyricsmoremore = false
 doChordBars = false
@@ -42,8 +42,8 @@ doOwn = false
 	- put in the chords (fake book).
 	- put in the tune (fake book).
 	- added youtube performances.
+	- put in the lyrics (fake book).
 	TODO:
-	- add the lyrics.
 	- check the chords (fake book).
 	- check the tune (fake book).
 	- hear the tune to check that it is right and adjust the tempo.
@@ -105,5 +105,25 @@ doOwn = false
 	% part "C"
 	f4~ \tuplet 3/2 { f8 cis d } f2 | r4 a e'4. d8 | c1~ | c4 c b4. a8 |
 	c4. e,8 g2 | r4 b b b | c1~ | c4 r r2 |
+}
+{% endif %}
+{% if part == "LyricsFake" %}\lyricmode {
+	This Love Of
+
+	% part "A"
+	Mine goes on and on, tho' life is emp -- ty __ since you have gone. __
+	You're al -- ways
+
+	% part "B"
+	on my mind, tho' out of sight, __ it's lone -- some thru the day, __
+	And oh! the night. __ I cry my
+
+	% part "A"
+	heart out __ it's bound to break, since noth -- ing mat -- ters, __ let it break, __
+	I ask the
+
+	% part "C"
+	sun __ and the moon, the stars that shine, __ What's to be -- come of it,
+	this love of mine. __
 }
 {% endif %}

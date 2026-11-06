@@ -26,7 +26,7 @@ remark = "Johnny Mathis (1959)"
 [versions.Fake]
 doChords = true
 doVoice = true
-doLyrics = false
+doLyrics = true
 doLyricsmore = false
 doLyricsmoremore = false
 doChordBars = false
@@ -43,8 +43,8 @@ doOwn = false
 	- put in the chords (fake book).
 	- put in the tune (fake book).
 	- added youtube performances.
+	- put in the lyrics (fake book).
 	TODO:
-	- add the lyrics.
 	- check the chords (fake book).
 	- check the tune (fake book).
 	- hear the tune to check that it is right and adjust the tempo.
@@ -124,5 +124,29 @@ doOwn = false
 			ees1~ | ees2. r4 |
 		}
 	}
+}
+{% endif %}
+{% if part == "LyricsFake" %}\lyricmode {
+
+	% part "A"
+	Fun -- ny, __ you're a stran -- ger who's come here, come from an -- oth -- er town.
+	Fun -- ny, __ I'm a stran -- ger my -- self here. Small World, is -- n't it?
+
+	% part "A"
+	Fun -- ny, __ you're a girl who goes trav' -- ling, rath -- er than set -- tling down.
+	Fun -- ny, __ 'cause I'd love to go trav' -- ling. Small World, is -- n't it?
+
+	% part "B"
+	We have so much in com -- mon, it's a phe -- nom -- e -- non.
+	We could pool our re -- sourc -- es by join -- ing forc -- es from now on. __
+
+	% part "A"
+	Luck -- y, __ you're a man who likes chil -- dren, that's an im -- por -- tant sign.
+	Luck -- y, __ 'cause I'd love to have chil -- dren. Small World, is -- n't it?
+	Fun -- ny, is -- n't it? Small and fun -- ny and
+
+	% part "Volta"
+	fine. __
+	fine. __
 }
 {% endif %}

@@ -26,8 +26,8 @@ remark = "Dinah Shore (1946)"
 [versions.Fake]
 doChords = true
 doVoice = true
-doLyrics = false
-doLyricsmore = false
+doLyrics = true
+doLyricsmore = true
 doLyricsmoremore = false
 doChordBars = false
 doGuitar = false
@@ -43,8 +43,8 @@ doOwn = false
 	- put in the chords (fake book).
 	- put in the tune (fake book).
 	- added youtube performances.
+	- put in the lyrics (fake book).
 	TODO:
-	- add the lyrics.
 	- check the chords (fake book).
 	- check the tune (fake book).
 	- hear the tune to check that it is right and adjust the tempo.
@@ -95,5 +95,25 @@ doOwn = false
 	% part "A"
 	a8 f4 f8~ f4. c8 | f8. f16 f4 a8. c16 g8. gis16 | a8 f4 f8~ f4. g8 | aes8. g16 f4 d8 c4. |
 	a'8 f4 f8~ f4. c8 | f8. f16 f4 a8 c~ c8. b16 | c8. bes16 a8. f16 c'4 bes8. a16 | f8. c16 e8. f16~ f2 |
+}
+{% endif %}
+{% if part == "LyricsFake" %}\lyricmode {
+	% part "A"
+	Shoo -- Fly Pie __ And Ap -- ple Pan Dow -- dy makes your eyes light up, __ your tum -- my say 'how -- dy,'
+	Shoo -- Fly Pie __ And Ap -- ple Pan Dow -- dy, __ I nev -- er get e -- nough of that won -- der -- ful stuff. __
+
+	% part "B"
+	Ma -- ma! when you bake, __ Ma -- ma! I don't want cake;
+	Ma -- ma! for my sake __ go to the o -- ven __ and make some ev -- er -- lov -- in' __ sh,
+
+	% part "A"
+	Shoo -- Fly Pie __ And Ap -- ple Pan Dow -- dy makes your eyes light up, __ your tum -- my say 'how -- dy,'
+	Shoo -- Fly Pie __ And Ap -- ple Pan Dow -- dy, __ I nev -- er get e -- nough of that won -- der -- ful stuff. __
+}
+{% endif %}
+{% if part == "LyricsmoreFake" %}\lyricmode {
+	% part "A"
+	Shoo -- Fly Pie __ And Ap -- ple Pan Dow -- dy makes the sun come out __ when Hea -- vens are cloud -- dy,
+	Shoo -- Fly Pie __ And Ap -- ple Pan Dow -- dy, __ I nev -- er get e -- nough of that won -- der -- ful stuff. __
 }
 {% endif %}

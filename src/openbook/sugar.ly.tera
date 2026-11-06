@@ -26,8 +26,8 @@ remark = "Jack Teagarden"
 [versions.Fake]
 doChords = true
 doVoice = true
-doLyrics = false
-doLyricsmore = false
+doLyrics = true
+doLyricsmore = true
 doLyricsmoremore = false
 doChordBars = false
 doGuitar = false
@@ -43,8 +43,8 @@ doOwn = false
 	- put in the chords (fake book).
 	- put in the tune (fake book).
 	- added youtube performances.
+	- put in the lyrics (fake book).
 	TODO:
-	- add the lyrics.
 	- check the chords (fake book).
 	- check the tune (fake book).
 	- hear the tune to check that it is right and adjust the tempo.
@@ -123,5 +123,45 @@ doOwn = false
 			g2 r |
 		}
 	}
+}
+{% endif %}
+{% if part == "LyricsFake" %}\lyricmode {
+
+	% part "A"
+	Su -- gar, I call my ba -- by my Su -- gar, I nev -- er 'may -- be' my
+	Su -- gar, that's why my ba -- by is so con -- fec -- tion -- ar -- y.
+
+	% part "A"
+	Fun -- ny, she nev -- er pleads __ for my mon -- ey, but when she feeds __ me on
+	hon -- ey, she gets her needs __ ev -- 'ry time. __ I'd make a
+
+	% part "B"
+	mil -- lion trips __ to her lips __ if I __ were a bee, 'cause they are
+	sweet -- er than __ an -- y can -- dy to me. She's gran -- u -- lat -- ed
+
+	% part "A"
+	Su -- gar, I nev -- er cheat __ on my Su -- gar, 'cause I'm too sweet __ on my
+	Su -- gar, that Su -- gar ba -- by o' mine. __
+	_
+}
+{% endif %}
+{% if part == "LyricsmoreFake" %}\lyricmode {
+
+	% part "A"
+	Su -- gar, I call my ba -- by my Su -- gar, I nev -- er 'may -- be' my
+	Su -- gar, that's why my ba -- by is so con -- fec -- tion -- ar -- y.
+
+	% part "A"
+	Fun -- ny, I nev -- er plead __ for his mon -- ey, 'cause when I feed __ him on
+	hon -- ey, I gets my needs __ ev -- 'ry time. __ I'd make a
+
+	% part "B"
+	mil -- lion trips __ to his lips __ if I __ we're a bee, 'cause they are
+	sweet -- er than __ an -- y can -- dy to me. He's gran -- u -- lat -- ed
+
+	% part "A"
+	Su -- gar, I nev -- er cheat __ on my Su -- gar, 'cause I'm too sweet __ on my
+	Su -- gar, that Su -- gar ba -- by o' mine. __
+	_
 }
 {% endif %}

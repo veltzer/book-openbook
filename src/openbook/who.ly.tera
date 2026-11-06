@@ -26,7 +26,7 @@ remark = "Jack Buchanan (1925)"
 [versions.Fake]
 doChords = true
 doVoice = true
-doLyrics = false
+doLyrics = true
 doLyricsmore = false
 doLyricsmoremore = false
 doChordBars = false
@@ -43,8 +43,8 @@ doOwn = false
 	- put in the chords (fake book).
 	- put in the tune (fake book).
 	- added youtube performances.
+	- put in the lyrics (fake book).
 	TODO:
-	- add the lyrics.
 	- check the chords (fake book).
 	- check the tune (fake book).
 	- hear the tune to check that it is right and adjust the tempo.
@@ -101,5 +101,23 @@ doOwn = false
 	% part "D"
 	a'1~ | a1~ | a4 fis a fis~ | fis e cis2 |
 	d2. r4 | r1 | fis4 d d d~ | d2 r2 |
+}
+{% endif %}
+{% if part == "LyricsFake" %}\lyricmode {
+
+	% part "A"
+	Who __ stole my heart __ a -- way?
+	Who __ makes me dream __ all day?
+
+	% part "B"
+	Dreams I know can nev -- er be true, __
+	seems as tho' I'll ev -- er be blue. __
+
+	% part "C"
+	Who __ means my hap -- pi -- ness?
+	Who __ would I an -- swer: 'Yes,'
+
+	% part "D"
+	to? __ Well, you ought __ to guess. Who, no one but you! __
 }
 {% endif %}

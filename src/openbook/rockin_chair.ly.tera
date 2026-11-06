@@ -26,7 +26,7 @@ remark = "Mildred Bailey (1937)"
 [versions.Fake]
 doChords = true
 doVoice = true
-doLyrics = false
+doLyrics = true
 doLyricsmore = false
 doLyricsmoremore = false
 doChordBars = false
@@ -43,8 +43,8 @@ doOwn = false
 	- put in the chords (fake book).
 	- put in the tune (fake book).
 	- added youtube performances.
+	- put in the lyrics (fake book).
 	TODO:
-	- add the lyrics.
 	- check the chords (fake book).
 	- check the tune (fake book).
 	- hear the tune to check that it is right and adjust the tempo.
@@ -120,5 +120,28 @@ doOwn = false
 			ees1~ | ees2 r |
 		}
 	}
+}
+{% endif %}
+{% if part == "LyricsFake" %}\lyricmode {
+
+	% part "A"
+	Old Rock -- in' Chair's got me, __ cane by my side;
+	fetch me that gin, son, 'fore I tan your hide.
+
+	% part "B"
+	Can't get from this ca -- bin, __ goin' no -- where;
+	just sit me here grab -- bin' at the flies 'round this Rock -- in' Chair.
+
+	% part "C"
+	My dear old Aunt Har -- ri -- et in hea -- ven she be
+	send me sweet cha -- ri -- ot __ for the end of these trou -- ble I see.
+
+	% part "A"
+	Old Rock -- in' Chair gits it. __ judg -- ment day is here.
+	chained to my Rock -- in'
+
+	% part "Volta"
+	Chair.
+	Chair. __
 }
 {% endif %}

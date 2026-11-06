@@ -25,8 +25,8 @@ remark = "Diana Krall on Love Scenes (1997)"
 [versions.Fake]
 doChords = true
 doVoice = true
-doLyrics = false
-doLyricsmore = false
+doLyrics = true
+doLyricsmore = true
 doLyricsmoremore = false
 doChordBars = false
 doGuitar = false
@@ -42,8 +42,8 @@ doOwn = false
 	- put in the chords (fake book).
 	- put in the tune (fake book).
 	- added youtube performances.
+	- put in the lyrics (fake book).
 	TODO:
-	- add the lyrics.
 	- check the chords (fake book).
 	- check the tune (fake book).
 	- hear the tune to check that it is right and adjust the tempo.
@@ -114,5 +114,30 @@ doOwn = false
 	r8 a~ \tuplet 3/2 { a f d } g4 r | r8 a~ \tuplet 3/2 { a f d } g4 r | r8 a~ \tuplet 3/2 { a f d } g4 d8. f16 | g4 f8. d16 f g8. r4 |
 	r8 a~ \tuplet 3/2 { a f d } g4 r | r8 a~ \tuplet 3/2 { a f d } g4 r | f8. g16 d4 f g | r4 aes f d | f8. g16 d4 f g |
 	r4 aes f d | f g8. d16 f4 g | r4 aes8 f d4 r | r8 a'~ \tuplet 3/2 { a b! gis } a8 a,4.~ | a4 r c8 a c4 | d1 |
+}
+{% endif %}
+{% if part == "LyricsFake" %}\lyricmode {
+
+	% part "A"
+	Peel __ Me A Grape, crush __ me some ice, Skin __ me a peach, save the fuzz for my pil -- low,
+	start __ me a smoke, talk __ to me nice, you got -- ta wine me and dine me, don't try and fool me,
+	be -- jewel __ me, ei -- ther a -- muse me or lose __ me, I'm __ get -- tin' hun -- gry, __ Peel Me A Grape.
+
+	% part "B"
+	Here's how to be an a -- gree -- a -- ble chap, love me and leave me in lux -- u -- ry's lap.
+	Hop when I hol -- ler, Skip when I snap, when I say, 'Do it,' jump to it.
+
+	% part "A"
+	Send __ out for scotch, call __ me a cab, cut __ me a rose, make my tea with the pet -- als.
+	Just __ hang a -- round, pick __ up the tab, Nev -- er out think me, just mink me, po -- lar bear rug me,
+	don't bug me, new Thun -- der -- bird me, you heard me, I'm __ get -- tin' hun -- gry, __ Peel Me A Grape.
+}
+{% endif %}
+{% if part == "LyricsmoreFake" %}\lyricmode {
+
+	% part "A"
+	Pop __ me a cork, French me a fry, Crack me a nut, bring a bowl full -- a bon -- bons,
+	chill __ me some wine, keep __ stand -- in' by, just en -- ter -- tain me, cham -- pagne me, show me you love me,
+	kid glove __ me, best way to cheer me, cash -- mere __ me, I'm __ get -- tin' hun -- gry, __ Peel Me A Grape.
 }
 {% endif %}

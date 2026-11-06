@@ -26,8 +26,8 @@ remark = "Keith Jarrett"
 [versions.Fake]
 doChords = true
 doVoice = true
-doLyrics = false
-doLyricsmore = false
+doLyrics = true
+doLyricsmore = true
 doLyricsmoremore = false
 doChordBars = false
 doGuitar = false
@@ -43,8 +43,8 @@ doOwn = false
 	- put in the chords (fake book).
 	- put in the tune (fake book).
 	- added youtube performances.
+	- put in the lyrics (fake book).
 	TODO:
-	- add the lyrics.
 	- check the chords (fake book).
 	- check the tune (fake book).
 	- hear the tune to check that it is right and adjust the tempo.
@@ -113,5 +113,30 @@ doOwn = false
 	c2 c~ |
 	c4 bes8. ees16 d8. c16 bes8. aes16 | g8 g4 g8~ g2~ | g4 f8. c'16 bes8. g16 ees8. c16 | ees8 ees4 ees8~ ees2~ |
 	ees4 \tuplet 3/2 { ees8 f ees } d8. aes'16 c,8. d16 | ees4 g8 bes des4 d | ees2. r4 |
+}
+{% endif %}
+{% if part == "LyricsFake" %}\lyricmode {
+	% part "A"
+	Sky -- lark, __ have you an -- y -- thing to say to me? __ Won't you tell me where my
+	love can be? __ Is there a mea -- dow in the
+
+	% alternatives
+	mist __ where some -- one's wait -- ing to be kissed?
+	rain to a blos -- som cov -- ered lane? __ And in your
+
+	% part "B"
+	lone -- ly flight, __ have -- n't you heard the mu -- sic
+	in the night? __ Won -- der -- ful mu -- sic, faint as a 'will -- o' the wisp,' craz -- y as a loon,
+	sad as a gyp __ sy ser -- e -- nad -- ing the moon. __ Oh,
+
+	% part "A"
+	Sky -- lark, __ I don't know if you can find these things, __ but my heart is rid -- ing on your wings. __
+	So, if you see them an -- y -- where, won't you lead me there?
+}
+{% endif %}
+{% if part == "LyricsmoreFake" %}\lyricmode {
+	% part "A"
+	Sky -- lark, __ have you seen a val -- ley green with spring, __ where my heart can go a
+	jour -- ney -- ing __ o -- ver the sha -- dows and the
 }
 {% endif %}

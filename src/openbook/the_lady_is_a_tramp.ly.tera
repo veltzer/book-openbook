@@ -27,8 +27,8 @@ remark = "Ella Fitzgerald from the Rodgers and Hart Song Book (1956)"
 [versions.Fake]
 doChords = true
 doVoice = true
-doLyrics = false
-doLyricsmore = false
+doLyrics = true
+doLyricsmore = true
 doLyricsmoremore = false
 doChordBars = false
 doGuitar = false
@@ -44,8 +44,8 @@ doOwn = false
 	- put in the chords (fake book).
 	- put in the tune (fake book).
 	- added youtube performances.
+	- put in the lyrics (fake book).
 	TODO:
-	- add the lyrics.
 	- check the chords (fake book).
 	- check the tune (fake book).
 	- hear the tune to check that it is right and adjust the tempo.
@@ -109,5 +109,29 @@ doOwn = false
 	% part "A"
 	r4 c b4. d8 | bes4 bes2 bes4 | a4. f8 a4 b~ | b1 |
 	r4 c c4. c8 | d4 d d d | c1~ | c4 r r2 |
+}
+{% endif %}
+{% if part == "LyricsFake" %}\lyricmode {
+
+	% part "A"
+	I get too hun -- gry for din -- ner at eight. __ I like the thea -- tre but ne -- ver come late. __
+	I ne -- ver both -- er with peo -- ple I hate. __ That's why The La -- dy Is A Tramp. __
+
+	% part "Volta"
+	_ I like the
+
+	% part "B"
+	free fresh wind in my hair, __ life with -- out care. __ I'm broke, __ it's oke, __
+
+	% part "A"
+	hate Cal -- i -- for -- nia, it's cold and it's damp, __
+	that's why The La -- dy Is A Tramp. __
+}
+{% endif %}
+{% if part == "LyricsmoreFake" %}\lyricmode {
+
+	% part "A"
+	I don't like crap games with bar -- ons and earls. __ Won't go to Har -- lem in er -- mine and pearls. __
+	Won't dish the dirt with the rest of the girls. __ That's why The La -- dy Is A Tramp. __
 }
 {% endif %}

@@ -26,7 +26,7 @@ remark = "John Steel (1921)"
 [versions.Fake]
 doChords = true
 doVoice = true
-doLyrics = false
+doLyrics = true
 doLyricsmore = false
 doLyricsmoremore = false
 doChordBars = false
@@ -43,8 +43,8 @@ doOwn = false
 	- put in the chords (fake book).
 	- put in the tune (fake book).
 	- added youtube performances.
+	- put in the lyrics (fake book).
 	TODO:
-	- add the lyrics.
 	- check the chords (fake book).
 	- check the tune (fake book).
 	- hear the tune to check that it is right and adjust the tempo.
@@ -85,5 +85,14 @@ doOwn = false
 	% part "A"
 	e2. g4 | a2. g4 | e g a c | e2 d |
 	c2. a4 | g2. e4 | f2. g4 | e'1~ | e2.
+}
+{% endif %}
+{% if part == "LyricsFake" %}\lyricmode {
+
+	% part "A"
+	Dear one The World Is Wait -- ing For The Sun -- rise; ev -- 'ry rose is heav -- y with dew. The
+
+	% part "A"
+	thrush on high, his sleep -- y mate is call -- ing and my heart is call -- ing you! __
 }
 {% endif %}

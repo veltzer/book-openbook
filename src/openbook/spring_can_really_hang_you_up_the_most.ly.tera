@@ -26,8 +26,8 @@ remark = "Chet Baker"
 [versions.Fake]
 doChords = true
 doVoice = true
-doLyrics = false
-doLyricsmore = false
+doLyrics = true
+doLyricsmore = true
 doLyricsmoremore = false
 doChordBars = false
 doGuitar = false
@@ -43,8 +43,8 @@ doOwn = false
 	- put in the chords (fake book).
 	- put in the tune (fake book).
 	- added youtube performances.
+	- put in the lyrics (fake book).
 	TODO:
-	- add the lyrics.
 	- check the chords (fake book).
 	- check the tune (fake book).
 	- hear the tune to check that it is right and adjust the tempo.
@@ -140,5 +140,56 @@ doOwn = false
 			c4 c, c8 d4 c8 | b'8 b, b b b cis4. | g'8 f e d des c bes r16 aes16 | g2. r4 |
 		}
 	}
+}
+{% endif %}
+{% if part == "LyricsFake" %}\lyricmode {
+
+	% part "Intro"
+	Once I was a sen -- ti -- ment -- al thing, threw my heart a -- way each spring. Now a spring ro -- mance
+	has -- n't got a chance, prom -- ised my first dance to win -- ter, all I've got to show's a splin -- ter
+	for my lit -- tle fling!
+
+	% part "A"
+	Spring this year has got me feel -- _ ing __ like a horse that nev -- er left the post; I
+	lie in my room, star -- ing up at the ceil -- ing Spring Can Real -- ly Hang You Up The Most!
+
+	% part "A"
+	Morn -- ing's kiss wakes trees and flow -- _ ers, __ and to them I'd like to drink a toast; I
+	walk in the park __ just to kill lone -- ly hours, __ _ Spring Can Real -- ly Hang You Up The Most!
+
+	% part "B"
+	All af -- ter -- noon, those birds __ _ twit -- ter twit, I know the tune: 'This is love, __ _ this is it!'
+	Heard it be -- fore and I __ _ know the score; and I've de -- ci -- ded that spring is a bore!
+
+	% part "A"
+	Love seemed sure a -- round the New -- _ Year, now it's A -- pril, love is just a ghost. Spring ar --
+	rived on time, on -- ly
+	what be -- came of you, dear? Spring Can Real -- ly Hang You Up The Most!
+	Spring Can Real -- ly Hang You Up The Most!
+	di -- tion must be chron -- ic, Spring Can Real -- ly Hang You Up The Most!
+	All a -- lone, the par -- ty's ov -- er, old man win -- ter was a gra -- cious host; but when
+	you keep pray -- ing for snow to hide the clo -- ver; Spring Can Real -- ly Hang You Up The Most!
+}
+{% endif %}
+{% if part == "LyricsmoreFake" %}\lyricmode {
+
+	% part "Intro"
+	_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _
+
+	% part "A"
+	Spring is here, there's no mis -- tak -- _ ing, __ ro -- bins build -- ing nests from coast to coast; my
+	heart tries to sing __ so they won't hear it break -- ing _ _ _ _ _ _ _ _ _
+
+	% part "A"
+	Col -- lege boys are writ -- ing son -- _ nets, __ in the 'ten -- der pass -- ion' they're en -- grossed; but
+	I'm on the shelf __ with last year's Eas -- ter bon -- nets, _ _ _ _ _ _ _ _ _
+
+	% part "B"
+	Love came my way, I hoped __ _ it would last, we had our day, now it's all __ _ in the past.
+	Spring came a -- long, a sea -- _ son of song; full of sweet prom -- ise, but some -- thing went wrong!
+
+	% part "A"
+	Doc -- tors once pre -- scibed a ton -- _ ic: 'sul -- phur and mo -- las -- ses' was the dose. Did -- n't
+	help a bit, my "con-"
 }
 {% endif %}

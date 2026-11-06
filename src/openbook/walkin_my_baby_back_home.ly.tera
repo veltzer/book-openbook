@@ -26,8 +26,8 @@ remark = "Nat King Cole (1952)"
 [versions.Fake]
 doChords = true
 doVoice = true
-doLyrics = false
-doLyricsmore = false
+doLyrics = true
+doLyricsmore = true
 doLyricsmoremore = false
 doChordBars = false
 doGuitar = false
@@ -43,8 +43,8 @@ doOwn = false
 	- put in the chords (fake book).
 	- put in the tune (fake book).
 	- added youtube performances.
+	- put in the lyrics (fake book).
 	TODO:
-	- add the lyrics.
 	- check the chords (fake book).
 	- check the tune (fake book).
 	- hear the tune to check that it is right and adjust the tempo.
@@ -120,5 +120,49 @@ doOwn = false
 			ees2. r4 |
 		}
 	}
+}
+{% endif %}
+{% if part == "LyricsFake" %}\lyricmode {
+
+	% part "A"
+	Gee! It's great, __ af -- ter be -- in' out late, __ Walk -- in' My Ba -- by Back Home.
+	Arm in arm, __ o -- ver mead -- ow and farm, __ Walk -- in' My Ba -- by Back Home.
+
+	% part "A"
+	We go 'long __ har -- mo -- niz -- in' a song, __ or I'm re -- cit -- ing a poem.
+	Owls go by, __ and they give me the eye, __ Walk -- in' My Ba -- by Back Home. We
+
+	% part "B"
+	stop for a while, __ she gives me a smile, __ and snug -- gles her head __ to my chest. We
+	start in to pet, __ And that's when I get __ her tal -- cum all o -- ver my vest __
+
+	% part "A"
+	Af -- ter I __ kind -- a straight -- en my tie, __ she has to bor -- row my comb.
+	One kiss, then __ I con -- tin -- ue a -- gain, __ Walk -- in' My Ba -- by Back
+
+	% part "Volta"
+	Home.
+}
+{% endif %}
+{% if part == "LyricsmoreFake" %}\lyricmode {
+
+	% part "A"
+	Gee! It's great, __ af -- ter be -- in' out late, __ Walk -- in' My Ba -- by Back Home.
+	Arm in arm, __ o -- ver mead -- ow and farm, __ Walk -- in' My Ba -- by Back Home.
+
+	% part "A"
+	We go 'long __ har -- mo -- niz -- in' a song, __ or I'm re -- cit -- ing a poem.
+	Owls go by, __ and they give me the eye, __ Walk -- in' My Ba -- by Back Home. She's
+
+	% part "B"
+	'fraid of the dark, __ so I have to park, __ out -- side of her door till it's light. She
+	says if I try __ to kiss her, she'll cry. __ I dry __ her tears all thru the night. __
+
+	% part "A"
+	Hand in hand __ to a bar -- be -- cue stand, __ right from her door -- way we roam.
+	Eats! and then __ it's a plea -- sure a -- gain, __ Walk -- in' My Ba -- by Back
+
+	% part "Volta"
+	_ Home.
 }
 {% endif %}

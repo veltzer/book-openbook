@@ -26,7 +26,7 @@ remark = "Ahmad Jamal live at the Pershing, Chicago (1958)"
 [versions.Fake]
 doChords = true
 doVoice = true
-doLyrics = false
+doLyrics = true
 doLyricsmore = false
 doLyricsmoremore = false
 doChordBars = false
@@ -43,8 +43,8 @@ doOwn = false
 	- put in the chords (fake book).
 	- put in the tune (fake book).
 	- added youtube performances.
+	- put in the lyrics (fake book).
 	TODO:
-	- add the lyrics.
 	- check the chords (fake book).
 	- check the tune (fake book).
 	- hear the tune to check that it is right and adjust the tempo.
@@ -106,5 +106,24 @@ doOwn = false
 	% part "A"
 	a2 a~ | a8 g a b d b a g | f!1~ |
 	f1 | ees2 ees~ | ees8 ees f! g bes g f ees | d1~ | d2 r2 |
+}
+{% endif %}
+{% if part == "LyricsFake" %}\lyricmode {
+
+	% part "A"
+	Poin -- ci -- an -- a, __ your branch -- es speak to me of love. __
+	Pale moon __ is cast -- ing shad -- ows from a -- bove. __ Poin -- ci --
+
+	% part "A"
+	an -- a, __ some -- how I feel the jun -- gle heat. __
+	With -- in me __ there grows a rhyth -- mic sav -- age beat. __
+
+	% part "B"
+	Love is ev -- 'ry where, it's mag -- ic per -- fume fills the air. __
+	To and fro you sway, my heart's in time, I've learned to care. __ Poin -- ci --
+
+	% part "A"
+	an -- a, __ though skies may turn from blue to gray, __
+	My love __ will live for -- ev -- er and a day. __
 }
 {% endif %}

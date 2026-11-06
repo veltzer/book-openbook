@@ -26,8 +26,8 @@ remark = "Benny Goodman and his Orchestra (1941)"
 [versions.Fake]
 doChords = true
 doVoice = true
-doLyrics = false
-doLyricsmore = false
+doLyrics = true
+doLyricsmore = true
 doLyricsmoremore = false
 doChordBars = false
 doGuitar = false
@@ -43,11 +43,11 @@ doOwn = false
 	- put in the chords (fake book).
 	- put in the tune (fake book).
 	- added youtube performances.
+	- put in the lyrics (fake book).
 	TODO:
 	- check the chords (fake book).
 	- check the tune (fake book).
 	- hear the tune to check that it is right and adjust the tempo.
-	- add the lyrics (the fake book has two verses).
 	- bar 8 (Cm7 F7) and bar 16 (Bb Ab7 G7): the fake book prints the later chords over the anticipating eighths; put in that way.
 	- first ending: Ab7 is printed over the pickup to the repeat; put in on beat 4.
 {% endif %}
@@ -108,5 +108,37 @@ doOwn = false
 			bes'4 r r2 |
 		}
 	}
+}
+{% endif %}
+{% if part == "LyricsFake" %}\lyricmode {
+	For there's a
+
+	% part "A"
+	change in the weath -- er there's a change in the sea, __ so from now on there'll be a change in me, __ My
+	walk will be dif -- f'rent my talk and my name, __ Noth -- in' a -- bout me is goin' to be the same. __ I'm goin' to
+
+	% part "A"
+	change my way of liv -- in' if that ain't e -- nough, __ then I'll change the way that I strut my stuff, __ 'cause
+	no -- bod -- y wants you when you're old and gray __ There'll Be Some Chang -- es Made to -- day. __ There'll Be Some Chang -- es
+
+	% part "Volta"
+	Made. For there's a
+	Made.
+}
+{% endif %}
+{% if part == "LyricsmoreFake" %}\lyricmode {
+	_ _ _
+
+	% part "A"
+	change in the fash -- ions, ask the fem -- i -- nine folks, __ ev -- en Jack Ben -- ny has been chang -- ing jokes, __ I
+	must make some chang -- es from old to the new, __ I must do things just the same as oth -- ers do. __ I'm goin' to
+
+	% part "A"
+	change my long tall Mam -- ma for a little short fat, __ goin' to change the num -- ber where I live at, __ I
+	must have some lov -- in' or I'll fade a -- way, __ There'll Be Some Chang -- es Made to -- day. __ There'll Be Some Chang -- es
+
+	% part "Volta"
+	_ _ _ _
+	Made.
 }
 {% endif %}

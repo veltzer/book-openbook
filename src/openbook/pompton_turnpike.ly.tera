@@ -26,7 +26,7 @@ remark = "Louis Jordan and his Tympany Five (1940)"
 [versions.Fake]
 doChords = true
 doVoice = true
-doLyrics = false
+doLyrics = true
 doLyricsmore = false
 doLyricsmoremore = false
 doChordBars = false
@@ -43,8 +43,8 @@ doOwn = false
 	- put in the chords (fake book).
 	- put in the tune (fake book).
 	- added youtube performances.
+	- put in the lyrics (fake book).
 	TODO:
-	- add the lyrics.
 	- check the chords (fake book).
 	- check the tune (fake book).
 	- hear the tune to check that it is right and adjust the tempo.
@@ -104,5 +104,24 @@ doOwn = false
 	% part "A"
 	g8 bes~ bes2. | g8 c,~ c2. | g'8. bes16 g8. bes16 g8. bes16 g8. bes16 | g8 c,~ c2. |
 	gis'8 b!~ b2. | g!8 bes~ bes2. | g8 ees~ ees2.~ | ees1 |
+}
+{% endif %}
+{% if part == "LyricsFake" %}\lyricmode {
+
+	% part "A"
+	Pomp -- ton __ Turn -- pike, __ That's a ver -- y fa -- mous Jer -- sey road -- way __
+	full of __ coun -- try __ charm. __ _
+
+	% part "A"
+	Pomp -- ton __ Turn -- pike __ leads you to a place not far from Broad -- way. __
+	Still it's __ on a __ farm. __ _ _
+
+	% part "B"
+	You dine with lights sub -- dued. __ The mu -- sic in -- ter -- lude __
+	puts you right in the mood __ to dance and find your -- self ro -- mance. __
+
+	% part "A"
+	Pomp -- ton __ Turn -- pike __ ride your bike or if you like just hitch -- hike. __
+	Come to __ Pomp -- ton __ Turn -- pike. __
 }
 {% endif %}

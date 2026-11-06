@@ -26,7 +26,7 @@ remark = "Glenn Miller Orchestra in the famous recording (1940)"
 [versions.Fake]
 doChords = true
 doVoice = true
-doLyrics = false
+doLyrics = true
 doLyricsmore = false
 doLyricsmoremore = false
 doChordBars = false
@@ -43,8 +43,8 @@ doOwn = false
 	- put in the chords (fake book).
 	- put in the tune (fake book).
 	- added youtube performances.
+	- put in the lyrics (fake book).
 	TODO:
-	- add the lyrics.
 	- check the chords (fake book).
 	- check the tune (fake book).
 	- hear the tune to check that it is right and adjust the tempo.
@@ -114,5 +114,24 @@ doOwn = false
 			bes2. r4 |
 		}
 	}
+}
+{% endif %}
+{% if part == "LyricsFake" %}\lyricmode {
+
+	% part "A"
+	Way down south, in Bir -- ming -- ham, __ I mean south in Al -- a -- bam's __ an old
+	place where peo -- ple go __ to dance __ the night __ a -- way. __ They all
+
+	% part "A"
+	drive or walk __ for miles __ to get jive that south -- ern style, __ s -- low
+	jive that makes __ you want __ to dance __ 'til break __ of day. __ It's a
+
+	% part "B"
+	junc -- tion where the town folks meet. At each
+	func -- tion, in their tux they __ greet __ you. Come on
+
+	% part "A"
+	down, for -- get __ your care. __ Come on down. You'll find __ me there. So long
+	town! I'm head -- in' for __ Tux -- e -- do Junc __ tion now. __ Way down
 }
 {% endif %}

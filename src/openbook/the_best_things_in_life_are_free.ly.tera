@@ -26,7 +26,7 @@ remark = "Hank Mobley"
 [versions.Fake]
 doChords = true
 doVoice = true
-doLyrics = false
+doLyrics = true
 doLyricsmore = false
 doLyricsmoremore = false
 doChordBars = false
@@ -43,8 +43,8 @@ doOwn = false
 	- put in the chords (fake book).
 	- put in the tune (fake book).
 	- added youtube performances.
+	- put in the lyrics (fake book).
 	TODO:
-	- add the lyrics.
 	- check the chords (fake book).
 	- check the tune (fake book).
 	- hear the tune to check that it is right and adjust the tempo.
@@ -105,5 +105,20 @@ doOwn = false
 	% part "A"
 	c,2 e | g2 c | b4 c b2~ | b2 a |
 	d2 c4 d | c2 d | c1~ | c4 r r2 |
+}
+{% endif %}
+{% if part == "LyricsFake" %}\lyricmode {
+
+	% part "A"
+	The moon be -- longs to ev -- 'ry one, __ The Best Things In Life Are Free. __ The
+
+	% part "B"
+	stars be -- long to ev -- 'ry one, __ they gleam there for you and me. __ The
+
+	% part "C"
+	flow -- ers in Spring, __ the rob -- ins that sing, __ the sun -- beams that shine: __ they're yours, they're mine! And
+
+	% part "A"
+	love can come to ev -- 'ry -- one, __ The Best Things In Life Are Free. __
 }
 {% endif %}

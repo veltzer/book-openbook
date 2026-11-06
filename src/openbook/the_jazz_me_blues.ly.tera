@@ -26,8 +26,8 @@ remark = "Bix Beiderbecke with the Wolverine Orchestra (1924)"
 [versions.Fake]
 doChords = true
 doVoice = true
-doLyrics = false
-doLyricsmore = false
+doLyrics = true
+doLyricsmore = true
 doLyricsmoremore = false
 doChordBars = false
 doGuitar = false
@@ -43,8 +43,8 @@ doOwn = false
 	- put in the chords (fake book).
 	- put in the tune (fake book).
 	- added youtube performances.
+	- put in the lyrics (fake book).
 	TODO:
-	- add the lyrics.
 	- check the chords (fake book).
 	- check the tune (fake book).
 	- hear the tune to check that it is right and adjust the tempo.
@@ -120,5 +120,30 @@ doOwn = false
 			c4 c c c | c8 d4 c8~ c4 bes4 | ees1~ | ees2. r4 |
 		}
 	}
+}
+{% endif %}
+{% if part == "LyricsFake" %}\lyricmode {
+	% part "Intro"
+	Down in Lou -- is -- ian -- a in that sun -- ny clime, __ They play a class of mu -- sic that is su -- per fine, __ And it
+	makes no dif -- fer -- ence if it's __ _ rain or shine, __ you can hear that jazz band mu -- sic play -- ing
+	all the time. __ It
+	_ _ _
+	Ev -- 'ry one __ that's nigh nev -- er seems __ to sigh, hear them loud -- ly cry: Oh!
+	% part "A"
+	Jazz -- man __ Don't stop that mu -- sic, it's __ _ jazz -- man, __ (jazz -- man) __ you
+	know I want to hear it both __ _ day and night, __ and if you don't blow it hot then I don't feel right __ Now if it's
+	Don't want it fast, don't want it slow, take your time don't rush it play it
+	sweet and low. __ I've got those dog -- gone real -- gone jazz -- band 'jazz __ me' blues. __
+}
+{% endif %}
+{% if part == "LyricsmoreFake" %}\lyricmode {
+	% part "Intro"
+	sounds so pe -- cu -- liar __ _ 'cause the mu -- sic's queer. __ _ How its sweet vi -- bra -- tion seems to fill the air. __ Then to
+	you the whole world seems to be in rhyme, __ _ _ you want noth -- ing else but jazz -- band mu -- sic
+	_ _ _ _
+	all the time. __
+	_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _
+	% part "A"
+	Rag -- time __ please sir will you play it in jazz -- time, __ (jazz -- time) __
 }
 {% endif %}

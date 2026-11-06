@@ -26,7 +26,7 @@ remark = "Dinah Shore (1946)"
 [versions.Fake]
 doChords = true
 doVoice = true
-doLyrics = false
+doLyrics = true
 doLyricsmore = false
 doLyricsmoremore = false
 doChordBars = false
@@ -43,8 +43,8 @@ doOwn = false
 	- put in the chords (fake book).
 	- put in the tune (fake book).
 	- added youtube performances.
+	- put in the lyrics (fake book).
 	TODO:
-	- add the lyrics.
 	- check the chords (fake book).
 	- check the tune (fake book).
 	- hear the tune to check that it is right and adjust the tempo.
@@ -105,5 +105,21 @@ doOwn = false
 	% part "A"
 	b8 c a b~ b4 a8 gis | \tuplet 3/2 { g4 a g } f e | a,4 d2.~ | d2. d8 e |
 	f8 g f e~ e4 d8 e | \tuplet 3/2 { f4 e f } a b | c1~ | c2. r4 |
+}
+{% endif %}
+{% if part == "LyricsFake" %}\lyricmode {
+	In a
+	% part "A"
+	quaint car -- a -- van __ there's a la -- dy they call the Gyp -- sy. __ She can
+	look in the fu -- ture, and drive a -- way all your fears. __ Ev' -- ry --
+	% part "A"
+	thing will come right __ if you on -- ly be -- lieve The Gyp -- sy. __ She could
+	tell at a glance __ that my heart was so full of tears. __ She
+	% part "B"
+	looked at my hand and told me, my lov -- er was al -- ways true, and
+	yet in my heart I knew dear, __ some -- bod -- y else __ was kiss -- ing you. But I'll
+	% part "A"
+	go there a -- gain __ 'cause I want to be -- lieve The Gyp -- sy, __ that my
+	lov -- er is true __ and will come back to me some day. __
 }
 {% endif %}
