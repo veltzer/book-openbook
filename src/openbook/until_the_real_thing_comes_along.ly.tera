@@ -26,8 +26,8 @@ remark = "Fats Waller and his Rhythm (1936)"
 [versions.Fake]
 doChords = true
 doVoice = true
-doLyrics = false
-doLyricsmore = false
+doLyrics = true
+doLyricsmore = true
 doLyricsmoremore = false
 doChordBars = false
 doGuitar = false
@@ -43,8 +43,8 @@ doOwn = false
 	- put in the chords (fake book).
 	- put in the tune (fake book).
 	- added youtube performances.
+	- put in the lyrics (fake book).
 	TODO:
-	- add the lyrics.
 	- check the chords (fake book).
 	- check the tune (fake book).
 	- hear the tune to check that it is right and adjust the tempo.
@@ -113,5 +113,38 @@ doOwn = false
 	% part "A"
 	bes4 bes bes4. g8 | bes4 bes bes2 | r8 d d c \tuplet 3/2 { d4 d c8 c } | d4 bes g4. c8 |
 	ees8 c ees c~ c4 fis,8 g | bes4 bes g2 | r8 ees ees ees f f c c | ees2. r4 |
+}
+{% endif %}
+{% if part == "LyricsFake" %}\lyricmode {
+
+	I'd
+
+	% part "A"
+	work for you, I'd slave for you, I'd be a beg -- gar or a knave for you: if
+	that is -- n't love, __ it will have to do
+
+	% part "Volta"
+	Un -- til The Real Thing Comes A -- long. _
+	Un -- til The Real Thing Comes A -- long.
+
+	% part "B"
+	With all the words, dear, at my com -- mand, I just can't make you un -- der -- stand.
+	I'll al -- ways love you, dar -- ling, come what may, my heart is yours, what more can I say? I'd
+
+	% part "A"
+	sigh for you, I'd cry for you, I'd tear the stars down from the sky for you: if
+	that is -- n't love, __ it will have to do, Un -- til The Real Thing Comes A -- long. __
+}
+{% endif %}
+{% if part == "LyricsmoreFake" %}\lyricmode {
+
+	_
+
+	% part "A"
+	glad -- ly move the earth for you, to prove my love, dear, and it's worth for you: if
+	that is -- n't love, __ it will have to do
+
+	% part "Volta"
+	_ _ _ _ _ _ _ _ I'd
 }
 {% endif %}
