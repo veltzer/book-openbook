@@ -26,9 +26,9 @@ remark = "Chick Webb with Ella Fitzgerald (1939)"
 [versions.Fake]
 doChords = true
 doVoice = true
-doLyrics = false
-doLyricsmore = false
-doLyricsmoremore = false
+doLyrics = true
+doLyricsmore = true
+doLyricsmoremore = true
 doChordBars = false
 doGuitar = false
 doExtra = false
@@ -43,8 +43,8 @@ doOwn = false
 	- put in the chords (fake book).
 	- put in the tune (fake book).
 	- added youtube performances.
+	- put in the lyrics (fake book).
 	TODO:
-	- add the lyrics.
 	- check the chords (fake book).
 	- check the tune (fake book).
 	- hear the tune to check that it is right and adjust the tempo.
@@ -107,5 +107,34 @@ doOwn = false
 
 	% part "Coda"
 	c1~ | c2. r4 |
+}
+{% endif %}
+{% if part == "LyricsFake" %}\lyricmode {
+
+	% part "A"
+	First you say you do and then you don't, __ and
+	then you say you will and then you won't. __ You're
+	Un -- de -- ci -- ded now, so what are you go -- na do? __
+	_ I've been
+
+	% part "B"
+	sit -- ting on a fence, and it does -- n't make much sense, 'cause you
+	keep me in sus -- pense and you know it. __ Then you
+	prom -- ise to re -- turn. When you don't, I real -- ly burn. Well, I
+	guess I'll nev -- er learn, and I show it. __
+}
+{% endif %}
+{% if part == "LyricsmoreFake" %}\lyricmode {
+
+	% part "A"
+	Now you want to play, and then it's no, __ and
+	when you say you'll stay, that's when you go. __
+}
+{% endif %}
+{% if part == "LyricsmoremoreFake" %}\lyricmode {
+
+	% part "A"
+	If you've got a heart and if you're kind, __ then
+	don't keep us a -- part. Make up your mind. __
 }
 {% endif %}

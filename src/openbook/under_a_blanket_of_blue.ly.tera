@@ -26,7 +26,7 @@ remark = "Ella Fitzgerald and Louis Armstrong (1956)"
 [versions.Fake]
 doChords = true
 doVoice = true
-doLyrics = false
+doLyrics = true
 doLyricsmore = false
 doLyricsmoremore = false
 doChordBars = false
@@ -43,8 +43,8 @@ doOwn = false
 	- put in the chords (fake book).
 	- put in the tune (fake book).
 	- added youtube performances.
+	- put in the lyrics (fake book).
 	TODO:
-	- add the lyrics.
 	- check the chords (fake book).
 	- check the tune (fake book).
 	- hear the tune to check that it is right and adjust the tempo.
@@ -101,5 +101,24 @@ doOwn = false
 	% part "A"
 	f,8 g aes c~ c aes g fis~ | fis1 | g8 bes c d~ d4 d | c4. g8 g2 |
 	ees'8 c ees c~ c4. c,8 | g'8 bes g2. | \tuplet 3/2 { f4 ees d } \tuplet 3/2 { f4 ees d } | ees1 |
+}
+{% endif %}
+{% if part == "LyricsFake" %}\lyricmode {
+
+	% part "A"
+	Un -- der A Blank -- et Of Blue, __ just you and I __ be -- neath the stars
+	wrapped in the arms __ of sweet ro -- mance, the night is ours. __
+
+	% part "A"
+	Un -- der A Blank -- et Of Blue, __ let me be thrilled __ by all your charms.
+	Dar -- ling, I know __ my heart will dance with -- in your arms. __
+
+	% part "B"
+	A sum -- mer night's mag -- ic en -- thrall -- ing me so;
+	the night would be trag -- ic if you were -- n't here __ to share it my dear. __
+
+	% part "A"
+	Cov -- ered with heav -- en a -- bove, __ let's dream a dream __ of love for two,
+	wrapped in the arms __ of sweet ro -- mance Un -- der A Blank -- et Of Blue.
 }
 {% endif %}
