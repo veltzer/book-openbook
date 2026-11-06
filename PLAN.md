@@ -183,23 +183,29 @@ quotes are not allowed in lyrics, use single quotes; a lyric that starts with
 a digit or contains special characters is written in double quotes as a
 lilypond string (`"500"`).
 
-Progress 2026-11-04 (end of day): 204 of the 396 fake book tunes with a
-poet now carry lyrics (about 160 added today). Work goes alphabetically; the
-L-O range is in progress, P-Z not started.
+Status 2026-11-07: the fake book pass is complete. 378 of the 396 fake
+book tunes with a poet carry lyrics; every one was compiled and its
+syllable-to-note alignment compared with the page bar by bar (except
+`twisted`, whose file has a TODO to do that check).
 
 Pages that print no lyrics (instrumental heads, nothing to add):
-`down_by_the_riverside`, `its_sand_man`, `johnnys_theme`.
+`down_by_the_riverside`, `its_sand_man`, `johnnys_theme`, `king_porter_stomp`,
+`maple_leaf_rag`, `salt_peanuts`, `shiny_stockings`, `swinging_shepherd_blues`,
+`tickle_toe`.
 
 Not done because the assistant's output filter refuses to reproduce these
 particular lyrics (type them by hand from the page): `arent_you_glad_youre_you`
 (48), `god_bless_the_child` (131), `i_wont_dance` (166),
-`is_you_is_or_is_you_aint` (188), possibly `lazy_afternoon` (212).
+`is_you_is_or_is_you_aint` (188), `lullaby_of_the_leaves` (231), `lush_life`
+(232), `sonny_boy` (354), `you_better_go_now` (439), `you_made_me_love_you`
+(440).
 
 Melody edits made while adding lyrics (the book prints no tie/slur there):
 `boplicity` bars 2-3 and 27. Bars where the book's ties and the typed melody
 disagree are listed as TODO lines in the files (`fever`,
 `a_lot_of_livin_to_do`, `frosty_the_snow_man`, `im_glad_there_is_you`,
-`lets_get_away_from_it_all`, `do_you_know_what_it_means_to_miss_new_orleans`).
+`lets_get_away_from_it_all`, `do_you_know_what_it_means_to_miss_new_orleans`,
+`put_your_little_foot_right_out`, `van_lingle_mungo`, `new_york_afternoon`).
 
 Fake book tunes missing lyrics at the start (353):
 

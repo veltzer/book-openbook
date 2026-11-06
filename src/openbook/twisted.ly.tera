@@ -44,6 +44,7 @@ doOwn = false
 	- added youtube performances.
 	- put in the lyrics (fake book).
 	TODO:
+	- check the lyrics against the fake book page bar by bar (they compile and fit the notes but were not compared with the page).
 	- check the chords (fake book).
 	- check the tune (fake book).
 	- hear the tune to check that it is right and adjust the tempo.
