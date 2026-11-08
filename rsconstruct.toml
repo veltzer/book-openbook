@@ -277,7 +277,8 @@ command = "python"
 args = ["-m", "scripts.wrapper_lilypond_explicit"]
 inputs = ["out/tera/src/test/demo.ly"]
 required_tools = ["lilypond"]
-output_files = ["out/smoke/demo.pdf", "out/smoke/demo.ps"]
+# lilypond also writes the midi, since demo.ly has a \midi block.
+output_files = ["out/smoke/demo.pdf", "out/smoke/demo.ps", "out/smoke/demo.midi"]
 
 # validate the generated website index page (part of the default build)
 [processor.checker.itidy]
