@@ -27,6 +27,12 @@ src_dirs = ["scripts", "config", "tests"]
 # golden tests pinning the driver generator (tests/test_drivers.py)
 [processor.checker.pytest]
 src_dirs = ["tests"]
+# Templates the tests render and compare against: an edit to one reruns them.
+dep_inputs = [
+    "src/include/common.ly.weave",
+    "src/test/demo.ly.tera",
+    "tests/expected_demo_driver.ly.tera",
+]
 
 # ─── shell ───────────────────────────────────────────────────────────────────
 
@@ -125,11 +131,13 @@ output_files = ["out/drivers/out/tera/books/guitar_album.ly.tera"]
 # Compile the tera-rendered book sources with lilypond. Each book is one
 # explicit product whose .ly input is a tera-processor output, so rsconstruct
 # orders tera before lilypond automatically and rebuilds a book only when its
-# rendered source changes.
+# rendered source changes. images/logo.eps is listed too: every book embeds
+# it (src/include/common.ly.weave), so a new logo rebuilds them; and so is
+# the wrapper, which `python -m` runs (the command is python, not the file).
 [processor.explicit.generic.openbook]
 command = "python"
 args = ["-m", "scripts.wrapper_lilypond_explicit"]
-inputs = ["out/tera/books/openbook.ly"]
+inputs = ["out/tera/books/openbook.ly", "images/logo.eps", "scripts/wrapper_lilypond_explicit.py"]
 required_tools = ["lilypond"]
 output_files = ["out/tera/books/openbook.pdf", "out/tera/books/openbook.ps"]
 
@@ -158,28 +166,28 @@ output_files = ["docs/output/openbook.pdf"]
 [processor.explicit.generic.israeli]
 command = "python"
 args = ["-m", "scripts.wrapper_lilypond_explicit"]
-inputs = ["out/tera/books/israeli.ly"]
+inputs = ["out/tera/books/israeli.ly", "images/logo.eps", "scripts/wrapper_lilypond_explicit.py"]
 required_tools = ["lilypond"]
 output_files = ["out/tera/books/israeli.pdf", "out/tera/books/israeli.ps"]
 
 [processor.explicit.generic.drumming]
 command = "python"
 args = ["-m", "scripts.wrapper_lilypond_explicit"]
-inputs = ["out/tera/books/drumming.ly"]
+inputs = ["out/tera/books/drumming.ly", "images/logo.eps", "scripts/wrapper_lilypond_explicit.py"]
 required_tools = ["lilypond"]
 output_files = ["out/tera/books/drumming.pdf", "out/tera/books/drumming.ps"]
 
 [processor.explicit.generic.rockbook]
 command = "python"
 args = ["-m", "scripts.wrapper_lilypond_explicit"]
-inputs = ["out/tera/books/rockbook.ly"]
+inputs = ["out/tera/books/rockbook.ly", "images/logo.eps", "scripts/wrapper_lilypond_explicit.py"]
 required_tools = ["lilypond"]
 output_files = ["out/tera/books/rockbook.pdf", "out/tera/books/rockbook.ps"]
 
 [processor.explicit.generic.guitar_album]
 command = "python"
 args = ["-m", "scripts.wrapper_lilypond_explicit"]
-inputs = ["out/tera/books/guitar_album.ly"]
+inputs = ["out/tera/books/guitar_album.ly", "images/logo.eps", "scripts/wrapper_lilypond_explicit.py"]
 required_tools = ["lilypond"]
 output_files = ["out/tera/books/guitar_album.pdf", "out/tera/books/guitar_album.ps"]
 

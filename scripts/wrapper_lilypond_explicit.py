@@ -6,8 +6,12 @@ Compile a LilyPond source to pdf+ps for the rsconstruct explicit processor.
 Invoked per the explicit-processor contract:
 
     python -m scripts.wrapper_lilypond_explicit \
-        --inputs out/tera/books/<name>.ly \
+        --inputs out/tera/books/<name>.ly [files the book reads...] \
         --output-files out/tera/books/<name>.pdf out/tera/books/<name>.ps
+
+Exactly one input is the .ly to compile. The others are files the book
+reads (the logo it embeds), listed so that rsconstruct rebuilds the book
+when they change; they are not passed to lilypond.
 
 Same decisions as the wrapper the retired Makefile used to drive:
 suppress lilypond's console noise unless it fails, and never leave
@@ -32,9 +36,10 @@ def main() -> int:
     parser.add_argument("--inputs", nargs="+", required=True)
     parser.add_argument("--output-files", nargs="+", required=True, dest="output_files")
     args = parser.parse_args()
-    if len(args.inputs) != 1:
+    sources = [p for p in args.inputs if p.endswith(".ly")]
+    if len(sources) != 1:
         raise ValueError(f"expected exactly one .ly input, got {args.inputs}")
-    source = Path(args.inputs[0])
+    source = Path(sources[0])
     outputs = [Path(p) for p in args.output_files]
     stems = {p.parent / p.stem for p in outputs}
     if len(stems) != 1:
