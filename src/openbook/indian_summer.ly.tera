@@ -5,6 +5,7 @@ default_version = "Wikifonia"
 title = "Indian Summer"
 style = "Jazz"
 composer = "Victor Herbert"
+poet = "Al Dubin"
 piece = "Jazz"
 typesetter = "OpenBook contributors (MusicXML import)"
 completion = "3"
@@ -15,7 +16,7 @@ copyright = "All Rights Reserved"
 [versions.Wikifonia]
 doChords = true
 doVoice = true
-doLyrics = false
+doLyrics = true
 doLyricsmore = false
 doLyricsmoremore = false
 doChordBars = false
@@ -34,6 +35,7 @@ doOwn = false
 	- retained the original copyright notice where printed; the underlying music is not relicensed.
 	- retained written measures, pickups, repeats and endings; lyrics omitted.
 	- tempo is an editorial practice suggestion.
+	- put in the lyrics from the same Wikifonia source; typos fixed.
 	TODO:
 	- proofread the music against the referenced PDF and check by ear.
 	- verify the copyright notice against the scan; no readable per-tune notice was recovered, so the archived rights notice is retained where available.
@@ -121,5 +123,14 @@ doOwn = false
 	a'8 c''4. ~ c''2 ~ |
 	c''2 r2 |
 	\endBar
+}
+{% endif %}
+{% if part == "LyricsWikifonia" %}\lyricmode {
+	Sum -- mer, __ You old In -- di -- an Sum -- _ mer, you're the tear that comes af -- ter __
+	June -- time's __ laugh -- ter; __ you see so man -- y dreams that __ don't come __ true, __ _
+	dreams we fash -- ioned when sum -- mer -- time __ was __ new. __ _ You are here to watch o --
+	ver __ some heart that is brok -- en __ by a word that some -- bod -- y __ left un -- spok --
+	en; __ you're the ghost of a ro -- mance in June go -- ing a -- stray, fad -- ing too soon,
+	that's why I say fare -- well __ to you, In -- di -- an Sum -- mer. __
 }
 {% endif %}

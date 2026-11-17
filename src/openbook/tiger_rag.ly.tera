@@ -5,9 +5,10 @@ default_version = "Wikifonia"
 title = "Tiger Rag"
 style = "Jazz"
 composer = "Original Dixieland Jazz Band"
+poet = "Harry DeCosta"
 piece = "Swing"
 copyright = "Original composition (1917); public domain in the US"
-copyrightextra = "Instrumental lead sheet; later lyrics and arrangements are excluded."
+copyrightextra = "Lead sheet with lyrics from the archived MusicXML."
 typesetter = "OpenBook contributors (MusicXML import)"
 completion = "3"
 uuid = "b7f60eca-c485-5484-bff7-eb6286412df8"
@@ -17,7 +18,7 @@ remark = "Copyright status outside the US may differ."
 [versions.Wikifonia]
 doChords = true
 doVoice = true
-doLyrics = false
+doLyrics = true
 doLyricsmore = false
 doLyricsmoremore = false
 doChordBars = false
@@ -34,7 +35,8 @@ doOwn = false
 	- local source: real_books_archive.gi/Wikifonia.tar.xz: Wikifonia/Original Dixieland Jazz Band, Harry DeCosta - Tiger Rag.mxl.
 	- jazz real/fake-book references: Firehouse_Jazz_Band:162.
 	- source revision: http://wikifonia.org/node/9068/revisions/12467/view.
-	- retained written measures, pickups, repeats and endings; lyrics and accompaniment omitted.
+	- retained written measures, pickups, repeats and endings; accompaniment omitted.
+	- put in the lyrics from the same Wikifonia source; typos fixed.
 	- the original composition is public domain in the US; no claim is made about later editions.
 	- US term reference: https://cspd.law.duke.edu/publicdomainday/2026.
 	- tempo is an editorial practice suggestion.
@@ -142,5 +144,13 @@ doOwn = false
 	}
 	g'2 r2 |
 	\endBar
+}
+{% endif %}
+{% if part == "LyricsWikifonia" %}\lyricmode {
+	Where's that ti -- ger! Where's that ti -- ger! Where's that ti -- ger! Where's that ti --
+	ger! Hold that ti -- ger! Hold that ti -- ger! Hold that ti -- ger! Choke him, poke him,
+	kick him and soak him! Where's that ti -- ger? Where's that ti -- ger? Where, __ oh where __
+	can he be? __ Low or high -- brow, they all cry "now:" "'Please" play that ti -- ger rag __
+	for me. __
 }
 {% endif %}

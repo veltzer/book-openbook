@@ -5,9 +5,10 @@ default_version = "Wikifonia"
 title = "Muskrat Ramble"
 style = "Jazz"
 composer = "Kid Ory"
+poet = "Ray Gilbert"
 piece = "Swing"
 copyright = "Original composition (1926); public domain in the US"
-copyrightextra = "Instrumental lead sheet; later lyrics and arrangements are excluded."
+copyrightextra = "Lead sheet with lyrics from the archived MusicXML."
 typesetter = "OpenBook contributors (MusicXML import)"
 completion = "3"
 uuid = "6288fcd2-57fb-532d-9a5c-f85a1ac439f8"
@@ -17,8 +18,8 @@ remark = "Copyright status outside the US may differ."
 [versions.Wikifonia]
 doChords = true
 doVoice = true
-doLyrics = false
-doLyricsmore = false
+doLyrics = true
+doLyricsmore = true
 doLyricsmoremore = false
 doChordBars = false
 doGuitar = false
@@ -34,7 +35,8 @@ doOwn = false
 	- local source: real_books_archive.gi/Wikifonia.tar.xz: Wikifonia/Edward Ory, Ray Gilbert - Muskrat Ramble.mxl.
 	- jazz real/fake-book references: Firehouse_Jazz_Band:164.
 	- source revision: http://wikifonia.org/node/9308/revisions/20009/view.
-	- retained written measures, pickups, repeats and endings; lyrics and accompaniment omitted.
+	- retained written measures, pickups, repeats and endings; accompaniment omitted.
+	- put in the lyrics from the same Wikifonia source; typos fixed.
 	- the original composition is public domain in the US; no claim is made about later editions.
 	- US term reference: https://cspd.law.duke.edu/publicdomainday/2026.
 	- tempo is an editorial practice suggestion.
@@ -140,5 +142,30 @@ doOwn = false
 	}
 	}
 	\endBar
+}
+{% endif %}
+{% if part == "LyricsWikifonia" %}\lyricmode {
+	Look at them shuf -- fl -- in', a shuf -- fl -- in "down;" __ Ram -- bl -- in', scram --
+	bl -- in', a -- head -- in' for town. __ Hus -- tl -- in', bus -- tl -- in', and buz --
+	zin' a -- roun', __ Hap -- pi -- ly a -- wait -- in' at the sta -- tion. Look at the
+	train, __ the num -- ber sev -- en -- o -- nine. __ Huff -- in' and puff -- in' and a --
+	riv -- in' on time. __ Who do you think's a -- bout to "'rive?" __ The band __ they call
+	"'The" Dix -- ie -- land Five.' They're gon -- na' play that Musk -- rat Ram -- ble tune.
+	the way you nev -- er ev -- er heard it played. __ Get read -- y for the big pa -- rade, __
+	All to -- geth -- er now, one and two, Come on and join the hap -- py throng, Feel the
+	beat of that ram -- bl -- in' scram -- bl -- in', musk -- rat song __ Come on and ram --
+	ble a -- long.
+}
+{% endif %}
+{% if part == "LyricsmoreWikifonia" %}\lyricmode {
+	Look at them shuf -- fl -- in', a shuf -- fl -- in' "down;" __ Look at the band __ par --
+	a -- din' all ov -- er town. __ Look at the hap -- pi -- ness a -- go -- in' a -- roun', __
+	Ev -- "'ry" -- bod -- y's up and cel -- e -- brat -- in'. Look at the drum -- mer en --
+	ter -- tain -- in' the gang. __ cling -- in' and clang -- in' with a bing and a bang. __
+	Chang -- in' the town from dead to "'live!" __ The band __ they call "'The" Dix -- ie --
+	land Five.' You're gon -- na hear them play the Dix -- ie -- land, you bet -- ter get your
+	res -- er -- va -- tion planned. __ In per -- son on a one night stand, __ All to -- geth --
+	er now, come on folks! Come on and join the hap -- py throng, Feel the beat of that shuf --
+	fl -- in', scuf -- fl -- in', musk -- rat song __ Come on and ram -- ble a -- _ long.
 }
 {% endif %}

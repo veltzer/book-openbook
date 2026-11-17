@@ -94,7 +94,7 @@ format as input format - so there could not be much co-operation there.
 
 ## Do you only allow Jazz tunes?
 No. Rock and Pop will be welcome and so would classical.
-If you are really into classical lilypond production, you may alternativly
+If you are really into classical lilypond production, you may alternatively
 wish to contribute to the mutopia project at http://www.mutopiaproject.org/.
 
 ## How do I build the pdfs?
@@ -129,7 +129,7 @@ tune's metadata as TOML front matter followed by sections. Just copy them from
 some other tune. One section for chords, another for lyrics, another for the
 melody etc.
 The build picks the new tune up by itself — no other file needs editing.
-After working on the tune build just that single tune by issueing:
+After working on the tune build just that single tune by issuing:
 ```sh
 rsconstruct build --iset processor.generator.generic.songs_pdf.enabled=true -t "*[tunename]*"
 ```

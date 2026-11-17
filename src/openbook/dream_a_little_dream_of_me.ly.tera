@@ -5,9 +5,10 @@ default_version = "Wikifonia"
 title = "Dream a Little Dream of Me"
 style = "Jazz"
 composer = "Fabian Andre, Wilbur Schwandt"
+poet = "Gus Kahn"
 piece = "Swing"
 copyright = "Original composition (1930); public domain in the US"
-copyrightextra = "Instrumental lead sheet; later lyrics and arrangements are excluded."
+copyrightextra = "Lead sheet with lyrics from the archived MusicXML."
 typesetter = "OpenBook contributors (MusicXML import)"
 completion = "3"
 uuid = "8dc2bfee-0dbd-545a-b14a-69cbd176eadc"
@@ -17,7 +18,7 @@ remark = "Copyright status outside the US may differ."
 [versions.Wikifonia]
 doChords = true
 doVoice = true
-doLyrics = false
+doLyrics = true
 doLyricsmore = false
 doLyricsmoremore = false
 doChordBars = false
@@ -34,7 +35,8 @@ doOwn = false
 	- local source: real_books_archive.gi/Wikifonia.tar.xz: Wikifonia/Wilbur Schwandt and Fabian Andre, Gus Kahn - Dream A Little Dream Of Me.mxl.
 	- jazz real/fake-book references: Great_Gig_Book:154, Ultimate-Fake-Book-C:164.
 	- source revision: http://wikifonia.org/node/3770/revisions/28321/view.
-	- retained written measures, pickups, repeats and endings; lyrics and accompaniment omitted.
+	- retained written measures, pickups, repeats and endings; accompaniment omitted.
+	- put in the lyrics from the same Wikifonia source; typos fixed.
 	- the original composition is public domain in the US; no claim is made about later editions.
 	- US term reference: https://cspd.law.duke.edu/publicdomainday/2026.
 	- tempo is an editorial practice suggestion.
@@ -128,5 +130,16 @@ doOwn = false
 	g'1 |
 	}
 	\endBar
+}
+{% endif %}
+{% if part == "LyricsWikifonia" %}\lyricmode {
+	Stars shin -- ing bright a -- bove you, Night breez -- es seem to whis -- per, "'I" love
+	you.' Birds sing -- ing in the syc -- a -- more tree, "'Dream" a lit -- tle dream of me.'
+	Say "'night" -- y -- night' and kiss "me;" Just hold me tight and tell me you'll miss me.
+	While I'm a -- lone and blue as can be Dream a lit -- tle dream of me. Stars fad -- ing,
+	but I lin -- ger on, dear, Still crav -- ing your "kiss;" I'm long -- ing to lin -- ger
+	till dawn, dear Just say -- ing "this:" Sweet dreams "'til" sun -- beams find you, Sweet
+	dreams that leave all wor -- ries be -- hind "you;" But in your dreams, what -- ev -- er
+	they be, Dream a lit -- tle dream of me.
 }
 {% endif %}
