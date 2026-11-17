@@ -24,7 +24,7 @@ remark = "Louis Armstrong and the All-Stars"
 [versions.Fake]
 doChords = true
 doVoice = true
-doLyrics = false
+doLyrics = true
 doLyricsmore = false
 doLyricsmoremore = false
 doChordBars = false
@@ -41,8 +41,8 @@ doOwn = false
 	- put in the chords (fake book).
 	- put in the tune (fake book).
 	- added youtube performances.
+	- put in the lyrics from the page (the song is by Hughie Cannon (1902), public domain).
 	TODO:
-	- add the lyrics.
 	- check the chords (fake book).
 	- check the tune (fake book).
 	- hear the tune to check that it is right and adjust the tempo.
@@ -112,5 +112,13 @@ doOwn = false
 			g1~ | g4 r r2 |
 		}
 	}
+}
+{% endif %}
+{% if part == "LyricsFake" %}\lyricmode {
+	Won't you come home, Bill Bai -- ley, Won't you come home? She moans the whole day long; __ _
+	I'll do de cook -- ing, dar -- ling, I'll pay de rent, I know I've done you wrong. __ _
+	'Mem -- ber dat rain -- y eve dat I drove you out, wid noth -- in but a fine tooth comb? I
+	know I'se to blame, well, ain't dat a shame? Bill Bai -- ley, won't you please come
+	home? home?
 }
 {% endif %}

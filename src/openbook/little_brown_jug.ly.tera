@@ -24,8 +24,8 @@ remark = "The Kings Of Dixieland"
 [versions.Fake]
 doChords = true
 doVoice = true
-doLyrics = false
-doLyricsmore = false
+doLyrics = true
+doLyricsmore = true
 doLyricsmoremore = false
 doChordBars = false
 doGuitar = false
@@ -41,8 +41,8 @@ doOwn = false
 	- put in the chords (fake book).
 	- put in the tune (fake book).
 	- added youtube performances.
+	- put in the lyrics from the page (the song is by Joseph Winner (1869), public domain) (second stanza in Lyricsmore, as far as the page prints it).
 	TODO:
-	- add the lyrics.
 	- check the chords (fake book).
 	- check the tune (fake book).
 	- hear the tune to check that it is right and adjust the tempo.
@@ -99,5 +99,19 @@ doOwn = false
 			g4 g g2 | a4 a a2 | b8 b b4 a b | c g c2 |
 		}
 	}
+}
+{% endif %}
+{% if part == "LyricsFake" %}\lyricmode {
+	My wife and I lived all a -- lone in a lit -- tle log hut we called our own;
+	she loved gin and I loved rum. I tell you what, we'd lots of fun!
+	Ha, ha, ha, you and me, Lit -- tle Brown Jug don't I love thee!
+	Ha, ha, ha, you and me, Lit -- tle Brown Jug don't I love thee! 'Tis
+	Ha, ha, ha, you and me, Lit -- tle Brown Jug don't I love thee!
+}
+{% endif %}
+{% if part == "LyricsmoreFake" %}\lyricmode {
+	_
+	you who makes my friends my foes; 'tis __ _ you __ _ who makes me wear old clothes.
+	Here you are so near my nose, so tip her up and down she goes!
 }
 {% endif %}

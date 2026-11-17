@@ -25,7 +25,7 @@ remark = "Aretha Franklin from the album Amazing Grace (1972)"
 [versions.Fake]
 doChords = true
 doVoice = true
-doLyrics = false
+doLyrics = true
 doLyricsmore = false
 doLyricsmoremore = false
 doChordBars = false
@@ -42,8 +42,8 @@ doOwn = false
 	- put in the chords (fake book).
 	- put in the tune (fake book).
 	- added youtube performances.
+	- put in the lyrics from the page (the words are John Newton's hymn (1779), public domain).
 	TODO:
-	- add the lyrics.
 	- check the chords (fake book).
 	- check the tune (fake book).
 	- hear the tune to check that it is right and adjust the tempo.
@@ -98,5 +98,11 @@ doOwn = false
 			g2.~ | g4 r r |
 		}
 	}
+}
+{% endif %}
+{% if part == "LyricsFake" %}\lyricmode {
+	A maz -- ing __ _ Grace! How sweet the sound that saved a __ _ wretch like me! I
+	once __ _ was __ _ lost, but now __ _ am __ _ found; was blind, but __ _ now I see. A
+	see.
 }
 {% endif %}

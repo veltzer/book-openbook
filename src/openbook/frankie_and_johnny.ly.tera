@@ -24,7 +24,7 @@ remark = "Louis Armstrong and the All-Stars"
 [versions.Fake]
 doChords = true
 doVoice = true
-doLyrics = false
+doLyrics = true
 doLyricsmore = false
 doLyricsmoremore = false
 doChordBars = false
@@ -41,8 +41,8 @@ doOwn = false
 	- put in the chords (fake book).
 	- put in the tune (fake book).
 	- added youtube performances.
+	- put in the lyrics from the page (the words are traditional, public domain).
 	TODO:
-	- add the lyrics.
 	- check the chords (fake book).
 	- check the tune (fake book).
 	- hear the tune to check that it is right and adjust the tempo.
@@ -83,5 +83,14 @@ doOwn = false
 	c8 d e a~ a g a4 | c,8 c4. r4 r8 c | c8 d e a~ a g a4 | c,1 |
 	f8 g a c~ c d4 a8 | c8 c4.~ c8 r a b | c4 c b a | g4 e e8 ees4 d8~ |
 	d1~ | d4 a'8 g a4 g | c8 r r4 r2 | r1 |
+}
+{% endif %}
+{% if part == "LyricsFake" %}\lyricmode {
+	Frank -- ie and John -- ny were sweet -- hearts. Oh! What a cou -- ple in love.
+	Frank -- ie was loy -- al to John -- ny, __ just as true as stars a -- bove. He was her man, __
+	but he done her wrong.
+	This is the end __ of my stor -- y, and this is the end __ of my song.
+	Frank -- ie is down __ in the jail -- house __ and she cries the whole night long, He was my man, __
+	but he done me wrong.
 }
 {% endif %}
