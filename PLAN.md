@@ -222,7 +222,7 @@ second stanza in `Lyricsmore`), `you_made_me_love_you` (jfb:440-441),
 PDF page = book page - 2), `amazing_grace` (jfb:44), `bill_bailey`
 (jfb:58), `frankie_and_johnny` (jfb:124), `little_brown_jug` (jfb:222).
 
-Status 2026-11-17 (batch 3): lyrics added to 113 more songs. 105 from their
+Status 2026-11-17 (batch 3): lyrics added to 120 more songs. 105 from their
 own Wikifonia `.mxl` (`a_pretty_girl_is_like_a_melody`,
 `a_ship_without_a_sail`, `ach_du_lieber_augustin`, `after_the_ball`,
 `ah_sweet_mystery_of_life`, `alabama_jubilee`, `alice_blue_gown`,
@@ -260,12 +260,13 @@ own Wikifonia `.mxl` (`a_pretty_girl_is_like_a_melody`,
 `we_wish_you_a_merry_christmas`, `wearing_of_the_green`, `wedding_bells`,
 `whatll_i_do`, `when_day_is_done`, `when_irish_eyes_are_smiling`,
 `why_was_i_born`, `yes_we_have_no_bananas`,
-`you_brought_a_new_kind_of_love_to_me`, `yours_is_my_heart_alone`) and 8
-aligned by hand (`buddy_bolden_blues`, `dark_eyes`, `down_by_the_riverside`,
-`hava_nagilah`, `see_see_rider`, `strike_up_the_band`,
-`sweet_georgia_brown`, `when_the_saints_go_marching_in`). Every other tune
-with a poet and no lyrics has lyrics still under copyright (published 1931
-or later).
+`you_brought_a_new_kind_of_love_to_me`, `yours_is_my_heart_alone`) and 15
+aligned by hand (`apres_un_reve`, `buddy_bolden_blues`, `dark_eyes`,
+`down_by_the_riverside`, `el_choclo`, `el_relicario`, `hava_nagilah`,
+`la_cumparsita`, `la_paloma`, `misirlou`, `see_see_rider`,
+`strike_up_the_band`, `sweet_georgia_brown`, `two_guitars`,
+`when_the_saints_go_marching_in`). Every other tune with a poet and no
+lyrics has lyrics still under copyright (published 1931 or later).
 
 Pages that print no lyrics (instrumental heads, nothing to add):
 `its_sand_man`, `johnnys_theme`, `king_porter_stomp`, `maple_leaf_rag`,

@@ -4,7 +4,8 @@ default_version = "Wikifonia"
 [attributes]
 title = "La Paloma"
 style = "Jazz"
-composer = "Sebastian Yradien"
+composer = "Sebastián Iradier"
+poet = "Sebastián Iradier"
 piece = "Standard"
 typesetter = "OpenBook contributors (MusicXML import)"
 completion = "3"
@@ -16,7 +17,7 @@ copyrightextra = "Archived MusicXML notice retained; underlying music is not rel
 [versions.Wikifonia]
 doChords = true
 doVoice = true
-doLyrics = false
+doLyrics = true
 doLyricsmore = false
 doLyricsmoremore = false
 doChordBars = false
@@ -33,8 +34,9 @@ doOwn = false
 	- source revision: http://wikifonia.org/node/9289/revisions/29325/view.
 	- book index reference: Great_Gig_Book:345 (real_books_archive.gi/index); index pagination is not a verified PDF page number.
 	- retained the archived MusicXML rights notice; no redistribution permission is asserted.
-	- retained written melody, chord changes, pickups, repeats and numbered endings; lyrics, slurs, dynamics and articulations other than fermatas omitted.
+	- retained written melody, chord changes, pickups, repeats and numbered endings; slurs, dynamics and articulations other than fermatas omitted.
 	- tempo is an editorial practice suggestion.
+	- put in the original Spanish lyrics (1863, public domain), aligned to this melody.
 	TODO:
 	- proofread the complete melody, harmony and form against a printed edition and check by ear.
 	- verify source attribution, copyright notice and reuse terms; only the archived MusicXML notice is retained.
@@ -149,5 +151,17 @@ doOwn = false
 	c''1 ~ |
 	c''2. r4 |
 	\endBar
+}
+{% endif %}
+{% if part == "LyricsWikifonia" %}\lyricmode {
+	Cuan -- do __ sa -- lí de la Ha -- ba -- na, ¡vál -- ga -- me Dios! __
+	Na -- die __ me~ha vis -- to sa -- lir si no fui yo. __
+	Y~u -- na lin -- da gua -- chi -- nan -- ga a -- llá voy yo, __
+	que se vi -- no tras de mí, que sí, se -- ñor. __
+	Si~a tu ven -- ta -- na lle -- ga u -- na pa -- lo -- ma, __
+	trá -- ta -- la con ca -- ri -- ño que~es mi per -- so -- na;
+	cuén -- ta -- le tus a -- mo -- res, bien de mi vi -- da,
+	co -- ró -- na -- la de flo -- res __ que~es co -- sa mí -- a.
+	¡Ay, chi -- ni -- ta que sí! ¡Ay, que da -- me tu~a -- mor! __
 }
 {% endif %}

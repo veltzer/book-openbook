@@ -5,6 +5,7 @@ default_version = "Wikifonia"
 title = "La Cumparsita"
 style = "Jazz"
 composer = "Gerardo Matos Rodríguez"
+poet = "Pascual Contursi, Enrique Pedro Maroni"
 piece = "Standard"
 typesetter = "OpenBook contributors (MusicXML import)"
 completion = "3"
@@ -16,7 +17,7 @@ copyrightextra = "Archived MusicXML notice retained; underlying music is not rel
 [versions.Wikifonia]
 doChords = true
 doVoice = true
-doLyrics = false
+doLyrics = true
 doLyricsmore = false
 doLyricsmoremore = false
 doChordBars = false
@@ -33,8 +34,9 @@ doOwn = false
 	- source revision: http://wikifonia.org/node/9375/revisions/20610/view.
 	- book index reference: Great_Gig_Book:345 (real_books_archive.gi/index); index pagination is not a verified PDF page number.
 	- retained the archived MusicXML rights notice; no redistribution permission is asserted.
-	- retained written melody, chord changes, pickups, repeats and numbered endings; lyrics, slurs, dynamics and articulations other than fermatas omitted.
+	- retained written melody, chord changes, pickups, repeats and numbered endings; slurs, dynamics and articulations other than fermatas omitted.
 	- tempo is an editorial practice suggestion.
+	- put in the Spanish lyrics (1924, public domain in the US), aligned to this melody.
 	TODO:
 	- proofread the complete melody, harmony and form against a printed edition and check by ear.
 	- verify source attribution, copyright notice and reuse terms; only the archived MusicXML notice is retained.
@@ -127,5 +129,18 @@ doOwn = false
 	r8 d''8 a''8 fis''8 d''8 c''4 fis''8 |
 	g''4 d''4 es''8 fis''8 ^\markup{ \bold\small {D.C.alfine} } g''4 |
 	\endBar
+}
+{% endif %}
+{% if part == "LyricsWikifonia" %}\lyricmode {
+	Si su -- pie -- ras, que~a -- ún den -- tro de mi al -- ma, con -- ser -- vo~a -- quel ca --
+	ri -- ño que tu -- ve pa -- ra ti... Quién sa -- be si su -- pie -- ras
+	que nun -- ca te~he ol -- vi -- da -- do, vol -- vien -- do~a tu pa -- sa -- do te~a --
+	cor -- da -- rás de mí... Los a -- mi -- gos ya no vie -- nen ni si -- quie -- ra
+	a vi -- si -- tar -- me, na -- die quie -- re
+	la cum -- par -- si -- ta de mi -- se -- rias sin fin des -- fi -- la~en tor -- no de~a -- quel
+	ser en -- fer -- mo que pron -- to~ha de mo -- rir de pe -- na. Por
+	e -- so cuan -- do en la qui -- e -- ta no -- che mi al -- ma so -- la can -- ta,
+	re -- cuer -- da~a -- quel a -- mor que ya se fue y que
+	nun -- ca ja -- más vol -- ve -- rá~a mí. _ _
 }
 {% endif %}

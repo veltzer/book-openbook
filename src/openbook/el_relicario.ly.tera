@@ -5,6 +5,7 @@ default_version = "Wikifonia"
 title = "El Relicario"
 style = "Standard"
 composer = "Jose Padilla"
+poet = "Armando Oliveros, Jose Maria Castellvi"
 piece = "Standard"
 typesetter = "OpenBook contributors (MusicXML import)"
 completion = "3"
@@ -16,7 +17,7 @@ copyrightextra = "Archived MusicXML notice retained; underlying music is not rel
 [versions.Wikifonia]
 doChords = true
 doVoice = true
-doLyrics = false
+doLyrics = true
 doLyricsmore = false
 doLyricsmoremore = false
 doChordBars = false
@@ -34,9 +35,10 @@ doOwn = false
 	- local PDF: real_books_archive.gi/The Book.pdf.
 	- book index reference: TheBook:303; index pagination is not a verified PDF page number.
 	- retained the archived MusicXML rights notice; no redistribution permission is asserted.
-	- retained written melody, chord changes, pickups, repeats and numbered endings; lyrics omitted.
+	- retained written melody, chord changes, pickups, repeats and numbered endings.
 	- imported explicit 7alt symbols using the book's altered-dominant notation where present.
 	- tempo is an editorial practice suggestion.
+	- put in the original Spanish lyrics (1914, public domain in the US), aligned to this melody.
 	TODO:
 	- proofread the complete melody, harmony and form against the referenced PDF and check by ear.
 	- verify source attribution, copyright notice and reuse terms against the scan; only the archived MusicXML notice is retained.
@@ -155,5 +157,17 @@ doOwn = false
 	d'2. ~ |
 	d'4 r4 r4 |
 	\endBar
+}
+{% endif %}
+{% if part == "LyricsWikifonia" %}\lyricmode {
+	_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _
+	Un dí -- a de San Eu -- ge -- nio, yen -- do ha -- cia~el Par -- do, le co -- no -- cí; __
+	e -- ra~el to -- re -- ro de más sa -- le -- _ _ ro
+	y~el más cas -- ti -- zo de to -- do Ma -- _ _ drid. _ _ _
+	_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _
+	Pi -- sa, mo -- re -- na, pi -- sa con gar -- bo,
+	que~un re -- li -- ca -- rio, que~un re -- li -- ca -- rio me voy a~ha -- cer, __
+	con el tro -- ci -- to de mi ca -- po -- te
+	que~ha pi -- so -- tea -- do, que~ha pi -- so -- tea -- do tan lin -- do pie. __
 }
 {% endif %}

@@ -4,10 +4,11 @@ default_version = "Wikifonia"
 [attributes]
 title = "Two Guitars"
 style = "Gypsy Jazz"
-composer = "Traditional"
+composer = "Ivan Vasiliev"
+poet = "Apollon Grigoryev"
 piece = "Moderato"
 copyright = "Public domain composition"
-copyrightextra = "Source MusicXML marked Public Domain; instrumental lead sheet."
+copyrightextra = "Source MusicXML marked Public Domain; lead sheet with the traditional lyrics."
 typesetter = "OpenBook contributors (MusicXML import)"
 completion = "3"
 uuid = "667465ba-158c-497c-a3da-a1e63001b38e"
@@ -17,7 +18,7 @@ location = "Fakebook_Django:232"
 [versions.Wikifonia]
 doChords = true
 doVoice = true
-doLyrics = false
+doLyrics = true
 doLyricsmore = false
 doLyricsmoremore = false
 doChordBars = false
@@ -31,7 +32,8 @@ doOwn = false
 {% if part == "Doc" %}
 	DONE:
 	- imported melody and chords from real_books_archive.gi/Wikifonia.tar.xz: Wikifonia/Traditional - Two Guitars.mxl.
-	- source edition explicitly declares Public Domain; imported without lyrics.
+	- source edition explicitly declares Public Domain.
+	- put in the traditional Russian lyrics (Apollon Grigoryev, 1857, public domain), transliterated and aligned to this melody.
 	- retained the written form, pickups, repeats and chord durations.
 	- source revision: http://wikifonia.org/node/18380/revisions/24361/view.
 	- tempo is an editorial practice suggestion, not a verified recording tempo.
@@ -109,5 +111,16 @@ doOwn = false
 	d'1 ~ |
 	d'1 |
 	\endBar
+}
+{% endif %}
+{% if part == "LyricsWikifonia" %}\lyricmode {
+	Dve gi -- ta -- ry, za -- ste -- na -- ya, zha -- lob -- no za -- ny -- li,
+	s~det -- stva pa -- myat' na -- pe -- va -- ya, sta -- ry -- ye a -- mi -- li,
+	sta -- ry -- ye, da chto -- to mi -- lo -- ye by -- lo -- ye!
+	Ekh, __ raz, ye -- shchyo raz, ye -- shchyo __ mno -- go raz,
+	ekh, __ raz, ye -- shchyo raz, mno -- go, __ mno -- go raz!
+	Chto __ za go -- re, v~sa -- mom de -- le,
+	ne -- uzh -- to nam gru -- stit' vpe -- ryod?
+	Poy, gi -- ta -- ra, poy, zve -- ni do~u -- tra! __
 }
 {% endif %}

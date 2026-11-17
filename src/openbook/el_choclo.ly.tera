@@ -5,9 +5,10 @@ default_version = "Wikifonia"
 title = "El Choclo"
 style = "Tango"
 composer = "Angel Villoldo"
+poet = "Angel Villoldo"
 piece = "Tango"
 copyright = "Public domain composition"
-copyrightextra = "Source MusicXML marked Public Domain; instrumental lead sheet."
+copyrightextra = "Source MusicXML marked Public Domain; lead sheet with the original lyrics."
 typesetter = "OpenBook contributors (MusicXML import)"
 completion = "3"
 uuid = "db2647e1-b833-48d9-9589-c0b432e08c5e"
@@ -17,7 +18,7 @@ location = "Wikifonia"
 [versions.Wikifonia]
 doChords = true
 doVoice = true
-doLyrics = false
+doLyrics = true
 doLyricsmore = false
 doLyricsmoremore = false
 doChordBars = false
@@ -31,7 +32,8 @@ doOwn = false
 {% if part == "Doc" %}
 	DONE:
 	- imported melody and chords from real_books_archive.gi/Wikifonia.tar.xz: Wikifonia/Angel Villoldo - El Choclo.mxl.
-	- source edition explicitly declares Public Domain; imported without lyrics.
+	- source edition explicitly declares Public Domain.
+	- put in the original lyrics (Angel Villoldo, 1903, public domain), aligned to this melody.
 	- retained the written form, pickups, repeats and chord durations.
 	- normalized missing forward-repeat markers and the unlabeled first ending before the printed second ending.
 	- source revision: http://wikifonia.org/node/9415/revisions/12881/view.
@@ -148,5 +150,25 @@ doOwn = false
 	}
 	d''2 r2 _\markup{ \bold\tiny {D.C. al Fine} } |
 	\endBar
+}
+{% endif %}
+{% if part == "LyricsWikifonia" %}\lyricmode {
+	Hay cho -- clos que tie -- nen las es -- pi -- gas de~o -- ro,
+	que son las que~a -- do -- ro con tier -- na pa -- sión,
+	cuan -- do tra -- ba -- jan -- do sul -- cos en la tie -- rra
+	jun -- to~a la carre -- ta u -- no~y o -- tro van.
+	Es mu -- y bo -- ni -- to ver en la co -- se -- cha
+	des -- ho -- jar las cha -- las y~al fue -- go e -- char,
+	mien -- tras al -- re -- de -- dor to -- dos se re -- ú -- nen
+	de -- jan -- do~el her -- vor en la o -- lla can -- tar.
+	Y cuan -- do la tar -- de ca -- e tran -- qui -- la -- men -- te
+	y~el sol en po -- nien -- te se va a~o -- cul -- tar,
+	con la gui -- ta -- rri -- ta sua -- ve y do -- lien -- te
+	se po -- ne la gen -- te a bai -- lar y~a -- mar.
+	Vie -- nen, vie -- nen los pa -- i -- sa -- nos a can -- tar
+	su dul -- ce can -- ción de~a -- mor en el fo -- gón,
+	y~en -- tre ma -- te~y ma -- te se van a -- le -- gran -- do
+	has -- ta que~el lu -- ce -- ro bri -- lla. Vie -- nen,
+	has -- ta que~el lu -- ce -- ro bri -- lla~en el bal -- cón.
 }
 {% endif %}

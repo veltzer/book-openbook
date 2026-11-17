@@ -5,6 +5,7 @@ default_version = "Laurent"
 title = "Après Un Rêve"
 style = "Classical"
 composer = "Gabriel Fauré"
+poet = "Romain Bussine"
 copyright = "Public Domain"
 typesetter = "Tak-Shing Chan <chan12@alumni.usc.edu>"
 completion = "3"
@@ -13,7 +14,7 @@ uuid = "9b67cf16-d49f-11f1-8000-046874d194b7"
 [versions.Laurent]
 doChords = true
 doVoice = true
-doLyrics = false
+doLyrics = true
 doLyricsmore = false
 doLyricsmoremore = false
 doChordBars = false
@@ -26,11 +27,11 @@ doOwn = false
 {% endif %}
 {% if part == "Doc" %}	DONE:
 	- converted the Tak-Shing Chan version from staging/openbook/laurent/apres_un_reve.ly (Fauré 1877, Choudens 1880, as played by Belmondo).
+	- put in the French lyrics (Romain Bussine, 1878, public domain), aligned to this melody.
 	TODO:
 	- the source has no chords, only the melody. Add chords.
 	- the source prints the melody transposed down to B minor (as played by Belmondo). It is here in the original key of C minor.
 	- the source has no tempo mark, check the tempo.
-	- the song has French words (Romain Bussine), add the lyrics.
 	- add youtube performances.
 {% endif %}
 {% if part == "ChordsLaurent" %}\chordmode {
@@ -98,5 +99,20 @@ doOwn = false
 	d2\p c4 | bes4. g8 ees f |
 	g4\pp ~ \tuplet 3/2 4 { g8( f ees f g aes } | g2.) |
 	c, | R2. |
+}
+{% endif %}
+{% if part == "LyricsLaurent" %}\lyricmode {
+	Dans un som -- meil __ _ _ que char -- _ mait ton i -- ma -- ge
+	Je rê -- vais le bon -- heur, ar -- dent mi -- ra -- ge,
+	Tes yeux é -- taient plus __ doux, ta voix pure et so -- no -- re,
+	Tu lu -- i -- sais comme un ciel __ _ _ _ _ d'au -- tom -- ne.
+	Tu m'ap -- pe -- lais __ _ _ et je __ _ quit -- tais la ter -- re
+	Pour m'en -- fuir a -- vec toi vers la lu -- miè -- re,
+	Les cieux pour nous en -- tr'ou -- vraient leurs nu -- es,
+	Splen -- deurs in -- con -- nu -- es, lu -- eurs di -- vi -- nes en -- tre -- vu -- es,
+	Hé -- las! Hé -- las! tris -- te ré -- veil des __ cho -- ses,
+	Je t'ap -- pel -- le, __ ô nuit, rends -- moi tes __ men -- son -- ges;
+	Re -- viens, re -- viens, ra -- di -- eu -- se,
+	Re -- viens, ô nuit mys -- té -- rieu -- se!
 }
 {% endif %}
