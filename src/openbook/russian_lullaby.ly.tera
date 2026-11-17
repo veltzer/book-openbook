@@ -5,9 +5,10 @@ default_version = "Wikifonia"
 title = "Russian Lullaby"
 style = "Jazz"
 composer = "Irving Berlin"
+poet = "Irving Berlin"
 piece = "Swing"
 copyright = "Original composition (1927); public domain in the US"
-copyrightextra = "Instrumental lead sheet; later lyrics and arrangements are excluded."
+copyrightextra = "Lead sheet with the original lyrics; later arrangements are excluded."
 typesetter = "OpenBook contributors (MusicXML import)"
 completion = "3"
 uuid = "5719dfe1-5049-573f-982c-50d11a866662"
@@ -17,7 +18,7 @@ remark = "Copyright status outside the US may differ."
 [versions.Wikifonia]
 doChords = true
 doVoice = true
-doLyrics = false
+doLyrics = true
 doLyricsmore = false
 doLyricsmoremore = false
 doChordBars = false
@@ -34,7 +35,8 @@ doOwn = false
 	- local source: real_books_archive.gi/Wikifonia.tar.xz: Wikifonia/Irving Berlin - Russian Lullaby.mxl.
 	- jazz real/fake-book references: Fakebook_Django:180.
 	- source revision: http://wikifonia.org/node/16228/revisions/21580/view.
-	- retained written measures, pickups, repeats and endings; lyrics and accompaniment omitted.
+	- retained written measures, pickups, repeats and endings; accompaniment omitted.
+	- put in the original lyrics from the same Wikifonia source (published with the song, public domain in the US); typos fixed.
 	- the original composition is public domain in the US; no claim is made about later editions.
 	- US term reference: https://cspd.law.duke.edu/publicdomainday/2026.
 	- tempo is an editorial practice suggestion.
@@ -142,5 +144,9 @@ doOwn = false
 	}
 	d''2. |
 	\endBar
+}
+{% endif %}
+{% if part == "LyricsWikifonia" %}\lyricmode {
+	Ev -- 'ry night you'll hear her croon A Russ -- ian lull -- a -- by Just a lit -- tle plain -- tive tune When ba -- by starts to cry Rock -- a -- bye my ba -- by Some where there may be a land That's free for you and me And a Russ -- ian lull -- a -- by.
 }
 {% endif %}

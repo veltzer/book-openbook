@@ -5,9 +5,10 @@ default_version = "Wikifonia"
 title = "I've Found a New Baby"
 style = "Jazz"
 composer = "Jack Palmer, Spencer Williams"
+poet = "Jack Palmer, Spencer Williams"
 piece = "Swing"
 copyright = "Original composition (1926); public domain in the US"
-copyrightextra = "Instrumental lead sheet; later lyrics and arrangements are excluded."
+copyrightextra = "Lead sheet with the original lyrics; later arrangements are excluded."
 typesetter = "OpenBook contributors (MusicXML import)"
 completion = "3"
 uuid = "3e4b4cc5-ccde-53ac-82d1-53c617e7d742"
@@ -17,7 +18,7 @@ remark = "Copyright status outside the US may differ."
 [versions.Wikifonia]
 doChords = true
 doVoice = true
-doLyrics = false
+doLyrics = true
 doLyricsmore = false
 doLyricsmoremore = false
 doChordBars = false
@@ -34,7 +35,8 @@ doOwn = false
 	- local source: real_books_archive.gi/Wikifonia.tar.xz: Wikifonia/Palmer, Williams - I've Found A New Baby.mxl.
 	- jazz real/fake-book references: Real_Book_2:185, 557_Standards:193, Firehouse_Jazz_Band:354, Fakebook_Django:95.
 	- source revision: http://wikifonia.org/node/990/revisions/22516/view.
-	- retained written measures, pickups, repeats and endings; lyrics and accompaniment omitted.
+	- retained written measures, pickups, repeats and endings; accompaniment omitted.
+	- put in the original lyrics from the same Wikifonia source (published with the song, public domain in the US); typos fixed; aligned to the typed melody by pitch, since the source has broken ties.
 	- the original composition is public domain in the US; no claim is made about later editions.
 	- US term reference: https://cspd.law.duke.edu/publicdomainday/2026.
 	- tempo is an editorial practice suggestion.
@@ -126,5 +128,16 @@ doOwn = false
 	f'1 |
 	r4 gis'8 - "" _ "(" a'4 gis'8 a'4 _ ")" |
 	\endBar
+}
+{% endif %}
+{% if part == "LyricsWikifonia" %}\lyricmode {
+	I found a new ba -- by, I found a new girl. My fash -- ion
+	plate ba -- a -- by got me in a whirl Her new kind of lov
+	-- in' done made me her slave her new tur -- tle -- do -- o
+	-- vin' is all that I crave Sweet -- est miss with a kiss full of
+	bliss can't res -- ist some -- how Tells me lies but she's wise naugh -- ty
+	eyes mes -- mer -- ize me now I do not mean may -- be I
+	just had a fall I found a new ba -- a -- by new ba -- by
+	that's all I found a new
 }
 {% endif %}

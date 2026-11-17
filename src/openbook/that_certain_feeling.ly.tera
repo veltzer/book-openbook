@@ -5,9 +5,10 @@ default_version = "Wikifonia"
 title = "That Certain Feeling"
 style = "Jazz"
 composer = "George Gershwin"
+poet = "Ira Gershwin"
 piece = "Swing"
 copyright = "Original composition (1925); public domain in the US"
-copyrightextra = "Instrumental lead sheet; later lyrics and arrangements are excluded."
+copyrightextra = "Lead sheet with the original lyrics; later arrangements are excluded."
 typesetter = "OpenBook contributors (MusicXML import)"
 completion = "3"
 uuid = "0e52009e-3a75-54e0-9969-3dac59b7aacc"
@@ -17,8 +18,8 @@ remark = "Copyright status outside the US may differ."
 [versions.Wikifonia]
 doChords = true
 doVoice = true
-doLyrics = false
-doLyricsmore = false
+doLyrics = true
+doLyricsmore = true
 doLyricsmoremore = false
 doChordBars = false
 doGuitar = false
@@ -34,7 +35,8 @@ doOwn = false
 	- local source: real_books_archive.gi/Wikifonia.tar.xz: Wikifonia/George Gershwin, Ira Gershwin - That Certain Feeling.mxl.
 	- jazz real/fake-book references: StandardsBook:436.
 	- source revision: http://wikifonia.org/node/15676/revisions/20864/view.
-	- retained written measures, pickups, repeats and endings; lyrics and accompaniment omitted.
+	- retained written measures, pickups, repeats and endings; accompaniment omitted.
+	- put in the original lyrics from the same Wikifonia source (published with the song, public domain in the US); typos fixed.
 	- the original composition is public domain in the US; no claim is made about later editions.
 	- US term reference: https://cspd.law.duke.edu/publicdomainday/2026.
 	- tempo is an editorial practice suggestion.
@@ -172,5 +174,26 @@ doOwn = false
 	}
 	}
 	\endBar
+}
+{% endif %}
+{% if part == "LyricsWikifonia" %}\lyricmode {
+	He: Knew it from the start, Love would play a part. Felt that feel -- ing come a -- steal -- ing In my lone -- some heart.
+	She: It would be i -- deal, if that's the way you feel, But tell me,
+	is it real -- ly real? (He:) You gave me That cer -- tain feel -- ing,
+	The first time I met you I hit the ceil -- ing I could not for -- get you.
+	You were com -- plete -- ly sweet, Oh what could I do? __ I want -- ed phras -- es to sing your prais -- es.
+	__ That cer -- tain feel -- ing, The one that they all love.
+	No use con -- ceal -- ing I've got what they call love. Now we're to -- geth -- er,
+	Let's find out wheth -- er __ You're feel -- ing that feel -- ing too.
+	You gave me too. __
+}
+{% endif %}
+{% if part == "LyricsmoreWikifonia" %}\lyricmode {
+	_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ That cer -- tain feel -- ing,
+	The first time I met you. That cer -- tain feel -- ing, I could not for -- get you.
+	I felt it hap -- pen just as you came in view. __ Grew sort of diz -- zy,
+	Thought, "'Gee," Who is he?' __ That cer -- tain feel -- ing, I'm here to con -- fess,
+	it Is so ap -- peal -- ing, No words can ex -- press it.
+	I can -- not hide it, I must con -- fide it. __ I'm feel -- ing that feel -- ing
 }
 {% endif %}

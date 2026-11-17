@@ -5,9 +5,10 @@ default_version = "Wikifonia"
 title = "My Ideal"
 style = "Jazz"
 composer = "Richard Whiting, Newell Chase"
+poet = "Leo Robin"
 piece = "Swing"
 copyright = "Original composition (1930); public domain in the US"
-copyrightextra = "Instrumental lead sheet; later lyrics and arrangements are excluded."
+copyrightextra = "Lead sheet with the original lyrics; later arrangements are excluded."
 typesetter = "OpenBook contributors (MusicXML import)"
 completion = "3"
 uuid = "9c9129ce-442c-5403-9c42-8b94c93fbbf6"
@@ -17,7 +18,7 @@ remark = "Copyright status outside the US may differ."
 [versions.Wikifonia]
 doChords = true
 doVoice = true
-doLyrics = false
+doLyrics = true
 doLyricsmore = false
 doLyricsmoremore = false
 doChordBars = false
@@ -34,7 +35,8 @@ doOwn = false
 	- local source: real_books_archive.gi/Wikifonia.tar.xz: Wikifonia/Richard Whiting, Newell Chase, Leo Robin - My Ideal.mxl.
 	- jazz real/fake-book references: 557_Standards:252, Jazz_LTD:245.
 	- source revision: http://wikifonia.org/node/4019/revisions/5334/view.
-	- retained written measures, pickups, repeats and endings; lyrics and accompaniment omitted.
+	- retained written measures, pickups, repeats and endings; accompaniment omitted.
+	- put in the original lyrics from the same Wikifonia source (published with the song, public domain in the US); typos fixed.
 	- the original composition is public domain in the US; no claim is made about later editions.
 	- US term reference: https://cspd.law.duke.edu/publicdomainday/2026.
 	- tempo is an editorial practice suggestion.
@@ -137,5 +139,15 @@ doOwn = false
 	f'2 g'2 |
 	es'1 |
 	\endBar
+}
+{% endif %}
+{% if part == "LyricsWikifonia" %}\lyricmode {
+	Long a -- go my heart and mind; got to -- geth -- er and de -- signed the won -- der -- ful (girl) for me,
+	Oh what a fan -- ta -- sy. Tho the id -- ol of my heart can't be or -- dered a la carte I won -- der if (she) will be al -- ways a fan -- ta -- sy.
+	Will I ev -- er find the (girl) of my mind the one who is my i -- deal?
+	May -- be (she's) a dream and yet (she) might be just a -- round the cor -- ner wait -- ing for me.
+	Will I re -- cog -- nize a light in (her) eyes that no oth -- er eyes re -- veal?
+	Or will I pass (her) by and nev -- er e -- ven know that (she) is my i -- deal deal.
+	my i -- deal.
 }
 {% endif %}

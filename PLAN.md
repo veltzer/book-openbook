@@ -188,6 +188,26 @@ book tunes with a poet carry lyrics; every one was compiled and its
 syllable-to-note alignment compared with the page bar by bar (except
 `twisted`, whose file has a TODO to do that check).
 
+Status 2026-11-17: Wikifonia pass. 69 Wikifonia-imported tunes published
+1930 or earlier (lyrics public domain in the US) got the original lyrics
+from their own `.mxl` (same file the melody was imported from), so the
+syllable-to-note alignment comes from the source; added only where the
+mxl's syllable-bearing note count (ties and slurs skipped) equals the typed
+melody's. Typos and missing hyphens fixed by hand; `poet` added; the
+`copyrightextra` and Doc lines updated. Left out on purpose: lyrics written
+later than 1930 (`tiger_rag` 1932, `muskrat_ramble` 1950,
+`dream_a_little_dream_of_me` 1931, `youre_the_top` 1934) and
+`st_louis_blues` (the mxl's dialect text is too garbled). Not done yet
+because the note counts differ (slurs or edits in the typed melody) - each
+needs a hand alignment: `memphis_blues`,
+`i_aint_gonna_give_nobody_none_of_my_jelly_roll`, `my_buddy`,
+`runnin_wild`, `nobody_knows_you_when_youre_down_and_out`,
+`i_want_to_be_happy`, `trouble_in_mind`, `five_foot_two_eyes_of_blue`,
+`ive_found_a_new_baby`, `sunday`, `the_birth_of_the_blues`, `chloe`,
+`my_blue_heaven`, `i_wanna_be_loved_by_you`, `if_i_had_you`,
+`love_me_or_leave_me`, `happy_days_are_here_again`, `just_you_just_me`,
+`bidin_my_time`, `get_happy`.
+
 Pages that print no lyrics (instrumental heads, nothing to add):
 `down_by_the_riverside`, `its_sand_man`, `johnnys_theme`, `king_porter_stomp`,
 `maple_leaf_rag`, `salt_peanuts`, `shiny_stockings`, `swinging_shepherd_blues`,

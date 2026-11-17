@@ -5,9 +5,10 @@ default_version = "Wikifonia"
 title = "My Blue Heaven"
 style = "Jazz"
 composer = "Walter Donaldson"
+poet = "George Whiting"
 piece = "Swing"
 copyright = "Original composition (1927); public domain in the US"
-copyrightextra = "Instrumental lead sheet; later lyrics and arrangements are excluded."
+copyrightextra = "Lead sheet with the original lyrics; later arrangements are excluded."
 typesetter = "OpenBook contributors (MusicXML import)"
 completion = "3"
 uuid = "5d4657bf-efcf-5894-892f-5e66cd403638"
@@ -17,7 +18,7 @@ remark = "Copyright status outside the US may differ."
 [versions.Wikifonia]
 doChords = true
 doVoice = true
-doLyrics = false
+doLyrics = true
 doLyricsmore = false
 doLyricsmoremore = false
 doChordBars = false
@@ -34,7 +35,8 @@ doOwn = false
 	- local source: real_books_archive.gi/Wikifonia.tar.xz: Wikifonia/Walter Donaldson, George Whiting - My Blue Heaven.mxl.
 	- jazz real/fake-book references: Firehouse_Jazz_Band:273, Fakebook_Django:147.
 	- source revision: http://wikifonia.org/node/991/revisions/2401/view.
-	- retained written measures, pickups, repeats and endings; lyrics and accompaniment omitted.
+	- retained written measures, pickups, repeats and endings; accompaniment omitted.
+	- put in the original lyrics from the same Wikifonia source (published with the song, public domain in the US); typos fixed; aligned to the typed melody by pitch, since the source has broken ties.
 	- the original composition is public domain in the US; no claim is made about later editions.
 	- US term reference: https://cspd.law.duke.edu/publicdomainday/2026.
 	- tempo taken from archived MusicXML.
@@ -130,5 +132,12 @@ doOwn = false
 	r4 g'4 ^ "(" bes'8 c''8 es''4 ^ ")" |
 	}
 	\endBar
+}
+{% endif %}
+{% if part == "LyricsWikifonia" %}\lyricmode {
+	When whip -- poor -- wills call and eve -- ning is nigh I hur -- ry to My Blue Heav -- en A turn to the right a lit -- tle white light Will lead you to My Blue Heav -- en.
+	You'll see a smil -- ing face, a fire -- _ place, a co -- zy room,
+	a lit -- tle nest that's nes -- tled where the ros -- es bloom,
+	Just Mol -- lie and me And ba -- by makes three, We're hap -- py in My Blue Heav -- en.
 }
 {% endif %}

@@ -4,10 +4,11 @@ default_version = "Wikifonia"
 [attributes]
 title = "I Ain't Gonna Give Nobody None Of My Jelly Roll"
 style = "Jazz"
-composer = "Clarence WIlliams, Spencer WIlliams"
+composer = "Clarence Williams, Spencer Williams"
+poet = "Clarence Williams, Spencer Williams"
 piece = "Swing"
 copyright = "Original composition (1919); public domain in the US"
-copyrightextra = "Instrumental lead sheet; later lyrics and arrangements are excluded."
+copyrightextra = "Lead sheet with the original lyrics; later arrangements are excluded."
 typesetter = "OpenBook contributors (MusicXML import)"
 completion = "3"
 uuid = "de2f6a0f-ddf0-5d57-82c5-92e65d02f1ae"
@@ -17,7 +18,7 @@ remark = "Copyright status outside the US may differ."
 [versions.Wikifonia]
 doChords = true
 doVoice = true
-doLyrics = false
+doLyrics = true
 doLyricsmore = false
 doLyricsmoremore = false
 doChordBars = false
@@ -31,10 +32,11 @@ doOwn = false
 {% if part == "Doc" %}
 	DONE:
 	- imported the historic melody and chord changes of the 1919 composition.
-	- local source: real_books_archive.gi/Wikifonia.tar.xz: Wikifonia/Clarence WIlliams, Spencer WIlliams - I Ain't Gonna Give Nobody None Of My Jelly Roll.mxl.
+	- local source: real_books_archive.gi/Wikifonia.tar.xz: Wikifonia/Clarence Williams, Spencer Williams - I Ain't Gonna Give Nobody None Of My Jelly Roll.mxl.
 	- jazz real/fake-book references: Firehouse_Jazz_Band:191.
 	- source revision: http://wikifonia.org/node/15061/revisions/20085/view.
-	- retained written measures, pickups, repeats and endings; lyrics and accompaniment omitted.
+	- retained written measures, pickups, repeats and endings; accompaniment omitted.
+	- put in the original lyrics from the same Wikifonia source (published with the song, public domain in the US); typos fixed; aligned to the typed melody by pitch, since the source has broken ties.
 	- the original composition is public domain in the US; no claim is made about later editions.
 	- US term reference: https://cspd.law.duke.edu/publicdomainday/2026.
 	- tempo is an editorial practice suggestion.
@@ -170,5 +172,20 @@ doOwn = false
 	\once \override NoteHead.style = #'slash bes'4 \once \override NoteHead.style = #'slash bes'4 \once \override NoteHead.style = #'slash bes'4 \once \override NoteHead.style = #'slash bes'4 |
 	\once \override NoteHead.style = #'slash bes'4 \once \override NoteHead.style = #'slash bes'4 \once \override NoteHead.style = #'slash bes'4 \once \override NoteHead.style = #'slash bes'4 _ "To Verse" |
 	\endBar
+}
+{% endif %}
+{% if part == "LyricsWikifonia" %}\lyricmode {
+	Lit -- tle Wil -- ly Green from New Or -- leans, a greed -- y boy was he.
+	He al -- ways want -- ed lots of kids just to keep him com -- pan -- y.
+	One day his Mom bought him a Toot -- sie roll, the best can -- dy that was made.
+	When the kids be -- gan to hang a -- round, lit -- tle Wil -- ly said: I ain't gon -- na give no -- bod -- y none of my Toot -- sie Roll,
+	(Toot -- sie Roll) I would -- n't give you a piece of my sweet,
+	not to save your soul! (save your soul!) Dad -- dy told me to -- day,
+	Just be -- fore he went a -- way, If I'd be a good boy,
+	He'd bring me a toy; And I'm my Dad -- dy's pride and joy!
+	You know there ain't no need in your just hang -- in' a -- round,
+	(hang -- in' a -- round) I know you want it, but I'm a gon -- na turn you down.
+	My Toot -- sie Roll is sweet! _ _ And you know it can't be beat!
+	_ _ I know you want it, but you can't have it! I ain't a gon -- na give you none!
 }
 {% endif %}

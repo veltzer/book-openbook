@@ -5,9 +5,10 @@ default_version = "Wikifonia"
 title = "When You Wore a Tulip"
 style = "Jazz"
 composer = "Percy Wenrich"
+poet = "Jack Mahoney"
 piece = "Swing"
 copyright = "Original composition (1914); public domain in the US"
-copyrightextra = "Instrumental lead sheet; later lyrics and arrangements are excluded."
+copyrightextra = "Lead sheet with the original lyrics; later arrangements are excluded."
 typesetter = "OpenBook contributors (MusicXML import)"
 completion = "3"
 uuid = "ed037320-5833-5725-9e33-3f772235482e"
@@ -17,7 +18,7 @@ remark = "Copyright status outside the US may differ."
 [versions.Wikifonia]
 doChords = true
 doVoice = true
-doLyrics = false
+doLyrics = true
 doLyricsmore = false
 doLyricsmoremore = false
 doChordBars = false
@@ -34,7 +35,8 @@ doOwn = false
 	- local source: real_books_archive.gi/Wikifonia.tar.xz: Wikifonia/Peter Wenrich, Jack Mahoney - When you wore a tulip.mxl.
 	- jazz real/fake-book references: Firehouse_Jazz_Band:210.
 	- source revision: http://wikifonia.org/node/3279/revisions/4173/view.
-	- retained written measures, pickups, repeats and endings; lyrics and accompaniment omitted.
+	- retained written measures, pickups, repeats and endings; accompaniment omitted.
+	- put in the original lyrics from the same Wikifonia source (published with the song, public domain in the US); typos fixed.
 	- the original composition is public domain in the US; no claim is made about later editions.
 	- US term reference: https://cspd.law.duke.edu/publicdomainday/2026.
 	- tempo is an editorial practice suggestion.
@@ -128,5 +130,9 @@ doOwn = false
 	g'1 |
 	R1 |
 	\endBar
+}
+{% endif %}
+{% if part == "LyricsWikifonia" %}\lyricmode {
+	When you wore a tu -- lip a sweet yel -- low tu -- lip and I wore a big red rose when you ca -- ressed me Twas then heav -- en blessed me what a bless -- ing _ no~one knows you made life cheer -- y when you called me dear -- y twas down where the blue grass grows your lips were sweet -- er than ju -- lep when you wore that tu -- lip and I wore a big _ red rose.
 }
 {% endif %}

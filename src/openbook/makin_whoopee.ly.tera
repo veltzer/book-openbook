@@ -5,9 +5,10 @@ default_version = "Wikifonia"
 title = "Makin' Whoopee"
 style = "Jazz"
 composer = "Walter Donaldson"
+poet = "Gus Kahn"
 piece = "Swing"
 copyright = "Original composition (1928); public domain in the US"
-copyrightextra = "Instrumental lead sheet; later lyrics and arrangements are excluded."
+copyrightextra = "Lead sheet with the original lyrics; later arrangements are excluded."
 typesetter = "OpenBook contributors (MusicXML import)"
 completion = "3"
 uuid = "8e756126-889d-5a9b-8989-25d1bcbce2e7"
@@ -17,8 +18,8 @@ remark = "Copyright status outside the US may differ."
 [versions.Wikifonia]
 doChords = true
 doVoice = true
-doLyrics = false
-doLyricsmore = false
+doLyrics = true
+doLyricsmore = true
 doLyricsmoremore = false
 doChordBars = false
 doGuitar = false
@@ -34,7 +35,8 @@ doOwn = false
 	- local source: real_books_archive.gi/Wikifonia.tar.xz: Wikifonia/Walter Donaldson, Gus Kahn - Makin' Whoopee!.mxl.
 	- jazz real/fake-book references: Real_Book_3:191, 557_Standards:232.
 	- source revision: http://wikifonia.org/node/2653/revisions/14946/view.
-	- retained written measures, pickups, repeats and endings; lyrics and accompaniment omitted.
+	- retained written measures, pickups, repeats and endings; accompaniment omitted.
+	- put in the original lyrics from the same Wikifonia source (published with the song, public domain in the US); typos fixed.
 	- the original composition is public domain in the US; no claim is made about later editions.
 	- US term reference: https://cspd.law.duke.edu/publicdomainday/2026.
 	- tempo is an editorial practice suggestion.
@@ -129,5 +131,18 @@ doOwn = false
 	a'4 f'2. ~ - "(" |
 	f'2 r2 - ")" |
 	\endBar
+}
+{% endif %}
+{% if part == "LyricsWikifonia" %}\lyricmode {
+	An -- oth -- er bride, an -- oth -- er June, an -- oth -- er sun -- ny hon -- ey -- moon an -- oth -- er sea -- son an -- oth -- er rea -- son for mak -- in' whoop -- ee!
+	A lot of whoop -- ee! Pic -- ture a lit -- tle love nest down where the ros -- es cling,
+	Pic -- ture a lit -- tle love nest think what a year can bring,
+	He's wash -- ing
+}
+{% endif %}
+{% if part == "LyricsmoreWikifonia" %}\lyricmode {
+	_ _ _ shoes, a lot of rice, the groom is ner -- vous he answers twice,
+	It's real -- ly kill -- ing that he's so will -- ing to mak -- in' _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ dish -- es and ba -- by clothes,
+	he's so am -- bi -- tious he ev -- en sews, but don't for -- get folks that's what you get folks for mak -- in' whoop -- ee!
 }
 {% endif %}

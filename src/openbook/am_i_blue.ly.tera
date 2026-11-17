@@ -5,9 +5,10 @@ default_version = "Wikifonia"
 title = "Am I Blue?"
 style = "Jazz"
 composer = "Harry Akst"
+poet = "Grant Clarke"
 piece = "Swing"
 copyright = "Original composition (1929); public domain in the US"
-copyrightextra = "Instrumental lead sheet; later lyrics and arrangements are excluded."
+copyrightextra = "Lead sheet with the original lyrics; later arrangements are excluded."
 typesetter = "OpenBook contributors (MusicXML import)"
 completion = "3"
 uuid = "df2eef47-1c03-59e3-b86b-d21735d84912"
@@ -17,7 +18,7 @@ remark = "Copyright status outside the US may differ."
 [versions.Wikifonia]
 doChords = true
 doVoice = true
-doLyrics = false
+doLyrics = true
 doLyricsmore = false
 doLyricsmoremore = false
 doChordBars = false
@@ -34,7 +35,8 @@ doOwn = false
 	- local source: real_books_archive.gi/Wikifonia.tar.xz: Wikifonia/Harry Akst, Grant Clarke - Am I Blue?.mxl.
 	- jazz real/fake-book references: 557_Standards:21, Firehouse_Jazz_Band:760, StandardsBook:35, Just_Standards_Real_Book:26.
 	- source revision: http://wikifonia.org/node/11307/revisions/15249/view.
-	- retained written measures, pickups, repeats and endings; lyrics and accompaniment omitted.
+	- retained written measures, pickups, repeats and endings; accompaniment omitted.
+	- put in the original lyrics from the same Wikifonia source (published with the song, public domain in the US); typos fixed.
 	- the original composition is public domain in the US; no claim is made about later editions.
 	- US term reference: https://cspd.law.duke.edu/publicdomainday/2026.
 	- tempo is an editorial practice suggestion.
@@ -125,5 +127,13 @@ doOwn = false
 	f'2 as'8 g'4 f'8 ~ |
 	f'2 r2 |
 	\endBar
+}
+{% endif %}
+{% if part == "LyricsWikifonia" %}\lyricmode {
+	Am I blue? Am I blue? Ain't these tears in these eyes tell -- in' you?
+	Am I blue? You'd be too if each plan with your man done fell through.
+	Was a time I was his on -- ly one. But now I'm the sad and lone -- ly one.
+	Law -- dy! Was I gay "'til" to -- day now he's gone and we're through.
+	Am I blue?
 }
 {% endif %}

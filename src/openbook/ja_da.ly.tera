@@ -5,9 +5,10 @@ default_version = "Wikifonia"
 title = "Ja-Da"
 style = "Jazz"
 composer = "Bob Carleton"
+poet = "Bob Carleton"
 piece = "Swing"
 copyright = "Original composition (1918); public domain in the US"
-copyrightextra = "Instrumental lead sheet; later lyrics and arrangements are excluded."
+copyrightextra = "Lead sheet with the original lyrics; later arrangements are excluded."
 typesetter = "OpenBook contributors (MusicXML import)"
 completion = "3"
 uuid = "87bc32d9-e6dd-5307-9334-3c28a73e0635"
@@ -17,7 +18,7 @@ remark = "Copyright status outside the US may differ."
 [versions.Wikifonia]
 doChords = true
 doVoice = true
-doLyrics = false
+doLyrics = true
 doLyricsmore = false
 doLyricsmoremore = false
 doChordBars = false
@@ -34,7 +35,8 @@ doOwn = false
 	- local source: real_books_archive.gi/Wikifonia.tar.xz: Wikifonia/Bob Carleton - Ja-Da.mxl.
 	- jazz real/fake-book references: Firehouse_Jazz_Band:20.
 	- source revision: http://wikifonia.org/node/9466/revisions/12941/view.
-	- retained written measures, pickups, repeats and endings; lyrics and accompaniment omitted.
+	- retained written measures, pickups, repeats and endings; accompaniment omitted.
+	- put in the original lyrics from the same Wikifonia source (published with the song, public domain in the US); typos fixed.
 	- the original composition is public domain in the US; no claim is made about later editions.
 	- US term reference: https://cspd.law.duke.edu/publicdomainday/2026.
 	- tempo is an editorial practice suggestion.
@@ -109,5 +111,13 @@ doOwn = false
 	}
 	}
 	\endBar
+}
+{% endif %}
+{% if part == "LyricsWikifonia" %}\lyricmode {
+	Ja -- Da, Ja -- Da, __ Ja -- Da, Ja -- Da, Jing,
+	Jing, Jing, Ja -- Da, Ja -- Da, __ Ja -- Da, Ja -- Da,
+	Jing, Jing, Jing, That's a fun -- ny lit -- tle bit of mel -- _ o -- dy __ Its so sooth -- ing and ap -- peal -- ing to me,
+	__ It goes Ja -- Da, Ja -- Da, __ Ja -- Da, Ja -- Da,
+	Jing, Jing, Jing, Jing,
 }
 {% endif %}

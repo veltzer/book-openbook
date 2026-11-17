@@ -5,9 +5,10 @@ default_version = "Wikifonia"
 title = "Indian Love Call"
 style = "Jazz"
 composer = "Rudolf Friml, Herbert Stothart"
+poet = "Otto Harbach, Oscar Hammerstein II"
 piece = "Swing"
 copyright = "Original composition (1924); public domain in the US"
-copyrightextra = "Instrumental lead sheet; later lyrics and arrangements are excluded."
+copyrightextra = "Lead sheet with the original lyrics; later arrangements are excluded."
 typesetter = "OpenBook contributors (MusicXML import)"
 completion = "3"
 uuid = "6bf24450-3d99-50db-aa66-67db3b7c2f8e"
@@ -17,7 +18,7 @@ remark = "Copyright status outside the US may differ."
 [versions.Wikifonia]
 doChords = true
 doVoice = true
-doLyrics = false
+doLyrics = true
 doLyricsmore = false
 doLyricsmoremore = false
 doChordBars = false
@@ -34,7 +35,8 @@ doOwn = false
 	- local source: real_books_archive.gi/Wikifonia.tar.xz: Wikifonia/ Rudolf Friml & Herbert Stothart, Otto Harbach & Oscar Hammerstein II - Indian Love Call.mxl.
 	- jazz real/fake-book references: Firehouse_Jazz_Band:543.
 	- source revision: http://wikifonia.org/node/3469/revisions/15904/view.
-	- retained written measures, pickups, repeats and endings; lyrics and accompaniment omitted.
+	- retained written measures, pickups, repeats and endings; accompaniment omitted.
+	- put in the original lyrics from the same Wikifonia source (published with the song, public domain in the US); typos fixed.
 	- the original composition is public domain in the US; no claim is made about later editions.
 	- US term reference: https://cspd.law.duke.edu/publicdomainday/2026.
 	- tempo is an editorial practice suggestion.
@@ -126,5 +128,9 @@ doOwn = false
 	c''1 ~ |
 	c''2 r2 |
 	\endBar
+}
+{% endif %}
+{% if part == "LyricsWikifonia" %}\lyricmode {
+	When I'm call -- ing you oo -- oo -- oo -- oo _ oo Will you an -- swer too _ oo -- oo -- oo _ _ That means I of -- fer my love to you to be your own If you re -- fuse me I will be blue and wait -- ing all a -- lone But if when you hear my love call ring -- ing clear and I hear your an -- swer -- ing ech -- o so dear Then I will know our love will come true You'll be -- long to me I'll be -- long to you.
 }
 {% endif %}

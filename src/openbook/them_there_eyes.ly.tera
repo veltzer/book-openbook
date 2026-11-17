@@ -5,9 +5,10 @@ default_version = "Wikifonia"
 title = "Them There Eyes"
 style = "Jazz"
 composer = "Maceo Pinkard"
+poet = "Doris Tauber, William Tracey"
 piece = "Swing"
 copyright = "Original composition (1930); public domain in the US"
-copyrightextra = "Instrumental lead sheet; later lyrics and arrangements are excluded."
+copyrightextra = "Lead sheet with the original lyrics; later arrangements are excluded."
 typesetter = "OpenBook contributors (MusicXML import)"
 completion = "3"
 uuid = "ea66fbcc-bbee-5641-aeb2-08547c499a2e"
@@ -17,7 +18,7 @@ remark = "Copyright status outside the US may differ."
 [versions.Wikifonia]
 doChords = true
 doVoice = true
-doLyrics = false
+doLyrics = true
 doLyricsmore = false
 doLyricsmoremore = false
 doChordBars = false
@@ -34,7 +35,8 @@ doOwn = false
 	- local source: real_books_archive.gi/Wikifonia.tar.xz: Wikifonia/Maceo Pinkard, Doris Tauber, William Tracy - Them There Eyes.mxl.
 	- jazz real/fake-book references: New_Real_2:377, 557_Standards:377, Fakebook_Django:221.
 	- source revision: http://wikifonia.org/node/3225/revisions/18904/view.
-	- retained written measures, pickups, repeats and endings; lyrics and accompaniment omitted.
+	- retained written measures, pickups, repeats and endings; accompaniment omitted.
+	- put in the original lyrics from the same Wikifonia source (published with the song, public domain in the US); typos fixed.
 	- the original composition is public domain in the US; no claim is made about later editions.
 	- US term reference: https://cspd.law.duke.edu/publicdomainday/2026.
 	- tempo is an editorial practice suggestion.
@@ -126,5 +128,9 @@ doOwn = false
 	b'1 |
 	c''1 |
 	\endBar
+}
+{% endif %}
+{% if part == "LyricsWikifonia" %}\lyricmode {
+	I fell in love with you first time I looked in -- to them there eyes You've got a cer -- tain lil' cute way of flirt -- in' with them there eyes they make me feel hap -- py they make me blue No stall -- in' I'm fall -- in' go -- ing in a big way for sweet lit -- tle you My heart is jump -- in' you sure start -- ed some -- thing with them there eyes You'd bet -- ter watch them if you're wise they sparkle _ they bub -- ble they're gon -- na get you in a whole lot of trou -- ble You're o -- ver work -- in' "'em" There's dan -- ger lurk -- in in them there eyes.
 }
 {% endif %}

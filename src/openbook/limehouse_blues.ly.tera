@@ -5,9 +5,10 @@ default_version = "Wikifonia"
 title = "Limehouse Blues"
 style = "Jazz"
 composer = "Philip Braham"
+poet = "Douglas Furber"
 piece = "Swing"
 copyright = "Original composition (1922); public domain in the US"
-copyrightextra = "Instrumental lead sheet; later lyrics and arrangements are excluded."
+copyrightextra = "Lead sheet with the original lyrics; later arrangements are excluded."
 typesetter = "OpenBook contributors (MusicXML import)"
 completion = "3"
 uuid = "82034476-2758-5d0c-9ab9-664fe52530a4"
@@ -17,7 +18,7 @@ remark = "Copyright status outside the US may differ."
 [versions.Wikifonia]
 doChords = true
 doVoice = true
-doLyrics = false
+doLyrics = true
 doLyricsmore = false
 doLyricsmoremore = false
 doChordBars = false
@@ -34,7 +35,8 @@ doOwn = false
 	- local source: real_books_archive.gi/Wikifonia.tar.xz: Wikifonia/Philip Braham , Douglas Furber - Limehouse Blues.mxl.
 	- jazz real/fake-book references: Real_Book_1:276, 557_Standards:212, Firehouse_Jazz_Band:253, Colorado:128, Colorado_Cookbook:128, Fakebook_Django:124, Just_Standards_Real_Book:225.
 	- source revision: http://wikifonia.org/node/7942/revisions/10951/view.
-	- retained written measures, pickups, repeats and endings; lyrics and accompaniment omitted.
+	- retained written measures, pickups, repeats and endings; accompaniment omitted.
+	- put in the original lyrics from the same Wikifonia source (published with the song, public domain in the US); typos fixed.
 	- the original composition is public domain in the US; no claim is made about later editions.
 	- US term reference: https://cspd.law.duke.edu/publicdomainday/2026.
 	- tempo is an editorial practice suggestion.
@@ -124,5 +126,9 @@ doOwn = false
 	as'4 as'4 as'4 as'4 ~ |
 	as'1 |
 	\endBar
+}
+{% endif %}
+{% if part == "LyricsWikifonia" %}\lyricmode {
+	Oh Lime -- house kid oh you sweet Lime -- house kid go -- in' the way that the rest of them did Poor brok -- en blos -- som and no -- bod -- y's child haunt -- ing and taunt -- ing you're just kind of wild Oh Lime -- house blues I've the real Lime -- house blues can't seem to shake off those real Chi -- na blues rings on your fin -- gers and tears for your crown that is the stor -- y of old Chi -- na town
 }
 {% endif %}

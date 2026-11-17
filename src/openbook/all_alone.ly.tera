@@ -5,9 +5,10 @@ default_version = "Wikifonia"
 title = "All Alone"
 style = "Jazz"
 composer = "Irving Berlin"
+poet = "Irving Berlin"
 piece = "Swing"
 copyright = "Original composition (1924); public domain in the US"
-copyrightextra = "Instrumental lead sheet; later lyrics and arrangements are excluded."
+copyrightextra = "Lead sheet with the original lyrics; later arrangements are excluded."
 typesetter = "OpenBook contributors (MusicXML import)"
 completion = "3"
 uuid = "4c72d423-e8c6-5a6c-a34e-6a38b1dba827"
@@ -17,7 +18,7 @@ remark = "Copyright status outside the US may differ."
 [versions.Wikifonia]
 doChords = true
 doVoice = true
-doLyrics = false
+doLyrics = true
 doLyricsmore = false
 doLyricsmoremore = false
 doChordBars = false
@@ -34,7 +35,8 @@ doOwn = false
 	- local source: real_books_archive.gi/Wikifonia.tar.xz: Wikifonia/Irving Berlin - All Alone.mxl.
 	- jazz real/fake-book references: Real_Book_2:12.
 	- source revision: http://wikifonia.org/node/14424/revisions/19327/view.
-	- retained written measures, pickups, repeats and endings; lyrics and accompaniment omitted.
+	- retained written measures, pickups, repeats and endings; accompaniment omitted.
+	- put in the original lyrics from the same Wikifonia source (published with the song, public domain in the US); typos fixed.
 	- the original composition is public domain in the US; no claim is made about later editions.
 	- US term reference: https://cspd.law.duke.edu/publicdomainday/2026.
 	- tempo is an editorial practice suggestion.
@@ -143,5 +145,13 @@ doOwn = false
 	}
 	}
 	\endBar
+}
+{% endif %}
+{% if part == "LyricsWikifonia" %}\lyricmode {
+	All a -- lone, __ I'm so all a -- lone. __ There is no~one else __ but you.
+	__ All a -- lone, __ by the tel -- e -- phone __ wait -- ing for __ a ring,
+	__ a ting -- a -- ling. __ I'm all a -- lone __ ev -- "'ry" eve -- ning,
+	__ All a -- lone, __ feel -- ing blue, __ won -- d'ring where you are,
+	__ and how you are __ and if you are all a -- lone too.
 }
 {% endif %}

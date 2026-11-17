@@ -5,9 +5,10 @@ default_version = "Wikifonia"
 title = "Ain't She Sweet"
 style = "Jazz"
 composer = "Milton Ager"
+poet = "Jack Yellen"
 piece = "Swing"
 copyright = "Original composition (1927); public domain in the US"
-copyrightextra = "Instrumental lead sheet; later lyrics and arrangements are excluded."
+copyrightextra = "Lead sheet with the original lyrics; later arrangements are excluded."
 typesetter = "OpenBook contributors (MusicXML import)"
 completion = "3"
 uuid = "7b57d65c-2be1-55cc-a799-4c6d7d25fe69"
@@ -17,7 +18,7 @@ remark = "Copyright status outside the US may differ."
 [versions.Wikifonia]
 doChords = true
 doVoice = true
-doLyrics = false
+doLyrics = true
 doLyricsmore = false
 doLyricsmoremore = false
 doChordBars = false
@@ -34,7 +35,8 @@ doOwn = false
 	- local source: real_books_archive.gi/Wikifonia.tar.xz: Wikifonia/Milton Ager, Jack Yellen - Ain't She Sweet.mxl.
 	- jazz real/fake-book references: 557_Standards:11, Just_Standards_Real_Book:12.
 	- source revision: http://wikifonia.org/node/5726/revisions/25054/view.
-	- retained written measures, pickups, repeats and endings; lyrics and accompaniment omitted.
+	- retained written measures, pickups, repeats and endings; accompaniment omitted.
+	- put in the original lyrics from the same Wikifonia source (published with the song, public domain in the US); typos fixed.
 	- the original composition is public domain in the US; no claim is made about later editions.
 	- US term reference: https://cspd.law.duke.edu/publicdomainday/2026.
 	- tempo is an editorial practice suggestion.
@@ -124,5 +126,9 @@ doOwn = false
 	e'2 d'2 |
 	c'2 r2 |
 	\endBar
+}
+{% endif %}
+{% if part == "LyricsWikifonia" %}\lyricmode {
+	Ain't she sweet see her com -- ing down the street now I ask you ver -- y con -- fi -- den -- tial -- ly ain't she sweet ain't she nice look her ov -- er once or twice now I ask you ve -- ry con -- fi -- den -- tial -- ly ain't she nice just cast an eye __ in her di -- rec -- tion oh me oh my __ ain't that per -- fec -- tion __ I re -- peat don't you think that's kind of neat and I ask you ve -- ry con -- fi -- den -- tial -- ly ain't she sweet.
 }
 {% endif %}

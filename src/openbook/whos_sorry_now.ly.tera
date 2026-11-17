@@ -5,9 +5,10 @@ default_version = "Wikifonia"
 title = "Who's Sorry Now"
 style = "Jazz"
 composer = "Ted Snyder"
+poet = "Bert Kalmar, Harry Ruby"
 piece = "Swing"
 copyright = "Original composition (1923); public domain in the US"
-copyrightextra = "Instrumental lead sheet; later lyrics and arrangements are excluded."
+copyrightextra = "Lead sheet with the original lyrics; later arrangements are excluded."
 typesetter = "OpenBook contributors (MusicXML import)"
 completion = "3"
 uuid = "f49e553e-f94d-5c31-8df0-b3fe96b7053e"
@@ -17,8 +18,8 @@ remark = "Copyright status outside the US may differ."
 [versions.Wikifonia]
 doChords = true
 doVoice = true
-doLyrics = false
-doLyricsmore = false
+doLyrics = true
+doLyricsmore = true
 doLyricsmoremore = false
 doChordBars = false
 doGuitar = false
@@ -34,7 +35,8 @@ doOwn = false
 	- local source: real_books_archive.gi/Wikifonia.tar.xz: Wikifonia/Ted Snyder, Bert Kalmar, Harry Ruby - Who's Sorry Now.mxl.
 	- jazz real/fake-book references: Firehouse_Jazz_Band:447, Just_Standards_Real_Book:374.
 	- source revision: http://wikifonia.org/node/22106/revisions/29167/view.
-	- retained written measures, pickups, repeats and endings; lyrics and accompaniment omitted.
+	- retained written measures, pickups, repeats and endings; accompaniment omitted.
+	- put in the original lyrics from the same Wikifonia source (published with the song, public domain in the US); typos fixed.
 	- the original composition is public domain in the US; no claim is made about later editions.
 	- US term reference: https://cspd.law.duke.edu/publicdomainday/2026.
 	- tempo is an editorial practice suggestion.
@@ -176,5 +178,22 @@ doOwn = false
 	}
 	}
 	\endBar
+}
+{% endif %}
+{% if part == "LyricsWikifonia" %}\lyricmode {
+	You smiled when we part -- ed, it hurt me some -- how, I thought there was noth -- ing worth -- while.
+	The ta -- bles are turn -- ing, and you're cry -- ing now,
+	while I am just learn -- ing to smile. __ Who's sor -- ry now?
+	Who's sor -- ry now? Whose heart is ach -- ing for break -- ing each vow?
+	Who's sad and blue? Who's cry -- ing too? Just like I cried o -- ver you.
+	__ Right to the end, just like a friend, I tried to warn you some -- how.
+	__ You had your way, now you must pay; I'm glad that you're sor -- ry now.
+	__ _ now. __
+}
+{% endif %}
+{% if part == "LyricsmoreWikifonia" %}\lyricmode {
+	Al -- though I for -- give you, I can -- not for -- get,
+	how you shat -- tered all my i -- deals. You smiled when I told you that you would re -- gret,
+	and now you know just how it feels. __
 }
 {% endif %}

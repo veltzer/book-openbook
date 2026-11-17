@@ -5,9 +5,10 @@ default_version = "Wikifonia"
 title = "My Baby Just Cares For Me"
 style = "Jazz"
 composer = "Walter Donaldson"
+poet = "Gus Kahn"
 piece = "Swing"
 copyright = "Original composition (1930); public domain in the US"
-copyrightextra = "Instrumental lead sheet; later lyrics and arrangements are excluded."
+copyrightextra = "Lead sheet with the original lyrics; later arrangements are excluded."
 typesetter = "OpenBook contributors (MusicXML import)"
 completion = "3"
 uuid = "6620fd0d-9a5c-55ec-aafd-47264fdd8e61"
@@ -17,8 +18,8 @@ remark = "Copyright status outside the US may differ."
 [versions.Wikifonia]
 doChords = true
 doVoice = true
-doLyrics = false
-doLyricsmore = false
+doLyrics = true
+doLyricsmore = true
 doLyricsmoremore = false
 doChordBars = false
 doGuitar = false
@@ -34,7 +35,8 @@ doOwn = false
 	- local source: real_books_archive.gi/Wikifonia.tar.xz: Wikifonia/Walter Donaldson, Gus Kahn - My Baby Just Cares For Me.mxl.
 	- jazz real/fake-book references: Colorado:148, Colorado_Cookbook:148.
 	- source revision: http://wikifonia.org/node/4906/revisions/6647/view.
-	- retained written measures, pickups, repeats and endings; lyrics and accompaniment omitted.
+	- retained written measures, pickups, repeats and endings; accompaniment omitted.
+	- put in the original lyrics from the same Wikifonia source (published with the song, public domain in the US); typos fixed.
 	- the original composition is public domain in the US; no claim is made about later editions.
 	- US term reference: https://cspd.law.duke.edu/publicdomainday/2026.
 	- tempo is an editorial practice suggestion.
@@ -143,5 +145,21 @@ doOwn = false
 	}
 	g'2. r4 |
 	\endBar
+}
+{% endif %}
+{% if part == "LyricsWikifonia" %}\lyricmode {
+	My bab -- y don't care for shows, My bab -- y don't care for clothes,
+	My bab -- y just cares for me! My bab -- y don't care for furs and lac -- es,
+	My bab -- y don't care for high -- toned plac -- es.
+	My bab -- y don't care for rings, Or oth -- er ex -- pen -- sive things,
+	She's sen -- si -- ble as can be, My bab -- y don't care who knows it,
+	My bab -- y just cares for me! me!
+}
+{% endif %}
+{% if part == "LyricsmoreWikifonia" %}\lyricmode {
+	My bab -- y don't care to own, Nine or ten car -- at stones,
+	My bab -- y just cares for me! My bab -- y don't care for big Rolls Roy -- ces,
+	There's some -- times a doubt a -- bout her choi -- ces. My bab -- y's not much for sports,
+	Like run -- nin' "'round" with -- out shorts, I must say that I'm glad that She makes such a fine se -- lec -- tion My bab -- y just cares for
 }
 {% endif %}

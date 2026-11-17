@@ -5,9 +5,10 @@ default_version = "Wikifonia"
 title = "Memphis Blues"
 style = "Jazz"
 composer = "W. C. Handy"
+poet = "George A. Norton"
 piece = "Swing"
 copyright = "Original composition (1912); public domain in the US"
-copyrightextra = "Instrumental lead sheet; later lyrics and arrangements are excluded."
+copyrightextra = "Lead sheet with the original lyrics; later arrangements are excluded."
 typesetter = "OpenBook contributors (MusicXML import)"
 completion = "3"
 uuid = "12012b49-7e75-5098-8cc9-ab56ea2980f8"
@@ -17,8 +18,8 @@ remark = "Copyright status outside the US may differ."
 [versions.Wikifonia]
 doChords = true
 doVoice = true
-doLyrics = false
-doLyricsmore = false
+doLyrics = true
+doLyricsmore = true
 doLyricsmoremore = false
 doChordBars = false
 doGuitar = false
@@ -34,7 +35,8 @@ doOwn = false
 	- local source: real_books_archive.gi/Wikifonia.tar.xz: Wikifonia/W. C. Handy - Memphis Blues.mxl.
 	- jazz real/fake-book references: Firehouse_Jazz_Band:96, Firehouse_Jazz_Band:97.
 	- source revision: http://wikifonia.org/node/12839/revisions/17245/view.
-	- retained written measures, pickups, repeats and endings; lyrics and accompaniment omitted.
+	- retained written measures, pickups, repeats and endings; accompaniment omitted.
+	- put in the original lyrics from the same Wikifonia source (published with the song, public domain in the US); typos fixed; aligned to the typed melody by pitch, since the source has broken ties.
 	- the original composition is public domain in the US; no claim is made about later editions.
 	- US term reference: https://cspd.law.duke.edu/publicdomainday/2026.
 	- tempo is an editorial practice suggestion.
@@ -142,5 +144,23 @@ doOwn = false
 	}
 	}
 	\endBar
+}
+{% endif %}
+{% if part == "LyricsWikifonia" %}\lyricmode {
+	Folks, I've just __ been down, down to Mem -- phis town. that's where the peo -- ple smile,
+	smile on you all __ the while. Hos -- pi -- tal -- it -- y,
+	they were good __ to me, I could -- n't spend __ a dime and had the grand -- est time.
+	I went out a -- danc -- in' with a Ten -- nes -- see dear __ they had a fel -- low there named Han -- dy with a band you should hear __ and while all the folks gent -- ly swayed all the band __ folks played,
+	real __ har -- mo -- ny, I nev -- er will for -- get __ the tune that Han -- dy called the Mem -- phis blues.
+	__ Oh yes them blues. They got a fid -- dler there that al -- ways slick -- ens his hair,
+	an' folks he sure __ do pull some __ _ bow. __ And when the big bas -- soon __ sec -- onds to the trom -- bones croon,
+	__ It moans just like __ a sin -- ner on Re -- vi -- val Day on Re -- vi -- _ val __ _ Day.
+	That mel -- an
+}
+{% endif %}
+{% if part == "LyricsmoreWikifonia" %}\lyricmode {
+	_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ (That mel -- an) -- chol -- ly strain that ev -- er haunt -- ing re -- frain is like a sweet __ old sor -- row __ _ song.
+	Here comes the ver -- y part __ wraps a spell a -- round my heart.
+	__ It sets me wild __ to hear that lov -- in' tune a -- _ _ _ _ _ _ _ _ _ _ _ gain __ The Mem -- phis Blues.
 }
 {% endif %}

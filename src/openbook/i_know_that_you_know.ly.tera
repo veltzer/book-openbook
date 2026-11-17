@@ -5,9 +5,10 @@ default_version = "Wikifonia"
 title = "I Know That You Know"
 style = "Jazz"
 composer = "Vincent Youmans"
+poet = "Anne Caldwell"
 piece = "Swing"
 copyright = "Original composition (1926); public domain in the US"
-copyrightextra = "Instrumental lead sheet; later lyrics and arrangements are excluded."
+copyrightextra = "Lead sheet with the original lyrics; later arrangements are excluded."
 typesetter = "OpenBook contributors (MusicXML import)"
 completion = "3"
 uuid = "571c2b13-0d5f-5fbd-9f6d-7f81f4d9e79f"
@@ -17,7 +18,7 @@ remark = "Copyright status outside the US may differ."
 [versions.Wikifonia]
 doChords = true
 doVoice = true
-doLyrics = false
+doLyrics = true
 doLyricsmore = false
 doLyricsmoremore = false
 doChordBars = false
@@ -34,7 +35,8 @@ doOwn = false
 	- local source: real_books_archive.gi/Wikifonia.tar.xz: Wikifonia/Vincent Youmans, Anne Caldwell - I Know That You Know.mxl.
 	- jazz real/fake-book references: 557_Standards:150.
 	- source revision: http://wikifonia.org/node/20834/revisions/27539/view.
-	- retained written measures, pickups, repeats and endings; lyrics and accompaniment omitted.
+	- retained written measures, pickups, repeats and endings; accompaniment omitted.
+	- put in the original lyrics from the same Wikifonia source (published with the song, public domain in the US); typos fixed.
 	- the original composition is public domain in the US; no claim is made about later editions.
 	- US term reference: https://cspd.law.duke.edu/publicdomainday/2026.
 	- tempo is an editorial practice suggestion.
@@ -126,5 +128,12 @@ doOwn = false
 	c''1 ~ |
 	c''4 r4 r2 |
 	\endBar
+}
+{% endif %}
+{% if part == "LyricsWikifonia" %}\lyricmode {
+	So dar -- ling, I know that you know That I'll go where you go.
+	I choose you, won't lose you I wish you'd know how much I long to hold you in my arms.
+	This time is my time, "'Twill" soon be good -- bye time Then, in the star -- light,
+	Hold me tight, With one more lit -- tle kiss, Say "'Night" -- y Night.'
 }
 {% endif %}

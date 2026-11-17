@@ -5,9 +5,10 @@ default_version = "Wikifonia"
 title = "Happy Days Are Here Again"
 style = "Jazz"
 composer = "Milton Ager"
+poet = "Jack Yellen"
 piece = "Swing"
 copyright = "Original composition (1929); public domain in the US"
-copyrightextra = "Instrumental lead sheet; later lyrics and arrangements are excluded."
+copyrightextra = "Lead sheet with the original lyrics; later arrangements are excluded."
 typesetter = "OpenBook contributors (MusicXML import)"
 completion = "3"
 uuid = "bbccb2f2-43e7-5841-bde5-e9857794bd2b"
@@ -17,7 +18,7 @@ remark = "Copyright status outside the US may differ."
 [versions.Wikifonia]
 doChords = true
 doVoice = true
-doLyrics = false
+doLyrics = true
 doLyricsmore = false
 doLyricsmoremore = false
 doChordBars = false
@@ -34,7 +35,8 @@ doOwn = false
 	- local source: real_books_archive.gi/Wikifonia.tar.xz: Wikifonia/Milton Ager, Jack Yellen - Happy Days are Here Again.mxl.
 	- jazz real/fake-book references: Just_Standards_Real_Book:134.
 	- source revision: http://wikifonia.org/node/18737/revisions/24791/view.
-	- retained written measures, pickups, repeats and endings; lyrics and accompaniment omitted.
+	- retained written measures, pickups, repeats and endings; accompaniment omitted.
+	- put in the original lyrics from the same Wikifonia source (published with the song, public domain in the US); typos fixed; aligned to the typed melody by pitch, since the source has broken ties.
 	- the original composition is public domain in the US; no claim is made about later editions.
 	- US term reference: https://cspd.law.duke.edu/publicdomainday/2026.
 	- tempo is an editorial practice suggestion.
@@ -146,5 +148,16 @@ doOwn = false
 	d''1 ( |
 	d''4 ) f'4 e'4 ^ "D.S.al fine" d'4 |
 	\endBar
+}
+{% endif %}
+{% if part == "LyricsWikifonia" %}\lyricmode {
+	_ _ _ _ _ _ _ Hap -- py days __ _ are here a -- gain!
+	__ _ The skies a -- bove __ _ are clear a -- gain.
+	__ _ Let us sing a song __ _ of cheer a -- gain,
+	__ _ Hap -- py days are here a -- gain. _ _ _ _ _ _ All to -- geth -- _ er,
+	shout it now! __ _ There's no one who __ _ can doubt it now,
+	__ _ So let's tell the world __ _ a -- bout it now,
+	__ _ Hap -- py days are here a -- gain! _ _ _ _ Your cares and trou -- bles are gone,
+	__ _ There'll be no more from now on.
 }
 {% endif %}

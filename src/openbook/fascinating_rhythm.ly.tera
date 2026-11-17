@@ -5,9 +5,10 @@ default_version = "Wikifonia"
 title = "Fascinating Rhythm"
 style = "Jazz"
 composer = "George Gershwin"
+poet = "Ira Gershwin"
 piece = "Swing"
 copyright = "Original composition (1924); public domain in the US"
-copyrightextra = "Instrumental lead sheet; later lyrics and arrangements are excluded."
+copyrightextra = "Lead sheet with the original lyrics; later arrangements are excluded."
 typesetter = "OpenBook contributors (MusicXML import)"
 completion = "3"
 uuid = "1093275c-ba9f-5bd8-bf2f-736a98e6124e"
@@ -17,7 +18,7 @@ remark = "Copyright status outside the US may differ."
 [versions.Wikifonia]
 doChords = true
 doVoice = true
-doLyrics = false
+doLyrics = true
 doLyricsmore = false
 doLyricsmoremore = false
 doChordBars = false
@@ -34,7 +35,8 @@ doOwn = false
 	- local source: real_books_archive.gi/Wikifonia.tar.xz: Wikifonia/George Gershwin, Ira Gershwin - Fascinating Rhythm.mxl.
 	- jazz real/fake-book references: 557_Standards:101, StandardsBook:138.
 	- source revision: http://wikifonia.org/node/3182/revisions/5439/view.
-	- retained written measures, pickups, repeats and endings; lyrics and accompaniment omitted.
+	- retained written measures, pickups, repeats and endings; accompaniment omitted.
+	- put in the original lyrics from the same Wikifonia source (published with the song, public domain in the US); typos fixed.
 	- the original composition is public domain in the US; no claim is made about later editions.
 	- US term reference: https://cspd.law.duke.edu/publicdomainday/2026.
 	- tempo is an editorial practice suggestion.
@@ -125,5 +127,13 @@ doOwn = false
 	f'1 ~ |
 	f'2. r4 |
 	\endBar
+}
+{% endif %}
+{% if part == "LyricsWikifonia" %}\lyricmode {
+	Fas -- ci -- nat -- ing rhy -- thm You've got me on the go!
+	fas -- ci -- nat -- ing rhy -- thm I'm all a qui -- ver what a mess you're mak -- ing!
+	the neigh -- bors want to know why I'm al -- ways shak -- ing just like a fliv -- ver each morn -- ing I get up with the sun (Start a hop -- ping nev -- er stop -- ping) to find at night no work has been done I know that once it did -- n't mat -- ter but now you're do -- ing wrong when you start to pat -- ter I'm so un -- hap -- py Won't you take a day off?
+	de -- cide to run a -- long some -- where far a -- way off and make it snap -- py Oh how I long to be the man I used to be!
+	Fas -- ci -- na -- ting rhy -- thm Oh wont you stop pick -- ing on me!
 }
 {% endif %}

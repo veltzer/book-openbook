@@ -5,9 +5,10 @@ default_version = "Wikifonia"
 title = "Tea for Two"
 style = "Jazz"
 composer = "Vincent Youmans"
+poet = "Irving Caesar"
 piece = "Swing"
 copyright = "Original composition (1924); public domain in the US"
-copyrightextra = "Instrumental lead sheet; later lyrics and arrangements are excluded."
+copyrightextra = "Lead sheet with the original lyrics; later arrangements are excluded."
 typesetter = "OpenBook contributors (MusicXML import)"
 completion = "3"
 uuid = "930f8750-13b5-5f0f-8e48-6edb4ab0ee89"
@@ -17,7 +18,7 @@ remark = "Copyright status outside the US may differ."
 [versions.Wikifonia]
 doChords = true
 doVoice = true
-doLyrics = false
+doLyrics = true
 doLyricsmore = false
 doLyricsmoremore = false
 doChordBars = false
@@ -34,7 +35,8 @@ doOwn = false
 	- local source: real_books_archive.gi/Wikifonia.tar.xz: Wikifonia/Vincent Youmans, Irving Caesar - Tea for two.mxl.
 	- jazz real/fake-book references: Real_Book_3:303, 557_Standards:368, Fakebook_Django:219, StandardsBook:432, Just_Standards_Real_Book:340.
 	- source revision: http://wikifonia.org/node/8863/revisions/27921/view.
-	- retained written measures, pickups, repeats and endings; lyrics and accompaniment omitted.
+	- retained written measures, pickups, repeats and endings; accompaniment omitted.
+	- put in the original lyrics from the same Wikifonia source (published with the song, public domain in the US); typos fixed.
 	- the original composition is public domain in the US; no claim is made about later editions.
 	- US term reference: https://cspd.law.duke.edu/publicdomainday/2026.
 	- tempo is an editorial practice suggestion.
@@ -124,5 +126,10 @@ doOwn = false
 	f'1 ~ |
 	f'2. r4 |
 	\endBar
+}
+{% endif %}
+{% if part == "LyricsWikifonia" %}\lyricmode {
+	Pic -- ture you up on my knee just tea for two and two for tea just me for you and you for me a -- lone No -- bod -- y near us to see us or hear us no friends or re -- la -- tions on week -- end va -- ca -- tions,
+	we won't have it known dear that we own a tel -- e -- phone dear Day will break and you'll a -- wake and start to bake a sug -- ar cake for me to take for all the boys to see we will raise a fam -- i -- ly a boy for you a girl for me oh can't you see how hap -- py we would be?
 }
 {% endif %}

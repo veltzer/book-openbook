@@ -5,9 +5,10 @@ default_version = "Wikifonia"
 title = "Bidin' My Time"
 style = "Jazz"
 composer = "George Gershwin"
+poet = "Ira Gershwin"
 piece = "Swing"
 copyright = "Original composition (1930); public domain in the US"
-copyrightextra = "Instrumental lead sheet; later lyrics and arrangements are excluded."
+copyrightextra = "Lead sheet with the original lyrics; later arrangements are excluded."
 typesetter = "OpenBook contributors (MusicXML import)"
 completion = "3"
 uuid = "a4bb7407-111a-56fb-b864-bfc3393b4a47"
@@ -17,8 +18,8 @@ remark = "Copyright status outside the US may differ."
 [versions.Wikifonia]
 doChords = true
 doVoice = true
-doLyrics = false
-doLyricsmore = false
+doLyrics = true
+doLyricsmore = true
 doLyricsmoremore = false
 doChordBars = false
 doGuitar = false
@@ -34,7 +35,8 @@ doOwn = false
 	- local source: real_books_archive.gi/Wikifonia.tar.xz: Wikifonia/George Gershwin, Ira Gershwin - Bidin' My Time.mxl.
 	- jazz real/fake-book references: 557_Standards:38, StandardsBook:65, Just_Standards_Real_Book:56.
 	- source revision: http://wikifonia.org/node/5937/revisions/8084/view.
-	- retained written measures, pickups, repeats and endings; lyrics and accompaniment omitted.
+	- retained written measures, pickups, repeats and endings; accompaniment omitted.
+	- put in the original lyrics from the same Wikifonia source (published with the song, public domain in the US); typos fixed; aligned to the typed melody by pitch, since the source has broken ties.
 	- the original composition is public domain in the US; no claim is made about later editions.
 	- US term reference: https://cspd.law.duke.edu/publicdomainday/2026.
 	- tempo is an editorial practice suggestion.
@@ -124,5 +126,22 @@ doOwn = false
 	}
 	}
 	\endBar
+}
+{% endif %}
+{% if part == "LyricsWikifonia" %}\lyricmode {
+	I'm bid -- in' my time, __ _ "'Cause" that's the kind -- a guy I'm.
+	__ _ While oth -- er folks grow diz -- zy I keep bus -- y bid -- in' my time.
+	Next year, __ Next year, __ some -- thin's bound to hap -- pen.
+	__ This year, __ this year, __ I'll just keep on nap -- pin' __ and bid -- in' __ _ my time __ _ "'Cause" that's the kind -- a guy I'm.
+	__ _ There's no re -- gret -- tin' when I'm set -- tin' bid -- in' my time.
+}
+{% endif %}
+{% if part == "LyricsmoreWikifonia" %}\lyricmode {
+	I'm bid -- in' my time, __ _ "'Cause" that's the kind -- a guy I'm.
+	__ _ Be -- gin -- nin' on a Mon -- day right thru Sun -- day,
+	bid -- in' my time. Give me, __ give me, __ glass that's full of tin -- kle.
+	__ Let me, __ let me, __ dream like Rip Van Win -- kle.
+	__ _ He bid -- ed his time. __ _ And like that Win -- kle guy I'm.
+	__ _ Just chas -- in' way flies, how the day flies, bid -- in' my _ time.
 }
 {% endif %}

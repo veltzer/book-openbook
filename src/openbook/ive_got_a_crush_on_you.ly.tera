@@ -5,9 +5,10 @@ default_version = "Wikifonia"
 title = "I've Got A Crush On You"
 style = "Jazz"
 composer = "George Gershwin"
+poet = "Ira Gershwin"
 piece = "Swing"
 copyright = "Original composition (1928); public domain in the US"
-copyrightextra = "Instrumental lead sheet; later lyrics and arrangements are excluded."
+copyrightextra = "Lead sheet with the original lyrics; later arrangements are excluded."
 typesetter = "OpenBook contributors (MusicXML import)"
 completion = "3"
 uuid = "81f91b4e-16f9-521b-8345-a1ceeabbcf49"
@@ -17,7 +18,7 @@ remark = "Copyright status outside the US may differ."
 [versions.Wikifonia]
 doChords = true
 doVoice = true
-doLyrics = false
+doLyrics = true
 doLyricsmore = false
 doLyricsmoremore = false
 doChordBars = false
@@ -34,7 +35,8 @@ doOwn = false
 	- local source: real_books_archive.gi/Wikifonia.tar.xz: Wikifonia/George Gershwin, Ira Gershwin - I've Got A Crush On You.mxl.
 	- jazz real/fake-book references: Real_Book_3:140, 557_Standards:193, Colorado:106, Colorado_Cookbook:106, StandardsBook:255, Just_Standards_Real_Book:188.
 	- source revision: http://wikifonia.org/node/4148/revisions/15928/view.
-	- retained written measures, pickups, repeats and endings; lyrics and accompaniment omitted.
+	- retained written measures, pickups, repeats and endings; accompaniment omitted.
+	- put in the original lyrics from the same Wikifonia source (published with the song, public domain in the US); typos fixed.
 	- the original composition is public domain in the US; no claim is made about later editions.
 	- US term reference: https://cspd.law.duke.edu/publicdomainday/2026.
 	- tempo is an editorial practice suggestion.
@@ -99,5 +101,12 @@ doOwn = false
 	bes'1 ~ |
 	bes'2. r4 |
 	\endBar
+}
+{% endif %}
+{% if part == "LyricsWikifonia" %}\lyricmode {
+	I've got a crush on you, sweet -- ie pie, all the day and night -- time hear me sigh.
+	I nev -- er had the least no -- tion that I could fall with so much e -- mo -- tion.
+	Could you coo? Could you care? for a cun -- ning cot -- tage we could share?
+	The world will par -- _ don my mush "'cause" I've got a crush my bab -- y on you.
 }
 {% endif %}

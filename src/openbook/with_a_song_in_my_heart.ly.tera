@@ -5,9 +5,10 @@ default_version = "Wikifonia"
 title = "With a Song in My Heart"
 style = "Jazz"
 composer = "Richard Rodgers"
+poet = "Lorenz Hart"
 piece = "Swing"
 copyright = "Original composition (1929); public domain in the US"
-copyrightextra = "Instrumental lead sheet; later lyrics and arrangements are excluded."
+copyrightextra = "Lead sheet with the original lyrics; later arrangements are excluded."
 typesetter = "OpenBook contributors (MusicXML import)"
 completion = "3"
 uuid = "0ef52b5f-cd15-56ca-a129-affc103ba885"
@@ -17,7 +18,7 @@ remark = "Copyright status outside the US may differ."
 [versions.Wikifonia]
 doChords = true
 doVoice = true
-doLyrics = false
+doLyrics = true
 doLyricsmore = false
 doLyricsmoremore = false
 doChordBars = false
@@ -34,7 +35,8 @@ doOwn = false
 	- local source: real_books_archive.gi/Wikifonia.tar.xz: Wikifonia/Richard Rodgers, Lorenz hart - With A Song In My Heart.mxl.
 	- jazz real/fake-book references: 557_Standards:431, StandardsBook:524, Just_Standards_Real_Book:384.
 	- source revision: http://wikifonia.org/node/3815/revisions/24826/view.
-	- retained written measures, pickups, repeats and endings; lyrics and accompaniment omitted.
+	- retained written measures, pickups, repeats and endings; accompaniment omitted.
+	- put in the original lyrics from the same Wikifonia source (published with the song, public domain in the US); typos fixed.
 	- the original composition is public domain in the US; no claim is made about later editions.
 	- US term reference: https://cspd.law.duke.edu/publicdomainday/2026.
 	- tempo is an editorial practice suggestion.
@@ -143,5 +145,15 @@ doOwn = false
 	}
 	c''2 ~ c''4 r4 |
 	\endBar
+}
+{% endif %}
+{% if part == "LyricsWikifonia" %}\lyricmode {
+	With a song in my heart I be -- hold your a -- dor -- a -- ble face,
+	Just a song at the start, But it soon is a hymn to your grace.
+	When the mus -- ic swells, I'm touch -- ing your hand It tells that you're stand -- ing near,
+	and at the sound of your voice, Heav -- en op -- ens its por -- tals to me.
+	Can I help but re -- joice That a song such as ours came to be?
+	But I al -- ways knew I would live life through With a song in my heart for you.
+	you.
 }
 {% endif %}

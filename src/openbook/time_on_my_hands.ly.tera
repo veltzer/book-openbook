@@ -5,9 +5,10 @@ default_version = "Wikifonia"
 title = "Time on My Hands"
 style = "Jazz"
 composer = "Vincent Youmans"
+poet = "Harold Adamson, Mack Gordon"
 piece = "Swing"
 copyright = "Original composition (1930); public domain in the US"
-copyrightextra = "Instrumental lead sheet; later lyrics and arrangements are excluded."
+copyrightextra = "Lead sheet with the original lyrics; later arrangements are excluded."
 typesetter = "OpenBook contributors (MusicXML import)"
 completion = "3"
 uuid = "78919eb3-7490-52e3-80ce-06e93fc3d55a"
@@ -17,7 +18,7 @@ remark = "Copyright status outside the US may differ."
 [versions.Wikifonia]
 doChords = true
 doVoice = true
-doLyrics = false
+doLyrics = true
 doLyricsmore = false
 doLyricsmoremore = false
 doChordBars = false
@@ -34,7 +35,8 @@ doOwn = false
 	- local source: real_books_archive.gi/Wikifonia.tar.xz: Wikifonia/Mack Gordon, Vincent Youmans, Harold Adamson - Time On My Hands.mxl.
 	- jazz real/fake-book references: 557_Standards:392, StandardsBook:468.
 	- source revision: http://wikifonia.org/node/4959/revisions/28803/view.
-	- retained written measures, pickups, repeats and endings; lyrics and accompaniment omitted.
+	- retained written measures, pickups, repeats and endings; accompaniment omitted.
+	- put in the original lyrics from the same Wikifonia source (published with the song, public domain in the US); typos fixed.
 	- the original composition is public domain in the US; no claim is made about later editions.
 	- US term reference: https://cspd.law.duke.edu/publicdomainday/2026.
 	- tempo is an editorial practice suggestion.
@@ -143,5 +145,12 @@ doOwn = false
 	}
 	f'2. r4 |
 	\endBar
+}
+{% endif %}
+{% if part == "LyricsWikifonia" %}\lyricmode {
+	Time on my hands, You in my arms, Noth -- ing but love, in view;
+	Then if you fall, Once and for all, I'll see my dreams come true.
+	Mo -- ments to spare for some -- one to care for, One love af -- fair for two ooh _ With time on my hands And you in my arms,
+	And love in my heart all for you. you.
 }
 {% endif %}

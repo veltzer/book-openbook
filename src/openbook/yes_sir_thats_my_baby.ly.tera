@@ -5,9 +5,10 @@ default_version = "Wikifonia"
 title = "Yes Sir, That's My Baby"
 style = "Jazz"
 composer = "Walter Donaldson"
+poet = "Gus Kahn"
 piece = "Swing"
 copyright = "Original composition (1925); public domain in the US"
-copyrightextra = "Instrumental lead sheet; later lyrics and arrangements are excluded."
+copyrightextra = "Lead sheet with the original lyrics; later arrangements are excluded."
 typesetter = "OpenBook contributors (MusicXML import)"
 completion = "3"
 uuid = "b58787b3-7bf8-54b9-9611-b75a45fed442"
@@ -17,8 +18,8 @@ remark = "Copyright status outside the US may differ."
 [versions.Wikifonia]
 doChords = true
 doVoice = true
-doLyrics = false
-doLyricsmore = false
+doLyrics = true
+doLyricsmore = true
 doLyricsmoremore = false
 doChordBars = false
 doGuitar = false
@@ -34,7 +35,8 @@ doOwn = false
 	- local source: real_books_archive.gi/Wikifonia.tar.xz: Wikifonia/Walter Donaldson, Gus Kahn - Yes Sir, That's My Baby.mxl.
 	- jazz real/fake-book references: 557_Standards:435.
 	- source revision: http://www.wikifonia.org/node/2547/revisions/3190/view.
-	- retained written measures, pickups, repeats and endings; lyrics and accompaniment omitted.
+	- retained written measures, pickups, repeats and endings; accompaniment omitted.
+	- put in the original lyrics from the same Wikifonia source (published with the song, public domain in the US); typos fixed.
 	- the original composition is public domain in the US; no claim is made about later editions.
 	- US term reference: https://cspd.law.duke.edu/publicdomainday/2026.
 	- tempo is an editorial practice suggestion.
@@ -142,5 +144,21 @@ doOwn = false
 	}
 	}
 	\endBar
+}
+{% endif %}
+{% if part == "LyricsWikifonia" %}\lyricmode {
+	Yes, Sir, That's My Ba -- by, no, sir, Don't mean "'May" -- be' Yes,
+	Sir, That's My Ba -- by now. __ Yes, ma'am we've de -- cid -- ed No ma'am we won't hide it,
+	Yes, ma'am you're in -- vit -- ed now. __ By the way, __ By the way __ When we reach the preach -- er I'd say,
+	__ Yes, Sir, That's My Ba -- by, No, Sir, don't mean "'may" -- be' Yes,
+	Sir, That's My Ba -- by now. __
+}
+{% endif %}
+{% if part == "LyricsmoreWikifonia" %}\lyricmode {
+	Yes, Sir, That's My Ba -- by, no, sir, Don't mean "'May" -- be' Yes,
+	Sir, That's My Ba -- by now. __ Well well, "'lookit'" that ba -- by Do tell,
+	don't say "'May" -- be' Nell's bells won't she cause some row. __ Pret -- ty soon __ Pret -- ty soon __ We will hear that Lo -- hen -- grin tune,
+	__ Who for should she be sir, No one else but me sir, Yes,
+	Sir, That's My Ba -- by _ now. __
 }
 {% endif %}

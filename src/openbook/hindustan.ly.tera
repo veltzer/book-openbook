@@ -5,9 +5,10 @@ default_version = "Wikifonia"
 title = "Hindustan"
 style = "Jazz"
 composer = "Harold Weeks, Oliver G. Wallace"
+poet = "Oliver G. Wallace, Harold Weeks"
 piece = "Swing"
 copyright = "Original composition (1918); public domain in the US"
-copyrightextra = "Instrumental lead sheet; later lyrics and arrangements are excluded."
+copyrightextra = "Lead sheet with the original lyrics; later arrangements are excluded."
 typesetter = "OpenBook contributors (MusicXML import)"
 completion = "3"
 uuid = "40581882-d91f-5555-ae86-8cf214d68abb"
@@ -17,7 +18,7 @@ remark = "Copyright status outside the US may differ."
 [versions.Wikifonia]
 doChords = true
 doVoice = true
-doLyrics = false
+doLyrics = true
 doLyricsmore = false
 doLyricsmoremore = false
 doChordBars = false
@@ -34,7 +35,8 @@ doOwn = false
 	- local source: real_books_archive.gi/Wikifonia.tar.xz: Wikifonia/Harold Weeks, Oliver Wallace - Hindustan.mxl.
 	- jazz real/fake-book references: Firehouse_Jazz_Band:37.
 	- source revision: http://wikifonia.org/node/19033/revisions/26141/view.
-	- retained written measures, pickups, repeats and endings; lyrics and accompaniment omitted.
+	- retained written measures, pickups, repeats and endings; accompaniment omitted.
+	- put in the original lyrics from the same Wikifonia source (published with the song, public domain in the US); typos fixed.
 	- the original composition is public domain in the US; no claim is made about later editions.
 	- US term reference: https://cspd.law.duke.edu/publicdomainday/2026.
 	- tempo is an editorial practice suggestion.
@@ -124,5 +126,12 @@ doOwn = false
 	c''1 ~ |
 	c''2. r4 |
 	\endBar
+}
+{% endif %}
+{% if part == "LyricsWikifonia" %}\lyricmode {
+	Hin -- du -- stan, where we stopped to rest our ti -- red car -- a -- van.
+	Hin -- du -- stan where the paint -- ed pea -- cock proud -- ly spread his fan.
+	Hin -- du -- stan where the pur -- ple sun bird flashed a -- cross the sand.
+	Hin -- du -- stan where I met her and the world be -- gan.
 }
 {% endif %}

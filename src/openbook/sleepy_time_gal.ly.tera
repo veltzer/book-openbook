@@ -5,9 +5,10 @@ default_version = "Wikifonia"
 title = "Sleepy Time Gal"
 style = "Jazz"
 composer = "Angelo Lorenzo, Richard A. Whiting"
+poet = "Joseph R. Alden, Raymond B. Egan"
 piece = "Swing"
 copyright = "Original composition (1925); public domain in the US"
-copyrightextra = "Instrumental lead sheet; later lyrics and arrangements are excluded."
+copyrightextra = "Lead sheet with the original lyrics; later arrangements are excluded."
 typesetter = "OpenBook contributors (MusicXML import)"
 completion = "3"
 uuid = "f78e92fe-9551-5134-91f7-9c43a9aa1b1c"
@@ -17,7 +18,7 @@ remark = "Copyright status outside the US may differ."
 [versions.Wikifonia]
 doChords = true
 doVoice = true
-doLyrics = false
+doLyrics = true
 doLyricsmore = false
 doLyricsmoremore = false
 doChordBars = false
@@ -34,7 +35,8 @@ doOwn = false
 	- local source: real_books_archive.gi/Wikifonia.tar.xz: Wikifonia/Ange Lorenzo, Raymond B. Egan, Jos. R. Alden, Richard A. Whiting - Sleepy Time Gal.mxl.
 	- jazz real/fake-book references: Firehouse_Jazz_Band:730.
 	- source revision: http://wikifonia.org/node/4955/revisions/6716/view.
-	- retained written measures, pickups, repeats and endings; lyrics and accompaniment omitted.
+	- retained written measures, pickups, repeats and endings; accompaniment omitted.
+	- put in the original lyrics from the same Wikifonia source (published with the song, public domain in the US); typos fixed.
 	- the original composition is public domain in the US; no claim is made about later editions.
 	- US term reference: https://cspd.law.duke.edu/publicdomainday/2026.
 	- tempo is an editorial practice suggestion.
@@ -143,5 +145,17 @@ doOwn = false
 	}
 	g'2 ~ g'4 r4 |
 	\endBar
+}
+{% endif %}
+{% if part == "LyricsWikifonia" %}\lyricmode {
+	Sleep -- y time gal, you're turn -- ing night in -- to day,
+	__ Sleep -- y time gal, You've danced the ev -- "'ning" a -- way,
+	Be -- fore each sil -- ver -- y star Fades out of sight,
+	Please give me one lit -- tle kiss, Then let us whis -- per "'Good" -- night.' It's get -- tin' late,
+	and dear, your pil -- low's wait -- in'; Sleep -- y time gal,
+	When all your dan -- cin' is thru, Sleep -- y time gal, I'll find a cot -- tage for you,
+	You'll learn to cook and to sew, What's more you'll love it, I know,
+	When you're a stay -- at -- home play at home, eight -- o' -- clock,
+	sleep -- y time gal. gal.
 }
 {% endif %}

@@ -5,9 +5,10 @@ default_version = "Wikifonia"
 title = "Soon"
 style = "Jazz"
 composer = "George Gershwin"
+poet = "Ira Gershwin"
 piece = "Swing"
 copyright = "Original composition (1930); public domain in the US"
-copyrightextra = "Instrumental lead sheet; later lyrics and arrangements are excluded."
+copyrightextra = "Lead sheet with the original lyrics; later arrangements are excluded."
 typesetter = "OpenBook contributors (MusicXML import)"
 completion = "3"
 uuid = "ba587996-e157-5d3e-853c-4903c0e1aec1"
@@ -17,8 +18,8 @@ remark = "Copyright status outside the US may differ."
 [versions.Wikifonia]
 doChords = true
 doVoice = true
-doLyrics = false
-doLyricsmore = false
+doLyrics = true
+doLyricsmore = true
 doLyricsmoremore = false
 doChordBars = false
 doGuitar = false
@@ -34,7 +35,8 @@ doOwn = false
 	- local source: real_books_archive.gi/Wikifonia.tar.xz: Wikifonia/George Gershwin, Ira Gershwin - Soon.mxl.
 	- jazz real/fake-book references: Real_Book_3:282, 557_Standards:339, Firehouse_Jazz_Band:137, StandardsBook:401.
 	- source revision: http://wikifonia.org/node/4135/revisions/5485/view.
-	- retained written measures, pickups, repeats and endings; lyrics and accompaniment omitted.
+	- retained written measures, pickups, repeats and endings; accompaniment omitted.
+	- put in the original lyrics from the same Wikifonia source (published with the song, public domain in the US); typos fixed.
 	- the original composition is public domain in the US; no claim is made about later editions.
 	- US term reference: https://cspd.law.duke.edu/publicdomainday/2026.
 	- tempo is an editorial practice suggestion.
@@ -142,5 +144,21 @@ doOwn = false
 	}
 	es'2. r4 |
 	\endBar
+}
+{% endif %}
+{% if part == "LyricsWikifonia" %}\lyricmode {
+	Soon, the lone -- ly nights will be end -- ed, soon, two hearts as one will be blend -- ed.
+	I've found the hap -- pi -- ness I've wait -- ed for; the on -- ly girl that I was fat -- ed for.
+	Oh, soon a lit -- tle cot -- tage will find us safe, with all our cares far be -- hind us.
+	The day you're mine this world will be in tune. Let's make that day come soon.
+	soon.
+}
+{% endif %}
+{% if part == "LyricsmoreWikifonia" %}\lyricmode {
+	Soon, my dear, you'll nev -- er be lone -- ly, soon, you'll find I live for you on -- ly.
+	When I'm with you who cares what time it is, or what the place or what the cli -- mate is?
+	Oh! soon our lit -- tle ship will come sail -- ing home through ev -- "'ry" storm,
+	nev -- er fail -- ing The day you're mine the world will be in tune.
+	Let's make that day come soon soon.
 }
 {% endif %}

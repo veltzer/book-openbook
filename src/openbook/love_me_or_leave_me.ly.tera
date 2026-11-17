@@ -5,9 +5,10 @@ default_version = "Wikifonia"
 title = "Love Me Or Leave Me"
 style = "Jazz"
 composer = "Walter Donaldson"
+poet = "Gus Kahn"
 piece = "Swing"
 copyright = "Original composition (1928); public domain in the US"
-copyrightextra = "Instrumental lead sheet; later lyrics and arrangements are excluded."
+copyrightextra = "Lead sheet with the original lyrics; later arrangements are excluded."
 typesetter = "OpenBook contributors (MusicXML import)"
 completion = "3"
 uuid = "6d5877b4-477f-5a80-be29-6f80916539a9"
@@ -17,7 +18,7 @@ remark = "Copyright status outside the US may differ."
 [versions.Wikifonia]
 doChords = true
 doVoice = true
-doLyrics = false
+doLyrics = true
 doLyricsmore = false
 doLyricsmoremore = false
 doChordBars = false
@@ -34,7 +35,8 @@ doOwn = false
 	- local source: real_books_archive.gi/Wikifonia.tar.xz: Wikifonia/Walter Donaldson, Gus Kahn - Love Me Or Leave Me.mxl.1.
 	- jazz real/fake-book references: 557_Standards:222, Firehouse_Jazz_Band:578, StandardsBook:278.
 	- source revision: http://wikifonia.org/node/4018/revisions/15956/view.
-	- retained written measures, pickups, repeats and endings; lyrics and accompaniment omitted.
+	- retained written measures, pickups, repeats and endings; accompaniment omitted.
+	- put in the original lyrics from the same Wikifonia source (published with the song, public domain in the US); typos fixed; aligned to the typed melody by pitch, since the source has broken ties.
 	- the original composition is public domain in the US; no claim is made about later editions.
 	- US term reference: https://cspd.law.duke.edu/publicdomainday/2026.
 	- tempo is an editorial practice suggestion.
@@ -143,5 +145,17 @@ doOwn = false
 	}
 	f'2. ) r4 |
 	\endBar
+}
+{% endif %}
+{% if part == "LyricsWikifonia" %}\lyricmode {
+	Love me or leave me or let me be lone -- ly. You won't be -- lieve me,
+	and I love you on -- ly. I'd rath -- er be lone -- ly than hap -- py with some -- bod -- y else.
+	You might find the night -- time the right time for kiss -- ing,
+	but night -- time is my time for just rem -- i -- nisc -- ing,
+	re -- gret -- ting in -- stead of for -- get -- ting with some -- bod -- y else.
+	There'll be no one un -- less that some -- one is you. _ _ I in -- tend to be in -- de -- pend -- ent -- ly blue.
+	_ _ I want your love but I don't want to bor -- row,
+	to have it to -- day and to give back to -- mor -- row,
+	For my love is your love, there's no love for no -- bod -- y else!
 }
 {% endif %}

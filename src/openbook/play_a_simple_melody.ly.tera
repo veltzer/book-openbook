@@ -5,9 +5,10 @@ default_version = "Wikifonia"
 title = "Play A Simple Melody"
 style = "Jazz"
 composer = "Irving Berlin"
+poet = "Irving Berlin"
 piece = "Swing"
 copyright = "Original composition (1914); public domain in the US"
-copyrightextra = "Instrumental lead sheet; later lyrics and arrangements are excluded."
+copyrightextra = "Lead sheet with the original lyrics; later arrangements are excluded."
 typesetter = "OpenBook contributors (MusicXML import)"
 completion = "3"
 uuid = "0bcbb6ae-6b76-5a5e-9ed5-51b913686549"
@@ -17,7 +18,7 @@ remark = "Copyright status outside the US may differ."
 [versions.Wikifonia]
 doChords = true
 doVoice = true
-doLyrics = false
+doLyrics = true
 doLyricsmore = false
 doLyricsmoremore = false
 doChordBars = false
@@ -34,7 +35,8 @@ doOwn = false
 	- local source: real_books_archive.gi/Wikifonia.tar.xz: Wikifonia/Irving Berlin - Play A Simple Melody.mxl.
 	- jazz real/fake-book references: Firehouse_Jazz_Band:247.
 	- source revision: http://wikifonia.org/node/5772/revisions/8114/view.
-	- retained written measures, pickups, repeats and endings; lyrics and accompaniment omitted.
+	- retained written measures, pickups, repeats and endings; accompaniment omitted.
+	- put in the original lyrics from the same Wikifonia source (published with the song, public domain in the US); typos fixed.
 	- the original composition is public domain in the US; no claim is made about later editions.
 	- US term reference: https://cspd.law.duke.edu/publicdomainday/2026.
 	- tempo is an editorial practice suggestion.
@@ -122,5 +124,9 @@ doOwn = false
 	es''2. r4 |
 	R1 |
 	\endBar
+}
+{% endif %}
+{% if part == "LyricsWikifonia" %}\lyricmode {
+	Won't you play a sim -- ple mel -- o -- dy like my moth -- er sang to me one with good old fash -- ioned har -- mon -- y play a sim -- ple mel -- o -- dy mus -- i -- cal de -- mon set your hon -- ey a -- dream -- in' won't you play me some rag just change that clas -- si -- cal nag to some sweet beau -- ti -- ful drag if you will play from a cop -- y of a tune that is chop -- py you'll get all my ap -- plause and that is sim -- ply be -- cause I want to lis -- ten to rag.
 }
 {% endif %}

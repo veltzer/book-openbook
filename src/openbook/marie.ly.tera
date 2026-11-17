@@ -5,9 +5,10 @@ default_version = "Wikifonia"
 title = "Marie"
 style = "Jazz"
 composer = "Irving Berlin"
+poet = "Irving Berlin"
 piece = "Swing"
 copyright = "Original composition (1928); public domain in the US"
-copyrightextra = "Instrumental lead sheet; later lyrics and arrangements are excluded."
+copyrightextra = "Lead sheet with the original lyrics; later arrangements are excluded."
 typesetter = "OpenBook contributors (MusicXML import)"
 completion = "3"
 uuid = "303605f1-6d96-5b8a-b302-b1d4b41d471d"
@@ -17,7 +18,7 @@ remark = "Copyright status outside the US may differ."
 [versions.Wikifonia]
 doChords = true
 doVoice = true
-doLyrics = false
+doLyrics = true
 doLyricsmore = false
 doLyricsmoremore = false
 doChordBars = false
@@ -34,7 +35,8 @@ doOwn = false
 	- local source: real_books_archive.gi/Wikifonia.tar.xz: Wikifonia/Irving Berlin - Marie.mxl.
 	- jazz real/fake-book references: Firehouse_Jazz_Band:413, Fakebook_Django:133.
 	- source revision: http://wikifonia.org/node/16926/revisions/22470/view.
-	- retained written measures, pickups, repeats and endings; lyrics and accompaniment omitted.
+	- retained written measures, pickups, repeats and endings; accompaniment omitted.
+	- put in the original lyrics from the same Wikifonia source (published with the song, public domain in the US); typos fixed.
 	- the original composition is public domain in the US; no claim is made about later editions.
 	- US term reference: https://cspd.law.duke.edu/publicdomainday/2026.
 	- tempo is an editorial practice suggestion.
@@ -166,5 +168,14 @@ doOwn = false
 	f'1 ~ |
 	f'1 |
 	\endBar
+}
+{% endif %}
+{% if part == "LyricsWikifonia" %}\lyricmode {
+	There's a gleam in your eyes, Ma -- rie. __ And the mean -- ing is plain to see.
+	__ But you'll find ro -- mance is a game of chance, that is not all it seems to be.
+	__ Ma -- rie, the dawn is break -- ing. Ma -- rie, you'll soon be walk -- ing,
+	to find __ your heart is ach -- ing. And tears will fall as you re -- call the moon __ in all it's splend -- or the kiss __ so ver -- y ten -- der.
+	The words __ will you sur -- ren -- der, to me __ Ma -- rie.
+	Ma -- Ma
 }
 {% endif %}

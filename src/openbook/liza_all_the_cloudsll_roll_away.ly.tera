@@ -5,9 +5,10 @@ default_version = "Wikifonia"
 title = "Liza (All the Clouds'll Roll Away)"
 style = "Jazz"
 composer = "George Gershwin"
+poet = "Ira Gershwin, Gus Kahn"
 piece = "Swing"
 copyright = "Original composition (1929); public domain in the US"
-copyrightextra = "Instrumental lead sheet; later lyrics and arrangements are excluded."
+copyrightextra = "Lead sheet with the original lyrics; later arrangements are excluded."
 typesetter = "OpenBook contributors (MusicXML import)"
 completion = "3"
 uuid = "547f386c-9a9f-5fb9-b4f7-b7a87d0fa657"
@@ -17,7 +18,7 @@ remark = "Copyright status outside the US may differ."
 [versions.Wikifonia]
 doChords = true
 doVoice = true
-doLyrics = false
+doLyrics = true
 doLyricsmore = false
 doLyricsmoremore = false
 doChordBars = false
@@ -34,7 +35,8 @@ doOwn = false
 	- local source: real_books_archive.gi/Wikifonia.tar.xz: Wikifonia/George Gershwin, Ira Gershwin and Gus Kahn - Liza.mxl.
 	- jazz real/fake-book references: 557_Standards:218.
 	- source revision: http://wikifonia.org/node/9053/revisions/12451/view.
-	- retained written measures, pickups, repeats and endings; lyrics and accompaniment omitted.
+	- retained written measures, pickups, repeats and endings; accompaniment omitted.
+	- put in the original lyrics from the same Wikifonia source (published with the song, public domain in the US); typos fixed.
 	- the original composition is public domain in the US; no claim is made about later editions.
 	- US term reference: https://cspd.law.duke.edu/publicdomainday/2026.
 	- tempo is an editorial practice suggestion.
@@ -167,5 +169,19 @@ doOwn = false
 	}
 	es'2. r4 |
 	\endBar
+}
+{% endif %}
+{% if part == "LyricsWikifonia" %}\lyricmode {
+	Moon shin -- in' on the riv -- er. Come a -- long, my Li -- za!
+	Breeze sing -- in' thru the tree -- tops. Come a -- long, my Li -- za!
+	Some -- thin' might -- y sweet I want to whis -- per sweet and low,
+	That you ought to know, my Li -- za! I get lone -- some,
+	hon -- ey, When I'm all a -- lone so long; Don't make me wait;
+	don't hes -- i -- tate; come and hear my song. Li -- za,
+	Li -- za, skies are gray, But if you'll smile on me All the clouds -- "'ll" roll a -- way.
+	Li -- za, Li -- za, don't de -- lay, Come, keep me com -- pan -- y And the clouds -- "'ll" roll a -- way.
+	See the hon -- ey -- moon a -- shin -- in' down; We should make a date with Par -- son Brown.
+	So, Li -- za, Li -- za, name the day When you be -- long to me And the clouds -- "'ll" roll a -- way.
+	way.
 }
 {% endif %}

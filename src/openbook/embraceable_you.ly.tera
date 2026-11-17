@@ -5,9 +5,10 @@ default_version = "Wikifonia"
 title = "Embraceable You"
 style = "Jazz"
 composer = "George Gershwin"
+poet = "Ira Gershwin"
 piece = "Swing"
 copyright = "Original composition (1930); public domain in the US"
-copyrightextra = "Instrumental lead sheet; later lyrics and arrangements are excluded."
+copyrightextra = "Lead sheet with the original lyrics; later arrangements are excluded."
 typesetter = "OpenBook contributors (MusicXML import)"
 completion = "3"
 uuid = "571d20e9-f4a6-557d-b59d-b2e78efcee8f"
@@ -17,7 +18,7 @@ remark = "Copyright status outside the US may differ."
 [versions.Wikifonia]
 doChords = true
 doVoice = true
-doLyrics = false
+doLyrics = true
 doLyricsmore = false
 doLyricsmoremore = false
 doChordBars = false
@@ -34,7 +35,8 @@ doOwn = false
 	- local source: real_books_archive.gi/Wikifonia.tar.xz: Wikifonia/George Gershwin, Ira Gershwin - Embraceable You.mxl.
 	- jazz real/fake-book references: Real_Book_2:92, 557_Standards:97, Fakebook_Django:63, StandardsBook:132, Just_Standards_Real_Book:108.
 	- source revision: http://wikifonia.org/node/4055/revisions/23426/view.
-	- retained written measures, pickups, repeats and endings; lyrics and accompaniment omitted.
+	- retained written measures, pickups, repeats and endings; accompaniment omitted.
+	- put in the original lyrics from the same Wikifonia source (published with the song, public domain in the US); typos fixed.
 	- the original composition is public domain in the US; no claim is made about later editions.
 	- US term reference: https://cspd.law.duke.edu/publicdomainday/2026.
 	- tempo is an editorial practice suggestion.
@@ -143,5 +145,15 @@ doOwn = false
 	}
 	g'4 r4 r2 |
 	\endBar
+}
+{% endif %}
+{% if part == "LyricsWikifonia" %}\lyricmode {
+	Em -- brace me, my sweet em -- brace -- a -- ble you.
+	Em -- brace me you ir -- re -- place -- a -- ble you!
+	Just one look at you, my heart grew tip -- sy in me. You and you a -- lone bring out the gy -- psy in me.
+	I love all the man -- y charms a -- bout you; A -- bove all I want my arms a -- round you.
+	Don't be a naugh -- ty ba -- by come to pa -- pa,
+	come to pa -- pa do! My sweet em -- brace -- a -- ble you.
+	you.
 }
 {% endif %}

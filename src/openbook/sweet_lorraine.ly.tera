@@ -5,9 +5,10 @@ default_version = "Wikifonia"
 title = "Sweet Lorraine"
 style = "Jazz"
 composer = "Cliff Burwell"
+poet = "Mitchell Parish"
 piece = "Swing"
 copyright = "Original composition (1928); public domain in the US"
-copyrightextra = "Instrumental lead sheet; later lyrics and arrangements are excluded."
+copyrightextra = "Lead sheet with the original lyrics; later arrangements are excluded."
 typesetter = "OpenBook contributors (MusicXML import)"
 completion = "3"
 uuid = "e06f54e4-1e95-5be2-99e7-183ae8a8ae1a"
@@ -17,7 +18,7 @@ remark = "Copyright status outside the US may differ."
 [versions.Wikifonia]
 doChords = true
 doVoice = true
-doLyrics = false
+doLyrics = true
 doLyricsmore = false
 doLyricsmoremore = false
 doChordBars = false
@@ -34,7 +35,8 @@ doOwn = false
 	- local source: real_books_archive.gi/Wikifonia.tar.xz: Wikifonia/Cliff Burwell, Mitchell Paris - Sweet Lorraine.mxl.
 	- jazz real/fake-book references: Real_Book_3:296, New_Real_3:379, 557_Standards:361, Firehouse_Jazz_Band:388.
 	- source revision: http://wikifonia.org/node/3478/revisions/23957/view.
-	- retained written measures, pickups, repeats and endings; lyrics and accompaniment omitted.
+	- retained written measures, pickups, repeats and endings; accompaniment omitted.
+	- put in the original lyrics from the same Wikifonia source (published with the song, public domain in the US); typos fixed.
 	- the original composition is public domain in the US; no claim is made about later editions.
 	- US term reference: https://cspd.law.duke.edu/publicdomainday/2026.
 	- tempo is an editorial practice suggestion.
@@ -126,5 +128,9 @@ doOwn = false
 	g'2. r4 |
 	g''4 g''4 g''4 r4 |
 	\endBar
+}
+{% endif %}
+{% if part == "LyricsWikifonia" %}\lyricmode {
+	I've just found joy I'm as hap -- py as a ba by boy with an -- oth -- er brand new choo -- choo toy when I'm with my sweet Lor -- raine A pair of eyes that are blu -- er than the sum -- mer skies when you see them you will re -- a -- lize why I love my sweet Lor -- raine I'm so hap -- py when it's rain -- ing I don't miss the sun For its in my sweet -- ies smile Just to think that I'm the luck -- y one who will lead her down the aisle each night I pray that no -- bo -- dy steals her heart a -- way just can't wait un -- til that hap -- py day when I mar -- ry sweet Lor -- raine
 }
 {% endif %}

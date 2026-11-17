@@ -5,9 +5,10 @@ default_version = "Wikifonia"
 title = "Whispering"
 style = "Jazz"
 composer = "John Schonberger, Vincent Rose"
+poet = "Malvin Schonberger"
 piece = "Swing"
 copyright = "Original composition (1920); public domain in the US"
-copyrightextra = "Instrumental lead sheet; later lyrics and arrangements are excluded."
+copyrightextra = "Lead sheet with the original lyrics; later arrangements are excluded."
 typesetter = "OpenBook contributors (MusicXML import)"
 completion = "3"
 uuid = "ae93b0d3-8ef4-560a-891f-319f3981b0b8"
@@ -17,7 +18,7 @@ remark = "Copyright status outside the US may differ."
 [versions.Wikifonia]
 doChords = true
 doVoice = true
-doLyrics = false
+doLyrics = true
 doLyricsmore = false
 doLyricsmoremore = false
 doChordBars = false
@@ -34,7 +35,8 @@ doOwn = false
 	- local source: real_books_archive.gi/Wikifonia.tar.xz: Wikifonia/John Schonberger, Richard Coburn, Vincent Rose - Whispering.mxl.
 	- jazz real/fake-book references: Firehouse_Jazz_Band:101, Fakebook_Django:242.
 	- source revision: http://wikifonia.org/node/2996/revisions/13302/view.
-	- retained written measures, pickups, repeats and endings; lyrics and accompaniment omitted.
+	- retained written measures, pickups, repeats and endings; accompaniment omitted.
+	- put in the original lyrics from the same Wikifonia source (published with the song, public domain in the US); typos fixed.
 	- the original composition is public domain in the US; no claim is made about later editions.
 	- US term reference: https://cspd.law.duke.edu/publicdomainday/2026.
 	- tempo is an editorial practice suggestion.
@@ -142,5 +144,10 @@ doOwn = false
 	}
 	}
 	\endBar
+}
+{% endif %}
+{% if part == "LyricsWikifonia" %}\lyricmode {
+	Whis -- per -- ing while you cud -- dle near me whis -- per -- ing so no one can hear me Each lit -- tle whis -- per seems to cheer me I know it's true there's no one dear but you You're whis -- pe -- ring why you'll nev -- er leave me whis -- per -- ing why you'll nev -- er grieve me whis -- per and say that you be -- lieve me,
+	Whis -- per -- ing that I love you. _ _ _ _ _ _ you.
 }
 {% endif %}

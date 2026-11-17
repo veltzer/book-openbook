@@ -5,9 +5,10 @@ default_version = "Wikifonia"
 title = "Dardanella"
 style = "Jazz"
 composer = "Felix Bernard, Johnny S. Black"
+poet = "Fred Fisher"
 piece = "Swing"
 copyright = "Original composition (1919); public domain in the US"
-copyrightextra = "Instrumental lead sheet; later lyrics and arrangements are excluded."
+copyrightextra = "Lead sheet with the original lyrics; later arrangements are excluded."
 typesetter = "OpenBook contributors (MusicXML import)"
 completion = "3"
 uuid = "3c30e1ba-4adb-5b73-97ce-a69cb788d8ea"
@@ -17,8 +18,8 @@ remark = "Copyright status outside the US may differ."
 [versions.Wikifonia]
 doChords = true
 doVoice = true
-doLyrics = false
-doLyricsmore = false
+doLyrics = true
+doLyricsmore = true
 doLyricsmoremore = false
 doChordBars = false
 doGuitar = false
@@ -34,7 +35,8 @@ doOwn = false
 	- local source: real_books_archive.gi/Wikifonia.tar.xz: Wikifonia/Feliz Bernard & Johnny S. Black, Fred Fisher - Dardanella.mxl.
 	- jazz real/fake-book references: Firehouse_Jazz_Band:429.
 	- source revision: http://wikifonia.org/node/18124/revisions/24000/view.
-	- retained written measures, pickups, repeats and endings; lyrics and accompaniment omitted.
+	- retained written measures, pickups, repeats and endings; accompaniment omitted.
+	- put in the original lyrics from the same Wikifonia source (published with the song, public domain in the US); typos fixed.
 	- the original composition is public domain in the US; no claim is made about later editions.
 	- US term reference: https://cspd.law.duke.edu/publicdomainday/2026.
 	- tempo is an editorial practice suggestion.
@@ -188,5 +190,23 @@ doOwn = false
 	}
 	}
 	\endBar
+}
+{% endif %}
+{% if part == "LyricsWikifonia" %}\lyricmode {
+	Down be -- side the Dar -- da -- nel -- la Bay, Where Or -- i -- ent -- al breez -- es play,
+	There lives a lone -- some maid, Ar -- me -- _ _ nian By the Dar -- da -- nelles with glow -- ing eyes,
+	She looks a -- cross the seas and sighs, And weaves her love spell so Si -- re -- _ _ nian _ _ _ _ _ _ Soon I shall re -- turn to Turk -- e -- stan I will ask for her heart and hand: Oh!
+	sweet Dar -- da -- nel -- la, I love your ha -- rem eyes I'm a luck -- y fel -- low to cap -- ture such a prize Oh Al -- lah knows,
+	my love for you And he tells you to be true, Dar -- da -- nel la,
+	Oh hear my sigh My O -- ri -- ent -- al, Oh! sweet Dar -- da -- nel -- la pre -- pare the wed -- ding wine There'll be one girl in my ha -- rem,
+	when you're mine. We'll build a tent just like the chil -- dren of the O -- ri -- ent,
+	Oh! sweet Dar -- da -- nel -- la, my star of love di -- vine vine.
+}
+{% endif %}
+{% if part == "LyricsmoreWikifonia" %}\lyricmode {
+	When the Turk -- ish Sul -- tan saw her eyes, Oh! he was tak -- en by sur -- prise,
+	He said "'I'll" buy her for my Ha -- _ _ rem' I just told the Sul -- tan to be nice,
+	She can't be bought for an -- y price, She said to me she could -- n't bear _ _ him _ _ _ _ _ _ So be -- neath the O -- ri -- ent -- al moon,
+	I'll be woo -- ing my love real soon:
 }
 {% endif %}

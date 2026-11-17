@@ -5,9 +5,10 @@ default_version = "Wikifonia"
 title = "Mountain Greenery"
 style = "Jazz"
 composer = "Richard Rodgers"
+poet = "Lorenz Hart"
 piece = "Swing"
 copyright = "Original composition (1926); public domain in the US"
-copyrightextra = "Instrumental lead sheet; later lyrics and arrangements are excluded."
+copyrightextra = "Lead sheet with the original lyrics; later arrangements are excluded."
 typesetter = "OpenBook contributors (MusicXML import)"
 completion = "3"
 uuid = "15bd9916-f7be-50e3-b83d-af321487d7a4"
@@ -17,7 +18,7 @@ remark = "Copyright status outside the US may differ."
 [versions.Wikifonia]
 doChords = true
 doVoice = true
-doLyrics = false
+doLyrics = true
 doLyricsmore = false
 doLyricsmoremore = false
 doChordBars = false
@@ -34,7 +35,8 @@ doOwn = false
 	- local source: real_books_archive.gi/Wikifonia.tar.xz: Wikifonia/Richard Rodgers, Lorenz Hart - Mountain Greenery.mxl.
 	- jazz real/fake-book references: Real_Book_3:209, StandardsBook:308, Just_Standards_Real_Book:258.
 	- source revision: http://wikifonia.org/node/6056/revisions/8386/view.
-	- retained written measures, pickups, repeats and endings; lyrics and accompaniment omitted.
+	- retained written measures, pickups, repeats and endings; accompaniment omitted.
+	- put in the original lyrics from the same Wikifonia source (published with the song, public domain in the US); typos fixed.
 	- the original composition is public domain in the US; no claim is made about later editions.
 	- US term reference: https://cspd.law.duke.edu/publicdomainday/2026.
 	- tempo is an editorial practice suggestion.
@@ -124,5 +126,9 @@ doOwn = false
 	c''1 ~ |
 	c''2. r4 |
 	\endBar
+}
+{% endif %}
+{% if part == "LyricsWikifonia" %}\lyricmode {
+	In a moun -- tain green -- er -- y where God paints the scen -- er -- y just two craz -- y peo -- ple to -- geth -- er while you love your lov -- er let blue skies be your cov -- er -- let when it rains we'll laugh at the wea -- ther and if you're good I'll search for wood so you can cook while I stand look -- ing beans could get no keen -- er re -- cep -- tion in a bean -- er -- y bless our moun -- tain green -- er -- y home!
 }
 {% endif %}

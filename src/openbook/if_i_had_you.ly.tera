@@ -5,9 +5,10 @@ default_version = "Wikifonia"
 title = "If I Had You"
 style = "Jazz"
 composer = "Jimmy Campbell, Reg Connelly, Ted Shapiro"
+poet = "Ted Shapiro, Jimmy Campbell, Reg Connelly"
 piece = "Swing"
 copyright = "Original composition (1928); public domain in the US"
-copyrightextra = "Instrumental lead sheet; later lyrics and arrangements are excluded."
+copyrightextra = "Lead sheet with the original lyrics; later arrangements are excluded."
 typesetter = "OpenBook contributors (MusicXML import)"
 completion = "3"
 uuid = "ba002f20-77d4-5c40-bff1-491407fa0895"
@@ -17,7 +18,7 @@ remark = "Copyright status outside the US may differ."
 [versions.Wikifonia]
 doChords = true
 doVoice = true
-doLyrics = false
+doLyrics = true
 doLyricsmore = false
 doLyricsmoremore = false
 doChordBars = false
@@ -34,7 +35,8 @@ doOwn = false
 	- local source: real_books_archive.gi/Wikifonia.tar.xz: Wikifonia/Jimmy Campbell, Reg Connelly, Ted Shapiro - If I Had You.mxl.
 	- jazz real/fake-book references: 557_Standards:147, Firehouse_Jazz_Band:462, Fakebook_Django:78.
 	- source revision: http://wikifonia.org/node/8304/revisions/25329/view.
-	- retained written measures, pickups, repeats and endings; lyrics and accompaniment omitted.
+	- retained written measures, pickups, repeats and endings; accompaniment omitted.
+	- put in the original lyrics from the same Wikifonia source (published with the song, public domain in the US); typos fixed; aligned to the typed melody by pitch, since the source has broken ties.
 	- the original composition is public domain in the US; no claim is made about later editions.
 	- US term reference: https://cspd.law.duke.edu/publicdomainday/2026.
 	- tempo is an editorial practice suggestion.
@@ -143,5 +145,17 @@ doOwn = false
 	}
 	bes'4 r4 r2 |
 	\endBar
+}
+{% endif %}
+{% if part == "LyricsWikifonia" %}\lyricmode {
+	I could show the world how to smile, __ I could be glad __ all of the while;
+	__ I could change the grey skies to blue __ if I had you.
+	__ I could leave the old days be -- hind; __ Leave all my pals,
+	__ I'd nev -- er mind. __ I could start my life all a -- new __ if I had you.
+	__ I could climb the snow -- capped moun -- tains, __ sail the might -- y o -- cean wide;
+	__ I could cross the burn -- ing de -- sert if I had you by my side.
+	__ I could be a king, dear, un -- crowned; __ hum -- ble or poor,
+	__ rich or re -- nowned. __ There is noth -- ing I could -- n't do __ if I had you.
+	__ you.
 }
 {% endif %}

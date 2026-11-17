@@ -5,6 +5,7 @@ default_version = "Wikifonia"
 title = "Just You, Just Me"
 style = "Jazz"
 composer = "Jesse Greer"
+poet = "Raymond Klages"
 piece = "Jazz"
 typesetter = "OpenBook contributors (MusicXML import)"
 completion = "3"
@@ -16,7 +17,7 @@ copyrightextra = "Rights Reserved"
 [versions.Wikifonia]
 doChords = true
 doVoice = true
-doLyrics = false
+doLyrics = true
 doLyricsmore = false
 doLyricsmoremore = false
 doChordBars = false
@@ -33,7 +34,8 @@ doOwn = false
 	- source revision: http://wikifonia.org/node/9952/revisions/19354/view.
 	- PDF reference: real_books_archive.gi/newreal3.pdf, PDF page 206.
 	- retained the original copyright notice where printed; the underlying music is not relicensed.
-	- retained written measures, pickups, repeats and endings; lyrics omitted.
+	- retained written measures, pickups, repeats and endings.
+	- put in the original lyrics from the same Wikifonia source (copyright expired, public domain in the US); typos fixed; aligned to the typed melody by pitch, since the source has broken ties.
 	- tempo is an editorial practice suggestion.
 	TODO:
 	- proofread the music against the referenced PDF and check by ear.
@@ -122,5 +124,12 @@ doOwn = false
 	r4 e'4 d'8 c'8 d'4 |
 	c'1 |
 	\endBar
+}
+{% endif %}
+{% if part == "LyricsWikifonia" %}\lyricmode {
+	Just you, just me, Let's find a co -- zy spot, to cud -- dle and coo.
+	Just us, Just we, I've missed an aw -- ful lot, my trou -- ble is you.
+	__ Oh, Gee! What are your charms for? What are your arms for? Use your im -- ag -- in -- a -- tion!
+	Just You, Just me, I'll tie a lov -- er's knot "'round" won -- der -- ful you!
 }
 {% endif %}

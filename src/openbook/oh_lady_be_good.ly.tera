@@ -5,9 +5,10 @@ default_version = "Wikifonia"
 title = "Oh, Lady Be Good!"
 style = "Jazz"
 composer = "George Gershwin"
+poet = "Ira Gershwin"
 piece = "Swing"
 copyright = "Original composition (1924); public domain in the US"
-copyrightextra = "Instrumental lead sheet; later lyrics and arrangements are excluded."
+copyrightextra = "Lead sheet with the original lyrics; later arrangements are excluded."
 typesetter = "OpenBook contributors (MusicXML import)"
 completion = "3"
 uuid = "3cc03f3b-0a11-50d9-bcb5-edeccaaacdb3"
@@ -17,8 +18,8 @@ remark = "Copyright status outside the US may differ."
 [versions.Wikifonia]
 doChords = true
 doVoice = true
-doLyrics = false
-doLyricsmore = false
+doLyrics = true
+doLyricsmore = true
 doLyricsmoremore = false
 doChordBars = false
 doGuitar = false
@@ -34,7 +35,8 @@ doOwn = false
 	- local source: real_books_archive.gi/Wikifonia.tar.xz: Wikifonia/George Gershwin, Ira Gershwin - Oh Lady Be Good.mxl.
 	- jazz real/fake-book references: Firehouse_Jazz_Band:327, Colorado:164, Colorado_Cookbook:164, StandardsBook:326.
 	- source revision: http://wikifonia.org/node/3840/revisions/17331/view.
-	- retained written measures, pickups, repeats and endings; lyrics and accompaniment omitted.
+	- retained written measures, pickups, repeats and endings; accompaniment omitted.
+	- put in the original lyrics from the same Wikifonia source (published with the song, public domain in the US); typos fixed.
 	- the original composition is public domain in the US; no claim is made about later editions.
 	- US term reference: https://cspd.law.duke.edu/publicdomainday/2026.
 	- tempo is an editorial practice suggestion.
@@ -143,5 +145,20 @@ doOwn = false
 	}
 	g'2 r2 |
 	\endBar
+}
+{% endif %}
+{% if part == "LyricsWikifonia" %}\lyricmode {
+	Oh, sweet and love -- ly lad -- y, be good! Oh lad -- y be good to me.
+	I am so aw -- f'ly mis -- un -- der -- stood, so lad -- y be good to me.
+	Oh, please have some pit -- y, I'm all a -- lone in this big cit -- y.
+	I tell you I'm just a lone -- some babe in the wood, so lad -- y be good to me!
+	me!
+}
+{% endif %}
+{% if part == "LyricsmoreWikifonia" %}\lyricmode {
+	Oh sweet and love -- ly lad -- y be good! Oh lad -- y be good to me.
+	I am so aw -- f'ly mis -- un -- der -- stood. so lad -- y be good to me.
+	This is tu -- lip weath -- er so let's put two and two to -- geth -- er.
+	I tell you I'm just a lone -- some babe in the wood, so lad -- y be good to
 }
 {% endif %}

@@ -5,9 +5,10 @@ default_version = "Wikifonia"
 title = "'S Wonderful"
 style = "Jazz"
 composer = "George Gershwin"
+poet = "Ira Gershwin"
 piece = "Swing"
 copyright = "Original composition (1927); public domain in the US"
-copyrightextra = "Instrumental lead sheet; later lyrics and arrangements are excluded."
+copyrightextra = "Lead sheet with the original lyrics; later arrangements are excluded."
 typesetter = "OpenBook contributors (MusicXML import)"
 completion = "3"
 uuid = "a74e1dd7-f6e0-597e-a981-ed1ddb1f1d78"
@@ -17,7 +18,7 @@ remark = "Copyright status outside the US may differ."
 [versions.Wikifonia]
 doChords = true
 doVoice = true
-doLyrics = false
+doLyrics = true
 doLyricsmore = false
 doLyricsmoremore = false
 doChordBars = false
@@ -34,7 +35,8 @@ doOwn = false
 	- local source: real_books_archive.gi/Wikifonia.tar.xz: Wikifonia/George Gershwin, Ira Gershwin - 'S Wonderful!.mxl.
 	- jazz real/fake-book references: 557_Standards:364, StandardsBook:364, Just_Standards_Real_Book:292.
 	- source revision: http://wikifonia.org/node/4090/revisions/15964/view.
-	- retained written measures, pickups, repeats and endings; lyrics and accompaniment omitted.
+	- retained written measures, pickups, repeats and endings; accompaniment omitted.
+	- put in the original lyrics from the same Wikifonia source (published with the song, public domain in the US); typos fixed.
 	- the original composition is public domain in the US; no claim is made about later editions.
 	- US term reference: https://cspd.law.duke.edu/publicdomainday/2026.
 	- tempo is an editorial practice suggestion.
@@ -125,5 +127,12 @@ doOwn = false
 	es'1 ~ |
 	es'2. r4 |
 	\endBar
+}
+{% endif %}
+{% if part == "LyricsWikifonia" %}\lyricmode {
+	’S~won -- der -- ful! ’S~mar -- vel -- ous! You should care for me.
+	’S~aw -- ful nice! ’S~par -- a -- dise! ’S~what I love to see! You've made my life so glam -- or -- ous,
+	You can't blame me for be -- ing am -- or -- ous! Oh!
+	’S~won -- der -- ful! ’S~mar -- vel -- ous! that you should care for me!
 }
 {% endif %}

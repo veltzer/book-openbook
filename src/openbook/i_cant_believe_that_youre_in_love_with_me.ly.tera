@@ -5,9 +5,10 @@ default_version = "Wikifonia"
 title = "I Can't Believe That You're in Love with Me"
 style = "Jazz"
 composer = "Jimmy McHugh"
+poet = "Clarence Gaskill"
 piece = "Swing"
 copyright = "Original composition (1926); public domain in the US"
-copyrightextra = "Instrumental lead sheet; later lyrics and arrangements are excluded."
+copyrightextra = "Lead sheet with the original lyrics; later arrangements are excluded."
 typesetter = "OpenBook contributors (MusicXML import)"
 completion = "3"
 uuid = "df9915ed-7b69-50f8-ba86-091453bf2909"
@@ -17,7 +18,7 @@ remark = "Copyright status outside the US may differ."
 [versions.Wikifonia]
 doChords = true
 doVoice = true
-doLyrics = false
+doLyrics = true
 doLyricsmore = false
 doLyricsmoremore = false
 doChordBars = false
@@ -34,7 +35,8 @@ doOwn = false
 	- local source: real_books_archive.gi/Wikifonia.tar.xz: Wikifonia/Clarence Gaskill, Jimmy McHugh - I Can't Believe That You're In Love With Me.mxl.
 	- jazz real/fake-book references: Firehouse_Jazz_Band:433, Fakebook_Django:76.
 	- source revision: http://wikifonia.org/node/2662/revisions/17903/view.
-	- retained written measures, pickups, repeats and endings; lyrics and accompaniment omitted.
+	- retained written measures, pickups, repeats and endings; accompaniment omitted.
+	- put in the original lyrics from the same Wikifonia source (published with the song, public domain in the US); typos fixed.
 	- the original composition is public domain in the US; no claim is made about later editions.
 	- US term reference: https://cspd.law.duke.edu/publicdomainday/2026.
 	- tempo taken from archived MusicXML.
@@ -126,5 +128,13 @@ doOwn = false
 	c''1 ~ |
 	c''2. r4 |
 	\endBar
+}
+{% endif %}
+{% if part == "LyricsWikifonia" %}\lyricmode {
+	Your eyes of blue, your kiss -- es too, _ nev -- er knew what they could do I cant be -- lieve that you're in love with me.
+	You're tell -- ing ev -- "'ry" -- one I know, I'm on your mind each place you go,
+	They can't be -- lieve that you're in love with me. I have al -- ways placed you far a -- bove me,
+	I just can't i -- mag -- ine that you love me; And af -- ter all is said and done,
+	To think that I'm the luck -- y one, I can't be -- lieve that you're in love with me.
 }
 {% endif %}

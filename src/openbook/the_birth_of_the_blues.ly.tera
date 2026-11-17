@@ -5,9 +5,10 @@ default_version = "Wikifonia"
 title = "The Birth of the Blues"
 style = "Jazz"
 composer = "Ray Henderson"
+poet = "B. G. DeSylva, Lew Brown"
 piece = "Swing"
 copyright = "Original composition (1926); public domain in the US"
-copyrightextra = "Instrumental lead sheet; later lyrics and arrangements are excluded."
+copyrightextra = "Lead sheet with the original lyrics; later arrangements are excluded."
 typesetter = "OpenBook contributors (MusicXML import)"
 completion = "3"
 uuid = "38fbb144-f136-5520-8be8-af33bd9eac14"
@@ -17,7 +18,7 @@ remark = "Copyright status outside the US may differ."
 [versions.Wikifonia]
 doChords = true
 doVoice = true
-doLyrics = false
+doLyrics = true
 doLyricsmore = false
 doLyricsmoremore = false
 doChordBars = false
@@ -34,7 +35,8 @@ doOwn = false
 	- local source: real_books_archive.gi/Wikifonia.tar.xz: Wikifonia/Ray Henderson, Buddy DeSylva, Lew Brown - The Birth Of The Blues.mxl.
 	- jazz real/fake-book references: Real_Book_2:32, 557_Standards:40, Firehouse_Jazz_Band:87, Just_Standards_Real_Book:58.
 	- source revision: http://wikifonia.org/node/10040/revisions/13620/view.
-	- retained written measures, pickups, repeats and endings; lyrics and accompaniment omitted.
+	- retained written measures, pickups, repeats and endings; accompaniment omitted.
+	- put in the original lyrics from the same Wikifonia source (published with the song, public domain in the US); typos fixed; aligned to the typed melody by pitch, since the source has broken ties.
 	- the original composition is public domain in the US; no claim is made about later editions.
 	- US term reference: https://cspd.law.duke.edu/publicdomainday/2026.
 	- tempo is an editorial practice suggestion.
@@ -145,5 +147,14 @@ doOwn = false
 	}
 	c''2. r4 |
 	\endBar
+}
+{% endif %}
+{% if part == "LyricsWikifonia" %}\lyricmode {
+	They heard the breeze in the trees __ Sing -- ing weird __ mel -- o -- dies __ And they made that __ the start __ of the blues.
+	__ And from the jail came the wail __ Of a down __ heart -- ed frail,
+	__ And they played __ that __ As part __ of the blues. __ From a whip -- por -- will Out on the hill,
+	__ they took a new __ note, __ Pushed it thru a horn till it was worn __ In -- to a blue __ note!
+	__ And then they nursed it, re -- hearsed it, And gave __ out the news __ That the South -- land gave birth __ to the blues!
+	__ They heard the blues!
 }
 {% endif %}

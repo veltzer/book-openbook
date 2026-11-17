@@ -5,9 +5,10 @@ default_version = "Wikifonia"
 title = "Louise"
 style = "Jazz"
 composer = "Richard A. Whiting"
+poet = "Leo Robin"
 piece = "Swing"
 copyright = "Original composition (1929); public domain in the US"
-copyrightextra = "Instrumental lead sheet; later lyrics and arrangements are excluded."
+copyrightextra = "Lead sheet with the original lyrics; later arrangements are excluded."
 typesetter = "OpenBook contributors (MusicXML import)"
 completion = "3"
 uuid = "022da13b-f581-5350-a921-cf11363d810e"
@@ -17,7 +18,7 @@ remark = "Copyright status outside the US may differ."
 [versions.Wikifonia]
 doChords = true
 doVoice = true
-doLyrics = false
+doLyrics = true
 doLyricsmore = false
 doLyricsmoremore = false
 doChordBars = false
@@ -34,7 +35,8 @@ doOwn = false
 	- local source: real_books_archive.gi/Wikifonia.tar.xz: Wikifonia/Richard A. Whiting, Leo Robin - Louise.mxl.
 	- jazz real/fake-book references: Jazz_LTD:218.
 	- source revision: http://wikifonia.org/node/3888/revisions/11790/view.
-	- retained written measures, pickups, repeats and endings; lyrics and accompaniment omitted.
+	- retained written measures, pickups, repeats and endings; accompaniment omitted.
+	- put in the original lyrics from the same Wikifonia source (published with the song, public domain in the US); typos fixed.
 	- the original composition is public domain in the US; no claim is made about later editions.
 	- US term reference: https://cspd.law.duke.edu/publicdomainday/2026.
 	- tempo is an editorial practice suggestion.
@@ -125,5 +127,15 @@ doOwn = false
 	g'4 c'2 a'4 |
 	f'2. r4 |
 	\endBar
+}
+{% endif %}
+{% if part == "LyricsWikifonia" %}\lyricmode {
+	Ev -- "'ry" lit -- tle breeze seems to whis -- per "'Lou" -- ise.' Birds in the trees seem to twit -- ter "'Lou" -- ise.' Each lit -- tle rose tells me it knows I love you,
+	love you. Ev -- "'ry" lit -- tle beat that I feel in my heart,
+	seems to re -- peat what I felt at the start. Each lit -- tle sigh tells me that I a -- dore you,
+	Lou -- ise. Just to see and hear you brings joy I nev -- er knew.
+	But to be so near you thrills me through and though. An -- y one can see why I want -- ed your kiss,
+	it had to be but the won -- der is this: Can't it be true some -- one like you could love me,
+	Lou -- ise?
 }
 {% endif %}

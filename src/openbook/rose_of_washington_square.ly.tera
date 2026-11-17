@@ -5,9 +5,10 @@ default_version = "Wikifonia"
 title = "Rose of Washington Square"
 style = "Jazz"
 composer = "James F. Hanley"
+poet = "Ballard MacDonald"
 piece = "Swing"
 copyright = "Original composition (1920); public domain in the US"
-copyrightextra = "Instrumental lead sheet; later lyrics and arrangements are excluded."
+copyrightextra = "Lead sheet with the original lyrics; later arrangements are excluded."
 typesetter = "OpenBook contributors (MusicXML import)"
 completion = "3"
 uuid = "e1b5dac7-afa1-53b2-9e24-726cac5670e3"
@@ -17,7 +18,7 @@ remark = "Copyright status outside the US may differ."
 [versions.Wikifonia]
 doChords = true
 doVoice = true
-doLyrics = false
+doLyrics = true
 doLyricsmore = false
 doLyricsmoremore = false
 doChordBars = false
@@ -34,7 +35,8 @@ doOwn = false
 	- local source: real_books_archive.gi/Wikifonia.tar.xz: Wikifonia/James F. Hanley, Ballard Mac Donald - Rose Of Washington Square.mxl.
 	- jazz real/fake-book references: Firehouse_Jazz_Band:401.
 	- source revision: http://wikifonia.org/node/18065/revisions/23922/view.
-	- retained written measures, pickups, repeats and endings; lyrics and accompaniment omitted.
+	- retained written measures, pickups, repeats and endings; accompaniment omitted.
+	- put in the original lyrics from the same Wikifonia source (published with the song, public domain in the US); typos fixed.
 	- the original composition is public domain in the US; no claim is made about later editions.
 	- US term reference: https://cspd.law.duke.edu/publicdomainday/2026.
 	- tempo is an editorial practice suggestion.
@@ -124,5 +126,13 @@ doOwn = false
 	bes'1 ~ |
 	bes'2. r4 |
 	\endBar
+}
+{% endif %}
+{% if part == "LyricsWikifonia" %}\lyricmode {
+	Rose Of Wash -- ing -- ton Square, I'm with -- er -- ing there in base -- ment air I'm fad -- ing,
+	Pose with plain or fan -- cy clothes, they say my Ro -- man nose it seems to please ar -- tis -- tic peo -- ple.
+	Beaux I've plen -- ty of those, with sec -- ond hand clothes and nice long hair.
+	I've got those Broad -- way vam -- pires lashed to the mast, I've got no fu -- ture but,
+	oh, what a past. I'm Rose Of Wash -- ing -- ton Square.
 }
 {% endif %}

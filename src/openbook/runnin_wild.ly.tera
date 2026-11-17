@@ -5,9 +5,10 @@ default_version = "Wikifonia"
 title = "Runnin' Wild"
 style = "Jazz"
 composer = "A. Harrington Gibbs"
+poet = "Joe Grey, Leo Wood"
 piece = "Swing"
 copyright = "Original composition (1922); public domain in the US"
-copyrightextra = "Instrumental lead sheet; later lyrics and arrangements are excluded."
+copyrightextra = "Lead sheet with the original lyrics; later arrangements are excluded."
 typesetter = "OpenBook contributors (MusicXML import)"
 completion = "3"
 uuid = "7ec88aec-5358-5da1-a1a1-3e1bace227ad"
@@ -17,7 +18,7 @@ remark = "Copyright status outside the US may differ."
 [versions.Wikifonia]
 doChords = true
 doVoice = true
-doLyrics = false
+doLyrics = true
 doLyricsmore = false
 doLyricsmoremore = false
 doChordBars = false
@@ -34,7 +35,8 @@ doOwn = false
 	- local source: real_books_archive.gi/Wikifonia.tar.xz: Wikifonia/A.H.Gibbs, Joe Grey & Leo Wood - Runnin' Wild.mxl.
 	- jazz real/fake-book references: Firehouse_Jazz_Band:283.
 	- source revision: http://wikifonia.org/node/20687/revisions/27356/view.
-	- retained written measures, pickups, repeats and endings; lyrics and accompaniment omitted.
+	- retained written measures, pickups, repeats and endings; accompaniment omitted.
+	- put in the original lyrics from the same Wikifonia source (published with the song, public domain in the US); typos fixed; aligned to the typed melody by pitch, since the source has broken ties.
 	- the original composition is public domain in the US; no claim is made about later editions.
 	- US term reference: https://cspd.law.duke.edu/publicdomainday/2026.
 	- tempo is an editorial practice suggestion.
@@ -124,5 +126,12 @@ doOwn = false
 	c''2 d''2 |
 	bes'1 |
 	\endBar
+}
+{% endif %}
+{% if part == "LyricsWikifonia" %}\lyricmode {
+	Run -- nin' Wild, Lost con -- trol, Run -- nin' wild might -- y bold,
+	Feel -- in' gay, reck -- less too Care -- free mind all the time, nev -- er blue Al -- ways goin' don't know where,
+	Al -- ways show -- in'~I don't care Don't love no -- bod -- y,
+	It's not worth while, All a -- lone, Run -- nin' Wild.
 }
 {% endif %}

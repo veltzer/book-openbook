@@ -5,9 +5,10 @@ default_version = "Wikifonia"
 title = "Till We Meet Again"
 style = "Jazz"
 composer = "Richard A. Whiting"
+poet = "Raymond B. Egan"
 piece = "Swing"
 copyright = "Original composition (1918); public domain in the US"
-copyrightextra = "Instrumental lead sheet; later lyrics and arrangements are excluded."
+copyrightextra = "Lead sheet with the original lyrics; later arrangements are excluded."
 typesetter = "OpenBook contributors (MusicXML import)"
 completion = "3"
 uuid = "4897a62a-3c02-5d74-826d-03a90a20b080"
@@ -17,8 +18,8 @@ remark = "Copyright status outside the US may differ."
 [versions.Wikifonia]
 doChords = true
 doVoice = true
-doLyrics = false
-doLyricsmore = false
+doLyrics = true
+doLyricsmore = true
 doLyricsmoremore = false
 doChordBars = false
 doGuitar = false
@@ -34,7 +35,8 @@ doOwn = false
 	- local source: real_books_archive.gi/Wikifonia.tar.xz: Wikifonia/Richard A. Whiting, Raymond B. Egan - Till We Meet Again.mxl.
 	- jazz real/fake-book references: Firehouse_Jazz_Band:231.
 	- source revision: http://wikifonia.org/node/5148/revisions/6997/view.
-	- retained written measures, pickups, repeats and endings; lyrics and accompaniment omitted.
+	- retained written measures, pickups, repeats and endings; accompaniment omitted.
+	- put in the original lyrics from the same Wikifonia source (published with the song, public domain in the US); typos fixed.
 	- the original composition is public domain in the US; no claim is made about later editions.
 	- US term reference: https://cspd.law.duke.edu/publicdomainday/2026.
 	- tempo is an editorial practice suggestion.
@@ -176,5 +178,20 @@ doOwn = false
 	}
 	g'2. |
 	\endBar
+}
+{% endif %}
+{% if part == "LyricsWikifonia" %}\lyricmode {
+	There's a song in the land of the lil -- ly __ Each sweet -- heart has heard with a sigh.
+	__ O -- ver high gar -- den walls this sweet e -- cho falls As a sol -- dier boy whis -- pers good -- bye: __ _ Smile the while you kiss me sad a -- dieu When the clouds roll by I'll come to you.
+	Then the skies will seem more blue, Down in Lov -- er's Lane, my dear -- ie.
+	Wed -- ding bells will ring so mer -- ri -- ly Ev -- "'ry" tear will be a mem -- o -- ry.
+	So wait and pray each night for me Till we meet a -- gain.
+	_ _ gain.
+}
+{% endif %}
+{% if part == "LyricsmoreWikifonia" %}\lyricmode {
+	_ _ Good -- bye means the birth of a tear drop, __ Hel -- lo means the birth of a smile.
+	__ And the smile will e -- rase the tear blight -- ing trace,
+	When we meet in the af -- ter a -- while. __ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ Tho' good
 }
 {% endif %}

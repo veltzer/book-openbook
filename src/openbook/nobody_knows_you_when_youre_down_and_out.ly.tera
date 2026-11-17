@@ -5,9 +5,10 @@ default_version = "Wikifonia"
 title = "Nobody Knows You When You're Down and Out"
 style = "Jazz"
 composer = "Jimmie Cox"
+poet = "Jimmie Cox"
 piece = "Swing"
 copyright = "Original composition (1923); public domain in the US"
-copyrightextra = "Instrumental lead sheet; later lyrics and arrangements are excluded."
+copyrightextra = "Lead sheet with the original lyrics; later arrangements are excluded."
 typesetter = "OpenBook contributors (MusicXML import)"
 completion = "3"
 uuid = "16a51acd-da5d-55de-9457-fd5c59718020"
@@ -17,7 +18,7 @@ remark = "Copyright status outside the US may differ."
 [versions.Wikifonia]
 doChords = true
 doVoice = true
-doLyrics = false
+doLyrics = true
 doLyricsmore = false
 doLyricsmoremore = false
 doChordBars = false
@@ -34,7 +35,8 @@ doOwn = false
 	- local source: real_books_archive.gi/Wikifonia.tar.xz: Wikifonia/Jimmie Cox - Nobody Knows You When You're Down And Out.mxl.
 	- jazz real/fake-book references: Firehouse_Jazz_Band:183, The_Real_Book_Of_Blues:186.
 	- source revision: http://wikifonia.org/node/12852/revisions/19954/view.
-	- retained written measures, pickups, repeats and endings; lyrics and accompaniment omitted.
+	- retained written measures, pickups, repeats and endings; accompaniment omitted.
+	- put in the original lyrics from the same Wikifonia source (published with the song, public domain in the US); typos fixed; aligned to the typed melody by pitch, since the source has broken ties.
 	- the original composition is public domain in the US; no claim is made about later editions.
 	- US term reference: https://cspd.law.duke.edu/publicdomainday/2026.
 	- tempo is an editorial practice suggestion.
@@ -128,5 +130,19 @@ doOwn = false
 	d''8 d''8 d''8 c''8 ( ~ c''8 d''8 ~ \once \omit TupletBracket \times 2/3 { d''8 ) as'8 ( g'8 ) } |
 	f'2. r4 |
 	\endBar
+}
+{% endif %}
+{% if part == "LyricsWikifonia" %}\lyricmode {
+	Once I lived the life __ of a mil -- lion -- aire; Spend -- ing my mon -- ey,
+	I did -- n't care. I took all my friends __ out for a good time,
+	Buy -- in' high price li -- quor, cham -- pagne and wine. __ _ When I be -- gan to fall so low,
+	__ I did -- n't have a friend and no place to go. __ If I ev -- er get hold __ of a dol -- lar a -- gain,
+	__ Gon -- na hold on to it __ till the eag -- le grins.
+	__ No -- bod -- y knows you __ when you're down __ and out.
+	__ In your pock -- et not one pen -- ny; And your friends,
+	__ you have -- n't an -- y. But if you ev -- er get __ on your feet a -- gain,
+	__ Then you'll find __ your long lost friends. __ It's might -- y strange __ _ with -- out a doubt;
+	__ _ No -- bod -- y knows you when you're down and out.
+	__ _ I mean __ when you're down __ and __ _ out.
 }
 {% endif %}

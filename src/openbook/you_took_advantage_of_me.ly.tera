@@ -5,9 +5,10 @@ default_version = "Wikifonia"
 title = "You Took Advantage Of Me"
 style = "Jazz"
 composer = "Richard Rodgers"
+poet = "Lorenz Hart"
 piece = "Swing"
 copyright = "Original composition (1928); public domain in the US"
-copyrightextra = "Instrumental lead sheet; later lyrics and arrangements are excluded."
+copyrightextra = "Lead sheet with the original lyrics; later arrangements are excluded."
 typesetter = "OpenBook contributors (MusicXML import)"
 completion = "3"
 uuid = "97b1adb8-3f37-5d47-8ccb-cc178f4f47a1"
@@ -17,7 +18,7 @@ remark = "Copyright status outside the US may differ."
 [versions.Wikifonia]
 doChords = true
 doVoice = true
-doLyrics = false
+doLyrics = true
 doLyricsmore = false
 doLyricsmoremore = false
 doChordBars = false
@@ -34,7 +35,8 @@ doOwn = false
 	- local source: real_books_archive.gi/Wikifonia.tar.xz: Wikifonia/Richard Rodgers, Lorenz hart - You Took Advantage Of Me.mxl.
 	- jazz real/fake-book references: Real_Book_1:490, 557_Standards:446, Firehouse_Jazz_Band:203, StandardsBook:542.
 	- source revision: http://wikifonia.org/node/4811/revisions/6522/view.
-	- retained written measures, pickups, repeats and endings; lyrics and accompaniment omitted.
+	- retained written measures, pickups, repeats and endings; accompaniment omitted.
+	- put in the original lyrics from the same Wikifonia source (published with the song, public domain in the US); typos fixed.
 	- the original composition is public domain in the US; no claim is made about later editions.
 	- US term reference: https://cspd.law.duke.edu/publicdomainday/2026.
 	- tempo is an editorial practice suggestion.
@@ -141,5 +143,17 @@ doOwn = false
 	}
 	}
 	\endBar
+}
+{% endif %}
+{% if part == "LyricsWikifonia" %}\lyricmode {
+	I'm a sen -- ti -- men -- tal sap that's all. What's the use of try -- ing not to fall?
+	I have no will, you've made your kill "'Cause" you took ad -- van -- tage of me!
+	I'm just like an ap -- ple on a bough, And you're gon -- na shake me down some -- how,
+	So what's the use you've cooked my goose "'Cause" you took ad -- van -- tage of me!
+	I'm so hot and both -- ered that I don't know My el -- bow from my ear;
+	I suf -- fer some -- thing aw -- ful each time you go And much worse when you're near.
+	Here I am with all my brid -- ges burned, Just a babe in arms where you're con -- cerned,
+	So lock the doors and call me yours "'Cause" you took ad -- van -- tage of me!
+	me!
 }
 {% endif %}

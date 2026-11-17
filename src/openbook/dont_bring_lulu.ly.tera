@@ -5,9 +5,10 @@ default_version = "Wikifonia"
 title = "Don't Bring Lulu"
 style = "Jazz"
 composer = "Ray Henderson"
+poet = "Billy Rose, Lew Brown"
 piece = "Swing"
 copyright = "Original composition (1925); public domain in the US"
-copyrightextra = "Instrumental lead sheet; later lyrics and arrangements are excluded."
+copyrightextra = "Lead sheet with the original lyrics; later arrangements are excluded."
 typesetter = "OpenBook contributors (MusicXML import)"
 completion = "3"
 uuid = "5bddd06d-31dd-5d98-a033-22432d38900c"
@@ -17,8 +18,8 @@ remark = "Copyright status outside the US may differ."
 [versions.Wikifonia]
 doChords = true
 doVoice = true
-doLyrics = false
-doLyricsmore = false
+doLyrics = true
+doLyricsmore = true
 doLyricsmoremore = false
 doChordBars = false
 doGuitar = false
@@ -34,7 +35,8 @@ doOwn = false
 	- local source: real_books_archive.gi/Wikifonia.tar.xz: Wikifonia/Billy Rose, Lew Brown & Ray Henderson - Don't Bring Lulu.mxl.
 	- jazz real/fake-book references: Firehouse_Jazz_Band:485.
 	- source revision: http://wikifonia.org/node/16404/revisions/21819/view.
-	- retained written measures, pickups, repeats and endings; lyrics and accompaniment omitted.
+	- retained written measures, pickups, repeats and endings; accompaniment omitted.
+	- put in the original lyrics from the same Wikifonia source (published with the song, public domain in the US); typos fixed.
 	- the original composition is public domain in the US; no claim is made about later editions.
 	- US term reference: https://cspd.law.duke.edu/publicdomainday/2026.
 	- tempo is an editorial practice suggestion.
@@ -162,5 +164,24 @@ doOwn = false
 	bes'2. r4 |
 	}
 	\endBar
+}
+{% endif %}
+{% if part == "LyricsWikifonia" %}\lyricmode {
+	Your pres -- ence is re -- ques -- ted, wrote lit -- tle John -- ny White,
+	But with this in -- vi -- ta -- tion There is a stip -- u -- la -- tion;
+	When you at -- tend this par -- ty You'll all be trea -- ted right But there's a wild and woo -- ly gi -- rl You boys can't in -- vite.
+	Now you can bring Pearl, she's a darn nice girl, But don't bring Lu -- lu You can bring Rose with the turned up nose,
+	But don't bring Lu -- lu Lu -- lu al -- ways wants to do what we boys don't want her to.
+	Ev -- ery time she starts a -- round, Lon -- don bridge is fall -- ing down.
+	You can bring cake or fil -- lets of steak, But don't bring Lu -- lu Lu -- lu gets blue and she goes cuc -- koo Like the clock up -- on the shelf,
+	She's the kind of smart -- y who breaks up ev -- "'ry" par -- ty;
+	Hul -- la -- ba -- loo -- loo, don't bring Lu -- lu.
+	I'll bring her my -- self.
+}
+{% endif %}
+{% if part == "LyricsmoreWikifonia" %}\lyricmode {
+	We all went to the par -- ty, a real high -- toned af -- fair,
+	And then a -- long came Lu -- lu As wild as an -- y Zu -- lu.
+	She star -- ted in -- to Charle -- ston and how the boys did stare But when she did the Hu -- la hu -- la Then she got the air.
 }
 {% endif %}

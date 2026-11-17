@@ -5,9 +5,10 @@ default_version = "Wikifonia"
 title = "You Do Something to Me"
 style = "Jazz"
 composer = "Cole Porter"
+poet = "Cole Porter"
 piece = "Swing"
 copyright = "Original composition (1929); public domain in the US"
-copyrightextra = "Instrumental lead sheet; later lyrics and arrangements are excluded."
+copyrightextra = "Lead sheet with the original lyrics; later arrangements are excluded."
 typesetter = "OpenBook contributors (MusicXML import)"
 completion = "3"
 uuid = "b9138d09-a0f9-5825-89a1-d1ac287cff83"
@@ -17,7 +18,7 @@ remark = "Copyright status outside the US may differ."
 [versions.Wikifonia]
 doChords = true
 doVoice = true
-doLyrics = false
+doLyrics = true
 doLyricsmore = false
 doLyricsmoremore = false
 doChordBars = false
@@ -34,7 +35,8 @@ doOwn = false
 	- local source: real_books_archive.gi/Wikifonia.tar.xz: Wikifonia/Cole Porter - You Do Something To Me.mxl.
 	- jazz real/fake-book references: Real_Book_3:355, 557_Standards:441, StandardsBook:532, Just_Standards_Real_Book:388.
 	- source revision: http://wikifonia.org/node/4153/revisions/18298/view.
-	- retained written measures, pickups, repeats and endings; lyrics and accompaniment omitted.
+	- retained written measures, pickups, repeats and endings; accompaniment omitted.
+	- put in the original lyrics from the same Wikifonia source (published with the song, public domain in the US); typos fixed.
 	- the original composition is public domain in the US; no claim is made about later editions.
 	- US term reference: https://cspd.law.duke.edu/publicdomainday/2026.
 	- tempo is an editorial practice suggestion.
@@ -141,5 +143,13 @@ doOwn = false
 	}
 	es'2. r4 |
 	\endBar
+}
+{% endif %}
+{% if part == "LyricsWikifonia" %}\lyricmode {
+	You do some -- thing to me, some -- thing that simp -- ly mys -- ti -- fies me.
+	Tell me why it should be, You have the pow'r to hyp -- no -- tize me?
+	Let me live "'neath" your spell, do -- do that voo -- doo that you do so well,
+	for You do some -- thing to me, that no -- bod -- y else can do.
+	do.
 }
 {% endif %}

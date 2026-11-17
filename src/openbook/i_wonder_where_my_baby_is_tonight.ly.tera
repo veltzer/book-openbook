@@ -5,9 +5,10 @@ default_version = "Wikifonia"
 title = "I Wonder Where My Baby Is Tonight"
 style = "Jazz"
 composer = "Walter Donaldson"
+poet = "Gus Kahn"
 piece = "Swing"
 copyright = "Original composition (1925); public domain in the US"
-copyrightextra = "Instrumental lead sheet; later lyrics and arrangements are excluded."
+copyrightextra = "Lead sheet with the original lyrics; later arrangements are excluded."
 typesetter = "OpenBook contributors (MusicXML import)"
 completion = "3"
 uuid = "38fda288-6f0b-5d1e-ad29-5082b5bed862"
@@ -17,7 +18,7 @@ remark = "Copyright status outside the US may differ."
 [versions.Wikifonia]
 doChords = true
 doVoice = true
-doLyrics = false
+doLyrics = true
 doLyricsmore = false
 doLyricsmoremore = false
 doChordBars = false
@@ -34,7 +35,8 @@ doOwn = false
 	- local source: real_books_archive.gi/Wikifonia.tar.xz: Wikifonia/Walter Donaldson, Gus Kahn - I Wonder Where My Baby Is Tonight.mxl.
 	- jazz real/fake-book references: Fakebook_Django:99.
 	- source revision: http://wikifonia.org/node/18445/revisions/24430/view.
-	- retained written measures, pickups, repeats and endings; lyrics and accompaniment omitted.
+	- retained written measures, pickups, repeats and endings; accompaniment omitted.
+	- put in the original lyrics from the same Wikifonia source (published with the song, public domain in the US); typos fixed.
 	- the original composition is public domain in the US; no claim is made about later editions.
 	- US term reference: https://cspd.law.duke.edu/publicdomainday/2026.
 	- tempo is an editorial practice suggestion.
@@ -208,5 +210,18 @@ doOwn = false
 	}
 	}
 	\endBar
+}
+{% endif %}
+{% if part == "LyricsWikifonia" %}\lyricmode {
+	I won -- der where my ba -- by is to -- night? __ I won -- der how my ba -- by is to -- night?
+	__ I won -- der where she's gone, And how she's get -- ting on;
+	I won -- der why my ba -- by does -- n't write, __ If she came back I won -- der what I'd do?
+	__ I won -- der did she find some -- bod -- y new;
+	__ She did -- n't treat me fair, And tho' I should -- n't care;
+	I won -- der where my ba -- by is to -- night? I won -- der does my ba -- by do the Charles -- ton __ Charles -- ton __ I won -- der who is teach -- ing her the Charles -- ton __ Charles -- ton __ While I sit and sigh,
+	the time goes drag -- gin' by; I'd like to kill the guy that wrote the Charles -- ton __ Charles -- ton.
+	__ We part -- ed "'cause" I could -- n't do the Charles -- ton __ Charles -- ton __ She'd still be here if I could do the Charles -- ton __ Charles -- ton __ I'm tak -- in' les -- sons now;
+	I'll win her back some -- how __ I won -- der where my ba -- by is to -- night.
+	__ I night. __
 }
 {% endif %}

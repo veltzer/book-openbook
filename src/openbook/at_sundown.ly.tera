@@ -5,9 +5,10 @@ default_version = "Wikifonia"
 title = "At Sundown"
 style = "Jazz"
 composer = "Walter Donaldson"
+poet = "Walter Donaldson"
 piece = "Swing"
 copyright = "Original composition (1927); public domain in the US"
-copyrightextra = "Instrumental lead sheet; later lyrics and arrangements are excluded."
+copyrightextra = "Lead sheet with the original lyrics; later arrangements are excluded."
 typesetter = "OpenBook contributors (MusicXML import)"
 completion = "3"
 uuid = "67133340-2761-570f-9ef6-08b6bf7e666b"
@@ -17,7 +18,7 @@ remark = "Copyright status outside the US may differ."
 [versions.Wikifonia]
 doChords = true
 doVoice = true
-doLyrics = false
+doLyrics = true
 doLyricsmore = false
 doLyricsmoremore = false
 doChordBars = false
@@ -34,7 +35,8 @@ doOwn = false
 	- local source: real_books_archive.gi/Wikifonia.tar.xz: Wikifonia/Walter Donaldson - At Sundown.mxl.
 	- jazz real/fake-book references: Firehouse_Jazz_Band:287.
 	- source revision: http://wikifonia.org/node/10021/revisions/13597/view.
-	- retained written measures, pickups, repeats and endings; lyrics and accompaniment omitted.
+	- retained written measures, pickups, repeats and endings; accompaniment omitted.
+	- put in the original lyrics from the same Wikifonia source (published with the song, public domain in the US); typos fixed.
 	- the original composition is public domain in the US; no claim is made about later editions.
 	- US term reference: https://cspd.law.duke.edu/publicdomainday/2026.
 	- tempo is an editorial practice suggestion.
@@ -127,5 +129,15 @@ doOwn = false
 	f'1 ~ |
 	f'1 |
 	\endBar
+}
+{% endif %}
+{% if part == "LyricsWikifonia" %}\lyricmode {
+	Ev -- "'ry" lit -- tle breeze is sigh -- ing of love un -- dy -- ing at sun -- down.
+	__ Ev -- "'ry" lit -- tle bird is rest -- ing and feath -- er nest -- ing at sun down.
+	__ Each lit -- tle rose -- bud is sleep -- ing __ While shad -- ows __ are creep -- ing.
+	__ In a lit -- tle cot -- tage coz -- y the world seems ros -- y at sun -- down.
+	__ Where a lov -- ing smile will greet __ me and al -- ways meet __ me at sun -- down,
+	__ I seem to sigh, I'm in heav -- en, __ When night is fall -- ing and love is call -- ing me home.
+	__
 }
 {% endif %}

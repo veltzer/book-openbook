@@ -5,9 +5,10 @@ default_version = "Wikifonia"
 title = "Doodle-Doo-Doo"
 style = "Jazz"
 composer = "Art Kassel, Con Conrad"
+poet = "Art Kassel, Mel Stitzel"
 piece = "Swing"
 copyright = "Original composition (1924); public domain in the US"
-copyrightextra = "Instrumental lead sheet; later lyrics and arrangements are excluded."
+copyrightextra = "Lead sheet with the original lyrics; later arrangements are excluded."
 typesetter = "OpenBook contributors (MusicXML import)"
 completion = "3"
 uuid = "8b4f1336-6047-5402-910b-b47554d5969a"
@@ -17,7 +18,7 @@ remark = "Copyright status outside the US may differ."
 [versions.Wikifonia]
 doChords = true
 doVoice = true
-doLyrics = false
+doLyrics = true
 doLyricsmore = false
 doLyricsmoremore = false
 doChordBars = false
@@ -34,7 +35,8 @@ doOwn = false
 	- local source: real_books_archive.gi/Wikifonia.tar.xz: Wikifonia/Art Kassel, Mel Stitzel - Doodle Doo Doo.mxl.
 	- jazz real/fake-book references: Firehouse_Jazz_Band:11.
 	- source revision: http://wikifonia.org/node/17963/revisions/23792/view.
-	- retained written measures, pickups, repeats and endings; lyrics and accompaniment omitted.
+	- retained written measures, pickups, repeats and endings; accompaniment omitted.
+	- put in the original lyrics from the same Wikifonia source (published with the song, public domain in the US); typos fixed.
 	- the original composition is public domain in the US; no claim is made about later editions.
 	- US term reference: https://cspd.law.duke.edu/publicdomainday/2026.
 	- tempo is an editorial practice suggestion.
@@ -92,5 +94,13 @@ doOwn = false
 	c''8 d''8 c''8 b'8 ~ b'8. bes'16 a'4 |
 	g'2. r4 |
 	\endBar
+}
+{% endif %}
+{% if part == "LyricsWikifonia" %}\lyricmode {
+	Please play for me, __ that sweet mel -- o -- dy __ called doo -- dle doo doo,
+	__ doo -- dle doo doo. __ I like the rest __ but what I like best,
+	__ is doo -- dle -- doo doo __ doo -- dle doo doo __ Sim -- pl -- est thing,
+	__ There's noth -- ing much to __ it, Don't have to sing, __ Just doo -- dle doo doo __ it.
+	I love it so __ Wher -- ev -- er I go, __ I doo -- dle doo doo -- dle doo doo.
 }
 {% endif %}

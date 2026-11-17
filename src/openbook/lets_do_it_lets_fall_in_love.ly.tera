@@ -5,9 +5,10 @@ default_version = "Wikifonia"
 title = "Let's Do It (Let's Fall in Love)"
 style = "Jazz"
 composer = "Cole Porter"
+poet = "Cole Porter"
 piece = "Swing"
 copyright = "Original composition (1928); public domain in the US"
-copyrightextra = "Instrumental lead sheet; later lyrics and arrangements are excluded."
+copyrightextra = "Lead sheet with the original lyrics; later arrangements are excluded."
 typesetter = "OpenBook contributors (MusicXML import)"
 completion = "3"
 uuid = "0c845e21-98d9-5421-ad43-6a833ec4bcdd"
@@ -17,9 +18,9 @@ remark = "Copyright status outside the US may differ."
 [versions.Wikifonia]
 doChords = true
 doVoice = true
-doLyrics = false
-doLyricsmore = false
-doLyricsmoremore = false
+doLyrics = true
+doLyricsmore = true
+doLyricsmoremore = true
 doChordBars = false
 doGuitar = false
 doExtra = false
@@ -34,7 +35,8 @@ doOwn = false
 	- local source: real_books_archive.gi/Wikifonia.tar.xz: Wikifonia/Cole Porter - Let's Do It (Let's Fall in Love).mxl.
 	- jazz real/fake-book references: StandardsBook:268, Just_Standards_Real_Book:222.
 	- source revision: http://wikifonia.org/node/2694/revisions/28301/view.
-	- retained written measures, pickups, repeats and endings; lyrics and accompaniment omitted.
+	- retained written measures, pickups, repeats and endings; accompaniment omitted.
+	- put in the original lyrics from the same Wikifonia source (published with the song, public domain in the US); typos fixed.
 	- the original composition is public domain in the US; no claim is made about later editions.
 	- US term reference: https://cspd.law.duke.edu/publicdomainday/2026.
 	- tempo is an editorial practice suggestion.
@@ -140,5 +142,28 @@ doOwn = false
 	}
 	}
 	\endBar
+}
+{% endif %}
+{% if part == "LyricsWikifonia" %}\lyricmode {
+	Birds do it, bees do it, E -- ven ed -- u -- cat -- ed fleas do it,
+	Let's do it Let's fall in love, _ In Spain the best up -- per sets do it,
+	Lith -- u -- an -- i -- ans and Letts do it, Let's do it,
+	Let's fall in love. The Dutch in old Am -- ster -- dam do it
+}
+{% endif %}
+{% if part == "LyricsmoreWikifonia" %}\lyricmode {
+	spon -- ges they say, do it, Oy -- sters down in Oy -- ster Bay,
+	do it, Let's do it, Let's fall in love. _ Cold Cape Cod clams "'gainst" their wish,
+	do it, Ev -- en la -- zy jel -- ly -- fish do it,
+	Let's do it, Let's fall in love. E -- lec -- tric eels, I might add,
+	do it Not to men -- tion the Finns. Folks in Si -- am do it,
+	Think of Si -- am -- ese twins. Some Ar -- gen -- tines with -- out means do it Peo -- ple say in Bos -- ton e -- ven beans do it Let's do it,
+	Let's fall in love. Ro -- man -- tic
+}
+{% endif %}
+{% if part == "LyricsmoremoreWikifonia" %}\lyricmode {
+	_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ Though it shocks them,
+	I know, Why ask if shad do it, Wait -- er, bring me shad -- roe.
+	In shal -- low shoals do it, soles do it _ _ _ _ _ _ _ _ _ _ _ _ _ _ Let's fall in love.
 }
 {% endif %}

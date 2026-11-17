@@ -5,9 +5,10 @@ default_version = "Wikifonia"
 title = "Darktown Strutters' Ball"
 style = "Jazz"
 composer = "Shelton Brooks"
+poet = "Shelton Brooks"
 piece = "Swing"
 copyright = "Original composition (1917); public domain in the US"
-copyrightextra = "Instrumental lead sheet; later lyrics and arrangements are excluded."
+copyrightextra = "Lead sheet with the original lyrics; later arrangements are excluded."
 typesetter = "OpenBook contributors (MusicXML import)"
 completion = "3"
 uuid = "3ced13ba-b9f2-5cd1-b387-d2e7697489a6"
@@ -17,7 +18,7 @@ remark = "Copyright status outside the US may differ."
 [versions.Wikifonia]
 doChords = true
 doVoice = true
-doLyrics = false
+doLyrics = true
 doLyricsmore = false
 doLyricsmoremore = false
 doChordBars = false
@@ -34,7 +35,8 @@ doOwn = false
 	- local source: real_books_archive.gi/Wikifonia.tar.xz: Wikifonia/Shelton Brooks - Darktown Strutters' Ball.mxl.
 	- jazz real/fake-book references: Firehouse_Jazz_Band:369.
 	- source revision: http://wikifonia.org/node/4034/revisions/16384/view.
-	- retained written measures, pickups, repeats and endings; lyrics and accompaniment omitted.
+	- retained written measures, pickups, repeats and endings; accompaniment omitted.
+	- put in the original lyrics from the same Wikifonia source (published with the song, public domain in the US); typos fixed.
 	- the original composition is public domain in the US; no claim is made about later editions.
 	- US term reference: https://cspd.law.duke.edu/publicdomainday/2026.
 	- tempo is an editorial practice suggestion.
@@ -102,5 +104,9 @@ doOwn = false
 	c''1 ~ |
 	c''4 r4 r2 |
 	\endBar
+}
+{% endif %}
+{% if part == "LyricsWikifonia" %}\lyricmode {
+	I'll be down to get you in a tax -- i hon -- ey you bet -- ter be read -- y a -- bout half past eight now dear -- ie don't be late I want to be there when the band starts play -- ing re -- mem -- ber when we get there hon -- ey the two -- steps I'm goin' to have em all goin' to dance out both my shoes when they play the Jel -- ly Roll Blues to -- morr -- ow night at the Dark -- town Strut -- ters' Ball
 }
 {% endif %}

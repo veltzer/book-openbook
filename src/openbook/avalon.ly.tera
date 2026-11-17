@@ -5,9 +5,10 @@ default_version = "Wikifonia"
 title = "Avalon"
 style = "Jazz"
 composer = "Vincent Rose"
+poet = "Al Jolson, B. G. DeSylva"
 piece = "Swing"
 copyright = "Original composition (1920); public domain in the US"
-copyrightextra = "Instrumental lead sheet; later lyrics and arrangements are excluded."
+copyrightextra = "Lead sheet with the original lyrics; later arrangements are excluded."
 typesetter = "OpenBook contributors (MusicXML import)"
 completion = "3"
 uuid = "b8689452-3cd2-56f4-8b93-cc60e757ea6a"
@@ -17,7 +18,7 @@ remark = "Copyright status outside the US may differ."
 [versions.Wikifonia]
 doChords = true
 doVoice = true
-doLyrics = false
+doLyrics = true
 doLyricsmore = false
 doLyricsmoremore = false
 doChordBars = false
@@ -34,7 +35,8 @@ doOwn = false
 	- local source: real_books_archive.gi/Wikifonia.tar.xz: Wikifonia/Vincent Rose, Al Jolson, B.G.De Sylva - Avalon.mxl.
 	- jazz real/fake-book references: Real_Book_2:20, 557_Standards:26, Firehouse_Jazz_Band:391, Colorado:28, Colorado_Cookbook:28, Fakebook_Django:13.
 	- source revision: http://wikifonia.org/node/5909/revisions/8048/view.
-	- retained written measures, pickups, repeats and endings; lyrics and accompaniment omitted.
+	- retained written measures, pickups, repeats and endings; accompaniment omitted.
+	- put in the original lyrics from the same Wikifonia source (published with the song, public domain in the US); typos fixed.
 	- the original composition is public domain in the US; no claim is made about later editions.
 	- US term reference: https://cspd.law.duke.edu/publicdomainday/2026.
 	- tempo is an editorial practice suggestion.
@@ -126,5 +128,9 @@ doOwn = false
 	f'1 ~ |
 	f'2. r4 |
 	\endBar
+}
+{% endif %}
+{% if part == "LyricsWikifonia" %}\lyricmode {
+	I found my love in A -- va -- lon be -- side the bay I left my love in A -- va -- lon and sail'd a -- way I dream of her and A -- va -- lon from dusk till dawn and so I think I'll trav -- el on to A -- va -- lon
 }
 {% endif %}

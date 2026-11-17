@@ -5,9 +5,10 @@ default_version = "Wikifonia"
 title = "Alabamy Bound"
 style = "Jazz"
 composer = "Ray Henderson"
+poet = "B. G. DeSylva, Bud Green"
 piece = "Swing"
 copyright = "Original composition (1925); public domain in the US"
-copyrightextra = "Instrumental lead sheet; later lyrics and arrangements are excluded."
+copyrightextra = "Lead sheet with the original lyrics; later arrangements are excluded."
 typesetter = "OpenBook contributors (MusicXML import)"
 completion = "3"
 uuid = "caa32d35-3eef-526d-bb48-09798c5bfc09"
@@ -17,7 +18,7 @@ remark = "Copyright status outside the US may differ."
 [versions.Wikifonia]
 doChords = true
 doVoice = true
-doLyrics = false
+doLyrics = true
 doLyricsmore = false
 doLyricsmoremore = false
 doChordBars = false
@@ -34,7 +35,8 @@ doOwn = false
 	- local source: real_books_archive.gi/Wikifonia.tar.xz: Wikifonia/Ray Henderson, Buddy G. DeSylva & Bud Green - Alabamy Bound.mxl.
 	- jazz real/fake-book references: Firehouse_Jazz_Band:26.
 	- source revision: http://wikifonia.org/node/15953/revisions/21245/view.
-	- retained written measures, pickups, repeats and endings; lyrics and accompaniment omitted.
+	- retained written measures, pickups, repeats and endings; accompaniment omitted.
+	- put in the original lyrics from the same Wikifonia source (published with the song, public domain in the US); typos fixed.
 	- the original composition is public domain in the US; no claim is made about later editions.
 	- US term reference: https://cspd.law.duke.edu/publicdomainday/2026.
 	- tempo is an editorial practice suggestion.
@@ -126,5 +128,9 @@ doOwn = false
 	g'1 ~ |
 	g'4 - "G" r4 r2 |
 	\endBar
+}
+{% endif %}
+{% if part == "LyricsWikifonia" %}\lyricmode {
+	I'm Al -- a -- bam -- y bound There'll be no "'Hee" -- be Jeeb -- ies' han -- gin' "'round" Just gave the mean -- est tick -- et man on earth All I'm worth To put my toot -- sies in an up -- per berth Just hear that choo choo sound I know that soon we're goin' to cov -- er ground And then I'll hol -- ler so the world will know Here I go I'm Al -- a -- bam y bound
 }
 {% endif %}

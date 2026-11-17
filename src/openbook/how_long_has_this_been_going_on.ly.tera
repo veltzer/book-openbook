@@ -5,9 +5,10 @@ default_version = "Wikifonia"
 title = "How Long Has This Been Going On?"
 style = "Jazz"
 composer = "George Gershwin"
+poet = "Ira Gershwin"
 piece = "Swing"
 copyright = "Original composition (1928); public domain in the US"
-copyrightextra = "Instrumental lead sheet; later lyrics and arrangements are excluded."
+copyrightextra = "Lead sheet with the original lyrics; later arrangements are excluded."
 typesetter = "OpenBook contributors (MusicXML import)"
 completion = "3"
 uuid = "6ec0ec20-1af4-5469-9f83-e1d1d872f380"
@@ -17,8 +18,8 @@ remark = "Copyright status outside the US may differ."
 [versions.Wikifonia]
 doChords = true
 doVoice = true
-doLyrics = false
-doLyricsmore = false
+doLyrics = true
+doLyricsmore = true
 doLyricsmoremore = false
 doChordBars = false
 doGuitar = false
@@ -34,7 +35,8 @@ doOwn = false
 	- local source: real_books_archive.gi/Wikifonia.tar.xz: Wikifonia/George Gershwin, Ira Gershwin - How Long Has This Been Going On.mxl.
 	- jazz real/fake-book references: Real_Book_3:121, 557_Standards:136, StandardsBook:176.
 	- source revision: http://wikifonia.org/node/1310/revisions/13082/view.
-	- retained written measures, pickups, repeats and endings; lyrics and accompaniment omitted.
+	- retained written measures, pickups, repeats and endings; accompaniment omitted.
+	- put in the original lyrics from the same Wikifonia source (published with the song, public domain in the US); typos fixed.
 	- the original composition is public domain in the US; no claim is made about later editions.
 	- US term reference: https://cspd.law.duke.edu/publicdomainday/2026.
 	- tempo is an editorial practice suggestion.
@@ -127,5 +129,17 @@ doOwn = false
 	e'8 g'8 a'8 g'8 bes'8 a'8 ~ a'8 g'8 ~ |
 	g'1 |
 	\endBar
+}
+{% endif %}
+{% if part == "LyricsWikifonia" %}\lyricmode {
+	I could cry __ sal -- ty tears __ Where have I been all these years?
+	__ Lit -- tle wow, __ _ Tell me now __ How long has this been go -- ing on __ long has this been go -- ing on __ Oh,
+	I feel that I could melt __ In -- to hea -- ven I'm hurled I know how Co -- lum -- bus felt __ fin -- ding a -- no -- ther word Kiss me once __ then once more __ That make thrice let's make it four!
+	__ What a break! __ for hea -- ven's sake! __ How long has this been go -- ing __ on __
+}
+{% endif %}
+{% if part == "LyricsmoreWikifonia" %}\lyricmode {
+	There were chills __ up my spine, __ And some thrills I can't de -- fine __ Lis -- ten sweet,
+	__ _ I re -- peat __ How
 }
 {% endif %}

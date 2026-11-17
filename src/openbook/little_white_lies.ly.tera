@@ -5,9 +5,10 @@ default_version = "Wikifonia"
 title = "Little White Lies"
 style = "Jazz"
 composer = "Walter Donaldson"
+poet = "Walter Donaldson"
 piece = "Swing"
 copyright = "Original composition (1930); public domain in the US"
-copyrightextra = "Instrumental lead sheet; later lyrics and arrangements are excluded."
+copyrightextra = "Lead sheet with the original lyrics; later arrangements are excluded."
 typesetter = "OpenBook contributors (MusicXML import)"
 completion = "3"
 uuid = "cab72c87-e58f-5b3d-8862-49f8591d02f1"
@@ -17,7 +18,7 @@ remark = "Copyright status outside the US may differ."
 [versions.Wikifonia]
 doChords = true
 doVoice = true
-doLyrics = false
+doLyrics = true
 doLyricsmore = false
 doLyricsmoremore = false
 doChordBars = false
@@ -34,7 +35,8 @@ doOwn = false
 	- local source: real_books_archive.gi/Wikifonia.tar.xz: Wikifonia/Walter Donaldson - Little White Lies.mxl.
 	- jazz real/fake-book references: Fakebook_Django:125.
 	- source revision: http://wikifonia.org/node/3829/revisions/5021/view.
-	- retained written measures, pickups, repeats and endings; lyrics and accompaniment omitted.
+	- retained written measures, pickups, repeats and endings; accompaniment omitted.
+	- put in the original lyrics from the same Wikifonia source (published with the song, public domain in the US); typos fixed.
 	- the original composition is public domain in the US; no claim is made about later editions.
 	- US term reference: https://cspd.law.duke.edu/publicdomainday/2026.
 	- tempo is an editorial practice suggestion.
@@ -143,5 +145,13 @@ doOwn = false
 	}
 	}
 	\endBar
+}
+{% endif %}
+{% if part == "LyricsWikifonia" %}\lyricmode {
+	The moon was all a -- glow and heav -- en was in your eyes,
+	The night that you told me those lit -- tle white lies. The stars all seemed to know that you did -- n't mean all those sighs,
+	The night that you told me those lit -- tle white lies. I try but there's no for -- get ting when ev -- "'ning" ap pears I sigh but there's no re -- gret -- ting in spite of my tears.
+	The Dev -- il was in your heart, But heav -- en was in your eyes.,
+	The night that you told me Those lit -- tle white lies. The lies!
 }
 {% endif %}

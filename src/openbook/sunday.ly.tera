@@ -5,9 +5,10 @@ default_version = "Wikifonia"
 title = "Sunday"
 style = "Jazz"
 composer = "Chester Conn, Jule Styne, Bennie Krueger, Ned Miller"
+poet = "Ned Miller, Bennie Krueger"
 piece = "Swing"
 copyright = "Original composition (1926); public domain in the US"
-copyrightextra = "Instrumental lead sheet; later lyrics and arrangements are excluded."
+copyrightextra = "Lead sheet with the original lyrics; later arrangements are excluded."
 typesetter = "OpenBook contributors (MusicXML import)"
 completion = "3"
 uuid = "f583606b-e5b4-5cd1-b60c-2c799d5dfdbc"
@@ -17,7 +18,7 @@ remark = "Copyright status outside the US may differ."
 [versions.Wikifonia]
 doChords = true
 doVoice = true
-doLyrics = false
+doLyrics = true
 doLyricsmore = false
 doLyricsmoremore = false
 doChordBars = false
@@ -34,7 +35,8 @@ doOwn = false
 	- local source: real_books_archive.gi/Wikifonia.tar.xz: Wikifonia/Ned Miller, Chester Cohn, Jule Styne, Bennie Krueger - Sunday.mxl.
 	- jazz real/fake-book references: 557_Standards:358, Firehouse_Jazz_Band:8.
 	- source revision: http://wikifonia.org/node/10651/revisions/14387/view.
-	- retained written measures, pickups, repeats and endings; lyrics and accompaniment omitted.
+	- retained written measures, pickups, repeats and endings; accompaniment omitted.
+	- put in the original lyrics from the same Wikifonia source (published with the song, public domain in the US); typos fixed; aligned to the typed melody by pitch, since the source has broken ties.
 	- the original composition is public domain in the US; no claim is made about later editions.
 	- US term reference: https://cspd.law.duke.edu/publicdomainday/2026.
 	- tempo is an editorial practice suggestion.
@@ -142,5 +144,14 @@ doOwn = false
 	}
 	c''2. r4 |
 	\endBar
+}
+{% endif %}
+{% if part == "LyricsWikifonia" %}\lyricmode {
+	I'm blue ev -- 'ry Mon -- day, think -- ing ov -- er Sun -- day That one day when I'm with you,
+	__ It seems that I sigh all day Tues -- day, I cry all day Wednes -- day,
+	Oh, my! how I long for you, __ And then comes Thurs -- day,
+	Gee! it's long __ it nev -- er goes by. __ Fri -- day makes me feel __ like I'm gon -- na die,
+	__ But af -- ter pay -- day is my fun -- day, I shine all day Sun -- day,
+	That one day when I'm with you. __ you.
 }
 {% endif %}

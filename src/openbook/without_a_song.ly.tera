@@ -5,9 +5,10 @@ default_version = "Wikifonia"
 title = "Without a Song"
 style = "Jazz"
 composer = "Vincent Youmans"
+poet = "Billy Rose, Edward Eliscu"
 piece = "Swing"
 copyright = "Original composition (1929); public domain in the US"
-copyrightextra = "Instrumental lead sheet; later lyrics and arrangements are excluded."
+copyrightextra = "Lead sheet with the original lyrics; later arrangements are excluded."
 typesetter = "OpenBook contributors (MusicXML import)"
 completion = "3"
 uuid = "e954c493-bfb1-595e-85ae-be28c25576cd"
@@ -17,7 +18,7 @@ remark = "Copyright status outside the US may differ."
 [versions.Wikifonia]
 doChords = true
 doVoice = true
-doLyrics = false
+doLyrics = true
 doLyricsmore = false
 doLyricsmoremore = false
 doChordBars = false
@@ -34,7 +35,8 @@ doOwn = false
 	- local source: real_books_archive.gi/Wikifonia.tar.xz: Wikifonia/Vincent Youmans, William Rose, Edward Eliscu - Without A Song.mxl.
 	- jazz real/fake-book references: New_Real_2:491, 557_Standards:431.
 	- source revision: http://wikifonia.org/node/5144/revisions/6979/view.
-	- retained written measures, pickups, repeats and endings; lyrics and accompaniment omitted.
+	- retained written measures, pickups, repeats and endings; accompaniment omitted.
+	- put in the original lyrics from the same Wikifonia source (published with the song, public domain in the US); typos fixed.
 	- the original composition is public domain in the US; no claim is made about later editions.
 	- US term reference: https://cspd.law.duke.edu/publicdomainday/2026.
 	- tempo is an editorial practice suggestion.
@@ -135,5 +137,17 @@ doOwn = false
 	c''8 bes'8 bes'4 ~ bes'8 c''8 c''8 es''8 |
 	es''1 ^\fermata |
 	\endBar
+}
+{% endif %}
+{% if part == "LyricsWikifonia" %}\lyricmode {
+	With -- out a song the day would nev -- er end, With -- out a song the road would nev -- er bend,
+	When things go wrong a man ain't got a friend, With -- out a song.
+	That field of corn would nev -- er see a plough, That field of corn would be a des -- ert now,
+	A dark -- y's born, But he's no good no -- how with -- out a song.
+	I got my troub -- les and woe but sure as I know the Jor -- dan will roll,
+	I'll get a -- long as long as a song is strong in my soul.
+	I'll nev -- er know what makes the rain to fall, I'll nev -- er know what makes the grass so tall,
+	I on -- ly know there ain't no love at all with -- out a song.
+	_ _ _ (Instrumental) _ _ _ _ _ _ I on -- ly know there ain't no love at all with -- out a song.
 }
 {% endif %}

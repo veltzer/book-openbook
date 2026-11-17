@@ -5,9 +5,10 @@ default_version = "Wikifonia"
 title = "It Had To Be You"
 style = "Jazz"
 composer = "Isham Jones"
+poet = "Gus Kahn"
 piece = "Swing"
 copyright = "Original composition (1924); public domain in the US"
-copyrightextra = "Instrumental lead sheet; later lyrics and arrangements are excluded."
+copyrightextra = "Lead sheet with the original lyrics; later arrangements are excluded."
 typesetter = "OpenBook contributors (MusicXML import)"
 completion = "3"
 uuid = "d64ba0fe-26aa-57b1-9f1b-b29ff40363e2"
@@ -17,7 +18,7 @@ remark = "Copyright status outside the US may differ."
 [versions.Wikifonia]
 doChords = true
 doVoice = true
-doLyrics = false
+doLyrics = true
 doLyricsmore = false
 doLyricsmoremore = false
 doChordBars = false
@@ -34,7 +35,8 @@ doOwn = false
 	- local source: real_books_archive.gi/Wikifonia.tar.xz: Wikifonia/Isham Jones, Gus Kahn - It Had To Be You.mxl.
 	- jazz real/fake-book references: Real_Book_2:180, Fakebook_Django:93, StandardsBook:242, Just_Standards_Real_Book:204.
 	- source revision: http://wikifonia.org/node/3842/revisions/18712/view.
-	- retained written measures, pickups, repeats and endings; lyrics and accompaniment omitted.
+	- retained written measures, pickups, repeats and endings; accompaniment omitted.
+	- put in the original lyrics from the same Wikifonia source (published with the song, public domain in the US); typos fixed.
 	- the original composition is public domain in the US; no claim is made about later editions.
 	- US term reference: https://cspd.law.duke.edu/publicdomainday/2026.
 	- tempo is an editorial practice suggestion.
@@ -145,5 +147,12 @@ doOwn = false
 	}
 	g'2. r4 |
 	\endBar
+}
+{% endif %}
+{% if part == "LyricsWikifonia" %}\lyricmode {
+	It had to be you, it had to be you, I wan -- dered a -- round and fin -- al -- ly found the some -- bod -- y who could make me be true could make me be blue and ev -- en be glad just to be sad think -- ing of you.
+	Some oth -- ers I've seen, might nev -- er be mean might nev -- er be cross or try to be boss but they would -- n't do For no -- bod -- y else gave me a thrill with all your faults I love you still.
+	It had to be you wond -- er -- ful you had to be you It had to be you,
+	you.
 }
 {% endif %}

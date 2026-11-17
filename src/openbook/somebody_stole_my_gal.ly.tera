@@ -5,9 +5,10 @@ default_version = "Wikifonia"
 title = "Somebody Stole My Gal"
 style = "Jazz"
 composer = "Leo Wood"
+poet = "Leo Wood"
 piece = "Swing"
 copyright = "Original composition (1918); public domain in the US"
-copyrightextra = "Instrumental lead sheet; later lyrics and arrangements are excluded."
+copyrightextra = "Lead sheet with the original lyrics; later arrangements are excluded."
 typesetter = "OpenBook contributors (MusicXML import)"
 completion = "3"
 uuid = "34e96cb5-6f9f-56bb-85db-6f21fb709b94"
@@ -17,7 +18,7 @@ remark = "Copyright status outside the US may differ."
 [versions.Wikifonia]
 doChords = true
 doVoice = true
-doLyrics = false
+doLyrics = true
 doLyricsmore = false
 doLyricsmoremore = false
 doChordBars = false
@@ -34,7 +35,8 @@ doOwn = false
 	- local source: real_books_archive.gi/Wikifonia.tar.xz: Wikifonia/Leo Wood - Somebody Stole My Gal.mxl.
 	- jazz real/fake-book references: Firehouse_Jazz_Band:204.
 	- source revision: http://wikifonia.org/node/5560/revisions/7583/view.
-	- retained written measures, pickups, repeats and endings; lyrics and accompaniment omitted.
+	- retained written measures, pickups, repeats and endings; accompaniment omitted.
+	- put in the original lyrics from the same Wikifonia source (published with the song, public domain in the US); typos fixed.
 	- the original composition is public domain in the US; no claim is made about later editions.
 	- US term reference: https://cspd.law.duke.edu/publicdomainday/2026.
 	- tempo is an editorial practice suggestion.
@@ -192,5 +194,13 @@ doOwn = false
 	c''4 r2*3/2 |
 	}
 	\endBar
+}
+{% endif %}
+{% if part == "LyricsWikifonia" %}\lyricmode {
+	Gee, but I'm lone -- some, lone -- some and blue I've found out some -- thing I ne -- ver knew I know now what it means to be sad For I've lost the best gal I ev -- er had;
+	She on -- ly left yes -- ter -- day Some -- bod -- y stole her a -- way.
+	Some -- bod -- y stole my gal Some -- bod -- y stole my pal.
+	Some -- bod -- y came and took her a -- way she did -- n't e -- ven say she was lea -- vin' The kiss -- es I loved so He's get -- ting now I know And Gee I know that she would come to me if she could see her bro -- ken heart -- ed lone -- some pal.
+	Some -- bod -- y stole my gal.
 }
 {% endif %}

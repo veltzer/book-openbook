@@ -5,9 +5,10 @@ default_version = "Wikifonia"
 title = "I Want to Be Happy"
 style = "Jazz"
 composer = "Vincent Youmans"
+poet = "Irving Caesar"
 piece = "Swing"
 copyright = "Original composition (1924); public domain in the US"
-copyrightextra = "Instrumental lead sheet; later lyrics and arrangements are excluded."
+copyrightextra = "Lead sheet with the original lyrics; later arrangements are excluded."
 typesetter = "OpenBook contributors (MusicXML import)"
 completion = "3"
 uuid = "0afceab4-0b2d-5fbb-8ce5-fdf9594d394a"
@@ -17,7 +18,7 @@ remark = "Copyright status outside the US may differ."
 [versions.Wikifonia]
 doChords = true
 doVoice = true
-doLyrics = false
+doLyrics = true
 doLyricsmore = false
 doLyricsmoremore = false
 doChordBars = false
@@ -34,7 +35,8 @@ doOwn = false
 	- local source: real_books_archive.gi/Wikifonia.tar.xz: Wikifonia/Vincent Youmans, Irving Caesar - I Want To Be Happy.mxl.
 	- jazz real/fake-book references: 557_Standards:197, StandardsBook:214.
 	- source revision: http://wikifonia.org/node/13197/revisions/17718/view.
-	- retained written measures, pickups, repeats and endings; lyrics and accompaniment omitted.
+	- retained written measures, pickups, repeats and endings; accompaniment omitted.
+	- put in the original lyrics from the same Wikifonia source (published with the song, public domain in the US); typos fixed; aligned to the typed melody by pitch, since the source has broken ties.
 	- the original composition is public domain in the US; no claim is made about later editions.
 	- US term reference: https://cspd.law.duke.edu/publicdomainday/2026.
 	- tempo is an editorial practice suggestion.
@@ -143,5 +145,14 @@ doOwn = false
 	}
 	}
 	\endBar
+}
+{% endif %}
+{% if part == "LyricsWikifonia" %}\lyricmode {
+	I want to be hap -- py, but I won't be hap -- py,
+	Till I make you hap -- py too. __ Life's real -- ly worth liv -- ing,
+	When we are mirth giv -- ing; Why can't I give some to you?
+	__ When skies are gray and you say you are blue, I'll send the sun smil -- ing through.
+	__ I want to be hap -- py, but I won't be hap -- py,
+	Till I make you hap -- py, too. too.
 }
 {% endif %}

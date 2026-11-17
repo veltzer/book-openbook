@@ -5,9 +5,10 @@ default_version = "Wikifonia"
 title = "I Wanna Be Loved by You"
 style = "Jazz"
 composer = "Herbert Stothart, Harry Ruby"
+poet = "Bert Kalmar"
 piece = "Swing"
 copyright = "Original composition (1928); public domain in the US"
-copyrightextra = "Instrumental lead sheet; later lyrics and arrangements are excluded."
+copyrightextra = "Lead sheet with the original lyrics; later arrangements are excluded."
 typesetter = "OpenBook contributors (MusicXML import)"
 completion = "3"
 uuid = "4a4cd9b4-1d56-5a4b-a00a-6859573b372e"
@@ -17,7 +18,7 @@ remark = "Copyright status outside the US may differ."
 [versions.Wikifonia]
 doChords = true
 doVoice = true
-doLyrics = false
+doLyrics = true
 doLyricsmore = false
 doLyricsmoremore = false
 doChordBars = false
@@ -34,7 +35,8 @@ doOwn = false
 	- local source: real_books_archive.gi/Wikifonia.tar.xz: Wikifonia/Herbert Stothart, Harry Ruby, Bert Kalmar - I Wanna Be Loved By You.mxl.
 	- jazz real/fake-book references: Fakebook_Django:97.
 	- source revision: http://www.wikifonia.org/node/2450/revisions/3072/view.
-	- retained written measures, pickups, repeats and endings; lyrics and accompaniment omitted.
+	- retained written measures, pickups, repeats and endings; accompaniment omitted.
+	- put in the original lyrics from the same Wikifonia source (published with the song, public domain in the US); typos fixed; aligned to the typed melody by pitch, since the source has broken ties.
 	- restored the first ending and the shared second/third ending from the archived MusicXML.
 	- the original composition is public domain in the US; no claim is made about later editions.
 	- US term reference: https://cspd.law.duke.edu/publicdomainday/2026.
@@ -111,5 +113,13 @@ doOwn = false
 	g'4 g'8 g'8 ~ g'8 a'8 b'4 |
 	d'8 d'4 e'8 g'4 r4 ^ "D.C. al Fine" |
 	\endBar
+}
+{% endif %}
+{% if part == "LyricsWikifonia" %}\lyricmode {
+	I wan -- na be loved by you, Just you and no -- bod -- y else but you.
+	I wan -- na be loved by you a -- lone, __ _ poo -- poo -- pa -- doop.
+	lone, poo -- poo -- pa -- doop. I could -- n't as -- pire __ _ to an -- y -- thing high -- er,
+	__ Than fill the de -- sire __ _ to make you my own;
+	pa -- pa -- pad -- ra, poo -- poo -- pa -- doop.
 }
 {% endif %}
