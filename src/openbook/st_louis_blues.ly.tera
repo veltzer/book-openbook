@@ -5,9 +5,10 @@ default_version = "Wikifonia"
 title = "St. Louis Blues"
 style = "Jazz"
 composer = "W. C. Handy"
+poet = "W. C. Handy"
 piece = "Swing"
 copyright = "Original composition (1914); public domain in the US"
-copyrightextra = "Instrumental lead sheet; later lyrics and arrangements are excluded."
+copyrightextra = "Lead sheet with the original lyrics; later arrangements are excluded."
 typesetter = "OpenBook contributors (MusicXML import)"
 completion = "3"
 uuid = "c2871b53-98aa-5e3d-a5df-75cca513eb4a"
@@ -17,7 +18,7 @@ remark = "Copyright status outside the US may differ."
 [versions.Wikifonia]
 doChords = true
 doVoice = true
-doLyrics = false
+doLyrics = true
 doLyricsmore = false
 doLyricsmoremore = false
 doChordBars = false
@@ -34,7 +35,8 @@ doOwn = false
 	- local source: real_books_archive.gi/Wikifonia.tar.xz: Wikifonia/W. C. Handy - St. Louis Blues.mxl.
 	- jazz real/fake-book references: Real_Book_2:349, 557_Standards:350, Firehouse_Jazz_Band:352.
 	- source revision: http://wikifonia.org/node/2648/revisions/25690/view.
-	- retained written measures, pickups, repeats and endings; lyrics and accompaniment omitted.
+	- retained written measures, pickups, repeats and endings; accompaniment omitted.
+	- put in the original lyrics from the same Wikifonia source (published with the song, public domain in the US); typos fixed.
 	- the original composition is public domain in the US; no claim is made about later editions.
 	- US term reference: https://cspd.law.duke.edu/publicdomainday/2026.
 	- tempo is an editorial practice suggestion.
@@ -187,5 +189,22 @@ doOwn = false
 	g'1 |
 	}
 	\endBar
+}
+{% endif %}
+{% if part == "LyricsWikifonia" %}\lyricmode {
+	_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _
+	I hate to see __ de ev' -- nin' sun go down, __
+	hate to see __ de ev' -- nin' sun go down, __
+	"'cause" my ba -- by, __ he done lef' dis town. __
+	Feel -- in' to -- mor -- row lak __ _ Ah feel to -- day, __
+	feel to -- mor -- row lak __ _ Ah feel to -- day, __
+	I'll pack my trunk, __ make ma get -- a -- way. __
+	St. Lou -- is wom -- an __ _ wid her dia -- mon' __ _ rings __
+	pulls dat man roun' __ by her a -- pron strings. __
+	"'Twant" for pow -- der __ an' for store -- bought __ _ hair, __
+	de man I love __ _ __ would not gone no -- where, __ _ no -- where.
+	Got de St. Lou -- is Blues, jes' as blue __ _ as Ah can be, __
+	dat man got __ _ a heart lak a rock __ _ cast in the sea, __
+	or else he would -- n't have gone __ _ so far __ _ from __ _ me! __
 }
 {% endif %}

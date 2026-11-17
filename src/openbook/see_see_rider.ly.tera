@@ -5,6 +5,7 @@ default_version = "Wikifonia"
 title = "See See Rider"
 style = "Jazz"
 composer = "Ma Rainey"
+poet = "Ma Rainey"
 piece = "Standard"
 typesetter = "OpenBook contributors (MusicXML import)"
 completion = "3"
@@ -16,7 +17,7 @@ copyrightextra = "Archived MusicXML notice retained; underlying music is not rel
 [versions.Wikifonia]
 doChords = true
 doVoice = true
-doLyrics = false
+doLyrics = true
 doLyricsmore = false
 doLyricsmoremore = false
 doChordBars = false
@@ -34,9 +35,10 @@ doOwn = false
 	- local PDF: real_books_archive.gi/Dixieland - The Firehouse Jazz Band - Dixieland Fake Book - 778 S Noten Sheets Score Songs Lieder.pdf.
 	- book index reference: Firehouse_Jazz_Band:52; index pagination is not a verified PDF page number.
 	- retained the archived MusicXML rights notice; no redistribution permission is asserted.
-	- retained written melody, chord changes, pickups, repeats and numbered endings; lyrics omitted.
+	- retained written melody, chord changes, pickups, repeats and numbered endings.
 	- imported explicit 7alt symbols using the book's altered-dominant notation where present.
 	- tempo is an editorial practice suggestion.
+	- put in the original lyrics (1924, public domain in the US), aligned to this melody.
 	TODO:
 	- proofread the complete melody, harmony and form against the referenced PDF and check by ear.
 	- verify source attribution, copyright notice and reuse terms against the scan; only the archived MusicXML notice is retained.
@@ -128,5 +130,12 @@ doOwn = false
 	}
 	c''2. r4 |
 	\endBar
+}
+{% endif %}
+{% if part == "LyricsWikifonia" %}\lyricmode {
+	_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _
+	See, see, ri -- der, __ see what __ you done __ done, Lawd, Lawd, Lawd!
+	Made me love you, now your gal has come; __
+	You made __ me love you, now your gal has come! __ come! __
 }
 {% endif %}

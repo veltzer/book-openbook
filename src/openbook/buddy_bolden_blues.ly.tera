@@ -5,6 +5,7 @@ default_version = "Wikifonia"
 title = "Buddy Bolden Blues"
 style = "Jazz"
 composer = "Jelly Roll Morton"
+poet = "Jelly Roll Morton"
 piece = "Standard"
 typesetter = "OpenBook contributors (MusicXML import)"
 completion = "3"
@@ -16,7 +17,7 @@ copyrightextra = "Archived MusicXML notice retained; underlying music is not rel
 [versions.Wikifonia]
 doChords = true
 doVoice = true
-doLyrics = false
+doLyrics = true
 doLyricsmore = false
 doLyricsmoremore = false
 doChordBars = false
@@ -34,9 +35,10 @@ doOwn = false
 	- local PDF: real_books_archive.gi/Dixieland - The Firehouse Jazz Band - Dixieland Fake Book - 778 S Noten Sheets Score Songs Lieder.pdf.
 	- book index reference: Firehouse_Jazz_Band:286; index pagination is not a verified PDF page number.
 	- retained the archived MusicXML rights notice; no redistribution permission is asserted.
-	- retained written melody, chord changes, pickups, repeats and numbered endings; lyrics omitted.
+	- retained written melody, chord changes, pickups, repeats and numbered endings.
 	- imported explicit 7alt symbols using the book's altered-dominant notation where present.
 	- tempo is an editorial practice suggestion.
+	- put in the traditional lyrics (public domain in the US), aligned to this melody.
 	TODO:
 	- proofread the complete melody, harmony and form against the referenced PDF and check by ear.
 	- verify source attribution, copyright notice and reuse terms against the scan; only the archived MusicXML notice is retained.
@@ -96,5 +98,16 @@ doOwn = false
 	es8 c4. fis8 - "B7" fis16 es16 \once \omit TupletBracket \times 2/3 { g8 f8 es8 ~ } |
 	es2. - "E" r4 |
 	\endBar
+}
+{% endif %}
+{% if part == "LyricsWikifonia" %}\lyricmode {
+	I thought I heard Bud -- dy Bol -- den say, __ "'You're"
+	nas -- ty, you're dir -- ty, take it a -- way! __ You're
+	ter -- ri -- ble, __ you're aw -- ful, take it a -- way!' __ I
+	thought I heard him say. __ I
+	thought I heard __ Judge Fo -- gar -- ty say, __
+	"'Thir" -- ty days in the mar -- ket, take him a -- way! __
+	Give him a good broom to sweep with, take him a -- way!' __ I
+	thought I heard __ _ him __ _ say. __
 }
 {% endif %}

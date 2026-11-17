@@ -5,9 +5,10 @@ default_version = "Wikifonia"
 title = "Dark Eyes"
 style = "Gypsy Jazz"
 composer = "Traditional"
+poet = "Yevhen Hrebinka"
 piece = "Swing"
 copyright = "Public domain composition"
-copyrightextra = "Source MusicXML marked Public Domain; instrumental lead sheet."
+copyrightextra = "Source MusicXML marked Public Domain; lead sheet with the traditional lyrics."
 typesetter = "OpenBook contributors (MusicXML import)"
 completion = "3"
 uuid = "3efb9cee-f166-4178-b07f-31acef2af286"
@@ -17,7 +18,7 @@ location = "Fakebook_Django:49"
 [versions.Wikifonia]
 doChords = true
 doVoice = true
-doLyrics = false
+doLyrics = true
 doLyricsmore = false
 doLyricsmoremore = false
 doChordBars = false
@@ -31,7 +32,8 @@ doOwn = false
 {% if part == "Doc" %}
 	DONE:
 	- imported melody and chords from real_books_archive.gi/Wikifonia.tar.xz: Wikifonia/Traditional - Dark Eyes.mxl.
-	- source edition explicitly declares Public Domain; imported without lyrics.
+	- source edition explicitly declares Public Domain.
+	- put in the traditional Russian lyrics (Yevhen Hrebinka, 1843, public domain), transliterated and aligned to this melody.
 	- retained the written form, pickups, repeats and chord durations.
 	- source revision: http://wikifonia.org/node/17879/revisions/23699/view.
 	- tempo is an editorial practice suggestion, not a verified recording tempo.
@@ -89,5 +91,12 @@ doOwn = false
 	d''1 ~ |
 	d''1 |
 	\endBar
+}
+{% endif %}
+{% if part == "LyricsWikifonia" %}\lyricmode {
+	O -- chi __ chyor -- ny -- ye, o -- chi __ strast -- ny -- ye, __
+	o -- chi zhguch -- i -- ye __ i pre -- kras -- ny -- ye! __
+	Kak lyu -- blyu __ ya vas, __ kak bo -- yus' ya vas,
+	znat', u -- vi -- del vas __
 }
 {% endif %}

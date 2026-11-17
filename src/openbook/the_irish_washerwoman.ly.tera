@@ -4,7 +4,8 @@ default_version = "Wikifonia"
 [attributes]
 title = "The Irish Washerwoman"
 style = "Standard"
-composer = "Jerimiah Dugan"
+composer = "Traditional"
+poet = "Charles Hansen"
 piece = "Standard"
 typesetter = "OpenBook contributors (MusicXML import)"
 completion = "3"
@@ -16,7 +17,7 @@ copyrightextra = "Archived MusicXML notice retained; underlying music is not rel
 [versions.Wikifonia]
 doChords = true
 doVoice = true
-doLyrics = false
+doLyrics = true
 doLyricsmore = false
 doLyricsmoremore = false
 doChordBars = false
@@ -37,6 +38,7 @@ doOwn = false
 	- retained written melody, chord changes, pickups, repeats and numbered endings; lyrics omitted.
 	- imported explicit 7alt symbols using the book's altered-dominant notation where present.
 	- tempo is an editorial practice suggestion.
+	- put in the lyrics from the same Wikifonia source; typos fixed.
 	TODO:
 	- proofread the complete melody, harmony and form against the referenced PDF and check by ear.
 	- verify source attribution, copyright notice and reuse terms against the scan; only the archived MusicXML notice is retained.
@@ -111,5 +113,14 @@ doOwn = false
 	}
 	}
 	\endBar
+}
+{% endif %}
+{% if part == "LyricsWikifonia" %}\lyricmode {
+	Oh an I -- rish er wash -- wo -- man has -- n't an e -- qual she rubs bet -- ter scrubs
+	bet -- ter than oth -- er peo -- ple she jigs a bit sings a bit all the day long and her
+	hearts like a sham -- rock it sings a gay song oh the neigh -- bours all lis -- ten to Mis --
+	sus Mc -- Clear -- y and vow that a wash wo -- mans life is not drear -- y she jig -- gles
+	and wig -- gles an eye -- ful of Ire -- land the pride of the I -- rish the wash -- wo --
+	man queen oh an wash -- wo -- man queen
 }
 {% endif %}

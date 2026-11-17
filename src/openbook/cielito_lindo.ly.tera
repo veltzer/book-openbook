@@ -4,7 +4,8 @@ default_version = "Wikifonia"
 [attributes]
 title = "Cielito Lindo"
 style = "Jazz"
-composer = "Mexican folk song"
+composer = "Quirino Mendoza y Cortés"
+poet = "Quirino Mendoza y Cortés"
 piece = "Standard"
 typesetter = "OpenBook contributors (MusicXML import)"
 completion = "3"
@@ -16,7 +17,7 @@ copyrightextra = "Archived MusicXML notice retained; underlying music is not rel
 [versions.Wikifonia]
 doChords = true
 doVoice = true
-doLyrics = false
+doLyrics = true
 doLyricsmore = false
 doLyricsmoremore = false
 doChordBars = false
@@ -35,6 +36,7 @@ doOwn = false
 	- retained the archived MusicXML rights notice; no redistribution permission is asserted.
 	- retained written melody, chord changes, pickups, repeats and numbered endings; lyrics, slurs, dynamics and articulations other than fermatas omitted.
 	- tempo is an editorial practice suggestion.
+	- put in the lyrics from the same Wikifonia source; typos fixed.
 	TODO:
 	- proofread the complete melody, harmony and form against a printed edition and check by ear.
 	- verify source attribution, copyright notice and reuse terms; only the archived MusicXML notice is retained.
@@ -123,5 +125,12 @@ doOwn = false
 	e'4 c'2 ~ |
 	c'2. |
 	\endBar
+}
+{% endif %}
+{% if part == "LyricsWikifonia" %}\lyricmode {
+	Hea -- vens a -- bove you all know that I love you you ri -- val their beau -- ty my dar --
+	ling __ I wait the day dear __ when I can hear you say dear __ I'll come to you __ with
+	love's own greet -- ing __ the stars a -- bove will light up the way the heav -- ens will
+	bless our meet -- ing __
 }
 {% endif %}

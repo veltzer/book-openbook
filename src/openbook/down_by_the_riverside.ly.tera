@@ -25,7 +25,7 @@ remark = "Sister Rosetta Tharpe (1964)"
 [versions.Fake]
 doChords = true
 doVoice = true
-doLyrics = false
+doLyrics = true
 doLyricsmore = false
 doLyricsmoremore = false
 doChordBars = false
@@ -42,8 +42,8 @@ doOwn = false
 	- put in the chords (fake book).
 	- put in the tune (fake book).
 	- added youtube performances.
+	- put in the traditional lyrics (public domain).
 	TODO:
-	- add the lyrics.
 	- check the chords (fake book).
 	- check the tune (fake book).
 	- hear the tune to check that it is right and adjust the tempo.
@@ -92,5 +92,17 @@ doOwn = false
 
 	% part "Coda"
 	f1~^\markup { \musicglyph #"scripts.coda" } | f2. r4 |
+}
+{% endif %}
+{% if part == "LyricsFake" %}\lyricmode {
+	Gon -- na lay down my bur -- den, __ down by the riv -- er -- side, __
+	down by the riv -- er -- side, __ down by the riv -- er -- side, __ gon -- na
+	lay down my hea -- vy load, __ down by the riv -- er -- side, __
+	gon -- na stud -- y war no more. __ I ain't gon --
+	na stud -- y war no more, I ain't gon -- na stud -- y war;
+	stud -- y war no more! __ I ain't gon --
+	na stud -- y war no more, I ain't gon -- na stud -- y war, gon --
+	na stud -- y war no more! __ "Gon-"
+	more! __
 }
 {% endif %}
