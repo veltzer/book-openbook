@@ -5,9 +5,10 @@ default_version = "Wikifonia"
 title = "Daisy Bell"
 style = "Waltz"
 composer = "Harry Dacre"
+poet = "Harry Dacre"
 piece = "Moderato"
 copyright = "Public domain composition"
-copyrightextra = "Source MusicXML marked Public Domain; instrumental lead sheet."
+copyrightextra = "Source MusicXML marked Public Domain; lead sheet with the original lyrics."
 typesetter = "OpenBook contributors (MusicXML import)"
 completion = "3"
 uuid = "12c059d7-0d4f-47f6-b3af-3563861502de"
@@ -17,8 +18,8 @@ location = "Wikifonia"
 [versions.Wikifonia]
 doChords = true
 doVoice = true
-doLyrics = false
-doLyricsmore = false
+doLyrics = true
+doLyricsmore = true
 doLyricsmoremore = false
 doChordBars = false
 doGuitar = false
@@ -31,7 +32,8 @@ doOwn = false
 {% if part == "Doc" %}
 	DONE:
 	- imported melody and chords from real_books_archive.gi/Wikifonia.tar.xz: Wikifonia/Harry Dacre - Bicycle Built for Two.mxl.
-	- source edition explicitly declares Public Domain; imported without lyrics.
+	- source edition explicitly declares Public Domain.
+	- put in the original lyrics from the same Wikifonia source (public domain); typos fixed.
 	- retained the written form, pickups, repeats and chord durations.
 	- source revision: http://wikifonia.org/node/17008/revisions/22615/view.
 	- tempo is an editorial practice suggestion, not a verified recording tempo.
@@ -185,5 +187,22 @@ doOwn = false
 	g'2. ~ |
 	g'2 r4 |
 	\endBar
+}
+{% endif %}
+{% if part == "LyricsWikifonia" %}\lyricmode {
+	There is a flo -- wer With -- in my heart, Dai -- sy, Dai -- sy! Plan -- ted one day By a
+	glan -- cing dart, Plan -- ted by Dai -- sy Bell! __ _ Whe -- ther she loves me Or loves
+	me not, Some -- times it's hard to "tell;" __ Yet I am long -- ing to share the lot Of
+	beau -- ti -- ful Dai -- sy Bell! __ Dai -- sy, Dai -- sy, Give me your ans -- wer do! __
+	I'm half cra -- zy, all for the love of you! __ It won't be a sty -- lish mar -- riage, __
+	I can't af -- ford a car -- riage, __ But you'll look sweet up -- on the seat of a bi --
+	cy -- cle made for two. __
+}
+{% endif %}
+{% if part == "LyricsmoreWikifonia" %}\lyricmode {
+	We will go tan -- dem as man and wife, Dai -- sy, Dai -- sy! Pedd -- ling a -- way down
+	the road of life, I and my Dai -- sy Bell! __ _ When the road's dark we can both des --
+	pise police -- men and "'lamps'" as well. __ There are bright lights in the dazz -- ling
+	eyes of beau -- ti -- ful Dai -- sy Bell! __
 }
 {% endif %}

@@ -4,7 +4,8 @@ default_version = "Wikifonia"
 [attributes]
 title = "Yours Is My Heart Alone"
 style = "Jazz"
-composer = "Franz Lehar"
+composer = "Franz Lehár"
+poet = "Ludwig Herzer, Fritz Löhner-Beda, Harry B. Smith"
 piece = "Jazz"
 typesetter = "OpenBook contributors (MusicXML import)"
 completion = "3"
@@ -15,7 +16,7 @@ copyright = "All Rights Reserved"
 [versions.Wikifonia]
 doChords = true
 doVoice = true
-doLyrics = false
+doLyrics = true
 doLyricsmore = false
 doLyricsmoremore = false
 doChordBars = false
@@ -34,6 +35,7 @@ doOwn = false
 	- retained the original copyright notice where printed; the underlying music is not relicensed.
 	- retained written measures, pickups, repeats and endings; lyrics omitted.
 	- tempo is an editorial practice suggestion.
+	- put in the original lyrics from the same Wikifonia source (published with the song, public domain in the US); typos fixed.
 	TODO:
 	- proofread the music against the referenced PDF and check by ear.
 	- verify editorial chord spacing in measures 7; the archive places successive symbols at the same offset.
@@ -140,5 +142,13 @@ doOwn = false
 	}
 	f'2 r2 |
 	\endBar
+}
+{% endif %}
+{% if part == "LyricsWikifonia" %}\lyricmode {
+	Yours __ is my heart a -- lone __ and with -- out you __ life holds no charm. __ Yours __
+	ev -- "'ry" thought I own, __ our love the theme __ of ev -- "'ry" dream. __ All __ that
+	makes life seem worth -- while __ dwells in your eyes __ and the spell of your smile. __
+	There is no song __ half so sweet to me __ as your voice whis -- per -- ing "'I" love you,
+	dear.' __ dear.' __
 }
 {% endif %}

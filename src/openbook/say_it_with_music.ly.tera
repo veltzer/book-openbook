@@ -5,6 +5,7 @@ default_version = "Wikifonia"
 title = "Say It With Music"
 style = "Jazz"
 composer = "Irving Berlin"
+poet = "Irving Berlin"
 piece = "Standard"
 typesetter = "OpenBook contributors (MusicXML import)"
 completion = "3"
@@ -16,8 +17,8 @@ copyrightextra = "Archived MusicXML notice retained; underlying music is not rel
 [versions.Wikifonia]
 doChords = true
 doVoice = true
-doLyrics = false
-doLyricsmore = false
+doLyrics = true
+doLyricsmore = true
 doLyricsmoremore = false
 doChordBars = false
 doGuitar = false
@@ -35,6 +36,7 @@ doOwn = false
 	- retained the archived MusicXML rights notice; no redistribution permission is asserted.
 	- retained written melody, chord changes, pickups, repeats and numbered endings; lyrics, slurs, dynamics and articulations other than fermatas omitted.
 	- tempo is an editorial practice suggestion.
+	- put in the original lyrics from the same Wikifonia source (published with the song, public domain in the US); typos fixed.
 	TODO:
 	- proofread the complete melody, harmony and form against a printed edition and check by ear.
 	- verify source attribution, copyright notice and reuse terms; only the archived MusicXML notice is retained.
@@ -163,5 +165,20 @@ doOwn = false
 	es'1 ~ |
 	es'2. r4 |
 	\endBar
+}
+{% endif %}
+{% if part == "LyricsWikifonia" %}\lyricmode {
+	_ _ _ _ _ _ _ _ _ _ _ _ Mu -- sic is a lang -- uage lov -- ers un -- der -- stand, Mel --
+	o -- dy and ro -- mance wan -- der hand in "hand;" Cu -- pid nev -- er fails as -- sis --
+	ted by a band, So if you have some -- thing sweet to tell "her;" Say it with mu -- sic,
+	Beau -- ti -- ful mu -- "sic;" Some -- how they'd rath -- er be kissed __ To the strains
+	of Cho -- pin or Liszt __ A mel -- o -- dy mel -- low, played on a cel -- lo, Helps mis --
+	ter Cu -- pid a -- long __ So say it with a beau -- ti -- ful song. __
+}
+{% endif %}
+{% if part == "LyricsmoreWikifonia" %}\lyricmode {
+	_ _ _ _ _ _ _ _ _ _ _ _ There's a ten -- der mes -- sage Deep down in my heart, Some --
+	thing you should know But how am I to "start:" Sen -- ti -- men -- tal speech -- es Nev --
+	er could im -- part, Just ex -- act -- ly what I want to tell "you;"
 }
 {% endif %}

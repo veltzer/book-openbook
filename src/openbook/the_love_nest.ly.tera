@@ -5,6 +5,7 @@ default_version = "Wikifonia"
 title = "The Love Nest"
 style = "Jazz"
 composer = "Louis A. Hirsch"
+poet = "Otto Harbach"
 piece = "Standard"
 typesetter = "OpenBook contributors (MusicXML import)"
 completion = "3"
@@ -16,7 +17,7 @@ copyrightextra = "Archived MusicXML notice retained; underlying music is not rel
 [versions.Wikifonia]
 doChords = true
 doVoice = true
-doLyrics = false
+doLyrics = true
 doLyricsmore = false
 doLyricsmoremore = false
 doChordBars = false
@@ -37,6 +38,7 @@ doOwn = false
 	- retained written melody, chord changes, pickups, repeats and numbered endings; lyrics omitted.
 	- imported explicit 7alt symbols using the book's altered-dominant notation where present.
 	- tempo is an editorial practice suggestion.
+	- put in the original lyrics from the same Wikifonia source (published with the song, public domain in the US); typos fixed.
 	TODO:
 	- proofread the complete melody, harmony and form against the referenced PDF and check by ear.
 	- verify source attribution, copyright notice and reuse terms against the scan; only the archived MusicXML notice is retained.
@@ -127,5 +129,13 @@ doOwn = false
 	c''1 ~ |
 	c''2 r2 |
 	\endBar
+}
+{% endif %}
+{% if part == "LyricsWikifonia" %}\lyricmode {
+	Just a love nest __ co -- zy with charm __ like a dove nest __ down on a farm __ a ve --
+	ran -- da with some sort of cling -- ing vine __ then a kitch -- en where some ramb -- ler
+	ros -- es twine __ then a small room __ tea set of blue __ best of all room __ dream room
+	for two __ bet -- ter than a pal -- ace with a gild -- ed dome, __ is a love nest __ you
+	can call home __
 }
 {% endif %}

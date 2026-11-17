@@ -5,6 +5,7 @@ default_version = "Wikifonia"
 title = "Joy To The World"
 style = "Jazz"
 composer = "Lowell Mason"
+poet = "Isaac Watts"
 piece = "Standard"
 typesetter = "OpenBook contributors (MusicXML import)"
 completion = "3"
@@ -16,8 +17,8 @@ copyrightextra = "Archived MusicXML notice retained; underlying music is not rel
 [versions.Wikifonia]
 doChords = true
 doVoice = true
-doLyrics = false
-doLyricsmore = false
+doLyrics = true
+doLyricsmore = true
 doLyricsmoremore = false
 doChordBars = false
 doGuitar = false
@@ -37,6 +38,7 @@ doOwn = false
 	- retained written melody, chord changes, pickups, repeats and numbered endings; lyrics omitted.
 	- imported explicit 7alt symbols using the book's altered-dominant notation where present.
 	- tempo is an editorial practice suggestion.
+	- put in the original lyrics from the same Wikifonia source (published with the song, public domain in the US); typos fixed.
 	TODO:
 	- proofread the complete melody, harmony and form against the referenced PDF and check by ear.
 	- verify source attribution, copyright notice and reuse terms against the scan; only the archived MusicXML notice is retained.
@@ -99,5 +101,17 @@ doOwn = false
 	e'4 d'4 |
 	c'2 |
 	\endBar
+}
+{% endif %}
+{% if part == "LyricsWikifonia" %}\lyricmode {
+	Joy to the world! the Lord has "come:" Let earth re -- ceive her "King:" Let ev -- "'ry" __
+	heart __ _ pre -- pare __ Him __ room, __ And heav'n and na -- ture __ sing, And __ heav'n
+	and na -- ture __ sing, And __ heav'n __ and heav'n __ and na -- ture sing.
+}
+{% endif %}
+{% if part == "LyricsmoreWikifonia" %}\lyricmode {
+	Joy to the world! the Sav -- ior "reigns:" Let men their songs em -- ploy, While fields __
+	and __ floods __ _ rocks, hills __ and __ plains __ Re -- peat the sound -- ing __ joy, Re --
+	peat the sound -- ing __ joy, Re -- peat __ re -- peat __ the sound -- ing joy.
 }
 {% endif %}

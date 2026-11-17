@@ -5,9 +5,10 @@ default_version = "Wikifonia"
 title = "Ach, Du Lieber Augustin"
 style = "Waltz"
 composer = "Traditional"
+poet = "Traditional"
 piece = "Moderato"
 copyright = "Public domain composition"
-copyrightextra = "Source MusicXML marked Public Domain; instrumental lead sheet."
+copyrightextra = "Source MusicXML marked Public Domain; lead sheet with the original lyrics."
 typesetter = "OpenBook contributors (MusicXML import)"
 completion = "3"
 uuid = "add5efa8-97c6-406b-aa30-6be6a865f2a0"
@@ -17,7 +18,7 @@ location = "Wikifonia"
 [versions.Wikifonia]
 doChords = true
 doVoice = true
-doLyrics = false
+doLyrics = true
 doLyricsmore = false
 doLyricsmoremore = false
 doChordBars = false
@@ -31,7 +32,8 @@ doOwn = false
 {% if part == "Doc" %}
 	DONE:
 	- imported melody and chords from real_books_archive.gi/Wikifonia.tar.xz: Wikifonia/Marx Augustin - Ach, Du Lieber Augustin.mxl.
-	- source edition explicitly declares Public Domain; imported without lyrics.
+	- source edition explicitly declares Public Domain.
+	- put in the original lyrics from the same Wikifonia source (public domain); typos fixed.
 	- retained the written form, pickups, repeats and chord durations.
 	- source revision: http://www.wikifonia.org/node/2029/revisions/2605/view.
 	- tempo is an editorial practice suggestion, not a verified recording tempo.
@@ -89,5 +91,11 @@ doOwn = false
 	g'4 c'4 c'4 |
 	f'2. |
 	\endBar
+}
+{% endif %}
+{% if part == "LyricsWikifonia" %}\lyricmode {
+	Ach, Du Lie -- ber Au -- gus -- tin, Au -- gus -- tin, Au -- gus -- tin, Ach, Du Lie --
+	ber Au -- gus -- tin, al -- les ist "weg;" Bock ist weg, stock ist weg, Auch ich bin in
+	dem dreck Ach, Du Lie -- ber Au -- gus -- tin, al -- les ist weg.
 }
 {% endif %}

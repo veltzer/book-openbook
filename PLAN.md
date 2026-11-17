@@ -219,10 +219,55 @@ second pass of the repeat in `Lyricsmore`), `georgia_on_my_mind`,
 `star_dust` (verse and refrain). From the page itself: `sonny_boy` (jfb:354,
 second stanza in `Lyricsmore`), `you_made_me_love_you` (jfb:440-441),
 `softly_as_in_a_morning_sunrise` (hlrjb:316, Hal Leonard Real Jazz Book
-PDF page = book page - 2). Not done: `strike_up_the_band` (its melody has
-a section the Wikifonia lyrics lack; needs another source). Every other
-tune with a poet and no lyrics has lyrics still under copyright (published
-1931 or later).
+PDF page = book page - 2), `amazing_grace` (jfb:44), `bill_bailey`
+(jfb:58), `frankie_and_johnny` (jfb:124), `little_brown_jug` (jfb:222).
+
+Status 2026-11-17 (batch 3): lyrics added to 105 more public-domain songs
+(published 1930 or earlier, or traditional). 101 from their own Wikifonia
+`.mxl` (25 marked `Public domain composition` / `Traditional composition`
+and 76 from the archive batches whose `poet` was not set yet):
+`a_pretty_girl_is_like_a_melody`, `a_ship_without_a_sail`,
+`ach_du_lieber_augustin`, `after_the_ball`, `ah_sweet_mystery_of_life`,
+`alabama_jubilee`, `alice_blue_gown`, `all_through_the_night`,
+`angels_we_have_heard_on_high`, `angry`, `any_time`, `april_showers`,
+`at_a_georgia_camp_meeting`, `auld_lang_syne`, `back_in_your_own_backyard`,
+`beautiful_dreamer`, `bill`, `blue`,
+`blues_my_naughty_sweetie_gives_to_me`, `cant_we_be_friends`,
+`careless_love`, `chinatown_my_chinatown`, `choucoune`, `clementine`,
+`daisy_bell`, `danny_boy`, `deck_the_halls`, `dixie`,
+`down_among_the_sheltering_palms`, `drink_to_me_only_with_thine_eyes`,
+`falling_in_love_again`, `fine_and_dandy`, `girl_of_my_dreams_i_love_you`,
+`give_my_regards_to_broadway`, `god_rest_ye_merry_gentlemen`,
+`hard_times_come_again_no_more`, `he_was_too_good_to_me`, `hello_ma_baby`,
+`honey`, `how_come_you_do_me_like_you_do`,
+`i_guess_ill_have_to_change_my_plan`, `i_may_be_wrong`, `i_want_a_girl`,
+`i_want_a_little_girl`, `ida_sweet_as_apple_cider`,
+`if_i_could_be_with_you_one_hour_tonight`,
+`if_you_were_the_only_girl_in_the_world`,
+`ill_build_a_stairway_to_paradise`, `im_confessin`, `jazz_baby`,
+`jeanie_with_the_light_brown_hair`, `joy_to_the_world`, `just_a_gigolo`,
+`lazy_river`, `le_temps_des_cerises`, `lover_come_back_to_me`,
+`ma_hes_making_eyes_at_me`, `macnamaras_band`, `make_believe`,
+`my_bonnie_lies_over_the_ocean`, `my_wild_irish_rose`, `nagasaki`,
+`nobodys_sweetheart`, `o_christmas_tree`, `o_sole_mio`,
+`oh_my_darling_clementine`, `pagan_love_song`, `peg_o_my_heart`,
+`please_dont_talk_about_me_when_im_gone`, `pretty_baby`,
+`roses_of_picardy`, `say_it_with_music`, `shine_on_harvest_moon`,
+`sing_you_sinners`, `sposin`, `star_spangled_banner`, `streets_of_laredo`,
+`stumbling`, `thats_my_weakness_now`, `the_love_nest`,
+`the_man_on_the_flying_trapeze`, `the_old_rugged_cross`,
+`the_one_i_love_belongs_to_somebody_else`, `the_song_is_ended`,
+`the_sweetheart_of_sigma_chi`, `the_whiffenpoof_song`, `thinking_of_you`,
+`too_ra_loo_ra_loo_ral`, `toot_toot_tootsie`, `wabash_blues`,
+`waltzing_matilda`, `we_wish_you_a_merry_christmas`,
+`wearing_of_the_green`, `wedding_bells`, `whatll_i_do`,
+`when_day_is_done`, `when_irish_eyes_are_smiling`, `why_was_i_born`,
+`yes_we_have_no_bananas`, `you_brought_a_new_kind_of_love_to_me`,
+`yours_is_my_heart_alone`. And 4 aligned by hand from a Wikifonia `.mxl`
+or traditional source: `when_the_saints_go_marching_in`, `hava_nagilah`,
+`sweet_georgia_brown`, `strike_up_the_band` (Part A and Coda are the
+instrumental fanfare). Every other tune with a poet and no lyrics has
+lyrics still under copyright (published 1931 or later).
 
 Pages that print no lyrics (instrumental heads, nothing to add):
 `down_by_the_riverside`, `its_sand_man`, `johnnys_theme`, `king_porter_stomp`,

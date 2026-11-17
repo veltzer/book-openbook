@@ -5,6 +5,7 @@ default_version = "Wikifonia"
 title = "Pagan Love Song"
 style = "Jazz"
 composer = "Nacio Herb Brown"
+poet = "Arthur Freed"
 piece = "Standard"
 typesetter = "OpenBook contributors (MusicXML import)"
 completion = "3"
@@ -16,7 +17,7 @@ copyrightextra = "Archived MusicXML notice retained; underlying music is not rel
 [versions.Wikifonia]
 doChords = true
 doVoice = true
-doLyrics = false
+doLyrics = true
 doLyricsmore = false
 doLyricsmoremore = false
 doChordBars = false
@@ -37,6 +38,7 @@ doOwn = false
 	- retained written melody, chord changes, pickups, repeats and numbered endings; lyrics omitted.
 	- imported explicit 7alt symbols using the book's altered-dominant notation where present.
 	- tempo is an editorial practice suggestion.
+	- put in the original lyrics from the same Wikifonia source (published with the song, public domain in the US); typos fixed.
 	TODO:
 	- proofread the complete melody, harmony and form against the referenced PDF and check by ear.
 	- verify source attribution, copyright notice and reuse terms against the scan; only the archived MusicXML notice is retained.
@@ -125,5 +127,11 @@ doOwn = false
 	e''4 c''2 ~ |
 	c''2 r4 |
 	\endBar
+}
+{% endif %}
+{% if part == "LyricsWikifonia" %}\lyricmode {
+	Come with me where moon -- beams __ _ _ light Ta -- hi -- tian skies, __ and the star --
+	lit wa -- ters __ lin -- ger in your eyes. __ Na -- tive hills are call -- ing __ _ _ to
+	them we be -- long, __ and we'll cheer each oth -- er __ with the Pa -- gan Love Song. __
 }
 {% endif %}

@@ -4,7 +4,8 @@ default_version = "Wikifonia"
 [attributes]
 title = "Too-ra-loo-ra-loo-ral"
 style = "Jazz"
-composer = "J. R. Shannon"
+composer = "James Royce Shannon"
+poet = "James Royce Shannon"
 piece = "Standard"
 typesetter = "OpenBook contributors (MusicXML import)"
 completion = "3"
@@ -16,7 +17,7 @@ copyrightextra = "Archived MusicXML notice retained; underlying music is not rel
 [versions.Wikifonia]
 doChords = true
 doVoice = true
-doLyrics = false
+doLyrics = true
 doLyricsmore = false
 doLyricsmoremore = false
 doChordBars = false
@@ -35,6 +36,7 @@ doOwn = false
 	- retained the archived MusicXML rights notice; no redistribution permission is asserted.
 	- retained written melody, chord changes, pickups, repeats and numbered endings; lyrics, slurs, dynamics and articulations other than fermatas omitted.
 	- tempo is an editorial practice suggestion.
+	- put in the original lyrics from the same Wikifonia source (published with the song, public domain in the US); typos fixed.
 	TODO:
 	- proofread the complete melody, harmony and form against a printed edition and check by ear.
 	- verify source attribution, copyright notice and reuse terms; only the archived MusicXML notice is retained.
@@ -123,5 +125,15 @@ doOwn = false
 	g'8 es'8 es'8 es'8 |
 	es'4. r8 |
 	\endBar
+}
+{% endif %}
+{% if part == "LyricsWikifonia" %}\lyricmode {
+	O -- ver in Kil -- lar -- ney, __ Man -- y years a -- go, __ Me Mith -- er sang a song
+	for me In tones so sweet and low. Just a sim -- ple lit -- tle dit -- ty, In her good old
+	Ir -- ish way, And I'd give the world if she could sing that song to me this day. __ _ Too --
+	ra -- loo -- ra -- loo -- ral, __ Too -- ra -- loo -- ra -- li, Too -- ra -- loo -- ra --
+	loo -- ral, __ Hush now don't you cry. __ _ Too -- ra -- loo -- ra -- loo -- ral, __ Too --
+	ra -- loo -- ra -- li, Too -- ra -- loo -- ra -- loo -- ral, That's an Ir -- ish lul -- la --
+	by.
 }
 {% endif %}

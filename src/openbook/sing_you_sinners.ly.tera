@@ -4,7 +4,8 @@ default_version = "Wikifonia"
 [attributes]
 title = "Sing You Sinners"
 style = "Jazz"
-composer = "Franke Harling"
+composer = "W. Franke Harling"
+poet = "Sam Coslow"
 piece = "Standard"
 typesetter = "OpenBook contributors (MusicXML import)"
 completion = "3"
@@ -16,7 +17,7 @@ copyrightextra = "Archived MusicXML notice retained; underlying music is not rel
 [versions.Wikifonia]
 doChords = true
 doVoice = true
-doLyrics = false
+doLyrics = true
 doLyricsmore = false
 doLyricsmoremore = false
 doChordBars = false
@@ -37,6 +38,7 @@ doOwn = false
 	- retained written melody, chord changes, pickups, repeats and numbered endings; lyrics omitted.
 	- imported explicit 7alt symbols using the book's altered-dominant notation where present.
 	- tempo is an editorial practice suggestion.
+	- put in the original lyrics from the same Wikifonia source (published with the song, public domain in the US); typos fixed.
 	TODO:
 	- proofread the complete melody, harmony and form against the referenced PDF and check by ear.
 	- verify source attribution, copyright notice and reuse terms against the scan; only the archived MusicXML notice is retained.
@@ -143,5 +145,14 @@ doOwn = false
 	}
 	}
 	\endBar
+}
+{% endif %}
+{% if part == "LyricsWikifonia" %}\lyricmode {
+	You sin -- ners drop ev -- "'ry" -- thing, let dat har -- mo -- ny ring up to heav -- en
+	and sing, sing you sin -- ners. __ Just wave your arms all a -- bout, let the Lord hear
+	you shout. Pour dat mu -- sic right out, sing you sin -- ners. __ When -- ev -- er there's
+	mu -- sic the de -- bil kicks, __ he don't al -- low mu -- sic by dat riv -- er Styx.
+	You're wick -- ed and you're de -- praved, and you've all mis -- be -- haved, if you wa --
+	na be saved, sing you sin -- ners. __ You sin -- ners sin -- ners. __
 }
 {% endif %}

@@ -4,7 +4,8 @@ default_version = "Wikifonia"
 [attributes]
 title = "Pretty Baby"
 style = "Jazz"
-composer = "Egbert Van Alstyne, Tony Jackson"
+composer = "Tony Jackson, Egbert Van Alstyne"
+poet = "Gus Kahn"
 piece = "Standard"
 typesetter = "OpenBook contributors (MusicXML import)"
 completion = "3"
@@ -16,8 +17,8 @@ copyrightextra = "Archived MusicXML notice retained; underlying music is not rel
 [versions.Wikifonia]
 doChords = true
 doVoice = true
-doLyrics = false
-doLyricsmore = false
+doLyrics = true
+doLyricsmore = true
 doLyricsmoremore = false
 doChordBars = false
 doGuitar = false
@@ -37,6 +38,7 @@ doOwn = false
 	- retained written melody, chord changes, pickups, repeats and numbered endings; lyrics omitted.
 	- imported explicit 7alt symbols using the book's altered-dominant notation where present.
 	- tempo is an editorial practice suggestion.
+	- put in the original lyrics from the same Wikifonia source (published with the song, public domain in the US); typos fixed.
 	TODO:
 	- proofread the complete melody, harmony and form against the referenced PDF and check by ear.
 	- verify source attribution, copyright notice and reuse terms against the scan; only the archived MusicXML notice is retained.
@@ -103,5 +105,17 @@ doOwn = false
 	r4 es''8. c''16 d''8. c''16 bes'4 |
 	es''2. r4 |
 	\endBar
+}
+{% endif %}
+{% if part == "LyricsWikifonia" %}\lyricmode {
+	Ev -- "'ry" bo -- dy loves a ba -- by, that's why I'm in love with you. Pret -- ty ba --
+	by pre -- tty ba -- by And I'd ba -- by Won't you come and let me rock you in the cra --
+	dle of love. __ and we'll cud -- dle all the time. Oh, I want a lov -- in' ba -- by and it
+	might as well be you. Pre -- tty ba -- by of mine.
+}
+{% endif %}
+{% if part == "LyricsmoreWikifonia" %}\lyricmode {
+	_ _ like to be your sis -- ter, bro -- ther, dad and mo -- ther too. Pret -- ty ba -- by,
+	pre -- tty
 }
 {% endif %}

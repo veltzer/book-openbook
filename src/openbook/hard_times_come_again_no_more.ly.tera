@@ -5,9 +5,10 @@ default_version = "Wikifonia"
 title = "Hard Times Come Again No More"
 style = "Folk"
 composer = "Stephen Foster"
+poet = "Stephen Foster"
 piece = "Moderato"
 copyright = "Public domain composition"
-copyrightextra = "Source MusicXML marked Public Domain; instrumental lead sheet."
+copyrightextra = "Source MusicXML marked Public Domain; lead sheet with the original lyrics."
 typesetter = "OpenBook contributors (MusicXML import)"
 completion = "3"
 uuid = "10e8c42f-2be9-4ab0-bccb-5e33c62556ea"
@@ -17,7 +18,7 @@ location = "Wikifonia"
 [versions.Wikifonia]
 doChords = true
 doVoice = true
-doLyrics = false
+doLyrics = true
 doLyricsmore = false
 doLyricsmoremore = false
 doChordBars = false
@@ -31,7 +32,8 @@ doOwn = false
 {% if part == "Doc" %}
 	DONE:
 	- imported melody and chords from real_books_archive.gi/Wikifonia.tar.xz: Wikifonia/Stephen Foster - Hard Times Come Again No More.mxl.
-	- source edition explicitly declares Public Domain; imported without lyrics.
+	- source edition explicitly declares Public Domain.
+	- put in the original lyrics from the same Wikifonia source (public domain); typos fixed.
 	- retained the written form, pickups, repeats and chord durations.
 	- source revision: http://wikifonia.org/node/18331/revisions/24283/view.
 	- tempo is an editorial practice suggestion, not a verified recording tempo.
@@ -91,5 +93,13 @@ doOwn = false
 	g'4 e'4 e'8 c'8 d'8. c'16 |
 	c'2 r2 |
 	\endBar
+}
+{% endif %}
+{% if part == "LyricsWikifonia" %}\lyricmode {
+	Let us pause in life's pleas -- ures and count her ma -- ny tears while we all sup sor --
+	row with the poor there's a song that will lin -- ger for -- ev -- er in our "ears;" Oh
+	Hard Times Come A -- gain no more "'Tis" the song the sigh of the wea -- ry Hard Times,
+	Hard Times, come a -- gain no more ma -- ny days you have lin -- gered a -- round my cab --
+	in door Oh! Hard Times, come a -- gain no more.
 }
 {% endif %}

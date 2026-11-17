@@ -5,6 +5,7 @@ default_version = "Wikifonia"
 title = "Lover, Come Back To Me"
 style = "Jazz"
 composer = "Sigmund Romberg"
+poet = "Oscar Hammerstein II"
 piece = "Standard"
 typesetter = "OpenBook contributors (MusicXML import)"
 completion = "3"
@@ -16,7 +17,7 @@ copyrightextra = "Archived MusicXML notice retained; underlying music is not rel
 [versions.Wikifonia]
 doChords = true
 doVoice = true
-doLyrics = false
+doLyrics = true
 doLyricsmore = false
 doLyricsmoremore = false
 doChordBars = false
@@ -37,6 +38,7 @@ doOwn = false
 	- retained written melody, chord changes, pickups, repeats and numbered endings; lyrics omitted.
 	- imported explicit 7alt symbols using the book's altered-dominant notation where present.
 	- tempo is an editorial practice suggestion.
+	- put in the original lyrics from the same Wikifonia source (published with the song, public domain in the US); typos fixed.
 	TODO:
 	- proofread the complete melody, harmony and form against the referenced PDF and check by ear.
 	- verify source attribution, copyright notice and reuse terms against the scan; only the archived MusicXML notice is retained.
@@ -141,5 +143,16 @@ doOwn = false
 	}
 	}
 	\endBar
+}
+{% endif %}
+{% if part == "LyricsWikifonia" %}\lyricmode {
+	The sky was "blue;" and high a -- bove, the moon was new and so was love. This ea -- ger
+	heart of mine was sing -- "ing:" "'Lov" -- er, where can you be?' __ You came at last.
+	love had its day, that day is past, you've gone a -- way. This ach -- ing heart of mine is
+	sing -- "ing:" "'Lov" -- er come back to me!' When I re -- mem -- ber ev -- "'ry" lit --
+	tle thing you used to do, I'm so lone -- ly. Ev' -- ry road I walk a -- long I've walked a --
+	long with you, no won -- der I am lone -- ly. The sky is blue, the night is cold, the moon
+	is new, but love is "old;" and while I'm wait -- ing here, this heart of mine is sing --
+	"ing:" "'Lov" -- er come back to me!' me!'
 }
 {% endif %}

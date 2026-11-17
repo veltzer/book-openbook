@@ -4,7 +4,8 @@ default_version = "Wikifonia"
 [attributes]
 title = "I Want A Little Girl"
 style = "Jazz"
-composer = "Murry Mencher (1930)"
+composer = "Murray Mencher"
+poet = "Billy Moll"
 piece = "Jazz"
 typesetter = "OpenBook contributors (MusicXML import)"
 completion = "3"
@@ -15,7 +16,7 @@ copyright = "All Rights Reserved"
 [versions.Wikifonia]
 doChords = true
 doVoice = true
-doLyrics = false
+doLyrics = true
 doLyricsmore = false
 doLyricsmoremore = false
 doChordBars = false
@@ -34,6 +35,7 @@ doOwn = false
 	- retained the original copyright notice where printed; the underlying music is not relicensed.
 	- retained written measures, pickups, repeats and endings; lyrics omitted.
 	- tempo taken from archived MusicXML.
+	- put in the original lyrics from the same Wikifonia source (published with the song, public domain in the US); typos fixed.
 	TODO:
 	- proofread the music against the referenced PDF and check by ear.
 	- verify the copyright notice against the scan; no readable per-tune notice was recovered, so the archived rights notice is retained where available.
@@ -127,5 +129,15 @@ doOwn = false
 	c'2 r2 |
 	}
 	\endBar
+}
+{% endif %}
+{% if part == "LyricsWikifonia" %}\lyricmode {
+	I want a lit -- tle girl to love a lot, I'd give an -- y -- thing that I got __ for a lit --
+	tle girl who'll fall in love with me __ i want a lit -- tle girl, she may not look like
+	the kind in a pic -- ture book, __ but if she can cook she'll suit me to a "'T.'" __ She
+	don't have to wave her hair __ or dress in fan -- cy clothes, __ and I would -- n't ev --
+	en care __ if she did -- n't wear silk -- en hose. __ i want a lit -- tle girl to call my
+	own. There must be somi -- one who is all a -- lone __ just a lit -- tle girl who'll fall
+	in love with me. __
 }
 {% endif %}

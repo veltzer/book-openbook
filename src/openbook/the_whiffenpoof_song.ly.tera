@@ -4,7 +4,8 @@ default_version = "Wikifonia"
 [attributes]
 title = "The Whiffenpoof Song"
 style = "Jazz"
-composer = "Meade Minniegerode, Tod Galloway"
+composer = "Tod B. Galloway"
+poet = "Meade Minnigerode, George S. Pomeroy"
 piece = "Standard"
 typesetter = "OpenBook contributors (MusicXML import)"
 completion = "3"
@@ -16,7 +17,7 @@ copyrightextra = "Archived MusicXML notice retained; underlying music is not rel
 [versions.Wikifonia]
 doChords = true
 doVoice = true
-doLyrics = false
+doLyrics = true
 doLyricsmore = false
 doLyricsmoremore = false
 doChordBars = false
@@ -37,6 +38,7 @@ doOwn = false
 	- retained written melody, chord changes, pickups, repeats and numbered endings; lyrics omitted.
 	- imported explicit 7alt symbols using the book's altered-dominant notation where present.
 	- tempo is an editorial practice suggestion.
+	- put in the original lyrics from the same Wikifonia source (published with the song, public domain in the US); typos fixed.
 	TODO:
 	- proofread the complete melody, harmony and form against the referenced PDF and check by ear.
 	- verify source attribution, copyright notice and reuse terms against the scan; only the archived MusicXML notice is retained.
@@ -127,5 +129,12 @@ doOwn = false
 	es'2. ~ |
 	es'2. |
 	\endBar
+}
+{% endif %}
+{% if part == "LyricsWikifonia" %}\lyricmode {
+	We're poor lit -- tle lambs who have lost our way Baa! baa! baa! __ We're lit -- tle
+	black sheep who have gone a -- stray baa! baa! baa! __ Gen -- tle -- men song -- sters off
+	on a spree Doom'd from here to e -- ter -- ni -- ty Lord have mer -- cy on such as we baa!
+	baa! baa! __
 }
 {% endif %}

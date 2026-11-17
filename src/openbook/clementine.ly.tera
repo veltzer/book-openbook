@@ -4,7 +4,8 @@ default_version = "Wikifonia"
 [attributes]
 title = "Clementine"
 style = "Jazz"
-composer = "Percy Montrose (1884)"
+composer = "Percy Montrose"
+poet = "Percy Montrose"
 piece = "Standard"
 typesetter = "OpenBook contributors (MusicXML import)"
 completion = "3"
@@ -16,8 +17,8 @@ copyrightextra = "Archived MusicXML notice retained; underlying music is not rel
 [versions.Wikifonia]
 doChords = true
 doVoice = true
-doLyrics = false
-doLyricsmore = false
+doLyrics = true
+doLyricsmore = true
 doLyricsmoremore = false
 doChordBars = false
 doGuitar = false
@@ -37,6 +38,7 @@ doOwn = false
 	- retained written melody, chord changes, pickups, repeats and numbered endings; lyrics omitted.
 	- imported explicit 7alt symbols using the book's altered-dominant notation where present.
 	- tempo is an editorial practice suggestion.
+	- put in the original lyrics from the same Wikifonia source (published with the song, public domain in the US); typos fixed.
 	TODO:
 	- proofread the complete melody, harmony and form against the referenced PDF and check by ear.
 	- verify source attribution, copyright notice and reuse terms against the scan; only the archived MusicXML notice is retained.
@@ -101,5 +103,17 @@ doOwn = false
 	g'2
 	}
 	\endBar
+}
+{% endif %}
+{% if part == "LyricsWikifonia" %}\lyricmode {
+	In a cav -- ern, in a can -- yon, Ex -- ca -- va -- ting for a mine, Dwelt a mi -- ner,
+	for -- ty nin -- er, And his daught -- er, Clem -- en -- tine. Oh, my dar -- ling, Oh, my
+	dar -- ling, Oh, my dar -- ling Clem -- en -- tine, You are lost and gone for -- ev -- er,
+	Dread -- ful sor -- ry, Clem -- en -- tine.
+}
+{% endif %}
+{% if part == "LyricsmoreWikifonia" %}\lyricmode {
+	Light she was and like a fai -- ry, And her shoes were num -- ber nine, Her -- ring box --
+	es, with -- out top -- ses, San -- dals were for Clem -- en -- tine.
 }
 {% endif %}

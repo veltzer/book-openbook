@@ -4,7 +4,8 @@ default_version = "Wikifonia"
 [attributes]
 title = "Alice Blue Gown"
 style = "Jazz"
-composer = "Harry Tierney, Joseph McCarthy"
+composer = "Harry Tierney"
+poet = "Joseph McCarthy"
 piece = "Standard"
 typesetter = "OpenBook contributors (MusicXML import)"
 completion = "3"
@@ -16,7 +17,7 @@ copyrightextra = "Archived MusicXML notice retained; underlying music is not rel
 [versions.Wikifonia]
 doChords = true
 doVoice = true
-doLyrics = false
+doLyrics = true
 doLyricsmore = false
 doLyricsmoremore = false
 doChordBars = false
@@ -37,6 +38,7 @@ doOwn = false
 	- retained written melody, chord changes, pickups, repeats and numbered endings; lyrics omitted.
 	- imported explicit 7alt symbols using the book's altered-dominant notation where present.
 	- tempo is an editorial practice suggestion.
+	- put in the original lyrics from the same Wikifonia source (published with the song, public domain in the US); typos fixed.
 	TODO:
 	- proofread the complete melody, harmony and form against the referenced PDF and check by ear.
 	- verify source attribution, copyright notice and reuse terms against the scan; only the archived MusicXML notice is retained.
@@ -137,5 +139,13 @@ doOwn = false
 	c''2. ~ |
 	c''2 r4 |
 	\endBar
+}
+{% endif %}
+{% if part == "LyricsWikifonia" %}\lyricmode {
+	In my sweet lit -- tle Al -- ice blue gown, __ When I first wan -- dered down in -- to
+	town, __ I was both proud and shy __ As I felt ev -- ry eye, But in ev -- ry shop win --
+	dow I'd primp pass -- ing by, Then in man -- ner of fash -- ion I'd frown __ And the world
+	seemed to smile all a -- round, __ Till it wil -- ted I wore it, I'll al -- ways a -- dore
+	it, My sweet lit -- tle A -- lice Blue Gown. In my Gown. __
 }
 {% endif %}

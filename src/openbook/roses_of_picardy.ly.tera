@@ -5,6 +5,7 @@ default_version = "Wikifonia"
 title = "Roses Of Picardy"
 style = "Jazz"
 composer = "Haydn Wood"
+poet = "Frederic E. Weatherly"
 piece = "Standard"
 typesetter = "OpenBook contributors (MusicXML import)"
 completion = "3"
@@ -16,7 +17,7 @@ copyrightextra = "Archived MusicXML notice retained; underlying music is not rel
 [versions.Wikifonia]
 doChords = true
 doVoice = true
-doLyrics = false
+doLyrics = true
 doLyricsmore = false
 doLyricsmoremore = false
 doChordBars = false
@@ -37,6 +38,7 @@ doOwn = false
 	- retained written melody, chord changes, pickups, repeats and numbered endings; lyrics omitted.
 	- imported explicit 7alt symbols using the book's altered-dominant notation where present.
 	- tempo is an editorial practice suggestion.
+	- put in the original lyrics from the same Wikifonia source (published with the song, public domain in the US); typos fixed.
 	TODO:
 	- proofread the complete melody, harmony and form against the referenced PDF and check by ear.
 	- verify source attribution, copyright notice and reuse terms against the scan; only the archived MusicXML notice is retained.
@@ -128,5 +130,16 @@ doOwn = false
 	a'4 c''8 a'8 a'4 b'8 g'8 |
 	c''1 |
 	\endBar
+}
+{% endif %}
+{% if part == "LyricsWikifonia" %}\lyricmode {
+	She is watch -- ing by the pop -- lars, Col -- in -- ette with the sea blue eyes. She is
+	watch -- ing and long -- ing and wait -- ing, Where the long white _ road -- way lies. And
+	a song stirs in the si -- lence, As the wind in the boughs a -- bove. She lis -- tens and
+	starts and trem -- bles, "'Tis" the first lit -- tle song of love. Ros -- es are shin --
+	ing in Pic -- ar -- dy, in the hush of the sil -- ver dew, Ros -- es are flow'r -- ing in
+	Pi -- car -- dy, but there's nev -- er a rose like you! And the ros -- es will die with
+	the sum -- mer -- time, and our roads may be far __ a -- part. But there's one rose that
+	dies not in Pi -- car -- dy! "'tis" the rose that I keep in my heart!
 }
 {% endif %}

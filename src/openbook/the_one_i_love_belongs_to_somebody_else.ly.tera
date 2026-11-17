@@ -5,6 +5,7 @@ default_version = "Wikifonia"
 title = "The One I Love Belongs To Somebody Else"
 style = "Jazz"
 composer = "Isham Jones"
+poet = "Gus Kahn"
 piece = "Standard"
 typesetter = "OpenBook contributors (MusicXML import)"
 completion = "3"
@@ -16,7 +17,7 @@ copyrightextra = "Archived MusicXML notice retained; underlying music is not rel
 [versions.Wikifonia]
 doChords = true
 doVoice = true
-doLyrics = false
+doLyrics = true
 doLyricsmore = false
 doLyricsmoremore = false
 doChordBars = false
@@ -37,6 +38,7 @@ doOwn = false
 	- retained written melody, chord changes, pickups, repeats and numbered endings; lyrics omitted.
 	- imported explicit 7alt symbols using the book's altered-dominant notation where present.
 	- tempo is an editorial practice suggestion.
+	- put in the original lyrics from the same Wikifonia source (published with the song, public domain in the US); typos fixed.
 	TODO:
 	- proofread the complete melody, harmony and form against the referenced PDF and check by ear.
 	- verify source attribution, copyright notice and reuse terms against the scan; only the archived MusicXML notice is retained.
@@ -127,5 +129,14 @@ doOwn = false
 	g'1 ~ |
 	g'2. r4 |
 	\endBar
+}
+{% endif %}
+{% if part == "LyricsWikifonia" %}\lyricmode {
+	The one I love be -- longs to some -- bod -- y else, __ she means her ten -- der songs
+	for some -- bod -- y else. __ And ev -- en when I have my arms a -- round her, I know her
+	thoughts are strong for some -- bod -- y else. __ The hands I hold be -- long to some --
+	bod -- y else, __ I'll bet they're not so cold to some -- bod -- y else. __ It's tough to
+	be a -- lone on the shelf, __ it's worse to fall in love by your -- self, __ the one I
+	love be -- longs to some -- bod -- y else. __
 }
 {% endif %}

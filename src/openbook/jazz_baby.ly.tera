@@ -4,7 +4,8 @@ default_version = "Wikifonia"
 [attributes]
 title = "Jazz Baby"
 style = "Jazz"
-composer = "Blanche Merrill, M.K. Jerome"
+composer = "M. K. Jerome"
+poet = "Blanche Merrill"
 piece = "Standard"
 typesetter = "OpenBook contributors (MusicXML import)"
 completion = "3"
@@ -16,7 +17,7 @@ copyrightextra = "Archived MusicXML notice retained; underlying music is not rel
 [versions.Wikifonia]
 doChords = true
 doVoice = true
-doLyrics = false
+doLyrics = true
 doLyricsmore = false
 doLyricsmoremore = false
 doChordBars = false
@@ -37,6 +38,7 @@ doOwn = false
 	- retained written melody, chord changes, pickups, repeats and numbered endings; lyrics omitted.
 	- imported explicit 7alt symbols using the book's altered-dominant notation where present.
 	- tempo is an editorial practice suggestion.
+	- put in the original lyrics from the same Wikifonia source (published with the song, public domain in the US); typos fixed.
 	TODO:
 	- proofread the complete melody, harmony and form against the referenced PDF and check by ear.
 	- verify source attribution, copyright notice and reuse terms against the scan; only the archived MusicXML notice is retained.
@@ -103,5 +105,13 @@ doOwn = false
 	e''8 d''8 c''8 b'8 ~ b'8 c''8 d''4 |
 	c''2. r4 |
 	\endBar
+}
+{% endif %}
+{% if part == "LyricsWikifonia" %}\lyricmode {
+	I'm a jazz ba -- by Lit -- tle jazz ba -- by that's me there's some -- thing in the tone
+	of a sax -- o -- phone __ that makes me do a lit -- tle wig -- gle all my own __ cause I'm
+	a jazz ba -- by full of jazz -- bo har -- mo -- ny that walk the dog and ball the jack
+	that caused all the talk __ is just a cop -- y of the way I nat -- ral -- ly walk __ cause
+	I'm a jazz ba -- by lit -- tle jazz ba -- by that's me
 }
 {% endif %}

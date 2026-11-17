@@ -4,7 +4,8 @@ default_version = "Wikifonia"
 [attributes]
 title = "Toot, Toot, Tootsie"
 style = "Jazz"
-composer = "Ted Fiorito"
+composer = "Ted Fio Rito, Dan Russo"
+poet = "Gus Kahn, Ernie Erdman"
 piece = "Standard"
 typesetter = "OpenBook contributors (MusicXML import)"
 completion = "3"
@@ -16,7 +17,7 @@ copyrightextra = "Archived MusicXML notice retained; underlying music is not rel
 [versions.Wikifonia]
 doChords = true
 doVoice = true
-doLyrics = false
+doLyrics = true
 doLyricsmore = false
 doLyricsmoremore = false
 doChordBars = false
@@ -37,6 +38,7 @@ doOwn = false
 	- retained written melody, chord changes, pickups, repeats and numbered endings; lyrics omitted.
 	- imported explicit 7alt symbols using the book's altered-dominant notation where present.
 	- tempo is an editorial practice suggestion.
+	- put in the original lyrics from the same Wikifonia source (published with the song, public domain in the US); typos fixed.
 	TODO:
 	- proofread the complete melody, harmony and form against the referenced PDF and check by ear.
 	- verify source attribution, copyright notice and reuse terms against the scan; only the archived MusicXML notice is retained.
@@ -174,5 +176,16 @@ doOwn = false
 	c''1 ~ |
 	c''2. r4 |
 	\endBar
+}
+{% endif %}
+{% if part == "LyricsWikifonia" %}\lyricmode {
+	Yes -- ter -- day I heard a lov -- er sigh, __ "'Good" -- bye __ oh, me oh my' __ Sev --
+	en times he got a -- board his train __ And sev -- en times he hur -- ried back to kiss
+	his love a -- gain, and tell "her:" Toot, Toot, Toot -- sie good -- bye! __ Toot, Toot,
+	Toot -- sie, don't cry, __ The choo -- choo train that takes me, A -- way from you no
+	words can tell how sad it makes me, Kiss me Toot -- sie, and then, __ Do it ov -- er a --
+	gain __ Watch for the mail, __ I'll nev -- er fail, __ If you don't get a let -- ter then
+	you'll know I'm in jail, __ Tut tut Toot -- sie, don't cry __ Toot, Toot Toot -- sie, good --
+	bye. __
 }
 {% endif %}

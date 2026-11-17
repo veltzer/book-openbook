@@ -5,9 +5,10 @@ default_version = "Wikifonia"
 title = "Hello! Ma Baby"
 style = "Ragtime"
 composer = "Joseph E. Howard, Ida Emerson"
+poet = "Joseph E. Howard, Ida Emerson"
 piece = "Allegro"
 copyright = "Public domain composition"
-copyrightextra = "Source MusicXML marked Public Domain; instrumental lead sheet."
+copyrightextra = "Source MusicXML marked Public Domain; lead sheet with the original lyrics."
 typesetter = "OpenBook contributors (MusicXML import)"
 completion = "3"
 uuid = "6bcd8687-18c4-4147-82e4-5a70c3c6fa0b"
@@ -17,7 +18,7 @@ location = "Wikifonia"
 [versions.Wikifonia]
 doChords = true
 doVoice = true
-doLyrics = false
+doLyrics = true
 doLyricsmore = false
 doLyricsmoremore = false
 doChordBars = false
@@ -31,7 +32,8 @@ doOwn = false
 {% if part == "Doc" %}
 	DONE:
 	- imported melody and chords from real_books_archive.gi/Wikifonia.tar.xz: Wikifonia/Ida Emerson, Joseph. E. Howard - Hello My Baby.mxl.
-	- source edition explicitly declares Public Domain; imported without lyrics.
+	- source edition explicitly declares Public Domain.
+	- put in the original lyrics from the same Wikifonia source (public domain); typos fixed.
 	- retained the written form, pickups, repeats and chord durations.
 	- source revision: http://wikifonia.org/node/14494/revisions/21085/view.
 	- tempo is an editorial practice suggestion, not a verified recording tempo.
@@ -89,5 +91,12 @@ doOwn = false
 	c''4 r8 g''8 _ "" a''4. g''8 |
 	a''4. g''8 a''4 g''4 |
 	\endBar
+}
+{% endif %}
+{% if part == "LyricsWikifonia" %}\lyricmode {
+	Hel -- lo, my ba -- by, Hel -- lo, my dar -- ling, Hel -- lo, my rag -- time gal. __ Send
+	me a kiss by wire. __ Ba -- by my heart's on fire! __ If you re -- fuse me, hon -- ey
+	you'll lose me, then you'll be left a -- lone. So, ba -- by, te -- le -- phone and tell me
+	I'm your own.
 }
 {% endif %}

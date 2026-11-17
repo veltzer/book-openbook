@@ -5,6 +5,7 @@ default_version = "Wikifonia"
 title = "Lazy River"
 style = "Jazz"
 composer = "Hoagy Carmichael, Sidney Arodin"
+poet = "Hoagy Carmichael, Sidney Arodin"
 piece = "Standard"
 typesetter = "OpenBook contributors (MusicXML import)"
 completion = "3"
@@ -16,7 +17,7 @@ copyrightextra = "Archived MusicXML notice retained; underlying music is not rel
 [versions.Wikifonia]
 doChords = true
 doVoice = true
-doLyrics = false
+doLyrics = true
 doLyricsmore = false
 doLyricsmoremore = false
 doChordBars = false
@@ -37,6 +38,7 @@ doOwn = false
 	- retained written melody, chord changes, pickups, repeats and numbered endings; lyrics omitted.
 	- imported explicit 7alt symbols using the book's altered-dominant notation where present.
 	- tempo is an editorial practice suggestion.
+	- put in the original lyrics from the same Wikifonia source (published with the song, public domain in the US); typos fixed.
 	TODO:
 	- proofread the complete melody, harmony and form against the referenced PDF and check by ear.
 	- verify source attribution, copyright notice and reuse terms against the scan; only the archived MusicXML notice is retained.
@@ -97,5 +99,14 @@ doOwn = false
 	d''8. f''16 d''8. a'16 c''8 a'4 c'8 |
 	f'2. r4 |
 	\endBar
+}
+{% endif %}
+{% if part == "LyricsWikifonia" %}\lyricmode {
+	Up a laz -- y riv -- er by the old mill -- run that laz -- y laz -- y riv -- er in the
+	noon day sun. Lin -- ger in the shade of a kind old "tree;" throw a -- way your trou --
+	bles dream a dream of me. __ Up a laz -- y riv -- er where the rob -- in's song a -- wakes
+	a bright new morn -- in we can loaf a -- long. Blue skies up a -- bove, ev -- "'ry" --
+	ones in "love;" up a laz -- y riv -- er how hap -- py you can be, up a laz -- y riv -- er
+	with me.
 }
 {% endif %}

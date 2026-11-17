@@ -4,7 +4,8 @@ default_version = "Wikifonia"
 [attributes]
 title = "Alabama  Jubilee"
 style = "Jazz"
-composer = "George L Cobb"
+composer = "George L. Cobb"
+poet = "Jack Yellen"
 piece = "Standard"
 typesetter = "OpenBook contributors (MusicXML import)"
 completion = "3"
@@ -16,7 +17,7 @@ copyrightextra = "Archived MusicXML notice retained; underlying music is not rel
 [versions.Wikifonia]
 doChords = true
 doVoice = true
-doLyrics = false
+doLyrics = true
 doLyricsmore = false
 doLyricsmoremore = false
 doChordBars = false
@@ -37,6 +38,7 @@ doOwn = false
 	- retained written melody, chord changes, pickups, repeats and numbered endings; lyrics omitted.
 	- imported explicit 7alt symbols using the book's altered-dominant notation where present.
 	- tempo is an editorial practice suggestion.
+	- put in the original lyrics from the same Wikifonia source (published with the song, public domain in the US); typos fixed.
 	TODO:
 	- proofread the complete melody, harmony and form against the referenced PDF and check by ear.
 	- verify source attribution, copyright notice and reuse terms against the scan; only the archived MusicXML notice is retained.
@@ -131,5 +133,14 @@ doOwn = false
 	r1 |
 	r1 |
 	\endBar
+}
+{% endif %}
+{% if part == "LyricsWikifonia" %}\lyricmode {
+	You ought to see Mis -- ter Jones __ when he rat -- tles the bones, __ Old Colo -- nel
+	Brown __ fool -- in' round like a clown __ Miss Vir -- gin -- ia who is past eight -- y
+	three __ Shout -- in' I'm full __ o' pep! Watch yo' step! watch __ yo' step! One leg --
+	ged Joe __ danced a -- roun' on his toe, __ Threw a -- way his crutch and hol -- lered
+	"'Let" "'er" go!' __ Oh, hon -- ey, Hail! Hail! the gang's all here for an Al -- a -- bam --
+	a Jub -- i -- lee. __
 }
 {% endif %}

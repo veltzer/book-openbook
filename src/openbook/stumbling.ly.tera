@@ -5,6 +5,7 @@ default_version = "Wikifonia"
 title = "Stumbling"
 style = "Jazz"
 composer = "Zez Confrey"
+poet = "Zez Confrey"
 piece = "Standard"
 typesetter = "OpenBook contributors (MusicXML import)"
 completion = "3"
@@ -16,7 +17,7 @@ copyrightextra = "Archived MusicXML notice retained; underlying music is not rel
 [versions.Wikifonia]
 doChords = true
 doVoice = true
-doLyrics = false
+doLyrics = true
 doLyricsmore = false
 doLyricsmoremore = false
 doChordBars = false
@@ -37,6 +38,7 @@ doOwn = false
 	- retained written melody, chord changes, pickups, repeats and numbered endings; lyrics omitted.
 	- imported explicit 7alt symbols using the book's altered-dominant notation where present.
 	- tempo is an editorial practice suggestion.
+	- put in the original lyrics from the same Wikifonia source (published with the song, public domain in the US); typos fixed.
 	TODO:
 	- proofread the complete melody, harmony and form against the referenced PDF and check by ear.
 	- verify source attribution, copyright notice and reuse terms against the scan; only the archived MusicXML notice is retained.
@@ -123,5 +125,15 @@ doOwn = false
 	a'8 g'8 fis'4 d''8 c''8 b'8 a'8 |
 	g'1 |
 	\endBar
+}
+{% endif %}
+{% if part == "LyricsWikifonia" %}\lyricmode {
+	Stum -- bling all a -- round, Stum -- bling all a -- round, stum -- bling all a -- round
+	so fun -- ny, Stum -- bling here and there, stum -- bling ev -- "'ry" where And I must de --
+	clare __ I stepped right on her toes __ and when she bumped my nose __ I fell and when I
+	rose, __ I felt a -- shamed, __ and told her, That's the lat -- est step, that's the lat --
+	est step, that's the lat -- est step, My hon -- ey, Not -- ice all the pep, no -- tice all
+	the pep, no -- tice all the pep, __ She said ,Stop mum -- bling __ tho' you are stum --
+	bling __ I like it just a lit -- tle bit, just a lit -- tle bit, quite a lit -- tle bit.
 }
 {% endif %}

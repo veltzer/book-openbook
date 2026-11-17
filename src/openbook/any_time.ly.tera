@@ -4,7 +4,8 @@ default_version = "Wikifonia"
 [attributes]
 title = "Any Time"
 style = "Standard"
-composer = "Herbert Happy Lawson"
+composer = "Herbert 'Happy' Lawson"
+poet = "Herbert 'Happy' Lawson"
 piece = "Standard"
 typesetter = "OpenBook contributors (MusicXML import)"
 completion = "3"
@@ -16,7 +17,7 @@ copyrightextra = "Archived MusicXML notice retained; underlying music is not rel
 [versions.Wikifonia]
 doChords = true
 doVoice = true
-doLyrics = false
+doLyrics = true
 doLyricsmore = false
 doLyricsmoremore = false
 doChordBars = false
@@ -37,6 +38,7 @@ doOwn = false
 	- retained written melody, chord changes, pickups, repeats and numbered endings; lyrics omitted.
 	- imported explicit 7alt symbols using the book's altered-dominant notation where present.
 	- tempo is an editorial practice suggestion.
+	- put in the original lyrics from the same Wikifonia source (published with the song, public domain in the US); typos fixed.
 	TODO:
 	- proofread the complete melody, harmony and form against the referenced PDF and check by ear.
 	- verify source attribution, copyright notice and reuse terms against the scan; only the archived MusicXML notice is retained.
@@ -127,5 +129,13 @@ doOwn = false
 	c''1 ~ |
 	c''2 r2 |
 	\endBar
+}
+{% endif %}
+{% if part == "LyricsWikifonia" %}\lyricmode {
+	An -- y time __ you're feel -- ing lone -- ly __ an -- y time __ you're feel -- ing blue __
+	an -- y time __ you feel down -- heart -- ed __ that will prove your love for me is true __
+	an -- y time __ you're think -- ing bout me __ that's the time __ I'll be think -- ing of
+	you __ so an -- y time you say you want me back a -- gain that's the time I'll come back
+	home to you __
 }
 {% endif %}

@@ -4,7 +4,8 @@ default_version = "Wikifonia"
 [attributes]
 title = "My Wild Irish Rose"
 style = "Standard"
-composer = "Chancellor Chauncey Olcott 1899"
+composer = "Chauncey Olcott"
+poet = "Chauncey Olcott"
 piece = "Standard"
 typesetter = "OpenBook contributors (MusicXML import)"
 completion = "3"
@@ -16,8 +17,8 @@ copyrightextra = "Archived MusicXML notice retained; underlying music is not rel
 [versions.Wikifonia]
 doChords = true
 doVoice = true
-doLyrics = false
-doLyricsmore = false
+doLyrics = true
+doLyricsmore = true
 doLyricsmoremore = false
 doChordBars = false
 doGuitar = false
@@ -37,6 +38,7 @@ doOwn = false
 	- retained written melody, chord changes, pickups, repeats and numbered endings; lyrics omitted.
 	- imported explicit 7alt symbols using the book's altered-dominant notation where present.
 	- tempo is an editorial practice suggestion.
+	- put in the original lyrics from the same Wikifonia source (published with the song, public domain in the US); typos fixed.
 	TODO:
 	- proofread the complete melody, harmony and form against the referenced PDF and check by ear.
 	- verify source attribution, copyright notice and reuse terms against the scan; only the archived MusicXML notice is retained.
@@ -209,5 +211,25 @@ doOwn = false
 	}
 	c''4 r2 |
 	\endBar
+}
+{% endif %}
+{% if part == "LyricsWikifonia" %}\lyricmode {
+	If you lis -- ten, I'll sing you a sweet lit -- tle song Of a flow -- er that's now
+	drooped and dead, __ Yet __ _ dear -- er to me, yes than all of its mates, Tho __ _ each
+	holds a -- loft its proud head __ "'Twas" giv -- en to me by a girl that I "know;" Since
+	we've met, faith, I've known no re -- pose. __ She is dear -- er by far than the world's
+	bright -- est star, And I call her my wild I -- rish rose. __ My wild I -- rish rose, __
+	the sweet -- est flow'r that grows, __ You may search ev -- "'ry" -- where, but none can
+	com -- pare with my wild I -- rish rose. __ My wild I -- rish rose, __ the dear -- est
+	flow'r that grows, __ And some day for my sake, she may let me take the bloom from my wild
+	I -- rish rose. __ They may rose. __
+}
+{% endif %}
+{% if part == "LyricsmoreWikifonia" %}\lyricmode {
+	_ _ sing of their ros -- es which by oth -- er names, Would __ _ smell just as sweet --
+	ly, they say, __ But I know that my Rose __ _ would nev -- er con -- sent To have that
+	sweet name tak -- en a -- way. __ Her glanc -- es are shy when e'er she pass -- es by The __ _
+	bow -- er where my true love grows. __ And my one wish has been that some day I may win
+	The _ heart of my wild I -- rish rose. __
 }
 {% endif %}

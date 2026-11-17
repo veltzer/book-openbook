@@ -5,9 +5,10 @@ default_version = "Wikifonia"
 title = "O Christmas Tree"
 style = "Waltz"
 composer = "Traditional"
+poet = "Ernst Anschütz"
 piece = "Moderato"
 copyright = "Public domain composition"
-copyrightextra = "Source MusicXML marked Public Domain; instrumental lead sheet."
+copyrightextra = "Source MusicXML marked Public Domain; lead sheet with the original lyrics."
 typesetter = "OpenBook contributors (MusicXML import)"
 completion = "3"
 uuid = "e6f5b612-f259-46ba-b6db-6830c3264c3e"
@@ -17,7 +18,7 @@ location = "Wikifonia"
 [versions.Wikifonia]
 doChords = true
 doVoice = true
-doLyrics = false
+doLyrics = true
 doLyricsmore = false
 doLyricsmoremore = false
 doChordBars = false
@@ -31,7 +32,8 @@ doOwn = false
 {% if part == "Doc" %}
 	DONE:
 	- imported melody and chords from real_books_archive.gi/Wikifonia.tar.xz: Wikifonia/Traditional - O Christmas Tree.mxl.
-	- source edition explicitly declares Public Domain; imported without lyrics.
+	- source edition explicitly declares Public Domain.
+	- put in the original lyrics from the same Wikifonia source (public domain); typos fixed.
 	- retained the written form, pickups, repeats and chord durations.
 	- source revision: http://wikifonia.org/node/874/revisions/4436/view.
 	- tempo is an editorial practice suggestion, not a verified recording tempo.
@@ -123,5 +125,16 @@ doOwn = false
 	g'8 a'8 bes'4 e'4 |
 	g'4 f'4 r4 |
 	\endBar
+}
+{% endif %}
+{% if part == "LyricsWikifonia" %}\lyricmode {
+	O Christ -- mas tree, O Christ -- mas tree, Thou tree most fair and love -- ly! O Christ --
+	mas tree, O Christ -- mas tree! Thou tree most fair and love -- ly! The sight of thee at
+	Christ -- mas tide, Spreads hope and glad -- ness far and wide. O Christ -- mas tree, O
+	Christ -- mas tree, Thou tree most fair and love -- ly! O Christ -- mas tree, O Christ --
+	mas tree, Thou hast a won -- drous mes -- "sage;" O Christ -- mas tree, O Christ -- mas
+	tree, Thou hast a won -- drous mes -- "sage:" Thou dost pro -- claim the Sav -- ior's
+	birth, Good will to men and peace on earth, O Christ -- mas tree, O Christ -- mas tree!
+	Thou hast a won -- drous mes -- sage.
 }
 {% endif %}

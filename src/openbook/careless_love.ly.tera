@@ -5,9 +5,10 @@ default_version = "Wikifonia"
 title = "Careless Love"
 style = "Jazz"
 composer = "Traditional"
+poet = "Traditional"
 piece = "Swing"
 copyright = "Traditional composition; public domain in the US"
-copyrightextra = "Instrumental lead sheet; later lyrics and arrangements are excluded."
+copyrightextra = "Lead sheet with the original lyrics; later arrangements are excluded."
 typesetter = "OpenBook contributors (MusicXML import)"
 completion = "3"
 uuid = "6d7bc0ef-5ba8-5c65-9190-a92d7bf0d2f8"
@@ -17,7 +18,7 @@ remark = "Copyright status outside the US may differ."
 [versions.Wikifonia]
 doChords = true
 doVoice = true
-doLyrics = false
+doLyrics = true
 doLyricsmore = false
 doLyricsmoremore = false
 doChordBars = false
@@ -34,7 +35,8 @@ doOwn = false
 	- local source: real_books_archive.gi/Wikifonia.tar.xz: Wikifonia/Traditional - Careless Love.mxl.
 	- jazz real/fake-book references: Real_Book_2:62, Firehouse_Jazz_Band:405.
 	- source revision: http://wikifonia.org/node/3863/revisions/13957/view.
-	- retained written measures, pickups, repeats and endings; lyrics and accompaniment omitted.
+	- retained written measures, pickups, repeats and endings; accompaniment omitted.
+	- put in the original lyrics from the same Wikifonia source (published with the song, public domain in the US); typos fixed.
 	- the original composition is public domain in the US; no claim is made about later editions.
 	- US term reference: https://cspd.law.duke.edu/publicdomainday/2026.
 	- tempo is an editorial practice suggestion.
@@ -124,5 +126,12 @@ doOwn = false
 	f'2 e''2 |
 	f''2. r4 |
 	\endBar
+}
+{% endif %}
+{% if part == "LyricsWikifonia" %}\lyricmode {
+	Love, oh love, oh care -- less love _ _ _ love, oh love oh care -- less love _ _ _ love,
+	oh love, oh care -- less love, oh see what love has done to me. _ _ I cried last night and
+	the night be -- fore _ _ to -- night I'll cry then cry no more _ _ _ Love, oh love, oh
+	care -- less love _ see what love has done to me.
 }
 {% endif %}

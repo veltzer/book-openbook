@@ -5,6 +5,7 @@ default_version = "Wikifonia"
 title = "Waltzing Matilda"
 style = "Jazz"
 composer = "Marie Cowan"
+poet = "Banjo Paterson"
 piece = "Standard"
 typesetter = "OpenBook contributors (MusicXML import)"
 completion = "3"
@@ -16,8 +17,8 @@ copyrightextra = "Archived MusicXML notice retained; underlying music is not rel
 [versions.Wikifonia]
 doChords = true
 doVoice = true
-doLyrics = false
-doLyricsmore = false
+doLyrics = true
+doLyricsmore = true
 doLyricsmoremore = false
 doChordBars = false
 doGuitar = false
@@ -37,6 +38,7 @@ doOwn = false
 	- retained written melody, chord changes, pickups, repeats and numbered endings; lyrics omitted.
 	- imported explicit 7alt symbols using the book's altered-dominant notation where present.
 	- tempo is an editorial practice suggestion.
+	- put in the original lyrics from the same Wikifonia source (published with the song, public domain in the US); typos fixed.
 	TODO:
 	- proofread the complete melody, harmony and form against the referenced PDF and check by ear.
 	- verify source attribution, copyright notice and reuse terms against the scan; only the archived MusicXML notice is retained.
@@ -93,5 +95,20 @@ doOwn = false
 	a4 d'8 fis'8 a'4 g'8 fis'8 |
 	e'4 e'8 e'8 d'4 r4 |
 	\endBar
+}
+{% endif %}
+{% if part == "LyricsWikifonia" %}\lyricmode {
+	Once a jol -- ly swag -- man camp'd __ by a bil -- la -- bong un -- der the shade of a
+	cool -- li -- bah tree and he sang as he watch'd and wait -- ed till his bil -- ly boiled
+	You'll come a waltz -- ing Ma -- til -- da with me. Waltz -- ing Ma -- til -- da Waltz --
+	ing Ma -- til -- da you'll come a waltz -- ing Ma -- til -- da with me and he sang as he
+	watched and wait -- ed till his bil -- ly boiled you'll come a waltz -- ing Ma -- til --
+	da with me.
+}
+{% endif %}
+{% if part == "LyricsmoreWikifonia" %}\lyricmode {
+	Down came a jum -- buck to drink __ at the wa -- ter hole Up jumped the swag man and
+	grabbed him with glee and he sang as he stowed him a -- way in his tuck -- er bag You'll
+	come a waltz -- ing Ma -- til -- da with me
 }
 {% endif %}

@@ -5,6 +5,7 @@ default_version = "Wikifonia"
 title = "Ma he's making eyes at me"
 style = "Jazz"
 composer = "Con Conrad"
+poet = "Sidney Clare"
 piece = "Standard"
 typesetter = "OpenBook contributors (MusicXML import)"
 completion = "3"
@@ -16,7 +17,7 @@ copyrightextra = "Archived MusicXML notice retained; underlying music is not rel
 [versions.Wikifonia]
 doChords = true
 doVoice = true
-doLyrics = false
+doLyrics = true
 doLyricsmore = false
 doLyricsmoremore = false
 doChordBars = false
@@ -37,6 +38,7 @@ doOwn = false
 	- retained written melody, chord changes, pickups, repeats and numbered endings; lyrics omitted.
 	- imported explicit 7alt symbols using the book's altered-dominant notation where present.
 	- tempo is an editorial practice suggestion.
+	- put in the original lyrics from the same Wikifonia source (published with the song, public domain in the US); typos fixed.
 	TODO:
 	- proofread the complete melody, harmony and form against the referenced PDF and check by ear.
 	- verify source attribution, copyright notice and reuse terms against the scan; only the archived MusicXML notice is retained.
@@ -125,5 +127,12 @@ doOwn = false
 	c''1 ~ |
 	c''2 r2 |
 	\endBar
+}
+{% endif %}
+{% if part == "LyricsWikifonia" %}\lyricmode {
+	Ma __ he's mak -- ing eyes at me __ Ma, __ he's aw -- ful nice to me __ Ma he's al --
+	most break -- ing my heart __ I'm be -- side him Mer -- cy let his con -- science guide
+	him Ma __ he wants to mar -- ry me __ Be my hon -- ey bee __ eve -- ry min -- ute he gets
+	bold -- er now he's lean -- ing on my shoul -- der Ma __ he's kiss -- ing me __
 }
 {% endif %}

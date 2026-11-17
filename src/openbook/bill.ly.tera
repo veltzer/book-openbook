@@ -5,6 +5,7 @@ default_version = "Wikifonia"
 title = "Bill"
 style = "Jazz"
 composer = "Jerome Kern"
+poet = "P. G. Wodehouse, Oscar Hammerstein II"
 piece = "Standard"
 typesetter = "OpenBook contributors (MusicXML import)"
 completion = "3"
@@ -16,7 +17,7 @@ copyrightextra = "Archived MusicXML notice retained; underlying music is not rel
 [versions.Wikifonia]
 doChords = true
 doVoice = true
-doLyrics = false
+doLyrics = true
 doLyricsmore = false
 doLyricsmoremore = false
 doChordBars = false
@@ -37,6 +38,7 @@ doOwn = false
 	- retained written melody, chord changes, pickups, repeats and numbered endings; lyrics omitted.
 	- imported explicit 7alt symbols using the book's altered-dominant notation where present.
 	- tempo is an editorial practice suggestion.
+	- put in the original lyrics from the same Wikifonia source (published with the song, public domain in the US); typos fixed.
 	TODO:
 	- proofread the complete melody, harmony and form against the referenced PDF and check by ear.
 	- verify source attribution, copyright notice and reuse terms against the scan; only the archived MusicXML notice is retained.
@@ -127,5 +129,16 @@ doOwn = false
 	d''2 e''2 |
 	c''2. r4 |
 	\endBar
+}
+{% endif %}
+{% if part == "LyricsWikifonia" %}\lyricmode {
+	But a -- long came Bill who's not the type at all you'd meet him on the street and nev --
+	er no -- tice him his form and face his man -- ly grace are not the kind that you would
+	find in a stat -- ue and I can't ex -- plain it's sure -- ly not his brain that makes me
+	thrill. I love him __ be -- cause he's won -- der -- ful __ be -- cause he's just old Bill
+	he's just my Bill an or -- di -- nar -- y boy he has -- n't got a thing that I can brag a --
+	bout and yet to be up -- on his knee so com -- fy and room -- y feels nat -- u -- ral to
+	me and I can't ex -- plain it's sure -- ly not his brain that makes me thrill I love him __
+	be -- cause he's I don't know __ be -- cause he's just my Bill
 }
 {% endif %}

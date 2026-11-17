@@ -5,6 +5,7 @@ default_version = "Wikifonia"
 title = "All Through The Night"
 style = "Jazz"
 composer = "Traditional"
+poet = "Harold Boulton"
 piece = "Standard"
 typesetter = "OpenBook contributors (MusicXML import)"
 completion = "3"
@@ -16,7 +17,7 @@ copyrightextra = "Archived MusicXML notice retained; underlying music is not rel
 [versions.Wikifonia]
 doChords = true
 doVoice = true
-doLyrics = false
+doLyrics = true
 doLyricsmore = false
 doLyricsmoremore = false
 doChordBars = false
@@ -37,6 +38,7 @@ doOwn = false
 	- retained written melody, chord changes, pickups, repeats and numbered endings; lyrics omitted.
 	- imported explicit 7alt symbols using the book's altered-dominant notation where present.
 	- tempo is an editorial practice suggestion.
+	- put in the original lyrics from the same Wikifonia source (published with the song, public domain in the US); typos fixed.
 	TODO:
 	- proofread the complete melody, harmony and form against the referenced PDF and check by ear.
 	- verify source attribution, copyright notice and reuse terms against the scan; only the archived MusicXML notice is retained.
@@ -125,5 +127,15 @@ doOwn = false
 	d'2 e'4. e'8 |
 	f'1 |
 	\endBar
+}
+{% endif %}
+{% if part == "LyricsWikifonia" %}\lyricmode {
+	Sleep my child and peace at -- tend thee all through the night Guard -- ian an -- gels
+	God will send thee all through the night Soft the drow -- sy hours are creep -- ing hill
+	and vale in slumb -- er sleep -- ing I my lov -- ing vig -- il keep -- ing all through the
+	night, While the moon her watch is keep -- ing all through the night while the wea -- ry
+	world is sleep -- ing all through the night O'er thy spir -- it gent -- ly steal -- ing vi --
+	sions of de -- light re -- veal -- ing breathes a pure and ho -- ly feel -- ing all
+	through the night.
 }
 {% endif %}

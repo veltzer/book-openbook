@@ -5,6 +5,7 @@ default_version = "Wikifonia"
 title = "I Guess I'll Have To Change My Plan"
 style = "Jazz"
 composer = "Arthur Schwartz"
+poet = "Howard Dietz"
 piece = "Standard"
 typesetter = "OpenBook contributors (MusicXML import)"
 completion = "3"
@@ -16,7 +17,7 @@ copyrightextra = "Archived MusicXML notice retained; underlying music is not rel
 [versions.Wikifonia]
 doChords = true
 doVoice = true
-doLyrics = false
+doLyrics = true
 doLyricsmore = false
 doLyricsmoremore = false
 doChordBars = false
@@ -37,6 +38,7 @@ doOwn = false
 	- retained written melody, chord changes, pickups, repeats and numbered endings; lyrics omitted.
 	- imported explicit 7alt symbols using the book's altered-dominant notation where present.
 	- tempo is an editorial practice suggestion.
+	- put in the original lyrics from the same Wikifonia source (published with the song, public domain in the US); typos fixed.
 	TODO:
 	- proofread the complete melody, harmony and form against the referenced PDF and check by ear.
 	- verify source attribution, copyright notice and reuse terms against the scan; only the archived MusicXML notice is retained.
@@ -103,5 +105,13 @@ doOwn = false
 	e''4 a'2 g'4 |
 	c''2. r4 |
 	\endBar
+}
+{% endif %}
+{% if part == "LyricsWikifonia" %}\lyricmode {
+	I guess I'll have to change my plan __ I should have re -- al -- ized there'd be an --
+	oth -- er man! __ I ov -- er looked that point com -- plete -- ly __ un -- til the big af --
+	fair be -- gan be -- fore I knew where I was at __ I found my -- self up -- on the shelf
+	and that was that __ I tried to reach the moon but when I got there, all that I could get
+	was the air, my feet are back up -- on the ground __ I've lost the one girl I found.
 }
 {% endif %}

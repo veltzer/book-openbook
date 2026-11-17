@@ -5,9 +5,10 @@ default_version = "Wikifonia"
 title = "When Irish Eyes Are Smiling"
 style = "Waltz"
 composer = "Ernest Ball"
+poet = "Chauncey Olcott, George Graff Jr."
 piece = "Moderato"
 copyright = "Public domain composition"
-copyrightextra = "Source MusicXML marked Public Domain; instrumental lead sheet."
+copyrightextra = "Source MusicXML marked Public Domain; lead sheet with the original lyrics."
 typesetter = "OpenBook contributors (MusicXML import)"
 completion = "3"
 uuid = "9db60a7f-d089-40f1-b78c-0b8cf6a2a64f"
@@ -17,7 +18,7 @@ location = "Ultimate-Fake-Book-C:721, TheBook:483"
 [versions.Wikifonia]
 doChords = true
 doVoice = true
-doLyrics = false
+doLyrics = true
 doLyricsmore = false
 doLyricsmoremore = false
 doChordBars = false
@@ -31,7 +32,8 @@ doOwn = false
 {% if part == "Doc" %}
 	DONE:
 	- imported melody and chords from real_books_archive.gi/Wikifonia.tar.xz: Wikifonia/Ernest Ball, Chauncey Olcott, George Graff Jr. - When Irish Eyes Are Smiling.mxl.
-	- source edition explicitly declares Public Domain; imported without lyrics.
+	- source edition explicitly declares Public Domain.
+	- put in the original lyrics from the same Wikifonia source (public domain); typos fixed.
 	- retained the written form, pickups, repeats and chord durations.
 	- source revision: http://wikifonia.org/node/732/revisions/970/view.
 	- tempo is an editorial practice suggestion, not a verified recording tempo.
@@ -141,5 +143,12 @@ doOwn = false
 	}
 	}
 	\endBar
+}
+{% endif %}
+{% if part == "LyricsWikifonia" %}\lyricmode {
+	When I -- rish Eyes Are Smi -- ling, __ Sure It's like a morn -- in' Spring __ In the
+	lilt of I -- rish laugh -- ter. You can hear the an -- gels sing. __ When I -- rish hearts
+	are hap -- py. __ All the world seems bright and gay. __ And When I -- rish Eyes Are Smi --
+	ling, Sure they steal _ your heart a -- way. When way __
 }
 {% endif %}

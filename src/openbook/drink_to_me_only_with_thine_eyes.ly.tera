@@ -5,9 +5,10 @@ default_version = "Wikifonia"
 title = "Drink to Me Only with Thine Eyes"
 style = "Ballad"
 composer = "Traditional"
+poet = "Ben Jonson"
 piece = "Andante"
 copyright = "Public domain composition"
-copyrightextra = "Source MusicXML marked Public Domain; instrumental lead sheet."
+copyrightextra = "Source MusicXML marked Public Domain; lead sheet with the original lyrics."
 typesetter = "OpenBook contributors (MusicXML import)"
 completion = "3"
 uuid = "340313df-eb2c-4478-9c4e-0fce2521b5b7"
@@ -17,7 +18,7 @@ location = "Wikifonia"
 [versions.Wikifonia]
 doChords = true
 doVoice = true
-doLyrics = false
+doLyrics = true
 doLyricsmore = false
 doLyricsmoremore = false
 doChordBars = false
@@ -31,7 +32,8 @@ doOwn = false
 {% if part == "Doc" %}
 	DONE:
 	- imported melody and chords from real_books_archive.gi/Wikifonia.tar.xz: Wikifonia/John Wall Callcott, Ben Jonson - Drink To Me Only With Thine Eyes.mxl.
-	- source edition explicitly declares Public Domain; imported without lyrics.
+	- source edition explicitly declares Public Domain.
+	- put in the original lyrics from the same Wikifonia source (public domain); typos fixed.
 	- retained the written form, pickups, repeats and chord durations.
 	- source revision: http://wikifonia.org/node/5377/revisions/7306/view.
 	- tempo is an editorial practice suggestion, not a verified recording tempo.
@@ -117,5 +119,12 @@ doOwn = false
 	e'2 d'4 |
 	c'2. |
 	\endBar
+}
+{% endif %}
+{% if part == "LyricsWikifonia" %}\lyricmode {
+	Drink to me on -- ly with _ thine eyes __ and I __ will pledge with mine __ Or leave a
+	kiss with -- in __ the cup __ and I'll __ not ask for wine the thirst __ that from my soul __
+	doth rise and asks a drink __ di -- vine __ But might I of Jove's nec -- _ tar sup __ I
+	would _ not change for thine
 }
 {% endif %}

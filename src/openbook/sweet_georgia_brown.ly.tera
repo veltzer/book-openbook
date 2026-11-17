@@ -4,7 +4,8 @@ default_version = "Laurent"
 [attributes]
 title = "Sweet Georgia Brown"
 style = "Jazz"
-composer = "Ben Bernie, Maceo Pinkard, Kenneth Casey"
+composer = "Ben Bernie, Maceo Pinkard"
+poet = "Kenneth Casey"
 typesetter = "Laurent Martelli"
 completion = "3"
 uuid = "0464493c-d49f-11f1-8000-046874d194b7"
@@ -13,7 +14,7 @@ structure = "AB"
 [versions.Laurent]
 doChords = true
 doVoice = true
-doLyrics = false
+doLyrics = true
 doLyricsmore = false
 doLyricsmoremore = false
 doChordBars = false
@@ -26,11 +27,11 @@ doOwn = false
 {% endif %}
 {% if part == "Doc" %}	DONE:
 	- converted the Laurent Martelli version from staging/openbook/laurent/sweet_georgia_brown.ly.
+	- put in the refrain lyrics (1925, public domain in the US) from the Wikifonia lead sheet (real_books_archive.gi/Wikifonia.tar.xz: Wikifonia/Ben Bernie, Maceo Pinkard - Sweet Georgia Brown.mxl), aligned by hand to this melody.
 	TODO:
 	- check the tune and chords against a real book.
 	- the source has a "To Coda" with a one bar coda (the last F held); this is written as a second ending.
 	- the source gives no chord for that bar, F is my choice.
-	- add the lyrics.
 	- add youtube performances.
 	- hear the tune to check that it is right and adjust the tempo.
 {% endif %}
@@ -86,5 +87,14 @@ doOwn = false
 			f1\fermata |
 		}
 	}
+}
+{% endif %}
+{% if part == "LyricsLaurent" %}\lyricmode {
+	No gal made has got a shade on Sweet Geor -- gia Brown; __ two left feet, but oh, so neat has
+	Sweet Geor -- gia Brown! __ They all sigh and wan -- na die for Sweet Geor -- gia Brown, __ I'll
+	tell you just why, __ you know I don't lie, __ not much! __ It's been said she knocks 'em dead
+	when she lands in town; __ since she came, why, it's a shame how she cools 'em down. _ Fell --
+	ers __ she can't get __ must be fell -- ers __ she ain't met; __ Geor -- gia named __ her,
+	Geor -- _ gia claimed __ her, Sweet Geor -- gia Brown! __ Brown!
 }
 {% endif %}

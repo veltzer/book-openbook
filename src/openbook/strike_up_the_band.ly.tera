@@ -13,7 +13,7 @@ uuid = "045ebe90-d49f-11f1-8000-046874d194b7"
 [versions.Laurent]
 doChords = true
 doVoice = true
-doLyrics = false
+doLyrics = true
 doLyricsmore = false
 doLyricsmoremore = false
 doChordBars = false
@@ -26,11 +26,11 @@ doOwn = false
 {% endif %}
 {% if part == "Doc" %}	DONE:
 	- converted the Laurent Martelli version from staging/openbook/laurent/strike_up_the_band.ly.
+	- put in the refrain lyrics (1927, public domain in the US) from the Wikifonia lead sheet (real_books_archive.gi/Wikifonia.tar.xz: Wikifonia/George Gershwin, Ira Gershwin - Strike Up The Band.mxl), aligned by hand to this melody (Part A and Coda are the instrumental fanfare).
 	TODO:
 	- check the tune and chords against a real book.
 	- the source marks "To Coda" and a Coda but no "D.C."; the "D.C. al Coda" markup is my reading of the form.
 	- the last bar of the coda has no chord in the source.
-	- add the lyrics.
 	- add youtube performances.
 	- hear the tune to check that it is right and adjust the tempo.
 {% endif %}
@@ -107,5 +107,17 @@ doOwn = false
 	r8 d4. bes4 g | bes4. c8 ~ c2 | r8 g'4. f4 c | bes'4. aes8 ~ aes2 |
 	r8 d,4. bes4 g | d'2 d | bes4 r <ees bes'>-. r | <e bes'>4.-. <f bes>8-> r4 bes,,-- |
 	c1\fermata |
+}
+{% endif %}
+{% if part == "LyricsLaurent" %}\lyricmode {
+	_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ Let the
+	drums roll out! __ Let the trum -- pet call! __ While the
+	peo -- ple shout! __ Strike up the band! __ Hear the
+	cym -- bals ring! __ _ Call -- ing one and all __ To the
+	mar -- tial swing: __ Strike up the band! __ There is
+	work to be done, to be done! There's a war to be won, to be won! Come, you
+	son of a, son of a gun! Take your stand! __ Fall in
+	line, yea, bo! __ Come a -- long, let's go! __
+	Hey, lead -- er! Strike up the band!
 }
 {% endif %}

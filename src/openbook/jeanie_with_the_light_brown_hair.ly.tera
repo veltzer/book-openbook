@@ -5,9 +5,10 @@ default_version = "Wikifonia"
 title = "Jeanie with the Light Brown Hair"
 style = "Ballad"
 composer = "Stephen Foster"
+poet = "Stephen Foster"
 piece = "Andante"
 copyright = "Public domain composition"
-copyrightextra = "Source MusicXML marked Public Domain; instrumental lead sheet."
+copyrightextra = "Source MusicXML marked Public Domain; lead sheet with the original lyrics."
 typesetter = "OpenBook contributors (MusicXML import)"
 completion = "3"
 uuid = "cb82ac83-9a80-44bb-9cfe-bab05cd05fbc"
@@ -17,8 +18,8 @@ location = "Wikifonia"
 [versions.Wikifonia]
 doChords = true
 doVoice = true
-doLyrics = false
-doLyricsmore = false
+doLyrics = true
+doLyricsmore = true
 doLyricsmoremore = false
 doChordBars = false
 doGuitar = false
@@ -31,7 +32,8 @@ doOwn = false
 {% if part == "Doc" %}
 	DONE:
 	- imported melody and chords from real_books_archive.gi/Wikifonia.tar.xz: Wikifonia/Stephen Foster , Stephen Foster 1854 - Jeanie With The Light Brown Hair.mxl.
-	- source edition explicitly declares Public Domain; imported without lyrics.
+	- source edition explicitly declares Public Domain.
+	- put in the original lyrics from the same Wikifonia source (public domain); typos fixed.
 	- retained the written form, pickups, repeats and chord durations.
 	- source revision: http://wikifonia.org/node/4391/revisions/15984/view.
 	- tempo is an editorial practice suggestion, not a verified recording tempo.
@@ -141,5 +143,22 @@ doOwn = false
 	}
 	}
 	\endBar
+}
+{% endif %}
+{% if part == "LyricsWikifonia" %}\lyricmode {
+	I dream of Jean -- nie with the light brown _ hair Borne like a va -- por on the sum --
+	mer air I see her trip -- ping where the bright streams _ play Hap -- py as the dai -- _
+	sies that dance on her way Man -- y were the wild notes her mer -- ry voice would pour,
+	Man -- y were the blithe birds that war -- bled them o'er I dream of Jean -- nie with the
+	light brown _ hair Float -- ing like a va -- por on the soft sum -- mer air I bright wa --
+	ters flow.
+}
+{% endif %}
+{% if part == "LyricsmoreWikifonia" %}\lyricmode {
+	_ long for Jean -- nie with the day dawn _ smile Ra -- dia -- ting glad -- ness warm with
+	win -- ning guile I hear her mel -- o -- dies like joys gone _ by Sigh -- ing round my
+	heart _ o'er the fond hopes that die. Sigh -- ing like the night wind and sob -- bing like
+	the rain Wait -- ing for the lost one that comes not a -- gain I long for Jean -- nie and
+	my heart bows _ low Nev -- er more to find her where the
 }
 {% endif %}

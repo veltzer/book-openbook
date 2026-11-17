@@ -5,6 +5,7 @@ default_version = "Wikifonia"
 title = "Chinatown, My Chinatown"
 style = "Jazz"
 composer = "Jean Schwartz"
+poet = "William Jerome"
 piece = "Standard"
 typesetter = "OpenBook contributors (MusicXML import)"
 completion = "3"
@@ -16,7 +17,7 @@ copyrightextra = "Archived MusicXML notice retained; underlying music is not rel
 [versions.Wikifonia]
 doChords = true
 doVoice = true
-doLyrics = false
+doLyrics = true
 doLyricsmore = false
 doLyricsmoremore = false
 doChordBars = false
@@ -37,6 +38,7 @@ doOwn = false
 	- retained written melody, chord changes, pickups, repeats and numbered endings; lyrics omitted.
 	- imported explicit 7alt symbols using the book's altered-dominant notation where present.
 	- tempo is an editorial practice suggestion.
+	- put in the original lyrics from the same Wikifonia source (published with the song, public domain in the US); typos fixed.
 	TODO:
 	- proofread the complete melody, harmony and form against the referenced PDF and check by ear.
 	- verify source attribution, copyright notice and reuse terms against the scan; only the archived MusicXML notice is retained.
@@ -125,5 +127,12 @@ doOwn = false
 	c''1 ~ |
 	c''4 r4 r2 |
 	\endBar
+}
+{% endif %}
+{% if part == "LyricsWikifonia" %}\lyricmode {
+	Chi -- na -- town my Chi -- na -- town __ where the lights are low __ hearts that know no
+	oth -- er land __ Drift -- ing to and fro, __ Dream -- y dream -- y Chi -- na -- town __
+	al -- mond eyes of brown __ hearts seem light and life seems bright __ In dream -- y Chi --
+	na -- town. __
 }
 {% endif %}

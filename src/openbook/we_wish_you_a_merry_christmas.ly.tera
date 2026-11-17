@@ -5,9 +5,10 @@ default_version = "Wikifonia"
 title = "We Wish You a Merry Christmas"
 style = "Waltz"
 composer = "Traditional"
+poet = "Traditional"
 piece = "Allegro"
 copyright = "Public domain composition"
-copyrightextra = "Source MusicXML marked Public Domain; instrumental lead sheet."
+copyrightextra = "Source MusicXML marked Public Domain; lead sheet with the original lyrics."
 typesetter = "OpenBook contributors (MusicXML import)"
 completion = "3"
 uuid = "91ebaa28-512f-46d4-a72e-02c31cbfc0b1"
@@ -17,7 +18,7 @@ location = "Wikifonia"
 [versions.Wikifonia]
 doChords = true
 doVoice = true
-doLyrics = false
+doLyrics = true
 doLyricsmore = false
 doLyricsmoremore = false
 doChordBars = false
@@ -31,7 +32,8 @@ doOwn = false
 {% if part == "Doc" %}
 	DONE:
 	- imported melody and chords from real_books_archive.gi/Wikifonia.tar.xz: Wikifonia/Traditional - We wish you a merry christmas.mxl.
-	- source edition explicitly declares Public Domain; imported without lyrics.
+	- source edition explicitly declares Public Domain.
+	- put in the original lyrics from the same Wikifonia source (public domain); typos fixed.
 	- retained the written form, pickups, repeats and chord durations.
 	- source revision: http://wikifonia.org/node/203/revisions/11626/view.
 	- tempo is an editorial practice suggestion, not a verified recording tempo.
@@ -111,5 +113,13 @@ doOwn = false
 	a'4 d''4 b'4 |
 	c''2
 	\endBar
+}
+{% endif %}
+{% if part == "LyricsWikifonia" %}\lyricmode {
+	We wish you a mer -- ry Christ -- mas, we wish you a mer -- ry Christ -- mas, We wish you
+	a mer -- ry Christ -- mas and a hap -- py new year! Good tid -- ings to you where -- ev --
+	er you "are:" Good tid -- ings for Christ -- mas and a hap -- py New Year! We wish you a
+	mer -- ry Christ -- mas. We wish you a mer -- ry Christ -- mas We wish you a mer -- ry
+	Christ -- mas and a hap -- py New Year!
 }
 {% endif %}

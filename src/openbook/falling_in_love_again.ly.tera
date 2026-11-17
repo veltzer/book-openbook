@@ -4,7 +4,8 @@ default_version = "Wikifonia"
 [attributes]
 title = "Falling In Love Again"
 style = "Jazz"
-composer = "Friedrich Hollander, English Lyrics by Reg Connelly"
+composer = "Friedrich Hollaender"
+poet = "Friedrich Hollaender, Reg Connelly"
 piece = "Standard"
 typesetter = "OpenBook contributors (MusicXML import)"
 completion = "3"
@@ -16,8 +17,8 @@ copyrightextra = "Archived MusicXML notice retained; underlying music is not rel
 [versions.Wikifonia]
 doChords = true
 doVoice = true
-doLyrics = false
-doLyricsmore = false
+doLyrics = true
+doLyricsmore = true
 doLyricsmoremore = false
 doChordBars = false
 doGuitar = false
@@ -35,6 +36,7 @@ doOwn = false
 	- retained the archived MusicXML rights notice; no redistribution permission is asserted.
 	- retained written melody, chord changes, pickups, repeats and numbered endings; lyrics, slurs, dynamics and articulations other than fermatas omitted.
 	- tempo is an editorial practice suggestion.
+	- put in the original lyrics from the same Wikifonia source (published with the song, public domain in the US); typos fixed.
 	TODO:
 	- proofread the complete melody, harmony and form against a printed edition and check by ear.
 	- verify source attribution, copyright notice and reuse terms; only the archived MusicXML notice is retained.
@@ -173,5 +175,28 @@ doOwn = false
 	}
 	}
 	\endBar
+}
+{% endif %}
+{% if part == "LyricsWikifonia" %}\lyricmode {
+	I of -- ten stop and won -- der why I ap -- peal to men, how man -- y times I blun -- der
+	in love and out a -- gain. They of -- fer me de -- vo -- tion I like it I con -- fess.
+	When I re -- flect e -- mo -- tion there's no need to guess. I'm Fall -- ing in love a --
+	gain, __ _ Nev -- er want -- ed "to;" __ _ What am I to do? I can't help it! __ Love's al --
+	ways been my game, _ Play it how I may, __ _ I was made that "way;" I can't help it! __
+	Men clus -- ter to me, Like moths a -- round a "flame;" __ _ And if their wings burn, I
+	know I'm not to blame Fall -- ing in love a -- gain, __ _ Nev -- er want -- ed "to;" __ _
+	What am I to do? I can't help it! __ I'm help it! __
+}
+{% endif %}
+{% if part == "LyricsmoreWikifonia" %}\lyricmode {
+	Ein rät -- sel -- haf -- ter Schim -- mer, Ein "'je" ne sais pas quoi' Liegt in den Au --
+	gen im -- mer Bei ein -- er schön -- en Frau Doch wenn sich mein -- e Au -- gen Bei ein --
+	em vis -- à -- vis Ganz tief in sein -- e sau -- gen Was sprech -- en dann sie? __ _ Ich
+	bin von Kopf bis Fuß auf Lie -- be ein -- ge -- stellt Denn das ist mein -- e Welt. Und
+	sonst gar -- nichts. __ Das ist, was soll ich ma -- chen Mei -- _ ne Na -- tur Ich kann
+	halt Lie -- ben nur Und sonst gar -- nichts __ Män -- ner um -- schwirrn mich wie Mot --
+	ten um das Licht und wenn sie ver -- bren -- nen Ja da -- für kann ich nicht. Ich bin von
+	Kopf bis Fuß auf Lie -- be ein -- ge -- stellt, denn das ist Mei -- ne Welt und sonst gar --
+	nichts __ Ich gar -- nichts __
 }
 {% endif %}

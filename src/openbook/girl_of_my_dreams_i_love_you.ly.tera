@@ -5,6 +5,7 @@ default_version = "Wikifonia"
 title = "Girl Of My Dreams (I Love You)"
 style = "Jazz"
 composer = "Sunny Clapp"
+poet = "Sunny Clapp"
 piece = "Standard"
 typesetter = "OpenBook contributors (MusicXML import)"
 completion = "3"
@@ -16,7 +17,7 @@ copyrightextra = "Archived MusicXML notice retained; underlying music is not rel
 [versions.Wikifonia]
 doChords = true
 doVoice = true
-doLyrics = false
+doLyrics = true
 doLyricsmore = false
 doLyricsmoremore = false
 doChordBars = false
@@ -37,6 +38,7 @@ doOwn = false
 	- retained written melody, chord changes, pickups, repeats and numbered endings; lyrics omitted.
 	- imported explicit 7alt symbols using the book's altered-dominant notation where present.
 	- tempo is an editorial practice suggestion.
+	- put in the original lyrics from the same Wikifonia source (published with the song, public domain in the US); typos fixed.
 	TODO:
 	- proofread the complete melody, harmony and form against the referenced PDF and check by ear.
 	- verify source attribution, copyright notice and reuse terms against the scan; only the archived MusicXML notice is retained.
@@ -146,5 +148,12 @@ doOwn = false
 	}
 	c''2 r4 |
 	\endBar
+}
+{% endif %}
+{% if part == "LyricsWikifonia" %}\lyricmode {
+	Girl of my dreams I love you, hon -- est I do, You are so sweet. __ If I could just hold
+	your charms, a -- gain in my arms, Then life would be com -- plete. __ Since you've been
+	gone. dear, life don't seem the same. Please come back a -- gain. __ And af -- ter all's
+	said and done, there's on -- ly one, Girl Of My Dreams it's you. __ _ _ _ you. __
 }
 {% endif %}

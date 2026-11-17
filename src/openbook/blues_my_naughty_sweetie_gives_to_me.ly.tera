@@ -6,9 +6,10 @@ title = "Blues My Naughty Sweetie Gives to Me"
 subtitle = "Simplified Changes"
 style = "Jazz"
 composer = "Charles McCarron, Carey Morgan"
+poet = "Arthur N. Swanstrom, Charles McCarron, Carey Morgan"
 piece = "Allegro"
 copyright = "Public domain composition"
-copyrightextra = "Source MusicXML marked Public Domain; instrumental lead sheet."
+copyrightextra = "Source MusicXML marked Public Domain; lead sheet with the original lyrics."
 typesetter = "OpenBook contributors (MusicXML import)"
 completion = "3"
 uuid = "7cbe944f-f32b-4924-87df-c89006e2777f"
@@ -18,7 +19,7 @@ location = "Wikifonia"
 [versions.Wikifonia]
 doChords = true
 doVoice = true
-doLyrics = false
+doLyrics = true
 doLyricsmore = false
 doLyricsmoremore = false
 doChordBars = false
@@ -32,7 +33,8 @@ doOwn = false
 {% if part == "Doc" %}
 	DONE:
 	- imported melody and chords from real_books_archive.gi/Wikifonia.tar.xz: Wikifonia/McGarron, Morgan, Swanstrom - Blues My Naughty Sweetie Gives To Me (Simplified Changes).mxl.
-	- source edition explicitly declares Public Domain; imported without lyrics.
+	- source edition explicitly declares Public Domain.
+	- put in the original lyrics from the same Wikifonia source (public domain); typos fixed.
 	- retained the written form, pickups, repeats and chord durations.
 	- source revision: http://wikifonia.org/node/978/revisions/2483/view.
 	- tempo is an editorial practice suggestion, not a verified recording tempo.
@@ -125,5 +127,13 @@ doOwn = false
 	g'1 ~ |
 	g'4 r4 r2 |
 	\endBar
+}
+{% endif %}
+{% if part == "LyricsWikifonia" %}\lyricmode {
+	there are blues that you get from wor -- ry __ oh, there are blues that you get from pain
+	and there are blues when you're lone -- _ _ ly for your one and on -- _ ly The blues you
+	can nev -- er ex -- plain __ There are blues __ That you get from long -- ing _ But the
+	blue -- est blue that be __ Are the kind of blues that's on my mind __ They're the ve --
+	ry mean -- est kind __ The blues my naugh -- ty sweet -- ie gives __ to me __
 }
 {% endif %}

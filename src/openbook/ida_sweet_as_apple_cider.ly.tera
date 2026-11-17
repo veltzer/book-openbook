@@ -5,6 +5,7 @@ default_version = "Wikifonia"
 title = "Ida (Sweet As Apple Cider)"
 style = "Jazz"
 composer = "Eddie Munson"
+poet = "Eddie Leonard"
 piece = "Standard"
 typesetter = "OpenBook contributors (MusicXML import)"
 completion = "3"
@@ -16,7 +17,7 @@ copyrightextra = "Archived MusicXML notice retained; underlying music is not rel
 [versions.Wikifonia]
 doChords = true
 doVoice = true
-doLyrics = false
+doLyrics = true
 doLyricsmore = false
 doLyricsmoremore = false
 doChordBars = false
@@ -37,6 +38,7 @@ doOwn = false
 	- retained written melody, chord changes, pickups, repeats and numbered endings; lyrics omitted.
 	- imported explicit 7alt symbols using the book's altered-dominant notation where present.
 	- tempo is an editorial practice suggestion.
+	- put in the original lyrics from the same Wikifonia source (published with the song, public domain in the US); typos fixed.
 	TODO:
 	- proofread the complete melody, harmony and form against the referenced PDF and check by ear.
 	- verify source attribution, copyright notice and reuse terms against the scan; only the archived MusicXML notice is retained.
@@ -125,5 +127,12 @@ doOwn = false
 	c''1 ~ |
 	c''4 r4 r2 |
 	\endBar
+}
+{% endif %}
+{% if part == "LyricsWikifonia" %}\lyricmode {
+	I -- da __ sweet as ap -- ple ci _ _ der __ sweet -- er __ than all I know _ come out __
+	in the sil -- vry moon -- light __ of love we'll whis -- per __ so soft and low seems I __
+	cant live with -- out _ _ you __ lis -- ten __ oh hon -- ey do _ I -- da __ I i -- do --
+	lize yer __ I love you I -- da deed I do. __
 }
 {% endif %}

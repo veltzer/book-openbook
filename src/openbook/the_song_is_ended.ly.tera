@@ -5,6 +5,7 @@ default_version = "Wikifonia"
 title = "The Song Is Ended"
 style = "Jazz"
 composer = "Irving Berlin"
+poet = "Irving Berlin"
 piece = "Standard"
 typesetter = "OpenBook contributors (MusicXML import)"
 completion = "3"
@@ -16,7 +17,7 @@ copyrightextra = "Archived MusicXML notice retained; underlying music is not rel
 [versions.Wikifonia]
 doChords = true
 doVoice = true
-doLyrics = false
+doLyrics = true
 doLyricsmore = false
 doLyricsmoremore = false
 doChordBars = false
@@ -37,6 +38,7 @@ doOwn = false
 	- retained written melody, chord changes, pickups, repeats and numbered endings; lyrics omitted.
 	- imported explicit 7alt symbols using the book's altered-dominant notation where present.
 	- tempo is an editorial practice suggestion.
+	- put in the original lyrics from the same Wikifonia source (published with the song, public domain in the US); typos fixed.
 	TODO:
 	- proofread the complete melody, harmony and form against the referenced PDF and check by ear.
 	- verify source attribution, copyright notice and reuse terms against the scan; only the archived MusicXML notice is retained.
@@ -143,5 +145,14 @@ doOwn = false
 	}
 	}
 	\endBar
+}
+{% endif %}
+{% if part == "LyricsWikifonia" %}\lyricmode {
+	The song __ is end -- ed but the mel -- o -- dy lin -- gers on. You and the song are
+	gone, but the mel -- o -- dy lin -- gers on. __ The night __ was splen -- did and the mel --
+	o -- dy seemed to say, "'Sum" -- mer will pass a -- "way;" take your hap -- pi -- ness
+	while you may.' There "'neath" the light of the moon __ we sang a love song that end -- ed
+	too soon. __ The moon __ de -- scend -- ed and I found with the break of dawn, you and the
+	song had gone. But the mel -- od -- y ling -- ered on. __ The
 }
 {% endif %}

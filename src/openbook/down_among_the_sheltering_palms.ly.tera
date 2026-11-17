@@ -5,6 +5,7 @@ default_version = "Wikifonia"
 title = "Down Among The Sheltering Palms"
 style = "Jazz"
 composer = "Abe Olman"
+poet = "James Brockman"
 piece = "Standard"
 typesetter = "OpenBook contributors (MusicXML import)"
 completion = "3"
@@ -16,7 +17,7 @@ copyrightextra = "Archived MusicXML notice retained; underlying music is not rel
 [versions.Wikifonia]
 doChords = true
 doVoice = true
-doLyrics = false
+doLyrics = true
 doLyricsmore = false
 doLyricsmoremore = false
 doChordBars = false
@@ -37,6 +38,7 @@ doOwn = false
 	- retained written melody, chord changes, pickups, repeats and numbered endings; lyrics omitted.
 	- imported explicit 7alt symbols using the book's altered-dominant notation where present.
 	- tempo is an editorial practice suggestion.
+	- put in the original lyrics from the same Wikifonia source (published with the song, public domain in the US); typos fixed.
 	TODO:
 	- proofread the complete melody, harmony and form against the referenced PDF and check by ear.
 	- verify source attribution, copyright notice and reuse terms against the scan; only the archived MusicXML notice is retained.
@@ -93,5 +95,13 @@ doOwn = false
 	b'2 a'2 |
 	g'2. r4 |
 	\endBar
+}
+{% endif %}
+{% if part == "LyricsWikifonia" %}\lyricmode {
+	Down __ A -- mong The Shel -- ter -- ing Palms, __ oh, hon -- ey, wait for me, __ oh, hon --
+	ey, wait for me, __ don't be __ for -- get -- tin' we've got a date __ out where __ the
+	sun goes down a -- bout eight. __ How my love __ is burn -- ing, burn -- ing, burn -- ing,
+	how my heart __ is yearn ing, yearn -- ing, yearn -- ing, to be down __ a -- mong the shel --
+	ter -- ing palms, __ oh, hon -- ey, wait for me.
 }
 {% endif %}

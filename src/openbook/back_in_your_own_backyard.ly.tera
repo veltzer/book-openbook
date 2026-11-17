@@ -5,6 +5,7 @@ default_version = "Wikifonia"
 title = "Back In Your Own Backyard"
 style = "Jazz"
 composer = "Dave Dreyer"
+poet = "Al Jolson, Billy Rose"
 piece = "Standard"
 typesetter = "OpenBook contributors (MusicXML import)"
 completion = "3"
@@ -16,7 +17,7 @@ copyrightextra = "Archived MusicXML notice retained; underlying music is not rel
 [versions.Wikifonia]
 doChords = true
 doVoice = true
-doLyrics = false
+doLyrics = true
 doLyricsmore = false
 doLyricsmoremore = false
 doChordBars = false
@@ -37,6 +38,7 @@ doOwn = false
 	- retained written melody, chord changes, pickups, repeats and numbered endings; lyrics omitted.
 	- imported explicit 7alt symbols using the book's altered-dominant notation where present.
 	- tempo is an editorial practice suggestion.
+	- put in the original lyrics from the same Wikifonia source (published with the song, public domain in the US); typos fixed.
 	TODO:
 	- proofread the complete melody, harmony and form against the referenced PDF and check by ear.
 	- verify source attribution, copyright notice and reuse terms against the scan; only the archived MusicXML notice is retained.
@@ -145,5 +147,13 @@ doOwn = false
 	}
 	g'4 r4 r2 |
 	\endBar
+}
+{% endif %}
+{% if part == "LyricsWikifonia" %}\lyricmode {
+	The bird with feath -- ers of blue __ is wait -- ing for you __ back in your own __ back --
+	yard __ you'll see your cas -- tle in Spain __ through your win -- dow pane __ back in
+	your won __ back yard __ Oh you can go to the east go to the west but some -- day you'll
+	come __ wear -- y at heart back where you start -- ed from __ you'll find your hap -- pi --
+	ness lies __ right un -- der your eyes __ back in your own __ back yard the bird with yard __
 }
 {% endif %}

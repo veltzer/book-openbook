@@ -4,7 +4,8 @@ default_version = "Wikifonia"
 [attributes]
 title = "Wearing Of The Green"
 style = "Jazz"
-composer = "Traditional Irish, Dion Boucicault 1864"
+composer = "Traditional"
+poet = "Dion Boucicault"
 piece = "Standard"
 typesetter = "OpenBook contributors (MusicXML import)"
 completion = "3"
@@ -16,7 +17,7 @@ copyrightextra = "Archived MusicXML notice retained; underlying music is not rel
 [versions.Wikifonia]
 doChords = true
 doVoice = true
-doLyrics = false
+doLyrics = true
 doLyricsmore = false
 doLyricsmoremore = false
 doChordBars = false
@@ -35,6 +36,7 @@ doOwn = false
 	- retained the archived MusicXML rights notice; no redistribution permission is asserted.
 	- retained written melody, chord changes, pickups, repeats and numbered endings; lyrics, slurs, dynamics and articulations other than fermatas omitted.
 	- tempo is an editorial practice suggestion.
+	- put in the original lyrics from the same Wikifonia source (published with the song, public domain in the US); typos fixed.
 	TODO:
 	- proofread the complete melody, harmony and form against a printed edition and check by ear.
 	- verify source attribution, copyright notice and reuse terms; only the archived MusicXML notice is retained.
@@ -125,5 +127,15 @@ doOwn = false
 	a'4 g'4 g'4 g'4 |
 	g'2. r4 |
 	\endBar
+}
+{% endif %}
+{% if part == "LyricsWikifonia" %}\lyricmode {
+	Oh _ Pad -- dy dear and did you hear the news that's go -- ing round? the sham -- rock is
+	for -- bid by law to grow on I -- rish ground! Sain't _ Pat -- rick's Day no more to keep,
+	his col -- or can't be seen for ther'es a blood -- y law a -- gin the wear -- ing of the
+	green I _ met with Nap -- per Tan -- dy and he tuk me by the hand and he said "'Hows" poor
+	old Ire -- land and how _ does she stand?' she's the most dis -- tress -- ful coun -- try
+	that ev -- er you have seen they're hang -- in men and wom -- en there for wear -- in of
+	the green.
 }
 {% endif %}

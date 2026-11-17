@@ -5,6 +5,7 @@ default_version = "Wikifonia"
 title = "Fine And Dandy"
 style = "Jazz"
 composer = "Kay Swift"
+poet = "Paul James"
 piece = "Standard"
 typesetter = "OpenBook contributors (MusicXML import)"
 completion = "3"
@@ -16,7 +17,7 @@ copyrightextra = "Archived MusicXML notice retained; underlying music is not rel
 [versions.Wikifonia]
 doChords = true
 doVoice = true
-doLyrics = false
+doLyrics = true
 doLyricsmore = false
 doLyricsmoremore = false
 doChordBars = false
@@ -37,6 +38,7 @@ doOwn = false
 	- retained written melody, chord changes, pickups, repeats and numbered endings; lyrics omitted.
 	- imported explicit 7alt symbols using the book's altered-dominant notation where present.
 	- tempo is an editorial practice suggestion.
+	- put in the original lyrics from the same Wikifonia source (published with the song, public domain in the US); typos fixed.
 	TODO:
 	- proofread the complete melody, harmony and form against the referenced PDF and check by ear.
 	- verify source attribution, copyright notice and reuse terms against the scan; only the archived MusicXML notice is retained.
@@ -144,5 +146,12 @@ doOwn = false
 	}
 	}
 	\endBar
+}
+{% endif %}
+{% if part == "LyricsWikifonia" %}\lyricmode {
+	Gee it's all __ fine and dan -- dy, Sug -- ar Can -- dy, when I've got you. __ Then I on --
+	ly see the sun -- ny side, __ Ev -- en troub -- le has its fun -- ny side. __ When you're
+	gone __ Su -- gar Can -- dy I get lone -- some, I get so blue. __ When you're han -- dy
+	it's fine and dan -- dy, But when you're gone what can I do?
 }
 {% endif %}

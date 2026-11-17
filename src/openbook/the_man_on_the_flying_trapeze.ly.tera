@@ -5,9 +5,10 @@ default_version = "Wikifonia"
 title = "The Man on the Flying Trapeze"
 style = "Waltz"
 composer = "Gaston Lyle"
+poet = "George Leybourne"
 piece = "Moderato"
 copyright = "Public domain composition"
-copyrightextra = "Source MusicXML marked Public Domain; instrumental lead sheet."
+copyrightextra = "Source MusicXML marked Public Domain; lead sheet with the original lyrics."
 typesetter = "OpenBook contributors (MusicXML import)"
 completion = "3"
 uuid = "42686960-e3c1-4b03-b680-c47be0dac312"
@@ -17,7 +18,7 @@ location = "Wikifonia"
 [versions.Wikifonia]
 doChords = true
 doVoice = true
-doLyrics = false
+doLyrics = true
 doLyricsmore = false
 doLyricsmoremore = false
 doChordBars = false
@@ -31,7 +32,8 @@ doOwn = false
 {% if part == "Doc" %}
 	DONE:
 	- imported melody and chords from real_books_archive.gi/Wikifonia.tar.xz: Wikifonia/Gaston Lyle, George Leybourne - Man On The Flying Trapeze.mxl.
-	- source edition explicitly declares Public Domain; imported without lyrics.
+	- source edition explicitly declares Public Domain.
+	- put in the original lyrics from the same Wikifonia source (public domain); typos fixed.
 	- retained the written form, pickups, repeats and chord durations.
 	- source revision: http://wikifonia.org/node/4387/revisions/5906/view.
 	- tempo is an editorial practice suggestion, not a verified recording tempo.
@@ -155,5 +157,15 @@ doOwn = false
 	c''2. ~ |
 	c''4 r2 |
 	\endBar
+}
+{% endif %}
+{% if part == "LyricsWikifonia" %}\lyricmode {
+	Oh once I was hap -- py but now I'm for -- lorn like an old coat that is tat -- tered and
+	torn left in this wide world to fret and to mourn be -- trayed by a maid in her teens __
+	oh the girl that I loved she was hand -- some __ and I tried all I knew her to please __
+	but I could not please her one quar -- ter so well as the man on the fly -- ing tra --
+	peze Oh! he'd fly thro' the air with the great -- est of ease a dar -- ling young man on
+	the fly -- ing trap -- eze his move -- ments were grace -- ful all girls he could please
+	and my love he pur -- loined a -- way. __
 }
 {% endif %}

@@ -4,7 +4,8 @@ default_version = "Wikifonia"
 [attributes]
 title = "Star Spangled Banner"
 style = "Jazz"
-composer = "Francis Scott Key, Francis Scott Key"
+composer = "John Stafford Smith"
+poet = "Francis Scott Key"
 piece = "Standard"
 typesetter = "OpenBook contributors (MusicXML import)"
 completion = "3"
@@ -16,7 +17,7 @@ copyrightextra = "Archived MusicXML notice retained; underlying music is not rel
 [versions.Wikifonia]
 doChords = true
 doVoice = true
-doLyrics = false
+doLyrics = true
 doLyricsmore = false
 doLyricsmoremore = false
 doChordBars = false
@@ -35,6 +36,7 @@ doOwn = false
 	- retained the archived MusicXML rights notice; no redistribution permission is asserted.
 	- retained written melody, chord changes, pickups, repeats and numbered endings; lyrics, slurs, dynamics and articulations other than fermatas omitted.
 	- tempo is an editorial practice suggestion.
+	- put in the original lyrics from the same Wikifonia source (published with the song, public domain in the US); typos fixed.
 	TODO:
 	- proofread the complete melody, harmony and form against a printed edition and check by ear.
 	- verify source attribution, copyright notice and reuse terms; only the archived MusicXML notice is retained.
@@ -125,5 +127,14 @@ doOwn = false
 	d''4. es''8 c''4 |
 	bes'2. |
 	\endBar
+}
+{% endif %}
+{% if part == "LyricsWikifonia" %}\lyricmode {
+	Oh, __ _ say can you see, by the dawn's ear -- ly light, What so proud -- ly we hail'd at
+	the twi -- light's last gleam -- ing? Whose broad stripes and bright stars, thro' the per --
+	i -- lous fight, O'er the ram -- parts we watch'd, were so gal -- lant -- ly stream --
+	ing? and the rock -- ets' red glare, the bombs burst -- ing in air, Gave proof thro' the
+	night that our flag was still there. Oh say does that __ _ star -- spang -- led ban -- _
+	ner yet __ _ wave __ _ O'er the land __ _ of the free and the home of the brave.
 }
 {% endif %}

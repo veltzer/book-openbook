@@ -5,6 +5,7 @@ default_version = "Wikifonia"
 title = "When Day Is Done"
 style = "Jazz"
 composer = "Robert Katscher"
+poet = "B. G. DeSylva"
 piece = "Standard"
 typesetter = "OpenBook contributors (MusicXML import)"
 completion = "3"
@@ -16,7 +17,7 @@ copyrightextra = "Archived MusicXML notice retained; underlying music is not rel
 [versions.Wikifonia]
 doChords = true
 doVoice = true
-doLyrics = false
+doLyrics = true
 doLyricsmore = false
 doLyricsmoremore = false
 doChordBars = false
@@ -37,6 +38,7 @@ doOwn = false
 	- retained written melody, chord changes, pickups, repeats and numbered endings; lyrics omitted.
 	- imported explicit 7alt symbols using the book's altered-dominant notation where present.
 	- tempo is an editorial practice suggestion.
+	- put in the original lyrics from the same Wikifonia source (published with the song, public domain in the US); typos fixed.
 	TODO:
 	- proofread the complete melody, harmony and form against the referenced PDF and check by ear.
 	- verify source attribution, copyright notice and reuse terms against the scan; only the archived MusicXML notice is retained.
@@ -127,5 +129,14 @@ doOwn = false
 	bes'1 ~ |
 	bes'4 r4 r2 |
 	\endBar
+}
+{% endif %}
+{% if part == "LyricsWikifonia" %}\lyricmode {
+	When day is done and shad -- ows fall, I dream of "you;" When day is done I think of all
+	the joys we knew. That yearn -- ing re -- turn -- ing to hold you in my arms, Won't go
+	love I know love, with -- out you night has lost its charms! When day is done and grass is
+	wet with twi -- light's dew, My lone -- ly heart is sink -- ing with the sun. __ Al --
+	though I miss your ten -- der kiss the whole day through, I miss you most of all when day
+	is done! __
 }
 {% endif %}

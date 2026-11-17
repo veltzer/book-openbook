@@ -5,9 +5,10 @@ default_version = "Wikifonia"
 title = "Ah! Sweet Mystery of Life"
 style = "Ballad"
 composer = "Victor Herbert"
+poet = "Rida Johnson Young"
 piece = "Andante"
 copyright = "Public domain composition"
-copyrightextra = "Source MusicXML marked Public Domain; instrumental lead sheet."
+copyrightextra = "Source MusicXML marked Public Domain; lead sheet with the original lyrics."
 typesetter = "OpenBook contributors (MusicXML import)"
 completion = "3"
 uuid = "ca9cd732-1a40-4b8f-95a7-444cb8d1c622"
@@ -17,7 +18,7 @@ location = "Wikifonia"
 [versions.Wikifonia]
 doChords = true
 doVoice = true
-doLyrics = false
+doLyrics = true
 doLyricsmore = false
 doLyricsmoremore = false
 doChordBars = false
@@ -31,7 +32,8 @@ doOwn = false
 {% if part == "Doc" %}
 	DONE:
 	- imported melody and chords from real_books_archive.gi/Wikifonia.tar.xz: Wikifonia/Victor Herbert, Rida Johnson Young - Ah! Sweet Mystery Of Life.mxl.
-	- source edition explicitly declares Public Domain; imported without lyrics.
+	- source edition explicitly declares Public Domain.
+	- put in the original lyrics from the same Wikifonia source (public domain); typos fixed.
 	- retained the written form, pickups, repeats and chord durations.
 	- source revision: http://www.wikifonia.org/node/2018/revisions/2592/view.
 	- tempo is an editorial practice suggestion, not a verified recording tempo.
@@ -107,5 +109,14 @@ doOwn = false
 	}
 	}
 	\endBar
+}
+{% endif %}
+{% if part == "LyricsWikifonia" %}\lyricmode {
+	Ah! Sweet Mys -- ter -- y Of Life, at last I've found thee, Ah! I know at last the sec --
+	ret of it "all;" All the long -- ing, seek -- ing, striv -- ing, wait -- ing, yearn --
+	ing, The burn -- ing hopes, the joy and i -- dle tears that fall! __ For "'tis" love, and
+	love a -- lone, the world is seek -- "ing;" And "'tis" love, and love a -- lone, that can
+	re -- pay! "'Tis" the an -- swer, "'tis" the end and all of liv -- ing, __ For it is love
+	a -- lone that rules for aye! For "'tis" aye! __
 }
 {% endif %}

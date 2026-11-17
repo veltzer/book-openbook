@@ -5,6 +5,7 @@ default_version = "Wikifonia"
 title = "April Showers"
 style = "Jazz"
 composer = "Louis Silvers"
+poet = "B. G. DeSylva"
 piece = "Standard"
 typesetter = "OpenBook contributors (MusicXML import)"
 completion = "3"
@@ -16,7 +17,7 @@ copyrightextra = "Archived MusicXML notice retained; underlying music is not rel
 [versions.Wikifonia]
 doChords = true
 doVoice = true
-doLyrics = false
+doLyrics = true
 doLyricsmore = false
 doLyricsmoremore = false
 doChordBars = false
@@ -37,6 +38,7 @@ doOwn = false
 	- retained written melody, chord changes, pickups, repeats and numbered endings; lyrics omitted.
 	- imported explicit 7alt symbols using the book's altered-dominant notation where present.
 	- tempo is an editorial practice suggestion.
+	- put in the original lyrics from the same Wikifonia source (published with the song, public domain in the US); typos fixed.
 	TODO:
 	- proofread the complete melody, harmony and form against the referenced PDF and check by ear.
 	- verify source attribution, copyright notice and reuse terms against the scan; only the archived MusicXML notice is retained.
@@ -176,5 +178,16 @@ doOwn = false
 	}
 	}
 	\endBar
+}
+{% endif %}
+{% if part == "LyricsWikifonia" %}\lyricmode {
+	Life is not a high -- way strewn with flow -- ers __ Still it holds a good -- ly share of
+	bliss __ When the sun gives way to Ap -- ril show -- ers __ Here's the point that you
+	should nev -- er miss __ Though Ap -- ril show -- ers __ may come your way __ they bring
+	the flow -- ers __ that bloom in May __ so if it's rain -- ing __ have no re -- grets __
+	be -- 'cause It is -- n't rain -- ing rain you know 'It's rain -- ing vi -- o -- lets, and
+	where you see clouds __ up -- on the hills __ you soon will see crowds __ of daf -- fo --
+	dils __ so keep on look -- ing for a blue -- bird and list -- ning for his song when -- ev --
+	er Ap -- ril show -- ers come a -- long __ Though Ap -- ril long __
 }
 {% endif %}

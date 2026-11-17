@@ -5,6 +5,7 @@ default_version = "Wikifonia"
 title = "What'll I Do?"
 style = "Jazz"
 composer = "Irving Berlin"
+poet = "Irving Berlin"
 piece = "Standard"
 typesetter = "OpenBook contributors (MusicXML import)"
 completion = "3"
@@ -16,8 +17,8 @@ copyrightextra = "Archived MusicXML notice retained; underlying music is not rel
 [versions.Wikifonia]
 doChords = true
 doVoice = true
-doLyrics = false
-doLyricsmore = false
+doLyrics = true
+doLyricsmore = true
 doLyricsmoremore = false
 doChordBars = false
 doGuitar = false
@@ -37,6 +38,7 @@ doOwn = false
 	- retained written melody, chord changes, pickups, repeats and numbered endings; lyrics omitted.
 	- imported explicit 7alt symbols using the book's altered-dominant notation where present.
 	- tempo is an editorial practice suggestion.
+	- put in the original lyrics from the same Wikifonia source (published with the song, public domain in the US); typos fixed.
 	TODO:
 	- proofread the complete melody, harmony and form against the referenced PDF and check by ear.
 	- verify source attribution, copyright notice and reuse terms against the scan; only the archived MusicXML notice is retained.
@@ -161,5 +163,19 @@ doOwn = false
 	c'2. ~ |
 	c'2. |
 	\endBar
+}
+{% endif %}
+{% if part == "LyricsWikifonia" %}\lyricmode {
+	Gone is the ro -- mance that was so di -- vine. __ "'Tis" bro -- ken and can -- not be
+	men -- ded. You must go your way and I must go mine. __ But now that our love -- dreams
+	have end -- ed. What -- "'ll" I do __ when you __ are far __ a -- way __ and I __ am blue,
+	What -- "'ll" I do? __ What -- "'ll" I do? __ What -- "'ll" I do __ with just __ a pho --
+	to -- graph __ to tell __ my trou -- bles to? __ When I'm a -- lone __ with on -- ly
+	dreams __ of you __ that won't __ come true, What -- "'ll" I do? __
+}
+{% endif %}
+{% if part == "LyricsmoreWikifonia" %}\lyricmode {
+	_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ do __
+	when I __ am won __ d'ring who __ is kiss -- ing you, What -- "'ll" I
 }
 {% endif %}

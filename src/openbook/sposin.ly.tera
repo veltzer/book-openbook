@@ -4,7 +4,8 @@ default_version = "Wikifonia"
 [attributes]
 title = "S'posin'"
 style = "Jazz"
-composer = "Andy Razaf, Paul Denniker"
+composer = "Paul Denniker"
+poet = "Andy Razaf"
 piece = "Standard"
 typesetter = "OpenBook contributors (MusicXML import)"
 completion = "3"
@@ -16,7 +17,7 @@ copyrightextra = "Archived MusicXML notice retained; underlying music is not rel
 [versions.Wikifonia]
 doChords = true
 doVoice = true
-doLyrics = false
+doLyrics = true
 doLyricsmore = false
 doLyricsmoremore = false
 doChordBars = false
@@ -37,6 +38,7 @@ doOwn = false
 	- retained written melody, chord changes, pickups, repeats and numbered endings; lyrics omitted.
 	- imported explicit 7alt symbols using the book's altered-dominant notation where present.
 	- tempo is an editorial practice suggestion.
+	- put in the original lyrics from the same Wikifonia source (published with the song, public domain in the US); typos fixed.
 	TODO:
 	- proofread the complete melody, harmony and form against the referenced PDF and check by ear.
 	- verify source attribution, copyright notice and reuse terms against the scan; only the archived MusicXML notice is retained.
@@ -125,5 +127,13 @@ doOwn = false
 	es'1 ~ |
 	es'2. r4 |
 	\endBar
+}
+{% endif %}
+{% if part == "LyricsWikifonia" %}\lyricmode {
+	S'pos -- in I should fall in love with you, __ do you think that you could love me too. __
+	S'pos -- in' I should hold you and ca -- ress you __ would it im -- press you __ or dis --
+	tress you, __ s'pos -- in' I should say for you I yearn, __ would you think I'm speak --
+	ing out of turn. __ and s'pos -- in' I'd de -- clare it, would you take my love and share
+	it, I'm not s'pos -- in', I'm in love with you __
 }
 {% endif %}

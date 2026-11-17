@@ -4,7 +4,8 @@ default_version = "Wikifonia"
 [attributes]
 title = "Please Don't Talk About Me When I'm Gone"
 style = "Jazz"
-composer = "Bee Palmer"
+composer = "Sam H. Stept"
+poet = "Sidney Clare, Bee Palmer"
 piece = "Standard"
 typesetter = "OpenBook contributors (MusicXML import)"
 completion = "3"
@@ -16,7 +17,7 @@ copyrightextra = "Archived MusicXML notice retained; underlying music is not rel
 [versions.Wikifonia]
 doChords = true
 doVoice = true
-doLyrics = false
+doLyrics = true
 doLyricsmore = false
 doLyricsmoremore = false
 doChordBars = false
@@ -37,6 +38,7 @@ doOwn = false
 	- retained written melody, chord changes, pickups, repeats and numbered endings; lyrics omitted.
 	- imported explicit 7alt symbols using the book's altered-dominant notation where present.
 	- tempo is an editorial practice suggestion.
+	- put in the original lyrics from the same Wikifonia source (published with the song, public domain in the US); typos fixed.
 	TODO:
 	- proofread the complete melody, harmony and form against the referenced PDF and check by ear.
 	- verify source attribution, copyright notice and reuse terms against the scan; only the archived MusicXML notice is retained.
@@ -144,5 +146,14 @@ doOwn = false
 	}
 	es''2. r4 |
 	\endBar
+}
+{% endif %}
+{% if part == "LyricsWikifonia" %}\lyricmode {
+	Please don't talk a -- bout __ me when I'm gone, __ Oh, hon -- ey, though our friend --
+	ship ceas -- es, from now "on;" __ And, lis -- ten, if you can't say an -- y -- thing real
+	nice, __ It's bet -- ter not to talk at all, __ is my ad -- vice. __ We're part -- ing,
+	you go your __ way I'll go mine, __ it's best that we "do;" __ Here's a kiss! __ I hope
+	that this __ brings lots of luck to you. Makes no diff -- "'rence" how __ I car -- ry on, __
+	Re -- mem -- ber, please don't talk a -- bout me when I'm gone. gone. __
 }
 {% endif %}

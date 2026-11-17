@@ -5,6 +5,7 @@ default_version = "Wikifonia"
 title = "The Old Rugged Cross"
 style = "Jazz"
 composer = "George Bennard"
+poet = "George Bennard"
 piece = "Standard"
 typesetter = "OpenBook contributors (MusicXML import)"
 completion = "3"
@@ -16,8 +17,8 @@ copyrightextra = "Archived MusicXML notice retained; underlying music is not rel
 [versions.Wikifonia]
 doChords = true
 doVoice = true
-doLyrics = false
-doLyricsmore = false
+doLyrics = true
+doLyricsmore = true
 doLyricsmoremore = false
 doChordBars = false
 doGuitar = false
@@ -37,6 +38,7 @@ doOwn = false
 	- retained written melody, chord changes, pickups, repeats and numbered endings; lyrics omitted.
 	- imported explicit 7alt symbols using the book's altered-dominant notation where present.
 	- tempo is an editorial practice suggestion.
+	- put in the original lyrics from the same Wikifonia source (published with the song, public domain in the US); typos fixed.
 	TODO:
 	- proofread the complete melody, harmony and form against the referenced PDF and check by ear.
 	- verify source attribution, copyright notice and reuse terms against the scan; only the archived MusicXML notice is retained.
@@ -99,5 +101,19 @@ doOwn = false
 	bes'2. ~ |
 	bes'4 r2 |
 	\endBar
+}
+{% endif %}
+{% if part == "LyricsWikifonia" %}\lyricmode {
+	On a hill far a -- way stood an old rug -- ged cross the _ em -- blem of suff -- ring and
+	shame __ and I love that old cross where the dear -- est and best for a world of lost sin --
+	ners was slain __ So I'll cher -- ish the old rug -- ged cross _ _ _ till my troph -- ies
+	at last I lay down __ I will cling to the old rug -- ged cross _ _ _ and ex -- change it
+	some day for a crown __
+}
+{% endif %}
+{% if part == "LyricsmoreWikifonia" %}\lyricmode {
+	_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ So
+	I'll cher -- ish the cross, the old rug -- ged cross _ _ _ _ _ _ _ _ _ _ I will cling to
+	the cross, the old rug -- ged cross
 }
 {% endif %}

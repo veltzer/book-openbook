@@ -5,9 +5,10 @@ default_version = "Wikifonia"
 title = "After the Ball"
 style = "Waltz"
 composer = "Charles K. Harris"
+poet = "Charles K. Harris"
 piece = "Moderato"
 copyright = "Public domain composition"
-copyrightextra = "Source MusicXML marked Public Domain; instrumental lead sheet."
+copyrightextra = "Source MusicXML marked Public Domain; lead sheet with the original lyrics."
 typesetter = "OpenBook contributors (MusicXML import)"
 completion = "3"
 uuid = "4fecd997-d6d7-4d12-8adb-edeaf4cfcd95"
@@ -17,8 +18,8 @@ location = "Wikifonia"
 [versions.Wikifonia]
 doChords = true
 doVoice = true
-doLyrics = false
-doLyricsmore = false
+doLyrics = true
+doLyricsmore = true
 doLyricsmoremore = false
 doChordBars = false
 doGuitar = false
@@ -31,7 +32,8 @@ doOwn = false
 {% if part == "Doc" %}
 	DONE:
 	- imported melody and chords from real_books_archive.gi/Wikifonia.tar.xz: Wikifonia/Charles K. Harris - After The Ball.mxl.
-	- source edition explicitly declares Public Domain; imported without lyrics.
+	- source edition explicitly declares Public Domain.
+	- put in the original lyrics from the same Wikifonia source (public domain); typos fixed.
 	- retained the written form, pickups, repeats and chord durations.
 	- source revision: http://www.wikifonia.org/node/2017/revisions/2591/view.
 	- tempo is an editorial practice suggestion, not a verified recording tempo.
@@ -249,5 +251,24 @@ doOwn = false
 	g'2. ~ |
 	g'4 r4 r4 |
 	\endBar
+}
+{% endif %}
+{% if part == "LyricsWikifonia" %}\lyricmode {
+	A lit -- tle maid -- en climbed an old man's knee, __ Begged for a sto -- ry, "'Do," un --
+	cle, please! __ Why are you sin -- "gle;" why live a -- lone? __ Have you no ba -- bies,
+	have you no home?' __ "'I" had a sweet -- heart, years, years a -- "go;" __ Where she is
+	now, pet, you will soon know. __ List to the sto -- ry, I'll tell it all, __ I be --
+	lieved her faith -- less, Af -- ter The Ball.' __ Af -- ter The Ball is o -- ver, Af --
+	ter the break of morn. __ Af -- ter the danc -- ers' leav -- "ing;" Af -- ter the stars
+	are "gone;" __ Man -- y a heart is ach -- ing, If you could read them "all;" __ Man -- y
+	the hopes that have van -- ish'd Af -- ter The Ball. __
+}
+{% endif %}
+{% if part == "LyricsmoreWikifonia" %}\lyricmode {
+	"'Bright" lights were flash -- ing in the grand ball -- room, __ Soft -- ly the mu --
+	sic, play -- ing sweet tunes, __ There came my sweet -- heart, my love, my own, __ "'I"
+	wish some wa -- "ter;" leave me a -- lone.' __ When I re -- turned, dear, there stood a
+	man, __ Kiss -- ing my sweet -- heart, as lov -- ers can. __ Down fell the glass, pet, bro --
+	ken that's all, __ Just __ _ as my heart was, Af -- ter The Ball.' __
 }
 {% endif %}

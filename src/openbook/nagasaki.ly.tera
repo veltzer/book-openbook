@@ -4,7 +4,8 @@ default_version = "Wikifonia"
 [attributes]
 title = "Nagasaki"
 style = "Jazz"
-composer = "Harry Warren, Mort Dixon"
+composer = "Harry Warren"
+poet = "Mort Dixon"
 piece = "Standard"
 typesetter = "OpenBook contributors (MusicXML import)"
 completion = "3"
@@ -16,7 +17,7 @@ copyrightextra = "Archived MusicXML notice retained; underlying music is not rel
 [versions.Wikifonia]
 doChords = true
 doVoice = true
-doLyrics = false
+doLyrics = true
 doLyricsmore = false
 doLyricsmoremore = false
 doChordBars = false
@@ -37,6 +38,7 @@ doOwn = false
 	- retained written melody, chord changes, pickups, repeats and numbered endings; lyrics omitted.
 	- imported explicit 7alt symbols using the book's altered-dominant notation where present.
 	- tempo is an editorial practice suggestion.
+	- put in the original lyrics from the same Wikifonia source (published with the song, public domain in the US); typos fixed.
 	TODO:
 	- proofread the complete melody, harmony and form against the referenced PDF and check by ear.
 	- verify source attribution, copyright notice and reuse terms against the scan; only the archived MusicXML notice is retained.
@@ -125,5 +127,17 @@ doOwn = false
 	g'8 a'8 fis'8 g'8 es''8 d''4. |
 	c''2. r4 |
 	\endBar
+}
+{% endif %}
+{% if part == "LyricsWikifonia" %}\lyricmode {
+	Hot gin -- ger and dy -- na -- mite __ There's no -- thing but that at night __ Back in
+	Na -- ga -- sak -- i where the fel -- lers chew to -- bacc -- y And the wom -- en wick --
+	y wack -- y woo. The way they can en -- ter -- tain __ Would hur -- ry a hur -- ri -- cane __
+	Back in Na -- ga -- sak -- i where the fel -- lers chew to -- bac -- cy And the wom -- en
+	wick -- y wack -- y woo. Oh! Fu -- ji -- am -- a You get a mom -- mer, and then your troub --
+	les in -- crease. __ In some pa -- go -- da She ord -- ers so -- da The earth shakes, milk
+	shakes ten cents a piece. They kiss -- ee and hug -- ee nice __ By jin -- go it's worth
+	the price __ Back in Na -- ga -- sak -- i where the fel -- lers chew to -- bac -- cy and
+	the wo -- men wick -- y wack -- y woo.
 }
 {% endif %}

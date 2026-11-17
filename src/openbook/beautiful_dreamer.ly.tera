@@ -5,9 +5,10 @@ default_version = "Wikifonia"
 title = "Beautiful Dreamer"
 style = "Ballad"
 composer = "Stephen Foster"
+poet = "Stephen Foster"
 piece = "Andante"
 copyright = "Public domain composition"
-copyrightextra = "Source MusicXML marked Public Domain; instrumental lead sheet."
+copyrightextra = "Source MusicXML marked Public Domain; lead sheet with the original lyrics."
 typesetter = "OpenBook contributors (MusicXML import)"
 completion = "3"
 uuid = "e73adfc3-1e42-4499-9a70-69b677f0176d"
@@ -17,8 +18,8 @@ location = "Wikifonia"
 [versions.Wikifonia]
 doChords = true
 doVoice = true
-doLyrics = false
-doLyricsmore = false
+doLyrics = true
+doLyricsmore = true
 doLyricsmoremore = false
 doChordBars = false
 doGuitar = false
@@ -31,7 +32,8 @@ doOwn = false
 {% if part == "Doc" %}
 	DONE:
 	- imported melody and chords from real_books_archive.gi/Wikifonia.tar.xz: Wikifonia/Stephen Foster - Beautiful Dreamer.mxl.
-	- source edition explicitly declares Public Domain; imported without lyrics.
+	- source edition explicitly declares Public Domain.
+	- put in the original lyrics from the same Wikifonia source (public domain); typos fixed.
 	- retained the written form, pickups, repeats and chord durations.
 	- source revision: http://wikifonia.org/node/4386/revisions/14466/view.
 	- tempo is an editorial practice suggestion, not a verified recording tempo.
@@ -143,5 +145,17 @@ doOwn = false
 	c'2. ~ |
 	c'2. |
 	\endBar
+}
+{% endif %}
+{% if part == "LyricsWikifonia" %}\lyricmode {
+	Beau -- ti -- ful dream -- er wake un -- to me __ star -- light and dew -- drops are wait --
+	ing for thee __ way! __ Beau -- ti -- ful dream -- er queen of my song __ list while I woo
+	thee with soft mel -- o -- dy __ thee __ Beau -- ti -- ful dream -- er a -- wake un -- to
+	me __
+}
+{% endif %}
+{% if part == "LyricsmoreWikifonia" %}\lyricmode {
+	Sounds of the rude world heard in the day __ Lull'd by the moon -- light have all passed
+	a
 }
 {% endif %}

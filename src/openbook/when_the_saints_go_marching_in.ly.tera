@@ -5,9 +5,10 @@ default_version = "Wikifonia"
 title = "When the Saints Go Marching In"
 style = "Jazz"
 composer = "Traditional"
+poet = "Traditional"
 piece = "Swing"
 copyright = "Traditional composition; public domain in the US"
-copyrightextra = "Instrumental lead sheet; later lyrics and arrangements are excluded."
+copyrightextra = "Lead sheet with the traditional lyrics; later arrangements are excluded."
 typesetter = "OpenBook contributors (MusicXML import)"
 completion = "3"
 uuid = "5e25d157-d337-52bc-b992-e2e510282a5a"
@@ -17,7 +18,7 @@ remark = "Copyright status outside the US may differ."
 [versions.Wikifonia]
 doChords = true
 doVoice = true
-doLyrics = false
+doLyrics = true
 doLyricsmore = false
 doLyricsmoremore = false
 doChordBars = false
@@ -34,7 +35,8 @@ doOwn = false
 	- local source: real_books_archive.gi/Wikifonia.tar.xz: Wikifonia/Traditional - When the Saints go Marching-in.mxl.
 	- jazz real/fake-book references: Firehouse_Jazz_Band:338.
 	- source revision: http://wikifonia.org/node/5813/revisions/24013/view.
-	- retained written measures, pickups, repeats and endings; lyrics and accompaniment omitted.
+	- retained written measures, pickups, repeats and endings; accompaniment omitted.
+	- put in the traditional lyrics from the Wikifonia lead sheet (real_books_archive.gi/Wikifonia.tar.xz: Wikifonia/Traditional - When the Saints Go Marching In.mxl), aligned to this melody (public domain in the US).
 	- the original composition is public domain in the US; no claim is made about later editions.
 	- US term reference: https://cspd.law.duke.edu/publicdomainday/2026.
 	- tempo is an editorial practice suggestion.
@@ -112,5 +114,10 @@ doOwn = false
 	}
 	f'4 r4 r2 |
 	\endBar
+}
+{% endif %}
+{% if part == "LyricsWikifonia" %}\lyricmode {
+	Oh, when the saints go march -- in' in, oh, when the saints go march -- in' in, oh, Lord, I
+	want to be in that num -- ber, when the saints go march -- in' in. Oh, when the in. __
 }
 {% endif %}

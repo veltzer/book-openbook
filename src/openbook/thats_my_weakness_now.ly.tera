@@ -5,6 +5,7 @@ default_version = "Wikifonia"
 title = "That's My Weakness Now"
 style = "Jazz"
 composer = "Sam H. Stept, Bud Green"
+poet = "Sam H. Stept, Bud Green"
 piece = "Standard"
 typesetter = "OpenBook contributors (MusicXML import)"
 completion = "3"
@@ -16,8 +17,8 @@ copyrightextra = "Archived MusicXML notice retained; underlying music is not rel
 [versions.Wikifonia]
 doChords = true
 doVoice = true
-doLyrics = false
-doLyricsmore = false
+doLyrics = true
+doLyricsmore = true
 doLyricsmoremore = false
 doChordBars = false
 doGuitar = false
@@ -37,6 +38,7 @@ doOwn = false
 	- retained written melody, chord changes, pickups, repeats and numbered endings; lyrics omitted.
 	- imported explicit 7alt symbols using the book's altered-dominant notation where present.
 	- tempo is an editorial practice suggestion.
+	- put in the original lyrics from the same Wikifonia source (published with the song, public domain in the US); typos fixed.
 	TODO:
 	- proofread the complete melody, harmony and form against the referenced PDF and check by ear.
 	- verify source attribution, copyright notice and reuse terms against the scan; only the archived MusicXML notice is retained.
@@ -137,5 +139,19 @@ doOwn = false
 	r1 |
 	r1 |
 	\endBar
+}
+{% endif %}
+{% if part == "LyricsWikifonia" %}\lyricmode {
+	She's got eyes of blue I nev -- er cared for eyes of blue, but she's got eyes of blue and
+	that's my weak -- ness now. She's got dim -- pled cheeks I nev -- er cared for dim -- pled
+	cheeks but she's got dim -- pled cheeks and that's my weak -- ness now, Oh my, __ oh me, __
+	I should be good, I would be good but __ _ GEE She likes to bill and coo I nev -- er liked
+	to bill and coo but she likes to bill and coo and that's my weak -- ness now __
+}
+{% endif %}
+{% if part == "LyricsmoreWikifonia" %}\lyricmode {
+	She likes long -- ered nights, I nev -- er cared for long -- ered nights, but she likes
+	long -- ered nights and that's my weak -- ness now. She's likes park and play I nev -- er
+	liked to park and play but she likes park and play and that's my weak -- ness now.
 }
 {% endif %}

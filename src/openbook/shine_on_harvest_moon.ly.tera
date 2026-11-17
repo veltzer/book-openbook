@@ -5,6 +5,7 @@ default_version = "Wikifonia"
 title = "Shine On Harvest Moon"
 style = "Jazz"
 composer = "Nora Bayes, Jack Norworth"
+poet = "Nora Bayes, Jack Norworth"
 piece = "Standard"
 typesetter = "OpenBook contributors (MusicXML import)"
 completion = "3"
@@ -16,7 +17,7 @@ copyrightextra = "Archived MusicXML notice retained; underlying music is not rel
 [versions.Wikifonia]
 doChords = true
 doVoice = true
-doLyrics = false
+doLyrics = true
 doLyricsmore = false
 doLyricsmoremore = false
 doChordBars = false
@@ -35,6 +36,7 @@ doOwn = false
 	- retained the archived MusicXML rights notice; no redistribution permission is asserted.
 	- retained written melody, chord changes, pickups, repeats and numbered endings; lyrics, slurs, dynamics and articulations other than fermatas omitted.
 	- tempo is an editorial practice suggestion.
+	- put in the original lyrics from the same Wikifonia source (published with the song, public domain in the US); typos fixed.
 	TODO:
 	- proofread the complete melody, harmony and form against a printed edition and check by ear.
 	- verify source attribution, copyright notice and reuse terms; only the archived MusicXML notice is retained.
@@ -125,5 +127,14 @@ doOwn = false
 	g'4. d'8 e'8 d'8 e'8 g'8 ~ |
 	g'2. r4 |
 	\endBar
+}
+{% endif %}
+{% if part == "LyricsWikifonia" %}\lyricmode {
+	Oh, shine on, shine on Har -- vest moon __ up in the sky, I ain't had no lov -- in' since
+	Jan -- u -- ar -- y, Feb -- ru -- ar -- y, June or Jul -- y. __ Snow time ain't no time to
+	stay __ out -- doors and spoon, So shine on, shine on har -- vest moon for me and my gal. __
+	Oh, shine on, shine on Har -- vest moon __ up in the sky, I ain't had no lov -- in' since
+	Jan -- u -- ar -- y, Feb -- ru -- ar -- y, June or Jul -- y. __ Snow time ain't no time to
+	stay __ out -- doors and spoon, So shine on, shine on har -- vest moon for me and my gal. __
 }
 {% endif %}

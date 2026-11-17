@@ -5,6 +5,7 @@ default_version = "Wikifonia"
 title = "A Pretty Girl Is Like a Melody"
 style = "Jazz"
 composer = "Irving Berlin"
+poet = "Irving Berlin"
 piece = "Standard"
 typesetter = "OpenBook contributors (MusicXML import)"
 completion = "3"
@@ -16,7 +17,7 @@ copyrightextra = "Archived MusicXML notice retained; underlying music is not rel
 [versions.Wikifonia]
 doChords = true
 doVoice = true
-doLyrics = false
+doLyrics = true
 doLyricsmore = false
 doLyricsmoremore = false
 doChordBars = false
@@ -35,6 +36,7 @@ doOwn = false
 	- retained the archived MusicXML rights notice; no redistribution permission is asserted.
 	- retained written melody, chord changes, pickups, repeats and numbered endings; lyrics, slurs, dynamics and articulations other than fermatas omitted.
 	- tempo is an editorial practice suggestion.
+	- put in the original lyrics from the same Wikifonia source (published with the song, public domain in the US); typos fixed.
 	TODO:
 	- proofread the complete melody, harmony and form against a printed edition and check by ear.
 	- verify source attribution, copyright notice and reuse terms; only the archived MusicXML notice is retained.
@@ -125,5 +127,13 @@ doOwn = false
 	f'1 ~ |
 	f'4 r4 r2 |
 	\endBar
+}
+{% endif %}
+{% if part == "LyricsWikifonia" %}\lyricmode {
+	A pret -- ty girl __ is like a mel -- o -- dy __ that haunts you night and day __ just
+	like the strain of a haunt -- ing re -- frain she'll start up -- on a mar -- a -- thon and
+	run -- a -- round your brain you can't es -- cape __ she's in your mem -- o -- ry __ by
+	morn -- ing night and noon __ she will leave you and then come back a -- gain a pret -- ty
+	girl is just like a pret -- ty tune. __
 }
 {% endif %}

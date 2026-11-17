@@ -5,9 +5,10 @@ default_version = "Wikifonia"
 title = "Auld Lang Syne"
 style = "Ballad"
 composer = "Traditional"
+poet = "Robert Burns"
 piece = "Moderato"
 copyright = "Public domain composition"
-copyrightextra = "Source MusicXML marked Public Domain; instrumental lead sheet."
+copyrightextra = "Source MusicXML marked Public Domain; lead sheet with the original lyrics."
 typesetter = "OpenBook contributors (MusicXML import)"
 completion = "3"
 uuid = "041e3959-57ba-43aa-b124-f008a9b0233b"
@@ -17,7 +18,7 @@ location = "Ultimate-Fake-Book-C:57, TheBook:325"
 [versions.Wikifonia]
 doChords = true
 doVoice = true
-doLyrics = false
+doLyrics = true
 doLyricsmore = false
 doLyricsmoremore = false
 doChordBars = false
@@ -31,7 +32,8 @@ doOwn = false
 {% if part == "Doc" %}
 	DONE:
 	- imported melody and chords from real_books_archive.gi/Wikifonia.tar.xz: Wikifonia/Traditional, Robert Burns - Auld Lang Syne.mxl.
-	- source edition explicitly declares Public Domain; imported without lyrics.
+	- source edition explicitly declares Public Domain.
+	- put in the original lyrics from the same Wikifonia source (public domain); typos fixed.
 	- retained the written form, pickups, repeats and chord durations.
 	- source revision: http://wikifonia.org/node/870/revisions/1155/view.
 	- tempo is an editorial practice suggestion, not a verified recording tempo.
@@ -123,5 +125,14 @@ doOwn = false
 	f'4. ( d'8 ) d'4 ( c'4 ) |
 	f'2. r4 |
 	\endBar
+}
+{% endif %}
+{% if part == "LyricsWikifonia" %}\lyricmode {
+	Should auld ac -- quain't -- ance be for -- got, and nev -- er brought to mind? Should
+	auld ac -- quain't -- ance be for -- got and days of Auld Lang Syne, For Auld __ Lang __
+	Syne, my dear, For Auld __ Lang __ Syne, We'll take a cup of kind -- ness yet, For Auld __
+	Lang __ Syne We twa' ha'e ran a -- boot the brae, and pu'd the Gow -- ans fine. We've wand --
+	ered mony a wear -- y foot sin Auld __ Lang __ Syne. For Auld __ Lang __ Syne, my dear,
+	For Auld __ Lang __ Syne, we'll take a cup of kind -- ness yet, for Auld __ Lang __ Syne.
 }
 {% endif %}

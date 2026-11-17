@@ -5,6 +5,7 @@ default_version = "Wikifonia"
 title = "I may be wrong"
 style = "Jazz"
 composer = "Henry Sullivan"
+poet = "Harry Ruskin"
 piece = "Standard"
 typesetter = "OpenBook contributors (MusicXML import)"
 completion = "3"
@@ -16,7 +17,7 @@ copyrightextra = "Archived MusicXML notice retained; underlying music is not rel
 [versions.Wikifonia]
 doChords = true
 doVoice = true
-doLyrics = false
+doLyrics = true
 doLyricsmore = false
 doLyricsmoremore = false
 doChordBars = false
@@ -37,6 +38,7 @@ doOwn = false
 	- retained written melody, chord changes, pickups, repeats and numbered endings; lyrics omitted.
 	- imported explicit 7alt symbols using the book's altered-dominant notation where present.
 	- tempo is an editorial practice suggestion.
+	- put in the original lyrics from the same Wikifonia source (published with the song, public domain in the US); typos fixed.
 	TODO:
 	- proofread the complete melody, harmony and form against the referenced PDF and check by ear.
 	- verify source attribution, copyright notice and reuse terms against the scan; only the archived MusicXML notice is retained.
@@ -125,5 +127,13 @@ doOwn = false
 	r4 g'4 g'4 f'4 |
 	f'2. r4 |
 	\endBar
+}
+{% endif %}
+{% if part == "LyricsWikifonia" %}\lyricmode {
+	I may be wrong, but I think you're won -- der -- ful I may be wrong but I think you're
+	swell I like your style say I think its mar -- vel -- ous I'm al -- ways wrong so how can
+	I tell? all of my shirts are un -- sight -- ly all of my ties are a crime if dear in you
+	I've picked right -- ly its the ve _ ry first time you came a -- long say I think you're
+	won -- der -- ful I think you're grand but I may be wrong
 }
 {% endif %}

@@ -5,9 +5,10 @@ default_version = "Wikifonia"
 title = "Choucoune"
 style = "Latin"
 composer = "Michel Mauleart Monton"
+poet = "Oswald Durand"
 piece = "Moderato"
 copyright = "Public domain composition"
-copyrightextra = "Source MusicXML marked Public Domain; instrumental lead sheet."
+copyrightextra = "Source MusicXML marked Public Domain; lead sheet with the original lyrics."
 typesetter = "OpenBook contributors (MusicXML import)"
 completion = "3"
 uuid = "2dbc649d-a374-42b4-97b8-8756c10de7f9"
@@ -17,7 +18,7 @@ location = "Wikifonia"
 [versions.Wikifonia]
 doChords = true
 doVoice = true
-doLyrics = false
+doLyrics = true
 doLyricsmore = false
 doLyricsmoremore = false
 doChordBars = false
@@ -31,7 +32,8 @@ doOwn = false
 {% if part == "Doc" %}
 	DONE:
 	- imported melody and chords from real_books_archive.gi/Wikifonia.tar.xz: Wikifonia/Michel Maul?art Monton, Oswald Durand - Choucoune.mxl.
-	- source edition explicitly declares Public Domain; imported without lyrics.
+	- source edition explicitly declares Public Domain.
+	- put in the original lyrics from the same Wikifonia source (public domain); typos fixed.
 	- retained the written form, pickups, repeats and chord durations.
 	- source revision: http://wikifonia.org/node/1895/revisions/2430/view.
 	- tempo is an editorial practice suggestion, not a verified recording tempo.
@@ -133,5 +135,13 @@ doOwn = false
 	}
 	c''4 r4 r2 |
 	\endBar
+}
+{% endif %}
+{% if part == "LyricsWikifonia" %}\lyricmode {
+	Dé -- yé on gwo touf pen -- gwen Lot jou mwen kon -- tré Chou -- coune Li sou -- ri lé li
+	wé mwen Mwen di "'A" syel la bel moun' Li di ou trou -- vé sa chè Li di ou tou -- vé sa
+	chè Ti zwé -- zo Lan bwa li ka pé'l kou -- té Ti zwé -- zo Lan bwa ki ka pé'l kou -- té Lo
+	mwen son -- jé sa Mwen ga -- gné la penn' Ka di pi jou sa Dé pié mwen dan chenn' Lo mwen
+	son jé sa Mwen ga gné la penn' Dé pié mwen dan chenn' Chou chenn' __
 }
 {% endif %}

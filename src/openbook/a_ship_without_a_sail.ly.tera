@@ -5,6 +5,7 @@ default_version = "Wikifonia"
 title = "A Ship Without A Sail"
 style = "Jazz"
 composer = "Richard Rodgers"
+poet = "Lorenz Hart"
 piece = "Standard"
 typesetter = "OpenBook contributors (MusicXML import)"
 completion = "3"
@@ -16,7 +17,7 @@ copyrightextra = "Archived MusicXML notice retained; underlying music is not rel
 [versions.Wikifonia]
 doChords = true
 doVoice = true
-doLyrics = false
+doLyrics = true
 doLyricsmore = false
 doLyricsmoremore = false
 doChordBars = false
@@ -37,6 +38,7 @@ doOwn = false
 	- retained written melody, chord changes, pickups, repeats and numbered endings; lyrics omitted.
 	- imported explicit 7alt symbols using the book's altered-dominant notation where present.
 	- tempo is an editorial practice suggestion.
+	- put in the original lyrics from the same Wikifonia source (published with the song, public domain in the US); typos fixed.
 	TODO:
 	- proofread the complete melody, harmony and form against the referenced PDF and check by ear.
 	- verify source attribution, copyright notice and reuse terms against the scan; only the archived MusicXML notice is retained.
@@ -181,5 +183,17 @@ doOwn = false
 	es'1 ~ |
 	es'4 r4 r2 |
 	\endBar
+}
+{% endif %}
+{% if part == "LyricsWikifonia" %}\lyricmode {
+	I don't know what day it is, Or if it's dark or "fair;" Some -- how, that's just the way
+	it is, And I don't real -- ly care. __ I go to this or that place, I seem a -- live and
+	"well;" My head is just a hat place, My breast an emp -- ty shell! __ And I've a fad -- ed
+	dream to sell. __ All a -- lone, all at sea! Why does no -- bod -- y care for me, When
+	there's no love to hold __ my love? Why is my heart __ so frail, Like a ship with -- out a
+	sail? __ Out on the o -- cean, sail -- ors can use a "chart;" __ I'm on the o -- cean guid --
+	ed by just a -- lone -- ly heart. Still a -- lone, still at sea! Still there's no one to
+	care for me, When there's no -- one to hold __ _ _ my hand. Life is a love -- _ less
+	"tale;" For a ship with -- out a sail. __ sail. __
 }
 {% endif %}

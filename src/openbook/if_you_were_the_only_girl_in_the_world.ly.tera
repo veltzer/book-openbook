@@ -5,6 +5,7 @@ default_version = "Wikifonia"
 title = "If You Were The Only Girl In The World"
 style = "Jazz"
 composer = "Nat D. Ayer"
+poet = "Clifford Grey"
 piece = "Standard"
 typesetter = "OpenBook contributors (MusicXML import)"
 completion = "3"
@@ -16,7 +17,7 @@ copyrightextra = "Archived MusicXML notice retained; underlying music is not rel
 [versions.Wikifonia]
 doChords = true
 doVoice = true
-doLyrics = false
+doLyrics = true
 doLyricsmore = false
 doLyricsmoremore = false
 doChordBars = false
@@ -37,6 +38,7 @@ doOwn = false
 	- retained written melody, chord changes, pickups, repeats and numbered endings; lyrics omitted.
 	- imported explicit 7alt symbols using the book's altered-dominant notation where present.
 	- tempo is an editorial practice suggestion.
+	- put in the original lyrics from the same Wikifonia source (published with the song, public domain in the US); typos fixed.
 	TODO:
 	- proofread the complete melody, harmony and form against the referenced PDF and check by ear.
 	- verify source attribution, copyright notice and reuse terms against the scan; only the archived MusicXML notice is retained.
@@ -143,5 +145,13 @@ doOwn = false
 	c'2. ~ |
 	c'4 r2 |
 	\endBar
+}
+{% endif %}
+{% if part == "LyricsWikifonia" %}\lyricmode {
+	If you were the on -- ly girl in the world and I were the on -- ly boy __ Noth -- ing
+	else would mat -- ter in the world to -- day we __ could go on lov -- ing in the same old
+	way a gar -- den of E -- den just made for two with noth -- ing to mar our joy __ I would
+	say such won -- der -- ful things to you there would be such won -- der -- ful things to
+	do if you were the on -- ly girl in the world and I were the on -- ly boy. __
 }
 {% endif %}

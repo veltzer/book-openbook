@@ -4,7 +4,8 @@ default_version = "Wikifonia"
 [attributes]
 title = "If I Could Be With You (One Hour Tonight)"
 style = "Jazz"
-composer = "Jimmy Johnson"
+composer = "James P. Johnson"
+poet = "Henry Creamer"
 piece = "Standard"
 typesetter = "OpenBook contributors (MusicXML import)"
 completion = "3"
@@ -16,7 +17,7 @@ copyrightextra = "Archived MusicXML notice retained; underlying music is not rel
 [versions.Wikifonia]
 doChords = true
 doVoice = true
-doLyrics = false
+doLyrics = true
 doLyricsmore = false
 doLyricsmoremore = false
 doChordBars = false
@@ -37,6 +38,7 @@ doOwn = false
 	- retained written melody, chord changes, pickups, repeats and numbered endings; lyrics omitted.
 	- imported explicit 7alt symbols using the book's altered-dominant notation where present.
 	- tempo is an editorial practice suggestion.
+	- put in the original lyrics from the same Wikifonia source (published with the song, public domain in the US); typos fixed.
 	TODO:
 	- proofread the complete melody, harmony and form against the referenced PDF and check by ear.
 	- verify source attribution, copyright notice and reuse terms against the scan; only the archived MusicXML notice is retained.
@@ -133,5 +135,16 @@ doOwn = false
 	}
 	}
 	\endBar
+}
+{% endif %}
+{% if part == "LyricsWikifonia" %}\lyricmode {
+	I'm so blue I don't know what to "do;" All day thru I'm pin -- ing just for you. I did
+	wrong when I let you go a -- way, For now I grieve a -- bout you night and day. I'm un --
+	hap -- py and dis -- sat -- is -- fied, __ But I'd be hap -- py if I had you by my side. __
+	If I could be with you I'd love you strong, __ If I could be with you I'd love you long __
+	I want you to know __ I would -- n't go __ Un -- til I told you hon -- ey why I love you
+	so. __ If I could be with you one hour to -- night, __ If I was free to do the things I
+	might __ I tell -- ing you true __ I'd be an -- y -- thing but blue If I could be with
+	you. If I could you.
 }
 {% endif %}

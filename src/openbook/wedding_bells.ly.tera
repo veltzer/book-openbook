@@ -4,7 +4,8 @@ default_version = "Wikifonia"
 [attributes]
 title = "Wedding Bells"
 style = "Jazz"
-composer = "Irving Kahal, Willie Raskin, Sammy Fain,"
+composer = "Sammy Fain"
+poet = "Irving Kahal, Willie Raskin"
 piece = "Standard"
 typesetter = "OpenBook contributors (MusicXML import)"
 completion = "3"
@@ -16,7 +17,7 @@ copyrightextra = "Archived MusicXML notice retained; underlying music is not rel
 [versions.Wikifonia]
 doChords = true
 doVoice = true
-doLyrics = false
+doLyrics = true
 doLyricsmore = false
 doLyricsmoremore = false
 doChordBars = false
@@ -37,6 +38,7 @@ doOwn = false
 	- retained written melody, chord changes, pickups, repeats and numbered endings; lyrics omitted.
 	- imported explicit 7alt symbols using the book's altered-dominant notation where present.
 	- tempo is an editorial practice suggestion.
+	- put in the original lyrics from the same Wikifonia source (published with the song, public domain in the US); typos fixed.
 	TODO:
 	- proofread the complete melody, harmony and form against the referenced PDF and check by ear.
 	- verify source attribution, copyright notice and reuse terms against the scan; only the archived MusicXML notice is retained.
@@ -127,5 +129,15 @@ doOwn = false
 	c''2 b'4 a'4 |
 	g'2. r4 |
 	\endBar
+}
+{% endif %}
+{% if part == "LyricsWikifonia" %}\lyricmode {
+	Not a soul down on the cor -- ner that's a pret -- ty cer -- tain sign __ that wed --
+	ding bells are break -- ing up that old gang of mine __ all the boys are sing -- ing love
+	songs they for -- got Sweet A -- de -- "line':" __ those wed -- ding bells are break --
+	ing up that old gang of mine, there goes Jack there goes Jim down to lov -- ers lane now
+	and then we meet a -- gain but they don't seem the same gee I get a -- lone -- some feel --
+	ing when I hear the church bells chime __ those wed -- ding bells are break -- ing up that
+	old gang of mine
 }
 {% endif %}

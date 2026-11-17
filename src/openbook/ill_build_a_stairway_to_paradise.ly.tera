@@ -5,6 +5,7 @@ default_version = "Wikifonia"
 title = "I'll Build A Stairway To Paradise"
 style = "Jazz"
 composer = "George Gershwin"
+poet = "B. G. DeSylva, Ira Gershwin"
 piece = "Standard"
 typesetter = "OpenBook contributors (MusicXML import)"
 completion = "3"
@@ -16,7 +17,7 @@ copyrightextra = "Archived MusicXML notice retained; underlying music is not rel
 [versions.Wikifonia]
 doChords = true
 doVoice = true
-doLyrics = false
+doLyrics = true
 doLyricsmore = false
 doLyricsmoremore = false
 doChordBars = false
@@ -37,6 +38,7 @@ doOwn = false
 	- retained written melody, chord changes, pickups, repeats and numbered endings; lyrics omitted.
 	- imported explicit 7alt symbols using the book's altered-dominant notation where present.
 	- tempo is an editorial practice suggestion.
+	- put in the original lyrics from the same Wikifonia source (published with the song, public domain in the US); typos fixed.
 	TODO:
 	- proofread the complete melody, harmony and form against the referenced PDF and check by ear.
 	- verify source attribution, copyright notice and reuse terms against the scan; only the archived MusicXML notice is retained.
@@ -110,5 +112,12 @@ doOwn = false
 	}
 	}
 	\endBar
+}
+{% endif %}
+{% if part == "LyricsWikifonia" %}\lyricmode {
+	I'll Build A Stair -- way To Par -- a -- dise __ with a new step ev -- "'ry" day! I'm
+	going to get there at an -- y price, stand a -- side I'm on my way! I've got the blues __
+	and up a -- bove it's so fair. Shoes! Go on and car -- ry me there! I'll Build A Stair --
+	way To Par -- a -- dise with a new step ev -- "'ry" day. day. __
 }
 {% endif %}

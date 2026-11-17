@@ -4,7 +4,8 @@ default_version = "Wikifonia"
 [attributes]
 title = "Hava Nagilah"
 style = "Jazz"
-composer = "unknown"
+composer = "Traditional"
+poet = "Abraham Zevi Idelsohn"
 piece = "Standard"
 typesetter = "OpenBook contributors (MusicXML import)"
 completion = "3"
@@ -16,7 +17,7 @@ copyrightextra = "Archived MusicXML notice retained; underlying music is not rel
 [versions.Wikifonia]
 doChords = true
 doVoice = true
-doLyrics = false
+doLyrics = true
 doLyricsmore = false
 doLyricsmoremore = false
 doChordBars = false
@@ -33,8 +34,9 @@ doOwn = false
 	- source revision: http://wikifonia.org/node/6257/revisions/15294/view.
 	- book index reference: TheBook:306 (real_books_archive.gi/index); index pagination is not a verified PDF page number.
 	- retained the archived MusicXML rights notice; no redistribution permission is asserted.
-	- retained written melody, chord changes, pickups, repeats and numbered endings; lyrics, slurs, dynamics and articulations other than fermatas omitted.
+	- retained written melody, chord changes, pickups, repeats and numbered endings; slurs, dynamics and articulations other than fermatas omitted.
 	- tempo is an editorial practice suggestion.
+	- put in the traditional lyrics (1918, public domain in the US), aligned to this melody.
 	TODO:
 	- proofread the complete melody, harmony and form against a printed edition and check by ear.
 	- verify source attribution, copyright notice and reuse terms; only the archived MusicXML notice is retained.
@@ -128,5 +130,14 @@ doOwn = false
 	e'4. e'8 c''8 b'8 a'8 gis'8 |
 	a'1 _\markup{ \bold\tiny {D.C. al Fine} } |
 	\endBar
+}
+{% endif %}
+{% if part == "LyricsWikifonia" %}\lyricmode {
+	Ha -- va __ na -- gi -- la, ha -- va __ _ na -- gi -- la, ha -- va __ na -- gi -- la
+	ve -- nis -- _ me -- cha. Ha -- va ne -- ra -- ne -- na, ha -- va ne -- ra -- ne -- na,
+	ha -- va ne -- ra -- ne -- na ve -- nis -- _ me -- cha. U -- ru, u -- ru a -- chim!
+	U -- ru a -- chim be -- lev sa -- me -- ach, u -- ru a -- chim be -- lev sa -- me -- ach,
+	u -- ru a -- chim be -- lev sa -- me -- ach, u -- ru a -- chim be -- lev sa -- me -- ach,
+	u -- ru a -- chim!
 }
 {% endif %}

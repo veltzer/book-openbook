@@ -4,7 +4,8 @@ default_version = "Wikifonia"
 [attributes]
 title = "O Sole Mio"
 style = "Jazz"
-composer = "Eduardo Di Capua"
+composer = "Eduardo di Capua"
+poet = "Giovanni Capurro"
 piece = "Standard"
 typesetter = "OpenBook contributors (MusicXML import)"
 completion = "3"
@@ -16,7 +17,7 @@ copyrightextra = "Archived MusicXML notice retained; underlying music is not rel
 [versions.Wikifonia]
 doChords = true
 doVoice = true
-doLyrics = false
+doLyrics = true
 doLyricsmore = false
 doLyricsmoremore = false
 doChordBars = false
@@ -35,6 +36,7 @@ doOwn = false
 	- retained the archived MusicXML rights notice; no redistribution permission is asserted.
 	- retained written melody, chord changes, pickups, repeats and numbered endings; lyrics, slurs, dynamics and articulations other than fermatas omitted.
 	- tempo is an editorial practice suggestion.
+	- put in the original lyrics from the same Wikifonia source (published with the song, public domain in the US); typos fixed.
 	TODO:
 	- proofread the complete melody, harmony and form against a printed edition and check by ear.
 	- verify source attribution, copyright notice and reuse terms; only the archived MusicXML notice is retained.
@@ -149,5 +151,14 @@ doOwn = false
 	f'2 ~ |
 	f'8 r8 r4 |
 	\endBar
+}
+{% endif %}
+{% if part == "LyricsWikifonia" %}\lyricmode {
+	_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ Che bel -- la co -- sa~'na __ jur -- na -- ta~e so --
+	le, __ N'a -- ria se -- re -- na dop -- po "'na" tem -- pe -- sta! __ Pe' ll'a -- ria fre --
+	sca pa -- re già "'na" fe -- sta __ Che bel -- la co -- sa "'na" jur -- na -- ta~e so -- _ _
+	le! __ Ma n'a -- tu so -- le __ cchiú bel -- lo,~ohi -- ne', __ "'o" so -- le mi -- o __
+	sta "'nfron --n" te~a te! __ "'O" so -- le'o so -- le mi -- o __ sta "'nfron --" te~'a te, __
+	sta "'nfron --n" te'a te! __ Ma n'a -- tu te! __
 }
 {% endif %}

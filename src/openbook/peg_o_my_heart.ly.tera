@@ -5,6 +5,7 @@ default_version = "Wikifonia"
 title = "Peg O' My Heart"
 style = "Standard"
 composer = "Fred Fisher"
+poet = "Alfred Bryan"
 piece = "Standard"
 typesetter = "OpenBook contributors (MusicXML import)"
 completion = "3"
@@ -16,8 +17,8 @@ copyrightextra = "Archived MusicXML notice retained; underlying music is not rel
 [versions.Wikifonia]
 doChords = true
 doVoice = true
-doLyrics = false
-doLyricsmore = false
+doLyrics = true
+doLyricsmore = true
 doLyricsmoremore = false
 doChordBars = false
 doGuitar = false
@@ -37,6 +38,7 @@ doOwn = false
 	- retained written melody, chord changes, pickups, repeats and numbered endings; lyrics omitted.
 	- imported explicit 7alt symbols using the book's altered-dominant notation where present.
 	- tempo is an editorial practice suggestion.
+	- put in the original lyrics from the same Wikifonia source (published with the song, public domain in the US); typos fixed.
 	TODO:
 	- proofread the complete melody, harmony and form against the referenced PDF and check by ear.
 	- verify source attribution, copyright notice and reuse terms against the scan; only the archived MusicXML notice is retained.
@@ -99,5 +101,19 @@ doOwn = false
 	}
 	bes'1 |
 	\endBar
+}
+{% endif %}
+{% if part == "LyricsWikifonia" %}\lyricmode {
+	Peg o' my heart __ I love you. Don't let us part, __ I love you. I al -- ways knew, __ it
+	would be you, __ since I heard your lilt -- ing laugh -- ter. It's your Ir -- ish heart
+	I'm af -- ter. Peg o' my heart, __ your glan -- ces make my heart say, __ "'How's" chan --
+	ces?' Come, be my own, __ come make your home __ in my heart. __ heart.
+}
+{% endif %}
+{% if part == "LyricsmoreWikifonia" %}\lyricmode {
+	Peg o' my heart, __ I love you. We'll nev -- er part, __ I love you. Dear lit -- tle
+	girl, __ sweet lit -- tle girl, __ sweet -- er than the Rose of Er -- in are your win --
+	ning smiles en -- dear -- in'. Peg o' my heart, __ your glan -- ces with Ir -- ish art, __
+	en -- tran -- ces. Come, be my own, __ come make your home __ in my
 }
 {% endif %}

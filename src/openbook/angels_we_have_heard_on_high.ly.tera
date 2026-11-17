@@ -5,9 +5,10 @@ default_version = "Wikifonia"
 title = "Angels We Have Heard on High"
 style = "Christmas"
 composer = "Traditional"
+poet = "James Chadwick"
 piece = "Moderato"
 copyright = "Public domain composition"
-copyrightextra = "Source MusicXML marked Public Domain; instrumental lead sheet."
+copyrightextra = "Source MusicXML marked Public Domain; lead sheet with the original lyrics."
 typesetter = "OpenBook contributors (MusicXML import)"
 completion = "3"
 uuid = "dc870e27-743a-4658-9d96-01393a2f7563"
@@ -17,8 +18,8 @@ location = "Wikifonia"
 [versions.Wikifonia]
 doChords = true
 doVoice = true
-doLyrics = false
-doLyricsmore = false
+doLyrics = true
+doLyricsmore = true
 doLyricsmoremore = false
 doChordBars = false
 doGuitar = false
@@ -31,7 +32,8 @@ doOwn = false
 {% if part == "Doc" %}
 	DONE:
 	- imported melody and chords from real_books_archive.gi/Wikifonia.tar.xz: Wikifonia/Traditional - Angels We Have Heard On High.mxl.
-	- source edition explicitly declares Public Domain; imported without lyrics.
+	- source edition explicitly declares Public Domain.
+	- put in the original lyrics from the same Wikifonia source (public domain); typos fixed.
 	- retained the written form, pickups, repeats and chord durations.
 	- source revision: http://wikifonia.org/node/212/revisions/5040/view.
 	- tempo is an editorial practice suggestion, not a verified recording tempo.
@@ -101,5 +103,17 @@ doOwn = false
 	f'1 ~ |
 	f'1 |
 	\endBar
+}
+{% endif %}
+{% if part == "LyricsWikifonia" %}\lyricmode {
+	An -- gels, we have heard on high, Sweet -- ly sing -- ing o'er the plains. And the moun --
+	tains in re -- ply, Which in -- spire your joy -- ous strains, "'Glo" -- _ _ _ _ _ _ _ _ _ _ _ _ _ _ _
+	ri -- a, In ex -- cel -- sis De -- o, Glo -- _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ ri -- a, In ex --
+	cel -- sis De -- _ o.' __
+}
+{% endif %}
+{% if part == "LyricsmoreWikifonia" %}\lyricmode {
+	Shep -- herds why this ju -- bi -- lee? Why your joy -- ous strains pro -- long What the
+	glad -- some tid -- ings be, E -- cho -- ing their heaven -- ly song?'
 }
 {% endif %}

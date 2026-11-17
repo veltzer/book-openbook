@@ -5,9 +5,10 @@ default_version = "Wikifonia"
 title = "Oh My Darling, Clementine"
 style = "Waltz"
 composer = "Percy Montrose"
+poet = "Percy Montrose"
 piece = "Moderato"
 copyright = "Public domain composition"
-copyrightextra = "Source MusicXML marked Public Domain; instrumental lead sheet."
+copyrightextra = "Source MusicXML marked Public Domain; lead sheet with the original lyrics."
 typesetter = "OpenBook contributors (MusicXML import)"
 completion = "3"
 uuid = "85726a37-8740-4deb-860a-53e96f4899f6"
@@ -17,7 +18,7 @@ location = "Wikifonia"
 [versions.Wikifonia]
 doChords = true
 doVoice = true
-doLyrics = false
+doLyrics = true
 doLyricsmore = false
 doLyricsmoremore = false
 doChordBars = false
@@ -31,7 +32,8 @@ doOwn = false
 {% if part == "Doc" %}
 	DONE:
 	- imported melody and chords from real_books_archive.gi/Wikifonia.tar.xz: Wikifonia/Traditional adapted by Vernon Dalhart, Percy Montrose or Bradford Barker (disputed) - Oh My Darling, Clementine.mxl.
-	- source edition explicitly declares Public Domain; imported without lyrics.
+	- source edition explicitly declares Public Domain.
+	- put in the original lyrics from the same Wikifonia source (public domain); typos fixed.
 	- retained the written form, pickups, repeats and chord durations.
 	- source revision: http://wikifonia.org/node/4388/revisions/15987/view.
 	- tempo is an editorial practice suggestion, not a verified recording tempo.
@@ -123,5 +125,15 @@ doOwn = false
 	g'4. c'8 e'8 g'8 |
 	f'2 r4 |
 	\endBar
+}
+{% endif %}
+{% if part == "LyricsWikifonia" %}\lyricmode {
+	In a cav -- ern in a can -- yon ex -- ca -- va -- ting for a mine dwelt a min -- er for --
+	ty nin -- er and his daugh -- ter Cle -- men -- tine Oh my dar -- ling oh my dar -- ling
+	oh my dar -- ling Clem -- en -- tine you are lost and gone for ev -- er dread -- ful sor --
+	ry Clem -- en -- tine Light she was and like a fai -- ry and her shoes were num -- ber
+	nine Her -- ring box -- es with -- out top -- ses san -- dals were for Clem -- en -- tine
+	oh my dar -- ling oh my dar -- ling oh my dar -- ling Cle -- men -- tine you are lost and
+	gone for ev -- er dread -- ful sor -- ry Cle -- men -- tine.
 }
 {% endif %}
