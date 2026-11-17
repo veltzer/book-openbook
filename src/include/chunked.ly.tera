@@ -1,0 +1,119 @@
+% Support code for books engraved in chunks (scripts/drivers_chunked.py).
+%
+% A big book (the openbook: 1600+ tunes) cannot be engraved in one lilypond
+% run: lilypond keeps every score of a book in memory until it has broken
+% the whole book into pages, about 10MB per tune, so the openbook peaked at
+% 16GB and got OOM-killed. The chunked build engraves the book as a front
+% matter file (title page + table of contents) plus a series of chunk files
+% holding consecutive runs of tunes, one lilypond process each, and merges
+% the PDFs (scripts/merge_chunks.py).
+%
+% This file is included (by tera) into every generated chunk and front
+% driver after the common definitions. It provides:
+%
+%   - chunkFirstPage: the printed number of the chunk's first page. The
+%     compile wrapper (scripts/wrapper_lilypond_chunk.py) passes it in the
+%     CHUNK_FIRST_PAGE environment variable, since it is only known once
+%     the previous chunks are engraved.
+%   - a tocItem that, instead of collecting a table of contents, puts the
+%     label tune<N> (N counting from 1 within the chunk) on the tune's first
+%     page; the page headers dump the resulting label->page table into
+%     <output>.labels when the pages are written.
+%   - static-table-of-contents: the front matter's table of contents, drawn
+%     exactly like lilypond's own \table-of-contents but from page numbers
+%     given as data (the tunes live in other lilypond runs, so lilypond's
+%     label mechanism cannot resolve them). Each line links to the URI
+%     chunkpage:<N>, which scripts/merge_chunks.py turns into an internal
+%     link to page N of the merged book.
+%
+% Keep this file free of the tera delimiters (brace-brace, brace-percent,
+% brace-hash): it is spliced in by tera's include.
+
+chunkFirstPage =
+#(let ((value (getenv "CHUNK_FIRST_PAGE")))
+  (if value (string->number value) 1))
+
+#(define chunk-labels-file
+  (string-append (ly:parser-output-name) ".labels"))
+#(define chunk-labels-written #f)
+#(define chunk-tune-count 0)
+
+tocItem =
+#(define-music-function (text) (markup?)
+  (set! chunk-tune-count (1+ chunk-tune-count))
+  (make-music 'EventChord
+              'page-marker #t
+              'page-label (string->symbol
+                           (format #f "tune~a" chunk-tune-count))))
+
+% An invisible, zero-size markup whose only effect is to write the
+% label->page table when the page carrying it is output; by then lilypond
+% has broken the whole file into pages and filled in label-page-table.
+#(define-markup-command (dump-chunk-labels layout props) ()
+  (ly:make-stencil
+   `(delay-stencil-evaluation
+     ,(delay (begin
+              (if (not chunk-labels-written)
+                  (let ((table (ly:output-def-lookup layout 'label-page-table)))
+                    (set! chunk-labels-written #t)
+                    (call-with-output-file chunk-labels-file
+                      (lambda (port)
+                        (for-each
+                         (lambda (entry)
+                           (format port "~a ~a\n" (car entry) (cdr entry)))
+                         (if (list? table) table '()))))))
+              '())))
+   '(0 . 0) '(0 . 0)))
+
+% entries: a list of (text page) pairs of strings, in book order
+#(define-markup-list-command (static-table-of-contents layout props entries)
+  (list?)
+  #:properties ((baseline-skip))
+  (let* ((title-markup (ly:output-def-lookup layout 'tocTitleMarkup))
+         (item-markup (ly:output-def-lookup layout 'tocItemMarkup))
+         (toplevel-formatter (ly:output-def-lookup layout 'tocFormatMarkup))
+         (gauge-ext (ly:stencil-extent (interpret-markup layout props "XXX") X)))
+    (cons (interpret-markup layout props title-markup)
+          (space-lines baseline-skip
+            (map (lambda (entry)
+                   (let* ((text (car entry))
+                          (page (cadr entry))
+                          (url (string-append "chunkpage:" page))
+                          (page-ext (ly:stencil-extent
+                                     (interpret-markup layout props page) X))
+                          (gap (- (interval-length gauge-ext)
+                                  (interval-length page-ext))))
+                     (interpret-markup
+                      layout
+                      (cons (list
+                             (cons 'toc:page
+                                   (make-with-url-markup url
+                                    (make-line-markup
+                                     (list (make-hspace-markup gap) page))))
+                             (cons 'toc:text (make-with-url-markup url text))
+                             (cons 'toc:level 0)
+                             (cons 'toc:toplevel-formatter toplevel-formatter)
+                             (cons 'toc:indent (make-line-markup '())))
+                            props)
+                      item-markup)))
+                 entries)))))
+
+\paper {
+	first-page-number = \chunkFirstPage
+	oddHeaderMarkup = \markup \overlay {
+		\dump-chunk-labels
+		\fill-line {
+			""
+			\unless \on-first-page-of-part \fromproperty #'header:instrument
+			\if \should-print-page-number \fromproperty #'page:page-number-string
+		}
+	}
+	evenHeaderMarkup = \markup \overlay {
+		\dump-chunk-labels
+		\fill-line {
+			\if \should-print-page-number \fromproperty #'page:page-number-string
+			\unless \on-first-page-of-part \fromproperty #'header:instrument
+			""
+		}
+	}
+}

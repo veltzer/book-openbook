@@ -5,9 +5,10 @@ default_version = "Wikifonia"
 title = "Some Sunny Day"
 style = "Jazz"
 composer = "Irving Berlin"
+poet = "Irving Berlin"
 piece = "Swing"
 copyright = "Original composition (1922); public domain in the US"
-copyrightextra = "Instrumental lead sheet; later lyrics and arrangements are excluded."
+copyrightextra = "Lead sheet with the original lyrics; later arrangements are excluded."
 typesetter = "OpenBook contributors (MusicXML import)"
 completion = "3"
 uuid = "c8197944-b986-5414-bd15-edfe254f9761"
@@ -17,7 +18,7 @@ remark = "Copyright status outside the US may differ."
 [versions.Wikifonia]
 doChords = true
 doVoice = true
-doLyrics = false
+doLyrics = true
 doLyricsmore = false
 doLyricsmoremore = false
 doChordBars = false
@@ -34,10 +35,11 @@ doOwn = false
 	- local source: real_books_archive.gi/Wikifonia.tar.xz: Wikifonia/Irving  Berlin - Some Sunny Day.mxl.
 	- jazz real/fake-book references: Firehouse_Jazz_Band:282.
 	- source revision: http://wikifonia.org/node/16980/revisions/22536/view.
-	- retained written measures, pickups, repeats and endings; lyrics and accompaniment omitted.
+	- retained written measures, pickups, repeats and endings; accompaniment omitted.
 	- the original composition is public domain in the US; no claim is made about later editions.
 	- US term reference: https://cspd.law.duke.edu/publicdomainday/2026.
 	- tempo is an editorial practice suggestion.
+	- put in the original lyrics from the same Wikifonia source (published with the song, public domain in the US).
 	TODO:
 	- proofread against a historic edition and check by ear.
 {% endif %}
@@ -142,5 +144,13 @@ doOwn = false
 	}
 	}
 	\endBar
+}
+{% endif %}
+{% if part == "LyricsWikifonia" %}\lyricmode {
+	Some sun -- ny day with a smile on my face, I'll go back to that place far a -- way. Back to that
+	shack and that red head -- ed hen. She'll say, 'How have you be'n?' then go back to the hay and lay
+	me my break -- fast. Some sun -- ny day I'll be on that ex -- press fly -- ing a -- way to my
+	lit -- tle bunch of hap -- pi -- ness. Oh, how I pine for those lips sweet as wine. They'll be
+	pressed close to mine some sun -- ny day.
 }
 {% endif %}

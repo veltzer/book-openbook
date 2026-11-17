@@ -128,17 +128,210 @@ output_files = ["out/drivers/out/tera/books/guitar_album.ly.tera"]
 
 # ─── books ───────────────────────────────────────────────────────────────────
 
-# Compile the tera-rendered book sources with lilypond. Each book is one
-# explicit product whose .ly input is a tera-processor output, so rsconstruct
-# orders tera before lilypond automatically and rebuilds a book only when its
-# rendered source changes. images/logo.eps is listed too: every book embeds
-# it (src/include/common.ly.weave), so a new logo rebuilds them; and so is
-# the wrapper, which `python -m` runs (the command is python, not the file).
+# Compile the tera-rendered book sources with lilypond. Each book (but the
+# openbook, engraved in chunks: see below) is one explicit product whose .ly
+# input is a tera-processor output, so rsconstruct orders tera before
+# lilypond automatically and rebuilds a book only when its rendered source
+# changes. images/logo.eps is listed too: every book embeds it
+# (src/include/common.ly.weave), so a new logo rebuilds them; and so is the
+# wrapper, which `python -m` runs (the command is python, not the file).
+
+# The openbook is too big to engrave in one lilypond run: lilypond keeps
+# every score of a book in memory until the whole book is broken into pages
+# (~10MB per tune), and the 1600+ tunes peaked at 16GB and got OOM-killed.
+# So it is engraved in chunks, one lilypond process each, and the PDFs are
+# merged (scripts/drivers_chunked.py explains the scheme):
+#
+#   openbook_chunk_drivers  front_probe + c00..c11 drivers (the chunk count is
+#                           the number of cNN outputs listed here)
+#   openbook_front_probe    engraves the front matter with placeholder page
+#                           numbers, to learn where the first chunk starts
+#   openbook_cNN            engrave the chunks in order; each starts on the
+#                           page the previous one's .next file names, and
+#                           reports its tunes' start pages in a .labels file
+#   openbook_front_driver   the real front matter, its TOC from the .labels
+#   openbook_front          engraves it
+#   openbook                merges everything into out/tera/books/openbook.*
+#
+# A chunk driver holds only its own tunes (no dates or git data), so editing
+# a tune re-engraves its chunk, and later chunks only if their start moves.
+# openbook_driver above still renders the one-file openbook.ly, which the
+# website publishes as the book's source; it is no longer engraved.
+[processor.explicit.generic.openbook_chunk_drivers]
+command = "python"
+args = ["-m", "scripts.drivers_chunked", "drivers"]
+inputs = ["src/include/common.ly.weave", "scripts/drivers.py", "scripts/drivers_chunked.py"]
+input_globs = ["out/derived/openbook/**/*.ly.toml"]
+output_files = [
+    "out/drivers/out/chunks/openbook/front_probe.ly.tera",
+    "out/drivers/out/chunks/openbook/c00.ly.tera",
+    "out/drivers/out/chunks/openbook/c01.ly.tera",
+    "out/drivers/out/chunks/openbook/c02.ly.tera",
+    "out/drivers/out/chunks/openbook/c03.ly.tera",
+    "out/drivers/out/chunks/openbook/c04.ly.tera",
+    "out/drivers/out/chunks/openbook/c05.ly.tera",
+    "out/drivers/out/chunks/openbook/c06.ly.tera",
+    "out/drivers/out/chunks/openbook/c07.ly.tera",
+    "out/drivers/out/chunks/openbook/c08.ly.tera",
+    "out/drivers/out/chunks/openbook/c09.ly.tera",
+    "out/drivers/out/chunks/openbook/c10.ly.tera",
+    "out/drivers/out/chunks/openbook/c11.ly.tera",
+]
+
+[processor.explicit.generic.openbook_front_probe]
+command = "python"
+args = ["-m", "scripts.wrapper_lilypond_chunk"]
+inputs = ["out/chunks/openbook/front_probe.ly", "images/logo.eps", "scripts/wrapper_lilypond_chunk.py"]
+required_tools = ["lilypond"]
+output_files = ["out/chunks/openbook/front_probe.pdf", "out/chunks/openbook/front_probe.next"]
+
+[processor.explicit.generic.openbook_c00]
+command = "python"
+args = ["-m", "scripts.wrapper_lilypond_chunk"]
+inputs = ["out/chunks/openbook/c00.ly", "out/chunks/openbook/front_probe.next", "scripts/wrapper_lilypond_chunk.py"]
+required_tools = ["lilypond"]
+output_files = ["out/chunks/openbook/c00.pdf", "out/chunks/openbook/c00.next", "out/chunks/openbook/c00.labels"]
+
+[processor.explicit.generic.openbook_c01]
+command = "python"
+args = ["-m", "scripts.wrapper_lilypond_chunk"]
+inputs = ["out/chunks/openbook/c01.ly", "out/chunks/openbook/c00.next", "scripts/wrapper_lilypond_chunk.py"]
+required_tools = ["lilypond"]
+output_files = ["out/chunks/openbook/c01.pdf", "out/chunks/openbook/c01.next", "out/chunks/openbook/c01.labels"]
+
+[processor.explicit.generic.openbook_c02]
+command = "python"
+args = ["-m", "scripts.wrapper_lilypond_chunk"]
+inputs = ["out/chunks/openbook/c02.ly", "out/chunks/openbook/c01.next", "scripts/wrapper_lilypond_chunk.py"]
+required_tools = ["lilypond"]
+output_files = ["out/chunks/openbook/c02.pdf", "out/chunks/openbook/c02.next", "out/chunks/openbook/c02.labels"]
+
+[processor.explicit.generic.openbook_c03]
+command = "python"
+args = ["-m", "scripts.wrapper_lilypond_chunk"]
+inputs = ["out/chunks/openbook/c03.ly", "out/chunks/openbook/c02.next", "scripts/wrapper_lilypond_chunk.py"]
+required_tools = ["lilypond"]
+output_files = ["out/chunks/openbook/c03.pdf", "out/chunks/openbook/c03.next", "out/chunks/openbook/c03.labels"]
+
+[processor.explicit.generic.openbook_c04]
+command = "python"
+args = ["-m", "scripts.wrapper_lilypond_chunk"]
+inputs = ["out/chunks/openbook/c04.ly", "out/chunks/openbook/c03.next", "scripts/wrapper_lilypond_chunk.py"]
+required_tools = ["lilypond"]
+output_files = ["out/chunks/openbook/c04.pdf", "out/chunks/openbook/c04.next", "out/chunks/openbook/c04.labels"]
+
+[processor.explicit.generic.openbook_c05]
+command = "python"
+args = ["-m", "scripts.wrapper_lilypond_chunk"]
+inputs = ["out/chunks/openbook/c05.ly", "out/chunks/openbook/c04.next", "scripts/wrapper_lilypond_chunk.py"]
+required_tools = ["lilypond"]
+output_files = ["out/chunks/openbook/c05.pdf", "out/chunks/openbook/c05.next", "out/chunks/openbook/c05.labels"]
+
+[processor.explicit.generic.openbook_c06]
+command = "python"
+args = ["-m", "scripts.wrapper_lilypond_chunk"]
+inputs = ["out/chunks/openbook/c06.ly", "out/chunks/openbook/c05.next", "scripts/wrapper_lilypond_chunk.py"]
+required_tools = ["lilypond"]
+output_files = ["out/chunks/openbook/c06.pdf", "out/chunks/openbook/c06.next", "out/chunks/openbook/c06.labels"]
+
+[processor.explicit.generic.openbook_c07]
+command = "python"
+args = ["-m", "scripts.wrapper_lilypond_chunk"]
+inputs = ["out/chunks/openbook/c07.ly", "out/chunks/openbook/c06.next", "scripts/wrapper_lilypond_chunk.py"]
+required_tools = ["lilypond"]
+output_files = ["out/chunks/openbook/c07.pdf", "out/chunks/openbook/c07.next", "out/chunks/openbook/c07.labels"]
+
+[processor.explicit.generic.openbook_c08]
+command = "python"
+args = ["-m", "scripts.wrapper_lilypond_chunk"]
+inputs = ["out/chunks/openbook/c08.ly", "out/chunks/openbook/c07.next", "scripts/wrapper_lilypond_chunk.py"]
+required_tools = ["lilypond"]
+output_files = ["out/chunks/openbook/c08.pdf", "out/chunks/openbook/c08.next", "out/chunks/openbook/c08.labels"]
+
+[processor.explicit.generic.openbook_c09]
+command = "python"
+args = ["-m", "scripts.wrapper_lilypond_chunk"]
+inputs = ["out/chunks/openbook/c09.ly", "out/chunks/openbook/c08.next", "scripts/wrapper_lilypond_chunk.py"]
+required_tools = ["lilypond"]
+output_files = ["out/chunks/openbook/c09.pdf", "out/chunks/openbook/c09.next", "out/chunks/openbook/c09.labels"]
+
+[processor.explicit.generic.openbook_c10]
+command = "python"
+args = ["-m", "scripts.wrapper_lilypond_chunk"]
+inputs = ["out/chunks/openbook/c10.ly", "out/chunks/openbook/c09.next", "scripts/wrapper_lilypond_chunk.py"]
+required_tools = ["lilypond"]
+output_files = ["out/chunks/openbook/c10.pdf", "out/chunks/openbook/c10.next", "out/chunks/openbook/c10.labels"]
+
+[processor.explicit.generic.openbook_c11]
+command = "python"
+args = ["-m", "scripts.wrapper_lilypond_chunk"]
+inputs = ["out/chunks/openbook/c11.ly", "out/chunks/openbook/c10.next", "scripts/wrapper_lilypond_chunk.py"]
+required_tools = ["lilypond"]
+output_files = ["out/chunks/openbook/c11.pdf", "out/chunks/openbook/c11.next", "out/chunks/openbook/c11.labels"]
+
+[processor.explicit.generic.openbook_front_driver]
+command = "python"
+args = ["-m", "scripts.drivers_chunked", "front"]
+inputs = [
+    "src/include/common.ly.weave",
+    "scripts/drivers.py",
+    "scripts/drivers_chunked.py",
+    "out/chunks/openbook/c00.labels",
+    "out/chunks/openbook/c01.labels",
+    "out/chunks/openbook/c02.labels",
+    "out/chunks/openbook/c03.labels",
+    "out/chunks/openbook/c04.labels",
+    "out/chunks/openbook/c05.labels",
+    "out/chunks/openbook/c06.labels",
+    "out/chunks/openbook/c07.labels",
+    "out/chunks/openbook/c08.labels",
+    "out/chunks/openbook/c09.labels",
+    "out/chunks/openbook/c10.labels",
+    "out/chunks/openbook/c11.labels",
+]
+input_globs = ["out/derived/openbook/**/*.ly.toml"]
+output_files = ["out/drivers/out/chunks/openbook/front.ly.tera"]
+
+[processor.explicit.generic.openbook_front]
+command = "python"
+args = ["-m", "scripts.wrapper_lilypond_chunk"]
+inputs = ["out/chunks/openbook/front.ly", "images/logo.eps", "scripts/wrapper_lilypond_chunk.py"]
+required_tools = ["lilypond"]
+output_files = ["out/chunks/openbook/front.pdf", "out/chunks/openbook/front.next"]
+
 [processor.explicit.generic.openbook]
 command = "python"
-args = ["-m", "scripts.wrapper_lilypond_explicit"]
-inputs = ["out/tera/books/openbook.ly", "images/logo.eps", "scripts/wrapper_lilypond_explicit.py"]
-required_tools = ["lilypond"]
+args = ["-m", "scripts.merge_chunks"]
+inputs = [
+    "scripts/merge_chunks.py",
+    "out/chunks/openbook/front.pdf",
+    "out/chunks/openbook/front.next",
+    "out/chunks/openbook/front_probe.next",
+    "out/chunks/openbook/c00.pdf",
+    "out/chunks/openbook/c00.next",
+    "out/chunks/openbook/c01.pdf",
+    "out/chunks/openbook/c01.next",
+    "out/chunks/openbook/c02.pdf",
+    "out/chunks/openbook/c02.next",
+    "out/chunks/openbook/c03.pdf",
+    "out/chunks/openbook/c03.next",
+    "out/chunks/openbook/c04.pdf",
+    "out/chunks/openbook/c04.next",
+    "out/chunks/openbook/c05.pdf",
+    "out/chunks/openbook/c05.next",
+    "out/chunks/openbook/c06.pdf",
+    "out/chunks/openbook/c06.next",
+    "out/chunks/openbook/c07.pdf",
+    "out/chunks/openbook/c07.next",
+    "out/chunks/openbook/c08.pdf",
+    "out/chunks/openbook/c08.next",
+    "out/chunks/openbook/c09.pdf",
+    "out/chunks/openbook/c09.next",
+    "out/chunks/openbook/c10.pdf",
+    "out/chunks/openbook/c10.next",
+    "out/chunks/openbook/c11.pdf",
+    "out/chunks/openbook/c11.next",
+]
 output_files = ["out/tera/books/openbook.pdf", "out/tera/books/openbook.ps"]
 
 # forScore index.csv for the openbook PDF (issue #121): one bookmark per tune

@@ -208,13 +208,30 @@ needs a hand alignment: `memphis_blues`,
 `love_me_or_leave_me`, `happy_days_are_here_again`, `just_you_just_me`,
 `bidin_my_time`, `get_happy`.
 
+Status 2026-11-17 (later): the 20 tunes above were done in the same commit.
+Then lyrics were added to 13 more public-domain songs (lyrics published
+1930 or earlier). From their own Wikifonia `.mxl` (notes match 1:1):
+`remember`, `some_sunny_day`, `black_and_blue`, `my_heart_stood_still`,
+`thou_swell` (the lyric-bearing `Thou Swell.mxl`, not the `.mxl.1` the
+melody came from; same notes). From a Wikifonia `.mxl`, aligned by hand to a
+melody typed from another book: `mean_to_me`, `i_got_rhythm` (both with the
+second pass of the repeat in `Lyricsmore`), `georgia_on_my_mind`,
+`star_dust` (verse and refrain). From the page itself: `sonny_boy` (jfb:354,
+second stanza in `Lyricsmore`), `you_made_me_love_you` (jfb:440-441),
+`softly_as_in_a_morning_sunrise` (hlrjb:316, Hal Leonard Real Jazz Book
+PDF page = book page - 2). Not done: `strike_up_the_band` (its melody has
+a section the Wikifonia lyrics lack; needs another source). Every other
+tune with a poet and no lyrics has lyrics still under copyright (published
+1931 or later).
+
 Pages that print no lyrics (instrumental heads, nothing to add):
 `down_by_the_riverside`, `its_sand_man`, `johnnys_theme`, `king_porter_stomp`,
 `maple_leaf_rag`, `salt_peanuts`, `shiny_stockings`, `swinging_shepherd_blues`,
 `tickle_toe`.
 
 Not done because the assistant's output filter refuses to reproduce these
-particular lyrics (type them by hand from the page): `arent_you_glad_youre_you`
+particular lyrics (type them by hand from the page; `sonny_boy` and
+`you_made_me_love_you` were done later): `arent_you_glad_youre_you`
 (48), `god_bless_the_child` (131), `i_wont_dance` (166),
 `is_you_is_or_is_you_aint` (188), `lullaby_of_the_leaves` (231), `lush_life`
 (232), `sonny_boy` (354), `you_better_go_now` (439), `you_made_me_love_you`

@@ -26,8 +26,8 @@ remark = "Chet Baker"
 [versions.Fake]
 doChords = true
 doVoice = true
-doLyrics = false
-doLyricsmore = false
+doLyrics = true
+doLyricsmore = true
 doLyricsmoremore = false
 doChordBars = false
 doGuitar = false
@@ -43,12 +43,12 @@ doOwn = false
 	- put in the chords (fake book).
 	- put in the tune (fake book).
 	- added youtube performances.
+	- put in the lyrics (1928, public domain in the US) from the page; the page sets And then the and ly now on one note each, kept so here.
 	TODO:
 	- check the chords (fake book).
 	- check the tune (fake book).
 	- hear the tune to check that it is right and adjust the tempo.
 	- the fake book prints no start repeat sign, so the repeat goes back to the beginning, yet the second verse of lyrics starts at the last A section. Check where the repeat should start.
-	- add the lyrics.
 {% endif %}
 {% if part == "ChordsFake" %}\chordmode {
 	\startChords
@@ -121,5 +121,18 @@ doOwn = false
 			ees1\repeatTie |
 		}
 	}
+}
+{% endif %}
+{% if part == "LyricsFake" %}\lyricmode {
+	When there are gray skies I don't mind the gray skies, you make them blue, Son -- ny Boy. Friends
+	may for -- sake me, let them all for -- sake me, you'll pull me through, Son -- ny Boy. You're sent
+	from heav -- en, and I know your worth. You've made a heav -- en for me right here on earth! When
+	I'm old and gray, dear, prom -- ise you won't stray, dear, I love you so, Son -- ny Boy.
+}
+{% endif %}
+{% if part == "LyricsmoreFake" %}\lyricmode {
+	_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _
+	_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _
+	"And then the" an -- gels grew lone -- ly, took you 'cause they're lone -- "ly now" I'm lone -- ly too, Son -- ny Boy.
 }
 {% endif %}

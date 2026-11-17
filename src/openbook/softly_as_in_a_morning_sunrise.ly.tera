@@ -27,7 +27,7 @@ remark = "John Coltrane live at the Village Vanguard (1961)"
 [versions.Real]
 doChords = true
 doVoice = true
-doLyrics = false
+doLyrics = true
 doLyricsmore = false
 doLyricsmoremore = false
 doChordBars = false
@@ -44,8 +44,8 @@ doOwn = false
 	- put in the chords (Hal Leonard Real Jazz Book).
 	- put in the tune (Hal Leonard Real Jazz Book).
 	- added youtube performances.
+	- put in the lyrics (1928, public domain in the US) from the Hal Leonard Real Jazz Book page.
 	TODO:
-	- add the lyrics.
 	- check the chords (Hal Leonard Real Jazz Book).
 	- check the tune (Hal Leonard Real Jazz Book).
 	- hear the tune to check that it is right and adjust the tempo.
@@ -102,5 +102,13 @@ doOwn = false
 	% part "A"
 	c2 g | r8 f g f g4 f | c'2 ees, | r8 d ees d ees4 d |
 	g2 c, | r8 g' aes g ees'4 d | c1~ | c2 r2 |
+}
+{% endif %}
+{% if part == "LyricsReal" %}\lyricmode {
+	Soft -- ly, as in a morn -- ing sun -- rise, the light of love comes steal -- ing in -- to a new
+	born day. Oh, flam -- ing with all the glow of sun -- rise, a burn -- ing kiss is steal -- ing the
+	vow that all be -- tray. For the pas -- sions that thrill love, and lift you high to heav -- en, are
+	the pas -- sions that kill love, and let you fall to hell! So ends each sto -- ry, soft -- ly, as in
+	an eve -- ning sun -- set, the light that gave you glo -- ry will take it all a -- way.
 }
 {% endif %}

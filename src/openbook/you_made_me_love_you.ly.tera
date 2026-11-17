@@ -26,7 +26,7 @@ remark = "Harry James and his orchestra (1941)"
 [versions.Fake]
 doChords = true
 doVoice = true
-doLyrics = false
+doLyrics = true
 doLyricsmore = false
 doLyricsmoremore = false
 doChordBars = false
@@ -43,8 +43,8 @@ doOwn = false
 	- put in the chords (fake book).
 	- put in the tune (fake book).
 	- added youtube performances.
+	- put in the lyrics (1913, public domain in the US) from the page.
 	TODO:
-	- add the lyrics.
 	- check the chords (fake book).
 	- check the tune (fake book).
 	- hear the tune to check that it is right and adjust the tempo.
@@ -103,5 +103,14 @@ doOwn = false
 	% part "C"
 	a4 bes a bes | a8 bes4 a8~ a e4 e8 | d8 d fis fis a a c c | d8 e4 d8~ d c4. |
 	r8 e4. d4 c8 a~ | a4 b~ b8 g4. | c1~ | c2. r4 |
+}
+{% endif %}
+{% if part == "LyricsFake" %}\lyricmode {
+	You Made Me Love You, I did -- n't wan -- na do it, I did -- n't wan -- na do it. You made me want
+	you, and all the time you knew it, I guess you al -- ways knew it. You made me hap -- py some -- _
+	times, you made me glad, __ but there were times, __ dear, you made __ me feel so bad. __ You made
+	me sigh for, I did -- n't wan -- na tell you, I did -- n't wan -- na tell you. I want some love
+	that's true, yes I do, 'deed I do, you know I do. Gim -- me, gim -- me what I cry __ for, you know
+	you got the brand of kiss -- es that I'd die __ for, you know You Made __ Me __ Love You.
 }
 {% endif %}

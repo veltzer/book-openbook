@@ -5,9 +5,10 @@ default_version = "Wikifonia"
 title = "Thou Swell"
 style = "Jazz"
 composer = "Richard Rodgers"
+poet = "Lorenz Hart"
 piece = "Swing"
 copyright = "Original composition (1927); public domain in the US"
-copyrightextra = "Instrumental lead sheet; later lyrics and arrangements are excluded."
+copyrightextra = "Lead sheet with the original lyrics; later arrangements are excluded."
 typesetter = "OpenBook contributors (MusicXML import)"
 completion = "3"
 uuid = "605f9165-8dc2-54f0-8790-b627a9934385"
@@ -17,7 +18,7 @@ remark = "Copyright status outside the US may differ."
 [versions.Wikifonia]
 doChords = true
 doVoice = true
-doLyrics = false
+doLyrics = true
 doLyricsmore = false
 doLyricsmoremore = false
 doChordBars = false
@@ -34,10 +35,11 @@ doOwn = false
 	- local source: real_books_archive.gi/Wikifonia.tar.xz: Wikifonia/Richard Rodgers, Lorenz Hart - Thou Swell.mxl.1.
 	- jazz real/fake-book references: 557_Standards:387, Firehouse_Jazz_Band:507, StandardsBook:458.
 	- source revision: http://wikifonia.org/node/10159/revisions/13782/view.
-	- retained written measures, pickups, repeats and endings; lyrics and accompaniment omitted.
+	- retained written measures, pickups, repeats and endings; accompaniment omitted.
 	- the original composition is public domain in the US; no claim is made about later editions.
 	- US term reference: https://cspd.law.duke.edu/publicdomainday/2026.
 	- tempo is an editorial practice suggestion.
+	- put in the original lyrics from the same Wikifonia source (published with the song, public domain in the US).
 	TODO:
 	- proofread against a historic edition and check by ear.
 {% endif %}
@@ -126,5 +128,13 @@ doOwn = false
 	es''1 ~ |
 	es''2. r4 |
 	\endBar
+}
+{% endif %}
+{% if part == "LyricsWikifonia" %}\lyricmode {
+	Thou swell! Thou wit -- ty! Thou sweet! Thou grand! Wouldst kiss me pret -- ty? Wouldst hold my
+	hand? both thine eyes are cute too; what they do to me. Hear me hol -- ler I choose a sweet
+	lo -- la -- pa -- loo -- sa in thee. I'd feel so rich in a hut for two; two rooms and kit -- chen
+	I'm sure would do; give me just a plot of, not a lot of land, And thou swell! Thou wit -- ty! Thou
+	grand!
 }
 {% endif %}

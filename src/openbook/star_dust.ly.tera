@@ -27,7 +27,7 @@ remark = "Louis Armstrong (1931)"
 [versions.Real]
 doChords = true
 doVoice = true
-doLyrics = false
+doLyrics = true
 doLyricsmore = false
 doLyricsmoremore = false
 doChordBars = false
@@ -44,8 +44,8 @@ doOwn = false
 	- put in the chords (Hal Leonard Real Jazz Book).
 	- put in the tune (Hal Leonard Real Jazz Book).
 	- added youtube performances.
+	- put in the lyrics (1929, public domain in the US) from the Wikifonia lead sheets (real_books_archive.gi/Wikifonia.tar.xz: Hoagy Carmichael, Mitchell Parish - Stardust.mxl for the verse, Hoagy Carmichael, Mitchell Parish - Star Dust.mxl for the refrain), aligned by hand to this melody.
 	TODO:
-	- add the lyrics.
 	- check the chords (Hal Leonard Real Jazz Book).
 	- check the tune (Hal Leonard Real Jazz Book).
 	- hear the tune to check that it is right and adjust the tempo.
@@ -118,5 +118,19 @@ doOwn = false
 	% part "D"
 	gis4 g! fis2~ | fis2. des8 ees | f4 aes des f | c2. des4 |
 	ees8 des bes ges bes2~ | bes8 aes bes ges aes f ges ees | des1 | r1 |
+}
+{% endif %}
+{% if part == "LyricsReal" %}\lyricmode {
+	And now the pur -- ple dusk of twi -- light time, steals a -- cross the mea -- dows of my heart.
+	High up in the sky the lit -- tle stars climb, al -- ways re -- mind -- ing me that we're a -- part.
+	You wan -- dered down the lane and far a -- way, leav -- ing me a song that will not die. Love is
+	now the star dust of yes -- ter -- day, the mu -- sic of the years gone by. Some -- times I
+	won -- der why I spend the lone -- ly night dream -- ing of a song? The mel -- o -- dy haunts my
+	rev -- er -- ie, and I am once a -- gain with you, when our love was new, and each kiss an
+	in -- spi -- ra -- tion, but that was long a -- go; now my con -- so -- la -- tion is in the star
+	dust of a song. Be -- side a gar -- den wall, when stars are bright, you are in my arms. The
+	night -- in -- gale tells his fair -- y tale of par -- a -- dise where ros -- es grew. Though I
+	dream in vain, in my heart it will re -- main my star dust mel -- o -- dy, the mel -- o -- dy of
+	love's re -- frain.
 }
 {% endif %}

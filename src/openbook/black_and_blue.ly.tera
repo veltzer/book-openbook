@@ -5,9 +5,10 @@ default_version = "Wikifonia"
 title = "Black and Blue"
 style = "Jazz"
 composer = "Fats Waller, Harry Brooks"
+poet = "Andy Razaf"
 piece = "Swing"
 copyright = "Original composition (1929); public domain in the US"
-copyrightextra = "Instrumental lead sheet; later lyrics and arrangements are excluded."
+copyrightextra = "Lead sheet with the original lyrics; later arrangements are excluded."
 typesetter = "OpenBook contributors (MusicXML import)"
 completion = "3"
 uuid = "917b2031-da8b-5afa-b8b5-a3b22f9d3270"
@@ -17,7 +18,7 @@ remark = "Copyright status outside the US may differ."
 [versions.Wikifonia]
 doChords = true
 doVoice = true
-doLyrics = false
+doLyrics = true
 doLyricsmore = false
 doLyricsmoremore = false
 doChordBars = false
@@ -34,10 +35,11 @@ doOwn = false
 	- local source: real_books_archive.gi/Wikifonia.tar.xz: Wikifonia/Thomas , Harry  Brooks, Andy Razaf - Black And Blue.mxl.
 	- jazz real/fake-book references: New_Real_2:34, 557_Standards:42.
 	- source revision: http://wikifonia.org/node/18019/revisions/23858/view.
-	- retained written measures, pickups, repeats and endings; lyrics and accompaniment omitted.
+	- retained written measures, pickups, repeats and endings; accompaniment omitted.
 	- the original composition is public domain in the US; no claim is made about later editions.
 	- US term reference: https://cspd.law.duke.edu/publicdomainday/2026.
 	- tempo is an editorial practice suggestion.
+	- put in the original lyrics from the same Wikifonia source (published with the song, public domain in the US).
 	TODO:
 	- proofread against a historic edition and check by ear.
 {% endif %}
@@ -124,5 +126,13 @@ doOwn = false
 	c''1 ~ |
 	c''2. r4 |
 	\endBar
+}
+{% endif %}
+{% if part == "LyricsWikifonia" %}\lyricmode {
+	Cold emp -- ty bed springs hard as lead, Pains in my head, feel like old Ned, What did I do to be so
+	black and blue? No joys for me, no com -- pa -- ny, Ev -- en the mouse ran from my house. All my
+	life thru, I've been so black and blue. I'm white in side, but that don't help my case, 'Cause I
+	can't hide what is on my face, ooh! I'm so for -- lorn, life's just a thorn, My heart is torn, why
+	was I born? What did I do to be so black and blue?
 }
 {% endif %}

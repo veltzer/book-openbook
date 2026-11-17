@@ -14,8 +14,8 @@ structure = "AABA"
 [versions.Laurent]
 doChords = true
 doVoice = true
-doLyrics = false
-doLyricsmore = false
+doLyrics = true
+doLyricsmore = true
 doLyricsmoremore = false
 doChordBars = false
 doGuitar = false
@@ -27,11 +27,11 @@ doOwn = false
 {% endif %}
 {% if part == "Doc" %}	DONE:
 	- converted the Laurent Martelli version from staging/openbook/laurent/i_got_rhythm.ly.
+	- put in the refrain lyrics (1930, public domain in the US) from the Wikifonia lead sheet (real_books_archive.gi/Wikifonia.tar.xz: George Gershwin, Ira Gershwin - I Got Rhythm.mxl), aligned by hand to this melody; the source's empty bar 33 filled with the line it repeats (I got my man); the second time through the first A is in the second verse line; the source's verse (Days can be sunny) is not in this lead sheet.
 	TODO:
 	- check the tune and chords against a real book.
 	- the source has no tempo; the tempo here is a guess.
 	- the coda ends with two bars of slashes (rhythm only) as in the source.
-	- add the lyrics.
 	- add youtube performances.
 {% endif %}
 {% if part == "ChordsLaurent" %}\chordmode {
@@ -105,5 +105,16 @@ doOwn = false
 	d4 d c8 bes c bes->~ | bes1_"Break" | r1 | r1 |
 	\override NoteHead.style = #'slash
 	c4 c c c | c8. c16 c8 c~ c2\fermata |
+}
+{% endif %}
+{% if part == "LyricsLaurent" %}\lyricmode {
+	I got rhy -- thm, I got mu -- sic, I got my man, who could ask for an -- y -- thing more? more? Old
+	Man Trou -- ble, I don't mind him, You won't find him 'round my door. __ _ I got star -- light, I
+	got sweet dreams, I got my man, who could ask for an -- y -- thing more? Who could ask for
+	an -- y -- thing more?
+}
+{% endif %}
+{% if part == "LyricsmoreLaurent" %}\lyricmode {
+	I got dai -- sies in green pas -- tures, I got my man, who could ask for an -- y -- thing
 }
 {% endif %}

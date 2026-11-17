@@ -26,7 +26,7 @@ remark = "Ray Charles (1960)"
 [versions.Real]
 doChords = true
 doVoice = true
-doLyrics = false
+doLyrics = true
 doLyricsmore = false
 doLyricsmoremore = false
 doChordBars = false
@@ -43,8 +43,8 @@ doOwn = false
 	- put in the chords (Hal Leonard Real Jazz Book).
 	- put in the tune (Hal Leonard Real Jazz Book).
 	- added youtube performances.
+	- put in the refrain lyrics (1930, public domain in the US) from the Wikifonia lead sheet (real_books_archive.gi/Wikifonia.tar.xz: Hoagy Carmichael, Stuart Gorrell - Georgia on My Mind.mxl), aligned by hand to this melody.
 	TODO:
-	- add the lyrics.
 	- check the chords (Hal Leonard Real Jazz Book).
 	- check the tune (Hal Leonard Real Jazz Book).
 	- hear the tune to check that it is right and adjust the tempo.
@@ -123,5 +123,13 @@ doOwn = false
 			f1~ | f2. r4 |
 		}
 	}
+}
+{% endif %}
+{% if part == "LyricsReal" %}\lyricmode {
+	Geor -- gia, Geor -- gia, the whole day through, Just an old sweet song keeps Geor -- gia on my
+	mind. Geor -- gia on my mind. Geor -- gia, Geor -- gia, a song of you Comes as sweet and clear as
+	moon -- light through the pines. Oth -- er arms reach out to me; Oth -- er eyes smile
+	ten -- der -- ly; Still in peace -- ful dreams I see the road leads back to you. __ _ Geor -- gia,
+	Geor -- gia, no peace I find; Just an old sweet song keeps Geor -- gia on my mind. mind.
 }
 {% endif %}

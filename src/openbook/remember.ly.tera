@@ -5,9 +5,10 @@ default_version = "Wikifonia"
 title = "Remember"
 style = "Jazz"
 composer = "Irving Berlin"
+poet = "Irving Berlin"
 piece = "Swing"
 copyright = "Original composition (1925); public domain in the US"
-copyrightextra = "Instrumental lead sheet; later lyrics and arrangements are excluded."
+copyrightextra = "Lead sheet with the original lyrics; later arrangements are excluded."
 typesetter = "OpenBook contributors (MusicXML import)"
 completion = "3"
 uuid = "6344c11b-5a17-53c8-b6be-eeba3612f103"
@@ -17,7 +18,7 @@ remark = "Copyright status outside the US may differ."
 [versions.Wikifonia]
 doChords = true
 doVoice = true
-doLyrics = false
+doLyrics = true
 doLyricsmore = false
 doLyricsmoremore = false
 doChordBars = false
@@ -34,10 +35,11 @@ doOwn = false
 	- local source: real_books_archive.gi/Wikifonia.tar.xz: Wikifonia/Irving  Berlin - Remember.mxl.
 	- jazz real/fake-book references: 557_Standards:371.
 	- source revision: http://wikifonia.org/node/14578/revisions/19527/view.
-	- retained written measures, pickups, repeats and endings; lyrics and accompaniment omitted.
+	- retained written measures, pickups, repeats and endings; accompaniment omitted.
 	- the original composition is public domain in the US; no claim is made about later editions.
 	- US term reference: https://cspd.law.duke.edu/publicdomainday/2026.
 	- tempo is an editorial practice suggestion.
+	- put in the original lyrics from the same Wikifonia source (published with the song, public domain in the US).
 	TODO:
 	- proofread against a historic edition and check by ear.
 {% endif %}
@@ -144,5 +146,12 @@ doOwn = false
 	}
 	}
 	\endBar
+}
+{% endif %}
+{% if part == "LyricsWikifonia" %}\lyricmode {
+	Re -- mem -- ber the night the night you said 'I love you.' re -- mem -- ber? Re -- mem -- ber you
+	vowed by all the stars a -- bove you, Re -- mem -- ber? Re -- mem -- ber we found a lone -- ly spot,
+	and af -- ter I learned to care a lot, you prom -- ised that you'd for -- get me not, But you
+	for -- got to Re -- mem -- ber. Re -- mem -- ber.
 }
 {% endif %}
