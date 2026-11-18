@@ -5,6 +5,7 @@ default_version = "Laurent"
 title = "Lazy Bird"
 style = "Jazz"
 composer = "John Coltrane"
+poet = "Jon Hendricks"
 typesetter = "Laurent Martelli"
 completion = "3"
 uuid = "5dad74b8-d4a0-11f1-8000-046874d194b7"
@@ -13,7 +14,7 @@ structure = "AABA"
 [versions.Laurent]
 doChords = true
 doVoice = true
-doLyrics = false
+doLyrics = true
 doLyricsmore = false
 doLyricsmoremore = false
 doChordBars = false
@@ -104,5 +105,18 @@ doOwn = false
 	d2. d4 | f2. e4 | c2. r4 | r ees2 d4 |
 	b1 | bes | a | aes |
 	g | g2. r4 | g1\fermata |
+}
+{% endif %}
+{% if part == "LyricsLaurent" %}\lyricmode {
+	High up in the sky a La -- zy Bird
+	glides up -- on the summer breeze,
+	so free,
+	sail -- ing over all the green trees;
+	Coltrane blows a bright mel -- o -- dy,
+	leap -- ing through the chan -- ges with a joyful
+	sound that lifts you off the
+	ground, wing -- ing its way through the
+	blue, La -- zy Bird
+	flies on high!
 }
 {% endif %}

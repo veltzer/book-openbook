@@ -5,6 +5,7 @@ default_version = "Real"
 title = "Bags' Groove"
 style = "Jazz"
 composer = "Milt Jackson"
+poet = "Jon Hendricks"
 piece = "Medium Swing"
 copyright = "1958 WEMAR MUSIC CORP."
 typesetter = "Mark Veltzer <mark.veltzer@gmail.com>"
@@ -24,7 +25,7 @@ remark = "Milt Jackson"
 [versions.Real]
 doChords = true
 doVoice = true
-doLyrics = false
+doLyrics = true
 doLyricsmore = false
 doLyricsmoremore = false
 doChordBars = false
@@ -80,5 +81,12 @@ doOwn = false
 		c'2. bes8 aes | bes4 aes8 f aes4 f8 ees | f4. ees8 r2 | r2 r4 f4 |
 		c'2. bes8 aes | bes4 aes8 f aes4 f8 ees | f4. ees8 r2 | r1 |
 	}
+}
+{% endif %}
+{% if part == "LyricsReal" %}\lyricmode {
+	Get
+	in the groove, let Milt Jack -- son's mal -- lets move you, _
+	get in the groove, let that mel -- low vibe soothe you, _
+	nod your head and move to Bags' Groove, yeah! _ _
 }
 {% endif %}

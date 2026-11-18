@@ -5,6 +5,7 @@ default_version = "Wikifonia"
 title = "Warm Valley"
 style = "Jazz"
 composer = "Duke Ellington"
+poet = "Bob Russell"
 piece = "Jazz"
 typesetter = "OpenBook contributors (MusicXML import)"
 completion = "3"
@@ -15,7 +16,7 @@ copyright = "1941 (renewed 1969) c/o EMI Robbins Catalog, Inc. Used by Permissio
 [versions.Wikifonia]
 doChords = true
 doVoice = true
-doLyrics = false
+doLyrics = true
 doLyricsmore = false
 doLyricsmoremore = false
 doChordBars = false
@@ -136,5 +137,41 @@ doOwn = false
 	}
 	}
 	\endBar
+}
+{% endif %}
+{% if part == "LyricsWikifonia" %}\lyricmode {
+	There's a
+	warm
+	val -- ley where love _
+	grows,
+	where a
+	gen --
+	tle riv -- er soft -- ly
+	flows,
+	in the
+	arms
+	of the one I _
+	love,
+	neath the
+	stars
+	shin -- ing from a _
+	bove;
+	When the night winds
+	whis -- per
+	through the trees,
+	I
+	hear John -- ny Hodges
+	on the
+	sum -- mer
+	breeze, call -- ing
+	me back
+	home
+	to that peace -- ful _
+	rest,
+	in the
+	warm
+	val -- ley I love _
+	best,
+	home.
 }
 {% endif %}

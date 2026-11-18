@@ -5,6 +5,7 @@ default_version = "Fake"
 title = "Yardbird Suite"
 style = "Jazz"
 composer = "Charlie Parker"
+poet = "Charlie Parker, Eddie Jefferson"
 piece = "Fast"
 copyright = "1946 ATLANTIC MUSIC CORP."
 copyrightextra = "Renewed and assigned 1974 ATLANTIC MUSIC CORP."
@@ -25,7 +26,7 @@ remark = "Chet Baker live at The Haig, Los Angeles (1953)"
 [versions.Fake]
 doChords = true
 doVoice = true
-doLyrics = false
+doLyrics = true
 doLyricsmore = false
 doLyricsmoremore = false
 doChordBars = false
@@ -105,5 +106,15 @@ doOwn = false
 	% part "A"
 	r8 c4. g4 a | bes4. aes8~ aes ees f g~ | g2 g4. e8~ | e4 e8 f r ees e a |
 	r8 a8~ a2. | r8 a,8 \tuplet 3/2 { b c d } e4 g,8 c~ | c2. r4 | r1 |
+}
+{% endif %}
+{% if part == "LyricsFake" %}\lyricmode {
+	If you want to hear a melody that's sweet and fine, lis -- ten to the Yard -- bird's _
+	fa -- mous al -- to sax -- o -- phone line,
+	soar -- ing like a bird up -- on the wing,
+	teach -- ing all the oth -- er horns the way to swing; Though the night is _
+	cold and gray, mu -- sic chases all the lone -- ly cares of life a -- way, _ _ _
+	lifting up your spir -- it with a joy -- ful beat, when Char -- lie Par -- ker
+	plays the Yard -- bird Suite, so sweet! _
 }
 {% endif %}

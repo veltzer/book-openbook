@@ -5,6 +5,7 @@ default_version = "Fake"
 title = "Now's The Time"
 style = "Jazz"
 composer = "Charlie Parker"
+poet = "Eddie Jefferson"
 piece = "Fast Blues"
 copyright = "1945, Atlantic Music Corp."
 copyrightextra = "Renewed and assigned 1973, Atlantic Music Corp."
@@ -25,7 +26,7 @@ remark = "A much more modern version by Blakey and the Messengers"
 [versions.Fake]
 doChords = true
 doVoice = true
-doLyrics = false
+doLyrics = true
 doLyricsmore = false
 doLyricsmoremore = false
 doChordBars = false
@@ -92,6 +93,13 @@ doOwn = false
 		f f g c, f bes,4. | f'8 f g c, f b,!4. | f'8 f g c, f f g c, | f f g c, f4 r8 aes~ |
 		\tuplet 3/2 { aes16 bes aes } f8 d b! d4 r | r8 g4. f8 g f ees | r c r c4 r8 r4 | r1 |
 	}
+}
+{% endif %}
+{% if part == "LyricsFake" %}\lyricmode {
+	Now's
+	the time, don't wait un -- til tomorrow when you can be hap -- py right to -- day, now's the time to let the be -- bop rhy -- thm
+	chase your blues a -- way; Hear Charlie Parker blow -- ing on his al -- to horn, telling ev -- 'ry -- bod -- y that a brand new day is
+	born, get up and dance, because now's the time, yeah, now's the time!
 }
 {% endif %}
 {% if part == "ChordsLaurent" %}\chordmode {

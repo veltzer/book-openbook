@@ -5,6 +5,7 @@ default_version = "Fake"
 title = "Killer Joe"
 style = "Jazz"
 composer = "Benny Golson"
+poet = "Quincy Jones, Jon Hendricks"
 piece = "Medium groove"
 copyright = "1958 (Renewed 1987) TIME STEP MUSIC (ASCAP)"
 copyrightextra = "All Rights Administered by MAYFLOWER MUSIC CORPORATION (ASCAP)"
@@ -25,7 +26,7 @@ remark = "Quincy Jones from Walking in Space (1969)"
 [versions.Fake]
 doChords = true
 doVoice = true
-doLyrics = false
+doLyrics = true
 doLyricsmore = false
 doLyricsmoremore = false
 doChordBars = false
@@ -118,5 +119,19 @@ doOwn = false
 	% part "End"
 	c4. c8 r2 | c4. c8 r2 | c4. c8 r2 | c4. c8 r2 |
 	c4. c8 r2 | c4. c8 r4 r8 ees,,8~ | ees1~ | ees2. r4 |
+}
+{% endif %}
+{% if part == "LyricsFake" %}\lyricmode {
+	Walk -- ing down the av -- e -- nue, _
+	wear -- ing his sharp mohair suit,
+	hat cocked on the side,
+	step -- ping with an easy stride,
+	everybody knows his name, _
+	smooth -- est cat in
+	the game;
+	La -- dies all turn a -- round
+	when he hits the town,
+	cool -- est guy that you will ev -- er
+	know, that's Kill -- er Joe!
 }
 {% endif %}

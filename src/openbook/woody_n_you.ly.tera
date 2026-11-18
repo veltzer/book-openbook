@@ -5,6 +5,7 @@ default_version = "Wikifonia"
 title = "Woody 'n' You"
 style = "Jazz"
 composer = "Dizzy Gillespie"
+poet = "Jon Hendricks"
 piece = "Jazz"
 typesetter = "OpenBook contributors (MusicXML import)"
 completion = "3"
@@ -16,7 +17,7 @@ copyrightextra = "Communications,"
 [versions.Wikifonia]
 doChords = true
 doVoice = true
-doLyrics = false
+doLyrics = true
 doLyricsmore = false
 doLyricsmoremore = false
 doChordBars = false
@@ -109,5 +110,32 @@ doOwn = false
 	f'8 as'8 c''8 es''8 ~ es''4 d''8 c''8 |
 	des''8 bes'8 r4 r2 |
 	\endBar
+}
+{% endif %}
+{% if part == "LyricsWikifonia" %}\lyricmode {
+	Diz -- zy wrote
+	this tune
+	for Wood -- y
+	Her -- man,
+	full of fire
+	and be -- bop drive,
+	mak -- ing every horn come a --
+	live, yeah!
+	Chords cas -- cade like falling rain,
+	building up the tension a -- gain,
+	then the rhythm breaks in -- to a
+	smile,
+	swin -- ging in that famous Gillespie
+	style, burning up the bandstand for
+	a while, what a groo -- vy _
+	sound,
+	when the band
+	takes flight
+	in -- to the
+	dark night,
+	play -- ing Wood --
+	y 'n' You, _
+	swin -- ging hard and true, Wood --
+	y 'n'
 }
 {% endif %}

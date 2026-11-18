@@ -5,6 +5,7 @@ default_version = "Real"
 title = "Solar"
 style = "Jazz"
 composer = "Miles Davis"
+poet = "Jon Hendricks"
 piece = "Jazz"
 typesetter = "Mark Veltzer <mark.veltzer@gmail.com>"
 completion = "5"
@@ -24,7 +25,7 @@ remark = "Classic miles davis"
 [versions.Real]
 doChords = true
 doVoice = true
-doLyrics = false
+doLyrics = true
 doLyricsmore = false
 doLyricsmoremore = false
 doChordBars = false
@@ -76,5 +77,11 @@ doOwn = false
 		r8 a4. gis4 bes8 a | r c,4.~ c4 f8 g | aes4 aes8 aes g4 bes8 aes~ | aes2. r8 g~ |
 		g4 f8 ees d c4 ges'8~ | ges4 f8 ees des c4 f8~ | f1 | r8 d! ees f g aes b!4 |
 	}
+}
+{% endif %}
+{% if part == "LyricsReal" %}\lyricmode {
+	High a -- bove the clouds the sun shines bright and gold -- en,
+	send -- ing down its rays of light a -- cross the bound -- less sky, _
+	or -- bit -- ing in har -- mo -- ny through space and time, So -- lar energy sub -- lime.
 }
 {% endif %}

@@ -5,6 +5,7 @@ default_version = "Fake"
 title = "Time Remembered"
 style = "Jazz"
 composer = "Bill Evans"
+poet = "Pauline London"
 piece = "With Movement"
 copyright = "1965 Acorn Music Corp., New York, NY"
 copyrightextra = "TRO"
@@ -25,7 +26,7 @@ remark = "Bill Evans live at the Munch Museum, Oslo, Norway, 1966"
 [versions.Fake]
 doChords = true
 doVoice = true
-doLyrics = false
+doLyrics = true
 doLyricsmore = false
 doLyricsmoremore = false
 doChordBars = false
@@ -95,5 +96,16 @@ doOwn = false
 			a1~ | a4 r r2 |
 		}
 	}
+}
+{% endif %}
+{% if part == "LyricsFake" %}\lyricmode {
+	Qui -- et moments from a dis -- tant past,
+	gold -- en hours that were too sweet to
+	last, drift -- ing like au -- tumn leaves a -- cross a si -- lent
+	stream, liv -- ing in -- side a gen -- tle dream;
+	Chords that shim -- mer like the morn -- ing dew, bring _ _
+	ing back the ten -- der memories of me and you, soft and _
+	clear, time re -- mem --
+	bered.
 }
 {% endif %}

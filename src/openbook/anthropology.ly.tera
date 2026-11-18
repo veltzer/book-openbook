@@ -5,6 +5,7 @@ default_version = "Real"
 title = "Anthropology"
 style = "Jazz"
 composer = "Charlie Parker, Dizzy Gillespie"
+poet = "Eddie Jefferson"
 piece = "Fast Bebop"
 copyright = "1946, Renewed and Assigned to Atlantic Music Corp. and Music Sales Corporation"
 typesetter = "Mark Veltzer <mark.veltzer@gmail.com>"
@@ -24,7 +25,7 @@ remark = "Charlie Parker"
 [versions.Real]
 doChords = true
 doVoice = true
-doLyrics = false
+doLyrics = true
 doLyricsmore = false
 doLyricsmoremore = false
 doChordBars = false
@@ -109,5 +110,18 @@ doOwn = false
 	% part "A"
 	bes8 d c b ees cis d f | r4 r8 ees r f ees4 | r8 d ees d c a bes d | c g bes a r4 r8 bes~ |
 	bes4 g8 bes d bes r e~ | e ees4 ges,8~ ges bes c d | ees8 f d f r d ees g, | c bes a bes r2 |
+}
+{% endif %}
+{% if part == "LyricsReal" %}\lyricmode {
+	Studying the histo -- ry of man, you'll find that since the world be -- gan there's been a swing -- ing beat in ev -- 'ry
+	land, that's what they call an -- thro -- pol -- o -- gy;
+	When Char -- lie Par -- ker and Diz -- zy Gil -- les -- pie
+	played down on Fif -- ty -- sec -- ond Street each night till _
+	dawn, a brand new sound was born; _ _
+	Peo -- ple came from far and near to lend an ear
+	to the wild and fran -- tic rhy -- thms they would hear,
+	bop was the mu -- sic of the day; _ _
+	Pro -- fes -- sors tried to an -- a -- lyze the way those cats could im -- pro -- vise, with fly -- ing fin -- gers and a
+	horn that cries, that's the real jazz an -- thro -- pol -- o -- gy, yes, be -- bop an -- thro -- pol -- o -- gy! _
 }
 {% endif %}

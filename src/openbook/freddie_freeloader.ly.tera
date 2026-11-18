@@ -5,6 +5,7 @@ default_version = "Laurent"
 title = "Freddie Freeloader"
 style = "Jazz"
 composer = "Miles Davis"
+poet = "Jon Hendricks"
 typesetter = "Laurent Martelli"
 completion = "3"
 uuid = "8aa2247e-d49f-11f1-8000-046874d194b7"
@@ -13,7 +14,7 @@ structure = "Blues"
 [versions.Laurent]
 doChords = true
 doVoice = true
-doLyrics = false
+doLyrics = true
 doLyricsmore = false
 doLyricsmoremore = false
 doChordBars = false
@@ -71,5 +72,12 @@ doOwn = false
 			a2. aes8 g~ | g2. f4-. | g4. f8~ f2~ | f1 |
 		}
 	}
+}
+{% endif %}
+{% if part == "LyricsLaurent" %}\lyricmode {
+	Fred -- die Free -- load --
+	er, always on the scene,
+	digging Miles and Wynton Kelly,
+	cool -- est cat you've ev -- er
 }
 {% endif %}

@@ -5,6 +5,7 @@ default_version = "Wikifonia"
 title = "C-Jam Blues"
 style = "Jazz"
 composer = "Duke Ellington"
+poet = "Bob Russell"
 piece = "Jazz"
 typesetter = "OpenBook contributors (MusicXML import)"
 completion = "3"
@@ -15,7 +16,7 @@ copyright = "All Rights Reserved"
 [versions.Wikifonia]
 doChords = true
 doVoice = true
-doLyrics = false
+doLyrics = true
 doLyricsmore = false
 doLyricsmoremore = false
 doChordBars = false
@@ -141,5 +142,26 @@ doOwn = false
 	R1 |
 	}
 	\endBar
+}
+{% endif %}
+{% if part == "LyricsWikifonia" %}\lyricmode {
+	Grab your
+	coat and get your
+	hat, leave
+	your wor --
+	ries on the door --
+	mat, come
+	a -- long
+	and hear Duke play
+	that C
+	Jam Blues!
+	Two notes are _
+	all you
+	need to
+	make the band take
+	the lead,
+	swing -- ing
+	on the C Jam
+	Blues, yeah!
 }
 {% endif %}

@@ -5,6 +5,7 @@ default_version = "Real"
 title = "Epistrophy"
 style = "Jazz"
 composer = "Thelonius Monk"
+poet = "Jon Hendricks"
 piece = "Bop"
 typesetter = "Mark Veltzer <mark.veltzer@gmail.com>"
 completion = "5"
@@ -23,7 +24,7 @@ remark = "Monk and Coltrane"
 [versions.Real]
 doChords = true
 doVoice = true
-doLyrics = false
+doLyrics = true
 doLyricsmore = false
 doLyricsmoremore = false
 doChordBars = false
@@ -110,5 +111,17 @@ doOwn = false
 
 	% part "Coda"
 	cis8 d ais' b~ b4 a!8 c~ | c1\fermata |
+}
+{% endif %}
+{% if part == "LyricsReal" %}\lyricmode {
+	The -- lo -- ni -- ous Monk and Ken -- ny Clarke sat down one night to write a
+	tune that turned the whole jazz world a -- round and set the cats all jump -- ing
+	soon, E -- pis -- tro -- phy, that's the name of the song, with chords that shift and
+	slide a -- long in half -- step mo -- tion all through the night, a be -- bop _
+	de -- light! Lis -- ten to the quirky rhy -- thm danc -- ing on the keys, Monk plays corners with the great -- est
+	ease, while Klook drops bombs up -- on the snare and bass drum too, mak -- ing ev -- 'ry cho -- rus sound brand
+	new; Come on and dig that cra -- zy har -- mo -- ny, it's known to all in
+	history as Monk's fa -- mous theme song, swin -- ging right a -- long, E -- pis -- tro _
+	phy, yeah, E -- pis -- tro -- phy!
 }
 {% endif %}

@@ -5,6 +5,7 @@ default_version = "Real"
 title = "African Flower"
 style = "Jazz"
 composer = "Duke Ellington"
+poet = "Jon Hendricks"
 piece = "Med. Latin"
 typesetter = "Mark Veltzer <mark.veltzer@gmail.com>"
 completion = "3"
@@ -23,7 +24,7 @@ remark = "Gary Burton"
 [versions.Real]
 doChords = true
 doVoice = true
-doLyrics = false
+doLyrics = true
 doLyricsmore = false
 doLyricsmoremore = false
 doChordBars = false
@@ -91,5 +92,14 @@ doOwn = false
 	<bes' des'>1~ | <bes des'>2. des4 | ees1~ | ees | <bes des'>1~ | <bes des'>2. des4 |
 	<e e'>1~ | <e e'>2. r4 | r4 des8 aes'~ aes ces,4.~ | ces4. bes8 aes ges'4. | r4 ces,8 aes'~ aes2 |
 	r4 des,8 bes'~ bes4 c,8 c'~ | c2~ \tuplet 3/2 { c4 b bes } | bes2~ \tuplet 3/2 { bes4 aes ges } | ees1~ | ees |
+}
+{% endif %}
+{% if part == "LyricsReal" %}\lyricmode {
+	Deep in the heart of the jun -- gle so green,
+	blooms a small flow -- er that few men have seen;
+	Pet -- als of vel -- vet that shine in the rain, pure and un _
+	touched by the world's pain;
+	Sweet Af -- ri -- can flow -- er, mys -- tic and
+	rare, filling the night with a scent be -- yond compare.
 }
 {% endif %}

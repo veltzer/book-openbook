@@ -5,6 +5,7 @@ default_version = "Wikifonia"
 title = "Bemsha Swing"
 style = "Jazz"
 composer = "Thelonious Monk"
+poet = "Jon Hendricks"
 piece = "Jazz"
 typesetter = "OpenBook contributors (MusicXML import)"
 completion = "3"
@@ -15,7 +16,7 @@ copyright = "All Rights Reserved"
 [versions.Wikifonia]
 doChords = true
 doVoice = true
-doLyrics = false
+doLyrics = true
 doLyricsmore = false
 doLyricsmoremore = false
 doChordBars = false
@@ -107,5 +108,25 @@ doOwn = false
 	}
 	}
 	\endBar
+}
+{% endif %}
+{% if part == "LyricsWikifonia" %}\lyricmode {
+	Come
+	on and
+	hear the Bem -- sha Swing, it's the
+	hip -- pest thing! _
+	Monk
+	and Denzil
+	wrote this catch -- y tune, makes you
+	want to croon; _
+	Swing
+	to the
+	left and to the right, all through
+	out the night; _
+	Yes,
+	when they
+	play that Bem -- sha Swing, bells be --
+	gin to ring, _
+	swing!
 }
 {% endif %}

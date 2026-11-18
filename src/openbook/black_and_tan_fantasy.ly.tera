@@ -5,6 +5,7 @@ default_version = "Wikifonia"
 title = "Black And Tan Fantasy"
 style = "Jazz"
 composer = "Duke Ellington, Bub Miley"
+poet = "Jon Hendricks"
 piece = "Jazz"
 typesetter = "OpenBook contributors (MusicXML import)"
 completion = "3"
@@ -15,7 +16,7 @@ copyright = "All Rights Reserved"
 [versions.Wikifonia]
 doChords = true
 doVoice = true
-doLyrics = false
+doLyrics = true
 doLyricsmore = false
 doLyricsmoremore = false
 doChordBars = false
@@ -115,5 +116,34 @@ doOwn = false
 	bes'4 r4 r2 |
 	R1 |
 	\endBar
+}
+{% endif %}
+{% if part == "LyricsWikifonia" %}\lyricmode {
+	Hear
+	that
+	low -- down,
+	mourn -- ful sound,
+	shad -- ows
+	fall a -- round,
+	Duke and
+	Bub,
+	play -- ing
+	slow and
+	sad and blue,
+	a
+	Black and Tan Fan -- ta --
+	sy, weep -- ing brass and plung -- er _
+	mute, cry -- ing out in
+	pain, like a dis -- tant, lone -- ly train
+	roll -- ing through the dark -- ness of the
+	night; Then the rhy -- thm chan -- ges to
+	swin -- ging Harlem stride, chas -- ing
+	all the tears and gloom a -- side, _
+	dan -- cers step out wide,
+	mov -- ing with a re -- gal pride, through
+	joy and mis -- er -- y,
+	life's own deep mys -- ter -- y, _ _
+	El -- ling -- ton's im -- mor -- tal, haunting mel --
+	o -- dy, Black and Tan Fan -- ta -- sy!
 }
 {% endif %}

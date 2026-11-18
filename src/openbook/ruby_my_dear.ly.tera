@@ -5,6 +5,7 @@ default_version = "Fake"
 title = "Ruby, My Dear"
 style = "Jazz"
 composer = "Thelonious Monk"
+poet = "Sally Swisher, Carmen McRae"
 piece = "Moderately Slow"
 copyright = "1945 J.J. Robbins & Sons, Inc."
 copyrightextra = "Assigned to Consolidated Music Publishers. Renewed Embassy Music Corp."
@@ -25,7 +26,7 @@ remark = "Thelonious Monk with John Coltrane (1957)"
 [versions.Fake]
 doChords = true
 doVoice = true
-doLyrics = false
+doLyrics = true
 doLyricsmore = false
 doLyricsmoremore = false
 doChordBars = false
@@ -101,5 +102,16 @@ doOwn = false
 	% part "A"
 	r4 g4~ g8 f4 ces8 | bes1 | r4 a'4~ a8 g des4 | c1 |
 	c'2 bes4. fes8 | ees2 r8 f c des | ees2 r8 fis \tuplet 3/2 { e!8 cis a! } | aes1 |
+}
+{% endif %}
+{% if part == "LyricsFake" %}\lyricmode {
+	Ru -- by, my dear, though you are far
+	a -- way, still in my heart you stay each lone -- ly night and
+	day; Mem -- o -- ries of your ten -- der
+	smile come back to com -- fort me a -- while, like a _
+	song that lin -- gers on when the sing -- er is _
+	gone; Through the shad -- ows I still hear your voice so
+	clear, whis -- per -- ing low, tell -- ing me
+	so, you'll al -- ways be my own sweet Ru -- by, my dear. _
 }
 {% endif %}

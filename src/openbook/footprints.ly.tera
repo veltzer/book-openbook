@@ -5,6 +5,7 @@ default_version = "Fake"
 title = "Footprints"
 style = "Jazz"
 composer = "Wayne Shorter"
+poet = "Wayne Shorter, Cassandra Wilson"
 piece = "Medium Swing"
 copyright = "1976 Miyako Music"
 typesetter = "Mark Veltzer <mark.veltzer@gmail.com>"
@@ -24,7 +25,7 @@ remark = "Miles Davis from Miles Smiles (1967)"
 [versions.Fake]
 doChords = true
 doVoice = true
-doLyrics = false
+doLyrics = true
 doLyricsmore = false
 doLyricsmoremore = false
 doChordBars = false
@@ -89,6 +90,12 @@ doOwn = false
 		bes'4 bes bes bes8 c~ c4. d8 | \tuplet 5/3 { ees4 d c bes g~ } g2 f4 | \tuplet 5/3 { bes4 a g f d~ } d2 c4 | r2 r8 d~ d2 c4 |
 		b'4 b b b8 d~ d4 g,8 bes~ | bes2. g | f1.~ | f1. |
 	}
+}
+{% endif %}
+{% if part == "LyricsFake" %}\lyricmode {
+	Foot -- prints in the sand, lead -- ing us a -- cross a lone -- ly, time -- less land,
+	search -- ing for a truth that on -- ly love can un -- der -- stand, washed a -- way by waves of the
+	sea, leav -- ing footprints in mem -- o -- ry. _
 }
 {% endif %}
 {% if part == "ChordsLaurent" %}\chordmode {

@@ -5,6 +5,7 @@ default_version = "Fake"
 title = "Ornithology"
 style = "Jazz"
 composer = "Charlie Parker, Benny Harris"
+poet = "Babs Gonzales, Eddie Jefferson"
 piece = "Fast Swing"
 copyright = "1946 ATLANTIC MUSIC CORP."
 copyrightextra = "Renewed and assigned 1974 ATLANTIC MUSIC CORP."
@@ -26,7 +27,7 @@ remark = "Kenny Garrett And Brad Mehldau classic"
 [versions.Fake]
 doChords = true
 doVoice = true
-doLyrics = false
+doLyrics = true
 doLyricsmore = false
 doLyricsmoremore = false
 doChordBars = false
@@ -109,5 +110,18 @@ doOwn = false
 			d a \tuplet 3/2 { fis g a fis g a fis g a } | d r r4 r2 |
 		}
 	}
+}
+{% endif %}
+{% if part == "LyricsFake" %}\lyricmode {
+	High
+	up in the sky you'll see a bird that flies where no one else has ev -- er been be -- fore, soaring over
+	How High the Moon, creating a brand new be -- bop tune, that's Or -- ni -- thol -- o -- gy; _
+	Ben -- ny Harris and Char -- lie Parker wrote the line,
+	ev -- 'ry sin -- gle cho -- rus is a mas -- ter -- piece of design, notes that dart and wheel
+	like a swal -- low on the wing, mak -- ing all the hip -- sters shout and sing; _
+	If you want to learn the se -- cret of the way to fly, _ _ _
+	lis -- ten to the Yard -- bird as his al -- to rea -- ches for the sky, wing -- ing _
+	free and high in sweet har -- mo -- ny, _ _ _
+	that's the sci -- ence of jazz Or -- ni -- thol -- o -- gy! _
 }
 {% endif %}

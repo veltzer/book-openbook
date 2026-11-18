@@ -5,6 +5,7 @@ default_version = "Wikifonia"
 title = "Israel"
 style = "Jazz"
 composer = "John Carisi"
+poet = "Jon Hendricks"
 piece = "Jazz"
 typesetter = "OpenBook contributors (MusicXML import)"
 completion = "3"
@@ -15,7 +16,7 @@ copyright = "All Rights Reserved"
 [versions.Wikifonia]
 doChords = true
 doVoice = true
-doLyrics = false
+doLyrics = true
 doLyricsmore = false
 doLyricsmoremore = false
 doChordBars = false
@@ -81,5 +82,20 @@ doOwn = false
 	\times 2/3 { a'4 bes'4 a'4 } g''4. f''8 |
 	\times 2/3 { e''8 f''8 e''8 } gis'4 ~ gis'8 a'8 cis''8 d''8 |
 	\endBar
+}
+{% endif %}
+{% if part == "LyricsWikifonia" %}\lyricmode {
+	Car -- isi wrote a _
+	mi -- nor blues for Miles to play,
+	cool and clear,
+	smooth and dear,
+	a
+	Birth of the Cool mas -- ter -- piece,
+	nev -- er to
+	cease; French
+	horn and tu -- ba blend,
+	Contrapuntal lines as -- cend, _
+	swin -- ging to the end,
+	sweet Is -- ra -- el, cool Is -- rael!
 }
 {% endif %}

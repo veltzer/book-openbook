@@ -5,6 +5,7 @@ default_version = "Fake"
 title = "Milestones"
 style = "Jazz"
 composer = "Miles Davis"
+poet = "Mark Murphy"
 piece = "Up Tempo"
 copyright = "1948, 1980 Screen Gems-EMI Music Inc., Hollywood, CA"
 typesetter = "Mark Veltzer <mark.veltzer@gmail.com>"
@@ -24,7 +25,7 @@ remark = "Miles Davis live"
 [versions.Fake]
 doChords = true
 doVoice = true
-doLyrics = false
+doLyrics = true
 doLyricsmore = false
 doLyricsmoremore = false
 doChordBars = false
@@ -116,5 +117,17 @@ doOwn = false
 	% part "A"
 	f4 r g r | a4 r8 g8 r2 | f4 r g r | a4 r8 g8 r2 |
 	f4 r g r | a4 r8 f8 r4 g4~ | g1~ | g1 |
+}
+{% endif %}
+{% if part == "LyricsFake" %}\lyricmode {
+	Mov -- ing down the road of life, we
+	pass the mile -- stones by,
+	on high;
+	Mo -- dal bree -- zes blow -- ing cool and
+	free a -- cross the open sky;
+	Miles and Can -- non -- ball and Col -- trane
+	showed us all a brand new
+	way to play, count -- ing mile -- stones _
+	ev -- 'ry sin -- gle day!
 }
 {% endif %}

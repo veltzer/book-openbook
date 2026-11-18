@@ -5,6 +5,7 @@ default_version = "Laurent"
 title = "Unit Seven"
 style = "Jazz"
 composer = "Sam Jones"
+poet = "Jon Hendricks"
 typesetter = "Laurent Martelli"
 completion = "3"
 uuid = "156811a1-d49f-11f1-8000-046874d194b7"
@@ -13,7 +14,7 @@ structure = "AABA"
 [versions.Laurent]
 doChords = true
 doVoice = true
-doLyrics = false
+doLyrics = true
 doLyricsmore = false
 doLyricsmoremore = false
 doChordBars = false
@@ -115,5 +116,20 @@ doOwn = false
 		g8 c, ees c' ~ c2 ~ | c2 bes8 g b c | r1 | r2 r8 c, f c |
 	}
 	g' c, ees c' ~ c2 ~ | c2 bes8 g b c | r1^"Break" | r2 <d, fis a c>2:32 |
+}
+{% endif %}
+{% if part == "LyricsLaurent" %}\lyricmode {
+	Sam Jones wrote
+	a groo -- vy blues that's _
+	guar -- an -- teed to make you move your
+	shoes, U -- nit Sev -- en is the swin -- ging name, _
+	Can -- non -- ball and Nat Adderley real -- ly set the bandstand all a -- flame;
+	Feel that walk -- ing bass line dri -- ving straight a -- head, wak -- ing up the sleepy _
+	heads, everybody's clap -- ping on two and four, _
+	shout -- ing out for more, _
+	when the horns come rif -- fing in _
+	har -- mo -- ny, hap -- py as can be,
+	ri -- ding high up -- on that soul -- ful groove, _ _
+	U -- nit Sev -- en makes you move! _ _
 }
 {% endif %}

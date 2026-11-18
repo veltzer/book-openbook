@@ -5,6 +5,7 @@ default_version = "Real"
 title = "Blue Trane"
 style = "Jazz"
 composer = "John Coltrane"
+poet = "Jon Hendricks"
 piece = "Fiercly"
 copyright = "1957 (Renewed 1985) JOWCOL MUSIC"
 typesetter = "Mark Veltzer <mark.veltzer@gmail.com>"
@@ -24,7 +25,7 @@ remark = "Bireli Lagrene & John McLaughlin Blue Train"
 [versions.Real]
 doChords = true
 doVoice = true
-doLyrics = false
+doLyrics = true
 doLyricsmore = false
 doLyricsmoremore = false
 doChordBars = false
@@ -107,6 +108,14 @@ doOwn = false
 			c1~ | c4-^_\markup { \italic { Fine } } r4 r2 |
 		}
 	}
+}
+{% endif %}
+{% if part == "LyricsReal" %}\lyricmode {
+	Hear that lone -- some whistle,
+	blow -- ing down the track, rid -- ing on the Blue
+	Trane, never com -- ing back, Col -- trane blows the blues
+	all through the dark night,
+	roll on, long Blue Trane!
 }
 {% endif %}
 {% if part == "ChordsLaurent" %}\chordmode {

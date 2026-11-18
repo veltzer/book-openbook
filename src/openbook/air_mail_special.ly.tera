@@ -5,6 +5,7 @@ default_version = "Fake"
 title = "Air Mail Special"
 style = "Swing"
 composer = "Benny Goodman, Charlie Christian, Jimmy Mundy"
+poet = "Jon Hendricks"
 piece = "Bright tempo"
 copyright = "1941 by Regent Music Corp."
 copyrightextra = "Copyright renewed by Regent Music Corp., Jewel Music Publishing Co., Inc. and Rytvoc Music. Reprinted by permission"
@@ -25,7 +26,7 @@ remark = "Ella Fitzgerald"
 [versions.Fake]
 doChords = true
 doVoice = true
-doLyrics = false
+doLyrics = true
 doLyricsmore = false
 doLyricsmoremore = false
 doChordBars = false
@@ -108,5 +109,16 @@ doOwn = false
 	% part "A"
 	r8 bes, d f bes bes r bes, | d f bes bes r bes, d f | bes bes g f bes bes g f | bes bes g f~ f4 r |
 	r8 bes, d f bes bes r bes, | d f bes bes r bes, d f | bes bes g f bes bes g f | bes bes a bes r2 |
+}
+{% endif %}
+{% if part == "LyricsFake" %}\lyricmode {
+	Look up in the sky, see that silver plane fly, bring -- ing a let -- ter from my ba -- by to me, fast as can be,
+	flying through the clouds a -- bove, bring -- ing me a word of love;
+	Air Mail Spe -- cial, fly on through the night, bring that _
+	Air Mail Spe -- cial, land it safe and right! When the _
+	weath -- er's rough and the winds blow high, still that pi -- lot keeps on fly -- ing through the storm -- y sky, nev -- er slows his stead -- y pace, _ _
+	rac -- ing through the clouds of space, 'cause he knows I'm wait -- ing down be -- low to read the sweet words that I love so; _ _
+	Hear those twin engines roar as they glide towards the shore, bringing a mes -- sage from the one I a -- dore, straight to my door,
+	Air Mail Spe -- cial, zoom -- ing from the blue, bring -- ing sweet ro -- mance and hap -- pi -- ness to me from you, yes, from you!
 }
 {% endif %}

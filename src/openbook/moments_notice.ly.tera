@@ -5,6 +5,7 @@ default_version = "Real"
 title = "Moment's Notice"
 style = "Jazz"
 composer = "John Coltrane"
+poet = "Jon Hendricks"
 piece = "Quickly"
 copyright = "1957 (Renewed 1985) JOWCOL MUSIC"
 typesetter = "Mark Veltzer <mark.veltzer@gmail.com>"
@@ -24,7 +25,7 @@ remark = "A Tribute to John Coltrane, Newport Jazz Festival 2004"
 [versions.Real]
 doChords = true
 doVoice = true
-doLyrics = false
+doLyrics = true
 doLyricsmore = false
 doLyricsmoremore = false
 doChordBars = false
@@ -98,5 +99,15 @@ doOwn = false
 	% part "B"
 	f4. ees8 f ees f g | ees2. g4 | f2. aes4 |
 	g2. bes4 | f2. g4 | ees2 f | g f | ees4 r r2 | r1 |
+}
+{% endif %}
+{% if part == "LyricsReal" %}\lyricmode {
+	At a mo -- ment's no -- tice I am read -- y
+	to drop ev -- 'ry -- thing and run right back to you, _
+	when -- ev -- er you call, _
+	I don't mind the hur -- ry at all, be -- cause my
+	heart knows
+	that true love comes a -- long at a mo -- ment's
+	no -- tice, just a mo -- ment's no -- tice! _
 }
 {% endif %}

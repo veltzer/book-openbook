@@ -5,6 +5,7 @@ default_version = "Real"
 title = "Con Alma"
 style = "Jazz"
 composer = "John 'Dizzy' Gillespie"
+poet = "Jon Hendricks"
 piece = "Moderately"
 copyright = "1956 by Jatap Publishing Co., Inc."
 copyrightextra = "Copyright Renewed 1984 by John Dizzy Gillespie"
@@ -25,7 +26,7 @@ remark = "Stan Getz"
 [versions.Real]
 doChords = true
 doVoice = true
-doLyrics = false
+doLyrics = true
 doLyricsmore = false
 doLyricsmoremore = false
 doChordBars = false
@@ -97,6 +98,13 @@ doOwn = false
 	% part "B"
 	ges8. f16 ees des ees8~ ees2~ | ees2 \tuplet 3/2 { f4 ges aes } | a8. aes16 ges fes ges8~ ges2~ | ges2 aes4 a |
 	b1~ | b1 | bes1~ | bes1^\markup { \italic { D.C. al Fine } } |
+}
+{% endif %}
+{% if part == "LyricsReal" %}\lyricmode {
+	Con al -- ma, with all my heart and with all my soul,
+	love is the song that makes my spir -- it whole;
+	Ten -- der and warm as a star in the tropical sky a -- bove, con _
+	al -- ma.
 }
 {% endif %}
 {% if part == "ChordsLaurent" %}\chordmode {

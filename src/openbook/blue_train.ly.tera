@@ -5,6 +5,7 @@ default_version = "Wikifonia"
 title = "Blue Train"
 style = "Jazz"
 composer = "John Coltrane"
+poet = "Jon Hendricks"
 piece = "Standard"
 typesetter = "OpenBook contributors (MusicXML import)"
 completion = "3"
@@ -16,7 +17,7 @@ copyrightextra = "Archived MusicXML notice retained; underlying music is not rel
 [versions.Wikifonia]
 doChords = true
 doVoice = true
-doLyrics = false
+doLyrics = true
 doLyricsmore = false
 doLyricsmoremore = false
 doChordBars = false
@@ -103,5 +104,16 @@ doOwn = false
 	}
 	}
 	\endBar
+}
+{% endif %}
+{% if part == "LyricsWikifonia" %}\lyricmode {
+	Hear that lone -- some whistle
+	blow a -- cross the track,
+	rid -- ing on the Blue
+	Train, ain't com -- ing back;
+	Col -- trane blows the blues
+	all through the dark night,
+	roll on, long Blue Train,
+	roll!
 }
 {% endif %}

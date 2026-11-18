@@ -5,6 +5,7 @@ default_version = "Fake"
 title = "Daahoud"
 style = "Jazz"
 composer = "Clifford Brown"
+poet = "Jon Hendricks"
 piece = "Up Tempo"
 copyright = "1962 Slow Dancing Music, Inc."
 typesetter = "Mark Veltzer <mark.veltzer@gmail.com>"
@@ -24,7 +25,7 @@ remark = "Oscar Peterson and Friends (1980)"
 [versions.Fake]
 doChords = true
 doVoice = true
-doLyrics = false
+doLyrics = true
 doLyricsmore = false
 doLyricsmoremore = false
 doChordBars = false
@@ -114,5 +115,18 @@ doOwn = false
 	f1 | r4 ees8 des ees ges ees des | bes8 ges g! aes r2 | r4 bes8 aes bes aes ges ees~ |
 	ees1~ | ees8 ges ees des~ des bes des d! | r1 | r4 bes'8 aes~ aes des ces bes~ |
 	bes4. bes8 r aes ges f~ | f4. f8 r ees des c~ | c8 ges' f aes ges f ees d! | r1 |
+}
+{% endif %}
+{% if part == "LyricsFake" %}\lyricmode {
+	Lis -- ten to the trumpet of Clif --
+	ford Brown, the warm -- est, sweet -- est sound in all the town, play -- ing Daa -- houd,
+	swin -- ging in a minor mood;
+	Every phrase is spar -- kling like a
+	pre -- cious gem,
+	Max Roach on the drums is burning right a -- long with him;
+	Hear those crisp ar -- tic -- u -- la -- tions danc -- ing through the chan -- ges with an effortless grace,
+	leav -- ing a smile on ev -- 'ry listener's face, joy that time can nev -- er erase;
+	Clif -- ford's horn is sing -- ing out clear and true, _
+	play -- ing Daa -- houd for me and you, yes, Brown -- ie's timeless classic, Daa -- houd!
 }
 {% endif %}

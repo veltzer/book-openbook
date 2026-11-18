@@ -5,6 +5,7 @@ default_version = "Fake"
 title = "St. Thomas"
 style = "Jazz"
 composer = "Sonny Rollins"
+poet = "Jon Hendricks"
 piece = "Latin/Calypso"
 copyright = "1963, Prestigve Music"
 typesetter = "Mark Veltzer <mark.veltzer@gmail.com>"
@@ -25,7 +26,7 @@ remark = "Kenny Drew on Piano"
 [versions.Fake]
 doChords = true
 doVoice = true
-doLyrics = false
+doLyrics = true
 doLyricsmore = false
 doLyricsmoremore = false
 doChordBars = false
@@ -98,5 +99,12 @@ doOwn = false
 		% part "C"
 		e2 d | c a | g4 c b c | r1 |
 	}
+}
+{% endif %}
+{% if part == "LyricsFake" %}\lyricmode {
+	Down in the Vir -- gin Is -- lands where the trade winds blow,
+	hear that ca -- lyp -- so rhy -- thm make the peo -- ple glow,
+	danc -- ing in the street _
+	to the hap -- py Saint Thom -- as beat!
 }
 {% endif %}

@@ -5,6 +5,7 @@ default_version = "Wikifonia"
 title = "Birk's Works"
 style = "Jazz"
 composer = "Dizzy Gillespie"
+poet = "Jon Hendricks"
 piece = "Jazz"
 typesetter = "OpenBook contributors (MusicXML import)"
 completion = "3"
@@ -15,7 +16,7 @@ copyright = "All Rights Reserved"
 [versions.Wikifonia]
 doChords = true
 doVoice = true
-doLyrics = false
+doLyrics = true
 doLyricsmore = false
 doLyricsmoremore = false
 doChordBars = false
@@ -99,5 +100,20 @@ doOwn = false
 	}
 	}
 	\endBar
+}
+{% endif %}
+{% if part == "LyricsWikifonia" %}\lyricmode {
+	When Diz -- zy
+	starts to blow his up -- turned horn, a
+	brand new groo -- vy sound is
+	born, you know that's Birks' Works! Lis -- ten
+	to the way
+	he bends those mi -- nor notes so _
+	blue, a mi -- nor blues for
+	me and you, that's Birks' Works! Cool and
+	hip and sly,
+	notes fly -- ing high,
+	no -- bod -- y swings like Diz -- zy
+	does, Birks' Works!
 }
 {% endif %}

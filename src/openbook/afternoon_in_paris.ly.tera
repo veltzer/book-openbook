@@ -5,6 +5,7 @@ default_version = "Fake"
 title = "Afternoon in Paris"
 style = "Jazz"
 composer = "John Lewis"
+poet = "Jon Hendricks"
 piece = "Swing"
 copyright = "1955 and Renewal of Copyright 1983 by MJQ Music, Inc."
 typesetter = "Mark Veltzer <mark.veltzer@gmail.com>"
@@ -36,7 +37,7 @@ doOwn = false
 [versions.Fake]
 doChords = true
 doVoice = true
-doLyrics = false
+doLyrics = true
 doLyricsmore = false
 doLyricsmoremore = false
 doChordBars = false
@@ -120,6 +121,18 @@ doOwn = false
 	% part "A"
 	g8 d r c b c d e | ees g, bes d c4 d | f8 c r bes a bes c d | des f, aes c bes4 c |
 	ees8 c aes ees g bes aes4 | f2 \tuplet 3/2 { g4 f g } | e1~ | e2. r4 |
+}
+{% endif %}
+{% if part == "LyricsFake" %}\lyricmode {
+	Stroll --
+	ing a -- long by the Seine on a warm af -- ter -- noon in Par -- is, watch -- ing the lov -- ers go walk -- ing by, hand in
+	hand, un -- der -- neath the blue sky; Caf -- és are buzz -- ing with laugh -- ter and song on an af -- ter -- noon in Par -- is,
+	spring in the air makes your heart feel so light and gay, cares of the world seem to fade a -- way; Then _ _ _ _
+	when the sun starts to set in the west, gold -- en shad -- ows fall,
+	soft -- ly the twi -- light comes steal -- ing,
+	bring -- ing a mag -- i -- cal feel --
+	ing; Still in my dreams I re -- turn to that sweet af -- ter -- noon in Par -- is, where love was born in the _ _ _
+	glow of a Par -- is af -- ter -- noon, sweet Par -- is! _
 }
 {% endif %}
 {% if part == "ChordsReal" %}\chordmode {

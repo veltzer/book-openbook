@@ -5,6 +5,7 @@ default_version = "Real"
 title = "In Walked Bud"
 style = "Jazz"
 composer = "Thelonious Monk"
+poet = "Jon Hendricks"
 piece = "Moderately"
 copyright = "1948 (Renewed) by Embassy Music Corporation"
 typesetter = "Mark Veltzer <mark.veltzer@gmail.com>"
@@ -24,7 +25,7 @@ remark = "Art Blakey's Jazz Messengers with Thelonious Monk (1957)"
 [versions.Real]
 doChords = true
 doVoice = true
-doLyrics = false
+doLyrics = true
 doLyricsmore = false
 doLyricsmoremore = false
 doChordBars = false
@@ -107,5 +108,16 @@ doOwn = false
 	% part "A"
 	f,8 c'~ c2 f,4 | e!8 c'~ c2 e,4 | ees8 c'~ c2 ees,4 | d!8 bes'4. des,4. b!8 |
 	c8 aes'~ aes2 b,!8 a! | bes8 g'4. des4. b!8 | c8 ees f ees aes4 f8 ees | r8 aes,4. r2 |
+}
+{% endif %}
+{% if part == "LyricsReal" %}\lyricmode {
+	The joint was jump -- ing and the cats were blow -- ing strong, _
+	play -- ing Blue Skies back -- wards all the night long, when suddenly the door swung
+	wide,
+	and
+	in walked Bud! He sat right down at the pi -- a -- no keys and _ _ _
+	dazzled ev -- 'ry -- bod -- y with his lightning speed and ease, Monk smiled and nodded at his
+	friend, a ge -- nius from be -- gin -- ning to the end, _ _
+	ev -- 'ry -- thing got hip -- per when in walked Bud Pow -- ell, yeah, in walked Bud!
 }
 {% endif %}

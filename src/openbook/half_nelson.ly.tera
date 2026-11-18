@@ -5,6 +5,7 @@ default_version = "Fake"
 title = "Half Nelson"
 style = "Jazz"
 composer = "Miles Davis"
+poet = "Eddie Jefferson"
 piece = "Medium Swing"
 copyright = "1948 by Screen Gems-EMI Music Inc."
 typesetter = "Mark Veltzer <mark.veltzer@gmail.com>"
@@ -24,7 +25,7 @@ remark = "Miles Davis Quintet from Workin' (1956)"
 [versions.Fake]
 doChords = true
 doVoice = true
-doLyrics = false
+doLyrics = true
 doLyricsmore = false
 doLyricsmoremore = false
 doChordBars = false
@@ -80,5 +81,12 @@ doOwn = false
 		g4 ees f r | r8 ees f g bes g aes bes | \tuplet 3/2 { c8 d c } b a g e4 g16 a | fis8 r r4 r2 |
 		\tuplet 3/2 { f8 g f } e d g f4. | \tuplet 3/2 { e8 f e } cis e d e f fis | g8 e r4 ees8 g bes g | aes8 des, f aes bes aes16 bes g8 f |
 	}
+}
+{% endif %}
+{% if part == "LyricsFake" %}\lyricmode {
+	Miles Davis wrote a nifty tune based on the chords of Lady Bird, the hip -- pest line you ev -- er
+	heard, Half Nel -- son is the name, and Charlie Par -- ker played the tenor sax up -- on the date, mak -- ing ev -- 'ry cho -- rus sound so
+	great! Wind -- ing through the chan -- ges with a clever twist, not a sin -- gle syncopated beat is missed,
+	wres -- tling with the mel -- o -- dy until the bell, locks you in a groove that casts a magic spell, when Miles and Bird team up to play Half Nel -- son!
 }
 {% endif %}

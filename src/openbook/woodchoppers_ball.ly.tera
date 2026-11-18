@@ -5,6 +5,7 @@ default_version = "Fake"
 title = "Woodchopper's Ball"
 style = "Swing"
 composer = "Joe Bishop, Woody Herman"
+poet = "Jon Hendricks"
 piece = "Fast"
 copyright = "1934, 1943, 1958 by MCA MUSIC PUBLISHING, A Division of MCA INC., New York, NY"
 copyrightextra = "Copyright Renewed"
@@ -25,7 +26,7 @@ remark = "Woody Herman and his Swingin' Herd"
 [versions.Fake]
 doChords = true
 doVoice = true
-doLyrics = false
+doLyrics = true
 doLyricsmore = false
 doLyricsmoremore = false
 doChordBars = false
@@ -91,5 +92,13 @@ doOwn = false
 			r4 c2.~ | c2.
 		}
 	}
+}
+{% endif %}
+{% if part == "LyricsFake" %}\lyricmode {
+	At
+	the Wood -- chop -- pers' Ball, hear those ax -- es ring and see the tim -- ber
+	fall, Wood -- y Her -- man's herd is swin -- ging
+	one and
+	all!
 }
 {% endif %}

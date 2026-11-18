@@ -5,6 +5,7 @@ default_version = "Fake"
 title = "Walkin' Shoes"
 style = "Jazz"
 composer = "Gerry Mulligan"
+poet = "Jon Hendricks, Mel Torme"
 piece = "Medium swing"
 copyright = "1954 Criterion Music Corp."
 copyrightextra = "Renewed 1982 Criterion Music Corp."
@@ -25,7 +26,7 @@ remark = "Gerry Mulligan"
 [versions.Fake]
 doChords = true
 doVoice = true
-doLyrics = false
+doLyrics = true
 doLyricsmore = false
 doLyricsmoremore = false
 doChordBars = false
@@ -121,5 +122,18 @@ doOwn = false
 
 	% part "Coda"
 	c8 d e fis r4 g,~ | g2 fis | fis1\fermata |
+}
+{% endif %}
+{% if part == "LyricsFake" %}\lyricmode {
+	Put on your walk -- in' shoes,
+	leave all your trou -- bles be -- hind and step right out up -- on the avenue, where the sun is shin -- ing _
+	bright and the breeze is cool and light, chas -- ing a -- way the _
+	blues; Got my
+	walk -- in' shoes on!
+	Ger -- ry Mulligan and Chet Baker play a con -- tra -- pun -- tal line without a pi -- a -- no
+	in the band, bar -- i -- tone and trum -- pet walk -- ing hand in hand down a -- long the Cal -- i -- for -- nia coast so _
+	free, swin -- ging with an eas -- y West Coast sym -- me -- try, light and _ _
+	breez -- y as a sum -- mer day can be, _
+	strut -- ting in my walk -- in' shoes!
 }
 {% endif %}

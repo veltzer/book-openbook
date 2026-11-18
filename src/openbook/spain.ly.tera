@@ -5,6 +5,7 @@ default_version = "Fake"
 title = "Spain"
 style = "Latin/Jazz"
 composer = "Chick Corea"
+poet = "Al Jarreau, Artie Maren"
 piece = "Moderately fast, in 2"
 copyright = "1973 Litha Music"
 typesetter = "Mark Veltzer <mark.veltzer@gmail.com>"
@@ -24,7 +25,7 @@ remark = "Chick Corea live at Montreux (2004)"
 [versions.Fake]
 doChords = true
 doVoice = true
-doLyrics = false
+doLyrics = true
 doLyricsmore = false
 doLyricsmoremore = false
 doChordBars = false
@@ -136,5 +137,24 @@ doOwn = false
 
 	% part "Coda"
 	e'1\fermata | d\fermata | b\fermata | \ottava #1 b''1\fermata \ottava #0 |
+}
+{% endif %}
+{% if part == "LyricsFake" %}\lyricmode {
+	I can recall so well the night we walked be -- neath the stars of old Ma -- drid,
+	hear -- ing the Span -- ish gui -- tars play,
+	far a -- way;
+	Soft -- ly the breeze car -- ried a song of love and
+	pain, down in sun -- ny Spain, _
+	where the flamenco dan -- cers stamp their heels in fiery rhy -- thm bold and _
+	free, passionate mu -- sic that for -- ev -- er haunts my mem -- o -- ry; Yesterday's _
+	dreams still shine like gold inside my heart, though we are worlds a -- part,
+	I'll re -- turn again,
+	back to Spain,
+	where the fi -- es -- ta lights are _
+	shin -- ing through the warm An -- da -- lu -- sian night,
+	clap -- ping hands in time,
+	rhy -- thm so sub -- lime,
+	danc -- ing once again
+	in old Spain! _
 }
 {% endif %}

@@ -5,6 +5,7 @@ default_version = "Laurent"
 title = "Jordu"
 style = "Jazz"
 composer = "Duke Jordan"
+poet = "Jon Hendricks"
 typesetter = "Laurent Martelli"
 completion = "3"
 uuid = "e1326c2c-d49f-11f1-8000-046874d194b7"
@@ -13,7 +14,7 @@ structure = "AABA"
 [versions.Laurent]
 doChords = true
 doVoice = true
-doLyrics = false
+doLyrics = true
 doLyricsmore = false
 doLyricsmoremore = false
 doChordBars = false
@@ -104,5 +105,22 @@ doOwn = false
 	% part "A"
 	fis2 f4. ees8-. | r g, c d ees f g bes | a2 aes4. g8-. | r g, c d ees f g ees |
 	fis2 f4. ees8-. | r2 \tuplet 3/2 { ees16 f ees } c8 ees c ~ | c2.. c8-. | r1 |
+}
+{% endif %}
+{% if part == "LyricsLaurent" %}\lyricmode {
+	Duke Jor -- dan wrote a mi -- nor
+	mel -- o -- dy that cap -- tures all the mys -- ter -- y of night, Jor -- du, a _ _ _ _
+	song that spar -- kles with a warm de -- light,
+	danc -- ing like a gyp -- sy flame, _
+	call -- ing out your
+	name; Lis -- ten to the _ _
+	rhy -- thm break and then take flight, _
+	soar -- ing through the star -- lit sky so bright, _
+	ev -- 'ry chord a sur -- prise, _
+	o -- pen -- ing your ears and eyes _
+	to a world of beau -- ty _
+	and ro -- mance; Come a -- long and
+	join the dance, let the mag -- ic of Jor -- du en -- chant your heart to -- night, _ _ _ _
+	swin -- ging in the moon -- light, sweet Jor -- du! _
 }
 {% endif %}

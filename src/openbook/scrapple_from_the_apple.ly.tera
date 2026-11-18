@@ -5,6 +5,7 @@ default_version = "Fake"
 title = "Scrapple From The Apple"
 style = "Jazz"
 composer = "Charlie Parker"
+poet = "Eddie Jefferson"
 piece = "Fast"
 copyright = "1957 ATLANTIC MUSIC CORP."
 copyrightextra = "Renewed and assigned 1985 ATLANTIC MUSIC CORP."
@@ -25,7 +26,7 @@ remark = "Emmet Cohen with Joshua Redman"
 [versions.Fake]
 doChords = true
 doVoice = true
-doLyrics = false
+doLyrics = true
 doLyricsmore = false
 doLyricsmoremore = false
 doChordBars = false
@@ -110,5 +111,16 @@ doOwn = false
 	% part "A"
 	r8 fis8 g bes a g f d | g c r4 r8 bes4 a8 | bes8. f'16 \tuplet 3/2 { d8 bes g } a d, g des | r4 r8 a'~ a bes4 a8 |
 	c8. a16 \tuplet 3/2 { g8 f g~ } g4 r8 f' | d4 r8 e~ e d \tuplet 3/2 { a bes b } | c4 r8 a bes a gis a | f c e f r2 |
+}
+{% endif %}
+{% if part == "LyricsFake" %}\lyricmode {
+	Take a pinch of Honeysuckle Rose and mix it with a dash of Rhythm chan -- ges, cook it up in New York town,
+	where the finest be -- bop in the world is al -- ways found,
+	Char -- lie Par -- ker served a dish so sweet and
+	fine, Scrap -- ple from the Ap -- ple, right in line!
+	Miles on trum -- pet, Duke Jordan on the keys, Tom -- my Pot -- ter walk -- ing on the bass with ease, Max Roach swin -- ging on the
+	drums so light, cook -- ing up a rec -- i -- pe that's out of sight! Everybody in the Big Ap -- ple came a -- round to get a taste of that _ _ _ _ _ _
+	brand new sound, spi -- cy har -- mo -- ny and mel -- o -- dy com -- bined, leav -- ing all the old cli -- ches far behind,
+	if you're hun -- gry for a groove that's hip and true, Scrap -- ple from the Ap -- ple is the dish for you!
 }
 {% endif %}

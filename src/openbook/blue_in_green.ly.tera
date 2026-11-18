@@ -5,6 +5,7 @@ default_version = "Fake"
 title = "Blue In Green"
 style = "Jazz"
 composer = "Miles Davis, Bill Evans"
+poet = "Meredith d'Ambrosio, Cassandra Wilson"
 piece = "Slowly"
 copyright = "1959 JAZZ HORN MUSIC CORP. & WARNER-TAMERLANE PUBLISHING CORP."
 copyrightextra = "WARNER-TAMERLANE PUBLISHING CORP. administers on behalf of itself and JAZZ HORN MUSIC CORP."
@@ -25,7 +26,7 @@ remark = "Bill Evans in a piano version"
 [versions.Fake]
 doChords = true
 doVoice = true
-doLyrics = false
+doLyrics = true
 doLyricsmore = false
 doLyricsmoremore = false
 doChordBars = false
@@ -75,5 +76,12 @@ doOwn = false
 	e,4. d8 cis d f a | c2. a4 |
 	g2. f4 | c'2. gis4 | b2. a4 | f'2. cis4 |
 	e2. d4 | c2. bes4 | a1\fermata |
+}
+{% endif %}
+{% if part == "LyricsFake" %}\lyricmode {
+	Soft -- ly fall the shades of eve -- ning,
+	col -- ors blend -- ing blue in green, a
+	qui -- et sigh of mem -- o -- ry un --
+	seen, lost in a dream.
 }
 {% endif %}

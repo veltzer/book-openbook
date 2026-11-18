@@ -5,6 +5,7 @@ default_version = "Real"
 title = "Cantaloupe Island"
 style = "Jazz"
 composer = "Herbie Hancock"
+poet = "Jon Hendricks"
 piece = "Moderate Rock"
 copyright = "1964 (Renewed) by Hancock Music Co."
 typesetter = "Mark Veltzer <mark.veltzer@gmail.com>"
@@ -24,7 +25,7 @@ remark = "Herbie Hancock live (1990)"
 [versions.Real]
 doChords = true
 doVoice = true
-doLyrics = false
+doLyrics = true
 doLyricsmore = false
 doLyricsmoremore = false
 doChordBars = false
@@ -103,6 +104,14 @@ doOwn = true
 		f,4. f8~ f2 | r2 c'8 ees c ees | f,4. f8~ f2 | R1 |
 		R1 | R1 | R1 | r2 r4 f8 f |
 	}
+}
+{% endif %}
+{% if part == "LyricsReal" %}\lyricmode {
+	Sail a --
+	way with me to Can -- ta -- loupe Is -- land, _
+	where the groo -- vy rhy -- thm flows be -- neath the palm trees,
+	cool breeze blow -- ing o -- ver the sea,
+	so free!
 }
 {% endif %}
 {% if part == "Own" %}onCue = <>^\markup \italic { on CUE }

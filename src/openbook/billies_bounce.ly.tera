@@ -5,6 +5,7 @@ default_version = "Real"
 title = "Billie's Bounce"
 style = "Blues"
 composer = "Charlie Parker"
+poet = "Eddie Jefferson"
 piece = "Blues"
 typesetter = "Micha Dienert <mdienert@t-online.de>"
 completion = "5"
@@ -23,7 +24,7 @@ remark = "t.b.d."
 [versions.Real]
 doChords = true
 doVoice = true
-doLyrics = false
+doLyrics = true
 doLyricsmore = false
 doLyricsmoremore = false
 doChordBars = false
@@ -120,6 +121,26 @@ doOwn = false
 	c8 a8 bes8 c16 bes16 a8 f8 d8 c8 | g'8 f8 g8( a8)~a4 r4 |
 	%
 	r1-\markup {\abs-fontsize #14 {(Last 12 Bars are transcribed from Charlie Parker Solo - The Savoy Recordings)}} |
+}
+{% endif %}
+{% if part == "LyricsReal" %}\lyricmode {
+	Wake
+	up this morn -- ing and I heard the news that Bil -- lie's got a brand new _
+	bounce to chase a -- way the blues, oh, yeah! It
+	makes you jump, _
+	makes you want to shout for joy, _
+	ev -- 'ry girl and boy _
+	gets out up -- on the dance floor _
+	scream -- ing out for more, _
+	when Char -- lie _
+	Par -- ker blows _
+	that Bil -- lie's Bounce! _
+	Hear the rhy -- thm section laying down the law,
+	hip -- pest groove you ev -- er saw,
+	bounc -- ing light -- ly on the beat, _
+	put -- ting wings up -- on your danc -- ing feet, you can't sit still, _
+	what a swin -- ging be -- bop thrill,
+	come a -- long and do the Bil -- lie's Bounce to -- night, yeah!
 }
 {% endif %}
 {% if part == "ChordsLaurent" %}\chordmode {

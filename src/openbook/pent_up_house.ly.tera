@@ -5,6 +5,7 @@ default_version = "Wikifonia"
 title = "Pent-Up House"
 style = "Jazz"
 composer = "Sonny Rollins"
+poet = "Jon Hendricks"
 piece = "Jazz"
 typesetter = "OpenBook contributors (MusicXML import)"
 completion = "3"
@@ -15,7 +16,7 @@ copyright = "All Rights Reserved"
 [versions.Wikifonia]
 doChords = true
 doVoice = true
-doLyrics = false
+doLyrics = true
 doLyricsmore = false
 doLyricsmoremore = false
 doChordBars = false
@@ -107,5 +108,25 @@ doOwn = false
 	}
 	}
 	\endBar
+}
+{% endif %}
+{% if part == "LyricsWikifonia" %}\lyricmode {
+	Liv -- ing in a pent -- up house,
+	qui -- et as a little mouse,
+	got to break a -- way
+	to -- day! Can't
+	stay in a pent -- up house, _
+	sitting round and feel -- ing grouch,
+	when the mu -- sic starts
+	to play! Throw
+	o -- pen all the win -- dows wide,
+	let the sunshine come in -- side,
+	hear Son -- ny Rollins blow,
+	watch
+	trou -- bles all go,
+	danc -- ing round the happy room,
+	sweep -- ing out the gloom,
+	no
+	more pent -- up house for me! _
 }
 {% endif %}

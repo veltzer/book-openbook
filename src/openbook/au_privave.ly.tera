@@ -5,6 +5,7 @@ default_version = "Aebersold"
 title = "Au Privave"
 style = "Jazz"
 composer = "Charlie Parker"
+poet = "Jon Hendricks"
 piece = "Upbeat Swing"
 copyright = "1956, Atlantic Music Corp."
 copyrightextra = "1978, Atlantic Music Corp."
@@ -23,7 +24,7 @@ id = "dvdQYSWOobc"
 [versions.Aebersold]
 doChords = true
 doVoice = true
-doLyrics = false
+doLyrics = true
 doLyricsmore = false
 doLyricsmoremore = false
 doChordBars = false
@@ -132,5 +133,24 @@ doOwn = false
 
 	% part "End"
 	g8 f g2. |
+}
+{% endif %}
+{% if part == "LyricsAebersold" %}\lyricmode {
+	Come on in and sit right down, the music's jumping in this town, when Char -- lie Par -- ker blows his horn so fine,
+	ev -- 'ry sin -- gle note is right in line, making you feel so good inside your soul,
+	when the rhy -- thm sec -- tion starts to roll, Au Pri -- vave, yeah!
+	Hear that al -- to sax -- o --
+	phone blow the blues a -- way!
+	Up on the band -- stand, see the cats all swin -- ging hard, play -- ing a chorus that is pure and disregard -- ing all the
+	cares of day, chas -- ing all the gloomy shad -- ows far a -- way; Hear the bass man walk -- ing steady on the beat, while the drummer keeps it
+	crisp and neat, pi -- a -- no comp -- ing chords so sweet and hip, never gonna let that tempo
+	slip! Everybody in the place has got a hap -- py smile up -- on their face, dig -- ging ev -- 'ry cho -- rus as it flies right by, reach -- ing _ _
+	up in -- to the sky, high -- er than a bird can fly; When Bird steps _
+	out in front and plays a so -- lo cho -- rus that nobody else could ev -- er imitate, ev -- 'ry note is crystal clear and right on time, swin -- ging in a groove that's
+	so sub -- lime, mak -- ing ev -- 'ry heart beat fast, _ _
+	wish -- ing that the night would for -- ev -- er last; Come on and _ _ _ _
+	join the cel -- e -- bra -- tion, feel the syncopation flow -- ing through the room to -- night, everything is out of sight, when the band plays
+	Au Pri -- vave, noth -- ing in the world can beat that hap -- py be -- bop blues sound, yeah, Au Pri -- vave, _
+	swing it now!
 }
 {% endif %}

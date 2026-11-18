@@ -5,6 +5,7 @@ default_version = "Fake"
 title = "Airegin"
 style = "Jazz"
 composer = "Sonny Rollins"
+poet = "Jon Hendricks"
 piece = "Bright tempo"
 copyright = "1963 Prestige Music"
 typesetter = "Mark Veltzer <mark.veltzer@gmail.com>"
@@ -24,7 +25,7 @@ remark = "Miles Davis Quintet from Cookin' (1956)"
 [versions.Fake]
 doChords = true
 doVoice = true
-doLyrics = false
+doLyrics = true
 doLyricsmore = false
 doLyricsmoremore = false
 doChordBars = false
@@ -101,5 +102,21 @@ doOwn = false
 	c1~ | c1~ | c1~ | c1~ | c1~ | c1~ |
 	c1~ | c1 | f1 | g4 g2 f4 |
 	ees4 r8 c8~ c ges'4 e8 | f4 f bes, b | c4 r8 aes8~ aes f bes4 | r8 aes4 f8 e4. d8 | ees8 aes r4 r2 |
+}
+{% endif %}
+{% if part == "LyricsFake" %}\lyricmode {
+	Spell it backwards and you'll see the name of Ni -- ge -- ri -- a, land of ancient mys -- ter --
+	y a -- cross the deep blue roll -- ing sea;
+	Where the drums beat out a rhythm bold and free, call -- ing out to you and call -- ing
+	me, where the migh -- ty riv -- er flows; _
+	Through the tropic night the stars shine bright a -- bove, light -- ing up a land of pride and
+	love, where the warm harms -- tan blows; _
+	Hear the highlife mu -- sic ring -- ing through the air, peo -- ple danc -- ing
+	ev -- 'ry -- where with joy to share;
+	Land of sun -- shine, land of song, where the spir -- it's _
+	proud and strong, Air -- e --
+	gin,
+	sweet Air -- e -- gin,
+	spell it backwards and you'll find the beating heart of Af -- ri -- ca, sweet Ni -- ge -- ri -- a!
 }
 {% endif %}

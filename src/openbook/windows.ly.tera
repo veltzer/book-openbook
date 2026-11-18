@@ -5,6 +5,7 @@ default_version = "Anon"
 title = "Windows"
 style = "Jazz"
 composer = "Chick Corea"
+poet = "Neville Potter"
 piece = "Up"
 typesetter = "Anonymous <anonymous@zivlempel.org>"
 completion = "3"
@@ -14,7 +15,7 @@ structure = "AB"
 [versions.Anon]
 doChords = true
 doVoice = true
-doLyrics = false
+doLyrics = true
 doLyricsmore = false
 doLyricsmoremore = false
 doChordBars = false
@@ -67,5 +68,14 @@ doOwn = false
 	e4 a e | g4. f | r8 e4 a e8 | f4. g | e4 a e | f4. g | a8 e'4 cis a8 | \tuplet 3/2 { g8 fis e } a4~ \tuplet 3/2 { a8 g fis } |
 	e'2.~ | e~ | e4. f | d2~ d8 c | d2.~ | d~ | d4. e | c2~ c8 b |
 	c2.~ | c | r4 d, ees | b'2 a4 | g2.~ | g~ | g~ | g |
+}
+{% endif %}
+{% if part == "LyricsAnon" %}\lyricmode {
+	Look -- ing through the win -- dows of my mind, I see the days we left be -- hind,
+	shin -- ing in the gold -- en light,
+	whirl -- ing like a car -- ou -- sel of mem -- o -- ries in
+	flight; Ev -- 'ry window o -- pens on a dif -- f'rent view, pain -- ted in a bright fa -- mil -- iar hue of me and _ _
+	you, Waltz -- ing through the rooms of _
+	time, win -- dows of my heart.
 }
 {% endif %}

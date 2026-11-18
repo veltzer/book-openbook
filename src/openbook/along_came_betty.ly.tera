@@ -5,6 +5,7 @@ default_version = "Fake"
 title = "Along Came Betty"
 style = "Jazz"
 composer = "Benny Golson"
+poet = "Jon Hendricks"
 piece = "Medium bounce"
 copyright = "1958 (Renewed 1986) TIME STEP MUSIC (ASCAP)"
 copyrightextra = "All Rights Administered by MAYFLOWER MUSIC CORPORATION (ASCAP)"
@@ -25,7 +26,7 @@ remark = "Benny Golson Sextet"
 [versions.Fake]
 doChords = true
 doVoice = true
-doLyrics = false
+doLyrics = true
 doLyricsmore = false
 doLyricsmoremore = false
 doChordBars = false
@@ -102,5 +103,16 @@ doOwn = false
 	% part "A"
 	r2 c'8 r bes des~ | des1 | r4 r8 c8~ c bes a bes | des2. c8 ees~ |
 	ees1~ | ees4. des8 r c r f, | e1 | fis4. e8 \tuplet 3/2 { fis4 e fis } | ees1~ | ees1 |
+}
+{% endif %}
+{% if part == "LyricsFake" %}\lyricmode {
+	My life was lone -- ly and so blue,
+	my skies were cloud -- y and gray, I had no one to care for,
+	no one to share my dreams each day; And then
+	along came Bet -- ty with a smile so warm and bright, chasing all my dark -- est clouds out of sight,
+	bring -- ing the sun -- shine back into my heart a -- gain, showing me how sweet a true love could be from right then;
+	Now ev -- 'ry moment is a song, since lovely Bet -- ty came a -- long to stay,
+	tak -- ing my lone -- ly blues a -- way, the day
+	that sweet Bet -- ty came a -- long, came my way!
 }
 {% endif %}

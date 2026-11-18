@@ -5,6 +5,7 @@ default_version = "Fake"
 title = "Birdland"
 style = "Jazz"
 composer = "Joe Zawinul"
+poet = "Jon Hendricks"
 piece = "Brightly"
 copyright = "1977 & 1978 Mulatto Music (BMI)"
 typesetter = "Mark Veltzer <mark.veltzer@gmail.com>"
@@ -24,7 +25,7 @@ remark = "The Manhattan Transfer from Extensions (1979)"
 [versions.Fake]
 doChords = true
 doVoice = true
-doLyrics = false
+doLyrics = true
 doLyricsmore = false
 doLyricsmoremore = false
 doChordBars = false
@@ -248,5 +249,38 @@ doOwn = false
 	\repeat volta 2 {
 		b4^\markup { Repeat and Fade } d g r8 g,~ | g4 b e r8 d~ | d1 | c8 b r a r g r b~ |
 	}
+}
+{% endif %}
+{% if part == "LyricsFake" %}\lyricmode {
+	Down
+	stairs in the cel -- lar, _
+	night -- time,
+	that was the place where all the cats would go to hear the sound
+	that Char -- lie Par -- ker found, down on Broad -- way, Fif -- ty -- sec -- ond Street, _
+	Bird -- land,
+	sweet Bird -- land!
+	Ev -- 'ry -- bod -- y knew that when the lights went low the great -- est mu -- sic in the world would flow,
+	Pee Wee Mar -- quette stood there
+	call -- ing out each giant's famous name,
+	Count Ba -- sie, Diz -- zy, Miles and Bud, Les -- ter Young and Sarah Vaughan and Trane,
+	blow -- ing their soul,
+	mak -- ing the rafters roll!
+	Down at Bird -- land, where the jazz was king, ev -- 'ry night you'd hear those trum -- pets ring, _
+	sax -- es would wail,
+	tell -- ing a sto -- ry that would nev -- er fail to move your heart, _
+	pure jazz art!
+	Down at Bird -- land,
+	jump -- ing at Bird -- land,
+	feel that rhy -- thm puls -- ing through the crowd, bras -- ses blast -- ing high and proud, _
+	swin -- ging till the break of dawn,
+	e -- ven when the night is gone the mem -- o -- ry lingers on and
+	on in my mind,
+	one of a kind,
+	down at old Bird -- land,
+	yeah,
+	swing -- ing Bird -- land,
+	jazz cor -- ner of the world,
+	where the ban -- ners of be -- bop were un -- furled for all to hear, _ _
+	sweet mu -- sic ring -- ing clear, down at Bird -- land, yeah!
 }
 {% endif %}

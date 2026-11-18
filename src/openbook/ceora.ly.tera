@@ -5,6 +5,7 @@ default_version = "Real"
 title = "Ceora"
 style = "Jazz"
 composer = "Lee Morgan"
+poet = "Sathima Bea Benjamin"
 piece = "Bossa"
 typesetter = "Mark Veltzer <mark.veltzer@gmail.com>"
 completion = "3"
@@ -23,7 +24,7 @@ remark = "Emmet Cohen with Patrick Bartley and Larry Grenadier"
 [versions.Real]
 doChords = true
 doVoice = true
-doLyrics = false
+doLyrics = true
 doLyricsmore = false
 doLyricsmoremore = false
 doChordBars = false
@@ -114,5 +115,18 @@ doOwn = false
 			f4. ees8~ ees8 ees8 ges8 e8 | ees1\fermata |
 		}
 	}
+}
+{% endif %}
+{% if part == "LyricsReal" %}\lyricmode {
+	Ce -- o -- ra, gentle as a summer breeze up -- on the shore,
+	your sweet smile is ev -- 'ry -- thing my heart could ev -- er ask for, soft as starlight shining in the
+	trop -- i -- cal sky, when we dance to -- geth -- er all the world pas -- ses by; Every word you whisper is a
+	mel -- o -- dy of love, sent to bless our hearts from heav -- en a -- bove, sway -- ing to the bos -- sa nova beat in the night, holding me so
+	warm and tight; Ce -- o -- ra, mu -- sic of the morning sun,
+	you and I have found a par -- a -- dise that's on -- ly be -- gun, where the flowers blossom in an
+	end -- less em -- brace, and the light of happiness is shin -- ing up -- on your face, nev -- er let this ten -- der mo -- ment fade
+	a -- way, stay with me for -- ev -- er and a day, my sweet Ce -- o -- ra,
+	my love,
+	sweet Ce -- o -- ra, my own!
 }
 {% endif %}

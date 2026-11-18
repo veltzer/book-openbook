@@ -5,6 +5,7 @@ default_version = "Fake"
 title = "Valse Hot"
 style = "Jazz"
 composer = "Sonny Rollins"
+poet = "Jon Hendricks"
 piece = "Medium Jazz Waltz"
 copyright = "1965 Prestige Music"
 typesetter = "Mark Veltzer <mark.veltzer@gmail.com>"
@@ -24,7 +25,7 @@ remark = "Emmet Cohen with Mike Rodriguez and John Ellis"
 [versions.Fake]
 doChords = true
 doVoice = true
-doLyrics = false
+doLyrics = true
 doLyricsmore = false
 doLyricsmoremore = false
 doChordBars = false
@@ -94,5 +95,15 @@ doOwn = false
 	% part "A"
 	bes8. ees16 bes8 des c4 | bes8. ees16 bes8 des c4 | bes8. ees16 bes8 des c4 | r2. |
 	ees8. aes16 ees8 ges ees4 | ees8. aes16 ees8 ges ees4 | ees8. aes16 ees8 ges ees4 | r2. |
+}
+{% endif %}
+{% if part == "LyricsFake" %}\lyricmode {
+	Three -- quarter time used to be polite and slow, un -- til Son -- ny Rol -- lins
+	showed the world the way a jazz waltz ought to go, Valse Hot, swin -- ging
+	on the beat in one, two, three, danc -- ing with a joy -- ous en -- er -- gy that sets your spir -- it
+	free! Hear Clif -- ford Brown and Max Roach join the mer -- ry chase, spin -- ning round and round at a diz -- zy, hap -- py _
+	pace, waltz -- ing through the chan -- ges bright and gay, _ _
+	chas -- ing all the gloom -- y clouds of yes -- ter -- day far a -- way, _
+	come a -- long and whirl a -- round the floor to Son -- ny's Valse Hot! _
 }
 {% endif %}
