@@ -25,9 +25,9 @@ remark = "ELMO Bigband featuring Stephan Greisinger"
 [versions.Fake]
 doChords = true
 doVoice = true
-doLyrics = false
-doLyricsmore = false
-doLyricsmoremore = false
+doLyrics = true
+doLyricsmore = true
+doLyricsmoremore = true
 doChordBars = false
 doGuitar = false
 doExtra = false
@@ -42,8 +42,10 @@ doOwn = false
 	- put in the chords (fake book).
 	- put in the tune (fake book).
 	- added youtube performances.
+	- put in the lyrics (fake book): the first time through the A part in the first line, the second time in the second line and the D.C. in the third line.
 	TODO:
-	- add the lyrics.
+	- the fake book credits no lyricist (By Charlie Barnet), find who wrote the words and add the poet.
+	- the D.C. line is printed as her/him in braces, typed as her.
 	- check the chords (fake book).
 	- check the tune (fake book).
 	- hear the tune to check that it is right and adjust the tempo.
@@ -111,5 +113,30 @@ doOwn = false
 
 	% part "Coda"
 	c,1 | c' | c~ | c2. r4 |
+}
+{% endif %}
+{% if part == "LyricsFake" %}\lyricmode {
+	% part "A"
+	Sky -- li -- ner, Sky -- li -- ner, fly -- ing so free -- ly; we seem to real -- ly
+	touch hea -- ven, high -- er, high -- er, ev -- er high -- er,
+	stars dance a -- bove __
+
+	% part "B"
+	giv -- ing a show for the peo -- ple be -- low as we fly. As we fly so
+	high, __ hear -- ing each sin -- gle beat of the mo -- tors re -- peat with a sigh, __
+	by and by. __
+
+	% part "Coda"
+	home to love. __
+}
+{% endif %}
+{% if part == "LyricsmoreFake" %}\lyricmode {
+	% part "A"
+	Sun -- beams all dance on your wings, where the light falls, and then when night falls,
+}
+{% endif %}
+{% if part == "LyricsmoremoreFake" %}\lyricmode {
+	% part "A"
+	I'll hold her close, that's the sweet song they sing me. Sky -- li -- ner bring me
 }
 {% endif %}
