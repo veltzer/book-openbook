@@ -26,8 +26,8 @@ remark = "Ella Fitzgerald"
 [versions.Fake]
 doChords = true
 doVoice = true
-doLyrics = false
-doLyricsmore = false
+doLyrics = true
+doLyricsmore = true
 doLyricsmoremore = false
 doChordBars = false
 doGuitar = false
@@ -98,5 +98,23 @@ doOwn = false
 			f2~ f8 g4. | aes4 f ees8 des4 c8 | r8 aes4. c8 c4 aes8 | r1 | r1 |
 		}
 	}
+}
+{% endif %}
+{% if part == "LyricsFake" %}\lyricmode {
+	Those
+	silk shin -- y stock -- ings that I wear when I'm with you, I
+	wear 'cause you told me that you dig that cra -- zy hue; When
+	we go to a dance, do you think of ro -- mance?
+	Oh, no, you take a glance at my fine shin -- y stock -- ings!
+	A guy who digs my shin -- y silk stock -- ings too!
+}
+{% endif %}
+{% if part == "LyricsmoreFake" %}\lyricmode {
+	I
+	walked with my ba -- by, and I know in noth -- ing flat she's
+	got some -- thing mel -- low lots of fel -- lows whis -- tle at; When
+	we go for a walk, I know soon as we're out,
+	with no shad -- ow of doubt, she's got lots to be proud of, I'm
+	I love those shin -- y stock -- ings most of all!
 }
 {% endif %}

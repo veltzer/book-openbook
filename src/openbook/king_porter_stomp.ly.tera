@@ -26,7 +26,7 @@ remark = "Benny Goodman and his Orchestra in the famous Fletcher Henderson arran
 [versions.Fake]
 doChords = true
 doVoice = true
-doLyrics = false
+doLyrics = true
 doLyricsmore = false
 doLyricsmoremore = false
 doChordBars = false
@@ -127,5 +127,25 @@ doOwn = false
 
 	% part "End"
 	des4 fes8. des16 ees4 des | fes8. des16 ees4 des aes8 bes | des,1 |
+}
+{% endif %}
+{% if part == "LyricsFake" %}\lyricmode {
+	Way down in New Or -- leans, where Jel -- ly Roll was king, the band began to play a stomp that made the rafters
+	ring; Come on and hear that beat, get up up -- on your feet, when King Por -- ter starts to stomp, ev -- 'ry -- bod -- y's
+	got to jump and shout! Hear that trom -- bone slide, hear that clar -- i -- net glide, while the trum -- pet blows high and
+	wide; No -- bod -- y can sit still when they play that Dix -- ie -- land thrill, down at the ball -- room to -- night!
+	Stomp, King Por -- ter, stomp! Shake the floor and romp! Let
+	that pia -- no roll, warm your heart and soul! Hear the drum -- mer beat, move your
+	danc -- ing feet, sway to and fro, don't let it go, keep that rhythm steady, ev -- 'ry -- bod -- y's
+	read -- y to stomp the blues a -- way, hey, hey, while the band plays on and on through the
+	night! Now comes the tri -- o strain, sweet mel -- o -- dy a -- gain,
+	soft and low, watch the danc -- ers go; Then they build it up once more!
+	Hear the brass -- es roar, loud -- er than be -- fore, rock -- ing all a -- cross the dance -- hall floor,
+	swing -- ing in that groove, mak -- ing ev -- 'ry -- bod -- y move, you can't lose with the King Por -- ter Stomp!
+	Now stomp it, boys, make a lot of noise! That's
+	the way to play, drive your cares a -- way! Jel -- ly Roll's great tune ends too
+	soon, hear the horns blow, watch the ban -- jo, syn -- co -- pa -- ted
+	rhythm makes your spir -- it glow, keep on stomp -- ing high, keep on stomp -- ing
+	low, that's the fa -- mous King Por -- ter Stomp, yes, that's the Stomp!
 }
 {% endif %}

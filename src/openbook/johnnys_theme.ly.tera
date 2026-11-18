@@ -26,7 +26,7 @@ remark = "Tokyo Large Ensemble (arr. John Higgins)"
 [versions.Fake]
 doChords = true
 doVoice = true
-doLyrics = false
+doLyrics = true
 doLyricsmore = false
 doLyricsmoremore = false
 doChordBars = false
@@ -107,5 +107,15 @@ doOwn = false
 
 	% part "End"
 	r8 e4. d4 c | b4. a8~ a2 | c4 \tuplet 3/2 { g8 fis g } aes4 g | r4 b c2 |
+}
+{% endif %}
+{% if part == "LyricsFake" %}\lyricmode {
+	Ev -- 'ry night, so right, there's mu -- sic in the
+	air, a hap -- py fel -- low wait -- ing there to share the fun;
+	Come on a -- long and join the show, it's time to go, the cur -- tain's go -- ing up, so
+	chase your cares a -- way, let laugh -- ter lead the way to -- night, ev -- 'ry -- thing is bright and gay to -- night, yes, right now!
+	Oh, yes!
+	Oh, yes!
+	It's mag -- ic to -- night, wel -- come to the show to -- night, friends!
 }
 {% endif %}

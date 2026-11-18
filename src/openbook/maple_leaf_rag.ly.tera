@@ -26,7 +26,7 @@ remark = "Sidney Bechet and the New Orleans Feetwarmers (1932)"
 [versions.Fake]
 doChords = true
 doVoice = true
-doLyrics = false
+doLyrics = true
 doLyricsmore = false
 doLyricsmoremore = false
 doChordBars = false
@@ -187,5 +187,31 @@ doOwn = false
 			aes,8 ees' aes r |
 		}
 	}
+}
+{% endif %}
+{% if part == "LyricsFake" %}\lyricmode {
+	Hear that rag -- time mel -- o -- dy, it's Mis -- ter Jop -- lin's Ma -- ple Leaf Rag, a tune that's grand,
+	sets your hap -- py toes a -- tap -- ping, makes the whole wide town start clap -- ping, hear those iv -- o -- ry pia -- no keys a --
+	ring -- ing, set -- ting ev -- 'ry -- bod -- y sing -- ing, syn -- co -- pa -- ted chords a -- swing -- ing right a -- long,
+	ring -- ing in the Ma -- ple Leaf Rag, that hap -- py, snap -- py Ma -- ple Leaf Rag -- time song!
+	Down in old Se -- da -- li -- a where ma -- ple leaves all grow, Scott Jop -- lin played the pia -- no in a way that
+	stole the show; A -- cross the keys his fin -- gers flew with rhy -- thm bright and gay, and chased the blues a -- way;
+	Soon the whole wide coun -- try learned to play that rag -- time tune each night and day, in ev -- 'ry sin -- gle town,
+	what a rag -- time mel -- o -- dy, it fills the air with hap -- py joy and
+	glee, yes, so free,
+	with har -- mo -- ny!
+	Now hear the tri -- o
+	strain go roll -- ing by, with syn -- co -- pa -- ted notes that dance and fly right up in -- to the sum -- mer sky;
+	You nev -- er can stand still when once you hear that rag -- time thrill, it makes your heart beat fast -- er, played
+	by ev -- 'ry rag -- time mas -- ter, ring -- ing out so clear and bold and bright a -- cross the dance -- hall floor,
+	ev -- 'ry -- bod -- y shouts for more when once they hear that fa -- mous Ma -- ple Leaf
+	Rag, Mis -- ter Jop -- lin's grand
+	Ma -- ple Leaf Rag -- time!
+	Come a -- long and join the hap -- py song, the night is young and noth -- ing can go
+	wrong, when you hear that Ma -- ple Leaf Rag, it nev -- er lets your hap -- py spir -- it lag or
+	tire; Just take your part -- ner by the hand and dance a -- cross the floor to that great rag -- time
+	band, hear those syn -- co -- pa -- ted chords ring out a -- cross the hap -- py land,
+	that's the grand old
+	Ma -- ple Leaf! _ _ _ _ _ _ _ _ _ _
 }
 {% endif %}

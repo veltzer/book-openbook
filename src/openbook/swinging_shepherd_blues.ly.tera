@@ -25,7 +25,7 @@ remark = "Ella Fitzgerald (1958)"
 [versions.Fake]
 doChords = true
 doVoice = true
-doLyrics = false
+doLyrics = true
 doLyricsmore = false
 doLyricsmoremore = false
 doChordBars = false
@@ -115,5 +115,18 @@ doOwn = false
 	c'8. e,16 g4 e8. c16 e8. c16 | f4 f8. c16 fis8 c4. | r8 dis8 \tuplet 3/2 { e8 g a } a8. bes16 a8. bes16 | \tuplet 3/2 { a8 bes bes } a8. aes16 g4 a!8. c16 |
 	ees8. f,16 \tuplet 3/2 { fis8 g c } \tuplet 3/2 { f,8 g c } \tuplet 3/2 { f,8 g c } | \tuplet 3/2 { ges8 f ees } f8 f~ f2 | r8. g16 c8. e16 g8. e16 c8. a16 | g8. gis16 a8. e16 g!8. gis16 a8. e'16 |
 	fis8. fis,16 a8. c16 dis8. e16 f!8. fis16 | g8. gis,16 a8. c16 ees8. c16 d8. a16 | c4 c2 c4~ | c8 c4 c8 c4 \tuplet 3/2 { g8 a c^\markup { \italic { D.S. al Fine } } } |
+}
+{% endif %}
+{% if part == "LyricsFake" %}\lyricmode {
+	A -- long
+	a moun -- tain pass, there is a walk -- in', talk -- in' cat, the swing -- in' shep -- herd who blows the blues; And
+	in the mead -- ow grass, all the lit -- tle sheep come 'round to lis -- ten to him blow the blues all
+	day; He sits be -- neath a sha -- dy tree and plays his mel -- o -- dy, the
+	swing -- in' shep -- herd; Out up -- on
+	swing -- in' shep -- herd; Now hear the
+	shep -- herd's sweet blues!
+	breeze a -- mong the leaves, as he plays up -- on his flute, ev -- 'ry note is clear and bright and full of hap -- py rhy -- thm as he
+	swings it high and low, while all the ech -- oes roll down the val -- ley deep; Not a sin -- gle lit -- tle lamb wants to go to sleep when they can
+	hear that shep -- herd play -- ing on his sil -- ver flute from ear -- ly morn till night, blow -- ing all day, A -- long a
 }
 {% endif %}

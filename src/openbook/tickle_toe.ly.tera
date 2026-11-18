@@ -25,7 +25,7 @@ remark = "Lambert, Hendricks and Ross with the Jon Hendricks lyric"
 [versions.Fake]
 doChords = true
 doVoice = true
-doLyrics = false
+doLyrics = true
 doLyricsmore = false
 doLyricsmoremore = false
 doChordBars = false
@@ -100,5 +100,16 @@ doOwn = false
 	% part "C"
 	des8 bes des bes ges bes des bes | des8 a r4 r r8 c~ | c4 aes c8 aes c aes | f8 aes c aes ces4 r8 bes~ |
 	bes4 f bes2 | r2 aes8 bes des des | r1 | r1 |
+}
+{% endif %}
+{% if part == "LyricsFake" %}\lyricmode {
+	Ear -- ly in the thir -- ties when the band would swing, Count Ba -- sie played Tic -- kle Toe;
+	Ev -- 'ry -- bod -- y jumped for joy when Les -- ter Young stepped out to blow Tic -- kle Toe;
+	Hear the sax -- es blow -- ing, glow -- ing, rhy -- thm sec -- tion flow -- ing, keep -- ing time so fine and
+	mel -- low through the night, so bright; Danc -- ers on the floor all shout for more when they hear that ten -- or sax soar!
+	Light up -- on your feet, you got to move your shoes and dance a -- way your blues;
+	Noth -- ing in the world can beat that eas -- y groove when Prez plays Tic -- kle;
+	Tic -- kle, tic -- kle, tic -- kle, tic -- kle, tic -- kle toe, tic -- kle, tic -- kle, tic -- kle, tic -- kle, tic -- kle, Oh,
+	sweet Toe, that's Tic -- kle Toe!
 }
 {% endif %}

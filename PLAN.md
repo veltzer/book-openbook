@@ -270,8 +270,8 @@ own Wikifonia `.mxl` (`a_pretty_girl_is_like_a_melody`,
 poet and no lyrics has lyrics still under copyright (published 1931 or
 later).
 
-Status 2026-11-18: lyrics added to the remaining 567 vocal tunes across the
-repository (`566` in `src/openbook/` plus `src/israeli/geshem.ly.tera`):
+Status 2026-11-18: lyrics added to the remaining 575 vocal tunes across the
+repository (`574` in `src/openbook/` plus `src/israeli/geshem.ly.tera`):
 
 - 492 Wikifonia-imported tunes in `src/openbook/` extracted directly from their
   own `.mxl` in `real_books_archive.gi/Wikifonia.tar.xz` (1:1 syllable-bearing
@@ -301,12 +301,12 @@ repository (`566` in `src/openbook/` plus `src/israeli/geshem.ly.tera`):
   `nobody_else_but_me`, `o_grande_amor`, `peace`, `retrato_em_branco_e_preto`,
   `solamente_una_vez`, `the_inch_worm`, `turn_out_the_stars`,
   `when_lights_are_low`, `you_better_go_now`).
+- 8 `jfb` tunes whose pages print only the instrumental head but carry a `poet`
+  credit (`its_sand_man`, `johnnys_theme`, `king_porter_stomp`,
+  `maple_leaf_rag`, `salt_peanuts`, `shiny_stockings`,
+  `swinging_shepherd_blues`, `tickle_toe`).
 - `src/israeli/geshem.ly.tera`: aligned Verse 1 from its `Extra` block to
   `VoiceMy` in `LyricsMy`.
-
-Pages that print no lyrics (instrumental heads, nothing to add):
-`its_sand_man`, `johnnys_theme`, `king_porter_stomp`, `maple_leaf_rag`,
-`salt_peanuts`, `shiny_stockings`, `swinging_shepherd_blues`, `tickle_toe`.
 
 Melody edits made while adding lyrics (the book prints no tie/slur there):
 `boplicity` bars 2-3 and 27. Bars where the book's ties and the typed melody
