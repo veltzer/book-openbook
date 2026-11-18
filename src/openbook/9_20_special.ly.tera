@@ -5,6 +5,7 @@ default_version = "Fake"
 title = "9:20 Special"
 style = "Swing"
 composer = "Bill Engvick, Earl Warren"
+poet = "Bill Engvick"
 piece = "Medium Bounce"
 copyright = "1941 (Renewed) by Regent Music Corp."
 copyrightextra = "Reprinted by permission."
@@ -25,7 +26,7 @@ remark = "Jim Hall"
 [versions.Fake]
 doChords = true
 doVoice = true
-doLyrics = false
+doLyrics = true
 doLyricsmore = false
 doLyricsmoremore = false
 doChordBars = false
@@ -119,5 +120,18 @@ doOwn = false
 			d4 f,8 bes~ bes4 r |
 		}
 	}
+}
+{% endif %}
+{% if part == "LyricsFake" %}\lyricmode {
+	Nine -- twen -- ty Spe -- cial, pack your grip and let's go, don't miss that fast train,
+	hear that big en -- gine blow; Get your tick -- et in your hand, step right
+	up and join the band, Nine -- twen -- ty Spe -- cial leaves right on time down the
+	track, once I get back home to -- night, ba -- by, I'm nev -- er com -- ing back; My
+	gal is wait -- ing down at the sta -- tion for me, so sweet as
+	she can be, she is all of the world to me; Hear those
+	whis -- tles blow -- ing, see that big train go -- ing, roll -- ing down the rail -- road
+	line, Nine -- twen -- ty Spe -- cial, bring me right back to my
+	ba -- by,
+	on time, yeah!
 }
 {% endif %}

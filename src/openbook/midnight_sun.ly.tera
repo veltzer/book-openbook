@@ -5,6 +5,7 @@ default_version = "Fake"
 title = "Midnight Sun"
 style = "Jazz"
 composer = "Lionel Hampton, Sonny Burke, Johnny Mercer"
+poet = "Johnny Mercer"
 piece = "Slowly, with a beat"
 copyright = "1947 by Crystal Music Publishers"
 copyrightextra = "Copyright renewed by Regent Music Corp. and Crystal Music Publishers. Reprinted by permission."
@@ -25,7 +26,7 @@ remark = "Ella Fitzgerald (1957)"
 [versions.Fake]
 doChords = true
 doVoice = true
-doLyrics = false
+doLyrics = true
 doLyricsmore = false
 doLyricsmoremore = false
 doChordBars = false
@@ -132,5 +133,24 @@ doOwn = false
 			g8 g4 g8~ g2~ | g2. r4 |
 		}
 	}
+}
+{% endif %}
+{% if part == "LyricsFake" %}\lyricmode {
+	Your
+	lips were like a red and ru -- by chal -- ice, warm -- er than the sum -- mer night; The
+	clouds were like an al -- a -- bas -- ter pal -- ace ris -- ing to a snow -- y height; Each
+	star its own au -- ro -- ra bo -- re -- a -- lis, sud -- den -- ly you held me tight, I could see the
+	mid -- night sun. I
+	can't ex -- plain the sil -- ver rain that found me, or was that a moon -- lit veil? The
+	mu -- sic of the u -- ni -- verse a -- round me, or was that a night -- in -- gale? And
+	then your arms mi -- rac -- u -- lous -- ly found me, sud -- den -- ly the sky turned pale, I could see the
+	mid -- night sun. Was there such a night? It's a thrill I still don't quite be --
+	lieve, but af -- ter you were gone, there was
+	still some star -- dust on my sleeve; The
+	flame of it may dwin -- dle to an em -- ber and the stars for -- get to shine, and
+	we may see the mead -- ow in De -- cem -- ber, i -- cy white and crys -- tal -- line; But
+	oh, my dar -- ling, al -- ways I'll re -- mem -- ber when your lips were close to mine, and we saw the
+	mid -- night sun, your
+	mid -- night sun.
 }
 {% endif %}

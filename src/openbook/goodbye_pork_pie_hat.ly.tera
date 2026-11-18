@@ -5,6 +5,7 @@ default_version = "Fake"
 title = "Goodbye Pork Pie Hat"
 style = "Jazz"
 composer = "Charles Mingus"
+poet = "Rahsaan Roland Kirk, Joni Mitchell"
 piece = "Slow Ballad"
 copyright = "1975 Jazz Workshop, Inc."
 typesetter = "Mark Veltzer <mark.veltzer@gmail.com>"
@@ -24,7 +25,7 @@ remark = "Jeff Beck from Wired (1976)"
 [versions.Fake]
 doChords = true
 doVoice = true
-doLyrics = false
+doLyrics = true
 doLyricsmore = false
 doLyricsmoremore = false
 doChordBars = false
@@ -83,5 +84,15 @@ doOwn = false
 		aes2 f | bes8 aes f ees ces' bes aes f | aes2 f | \tuplet 3/2 { c'4 bes aes } \tuplet 3/2 { f ees c } |
 	}
 	f1\fermata |
+}
+{% endif %}
+{% if part == "LyricsFake" %}\lyricmode {
+	He
+	put all of his soul in -- to a ten -- or sax -- o -- phone; He
+	had a way of talk -- ing, 'twas a lan -- guage all his own; Life's
+	sto -- ry, love and glo -- ry, if you lis -- ten when he plays it for you, now
+	lis -- ten and lis -- ten and dig it, can you
+	dig it? Les -- ter Young is play -- ing what he's feel -- ing, deal -- ing and danc -- ing you
+	home.
 }
 {% endif %}

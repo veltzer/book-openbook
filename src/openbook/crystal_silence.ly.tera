@@ -5,6 +5,7 @@ default_version = "Real"
 title = "Crystal Silence"
 style = "Jazz"
 composer = "Chick Corea"
+poet = "Neville Potter"
 piece = "Ballad"
 typesetter = "Mark Veltzer <mark.veltzer@gmail.com>"
 completion = "5"
@@ -23,7 +24,7 @@ remark = "Gary Burton and Chick Corea, Crystal Silence (1973), the duo recording
 [versions.Real]
 doChords = true
 doVoice = true
-doLyrics = false
+doLyrics = true
 doLyricsmore = false
 doLyricsmoremore = false
 doChordBars = false
@@ -133,5 +134,20 @@ doOwn = false
 
 	% part "End"
 	r1^\markup { Ending } | r1\fermata |
+}
+{% endif %}
+{% if part == "LyricsReal" %}\lyricmode {
+	Oh,
+	where did he go? The crys -- tal si -- lence cries in my dreams,
+	I see him still through the crys -- tal
+	si -- lence of the night; A game he
+	might have played if he had stayed;
+	Oh, I know those won -- drous games that we would have played; As long as time ex --
+	ists, I
+	shall re -- call the man I knew so
+	well; One day I know in time our
+	paths will meet, and then we will feel the crys -- tal si -- lence,
+	all a -- lone I can re -- flect, I let him slip a -- way from the
+	dream, in the crys -- tal si -- lence of night.
 }
 {% endif %}

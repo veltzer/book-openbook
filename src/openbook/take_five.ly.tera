@@ -5,6 +5,7 @@ default_version = "Unknown"
 title = "Take Five"
 style = "Jazz"
 composer = "Paul Desmond"
+poet = "Iola Brubeck"
 piece = "Moderately"
 copyright = "1960 (Renewed) Desmond Music Company (U.S.A.) and Derry Music Company (Canada)"
 typesetter = "Jordan Eldredge <jordan@jordaneldredge.com>"
@@ -16,7 +17,7 @@ location = "rbk1:420"
 [versions.Unknown]
 doChords = true
 doVoice = true
-doLyrics = false
+doLyrics = true
 doLyricsmore = false
 doLyricsmoremore = false
 doChordBars = false
@@ -91,6 +92,16 @@ doOwn = false
 	% part "A"
 	gis a gis g f4 a, c | d2. \tuplet 3/2 { e16 f e } d8 c4 | d2. \tuplet 3/2 { c16 d c } a8 g4 | a2.~ a8 d f g |
 	gis a gis g f4 a, c | d2. \tuplet 3/2 { c16 d c } a8 g4 | a2. \tuplet 3/2 { e'16 f e } d8 c4 | d2.~ d2 |
+}
+{% endif %}
+{% if part == "LyricsUnknown" %}\lyricmode {
+	Won't you stop and
+	take a lit -- tle time out with me, just take five; Stop your bus -- y day and take the time out to see
+	I'm a -- live; Though I go out of my way just so I can pass by each day, not a
+	sin -- gle word do we say, it's a pan -- to -- mime and not a play; Still I know our eyes of -- ten meet, I feel tin -- gles down to my feet when your
+	smile warms my heart, then you walk a -- way; Would -- n't it be bet -- ter not to be so po -- lite, you could of -- fer a light, start a
+	lit -- tle con -- ver -- sa -- tion now, it's all right, just take five, just take five; Won't you stop and take a lit --
+	tle time out with me, take five, stop your bus -- y day and see that I'm a -- live, take five!
 }
 {% endif %}
 {% if part == "ChordsLaurent" %}\chordmode {

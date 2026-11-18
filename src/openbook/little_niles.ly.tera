@@ -5,6 +5,7 @@ default_version = "Fake"
 title = "Little Niles"
 style = "Jazz"
 composer = "Randy Weston"
+poet = "Jon Hendricks"
 piece = "Jazz Waltz"
 copyright = "1957 (Renewed 1985) BLACK SUN MUSIC (SESAC)"
 copyrightextra = "All Rights Administered by MAYFLOWER MUSIC CORPORATION (ASCAP)"
@@ -25,7 +26,7 @@ remark = "Phineas Newborn Jr."
 [versions.Fake]
 doChords = true
 doVoice = true
-doLyrics = false
+doLyrics = true
 doLyricsmore = false
 doLyricsmoremore = false
 doChordBars = false
@@ -111,5 +112,17 @@ doOwn = false
 	\repeat volta 2 {
 		a4~ a8 f' r a, | gis4 e'! gis, | g!4~ g8 ees' r g, | fis4^\markup { Repeat and Fade } d' fis, |
 	}
+}
+{% endif %}
+{% if part == "LyricsFake" %}\lyricmode {
+	Lit -- tle Niles, ev -- 'ry lit -- tle boy in one, and oh, so much fun; Lit -- tle Niles, half a man and half a child, and
+	when he smiles, like all the lit -- tle chil -- dren ev -- 'ry -- where, he's real -- ly liv -- ing truth, for truth is part of youth, and when you feel con -- tent -- ment sur -- round you, you'll
+	know he's a -- round you; There are days when his mis -- chie -- vous way makes you shout and wear your
+	pa -- tience out; Still you'll know you'll stand his
+	ev -- 'ry whim, just be -- cause you see your --
+	self in him; Lit -- tle Niles, walk -- in' a -- round and act -- in' so tall, al -- though he's small; Lit -- tle Niles, help -- less in his
+	lit -- tle world, he warms your heart and cheers up your hap -- py day in ev -- 'ry way; Lit -- tle Niles, he's for -- ev -- er on the go and nev -- er slows, when you hold him
+	close to you, you'll soon real -- ize there's
+	heav -- en in his eyes, sweet Lit -- tle Niles, Lit -- tle Niles!
 }
 {% endif %}

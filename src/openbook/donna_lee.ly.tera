@@ -5,6 +5,7 @@ default_version = "Real"
 title = "Donna Lee"
 style = "Jazz"
 composer = "Charlie Parker"
+poet = "Stanley Cornfield"
 piece = "Up Tempo"
 typesetter = "Mark Veltzer <mark.veltzer@gmail.com>"
 completion = "5"
@@ -24,7 +25,7 @@ remark = "The original Parker, Davis, Bud Powell version"
 [versions.Real]
 doChords = true
 doVoice = true
-doLyrics = false
+doLyrics = true
 doLyricsmore = false
 doLyricsmoremore = false
 doChordBars = false
@@ -101,5 +102,24 @@ doOwn = false
 	\tuplet 3/2 { aes bes aes } g aes bes aes g f | b, d f aes b g' f e |
 	ees! des c bes a ges f ees | des f aes c bes aes g ees |
 	aes4 r r2 | r1 |
+}
+{% endif %}
+{% if part == "LyricsReal" %}\lyricmode {
+	Is -- n't it weird and strange the way mu -- si -- cians want to
+	show off how fast they've learned to play their mu -- sic? Is it
+	that they want to make it seem so tough, so ver -- y tough on a per --
+	son that you'd have to be some -- one ver -- y great and spe --
+	cial just to make your fin -- gers move a lit --
+	tle fast -- er than they are used to mov -- in' when they're do -- in' day -- to -- day
+	tasks like wash -- in' up the dish -- es or pull -- in' up
+	weeds? Typ -- ists do it much bet -- ter if you're im -- pressed with speed and ac -- cu --
+	ra -- cy at all! But it would be dis -- hon -- est of me if
+	I did -- n't tell you I real -- ly get ex -- cit -- ed when
+	I hear jazz mu -- si -- cians real -- ly get hot and blow and let go with ev -- 'ry --
+	thing! I
+	may be weird, I may be strange, I can't ex -- pect the world to change, but
+	one of these days I'm gon -- na find out why the guy who wrote this song de --
+	signed it so it must be played much fast -- er than a guy like me can
+	play!
 }
 {% endif %}

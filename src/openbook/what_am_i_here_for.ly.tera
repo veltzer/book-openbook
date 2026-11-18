@@ -5,6 +5,7 @@ default_version = "Wikifonia"
 title = "What Am I Here For"
 style = "Jazz"
 composer = "Duke Ellington"
+poet = "Jon Hendricks"
 piece = "Jazz"
 typesetter = "OpenBook contributors (MusicXML import)"
 completion = "3"
@@ -16,7 +17,7 @@ copyrightextra = "Publications U.S. Inc. (Print), All Rights Reserved. Used by P
 [versions.Wikifonia]
 doChords = true
 doVoice = true
-doLyrics = false
+doLyrics = true
 doLyricsmore = false
 doLyricsmoremore = false
 doChordBars = false
@@ -151,5 +152,45 @@ doOwn = false
 	as''16 g''16 e''8 ~ e''8 f''8 des''8 bes'8 g'8 f'8 |
 	bes'8 c''8 d''8 g''8 r4 g'4 ^\fermata |
 	\endBar
+}
+{% endif %}
+{% if part == "LyricsWikifonia" %}\lyricmode {
+	What am I here for?
+	What am I here for?
+	What does my liv -- ing all mean?
+	Where am I go -- ing?
+	What am I do -- ing?
+	What is this pause in be -- tween?
+	Won -- der why you
+	won -- der
+	'bout to -- mor -- row
+	more;
+	Ev -- 'ry day's
+	a brand new day,
+	it'll come as sure
+	as you are born;
+	What am I here
+	for? What
+	am I here
+	for? May --
+	be I'm do -- ing it
+	now; Where do I come
+	from? Where am I go -- ing? None
+	of my
+	bus -- i -- ness no -- how;
+	What's the use of won --
+	der -- ing, long as you're liv -- in'?
+	That's what I'm here
+	for, that's
+	what I'm here for, life is
+	just to live!
+	What am I here for?
+	What am I here for?
+	That's what I'm here for, to
+	live and love each hap -- py
+	day that comes
+	my way, yes, that's what I'm here for,
+	that's what I'm here for, life is just
+	there for us to live!
 }
 {% endif %}

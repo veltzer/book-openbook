@@ -5,6 +5,7 @@ default_version = "Wikifonia"
 title = "Nuages"
 style = "Jazz"
 composer = "Django Reinhardt"
+poet = "Spencer Williams"
 piece = "Standard"
 typesetter = "OpenBook contributors (MusicXML import)"
 completion = "3"
@@ -16,7 +17,7 @@ copyrightextra = "Archived MusicXML notice retained; underlying music is not rel
 [versions.Wikifonia]
 doChords = true
 doVoice = true
-doLyrics = false
+doLyrics = true
 doLyricsmore = false
 doLyricsmoremore = false
 doChordBars = false
@@ -127,5 +128,40 @@ doOwn = false
 	d'1 ~ - "Gj7" |
 	d'4 - "G" r4 r2 |
 	\endBar
+}
+{% endif %}
+{% if part == "LyricsWikifonia" %}\lyricmode {
+	It's the blu -- est kind of
+	blues my
+	ba -- by sings,
+	_
+	it's the new -- est kind of blues
+	my sweet ba -- by sings;
+	It's the kind
+	that
+	makes you sigh, it's the kind that
+	makes
+	you cry, do -- ing some -- thing to my
+	heart,
+	like a lul -- la --
+	by;
+	It's the blu -- est kind of
+	blues
+	that my ba -- by sings, the
+	tru -- est
+	kind of
+	blues
+	that my ba -- by brings, al -- ways on
+	my mind,
+	a -- wake
+	or
+	while I am sleep -- ing, it's
+	the
+	blu -- est kind of
+	blues
+	that my dar -- ling ba -- by sings to
+	me each
+	lone -- ly
+	night.
 }
 {% endif %}

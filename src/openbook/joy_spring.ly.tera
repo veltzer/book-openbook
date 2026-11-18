@@ -5,6 +5,7 @@ default_version = "Wikifonia"
 title = "Joy Spring"
 style = "Jazz"
 composer = "Clifford Brown"
+poet = "Jon Hendricks"
 piece = "Jazz"
 typesetter = "OpenBook contributors (MusicXML import)"
 completion = "3"
@@ -15,7 +16,7 @@ copyright = "All Rights Reserved"
 [versions.Wikifonia]
 doChords = true
 doVoice = true
-doLyrics = false
+doLyrics = true
 doLyricsmore = false
 doLyricsmoremore = false
 doChordBars = false
@@ -111,5 +112,33 @@ doOwn = false
 	r4 bes'8 r4. r8 a'8 g'8 r8 f'8 e'8 |
 	}
 	\endBar
+}
+{% endif %}
+{% if part == "LyricsWikifonia" %}\lyricmode {
+	Is --
+	n't spring
+	your fa -- vor -- ite sea --
+	son? Watch -- ing the
+	flow -- ers bloom -- in' up out of
+	the ground, watch -- in' the snow
+	melt down, boy, you may
+	dig win -- ter time, but spring
+	is my joy! It's
+	got me feel --
+	in' so glad, the days
+	are breez -- y; You've
+	got the time to say hel -- lo
+	and give a smile, feel -- in'
+	real good is in style,
+	you may dig win -- ter, boy,
+	but spring is my
+	joy! It's some -- thing spe -- cial,
+	have -- n't you ob -- served, it
+	makes you glad to be a --
+	live; It's not ab -- surd to
+	say that spring helps you sur -- vive the
+	win -- ter's long, mis -- 'ra -- ble
+	snow and rain, it gives you hope that
+	spring is my real joy!
 }
 {% endif %}

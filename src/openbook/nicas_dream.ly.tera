@@ -5,6 +5,7 @@ default_version = "Fake"
 title = "Nica's Dream"
 style = "Jazz"
 composer = "Horace Silver"
+poet = "Horace Silver"
 piece = "Moderate Latin Tempo"
 copyright = "1984 by Ecaroh Music, Inc."
 typesetter = "Mark Veltzer <mark.veltzer@gmail.com>"
@@ -24,7 +25,7 @@ remark = "The Jazz Messengers in the first recording (1956)"
 [versions.Fake]
 doChords = true
 doVoice = true
-doLyrics = false
+doLyrics = true
 doLyricsmore = false
 doLyricsmoremore = false
 doChordBars = false
@@ -122,5 +123,22 @@ doOwn = false
 	\tuplet 3/2 { c'4 des a!4 } c2~ | c4. bes8~ bes8 f4 des8 | \tuplet 3/2 { ees4 f des } ees2~ | ees2. des4 |
 	bes'1~ | bes4. aes8~ aes8 f4 des8 | ees1~ | ees1 | ees8 f ees f ges2~ | ges2 f4 r8 des8 |
 	c1~ | c2. r4 |
+}
+{% endif %}
+{% if part == "LyricsFake" %}\lyricmode {
+	A
+	song, hap -- py and gay, a
+	song that we know all the mu -- si -- cians will play, you
+	know, so it would seem ev -- 'ry -- bod -- y loves Ni -- ca's
+	Dream; A
+	Dream!
+	She had a vi -- sion that jazz would one day be the
+	mu -- sic that's of the fu -- ture, you see, don't you a -- gree?
+	We'll help to see that her vi -- sion will come true, and
+	all the world will be blessed by it too; This song is here to stay, my friend,
+	just wait and see, the peo --
+	ple have made it part of jazz his -- to -- ry, you know,
+	so it would seem that ev -- 'ry -- bod -- y loves Ni -- ca's
+	Dream!
 }
 {% endif %}

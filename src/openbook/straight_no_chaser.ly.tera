@@ -5,6 +5,7 @@ default_version = "Wikifonia"
 title = "Straight, No Chaser"
 style = "Jazz"
 composer = "Thelonious Monk"
+poet = "Eddie Jefferson"
 piece = "Jazz"
 typesetter = "OpenBook contributors (MusicXML import)"
 completion = "3"
@@ -15,7 +16,7 @@ copyright = "All Rights Reserved"
 [versions.Wikifonia]
 doChords = true
 doVoice = true
-doLyrics = false
+doLyrics = true
 doLyricsmore = false
 doLyricsmoremore = false
 doChordBars = false
@@ -83,5 +84,19 @@ doOwn = false
 	f'8 g'8 gis'8 a'8 ~ a'2 ~ |
 	a'1 |
 	\endBar
+}
+{% endif %}
+{% if part == "LyricsWikifonia" %}\lyricmode {
+	I
+	came to this town, was tired of
+	chas -- in' a -- round, I
+	came to get straight, I had to
+	get straight, had no time to wait,
+	God knows I had to make haste;
+	Do things a -- mov -- in', no
+	time for dood -- lin', I used to
+	won -- der how, when ev -- 'ry -- thing seemed
+	pro -- found with pid -- dl -- in', I
+	came to get straight!
 }
 {% endif %}

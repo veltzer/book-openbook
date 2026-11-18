@@ -5,6 +5,7 @@ default_version = "Wikifonia"
 title = "Little B's Poem"
 style = "Jazz"
 composer = "Bobby Hutcherson"
+poet = "Jessica Lauren"
 piece = "Jazz"
 typesetter = "OpenBook contributors (MusicXML import)"
 completion = "3"
@@ -15,7 +16,7 @@ copyright = "All Rights Reserved"
 [versions.Wikifonia]
 doChords = true
 doVoice = true
-doLyrics = false
+doLyrics = true
 doLyricsmore = false
 doLyricsmoremore = false
 doChordBars = false
@@ -89,5 +90,24 @@ doOwn = false
 	gis'4 a'4 b'4 |
 	c''4 d''4 f''4 |
 	\endBar
+}
+{% endif %}
+{% if part == "LyricsWikifonia" %}\lyricmode {
+	Horns of
+	love, you
+	make my heart
+	sing; Re -- joice,
+	re -- joice,
+	let all
+	the bells ring!
+	Lit -- tle girl,
+	you're my heart's
+	de -- light, you
+	make life sun --
+	ny and bright;
+	Lit -- tle girl,
+	you are all
+	my heart longs
+	for, al -- ways.
 }
 {% endif %}

@@ -5,6 +5,7 @@ default_version = "Fake"
 title = "Good Bait"
 style = "Jazz"
 composer = "Tadd Dameron, Count Basie"
+poet = "Jon Hendricks"
 piece = "Medium Swing"
 copyright = "1944 (Renewed) WB MUSIC CORP."
 typesetter = "Mark Veltzer <mark.veltzer@gmail.com>"
@@ -24,7 +25,7 @@ remark = "John Coltrane from Soultrane (1958)"
 [versions.Fake]
 doChords = true
 doVoice = true
-doLyrics = false
+doLyrics = true
 doLyricsmore = false
 doLyricsmoremore = false
 doChordBars = false
@@ -98,5 +99,15 @@ doOwn = false
 	% part "A"
 	bes'4 bes8 a bes4 r | r8 a bes c des ees ges aes | f4 f8 e! f4 r | r8 d c bes a c f ees |
 	d4 d8 cis d g f d | bes4 bes8 a bes d f ees | d a aes des c g ges b! | bes4 r r2 |
+}
+{% endif %}
+{% if part == "LyricsFake" %}\lyricmode {
+	Keep
+	it in mind, ad -- vice is cheap and fate is some -- times un -- kind; Nev -- er -- the -- less, ac -- cept this free
+	pearl of wis -- dom of -- fered to the ranks of wis -- dom: if you're tempt -- ing fate, then use good bait! The
+	fish got -- ta swim, and like that old song says, birds got -- ta fly; But if you can't help lov -- in' some
+	one 'til you die, don't start with a lov -- in' lie, a -- void the sec -- ond rate by start -- ing with good bait! Be --
+	tween you and me, more fish than one are swim -- ming in the sea, so if you're smart you'll save your heart
+	for some -- thing spe -- cial, some -- one sweet and un -- for -- get -- ful, drop your line, hold out for some -- thing fine: good bait!
 }
 {% endif %}

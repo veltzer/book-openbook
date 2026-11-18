@@ -5,6 +5,7 @@ default_version = "Real"
 title = "Blue Monk"
 style = "Jazz"
 composer = "Thelonius Monk"
+poet = "Abbey Lincoln"
 piece = "Blues"
 copyright = "1962 (Renewed 1990) by Thelonious Monk Corp."
 typesetter = "Mark Veltzer <mark.veltzer@gmail.com>"
@@ -24,7 +25,7 @@ remark = "Bobby McFerrin and Chick Corea"
 [versions.Real]
 doChords = true
 doVoice = true
-doLyrics = false
+doLyrics = true
 doLyricsmore = false
 doLyricsmoremore = false
 doChordBars = false
@@ -72,5 +73,11 @@ doOwn = false
 	d8 ees e f~ f2 | g8 gis a bes~ bes2 | f8 g! f e! ees f, cis' d~ | d des4 c8~ c2 |
 	g'8 gis a bes~ bes2 | bes8 b c des~ des2 | f,8 g f e! ees f, cis' d~ | d2. \tuplet 3/2 { f8 f f } |
 	f f,4.~ f2 | f'8 g f e ees f, cis' d~ | d4 f8 g f e ees f, | cis' d4.~ d2 |
+}
+{% endif %}
+{% if part == "LyricsReal" %}\lyricmode {
+	Go -- ing a -- lone, life is your own, but the cost is some -- times dear, be -- ing com --
+	plete, know -- ing de -- feat, keep -- ing on from year to year; It takes some do -- ing, Monk -- er --
+	y's the blues you hear, keep -- ing on year to year, trial and er -- ror, loss and gain.
 }
 {% endif %}

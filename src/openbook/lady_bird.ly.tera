@@ -5,6 +5,7 @@ default_version = "Real"
 title = "Lady Bird"
 style = "Jazz"
 composer = "Tadd Dameron"
+poet = "Stanley Cornfield"
 piece = "Moderately"
 copyright = "1947 (Renewed) by Music Sales Corporation"
 typesetter = "Mark Veltzer <mark.veltzer@gmail.com>"
@@ -24,7 +25,7 @@ remark = "Miles Davis with Tadd Dameron"
 [versions.Real]
 doChords = true
 doVoice = true
-doLyrics = false
+doLyrics = true
 doLyricsmore = false
 doLyricsmoremore = false
 doChordBars = false
@@ -90,5 +91,13 @@ doOwn = false
 			g1\fermata |
 		}
 	}
+}
+{% endif %}
+{% if part == "LyricsReal" %}\lyricmode {
+	We fit to -- geth -- er like two birds of a feath -- er,
+	a per -- fect com -- bi -- na -- tion, now it just could -- n't
+	be bet -- ter; If you just say the word, I'll leave my
+	lone -- ly world and fly, La -- dy
+	Bird!
 }
 {% endif %}

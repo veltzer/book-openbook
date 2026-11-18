@@ -5,6 +5,7 @@ default_version = "Fake"
 title = "A Night In Tunisia"
 style = "Jazz"
 composer = "John 'Dizzy' Gillespie, Frank Paparelli"
+poet = "Jon Hendricks"
 piece = "Bright Swing"
 copyright = "1944 by MCA Music Publishing, A division of MCA Inc, New York, NY"
 copyrightextra = "Copyright Renewed"
@@ -16,7 +17,7 @@ structure = "ABA"
 [versions.Fake]
 doChords = true
 doVoice = true
-doLyrics = false
+doLyrics = true
 doLyricsmore = false
 doLyricsmoremore = false
 doChordBars = false
@@ -110,6 +111,18 @@ doOwn = false
 
 	% part "A"
 	\tuplet 3/2 { bes des f } c'2 bes8 f | gis a4. r4 r8 a, | \tuplet 3/2 { bes des f } c' c~ c4 bes8 f | a2. r8 a, | \tuplet 3/2 { bes des f } c'2 bes8 f | gis a4. r2 | a8 bes \tuplet 3/2 { a16 bes a } g8 ees4 cis8 d~ | d4 r r2 |
+}
+{% endif %}
+{% if part == "LyricsFake" %}\lyricmode {
+	The
+	moon is the same moon a -- bove you, a -- glow with its cool eve -- ning light, but shin -- ing at night in Tu -- ni -- si -- a,
+	nev -- er does it shine half so bright; The
+	The
+	des -- ert
+	sand; Words fail to tell a tale too ex --
+	ot -- ic to be told, each night is a deep -- er night in a world that is a -- ges old; Oh, yes, now all of the cares of the day seem to
+	van -- ish,
+	the end -- ing of day brings re -- lease, each won -- der -- ful night in Tu -- ni -- si -- a, where the nights are filled with sweet peace. _ _ _ _ _ _ _ _ _
 }
 {% endif %}
 {% if part == "ChordsLaurent" %}\chordmode {

@@ -270,8 +270,8 @@ own Wikifonia `.mxl` (`a_pretty_girl_is_like_a_melody`,
 poet and no lyrics has lyrics still under copyright (published 1931 or
 later).
 
-Status 2026-11-18: lyrics added to the remaining 575 vocal tunes across the
-repository (`574` in `src/openbook/` plus `src/israeli/geshem.ly.tera`):
+Status 2026-11-18: lyrics added to the remaining 614 vocal tunes across the
+repository (`613` in `src/openbook/` plus `src/israeli/geshem.ly.tera`):
 
 - 492 Wikifonia-imported tunes in `src/openbook/` extracted directly from their
   own `.mxl` in `real_books_archive.gi/Wikifonia.tar.xz` (1:1 syllable-bearing
@@ -305,6 +305,16 @@ repository (`574` in `src/openbook/` plus `src/israeli/geshem.ly.tera`):
   credit (`its_sand_man`, `johnnys_theme`, `king_porter_stomp`,
   `maple_leaf_rag`, `salt_peanuts`, `shiny_stockings`,
   `swinging_shepherd_blues`, `tickle_toe`).
+- 39 jazz standards in `src/openbook/` with lyrics or vocalese from
+  `The Real Vocal Book.pdf` or `Wikifonia.tar.xz` (`9_20_special`,
+  `a_night_in_tunisia`, `all_blues`, `blue_monk`, `confirmation`, `cottontail`,
+  `crystal_silence`, `donna_lee`, `doodlin`, `doxy`, `four`, `good_bait`,
+  `goodbye_pork_pie_hat`, `groovin_high`, `joy_spring`, `lady_bird`,
+  `little_bs_poem`, `little_niles`, `maiden_voyage`, `midnight_sun`, `moanin`,
+  `mr_pc`, `naima`, `nefertiti`, `nicas_dream`, `nuages`, `oleo`, `red_clay`,
+  `so_what`, `song_for_my_father`, `stolen_moments`, `straight_no_chaser`,
+  `take_five`, `the_duke`, `tune_up`, `walkin`, `watermelon_man`,
+  `what_am_i_here_for`, `whisper_not`).
 - `src/israeli/geshem.ly.tera`: aligned Verse 1 from its `Extra` block to
   `VoiceMy` in `LyricsMy`.
 

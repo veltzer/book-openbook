@@ -5,6 +5,7 @@ default_version = "Real"
 title = "Red Clay"
 style = "Jazz"
 composer = "Freddie Hubbard"
+poet = "Mark Murphy"
 piece = "Moderate Latin"
 copyright = "1972 by HUBTONES MUSIC CO."
 typesetter = "Mark Veltzer <mark.veltzer@gmail.com>"
@@ -24,7 +25,7 @@ remark = "Freddie Hubbard live at the North Sea Jazz Festival"
 [versions.Real]
 doChords = true
 doVoice = true
-doLyrics = false
+doLyrics = true
 doLyricsmore = false
 doLyricsmoremore = false
 doChordBars = false
@@ -122,5 +123,18 @@ doOwn = false
 
 	% part "Coda"
 	ges,1~^\markup { \musicglyph #"scripts.coda" } | ges2. r4 | r2 r4\fermata aes'4\fermata |
+}
+{% endif %}
+{% if part == "LyricsReal" %}\lyricmode {
+	Screen
+	door slap -- pin' some -- where on a side porch, on a sleep -- y morn -- ing way out in the
+	boon -- docks, sto -- ries are be -- ing told on the
+	red clay;
+	clay,
+	mov -- ing, al -- ways mov -- ing,
+	morn -- ing, mid -- night, sleep tight; Some --
+	one is play -- ing some -- thing on the back steps, the hap -- py fa -- ces look out of the
+	win -- dows, al -- ways some -- thing good on the red clay,
+	red clay.
 }
 {% endif %}

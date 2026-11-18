@@ -5,6 +5,7 @@ default_version = "Real"
 title = "Stolen Moments"
 style = "Jazz"
 composer = "Oliver Nelson"
+poet = "Mark Murphy"
 piece = "Moderately slow"
 copyright = "1962, 1965 by Oliver E. Nelson"
 copyrightextra = "Copyright Renewed. Alameda Music Co.: Sole Licensing and Selling Agent"
@@ -25,7 +26,7 @@ remark = "Eric Dolphy"
 [versions.Real]
 doChords = true
 doVoice = true
-doLyrics = false
+doLyrics = true
 doLyricsmore = false
 doLyricsmoremore = false
 doChordBars = false
@@ -90,5 +91,13 @@ doOwn = false
 
 	% part "Coda"
 	g2 r8 g a g | bes4 a8 g~ g4. g8~ | g2 r8 c, ees g | f1~ | f1\fermata |
+}
+{% endif %}
+{% if part == "LyricsReal" %}\lyricmode {
+	Sto -- len mo -- ments, if I told you I loved you, pret -- ty ba -- by, would it make up
+	for what they say? If I hold you and squeeze you, dar -- lin', would you lin -- ger a while
+	to -- day? If I hold you and hug you, my dear, so don't ar -- gue, then gos -- sips won't hurt you, I'll nev -- er de --
+	sert you, and some -- day find us where peo -- ple won't bind us to the hands of
+	time; What's the pan -- to -- mime? Sto -- len mo -- ments, sto -- len.
 }
 {% endif %}

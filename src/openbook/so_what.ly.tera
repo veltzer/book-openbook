@@ -5,6 +5,7 @@ default_version = "Laurent"
 title = "So What"
 style = "Jazz"
 composer = "Miles Davis"
+poet = "Eddie Jefferson"
 typesetter = "Laurent Martelli"
 completion = "3"
 uuid = "f1d840d2-d4a0-11f1-8000-046874d194b7"
@@ -13,7 +14,7 @@ structure = "AABA"
 [versions.Laurent]
 doChords = true
 doVoice = true
-doLyrics = false
+doLyrics = true
 doLyricsmore = false
 doLyricsmoremore = false
 doChordBars = false
@@ -107,5 +108,24 @@ doOwn = false
 	d8 a4. <e' a d g b>4. <d g c f a>8 | r8 e,8 a b c( d) e c |
 	d2 <e a d g b>4. <d g c f a>8 | r8 e4. e4 e |
 	d8( a4.) <e' a d g b>4. <d g c f a>8 | r1 |
+}
+{% endif %}
+{% if part == "LyricsLaurent" %}\lyricmode {
+	My
+	ba -- by just walked on the
+	stage, so what? She dan -- ces so low and
+	so hot, so what? Oh, yes, she did leave the
+	stage, so what? Clean out of
+	sight, so what?
+	And then he walked off the
+	stage, so what? That's what you
+	folks are all say -- in', so what? Yes, he
+	did leave the stage, so what? And that's a fact,
+	so what? It's not they have
+	to re -- hearse, that's right, al -- though we know
+	that they're mas -- ters, that's right, they have a
+	real mel -- low style, so smooth; You'll have to ad --
+	mit it, huh, oh, yes, so
+	cool, so what!
 }
 {% endif %}

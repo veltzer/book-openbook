@@ -5,6 +5,7 @@ default_version = "Real"
 title = "Cottontail"
 style = "Jazz"
 composer = "Duke Ellington"
+poet = "Jon Hendricks"
 piece = "Fast"
 typesetter = "Mark Veltzer <mark.veltzer@gmail.com>"
 completion = "5"
@@ -23,7 +24,7 @@ remark = "Ella Fitzgerald with Duke Ellington, Milan 1966"
 [versions.Real]
 doChords = true
 doVoice = true
-doLyrics = false
+doLyrics = true
 doLyricsmore = false
 doLyricsmoremore = false
 doChordBars = false
@@ -111,5 +112,16 @@ doOwn = false
 	% part "A"
 	r8 bes4. f8 aes c4 | bes4. bes8 r2 | r8 bes4 r8 bes4. c8 | bes aes f4-. ees2 |
 	r4 d'4~ d4. f8 | ees des4 c8-^ r8 bes4 aes8 | aes f fis g g ees e f~ | f fis g aes r2 |
+}
+{% endif %}
+{% if part == "LyricsReal" %}\lyricmode {
+	Way back in my child -- hood I heard a sto -- ry so true,
+	'bout a fun -- ny bun -- ny steal -- in' some Cab -- bage from a farm -- er
+	he knew; But
+	he got a -- way!
+	He knew his mom -- ma was right, so why don't he heed what she say? May --
+	be he just don't dig it, part of his hab -- it 'cause he's a rab -- bit;
+	His mom -- ma got wor -- ried, she told the bun -- ny one day,
+	Bet -- ter watch that farm -- er's head -- ing, do what I say or he'll blow you a -- way!
 }
 {% endif %}

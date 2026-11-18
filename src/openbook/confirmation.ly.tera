@@ -5,6 +5,7 @@ default_version = "Fake"
 title = "Confirmation"
 style = "Jazz"
 composer = "Charlie Parker"
+poet = "Stanley Cornfield"
 piece = "Fast"
 copyright = "1946 ATLANTIC MUSIC CORP."
 copyrightextra = "Renewed and assigned 1974 ATLANTIC MUSIC CORP."
@@ -25,7 +26,7 @@ remark = "Charlie Parker and Dizzy Gillespie live at Carnegie Hall (1947)"
 [versions.Fake]
 doChords = true
 doVoice = true
-doLyrics = false
+doLyrics = true
 doLyricsmore = false
 doLyricsmoremore = false
 doChordBars = false
@@ -115,6 +116,17 @@ doOwn = false
 	% part "A"
 	r8 c'4. bes8 a \tuplet 3/2 { e8 f fis } | g8 d' bes g a cis, r g' | r8 f r4 r4 r8 a | g8 bes a g r8 f4 bes8 |
 	b8 bes aes f bes aes4. | r8 c bes aes a cis, d f~ | f8 d f a r8 f4 d8 | f4 r r2 |
+}
+{% endif %}
+{% if part == "LyricsFake" %}\lyricmode {
+	Hey, Char -- lie, please wake up, some -- bod -- y's phon -- ing you for some con -- fir -- ma -- tion, you got to hur -- ry,
+	it's long dis -- tance in -- for -- ma -- tion, you can't af -- ford to let this one go, it's just self pres -- er --
+	va -- tion! Hey, the Grey -- hound is leav -- ing ten o' -- clock this morn -- ing, I think you bet -- ter talk with
+	this guy, be -- cause he's your a -- gent, he's pret -- ty pa -- tient, but some -- times you make him so mad,
+	yes! This gig is with Min -- gus, and Bud just got out of Belle -- vue now and they can't slow him down,
+	no! So leave your Bird -- land dreams a -- while and get to the tel -- e -- phone, Char -- lie, you got no bus -- i -- ness sleep -- ing an -- y -- way, the good Lord sent you
+	here to play! Hey, Char -- lie, some -- bod -- y's phon -- ing you for some con -- fir -- ma -- tion, you got to
+	hur -- ry, it's long dis -- tance, you just can't sleep 'cause the good Lord sent you here to play!
 }
 {% endif %}
 {% if part == "ChordsLaurent" %}\chordmode {

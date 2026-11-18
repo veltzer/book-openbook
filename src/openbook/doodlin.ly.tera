@@ -5,6 +5,7 @@ default_version = "Fake"
 title = "Doodlin'"
 style = "Jazz"
 composer = "Horace Silver"
+poet = "Jon Hendricks"
 piece = "Medium swing"
 copyright = "1956 & 1957 by Silhouette Music Corp."
 typesetter = "Mark Veltzer <mark.veltzer@gmail.com>"
@@ -24,7 +25,7 @@ remark = "Ray Charles from The Great Ray Charles (1957)"
 [versions.Fake]
 doChords = true
 doVoice = true
-doLyrics = false
+doLyrics = true
 doLyricsmore = false
 doLyricsmoremore = false
 doChordBars = false
@@ -103,5 +104,16 @@ doOwn = false
 	des8 r8 b'8 b bes bes a a | aes8 ges f4 des8 aes c des~ | des8 r8 aes'8 aes g g ges ges | f8 ces'8 bes4 ges8 des f ges~ |
 	ges8 r8 des'8 des c c ces ces | bes8 ges f4 des8 aes c des~ | des8 r8 aes'8 aes g g ges ges | f8 bes, des f~ f des4-. aes8 |
 	ges4. aes8 c c des d | ees1 | r4 \tuplet 3/2 { aes16 ces aes } f8 e8 bes' ees, a | aes2. r4 |
+}
+{% endif %}
+{% if part == "LyricsFake" %}\lyricmode {
+	Us -- in' the phone booth, mak -- in' a few calls, dood -- lin' weird things, us -- in' the booth walls; Got me a big date, wait -- in' for my
+	chick, put -- tin' her face on so she could look slick; I en -- joy pro -- cras -- ti -- nat -- ing, 'cause I'm bus -- y while I'm wait -- in', dood -- lin'
+	a -- way, dood -- lin' a -- way; Sit -- tin' and din -- in', din -- ner be -- gin -- nin', start -- ed de --
+	sign -- in' on the cloth,
+	dood -- lin' all the live -- long day;
+	Talk -- in' to my date, dood -- lin' my bit, wait -- er got salt -- y, told me to please quit; Told the wait -- er, Don't be
+	diz -- zy, can't you see I'm ver -- y bus -- y, dood -- lin' a -- way, dood -- lin' a -- way! Do you dood -- le all day? Asked the
+	wait -- er in his way; Dood -- lin's all I want to do, I like it that way!
 }
 {% endif %}

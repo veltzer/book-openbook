@@ -5,6 +5,7 @@ default_version = "Fake"
 title = "Walkin'"
 style = "Jazz"
 composer = "Richard Carpenter"
+poet = "Jon Hendricks"
 piece = "Easy"
 copyright = "1955 by Richard Carpenter"
 copyrightextra = "Assigned to RICHCAR MUSIC CO. All Rights Reserved. Used by Permission."
@@ -25,7 +26,7 @@ remark = "Herb Ellis"
 [versions.Fake]
 doChords = true
 doVoice = true
-doLyrics = false
+doLyrics = true
 doLyricsmore = false
 doLyricsmoremore = false
 doChordBars = false
@@ -105,5 +106,16 @@ doOwn = false
 			r2 r4 f'4^\markup { D.S. al Fine } |
 		}
 	}
+}
+{% endif %}
+{% if part == "LyricsFake" %}\lyricmode {
+	I
+	don't know what you have ev -- er done with, I don't care
+	who, but walk -- in' is my fav -- 'rite thing for cats and chicks to do; Let
+	me take you walk -- in', 'til the part -- ing mo -- ment comes,
+	let me do some talk -- in', o -- pen
+	up your ear -- drums, 'cause we're gon -- na walk a -- while, talk
+	a -- while, let me take
+	you!
 }
 {% endif %}

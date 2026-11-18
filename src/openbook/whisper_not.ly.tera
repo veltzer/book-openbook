@@ -5,6 +5,7 @@ default_version = "Laurent"
 title = "Whisper Not"
 style = "Jazz"
 composer = "Benny Golson"
+poet = "Leonard Feather"
 typesetter = "Laurent Martelli"
 completion = "3"
 uuid = "156811a2-d49f-11f1-8000-046874d194b7"
@@ -13,7 +14,7 @@ structure = "AABA"
 [versions.Laurent]
 doChords = true
 doVoice = true
-doLyrics = false
+doLyrics = true
 doLyricsmore = false
 doLyricsmoremore = false
 doChordBars = false
@@ -123,5 +124,21 @@ doOwn = false
 			f2.\repeatTie r4 |
 		}
 	}
+}
+{% endif %}
+{% if part == "LyricsLaurent" %}\lyricmode {
+	Sing low,
+	sing clear, sweet words in my ear, not a whis -- per
+	of de -- spair, but love's own prayer; Sing on, un -- til you
+	bring back the thrill of a sen -- ti -- men -- tal
+	tune that died too soon; Our har -- mo -- ny was lost, but you for --
+	gave, I for -- got, so whis -- per not of quar -- rels past, you
+	know we've had our last; Now we'll be on key con --
+	stant -- ly, our sweet love will whis -- per on
+	e -- ter -- nal -- ly; Sing low, sing clear, sweet words in my
+	ear, not a whis -- per of de -- spair, but love's own prayer will lin -- ger
+	there, whis -- per not, my dar -- ling, love will whis -- per on,
+	whis -- per not,
+	love.
 }
 {% endif %}

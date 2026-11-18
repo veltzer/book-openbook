@@ -5,6 +5,7 @@ default_version = "Fake"
 title = "Doxy"
 style = "Jazz"
 composer = "Sonny Rollins"
+poet = "Stanley Cornfield"
 piece = "Medium Groove"
 copyright = "1963 Prestige Music Co, Inc."
 typesetter = "Mark Veltzer <mark.veltzer@gmail.com>"
@@ -20,7 +21,7 @@ remark = "Miles Davis!"
 [versions.Fake]
 doChords = true
 doVoice = true
-doLyrics = false
+doLyrics = true
 doLyricsmore = false
 doLyricsmoremore = false
 doChordBars = false
@@ -106,5 +107,14 @@ doOwn = false
 
 	% part "A"
 	bes d bes f bes4 r8 f | bes f bes des r g,4 f8 | e g bes des \tuplet 3/2 { c8 des c } g8 bes | r1 |
+}
+{% endif %}
+{% if part == "LyricsFake" %}\lyricmode {
+	I
+	moved a -- round a lot when I was a kid, 'cause my
+	dad -- dy was the trav -- 'lin' type; The last thing
+	in the world that he liked to do was
+	watch the box and smoke a pipe; Oh, we lived all o --
+	ver the cit -- y and coun -- try, and that's the rea -- son why I got itch -- y feet for Dox -- y!
 }
 {% endif %}

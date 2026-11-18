@@ -5,6 +5,7 @@ default_version = "Fake"
 title = "Nefertiti"
 style = "Jazz"
 composer = "Wayne Shorter"
+poet = "Bonnie Ferguson"
 piece = "Medium Swing"
 copyright = "1968 Mikayo Music"
 typesetter = "Mark Veltzer <mark.veltzer@gmail.com>"
@@ -24,7 +25,7 @@ remark = "Herbie Hancock live"
 [versions.Fake]
 doChords = true
 doVoice = true
-doLyrics = false
+doLyrics = true
 doLyricsmore = false
 doLyricsmoremore = false
 doChordBars = false
@@ -79,5 +80,12 @@ doOwn = false
 		gis2~ gis4. g8 | fis4 d a2 | r2 bes'4. a8 | gis4 e b bes8 a8~ |
 		a2. cis8 a8~ | a1 | r1 | r1 |
 	}
+}
+{% endif %}
+{% if part == "LyricsFake" %}\lyricmode {
+	Ne -- fer -- ti -- ti, E -- gypt's queen, the pow -- er be --
+	side King Ak -- na -- ten;
+	First to be por -- trayed stand -- ing e -- qual with the king,
+	the queen.
 }
 {% endif %}

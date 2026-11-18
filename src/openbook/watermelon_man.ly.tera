@@ -5,6 +5,7 @@ default_version = "Aebersold"
 title = "Watermelon Man"
 style = "Jazz"
 composer = "Herbie Hancock"
+poet = "Jon Hendricks"
 piece = "16-Bar Blues"
 copyright = "1962, 1963 & 1965 By Hancock Music Co., New York, NY"
 typesetter = "Mark Veltzer <mark.veltzer@gmail.com>"
@@ -19,7 +20,7 @@ id = "4z8Rt4nvd-I"
 [versions.Aebersold]
 doChords = true
 doVoice = true
-doLyrics = false
+doLyrics = true
 doLyricsmore = false
 doLyricsmoremore = false
 doChordBars = false
@@ -81,6 +82,14 @@ doOwn = false
 	r4 c'8 ( c g'4 a | aes8 g f d f4 g-. ) |
 	r c,8 ( c g'4 a | aes8 g f d c4 d-. ) |
 	r c8 ( c g'4 aes | \mark \markup { \italic { break } } f-. ) f,8 f <aes c> ( <bes d>4-. ) f8~ | f1 | r |
+}
+{% endif %}
+{% if part == "LyricsAebersold" %}\lyricmode {
+	Hey, Wa -- ter -- mel -- on
+	Man, Wa -- ter -- mel -- on
+	Man,
+	bring
+	me one that's red, Man!
 }
 {% endif %}
 {% if part == "ChordsLaurent" %}\chordmode {

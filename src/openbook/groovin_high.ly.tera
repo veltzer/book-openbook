@@ -5,6 +5,7 @@ default_version = "Fake"
 title = "Groovin' High"
 style = "Jazz"
 composer = "John 'Dizzy' Gillespie"
+poet = "Kirby Stone"
 piece = "Moderately Fast"
 copyright = "1944, 1945 by MCA Music Publishing, A Division of MCA Inc., New York, NY"
 copyrightextra = "Copyright Renewed."
@@ -25,7 +26,7 @@ remark = "Charlie Parker"
 [versions.Fake]
 doChords = true
 doVoice = true
-doLyrics = false
+doLyrics = true
 doLyricsmore = false
 doLyricsmoremore = false
 doChordBars = false
@@ -114,5 +115,17 @@ doOwn = false
 	f4. g8 aes bes4 ces8~ | ces8 des ees f~ f4 b,8. a16 | bes8 g r4 r2 | r1 |
 
 	}
+}
+{% endif %}
+{% if part == "LyricsFake" %}\lyricmode {
+	Qui -- et,
+	qui -- et, there real -- ly is -- n't an -- y spe -- cial need for a ri -- ot; Qui -- et,
+	you nev -- er, ev -- er seem to lose your speed, can't ya sigh it, qui -- et? If
+	on -- ly I could make your lips take heed, we could have a great time while we're swing -- in' a --
+	long, we might e -- ven hear the bells ring -- in' a -- long; Slow -- ly, sweet -- ly, if you and I
+	are gon -- na have a ro -- mance, make it nice -- ly, neat -- ly; Our love af -- fair will
+	stand a bet -- ter chance, keep it soft -- ly, dis -- creet -- ly, and while the oth -- er
+	cou -- ples start to dance, we'll take a fli -- er and light up the fi -- re of love, groov -- in'
+	high, whisper -- ing low as we go, groov -- in' high!
 }
 {% endif %}

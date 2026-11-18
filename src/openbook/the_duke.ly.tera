@@ -5,6 +5,7 @@ default_version = "Fake"
 title = "The Duke"
 style = "Jazz"
 composer = "Dave Brubeck"
+poet = "Iola Brubeck"
 piece = "With a relaxed beat"
 copyright = "1955, 1956 Derry Music Company"
 copyrightextra = "U.S. copyright renewed. Sole Selling Agent: Shawnee Press, Inc., Delaware Water Gap, PA 18327"
@@ -25,7 +26,7 @@ remark = "Miles Davis with the Gil Evans Orchestra live (1959)"
 [versions.Fake]
 doChords = true
 doVoice = true
-doLyrics = false
+doLyrics = true
 doLyricsmore = false
 doLyricsmoremore = false
 doChordBars = false
@@ -109,5 +110,16 @@ doOwn = false
 	% part "A"
 	r8 b8 a4 g8 e4 d8 | b4 g8 a~ a2 |
 	r8 d,8 g b d4 d | e4 c8 aes~ aes2 | r8 g aes g f c'4. | ees,4 f8 d~ d2 | r8 des ees des c aes'4. | c,4 d8 b~ b2 |
+}
+{% endif %}
+{% if part == "LyricsFake" %}\lyricmode {
+	We dig you, Duke, we miss you so, we miss your smile that set our hearts
+	a -- glow; We miss your suave and gra -- cious ways, we loved you
+	all your days;
+	You had such a
+	lyr -- ic line, and a style that words can't de -- fine,
+	your soul -- ful phra -- ses did a -- maze us more than Wil -- liam Shake -- speare's plays;
+	Sing -- in', swing -- in', no life's com -- plete
+	un -- til he's known the rhy -- thm of that El -- ling -- ton beat, liv -- in', lov -- in', made this world a swing -- in' place!
 }
 {% endif %}

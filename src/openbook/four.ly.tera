@@ -5,6 +5,7 @@ default_version = "Fake"
 title = "Four"
 style = "Jazz"
 composer = "Miles Davis"
+poet = "Jon Hendricks"
 piece = "Medium Swing"
 copyright = "1963 Prestige Music"
 typesetter = "Mark Veltzer <mark.veltzer@gmail.com>"
@@ -24,7 +25,7 @@ remark = "Miles Davis live at Philharmonic Hall, New York, 1964 (Four & More)"
 [versions.Fake]
 doChords = true
 doVoice = true
-doLyrics = false
+doLyrics = true
 doLyricsmore = false
 doLyricsmoremore = false
 doChordBars = false
@@ -106,6 +107,15 @@ doOwn = false
 			bes'4 g8 bes b! e,! dis4 | c'4 aes8 f d'4 bes8 ees | r1 | r1 |
 		}
 	}
+}
+{% endif %}
+{% if part == "LyricsFake" %}\lyricmode {
+	Of the won --
+	der -- ful things that you get out of life, there are just four; And they may
+	not be man -- y, but no -- bod -- y needs an -- y more; Now of the man -- y
+	facts mak -- ing the list of life, truth takes the lead, and to re -- lax,
+	know -- ing the gist of life, it's truth you need; Then hon -- or and
+	hap -- pi -- ness and won -- der -- ful love, that'll make it four!
 }
 {% endif %}
 {% if part == "ChordsLaurent" %}\chordmode {

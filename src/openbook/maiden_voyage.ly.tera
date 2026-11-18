@@ -5,6 +5,7 @@ default_version = "Real"
 title = "Maiden Voyage"
 style = "Jazz"
 composer = "Herbie Hancock"
+poet = "Jean Hancock, Mark Murphy"
 piece = "Moderately"
 copyright = "1973 by Hancock Music Co."
 typesetter = "Mark Veltzer <mark.veltzer@gmail.com>"
@@ -24,7 +25,7 @@ remark = "Herbie Hancock live in Munich (1989)"
 [versions.Real]
 doChords = true
 doVoice = true
-doLyrics = false
+doLyrics = true
 doLyricsmore = false
 doLyricsmoremore = false
 doChordBars = false
@@ -124,6 +125,18 @@ doOwn = false
 	% part "A"
 	d1~ | d1~ | d1 | r2 r4 c8 d |
 	ees8 f c2.~ | c1~ | c1 | r1 |
+}
+{% endif %}
+{% if part == "LyricsReal" %}\lyricmode {
+	See the
+	sky, let's ex --
+	plore its hue;
+	Night is
+	time for
+	your de -- but;
+	Take a ship, you must
+	leave the bay
+	on this trip.
 }
 {% endif %}
 {% if part == "ChordsLaurent" %}\chordmode {

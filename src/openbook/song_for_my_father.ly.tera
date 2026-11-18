@@ -5,6 +5,7 @@ default_version = "Laurent"
 title = "Song For My Father"
 style = "Jazz"
 composer = "Horace Silver"
+poet = "Horace Silver"
 copyright = "1966 Ecaroh Music Inc."
 typesetter = "Laurent Martelli"
 completion = "3"
@@ -14,7 +15,7 @@ structure = "AB"
 [versions.Laurent]
 doChords = true
 doVoice = true
-doLyrics = false
+doLyrics = true
 doLyricsmore = false
 doLyricsmoremore = false
 doChordBars = false
@@ -93,5 +94,22 @@ doOwn = false
 	<c ees>-.( <bes des>) r <des f> ~ <des f>2 |
 	r2 <e aes>4. <g bes>8 ~ | <g bes>1 ~ |
 	<g bes>2 r8 c,-. f-. aes-. |
+}
+{% endif %}
+{% if part == "LyricsLaurent" %}\lyricmode {
+	I wrote a
+	song for my fa -- ther in the fond hopes that it
+	would give him a thrill, af -- ter see -- ing Bra --
+	zil;
+	_
+	My fa -- ther's
+	In Ri -- o all
+	day long,
+	I heard my fa --
+	ther's song,
+	a bos -- sa
+	no -- va
+	beat so
+	sweet, I heard
 }
 {% endif %}

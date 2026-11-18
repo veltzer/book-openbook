@@ -5,6 +5,7 @@ default_version = "Real"
 title = "Moanin'"
 style = "Jazz"
 composer = "Bobby Timmons"
+poet = "Jon Hendricks"
 piece = "Medium Swing"
 copyright = "1959 Totem Music Inc."
 typesetter = "Mark Veltzer <mark.veltzer@gmail.com>"
@@ -24,7 +25,7 @@ remark = "Bobby Timmons Trio with Jimmy Cobb (1960)"
 [versions.Real]
 doChords = true
 doVoice = true
-doLyrics = false
+doLyrics = true
 doLyricsmore = false
 doLyricsmoremore = false
 doChordBars = false
@@ -122,5 +123,21 @@ doOwn = false
 	\tuplet 5/4 { bes16 ces bes aes f } f4 <f bes des>4. <f a! c>8 | r8 f4 f8 c'8 ees~ ees4 |
 	\tuplet 5/4 { bes16 ces bes aes f } f4 <f bes des>4. <f a! c>8 | r8 f4 f8 \tuplet 3/2 { aes8 r aes } \tuplet 3/2 { f8 r c } |
 	ees4-. f4-- <f bes des>4. <f a! c>8 | r1 |
+}
+{% endif %}
+{% if part == "LyricsReal" %}\lyricmode {
+	Ev -- 'ry morn -- ing finds me
+	moan -- in', 'cause of all the trou -- ble
+	I see, life's a los -- ing game now, cares and wor -- ries
+	got me moan -- in'; Ev -- 'ry eve -- ning finds me moan -- in', I'm a --
+	lone and cry -- ing,
+	tired of pay -- ing these dues,
+	moan -- in'!
+	Lord, I spend plen -- ty of days and nights a -- lone with my grief, Lord, I pray, real --
+	ly and tru -- ly pray some -- one will come and bring me re -- lief! Ev -- 'ry morn -- ing finds me moan -- in',
+	'cause of all the trou -- ble I see,
+	life's a los -- ing game to me, cares and wor -- ries got
+	me moan -- in', yes, cares and wor -- ries got me moan -- in' all day
+	long, oh, yes, Lord!
 }
 {% endif %}

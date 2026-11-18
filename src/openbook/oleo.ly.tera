@@ -5,6 +5,7 @@ default_version = "Fake"
 title = "Oleo"
 style = "Jazz"
 composer = "Sonny Rollins"
+poet = "Jim Cox"
 piece = "Fast"
 copyright = "1963 Prestige Music"
 typesetter = "Mark Veltzer <mark.veltzer@gmail.com>"
@@ -24,7 +25,7 @@ remark = "Sonny Rollins live with NHOP and Alan Dawson (1965)"
 [versions.Fake]
 doChords = true
 doVoice = true
-doLyrics = false
+doLyrics = true
 doLyricsmore = false
 doLyricsmoremore = false
 doChordBars = false
@@ -98,5 +99,12 @@ doOwn = false
 	% part "B"
 	r1 | r1 | r1 | r1 |
 	r1 | r1 | r1 | r1^\markup { \italic { D.C. al Fine (2nd ending) } } |
+}
+{% endif %}
+{% if part == "LyricsFake" %}\lyricmode {
+	O -- le -- o, O -- le -- o, your hot -- cakes have nev -- er had it bet -- ter, it's the spread that
+	you're fed when you feel in your head may -- be your fat is
+	sat -- u -- ra -- ted; Go to
+	mar -- ga -- rine school!
 }
 {% endif %}

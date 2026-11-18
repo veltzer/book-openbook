@@ -6,6 +6,7 @@ title = "Naima"
 subtitle = "(Niema)"
 style = "Jazz"
 composer = "John Coltrane"
+poet = "Jon Hendricks"
 piece = "Moderately slow"
 copyright = "1973 JOWCOL MUSIC"
 typesetter = "Mark Veltzer <mark.veltzer@gmail.com>"
@@ -25,7 +26,7 @@ remark = "John Coltrane Quartet live (1965)"
 [versions.Real]
 doChords = true
 doVoice = true
-doLyrics = false
+doLyrics = true
 doLyricsmore = false
 doLyricsmoremore = false
 doChordBars = false
@@ -127,6 +128,15 @@ doOwn = false
 	% part "Coda"
 	ees2. r4 | aes2 ges4. ees16 ges | ees2. r4 | aes2 ges4. ees16 ges |
 	ees2. r4 | aes2 ges4. ees16 ges | ees2 f | g! aes | bes c | ees1 |
+}
+{% endif %}
+{% if part == "LyricsReal" %}\lyricmode {
+	Child of the Gods, spir -- it here on earth,
+	an -- gels a -- bove mea -- sure her true worth;
+	Moth -- er of all, and the keep -- er of the
+	home, and a wife to her man so he'll
+	nev -- er care to roam; Love to the child, mis --
+	tress of re -- birth, child of the Gods down here on earth.
 }
 {% endif %}
 {% if part == "ChordsLaurent" %}\chordmode {
