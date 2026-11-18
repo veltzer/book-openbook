@@ -5,6 +5,7 @@ default_version = "Fake"
 title = "Jeannine"
 style = "Jazz"
 composer = "Duke Pearson"
+poet = "Oscar Brown Jr."
 piece = "Bright and Kickin'"
 copyright = "1960 UPAM MUSIC CO., A Division of Gopam Enterprises, Inc."
 typesetter = "Mark Veltzer <mark.veltzer@gmail.com>"
@@ -24,7 +25,7 @@ remark = "Cannonball Adderley from Them Dirty Blues (1960)"
 [versions.Fake]
 doChords = true
 doVoice = true
-doLyrics = false
+doLyrics = true
 doLyricsmore = false
 doLyricsmoremore = false
 doChordBars = false
@@ -112,5 +113,16 @@ doOwn = false
 	% part "B"
 	a2 g | c,2 r8 d f g | a fis a b a b cis4~ | cis1~ |
 	cis8 r gis4 \tuplet 3/2 { a b d } | c2 r8 b c d~ | d2 r4 a8 d~ | d2 r2^\markup { \italic { D.S. al Fine } } |
+}
+{% endif %}
+{% if part == "LyricsFake" %}\lyricmode {
+	Jean -- nine, you're the shar -- pest girl _
+	in town, when you walk by all heads turn a -- round;
+	Dressed in style from your head down to your toes, ev -- 'ry -- bod -- y
+	knows that you're the queen of the scene, sweet Jean -- nine! _ _
+	With a smile so bright and _
+	eyes that shine, _
+	how I wish that I could make your heart all _ _
+	mine, groo -- vy lit -- tle la -- dy, sweet Jean -- nine!
 }
 {% endif %}

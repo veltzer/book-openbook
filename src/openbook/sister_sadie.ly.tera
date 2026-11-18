@@ -5,6 +5,7 @@ default_version = "Fake"
 title = "Sister Sadie"
 style = "Jazz"
 composer = "Horace Silver"
+poet = "Jon Hendricks"
 piece = "Medium blues"
 copyright = "1959 by Ecaroh Music, Inc."
 typesetter = "Mark Veltzer <mark.veltzer@gmail.com>"
@@ -24,7 +25,7 @@ remark = "Horace Silver Quintet"
 [versions.Fake]
 doChords = true
 doVoice = true
-doLyrics = false
+doLyrics = true
 doLyricsmore = false
 doLyricsmoremore = false
 doChordBars = false
@@ -120,5 +121,18 @@ doOwn = false
 	% part "Coda"
 	ais'8 b ais b g f d c | d bes g f \tuplet 3/2 { g4 g' bes } | \tuplet 3/2 { d8 c bes } g8 f g2 | r2 \tuplet 3/2 { r4 d4 f } |
 	a8 f d c d2~ | d1 |
+}
+{% endif %}
+{% if part == "LyricsFake" %}\lyricmode {
+	Sis -- ter Sa -- die was a la -- dy who knew how to shout the gospel truth,
+	ev -- 'ry Sun -- day morn -- ing from her youth, _
+	she would get the con -- gre -- ga -- tion rock -- ing in the _
+	pews, chas -- ing away ev -- 'ry -- bod -- y's Mon -- day morn -- ing blues!
+	Hor -- ace Sil -- ver wrote this soul -- ful song to cel -- e -- brate her joy -- ful
+	way, when the brass and sax -- es start to preach and play, _ _
+	you can't keep your feet from tap -- ping to that fun -- ky beat! _ _ _
+	Hear the tam -- bou -- rine a -- ring -- ing and the choir a -- singing Hallelujah loud and clear for all the world to hear,
+	lifting up your spir -- it high a -- bove the clouds into the sunny sky, no -- bod -- y could ev -- er feel low when
+	Sis -- ter Sa -- die swings!
 }
 {% endif %}

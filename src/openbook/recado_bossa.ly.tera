@@ -5,6 +5,7 @@ default_version = "Wikifonia"
 title = "Recado Bossa"
 style = "Jazz"
 composer = "Djalma Ferreira"
+poet = "Luiz Antonio, Paul Francis Webster"
 piece = "Standard"
 typesetter = "OpenBook contributors (MusicXML import)"
 completion = "3"
@@ -16,7 +17,7 @@ copyrightextra = "Archived MusicXML notice retained; underlying music is not rel
 [versions.Wikifonia]
 doChords = true
 doVoice = true
-doLyrics = false
+doLyrics = true
 doLyricsmore = false
 doLyricsmoremore = false
 doChordBars = false
@@ -173,5 +174,53 @@ doOwn = false
 	d1 ( _ "Schluß" |
 	d4 ) _ "To" r4 r8 _ "A" d4 d8 |
 	\endBar
+}
+{% endif %}
+{% if part == "LyricsWikifonia" %}\lyricmode {
+	All that I pos -- sess
+	is a song, _
+	just a gen -- tle bossa
+	no -- va song, _
+	sent to
+	tell you _
+	of
+	my
+	end -- less love, _
+	take this gift _
+	of mine,
+	born be -- neath _
+	the south -- ern
+	stars that _
+	bright -- ly shine;
+	Though you
+	walk a --
+	way from
+	me, _
+	still this mel -- o -- dy
+	will fol -- low you
+	a -- cross the sea,
+	to
+	your
+	heart; Whis -- per -- ing your
+	name each night, _
+	hold -- ing
+	you in dreams so _
+	warm and tight, _
+	un -- til the
+	day you
+	come back _
+	home
+	to
+	stay; Keep this _
+	lit -- tle gift _
+	of song,
+	let its _ _
+	rhy -- thm linger
+	all night _
+	long, my mes -- sage
+	of true love, _
+	Re -- ca -- do Bossa
+	for
+	you, love.
 }
 {% endif %}

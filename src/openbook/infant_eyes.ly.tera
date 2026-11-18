@@ -5,6 +5,7 @@ default_version = "Anon"
 title = "Infant Eyes"
 style = "Jazz"
 composer = "Wayne Shorter"
+poet = "Doug Carn"
 piece = "Slow"
 typesetter = "Anonymous <anonymous@zivlempel.org>"
 completion = "3"
@@ -14,7 +15,7 @@ structure = "ABA"
 [versions.Anon]
 doChords = true
 doVoice = true
-doLyrics = false
+doLyrics = true
 doLyricsmore = false
 doLyricsmoremore = false
 doChordBars = false
@@ -77,5 +78,15 @@ doOwn = false
 	% part "A"
 	f2~ f8 d f g | aes2. g4 | f2~ f8 d c bes | bes'2. f4 |
 	aes2~ aes8 bes, ees aes | f2. bes,4 | des2~ des8 bes ees des | bes1~ | bes2. r4 |
+}
+{% endif %}
+{% if part == "LyricsAnon" %}\lyricmode {
+	Shin -- ing
+	pure and clear with won -- der and sur -- prise, I _ _
+	see a brand new world re -- flec -- ted in your in -- fant _
+	eyes; Free from ev -- 'ry shad -- ow of re -- gret or _
+	fear, bring -- ing heav -- en's gen -- tle bles -- sing close and _
+	near, teach -- ing us the truth of love so _ _ _
+	wise, look -- ing through your in -- no -- cent in -- fant eyes.
 }
 {% endif %}

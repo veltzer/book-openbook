@@ -5,6 +5,7 @@ default_version = "Wikifonia"
 title = "Colonel Bogey"
 style = "Standard"
 composer = "Kenneth Joseph Alford (F.J. Ricketts)"
+poet = "Kenneth Joseph Alford"
 piece = "Standard"
 typesetter = "OpenBook contributors (MusicXML import)"
 completion = "3"
@@ -16,7 +17,7 @@ copyrightextra = "Archived MusicXML notice retained; underlying music is not rel
 [versions.Wikifonia]
 doChords = true
 doVoice = true
-doLyrics = false
+doLyrics = true
 doLyricsmore = false
 doLyricsmoremore = false
 doChordBars = false
@@ -227,5 +228,89 @@ doOwn = false
 	d''1 ~ |
 	d''4 r4 d''8 d''8 d''8 d''8 |
 	\endBar
+}
+{% endif %}
+{% if part == "LyricsWikifonia" %}\lyricmode {
+	Hear the
+	sol -- diers march
+	in line,
+	step
+	by step,
+	keep -- ing time
+	so fine,
+	whis --
+	tling a
+	mer -- ry tune
+	be -- neath
+	the bright and
+	shin -- ing sun
+	at noon, _
+	loud
+	and clear, hoo -- ray!
+	Col -- onel
+	Bo -- gey leads
+	the way,
+	hats
+	cocked high,
+	spir -- its bright
+	and gay,
+	brass
+	band plays
+	out a -- loud
+	be -- fore
+	the cheer -- ing,
+	hap -- py crowd,
+	march -- ing on
+	to --
+	day!
+	Drums beat out _
+	the
+	stead -- y call, one and all, _
+	stand -- ing proud and tall,
+	nev -- er
+	to fall,
+	through the town they
+	stride, _
+	full of mar -- tial pride,
+	side by
+	side, while the ban -- ners wave _
+	on high
+	up in the blue sky,
+	hear the bu -- gles cry,
+	as they pass _
+	by,
+	march on!
+	Hear the
+	sol -- diers march
+	in line,
+	step
+	by step,
+	keep -- ing time
+	so fine,
+	whis --
+	tling a
+	mer -- ry tune
+	be -- neath
+	the bright and
+	shin -- ing sun
+	at noon, _
+	loud
+	and clear, hoo -- ray!
+	Col -- onel
+	Bo -- gey leads
+	the way,
+	hats
+	cocked high,
+	spir -- its bright
+	and gay,
+	brass
+	band plays
+	out a -- loud
+	be -- fore
+	the cheer -- ing,
+	hap -- py crowd,
+	march -- ing on
+	to --
+	day, hip hoo -- ray!
 }
 {% endif %}

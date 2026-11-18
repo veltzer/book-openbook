@@ -5,6 +5,7 @@ default_version = "Wikifonia"
 title = "Rhythm-a-Ning"
 style = "Jazz"
 composer = "Thelonious Monk"
+poet = "Jon Hendricks"
 piece = "Jazz"
 typesetter = "OpenBook contributors (MusicXML import)"
 completion = "3"
@@ -15,7 +16,7 @@ copyright = "All Rights Reserved"
 [versions.Wikifonia]
 doChords = true
 doVoice = true
-doLyrics = false
+doLyrics = true
 doLyricsmore = false
 doLyricsmoremore = false
 doChordBars = false
@@ -121,5 +122,40 @@ doOwn = false
 	g'4 -. as'4 -- e''4 ^^ e''4 ^^ |
 	e''4 ^^ r4 r2 |
 	\endBar
+}
+{% endif %}
+{% if part == "LyricsWikifonia" %}\lyricmode {
+	Rhy -- thm -- a --
+	ning, hear Monk _
+	swing, play -- ing
+	on the keys, _
+	bounc -- ing with the _
+	great -- est ease, _
+	mak -- ing raf -- ters
+	ring!
+	Rhy -- thm -- a --
+	ning, hip -- pest _
+	thing, Ma -- ry
+	Lou's great riff _
+	sets the tem -- po _
+	fast and stiff, _
+	ev -- 'ry -- bod -- y
+	sing! _
+	Up and down the _
+	i -- vo -- ry board,
+	Monk strikes
+	a
+	brand new dis -- so -- nant
+	be -- bop chord, _
+	spin -- ning round _
+	the
+	room! Rhy -- thm --
+	a -- ning, feel _
+	that spring, _
+	noth -- ing else _
+	in the world can _
+	make you swing _
+	like Rhy -- thm -- a --
+	ning!
 }
 {% endif %}

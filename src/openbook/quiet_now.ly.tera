@@ -5,6 +5,7 @@ default_version = "Fake"
 title = "Quiet Now"
 style = "Jazz"
 composer = "Denny Zeitlin"
+poet = "Meredith d'Ambrosio"
 piece = "Very slowly, rubato, with tenderness"
 copyright = "1966 and 1982 Ludlow Music, Inc., New York, NY. (TRO)"
 typesetter = "Mark Veltzer <mark.veltzer@gmail.com>"
@@ -24,7 +25,7 @@ remark = "Bill Evans Trio live at the Montreux Jazz Festival, 1968"
 [versions.Fake]
 doChords = true
 doVoice = true
-doLyrics = false
+doLyrics = true
 doLyricsmore = false
 doLyricsmoremore = false
 doChordBars = false
@@ -102,5 +103,17 @@ doOwn = false
 
 	% part "Coda"
 	g'4 c g c,\fermata | g'4 c g c,\fermata | \tuplet 3/2 { r8 e, a } \tuplet 3/2 { b e a } \tuplet 3/2 { b e a } \tuplet 3/2 { b, e a } | b1 |
+}
+{% endif %}
+{% if part == "LyricsFake" %}\lyricmode {
+	Qui -- et now, let the world out -- side fade in -- to si -- lence,
+	while the shad -- ows of the eve -- ning soft -- ly fall a -- round us two, _ _ _
+	noth -- ing mat -- ters now ex -- cept the warmth of hold -- ing you;
+	Lis -- ten to the gen -- tle beat -- ing of our hearts in har -- mo -- ny, _ _ _
+	drift -- ing on a peace -- ful sea of time -- less mem -- o -- ry; _ _
+	All the rest -- less words we spoke today have mel -- ted in the twi -- light glow, Bill Ev -- ans plays a ten -- der chord so _ _ _ _
+	soft and slow, peace is here at last, _
+	all the storms of life have safe -- ly passed, _ _ _ _
+	close your eyes and rest your head up -- on my shoul -- der, qui -- et now, so qui -- et now. _
 }
 {% endif %}

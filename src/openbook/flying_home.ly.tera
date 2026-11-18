@@ -5,6 +5,7 @@ default_version = "Fake"
 title = "Flying Home"
 style = "Jazz"
 composer = "Benny Goodman, Lionel Hampton"
+poet = "Sid Robin"
 piece = "Medium Bounce"
 copyright = "1940 by Regent Music Corp."
 copyrightextra = "Copyright renewed by Regent Music Corp. and Jewel Music Publishing Co., Inc."
@@ -25,7 +26,7 @@ remark = "Lionel Hampton and his Orchestra with Illinois Jacquet (1942)"
 [versions.Fake]
 doChords = true
 doVoice = true
-doLyrics = false
+doLyrics = true
 doLyricsmore = false
 doLyricsmoremore = false
 doChordBars = false
@@ -110,5 +111,16 @@ doOwn = false
 	% part "A"
 	c8 ees4 bes8~ bes2 | c8 ees c ees \tuplet 3/2 { b! bes aes } f ees | c'8 ees4 bes8~ bes4. aes8 | c8 ees c ees \tuplet 3/2 { b! bes aes } f ees |
 	c'8 ees4 bes8~ bes4. aes8 | c8 ees c ees \tuplet 3/2 { b! bes aes } f ees | c8 ees f aes~ aes ges4 ees8 | aes8 ges4 ees8~ ees4 r4 |
+}
+{% endif %}
+{% if part == "LyricsFake" %}\lyricmode {
+	Fly -- ing home, a -- cross the sky up -- on a silver wing, my heart begins to
+	sing, be -- cause I know that soon I'll see the one who means the whole wide world to me, fly -- ing _
+	home, straight back to your arms!
+	Ev -- 'ry mile that pas -- ses by brings me _ _
+	clo -- ser to the mo -- ment when I'll hold you tight and nev -- er say good -- bye; Hear Lionel _
+	Hamp -- ton's vibes and Ben -- ny Good -- man's clar -- i -- net, play -- ing a groove you'll nev -- er for -- get, Illinois Jacquet blowing
+	on his ten -- or sax so strong, keep -- ing the rhy -- thm roll -- ing all night long, noth -- ing can stop me now, _ _
+	I'm on my way back home to stay, fly -- ing home to you to -- night, yeah, fly -- ing home! _ _ _
 }
 {% endif %}

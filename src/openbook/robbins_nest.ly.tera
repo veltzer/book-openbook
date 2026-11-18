@@ -4,7 +4,8 @@ default_version = "Fake"
 [attributes]
 title = "Robbin's nest"
 style = "Jazz"
-composer = "Sir Charles Thompson, Jean-Baptiste \\\"Illinois\\\" Jacquet"
+composer = "Sir Charles Thompson, Jean-Baptiste 'Illinois' Jacquet"
+poet = "Bob Russell"
 piece = "Medium Swing"
 copyright = "1947, 1948, 1951, 1952 (Renewed 1975, 1976, 1979, 1980) Atlantic Music Corp"
 typesetter = "Samuel Tardieu <sam@rfc1149.net>"
@@ -15,7 +16,7 @@ structure = "AABA"
 [versions.Fake]
 doChords = true
 doVoice = true
-doLyrics = false
+doLyrics = true
 doLyricsmore = false
 doLyricsmoremore = false
 doChordBars = false
@@ -96,5 +97,21 @@ doOwn = false
 	bes aes ees c bes' aes4.~ | aes2. r8 g~ |
 	g4 e8 g ges ees c f~ | f4 d8 f e8. g16 a8 c8~ |
 	c1~ | c2~ c4 r4 |
+}
+{% endif %}
+{% if part == "LyricsFake" %}\lyricmode {
+	Rob -- bins' Nest, _
+	that's the co -- zy place that I love the best,
+	where the mu -- sic's al -- ways cool
+	and the cats all come to rest their wea -- ry soul; _
+	Fred -- die Rob -- bins
+	spins the
+	rec -- ords through the mid -- dle of the
+	Har -- lem night, _
+	mak -- ing ev -- 'ry -- thing alright,
+	Il -- li -- nois Jacquet blows sweet,
+	Sir Charles Thomp -- son keeps the stead -- y beat,
+	swin -- ging light -- ly on the breeze,
+	high up in the Rob -- bins' Nest a -- mong the trees! _
 }
 {% endif %}

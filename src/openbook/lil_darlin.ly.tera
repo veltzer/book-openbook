@@ -5,6 +5,7 @@ default_version = "Fake"
 title = "Li'l Darlin'"
 style = "Jazz"
 composer = "Neal Hefti"
+poet = "Jon Hendricks"
 piece = "Slow Blues"
 copyright = "1958 & 1962 by Neal Hefti Music Inc., Encino, CA"
 typesetter = "Mark Veltzer <mark.veltzer@gmail.com>"
@@ -24,7 +25,7 @@ remark = "Count Basie and his orchestra live at the Tropicana Hotel, Las Vegas (
 [versions.Fake]
 doChords = true
 doVoice = true
-doLyrics = false
+doLyrics = true
 doLyricsmore = false
 doLyricsmoremore = false
 doChordBars = false
@@ -108,5 +109,18 @@ doOwn = false
 	% part "Coda"
 	r8 d'4. a4 g4 | f4 d e8. f16 g8. f16~ | f1 | r1 |
 	r8 d'4. a4 g4 | f4 d e8. f16 g8. f16~ | f4 aes8 f~ f4 a8 f~ | f4 c'8 c'8~ c4 c,4\fermata |
+}
+{% endif %}
+{% if part == "LyricsFake" %}\lyricmode {
+	Li'l Dar -- lin', don't you cry _ _
+	for me, dry your pret -- ty eyes and _
+	see that my heart be -- longs to no -- bod -- y else in the world but _
+	you, my sweet Li'l Dar -- lin', so true; _
+	Soft and slow, hear the trum -- pets _
+	glow, Fred -- die Green's gui -- tar is strum -- ming
+	low, keep -- ing time like a gen -- tle heart -- beat all through the qui -- et _
+	night, hold -- ing you close and tight, _ _
+	whis -- per -- ing words of ten -- der love, _
+	un -- der -- neath the stars a -- bove, my sweet Li'l Dar -- lin', sleep tight. _ _
 }
 {% endif %}

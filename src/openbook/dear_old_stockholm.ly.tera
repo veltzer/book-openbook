@@ -5,6 +5,7 @@ default_version = "Real"
 title = "Dear Old Stockholm"
 style = "Jazz"
 composer = "Traditional"
+poet = "Anders Fryxell"
 typesetter = "Mark Veltzer <mark.veltzer@gmail.com>"
 completion = "5"
 uuid = "6e653370-d583-11f1-8000-046874d194b7"
@@ -22,7 +23,7 @@ remark = "John Coltrane"
 [versions.Real]
 doChords = true
 doVoice = true
-doLyrics = false
+doLyrics = true
 doLyricsmore = false
 doLyricsmoremore = false
 doChordBars = false
@@ -113,5 +114,15 @@ doOwn = false
 	% part "Coda"
 	f,2~ f8 c' f, c | r8 f4. f4-^ g-^ | a4. a8-^ r2 | r8 f4. f4-^ g-^ | a4. a8-^ r2 |
 	r8 f4. f4 g | a4. g8~ g4. f8~ | f2 g4 r8 f8 | R1 | R1 |
+}
+{% endif %}
+{% if part == "LyricsReal" %}\lyricmode {
+	Dear old Stock -- holm, fair -- est
+	land be -- neath the north -- ern star, crown of the _
+	shin -- ing sea, wher -- ev -- er I wan -- der far, my _ _
+	heart turns back to thee; _
+	Through the long win -- ter night and the bright sum -- mer light, birch trees whis -- per your _
+	name a -- cross the clear wa -- ters blue, for -- ev -- er faith -- ful and
+	true to dear old Stock -- holm, my home.
 }
 {% endif %}

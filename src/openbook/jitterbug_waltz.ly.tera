@@ -5,6 +5,7 @@ default_version = "Anon"
 title = "Jitterbug Waltz"
 style = "Jazz"
 composer = "Fats Waller"
+poet = "Richard Maltby Jr."
 piece = "Up"
 typesetter = "Anonymous <anonymous@zivlempel.org>"
 completion = "3"
@@ -14,7 +15,7 @@ structure = "A"
 [versions.Anon]
 doChords = true
 doVoice = true
-doLyrics = false
+doLyrics = true
 doLyricsmore = false
 doLyricsmoremore = false
 doChordBars = false
@@ -79,5 +80,17 @@ doOwn = false
 			bes'2. | r4 aes f | des2.~ | des~ | des~ | des |
 		}
 	}
+}
+{% endif %}
+{% if part == "LyricsAnon" %}\lyricmode {
+	Could I have this waltz with you, my dear, al -- though the band is play -- ing some -- thing ra -- ther strange to hear,
+	Fats Wal -- ler's Jit -- ter -- bug Waltz!
+	One, two, three, we glide a -- cross the floor, a syn -- co -- pa -- ted waltz we nev -- er danced be -- fore, _ _
+	do -- ing the Jit -- ter -- bug Waltz!
+	In -- stead of Vi -- en -- nese vi -- o -- lins so po -- lite, _
+	Har -- lem pi -- a -- no keys are jump -- ing all through the night,
+	spin -- ning a -- round in three -- quar -- ter time, _ _
+	swin -- ging and sway -- ing, sub -- lime,
+	Jit -- ter -- bug Waltz!
 }
 {% endif %}

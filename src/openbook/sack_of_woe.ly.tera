@@ -5,6 +5,7 @@ default_version = "Fake"
 title = "Sack Of Woe"
 style = "Jazz"
 composer = "Julian Adderley"
+poet = "Jon Hendricks"
 piece = "Medium Swing"
 copyright = "1960 UPAM MUSIC CO., A Division of Gopam Enterprises, Inc."
 typesetter = "Mark Veltzer <mark.veltzer@gmail.com>"
@@ -24,7 +25,7 @@ remark = "Cannonball Adderley live (1961)"
 [versions.Fake]
 doChords = true
 doVoice = true
-doLyrics = false
+doLyrics = true
 doLyricsmore = false
 doLyricsmoremore = false
 doChordBars = false
@@ -101,5 +102,16 @@ doOwn = false
 			f1~ | f1 |
 		}
 	}
+}
+{% endif %}
+{% if part == "LyricsFake" %}\lyricmode {
+	Walk -- ing down the street with a heav -- y load,
+	car -- ry -- ing a big sack of woe, _ _
+	no -- where in the world left for me to go,
+	work -- ing hard all day, nev -- er get no pay, bills are pi -- ling high,
+	un -- der -- neath a cloud -- y sky, Cannonball Adderley plays the blues for me, _
+	set -- ting my burdened spir -- it free, dropping that heav -- y sack of woe right on the
+	ground,
+	yeah!
 }
 {% endif %}

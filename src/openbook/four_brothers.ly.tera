@@ -5,6 +5,7 @@ default_version = "Laurent"
 title = "Four Brothers"
 style = "Jazz"
 composer = "Jimmy Giuffre"
+poet = "Jon Hendricks"
 typesetter = "Laurent Martelli"
 completion = "3"
 uuid = "8aa22480-d49f-11f1-8000-046874d194b7"
@@ -13,7 +14,7 @@ structure = "AABA"
 [versions.Laurent]
 doChords = true
 doVoice = true
-doLyrics = false
+doLyrics = true
 doLyricsmore = false
 doLyricsmoremore = false
 doChordBars = false
@@ -92,5 +93,16 @@ doOwn = false
 	% part "A"
 	c b c b c aes f d | des f aes c b g ees des | c ees g bes r aes r ees | g f4. r4 r8 g |
 	aes f des bes aes' f des bes | g'4-. bes,8 a~ a4 r8 e' | f des!8 c bes ees b c aes~ | aes4 r r2 |
+}
+{% endif %}
+{% if part == "LyricsLaurent" %}\lyricmode {
+	Along came four swinging brothers with a sound so new, three tenors and a baritone blow -- ing cool and true, Stan Getz and Zoot Sims,
+	Her -- bie Stew -- ard and Serge Cha -- loff too, Wood -- y Herman's
+	fa -- mous sax -- o -- phone crew, Four Broth -- ers!
+	Lis -- ten to the way they blend in _
+	four -- part har -- mo -- ny, chas -- ing each oth -- er round the horn with ef -- fort -- less ve -- loc -- i -- ty,
+	Jim -- my Giuf -- fre wrote the chart that set the jazz world on its ear, clean -- est con -- tra -- pun -- tal lines you'll ever
+	hear; Tak -- ing turns up -- on the so -- lo spot, each broth -- er blow -- ing cool and hot, swin -- ging from the ver -- y start,
+	play -- ing to -- geth -- er with a sin -- gle beat -- ing heart, those swin -- ging Four Broth -- ers, yeah! _
 }
 {% endif %}

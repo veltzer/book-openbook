@@ -5,6 +5,7 @@ default_version = "Anon"
 title = "Dansons La Gigue"
 style = "Jazz"
 composer = "Patricia Barber"
+poet = "Paul Verlaine, Patricia Barber"
 piece = "Mysterious"
 typesetter = "Anonymous <anonymous@zivlempel.org>"
 completion = "3"
@@ -14,7 +15,7 @@ structure = "Intro A End"
 [versions.Anon]
 doChords = true
 doVoice = true
-doLyrics = false
+doLyrics = true
 doLyricsmore = false
 doLyricsmoremore = false
 doChordBars = false
@@ -81,5 +82,12 @@ doOwn = false
 	% part "End"
 	\repeat percent 4 { r4^\markup { (out only) } r r | r4 r r }
 	\repeat percent 4 { r4 r r | r4 r r }
+}
+{% endif %}
+{% if part == "LyricsAnon" %}\lyricmode {
+	Dan -- sons la gi -- gue! J'ai -- mais sur --
+	tout ses jo -- lis yeux, plus clairs que
+	l'é -- toile des cieux, j'ai -- mais ses _
+	yeux ma -- li -- cieux.
 }
 {% endif %}

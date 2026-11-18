@@ -5,6 +5,7 @@ default_version = "Wikifonia"
 title = "Midnight Mood"
 style = "Jazz"
 composer = "Joe Zawinul"
+poet = "Ben Raleigh"
 piece = "Jazz"
 typesetter = "OpenBook contributors (MusicXML import)"
 completion = "3"
@@ -15,7 +16,7 @@ copyright = "All Rights Reserved"
 [versions.Wikifonia]
 doChords = true
 doVoice = true
-doLyrics = false
+doLyrics = true
 doLyricsmore = false
 doLyricsmoremore = false
 doChordBars = false
@@ -109,5 +110,31 @@ doOwn = false
 	des''2. |
 	}
 	\endBar
+}
+{% endif %}
+{% if part == "LyricsWikifonia" %}\lyricmode {
+	In a
+	mid -- night
+	mood, I think of
+	you, when
+	stars shine
+	through the
+	deep vel -- vet _
+	blue;
+	Soft -- ly the
+	night wind sighs, _
+	bring -- ing
+	back your
+	ten -- der
+	eyes, lost
+	in a
+	dream
+	of ro -- mance
+	that we knew, _
+	in a
+	mid -- night
+	mood, loving
+	on -- ly
+	you.
 }
 {% endif %}

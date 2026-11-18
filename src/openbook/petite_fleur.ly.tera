@@ -5,6 +5,7 @@ default_version = "Wikifonia"
 title = "Petite Fleur"
 style = "Jazz"
 composer = "Sydney Bechet"
+poet = "Fernand Bonifay, Paddy Roberts"
 piece = "Standard"
 typesetter = "OpenBook contributors (MusicXML import)"
 completion = "3"
@@ -16,7 +17,7 @@ copyrightextra = "Archived MusicXML notice retained; underlying music is not rel
 [versions.Wikifonia]
 doChords = true
 doVoice = true
-doLyrics = false
+doLyrics = true
 doLyricsmore = false
 doLyricsmoremore = false
 doChordBars = false
@@ -162,5 +163,57 @@ doOwn = false
 	g8 ( ^ "N.C." d'8 g'8 ^ "rit." bes'8 d''8 g''8 d''8 bes'8 ) |
 	g'2. ^\fermata r4 |
 	\endBar
+}
+{% endif %}
+{% if part == "LyricsWikifonia" %}\lyricmode {
+	J'ai ca -- ché mieux que par _
+	tout
+	au fond de mon _
+	cœur
+	u -- ne pe -- ti -- te _
+	fleur,
+	qui ne fleu -- rit _
+	qu'en
+	mon a _
+	mour;
+	Sa pé -- tale est _
+	doux
+	com -- me un beau _
+	jour,
+	son par -- fum me _
+	suit
+	tout au long de _
+	la
+	dou -- ce _ _ _
+	nuit;
+	Dans mon jar -- din _
+	se --
+	cret
+	je
+	l'ai vu
+	naî --
+	tre un ma -- tin _
+	clair,
+	quand tu m'as sou _ _
+	ri, mon
+	grand a --
+	mour;
+	Si un jour
+	tu
+	par -- tais loin _ _
+	de
+	moi, je _
+	sais
+	que ma pe _ _
+	ti -- te
+	fleur mour _
+	rait,
+	car el -- le _ _
+	ne
+	vit que de ton _ _
+	ten -- dre
+	et doux
+	a --
+	mour.
 }
 {% endif %}

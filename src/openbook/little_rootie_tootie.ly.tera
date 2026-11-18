@@ -5,6 +5,7 @@ default_version = "Wikifonia"
 title = "Little Rootie Tootie"
 style = "Jazz"
 composer = "Thelonious Monk"
+poet = "Jon Hendricks"
 piece = "Jazz"
 typesetter = "OpenBook contributors (MusicXML import)"
 completion = "3"
@@ -15,7 +16,7 @@ copyright = "All Rights Reserved"
 [versions.Wikifonia]
 doChords = true
 doVoice = true
-doLyrics = false
+doLyrics = true
 doLyricsmore = false
 doLyricsmoremore = false
 doChordBars = false
@@ -109,5 +110,29 @@ doOwn = false
 	r8 as8 \times 2/3 { c'8 es'8 ges'8 } f'8 es'8 a8 as8 ~ |
 	as1 |
 	\endBar
+}
+{% endif %}
+{% if part == "LyricsWikifonia" %}\lyricmode {
+	Hear that whis -- tle blow -- ing down the track,
+	chug -- a -- lug,
+	Lit -- tle Roo -- tie Too -- tie's com -- ing back,
+	chug -- a -- lug,
+	Monk wrote this song for his lit -- tle son,
+	what a joy,
+	watch -- ing that hap -- py lit -- tle boy
+	run a -- round like a _ _
+	rail -- road train,
+	roll -- ing through the sun -- shine and
+	the rain,
+	pi -- a -- no keys ring like a
+	cros -- sing bell, _ _
+	cas -- ting a _ _
+	spell! All a -- board the be -- bop ex -- press,
+	yes, in -- deed,
+	pick -- ing up its syn -- co -- pa -- ted speed,
+	hold on tight,
+	roll -- ing through the mid -- dle of the night,
+	full of glee,
+	Lit -- tle Roo -- tie Too -- tie, yeah! _
 }
 {% endif %}

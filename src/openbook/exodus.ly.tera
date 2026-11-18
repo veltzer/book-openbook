@@ -5,6 +5,7 @@ default_version = "Wikifonia"
 title = "Exodus"
 style = "Jazz"
 composer = "Ernest Gold"
+poet = "Pat Boone"
 piece = "Standard"
 typesetter = "OpenBook contributors (MusicXML import)"
 completion = "3"
@@ -16,7 +17,7 @@ copyrightextra = "Archived MusicXML notice retained; underlying music is not rel
 [versions.Wikifonia]
 doChords = true
 doVoice = true
-doLyrics = false
+doLyrics = true
 doLyricsmore = false
 doLyricsmoremore = false
 doChordBars = false
@@ -121,5 +122,31 @@ doOwn = false
 	c''8 d''8 g''4 ~ g''8 f''8 d''8. c''16 |
 	d''1 |
 	\endBar
+}
+{% endif %}
+{% if part == "LyricsWikifonia" %}\lyricmode {
+	This
+	land is mine, _
+	God gave this land to _
+	me, this brave and _ _
+	an -- cient land _
+	to me; And when the _
+	morn -- ing sun _ _
+	re -- veals her hills and plains, then _
+	I see
+	a land where _
+	chil -- dren can run free; _
+	So take my hand _ _
+	and walk this _
+	love -- ly land with me, _
+	though I am _ _
+	just a man, when _ _ _ _
+	you are
+	help of
+	God, I _ _ _ _
+	know I can be strong, _
+	to make this land our _
+	home, if I must fight, I'll
+	fight
 }
 {% endif %}

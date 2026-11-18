@@ -5,6 +5,7 @@ default_version = "Fake"
 title = "Hi-Fly"
 style = "Jazz"
 composer = "Randy Weston"
+poet = "Jon Hendricks"
 piece = "Medium swing"
 copyright = "1958 (Renewed 1987) Black Sun Music (SESAC)"
 copyrightextra = "All Rights Administered by Mayflower Music Corporation (ASCAP)"
@@ -25,7 +26,7 @@ remark = "Cannonball Adderley"
 [versions.Fake]
 doChords = true
 doVoice = true
-doLyrics = false
+doLyrics = true
 doLyricsmore = false
 doLyricsmoremore = false
 doChordBars = false
@@ -108,5 +109,16 @@ doOwn = false
 	% part "A"
 	g8 g d'16 g,8 g16~ g2 | r4 g8 g d'16 g,8 g16~ g4 | g8 g d'16 g,8 g16~ g2 | r4 g8 g d'16 g,8 g16~ g4 |
 	g8 g d'16 g,8 g16~ g2 | r4 g8 g d'16 g,8 g16~ g8 f | g2. r8 f | aes1 |
+}
+{% endif %}
+{% if part == "LyricsFake" %}\lyricmode {
+	Up in the sky, six feet two and look -- ing migh -- ty fine, Ran -- dy Wes -- ton wrote a groovy
+	line called Hi -- Fly, reach -- ing for the _ _ _
+	clouds a -- bove,
+	mu -- si -- cal love;
+	Feel the rhy -- thm lift your feet,
+	bounc -- ing to that Af -- ri -- can
+	beat, soar -- ing high a -- bove the cit -- y streets where jazz and soul -- ful spir -- its _ _ _
+	meet, come a -- long and fly with me, Hi -- Fly, so free! _ _
 }
 {% endif %}

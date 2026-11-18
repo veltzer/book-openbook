@@ -5,6 +5,7 @@ default_version = "Wikifonia"
 title = "Monk's Dream"
 style = "Jazz"
 composer = "Thelonious Monk"
+poet = "Jon Hendricks"
 piece = "Standard"
 typesetter = "OpenBook contributors (MusicXML import)"
 completion = "3"
@@ -16,7 +17,7 @@ copyrightextra = "Archived MusicXML notice retained; underlying music is not rel
 [versions.Wikifonia]
 doChords = true
 doVoice = true
-doLyrics = false
+doLyrics = true
 doLyricsmore = false
 doLyricsmoremore = false
 doChordBars = false
@@ -131,5 +132,32 @@ doOwn = false
 	des'1 |
 	r2 e'4 c'4 |
 	\endBar
+}
+{% endif %}
+{% if part == "LyricsWikifonia" %}\lyricmode {
+	Step in -- side of
+	Monk's Dream, where the _ _
+	chords gleam _ _
+	with an un -- ex -- pec -- ted
+	light, danc -- ing through the _ _
+	mid -- dle of _
+	the Har -- lem night; _
+	Char -- lie Rous -- e's
+	ten -- or sax -- o -- phone
+	sings
+	right a -- long,
+	play -- ing Monk's
+	hyp -- not -- ic song, _
+	an -- gles sharp and _ _
+	rhy -- thms bold and free, _
+	un -- lock -- ing the door to mystery; _
+	In a world of
+	his own mak -- ing, _ _
+	nev -- er fak -- ing,
+	ev -- 'ry note is pure _
+	and true, pain -- ting a _ _
+	brand new view, _
+	wel -- come in -- to _
+	Monk's Dream!
 }
 {% endif %}

@@ -5,6 +5,7 @@ default_version = "Wikifonia"
 title = "Lester Leaps In"
 style = "Jazz"
 composer = "Lester Young"
+poet = "Eddie Jefferson, Jon Hendricks"
 piece = "Jazz"
 typesetter = "OpenBook contributors (MusicXML import)"
 completion = "3"
@@ -15,7 +16,7 @@ copyright = "All Rights Reserved"
 [versions.Wikifonia]
 doChords = true
 doVoice = true
-doLyrics = false
+doLyrics = true
 doLyricsmore = false
 doLyricsmoremore = false
 doChordBars = false
@@ -127,5 +128,33 @@ doOwn = false
 	r2 r8 f'8 g'4 |
 	}
 	\endBar
+}
+{% endif %}
+{% if part == "LyricsWikifonia" %}\lyricmode {
+	Here comes
+	Les -- ter,
+	leap -- ing right in with
+	his horn,
+	cool -- est
+	ten -- or
+	sound that ev -- er was
+	born!
+	Pork pie
+	hat cocked
+	low up -- on his head,
+	blow -- ing
+	phra -- ses
+	leav -- ing
+	all the oth -- ers for
+	dead!
+	Ba -- sie
+	feeds him
+	chords that make him fly,
+	soar -- ing
+	effort _
+	lessly _
+	through the swin -- ging _
+	sky,
+	Pres leaps!
 }
 {% endif %}

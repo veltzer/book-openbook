@@ -5,6 +5,7 @@ default_version = "Fake"
 title = "Jive At Five"
 style = "Swing"
 composer = "Count Basie, Harry Edison"
+poet = "Jon Hendricks"
 piece = "Fast"
 copyright = "1941 (Renewed) WB Music Corp."
 typesetter = "Mark Veltzer <mark.veltzer@gmail.com>"
@@ -24,7 +25,7 @@ remark = "Harry 'Sweets' Edison"
 [versions.Fake]
 doChords = true
 doVoice = true
-doLyrics = false
+doLyrics = true
 doLyricsmore = false
 doLyricsmoremore = false
 doChordBars = false
@@ -93,5 +94,14 @@ doOwn = false
 	% part "A"
 	g8 bes r4 bes des8 c~ | c c4 ges8 f ees c bes | g'8 bes r4 bes des8 c~ | c c4 ges8 f ees c bes |
 	r8 bes' bes4 a8 a4 aes8 | aes4 g8 g~ g4 r | ges4 ges f8 ees f ges | f8 ees4 ees8~ ees4 r |
+}
+{% endif %}
+{% if part == "LyricsFake" %}\lyricmode {
+	Ev -- 'ry morn -- ing when the clock strikes five, all the cats in Harlem come alive, meeting at the corner just to
+	swing and jive, do -- ing the Jive at Five! Count Ba -- sie plays the _ _ _
+	pi -- a -- no light and spare, Sweets Ed -- i -- son's mu -- ted trum -- pet fills the air, _
+	Les -- ter Young steps out and blows a cho -- rus so fine, _ _ _ _ _
+	ev -- 'ry -- bod -- y's tap -- ping to that eas -- y Kan -- sas Cit -- y line, be -- fore the sun be -- gins to
+	rise, we're groo -- ving to -- geth -- er at Jive at Five, yeah, Jive at Five! _ _
 }
 {% endif %}

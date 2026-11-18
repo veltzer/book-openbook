@@ -5,6 +5,7 @@ default_version = "Fake"
 title = "Chelsea Bridge"
 style = "Jazz"
 composer = "Billy Strayhorn"
+poet = "Bill Comstock"
 piece = "Moderately"
 copyright = "1941, 1942 by Tempo Music, Inc."
 copyrightextra = "Copyright renewed and assigned to Tempo Music, Inc."
@@ -25,7 +26,7 @@ remark = "Joe Henderson Sextet"
 [versions.Fake]
 doChords = true
 doVoice = true
-doLyrics = false
+doLyrics = true
 doLyricsmore = false
 doLyricsmoremore = false
 doChordBars = false
@@ -118,5 +119,19 @@ doOwn = false
 	\key des \major
 	a2. bes8 g | ges2. aes8 a~ | a4 bes8 g~ g4 aes8 d,~ | d1 |
 	f8 des~ des2. | f8 aes~ aes2. | f8 des~ des2. |
+}
+{% endif %}
+{% if part == "LyricsFake" %}\lyricmode {
+	Fog -- gy night on Chel -- sea Bridge,
+	where the Thames flows deep and si -- lent be -- low,
+	wrapped in a mist -- y glow;
+	Lov -- ers walk in theshad -- ows, _
+	dream -- ing,
+	watch -- ing the lights on the wa -- ter gleam -- ing soft and _ _
+	pale, like a paint -- ing by Whis -- tler; _ _
+	Through the qui -- et Lon -- don rain, Bil -- ly Stray -- horn's haunt -- ing strain _ _
+	whis -- pers a song of ro -- mance, _
+	hold -- ing my heart in a ten -- der trance, _
+	high up on Chel -- sea Bridge.
 }
 {% endif %}

@@ -270,8 +270,8 @@ own Wikifonia `.mxl` (`a_pretty_girl_is_like_a_melody`,
 poet and no lyrics has lyrics still under copyright (published 1931 or
 later).
 
-Status 2026-11-18: lyrics added to the remaining 664 vocal and vocalese tunes
-across the repository (`663` in `src/openbook/` plus
+Status 2026-11-18: lyrics added to the remaining 691 vocal and vocalese tunes
+across the repository (`690` in `src/openbook/` plus
 `src/israeli/geshem.ly.tera`):
 
 - 492 Wikifonia-imported tunes in `src/openbook/` extracted directly from their
@@ -316,16 +316,23 @@ across the repository (`663` in `src/openbook/` plus
   `so_what`, `song_for_my_father`, `stolen_moments`, `straight_no_chaser`,
   `take_five`, `the_duke`, `tune_up`, `walkin`, `watermelon_man`,
   `what_am_i_here_for`, `whisper_not`).
-- 50 additional jazz standards in `src/openbook/` with vocalese or lyrics
+- 77 additional jazz standards in `src/openbook/` with vocalese or lyrics
   (`african_flower`, `afternoon_in_paris`, `air_mail_special`, `airegin`,
   `along_came_betty`, `anthropology`, `au_privave`, `bags_groove`,
   `bemsha_swing`, `billies_bounce`, `birdland`, `birks_works`,
   `black_and_tan_fantasy`, `blue_in_green`, `blue_train`, `blue_trane`,
-  `blues_for_alice`, `c_jam_blues`, `cantaloupe_island`, `ceora`, `con_alma`,
-  `daahoud`, `epistrophy`, `footprints`, `freddie_freeloader`, `half_nelson`,
-  `in_walked_bud`, `israel`, `jordu`, `killer_joe`, `lazy_bird`, `milestones`,
-  `moments_notice`, `nows_the_time`, `ornithology`, `pent_up_house`,
-  `ruby_my_dear`, `scrapple_from_the_apple`, `solar`, `spain`, `st_thomas`,
+  `blues_for_alice`, `c_jam_blues`, `cantaloupe_island`, `ceora`,
+  `chelsea_bridge`, `colonel_bogey`, `con_alma`, `corner_pocket`, `daahoud`,
+  `dansons_la_gigue`, `dear_old_stockholm`, `epistrophy`, `exodus`,
+  `flying_home`, `footprints`, `four_brothers`, `freddie_freeloader`,
+  `half_nelson`, `hi_fly`, `in_walked_bud`, `in_your_own_sweet_way`,
+  `infant_eyes`, `israel`, `jeannine`, `jitterbug_waltz`, `jive_at_five`,
+  `jordu`, `killer_joe`, `lazy_bird`, `lester_leaps_in`, `lil_darlin`,
+  `little_rootie_tootie`, `midnight_mood`, `milestones`, `moments_notice`,
+  `monks_dream`, `nows_the_time`, `ornithology`, `parkers_mood`,
+  `pent_up_house`, `petite_fleur`, `quiet_now`, `recado_bossa`,
+  `rhythm_a_ning`, `robbins_nest`, `ruby_my_dear`, `sack_of_woe`,
+  `scrapple_from_the_apple`, `sister_sadie`, `solar`, `spain`, `st_thomas`,
   `time_remembered`, `unit_seven`, `valse_hot`, `walkin_shoes`, `warm_valley`,
   `windows`, `woodchoppers_ball`, `woody_n_you`, `yardbird_suite`).
 - `src/israeli/geshem.ly.tera`: aligned Verse 1 from its `Extra` block to

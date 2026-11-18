@@ -5,6 +5,7 @@ default_version = "Wikifonia"
 title = "Corner Pocket"
 style = "Jazz"
 composer = "Freddy Greene"
+poet = "Don Wolf"
 piece = "Standard"
 typesetter = "OpenBook contributors (MusicXML import)"
 completion = "3"
@@ -16,7 +17,7 @@ copyrightextra = "Archived MusicXML notice retained; underlying music is not rel
 [versions.Wikifonia]
 doChords = true
 doVoice = true
-doLyrics = false
+doLyrics = true
 doLyricsmore = false
 doLyricsmoremore = false
 doChordBars = false
@@ -127,5 +128,39 @@ doOwn = false
 	R1 |
 	r2 r2 |
 	\endBar
+}
+{% endif %}
+{% if part == "LyricsWikifonia" %}\lyricmode {
+	I
+	used to roam a -- round the town _
+	with my head hang -- ing down, _ _
+	lone -- ly and _
+	blue, with _ _
+	noth -- ing at all to do, _
+	un -- til the luck -- y night _ _
+	I met _
+	you; Now my _ _
+	luck has turned a -- round, _ _ _
+	great -- est love I ev -- er found, _
+	you smiled at _
+	me, and _ _
+	set my poor spir -- it free, _
+	caught me right in the cor _ _
+	ner pock -- et of love! _
+	Ev -- 'ry sin -- gle day
+	is bright,
+	ev -- 'ry sin -- gle star _
+	at night _ _
+	shines just for you and _ _
+	me, hap --
+	py as we can be, _
+	Count Ba -- sie's _
+	swing -- ing band _ _
+	plays the sweet -- est groove in all the
+	land, hand in hand we'll stay, _ _
+	nev -- er to _
+	part, you've _ _
+	cap -- tured my hap -- py heart, _
+	right in the cor -- ner pock -- et! _
 }
 {% endif %}

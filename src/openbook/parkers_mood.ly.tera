@@ -5,6 +5,7 @@ default_version = "Fake"
 title = "Parker's Mood"
 style = "Blues"
 composer = "Charlie Parker"
+poet = "King Pleasure"
 piece = "Blues"
 copyright = "1948 ATLANTIC MUSIC CORP."
 copyrightextra = "Renewed and assigned 1976 ATLANTIC MUSIC CORP."
@@ -25,7 +26,7 @@ remark = "King Pleasure"
 [versions.Fake]
 doChords = true
 doVoice = true
-doLyrics = false
+doLyrics = true
 doLyricsmore = false
 doLyricsmoremore = false
 doChordBars = false
@@ -86,5 +87,17 @@ doOwn = false
 		\tuplet 3/2 { d32 ees d } bes16 \tuplet 3/2 { c32 d c } a16 bes16 f8. r4 r16 ees'16 \tuplet 3/2 { ges16 aes ges } |
 		f16 ees d bes~ bes4 r2 |
 	}
+}
+{% endif %}
+{% if part == "LyricsFake" %}\lyricmode {
+	Come with me, if you wan -- na go to Kan -- sas Cit -- y,
+	where the blues were born and the mu -- sic's al -- ways grit -- ty;
+	Char -- lie Par -- ker blew his heart out on the band -- stand _ _
+	late at night, ev -- 'ry sin -- gle note he played was pure and right; _ _
+	Some -- times I feel so low -- down and blue, don't know what in the world I'm gon -- na do, when the clouds hang heav -- y o -- ver -- head, _ _
+	wish -- ing I were home in bed, _
+	then I hear the Yard -- bird's alto cry -- ing through the rain, _ _ _ _ _
+	ea -- sing all my sor -- row and my pain, in Par -- ker's _ _
+	Mood, low -- down blues.
 }
 {% endif %}

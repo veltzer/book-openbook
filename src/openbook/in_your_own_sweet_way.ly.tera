@@ -5,6 +5,7 @@ default_version = "Laurent"
 title = "In Your Own Sweet Way"
 style = "Jazz"
 composer = "Dave Brubeck"
+poet = "Iola Brubeck"
 typesetter = "Laurent Martelli"
 completion = "3"
 uuid = "bee31984-d49f-11f1-8000-046874d194b7"
@@ -13,7 +14,7 @@ structure = "AABA"
 [versions.Laurent]
 doChords = true
 doVoice = true
-doLyrics = false
+doLyrics = true
 doLyricsmore = false
 doLyricsmoremore = false
 doChordBars = false
@@ -99,5 +100,17 @@ doOwn = false
 	% part "A"
 	d2. c8 bes~ | bes1 | r8 d ees f ees4 d8 bes~ | bes4 c8 d~ d2 |
 	r8 ces des ees des4 ces8 bes~ | bes4 des8 ges,~ ges4 bes8 aes~ | aes2. ges8 fes~ | fes4. f8 r2 |
+}
+{% endif %}
+{% if part == "LyricsLaurent" %}\lyricmode {
+	You're so
+	sure that you know ev -- 'ry -- thing I'm _ _
+	gon -- na say, smil -- ing at me in your own sweet _
+	way; Though you
+	tease me
+	and pre -- tend you don't care at all,
+	still you're al -- ways there to catch me when I fall; _
+	No one else could ev -- er take your place, _
+	lov -- ing me each day in your own sweet, gen -- tle way. _
 }
 {% endif %}
