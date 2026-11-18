@@ -5,6 +5,7 @@ default_version = "Wikifonia"
 title = "Do-Re-Mi"
 style = "Standard"
 composer = "Richard Rodgers"
+poet = "Oscar Hammerstein II"
 piece = "Standard"
 typesetter = "OpenBook contributors (MusicXML import)"
 completion = "3"
@@ -16,7 +17,7 @@ copyrightextra = "Archived MusicXML notice retained; underlying music is not rel
 [versions.Wikifonia]
 doChords = true
 doVoice = true
-doLyrics = false
+doLyrics = true
 doLyricsmore = false
 doLyricsmoremore = false
 doChordBars = false
@@ -37,6 +38,7 @@ doOwn = false
 	- retained written melody, chord changes, pickups, repeats and numbered endings; lyrics omitted.
 	- imported explicit 7alt symbols using the book's altered-dominant notation where present.
 	- tempo is an editorial practice suggestion.
+	- put in the lyrics from the same Wikifonia source.
 	TODO:
 	- proofread the complete melody, harmony and form against the referenced PDF and check by ear.
 	- verify source attribution, copyright notice and reuse terms against the scan; only the archived MusicXML notice is retained.
@@ -219,5 +221,16 @@ doOwn = false
 	c''2 ~ |
 	c''4 r4 |
 	\endBar
+}
+{% endif %}
+{% if part == "LyricsWikifonia" %}\lyricmode {
+	Let's start at the ver -- ry be -- gin -- ning! __ A ver -- y good place to start, _ When
+	you read you be -- gin with A, B, C, When you sing you be -- gin with do -- re -- mi! Do --
+	re -- mi, Do -- re -- mi. The first three notes just hap -- pen to be do -- re -- mi! Do --
+	re -- mi! Do -- re -- mi -- fa -- so -- la -- ti _ _ _ _ _ _ _ Doe a deer, a fe -- male
+	deer, Ray a drop of gold -- en sun, __ Me a name I call my -- self, Far a long, long way
+	to run, __ Sew a nee -- dle pull -- ing thread, __ La a note to fol -- low sew, __ Tea a
+	drink with jam and bread __ That will bring us back to do -- oh -- oh -- oh! doe! __ Do --
+	re -- mi -- fa -- so -- la -- ti -- do! __
 }
 {% endif %}

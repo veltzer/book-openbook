@@ -4,7 +4,8 @@ default_version = "Wikifonia"
 [attributes]
 title = "Dansero"
 style = "Jazz"
-composer = "Richard Hayman, Lee Daniels, Sol Parker, Richard Hayman, Lee Daniels, Sol Parker"
+composer = "Richard Hayman, Lee Daniels, Sol Parker"
+poet = "Richard Hayman, Lee Daniels, Sol Parker"
 piece = "Standard"
 typesetter = "OpenBook contributors (MusicXML import)"
 completion = "3"
@@ -16,8 +17,8 @@ copyrightextra = "Archived MusicXML notice retained; underlying music is not rel
 [versions.Wikifonia]
 doChords = true
 doVoice = true
-doLyrics = false
-doLyricsmore = false
+doLyrics = true
+doLyricsmore = true
 doLyricsmoremore = false
 doChordBars = false
 doGuitar = false
@@ -35,6 +36,7 @@ doOwn = false
 	- retained the archived MusicXML rights notice; no redistribution permission is asserted.
 	- retained written melody, chord changes, pickups, repeats and numbered endings; lyrics, slurs, dynamics and articulations other than fermatas omitted.
 	- tempo is an editorial practice suggestion.
+	- put in the lyrics from the same Wikifonia source.
 	TODO:
 	- proofread the complete melody, harmony and form against a printed edition and check by ear.
 	- verify source attribution, copyright notice and reuse terms; only the archived MusicXML notice is retained.
@@ -111,5 +113,19 @@ doOwn = false
 	f'8 d'8 e'8 f'8 as'4 as'4 |
 	g'4. f'8 ~ f'2 |
 	\endBar
+}
+{% endif %}
+{% if part == "LyricsWikifonia" %}\lyricmode {
+	Hold me close __ and hold me tight. __ Hold me now __ while my head seems light. __
+	Thrills like this __ lin -- ger so __ When I hear them play Dan -- ser -- o. __ In my
+	heart I know that if I've heard one tune __ I've heard a thou -- sand themes. __ But still
+	and all I find there's on -- ly one __ that thrills me to ex -- tremes, __ or so it seems.
+	Here be -- fore __ my ve -- ry eyes __ I could swear __ this is par -- a -- dise. __ This
+	is all __ mine I know, __ When I hear them play Dan -- ser -- o. __
+}
+{% endif %}
+{% if part == "LyricsmoreWikifonia" %}\lyricmode {
+	If I dream __ of new de -- lights, __ it's a part __ of this night of nights. __ And
+	while I __ feel this glow __ Let them play and play Dan -- ser -- o. __
 }
 {% endif %}

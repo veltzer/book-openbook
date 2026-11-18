@@ -5,6 +5,7 @@ default_version = "Wikifonia"
 title = "You'll Never Know"
 style = "Jazz"
 composer = "Harry Warren"
+poet = "Mack Gordon"
 piece = "Jazz"
 typesetter = "OpenBook contributors (MusicXML import)"
 completion = "3"
@@ -15,8 +16,8 @@ copyright = "1943 WB Music Corn, (Renewed). All Rishts Reserved. Used by Permiss
 [versions.Wikifonia]
 doChords = true
 doVoice = true
-doLyrics = false
-doLyricsmore = false
+doLyrics = true
+doLyricsmore = true
 doLyricsmoremore = false
 doChordBars = false
 doGuitar = false
@@ -34,6 +35,7 @@ doOwn = false
 	- retained the original copyright notice where printed; the underlying music is not relicensed.
 	- retained written measures, pickups, repeats and endings; lyrics omitted.
 	- tempo is an editorial practice suggestion.
+	- put in the lyrics from the same Wikifonia source.
 	TODO:
 	- proofread the music against the referenced PDF and check by ear.
 {% endif %}
@@ -138,5 +140,20 @@ doOwn = false
 	}
 	}
 	\endBar
+}
+{% endif %}
+{% if part == "LyricsWikifonia" %}\lyricmode {
+	You'll nev -- er know __ just how much __ I miss you __ You'll nev -- er know __ just how
+	much __ I care __ and if I tried __ I still could -- nt hide __ my love for you you ought
+	to know __ for have -- nt I told __ you so a mil lion or more __ times You went a -- way __
+	and my heart __ went with you __ I speak your name __ in my ev -- ry prayer __ if there is
+	some oth -- er way __ to prove that I love __ you I swear I dont know how __ You'll nev --
+	er know __ if you dont __ know now. __ now. __
+}
+{% endif %}
+{% if part == "LyricsmoreWikifonia" %}\lyricmode {
+	_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ you said good -- bye __ now stars in the sky __ re --
+	fuse to shine take it from me __ it's no fun to be __ a lone with moon -- light and "mem'" --
+	"'ries"
 }
 {% endif %}

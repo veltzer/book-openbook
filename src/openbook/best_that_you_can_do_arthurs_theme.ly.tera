@@ -5,6 +5,7 @@ default_version = "Wikifonia"
 title = "Best That You Can Do (Arthur's Theme)"
 style = "Standard"
 composer = "Burt Bacharach, Christopher Cross"
+poet = "Carol Bayer Sager, Peter Allen"
 piece = "Standard"
 typesetter = "OpenBook contributors (MusicXML import)"
 completion = "3"
@@ -16,8 +17,8 @@ copyrightextra = "Archived MusicXML notice retained; underlying music is not rel
 [versions.Wikifonia]
 doChords = true
 doVoice = true
-doLyrics = false
-doLyricsmore = false
+doLyrics = true
+doLyricsmore = true
 doLyricsmoremore = false
 doChordBars = false
 doGuitar = false
@@ -37,6 +38,7 @@ doOwn = false
 	- retained written melody, chord changes, pickups, repeats and numbered endings; lyrics omitted.
 	- imported explicit 7alt symbols using the book's altered-dominant notation where present.
 	- tempo is an editorial practice suggestion.
+	- put in the lyrics from the same Wikifonia source.
 	TODO:
 	- proofread the complete melody, harmony and form against the referenced PDF and check by ear.
 	- verify source attribution, copyright notice and reuse terms against the scan; only the archived MusicXML notice is retained.
@@ -127,5 +129,22 @@ doOwn = false
 	a'2 r2 |
 	R1 |
 	\endBar
+}
+{% endif %}
+{% if part == "LyricsWikifonia" %}\lyricmode {
+	Once in your life you'll find __ her. Some -- one who turns __ your head a -- round and
+	next thing you know you're clos -- "in'" down the town. Wake up and she's still with __
+	you. _ _ e -- ven "tho'" you left her way __ a -- cross town You're won -- der -- "in'" to
+	your -- self, hey, what have I found? If you get caught be -- tween the moon and New York
+	Cit -- y I know it's cra -- zy, but it's true __ _ _ _ _ _ _ If you get caught be -- tween
+	the moon and New York Ci -- _ ty, the best that you can do the best that you can do is
+	fall __ in love. __
+}
+{% endif %}
+{% if part == "LyricsmoreWikifonia" %}\lyricmode {
+	Arth -- ur he does what "he~plea" -- ses. All of his life __ his mas -- ters toys and
+	deep in his heart he's just, he's just a boy. Liv -- "in'" his life one day __ at a time,
+	show -- in him -- self _ a real -- ly good time he's Laugh -- "in'" a -- bout the way they
+	want him to be.
 }
 {% endif %}

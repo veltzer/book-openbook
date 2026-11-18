@@ -5,6 +5,7 @@ default_version = "Wikifonia"
 title = "Dites - Moi"
 style = "Standard"
 composer = "Richard Rodgers"
+poet = "Oscar Hammerstein II"
 piece = "Standard"
 typesetter = "OpenBook contributors (MusicXML import)"
 completion = "3"
@@ -16,8 +17,8 @@ copyrightextra = "Archived MusicXML notice retained; underlying music is not rel
 [versions.Wikifonia]
 doChords = true
 doVoice = true
-doLyrics = false
-doLyricsmore = false
+doLyrics = true
+doLyricsmore = true
 doLyricsmoremore = false
 doChordBars = false
 doGuitar = false
@@ -37,6 +38,7 @@ doOwn = false
 	- retained written melody, chord changes, pickups, repeats and numbered endings; lyrics omitted.
 	- imported explicit 7alt symbols using the book's altered-dominant notation where present.
 	- tempo is an editorial practice suggestion.
+	- put in the lyrics from the same Wikifonia source.
 	TODO:
 	- proofread the complete melody, harmony and form against the referenced PDF and check by ear.
 	- verify source attribution, copyright notice and reuse terms against the scan; only the archived MusicXML notice is retained.
@@ -93,5 +95,17 @@ doOwn = false
 	d'2 b'2 |
 	c''2 r2 |
 	\endBar
+}
+{% endif %}
+{% if part == "LyricsWikifonia" %}\lyricmode {
+	Di -- tes moi __ pour quoi _ la vie est bel -- le di -- tes moi _ pour quoi _ la vie est
+	gai? di -- tes moi _ pour quoi _ Chere ma d'moi sel -- le est -- ce -- que par -- ce que
+	vous m'ai mez?
+}
+{% endif %}
+{% if part == "LyricsmoreWikifonia" %}\lyricmode {
+	Tell me why __ the sky _ is filled with mu -- sic tell me why _ we fly _ on clouds a --
+	bove can it be _ that we _ can fly to mu -- sic just be -- cause just be -- cause we're in
+	love?
 }
 {% endif %}

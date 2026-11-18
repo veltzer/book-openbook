@@ -5,6 +5,7 @@ default_version = "Wikifonia"
 title = "Words"
 style = "Jazz"
 composer = "The Bee Gees"
+poet = "The Bee Gees"
 piece = "Standard"
 typesetter = "OpenBook contributors (MusicXML import)"
 completion = "3"
@@ -16,8 +17,8 @@ copyrightextra = "Archived MusicXML notice retained; underlying music is not rel
 [versions.Wikifonia]
 doChords = true
 doVoice = true
-doLyrics = false
-doLyricsmore = false
+doLyrics = true
+doLyricsmore = true
 doLyricsmoremore = false
 doChordBars = false
 doGuitar = false
@@ -37,6 +38,7 @@ doOwn = false
 	- retained written melody, chord changes, pickups, repeats and numbered endings; lyrics omitted.
 	- imported explicit 7alt symbols using the book's altered-dominant notation where present.
 	- tempo is an editorial practice suggestion.
+	- put in the lyrics from the same Wikifonia source.
 	TODO:
 	- proofread the complete melody, harmony and form against the referenced PDF and check by ear.
 	- verify source attribution, copyright notice and reuse terms against the scan; only the archived MusicXML notice is retained.
@@ -121,5 +123,19 @@ doOwn = false
 	g'1 |
 	}
 	\endBar
+}
+{% endif %}
+{% if part == "LyricsWikifonia" %}\lyricmode {
+	Smile an ev -- er -- last -- ing "smile;" a smile could bring you near to me. Don't ev --
+	er let me find you gone "'cause" that would bring a tear to me. This world has lost its
+	glo -- ry, let's start a brand new sto -- ry now, my love. Right now, there'll be no oth --
+	er time, and I can show you how, my love. __ say. It's on -- ly Words, and Words are all I
+	have to take your heart a -- way.
+}
+{% endif %}
+{% if part == "LyricsmoreWikifonia" %}\lyricmode {
+	Talk in ev -- er -- last -- ing words and ded -- i -- cate them all to me. And I will
+	give you all my life, I'm here if you should call to me. You think that I don't e -- ven
+	mean __ _ a sin -- gle word I
 }
 {% endif %}

@@ -5,6 +5,7 @@ default_version = "Wikifonia"
 title = "Give Me the Simple Life"
 style = "Jazz"
 composer = "Rube Bloom"
+poet = "Harry Ruby"
 piece = "Standard"
 typesetter = "OpenBook contributors (MusicXML import)"
 completion = "3"
@@ -16,7 +17,7 @@ copyrightextra = "Archived MusicXML notice retained; underlying music is not rel
 [versions.Wikifonia]
 doChords = true
 doVoice = true
-doLyrics = false
+doLyrics = true
 doLyricsmore = false
 doLyricsmoremore = false
 doChordBars = false
@@ -37,6 +38,7 @@ doOwn = false
 	- retained written melody, chord changes, pickups, repeats and numbered endings; lyrics omitted.
 	- imported explicit 7alt symbols using the book's altered-dominant notation where present.
 	- tempo is an editorial practice suggestion.
+	- put in the lyrics from the same Wikifonia source.
 	TODO:
 	- proofread the complete melody, harmony and form against the referenced PDF and check by ear.
 	- verify source attribution, copyright notice and reuse terms against the scan; only the archived MusicXML notice is retained.
@@ -131,5 +133,16 @@ doOwn = false
 	es''2 ~ es''2 ~ |
 	es''1 |
 	\endBar
+}
+{% endif %}
+{% if part == "LyricsWikifonia" %}\lyricmode {
+	I dont be -- lieve in fret -- tin and griev -- in Why mess ar -- round with strife? I nev --
+	er was cut out to step and stru out Give me the sim -- ple life. Some find it plea -- sant
+	din -- ing on pheas -- ant Those things roll off my knife. Just serve me to -- ma -- toes
+	and mashed po -- ta -- toes. Give me the sim -- ple life. A cot -- tage small is all I'm
+	af -- ter, Not one thats spac -- ious and wide. A house that rings with joy and laugh --
+	ter And the ones you love in -- side Some like the high road, I like the low road, Free
+	from the care and strife. Sounds corn -- y and seed -- y, but yes in -- deed "y;" Give me
+	the simp -- le Give me the sim -- ple Give me the sim -- ple life __
 }
 {% endif %}

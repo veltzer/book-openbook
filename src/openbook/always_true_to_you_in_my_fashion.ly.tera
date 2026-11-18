@@ -5,6 +5,7 @@ default_version = "Wikifonia"
 title = "Always True to You in my Fashion"
 style = "Standard"
 composer = "Cole Porter"
+poet = "Cole Porter"
 piece = "Standard"
 typesetter = "OpenBook contributors (MusicXML import)"
 completion = "3"
@@ -16,8 +17,8 @@ copyrightextra = "Archived MusicXML notice retained; underlying music is not rel
 [versions.Wikifonia]
 doChords = true
 doVoice = true
-doLyrics = false
-doLyricsmore = false
+doLyrics = true
+doLyricsmore = true
 doLyricsmoremore = false
 doChordBars = false
 doGuitar = false
@@ -37,6 +38,7 @@ doOwn = false
 	- retained written melody, chord changes, pickups, repeats and numbered endings; lyrics omitted.
 	- imported explicit 7alt symbols using the book's altered-dominant notation where present.
 	- tempo is an editorial practice suggestion.
+	- put in the lyrics from the same Wikifonia source.
 	TODO:
 	- proofread the complete melody, harmony and form against the referenced PDF and check by ear.
 	- verify source attribution, copyright notice and reuse terms against the scan; only the archived MusicXML notice is retained.
@@ -143,5 +145,20 @@ doOwn = false
 	c'1 ~ |
 	c'1 |
 	\endBar
+}
+{% endif %}
+{% if part == "LyricsWikifonia" %}\lyricmode {
+	If a cus -- tom tail -- ored vet __ asks me out for some -- thing wet __ when the vet be --
+	gins to pet __ I cry "'Hoo" -- "ray'" __ but I'm al -- ways true to you __ dar -- "lin'"
+	in my fash -- ion "(my" fash -- "ion)" yes I'm al -- ways true to you __ dar -- "lin'" in
+	my way __ I've been _ There's an oil -- man known as Tex who is keen to give me checks and
+	his checks I fear means that Tex is here to stay __ But I'm al -- ways true to you __ dar --
+	"lin'" in my fash -- ion "(my" fash -- "ion)" yes I'm al -- ways true to you __ dar "lin'"
+	in my way __
+}
+{% endif %}
+{% if part == "LyricsmoreWikifonia" %}\lyricmode {
+	_ _ asked to have a meal __ by a big ty -- coon in steel __ If the meal in -- cludes a
+	deal __ ac -- cept I may __
 }
 {% endif %}

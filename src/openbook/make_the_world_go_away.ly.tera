@@ -5,6 +5,7 @@ default_version = "Wikifonia"
 title = "Make The World Go Away"
 style = "Standard"
 composer = "Hank Cochran"
+poet = "Hank Cochran"
 piece = "Standard"
 typesetter = "OpenBook contributors (MusicXML import)"
 completion = "3"
@@ -16,7 +17,7 @@ copyrightextra = "Archived MusicXML notice retained; underlying music is not rel
 [versions.Wikifonia]
 doChords = true
 doVoice = true
-doLyrics = false
+doLyrics = true
 doLyricsmore = false
 doLyricsmoremore = false
 doChordBars = false
@@ -37,6 +38,7 @@ doOwn = false
 	- retained written melody, chord changes, pickups, repeats and numbered endings; lyrics omitted.
 	- imported explicit 7alt symbols using the book's altered-dominant notation where present.
 	- tempo is an editorial practice suggestion.
+	- put in the lyrics from the same Wikifonia source.
 	TODO:
 	- proofread the complete melody, harmony and form against the referenced PDF and check by ear.
 	- verify source attribution, copyright notice and reuse terms against the scan; only the archived MusicXML notice is retained.
@@ -127,5 +129,14 @@ doOwn = false
 	c'1 ~ |
 	c'4 r4 r2 |
 	\endBar
+}
+{% endif %}
+{% if part == "LyricsWikifonia" %}\lyricmode {
+	Do you re -- mem -- ber when you loved me be -- fore the world took me a -- "way/" if you
+	do then for -- give me and make the world _ go a -- way __ make the world go a -- way and
+	get it off _ my _ shoul _ ders say the things you used to say and make the world _ go a --
+	way __ I'm sor -- ry if I hurt you I'll make it up _ day by day just say you love me like
+	you used to and make the world _ go _ way __ make the world go a -- way and get it off _
+	my _ shoul _ ders say the things you used to say and make the world _ go a -- way. __
 }
 {% endif %}

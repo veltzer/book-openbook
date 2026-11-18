@@ -5,6 +5,7 @@ default_version = "Wikifonia"
 title = "Canadian Sunset"
 style = "Jazz"
 composer = "Eddie Heywood, Norman Gimbel"
+poet = "Norman Gimbel"
 piece = "Standard"
 typesetter = "OpenBook contributors (MusicXML import)"
 completion = "3"
@@ -16,8 +17,8 @@ copyrightextra = "Archived MusicXML notice retained; underlying music is not rel
 [versions.Wikifonia]
 doChords = true
 doVoice = true
-doLyrics = false
-doLyricsmore = false
+doLyrics = true
+doLyricsmore = true
 doLyricsmoremore = false
 doChordBars = false
 doGuitar = false
@@ -35,6 +36,7 @@ doOwn = false
 	- retained the archived MusicXML rights notice; no redistribution permission is asserted.
 	- retained written melody, chord changes, pickups, repeats and numbered endings; lyrics, slurs, dynamics and articulations other than fermatas omitted.
 	- tempo is an editorial practice suggestion.
+	- put in the lyrics from the same Wikifonia source.
 	TODO:
 	- proofread the complete melody, harmony and form against a printed edition and check by ear.
 	- verify source attribution, copyright notice and reuse terms; only the archived MusicXML notice is retained.
@@ -173,5 +175,18 @@ doOwn = false
 	f'1 |
 	R1 _\markup{ \bold\tiny {D.C.} } |
 	\endBar
+}
+{% endif %}
+{% if part == "LyricsWikifonia" %}\lyricmode {
+	Once __ I was a -- lone So __ lone -- ly and then you came __ out of no -- where __ like
+	the sun __ up from the hills thrills __ a week -- end in Can -- a -- da __ a change of
+	scene was the most __ I bar -- gained for __ and then I dis -- cov -- ered you __ and in
+	your eyes I found a love that I could -- n't ig -- nore down __ down came the sun fast __
+	fast beat my heart I knew __ as the sun -- set __ from that day __ we'd nev -- er part.
+}
+{% endif %}
+{% if part == "LyricsmoreWikifonia" %}\lyricmode {
+	Cold __ cold was the wind warm __ warm were your lips out there __ on that ski -- trail __
+	where your kiss, __ filled me with
 }
 {% endif %}

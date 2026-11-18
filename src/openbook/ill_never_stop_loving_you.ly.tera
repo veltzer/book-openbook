@@ -5,6 +5,7 @@ default_version = "Wikifonia"
 title = "I'll Never Stop Loving You"
 style = "Jazz"
 composer = "Nicholas Brodszky"
+poet = "Sammy Cahn"
 piece = "Standard"
 typesetter = "OpenBook contributors (MusicXML import)"
 completion = "3"
@@ -16,7 +17,7 @@ copyrightextra = "Archived MusicXML notice retained; underlying music is not rel
 [versions.Wikifonia]
 doChords = true
 doVoice = true
-doLyrics = false
+doLyrics = true
 doLyricsmore = false
 doLyricsmoremore = false
 doChordBars = false
@@ -37,6 +38,7 @@ doOwn = false
 	- retained written melody, chord changes, pickups, repeats and numbered endings; lyrics omitted.
 	- imported explicit 7alt symbols using the book's altered-dominant notation where present.
 	- tempo is an editorial practice suggestion.
+	- put in the lyrics from the same Wikifonia source.
 	TODO:
 	- proofread the complete melody, harmony and form against the referenced PDF and check by ear.
 	- verify source attribution, copyright notice and reuse terms against the scan; only the archived MusicXML notice is retained.
@@ -144,5 +146,14 @@ doOwn = false
 	}
 	c''2. r4 |
 	\endBar
+}
+{% endif %}
+{% if part == "LyricsWikifonia" %}\lyricmode {
+	I'll nev -- er stop lov -- ing you, What -- ev -- er else I may do, My love for you will
+	live "'till" time it -- self is through. I'll nev -- er stop want -- ing you, And when for --
+	ev -- er is through, my heart will beat the way it does each time we meet. The night does --
+	n't ques -- tion the stars that ap -- pear in the skies, So why should I ques -- tion the
+	stars that ap -- pear in my eyes. Of this I'm more than just sure, My love will last and
+	en -- dure, I'll nev -- er, no, I'll nev -- er stop lov -- ing you. __ you. __
 }
 {% endif %}

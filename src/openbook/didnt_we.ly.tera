@@ -5,6 +5,7 @@ default_version = "Wikifonia"
 title = "Didn't We"
 style = "Jazz"
 composer = "Jimmy Webb"
+poet = "Jimmy Webb"
 piece = "Standard"
 typesetter = "OpenBook contributors (MusicXML import)"
 completion = "3"
@@ -16,7 +17,7 @@ copyrightextra = "Archived MusicXML notice retained; underlying music is not rel
 [versions.Wikifonia]
 doChords = true
 doVoice = true
-doLyrics = false
+doLyrics = true
 doLyricsmore = false
 doLyricsmoremore = false
 doChordBars = false
@@ -37,6 +38,7 @@ doOwn = false
 	- retained written melody, chord changes, pickups, repeats and numbered endings; lyrics omitted.
 	- imported explicit 7alt symbols using the book's altered-dominant notation where present.
 	- tempo is an editorial practice suggestion.
+	- put in the lyrics from the same Wikifonia source.
 	TODO:
 	- proofread the complete melody, harmony and form against the referenced PDF and check by ear.
 	- verify source attribution, copyright notice and reuse terms against the scan; only the archived MusicXML notice is retained.
@@ -133,5 +135,14 @@ doOwn = false
 	f''4 d''2 e''4 |
 	c''1 |
 	\endBar
+}
+{% endif %}
+{% if part == "LyricsWikifonia" %}\lyricmode {
+	This time we al -- most made the piec -- es fit did -- "'nt" we? __ This time we al --
+	most made some sense of it, Did -- n't we? __ This time I held the ans -- wer right here
+	in my hand. __ Then I touched it and it had turned to sand. This time we al -- most sang
+	our song in tune did -- n't we? __ This time we al -- most made it to the moon, oh did --
+	n't we? __ This time we al -- most made our poem __ rhyme. __ This time we al -- most made
+	that long, long __ climb. __ did -- n't we al -- most make it this time?
 }
 {% endif %}

@@ -5,6 +5,7 @@ default_version = "Wikifonia"
 title = "Isn't She Lovely"
 style = "Standard"
 composer = "Stevie Wonder"
+poet = "Stevie Wonder"
 piece = "Standard"
 typesetter = "OpenBook contributors (MusicXML import)"
 completion = "3"
@@ -16,8 +17,8 @@ copyrightextra = "Archived MusicXML notice retained; underlying music is not rel
 [versions.Wikifonia]
 doChords = true
 doVoice = true
-doLyrics = false
-doLyricsmore = false
+doLyrics = true
+doLyricsmore = true
 doLyricsmoremore = false
 doChordBars = false
 doGuitar = false
@@ -37,6 +38,7 @@ doOwn = false
 	- retained written melody, chord changes, pickups, repeats and numbered endings; lyrics omitted.
 	- imported explicit 7alt symbols using the book's altered-dominant notation where present.
 	- tempo is an editorial practice suggestion.
+	- put in the lyrics from the same Wikifonia source.
 	TODO:
 	- proofread the complete melody, harmony and form against the referenced PDF and check by ear.
 	- verify source attribution, copyright notice and reuse terms against the scan; only the archived MusicXML notice is retained.
@@ -133,5 +135,20 @@ doOwn = false
 	f'4 a'4 bes'4 a'4 |
 	R1 |
 	\endBar
+}
+{% endif %}
+{% if part == "LyricsWikifonia" %}\lyricmode {
+	Is -- n't she love -- ly is -- n't she won -- er -- ful? Is -- n't she pre -- cious, less
+	than one min -- ute old __ I nev -- er thought thru love we'd be __ mak -- ing one as lov --
+	ly __ as she But is -- n't she love -- ly made from love? _ _ _ _ "(3)" Is -- n't she love --
+	ly life and love are the same __ Life is A -- i -- sha the mean -- ing of her name, __ Lon --
+	die, it could __ have not been done __ with -- out you who con -- ceived __ the one that's
+	so ver -- y love -- ly mad from Love. "(4)" instrumental
+}
+{% endif %}
+{% if part == "LyricsmoreWikifonia" %}\lyricmode {
+	_ _ _ pret -- ty tru -- ly the an -- "gels'" best? Boy, I'm so hap -- py we have been
+	heav -- en blest __ I can't be -- lieve what God has done __ through us he's giv -- en
+	life __ to one _ _ _ _ _ _ _ "(2)" _ _ _ _ _ _ Is -- nt -- she
 }
 {% endif %}

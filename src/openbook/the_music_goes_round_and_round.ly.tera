@@ -5,6 +5,7 @@ default_version = "Wikifonia"
 title = "The Music Goes Round and Round"
 style = "Standard"
 composer = "Edward Farley, Mike Riley"
+poet = "Red Hodgson"
 piece = "Standard"
 typesetter = "OpenBook contributors (MusicXML import)"
 completion = "3"
@@ -16,7 +17,7 @@ copyrightextra = "Archived MusicXML notice retained; underlying music is not rel
 [versions.Wikifonia]
 doChords = true
 doVoice = true
-doLyrics = false
+doLyrics = true
 doLyricsmore = false
 doLyricsmoremore = false
 doChordBars = false
@@ -37,6 +38,7 @@ doOwn = false
 	- retained written melody, chord changes, pickups, repeats and numbered endings; lyrics omitted.
 	- imported explicit 7alt symbols using the book's altered-dominant notation where present.
 	- tempo is an editorial practice suggestion.
+	- put in the lyrics from the same Wikifonia source.
 	TODO:
 	- proofread the complete melody, harmony and form against the referenced PDF and check by ear.
 	- verify source attribution, copyright notice and reuse terms against the scan; only the archived MusicXML notice is retained.
@@ -125,5 +127,15 @@ doOwn = false
 	g'4 g'8 g'8 f'4 e'4 |
 	c'2 r2 |
 	\endBar
+}
+{% endif %}
+{% if part == "LyricsWikifonia" %}\lyricmode {
+	I blow through here __ the mu -- sic goes round and a -- round whoa -- ho ho -- ho ho --
+	ho and it comes out here I push the first valve down the mu -- sic goes round and a --
+	round whoa -- ho -- ho ho -- ho -- ho and it comes up here I push the mid -- dle valve
+	down __ _ the mu -- sic goes do -- wn a -- round __ be -- low __ be -- low __ be -- low __
+	dee -- dle dee ho ho -- ho lis -- ten to the jazz _ come out _ _ _ I push the oth -- er
+	valve down _ _ _ the mu -- sic goes round and a -- round whoa -- ho ho -- ho -- ho -- ho
+	and it comes out here
 }
 {% endif %}

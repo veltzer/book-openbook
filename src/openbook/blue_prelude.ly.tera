@@ -5,6 +5,7 @@ default_version = "Wikifonia"
 title = "Blue Prelude"
 style = "Jazz"
 composer = "Joe Bishop"
+poet = "Gordon Jenkins"
 piece = "Standard"
 typesetter = "OpenBook contributors (MusicXML import)"
 completion = "3"
@@ -16,7 +17,7 @@ copyrightextra = "Archived MusicXML notice retained; underlying music is not rel
 [versions.Wikifonia]
 doChords = true
 doVoice = true
-doLyrics = false
+doLyrics = true
 doLyricsmore = false
 doLyricsmoremore = false
 doChordBars = false
@@ -37,6 +38,7 @@ doOwn = false
 	- retained written melody, chord changes, pickups, repeats and numbered endings; lyrics omitted.
 	- imported explicit 7alt symbols using the book's altered-dominant notation where present.
 	- tempo is an editorial practice suggestion.
+	- put in the lyrics from the same Wikifonia source.
 	TODO:
 	- proofread the complete melody, harmony and form against the referenced PDF and check by ear.
 	- verify source attribution, copyright notice and reuse terms against the scan; only the archived MusicXML notice is retained.
@@ -143,5 +145,14 @@ doOwn = false
 	d'1 ~ |
 	d'2. r4 |
 	\endBar
+}
+{% endif %}
+{% if part == "LyricsWikifonia" %}\lyricmode {
+	Let me sigh let me cry when I'm blue. __ Let me go "'way" from this lone -- ly town. __
+	Won't be long till my song will be "thru'," __ "'cause" I know I'm on my last __ go --
+	round. __ All the love I could steal beg or bor -- row __ would -- n't heal all this pain
+	in my soul. __ What is love, but a pre -- lude to sor -- row __ with a heart -- break a --
+	head for your goal. __ Here I go, now you know why I'm leav -- "ing;" __ Got the blues,
+	what can I lose, __ _ good -- bye. __
 }
 {% endif %}

@@ -5,6 +5,7 @@ default_version = "Wikifonia"
 title = "A Weaver of Dreams"
 style = "Jazz"
 composer = "Victor Young, Jack Elliott"
+poet = "Jack Elliott"
 piece = "Standard"
 typesetter = "OpenBook contributors (MusicXML import)"
 completion = "3"
@@ -16,7 +17,7 @@ copyrightextra = "Archived MusicXML notice retained; underlying music is not rel
 [versions.Wikifonia]
 doChords = true
 doVoice = true
-doLyrics = false
+doLyrics = true
 doLyricsmore = false
 doLyricsmoremore = false
 doChordBars = false
@@ -35,6 +36,7 @@ doOwn = false
 	- retained the archived MusicXML rights notice; no redistribution permission is asserted.
 	- retained written melody, chord changes, pickups, repeats and numbered endings; lyrics, slurs, dynamics and articulations other than fermatas omitted.
 	- tempo is an editorial practice suggestion.
+	- put in the lyrics from the same Wikifonia source.
 	TODO:
 	- proofread the complete melody, harmony and form against a printed edition and check by ear.
 	- verify source attribution, copyright notice and reuse terms; only the archived MusicXML notice is retained.
@@ -123,5 +125,15 @@ doOwn = false
 	b'4 d''8 c''8 ~ c''2 |
 	r2 r2 |
 	\endBar
+}
+{% endif %}
+{% if part == "LyricsWikifonia" %}\lyricmode {
+	You're a weav -- er of dreams, you and your strange fas -- ci -- na -- tion, you're a
+	weav -- er of dreams, you and your come hith -- er "smile;" Just to hear you speak can
+	leave me weak as a babe in arms Poor lit -- tle bab in arms, Help -- less be -- fore your
+	charms. You're a weav -- er of dreams, You and your lips warm and ten -- der. Just like
+	Mag -- ic it seems, Thrill -- ing en -- chant -- ing me "too;" I'm in your spell and
+	there's no cure, I'm lost for sure, "'cause" you're a weav -- er of dreams and I'm in love
+	with you. __
 }
 {% endif %}

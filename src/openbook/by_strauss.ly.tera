@@ -5,6 +5,7 @@ default_version = "Wikifonia"
 title = "By Strauss"
 style = "Standard"
 composer = "George Gershwin"
+poet = "Ira Gershwin"
 piece = "Standard"
 typesetter = "OpenBook contributors (MusicXML import)"
 completion = "3"
@@ -16,7 +17,7 @@ copyrightextra = "Archived MusicXML notice retained; underlying music is not rel
 [versions.Wikifonia]
 doChords = true
 doVoice = true
-doLyrics = false
+doLyrics = true
 doLyricsmore = false
 doLyricsmoremore = false
 doChordBars = false
@@ -37,6 +38,7 @@ doOwn = false
 	- retained written melody, chord changes, pickups, repeats and numbered endings; lyrics omitted.
 	- imported explicit 7alt symbols using the book's altered-dominant notation where present.
 	- tempo is an editorial practice suggestion.
+	- put in the lyrics from the same Wikifonia source.
 	TODO:
 	- proofread the complete melody, harmony and form against the referenced PDF and check by ear.
 	- verify source attribution, copyright notice and reuse terms against the scan; only the archived MusicXML notice is retained.
@@ -153,5 +155,14 @@ doOwn = false
 	}
 	}
 	\endBar
+}
+{% endif %}
+{% if part == "LyricsWikifonia" %}\lyricmode {
+	When I want a mel -- o -- dy lilt -- ing thru the house, Then I want a mel -- o -- dy __
+	by Strauss! __ It laughs! It sings! The world is in rhyme, Swing -- ing to three quar --
+	ter time. __ Let the "'Dan" -- "ube'" flow a -- long And the "'Fle" -- der -- "maus!'"
+	Keep the wine and give me song __ by Strauss! __ By Jo! By Jing! "'By" "Strauss'" is the
+	thing! So I say to ha -- cha -- cha __ Her -- aus! __ Just give me a oom -- pah -- pah __
+	By Strauss! When I want a Strauss! __
 }
 {% endif %}

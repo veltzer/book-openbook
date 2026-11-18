@@ -5,6 +5,7 @@ default_version = "Wikifonia"
 title = "The Moon Of Manakoora"
 style = "Jazz"
 composer = "Alfred Newman, Frank Loesser"
+poet = "Frank Loesser"
 piece = "Standard"
 typesetter = "OpenBook contributors (MusicXML import)"
 completion = "3"
@@ -16,7 +17,7 @@ copyrightextra = "Archived MusicXML notice retained; underlying music is not rel
 [versions.Wikifonia]
 doChords = true
 doVoice = true
-doLyrics = false
+doLyrics = true
 doLyricsmore = false
 doLyricsmoremore = false
 doChordBars = false
@@ -35,6 +36,7 @@ doOwn = false
 	- retained the archived MusicXML rights notice; no redistribution permission is asserted.
 	- retained written melody, chord changes, pickups, repeats and numbered endings; lyrics, slurs, dynamics and articulations other than fermatas omitted.
 	- tempo is an editorial practice suggestion.
+	- put in the lyrics from the same Wikifonia source.
 	TODO:
 	- proofread the complete melody, harmony and form against a printed edition and check by ear.
 	- verify source attribution, copyright notice and reuse terms; only the archived MusicXML notice is retained.
@@ -143,5 +145,13 @@ doOwn = false
 	}
 	}
 	\endBar
+}
+{% endif %}
+{% if part == "LyricsWikifonia" %}\lyricmode {
+	The moon of Man -- a -- koo -- ra filled the night with mag -- ic Pol -- y -- ne -- sian
+	charms __ The moon of Man -- a -- koo -- ra came in sight and brought you to my ea -- ger
+	arms __ the moon of Man -- a -- koo -- ra soon will rise a -- gain a -- bove the is --
+	land shore __ Then I'll be -- hold it in your dusk -- y eyes and you'll be in my arms once
+	more. __ the more. __
 }
 {% endif %}

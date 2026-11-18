@@ -5,6 +5,7 @@ default_version = "Wikifonia"
 title = "The Greatest Love Of All"
 style = "Jazz"
 composer = "Michael Masser, Linda Creed"
+poet = "Linda Creed"
 piece = "Standard"
 typesetter = "OpenBook contributors (MusicXML import)"
 completion = "3"
@@ -16,8 +17,8 @@ copyrightextra = "Archived MusicXML notice retained; underlying music is not rel
 [versions.Wikifonia]
 doChords = true
 doVoice = true
-doLyrics = false
-doLyricsmore = false
+doLyrics = true
+doLyricsmore = true
 doLyricsmoremore = false
 doChordBars = false
 doGuitar = false
@@ -35,6 +36,7 @@ doOwn = false
 	- retained the archived MusicXML rights notice; no redistribution permission is asserted.
 	- retained written melody, chord changes, pickups, repeats and numbered endings; lyrics, slurs, dynamics and articulations other than fermatas omitted.
 	- tempo is an editorial practice suggestion.
+	- put in the lyrics from the same Wikifonia source.
 	TODO:
 	- proofread the complete melody, harmony and form against a printed edition and check by ear.
 	- verify source attribution, copyright notice and reuse terms; only the archived MusicXML notice is retained.
@@ -193,5 +195,22 @@ doOwn = false
 	bes'1 ~ |
 	bes'4 r4 r2 |
 	\endBar
+}
+{% endif %}
+{% if part == "LyricsWikifonia" %}\lyricmode {
+	_ I be -- lieve the chil -- dren are the fu -- ture teach them well and let them lead the
+	way show them all the beau -- ty they pos -- sess -- in -- side _ _ give them a sense of
+	pride to make it eas -- i -- er let the chil -- drens laugh -- ter re -- ming us how we
+	used to be so I learned to de -- pend on me I de -- cid -- ed long a -- go nev -- er to
+	walk in an -- y -- ones sha -- dow if I fail if I suc -- ceed at least I lived as I be --
+	lieve no mat -- ter what they take from me they cant take a -- way my dig -- ni -- ty be --
+	cause the great -- est love of all is hap -- pen -- ing to me. __ I found the great -- est
+	love of all in -- side of me The great -- est love of all _ _ is eas -- y to a -- chieve __
+	learn -- ing to love your -- self is the great -- est love of all. __
+}
+{% endif %}
+{% if part == "LyricsmoreWikifonia" %}\lyricmode {
+	be. Ev ry bod -- ys search -- ing for a he -- ro Peo -- ple need some -- one to look up
+	to I nev -- er found an y -- one who full -- filled that need _ a lone -- ly place to
 }
 {% endif %}

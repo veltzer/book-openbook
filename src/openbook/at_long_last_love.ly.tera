@@ -5,6 +5,7 @@ default_version = "Wikifonia"
 title = "At Long Last Love"
 style = "Jazz"
 composer = "Cole Porter"
+poet = "Cole Porter"
 piece = "Standard"
 typesetter = "OpenBook contributors (MusicXML import)"
 completion = "3"
@@ -16,7 +17,7 @@ copyrightextra = "Archived MusicXML notice retained; underlying music is not rel
 [versions.Wikifonia]
 doChords = true
 doVoice = true
-doLyrics = false
+doLyrics = true
 doLyricsmore = false
 doLyricsmoremore = false
 doChordBars = false
@@ -37,6 +38,7 @@ doOwn = false
 	- retained written melody, chord changes, pickups, repeats and numbered endings; lyrics omitted.
 	- imported explicit 7alt symbols using the book's altered-dominant notation where present.
 	- tempo is an editorial practice suggestion.
+	- put in the lyrics from the same Wikifonia source.
 	TODO:
 	- proofread the complete melody, harmony and form against the referenced PDF and check by ear.
 	- verify source attribution, copyright notice and reuse terms against the scan; only the archived MusicXML notice is retained.
@@ -146,5 +148,13 @@ doOwn = false
 	}
 	c''4 r4 r2 |
 	\endBar
+}
+{% endif %}
+{% if part == "LyricsWikifonia" %}\lyricmode {
+	Is it an earth -- quake __ or simp -- ly a shock? __ Is it the good tur -- tle soup, or
+	mere -- ly a mock? __ Is it a cock -- tail, __ this feel -- ing of joy, __ Or is what I
+	feel the real Mc Coy? __ Is it for all time, __ or simp -- ly a lark? __ Is it Gra -- na --
+	da I see or on -- ly As -- bur -- y Park? __ Is it a fan -- cy __ not worth think -- ing
+	of? __ Or is it at long last love? __ Is it an love? __
 }
 {% endif %}

@@ -5,6 +5,7 @@ default_version = "Wikifonia"
 title = "San Antonio Rose"
 style = "Standard"
 composer = "Bob Wills"
+poet = "Bob Wills"
 piece = "Standard"
 typesetter = "OpenBook contributors (MusicXML import)"
 completion = "3"
@@ -16,7 +17,7 @@ copyrightextra = "Archived MusicXML notice retained; underlying music is not rel
 [versions.Wikifonia]
 doChords = true
 doVoice = true
-doLyrics = false
+doLyrics = true
 doLyricsmore = false
 doLyricsmoremore = false
 doChordBars = false
@@ -37,6 +38,7 @@ doOwn = false
 	- retained written melody, chord changes, pickups, repeats and numbered endings; lyrics omitted.
 	- imported explicit 7alt symbols using the book's altered-dominant notation where present.
 	- tempo is an editorial practice suggestion.
+	- put in the lyrics from the same Wikifonia source.
 	TODO:
 	- proofread the complete melody, harmony and form against the referenced PDF and check by ear.
 	- verify source attribution, copyright notice and reuse terms against the scan; only the archived MusicXML notice is retained.
@@ -191,5 +193,17 @@ doOwn = false
 	g'4 ( c''2. ~ |
 	c''4 ) r4 r2 |
 	\endBar
+}
+{% endif %}
+{% if part == "LyricsWikifonia" %}\lyricmode {
+	Deep with -- in my heart lies a mel -- o -- dy, A song of old San An -- tone. __ Where in
+	dreams "I(" live with a mem -- o -- ry, Be -- neath the stars all a -- lone. __ It was
+	there I found be -- side the Al -- a -- mo, En -- chant -- ment strange as the blue up a --
+	bove. A moon -- lit pass that on -- ly she would know, Still hears my brok -- en son of
+	love. __ Moon in all your splen -- dor know on -- ly my heart, Call back my Rose, Rose of
+	San An tone. Lips so sweet and ten -- der, like pet -- als fall ing a part, __ Speak once
+	a -- gain of my love my own. Brok -- en song, emp -- ty words I know still live in my
+	heart all a -- lone. __ For that moon -- lit pass bhy the Al -- a -- mo And Rose, my Rose
+	of San An -- tone. __
 }
 {% endif %}

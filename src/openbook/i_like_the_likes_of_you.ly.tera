@@ -5,6 +5,7 @@ default_version = "Wikifonia"
 title = "I Like The Likes Of You"
 style = "Jazz"
 composer = "Vernon duke, E. Y. Harburg"
+poet = "E. Y. Harburg"
 piece = "Standard"
 typesetter = "OpenBook contributors (MusicXML import)"
 completion = "3"
@@ -16,7 +17,7 @@ copyrightextra = "Archived MusicXML notice retained; underlying music is not rel
 [versions.Wikifonia]
 doChords = true
 doVoice = true
-doLyrics = false
+doLyrics = true
 doLyricsmore = false
 doLyricsmoremore = false
 doChordBars = false
@@ -35,6 +36,7 @@ doOwn = false
 	- retained the archived MusicXML rights notice; no redistribution permission is asserted.
 	- retained written melody, chord changes, pickups, repeats and numbered endings; lyrics, slurs, dynamics and articulations other than fermatas omitted.
 	- tempo is an editorial practice suggestion.
+	- put in the lyrics from the same Wikifonia source.
 	TODO:
 	- proofread the complete melody, harmony and form against a printed edition and check by ear.
 	- verify source attribution, copyright notice and reuse terms; only the archived MusicXML notice is retained.
@@ -141,5 +143,13 @@ doOwn = false
 	}
 	}
 	\endBar
+}
+{% endif %}
+{% if part == "LyricsWikifonia" %}\lyricmode {
+	I like the likes of you, I like the things you do, I mean I like the likes of you. _ _ _ _
+	I like your eyes of blue, I think they're blue don't you? I mean I like your eyes of blue.
+	Oh dear, __ If I could on -- ly say __ what I mean, __ I mean if I could mean __ what I
+	say, __ that is I mean to say __ that I mean to say that, I like the likes of you, your
+	looks are pure de -- luxe, looks like I like the likes of you. __ _ _ _ _ _ _ you. __
 }
 {% endif %}

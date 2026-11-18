@@ -5,6 +5,7 @@ default_version = "Wikifonia"
 title = "A Sleepin' Bee"
 style = "Jazz"
 composer = "Harold Arlen"
+poet = "Harold Arlen, Truman Capote"
 piece = "Standard"
 typesetter = "OpenBook contributors (MusicXML import)"
 completion = "3"
@@ -16,7 +17,7 @@ copyrightextra = "Archived MusicXML notice retained; underlying music is not rel
 [versions.Wikifonia]
 doChords = true
 doVoice = true
-doLyrics = false
+doLyrics = true
 doLyricsmore = false
 doLyricsmoremore = false
 doChordBars = false
@@ -37,6 +38,7 @@ doOwn = false
 	- retained written melody, chord changes, pickups, repeats and numbered endings; lyrics omitted.
 	- imported explicit 7alt symbols using the book's altered-dominant notation where present.
 	- tempo is an editorial practice suggestion.
+	- put in the lyrics from the same Wikifonia source.
 	TODO:
 	- proofread the complete melody, harmony and form against the referenced PDF and check by ear.
 	- verify source attribution, copyright notice and reuse terms against the scan; only the archived MusicXML notice is retained.
@@ -134,5 +136,15 @@ doOwn = false
 	as'1 ~ |
 	as'4 r4 r2 |
 	\endBar
+}
+{% endif %}
+{% if part == "LyricsWikifonia" %}\lyricmode {
+	When a bee lies sleep -- "in'" __ in the palm of your hand, __ You're be -- witch'd and
+	deep in __ love's long look'd af -- ter land. __ Where you'll see a sun -- up sky with a
+	morn -- "in'" new, and where the days go laugh -- "in'" by as love comes a call -- "in'"
+	on you. __ Sleep on Bee, don't wak -- en __ can't be -- lieve what just passed __ He's
+	mine for the tak -- "in'," __ I'm so hap -- py at last __ May -- be I dreams but he seems
+	sweet gold -- en as a crown. a sleep -- "in'" bee done told me. I'll walks with me feet
+	off the "groun'" when my one true love I has "foun'." __
 }
 {% endif %}

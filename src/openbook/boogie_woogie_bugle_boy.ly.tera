@@ -5,6 +5,7 @@ default_version = "Wikifonia"
 title = "Boogie woogie bugle boy"
 style = "Jazz"
 composer = "Don Raye, Hughie Prince"
+poet = "Don Raye, Hughie Prince"
 piece = "Standard"
 typesetter = "OpenBook contributors (MusicXML import)"
 completion = "3"
@@ -16,8 +17,8 @@ copyrightextra = "Archived MusicXML notice retained; underlying music is not rel
 [versions.Wikifonia]
 doChords = true
 doVoice = true
-doLyrics = false
-doLyricsmore = false
+doLyrics = true
+doLyricsmore = true
 doLyricsmoremore = false
 doChordBars = false
 doGuitar = false
@@ -35,6 +36,7 @@ doOwn = false
 	- retained the archived MusicXML rights notice; no redistribution permission is asserted.
 	- retained written melody, chord changes, pickups, repeats and numbered endings; lyrics, slurs, dynamics and articulations other than fermatas omitted.
 	- tempo is an editorial practice suggestion.
+	- put in the lyrics from the same Wikifonia source.
 	TODO:
 	- proofread the complete melody, harmony and form against a printed edition and check by ear.
 	- verify source attribution, copyright notice and reuse terms; only the archived MusicXML notice is retained.
@@ -125,5 +127,23 @@ doOwn = false
 	e'8 g'8 a'8 dis'8 e'8 g'8 a'8 dis'8 |
 	e'8 g'8 a'8 c''8 ~ c''2 |
 	\endBar
+}
+{% endif %}
+{% if part == "LyricsWikifonia" %}\lyricmode {
+	He was a fa -- mous trum -- pet man from out Chi -- ca -- go way __ he had a boo -- gie
+	style that no one else could play __ he was the top man of his craft __ but then his num --
+	ber came up _ and he was gone with the draft __ he's in the ar -- my now a blow -- in re --
+	veil -- le hes the Boo -- gie woo -- gie bu -- gle boy of Com -- pan -- y B __ They Com --
+	pan -- y B __ a toot! a toot a toot did -- dle a -- da toot He blows it eight to the bar __
+	in boo -- gie rhy -- thm he cant blow a note un -- less a bass and gui -- tar __ is play --
+	in with im __ _ _ _ _ he makes the comp -- ny jump when he plays re -- veil -- le he's the
+	Boo -- gie woo -- gie bu -- gle boy of Com -- pan y B. __
+}
+{% endif %}
+{% if part == "LyricsmoreWikifonia" %}\lyricmode {
+	_ _ _ made him blow a bu -- gle for his Un -- cle Sam __ It real -- ly brought him down
+	be -- cause he could -- nt jam __ the cap -- tain seemed to un -- der -- stand __ be --
+	cause the next day the cap _ went out and draft -- ed a band __ and now the comp -- ny
+	jumps when he plays re -- veil -- le
 }
 {% endif %}

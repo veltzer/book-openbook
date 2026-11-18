@@ -5,6 +5,7 @@ default_version = "Wikifonia"
 title = "Green Eyes"
 style = "Standard"
 composer = "Nilo Mendez"
+poet = "Adolfo Utrera"
 piece = "Standard"
 typesetter = "OpenBook contributors (MusicXML import)"
 completion = "3"
@@ -16,7 +17,7 @@ copyrightextra = "Archived MusicXML notice retained; underlying music is not rel
 [versions.Wikifonia]
 doChords = true
 doVoice = true
-doLyrics = false
+doLyrics = true
 doLyricsmore = false
 doLyricsmoremore = false
 doChordBars = false
@@ -37,6 +38,7 @@ doOwn = false
 	- retained written melody, chord changes, pickups, repeats and numbered endings; lyrics omitted.
 	- imported explicit 7alt symbols using the book's altered-dominant notation where present.
 	- tempo is an editorial practice suggestion.
+	- put in the lyrics from the same Wikifonia source.
 	TODO:
 	- proofread the complete melody, harmony and form against the referenced PDF and check by ear.
 	- verify source attribution, copyright notice and reuse terms against the scan; only the archived MusicXML notice is retained.
@@ -146,5 +148,15 @@ doOwn = false
 	}
 	}
 	\endBar
+}
+{% endif %}
+{% if part == "LyricsWikifonia" %}\lyricmode {
+	Your green eyes with their soft lights, __ Your eyes that pro -- mise sweet nights, __
+	Bring to my soul a long -- ing, __ a thirst for love di -- vine. __ In dreams I seem to
+	hold you __ To find you and en -- fold you __ Our lips meet, and our hearts too, __ with a
+	thrill so sub -- lime. __ Those cool and lim -- pid green eyes, __ A pool where -- in my
+	love lies, __ so deep that in my search -- ing __ For hap -- pi -- ness I fear __ that
+	they will ev -- er haunt me. __ All thru my life they'll taunt me, __ But will they ev --
+	er want me, __ green eyes, make my dreams come true. Your green eyes with their true. __
 }
 {% endif %}

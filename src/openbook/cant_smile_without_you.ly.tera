@@ -4,7 +4,8 @@ default_version = "Wikifonia"
 [attributes]
 title = "Can't Smile Without You"
 style = "Standard"
-composer = "Chris Arnold, David Martin And Geoff Morrow"
+composer = "Chris Arnold, David Martin, Geoff Morrow"
+poet = "Chris Arnold, David Martin, Geoff Morrow"
 piece = "Standard"
 typesetter = "OpenBook contributors (MusicXML import)"
 completion = "3"
@@ -16,8 +17,8 @@ copyrightextra = "Archived MusicXML notice retained; underlying music is not rel
 [versions.Wikifonia]
 doChords = true
 doVoice = true
-doLyrics = false
-doLyricsmore = false
+doLyrics = true
+doLyricsmore = true
 doLyricsmoremore = false
 doChordBars = false
 doGuitar = false
@@ -37,6 +38,7 @@ doOwn = false
 	- retained written melody, chord changes, pickups, repeats and numbered endings; lyrics omitted.
 	- imported explicit 7alt symbols using the book's altered-dominant notation where present.
 	- tempo is an editorial practice suggestion.
+	- put in the lyrics from the same Wikifonia source.
 	TODO:
 	- proofread the complete melody, harmony and form against the referenced PDF and check by ear.
 	- verify source attribution, copyright notice and reuse terms against the scan; only the archived MusicXML notice is retained.
@@ -199,5 +201,28 @@ doOwn = false
 	f''2 f''8 ^ "Repeat and fade" f''4. |
 	}
 	\endBar
+}
+{% endif %}
+{% if part == "LyricsWikifonia" %}\lyricmode {
+	You know I can't smile with -- out you, I can't smile with -- out you, I can't laugh and
+	I can't sing, I'm find -- ing it hard __ to do an -- y -- thing. __ You see I feel sad
+	when you're sad, I feel glad when you're glad, if you __ on -- ly knew what I'm __ go --
+	ing "through;" I just can't smile __ with -- out you. You came a -- long __ just like a
+	song __ and bright -- ened my day. __ Who'd -- a be -- lieved that you were part of a
+	dream. __ Now it all seems light -- years a -- way. And now you know I can't smile with --
+	out you, I can't smile with -- out you, I can't laugh and I can't sing, I'm find -- ing it
+	hard __ to do an -- y -- thing __ You see I feel sad when you're sad, I feel glad when
+	you're glad, if you __ on -- ly knew what I'm __ go -- ing "through;" I just can't smile. __
+	Now, some peo -- ple say __ hap -- pi -- ness takes __ so __ ver -- y long to find. __
+	Well, I'm find -- ing it hard __ leav -- ing your love be -- hind __ me. And you see, I
+	can't smile with -- out you, I can't smile with -- out you, I can't laugh, and I can't
+	sing, I'm find -- ing it hard to do an -- y -- thing. __ You see I feel glad when you're
+	glad, I feel sad when you're sad, if you __ on -- ly knew what I'm __ go -- ing "through;"
+	I just can't smile with -- out
+}
+{% endif %}
+{% if part == "LyricsmoreWikifonia" %}\lyricmode {
+	_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _
+	you __
 }
 {% endif %}

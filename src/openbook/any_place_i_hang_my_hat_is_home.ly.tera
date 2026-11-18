@@ -5,6 +5,7 @@ default_version = "Wikifonia"
 title = "Any Place I Hang My Hat Is Home"
 style = "Standard"
 composer = "Harold Arlen"
+poet = "Johnny Mercer"
 piece = "Standard"
 typesetter = "OpenBook contributors (MusicXML import)"
 completion = "3"
@@ -16,7 +17,7 @@ copyrightextra = "Archived MusicXML notice retained; underlying music is not rel
 [versions.Wikifonia]
 doChords = true
 doVoice = true
-doLyrics = false
+doLyrics = true
 doLyricsmore = false
 doLyricsmoremore = false
 doChordBars = false
@@ -37,6 +38,7 @@ doOwn = false
 	- retained written melody, chord changes, pickups, repeats and numbered endings; lyrics omitted.
 	- imported explicit 7alt symbols using the book's altered-dominant notation where present.
 	- tempo is an editorial practice suggestion.
+	- put in the lyrics from the same Wikifonia source.
 	TODO:
 	- proofread the complete melody, harmony and form against the referenced PDF and check by ear.
 	- verify source attribution, copyright notice and reuse terms against the scan; only the archived MusicXML notice is retained.
@@ -141,5 +143,18 @@ doOwn = false
 	d'8 f'8 g'8 a'8 c''8 bes'8 a'8 f'8 |
 	f'1 |
 	\endBar
+}
+{% endif %}
+{% if part == "LyricsWikifonia" %}\lyricmode {
+	Free __ an eas -- y, that's my style, __ how -- dy do me, watch me smile. __ Fare __ thee
+	well me, af -- ter while, __ "'cause" I got -- ta roam, __ "an'" an -- y place I hang my
+	head is home. Sweet -- "nin'" wa -- ter, cher -- ry wine, __ thank __ you kind -- ly,
+	suits me fine. __ Kan -- sas Cit -- y, Car -- o -- line, __ that's my hone -- y comb, __
+	"'cause" an -- y place I hang my hat is home. Birds roost -- "in'" in the tree pick up and
+	go "an'" the go -- in proves that's how it ought to be. I pick up too when the spir -- it
+	moves me. Cross __ the riv -- er "'round" the bend, __ how -- dy stran -- ger, so -- long
+	friend. __ There's a voice in the lone -- some "win'" __ that keeps whisp -- per -- "in'"
+	roam! I'm go -- in where a wel -- come mat is, no mat -- ter where that is, "'cause" an --
+	y place I hang my hat is home.
 }
 {% endif %}

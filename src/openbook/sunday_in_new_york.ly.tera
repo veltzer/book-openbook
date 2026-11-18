@@ -5,6 +5,7 @@ default_version = "Wikifonia"
 title = "Sunday in New York"
 style = "Jazz"
 composer = "Peter Nero"
+poet = "Carroll Coates"
 piece = "Standard"
 typesetter = "OpenBook contributors (MusicXML import)"
 completion = "3"
@@ -16,8 +17,8 @@ copyrightextra = "Archived MusicXML notice retained; underlying music is not rel
 [versions.Wikifonia]
 doChords = true
 doVoice = true
-doLyrics = false
-doLyricsmore = false
+doLyrics = true
+doLyricsmore = true
 doLyricsmoremore = false
 doChordBars = false
 doGuitar = false
@@ -37,6 +38,7 @@ doOwn = false
 	- retained written melody, chord changes, pickups, repeats and numbered endings; lyrics omitted.
 	- imported explicit 7alt symbols using the book's altered-dominant notation where present.
 	- tempo is an editorial practice suggestion.
+	- put in the lyrics from the same Wikifonia source.
 	TODO:
 	- proofread the complete melody, harmony and form against the referenced PDF and check by ear.
 	- verify source attribution, copyright notice and reuse terms against the scan; only the archived MusicXML notice is retained.
@@ -122,5 +124,20 @@ doOwn = false
 	g'1 ~ |
 	g'2. r4 |
 	\endBar
+}
+{% endif %}
+{% if part == "LyricsWikifonia" %}\lyricmode {
+	New York on Sun -- day, big ci -- ty tak -- ing a nap. __ Slow down, it's Sun -- day. __
+	Life's a ball, __ let it fall right in your lap. You can spend time __ with out spend __
+	ing a dime watch -- ing peo -- ple watch peo -- ple pass. __ La -- ter you pause, __ and
+	by one __ of the stores there's that face __ next to yours __ in the glass. __ Two hearts
+	stop beat -- ing, you're both too breath -- less to speak. __ Love smiles her greet -- ing __
+	then the dream __ that has seen you through the week. comes true on Sun -- day in New
+	York. __
+}
+{% endif %}
+{% if part == "LyricsmoreWikifonia" %}\lyricmode {
+	If you've got trou -- bles just take them out for a walk. __ They'll burst like bub --
+	bles __ in the fun __ of a Sun -- day in New
 }
 {% endif %}

@@ -5,6 +5,7 @@ default_version = "Wikifonia"
 title = "Sunrise, Sunset"
 style = "Standard"
 composer = "Jerry Bock"
+poet = "Sheldon Harnick"
 piece = "Standard"
 typesetter = "OpenBook contributors (MusicXML import)"
 completion = "3"
@@ -16,8 +17,8 @@ copyrightextra = "Archived MusicXML notice retained; underlying music is not rel
 [versions.Wikifonia]
 doChords = true
 doVoice = true
-doLyrics = false
-doLyricsmore = false
+doLyrics = true
+doLyricsmore = true
 doLyricsmoremore = false
 doChordBars = false
 doGuitar = false
@@ -37,6 +38,7 @@ doOwn = false
 	- retained written melody, chord changes, pickups, repeats and numbered endings; lyrics omitted.
 	- imported explicit 7alt symbols using the book's altered-dominant notation where present.
 	- tempo is an editorial practice suggestion.
+	- put in the lyrics from the same Wikifonia source.
 	TODO:
 	- proofread the complete melody, harmony and form against the referenced PDF and check by ear.
 	- verify source attribution, copyright notice and reuse terms against the scan; only the archived MusicXML notice is retained.
@@ -209,5 +211,22 @@ doOwn = false
 	}
 	}
 	\endBar
+}
+{% endif %}
+{% if part == "LyricsWikifonia" %}\lyricmode {
+	Is this the lit -- tle girl I car -- ried? Is this the lit -- tle boy at play? I dont re --
+	mem -- ber grow -- ing old -- er when did they? __ When did she get to be a beau -- ty
+	when did he grow to be so tall Was -- nt it yes -- ter -- day when they were small __ Sun --
+	rise __ sun -- set sun -- rise __ sun -- set swift -- ly __ flow the days __ seed -- lings
+	turn o -- ver -- night to sun flow'rs blos -- som -- ing e -- ven as we gaze __ sun --
+	rise __ sun -- set sun rise __ sun -- set swift -- ly __ fly the years __ one sea -- son
+	fol -- low -- ing an -- oth -- er Lad -- en with hap -- pi -- ness and tears __ tears __
+}
+{% endif %}
+{% if part == "LyricsmoreWikifonia" %}\lyricmode {
+	Now is the lit -- tle boy a bride -- groom now is the lit -- tle girl a bride Un -- der
+	the can -- o -- py I see them side by side __ place the gold ring a -- round her fin --
+	ger share the sweet wind and break the glass soon the full cir -- cle will have come to
+	pass __
 }
 {% endif %}

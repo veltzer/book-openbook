@@ -5,6 +5,7 @@ default_version = "Wikifonia"
 title = "Remind Me"
 style = "Jazz"
 composer = "Jerome Kern"
+poet = "Dorothy Fields"
 piece = "Standard"
 typesetter = "OpenBook contributors (MusicXML import)"
 completion = "3"
@@ -16,8 +17,8 @@ copyrightextra = "Archived MusicXML notice retained; underlying music is not rel
 [versions.Wikifonia]
 doChords = true
 doVoice = true
-doLyrics = false
-doLyricsmore = false
+doLyrics = true
+doLyricsmore = true
 doLyricsmoremore = false
 doChordBars = false
 doGuitar = false
@@ -37,6 +38,7 @@ doOwn = false
 	- retained written melody, chord changes, pickups, repeats and numbered endings; lyrics omitted.
 	- imported explicit 7alt symbols using the book's altered-dominant notation where present.
 	- tempo is an editorial practice suggestion.
+	- put in the lyrics from the same Wikifonia source.
 	TODO:
 	- proofread the complete melody, harmony and form against the referenced PDF and check by ear.
 	- verify source attribution, copyright notice and reuse terms against the scan; only the archived MusicXML notice is retained.
@@ -152,5 +154,24 @@ doOwn = false
 	\textMark \markup { \musicglyph "scripts.coda" } es'1 ~ |
 	es'1 |
 	\endBar
+}
+{% endif %}
+{% if part == "LyricsWikifonia" %}\lyricmode {
+	Re -- mind me __ not to find you so at -- trac -- tive, __ Re -- mind me __ that the
+	world is full of men. __ When I start to miss you, to touch your hand, to kiss you, Re --
+	mind me __ to count to ten! __ I had a feel -- ing when I met you __ you'd drive me cra --
+	zy, if I let you, __ But all my ef -- forts to for -- get you __ Re -- mind me, I'm in
+	love a -- gain __ I get my heart well in hand, and I'm cer -- tain __ that I can take you
+	or leave you a -- lone. __ Then you "'Be" -- gin that Be -- "guine'" a -- gain, and boom!
+	I give in a -- gain. I have a will __ made of steel, my friend, __ but when it seems a --
+	bout to bend, Re get. __
+}
+{% endif %}
+{% if part == "LyricsmoreWikifonia" %}\lyricmode {
+	_ mind me __ not to men -- tion that I love you. __ Re -- mind me __ to be sor -- ry that
+	we met. __ Al -- though I a -- dore you, Re -- mind me to ig -- nore you, you're one thing __
+	I will re -- gret! __ So when your charm be -- gins to blind me, __ I'll sim -- ply tie my
+	hands be -- hind me. __ Dom't let me kiss you, please Re -- mind me. __ un -- less my Dar --
+	ling, you for
 }
 {% endif %}

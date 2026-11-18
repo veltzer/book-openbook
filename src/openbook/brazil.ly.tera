@@ -5,6 +5,7 @@ default_version = "Wikifonia"
 title = "Brazil"
 style = "Standard"
 composer = "Ary Barroso"
+poet = "S. K. Russell"
 piece = "Standard"
 typesetter = "OpenBook contributors (MusicXML import)"
 completion = "3"
@@ -16,7 +17,7 @@ copyrightextra = "Archived MusicXML notice retained; underlying music is not rel
 [versions.Wikifonia]
 doChords = true
 doVoice = true
-doLyrics = false
+doLyrics = true
 doLyricsmore = false
 doLyricsmoremore = false
 doChordBars = false
@@ -37,6 +38,7 @@ doOwn = false
 	- retained written melody, chord changes, pickups, repeats and numbered endings; lyrics omitted.
 	- imported explicit 7alt symbols using the book's altered-dominant notation where present.
 	- tempo is an editorial practice suggestion.
+	- put in the lyrics from the same Wikifonia source.
 	TODO:
 	- proofread the complete melody, harmony and form against the referenced PDF and check by ear.
 	- verify source attribution, copyright notice and reuse terms against the scan; only the archived MusicXML notice is retained.
@@ -198,5 +200,14 @@ doOwn = false
 	}
 	b'4 r4 r2 |
 	\endBar
+}
+{% endif %}
+{% if part == "LyricsWikifonia" %}\lyricmode {
+	Bra -- zil, __ Where hearts were en -- ter -- tain -- ing June, __ We stood be -- neath
+	an am -- ber moon, __ And soft -- ly mur -- mured "'Some" -- day "soon.'" __ We kissed, __
+	and clung to -- geth -- er. Then __ to -- mor -- row was an -- oth -- er day. __ The morn --
+	ing found me miles a -- way, __ With still a mil -- lion things to say. __ Now, __ when
+	twi -- light dims the sky a -- bove, __ Re call -- ing thrills of our love, __ There's one
+	thing I'm cer -- tain "of;" __ Re -- turn __ I will, __ To old __ Bra -- zil. __ _ Bra
 }
 {% endif %}

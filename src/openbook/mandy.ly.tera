@@ -5,6 +5,7 @@ default_version = "Wikifonia"
 title = "Mandy"
 style = "Jazz"
 composer = "Scott English, Richard Kerr"
+poet = "Scott English, Richard Kerr"
 piece = "Standard"
 typesetter = "OpenBook contributors (MusicXML import)"
 completion = "3"
@@ -16,8 +17,8 @@ copyrightextra = "Archived MusicXML notice retained; underlying music is not rel
 [versions.Wikifonia]
 doChords = true
 doVoice = true
-doLyrics = false
-doLyricsmore = false
+doLyrics = true
+doLyricsmore = true
 doLyricsmoremore = false
 doChordBars = false
 doGuitar = false
@@ -37,6 +38,7 @@ doOwn = false
 	- retained written melody, chord changes, pickups, repeats and numbered endings; lyrics omitted.
 	- imported explicit 7alt symbols using the book's altered-dominant notation where present.
 	- tempo is an editorial practice suggestion.
+	- put in the lyrics from the same Wikifonia source.
 	TODO:
 	- proofread the complete melody, harmony and form against the referenced PDF and check by ear.
 	- verify source attribution, copyright notice and reuse terms against the scan; only the archived MusicXML notice is retained.
@@ -164,5 +166,24 @@ doOwn = false
 	f''8 e''8 f''8 e''8 d''4 e''4 |
 	}
 	\endBar
+}
+{% endif %}
+{% if part == "LyricsWikifonia" %}\lyricmode {
+	I re -- mem -- ber all my life rain -- ing down as cold as ice shad -- ows of a man a
+	face through the win -- dow cry -- ing in the night the night goes in -- to see a mem --
+	ry I nev -- er re -- a -- lized how hap -- py you made me Oh Man -- dy well you came and
+	you gave with -- out tak -- ing but I sent you a -- way _ Oh Man -- dy well you kissed me
+	and stopped me from shak -- ing _ and I need you ro -- day _ Oh Man -- dy I'm Man -- dy
+	yes -- ter -- days a dream I face the morn -- ing _ cry -- ing on a breeze the pain is
+	call -- ing _ Oh Man -- dy well you came and you gave with -- out tak -- ing but I sent
+	you a -- way _ Oh Man -- dy well you kissed me and stopped me from shak -- ing and I need
+	you to -- day _ Oh
+}
+{% endif %}
+{% if part == "LyricsmoreWikifonia" %}\lyricmode {
+	Morn -- ings just an -- oth -- er day hap -- py peo -- ple pass my way Look -- ing in
+	their eyes I _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ up -- hill climb -- ing the tears are in my
+	mind and both -- ing is rhym -- ing _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _
+	"D.S.al"
 }
 {% endif %}

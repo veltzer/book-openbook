@@ -5,6 +5,7 @@ default_version = "Wikifonia"
 title = "When a Man Loves a Woman"
 style = "Jazz"
 composer = "Andrew Wright, Calvin Lewis"
+poet = "Andrew Wright, Calvin Lewis"
 piece = "Standard"
 typesetter = "OpenBook contributors (MusicXML import)"
 completion = "3"
@@ -16,8 +17,8 @@ copyrightextra = "Archived MusicXML notice retained; underlying music is not rel
 [versions.Wikifonia]
 doChords = true
 doVoice = true
-doLyrics = false
-doLyricsmore = false
+doLyrics = true
+doLyricsmore = true
 doLyricsmoremore = false
 doChordBars = false
 doGuitar = false
@@ -35,6 +36,7 @@ doOwn = false
 	- retained the archived MusicXML rights notice; no redistribution permission is asserted.
 	- retained written melody, chord changes, pickups, repeats and numbered endings; lyrics, slurs, dynamics and articulations other than fermatas omitted.
 	- tempo is an editorial practice suggestion.
+	- put in the lyrics from the same Wikifonia source.
 	TODO:
 	- proofread the complete melody, harmony and form against a printed edition and check by ear.
 	- verify source attribution, copyright notice and reuse terms; only the archived MusicXML notice is retained.
@@ -206,5 +208,24 @@ doOwn = false
 	r4. r8 e''8 e''8 |
 	}
 	\endBar
+}
+{% endif %}
+{% if part == "LyricsWikifonia" %}\lyricmode {
+	When a man __ _ loves __ _ a wom man can't keep his mind on "noth'" in else He'd trade
+	the world for a good thing he's found If she is bad __ _ _ he can't see it. She can do __ _
+	no wrong, __ _ Turn his back on his best friend if he puts her down. __ When a way __ it
+	ought to be When a man loves __ a wom an __ I give you ev -- ery thing I've got __ _ _ Try --
+	ing to hold on __ to your pre -- cious love __ _ _ Ba -- by, -- ba -- by, please don't
+	treat me bad __ _ When a man loves __ _ a wom -- an deep down in his soul __ _ she can
+	bring him __ such mis -- e -- ry __ If she is play ing him for a fool __ _ he's the last
+	one to know Lov -- ing eyes can nev -- er see Yes, when a man __ _ _ loves a wom -- an I
+	know ex -- act -- ly how he feels __ cause ba -- by ba __ _ _ _ _ _ _ by When a man __ _
+	loves __ _ a wom an When a
+}
+{% endif %}
+{% if part == "LyricsmoreWikifonia" %}\lyricmode {
+	_ _ man __ _ loves __ _ a wom an _ spend his ver -- y last __ _ dime Try -- ing to hold
+	on to what __ _ he needs. He's give up all __ _ _ _ his com -- forts and sleep out in the
+	rain __ _ if she said that's the __
 }
 {% endif %}

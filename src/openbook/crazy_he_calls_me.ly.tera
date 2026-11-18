@@ -5,6 +5,7 @@ default_version = "Wikifonia"
 title = "Crazy He Calls Me"
 style = "Jazz"
 composer = "Carl Sigman"
+poet = "Bob Russell"
 piece = "Standard"
 typesetter = "OpenBook contributors (MusicXML import)"
 completion = "3"
@@ -16,7 +17,7 @@ copyrightextra = "Archived MusicXML notice retained; underlying music is not rel
 [versions.Wikifonia]
 doChords = true
 doVoice = true
-doLyrics = false
+doLyrics = true
 doLyricsmore = false
 doLyricsmoremore = false
 doChordBars = false
@@ -37,6 +38,7 @@ doOwn = false
 	- retained written melody, chord changes, pickups, repeats and numbered endings; lyrics omitted.
 	- imported explicit 7alt symbols using the book's altered-dominant notation where present.
 	- tempo is an editorial practice suggestion.
+	- put in the lyrics from the same Wikifonia source.
 	TODO:
 	- proofread the complete melody, harmony and form against the referenced PDF and check by ear.
 	- verify source attribution, copyright notice and reuse terms against the scan; only the archived MusicXML notice is retained.
@@ -143,5 +145,16 @@ doOwn = false
 	}
 	}
 	\endBar
+}
+{% endif %}
+{% if part == "LyricsWikifonia" %}\lyricmode {
+	I say I'll move the moun -- tains, and I move the moun -- tains, if he wants them out of
+	the way. __ cra -- zy he calls __ me, sure I'm craz -- y craz -- y in love, __ I'd say. __
+	I say I'll go thru fire __ and I'll go thru fire, __ as he wants it so it will be. __ Craz --
+	y he calls __ me, sure I'm craz -- y, cra -- zy in love __ you see. __ Like the wind that
+	shakes the bough He moves me with a smile. The dif -- fi -- cult I'll do right now the im --
+	pos -- si -- ble will take a lit -- tle while. I say I'll care for -- ev -- er and I mean
+	for -- ever __ if I have to hold up the sky. __ Craz y he calls __ me, sure I'm craz -- y,
+	cra -- zy in love __ am I __ I __
 }
 {% endif %}

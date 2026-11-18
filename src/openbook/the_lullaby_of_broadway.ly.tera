@@ -5,6 +5,7 @@ default_version = "Wikifonia"
 title = "The Lullaby Of Broadway"
 style = "Jazz"
 composer = "Harry Warren"
+poet = "Al Dubin"
 piece = "Standard"
 typesetter = "OpenBook contributors (MusicXML import)"
 completion = "3"
@@ -16,8 +17,8 @@ copyrightextra = "Archived MusicXML notice retained; underlying music is not rel
 [versions.Wikifonia]
 doChords = true
 doVoice = true
-doLyrics = false
-doLyricsmore = false
+doLyrics = true
+doLyricsmore = true
 doLyricsmoremore = false
 doChordBars = false
 doGuitar = false
@@ -37,6 +38,7 @@ doOwn = false
 	- retained written melody, chord changes, pickups, repeats and numbered endings; lyrics omitted.
 	- imported explicit 7alt symbols using the book's altered-dominant notation where present.
 	- tempo is an editorial practice suggestion.
+	- put in the lyrics from the same Wikifonia source.
 	TODO:
 	- proofread the complete melody, harmony and form against the referenced PDF and check by ear.
 	- verify source attribution, copyright notice and reuse terms against the scan; only the archived MusicXML notice is retained.
@@ -170,5 +172,24 @@ doOwn = false
 	c''1 ~ |
 	c''4 ^\fermata r4 r2 |
 	\endBar
+}
+{% endif %}
+{% if part == "LyricsWikifonia" %}\lyricmode {
+	Come -- on a -- long and list -- en to __ the lul -- la -- by of Broad -- way. The hip
+	hoo -- ray and bal -- ly -- hoo, __ the lul -- la -- by of Broad -- way. The rum -- ble of
+	the sub -- way train, __ The rat -- tle of the tax -- is. The daf -- fy -- dils who en --
+	ter -- tain __ at An -- ge -- lo's and Max -- ie's. When a Broad -- way -- ba by says
+	"'Good" -- "night,'" __ it's ear ly in the morn -- ing. Man -- hat -- tan ba -- bies don't
+	sleep tight __ un til the "dawn:" Good -- night Ba -- by, good -- night milk -- man's on
+	his way. __ Sleep tight, Ba -- by, sleep tight, let's call it a day __ Hey! __ Let's call
+	it a day. __ List -- en to the lul -- la -- by of old Broad -- way. __
+}
+{% endif %}
+{% if part == "LyricsmoreWikifonia" %}\lyricmode {
+	_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ The hi -- dee -- hi and boop -- a -- doo, __ the lul -- la --
+	by of Broad -- way. The band be -- gins to go to town, __ and ev -- "'ry" one goes cra --
+	zy. You rock -- a -- bye your ba -- by "'round" __ "'til" ev -- "'ry" things get haz -- y.
+	Hush -- a -- bye, I'll buy you this and that __ you hear a dad -- dy say -- ing. And ba --
+	by goes home to her flat __ to sleep all "day:"
 }
 {% endif %}

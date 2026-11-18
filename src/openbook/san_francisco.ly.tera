@@ -5,6 +5,7 @@ default_version = "Wikifonia"
 title = "San Francisco"
 style = "Standard"
 composer = "Brian Kaper, Walter Jurman"
+poet = "Gus Kahn"
 piece = "Standard"
 typesetter = "OpenBook contributors (MusicXML import)"
 completion = "3"
@@ -16,7 +17,7 @@ copyrightextra = "Archived MusicXML notice retained; underlying music is not rel
 [versions.Wikifonia]
 doChords = true
 doVoice = true
-doLyrics = false
+doLyrics = true
 doLyricsmore = false
 doLyricsmoremore = false
 doChordBars = false
@@ -37,6 +38,7 @@ doOwn = false
 	- retained written melody, chord changes, pickups, repeats and numbered endings; lyrics omitted.
 	- imported explicit 7alt symbols using the book's altered-dominant notation where present.
 	- tempo is an editorial practice suggestion.
+	- put in the lyrics from the same Wikifonia source.
 	TODO:
 	- proofread the complete melody, harmony and form against the referenced PDF and check by ear.
 	- verify source attribution, copyright notice and reuse terms against the scan; only the archived MusicXML notice is retained.
@@ -142,5 +144,13 @@ doOwn = false
 	}
 	}
 	\endBar
+}
+{% endif %}
+{% if part == "LyricsWikifonia" %}\lyricmode {
+	San Fran -- cis -- co o -- pen your gol -- den gate You let no stran -- ger wait out --
+	side your door. __ San Fran -- cis -- co here is your wan -- d'ring one say -- ing "'I'll"
+	wan -- der no "more'." __ _ Oth -- er plac -- es on -- ly make me love you "best;" Tell me
+	you're the heart of all the gold -- en west. San Fran -- cis -- co wel -- come me home __
+	a -- gain I'm com -- ing home __ to go roam -- ing no more. more. __
 }
 {% endif %}

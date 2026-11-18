@@ -5,6 +5,7 @@ default_version = "Wikifonia"
 title = "We'll Be Together Again"
 style = "Jazz"
 composer = "Carl Fischer"
+poet = "Frankie Laine"
 piece = "Jazz"
 typesetter = "OpenBook contributors (MusicXML import)"
 completion = "3"
@@ -15,7 +16,7 @@ copyright = "All Rights Reserved"
 [versions.Wikifonia]
 doChords = true
 doVoice = true
-doLyrics = false
+doLyrics = true
 doLyricsmore = false
 doLyricsmoremore = false
 doChordBars = false
@@ -34,6 +35,7 @@ doOwn = false
 	- retained the original copyright notice where printed; the underlying music is not relicensed.
 	- retained written measures, pickups, repeats and endings; lyrics omitted.
 	- tempo is an editorial practice suggestion.
+	- put in the lyrics from the same Wikifonia source.
 	TODO:
 	- proofread the music against the referenced PDF and check by ear.
 	- verify editorial chord spacing in measures 9, 33; the archive places successive symbols at the same offset.
@@ -140,5 +142,15 @@ doOwn = false
 	}
 	}
 	\endBar
+}
+{% endif %}
+{% if part == "LyricsWikifonia" %}\lyricmode {
+	No tears, no fears, __ Re -- mem -- ber there's al -- ways to -- mor -- row, __ So what
+	if we have to part, We'll be to -- geth -- er a -- gain. Your kiss, your smile, __ Are mem --
+	"'ries" I'll trea -- sure for -- ev -- er, __ So try think -- ing with your heart, We'll
+	be to -- geth -- er a -- gain. Times when I know you'll be lone -- some, __ Times when I
+	know you'll ber sad, Don't let temp -- ta -- tion sur -- round you, __ Don't let the blues
+	make you bad. Some -- day, some way, __ We both have a life -- time be -- fore us, __ For
+	part -- ing is not good -- bye, We'll be to -- geth -- er a -- gain. No gain.
 }
 {% endif %}

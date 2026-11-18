@@ -5,6 +5,7 @@ default_version = "Wikifonia"
 title = "Trouble Is A Man"
 style = "Jazz"
 composer = "Alec Wilder"
+poet = "Alec Wilder"
 piece = "Jazz"
 typesetter = "OpenBook contributors (MusicXML import)"
 completion = "3"
@@ -17,7 +18,7 @@ copyrightextraextra = "Profit. Used by Permission."
 [versions.Wikifonia]
 doChords = true
 doVoice = true
-doLyrics = false
+doLyrics = true
 doLyricsmore = false
 doLyricsmoremore = false
 doChordBars = false
@@ -36,6 +37,7 @@ doOwn = false
 	- retained the original copyright notice where printed; the underlying music is not relicensed.
 	- retained written measures, pickups, repeats and endings; lyrics omitted.
 	- tempo is an editorial practice suggestion.
+	- put in the lyrics from the same Wikifonia source.
 	TODO:
 	- proofread the music against the referenced PDF and check by ear.
 	- verify editorial chord spacing in measures 9; the archive places successive symbols at the same offset.
@@ -143,5 +145,16 @@ doOwn = false
 	c'1 |
 	}
 	\endBar
+}
+{% endif %}
+{% if part == "LyricsWikifonia" %}\lyricmode {
+	A wo -- man gets all the blame __ for ev -- "'ry" -- thing that hap -- pens un -- der the
+	sun, But when it comes to be -- "in'" bad, A wo -- mans's not the on -- ly one. Troub --
+	le is a man __ a man who loves me no more, no more. __ Troub -- le is a man, __ A man I'll
+	al -- ways a -- dore. Noth -- ing good to say __ a -- bout him, Still I hate a day __ with --
+	out him. Why should he have to be the "one'," my on -- ly? Troub -- le is a man __ A man
+	who's hand -- some and tall, so tall. __ Troub -- le is a man, __ who's for him -- self
+	and that's all. A -- fter all we planned __ he did -- n't mean it. Now I und -- er stand __
+	I should have seen it. Trou -- ble is a man, __ troub -- le is a man __ I love.
 }
 {% endif %}

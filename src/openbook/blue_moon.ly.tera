@@ -5,6 +5,7 @@ default_version = "Wikifonia"
 title = "Blue Moon"
 style = "Jazz"
 composer = "Richard Rodgers"
+poet = "Lorentz Hart"
 piece = "Jazz"
 typesetter = "OpenBook contributors (MusicXML import)"
 completion = "3"
@@ -16,7 +17,7 @@ copyrightextra = "International Copyright Secured All Rights Reserved"
 [versions.Wikifonia]
 doChords = true
 doVoice = true
-doLyrics = false
+doLyrics = true
 doLyricsmore = false
 doLyricsmoremore = false
 doChordBars = false
@@ -35,6 +36,7 @@ doOwn = false
 	- retained the original copyright notice where printed; the underlying music is not relicensed.
 	- retained written measures, pickups, repeats and endings; lyrics omitted.
 	- tempo taken from archived MusicXML.
+	- put in the lyrics from the same Wikifonia source.
 	TODO:
 	- proofread the music against the referenced PDF and check by ear.
 {% endif %}
@@ -141,5 +143,15 @@ doOwn = false
 	}
 	es''1 |
 	\endBar
+}
+{% endif %}
+{% if part == "LyricsWikifonia" %}\lyricmode {
+	Blue Moon -- you saw me stan -- ding a -- lone __ with -- out a dream in my heart -- with --
+	out a love of my own __ Blue Moon -- you knew just what I was -- there -- for -- You heard
+	me say -- ing a pray'r __ for __ Some -- one -- I real -- ly could care __ for __ And then
+	there sud -- den -- ly ap -- peared -- be -- fore me __ The on -- ly one my arms will Ev --
+	er hold, __ I heard some -- bo -- dy whis -- per please, a -- dore me __ And when I looked
+	the moon had turned to gold! Blue moon __ now i'm no long -- er a -- lone __ with -- out a
+	dream in my heart, __ with -- out a love of my own __
 }
 {% endif %}

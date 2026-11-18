@@ -5,6 +5,7 @@ default_version = "Wikifonia"
 title = "Pretend"
 style = "Jazz"
 composer = "Cliff Parman, Frank Lavere, Lew Douglas"
+poet = "Cliff Parman, Frank Lavere, Lew Douglas"
 piece = "Standard"
 typesetter = "OpenBook contributors (MusicXML import)"
 completion = "3"
@@ -16,8 +17,8 @@ copyrightextra = "Archived MusicXML notice retained; underlying music is not rel
 [versions.Wikifonia]
 doChords = true
 doVoice = true
-doLyrics = false
-doLyricsmore = false
+doLyrics = true
+doLyricsmore = true
 doLyricsmoremore = false
 doChordBars = false
 doGuitar = false
@@ -37,6 +38,7 @@ doOwn = false
 	- retained written melody, chord changes, pickups, repeats and numbered endings; lyrics omitted.
 	- imported explicit 7alt symbols using the book's altered-dominant notation where present.
 	- tempo is an editorial practice suggestion.
+	- put in the lyrics from the same Wikifonia source.
 	TODO:
 	- proofread the complete melody, harmony and form against the referenced PDF and check by ear.
 	- verify source attribution, copyright notice and reuse terms against the scan; only the archived MusicXML notice is retained.
@@ -145,5 +147,20 @@ doOwn = false
 	}
 	}
 	\endBar
+}
+{% endif %}
+{% if part == "LyricsWikifonia" %}\lyricmode {
+	Pre -- tend you're hap -- py when you're blue It is -- n't -- ver -- y hard to do And
+	you'll find ha -- pi -- ness with -- out an end, when -- ev -- er you pre -- tend Re --
+	mem -- ber an -- y -- one can dream And no -- thing's -- bad as it may seem the lit -- tle
+	things you have -- n't got could be a lot if you'd pre -- tend __ You'll find a love you
+	can share, one you can call all your own,
+}
+{% endif %}
+{% if part == "LyricsmoreWikifonia" %}\lyricmode {
+	_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _
+	Just close your eyes she'll be there you'll nev -- er be a -- lone and if you sing this
+	mel -- o -- dy you'll be pre -- tend -- ing just like me the world is mine it can be yours
+	my friend so why don't you pre -- tend. pre -- tend you're hap -- py when you're tend. __
 }
 {% endif %}

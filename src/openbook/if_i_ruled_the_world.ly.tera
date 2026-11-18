@@ -5,6 +5,7 @@ default_version = "Wikifonia"
 title = "If I Ruled The World"
 style = "Standard"
 composer = "Cyril Ornadel"
+poet = "Leslie Bricusse"
 piece = "Standard"
 typesetter = "OpenBook contributors (MusicXML import)"
 completion = "3"
@@ -16,8 +17,8 @@ copyrightextra = "Archived MusicXML notice retained; underlying music is not rel
 [versions.Wikifonia]
 doChords = true
 doVoice = true
-doLyrics = false
-doLyricsmore = false
+doLyrics = true
+doLyricsmore = true
 doLyricsmoremore = false
 doChordBars = false
 doGuitar = false
@@ -37,6 +38,7 @@ doOwn = false
 	- retained written melody, chord changes, pickups, repeats and numbered endings; lyrics omitted.
 	- imported explicit 7alt symbols using the book's altered-dominant notation where present.
 	- tempo is an editorial practice suggestion.
+	- put in the lyrics from the same Wikifonia source.
 	TODO:
 	- proofread the complete melody, harmony and form against the referenced PDF and check by ear.
 	- verify source attribution, copyright notice and reuse terms against the scan; only the archived MusicXML notice is retained.
@@ -209,5 +211,23 @@ doOwn = false
 	c''2 d''2 |
 	es''4 r4 r2 |
 	\endBar
+}
+{% endif %}
+{% if part == "LyricsWikifonia" %}\lyricmode {
+	If I ruled the world __ ev -- "'ry" day would be the first day of spring, __ Ev -- "'ry"
+	heart would have a new song to sing __ And we'd sing of the joy ev -- "'ry" morn -- ing
+	would bring. __ If _ My world __ would be a beau -- ti -- ful place __ where we would
+	weave such won -- der -- ful dreams. __ My world __ would wear a smile on it's face __
+	Like the man in the moon has when the moon beams. __ If I ruled the world __ ev -- "'ry"
+	man would say the world was his friend, __ There'd be hap -- pi -- ness that no man could
+	end, __ No, my friend, not if I ruled the world. __ Ev -- "'ry" head would be held up
+	high, __ There'd be sun -- shine in ev -- "'ry" -- one's sky __ If the day ev -- er dawned
+	when I ruled the world. __
+}
+{% endif %}
+{% if part == "LyricsmoreWikifonia" %}\lyricmode {
+	_ I ruled the world __ ev -- "'ry" man would be as free as a bird, __ Ev -- "'ry" voice
+	would be a voice to be heard. __ Take my word we would trea -- sure each day that oc -- _ _
+	curred. __
 }
 {% endif %}

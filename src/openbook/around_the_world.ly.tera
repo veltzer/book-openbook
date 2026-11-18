@@ -5,6 +5,7 @@ default_version = "Wikifonia"
 title = "Around The World"
 style = "Standard"
 composer = "Victor Young, Harold Adamson"
+poet = "Victor Young, Harold Adamson"
 piece = "Standard"
 typesetter = "OpenBook contributors (MusicXML import)"
 completion = "3"
@@ -16,7 +17,7 @@ copyrightextra = "Archived MusicXML notice retained; underlying music is not rel
 [versions.Wikifonia]
 doChords = true
 doVoice = true
-doLyrics = false
+doLyrics = true
 doLyricsmore = false
 doLyricsmoremore = false
 doChordBars = false
@@ -37,6 +38,7 @@ doOwn = false
 	- retained written melody, chord changes, pickups, repeats and numbered endings; lyrics omitted.
 	- imported explicit 7alt symbols using the book's altered-dominant notation where present.
 	- tempo is an editorial practice suggestion.
+	- put in the lyrics from the same Wikifonia source.
 	TODO:
 	- proofread the complete melody, harmony and form against the referenced PDF and check by ear.
 	- verify source attribution, copyright notice and reuse terms against the scan; only the archived MusicXML notice is retained.
@@ -127,5 +129,13 @@ doOwn = false
 	c''2. ~ |
 	c''4 r2 |
 	\endBar
+}
+{% endif %}
+{% if part == "LyricsWikifonia" %}\lyricmode {
+	A -- round the world I searched for you, I trav -- eled on when hope was gone to keep a
+	ren -- dez -- vous I knew some -- where, som -- time, some -- how you'd look at me and I
+	would see the smile you're smi -- ling now, It might have been in Coun -- ty Down or in
+	New York in Gay Pa -- ree or ev -- en Lon -- don Town, no more will I go all a -- round
+	the world for I have found my world in you. __
 }
 {% endif %}

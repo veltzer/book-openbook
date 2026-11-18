@@ -5,6 +5,7 @@ default_version = "Wikifonia"
 title = "Feelings"
 style = "Standard"
 composer = "Morris Albert"
+poet = "Morris Albert"
 piece = "Standard"
 typesetter = "OpenBook contributors (MusicXML import)"
 completion = "3"
@@ -16,8 +17,8 @@ copyrightextra = "Archived MusicXML notice retained; underlying music is not rel
 [versions.Wikifonia]
 doChords = true
 doVoice = true
-doLyrics = false
-doLyricsmore = false
+doLyrics = true
+doLyricsmore = true
 doLyricsmoremore = false
 doChordBars = false
 doGuitar = false
@@ -37,6 +38,7 @@ doOwn = false
 	- retained written melody, chord changes, pickups, repeats and numbered endings; lyrics omitted.
 	- imported explicit 7alt symbols using the book's altered-dominant notation where present.
 	- tempo is an editorial practice suggestion.
+	- put in the lyrics from the same Wikifonia source.
 	TODO:
 	- proofread the complete melody, harmony and form against the referenced PDF and check by ear.
 	- verify source attribution, copyright notice and reuse terms against the scan; only the archived MusicXML notice is retained.
@@ -141,5 +143,18 @@ doOwn = false
 	e''2. r4 |
 	R1 - "D.S.andfade" - "returnto" |
 	\endBar
+}
+{% endif %}
+{% if part == "LyricsWikifonia" %}\lyricmode {
+	Feel -- ings __ noth -- ing more than feel -- ings __ try -- ing to for -- get my feel --
+	ings of love
+}
+{% endif %}
+{% if part == "LyricsmoreWikifonia" %}\lyricmode {
+	Tear -- drops __ roll -- ing down on my face __ try -- ing to for -- get my feel -- ings
+	of love Feel -- ings _ for all my life I'll feel it I wish I'd nev -- er met you girl,
+	you'll nev -- er come a -- gain feel -- ings wo, wo, wo, feel -- ings wo, wo, wo, feel you
+	a -- gain in my arms feel -- ings __ feel -- ings like I've nev -- er lost you _ and feel
+	ings like I'll nev -- er have you __ a -- gain in my heart.
 }
 {% endif %}

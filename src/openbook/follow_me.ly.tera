@@ -5,6 +5,7 @@ default_version = "Wikifonia"
 title = "Follow me"
 style = "Standard"
 composer = "John Denver"
+poet = "John Denver"
 piece = "Standard"
 typesetter = "OpenBook contributors (MusicXML import)"
 completion = "3"
@@ -16,8 +17,8 @@ copyrightextra = "Archived MusicXML notice retained; underlying music is not rel
 [versions.Wikifonia]
 doChords = true
 doVoice = true
-doLyrics = false
-doLyricsmore = false
+doLyrics = true
+doLyricsmore = true
 doLyricsmoremore = false
 doChordBars = false
 doGuitar = false
@@ -37,6 +38,7 @@ doOwn = false
 	- retained written melody, chord changes, pickups, repeats and numbered endings; lyrics omitted.
 	- imported explicit 7alt symbols using the book's altered-dominant notation where present.
 	- tempo is an editorial practice suggestion.
+	- put in the lyrics from the same Wikifonia source.
 	TODO:
 	- proofread the complete melody, harmony and form against the referenced PDF and check by ear.
 	- verify source attribution, copyright notice and reuse terms against the scan; only the archived MusicXML notice is retained.
@@ -173,5 +175,24 @@ doOwn = false
 	c'1 ~ |
 	c'2 r2 |
 	\endBar
+}
+{% endif %}
+{% if part == "LyricsWikifonia" %}\lyricmode {
+	It's by far the hard -- est thing I've ev -- er done __ to be so in love with you and so
+	a -- lone __ fol -- low me where I go what I do and who I know make it part of you to be a
+	part of me __ fol -- low me up and down all _ the way and all a -- round take my hand and
+	say you'll fol -- low me __ Its long been on my mind you know its been a long long time
+	I'll try to find the way that I can make you un _ der -- stand the way I feel a -- bout
+	you and just how much I need you to be there where I can talk to you when there's no one
+	else a -- round __ fol -- low _ fol -- low -- way __ take my hand and say you'll fol --
+	low me. __
+}
+{% endif %}
+{% if part == "LyricsmoreWikifonia" %}\lyricmode {
+	_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _
+	Yousee I'llike to share my lifewith you and _ show you things I've seen _ pla -- ces that
+	I'm go -- ing to _ pla -- ces where _ I've been to have you there be -- side me and nev --
+	er be a -- lone _ and _ all the time that you're with me then we will _ be at home. __ _ _ _ _ _
+	C __
 }
 {% endif %}

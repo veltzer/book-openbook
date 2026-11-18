@@ -5,6 +5,7 @@ default_version = "Wikifonia"
 title = "Time Was"
 style = "Jazz"
 composer = "Miguel Prado"
+poet = "S. K. Russell"
 piece = "Jazz"
 typesetter = "OpenBook contributors (MusicXML import)"
 completion = "3"
@@ -15,7 +16,7 @@ copyright = "All Rights Reserved"
 [versions.Wikifonia]
 doChords = true
 doVoice = true
-doLyrics = false
+doLyrics = true
 doLyricsmore = false
 doLyricsmoremore = false
 doChordBars = false
@@ -34,6 +35,7 @@ doOwn = false
 	- retained the original copyright notice where printed; the underlying music is not relicensed.
 	- retained written measures, pickups, repeats and endings; lyrics omitted.
 	- tempo is an editorial practice suggestion.
+	- put in the lyrics from the same Wikifonia source.
 	TODO:
 	- proofread the music against the referenced PDF and check by ear.
 	- verify editorial chord spacing in measures 7, 15, 31; the archive places successive symbols at the same offset.
@@ -140,5 +142,15 @@ doOwn = false
 	}
 	}
 	\endBar
+}
+{% endif %}
+{% if part == "LyricsWikifonia" %}\lyricmode {
+	Time was when we had fun on the school -- yard "swings;" when we ex -- changed grad -- u --
+	a -- tion rings one love -- ly yes -- ter -- day. __ Time was when we wrote love let --
+	ters in the sand, or lin -- gered ov -- er our cof -- fee and, dream -- ing the time a --
+	way. __ Pic -- nics and hay -- rides and mid -- win -- ter sleigh -- rides and nev -- er a --
+	part. Hikes in the coun -- try and there's more than one tree on which I've a place in
+	your heart. Dar -- ling, ev -- "'ry" to -- mor -- row will be com -- plete, If all our mo --
+	ments are half as sweet as all our time was then. __ then. __
 }
 {% endif %}

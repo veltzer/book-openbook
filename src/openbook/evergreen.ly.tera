@@ -5,6 +5,7 @@ default_version = "Wikifonia"
 title = "Evergreen"
 style = "Standard"
 composer = "Barbra Streisand"
+poet = "Paul Williams"
 piece = "Standard"
 typesetter = "OpenBook contributors (MusicXML import)"
 completion = "3"
@@ -16,8 +17,8 @@ copyrightextra = "Archived MusicXML notice retained; underlying music is not rel
 [versions.Wikifonia]
 doChords = true
 doVoice = true
-doLyrics = false
-doLyricsmore = false
+doLyrics = true
+doLyricsmore = true
 doLyricsmoremore = false
 doChordBars = false
 doGuitar = false
@@ -37,6 +38,7 @@ doOwn = false
 	- retained written melody, chord changes, pickups, repeats and numbered endings; lyrics omitted.
 	- imported explicit 7alt symbols using the book's altered-dominant notation where present.
 	- tempo is an editorial practice suggestion.
+	- put in the lyrics from the same Wikifonia source.
 	TODO:
 	- proofread the complete melody, harmony and form against the referenced PDF and check by ear.
 	- verify source attribution, copyright notice and reuse terms against the scan; only the archived MusicXML notice is retained.
@@ -224,5 +226,21 @@ doOwn = false
 	a'1 ~ |
 	a'1 |
 	\endBar
+}
+{% endif %}
+{% if part == "LyricsWikifonia" %}\lyricmode {
+	Ah
+}
+{% endif %}
+{% if part == "LyricsmoreWikifonia" %}\lyricmode {
+	_ _ _ _ _ _ _ _ _ _ Love, __ soft as an eas -- y "chair;" __ love, __ fresh as the morn --
+	ing air. __ One __ love that is shared by two, __ I have found __ with you. __ Like a rose __
+	un -- der the A -- pril snow, __ I was al -- ways cer -- tain love would grow. __ Love, __
+	age -- less and ev -- er -- green, __ sel -- dom seen by two. __ You and I will make each
+	night a first, ev -- "'ry" day a be -- gin -- ning. __ Spir -- its rise and their dance is
+	u -- re -- hearsed. They warm and ex -- cite __ us "'cause" we have the bright -- est
+	love, __ _ two lights that shine as one, morn -- ing glo -- ry -- and -- the -- mid --
+	night sun. __ Time, __ we've learned to sail a -- "bove;" __ _ time __ _ won't change the
+	mean -- ing of __ one love, __ age -- less and ev -- er -- ev -- er -- green. __
 }
 {% endif %}

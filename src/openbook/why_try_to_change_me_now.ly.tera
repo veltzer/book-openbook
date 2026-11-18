@@ -5,6 +5,7 @@ default_version = "Wikifonia"
 title = "Why Try To Change Me Now"
 style = "Jazz"
 composer = "Cy Coleman"
+poet = "Joseph McCarthy"
 piece = "Standard"
 typesetter = "OpenBook contributors (MusicXML import)"
 completion = "3"
@@ -16,7 +17,7 @@ copyrightextra = "Archived MusicXML notice retained; underlying music is not rel
 [versions.Wikifonia]
 doChords = true
 doVoice = true
-doLyrics = false
+doLyrics = true
 doLyricsmore = false
 doLyricsmoremore = false
 doChordBars = false
@@ -37,6 +38,7 @@ doOwn = false
 	- retained written melody, chord changes, pickups, repeats and numbered endings; lyrics omitted.
 	- imported explicit 7alt symbols using the book's altered-dominant notation where present.
 	- tempo is an editorial practice suggestion.
+	- put in the lyrics from the same Wikifonia source.
 	TODO:
 	- proofread the complete melody, harmony and form against the referenced PDF and check by ear.
 	- verify source attribution, copyright notice and reuse terms against the scan; only the archived MusicXML notice is retained.
@@ -125,5 +127,18 @@ doOwn = false
 	r8 c'8 es'8 c'8 g'4 g'4 |
 	es'2. r4 |
 	\endBar
+}
+{% endif %}
+{% if part == "LyricsWikifonia" %}\lyricmode {
+	I'm sen -- ti -- men -- tal, __ so I walk __ in the rain, I've got some hab -- its __ ev --
+	en I __ can't ex -- plain. Could start for the cor -- ner, turn __ up in Spain. But why
+	try to change me now? I sit and day dream, __ I've got day -- dreams ga -- lore, cig -- a --
+	rette ash -- es, __ there they go __ on the floor. I'll go a -- way week -- ends, __ leave
+	my keys __ in the door, but why try to change me now? Why can't I be __ more con -- ven --
+	tion -- al? __ Peo -- ple talk, __ peo -- ple stare, __ so I try. But that's not for me,
+	"'cause" I can't see my kind of craz -- y world go pass -- ing me by. So let peo -- ple
+	wond -- er, __ let them laugh, __ let them frown. You know I'll love you __ till the
+	moon's __ up -- side down. Don't __ you re -- mem -- ber, __ I was al -- ways your clown?
+	Why try to change me now?
 }
 {% endif %}

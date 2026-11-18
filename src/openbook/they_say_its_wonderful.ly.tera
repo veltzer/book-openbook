@@ -5,6 +5,7 @@ default_version = "Wikifonia"
 title = "They Say It's Wonderful"
 style = "Jazz"
 composer = "Irving Berlin"
+poet = "Irving Berlin"
 piece = "Jazz"
 typesetter = "OpenBook contributors (MusicXML import)"
 completion = "3"
@@ -15,7 +16,7 @@ copyright = "All Rights Reserved"
 [versions.Wikifonia]
 doChords = true
 doVoice = true
-doLyrics = false
+doLyrics = true
 doLyricsmore = false
 doLyricsmoremore = false
 doChordBars = false
@@ -34,6 +35,7 @@ doOwn = false
 	- retained the original copyright notice where printed; the underlying music is not relicensed.
 	- retained written measures, pickups, repeats and endings; lyrics omitted.
 	- tempo is an editorial practice suggestion.
+	- put in the lyrics from the same Wikifonia source.
 	TODO:
 	- proofread the music against the referenced PDF and check by ear.
 	- verify editorial chord spacing in measures 31; the archive places successive symbols at the same offset.
@@ -130,5 +132,13 @@ doOwn = false
 	f'1 ~ |
 	f'2. r4 |
 	\endBar
+}
+{% endif %}
+{% if part == "LyricsWikifonia" %}\lyricmode {
+	They say that fall -- ing in love is won -- der -- ful, __ it's won -- der -- ful __ so
+	they say. __ And with a moon up a -- bove, "it;s" won -- der -- ful, __ it's won -- er --
+	ful __ so they tell me. __ I can't re -- call who said it, I know I nev -- er read it. I
+	on -- ly know they tell me that love is grand, and the thing that's known as ro -- mance
+	is won -- der -- ful, won -- der ful, in ev -- "'ry" way, __ so they say __ say. __
 }
 {% endif %}

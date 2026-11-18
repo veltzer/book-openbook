@@ -5,6 +5,7 @@ default_version = "Wikifonia"
 title = "The Best Of Times"
 style = "Standard"
 composer = "Jerry Herman"
+poet = "Jerry Herman"
 piece = "Standard"
 typesetter = "OpenBook contributors (MusicXML import)"
 completion = "3"
@@ -16,8 +17,8 @@ copyrightextra = "Archived MusicXML notice retained; underlying music is not rel
 [versions.Wikifonia]
 doChords = true
 doVoice = true
-doLyrics = false
-doLyricsmore = false
+doLyrics = true
+doLyricsmore = true
 doLyricsmoremore = false
 doChordBars = false
 doGuitar = false
@@ -37,6 +38,7 @@ doOwn = false
 	- retained written melody, chord changes, pickups, repeats and numbered endings; lyrics omitted.
 	- imported explicit 7alt symbols using the book's altered-dominant notation where present.
 	- tempo is an editorial practice suggestion.
+	- put in the lyrics from the same Wikifonia source.
 	TODO:
 	- proofread the complete melody, harmony and form against the referenced PDF and check by ear.
 	- verify source attribution, copyright notice and reuse terms against the scan; only the archived MusicXML notice is retained.
@@ -223,5 +225,20 @@ doOwn = false
 	d''1 ~ |
 	d''4 r4 r2 |
 	\endBar
+}
+{% endif %}
+{% if part == "LyricsWikifonia" %}\lyricmode {
+	_ best of times is now __ Whats left of sum -- mer but a fad -- ed rose? __ the best of
+	times is now __ as for to -- mor -- row well, who knows? who knows? who knows? so now is
+	now is now __ Now __ not some for -- got -- ten yes -- ter -- day __ now __ to mor -- row
+	is too far a -- way __ so best of times is now is now is now the best of times is now __
+	whats left of sum -- mer but a fad -- ed rose __ the best of times is now __ as for to --
+	mor -- row well who knows? who knows, who knows _ best of times is now is now is now is
+	now is now. __
+}
+{% endif %}
+{% if part == "LyricsmoreWikifonia" %}\lyricmode {
+	_ hold this mo -- ment -- fast __ and live and love as hard as you know how __ and make
+	this mo -- ment last __ be -- cause the bestof times is
 }
 {% endif %}

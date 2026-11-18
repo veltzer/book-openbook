@@ -5,6 +5,7 @@ default_version = "Wikifonia"
 title = "How Do You Keep The Music Playing"
 style = "Jazz"
 composer = "Michel LeGrand"
+poet = "Alan Bergman, Marilyn Bergman"
 piece = "Standard"
 typesetter = "OpenBook contributors (MusicXML import)"
 completion = "3"
@@ -16,7 +17,7 @@ copyrightextra = "Archived MusicXML notice retained; underlying music is not rel
 [versions.Wikifonia]
 doChords = true
 doVoice = true
-doLyrics = false
+doLyrics = true
 doLyricsmore = false
 doLyricsmoremore = false
 doChordBars = false
@@ -37,6 +38,7 @@ doOwn = false
 	- retained written melody, chord changes, pickups, repeats and numbered endings; lyrics omitted.
 	- imported explicit 7alt symbols using the book's altered-dominant notation where present.
 	- tempo is an editorial practice suggestion.
+	- put in the lyrics from the same Wikifonia source.
 	TODO:
 	- proofread the complete melody, harmony and form against the referenced PDF and check by ear.
 	- verify source attribution, copyright notice and reuse terms against the scan; only the archived MusicXML notice is retained.
@@ -154,5 +156,18 @@ doOwn = false
 	es'1 ~ |
 	es'1 |
 	\endBar
+}
+{% endif %}
+{% if part == "LyricsWikifonia" %}\lyricmode {
+	How do you keep the mus -- ic play -- ing? How do you make it last? How do you keep the
+	song from fad -- ing too fast? __ How do you lose your -- self to some -- one and nev --
+	er lose your way? How do you not run out of new thins to say? __ And since we know we're
+	al -- ways chang -- ing, how can it be the same? And tell me how, year af -- ter year,
+	you're sure your heart will fall a -- part __ each time you hear "(her/his)" name? __ I
+	know the way I feel for you, it's now or nev -- er. The more I love the more that I'm a --
+	fraid that in your eyes I may not see for -- ev -- er, for -- ev -- er. If we can be the
+	best of lov -- ers, yet be the best of friends, if we can try with ev -- "'ry" day to make
+	it bet -- ter as it grows, with an -- y luck, then I sup -- pose __ the mu -- sic nev --
+	er ends. __
 }
 {% endif %}

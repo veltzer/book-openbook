@@ -5,6 +5,7 @@ default_version = "Wikifonia"
 title = "Bali Ha'i"
 style = "Standard"
 composer = "Richard Rodgers"
+poet = "Oscar Hammerstein II"
 piece = "Standard"
 typesetter = "OpenBook contributors (MusicXML import)"
 completion = "3"
@@ -16,7 +17,7 @@ copyrightextra = "Archived MusicXML notice retained; underlying music is not rel
 [versions.Wikifonia]
 doChords = true
 doVoice = true
-doLyrics = false
+doLyrics = true
 doLyricsmore = false
 doLyricsmoremore = false
 doChordBars = false
@@ -37,6 +38,7 @@ doOwn = false
 	- retained written melody, chord changes, pickups, repeats and numbered endings; lyrics omitted.
 	- imported explicit 7alt symbols using the book's altered-dominant notation where present.
 	- tempo is an editorial practice suggestion.
+	- put in the lyrics from the same Wikifonia source.
 	TODO:
 	- proofread the complete melody, harmony and form against the referenced PDF and check by ear.
 	- verify source attribution, copyright notice and reuse terms against the scan; only the archived MusicXML notice is retained.
@@ -225,5 +227,19 @@ doOwn = false
 	}
 	}
 	\endBar
+}
+{% endif %}
+{% if part == "LyricsWikifonia" %}\lyricmode {
+	Most peo -- ple live on a lone -- ly is -- land __ Lost in the mid -- dle of a fog -- gy
+	sea __ most peo -- ple long for an -- oth -- er is -- land __ one where they know they
+	would like to be __ Ba -- li Ha'i may call you an -- y night an -- y day in your heart, __
+	you'll hear it call you come a -- way come a -- way Ba -- li Ha'i will whis -- per on the
+	wind of the sea here am I __ your spe -- cial is -- land come to me come to me your own
+	spe -- cial hopes your own spe -- cial dreams bloom on the hill -- side and shine in the
+	streams If you try, you'll find me where the sky meet the sea here am I __ your spec --
+	ail is -- land! come to me come to me! Ba -- li Ha'i Ba -- li Ha'i Ba -- li Ha'i __ some
+	day you'll see me float -- ing in the sun -- shine my head stick -- ing out from a low fly --
+	ing cloud __ you'll hear me call you sing -- ing through the sun -- shine sweet and clear
+	as can be __ come to me here I am come to me! __ Bal -- i Ha'i! __
 }
 {% endif %}

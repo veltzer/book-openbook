@@ -5,6 +5,7 @@ default_version = "Wikifonia"
 title = "Volare"
 style = "Jazz"
 composer = "Domenico Modugno, Mitchell Parish"
+poet = "Mitchell Parish"
 piece = "Standard"
 typesetter = "OpenBook contributors (MusicXML import)"
 completion = "3"
@@ -16,7 +17,7 @@ copyrightextra = "Archived MusicXML notice retained; underlying music is not rel
 [versions.Wikifonia]
 doChords = true
 doVoice = true
-doLyrics = false
+doLyrics = true
 doLyricsmore = false
 doLyricsmoremore = false
 doChordBars = false
@@ -35,6 +36,7 @@ doOwn = false
 	- retained the archived MusicXML rights notice; no redistribution permission is asserted.
 	- retained written melody, chord changes, pickups, repeats and numbered endings; lyrics, slurs, dynamics and articulations other than fermatas omitted.
 	- tempo is an editorial practice suggestion.
+	- put in the lyrics from the same Wikifonia source.
 	TODO:
 	- proofread the complete melody, harmony and form against a printed edition and check by ear.
 	- verify source attribution, copyright notice and reuse terms; only the archived MusicXML notice is retained.
@@ -167,5 +169,18 @@ doOwn = false
 	g'4. bes'8 \times 2/3 { a'4 bes'4 c''4 } |
 	bes'2. r4 |
 	\endBar
+}
+{% endif %}
+{% if part == "LyricsWikifonia" %}\lyricmode {
+	Some -- times the world is a val -- ley of heart -- aches and tears and in the hust -- le
+	and bus -- tle no sun -- shine ap -- pears. But you and I have our love al -- ways there
+	to re -- mind us, __ there is a way we can leave all the shad -- ows be -- hind us. __ Vo --
+	la -- re, __ oh, oh! __ Can -- ta -- re, __ oh, oh, oh, oh! __ Let's fly way up to the
+	clouds, a -- way from the mad -- den -- ing crowds. We can sing in the glow of a star that
+	I know of, where lov -- ers en -- joy peace of mind. Let us leave the con -- fus -- ion
+	and all dis -- il -- lu -- sion be -- hind. __ Just like birds of a feath -- er, a rain --
+	bow to -- geth -- er we'll find. __ Vo -- l -- re, _ oh, oh! _ Can -- ta -- re _ oh, oh,
+	oh, oh! _ Your love has giv -- en me wings. Your love has giv -- en me wings. Your love
+	has giv -- en me
 }
 {% endif %}

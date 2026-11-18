@@ -5,6 +5,7 @@ default_version = "Wikifonia"
 title = "To Each His Own"
 style = "Jazz"
 composer = "Jay Livingstone, Ray Evans"
+poet = "Jay Livingstone, Ray Evans"
 piece = "Standard"
 typesetter = "OpenBook contributors (MusicXML import)"
 completion = "3"
@@ -16,7 +17,7 @@ copyrightextra = "Archived MusicXML notice retained; underlying music is not rel
 [versions.Wikifonia]
 doChords = true
 doVoice = true
-doLyrics = false
+doLyrics = true
 doLyricsmore = false
 doLyricsmoremore = false
 doChordBars = false
@@ -37,6 +38,7 @@ doOwn = false
 	- retained written melody, chord changes, pickups, repeats and numbered endings; lyrics omitted.
 	- imported explicit 7alt symbols using the book's altered-dominant notation where present.
 	- tempo is an editorial practice suggestion.
+	- put in the lyrics from the same Wikifonia source.
 	TODO:
 	- proofread the complete melody, harmony and form against the referenced PDF and check by ear.
 	- verify source attribution, copyright notice and reuse terms against the scan; only the archived MusicXML notice is retained.
@@ -143,5 +145,16 @@ doOwn = false
 	}
 	}
 	\endBar
+}
+{% endif %}
+{% if part == "LyricsWikifonia" %}\lyricmode {
+	A rose __ must re -- main __ with the sun __ and the rain __ or it love -- ly pro -- mise
+	won't come true. __ To each his own, to each his hown And my own is you __ What good __ is
+	a song __ if the words just don't be -- long __ and a dream must be a dream for two __ No
+	good a -- lone, to each his own, For me there's "you:" __ If a flame is to grow there must
+	be a glow, To o -- pen each door there's a key. __ I need you I know, I can't let you go,
+	Your touch means too much to me. __ Two lips __ must in -- sist __ on two more __ to be
+	kissed __ or they'll nev -- er know what love can do. __ To each his own, I've found my
+	own one and on -- ly you. __ A you.
 }
 {% endif %}

@@ -5,6 +5,7 @@ default_version = "Wikifonia"
 title = "Like A Lover"
 style = "Jazz"
 composer = "Dory Caymmi"
+poet = "Nelson Mota, English by Alan, Marilyn Bergman"
 piece = "Jazz"
 typesetter = "OpenBook contributors (MusicXML import)"
 completion = "3"
@@ -15,8 +16,8 @@ copyright = "All Rights Reserved"
 [versions.Wikifonia]
 doChords = true
 doVoice = true
-doLyrics = false
-doLyricsmore = false
+doLyrics = true
+doLyricsmore = true
 doLyricsmoremore = false
 doChordBars = false
 doGuitar = false
@@ -34,6 +35,7 @@ doOwn = false
 	- retained the original copyright notice where printed; the underlying music is not relicensed.
 	- retained written measures, pickups, repeats and endings; lyrics omitted.
 	- tempo is an editorial practice suggestion.
+	- put in the lyrics from the same Wikifonia source.
 	TODO:
 	- proofread the music against the referenced PDF and check by ear.
 	- verify the copyright notice against the scan; no readable per-tune notice was recovered, so the archived rights notice is retained where available.
@@ -143,5 +145,23 @@ doOwn = false
 	c'1 |
 	R1 |
 	\endBar
+}
+{% endif %}
+{% if part == "LyricsWikifonia" %}\lyricmode {
+	Like a lov -- er the morn -- ing sun __ slow -- ly ris -- es and kiss -- es you __ a --
+	wake. __ Your smile is soft __ and drow -- sy as you let it play __ up -- on __ your face. __
+	Oh, how I dream __ I might be like the morn -- ing sun __ to you. __ How I en -- vy a cup
+	that knows __ your lips, __ let it be me __ my love, __ And a tab -- le that feels your
+	fig -- ger -- tips, __ Let it be me, __ Let me be your love, __ Bring and end to the end --
+	less days __ and nights __ with -- out you. __ Like a lov -- er the vel -- vet moon, __
+	shares your pil -- low and watch -- es while __ you sleep. __ It's light ar -- rives __ on
+	tip -- toe, gent -- ly tak -- ing you __ in it's __ em -- brace. __ Oh, how I dream __ I
+	might be like the vel -- vet moon __ to you. __
+}
+{% endif %}
+{% if part == "LyricsmoreWikifonia" %}\lyricmode {
+	Like a lov -- er the riv -- er wind __ sighs and rip -- ples it's fin -- gers thru __
+	your hair. __ Up -- on your cheek __ it ling -- ers, nev -- er hav -- ing known __ a sweet --
+	er place. __ Oh, how I dream __ I might be like the riv -- er wind __ to you. __
 }
 {% endif %}

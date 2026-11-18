@@ -5,6 +5,7 @@ default_version = "Wikifonia"
 title = "A Blossom Fell"
 style = "Jazz"
 composer = "Dominic John, Harold Cornelius, Howard Barnes"
+poet = "Dominic John, Harold Cornelius, Howard Barnes"
 piece = "Standard"
 typesetter = "OpenBook contributors (MusicXML import)"
 completion = "3"
@@ -16,7 +17,7 @@ copyrightextra = "Archived MusicXML notice retained; underlying music is not rel
 [versions.Wikifonia]
 doChords = true
 doVoice = true
-doLyrics = false
+doLyrics = true
 doLyricsmore = false
 doLyricsmoremore = false
 doChordBars = false
@@ -37,6 +38,7 @@ doOwn = false
 	- retained written melody, chord changes, pickups, repeats and numbered endings; lyrics omitted.
 	- imported explicit 7alt symbols using the book's altered-dominant notation where present.
 	- tempo is an editorial practice suggestion.
+	- put in the lyrics from the same Wikifonia source.
 	TODO:
 	- proofread the complete melody, harmony and form against the referenced PDF and check by ear.
 	- verify source attribution, copyright notice and reuse terms against the scan; only the archived MusicXML notice is retained.
@@ -119,5 +121,14 @@ doOwn = false
 	}
 	}
 	\endBar
+}
+{% endif %}
+{% if part == "LyricsWikifonia" %}\lyricmode {
+	A blos -- som fell __ from off a tree __ it set -- tled soft -- ly on the lips you turned
+	to me __ the gyp -- sies say and I know why __ a fall -- ing blos -- som on -- ly touch --
+	es lips that lie A blos -- som fell __ and ver -- y soon __ I saw you kiss -- ing some --
+	one new be -- neath the moon __ I thought you loved me __ you said you loved me __ we
+	plann'd to -- geth -- er __ to dream for ev -- er the dream has end -- ed __ for true love
+	died __ the night a blos -- som fell and touch'd two lips that lied. a blos -- som lied. __
 }
 {% endif %}

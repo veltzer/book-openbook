@@ -5,6 +5,7 @@ default_version = "Wikifonia"
 title = "Nice 'N' Easy"
 style = "Jazz"
 composer = "Lew Spence"
+poet = "Alan Bergman, Marilyn Keith"
 piece = "Jazz"
 typesetter = "OpenBook contributors (MusicXML import)"
 completion = "3"
@@ -15,7 +16,7 @@ copyright = "All Rights Reserved"
 [versions.Wikifonia]
 doChords = true
 doVoice = true
-doLyrics = false
+doLyrics = true
 doLyricsmore = false
 doLyricsmoremore = false
 doChordBars = false
@@ -34,6 +35,7 @@ doOwn = false
 	- retained the original copyright notice where printed; the underlying music is not relicensed.
 	- retained written measures, pickups, repeats and endings; lyrics omitted.
 	- tempo is an editorial practice suggestion.
+	- put in the lyrics from the same Wikifonia source.
 	TODO:
 	- proofread the music against the referenced PDF and check by ear.
 	- verify editorial chord spacing in measures 8, 15, 16, 24, 31, 35, 36, 37; the archive places successive symbols at the same offset.
@@ -138,5 +140,14 @@ doOwn = false
 	c'1 ~ |
 	c'2. r4 |
 	\endBar
+}
+{% endif %}
+{% if part == "LyricsWikifonia" %}\lyricmode {
+	Let's take it nice "'n'" eas -- y, It's gon -- na be so eas -- y, For us to fall __ in
+	love. __ Hey bab -- y what's you hur -- ry, Re -- lax and don't you wor -- ry, We're gon --
+	na fall __ in love. __ We're on the road to ro -- mance, That's safe to say, __ But let's
+	make all the stops __ a -- long __ the way. __ The prob -- lem now of course __ is, To sim --
+	ply hold your horse -- es, To rush would be a __ crime, __ "'Cause" nice "'n'" eas -- y
+	does it ev -- "'ry" time! time! __
 }
 {% endif %}

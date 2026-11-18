@@ -5,6 +5,7 @@ default_version = "Wikifonia"
 title = "Penny Arcade"
 style = "Jazz"
 composer = "Sammy King"
+poet = "Sammy King"
 piece = "Standard"
 typesetter = "OpenBook contributors (MusicXML import)"
 completion = "3"
@@ -16,8 +17,8 @@ copyrightextra = "Archived MusicXML notice retained; underlying music is not rel
 [versions.Wikifonia]
 doChords = true
 doVoice = true
-doLyrics = false
-doLyricsmore = false
+doLyrics = true
+doLyricsmore = true
 doLyricsmoremore = false
 doChordBars = false
 doGuitar = false
@@ -35,6 +36,7 @@ doOwn = false
 	- retained the archived MusicXML rights notice; no redistribution permission is asserted.
 	- retained written melody, chord changes, pickups, repeats and numbered endings; lyrics, slurs, dynamics and articulations other than fermatas omitted.
 	- tempo is an editorial practice suggestion.
+	- put in the lyrics from the same Wikifonia source.
 	TODO:
 	- proofread the complete melody, harmony and form against a printed edition and check by ear.
 	- verify source attribution, copyright notice and reuse terms; only the archived MusicXML notice is retained.
@@ -234,5 +236,26 @@ doOwn = false
 	g'1 |
 	R1 |
 	\endBar
+}
+{% endif %}
+{% if part == "LyricsWikifonia" %}\lyricmode {
+	A light __ shone in the night some -- where ahe -- a -- d __ Blue turned in -- to green,
+	then it was re d. __ And stir __ ring the night __ Love mus ic play -- _ ed. The light I
+	saw in the night was a penn -- y ar cade. "'Step" up and "play'," each ma -- chine seemed
+	to say as I walked round and round the penn y ar -- cade __ "'Just" ring the bell on the
+	big bag a -- telle and you'll make all the col __ oured lights cas -- cade __ And mus __
+	ic played __ in the penn __ y arc __ ade. __ Well it played and it played, played all the
+	time. "'Roll" up and spend your last "dime!'" __ At "dime!'" __ "'Step" up and "play',"
+	each ma -- chine seemed to say as I walked round and round the penn y ar -- cade __
+	"'Just" ring the bell on the big bag a -- telle and you'll make all the col __ oured
+	lights cas -- cade __ And mus __ ic played __ in the penn __ y arc __ ade. __ Well it
+	played and it played, played all the time. "'Roll" up and spend your last, "'Roll" up and
+	spend your last, "'Roll" up and spend your last dime.
+}
+{% endif %}
+{% if part == "LyricsmoreWikifonia" %}\lyricmode {
+	_ "first~I" __ thought it a dream that I was __ in __ _ Lost, lost in a sea of glass and __
+	tin. __ _ But "no,~so" __ dipp -- ing __ "my~hand" __ in the back "of~my" __ jea -- ns I
+	grabbed a hand ful of coins to feed the ma -- ch -- ines. __
 }
 {% endif %}

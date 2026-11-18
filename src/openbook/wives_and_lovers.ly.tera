@@ -5,6 +5,7 @@ default_version = "Wikifonia"
 title = "Wives And Lovers"
 style = "Jazz"
 composer = "Burt Bacharach"
+poet = "Hal David"
 piece = "Standard"
 typesetter = "OpenBook contributors (MusicXML import)"
 completion = "3"
@@ -16,8 +17,8 @@ copyrightextra = "Archived MusicXML notice retained; underlying music is not rel
 [versions.Wikifonia]
 doChords = true
 doVoice = true
-doLyrics = false
-doLyricsmore = false
+doLyrics = true
+doLyricsmore = true
 doLyricsmoremore = false
 doChordBars = false
 doGuitar = false
@@ -37,6 +38,7 @@ doOwn = false
 	- retained written melody, chord changes, pickups, repeats and numbered endings; lyrics omitted.
 	- imported explicit 7alt symbols using the book's altered-dominant notation where present.
 	- tempo is an editorial practice suggestion.
+	- put in the lyrics from the same Wikifonia source.
 	TODO:
 	- proofread the complete melody, harmony and form against the referenced PDF and check by ear.
 	- verify source attribution, copyright notice and reuse terms against the scan; only the archived MusicXML notice is retained.
@@ -181,5 +183,22 @@ doOwn = false
 	g'2. ~ |
 	g'4 r4 r4 |
 	\endBar
+}
+{% endif %}
+{% if part == "LyricsWikifonia" %}\lyricmode {
+	Hey, lit tle girl, comb your hair, fix your make -- up, soom he will op -- en the door. __
+	Don't think be -- cause there's a ring on your fin -- ger you need -- "'nt" try an -- y --
+	more. __ For wives should al -- ways be lov -- ers too. Run to his arms __ the mo -- ment
+	he __ comes home to you. I'm warn -- ing you. __ _ Hey lit -- tle girl, bet -- ter wear
+	some -- thing pret -- ty some thing you'd wear to go to the cit -- "y;" And dim all the
+	lights, pour the wine, start the mus -- ic time to get read -- y for love. __ Oh, time to
+	get read -- y time to get read -- y, time to get read -- y for love __
+}
+{% endif %}
+{% if part == "LyricsmoreWikifonia" %}\lyricmode {
+	Day af -- ter day, there are girls at the of -- fice and men will al -- ways be men. __
+	Don't send him off with your hair still in cur -- lers you may not see him a -- gain. __
+	For wives should al -- ways be love -- ers too. Run to his arms __ the mo -- ment he __
+	comes home to you. He's al -- most _ here. __
 }
 {% endif %}

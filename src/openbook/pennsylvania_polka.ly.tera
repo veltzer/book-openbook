@@ -5,6 +5,7 @@ default_version = "Wikifonia"
 title = "Pennsylvania Polka"
 style = "Standard"
 composer = "Lester Lee, Zeke Manners"
+poet = "Lester Lee, Zeke Manners"
 piece = "Standard"
 typesetter = "OpenBook contributors (MusicXML import)"
 completion = "3"
@@ -16,7 +17,7 @@ copyrightextra = "Archived MusicXML notice retained; underlying music is not rel
 [versions.Wikifonia]
 doChords = true
 doVoice = true
-doLyrics = false
+doLyrics = true
 doLyricsmore = false
 doLyricsmoremore = false
 doChordBars = false
@@ -37,6 +38,7 @@ doOwn = false
 	- retained written melody, chord changes, pickups, repeats and numbered endings; lyrics omitted.
 	- imported explicit 7alt symbols using the book's altered-dominant notation where present.
 	- tempo is an editorial practice suggestion.
+	- put in the lyrics from the same Wikifonia source.
 	TODO:
 	- proofread the complete melody, harmony and form against the referenced PDF and check by ear.
 	- verify source attribution, copyright notice and reuse terms against the scan; only the archived MusicXML notice is retained.
@@ -193,5 +195,17 @@ doOwn = false
 	g'4 f'2. ~ |
 	f'2. r4 |
 	\endBar
+}
+{% endif %}
+{% if part == "LyricsWikifonia" %}\lyricmode {
+	Strike up the mus -- ic the band has be -- gun __ the Penn -- syl -- van -- ia Pol -- ka __
+	Pick out your part -- ner and join in the fun __ the Penn -- syl -- van -- ia Pol -- ka __
+	it start -- ed in Soran -- ton its now Num -- ber one __ it's bound to en -- ter -- tain
+	ya -- ev -- ry -- bod -- y has a man -- ia __ to do the Pol -- ka from Penn -- syl -- van --
+	ia __ Strike up the mus -- ic the band has be -- gun __ the Penn -- syl -- van -- ia Pol --
+	ka __ pick out your part -- ners and join in the fun __ the Penn -- syl -- van -- ia Pol --
+	ka __ it start -- ed in Scran -- ton its now Num -- ber one __ it's bound to en -- ter --
+	tain ya __ ev -- ry -- bod -- y has a man -- ia __ to do the Pol -- ka from Penn -- syl --
+	van -- ia. __
 }
 {% endif %}

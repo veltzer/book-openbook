@@ -5,6 +5,7 @@ default_version = "Wikifonia"
 title = "Detour Ahead"
 style = "Jazz"
 composer = "Herb Ellis, John Frigo, Lou Carter"
+poet = "Herb Ellis, John Frigo, Lou Carter"
 piece = "Jazz"
 typesetter = "OpenBook contributors (MusicXML import)"
 completion = "3"
@@ -15,8 +16,8 @@ copyright = "All Rights Reserved"
 [versions.Wikifonia]
 doChords = true
 doVoice = true
-doLyrics = false
-doLyricsmore = false
+doLyrics = true
+doLyricsmore = true
 doLyricsmoremore = false
 doChordBars = false
 doGuitar = false
@@ -35,6 +36,7 @@ doOwn = false
 	- retained written measures, pickups, repeats and endings; lyrics omitted.
 	- restored the archived 7alt chords using the book's altered-dominant notation.
 	- tempo taken from archived MusicXML.
+	- put in the lyrics from the same Wikifonia source.
 	TODO:
 	- proofread the music against the referenced PDF and check by ear.
 	- verify the copyright notice against the scan; no readable per-tune notice was recovered, so the archived rights notice is retained where available.
@@ -126,5 +128,20 @@ doOwn = false
 	a'4 c'2 c'4 |
 	c'1 - "(G7#5)" |
 	\endBar
+}
+{% endif %}
+{% if part == "LyricsWikifonia" %}\lyricmode {
+	_ road, clear day, __ but why am I the on -- ly one trav -- "'lin'" this way? How strange
+	the road to love should be so eas -- y, can there be a de -- tour a -- head?
+}
+{% endif %}
+{% if part == "LyricsmoreWikifonia" %}\lyricmode {
+	_ up, slow down, __ be -- rofre you crash and break your heart, gul -- li -- ble clown.
+	You fool, you're Head -- ed in the wrong di -- rec -- tion, can't you see the de -- tour a -- _
+	head? The far -- ther you trav -- el, the hard -- er to un -- rav -- el the web he spins a --
+	round you. Turn back while there's time, can't you see the dan -- ger "sign;" soft shoul --
+	ders sur -- round you. Smooth road, clear "night;" __ oh, luck -- y me, that sud -- den --
+	ly I saw the light. I'm turn -- ing back a -- way from all this trou -- ble. Smooth road,
+	smooth road, no de -- trour a -- head
 }
 {% endif %}

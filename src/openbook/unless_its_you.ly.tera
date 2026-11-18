@@ -5,6 +5,7 @@ default_version = "Wikifonia"
 title = "Unless It's You"
 style = "Jazz"
 composer = "Johnny Mandel"
+poet = "Morgan Ames"
 piece = "Jazz"
 typesetter = "OpenBook contributors (MusicXML import)"
 completion = "3"
@@ -16,7 +17,7 @@ copyrightextra = "Public Performance"
 [versions.Wikifonia]
 doChords = true
 doVoice = true
-doLyrics = false
+doLyrics = true
 doLyricsmore = false
 doLyricsmoremore = false
 doChordBars = false
@@ -35,6 +36,7 @@ doOwn = false
 	- retained the original copyright notice where printed; the underlying music is not relicensed.
 	- retained written measures, pickups, repeats and endings; lyrics omitted.
 	- tempo is an editorial practice suggestion.
+	- put in the lyrics from the same Wikifonia source.
 	TODO:
 	- proofread the music against the referenced PDF and check by ear.
 {% endif %}
@@ -141,5 +143,13 @@ doOwn = false
 	}
 	}
 	\endBar
+}
+{% endif %}
+{% if part == "LyricsWikifonia" %}\lyricmode {
+	I won -- der why __ I've loved so "few;" __ I guess I'm shy, __ I'm just like you. And so
+	I try __ to turn a -- way, __ though you're the sky to me, the joy to me, the day at times
+	I stray __ and think I'm free, __ then in your way __ you reach for me. You know I'll
+	stay, __ I al -- ways do, __ for what is love to me __ Un -- less it's you. I won -- der
+	you. __
 }
 {% endif %}

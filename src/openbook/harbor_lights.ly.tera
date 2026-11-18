@@ -5,6 +5,7 @@ default_version = "Wikifonia"
 title = "Harbor Lights"
 style = "Jazz"
 composer = "Hugh Williams, Jimmy Kennedy"
+poet = "Jimmy Kennedy"
 piece = "Standard"
 typesetter = "OpenBook contributors (MusicXML import)"
 completion = "3"
@@ -16,7 +17,7 @@ copyrightextra = "Archived MusicXML notice retained; underlying music is not rel
 [versions.Wikifonia]
 doChords = true
 doVoice = true
-doLyrics = false
+doLyrics = true
 doLyricsmore = false
 doLyricsmoremore = false
 doChordBars = false
@@ -35,6 +36,7 @@ doOwn = false
 	- retained the archived MusicXML rights notice; no redistribution permission is asserted.
 	- retained written melody, chord changes, pickups, repeats and numbered endings; lyrics, slurs, dynamics and articulations other than fermatas omitted.
 	- tempo is an editorial practice suggestion.
+	- put in the lyrics from the same Wikifonia source.
 	TODO:
 	- proofread the complete melody, harmony and form against a printed edition and check by ear.
 	- verify source attribution, copyright notice and reuse terms; only the archived MusicXML notice is retained.
@@ -125,5 +127,14 @@ doOwn = false
 	c'1 ~ |
 	c'4 r4 r2 |
 	\endBar
+}
+{% endif %}
+{% if part == "LyricsWikifonia" %}\lyricmode {
+	I saw the har -- bor lights they on -- ly told me we were part -- ing the same old har --
+	bor lights that once brought you to me I watched the har -- bor lights how could I help if
+	tears were start -- ing good -- bye to ten -- der nights be -- side the wil -- v'ry sea __
+	I longed to hold you near and kiss you just once more __ but you were on the ship and I
+	was on the shore __ now I know lone -- ly nights for all the while my heart is whs --
+	p'ring some oth -- er har -- bor lights will steal your love from me. __
 }
 {% endif %}

@@ -5,6 +5,7 @@ default_version = "Wikifonia"
 title = "At Last"
 style = "Jazz"
 composer = "Harry Warren"
+poet = "Mack Gordon"
 piece = "Jazz"
 typesetter = "OpenBook contributors (MusicXML import)"
 completion = "3"
@@ -16,7 +17,7 @@ copyrightextra = "Publications U.S. Inc. (Print) All Rights Recerved [lead ky Da
 [versions.Wikifonia]
 doChords = true
 doVoice = true
-doLyrics = false
+doLyrics = true
 doLyricsmore = false
 doLyricsmoremore = false
 doChordBars = false
@@ -35,6 +36,7 @@ doOwn = false
 	- retained the original copyright notice where printed; the underlying music is not relicensed.
 	- retained written measures, pickups, repeats and endings; lyrics omitted.
 	- tempo is an editorial practice suggestion.
+	- put in the lyrics from the same Wikifonia source.
 	TODO:
 	- proofread the music against the referenced PDF and check by ear.
 	- verify editorial chord spacing in measures 8, 18, 20, 24, 26, 28, 32, 42, 44, 48; the archive places successive symbols at the same offset.
@@ -160,5 +162,17 @@ doOwn = false
 	r2 r4 g'4 ^ "D.S. al Fine" |
 	}
 	\endBar
+}
+{% endif %}
+{% if part == "LyricsWikifonia" %}\lyricmode {
+	I was nev -- er spell -- bound by a star -- ry sky. What is there to moon -- glow, when
+	love has passed you by. Then there came a mid -- night, and the world was new. Now here am
+	I so spell -- bound, dar -- ling, Not by stars, but just by you. At last __ my love __ has
+	come a -- long, My lone -- ly days are o -- ver and life __ is like a song. __ At last __
+	the skies __ a -- bove are blue, My heart __ was wrapped in clo -- ver the night __ I
+	looked at you. I found a dream that I can speak to, __ A dream that I can call my own. I
+	found a thrill to press my cheek to, __ A thrill I've nev -- er known. __ You smiled __
+	and then __ the spell was cast, And here __ we are in Hea -- ven For you are mine at last
+	At
 }
 {% endif %}

@@ -5,6 +5,7 @@ default_version = "Wikifonia"
 title = "Black Coffee"
 style = "Jazz"
 composer = "Sonny Burke"
+poet = "Sonny Burke"
 piece = "Jazz"
 typesetter = "OpenBook contributors (MusicXML import)"
 completion = "3"
@@ -15,7 +16,7 @@ copyright = "All Rights Reserved"
 [versions.Wikifonia]
 doChords = true
 doVoice = true
-doLyrics = false
+doLyrics = true
 doLyricsmore = false
 doLyricsmoremore = false
 doChordBars = false
@@ -34,6 +35,7 @@ doOwn = false
 	- retained the original copyright notice where printed; the underlying music is not relicensed.
 	- retained written measures, pickups, repeats and endings; lyrics omitted.
 	- tempo is an editorial practice suggestion.
+	- put in the lyrics from the same Wikifonia source.
 	TODO:
 	- proofread the music against the referenced PDF and check by ear.
 	- verify editorial chord spacing in measures 8, 9, 12, 20, 24, 40, 44; the archive places successive symbols at the same offset.
@@ -148,5 +150,20 @@ doOwn = false
 	c''1 ~ |
 	c''2. r4 |
 	\endBar
+}
+{% endif %}
+{% if part == "LyricsWikifonia" %}\lyricmode {
+	I'm feel -- ing might -- y lone -- some, have -- n't slept a wink. __ I walk the floor
+	and watch the door, __ and in be -- tween I drink black cof -- fee, __ Love's a hand -- me --
+	down brew __ I'll nev -- er know a Sun -- day in this weekday __ _ room __ I'm talk --
+	"in'" to the shad -- ows from one "o'" clock to "four;" __ And Lord how slow the mo --
+	ments go, __ when all I do is pour black cof -- fee __ Since the blues caught my eye __
+	I'm hang -- ing out on Mon -- day my Sun -- day blues __ to dry __ Now a man is born to go
+	a lov -- "in'" __ a wom -- an's born to weep and fret __ And stay at home and tend her ov --
+	en __ And drown her past re -- grets in cof -- fee and cig -- ar -- ettes __ I'm moan --
+	ing all the morn -- ning and mour -- ning all the "night;" And in be -- tween it's ni --
+	co -- tine, __ and not much heart to fight black cof -- fee. __ Feel -- ing low as can be.
+	It's driv -- ing me craz -- y, I'm wait -- ing for my ba -- by to may -- be come __ a --
+	round. __
 }
 {% endif %}

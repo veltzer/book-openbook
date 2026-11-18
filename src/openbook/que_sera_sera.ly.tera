@@ -4,7 +4,8 @@ default_version = "Wikifonia"
 [attributes]
 title = "Que Sera, Sera"
 style = "Jazz"
-composer = "Jay Livingston, Ray Evans, Jay Livingston, Ray Evans"
+composer = "Jay Livingston, Ray Evans"
+poet = "Jay Livingston, Ray Evans"
 piece = "Standard"
 typesetter = "OpenBook contributors (MusicXML import)"
 completion = "3"
@@ -16,7 +17,7 @@ copyrightextra = "Archived MusicXML notice retained; underlying music is not rel
 [versions.Wikifonia]
 doChords = true
 doVoice = true
-doLyrics = false
+doLyrics = true
 doLyricsmore = false
 doLyricsmoremore = false
 doChordBars = false
@@ -35,6 +36,7 @@ doOwn = false
 	- retained the archived MusicXML rights notice; no redistribution permission is asserted.
 	- retained written melody, chord changes, pickups, repeats and numbered endings; lyrics, slurs, dynamics and articulations other than fermatas omitted.
 	- tempo is an editorial practice suggestion.
+	- put in the lyrics from the same Wikifonia source.
 	TODO:
 	- proofread the complete melody, harmony and form against a printed edition and check by ear.
 	- verify source attribution, copyright notice and reuse terms; only the archived MusicXML notice is retained.
@@ -131,5 +133,12 @@ doOwn = false
 	c'2. ~ |
 	c'2. |
 	\endBar
+}
+{% endif %}
+{% if part == "LyricsWikifonia" %}\lyricmode {
+	When I was just a lit -- tle girl I asked my moth -- er what will I be? __ Will I be pret --
+	ty will I be rich? heres what she said to me __ Que se -- ra se -- ra __ what -- ev -- er
+	will be will be __ the fu -- ture's not ours to see __ Que se -- ra se -- ra __ what will
+	be will be. __
 }
 {% endif %}

@@ -5,6 +5,7 @@ default_version = "Wikifonia"
 title = "Cuando Calienta el Sol"
 style = "Standard"
 composer = "Carlos Rigual"
+poet = "Carlso Martinoli"
 piece = "Standard"
 typesetter = "OpenBook contributors (MusicXML import)"
 completion = "3"
@@ -16,7 +17,7 @@ copyrightextra = "Archived MusicXML notice retained; underlying music is not rel
 [versions.Wikifonia]
 doChords = true
 doVoice = true
-doLyrics = false
+doLyrics = true
 doLyricsmore = false
 doLyricsmoremore = false
 doChordBars = false
@@ -37,6 +38,7 @@ doOwn = false
 	- retained written melody, chord changes, pickups, repeats and numbered endings; lyrics omitted.
 	- imported explicit 7alt symbols using the book's altered-dominant notation where present.
 	- tempo is an editorial practice suggestion.
+	- put in the lyrics from the same Wikifonia source.
 	TODO:
 	- proofread the complete melody, harmony and form against the referenced PDF and check by ear.
 	- verify source attribution, copyright notice and reuse terms against the scan; only the archived MusicXML notice is retained.
@@ -100,5 +102,11 @@ doOwn = false
 	}
 	c''1 |
 	\endBar
+}
+{% endif %}
+{% if part == "LyricsWikifonia" %}\lyricmode {
+	Cuan -- do ca -- lien -- "ta~el" sol __ a -- "qui~en" la pla -- "ya;" __ sien -- to tu
+	cuer -- po vi -- brar, cer -- ca de mi _ Es tu palp -- i -- tar __ es tu ca -- ra __ es tu
+	pe -- lo __ son tus be -- sos __ "me~es" -- tre -- mez -- co -- o -- o -- o.
 }
 {% endif %}

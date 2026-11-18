@@ -5,6 +5,7 @@ default_version = "Wikifonia"
 title = "Come Fly With Me"
 style = "Jazz"
 composer = "James Van Heusen"
+poet = "Sammy Cahn"
 piece = "Standard"
 typesetter = "OpenBook contributors (MusicXML import)"
 completion = "3"
@@ -16,7 +17,7 @@ copyrightextra = "Archived MusicXML notice retained; underlying music is not rel
 [versions.Wikifonia]
 doChords = true
 doVoice = true
-doLyrics = false
+doLyrics = true
 doLyricsmore = false
 doLyricsmoremore = false
 doChordBars = false
@@ -37,6 +38,7 @@ doOwn = false
 	- retained written melody, chord changes, pickups, repeats and numbered endings; lyrics omitted.
 	- imported explicit 7alt symbols using the book's altered-dominant notation where present.
 	- tempo is an editorial practice suggestion.
+	- put in the lyrics from the same Wikifonia source.
 	TODO:
 	- proofread the complete melody, harmony and form against the referenced PDF and check by ear.
 	- verify source attribution, copyright notice and reuse terms against the scan; only the archived MusicXML notice is retained.
@@ -175,5 +177,18 @@ doOwn = false
 	c''1 ~ |
 	c''2 r2 |
 	\endBar
+}
+{% endif %}
+{% if part == "LyricsWikifonia" %}\lyricmode {
+	Come fly with me! __ Let's fly __ Let's fly __ a way! __ If you can use __ some ex -- ot --
+	ic booze __ there's a bar in far Bom -- bay. Come fly with me! __ Let's fly __ Let's fly __
+	a way! __ Come fly with me! __ Let's float __ down to __ Pe ru! __ In Lla -- ma Land __
+	there's a one -- man band __ and he'll toot his flute for you. Come fly with me! __ Let's
+	take __ off in __ the blue! __ Once I get you up there, __ where the air is rar -- i --
+	fied, __ we'll just glide, __ star -- ry eyed. __ Once I get you up there, __ I'll be hold --
+	ing you so near, __ you may hear __ an -- gels cheer "'cause" __ we're to -- geth -- er.
+	Weath -- er -- wise, __ It's such __ a love -- ly -- day! __ Just say the words __ and
+	we'll beat the birds __ down to A -- ca -- pul -- co Bay. It's per -- fect for __ a fly --
+	ing hon -- ey -- moon, they say. Come fly with me! __ Let's fly! __ Let's fly __ a -- way! __
 }
 {% endif %}

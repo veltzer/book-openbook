@@ -5,6 +5,7 @@ default_version = "Wikifonia"
 title = "Day by Day"
 style = "Jazz"
 composer = "Axel Stordahl, Paul Weston"
+poet = "Axel Stordahl, Paul Weston, Sammy Cahn"
 piece = "Jazz"
 typesetter = "OpenBook contributors (MusicXML import)"
 completion = "3"
@@ -15,7 +16,7 @@ copyright = "All Rights Reserved"
 [versions.Wikifonia]
 doChords = true
 doVoice = true
-doLyrics = false
+doLyrics = true
 doLyricsmore = false
 doLyricsmoremore = false
 doChordBars = false
@@ -34,6 +35,7 @@ doOwn = false
 	- retained the original copyright notice where printed; the underlying music is not relicensed.
 	- retained written measures, pickups, repeats and endings; lyrics omitted.
 	- tempo is an editorial practice suggestion.
+	- put in the lyrics from the same Wikifonia source.
 	TODO:
 	- proofread the music against the referenced PDF and check by ear.
 	- verify the copyright notice against the scan; no readable per-tune notice was recovered, so the archived rights notice is retained where available.
@@ -119,5 +121,13 @@ doOwn = false
 	g'2 a'4 fis'4 |
 	g'1 |
 	\endBar
+}
+{% endif %}
+{% if part == "LyricsWikifonia" %}\lyricmode {
+	Day by day __ I'm fal -- ling more in love with you And day by day __ my love seem to
+	grow __ There is -- "'nt" an -- y end to my de -- vo -- tion __ I's deep -- er dear by far
+	than a -- ny o cean __ I find that day by day __ You're mak -- ing all my dreams come true
+	So come what may __ I want you to know __ I'm yours a -- lone __ and I'm in love to stay,
+	As we go through the years day by day
 }
 {% endif %}

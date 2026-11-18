@@ -5,6 +5,7 @@ default_version = "Wikifonia"
 title = "A Summer Place"
 style = "Jazz"
 composer = "Max Steiner, Mack Discant"
+poet = "Mack Discant"
 piece = "Standard"
 typesetter = "OpenBook contributors (MusicXML import)"
 completion = "3"
@@ -16,8 +17,8 @@ copyrightextra = "Archived MusicXML notice retained; underlying music is not rel
 [versions.Wikifonia]
 doChords = true
 doVoice = true
-doLyrics = false
-doLyricsmore = false
+doLyrics = true
+doLyricsmore = true
 doLyricsmoremore = false
 doChordBars = false
 doGuitar = false
@@ -35,6 +36,7 @@ doOwn = false
 	- retained the archived MusicXML rights notice; no redistribution permission is asserted.
 	- retained written melody, chord changes, pickups, repeats and numbered endings; lyrics, slurs, dynamics and articulations other than fermatas omitted.
 	- tempo is an editorial practice suggestion.
+	- put in the lyrics from the same Wikifonia source.
 	TODO:
 	- proofread the complete melody, harmony and form against a printed edition and check by ear.
 	- verify source attribution, copyright notice and reuse terms; only the archived MusicXML notice is retained.
@@ -135,5 +137,18 @@ doOwn = false
 	c''2. ~ |
 	c''4. ~ c''4 r8 |
 	\endBar
+}
+{% endif %}
+{% if part == "LyricsWikifonia" %}\lyricmode {
+	There's __ a sum -- mer place __ where it may rain __ or storm __ yet I'm safe __ and
+	warm __ for with _ _ _ _ there are no _ gloom -- y skies when seen __ through the eyes of
+	those __ who are blessed with love __ and the sweet se -- cret of __ a sum -- mer place __
+	is that it's an -- y -- where __ when two peop -- ple share __ all their hopes __ all
+	their dreams __ all their love __
+}
+{% endif %}
+{% if part == "LyricsmoreWikifonia" %}\lyricmode {
+	in __ that sum -- mer place __ your arms reach out __ to me __ and my heart __ is free __
+	from all care __ for it knows __
 }
 {% endif %}

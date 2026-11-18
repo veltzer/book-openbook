@@ -5,6 +5,7 @@ default_version = "Wikifonia"
 title = "Tangerine"
 style = "Jazz"
 composer = "Victor Schertzinger"
+poet = "Johnny Mercer"
 piece = "Jazz"
 typesetter = "OpenBook contributors (MusicXML import)"
 completion = "3"
@@ -15,7 +16,7 @@ copyright = "All Rights Reserved"
 [versions.Wikifonia]
 doChords = true
 doVoice = true
-doLyrics = false
+doLyrics = true
 doLyricsmore = false
 doLyricsmoremore = false
 doChordBars = false
@@ -34,6 +35,7 @@ doOwn = false
 	- retained the original copyright notice where printed; the underlying music is not relicensed.
 	- retained written measures, pickups, repeats and endings; lyrics omitted.
 	- tempo is an editorial practice suggestion.
+	- put in the lyrics from the same Wikifonia source.
 	TODO:
 	- proofread the music against the referenced PDF and check by ear.
 	- verify the copyright notice against the scan; no readable per-tune notice was recovered, so the archived rights notice is retained where available.
@@ -125,5 +127,13 @@ doOwn = false
 	c'1 ~ |
 	c'2 r2 |
 	\endBar
+}
+{% endif %}
+{% if part == "LyricsWikifonia" %}\lyricmode {
+	Tan -- ger -- ine __ she is all they claim __ with her eyes of night and lips as bright
+	as flame __ Tan -- ger -- ine __ when she danc -- es by __ sen -- or -- i -- tas stare and
+	ca -- bal -- le -- ros sigh __ and Ive seen __ toasts to Tan -- ger -- ine __ raised in ev --
+	"'ry" bar a -- cross the Ar -- gen -- tine __ yes she has them all on the run but her
+	heeart be -- longs to just one her heart be -- longs to Tan -- ger -- ine. __
 }
 {% endif %}

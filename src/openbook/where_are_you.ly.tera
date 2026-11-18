@@ -5,6 +5,7 @@ default_version = "Wikifonia"
 title = "Where Are You?"
 style = "Jazz"
 composer = "Jimmy McHugh"
+poet = "Harold Adamson"
 piece = "Jazz"
 typesetter = "OpenBook contributors (MusicXML import)"
 completion = "3"
@@ -16,7 +17,7 @@ copyrightextra = "Reserved"
 [versions.Wikifonia]
 doChords = true
 doVoice = true
-doLyrics = false
+doLyrics = true
 doLyricsmore = false
 doLyricsmoremore = false
 doChordBars = false
@@ -35,6 +36,7 @@ doOwn = false
 	- retained the original copyright notice where printed; the underlying music is not relicensed.
 	- retained written measures, pickups, repeats and endings; lyrics omitted.
 	- tempo is an editorial practice suggestion.
+	- put in the lyrics from the same Wikifonia source.
 	TODO:
 	- proofread the music against the referenced PDF and check by ear.
 {% endif %}
@@ -137,5 +139,13 @@ doOwn = false
 	}
 	}
 	\endBar
+}
+{% endif %}
+{% if part == "LyricsWikifonia" %}\lyricmode {
+	Where are you? Where have you gone with -- out me? I thought you cared a -- bout me.
+	Where are you? Where's my heart? Where is the dream we start -- ed? I can't be -- lieve we
+	part -- ed. Where are you? When we said good -- bye, love, what had we to gain? When I
+	gave you my love was it all in vain? All life through, must I go on pre -- tend -- ing?
+	Where is my hap -- py end -- ing? Where Are You?
 }
 {% endif %}

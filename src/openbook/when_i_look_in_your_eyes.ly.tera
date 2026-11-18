@@ -5,6 +5,7 @@ default_version = "Wikifonia"
 title = "When I Look In Your Eyes"
 style = "Jazz"
 composer = "Leslie Bricusse"
+poet = "Leslie Bricusse"
 piece = "Jazz"
 typesetter = "OpenBook contributors (MusicXML import)"
 completion = "3"
@@ -16,7 +17,7 @@ copyrightextra = "Reserved"
 [versions.Wikifonia]
 doChords = true
 doVoice = true
-doLyrics = false
+doLyrics = true
 doLyricsmore = false
 doLyricsmoremore = false
 doChordBars = false
@@ -35,6 +36,7 @@ doOwn = false
 	- retained the original copyright notice where printed; the underlying music is not relicensed.
 	- retained written measures, pickups, repeats and endings; lyrics omitted.
 	- tempo is an editorial practice suggestion.
+	- put in the lyrics from the same Wikifonia source.
 	TODO:
 	- proofread the music against the referenced PDF and check by ear.
 	- verify editorial chord spacing in measures 7, 8, 15, 23; the archive places successive symbols at the same offset.
@@ -130,5 +132,16 @@ doOwn = false
 	c''8 e''8 f''8 e''8 bes'8 d''8 f''8 bes''8 |
 	a''1 |
 	\endBar
+}
+{% endif %}
+{% if part == "LyricsWikifonia" %}\lyricmode {
+	When I look in your eyes, I see the wis -- dom of the world in your eyes, I see the sad --
+	ness of a thous -- and good -- byes, When I look in your eyes. And it is no sur -- prise
+	to see the soft -- ness of the moon in your eyes, the gen -- tle spar -- kle of the stars
+	in the skies, When I look in your eyes. __ In your eyes I see the deep -- ness of the sea,
+	I see the deep -- ness of the love, The love I feel you felt for me. __ Au -- tumn comes,
+	sum -- mer dies, I see the pass -- ing of the years in your eyes, And when we part
+	there'll be no tears, no good -- byes, I'll just look in -- to your eyes. __ Those eyes,
+	so wise, so warm, so real, How I love the world your eyes re -- veal.
 }
 {% endif %}

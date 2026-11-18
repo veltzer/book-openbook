@@ -5,6 +5,7 @@ default_version = "Wikifonia"
 title = "Don't Go To Strangers"
 style = "Jazz"
 composer = "J. D. Martin, Russell Smith"
+poet = "J. D. Martin, Russell Smith"
 piece = "Jazz"
 typesetter = "OpenBook contributors (MusicXML import)"
 completion = "3"
@@ -15,7 +16,7 @@ copyright = "All Rights Reserved"
 [versions.Wikifonia]
 doChords = true
 doVoice = true
-doLyrics = false
+doLyrics = true
 doLyricsmore = false
 doLyricsmoremore = false
 doChordBars = false
@@ -34,6 +35,7 @@ doOwn = false
 	- retained the original copyright notice where printed; the underlying music is not relicensed.
 	- retained written measures, pickups, repeats and endings; lyrics omitted.
 	- tempo is an editorial practice suggestion.
+	- put in the lyrics from the same Wikifonia source.
 	TODO:
 	- proofread the music against the referenced PDF and check by ear.
 	- verify editorial chord spacing in measures 7, 15, 31; the archive places successive symbols at the same offset.
@@ -138,5 +140,16 @@ doOwn = false
 	}
 	}
 	\endBar
+}
+{% endif %}
+{% if part == "LyricsWikifonia" %}\lyricmode {
+	Build you dreams __ to the stars a -- bove, __ but when you need __ some -- one true to
+	love, __ don't go to stran -- gers dar -- ling, come to me. __ Play with fire __ till your
+	fin -- gers burn, __ and when there's no -- place for you to turn, __ don't go to stran --
+	gers, dar -- ling come to me. __ For when you hear the call to fol -- low your heart,
+	you'll fol -- low your heart, I "know;" __ I've been through it all, for I'm and old hand,
+	and I'll un -- der -- stand __ if you go. So make your mark __ for your friends to see __
+	but when you need __ more than com -- pan -- ny, __ don't go to stran -- gers, darl --
+	ing, come to me. __ me.
 }
 {% endif %}

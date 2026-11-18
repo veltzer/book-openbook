@@ -5,6 +5,7 @@ default_version = "Wikifonia"
 title = "It's De-lovely"
 style = "Jazz"
 composer = "Cole Porter"
+poet = "Cole Porter"
 piece = "Jazz"
 typesetter = "OpenBook contributors (MusicXML import)"
 completion = "3"
@@ -16,7 +17,7 @@ copyrightextra = "Trusts. Chappell & Co., Owner of Publication and Allied Rights
 [versions.Wikifonia]
 doChords = true
 doVoice = true
-doLyrics = false
+doLyrics = true
 doLyricsmore = false
 doLyricsmoremore = false
 doChordBars = false
@@ -35,6 +36,7 @@ doOwn = false
 	- retained the original copyright notice where printed; the underlying music is not relicensed.
 	- retained written measures, pickups, repeats and endings; lyrics omitted.
 	- tempo is an editorial practice suggestion.
+	- put in the lyrics from the same Wikifonia source.
 	TODO:
 	- proofread the music against the referenced PDF and check by ear.
 {% endif %}
@@ -149,5 +151,18 @@ doOwn = false
 	}
 	}
 	\endBar
+}
+{% endif %}
+{% if part == "LyricsWikifonia" %}\lyricmode {
+	The night is young, __ The skies are clear __ And if you want. __ to go walk -- ing,
+	dear, __ It's de -- light -- ful, _ it's de -- li -- cious, __ It's De -- love -- ly. __ I
+	un -- der -- stand __ the reas -- on why __ You're sent -- i -- men -- tal, "'cause" so am
+	I, __ It's de -- light -- ful, __ it's de -- li -- cious, __ It's De -- love -- ly. __ You
+	can tell at a glance __ What a swell night __ this is for ro -- mance, __ You can hear
+	dear Moth -- er Na -- ture mur -- mur -- ing low, __ "'Let" your -- self "go?'" __ So
+	please be sweet, __ my chick -- a -- dee, __ And when I kiss __ you, just say to me, __
+	"'It's" de -- light -- ful, __ it's de -- li -- cious, _ It's de -- lect -- a -- ble, __
+	it's de -- lir -- i -- ous, __ It's di -- lem -- na, it's __ de -- li -- mit, it's de --
+	luxe, It's De -- love -- "ly.'" __ The love -- ly __
 }
 {% endif %}

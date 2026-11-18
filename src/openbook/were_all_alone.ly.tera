@@ -4,7 +4,8 @@ default_version = "Wikifonia"
 [attributes]
 title = "We're All Alone"
 style = "Jazz"
-composer = "William Scaggs, William Scaggs"
+composer = "William Scaggs"
+poet = "William Scaggs"
 piece = "Standard"
 typesetter = "OpenBook contributors (MusicXML import)"
 completion = "3"
@@ -16,8 +17,8 @@ copyrightextra = "Archived MusicXML notice retained; underlying music is not rel
 [versions.Wikifonia]
 doChords = true
 doVoice = true
-doLyrics = false
-doLyricsmore = false
+doLyrics = true
+doLyricsmore = true
 doLyricsmoremore = false
 doChordBars = false
 doGuitar = false
@@ -35,6 +36,7 @@ doOwn = false
 	- retained the archived MusicXML rights notice; no redistribution permission is asserted.
 	- retained written melody, chord changes, pickups, repeats and numbered endings; lyrics, slurs, dynamics and articulations other than fermatas omitted.
 	- tempo is an editorial practice suggestion.
+	- put in the lyrics from the same Wikifonia source.
 	TODO:
 	- proofread the complete melody, harmony and form against a printed edition and check by ear.
 	- verify source attribution, copyright notice and reuse terms; only the archived MusicXML notice is retained.
@@ -123,5 +125,19 @@ doOwn = false
 	d''1 |
 	fis'1 |
 	\endBar
+}
+{% endif %}
+{% if part == "LyricsWikifonia" %}\lyricmode {
+	Out -- side the rain be -- gins __ and it may ne -- ver end So cry no more on the shore
+	dream will take us out to __ _ sea For ev -- er -- more for ev -- er -- more Close the win --
+	dow calm the light and it will be all right no need to bo -- ther now Let it out let it
+	all be -- gin learn how to pre -- tend __ Once a sto -- ry told it __ can't help __ _ grow --
+	ing old ro -- ses _ do lov -- ers too so cast your sea sons to the wind and hold me dear
+	on hold me dear All's for -- gott -- _ en now __ _ my love __ we're all __ _ a -- lone __
+}
+{% endif %}
+{% if part == "LyricsmoreWikifonia" %}\lyricmode {
+	Close your eyes A -- _ mie __ and you can be with me neath the waves through the caves of
+	ours long for -- _ gott -- _ en now we're all a -- lone we're all a -- lone
 }
 {% endif %}

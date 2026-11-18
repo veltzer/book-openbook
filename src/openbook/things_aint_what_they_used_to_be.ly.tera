@@ -5,6 +5,7 @@ default_version = "Wikifonia"
 title = "Things Ain't What They Used to Be"
 style = "Jazz"
 composer = "Mercer Ellington"
+poet = "Mercer Ellington"
 piece = "Jazz"
 typesetter = "OpenBook contributors (MusicXML import)"
 completion = "3"
@@ -15,8 +16,8 @@ copyright = "All Rights Reserved"
 [versions.Wikifonia]
 doChords = true
 doVoice = true
-doLyrics = false
-doLyricsmore = false
+doLyrics = true
+doLyricsmore = true
 doLyricsmoremore = false
 doChordBars = false
 doGuitar = false
@@ -34,6 +35,7 @@ doOwn = false
 	- retained the original copyright notice where printed; the underlying music is not relicensed.
 	- retained written measures, pickups, repeats and endings; lyrics omitted.
 	- tempo is an editorial practice suggestion.
+	- put in the lyrics from the same Wikifonia source.
 	TODO:
 	- proofread the music against the referenced PDF and check by ear.
 	- verify the copyright notice against the scan; no readable per-tune notice was recovered, so the archived rights notice is retained where available.
@@ -109,5 +111,22 @@ doOwn = false
 	\mark \markup { \musicglyph "scripts.coda" } es''1 ~ |
 	es''2 r2 |
 	\endBar
+}
+{% endif %}
+{% if part == "LyricsWikifonia" %}\lyricmode {
+	Got so wear -- y of be -- "in'" noth -- "in'," __ felt so drear -- y just do -- "in'"
+	noth -- "in'," __ did -- "'nt" care ev -- er get -- "tin'" noth -- "in'," felt so low. __
+	Now my eyes on the far ho ri -- zon can see a glow __ an -- noun -- "cin'" Things ain't
+	what they used to be. __ Look at that ar -- my __ fight -- "in'" to be free. It does --
+	n't bar me! __ Shows me how to go with my head "up;" __ eyes ain't look -- "in'" low.
+	Don't feel fed up, __ that's how come I see a vic -- tor -- "y;" __ be -- lieve me things
+	ain't what they used to be. __
+}
+{% endif %}
+{% if part == "LyricsmoreWikifonia" %}\lyricmode {
+	No use be -- "in'" a doubt -- "in'" Thom -- as, __ no ig -- nor -- "in'" that ros -- y
+	prom -- ise, __ now I know there's a hap -- py sto -- ry yet to come. __ It's the dawn of
+	the day of glor -- "y:" mil -- len -- ni -- um. __ I tell you things ain't what they used
+	to be. __
 }
 {% endif %}

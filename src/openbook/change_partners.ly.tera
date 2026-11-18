@@ -5,6 +5,7 @@ default_version = "Wikifonia"
 title = "Change Partners"
 style = "Jazz"
 composer = "Irving Berlin"
+poet = "Irving Berlin"
 piece = "Standard"
 typesetter = "OpenBook contributors (MusicXML import)"
 completion = "3"
@@ -16,7 +17,7 @@ copyrightextra = "Archived MusicXML notice retained; underlying music is not rel
 [versions.Wikifonia]
 doChords = true
 doVoice = true
-doLyrics = false
+doLyrics = true
 doLyricsmore = false
 doLyricsmoremore = false
 doChordBars = false
@@ -37,6 +38,7 @@ doOwn = false
 	- retained written melody, chord changes, pickups, repeats and numbered endings; lyrics omitted.
 	- imported explicit 7alt symbols using the book's altered-dominant notation where present.
 	- tempo is an editorial practice suggestion.
+	- put in the lyrics from the same Wikifonia source.
 	TODO:
 	- proofread the complete melody, harmony and form against the referenced PDF and check by ear.
 	- verify source attribution, copyright notice and reuse terms against the scan; only the archived MusicXML notice is retained.
@@ -172,5 +174,16 @@ doOwn = false
 	f'2 \times 2/3 { e'4 f'4 g'4 } |
 	f'2. r4 |
 	\endBar
+}
+{% endif %}
+{% if part == "LyricsWikifonia" %}\lyricmode {
+	Must you dance __ ev -- "'ry" dance __ with the same __ for -- tu -- nate man? __ You
+	have danced with him since the mus -- ic be -- gan. __ Won't you change part -- ners and
+	dance with me? __ Must you dance __ quite so close __ with your lips __ touch -- ing his
+	face? __ Can't you see I'm long -- ing to be in his place? __ Won't you change part --
+	ners and dance with me? __ Ask him to sit this one out, and while your a -- lone __ I'll
+	tell the wait -- er to tell him he's want -- ed on the tel -- e -- phone. You've been
+	locked __ in his arms __ ev -- er since __ heav -- en knows when. __ Won't you change part --
+	ners, and then __ you may nev -- er want __ to change __ part -- ners a -- gain.
 }
 {% endif %}

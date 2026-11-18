@@ -5,6 +5,7 @@ default_version = "Wikifonia"
 title = "What Will I Tell My Heart"
 style = "Jazz"
 composer = "Jack Lawrence, Pete Tinturin"
+poet = "Irving Gordon"
 piece = "Standard"
 typesetter = "OpenBook contributors (MusicXML import)"
 completion = "3"
@@ -16,7 +17,7 @@ copyrightextra = "Archived MusicXML notice retained; underlying music is not rel
 [versions.Wikifonia]
 doChords = true
 doVoice = true
-doLyrics = false
+doLyrics = true
 doLyricsmore = false
 doLyricsmoremore = false
 doChordBars = false
@@ -37,6 +38,7 @@ doOwn = false
 	- retained written melody, chord changes, pickups, repeats and numbered endings; lyrics omitted.
 	- imported explicit 7alt symbols using the book's altered-dominant notation where present.
 	- tempo is an editorial practice suggestion.
+	- put in the lyrics from the same Wikifonia source.
 	TODO:
 	- proofread the complete melody, harmony and form against the referenced PDF and check by ear.
 	- verify source attribution, copyright notice and reuse terms against the scan; only the archived MusicXML notice is retained.
@@ -127,5 +129,16 @@ doOwn = false
 	es'8 - "Vm7" g'8 bes'8 d''8 ~ d''4 d''8 bes'8 ~ |
 	bes'2. r4 |
 	\endBar
+}
+{% endif %}
+{% if part == "LyricsWikifonia" %}\lyricmode {
+	I'll try to ex -- plain __ to friends dear, __ the rea -- son we two __ are a -- "part;" __
+	I know what to tell __ our friends dear, __ but what will I tell __ my heart? __ It's eas --
+	y to say __ to strang -- ers, __ that we played a game __ from the start, __ it's eas -- y
+	to lie __ to strang -- ers, __ but what will I tell __ my heart? __ When I smile to hide
+	all the tears in -- side, what an ache it will "bring;" then I'll wan -- der home to a tel --
+	e -- phone that for -- got how to ring. __ I could say you'll soon __ be back, dear, __ to
+	fool the whole town __ may be smart. __ I'll tell them you'll soon __ be back, dear, __
+	but what will I tell __ my heart? __
 }
 {% endif %}

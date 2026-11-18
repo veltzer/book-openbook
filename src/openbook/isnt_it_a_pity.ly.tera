@@ -5,6 +5,7 @@ default_version = "Wikifonia"
 title = "Isn't It A Pity"
 style = "Jazz"
 composer = "George Gershwin"
+poet = "Ira Gershwin"
 piece = "Standard"
 typesetter = "OpenBook contributors (MusicXML import)"
 completion = "3"
@@ -16,8 +17,8 @@ copyrightextra = "Archived MusicXML notice retained; underlying music is not rel
 [versions.Wikifonia]
 doChords = true
 doVoice = true
-doLyrics = false
-doLyricsmore = false
+doLyrics = true
+doLyricsmore = true
 doLyricsmoremore = false
 doChordBars = false
 doGuitar = false
@@ -37,6 +38,7 @@ doOwn = false
 	- retained written melody, chord changes, pickups, repeats and numbered endings; lyrics omitted.
 	- imported explicit 7alt symbols using the book's altered-dominant notation where present.
 	- tempo is an editorial practice suggestion.
+	- put in the lyrics from the same Wikifonia source.
 	TODO:
 	- proofread the complete melody, harmony and form against the referenced PDF and check by ear.
 	- verify source attribution, copyright notice and reuse terms against the scan; only the archived MusicXML notice is retained.
@@ -174,5 +176,30 @@ doOwn = false
 	}
 	}
 	\endBar
+}
+{% endif %}
+{% if part == "LyricsWikifonia" %}\lyricmode {
+	"He.~Why" did I wan -- der, here and there and yon -- der, Wast -- ing prec -- ious time,
+	For no rea -- son or rhyme? Is -- n't it a pit -- y? __ Is -- n't it a crime? My journ --
+	ey's end -- "ed;" Ev -- "'ry" -- thing is splen -- "did:" Meet -- ing you to -- day Has
+	giv -- en me a Won -- der ful i -- dea, __ Here I stay! It's a fun -- ny thing I look at
+	you __ I get a thrill __ I nev -- er knew, __ Is -- n't it a pit -- y we nev -- er met __
+	be -- fore? Here we are at last! It's like a dream! __ the two of us. __ A per -- fect
+	team! __ Is -- n't it a pit -- y we nev -- er met __ be -- fore? Im -- ag -- ine all the
+	lone -- ly years we've wast -- "ed:" You, with the neigh -- bors, I, at sil -- ly lab --
+	"ors;" What joys un -- tast -- ed! You, read -- ing Hei -- ne, I, some -- where in Chi --
+	na. Hap -- pi -- est of men I'm sure to be, __ If on -- ly you __ will say to me, __
+	"'It's" an aw -- ful pit -- y, We nev -- er, nev -- er met be -- "fore.'" "fore.'" __
+}
+{% endif %}
+{% if part == "LyricsmoreWikifonia" %}\lyricmode {
+	"She.~While" you were flirt -- ing I was bus -- y knit -- ting, hop -- ing I'd sur --
+	vive, Hop -- ing you'd _ ar -- rive. All my Dres -- den boy -- "friends~were" __ on -- ly
+	half a -- live. Sleep -- y was Her -- mann, Fritz was like a ser -- mon, Hans was such a
+	bore! How well you planned it! I just could -- sn't "stand~it" __ An -- y more! _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _
+	Fish -- ing for sal -- mon, Los -- ing at back -- gam -- mon. What joys un -- tast -- ed!
+	My nights were sour __ _ Spemt with Scho -- pen -- hau -- er. Let's for -- get the past
+	Let's both a -- gree __ That I'm for you __ and you're for me, __ And it's such a pit --
+	y, We nev -- er, nev -- er met be
 }
 {% endif %}

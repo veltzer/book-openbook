@@ -5,6 +5,7 @@ default_version = "Wikifonia"
 title = "You"
 style = "Jazz"
 composer = "Walter Donaldson"
+poet = "Harold Adamson"
 piece = "Standard"
 typesetter = "OpenBook contributors (MusicXML import)"
 completion = "3"
@@ -16,8 +17,8 @@ copyrightextra = "Archived MusicXML notice retained; underlying music is not rel
 [versions.Wikifonia]
 doChords = true
 doVoice = true
-doLyrics = false
-doLyricsmore = false
+doLyrics = true
+doLyricsmore = true
 doLyricsmoremore = false
 doChordBars = false
 doGuitar = false
@@ -37,6 +38,7 @@ doOwn = false
 	- retained written melody, chord changes, pickups, repeats and numbered endings; lyrics omitted.
 	- imported explicit 7alt symbols using the book's altered-dominant notation where present.
 	- tempo is an editorial practice suggestion.
+	- put in the lyrics from the same Wikifonia source.
 	TODO:
 	- proofread the complete melody, harmony and form against the referenced PDF and check by ear.
 	- verify source attribution, copyright notice and reuse terms against the scan; only the archived MusicXML notice is retained.
@@ -176,5 +178,19 @@ doOwn = false
 	c''1 ~ |
 	c''2 r2 |
 	\endBar
+}
+{% endif %}
+{% if part == "LyricsWikifonia" %}\lyricmode {
+	You __ Gee! but you're won -- der -- ful You __ love -- ly you! __ You com -- plete -- ly
+	sat -- is -- fy I'm con -- fess -- "in'" that is why there's no -- bod -- y like you. you. __
+	Just to think __ that you love me __ Makes my fu -- ture look strong __ I swear by stars a --
+	bove me __ I'm darned if I don't __ feel like writ -- "in'" a song __ a song __ a -- bout
+	You __ Mus -- ic and words __ a -- bout you __ love -- ly you __ Let me think up phras --
+	es for, let me sing out prais -- es for, no -- bod -- y but you. __
+}
+{% endif %}
+{% if part == "LyricsmoreWikifonia" %}\lyricmode {
+	You __ So much de -- pends __ up -- on you __ tell me true __ Will it be my fate at all?
+	Will I ev -- er rate at all with some -- bod -- y like
 }
 {% endif %}

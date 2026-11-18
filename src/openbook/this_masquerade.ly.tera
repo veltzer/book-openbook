@@ -5,6 +5,7 @@ default_version = "Wikifonia"
 title = "This Masquerade"
 style = "Jazz"
 composer = "Leon Russell"
+poet = "Leon Russell"
 piece = "Standard"
 typesetter = "OpenBook contributors (MusicXML import)"
 completion = "3"
@@ -16,8 +17,8 @@ copyrightextra = "Archived MusicXML notice retained; underlying music is not rel
 [versions.Wikifonia]
 doChords = true
 doVoice = true
-doLyrics = false
-doLyricsmore = false
+doLyrics = true
+doLyricsmore = true
 doLyricsmoremore = false
 doChordBars = false
 doGuitar = false
@@ -37,6 +38,7 @@ doOwn = false
 	- retained written melody, chord changes, pickups, repeats and numbered endings; lyrics omitted.
 	- imported explicit 7alt symbols using the book's altered-dominant notation where present.
 	- tempo taken from archived MusicXML.
+	- put in the lyrics from the same Wikifonia source.
 	TODO:
 	- proofread the complete melody, harmony and form against the referenced PDF and check by ear.
 	- verify source attribution, copyright notice and reuse terms against the scan; only the archived MusicXML notice is retained.
@@ -146,5 +148,20 @@ doOwn = false
 	\once \override NoteHead.style = #'slash bes'4 ^ "(Vamp till cue)" \once \override NoteHead.style = #'slash bes'4 \once \override NoteHead.style = #'slash bes'4 \once \override NoteHead.style = #'slash bes'4 |
 	}
 	\endBar
+}
+{% endif %}
+{% if part == "LyricsWikifonia" %}\lyricmode {
+	_ _ _ _ _ _ _ _ Are we real -- ly hap __ py here __ with this lone -- ly game we play __ _
+	look -- ing for words __ to say? __ _ search -- ing but not find -- ing un __ der -- stand -- _
+	ing an -- y way __ We're lost __ in a mas -- _ quer -- ade __ both a -- fraid to say __
+	we're just __ too far __ a -- _ way __ from be -- ing close to -- geth -- er from the
+	start _ We tried to talk __ it o __ ver but the words __ got in __ the _ way __ we're lost __
+	in -- side __ this lone -- ly game __ we play __
+}
+{% endif %}
+{% if part == "LyricsmoreWikifonia" %}\lyricmode {
+	_ _ _ _ _ _ _ _ Thoughts of leav -- ing dis -- ap -- pear __ ev -- ry time I see your
+	eyes __ No mat -- ter how hard __ I try __ to un -- der -- stand the rea __ sons that __
+	we _ car -- ry on __ this way __
 }
 {% endif %}

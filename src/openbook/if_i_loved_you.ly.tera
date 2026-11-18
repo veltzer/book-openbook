@@ -5,6 +5,7 @@ default_version = "Wikifonia"
 title = "If I Loved You"
 style = "Jazz"
 composer = "Richard Rodgers"
+poet = "Oscar Hammerstein II, Richard Rodgers"
 piece = "Jazz"
 typesetter = "OpenBook contributors (MusicXML import)"
 completion = "3"
@@ -15,8 +16,8 @@ copyright = "All Rights Reserved"
 [versions.Wikifonia]
 doChords = true
 doVoice = true
-doLyrics = false
-doLyricsmore = false
+doLyrics = true
+doLyricsmore = true
 doLyricsmoremore = false
 doChordBars = false
 doGuitar = false
@@ -34,6 +35,7 @@ doOwn = false
 	- retained the original copyright notice where printed; the underlying music is not relicensed.
 	- retained written measures, pickups, repeats and endings; lyrics omitted.
 	- tempo is an editorial practice suggestion.
+	- put in the lyrics from the same Wikifonia source.
 	TODO:
 	- proofread the music against the referenced PDF and check by ear.
 	- verify the copyright notice against the scan; no readable per-tune notice was recovered, so the archived rights notice is retained where available.
@@ -123,5 +125,16 @@ doOwn = false
 	f''2 f''2 ~ |
 	f''2 r2 |
 	\endBar
+}
+{% endif %}
+{% if part == "LyricsWikifonia" %}\lyricmode {
+	If I loved you time __ and a -- ain __ I would try to say all I'd want you to know __ go __
+	Long -- ing to tell you but a -- fraid and shy I'd let my gold -- en chanc -- es pass me
+	by! Soon "you;d" leave me off __ you would go __ in the mist of day nev -- er nev -- er to
+	know __ How I loved you If I loved you __
+}
+{% endif %}
+{% if part == "LyricsmoreWikifonia" %}\lyricmode {
+	If I loved you words __ would -- nt come __ in an eas -- y way round in cir -- cles I'd
 }
 {% endif %}

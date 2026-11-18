@@ -5,6 +5,7 @@ default_version = "Wikifonia"
 title = "Hey there"
 style = "Jazz"
 composer = "Jerry Ross, Richard Adler"
+poet = "Jerry Ross, Richard Adler"
 piece = "Jazz"
 typesetter = "OpenBook contributors (MusicXML import)"
 completion = "3"
@@ -16,8 +17,8 @@ copyrightextra = "of America. All Rights Reserved."
 [versions.Wikifonia]
 doChords = true
 doVoice = true
-doLyrics = false
-doLyricsmore = false
+doLyrics = true
+doLyricsmore = true
 doLyricsmoremore = false
 doChordBars = false
 doGuitar = false
@@ -35,6 +36,7 @@ doOwn = false
 	- retained the original copyright notice where printed; the underlying music is not relicensed.
 	- retained written measures, pickups, repeats and endings; lyrics omitted.
 	- tempo is an editorial practice suggestion.
+	- put in the lyrics from the same Wikifonia source.
 	TODO:
 	- proofread the music against the referenced PDF and check by ear.
 {% endif %}
@@ -123,5 +125,18 @@ doOwn = false
 	e'4 f'2. ~ |
 	f'2. r4 |
 	\endBar
+}
+{% endif %}
+{% if part == "LyricsWikifonia" %}\lyricmode {
+	Hey there you with the stars in your eyes love nev -- er made a fool of you you used to
+	be too wise! __ hey there you on that high fly -- ing cloud "tho'" she wont throw a crumb
+	to you you'll think some day she'll come to you __ bet -- ter for break it and she wont
+	care __ wont you take this ad -- vice I hand you like a broth -- er? __ or are you not see --
+	ing things too clear are you too much in love to hear is it all go -- ing in one ear and
+	out the oth -- er? __
+}
+{% endif %}
+{% if part == "LyricsmoreWikifonia" %}\lyricmode {
+	get her Her with her nose in the air she has you danc -- ing on a string
 }
 {% endif %}

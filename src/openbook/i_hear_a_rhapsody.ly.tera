@@ -5,6 +5,7 @@ default_version = "Wikifonia"
 title = "I Hear a Rhapsody"
 style = "Jazz"
 composer = "Dick Gasparre, George Fragos, Jack Baker"
+poet = "Dick Gasparre, George Fragos, Jack Baker"
 piece = "Jazz"
 typesetter = "OpenBook contributors (MusicXML import)"
 completion = "3"
@@ -16,7 +17,7 @@ copyrightextra = "All Rights Reserved. International Copyright Secured."
 [versions.Wikifonia]
 doChords = true
 doVoice = true
-doLyrics = false
+doLyrics = true
 doLyricsmore = false
 doLyricsmoremore = false
 doChordBars = false
@@ -35,6 +36,7 @@ doOwn = false
 	- retained the original copyright notice where printed; the underlying music is not relicensed.
 	- retained written measures, pickups, repeats and endings; lyrics omitted.
 	- tempo is an editorial practice suggestion.
+	- put in the lyrics from the same Wikifonia source.
 	TODO:
 	- proofread the music against the referenced PDF and check by ear.
 	- verify editorial chord spacing in measures 21; the archive places successive symbols at the same offset.
@@ -124,5 +126,14 @@ doOwn = false
 	f'4. es'8 es'2 ( |
 	es'4 ) r4 r2 |
 	\endBar
+}
+{% endif %}
+{% if part == "LyricsWikifonia" %}\lyricmode {
+	And when I hear you call __ so soft -- ly to me, __ I don't hear a call at all, __ I hear
+	a rhap -- so -- dy. __ And when your spark -- ling eyes __ are smil -- ing at me, __ then
+	soft through the star -- lit skies __ I hear a rhap -- so -- dy. __ My days are so blue
+	when you're a -- way. __ My heart longs for you, so won't you stay? __ My dar -- ling,
+	hold me tight __ and whis -- per to me. __ Then soft through a star -- ry night __ I hear
+	a rhap -- so -- dy. __
 }
 {% endif %}

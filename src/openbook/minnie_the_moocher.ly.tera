@@ -5,6 +5,7 @@ default_version = "Wikifonia"
 title = "Minnie the Moocher"
 style = "Jazz"
 composer = "Cab Calloway, Irving Mills"
+poet = "Cab Calloway, Irving Mills"
 piece = "Standard"
 typesetter = "OpenBook contributors (MusicXML import)"
 completion = "3"
@@ -16,8 +17,8 @@ copyrightextra = "Archived MusicXML notice retained; underlying music is not rel
 [versions.Wikifonia]
 doChords = true
 doVoice = true
-doLyrics = false
-doLyricsmore = false
+doLyrics = true
+doLyricsmore = true
 doLyricsmoremore = false
 doChordBars = false
 doGuitar = false
@@ -37,6 +38,7 @@ doOwn = false
 	- retained written melody, chord changes, pickups, repeats and numbered endings; lyrics omitted.
 	- imported explicit 7alt symbols using the book's altered-dominant notation where present.
 	- tempo is an editorial practice suggestion.
+	- put in the lyrics from the same Wikifonia source.
 	TODO:
 	- proofread the complete melody, harmony and form against the referenced PDF and check by ear.
 	- verify source attribution, copyright notice and reuse terms against the scan; only the archived MusicXML notice is retained.
@@ -117,5 +119,21 @@ doOwn = false
 	}
 	}
 	\endBar
+}
+{% endif %}
+{% if part == "LyricsWikifonia" %}\lyricmode {
+	Now here's a sto -- ry "'bout" Min -- nie the Mooch -- er She was a low -- down hooch --
+	y chooch -- er She was the rough -- est tough -- est frail But Min -- nie had a heart as
+	big as a whale __ Ho de ho de "ho~(ho..de~ho..de..ho)" __ Rah de dah de
+	"dah~(Rah..de~dah..de..dah)" __ Tee -- dle dee de "dee~(Tee..dle~dee..de..dee)" __ Ho de
+	ho __ _ de "ho~(Ho..de~ho..de..ho)" __ "2.She" ho __ _ de "ho~ho..de..ho)" __ Poor Min,
+	Poor Min, Poor Min
+}
+{% endif %}
+{% if part == "LyricsmoreWikifonia" %}\lyricmode {
+	_ messed a -- _ round wid a bloke named Smoke -- y She loved him "tho'" he was a "'coke" --
+	"y'" He took her down to Chi -- na -- town And showed her how to kick the gong __ _ a --
+	rond __ Hi de hi de "hi~(Hi..de~hi..de..hi)" __ Ree de dah de "doo~(Ree..de~dah..de..doo)" __
+	Bo -- de dah do "dah~(Bo..de~dah..do.dah)" __ Ho de
 }
 {% endif %}

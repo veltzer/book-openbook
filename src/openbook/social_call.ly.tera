@@ -5,6 +5,7 @@ default_version = "Wikifonia"
 title = "Social Call"
 style = "Jazz"
 composer = "Gigi Gryce"
+poet = "Jon Hendricks"
 piece = "Standard"
 typesetter = "OpenBook contributors (MusicXML import)"
 completion = "3"
@@ -16,7 +17,7 @@ copyrightextra = "Archived MusicXML notice retained; underlying music is not rel
 [versions.Wikifonia]
 doChords = true
 doVoice = true
-doLyrics = false
+doLyrics = true
 doLyricsmore = false
 doLyricsmoremore = false
 doChordBars = false
@@ -37,6 +38,7 @@ doOwn = false
 	- retained written melody, chord changes, pickups, repeats and numbered endings; lyrics omitted.
 	- imported explicit 7alt symbols using the book's altered-dominant notation where present.
 	- tempo taken from archived MusicXML.
+	- put in the lyrics from the same Wikifonia source.
 	TODO:
 	- proofread the complete melody, harmony and form against the referenced PDF and check by ear.
 	- verify source attribution, copyright notice and reuse terms against the scan; only the archived MusicXML notice is retained.
@@ -129,5 +131,15 @@ doOwn = false
 	d'8 es'4. c'8 d'4. |
 	bes2 r2 |
 	\endBar
+}
+{% endif %}
+{% if part == "LyricsWikifonia" %}\lyricmode {
+	Hap -- penned to pass your door -- way, gave __ you a buzz, that's all. __ Late -- ly I
+	thought lots a -- bout you so I thought I'd pay __ a so -- cial call. Do you re -- call
+	the old days, we __ used to have a ball. __ Not that I'm lone -- some with -- out you, I
+	just thought I'd pay __ a so -- cial call. __ I lie and say __ things are just swell, __
+	but to tell the "truth:" __ I ha -- ven't been __ to well. And if you should try to kiss
+	me I __ wou -- ldn't ev -- en stall. __ May -- be we'll get back to -- ge -- ther star --
+	ting with this in -- ci -- den -- tal e -- le -- men -- tal sim -- ple so -- cial call.
 }
 {% endif %}

@@ -5,6 +5,7 @@ default_version = "Wikifonia"
 title = "Feeling Good"
 style = "Standard"
 composer = "Anthony Newley"
+poet = "Leslie Bricusse"
 piece = "Standard"
 typesetter = "OpenBook contributors (MusicXML import)"
 completion = "3"
@@ -16,8 +17,8 @@ copyrightextra = "Archived MusicXML notice retained; underlying music is not rel
 [versions.Wikifonia]
 doChords = true
 doVoice = true
-doLyrics = false
-doLyricsmore = false
+doLyrics = true
+doLyricsmore = true
 doLyricsmoremore = false
 doChordBars = false
 doGuitar = false
@@ -37,6 +38,7 @@ doOwn = false
 	- retained written melody, chord changes, pickups, repeats and numbered endings; lyrics omitted.
 	- imported explicit 7alt symbols using the book's altered-dominant notation where present.
 	- tempo is an editorial practice suggestion.
+	- put in the lyrics from the same Wikifonia source.
 	TODO:
 	- proofread the complete melody, harmony and form against the referenced PDF and check by ear.
 	- verify source attribution, copyright notice and reuse terms against the scan; only the archived MusicXML notice is retained.
@@ -148,5 +150,21 @@ doOwn = false
 	d''1 ~ |
 	d''1 ^\fermata |
 	\endBar
+}
+{% endif %}
+{% if part == "LyricsWikifonia" %}\lyricmode {
+	Birds fly -- ing high, you now how I feel. Sun __ _ in the sky, you know how I feel.
+	Breeze __ _ drift -- ing by, you know how I feel. It's a new dawn, it's a new day, it's a
+	new life __ for __ me. __ Feel -- ing good. __ good. __ Drag -- on -- fly out in the sun,
+	hyou know what I mean. But -- ter -- flies all hav -- ing fun, you know what I mean. Sleep
+	in peace when day is done, that's what I mean. __ An this old world is a new world and a
+	bold world __ for __ me. __ Stars when you shine, you know how I feel. Scent of the pine,
+	you know how I feel. Free -- dom is mine, I know how I feel. It's a new dawn, "it;'s" a
+	new day, it's a new life __ for __ me. __ _ Feel -- ing good. __
+}
+{% endif %}
+{% if part == "LyricsmoreWikifonia" %}\lyricmode {
+	Fish in the sea, you now how I feel. Riv -- er run -- ning free, you know how I feel.
+	Blos -- soms on the tree, you know how I feel.
 }
 {% endif %}

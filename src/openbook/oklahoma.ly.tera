@@ -5,6 +5,7 @@ default_version = "Wikifonia"
 title = "Oklahoma"
 style = "Standard"
 composer = "Richard Rodgers"
+poet = "Oscar Hammerstein II"
 piece = "Standard"
 typesetter = "OpenBook contributors (MusicXML import)"
 completion = "3"
@@ -16,7 +17,7 @@ copyrightextra = "Archived MusicXML notice retained; underlying music is not rel
 [versions.Wikifonia]
 doChords = true
 doVoice = true
-doLyrics = false
+doLyrics = true
 doLyricsmore = false
 doLyricsmoremore = false
 doChordBars = false
@@ -37,6 +38,7 @@ doOwn = false
 	- retained written melody, chord changes, pickups, repeats and numbered endings; lyrics omitted.
 	- imported explicit 7alt symbols using the book's altered-dominant notation where present.
 	- tempo is an editorial practice suggestion.
+	- put in the lyrics from the same Wikifonia source.
 	TODO:
 	- proofread the complete melody, harmony and form against the referenced PDF and check by ear.
 	- verify source attribution, copyright notice and reuse terms against the scan; only the archived MusicXML notice is retained.
@@ -192,5 +194,15 @@ doOwn = false
 	}
 	c''8 r8 r4 |
 	\endBar
+}
+{% endif %}
+{% if part == "LyricsWikifonia" %}\lyricmode {
+	"O~k" -- la -- hom -- a where the wind comes sweep -- "in'" down the plain, __ and the
+	wav -- "in'" wheat can sure smell sweet when the wind comes right be -- hind the rain. __
+	O __ k -- la hom -- a ev -- "'ry" night my hon -- ey lamb and I, __ sit a -- lone and talk
+	and watch a hawke mak -- ing la -- zy cir -- cles in the sky. __ We know we be -- long to
+	the land __ and the land we be -- long to is grand! __ And when we say __ yeeow! A -- yip --
+	i -- o -- ee -- ay! __ We're on -- ly say -- "in'" you're do -- "in'" fine Ok -- la -- ho --
+	ma! Ok -- la ho -- ma __ O. K. K. __
 }
 {% endif %}

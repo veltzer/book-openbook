@@ -4,7 +4,8 @@ default_version = "Wikifonia"
 [attributes]
 title = "From A Distance"
 style = "Jazz"
-composer = "Julie Gold, Julie Gold"
+composer = "Julie Gold"
+poet = "Julie Gold"
 piece = "Standard"
 typesetter = "OpenBook contributors (MusicXML import)"
 completion = "3"
@@ -16,7 +17,7 @@ copyrightextra = "Archived MusicXML notice retained; underlying music is not rel
 [versions.Wikifonia]
 doChords = true
 doVoice = true
-doLyrics = false
+doLyrics = true
 doLyricsmore = false
 doLyricsmoremore = false
 doChordBars = false
@@ -35,6 +36,7 @@ doOwn = false
 	- retained the archived MusicXML rights notice; no redistribution permission is asserted.
 	- retained written melody, chord changes, pickups, repeats and numbered endings; lyrics, slurs, dynamics and articulations other than fermatas omitted.
 	- tempo is an editorial practice suggestion.
+	- put in the lyrics from the same Wikifonia source.
 	TODO:
 	- proofread the complete melody, harmony and form against a printed edition and check by ear.
 	- verify source attribution, copyright notice and reuse terms; only the archived MusicXML notice is retained.
@@ -139,5 +141,15 @@ doOwn = false
 	}
 	}
 	\endBar
+}
+{% endif %}
+{% if part == "LyricsWikifonia" %}\lyricmode {
+	From a dis -- tance the world _ looks blue and green _ _ and the snow _ capped _ moun --
+	tains white From a dis -- tance the o -- cean meets the stream _ _ and _ the ea _ gle _ _
+	takes _ _ to _ _ flight from _ _ dis -- tance there _ is _ har -- mo -- ny and it _ ech --
+	oes through the land _ _ _ It's the voice of hope it's the voice of _ peace It's the voice
+	of _ _ ev _ _ "'ry" _ _ man from a man God _ is watch -- ing us God _ is watch -- ing us
+	God _ is watch -- ing us from a _ dis -- tance _ _ oh God is _ watch -- ing us from a dis --
+	tance __
 }
 {% endif %}

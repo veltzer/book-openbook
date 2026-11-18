@@ -5,6 +5,7 @@ default_version = "Wikifonia"
 title = "I'll Be Home For Christmas"
 style = "Jazz"
 composer = "Shayne, Mercer"
+poet = "Mercer"
 piece = "Standard"
 typesetter = "OpenBook contributors (MusicXML import)"
 completion = "3"
@@ -16,7 +17,7 @@ copyrightextra = "Archived MusicXML notice retained; underlying music is not rel
 [versions.Wikifonia]
 doChords = true
 doVoice = true
-doLyrics = false
+doLyrics = true
 doLyricsmore = false
 doLyricsmoremore = false
 doChordBars = false
@@ -35,6 +36,7 @@ doOwn = false
 	- retained the archived MusicXML rights notice; no redistribution permission is asserted.
 	- retained written melody, chord changes, pickups, repeats and numbered endings; lyrics, slurs, dynamics and articulations other than fermatas omitted.
 	- tempo is an editorial practice suggestion.
+	- put in the lyrics from the same Wikifonia source.
 	TODO:
 	- proofread the complete melody, harmony and form against a printed edition and check by ear.
 	- verify source attribution, copyright notice and reuse terms; only the archived MusicXML notice is retained.
@@ -139,5 +141,13 @@ doOwn = false
 	bes'2 c''2 |
 	bes'1 |
 	\endBar
+}
+{% endif %}
+{% if part == "LyricsWikifonia" %}\lyricmode {
+	I'm dream ing __ to -- night of a place I love e -- ven more than __ I u sual __ ly do
+	and al though __ I know it's a long way back I prom ise you I'll be home for Christ mas
+	You can count on me Please have snow and mis tle toe and pre sents on the tree __ _ Christ
+	mas eve will find me Where the love light gleams I'll be home for Christ mas if on ly in
+	my dreams
 }
 {% endif %}

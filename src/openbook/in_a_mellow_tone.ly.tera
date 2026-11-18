@@ -5,6 +5,7 @@ default_version = "Wikifonia"
 title = "In A Mellow Tone"
 style = "Jazz"
 composer = "Duke Ellington"
+poet = "Duke Ellington"
 piece = "Jazz"
 typesetter = "OpenBook contributors (MusicXML import)"
 completion = "3"
@@ -16,7 +17,7 @@ copyrightextra = "Secured All Rights Reserved"
 [versions.Wikifonia]
 doChords = true
 doVoice = true
-doLyrics = false
+doLyrics = true
 doLyricsmore = false
 doLyricsmoremore = false
 doChordBars = false
@@ -35,6 +36,7 @@ doOwn = false
 	- retained the original copyright notice where printed; the underlying music is not relicensed.
 	- retained written measures, pickups, repeats and endings; lyrics omitted.
 	- tempo taken from archived MusicXML.
+	- put in the lyrics from the same Wikifonia source.
 	TODO:
 	- proofread the music against the referenced PDF and check by ear.
 {% endif %}
@@ -121,5 +123,13 @@ doOwn = false
 	r4 a'8 f'8 g'8 a'4 bes'8 ~ |
 	bes'1 |
 	\endBar
+}
+{% endif %}
+{% if part == "LyricsWikifonia" %}\lyricmode {
+	In a mel -- low tone __ Feel -- "in'" fan -- cy free, __ and I'm not a -- lone __ I've
+	got com -- pan -- y. __ Ev -- ry thing's O. K. __ The live __ long day __ With this mel --
+	low -- song, __ I can't __ go wrong. __ In a mel -- low tone, __ that's the way to live. __
+	If you mope and groan, __ some -- thing's got to give. __ So go __ your way, __ and laugh __
+	and "play;" __ there's joy __ un -- known, __ in a mel -- low tone. __
 }
 {% endif %}

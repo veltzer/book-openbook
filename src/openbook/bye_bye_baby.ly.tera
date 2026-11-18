@@ -5,6 +5,7 @@ default_version = "Wikifonia"
 title = "Bye Bye Baby"
 style = "Jazz"
 composer = "Jule Styne"
+poet = "Leo Robin"
 piece = "Jazz"
 typesetter = "OpenBook contributors (MusicXML import)"
 completion = "3"
@@ -15,7 +16,7 @@ copyright = "All Rights Reserved"
 [versions.Wikifonia]
 doChords = true
 doVoice = true
-doLyrics = false
+doLyrics = true
 doLyricsmore = false
 doLyricsmoremore = false
 doChordBars = false
@@ -34,6 +35,7 @@ doOwn = false
 	- retained the original copyright notice where printed; the underlying music is not relicensed.
 	- retained written measures, pickups, repeats and endings; lyrics omitted.
 	- tempo is an editorial practice suggestion.
+	- put in the lyrics from the same Wikifonia source.
 	TODO:
 	- proofread the music against the referenced PDF and check by ear.
 	- verify editorial chord spacing in measures 8, 10, 15, 24, 26, 34; the archive places successive symbols at the same offset.
@@ -138,5 +140,15 @@ doOwn = false
 	bes'1 ~ |
 	bes'1 |
 	\endBar
+}
+{% endif %}
+{% if part == "LyricsWikifonia" %}\lyricmode {
+	I'll be in my room a -- lone ev -- "'ry" post mer -- i -- di -- an. And I'll be with my
+	dia -- ry and that book by Mis -- ter Gid -- e -- on. Bye bye, ba -- by, re -- mem -- ber
+	you're my ba -- by when they give you the eye, __ and just to show that I care __ I will
+	write __ and de -- clare __ that I'm on the loose, __ but I'm still __ on the square. __
+	I'll be gloom -- y, but send that rain -- bow to me, then my sha -- dows will fly, __
+	though you'll be gone for a -- while, __ I know that I'll be smil -- ing with my ba -- by,
+	by and by. __
 }
 {% endif %}

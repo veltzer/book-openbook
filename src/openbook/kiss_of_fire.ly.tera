@@ -5,6 +5,7 @@ default_version = "Wikifonia"
 title = "Kiss Of Fire"
 style = "Jazz"
 composer = "Robert Hill, Lester Hallen"
+poet = "Lester Hallen"
 piece = "Standard"
 typesetter = "OpenBook contributors (MusicXML import)"
 completion = "3"
@@ -16,7 +17,7 @@ copyrightextra = "Archived MusicXML notice retained; underlying music is not rel
 [versions.Wikifonia]
 doChords = true
 doVoice = true
-doLyrics = false
+doLyrics = true
 doLyricsmore = false
 doLyricsmoremore = false
 doChordBars = false
@@ -35,6 +36,7 @@ doOwn = false
 	- retained the archived MusicXML rights notice; no redistribution permission is asserted.
 	- retained written melody, chord changes, pickups, repeats and numbered endings; lyrics, slurs, dynamics and articulations other than fermatas omitted.
 	- tempo is an editorial practice suggestion.
+	- put in the lyrics from the same Wikifonia source.
 	TODO:
 	- proofread the complete melody, harmony and form against a printed edition and check by ear.
 	- verify source attribution, copyright notice and reuse terms; only the archived MusicXML notice is retained.
@@ -145,5 +147,20 @@ doOwn = false
 	}
 	}
 	\endBar
+}
+{% endif %}
+{% if part == "LyricsWikifonia" %}\lyricmode {
+	I touch you lips and all at once the sparks go fly -- ing. Those dev -- il lips that know
+	so well the art of ly -- ing, and "tho'" I see the dan -- ger, still the flames grow high --
+	er. I know I must sur -- ren -- der to your kiss of fire. __ _ Just like a torch, you act
+	the soul with -- in me burn -- ing. I must go on a -- long this road of no re -- turn --
+	ing, and "tho'" it burns me and it turns me in -- to ash -- es, my whole world crash -- es
+	with -- out your kiss of fire. __ _ I can't re -- sist you. What good is there in try --
+	"ing;" what good is there de -- ny -- ing? You're all that I de -- sire. __ _ Since first
+	I kissed you, my heart was yours com -- plete -- ly if I'm a slave, the it's a slave I
+	want to be. Don't pit -- y me! Don't pit -- y me! Give me your lips, the lips you on -- ly
+	let me bor -- row, Love me to -- night and let the dev -- il take to -- mor -- row. I know
+	that I must have your kiss al -- though it dooms me "tho'" is con -- sumes me, your kiss
+	of fire. I touch your fire.
 }
 {% endif %}

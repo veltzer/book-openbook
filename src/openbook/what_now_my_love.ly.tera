@@ -4,7 +4,8 @@ default_version = "Wikifonia"
 [attributes]
 title = "What Now, My Love?"
 style = "Jazz"
-composer = "Gilbert Bécaud 1961, Pierre French: Delanoë, English: Carl Sigman 1961"
+composer = "Gilbert Bécaud, Pierre Delanoë, Carl Sigman"
+poet = "Pierre Delanoë, Carl Sigman"
 piece = "Standard"
 typesetter = "OpenBook contributors (MusicXML import)"
 completion = "3"
@@ -16,8 +17,8 @@ copyrightextra = "Archived MusicXML notice retained; underlying music is not rel
 [versions.Wikifonia]
 doChords = true
 doVoice = true
-doLyrics = false
-doLyricsmore = false
+doLyrics = true
+doLyricsmore = true
 doLyricsmoremore = false
 doChordBars = false
 doGuitar = false
@@ -35,6 +36,7 @@ doOwn = false
 	- retained the archived MusicXML rights notice; no redistribution permission is asserted.
 	- retained written melody, chord changes, pickups, repeats and numbered endings; lyrics, slurs, dynamics and articulations other than fermatas omitted.
 	- tempo is an editorial practice suggestion.
+	- put in the lyrics from the same Wikifonia source.
 	TODO:
 	- proofread the complete melody, harmony and form against a printed edition and check by ear.
 	- verify source attribution, copyright notice and reuse terms; only the archived MusicXML notice is retained.
@@ -134,5 +136,17 @@ doOwn = false
 	b'1 ~ |
 	b'2 r2 |
 	\endBar
+}
+{% endif %}
+{% if part == "LyricsWikifonia" %}\lyricmode {
+	What now my love __ now that you left me __ how can I live __ through an -- oth -- er day __
+	watch -- ing my
+}
+{% endif %}
+{% if part == "LyricsmoreWikifonia" %}\lyricmode {
+	_ _ _ dreams __ turn -- ing to ash -- es __ _ and my hopes __ in -- to bits of _ _ _ _
+	clay. __ Once I could see, __ once I could feel __ now I am numb I've be -- come un --
+	real __ I walk the night _ with -- out a goal __ stripped of my heart __ my soul __ what
+	now my love __ now there is noth -- ing __ on -- ly my last __ good -- bye __
 }
 {% endif %}

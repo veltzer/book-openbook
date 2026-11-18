@@ -5,6 +5,7 @@ default_version = "Wikifonia"
 title = "Who Cares"
 style = "Jazz"
 composer = "George Gershwin"
+poet = "Ira Gershwin"
 piece = "Jazz"
 typesetter = "OpenBook contributors (MusicXML import)"
 completion = "3"
@@ -15,7 +16,7 @@ copyright = "1931, 1952 WB Music Corp. (Renewed) All Rights Reserved. Used by Pe
 [versions.Wikifonia]
 doChords = true
 doVoice = true
-doLyrics = false
+doLyrics = true
 doLyricsmore = false
 doLyricsmoremore = false
 doChordBars = false
@@ -34,6 +35,7 @@ doOwn = false
 	- retained the original copyright notice where printed; the underlying music is not relicensed.
 	- retained written measures, pickups, repeats and endings; lyrics omitted.
 	- tempo is an editorial practice suggestion.
+	- put in the lyrics from the same Wikifonia source.
 	TODO:
 	- proofread the music against the referenced PDF and check by ear.
 {% endif %}
@@ -130,5 +132,11 @@ doOwn = false
 	c'1 ~ |
 	c'2 ~ c'4 r4 |
 	\endBar
+}
+{% endif %}
+{% if part == "LyricsWikifonia" %}\lyricmode {
+	Who cares if the sky cares to fall in the sea? __ Who cares how his -- to -- ry rates me? __
+	Long as your __ kiss in -- tox -- i -- cates me! Why should I care? Life is one long __ ju --
+	bi -- lee. So long as I care __ for you __ And you care __ for me. __ Who me. __
 }
 {% endif %}

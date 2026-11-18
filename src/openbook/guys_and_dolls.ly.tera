@@ -5,6 +5,7 @@ default_version = "Wikifonia"
 title = "Guys And Dolls"
 style = "Standard"
 composer = "Frank Loesser"
+poet = "Frank Loesser"
 piece = "Standard"
 typesetter = "OpenBook contributors (MusicXML import)"
 completion = "3"
@@ -16,8 +17,8 @@ copyrightextra = "Archived MusicXML notice retained; underlying music is not rel
 [versions.Wikifonia]
 doChords = true
 doVoice = true
-doLyrics = false
-doLyricsmore = false
+doLyrics = true
+doLyricsmore = true
 doLyricsmoremore = false
 doChordBars = false
 doGuitar = false
@@ -37,6 +38,7 @@ doOwn = false
 	- retained written melody, chord changes, pickups, repeats and numbered endings; lyrics omitted.
 	- imported explicit 7alt symbols using the book's altered-dominant notation where present.
 	- tempo is an editorial practice suggestion.
+	- put in the lyrics from the same Wikifonia source.
 	TODO:
 	- proofread the complete melody, harmony and form against the referenced PDF and check by ear.
 	- verify source attribution, copyright notice and reuse terms against the scan; only the archived MusicXML notice is retained.
@@ -146,5 +148,23 @@ doOwn = false
 	}
 	c''2 r2 |
 	\endBar
+}
+{% endif %}
+{% if part == "LyricsWikifonia" %}\lyricmode {
+	When you see a guy __ reach for stars in the sky, __ You can bet that he's do -- ing it
+	for some doll. __ When you spot a John wait -- ing out in the rain, __ Chan -- ces are
+	he's in -- sane as on -- ly a John can be for a Jane. __ When you meet a gent __ pay --
+	ing all kinds of rent __ for a flat that could flat -- ten the Taj Ma -- hal, __ Call it
+	sad, Call it fun -- ny, But it's bet -- ter than ev -- en mon -- ey that the guy's on --
+	ly do -- ing it for some doll. On the oth -- er hand, When you
+}
+{% endif %}
+{% if part == "LyricsmoreWikifonia" %}\lyricmode {
+	_ _ see a dame __ change the shape of her frame, __ You can bet she's re -- duc -- ing it
+	for some guy. __ When you find a Doll with her dia -- mond in hock, __ rest as -- sured
+	that the rock has gone to re -- stock some gen -- tle -- man Jock. __ When you see a mouse __
+	hur -- ry out of the house, __ and she runs twen -- ty blocks __ for ci -- gars and rye, __
+	Call it dumb, Call it clev -- er, Ah! But you can give odds for -- ev -- er that the dolls
+	on -- ly do -- ing it for some _ _ _ _ _ _ _ _ guy.
 }
 {% endif %}

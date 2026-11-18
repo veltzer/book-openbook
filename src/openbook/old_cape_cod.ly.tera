@@ -5,6 +5,7 @@ default_version = "Wikifonia"
 title = "Old Cape Cod"
 style = "Jazz"
 composer = "Allan Jeffrey, Claire Rothrock, Milton Yakus"
+poet = "Allan Jeffrey, Claire Rothrock, Milton Yakus"
 piece = "Standard"
 typesetter = "OpenBook contributors (MusicXML import)"
 completion = "3"
@@ -16,7 +17,7 @@ copyrightextra = "Archived MusicXML notice retained; underlying music is not rel
 [versions.Wikifonia]
 doChords = true
 doVoice = true
-doLyrics = false
+doLyrics = true
 doLyricsmore = false
 doLyricsmoremore = false
 doChordBars = false
@@ -35,6 +36,7 @@ doOwn = false
 	- retained the archived MusicXML rights notice; no redistribution permission is asserted.
 	- retained written melody, chord changes, pickups, repeats and numbered endings; lyrics, slurs, dynamics and articulations other than fermatas omitted.
 	- tempo is an editorial practice suggestion.
+	- put in the lyrics from the same Wikifonia source.
 	TODO:
 	- proofread the complete melody, harmony and form against a printed edition and check by ear.
 	- verify source attribution, copyright notice and reuse terms; only the archived MusicXML notice is retained.
@@ -121,5 +123,15 @@ doOwn = false
 	e''2 fis'2 |
 	g'1 |
 	\endBar
+}
+{% endif %}
+{% if part == "LyricsWikifonia" %}\lyricmode {
+	If you're fond of sand dunes and sal -- ty air. Quaint lit -- tle vil -- a -- ges here
+	and there. You're sure to fall in love with Old Cape Cod. __ If you like the taste of a
+	lob -- ster stew. Served by a win -- dow with an o -- cean view. You're sure to fall in
+	love with Old Cape Cod. __ Wind -- ing roads that seem to beck on you. Miles of green be --
+	neath a sky of blue. Chruch bells chim -- ing on a Sun -- day morn Re -- mind you of the
+	town where you were born. If you spend an ev -- "'nig" you'll want to stay Watch -- ing
+	the moon -- light on Cape Cod Bay You're sure to fall in love with Old Cape Cod.
 }
 {% endif %}

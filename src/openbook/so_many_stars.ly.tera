@@ -5,6 +5,7 @@ default_version = "Wikifonia"
 title = "So Many Stars"
 style = "Jazz"
 composer = "Sergio Mendes"
+poet = "Alan, Marilyn Bergman"
 piece = "Jazz"
 typesetter = "OpenBook contributors (MusicXML import)"
 completion = "3"
@@ -15,7 +16,7 @@ copyright = "All Rights Reserved"
 [versions.Wikifonia]
 doChords = true
 doVoice = true
-doLyrics = false
+doLyrics = true
 doLyricsmore = false
 doLyricsmoremore = false
 doChordBars = false
@@ -34,6 +35,7 @@ doOwn = false
 	- retained the original copyright notice where printed; the underlying music is not relicensed.
 	- retained written measures, pickups, repeats and endings; lyrics omitted.
 	- tempo is an editorial practice suggestion.
+	- put in the lyrics from the same Wikifonia source.
 	TODO:
 	- proofread the music against the referenced PDF and check by ear.
 	- verify editorial chord spacing in measures 36; the archive places successive symbols at the same offset.
@@ -148,5 +150,17 @@ doOwn = false
 	e'1 ~ |
 	e'1 |
 	\endBar
+}
+{% endif %}
+{% if part == "LyricsWikifonia" %}\lyricmode {
+	The dawn __ is filled with dreams, __ so ma -- ny dreams, __ which one is mine? One must
+	be right for me. __ Which dream, __ of all the dreams, __ when there's a dream for ev --
+	"'ry" star? __ and there are oh __ so ma -- ny stars, __ so ma -- ny stars. __ The wind __
+	is filled with songs, __ so ma ny songs, __ which one is mine? One must be right for me. __
+	Which song __ of all the songs, __ when there's a song for ev -- "'ry" star? __ and there
+	are oh __ so ma -- ny stars, __ so ma -- ny stars. __ A -- lone __ the count -- less days, __
+	the end less nights, __ that I have searched __ so ma -- ny eyes, __ so ma -- ny hearts, __
+	so ma ny smiles __ Which one to choose? __ Which way to go? __ How can I tell? __ How can
+	I know? __ Out of oh, __ so ma -- ny stars, __ so ma -- ny stars. __
 }
 {% endif %}

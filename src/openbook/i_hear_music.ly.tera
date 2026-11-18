@@ -5,6 +5,7 @@ default_version = "Wikifonia"
 title = "I Hear Music"
 style = "Jazz"
 composer = "Burton Lane"
+poet = "Frank Loesser"
 piece = "Jazz"
 typesetter = "OpenBook contributors (MusicXML import)"
 completion = "3"
@@ -15,8 +16,8 @@ copyright = "All Rights Reserved"
 [versions.Wikifonia]
 doChords = true
 doVoice = true
-doLyrics = false
-doLyricsmore = false
+doLyrics = true
+doLyricsmore = true
 doLyricsmoremore = false
 doChordBars = false
 doGuitar = false
@@ -34,6 +35,7 @@ doOwn = false
 	- retained the original copyright notice where printed; the underlying music is not relicensed.
 	- retained written measures, pickups, repeats and endings; lyrics omitted.
 	- tempo is an editorial practice suggestion.
+	- put in the lyrics from the same Wikifonia source.
 	TODO:
 	- proofread the music against the referenced PDF and check by ear.
 	- verify the copyright notice against the scan; no readable per-tune notice was recovered, so the archived rights notice is retained where available.
@@ -145,5 +147,22 @@ doOwn = false
 	f'1 ~ |
 	f'2 r2 |
 	\endBar
+}
+{% endif %}
+{% if part == "LyricsWikifonia" %}\lyricmode {
+	Not that I'm a Pun -- chin -- nel -- lo, just an op -- ti -- mis -- tic fel -- low with a
+	lot of ver -- y mel -- low mu -- sic in my soul. __ Not that I'm a Pol -- ly -- an -- na
+	shout -- "in'" out a loud ho -- san -- na, It's my sing -- ing heart I can't con -- trol. __
+	I hear mu -- sic. __ might -- y fine mu -- sic. __ The mur -- mur of a mor -- ning breeze
+	up there, __ the rat -- tle of the milk man on the stair. __
+}
+{% endif %}
+{% if part == "LyricsmoreWikifonia" %}\lyricmode {
+	_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _
+	Sure that's mu -- sic, __ might -- y fine mu -- sic. __ The sing -- ing of a spar -- row
+	in the sky, __ the perk -- ing of the cof -- fee right near by. __ There's my fav --
+	"'rite" mel -- o -- dy. you, my an -- gel, phon -- ing __ me. __ I hear mu -- sic, __
+	might -- y fine mu -- sic. __ And an -- y time I think my world is wrong, __ I get me out
+	of bed and sing __ this song. __
 }
 {% endif %}

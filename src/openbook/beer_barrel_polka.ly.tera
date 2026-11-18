@@ -4,7 +4,8 @@ default_version = "Wikifonia"
 [attributes]
 title = "Beer Barrel Polka"
 style = "Standard"
-composer = "Lew Brown: Wladimir A."
+composer = "Lew Brown: Wladimir A"
+poet = "Lew Brown: Wladimir A"
 piece = "Standard"
 typesetter = "OpenBook contributors (MusicXML import)"
 completion = "3"
@@ -16,8 +17,8 @@ copyrightextra = "Archived MusicXML notice retained; underlying music is not rel
 [versions.Wikifonia]
 doChords = true
 doVoice = true
-doLyrics = false
-doLyricsmore = false
+doLyrics = true
+doLyricsmore = true
 doLyricsmoremore = false
 doChordBars = false
 doGuitar = false
@@ -37,6 +38,7 @@ doOwn = false
 	- retained written melody, chord changes, pickups, repeats and numbered endings; lyrics omitted.
 	- imported explicit 7alt symbols using the book's altered-dominant notation where present.
 	- tempo is an editorial practice suggestion.
+	- put in the lyrics from the same Wikifonia source.
 	TODO:
 	- proofread the complete melody, harmony and form against the referenced PDF and check by ear.
 	- verify source attribution, copyright notice and reuse terms against the scan; only the archived MusicXML notice is retained.
@@ -231,5 +233,23 @@ doOwn = false
 	}
 	f''2 r2 |
 	\endBar
+}
+{% endif %}
+{% if part == "LyricsWikifonia" %}\lyricmode {
+	Theres a gar -- den what a gar -- den on -- ly hap -- py fac -- es bloom there and
+	there's nev -- er an -- y room there for a wor -- ry or a gloom there oh theres mu -- sic
+	and theres danc -- ing and a lot of sweet ro -- manc -- ing when they play a pol -- ka
+	they all get in the swing ev -- ry time they hear __ that oom -- pa -- pa __ ev -- ry bod --
+	y feels __ so tra -- la -- la __ they want to throw their cares a -- way __ they all go
+	lah -- de ah de -- ay __ then they hear them sing __ roll out the bar -- rel __ we'll have
+	a bar -- rel of fun __ roll out the bar -- rel __ we've got the blues on the run __ Zing!
+	Boom! Ta -- rar -- rell! __ ring out a song of good cheer __ Now's the time to roll the
+	bar -- rel __ for the gangs all here. __ here. __
+}
+{% endif %}
+{% if part == "LyricsmoreWikifonia" %}\lyricmode {
+	_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _
+	hear a rum __ ble on the floor __ its the big sur -- prise __ they're wait -- ing for __
+	and all the cou -- ples form a ring __ for miles a -- round you'll
 }
 {% endif %}

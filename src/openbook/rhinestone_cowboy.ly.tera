@@ -5,6 +5,7 @@ default_version = "Wikifonia"
 title = "Rhinestone Cowboy"
 style = "Standard"
 composer = "Larry Weiss"
+poet = "Larry Weiss"
 piece = "Standard"
 typesetter = "OpenBook contributors (MusicXML import)"
 completion = "3"
@@ -16,8 +17,8 @@ copyrightextra = "Archived MusicXML notice retained; underlying music is not rel
 [versions.Wikifonia]
 doChords = true
 doVoice = true
-doLyrics = false
-doLyricsmore = false
+doLyrics = true
+doLyricsmore = true
 doLyricsmoremore = false
 doChordBars = false
 doGuitar = false
@@ -37,6 +38,7 @@ doOwn = false
 	- retained written melody, chord changes, pickups, repeats and numbered endings; lyrics omitted.
 	- imported explicit 7alt symbols using the book's altered-dominant notation where present.
 	- tempo is an editorial practice suggestion.
+	- put in the lyrics from the same Wikifonia source.
 	TODO:
 	- proofread the complete melody, harmony and form against the referenced PDF and check by ear.
 	- verify source attribution, copyright notice and reuse terms against the scan; only the archived MusicXML notice is retained.
@@ -157,5 +159,22 @@ doOwn = false
 	}
 	r4 d''8 d''8 - "andfade" g''4 - "Returnto" - "D.S.andfade" a''4 |
 	\endBar
+}
+{% endif %}
+{% if part == "LyricsWikifonia" %}\lyricmode {
+	I've been walk -- in these street so long sing -- in the same old song I know ev -- ry
+	crack on these dir -- ty side -- walks of Broad _ way where hus -- tle is the name of the
+	game and nice guys get washed a -- way like the snow and the rain there's been a load of
+	com -- pri -- mis -- in on the road to my hor -- i -- zon but I'm gon -- na be where the
+	lights are shin -- in on me __ like a rhine -- stone cow -- boy _ rid -- in out on a horse
+	in a star -- spang -- led ro -- de -- o rhine -- stone cow _ boy get -- tin cards and let
+	ters from peop -- ple I dont ev -- en know of -- fers com -- in o -- ver the phone "well'"
+	I Like a rhine -- stone
+}
+{% endif %}
+{% if part == "LyricsmoreWikifonia" %}\lyricmode {
+	_ _ eal -- ly dont mine the rain anda smile cant hide the pain but you're down when
+	you're rid -- in a train thats tak -- ing the long way but _ I dream of the things I'll do
+	with a sub -- way token and a dollar tucked in -- side my shoe
 }
 {% endif %}

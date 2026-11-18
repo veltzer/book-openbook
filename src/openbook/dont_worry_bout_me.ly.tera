@@ -5,6 +5,7 @@ default_version = "Wikifonia"
 title = "Don't Worry 'Bout Me"
 style = "Jazz"
 composer = "Rube Bloom"
+poet = "Ted Koehler"
 piece = "Standard"
 typesetter = "OpenBook contributors (MusicXML import)"
 completion = "3"
@@ -16,7 +17,7 @@ copyrightextra = "Archived MusicXML notice retained; underlying music is not rel
 [versions.Wikifonia]
 doChords = true
 doVoice = true
-doLyrics = false
+doLyrics = true
 doLyricsmore = false
 doLyricsmoremore = false
 doChordBars = false
@@ -37,6 +38,7 @@ doOwn = false
 	- retained written melody, chord changes, pickups, repeats and numbered endings; lyrics omitted.
 	- imported explicit 7alt symbols using the book's altered-dominant notation where present.
 	- tempo is an editorial practice suggestion.
+	- put in the lyrics from the same Wikifonia source.
 	TODO:
 	- proofread the complete melody, harmony and form against the referenced PDF and check by ear.
 	- verify source attribution, copyright notice and reuse terms against the scan; only the archived MusicXML notice is retained.
@@ -146,5 +148,14 @@ doOwn = false
 	}
 	as'1 |
 	\endBar
+}
+{% endif %}
+{% if part == "LyricsWikifonia" %}\lyricmode {
+	Don't wor -- ry "'bout" me, __ I'll get a -- long, __ for -- get a -- bout me, __ Be hap --
+	py my love. __ Let's say that our lit -- tle show is ov -- er and so the stor -- y ends, __
+	Why not call it a day the sen -- si -- ble way, and still be friends. __ "'Look" out for
+	your -- "self'" __ should be a rule, __ Give your heart and your love to who -- ev -- er
+	you love, Don't be a fool. __ Dar -- ling, why shoud you cling to some fad -- ing thing
+	that used to be? __ If you can for -- get, __ Don't wor -- ry "'bout" me. Don't me. __
 }
 {% endif %}

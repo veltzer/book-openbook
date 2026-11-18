@@ -5,6 +5,7 @@ default_version = "Wikifonia"
 title = "Bluebird"
 style = "Jazz"
 composer = "Phil Myers"
+poet = "Phil Myers"
 piece = "Standard"
 typesetter = "OpenBook contributors (MusicXML import)"
 completion = "3"
@@ -16,7 +17,7 @@ copyrightextra = "Archived MusicXML notice retained; underlying music is not rel
 [versions.Wikifonia]
 doChords = true
 doVoice = true
-doLyrics = false
+doLyrics = true
 doLyricsmore = false
 doLyricsmoremore = false
 doChordBars = false
@@ -37,6 +38,7 @@ doOwn = false
 	- retained written melody, chord changes, pickups, repeats and numbered endings; lyrics omitted.
 	- imported explicit 7alt symbols using the book's altered-dominant notation where present.
 	- tempo is an editorial practice suggestion.
+	- put in the lyrics from the same Wikifonia source.
 	TODO:
 	- proofread the complete melody, harmony and form against the referenced PDF and check by ear.
 	- verify source attribution, copyright notice and reuse terms against the scan; only the archived MusicXML notice is retained.
@@ -125,5 +127,15 @@ doOwn = false
 	c'4 e'4 ~ e'8 g'8 bes'8 as'8 |
 	g'1 |
 	\endBar
+}
+{% endif %}
+{% if part == "LyricsWikifonia" %}\lyricmode {
+	Blue birds __ fly far a -- way __ just to __ stay warm __ I try __ to light a litt -- le
+	fi -- re when the win -- ter wind blows in the storm Fire in __ the fi -- re place __
+	chill in __ my heart __ So warm __ when we were to -- ge -- ther so cold __ when we're a --
+	part __ Blue -- birds al -- ways find their way back home fly -- ing through the A -- pril
+	sky __ Some -- day will you feel that spring has come? Some -- day will you want to try --
+	y? Blue -- birds __ fly far a -- way __ where I __ can't be __ I'll be __ wait -- ing here
+	in spring -- time, blue -- bird __ fly home to me.
 }
 {% endif %}

@@ -5,6 +5,7 @@ default_version = "Wikifonia"
 title = "I Had The Craziest Dream"
 style = "Jazz"
 composer = "Harry Warren"
+poet = "Mack Gordon"
 piece = "Standard"
 typesetter = "OpenBook contributors (MusicXML import)"
 completion = "3"
@@ -16,7 +17,7 @@ copyrightextra = "Archived MusicXML notice retained; underlying music is not rel
 [versions.Wikifonia]
 doChords = true
 doVoice = true
-doLyrics = false
+doLyrics = true
 doLyricsmore = false
 doLyricsmoremore = false
 doChordBars = false
@@ -37,6 +38,7 @@ doOwn = false
 	- retained written melody, chord changes, pickups, repeats and numbered endings; lyrics omitted.
 	- imported explicit 7alt symbols using the book's altered-dominant notation where present.
 	- tempo is an editorial practice suggestion.
+	- put in the lyrics from the same Wikifonia source.
 	TODO:
 	- proofread the complete melody, harmony and form against the referenced PDF and check by ear.
 	- verify source attribution, copyright notice and reuse terms against the scan; only the archived MusicXML notice is retained.
@@ -128,5 +130,14 @@ doOwn = false
 	}
 	c''2 ~ c''8 r8 r4 |
 	\endBar
+}
+{% endif %}
+{% if part == "LyricsWikifonia" %}\lyricmode {
+	I had the cra -- zi -- est dream __ last night, yes I did. __ I nev -- er dreamt __ it
+	could be, __ Yet there you were __ in love with me. __ I found your lips __ next to mine, __
+	so I kissed __ you, and you did -- n't mind it at all. __ When I'm a -- wake __ such a
+	break __ nev -- er hap -- pens, How long can a guy __ go on dream -- ing? __ If there's a
+	chance __ that you care __ _ Then, please say you "do;" "(ba" -- "by)" Say it and make __
+	my craz -- i -- est dream __ come true. __
 }
 {% endif %}

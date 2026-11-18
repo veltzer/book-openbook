@@ -5,6 +5,7 @@ default_version = "Wikifonia"
 title = "Begin The Beguine"
 style = "Jazz"
 composer = "Cole Porter"
+poet = "Cole Porter"
 piece = "Standard"
 typesetter = "OpenBook contributors (MusicXML import)"
 completion = "3"
@@ -16,7 +17,7 @@ copyrightextra = "Archived MusicXML notice retained; underlying music is not rel
 [versions.Wikifonia]
 doChords = true
 doVoice = true
-doLyrics = false
+doLyrics = true
 doLyricsmore = false
 doLyricsmoremore = false
 doChordBars = false
@@ -37,6 +38,7 @@ doOwn = false
 	- retained written melody, chord changes, pickups, repeats and numbered endings; lyrics omitted.
 	- imported explicit 7alt symbols using the book's altered-dominant notation where present.
 	- tempo is an editorial practice suggestion.
+	- put in the lyrics from the same Wikifonia source.
 	TODO:
 	- proofread the complete melody, harmony and form against the referenced PDF and check by ear.
 	- verify source attribution, copyright notice and reuse terms against the scan; only the archived MusicXML notice is retained.
@@ -277,5 +279,25 @@ doOwn = false
 	c''1 ~ |
 	c''2. r4 |
 	\endBar
+}
+{% endif %}
+{% if part == "LyricsWikifonia" %}\lyricmode {
+	When they be -- gin __ the be -- guine, __ it brings back the sound __ of mus -- ic so
+	ten -- der, __ it brings back a night, __ of trop -- i -- cal splen -- dor. __ It brings
+	back a mem -- o -- ry ev -- er green. __ I'm with you once more __ un -- der the stars, __
+	and down by the shore __ an or -- ches -- tra play -- ing __ and ev -- en the palms __
+	seem to be sway -- ing __ when they be -- gin __ the be -- guine. __ To live it a -- gain __
+	is past all en -- dev -- our, __ ex -- cept when that tune __ clut -- ches your heart, __
+	and there we are, swear -- ing to love for -- ev -- er, __ and prom -- is ing nev -- er
+	nev -- er to part. __ What mo -- ments di -- vine, __ what rap -- ture se -- rene __ till
+	clouds came a -- long to dis -- perse the joys we had tast -- ed, __ and now when I hear
+	peo -- ple curse the chance that was wast -- ed __ I know but too well __ what they
+	"mean;" __ so don't let them be -- gin __ the be -- guine, __ let the love that was once a --
+	fire re -- main an em -- "ber;" __ let it sleep like the dead de -- sire I on -- ly re --
+	mem -- ber, __ when they be -- gin __ the be -- guine. __ Oh yes, let them be -- gin the
+	be -- guine, make them play, __ till the stars that were there be -- fore re -- turn a --
+	bove you, __ till you whis -- per to me once more, "'Dar" -- ling, I love "you!'" __ and
+	we sud -- den -- ly know __ what heav -- en we're in __ when they be -- gin __ the be --
+	guine __ when they be -- gin __ the be
 }
 {% endif %}

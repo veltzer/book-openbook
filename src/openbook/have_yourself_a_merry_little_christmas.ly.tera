@@ -5,6 +5,7 @@ default_version = "Wikifonia"
 title = "Have Yourself A Merry Little Christmas"
 style = "Jazz"
 composer = "Hugh Martin, Ralph Blane"
+poet = "Hugh Martin, Ralph Blane"
 piece = "Standard"
 typesetter = "OpenBook contributors (MusicXML import)"
 completion = "3"
@@ -16,7 +17,7 @@ copyrightextra = "Archived MusicXML notice retained; underlying music is not rel
 [versions.Wikifonia]
 doChords = true
 doVoice = true
-doLyrics = false
+doLyrics = true
 doLyricsmore = false
 doLyricsmoremore = false
 doChordBars = false
@@ -35,6 +36,7 @@ doOwn = false
 	- retained the archived MusicXML rights notice; no redistribution permission is asserted.
 	- retained written melody, chord changes, pickups, repeats and numbered endings; lyrics, slurs, dynamics and articulations other than fermatas omitted.
 	- tempo is an editorial practice suggestion.
+	- put in the lyrics from the same Wikifonia source.
 	TODO:
 	- proofread the complete melody, harmony and form against a printed edition and check by ear.
 	- verify source attribution, copyright notice and reuse terms; only the archived MusicXML notice is retained.
@@ -131,5 +133,16 @@ doOwn = false
 	c''1 |
 	R1 |
 	\endBar
+}
+{% endif %}
+{% if part == "LyricsWikifonia" %}\lyricmode {
+	Have your -- self a mer -- ry lit -- tle Christ -- "mas;" Let your heart be light __ from
+	now on, our trou -- bles will be out of sight. _ _ _ _ _ _ _ _ Have your -- self a mer --
+	ry lit -- tle Christ -- "mas;" Make the Yule -- tide gay. __ from now on, our trou -- bles
+	will be miles a -- way __ here we are as in old -- en days, hap -- py gold -- en days of
+	"yore;" Faith -- ful friends who are dear to us gath -- er near to us once more. __
+	Through the years we all will be to -- get -- her if the fates al -- low. __ hang a shin --
+	ing star up -- on the high -- est bough __ And have your -- self a mer -- ry lit -- tle
+	Christ -- mas now
 }
 {% endif %}

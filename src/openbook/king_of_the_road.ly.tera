@@ -5,6 +5,7 @@ default_version = "Wikifonia"
 title = "King Of The Road"
 style = "Standard"
 composer = "Roger Miller"
+poet = "Roger Miller"
 piece = "Standard"
 typesetter = "OpenBook contributors (MusicXML import)"
 completion = "3"
@@ -16,8 +17,8 @@ copyrightextra = "Archived MusicXML notice retained; underlying music is not rel
 [versions.Wikifonia]
 doChords = true
 doVoice = true
-doLyrics = false
-doLyricsmore = false
+doLyrics = true
+doLyricsmore = true
 doLyricsmoremore = false
 doChordBars = false
 doGuitar = false
@@ -37,6 +38,7 @@ doOwn = false
 	- retained written melody, chord changes, pickups, repeats and numbered endings; lyrics omitted.
 	- imported explicit 7alt symbols using the book's altered-dominant notation where present.
 	- tempo taken from archived MusicXML.
+	- put in the lyrics from the same Wikifonia source.
 	TODO:
 	- proofread the complete melody, harmony and form against the referenced PDF and check by ear.
 	- verify source attribution, copyright notice and reuse terms against the scan; only the archived MusicXML notice is retained.
@@ -126,5 +128,20 @@ doOwn = false
 	g'8 g'8 g'8 g'8 b'4 b'8 b'8 |
 	d''8 d''8 d''8 f''8 ~ f''8 e''8 d''4 ^ "D.C. al Fine" |
 	\endBar
+}
+{% endif %}
+{% if part == "LyricsWikifonia" %}\lyricmode {
+	Trail -- er for sale or rent __ rooms __ to let _ fif -- ty cents __ no phone no pool no
+	pets __ I aint got no cig -- a -- rettes __ ah but two hours of push -- ing broom __ buys
+	an eight __ by twelve _ four bit room __ I'm a man of means by no means __ King of the
+	road. road I know ev -- e -- ry en -- gin -- eer on ev -- e -- ry train __ all of the chil --
+	dren and all of their names and ev -- e -- ry hand -- out in ev -- e -- ry town and ev --
+	ry lock that aint locked when no -- ones a -- round __ I sing
+}
+{% endif %}
+{% if part == "LyricsmoreWikifonia" %}\lyricmode {
+	Third box car mid -- night train __ des -- tin -- a -- tion Ban -- gor Maine __ old worn
+	out suit and shoes __ I dont pay no un -- ion dues __ I smoke old sto -- gies I have found __ _ _
+	short __ but not too big a -- round __
 }
 {% endif %}

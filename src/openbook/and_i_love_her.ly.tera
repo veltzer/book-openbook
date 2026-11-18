@@ -5,6 +5,7 @@ default_version = "Wikifonia"
 title = "And I Love Her"
 style = "Standard"
 composer = "John Lennon, Paul McCartney"
+poet = "John Lennon, Paul McCartney"
 piece = "Standard"
 typesetter = "OpenBook contributors (MusicXML import)"
 completion = "3"
@@ -16,8 +17,8 @@ copyrightextra = "Archived MusicXML notice retained; underlying music is not rel
 [versions.Wikifonia]
 doChords = true
 doVoice = true
-doLyrics = false
-doLyricsmore = false
+doLyrics = true
+doLyricsmore = true
 doLyricsmoremore = false
 doChordBars = false
 doGuitar = false
@@ -37,6 +38,7 @@ doOwn = false
 	- retained written melody, chord changes, pickups, repeats and numbered endings; lyrics omitted.
 	- imported explicit 7alt symbols using the book's altered-dominant notation where present.
 	- tempo is an editorial practice suggestion.
+	- put in the lyrics from the same Wikifonia source.
 	TODO:
 	- proofread the complete melody, harmony and form against the referenced PDF and check by ear.
 	- verify source attribution, copyright notice and reuse terms against the scan; only the archived MusicXML notice is retained.
@@ -133,5 +135,17 @@ doOwn = false
 	d'4 a'2. ~ |
 	a'1 |
 	\endBar
+}
+{% endif %}
+{% if part == "LyricsWikifonia" %}\lyricmode {
+	I give her all my love, __ that's all I do _ and if you saw my love __ you'd love her _ _
+	I _ love her __ _ A love like ours __ Could nev -- er die __ as long as I __ have you near _
+	me bright are the stars that shine __ dark is the sky _ I know this love of mine __ will
+	nev -- er die _ and I love her. __
+}
+{% endif %}
+{% if part == "LyricsmoreWikifonia" %}\lyricmode {
+	She gives me ev -- ry thing __ and ten -- der -- ly _ the kiss my lov -- er brings __ she
+	brings to too me and I love her. __
 }
 {% endif %}

@@ -5,6 +5,7 @@ default_version = "Wikifonia"
 title = "The Night Has A Thousand Eyes"
 style = "Jazz"
 composer = "Jerry Brainin"
+poet = "Buddy Bernier"
 piece = "Standard"
 typesetter = "OpenBook contributors (MusicXML import)"
 completion = "3"
@@ -16,7 +17,7 @@ copyrightextra = "Archived MusicXML notice retained; underlying music is not rel
 [versions.Wikifonia]
 doChords = true
 doVoice = true
-doLyrics = false
+doLyrics = true
 doLyricsmore = false
 doLyricsmoremore = false
 doChordBars = false
@@ -37,6 +38,7 @@ doOwn = false
 	- retained written melody, chord changes, pickups, repeats and numbered endings; lyrics omitted.
 	- imported explicit 7alt symbols using the book's altered-dominant notation where present.
 	- tempo is an editorial practice suggestion.
+	- put in the lyrics from the same Wikifonia source.
 	TODO:
 	- proofread the complete melody, harmony and form against the referenced PDF and check by ear.
 	- verify source attribution, copyright notice and reuse terms against the scan; only the archived MusicXML notice is retained.
@@ -167,5 +169,16 @@ doOwn = false
 	g'1 ~ |
 	g'4 r4 r2 |
 	\endBar
+}
+{% endif %}
+{% if part == "LyricsWikifonia" %}\lyricmode {
+	Don't whis -- per things to me you don't mean, __ for words deep down in -- side can be
+	seen my the night. __ The night __ has a thou -- sand eyes __ and it knows a truth -- ful
+	heart from one that lies. __ "Tho'" ro -- mance may have called in the past, __ my love
+	for you will be ev -- er -- last -- ing and bright. __ As bright __ as the star -- lit
+	skies __ and this wond -- "'rous" night that has a thous -- and eyes. __ I've lived my
+	life __ walk -- ing thru a dream. __ For I knew that I would find this mo -- ment su --
+	preme. __ A night of bliss __ and ten -- der sighs __ and the smil -- ing down __ of a
+	thous -- and eyes. __ The night __ has a thous -- and eyes. __
 }
 {% endif %}

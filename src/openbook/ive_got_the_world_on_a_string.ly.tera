@@ -5,6 +5,7 @@ default_version = "Wikifonia"
 title = "I've Got The World On  A String"
 style = "Jazz"
 composer = "Harold Arlen"
+poet = "Ted Koehler"
 piece = "Jazz"
 typesetter = "OpenBook contributors (MusicXML import)"
 completion = "3"
@@ -15,7 +16,7 @@ copyright = "All Rights Reserved"
 [versions.Wikifonia]
 doChords = true
 doVoice = true
-doLyrics = false
+doLyrics = true
 doLyricsmore = false
 doLyricsmoremore = false
 doChordBars = false
@@ -34,6 +35,7 @@ doOwn = false
 	- retained the original copyright notice where printed; the underlying music is not relicensed.
 	- retained written measures, pickups, repeats and endings; lyrics omitted.
 	- tempo is an editorial practice suggestion.
+	- put in the lyrics from the same Wikifonia source.
 	TODO:
 	- proofread the music against the referenced PDF and check by ear.
 	- verify editorial chord spacing in measures 8, 16; the archive places successive symbols at the same offset.
@@ -124,5 +126,15 @@ doOwn = false
 	f'1 ~ |
 	f'4 r4 r2 |
 	\endBar
+}
+{% endif %}
+{% if part == "LyricsWikifonia" %}\lyricmode {
+	I've got the world on a string __ sit -- tin on a rain -- bow, fot the string a -- round
+	my fin -- ger. What a world, what A __ life __ I'm in love. I've got a song that I sing, __
+	I can make the rain go, an -- y -- time I move my fin -- ger, Luck -- y me, can't you __
+	see __ I'm in love? __ Life is a beau -- ti -- ful thing, __ as long as I hold the string, __
+	I'd be a luck -- y so and so, If I should ev -- er let it go. __ I've got the world on a
+	string __ sit -- tin on a rain -- bow, fot the string a -- round my fin -- ger. What a
+	world, what a __ life __ I'm in love. __
 }
 {% endif %}

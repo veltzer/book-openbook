@@ -5,6 +5,7 @@ default_version = "Wikifonia"
 title = "A Song For You"
 style = "Jazz"
 composer = "Leon Russell"
+poet = "Leon Russell"
 piece = "Standard"
 typesetter = "OpenBook contributors (MusicXML import)"
 completion = "3"
@@ -16,7 +17,7 @@ copyrightextra = "Archived MusicXML notice retained; underlying music is not rel
 [versions.Wikifonia]
 doChords = true
 doVoice = true
-doLyrics = false
+doLyrics = true
 doLyricsmore = false
 doLyricsmoremore = false
 doChordBars = false
@@ -37,6 +38,7 @@ doOwn = false
 	- retained written melody, chord changes, pickups, repeats and numbered endings; lyrics omitted.
 	- imported explicit 7alt symbols using the book's altered-dominant notation where present.
 	- tempo taken from archived MusicXML.
+	- put in the lyrics from the same Wikifonia source.
 	TODO:
 	- proofread the complete melody, harmony and form against the referenced PDF and check by ear.
 	- verify source attribution, copyright notice and reuse terms against the scan; only the archived MusicXML notice is retained.
@@ -153,5 +155,22 @@ doOwn = false
 	r1 |
 	r1 |
 	\endBar
+}
+{% endif %}
+{% if part == "LyricsWikifonia" %}\lyricmode {
+	I've been so man -- y plac -- es in my life and time. __ I've sung a lot of songs I've
+	made some bad rhymes. __ I've act -- ed out my life in sta -- ges with ten thous -- and
+	peop -- le watch -- ing But we're a -- lone now and I'm sing -- "in'" this song for you. __ _ _
+	I know your im -- age of me __ is what I hope to be. __ I've trat -- ed you un -- kind --
+	ly but ba -- by can't you see __ There's no -- one more im -- port -- ant to __ me so ba --
+	by can't you please see through __ me "'Caue" we're a -- lone now and I'm sing -- "in'"
+	this song for you. __ _ _ You taught me pre -- cious se -- crets of the truth with -- hold --
+	ing __ _ nothing. -- _ _ You came out in Front and I was hid -- ing. But now I'm so much
+	bet -- ter And if my words __ don't come to -- ge -- ther List -- en to the mel -- o -- dy __
+	"'Cause" my love's __ in there hid -- ing __ _ I love you in a place where there's no
+	space or time. __ I love you for my life you are a friend of mine And when my life is o --
+	ver Re -- mem -- ber when we're to -- ge -- ther __ _ we were a -- lone and I was sing --
+	in this song for you -- _ _ We were a -- lone and I was sing -- "in'" this song for you -- _ _ _
+	You. __ Sing -- "in'" this song for you. __
 }
 {% endif %}

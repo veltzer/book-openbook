@@ -5,6 +5,7 @@ default_version = "Wikifonia"
 title = "You Leave Me Breathless"
 style = "Jazz"
 composer = "Frederick Hollander"
+poet = "Ralph Freed"
 piece = "Standard"
 typesetter = "OpenBook contributors (MusicXML import)"
 completion = "3"
@@ -16,7 +17,7 @@ copyrightextra = "Archived MusicXML notice retained; underlying music is not rel
 [versions.Wikifonia]
 doChords = true
 doVoice = true
-doLyrics = false
+doLyrics = true
 doLyricsmore = false
 doLyricsmoremore = false
 doChordBars = false
@@ -37,6 +38,7 @@ doOwn = false
 	- retained written melody, chord changes, pickups, repeats and numbered endings; lyrics omitted.
 	- imported explicit 7alt symbols using the book's altered-dominant notation where present.
 	- tempo is an editorial practice suggestion.
+	- put in the lyrics from the same Wikifonia source.
 	TODO:
 	- proofread the complete melody, harmony and form against the referenced PDF and check by ear.
 	- verify source attribution, copyright notice and reuse terms against the scan; only the archived MusicXML notice is retained.
@@ -145,5 +147,15 @@ doOwn = false
 	}
 	}
 	\endBar
+}
+{% endif %}
+{% if part == "LyricsWikifonia" %}\lyricmode {
+	You leave me breath -- less, you heav -- en -- ly thing. __ You look so won -- der --
+	ful, __ you're like a breath of spring. __ You have me speech -- less, I'm just like the
+	birds, __ I'm filled with mel -- o -- dy, __ but at a loss for words. __ That lit -- tle
+	grin of yours, __ that fun -- ny chin of yours, does so much to my heart. __ Oh! Give your
+	lips to me, __ for dar -- ling, that would be __ the fi -- nal touch to my heart. __ You
+	leave me breath -- less, that's all I can say. __ I can't say more, be -- cause __ you
+	take my breath a -- way. You leave me way. __
 }
 {% endif %}

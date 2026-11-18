@@ -5,6 +5,7 @@ default_version = "Wikifonia"
 title = "Dear Heart"
 style = "Jazz"
 composer = "Henry Mancini, Jay Livingston, Ray Evans"
+poet = "Jay Livingston, Ray Evans"
 piece = "Standard"
 typesetter = "OpenBook contributors (MusicXML import)"
 completion = "3"
@@ -16,7 +17,7 @@ copyrightextra = "Archived MusicXML notice retained; underlying music is not rel
 [versions.Wikifonia]
 doChords = true
 doVoice = true
-doLyrics = false
+doLyrics = true
 doLyricsmore = false
 doLyricsmoremore = false
 doChordBars = false
@@ -35,6 +36,7 @@ doOwn = false
 	- retained the archived MusicXML rights notice; no redistribution permission is asserted.
 	- retained written melody, chord changes, pickups, repeats and numbered endings; lyrics, slurs, dynamics and articulations other than fermatas omitted.
 	- tempo is an editorial practice suggestion.
+	- put in the lyrics from the same Wikifonia source.
 	TODO:
 	- proofread the complete melody, harmony and form against a printed edition and check by ear.
 	- verify source attribution, copyright notice and reuse terms; only the archived MusicXML notice is retained.
@@ -171,5 +173,12 @@ doOwn = false
 	}
 	}
 	\endBar
+}
+{% endif %}
+{% if part == "LyricsWikifonia" %}\lyricmode {
+	Dear heart, wish you were here to warm this night __ My dear heart seems like a year
+	since you've been out of my sight. __ A sin -- gle room, a ta -- ble for one, it's a lone --
+	some town all right __ but soon I'll kiss you hel -- lo at our front door __ and dear
+	heart I want you to know I'll leave your arms __ nev -- er more. __ more. __
 }
 {% endif %}

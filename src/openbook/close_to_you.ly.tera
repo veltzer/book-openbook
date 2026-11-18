@@ -5,6 +5,7 @@ default_version = "Wikifonia"
 title = "Close to You"
 style = "Jazz"
 composer = "Al Hoffman"
+poet = "Carl Lampl, Jerry Livingston"
 piece = "Standard"
 typesetter = "OpenBook contributors (MusicXML import)"
 completion = "3"
@@ -16,7 +17,7 @@ copyrightextra = "Archived MusicXML notice retained; underlying music is not rel
 [versions.Wikifonia]
 doChords = true
 doVoice = true
-doLyrics = false
+doLyrics = true
 doLyricsmore = false
 doLyricsmoremore = false
 doChordBars = false
@@ -37,6 +38,7 @@ doOwn = false
 	- retained written melody, chord changes, pickups, repeats and numbered endings; lyrics omitted.
 	- imported explicit 7alt symbols using the book's altered-dominant notation where present.
 	- tempo is an editorial practice suggestion.
+	- put in the lyrics from the same Wikifonia source.
 	TODO:
 	- proofread the complete melody, harmony and form against the referenced PDF and check by ear.
 	- verify source attribution, copyright notice and reuse terms against the scan; only the archived MusicXML notice is retained.
@@ -128,5 +130,13 @@ doOwn = false
 	g'1 ~ |
 	g'2 ~ g'4 r4 |
 	\endBar
+}
+{% endif %}
+{% if part == "LyricsWikifonia" %}\lyricmode {
+	Close to you __ I will al -- ways stay, __ Close to you __ Though you're far a -- way. __
+	You'll al -- ways be near, __ As though you were here by my side, __ No mat -- ter where. __
+	In my dreams I'll find you there. Close to me __ Shar -- ing you're car -- ess __ Can't
+	you see __ You're my hap -- pi -- ness. __ Where -- ev -- er you go __ My heart will go
+	too. What can I do? It on -- ly wants to be close to you. __
 }
 {% endif %}

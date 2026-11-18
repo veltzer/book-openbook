@@ -5,6 +5,7 @@ default_version = "Wikifonia"
 title = "Don't You Know I Care"
 style = "Jazz"
 composer = "Duke Ellington"
+poet = "Mack David"
 piece = "Standard"
 typesetter = "OpenBook contributors (MusicXML import)"
 completion = "3"
@@ -16,7 +17,7 @@ copyrightextra = "Archived MusicXML notice retained; underlying music is not rel
 [versions.Wikifonia]
 doChords = true
 doVoice = true
-doLyrics = false
+doLyrics = true
 doLyricsmore = false
 doLyricsmoremore = false
 doChordBars = false
@@ -37,6 +38,7 @@ doOwn = false
 	- retained written melody, chord changes, pickups, repeats and numbered endings; lyrics omitted.
 	- imported explicit 7alt symbols using the book's altered-dominant notation where present.
 	- tempo is an editorial practice suggestion.
+	- put in the lyrics from the same Wikifonia source.
 	TODO:
 	- proofread the complete melody, harmony and form against the referenced PDF and check by ear.
 	- verify source attribution, copyright notice and reuse terms against the scan; only the archived MusicXML notice is retained.
@@ -127,5 +129,14 @@ doOwn = false
 	\times 2/3 { as'4 bes'4 as'4 } ces''4 d'8 es'8 ~ |
 	es'2. r4 |
 	\endBar
+}
+{% endif %}
+{% if part == "LyricsWikifonia" %}\lyricmode {
+	Don't you know I care or don't you care to know? __ If you know I care how can you hurt
+	me so? __ Dar -- ling, you are part of ev -- "'ry" breath I "t,ake" __ will you break my
+	heart, or give my heart a break? __ I can't fig -- ure out __ what love's all a -- bout __
+	and where I fit in __ to your scheme. __ Am I wast -- ing time, __ please tell me "'cause"
+	I'm __ down to my last dream? Wont you please be fair, love me or let me go. __ Don't you
+	know I care or don't you care to know? __
 }
 {% endif %}

@@ -5,6 +5,7 @@ default_version = "Wikifonia"
 title = "Sway"
 style = "Jazz"
 composer = "Pablo Beltran Ruiz"
+poet = "Norman Gimbel"
 piece = "Standard"
 typesetter = "OpenBook contributors (MusicXML import)"
 completion = "3"
@@ -16,7 +17,7 @@ copyrightextra = "Archived MusicXML notice retained; underlying music is not rel
 [versions.Wikifonia]
 doChords = true
 doVoice = true
-doLyrics = false
+doLyrics = true
 doLyricsmore = false
 doLyricsmoremore = false
 doChordBars = false
@@ -37,6 +38,7 @@ doOwn = false
 	- retained written melody, chord changes, pickups, repeats and numbered endings; lyrics omitted.
 	- imported explicit 7alt symbols using the book's altered-dominant notation where present.
 	- tempo is an editorial practice suggestion.
+	- put in the lyrics from the same Wikifonia source.
 	TODO:
 	- proofread the complete melody, harmony and form against the referenced PDF and check by ear.
 	- verify source attribution, copyright notice and reuse terms against the scan; only the archived MusicXML notice is retained.
@@ -173,5 +175,20 @@ doOwn = false
 	\times 2/3 { r4 g'4 f'4 } e'2 |
 	f'4 e'8 d'2 r8 |
 	\endBar
+}
+{% endif %}
+{% if part == "LyricsWikifonia" %}\lyricmode {
+	When ma -- rim -- ba rhy -- thms start to play, dance with me, make me sway. Like a la --
+	zy o -- cean hugs the shore, hold me close, sway me more. Like a flo -- wer ben -- ding in
+	the breeze, bend with me, sway with "ease;" when we dance you have a way with me stay with
+	me, sway with me. All the dan -- cers may be on the floor, __ dear, but my eyes will see
+	on -- ly you, on -- ly you have that ma -- gic tech -- "nique:" When we sway I go week! I
+	can hear the sound of vi -- o -- lins long be -- fore it be -- gins Make me thrill as on --
+	ly you know how, sway me smooth, sway me now. All the dan -- cers may be on the floor, __
+	dear, but my eyes will see on -- ly you, on -- ly _ _ _ ma -- gic tech -- "nique:" When we
+	sway I go week! I can hear the sound of vi -- o -- lins long be -- fore it be -- gins Make
+	me thrill as on -- ly you know how, sway me smooth, sway me now. When ma -- rim -- ba rhy --
+	thms start to play, dance with me, make me sway, like a la -- zy o -- cean hugs the shore
+	hold me close, sway me more.
 }
 {% endif %}

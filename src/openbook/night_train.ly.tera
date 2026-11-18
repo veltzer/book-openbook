@@ -5,6 +5,7 @@ default_version = "Wikifonia"
 title = "Night Train"
 style = "Jazz"
 composer = "Jimmy Forrest"
+poet = "Oscar Washington, Lewis C. Simpkins"
 piece = "Jazz"
 typesetter = "OpenBook contributors (MusicXML import)"
 completion = "3"
@@ -15,8 +16,8 @@ copyright = "All Rights Reserved"
 [versions.Wikifonia]
 doChords = true
 doVoice = true
-doLyrics = false
-doLyricsmore = false
+doLyrics = true
+doLyricsmore = true
 doLyricsmoremore = false
 doChordBars = false
 doGuitar = false
@@ -34,6 +35,7 @@ doOwn = false
 	- retained the original copyright notice where printed; the underlying music is not relicensed.
 	- retained written measures, pickups, repeats and endings; lyrics omitted.
 	- tempo is an editorial practice suggestion.
+	- put in the lyrics from the same Wikifonia source.
 	TODO:
 	- proofread the music against the referenced PDF and check by ear.
 	- verify the copyright notice against the scan; no readable per-tune notice was recovered, so the archived rights notice is retained where available.
@@ -145,5 +147,24 @@ doOwn = false
 	des''8. c''16 bes'8. as'16 f'8. es'16 des'8. c'16 ~ |
 	c'2. r8 r8 ^ "Fine" |
 	\endBar
+}
+{% endif %}
+{% if part == "LyricsWikifonia" %}\lyricmode {
+	Night __ train __ that took my ba -- by so far a -- way, __ Night __ train __ that took
+	my ba -- by so far a -- way, __ Tell __ her __ I love her more and more ev -- ";ry" day. __
+	My moth -- er said I'd lose her if I ev -- er did a -- buse her, should have list -- ened. _ _ _
+	My moth -- er said I'd lose her, if I ev -- er did a -- buse her, should have list --
+	ened. _ _ _ Now I have learned my les -- son my sweet ba -- by was a bless -- "in',"
+	should have list -- ened. _ _ _ It's blue Mon -- day morn -- ing __ she left me last __
+	Sat -- ur -- day night Ev -- "'ry" time I hear trains blow __ I get the blues, __ can't
+	sleep at night. Night __ train __ please bring my ba -- by back home to me, __ Night __
+	train __ Please bring my ba -- by back home to me. __ She's __ gone __ the blues she's
+	left just won't set me free. __
+}
+{% endif %}
+{% if part == "LyricsmoreWikifonia" %}\lyricmode {
+	Night __ train __ your whis -- tle tore my poo heart in two, __ Night __ train __ your
+	whis -- tle tore my poor heart in two, __ She's __ gone __ and I don't know what I'm gon --
+	na do! __
 }
 {% endif %}

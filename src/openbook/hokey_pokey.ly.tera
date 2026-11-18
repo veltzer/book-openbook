@@ -16,8 +16,8 @@ copyrightextra = "Archived MusicXML notice retained; underlying music is not rel
 [versions.Wikifonia]
 doChords = true
 doVoice = true
-doLyrics = false
-doLyricsmore = false
+doLyrics = true
+doLyricsmore = true
 doLyricsmoremore = false
 doChordBars = false
 doGuitar = false
@@ -37,6 +37,7 @@ doOwn = false
 	- retained written melody, chord changes, pickups, repeats and numbered endings; lyrics omitted.
 	- imported explicit 7alt symbols using the book's altered-dominant notation where present.
 	- tempo is an editorial practice suggestion.
+	- put in the lyrics from the same Wikifonia source.
 	TODO:
 	- proofread the complete melody, harmony and form against the referenced PDF and check by ear.
 	- verify source attribution, copyright notice and reuse terms against the scan; only the archived MusicXML notice is retained.
@@ -89,5 +90,16 @@ doOwn = false
 	d'4 d'8 d'8 e'4 fis'4 |
 	g'2 r2 |
 	\endBar
+}
+{% endif %}
+{% if part == "LyricsWikifonia" %}\lyricmode {
+	You put your right arm in __ you put your right arm out __ you put your right arm in __
+	and shake it all a -- bout and then you do the hok -- ey pok -- ey and you turn your --
+	self a -- bout and thats what its all a -- bout Hey do the hok -- ey pok -- ey hey do the
+	hok -- ey pok -- ey hey do the hod -- ey pok -- ey thats what its all a bout.
+}
+{% endif %}
+{% if part == "LyricsmoreWikifonia" %}\lyricmode {
+	_ _ _ left arm
 }
 {% endif %}

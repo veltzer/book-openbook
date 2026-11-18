@@ -5,6 +5,7 @@ default_version = "Wikifonia"
 title = "Moonlight Serenade"
 style = "Jazz"
 composer = "Glenn Miller"
+poet = "Mitchell Parish"
 piece = "Standard"
 typesetter = "OpenBook contributors (MusicXML import)"
 completion = "3"
@@ -16,8 +17,8 @@ copyrightextra = "Archived MusicXML notice retained; underlying music is not rel
 [versions.Wikifonia]
 doChords = true
 doVoice = true
-doLyrics = false
-doLyricsmore = false
+doLyrics = true
+doLyricsmore = true
 doLyricsmoremore = false
 doChordBars = false
 doGuitar = false
@@ -37,6 +38,7 @@ doOwn = false
 	- retained written melody, chord changes, pickups, repeats and numbered endings; lyrics omitted.
 	- imported explicit 7alt symbols using the book's altered-dominant notation where present.
 	- tempo is an editorial practice suggestion.
+	- put in the lyrics from the same Wikifonia source.
 	TODO:
 	- proofread the complete melody, harmony and form against the referenced PDF and check by ear.
 	- verify source attribution, copyright notice and reuse terms against the scan; only the archived MusicXML notice is retained.
@@ -144,5 +146,21 @@ doOwn = false
 	a'4 a'4 c''4. c''8 |
 	a'2. r4 |
 	\endBar
+}
+{% endif %}
+{% if part == "LyricsWikifonia" %}\lyricmode {
+	I stand __ at your gate __ and the song __ that I sing __ is of moon -- light. I stand __
+	and I wait __ for the touch __ of your hand __ in the June night. The ros -- es __ are
+	sigh -- ing a Moon -- light Ser -- e -- nade. The _ Let us stray till break of day in
+	love's val -- ley of dreams Just you and I, a sum -- mer sky, a heav -- en -- ly breeze
+	kiss -- ing the trees. So don't __ let me wait, __ come to me __ ten -- der -- ly __ in
+	the June night. I stand __ at your gate __ and I sing __ you a song __ in the moon --
+	"light;" a love song, __ my dar -- ling, a Moon -- light Ser -- e -- nade.
+}
+{% endif %}
+{% if part == "LyricsmoreWikifonia" %}\lyricmode {
+	_ stars __ are a -- glow __ and to -- night __ how their light __ sets me dream -- ing.
+	My love, __ do you know __ that your eyes __ are like stars __ bright -- ly beam -- ing? I
+	bring you __ and sing you a Moon -- light Ser -- e _ _ nade
 }
 {% endif %}

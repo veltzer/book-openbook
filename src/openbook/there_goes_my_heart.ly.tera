@@ -5,6 +5,7 @@ default_version = "Wikifonia"
 title = "There Goes My Heart"
 style = "Jazz"
 composer = "Abner Silver"
+poet = "Benny Davis"
 piece = "Jazz"
 typesetter = "OpenBook contributors (MusicXML import)"
 completion = "3"
@@ -15,7 +16,7 @@ copyright = "All Rights Reserved"
 [versions.Wikifonia]
 doChords = true
 doVoice = true
-doLyrics = false
+doLyrics = true
 doLyricsmore = false
 doLyricsmoremore = false
 doChordBars = false
@@ -34,6 +35,7 @@ doOwn = false
 	- retained the original copyright notice where printed; the underlying music is not relicensed.
 	- retained written measures, pickups, repeats and endings; lyrics omitted.
 	- tempo is an editorial practice suggestion.
+	- put in the lyrics from the same Wikifonia source.
 	TODO:
 	- proofread the music against the referenced PDF and check by ear.
 	- verify editorial chord spacing in measures 12, 32, 34; the archive places successive symbols at the same offset.
@@ -142,5 +144,14 @@ doOwn = false
 	}
 	bes'2. r4 |
 	\endBar
+}
+{% endif %}
+{% if part == "LyricsWikifonia" %}\lyricmode {
+	There goes my heart, __ there goes the one I love. __ There goes the "girl~(boy)" __ I
+	was -- n't wor -- thy "of;" __ There goes my hap -- pi -- ness __ it could -- n't be! __
+	There goes some -- bod -- y else, __ in place of me. __ Good -- bye ro -- mance, __ it
+	could -- n't last some -- how, __ I had my chance, __ but it's all ov -- er now, __ I nev --
+	er thought that "she~(he)" __ could pass me by! __ There goes my heart and here __ am I.
+	Ther goes my I. __
 }
 {% endif %}

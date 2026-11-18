@@ -5,6 +5,7 @@ default_version = "Wikifonia"
 title = "You Don't Know Me"
 style = "Jazz"
 composer = "Eddy Arnold, Cindy Walker"
+poet = "Cindy Walker"
 piece = "Standard"
 typesetter = "OpenBook contributors (MusicXML import)"
 completion = "3"
@@ -16,7 +17,7 @@ copyrightextra = "Archived MusicXML notice retained; underlying music is not rel
 [versions.Wikifonia]
 doChords = true
 doVoice = true
-doLyrics = false
+doLyrics = true
 doLyricsmore = false
 doLyricsmoremore = false
 doChordBars = false
@@ -35,6 +36,7 @@ doOwn = false
 	- retained the archived MusicXML rights notice; no redistribution permission is asserted.
 	- retained written melody, chord changes, pickups, repeats and numbered endings; lyrics, slurs, dynamics and articulations other than fermatas omitted.
 	- tempo is an editorial practice suggestion.
+	- put in the lyrics from the same Wikifonia source.
 	TODO:
 	- proofread the complete melody, harmony and form against a printed edition and check by ear.
 	- verify source attribution, copyright notice and reuse terms; only the archived MusicXML notice is retained.
@@ -131,5 +133,17 @@ doOwn = false
 	}
 	c'1 |
 	\endBar
+}
+{% endif %}
+{% if part == "LyricsWikifonia" %}\lyricmode {
+	You give your hand to me, and then you say hel lo, and I can hard -- ly speak my heart is
+	beat ing so and an y -- one can tell you think you know me well but you don't know me. __
+	No, you don't know the one who dreams of you at night and longs to kiss you lips and longs
+	to hold you tight to you I'm just a friend that's all I've ev -- er been but you don't
+	know me __ For I nev -- er knew the art of mak -- ing love though my heart ached with love
+	for you. _ A -- fraid and shy I'd let my chance go by, the chance you _ _ _ _ too You give
+	your hand to me, and then you say good -- bye I watch you walk a -- way be -- side a luck --
+	y guy you'll nev -- er nev -- er know the one who loves you so but you don't know me. __
+	You give your me.
 }
 {% endif %}

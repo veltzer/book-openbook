@@ -5,6 +5,7 @@ default_version = "Wikifonia"
 title = "You're The Top"
 style = "Jazz"
 composer = "Cole Porter"
+poet = "Cole Porter"
 piece = "Jazz"
 typesetter = "OpenBook contributors (MusicXML import)"
 completion = "3"
@@ -15,8 +16,8 @@ copyright = "1034 Warner Bros Ine (Renewed) All Richrs Reserved Used by Permissi
 [versions.Wikifonia]
 doChords = true
 doVoice = true
-doLyrics = false
-doLyricsmore = false
+doLyrics = true
+doLyricsmore = true
 doLyricsmoremore = false
 doChordBars = false
 doGuitar = false
@@ -34,6 +35,7 @@ doOwn = false
 	- retained the original copyright notice where printed; the underlying music is not relicensed.
 	- retained written measures, pickups, repeats and endings; lyrics omitted.
 	- tempo is an editorial practice suggestion.
+	- put in the lyrics from the same Wikifonia source.
 	TODO:
 	- proofread the music against the referenced PDF and check by ear.
 	- verify editorial chord spacing in measures 16, 32, 34; the archive places successive symbols at the same offset.
@@ -139,5 +141,23 @@ doOwn = false
 	}
 	R1 |
 	\endBar
+}
+{% endif %}
+{% if part == "LyricsWikifonia" %}\lyricmode {
+	You're the top! You're the Col -- os se -- um! You're the top! You're the "Louvr'" mu --
+	se -- um, You're a mel -- o -- dy __ From a sym -- pho -- ny __ by Strauss, You're a Ben --
+	del bon -- net, A Shake -- speare son -- net, You're Mick -- ey Mouse. __ You're the Nile
+	You're the Tow'r of Pi -- sa, You're the smile on the Mon -- a Lis -- "a;" I'm a worth --
+	less check, __ a _ to -- tal wreck, __ a flop, But if Bab -- y, I'm __ the bot tom, You're __
+	the top! top!
+}
+{% endif %}
+{% if part == "LyricsmoreWikifonia" %}\lyricmode {
+	You're the top! You're Ma -- hat -- ma Ghan -- di, You're the top! You're Na -- pol --
+	eum brand -- y, You're the pur -- ple light __ Of a sum -- mer night __ in Spain, You're
+	the Na -- tion'l Gall -- "'ry," You're Gar -- bo's sal -- "'ry," You're cel -- lo --
+	phane, __ You're sub -- lime You're a tur -- key din -- ner, You're the time of the Der --
+	by win -- ner, I'm a toy bal -- loon __ that is fat -- ed soon __ to "pop;" But if Bab --
+	y I'm __ the bot -- tom, You're __ the
 }
 {% endif %}

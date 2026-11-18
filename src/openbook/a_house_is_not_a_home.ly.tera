@@ -5,6 +5,7 @@ default_version = "Wikifonia"
 title = "A House Is Not A Home"
 style = "Jazz"
 composer = "Burt Bacharach"
+poet = "Hal David"
 piece = "Standard"
 typesetter = "OpenBook contributors (MusicXML import)"
 completion = "3"
@@ -16,7 +17,7 @@ copyrightextra = "Archived MusicXML notice retained; underlying music is not rel
 [versions.Wikifonia]
 doChords = true
 doVoice = true
-doLyrics = false
+doLyrics = true
 doLyricsmore = false
 doLyricsmoremore = false
 doChordBars = false
@@ -37,6 +38,7 @@ doOwn = false
 	- retained written melody, chord changes, pickups, repeats and numbered endings; lyrics omitted.
 	- imported explicit 7alt symbols using the book's altered-dominant notation where present.
 	- tempo taken from archived MusicXML.
+	- put in the lyrics from the same Wikifonia source.
 	TODO:
 	- proofread the complete melody, harmony and form against the referenced PDF and check by ear.
 	- verify source attribution, copyright notice and reuse terms against the scan; only the archived MusicXML notice is retained.
@@ -158,5 +160,17 @@ doOwn = false
 	}
 	}
 	\endBar
+}
+{% endif %}
+{% if part == "LyricsWikifonia" %}\lyricmode {
+	A chair is still a chair __ e ven when there's no one sit -- ting "there;" But a chair is
+	not a house, and a house is not a home when there's no one there __ to hold you tight, and
+	no one there you can kiss good -- night. A room is still a room __ ev en when there's noth --
+	ing there but "gloom;" But a room is not a house, and a house is not a home when the two
+	of us __ are far a -- part and one of us has a bro -- ken heart. Now and then I call your
+	name and sud -- den -- ly your face ap -- pears But it's just __ a cra -- zy game. When it
+	ends it ends in tears. Dar -- ling, have a heart, __ don't let one mis -- take keep us a --
+	part. I'm not meant to live a -- lone. Turn this house in -- to a home. When I climb the
+	stair __ and turn the key, Oh, please be there still in love with me. A me. __
 }
 {% endif %}

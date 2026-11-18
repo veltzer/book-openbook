@@ -4,7 +4,8 @@ default_version = "Wikifonia"
 [attributes]
 title = "Quando, Quando, Quando (Tell Me When)"
 style = "Jazz"
-composer = "Tony Renis 1962, Italian: Alberto Testa; English: Ervin Drake 1962"
+composer = "Tony Renis, Alberto Testa, Ervin Drake"
+poet = "Alberto Testa, Ervin Drake"
 piece = "Standard"
 typesetter = "OpenBook contributors (MusicXML import)"
 completion = "3"
@@ -16,7 +17,7 @@ copyrightextra = "Archived MusicXML notice retained; underlying music is not rel
 [versions.Wikifonia]
 doChords = true
 doVoice = true
-doLyrics = false
+doLyrics = true
 doLyricsmore = false
 doLyricsmoremore = false
 doChordBars = false
@@ -35,6 +36,7 @@ doOwn = false
 	- retained the archived MusicXML rights notice; no redistribution permission is asserted.
 	- retained written melody, chord changes, pickups, repeats and numbered endings; lyrics, slurs, dynamics and articulations other than fermatas omitted.
 	- tempo is an editorial practice suggestion.
+	- put in the lyrics from the same Wikifonia source.
 	TODO:
 	- proofread the complete melody, harmony and form against a printed edition and check by ear.
 	- verify source attribution, copyright notice and reuse terms; only the archived MusicXML notice is retained.
@@ -213,5 +215,15 @@ doOwn = false
 	bes'1 ~ |
 	bes'2. r4 |
 	\endBar
+}
+{% endif %}
+{% if part == "LyricsWikifonia" %}\lyricmode {
+	Tell me when will you be mine __ tell me quan -- do quan -- do quan -- do __ we can share
+	a love di -- vine __ please dont make me wait a -- gain __ when will you say Yes to me __
+	tell me quan -- do quan -- do quan -- do __ you mean hap -- pi ness for me __ oh my love
+	please tell me when __ "ev'" -- ry mo -- ments a day __ ev -- "'ry" day seems a life --
+	time __ let me show you the way __ to a joy be -- yond com -- pare __ I cant wait a mo --
+	ment more __ tell me quan -- do quan -- do quan -- do __ say its me that you a -- dore __
+	and then dar -- ling tell me when __ tell me when will you be when
 }
 {% endif %}

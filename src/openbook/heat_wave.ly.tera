@@ -5,6 +5,7 @@ default_version = "Wikifonia"
 title = "Heat Wave"
 style = "Jazz"
 composer = "Irving Berlin"
+poet = "Irving Berlin"
 piece = "Standard"
 typesetter = "OpenBook contributors (MusicXML import)"
 completion = "3"
@@ -16,7 +17,7 @@ copyrightextra = "Archived MusicXML notice retained; underlying music is not rel
 [versions.Wikifonia]
 doChords = true
 doVoice = true
-doLyrics = false
+doLyrics = true
 doLyricsmore = false
 doLyricsmoremore = false
 doChordBars = false
@@ -37,6 +38,7 @@ doOwn = false
 	- retained written melody, chord changes, pickups, repeats and numbered endings; lyrics omitted.
 	- imported explicit 7alt symbols using the book's altered-dominant notation where present.
 	- tempo is an editorial practice suggestion.
+	- put in the lyrics from the same Wikifonia source.
 	TODO:
 	- proofread the complete melody, harmony and form against the referenced PDF and check by ear.
 	- verify source attribution, copyright notice and reuse terms against the scan; only the archived MusicXML notice is retained.
@@ -127,5 +129,15 @@ doOwn = false
 	b'8 b'8 b'8 g'8 ~ g'2 |
 	a'4 g'2. |
 	\endBar
+}
+{% endif %}
+{% if part == "LyricsWikifonia" %}\lyricmode {
+	We're hav -- ing a heat __ wave, __ a trop -- i -- cal heat __ wave. __ The "temp'" -- ra --
+	tures ris -- ing it is -- n't sur -- pris -- ing. She cer -- tain -- ly can __ can -- can.
+	She star -- ted the heat __ wave, __ by let -- ting her seat __ wave, __ and in such a way __
+	that the cus -- tom -- ers say __ that she cer -- tain -- ly can __ can -- can. Gee __ her __
+	a -- na -- to my __ made __ the mer -- cur -- y __ jump __ to nine -- ty three. Yes sir! __
+	We're hav -- ing a heat __ wave, __ a trop -- i -- cal heat __ wave, __ the way that she
+	moves __ that ther -- mo -- me -- ter proves __ that she cer -- tain -- ly can __ can can.
 }
 {% endif %}

@@ -5,6 +5,7 @@ default_version = "Wikifonia"
 title = "Seventy Six Trombones"
 style = "Standard"
 composer = "Meredith Wilson"
+poet = "Meredith Wilson"
 piece = "Standard"
 typesetter = "OpenBook contributors (MusicXML import)"
 completion = "3"
@@ -16,7 +17,7 @@ copyrightextra = "Archived MusicXML notice retained; underlying music is not rel
 [versions.Wikifonia]
 doChords = true
 doVoice = true
-doLyrics = false
+doLyrics = true
 doLyricsmore = false
 doLyricsmoremore = false
 doChordBars = false
@@ -37,6 +38,7 @@ doOwn = false
 	- retained written melody, chord changes, pickups, repeats and numbered endings; lyrics omitted.
 	- imported explicit 7alt symbols using the book's altered-dominant notation where present.
 	- tempo is an editorial practice suggestion.
+	- put in the lyrics from the same Wikifonia source.
 	TODO:
 	- proofread the complete melody, harmony and form against the referenced PDF and check by ear.
 	- verify source attribution, copyright notice and reuse terms against the scan; only the archived MusicXML notice is retained.
@@ -207,5 +209,20 @@ doOwn = false
 	c'''4 r8 c'4 c'8 |
 	c'8 r8 r2 |
 	\endBar
+}
+{% endif %}
+{% if part == "LyricsWikifonia" %}\lyricmode {
+	Sev -- en -- ty six trom -- bones led the big par -- ade __ with a hun -- dred and ten
+	cor -- nets close at hand __ they were fol -- lowed by rows and rows of the fin -- est vir --
+	tu -- o -- sos the cream of ev -- ry fam -- ous band __ sev -- en -- ty six trom -- bones
+	caught the morn -- ing sun __ with a hun -- dred and ten cor -- nets right be -- hind --
+	there were more than a thous -- and reeds spring -- ing -- up like weeds there were horns __
+	of ev -- ry shape and kind __ there were cop -- per bot -- tom tym -- pa -- ni in horse
+	pla -- toons __ thun -- der -- ing thun -- der -- ing all a -- long the way _ dou -- ble
+	bell eu pho -- ni -- andums and big bas -- soons __ each bas -- soon __ hav -- ing his big
+	fat say there were fif -- ty moun -- ted can -- non in the bat -- ter -- y __ thun -- der --
+	ing thun -- der -- ing loud -- er than be -- fore _ clar -- i -- nets of ev -- ry size and
+	trum -- pet -- ers who'd im -- pro -- vise a full oc -- tave high -- er than the score _ _
+	sev -- en -- ty square.
 }
 {% endif %}

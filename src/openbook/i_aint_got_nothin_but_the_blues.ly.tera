@@ -5,6 +5,7 @@ default_version = "Wikifonia"
 title = "I Ain't Got Nothin' But The Blues"
 style = "Jazz"
 composer = "Duke Ellington"
+poet = "Don George"
 piece = "Standard"
 typesetter = "OpenBook contributors (MusicXML import)"
 completion = "3"
@@ -16,7 +17,7 @@ copyrightextra = "Archived MusicXML notice retained; underlying music is not rel
 [versions.Wikifonia]
 doChords = true
 doVoice = true
-doLyrics = false
+doLyrics = true
 doLyricsmore = false
 doLyricsmoremore = false
 doChordBars = false
@@ -37,6 +38,7 @@ doOwn = false
 	- retained written melody, chord changes, pickups, repeats and numbered endings; lyrics omitted.
 	- imported explicit 7alt symbols using the book's altered-dominant notation where present.
 	- tempo is an editorial practice suggestion.
+	- put in the lyrics from the same Wikifonia source.
 	TODO:
 	- proofread the complete melody, harmony and form against the referenced PDF and check by ear.
 	- verify source attribution, copyright notice and reuse terms against the scan; only the archived MusicXML notice is retained.
@@ -146,5 +148,17 @@ doOwn = false
 	}
 	f'2 r2 |
 	\endBar
+}
+{% endif %}
+{% if part == "LyricsWikifonia" %}\lyricmode {
+	Ain't got the change of a nick -- el, __ ain't got no bounce in my shoes, __ ain't got no
+	fanc -- y to tick -- le, __ I ain't got noth -- "in'" but the blues. __ Ain't got no cof --
+	fee that's perk -- "in'," __ ain't got no win -- nings to lose, __ ain't got a dream that
+	is work -- "in'," __ I ain't got noth -- "in'" but the blues. __ When trum -- pets flare
+	up __ I keep my hair up, __ I just can't make it come down. __ Be -- lieve me Pap -- py, __
+	I can't get hap -- py __ since my ev -- er lov -- "in'" ba -- by left town. __ Ain't got
+	no rest on my slum -- bers, __ ain't got no feel -- in's to bruise, __ ain't got no tel --
+	e -- phone num -- bers, __ I ain't got noth -- "in'" but the blues Ain't got the change of
+	a nick -- blues. __
 }
 {% endif %}

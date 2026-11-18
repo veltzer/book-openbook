@@ -5,6 +5,7 @@ default_version = "Wikifonia"
 title = "Blame It On My Youth"
 style = "Jazz"
 composer = "Oscar Levant"
+poet = "Edward Heyman"
 piece = "Jazz"
 typesetter = "OpenBook contributors (MusicXML import)"
 completion = "3"
@@ -17,7 +18,7 @@ copyrightextraextra = "Used By Permission"
 [versions.Wikifonia]
 doChords = true
 doVoice = true
-doLyrics = false
+doLyrics = true
 doLyricsmore = false
 doLyricsmoremore = false
 doChordBars = false
@@ -36,6 +37,7 @@ doOwn = false
 	- retained the original copyright notice where printed; the underlying music is not relicensed.
 	- retained written measures, pickups, repeats and endings; lyrics omitted.
 	- tempo is an editorial practice suggestion.
+	- put in the lyrics from the same Wikifonia source.
 	TODO:
 	- proofread the music against the referenced PDF and check by ear.
 	- verify editorial chord spacing in measures 4, 8, 12, 20, 24, 28, 32; the archive places successive symbols at the same offset.
@@ -141,5 +143,15 @@ doOwn = false
 	}
 	es''2. r4 |
 	\endBar
+}
+{% endif %}
+{% if part == "LyricsWikifonia" %}\lyricmode {
+	If I ex -- pect -- ed love __ when first we kissed, blame it on my "youth;" __ if on --
+	ly just for you __ I did ex -- ist, blame it on my youth. __ I __ be -- lieved in ev --
+	"'ry" -- thing like a child of three, you __ meant more than an -- y -- thing, all the
+	world to me! If you were on my mind __ all night and day, blame it on my "youth:" __ if I
+	for -- got to eat __ and sleep and pray, blame it on my youth. __ If __ I cried a lit --
+	tle bit when first I learned the truth, don't blame it on my heart, __ blame it on my
+	youth. __
 }
 {% endif %}

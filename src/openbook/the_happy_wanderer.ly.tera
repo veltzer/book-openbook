@@ -5,6 +5,7 @@ default_version = "Wikifonia"
 title = "The Happy Wanderer"
 style = "Jazz"
 composer = "Friedr.W.Moller, Antonia Ridge"
+poet = "Antonia Ridge"
 piece = "Standard"
 typesetter = "OpenBook contributors (MusicXML import)"
 completion = "3"
@@ -16,8 +17,8 @@ copyrightextra = "Archived MusicXML notice retained; underlying music is not rel
 [versions.Wikifonia]
 doChords = true
 doVoice = true
-doLyrics = false
-doLyricsmore = false
+doLyrics = true
+doLyricsmore = true
 doLyricsmoremore = false
 doChordBars = false
 doGuitar = false
@@ -35,6 +36,7 @@ doOwn = false
 	- retained the archived MusicXML rights notice; no redistribution permission is asserted.
 	- retained written melody, chord changes, pickups, repeats and numbered endings; lyrics, slurs, dynamics and articulations other than fermatas omitted.
 	- tempo is an editorial practice suggestion.
+	- put in the lyrics from the same Wikifonia source.
 	TODO:
 	- proofread the complete melody, harmony and form against a printed edition and check by ear.
 	- verify source attribution, copyright notice and reuse terms; only the archived MusicXML notice is retained.
@@ -129,5 +131,19 @@ doOwn = false
 	bes4 r4 r2 |
 	}
 	\endBar
+}
+{% endif %}
+{% if part == "LyricsWikifonia" %}\lyricmode {
+	I love to go a -- wan -- der -- ing a -- long the moun -- tain track __ and as I go I
+	love to sing my knap -- sack on my back __ Val de ri _ _ _ _ _ Val de ri _ _ _ _ _ Val de
+	ri _ _ _ _ _ Val de ha ha ha ha ha ha Val de ri _ _ _ _ _ Val de ra _ _ _ _ _ my knap sack
+	on my back. __
+}
+{% endif %}
+{% if part == "LyricsmoreWikifonia" %}\lyricmode {
+	I wave my hat to all I meet and they wave back to me __ and black birds call so loud and
+	sweet from ev -- ry green wood tree __ _ _ _ tra la la la la _ _ _ tra la la la la _ _ _
+	tra la la la la _ _ _ _ _ _ _ _ _ _ _ tra la la la rI _ _ _ tra la la la la from ev -- ry
+	green wood tree. __
 }
 {% endif %}

@@ -5,6 +5,7 @@ default_version = "Wikifonia"
 title = "The Best Thing For You"
 style = "Jazz"
 composer = "Irving Berlin"
+poet = "Irving Berlin"
 piece = "Standard"
 typesetter = "OpenBook contributors (MusicXML import)"
 completion = "3"
@@ -16,7 +17,7 @@ copyrightextra = "Archived MusicXML notice retained; underlying music is not rel
 [versions.Wikifonia]
 doChords = true
 doVoice = true
-doLyrics = false
+doLyrics = true
 doLyricsmore = false
 doLyricsmoremore = false
 doChordBars = false
@@ -37,6 +38,7 @@ doOwn = false
 	- retained written melody, chord changes, pickups, repeats and numbered endings; lyrics omitted.
 	- imported explicit 7alt symbols using the book's altered-dominant notation where present.
 	- tempo is an editorial practice suggestion.
+	- put in the lyrics from the same Wikifonia source.
 	TODO:
 	- proofread the complete melody, harmony and form against the referenced PDF and check by ear.
 	- verify source attribution, copyright notice and reuse terms against the scan; only the archived MusicXML notice is retained.
@@ -150,5 +152,13 @@ doOwn = false
 	}
 	}
 	\endBar
+}
+{% endif %}
+{% if part == "LyricsWikifonia" %}\lyricmode {
+	I on -- ly want what's the best thing for you and the best thing for you would be me. __
+	I've been con -- vinced af -- ter think -- ing it through, that the best thing for you
+	would be me. __ Ev -- "'ry" day __ to my -- self I say, __ point the way, __ what will it
+	be? __ I ask my -- self what's the best thing for you, and my -- self and I __ seem __ to
+	a -- gree __ that the best thing for you would be me. __ me.
 }
 {% endif %}

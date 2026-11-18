@@ -5,6 +5,7 @@ default_version = "Wikifonia"
 title = "You Make Me Feel So Young"
 style = "Jazz"
 composer = "Josef Myrow"
+poet = "Mack Gordon"
 piece = "Jazz"
 typesetter = "OpenBook contributors (MusicXML import)"
 completion = "3"
@@ -15,7 +16,7 @@ copyright = "1946 WR Music Corp. (Renewed) All Rights Reserved. Used by Permissi
 [versions.Wikifonia]
 doChords = true
 doVoice = true
-doLyrics = false
+doLyrics = true
 doLyricsmore = false
 doLyricsmoremore = false
 doChordBars = false
@@ -34,6 +35,7 @@ doOwn = false
 	- retained the original copyright notice where printed; the underlying music is not relicensed.
 	- retained written measures, pickups, repeats and endings; lyrics omitted.
 	- tempo is an editorial practice suggestion.
+	- put in the lyrics from the same Wikifonia source.
 	TODO:
 	- proofread the music against the referenced PDF and check by ear.
 	- verify editorial chord spacing in measures 2, 10, 20, 31, 33; the archive places successive symbols at the same offset.
@@ -137,5 +139,16 @@ doOwn = false
 	bes'1 ~ |
 	bes'2 r2 |
 	\endBar
+}
+{% endif %}
+{% if part == "LyricsWikifonia" %}\lyricmode {
+	You make me feel so young, __ you make me feel like spring has sprung, __ and ev -- "'ry"
+	time I see you grin, __ I'm such __ a hap -- py in -- di -- vi -- du -- al. The mo -- ment
+	that you speak, __ I wan -- na go play hide and seek, __ I wan -- na go and bounce the
+	moon, __ just like __ a toy __ bal -- loon. __ You and I are just like a coup -- le of
+	tots, __ run -- ning a -- cross a mea -- dow, _ pick -- _ ing up lots __ of for -- get --
+	me -- nots __ You make me feel so young, __ you make me feel there are songs to be sung,
+	bells to be rung, and a won -- der -- ful fling to be flung. And ev -- en when I'm old and
+	gray, I'm gon -- na feel the way I do to -- day, "'cause" you make me feel so young. __
 }
 {% endif %}

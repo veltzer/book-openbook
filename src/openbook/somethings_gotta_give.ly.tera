@@ -4,7 +4,8 @@ default_version = "Wikifonia"
 [attributes]
 title = "Something's Gotta Give"
 style = "Jazz"
-composer = "Johnny Mercer 1954, Johnny Mercer"
+composer = "Johnny Mercer"
+poet = "Johnny Mercer"
 piece = "Standard"
 typesetter = "OpenBook contributors (MusicXML import)"
 completion = "3"
@@ -16,7 +17,7 @@ copyrightextra = "Archived MusicXML notice retained; underlying music is not rel
 [versions.Wikifonia]
 doChords = true
 doVoice = true
-doLyrics = false
+doLyrics = true
 doLyricsmore = false
 doLyricsmoremore = false
 doChordBars = false
@@ -35,6 +36,7 @@ doOwn = false
 	- retained the archived MusicXML rights notice; no redistribution permission is asserted.
 	- retained written melody, chord changes, pickups, repeats and numbered endings; lyrics, slurs, dynamics and articulations other than fermatas omitted.
 	- tempo is an editorial practice suggestion.
+	- put in the lyrics from the same Wikifonia source.
 	TODO:
 	- proofread the complete melody, harmony and form against a printed edition and check by ear.
 	- verify source attribution, copyright notice and reuse terms; only the archived MusicXML notice is retained.
@@ -205,5 +207,19 @@ doOwn = false
 	}
 	}
 	\endBar
+}
+{% endif %}
+{% if part == "LyricsWikifonia" %}\lyricmode {
+	When an __ ir __ re -- sist -- i -- ble force such as you __ meets an __ old __ im -- mov --
+	a -- ble ob -- ject like me __ you can __ bet __ as sure as you live __ some -- things got --
+	ta give some -- things got -- ta give some -- things got -- ta give __ when an _ ir __ re --
+	press -- i -- ble smile such as yours __ warms an __ old __ im -- pla -- ca -- ble heart
+	such as mine __ dont say __ no __ be -- cause I in -- sist __ some -- where some -- how
+	some -- ones gon -- na be kissed __ so en -- garde __ who know _ what the fates have in
+	store __ from their __ vast __ mys -- te -- ri -- ous sky? __ I'll try hard __ ig -- nor __
+	ing those lips I a -- dore __ but how __ long __ can an -- y -- one try? __ fight fight __
+	fight __ fight fight it with all of our might __ chan -- ces __ are __ some heav -- en --
+	ly star span -- gled night __ we'll find __ out __ as sure as we live __ some -- things go --
+	ta give some -- things got -- ta give, some -- things got -- ta give __
 }
 {% endif %}

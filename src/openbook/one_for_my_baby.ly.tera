@@ -5,6 +5,7 @@ default_version = "Wikifonia"
 title = "One For My Baby"
 style = "Jazz"
 composer = "Harold Arlen"
+poet = "Johnny Mercer"
 piece = "Jazz"
 typesetter = "OpenBook contributors (MusicXML import)"
 completion = "3"
@@ -15,7 +16,7 @@ copyright = "All Rights Reserved"
 [versions.Wikifonia]
 doChords = true
 doVoice = true
-doLyrics = false
+doLyrics = true
 doLyricsmore = false
 doLyricsmoremore = false
 doChordBars = false
@@ -34,6 +35,7 @@ doOwn = false
 	- retained the original copyright notice where printed; the underlying music is not relicensed.
 	- retained written measures, pickups, repeats and endings; lyrics omitted.
 	- tempo is an editorial practice suggestion.
+	- put in the lyrics from the same Wikifonia source.
 	TODO:
 	- proofread the music against the referenced PDF and check by ear.
 	- verify editorial chord spacing in measures 5, 13, 21, 25, 29, 37, 45, 49, 53, 56, 59; the archive places successive symbols at the same offset.
@@ -176,5 +178,21 @@ doOwn = false
 	g'1 |
 	R1 |
 	\endBar
+}
+{% endif %}
+{% if part == "LyricsWikifonia" %}\lyricmode {
+	It's quart -- er to three, __ There's no -- one in the place ex -- cept you and me, __ So
+	set "'em" up, Joe __ I've got a lit -- tle sto -- ry you ought -- a know, __ We're drink --
+	ing, my friend, __ to the end __ of a brief ep -- i -- sode, __ Make it one for my ba --
+	by and one more for the road. I got the rou -- tine, __ so drop an -- oth -- er nick -- el
+	in the ma -- chine, __ I'm feel -- "in'" so bad __ I wish you'd made the mu -- sic dream --
+	y and sad, __ Could tell you a -- lot, __ But you've got __ to be true to your code, __
+	Make it one for my ba -- by and one more for the road. You'd nev -- er know it, But bud --
+	dy, I'm a kind of po -- et and I've got -- ta lot -- ta things to "say;" __ And when I'm
+	gloom -- y you sim -- ply got -- ta lis -- ten to me un -- til it's talked a -- way. __
+	Well, that how it goes __ And Joe, I know you're get -- ting anx -- ious to close, __ So,
+	thanks for the cheer __ I hope you did -- n't mind my bend -- ing your ear, __ This torch
+	that I've found __ must be drowned __ or it soon might ex -- plode, __ Make it one for my
+	ba -- by and one more for the road that long, long road.
 }
 {% endif %}

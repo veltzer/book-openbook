@@ -5,6 +5,7 @@ default_version = "Wikifonia"
 title = "C'est Magnifique"
 style = "Standard"
 composer = "Cole Porter"
+poet = "Cole Porter"
 piece = "Standard"
 typesetter = "OpenBook contributors (MusicXML import)"
 completion = "3"
@@ -16,7 +17,7 @@ copyrightextra = "Archived MusicXML notice retained; underlying music is not rel
 [versions.Wikifonia]
 doChords = true
 doVoice = true
-doLyrics = false
+doLyrics = true
 doLyricsmore = false
 doLyricsmoremore = false
 doChordBars = false
@@ -37,6 +38,7 @@ doOwn = false
 	- retained written melody, chord changes, pickups, repeats and numbered endings; lyrics omitted.
 	- imported explicit 7alt symbols using the book's altered-dominant notation where present.
 	- tempo taken from archived MusicXML.
+	- put in the lyrics from the same Wikifonia source.
 	TODO:
 	- proofread the complete melody, harmony and form against the referenced PDF and check by ear.
 	- verify source attribution, copyright notice and reuse terms against the scan; only the archived MusicXML notice is retained.
@@ -127,5 +129,13 @@ doOwn = false
 	c''1 ~ |
 	c''2. r4 |
 	\endBar
+}
+{% endif %}
+{% if part == "LyricsWikifonia" %}\lyricmode {
+	When love comes in and takes you or a spin oo la la la __ C'est mag -- ni -- fi -- que __
+	when ev -- "'ry" night your loved one holds you tight oo la la la __ C'est mag -- ni -- fi --
+	que __ but when one day your loved one drifts a -- way oo la la la __ it is so tra -- gi --
+	que __ but when once more he whis -- pers "'Je" t'a -- "dore'" C'est mag -- ni -- fi -- _
+	que. __
 }
 {% endif %}

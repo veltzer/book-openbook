@@ -5,6 +5,7 @@ default_version = "Wikifonia"
 title = "Deep Purple"
 style = "Jazz"
 composer = "Peter De Rose"
+poet = "Mitchel Paarish"
 piece = "Jazz"
 typesetter = "OpenBook contributors (MusicXML import)"
 completion = "3"
@@ -16,7 +17,7 @@ copyrightextra = "Warner Bros. Publications Inc"
 [versions.Wikifonia]
 doChords = true
 doVoice = true
-doLyrics = false
+doLyrics = true
 doLyricsmore = false
 doLyricsmoremore = false
 doChordBars = false
@@ -35,6 +36,7 @@ doOwn = false
 	- retained the original copyright notice where printed; the underlying music is not relicensed.
 	- retained written measures, pickups, repeats and endings; lyrics omitted.
 	- tempo taken from archived MusicXML.
+	- put in the lyrics from the same Wikifonia source.
 	TODO:
 	- proofread the music against the referenced PDF and check by ear.
 {% endif %}
@@ -121,5 +123,14 @@ doOwn = false
 	g'2 gis'4 a'4 |
 	f'1 |
 	\endBar
+}
+{% endif %}
+{% if part == "LyricsWikifonia" %}\lyricmode {
+	When the deep pur -- ple falls, ov -- er sleep -- y gar -- den walls, And the stars be --
+	gin to flick -- er in the sky __ Through the mist of a mem -- o -- ry you wan -- der back
+	to me Breath -- ing my name with a sigh. In the still of the night once a -- gain I hold
+	you tight, Though you're gone, you're love lives on When moon -- light beams. __ And as
+	long as my heart will beat, lov -- er we'll al -- ways meet, Here in my deep pur ple
+	dreams.
 }
 {% endif %}

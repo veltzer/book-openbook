@@ -5,6 +5,7 @@ default_version = "Wikifonia"
 title = "Dedicated To You"
 style = "Jazz"
 composer = "Saul Chaplin"
+poet = "H. H. Zaret, Sammy Cahn"
 piece = "Standard"
 typesetter = "OpenBook contributors (MusicXML import)"
 completion = "3"
@@ -16,7 +17,7 @@ copyrightextra = "Archived MusicXML notice retained; underlying music is not rel
 [versions.Wikifonia]
 doChords = true
 doVoice = true
-doLyrics = false
+doLyrics = true
 doLyricsmore = false
 doLyricsmoremore = false
 doChordBars = false
@@ -37,6 +38,7 @@ doOwn = false
 	- retained written melody, chord changes, pickups, repeats and numbered endings; lyrics omitted.
 	- imported explicit 7alt symbols using the book's altered-dominant notation where present.
 	- tempo is an editorial practice suggestion.
+	- put in the lyrics from the same Wikifonia source.
 	TODO:
 	- proofread the complete melody, harmony and form against the referenced PDF and check by ear.
 	- verify source attribution, copyright notice and reuse terms against the scan; only the archived MusicXML notice is retained.
@@ -142,5 +144,16 @@ doOwn = false
 	}
 	}
 	\endBar
+}
+{% endif %}
+{% if part == "LyricsWikifonia" %}\lyricmode {
+	If I should write a book for you, __ That brought me fame and for -- tune too, __ That
+	book would be, like my heart and me, "'Ded" -- i -- cat -- ed to "you!'" And if i should
+	paint a pic -- ture too, __ That showed the lov -- li -- nes of you, __ The art would be,
+	like my heart and me, "'Ded" -- i -- cat -- ed to "you!'" To you, be -- cause your love is
+	the bea -- con that lights up my way, Toy you __ be -- cause with you, I know, a life --
+	time could be just one heav -- en -- ly day. If I should find a twink -- ling star, __ one
+	half so won -- drous as you are, __ That star would be, like my heart and me, "'Ded" -- i --
+	cat -- ed to "you!'" "you!'"
 }
 {% endif %}

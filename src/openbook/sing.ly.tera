@@ -4,7 +4,8 @@ default_version = "Wikifonia"
 [attributes]
 title = "Sing"
 style = "Jazz"
-composer = "Joe Raposo, Joe Raposo"
+composer = "Joe Raposo"
+poet = "Joe Raposo"
 piece = "Standard"
 typesetter = "OpenBook contributors (MusicXML import)"
 completion = "3"
@@ -16,7 +17,7 @@ copyrightextra = "Archived MusicXML notice retained; underlying music is not rel
 [versions.Wikifonia]
 doChords = true
 doVoice = true
-doLyrics = false
+doLyrics = true
 doLyricsmore = false
 doLyricsmoremore = false
 doChordBars = false
@@ -35,6 +36,7 @@ doOwn = false
 	- retained the archived MusicXML rights notice; no redistribution permission is asserted.
 	- retained written melody, chord changes, pickups, repeats and numbered endings; lyrics, slurs, dynamics and articulations other than fermatas omitted.
 	- tempo is an editorial practice suggestion.
+	- put in the lyrics from the same Wikifonia source.
 	TODO:
 	- proofread the complete melody, harmony and form against a printed edition and check by ear.
 	- verify source attribution, copyright notice and reuse terms; only the archived MusicXML notice is retained.
@@ -165,5 +167,13 @@ doOwn = false
 	g2. r4 |
 	}
 	\endBar
+}
+{% endif %}
+{% if part == "LyricsWikifonia" %}\lyricmode {
+	Sing! sing a song sing out loud sing out strong sing of good things, not bad sing of hap --
+	py not sad sing! sing a song make it sim ple to last your whole life long __ dont wor --
+	ry that "it;s" not good e -- nough for an -- y -- one else to hear sing! sing a song! __
+	La la do la da la da la do la da la da da la do la da __ La do la da la da la la da lo da
+	da la do lo da __ _ La la do la da la da la do la da la da da la do la da __
 }
 {% endif %}

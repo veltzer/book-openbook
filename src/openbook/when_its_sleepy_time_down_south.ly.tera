@@ -5,6 +5,7 @@ default_version = "Wikifonia"
 title = "When It's Sleepy Time Down South"
 style = "Jazz"
 composer = "Clarence Muse"
+poet = "Leon Rene, Otis Rene"
 piece = "Standard"
 typesetter = "OpenBook contributors (MusicXML import)"
 completion = "3"
@@ -16,7 +17,7 @@ copyrightextra = "Archived MusicXML notice retained; underlying music is not rel
 [versions.Wikifonia]
 doChords = true
 doVoice = true
-doLyrics = false
+doLyrics = true
 doLyricsmore = false
 doLyricsmoremore = false
 doChordBars = false
@@ -37,6 +38,7 @@ doOwn = false
 	- retained written melody, chord changes, pickups, repeats and numbered endings; lyrics omitted.
 	- imported explicit 7alt symbols using the book's altered-dominant notation where present.
 	- tempo is an editorial practice suggestion.
+	- put in the lyrics from the same Wikifonia source.
 	TODO:
 	- proofread the complete melody, harmony and form against the referenced PDF and check by ear.
 	- verify source attribution, copyright notice and reuse terms against the scan; only the archived MusicXML notice is retained.
@@ -141,5 +143,17 @@ doOwn = false
 	}
 	}
 	\endBar
+}
+{% endif %}
+{% if part == "LyricsWikifonia" %}\lyricmode {
+	Pale moon shin -- ing on the fields be -- low __ Folks are croon __ ing songs soft and
+	low, __ Need -- n't tell me so be -- cause I know, __ It's sleep -- y time down south.
+	Soft winds blow -- ing thru the pine -- wood trees, __ Folks down there __ live a life of
+	ease, __ When "ol'" mam -- my falls up -- on her knees, __ It's sleep -- y time down
+	south. __ Steam -- boats on the riv -- er a -- com -- "in'," a -- go -- "in'" splash --
+	ing the night a -- way, Hear those ban -- jos ring -- "in'" the folks are a -- sing --
+	"in'" they dance till break of day. __ dear old South -- land with it's dream -- y songs, __
+	Takes me back __ there where I be -- long, __ How I'd love to be in mam -- my's arms, __
+	When it's sleep -- y time down south. south.
 }
 {% endif %}

@@ -5,6 +5,7 @@ default_version = "Wikifonia"
 title = "I'm Just A Lucky So And So"
 style = "Jazz"
 composer = "Mac David"
+poet = "Duke Ellington"
 piece = "Standard"
 typesetter = "OpenBook contributors (MusicXML import)"
 completion = "3"
@@ -16,7 +17,7 @@ copyrightextra = "Archived MusicXML notice retained; underlying music is not rel
 [versions.Wikifonia]
 doChords = true
 doVoice = true
-doLyrics = false
+doLyrics = true
 doLyricsmore = false
 doLyricsmoremore = false
 doChordBars = false
@@ -37,6 +38,7 @@ doOwn = false
 	- retained written melody, chord changes, pickups, repeats and numbered endings; lyrics omitted.
 	- imported explicit 7alt symbols using the book's altered-dominant notation where present.
 	- tempo is an editorial practice suggestion.
+	- put in the lyrics from the same Wikifonia source.
 	TODO:
 	- proofread the complete melody, harmony and form against the referenced PDF and check by ear.
 	- verify source attribution, copyright notice and reuse terms against the scan; only the archived MusicXML notice is retained.
@@ -125,5 +127,16 @@ doOwn = false
 	g'1 ~ |
 	g'1 ^\fermata |
 	\endBar
+}
+{% endif %}
+{% if part == "LyricsWikifonia" %}\lyricmode {
+	As I walk down the street, __ seems ev -- "'ry" -- one I meet __ gives me a friend -- ly
+	hel -- lo. __ I guess I'm just a luck -- y so and so. __ The birds in ev -- "'ry" tree, __
+	are all so neigh -- bor -- ly __ they sing where -- ev -- er I go. __ I guess I'm just a
+	luck -- y so and so. __ If you should ask me the a -- mount in my bank ac -- count, I'd
+	have to con -- fess __ that I'm slip -- "pin'." __ But that don't wor -- ry me, con -- fi --
+	den -- tial -- ly, I've got a dream that's a pip -- "pin'." __ And when the day is thru __
+	each night I hur -- ry to __ a home where love waits, I know. __ I guess I'm just a luck --
+	y so and so. __
 }
 {% endif %}

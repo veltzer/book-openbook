@@ -5,6 +5,7 @@ default_version = "Wikifonia"
 title = "You're My Thrill"
 style = "Jazz"
 composer = "Jay Gorney"
+poet = "Sidney Clare"
 piece = "Standard"
 typesetter = "OpenBook contributors (MusicXML import)"
 completion = "3"
@@ -16,7 +17,7 @@ copyrightextra = "Archived MusicXML notice retained; underlying music is not rel
 [versions.Wikifonia]
 doChords = true
 doVoice = true
-doLyrics = false
+doLyrics = true
 doLyricsmore = false
 doLyricsmoremore = false
 doChordBars = false
@@ -37,6 +38,7 @@ doOwn = false
 	- retained written melody, chord changes, pickups, repeats and numbered endings; lyrics omitted.
 	- imported explicit 7alt symbols using the book's altered-dominant notation where present.
 	- tempo is an editorial practice suggestion.
+	- put in the lyrics from the same Wikifonia source.
 	TODO:
 	- proofread the complete melody, harmony and form against the referenced PDF and check by ear.
 	- verify source attribution, copyright notice and reuse terms against the scan; only the archived MusicXML notice is retained.
@@ -133,5 +135,14 @@ doOwn = false
 	d''1 ~ |
 	d''1 |
 	\endBar
+}
+{% endif %}
+{% if part == "LyricsWikifonia" %}\lyricmode {
+	You're my thrill, you do some -- thing to me you send chills right through me, When I
+	look at you, "'Cause" you're my thrill. You're my thrill, how my pulse in -- creas -- es,
+	I just go to piec -- es when I look at you, "'Cause" you're my thrill. Hmmm __ Noth -- ing
+	seems to mat -- ter. Hmmm __ here's my heart on a sil -- ver plat -- ter, where's my will?
+	Why this strange de -- sire? _ That keeps moun -- ting high -- er when I look at you I
+	can't keep still. __ You're my thrill. __
 }
 {% endif %}

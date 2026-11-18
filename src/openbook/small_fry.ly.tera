@@ -5,6 +5,7 @@ default_version = "Wikifonia"
 title = "Small Fry"
 style = "Jazz"
 composer = "Hoagy Carmichael"
+poet = "Frank Loesser"
 piece = "Jazz"
 typesetter = "OpenBook contributors (MusicXML import)"
 completion = "3"
@@ -15,7 +16,7 @@ copyright = "All Rights Reserved"
 [versions.Wikifonia]
 doChords = true
 doVoice = true
-doLyrics = false
+doLyrics = true
 doLyricsmore = false
 doLyricsmoremore = false
 doChordBars = false
@@ -34,6 +35,7 @@ doOwn = false
 	- retained the original copyright notice where printed; the underlying music is not relicensed.
 	- retained written measures, pickups, repeats and endings; lyrics omitted.
 	- tempo is an editorial practice suggestion.
+	- put in the lyrics from the same Wikifonia source.
 	TODO:
 	- proofread the music against the referenced PDF and check by ear.
 	- verify the copyright notice against the scan; no readable per-tune notice was recovered, so the archived rights notice is retained where available.
@@ -129,5 +131,19 @@ doOwn = false
 	d''4 bes'8 a'8 ~ a'4 g'4 |
 	f'2. r4 |
 	\endBar
+}
+{% endif %}
+{% if part == "LyricsWikifonia" %}\lyricmode {
+	Small fry, strut -- "tin'" by the pool room, small fry should be in the school -- room.
+	My, my, put down that cig -- ar -- ette, you ain't a grown -- up haigh and might -- y yet.
+	Small fry, danc -- "in'" for a pen -- ny, small fry, count -- "in'" up how man -- y. My,
+	my, just lis -- ten here to me, you ain't the big -- gest cat -- fish in the sea, __ You
+	prac -- tice peck -- "in'" all day long to some old ra -- di -- o song. __ Oh yes, __ oh
+	yes, __ oh yes. __ You bet -- ter lis -- ten to your Maw and some -- day prac -- tice the
+	law __ and then you'll be a real suc -- cess. Yes, small fry you kissed the neigh -- bor's
+	daugh -- ter, small fry you stay in shal -- low wat -- er. Seems I should take you
+	"'cross" my knee, you ain't the big -- gest cat -- fish in the sea. __ You've got your
+	feet all soak -- "in'" wet, you'll be the death of me yet. __ Oh me, __ oh my, __ small
+	fry.
 }
 {% endif %}

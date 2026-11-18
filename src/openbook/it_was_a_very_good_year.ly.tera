@@ -4,7 +4,8 @@ default_version = "Wikifonia"
 [attributes]
 title = "It Was A Very Good Year"
 style = "Jazz"
-composer = "Ervin Drake 1961"
+composer = "Ervin Drake"
+poet = "Ervin Drake"
 piece = "Standard"
 typesetter = "OpenBook contributors (MusicXML import)"
 completion = "3"
@@ -16,8 +17,8 @@ copyrightextra = "Archived MusicXML notice retained; underlying music is not rel
 [versions.Wikifonia]
 doChords = true
 doVoice = true
-doLyrics = false
-doLyricsmore = false
+doLyrics = true
+doLyricsmore = true
 doLyricsmoremore = false
 doChordBars = false
 doGuitar = false
@@ -37,6 +38,7 @@ doOwn = false
 	- retained written melody, chord changes, pickups, repeats and numbered endings; lyrics omitted.
 	- imported explicit 7alt symbols using the book's altered-dominant notation where present.
 	- tempo is an editorial practice suggestion.
+	- put in the lyrics from the same Wikifonia source.
 	TODO:
 	- proofread the complete melody, harmony and form against the referenced PDF and check by ear.
 	- verify source attribution, copyright notice and reuse terms against the scan; only the archived MusicXML notice is retained.
@@ -127,5 +129,19 @@ doOwn = false
 	e'4 d'8 e'8 c'4 c'4 |
 	cis'2 a'2 |
 	\endBar
+}
+{% endif %}
+{% if part == "LyricsWikifonia" %}\lyricmode {
+	_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ When I was sev -- en -- teen _ it was a ver -- y good
+	year, __ It was a ver -- y good year for small town girls and soft sum -- mer nights, __
+	we'd __ hide from the lights __ on the vil -- lage green __ When I was sev -- _ en --
+	teen. _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ "2.When" I was ver -- y good year
+}
+{% endif %}
+{% if part == "LyricsmoreWikifonia" %}\lyricmode {
+	_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ twen -- ty -- one _ it was a ver -- y good year __
+	It was a ver -- y good year foe cit -- y girls who lived up the stair, __ with __ per --
+	fumed _ hair __ that _ came un -- done __ When I was twen -- _ ty -- one. _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _
+	"3.When" I was
 }
 {% endif %}

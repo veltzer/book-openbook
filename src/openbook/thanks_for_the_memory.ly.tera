@@ -5,6 +5,7 @@ default_version = "Wikifonia"
 title = "Thanks For The Memory"
 style = "Jazz"
 composer = "Leo Robin"
+poet = "Ralph Rainger"
 piece = "Standard"
 typesetter = "OpenBook contributors (MusicXML import)"
 completion = "3"
@@ -16,8 +17,8 @@ copyrightextra = "Archived MusicXML notice retained; underlying music is not rel
 [versions.Wikifonia]
 doChords = true
 doVoice = true
-doLyrics = false
-doLyricsmore = false
+doLyrics = true
+doLyricsmore = true
 doLyricsmoremore = false
 doChordBars = false
 doGuitar = false
@@ -37,6 +38,7 @@ doOwn = false
 	- retained written melody, chord changes, pickups, repeats and numbered endings; lyrics omitted.
 	- imported explicit 7alt symbols using the book's altered-dominant notation where present.
 	- tempo is an editorial practice suggestion.
+	- put in the lyrics from the same Wikifonia source.
 	TODO:
 	- proofread the complete melody, harmony and form against the referenced PDF and check by ear.
 	- verify source attribution, copyright notice and reuse terms against the scan; only the archived MusicXML notice is retained.
@@ -150,5 +152,29 @@ doOwn = false
 	d''4 d'2 a'4 |
 	f'1 |
 	\endBar
+}
+{% endif %}
+{% if part == "LyricsWikifonia" %}\lyricmode {
+	Thanks for the mem -- o -- ry of can -- dle light and wine __ cas -- tles on the Rhine __
+	the Par -- the -- non and mo -- ments on the Hud -- son Riv -- er Line. __ How love -- ly
+	it was! Thanks for the mem -- o -- ry of rain -- y af -- ter -- noons __ swing -- y Har --
+	lem tunes, __ and mo -- tor -- trips and burn -- ing lips and burn -- ing toast and
+	prunes. __ How love -- ly it was! Man -- ys the time that we feast ed. and Man ys the time
+	that we fast -- ed. Oh, well it was swell while it last -- ed we did have fun and no harm
+	done. And thanks for the mem -- o -- ry of sun -- burns at the shore __ nights in Sing --
+	a -- pore. __ You might have been a head -- ache but you nev -- er were a bore, __ so
+	thank you so much. nev -- er did come true? __ "Awf'" -- ly glad I met you, chee -- ri o
+	and too -- dle -- oo __ and thank you so much!
+}
+{% endif %}
+{% if part == "LyricsmoreWikifonia" %}\lyricmode {
+	Thanks for the mem -- o -- ry of sen -- ti -- men -- tal verse, __ noth -- ing in my
+	purse, __ and chuck -- les when the preach -- er said "'For" bet -- ter or for worse. __
+	How love -- ly it was! Thanks for the mom -- o -- ry of lin -- ge -- rie with lace, __
+	Pils ner by the case, __ and how I jumped the day you trumped my one and on -- ly ace. __
+	How love -- ly it was! We said good -- bye with a high -- "ball;" then I got as high as a
+	steep -- le. But we were in -- tel -- i -- gent peo -- ple no tears, no fuss, hur -- ray
+	for us. So thanks for the mem -- o -- ry and strict -- ly en -- tre -- nous, __ dar --
+	ling how are you? __ And how are all the lit -- tle dreams that
 }
 {% endif %}

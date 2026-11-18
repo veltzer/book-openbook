@@ -5,6 +5,7 @@ default_version = "Wikifonia"
 title = "You Are Too Beautiful"
 style = "Jazz"
 composer = "Richard Rodgers"
+poet = "Lorenz Hart"
 piece = "Jazz"
 typesetter = "OpenBook contributors (MusicXML import)"
 completion = "3"
@@ -16,7 +17,7 @@ copyrightextra = "Music. All Rights on behalf of The Estate of Loren: Hart Admin
 [versions.Wikifonia]
 doChords = true
 doVoice = true
-doLyrics = false
+doLyrics = true
 doLyricsmore = false
 doLyricsmoremore = false
 doChordBars = false
@@ -35,6 +36,7 @@ doOwn = false
 	- retained the original copyright notice where printed; the underlying music is not relicensed.
 	- retained written measures, pickups, repeats and endings; lyrics omitted.
 	- tempo is an editorial practice suggestion.
+	- put in the lyrics from the same Wikifonia source.
 	TODO:
 	- proofread the music against the referenced PDF and check by ear.
 	- verify editorial chord spacing in measures 4, 8, 12, 15, 16, 24, 28, 31, 32; the archive places successive symbols at the same offset.
@@ -138,5 +140,15 @@ doOwn = false
 	}
 	}
 	\endBar
+}
+{% endif %}
+{% if part == "LyricsWikifonia" %}\lyricmode {
+	You are too beau -- ti -- ful, my dear, to be true, and I am a fool for beau -- ty.
+	fooled by a feel -- ing that be -- cause I had found you, I could have bound you, too. You
+	are too beau -- ti -- ful for one man a -- lone, for one luck -- y fool to be with. When
+	there are oth -- er men with eyes of their own to see with. Love does not stand shar --
+	ing, not if one cares. Have you been com -- par -- ing my ev -- "'ry" kiss with theirs? If
+	on the oth -- er hand, I'm faith -- ful to you, it's not through a sense of du -- "ty;"
+	you are too beau -- ti -- ful and I am a fool for beau -- ty. ty.
 }
 {% endif %}

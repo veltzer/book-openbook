@@ -5,6 +5,7 @@ default_version = "Wikifonia"
 title = "I Didn't Know About You"
 style = "Jazz"
 composer = "Duke Ellington"
+poet = "Bob Russell"
 piece = "Jazz"
 typesetter = "OpenBook contributors (MusicXML import)"
 completion = "3"
@@ -16,7 +17,7 @@ copyrightextra = "USA Controlled by EMI"
 [versions.Wikifonia]
 doChords = true
 doVoice = true
-doLyrics = false
+doLyrics = true
 doLyricsmore = false
 doLyricsmoremore = false
 doChordBars = false
@@ -35,6 +36,7 @@ doOwn = false
 	- retained the original copyright notice where printed; the underlying music is not relicensed.
 	- retained written measures, pickups, repeats and endings; lyrics omitted.
 	- tempo is an editorial practice suggestion.
+	- put in the lyrics from the same Wikifonia source.
 	TODO:
 	- proofread the music against the referenced PDF and check by ear.
 	- verify editorial chord spacing in measures 7, 15, 16; the archive places successive symbols at the same offset.
@@ -120,5 +122,16 @@ doOwn = false
 	d'8 d'8 f'8 g'8 a'8 f'8 a'4 |
 	f'1 |
 	\endBar
+}
+{% endif %}
+{% if part == "LyricsWikifonia" %}\lyricmode {
+	I ran a -- round __ with my own lit -- tle crowd, __ The us -- u -- al laughs, __ not of --
+	ten but loud, __ and in the world that I knew __ I did -- n't know a -- bout you. __ Chas --
+	ing af -- ter the ring __ on the mer -- ry -- go -- round. __ Just tak -- ing my fun __
+	where it could be found, __ and yet what else could I "do;" __ I did -- n't know a -- bout
+	you. __ Dar -- ling now I know I had the lone -- li -- est yes -- ter -- day, ev -- "'ry"
+	day. In your arms I know for once in my life I'm liv -- ing. Had a good time __ ev --
+	"'ry" -- time I went out. __ Ro -- mance was a thing __ I kid -- ded a -- bout. __ How
+	could I know a -- bout love? __ I did -- n't know a -- bout you.
 }
 {% endif %}

@@ -5,6 +5,7 @@ default_version = "Wikifonia"
 title = "J'attendrai"
 style = "Standard"
 composer = "Dino Olivieri"
+poet = "Louis Poterat"
 piece = "Standard"
 typesetter = "OpenBook contributors (MusicXML import)"
 completion = "3"
@@ -16,8 +17,8 @@ copyrightextra = "Archived MusicXML notice retained; underlying music is not rel
 [versions.Wikifonia]
 doChords = true
 doVoice = true
-doLyrics = false
-doLyricsmore = false
+doLyrics = true
+doLyricsmore = true
 doLyricsmoremore = false
 doChordBars = false
 doGuitar = false
@@ -37,6 +38,7 @@ doOwn = false
 	- retained written melody, chord changes, pickups, repeats and numbered endings; lyrics omitted.
 	- imported explicit 7alt symbols using the book's altered-dominant notation where present.
 	- tempo is an editorial practice suggestion.
+	- put in the lyrics from the same Wikifonia source.
 	TODO:
 	- proofread the complete melody, harmony and form against the referenced PDF and check by ear.
 	- verify source attribution, copyright notice and reuse terms against the scan; only the archived MusicXML notice is retained.
@@ -175,5 +177,24 @@ doOwn = false
 	}
 	c''4 ) r4 r2 |
 	\endBar
+}
+{% endif %}
+{% if part == "LyricsWikifonia" %}\lyricmode {
+	_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ Les fleurs pal -- is -- sent Le feu s'e --
+	teint L'om -- bre se glis -- se Dans le jar -- din L'hor -- lo -- ge tis -- se Des sons
+	tres las "je~crois~entendre~ton~pas" __ le vent m'ap -- por -- te Des bruits loin -- tains
+	Guet -- tant ma por -- te J'é -- coute en vain Hélàs __ plus rien __ "plus~rien" __ ne
+	vient __ J'atten -- drai __ Le "jour~et" __ la nuit, J'at -- ten -- drai tou -- jours __
+	"Ton~re" -- tour __ J'atten -- drai, __ Carl'oi -- zea qui -- s'en -- fuit Vient chetr --
+	cher l'ou -- bli __ "Dans~son" __ nid __ "le~temps" __ "passe~et" __ court __ "En~bat" --
+	tant Tris -- te -- ment dans mon "coeur~plus" __ lourd __ "Et~pour" -- tant J'at -- ten --
+	drai ton re -- tour __ tour __
+}
+{% endif %}
+{% if part == "LyricsmoreWikifonia" %}\lyricmode {
+	_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ Re -- viens bien vi -- te Les jours sont
+	froids Et sans li -- mi -- te Les nuits sans toi Quand on se quit -- te On ou -- blie --
+	tout "Mais~reve~nir~est~si~doux" __ Si ma tris -- tes -- se Peut t'é -- mou -- voir, A --
+	vec ten dres -- se Re -- viens un soir "Et~dans" __ tes bras __ "Tout~re" -- nai -- tra __
 }
 {% endif %}

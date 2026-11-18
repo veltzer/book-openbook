@@ -5,6 +5,7 @@ default_version = "Wikifonia"
 title = "Nobody's Heart"
 style = "Jazz"
 composer = "Richard Rodgers"
+poet = "Lorenz Hart"
 piece = "Standard"
 typesetter = "OpenBook contributors (MusicXML import)"
 completion = "3"
@@ -16,7 +17,7 @@ copyrightextra = "Archived MusicXML notice retained; underlying music is not rel
 [versions.Wikifonia]
 doChords = true
 doVoice = true
-doLyrics = false
+doLyrics = true
 doLyricsmore = false
 doLyricsmoremore = false
 doChordBars = false
@@ -37,6 +38,7 @@ doOwn = false
 	- retained written melody, chord changes, pickups, repeats and numbered endings; lyrics omitted.
 	- imported explicit 7alt symbols using the book's altered-dominant notation where present.
 	- tempo is an editorial practice suggestion.
+	- put in the lyrics from the same Wikifonia source.
 	TODO:
 	- proofread the complete melody, harmony and form against the referenced PDF and check by ear.
 	- verify source attribution, copyright notice and reuse terms against the scan; only the archived MusicXML notice is retained.
@@ -194,5 +196,16 @@ doOwn = false
 	g'2 ~ |
 	g'2 ^ "D.S. al Fine" |
 	\endBar
+}
+{% endif %}
+{% if part == "LyricsWikifonia" %}\lyricmode {
+	No -- bod -- y'd heart be -- longs to me, Heigh -- ho! Who cares? No -- bod -- y writes
+	his song to me, No __ one be -- longs to me, That's the least of my cares. I may be sad at
+	times, And dis -- in -- clined to play, But it's not bad at times, To go your own sweet
+	way. __ No -- bod -- y's arms be -- long to me, No __ arms feel strong to me, I ad -- mire
+	the moon, As a moon, Just a moon, No -- bod -- y's heart be -- longs to me to day. day. __
+	Ride Am -- a -- zon ride. __ Hunt your stags and bears. __ Take life in it's stride. __
+	Heigh -- ho! Who cares? __ Go hunt -- ing with pride, __ Track bears to their lairs __
+	Ride Am -- a -- zon ride. __ Heigh -- ho! __ Who cares? __
 }
 {% endif %}

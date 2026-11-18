@@ -4,7 +4,8 @@ default_version = "Wikifonia"
 [attributes]
 title = "Weekend In New England"
 style = "Jazz"
-composer = "Randy Edelman, Randy Edelman"
+composer = "Randy Edelman"
+poet = "Randy Edelman"
 piece = "Standard"
 typesetter = "OpenBook contributors (MusicXML import)"
 completion = "3"
@@ -16,8 +17,8 @@ copyrightextra = "Archived MusicXML notice retained; underlying music is not rel
 [versions.Wikifonia]
 doChords = true
 doVoice = true
-doLyrics = false
-doLyricsmore = false
+doLyrics = true
+doLyricsmore = true
 doLyricsmoremore = false
 doChordBars = false
 doGuitar = false
@@ -35,6 +36,7 @@ doOwn = false
 	- retained the archived MusicXML rights notice; no redistribution permission is asserted.
 	- retained written melody, chord changes, pickups, repeats and numbered endings; lyrics, slurs, dynamics and articulations other than fermatas omitted.
 	- tempo is an editorial practice suggestion.
+	- put in the lyrics from the same Wikifonia source.
 	TODO:
 	- proofread the complete melody, harmony and form against a printed edition and check by ear.
 	- verify source attribution, copyright notice and reuse terms; only the archived MusicXML notice is retained.
@@ -151,5 +153,18 @@ doOwn = false
 	d''2. |
 	r8 c''8 c''4 d''8 c''8 _\markup{ \bold\tiny {D.C. al Fine} } |
 	\endBar
+}
+{% endif %}
+{% if part == "LyricsWikifonia" %}\lyricmode {
+	Last night I said good -- bye, Now it seems years. I'm _ _ thoughts of me hold -- ing
+	you, bring -- ing us __ near. __ And tell me, When will our eyes meet? __ When __ can I
+	touch you? __ When __ will this strong yearn -- ing end? __ And when will I hold you __ a --
+	gain? I feel the change com -- "in'" __ I feel the wind blow. I feel brave and dar -- ing,
+	I feel my blood __ flow. __ _ _ _ _ _ With you I could bring out all the love that I have. __ _
+	you there's __ a hea -- ven, __ So earth ain't so __ _ bad. __ And tell me, __
+}
+{% endif %}
+{% if part == "LyricsmoreWikifonia" %}\lyricmode {
+	back in the cit -- _ y noth -- ing is _ _ clear but
 }
 {% endif %}

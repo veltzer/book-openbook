@@ -5,6 +5,7 @@ default_version = "Wikifonia"
 title = "You Say You Care"
 style = "Jazz"
 composer = "Jule Styne"
+poet = "Leo Robin"
 piece = "Jazz"
 typesetter = "OpenBook contributors (MusicXML import)"
 completion = "3"
@@ -15,7 +16,7 @@ copyright = "All Rights Reserved"
 [versions.Wikifonia]
 doChords = true
 doVoice = true
-doLyrics = false
+doLyrics = true
 doLyricsmore = false
 doLyricsmoremore = false
 doChordBars = false
@@ -34,6 +35,7 @@ doOwn = false
 	- retained the original copyright notice where printed; the underlying music is not relicensed.
 	- retained written measures, pickups, repeats and endings; lyrics omitted.
 	- tempo is an editorial practice suggestion.
+	- put in the lyrics from the same Wikifonia source.
 	TODO:
 	- proofread the music against the referenced PDF and check by ear.
 	- verify the copyright notice against the scan; no readable per-tune notice was recovered, so the archived rights notice is retained where available.
@@ -147,5 +149,14 @@ doOwn = false
 	}
 	}
 	\endBar
+}
+{% endif %}
+{% if part == "LyricsWikifonia" %}\lyricmode {
+	You say you care, and all at once a mil -- lion rose -- es pour their per -- fume on the
+	air. __ You say you care, and you put words ro what the whip -- poor -- wills are sing --
+	ing ev -- "'ry" -- where. __ How sweet, how strange, that all my lon -- li -- ness should
+	change in -- to the lov -- li -- ness we share. __ If you were there, no hill would be too
+	high, and dar -- ling, I would ev -- en fly the sea, __ just to hear you say you care for
+	me. me. __
 }
 {% endif %}

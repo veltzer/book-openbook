@@ -5,6 +5,7 @@ default_version = "Wikifonia"
 title = "The Loco-motion"
 style = "Jazz"
 composer = "Gerry Goffin, Carole King"
+poet = "Gerry Goffin, Carole King"
 piece = "Standard"
 typesetter = "OpenBook contributors (MusicXML import)"
 completion = "3"
@@ -16,8 +17,8 @@ copyrightextra = "Archived MusicXML notice retained; underlying music is not rel
 [versions.Wikifonia]
 doChords = true
 doVoice = true
-doLyrics = false
-doLyricsmore = false
+doLyrics = true
+doLyricsmore = true
 doLyricsmoremore = false
 doChordBars = false
 doGuitar = false
@@ -37,6 +38,7 @@ doOwn = false
 	- retained written melody, chord changes, pickups, repeats and numbered endings; lyrics omitted.
 	- imported explicit 7alt symbols using the book's altered-dominant notation where present.
 	- tempo is an editorial practice suggestion.
+	- put in the lyrics from the same Wikifonia source.
 	TODO:
 	- proofread the complete melody, harmony and form against the referenced PDF and check by ear.
 	- verify source attribution, copyright notice and reuse terms against the scan; only the archived MusicXML notice is retained.
@@ -123,5 +125,21 @@ doOwn = false
 	d''8 d''8 d''8 d''8 d''4 d''4 |
 	}
 	\endBar
+}
+{% endif %}
+{% if part == "LyricsWikifonia" %}\lyricmode {
+	"Ev'" ry bod -- y's do -- _ in a brand new dance now "(C'm" on ba -- by do the lo -- co --
+	mo -- "tion)" I know you'll get to like it if you give it a chance now "(Cm" on ba by do
+	the lo co mo "tion)" my lit -- tle ba -- by sis -- ter can _ do it with ease its eas -- i --
+	er than learn _ in your A B C's so come on come on do the lo -- co -- mo -- tion with me
+	you got to swing your hips now come on ba -- by jump up jump back oh well I think you got
+	the knack me "(Cm" on ba -- by do the lo -- co -- mo -- "tion)" "(Cm" on ba -- by do the
+	lo -- co -- mo -- "tion)"
+}
+{% endif %}
+{% if part == "LyricsmoreWikifonia" %}\lyricmode {
+	now that you can do _ it _ lets makea chain now _ _ _ _ _ _ _ _ _ _ A chug -- a -- chug --
+	a mo -- tion like a rail -- _ road -- train now _ _ _ _ _ _ _ _ _ _ _ do it nice and eas --
+	y now _ dont lose con -- trol A lit -- tle bit of rhy -- thm and a lot of soul,
 }
 {% endif %}

@@ -4,7 +4,8 @@ default_version = "Wikifonia"
 [attributes]
 title = "I Apologise"
 style = "Jazz"
-composer = "Al Hoffman,Al Goodhart, Ed Nelson"
+composer = "Al Hoffman, Al Goodhart, Ed Nelson"
+poet = "Al Hoffman, Al Goodhart, Ed Nelson"
 piece = "Standard"
 typesetter = "OpenBook contributors (MusicXML import)"
 completion = "3"
@@ -16,8 +17,8 @@ copyrightextra = "Archived MusicXML notice retained; underlying music is not rel
 [versions.Wikifonia]
 doChords = true
 doVoice = true
-doLyrics = false
-doLyricsmore = false
+doLyrics = true
+doLyricsmore = true
 doLyricsmoremore = false
 doChordBars = false
 doGuitar = false
@@ -37,6 +38,7 @@ doOwn = false
 	- retained written melody, chord changes, pickups, repeats and numbered endings; lyrics omitted.
 	- imported explicit 7alt symbols using the book's altered-dominant notation where present.
 	- tempo is an editorial practice suggestion.
+	- put in the lyrics from the same Wikifonia source.
 	TODO:
 	- proofread the complete melody, harmony and form against the referenced PDF and check by ear.
 	- verify source attribution, copyright notice and reuse terms against the scan; only the archived MusicXML notice is retained.
@@ -131,5 +133,19 @@ doOwn = false
 	es''2. r4 |
 	}
 	\endBar
+}
+{% endif %}
+{% if part == "LyricsWikifonia" %}\lyricmode {
+	If I told a lie, if I make you cry, when I said good -- bye, I'm sor -- ry, from the bot --
+	tom of my heart, dear, I Ap -- ol -- o -- gise. I Ap -- ol -- o -- gise. I re -- al -- ise
+	I've been un -- fair to you, please let me make a -- mends, Don't say that you for -- got
+	the love we knew, af -- ter all, we were more than friends. Give me back your glance, give
+	me back ro -- mance, give me one more chance, for -- give me. From the bot -- tom of my
+	heart ",dear," I Ap -- ol -- o -- gise.
+}
+{% endif %}
+{% if part == "LyricsmoreWikifonia" %}\lyricmode {
+	If I caused you pain, I know I'm to blame, must have been in -- sane, be -- lieve me, _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _
+	If I've made you blue I've had heart -- aches too, now I beg of you, for -- give me.
 }
 {% endif %}

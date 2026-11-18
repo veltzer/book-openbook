@@ -5,6 +5,7 @@ default_version = "Wikifonia"
 title = "Don't Smoke in Bed"
 style = "Jazz"
 composer = "Willard Robison"
+poet = "Willard Robison"
 piece = "Standard"
 typesetter = "OpenBook contributors (MusicXML import)"
 completion = "3"
@@ -16,7 +17,7 @@ copyrightextra = "Archived MusicXML notice retained; underlying music is not rel
 [versions.Wikifonia]
 doChords = true
 doVoice = true
-doLyrics = false
+doLyrics = true
 doLyricsmore = false
 doLyricsmoremore = false
 doChordBars = false
@@ -37,6 +38,7 @@ doOwn = false
 	- retained written melody, chord changes, pickups, repeats and numbered endings; lyrics omitted.
 	- imported explicit 7alt symbols using the book's altered-dominant notation where present.
 	- tempo is an editorial practice suggestion.
+	- put in the lyrics from the same Wikifonia source.
 	TODO:
 	- proofread the complete melody, harmony and form against the referenced PDF and check by ear.
 	- verify source attribution, copyright notice and reuse terms against the scan; only the archived MusicXML notice is retained.
@@ -144,5 +146,16 @@ doOwn = false
 	c'1 ~ |
 	c'1 |
 	\endBar
+}
+{% endif %}
+{% if part == "LyricsWikifonia" %}\lyricmode {
+	She left a note on her dres -- ser and her old wed -- ding ring. With these few good --
+	bye words, sad -- ly she "sings:" Good -- bye old sleep -- y head __ I'm pack -- ing you
+	in. __ Like I said, __ take care of ev -- "'ry" -- thing. __ I'm leav -- ing my wed --
+	ding ring. __ Don't look for me, __ I'll get a -- head. __ Re -- mem -- ber, dar -- ling, __
+	Don't smoke in bed. __ Good -- bye old sleep -- y head __ I'm pack -- ing you in. __ Like
+	I said, __ take care of ev -- "'ry" -- thing. __ I'm leav -- ing my wed -- ding ring. __
+	Don't look for me, __ I'll get a -- head. __ Re -- mem -- ber, dar -- ling, __ Don't smoke
+	in bed. __
 }
 {% endif %}

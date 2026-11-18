@@ -5,6 +5,7 @@ default_version = "Wikifonia"
 title = "Ruby"
 style = "Jazz"
 composer = "Kaiser Chiefs"
+poet = "Kaiser Chiefs"
 piece = "Standard"
 typesetter = "OpenBook contributors (MusicXML import)"
 completion = "3"
@@ -16,8 +17,8 @@ copyrightextra = "Archived MusicXML notice retained; underlying music is not rel
 [versions.Wikifonia]
 doChords = true
 doVoice = true
-doLyrics = false
-doLyricsmore = false
+doLyrics = true
+doLyricsmore = true
 doLyricsmoremore = false
 doChordBars = false
 doGuitar = false
@@ -37,6 +38,7 @@ doOwn = false
 	- retained written melody, chord changes, pickups, repeats and numbered endings; lyrics omitted.
 	- imported explicit 7alt symbols using the book's altered-dominant notation where present.
 	- tempo is an editorial practice suggestion.
+	- put in the lyrics from the same Wikifonia source.
 	TODO:
 	- proofread the complete melody, harmony and form against the referenced PDF and check by ear.
 	- verify source attribution, copyright notice and reuse terms against the scan; only the archived MusicXML notice is retained.
@@ -195,5 +197,28 @@ doOwn = false
 	es''2 r2 |
 	r2 r2 |
 	\endBar
+}
+{% endif %}
+{% if part == "LyricsWikifonia" %}\lyricmode {
+	Let it ne -- ver be said, __ _ That ro -- mance is dead __ Cause there's so litt -- le
+	else __ oc -- cu -- py -- ing my head __ There is no -- thing I need __ ex -- cept the air
+	that I breathe __ But I'm not real -- ly fussed, __ Does -- n't mat -- ter to me __ Ru --
+	by, Ru -- by, Ru -- by, Ru -- by __ "(A" -- haa, a -- haa, A -- "haa)" Do ya Do ya do --
+	ya Do ya __ "(A" -- haa, A -- haa, A -- "haa)" Now what ya do -- ing do -- ing to me __
+	"(A" -- haa, A -- haa, A -- "haa)" Ru -- by, Ru -- by, Ru -- by Ru -- by __ "(A" -- haa, A --
+	haa, A -- "haa)" Due to "haa)" Could it be, could it be that you're jo -- king with me __
+	And you don't real -- ly see __ you with me __ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _
+	Ru -- by, Ru -- by, Ru -- by, Ru -- by __ "(A" -- haa, a -- haa, A -- "haa)" Do ya Do ya
+	do -- ya Do ya __ "(A" -- haa, A -- haa, A -- haa Now what ya do -- ing do -- ing to me __
+	"(A" -- haa, A -- haa, A -- "haa)" Ru -- by, Ru -- by, Ru -- by Ru -- by __ "(A" -- haa, A --
+	haa, A -- "haa)" Do ya Do ya do -- ya Do ya __ "(A" -- haa, A -- haa, A -- "haa)" Now what
+	ya do -- ing do -- ing to me __ "(A" -- haa, A -- haa, A -- "haa)"
+}
+{% endif %}
+{% if part == "LyricsmoreWikifonia" %}\lyricmode {
+	_ _ lack of "int'" -- rest __ To -- mor -- row is can -- celled __ Let the clocks be re --
+	set __ and the pen -- du -- lums held __ Cause there's no -- thing at all __ ex -- cept
+	the space in be -- tween __ Find -- ing out what you're called __ and re -- pea -- ting
+	your name __
 }
 {% endif %}

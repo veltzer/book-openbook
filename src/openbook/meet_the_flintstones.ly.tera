@@ -5,6 +5,7 @@ default_version = "Wikifonia"
 title = "Meet The Flintstones"
 style = "Jazz"
 composer = "Hoyt Curtin"
+poet = "Hoyt Curtin"
 piece = "Standard"
 typesetter = "OpenBook contributors (MusicXML import)"
 completion = "3"
@@ -16,8 +17,8 @@ copyrightextra = "Archived MusicXML notice retained; underlying music is not rel
 [versions.Wikifonia]
 doChords = true
 doVoice = true
-doLyrics = false
-doLyricsmore = false
+doLyrics = true
+doLyricsmore = true
 doLyricsmoremore = false
 doChordBars = false
 doGuitar = false
@@ -37,6 +38,7 @@ doOwn = false
 	- retained written melody, chord changes, pickups, repeats and numbered endings; lyrics omitted.
 	- imported explicit 7alt symbols using the book's altered-dominant notation where present.
 	- tempo taken from archived MusicXML.
+	- put in the lyrics from the same Wikifonia source.
 	TODO:
 	- proofread the complete melody, harmony and form against the referenced PDF and check by ear.
 	- verify source attribution, copyright notice and reuse terms against the scan; only the archived MusicXML notice is retained.
@@ -133,5 +135,18 @@ doOwn = false
 	es''1 ^ "(Cm7" |
 	r2 ^ ")" r2 |
 	\endBar
+}
+{% endif %}
+{% if part == "LyricsWikifonia" %}\lyricmode {
+	Flint -- stones! Meet the Flint -- stones! They're a mod -- ern stone age fa -- mi -- ly.
+	From the town of Bed -- rock, they're a page right out of his -- to -- ry. "1.Let's" ride
+	with the "fam'" -- ly down the street, through the cour -- te -- sy of Fred's two feet.
+	When you're with the Flint -- stones, have a yab -- ba dab -- ba doo time, a dab -- ba doo
+	time, we'll have a gay, old time!
+}
+{% endif %}
+{% if part == "LyricsmoreWikifonia" %}\lyricmode {
+	_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ Some -- day, may -- be Fred
+	will win the fight, then that cat will stay out for the night.
 }
 {% endif %}

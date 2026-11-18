@@ -5,6 +5,7 @@ default_version = "Wikifonia"
 title = "I Wished On The Moon"
 style = "Jazz"
 composer = "Ralph Rainger"
+poet = "Dorothy Parker"
 piece = "Standard"
 typesetter = "OpenBook contributors (MusicXML import)"
 completion = "3"
@@ -16,7 +17,7 @@ copyrightextra = "Archived MusicXML notice retained; underlying music is not rel
 [versions.Wikifonia]
 doChords = true
 doVoice = true
-doLyrics = false
+doLyrics = true
 doLyricsmore = false
 doLyricsmoremore = false
 doChordBars = false
@@ -37,6 +38,7 @@ doOwn = false
 	- retained written melody, chord changes, pickups, repeats and numbered endings; lyrics omitted.
 	- imported explicit 7alt symbols using the book's altered-dominant notation where present.
 	- tempo is an editorial practice suggestion.
+	- put in the lyrics from the same Wikifonia source.
 	TODO:
 	- proofread the complete melody, harmony and form against the referenced PDF and check by ear.
 	- verify source attribution, copyright notice and reuse terms against the scan; only the archived MusicXML notice is retained.
@@ -128,5 +130,13 @@ doOwn = false
 	bes'1 ~ |
 	bes'2 r2 |
 	\endBar
+}
+{% endif %}
+{% if part == "LyricsWikifonia" %}\lyricmode {
+	I wished on the moon __ for some -- thing I nev -- er knew, __ wished on the moon __ for
+	more than I ev -- er "knew:" __ a sweet -- er rose, a soft -- er sky, an Ap -- ril day __
+	that would not dance __ a -- way, __ I begged of a star __ to throw me a beam or two, __
+	wished on a star __ and asked for a dream or two. __ I looked for ev -- "'ry" love -- li --
+	ness, it all came "true;" __ I wished on the moon __ for you. __
 }
 {% endif %}

@@ -5,6 +5,7 @@ default_version = "Wikifonia"
 title = "Since I Fell For You"
 style = "Jazz"
 composer = "Buddy Johnson"
+poet = "Buddy Johnson"
 piece = "Jazz"
 typesetter = "OpenBook contributors (MusicXML import)"
 completion = "3"
@@ -15,7 +16,7 @@ copyright = "1948 Warner Bros., [nc. (Renewed) All Rights Reserved. Used by Perm
 [versions.Wikifonia]
 doChords = true
 doVoice = true
-doLyrics = false
+doLyrics = true
 doLyricsmore = false
 doLyricsmoremore = false
 doChordBars = false
@@ -34,6 +35,7 @@ doOwn = false
 	- retained the original copyright notice where printed; the underlying music is not relicensed.
 	- retained written measures, pickups, repeats and endings; lyrics omitted.
 	- tempo is an editorial practice suggestion.
+	- put in the lyrics from the same Wikifonia source.
 	TODO:
 	- proofread the music against the referenced PDF and check by ear.
 	- verify editorial chord spacing in measures 1, 3, 5, 7, 9, 11, 13, 26, 28, 30, 33; the archive places successive symbols at the same offset.
@@ -139,5 +141,14 @@ doOwn = false
 	}
 	}
 	\endBar
+}
+{% endif %}
+{% if part == "LyricsWikifonia" %}\lyricmode {
+	You __ made me leave my hap -- py home, You took my love and now __ you're gone. Since I __
+	fell for you. __ _ Love __ brings such mis -- er -- y __ _ and pain. I know I'll nev -- er
+	be __ the same Since I __ fell for you. __ _ It's too bad, __ it's too sad __ But I'm in
+	love with __ you. _ You love me __ then snub me, __ Oh, what can I do? __ I'm still in
+	love with you. I __ guess I'll nev -- er see __ the light. I get the blues most ev --
+	"'ry" night, Since I __ fell for you. you.
 }
 {% endif %}

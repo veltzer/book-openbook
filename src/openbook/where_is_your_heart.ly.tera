@@ -5,6 +5,7 @@ default_version = "Wikifonia"
 title = "Where is Your Heart"
 style = "Jazz"
 composer = "Georges Aurick, William Engvick"
+poet = "William Engvick"
 piece = "Standard"
 typesetter = "OpenBook contributors (MusicXML import)"
 completion = "3"
@@ -16,7 +17,7 @@ copyrightextra = "Archived MusicXML notice retained; underlying music is not rel
 [versions.Wikifonia]
 doChords = true
 doVoice = true
-doLyrics = false
+doLyrics = true
 doLyricsmore = false
 doLyricsmoremore = false
 doChordBars = false
@@ -35,6 +36,7 @@ doOwn = false
 	- retained the archived MusicXML rights notice; no redistribution permission is asserted.
 	- retained written melody, chord changes, pickups, repeats and numbered endings; lyrics, slurs, dynamics and articulations other than fermatas omitted.
 	- tempo is an editorial practice suggestion.
+	- put in the lyrics from the same Wikifonia source.
 	TODO:
 	- proofread the complete melody, harmony and form against a printed edition and check by ear.
 	- verify source attribution, copyright notice and reuse terms; only the archived MusicXML notice is retained.
@@ -125,5 +127,14 @@ doOwn = false
 	bes'4 a'4 g'4 |
 	f'2 r4 |
 	\endBar
+}
+{% endif %}
+{% if part == "LyricsWikifonia" %}\lyricmode {
+	When -- ev -- er we kiss I wor -- ry and won -- der your lips may be near, but _ where is
+	your heart? it's al -- ways like this I wor -- ry and won -- der you're close to me here
+	but _ where is your heart? it's a sad thing to re -- al -- ize -- that you've a heart that
+	nev -- er melts when we kiss do you close your eyes pre -- tend -- ing that I'm some --
+	one else? you must break the spell this cloud that I'm un -- der so please won't you tell
+	dar -- ling where is your heart?
 }
 {% endif %}

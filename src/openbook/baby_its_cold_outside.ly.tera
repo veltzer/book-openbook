@@ -5,6 +5,7 @@ default_version = "Wikifonia"
 title = "Baby It's Cold Outside"
 style = "Jazz"
 composer = "Frank Loesser"
+poet = "Frank Loesser"
 piece = "Jazz"
 typesetter = "OpenBook contributors (MusicXML import)"
 completion = "3"
@@ -15,8 +16,8 @@ copyright = "1948, (renewed 1976), 1991 Frank Music Corp. International Copyrigh
 [versions.Wikifonia]
 doChords = true
 doVoice = true
-doLyrics = false
-doLyricsmore = false
+doLyrics = true
+doLyricsmore = true
 doLyricsmoremore = false
 doChordBars = false
 doGuitar = false
@@ -34,6 +35,7 @@ doOwn = false
 	- retained the original copyright notice where printed; the underlying music is not relicensed.
 	- retained written measures, pickups, repeats and endings; lyrics omitted.
 	- tempo is an editorial practice suggestion.
+	- put in the lyrics from the same Wikifonia source.
 	TODO:
 	- proofread the music against the referenced PDF and check by ear.
 {% endif %}
@@ -128,5 +130,23 @@ doOwn = false
 	}
 	es'2. r4 |
 	\endBar
+}
+{% endif %}
+{% if part == "LyricsWikifonia" %}\lyricmode {
+	I real -- ly can't stay, __ Iv'e got to go "'way," __ The ev -- "'ning" has been __ so
+	ver -- y nice. __ My moth -- er will star to wor -- ry, and fath -- er will be pac ing the
+	floor. So real -- ly I'd bet -- ter scur -- ry. Well, may -- be just a half a drink more.
+	The neigh -- bors might think __ say, what's in this drink? __ I wish I knew how __ to
+	break the spell. __ I ought to say "'No," no, no, "sir!'" At least I'm gon -- na say that
+	I tried. I real -- ly can't stay, __ ah, but it's cold __ out -- side I side.
+}
+{% endif %}
+{% if part == "LyricsmoreWikifonia" %}\lyricmode {
+	_ simp -- ly must go, __ the ans -- wer is no! __ The wel -- come has been __ so nice and
+	warm. __ My sis -- ter will be sus -- pi -- "cious;" my bro -- ther will be there at the
+	door. My maid -- en aunt's mind is vic -- ious. Well may -- be just a cig -- a -- rette
+	more. I've got to get home, __ say, lend me a comb. __ You've real -- ly been grand __ But
+	don't you see, __ there's bound to be talk to -- mor -- row At least there will be plent --
+	y im -- plied. I real -- ly can't stay, __ ah, but it's cold __ out _ _ side.
 }
 {% endif %}

@@ -5,6 +5,7 @@ default_version = "Wikifonia"
 title = "If You Go"
 style = "Jazz"
 composer = "Michel Emer"
+poet = "English Geoffrey Parsons"
 piece = "Standard"
 typesetter = "OpenBook contributors (MusicXML import)"
 completion = "3"
@@ -16,7 +17,7 @@ copyrightextra = "Archived MusicXML notice retained; underlying music is not rel
 [versions.Wikifonia]
 doChords = true
 doVoice = true
-doLyrics = false
+doLyrics = true
 doLyricsmore = false
 doLyricsmoremore = false
 doChordBars = false
@@ -37,6 +38,7 @@ doOwn = false
 	- retained written melody, chord changes, pickups, repeats and numbered endings; lyrics omitted.
 	- imported explicit 7alt symbols using the book's altered-dominant notation where present.
 	- tempo is an editorial practice suggestion.
+	- put in the lyrics from the same Wikifonia source.
 	TODO:
 	- proofread the complete melody, harmony and form against the referenced PDF and check by ear.
 	- verify source attribution, copyright notice and reuse terms against the scan; only the archived MusicXML notice is retained.
@@ -151,5 +153,14 @@ doOwn = false
 	}
 	}
 	\endBar
+}
+{% endif %}
+{% if part == "LyricsWikifonia" %}\lyricmode {
+	If you go, __ if you love me no more, __ if I know __ that you want me no more, __ then
+	the sun would lose it's light, and day turn in -- to night, night with -- out stars, __
+	deep night with -- out stars. __ If you go, __ if you leave me a -- lone, __ if I know __
+	you're no long -- er my own, __ win -- ter would re -- place the spring, the birds no more
+	would sing, this can -- not "be;" __ stay here with me. __ My heart would die, I know, if
+	you should go. __ go. __
 }
 {% endif %}

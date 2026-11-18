@@ -5,6 +5,7 @@ default_version = "Wikifonia"
 title = "The Very Thought Of You"
 style = "Jazz"
 composer = "Ray Noble"
+poet = "Ray Noble"
 piece = "Jazz"
 typesetter = "OpenBook contributors (MusicXML import)"
 completion = "3"
@@ -15,7 +16,7 @@ copyright = "All Rights Reserved"
 [versions.Wikifonia]
 doChords = true
 doVoice = true
-doLyrics = false
+doLyrics = true
 doLyricsmore = false
 doLyricsmoremore = false
 doChordBars = false
@@ -34,6 +35,7 @@ doOwn = false
 	- retained the original copyright notice where printed; the underlying music is not relicensed.
 	- retained written measures, pickups, repeats and endings; lyrics omitted.
 	- tempo is an editorial practice suggestion.
+	- put in the lyrics from the same Wikifonia source.
 	TODO:
 	- proofread the music against the referenced PDF and check by ear.
 	- verify editorial chord spacing in measures 13; the archive places successive symbols at the same offset.
@@ -142,5 +144,15 @@ doOwn = false
 	}
 	}
 	\endBar
+}
+{% endif %}
+{% if part == "LyricsWikifonia" %}\lyricmode {
+	The Ver -- y Thought Of You, __ and I for -- get to do __ the lit -- tle or -- di -- nar --
+	y things that ev -- "'ry" -- one ought to do. __ I'm liv -- ing in a kind of day -- dream, __
+	I'm hap -- py as a king, and fool -- ish "tho'" it may seem, to me __ that's ev -- "'ry" --
+	thing The mere i -- dea of you __ the long -- ing here for you, __ You'll nev -- er know
+	how slow the mo -- ments go "'til" I'm near to you. __ I see your face in ev -- "'ry" flow --
+	"er;" __ your eyes in stars a -- bove, __ It's just the thought of you, The Ver -- y
+	Thought Of You, __ my love. __ The Ver -- y love. __
 }
 {% endif %}

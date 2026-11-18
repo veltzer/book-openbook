@@ -5,6 +5,7 @@ default_version = "Wikifonia"
 title = "Lookin' For Love"
 style = "Standard"
 composer = "Bob Morrison, Patti Ryan, Wanda Mallette"
+poet = "Bob Morrison, Patti Ryan, Wanda Mallette"
 piece = "Standard"
 typesetter = "OpenBook contributors (MusicXML import)"
 completion = "3"
@@ -16,7 +17,7 @@ copyrightextra = "Archived MusicXML notice retained; underlying music is not rel
 [versions.Wikifonia]
 doChords = true
 doVoice = true
-doLyrics = false
+doLyrics = true
 doLyricsmore = false
 doLyricsmoremore = false
 doChordBars = false
@@ -37,6 +38,7 @@ doOwn = false
 	- retained written melody, chord changes, pickups, repeats and numbered endings; lyrics omitted.
 	- imported explicit 7alt symbols using the book's altered-dominant notation where present.
 	- tempo is an editorial practice suggestion.
+	- put in the lyrics from the same Wikifonia source.
 	TODO:
 	- proofread the complete melody, harmony and form against the referenced PDF and check by ear.
 	- verify source attribution, copyright notice and reuse terms against the scan; only the archived MusicXML notice is retained.
@@ -159,5 +161,17 @@ doOwn = false
 	g'4 a'4 b'4 a'4 |
 	}
 	\endBar
+}
+{% endif %}
+{% if part == "LyricsWikifonia" %}\lyricmode {
+	well I've spent a life -- time look -- in for you sin -- gles -- bars and good -- time
+	lov -- ers were nev -- er true play -- in a fools game hop -- in to win tell -- in those
+	sweet lies _ _ and los -- ing a gain _ I was look in for love in all the wrong plac -- es _ _
+	look -- in for love in too man -- y fac -- es search -- ing their eyes look -- in for trac --
+	es of what I'm dream -- in of _ Hop -- in to find a friend and a lov -- er _ _ I'll bless
+	the day I dis -- cov -- er an oth -- er heart look -- in for love _ _ you came a -- knock --
+	in at my hearts door _ youre ev -- ry -- thing I been look -- in for _ _ _ no more _ I was
+	look -- in for love in all the right plac -- es _ _ look -- in -- for love in too man -- y
+	fac -- es search -- ing their eyes look -- ing for trac -- es of what I'm dream -- in of
 }
 {% endif %}

@@ -5,6 +5,7 @@ default_version = "Wikifonia"
 title = "Under Paris Skies"
 style = "Jazz"
 composer = "Hubert Giraud, Kim Gannon, Jean Drejac"
+poet = "Kim Gannon, Jean Drejac"
 piece = "Standard"
 typesetter = "OpenBook contributors (MusicXML import)"
 completion = "3"
@@ -16,8 +17,8 @@ copyrightextra = "Archived MusicXML notice retained; underlying music is not rel
 [versions.Wikifonia]
 doChords = true
 doVoice = true
-doLyrics = false
-doLyricsmore = false
+doLyrics = true
+doLyricsmore = true
 doLyricsmoremore = false
 doChordBars = false
 doGuitar = false
@@ -35,6 +36,7 @@ doOwn = false
 	- retained the archived MusicXML rights notice; no redistribution permission is asserted.
 	- retained written melody, chord changes, pickups, repeats and numbered endings; lyrics, slurs, dynamics and articulations other than fermatas omitted.
 	- tempo is an editorial practice suggestion.
+	- put in the lyrics from the same Wikifonia source.
 	TODO:
 	- proofread the complete melody, harmony and form against a printed edition and check by ear.
 	- verify source attribution, copyright notice and reuse terms; only the archived MusicXML notice is retained.
@@ -147,5 +149,16 @@ doOwn = false
 	d''2. ~ |
 	d''4 r2 |
 	\endBar
+}
+{% endif %}
+{% if part == "LyricsWikifonia" %}\lyricmode {
+	Strang -- er be -- ware theres love in the air, un -- der Par -- is skies __ try to be
+	smart and dont let your heart catch on fire __ Pa ri -- sian love can bloom high in a sky --
+	light room or in a gay ca -- fe where hun -- dreds of peo -- ple can see __ me __
+}
+{% endif %}
+{% if part == "LyricsmoreWikifonia" %}\lyricmode {
+	Love be -- comes king the mo -- ment its spring un -- der Par -- is skies __ Lone -- ly
+	hearts meet some -- where on the street of de -- sire __
 }
 {% endif %}

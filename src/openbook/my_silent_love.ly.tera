@@ -5,6 +5,7 @@ default_version = "Wikifonia"
 title = "My Silent Love"
 style = "Jazz"
 composer = "Dana Suesse"
+poet = "Edward Heyman"
 piece = "Standard"
 typesetter = "OpenBook contributors (MusicXML import)"
 completion = "3"
@@ -16,7 +17,7 @@ copyrightextra = "Archived MusicXML notice retained; underlying music is not rel
 [versions.Wikifonia]
 doChords = true
 doVoice = true
-doLyrics = false
+doLyrics = true
 doLyricsmore = false
 doLyricsmoremore = false
 doChordBars = false
@@ -37,6 +38,7 @@ doOwn = false
 	- retained written melody, chord changes, pickups, repeats and numbered endings; lyrics omitted.
 	- imported explicit 7alt symbols using the book's altered-dominant notation where present.
 	- tempo is an editorial practice suggestion.
+	- put in the lyrics from the same Wikifonia source.
 	TODO:
 	- proofread the complete melody, harmony and form against the referenced PDF and check by ear.
 	- verify source attribution, copyright notice and reuse terms against the scan; only the archived MusicXML notice is retained.
@@ -144,5 +146,14 @@ doOwn = false
 	}
 	}
 	\endBar
+}
+{% endif %}
+{% if part == "LyricsWikifonia" %}\lyricmode {
+	I __ reach for you like I'd reach for a star, wor -- ship -- ing you from a -- far, liv --
+	ing with my si -- lent love. I'm __ like a flame dy -- ing out in the rain, on -- ly the
+	ash -- es re -- main, smould -- "'ring" like my si -- lent love. How I long to tell, all
+	the things I have planned. Still, it's wrong to tell, you would not un -- der -- stand.
+	You'll __ go a -- long nev -- er dream -- ing I care, lov -- ing some -- bod -- y some --
+	where, leav -- ing me my si -- lent love. love. __
 }
 {% endif %}

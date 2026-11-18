@@ -5,6 +5,7 @@ default_version = "Wikifonia"
 title = "Baubles, Bangles and Beads"
 style = "Jazz"
 composer = "George Forrest, Robert Wright"
+poet = "George Forrest, Robert Wright"
 piece = "Jazz"
 typesetter = "OpenBook contributors (MusicXML import)"
 completion = "3"
@@ -15,7 +16,7 @@ copyright = "All Rights Reserved"
 [versions.Wikifonia]
 doChords = true
 doVoice = true
-doLyrics = false
+doLyrics = true
 doLyricsmore = false
 doLyricsmoremore = false
 doChordBars = false
@@ -34,6 +35,7 @@ doOwn = false
 	- retained the original copyright notice where printed; the underlying music is not relicensed.
 	- retained written measures, pickups, repeats and endings; lyrics omitted.
 	- tempo is an editorial practice suggestion.
+	- put in the lyrics from the same Wikifonia source.
 	TODO:
 	- proofread the music against the referenced PDF and check by ear.
 	- verify the copyright notice against the scan; no readable per-tune notice was recovered, so the archived rights notice is retained where available.
@@ -129,5 +131,13 @@ doOwn = false
 	f'2. ~ |
 	f'4 r2 |
 	\endBar
+}
+{% endif %}
+{% if part == "LyricsWikifonia" %}\lyricmode {
+	Bau -- bles ban -- gles hear how they jing jing -- a -- ling -- a bau -- bles ban -- gles
+	bright shin -- y beads spar -- kles span -- gles my heart will sing sing -- a -- ling -- a
+	wear -- ing bau -- bles ban -- gles and beads. I'll glit -- ter and gleam so, Make some --
+	bod -- y dream so that some -- day he may buy me a ring ring -- a -- ling -- a I've heard
+	that's where it leads, __ wear -- ing bau -- bles ban -- gles and beads. __
 }
 {% endif %}

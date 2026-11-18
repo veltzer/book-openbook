@@ -5,6 +5,7 @@ default_version = "Wikifonia"
 title = "Alone Too Long"
 style = "Jazz"
 composer = "Arthur Schwartz"
+poet = "Dorothy Fields"
 piece = "Standard"
 typesetter = "OpenBook contributors (MusicXML import)"
 completion = "3"
@@ -16,7 +17,7 @@ copyrightextra = "Archived MusicXML notice retained; underlying music is not rel
 [versions.Wikifonia]
 doChords = true
 doVoice = true
-doLyrics = false
+doLyrics = true
 doLyricsmore = false
 doLyricsmoremore = false
 doChordBars = false
@@ -37,6 +38,7 @@ doOwn = false
 	- retained written melody, chord changes, pickups, repeats and numbered endings; lyrics omitted.
 	- imported explicit 7alt symbols using the book's altered-dominant notation where present.
 	- tempo is an editorial practice suggestion.
+	- put in the lyrics from the same Wikifonia source.
 	TODO:
 	- proofread the complete melody, harmony and form against the referenced PDF and check by ear.
 	- verify source attribution, copyright notice and reuse terms against the scan; only the archived MusicXML notice is retained.
@@ -128,5 +130,14 @@ doOwn = false
 	g'1 ~ |
 	g'2 ~ g'4 r4 |
 	\endBar
+}
+{% endif %}
+{% if part == "LyricsWikifonia" %}\lyricmode {
+	I'd kiss you if I dared, I want to but I'm scared. I should have known I've been a --
+	lone too long. __ My lips are much too still, my arms have lost their skill. My charm has
+	flown, I've been a -- lone too long. __ It's been years since I have whis -- per'd a foool --
+	ish love word, __ and I'd be a -- fraid I's sing you a fad -- ed song. __ But if you smile
+	and then say "'dar" -- ling, try a -- "gain'" I'll know you've known I've beem a -- way
+	too long. __
 }
 {% endif %}

@@ -4,7 +4,8 @@ default_version = "Wikifonia"
 [attributes]
 title = "You Belong To My Heart"
 style = "Jazz"
-composer = "Agustin Lara, English Lyrics: Ray Gilbert"
+composer = "Agustin Lara, Ray Gilbert"
+poet = "Ray Gilbert"
 piece = "Standard"
 typesetter = "OpenBook contributors (MusicXML import)"
 completion = "3"
@@ -16,7 +17,7 @@ copyrightextra = "Archived MusicXML notice retained; underlying music is not rel
 [versions.Wikifonia]
 doChords = true
 doVoice = true
-doLyrics = false
+doLyrics = true
 doLyricsmore = false
 doLyricsmoremore = false
 doChordBars = false
@@ -35,6 +36,7 @@ doOwn = false
 	- retained the archived MusicXML rights notice; no redistribution permission is asserted.
 	- retained written melody, chord changes, pickups, repeats and numbered endings; lyrics, slurs, dynamics and articulations other than fermatas omitted.
 	- tempo is an editorial practice suggestion.
+	- put in the lyrics from the same Wikifonia source.
 	TODO:
 	- proofread the complete melody, harmony and form against a printed edition and check by ear.
 	- verify source attribution, copyright notice and reuse terms; only the archived MusicXML notice is retained.
@@ -123,5 +125,14 @@ doOwn = false
 	g'4 f'8 f'8 c''4 bes'8 c''8 |
 	es''1 |
 	\endBar
+}
+{% endif %}
+{% if part == "LyricsWikifonia" %}\lyricmode {
+	You be -- long to my heart __ now and for -- ev -- er __ and our love had its start __
+	not long a -- go. __ we were gath -- er -- ing stars while a mil -- lion -- gui -- tars
+	played our love song. __ When I said I love you ev -- ry beat of my heart said it too. __
+	"'Twas" a mo -- ment like this __ do you re -- mem -- ber? __ and your eyes threw a kiss, __
+	when they met mine. __ Now we own all the stars and a mil -- lion gui -- tars are still
+	play -- ing. __ Dar ling you are the song and you'll al -- ways be -- long to my heart.
 }
 {% endif %}

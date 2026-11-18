@@ -5,6 +5,7 @@ default_version = "Wikifonia"
 title = "I'm A Fool To Want You"
 style = "Jazz"
 composer = "Frank Sinatra, Jack Wolf, Joel Herron"
+poet = "Frank Sinatra, Jack Wolf, Joel Herron"
 piece = "Jazz"
 typesetter = "OpenBook contributors (MusicXML import)"
 completion = "3"
@@ -15,8 +16,8 @@ copyright = "All Rights Reserved"
 [versions.Wikifonia]
 doChords = true
 doVoice = true
-doLyrics = false
-doLyricsmore = false
+doLyrics = true
+doLyricsmore = true
 doLyricsmoremore = false
 doChordBars = false
 doGuitar = false
@@ -34,6 +35,7 @@ doOwn = false
 	- retained the original copyright notice where printed; the underlying music is not relicensed.
 	- retained written measures, pickups, repeats and endings; lyrics omitted.
 	- tempo is an editorial practice suggestion.
+	- put in the lyrics from the same Wikifonia source.
 	TODO:
 	- proofread the music against the referenced PDF and check by ear.
 	- verify editorial chord spacing in measures 16; the archive places successive symbols at the same offset.
@@ -146,5 +148,19 @@ doOwn = false
 	e'1 ~ |
 	e'2. ^\fermata r4 |
 	\endBar
+}
+{% endif %}
+{% if part == "LyricsWikifonia" %}\lyricmode {
+	I'm A Fool To Want you, __ I'm A Fool To Want You, __ to want a love that can't be true,
+	a love that's there for oth -- ers too. __ I'm a fool to kiss the dev -- il has known.
+	Time and time a -- gain I said I'd leave you, __ time and time a -- gain I went a -- way. __
+	But then would come the time when I would need you, __ and once a -- gain these words I'd
+	have to "say:" __ I'm A Fool To Want You, __ pit -- y me, I need you. __ I know it's
+	wrong, it must be wrong, but right or wrong, I can't get a -- long __ with -- out you. __
+}
+{% endif %}
+{% if part == "LyricsmoreWikifonia" %}\lyricmode {
+	_ _ _ _ hold "you,_" __ such a fool to hold "yon,_" __ to seek a kiss not mine a lone to
+	share a
 }
 {% endif %}

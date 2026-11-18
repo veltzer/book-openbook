@@ -4,7 +4,8 @@ default_version = "Wikifonia"
 [attributes]
 title = "I'm Getting Sentimental Over You"
 style = "Jazz"
-composer = "George Bassman, Ned Washington 1932"
+composer = "George Bassman, Ned Washington"
+poet = "George Bassman, Ned Washington"
 piece = "Jazz"
 typesetter = "OpenBook contributors (MusicXML import)"
 completion = "3"
@@ -16,7 +17,7 @@ copyrightextra = "Permission of CPP/ Belwin, Inc., Miami, FL and Music Sales Ltd
 [versions.Wikifonia]
 doChords = true
 doVoice = true
-doLyrics = false
+doLyrics = true
 doLyricsmore = false
 doLyricsmoremore = false
 doChordBars = false
@@ -35,6 +36,7 @@ doOwn = false
 	- retained the original copyright notice where printed; the underlying music is not relicensed.
 	- retained written measures, pickups, repeats and endings; lyrics omitted.
 	- tempo taken from archived MusicXML.
+	- put in the lyrics from the same Wikifonia source.
 	TODO:
 	- proofread the music against the referenced PDF and check by ear.
 {% endif %}
@@ -127,5 +129,14 @@ doOwn = false
 	bes4 as'4 as'4 g'4 |
 	f'1 |
 	\endBar
+}
+{% endif %}
+{% if part == "LyricsWikifonia" %}\lyricmode {
+	Ne ver thought I'd fall but __ _ now I hear love call I'm get ting sen ti men tal o ver
+	you __ things you say and do just __ _ thrill me through and through I'm get ting sen ti
+	men tal ov er you __ I thought I was hap py I could live with out love now I must ad mit
+	love is all __ _ I'm think __ _ ing of won't you please be kind and __ _ just make up your
+	mind that you'll be sweet and gen tle be gen tile with me be cause I'm sen ti men tal o
+	ver you.
 }
 {% endif %}

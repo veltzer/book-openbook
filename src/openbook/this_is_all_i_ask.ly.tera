@@ -4,7 +4,8 @@ default_version = "Wikifonia"
 [attributes]
 title = "This Is All I Ask"
 style = "Jazz"
-composer = "Gordon Jenkins, Gordon Jenkins"
+composer = "Gordon Jenkins"
+poet = "Gordon Jenkins"
 piece = "Standard"
 typesetter = "OpenBook contributors (MusicXML import)"
 completion = "3"
@@ -16,7 +17,7 @@ copyrightextra = "Archived MusicXML notice retained; underlying music is not rel
 [versions.Wikifonia]
 doChords = true
 doVoice = true
-doLyrics = false
+doLyrics = true
 doLyricsmore = false
 doLyricsmoremore = false
 doChordBars = false
@@ -35,6 +36,7 @@ doOwn = false
 	- retained the archived MusicXML rights notice; no redistribution permission is asserted.
 	- retained written melody, chord changes, pickups, repeats and numbered endings; lyrics, slurs, dynamics and articulations other than fermatas omitted.
 	- tempo is an editorial practice suggestion.
+	- put in the lyrics from the same Wikifonia source.
 	TODO:
 	- proofread the complete melody, harmony and form against a printed edition and check by ear.
 	- verify source attribution, copyright notice and reuse terms; only the archived MusicXML notice is retained.
@@ -171,5 +173,18 @@ doOwn = false
 	}
 	}
 	\endBar
+}
+{% endif %}
+{% if part == "LyricsWikifonia" %}\lyricmode {
+	As I ap -- proach the prime of my life, I find I have the time of my life learn -- ing to
+	en -- joy at my lei -- sure __ all the sim -- ple plea -- sures. __ And so I hap -- pi --
+	ly con -- cede, this is all I ask, this is all I need. __ Beau -- ti -- ful girls walk a
+	lit -- tle slow -- er when you walk by me. Lin -- ger -- ing sun -- sets stay a lit -- tle
+	long -- er with the lone -- ly sea. Child -- ren ev -- "'ry" -- where, when you shoot at
+	bad men, shoot at me. __ Take me to that strange, en -- chant -- ed land grown -- ups sel --
+	dom un -- der stand. Wand -- er -- ing rain -- bows leave a bit of col -- or for my heart
+	to own, stars in the sky make my wish come true be -- fore the night has flown. And let
+	the mu -- sic play as long as there's a song to sing, and I will stay young -- er than
+	spring. __ Beau -- ti ful spring. __
 }
 {% endif %}

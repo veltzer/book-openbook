@@ -5,6 +5,7 @@ default_version = "Wikifonia"
 title = "Pennsylvania 6-5000"
 style = "Standard"
 composer = "Jerry Gray"
+poet = "Carl Sigman"
 piece = "Standard"
 typesetter = "OpenBook contributors (MusicXML import)"
 completion = "3"
@@ -16,7 +17,7 @@ copyrightextra = "Archived MusicXML notice retained; underlying music is not rel
 [versions.Wikifonia]
 doChords = true
 doVoice = true
-doLyrics = false
+doLyrics = true
 doLyricsmore = false
 doLyricsmoremore = false
 doChordBars = false
@@ -37,6 +38,7 @@ doOwn = false
 	- retained written melody, chord changes, pickups, repeats and numbered endings; lyrics omitted.
 	- imported explicit 7alt symbols using the book's altered-dominant notation where present.
 	- tempo is an editorial practice suggestion.
+	- put in the lyrics from the same Wikifonia source.
 	TODO:
 	- proofread the complete melody, harmony and form against the referenced PDF and check by ear.
 	- verify source attribution, copyright notice and reuse terms against the scan; only the archived MusicXML notice is retained.
@@ -129,5 +131,16 @@ doOwn = false
 	d'4 d'8 d'4 d'4. |
 	}
 	\endBar
+}
+{% endif %}
+{% if part == "LyricsWikifonia" %}\lyricmode {
+	Num -- bers I've got by the doz -- en __ ev -- "'ry" one's un -- cle and cous -- in __
+	But I can't live with -- out buzz -- "in'" __ Penn syl -- van -- ia Six, Five Thou -- sand --
+	I've got a sweet -- y I know there __ Some -- one who sets me a -- glow there __ Gives me
+	the sweet -- est "'hel" -- lo "there'" __ Penn syl -- van -- ia Six, Five Thou -- sand --
+	We don't say "'how" are __ "you'" and ver -- y sel -- dom ask "'what's" new __ In -- stead
+	we start and end each call with "'ba" -- by con -- fi -- den -- tial -- ly I __ love
+	"you'" __ may -- be it sounds a bit fun -- ny __ when I'm a -- way from my hon -- ey __
+	here's what I do with my mon -- ey __ Penn syl -- van -- ia Six, Five Thou -- sand
 }
 {% endif %}

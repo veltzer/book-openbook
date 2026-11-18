@@ -5,6 +5,7 @@ default_version = "Wikifonia"
 title = "When the World Was Young"
 style = "Jazz"
 composer = "M. Phillippe-Gerard"
+poet = "Johnny Mercer"
 piece = "Standard"
 typesetter = "OpenBook contributors (MusicXML import)"
 completion = "3"
@@ -16,8 +17,8 @@ copyrightextra = "Archived MusicXML notice retained; underlying music is not rel
 [versions.Wikifonia]
 doChords = true
 doVoice = true
-doLyrics = false
-doLyricsmore = false
+doLyrics = true
+doLyricsmore = true
 doLyricsmoremore = false
 doChordBars = false
 doGuitar = false
@@ -37,6 +38,7 @@ doOwn = false
 	- retained written melody, chord changes, pickups, repeats and numbered endings; lyrics omitted.
 	- imported explicit 7alt symbols using the book's altered-dominant notation where present.
 	- tempo is an editorial practice suggestion.
+	- put in the lyrics from the same Wikifonia source.
 	TODO:
 	- proofread the complete melody, harmony and form against the referenced PDF and check by ear.
 	- verify source attribution, copyright notice and reuse terms against the scan; only the archived MusicXML notice is retained.
@@ -140,5 +142,25 @@ doOwn = false
 	d'2. ~ |
 	d'2 r4 |
 	\endBar
+}
+{% endif %}
+{% if part == "LyricsWikifonia" %}\lyricmode {
+	It is n't by chance I hap -- pen to be a bou -- le -- var -- dier, the toast of Par --
+	is. For o -- ver the noise, the talk and the smoke, I'm good for a laugh, a drink or a
+	joke. I walk in a room, a par -- ty or ball, "'Come" sit o -- ver "here'" some -- bo -- dy
+	will call. "'A" drink for "M'" -- sieur! A drink for us "all.'" But how ma -- ny times I
+	stop and re -- call. Ah, the ap -- ple trees, blos -- soms in the breeze that we walked a --
+	mong. Ly -- ing in the hay, games we used to play while the rounds were sung. On -- ly yes --
+	ter -- day, when the world was young. __ Where
+}
+{% endif %}
+{% if part == "LyricsmoreWikifonia" %}\lyricmode {
+	Where ev -- er I go they men -- tion my name. And that, in it -- self, is some sort of
+	fame. "'Come" by for a drink, we're hav -- ing a "game.'" Where -- ev -- er I go I'm glad
+	that I came. The talk is quite gay, the com -- pan -- y fine. There's laugh -- ter and
+	lights and glam -- our and wine. And beau -- ti -- ful girls and some of them mine. But of --
+	ten my eyes see a "diff'" -- rent shine. Ah, the ap -- ple trees, sun -- lit mem -- o --
+	ries where the ham -- mock swung. On our backs we'd lie look -- ing at the sky till the
+	stars were strung. On -- ly last Ju -- ly when the world was young. __ While
 }
 {% endif %}

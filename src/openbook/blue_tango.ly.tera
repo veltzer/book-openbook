@@ -5,6 +5,7 @@ default_version = "Wikifonia"
 title = "Blue Tango"
 style = "Jazz"
 composer = "Leroy Anderson, Mitchell Parish"
+poet = "Mitchell Parish"
 piece = "Standard"
 typesetter = "OpenBook contributors (MusicXML import)"
 completion = "3"
@@ -16,7 +17,7 @@ copyrightextra = "Archived MusicXML notice retained; underlying music is not rel
 [versions.Wikifonia]
 doChords = true
 doVoice = true
-doLyrics = false
+doLyrics = true
 doLyricsmore = false
 doLyricsmoremore = false
 doChordBars = false
@@ -35,6 +36,7 @@ doOwn = false
 	- retained the archived MusicXML rights notice; no redistribution permission is asserted.
 	- retained written melody, chord changes, pickups, repeats and numbered endings; lyrics, slurs, dynamics and articulations other than fermatas omitted.
 	- tempo is an editorial practice suggestion.
+	- put in the lyrics from the same Wikifonia source.
 	TODO:
 	- proofread the complete melody, harmony and form against a printed edition and check by ear.
 	- verify source attribution, copyright notice and reuse terms; only the archived MusicXML notice is retained.
@@ -147,5 +149,14 @@ doOwn = false
 	}
 	}
 	\endBar
+}
+{% endif %}
+{% if part == "LyricsWikifonia" %}\lyricmode {
+	Here am I with you __ in a world of blue __ and we're danc -- ing to the tan -- go we
+	loved when first we met __ while the mu -- sic plays __ we re -- call the days __ when our
+	love was a tune that we could -- n't soon for -- get __ as I kiss your cheek __ we did --
+	nt have to speak __ the vi -- o -- lins like a choir ex press the de sire __ we used to
+	know __ not long a -- go so just hold me tight __ in your arms to -- night __ and this
+	blue tan -- go will be our thrill -- ing mem -- o -- ry of love __ here am love __
 }
 {% endif %}

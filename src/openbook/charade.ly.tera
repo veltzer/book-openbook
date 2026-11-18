@@ -5,6 +5,7 @@ default_version = "Wikifonia"
 title = "Charade"
 style = "Jazz"
 composer = "Henry Mancini"
+poet = "Johnny Mercer"
 piece = "Jazz"
 typesetter = "OpenBook contributors (MusicXML import)"
 completion = "3"
@@ -15,7 +16,7 @@ copyright = "1963 by Northridge Music Co. and Northern Music Corp. Copvyricht Re
 [versions.Wikifonia]
 doChords = true
 doVoice = true
-doLyrics = false
+doLyrics = true
 doLyricsmore = false
 doLyricsmoremore = false
 doChordBars = false
@@ -34,6 +35,7 @@ doOwn = false
 	- retained the original copyright notice where printed; the underlying music is not relicensed.
 	- retained written measures, pickups, repeats and endings; lyrics omitted.
 	- tempo is an editorial practice suggestion.
+	- put in the lyrics from the same Wikifonia source.
 	TODO:
 	- proofread the music against the referenced PDF and check by ear.
 {% endif %}
@@ -192,5 +194,15 @@ doOwn = false
 	a'2. ~ |
 	a'2. |
 	\endBar
+}
+{% endif %}
+{% if part == "LyricsWikifonia" %}\lyricmode {
+	When we played our char -- ade __ we were like chil -- dren pos -- ing, __ play -- ing at
+	games, act -- ing out names, gues -- sing the parts we played. __ Oh what a hit we made, __
+	we came on next to clos -- "ing;" __ best on the bill, lov -- ers un -- til love left the
+	mas -- que -- rade. __ Fate, __ seemed to pull the strings, I turned and you were gone. __
+	While __ from the dark -- ened wings the mus -- ic box played on. __ Sad lit -- tle se --
+	re -- nade, __ song of my heart's com -- pos -- "ing;" __ I hear it still, I al -- ways
+	will, best on the bill __ cha -- rade __
 }
 {% endif %}

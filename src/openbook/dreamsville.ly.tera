@@ -5,6 +5,7 @@ default_version = "Wikifonia"
 title = "Dreamsville"
 style = "Jazz"
 composer = "Henry Mancini"
+poet = "Ray Evans, Jay Livingston"
 piece = "Standard"
 typesetter = "OpenBook contributors (MusicXML import)"
 completion = "3"
@@ -16,7 +17,7 @@ copyrightextra = "Archived MusicXML notice retained; underlying music is not rel
 [versions.Wikifonia]
 doChords = true
 doVoice = true
-doLyrics = false
+doLyrics = true
 doLyricsmore = false
 doLyricsmoremore = false
 doChordBars = false
@@ -37,6 +38,7 @@ doOwn = false
 	- retained written melody, chord changes, pickups, repeats and numbered endings; lyrics omitted.
 	- imported explicit 7alt symbols using the book's altered-dominant notation where present.
 	- tempo is an editorial practice suggestion.
+	- put in the lyrics from the same Wikifonia source.
 	TODO:
 	- proofread the complete melody, harmony and form against the referenced PDF and check by ear.
 	- verify source attribution, copyright notice and reuse terms against the scan; only the archived MusicXML notice is retained.
@@ -134,5 +136,13 @@ doOwn = false
 	d'1 ~ |
 	d'1 |
 	\endBar
+}
+{% endif %}
+{% if part == "LyricsWikifonia" %}\lyricmode {
+	I'm in Dreams -- ville __ hold -- ing "you;" a dream -- y view, just we two a -- lone
+	with love in Dreams -- ville, __ Time is "new;" We're here to love and we do. We can see
+	the rest of the world be -- low us from our pink cloud. There's no bound -- "'ry" to this
+	mag -- ic land as we go ex -- plor -- ing hand in hand in Dreams -- y Dreams -- ville, __
+	far a -- way, and here we love, here we'll stay. stay. __
 }
 {% endif %}

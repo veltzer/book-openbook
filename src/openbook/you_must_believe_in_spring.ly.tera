@@ -5,6 +5,7 @@ default_version = "Wikifonia"
 title = "You Must Believe In Spring"
 style = "Jazz"
 composer = "Michel Legrand"
+poet = "Alan, Marilyn Bergman"
 piece = "Jazz"
 typesetter = "OpenBook contributors (MusicXML import)"
 completion = "3"
@@ -16,7 +17,7 @@ copyrightextra = "Publishing, Used by Permission of CPP/Belwin, Inc., Miami, FL 
 [versions.Wikifonia]
 doChords = true
 doVoice = true
-doLyrics = false
+doLyrics = true
 doLyricsmore = false
 doLyricsmoremore = false
 doChordBars = false
@@ -35,6 +36,7 @@ doOwn = false
 	- retained the original copyright notice where printed; the underlying music is not relicensed.
 	- retained written measures, pickups, repeats and endings; lyrics omitted.
 	- tempo is an editorial practice suggestion.
+	- put in the lyrics from the same Wikifonia source.
 	TODO:
 	- proofread the music against the referenced PDF and check by ear.
 	- verify editorial chord spacing in measures 8, 16; the archive places successive symbols at the same offset.
@@ -110,5 +112,17 @@ doOwn = false
 	g'8 f'8 es'8 d'8 c'4 b4 |
 	c'1 |
 	\endBar
+}
+{% endif %}
+{% if part == "LyricsWikifonia" %}\lyricmode {
+	When lone -- ly feel -- ing chnll the mead -- ows of your mind, just think when win --
+	ter comes, can spring be far be -- hind? Be -- neat the deep -- est snows, the se -- cret
+	of a rose is mere -- ly that it knows you must be -- lieve in spring. Just as a tree is
+	sure it's leaves will re -- ap -- "pear;" it knows it's "em[p" -- ti -- ness is just a
+	time of year. The fro -- zen moun -- tain dreams of Ap -- rils's melt -- ing streams. How
+	crys -- tal clear it seems, you must be -- lieve in spring. You must be -- lieve in love
+	and trust it's on its way, just as the sleep -- ing rose a -- waits the kiss of May. So in
+	a world of snow, of things that come and go, where what you think you know, you can't be
+	cer -- tain of, you must be -- lieve in spring and love.
 }
 {% endif %}

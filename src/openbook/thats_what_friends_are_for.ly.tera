@@ -5,6 +5,7 @@ default_version = "Wikifonia"
 title = "That's What Friends Are For"
 style = "Jazz"
 composer = "Burt Bacharach, Carole Bayer Sager"
+poet = "Burt Bacharach, Carole Bayer Sager"
 piece = "Standard"
 typesetter = "OpenBook contributors (MusicXML import)"
 completion = "3"
@@ -16,8 +17,8 @@ copyrightextra = "Archived MusicXML notice retained; underlying music is not rel
 [versions.Wikifonia]
 doChords = true
 doVoice = true
-doLyrics = false
-doLyricsmore = false
+doLyrics = true
+doLyricsmore = true
 doLyricsmoremore = false
 doChordBars = false
 doGuitar = false
@@ -37,6 +38,7 @@ doOwn = false
 	- retained written melody, chord changes, pickups, repeats and numbered endings; lyrics omitted.
 	- imported explicit 7alt symbols using the book's altered-dominant notation where present.
 	- tempo taken from archived MusicXML.
+	- put in the lyrics from the same Wikifonia source.
 	TODO:
 	- proofread the complete melody, harmony and form against the referenced PDF and check by ear.
 	- verify source attribution, copyright notice and reuse terms against the scan; only the archived MusicXML notice is retained.
@@ -135,5 +137,23 @@ doOwn = false
 	as'4 r16 bes'16 c''16 es''16 as''8 g''16 es''16 ~ es''16 c''8. |
 	}
 	\endBar
+}
+{% endif %}
+{% if part == "LyricsWikifonia" %}\lyricmode {
+	_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ "&" I Ne -- ver thought I'd feel __
+	this way __ "&" as far as I'm __ con -- cerned __ I'm glad I got __ the chance __ to say __
+	That I do be -- lieve __ I love you "&" if I should ev -- er go __ a -- way __ _ Well then
+	close your eyes __ "&" try __ to feel the way __ we do __ to -- day __ "&" than if you can __
+	re -- mem -- ber. __ _ _ _ _ Keep smi -- "lin'" Keep shi -- "nin'" Know -- "in'" you __
+	can al -- ways count on me for sure __ that's what friends __ are for __ _ _ _ _ In good __
+	times "&" bad __ times I'll be on __ your side for -- ev -- er more _ _ That's what
+	friends __ are for
+}
+{% endif %}
+{% if part == "LyricsmoreWikifonia" %}\lyricmode {
+	_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ Inst... _ _ _ _ _ _ _ Well you came
+	"&" o -- pened me __ "&" now there's so __ much more __ I see __ "&" so, by the way, __ I
+	thank you.... "&" then For the times when we're __ a -- part __ _ Well just close your
+	eyes __ "&" know __ These words are com -- "min'" from __ my heart __
 }
 {% endif %}

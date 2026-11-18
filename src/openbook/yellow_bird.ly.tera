@@ -5,6 +5,7 @@ default_version = "Wikifonia"
 title = "Yellow Bird"
 style = "Jazz"
 composer = "Norman Luboff, Marilyn Keith, Alan Bergman"
+poet = "Marilyn Keith, Alan Bergman"
 piece = "Standard"
 typesetter = "OpenBook contributors (MusicXML import)"
 completion = "3"
@@ -16,7 +17,7 @@ copyrightextra = "Archived MusicXML notice retained; underlying music is not rel
 [versions.Wikifonia]
 doChords = true
 doVoice = true
-doLyrics = false
+doLyrics = true
 doLyricsmore = false
 doLyricsmoremore = false
 doChordBars = false
@@ -35,6 +36,7 @@ doOwn = false
 	- retained the archived MusicXML rights notice; no redistribution permission is asserted.
 	- retained written melody, chord changes, pickups, repeats and numbered endings; lyrics, slurs, dynamics and articulations other than fermatas omitted.
 	- tempo is an editorial practice suggestion.
+	- put in the lyrics from the same Wikifonia source.
 	TODO:
 	- proofread the complete melody, harmony and form against a printed edition and check by ear.
 	- verify source attribution, copyright notice and reuse terms; only the archived MusicXML notice is retained.
@@ -121,5 +123,13 @@ doOwn = false
 	c''1 |
 	c''1 |
 	\endBar
+}
+{% endif %}
+{% if part == "LyricsWikifonia" %}\lyricmode {
+	Yel -- low bird up high in ba -- na na tree yel -- low bird you sit all a -- lone like me
+	did your la -- dy "frien'" leave de nest a -- gain? Dat is ve -- ry sad makes me feel so
+	bad you can fly a -- way in de sky a -- way You more luck -- y dan me! I al -- so have a
+	pret -- ty gal she not with me to -- day Dey all de same de pret -- ty gal make dem de
+	nest den dey fly a -- way! __ yel -- low bird yel -- low bird.
 }
 {% endif %}

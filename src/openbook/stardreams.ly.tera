@@ -5,6 +5,7 @@ default_version = "Wikifonia"
 title = "Stardreams"
 style = "Jazz"
 composer = "Charles Spivak"
+poet = "Sonny Burke, Sylvia Dee"
 piece = "Standard"
 typesetter = "OpenBook contributors (MusicXML import)"
 completion = "3"
@@ -16,7 +17,7 @@ copyrightextra = "Archived MusicXML notice retained; underlying music is not rel
 [versions.Wikifonia]
 doChords = true
 doVoice = true
-doLyrics = false
+doLyrics = true
 doLyricsmore = false
 doLyricsmoremore = false
 doChordBars = false
@@ -37,6 +38,7 @@ doOwn = false
 	- retained written melody, chord changes, pickups, repeats and numbered endings; lyrics omitted.
 	- imported explicit 7alt symbols using the book's altered-dominant notation where present.
 	- tempo is an editorial practice suggestion.
+	- put in the lyrics from the same Wikifonia source.
 	TODO:
 	- proofread the complete melody, harmony and form against the referenced PDF and check by ear.
 	- verify source attribution, copyright notice and reuse terms against the scan; only the archived MusicXML notice is retained.
@@ -127,5 +129,15 @@ doOwn = false
 	g'1 ~ |
 	g'1 ^\fermata |
 	\endBar
+}
+{% endif %}
+{% if part == "LyricsWikifonia" %}\lyricmode {
+	You come in star -- dreams to bring me our dreams and then __ we share a thrill a --
+	gain, a -- gain. You're mine in star -- dreams, as ev -- "'ry" star "beams;" our love __
+	is all your're think -- ing of. __ Once a -- gain the moon wan -- ders past, __ you kiss
+	me at last, __ and all of my cares __ take flight. __ Then you hold me close for a --
+	"while;" __ I see your sweet smile. __ Two hearts beat as one __ to -- night. But I lose
+	my star -- dreams, they're gone as dawn beams. I sigh __ as star -- dreams say good --
+	bye. __
 }
 {% endif %}

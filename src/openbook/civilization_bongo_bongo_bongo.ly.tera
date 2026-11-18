@@ -5,6 +5,7 @@ default_version = "Wikifonia"
 title = "Civilization (Bongo, Bongo, Bongo)"
 style = "Standard"
 composer = "Bob Hilliard"
+poet = "Carl Sigman"
 piece = "Standard"
 typesetter = "OpenBook contributors (MusicXML import)"
 completion = "3"
@@ -16,7 +17,7 @@ copyrightextra = "Archived MusicXML notice retained; underlying music is not rel
 [versions.Wikifonia]
 doChords = true
 doVoice = true
-doLyrics = false
+doLyrics = true
 doLyricsmore = false
 doLyricsmoremore = false
 doChordBars = false
@@ -37,6 +38,7 @@ doOwn = false
 	- retained written melody, chord changes, pickups, repeats and numbered endings; lyrics omitted.
 	- imported explicit 7alt symbols using the book's altered-dominant notation where present.
 	- tempo is an editorial practice suggestion.
+	- put in the lyrics from the same Wikifonia source.
 	TODO:
 	- proofread the complete melody, harmony and form against the referenced PDF and check by ear.
 	- verify source attribution, copyright notice and reuse terms against the scan; only the archived MusicXML notice is retained.
@@ -109,5 +111,14 @@ doOwn = false
 	c''1 ~ |
 	c''2. r4 |
 	\endBar
+}
+{% endif %}
+{% if part == "LyricsWikifonia" %}\lyricmode {
+	Bon -- go, bon -- go, bon -- go I don't want to leave the Con -- go, Oh, no, no, no, no,
+	no! __ Bin -- gle, ban -- gle, bun -- gle, I'm so hap -- py in the jun -- gle I re -- fuse
+	to go. __ Don't want no bright lights, false teeth, door -- bells, land -- lords, I make
+	it clear __ That, no mat -- ter how they coax me, I'll stay right here! __ They have
+	things like the a -- tom bomb, __ So, I think I'll stay where I "'um'" __ Ci -- vi -- li --
+	za -- tion, __ "I'" stay right here! __
 }
 {% endif %}

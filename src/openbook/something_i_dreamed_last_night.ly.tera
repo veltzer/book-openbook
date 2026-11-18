@@ -5,6 +5,7 @@ default_version = "Wikifonia"
 title = "Something I Dreamed Last Night"
 style = "Jazz"
 composer = "Herbert Magidson, Jack Yellen, Sammy Fain"
+poet = "Herbert Magidson, Jack Yellen, Sammy Fain"
 piece = "Standard"
 typesetter = "OpenBook contributors (MusicXML import)"
 completion = "3"
@@ -16,7 +17,7 @@ copyrightextra = "Archived MusicXML notice retained; underlying music is not rel
 [versions.Wikifonia]
 doChords = true
 doVoice = true
-doLyrics = false
+doLyrics = true
 doLyricsmore = false
 doLyricsmoremore = false
 doChordBars = false
@@ -37,6 +38,7 @@ doOwn = false
 	- retained written melody, chord changes, pickups, repeats and numbered endings; lyrics omitted.
 	- imported explicit 7alt symbols using the book's altered-dominant notation where present.
 	- tempo is an editorial practice suggestion.
+	- put in the lyrics from the same Wikifonia source.
 	TODO:
 	- proofread the complete melody, harmony and form against the referenced PDF and check by ear.
 	- verify source attribution, copyright notice and reuse terms against the scan; only the archived MusicXML notice is retained.
@@ -118,5 +120,17 @@ doOwn = false
 	d'4 d'4 ~ d'8 d'8 d''8 c''8 |
 	c''2 r2 |
 	\endBar
+}
+{% endif %}
+{% if part == "LyricsWikifonia" %}\lyricmode {
+	I can't be -- lieve that you're not here with me, to have a laugh or share a tear with
+	me. __ It's all so wrong, it can't be right! __ It must have been Some -- thing -- I
+	Dreamed Last Night. To nev -- er see your fun -- ny face a -- gain! __ To nev -- er thrill
+	to your em -- brace a -- gain! __ Oh, it's so wrong, it can't be right! __ It must have
+	been Some -- thing __ I Dreamed Last Night. Those mid -- night sup -- pers for two, our
+	"'corn" -- "y'" du -- ets at dawn, those cra -- zy mo -- ments with you, don't tell me
+	that they are gone! To nev -- er look -- "in'" to those eyes a -- gain! __ The sun just
+	might as well not rise a -- gain! __ Oh, no, no, no! It can't be right! __ It must have
+	been Some -- thing __ I Dreamed Last Night!
 }
 {% endif %}

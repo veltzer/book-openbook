@@ -5,6 +5,7 @@ default_version = "Wikifonia"
 title = "The Face I Love"
 style = "Jazz"
 composer = "Marcos Valle"
+poet = "Ray Gilbert"
 piece = "Standard"
 typesetter = "OpenBook contributors (MusicXML import)"
 completion = "3"
@@ -16,8 +17,8 @@ copyrightextra = "Archived MusicXML notice retained; underlying music is not rel
 [versions.Wikifonia]
 doChords = true
 doVoice = true
-doLyrics = false
-doLyricsmore = false
+doLyrics = true
+doLyricsmore = true
 doLyricsmoremore = false
 doChordBars = false
 doGuitar = false
@@ -37,6 +38,7 @@ doOwn = false
 	- retained written melody, chord changes, pickups, repeats and numbered endings; lyrics omitted.
 	- imported explicit 7alt symbols using the book's altered-dominant notation where present.
 	- tempo is an editorial practice suggestion.
+	- put in the lyrics from the same Wikifonia source.
 	TODO:
 	- proofread the complete melody, harmony and form against the referenced PDF and check by ear.
 	- verify source attribution, copyright notice and reuse terms against the scan; only the archived MusicXML notice is retained.
@@ -143,5 +145,19 @@ doOwn = false
 	d'2. ~ |
 	d'2. |
 	\endBar
+}
+{% endif %}
+{% if part == "LyricsWikifonia" %}\lyricmode {
+	Just think of things like __ daf -- fo -- dils, and peace -- ful sheep on __ clo -- vered
+	hills the morn -- ing song of __ whip -- poor -- wills and you'll see the face that I
+	love. __ Think of an -- y old sky get -- ting rea -- dy to cry. Down comes the rain but
+	it's rain -- ing con -- fet -- ti. Then love -- ly view _ in -- tro -- duc -- es you to to
+	the face I love. __
+}
+{% endif %}
+{% if part == "LyricsmoreWikifonia" %}\lyricmode {
+	_ think of things like __ far off isles, two blue green eyes and __ sun -- lit smiles,
+	and in your hand a __ wish -- ing star the one you thought too far a -- bove. __ "Ev'" --
+	ry
 }
 {% endif %}

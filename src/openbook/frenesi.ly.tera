@@ -5,6 +5,7 @@ default_version = "Wikifonia"
 title = "Frenesi"
 style = "Jazz"
 composer = "Alberto Dominguez"
+poet = "Ray Charles, S.K. Russell"
 piece = "Standard"
 typesetter = "OpenBook contributors (MusicXML import)"
 completion = "3"
@@ -16,7 +17,7 @@ copyrightextra = "Archived MusicXML notice retained; underlying music is not rel
 [versions.Wikifonia]
 doChords = true
 doVoice = true
-doLyrics = false
+doLyrics = true
 doLyricsmore = false
 doLyricsmoremore = false
 doChordBars = false
@@ -37,6 +38,7 @@ doOwn = false
 	- retained written melody, chord changes, pickups, repeats and numbered endings; lyrics omitted.
 	- imported explicit 7alt symbols using the book's altered-dominant notation where present.
 	- tempo is an editorial practice suggestion.
+	- put in the lyrics from the same Wikifonia source.
 	TODO:
 	- proofread the complete melody, harmony and form against the referenced PDF and check by ear.
 	- verify source attribution, copyright notice and reuse terms against the scan; only the archived MusicXML notice is retained.
@@ -148,5 +150,17 @@ doOwn = false
 	es''1 ~ |
 	es''4 r4 r2 |
 	\endBar
+}
+{% endif %}
+{% if part == "LyricsWikifonia" %}\lyricmode {
+	It was fi -- es -- ta down in Mex -- i -- co, __ and so I stopped a -- while to see the
+	show, __ I knew that Fre -- ne -- si meant "'please" love "me'," And I could say fre -- ne --
+	si. A love -- ly se -- no -- ri -- ta caught my eye, __ I stood en -- chant -- ed as she
+	wan -- dered by __ and nev -- er know -- ing that it came from me, I gent -- ly sighed fre --
+	ne -- si. She stopped and raised her eyes to mine, her lips just plead -- ed to be kissed,
+	her eyes were soft as cand -- le shine, so how was I to re -- sist? And now with -- out a
+	heart to call my own, __ a great -- er hap -- pi -- ness I've nev -- er known, __ be --
+	cause her kiss -- es are for me a -- lone, who would -- n't say fre -- ne -- si. si. __
+	who would -- n't say fre -- ne -- si! __
 }
 {% endif %}

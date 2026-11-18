@@ -5,6 +5,7 @@ default_version = "Wikifonia"
 title = "Isle Of Capri"
 style = "Jazz"
 composer = "Wilhelm Grosz"
+poet = "Jimmy Kennedy"
 piece = "Standard"
 typesetter = "OpenBook contributors (MusicXML import)"
 completion = "3"
@@ -16,8 +17,8 @@ copyrightextra = "Archived MusicXML notice retained; underlying music is not rel
 [versions.Wikifonia]
 doChords = true
 doVoice = true
-doLyrics = false
-doLyricsmore = false
+doLyrics = true
+doLyricsmore = true
 doLyricsmoremore = false
 doChordBars = false
 doGuitar = false
@@ -37,6 +38,7 @@ doOwn = false
 	- retained written melody, chord changes, pickups, repeats and numbered endings; lyrics omitted.
 	- imported explicit 7alt symbols using the book's altered-dominant notation where present.
 	- tempo is an editorial practice suggestion.
+	- put in the lyrics from the same Wikifonia source.
 	TODO:
 	- proofread the complete melody, harmony and form against the referenced PDF and check by ear.
 	- verify source attribution, copyright notice and reuse terms against the scan; only the archived MusicXML notice is retained.
@@ -129,5 +131,21 @@ doOwn = false
 	f'2 ~ f'2 ~ |
 	f'2 r2 |
 	\endBar
+}
+{% endif %}
+{% if part == "LyricsWikifonia" %}\lyricmode {
+	Twas on the Isle of Cap -- ri that I found her Be -- neath the shade of an old wal -- nut
+	tree. Oh, I can still see the flow'rs bloom -- ing round her Where we met on the Isle of
+	Cap -- ri. she was as pri. Sum -- mer -- time was near -- ly o -- ver -- blue I -- tal --
+	ian sky a -- bove I said La -- dy I'm a ro -- ver Can you spare a sweet word of love? She
+	whis -- pered soft -- ly Its best not to lin -- ger and then as I kissed her hand I could
+	see She wore a plain gold -- en ring on her fin -- ger T'was good -- bye on the Isle of
+	Cap -- ri. __
+}
+{% endif %}
+{% if part == "LyricsmoreWikifonia" %}\lyricmode {
+	_ _ _ sweet as a rose at the dawn -- ing But some -- how fate han -- nt meant her for me
+	Abd tho I sailed with the tide in the morn -- ing Still my heart's on the Isle of Cap --
+	ri
 }
 {% endif %}

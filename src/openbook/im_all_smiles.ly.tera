@@ -5,6 +5,7 @@ default_version = "Wikifonia"
 title = "I'm All Smiles"
 style = "Jazz"
 composer = "Michael Leonard"
+poet = "Herbert Martin"
 piece = "Jazz"
 typesetter = "OpenBook contributors (MusicXML import)"
 completion = "3"
@@ -17,8 +18,8 @@ copyrightextraextra = "J. Michel KG, Musikverlag The nghts for Japanassigned to 
 [versions.Wikifonia]
 doChords = true
 doVoice = true
-doLyrics = false
-doLyricsmore = false
+doLyrics = true
+doLyricsmore = true
 doLyricsmoremore = false
 doChordBars = false
 doGuitar = false
@@ -36,6 +37,7 @@ doOwn = false
 	- retained the original copyright notice where printed; the underlying music is not relicensed.
 	- retained written measures, pickups, repeats and endings; lyrics omitted.
 	- tempo is an editorial practice suggestion.
+	- put in the lyrics from the same Wikifonia source.
 	TODO:
 	- proofread the music against the referenced PDF and check by ear.
 {% endif %}
@@ -202,5 +204,19 @@ doOwn = false
 	d''4 b'4 cis''4 |
 	d''2. |
 	\endBar
+}
+{% endif %}
+{% if part == "LyricsWikifonia" %}\lyricmode {
+	I'm all smiles, Dar -- "lin'" You'd be too __ _ If you knew, Dar -- "lin'" all of my
+	smiles were for you. __ warm to the touch of you. __ Rain has -- n't fal -- len for days
+	now, __ but rain -- bows are fill -- ing the skies. __ My heart must have paint -- ed
+	those rain -- bows __ shi -- ning be -- fore my eyes. __ Can't you tell that I'm in love
+	Dar -- "lin'" Deep and true. __ With guess who, Dar -- "lin'" Some -- one I'd die for,
+	beg, steal or lie for, eat hum -- ble pie for some one to fly to the sun, moon, and sky
+	for. Some -- one to live for, to love with and cry for. And that some -- one is you.
+}
+{% endif %}
+{% if part == "LyricsmoreWikifonia" %}\lyricmode {
+	I'm all chills, Dar -- "lin'" through and through __ _ My cold hands, Dar -- "lin'"
 }
 {% endif %}

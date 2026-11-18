@@ -5,6 +5,7 @@ default_version = "Wikifonia"
 title = "Okie from Muskogee"
 style = "Standard"
 composer = "Merle Haggard, Ray Edward Burris"
+poet = "Merle Haggard, Ray Edward Burris"
 piece = "Standard"
 typesetter = "OpenBook contributors (MusicXML import)"
 completion = "3"
@@ -16,8 +17,8 @@ copyrightextra = "Archived MusicXML notice retained; underlying music is not rel
 [versions.Wikifonia]
 doChords = true
 doVoice = true
-doLyrics = false
-doLyricsmore = false
+doLyrics = true
+doLyricsmore = true
 doLyricsmoremore = false
 doChordBars = false
 doGuitar = false
@@ -37,6 +38,7 @@ doOwn = false
 	- retained written melody, chord changes, pickups, repeats and numbered endings; lyrics omitted.
 	- imported explicit 7alt symbols using the book's altered-dominant notation where present.
 	- tempo is an editorial practice suggestion.
+	- put in the lyrics from the same Wikifonia source.
 	TODO:
 	- proofread the complete melody, harmony and form against the referenced PDF and check by ear.
 	- verify source attribution, copyright notice and reuse terms against the scan; only the archived MusicXML notice is retained.
@@ -125,5 +127,19 @@ doOwn = false
 	c'1 ~ |
 	c'1 |
 	\endBar
+}
+{% endif %}
+{% if part == "LyricsWikifonia" %}\lyricmode {
+	We dont smoke mar -- i -- jua -- na in Mus -- ko gee __ We dont take our trips on L. S.
+	D. __ We dont burn our draft cards down on main street __ Cause we like liv -- ing right
+	and be -- ing free __ and I'm proud to be an Ok -- ie from Mus -- ko -- gee __ A place
+	where ev -- en squares can have a ball __ We still wave old Glo -- ry -- at the court --
+	house __ and white light -- nings still the big -- gest thrill of all __
+}
+{% endif %}
+{% if part == "LyricsmoreWikifonia" %}\lyricmode {
+	We dont make a _ par -- ty out of lov -- ing __ We like hold -- ing hands and pitch --
+	ing woos __ we dont let our hair grow long and shag -- gy __ Like the hip -- pies down in
+	San Fran -- cisco do __
 }
 {% endif %}

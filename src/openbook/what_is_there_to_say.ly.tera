@@ -5,6 +5,7 @@ default_version = "Wikifonia"
 title = "What is There to Say"
 style = "Jazz"
 composer = "Vernon Duke"
+poet = "E. Y. Harburg"
 piece = "Standard"
 typesetter = "OpenBook contributors (MusicXML import)"
 completion = "3"
@@ -16,8 +17,8 @@ copyrightextra = "Archived MusicXML notice retained; underlying music is not rel
 [versions.Wikifonia]
 doChords = true
 doVoice = true
-doLyrics = false
-doLyricsmore = false
+doLyrics = true
+doLyricsmore = true
 doLyricsmoremore = false
 doChordBars = false
 doGuitar = false
@@ -37,6 +38,7 @@ doOwn = false
 	- retained written melody, chord changes, pickups, repeats and numbered endings; lyrics omitted.
 	- imported explicit 7alt symbols using the book's altered-dominant notation where present.
 	- tempo is an editorial practice suggestion.
+	- put in the lyrics from the same Wikifonia source.
 	TODO:
 	- proofread the complete melody, harmony and form against the referenced PDF and check by ear.
 	- verify source attribution, copyright notice and reuse terms against the scan; only the archived MusicXML notice is retained.
@@ -147,5 +149,22 @@ doOwn = false
 	es'1 ~ |
 	es'2. r4 |
 	\endBar
+}
+{% endif %}
+{% if part == "LyricsWikifonia" %}\lyricmode {
+	Dar -- ling par -- don my con -- fu -- sion, But are you an op -- ti -- cal il -- lu --
+	sion, And if not, then what on earth are you do -- ing to me? __ If my speech is wil -- ly
+	nil -- ly, It's be -- cause I can -- not gild the li -- ly. I should love to sing your
+	prais -- es, But phras -- es and words are sil -- ly. What is there to say, and what is
+	there to do? The dream I've been seek -- ing has prac -- ti -- c'lly speak -- ing come
+	true. __ _ _ _ _ _ _ _ _ _ _ _ beau -- ty is just un -- for -- giv -- a -- ble. You're
+	made to mar -- vel at and words to that ef -- fect. So, What is there to say, and what is
+	there to do? My heart's in a dead -- lock, I'd e -- ven face wed -- lock with you. __
+}
+{% endif %}
+{% if part == "LyricsmoreWikifonia" %}\lyricmode {
+	_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _
+	What is there to say, and how will I pull through? I knew in a mo -- ment, con -- tent --
+	ment and home meant just you. __ You are so lov -- a -- ble, so liv -- a -- ble, your
 }
 {% endif %}

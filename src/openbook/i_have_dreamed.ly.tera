@@ -5,6 +5,7 @@ default_version = "Wikifonia"
 title = "I Have Dreamed"
 style = "Standard"
 composer = "Richard Rodgers"
+poet = "Oscar Hammerstein II"
 piece = "Standard"
 typesetter = "OpenBook contributors (MusicXML import)"
 completion = "3"
@@ -16,7 +17,7 @@ copyrightextra = "Archived MusicXML notice retained; underlying music is not rel
 [versions.Wikifonia]
 doChords = true
 doVoice = true
-doLyrics = false
+doLyrics = true
 doLyricsmore = false
 doLyricsmoremore = false
 doChordBars = false
@@ -37,6 +38,7 @@ doOwn = false
 	- retained written melody, chord changes, pickups, repeats and numbered endings; lyrics omitted.
 	- imported explicit 7alt symbols using the book's altered-dominant notation where present.
 	- tempo is an editorial practice suggestion.
+	- put in the lyrics from the same Wikifonia source.
 	TODO:
 	- proofread the complete melody, harmony and form against the referenced PDF and check by ear.
 	- verify source attribution, copyright notice and reuse terms against the scan; only the archived MusicXML notice is retained.
@@ -151,5 +153,13 @@ doOwn = false
 	}
 	es''2. r4 |
 	\endBar
+}
+{% endif %}
+{% if part == "LyricsWikifonia" %}\lyricmode {
+	I have dreamed __ that your arms are love -- ly __ I have dreamed __ what a joy you'll
+	be. __ I have dreamed __ ev -- "'ry" word you'll whis -- per __ when your close, __ close
+	to me. __ How you look __ in the glow of eve -- ning __ I have dreamed __ and en -- joyed
+	the view. __ In these dreams I've loved you so that by now I think I know what it's like
+	to be loved by you __ I will love be -- ing loved by you. __ you. __
 }
 {% endif %}

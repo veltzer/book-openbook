@@ -5,6 +5,7 @@ default_version = "Wikifonia"
 title = "High Hopes"
 style = "Jazz"
 composer = "Jimmy Van Heusen, Sammy Cahn"
+poet = "Sammy Cahn"
 piece = "Standard"
 typesetter = "OpenBook contributors (MusicXML import)"
 completion = "3"
@@ -16,8 +17,8 @@ copyrightextra = "Archived MusicXML notice retained; underlying music is not rel
 [versions.Wikifonia]
 doChords = true
 doVoice = true
-doLyrics = false
-doLyricsmore = false
+doLyrics = true
+doLyricsmore = true
 doLyricsmoremore = false
 doChordBars = false
 doGuitar = false
@@ -35,6 +36,7 @@ doOwn = false
 	- retained the archived MusicXML rights notice; no redistribution permission is asserted.
 	- retained written melody, chord changes, pickups, repeats and numbered endings; lyrics, slurs, dynamics and articulations other than fermatas omitted.
 	- tempo is an editorial practice suggestion.
+	- put in the lyrics from the same Wikifonia source.
 	TODO:
 	- proofread the complete melody, harmony and form against a printed edition and check by ear.
 	- verify source attribution, copyright notice and reuse terms; only the archived MusicXML notice is retained.
@@ -134,5 +136,25 @@ doOwn = false
 	f'4 \times 2/3 { a'8 bes'8 b'8 } c''4 c'4 |
 	f4 r4 r2 |
 	\endBar
+}
+{% endif %}
+{% if part == "LyricsWikifonia" %}\lyricmode {
+	Next time you're found __ with your chin on the ground __ there's a lot to be learned __
+	so look a -- round __ Just what makes that lit -- tle ol'ant _ think he'll move that rub --
+	ber tree plant? __ an -- y -- one knows __ an ant can't _ move a rub -- ber tree plant but
+	he's got high __ _ _ hopes he's got high __ _ _ hopes he's got high ap -- ple pie in the
+	sky __ _ _ hopes, so an -- y time you're get __ tin low stead of let __ "tin'" go just re --
+	mem -- ber that ant Oops, there goes an -- oth -- er rub __ ber tree plant Oops there goes
+	an -- oth -- er rub __ ber tree plant plop _ _ _ _ ker -- plop.
+}
+{% endif %}
+{% if part == "LyricsmoreWikifonia" %}\lyricmode {
+	when troub -- les call __ and your back's to the wall __ there's a lot to be learned __
+	that wall could fall __ Once there was a sil -- ly "ol'" ant __ thought he'd punch a hole
+	in a dam __ no one could make __ that ram scram _ He kept but -- "tin'" that dam "'Cause"
+	he had high __ _ _ hopes He had high __ _ _ hopes he had high ap -- ple pie in the sky __ _ _
+	hopes so an -- y -- time you're feel -- in bad stead of feel -- in sad just re -- mem __
+	ber that ram Oops there goes a bil -- lion kil __ o -- watt dam Oops there goes a bil --
+	lion kil __ o -- watt dam
 }
 {% endif %}

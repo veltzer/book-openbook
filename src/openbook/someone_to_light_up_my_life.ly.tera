@@ -5,6 +5,7 @@ default_version = "Wikifonia"
 title = "Someone to Light up My Life"
 style = "Jazz"
 composer = "Antonio Carlos Jobim"
+poet = "Gene Lees"
 piece = "Jazz"
 typesetter = "OpenBook contributors (MusicXML import)"
 completion = "3"
@@ -17,7 +18,7 @@ copyrightextraextra = "Performance For Profit. Used Ey Permission of TRO"
 [versions.Wikifonia]
 doChords = true
 doVoice = true
-doLyrics = false
+doLyrics = true
 doLyricsmore = false
 doLyricsmoremore = false
 doChordBars = false
@@ -36,6 +37,7 @@ doOwn = false
 	- retained the original copyright notice where printed; the underlying music is not relicensed.
 	- retained written measures, pickups, repeats and endings; lyrics omitted.
 	- tempo is an editorial practice suggestion.
+	- put in the lyrics from the same Wikifonia source.
 	TODO:
 	- proofread the music against the referenced PDF and check by ear.
 {% endif %}
@@ -154,5 +156,17 @@ doOwn = false
 	bes'1 ~ |
 	bes'2. r4 |
 	\endBar
+}
+{% endif %}
+{% if part == "LyricsWikifonia" %}\lyricmode {
+	Go on your way __ with a cloud -- less blue sky a -- bove. __ May all your days __ be a
+	won -- der -- ful song of love. __ O -- pen your arms and sing of all the hid -- den hopes _
+	you've e -- ver trea -- sured and live out your life in peace. __ Where shall I look for
+	the love to re -- place you? Some -- one to light up my life? __ Some -- one with strange
+	lit -- tle ways, eyes like a blue aut -- umn haze. Some -- one with your laugh -- ing
+	style. __ and a smile that I know will keep haunt -- ing me end -- less -- ly Some --
+	times in stars or the swift flight of sea birds I catch a mo -- ment of you. __ That's why
+	I walk all a -- lone seach -- ing for some -- thing un -- known Search -- ing for some --
+	thing or some -- one to light up my life. __
 }
 {% endif %}

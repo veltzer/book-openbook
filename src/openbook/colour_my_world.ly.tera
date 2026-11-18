@@ -5,6 +5,7 @@ default_version = "Wikifonia"
 title = "Colour My World"
 style = "Standard"
 composer = "James Pankow"
+poet = "James Pankow"
 piece = "Standard"
 typesetter = "OpenBook contributors (MusicXML import)"
 completion = "3"
@@ -16,8 +17,8 @@ copyrightextra = "Archived MusicXML notice retained; underlying music is not rel
 [versions.Wikifonia]
 doChords = true
 doVoice = true
-doLyrics = false
-doLyricsmore = false
+doLyrics = true
+doLyricsmore = true
 doLyricsmoremore = false
 doChordBars = false
 doGuitar = false
@@ -37,6 +38,7 @@ doOwn = false
 	- retained written melody, chord changes, pickups, repeats and numbered endings; lyrics omitted.
 	- imported explicit 7alt symbols using the book's altered-dominant notation where present.
 	- tempo is an editorial practice suggestion.
+	- put in the lyrics from the same Wikifonia source.
 	TODO:
 	- proofread the complete melody, harmony and form against the referenced PDF and check by ear.
 	- verify source attribution, copyright notice and reuse terms against the scan; only the archived MusicXML notice is retained.
@@ -115,5 +117,17 @@ doOwn = false
 	f'2. ~ f'4 f'8 g'4 e'8 |
 	f'1. |
 	\endBar
+}
+{% endif %}
+{% if part == "LyricsWikifonia" %}\lyricmode {
+	As ti -- me goes on __ I re -- a -- lize __ just what you mean __ to __ _ me __ and now __
+	now that you're near __ pro -- mise your love __ that i've wait -- ed to share __ and
+	dreams __ of our mom -- ments to -- ge -- ther __ Co -- lor my world __ _ with hopes __ of
+	lov -- ing you __
+}
+{% endif %}
+{% if part == "LyricsmoreWikifonia" %}\lyricmode {
+	_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _
+	"(flute)"
 }
 {% endif %}

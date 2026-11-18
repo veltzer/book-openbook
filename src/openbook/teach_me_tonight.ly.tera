@@ -5,6 +5,7 @@ default_version = "Wikifonia"
 title = "Teach Me Tonight"
 style = "Jazz"
 composer = "Gene DePaul"
+poet = "Sammy Cahn"
 piece = "Jazz"
 typesetter = "OpenBook contributors (MusicXML import)"
 completion = "3"
@@ -16,7 +17,7 @@ copyrightextra = "Road Music Administered by"
 [versions.Wikifonia]
 doChords = true
 doVoice = true
-doLyrics = false
+doLyrics = true
 doLyricsmore = false
 doLyricsmoremore = false
 doChordBars = false
@@ -35,6 +36,7 @@ doOwn = false
 	- retained the original copyright notice where printed; the underlying music is not relicensed.
 	- retained written measures, pickups, repeats and endings; lyrics omitted.
 	- tempo is an editorial practice suggestion.
+	- put in the lyrics from the same Wikifonia source.
 	TODO:
 	- proofread the music against the referenced PDF and check by ear.
 	- verify editorial chord spacing in measures 16, 32, 34; the archive places successive symbols at the same offset.
@@ -142,5 +144,16 @@ doOwn = false
 	}
 	es'2. r4 |
 	\endBar
+}
+{% endif %}
+{% if part == "LyricsWikifonia" %}\lyricmode {
+	Did you say I've got a lot to learn __ Well, don't thnk I'm try -- ing not to learn Since
+	this is the per -- fect spot to learn, teach me to -- night Start -- ing with the A, B, c,
+	of it, __ right down to the X, Y, Z, of it. Help me solve the mys -- ter -- y of it teach
+	me ton -- night The skies a black -- board high a -- bove you, if a shoot -- ing star goes
+	by __ I'll use that star to write I love you. A thou -- sand times a -- cross the sky. One
+	thing is -- n't ver -- y clear my love, __ should the teach -- er stand so near my love?
+	Grad -- u -- a -- tions al -- most here my love Teach me to -- night Did you say I've got
+	a night. __
 }
 {% endif %}

@@ -5,6 +5,7 @@ default_version = "Wikifonia"
 title = "Christmas Time Is Here"
 style = "Jazz"
 composer = "Vince Guaraldi, Lee Mendelson"
+poet = "Lee Mendelson"
 piece = "Standard"
 typesetter = "OpenBook contributors (MusicXML import)"
 completion = "3"
@@ -16,7 +17,7 @@ copyrightextra = "Archived MusicXML notice retained; underlying music is not rel
 [versions.Wikifonia]
 doChords = true
 doVoice = true
-doLyrics = false
+doLyrics = true
 doLyricsmore = false
 doLyricsmoremore = false
 doChordBars = false
@@ -35,6 +36,7 @@ doOwn = false
 	- retained the archived MusicXML rights notice; no redistribution permission is asserted.
 	- retained written melody, chord changes, pickups, repeats and numbered endings; lyrics, slurs, dynamics and articulations other than fermatas omitted.
 	- tempo is an editorial practice suggestion.
+	- put in the lyrics from the same Wikifonia source.
 	TODO:
 	- proofread the complete melody, harmony and form against a printed edition and check by ear.
 	- verify source attribution, copyright notice and reuse terms; only the archived MusicXML notice is retained.
@@ -123,5 +125,14 @@ doOwn = false
 	d'8 f'8 d'4 f'4 |
 	g'2. |
 	\endBar
+}
+{% endif %}
+{% if part == "LyricsWikifonia" %}\lyricmode {
+	Christ -- mas time is here, hap -- pi -- ness and cheer. Fun for all that chil -- dren
+	call their fa -- v'rite time of year. Snow -- flakes in the air, car -- ols ev -- "'ry" --
+	where. Old -- en times and an -- cient rhymes of love and dreams to share. Sleigh -- bells
+	in the air, beau -- ty ev -- "'ry" -- where. Yule -- tide by the fire -- _ side and joy --
+	ful mem -- "'ries" there. Christ -- mas time is here, we'll be draw -- ing near. Oh, that
+	we could al -- ways see such spir -- it through the year.
 }
 {% endif %}

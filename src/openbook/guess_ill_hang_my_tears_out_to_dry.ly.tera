@@ -5,6 +5,7 @@ default_version = "Wikifonia"
 title = "Guess I'll Hang My Tears Out To Dry"
 style = "Jazz"
 composer = "Jules Styne"
+poet = "Sammy Cahn"
 piece = "Standard"
 typesetter = "OpenBook contributors (MusicXML import)"
 completion = "3"
@@ -16,7 +17,7 @@ copyrightextra = "Archived MusicXML notice retained; underlying music is not rel
 [versions.Wikifonia]
 doChords = true
 doVoice = true
-doLyrics = false
+doLyrics = true
 doLyricsmore = false
 doLyricsmoremore = false
 doChordBars = false
@@ -37,6 +38,7 @@ doOwn = false
 	- retained written melody, chord changes, pickups, repeats and numbered endings; lyrics omitted.
 	- imported explicit 7alt symbols using the book's altered-dominant notation where present.
 	- tempo is an editorial practice suggestion.
+	- put in the lyrics from the same Wikifonia source.
 	TODO:
 	- proofread the complete melody, harmony and form against the referenced PDF and check by ear.
 	- verify source attribution, copyright notice and reuse terms against the scan; only the archived MusicXML notice is retained.
@@ -138,5 +140,17 @@ doOwn = false
 	c'2 r2 |
 	}
 	\endBar
+}
+{% endif %}
+{% if part == "LyricsWikifonia" %}\lyricmode {
+	When I want rain, __ I get sun -- ny wea -- ther, I'm just as blue as the sky. __ Since
+	love is gone, __ can't pull my -- self to -- geth -- er, guess I'll hang my tears out to
+	dry. __ Friends ask me out, __ I tell them I'm bus -- y, must get a new al -- i -- bi. __
+	I stay at home, __ and ask my -- self where is she, guess I'll hang my tears out to dry. __
+	Dry lit -- tle tear -- drops, my lit -- tle tear -- drops, hang -- ing on a string of
+	dreams. Fly lit -- tle mem -- "'ries," my lit -- tle mem -- "'ries" re -- mind her of our
+	cra -- zy schemes. Some -- bod -- y said, __ just for -- get a -- bout her, I gave that
+	treat -- ment a try. __ Strange ly e -- nough, __ I got a -- long with -- out her, then
+	one day she passed me right by, __ oh well, I guess I'll hang my tears out to dry. __
 }
 {% endif %}

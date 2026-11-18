@@ -5,6 +5,7 @@ default_version = "Wikifonia"
 title = "Moondance"
 style = "Jazz"
 composer = "Van Morrison"
+poet = "Van Morrison"
 piece = "Standard"
 typesetter = "OpenBook contributors (MusicXML import)"
 completion = "3"
@@ -16,8 +17,8 @@ copyrightextra = "Archived MusicXML notice retained; underlying music is not rel
 [versions.Wikifonia]
 doChords = true
 doVoice = true
-doLyrics = false
-doLyricsmore = false
+doLyrics = true
+doLyricsmore = true
 doLyricsmoremore = false
 doChordBars = false
 doGuitar = false
@@ -37,6 +38,7 @@ doOwn = false
 	- retained written melody, chord changes, pickups, repeats and numbered endings; lyrics omitted.
 	- imported explicit 7alt symbols using the book's altered-dominant notation where present.
 	- tempo is an editorial practice suggestion.
+	- put in the lyrics from the same Wikifonia source.
 	TODO:
 	- proofread the complete melody, harmony and form against the referenced PDF and check by ear.
 	- verify source attribution, copyright notice and reuse terms against the scan; only the archived MusicXML notice is retained.
@@ -175,5 +177,29 @@ doOwn = false
 	bes'4 r4 c''16 bes'16 as'8 bes'16 as'16 f'8 ~ |
 	f'4 r4 r2 |
 	\endBar
+}
+{% endif %}
+{% if part == "LyricsWikifonia" %}\lyricmode {
+	Well it's a mar -- vel -- ous night __ for a Moon -- dance with the stars up a -- bove in
+	your eyes. __ A fan -- tab -- u -- lous night __ to make ro __ mance "'neath" the cov --
+	er of Oc -- to -- ber skies. __ And all the leaves on the trees __ are fall __ ing to the
+	sound of the breez -- es that blow, __ and I'm try -- ing to please __ to the call -- ing
+	of your heart -- strings that play soft and low. And __ all the night's _ _ mag -- ic
+	seems to whis -- per and hush. __ And all _ soft _ _ moon __ light seems to shine __ in
+	your blush. __ Can I __ just have __ one a -- more __ Moon -- dance __ with __ you __ my
+	love? __ Can I __ just make __ some __ more __ ro __ mance with a -- you, __ my love? __
+	Well I love? One more Moon -- dance with you in the moon -- light on a ma -- _ gic night,
+	la la __ la __ la, in _ moon -- light _ on a mag -- _ _ _ ic night. Can't I __ just have __
+	one more __ _ dance __ _ with you, my __ _ _ love? __
+}
+{% endif %}
+{% if part == "LyricsmoreWikifonia" %}\lyricmode {
+	_ _ _ wan -- na make love __ to you to __ night, I can't wait til the morn -- ing has
+	come. __ And I know now the time __ _ is just __ right and straight in -- to my arms __
+	you will run. __ and when you come my __ _ "heart~will" __ be wait __ ing to make sure
+	that you're nev -- er a -- lone. __ There and then all my dreams __ will come true, __
+	dear, there and then I will make you my own. "And~ev" -- "'ry" time I __ _ _ touch __ you
+	you just trem -- ble in -- side. __ And I know how __ _ _ much __ you want me that __ you
+	cant hide. __
 }
 {% endif %}

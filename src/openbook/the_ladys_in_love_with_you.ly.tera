@@ -5,6 +5,7 @@ default_version = "Wikifonia"
 title = "The Lady's In Love With You"
 style = "Jazz"
 composer = "Burton Lane"
+poet = "Frank Loesser"
 piece = "Standard"
 typesetter = "OpenBook contributors (MusicXML import)"
 completion = "3"
@@ -16,7 +17,7 @@ copyrightextra = "Archived MusicXML notice retained; underlying music is not rel
 [versions.Wikifonia]
 doChords = true
 doVoice = true
-doLyrics = false
+doLyrics = true
 doLyricsmore = false
 doLyricsmoremore = false
 doChordBars = false
@@ -37,6 +38,7 @@ doOwn = false
 	- retained written melody, chord changes, pickups, repeats and numbered endings; lyrics omitted.
 	- imported explicit 7alt symbols using the book's altered-dominant notation where present.
 	- tempo is an editorial practice suggestion.
+	- put in the lyrics from the same Wikifonia source.
 	TODO:
 	- proofread the complete melody, harmony and form against the referenced PDF and check by ear.
 	- verify source attribution, copyright notice and reuse terms against the scan; only the archived MusicXML notice is retained.
@@ -175,5 +177,16 @@ doOwn = false
 	}
 	g'2 ~ g'8 r8 r4 |
 	\endBar
+}
+{% endif %}
+{% if part == "LyricsWikifonia" %}\lyricmode {
+	Have you ev -- er seen the dawn of love? __ Lit -- tle things that mean the dawn of love? __
+	Why wait for her to say that she a -- dores you? __ Long be -- fore the first kiss __ Have
+	you ev -- er seen this? __ If there's a gleam in her eye __ each time she straight -- ens
+	your tie, __ You'll know the la -- dy's in love __ with you. _ If she can dress for a date __
+	with -- out that wait -- ing you hate __ It means the la -- dy's in love __ with you. __
+	And when your friends ask you o -- ver to join their ta -- ble __ But she picks that far a --
+	way booth for two, __ Well, sir, here's just how it stands, __ you've got ro -- mance on
+	your hands. __ Be -- cause the la -- dy's in love __ with you. __ If there's a you. __
 }
 {% endif %}

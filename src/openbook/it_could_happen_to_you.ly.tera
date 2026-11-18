@@ -5,6 +5,7 @@ default_version = "Wikifonia"
 title = "It Could Happen To You"
 style = "Jazz"
 composer = "Jimmy Van Heusen"
+poet = "Johnny Burke"
 piece = "Jazz"
 typesetter = "OpenBook contributors (MusicXML import)"
 completion = "3"
@@ -15,7 +16,7 @@ copyright = "All Rights Reserved"
 [versions.Wikifonia]
 doChords = true
 doVoice = true
-doLyrics = false
+doLyrics = true
 doLyricsmore = false
 doLyricsmoremore = false
 doChordBars = false
@@ -34,6 +35,7 @@ doOwn = false
 	- retained the original copyright notice where printed; the underlying music is not relicensed.
 	- retained written measures, pickups, repeats and endings; lyrics omitted.
 	- tempo is an editorial practice suggestion.
+	- put in the lyrics from the same Wikifonia source.
 	TODO:
 	- proofread the music against the referenced PDF and check by ear.
 	- verify editorial chord spacing in measures 8, 12, 24, 28, 31, 33; the archive places successive symbols at the same offset.
@@ -140,5 +142,12 @@ doOwn = false
 	}
 	g'1 |
 	\endBar
+}
+{% endif %}
+{% if part == "LyricsWikifonia" %}\lyricmode {
+	Hide your heart from sight, lock your dreams at night. It could hap -- pen to you. __
+	Don't count stars or you might stum -- ble, __ some -- one drops a sigh and down you tum --
+	ble. Keep and eye on spring, run when church bells ring. It could hap -- pen to you. __
+	All I did was won -- der how your arms would be and it hap -- pened to me __
 }
 {% endif %}

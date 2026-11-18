@@ -5,6 +5,7 @@ default_version = "Wikifonia"
 title = "I Got It Bad And That Ain't Good"
 style = "Jazz"
 composer = "Duke Ellington"
+poet = "Paul Francis Webster"
 piece = "Standard"
 typesetter = "OpenBook contributors (MusicXML import)"
 completion = "3"
@@ -16,7 +17,7 @@ copyrightextra = "Archived MusicXML notice retained; underlying music is not rel
 [versions.Wikifonia]
 doChords = true
 doVoice = true
-doLyrics = false
+doLyrics = true
 doLyricsmore = false
 doLyricsmoremore = false
 doChordBars = false
@@ -37,6 +38,7 @@ doOwn = false
 	- retained written melody, chord changes, pickups, repeats and numbered endings; lyrics omitted.
 	- imported explicit 7alt symbols using the book's altered-dominant notation where present.
 	- tempo is an editorial practice suggestion.
+	- put in the lyrics from the same Wikifonia source.
 	TODO:
 	- proofread the complete melody, harmony and form against the referenced PDF and check by ear.
 	- verify source attribution, copyright notice and reuse terms against the scan; only the archived MusicXML notice is retained.
@@ -160,5 +162,18 @@ doOwn = false
 	g'1 |
 	R1 |
 	\endBar
+}
+{% endif %}
+{% if part == "LyricsWikifonia" %}\lyricmode {
+	The po -- ets say that all who love are blind, but I'm in love and I __ know what time it
+	is. The good book says, "'Go" seek and ye shall "find.'" Well, I have sought and, my, __
+	what a climb it is My life is just like the wea -- ther. It chan -- ges with the hours. __
+	When he's near, I'm fair and warm -- er. When he's gone, I'm cloud -- y with show -- ers.
+	In e -- mo -- tion, like the o -- cean, it's ei -- ther sink or swim __ when a wo -- man
+	loves a man like I love him. Nev -- er treats me sweet and gen -- tle, the way he should.
+	I got it bad and that ain't good! My poor heart is sen -- ti -- men -- tal, not made of
+	wood. I got it bad and that ain't good! __ But when the week -- end's ov -- er and Mon --
+	day rolls a -- round I end up like I start out, just cry -- "in'" my heart out. He don't
+	love me like I love him. No bod -- y could. I got it bad and that ain't good!
 }
 {% endif %}

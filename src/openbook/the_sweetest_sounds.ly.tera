@@ -5,6 +5,7 @@ default_version = "Wikifonia"
 title = "The Sweetest Sounds"
 style = "Jazz"
 composer = "Richard Rodgers"
+poet = "Richard Rodgers"
 piece = "Jazz"
 typesetter = "OpenBook contributors (MusicXML import)"
 completion = "3"
@@ -15,7 +16,7 @@ copyright = "All Rights Reserved"
 [versions.Wikifonia]
 doChords = true
 doVoice = true
-doLyrics = false
+doLyrics = true
 doLyricsmore = false
 doLyricsmoremore = false
 doChordBars = false
@@ -34,6 +35,7 @@ doOwn = false
 	- retained the original copyright notice where printed; the underlying music is not relicensed.
 	- retained written measures, pickups, repeats and endings; lyrics omitted.
 	- tempo taken from archived MusicXML.
+	- put in the lyrics from the same Wikifonia source.
 	TODO:
 	- proofread the music against the referenced PDF and check by ear.
 	- verify editorial chord spacing in measures 16; the archive places successive symbols at the same offset.
@@ -140,5 +142,12 @@ doOwn = false
 	f'2 ~ |
 	f'8 r8 r4 |
 	\endBar
+}
+{% endif %}
+{% if part == "LyricsWikifonia" %}\lyricmode {
+	The Sweet -- est Sounds I'll ev -- er hear Are still in -- side my head. __ The kind --
+	est words I'll ev -- er know Are wait -- ing to be said. __ The most en -- tranc -- ing
+	sight of all is yet for me to see. __ And the dear -- est love in all the world is wait --
+	ing some -- where __ for me. __ is wait -- ing some -- where, Some -- where for me. __
 }
 {% endif %}

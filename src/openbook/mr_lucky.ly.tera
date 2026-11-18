@@ -5,6 +5,7 @@ default_version = "Wikifonia"
 title = "Mr. Lucky"
 style = "Jazz"
 composer = "Henry Mancini"
+poet = "Jay Livingston, Ray Evans"
 piece = "Jazz"
 typesetter = "OpenBook contributors (MusicXML import)"
 completion = "3"
@@ -15,8 +16,8 @@ copyright = "1959 (Renewed 1987) Northridge Music Co. and Warner Bros. Music. Al
 [versions.Wikifonia]
 doChords = true
 doVoice = true
-doLyrics = false
-doLyricsmore = false
+doLyrics = true
+doLyricsmore = true
 doLyricsmoremore = false
 doChordBars = false
 doGuitar = false
@@ -34,6 +35,7 @@ doOwn = false
 	- retained the original copyright notice where printed; the underlying music is not relicensed.
 	- retained written measures, pickups, repeats and endings; lyrics omitted.
 	- tempo is an editorial practice suggestion.
+	- put in the lyrics from the same Wikifonia source.
 	TODO:
 	- proofread the music against the referenced PDF and check by ear.
 {% endif %}
@@ -138,5 +140,17 @@ doOwn = false
 	}
 	}
 	\endBar
+}
+{% endif %}
+{% if part == "LyricsWikifonia" %}\lyricmode {
+	They call us luck -- y, __ you and I, __ Luck -- y girl, __ luck y guy. __ When you take
+	my hand or touch my cheek __ I now I'm on a life -- time luck -- y streak. __ A luck -- y
+	rain -- bow __ lights the sky __ When we kiss, __ when we sigh. __ They say I'm luck -- y,
+	mis -- ter -- luck -- y guy __ and you're the rea -- son why. They call us
+}
+{% endif %}
+{% if part == "LyricsmoreWikifonia" %}\lyricmode {
+	_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _
+	They say you're luck -- y mis -- ter luck -- y guy __ but dar -- ling, so am _ _ _ _ I.
 }
 {% endif %}

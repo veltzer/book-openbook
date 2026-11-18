@@ -5,6 +5,7 @@ default_version = "Wikifonia"
 title = "(Sittin' On) The Dock of the Bay"
 style = "Jazz"
 composer = "Otis Reading, Steve Cropper"
+poet = "Otis Reading, Steve Cropper"
 piece = "Standard"
 typesetter = "OpenBook contributors (MusicXML import)"
 completion = "3"
@@ -16,7 +17,7 @@ copyrightextra = "Archived MusicXML notice retained; underlying music is not rel
 [versions.Wikifonia]
 doChords = true
 doVoice = true
-doLyrics = false
+doLyrics = true
 doLyricsmore = false
 doLyricsmoremore = false
 doChordBars = false
@@ -37,6 +38,7 @@ doOwn = false
 	- retained written melody, chord changes, pickups, repeats and numbered endings; lyrics omitted.
 	- imported explicit 7alt symbols using the book's altered-dominant notation where present.
 	- tempo taken from archived MusicXML.
+	- put in the lyrics from the same Wikifonia source.
 	TODO:
 	- proofread the complete melody, harmony and form against the referenced PDF and check by ear.
 	- verify source attribution, copyright notice and reuse terms against the scan; only the archived MusicXML notice is retained.
@@ -144,5 +146,15 @@ doOwn = false
 	b'8 d''8 d''4 ^ "Repeat and fade" e''4. e''8 |
 	}
 	\endBar
+}
+{% endif %}
+{% if part == "LyricsWikifonia" %}\lyricmode {
+	Sit -- "tin'" in the mor -- "nin'" __ _ I'll be sit -- "tin'" when the eve -- "nin'" __
+	come, __ watch -- in the ships roll in __ then I watch "'em" roll a -- way a -- gain __
+	Yeah! I'm sit -- "tin'" on the dock of the bay __ watch "in'" the tide __ roll a -- way __
+	"(oo" __ "ee)" sit -- "tin'" on the dock of the bay __ wast -- _ in -- time __ I time __
+	Looks like noth -- "in'" gon -- na change __ ev -- "'ry" -- thing still re -- mains the
+	same __ I can't do what ten peo -- ple tell me to do __ so I guess I'll re -- main __ the
+	same.
 }
 {% endif %}

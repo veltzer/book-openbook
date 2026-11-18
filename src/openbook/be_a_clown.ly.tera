@@ -4,7 +4,8 @@ default_version = "Wikifonia"
 [attributes]
 title = "Be A Clown"
 style = "Jazz"
-composer = "Cole Porter, Cole Porter"
+composer = "Cole Porter"
+poet = "Cole Porter"
 piece = "Standard"
 typesetter = "OpenBook contributors (MusicXML import)"
 completion = "3"
@@ -16,8 +17,8 @@ copyrightextra = "Archived MusicXML notice retained; underlying music is not rel
 [versions.Wikifonia]
 doChords = true
 doVoice = true
-doLyrics = false
-doLyricsmore = false
+doLyrics = true
+doLyricsmore = true
 doLyricsmoremore = false
 doChordBars = false
 doGuitar = false
@@ -35,6 +36,7 @@ doOwn = false
 	- retained the archived MusicXML rights notice; no redistribution permission is asserted.
 	- retained written melody, chord changes, pickups, repeats and numbered endings; lyrics, slurs, dynamics and articulations other than fermatas omitted.
 	- tempo is an editorial practice suggestion.
+	- put in the lyrics from the same Wikifonia source.
 	TODO:
 	- proofread the complete melody, harmony and form against a printed edition and check by ear.
 	- verify source attribution, copyright notice and reuse terms; only the archived MusicXML notice is retained.
@@ -159,5 +161,23 @@ doOwn = false
 	}
 	}
 	\endBar
+}
+{% endif %}
+{% if part == "LyricsWikifonia" %}\lyricmode {
+	"1~Be" a clown __ Be a clown, __ All the world __ loves a clown __ Act the fool, __ Play
+	the calf __ And you'll al -- ways have __ the last laugh, __ Wear tthe cap __ and the
+	bells, __ And you'll rate with all __ the great swells, __ If you be -- come a doc -- tor,
+	folk's will face you with dread, __ If you be -- come a den -- tist they'll be glad when
+	you're dead, __ You'll get a big -- ger hand if you can stand on your head. __ Be a clown,
+	be a clown, be a clown. __ "2.~Be" a
+}
+{% endif %}
+{% if part == "LyricsmoreWikifonia" %}\lyricmode {
+	_ _ clown __ Be a clown, __ All the world __ loves a clown __ Be a cra -- zy buf -- foon __
+	And the "'dem" -- ol -- selles -- "'ll" all swoon, __ Dress in huge __ bag -- gy pants __
+	And you'll ride the road __ to ro -- mance, __ A butch -- er or a bak -- er lad -- ies nev --
+	er em -- brace, __ A bar -- ber for a beau would be a so -- cial dis -- grace, __ They all --
+	"'ll" come to call if you can fall on your face.. __ Be a clown, be a clown be a clown. __
+	"3.~Be" a
 }
 {% endif %}

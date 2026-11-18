@@ -5,6 +5,7 @@ default_version = "Wikifonia"
 title = "The Sound of Music"
 style = "Jazz"
 composer = "Richard Rodgers, Oscar Hammerstein II"
+poet = "Oscar Hammerstein II"
 piece = "Standard"
 typesetter = "OpenBook contributors (MusicXML import)"
 completion = "3"
@@ -16,7 +17,7 @@ copyrightextra = "Archived MusicXML notice retained; underlying music is not rel
 [versions.Wikifonia]
 doChords = true
 doVoice = true
-doLyrics = false
+doLyrics = true
 doLyricsmore = false
 doLyricsmoremore = false
 doChordBars = false
@@ -35,6 +36,7 @@ doOwn = false
 	- retained the archived MusicXML rights notice; no redistribution permission is asserted.
 	- retained written melody, chord changes, pickups, repeats and numbered endings; lyrics, slurs, dynamics and articulations other than fermatas omitted.
 	- tempo is an editorial practice suggestion.
+	- put in the lyrics from the same Wikifonia source.
 	TODO:
 	- proofread the complete melody, harmony and form against a printed edition and check by ear.
 	- verify source attribution, copyright notice and reuse terms; only the archived MusicXML notice is retained.
@@ -157,5 +159,16 @@ doOwn = false
 	f'2 d''8 c''8 b'8 c''8 |
 	a''2. r4 |
 	\endBar
+}
+{% endif %}
+{% if part == "LyricsWikifonia" %}\lyricmode {
+	The hills are a -- live with the sound of mu -- sic __ with songs they have sung for a
+	thou -- sand years __ the hills fill my heart with the sound of mu -- sic __ my heart
+	wants to sing ev -- ry song it hears. __ my heart wants to beat like the wings of the
+	birds that rise from the lake to the trees. My heart wants to sigh like a chime that files
+	from a church on a breeze to laugh like a brook when it trips and falls o -- ver stones on
+	its way to sing through the night like a lark who is learn -- ing to pray I go to the
+	hills when my heart is lone -- ly __ I know I will hear what I've heard be -- fore __ my
+	heart will be blessed with the sound of mu -- sic __ and I'll sing once more.
 }
 {% endif %}

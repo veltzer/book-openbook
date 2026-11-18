@@ -5,6 +5,7 @@ default_version = "Wikifonia"
 title = "So In Love"
 style = "Jazz"
 composer = "Cole Porter"
+poet = "Cole Porter"
 piece = "Jazz"
 typesetter = "OpenBook contributors (MusicXML import)"
 completion = "3"
@@ -16,7 +17,7 @@ copyrightextra = "Chappell & Co., Owner of Publication and Allied Rights through
 [versions.Wikifonia]
 doChords = true
 doVoice = true
-doLyrics = false
+doLyrics = true
 doLyricsmore = false
 doLyricsmoremore = false
 doChordBars = false
@@ -35,6 +36,7 @@ doOwn = false
 	- retained the original copyright notice where printed; the underlying music is not relicensed.
 	- retained written measures, pickups, repeats and endings; lyrics omitted.
 	- tempo is an editorial practice suggestion.
+	- put in the lyrics from the same Wikifonia source.
 	TODO:
 	- proofread the music against the referenced PDF and check by ear.
 {% endif %}
@@ -213,5 +215,15 @@ doOwn = false
 	as'1 ~ |
 	as'4 r4 r2 |
 	\endBar
+}
+{% endif %}
+{% if part == "LyricsWikifonia" %}\lyricmode {
+	Strange dear, __ but true, dear, __ When I'm close __ to you dear, __ The stars fill the
+	sky, __ So in love with you am I, __ Ev -- en __ with -- out you, __ My arms fold __ a --
+	bout you, __ You know dar -- ling why, __ So in love __ with you am I, __ In love with the
+	night mys -- ter -- i -- ous, __ The night when you first were there. __ In love with my
+	joy de -- lir i ous __ When I knew that you could care. __ So taunt me __ and hurt me, __
+	de -- ceive me, __ de -- sert me, __ I'm yours till I die. __ So in love, __ So in love, __
+	So in love, with you my love __ am I. __ I. __
 }
 {% endif %}

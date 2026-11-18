@@ -5,6 +5,7 @@ default_version = "Wikifonia"
 title = "Once In Love With Amy"
 style = "Standard"
 composer = "Frank Loesser"
+poet = "Frank Loesser"
 piece = "Standard"
 typesetter = "OpenBook contributors (MusicXML import)"
 completion = "3"
@@ -16,7 +17,7 @@ copyrightextra = "Archived MusicXML notice retained; underlying music is not rel
 [versions.Wikifonia]
 doChords = true
 doVoice = true
-doLyrics = false
+doLyrics = true
 doLyricsmore = false
 doLyricsmoremore = false
 doChordBars = false
@@ -37,6 +38,7 @@ doOwn = false
 	- retained written melody, chord changes, pickups, repeats and numbered endings; lyrics omitted.
 	- imported explicit 7alt symbols using the book's altered-dominant notation where present.
 	- tempo is an editorial practice suggestion.
+	- put in the lyrics from the same Wikifonia source.
 	TODO:
 	- proofread the complete melody, harmony and form against the referenced PDF and check by ear.
 	- verify source attribution, copyright notice and reuse terms against the scan; only the archived MusicXML notice is retained.
@@ -133,5 +135,16 @@ doOwn = false
 	g'1 ~ |
 	g'4 r4 r2 |
 	\endBar
+}
+{% endif %}
+{% if part == "LyricsWikifonia" %}\lyricmode {
+	Once in love with A -- my al -- ways in love with A -- my ev -- er and ev -- er fas --
+	cin -- at -- ed by "'er" sets your heart a -- fire to _ stay once you're kissed by A -- my
+	tear up your list its A -- my ply her with bo -- bons po -- et -- ry and flow -- ers moon
+	a mil -- lion hours a _ way you might be quite the fick -- le -- heart ed ro -- ver so
+	care -- free and bold who loves a girl and la -- ter thinks it o -- ver and just quite
+	cold but once in love with A -- my al -- ways in love with A -- my ev -- er and ev -- er
+	sweet -- ly you'll ro -- mance "'er" trou -- ble is the an -- swer will be that A -- my'd
+	rath -- er stay in love with me. __
 }
 {% endif %}

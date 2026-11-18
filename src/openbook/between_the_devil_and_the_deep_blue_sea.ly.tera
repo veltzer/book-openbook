@@ -5,6 +5,7 @@ default_version = "Wikifonia"
 title = "Between The Devil And The Deep Blue Sea"
 style = "Jazz"
 composer = "Harold Arlen"
+poet = "Ted Koehler"
 piece = "Jazz"
 typesetter = "OpenBook contributors (MusicXML import)"
 completion = "3"
@@ -15,7 +16,7 @@ copyright = "All Rights Reserved"
 [versions.Wikifonia]
 doChords = true
 doVoice = true
-doLyrics = false
+doLyrics = true
 doLyricsmore = false
 doLyricsmoremore = false
 doChordBars = false
@@ -34,6 +35,7 @@ doOwn = false
 	- retained the original copyright notice where printed; the underlying music is not relicensed.
 	- retained written measures, pickups, repeats and endings; lyrics omitted.
 	- tempo is an editorial practice suggestion.
+	- put in the lyrics from the same Wikifonia source.
 	TODO:
 	- proofread the music against the referenced PDF and check by ear.
 	- verify editorial chord spacing in measures 16, 24; the archive places successive symbols at the same offset.
@@ -122,5 +124,14 @@ doOwn = false
 	c''8. f''16 c''8. ces''16 bes'4 a'8 f'8 ~ |
 	f'2 r2 |
 	\endBar
+}
+{% endif %}
+{% if part == "LyricsWikifonia" %}\lyricmode {
+	I don't want you, but I'd hate to lose you, you've got me be -- tween _ the dev -- il and
+	the deep blue sea. __ I for -- give you "'cause" I can't for -- get you, you've got me be --
+	tween _ the dev -- il and the deep blue sea. __ I ought to cross you off my list, __ but
+	when you bcome knock -- "in'" at my door, __ fate seems to give my heart a twist, __ and I
+	come run -- ning back for more. I should hate you, but I guess I love you, you've got me
+	in be -- tween __ the dev -- il and the deep blue sea. __
 }
 {% endif %}

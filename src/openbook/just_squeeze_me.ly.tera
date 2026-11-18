@@ -5,6 +5,7 @@ default_version = "Wikifonia"
 title = "Just Squeeze Me"
 style = "Jazz"
 composer = "Duke Ellington"
+poet = "Lee Gaines"
 piece = "Jazz"
 typesetter = "OpenBook contributors (MusicXML import)"
 completion = "3"
@@ -16,7 +17,7 @@ copyrightextra = "All Rights Reserved"
 [versions.Wikifonia]
 doChords = true
 doVoice = true
-doLyrics = false
+doLyrics = true
 doLyricsmore = false
 doLyricsmoremore = false
 doChordBars = false
@@ -35,6 +36,7 @@ doOwn = false
 	- retained the original copyright notice where printed; the underlying music is not relicensed.
 	- retained written measures, pickups, repeats and endings; lyrics omitted.
 	- tempo is an editorial practice suggestion.
+	- put in the lyrics from the same Wikifonia source.
 	TODO:
 	- proofread the music against the referenced PDF and check by ear.
 {% endif %}
@@ -137,5 +139,15 @@ doOwn = false
 	}
 	}
 	\endBar
+}
+{% endif %}
+{% if part == "LyricsWikifonia" %}\lyricmode {
+	Treat me sweet and gen -- tle __ when you say good -- night, __ Just __ squeeze __ me, __
+	but please don't tease me. __ I get sen -- ti -- men -- tal __ when you hold me tight, __
+	Just __ squeeze __ me. __ but please don't tease me. __ Miss -- ing you since you went a --
+	way, sing -- ing the blues a -- way each day, count -- ing the nights and wait -- ing for
+	you. __ I'm in the mood to let you know I nev -- er knew I loved you so, Please say you
+	love me too. __ When I get this feel -- in __ I'm in ec -- sta -- sy, __ So __ squeeze __
+	me, __ but please don't tease me. __ tease me. __
 }
 {% endif %}

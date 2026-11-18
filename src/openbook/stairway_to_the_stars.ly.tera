@@ -5,6 +5,7 @@ default_version = "Wikifonia"
 title = "Stairway To The Stars"
 style = "Jazz"
 composer = "Matt Malneck, Frank Signorelli"
+poet = "Mitchell Parish"
 piece = "Jazz"
 typesetter = "OpenBook contributors (MusicXML import)"
 completion = "3"
@@ -15,7 +16,7 @@ copyright = "1960 (renewed 1988) EMI Unart Catalog, Inc., Used by Permission of 
 [versions.Wikifonia]
 doChords = true
 doVoice = true
-doLyrics = false
+doLyrics = true
 doLyricsmore = false
 doLyricsmoremore = false
 doChordBars = false
@@ -34,6 +35,7 @@ doOwn = false
 	- retained the original copyright notice where printed; the underlying music is not relicensed.
 	- retained written measures, pickups, repeats and endings; lyrics omitted.
 	- tempo is an editorial practice suggestion.
+	- put in the lyrics from the same Wikifonia source.
 	TODO:
 	- proofread the music against the referenced PDF and check by ear.
 	- verify editorial chord spacing in measures 7, 8, 16, 20, 24; the archive places successive symbols at the same offset.
@@ -119,5 +121,15 @@ doOwn = false
 	g'4 g'8 g'8 ~ g'8 gis'8 a'4 |
 	c''1 |
 	\endBar
+}
+{% endif %}
+{% if part == "LyricsWikifonia" %}\lyricmode {
+	Let's build a stair -- way to the stars, and climb that stair -- way to the stars, with
+	love be -- side us to fill the night __ with a song. We'll hear the sound of vi -- o --
+	lins, out you -- der where the blue be -- gins. The moon will guide us as we go drift --
+	ting a -- long. Can't we sail a -- way on a la -- zy dai -- sy pet -- al o -- ver the rim
+	of the hill? Can't we sail a -- way on a lit -- tle dream and set -- tle high on the crest
+	of a thrill? Let's build a stair -- way to the stars, a -- love -- ly stair -- way to the
+	stars. It would be heav -- en to climb to heav -- ven with you.
 }
 {% endif %}

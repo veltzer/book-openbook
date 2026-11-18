@@ -5,6 +5,7 @@ default_version = "Wikifonia"
 title = "Shchedryk"
 style = "Christmas"
 composer = "Mykola Leontovych"
+poet = "Peter Wilhousky"
 piece = "Allegro"
 copyright = "Public domain composition"
 copyrightextra = "Source MusicXML marked Public Domain; instrumental lead sheet."
@@ -17,7 +18,7 @@ location = "Wikifonia"
 [versions.Wikifonia]
 doChords = true
 doVoice = true
-doLyrics = false
+doLyrics = true
 doLyricsmore = false
 doLyricsmoremore = false
 doChordBars = false
@@ -35,6 +36,7 @@ doOwn = false
 	- retained the written form, pickups, repeats and chord durations.
 	- source revision: http://wikifonia.org/node/873/revisions/1161/view.
 	- tempo is an editorial practice suggestion, not a verified recording tempo.
+	- put in the lyrics from the same Wikifonia source.
 	TODO:
 	- proofread against a historical edition and check by ear.
 {% endif %}
@@ -125,5 +127,17 @@ doOwn = false
 	b'4 a'8 b'8 e'4 |
 	e'2. |
 	\endBar
+}
+{% endif %}
+{% if part == "LyricsWikifonia" %}\lyricmode {
+	Hark! how the bells, Sweet sil -- ver bells, All seem to say, "'Throw" cares a -- "way.'"
+	Christ -- mas is here, Bring -- ing good cheer, To young and old, Meek and the bold. Ding,
+	dong, ding, dong, That is their song, with joy -- ful ring, All car -- ol -- ing One seems
+	to hear, Words of good cheer, From ev -- "'ry" -- where Fill -- ing the air Gai -- ly they
+	ring __ While peo -- ple sing __ Songs of good cheer, __ Christ -- mas is "here;" Mer --
+	ry, mer -- ry, mer -- ry, mer -- ry Christ -- mas. Mer -- ry, mer -- ry, mer -- ry mer --
+	ry Christ -- mas, On, on they send, On with -- out end, Their joy -- ful tone, To ev --
+	"'ry" home. Hark how the bells, Sweet sil -- ver bells, All seem to say, "'Throw" cares a --
+	"way'" Ding, dong, ding dong.
 }
 {% endif %}

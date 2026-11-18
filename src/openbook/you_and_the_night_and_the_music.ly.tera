@@ -5,6 +5,7 @@ default_version = "Wikifonia"
 title = "You And The Night And The Music"
 style = "Jazz"
 composer = "Arthur Schwartz"
+poet = "Howard Dietz"
 piece = "Standard"
 typesetter = "OpenBook contributors (MusicXML import)"
 completion = "3"
@@ -16,7 +17,7 @@ copyrightextra = "Archived MusicXML notice retained; underlying music is not rel
 [versions.Wikifonia]
 doChords = true
 doVoice = true
-doLyrics = false
+doLyrics = true
 doLyricsmore = false
 doLyricsmoremore = false
 doChordBars = false
@@ -37,6 +38,7 @@ doOwn = false
 	- retained written melody, chord changes, pickups, repeats and numbered endings; lyrics omitted.
 	- imported explicit 7alt symbols using the book's altered-dominant notation where present.
 	- tempo is an editorial practice suggestion.
+	- put in the lyrics from the same Wikifonia source.
 	TODO:
 	- proofread the complete melody, harmony and form against the referenced PDF and check by ear.
 	- verify source attribution, copyright notice and reuse terms against the scan; only the archived MusicXML notice is retained.
@@ -128,5 +130,15 @@ doOwn = false
 	es''2 d''2 |
 	c''2. r4 |
 	\endBar
+}
+{% endif %}
+{% if part == "LyricsWikifonia" %}\lyricmode {
+	You and the night and the mus -- ic fill me with flam -- ing de -- sire, set -- ting my
+	be -- ing com -- plete -- ly on fire! You and the nioght and the mus -- ic thrill me, but
+	will we be one, af -- ter the night and the mu -- sic are done? Un -- til the pale light
+	of dawn -- ing and day -- light, our hearts will be throb -- bing gui -- tars, morn -- ing
+	may come with -- out warn -- ing, and take a -- way the stars. If we must live for the mo --
+	ment, love till the mo -- ment is _ Af -- ter the night and the mu -- sic die will I have
+	you?
 }
 {% endif %}

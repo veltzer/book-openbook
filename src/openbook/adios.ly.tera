@@ -5,6 +5,7 @@ default_version = "Wikifonia"
 title = "Adios"
 style = "Jazz"
 composer = "Enric Madriguera"
+poet = "Eddie Woods (English)"
 piece = "Standard"
 typesetter = "OpenBook contributors (MusicXML import)"
 completion = "3"
@@ -16,8 +17,8 @@ copyrightextra = "Archived MusicXML notice retained; underlying music is not rel
 [versions.Wikifonia]
 doChords = true
 doVoice = true
-doLyrics = false
-doLyricsmore = false
+doLyrics = true
+doLyricsmore = true
 doLyricsmoremore = false
 doChordBars = false
 doGuitar = false
@@ -37,6 +38,7 @@ doOwn = false
 	- retained written melody, chord changes, pickups, repeats and numbered endings; lyrics omitted.
 	- imported explicit 7alt symbols using the book's altered-dominant notation where present.
 	- tempo is an editorial practice suggestion.
+	- put in the lyrics from the same Wikifonia source.
 	TODO:
 	- proofread the complete melody, harmony and form against the referenced PDF and check by ear.
 	- verify source attribution, copyright notice and reuse terms against the scan; only the archived MusicXML notice is retained.
@@ -142,5 +144,23 @@ doOwn = false
 	f'1 ~ |
 	f'4 r4 r2 |
 	\endBar
+}
+{% endif %}
+{% if part == "LyricsWikifonia" %}\lyricmode {
+	A -- dios, __ in leav -- ing you it grieves me to __ say a -- dios. __ I'll be so lone --
+	ly, for you on -- ly, I sigh and cry __ my a -- dios, a -- dios __ to you. __ And in this
+	heart __ is mem -- "'ry" of what used to be, __ dear for you and me __ set a -- part. __
+	Moon watch -- ing, and wait -- ing a -- bove, __ soon it will be bless __ ing our love. __
+	A -- dios, __ for hap -- py end -- ings I'll re -- turn __ dear to you, with a love __
+	true, no more to bid __ you a -- dios. __
+}
+{% endif %}
+{% if part == "LyricsmoreWikifonia" %}\lyricmode {
+	A -- dios, __ Me voy lin -- da mo -- re -- ma le -- jos de ti. __ El -- al -- mahe --
+	"cha͡" una pe -- na por -- "que͡~al" par -- lir te -- mo __ que "tu͡~ol" -- vi -- des nues --
+	"tro͡" amor __ Her -- mo -- sa flor __ mi al -- ma cau -- ti -- vas -- te con __ la fra --
+	gan -- cia de __ to can -- dor. __ Tu es -- res to -- da __ "mi͡~i" -- lu -- sión __ Tu --
+	e -- res mi dul -- ce can -- ción. __ A -- dios, __ me voy lin -- da mo -- re -- na me __
+	voy "de͡~a" qui A llo -- rar __ mi tris -- te -- za le -- jos de ti. __
 }
 {% endif %}

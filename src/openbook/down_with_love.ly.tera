@@ -5,6 +5,7 @@ default_version = "Wikifonia"
 title = "Down With Love"
 style = "Jazz"
 composer = "Harold Arlen"
+poet = "E. Y. Harburg"
 piece = "Standard"
 typesetter = "OpenBook contributors (MusicXML import)"
 completion = "3"
@@ -16,7 +17,7 @@ copyrightextra = "Archived MusicXML notice retained; underlying music is not rel
 [versions.Wikifonia]
 doChords = true
 doVoice = true
-doLyrics = false
+doLyrics = true
 doLyricsmore = false
 doLyricsmoremore = false
 doChordBars = false
@@ -37,6 +38,7 @@ doOwn = false
 	- retained written melody, chord changes, pickups, repeats and numbered endings; lyrics omitted.
 	- imported explicit 7alt symbols using the book's altered-dominant notation where present.
 	- tempo is an editorial practice suggestion.
+	- put in the lyrics from the same Wikifonia source.
 	TODO:
 	- proofread the complete melody, harmony and form against the referenced PDF and check by ear.
 	- verify source attribution, copyright notice and reuse terms against the scan; only the archived MusicXML notice is retained.
@@ -157,5 +159,16 @@ doOwn = false
 	c''1 ~ |
 	c''2. r4 |
 	\endBar
+}
+{% endif %}
+{% if part == "LyricsWikifonia" %}\lyricmode {
+	Down with love, the flow -- ers, and rice and shoes, __ Down with love, The root of all
+	mid -- night blues. __ Down with things that give you that well know pain. __ Take that
+	moon and wrap __ it in cel -- lo -- "phane;" __ Down with love, let's li -- quid -- ate
+	all it's friends, __ Moon and June and ro -- ses and rain -- bow's end. __ Down with songs
+	that moan __ a -- bout night and "day;" __ Down with love, yes, take __ it a -- way, a
+	way. __ A -- way, __ take it a -- way. __ _ give it back to the birds and the bees and the
+	Vi -- en -- nese. __ Down with eyes ro -- man -- tic and stu -- pid. Down with sighs, Down
+	with Cu -- pid. Broth -- er let's stuff that dove. Down with love! __
 }
 {% endif %}

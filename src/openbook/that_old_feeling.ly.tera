@@ -5,6 +5,7 @@ default_version = "Wikifonia"
 title = "That Old Feeling"
 style = "Jazz"
 composer = "Sammy Fain"
+poet = "Lew Brown"
 piece = "Jazz"
 typesetter = "OpenBook contributors (MusicXML import)"
 completion = "3"
@@ -15,7 +16,7 @@ copyright = "1937 (renewed 1965) EMI Feist Catalog, Inc., Used by Permission of 
 [versions.Wikifonia]
 doChords = true
 doVoice = true
-doLyrics = false
+doLyrics = true
 doLyricsmore = false
 doLyricsmoremore = false
 doChordBars = false
@@ -34,6 +35,7 @@ doOwn = false
 	- retained the original copyright notice where printed; the underlying music is not relicensed.
 	- retained written measures, pickups, repeats and endings; lyrics omitted.
 	- tempo is an editorial practice suggestion.
+	- put in the lyrics from the same Wikifonia source.
 	TODO:
 	- proofread the music against the referenced PDF and check by ear.
 	- verify editorial chord spacing in measures 16, 28, 32; the archive places successive symbols at the same offset.
@@ -137,5 +139,13 @@ doOwn = false
 	}
 	}
 	\endBar
+}
+{% endif %}
+{% if part == "LyricsWikifonia" %}\lyricmode {
+	I saw -- you last night __ and got that old feel -- ing. -- When you came in sight __ I
+	got that old feel -- ing __ The mo -- ment that you danced by I felt a thrill. And when
+	you caught my eye my heart stood still Once a -- gain I seemed __ to get that old yearn --
+	ing, and I knew the spark __ of love was still burn -- ing There'll be no new ro -- mance __
+	for me, it's fool -- ish to start. For that old feel -- ing is still in my heart. heart.
 }
 {% endif %}

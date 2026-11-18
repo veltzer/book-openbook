@@ -5,6 +5,7 @@ default_version = "Wikifonia"
 title = "Just The Way You Are"
 style = "Jazz"
 composer = "Billy Joel"
+poet = "Billy Joel"
 piece = "Standard"
 typesetter = "OpenBook contributors (MusicXML import)"
 completion = "3"
@@ -16,7 +17,7 @@ copyrightextra = "Archived MusicXML notice retained; underlying music is not rel
 [versions.Wikifonia]
 doChords = true
 doVoice = true
-doLyrics = false
+doLyrics = true
 doLyricsmore = false
 doLyricsmoremore = false
 doChordBars = false
@@ -35,6 +36,7 @@ doOwn = false
 	- retained the archived MusicXML rights notice; no redistribution permission is asserted.
 	- retained written melody, chord changes, pickups, repeats and numbered endings; lyrics, slurs, dynamics and articulations other than fermatas omitted.
 	- tempo is an editorial practice suggestion.
+	- put in the lyrics from the same Wikifonia source.
 	TODO:
 	- proofread the complete melody, harmony and form against a printed edition and check by ear.
 	- verify source attribution, copyright notice and reuse terms; only the archived MusicXML notice is retained.
@@ -321,5 +323,25 @@ doOwn = false
 	r1 |
 	r1 \fermata |
 	\endBar
+}
+{% endif %}
+{% if part == "LyricsWikifonia" %}\lyricmode {
+	Don't go chang -- ing __ to try and please me __ You nev -- er let me down __ be -- fore __
+	mm __ _ _ mm __ _ don't im -- ag -- ine __ you're too fa -- mil -- iar __ And I don't see __
+	you __ an -- y more __ I __ would __ not leave you __ in times of trou -- ble __ We nev --
+	er could have come __ this far __ mm __ _ mm __ _ _ I took the good __ times __ I'll take
+	the bad __ times __ I'll take you just __ the way __ you are __ Don't go try -- ing __
+	Some __ new fash -- ion __ Don't change the col -- or of your hair __ mm __ _ _ mm __ _
+	You al -- ways have my un -- spok -- en pas -- sion __ Al -- though I might __ not seem to
+	care __ I __ don't __ want clev -- er __ con -- ver -- sa -- tion __ I nev -- er want to
+	work __ that hard __ mm __ _ _ mm __ _ I just want some -- one __ that I can talk __ to __
+	I want you just __ the way __ you are __ I need to know __ that you __ will al -- ways be __
+	The same old some -- one that I know __ Oh What will __ it take __ till you __ be -- lieve __
+	in me __ The way that I __ be -- lieve __ in you __ I __ said __ I love you __ and that's
+	for -- ev -- er __ And this I prom -- ise from the heart __ mm __ _ _ mm __ _ I could not
+	love __ you __ an -- _ y __ _ bet -- ter __ I love you just __ the way __ you are __ I __
+	don't __ want clev -- er __ con -- _ _ ver -- sa -- tion I nev -- er want _ to work __
+	that hard __ mm __ _ _ _ _ I just want some -- one __ that I can talk __ to __ I want you
+	just __ the way __ you are __ _ _ _ _ _ _ _ _ _ _ _ Whoa
 }
 {% endif %}

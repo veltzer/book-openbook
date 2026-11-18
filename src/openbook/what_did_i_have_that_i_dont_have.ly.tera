@@ -5,6 +5,7 @@ default_version = "Wikifonia"
 title = "What did I have that I dont have?"
 style = "Standard"
 composer = "Burton Lane"
+poet = "AlanJay Lerner"
 piece = "Standard"
 typesetter = "OpenBook contributors (MusicXML import)"
 completion = "3"
@@ -16,8 +17,8 @@ copyrightextra = "Archived MusicXML notice retained; underlying music is not rel
 [versions.Wikifonia]
 doChords = true
 doVoice = true
-doLyrics = false
-doLyricsmore = false
+doLyrics = true
+doLyricsmore = true
 doLyricsmoremore = false
 doChordBars = false
 doGuitar = false
@@ -37,6 +38,7 @@ doOwn = false
 	- retained written melody, chord changes, pickups, repeats and numbered endings; lyrics omitted.
 	- imported explicit 7alt symbols using the book's altered-dominant notation where present.
 	- tempo is an editorial practice suggestion.
+	- put in the lyrics from the same Wikifonia source.
 	TODO:
 	- proofread the complete melody, harmony and form against the referenced PDF and check by ear.
 	- verify source attribution, copyright notice and reuse terms against the scan; only the archived MusicXML notice is retained.
@@ -125,5 +127,19 @@ doOwn = false
 	f''1 ~ |
 	f''4 r4 r2 |
 	\endBar
+}
+{% endif %}
+{% if part == "LyricsWikifonia" %}\lyricmode {
+	What did I have that I don't have? __ What di he like that I lost track of? __ What did I
+	do that I don't do the way I did be -- fore? What is -- n't there that once was there? __
+	What have I got a great big lack of? __ Some -- thing in me then, he could see then __
+	Beck -- ons to him no more I'm __ just a vic -- tim of time, __ Ob -- so -- lete in my
+	prime! __ out of date and out -- classed by my past. __ late great me if I knew how? __
+	Oh! What did I have I don't have now? __
+}
+{% endif %}
+{% if part == "LyricsmoreWikifonia" %}\lyricmode {
+	What did he love that there's none of? __ What did I lose the sweet knack of? __ _ Would --
+	n't I be the
 }
 {% endif %}

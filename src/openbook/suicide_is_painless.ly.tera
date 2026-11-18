@@ -5,6 +5,7 @@ default_version = "Wikifonia"
 title = "Suicide is Painless"
 style = "Jazz"
 composer = "Johnny Mandel, Mike Altman"
+poet = "Mike Altman"
 piece = "Standard"
 typesetter = "OpenBook contributors (MusicXML import)"
 completion = "3"
@@ -16,7 +17,7 @@ copyrightextra = "Archived MusicXML notice retained; underlying music is not rel
 [versions.Wikifonia]
 doChords = true
 doVoice = true
-doLyrics = false
+doLyrics = true
 doLyricsmore = false
 doLyricsmoremore = false
 doChordBars = false
@@ -35,6 +36,7 @@ doOwn = false
 	- retained the archived MusicXML rights notice; no redistribution permission is asserted.
 	- retained written melody, chord changes, pickups, repeats and numbered endings; lyrics, slurs, dynamics and articulations other than fermatas omitted.
 	- tempo is an editorial practice suggestion.
+	- put in the lyrics from the same Wikifonia source.
 	TODO:
 	- proofread the complete melody, harmony and form against a printed edition and check by ear.
 	- verify source attribution, copyright notice and reuse terms; only the archived MusicXML notice is retained.
@@ -123,5 +125,12 @@ doOwn = false
 	d''2 d''4 d''4 |
 	d''2. r4 |
 	\endBar
+}
+{% endif %}
+{% if part == "LyricsWikifonia" %}\lyricmode {
+	Through ear -- ly morn -- ing fog I see vis -- ions of the things to be the pains that
+	are with -- held for me I re -- al -- ize and I can see __ that su -- i -- cide is pain
+	less it brings on man -- y chang -- es and I can take or leave it if I please __ I please, __
+	and you can do the same thing if you please
 }
 {% endif %}

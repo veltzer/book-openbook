@@ -5,6 +5,7 @@ default_version = "Wikifonia"
 title = "Steppin' Out With My Baby"
 style = "Jazz"
 composer = "Irving Berlin"
+poet = "Irving Berlin"
 piece = "Standard"
 typesetter = "OpenBook contributors (MusicXML import)"
 completion = "3"
@@ -16,7 +17,7 @@ copyrightextra = "Archived MusicXML notice retained; underlying music is not rel
 [versions.Wikifonia]
 doChords = true
 doVoice = true
-doLyrics = false
+doLyrics = true
 doLyricsmore = false
 doLyricsmoremore = false
 doChordBars = false
@@ -37,6 +38,7 @@ doOwn = false
 	- retained written melody, chord changes, pickups, repeats and numbered endings; lyrics omitted.
 	- imported explicit 7alt symbols using the book's altered-dominant notation where present.
 	- tempo is an editorial practice suggestion.
+	- put in the lyrics from the same Wikifonia source.
 	TODO:
 	- proofread the complete melody, harmony and form against the referenced PDF and check by ear.
 	- verify source attribution, copyright notice and reuse terms against the scan; only the archived MusicXML notice is retained.
@@ -141,5 +143,15 @@ doOwn = false
 	}
 	}
 	\endBar
+}
+{% endif %}
+{% if part == "LyricsWikifonia" %}\lyricmode {
+	Step -- "pin'" out __ with my ba -- by. Can't go wrong __ "'cause" I'm in right. __ It's
+	for sure, __ not for may -- be, that I'm all dressed up to -- night. __ Step -- "pin'" out __
+	with my hon -- ey, can't be bad __ to feel so good. __ Nev -- er felt __ quite so sun --
+	ny. And I keep on knock -- "in'" wood, __ there'll be smooth sail -- "in'," "'cause" I'm
+	trim -- "min'" my sails. __ In my top hat __ and my white tie __ and my tails __ step --
+	pin out __ with my ba -- by. Can't go wrong __ "'cause" I'm in right. __ Ask me when __
+	will the day __ be, the big day might be to -- night. __ be to night. __
 }
 {% endif %}

@@ -4,7 +4,8 @@ default_version = "Wikifonia"
 [attributes]
 title = "The Wind Beneath My Wings"
 style = "Jazz"
-composer = "Larry Henley, Jeff Silbar, Larry Henley, Jeff Silbar"
+composer = "Larry Henley, Jeff Silbar"
+poet = "Larry Henley, Jeff Silbar"
 piece = "Standard"
 typesetter = "OpenBook contributors (MusicXML import)"
 completion = "3"
@@ -16,8 +17,8 @@ copyrightextra = "Archived MusicXML notice retained; underlying music is not rel
 [versions.Wikifonia]
 doChords = true
 doVoice = true
-doLyrics = false
-doLyricsmore = false
+doLyrics = true
+doLyricsmore = true
 doLyricsmoremore = false
 doChordBars = false
 doGuitar = false
@@ -35,6 +36,7 @@ doOwn = false
 	- retained the archived MusicXML rights notice; no redistribution permission is asserted.
 	- retained written melody, chord changes, pickups, repeats and numbered endings; lyrics, slurs, dynamics and articulations other than fermatas omitted.
 	- tempo is an editorial practice suggestion.
+	- put in the lyrics from the same Wikifonia source.
 	TODO:
 	- proofread the complete melody, harmony and form against a printed edition and check by ear.
 	- verify source attribution, copyright notice and reuse terms; only the archived MusicXML notice is retained.
@@ -129,5 +131,19 @@ doOwn = false
 	g'1 |
 	g''1 |
 	\endBar
+}
+{% endif %}
+{% if part == "LyricsWikifonia" %}\lyricmode {
+	It must have been cold __ there in my sha -- dow __ to nev -- er have sun -- light in
+	your face __ you were con -- tent __ to let me shine __ you al -- ways walked __ a step be --
+	hind __ Did you ev -- er know __ that you're my he -- ro __ and ev -- ry thing I'd like to _
+	be li -- ke to be I can fly high -- er than an ea -- e -- gle _ _ cause you are the wind __
+	be -- neath my wings __
+}
+{% endif %}
+{% if part == "LyricsmoreWikifonia" %}\lyricmode {
+	So I was the one __ with all the glo -- ry __ while you were the one __ with all the
+	strength __ beau -- ti -- ful face __ with out a name __ beau -- ti -- ful smile __ to
+	hide the pain __
 }
 {% endif %}

@@ -5,6 +5,7 @@ default_version = "Wikifonia"
 title = "If This Isn't Love"
 style = "Standard"
 composer = "Burton Lane"
+poet = "E. Y. Harburg"
 piece = "Standard"
 typesetter = "OpenBook contributors (MusicXML import)"
 completion = "3"
@@ -16,7 +17,7 @@ copyrightextra = "Archived MusicXML notice retained; underlying music is not rel
 [versions.Wikifonia]
 doChords = true
 doVoice = true
-doLyrics = false
+doLyrics = true
 doLyricsmore = false
 doLyricsmoremore = false
 doChordBars = false
@@ -37,6 +38,7 @@ doOwn = false
 	- retained written melody, chord changes, pickups, repeats and numbered endings; lyrics omitted.
 	- imported explicit 7alt symbols using the book's altered-dominant notation where present.
 	- tempo is an editorial practice suggestion.
+	- put in the lyrics from the same Wikifonia source.
 	TODO:
 	- proofread the complete melody, harmony and form against the referenced PDF and check by ear.
 	- verify source attribution, copyright notice and reuse terms against the scan; only the archived MusicXML notice is retained.
@@ -203,5 +205,16 @@ doOwn = false
 	c'2 ~ |
 	c'8 r8 r4 |
 	\endBar
+}
+{% endif %}
+{% if part == "LyricsWikifonia" %}\lyricmode {
+	If this is -- n't love __ The whole world is craz -- y __ If this is -- n't love __ I'm
+	daft as a dai -- sy __ With moons all a -- round __ And cows jump -- ing o -- ver __
+	There's some -- thing a -- miss and I'll eat my hat if this is -- n't love! __ I'm feel --
+	ing like an ap -- ple on top of Wil -- liam "Tell;" With this I can -- not grap -- ple be --
+	cause, be -- cause you're so a -- dor -- a -- ble. If this is -- n't love __ Then win --
+	ter is sum -- mer __ If this is -- n't love __ My heart needs a plum -- ber __ I'm swing --
+	"in'" on stars __ I'm rid -- "in'" on rain -- bows __ I'm just bust -- "in'" with bliss,
+	and kiss your hand if this is -- n't love! __
 }
 {% endif %}

@@ -5,6 +5,7 @@ default_version = "Wikifonia"
 title = "Love Is The Sweetest Thing"
 style = "Jazz"
 composer = "Ray Noble"
+poet = "Ray Noble"
 piece = "Standard"
 typesetter = "OpenBook contributors (MusicXML import)"
 completion = "3"
@@ -16,7 +17,7 @@ copyrightextra = "Archived MusicXML notice retained; underlying music is not rel
 [versions.Wikifonia]
 doChords = true
 doVoice = true
-doLyrics = false
+doLyrics = true
 doLyricsmore = false
 doLyricsmoremore = false
 doChordBars = false
@@ -37,6 +38,7 @@ doOwn = false
 	- retained written melody, chord changes, pickups, repeats and numbered endings; lyrics omitted.
 	- imported explicit 7alt symbols using the book's altered-dominant notation where present.
 	- tempo is an editorial practice suggestion.
+	- put in the lyrics from the same Wikifonia source.
 	TODO:
 	- proofread the complete melody, harmony and form against the referenced PDF and check by ear.
 	- verify source attribution, copyright notice and reuse terms against the scan; only the archived MusicXML notice is retained.
@@ -142,5 +144,15 @@ doOwn = false
 	}
 	}
 	\endBar
+}
+{% endif %}
+{% if part == "LyricsWikifonia" %}\lyricmode {
+	Love is __ the sweet -- test thing, What else on earth could ev -- er bring Such hap --
+	pi ness to ev -- "'ry" -- thing As love's old sto -- ry. Love is __ the strang -- gest
+	thing, No song of birds up -- on __ the wing Shall in our hearts more sweet -- ly sing
+	Than loves old sto -- ry. What -- ev -- er heart may de -- sire, What -- ev -- er fate may
+	send, This it the tale that nev -- er will tire, This is the song with -- out end. Love is __
+	the great -- est thing, The old -- est yet the lat -- est thing, I on -- ly hope that fate __
+	may bring, Love's sto -- ry to you. you.
 }
 {% endif %}

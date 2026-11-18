@@ -5,6 +5,7 @@ default_version = "Wikifonia"
 title = "I Only Have Eyes For You"
 style = "Jazz"
 composer = "Harry Warren"
+poet = "Al Dubin"
 piece = "Jazz"
 typesetter = "OpenBook contributors (MusicXML import)"
 completion = "3"
@@ -15,7 +16,7 @@ copyright = "All Rights Reserved"
 [versions.Wikifonia]
 doChords = true
 doVoice = true
-doLyrics = false
+doLyrics = true
 doLyricsmore = false
 doLyricsmoremore = false
 doChordBars = false
@@ -34,6 +35,7 @@ doOwn = false
 	- retained the original copyright notice where printed; the underlying music is not relicensed.
 	- retained written measures, pickups, repeats and endings; lyrics omitted.
 	- tempo is an editorial practice suggestion.
+	- put in the lyrics from the same Wikifonia source.
 	TODO:
 	- proofread the music against the referenced PDF and check by ear.
 	- verify editorial chord spacing in measures 4, 8, 53; the archive places successive symbols at the same offset.
@@ -168,5 +170,15 @@ doOwn = false
 	R1 |
 	}
 	\endBar
+}
+{% endif %}
+{% if part == "LyricsWikifonia" %}\lyricmode {
+	My love must be a kind a blind love, I can't see an -- y -- one but you. And dear, I won --
+	der if you find love An op -- ti -- cal il -- lu -- sion too? __ Are the stars out to --
+	night? __ I don't know if it's cloud -- y or bright, __ "'Cause" I on -- ly have eyes __
+	for you, dear __ The moon may be high, __ but I can't see a thing in the sky __ "'Cause" I
+	on -- ly have eyes __ for you. __ I don't know if we're in a gar -- den, __ Or on a crowd --
+	ed av -- e -- nue. You __ are here, so am I. __ May -- be mil -- lions of peo -- ple go __ _
+	But they all dis -- ap -- pear __ from view, __ And I on -- ly have eyes __ for you.
 }
 {% endif %}

@@ -5,6 +5,7 @@ default_version = "Wikifonia"
 title = "Be My Love"
 style = "Jazz"
 composer = "Nicholas Brodszky"
+poet = "Sammy Cahn"
 piece = "Jazz"
 typesetter = "OpenBook contributors (MusicXML import)"
 completion = "3"
@@ -15,7 +16,7 @@ copyright = "All Rights Reserved"
 [versions.Wikifonia]
 doChords = true
 doVoice = true
-doLyrics = false
+doLyrics = true
 doLyricsmore = false
 doLyricsmoremore = false
 doChordBars = false
@@ -34,6 +35,7 @@ doOwn = false
 	- retained the original copyright notice where printed; the underlying music is not relicensed.
 	- retained written measures, pickups, repeats and endings; lyrics omitted.
 	- tempo is an editorial practice suggestion.
+	- put in the lyrics from the same Wikifonia source.
 	TODO:
 	- proofread the music against the referenced PDF and check by ear.
 	- verify the copyright notice against the scan; no readable per-tune notice was recovered, so the archived rights notice is retained where available.
@@ -149,5 +151,14 @@ doOwn = false
 	}
 	g'2 r2 |
 	\endBar
+}
+{% endif %}
+{% if part == "LyricsWikifonia" %}\lyricmode {
+	Be my love, for no -- one else can end this yearn -- ing, This need that you and you a --
+	lone cre -- ate. Just fill my arms __ the way you've filled my dreams, __ The dreams that
+	you in -- spire __ with ev -- "'ry" sweet de -- sire. __ Be my love, and with your kiss --
+	es set me burn -- "ing;" One kiss is all I need to seal my fate, And hand in hand, __
+	we'll find loves prom -- ised land. There'll be no -- one but you for me e -- ter -- nal --
+	ly, if you will be my love. __ Be my love. __
 }
 {% endif %}

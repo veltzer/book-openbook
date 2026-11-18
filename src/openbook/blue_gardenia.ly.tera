@@ -5,6 +5,7 @@ default_version = "Wikifonia"
 title = "Blue Gardenia"
 style = "Jazz"
 composer = "Lester Lee"
+poet = "Bob Russell"
 piece = "Jazz"
 typesetter = "OpenBook contributors (MusicXML import)"
 completion = "3"
@@ -15,7 +16,7 @@ copyright = "All Rights Reserved"
 [versions.Wikifonia]
 doChords = true
 doVoice = true
-doLyrics = false
+doLyrics = true
 doLyricsmore = false
 doLyricsmoremore = false
 doChordBars = false
@@ -34,6 +35,7 @@ doOwn = false
 	- retained the original copyright notice where printed; the underlying music is not relicensed.
 	- retained written measures, pickups, repeats and endings; lyrics omitted.
 	- tempo is an editorial practice suggestion.
+	- put in the lyrics from the same Wikifonia source.
 	TODO:
 	- proofread the music against the referenced PDF and check by ear.
 	- verify the copyright notice against the scan; no readable per-tune notice was recovered, so the archived rights notice is retained where available.
@@ -139,5 +141,13 @@ doOwn = false
 	}
 	}
 	\endBar
+}
+{% endif %}
+{% if part == "LyricsWikifonia" %}\lyricmode {
+	Blue Gar -- den -- ia, now I'm a -- lone with you, and I am al -- so blue, she has tossed
+	us a -- side. And like you, Gar -- den -- ia, once I was near her heart, Af -- ter the
+	tear -- drops start where are tear -- drops to hide? I lived for and hour. __ what more
+	can I tell? Love bloomed like a flow -- er, then the pet -- als fell. Blue Gar -- den --
+	ia, thrown to a pass -- ing breeze, but pressed in my book of mem -- o -- ries. __ ries. __
 }
 {% endif %}

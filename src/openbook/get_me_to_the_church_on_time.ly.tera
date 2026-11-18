@@ -5,6 +5,7 @@ default_version = "Wikifonia"
 title = "Get Me to the Church on Time"
 style = "Standard"
 composer = "Frederick Loewe"
+poet = "Alan Jay Lerner"
 piece = "Standard"
 typesetter = "OpenBook contributors (MusicXML import)"
 completion = "3"
@@ -16,7 +17,7 @@ copyrightextra = "Archived MusicXML notice retained; underlying music is not rel
 [versions.Wikifonia]
 doChords = true
 doVoice = true
-doLyrics = false
+doLyrics = true
 doLyricsmore = false
 doLyricsmoremore = false
 doChordBars = false
@@ -37,6 +38,7 @@ doOwn = false
 	- retained written melody, chord changes, pickups, repeats and numbered endings; lyrics omitted.
 	- imported explicit 7alt symbols using the book's altered-dominant notation where present.
 	- tempo is an editorial practice suggestion.
+	- put in the lyrics from the same Wikifonia source.
 	TODO:
 	- proofread the complete melody, harmony and form against the referenced PDF and check by ear.
 	- verify source attribution, copyright notice and reuse terms against the scan; only the archived MusicXML notice is retained.
@@ -183,5 +185,16 @@ doOwn = false
 	a'1 |
 	g'1 |
 	\endBar
+}
+{% endif %}
+{% if part == "LyricsWikifonia" %}\lyricmode {
+	I'm get -- ting mar -- ried in the mor -- ning __ Ding dong the bells are "goin'" to
+	chime __ Pull out the stop -- per Let's have a whop -- per but get me to the church on
+	time __ I've got to be there in the morn -- ing __ Spruced up and look -- ing in my prime __
+	Girls come and kiss me Show how you'll miss me but get me to the church on time __ If I am
+	danc, -- ing __ roll up the floor __ if I am whist -- ling "(Whistle)" me out the door __
+	for I'm get -- ting mar -- ried in the morn -- ing __ Ding dong the bells are "goin'" to
+	chime __ Kick up a rum -- pus but don't lose the com -- pass and get me to the church Get
+	me to the church For Gawd's sake get me to the church on time!
 }
 {% endif %}

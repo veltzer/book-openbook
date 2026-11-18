@@ -5,6 +5,7 @@ default_version = "Wikifonia"
 title = "In the Wee Small Hours of the Morning"
 style = "Jazz"
 composer = "David Mann"
+poet = "Bob Hilliard"
 piece = "Jazz"
 typesetter = "OpenBook contributors (MusicXML import)"
 completion = "3"
@@ -16,7 +17,7 @@ copyrightextra = "Permission. Rights for"
 [versions.Wikifonia]
 doChords = true
 doVoice = true
-doLyrics = false
+doLyrics = true
 doLyricsmore = false
 doLyricsmoremore = false
 doChordBars = false
@@ -35,6 +36,7 @@ doOwn = false
 	- retained the original copyright notice where printed; the underlying music is not relicensed.
 	- retained written measures, pickups, repeats and endings; lyrics omitted.
 	- tempo is an editorial practice suggestion.
+	- put in the lyrics from the same Wikifonia source.
 	TODO:
 	- proofread the music against the referenced PDF and check by ear.
 	- verify editorial chord spacing in measures 9, 13, 15; the archive places successive symbols at the same offset.
@@ -114,5 +116,13 @@ doOwn = false
 	c'1 ~ |
 	c'2. r4 |
 	\endBar
+}
+{% endif %}
+{% if part == "LyricsWikifonia" %}\lyricmode {
+	In The Wee Small Hours __ Of The Morn -- ing, __ While the whole wide world is fast a --
+	sleep, You lie a -- wake and think a -- bout the girl And nev -- er ev -- er think of
+	count -- ing sheep. When you lone -- ly heart has learned its les -- son __ You'd be hers
+	if on -- ly she would call. In the Wee Small Hours __ Of The Morn -- ing, __ That's the
+	time you miss her most of all. In The time you miss her most of all. __
 }
 {% endif %}

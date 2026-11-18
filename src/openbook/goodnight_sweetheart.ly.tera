@@ -4,7 +4,8 @@ default_version = "Wikifonia"
 [attributes]
 title = "Goodnight Sweetheart"
 style = "Jazz"
-composer = "Jimmy Campbell, Reginald Connelly, Ray Noble, Jimmy Campbell, Reginald Connelly, Ray Noble"
+composer = "Jimmy Campbell, Reginald Connelly, Ray Noble"
+poet = "Jimmy Campbell, Reginald Connelly, Ray Noble"
 piece = "Standard"
 typesetter = "OpenBook contributors (MusicXML import)"
 completion = "3"
@@ -16,7 +17,7 @@ copyrightextra = "Archived MusicXML notice retained; underlying music is not rel
 [versions.Wikifonia]
 doChords = true
 doVoice = true
-doLyrics = false
+doLyrics = true
 doLyricsmore = false
 doLyricsmoremore = false
 doChordBars = false
@@ -35,6 +36,7 @@ doOwn = false
 	- retained the archived MusicXML rights notice; no redistribution permission is asserted.
 	- retained written melody, chord changes, pickups, repeats and numbered endings; lyrics, slurs, dynamics and articulations other than fermatas omitted.
 	- tempo is an editorial practice suggestion.
+	- put in the lyrics from the same Wikifonia source.
 	TODO:
 	- proofread the complete melody, harmony and form against a printed edition and check by ear.
 	- verify source attribution, copyright notice and reuse terms; only the archived MusicXML notice is retained.
@@ -123,5 +125,13 @@ doOwn = false
 	c''1 ~ |
 	c''4 r4 r2 |
 	\endBar
+}
+{% endif %}
+{% if part == "LyricsWikifonia" %}\lyricmode {
+	Good -- night sweet -- heart all my pray's are for you good -- night sweet -- heart I'll
+	be watch -- ing o'er you tears and part -- ing may make us for -- lorn __ but with the
+	dawn __ a new day is born __ "(so" I'll "say)" good -- night sweet -- heart sleep will ban --
+	ish sor -- row good -- night sweet -- heart till we meet to -- mor -- row dreams en --
+	fold you in them dear I'll hold you good -- night sweet -- heart good -- night. __
 }
 {% endif %}

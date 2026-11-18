@@ -5,6 +5,7 @@ default_version = "Wikifonia"
 title = "The Look Of Love"
 style = "Jazz"
 composer = "Burt Bacharach, Hal David"
+poet = "Hal David"
 piece = "Standard"
 typesetter = "OpenBook contributors (MusicXML import)"
 completion = "3"
@@ -16,8 +17,8 @@ copyrightextra = "Archived MusicXML notice retained; underlying music is not rel
 [versions.Wikifonia]
 doChords = true
 doVoice = true
-doLyrics = false
-doLyricsmore = false
+doLyrics = true
+doLyricsmore = true
 doLyricsmoremore = false
 doChordBars = false
 doGuitar = false
@@ -35,6 +36,7 @@ doOwn = false
 	- retained the archived MusicXML rights notice; no redistribution permission is asserted.
 	- retained written melody, chord changes, pickups, repeats and numbered endings; lyrics, slurs, dynamics and articulations other than fermatas omitted.
 	- tempo is an editorial practice suggestion.
+	- put in the lyrics from the same Wikifonia source.
 	TODO:
 	- proofread the complete melody, harmony and form against a printed edition and check by ear.
 	- verify source attribution, copyright notice and reuse terms; only the archived MusicXML notice is retained.
@@ -139,5 +141,20 @@ doOwn = false
 	r2 \times 2/3 { f'4 f'4 f'4 } |
 	d'2 ~ d'4 \fermata r4 |
 	\endBar
+}
+{% endif %}
+{% if part == "LyricsWikifonia" %}\lyricmode {
+	The look __ of love __ is in __ you eyes, __ A look __ your smile __ can't dis -- guise __
+	The look __ of love __ It's say -- ing so __ much more __ than just words could ev -- er
+	say __ And what my heart __ has heard, __ well, it takes my breath __ a -- way. __ I can
+	hard -- ly wait to hold you, feel __ my arms a -- round you, How long __ I have wait --
+	ed, wait -- ed just to love you, now __ that I have found you __ you've got the look _
+	don't ev -- er go, __ don't ev -- er go, __ I love you so. __
+}
+{% endif %}
+{% if part == "LyricsmoreWikifonia" %}\lyricmode {
+	The look __ of love __ is in __ your face, __ A look __ that time __ can't e -- rase.. __
+	Be mine __ to -- night __ let this be just __ the start __ of so man -- y nights __ like
+	this __ Let's take a lov -- er's vow __ and then seal it with __ a kiss. __
 }
 {% endif %}

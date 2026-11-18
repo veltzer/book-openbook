@@ -5,6 +5,7 @@ default_version = "Wikifonia"
 title = "Somewhere Along The Way"
 style = "Jazz"
 composer = "Kurt Adams"
+poet = "Sammy Gallop"
 piece = "Standard"
 typesetter = "OpenBook contributors (MusicXML import)"
 completion = "3"
@@ -16,7 +17,7 @@ copyrightextra = "Archived MusicXML notice retained; underlying music is not rel
 [versions.Wikifonia]
 doChords = true
 doVoice = true
-doLyrics = false
+doLyrics = true
 doLyricsmore = false
 doLyricsmoremore = false
 doChordBars = false
@@ -37,6 +38,7 @@ doOwn = false
 	- retained written melody, chord changes, pickups, repeats and numbered endings; lyrics omitted.
 	- imported explicit 7alt symbols using the book's altered-dominant notation where present.
 	- tempo is an editorial practice suggestion.
+	- put in the lyrics from the same Wikifonia source.
 	TODO:
 	- proofread the complete melody, harmony and form against the referenced PDF and check by ear.
 	- verify source attribution, copyright notice and reuse terms against the scan; only the archived MusicXML notice is retained.
@@ -159,5 +161,18 @@ doOwn = false
 	}
 	}
 	\endBar
+}
+{% endif %}
+{% if part == "LyricsWikifonia" %}\lyricmode {
+	Here am I with -- out you Lost with -- out __ your warm em -- brace still so mad a --
+	bout you and won -- dring who took my place I used to walk with __ you a -- long the av --
+	en -- ue __ Our hearts were care -- free and gay How could I know I'd lose you Some --
+	where a -- long the way The friends we used to know __ would al ways smile "'Hello:" _ No
+	love like our love they'd say The love slipped through our fin -- gers some -- where a --
+	long the way __ I should for -- get __ but with the lone -- li -- ness of night __ I start
+	re -- mem -- ber -- ing ev ry -- thing __ you're gone and yet __ there's still a feel --
+	ing deep ins -- side __ that you will al -- ways be part of me so now I look for you __ a
+	long the av -- en -- ue __ and as I wan -- der I pray that some -- day soon I'll find you
+	some -- where a -- long the way. some -- where a long the way.
 }
 {% endif %}

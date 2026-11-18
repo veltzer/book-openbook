@@ -5,6 +5,7 @@ default_version = "Wikifonia"
 title = "San Francisco Bay Blues"
 style = "Jazz"
 composer = "Jesse Fuller"
+poet = "Jesse Fuller"
 piece = "Standard"
 typesetter = "OpenBook contributors (MusicXML import)"
 completion = "3"
@@ -16,7 +17,7 @@ copyrightextra = "Archived MusicXML notice retained; underlying music is not rel
 [versions.Wikifonia]
 doChords = true
 doVoice = true
-doLyrics = false
+doLyrics = true
 doLyricsmore = false
 doLyricsmoremore = false
 doChordBars = false
@@ -37,6 +38,7 @@ doOwn = false
 	- retained written melody, chord changes, pickups, repeats and numbered endings; lyrics omitted.
 	- imported explicit 7alt symbols using the book's altered-dominant notation where present.
 	- tempo is an editorial practice suggestion.
+	- put in the lyrics from the same Wikifonia source.
 	TODO:
 	- proofread the complete melody, harmony and form against the referenced PDF and check by ear.
 	- verify source attribution, copyright notice and reuse terms against the scan; only the archived MusicXML notice is retained.
@@ -127,5 +129,15 @@ doOwn = false
 	e''8 ( c''8 ) ~ c''2. ~ |
 	c''4 r4 r2 |
 	\endBar
+}
+{% endif %}
+{% if part == "LyricsWikifonia" %}\lyricmode {
+	I got the blues for my ba -- by, left me by the San Fran -- cis -- co "Bay;" __ O -- cean
+	lin -- er took her so far a -- way. __ Did -- n't mean to treat her so bad, __ she was the
+	best gal I ev -- er had. __ Said good -- bye, __ _ made me cry, __ _ I wan -- na lay down
+	and die. __ I ain't got a nick -- el and I aint got a lous -- y "dime;" __ If she ev -- er
+	comes back, I think I'm gon -- na lose my mind. __ If she ev -- er comes back to stay, It --
+	"'ll" be an -- oth -- er brand new day, __ Walk -- "in'" with my ba -- by down by the San
+	Fran -- cis -- co bay. __
 }
 {% endif %}

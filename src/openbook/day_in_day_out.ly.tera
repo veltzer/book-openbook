@@ -5,6 +5,7 @@ default_version = "Wikifonia"
 title = "Day in, Day out"
 style = "Jazz"
 composer = "Rube Bloom"
+poet = "Johnny Mercer"
 piece = "Jazz"
 typesetter = "OpenBook contributors (MusicXML import)"
 completion = "3"
@@ -15,7 +16,7 @@ copyright = "All Rights Reserved"
 [versions.Wikifonia]
 doChords = true
 doVoice = true
-doLyrics = false
+doLyrics = true
 doLyricsmore = false
 doLyricsmoremore = false
 doChordBars = false
@@ -34,6 +35,7 @@ doOwn = false
 	- retained the original copyright notice where printed; the underlying music is not relicensed.
 	- retained written measures, pickups, repeats and endings; lyrics omitted.
 	- tempo is an editorial practice suggestion.
+	- put in the lyrics from the same Wikifonia source.
 	TODO:
 	- proofread the music against the referenced PDF and check by ear.
 	- verify the copyright notice against the scan; no readable per-tune notice was recovered, so the archived rights notice is retained where available.
@@ -177,5 +179,16 @@ doOwn = false
 	c''1 |
 	a'1 |
 	\endBar
+}
+{% endif %}
+{% if part == "LyricsWikifonia" %}\lyricmode {
+	Day in __ day out __ the same old hoo -- doo fol -- lows me a -- bout __ that same old
+	pound -- ing in my heart when -- ev -- er I think of you __ and dar -- ling I think of you __
+	day in and day out __ day out __ day in __ I need -- nt tell you how my days be -- gin __
+	when I a -- wake I a -- wak -- en with a tin -- gle One pos -- si -- bil -- i -- ty in
+	view the pos -- _ bil -- i -- ty of may -- be see -- ing you __ come rain __ come shine __
+	I meet you and to me the day is fine __ then I kiss your lips __ and the pound -- ing be --
+	comes __ the o -- ceans roar __ a thou -- sand drums __ can't you see it's love __ can
+	there by an -- y doubt __ when there it is day in day out? __
 }
 {% endif %}

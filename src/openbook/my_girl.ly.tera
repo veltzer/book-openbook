@@ -5,6 +5,7 @@ default_version = "Wikifonia"
 title = "My Girl"
 style = "Jazz"
 composer = "Ronald White, William Smokey Robinson"
+poet = "William Smokey Robinson"
 piece = "Standard"
 typesetter = "OpenBook contributors (MusicXML import)"
 completion = "3"
@@ -16,7 +17,7 @@ copyrightextra = "Archived MusicXML notice retained; underlying music is not rel
 [versions.Wikifonia]
 doChords = true
 doVoice = true
-doLyrics = false
+doLyrics = true
 doLyricsmore = false
 doLyricsmoremore = false
 doChordBars = false
@@ -37,6 +38,7 @@ doOwn = false
 	- retained written melody, chord changes, pickups, repeats and numbered endings; lyrics omitted.
 	- imported explicit 7alt symbols using the book's altered-dominant notation where present.
 	- tempo taken from archived MusicXML.
+	- put in the lyrics from the same Wikifonia source.
 	TODO:
 	- proofread the complete melody, harmony and form against the referenced PDF and check by ear.
 	- verify source attribution, copyright notice and reuse terms against the scan; only the archived MusicXML notice is retained.
@@ -184,5 +186,19 @@ doOwn = false
 	a'8 g'8 f'4 d'8 g'4. |
 	f'2. r4 |
 	\endBar
+}
+{% endif %}
+{% if part == "LyricsWikifonia" %}\lyricmode {
+	I've got sun -- shine -- on a cloud -- y day when it's cold out -- side I've got the
+	month of May I guess you say what can make me feel this way? My girl __ talk -- ing
+	"'bout" my __ girl. __ _ _ I've got so much hon -- ey the bees en -- vy me I've got a
+	sweet -- er song __ _ than the birds in the tree. Well I guess you say what can make me
+	feel this way? My girl __ talk -- ing "'bout" my __ girl. __ _ _ I don't need no mon -- ey
+	for -- tune or fame I've got all the rich -- es ba -- by, one man can claim. Well, I guess
+	you say what can make me feel this way? My girl __ talk -- ing "'bout" my __ girl. __ _ _
+	I've got sun -- shine on a cloud -- y -- day __ with my "girl;" __ I've e -- ven got the
+	month of May with my girl. __ Talk -- ing -- "'bout," __ talk -- ing "'bout," __ talk --
+	ing "'bout" __ my girl __ _ Woo __ my girl __ that's all __ I can talk a -- bout is my
+	girl.
 }
 {% endif %}

@@ -5,6 +5,7 @@ default_version = "Wikifonia"
 title = "Well, Did You Evah?"
 style = "Standard"
 composer = "Cole Porter"
+poet = "Cole Porter"
 piece = "Standard"
 typesetter = "OpenBook contributors (MusicXML import)"
 completion = "3"
@@ -16,8 +17,8 @@ copyrightextra = "Archived MusicXML notice retained; underlying music is not rel
 [versions.Wikifonia]
 doChords = true
 doVoice = true
-doLyrics = false
-doLyricsmore = false
+doLyrics = true
+doLyricsmore = true
 doLyricsmoremore = false
 doChordBars = false
 doGuitar = false
@@ -37,6 +38,7 @@ doOwn = false
 	- retained written melody, chord changes, pickups, repeats and numbered endings; lyrics omitted.
 	- imported explicit 7alt symbols using the book's altered-dominant notation where present.
 	- tempo taken from archived MusicXML.
+	- put in the lyrics from the same Wikifonia source.
 	TODO:
 	- proofread the complete melody, harmony and form against the referenced PDF and check by ear.
 	- verify source attribution, copyright notice and reuse terms against the scan; only the archived MusicXML notice is retained.
@@ -161,5 +163,28 @@ doOwn = false
 	f'2
 	}
 	\endBar
+}
+{% endif %}
+{% if part == "LyricsWikifonia" %}\lyricmode {
+	Have you heard a -- bout this clan I am called "'The" for -- got -- ten "man'?" Well, did
+	you ev -- ah? What a swell par -- ty this is! Have you heard the sto -- ry of "A~boy," __
+	a girl, un -- re -- quit -- ed love? Well, did you ev -- ah? What a swell par -- ty this
+	is! What frills, what frocks! What furs, what rocks! What ga -- i -- ty! It's all too ex --
+	quis! That French cham -- pagne! So good for the brain! That bands, it's the end! Kind --
+	ly don't fall down my friend. Have you heard? The count -- ess Krupp Crossed the bridge
+	when the bridge was up. Well, did you ev -- ah? What a swell par -- ty this is! Have you
+	heard that Mim -- sie Starr Just got pinched in the Ast -- or bar? Well did you ev -- ah?
+	What a swell par -- ty this is!
+}
+{% endif %}
+{% if part == "LyricsmoreWikifonia" %}\lyricmode {
+	_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ Have you heard that un -- cle Newt
+	For -- got to "0p" -- en "his~par" -- a -- chute? Well, did you ev -- ah? What a swell par --
+	ty this is! It's great, It's grand, It's won -- der -- land What soup, what fish! That
+	beef, what a dish! That grouse, so rare! That aged cam -- em -- bert! That ba -- ba au
+	rhum! Will you please move ov -- er chum? Have you heard that dear old Blanche Got run
+	down by an av -- al -- anche? Well, did you ev -- ah? What a swell par -- ty this is! Have
+	you heard? It's in the stars Next ju -- ly we col -- lide with Mars! Well did you ev --
+	ah? what a swell par -- ty this is!
 }
 {% endif %}

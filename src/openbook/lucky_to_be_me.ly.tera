@@ -5,6 +5,7 @@ default_version = "Wikifonia"
 title = "Lucky to Be Me"
 style = "Jazz"
 composer = "Leonard Bernstein"
+poet = "Betty Comden, Adolph Green"
 piece = "Standard"
 typesetter = "OpenBook contributors (MusicXML import)"
 completion = "3"
@@ -16,8 +17,8 @@ copyrightextra = "Archived MusicXML notice retained; underlying music is not rel
 [versions.Wikifonia]
 doChords = true
 doVoice = true
-doLyrics = false
-doLyricsmore = false
+doLyrics = true
+doLyricsmore = true
 doLyricsmoremore = false
 doChordBars = false
 doGuitar = false
@@ -37,6 +38,7 @@ doOwn = false
 	- retained written melody, chord changes, pickups, repeats and numbered endings; lyrics omitted.
 	- imported explicit 7alt symbols using the book's altered-dominant notation where present.
 	- tempo is an editorial practice suggestion.
+	- put in the lyrics from the same Wikifonia source.
 	TODO:
 	- proofread the complete melody, harmony and form against the referenced PDF and check by ear.
 	- verify source attribution, copyright notice and reuse terms against the scan; only the archived MusicXML notice is retained.
@@ -155,5 +157,22 @@ doOwn = false
 	f'1 ~ |
 	f'1 |
 	\endBar
+}
+{% endif %}
+{% if part == "LyricsWikifonia" %}\lyricmode {
+	I used to think it might be nice to be an -- y -- one else but me. I thought that it
+	might be a pleas -- ant sur -- prise __ to wake up as a cou -- ple of oth -- er guys. __
+	But now that I've found you I've changed my point of view. And now I would -- n't give a
+	dime to be an -- y -- one alse but me. __ What a day! For -- tune smiled and came my way.
+	Bring -- ing love I ne -- ver thought I'd see. I'm so luck -- y to be me. me. I am simp --
+	ly thun -- der struck at the change in my luck. Knew at once I wan -- ted you Ne -- ver
+	thought you'd want me too. I'm so proud you chose me from all the crowd. There's no o --
+	ther guy I'd rath -- er be. I could laugh out loud, I'm so luck -- y to be me. __
+}
+{% endif %}
+{% if part == "LyricsmoreWikifonia" %}\lyricmode {
+	_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _
+	What a night! Sud -- den -- ly you came in sight. Look -- ing just the way I'd Hoped you'd
+	be. I'm so luck -- y to be
 }
 {% endif %}

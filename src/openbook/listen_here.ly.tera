@@ -5,6 +5,7 @@ default_version = "Wikifonia"
 title = "Listen Here"
 style = "Jazz"
 composer = "Bob Dorough"
+poet = "Dave Frishberg"
 piece = "Standard"
 typesetter = "OpenBook contributors (MusicXML import)"
 completion = "3"
@@ -16,7 +17,7 @@ copyrightextra = "Archived MusicXML notice retained; underlying music is not rel
 [versions.Wikifonia]
 doChords = true
 doVoice = true
-doLyrics = false
+doLyrics = true
 doLyricsmore = false
 doLyricsmoremore = false
 doChordBars = false
@@ -37,6 +38,7 @@ doOwn = false
 	- retained written melody, chord changes, pickups, repeats and numbered endings; lyrics omitted.
 	- imported explicit 7alt symbols using the book's altered-dominant notation where present.
 	- tempo is an editorial practice suggestion.
+	- put in the lyrics from the same Wikifonia source.
 	TODO:
 	- proofread the complete melody, harmony and form against the referenced PDF and check by ear.
 	- verify source attribution, copyright notice and reuse terms against the scan; only the archived MusicXML notice is retained.
@@ -124,5 +126,18 @@ doOwn = false
 	f''1 ~ |
 	f''1 ^\fermata |
 	\endBar
+}
+{% endif %}
+{% if part == "LyricsWikifonia" %}\lyricmode {
+	When you're still, __ do you hear one small voice, __ crys -- tal clear, say -- ing,
+	"'Lis" -- ten Here, my friend, Lis -- ten "Here'?" Well, that voice __ is your own, and it
+	speaks to you __ a -- lone, "'You" can count on "me'," it says, "'So" Lis -- ten "Here?'"
+	This is you, __ this is real, __ this is tru -- ly the way you feel. __ You can run, __
+	You can hide, __ oh, but some time, some place, we each of us wind up face to face with
+	that lit -- tle voice __ in -- side. So we hope __ and we yearn, __ and we live and some --
+	times learn from the lit -- tle voice that whis -- pers __ crys -- tal clear. And we each __
+	hear the call, "'cause" it's call -- ing __ to us all "'Fol" -- low "me'" it says, __
+	"'Nev" -- er fear, __ Lis -- ten Here, old friend, Lis -- ten Here, dum -- my, __ Lis --
+	ten "Here?'" __
 }
 {% endif %}

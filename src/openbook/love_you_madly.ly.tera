@@ -5,6 +5,7 @@ default_version = "Wikifonia"
 title = "Love You Madly"
 style = "Jazz"
 composer = "Duke Ellington"
+poet = "Duke Ellington"
 piece = "Standard"
 typesetter = "OpenBook contributors (MusicXML import)"
 completion = "3"
@@ -16,7 +17,7 @@ copyrightextra = "Archived MusicXML notice retained; underlying music is not rel
 [versions.Wikifonia]
 doChords = true
 doVoice = true
-doLyrics = false
+doLyrics = true
 doLyricsmore = false
 doLyricsmoremore = false
 doChordBars = false
@@ -37,6 +38,7 @@ doOwn = false
 	- retained written melody, chord changes, pickups, repeats and numbered endings; lyrics omitted.
 	- imported explicit 7alt symbols using the book's altered-dominant notation where present.
 	- tempo is an editorial practice suggestion.
+	- put in the lyrics from the same Wikifonia source.
 	TODO:
 	- proofread the complete melody, harmony and form against the referenced PDF and check by ear.
 	- verify source attribution, copyright notice and reuse terms against the scan; only the archived MusicXML notice is retained.
@@ -127,5 +129,16 @@ doOwn = false
 	c''8 c'4 a'8 ~ a'4 d'8 g'8 ~ |
 	g'4. f'8 r2 |
 	\endBar
+}
+{% endif %}
+{% if part == "LyricsWikifonia" %}\lyricmode {
+	Love __ you mad -- ly right or wrong, __ sounds __ like a ly -- ric of __ a song, __ but
+	since it's so, __ I thought you ought to know __ I love you, love __ you mad -- ly. "'Bet" --
+	ter fish are in the "sea,'" __ is __ not the the -- o -- ry __ for me, __ and that's for
+	sure, __ just like I said be -- fore, __ "'I" love you, love __ you mad -- ly. If you
+	could see the hap -- py you and me __ I dream a -- bout so proud -- ly __ you'd know the
+	breath of spring __ that makes me sing __ my __ love song __ so loud -- ly. Good __ things
+	come to those who wait, __ so __ just re -- lax and wait __ for fate __ _ to let me see __
+	the day you'll say to me, __ "'I" love you, love __ you mad -- "ly!'"
 }
 {% endif %}

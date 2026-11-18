@@ -5,6 +5,7 @@ default_version = "Wikifonia"
 title = "Two Sleepy People"
 style = "Jazz"
 composer = "Hoagy Carmichael"
+poet = "Frank Loesser"
 piece = "Standard"
 typesetter = "OpenBook contributors (MusicXML import)"
 completion = "3"
@@ -16,7 +17,7 @@ copyrightextra = "Archived MusicXML notice retained; underlying music is not rel
 [versions.Wikifonia]
 doChords = true
 doVoice = true
-doLyrics = false
+doLyrics = true
 doLyricsmore = false
 doLyricsmoremore = false
 doChordBars = false
@@ -37,6 +38,7 @@ doOwn = false
 	- retained written melody, chord changes, pickups, repeats and numbered endings; lyrics omitted.
 	- imported explicit 7alt symbols using the book's altered-dominant notation where present.
 	- tempo is an editorial practice suggestion.
+	- put in the lyrics from the same Wikifonia source.
 	TODO:
 	- proofread the complete melody, harmony and form against the referenced PDF and check by ear.
 	- verify source attribution, copyright notice and reuse terms against the scan; only the archived MusicXML notice is retained.
@@ -142,5 +144,18 @@ doOwn = false
 	}
 	}
 	\endBar
+}
+{% endif %}
+{% if part == "LyricsWikifonia" %}\lyricmode {
+	Here we are, out of cig -- a -- rettes __ hold -- ing hands and yawn -- ing, look how
+	late it gets. __ Two sleep -- y peo -- ple, by dawn's ear -- ly light, and too much in
+	love to say good -- night. Here we are, in the coz -- y chair, __ pick -- ing on a wish --
+	bone __ from the Frig -- i -- daire. __ Two sleep -- y peo -- ple with noth -- ing to say
+	and two much in love to break a -- way. Do you re -- mem -- ber the nights we used to ling --
+	er in the hall? __ Fath -- er did -- n't like you at all. Do you re -- mem -- ber the rea --
+	son why we mar -- ried in the fall? To rent this lit -- tle nest, __ and get a bit of
+	rest. Well here we are just a -- bout the same, __ fog -- gy lit -- tle fel -- la, drow --
+	sy lit -- tle dame. __ Two sleep -- py peo -- ple, by dawn's ear -- ly light, and too much
+	in love to say good -- night. night.
 }
 {% endif %}

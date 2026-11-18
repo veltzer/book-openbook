@@ -5,6 +5,7 @@ default_version = "Wikifonia"
 title = "Strollin'"
 style = "Jazz"
 composer = "Horace Silver"
+poet = "Horace Silver"
 piece = "Standard"
 typesetter = "OpenBook contributors (MusicXML import)"
 completion = "3"
@@ -16,7 +17,7 @@ copyrightextra = "Archived MusicXML notice retained; underlying music is not rel
 [versions.Wikifonia]
 doChords = true
 doVoice = true
-doLyrics = false
+doLyrics = true
 doLyricsmore = false
 doLyricsmoremore = false
 doChordBars = false
@@ -37,6 +38,7 @@ doOwn = false
 	- retained written melody, chord changes, pickups, repeats and numbered endings; lyrics omitted.
 	- imported explicit 7alt symbols using the book's altered-dominant notation where present.
 	- tempo is an editorial practice suggestion.
+	- put in the lyrics from the same Wikifonia source.
 	TODO:
 	- proofread the complete melody, harmony and form against the referenced PDF and check by ear.
 	- verify source attribution, copyright notice and reuse terms against the scan; only the archived MusicXML notice is retained.
@@ -136,5 +138,15 @@ doOwn = false
 	r4 r8 b'8 ~ b'4. g'8 ~ |
 	g'1 |
 	\endBar
+}
+{% endif %}
+{% if part == "LyricsWikifonia" %}\lyricmode {
+	I saw her stroll -- "in'" down the prom -- e -- nade. __ I took one look __ and I said
+	"'Oh," my "God.'" __ Please help __ me to win her. __ She's all that I need. __ Dear Lord
+	a -- bove __ me __ please help __ me suc -- ceed. __ She turned and smiled __ at me to my
+	sur -- prise. __ I lat -- er found __ out she had great big eyes. __ It all __ goes to
+	prove that __ your dream __ can come true, __ don't __ you see. I'm just as hap -- py as I
+	can be. She's strol -- lin al -- long with me. be. Sweet -- ie, and me, ba -- by makes
+	three, strol -- "lin'." __
 }
 {% endif %}

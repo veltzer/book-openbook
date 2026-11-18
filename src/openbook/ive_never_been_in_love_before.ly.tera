@@ -5,6 +5,7 @@ default_version = "Wikifonia"
 title = "I've Never Been In Love Before"
 style = "Jazz"
 composer = "Frank Loesser"
+poet = "Frank Loesser"
 piece = "Jazz"
 typesetter = "OpenBook contributors (MusicXML import)"
 completion = "3"
@@ -15,8 +16,8 @@ copyright = "All Rights Reserved"
 [versions.Wikifonia]
 doChords = true
 doVoice = true
-doLyrics = false
-doLyricsmore = false
+doLyrics = true
+doLyricsmore = true
 doLyricsmoremore = false
 doChordBars = false
 doGuitar = false
@@ -34,6 +35,7 @@ doOwn = false
 	- retained the original copyright notice where printed; the underlying music is not relicensed.
 	- retained written measures, pickups, repeats and endings; lyrics omitted.
 	- tempo is an editorial practice suggestion.
+	- put in the lyrics from the same Wikifonia source.
 	TODO:
 	- proofread the music against the referenced PDF and check by ear.
 	- verify editorial chord spacing in measures 2, 3, 8, 9, 10, 18, 20, 21, 25, 26, 27; the archive places successive symbols at the same offset.
@@ -126,5 +128,16 @@ doOwn = false
 	bes'1 ~ |
 	bes'2. r4 |
 	\endBar
+}
+{% endif %}
+{% if part == "LyricsWikifonia" %}\lyricmode {
+	I've Nev -- er Been in Love Be -- fore, Now all at once it's you. It's you for -- ev --
+	er more __ I've score. __ But this is wine that's all too strange and strong. I'm full of
+	fool -- ish song, and out my song must pour. __ So please for -- give this help -- less
+	haze I'm in, I've real -- ly Nev -- er Been In Love Be -- fore __
+}
+{% endif %}
+{% if part == "LyricsmoreWikifonia" %}\lyricmode {
+	_ Nev -- er Been In Love Be -- fore, I thought my heart was safe I thought I knew the
 }
 {% endif %}

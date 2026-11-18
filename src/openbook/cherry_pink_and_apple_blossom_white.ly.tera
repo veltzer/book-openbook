@@ -4,7 +4,8 @@ default_version = "Wikifonia"
 [attributes]
 title = "Cherry Pink And Apple Blossom White"
 style = "Jazz"
-composer = "Louiguy (Louis Guglielmi) 1950, French lyrics: Jacques Larue, English lyrics: Mack David"
+composer = "Louiguy (Louis Guglielmi), Jacques Larue, Mack David"
+poet = "Jacques Larue, Mack David"
 piece = "Standard"
 typesetter = "OpenBook contributors (MusicXML import)"
 completion = "3"
@@ -16,8 +17,8 @@ copyrightextra = "Archived MusicXML notice retained; underlying music is not rel
 [versions.Wikifonia]
 doChords = true
 doVoice = true
-doLyrics = false
-doLyricsmore = false
+doLyrics = true
+doLyricsmore = true
 doLyricsmoremore = false
 doChordBars = false
 doGuitar = false
@@ -35,6 +36,7 @@ doOwn = false
 	- retained the archived MusicXML rights notice; no redistribution permission is asserted.
 	- retained written melody, chord changes, pickups, repeats and numbered endings; lyrics, slurs, dynamics and articulations other than fermatas omitted.
 	- tempo is an editorial practice suggestion.
+	- put in the lyrics from the same Wikifonia source.
 	TODO:
 	- proofread the complete melody, harmony and form against a printed edition and check by ear.
 	- verify source attribution, copyright notice and reuse terms; only the archived MusicXML notice is retained.
@@ -111,5 +113,20 @@ doOwn = false
 	\textMark \markup { \musicglyph "scripts.coda" } es'1 ~ |
 	es'2. r4 |
 	\endBar
+}
+{% endif %}
+{% if part == "LyricsWikifonia" %}\lyricmode {
+	It's cher -- ry pink and ap -- ple blos -- som white __ when your true lov -- er comes
+	your way It's cher -- ry pink and ap -- ple blos -- som white __ The po -- ets say the sto
+	ry goes that once a cher -- ry tree __ be -- side an ap -- ple tree did grow And there a
+	boy once met his bride to be __ long, long a -- go The boy looked in -- to her eyes it was
+	a sight to en -- thrall the breez -- es joined in their sighs The blos -- soms start -- ed
+	to fall And so they gent -- ly ca -- ressed the lo -- vers looked up to find The branch --
+	es -- of the two trees were in -- ter twined and that is why the po -- ets love. __
+}
+{% endif %}
+{% if part == "LyricsmoreWikifonia" %}\lyricmode {
+	_ _ _ _ _ _ _ al -- ways write __ If there's a new moon bright a -- bove It's cher -- ry
+	pink and ap -- ple blos -- som white __ When you're in
 }
 {% endif %}

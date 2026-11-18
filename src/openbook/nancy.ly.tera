@@ -5,6 +5,7 @@ default_version = "Wikifonia"
 title = "Nancy"
 style = "Jazz"
 composer = "Jimmy van Heusen"
+poet = "Phil Silvers"
 piece = "Standard"
 typesetter = "OpenBook contributors (MusicXML import)"
 completion = "3"
@@ -16,7 +17,7 @@ copyrightextra = "Archived MusicXML notice retained; underlying music is not rel
 [versions.Wikifonia]
 doChords = true
 doVoice = true
-doLyrics = false
+doLyrics = true
 doLyricsmore = false
 doLyricsmoremore = false
 doChordBars = false
@@ -37,6 +38,7 @@ doOwn = false
 	- retained written melody, chord changes, pickups, repeats and numbered endings; lyrics omitted.
 	- imported explicit 7alt symbols using the book's altered-dominant notation where present.
 	- tempo is an editorial practice suggestion.
+	- put in the lyrics from the same Wikifonia source.
 	TODO:
 	- proofread the complete melody, harmony and form against the referenced PDF and check by ear.
 	- verify source attribution, copyright notice and reuse terms against the scan; only the archived MusicXML notice is retained.
@@ -145,5 +147,17 @@ doOwn = false
 	}
 	}
 	\endBar
+}
+{% endif %}
+{% if part == "LyricsWikifonia" %}\lyricmode {
+	If I don't see her each day __ I miss her. Gee! what a thrill __ each time I kiss her. Be --
+	lieve me I've got a case __ on Nan -- cy with the laugh -- ing face. __ She takes the win --
+	ter and makes __ it sum -- mer, Sum -- mer could take __ some les -- sons from her. Pic --
+	ture a tom -- boy in lace, __ That's Nan -- cy with tthe laugh -- ing face. __ Do you ev --
+	er hear mis -- sion bells ring -- ing? Well she'll give you the ver -- y same glow. __ _
+	When she speaks you would think __ it was sing -- ing, Just hear her say "'Hel" -- "lo.'"
+	I swear to good -- ness you can't __ re -- sist her, Sor -- ry for you __ she has no sis --
+	ter. No one could ev -- er re -- place __ my Nan -- cy with the laugh -- ing face. __ If I
+	don't Nan -- cy with the laugh -- ing face. __
 }
 {% endif %}

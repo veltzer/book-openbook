@@ -5,6 +5,7 @@ default_version = "Wikifonia"
 title = "Never On Sunday"
 style = "Standard"
 composer = "Manos Hadjidakis"
+poet = "Billy Towne"
 piece = "Standard"
 typesetter = "OpenBook contributors (MusicXML import)"
 completion = "3"
@@ -16,7 +17,7 @@ copyrightextra = "Archived MusicXML notice retained; underlying music is not rel
 [versions.Wikifonia]
 doChords = true
 doVoice = true
-doLyrics = false
+doLyrics = true
 doLyricsmore = false
 doLyricsmoremore = false
 doChordBars = false
@@ -37,6 +38,7 @@ doOwn = false
 	- retained written melody, chord changes, pickups, repeats and numbered endings; lyrics omitted.
 	- imported explicit 7alt symbols using the book's altered-dominant notation where present.
 	- tempo is an editorial practice suggestion.
+	- put in the lyrics from the same Wikifonia source.
 	TODO:
 	- proofread the complete melody, harmony and form against the referenced PDF and check by ear.
 	- verify source attribution, copyright notice and reuse terms against the scan; only the archived MusicXML notice is retained.
@@ -132,5 +134,15 @@ doOwn = false
 	es'1 |
 	r8 bes8 es'8 d'8 es'8 f'8 g'8 as'8 ^ "D.S. al Fine" |
 	\endBar
+}
+{% endif %}
+{% if part == "LyricsWikifonia" %}\lyricmode {
+	Oh you can kiss me on a Mon -- day a Mon -- day a Mon -- day is ver -- y ver -- y good Or
+	you can kiss me on a Tues -- day a Tues -- day a Tues -- day in fact I wish you would or
+	you can kiss me on a Wednes -- day a Thurs -- day a Fri -- day and Sat -- ur -- day is
+	best But nev -- er nev -- er on a Sun -- day a Sun -- day a Sun -- day cause thats my day
+	of rest come an -- y rest __ day __ and you'll be my guest __ an -- y day you say __ but
+	my day of rest just name the day __ that you like the best __ on -- ly stay a -- way __ on
+	my day of rest Oh you can kiss me on a
 }
 {% endif %}

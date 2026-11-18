@@ -5,6 +5,7 @@ default_version = "Wikifonia"
 title = "I Was Doing All Right"
 style = "Jazz"
 composer = "George Gershwin"
+poet = "Ira Gershwin"
 piece = "Standard"
 typesetter = "OpenBook contributors (MusicXML import)"
 completion = "3"
@@ -16,7 +17,7 @@ copyrightextra = "Archived MusicXML notice retained; underlying music is not rel
 [versions.Wikifonia]
 doChords = true
 doVoice = true
-doLyrics = false
+doLyrics = true
 doLyricsmore = false
 doLyricsmoremore = false
 doChordBars = false
@@ -37,6 +38,7 @@ doOwn = false
 	- retained written melody, chord changes, pickups, repeats and numbered endings; lyrics omitted.
 	- imported explicit 7alt symbols using the book's altered-dominant notation where present.
 	- tempo is an editorial practice suggestion.
+	- put in the lyrics from the same Wikifonia source.
 	TODO:
 	- proofread the complete melody, harmony and form against the referenced PDF and check by ear.
 	- verify source attribution, copyright notice and reuse terms against the scan; only the archived MusicXML notice is retained.
@@ -149,5 +151,14 @@ doOwn = false
 	}
 	}
 	\endBar
+}
+{% endif %}
+{% if part == "LyricsWikifonia" %}\lyricmode {
+	I was do -- ing all right, No -- thing but rain -- bows in my sky, I was do -- ing all
+	right Till you came by. Had no cause to som -- plain, life was as sweet as ap -- ple pie,
+	Nev -- er no -- tice the rain Till you came by. But now __ When -- ev -- er you're a --
+	way, Can't sleep nights and suf -- fer all the "day;" I just sit and won -- der if love is --
+	n't one big blun -- der. But when you hold me tight, ting -- ling all thru, I feel some --
+	how I was do -- ing all right But i'm do -- ing bet -- ter than ev -- er now. __ now. __
 }
 {% endif %}

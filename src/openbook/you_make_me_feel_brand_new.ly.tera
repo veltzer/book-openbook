@@ -5,6 +5,7 @@ default_version = "Wikifonia"
 title = "You Make Me Feel Brand New"
 style = "Jazz"
 composer = "Thom Bell, Linda Creed"
+poet = "Thom Bell, Linda Creed"
 piece = "Standard"
 typesetter = "OpenBook contributors (MusicXML import)"
 completion = "3"
@@ -16,8 +17,8 @@ copyrightextra = "Archived MusicXML notice retained; underlying music is not rel
 [versions.Wikifonia]
 doChords = true
 doVoice = true
-doLyrics = false
-doLyricsmore = false
+doLyrics = true
+doLyricsmore = true
 doLyricsmoremore = false
 doChordBars = false
 doGuitar = false
@@ -37,6 +38,7 @@ doOwn = false
 	- retained written melody, chord changes, pickups, repeats and numbered endings; lyrics omitted.
 	- imported explicit 7alt symbols using the book's altered-dominant notation where present.
 	- tempo is an editorial practice suggestion.
+	- put in the lyrics from the same Wikifonia source.
 	TODO:
 	- proofread the complete melody, harmony and form against the referenced PDF and check by ear.
 	- verify source attribution, copyright notice and reuse terms against the scan; only the archived MusicXML notice is retained.
@@ -171,5 +173,25 @@ doOwn = false
 	d''4 c''4 es''4 d''4 |
 	f''1 - "Bbmaj7" |
 	\endBar
+}
+{% endif %}
+{% if part == "LyricsWikifonia" %}\lyricmode {
+	_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ My love I'll nev -- er find the words my
+	love To tell you how I feel my love Mere words __ could not -- ex -- plain __ Prec -- ious
+	love you held my life with -- in your hands Cre -- at -- ed ev -- "'ry" -- thing I _ am
+	Taught me how to live a -- _ gain __ On -- ly you __ cared when I need -- ed a friend __
+	Be -- lieved in me through __ thick and thin _ This song is for you filled with grat -- i --
+	tude and _ love __ God bless you you make me feel brand new For God blessed me with you
+	You make me feel brand new I sing this song "'cause" you make me feel brand _ _ new _ _ _ _ _ _ _ _
+	My you make me feel brand new.
+}
+{% endif %}
+{% if part == "LyricsmoreWikifonia" %}\lyricmode {
+	_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ love when ev -- er I was in -- se -- cure
+	you built me up and made me sure You gave __ my "pride~back" __ to me __ Prec -- ious
+	friend with you I'll al -- ways have a friend You're some -- one who I can de -- _ pend To
+	walk a path that some -- times bends __ With -- out you __ life has no mean -- ing or
+	rhyme __ Like notes to a song __ out of time _ How can I re -- pay you for hav -- ing
+	faith in -- _ me __
 }
 {% endif %}

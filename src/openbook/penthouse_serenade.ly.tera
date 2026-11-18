@@ -5,6 +5,7 @@ default_version = "Wikifonia"
 title = "Penthouse Serenade"
 style = "Jazz"
 composer = "Val Burton"
+poet = "Will Jason"
 piece = "Standard"
 typesetter = "OpenBook contributors (MusicXML import)"
 completion = "3"
@@ -16,7 +17,7 @@ copyrightextra = "Archived MusicXML notice retained; underlying music is not rel
 [versions.Wikifonia]
 doChords = true
 doVoice = true
-doLyrics = false
+doLyrics = true
 doLyricsmore = false
 doLyricsmoremore = false
 doChordBars = false
@@ -37,6 +38,7 @@ doOwn = false
 	- retained written melody, chord changes, pickups, repeats and numbered endings; lyrics omitted.
 	- imported explicit 7alt symbols using the book's altered-dominant notation where present.
 	- tempo is an editorial practice suggestion.
+	- put in the lyrics from the same Wikifonia source.
 	TODO:
 	- proofread the complete melody, harmony and form against the referenced PDF and check by ear.
 	- verify source attribution, copyright notice and reuse terms against the scan; only the archived MusicXML notice is retained.
@@ -143,5 +145,16 @@ doOwn = false
 	}
 	}
 	\endBar
+}
+{% endif %}
+{% if part == "LyricsWikifonia" %}\lyricmode {
+	Just pic -- ture a pent -- house way up in the sky, with hin -- ges on chim -- neys for
+	stars to go by, a swee slice of heav -- en for just you and I when we're a -- lone. From
+	all of so -- ci -- e -- ty we'll stay a -- loof, and live in pro -- pri -- e -- ty there
+	on the roof, two heav -- en -- ly her -- mits we will be in truth when we're a -- lone.
+	We'll see life's mad pat -- tern as we view old Man -- hat -- tan, then we can thank our
+	luck -- y stars that we're liv -- ing as we are. In our lit -- tle pent -- house, we'll al --
+	ways con -- trive to keep love and ro -- mance for -- ev -- er a -- live, in view of the
+	Hud -- son just o -- ver the drive, when we're a -- lone. Just lone.
 }
 {% endif %}

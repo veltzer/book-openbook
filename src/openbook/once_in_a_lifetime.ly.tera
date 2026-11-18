@@ -5,6 +5,7 @@ default_version = "Wikifonia"
 title = "Once in a Lifetime"
 style = "Standard"
 composer = "Leslie Bricusse, Anthony Newley"
+poet = "Leslie Bricusse, Anthony Newley"
 piece = "Standard"
 typesetter = "OpenBook contributors (MusicXML import)"
 completion = "3"
@@ -16,7 +17,7 @@ copyrightextra = "Archived MusicXML notice retained; underlying music is not rel
 [versions.Wikifonia]
 doChords = true
 doVoice = true
-doLyrics = false
+doLyrics = true
 doLyricsmore = false
 doLyricsmoremore = false
 doChordBars = false
@@ -37,6 +38,7 @@ doOwn = false
 	- retained written melody, chord changes, pickups, repeats and numbered endings; lyrics omitted.
 	- imported explicit 7alt symbols using the book's altered-dominant notation where present.
 	- tempo is an editorial practice suggestion.
+	- put in the lyrics from the same Wikifonia source.
 	TODO:
 	- proofread the complete melody, harmony and form against the referenced PDF and check by ear.
 	- verify source attribution, copyright notice and reuse terms against the scan; only the archived MusicXML notice is retained.
@@ -131,5 +133,14 @@ doOwn = false
 	es''1 ~ |
 	es''2. r4 |
 	\endBar
+}
+{% endif %}
+{% if part == "LyricsWikifonia" %}\lyricmode {
+	_ once in a life -- time __ a man knows a mo -- ment __ one won -- der -- ful mo -- ment __
+	when fate takes his hand. __ And this is my mo -- ment, __ my once in a life -- time __
+	when I can ex -- plore a new and ex -- ci -- ting land. __ For once in my life -- time __
+	I feel like a gi -- ant. __ I soar like an ea -- gle __ as "tho'" I had wings. __ For this
+	is my mo -- ment. __ My des -- ti -- ny calls me. __ And "tho'" it may be just once in a
+	life -- time I'm gon -- na do great things. __
 }
 {% endif %}

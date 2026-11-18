@@ -5,6 +5,7 @@ default_version = "Wikifonia"
 title = "Let Me Entertain You"
 style = "Standard"
 composer = "Jule Styne"
+poet = "Stephen Sondheim"
 piece = "Standard"
 typesetter = "OpenBook contributors (MusicXML import)"
 completion = "3"
@@ -16,7 +17,7 @@ copyrightextra = "Archived MusicXML notice retained; underlying music is not rel
 [versions.Wikifonia]
 doChords = true
 doVoice = true
-doLyrics = false
+doLyrics = true
 doLyricsmore = false
 doLyricsmoremore = false
 doChordBars = false
@@ -37,6 +38,7 @@ doOwn = false
 	- retained written melody, chord changes, pickups, repeats and numbered endings; lyrics omitted.
 	- imported explicit 7alt symbols using the book's altered-dominant notation where present.
 	- tempo is an editorial practice suggestion.
+	- put in the lyrics from the same Wikifonia source.
 	TODO:
 	- proofread the complete melody, harmony and form against the referenced PDF and check by ear.
 	- verify source attribution, copyright notice and reuse terms against the scan; only the archived MusicXML notice is retained.
@@ -164,5 +166,16 @@ doOwn = false
 	}
 	}
 	\endBar
+}
+{% endif %}
+{% if part == "LyricsWikifonia" %}\lyricmode {
+	Ex -- tra! Ex -- tra! Hey! look at the head -- line. His -- tor -- i -- cal news __ is be --
+	ing made __ Ex -- tra! Ex -- tra! They're draw -- ing a red __ line a -- round the big --
+	gest scoop of the de -- cade! __ A bar -- rel of charm, __ a fab -- u -- lous thrill! __
+	The big -- gest lit -- tle head -- line in vau -- de -- ville. __ Oh! Let me en -- ter --
+	tain you, Let me make you smile. Let me do a few tricks, some old and then some new
+	tricks, I'm ver -- y ver -- sa -- tile. And if you're real good, I'll make you feel good,
+	I want your spir -- its to climb. Just let me en -- ter -- tain you and we'll have a real
+	good time, yes sir, __ We'll have a feal good time. _ _ _ _ _ time.
 }
 {% endif %}

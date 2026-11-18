@@ -5,6 +5,7 @@ default_version = "Wikifonia"
 title = "My Old Flame"
 style = "Jazz"
 composer = "Arthur Johnston, Sam Coslow"
+poet = "Arthur Johnston, Sam Coslow"
 piece = "Jazz"
 typesetter = "OpenBook contributors (MusicXML import)"
 completion = "3"
@@ -15,7 +16,7 @@ copyright = "All Rights Reserved"
 [versions.Wikifonia]
 doChords = true
 doVoice = true
-doLyrics = false
+doLyrics = true
 doLyricsmore = false
 doLyricsmoremore = false
 doChordBars = false
@@ -34,6 +35,7 @@ doOwn = false
 	- retained the original copyright notice where printed; the underlying music is not relicensed.
 	- retained written measures, pickups, repeats and endings; lyrics omitted.
 	- tempo is an editorial practice suggestion.
+	- put in the lyrics from the same Wikifonia source.
 	TODO:
 	- proofread the music against the referenced PDF and check by ear.
 	- verify the copyright notice against the scan; no readable per-tune notice was recovered, so the archived rights notice is retained where available.
@@ -137,5 +139,16 @@ doOwn = false
 	}
 	}
 	\endBar
+}
+{% endif %}
+{% if part == "LyricsWikifonia" %}\lyricmode {
+	My Old Flame, __ I can't e -- ven think __ of his name __ but it's fun -- ny now and
+	then, how my thoughts go flash -- ing back a -- gain, __ to My Old Flame. __ My Old Flame, __
+	my new lo -- vers all __ seem so tame. __ For I have -- n't met a gent so mag -- nif -- i --
+	cent or el -- e -- gant __ as my old Flame. __ I've met so man -- y who had fas -- ci --
+	na -- "tin'" ways, __ a fas -- ci -- na -- "tin'" gaze __ in their "eyes;" __ some who
+	took me up __ to the skies. __ But their at -- temps at love were on -- ly im -- i -- ta --
+	tions of My Old Flame, __ I can't e -- ven think __ of his name. __ But I'll nev -- er be
+	the same un -- til I dis -- co -- ver what be -- came __ of My Old Flame. Flame.
 }
 {% endif %}

@@ -5,6 +5,7 @@ default_version = "Wikifonia"
 title = "The Twelfth Of Never"
 style = "Jazz"
 composer = "Jerry Livingston, Paul Francis Webster"
+poet = "Paul Francis Webster"
 piece = "Standard"
 typesetter = "OpenBook contributors (MusicXML import)"
 completion = "3"
@@ -16,7 +17,7 @@ copyrightextra = "Archived MusicXML notice retained; underlying music is not rel
 [versions.Wikifonia]
 doChords = true
 doVoice = true
-doLyrics = false
+doLyrics = true
 doLyricsmore = false
 doLyricsmoremore = false
 doChordBars = false
@@ -35,6 +36,7 @@ doOwn = false
 	- retained the archived MusicXML rights notice; no redistribution permission is asserted.
 	- retained written melody, chord changes, pickups, repeats and numbered endings; lyrics, slurs, dynamics and articulations other than fermatas omitted.
 	- tempo is an editorial practice suggestion.
+	- put in the lyrics from the same Wikifonia source.
 	TODO:
 	- proofread the complete melody, harmony and form against a printed edition and check by ear.
 	- verify source attribution, copyright notice and reuse terms; only the archived MusicXML notice is retained.
@@ -153,5 +155,16 @@ doOwn = false
 	d''1 |
 	d''2. r4 |
 	\endBar
+}
+{% endif %}
+{% if part == "LyricsWikifonia" %}\lyricmode {
+	You ask how much I need you, must I ex -- plain? I need you, oh, my dar -- ling, like ros --
+	es need rain. You ask how long I'll love you, I'll tell you true, Un -- til The Twelfth Of
+	Nev -- er, I'll still be lov -- ing you. Hold me close, nev -- er let me "go;" Hold me
+	close, melt my heart like A -- pril snow. I'll love you "'till" the blue -- bells for --
+	get to bloom, I'll love "'tillyou" "'till" the clo -- ver has lost it's per -- fume. I'll
+	love you "'till" the po -- ets run out of rhyme, Un -- til The Twelfth Of Nev -- er, And
+	that's a long, long "time;" Un -- till The Twelfth Of Nev -- er, And that's a long, long
+	time.
 }
 {% endif %}

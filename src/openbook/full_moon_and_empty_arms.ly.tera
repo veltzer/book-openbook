@@ -5,6 +5,7 @@ default_version = "Wikifonia"
 title = "Full Moon And Empty Arms"
 style = "Jazz"
 composer = "Buddy Kaye, Ted Mossman"
+poet = "Buddy Kaye, Ted Mossman"
 piece = "Jazz"
 typesetter = "OpenBook contributors (MusicXML import)"
 completion = "3"
@@ -15,7 +16,7 @@ copyright = "All Rights Reserved"
 [versions.Wikifonia]
 doChords = true
 doVoice = true
-doLyrics = false
+doLyrics = true
 doLyricsmore = false
 doLyricsmoremore = false
 doChordBars = false
@@ -34,6 +35,7 @@ doOwn = false
 	- retained the original copyright notice where printed; the underlying music is not relicensed.
 	- retained written measures, pickups, repeats and endings; lyrics omitted.
 	- tempo is an editorial practice suggestion.
+	- put in the lyrics from the same Wikifonia source.
 	TODO:
 	- proofread the music against the referenced PDF and check by ear.
 	- verify editorial chord spacing in measures 3, 7, 13, 19, 23, 31; the archive places successive symbols at the same offset.
@@ -136,5 +138,13 @@ doOwn = false
 	}
 	}
 	\endBar
+}
+{% endif %}
+{% if part == "LyricsWikifonia" %}\lyricmode {
+	Full moon __ and emp -- ty arms __ The moon is there for us to share but where are you? __
+	A night like this __ could weave a mem -- o -- ry __ And ev -- "'ry" kiss __ could start a
+	dream for two. Full moon __ and emp -- ty arms __ To -- night I'll use the ma -- gic moon
+	to wish up -- on. __ And next full moon, __ if my one wish comes true __ my emp -- ty arms
+	will __ be filled with you. you.
 }
 {% endif %}

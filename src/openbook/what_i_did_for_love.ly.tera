@@ -5,6 +5,7 @@ default_version = "Wikifonia"
 title = "What I Did For Love"
 style = "Standard"
 composer = "Marvin Hamlisch"
+poet = "Edward Kleban"
 piece = "Standard"
 typesetter = "OpenBook contributors (MusicXML import)"
 completion = "3"
@@ -16,7 +17,7 @@ copyrightextra = "Archived MusicXML notice retained; underlying music is not rel
 [versions.Wikifonia]
 doChords = true
 doVoice = true
-doLyrics = false
+doLyrics = true
 doLyricsmore = false
 doLyricsmoremore = false
 doChordBars = false
@@ -37,6 +38,7 @@ doOwn = false
 	- retained written melody, chord changes, pickups, repeats and numbered endings; lyrics omitted.
 	- imported explicit 7alt symbols using the book's altered-dominant notation where present.
 	- tempo is an editorial practice suggestion.
+	- put in the lyrics from the same Wikifonia source.
 	TODO:
 	- proofread the complete melody, harmony and form against the referenced PDF and check by ear.
 	- verify source attribution, copyright notice and reuse terms against the scan; only the archived MusicXML notice is retained.
@@ -151,5 +153,16 @@ doOwn = false
 	r4 d'8 e'8 f'8 b'8 ~ b'4 |
 	c''1 |
 	\endBar
+}
+{% endif %}
+{% if part == "LyricsWikifonia" %}\lyricmode {
+	Kiss to -- day __ good bye __ the sweet -- ness and the sor -- row __ We did what __ we
+	had to do, __ And I can't re -- gret __ what I did for love. __ what I did for __ love. __
+	Look my eyes __ are dry, __ the fift was ours to bor -- row. __ It's as if __ we al --
+	ways knew, __ But I won't for -- get __ what I did for love, __ what I did "for~love." __ _
+	Gone, __ love is nev -- er gone, __ as we trav -- el on, __ love's what we'll re -- mem --
+	ber. Kiss to -- day __ good -- bye __ and point me t'ward to -- mor -- row __ Wish me luck __
+	the same __ to you. __ Won't for -- get, __ can't re -- get -- what I did __ for love.
+	what I did for __ love. What I did for __ love.
 }
 {% endif %}

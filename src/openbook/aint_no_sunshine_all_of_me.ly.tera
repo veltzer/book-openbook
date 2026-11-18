@@ -5,6 +5,7 @@ default_version = "Wikifonia"
 title = "Ain't No Sunshine (All Of Me)"
 style = "Jazz"
 composer = "Bill Withers"
+poet = "Bill Withers"
 piece = "Standard"
 typesetter = "OpenBook contributors (MusicXML import)"
 completion = "3"
@@ -16,8 +17,8 @@ copyrightextra = "Archived MusicXML notice retained; underlying music is not rel
 [versions.Wikifonia]
 doChords = true
 doVoice = true
-doLyrics = false
-doLyricsmore = false
+doLyrics = true
+doLyricsmore = true
 doLyricsmoremore = false
 doChordBars = false
 doGuitar = false
@@ -37,6 +38,7 @@ doOwn = false
 	- retained written melody, chord changes, pickups, repeats and numbered endings; lyrics omitted.
 	- imported explicit 7alt symbols using the book's altered-dominant notation where present.
 	- tempo is an editorial practice suggestion.
+	- put in the lyrics from the same Wikifonia source.
 	TODO:
 	- proofread the complete melody, harmony and form against the referenced PDF and check by ear.
 	- verify source attribution, copyright notice and reuse terms against the scan; only the archived MusicXML notice is retained.
@@ -121,5 +123,23 @@ doOwn = false
 	a'4 r4 r4 r4 _ "[Repeat four times]" |
 	}
 	\endBar
+}
+{% endif %}
+{% if part == "LyricsWikifonia" %}\lyricmode {
+	Ain't No Sun -- shine when she's gone It's not warm __ when __ she's a -- way Ain't no
+	sun -- shine when she's gone __ _ and she's al -- ways gone too long an -- y -- time __
+	she goes a -- way -- and I know I Know I know __ i know i know i know i know __ i know i
+	know i know i know i __ know i know i know i know i know __ i know i know i know i know __
+	i know i know i know i know __ i know i know i know hey __ i ough -- ta leave the young
+	thing a -- lone __ _ but ain't no sun -- shine when she's gone __ _ _ _ Ain't No Sun --
+	shine when she's gone On -- ly dark -- ness __ ev -- "'ry" -- day Ain't no sun -- shine
+	when she's gone __ _ and this house just ain't no home an -- y -- time __ she goes a --
+	way -- an -- y -- time __ she goes a -- way
+}
+{% endif %}
+{% if part == "LyricsmoreWikifonia" %}\lyricmode {
+	Won -- der this __ time where she's gone won -- der if __ she's __ gone to stay ain't no
+	sun -- shine when she's gone __ _ and this house just ain't no home an -- y -- time __ she
+	goes a -- way
 }
 {% endif %}

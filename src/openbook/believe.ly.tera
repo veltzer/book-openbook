@@ -5,6 +5,7 @@ default_version = "Wikifonia"
 title = "Believe"
 style = "Standard"
 composer = "Alan Silvestri"
+poet = "Glen Ballard"
 piece = "Standard"
 typesetter = "OpenBook contributors (MusicXML import)"
 completion = "3"
@@ -16,8 +17,8 @@ copyrightextra = "Archived MusicXML notice retained; underlying music is not rel
 [versions.Wikifonia]
 doChords = true
 doVoice = true
-doLyrics = false
-doLyricsmore = false
+doLyrics = true
+doLyricsmore = true
 doLyricsmoremore = false
 doChordBars = false
 doGuitar = false
@@ -37,6 +38,7 @@ doOwn = false
 	- retained written melody, chord changes, pickups, repeats and numbered endings; lyrics omitted.
 	- imported explicit 7alt symbols using the book's altered-dominant notation where present.
 	- tempo is an editorial practice suggestion.
+	- put in the lyrics from the same Wikifonia source.
 	TODO:
 	- proofread the complete melody, harmony and form against the referenced PDF and check by ear.
 	- verify source attribution, copyright notice and reuse terms against the scan; only the archived MusicXML notice is retained.
@@ -164,5 +166,25 @@ doOwn = false
 	e''4 ^ "Repeat ad lib. and fade." b'8 b8 b'4 b'4 |
 	}
 	\endBar
+}
+{% endif %}
+{% if part == "LyricsWikifonia" %}\lyricmode {
+	Chil -- dren __ sleep -- ing, __ snow is soft -- ly fall -- ing. __ Dreams are call --
+	ing __ like bells in __ the dis __ tance. We were __ dream -- ers, __ not so long __ a --
+	go, __ but one by one, we __ _ all had __ to grow __ up. When it seems __ the ma -- gic
+	slipped a -- way, we find it all __ a -- gain __ on Christ -- mas __ day. Be lieve in what
+	your heart __ is say -- ing, hear the mel -- o -- dy __ that's play -- ing. There's no
+	time to waste, __ there's so much to cel -- e -- brate. __ Be -- lieve in what you feel __
+	in -- side __ and give your dreams the wings __ to fly. You have ev -- "'ry" -- thing you __
+	need __ if you just __ be -- lieve _ be -- lieve. If you just __ be -- lieve, if you just __
+	be -- lieve, if your just __ be -- lieve. Just be -- lieve, just __ be -- lieve.
+}
+{% endif %}
+{% if part == "LyricsmoreWikifonia" %}\lyricmode {
+	Trains move __ quick -- ly __ to their jour -- neys end. _ Des -- ti -- na -- tions __
+	are where we __ be -- "gin~a" -- gain. Ships go __ sail -- ing, __ far a -- cross __ the
+	sea, __ _ trust -- ing star -- light __ to get where __ they "need~to" __ be. When it
+	seems __ that we __ have lost our way, we find our -- selves __ a -- gain __ on Christ --
+	mas __ day.
 }
 {% endif %}

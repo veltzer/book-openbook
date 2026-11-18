@@ -5,6 +5,7 @@ default_version = "Wikifonia"
 title = "Happiness Is A Thing Called Joe"
 style = "Jazz"
 composer = "Harold Arlen"
+poet = "E. Y. Harburg"
 piece = "Standard"
 typesetter = "OpenBook contributors (MusicXML import)"
 completion = "3"
@@ -16,7 +17,7 @@ copyrightextra = "Archived MusicXML notice retained; underlying music is not rel
 [versions.Wikifonia]
 doChords = true
 doVoice = true
-doLyrics = false
+doLyrics = true
 doLyricsmore = false
 doLyricsmoremore = false
 doChordBars = false
@@ -37,6 +38,7 @@ doOwn = false
 	- retained written melody, chord changes, pickups, repeats and numbered endings; lyrics omitted.
 	- imported explicit 7alt symbols using the book's altered-dominant notation where present.
 	- tempo is an editorial practice suggestion.
+	- put in the lyrics from the same Wikifonia source.
 	TODO:
 	- proofread the complete melody, harmony and form against the referenced PDF and check by ear.
 	- verify source attribution, copyright notice and reuse terms against the scan; only the archived MusicXML notice is retained.
@@ -154,5 +156,15 @@ doOwn = false
 	}
 	}
 	\endBar
+}
+{% endif %}
+{% if part == "LyricsWikifonia" %}\lyricmode {
+	It seems like hap -- pi -- ness is "jes'" a thing called Joe. __ He's got a smile that
+	makes the li -- lacs wan -- na grow, __ He's got a way the makes the an -- gels heave a
+	sigh, __ When they know Lit -- tle Joe's pass -- ing by. __ Some -- time the cab -- ins
+	gloom -- y "an'" the tab -- le bare, __ Then he'll kiss me "an'" it's Christ -- mas ev --
+	"'ry" -- where, __ Troub -- les fly a -- way "an'" life is eas -- y go, __ Does he love me
+	good, that's all I need to know, __ Seems like hap -- pi -- ness is "jes'" a thing called
+	Joe. __ It seem like Joe. __
 }
 {% endif %}

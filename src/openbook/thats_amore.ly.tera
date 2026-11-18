@@ -5,6 +5,7 @@ default_version = "Wikifonia"
 title = "That's Amore"
 style = "Jazz"
 composer = "Harry Warren, Joe Brooks"
+poet = "Joe Brooks"
 piece = "Standard"
 typesetter = "OpenBook contributors (MusicXML import)"
 completion = "3"
@@ -16,7 +17,7 @@ copyrightextra = "Archived MusicXML notice retained; underlying music is not rel
 [versions.Wikifonia]
 doChords = true
 doVoice = true
-doLyrics = false
+doLyrics = true
 doLyricsmore = false
 doLyricsmoremore = false
 doChordBars = false
@@ -35,6 +36,7 @@ doOwn = false
 	- retained the archived MusicXML rights notice; no redistribution permission is asserted.
 	- retained written melody, chord changes, pickups, repeats and numbered endings; lyrics, slurs, dynamics and articulations other than fermatas omitted.
 	- tempo is an editorial practice suggestion.
+	- put in the lyrics from the same Wikifonia source.
 	TODO:
 	- proofread the complete melody, harmony and form against a printed edition and check by ear.
 	- verify source attribution, copyright notice and reuse terms; only the archived MusicXML notice is retained.
@@ -189,5 +191,16 @@ doOwn = false
 	bes'2. |
 	R2. |
 	\endBar
+}
+{% endif %}
+{% if part == "LyricsWikifonia" %}\lyricmode {
+	When the moon hits your eye like a big piz -- za pie that's a -- mor -- e when the world
+	seems to shine like you've had too much wine that's a -- mor -- e Bells will ring, ting --
+	a -- ling -- a ling ting -- a -- ling -- a -- ling and you'll sing Vee -- ta bel -- la
+	Hearts will play tip -- py tip -- py tay tip -- py tip -- py tay like a gay tar -- an --
+	tel -- la when the stars make you drool just like pas -- ta -- fa -- zool that's a -- mor --
+	e when you dance down the street with a cloud at your feed you're in love when you walk in
+	a dream but you know you're not dream -- ing sig -- nor e Scuz za me but you see back in
+	old Na -- po -- li that's a -- mor -- _ e. __
 }
 {% endif %}

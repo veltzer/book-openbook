@@ -5,6 +5,7 @@ default_version = "Wikifonia"
 title = "Are You Havin' Any Fun"
 style = "Jazz"
 composer = "Sammy Fain"
+poet = "Jack Yellen"
 piece = "Standard"
 typesetter = "OpenBook contributors (MusicXML import)"
 completion = "3"
@@ -16,7 +17,7 @@ copyrightextra = "Archived MusicXML notice retained; underlying music is not rel
 [versions.Wikifonia]
 doChords = true
 doVoice = true
-doLyrics = false
+doLyrics = true
 doLyricsmore = false
 doLyricsmoremore = false
 doChordBars = false
@@ -37,6 +38,7 @@ doOwn = false
 	- retained written melody, chord changes, pickups, repeats and numbered endings; lyrics omitted.
 	- imported explicit 7alt symbols using the book's altered-dominant notation where present.
 	- tempo is an editorial practice suggestion.
+	- put in the lyrics from the same Wikifonia source.
 	TODO:
 	- proofread the complete melody, harmony and form against the referenced PDF and check by ear.
 	- verify source attribution, copyright notice and reuse terms against the scan; only the archived MusicXML notice is retained.
@@ -148,5 +150,16 @@ doOwn = false
 	}
 	}
 	\endBar
+}
+{% endif %}
+{% if part == "LyricsWikifonia" %}\lyricmode {
+	Are you hav -- "in'" an -- y fun? __ What "y'" get -- "tin'" out "o'" liv -- "in'?" __
+	What good is what you've got __ if you're not hav -- "in'" an -- y fun? __ Are you hav --
+	"in'" an -- y laughs? __ Are you get -- "tin'" an -- y lov -- "in'?" __ If oth -- er peo --
+	ple do __ so can "you;" have a lit -- tle fun. Af -- ter the hon -- ey's in __ the comb __
+	lit -- tle bees go out and "play;" __ E -- ven the old gray mare down home __ has got to
+	have hay. Hey! Bet -- ter have a lit -- tle fun. __ You ain't gon -- na live for -- ev --
+	"er;" __ Be -- fore you're old and gray __ still o -- kay. __ Have your lit -- tle fun,
+	son! Have your lit -- tle fun! Are you hav -- "in'" an -- y fun!
 }
 {% endif %}

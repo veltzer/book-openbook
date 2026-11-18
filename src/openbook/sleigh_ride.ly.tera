@@ -5,6 +5,7 @@ default_version = "Wikifonia"
 title = "Sleigh Ride"
 style = "Jazz"
 composer = "Leroy Anderson"
+poet = "Leroy Anderson"
 piece = "Standard"
 typesetter = "OpenBook contributors (MusicXML import)"
 completion = "3"
@@ -16,8 +17,8 @@ copyrightextra = "Archived MusicXML notice retained; underlying music is not rel
 [versions.Wikifonia]
 doChords = true
 doVoice = true
-doLyrics = false
-doLyricsmore = false
+doLyrics = true
+doLyricsmore = true
 doLyricsmoremore = false
 doChordBars = false
 doGuitar = false
@@ -35,6 +36,7 @@ doOwn = false
 	- retained the archived MusicXML rights notice; no redistribution permission is asserted.
 	- retained written melody, chord changes, pickups, repeats and numbered endings; lyrics, slurs, dynamics and articulations other than fermatas omitted.
 	- tempo is an editorial practice suggestion.
+	- put in the lyrics from the same Wikifonia source.
 	TODO:
 	- proofread the complete melody, harmony and form against a printed edition and check by ear.
 	- verify source attribution, copyright notice and reuse terms; only the archived MusicXML notice is retained.
@@ -129,5 +131,23 @@ doOwn = false
 	c'8 c''4 c''8 c''4 r4 |
 	}
 	\endBar
+}
+{% endif %}
+{% if part == "LyricsWikifonia" %}\lyricmode {
+	Just hear those sleigh bells jin -- gl -- _ ring -- ting -- tin -- gl -- ing too __ Come
+	on it's love -- ly weath -- er for a sleigh ride to -- get -- her with you __ Out -- side
+	the sleigh bells jin -- gl -- _ ring -- ting -- tin -- gl -- ing too __ Come on _ love --
+	ly weath -- er for a sleigh ride to -- get -- her with you __ Gid -- dy -- yup Gid -- dy --
+	yup Gid -- dy -- yup let's go __ Let's look at the snow. __ we're rid -- ing in a won --
+	der -- land of snow __ Gid -- dy -- yap Gid -- dy -- yap Gid -- dy -- yap it's grand __ _
+	hold -- ing your hand. __ We're glid -- ing a -- long with a song of a win -- ter -- y
+	fair -- y Land Our cheeks are
+}
+{% endif %}
+{% if part == "LyricsmoreWikifonia" %}\lyricmode {
+	_ _ _ nice and ros -- y _ com -- fy co -- zy are we __ we're snug -- gled up to -- get --
+	her like two birds of a feat -- her would be __ Let's take that nice and ros -- y _ com --
+	fy co -- zy are we __ we're snug -- _ up to -- get -- her like two birds of a feat -- her
+	would be __
 }
 {% endif %}

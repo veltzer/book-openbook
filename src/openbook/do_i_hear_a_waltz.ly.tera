@@ -5,6 +5,7 @@ default_version = "Wikifonia"
 title = "Do I Hear A Waltz"
 style = "Standard"
 composer = "Richard Rodgers"
+poet = "Stephen Sondheim"
 piece = "Standard"
 typesetter = "OpenBook contributors (MusicXML import)"
 completion = "3"
@@ -16,7 +17,7 @@ copyrightextra = "Archived MusicXML notice retained; underlying music is not rel
 [versions.Wikifonia]
 doChords = true
 doVoice = true
-doLyrics = false
+doLyrics = true
 doLyricsmore = false
 doLyricsmoremore = false
 doChordBars = false
@@ -37,6 +38,7 @@ doOwn = false
 	- retained written melody, chord changes, pickups, repeats and numbered endings; lyrics omitted.
 	- imported explicit 7alt symbols using the book's altered-dominant notation where present.
 	- tempo is an editorial practice suggestion.
+	- put in the lyrics from the same Wikifonia source.
 	TODO:
 	- proofread the complete melody, harmony and form against the referenced PDF and check by ear.
 	- verify source attribution, copyright notice and reuse terms against the scan; only the archived MusicXML notice is retained.
@@ -199,5 +201,15 @@ doOwn = false
 	r2 d'4 |
 	r4 r2 |
 	\endBar
+}
+{% endif %}
+{% if part == "LyricsWikifonia" %}\lyricmode {
+	Do I hear a waltz __ ver -- y odd but I hear a waltz __ there is -- nt a band and I dont
+	un -- der -- stand it at all __ I cant hear a waltz __ oh my lord there it goes a -- gain __
+	why is no -- bod -- y danc -- ing __ in the street? __ cant they __ hear the beat __ ma --
+	gi -- cal mys -- ti -- cal mir -- a -- cle __ can it be __ is it true __ things are im --
+	pos -- si -- bly lyr -- i -- cal __ is it me __ no its you __ I do hear a waltz __ I see
+	you and I hear a waltz __ its what I've been wait -- ing for all my life _ to hear a
+	waltz. __
 }
 {% endif %}

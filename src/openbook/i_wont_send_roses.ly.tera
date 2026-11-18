@@ -5,6 +5,7 @@ default_version = "Wikifonia"
 title = "I Won't Send Roses"
 style = "Standard"
 composer = "Jerry Herman"
+poet = "Jerry Herman"
 piece = "Standard"
 typesetter = "OpenBook contributors (MusicXML import)"
 completion = "3"
@@ -16,7 +17,7 @@ copyrightextra = "Archived MusicXML notice retained; underlying music is not rel
 [versions.Wikifonia]
 doChords = true
 doVoice = true
-doLyrics = false
+doLyrics = true
 doLyricsmore = false
 doLyricsmoremore = false
 doChordBars = false
@@ -37,6 +38,7 @@ doOwn = false
 	- retained written melody, chord changes, pickups, repeats and numbered endings; lyrics omitted.
 	- imported explicit 7alt symbols using the book's altered-dominant notation where present.
 	- tempo is an editorial practice suggestion.
+	- put in the lyrics from the same Wikifonia source.
 	TODO:
 	- proofread the complete melody, harmony and form against the referenced PDF and check by ear.
 	- verify source attribution, copyright notice and reuse terms against the scan; only the archived MusicXML notice is retained.
@@ -129,5 +131,13 @@ doOwn = false
 	b1 |
 	c'1 |
 	\endBar
+}
+{% endif %}
+{% if part == "LyricsWikifonia" %}\lyricmode {
+	I won't send ros -- es or hold the "door;" I won't re -- mem -- ber which dress you wore.
+	My heart is too much ic con -- trol, __ the lack of ro -- mance in my soul __ will turn
+	you grey, kid, so stay a -- way, kid. For -- get my shoul -- der when you're in need. For --
+	get -- ting birth -- days is guar -- an -- teed. __ And should I love you, you woukd be
+	the last to know. __ I won't send ros -- es and ros -- es suit you so.
 }
 {% endif %}

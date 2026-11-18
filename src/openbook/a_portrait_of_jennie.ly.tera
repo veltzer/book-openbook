@@ -5,6 +5,7 @@ default_version = "Wikifonia"
 title = "A Portrait of Jennie"
 style = "Jazz"
 composer = "J. Russell Robinson, Gordon Burge"
+poet = "Gordon Burge"
 piece = "Standard"
 typesetter = "OpenBook contributors (MusicXML import)"
 completion = "3"
@@ -16,7 +17,7 @@ copyrightextra = "Archived MusicXML notice retained; underlying music is not rel
 [versions.Wikifonia]
 doChords = true
 doVoice = true
-doLyrics = false
+doLyrics = true
 doLyricsmore = false
 doLyricsmoremore = false
 doChordBars = false
@@ -35,6 +36,7 @@ doOwn = false
 	- retained the archived MusicXML rights notice; no redistribution permission is asserted.
 	- retained written melody, chord changes, pickups, repeats and numbered endings; lyrics, slurs, dynamics and articulations other than fermatas omitted.
 	- tempo is an editorial practice suggestion.
+	- put in the lyrics from the same Wikifonia source.
 	TODO:
 	- proofread the complete melody, harmony and form against a printed edition and check by ear.
 	- verify source attribution, copyright notice and reuse terms; only the archived MusicXML notice is retained.
@@ -125,5 +127,14 @@ doOwn = false
 	as'4 es'4 g'2 |
 	es'1 |
 	\endBar
+}
+{% endif %}
+{% if part == "LyricsWikifonia" %}\lyricmode {
+	A por -- trait of Jen -- nie __ more prec -- ious to me __ than a mas -- ter -- piece how --
+	ev -- er fam -- ous it be. The por -- trait of Jen -- nie __ is etched in my heart. __
+	where her feat -- ures __ have been sketched __ from the start. Ah, the co -- lor and beau --
+	ty of life. And the glow of her spi -- rit di -- vine. __ all cast in hea -- ven's own de --
+	sign. With a por -- trait of Jen -- nie __ I ne -- ver will part _ For there is -- n't a --
+	ny por -- trait of Jen -- nie is here in my heart.
 }
 {% endif %}

@@ -5,6 +5,7 @@ default_version = "Wikifonia"
 title = "Let's Get Lost"
 style = "Jazz"
 composer = "Jimmy McHugh"
+poet = "Jimmy McHugh"
 piece = "Standard"
 typesetter = "OpenBook contributors (MusicXML import)"
 completion = "3"
@@ -16,7 +17,7 @@ copyrightextra = "Archived MusicXML notice retained; underlying music is not rel
 [versions.Wikifonia]
 doChords = true
 doVoice = true
-doLyrics = false
+doLyrics = true
 doLyricsmore = false
 doLyricsmoremore = false
 doChordBars = false
@@ -37,6 +38,7 @@ doOwn = false
 	- retained written melody, chord changes, pickups, repeats and numbered endings; lyrics omitted.
 	- imported explicit 7alt symbols using the book's altered-dominant notation where present.
 	- tempo is an editorial practice suggestion.
+	- put in the lyrics from the same Wikifonia source.
 	TODO:
 	- proofread the complete melody, harmony and form against the referenced PDF and check by ear.
 	- verify source attribution, copyright notice and reuse terms against the scan; only the archived MusicXML notice is retained.
@@ -152,5 +154,15 @@ doOwn = false
 	es'1 ~ |
 	es'1 |
 	\endBar
+}
+{% endif %}
+{% if part == "LyricsWikifonia" %}\lyricmode {
+	The part -- y's rath -- er dull, is -- n't it? We'd love to steal a -- way, would -- n't
+	we? So let's not ev -- en ask should we, or should -- n't we? __ Lets get lost, __ lost in
+	each oth -- er's arms. Let's get lost, __ let them send out a -- larms. And though they'll
+	think us rath -- er rude, __ let's tell the world we're in that cra -- zy mood. Let's de --
+	frost, __ in a ro -- man -- tic mist, let's get crossed __ off ev -- "'ry" -- bod -- y's
+	list. To cel -- e -- brate this night we found each oth -- er, mm, __ let's __ get lost. __
+	lost. __
 }
 {% endif %}

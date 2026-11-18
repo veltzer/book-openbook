@@ -5,6 +5,7 @@ default_version = "Wikifonia"
 title = "The White Cliffs of Dover"
 style = "Jazz"
 composer = "Walter Kent"
+poet = "Nat Burton"
 piece = "Standard"
 typesetter = "OpenBook contributors (MusicXML import)"
 completion = "3"
@@ -16,8 +17,8 @@ copyrightextra = "Archived MusicXML notice retained; underlying music is not rel
 [versions.Wikifonia]
 doChords = true
 doVoice = true
-doLyrics = false
-doLyricsmore = false
+doLyrics = true
+doLyricsmore = true
 doLyricsmoremore = false
 doChordBars = false
 doGuitar = false
@@ -37,6 +38,7 @@ doOwn = false
 	- retained written melody, chord changes, pickups, repeats and numbered endings; lyrics omitted.
 	- imported explicit 7alt symbols using the book's altered-dominant notation where present.
 	- tempo is an editorial practice suggestion.
+	- put in the lyrics from the same Wikifonia source.
 	TODO:
 	- proofread the complete melody, harmony and form against the referenced PDF and check by ear.
 	- verify source attribution, copyright notice and reuse terms against the scan; only the archived MusicXML notice is retained.
@@ -129,5 +131,18 @@ doOwn = false
 	es'4 r4 bes'4 as'8 g'8 |
 	bes'2 r2 |
 	\endBar
+}
+{% endif %}
+{% if part == "LyricsWikifonia" %}\lyricmode {
+	There'll be blue birds ov -- er the white cliffs of Do -- ver to -- mor -- row just you
+	wait and see __ there'll be _ The shep -- herd will tend his sheep the val -- ley will
+	bloom a -- gain and Jim -- my will go to sleep in his own lit -- tle room a -- gain
+	there'll be blue birds o -- ver the white cliffs of Do -- ver to -- mor -- row just you
+	wait and see.
+}
+{% endif %}
+{% if part == "LyricsmoreWikifonia" %}\lyricmode {
+	_ _ love and laugh -- ter and peace e -- ver af -- ter to -- mor -- row when the world is _ _ _
+	free. __
 }
 {% endif %}

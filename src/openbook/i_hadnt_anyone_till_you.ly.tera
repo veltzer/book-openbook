@@ -5,6 +5,7 @@ default_version = "Wikifonia"
 title = "I Hadn't Anyone Till You"
 style = "Jazz"
 composer = "Ray Noble"
+poet = "Ray Noble"
 piece = "Jazz"
 typesetter = "OpenBook contributors (MusicXML import)"
 completion = "3"
@@ -16,7 +17,7 @@ copyrightextra = "Rights for"
 [versions.Wikifonia]
 doChords = true
 doVoice = true
-doLyrics = false
+doLyrics = true
 doLyricsmore = false
 doLyricsmoremore = false
 doChordBars = false
@@ -35,6 +36,7 @@ doOwn = false
 	- retained the original copyright notice where printed; the underlying music is not relicensed.
 	- retained written measures, pickups, repeats and endings; lyrics omitted.
 	- tempo is an editorial practice suggestion.
+	- put in the lyrics from the same Wikifonia source.
 	TODO:
 	- proofread the music against the referenced PDF and check by ear.
 {% endif %}
@@ -131,5 +133,13 @@ doOwn = false
 	f'1 ~ |
 	f'2 r2 |
 	\endBar
+}
+{% endif %}
+{% if part == "LyricsWikifonia" %}\lyricmode {
+	I had -- n't an -- y -- one __ till you, __ I was a lone -- ly one __ till you. __ I used
+	to lie a -- wake and won -- der if there could be __ a some -- one in the wide world just
+	made for me. Now I see, I had to save love __ _ for you, __ I nev -- er gave my love __
+	till you. __ And through my lone -- ly heart de -- mand -- ing it, Cu -- pid took a hand
+	in it, I had -- n't an -- y -- one __ till you. __ I had -- n't you. __
 }
 {% endif %}

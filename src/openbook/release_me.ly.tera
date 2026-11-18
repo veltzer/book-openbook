@@ -5,6 +5,7 @@ default_version = "Wikifonia"
 title = "Release Me"
 style = "Standard"
 composer = "Dub Williams, Eddie Miller, Robert Yount"
+poet = "Dub Williams, Eddie Miller, Robert Yount"
 piece = "Standard"
 typesetter = "OpenBook contributors (MusicXML import)"
 completion = "3"
@@ -16,7 +17,7 @@ copyrightextra = "Archived MusicXML notice retained; underlying music is not rel
 [versions.Wikifonia]
 doChords = true
 doVoice = true
-doLyrics = false
+doLyrics = true
 doLyricsmore = false
 doLyricsmoremore = false
 doChordBars = false
@@ -37,6 +38,7 @@ doOwn = false
 	- retained written melody, chord changes, pickups, repeats and numbered endings; lyrics omitted.
 	- imported explicit 7alt symbols using the book's altered-dominant notation where present.
 	- tempo is an editorial practice suggestion.
+	- put in the lyrics from the same Wikifonia source.
 	TODO:
 	- proofread the complete melody, harmony and form against the referenced PDF and check by ear.
 	- verify source attribution, copyright notice and reuse terms against the scan; only the archived MusicXML notice is retained.
@@ -125,5 +127,12 @@ doOwn = false
 	c''1 ~ |
 	c''2. r4 |
 	\endBar
+}
+{% endif %}
+{% if part == "LyricsWikifonia" %}\lyricmode {
+	Please re lease me let me go __ for I dont love you an -- y more __ to waste our lives
+	would be a sin __ Re -- lease me and let me love a -- gain __ I have found a new love,
+	dear __ and I will al -- ways want her near __ her lips are warm while yours are cold __
+	re -- lease me. my dar -- ling let me go __
 }
 {% endif %}

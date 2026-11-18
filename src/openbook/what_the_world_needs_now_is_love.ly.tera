@@ -5,6 +5,7 @@ default_version = "Wikifonia"
 title = "What The World Needs Now Is Love"
 style = "Jazz"
 composer = "Burt Bacharach"
+poet = "Hal David"
 piece = "Standard"
 typesetter = "OpenBook contributors (MusicXML import)"
 completion = "3"
@@ -16,8 +17,8 @@ copyrightextra = "Archived MusicXML notice retained; underlying music is not rel
 [versions.Wikifonia]
 doChords = true
 doVoice = true
-doLyrics = false
-doLyricsmore = false
+doLyrics = true
+doLyricsmore = true
 doLyricsmoremore = false
 doChordBars = false
 doGuitar = false
@@ -37,6 +38,7 @@ doOwn = false
 	- retained written melody, chord changes, pickups, repeats and numbered endings; lyrics omitted.
 	- imported explicit 7alt symbols using the book's altered-dominant notation where present.
 	- tempo is an editorial practice suggestion.
+	- put in the lyrics from the same Wikifonia source.
 	TODO:
 	- proofread the complete melody, harmony and form against the referenced PDF and check by ear.
 	- verify source attribution, copyright notice and reuse terms against the scan; only the archived MusicXML notice is retained.
@@ -147,5 +149,21 @@ doOwn = false
 	e'8 g'8 g'2 ~ |
 	g'4 r2 |
 	\endBar
+}
+{% endif %}
+{% if part == "LyricsWikifonia" %}\lyricmode {
+	_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ Lord we
+	dont need an -- oth -- er moun -- tain __ there are moun -- tains and hill sides e --
+	nough to climb __ there are O -- ceans -- and riv -- ers e nough to cross __ e nough to
+	last till the end of time __ what the ev -- ry -- one __ No not just for some __ oh but
+	just for ev ry _ _ one
+}
+{% endif %}
+{% if part == "LyricsmoreWikifonia" %}\lyricmode {
+	What the world needs now is love sweet love its the on -- ly thing __ that theres just _
+	too lit -- tle of what the world needs now is love sweet love no not just for some __ but
+	for ev -- ery one __ Lord we dont need an -- oth -- er mead -- ow __ there are corn --
+	fields and wheat -- fields d -- nough to grow __ there are sun -- beams and moon -- beams
+	e -- nough to shine __ oh lis -- ten Lord, if you want to know __
 }
 {% endif %}

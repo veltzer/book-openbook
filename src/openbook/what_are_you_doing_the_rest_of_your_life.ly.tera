@@ -5,6 +5,7 @@ default_version = "Wikifonia"
 title = "What Are You Doing the Rest of Your Life?"
 style = "Jazz"
 composer = "Michel Legrand"
+poet = "Alan Bergman, Marilyn Bergman"
 piece = "Jazz"
 typesetter = "OpenBook contributors (MusicXML import)"
 completion = "3"
@@ -15,7 +16,7 @@ copyright = "1969 EMI Unart Catalog, Inc. Used by Permission of CPP/Belwin, Inc.
 [versions.Wikifonia]
 doChords = true
 doVoice = true
-doLyrics = false
+doLyrics = true
 doLyricsmore = false
 doLyricsmoremore = false
 doChordBars = false
@@ -34,6 +35,7 @@ doOwn = false
 	- retained the original copyright notice where printed; the underlying music is not relicensed.
 	- retained written measures, pickups, repeats and endings; lyrics omitted.
 	- tempo is an editorial practice suggestion.
+	- put in the lyrics from the same Wikifonia source.
 	TODO:
 	- proofread the music against the referenced PDF and check by ear.
 	- verify editorial chord spacing in measures 43; the archive places successive symbols at the same offset.
@@ -149,5 +151,19 @@ doOwn = false
 	R1 |
 	R1 |
 	\endBar
+}
+{% endif %}
+{% if part == "LyricsWikifonia" %}\lyricmode {
+	What are you do -- ing the rest of your life? __ North and south and east and west of
+	your life? __ I have on -- ly one re -- quest of your "life:" __ that you spend it all
+	with "me:" __ All the sea sons and the times of your days. __ All the nick -- les and the
+	dimes of your days. __ Let the rea -- sons and the rhymes of your days __ all be -- gin
+	and end with me. I want to see your face in ev -- "'ry" kind of light. In fields of dawn
+	and for -- ests of the night. And when you stand be -- fore the can -- dles on a cake, Oh,
+	let me be the one to hear the si -- lent wish you make! Those to -- mor -- rows wait --
+	ing deep in your eyes, __ in the world of love you keep in your eyes, __ I'll a -- wa --
+	ken what's a -- sleep in your eyes. __ It may take a kiss or two! __ "Thru'" all of my
+	life, __ sum -- mer, win -- ter, spring, and fall of your life, __ All I ev -- er will re --
+	call of my life is all of my life with you! What are you do -- ing the you!
 }
 {% endif %}

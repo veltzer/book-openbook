@@ -5,6 +5,7 @@ default_version = "Wikifonia"
 title = "Song Sung Blue"
 style = "Jazz"
 composer = "Neil Diamond"
+poet = "Neil Diamond"
 piece = "Standard"
 typesetter = "OpenBook contributors (MusicXML import)"
 completion = "3"
@@ -16,8 +17,8 @@ copyrightextra = "Archived MusicXML notice retained; underlying music is not rel
 [versions.Wikifonia]
 doChords = true
 doVoice = true
-doLyrics = false
-doLyricsmore = false
+doLyrics = true
+doLyricsmore = true
 doLyricsmoremore = false
 doChordBars = false
 doGuitar = false
@@ -35,6 +36,7 @@ doOwn = false
 	- retained the archived MusicXML rights notice; no redistribution permission is asserted.
 	- retained written melody, chord changes, pickups, repeats and numbered endings; lyrics, slurs, dynamics and articulations other than fermatas omitted.
 	- tempo is an editorial practice suggestion.
+	- put in the lyrics from the same Wikifonia source.
 	TODO:
 	- proofread the complete melody, harmony and form against a printed edition and check by ear.
 	- verify source attribution, copyright notice and reuse terms; only the archived MusicXML notice is retained.
@@ -125,5 +127,18 @@ doOwn = false
 	c''1 |
 	}
 	\endBar
+}
+{% endif %}
+{% if part == "LyricsWikifonia" %}\lyricmode {
+	Song sung blue ev -- ry -- bod -- y -- knows one __ song sung blue ev -- ry gar -- den
+	grows one __ me and you are sub -- ject to the blues now and then __ but when you take the
+	blues and make a song you sing them out a -- gain __ sing them out a -- gain. __ _ _ sing
+	it with a cry in your voice __ and be -- fore you know it start to feel -- in good you sim --
+	ply got no choice song sung blue song sung blue
+}
+{% endif %}
+{% if part == "LyricsmoreWikifonia" %}\lyricmode {
+	Song sung blue wee -- in like a wil -- low __ song sung blue sleep -- in on my pil -- low __
+	fun -- ny thing but you can
 }
 {% endif %}

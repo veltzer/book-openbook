@@ -5,6 +5,7 @@ default_version = "Wikifonia"
 title = "Sunny"
 style = "Jazz"
 composer = "Bobby Hebb"
+poet = "Bobby Hebb"
 piece = "Standard"
 typesetter = "OpenBook contributors (MusicXML import)"
 completion = "3"
@@ -16,7 +17,7 @@ copyrightextra = "Archived MusicXML notice retained; underlying music is not rel
 [versions.Wikifonia]
 doChords = true
 doVoice = true
-doLyrics = false
+doLyrics = true
 doLyricsmore = false
 doLyricsmoremore = false
 doChordBars = false
@@ -37,6 +38,7 @@ doOwn = false
 	- retained written melody, chord changes, pickups, repeats and numbered endings; lyrics omitted.
 	- imported explicit 7alt symbols using the book's altered-dominant notation where present.
 	- tempo is an editorial practice suggestion.
+	- put in the lyrics from the same Wikifonia source.
 	TODO:
 	- proofread the complete melody, harmony and form against the referenced PDF and check by ear.
 	- verify source attribution, copyright notice and reuse terms against the scan; only the archived MusicXML notice is retained.
@@ -98,5 +100,12 @@ doOwn = false
 	R1 |
 	}
 	\endBar
+}
+{% endif %}
+{% if part == "LyricsWikifonia" %}\lyricmode {
+	Sun -- ny __ yes -- ter -- day my life was fil -- led with rain __ Sun -- ny __ you smi --
+	led at me and really eased the pain __ Oh the dark days are gone __ and the bright days're
+	here __ my Sun -- ny one __ shi -- nes so sin -- ce -- re __ Sun -- ny one so true __ I
+	love you __
 }
 {% endif %}

@@ -5,6 +5,7 @@ default_version = "Wikifonia"
 title = "Scotch and Soda"
 style = "Jazz"
 composer = "Dave Guard"
+poet = "Dave Guard"
 piece = "Standard"
 typesetter = "OpenBook contributors (MusicXML import)"
 completion = "3"
@@ -16,8 +17,8 @@ copyrightextra = "Archived MusicXML notice retained; underlying music is not rel
 [versions.Wikifonia]
 doChords = true
 doVoice = true
-doLyrics = false
-doLyricsmore = false
+doLyrics = true
+doLyricsmore = true
 doLyricsmoremore = false
 doChordBars = false
 doGuitar = false
@@ -35,6 +36,7 @@ doOwn = false
 	- retained the archived MusicXML rights notice; no redistribution permission is asserted.
 	- retained written melody, chord changes, pickups, repeats and numbered endings; lyrics, slurs, dynamics and articulations other than fermatas omitted.
 	- tempo is an editorial practice suggestion.
+	- put in the lyrics from the same Wikifonia source.
 	TODO:
 	- proofread the complete melody, harmony and form against a printed edition and check by ear.
 	- verify source attribution, copyright notice and reuse terms; only the archived MusicXML notice is retained.
@@ -133,5 +135,18 @@ doOwn = false
 	es'1 ~ |
 	es'2. r4 |
 	\endBar
+}
+{% endif %}
+{% if part == "LyricsWikifonia" %}\lyricmode {
+	Scotch and so -- da, mud in your eye, Bab -- by do I feel high. Oh me, __ Oh my! Do _ I __
+	feel high. __
+}
+{% endif %}
+{% if part == "LyricsmoreWikifonia" %}\lyricmode {
+	Dry mar -- tin __ i jig -- ger of gin, Oh what a spell you've got me in, __ Oh my! Do _ I __
+	feel _ high. __ Peo -- ple won't __ be -- lieve me, __ they'll think that I'm just brag __
+	"gin'." __ But I could feel __ the way I do __ and still be on the wa -- gon. __ All I
+	need __ is one of your smiles, sun -- shine of your eyes, __ oh me, __ oh my, do _ I __
+	feel high -- er than a kite __ can fly! _ Give me lov -- "in'," ba -- by, I feel high. __
 }
 {% endif %}

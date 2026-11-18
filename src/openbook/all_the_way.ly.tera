@@ -5,6 +5,7 @@ default_version = "Wikifonia"
 title = "All The Way"
 style = "Jazz"
 composer = "James Van Heusen"
+poet = "Sammy Cahn"
 piece = "Standard"
 typesetter = "OpenBook contributors (MusicXML import)"
 completion = "3"
@@ -16,7 +17,7 @@ copyrightextra = "Archived MusicXML notice retained; underlying music is not rel
 [versions.Wikifonia]
 doChords = true
 doVoice = true
-doLyrics = false
+doLyrics = true
 doLyricsmore = false
 doLyricsmoremore = false
 doChordBars = false
@@ -37,6 +38,7 @@ doOwn = false
 	- retained written melody, chord changes, pickups, repeats and numbered endings; lyrics omitted.
 	- imported explicit 7alt symbols using the book's altered-dominant notation where present.
 	- tempo is an editorial practice suggestion.
+	- put in the lyrics from the same Wikifonia source.
 	TODO:
 	- proofread the complete melody, harmony and form against the referenced PDF and check by ear.
 	- verify source attribution, copyright notice and reuse terms against the scan; only the archived MusicXML notice is retained.
@@ -130,5 +132,16 @@ doOwn = false
 	as'2 d'2 |
 	es'1 |
 	\endBar
+}
+{% endif %}
+{% if part == "LyricsWikifonia" %}\lyricmode {
+	When some -- bod -- y loves you, it's no good un -- less he loves you all the way. Hap --
+	py to be near you, when you need some -- one to cheer you all the way. Tall -- er __ than
+	the tall -- est tree is, that's how it's got to feel. Deep -- er __ than the deep blue sea
+	is, that's how deep it goes, __ if it's real. When some -- bod -- y needs you, it's no
+	good un -- less he needs you, all the way. Thru the good or lean years and for all the in
+	be -- tween years, come what may. Who knows __ where the road will lead us, on -- ly a
+	fool would say. But if you let me love you, it's for sure I'm gon -- na love you all the
+	way, all the way.
 }
 {% endif %}

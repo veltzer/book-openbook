@@ -5,6 +5,7 @@ default_version = "Wikifonia"
 title = "We Need A Little Christmas"
 style = "Standard"
 composer = "Jerry Herman"
+poet = "Jerry Herman"
 piece = "Standard"
 typesetter = "OpenBook contributors (MusicXML import)"
 completion = "3"
@@ -16,8 +17,8 @@ copyrightextra = "Archived MusicXML notice retained; underlying music is not rel
 [versions.Wikifonia]
 doChords = true
 doVoice = true
-doLyrics = false
-doLyricsmore = false
+doLyrics = true
+doLyricsmore = true
 doLyricsmoremore = false
 doChordBars = false
 doGuitar = false
@@ -37,6 +38,7 @@ doOwn = false
 	- retained written melody, chord changes, pickups, repeats and numbered endings; lyrics omitted.
 	- imported explicit 7alt symbols using the book's altered-dominant notation where present.
 	- tempo is an editorial practice suggestion.
+	- put in the lyrics from the same Wikifonia source.
 	TODO:
 	- proofread the complete melody, harmony and form against the referenced PDF and check by ear.
 	- verify source attribution, copyright notice and reuse terms against the scan; only the archived MusicXML notice is retained.
@@ -187,5 +189,25 @@ doOwn = false
 	g'1 ~ |
 	g'4 r4 r2 |
 	\endBar
+}
+{% endif %}
+{% if part == "LyricsWikifonia" %}\lyricmode {
+	Haul out the hol -- "ly;" __ Put up the tree be -- fore my spir -- it falls __ a -- gain.
+	Fill up the stock -- ings, __ I may be rush -- ing things, but deck the halls __ a -- gain
+	now. __ For we need a lit -- tle hrist -- mas Right this ver -- y min -- ute, Cand -- les
+	in the win -- dow, Car -- ols at the spin -- et. Yes, we need a lit -- tle Christ -- mas
+	Right this ver -- y min -- ute. It has -- n't snowed a sin -- gle flur -- ry, but San --
+	ta, dear, we're in a hur -- "ry;" so need a lit -- tle Christ -- mas now. For we need a
+	lit -- tle mus -- ic, Need a lit -- tle laugh -- ter, Need a lit -- tle sing -- ing Ring --
+	ing thru the raf -- ter, And we need a lit -- tle snap -- py "'Hap" -- py ev -- er af --
+	"ter,'" Need a lit -- tle Christ -- mas now. __
+}
+{% endif %}
+{% if part == "LyricsmoreWikifonia" %}\lyricmode {
+	climb down the chim -- "ney;" __ Turn on the bright -- est string of lights I've ev -- er
+	seen. Slice up the fruit -- cake __ It's time we hang some tin -- sel on that ev -- er --
+	green bough. __ For I've grown a lit -- tle lean -- er, Grown a lit -- tle cold --
+	"er,And" Grown a lit -- tle sad -- der, Grown a lit -- tle old -- er, And I need a litt --
+	tle an -- gel Sit -- ting on my should -- er __
 }
 {% endif %}

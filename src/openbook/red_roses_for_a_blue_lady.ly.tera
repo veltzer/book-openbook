@@ -5,6 +5,7 @@ default_version = "Wikifonia"
 title = "Red Roses for a Blue Lady"
 style = "Standard"
 composer = "Roy Brodsky, Sid Tepper"
+poet = "Roy Brodsky, Sid Tepper"
 piece = "Standard"
 typesetter = "OpenBook contributors (MusicXML import)"
 completion = "3"
@@ -16,7 +17,7 @@ copyrightextra = "Archived MusicXML notice retained; underlying music is not rel
 [versions.Wikifonia]
 doChords = true
 doVoice = true
-doLyrics = false
+doLyrics = true
 doLyricsmore = false
 doLyricsmoremore = false
 doChordBars = false
@@ -37,6 +38,7 @@ doOwn = false
 	- retained written melody, chord changes, pickups, repeats and numbered endings; lyrics omitted.
 	- imported explicit 7alt symbols using the book's altered-dominant notation where present.
 	- tempo is an editorial practice suggestion.
+	- put in the lyrics from the same Wikifonia source.
 	TODO:
 	- proofread the complete melody, harmony and form against the referenced PDF and check by ear.
 	- verify source attribution, copyright notice and reuse terms against the scan; only the archived MusicXML notice is retained.
@@ -169,5 +171,16 @@ doOwn = false
 	c''1 ~ |
 	c''1 |
 	\endBar
+}
+{% endif %}
+{% if part == "LyricsWikifonia" %}\lyricmode {
+	It hap -- pened in a flow -- er shop just the oth -- er day When I went tyo or -- der a
+	bou -- quet __ I walked up to the flo -- rist but be -- fore I could be -- gin. A man
+	rushed in and then I heard him say __ I want some red ros -- es for a blue la -- dy Mis --
+	ter Flor -- ist take my or -- der please __ We had a sil -- ly quar -- rel the oth -- er
+	day __ Hope these pret -- ty flow -- ers chase her blues a -- way __ wrap up some red ros --
+	es for a blue la -- dy send them to the sweet -- est gal in town __ and if they do the
+	trick I'll hur -- ry back to pick your best white or -- chid for her wed -- ding gown. I
+	want some gown. __
 }
 {% endif %}

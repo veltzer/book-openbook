@@ -5,6 +5,7 @@ default_version = "Wikifonia"
 title = "Theme From New York, New York"
 style = "Jazz"
 composer = "John Kander, Fred Ebb"
+poet = "Fred Ebb"
 piece = "Standard"
 typesetter = "OpenBook contributors (MusicXML import)"
 completion = "3"
@@ -16,7 +17,7 @@ copyrightextra = "Archived MusicXML notice retained; underlying music is not rel
 [versions.Wikifonia]
 doChords = true
 doVoice = true
-doLyrics = false
+doLyrics = true
 doLyricsmore = false
 doLyricsmoremore = false
 doChordBars = false
@@ -35,6 +36,7 @@ doOwn = false
 	- retained the archived MusicXML rights notice; no redistribution permission is asserted.
 	- retained written melody, chord changes, pickups, repeats and numbered endings; lyrics, slurs, dynamics and articulations other than fermatas omitted.
 	- tempo is an editorial practice suggestion.
+	- put in the lyrics from the same Wikifonia source.
 	TODO:
 	- proofread the complete melody, harmony and form against a printed edition and check by ear.
 	- verify source attribution, copyright notice and reuse terms; only the archived MusicXML notice is retained.
@@ -223,5 +225,21 @@ doOwn = false
 	es''8 ces''8 es''2. \fermata |
 	r1 |
 	\endBar
+}
+{% endif %}
+{% if part == "LyricsWikifonia" %}\lyricmode {
+	_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ Start spread -- ing the news, you're
+	leav -- ing to -- day I want to be a part of it, New York, __ New York __ Your vag -- a --
+	bond shoes, they are long -- ing to stray, And __ step a -- round the heart of it, New
+	York, __ New York. __ I __ wan -- na wake up in that cit -- y that __ does -- n't sleep.
+	And find you're king of the hill, __ top of the heap. Your small town blues, _ melt -- ing
+	a -- way. I gon -- na make a brand new start __ of it in old New York. __ _ You al -- ways __
+	make it there, __ you make it an -- y -- where. __ It's up to you, New York, New York. Da
+	da da da da da da da da do do day. Ba da da cla da ba ba ba __ ba da in New York, __ New
+	York. __ I __ wan -- na wake up in that ci -- ty that __ does -- n't sleep. And find I'm
+	king of the hill, __ top of the list, __ A num -- ber one, king of the hill. __ These lit --
+	tle town blues, they have all melt -- ed a -- way. And I'm gon -- na make a brand new
+	start __ of it right there __ in old New York. You al -- ways __ make it there, __ you
+	make it an -- y -- where. __ Come on, come through New York, New York. __ New __ _ York.
 }
 {% endif %}

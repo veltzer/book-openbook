@@ -5,6 +5,7 @@ default_version = "Wikifonia"
 title = "L-O-V-E"
 style = "Standard"
 composer = "Bert Kaempfert, Milt Gabler"
+poet = "Bert Kaempfert, Milt Gabler"
 piece = "Standard"
 typesetter = "OpenBook contributors (MusicXML import)"
 completion = "3"
@@ -16,7 +17,7 @@ copyrightextra = "Archived MusicXML notice retained; underlying music is not rel
 [versions.Wikifonia]
 doChords = true
 doVoice = true
-doLyrics = false
+doLyrics = true
 doLyricsmore = false
 doLyricsmoremore = false
 doChordBars = false
@@ -37,6 +38,7 @@ doOwn = false
 	- retained written melody, chord changes, pickups, repeats and numbered endings; lyrics omitted.
 	- imported explicit 7alt symbols using the book's altered-dominant notation where present.
 	- tempo taken from archived MusicXML.
+	- put in the lyrics from the same Wikifonia source.
 	TODO:
 	- proofread the complete melody, harmony and form against the referenced PDF and check by ear.
 	- verify source attribution, copyright notice and reuse terms against the scan; only the archived MusicXML notice is retained.
@@ -149,5 +151,13 @@ doOwn = false
 	g'4 e'4 fis'4 a'4 |
 	g'1 |
 	\endBar
+}
+{% endif %}
+{% if part == "LyricsWikifonia" %}\lyricmode {
+	L is for the way you Look at me. O is for the On -- ly -- one I see. V is Ver y, ver -- y
+	ex tra or di nar y, E is E ven more than an y one that you a dore can Love is all that I
+	can give to you, Love is more than just a game for two. Two in Love can make it, Take my
+	heart and please don't break it. Love was made for me and you. __ you __ That's al most
+	true. __ For me and you.
 }
 {% endif %}

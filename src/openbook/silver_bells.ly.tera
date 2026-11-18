@@ -4,7 +4,8 @@ default_version = "Wikifonia"
 [attributes]
 title = "Silver Bells"
 style = "Jazz"
-composer = "Jay Livingston, Ray Evans ©1950, Jay Livingston, Ray Evans"
+composer = "Jay Livingston, Ray Evans"
+poet = "Jay Livingston, Ray Evans"
 piece = "Standard"
 typesetter = "OpenBook contributors (MusicXML import)"
 completion = "3"
@@ -16,7 +17,7 @@ copyrightextra = "Archived MusicXML notice retained; underlying music is not rel
 [versions.Wikifonia]
 doChords = true
 doVoice = true
-doLyrics = false
+doLyrics = true
 doLyricsmore = false
 doLyricsmoremore = false
 doChordBars = false
@@ -35,6 +36,7 @@ doOwn = false
 	- retained the archived MusicXML rights notice; no redistribution permission is asserted.
 	- retained written melody, chord changes, pickups, repeats and numbered endings; lyrics, slurs, dynamics and articulations other than fermatas omitted.
 	- tempo is an editorial practice suggestion.
+	- put in the lyrics from the same Wikifonia source.
 	TODO:
 	- proofread the complete melody, harmony and form against a printed edition and check by ear.
 	- verify source attribution, copyright notice and reuse terms; only the archived MusicXML notice is retained.
@@ -148,5 +150,13 @@ doOwn = false
 	}
 	}
 	\endBar
+}
+{% endif %}
+{% if part == "LyricsWikifonia" %}\lyricmode {
+	Cit -- y side -- walks, bus -- y side -- walks dressed in hol -- i -- day style, In the
+	air there's a feel -- ing of Christ -- mas __ Chil -- dren laugh -- ing, peo -- ple pass --
+	ing meet -- ing smile af -- ter smile, And on ev -- "'ry" street cor -- ner you "hear;" __
+	Sil -- ver bells __ sil -- ver bells __ It's Christ -- mas time in the cit -- y __ Ring a
+	ling, __ hear them ring, __ Soon it will be Christ -- mas Day. __ Strings of
 }
 {% endif %}

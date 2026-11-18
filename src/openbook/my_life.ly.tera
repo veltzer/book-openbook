@@ -5,6 +5,7 @@ default_version = "Wikifonia"
 title = "My Life"
 style = "Standard"
 composer = "Billy Joel"
+poet = "Billy Joel"
 piece = "Standard"
 typesetter = "OpenBook contributors (MusicXML import)"
 completion = "3"
@@ -16,8 +17,8 @@ copyrightextra = "Archived MusicXML notice retained; underlying music is not rel
 [versions.Wikifonia]
 doChords = true
 doVoice = true
-doLyrics = false
-doLyricsmore = false
+doLyrics = true
+doLyricsmore = true
 doLyricsmoremore = false
 doChordBars = false
 doGuitar = false
@@ -37,6 +38,7 @@ doOwn = false
 	- retained written melody, chord changes, pickups, repeats and numbered endings; lyrics omitted.
 	- imported explicit 7alt symbols using the book's altered-dominant notation where present.
 	- tempo is an editorial practice suggestion.
+	- put in the lyrics from the same Wikifonia source.
 	TODO:
 	- proofread the complete melody, harmony and form against the referenced PDF and check by ear.
 	- verify source attribution, copyright notice and reuse terms against the scan; only the archived MusicXML notice is retained.
@@ -171,5 +173,21 @@ doOwn = false
 	c''1 ^ "Repeat and fade" |
 	}
 	\endBar
+}
+{% endif %}
+{% if part == "LyricsWikifonia" %}\lyricmode {
+	Got a call from an old _ friend we used to be real close said he could -- n't go on the A --
+	mer -- i -- can way Closed the shop sold the house bought a tick -- et to the West Coast
+	Now he gives them a stand -- up rou -- tine in L. A. lone. I nev -- er said you had to of --
+	fer me a sec -- ond chance __ I nev -- er said I was a vic -- tim of cir -- cum -- stance _
+	I still be -- long dont get me wrong you can speak your mind but not on my time
+	"(instrumental)" _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ I don't care what you say an --
+	y more this is my life go a -- head with your own life, leave me a -- lone. __
+}
+{% endif %}
+{% if part == "LyricsmoreWikifonia" %}\lyricmode {
+	I don't need you to wo -- ry for me _ cause I'm al -- right I don't want you to tell me
+	it's time to come home I don't care what you say an -- y -- more _ this is my life Go a --
+	head with your own life _ leave me a -- lone.
 }
 {% endif %}

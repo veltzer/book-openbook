@@ -5,6 +5,7 @@ default_version = "Wikifonia"
 title = "Easy Street"
 style = "Jazz"
 composer = "Alan Rankin Jones"
+poet = "Alan Rankin Jones"
 piece = "Standard"
 typesetter = "OpenBook contributors (MusicXML import)"
 completion = "3"
@@ -16,7 +17,7 @@ copyrightextra = "Archived MusicXML notice retained; underlying music is not rel
 [versions.Wikifonia]
 doChords = true
 doVoice = true
-doLyrics = false
+doLyrics = true
 doLyricsmore = false
 doLyricsmoremore = false
 doChordBars = false
@@ -37,6 +38,7 @@ doOwn = false
 	- retained written melody, chord changes, pickups, repeats and numbered endings; lyrics omitted.
 	- imported explicit 7alt symbols using the book's altered-dominant notation where present.
 	- tempo is an editorial practice suggestion.
+	- put in the lyrics from the same Wikifonia source.
 	TODO:
 	- proofread the complete melody, harmony and form against the referenced PDF and check by ear.
 	- verify source attribution, copyright notice and reuse terms against the scan; only the archived MusicXML notice is retained.
@@ -125,5 +127,16 @@ doOwn = false
 	es'4. f'8 es'4. f'8 |
 	es'1 |
 	\endBar
+}
+{% endif %}
+{% if part == "LyricsWikifonia" %}\lyricmode {
+	Eas -- y Street, __ I'd love to live on Eas -- y Street. __ No -- bo -- dy works on Eas --
+	y Street. __ Just sit a -- round all day, just sit and play the hor -- ses. Life is sweet __
+	for folks that live on Eas -- y Street. __ No week -- ly pay -- ments you must meet __
+	that makes your hair turn gray. __ When op -- por tun -- i -- ty comes knock -- "in'" you
+	just keep on with your rock -- "in'" "'cause" you know your for -- tune's made. __ And if
+	the sun makes you per -- spire _ there's a man that you can hire _ to plant trees so you __
+	can have shade on Eas -- y street, __ I'm tell -- ing "ev'" -- ry one I meet __ If I could
+	live on Eas -- y Street __ I would -- n't want no job to -- day. so please go "'way."
 }
 {% endif %}

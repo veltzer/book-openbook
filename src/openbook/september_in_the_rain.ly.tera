@@ -5,6 +5,7 @@ default_version = "Wikifonia"
 title = "September in the Rain"
 style = "Jazz"
 composer = "Harry Warren"
+poet = "Al Dubin"
 piece = "Jazz"
 typesetter = "OpenBook contributors (MusicXML import)"
 completion = "3"
@@ -15,8 +16,8 @@ copyright = "1937 Warner Bros., Inc. (Renewed) All Rights Reserved. Used by Perm
 [versions.Wikifonia]
 doChords = true
 doVoice = true
-doLyrics = false
-doLyricsmore = false
+doLyrics = true
+doLyricsmore = true
 doLyricsmoremore = false
 doChordBars = false
 doGuitar = false
@@ -35,6 +36,7 @@ doOwn = false
 	- retained written measures, pickups, repeats and endings; lyrics omitted.
 	- restored the three-pass AABA form with separate first, second and third endings from the archived MusicXML.
 	- tempo is an editorial practice suggestion.
+	- put in the lyrics from the same Wikifonia source.
 	TODO:
 	- proofread the music against the referenced PDF and check by ear.
 	- verify editorial chord spacing in measures 8, 20; the archive places successive symbols at the same offset.
@@ -118,5 +120,15 @@ doOwn = false
 	}
 	}
 	\endBar
+}
+{% endif %}
+{% if part == "LyricsWikifonia" %}\lyricmode {
+	The leaves of brown came tum -- bling down, re -- mem -- ber, __ in Sep -- tem -- ber __
+	in the rain. __ The rain. __ To ev -- "'ry" word of love I heard you whis -- per, __ the
+	rain -- drops seemed to play a sweet re -- frain. __ Though rain. __
+}
+{% endif %}
+{% if part == "LyricsmoreWikifonia" %}\lyricmode {
+	_ sun went out just like a dy -- ing em -- ber, __ that Sep -- tem -- ber __ in the
 }
 {% endif %}

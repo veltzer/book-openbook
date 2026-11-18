@@ -5,6 +5,7 @@ default_version = "Wikifonia"
 title = "Mona Lisa"
 style = "Jazz"
 composer = "Jay Livingston, Ray Evans"
+poet = "Jay Livingston, Ray Evans"
 piece = "Standard"
 typesetter = "OpenBook contributors (MusicXML import)"
 completion = "3"
@@ -16,7 +17,7 @@ copyrightextra = "Archived MusicXML notice retained; underlying music is not rel
 [versions.Wikifonia]
 doChords = true
 doVoice = true
-doLyrics = false
+doLyrics = true
 doLyricsmore = false
 doLyricsmoremore = false
 doChordBars = false
@@ -37,6 +38,7 @@ doOwn = false
 	- retained written melody, chord changes, pickups, repeats and numbered endings; lyrics omitted.
 	- imported explicit 7alt symbols using the book's altered-dominant notation where present.
 	- tempo is an editorial practice suggestion.
+	- put in the lyrics from the same Wikifonia source.
 	TODO:
 	- proofread the complete melody, harmony and form against the referenced PDF and check by ear.
 	- verify source attribution, copyright notice and reuse terms against the scan; only the archived MusicXML notice is retained.
@@ -120,5 +122,15 @@ doOwn = false
 	}
 	}
 	\endBar
+}
+{% endif %}
+{% if part == "LyricsWikifonia" %}\lyricmode {
+	Mo -- na Li -- sa, Mo -- na Li -- sa men have named "you;" You're so like the la -- dy
+	with the mys -- tic smile. Is it on -- ly "'cause" you're lone -- ly __ they have blamed
+	you for that Mo -- na Li -- sa strange -- ness __ in your smile? Do you smile to tempt a
+	lov -- er, __ Mo -- na Li -- sa, __ or is this your way to hide a bro -- ken heart? Man --
+	y dreams have been brought to your door -- step. They just lie there, and they lie there. __
+	Are you warm, are you real, Mo -- na Li -- sa, or just a cold and lone -- ly love -- ly
+	work of art? Mo -- na art?
 }
 {% endif %}

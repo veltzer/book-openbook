@@ -5,6 +5,7 @@ default_version = "Wikifonia"
 title = "How To Handle A Woman"
 style = "Standard"
 composer = "Frederick Loewe"
+poet = "Alan Jay Lerner"
 piece = "Standard"
 typesetter = "OpenBook contributors (MusicXML import)"
 completion = "3"
@@ -16,7 +17,7 @@ copyrightextra = "Archived MusicXML notice retained; underlying music is not rel
 [versions.Wikifonia]
 doChords = true
 doVoice = true
-doLyrics = false
+doLyrics = true
 doLyricsmore = false
 doLyricsmoremore = false
 doChordBars = false
@@ -37,6 +38,7 @@ doOwn = false
 	- retained written melody, chord changes, pickups, repeats and numbered endings; lyrics omitted.
 	- imported explicit 7alt symbols using the book's altered-dominant notation where present.
 	- tempo is an editorial practice suggestion.
+	- put in the lyrics from the same Wikifonia source.
 	TODO:
 	- proofread the complete melody, harmony and form against the referenced PDF and check by ear.
 	- verify source attribution, copyright notice and reuse terms against the scan; only the archived MusicXML notice is retained.
@@ -139,5 +141,15 @@ doOwn = false
 	}
 	}
 	\endBar
+}
+{% endif %}
+{% if part == "LyricsWikifonia" %}\lyricmode {
+	How to han -- dle a wom -- an __ There's a way, said a wise old man, __ A way known by ev --
+	"'ry" wom -- an since the whole rig -- ma -- role be -- gan. "'Do" I flat -- ter "her?'" I
+	begged him an -- swer. "'Do" I threat -- en or ca -- jole or plead? Do I brood or play the
+	gay ro -- man -- "cer?'" Said he, smil -- ing, "'No," in -- "deed.'" How to han -- dle a
+	wom -- an __ Mark me well, I will tell you, sir. "'The" way to han -- dle a wom -- an __
+	is to love her, __ Sim -- ply love her, __ Mere -- ly love her, love her, love "her!'" _ _ _ _
+	love "her!'" __
 }
 {% endif %}

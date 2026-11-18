@@ -5,6 +5,7 @@ default_version = "Wikifonia"
 title = "I Told Ya I Love Ya Now Get Out"
 style = "Jazz"
 composer = "Herb Ellis, John Frigo, Lou Carter"
+poet = "Herb Ellis, John Frigo, Lou Carter"
 piece = "Standard"
 typesetter = "OpenBook contributors (MusicXML import)"
 completion = "3"
@@ -16,7 +17,7 @@ copyrightextra = "Archived MusicXML notice retained; underlying music is not rel
 [versions.Wikifonia]
 doChords = true
 doVoice = true
-doLyrics = false
+doLyrics = true
 doLyricsmore = false
 doLyricsmoremore = false
 doChordBars = false
@@ -37,6 +38,7 @@ doOwn = false
 	- retained written melody, chord changes, pickups, repeats and numbered endings; lyrics omitted.
 	- imported explicit 7alt symbols using the book's altered-dominant notation where present.
 	- tempo is an editorial practice suggestion.
+	- put in the lyrics from the same Wikifonia source.
 	TODO:
 	- proofread the complete melody, harmony and form against the referenced PDF and check by ear.
 	- verify source attribution, copyright notice and reuse terms against the scan; only the archived MusicXML notice is retained.
@@ -194,5 +196,18 @@ doOwn = false
 	}
 	}
 	\endBar
+}
+{% endif %}
+{% if part == "LyricsWikifonia" %}\lyricmode {
+	I Told Ya I Love __ Ya, Now Get Out! __ I Told Ya I Love __ Ya, Now Get Out! __ Ev --
+	"'ry" -- thing's cos -- y and ev -- "'ry" -- thing's gone, __ but let's cool it, hon --
+	ey, time march -- es on. I Told Ya I Love __ Ya, Now Get Out! __ There may be times when I
+	need __ ya, there's no doubt. __ Ba -- by, now you're some -- "thin'" I can do with --
+	out. __ Leave your num -- ber and go on home, __ but don't wait with sand -- wich -- es by
+	the "'phone." __ I Told Ya I Love __ Ya, Now Get Out! __ Ba -- by, __ please leave me be.
+	You want a pup -- pet and there's no strings on me. __ Get hep, __ you can leave on the
+	five -- eight -- een. __ Now don't go "'way" say "in'" I've been mean. __ "'Cause" like an --
+	y man I can change my ways, __ and a "'round" trip tick -- et's good for six -- ty days. __
+	I Told Ya I Love __ Ya, Now Get Out __ I
 }
 {% endif %}

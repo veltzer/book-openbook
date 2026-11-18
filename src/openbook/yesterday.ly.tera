@@ -5,6 +5,7 @@ default_version = "Wikifonia"
 title = "Yesterday"
 style = "Jazz"
 composer = "John Lennon, Paul McCartney"
+poet = "John Lennon, Paul McCartney"
 piece = "Standard"
 typesetter = "OpenBook contributors (MusicXML import)"
 completion = "3"
@@ -16,8 +17,8 @@ copyrightextra = "Archived MusicXML notice retained; underlying music is not rel
 [versions.Wikifonia]
 doChords = true
 doVoice = true
-doLyrics = false
-doLyricsmore = false
+doLyrics = true
+doLyricsmore = true
 doLyricsmoremore = false
 doChordBars = false
 doGuitar = false
@@ -37,6 +38,7 @@ doOwn = false
 	- retained written melody, chord changes, pickups, repeats and numbered endings; lyrics omitted.
 	- imported explicit 7alt symbols using the book's altered-dominant notation where present.
 	- tempo is an editorial practice suggestion.
+	- put in the lyrics from the same Wikifonia source.
 	TODO:
 	- proofread the complete melody, harmony and form against the referenced PDF and check by ear.
 	- verify source attribution, copyright notice and reuse terms against the scan; only the archived MusicXML notice is retained.
@@ -113,5 +115,18 @@ doOwn = false
 	f'4 a'4 g'4 d'4 |
 	f'4 a'8 a'8 ~ a'2 ^\fermata |
 	\endBar
+}
+{% endif %}
+{% if part == "LyricsWikifonia" %}\lyricmode {
+	Yes -- ter -- day, all my trou -- bles seemed so far a -- way, Now it looks as though
+	they're here to stay, __ Oh I be -- lieve __ in Yes -- ter day. __ Why she had to go I
+	don't know, she would -- n't say. I said some -- thing wrong, now I long for Yes -- ter --
+	day. Yes -- ter -- day, love was such an eas -- y game to play Now I need a place to hide
+	a -- way __ Oh I be -- lieve __ in Yes -- ter -- day __ Mm mm mm mm mm mm mm. __
+}
+{% endif %}
+{% if part == "LyricsmoreWikifonia" %}\lyricmode {
+	Sud -- den -- ly, I'm not half the man I used to be. There's a shad -- ow hang -- ing o --
+	ver me. __ Oh Yes -- ter -- day __ came sud -- den -- ly. __
 }
 {% endif %}

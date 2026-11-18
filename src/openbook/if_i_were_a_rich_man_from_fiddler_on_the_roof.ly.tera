@@ -5,6 +5,7 @@ default_version = "Wikifonia"
 title = "If I Were A Rich Man (from Fiddler On The Roof)"
 style = "Standard"
 composer = "Jerry Bock"
+poet = "Sheldon Harnick"
 piece = "Standard"
 typesetter = "OpenBook contributors (MusicXML import)"
 completion = "3"
@@ -16,8 +17,8 @@ copyrightextra = "Archived MusicXML notice retained; underlying music is not rel
 [versions.Wikifonia]
 doChords = true
 doVoice = true
-doLyrics = false
-doLyricsmore = false
+doLyrics = true
+doLyricsmore = true
 doLyricsmoremore = false
 doChordBars = false
 doGuitar = false
@@ -37,6 +38,7 @@ doOwn = false
 	- retained written melody, chord changes, pickups, repeats and numbered endings; lyrics omitted.
 	- imported explicit 7alt symbols using the book's altered-dominant notation where present.
 	- tempo is an editorial practice suggestion.
+	- put in the lyrics from the same Wikifonia source.
 	TODO:
 	- proofread the complete melody, harmony and form against the referenced PDF and check by ear.
 	- verify source attribution, copyright notice and reuse terms against the scan; only the archived MusicXML notice is retained.
@@ -178,5 +180,23 @@ doOwn = false
 	c''1 ~ |
 	c''1 |
 	\endBar
+}
+{% endif %}
+{% if part == "LyricsWikifonia" %}\lyricmode {
+	If I Were A Rich Man Dai -- dle dee -- dle dai -- dle dig -- guh dig -- guh dee -- dle
+	dai -- dle dum All day long I'd bid -- dy bid -- dy bum if I were a wealth -- y man dig --
+	guh dig -- guh dee -- dle dai -- dle man. I'd build a big tall house with rooms by the doz --
+	en Right in the mid -- dle of the town A fine tin roof with real wood -- en floors be --
+	low There would be no -- where just for show I'd fill my yard with chicks and tur -- keys
+	and geese and ducks for the town to see and hear Squawk -- ing just as nois -- i -- ly as
+	they can And each loud quack and cluck and gob -- ble and honk will land like a trum --
+	pet on the ear As if to say here lives a wealth -- y man __ You de -- creed I should be
+	what I am Would I spoil some Vast e -- ter -- nal plan If I were a wealth -- y man __
+}
+{% endif %}
+{% if part == "LyricsmoreWikifonia" %}\lyricmode {
+	_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _
+	one long stair -- case just go -- ing up And one ev en lon -- ger com -- ing down And one
+	more lead -- ing
 }
 {% endif %}

@@ -5,6 +5,7 @@ default_version = "Wikifonia"
 title = "AMOR"
 style = "Jazz"
 composer = "Gabriel Ruiz"
+poet = "Sunny Skylar"
 piece = "Standard"
 typesetter = "OpenBook contributors (MusicXML import)"
 completion = "3"
@@ -16,7 +17,7 @@ copyrightextra = "Archived MusicXML notice retained; underlying music is not rel
 [versions.Wikifonia]
 doChords = true
 doVoice = true
-doLyrics = false
+doLyrics = true
 doLyricsmore = false
 doLyricsmoremore = false
 doChordBars = false
@@ -37,6 +38,7 @@ doOwn = false
 	- retained written melody, chord changes, pickups, repeats and numbered endings; lyrics omitted.
 	- imported explicit 7alt symbols using the book's altered-dominant notation where present.
 	- tempo is an editorial practice suggestion.
+	- put in the lyrics from the same Wikifonia source.
 	TODO:
 	- proofread the complete melody, harmony and form against the referenced PDF and check by ear.
 	- verify source attribution, copyright notice and reuse terms against the scan; only the archived MusicXML notice is retained.
@@ -157,5 +159,15 @@ doOwn = false
 	r4 r2*3/2 |
 	r4 r4 r2 |
 	\endBar
+}
+{% endif %}
+{% if part == "LyricsWikifonia" %}\lyricmode {
+	_ _ _ _ _ _ _ _ _ A -- mor, A -- mor -- A mor -- This word so sweet that I re peat Means
+	I a dore you __ _ more, A mor my _ Would you de -- ny -- this heart that I have placed be --
+	fore you __ I can't find an -- oth -- er word with mean -- ing so clear My _ try to whis --
+	per sweet -- er things in your ear But some -- how or oth -- er noth -- ing sounds quite
+	so dear, As this soft ca -- ress -- ing word I know A -- mor A -- mor A -- mor __ When
+	you're a -- way there is no day and nights are lonely _ A -- mor A -- mor my love make
+	life di -- vine, Say you'll be mine, and love me on -- "ly.~A" __
 }
 {% endif %}

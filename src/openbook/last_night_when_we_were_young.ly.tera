@@ -5,6 +5,7 @@ default_version = "Wikifonia"
 title = "Last Night When We Were Young"
 style = "Jazz"
 composer = "Harold Arlen"
+poet = "E. Y. Harburg"
 piece = "Standard"
 typesetter = "OpenBook contributors (MusicXML import)"
 completion = "3"
@@ -16,8 +17,8 @@ copyrightextra = "Archived MusicXML notice retained; underlying music is not rel
 [versions.Wikifonia]
 doChords = true
 doVoice = true
-doLyrics = false
-doLyricsmore = false
+doLyrics = true
+doLyricsmore = true
 doLyricsmoremore = false
 doChordBars = false
 doGuitar = false
@@ -37,6 +38,7 @@ doOwn = false
 	- retained written melody, chord changes, pickups, repeats and numbered endings; lyrics omitted.
 	- imported explicit 7alt symbols using the book's altered-dominant notation where present.
 	- tempo is an editorial practice suggestion.
+	- put in the lyrics from the same Wikifonia source.
 	TODO:
 	- proofread the complete melody, harmony and form against the referenced PDF and check by ear.
 	- verify source attribution, copyright notice and reuse terms against the scan; only the archived MusicXML notice is retained.
@@ -117,5 +119,18 @@ doOwn = false
 	g'1 ~ |
 	g'1 |
 	\endBar
+}
+{% endif %}
+{% if part == "LyricsWikifonia" %}\lyricmode {
+	Last night __ when we were young love was a star, __ a song un -- sung. Life was so new, __
+	so real so right. A -- ges a go, last night. To _ that spring had de -- pen -- ded on mere --
+	ly "this:" a look, a kiss. To think _ that some -- thing so splen -- did could slip a --
+	way with one lon -- ly day break. SO now __ let's rem -- i -- nisce and re -- col -- lect
+	the sighs and the kiss -- es, the arms that clung, when we were young last night. __
+}
+{% endif %}
+{% if part == "LyricsmoreWikifonia" %}\lyricmode {
+	_ day __ the world is old. You flew a -- way __ and time grew cold. Where is that star __
+	that shone so bright? A -- ges a go last night. To think
 }
 {% endif %}

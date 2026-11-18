@@ -5,6 +5,7 @@ default_version = "Wikifonia"
 title = "Come Closer To Me"
 style = "Standard"
 composer = "Osvaldo Farres"
+poet = "Al Stewart(Eng.)"
 piece = "Standard"
 typesetter = "OpenBook contributors (MusicXML import)"
 completion = "3"
@@ -16,7 +17,7 @@ copyrightextra = "Archived MusicXML notice retained; underlying music is not rel
 [versions.Wikifonia]
 doChords = true
 doVoice = true
-doLyrics = false
+doLyrics = true
 doLyricsmore = false
 doLyricsmoremore = false
 doChordBars = false
@@ -37,6 +38,7 @@ doOwn = false
 	- retained written melody, chord changes, pickups, repeats and numbered endings; lyrics omitted.
 	- imported explicit 7alt symbols using the book's altered-dominant notation where present.
 	- tempo is an editorial practice suggestion.
+	- put in the lyrics from the same Wikifonia source.
 	TODO:
 	- proofread the complete melody, harmony and form against the referenced PDF and check by ear.
 	- verify source attribution, copyright notice and reuse terms against the scan; only the archived MusicXML notice is retained.
@@ -185,5 +187,19 @@ doOwn = false
 	}
 	f''1 |
 	\endBar
+}
+{% endif %}
+{% if part == "LyricsWikifonia" %}\lyricmode {
+	_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ Moon -- light was made for a June night, __ And June
+	nights were made, dear, for love and ro -- mance, For heav -- en -- ly kiss -- es, for
+	lips sweet and ten -- der, __ On this night of splen -- dor, _ _ _ _ _ You're so far a --
+	"way;" _ _ _ _ _ _ _ _ Come Clos -- er To Me __ so I __ can see heav -- en in your eyes, _ _ _ _ _ _
+	Come clos -- er to me, __ so I __ can be close to Par -- a -- "dise;" _ _ _ _ _ _ Thrill
+	me with your kiss -- es __ Let me learn what bliss is, __ Kiss me once and then We'll kiss
+	and kiss a -- gain, And life will be di -- "vine;" _ _ _ _ _ _ _ _ Come clos -- er, my
+	dear, __ so I __ can hear mu -- sic in my "heart;" _ _ _ _ _ _ I've wait -- ed so long __
+	to hear __ the song that your love will "start;" _ _ _ _ _ _ Dar -- ling, I'll a -- dore
+	you, __ Live my life just for you __ All I ask is this, please give me one more kiss, and
+	whis -- per you'll be mine. _ _ _ _ _ _ Come Clos -- er To mine.
 }
 {% endif %}

@@ -5,6 +5,7 @@ default_version = "Wikifonia"
 title = "My Way"
 style = "Jazz"
 composer = "My Way, Paul Anka"
+poet = "Paul Anka"
 piece = "Standard"
 typesetter = "OpenBook contributors (MusicXML import)"
 completion = "3"
@@ -16,8 +17,8 @@ copyrightextra = "Archived MusicXML notice retained; underlying music is not rel
 [versions.Wikifonia]
 doChords = true
 doVoice = true
-doLyrics = false
-doLyricsmore = false
+doLyrics = true
+doLyricsmore = true
 doLyricsmoremore = false
 doChordBars = false
 doGuitar = false
@@ -35,6 +36,7 @@ doOwn = false
 	- retained the archived MusicXML rights notice; no redistribution permission is asserted.
 	- retained written melody, chord changes, pickups, repeats and numbered endings; lyrics, slurs, dynamics and articulations other than fermatas omitted.
 	- tempo is an editorial practice suggestion.
+	- put in the lyrics from the same Wikifonia source.
 	TODO:
 	- proofread the complete melody, harmony and form against a printed edition and check by ear.
 	- verify source attribution, copyright notice and reuse terms; only the archived MusicXML notice is retained.
@@ -133,5 +135,22 @@ doOwn = false
 	}
 	}
 	\endBar
+}
+{% endif %}
+{% if part == "LyricsWikifonia" %}\lyricmode {
+	And now the end is near and so I face the fi -- nal cur -- tain. My friend I say it clear
+	I'll state my case of which I'm cer -- tain. I've lived a life that's full I've trav --
+	eled each and "ev'" -- ry high -- way and more much more than this. I did it my way. Yes
+	there were times I'm sure you knew, when I bit off more than I could chew. But thru it all
+	when there was doubt I ate it up and spit it out. I faced it all and I stood tall and did
+	it my way. I've __
+}
+{% endif %}
+{% if part == "LyricsmoreWikifonia" %}\lyricmode {
+	_ loved, I've laughed and cried. I've had my fill my share of lo -- sing. And now as
+	tears sub -- side I find it all _ so a -- mus -- ing. To think I did all that and may I
+	say not in a shy way. Oh no Oh no not me. I did it my way. What is a man? What has he got?
+	If not him -- self __ _ then he has not. To say the things he tru -- ly feels and not the
+	words of one who kneels. The rec -- ord shows I took the blows and did it __ _ _ _ way.
 }
 {% endif %}

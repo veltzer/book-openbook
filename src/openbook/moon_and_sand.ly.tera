@@ -5,6 +5,7 @@ default_version = "Wikifonia"
 title = "Moon and Sand"
 style = "Jazz"
 composer = "Alec Wilder"
+poet = "William Engvick"
 piece = "Jazz"
 typesetter = "OpenBook contributors (MusicXML import)"
 completion = "3"
@@ -17,7 +18,7 @@ copyrightextraextra = "of TRO"
 [versions.Wikifonia]
 doChords = true
 doVoice = true
-doLyrics = false
+doLyrics = true
 doLyricsmore = false
 doLyricsmoremore = false
 doChordBars = false
@@ -36,6 +37,7 @@ doOwn = false
 	- retained the original copyright notice where printed; the underlying music is not relicensed.
 	- retained written measures, pickups, repeats and endings; lyrics omitted.
 	- tempo is an editorial practice suggestion.
+	- put in the lyrics from the same Wikifonia source.
 	TODO:
 	- proofread the music against the referenced PDF and check by ear.
 	- verify editorial chord spacing in measures 1, 5, 7, 8, 15, 19, 29, 31, 32, 39, 40; the archive places successive symbols at the same offset.
@@ -143,5 +145,13 @@ doOwn = false
 	d'1 ~ |
 	d'1 |
 	\endBar
+}
+{% endif %}
+{% if part == "LyricsWikifonia" %}\lyricmode {
+	Deep __ is the mid -- night sea. __ Warm __ is the fra -- grant land. __ Sweet __ are
+	your lips to me. __ Soft __ as the moon and sand. __ Oh when __ will we meet a -- gain __
+	When the night has left us __ will the spell re -- main? __ Though __ waves in -- vade the
+	shore __ Though __ we may kiss no more. __ Night __ is at our com -- mand Moon and sand __
+	and the glo -- ry of love. __
 }
 {% endif %}

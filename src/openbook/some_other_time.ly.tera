@@ -5,6 +5,7 @@ default_version = "Wikifonia"
 title = "Some Other Time"
 style = "Jazz"
 composer = "Leonard Bernstein"
+poet = "Betty Comden, Adolph Green"
 piece = "Jazz"
 typesetter = "OpenBook contributors (MusicXML import)"
 completion = "3"
@@ -15,7 +16,7 @@ copyright = "1945 Warner Bros. Inc. (Renewed) All Riehrs Reserved Lleed bu Permi
 [versions.Wikifonia]
 doChords = true
 doVoice = true
-doLyrics = false
+doLyrics = true
 doLyricsmore = false
 doLyricsmoremore = false
 doChordBars = false
@@ -34,6 +35,7 @@ doOwn = false
 	- retained the original copyright notice where printed; the underlying music is not relicensed.
 	- retained written measures, pickups, repeats and endings; lyrics omitted.
 	- tempo is an editorial practice suggestion.
+	- put in the lyrics from the same Wikifonia source.
 	TODO:
 	- proofread the music against the referenced PDF and check by ear.
 	- verify editorial chord spacing in measures 32, 40; the archive places successive symbols at the same offset.
@@ -155,5 +157,16 @@ doOwn = false
 	}
 	c'1 |
 	\endBar
+}
+{% endif %}
+{% if part == "LyricsWikifonia" %}\lyricmode {
+	Twen -- ty -- four ho -- urs can go so fast, __ you look a -- round __ the day has
+	passed. __ When you're in love time is pre -- cious "stuff;" Ev -- en a life -- time in --
+	n't e -- nough! Where has the time all gone to? Have -- n't done half the things we want
+	to. Oh, well we'll catch up some oth -- er time. This day was just a tok -- en, too man --
+	y words are still un -- spok -- en. Oh, well, we'll catch -- up some oth -- er time. __
+	Just when the fun is start -- ing comes the time for part -- ing But let's be glad for
+	what we had and what's to come. There's so much more em -- brac -- ing still to be done,
+	but time is rac -- ing. Oh, well, we'll catch up some oth -- er time __ oth -- er time. __
 }
 {% endif %}

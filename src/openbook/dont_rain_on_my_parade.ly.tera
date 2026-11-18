@@ -5,6 +5,7 @@ default_version = "Wikifonia"
 title = "Don't Rain On My Parade"
 style = "Standard"
 composer = "Jule Styne"
+poet = "Bob Merril"
 piece = "Standard"
 typesetter = "OpenBook contributors (MusicXML import)"
 completion = "3"
@@ -16,7 +17,7 @@ copyrightextra = "Archived MusicXML notice retained; underlying music is not rel
 [versions.Wikifonia]
 doChords = true
 doVoice = true
-doLyrics = false
+doLyrics = true
 doLyricsmore = false
 doLyricsmoremore = false
 doChordBars = false
@@ -37,6 +38,7 @@ doOwn = false
 	- retained written melody, chord changes, pickups, repeats and numbered endings; lyrics omitted.
 	- imported explicit 7alt symbols using the book's altered-dominant notation where present.
 	- tempo is an editorial practice suggestion.
+	- put in the lyrics from the same Wikifonia source.
 	TODO:
 	- proofread the complete melody, harmony and form against the referenced PDF and check by ear.
 	- verify source attribution, copyright notice and reuse terms against the scan; only the archived MusicXML notice is retained.
@@ -180,5 +182,21 @@ doOwn = false
 	}
 	c''2. r4 |
 	\endBar
+}
+{% endif %}
+{% if part == "LyricsWikifonia" %}\lyricmode {
+	Don't tell __ me not to __ fly I've simp -- ly got to. If some -- one takes a __ spill,
+	It's me and not you. don't bring __ a -- round a __ cloud to rain on my par -- ade. __
+	Don't tell __ me not to __ live, just sit and put -- ter. Life's can -- dy and the __
+	sun's a ball of but -- ter. Who told __ you you're al -- lowed to rain on my pa -- rade? __
+	I'll march my band out, __ I'll beat my drum. __ And if I'm fanned out, __ Your turn at
+	bat, sir, __ At least I did -- n't fake it, Hat, sir, __ I guess I did -- n't make it! But
+	wheth -- er I'm the __ rose of sheer per -- fec -- tion or freck __ le on the __ nose of
+	life's com -- plex -- ion. The cin -- der or the __ shin -- y ap -- ple of it's eye. __ I
+	got -- ta fly once, I __ got -- ta try once, on -- ly can die once, Right sir? __ Ooh,
+	love is juic -- y, juic -- y, and you see I __ got -- ta have my bite, sir. __ Get read --
+	y for me, __ love, "'cause" I'm a "'com" -- "er'" I sim -- ply got -- ta __ march, my
+	hearts a drum -- mer. Don't bring __ a -- round a __ cloud to rain on my pa -- rade. __
+	rade. __
 }
 {% endif %}

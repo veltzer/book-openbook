@@ -5,6 +5,7 @@ default_version = "Wikifonia"
 title = "When The Sun Comes Out"
 style = "Jazz"
 composer = "Harold Arlen"
+poet = "Ted Arlen"
 piece = "Jazz"
 typesetter = "OpenBook contributors (MusicXML import)"
 completion = "3"
@@ -15,7 +16,7 @@ copyright = "All Rights Reserved"
 [versions.Wikifonia]
 doChords = true
 doVoice = true
-doLyrics = false
+doLyrics = true
 doLyricsmore = false
 doLyricsmoremore = false
 doChordBars = false
@@ -34,6 +35,7 @@ doOwn = false
 	- retained the original copyright notice where printed; the underlying music is not relicensed.
 	- retained written measures, pickups, repeats and endings; lyrics omitted.
 	- tempo is an editorial practice suggestion.
+	- put in the lyrics from the same Wikifonia source.
 	TODO:
 	- proofread the music against the referenced PDF and check by ear.
 	- verify editorial chord spacing in measures 36; the archive places successive symbols at the same offset.
@@ -136,5 +138,18 @@ doOwn = false
 	c''1 ~ |
 	c''2. r4 |
 	\endBar
+}
+{% endif %}
+{% if part == "LyricsWikifonia" %}\lyricmode {
+	When the sun comes out __ and that rain stops beat -- "in'" on my win -- dow "pane;" __
+	When the sun comes out __ there'll be blue -- birds "'round" my door sing -- "in'" like
+	they did be -- fore that "ol'" storm broke out __ and my man walked off and left me in the
+	rain. __ Though he's gone I doubt. __ If he'll stay a -- way for good, I'd stop liv --
+	"in'" if he should. Love is fun -- ny, it's not al -- ways peach -- es, cream, and hon --
+	ey. Just when ev -- "'ry" -- thing looked bright and sun -- ny, sud -- den -- ly the cy --
+	clone came. __ I'll nev -- er be the same "'till" that sun comes out __ and that rain
+	stops beat -- "in'" on my win -- dow "pane;" __ If my heart holds out __ let it rain and
+	let it pour, it may not be long be -- fore there's a knock -- "in'" at my door, then
+	you'll know the one I loved walked _ in __ when the sun __ comes out. __
 }
 {% endif %}

@@ -4,7 +4,8 @@ default_version = "Wikifonia"
 [attributes]
 title = "A Handful Of Stars"
 style = "Jazz"
-composer = "Jack Lawrence & Ted Shapiro"
+composer = "Jack Lawrence, Ted Shapiro"
+poet = "Jack Lawrence, Ted Shapiro"
 piece = "Standard"
 typesetter = "OpenBook contributors (MusicXML import)"
 completion = "3"
@@ -16,7 +17,7 @@ copyrightextra = "Archived MusicXML notice retained; underlying music is not rel
 [versions.Wikifonia]
 doChords = true
 doVoice = true
-doLyrics = false
+doLyrics = true
 doLyricsmore = false
 doLyricsmoremore = false
 doChordBars = false
@@ -35,6 +36,7 @@ doOwn = false
 	- retained the archived MusicXML rights notice; no redistribution permission is asserted.
 	- retained written melody, chord changes, pickups, repeats and numbered endings; lyrics, slurs, dynamics and articulations other than fermatas omitted.
 	- tempo is an editorial practice suggestion.
+	- put in the lyrics from the same Wikifonia source.
 	TODO:
 	- proofread the complete melody, harmony and form against a printed edition and check by ear.
 	- verify source attribution, copyright notice and reuse terms; only the archived MusicXML notice is retained.
@@ -163,5 +165,22 @@ doOwn = false
 	}
 	}
 	\endBar
+}
+{% endif %}
+{% if part == "LyricsWikifonia" %}\lyricmode {
+	_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ A star cov -- ered sky, __ a rose scent --
+	ed lane, __ The song of a night -- in gale __ And two moon -- struck lov -- ers, Liv --
+	ing a fair -- y tale. _ _ _ I re -- call a sto -- ry a night of love and glo -- ry, A
+	night that left my heart ro -- man -- tic "scars;" __ We stood so near to heav -- en that
+	I reached clear to heav -- en and gath -- ered you A Hand -- ful Of Stars. Sweet re -- mem --
+	bered hour _ when love be -- gan to flow -- er, With moon -- light "thru'" the trees like
+	sil -- ver bars __ And as the moon grew old -- er I reached a -- cross your shoul -- der,
+	And gath -- ered you A Hand -- Ful Of Stars. __ I placed my fin -- ger -- tips up -- on
+	your lips and srars fell in your eyes, __ Moon -- glow made a ha -- lo of your "hair;" Sud --
+	den -- ly you looked at me and dreams be -- gan to rise, __ Oh! what things un -- spok --
+	en trem -- bled in the air, __ Our hearts were mad -- ly beat -- ing and then our lips
+	were meet -- ing and Ve -- nus seemed to melt right in -- to Mars, __ Then while we stood
+	ca -- ress -- inr blue heav -- en sent a bless -- ing A show -- er of A Hand -- ful Of
+	Stars. Stars.
 }
 {% endif %}

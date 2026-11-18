@@ -5,6 +5,7 @@ default_version = "Wikifonia"
 title = "You Are My Sunshine"
 style = "Jazz"
 composer = "Charles Mitchell"
+poet = "Jimmy Davis, Rice Brothers"
 piece = "Standard"
 typesetter = "OpenBook contributors (MusicXML import)"
 completion = "3"
@@ -16,8 +17,8 @@ copyrightextra = "Archived MusicXML notice retained; underlying music is not rel
 [versions.Wikifonia]
 doChords = true
 doVoice = true
-doLyrics = false
-doLyricsmore = false
+doLyrics = true
+doLyricsmore = true
 doLyricsmoremore = false
 doChordBars = false
 doGuitar = false
@@ -37,6 +38,7 @@ doOwn = false
 	- retained written melody, chord changes, pickups, repeats and numbered endings; lyrics omitted.
 	- imported explicit 7alt symbols using the book's altered-dominant notation where present.
 	- tempo is an editorial practice suggestion.
+	- put in the lyrics from the same Wikifonia source.
 	TODO:
 	- proofread the complete melody, harmony and form against the referenced PDF and check by ear.
 	- verify source attribution, copyright notice and reuse terms against the scan; only the archived MusicXML notice is retained.
@@ -103,5 +105,19 @@ doOwn = false
 	r4 r4. a8 d'8 e'8 |
 	}
 	\endBar
+}
+{% endif %}
+{% if part == "LyricsWikifonia" %}\lyricmode {
+	You are my sun -- shine, my on -- ly sun -- shine. You make me hap -- py when skies are
+	grey. __ You'll nev -- er know dear how much I love you. Please don't take my sun -- shine
+	a -- way. The oth -- er night dear as I lay sleep -- ing, I dreamed I held you in my arms. __
+	When I a -- woke, dear, I was mis -- tak -- en and I hung my head and cried. You are my
+}
+{% endif %}
+{% if part == "LyricsmoreWikifonia" %}\lyricmode {
+	_ _ _ sun -- shine, my on -- ly sun -- shine. You make me hap -- py when skies are grey. __
+	You'll nev -- er know dear how much I love you. Please don't take my sun -- shine a --
+	way. I'll al -- ways love you and make you hap -- py, if you will on -- ly say the same. __
+	But if you leave me to love an -- oth -- er, you'll re -- gret it all some day. You are my
 }
 {% endif %}

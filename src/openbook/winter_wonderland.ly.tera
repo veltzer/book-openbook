@@ -5,6 +5,7 @@ default_version = "Wikifonia"
 title = "Winter Wonderland"
 style = "Jazz"
 composer = "Felix Bernard, Richard B. Smith"
+poet = "Richard B. Smith"
 piece = "Standard"
 typesetter = "OpenBook contributors (MusicXML import)"
 completion = "3"
@@ -16,7 +17,7 @@ copyrightextra = "Archived MusicXML notice retained; underlying music is not rel
 [versions.Wikifonia]
 doChords = true
 doVoice = true
-doLyrics = false
+doLyrics = true
 doLyricsmore = false
 doLyricsmoremore = false
 doChordBars = false
@@ -35,6 +36,7 @@ doOwn = false
 	- retained the archived MusicXML rights notice; no redistribution permission is asserted.
 	- retained written melody, chord changes, pickups, repeats and numbered endings; lyrics, slurs, dynamics and articulations other than fermatas omitted.
 	- tempo is an editorial practice suggestion.
+	- put in the lyrics from the same Wikifonia source.
 	TODO:
 	- proofread the complete melody, harmony and form against a printed edition and check by ear.
 	- verify source attribution, copyright notice and reuse terms; only the archived MusicXML notice is retained.
@@ -127,5 +129,16 @@ doOwn = false
 	c'1 ~ |
 	c'1 |
 	\endBar
+}
+{% endif %}
+{% if part == "LyricsWikifonia" %}\lyricmode {
+	Sleigh bells ring are you list -- ning in the lane snow is glist ning a beau -- ti ful
+	sight we're hap -- py to -- night walk -- ing in a win -- ter won -- der -- land Gone a --
+	way is the blue -- bird here to stay is the new bird to sing his love song as we go a --
+	long walk -- ing in a win -- ter won -- der -- land In the mead -- ow we will build a snow --
+	man and pre -- tend that he is Par son Brown He'll say are you mar -- ried? We'll say no
+	man but you can do the job when you're in town lat -- er on we'll con -- spi -- re as we
+	sit by the fi -- re to face un -- a -- fraid the plans that we made walk -- ing in a win --
+	ter won -- der -- land, __
 }
 {% endif %}

@@ -5,6 +5,7 @@ default_version = "Wikifonia"
 title = "The Midnight Sun Will Never Set"
 style = "Jazz"
 composer = "Quincy Jones, Henri Salvador"
+poet = "Dorcas Cochran"
 piece = "Jazz"
 typesetter = "OpenBook contributors (MusicXML import)"
 completion = "3"
@@ -15,8 +16,8 @@ copyright = "All Rights Reserved"
 [versions.Wikifonia]
 doChords = true
 doVoice = true
-doLyrics = false
-doLyricsmore = false
+doLyrics = true
+doLyricsmore = true
 doLyricsmoremore = false
 doChordBars = false
 doGuitar = false
@@ -34,6 +35,7 @@ doOwn = false
 	- retained the original copyright notice where printed; the underlying music is not relicensed.
 	- retained written measures, pickups, repeats and endings; lyrics omitted.
 	- tempo is an editorial practice suggestion.
+	- put in the lyrics from the same Wikifonia source.
 	TODO:
 	- proofread the music against the referenced PDF and check by ear.
 	- verify editorial chord spacing in measures 2, 4, 19, 21; the archive places successive symbols at the same offset.
@@ -124,5 +126,21 @@ doOwn = false
 	e''8 d''8 a'4 ~ a'8 bes'8 des''8 e''8 |
 	f''1 |
 	\endBar
+}
+{% endif %}
+{% if part == "LyricsWikifonia" %}\lyricmode {
+	The mid -- night sun will ne -- ver set. It shines for -- ev -- er in my heart. For it
+	was un -- der -- neath that am -- ber glow, you whis -- pered -- "low:" "'We'll" ne -- ver
+	"part.'" mid -- night sun __ was shi -- ning too. No more is night a wild de -- light with
+	all the world on fire. __ And yet I can't es -- cape the lips I still de -- sire. __ I see
+	two si -- lent sil -- hou -- ettes. A -- gainst a fla -- ming sky and sea. And then I know
+	"'tho" I'm a fool to care, a -- gain, some -- where the mid -- night sun __ will shine for
+	me.
+}
+{% endif %}
+{% if part == "LyricsmoreWikifonia" %}\lyricmode {
+	The nid -- night sun will ne -- ver set. So how could our ro -- mance be through? For in
+	the ev -- er shi -- ning day light of our sum -- mer love, the _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _
+	"`"
 }
 {% endif %}

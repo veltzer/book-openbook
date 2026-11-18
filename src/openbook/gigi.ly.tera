@@ -5,6 +5,7 @@ default_version = "Wikifonia"
 title = "Gigi"
 style = "Standard"
 composer = "Frederick Loewe"
+poet = "Alan Jay Lerner"
 piece = "Standard"
 typesetter = "OpenBook contributors (MusicXML import)"
 completion = "3"
@@ -16,8 +17,8 @@ copyrightextra = "Archived MusicXML notice retained; underlying music is not rel
 [versions.Wikifonia]
 doChords = true
 doVoice = true
-doLyrics = false
-doLyricsmore = false
+doLyrics = true
+doLyricsmore = true
 doLyricsmoremore = false
 doChordBars = false
 doGuitar = false
@@ -37,6 +38,7 @@ doOwn = false
 	- retained written melody, chord changes, pickups, repeats and numbered endings; lyrics omitted.
 	- imported explicit 7alt symbols using the book's altered-dominant notation where present.
 	- tempo is an editorial practice suggestion.
+	- put in the lyrics from the same Wikifonia source.
 	TODO:
 	- proofread the complete melody, harmony and form against the referenced PDF and check by ear.
 	- verify source attribution, copyright notice and reuse terms against the scan; only the archived MusicXML notice is retained.
@@ -159,5 +161,25 @@ doOwn = false
 	c'1 ~ |
 	c'1 |
 	\endBar
+}
+{% endif %}
+{% if part == "LyricsWikifonia" %}\lyricmode {
+	Gi -- gi am I a fool with -- out a mind of have I mere -- ly been too blind to re -- a --
+	lize? Oh Gi gi why you've been grow -- ing up be -- fore my eyes __ Gi -- gi you're not at
+	all that fun -- ny awk -- ward lit -- tle girl I knew Oh no O -- ver night there's been a
+	breath -- less change in you Oh Gi -- gi while you were _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _
+	When did your spark -- le turn to fi -- re and your watmth be -- come de -- si -- re? Oh
+	what mi -- ra -- cle has made you the way you are? you! Oh Gi -- gi while you were tremb --
+	ling on the brink was I out yon -- der some -- where blink -- ing at a star? Oh Gi -- gi
+	have I been stand ing up too close or back too far? __ when did your spar -- kle turn to
+	fi -- re and your warmth be -- come de -- si -- re? oh what mi -- a -- cle has made you
+	the way you are? __
+}
+{% endif %}
+{% if part == "LyricsmoreWikifonia" %}\lyricmode {
+	_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _
+	I was mad not to have seen the change in _ _ _ _ _ _ _ tremb -- ling on the brink was I
+	out yon -- der some -- where blink -- ing at a star? Oh Gi -- gi have I been stand -- ing
+	up too close or back too far? __
 }
 {% endif %}

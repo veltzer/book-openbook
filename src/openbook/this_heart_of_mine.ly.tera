@@ -5,6 +5,7 @@ default_version = "Wikifonia"
 title = "This Heart of Mine"
 style = "Jazz"
 composer = "Harry Warren"
+poet = "Arthur Freed"
 piece = "Standard"
 typesetter = "OpenBook contributors (MusicXML import)"
 completion = "3"
@@ -16,8 +17,8 @@ copyrightextra = "Archived MusicXML notice retained; underlying music is not rel
 [versions.Wikifonia]
 doChords = true
 doVoice = true
-doLyrics = false
-doLyricsmore = false
+doLyrics = true
+doLyricsmore = true
 doLyricsmoremore = false
 doChordBars = false
 doGuitar = false
@@ -37,6 +38,7 @@ doOwn = false
 	- retained written melody, chord changes, pickups, repeats and numbered endings; lyrics omitted.
 	- imported explicit 7alt symbols using the book's altered-dominant notation where present.
 	- tempo is an editorial practice suggestion.
+	- put in the lyrics from the same Wikifonia source.
 	TODO:
 	- proofread the complete melody, harmony and form against the referenced PDF and check by ear.
 	- verify source attribution, copyright notice and reuse terms against the scan; only the archived MusicXML notice is retained.
@@ -123,5 +125,18 @@ doOwn = false
 	f'1 ~ |
 	f'1 |
 	\endBar
+}
+{% endif %}
+{% if part == "LyricsWikifonia" %}\lyricmode {
+	This heart of mine __ was do -- ing ve -- ry well. __ The world was fine __ as far as I
+	could tell. __ and then quite sud -- den -- ly I met you and I dreamed of gay a -- mours
+	At dawn I woke up sing -- ing __ sen -- ti -- men -- tal o -- ver tures. This heart of ta --
+	ken on a won -- der -- ful de -- sign. As long as life en -- dures, it's yours, this heart
+	of mine. __
+}
+{% endif %}
+{% if part == "LyricsmoreWikifonia" %}\lyricmode {
+	_ _ _ mine __ is gai -- ly dan -- cing now. __ I taste the wine __ of real ro -- man --
+	cing now. __ Some how this cra -- zy world has
 }
 {% endif %}

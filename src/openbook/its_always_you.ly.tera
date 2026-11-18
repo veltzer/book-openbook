@@ -5,6 +5,7 @@ default_version = "Wikifonia"
 title = "It's Always You"
 style = "Jazz"
 composer = "James Van Heusen"
+poet = "Johnny Burke"
 piece = "Standard"
 typesetter = "OpenBook contributors (MusicXML import)"
 completion = "3"
@@ -16,7 +17,7 @@ copyrightextra = "Archived MusicXML notice retained; underlying music is not rel
 [versions.Wikifonia]
 doChords = true
 doVoice = true
-doLyrics = false
+doLyrics = true
 doLyricsmore = false
 doLyricsmoremore = false
 doChordBars = false
@@ -37,6 +38,7 @@ doOwn = false
 	- retained written melody, chord changes, pickups, repeats and numbered endings; lyrics omitted.
 	- imported explicit 7alt symbols using the book's altered-dominant notation where present.
 	- tempo is an editorial practice suggestion.
+	- put in the lyrics from the same Wikifonia source.
 	TODO:
 	- proofread the complete melody, harmony and form against the referenced PDF and check by ear.
 	- verify source attribution, copyright notice and reuse terms against the scan; only the archived MusicXML notice is retained.
@@ -128,5 +130,14 @@ doOwn = false
 	des''2 g'2 |
 	as'2. r4 |
 	\endBar
+}
+{% endif %}
+{% if part == "LyricsWikifonia" %}\lyricmode {
+	When -- ev -- er it's ear -- ly twi -- light, I watch "'till" a star breaks "through;"
+	fun -- ny it's not a star I see, It's al -- ways you. When -- ev -- er I roam through ros --
+	es, and late -- ly I oft -- en do, fun -- ny, it's not a rose I touch, it's al -- ways
+	you. If a breeze car -- ess -- es me, it's real -- ly you strol -- ling by. If I hear a
+	mel -- o -- dy, it's mere -- ly the way you sigh. Wher -- ev -- er you are, you're near
+	me, you dare me to be un -- true. Fun -- ny, each time I fall in love it's al -- ways you.
 }
 {% endif %}

@@ -5,6 +5,7 @@ default_version = "Wikifonia"
 title = "Comedy Tonight"
 style = "Standard"
 composer = "Stephen Sondheim"
+poet = "Stephen Sondheim"
 piece = "Standard"
 typesetter = "OpenBook contributors (MusicXML import)"
 completion = "3"
@@ -16,8 +17,8 @@ copyrightextra = "Archived MusicXML notice retained; underlying music is not rel
 [versions.Wikifonia]
 doChords = true
 doVoice = true
-doLyrics = false
-doLyricsmore = false
+doLyrics = true
+doLyricsmore = true
 doLyricsmoremore = false
 doChordBars = false
 doGuitar = false
@@ -37,6 +38,7 @@ doOwn = false
 	- retained written melody, chord changes, pickups, repeats and numbered endings; lyrics omitted.
 	- imported explicit 7alt symbols using the book's altered-dominant notation where present.
 	- tempo is an editorial practice suggestion.
+	- put in the lyrics from the same Wikifonia source.
 	TODO:
 	- proofread the complete melody, harmony and form against the referenced PDF and check by ear.
 	- verify source attribution, copyright notice and reuse terms against the scan; only the archived MusicXML notice is retained.
@@ -138,5 +140,23 @@ doOwn = false
 	g'1 |
 	}
 	\endBar
+}
+{% endif %}
+{% if part == "LyricsWikifonia" %}\lyricmode {
+	Some -- thing fa -- mil -- iar, some -- thing pe -- cu -- liar some -- thing for ev --
+	"'ry" one, a com -- e -- dy to -- night. Some -- thing ap -- peal -- ing, some -- thing ap --
+	pall -- ing, Some -- thing for ev -- "'ry" one, a com -- e -- dy to -- night. No -- thing
+	with kings, no -- thing with crowns. Bring on the lo -- vers, li -- ars and clowns! __ Old
+	sit -- u -- a -- tions, new com -- pli -- ca -- tions. No -- thing por -- ten -- tous or
+	po -- "lite;" __ trag -- e -- dy to mor -- row, com -- e -- dy to -- night.
+}
+{% endif %}
+{% if part == "LyricsmoreWikifonia" %}\lyricmode {
+	Some -- thing con -- vul -- sive, some -- thing re -- pul -- sive, some -- thing for ev --
+	"'ry" one, a com -- e -- dy to -- night, Some -- thing es -- thet -- ic, some -- thing fre --
+	net -- ic, Some -- thing for ev -- "'ry" -- one, a com -- e -- dy to -- night. No -- thing
+	of gods, no -- thing of fate. Weigh -- ty af -- fairs will just have to wait. __ No --
+	thing that's for -- mal, no -- thing that's nor -- mal, no re -- ci -- ta -- tions to re --
+	cite, __ Op -- en up the cur -- tain, com -- e -- dy to -- night.
 }
 {% endif %}

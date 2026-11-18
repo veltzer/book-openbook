@@ -5,6 +5,7 @@ default_version = "Wikifonia"
 title = "Till There Was You"
 style = "Jazz"
 composer = "Meredith Willson"
+poet = "Meredith Willson"
 piece = "Jazz"
 typesetter = "OpenBook contributors (MusicXML import)"
 completion = "3"
@@ -15,7 +16,7 @@ copyright = "All Rights Reserved"
 [versions.Wikifonia]
 doChords = true
 doVoice = true
-doLyrics = false
+doLyrics = true
 doLyricsmore = false
 doLyricsmoremore = false
 doChordBars = false
@@ -34,6 +35,7 @@ doOwn = false
 	- retained the original copyright notice where printed; the underlying music is not relicensed.
 	- retained written measures, pickups, repeats and endings; lyrics omitted.
 	- tempo is an editorial practice suggestion.
+	- put in the lyrics from the same Wikifonia source.
 	TODO:
 	- proofread the music against the referenced PDF and check by ear.
 	- verify the copyright notice against the scan; no readable per-tune notice was recovered, so the archived rights notice is retained where available.
@@ -137,5 +139,14 @@ doOwn = false
 	es'1 ~ |
 	es'2. \fermata r4 |
 	\endBar
+}
+{% endif %}
+{% if part == "LyricsWikifonia" %}\lyricmode {
+	There were bells on the hill. but I nev -- er heard them ring -- ing No, I nev -- er
+	heard them at all till there was you __ There were birds in the sky but I nev -- er saw
+	them wing -- ing, No I nev -- er saw them at all till there was you. __ and there was mus --
+	ic and there were won -- fer -- ful ro -- ses they tell me in sweet fra -- grant mead --
+	dows of dawns, and dew, There was love all a -- round but I nev -- er heard it sing -- ing
+	No I nev -- er heard it at all till there was you and there was you. __
 }
 {% endif %}

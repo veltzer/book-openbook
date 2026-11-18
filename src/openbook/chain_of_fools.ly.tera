@@ -5,6 +5,7 @@ default_version = "Wikifonia"
 title = "Chain Of Fools"
 style = "Jazz"
 composer = "Don Covay"
+poet = "Don Covay"
 piece = "Standard"
 typesetter = "OpenBook contributors (MusicXML import)"
 completion = "3"
@@ -16,7 +17,7 @@ copyrightextra = "Archived MusicXML notice retained; underlying music is not rel
 [versions.Wikifonia]
 doChords = true
 doVoice = true
-doLyrics = false
+doLyrics = true
 doLyricsmore = false
 doLyricsmoremore = false
 doChordBars = false
@@ -37,6 +38,7 @@ doOwn = false
 	- retained written melody, chord changes, pickups, repeats and numbered endings; lyrics omitted.
 	- imported explicit 7alt symbols using the book's altered-dominant notation where present.
 	- tempo is an editorial practice suggestion.
+	- put in the lyrics from the same Wikifonia source.
 	TODO:
 	- proofread the complete melody, harmony and form against the referenced PDF and check by ear.
 	- verify source attribution, copyright notice and reuse terms against the scan; only the archived MusicXML notice is retained.
@@ -187,5 +189,19 @@ doOwn = false
 	c'2 r2 |
 	r2 - "D.S., vamp and fade on E" es'8 f'4 g'8 ~ |
 	\endBar
+}
+{% endif %}
+{% if part == "LyricsWikifonia" %}\lyricmode {
+	Chain, chain, chain, __ chain, chain, chain, __ chain, chain, chain, __ Chain of fools. __
+	For five long __ years __ I thought you __ were my man, __ But I found __ out love, __ I'm
+	just a link in your chain. __ You got me where you want __ me, I ain't noth -- "in'" but
+	your fool, __ You treat -- ed me mean, __ You treat -- ed me cruel. __ Chain, chain,
+	chain, __ Chain of fools. __ _ Ev -- er -- y chain __ has got a weak __ link, I __ might
+	be weak, __ child __ But I'll give you strength. __ You told __ me to leave __ you a --
+	lone. __ My fath -- er said __ come on home. __ My doc -- tor said take it ea -- sy, Oh,
+	but your lov -- "in'" is __ much too strong, __ I'm add -- ed to __ your chain, chain,
+	chain, __ chain, chain, chain, __ chain, chain, chain, __ chain of fools, __ One of these
+	mor -- nings __ the chain is gon -- na break, __ But up un -- til then, __ yeah, __ I'm __
+	gon -- na take all I can take. __ _ Chain, chain, chain,
 }
 {% endif %}

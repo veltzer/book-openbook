@@ -5,6 +5,7 @@ default_version = "Wikifonia"
 title = "Stranger In Paradise"
 style = "Standard"
 composer = "Alexander Borodin, George Forrest"
+poet = "George Forrest, Robert Wright"
 piece = "Standard"
 typesetter = "OpenBook contributors (MusicXML import)"
 completion = "3"
@@ -16,7 +17,7 @@ copyrightextra = "Archived MusicXML notice retained; underlying music is not rel
 [versions.Wikifonia]
 doChords = true
 doVoice = true
-doLyrics = false
+doLyrics = true
 doLyricsmore = false
 doLyricsmoremore = false
 doChordBars = false
@@ -38,6 +39,7 @@ doOwn = false
 	- retained written melody, chord changes, pickups, repeats and numbered endings; lyrics omitted.
 	- imported explicit 7alt symbols using the book's altered-dominant notation where present.
 	- tempo is an editorial practice suggestion.
+	- put in the lyrics from the same Wikifonia source.
 	TODO:
 	- proofread the complete melody, harmony and form against the referenced PDF and check by ear.
 	- verify source attribution, copyright notice and reuse terms against the scan; only the archived MusicXML notice is retained.
@@ -158,5 +160,17 @@ doOwn = false
 	c''1 |
 	c''2. r4 |
 	\endBar
+}
+{% endif %}
+{% if part == "LyricsWikifonia" %}\lyricmode {
+	Take my hand __ I'm a strang -- er in par -- a -- dise All lost in a won -- der -- land __
+	a strang -- er in par -- a -- dise If I stand star -- ry eyed __ that's a dan -- ger in
+	par -- a -- dise for mor -- tals who stand be -- side -- an an -- gel like you I saw your
+	face __ and I as -- cend -- ed __ out of the com -- mon place __ in -- to the rare! some --
+	where in space __ I hang sus -- pend -- ed un -- til I know __ there's a chance that you
+	care won't you an -- swer the fer -- vent prayer __ of a strang -- er in par -- a -- dise?
+	dont send me in dark des -- pair __ from all that I hun -- ger for but "0" -- pen your an --
+	gels arms __ to the strang -- er in par -- a -- dise and tell him that he need be __ a
+	strang -- er no more.
 }
 {% endif %}

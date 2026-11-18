@@ -5,6 +5,7 @@ default_version = "Wikifonia"
 title = "That Sunday (That Summer)"
 style = "Jazz"
 composer = "George David Weiss"
+poet = "Joe Sherman"
 piece = "Standard"
 typesetter = "OpenBook contributors (MusicXML import)"
 completion = "3"
@@ -16,7 +17,7 @@ copyrightextra = "Archived MusicXML notice retained; underlying music is not rel
 [versions.Wikifonia]
 doChords = true
 doVoice = true
-doLyrics = false
+doLyrics = true
 doLyricsmore = false
 doLyricsmoremore = false
 doChordBars = false
@@ -37,6 +38,7 @@ doOwn = false
 	- retained written melody, chord changes, pickups, repeats and numbered endings; lyrics omitted.
 	- imported explicit 7alt symbols using the book's altered-dominant notation where present.
 	- tempo is an editorial practice suggestion.
+	- put in the lyrics from the same Wikifonia source.
 	TODO:
 	- proofread the complete melody, harmony and form against the referenced PDF and check by ear.
 	- verify source attribution, copyright notice and reuse terms against the scan; only the archived MusicXML notice is retained.
@@ -134,5 +136,16 @@ doOwn = false
 	es'2 f'2 |
 	f'4 g'2. ^\fermata |
 	\endBar
+}
+{% endif %}
+{% if part == "LyricsWikifonia" %}\lyricmode {
+	If I had to chose just one day to last my whole life through, it would sure -- ly be that
+	Sun -- day, The day that I met you. New -- born whip -- por -- wills __ were call -- "in'"
+	from the hills. __ Sum -- mer was a -- com -- "in'" in but fast. Lots of daf -- fo -- dils __
+	were show -- in off their skills, __ Nod -- ding all to -- geth -- er I could al -- most
+	hear them whis -- "per:" "'Go" on, kiss her, go on and kiss "her!'" If I had to chose one
+	mo -- ment to live with -- in my heart, It would be that ten -- der mo -- ment re -- call --
+	ing how we start -- ed Dar -- ling, it would be when you smiled at me that way __ that Sun --
+	day __ that sum -- mer. If I had to sum -- mer. If I had to chose just one day.
 }
 {% endif %}

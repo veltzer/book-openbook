@@ -5,6 +5,7 @@ default_version = "Wikifonia"
 title = "Always And Forever"
 style = "Jazz"
 composer = "Rod Temperton"
+poet = "Rod Temperton"
 piece = "Standard"
 typesetter = "OpenBook contributors (MusicXML import)"
 completion = "3"
@@ -16,7 +17,7 @@ copyrightextra = "Archived MusicXML notice retained; underlying music is not rel
 [versions.Wikifonia]
 doChords = true
 doVoice = true
-doLyrics = false
+doLyrics = true
 doLyricsmore = false
 doLyricsmoremore = false
 doChordBars = false
@@ -37,6 +38,7 @@ doOwn = false
 	- retained written melody, chord changes, pickups, repeats and numbered endings; lyrics omitted.
 	- imported explicit 7alt symbols using the book's altered-dominant notation where present.
 	- tempo is an editorial practice suggestion.
+	- put in the lyrics from the same Wikifonia source.
 	TODO:
 	- proofread the complete melody, harmony and form against the referenced PDF and check by ear.
 	- verify source attribution, copyright notice and reuse terms against the scan; only the archived MusicXML notice is retained.
@@ -154,5 +156,27 @@ doOwn = false
 	dis''4. ( ~ dis''4 ~ dis''16 cis''16 b'2. ~ |
 	b'1. ) |
 	\endBar
+}
+{% endif %}
+{% if part == "LyricsWikifonia" %}\lyricmode {
+	Al ways and for -- ev -- er, __ each _ ment with __ you __ is just like a dream __ to __
+	me __ that __ some -- how came true. "(Ooh" __ "babe.)" And I know to -- mor -- row __
+	will still be the same, __ "'cause" we've got a life of __ love __ that won't ev -- er
+	change. And ev -- "'ry" day __ love me your own spe -- cial __ way. Melt all my heart __ a --
+	way __ with a smile. __ Take time __ to tell __ me __ you __ real -- ly care __ and we'll
+	share __ to -- mor -- "row~to" -- geth -- er. __ Ooh ba -- by __ I'll al -- ways love you __
+	for -- ev -- er "(Al" -- ways for -- ev -- er love "you.)" Ev -- er, ev -- er, ev -- er!
+	"2.~There'll" al -- ways be sun -- shine __ when I look at __ you __ Some -- thing I can't __
+	ex -- plain __ "just~the" __ things that you do, "(Ooh" __ "babe.)" And if you get lone --
+	ly, __ call me and take __ a se -- cond to give to __ me __ that mag -- ic you make. And
+	I'll always __ love you __ for -- _ _ ev -- er. __ "(Al" -- ways for -- ev -- er love
+	"you)" Ooh, ba -- by, ooh ba -- by. Yeah ba -- by, yeah ba -- by For -- ever. __ "(Al" --
+	ways for -- ev -- er love "you)" Love you! Love you! You! __ Al -- ways. __ "(Al" -- ways
+	for -- ev -- er love "you.)" Ev -- er, ev -- er, ev -- er! For -- ev -- er, "(Al" -- ways
+	for -- ev -- er love "you.)" Al -- ways. __ _ _ Oh! __ _ Ooh __ love,. "(Al" -- ways for --
+	ev -- er love "you.)" Ev -- er, ev -- er, ev -- er! And al -- ways, __ I'll love you. Ev --
+	er, ev -- er, ev -- er! Yes, I'm __ the one who, yes I'm __ the one who __ loves you
+	always. __ "(Al" -- ways for -- ev -- er love "you.)" For -- ev -- er, __ I'll love __
+	you. __
 }
 {% endif %}

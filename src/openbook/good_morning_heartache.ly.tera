@@ -5,6 +5,7 @@ default_version = "Wikifonia"
 title = "Good Morning Heartache"
 style = "Jazz"
 composer = "Ervin Drake"
+poet = "Dan Fisher, Irene Higginbotham"
 piece = "Jazz"
 typesetter = "OpenBook contributors (MusicXML import)"
 completion = "3"
@@ -15,7 +16,7 @@ copyright = "1943,1973 Harrison Music & Robbins Music. All Rights Reserved. Inte
 [versions.Wikifonia]
 doChords = true
 doVoice = true
-doLyrics = false
+doLyrics = true
 doLyricsmore = false
 doLyricsmoremore = false
 doChordBars = false
@@ -34,6 +35,7 @@ doOwn = false
 	- retained the original copyright notice where printed; the underlying music is not relicensed.
 	- retained written measures, pickups, repeats and endings; lyrics omitted.
 	- tempo is an editorial practice suggestion.
+	- put in the lyrics from the same Wikifonia source.
 	TODO:
 	- proofread the music against the referenced PDF and check by ear.
 	- verify editorial chord spacing in measures 8; the archive places successive symbols at the same offset.
@@ -121,5 +123,17 @@ doOwn = false
 	r8 c'8 c'8 c'8 a'8 c'8 a'8 f'8 ~ |
 	f'2. r4 |
 	\endBar
+}
+{% endif %}
+{% if part == "LyricsWikifonia" %}\lyricmode {
+	Good -- morn -- ing heart -- ache, you old gloom -- y sight. __ Good -- morn -- ing heart --
+	ache, thought we said good -- bye last night. __ I turned and tossed un -- til it seemed
+	you had gone, __ but here you are with the dawn. __ Wish I'd for -- get you, but you're
+	here to stay. __ It seems I met you when my love went a -- way __ Now ev -- "'ry" day I
+	start by say -- ing to you __ good morn -- ing heart -- ache, what's new? __ Stop haunt --
+	ing me now, __ can't shake you no -- how. __ Just leave me a -- lone. __ I've got those
+	Mon -- day blues straight thru Sun -- day blues. Good morn -- ing heart -- ache here we go
+	a -- gain __ Good morn -- ing heart -- ache, you're the one who knew me when. __ Might as
+	well get used to you hang -- ing a -- round, __ good morn -- ing heart -- ache sit down. __
 }
 {% endif %}

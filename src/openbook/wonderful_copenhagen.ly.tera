@@ -5,6 +5,7 @@ default_version = "Wikifonia"
 title = "Wonderful Copenhagen"
 style = "Jazz"
 composer = "Frank Loesser"
+poet = "Frank Loesser"
 piece = "Standard"
 typesetter = "OpenBook contributors (MusicXML import)"
 completion = "3"
@@ -16,7 +17,7 @@ copyrightextra = "Archived MusicXML notice retained; underlying music is not rel
 [versions.Wikifonia]
 doChords = true
 doVoice = true
-doLyrics = false
+doLyrics = true
 doLyricsmore = false
 doLyricsmoremore = false
 doChordBars = false
@@ -35,6 +36,7 @@ doOwn = false
 	- retained the archived MusicXML rights notice; no redistribution permission is asserted.
 	- retained written melody, chord changes, pickups, repeats and numbered endings; lyrics, slurs, dynamics and articulations other than fermatas omitted.
 	- tempo is an editorial practice suggestion.
+	- put in the lyrics from the same Wikifonia source.
 	TODO:
 	- proofread the complete melody, harmony and form against a printed edition and check by ear.
 	- verify source attribution, copyright notice and reuse terms; only the archived MusicXML notice is retained.
@@ -149,5 +151,13 @@ doOwn = false
 	}
 	f''4 r2 |
 	\endBar
+}
+{% endif %}
+{% if part == "LyricsWikifonia" %}\lyricmode {
+	Won -- der -- ful won -- deer -- ful Co -- pen -- ha -- gen friend -- ly old girl of a
+	town __ neath her ta -- vern light, on this mer -- ry night let us clink and drink one
+	down __ to won -- der ful won -- der -- ful Co -- pen -- ha -- gen sal -- ty old queen of
+	the sea __ once I sailed a -- way but I'm home to -- day sing -- ing Co -- pen -- hag --
+	en won -- der -- ful won -- der -- ful Co -- pen -- ha -- gen for me _ _ _ me. __
 }
 {% endif %}

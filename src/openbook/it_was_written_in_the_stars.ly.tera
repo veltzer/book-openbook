@@ -5,6 +5,7 @@ default_version = "Wikifonia"
 title = "It Was Written in the Stars"
 style = "Standard"
 composer = "Harold Arlen"
+poet = "Leo Robin"
 piece = "Standard"
 typesetter = "OpenBook contributors (MusicXML import)"
 completion = "3"
@@ -16,7 +17,7 @@ copyrightextra = "Archived MusicXML notice retained; underlying music is not rel
 [versions.Wikifonia]
 doChords = true
 doVoice = true
-doLyrics = false
+doLyrics = true
 doLyricsmore = false
 doLyricsmoremore = false
 doChordBars = false
@@ -37,6 +38,7 @@ doOwn = false
 	- retained written melody, chord changes, pickups, repeats and numbered endings; lyrics omitted.
 	- imported explicit 7alt symbols using the book's altered-dominant notation where present.
 	- tempo is an editorial practice suggestion.
+	- put in the lyrics from the same Wikifonia source.
 	TODO:
 	- proofread the complete melody, harmony and form against the referenced PDF and check by ear.
 	- verify source attribution, copyright notice and reuse terms against the scan; only the archived MusicXML notice is retained.
@@ -152,5 +154,15 @@ doOwn = false
 	R1 |
 	R1 |
 	\endBar
+}
+{% endif %}
+{% if part == "LyricsWikifonia" %}\lyricmode {
+	It was writ -- ten in the stars what was writ -- ten in the stars shall __ be. __ It was
+	writ -- ten in the stars that the heart and not the eyes shall see. __ And so, wheth -- er
+	it bring joy, __ wheth -- er it bring woe __ it shall be done! Now, sud -- den -- ly I
+	know __ you are the one. __ Here __ as in a day -- dream, by my side you stand. Here __
+	with my to mor -- rows in your hand. __ It was writ -- ten high a -- bove that I have to
+	have your love or I'll ne -- ver be free. And clou -- dy through the day be, cra -- zy
+	though I may be what the stars fore -- told shall be. __ and so __ shall it be. __
 }
 {% endif %}

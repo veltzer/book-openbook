@@ -5,6 +5,7 @@ default_version = "Wikifonia"
 title = "Until It's Time For You To Go"
 style = "Jazz"
 composer = "Buffy Sainte Marie"
+poet = "Buffy Sainte Marie"
 piece = "Standard"
 typesetter = "OpenBook contributors (MusicXML import)"
 completion = "3"
@@ -16,8 +17,8 @@ copyrightextra = "Archived MusicXML notice retained; underlying music is not rel
 [versions.Wikifonia]
 doChords = true
 doVoice = true
-doLyrics = false
-doLyricsmore = false
+doLyrics = true
+doLyricsmore = true
 doLyricsmoremore = false
 doChordBars = false
 doGuitar = false
@@ -37,6 +38,7 @@ doOwn = false
 	- retained written melody, chord changes, pickups, repeats and numbered endings; lyrics omitted.
 	- imported explicit 7alt symbols using the book's altered-dominant notation where present.
 	- tempo is an editorial practice suggestion.
+	- put in the lyrics from the same Wikifonia source.
 	TODO:
 	- proofread the complete melody, harmony and form against the referenced PDF and check by ear.
 	- verify source attribution, copyright notice and reuse terms against the scan; only the archived MusicXML notice is retained.
@@ -160,5 +162,21 @@ doOwn = false
 	b2. ~ |
 	b4 r2 ^ "D.C. al Fine" |
 	\endBar
+}
+{% endif %}
+{% if part == "LyricsWikifonia" %}\lyricmode {
+	You're not a dream, you're not an an -- gel you're a "man;" __ I'm not a queen, _ I'm a
+	wo -- man _ take my hand. __ We'll make a space in the lives _ that we planned, __ And
+	here we'll stay un -- til it's time for you to go. __ Yes we're diff -- rent, worlds a --
+	part, we're not the same __ We laughed and played at the start like in a game. __ You
+	could have stayed out -- side my heart but in you came. __ And here you'll stay un -- til
+	it's time for you to go. __ Don't ask why. __ Don't ask how. __ Don't ask for -- ev -- er __
+	love me now. __
+}
+{% endif %}
+{% if part == "LyricsmoreWikifonia" %}\lyricmode {
+	This love of mine had no be -- gin -- ning, has no end __ I was an oak now I'm a wil --
+	low now I can bend __ And "tho'" I'll never in my life see you a -- gain __ _ Still I'll
+	Stay un -- til it's time for you to go. __
 }
 {% endif %}

@@ -5,6 +5,7 @@ default_version = "Wikifonia"
 title = "Goodbye"
 style = "Jazz"
 composer = "Gordon Jenkins"
+poet = "Gordon Jenkins"
 piece = "Jazz"
 typesetter = "OpenBook contributors (MusicXML import)"
 completion = "3"
@@ -15,7 +16,7 @@ copyright = "All Rights Reserved"
 [versions.Wikifonia]
 doChords = true
 doVoice = true
-doLyrics = false
+doLyrics = true
 doLyricsmore = false
 doLyricsmoremore = false
 doChordBars = false
@@ -34,6 +35,7 @@ doOwn = false
 	- retained the original copyright notice where printed; the underlying music is not relicensed.
 	- retained written measures, pickups, repeats and endings; lyrics omitted.
 	- tempo is an editorial practice suggestion.
+	- put in the lyrics from the same Wikifonia source.
 	TODO:
 	- proofread the music against the referenced PDF and check by ear.
 	- verify editorial chord spacing in measures 18; the archive places successive symbols at the same offset.
@@ -140,5 +142,15 @@ doOwn = false
 	}
 	}
 	\endBar
+}
+{% endif %}
+{% if part == "LyricsWikifonia" %}\lyricmode {
+	I'll nev -- er for -- get you, __ I'll nev -- er for -- get you, __ I'll nev -- er for --
+	get __ how we prom -- ised one day, __ To love one an -- oth -- er for -- ev -- er that
+	way, __ We said we'd nev -- er say __ good -- bye. But that was long a -- go, Now you've
+	for -- got -- ten, I know, No use to won -- der why, Let's say fare -- well __ with a
+	sigh, __ Let love die. But we'll go on liv -- ing __ our own way of liv -- ing, __ So you
+	take the high __ road and I'll take the low, __ It's time that we part -- ed, It's much
+	bet -- ter so, __ But kiss me as you go, __ Good -- bye. __ I'll
 }
 {% endif %}

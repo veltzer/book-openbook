@@ -5,6 +5,7 @@ default_version = "Wikifonia"
 title = "Can't We Talk It Over"
 style = "Jazz"
 composer = "Victor Young"
+poet = "Ned Washington"
 piece = "Jazz"
 typesetter = "OpenBook contributors (MusicXML import)"
 completion = "3"
@@ -15,7 +16,7 @@ copyright = "All Rights Reserved"
 [versions.Wikifonia]
 doChords = true
 doVoice = true
-doLyrics = false
+doLyrics = true
 doLyricsmore = false
 doLyricsmoremore = false
 doChordBars = false
@@ -34,6 +35,7 @@ doOwn = false
 	- retained the original copyright notice where printed; the underlying music is not relicensed.
 	- retained written measures, pickups, repeats and endings; lyrics omitted.
 	- tempo is an editorial practice suggestion.
+	- put in the lyrics from the same Wikifonia source.
 	TODO:
 	- proofread the music against the referenced PDF and check by ear.
 	- verify the copyright notice against the scan; no readable per-tune notice was recovered, so the archived rights notice is retained where available.
@@ -133,5 +135,16 @@ doOwn = false
 	}
 	}
 	\endBar
+}
+{% endif %}
+{% if part == "LyricsWikifonia" %}\lyricmode {
+	_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ We were so in love, the day love start -- ed, Who
+	would think that we would soon be part -- ed, I just can't be -- lieve it's true, I make
+	this ap -- peal to you. __ Can't we talk it o -- ver, Let's talk it o -- ver Be -- fore
+	you tell me you're through. __ Can't we sit to -- geth -- er And fig -- ure wheth -- er
+	This is the right thing to do. __ I hate the thought of spend -- ing nights all a -- lone,
+	Miss -- ing the thrill, of nights that we've "known;" Can't we talk it o -- ver, be --
+	fore bit's o -- ver, Be -- fore you whis -- per "'Good" -- bye for ev -- "er'" Let's talk
+	it o -- ver dear. __
 }
 {% endif %}

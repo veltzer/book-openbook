@@ -5,6 +5,7 @@ default_version = "Wikifonia"
 title = "To Life"
 style = "Standard"
 composer = "Jerry Bock"
+poet = "Sheldon Harnick"
 piece = "Standard"
 typesetter = "OpenBook contributors (MusicXML import)"
 completion = "3"
@@ -16,8 +17,8 @@ copyrightextra = "Archived MusicXML notice retained; underlying music is not rel
 [versions.Wikifonia]
 doChords = true
 doVoice = true
-doLyrics = false
-doLyricsmore = false
+doLyrics = true
+doLyricsmore = true
 doLyricsmoremore = false
 doChordBars = false
 doGuitar = false
@@ -37,6 +38,7 @@ doOwn = false
 	- retained written melody, chord changes, pickups, repeats and numbered endings; lyrics omitted.
 	- imported explicit 7alt symbols using the book's altered-dominant notation where present.
 	- tempo is an editorial practice suggestion.
+	- put in the lyrics from the same Wikifonia source.
 	TODO:
 	- proofread the complete melody, harmony and form against the referenced PDF and check by ear.
 	- verify source attribution, copyright notice and reuse terms against the scan; only the archived MusicXML notice is retained.
@@ -219,5 +221,28 @@ doOwn = false
 	}
 	}
 	\endBar
+}
+{% endif %}
+{% if part == "LyricsWikifonia" %}\lyricmode {
+	_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ To Life to life, "L'" -- chai -- im! "L'" -- chai -- im,
+	"L'" -- chai -- im, To Life! If you're been luck -- y, then Mon -- day was no worse than
+	Sun -- day was, Drink "L'" -- chai -- im To Life, To Life "L'" -- chai -- im! "L'" -- chai --
+	im, "L'" -- chai -- im, To Life! One day it's hon -- ey and rai -- sin cake, Next day __ _
+	stom -- ach ache. Drink "L'" -- chai -- im to Life! __ Our great men have writ -- ten
+	words of wis -- dom to be used when hard -- ship must be "faced;" __ Life o -- blig -- es
+	us with hard -- ship So the words of wis -- dom should -- n't go to waste. __ To us and
+	our good for -- tune Be hap -- py, be health -- y long life! And if our good for -- tune
+	nev -- er comes, Here's to what -- ev -- er comes Drink "L'" -- chai -- im __ To life! To
+	life!
+}
+{% endif %}
+{% if part == "LyricsmoreWikifonia" %}\lyricmode {
+	_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ Life has a way of con -- fus --
+	ing us, Bless -- ing and bruis -- ing us, _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ A gift we
+	sel -- dom are wise e -- nough Ev -- er to prize e -- nough, _ _ _ _ _ _ God would like us
+	to be joy -- ful, E -- ven though out hearts lie pant -- ing on the "floor;" __ How much
+	more can we be joy -- ful When there's real -- ly some -- thing to be joy -- ful for. __
+	To life to life! "L'" -- chai -- im. "L'" -- chai -- im, "L'" -- chai -- im, To life! It
+	gives you some -- thing to think a -- bout, Some -- thing to drink a -- bout,
 }
 {% endif %}

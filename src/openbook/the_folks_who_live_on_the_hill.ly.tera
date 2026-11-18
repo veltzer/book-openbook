@@ -5,6 +5,7 @@ default_version = "Wikifonia"
 title = "The Folks Who Live on the Hill"
 style = "Jazz"
 composer = "Jerome Kern"
+poet = "Oscar Hammerstein II"
 piece = "Standard"
 typesetter = "OpenBook contributors (MusicXML import)"
 completion = "3"
@@ -16,7 +17,7 @@ copyrightextra = "Archived MusicXML notice retained; underlying music is not rel
 [versions.Wikifonia]
 doChords = true
 doVoice = true
-doLyrics = false
+doLyrics = true
 doLyricsmore = false
 doLyricsmoremore = false
 doChordBars = false
@@ -37,6 +38,7 @@ doOwn = false
 	- retained written melody, chord changes, pickups, repeats and numbered endings; lyrics omitted.
 	- imported explicit 7alt symbols using the book's altered-dominant notation where present.
 	- tempo is an editorial practice suggestion.
+	- put in the lyrics from the same Wikifonia source.
 	TODO:
 	- proofread the complete melody, harmony and form against the referenced PDF and check by ear.
 	- verify source attribution, copyright notice and reuse terms against the scan; only the archived MusicXML notice is retained.
@@ -148,5 +150,17 @@ doOwn = false
 	e''8 c''8 d''8 e''8 d''8 c''8 d''4 |
 	c''1 |
 	\endBar
+}
+{% endif %}
+{% if part == "LyricsWikifonia" %}\lyricmode {
+	Some day __ we'll build a home on a hill -- top high __ you and I __ Shin -- y and new, a
+	cot -- tage that two can fill __ and we'll be pleased to be called __ the folks who live
+	on the hill __ Some day __ we may be add -- ing a thing or two a wing or two __ We will
+	make chang -- es as an -- y fam -- ily will __ but we will al -- ways be called __ the
+	folks who live on the hill Our __ ver -- an -- da will com -- mand a view of mead -- ows
+	green __ the sort of view that seems to want to be seen __ and when the kids grow up and
+	leave us __ we'll sit and look at that same old view __ just we two __ Dar -- by and Joan
+	who used to be Jack and Jill __ the folks who like to be called __ what they have al --
+	ways been called __ the folks who live on the hill.
 }
 {% endif %}

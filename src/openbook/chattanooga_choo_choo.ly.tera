@@ -5,6 +5,7 @@ default_version = "Wikifonia"
 title = "Chattanooga Choo-Choo"
 style = "Standard"
 composer = "Harry Warren"
+poet = "Mack Gordon"
 piece = "Standard"
 typesetter = "OpenBook contributors (MusicXML import)"
 completion = "3"
@@ -16,7 +17,7 @@ copyrightextra = "Archived MusicXML notice retained; underlying music is not rel
 [versions.Wikifonia]
 doChords = true
 doVoice = true
-doLyrics = false
+doLyrics = true
 doLyricsmore = false
 doLyricsmoremore = false
 doChordBars = false
@@ -37,6 +38,7 @@ doOwn = false
 	- retained written melody, chord changes, pickups, repeats and numbered endings; lyrics omitted.
 	- imported explicit 7alt symbols using the book's altered-dominant notation where present.
 	- tempo taken from archived MusicXML.
+	- put in the lyrics from the same Wikifonia source.
 	TODO:
 	- proofread the complete melody, harmony and form against the referenced PDF and check by ear.
 	- verify source attribution, copyright notice and reuse terms against the scan; only the archived MusicXML notice is retained.
@@ -173,5 +175,21 @@ doOwn = false
 	c''2 ~ c''2 ~ |
 	c''4 r4 r2 |
 	\endBar
+}
+{% endif %}
+{% if part == "LyricsWikifonia" %}\lyricmode {
+	Par -- don me boy __ is that the Chat -- ta -- noo -- ga Choo -- choo __ Track __ twen --
+	ty nine __ Boy you can gim -- me a shine __ I can af -- ford __ to board a Chat -- ta --
+	noo -- ga Choo -- choo __ I've __ got my fare __ and just a tri -- fle to spare __ you
+	leave "the~Penn" __ syl -- va -- nia sta -- tion "'bout" a quar -- ter to four, __ read __
+	a mag -- a -- zine and then you're in Bal -- ti -- more, __ Din -- ner in the din -- er
+	noth -- ing could be fin -- er than __ to have you ham "'n" eggs in Car -- o -- li -- na.
+	When __ you hear the whis -- tle blow -- "in'" eight to the bar __ Then __ you know that
+	Ten -- nes -- see is not ver -- y far __ Shov -- el all the coal in got -- ta keep it roll --
+	"in'" Woo, Woo, Chat -- ta -- noo -- ga there _ you are __ Ther's gon -- na be __ a cer --
+	tain par -- ty at the sta -- tion __ Sat -- in and lace __ I used to call fun -- ny face __
+	She's gon -- na cry __ un -- til I tell her that I'll nev -- er roam __ so Chat -- ta --
+	noo -- ga Choo -- choo won't __ you choo __ choo me home __ Chat -- ta -- noo -- ga choo --
+	choo won't __ you choo __ choo me home. __
 }
 {% endif %}

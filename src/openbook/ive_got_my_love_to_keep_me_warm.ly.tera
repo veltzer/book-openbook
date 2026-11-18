@@ -5,6 +5,7 @@ default_version = "Wikifonia"
 title = "I've Got My Love To Keep me Warm"
 style = "Jazz"
 composer = "Irving Berlin"
+poet = "Irving Berlin"
 piece = "Standard"
 typesetter = "OpenBook contributors (MusicXML import)"
 completion = "3"
@@ -16,8 +17,8 @@ copyrightextra = "Archived MusicXML notice retained; underlying music is not rel
 [versions.Wikifonia]
 doChords = true
 doVoice = true
-doLyrics = false
-doLyricsmore = false
+doLyrics = true
+doLyricsmore = true
 doLyricsmoremore = false
 doChordBars = false
 doGuitar = false
@@ -37,6 +38,7 @@ doOwn = false
 	- retained written melody, chord changes, pickups, repeats and numbered endings; lyrics omitted.
 	- imported explicit 7alt symbols using the book's altered-dominant notation where present.
 	- tempo is an editorial practice suggestion.
+	- put in the lyrics from the same Wikifonia source.
 	TODO:
 	- proofread the complete melody, harmony and form against the referenced PDF and check by ear.
 	- verify source attribution, copyright notice and reuse terms against the scan; only the archived MusicXML notice is retained.
@@ -157,5 +159,18 @@ doOwn = false
 	es'1 ~ ^ "Fine" |
 	es'2. r4 |
 	\endBar
+}
+{% endif %}
+{% if part == "LyricsWikifonia" %}\lyricmode {
+	The snow is snow -- ing, the wind is blow -- ing, but I can weath -- er the storm. __
+	What do I care how much it may storm? __ I've Got My Love To Keep Me Warm. __ I _ Off with
+	my o -- ver -- coat, __ off with my glove, __ I need no o -- ver -- coat, __ I'm burn --
+	ing with love. My heart's on fire, _ the flame grows high -- er, So I will weath -- er the
+	storm, __ What do I care how much it may storm? __ I've Got My Love To Keep Me Warm. __
+}
+{% endif %}
+{% if part == "LyricsmoreWikifonia" %}\lyricmode {
+	_ can't re -- mem -- ber a worse De -- cem -- ber, just watch those i -- ci -- cles form, __
+	What do I care if i -- ci -- cles form? __
 }
 {% endif %}

@@ -5,6 +5,7 @@ default_version = "Wikifonia"
 title = "Another Op'nin', Another Show"
 style = "Standard"
 composer = "Cole Porter"
+poet = "Cole Porter"
 piece = "Standard"
 typesetter = "OpenBook contributors (MusicXML import)"
 completion = "3"
@@ -16,7 +17,7 @@ copyrightextra = "Archived MusicXML notice retained; underlying music is not rel
 [versions.Wikifonia]
 doChords = true
 doVoice = true
-doLyrics = false
+doLyrics = true
 doLyricsmore = false
 doLyricsmoremore = false
 doChordBars = false
@@ -37,6 +38,7 @@ doOwn = false
 	- retained written melody, chord changes, pickups, repeats and numbered endings; lyrics omitted.
 	- imported explicit 7alt symbols using the book's altered-dominant notation where present.
 	- tempo is an editorial practice suggestion.
+	- put in the lyrics from the same Wikifonia source.
 	TODO:
 	- proofread the complete melody, harmony and form against the referenced PDF and check by ear.
 	- verify source attribution, copyright notice and reuse terms against the scan; only the archived MusicXML notice is retained.
@@ -230,5 +232,19 @@ doOwn = false
 	g''1 ~ |
 	g''4 r4 r2 |
 	\endBar
+}
+{% endif %}
+{% if part == "LyricsWikifonia" %}\lyricmode {
+	An -- oth -- er "op'" -- "nin'," an -- oth -- er show __ In Phi -- ly, Bos -- ton or Bal --
+	ti -- moe, __ A chance for stage __ folks to say "'hel" -- lo __ an -- oth -- er "op'" --
+	"nin,'" of an -- oth -- er show. An -- oth -- er job __ that you hope, at last, __ Will
+	make your fu -- ture for -- get your past, __ An -- oth -- er pain __ where the ul -- cers
+	grow, __ An -- oth -- er "op'" -- "nin'" of an -- oth -- er show. Four weeks __ you re --
+	herse and re -- herse, __ three weeks __ and it could -- n't be worse. __ One week, __
+	will it ev -- er be right? __ Then out "o'" the hat, __ it's that big first night! __ the
+	ov -- er -- ture __ is a -- bout to start, __ You cross your fin __ gers and hold your
+	heart, __ It's cur -- tain time __ and a -- way we go, __ An -- oth -- er "op'" -- "nin'"
+	of an -- oth -- er show. An -- oth -- er "op'" -- "nin'," just an -- oth -- er "op'" --
+	"nin'" of -- an oth -- er __ show! __
 }
 {% endif %}

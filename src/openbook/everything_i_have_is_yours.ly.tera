@@ -5,6 +5,7 @@ default_version = "Wikifonia"
 title = "Everything I Have Is Yours"
 style = "Jazz"
 composer = "Burton Lane"
+poet = "Harold Adamson"
 piece = "Jazz"
 typesetter = "OpenBook contributors (MusicXML import)"
 completion = "3"
@@ -16,7 +17,7 @@ copyrightextra = "Rights Reserved"
 [versions.Wikifonia]
 doChords = true
 doVoice = true
-doLyrics = false
+doLyrics = true
 doLyricsmore = false
 doLyricsmoremore = false
 doChordBars = false
@@ -35,6 +36,7 @@ doOwn = false
 	- retained the original copyright notice where printed; the underlying music is not relicensed.
 	- retained written measures, pickups, repeats and endings; lyrics omitted.
 	- tempo is an editorial practice suggestion.
+	- put in the lyrics from the same Wikifonia source.
 	TODO:
 	- proofread the music against the referenced PDF and check by ear.
 	- verify editorial chord spacing in measures 16; the archive places successive symbols at the same offset.
@@ -122,5 +124,14 @@ doOwn = false
 	g'2 g'2 |
 	c''1 |
 	\endBar
+}
+{% endif %}
+{% if part == "LyricsWikifonia" %}\lyricmode {
+	Ev -- "'ry" thing I have is yours. You're part of me. __ Ev -- "'ry" -- thing I have is
+	yours, my des ti ny. __ I would glad ly give the sun to you __ if the sun were on ly mine.
+	I would glad ly give the earth to you __ and the stars that shine. Ev -- "'ry" -- thing
+	that I pos -- ess I of -- fer "to~you" __ Let my dream of hap -- pi -- ness come true. __
+	I'd be hap -- py just to spend my life __ wait -- ing at your beck and call. Ev -- "'ry" --
+	thing I have is yours, my life, my all.
 }
 {% endif %}

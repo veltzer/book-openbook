@@ -5,6 +5,7 @@ default_version = "Wikifonia"
 title = "Out of This World"
 style = "Jazz"
 composer = "Harold Arlen"
+poet = "Johnny Mercer"
 piece = "Jazz"
 typesetter = "OpenBook contributors (MusicXML import)"
 completion = "3"
@@ -16,7 +17,7 @@ copyrightextra = "Permission."
 [versions.Wikifonia]
 doChords = true
 doVoice = true
-doLyrics = false
+doLyrics = true
 doLyricsmore = false
 doLyricsmoremore = false
 doChordBars = false
@@ -35,6 +36,7 @@ doOwn = false
 	- retained the original copyright notice where printed; the underlying music is not relicensed.
 	- retained written measures, pickups, repeats and endings; lyrics omitted.
 	- tempo is an editorial practice suggestion.
+	- put in the lyrics from the same Wikifonia source.
 	TODO:
 	- proofread the music against the referenced PDF and check by ear.
 {% endif %}
@@ -203,5 +205,16 @@ doOwn = false
 	d''4 ( es''2. ) ~ - "" |
 	es''2. r4 |
 	\endBar
+}
+{% endif %}
+{% if part == "LyricsWikifonia" %}\lyricmode {
+	You're clear __ out of this world. __ When I'm __ look -- ing at you. __ I hear __ out of
+	this world __ the mu -- sic that no mor -- tal ev -- er knew. __ You're right __ out of a
+	book. __ The fai -- ry talew I read when I was so high. __ No ar -- mored knight _ out of
+	a book __ was more en -- chan -- ted by a Lo -- re -- lei __ than I. __ Af -- ter wait --
+	ing so long for the right time, __ af -- ter reach -- ing so long for a star, __ all at
+	once from the long and lone -- ly night -- time __ and des -- pite time __ Here you are. __
+	I'd cry __ out of this world. __ If you __ said we were through. __ So let me fly __ out
+	of this world __ and spend the next e -- ter -- ni -- ty or two __ with you. __
 }
 {% endif %}

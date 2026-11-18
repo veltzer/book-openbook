@@ -4,7 +4,8 @@ default_version = "Wikifonia"
 [attributes]
 title = "Lost"
 style = "Jazz"
-composer = "Jann Arden Richard, Michael Bubl\u00e9, Alan Chang"
+composer = "Jann Arden Richard, Michael Bublé, Alan Chang"
+poet = "Jann Arden Richard, Michael Buble, Alan Chang"
 piece = "Standard"
 typesetter = "OpenBook contributors (MusicXML import)"
 completion = "3"
@@ -16,7 +17,7 @@ copyrightextra = "Archived MusicXML notice retained; underlying music is not rel
 [versions.Wikifonia]
 doChords = true
 doVoice = true
-doLyrics = false
+doLyrics = true
 doLyricsmore = false
 doLyricsmoremore = false
 doChordBars = false
@@ -37,6 +38,7 @@ doOwn = false
 	- retained written melody, chord changes, pickups, repeats and numbered endings; lyrics omitted.
 	- imported explicit 7alt symbols using the book's altered-dominant notation where present.
 	- tempo is an editorial practice suggestion.
+	- put in the lyrics from the same Wikifonia source.
 	TODO:
 	- proofread the complete melody, harmony and form against the referenced PDF and check by ear.
 	- verify source attribution, copyright notice and reuse terms against the scan; only the archived MusicXML notice is retained.
@@ -160,5 +162,25 @@ doOwn = false
 	r4 \times 2/3 { r8 g'8 g'8 } e''8 g''16 e''16 ~ e''16 d''8. |
 	c''1 ^\fermata |
 	\endBar
+}
+{% endif %}
+{% if part == "LyricsWikifonia" %}\lyricmode {
+	I can't be -- lieve it's ov -- "er;" I watched the whole __ thing fall, __ and I nev --
+	er saw __ the writ -- ing that was on the wall. __ If I on -- ly __ knew __ the days were
+	slip -- ping past, that the good things nev -- er last, __ that you were cry -- "in'." Sum --
+	mer turned to win -- ter, __ and the snow, it turned __ to "rain;" __ then the rain turned
+	in -- to tears __ up -- on __ your face. __ I hard -- ly rec -- og -- nize __ the girl you
+	are __ to -- "day;" __ and God, __ I hope __ it's not __ too __ late. __ Mm, __ "it''s"
+	not too late. __ "'Cause" your are not a -- "lone;" __ I'm al -- ways there with you, __
+	and we'll get lost to -- geth -- er, till the light comes __ pour -- ing thru. __ "'Cause"
+	when you feel like your done, __ and the dark -- ness has won, __ babe, you're not lost. __ _ _
+	When your world's crash -- ing down __ and you can't bear __ the thought. __ I said babe,
+	you're not lost. Life can show no mer -- cy __ it can tear your soul __ a -- part. __ It
+	can make you feel like you've gone cra -- zy, but __ you're __ not. __ Though things have
+	seemed to change, __ there's one thing that's still the "same;" __ in my heart __ you have
+	re -- mained, __ and we can fly, __ fly, __ _ fly __ a -- way. __ "'Cause" you are not a --
+	"lone;" __ and you can't bear __ to crawl. __ I said, ba -- by, you're not lost. I said,
+	ba -- by you're __ not __ lost. __ I said, ba -- by, you're __ not lost. __ I said, ba --
+	by you're __ not lost.
 }
 {% endif %}

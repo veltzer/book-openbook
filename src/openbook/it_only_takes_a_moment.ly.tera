@@ -5,6 +5,7 @@ default_version = "Wikifonia"
 title = "It Only Takes A Moment"
 style = "Standard"
 composer = "Jerry Herman"
+poet = "Jerry Herman"
 piece = "Standard"
 typesetter = "OpenBook contributors (MusicXML import)"
 completion = "3"
@@ -16,7 +17,7 @@ copyrightextra = "Archived MusicXML notice retained; underlying music is not rel
 [versions.Wikifonia]
 doChords = true
 doVoice = true
-doLyrics = false
+doLyrics = true
 doLyricsmore = false
 doLyricsmoremore = false
 doChordBars = false
@@ -37,6 +38,7 @@ doOwn = false
 	- retained written melody, chord changes, pickups, repeats and numbered endings; lyrics omitted.
 	- imported explicit 7alt symbols using the book's altered-dominant notation where present.
 	- tempo is an editorial practice suggestion.
+	- put in the lyrics from the same Wikifonia source.
 	TODO:
 	- proofread the complete melody, harmony and form against the referenced PDF and check by ear.
 	- verify source attribution, copyright notice and reuse terms against the scan; only the archived MusicXML notice is retained.
@@ -196,5 +198,16 @@ doOwn = false
 	bes'1 ~ |
 	bes'1 |
 	\endBar
+}
+{% endif %}
+{% if part == "LyricsWikifonia" %}\lyricmode {
+	It on -- ly __ takes a mo -- ment, __ For your eyes to meet and then __ Your heart knows __
+	in a mo -- ment, __ You will nev -- er be a -- lone a -- gain. I held her __ for an in --
+	stant, __ But my arms felt sure and strong. __ It on -- ly __ takes a mo -- ment, __ to be
+	loved a whole life long. I've heard it said __ that love must grow, __ That to be sure, __
+	you must be slow, __ I saw you smile __ and now I know, __ I'll lis -- ten to just my
+	heart, __ That smile made me trust my heart. __ For it long. __ and that is all __ that
+	love's a -- bout __ And we'll re -- call __ when time runs out __ That it on -- ly __ took
+	a mo -- ment, __ To be loved a whole life long. __
 }
 {% endif %}

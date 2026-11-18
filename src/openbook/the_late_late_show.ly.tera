@@ -5,6 +5,7 @@ default_version = "Wikifonia"
 title = "The Late Late Show"
 style = "Jazz"
 composer = "Murray Berlin, Roy Alfred"
+poet = "Roy Alfred"
 piece = "Standard"
 typesetter = "OpenBook contributors (MusicXML import)"
 completion = "3"
@@ -16,8 +17,8 @@ copyrightextra = "Archived MusicXML notice retained; underlying music is not rel
 [versions.Wikifonia]
 doChords = true
 doVoice = true
-doLyrics = false
-doLyricsmore = false
+doLyrics = true
+doLyricsmore = true
 doLyricsmoremore = false
 doChordBars = false
 doGuitar = false
@@ -35,6 +36,7 @@ doOwn = false
 	- retained the archived MusicXML rights notice; no redistribution permission is asserted.
 	- retained written melody, chord changes, pickups, repeats and numbered endings; lyrics, slurs, dynamics and articulations other than fermatas omitted.
 	- tempo is an editorial practice suggestion.
+	- put in the lyrics from the same Wikifonia source.
 	TODO:
 	- proofread the complete melody, harmony and form against a printed edition and check by ear.
 	- verify source attribution, copyright notice and reuse terms; only the archived MusicXML notice is retained.
@@ -123,5 +125,19 @@ doOwn = false
 	r8 g'4. c'8. d'16 es'8. f'16 |
 	g'4 g'8 es'8 ~ es'4 r4 |
 	\endBar
+}
+{% endif %}
+{% if part == "LyricsWikifonia" %}\lyricmode {
+	Gee! it's co -- sy in the park to -- night. __ When you cud -- dle up and hold me tight. __
+	Stars a -- bove __ they seem __ to know. __ We're put -- ting on the late late show. __
+	late late show. __ Birds that should be dream -- ing start in chirp -- ing a song. __
+	While fire _ flies are gleam -- ing __ we kissed, kissed all _ night long. _ Then we am --
+	ble back to my front door. __ Say good -- night and then we kiss some more. __ Guess you
+	know __ I love __ you so. __ It start -- ed on the late late show. __
+}
+{% endif %}
+{% if part == "LyricsmoreWikifonia" %}\lyricmode {
+	Hear the cra -- zy mu -- sic in the trees. __ See the flo -- wers dan -- cing in the
+	breeze. __ Old Man Moon __ be -- gins __ to glow. __ He's join -- ing in the
 }
 {% endif %}

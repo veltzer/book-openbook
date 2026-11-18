@@ -5,6 +5,7 @@ default_version = "Wikifonia"
 title = "On The Road Again"
 style = "Standard"
 composer = "Willie Nelson"
+poet = "Willie Nelson"
 piece = "Standard"
 typesetter = "OpenBook contributors (MusicXML import)"
 completion = "3"
@@ -16,7 +17,7 @@ copyrightextra = "Archived MusicXML notice retained; underlying music is not rel
 [versions.Wikifonia]
 doChords = true
 doVoice = true
-doLyrics = false
+doLyrics = true
 doLyricsmore = false
 doLyricsmoremore = false
 doChordBars = false
@@ -37,6 +38,7 @@ doOwn = false
 	- retained written melody, chord changes, pickups, repeats and numbered endings; lyrics omitted.
 	- imported explicit 7alt symbols using the book's altered-dominant notation where present.
 	- tempo is an editorial practice suggestion.
+	- put in the lyrics from the same Wikifonia source.
 	TODO:
 	- proofread the complete melody, harmony and form against the referenced PDF and check by ear.
 	- verify source attribution, copyright notice and reuse terms against the scan; only the archived MusicXML notice is retained.
@@ -173,5 +175,15 @@ doOwn = false
 	g'4 r4 d''8 e''8 fis''4 |
 	g''2 r2 |
 	\endBar
+}
+{% endif %}
+{% if part == "LyricsWikifonia" %}\lyricmode {
+	On the road a -- gain __ Just can't wait to get on the road a -- gain __ Life I love is
+	mak -- ing mus -- ic with my friends and I can't wait to get on the road _ a -- gain __ On
+	the _ On the road a -- gain __ like a band of gyp -- sies we go down the high -- way __
+	we're the best of friends __ In -- sist -- ing that the world keep turn -- ing our way __
+	and our way __ is on the road a -- gain __ just can't wait to get on the road a -- gain __
+	life I love is mak -- ing mus -- ic with my friends and I can't wait to get on the road a --
+	gain _ and I can't wait to get on the road _ a -- gain. __
 }
 {% endif %}

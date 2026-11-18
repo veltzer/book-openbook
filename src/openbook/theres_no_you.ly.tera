@@ -5,6 +5,7 @@ default_version = "Wikifonia"
 title = "There's No You"
 style = "Jazz"
 composer = "Hal Hopper"
+poet = "Tom Adair"
 piece = "Standard"
 typesetter = "OpenBook contributors (MusicXML import)"
 completion = "3"
@@ -16,7 +17,7 @@ copyrightextra = "Archived MusicXML notice retained; underlying music is not rel
 [versions.Wikifonia]
 doChords = true
 doVoice = true
-doLyrics = false
+doLyrics = true
 doLyricsmore = false
 doLyricsmoremore = false
 doChordBars = false
@@ -37,6 +38,7 @@ doOwn = false
 	- retained written melody, chord changes, pickups, repeats and numbered endings; lyrics omitted.
 	- imported explicit 7alt symbols using the book's altered-dominant notation where present.
 	- tempo is an editorial practice suggestion.
+	- put in the lyrics from the same Wikifonia source.
 	TODO:
 	- proofread the complete melody, harmony and form against the referenced PDF and check by ear.
 	- verify source attribution, copyright notice and reuse terms against the scan; only the archived MusicXML notice is retained.
@@ -142,5 +144,19 @@ doOwn = false
 	bes'2 e'4 e'4 |
 	f'2. r4 |
 	\endBar
+}
+{% endif %}
+{% if part == "LyricsWikifonia" %}\lyricmode {
+	White frost glis -- tens on my win -- dow pane, Wood fires burn up -- on the hill. Leaves
+	turn rust, __ and I must __ sing a love song I re -- mem -- ber "still:" I feel __ teh au --
+	tumn breeze, It steals "'cross" my pil -- low as soft as a will -- o -- the -- wisp, __
+	And in it's song there is sad -- ness be -- cause __ there's no you. The lone -- ly au --
+	tumn trees, How soft -- ly they're sigh -- ing, for sum -- mer is dy __ ing, They know __
+	that in my heart there's no glad -- ness be -- cause __ there's no you. The park that we
+	walked __ in, the gar -- den we talked __ in, How lone -- some they seem __ in the fall. __
+	The storm -- y clouds hov -- er, And fall -- ing leave cov -- er our fav -- o -- rite nook __
+	in the wall. __ Ibn Spring __ we'll meet a -- gain. We'll kiss and re -- cap -- ture the
+	sum -- mer -- time rap -- ture we knew, __ And from that day, nev -- er more __ will I say __
+	there's no you.
 }
 {% endif %}

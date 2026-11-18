@@ -5,6 +5,7 @@ default_version = "Wikifonia"
 title = "Out Of My Dreams"
 style = "Standard"
 composer = "Richard Rodgers"
+poet = "Oscar Hammerstein II"
 piece = "Standard"
 typesetter = "OpenBook contributors (MusicXML import)"
 completion = "3"
@@ -16,7 +17,7 @@ copyrightextra = "Archived MusicXML notice retained; underlying music is not rel
 [versions.Wikifonia]
 doChords = true
 doVoice = true
-doLyrics = false
+doLyrics = true
 doLyricsmore = false
 doLyricsmoremore = false
 doChordBars = false
@@ -37,6 +38,7 @@ doOwn = false
 	- retained written melody, chord changes, pickups, repeats and numbered endings; lyrics omitted.
 	- imported explicit 7alt symbols using the book's altered-dominant notation where present.
 	- tempo is an editorial practice suggestion.
+	- put in the lyrics from the same Wikifonia source.
 	TODO:
 	- proofread the complete melody, harmony and form against the referenced PDF and check by ear.
 	- verify source attribution, copyright notice and reuse terms against the scan; only the archived MusicXML notice is retained.
@@ -222,5 +224,15 @@ doOwn = false
 	c''2 r4 ^ "D.C. al Fine" |
 	}
 	\endBar
+}
+{% endif %}
+{% if part == "LyricsWikifonia" %}\lyricmode {
+	Out of my dreams and in -- to your arms I long to fly __ I will come as eve -- "'ning"
+	comes to woo a wait -- ing sky. __ Out of my dreams and in -- to the hush of fall -- ing
+	shad -- ows, When the mist is low __ and stars are break -- ing through. __ Then out of my
+	dreams I'll go __ In -- to a dream __ with your. __ Wont have to make up an -- y -- more
+	stor -- ies, You'll be there! __ Think of the bright mid -- sum -- mer night glor -- ies
+	we can share. __ Wont have to go on kiss -- ing a day dream I'll have you __ You'll be
+	real __ Real as the white moon light -- ing the blue. __
 }
 {% endif %}

@@ -5,6 +5,7 @@ default_version = "Wikifonia"
 title = "Michelle"
 style = "Jazz"
 composer = "John Lennon, Paul McCartney"
+poet = "John Lennon, Paul McCartney"
 piece = "Standard"
 typesetter = "OpenBook contributors (MusicXML import)"
 completion = "3"
@@ -16,8 +17,8 @@ copyrightextra = "Archived MusicXML notice retained; underlying music is not rel
 [versions.Wikifonia]
 doChords = true
 doVoice = true
-doLyrics = false
-doLyricsmore = false
+doLyrics = true
+doLyricsmore = true
 doLyricsmoremore = false
 doChordBars = false
 doGuitar = false
@@ -37,6 +38,7 @@ doOwn = false
 	- retained written melody, chord changes, pickups, repeats and numbered endings; lyrics omitted.
 	- imported explicit 7alt symbols using the book's altered-dominant notation where present.
 	- tempo is an editorial practice suggestion.
+	- put in the lyrics from the same Wikifonia source.
 	TODO:
 	- proofread the complete melody, harmony and form against the referenced PDF and check by ear.
 	- verify source attribution, copyright notice and reuse terms against the scan; only the archived MusicXML notice is retained.
@@ -145,5 +147,21 @@ doOwn = false
 	d'1 ~ |
 	d'2. r4 |
 	\endBar
+}
+{% endif %}
+{% if part == "LyricsWikifonia" %}\lyricmode {
+	Mich -- elle, ma belle, these are words that go to -- geth -- er well, my Mi -- chelle.
+	Mich -- elle, ma belle, sont les mots qui vont très bien en -- semble, très bien en --
+	semble. I love you, I love you, I love you, that's all I want to say, Un -- til I find a
+	way __ I will say the on -- ly words I know that you'll un -- der -- stand. I love you. __ _
+	I __ Mich -- elle, ma belle, sont les mots qui vont très bien en -- semble, très bien en --
+	semble __ I will say the on -- ly words I know that you'll un -- der -- stand. my Mich --
+	elle. __
+}
+{% endif %}
+{% if part == "LyricsmoreWikifonia" %}\lyricmode {
+	_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ need to, I need to, I
+	need to, I need to make you see Oh what you mean to me, __ _ un til I do I'm ho -- ping
+	you will know what I mean.
 }
 {% endif %}

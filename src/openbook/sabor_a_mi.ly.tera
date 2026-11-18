@@ -4,7 +4,8 @@ default_version = "Wikifonia"
 [attributes]
 title = "Sabor A Mi"
 style = "Jazz"
-composer = "Alvaro Carrillo, Alvaro Carrillo"
+composer = "Alvaro Carrillo"
+poet = "Alvaro Carrillo"
 piece = "Standard"
 typesetter = "OpenBook contributors (MusicXML import)"
 completion = "3"
@@ -16,7 +17,7 @@ copyrightextra = "Archived MusicXML notice retained; underlying music is not rel
 [versions.Wikifonia]
 doChords = true
 doVoice = true
-doLyrics = false
+doLyrics = true
 doLyricsmore = false
 doLyricsmoremore = false
 doChordBars = false
@@ -35,6 +36,7 @@ doOwn = false
 	- retained the archived MusicXML rights notice; no redistribution permission is asserted.
 	- retained written melody, chord changes, pickups, repeats and numbered endings; lyrics, slurs, dynamics and articulations other than fermatas omitted.
 	- tempo is an editorial practice suggestion.
+	- put in the lyrics from the same Wikifonia source.
 	TODO:
 	- proofread the complete melody, harmony and form against a printed edition and check by ear.
 	- verify source attribution, copyright notice and reuse terms; only the archived MusicXML notice is retained.
@@ -125,5 +127,17 @@ doOwn = false
 	g'1 ~ |
 	g'4 r4 r2 |
 	\endBar
+}
+{% endif %}
+{% if part == "LyricsWikifonia" %}\lyricmode {
+	Tan -- to Tiem -- po dis -- fru -- ta -- mos este a -- mor Nues -- tras al -- mas "se~a" --
+	cer -- ca -- ron tan -- to así Que yo guar -- do tu sa -- bor Pe -- ro tu lle -- vas tam --
+	bien Sa -- bor A Mi Si ne -- ga -- ras mi pre -- sen -- "cia~en" tu vi -- vir Bas -- ta --
+	ria con a -- bra -- zar -- "te~y" con -- ver -- sar Tan -- ta vi -- da yo te di que por
+	fuer -- za tie -- nes ya Sa -- bor A Mi __ No pre -- ten do ser tu due -- ño No soy na --
+	da, yo no ten -- go va -- ni -- dad De mi vi -- da doy lo bue -- no Yo tan po -- bre
+	"que~o" -- tra co -- sa pue -- do dar Pa -- sa -- ran más de mil a -- ños mu -- cho más Yo
+	no se si ten -- "ga~a" -- mor "la~e" -- ter -- ni -- dad Pe -- "ro~a" -- lla tal co --
+	"mo~a" -- quí en la bo -- ca lle -- va -- ras Sa -- bor A Mi. __
 }
 {% endif %}

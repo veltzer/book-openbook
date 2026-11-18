@@ -5,6 +5,7 @@ default_version = "Wikifonia"
 title = "The Christmas Waltz"
 style = "Jazz"
 composer = "Jule Styne"
+poet = "Sammy Cahn"
 piece = "Standard"
 typesetter = "OpenBook contributors (MusicXML import)"
 completion = "3"
@@ -16,7 +17,7 @@ copyrightextra = "Archived MusicXML notice retained; underlying music is not rel
 [versions.Wikifonia]
 doChords = true
 doVoice = true
-doLyrics = false
+doLyrics = true
 doLyricsmore = false
 doLyricsmoremore = false
 doChordBars = false
@@ -37,6 +38,7 @@ doOwn = false
 	- retained written melody, chord changes, pickups, repeats and numbered endings; lyrics omitted.
 	- imported explicit 7alt symbols using the book's altered-dominant notation where present.
 	- tempo is an editorial practice suggestion.
+	- put in the lyrics from the same Wikifonia source.
 	TODO:
 	- proofread the complete melody, harmony and form against the referenced PDF and check by ear.
 	- verify source attribution, copyright notice and reuse terms against the scan; only the archived MusicXML notice is retained.
@@ -144,5 +146,14 @@ doOwn = false
 	f'2. ~ |
 	f'2. |
 	\endBar
+}
+{% endif %}
+{% if part == "LyricsWikifonia" %}\lyricmode {
+	Frost -- ed win -- dow panes, __ can -- dles gleam -- ing in -- side, paint -- ed cand --
+	y canes __ on the "tree;" San -- ta's on his way, he's filled his sleigh with things, __
+	things for you and for me. It's that time of year __ when the world falls in love, ev --
+	"'ry" song you hear __ seems to say "'Mer" -- ry Christ -- mas __ may your New Year dreams
+	come "true.'" __ And this song of mine, __ in three quar -- ter time, __ wish -- es you
+	and yours __ the same thing too. __
 }
 {% endif %}

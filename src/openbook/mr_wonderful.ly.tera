@@ -5,6 +5,7 @@ default_version = "Wikifonia"
 title = "Mr Wonderful"
 style = "Standard"
 composer = "George Weiss, Jerry Bock, Larry Holofcener"
+poet = "George Weiss, Jerry Bock, Larry Holofcener"
 piece = "Standard"
 typesetter = "OpenBook contributors (MusicXML import)"
 completion = "3"
@@ -16,8 +17,8 @@ copyrightextra = "Archived MusicXML notice retained; underlying music is not rel
 [versions.Wikifonia]
 doChords = true
 doVoice = true
-doLyrics = false
-doLyricsmore = false
+doLyrics = true
+doLyricsmore = true
 doLyricsmoremore = false
 doChordBars = false
 doGuitar = false
@@ -37,6 +38,7 @@ doOwn = false
 	- retained written melody, chord changes, pickups, repeats and numbered endings; lyrics omitted.
 	- imported explicit 7alt symbols using the book's altered-dominant notation where present.
 	- tempo is an editorial practice suggestion.
+	- put in the lyrics from the same Wikifonia source.
 	TODO:
 	- proofread the complete melody, harmony and form against the referenced PDF and check by ear.
 	- verify source attribution, copyright notice and reuse terms against the scan; only the archived MusicXML notice is retained.
@@ -217,5 +219,21 @@ doOwn = false
 	}
 	}
 	\endBar
+}
+{% endif %}
+{% if part == "LyricsWikifonia" %}\lyricmode {
+	Why this feel -- ing? __ why this glow? __ why the thrill when you say Hel -- lo __ It's
+	a strange and ten -- der mag -- ic you do __ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _
+	One more thing then I'm through Mis -- ter Won -- der -- ful, __ Mis -- ter won -- der --
+	ful __ Mis -- ter won -- der -- ful I love you __ why this you! __
+}
+{% endif %}
+{% if part == "LyricsmoreWikifonia" %}\lyricmode {
+	_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ Mis -- ter Won -- der -- ful __ thats
+	you __ Why this trem -- bling __ when you speak? __ why this joy when you touch my cheek? __
+	I must tell you what my heart knows is true __ Mis -- ter Won -- der -- ful __ thats you
+	and why this long -- ing __ to know your charms to spend for -- ev -- er __ here in your
+	arms __ Oh theres much more __ I could say __ but the words keep slip -- ping a -- way __
+	and I'm left with on -- ly one point of view __ Mis -- ter Won -- der -- ful __ thats you __
 }
 {% endif %}

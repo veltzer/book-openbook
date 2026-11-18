@@ -5,6 +5,7 @@ default_version = "Wikifonia"
 title = "How Are Things in Glocca Morra?"
 style = "Jazz"
 composer = "Burton Lane"
+poet = "E. Y. Harburg"
 piece = "Standard"
 typesetter = "OpenBook contributors (MusicXML import)"
 completion = "3"
@@ -16,7 +17,7 @@ copyrightextra = "Archived MusicXML notice retained; underlying music is not rel
 [versions.Wikifonia]
 doChords = true
 doVoice = true
-doLyrics = false
+doLyrics = true
 doLyricsmore = false
 doLyricsmoremore = false
 doChordBars = false
@@ -37,6 +38,7 @@ doOwn = false
 	- retained written melody, chord changes, pickups, repeats and numbered endings; lyrics omitted.
 	- imported explicit 7alt symbols using the book's altered-dominant notation where present.
 	- tempo is an editorial practice suggestion.
+	- put in the lyrics from the same Wikifonia source.
 	TODO:
 	- proofread the complete melody, harmony and form against the referenced PDF and check by ear.
 	- verify source attribution, copyright notice and reuse terms against the scan; only the archived MusicXML notice is retained.
@@ -142,5 +144,16 @@ doOwn = false
 	}
 	f'2. r4 |
 	\endBar
+}
+{% endif %}
+{% if part == "LyricsWikifonia" %}\lyricmode {
+	How are things in Gloc -- ca -- Mor -- ra? __ _ Is that lit -- tle brook still leap --
+	ing there? __ Does it still run down to Don -- ny Cove? __ Thru Kil -- ley -- begs, __ Kil --
+	ker -- ry and Kil -- dare? __ How are things in Gloc -- ca Mor -- ra? __ Is that wil --
+	low tree still weep -- "in'" there? __ Does the lad -- die with the twink -- "lin'" eye __
+	come whist -- "lin'" by __ and does he walk a -- way, Sad and dream -- y there not to see
+	me there? __ So I ask each weep -- "in'" wil -- low and each brook a -- long the way, and
+	each lad that comes a -- whist -- "lin'" Too -- ra -- lay. __ How are things in Gloc -- ca
+	Mor -- ra this fine day? __ How are things in Gloc -- ca day? __
 }
 {% endif %}

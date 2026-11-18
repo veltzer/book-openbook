@@ -5,6 +5,7 @@ default_version = "Wikifonia"
 title = "Save Your Love For Me"
 style = "Jazz"
 composer = "Buddy Johnson"
+poet = "Buddy Johnson"
 piece = "Jazz"
 typesetter = "OpenBook contributors (MusicXML import)"
 completion = "3"
@@ -15,7 +16,7 @@ copyright = "1972 Contemporary Music. Used By Permission."
 [versions.Wikifonia]
 doChords = true
 doVoice = true
-doLyrics = false
+doLyrics = true
 doLyricsmore = false
 doLyricsmoremore = false
 doChordBars = false
@@ -34,6 +35,7 @@ doOwn = false
 	- retained the original copyright notice where printed; the underlying music is not relicensed.
 	- retained written measures, pickups, repeats and endings; lyrics omitted.
 	- tempo is an editorial practice suggestion.
+	- put in the lyrics from the same Wikifonia source.
 	TODO:
 	- proofread the music against the referenced PDF and check by ear.
 {% endif %}
@@ -148,5 +150,16 @@ doOwn = false
 	}
 	}
 	\endBar
+}
+{% endif %}
+{% if part == "LyricsWikifonia" %}\lyricmode {
+	Wish I knew __ why I'm so in love with you, __ no one else in this world will do, so, dar --
+	ling, save your love for me. __ Run a -- way, __ if I were wise I'd run a -- way, __ but
+	like a fool in love I stay, and pray you'll save your love for me. __ I can feel it ev --
+	en when you're not here, __ can't con -- ceal it, I real -- ly love you my dear. __ And
+	"tho'" I know no good can come from lov -- ing you, __ I can't do a thing, __ I'm so in
+	love with you. __ Help me please, __ hve merc -- y on a fool like me, __ I know I'm doomed
+	but still I plead, dar -- ling, please save your love for me. __ You may have fun with the
+	crowd, but for cry -- ing out loud, __ dar -- ling, please save you love __ for me. __ me. __
 }
 {% endif %}

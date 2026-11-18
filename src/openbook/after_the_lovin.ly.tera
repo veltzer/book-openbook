@@ -5,6 +5,7 @@ default_version = "Wikifonia"
 title = "After The Lovin'"
 style = "Standard"
 composer = "Ritchie Adams"
+poet = "Alan Bernstein"
 piece = "Standard"
 typesetter = "OpenBook contributors (MusicXML import)"
 completion = "3"
@@ -16,7 +17,7 @@ copyrightextra = "Archived MusicXML notice retained; underlying music is not rel
 [versions.Wikifonia]
 doChords = true
 doVoice = true
-doLyrics = false
+doLyrics = true
 doLyricsmore = false
 doLyricsmoremore = false
 doChordBars = false
@@ -37,6 +38,7 @@ doOwn = false
 	- retained written melody, chord changes, pickups, repeats and numbered endings; lyrics omitted.
 	- imported explicit 7alt symbols using the book's altered-dominant notation where present.
 	- tempo is an editorial practice suggestion.
+	- put in the lyrics from the same Wikifonia source.
 	TODO:
 	- proofread the complete melody, harmony and form against the referenced PDF and check by ear.
 	- verify source attribution, copyright notice and reuse terms against the scan; only the archived MusicXML notice is retained.
@@ -160,5 +162,19 @@ doOwn = false
 	e'2 c'2 ~ |
 	c'2. r4 |
 	\endBar
+}
+{% endif %}
+{% if part == "LyricsWikifonia" %}\lyricmode {
+	So I sing you to sleep __ af -- ter the lov -- in __ with a song I just wrote __ yes --
+	ter -- day, and I hope you can get __ what the words __ and the mus -- ic have to say.
+	It's so hard to ex -- plain ev -- "'ry" -- thing that I'm feel -- ing __ face to face I
+	just seem to go dry. But I love you so much __ that the sound __ of your voice can get me
+	high. Thanks for tak -- "in'" me __ on a one way trip __ to the sun. __ And thanks for
+	turn -- "in'" me. __ in -- to a some -- one. So I sing you to sleep __ af -- ter the lov --
+	"in'" I brush back the hair __ from your eyes. And the love on your face __ is so real __
+	that it makes me wan -- na cry. And I know __ that my song is -- n't say -- "in'" an -- y --
+	thing new Oh, __ but af -- ter the lov -- "in'" "I''m" __ still in love with you. Yes, af --
+	ter the lov -- "in'" I'm __ still in love with you. Oh, af -- ter the lov -- "in'" I'm __
+	still in love with you __
 }
 {% endif %}

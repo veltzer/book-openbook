@@ -5,6 +5,7 @@ default_version = "Wikifonia"
 title = "Lady Sings The Blues"
 style = "Jazz"
 composer = "Billie Holiday"
+poet = "Herbert Nichols"
 piece = "Standard"
 typesetter = "OpenBook contributors (MusicXML import)"
 completion = "3"
@@ -16,7 +17,7 @@ copyrightextra = "Archived MusicXML notice retained; underlying music is not rel
 [versions.Wikifonia]
 doChords = true
 doVoice = true
-doLyrics = false
+doLyrics = true
 doLyricsmore = false
 doLyricsmoremore = false
 doChordBars = false
@@ -37,6 +38,7 @@ doOwn = false
 	- retained written melody, chord changes, pickups, repeats and numbered endings; lyrics omitted.
 	- imported explicit 7alt symbols using the book's altered-dominant notation where present.
 	- tempo is an editorial practice suggestion.
+	- put in the lyrics from the same Wikifonia source.
 	TODO:
 	- proofread the complete melody, harmony and form against the referenced PDF and check by ear.
 	- verify source attribution, copyright notice and reuse terms against the scan; only the archived MusicXML notice is retained.
@@ -128,5 +130,16 @@ doOwn = false
 	g'2. g'8 es''8 ^\fermata |
 	d''2. ^\fermata r4 |
 	\endBar
+}
+{% endif %}
+{% if part == "LyricsWikifonia" %}\lyricmode {
+	La -- dy sings the blues, __ she's got them bad, __ she feels so sad. Wants __ the world
+	to know __ what the blues are all a -- bout. __ La -- dy sings the blues, __ she tells her
+	side, __ noth -- ng to hide. Now __ the world will know __ just what the blues are all a --
+	bout. __ The blues ain't noth -- "in'" but a pain in your heart. __ When you get a bad
+	start, __ when you and your man have to part, __ she ain't gon -- na just sit a -- round
+	and cry. She knows she won't die __ be -- cause she loves him. __ La -- dy sings the blues __
+	she's tell -- "in'" you __ she's got them bad. Now __ the world will know, she's nev -- er
+	gon -- na sing them no more, __ no __ _ more.
 }
 {% endif %}

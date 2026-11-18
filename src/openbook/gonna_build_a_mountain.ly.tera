@@ -5,6 +5,7 @@ default_version = "Wikifonia"
 title = "Gonna Build A Mountain"
 style = "Standard"
 composer = "Leslie Bricusse, Anthony Newley"
+poet = "Leslie Bricusse, Anthony Newley"
 piece = "Standard"
 typesetter = "OpenBook contributors (MusicXML import)"
 completion = "3"
@@ -16,7 +17,7 @@ copyrightextra = "Archived MusicXML notice retained; underlying music is not rel
 [versions.Wikifonia]
 doChords = true
 doVoice = true
-doLyrics = false
+doLyrics = true
 doLyricsmore = false
 doLyricsmoremore = false
 doChordBars = false
@@ -37,6 +38,7 @@ doOwn = false
 	- retained written melody, chord changes, pickups, repeats and numbered endings; lyrics omitted.
 	- imported explicit 7alt symbols using the book's altered-dominant notation where present.
 	- tempo is an editorial practice suggestion.
+	- put in the lyrics from the same Wikifonia source.
 	TODO:
 	- proofread the complete melody, harmony and form against the referenced PDF and check by ear.
 	- verify source attribution, copyright notice and reuse terms against the scan; only the archived MusicXML notice is retained.
@@ -127,5 +129,14 @@ doOwn = false
 	c''1 ~ |
 	c''4 r4 r2 |
 	\endBar
+}
+{% endif %}
+{% if part == "LyricsWikifonia" %}\lyricmode {
+	Gon -- na build a moun -- tain __ from a lit -- tle hill __ gon -- na build a moun --
+	tain __ lease I hope I will __ gon -- na build a moun -- tain gon -- na build it high I
+	don't know how I'm gon -- na do it on -- ly know I'm gon -- na try __ gon -- na build a
+	day -- dream __ from a lit -- tle hope __ gon -- na push that day dream __ up the moun --
+	tain slope __ gon -- na build a day dream gon -- na see it through Gon -- na build a moun --
+	tain and a day -- dream gon -- na make em both come true. __
 }
 {% endif %}

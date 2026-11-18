@@ -5,6 +5,7 @@ default_version = "Wikifonia"
 title = "AL DI LA"
 style = "Standard"
 composer = "C. Donida"
+poet = "Mogol, Engish Ervin Drake"
 piece = "Standard"
 typesetter = "OpenBook contributors (MusicXML import)"
 completion = "3"
@@ -16,8 +17,8 @@ copyrightextra = "Archived MusicXML notice retained; underlying music is not rel
 [versions.Wikifonia]
 doChords = true
 doVoice = true
-doLyrics = false
-doLyricsmore = false
+doLyrics = true
+doLyricsmore = true
 doLyricsmoremore = false
 doChordBars = false
 doGuitar = false
@@ -37,6 +38,7 @@ doOwn = false
 	- retained written melody, chord changes, pickups, repeats and numbered endings; lyrics omitted.
 	- imported explicit 7alt symbols using the book's altered-dominant notation where present.
 	- tempo is an editorial practice suggestion.
+	- put in the lyrics from the same Wikifonia source.
 	TODO:
 	- proofread the complete melody, harmony and form against the referenced PDF and check by ear.
 	- verify source attribution, copyright notice and reuse terms against the scan; only the archived MusicXML notice is retained.
@@ -150,5 +152,25 @@ doOwn = false
 	bes'2 \times 2/3 { c''4 d''4 c''4 } |
 	d''4. ^\fermata c''8 bes'2 ^\fermata |
 	\endBar
+}
+{% endif %}
+{% if part == "LyricsWikifonia" %}\lyricmode {
+	Al di la means you are far a -- bove me, ver -- y far. __ Al di la, as dis -- tant as the
+	love -- ly "ev'" -- ning star. __ Where you walk flow -- ers bloom when you smile all the
+	gloom turns to sun -- shine, And my heart o -- pens -- wide, when your gone it fades in --
+	side and seems to have died. Al di la, I wan -- der'd as I drift -- ed where you were. __
+	Al di la, the fog a -- round me lift -- ed, there you were. __ In the kiss that I gave was
+	the love I had sav'd for a life -- time. Then I knew all of you was com -- plete -- ly
+	mine. __ Al di
+}
+{% endif %}
+{% if part == "LyricsmoreWikifonia" %}\lyricmode {
+	_ _ _ del be -- ne piu pre -- zio -- so ci sei tu, __ Al di la del so -- gno piu am'bi
+	zio so ci sei tu. __ Al di la del -- le co -- se piu bel -- le'al di la del -- le stel --
+	le ci sei tu, al di la ci sei tu per me, per me, so -- tan -- to per me. Al di la, del ma --
+	re piu pro -- fon -- do ci sei tu __ Al di la dei li -- mi -- ti del mon -- do, ci sei tu __
+	Al di la del -- la vol -- ta'in fi -- ni -- ta'al di la del -- la vi -- ta ci sei tu, al
+	di la, ci sei tu, per me! __ _ _ me! La, la, la, la, La, la, la, la, La, la, la, La, la,
+	la.
 }
 {% endif %}

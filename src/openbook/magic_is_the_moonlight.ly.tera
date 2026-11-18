@@ -5,6 +5,7 @@ default_version = "Wikifonia"
 title = "Magic Is The Moonlight"
 style = "Standard"
 composer = "Maria Grever"
+poet = "Maria Grever"
 piece = "Standard"
 typesetter = "OpenBook contributors (MusicXML import)"
 completion = "3"
@@ -16,7 +17,7 @@ copyrightextra = "Archived MusicXML notice retained; underlying music is not rel
 [versions.Wikifonia]
 doChords = true
 doVoice = true
-doLyrics = false
+doLyrics = true
 doLyricsmore = false
 doLyricsmoremore = false
 doChordBars = false
@@ -37,6 +38,7 @@ doOwn = false
 	- retained written melody, chord changes, pickups, repeats and numbered endings; lyrics omitted.
 	- imported explicit 7alt symbols using the book's altered-dominant notation where present.
 	- tempo is an editorial practice suggestion.
+	- put in the lyrics from the same Wikifonia source.
 	TODO:
 	- proofread the complete melody, harmony and form against the referenced PDF and check by ear.
 	- verify source attribution, copyright notice and reuse terms against the scan; only the archived MusicXML notice is retained.
@@ -146,5 +148,14 @@ doOwn = false
 	}
 	}
 	\endBar
+}
+{% endif %}
+{% if part == "LyricsWikifonia" %}\lyricmode {
+	Mag -- ic is the moon -- light, __ On this lov -- er's June night __ As I see the moon --
+	light __ Shin -- ing in your eyes. __ Can't re -- sist the pow -- er __ In this moon --
+	lit hour __ Love be -- gan to flow -- er __ This is Par -- a -- dise. __ Liv -- ing in the
+	splen -- dor __ Of your kiss so ten -- der, __ make my heart sur -- ren -- der __ To your
+	love di -- "vine;" __ Mag -- ic is the moon -- light, __ More than an -- y June night, __
+	Mag -- ic is the moon -- light, __ For it made you mine. __ Ma -- gic is the mine. __
 }
 {% endif %}

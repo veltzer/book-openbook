@@ -5,6 +5,7 @@ default_version = "Wikifonia"
 title = "For Heaven's Sake"
 style = "Jazz"
 composer = "Don Meyer, Elise Bretton, Sherman Edwards"
+poet = "Don Meyer, Elise Bretton, Sherman Edwards"
 piece = "Jazz"
 typesetter = "OpenBook contributors (MusicXML import)"
 completion = "3"
@@ -15,7 +16,7 @@ copyright = "All Rights Reserved"
 [versions.Wikifonia]
 doChords = true
 doVoice = true
-doLyrics = false
+doLyrics = true
 doLyricsmore = false
 doLyricsmoremore = false
 doChordBars = false
@@ -34,6 +35,7 @@ doOwn = false
 	- retained the original copyright notice where printed; the underlying music is not relicensed.
 	- retained written measures, pickups, repeats and endings; lyrics omitted.
 	- tempo is an editorial practice suggestion.
+	- put in the lyrics from the same Wikifonia source.
 	TODO:
 	- proofread the music against the referenced PDF and check by ear.
 	- verify editorial chord spacing in measures 21; the archive places successive symbols at the same offset.
@@ -124,5 +126,16 @@ doOwn = false
 	d'2 ~ d'8 f'8 e'8 g'8 |
 	f'2. r4 |
 	\endBar
+}
+{% endif %}
+{% if part == "LyricsWikifonia" %}\lyricmode {
+	For heav -- ens sake, __ let's fall in love, __ it's no mis -- take __ to call it love.
+	An an -- gel's old -- ing hands with me, __ how heav -- en -- ly __ Heav -- en can be.
+	Here is ro -- mance __ for us to try, __ here is the chance __ we can't den -- y. While
+	Heav -- en's giv -- ing us the break __ let's fall in love, __ for Heav -- en's sake.
+	Don't say a word my dar -- ling, don't break a spell like this. Just hold me tight, we're
+	a -- lone in the night, and Heav -- en is hee in a kiss. This pair of eyes __ can see a
+	star, __ so par -- a -- dise __ can't be so far. Since Heav -- en's what we're dream --
+	ing of, __ for Heav -- en's sake __ let's fall in love.
 }
 {% endif %}

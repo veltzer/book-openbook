@@ -5,6 +5,7 @@ default_version = "Wikifonia"
 title = "Almost Like Being in Love"
 style = "Jazz"
 composer = "Frederick Loewe"
+poet = "Alan Jay Lerner"
 piece = "Jazz"
 typesetter = "OpenBook contributors (MusicXML import)"
 completion = "3"
@@ -16,7 +17,7 @@ copyrightextra = "of CPP/Belwin, Inc., Miami, FL. All Rights Reserved"
 [versions.Wikifonia]
 doChords = true
 doVoice = true
-doLyrics = false
+doLyrics = true
 doLyricsmore = false
 doLyricsmoremore = false
 doChordBars = false
@@ -35,6 +36,7 @@ doOwn = false
 	- retained the original copyright notice where printed; the underlying music is not relicensed.
 	- retained written measures, pickups, repeats and endings; lyrics omitted.
 	- tempo is an editorial practice suggestion.
+	- put in the lyrics from the same Wikifonia source.
 	TODO:
 	- proofread the music against the referenced PDF and check by ear.
 	- verify editorial chord spacing in measures 37; the archive places successive symbols at the same offset.
@@ -132,5 +134,14 @@ doOwn = false
 	bes'1 |
 	R1 |
 	\endBar
+}
+{% endif %}
+{% if part == "LyricsWikifonia" %}\lyricmode {
+	What a day this has been! What a rare mood I'm in! Why, it's al -- most like be -- ing __
+	in love. __ There's a smile on my face for the whole hu -- man race. Why, it's al -- most
+	like be -- ing __ in love. __ All the mu -- sic of life seems to be, __ like a bell that
+	is ring -- ing for me. __ And from the way that I feel when that bell starts to peal I
+	could swear I was fall -- ing, I could swear I was fall -- ing, it's al -- most like be --
+	ing in love.
 }
 {% endif %}

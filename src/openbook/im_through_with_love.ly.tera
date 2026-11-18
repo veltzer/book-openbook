@@ -5,6 +5,7 @@ default_version = "Wikifonia"
 title = "I'm Through With Love"
 style = "Jazz"
 composer = "Matt Malneck, Fud Livingston"
+poet = "Gus Kahn"
 piece = "Jazz"
 typesetter = "OpenBook contributors (MusicXML import)"
 completion = "3"
@@ -16,7 +17,7 @@ copyrightextra = "Rights Reserved"
 [versions.Wikifonia]
 doChords = true
 doVoice = true
-doLyrics = false
+doLyrics = true
 doLyricsmore = false
 doLyricsmoremore = false
 doChordBars = false
@@ -35,6 +36,7 @@ doOwn = false
 	- retained the original copyright notice where printed; the underlying music is not relicensed.
 	- retained written measures, pickups, repeats and endings; lyrics omitted.
 	- tempo is an editorial practice suggestion.
+	- put in the lyrics from the same Wikifonia source.
 	TODO:
 	- proofread the music against the referenced PDF and check by ear.
 	- verify editorial chord spacing in measures 9, 17; the archive places successive symbols at the same offset.
@@ -124,5 +126,17 @@ doOwn = false
 	r8 c'8 b8 c'8 as'4 g'4 - "" |
 	es'1 |
 	\endBar
+}
+{% endif %}
+{% if part == "LyricsWikifonia" %}\lyricmode {
+	I'm through with love, I'll nev -- er fall a -- gain. __ Said a -- dieu to love, don't ev --
+	er call a -- gain. __ For I must have you __ or no one, __ and so I'm through with love. __
+	I've locked my heart I'll keep my feel -- ings there. __ I have stocked my heart with ic --
+	y, frig -- id air. __ And I mean to care __ for no one, __ be -- cause I'm through with
+	love. __ Why did you lead me to think you could care? __ You did -- n't need me for you
+	had your share __ of slaves a -- round you and hound you and swear __ with deep e -- mo --
+	tion, de -- vo -- tion to you. Good -- bye to spring and all it's meant to me __ It can
+	nev -- er bring the thing that used to be. __ For I must have you __ or no one, __ and so
+	I'm through with love.
 }
 {% endif %}

@@ -5,6 +5,7 @@ default_version = "Wikifonia"
 title = "Blue Star (The \\\"Medic\\\" Theme)"
 style = "Jazz"
 composer = "Victor Young"
+poet = "Edward Heyman"
 piece = "Standard"
 typesetter = "OpenBook contributors (MusicXML import)"
 completion = "3"
@@ -16,7 +17,7 @@ copyrightextra = "Archived MusicXML notice retained; underlying music is not rel
 [versions.Wikifonia]
 doChords = true
 doVoice = true
-doLyrics = false
+doLyrics = true
 doLyricsmore = false
 doLyricsmoremore = false
 doChordBars = false
@@ -37,6 +38,7 @@ doOwn = false
 	- retained written melody, chord changes, pickups, repeats and numbered endings; lyrics omitted.
 	- imported explicit 7alt symbols using the book's altered-dominant notation where present.
 	- tempo is an editorial practice suggestion.
+	- put in the lyrics from the same Wikifonia source.
 	TODO:
 	- proofread the complete melody, harmony and form against the referenced PDF and check by ear.
 	- verify source attribution, copyright notice and reuse terms against the scan; only the archived MusicXML notice is retained.
@@ -145,5 +147,14 @@ doOwn = false
 	}
 	es''2 ~ es''4 r4 |
 	\endBar
+}
+{% endif %}
+{% if part == "LyricsWikifonia" %}\lyricmode {
+	When things go wrong and there's no one a -- round to hear, __ I look at you, Star of
+	blue, And my trou -- bles __ dis -- ap -- pear. Blue Star __ when I am blue, All I do __
+	is look at you, For I seem to find peace of mind, And I nev -- er get lone -- ly when you
+	shine from a -- far. __ With you __ a -- way up there, I don't dare __ to have a care, For
+	I want to show, That your glow lets me know that you know that I'm not blue, Blue Star __
+	Blue Star __
 }
 {% endif %}

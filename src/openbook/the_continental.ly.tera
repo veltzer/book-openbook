@@ -5,6 +5,7 @@ default_version = "Wikifonia"
 title = "The Continental"
 style = "Jazz"
 composer = "Con Conrad"
+poet = "Herbert Magidson"
 piece = "Standard"
 typesetter = "OpenBook contributors (MusicXML import)"
 completion = "3"
@@ -16,7 +17,7 @@ copyrightextra = "Archived MusicXML notice retained; underlying music is not rel
 [versions.Wikifonia]
 doChords = true
 doVoice = true
-doLyrics = false
+doLyrics = true
 doLyricsmore = false
 doLyricsmoremore = false
 doChordBars = false
@@ -37,6 +38,7 @@ doOwn = false
 	- retained written melody, chord changes, pickups, repeats and numbered endings; lyrics omitted.
 	- imported explicit 7alt symbols using the book's altered-dominant notation where present.
 	- tempo is an editorial practice suggestion.
+	- put in the lyrics from the same Wikifonia source.
 	TODO:
 	- proofread the complete melody, harmony and form against the referenced PDF and check by ear.
 	- verify source attribution, copyright notice and reuse terms against the scan; only the archived MusicXML notice is retained.
@@ -247,5 +249,25 @@ doOwn = false
 	es''1 ~ |
 	es''4 r4 r2 |
 	\endBar
+}
+{% endif %}
+{% if part == "LyricsWikifonia" %}\lyricmode {
+	Beau -- ti -- ful mu -- sic! __ _ _ Dan -- ger -- ous rhy -- thm! __ _ _ _ It's some
+	thing dar -- ing, The Con -- ti -- nen -- tal, A way of danc -- ing that's real -- ly ul --
+	tra "new;" It's ver -- y sub -- tle, The Cin -- ti -- nen -- tal, Be -- cause it does what
+	you want it to do. _ _ _ _ _ _ It has a pas -- sion, The Con -- ti -- nen -- tal, An in --
+	vi -- ta -- tion to moon -- light and ro -- "mance;" It's quite the fash -- ion, The Con --
+	ti -- nen -- tal Be -- cause you tell of your love while you dance. Your lips __ whis --
+	per so ten -- der -- ly, __ Her eyes __ ans -- wer your song. __ Two bod -- ies sway --
+	ing, The Con -- ti -- nen -- tal, And you are say -- ing just what you're think -- ing
+	"of;" So keep on danc -- ing The Con -- ti -- nen -- tal, For it's the song of ro -- mance
+	and of love. _ _ _ _ _ _ _ _ _ _ _ _ _ _ You kiss __ while you're danc -- "ing;" __ It's
+	con -- ti -- nen -- tal It's con -- ti -- nen -- tal You sing, __ while you're danc --
+	"ing;" __ Your voice is gen -- tle and sen -- ti -- men -- tal. You'll know be -- fore the
+	dance is through, __ That you're in love with her and she's in love with you. __ You'll
+	find __ while you're danc -- ing, __ That there's a rhy -- thm in your heart and "soul;" __
+	A cer -- tain rhy -- thm tat you can't con -- trol, __ And you will do The Con -- ti --
+	nen -- tal all __ the time. __ _ _ _ _ Beau -- ti -- ful mu -- sic! __ Dan -- ger -- ous
+	rhy -- thm! __
 }
 {% endif %}

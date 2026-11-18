@@ -5,6 +5,7 @@ default_version = "Wikifonia"
 title = "Something Wonderful"
 style = "Standard"
 composer = "Richard Rodgers"
+poet = "Oscar Hammerstein II"
 piece = "Standard"
 typesetter = "OpenBook contributors (MusicXML import)"
 completion = "3"
@@ -16,7 +17,7 @@ copyrightextra = "Archived MusicXML notice retained; underlying music is not rel
 [versions.Wikifonia]
 doChords = true
 doVoice = true
-doLyrics = false
+doLyrics = true
 doLyricsmore = false
 doLyricsmoremore = false
 doChordBars = false
@@ -37,6 +38,7 @@ doOwn = false
 	- retained written melody, chord changes, pickups, repeats and numbered endings; lyrics omitted.
 	- imported explicit 7alt symbols using the book's altered-dominant notation where present.
 	- tempo is an editorial practice suggestion.
+	- put in the lyrics from the same Wikifonia source.
 	TODO:
 	- proofread the complete melody, harmony and form against the referenced PDF and check by ear.
 	- verify source attribution, copyright notice and reuse terms against the scan; only the archived MusicXML notice is retained.
@@ -164,5 +166,15 @@ doOwn = false
 	}
 	g'2. r4 |
 	\endBar
+}
+{% endif %}
+{% if part == "LyricsWikifonia" %}\lyricmode {
+	He will not al -- ways say What you would have him say. But, now and then, he'll say some --
+	thing won -- der -- ful. The thought -- less things he'll do will hurt and wor -- ry you.
+	Then, all at once he'll do some -- thing won -- der -- ful. He has a thous -- and dreams
+	that won't come true. You know that he be -- lieves in them and that's e -- nough for you.
+	You'll al -- ways go a -- long. De -- fend him when he's wrong. And tell him when he's
+	strong. He is won -- der -- ful. He'll al -- ways need your love, and so he'll get your
+	love. A man who needs your love can be won -- der -- ful __
 }
 {% endif %}

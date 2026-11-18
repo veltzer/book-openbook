@@ -5,6 +5,7 @@ default_version = "Wikifonia"
 title = "Lulu's Back in Town"
 style = "Jazz"
 composer = "Harry Warren"
+poet = "Al Dubin"
 piece = "Jazz"
 typesetter = "OpenBook contributors (MusicXML import)"
 completion = "3"
@@ -15,8 +16,8 @@ copyright = "All Rights Reserved"
 [versions.Wikifonia]
 doChords = true
 doVoice = true
-doLyrics = false
-doLyricsmore = false
+doLyrics = true
+doLyricsmore = true
 doLyricsmoremore = false
 doChordBars = false
 doGuitar = false
@@ -34,6 +35,7 @@ doOwn = false
 	- retained the original copyright notice where printed; the underlying music is not relicensed.
 	- retained written measures, pickups, repeats and endings; lyrics omitted.
 	- tempo is an editorial practice suggestion.
+	- put in the lyrics from the same Wikifonia source.
 	TODO:
 	- proofread the music against the referenced PDF and check by ear.
 	- verify editorial chord spacing in measures 17; the archive places successive symbols at the same offset.
@@ -122,5 +124,19 @@ doOwn = false
 	g'8 es'4. es'8 f'4 es'8 ~ |
 	es'1 ^ "/9" |
 	\endBar
+}
+{% endif %}
+{% if part == "LyricsWikifonia" %}\lyricmode {
+	Got -- ta get my old tux -- e -- do pressed. __ Got -- ta sew a but -- ton on my vest. __
+	"'Cause" to -- night i've got to look my best. __ Lu -- lu's back in town. __ _ You can
+	tell all my pets. __ All my blondes and bru -- nettes __ Mis -- ter O -- tis re -- grets
+	that he won't be a -- round. __ Bet -- ter tell the mail man not to call. __ I ain't com --
+	ing back un -- til the fall. __ And I may not come back home at all. __ Lu -- lu's back in
+	town. __
+}
+{% endif %}
+{% if part == "LyricsmoreWikifonia" %}\lyricmode {
+	Got -- ta get a half a buck some -- where. __ Got -- ta shine my shoes and slick my hair. __
+	Got -- ta get my -- self a bou -- ton -- aire. __ Lu -- lu's back in town. __
 }
 {% endif %}

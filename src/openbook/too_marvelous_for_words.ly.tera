@@ -5,6 +5,7 @@ default_version = "Wikifonia"
 title = "Too Marvelous For Words"
 style = "Jazz"
 composer = "Richard A Whiting"
+poet = "Johnny Mercer"
 piece = "Jazz"
 typesetter = "OpenBook contributors (MusicXML import)"
 completion = "3"
@@ -15,7 +16,7 @@ copyright = "All Rights Reserved"
 [versions.Wikifonia]
 doChords = true
 doVoice = true
-doLyrics = false
+doLyrics = true
 doLyricsmore = false
 doLyricsmoremore = false
 doChordBars = false
@@ -34,6 +35,7 @@ doOwn = false
 	- retained the original copyright notice where printed; the underlying music is not relicensed.
 	- retained written measures, pickups, repeats and endings; lyrics omitted.
 	- tempo is an editorial practice suggestion.
+	- put in the lyrics from the same Wikifonia source.
 	TODO:
 	- proofread the music against the referenced PDF and check by ear.
 	- verify the copyright notice against the scan; no readable per-tune notice was recovered, so the archived rights notice is retained where available.
@@ -139,5 +141,15 @@ doOwn = false
 	}
 	}
 	\endBar
+}
+{% endif %}
+{% if part == "LyricsWikifonia" %}\lyricmode {
+	You're just too mar -- ve -- lous, too mar -- ve -- lous for words, like glor -- i --
+	ous, __ glam -- or -- ous, __ and that old stand -- by a -- mor -- ous. It's all too won --
+	der -- ful, I'll nev -- er find the words, that say e -- nough, __ tell e -- nough __ I
+	mean they just aren't swell e -- nough. You're much too much, and just too ver -- y, ver --
+	y! To ev -- er be in Web -- ster's Dic -- tion -- ar -- y. And so I'm bor -- row -- ing a
+	love song from the birds, to tell you that you're mar -- vel -- ous too mar -- vel -- ous
+	for words. You're words.
 }
 {% endif %}

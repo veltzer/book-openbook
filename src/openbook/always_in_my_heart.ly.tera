@@ -5,6 +5,7 @@ default_version = "Wikifonia"
 title = "Always in my Heart"
 style = "Jazz"
 composer = "Ernesto Lecuona, Kim Gannon"
+poet = "Kim Gannon"
 piece = "Standard"
 typesetter = "OpenBook contributors (MusicXML import)"
 completion = "3"
@@ -16,7 +17,7 @@ copyrightextra = "Archived MusicXML notice retained; underlying music is not rel
 [versions.Wikifonia]
 doChords = true
 doVoice = true
-doLyrics = false
+doLyrics = true
 doLyricsmore = false
 doLyricsmoremore = false
 doChordBars = false
@@ -35,6 +36,7 @@ doOwn = false
 	- retained the archived MusicXML rights notice; no redistribution permission is asserted.
 	- retained written melody, chord changes, pickups, repeats and numbered endings; lyrics, slurs, dynamics and articulations other than fermatas omitted.
 	- tempo is an editorial practice suggestion.
+	- put in the lyrics from the same Wikifonia source.
 	TODO:
 	- proofread the complete melody, harmony and form against a printed edition and check by ear.
 	- verify source attribution, copyright notice and reuse terms; only the archived MusicXML notice is retained.
@@ -125,5 +127,15 @@ doOwn = false
 	bes'1 |
 	f''1 |
 	\endBar
+}
+{% endif %}
+{% if part == "LyricsWikifonia" %}\lyricmode {
+	You are al -- ways in my heart __ e -- ven though you're far a -- way I can hear the mu --
+	sic of __ the song of love I sang with you __ You are al -- ways in your heart and when
+	skies a -- bove are grey I re -- mem -- ber that you care, __ and then and there the sun
+	breaks thru Just be -- fore I go to sleep __ theres a re -- dez -- vous I keep and the
+	dream I al -- ways meet __ helps me for -- get we're far a -- part I dont know ex -- act --
+	ly when dear and I'm sure we'll meet a -- gain dear and my dar -- ling till we do you are
+	al -- ways in my heart.
 }
 {% endif %}

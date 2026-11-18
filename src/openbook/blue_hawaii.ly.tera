@@ -5,6 +5,7 @@ default_version = "Wikifonia"
 title = "Blue Hawaii"
 style = "Jazz"
 composer = "Leo Robin, Ralph Rainger"
+poet = "Leo Robin, Ralph Rainger"
 piece = "Standard"
 typesetter = "OpenBook contributors (MusicXML import)"
 completion = "3"
@@ -16,7 +17,7 @@ copyrightextra = "Archived MusicXML notice retained; underlying music is not rel
 [versions.Wikifonia]
 doChords = true
 doVoice = true
-doLyrics = false
+doLyrics = true
 doLyricsmore = false
 doLyricsmoremore = false
 doChordBars = false
@@ -35,6 +36,7 @@ doOwn = false
 	- retained the archived MusicXML rights notice; no redistribution permission is asserted.
 	- retained written melody, chord changes, pickups, repeats and numbered endings; lyrics, slurs, dynamics and articulations other than fermatas omitted.
 	- tempo is an editorial practice suggestion.
+	- put in the lyrics from the same Wikifonia source.
 	TODO:
 	- proofread the complete melody, harmony and form against a printed edition and check by ear.
 	- verify source attribution, copyright notice and reuse terms; only the archived MusicXML notice is retained.
@@ -123,5 +125,13 @@ doOwn = false
 	g'4. fis'8 g'4. fis'8 |
 	g'2 g''2 |
 	\endBar
+}
+{% endif %}
+{% if part == "LyricsWikifonia" %}\lyricmode {
+	Night and you and Blue Ha -- wa __ _ _ ii the night is heav -- en -- ly and _ you are
+	heav -- en to me _ _ _ Lov -- ely you and Blue Ha -- wa _ _ _ ii with all this love -- li --
+	ness there _ should be love __ Come with me __ _ while the moon is on the sea __ the night
+	is young __ and so are we __ Dreams come true in Blue Ha -- wa __ _ _ ii and mine could
+	all come true this _ mag -- ic night of nights with you.
 }
 {% endif %}

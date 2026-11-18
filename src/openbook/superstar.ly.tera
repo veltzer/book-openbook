@@ -5,6 +5,7 @@ default_version = "Wikifonia"
 title = "Superstar"
 style = "Standard"
 composer = "Leon Russell, Bonnie Bramlett"
+poet = "Leon Russell, Bonnie Bramlett"
 piece = "Standard"
 typesetter = "OpenBook contributors (MusicXML import)"
 completion = "3"
@@ -16,8 +17,8 @@ copyrightextra = "Archived MusicXML notice retained; underlying music is not rel
 [versions.Wikifonia]
 doChords = true
 doVoice = true
-doLyrics = false
-doLyricsmore = false
+doLyrics = true
+doLyricsmore = true
 doLyricsmoremore = false
 doChordBars = false
 doGuitar = false
@@ -37,6 +38,7 @@ doOwn = false
 	- retained written melody, chord changes, pickups, repeats and numbered endings; lyrics omitted.
 	- imported explicit 7alt symbols using the book's altered-dominant notation where present.
 	- tempo is an editorial practice suggestion.
+	- put in the lyrics from the same Wikifonia source.
 	TODO:
 	- proofread the complete melody, harmony and form against the referenced PDF and check by ear.
 	- verify source attribution, copyright notice and reuse terms against the scan; only the archived MusicXML notice is retained.
@@ -150,5 +152,20 @@ doOwn = false
 	\textMark \markup { \musicglyph "scripts.coda" } e'4 ^ "Coda" e'8 d'8 c'2 ~ |
 	c'2. r4 |
 	\endBar
+}
+{% endif %}
+{% if part == "LyricsWikifonia" %}\lyricmode {
+	"....Long" a -- go, __ and oh so far a -- way __ I fell in love with you __ be -- fore
+	the sec -- ond show. __ Your gui -- tar __ it sounds so sweet and clear __ but you're not
+	real -- ly here __ it's just the ra -- di -- o, __ Don't you re -- mem -- ber you told me
+	you loved me ba -- by. __ You said you'd be com -- ing back this way a -- gain ba -- by. __
+	Ba -- by, ba -- by, ba -- by, ba -- by oh ba -- _ by __ I love _ _ you __ I real -- ly do. _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _
+	I real -- ly do __ I real -- ly do. __
+}
+{% endif %}
+{% if part == "LyricsmoreWikifonia" %}\lyricmode {
+	"....Lon" -- li -- ness __ is such a sad af fair, __ and I can hard -- ly wait __ to be
+	with you a -- gain. __ What to say __ to make you come a -- gain, __ come back to me a --
+	gain __ and play your sad gui -- tar. __
 }
 {% endif %}

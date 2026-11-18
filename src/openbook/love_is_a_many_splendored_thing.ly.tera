@@ -5,6 +5,7 @@ default_version = "Wikifonia"
 title = "Love Is A Many Splendored Thing"
 style = "Jazz"
 composer = "Sammy Fain"
+poet = "Paul Francis Webster"
 piece = "Jazz"
 typesetter = "OpenBook contributors (MusicXML import)"
 completion = "3"
@@ -16,7 +17,7 @@ copyrightextra = "Catalog Inc (Publishing)"
 [versions.Wikifonia]
 doChords = true
 doVoice = true
-doLyrics = false
+doLyrics = true
 doLyricsmore = false
 doLyricsmoremore = false
 doChordBars = false
@@ -35,6 +36,7 @@ doOwn = false
 	- retained the original copyright notice where printed; the underlying music is not relicensed.
 	- retained written measures, pickups, repeats and endings; lyrics omitted.
 	- tempo is an editorial practice suggestion.
+	- put in the lyrics from the same Wikifonia source.
 	TODO:
 	- proofread the music against the referenced PDF and check by ear.
 {% endif %}
@@ -127,5 +129,14 @@ doOwn = false
 	r1 |
 	r1 |
 	\endBar
+}
+{% endif %}
+{% if part == "LyricsWikifonia" %}\lyricmode {
+	Love __ is a ma -- ny splen -- dored thing __ It's the Ap ril rose that on -- ly grows in
+	the ear -- ly spring __ Love is nat -- ures way of giv -- ing A rea -- son to be liv --
+	ing The gold -- en crown that makes a man a king. __ Once __ on a hihg and win -- dy hill __
+	in the morn -- ing mist two lov -- ers kissed and the world stood still. __ Then your fing --
+	ers touch -- ed -- my sil -- ent heart and taught it how to sing __ Yes true love's __ a
+	man -- y splen -- dored thing __
 }
 {% endif %}

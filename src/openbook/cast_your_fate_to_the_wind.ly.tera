@@ -5,6 +5,7 @@ default_version = "Wikifonia"
 title = "Cast Your Fate To The Wind"
 style = "Jazz"
 composer = "Vince Guaraldi"
+poet = "Carel Werver"
 piece = "Standard"
 typesetter = "OpenBook contributors (MusicXML import)"
 completion = "3"
@@ -16,8 +17,8 @@ copyrightextra = "Archived MusicXML notice retained; underlying music is not rel
 [versions.Wikifonia]
 doChords = true
 doVoice = true
-doLyrics = false
-doLyricsmore = false
+doLyrics = true
+doLyricsmore = true
 doLyricsmoremore = false
 doChordBars = false
 doGuitar = false
@@ -37,6 +38,7 @@ doOwn = false
 	- retained written melody, chord changes, pickups, repeats and numbered endings; lyrics omitted.
 	- imported explicit 7alt symbols using the book's altered-dominant notation where present.
 	- tempo is an editorial practice suggestion.
+	- put in the lyrics from the same Wikifonia source.
 	TODO:
 	- proofread the complete melody, harmony and form against the referenced PDF and check by ear.
 	- verify source attribution, copyright notice and reuse terms against the scan; only the archived MusicXML notice is retained.
@@ -176,5 +178,23 @@ doOwn = false
 	}
 	}
 	\endBar
+}
+{% endif %}
+{% if part == "LyricsWikifonia" %}\lyricmode {
+	A month of nights, __ a year of days, __ Oc -- to -- bers drift -- ing in -- to Mays. You
+	set your sail __ when the tide comes in __ and you just cast your fate __ to the wind. __
+	You shift your course __ a -- long the breeze, __ won't sail up -- wind on mem -- o --
+	ries. The emp -- ty sky __ is your best friend __ and you just cast your fate __ to the
+	wind. __ That time has such a way of chang -- ing a man through -- out __ the years. __ _ _
+	And now you're re -- ar -- rang -- ing __ your life thru all __ your tears __ _ a lone a --
+	lone There nev -- er was, __ there could -- n't be __ a place in time for men to be, who'd
+	drink the dark __ and laugh at day __ and let their wild -- est dreams __ blow a -- way. __
+	So
+}
+{% endif %}
+{% if part == "LyricsmoreWikifonia" %}\lyricmode {
+	_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _
+	now you're old, __ you're wise and smart, __ You're just a man with half a heart. You won --
+	der how __ it might have been __ had you not cast you fate __ to the wind. __
 }
 {% endif %}

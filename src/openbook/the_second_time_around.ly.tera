@@ -5,6 +5,7 @@ default_version = "Wikifonia"
 title = "The Second Time Around"
 style = "Jazz"
 composer = "James Van Heusen"
+poet = "Sammy Cahn"
 piece = "Jazz"
 typesetter = "OpenBook contributors (MusicXML import)"
 completion = "3"
@@ -15,7 +16,7 @@ copyright = "1967 Twentieth Century Music c/o EMI Miller Catalog, Inc. Used by P
 [versions.Wikifonia]
 doChords = true
 doVoice = true
-doLyrics = false
+doLyrics = true
 doLyricsmore = false
 doLyricsmoremore = false
 doChordBars = false
@@ -34,6 +35,7 @@ doOwn = false
 	- retained the original copyright notice where printed; the underlying music is not relicensed.
 	- retained written measures, pickups, repeats and endings; lyrics omitted.
 	- tempo is an editorial practice suggestion.
+	- put in the lyrics from the same Wikifonia source.
 	TODO:
 	- proofread the music against the referenced PDF and check by ear.
 {% endif %}
@@ -132,5 +134,15 @@ doOwn = false
 	c'1 ~ |
 	c'1 |
 	\endBar
+}
+{% endif %}
+{% if part == "LyricsWikifonia" %}\lyricmode {
+	Love is love -- li -- er the sec -- ond time a -- round __ just as won -- der -- ful with
+	both feet on the ground __ it's that sec -- ond time you hear your love song sung __ makes
+	you think per -- haps that love like youth is wast -- ed on the young. __ love's more comf --
+	ta -- ble the sec -- ond time you fall __ like a friend -- ly home the sec -- ond time you
+	call __ who can say what led us to this mir -- a -- cle we found there are those who'll
+	bet __ love comes but once and yet __ I'm oh so glad we met the sec -- ond time a --
+	round. __
 }
 {% endif %}

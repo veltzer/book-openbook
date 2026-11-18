@@ -5,6 +5,7 @@ default_version = "Wikifonia"
 title = "Our Day Will Come"
 style = "Jazz"
 composer = "Mort Garson, Bob Hilliard"
+poet = "Bob Hilliard"
 piece = "Standard"
 typesetter = "OpenBook contributors (MusicXML import)"
 completion = "3"
@@ -16,7 +17,7 @@ copyrightextra = "Archived MusicXML notice retained; underlying music is not rel
 [versions.Wikifonia]
 doChords = true
 doVoice = true
-doLyrics = false
+doLyrics = true
 doLyricsmore = false
 doLyricsmoremore = false
 doChordBars = false
@@ -35,6 +36,7 @@ doOwn = false
 	- retained the archived MusicXML rights notice; no redistribution permission is asserted.
 	- retained written melody, chord changes, pickups, repeats and numbered endings; lyrics, slurs, dynamics and articulations other than fermatas omitted.
 	- tempo is an editorial practice suggestion.
+	- put in the lyrics from the same Wikifonia source.
 	TODO:
 	- proofread the complete melody, harmony and form against a printed edition and check by ear.
 	- verify source attribution, copyright notice and reuse terms; only the archived MusicXML notice is retained.
@@ -123,5 +125,13 @@ doOwn = false
 	g'1 ~ |
 	g'2. r4 |
 	\endBar
+}
+{% endif %}
+{% if part == "LyricsWikifonia" %}\lyricmode {
+	Our day will come, and we'll have ever -- y -- thing We'll share the joy fal -- ling in
+	love can "bring;" No one can tell me that I'm too young to know __ I love you so __ And
+	you love me __ Our day will come, if we just wait a "while;" No tears for us, think love
+	and wear a smile. Our dream have mag -- ic be -- cause We'll al -- ways stay in love this
+	way. Our day __ will come. __
 }
 {% endif %}

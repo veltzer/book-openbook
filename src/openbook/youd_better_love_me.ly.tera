@@ -5,6 +5,7 @@ default_version = "Wikifonia"
 title = "You'd Better Love Me"
 style = "Standard"
 composer = "Hugh Martin, Timothy Gray"
+poet = "Hugh Martin, Timothy Gray"
 piece = "Standard"
 typesetter = "OpenBook contributors (MusicXML import)"
 completion = "3"
@@ -16,7 +17,7 @@ copyrightextra = "Archived MusicXML notice retained; underlying music is not rel
 [versions.Wikifonia]
 doChords = true
 doVoice = true
-doLyrics = false
+doLyrics = true
 doLyricsmore = false
 doLyricsmoremore = false
 doChordBars = false
@@ -37,6 +38,7 @@ doOwn = false
 	- retained written melody, chord changes, pickups, repeats and numbered endings; lyrics omitted.
 	- imported explicit 7alt symbols using the book's altered-dominant notation where present.
 	- tempo is an editorial practice suggestion.
+	- put in the lyrics from the same Wikifonia source.
 	TODO:
 	- proofread the complete melody, harmony and form against the referenced PDF and check by ear.
 	- verify source attribution, copyright notice and reuse terms against the scan; only the archived MusicXML notice is retained.
@@ -180,5 +182,17 @@ doOwn = false
 	c''1 ~ |
 	c''2 ~ c''8 r8 r4 |
 	\endBar
+}
+{% endif %}
+{% if part == "LyricsWikifonia" %}\lyricmode {
+	You called me back with a si -- lent plea, from a -- no -- ther time, a -- no -- ther
+	place, a -- no -- ther me. You called me back and I found my way to a half re -- mem --
+	bered, half for -- got -- ten yes -- ter -- day. But I might not stay. __ You'd bet __ ter
+	love __ me while __ you may. __ To -- mor -- row I __ may fly __ a -- way. __ I want your
+	gen -- tle touch, __ your con -- ti -- nen -- tal touch. __ your e -- le -- men -- tal
+	touch, __ And you want me too, oh I know that you do. You'd bet -- ter love __ me while __
+	I'm here. __ I have __ been known __ to dis -- ap -- pear. __ So don't let this mir -- a --
+	cle __ melt a -- way. __ The clock __ ticks fast __ a -- bove __ me, If you __ think fond --
+	ly of __ me, you'd bet -- ter love __ me while you may. __
 }
 {% endif %}

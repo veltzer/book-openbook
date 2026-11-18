@@ -5,6 +5,7 @@ default_version = "Wikifonia"
 title = "Hey, Look Me Over"
 style = "Standard"
 composer = "Cy Coleman"
+poet = "Carolyn Leigh"
 piece = "Standard"
 typesetter = "OpenBook contributors (MusicXML import)"
 completion = "3"
@@ -16,8 +17,8 @@ copyrightextra = "Archived MusicXML notice retained; underlying music is not rel
 [versions.Wikifonia]
 doChords = true
 doVoice = true
-doLyrics = false
-doLyricsmore = false
+doLyrics = true
+doLyricsmore = true
 doLyricsmoremore = false
 doChordBars = false
 doGuitar = false
@@ -37,6 +38,7 @@ doOwn = false
 	- retained written melody, chord changes, pickups, repeats and numbered endings; lyrics omitted.
 	- imported explicit 7alt symbols using the book's altered-dominant notation where present.
 	- tempo is an editorial practice suggestion.
+	- put in the lyrics from the same Wikifonia source.
 	TODO:
 	- proofread the complete melody, harmony and form against the referenced PDF and check by ear.
 	- verify source attribution, copyright notice and reuse terms against the scan; only the archived MusicXML notice is retained.
@@ -143,5 +145,18 @@ doOwn = false
 	}
 	g'4. ~ g'4 r8 |
 	\endBar
+}
+{% endif %}
+{% if part == "LyricsWikifonia" %}\lyricmode {
+	Hey look me o -- ver lend me an ear fresh out of clo -- ver mort -- gaged up to here __
+	but dont pass the plate folks dont pass the cup __ I fig -- ure when -- ev -- er you're
+	down and out the on -- ly way is up and I'll be up like a rose -- bud high on the vine
+	don't thumb your nose bud take a tip from mine I'm a lit -- tle bit short of the el -- bow
+	room but let me get me some and look out world here I come.
+}
+{% endif %}
+{% if part == "LyricsmoreWikifonia" %}\lyricmode {
+	_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _
+	hear me shout
 }
 {% endif %}

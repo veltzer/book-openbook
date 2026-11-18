@@ -5,6 +5,7 @@ default_version = "Wikifonia"
 title = "Slow Hot Wind"
 style = "Jazz"
 composer = "Henry Mancini"
+poet = "Norman Gimbel"
 piece = "Jazz"
 typesetter = "OpenBook contributors (MusicXML import)"
 completion = "3"
@@ -15,8 +16,8 @@ copyright = "All Rights Reserved"
 [versions.Wikifonia]
 doChords = true
 doVoice = true
-doLyrics = false
-doLyricsmore = false
+doLyrics = true
+doLyricsmore = true
 doLyricsmoremore = false
 doChordBars = false
 doGuitar = false
@@ -34,6 +35,7 @@ doOwn = false
 	- retained the original copyright notice where printed; the underlying music is not relicensed.
 	- retained written measures, pickups, repeats and endings; lyrics omitted.
 	- tempo is an editorial practice suggestion.
+	- put in the lyrics from the same Wikifonia source.
 	TODO:
 	- proofread the music against the referenced PDF and check by ear.
 	- verify the copyright notice against the scan; no readable per-tune notice was recovered, so the archived rights notice is retained where available.
@@ -129,5 +131,15 @@ doOwn = false
 	b'1 ~ |
 	b'1 |
 	\endBar
+}
+{% endif %}
+{% if part == "LyricsWikifonia" %}\lyricmode {
+	Her gaze __ swept o -- ver me like __ a slow __ hot wind __ _ _ _ _ _ There in the shade __
+	like a cool drink wait -- ting __ she sat with slow fire __ in her eyes just wait -- in __
+	Some days __ it's too hot to fight __ a slow __ hot wind __ a slow __ hot wind. __
+}
+{% endif %}
+{% if part == "LyricsmoreWikifonia" %}\lyricmode {
+	Some days __ it's too warm to fight __ a
 }
 {% endif %}

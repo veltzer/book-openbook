@@ -5,6 +5,7 @@ default_version = "Wikifonia"
 title = "On Broadway"
 style = "Jazz"
 composer = "Barry Mann, Cynthia Weil, Jerry Lieber, Mike Stroller"
+poet = "Barry Mann, Cynthia Weil, Jerry Lieber, Mike Stroller"
 piece = "Standard"
 typesetter = "OpenBook contributors (MusicXML import)"
 completion = "3"
@@ -16,8 +17,8 @@ copyrightextra = "Archived MusicXML notice retained; underlying music is not rel
 [versions.Wikifonia]
 doChords = true
 doVoice = true
-doLyrics = false
-doLyricsmore = false
+doLyrics = true
+doLyricsmore = true
 doLyricsmoremore = false
 doChordBars = false
 doGuitar = false
@@ -37,6 +38,7 @@ doOwn = false
 	- retained written melody, chord changes, pickups, repeats and numbered endings; lyrics omitted.
 	- imported explicit 7alt symbols using the book's altered-dominant notation where present.
 	- tempo is an editorial practice suggestion.
+	- put in the lyrics from the same Wikifonia source.
 	TODO:
 	- proofread the complete melody, harmony and form against the referenced PDF and check by ear.
 	- verify source attribution, copyright notice and reuse terms against the scan; only the archived MusicXML notice is retained.
@@ -116,5 +118,18 @@ doOwn = false
 	r1 |
 	r1 |
 	\endBar
+}
+{% endif %}
+{% if part == "LyricsWikifonia" %}\lyricmode {
+	They say the ne -- on lights are bright on Broad way __ They say there's al -- ways mag --
+	ic in the air. __ But when you're walk -- "in'" down that street __ and you ain't had e --
+	nough to eat, __ the glit -- ter rubs right off and you're no -- where __ on Broad -- way. __
+	I'm a star on Broad -- way.
+}
+{% endif %}
+{% if part == "LyricsmoreWikifonia" %}\lyricmode {
+	They say the girls are some -- "thin'" else on Broad way, __ but look -- "in'" at them
+	just gives me the blues, __ "'cause" how ya gon -- na make some time __ when all you got
+	is one thin dime, __ and one thin dime won't e -- ven shine your shoes __ on Broad -- way. __
 }
 {% endif %}

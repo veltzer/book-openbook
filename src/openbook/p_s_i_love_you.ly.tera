@@ -5,6 +5,7 @@ default_version = "Wikifonia"
 title = "P. S. I Love You"
 style = "Jazz"
 composer = "Gordon Hll Jenkins"
+poet = "Johnny Mercer"
 piece = "Standard"
 typesetter = "OpenBook contributors (MusicXML import)"
 completion = "3"
@@ -16,7 +17,7 @@ copyrightextra = "Archived MusicXML notice retained; underlying music is not rel
 [versions.Wikifonia]
 doChords = true
 doVoice = true
-doLyrics = false
+doLyrics = true
 doLyricsmore = false
 doLyricsmoremore = false
 doChordBars = false
@@ -37,6 +38,7 @@ doOwn = false
 	- retained written melody, chord changes, pickups, repeats and numbered endings; lyrics omitted.
 	- imported explicit 7alt symbols using the book's altered-dominant notation where present.
 	- tempo is an editorial practice suggestion.
+	- put in the lyrics from the same Wikifonia source.
 	TODO:
 	- proofread the complete melody, harmony and form against the referenced PDF and check by ear.
 	- verify source attribution, copyright notice and reuse terms against the scan; only the archived MusicXML notice is retained.
@@ -130,5 +132,15 @@ doOwn = false
 	c'4 es'4 as'4 ces''4 |
 	bes'1 |
 	\endBar
+}
+{% endif %}
+{% if part == "LyricsWikifonia" %}\lyricmode {
+	Dear I thought I'd drop a line, the weath -- ers cool, the folks are fine, I'm in bed
+	each night at nine. P. S. I love you. Yes -- ter -- day we had some rain, but all in all,
+	I can't com -- plain. Was it dust -- y on the train. P. S. I love you. Write to the Browns __
+	just as soon as you're a -- ble, __ They came a -- round to call. __ I burned a hole in
+	the din -- ing -- room ta -- ble, __ And let me see, I guess thats all. __ Noth -- ing
+	else for me to say, and so I'll close, but, by the way, ev -- "'ry" -- bod -- y's think --
+	ing of you. P. S. I love you. P. S. I love you.
 }
 {% endif %}

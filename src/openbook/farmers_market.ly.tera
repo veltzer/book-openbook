@@ -5,6 +5,7 @@ default_version = "Wikifonia"
 title = "Farmer's Market"
 style = "Jazz"
 composer = "Art Farmer"
+poet = "Annie Ross"
 piece = "Standard"
 typesetter = "OpenBook contributors (MusicXML import)"
 completion = "3"
@@ -16,8 +17,8 @@ copyrightextra = "Archived MusicXML notice retained; underlying music is not rel
 [versions.Wikifonia]
 doChords = true
 doVoice = true
-doLyrics = false
-doLyricsmore = false
+doLyrics = true
+doLyricsmore = true
 doLyricsmoremore = false
 doChordBars = false
 doGuitar = false
@@ -37,6 +38,7 @@ doOwn = false
 	- retained written melody, chord changes, pickups, repeats and numbered endings; lyrics omitted.
 	- imported explicit 7alt symbols using the book's altered-dominant notation where present.
 	- tempo is an editorial practice suggestion.
+	- put in the lyrics from the same Wikifonia source.
 	TODO:
 	- proofread the complete melody, harmony and form against the referenced PDF and check by ear.
 	- verify source attribution, copyright notice and reuse terms against the scan; only the archived MusicXML notice is retained.
@@ -120,5 +122,25 @@ doOwn = false
 	f''4 r4 ^ "Solo break ..." r2 ^ "Solos on F blues. After solos, D.S. al fine" ^ "Fine" |
 	R1 |
 	\endBar
+}
+{% endif %}
+{% if part == "LyricsWikifonia" %}\lyricmode {
+	_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ Once there was a girl and she was
+	right from the sticks Thought __ she'd go out to the mar -- ket one day and hey we could
+	sure say __ of the town she was the toast, Real -- ly the most, we don't want to boast, __
+	but scads of lads would soon sur -- round her Cit -- y slick -- ers sure would hound her.
+	She walked in the mar -- ket place and what did she see, Crew -- cut and cute with a cra --
+	zy goat -- ee What a blend, he was the end __ sell -- "in'" beans Dressed in his jeans,
+	"'What" a "buy.'" she __ was heard to cry.
+}
+{% endif %}
+{% if part == "LyricsmoreWikifonia" %}\lyricmode {
+	_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ Once there was a drum -- mer who
+	was straight from New York. Tour -- "in'" the count -- ry with _ Ward -- ell Gray _ _ we
+	could sure say __ of the drums, he was the toast, _ _ _ _ _ _ _ _ _ _ all the craz -- y
+	chicks would hound him, all the swing -- in bands would sound him. Then one day he saw the
+	one that made his head whirl, He __ met and mar -- ried the same __ lit -- tle girl. _ _ _
+	they are the end __ they're real cool house with a pool crazy scenes _ Blame __ it on the
+	beans.
 }
 {% endif %}

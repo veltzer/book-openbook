@@ -5,6 +5,7 @@ default_version = "Wikifonia"
 title = "June in January"
 style = "Jazz"
 composer = "Leo Robin, Ralph Rainger"
+poet = "Leo Robin, Ralph Rainger"
 piece = "Standard"
 typesetter = "OpenBook contributors (MusicXML import)"
 completion = "3"
@@ -16,7 +17,7 @@ copyrightextra = "Archived MusicXML notice retained; underlying music is not rel
 [versions.Wikifonia]
 doChords = true
 doVoice = true
-doLyrics = false
+doLyrics = true
 doLyricsmore = false
 doLyricsmoremore = false
 doChordBars = false
@@ -37,6 +38,7 @@ doOwn = false
 	- retained written melody, chord changes, pickups, repeats and numbered endings; lyrics omitted.
 	- imported explicit 7alt symbols using the book's altered-dominant notation where present.
 	- tempo is an editorial practice suggestion.
+	- put in the lyrics from the same Wikifonia source.
 	TODO:
 	- proofread the complete melody, harmony and form against the referenced PDF and check by ear.
 	- verify source attribution, copyright notice and reuse terms against the scan; only the archived MusicXML notice is retained.
@@ -146,5 +148,14 @@ doOwn = false
 	}
 	es''1 |
 	\endBar
+}
+{% endif %}
+{% if part == "LyricsWikifonia" %}\lyricmode {
+	It's June in Jan -- u -- ar -- y be -- cause I'm in love. It al -- ways is spring in my
+	heart, with you in my arms. __ The snow is just white blos -- soms that fall from a --
+	"bove;" and here is the rea -- son -- my dear, your mag -- i -- cal charms. __ The night
+	is cold, the trees are bare, but I can feel the scent of ros -- es in the air. It's June
+	in Jan -- u -- a -- ry be -- cause I'm in love, but on -- ly be -- cause I'm in love with
+	you. __ It's you. __
 }
 {% endif %}

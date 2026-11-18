@@ -5,6 +5,7 @@ default_version = "Wikifonia"
 title = "Perfidia"
 style = "Jazz"
 composer = "Alberto Dominguez"
+poet = "Milton Leeds"
 piece = "Standard"
 typesetter = "OpenBook contributors (MusicXML import)"
 completion = "3"
@@ -16,7 +17,7 @@ copyrightextra = "Archived MusicXML notice retained; underlying music is not rel
 [versions.Wikifonia]
 doChords = true
 doVoice = true
-doLyrics = false
+doLyrics = true
 doLyricsmore = false
 doLyricsmoremore = false
 doChordBars = false
@@ -37,6 +38,7 @@ doOwn = false
 	- retained written melody, chord changes, pickups, repeats and numbered endings; lyrics omitted.
 	- imported explicit 7alt symbols using the book's altered-dominant notation where present.
 	- tempo is an editorial practice suggestion.
+	- put in the lyrics from the same Wikifonia source.
 	TODO:
 	- proofread the complete melody, harmony and form against the referenced PDF and check by ear.
 	- verify source attribution, copyright notice and reuse terms against the scan; only the archived MusicXML notice is retained.
@@ -129,5 +131,15 @@ doOwn = false
 	g''1 |
 	R1 |
 	\endBar
+}
+{% endif %}
+{% if part == "LyricsWikifonia" %}\lyricmode {
+	To you __ my heart cries out Per -- fid -- i -- a __ for I found you the love of my life
+	in some -- bod -- y el -- se's arms __ your eyes __ are ech -- o -- ing Per -- fid -- i --
+	a __ for -- get -- ful of our pro -- mise of love you're shar -- ing an -- oth -- ers
+	charms __ with a sad la -- ment my dreams have fad -- ed like a bro -- ken mel -- o -- dy __
+	while the Gods of love look down and laugh at what ro -- man -- tic fools we mor -- tals
+	be __ and now __ I know my love was not for you __ and so I'll take it back with a sigh
+	per -- fid -- i -- ous one good bye.
 }
 {% endif %}

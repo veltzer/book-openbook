@@ -5,6 +5,7 @@ default_version = "Wikifonia"
 title = "As Long As He Needs Me"
 style = "Standard"
 composer = "Lionel Bart"
+poet = "Lionel Bart"
 piece = "Standard"
 typesetter = "OpenBook contributors (MusicXML import)"
 completion = "3"
@@ -16,7 +17,7 @@ copyrightextra = "Archived MusicXML notice retained; underlying music is not rel
 [versions.Wikifonia]
 doChords = true
 doVoice = true
-doLyrics = false
+doLyrics = true
 doLyricsmore = false
 doLyricsmoremore = false
 doChordBars = false
@@ -37,6 +38,7 @@ doOwn = false
 	- retained written melody, chord changes, pickups, repeats and numbered endings; lyrics omitted.
 	- imported explicit 7alt symbols using the book's altered-dominant notation where present.
 	- tempo is an editorial practice suggestion.
+	- put in the lyrics from the same Wikifonia source.
 	TODO:
 	- proofread the complete melody, harmony and form against the referenced PDF and check by ear.
 	- verify source attribution, copyright notice and reuse terms against the scan; only the archived MusicXML notice is retained.
@@ -151,5 +153,15 @@ doOwn = false
 	}
 	<c'' e'' g''>2 s4 r4 |
 	\endBar
+}
+{% endif %}
+{% if part == "LyricsWikifonia" %}\lyricmode {
+	He does -- n't act as though he cares, but deep in -- side I know he cares, and this is
+	why I'm tied right by his side. __ As long as he needs me, __ I know where I must be. __
+	I'll cling on stead -- fast -- ly __ as long as he needs me. __ As long as life is long, __
+	I'll love him right or wrong, __ and some -- how I'll be strong __ as long as he needs me. __
+	If you are lone -- ly __ then you will know __ when some -- one needs you, __ you love
+	them so. __ I wont be -- tray his trust, __ though peo -- ple say I must. __ I've got to
+	stay true just, __ As long as he needs me. __ As Long As He Needs Me.
 }
 {% endif %}

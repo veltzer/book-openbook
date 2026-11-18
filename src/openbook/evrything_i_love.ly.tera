@@ -5,6 +5,7 @@ default_version = "Wikifonia"
 title = "Ev'rything I Love"
 style = "Jazz"
 composer = "Cole Porter"
+poet = "Cole Porter"
 piece = "Standard"
 typesetter = "OpenBook contributors (MusicXML import)"
 completion = "3"
@@ -16,7 +17,7 @@ copyrightextra = "Archived MusicXML notice retained; underlying music is not rel
 [versions.Wikifonia]
 doChords = true
 doVoice = true
-doLyrics = false
+doLyrics = true
 doLyricsmore = false
 doLyricsmoremore = false
 doChordBars = false
@@ -37,6 +38,7 @@ doOwn = false
 	- retained written melody, chord changes, pickups, repeats and numbered endings; lyrics omitted.
 	- imported explicit 7alt symbols using the book's altered-dominant notation where present.
 	- tempo is an editorial practice suggestion.
+	- put in the lyrics from the same Wikifonia source.
 	TODO:
 	- proofread the complete melody, harmony and form against the referenced PDF and check by ear.
 	- verify source attribution, copyright notice and reuse terms against the scan; only the archived MusicXML notice is retained.
@@ -178,5 +180,15 @@ doOwn = false
 	es''1 |
 	es''2 ~ es''4 r4 |
 	\endBar
+}
+{% endif %}
+{% if part == "LyricsWikifonia" %}\lyricmode {
+	If I __ were Lord By -- ron, I'd write __ you, sweet sir -- en, A po -- em in -- spir --
+	"in'," A kil -- ler dil -- ler -- oo. __ Too bad __ "I'" no po -- et, I hap -- pen to know
+	it, But y way __ here's a roun -- de -- lay __ that I wrote last night a -- bout you. You
+	are to me ev -- "'ry" -- thing, My life to be, ev -- "'ry" -- thing. When in my sleep you
+	ap -- pear, Fair skies of deep blue ap -- pear. Each time our lips touch a -- gain, I
+	yearn for you oh, so __ much a -- gain. You are my fav -- "'rite" star, __ My hav -- en in
+	heav -- en a -- bove. You are ev -- "'ry" -- thing I love. __ ev -- "'ry" -- thing I love. __
 }
 {% endif %}

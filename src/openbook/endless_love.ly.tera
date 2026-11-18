@@ -5,6 +5,7 @@ default_version = "Wikifonia"
 title = "Endless Love"
 style = "Standard"
 composer = "Lionel Richie"
+poet = "Lionel Richie"
 piece = "Standard"
 typesetter = "OpenBook contributors (MusicXML import)"
 completion = "3"
@@ -16,7 +17,7 @@ copyrightextra = "Archived MusicXML notice retained; underlying music is not rel
 [versions.Wikifonia]
 doChords = true
 doVoice = true
-doLyrics = false
+doLyrics = true
 doLyricsmore = false
 doLyricsmoremore = false
 doChordBars = false
@@ -37,6 +38,7 @@ doOwn = false
 	- retained written melody, chord changes, pickups, repeats and numbered endings; lyrics omitted.
 	- imported explicit 7alt symbols using the book's altered-dominant notation where present.
 	- tempo is an editorial practice suggestion.
+	- put in the lyrics from the same Wikifonia source.
 	TODO:
 	- proofread the complete melody, harmony and form against the referenced PDF and check by ear.
 	- verify source attribution, copyright notice and reuse terms against the scan; only the archived MusicXML notice is retained.
@@ -180,5 +182,15 @@ doOwn = false
 	c''2. r4 |
 	R1 |
 	\endBar
+}
+{% endif %}
+{% if part == "LyricsWikifonia" %}\lyricmode {
+	My love there's on -- ly you in my life _ the on -- ly thing that's right __ my first
+	love you're ev -- ry breath that I take _ you're ev -- ry step I make __ and I __ I want
+	to share all my love _ _ with you __ no one else __ will _ do _ and your eyes tell me how
+	much you care _ _ oh _ _ yes _ you will al -- ways be __ my end -- less love __ world to
+	me _ _ Oh I know I found in you my end -- less love __ Oh _ _ _ _ and _ on -- ly _ one _ _
+	oh no I can't de -- ny this love I have in -- side and i'll give if all to you my love _ _
+	my end -- less love. __
 }
 {% endif %}

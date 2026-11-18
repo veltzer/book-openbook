@@ -5,6 +5,7 @@ default_version = "Wikifonia"
 title = "It's A Great Day For The Irish"
 style = "Standard"
 composer = "Roger Edens"
+poet = "Roger Edens"
 piece = "Standard"
 typesetter = "OpenBook contributors (MusicXML import)"
 completion = "3"
@@ -16,8 +17,8 @@ copyrightextra = "Archived MusicXML notice retained; underlying music is not rel
 [versions.Wikifonia]
 doChords = true
 doVoice = true
-doLyrics = false
-doLyricsmore = false
+doLyrics = true
+doLyricsmore = true
 doLyricsmoremore = false
 doChordBars = false
 doGuitar = false
@@ -37,6 +38,7 @@ doOwn = false
 	- retained written melody, chord changes, pickups, repeats and numbered endings; lyrics omitted.
 	- imported explicit 7alt symbols using the book's altered-dominant notation where present.
 	- tempo is an editorial practice suggestion.
+	- put in the lyrics from the same Wikifonia source.
 	TODO:
 	- proofread the complete melody, harmony and form against the referenced PDF and check by ear.
 	- verify source attribution, copyright notice and reuse terms against the scan; only the archived MusicXML notice is retained.
@@ -199,5 +201,27 @@ doOwn = false
 	c''1 ~ |
 	c''2. r4 |
 	\endBar
+}
+{% endif %}
+{% if part == "LyricsWikifonia" %}\lyricmode {
+	Oh, I woke me up this morn -- ing and I heard a joy -- ful song From the throats of hap --
+	py Ir -- ish -- men, a hun -- dred thou -- sand strong. Shure it was the Hi -- ber -- ni --
+	an Bri -- gade __ lin -- ing up for to start the big par -- ade. __ So I fetch'd me Sun --
+	day bon -- net and the flag I love so well, And I bought me -- self a sham -- rock just to
+	wear in me la -- pel. Don't you know that to -- day's March sev -- en -- teen? __ It's the
+	day for the wear -- ing of the green. __ It's a great day __ for the I -- rish, __ it's a
+	great day for the fair. __ The side -- walks of New York are thick with blar -- ney __ For
+	shure you'd think New York was Old Kil -- ar -- ney. __ It's a great day __ for the sham --
+	rock __ for the flags in full ar -- ray __ We're fee -- ling so in -- spir -- ish, shure
+	be -- cause for all the I -- rish, It's a great, great __ day! It's a day! __
+}
+{% endif %}
+{% if part == "LyricsmoreWikifonia" %}\lyricmode {
+	_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _
+	great day __ for the I -- rish, __ it's a great day fot the fair. __ Be -- gosh, there's
+	not a cop to stop the raid -- ing __ Be -- gor -- rah all the cops are out par -- ad --
+	ing! __ It's a great day __ for the Sham -- rock __ fot the flags in full ar -- ray __ And
+	as we go a -- swing -- ing, ev -- "'ry" I -- rish heart is sing -- ing, It's a great great __ _ _ _
+	day! __
 }
 {% endif %}

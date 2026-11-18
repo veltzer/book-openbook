@@ -5,6 +5,7 @@ default_version = "Wikifonia"
 title = "The Night We Called It A Day"
 style = "Jazz"
 composer = "Matt Dennis"
+poet = "Tom Adair"
 piece = "Jazz"
 typesetter = "OpenBook contributors (MusicXML import)"
 completion = "3"
@@ -15,7 +16,7 @@ copyright = "All Rights Reserved"
 [versions.Wikifonia]
 doChords = true
 doVoice = true
-doLyrics = false
+doLyrics = true
 doLyricsmore = false
 doLyricsmoremore = false
 doChordBars = false
@@ -34,6 +35,7 @@ doOwn = false
 	- retained the original copyright notice where printed; the underlying music is not relicensed.
 	- retained written measures, pickups, repeats and endings; lyrics omitted.
 	- tempo is an editorial practice suggestion.
+	- put in the lyrics from the same Wikifonia source.
 	TODO:
 	- proofread the music against the referenced PDF and check by ear.
 	- verify editorial chord spacing in measures 17, 21; the archive places successive symbols at the same offset.
@@ -142,5 +144,15 @@ doOwn = false
 	}
 	d'2. ^\fermata r4 |
 	\endBar
+}
+{% endif %}
+{% if part == "LyricsWikifonia" %}\lyricmode {
+	There was a moon out in space, But a cloud drift -- ed ov -- er it's face, You kissed me
+	and went on your way, The night we called it a day. I heard the song of the spheres, Like
+	a min -- or la -- ment in my ears, I had -- n't the heart left to pray, The night we
+	called it a day. Soft "thru'" the dark, The hoot of an owl in the sky, Sad "tho'" his
+	song, No blu -- er was he than "I;" The moon went down, Stars were gone, But the sun did --
+	n't rise with the dawn, There was -- n't a thing left to say the night we called it a day.
+	There was a night we called it a day.
 }
 {% endif %}

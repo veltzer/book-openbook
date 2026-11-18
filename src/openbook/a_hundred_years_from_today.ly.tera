@@ -5,6 +5,7 @@ default_version = "Wikifonia"
 title = "A Hundred Years From Today"
 style = "Jazz"
 composer = "Victor Young"
+poet = "Joe Young, Ned Washington"
 piece = "Standard"
 typesetter = "OpenBook contributors (MusicXML import)"
 completion = "3"
@@ -16,8 +17,8 @@ copyrightextra = "Archived MusicXML notice retained; underlying music is not rel
 [versions.Wikifonia]
 doChords = true
 doVoice = true
-doLyrics = false
-doLyricsmore = false
+doLyrics = true
+doLyricsmore = true
 doLyricsmoremore = false
 doChordBars = false
 doGuitar = false
@@ -37,6 +38,7 @@ doOwn = false
 	- retained written melody, chord changes, pickups, repeats and numbered endings; lyrics omitted.
 	- imported explicit 7alt symbols using the book's altered-dominant notation where present.
 	- tempo is an editorial practice suggestion.
+	- put in the lyrics from the same Wikifonia source.
 	TODO:
 	- proofread the complete melody, harmony and form against the referenced PDF and check by ear.
 	- verify source attribution, copyright notice and reuse terms against the scan; only the archived MusicXML notice is retained.
@@ -121,5 +123,21 @@ doOwn = false
 	es''8 c''4. \times 2/3 { g'4 g'4 g'4 } |
 	es'1 |
 	\endBar
+}
+{% endif %}
+{% if part == "LyricsWikifonia" %}\lyricmode {
+	Don't save your kiss -- es, just pass them a round, you'll find my rea -- son is log --
+	ic -- "'lly" sound. Who's gon -- na know that you passed them a -- round, a hun -- dred
+	years from to -- day. Why crave a pen -- house that's fit for a queen, you're near -- er
+	heav -- en on Mo -- ther Earth's green. If you had mil -- lions, what would they all mean
+	a hun -- dred years from to -- day. So laugh and sing, make love the thing, be hap -- py
+	while you "may;" __ there's al -- ways one be -- neath the sun that's bound to make you
+	feel that way. day. A Hun -- dred Years From To -- day.
+}
+{% endif %}
+{% if part == "LyricsmoreWikifonia" %}\lyricmode {
+	_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ The moon is
+	shin -- ing and that's a good sign. cling to me clos -- er and say you'll be mine. Re --
+	mem -- ber dar -- ling, we won't see it shine a hun -- dred years from to
 }
 {% endif %}

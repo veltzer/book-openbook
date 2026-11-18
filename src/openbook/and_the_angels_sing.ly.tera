@@ -5,6 +5,7 @@ default_version = "Wikifonia"
 title = "And The Angels Sing"
 style = "Jazz"
 composer = "Z. Elman"
+poet = "Johnny Mercer"
 piece = "Standard"
 typesetter = "OpenBook contributors (MusicXML import)"
 completion = "3"
@@ -16,7 +17,7 @@ copyrightextra = "Archived MusicXML notice retained; underlying music is not rel
 [versions.Wikifonia]
 doChords = true
 doVoice = true
-doLyrics = false
+doLyrics = true
 doLyricsmore = false
 doLyricsmoremore = false
 doChordBars = false
@@ -37,6 +38,7 @@ doOwn = false
 	- retained written melody, chord changes, pickups, repeats and numbered endings; lyrics omitted.
 	- imported explicit 7alt symbols using the book's altered-dominant notation where present.
 	- tempo is an editorial practice suggestion.
+	- put in the lyrics from the same Wikifonia source.
 	TODO:
 	- proofread the complete melody, harmony and form against the referenced PDF and check by ear.
 	- verify source attribution, copyright notice and reuse terms against the scan; only the archived MusicXML notice is retained.
@@ -178,5 +180,17 @@ doOwn = false
 	}
 	es''2. r4 |
 	\endBar
+}
+{% endif %}
+{% if part == "LyricsWikifonia" %}\lyricmode {
+	We meet, __ and the An -- gels sing. __ The Ang -- els sing the sweet -- est song I ev --
+	er heard. __ You speak, __ And the Ang -- els sing, __ or am I breath -- ing mu -- sic in --
+	to ev -- "'ry" word. __ Sud -- den -- ly the set -- ting is strange, __ I can see wat --
+	er and moon -- light beam -- ing, sil -- ver waves that break on some un -- dis -- cov --
+	ered "shore;" then sud -- den -- ly I see it all change, __ long win -- ter nights with
+	the can -- dles gleam -- ing, thru it all your face that I a -- dore. __ You smile __ And
+	the An -- gels sing. __ And "tho'" it's just a gen -- tle mur -- mur at the start, __ We
+	kiss, __ And the An -- gels sing, And leave theeir mus -- ic ring -- ing in my heart. __
+	We heart. __
 }
 {% endif %}

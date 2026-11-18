@@ -5,6 +5,7 @@ default_version = "Wikifonia"
 title = "Spanish Eyes"
 style = "Jazz"
 composer = "Bert Kaempfert, Charles Singleton, Eddie Snyder"
+poet = "Charles Singleton, Eddie Snyder"
 piece = "Standard"
 typesetter = "OpenBook contributors (MusicXML import)"
 completion = "3"
@@ -16,7 +17,7 @@ copyrightextra = "Archived MusicXML notice retained; underlying music is not rel
 [versions.Wikifonia]
 doChords = true
 doVoice = true
-doLyrics = false
+doLyrics = true
 doLyricsmore = false
 doLyricsmoremore = false
 doChordBars = false
@@ -35,6 +36,7 @@ doOwn = false
 	- retained the archived MusicXML rights notice; no redistribution permission is asserted.
 	- retained written melody, chord changes, pickups, repeats and numbered endings; lyrics, slurs, dynamics and articulations other than fermatas omitted.
 	- tempo is an editorial practice suggestion.
+	- put in the lyrics from the same Wikifonia source.
 	TODO:
 	- proofread the complete melody, harmony and form against a printed edition and check by ear.
 	- verify source attribution, copyright notice and reuse terms; only the archived MusicXML notice is retained.
@@ -127,5 +129,12 @@ doOwn = false
 	g''1 |
 	R1 |
 	\endBar
+}
+{% endif %}
+{% if part == "LyricsWikifonia" %}\lyricmode {
+	Blue __ Span -- ish eyes __ tear -- drops are fall -- ing from your Span -- ish eyes __
+	please __ please don't cry __ this is just a -- dios and not good -- bye __ Soon __ I'll
+	re -- turn __ bring -- ing you all the love your heart can hold __ Please __ say si si __
+	say you and your Span -- ish eyes will wait for me.
 }
 {% endif %}

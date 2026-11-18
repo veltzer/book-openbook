@@ -5,6 +5,7 @@ default_version = "Wikifonia"
 title = "Lovely Hula Hands"
 style = "Standard"
 composer = "Robert Alexander Anderson"
+poet = "Robert Alexander Anderson"
 piece = "Standard"
 typesetter = "OpenBook contributors (MusicXML import)"
 completion = "3"
@@ -16,8 +17,8 @@ copyrightextra = "Archived MusicXML notice retained; underlying music is not rel
 [versions.Wikifonia]
 doChords = true
 doVoice = true
-doLyrics = false
-doLyricsmore = false
+doLyrics = true
+doLyricsmore = true
 doLyricsmoremore = false
 doChordBars = false
 doGuitar = false
@@ -37,6 +38,7 @@ doOwn = false
 	- retained written melody, chord changes, pickups, repeats and numbered endings; lyrics omitted.
 	- imported explicit 7alt symbols using the book's altered-dominant notation where present.
 	- tempo is an editorial practice suggestion.
+	- put in the lyrics from the same Wikifonia source.
 	TODO:
 	- proofread the complete melody, harmony and form against the referenced PDF and check by ear.
 	- verify source attribution, copyright notice and reuse terms against the scan; only the archived MusicXML notice is retained.
@@ -125,5 +127,19 @@ doOwn = false
 	f'4 c'4 bes8 c'8 e'8 g'8 |
 	f'1 |
 	\endBar
+}
+{% endif %}
+{% if part == "LyricsWikifonia" %}\lyricmode {
+	Love -- ly Hu -- la Hands grace -- ful as the birds in _ mo -- tion __ Glid -- ing like
+	the gulls o'er the o -- cean, Love -- ly Hu -- la Hands, kou li -- ma na -- ni ë
+}
+{% endif %}
+{% if part == "LyricsmoreWikifonia" %}\lyricmode {
+	Love -- ly Hu -- la Hands tell -- ing of the rains in the val -- ley __ And the swir --
+	ling winds over the Pa -- li, Love -- ly Hu -- la Hands, kou li -- ma na -- ni _ ë I can
+	feel the soft ca -- ress -- es of your hu -- la hands, your Love -- ly Hu -- la Hands Ev --
+	"'ry" lit -- tle move ex -- press -- es so I'll un -- der -- stand All the ten -- der mean --
+	ing of your hu -- la hands Fin -- ger -- tips that say A -- lo -- ha __ Say to me a --
+	gain, I love you! Love -- ly Hu -- la Hands, kou -- li -- ma -- na -- ni e
 }
 {% endif %}

@@ -5,6 +5,7 @@ default_version = "Wikifonia"
 title = "Ballad of the Sad Young Men"
 style = "Standard"
 composer = "Tommy Wolf"
+poet = "Fran Landesman"
 piece = "Standard"
 typesetter = "OpenBook contributors (MusicXML import)"
 completion = "3"
@@ -16,8 +17,8 @@ copyrightextra = "Archived MusicXML notice retained; underlying music is not rel
 [versions.Wikifonia]
 doChords = true
 doVoice = true
-doLyrics = false
-doLyricsmore = false
+doLyrics = true
+doLyricsmore = true
 doLyricsmoremore = false
 doChordBars = false
 doGuitar = false
@@ -37,6 +38,7 @@ doOwn = false
 	- retained written melody, chord changes, pickups, repeats and numbered endings; lyrics omitted.
 	- imported explicit 7alt symbols using the book's altered-dominant notation where present.
 	- tempo is an editorial practice suggestion.
+	- put in the lyrics from the same Wikifonia source.
 	TODO:
 	- proofread the complete melody, harmony and form against the referenced PDF and check by ear.
 	- verify source attribution, copyright notice and reuse terms against the scan; only the archived MusicXML notice is retained.
@@ -182,5 +184,25 @@ doOwn = false
 	es''1 |
 	es''1 |
 	\endBar
+}
+{% endif %}
+{% if part == "LyricsWikifonia" %}\lyricmode {
+	Sing a song of sad young men, glass -- es full of rye. All the news is bad a -- "gain;"
+	kiss your dreams good -- bye. All the sad young men sit -- ting in the bars, know -- ing
+	ne -- on nights, mis -- sing all the stars, __ All the sad young men drift -- ing through
+	the town. __ Drink -- ing up the night, __ try -- ing not to drown. __ All the sad young
+	men sing -- ing in the cold. Try -- ing to for -- get _ they're grow -- ing old. __ All
+	the sad young men cho -- king on their youth. __ Try -- ing to be brave, __ run -- ning
+	from the truth. __ _ Let your gen -- tle light guide them home a -- gain. All the sad
+	young men. __
+}
+{% endif %}
+{% if part == "LyricsmoreWikifonia" %}\lyricmode {
+	Au -- tumn turns the leaves to gold. ALow -- ly dies the heart. Sad young men are grow --
+	ing "old;" that's the cruel -- est part. All the sad young men seek a cer -- tain smile.
+	Some -- one they can hold for a lit -- tle while. __ Tir -- ed lit -- tle girl does the
+	best she can, __ try -- ing to be gay __ for a sad young man. __ While a gri -- my moon
+	watch -- es from a -- bove, all the sad young men _ at mak -- ing love. __ Mis -- be --
+	got -- ten moon, shine for sad young men. __
 }
 {% endif %}

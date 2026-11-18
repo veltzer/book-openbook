@@ -5,6 +5,7 @@ default_version = "Wikifonia"
 title = "In the Chapel In The Moonlight"
 style = "Jazz"
 composer = "Billy Hill"
+poet = "Billy Hill"
 piece = "Standard"
 typesetter = "OpenBook contributors (MusicXML import)"
 completion = "3"
@@ -16,8 +17,8 @@ copyrightextra = "Archived MusicXML notice retained; underlying music is not rel
 [versions.Wikifonia]
 doChords = true
 doVoice = true
-doLyrics = false
-doLyricsmore = false
+doLyrics = true
+doLyricsmore = true
 doLyricsmoremore = false
 doChordBars = false
 doGuitar = false
@@ -37,6 +38,7 @@ doOwn = false
 	- retained written melody, chord changes, pickups, repeats and numbered endings; lyrics omitted.
 	- imported explicit 7alt symbols using the book's altered-dominant notation where present.
 	- tempo is an editorial practice suggestion.
+	- put in the lyrics from the same Wikifonia source.
 	TODO:
 	- proofread the complete melody, harmony and form against the referenced PDF and check by ear.
 	- verify source attribution, copyright notice and reuse terms against the scan; only the archived MusicXML notice is retained.
@@ -163,5 +165,24 @@ doOwn = false
 	}
 	}
 	\endBar
+}
+{% endif %}
+{% if part == "LyricsWikifonia" %}\lyricmode {
+	There's a lit -- tle old church __ thats cov -- ered with moss __ where I held your hand __
+	ten -- der -- ly __ _ I of -- ten go there __ to gaze at the cross __ and dream that
+	you'll come __ back to me How I'd love to hear the or -- gan __ in the chap -- el in the
+	moon -- light __ while we're strol -- ling down the aisle __ where ro -- ses en -- twine __
+	How I'd love to hear you whis -- per __ in the chap -- el in the moon -- light __ that the
+	love -- light in your eyes __ for -- ev -- er will shine __ till the ro -- ses turn to ash --
+	es till the or -- gan turns to rust If you nev -- er come I'll still be there till the
+	moon -- light turns to dust how I'd love to hear the cho -- ir __ in the chap -- el in the
+	cha -- pel __ as they sing "'Oh" Pro -- mise "Me'" __ for -- ev -- er be mine How I'd love
+	the hear the mine __
+}
+{% endif %}
+{% if part == "LyricsmoreWikifonia" %}\lyricmode {
+	In a lit -- tle old book __ a love -- ly old hymn __ still ech -- oes in "my~mem" -- o --
+	ry _ should I turn to the page __ my eyes would grow dim __ with thoughts of what once __
+	used to be
 }
 {% endif %}

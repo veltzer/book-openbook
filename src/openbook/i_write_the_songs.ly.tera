@@ -5,6 +5,7 @@ default_version = "Wikifonia"
 title = "I Write the Songs"
 style = "Standard"
 composer = "Bruce Johnston"
+poet = "Bruce Johnston"
 piece = "Standard"
 typesetter = "OpenBook contributors (MusicXML import)"
 completion = "3"
@@ -16,8 +17,8 @@ copyrightextra = "Archived MusicXML notice retained; underlying music is not rel
 [versions.Wikifonia]
 doChords = true
 doVoice = true
-doLyrics = false
-doLyricsmore = false
+doLyrics = true
+doLyricsmore = true
 doLyricsmoremore = false
 doChordBars = false
 doGuitar = false
@@ -37,6 +38,7 @@ doOwn = false
 	- retained written melody, chord changes, pickups, repeats and numbered endings; lyrics omitted.
 	- imported explicit 7alt symbols using the book's altered-dominant notation where present.
 	- tempo taken from archived MusicXML.
+	- put in the lyrics from the same Wikifonia source.
 	TODO:
 	- proofread the complete melody, harmony and form against the referenced PDF and check by ear.
 	- verify source attribution, copyright notice and reuse terms against the scan; only the archived MusicXML notice is retained.
@@ -139,5 +141,23 @@ doOwn = false
 	b'8 g'8 a'4 g'8 g'8 g'4 |
 	d''2 r2 |
 	\endBar
+}
+{% endif %}
+{% if part == "LyricsWikifonia" %}\lyricmode {
+	I've been a -- live for -- ev -- er and I wrote the ver -- y first song I put the words
+	and the mel -- d -- dies to -- geth -- er I am mu -- sic and I write the songs I write the
+	songs that make the whole world sing I write the songs of love and spe -- _ cial things _
+	I write the songs that make the young girls cry I write the songs I write the songs.
+	songs. Oh my mu -- sic makes you dance and gives you spir -- it -- to take a chance And I
+	wrote some rock "n'" roll so you _ can move _ _ Mu -- sic fills your heart well thats a
+	real fine place to start its from me its for you its from you its for me its a world _
+	wide sym -- pho -- ny I write the songs that make the whole world sing i write the songs
+	of love and spec -- _ cial things _ I write the songs that make the young girls cry I
+	write the songs, I write the songs I am mu -- sic and I write the songs
+}
+{% endif %}
+{% if part == "LyricsmoreWikifonia" %}\lyricmode {
+	My home lies deep with -- in you and I've got my own place "in~your" soul Now when I look
+	out _ through your _ eyes _ _ _ I'm young again even though I'm very old.
 }
 {% endif %}

@@ -5,6 +5,7 @@ default_version = "Wikifonia"
 title = "Maria"
 style = "Standard"
 composer = "Leonard Bernstein"
+poet = "Stephen Sondheim"
 piece = "Standard"
 typesetter = "OpenBook contributors (MusicXML import)"
 completion = "3"
@@ -16,7 +17,7 @@ copyrightextra = "Archived MusicXML notice retained; underlying music is not rel
 [versions.Wikifonia]
 doChords = true
 doVoice = true
-doLyrics = false
+doLyrics = true
 doLyricsmore = false
 doLyricsmoremore = false
 doChordBars = false
@@ -37,6 +38,7 @@ doOwn = false
 	- retained written melody, chord changes, pickups, repeats and numbered endings; lyrics omitted.
 	- imported explicit 7alt symbols using the book's altered-dominant notation where present.
 	- tempo is an editorial practice suggestion.
+	- put in the lyrics from the same Wikifonia source.
 	TODO:
 	- proofread the complete melody, harmony and form against the referenced PDF and check by ear.
 	- verify source attribution, copyright notice and reuse terms against the scan; only the archived MusicXML notice is retained.
@@ -119,5 +121,17 @@ doOwn = false
 	e'8 c''4. ~ c''2 ~ |
 	c''1 ^\fermata |
 	\endBar
+}
+{% endif %}
+{% if part == "LyricsWikifonia" %}\lyricmode {
+	The most beau -- ti -- ful sound I ev -- er "heard:" Ma -- ri -- a, Ma -- ri -- a, Ma --
+	ri -- a, Ma -- ri -- a, __ All the beau -- ti -- ful sounds of the world in a sin -- gle
+	"word:" Ma -- ri -- a, Ma -- ri -- a, Ma -- ri -- a, Ma -- ri a, Ma -- ri -- a, Ma -- ri --
+	a. Ma -- ri -- a, __ I've just met a girl named Ma -- ri -- a, __ And sud -- den -- ly
+	that name will nev -- er be the same to me. Ma -- ri -- a! __ I've just kissed a girl
+	named Ma -- ri -- a, __ And sun -- den -- ly I've found how won -- der -- ful a sound can
+	be! Ma -- ri -- a! __ Say it loud and there's mus -- ic play -- ing. Say it soft and it's
+	al -- most like pray -- ing. __ Ma -- ri -- a, __ I'll nev -- er stop say -- ing "'Ma" --
+	ri -- "a.'" __
 }
 {% endif %}

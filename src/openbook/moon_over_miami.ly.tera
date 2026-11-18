@@ -5,6 +5,7 @@ default_version = "Wikifonia"
 title = "Moon Over Miami"
 style = "Jazz"
 composer = "Joe Burke"
+poet = "Edgar Leslie"
 piece = "Standard"
 typesetter = "OpenBook contributors (MusicXML import)"
 completion = "3"
@@ -16,7 +17,7 @@ copyrightextra = "Archived MusicXML notice retained; underlying music is not rel
 [versions.Wikifonia]
 doChords = true
 doVoice = true
-doLyrics = false
+doLyrics = true
 doLyricsmore = false
 doLyricsmoremore = false
 doChordBars = false
@@ -37,6 +38,7 @@ doOwn = false
 	- retained written melody, chord changes, pickups, repeats and numbered endings; lyrics omitted.
 	- imported explicit 7alt symbols using the book's altered-dominant notation where present.
 	- tempo is an editorial practice suggestion.
+	- put in the lyrics from the same Wikifonia source.
 	TODO:
 	- proofread the complete melody, harmony and form against the referenced PDF and check by ear.
 	- verify source attribution, copyright notice and reuse terms against the scan; only the archived MusicXML notice is retained.
@@ -126,5 +128,15 @@ doOwn = false
 	g'2 g'2 |
 	g'2. r4 |
 	\endBar
+}
+{% endif %}
+{% if part == "LyricsWikifonia" %}\lyricmode {
+	Moon ov -- er Mi -- a -- mi, shine on my love and me, __ so we can stroll __ be -- side
+	the roll of the rol -- ling sea. Moon ov -- er Mi -- a -- mi, shine on as we be -- gin, __
+	a dream or two __ that may come true, when the tide comes in. Hark to the song of the smil --
+	ing trou -- ba -- dours, __ hark to the throb -- bing gui -- tars hear how the waves of --
+	fer thun -- der -- ous ap -- plause, __ af -- ter each song to the stars. Moon ov -- er Mi --
+	a -- mi, you know we're wait -- ing for, __ a lit -- tle love, __ a lit -- tle kiss, on Mi --
+	a -- mi shore.
 }
 {% endif %}

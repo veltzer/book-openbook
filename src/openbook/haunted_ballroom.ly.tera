@@ -5,6 +5,7 @@ default_version = "Wikifonia"
 title = "Haunted Ballroom"
 style = "Jazz"
 composer = "Victor Feldman"
+poet = "Milo Adamo"
 piece = "Jazz"
 typesetter = "OpenBook contributors (MusicXML import)"
 completion = "3"
@@ -15,8 +16,8 @@ copyright = "All Rights Reserved"
 [versions.Wikifonia]
 doChords = true
 doVoice = true
-doLyrics = false
-doLyricsmore = false
+doLyrics = true
+doLyricsmore = true
 doLyricsmoremore = false
 doChordBars = false
 doGuitar = false
@@ -34,6 +35,7 @@ doOwn = false
 	- retained the original copyright notice where printed; the underlying music is not relicensed.
 	- retained written measures, pickups, repeats and endings; lyrics omitted.
 	- tempo is an editorial practice suggestion.
+	- put in the lyrics from the same Wikifonia source.
 	TODO:
 	- proofread the music against the referenced PDF and check by ear.
 	- verify the copyright notice against the scan; no readable per-tune notice was recovered, so the archived rights notice is retained where available.
@@ -109,5 +111,18 @@ doOwn = false
 	d''2 ~ d''8 bes'8 g'8 c''8 ~ |
 	c''1 ^ "D.C. al Fine" |
 	\endBar
+}
+{% endif %}
+{% if part == "LyricsWikifonia" %}\lyricmode {
+	Hear "'em" swing __ see "'em" sway __ to the songs of yes -- ter -- day, __ "'string" of
+	"Pearls'" __ "'El" -- mer's "Tune'" __ mid -- night __ at the Star -- "light~Haunt" -- ed _
+	Ball -- room Gene Kru -- pa beat -- ing on the drums. __ And Tom -- my Dor sey play -- ing
+	the slide trom -- bone __ Glenn Mil -- ler put you in the mood __ with a song __ and Satch __
+	mo got up __ and blew __ on his horn __
+}
+{% endif %}
+{% if part == "LyricsmoreWikifonia" %}\lyricmode {
+	Long a -- go __ so they say __ all the big bands used to play __ "'my" ro -- "mance'" __
+	"'Love" in "Bloom'" __
 }
 {% endif %}

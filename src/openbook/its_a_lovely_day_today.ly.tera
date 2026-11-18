@@ -5,6 +5,7 @@ default_version = "Wikifonia"
 title = "It's A Lovely Day Today"
 style = "Jazz"
 composer = "Irving Berlin"
+poet = "Irving Berlin"
 piece = "Standard"
 typesetter = "OpenBook contributors (MusicXML import)"
 completion = "3"
@@ -16,7 +17,7 @@ copyrightextra = "Archived MusicXML notice retained; underlying music is not rel
 [versions.Wikifonia]
 doChords = true
 doVoice = true
-doLyrics = false
+doLyrics = true
 doLyricsmore = false
 doLyricsmoremore = false
 doChordBars = false
@@ -37,6 +38,7 @@ doOwn = false
 	- retained written melody, chord changes, pickups, repeats and numbered endings; lyrics omitted.
 	- imported explicit 7alt symbols using the book's altered-dominant notation where present.
 	- tempo is an editorial practice suggestion.
+	- put in the lyrics from the same Wikifonia source.
 	TODO:
 	- proofread the complete melody, harmony and form against the referenced PDF and check by ear.
 	- verify source attribution, copyright notice and reuse terms against the scan; only the archived MusicXML notice is retained.
@@ -154,5 +156,15 @@ doOwn = false
 	}
 	}
 	\endBar
+}
+{% endif %}
+{% if part == "LyricsWikifonia" %}\lyricmode {
+	It's a love -- ly day to -- day, __ so what -- ev -- er you've got to do, __ You've got a
+	love -- ly day to do it in, __ that's true. __ And I hope what -- ev -- er you've got to
+	do is some -- thing that can be done by two, for I'd real -- ly like to stay. __ It's a
+	love -- ly day to -- day, __ and what -- ev -- er you've got to do __ I'd be so hap -- py
+	to be do -- ing it __ with you. __ But if you've got some -- thing that must be done, and
+	it can on -- ly be done by one there is noth -- ing more to say __ ex -- cept it's a love --
+	ly day for say -- ing it's a love -- ly day. __ It's a day.
 }
 {% endif %}

@@ -5,6 +5,7 @@ default_version = "Wikifonia"
 title = "The Summer Knows"
 style = "Jazz"
 composer = "Michel Legrand"
+poet = "Alan Bergman, Marilyn Bergman"
 piece = "Jazz"
 typesetter = "OpenBook contributors (MusicXML import)"
 completion = "3"
@@ -15,7 +16,7 @@ copyright = "1971 WB Music Corp. (Renewed) All Rights Reserved. Used by Permissi
 [versions.Wikifonia]
 doChords = true
 doVoice = true
-doLyrics = false
+doLyrics = true
 doLyricsmore = false
 doLyricsmoremore = false
 doChordBars = false
@@ -34,6 +35,7 @@ doOwn = false
 	- retained the original copyright notice where printed; the underlying music is not relicensed.
 	- retained written measures, pickups, repeats and endings; lyrics omitted.
 	- tempo is an editorial practice suggestion.
+	- put in the lyrics from the same Wikifonia source.
 	TODO:
 	- proofread the music against the referenced PDF and check by ear.
 {% endif %}
@@ -132,5 +134,16 @@ doOwn = false
 	}
 	f'2. r4 |
 	\endBar
+}
+{% endif %}
+{% if part == "LyricsWikifonia" %}\lyricmode {
+	The sum -- mer smiles, __ the sum -- mer knows An un -- a -- shamed __ she sheds her
+	clothes. The sum -- mer smooths __ the rest -- less sky, And lov -- ing -- ly __ she warms
+	the sand __ on which you lie. __ The sum -- mer knows, __ the sum -- mer's wise, she sees
+	the doubts __ with -- in your eyes, and so she takes __ her sum -- mer time. Tells the
+	moon to wait and the sun to ling -- er. Twists the world "'round" her sum -- mer fing --
+	er. Lets you see the won -- der of it all. And if you've learned __ your les -- son well.
+	There's lit -- tle more __ for her to tell. One last ca -- ress __ it's time to dress for
+	fall. __ The fall. __
 }
 {% endif %}

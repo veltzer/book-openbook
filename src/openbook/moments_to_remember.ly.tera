@@ -5,6 +5,7 @@ default_version = "Wikifonia"
 title = "Moments To Remember"
 style = "Jazz"
 composer = "Robert Allen, Al Stillman"
+poet = "Al Stillman"
 piece = "Standard"
 typesetter = "OpenBook contributors (MusicXML import)"
 completion = "3"
@@ -16,7 +17,7 @@ copyrightextra = "Archived MusicXML notice retained; underlying music is not rel
 [versions.Wikifonia]
 doChords = true
 doVoice = true
-doLyrics = false
+doLyrics = true
 doLyricsmore = false
 doLyricsmoremore = false
 doChordBars = false
@@ -35,6 +36,7 @@ doOwn = false
 	- retained the archived MusicXML rights notice; no redistribution permission is asserted.
 	- retained written melody, chord changes, pickups, repeats and numbered endings; lyrics, slurs, dynamics and articulations other than fermatas omitted.
 	- tempo is an editorial practice suggestion.
+	- put in the lyrics from the same Wikifonia source.
 	TODO:
 	- proofread the complete melody, harmony and form against a printed edition and check by ear.
 	- verify source attribution, copyright notice and reuse terms; only the archived MusicXML notice is retained.
@@ -125,5 +127,15 @@ doOwn = false
 	a'1 |
 	g'2. ~ g'8 r8 |
 	\endBar
+}
+{% endif %}
+{% if part == "LyricsWikifonia" %}\lyricmode {
+	The New Years Eve we did the town, the day we tore the goal -- posts down. We will have
+	these mo -- ments to re -- mem -- ber. The qui -- et walks the nois -- y fun the ball --
+	room prize we al -- most "won;" We will have these mo -- ments to re -- mem -- ber. The
+	sum -- mer turns to win -- ter, and the pre -- sent dis -- appears. The laugh -- ter we
+	were glad to share will e -- cho through the years. When oth -- er nights and oth -- er
+	days may find us gone our "sep'" -- rate ways. We will have these mo -- ments to re -- mem --
+	ber. __
 }
 {% endif %}

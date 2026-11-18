@@ -5,6 +5,7 @@ default_version = "Wikifonia"
 title = "Please"
 style = "Jazz"
 composer = "Ralph Rainger"
+poet = "Leo Robin"
 piece = "Standard"
 typesetter = "OpenBook contributors (MusicXML import)"
 completion = "3"
@@ -16,8 +17,8 @@ copyrightextra = "Archived MusicXML notice retained; underlying music is not rel
 [versions.Wikifonia]
 doChords = true
 doVoice = true
-doLyrics = false
-doLyricsmore = false
+doLyrics = true
+doLyricsmore = true
 doLyricsmoremore = false
 doChordBars = false
 doGuitar = false
@@ -37,6 +38,7 @@ doOwn = false
 	- retained written melody, chord changes, pickups, repeats and numbered endings; lyrics omitted.
 	- imported explicit 7alt symbols using the book's altered-dominant notation where present.
 	- tempo is an editorial practice suggestion.
+	- put in the lyrics from the same Wikifonia source.
 	TODO:
 	- proofread the complete melody, harmony and form against the referenced PDF and check by ear.
 	- verify source attribution, copyright notice and reuse terms against the scan; only the archived MusicXML notice is retained.
@@ -126,5 +128,19 @@ doOwn = false
 	c''1 ~ |
 	c''1 |
 	\endBar
+}
+{% endif %}
+{% if part == "LyricsWikifonia" %}\lyricmode {
+	Please lend your lit -- tle ear to my pleas, Lend a ray of cheer to my pleas, Tell me
+	that youy love me too. __ Please, let me hold you tight in my arms, I could find de --
+	light in your charms, Ev -- "'ry" nightt my whole live through. __ Your eyes re -- veal
+	that you have the soul of an an -- gel, white as "snow;" But how long must I play the role
+	of a gloom -- y Ro -- me -- o? Oh! Please say you're not in -- tend -- ing to tease, Speed
+	the hap -- py end -- ing and please, Tell me that you love me too. __
+}
+{% endif %}
+{% if part == "LyricsmoreWikifonia" %}\lyricmode {
+	_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _
+	"(the" nic -- est man I've "met;)" _ _ _ _ _ _ _ _ _ _ "(tear" -- ful Ju -- li -- "et?)"
 }
 {% endif %}

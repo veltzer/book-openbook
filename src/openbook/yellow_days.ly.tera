@@ -4,7 +4,8 @@ default_version = "Wikifonia"
 [attributes]
 title = "Yellow Days"
 style = "Jazz"
-composer = "Alvaro Carrillo, English Lyrics by Alan Bernstein"
+composer = "Alvaro Carrillo, English Alan Bernstein"
+poet = "English Alan Bernstein"
 piece = "Standard"
 typesetter = "OpenBook contributors (MusicXML import)"
 completion = "3"
@@ -16,7 +17,7 @@ copyrightextra = "Archived MusicXML notice retained; underlying music is not rel
 [versions.Wikifonia]
 doChords = true
 doVoice = true
-doLyrics = false
+doLyrics = true
 doLyricsmore = false
 doLyricsmoremore = false
 doChordBars = false
@@ -35,6 +36,7 @@ doOwn = false
 	- retained the archived MusicXML rights notice; no redistribution permission is asserted.
 	- retained written melody, chord changes, pickups, repeats and numbered endings; lyrics, slurs, dynamics and articulations other than fermatas omitted.
 	- tempo is an editorial practice suggestion.
+	- put in the lyrics from the same Wikifonia source.
 	TODO:
 	- proofread the complete melody, harmony and form against a printed edition and check by ear.
 	- verify source attribution, copyright notice and reuse terms; only the archived MusicXML notice is retained.
@@ -125,5 +127,16 @@ doOwn = false
 	f'1 ~ |
 	f'2 r2 |
 	\endBar
+}
+{% endif %}
+{% if part == "LyricsWikifonia" %}\lyricmode {
+	I re -- mem -- ber when the sun -- light had a spe -- cial kind of bright -- ness, and
+	the laugh -- ter has a lov -- er's kind of light -- ness, yel -- low days, yel -- low
+	days. __ She would hold me, and a smile would spread a -- round us so com -- plete -- ly,
+	and the soft -- ness of a kiss would ling -- er sweet -- ly, yel -- low days, yel -- low
+	days. __ But then came thun -- der and I heard her say good -- bye thru tears of won --
+	der, now I'm all a -- lone and my heart wants to know, yel -- low days, where'd yo go. __
+	Life is em -- pty, and the sun -- light seems so hars in -- stead of ten -- der, and the
+	laugh -- ter's just an e -- cho I re -- mem -- ber, from yel -- low days, yel -- low days. __
 }
 {% endif %}

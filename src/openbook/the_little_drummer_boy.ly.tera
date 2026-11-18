@@ -5,6 +5,7 @@ default_version = "Wikifonia"
 title = "The Little Drummer Boy"
 style = "Jazz"
 composer = "Harry Simeone, Henry Onorati, Katherine Davis"
+poet = "Henry Onorati, Katherine Davis"
 piece = "Standard"
 typesetter = "OpenBook contributors (MusicXML import)"
 completion = "3"
@@ -16,8 +17,8 @@ copyrightextra = "Archived MusicXML notice retained; underlying music is not rel
 [versions.Wikifonia]
 doChords = true
 doVoice = true
-doLyrics = false
-doLyricsmore = false
+doLyrics = true
+doLyricsmore = true
 doLyricsmoremore = false
 doChordBars = false
 doGuitar = false
@@ -35,6 +36,7 @@ doOwn = false
 	- retained the archived MusicXML rights notice; no redistribution permission is asserted.
 	- retained written melody, chord changes, pickups, repeats and numbered endings; lyrics, slurs, dynamics and articulations other than fermatas omitted.
 	- tempo is an editorial practice suggestion.
+	- put in the lyrics from the same Wikifonia source.
 	TODO:
 	- proofread the complete melody, harmony and form against a printed edition and check by ear.
 	- verify source attribution, copyright notice and reuse terms; only the archived MusicXML notice is retained.
@@ -115,5 +117,19 @@ doOwn = false
 	f'2. r4 |
 	}
 	\endBar
+}
+{% endif %}
+{% if part == "LyricsWikifonia" %}\lyricmode {
+	Come, they told me, Pa -- rum -- pum -- pum -- pum __ A new born King to "see;" Pa -- rum --
+	pum -- pum -- pum. __ Our fin -- est gifts we bring Pa -- rum -- pum -- pum -- pum. __ To
+	lay be -- fore the King, Pa -- um -- pum -- pum -- pum, rum -- pum -- pum -- pum, rum --
+	pum -- pum pum __ So to hon -- or Him, Pa -- rum -- pum -- pum -- pum __ When _ we come. __
+}
+{% endif %}
+{% if part == "LyricsmoreWikifonia" %}\lyricmode {
+	Lit -- tle B -- by, Pa -- rum -- pum -- pum -- pum __ I am a poor boy "too;" Pa -- rum --
+	pum -- pum -- pum __ I have no gift to bring Pa -- rum -- pum -- pum -- pum __ That's fit
+	to give our King, Pa -- rum -- pum -- pum -- pum, rum -- pum -- pum -- pum, rum -- pum --
+	pum -- pum __ Shall I play for You, Pa -- rum -- pum -- pum -- pim __ On __ _ my drum? __
 }
 {% endif %}

@@ -5,6 +5,7 @@ default_version = "Wikifonia"
 title = "I Get Along Without You Very Well"
 style = "Jazz"
 composer = "Hoagy Carmichael"
+poet = "Jane Brown Thompson"
 piece = "Standard"
 typesetter = "OpenBook contributors (MusicXML import)"
 completion = "3"
@@ -16,7 +17,7 @@ copyrightextra = "Archived MusicXML notice retained; underlying music is not rel
 [versions.Wikifonia]
 doChords = true
 doVoice = true
-doLyrics = false
+doLyrics = true
 doLyricsmore = false
 doLyricsmoremore = false
 doChordBars = false
@@ -37,6 +38,7 @@ doOwn = false
 	- retained written melody, chord changes, pickups, repeats and numbered endings; lyrics omitted.
 	- imported explicit 7alt symbols using the book's altered-dominant notation where present.
 	- tempo is an editorial practice suggestion.
+	- put in the lyrics from the same Wikifonia source.
 	TODO:
 	- proofread the complete melody, harmony and form against the referenced PDF and check by ear.
 	- verify source attribution, copyright notice and reuse terms against the scan; only the archived MusicXML notice is retained.
@@ -207,5 +209,18 @@ doOwn = false
 	}
 	}
 	\endBar
+}
+{% endif %}
+{% if part == "LyricsWikifonia" %}\lyricmode {
+	I get a -- long with -- out you ver -- y well __ Of course I do __ ex cept when soft
+	rains fall __ and drip from leaves then I re -- call the thrill of be -- ing shelt -- ered
+	in your arms __ Of course I do __ but I get a -- long with -- out you ver -- y well __
+	I've for -- got -- ten you, just like I should __ of course I have __ ex -- cept to hear
+	your name __ or some -- one's laugh that is the same But I've for -- got -- ten you just
+	like I should __ What a guy __ what a fool am I __ To think my break -- ing heart __ could
+	kid the moon __ what's in store? __ should I "'phone" once more? __ No its best that I
+	stick to my tune __ I get a -- long with -- out you ver -- y well __ Of course I do __ Ex --
+	cept per -- haps in spring, __ but I should nev -- er think "of~spring" __ for that would
+	sure -- ly break my heart in two __ two. __
 }
 {% endif %}

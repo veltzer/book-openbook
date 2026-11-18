@@ -5,6 +5,7 @@ default_version = "Wikifonia"
 title = "Stars Fell On Alabama"
 style = "Jazz"
 composer = "Frank Perkins"
+poet = "Mitchell Parish"
 piece = "Jazz"
 typesetter = "OpenBook contributors (MusicXML import)"
 completion = "3"
@@ -16,7 +17,7 @@ copyrightextra = "CPP/Belwin, Inc., Miami, FL and Music Sales Ltd. All Rights Re
 [versions.Wikifonia]
 doChords = true
 doVoice = true
-doLyrics = false
+doLyrics = true
 doLyricsmore = false
 doLyricsmoremore = false
 doChordBars = false
@@ -35,6 +36,7 @@ doOwn = false
 	- retained the original copyright notice where printed; the underlying music is not relicensed.
 	- retained written measures, pickups, repeats and endings; lyrics omitted.
 	- tempo is an editorial practice suggestion.
+	- put in the lyrics from the same Wikifonia source.
 	TODO:
 	- proofread the music against the referenced PDF and check by ear.
 	- verify editorial chord spacing in measures 7, 8, 9, 32; the archive places successive symbols at the same offset.
@@ -122,5 +124,15 @@ doOwn = false
 	c'1 ~ |
 	c'2 r2 |
 	\endBar
+}
+{% endif %}
+{% if part == "LyricsWikifonia" %}\lyricmode {
+	We lived our lit -- tle dra -- ma, we kissed in a field of white, and stars fell on Al --
+	a -- bam -- a last night, I can't for -- get the glam -- our, your eyes, held a ten -- der
+	light, and stars fell on Al -- a -- bam -- a last night I nev -- er planned in my i -- mag --
+	i -- na -- tion -- a sit -- u -- a -- tion -- so heav -- en ly, __ A fair -- y -- land
+	where no one else could en -- ter __ and in the cen -- ter __ just you and me, dear, My
+	heart beat like a ham -- mer, my arms wound a -- round you tight, and stars fell on Al --
+	a -- ba -- ma last night. __
 }
 {% endif %}

@@ -5,6 +5,7 @@ default_version = "Wikifonia"
 title = "That Old Black Magic"
 style = "Jazz"
 composer = "Harold Arlen"
+poet = "Johhny Mercer"
 piece = "Jazz"
 typesetter = "OpenBook contributors (MusicXML import)"
 completion = "3"
@@ -15,7 +16,7 @@ copyright = "All Rights Reserved"
 [versions.Wikifonia]
 doChords = true
 doVoice = true
-doLyrics = false
+doLyrics = true
 doLyricsmore = false
 doLyricsmoremore = false
 doChordBars = false
@@ -34,6 +35,7 @@ doOwn = false
 	- retained the original copyright notice where printed; the underlying music is not relicensed.
 	- retained written measures, pickups, repeats and endings; lyrics omitted.
 	- tempo is an editorial practice suggestion.
+	- put in the lyrics from the same Wikifonia source.
 	TODO:
 	- proofread the music against the referenced PDF and check by ear.
 	- verify the copyright notice against the scan; no readable per-tune notice was recovered, so the archived rights notice is retained where available.
@@ -223,5 +225,19 @@ doOwn = false
 	}
 	}
 	\endBar
+}
+{% endif %}
+{% if part == "LyricsWikifonia" %}\lyricmode {
+	That old black __ mag -- ic has me in its __ spell __ That old black __ mag -- ic that
+	you weave so __ well __ Those i -- cy __ fin -- gers up and down my __ spine __ the same
+	old __ witch -- craft when your eyes meet __ mine __ the same old __ ting -- le that I
+	feel in __ side __ and then that __ el -- e -- va -- tor starts its __ ride __ and down
+	and __ down __ I go round and __ round __ I go like a __ leaf __ that's caught in the tide __
+	I should stay a way __ but what can I do? __ I hear your name __ and I'm a -- flame __ A --
+	flame with such __ a burn -- ing de -- sire __ that on -- ly your kiss __ can put out the
+	fire __ For you're the __ lov -- er I have wait -- ed __ for __ the mate that __ fate __
+	had me cre -- at -- ed __ for __ and ev -- "'ry" -- time __ your lips meet mine __ Dar --
+	ling down and __ down __ I go round and __ round __ I go in a __ spin __ lov -- ing the
+	spin I'm __ in __ und -- er that old black __ mag -- ic called love! __ That love! __
 }
 {% endif %}

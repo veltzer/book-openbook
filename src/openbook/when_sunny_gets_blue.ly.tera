@@ -5,6 +5,7 @@ default_version = "Wikifonia"
 title = "When Sunny Gets Blue"
 style = "Jazz"
 composer = "Marvin Fisher"
+poet = "Jack Sega"
 piece = "Jazz"
 typesetter = "OpenBook contributors (MusicXML import)"
 completion = "3"
@@ -15,7 +16,7 @@ copyright = "All Rights Reserved"
 [versions.Wikifonia]
 doChords = true
 doVoice = true
-doLyrics = false
+doLyrics = true
 doLyricsmore = false
 doLyricsmoremore = false
 doChordBars = false
@@ -34,6 +35,7 @@ doOwn = false
 	- retained the original copyright notice where printed; the underlying music is not relicensed.
 	- retained written measures, pickups, repeats and endings; lyrics omitted.
 	- tempo is an editorial practice suggestion.
+	- put in the lyrics from the same Wikifonia source.
 	TODO:
 	- proofread the music against the referenced PDF and check by ear.
 	- verify editorial chord spacing in measures 5, 9, 13, 17, 29, 33, 34; the archive places successive symbols at the same offset.
@@ -132,5 +134,19 @@ doOwn = false
 	g'1 ~ |
 	g'1 |
 	\endBar
+}
+{% endif %}
+{% if part == "LyricsWikifonia" %}\lyricmode {
+	When Sun -- ny gets blue, her eyes get gray and cloud -- y. Then the rain be -- gins to
+	fall. Pit -- ter, pat -- ter, pit -- ter, pat -- ter, love is gone so what's the mat --
+	ter? No sweet lov -- er man comes to call. __ When Sun -- ny gets blue, she breathes a
+	sigh of sad -- ness, like the wind that stirs the trees. Wind that sets the leaves to sway --
+	"in'," like some vi -- o -- lins are play -- "in'" weird and haunt -- ing mel -- o --
+	dies. Peo -- ple used to love to hear her laugh, see her smile. That's how she got her
+	name. Since the sad af -- fair, she's lost her smile, changed her style. Some -- how she's
+	not the same. __ But mem -- "'ries" will fade, and pret -- ty dreams will rise up where
+	her oth -- er dream fell through. Hur -- ry new love, hur -- ry here __ to kiss a -- way
+	each lone -- ly tear, __ and hold her near when sun -- ny gets blue. __ Hold her near when
+	sun -- ny gets blue. __
 }
 {% endif %}

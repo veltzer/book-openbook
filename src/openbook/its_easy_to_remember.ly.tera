@@ -5,6 +5,7 @@ default_version = "Wikifonia"
 title = "It's Easy To Remember"
 style = "Jazz"
 composer = "Richard Rodgers"
+poet = "Lorenz Hart"
 piece = "Standard"
 typesetter = "OpenBook contributors (MusicXML import)"
 completion = "3"
@@ -16,7 +17,7 @@ copyrightextra = "Archived MusicXML notice retained; underlying music is not rel
 [versions.Wikifonia]
 doChords = true
 doVoice = true
-doLyrics = false
+doLyrics = true
 doLyricsmore = false
 doLyricsmoremore = false
 doChordBars = false
@@ -37,6 +38,7 @@ doOwn = false
 	- retained written melody, chord changes, pickups, repeats and numbered endings; lyrics omitted.
 	- imported explicit 7alt symbols using the book's altered-dominant notation where present.
 	- tempo is an editorial practice suggestion.
+	- put in the lyrics from the same Wikifonia source.
 	TODO:
 	- proofread the complete melody, harmony and form against the referenced PDF and check by ear.
 	- verify source attribution, copyright notice and reuse terms against the scan; only the archived MusicXML notice is retained.
@@ -146,5 +148,16 @@ doOwn = false
 	}
 	es''1 |
 	\endBar
+}
+{% endif %}
+{% if part == "LyricsWikifonia" %}\lyricmode {
+	Your sweet ex -- pres -- sion, __ the smile you gave me, __ the way you looked when we
+	met. It's eas -- y to re -- mem -- ber but so hard to for -- get. __ I hear you whis --
+	per, __ "'I'll" al -- ways love "you.'" __ I know it's ov -- er and yet, it's eas -- y to
+	re -- mem -- ber but so hard to for -- get. __ So I must dream __ to have your hand car --
+	ess me, Fin -- gers press me tight. __ I'd rath -- er dream __ than have that lone -- ly
+	feel -- ing steal -- ing through the night. __ Each lit -- tle mo -- ment __ is clear be --
+	fore me, __ and though it brings me re -- gret, it's easy to re -- mem -- ber but so hard
+	to for get. _ Your sweet ex -- so hard to for -- get.
 }
 {% endif %}

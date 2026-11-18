@@ -5,6 +5,7 @@ default_version = "Wikifonia"
 title = "The Swingin' Shepherd Blues"
 style = "Jazz"
 composer = "Moe Koffman, Kenny Jacobson, Rhoda Roberts"
+poet = "Kenny Jacobson, Rhoda Roberts"
 piece = "Standard"
 typesetter = "OpenBook contributors (MusicXML import)"
 completion = "3"
@@ -16,7 +17,7 @@ copyrightextra = "Archived MusicXML notice retained; underlying music is not rel
 [versions.Wikifonia]
 doChords = true
 doVoice = true
-doLyrics = false
+doLyrics = true
 doLyricsmore = false
 doLyricsmoremore = false
 doChordBars = false
@@ -35,6 +36,7 @@ doOwn = false
 	- retained the archived MusicXML rights notice; no redistribution permission is asserted.
 	- retained written melody, chord changes, pickups, repeats and numbered endings; lyrics, slurs, dynamics and articulations other than fermatas omitted.
 	- tempo is an editorial practice suggestion.
+	- put in the lyrics from the same Wikifonia source.
 	TODO:
 	- proofread the complete melody, harmony and form against a printed edition and check by ear.
 	- verify source attribution, copyright notice and reuse terms; only the archived MusicXML notice is retained.
@@ -103,5 +105,13 @@ doOwn = false
 	}
 	}
 	\endBar
+}
+{% endif %}
+{% if part == "LyricsWikifonia" %}\lyricmode {
+	A -- long a moun -- tain pass, there is a patch of grass, where __ _ the swing -- "in'"
+	shep -- herd plays his tune. __ His sheep nev -- er stray, __ dan -- "cin'" all day __
+	till __ _ they see the pale __ _ and __ _ yel __ _ low moon. __ _ And __ _ then he leads
+	his flock and home -- ward they all rock to the tune of the __ swing -- "in'" __ _ shep -- _
+	herd blues. A -- long a of the __ swing -- "in'" __ shep -- _ herd blues. __
 }
 {% endif %}

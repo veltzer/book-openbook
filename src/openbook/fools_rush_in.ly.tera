@@ -5,6 +5,7 @@ default_version = "Wikifonia"
 title = "Fools rush in"
 style = "Jazz"
 composer = "Rube Bloom"
+poet = "Johnny Mercer"
 piece = "Jazz"
 typesetter = "OpenBook contributors (MusicXML import)"
 completion = "3"
@@ -15,7 +16,7 @@ copyright = "All Rights Reserved"
 [versions.Wikifonia]
 doChords = true
 doVoice = true
-doLyrics = false
+doLyrics = true
 doLyricsmore = false
 doLyricsmoremore = false
 doChordBars = false
@@ -34,6 +35,7 @@ doOwn = false
 	- retained the original copyright notice where printed; the underlying music is not relicensed.
 	- retained written measures, pickups, repeats and endings; lyrics omitted.
 	- tempo is an editorial practice suggestion.
+	- put in the lyrics from the same Wikifonia source.
 	TODO:
 	- proofread the music against the referenced PDF and check by ear.
 	- verify the copyright notice against the scan; no readable per-tune notice was recovered, so the archived rights notice is retained where available.
@@ -121,5 +123,13 @@ doOwn = false
 	c''1 ~ |
 	c''2 r2 |
 	\endBar
+}
+{% endif %}
+{% if part == "LyricsWikifonia" %}\lyricmode {
+	Fools rush in __ where an -- gels fear to tread __ and so I come to you my love __ my
+	heart a -- bove my head __ though I see __ the dan -- ger there __ if there's a chance for
+	me __ then I don't care __ fools rush in __ where wise men nev -- er go __ but wise men
+	nev -- er fall in love __ so how are they to know? __ when we met __ I felt my life be --
+	gin __ so o -- pen up your heart and let __ this fool rush in __
 }
 {% endif %}

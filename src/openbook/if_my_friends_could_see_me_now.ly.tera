@@ -5,6 +5,7 @@ default_version = "Wikifonia"
 title = "If My Friends Could See Me Now"
 style = "Standard"
 composer = "Cy Coleman"
+poet = "Dorothy Fields"
 piece = "Standard"
 typesetter = "OpenBook contributors (MusicXML import)"
 completion = "3"
@@ -16,8 +17,8 @@ copyrightextra = "Archived MusicXML notice retained; underlying music is not rel
 [versions.Wikifonia]
 doChords = true
 doVoice = true
-doLyrics = false
-doLyricsmore = false
+doLyrics = true
+doLyricsmore = true
 doLyricsmoremore = false
 doChordBars = false
 doGuitar = false
@@ -37,6 +38,7 @@ doOwn = false
 	- retained written melody, chord changes, pickups, repeats and numbered endings; lyrics omitted.
 	- imported explicit 7alt symbols using the book's altered-dominant notation where present.
 	- tempo is an editorial practice suggestion.
+	- put in the lyrics from the same Wikifonia source.
 	TODO:
 	- proofread the complete melody, harmony and form against the referenced PDF and check by ear.
 	- verify source attribution, copyright notice and reuse terms against the scan; only the archived MusicXML notice is retained.
@@ -147,5 +149,22 @@ doOwn = false
 	}
 	}
 	\endBar
+}
+{% endif %}
+{% if part == "LyricsWikifonia" %}\lyricmode {
+	If they could see me now, __ that lit -- tle gang of mine, __ I'm eat -- ing fan -- cy
+	chow and drink -- ing fan -- cy wine. __ I'd like those stum -- ble bums to see for a fact __
+	The kind of top drawer first rate chums I at -- tract. __ All I can say is "'Wow!" -- ee
+	Look -- a where I am. __ To night I land -- ed, pow! __ right in a pot of "jam.'" __ What
+	a set up! Ho -- ly cow! __ They'd nev -- er be -- lieve it, If my friends could see me now __
+	If they could see me now __
+}
+{% endif %}
+{% if part == "LyricsmoreWikifonia" %}\lyricmode {
+	_ _ _ see me now, __ My lit -- tle ddust -- y group, __ _ traip -- "sin'" "'round" this
+	mil -- lion dol -- lar chick -- en coup. __ I'd hear those thrift shop cats "say:"
+	"'Broth" -- er, get her! __ Draped on a bed -- spread made from three kinds of "fur.'" __
+	All I can say is "'Wow!" __ Wait till the riff and raff __ See just ex -- act -- ly how __
+	he signed this au -- to -- "graph.'" __ What a build -- up! Ho -- ly cow! __
 }
 {% endif %}

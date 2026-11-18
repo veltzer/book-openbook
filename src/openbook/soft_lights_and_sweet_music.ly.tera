@@ -5,6 +5,7 @@ default_version = "Wikifonia"
 title = "Soft Lights And Sweet Music"
 style = "Jazz"
 composer = "Irving Berlin"
+poet = "Irving Berlin"
 piece = "Standard"
 typesetter = "OpenBook contributors (MusicXML import)"
 completion = "3"
@@ -16,7 +17,7 @@ copyrightextra = "Archived MusicXML notice retained; underlying music is not rel
 [versions.Wikifonia]
 doChords = true
 doVoice = true
-doLyrics = false
+doLyrics = true
 doLyricsmore = false
 doLyricsmoremore = false
 doChordBars = false
@@ -37,6 +38,7 @@ doOwn = false
 	- retained written melody, chord changes, pickups, repeats and numbered endings; lyrics omitted.
 	- imported explicit 7alt symbols using the book's altered-dominant notation where present.
 	- tempo is an editorial practice suggestion.
+	- put in the lyrics from the same Wikifonia source.
 	TODO:
 	- proofread the complete melody, harmony and form against the referenced PDF and check by ear.
 	- verify source attribution, copyright notice and reuse terms against the scan; only the archived MusicXML notice is retained.
@@ -184,5 +186,14 @@ doOwn = false
 	}
 	}
 	\endBar
+}
+{% endif %}
+{% if part == "LyricsWikifonia" %}\lyricmode {
+	I can't re -- sist the moan of a cel -- lo, __ I can't re -- sist the light of the moon, __
+	So place me in a light that is mel -- low __ And let me hear a beau -- ti -- ful tune, __
+	The mus -- ic must flow, __ The lights must be low. __ Soft lights __ and sweet mu -- sic
+	and you in __ my arms. __ Soft lights and sweet mel -- o -- dy __ will bring you clo --
+	ser to me. __ Cho -- pin __ and pale moon -- light re -- veal all __ your charms. __ So
+	give me vel -- vet lights and sweet mus -- ic and you in __ my arms. arms. __
 }
 {% endif %}
