@@ -5,6 +5,7 @@ default_version = "Wikifonia"
 title = "When lights are low"
 style = "Jazz"
 composer = "Benny Carter"
+poet = "Spencer Williams"
 piece = "Standard"
 typesetter = "OpenBook contributors (MusicXML import)"
 completion = "3"
@@ -16,7 +17,7 @@ copyrightextra = "Archived MusicXML notice retained; underlying music is not rel
 [versions.Wikifonia]
 doChords = true
 doVoice = true
-doLyrics = false
+doLyrics = true
 doLyricsmore = false
 doLyricsmoremore = false
 doChordBars = false
@@ -125,5 +126,16 @@ doOwn = false
 	e'4. c'16 a16 c'8 e'8 d'8 c'8 |
 	r4 s4 s2 |
 	\endBar
+}
+{% endif %}
+{% if part == "LyricsWikifonia" %}\lyricmode {
+	When lights are low,
+	sweet -- heart, how I love to hold you, when lights are low,
+	and dream in the pale moon -- light's soft glow; Mu -- sic sweet
+	seems to re -- peat our love song, when lights are low. And
+	when we dance to -- geth -- er, dear, heav -- en seems to be oh so near;
+	Each lit -- tle star winks from a -- far to say you're mine, all mine; When lights are low,
+	sweet -- heart, nev -- er let this mo -- ment end, hold me close,
+	while our hap -- py hearts ten -- der -- ly blend; Tell me you love me too, when lights are low.
 }
 {% endif %}

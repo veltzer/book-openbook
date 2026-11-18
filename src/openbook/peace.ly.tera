@@ -26,8 +26,8 @@ remark = "Chet Baker"
 [versions.Real]
 doChords = true
 doVoice = true
-doLyrics = false
-doLyricsmore = false
+doLyrics = true
+doLyricsmore = true
 doLyricsmoremore = false
 doChordBars = false
 doGuitar = false
@@ -95,5 +95,19 @@ doOwn = false
 			f,1 |
 		}
 	}
+}
+{% endif %}
+{% if part == "LyricsReal" %}\lyricmode {
+	There's a
+	place that I know where the syc -- a -- mores grow and daf -- fo -- dils have their fun, Where the
+	cares of the day seem to slow -- ly fade a -- way in the glow of the eve -- ning sun; Peace, when the day is
+	done. If I done.
+}
+{% endif %}
+{% if part == "LyricsmoreReal" %}\lyricmode {
+	_ _
+	go there real late, let my mind med -- i -- tate on ev -- 'ry -- thing to be done, If I
+	search deep in -- side, let my con -- science be my guide, then the an -- swers are sure to come; Don't have to wor -- ry
+	none, Life's sweet, none.
 }
 {% endif %}

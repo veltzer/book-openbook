@@ -6,6 +6,7 @@ title = "O Barquino"
 subtitle = "Little Boat"
 style = "Jazz"
 composer = "Roberto Menescal"
+poet = "Ronaldo Boscoli, Buddy Kaye"
 piece = "Bossa Nova"
 copyright = "1962-1964 Editions SACHA s.q.r.l. Paris, France"
 typesetter = "Laurent Martelli"
@@ -16,8 +17,8 @@ structure = "AAAB"
 [versions.Laurent]
 doChords = true
 doVoice = true
-doLyrics = false
-doLyricsmore = false
+doLyrics = true
+doLyricsmore = true
 doLyricsmoremore = false
 doChordBars = false
 doGuitar = false
@@ -90,5 +91,19 @@ doOwn = false
 	% part "End"
 	r1 | r1 | r1 | r1 |
 	r1 | r1 | r1 | r1 | r1\fermata |
+}
+{% endif %}
+{% if part == "LyricsLaurent" %}\lyricmode {
+	My Lit -- tle Boat is like a note bounc -- ing mer -- ri -- ly a -- long, hear it splash -- in' up a song.
+	The sails are white, the sky is bright, head -- in' out in -- to the blue with a crew of on -- ly two.
+	Where we can share love's salt -- y air on a lit -- tle par -- a -- dise a -- float, not a care
+	have we in my Lit -- tle Boat, Boat!
+}
+{% endif %}
+{% if part == "LyricsmoreLaurent" %}\lyricmode {
+	Di -- a de luz, fes -- ta de sol, bar -- co a na -- ve -- gar no ma -- ci -- o a -- zul do mar.
+	Tu -- do é ve -- rão, o a -- mor se faz num bar -- qui -- nho pe -- lo mar que des -- li -- za só.
+	Sem in -- ten -- ção, nos -- sa can -- ção vai sa -- in -- do des -- se mar e o sol bei -- ja
+	o mar, di -- as tão fe -- li -- zes!
 }
 {% endif %}

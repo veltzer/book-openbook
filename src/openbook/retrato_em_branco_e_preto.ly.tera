@@ -16,7 +16,7 @@ structure = "AB"
 [versions.Anon]
 doChords = true
 doVoice = true
-doLyrics = false
+doLyrics = true
 doLyricsmore = false
 doLyricsmoremore = false
 doChordBars = false
@@ -75,5 +75,16 @@ doOwn = false
 	d4. c8~ c ees4 cis8 | d8 c4 ees8~ ees d4 g8~ | g1 | r |
 	g4._\markup { \bold "(end tag)" } fis8~ fis aes4 g8 | a8 gis4 bes8~ bes a4 c8~ | c4. bes8~ bes cis4 a8 | c8 bes4 a8~ a g4 f8~ |
 	f4. ees8~ ees fis4 d8 | f8 ees4 fis8~ fis d4 g8~ | g1_\markup { \bold "(end)" }~ | g4 r r2 |
+}
+{% endif %}
+{% if part == "LyricsAnon" %}\lyricmode {
+	Já co -- nhe -- ço os pas -- sos des -- "sa es" -- tra -- da, sei que não vai dar em
+	na -- da, seus se -- gre -- dos sei de cor.
+	Já co -- nhe -- ço as pe -- dras do ca -- mi -- "nho, e" sei tam -- bém "que a" -- li so --
+	zi -- "nho eu" vou fi -- car, tan -- to pi -- or; O "que é" "que eu" pos -- so con -- "tra o"
+	en -- can -- to des -- "se a" -- mor "que eu" ne -- go, "trago u" -- ma dor no pei -- to
+	ce -- "go, em" bran -- "co e" pre -- "to a" me gui -- ar.
+	"Trago u" -- ma dor no pei -- "to, u" -- ma lem -- bran -- "ça, um" re -- tra -- "to em" bran -- "co e"
+	pre -- to que mal -- tra -- "ta o" co -- ra -- ção.
 }
 {% endif %}

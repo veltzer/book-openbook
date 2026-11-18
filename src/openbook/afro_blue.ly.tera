@@ -5,6 +5,7 @@ default_version = "Real"
 title = "Afro Blue"
 style = "Latin"
 composer = "Mongo Santamaria"
+poet = "Oscar Brown Jr."
 piece = "Med. Fast"
 typesetter = "Mark Veltzer <mark.veltzer@gmail.com>"
 completion = "5"
@@ -23,8 +24,8 @@ remark = "Mongo Santamaria, the composer, in the original recording"
 [versions.Real]
 doChords = true
 doVoice = true
-doLyrics = false
-doLyricsmore = false
+doLyrics = true
+doLyricsmore = true
 doLyricsmoremore = false
 doChordBars = false
 doGuitar = false
@@ -128,5 +129,23 @@ doOwn = false
 		r2. | r2. | r2. | r2. |
 		r2. | r2. | r2. | r2. |
 	}
+}
+{% endif %}
+{% if part == "LyricsReal" %}\lyricmode {
+	Dream of a land my soul's from, I
+	hear a hand stroke on a drum.
+	Shades of de -- light, co -- coa hue,
+	rich as the night, Af -- ro Blue. Two young
+	lov -- ers, face to face, with un -- du -- la -- ting, warm em -- brace, they gent --
+	ly sway, then slip a -- way to some se -- clud -- ed, dark place.
+	Shades of de -- light, co -- coa hue,
+	rich as the night, Af -- ro Blue.
+}
+{% endif %}
+{% if part == "LyricsmoreReal" %}\lyricmode {
+	El -- e -- gant boy, beau -- ti -- ful girl,
+	danc -- ing for joy, der -- 'lic -- tic whirl.
+	_ _ _ _ _ _ _
+	_ _ _ _ _ _ _
 }
 {% endif %}

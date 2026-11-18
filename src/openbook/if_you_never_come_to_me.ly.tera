@@ -5,6 +5,7 @@ default_version = "Wikifonia"
 title = "If You Never Come To Me"
 style = "Jazz"
 composer = "Antonio Carlos Jobim"
+poet = "Ray Gilbert"
 piece = "Jazz"
 typesetter = "OpenBook contributors (MusicXML import)"
 completion = "3"
@@ -15,8 +16,8 @@ copyright = "All Rights Reserved"
 [versions.Wikifonia]
 doChords = true
 doVoice = true
-doLyrics = false
-doLyricsmore = false
+doLyrics = true
+doLyricsmore = true
 doLyricsmoremore = false
 doChordBars = false
 doGuitar = false
@@ -93,5 +94,19 @@ doOwn = false
 	g'2. r4 |
 	}
 	\endBar
+}
+{% endif %}
+{% if part == "LyricsWikifonia" %}\lyricmode {
+	There's no use of a moon -- light glow,
+	_ or the peaks where win -- ter snows; What's the
+	use of the waves that will break in the cool of the eve -- ning? What is the
+	eve -- ning with -- out you? It's noth -- ing.
+}
+{% endif %}
+{% if part == "LyricsmoreWikifonia" %}\lyricmode {
+	It may be you will nev -- er come,
+	_ if you nev -- er come to me; What's the
+	use of my won -- der -- ful dreams, and why would they _ need me? Where would they
+	lead me with -- out you? To no -- where.
 }
 {% endif %}

@@ -5,6 +5,7 @@ default_version = "Wikifonia"
 title = "Nobody Else but Me"
 style = "Jazz"
 composer = "Jerome Kern"
+poet = "Oscar Hammerstein II"
 piece = "Jazz"
 typesetter = "OpenBook contributors (MusicXML import)"
 completion = "3"
@@ -15,7 +16,7 @@ copyright = "All Rights Reserved"
 [versions.Wikifonia]
 doChords = true
 doVoice = true
-doLyrics = false
+doLyrics = true
 doLyricsmore = false
 doLyricsmoremore = false
 doChordBars = false
@@ -131,5 +132,17 @@ doOwn = false
 	c''2 r2 |
 	R1 |
 	\endBar
+}
+{% endif %}
+{% if part == "LyricsWikifonia" %}\lyricmode {
+	I just
+	came from the dress -- ing room, and I looked in my mir -- ror there, tell me, who did I
+	see? No -- bod -- y else but me! Did
+	you ev -- er no -- tice my nose turns up, and my
+	eyes aren't blue at all? I'm not pret -- ty like oth -- er girls, and
+	I have -- n't got an -- y curls, I'm not short and not tall, no glam -- or at all,
+	yet I know that the boy I love loves no gal,
+	loves no one, loves no soul, loves no girl, loves no heart,
+	loves no -- bod -- y else in all the world!
 }
 {% endif %}

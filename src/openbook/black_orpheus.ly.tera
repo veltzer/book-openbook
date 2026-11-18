@@ -5,6 +5,7 @@ default_version = "Wikifonia"
 title = "Black Orpheus"
 style = "Jazz"
 composer = "Luiz Bonfa"
+poet = "Carl Sigman"
 piece = "Standard"
 typesetter = "OpenBook contributors (MusicXML import)"
 completion = "3"
@@ -16,7 +17,7 @@ copyrightextra = "Archived MusicXML notice retained; underlying music is not rel
 [versions.Wikifonia]
 doChords = true
 doVoice = true
-doLyrics = false
+doLyrics = true
 doLyricsmore = false
 doLyricsmoremore = false
 doChordBars = false
@@ -141,5 +142,18 @@ doOwn = false
 	a'1 ~ |
 	a'2. r4 |
 	\endBar
+}
+{% endif %}
+{% if part == "LyricsWikifonia" %}\lyricmode {
+	A
+	Day In The Life Of A Fool, a
+	sad and a long, lone -- ly day, I walk the
+	av -- e -- nue and hope I'll run in -- to the wel --
+	come sight of you, com -- ing my way.
+	I stop just a -- cross from your door,
+	but you're nev -- er home an -- y -- more.
+	So back to my room, and there in the gloom
+	I cry tears of good -- bye.
+	_ 'Til you come back to me, that's the way it will be, ev -- 'ry day in the life of a fool.
 }
 {% endif %}

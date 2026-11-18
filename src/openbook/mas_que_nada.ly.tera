@@ -5,6 +5,7 @@ default_version = "Wikifonia"
 title = "Mas Que Nada"
 style = "Jazz"
 composer = "Jorge Ben"
+poet = "Jorge Ben"
 piece = "Standard"
 typesetter = "OpenBook contributors (MusicXML import)"
 completion = "3"
@@ -16,7 +17,7 @@ copyrightextra = "Archived MusicXML notice retained; underlying music is not rel
 [versions.Wikifonia]
 doChords = true
 doVoice = true
-doLyrics = false
+doLyrics = true
 doLyricsmore = false
 doLyricsmoremore = false
 doChordBars = false
@@ -153,5 +154,17 @@ doOwn = false
 	f'2 r2 |
 	}
 	\endBar
+}
+{% endif %}
+{% if part == "LyricsWikifonia" %}\lyricmode {
+	O -- á, o -- á, o -- á, o -- ba,
+	o -- ba, o -- ba, o -- ba! O -- á, o -- á,
+	o -- á, o -- á, o -- ba, o -- ba, o -- ba,
+	hey! Mas que na -- da, sai da mi -- nha fren -- te que eu que -- ro pas --
+	sar, pois o sam -- ba es -- tá a -- ni -- ma -- do, o "que eu" que -- ro é sam -- bar!
+	Es -- te sam -- ba que é mis -- to de ma -- ra -- ca -- tu, é sam -- ba de pre --
+	to ve -- lho, sam -- ba de pre -- to tu! Mas que na --
+	da, um sam -- ba co -- mo es -- se tão le -- gal, vo -- cê não vai que --
+	rer que eu che -- gue no fi -- nal!
 }
 {% endif %}

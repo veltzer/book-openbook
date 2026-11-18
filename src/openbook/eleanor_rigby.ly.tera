@@ -5,6 +5,7 @@ default_version = "Wikifonia"
 title = "Eleanor Rigby"
 style = "Jazz"
 composer = "John Lennon, Paul McCartney"
+poet = "John Lennon, Paul McCartney"
 piece = "Standard"
 typesetter = "OpenBook contributors (MusicXML import)"
 completion = "3"
@@ -16,7 +17,7 @@ copyrightextra = "Archived MusicXML notice retained; underlying music is not rel
 [versions.Wikifonia]
 doChords = true
 doVoice = true
-doLyrics = false
+doLyrics = true
 doLyricsmore = false
 doLyricsmoremore = false
 doChordBars = false
@@ -111,5 +112,14 @@ doOwn = false
 	e''4 b'8 a'8 ~ a'8 g'8 g'8 e'8 ~ |
 	e'1 |
 	\endBar
+}
+{% endif %}
+{% if part == "LyricsWikifonia" %}\lyricmode {
+	Ah, look at all the lone -- ly peo -- ple! _ _ _ _ _ _ _ _ _ _
+	Ah, look at all the lone -- ly peo -- ple! _ _ _ _ _ _ _ _ _ _
+	El -- ea -- nor Rig -- by picks up the rice in the church where a wed -- ding has been, lives in a dream. _
+	Waits at the win -- dow, wear -- ing the face that she keeps in a jar by the door, who is it for? _
+	All the lone -- ly peo -- ple, where do they all come _ from?
+	All the lone -- ly peo -- ple, where do they all be -- _ long?
 }
 {% endif %}

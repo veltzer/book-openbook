@@ -5,6 +5,7 @@ default_version = "Wikifonia"
 title = "Love Story"
 style = "Jazz"
 composer = "Francis Lai"
+poet = "Carl Sigman"
 piece = "Standard"
 typesetter = "OpenBook contributors (MusicXML import)"
 completion = "3"
@@ -16,7 +17,7 @@ copyrightextra = "Archived MusicXML notice retained; underlying music is not rel
 [versions.Wikifonia]
 doChords = true
 doVoice = true
-doLyrics = false
+doLyrics = true
 doLyricsmore = false
 doLyricsmoremore = false
 doChordBars = false
@@ -147,5 +148,17 @@ doOwn = false
 	g'1 ~ |
 	g'4 \fermata r4 r2 |
 	\endBar
+}
+{% endif %}
+{% if part == "LyricsWikifonia" %}\lyricmode {
+	Where do I be -- gin to tell the sto -- ry of how great a love can be, the sweet love sto -- ry that is
+	old -- er than the sea, the sim -- ple truth a -- bout the love she brings to me? Where do I start?
+	With her first hel -- lo, she gave a mean -- ing to this emp -- ty world of mine, there'll nev -- er be an -- oth -- er
+	love, an -- oth -- er time, she came in -- to my life and made the liv -- ing fine; She fills my heart,
+	she fills my heart with ver -- y spe -- cial things, with an -- gel songs, with wild i --
+	mag -- in -- ings; She fills my soul with so much love that an -- y -- where I go I'm nev -- er
+	lone -- _ ly; With her a -- long, who could be lone -- _ ly? I reach for her hand, it's al -- ways there.
+	How long does it last? Can love be mea -- sured by the hours in a _ day? I have no an -- swers now, but
+	this much I can say: I know I'll need her 'til the stars all burn a -- way, and she'll be there.
 }
 {% endif %}

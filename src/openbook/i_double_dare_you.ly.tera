@@ -5,6 +5,7 @@ default_version = "Wikifonia"
 title = "I Double Dare You"
 style = "Jazz"
 composer = "Terry Shand, Jimmy Eaton"
+poet = "Terry Shand, Jimmy Eaton"
 piece = "Standard"
 typesetter = "OpenBook contributors (MusicXML import)"
 completion = "3"
@@ -16,7 +17,7 @@ copyrightextra = "Archived MusicXML notice retained; underlying music is not rel
 [versions.Wikifonia]
 doChords = true
 doVoice = true
-doLyrics = false
+doLyrics = true
 doLyricsmore = false
 doLyricsmoremore = false
 doChordBars = false
@@ -133,5 +134,16 @@ doOwn = false
 	bes'4 as'2. ~ |
 	as'2. r4 |
 	\endBar
+}
+{% endif %}
+{% if part == "LyricsWikifonia" %}\lyricmode {
+	I dou -- ble dare you to sit o -- ver here, I dou -- ble
+	dare you to lend me an ear; I've got a se -- cret I'd
+	like to im -- part, some -- thing that's weigh -- ing right
+	down in the depths of my lov -- ing heart. I dou -- ble dare you to
+	turn down the light, I dou -- ble dare you to hold me so tight;
+	Don't waste a mo -- ment, you know that I'll be ev -- er true;
+	Tell me you love me and kiss me once, or
+	twice, I dou -- ble dare you!
 }
 {% endif %}

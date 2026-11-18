@@ -5,6 +5,7 @@ default_version = "Wikifonia"
 title = "Lover"
 style = "Jazz"
 composer = "Richard Rodgers, Lorenz Hart"
+poet = "Lorenz Hart"
 piece = "Standard"
 typesetter = "OpenBook contributors (MusicXML import)"
 completion = "3"
@@ -16,7 +17,7 @@ copyrightextra = "Archived MusicXML notice retained; underlying music is not rel
 [versions.Wikifonia]
 doChords = true
 doVoice = true
-doLyrics = false
+doLyrics = true
 doLyricsmore = false
 doLyricsmoremore = false
 doChordBars = false
@@ -187,5 +188,20 @@ doOwn = false
 	c''2. ~ |
 	c''4 r2 |
 	\endBar
+}
+{% endif %}
+{% if part == "LyricsWikifonia" %}\lyricmode {
+	Lov -- er, when I'm near you and I
+	hear you speak my name, soft -- ly,
+	in my ear you breathe a flame.
+	Lov -- er, when we kneel, dear, how I
+	feel, dear, can't be told; With your
+	arms a -- round me I'm so bold.
+	All of my fu -- ture is in you, you are my
+	ev -- 'ry de -- sire; _ It's dev -- il -- ish, this
+	thing that's in you, fill -- ing my heart with burn --
+	ing Lov -- er, please be ten -- der,
+	when you're ten -- der fears de -- part;
+	Lov -- er, I sur -- ren -- der to my heart.
 }
 {% endif %}

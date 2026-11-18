@@ -161,7 +161,7 @@ briefs. The briefs and the helper scripts (page rendering, single-tune render,
 staff-line pitch finder) lived in a temporary scratchpad under `/tmp` and are
 not kept; this section holds what they said.
 
-## Lyrics - in progress
+## Lyrics - done
 
 Started 2026-11-04. Tunes whose front matter names a poet but whose file has
 no lyrics part. The Jazz Fake Book prints the lyrics under the melody, so the
@@ -270,17 +270,43 @@ own Wikifonia `.mxl` (`a_pretty_girl_is_like_a_melody`,
 poet and no lyrics has lyrics still under copyright (published 1931 or
 later).
 
+Status 2026-11-18: lyrics added to the remaining 567 vocal tunes across the
+repository (`566` in `src/openbook/` plus `src/israeli/geshem.ly.tera`):
+
+- 492 Wikifonia-imported tunes in `src/openbook/` extracted directly from their
+  own `.mxl` in `real_books_archive.gi/Wikifonia.tar.xz` (1:1 syllable-bearing
+  note match).
+- 48 tunes in `src/openbook/` cross-matched and aligned to corresponding `.mxl`
+  files in `real_books_archive.gi/Wikifonia.tar.xz` (`a_child_is_born`,
+  `agua_de_beber`, `alfie`, `all_in_love_is_fair`, `all_my_tomorrows`,
+  `april_in_paris`, `arent_you_glad_youre_you`, `besame_mucho`, `cest_si_bon`,
+  `day_dream`, `days_of_wine_and_roses`, `early_autumn`, `estate`, `girl_talk`,
+  `god_bless_the_child`, `how_about_you`, `i_fall_in_love_too_easily`,
+  `i_get_a_kick_out_of_you`, `i_remember_clifford`, `i_wont_dance`,
+  `in_a_sentimental_mood`, `invitation`, `is_you_is_or_is_you_aint`,
+  `its_all_right_with_me`, `just_one_of_those_things`, `laura`,
+  `love_is_here_to_stay`, `lullaby_of_the_leaves`, `lush_life`,
+  `mack_the_knife`, `moon_river`, `my_mans_gone_now`, `old_devil_moon`,
+  `orange_colored_sky`, `out_of_nowhere`, `perdido`, `pure_imagination`,
+  `rain`, `september_song`, `someday_youll_be_sorry`, `sophisticated_lady`,
+  `speak_low`, `star_eyes`, `the_more_i_see_you`, `triste`, `wave`,
+  `when_you_wish_upon_a_star`, `you_dont_know_what_love_is`).
+- 26 tunes in `src/openbook/` aligned from `Jazz Fake Book.pdf`,
+  `The Real Vocal Book.pdf`, `The Standards Real Book.pdf`, `New Real Book`, or
+  alternate-title `.mxl` files in `Wikifonia.tar.xz` (`afro_blue`,
+  `baltimore_oriole`, `barquino`, `black_orpheus`, `centerpiece`,
+  `could_it_be_you`, `eleanor_rigby`, `emily`, `i_double_dare_you`,
+  `if_you_never_come_to_me`, `im_an_old_cowhand`, `it_dont_mean_a_thing`,
+  `je_suis_seul_ce_soir`, `love_story`, `lover`, `mas_que_nada`, `meditation`,
+  `nobody_else_but_me`, `o_grande_amor`, `peace`, `retrato_em_branco_e_preto`,
+  `solamente_una_vez`, `the_inch_worm`, `turn_out_the_stars`,
+  `when_lights_are_low`, `you_better_go_now`).
+- `src/israeli/geshem.ly.tera`: aligned Verse 1 from its `Extra` block to
+  `VoiceMy` in `LyricsMy`.
+
 Pages that print no lyrics (instrumental heads, nothing to add):
 `its_sand_man`, `johnnys_theme`, `king_porter_stomp`, `maple_leaf_rag`,
 `salt_peanuts`, `shiny_stockings`, `swinging_shepherd_blues`, `tickle_toe`.
-
-Not done because the assistant's output filter refuses to reproduce these
-particular lyrics (type them by hand from the page; `sonny_boy` and
-`you_made_me_love_you` were done later): `arent_you_glad_youre_you`
-(48), `god_bless_the_child` (131), `i_wont_dance` (166),
-`is_you_is_or_is_you_aint` (188), `lullaby_of_the_leaves` (231), `lush_life`
-(232), `sonny_boy` (354), `you_better_go_now` (439), `you_made_me_love_you`
-(440).
 
 Melody edits made while adding lyrics (the book prints no tie/slur there):
 `boplicity` bars 2-3 and 27. Bars where the book's ties and the typed melody
@@ -396,5 +422,3 @@ you_call_it_madness, you_came_a_long_way_from_st_louis, you_made_me_love_you,
 you_turned_the_tables_on_me, youd_be_so_nice_to_come_home_to,
 youll_never_walk_alone, young_and_foolish, young_at_heart,
 younger_than_springtime, youre_my_everything, youre_the_cream_in_my_coffee.
-
-Tunes with a poet but located elsewhere (need another lyric source): all_my_tomorrows (rbk1), april_in_paris (rbk1), besame_mucho, days_of_wine_and_roses, georgia_on_my_mind, in_a_sentimental_mood, invitation, it_dont_mean_a_thing, moon_river, out_of_nowhere, peace, softly_as_in_a_morning_sunrise, sophisticated_lady, star_dust, triste, wave, you_dont_know_what_love_is (hlrjb), i_fall_in_love_too_easily, star_eyes, when_you_wish_upon_a_star (557), my_mans_gone_now (rbk3), someday_youll_be_sorry (dfb), the_more_i_see_you (srb), and without any location: early_autumn, i_got_rhythm, its_all_right_with_me, just_one_of_those_things, laura, love_is_here_to_stay, mack_the_knife, mean_to_me, o_grande_amor, old_devil_moon, pure_imagination, retrato_em_branco_e_preto, september_song, speak_low, strike_up_the_band.

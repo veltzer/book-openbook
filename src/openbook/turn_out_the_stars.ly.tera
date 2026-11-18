@@ -5,6 +5,7 @@ default_version = "Wikifonia"
 title = "Turn Out the Stars"
 style = "Jazz"
 composer = "Bill Evans"
+poet = "Gene Lees"
 piece = "Jazz"
 typesetter = "OpenBook contributors (MusicXML import)"
 completion = "3"
@@ -16,7 +17,7 @@ copyrightextra = "Including Public P"
 [versions.Wikifonia]
 doChords = true
 doVoice = true
-doLyrics = false
+doLyrics = true
 doLyricsmore = false
 doLyricsmoremore = false
 doChordBars = false
@@ -137,5 +138,18 @@ doOwn = false
 	r4 f'4 f'4 e'4 |
 	e'2 ~ e'2 |
 	\endBar
+}
+{% endif %}
+{% if part == "LyricsWikifonia" %}\lyricmode {
+	Turn out the stars, turn out the stars,
+	all of my nights have grown dark and too cold, all of the sto -- ries of
+	love have been told; Turn out the stars, why let them
+	shine in the dark of the sky, when the love that we knew had to
+	die? Now that you're gone, _ how can I go on liv -- ing with mem -- o --
+	ries of days when your heart used to beat next to mine? Now I am lost
+	in shad -- ows of time; Put out the moon,
+	put out the sun, now that our love is done, since there's
+	no more love; And tell the wind not to sigh in the trees,
+	turn out the stars, turn out the stars.
 }
 {% endif %}

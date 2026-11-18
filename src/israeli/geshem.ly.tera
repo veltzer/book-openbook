@@ -20,7 +20,7 @@ id = "1CBj7q51-BQ"
 [versions.My]
 doChords = true
 doVoice = true
-doLyrics = false
+doLyrics = true
 doLyricsmore = false
 doLyricsmoremore = false
 doChordBars = false
@@ -90,6 +90,12 @@ doOwn = false
 	% part "Verse"
 	d8. c16 b8 c d8. c16 b8 c | d2.. e16 fis | g8. fis16 e8 e d8. b16 d8 e | b2.. b16 c |
 	d8. d16 d8 d d8. d16 e8 fis | d2.. e16 fis | g8. fis16 e8 e d4 \times 2/3 { d8 d d } | e1 |
+}
+{% endif %}
+{% if part == "LyricsMy" %}\lyricmode {
+	_ _ _ _ _ _
+	אין מ -- קום ל -- דא -- גה ה -- יי שקטה, א -- ני אי -- תך, את לא ל -- בד ל -- עת עתה, עכ -- שיו
+	ה -- כל זו -- רם כאן ב -- מ -- נו -- חה, ו -- את בו -- כה, _ _ _ ו -- את בו -- כה.
 }
 {% endif %}
 {% if part == "Extra" %}% Lyrics

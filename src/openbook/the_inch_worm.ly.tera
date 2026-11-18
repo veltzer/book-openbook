@@ -5,6 +5,7 @@ default_version = "Wikifonia"
 title = "The Inch Worm"
 style = "Jazz"
 composer = "Frank Loesser"
+poet = "Frank Loesser"
 piece = "Jazz"
 typesetter = "OpenBook contributors (MusicXML import)"
 completion = "3"
@@ -15,8 +16,8 @@ copyright = "All Rights Reserved"
 [versions.Wikifonia]
 doChords = true
 doVoice = true
-doLyrics = false
-doLyricsmore = false
+doLyrics = true
+doLyricsmore = true
 doLyricsmoremore = false
 doChordBars = false
 doGuitar = false
@@ -99,5 +100,17 @@ doOwn = false
 	\once \override NoteHead.style = #'slash es''4 \once \override NoteHead.style = #'slash es''4 \once \override NoteHead.style = #'slash es''4 |
 	}
 	\endBar
+}
+{% endif %}
+{% if part == "LyricsWikifonia" %}\lyricmode {
+	Inch -- worm, inch -- worm, mea -- sur -- ing the mar -- i -- golds,
+	you and your a -- rith -- me -- tic, you'll prob -- a -- bly go far.
+	beau -- ti -- ful they are. _ _ _ _ _ _
+}
+{% endif %}
+{% if part == "LyricsmoreWikifonia" %}\lyricmode {
+	Inch -- worm, inch -- worm, mea -- sur -- ing the mar -- i -- golds,
+	seems to me you'd stop and see how _ _ _ _ _
+	_ _ _ _ _ _ _ _ _ _ _
 }
 {% endif %}

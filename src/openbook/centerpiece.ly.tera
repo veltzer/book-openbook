@@ -5,6 +5,7 @@ default_version = "Wikifonia"
 title = "Centerpiece"
 style = "Jazz"
 composer = "Sweets Edison"
+poet = "Jon Hendricks"
 piece = "Standard"
 typesetter = "OpenBook contributors (MusicXML import)"
 completion = "3"
@@ -16,7 +17,7 @@ copyrightextra = "Archived MusicXML notice retained; underlying music is not rel
 [versions.Wikifonia]
 doChords = true
 doVoice = true
-doLyrics = false
+doLyrics = true
 doLyricsmore = false
 doLyricsmoremore = false
 doChordBars = false
@@ -111,5 +112,15 @@ doOwn = false
 	<bes' des''>8 <c'' es''>4 <cis'' e''>4 <d'' f''>4 <dis'' fis''>8 |
 	<d'' fis''>8 <e'' g''>4 <f'' as''>4 <es'' a''>4 <d'' bes''>8 |
 	\endBar
+}
+{% endif %}
+{% if part == "LyricsWikifonia" %}\lyricmode {
+	The
+	more I'm with you, pret -- ty ba -- by, the more I feel my love in -- crease. I'm
+	build -- ing all my dreams a -- round you, our hap -- pi -- ness will nev -- er cease, 'cause
+	noth -- ing's an -- y good with -- out you, 'cause ba -- by, you're my cen -- ter -- piece. We'll
+	buy a house and gar -- den some -- where, a -- long a coun -- try road a -- piece, a
+	lit -- tle cot -- tage on the out -- skirts, where we can real -- ly find re -- lief, 'cause
+	noth -- ing's an -- y good with -- out you, 'cause ba -- by, you're my cen -- ter -- piece! _ _ _
 }
 {% endif %}

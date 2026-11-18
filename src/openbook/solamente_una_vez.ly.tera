@@ -5,6 +5,7 @@ default_version = "Wikifonia"
 title = "Solamente una Vez"
 style = "Jazz"
 composer = "Agustin Lara"
+poet = "Agustin Lara, Ray Gilbert"
 piece = "Standard"
 typesetter = "OpenBook contributors (MusicXML import)"
 completion = "3"
@@ -16,8 +17,8 @@ copyrightextra = "Archived MusicXML notice retained; underlying music is not rel
 [versions.Wikifonia]
 doChords = true
 doVoice = true
-doLyrics = false
-doLyricsmore = false
+doLyrics = true
+doLyricsmore = true
 doLyricsmoremore = false
 doChordBars = false
 doGuitar = false
@@ -141,5 +142,29 @@ doOwn = false
 	es''1 ~ |
 	es''1 |
 	\endBar
+}
+{% endif %}
+{% if part == "LyricsWikifonia" %}\lyricmode {
+	So -- la -- men -- "te u" -- na vez a -- "mé en" la vi -- da,
+	so -- la -- men -- "te u" -- na vez y na -- da más.
+	U -- na vez, na -- da más, en mi huer -- to bri -- lló "la es" -- pe -- ran -- za,
+	"la es" -- pe -- ran -- za "que a" -- lum -- "bra el" ca -- mi -- no de mi so -- le -- dad.
+	U -- na vez, na -- da más, "se en" -- tre -- "ga el" al -- ma
+	con la dul -- "ce y" to -- tal re -- nun -- ciación;
+	Y cuan -- "do e" -- se mi -- la -- gro re -- ha -- "ce el" pro -- di -- gio "de a" -- mar -- se,
+	hay cam -- pa -- nas de fies -- ta que can -- tan en el co -- ra -- zón.
+	So -- la -- men -- "te u" -- na pa -- nas de fies -- ta que can -- tan en el co -- ra -- zón.
+}
+{% endif %}
+{% if part == "LyricsmoreWikifonia" %}\lyricmode {
+	You be -- long to my heart, now and for -- ev -- er,
+	and our love had its start not long a -- go;
+	We were gath -- er -- ing stars while a mil -- lion gui -- tars played our love song,
+	when I said I love you, ev -- 'ry beat of my heart said it too.
+	'Twas a mo -- ment like this, do you re -- mem -- ber?
+	And your eyes threw a kiss when they met;
+	Now we own all the stars and a mil -- lion gui -- tars are still play -- ing;
+	Dar -- ling, you are the song and you'll al -- ways be -- long to my heart.
+	You be -- long to my you are the song and you'll al -- ways be -- long to my heart.
 }
 {% endif %}

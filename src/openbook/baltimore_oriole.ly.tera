@@ -5,6 +5,7 @@ default_version = "Wikifonia"
 title = "Baltimore Oriole"
 style = "Jazz"
 composer = "Hoagy Carmichael"
+poet = "Paul Francis Webster"
 piece = "Standard"
 typesetter = "OpenBook contributors (MusicXML import)"
 completion = "3"
@@ -16,7 +17,7 @@ copyrightextra = "Archived MusicXML notice retained; underlying music is not rel
 [versions.Wikifonia]
 doChords = true
 doVoice = true
-doLyrics = false
+doLyrics = true
 doLyricsmore = false
 doLyricsmoremore = false
 doChordBars = false
@@ -133,5 +134,17 @@ doOwn = false
 	g'1 |
 	R1 |
 	\endBar
+}
+{% endif %}
+{% if part == "LyricsWikifonia" %}\lyricmode {
+	Bal -- ti -- more O -- ri -- ole took a look at the mer -- cu -- ry, for -- ty be -- low. No
+	life for a la -- dy to be drag -- gin' her feath -- ers a -- round in the snow.
+	Leav -- ing me blue, off she flew to the Tan -- gi -- pa -- ho where a two -- tim -- in'
+	black -- bird met the di -- vine Miss O! I'd like to ruf -- fle his plu -- mage!
+	Bal -- ti -- more O -- ri -- ole messed a -- roun' with that big mouth 'til he singed her wing. For --
+	giv -- in' is eas -- y, it's a wom -- an -- like, now -- and -- then -- could -- hap -- pen thing.
+	Send her back home, home ain't home with -- out her war -- bl -- ing; Make a lone -- ly man
+	hap -- py. Bal -- ti -- more O -- _ ri -- ole, come down from that
+	bough, _ fly back to me now.
 }
 {% endif %}

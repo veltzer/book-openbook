@@ -5,6 +5,7 @@ default_version = "Wikifonia"
 title = "(Je suis) Seul ce soir"
 style = "Jazz"
 composer = "Jean Sablon, Jean Sablon"
+poet = "Rose Noel, Jean Casanova"
 piece = "Standard"
 typesetter = "OpenBook contributors (MusicXML import)"
 completion = "3"
@@ -16,7 +17,7 @@ copyrightextra = "Archived MusicXML notice retained; underlying music is not rel
 [versions.Wikifonia]
 doChords = true
 doVoice = true
-doLyrics = false
+doLyrics = true
 doLyricsmore = false
 doLyricsmoremore = false
 doChordBars = false
@@ -127,5 +128,15 @@ doOwn = false
 	R1 |
 	R1 |
 	\endBar
+}
+{% endif %}
+{% if part == "LyricsWikifonia" %}\lyricmode {
+	Je suis seul ce soir a -- vec mes rê -- _ ves,
+	je suis seul ce soir sans ton a -- mour; Le jour
+	s'a -- chè -- ve, mon coeur rê -- ve d'a -- voir ton doux re --
+	gard. Je suis seul ce soir a -- vec ma
+	pei -- _ ne, j'ai per -- du l'es -- poir de ton re --
+	tour; Pour -- tant dans mon coeur j'at -- tends le bon -- heur,
+	mais je suis si seul ce soir sans ton a -- mour.
 }
 {% endif %}

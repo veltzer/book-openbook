@@ -27,7 +27,7 @@ remark = "Duke Ellington (1943)"
 [versions.Real]
 doChords = true
 doVoice = true
-doLyrics = false
+doLyrics = true
 doLyricsmore = false
 doLyricsmoremore = false
 doChordBars = false
@@ -119,6 +119,18 @@ doOwn = false
 	% part "A"
 	g2 g4 bes | d2 g,4 bes | des2 c8 bes4 g8~ | g1 |
 	r4 bes8 bes~ bes bes bes4 | bes8 bes4 bes8 bes4 bes8 bes~ | bes8 bes bes4 bes8 bes4 bes8 | bes4 r r2 |
+}
+{% endif %}
+{% if part == "LyricsReal" %}\lyricmode {
+	It
+	don't mean a thing, if it ain't got that swing,
+	doo wah, doo wah, doo wah, doo wah, doo wah, doo wah, doo wah, doo wah. All
+	you got -- ta do is just sing that mel -- o -- dy,
+	doo wah, doo wah, doo wah, doo wah, doo wah, doo wah, doo wah, doo wah. It
+	makes no dif -- f'rence if it's sweet or hot, just
+	give that rhy -- thm ev -- 'ry -- thing you've got. It
+	don't mean a thing, if it ain't got that swing,
+	doo wah, doo wah, doo wah, doo wah, doo wah, doo wah, doo wah, doo wah.
 }
 {% endif %}
 {% if part == "ChordsLaurent" %}\chordmode {

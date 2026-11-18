@@ -5,6 +5,7 @@ default_version = "Wikifonia"
 title = "I'm an Old Cowhand"
 style = "Jazz"
 composer = "Johnny Mercer"
+poet = "Johnny Mercer"
 piece = "Standard"
 typesetter = "OpenBook contributors (MusicXML import)"
 completion = "3"
@@ -16,7 +17,7 @@ copyrightextra = "Archived MusicXML notice retained; underlying music is not rel
 [versions.Wikifonia]
 doChords = true
 doVoice = true
-doLyrics = false
+doLyrics = true
 doLyricsmore = false
 doLyricsmoremore = false
 doChordBars = false
@@ -115,5 +116,14 @@ doOwn = false
 	}
 	}
 	\endBar
+}
+{% endif %}
+{% if part == "LyricsWikifonia" %}\lyricmode {
+	I'm an old cow --
+	hand from the Ri -- o Grande, and my legs ain't
+	bowed and my cheeks ain't tanned; I'm a
+	cow -- boy who nev -- er saw a cow, nev -- er roped a steer 'cause I don't know how, and I
+	sure ain't fix -- in' to start in now, yip -- py -- i -- o -- ki -- ay, _
+	yip -- py -- i -- o -- ki -- ay! I'm an old cow -- ay!
 }
 {% endif %}

@@ -26,7 +26,7 @@ remark = "Jeri Southern (1951)"
 [versions.Fake]
 doChords = true
 doVoice = true
-doLyrics = false
+doLyrics = true
 doLyricsmore = false
 doLyricsmoremore = false
 doChordBars = false
@@ -96,5 +96,15 @@ doOwn = false
 	% part "A"
 	f8 ees4.~ ees8 bes c d | f f ees ees aes aes g g | c4 bes2.~ | bes2 r8 bes c d |
 	d4 ees bes g | bes4 aes c d, | ees2. r4 |
+}
+{% endif %}
+{% if part == "LyricsFake" %}\lyricmode {
+	You Bet -- ter
+	Go Now, be -- cause I like you much too much, you have a way with you; You ought to
+	know now, just why I like you ver -- y much, the night was gay with you.
+	There's the moon a -- bove, and it gives my heart a lot of swing;
+	In your eyes there's love, and the way I feel it must be spring. I want you
+	so now, you have the lips I love to touch; You Bet -- ter Go Now, you bet -- ter
+	go, be -- cause I like you much too much.
 }
 {% endif %}

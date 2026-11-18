@@ -5,6 +5,7 @@ default_version = "Wikifonia"
 title = "Emily"
 style = "Jazz"
 composer = "Johnny Mandel"
+poet = "Johnny Mercer"
 piece = "Jazz"
 typesetter = "OpenBook contributors (MusicXML import)"
 completion = "3"
@@ -15,7 +16,7 @@ copyright = "1964 (renewed 1992) MGM/EMI Miller Catalog, Inc. Used by Permission
 [versions.Wikifonia]
 doChords = true
 doVoice = true
-doLyrics = false
+doLyrics = true
 doLyricsmore = false
 doLyricsmoremore = false
 doChordBars = false
@@ -136,5 +137,18 @@ doOwn = false
 	c''2. |
 	c''2 r4 |
 	\endBar
+}
+{% endif %}
+{% if part == "LyricsWikifonia" %}\lyricmode {
+	Em -- i -- ly, Em -- i -- ly, Em -- i -- ly has the
+	mur -- mur -- ing sound of May, All
+	sil -- ver bells, cor -- al shells, car -- ou -- sels, and the
+	laugh -- ter of chil -- dren at play, say
+	Em -- i -- ly, Em -- i -- ly, Em -- i -- ly, and we
+	fade to a mar -- vel -- ous view, Two
+	lov -- ers a -- lone and out of sight, see -- ing
+	im -- a -- ges in the fi -- re -- light; As my eyes
+	vis -- u -- al -- ize a fam -- i -- ly, they _ see
+	dream -- i -- ly, Em -- i -- ly, too. _
 }
 {% endif %}

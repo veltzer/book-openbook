@@ -6,6 +6,7 @@ title = "Meditation"
 subtitle = "Meditação"
 style = "Bossa Nova"
 composer = "Antonio Carlos Jobim"
+poet = "Newton Mendonca, Norman Gimbel"
 typesetter = "Laurent Martelli"
 completion = "3"
 uuid = "6120ae68-d49f-11f1-8000-046874d194b7"
@@ -14,7 +15,7 @@ structure = "AABA"
 [versions.Laurent]
 doChords = true
 doVoice = true
-doLyrics = false
+doLyrics = true
 doLyricsmore = false
 doLyricsmoremore = false
 doChordBars = false
@@ -88,5 +89,18 @@ doOwn = false
 	a a a a~ a a a a~ | a g4 b8~ b g4 a8~ | a b4 a8~ a2~ | a2 r |
 	f1~ | f2~ f8 e4 g8~ | g ges4 f8~ f2~ | f2~ f8 c d e~ |
 	e e e f~ f f f d~ | d d d e~ e e e c~ | c1~ | c4 r4 r2 |
+}
+{% endif %}
+{% if part == "LyricsLaurent" %}\lyricmode {
+	In my lone -- li -- ness, when you're gone
+	and I'm all by my -- self and I need your ca -- ress;
+	I just think of you, and the thought
+	of you hold -- ing me near makes my lone -- li -- ness soon dis -- ap -- pear.
+	Though you're far a -- way, I have
+	on -- ly to close my eyes to see you!
+	I will wait for you 'til the sun
+	falls from out of the sky, what else can I do?
+	I will wait for you, med -- i -- ta --
+	ting how sweet life will be when you come back to me.
 }
 {% endif %}

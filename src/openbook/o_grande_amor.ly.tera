@@ -16,7 +16,7 @@ structure = "AABA"
 [versions.Laurent]
 doChords = true
 doVoice = true
-doLyrics = false
+doLyrics = true
 doLyricsmore = false
 doLyricsmoremore = false
 doChordBars = false
@@ -85,5 +85,16 @@ doOwn = false
 		a1 | r4 b8 a~ a b4 a8 | a1 | r4 b8 c~ c e4 d8~ |
 		d1 | r4 e8 gis~ gis b4 a8~ | a1~ | a1 |
 	}
+}
+{% endif %}
+{% if part == "LyricsLaurent" %}\lyricmode {
+	Ha -- ja o "que hou" -- ver, há sem -- "pre um" ho --
+	mem pa -- "ra u" -- ma mu -- lher, sem -- pre;
+	E há de sem -- "pre ha" -- ver, pa -- "ra es" -- que -- cer um fal -- "so a" --
+	mor, u -- ma von -- ta -- de de mor -- rer; _
+	Se -- ja co -- mo _ for, há de ven -- cer
+	o gran -- "de a" -- mor, "que há" de
+	ser no co -- ra -- ção, co -- "mo um" per --
+	"dão a" quem cho -- rou.
 }
 {% endif %}

@@ -5,6 +5,7 @@ default_version = "Real"
 title = "Could It Be You"
 style = "Jazz"
 composer = "Cole Porter"
+poet = "Cole Porter"
 piece = "Ballad"
 copyright = "1942 by Chappell & Co., Renewed"
 copyrightextra = "Assigned to Robert H. Montgomery, Trustee of the Cole Porter Musical and Literary Property Trusts"
@@ -26,8 +27,8 @@ remark = "A cafe performance"
 [versions.Real]
 doChords = true
 doVoice = true
-doLyrics = false
-doLyricsmore = false
+doLyrics = true
+doLyricsmore = true
 doLyricsmoremore = false
 doChordBars = false
 doGuitar = false
@@ -108,5 +109,19 @@ doOwn = false
 			r4 f g d' | d2 c8 bes c4 | bes1_\markup { \italic { Fine } } | r |
 		}
 	}
+}
+{% endif %}
+{% if part == "LyricsReal" %}\lyricmode {
+	Could it be you, the one I'm fat -- ed for?
+	Could it be you, the love I've wait -- ed for?
+	For lo, since you came a -- long, and kin -- dled the song in my heart,
+	why both -- er pre -- tend -- ing the song is un -- end -- ing?
+	Could be, these rev -- 'ries of mine are far too di -- vine to come true,
+	or could it be re -- al -- ly you?
+}
+{% endif %}
+{% if part == "LyricsmoreReal" %}\lyricmode {
+	Are you the dream I al -- ways dream a -- bout?
+	Are we the team I'm on the beam a -- bout?
 }
 {% endif %}
