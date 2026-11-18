@@ -342,7 +342,10 @@ Status 2026-11-18 (later): `skyliner` got its lyrics from the page (jfb:340,
 three lines under the A part; the book credits no lyricist, so no `poet`).
 `burgundystreet_blues` is an instrumental: its Wikifonia `.mxl` carries only
 the digits `2 1 4 3 1 2` as lyric text, so the bogus lyrics part and the
-`poet` were removed. `thats_a_plenty` stays instrumental: neither its `.mxl`
+`poet` were removed. That `.mxl` is also not the tune the reference points
+at (a 32 bar tune in E flat minor), so the real 12 bar blues was typed from
+the Firehouse page (PDF 659, tune 458) as the default `Firehouse` version
+and the title and composer corrected. `thats_a_plenty` stays instrumental: neither its `.mxl`
 nor the Firehouse pages (PDF 356-358) print words, and the later lyrics are
 still under copyright.
 

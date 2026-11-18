@@ -110,7 +110,8 @@ Additional pending-review labels:
   MusicXML notice without a scan comparison.
   There are 631 tunes with this flag.
 - **Page**: locate the tune in the exact local PDF edition; only its index
-  reference is recorded. All 500 additional imports have this flag.
+  reference is recorded. All 500 additional imports had this flag; The
+  Burgundy Street Blues has since been located (499 remain).
 - **Route**: source navigation markers warrant a complete performance-order
   review. These are review prompts, not confirmed defects.
 - **Endings**: unusual/unlabeled source ending markers need comparison with
@@ -235,7 +236,7 @@ Additional pending-review labels:
 | [Brilliant Corners](../src/openbook/brilliant_corners.ly.tera) | Initial 328 | M, S, B | Notice |
 | [Broadway](../src/openbook/broadway.ly.tera) | Initial 328 | M, S, B | Notice |
 | [Buddy Bolden Blues](../src/openbook/buddy_bolden_blues.ly.tera) | Batch 2 (200) | M, S, B, E | Notice; Page |
-| [burgundystreet blues](../src/openbook/burgundystreet_blues.ly.tera) | Batch 1 (200) | M, S, B, E | Notice; Page |
+| [The Burgundy Street Blues](../src/openbook/burgundystreet_blues.ly.tera) | Batch 1 (200) | M, S, B, E | Notice; the imported melody is a different tune, see the Doc part |
 | [Buster Rides Again](../src/openbook/buster_rides_again.ly.tera) | Initial 328 | M, S, B | Notice |
 | [By Myself](../src/openbook/by_myself.ly.tera) | Initial 328 | M, S, B | Notice |
 | [By Strauss](../src/openbook/by_strauss.ly.tera) | Batch 2 (200) | M, S, B, E | Notice; Page |

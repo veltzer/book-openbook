@@ -1,17 +1,30 @@
 {#
-default_version = "Wikifonia"
+default_version = "Firehouse"
 
 [attributes]
-title = "burgundystreet blues"
+title = "The Burgundy Street Blues"
 style = "Jazz"
-composer = "Lewis"
-piece = "Standard"
+composer = "George Lewis"
+piece = "Slow Blues"
 typesetter = "OpenBook contributors (MusicXML import)"
 completion = "3"
 uuid = "3bf8335a-e431-5767-affc-593b26af5d5e"
+structure = "Blues"
 location = "Firehouse_Jazz_Band:659"
 copyright = "All Rights Reserved"
 copyrightextra = "Archived MusicXML notice retained; underlying music is not relicensed."
+
+[versions.Firehouse]
+doChords = true
+doVoice = true
+doLyrics = false
+doLyricsmore = false
+doLyricsmoremore = false
+doChordBars = false
+doGuitar = false
+doExtra = false
+doPrep = false
+doOwn = false
 
 [versions.Wikifonia]
 doChords = true
@@ -29,19 +42,56 @@ doOwn = false
 {% endif %}
 {% if part == "Doc" %}
 	DONE:
+	- added the Firehouse version, typed from the Firehouse Jazz Band Dixieland Fake Book, tune 458, PDF page 659 (meta data, structure, chords and tune). This is the 12 bar blues in C by George Lewis and is the default version.
+	- the Wikifonia version below is a different tune: 32 bars, E flat minor going to E flat major. Its source names it 'burgundystreet blues' by 'Lewis', it does not match the Firehouse page and it is not identified. It is kept as a second version only.
 	- imported melody and chord changes from real_books_archive.gi/Wikifonia.tar.xz: Wikifonia/Lewis - burgundystreet blues.mxl.
 	- source revision: http://wikifonia.org/node/8923/revisions/14809/view.
 	- local PDF: real_books_archive.gi/Dixieland - The Firehouse Jazz Band - Dixieland Fake Book - 778 S Noten Sheets Score Songs Lieder.pdf.
-	- book index reference: Firehouse_Jazz_Band:659; index pagination is not a verified PDF page number.
+	- book reference: Firehouse_Jazz_Band:659 is the PDF page of the Firehouse version (checked against the scan).
 	- retained the archived MusicXML rights notice; no redistribution permission is asserted.
 	- retained written melody, chord changes, pickups, repeats and numbered endings.
 	- imported explicit 7alt symbols using the book's altered-dominant notation where present.
 	- tempo taken from archived MusicXML.
 	- the tune is an instrumental: the Wikifonia source carries no words, only the digits 2 1 4 3 1 2 as lyric text, which are not typed in; no poet is credited.
 	TODO:
-	- proofread the complete melody, harmony and form against the referenced PDF and check by ear.
-	- verify source attribution, copyright notice and reuse terms against the scan; only the archived MusicXML notice is retained.
-	- locate the tune in the exact local PDF edition; book-index page numbers may differ.
+	- check the chords (Firehouse).
+	- check the tune (Firehouse).
+	- hear the tune to check that it is right and adjust the tempo.
+	- Firehouse: the wavy lines (scoops) into the pickup of bar 4 and into the last note of bar 5 are not notated.
+	- Firehouse bar 8 (A7): the first note carries a natural in parentheses and is typed as c natural.
+	- Firehouse: the low notes ending bars 1, 4 and 7 are read as the g below middle c, check them.
+	- the Firehouse page prints no copyright notice; the notice here is the one retained from the archived MusicXML of the Wikifonia version.
+	- identify the tune of the Wikifonia version and move it to a file of its own, or drop it.
+{% endif %}
+{% if part == "ChordsFirehouse" %}\chordmode {
+	\startChords
+	\startSong
+
+	\myMark "A"
+	\startPart
+	\repeat volta 2 {
+		c1 | f:7 | c | c:7 | \myEndLine
+		f1 | f | c | a:7 | \myEndLine
+		d1:7 | g:7 | c2 f:7 | c1 | \myEndLine
+	}
+	\endPart
+
+	\endSong
+	\endChords
+}
+{% endif %}
+{% if part == "VoiceFirehouse" %}\absolute {
+	\tempo "Adagio" 4 = 66
+	\time 4/4
+	\key c \major
+
+	% part "A"
+	\repeat volta 2 {
+		g'4-- dis'16 e' c' g~ g2 | f'16 a' c''8~ c''4 a'8-- c' g'-- e'~ | e'2 r8 e'-- \tuplet 3/2 { ees'8 d' c' } | g2 r4 gis'8 a' |
+		f'16 c' a c'~ c'2 r8 a'~ | a'2 f'8 c' g'4( | \tuplet 3/2 { e'8) c' g~ } g2. | c'4 b16 c' e' g' b'4. g'16 a' |
+		d'2 r8 d'16 e' f' e' d' c' | b4 b16 d' f' a' g'4 e'8( c'16) d' | c'4~ c'8 e'16 g' f'4 g'8 f' | e'2. r4 |
+	}
+}
 {% endif %}
 {% if part == "ChordsWikifonia" %}\chordmode {
 	\startChords
