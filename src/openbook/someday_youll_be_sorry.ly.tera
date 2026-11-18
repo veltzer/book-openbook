@@ -24,7 +24,7 @@ remark = "Louis Armstrong and the Dukes of Dixieland"
 [versions.Real]
 doChords = true
 doVoice = true
-doLyrics = false
+doLyrics = true
 doLyricsmore = false
 doLyricsmoremore = false
 doChordBars = false
@@ -41,8 +41,8 @@ doOwn = false
 	- put in the chords (Dixieland fake book).
 	- put in the tune (Dixieland fake book).
 	- added youtube performances.
+	- put in the lyrics from Wikifonia/:Louis Armstrong, kenny ball - Someday You'll Be Sorry.mxl.
 	TODO:
-	- add the lyrics.
 	- add the copyright notice (the Dixieland fake book does not have one).
 	- check the chords (Dixieland fake book).
 	- check the tune (Dixieland fake book).
@@ -89,5 +89,13 @@ doOwn = false
 	r4 r8 c8 d4 c | d c bes g | d1 | r2 bes' |
 	c,4 ees bes' aes | g f2 bes4 | d d d bes | d c2. |
 	ees4 c aes c, | g'2 g4. ees8~ | ees1~ | ees4 r r2 |
+}
+{% endif %}
+{% if part == "LyricsReal" %}\lyricmode {
+	Some -- day __ you'll be sor -- ry. __ The way you treat -- ed me was wrong. __ I was the
+	one who taught you all you know. Your friends have sent you __ to make me sing an -- oth --
+	er song. So, __ good __ luck __ may __ be with you, __ and __ may your fu -- ture you wont
+	fear. No, there wont be an -- oth -- er to treat you like a broth -- er, Some -- day
+	you'll be sor -- ry dear. sor __
 }
 {% endif %}

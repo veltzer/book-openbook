@@ -5,6 +5,7 @@ default_version = "Wikifonia"
 title = "How About You"
 style = "Jazz"
 composer = "Burton Lane"
+poet = "Ralph Freed"
 piece = "Jazz"
 typesetter = "OpenBook contributors (MusicXML import)"
 completion = "3"
@@ -15,7 +16,7 @@ copyright = "All Rights Reserved"
 [versions.Wikifonia]
 doChords = true
 doVoice = true
-doLyrics = false
+doLyrics = true
 doLyricsmore = false
 doLyricsmoremore = false
 doChordBars = false
@@ -34,6 +35,7 @@ doOwn = false
 	- retained the original copyright notice where printed; the underlying music is not relicensed.
 	- retained written measures, pickups, repeats and endings; lyrics omitted.
 	- tempo taken from archived MusicXML.
+	- put in the lyrics from Wikifonia/Burton Lane, Ralph Freed - How About You?.mxl.
 	TODO:
 	- proofread the music against the referenced PDF and check by ear.
 	- verify the copyright notice against the scan; no readable per-tune notice was recovered, so the archived rights notice is retained where available.
@@ -165,5 +167,14 @@ doOwn = false
 	g'1 ( |
 	g'4 ) r4 r2 |
 	\endBar
+}
+{% endif %}
+{% if part == "LyricsWikifonia" %}\lyricmode {
+	I like New York in June, How A -- bout You? __ I like __ a Gersh -- win tune, How A --
+	bout You? __ I love a fire -- side when a storm is due, __ I like po -- ta -- to chips,
+	moon -- light and mo -- tor trips How A -- bout You? __ I'm mad a -- bout good books,
+	can't get __ my fill, __ And Frank -- lin Roose -- velt's looks, give me a __ thrill. __
+	Hold -- ing hands in a mov -- ie show, when all the lights are low may __ not be new, __
+	But I like it, How A -- bout __ You? You? __
 }
 {% endif %}

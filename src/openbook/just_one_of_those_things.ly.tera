@@ -15,7 +15,7 @@ structure = "AABC"
 [versions.Laurent]
 doChords = true
 doVoice = true
-doLyrics = false
+doLyrics = true
 doLyricsmore = false
 doLyricsmoremore = false
 doChordBars = false
@@ -28,11 +28,11 @@ doOwn = false
 {% endif %}
 {% if part == "Doc" %}	DONE:
 	- converted the Laurent Martelli version from staging/openbook/laurent/just_one_of_those_things.ly.
+	- put in the lyrics from Wikifonia/Cole Porter - Just One Of Those Things.mxl.
 	TODO:
 	- check the tune and chords against a real book.
 	- the source has the chord of the second ending as D major (d1*2) under an F melody note, probably a typo.
 	- the tempo is taken from the midi tempo in the source.
-	- add the lyrics.
 	- add youtube performances.
 {% endif %}
 {% if part == "ChordsLaurent" %}\chordmode {
@@ -125,5 +125,16 @@ doOwn = false
 			f'1 ~ | f4 r r2 |
 		}
 	}
+}
+{% endif %}
+{% if part == "LyricsLaurent" %}\lyricmode {
+	It was just one __ of those things, __ just one __ of those cra -- zy flings. __ One of
+	those bells that now and then rings, just one __ of those things. __ It was just one __ of
+	those nights, __ just one __ of those fab -- u -- lous flights, a trip to the moon on gos --
+	sa -- mer wings, just one __ of those things. __ If we'd thought a bit __ of the end of it __
+	when we start -- ed paint -- ing the town, __ we'd have been a -- ware __ that our love af --
+	fair __ was too hot not __ to cool down. __ So good -- bye, dear, __ and A -- men, __
+	Here's hop -- ing we meet now and then __ it was great fun, __ but it was just one __ of
+	those things __ It was things __
 }
 {% endif %}

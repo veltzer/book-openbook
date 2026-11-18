@@ -26,8 +26,8 @@ remark = "Ella Fitzgerald and Louis Armstrong"
 [versions.Fake]
 doChords = true
 doVoice = true
-doLyrics = false
-doLyricsmore = false
+doLyrics = true
+doLyricsmore = true
 doLyricsmoremore = false
 doChordBars = false
 doGuitar = false
@@ -43,8 +43,8 @@ doOwn = false
 	- put in the chords (fake book).
 	- put in the tune (fake book).
 	- added youtube performances.
+	- put in the lyrics from Wikifonia/Jerome Kern, Oscar Hammerstein, Otto Harbach - I Won't Dance.mxl.
 	TODO:
-	- add the lyrics.
 	- check the chords (fake book).
 	- check the tune (fake book).
 	- hear the tune to check that it is right and adjust the tempo.
@@ -117,5 +117,22 @@ doOwn = false
 
 	% part "Coda"
 	c4 e g f | e4 g a c | e4 c d2 | c1~ | c4 r r2 |
+}
+{% endif %}
+{% if part == "LyricsFake" %}\lyricmode {
+	"(He)~I" won't dance! Don't ask "me;" I won't dance! Don't ask "me;" I won't dance, ma --
+	dame, with you. __ My heart won't let my feet do things they should do! __ You __ know
+	what? You're love -- ly! "(she)~and" so what? I'm lover -- ly! __ "(He)~But," oh! what you
+	do to me. __ I'm like an __ o -- cean wave that's bumped on the "shore;" __ I feel __ so
+	ab -- so -- lute -- ly stumped on the floor! __ "(She)~When" __ you dance you're charm --
+	ing __ and you're gen -- tle __ "'spec" __ ially when you do the "'Con" -- ti -- nen --
+	"tal.'" __ "(He)~But" this feel -- ing is -- n't __
+}
+{% endif %}
+{% if part == "LyricsmoreFake" %}\lyricmode {
+	pure -- ly men -- "tal;" __ for hea -- ven rest us, __ I'm not as -- bes -- tos. __ And
+	that's why I won't __ dance! Why should I? I won't dance! How could I? I __ won't __
+	dance! "'Mer" ci beau "coup'" __ I know the mus -- ic leads __ the way to ro -- mance __
+	so if I hold you __ in my arms I won't dance! __
 }
 {% endif %}

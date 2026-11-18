@@ -26,7 +26,7 @@ remark = "Elis Regina from Elis & Tom (1974)"
 [versions.Real]
 doChords = true
 doVoice = true
-doLyrics = false
+doLyrics = true
 doLyricsmore = false
 doLyricsmoremore = false
 doChordBars = false
@@ -57,8 +57,8 @@ doOwn = false
 	- put in the tune (Hal Leonard Real Jazz Book).
 	- added youtube performances.
 	- added the Laurent Martelli version (version Laurent) from staging/openbook/laurent/triste.ly.
+	- put in the lyrics from Wikifonia/Antonio Carlos Jobim - Triste.mxl.
 	TODO:
-	- add the lyrics.
 	- check the chords (Hal Leonard Real Jazz Book).
 	- check the tune (Hal Leonard Real Jazz Book).
 	- hear the tune to check that it is right and adjust the tempo (the book has no tempo marking).
@@ -190,5 +190,14 @@ doOwn = false
 
 	% part "End"
 	r1 | r1 | r1 | r1 |
+}
+{% endif %}
+{% if part == "LyricsReal" %}\lyricmode {
+	Sad __ is to live in so -- li -- tude. __ Far __ from your tran -- quil a -- ti -- tude. __
+	Sad is to know __ that no __ one e -- ver can live on a dream. __ That ne -- ver can be, __
+	will ne -- ver be. __ Dream -- er a -- wake. __ Wake -- up and see. __ Your __ beau -- ty
+	is an aer -- o -- plane. __ So __ high my heart can't bear __ the strain. __ A heart that
+	stops when you __ pass by __ on -- ly to cause me pain. __ Sad __ is to live in so -- li --
+	tude. __
 }
 {% endif %}

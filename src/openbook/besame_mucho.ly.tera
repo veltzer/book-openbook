@@ -6,7 +6,7 @@ title = "Bésame Mucho"
 subtitle = "Kiss Me Much"
 style = "Latin/Jazz"
 composer = "Consuelo Velazquez"
-poet = "Consuelo Velazquez, English Words by Sunny Skylar"
+poet = "Consuelo Velazquez, Sunny Skylar"
 piece = "Moderately"
 copyright = "1941 and 1943 by Promotora Hispano Americana De Musica, S.A."
 copyrightextra = "Copyrights Renewed by Peer International Corporation"
@@ -27,7 +27,7 @@ remark = "Wes Montgomery"
 [versions.Real]
 doChords = true
 doVoice = true
-doLyrics = false
+doLyrics = true
 doLyricsmore = false
 doLyricsmoremore = false
 doChordBars = false
@@ -61,8 +61,8 @@ doOwn = false
 		complete; its melody only has the first 8 bars. The rest of the old
 		draft melody was a placeholder copied from How Insensitive and was
 		dropped, rests stand in for it.
+	- put in the lyrics from Wikifonia/Consuelo Velazquez - Besame Mucho.mxl.
 	TODO:
-	- add the lyrics.
 	- Latin version: put in the rest of the tune (Latin Real Book) and the
 		lyrics (they are in the git history of
 		staging/openbook/besame_mucho.ly.mako); check its chords.
@@ -192,5 +192,15 @@ doOwn = false
 
 	% part "A"
 	R1*16 |
+}
+{% endif %}
+{% if part == "LyricsReal" %}\lyricmode {
+	Bé -- sa -- me, __ bé -- sa -- me mu -- cho, __ co -- mo si fue -- ra ta no -- che la úl --
+	ti -- ma "vez;" __ bé -- sa -- me mu -- cho, __ que ten -- go mie -- do per -- der -- te,
+	per -- der -- te tra vez. __ Quie -- ro te -- ner te muy cer -- ca, mi -- rar -- me tus o --
+	jos, ver -- te jun -- to mí, pien -- sa que tal vez ma -- ña -- na yo ya ta -- re le --
+	jos, muy le -- jos de ti. Bé -- sa -- me, __ bé -- sa -- me mu -- cho, __ co -- mo si fue --
+	ra ta no -- che la úl -- ti -- ma "vez;" __ bé -- sa -- me mu -- cho, __ que ten -- go mie --
+	do per -- der -- te, per -- der -- te -- des __ pués. __
 }
 {% endif %}

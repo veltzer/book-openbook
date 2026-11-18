@@ -5,6 +5,7 @@ default_version = "Wikifonia"
 title = "Alfie"
 style = "Jazz"
 composer = "Burt Bacharach"
+poet = "Hal David"
 piece = "Jazz"
 typesetter = "OpenBook contributors (MusicXML import)"
 completion = "3"
@@ -15,7 +16,7 @@ copyright = "All Rights Reserved"
 [versions.Wikifonia]
 doChords = true
 doVoice = true
-doLyrics = false
+doLyrics = true
 doLyricsmore = false
 doLyricsmoremore = false
 doChordBars = false
@@ -34,6 +35,7 @@ doOwn = false
 	- retained the original copyright notice where printed; the underlying music is not relicensed.
 	- retained written measures, pickups, repeats and endings; lyrics omitted.
 	- tempo taken from archived MusicXML.
+	- put in the lyrics from Wikifonia/Burt Bacharach, Hal David - Alfie.mxl.
 	TODO:
 	- proofread the music against the referenced PDF and check by ear.
 	- verify the copyright notice against the scan; no readable per-tune notice was recovered, so the archived rights notice is retained where available.
@@ -147,5 +149,18 @@ doOwn = false
 	R1 - "Last x" |
 	}
 	\endBar
+}
+{% endif %}
+{% if part == "LyricsWikifonia" %}\lyricmode {
+	What's it all a -- bout, __ Al -- fie? __ Is is just for the mo -- ment __ we live?
+	What's it all a -- bout __ when you sort it out, __ Al -- fie? Are we meant to take more
+	than we give, or are we meant to be kind? __ And if on -- ly fools are kind __ Al -- fie __
+	then I guess it is wise to __ be cruel. And if life be -- longs __ on -- ly -- to the
+	strong, __ Al -- fie, what will you lend on an old gold -- en rule? As sure as I be --
+	lieve there's a heav -- en a -- bove, Al -- fie, I know there's some -- thing much more,
+	some -- thing e -- ven non -- be -- liev -- ers can be -- lieve in. I be -- lieve in love, __
+	Al -- fie. __ With -- out true love we just ex -- ist, Al -- fie. Un -- til you find the
+	love you've missed you're noth -- ing, Al -- fie. When you walk let your heart lead the
+	way, and you'll find love an -- y day, Al -- fie, Al -- fie.
 }
 {% endif %}

@@ -14,7 +14,7 @@ structure = "ABAC"
 [versions.Laurent]
 doChords = true
 doVoice = true
-doLyrics = false
+doLyrics = true
 doLyricsmore = false
 doLyricsmoremore = false
 doChordBars = false
@@ -27,10 +27,10 @@ doOwn = false
 {% endif %}
 {% if part == "Doc" %}	DONE:
 	- converted the Laurent Martelli version from staging/openbook/laurent/love_is_here_to_stay.ly.
+	- put in the lyrics from Wikifonia/George and Ira Gershwin - Love Is Here To Stay.mxl.
 	TODO:
 	- check the tune and chords against a real book.
 	- the source has no tempo marking, the tempo is a guess.
-	- add the lyrics.
 	- add youtube performances.
 {% endif %}
 {% if part == "ChordsLaurent" %}\chordmode {
@@ -89,5 +89,14 @@ doOwn = false
 	% part "C"
 	c8 c c4 d8 d4 c8 | bes bes bes4 c8 c4. | r8 a gis a c4 bes | g2 d' |
 	r4 c d a | c2 d, | f1 ~ | f4 r r2 |
+}
+{% endif %}
+{% if part == "LyricsLaurent" %}\lyricmode {
+	clear Our love is here to stay, Not for a year, But ev -- er and a day. The ra -- di -- o
+	and the tel -- e -- phone and the mov -- ies that we know May just be pass -- ing fan --
+	cies, And in time may go. But, oh my dear, Our love is here to stay. To -- geth -- er
+	we're go -- ing a long, long way. In time the Rock -- ies may crum -- "ble;" Gi -- bral --
+	ter may tum -- ble, They're on -- ly made of clay, But our love is here to stay It's ver --
+	y. __
 }
 {% endif %}

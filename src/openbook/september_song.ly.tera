@@ -14,7 +14,7 @@ structure = "AABA"
 [versions.Laurent]
 doChords = true
 doVoice = true
-doLyrics = false
+doLyrics = true
 doLyricsmore = false
 doLyricsmoremore = false
 doChordBars = false
@@ -27,10 +27,10 @@ doOwn = false
 {% endif %}
 {% if part == "Doc" %}	DONE:
 	- converted the Laurent Martelli version from staging/openbook/laurent/september_song.ly.
+	- put in the lyrics from Wikifonia/Kurt Weill, Maxwell Anderson - September Song.mxl.1.
 	TODO:
 	- check the tune and chords against a real book.
 	- the source has no tempo; adjust the tempo.
-	- add the lyrics.
 	- add youtube performances.
 {% endif %}
 {% if part == "ChordsLaurent" %}\chordmode {
@@ -89,5 +89,13 @@ doOwn = false
 	% part "A"
 	a4. a8~ a2 | r4 c,4 ees aes | g1 | r4 e8 e g4 c |
 	d2. a4 | c2 c | c1 | r1 |
+}
+{% endif %}
+{% if part == "LyricsLaurent" %}\lyricmode {
+	Oh it's a long, long while from May to De -- cem -- ber, __ but the days grow short, __
+	when you reach Sep -- tem -- ber. __ When the au -- tumn weath -- er __ turns the leaves
+	to flame one has -- n't got time __ for the wait -- ing game. __ Oh the days dwin -- dle
+	down __ to a pre -- cious few, __ Sep -- tem -- ber, Nov -- em -- ber, And these few pre --
+	cious __ days I'll spend with you. These pre -- cious days I'll spend with you.
 }
 {% endif %}

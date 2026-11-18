@@ -24,7 +24,7 @@ remark = "Thelonious Monk, the other recording the real book refers to"
 [versions.Real]
 doChords = true
 doVoice = true
-doLyrics = false
+doLyrics = true
 doLyricsmore = false
 doLyricsmoremore = false
 doChordBars = false
@@ -41,6 +41,7 @@ doOwn = false
 	- put in the chords (real book).
 	- put in the tune (real book).
 	- added youtube performances (the real book refers to Charlie Parker - "April In Paris" and Thelonious Monk - "Monk").
+	- put in the lyrics from Wikifonia/Vernon Duke, E. Y. Harburg - April In Paris.mxl.
 	TODO:
 	- check the chords (real book).
 	- check the tune (real book).
@@ -49,7 +50,6 @@ doOwn = false
 	- the A7 alt chord of the book (bar 28) is written as A7#5#9.
 	- bar 29: the last note of the bar (and the first of bar 30) is written between c and d in the book; typed as c.
 	- the poet (E.Y. Harburg) is not printed in the real book; added from general knowledge.
-	- add the lyrics.
 {% endif %}
 {% if part == "ChordsReal" %}\chordmode {
 	\startChords
@@ -103,5 +103,13 @@ doOwn = false
 	% part "A"
 	\tuplet 3/2 { f4 f f } dis e~ | e1 | \tuplet 3/2 { bes'4 bes bes } gis a~ | a1 |
 	\tuplet 3/2 { d4 d d } b c~ | c2 e | c1~^\markup { \italic { Fine } } | c4 r r2 |
+}
+{% endif %}
+{% if part == "LyricsReal" %}\lyricmode {
+	A -- pril in Par -- is, __ Chest -- nuts in blos -- som, __ Hol -- i -- day tab -- les __
+	un -- der the trees. __ A -- pril in Par -- is, __ This is a feel -- ing __ no -- one can
+	ev -- er __ re -- prise. __ I nev -- er knew the charm of spring nev -- er met it face to
+	face. I nev -- er know my heart could sing, nev -- er missed a warm em -- brace, till A --
+	pril in Par -- is, __ Whom can I turn to, __ What have you done to __ my heart? __
 }
 {% endif %}

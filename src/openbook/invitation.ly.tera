@@ -25,7 +25,7 @@ remark = "Jaco Pastorius Big Band live in Japan (1982)"
 [versions.Real]
 doChords = true
 doVoice = true
-doLyrics = false
+doLyrics = true
 doLyricsmore = false
 doLyricsmoremore = false
 doChordBars = false
@@ -42,8 +42,8 @@ doOwn = false
 	- put in the chords (Hal Leonard Real Jazz Book).
 	- put in the tune (Hal Leonard Real Jazz Book).
 	- added youtube performances.
+	- put in the lyrics from Wikifonia/Bronislau Kaper - Invitation.mxl.
 	TODO:
-	- add the lyrics.
 	- check the chords (Hal Leonard Real Jazz Book).
 	- check the tune (Hal Leonard Real Jazz Book).
 	- hear the tune to check that it is right and adjust the tempo.
@@ -105,5 +105,17 @@ doOwn = false
 	d4. d8 \tuplet 3/2 { d4 c g' } | d2. c4 | bes'1~ | bes1 |
 	\tuplet 3/2 { f4 ges f' } c2~ | c4 bes8 des \tuplet 3/2 { c4 bes ees, } | f2 f~ | f2 \tuplet 3/2 { ees4 f ees } |
 	aes2 \tuplet 3/2 { ges4 aes ges } | des'4. ces8 \tuplet 3/2 { ces4 des ces } | d1~ | d1 |
+}
+{% endif %}
+{% if part == "LyricsReal" %}\lyricmode {
+	You and your smile __ hold a strange in -- vi -- ta -- tion. __ Some -- how it seems
+	we've shared our dreams, but where? __ Time af -- ter time __ in a room full of stran --
+	gers, __ out of the blue sud -- den -- ly you are there. __ Wher -- ev -- er I go __
+	you're the glow of temp -- ta -- tion, __ glan -- cing my way __ in the gray of the dawn. __
+	And al -- ways your eyes __ smile that strange in -- vi -- ta -- tion. __ Then you are
+	gone. __ Where, oh, where have you gone? __ How long must I stay __ in a world of il -- lu --
+	sion, __ be where you are, so near yet so far a -- part. __ Ho -- ping you'll say, __ with
+	a warm in -- vi -- ta -- tion, __ "'Where" have you been? Dar -- ling come in, come in --
+	to my "heart.'" __
 }
 {% endif %}

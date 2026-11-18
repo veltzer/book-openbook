@@ -26,8 +26,8 @@ remark = "Billy Strayhorn, the composer, sings and plays"
 [versions.Fake]
 doChords = true
 doVoice = true
-doLyrics = false
-doLyricsmore = false
+doLyrics = true
+doLyricsmore = true
 doLyricsmoremore = false
 doChordBars = false
 doGuitar = false
@@ -43,8 +43,8 @@ doOwn = false
 	- put in the chords (fake book).
 	- put in the tune (fake book).
 	- added youtube performances.
+	- put in the lyrics from Wikifonia/Billy Strayhorn - Lush Life.mxl.
 	TODO:
-	- add the lyrics.
 	- check the chords (fake book).
 	- check the tune (fake book).
 	- hear the tune to check that it is right and adjust the tempo.
@@ -135,5 +135,25 @@ doOwn = false
 	% part "C"
 	aes4. ges8 aes4 aes8 ges | f4 ees8 f~ f4. c8 | ees4. des8 ees ees4 des8 | des8 ces4 bes'8~ bes4. f8 |
 	aes4. ges8 aes4 aes8 ges | f4 f8 ees f4. aes,8 | ces4 c des d | ees8 e f2. |
+}
+{% endif %}
+{% if part == "LyricsFake" %}\lyricmode {
+	I used to vis -- it all the ver y gay pla -- ces __ those come -- what may pla -- ces, __
+	where one re -- lax -- es on the ax -- is of the wheel of life __ to get the feel of life, __
+	from jazz and cock -- tails. The girls I knew __ had sad and sul -- len gray fac -- es __
+	with dis -- tin -- que tra -- ces __ that used to be there, you could see where they'd
+	been washed a -- way __ by too man -- y thru the day twelve "o'" -- clock tales Then you
+	came a -- long with your sir -- en song __ to tempt me to mad -- ness __ I thought for a --
+	while that your poig -- nant smile was tinged with the sad -- ness of a great love for me. __
+	Ah! yes, I was wrong, a gain I was wrong. __ Life is lone -- ly a -- gain and onl -- ly
+	ladst year ev -- "'ry" -- thing seemed so sure. Now life is aw -- ful a -- gain, a trough --
+	ful of hearts could on -- ly be a bore. A week in Par -- is will ease the blue of "it;"
+	all I care is to smile in spite __ of it. I'll for -- get you I will while __ yet you are
+	still burn -- ing in -- side my brain. Ro -- mance is mush, sti -- fling those who
+}
+{% endif %}
+{% if part == "LyricsmoreFake" %}\lyricmode {
+	strive. __ I'll live a lush life in some small dive, __ and there __ I'll be, while I rot
+	with __ the rest of those whose lives are lone -- ly too.
 }
 {% endif %}

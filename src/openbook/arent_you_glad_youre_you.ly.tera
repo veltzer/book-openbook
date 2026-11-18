@@ -26,7 +26,7 @@ remark = "Gerry Mulligan at The Haig, Los Angeles, 1953"
 [versions.Fake]
 doChords = true
 doVoice = true
-doLyrics = false
+doLyrics = true
 doLyricsmore = false
 doLyricsmoremore = false
 doChordBars = false
@@ -43,8 +43,8 @@ doOwn = false
 	- put in the chords (fake book).
 	- put in the tune (fake book).
 	- added youtube performances.
+	- put in the lyrics from Wikifonia/Jimmy Van Heusen, Johnny Burke - Aren't You Glad You're You? .mxl.
 	TODO:
-	- add the lyrics.
 	- check the chords (fake book).
 	- check the tune (fake book).
 	- hear the tune to check that it is right and adjust the tempo.
@@ -119,5 +119,15 @@ doOwn = false
 			f2. r4 |
 		}
 	}
+}
+{% endif %}
+{% if part == "LyricsFake" %}\lyricmode {
+	Ev -- ry time you're near a rose, aren't you glad you have a nose? And if the dawn is
+	fresh with dew, aren't you glad you're you? When a mead -- ow -- lark ap -- pears, aren't
+	you glad you've got two ears? And if your heart is sing -- ing too, aren't you glad you're
+	you? you can see a sum -- mer sky, or touch a friend -- ly hand, or taste an ap -- ple
+	pie. Par -- don the gram -- mar but ain't life grand? __ And when you wake up each morn,
+	aren't you glad that you were born? Think what you've got the whole day through. Aren't
+	you glad you're you?
 }
 {% endif %}

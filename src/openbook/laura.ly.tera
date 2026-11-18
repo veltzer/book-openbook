@@ -14,7 +14,7 @@ structure = "ABAC"
 [versions.Laurent]
 doChords = true
 doVoice = true
-doLyrics = false
+doLyrics = true
 doLyricsmore = false
 doLyricsmoremore = false
 doChordBars = false
@@ -27,11 +27,11 @@ doOwn = false
 {% endif %}
 {% if part == "Doc" %}	DONE:
 	- converted the Laurent Martelli version from staging/openbook/laurent/laura.ly (its to-coda/coda layout is written as a second ending).
+	- put in the lyrics from Wikifonia/David Raksin, Johnny Mercer - Laura.mxl.
 	TODO:
 	- check the tune and chords against a real book (hlrjb:234).
 	- the source has no tempo marking, the tempo is a guess.
 	- the last chord in the source is c:maj.11+^5.9, written here as c:maj9.11+.
-	- add the lyrics.
 	- add youtube performances.
 {% endif %}
 {% if part == "ChordsLaurent" %}\chordmode {
@@ -116,5 +116,13 @@ doOwn = false
 			c1 | c | c | c\fermata |
 		}
 	}
+}
+{% endif %}
+{% if part == "LyricsLaurent" %}\lyricmode {
+	Lau -- ra __ is the face __ in the mist -- y light, __ foot -- steps __ that __ you hear
+	down the hall. __ The laugh __ that floats on a sum -- mer __ night, __ that you __ can
+	nev -- er quite __ re -- call. __ And __ you see Lau -- ra __ on the __ train that __ is
+	pass -- ing thru, __ those __ eyes, how fa -- mil -- iar they seem. __ She __ gave __ your
+	ver -- y first kiss to __ you, __ that was Lau -- ra __ but __ she's on -- ly a __ dream.
 }
 {% endif %}

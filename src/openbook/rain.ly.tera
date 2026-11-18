@@ -5,6 +5,7 @@ default_version = "Fake"
 title = "Rain"
 style = "Swing"
 composer = "Peter DeRose"
+poet = "Eugene Ford"
 piece = "Slowly"
 copyright = "1934 by Shapiro, Bernstein & Co., Inc."
 copyrightextra = "Copyright Renewed"
@@ -25,7 +26,7 @@ remark = "Vaughn Monroe"
 [versions.Fake]
 doChords = true
 doVoice = true
-doLyrics = false
+doLyrics = true
 doLyricsmore = false
 doLyricsmoremore = false
 doChordBars = false
@@ -42,8 +43,8 @@ doOwn = false
 	- put in the chords (fake book).
 	- put in the tune (fake book).
 	- added youtube performances.
+	- put in the lyrics from Wikifonia/Eugene Ford - Rain.mxl.
 	TODO:
-	- add the lyrics.
 	- check the chords (fake book).
 	- check the tune (fake book).
 	- hear the tune to check that it is right and adjust the tempo.
@@ -120,5 +121,13 @@ doOwn = false
 			c1~ | c2. r4 |
 		}
 	}
+}
+{% endif %}
+{% if part == "LyricsFake" %}\lyricmode {
+	Rain, __ Let us cud -- dle while the rain __ pit -- ter -- pat -- ters on the pane and
+	we're a -- lone, __ A __ chance to while a -- way a dream -- y af -- ter -- noon, __ A
+	love -- ly peace -- ful af -- ter -- noon, __ No one can see __ "us;" __ Rain, __ It's __
+	so coz -- y in the rain, __ There's no rea -- son to com -- plain if she's with you. __ To
+	hold her hand and the it's ten to one you'll __ kiss her in the Rain, Rain, Rain. __ Rain. __
 }
 {% endif %}

@@ -26,8 +26,8 @@ remark = "Chet Baker"
 [versions.Real]
 doChords = true
 doVoice = true
-doLyrics = false
-doLyricsmore = false
+doLyrics = true
+doLyricsmore = true
 doLyricsmoremore = false
 doChordBars = false
 doGuitar = false
@@ -43,8 +43,8 @@ doOwn = false
 	- put in the chords (557 jazz standards book).
 	- put in the tune (557 jazz standards book).
 	- added youtube performances.
+	- put in the lyrics from Wikifonia/Jule Styne, Sammy Cahn - I Fall In Love Too Easily.mxl.
 	TODO:
-	- add the lyrics.
 	- check the chords (557 jazz standards book).
 	- the book has alternate chords in parenthesis in bars 8 and 13-15
 		(Dm7b5 G7, Fm7 Abm7, G7 C7, F9 Bb13) which are not put in.
@@ -97,5 +97,17 @@ doOwn = false
 			ees2. r4 |
 		}
 	}
+}
+{% endif %}
+{% if part == "LyricsReal" %}\lyricmode {
+	There are those who can leave love or take it. __ Love to them is just what they make it. __
+	I wish that I __ were the same.. But love is my fav -- "'rite" game. I fall __ in love too
+	eas -- i -- ly, I __ fall in love too __ fast, I fall in love too __ ter -- ri -- bly hard __
+	for love to
+}
+{% endif %}
+{% if part == "LyricsmoreReal" %}\lyricmode {
+	ev -- er last. My heart should be well schooled, __ "'cause" I've been fooled in the
+	past, __ and still I fall in love too __ eas -- i -- ly __ I fall in love too
 }
 {% endif %}

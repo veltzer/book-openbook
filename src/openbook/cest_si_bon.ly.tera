@@ -5,6 +5,7 @@ default_version = "Wikifonia"
 title = "C\u00e8st si bon"
 style = "Jazz"
 composer = "Henri Betti"
+poet = "Andre Hornez (French), Jerry Seelen (English)"
 piece = "Standard"
 typesetter = "OpenBook contributors (MusicXML import)"
 completion = "3"
@@ -16,8 +17,8 @@ copyrightextra = "Archived MusicXML notice retained; underlying music is not rel
 [versions.Wikifonia]
 doChords = true
 doVoice = true
-doLyrics = false
-doLyricsmore = false
+doLyrics = true
+doLyricsmore = true
 doLyricsmoremore = false
 doChordBars = false
 doGuitar = false
@@ -37,6 +38,7 @@ doOwn = false
 	- retained written melody, chord changes, pickups, repeats and numbered endings; lyrics omitted.
 	- imported explicit 7alt symbols using the book's altered-dominant notation where present.
 	- tempo is an editorial practice suggestion.
+	- put in the lyrics from Wikifonia/Henri Betti, Andre Hornez (French), Jerry Seelen (English) - C'est Si Bon.mxl.
 	TODO:
 	- proofread the complete melody, harmony and form against the referenced PDF and check by ear.
 	- verify source attribution, copyright notice and reuse terms against the scan; only the archived MusicXML notice is retained.
@@ -157,5 +159,25 @@ doOwn = false
 	g'2 ) r2 |
 	R1 _ "Form: AABC" |
 	\endBar
+}
+{% endif %}
+{% if part == "LyricsWikifonia" %}\lyricmode {
+	"'C'EST" SI "BON,'" Lov -- ers say that in France, When they thrill to ro -- mance, It
+	means __ that it's so __ good. C'EST SI __ BON, So I __ say it to __ you Like the French
+	peo -- ple __ do, Be -- cause it's oh, so good. "Ev'" -- ry __ word, "ev'" -- ry sigh,
+	"ev'" -- ry kiss, dear, Leads to on -- ly one thought and it's this, dear. It's so good,
+	Noth -- ing __ else can re -- place, Just your __ slight -- est em -- brace. And if __ you
+	on -- ly would, be my own, __ For the rest __ of my days. I will whis -- per __ this
+	phrase, My __ dar -- ling, "'C'EST" __ SI "BON'" "'C'EST" SI "BON,'" I __
+}
+{% endif %}
+{% if part == "LyricsmoreWikifonia" %}\lyricmode {
+	"'C'EST" SI "BON,'" de par -- tir n'im -- porte ou, Bras des -- sus bras des -- sous En
+	chan -- tant des chan -- sons. C'EST SI __ BON, De se __ "dir'" des mots __ doux, Des pe --
+	tits riens du __ tout Mais qui en di -- sent long. En vo -- yant no -- tre mi -- ne ra --
+	vi -- e, Les pas -- sants dans la rue, nous en -- vient. C'EST SI BON, De guet -- ter __
+	dans ses yeux, __ Un es -- spoir __ mer -- viel -- leux, __ Qui don -- ne __ le fris --
+	son. C'EST SI BON, Ces __ pe -- tits sen -- sa -- tions. Ça vaut mieux qu'un mil -- lion.
+	"Tell'" ment, __ "tell'" -- ment c'est __ bon. C'EST SI
 }
 {% endif %}

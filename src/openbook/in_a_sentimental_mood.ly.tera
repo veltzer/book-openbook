@@ -26,8 +26,8 @@ remark = "Duke Ellington"
 [versions.Real]
 doChords = true
 doVoice = true
-doLyrics = false
-doLyricsmore = false
+doLyrics = true
+doLyricsmore = true
 doLyricsmoremore = false
 doChordBars = false
 doGuitar = false
@@ -43,8 +43,8 @@ doOwn = false
 	- put in the chords (Hal Leonard Real Jazz Book).
 	- put in the tune (Hal Leonard Real Jazz Book).
 	- added youtube performances.
+	- put in the lyrics from Wikifonia/Duke Ellington - In a Sentimental Mood.mxl.
 	TODO:
-	- add the lyrics.
 	- check the chords (Hal Leonard Real Jazz Book).
 	- check the tune (Hal Leonard Real Jazz Book).
 	- hear the tune to check that it is right and adjust the tempo.
@@ -105,5 +105,19 @@ doOwn = false
 	% part "A"
 	g1~ | g4 f8 g f e d c | a4 d8 a~ a2~ | a4 a8 c d aes g f |
 	d2~ d8 f a c | e2. d4 | bes2 e,2 | f2. r4 |
+}
+{% endif %}
+{% if part == "LyricsReal" %}\lyricmode {
+	In a sen -- ti -- men -- tal mood __ I can see the stars come thru my room __ while your
+	lov -- ing at -- ti -- tude __ is, like a flame that lights the gloom. On the wings of ev --
+	"'ry" Rose __ pet -- als seem to fall. It's all like a __ dream to call you mine. My
+	heart's __ a light -- er thing since you made this night a thing di -- vine In a sen -- ti --
+	men -- tal mood __ I'm with -- in a world so heav -- en -- ly __ for I nev -- er dreamt
+	that you'd __ be lov -- ing sen -- ti -- men -- tal me.
+}
+{% endif %}
+{% if part == "LyricsmoreReal" %}\lyricmode {
+	kiss __ drifts a mel -- o -- dy so __ strange and sweet. __ In this sen -- ti -- men --
+	tal __ bliss __ you make my par -- a -- dise __ com -- plete.
 }
 {% endif %}

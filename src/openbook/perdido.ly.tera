@@ -5,6 +5,7 @@ default_version = "Laurent"
 title = "Perdido"
 style = "Jazz"
 composer = "Juan Tizol"
+poet = "Juan Tizol"
 copyright = "1942 Tempo Music, Inc. and Music Sales Corporation (ASCAP)"
 typesetter = "Laurent Martelli"
 completion = "3"
@@ -14,8 +15,8 @@ structure = "AABA"
 [versions.Laurent]
 doChords = true
 doVoice = true
-doLyrics = false
-doLyricsmore = false
+doLyrics = true
+doLyricsmore = true
 doLyricsmoremore = false
 doChordBars = false
 doGuitar = false
@@ -27,11 +28,11 @@ doOwn = false
 {% endif %}
 {% if part == "Doc" %}	DONE:
 	- converted the Laurent Martelli version from staging/openbook/laurent/perdido.ly.
+	- put in the lyrics from Wikifonia/Juan Tizol - Perdido.mxl.
 	TODO:
 	- check the tune and chords against a real book.
 	- the source stops after the bridge; the last A (a repeat of the first A) is not written out.
 	- the tempo is the midi tempo of the source; check it.
-	- add the lyrics.
 	- add youtube performances.
 {% endif %}
 {% if part == "ChordsLaurent" %}\chordmode {
@@ -88,5 +89,19 @@ doOwn = false
 	% part "B"
 	d1 | \tuplet 3/2 { a4 b c } d d8 e~ | e1 | b8 a~ a2. |
 	c1 | \tuplet 3/2 { g4 a bes } c c8 d~ | d1 | a8 g~ g2 r8 c,8 |
+}
+{% endif %}
+{% if part == "LyricsLaurent" %}\lyricmode {
+	Per -- di -- do, __ I look for my heart, it's per -- di -- do, __ I lost it way down in
+	Tor -- ri -- do __ while chanc -- ing a dance __ fi -- es -- ta __ Bo -- le -- ro, __ She
+	glanced as she danced a Bo -- le -- ro, __ I said, tak -- ing off my som -- bre -- ro, __
+	"'Let's"
+}
+{% endif %}
+{% if part == "LyricsmoreLaurent" %}\lyricmode {
+	meet for a __ sweet __ si -- es -- "ta.'" __ High was the sun when __ we first __ came
+	"close;" __ Low was the moon when __ we said __ "'A" -- "dios'," __ Per -- di -- do __
+	Since __ then has my __ heart been per -- di -- do, __ I know __ I must __ go to Tor -- ri --
+	do, __ That yearn -- ing to __ lose __
 }
 {% endif %}

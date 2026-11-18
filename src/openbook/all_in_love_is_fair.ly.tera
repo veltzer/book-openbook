@@ -5,6 +5,7 @@ default_version = "Real"
 title = "All In Love Is Fair"
 style = "Jazz"
 composer = "Stevie Wonder"
+poet = "Stevie Wonder"
 piece = "Ballad"
 typesetter = "Mark Veltzer <mark.veltzer@gmail.com>"
 completion = "5"
@@ -23,8 +24,8 @@ remark = "Barbra Streisand"
 [versions.Real]
 doChords = true
 doVoice = true
-doLyrics = false
-doLyricsmore = false
+doLyrics = true
+doLyricsmore = true
 doLyricsmoremore = false
 doChordBars = false
 doGuitar = false
@@ -41,6 +42,7 @@ doOwn = false
 	- put in the tune (real book).
 	- the real book names the recording: Stevie Wonder - Innervisions.
 	- added youtube performances.
+	- put in the lyrics from Wikifonia/Stevie Wonder - All in Love is Fair (Transcribed).mxl.
 	TODO:
 	- check the chords (real book).
 	- check the tune (real book).
@@ -48,7 +50,6 @@ doOwn = false
 	- the A7 alt chord of the book (bar 20) is written as A7#5#9.
 	- the real book shows a scoop (glissando from below) into the first A of bar 22, it is not notated.
 	- bar 20: the ledger line note over the A7 alt chord is drawn between A and B, it was typed as A.
-	- add the lyrics.
 {% endif %}
 {% if part == "ChordsReal" %}\chordmode {
 	\startChords
@@ -125,5 +126,22 @@ doOwn = false
 	f'2.~ | f2.~ |
 	\time 4/4
 	f2 r2 | r1\fermata |
+}
+{% endif %}
+{% if part == "LyricsReal" %}\lyricmode {
+	All is fair in "love;" love's a cra -- zy "game;" two peo -- ple vow to stay in love as
+	one they say. But all is changed with "time;" the fu -- ture none can see. The road you
+	leave be -- hi -- n -- "d;" a -- head lies mys -- te -- r -- y. But all is far in "love;"
+	I had to go a -- way. __ A wri -- ter takes his pen to write the words a -- gain all in
+	love is fair. All of fate's a "chance;" it's ei -- ther good or ba -- d. I tossed my coin
+	to sa -- y in love with me __
+}
+{% endif %}
+{% if part == "LyricsmoreReal" %}\lyricmode {
+	you'd stay. But all in war's so co -- "ld;" you ei -- ther win or lo -- s -- e. When all
+	is put a -- wa -- y the los -- ing side I'll pl -- a -- y. But all is fair in "love;" I
+	should have ne -- ver left your side. A wri -- ter takes his pen to write the words a --
+	gain. All in love __ is fair. A wri -- ter takes his pen to write the words a -- ga -- in.
+	All in love is fair.
 }
 {% endif %}

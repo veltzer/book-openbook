@@ -5,6 +5,7 @@ default_version = "Laurent"
 title = "Agua De Beber"
 style = "Jazz"
 composer = "Antonio Carlos Jobim"
+poet = "Vinicius de Moraes"
 piece = "Bossa Nova"
 typesetter = "Laurent Martelli"
 completion = "3"
@@ -13,8 +14,8 @@ uuid = "9b637416-d49f-11f1-8000-046874d194b7"
 [versions.Laurent]
 doChords = true
 doVoice = true
-doLyrics = false
-doLyricsmore = false
+doLyrics = true
+doLyricsmore = true
 doLyricsmoremore = false
 doChordBars = false
 doGuitar = false
@@ -26,12 +27,12 @@ doOwn = false
 {% endif %}
 {% if part == "Doc" %}	DONE:
 	- converted the Laurent Martelli version from staging/openbook/laurent/agua_de_beber.ly.
+	- put in the lyrics from Wikifonia/Antonio Carlos Jobim, Vinicius de Moraes - Agua De Beber.mxl.
 	TODO:
 	- the source was marked "uncomplete": the melody stops after 22 bars and only the first 6 bars have chords, and those chords do not fit the melody well.
 	- complete the tune and the chords from a real book.
 	- bar 20 was only 7/8 long in the source (c4 c8 c2, after a tie from e flat); it is guessed here as e flat 8, c 4, c 8 tied to c 2.
 	- check the tune and chords against a real book.
-	- add the lyrics.
 	- add youtube performances.
 {% endif %}
 {% if part == "ChordsLaurent" %}\chordmode {
@@ -60,5 +61,19 @@ doOwn = false
 	r2 r4 r8 ees8 ~ | ees ees4 ees8 ~ ees ees ees4 | d4. a8 ~ a c4 ees8 ~ | ees d4 c8 ~ c2 |
 	c4 c8 ees8 ~ ees g4 f8 ~ | f1 | g4 f8 ees8 ~ ees c4 ees8 ~ | ees8 c4 c8 ~ c2 |
 	c4 c8 ees8 ~ ees g4 f8 ~ | f1 | f4 f8 r8 r2 |
+}
+{% endif %}
+{% if part == "LyricsLaurent" %}\lyricmode {
+	Your love __ is rain, __ my heart __ the flow -- er. __ I need __ your love __ or __ I
+	will __ die. My __ ver -- y __ life is __ in your __ pow -- er. __ Will __ I __ with er __
+	and fade or bloom __ to the __ sky? Ag __ ua De Be __ ber, give __ the flow er __ wa --
+	ter __ to drink. __ Ag ua De __ Be ber, __ give the
+}
+{% endif %}
+{% if part == "LyricsmoreLaurent" %}\lyricmode {
+	on dis -- tant de -- serts. The __ rain can __ fall __ up on __ the sea. __ The __ rain
+	can __ fall up __ on the __ flow -- er. __ Since the __ rain has __ to __ fall __ let it __
+	fall on me. Ag __ ua De __ Be ber, __ Ag ua De __ Be ber __ ca ma ra. __ Ag ua __ De Be __
+	ber, Ag ua __ De Be __ ber
 }
 {% endif %}

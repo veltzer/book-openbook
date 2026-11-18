@@ -26,8 +26,8 @@ remark = "Bill Evans Trio"
 [versions.Real]
 doChords = true
 doVoice = true
-doLyrics = false
-doLyricsmore = false
+doLyrics = true
+doLyricsmore = true
 doLyricsmoremore = false
 doChordBars = false
 doGuitar = false
@@ -43,8 +43,8 @@ doOwn = false
 	- put in the chords (557 jazz standards book).
 	- put in the tune (557 jazz standards book).
 	- added youtube performances.
+	- put in the lyrics from Wikifonia/Leigh Harline, Ned Washington - When You Wish Upon A Star.mxl.1.
 	TODO:
-	- add the lyrics.
 	- check the chords (557 jazz standards book).
 	- the book has alternate chords in parenthesis (Cmaj7 C#dim, G7 B+7b9, Em7 A7, A7)
 		which are not put in.
@@ -111,5 +111,17 @@ doOwn = false
 	% part "A"
 	g,4 g' f e | cis d a'2 | g,4 b' a g | fis g c2 |
 	d4 c b a | g f e d | a'2 b,2 | c2. r4 |
+}
+{% endif %}
+{% if part == "LyricsReal" %}\lyricmode {
+	When you wish up -- on a star, makes no dif -- f'rence who you are, an -- y thing your
+	heart de -- sires will come to you. dream -- ers do Fate is kind, She brings to those __
+	who love, the sweet ful -- fill -- ment of their se -- cret long -- ing. Like a bolt out
+	of the blue, Fate steps in and sees you thru, when you wish up -- pon a star your dream
+}
+{% endif %}
+{% if part == "LyricsmoreReal" %}\lyricmode {
+	If your heart is in your dream no re -- quest is too ex -- treme When you wish u -- pon a
+	star as
 }
 {% endif %}

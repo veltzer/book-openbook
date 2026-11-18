@@ -5,6 +5,7 @@ default_version = "Real"
 title = "A Child Is Born"
 style = "Jazz"
 composer = "Thad Jones"
+poet = "Alex Wilder"
 piece = "Ballad"
 typesetter = "Mark Veltzer <mark.veltzer@gmail.com>"
 completion = "3"
@@ -23,8 +24,8 @@ remark = "Bill Evans"
 [versions.Real]
 doChords = true
 doVoice = true
-doLyrics = false
-doLyricsmore = false
+doLyrics = true
+doLyricsmore = true
 doLyricsmoremore = false
 doChordBars = false
 doGuitar = false
@@ -40,6 +41,7 @@ doOwn = false
 	- put in the chords (real book).
 	- put in the tune (real book).
 	- added youtube performances (the real book refers to Thad Jones - Mel Lewis - "Jones/Lewis").
+	- put in the lyrics from Wikifonia/Thad Jones 1969, Alex Wilder - A Child is Born.mxl.
 	TODO:
 	- check the chords (real book).
 	- check the tune (real book).
@@ -48,7 +50,6 @@ doOwn = false
 	- bar 8: the book writes a lower voice under the held c (typed here as f eb f). Check these notes.
 	- bar 16: the book writes a d f dyad tied to an eighth, followed by an eighth that is hard to read (typed here as c). Check.
 	- bar 20 of the B part (Ab9 - C-7b5): the eighth after the rest is hard to read (typed here as g). Check.
-	- add the lyrics.
 	REMARKS:
 	- the book writes "D7 alt." which is written here as D7#5#9.
 {% endif %}
@@ -104,5 +105,18 @@ doOwn = false
 
 	% part "Coda"
 	c'2. | a2. | c2.\fermata | c2.\fermata | d2.\fermata |
+}
+{% endif %}
+{% if part == "LyricsReal" %}\lyricmode {
+	Now out of the night soft as the dawn in to the light this Child in no cent Child soft as
+	a fawn this child is born __ one small heart one __ pair of eyes one work of art here in
+	my arms __ here He lies trust ing and warm blessed in this morn __ a Child is born __ Now
+	out of the night
+}
+{% endif %}
+{% if part == "LyricsmoreReal" %}\lyricmode {
+	soft as the dawn in to the light this Child in no cent Child soft as a fawn this child is
+	born __ one small heart one pair of eyes one work __ of art here in my arms __ here He
+	lies trust ing and warm blessed in this morn __ a Child is born __
 }
 {% endif %}

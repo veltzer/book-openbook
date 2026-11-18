@@ -26,7 +26,7 @@ remark = "Bill Evans Trio live at the Village Vanguard (1961)"
 [versions.Real]
 doChords = true
 doVoice = true
-doLyrics = false
+doLyrics = true
 doLyricsmore = false
 doLyricsmoremore = false
 doChordBars = false
@@ -43,8 +43,8 @@ doOwn = false
 	- put in the chords (real book).
 	- put in the tune (real book).
 	- added youtube performances.
+	- put in the lyrics from Wikifonia/George Gershwin, Ira Gershwin, DuBose and Dorothy Heyward - My Man's Gone Now.mxl.
 	TODO:
-	- add the lyrics.
 	- check the chords (real book).
 	- check the tune (real book).
 	- hear the tune to check that it is right and adjust the tempo.
@@ -121,5 +121,18 @@ doOwn = false
 	a8 a4. r4 | a8 g a4 g | f4 d2 | a'8 g a g f d~ |
 	d2. | b'!8 a b4. a8 | b!4 b2 | b!4. a8 b a |
 	c8 b! a2 | b!8 a b4. a8 | b!4 b bes | a8 g a g f d~ | d2. |
+}
+{% endif %}
+{% if part == "LyricsReal" %}\lyricmode {
+	My man's gone now, ain't no use a -- lis -- "tenin'" for his tired __ foot -- steps climb --
+	ing up __ de stairs. __ Ah, __ Ah __ Ole Man Sor -- row's come to keep me com -- p'ny,
+	Whis -- per -- "in'" be -- side me when I say __ my prayers. __ Ah, __ Ah, __ "Ain'" dat I
+	"min'" work -- "in'" __ Work "an'" me is trav -- el -- ers Jour -- ney -- "in'" to ged --
+	der to de prom __ ise land. __ But Ole Man Sor -- row's march -- "in'" all de way wid me,
+	Tell -- "in'" me I'm ole now. Since I lose __ my man. Since she lose __ her man. Since I
+	lose __ my man. Ah, __ Ah, __ Ole Man Sow -- row's sit -- "tin'" by de fire -- place, Ly --
+	in all night long. __ By __ me in de __ bed. __ Tel -- "lin'" me de same thing morn --
+	"in'," noon "an'" "eb'" -- "nin'," That I'm all a -- lone now __ Since my man __ is dead.
+	Ah, __ Since __
 }
 {% endif %}

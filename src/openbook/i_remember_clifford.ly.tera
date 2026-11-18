@@ -5,6 +5,7 @@ default_version = "Laurent"
 title = "I Remember Clifford"
 style = "Jazz"
 composer = "Benny Golson"
+poet = "Benny Golson"
 piece = "Med Swing"
 typesetter = "Laurent Martelli"
 completion = "3"
@@ -15,8 +16,8 @@ structureremark = "6 bar intro, the first A is repeated with two 4 bar endings"
 [versions.Laurent]
 doChords = true
 doVoice = true
-doLyrics = false
-doLyricsmore = false
+doLyrics = true
+doLyricsmore = true
 doLyricsmoremore = false
 doChordBars = false
 doGuitar = false
@@ -41,11 +42,11 @@ doOwn = false
 {% if part == "Doc" %}	DONE:
 	- converted the Laurent Martelli version from staging/openbook/laurent/i_remember_clifford.ly.
 	- converted the old mako version from staging/openbook/i_remember_clifford.mako.
+	- put in the lyrics from Wikifonia/Benny Golson - I remember Clifford.mxl.
 	TODO:
 	- check the tune and chords against a real book.
 	- the tempo is a guess from "Med Swing".
 	- add youtube performances.
-	- add the lyrics.
 	REMARKS:
 	- the Laurent Martelli source writes the melody in C and transposes it to
 		Eb when engraving (the chords are in Eb), so the melody here is that
@@ -152,5 +153,17 @@ doOwn = false
 	% part "A"
 	e2. d8 b ) | c2 r8 d ( e f | g4. g8 gis f b gis ) | a2 r8 e ( a b ) |
 	c2 r8 d, ( g a ) | bes2 r8 a, ( c d | e a, c d ees4 b ) | c1 |
+}
+{% endif %}
+{% if part == "LyricsLaurent" %}\lyricmode {
+	I __ know __ he'll ne -- ver be __ for -- got -- en He __ was __ a __ king __ un --
+	crown'd I know __ I'll al -- ways __ re -- mem -- ber the __ warmth of __ his sound __ lin --
+	ger -- ing long, __ I'm sure __ he's
+}
+{% endif %}
+{% if part == "LyricsmoreLaurent" %}\lyricmode {
+	still __ a -- round For __ those who __ heard they __ re -- peat __ him __ yet __ so __
+	those who hear won't __ for -- get __ the __ sound of __ his phrase __ ech -- oes __ a
+	time __ un -- count -- a -- ble __ by days __ The
 }
 {% endif %}

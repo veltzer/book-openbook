@@ -27,7 +27,7 @@ remark = "Henry Mancini and his orchestra (1961)"
 [versions.Real]
 doChords = true
 doVoice = true
-doLyrics = false
+doLyrics = true
 doLyricsmore = false
 doLyricsmoremore = false
 doChordBars = false
@@ -44,8 +44,8 @@ doOwn = false
 	- put in the chords (Hal Leonard Real Jazz Book).
 	- put in the tune (Hal Leonard Real Jazz Book).
 	- added youtube performances.
+	- put in the lyrics from Wikifonia/Henry Mancini, Johnny Mercer - Moon River.mxl.
 	TODO:
-	- add the lyrics.
 	- check the chords (Hal Leonard Real Jazz Book).
 	- check the tune (Hal Leonard Real Jazz Book).
 	- hear the tune to check that it is right and adjust the tempo.
@@ -126,5 +126,13 @@ doOwn = false
 			c2.~ | c2.~ | c2. |
 		}
 	}
+}
+{% endif %}
+{% if part == "LyricsReal" %}\lyricmode {
+	Moon Ri -- ver, wi -- der than a mile, I'm cros -- sing you in style some day. __ Oh,
+	dream ma -- ker, you heart brea -- ker, whe -- re -- ver you're go -- ing __ I'm go -- ing __
+	your way. Two drif -- ters off to see the world. There's such a lot of world to see. __
+	We're af -- ter the same rain -- bow's end __ wai -- ting "'round" the bend, __ my huc --
+	kle -- ber -- ry friend, Moon Ri -- ver __ and me. __
 }
 {% endif %}

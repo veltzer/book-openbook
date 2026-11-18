@@ -4,8 +4,8 @@ default_version = "Fake"
 [attributes]
 title = "God Bless' The Child"
 style = "Jazz"
-composer = "Arthur Herzog Jr., Billie Holiday"
-poet = "Arthur Herzog Jr., Billie Holiday"
+composer = "Arthur Herzog Jr, Billie Holiday"
+poet = "Arthur Herzog Jr, Billie Holiday"
 piece = "Slowly, with feeling"
 copyright = "1941 by Edward B. Marks Music Company"
 copyrightextra = "Copyright Renewed."
@@ -26,8 +26,8 @@ remark = "Sonny Rollins and Jim Hall from The Bridge (1962)"
 [versions.Fake]
 doChords = true
 doVoice = true
-doLyrics = false
-doLyricsmore = false
+doLyrics = true
+doLyricsmore = true
 doLyricsmoremore = false
 doChordBars = false
 doGuitar = false
@@ -43,8 +43,8 @@ doOwn = false
 	- put in the chords (fake book).
 	- put in the tune (fake book).
 	- added youtube performances.
+	- put in the lyrics from Wikifonia/Arthur Herzog Jr, Billie Holiday - God Bless' The Child.mxl.
 	TODO:
-	- add the lyrics.
 	- check the chords (fake book).
 	- check the tune (fake book).
 	- hear the tune to check that it is right and adjust the tempo.
@@ -113,5 +113,20 @@ doOwn = false
 	% part "A"
 	g4 g f ees8 f | g4 g f bes8 c | des4 des c bes8 c | des4 bes g2 | g8 g4 f8 c2 |
 	g'8 g4 f8 ces4. g'8 | bes8 bes4 g8 bes4 g | g8 bes bes2 bes,4 | c8 ees g2.~ | g2. r4 |
+}
+{% endif %}
+{% if part == "LyricsFake" %}\lyricmode {
+	Them that's got shall get, them that's not shall not lose, so the Bible said and it still
+	is "news:" Ma -- ma may have, Pa -- pa may have, but God "Bless'" the child that's got his
+	own! That's got his own. Yes the Mon -- ey, you got lots "o'" friends, __ crowd "in'"
+	round the door, when you're gone and spend -- in ends, __ they don't come no more. Rich re --
+	la -- tions give, crust of bread and such, you can help your -- self, but don't take too
+	much! Ma -- ma may have, Pa -- pa may have, but God "Bless'" the child that's got his own!
+	that's got his own. __
+}
+{% endif %}
+{% if part == "LyricsmoreFake" %}\lyricmode {
+	strong get more, while the weak ones fade, emp -- ty pock -- ets don't ev -- er make the
+	"grade;"
 }
 {% endif %}

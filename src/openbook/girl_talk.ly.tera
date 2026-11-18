@@ -5,6 +5,7 @@ default_version = "Laurent"
 title = "Girl Talk"
 style = "Jazz"
 composer = "Neal Hefti"
+poet = "Bobby Troup"
 typesetter = "Laurent Martelli"
 completion = "3"
 uuid = "bee31982-d49f-11f1-8000-046874d194b7"
@@ -13,8 +14,8 @@ structure = "AB"
 [versions.Laurent]
 doChords = true
 doVoice = true
-doLyrics = false
-doLyricsmore = false
+doLyrics = true
+doLyricsmore = true
 doLyricsmoremore = false
 doChordBars = false
 doGuitar = false
@@ -26,11 +27,11 @@ doOwn = false
 {% endif %}
 {% if part == "Doc" %}	DONE:
 	- converted the Laurent Martelli version from staging/openbook/laurent/girl_talk.ly.
+	- put in the lyrics from Wikifonia/Neal Hefti, Bobby Troup - Girl Talk.mxl.
 	TODO:
 	- check the tune and chords against a real book (hlrjb:136).
 	- the source spells the composer "Neil Hefti"; corrected to Neal Hefti.
 	- the source has no tempo; the tempo here is a guess.
-	- add the lyrics.
 	- add youtube performances.
 {% endif %}
 {% if part == "ChordsLaurent" %}\chordmode {
@@ -83,5 +84,19 @@ doOwn = false
 
 	% part "End"
 	ees1~ | ees2 r |
+}
+{% endif %}
+{% if part == "LyricsLaurent" %}\lyricmode {
+	They like to chat a -- bout the dress -- es they will wear to -- night, they chew the fat
+	a -- bout their tress -- es and their neigh -- bors flight. In con -- se -- quen -- tial
+	things that men don't real -- ly care to know be -- come es -- sen -- tial things that wo --
+	men find so "'ap" -- pro -- "po.'" but that's a dame, they're all the "same;" it's just a
+	"game;" they call __
+}
+{% endif %}
+{% if part == "LyricsmoreLaurent" %}\lyricmode {
+	"(We)" "(we)" "(we)" "(our)" "(our)" "(we're)" "(we)" "(we)" "(our)" "(we)" "'" "(you)"
+	"(It's" all been planned, so take my hand, please un -- der -- stand the sweet -- est girl
+	talk, talkds of "you.)"
 }
 {% endif %}

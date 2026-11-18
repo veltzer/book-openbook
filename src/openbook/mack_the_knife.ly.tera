@@ -24,8 +24,8 @@ remark = "Bobby Darin on the Ed Sullivan Show"
 [versions.My]
 doChords = true
 doVoice = true
-doLyrics = false
-doLyricsmore = false
+doLyrics = true
+doLyricsmore = true
 doLyricsmoremore = false
 doChordBars = false
 doGuitar = false
@@ -41,6 +41,7 @@ doOwn = false
 	- put in the chords (the usual jazz changes, in the B flat key of the Armstrong and Darin recordings).
 	- put in the tune (Weill's 1928 melody, after the ABC transcription by John Chambers, transposed from D to B flat and written in 4/4 with doubled note values).
 	- added youtube performances.
+	- put in the lyrics from Wikifonia/Kurt Weill, based on the original German lyrics by Bertolt Brecht (Die Moritat von Mackie Messer), Marc Blitzstein - Mack The Kn.mxl.
 	TODO:
 	- add the lyrics (the staged lyrics file staging/openbook/laurent/mack_the_knife_lyrics.ly had none of its own, they were in the missing include file).
 	- check the tune and chords against a real book.
@@ -92,5 +93,17 @@ doOwn = false
 			g1 |
 		}
 	}
+}
+{% endif %}
+{% if part == "LyricsMy" %}\lyricmode {
+	Oh, the shark has __ pret -- ty teeth, dear __ and he shows them __ pearl -- y white. __
+	Just a jack -- knife __ has Mac -- heath, dear __ and he keeps it __ out of sight. __ When
+	the shark
+}
+{% endif %}
+{% if part == "LyricsmoreMy" %}\lyricmode {
+	Mil -- ler __ dis -- ap -- peared, dear __ af -- ter draw -- ing __ out his "cash;" __
+	and Mac -- heath spends __ like a __ sail -- or. __ Did our __ boy do __ some -- thing __
+	rash? __ Su -- key __ Taw -- dry, __ Jen
 }
 {% endif %}

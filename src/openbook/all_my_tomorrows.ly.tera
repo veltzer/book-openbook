@@ -23,8 +23,8 @@ remark = "Shirley Horn"
 [versions.Real]
 doChords = true
 doVoice = true
-doLyrics = false
-doLyricsmore = false
+doLyrics = true
+doLyricsmore = true
 doLyricsmoremore = false
 doChordBars = false
 doGuitar = false
@@ -40,6 +40,7 @@ doOwn = false
 	- put in the chords (real book).
 	- put in the tune (real book).
 	- added youtube performances.
+	- put in the lyrics from Wikifonia/James Van Heusen - All My Tomorrows.mxl.
 	TODO:
 	- check the chords (real book).
 	- check the tune (real book).
@@ -48,7 +49,6 @@ doOwn = false
 	- the B7 alt chord of the book (bridge, bar 7) is written as B7#5#9.
 	- the first note of the second ending is drawn between D and E, it was typed as E like the other two times this phrase appears.
 	- bar 6 of the last A: the real book draws the last two notes as sixteenths which leaves the bar half a beat short, they were typed as eighths like bar 6 of the first A.
-	- add the lyrics.
 {% endif %}
 {% if part == "ChordsReal" %}\chordmode {
 	\startChords
@@ -122,5 +122,20 @@ doOwn = false
 
 	% part "End"
 	b'8 b b b a a4 b8 | c2. fis,4 | g1 |
+}
+{% endif %}
+{% if part == "LyricsReal" %}\lyricmode {
+	To -- day I may not have a thing at all, ex -- cept for just a dream or two. But I've got
+	lots of plans for to -- mor -- row, and all my to -- mor -- rows be -- long to you. Right
+	now it may not seem like spring at all, We're drift -- ing and the laughs are few. But
+	I've got rain -- bows planned for to -- mor -- row, and all my to -- mor -- rows be --
+	long to you. No one knows bet -- ter than I __ that luck keeps pass -- ing me by, that's
+	fate! But with you there at my side, __ I'll soon be turn -- ing the tide, __ just wait!
+	As long as I've got arms that cling at all, it's you that I'll be cling -- ing to. And
+}
+{% endif %}
+{% if part == "LyricsmoreReal" %}\lyricmode {
+	all the dreams I dream, beg, or bor -- row, on some bright to -- mor -- row they'll all
+	come true, and all my bright to -- mor -- rows be -- long to you. you.
 }
 {% endif %}

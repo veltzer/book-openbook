@@ -26,7 +26,7 @@ remark = "John Coltrane from Ballads (1962)"
 [versions.Real]
 doChords = true
 doVoice = true
-doLyrics = false
+doLyrics = true
 doLyricsmore = false
 doLyricsmoremore = false
 doChordBars = false
@@ -43,8 +43,8 @@ doOwn = false
 	- put in the chords (Hal Leonard Real Jazz Book).
 	- put in the tune (Hal Leonard Real Jazz Book).
 	- added youtube performances.
+	- put in the lyrics from Wikifonia/Don Raye, Gene DePaul - You Don't Know What Love Is.mxl.
 	TODO:
-	- add the lyrics.
 	- check the chords (Hal Leonard Real Jazz Book).
 	- check the tune (Hal Leonard Real Jazz Book).
 	- hear the tune to check that it is right and adjust the tempo.
@@ -125,5 +125,16 @@ doOwn = false
 			f8 f~ f2. |
 		}
 	}
+}
+{% endif %}
+{% if part == "LyricsReal" %}\lyricmode {
+	You Don't Know __ What Love Is, __ un til you've learned the mean -- ing __ of the blues.
+	Un -- til you've loved a love you've had to lose, You Don't Know __ What Love Is. __ You
+	don't know __ how lips hurt, __ un -- til you've kissed and had to __ pay the cost. Un --
+	til you've flipped your heart and you have lost, You Don't Know __ What Love Is. __ Do you
+	know __ how a lost heart fears __ the thought of rem -- i -- nisc -- ing? __ And how lips
+	that taste of tears __ lose their taste __ for kiss -- ing? __ You don't know __ how
+	hearts burn __ for love that can not live, yet __ nev -- er dies. Un -- til you've faced
+	each dawn with sleep -- less eyes, You Don't Know __ What Love Is. __ You Love Is. __
 }
 {% endif %}

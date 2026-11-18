@@ -5,6 +5,7 @@ default_version = "Anon"
 title = "Orange Colored Sky"
 style = "Jazz"
 composer = "Milton DeLugg, Willie Stein"
+poet = "Milton Delugg, Willie Stein"
 piece = "Easy"
 typesetter = "Anonymous <anonymous@zivlempel.org>"
 completion = "3"
@@ -14,8 +15,8 @@ structure = "AABA"
 [versions.Anon]
 doChords = true
 doVoice = true
-doLyrics = false
-doLyricsmore = false
+doLyrics = true
+doLyricsmore = true
 doLyricsmoremore = false
 doChordBars = false
 doGuitar = false
@@ -27,12 +28,12 @@ doOwn = false
 {% endif %}
 {% if part == "Doc" %}	DONE:
 	- converted the Anonymous <anonymous@zivlempel.org> version from staging/openbook/anon/OrangeColoredSky.ly.
+	- put in the lyrics from Wikifonia/Milton Delugg, Willie Stein - Orange Colored Sky.mxl.
 	TODO:
 	- check the tune and chords against a real book.
 	- add youtube performances.
 	- the X marks over the rests are drum hits.
 	- performance notes from the source: Intro: four bars from bar 5 (no drum hits), take the 1st ending. Last time: play the last line 3 times with a Dm7 / G7 turnaround.
-	- add the lyrics.
 {% endif %}
 {% if part == "ChordsAnon" %}\chordmode {
 	\startChords
@@ -98,5 +99,22 @@ doOwn = false
 	% part "A"
 	d8 e d e~ e2 | e8 fis g4 fis8 e~ e4 | d8 e d4 e d8 fis~ | fis1 |
 	g4 r^"X" g r^"X" | g8 e g4 e2 | g8 e c4 b a8 g~ | g1 |
+}
+{% endif %}
+{% if part == "LyricsAnon" %}\lyricmode {
+	I was walk -- in a -- long __ mind -- in my bus -- "'ness" __ when out of an or -- ange __
+	col -- ored sky Flash! Bam! Al -- a -- ka -- zam Won -- der -- ful __ you __ came by. I
+	was hum -- min a tune __ drink -- in in __ sun -- shine when out of __ an or -- ange col --
+	ored sky Flash! Bam! Al -- a -- ka -- zam __ I got a look __ at you. One look and I
+	yelled, "'Tim" -- ber, __ watch out for fly -- ing __ "glass,'" Cause the ceil -- ing fell __
+	in and the bot -- tom fell out, I went in -- to a __
+}
+{% endif %}
+{% if part == "LyricsmoreAnon" %}\lyricmode {
+	spin and I star -- ted to __ shout, "'I've" been hit, this __ is it, this is "it!'" I __
+	was walk -- "in'" a -- long __ mind -- "in'" my bus -- "'ness" when love __ came and hit
+	me in the __ eye, Flash! Bam! Al -- a -- ka -- zam Out of an or -- ange col -- ored sky.
+	Or ange col -- ored, -- pur -- ple striped __ pret ty green pol -- ka dot -- ted sky,
+	Flash! Bam! Al -- a -- ka -- zam __ and good -- bye.
 }
 {% endif %}

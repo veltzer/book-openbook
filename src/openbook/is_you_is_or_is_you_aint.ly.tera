@@ -26,7 +26,7 @@ remark = "Dinah Washington"
 [versions.Fake]
 doChords = true
 doVoice = true
-doLyrics = false
+doLyrics = true
 doLyricsmore = false
 doLyricsmoremore = false
 doChordBars = false
@@ -43,8 +43,8 @@ doOwn = false
 	- put in the chords (fake book).
 	- put in the tune (fake book).
 	- added youtube performances.
+	- put in the lyrics from Wikifonia/Billy Austin, Louis Jordan - Is You Is Or Is You Ain't My Baby?.mxl.1.
 	TODO:
-	- add the lyrics.
 	- check the chords (fake book).
 	- check the tune (fake book).
 	- hear the tune to check that it is right and adjust the tempo.
@@ -124,5 +124,16 @@ doOwn = false
 			r4 des,8 g c c4 aes8~ | aes1~ | aes2. r4 |
 		}
 	}
+}
+{% endif %}
+{% if part == "LyricsFake" %}\lyricmode {
+	I got a gal who's al -- ways late __ Ev -- ry time we have a date __ but I love her __
+	Yes, I love her __ I'm gon -- na walk up to her gate __ and see if I can get it straight, __
+	"'cause" I love her __ I'm gon -- na ask her __ Is you is, or is you ain't my ba -- by?
+	The way you're act -- ing late -- ly made me doubt __ You'se __ is still my ba -- by, ba --
+	by. Seems my flame in your heart done gone out __ A wo -- man is a crea -- ture that has
+	al -- ways __ been strange __ Just when you're sure of one you'll find she's gone and made
+	a change __ So is you is or is you ain't my __ ba -- by? May -- be ba -- by's found some --
+	bod -- y __ new Or is my ba -- by still my ba -- by __ true?
 }
 {% endif %}

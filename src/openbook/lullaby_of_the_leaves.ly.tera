@@ -26,7 +26,7 @@ remark = "Gerry Mulligan Quartet with Chet Baker"
 [versions.Fake]
 doChords = true
 doVoice = true
-doLyrics = false
+doLyrics = true
 doLyricsmore = false
 doLyricsmoremore = false
 doChordBars = false
@@ -43,8 +43,8 @@ doOwn = false
 	- put in the chords (fake book).
 	- put in the tune (fake book).
 	- added youtube performances.
+	- put in the lyrics from Wikifonia/Bernice Petkere, Joe Young - Lullaby Of The Leaves.mxl.
 	TODO:
-	- add the lyrics.
 	- check the chords (fake book).
 	- check the tune (fake book).
 	- hear the tune to check that it is right and adjust the tempo.
@@ -123,5 +123,16 @@ doOwn = false
 			c1~ | c1 |
 		}
 	}
+}
+{% endif %}
+{% if part == "LyricsFake" %}\lyricmode {
+	Cra -- dle me where south -- ern skies can watch me with a mil -- lion eyes, Oh sing me
+	to sleep, Lul -- la -- by Of The Leaves. __ Cov -- er me with hea -- ven's blue and let me
+	dream a dream or two, Oh sing me to sleep, Lul -- la -- by Of The Leaves. __ I'm breez --
+	ing a -- long, a -- long with the breeze, I'm hear -- ing a song, a song thru the trees,
+	ooh ooh ooh ooh ooh ooh The pine mel -- o -- dy car -- ess -- ing the shore, Fa -- mi --
+	lar to me, I've heard it be -- fore, ooh ooh ooh ooh. __ That's south -- land, don't I
+	feel it in my soul, and don't I know I've reached my goal, Oh sing me to sleep, Lul -- la --
+	by Of The Leaves. __
 }
 {% endif %}

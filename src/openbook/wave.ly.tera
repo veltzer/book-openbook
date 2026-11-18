@@ -27,8 +27,8 @@ remark = "Oscar Peterson"
 [versions.Real]
 doChords = true
 doVoice = true
-doLyrics = false
-doLyricsmore = false
+doLyrics = true
+doLyricsmore = true
 doLyricsmoremore = false
 doChordBars = false
 doGuitar = false
@@ -45,8 +45,8 @@ doOwn = false
 	- put in the chords (Hal Leonard Real Jazz Book).
 	- put in the tune (Hal Leonard Real Jazz Book).
 	- added youtube performances.
+	- put in the lyrics from Wikifonia/Antonio Carlos Jobim - Wave.mxl.
 	TODO:
-	- add the lyrics.
 	- check the chords (Hal Leonard Real Jazz Book).
 	- check the tune (Hal Leonard Real Jazz Book).
 	- hear the tune to check that it is right and adjust the tempo.
@@ -133,5 +133,22 @@ doOwn = false
 			r1 |
 		}
 	}
+}
+{% endif %}
+{% if part == "LyricsReal" %}\lyricmode {
+	So close your eyes, for that's a love -- ly way to be. __ A -- ware __ of things __ your
+	heart a -- lone __ was meant __ to see. __ The fun -- da -- men -- tal __ lone __ li --
+	ness __ goes __ when -- ev -- er two can dream a dream to -- geth -- er. __ You can't de --
+	ny, don't try to fight the ris -- ing sea. __ Don't fight __ the moon, __ the stars bove __
+	and __ don't __ fight __ me. __ The __ fun -- da -- men -- tal __ lone __ li -- ness __
+	goes when -- ev -- er two can dream a dream to -- geth -- er. __ When __ I saw you first
+	the time was half past three, __ when __ your eyes met mine it was e -- ter -- ni -- ty.
+	By __ now we know the wave is on its way to be. __ Just __ catch __ the __ wave, __ don't __
+	be a -- fraid __ of __ lov -- ing __ me. __ The __ fun -- da -- men -- tal __ lone __ li --
+	ness __ goes when -- ev -- er two can dream a dream to -- geth -- er. __ dream __
+}
+{% endif %}
+{% if part == "LyricsmoreReal" %}\lyricmode {
+	a dream to -- geth -- er dream a dream to -- geth -- er
 }
 {% endif %}

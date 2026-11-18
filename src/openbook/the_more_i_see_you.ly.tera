@@ -27,7 +27,7 @@ remark = "Hank Mobley from A Caddy for Daddy (1965)"
 [versions.Real]
 doChords = true
 doVoice = true
-doLyrics = false
+doLyrics = true
 doLyricsmore = false
 doLyricsmoremore = false
 doChordBars = false
@@ -44,8 +44,8 @@ doOwn = false
 	- put in the chords (Standards Real Book).
 	- put in the tune (Standards Real Book).
 	- added youtube performances.
+	- put in the lyrics from Wikifonia/Harry Warren, Mack Gordon - The More I See You.mxl.1.
 	TODO:
-	- add the lyrics.
 	- add the verse (Standards Real Book, page 309).
 	- add the alternate chords that the book gives in parentheses.
 	- bar 10: the book has Dbm7(add6), I put in Dbm7.
@@ -126,5 +126,13 @@ doOwn = false
 	g2 bes,~ | bes4 g' ees f | ees1 | r4 bes ees4. d8 |
 
 	}
+}
+{% endif %}
+{% if part == "LyricsReal" %}\lyricmode {
+	The more I see you, __ The more I want you __ some -- how this feel -- ing __ just grows
+	and grows, with "ev'" -- ry sigh I be -- come more mad a -- bout you, __ more lost with --
+	out you, __ and so it goes. Can you i -- mag -- ine __ how much I'll love you, __ the more
+	I see you __ as years go by __ I know the on -- ly one for me can on -- ly be you. __ My
+	arms wont free you __ my heart wont try. The more I
 }
 {% endif %}

@@ -5,6 +5,7 @@ default_version = "Wikifonia"
 title = "Estate"
 style = "Jazz"
 composer = "Bruno Martino"
+poet = "Bruno Righetti"
 piece = "Jazz"
 typesetter = "OpenBook contributors (MusicXML import)"
 completion = "3"
@@ -15,8 +16,8 @@ copyright = "All Rights Reserved"
 [versions.Wikifonia]
 doChords = true
 doVoice = true
-doLyrics = false
-doLyricsmore = false
+doLyrics = true
+doLyricsmore = true
 doLyricsmoremore = false
 doChordBars = false
 doGuitar = false
@@ -34,6 +35,7 @@ doOwn = false
 	- retained the original copyright notice where printed; the underlying music is not relicensed.
 	- retained written measures, pickups, repeats and endings; lyrics omitted.
 	- tempo is an editorial practice suggestion.
+	- put in the lyrics from Wikifonia/Bruno Martino, Bruno Righetti - Estate.mxl.1.
 	TODO:
 	- proofread the music against the referenced PDF and check by ear.
 	- verify the copyright notice against the scan; no readable per-tune notice was recovered, so the archived rights notice is retained where available.
@@ -159,5 +161,21 @@ doOwn = false
 	e''1 ~ |
 	e''2. r4 |
 	\endBar
+}
+{% endif %}
+{% if part == "LyricsWikifonia" %}\lyricmode {
+	E -- sta -- te, __ sei cal -- da co -- me ba -- cio che per -- du -- to, __ sei pie -- na
+	di __ a -- mo -- re che __ pas -- sa -- to, __ Che cuo -- re mio __ vor -- reb -- be can --
+	cel -- lare. __ O -- dio l'e -- sta -- te, __ il so -- le __ che ni gior -- no ci scal --
+	da -- va, __ Che splen -- di -- di tra -- mon -- ti di -- pin -- ge -- va. __ A -- des --
+	so bru -- cia so -- lo con fu -- ror. __ Tor -- ne -- ra alt -- ro __ ver -- no, __ Ca --
+	dran -- no mil -- le pe -- ta -- li __ di __ ro -- se, __ la ne -- ve co -- pri -- ra __
+	tut -- te __ le __ co -- se, __ E -- for -- se "po'" __ di pa -- ce tor __
+}
+{% endif %}
+{% if part == "LyricsmoreWikifonia" %}\lyricmode {
+	ne -- ra. __ O -- dio l'e -- sta -- te, __ che da -- to suo pro __ fu -- mo __ og -- ni
+	fio -- re, __ l'e -- sta -- te che __ cre -- a -- to __ nos -- tro mo -- re, __ per far --
+	mi poi mo -- ri -- re di do -- lor. __
 }
 {% endif %}

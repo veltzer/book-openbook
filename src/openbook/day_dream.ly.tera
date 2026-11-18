@@ -5,6 +5,7 @@ default_version = "Wikifonia"
 title = "Day Dream"
 style = "Jazz"
 composer = "Duke Ellington, Billy Strayhorn"
+poet = "John LaTouche"
 piece = "Jazz"
 typesetter = "OpenBook contributors (MusicXML import)"
 completion = "3"
@@ -15,7 +16,7 @@ copyright = "1941 (renewed 1969) EMI Robbins Catalog, Inc. Used by Permission of
 [versions.Wikifonia]
 doChords = true
 doVoice = true
-doLyrics = false
+doLyrics = true
 doLyricsmore = false
 doLyricsmoremore = false
 doChordBars = false
@@ -34,6 +35,7 @@ doOwn = false
 	- retained the original copyright notice where printed; the underlying music is not relicensed.
 	- retained written measures, pickups, repeats and endings; lyrics omitted.
 	- tempo is an editorial practice suggestion.
+	- put in the lyrics from Wikifonia/Duke Ellington & Billy Strayhorn, John LaTouche - Day Dream.mxl.
 	TODO:
 	- proofread the music against the referenced PDF and check by ear.
 {% endif %}
@@ -136,5 +138,15 @@ doOwn = false
 	c''1 ~ |
 	c''2. r4 |
 	\endBar
+}
+{% endif %}
+{% if part == "LyricsWikifonia" %}\lyricmode {
+	Fun -- ny the way that I feel now can't keep my feet on the ground, ev -- "'ry" -- thing
+	seems un -- real now when you're not a -- round. Day Dream __ why do you haunt me so? __
+	Deep in the ros -- y glow, the face of my love you __ show. Day __ Dream __ I walk a --
+	long on __ air __ build -- ing a cas -- tle there, for me and __ my love __ to Share. __
+	Don't know the time Lord -- y, I'm in a daze. Sun in the sky while I moon a -- round feel --
+	ing haz -- y. Day Dream __ don't break __ my rev -- er -- ie __ un -- til __ I find that
+	she is day dream -- ing just like __ me. me. __
 }
 {% endif %}

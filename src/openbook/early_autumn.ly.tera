@@ -14,7 +14,7 @@ structure = "AABA"
 [versions.Laurent]
 doChords = true
 doVoice = true
-doLyrics = false
+doLyrics = true
 doLyricsmore = false
 doLyricsmoremore = false
 doChordBars = false
@@ -27,9 +27,9 @@ doOwn = false
 {% endif %}
 {% if part == "Doc" %}	DONE:
 	- converted the Laurent Martelli version from staging/openbook/laurent/early_autumn.ly.
+	- put in the lyrics from Wikifonia/Ralph Burns, Woody Herman, Johnny Mercer - Early Autumn.mxl.
 	TODO:
 	- check the tune and chords against a real book.
-	- add the lyrics.
 	- add youtube performances.
 	- hear the tune to check that it is right and adjust the tempo.
 {% endif %}
@@ -103,5 +103,16 @@ doOwn = false
 	g' ees c aes g'16 aes bes c g4 | r b,16 d f aes g f ees d g8 b, |
 	f'4 \tuplet 3/2 { des8 bes ges } \tuplet 3/2 { f' ges aes } f4 |
 	r a,16 c ees ges f ees d c f4 | d1~ | d2 r |
+}
+{% endif %}
+{% if part == "LyricsLaurent" %}\lyricmode {
+	When an ear -- ly Au -- tumn walks the land and chills the breeze, and touch -- es with
+	her hand the sum -- mer trees, per -- haps you'll un -- der -- stand what mem -- o -- ries
+	I own. There's a dance pa -- vil -- lion in the rain all shut -- tered down, a wind -- ing
+	coun -- try lane, all rus -- set brown, a frost -- y win -- dow pane shows me a town grown
+	lone -- ly. The spring __ fof ours that start -- ed so ap -- ril heart -- ed, seemed made
+	for just a boy and girl. I nev -- er dreamed, did you, an -- y fall would come in __ view
+	so ear -- ly, ear -- ly? Dar -- ling if you care please let me know, I'll meet you an -- y --
+	where, I miss you so, let's nev -- er have to share an -- oth -- er ear -- ly au -- tumn.
 }
 {% endif %}

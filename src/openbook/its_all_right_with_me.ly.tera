@@ -15,8 +15,8 @@ structure = "AABA"
 [versions.Laurent]
 doChords = true
 doVoice = true
-doLyrics = false
-doLyricsmore = false
+doLyrics = true
+doLyricsmore = true
 doLyricsmoremore = false
 doChordBars = false
 doGuitar = false
@@ -28,11 +28,11 @@ doOwn = false
 {% endif %}
 {% if part == "Doc" %}	DONE:
 	- converted the Laurent Martelli version from staging/openbook/laurent/its_all_right_with_me.ly.
+	- put in the lyrics from Wikifonia/Cole Porter - It's All Right With Me.mxl.
 	TODO:
 	- check the tune and chords against a real book.
 	- the source has no tempo marking, the tempo is a guess.
 	- the source has a D.S./coda layout (to coda after the last A), written out here with the 2 bar coda at the end.
-	- add the lyrics.
 	- add youtube performances.
 {% endif %}
 {% if part == "ChordsLaurent" %}\chordmode {
@@ -121,5 +121,21 @@ doOwn = false
 
 	% part "Coda"
 	ees'1 ~ | ees4 r r2 |
+}
+{% endif %}
+{% if part == "LyricsLaurent" %}\lyricmode {
+	It's the wrong time __ and the wrong place __ "tho'" your face, is charm -- ing, it's the
+	wrong "face;" __ it's not her face __ but such a charm -- ing face __ that it's all right __
+	with me. __ It's the with me. __ You can't __ know how hap -- py I am that we met, I'm
+	strange -- ly at tract -- ed to you. There's some -- one I'm try -- ing so hard to for --
+	get, don't you want to for -- get some -- one too? It's the __ wrong game, with the __
+	wrong chips, "tho'" your __ lips are temp -- ting they're __ the wrong "lips;" they're not __
+	her lips but they're __ such temp -- ting lips that if __ some night you're free __ dear,
+	it's __ all right, it's all __ right with me. __
+}
+{% endif %}
+{% if part == "LyricsmoreLaurent" %}\lyricmode {
+	wrong song in the __ wrong style "tho'" your __ smile is love -- ly, it's __ the wrong
+	"smile;" it's not __ her smile but such __ a love -- ly smile that it's __ all right
 }
 {% endif %}

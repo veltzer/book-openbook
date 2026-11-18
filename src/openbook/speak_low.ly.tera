@@ -14,8 +14,8 @@ structure = "ABA"
 [versions.Laurent]
 doChords = true
 doVoice = true
-doLyrics = false
-doLyricsmore = false
+doLyrics = true
+doLyricsmore = true
 doLyricsmoremore = false
 doChordBars = false
 doGuitar = false
@@ -27,6 +27,7 @@ doOwn = false
 {% endif %}
 {% if part == "Doc" %}	DONE:
 	- converted the Silvia Bertoluzza version (from the Laurent Martelli collection) from staging/openbook/laurent/speaklow.ly.
+	- put in the lyrics from Wikifonia/Kurt Weill, Ogden Nash - Speak Low.mxl.
 	TODO:
 	- check the tune and chords against a real book (the source has only an 8 bar bridge).
 	- add the lyrics (they are in git history of staging/openbook/laurent/speaklow.ly, but do not line up with its repeat).
@@ -105,5 +106,20 @@ doOwn = false
 	a2 \tuplet 3/2 { g4 d g } | a2. g4 | d'2. c4 | d2. a4 |
 	c1 ~ | c2 \tuplet 3/2 { bes4 f g } | a1 ~ | a4 a bes c |
 	d d d4. d8 | d4 d d4. d8 | d1 | r1 |
+}
+{% endif %}
+{% if part == "LyricsLaurent" %}\lyricmode {
+	Speak low __ when you speak love, __ our sum -- mer day with -- ers a way too soon too
+	soon Speak low __ when you speak love, __ our mo -- ment is swift, like ships __ a drift,
+	we're swept __ a -- drift too soon. Speak love is __ pure gold, and time __ a thief. We're
+	late dar -- ling we're late __ the cur -- tain de -- scends, ev -- "'ry" -- thing ends too __
+	soon, too soon, I wait dar -- ling I wait will you speak low to me, __ speak love to me, __
+	and soon
+}
+{% endif %}
+{% if part == "LyricsmoreLaurent" %}\lyricmode {
+	low, dar -- ling, speak low love __ is a spark lost in the dark too soon, too soon, I
+	feel wher -- ever I go that __ to -- mor -- ow is near, to -- mor -- row is here and __ al --
+	lways too soon. Time is so __ old and love so __ brief
 }
 {% endif %}

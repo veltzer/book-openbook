@@ -15,8 +15,8 @@ structure = "Intro ABC"
 [versions.Anon]
 doChords = true
 doVoice = true
-doLyrics = false
-doLyricsmore = false
+doLyrics = true
+doLyricsmore = true
 doLyricsmoremore = false
 doChordBars = false
 doGuitar = false
@@ -28,11 +28,11 @@ doOwn = false
 {% endif %}
 {% if part == "Doc" %}	DONE:
 	- converted the Anonymous <anonymous@zivlempel.org> version from staging/openbook/anon/PureImagination.ly.
+	- put in the lyrics from Wikifonia/Anthony Newley, Leslie Bricusse - Pure Imagination.mxl.
 	TODO:
 	- check the tune and chords against a real book.
 	- add youtube performances.
 	- the intro is played by the piano; the last two notes of the intro bar are the pickup to A.
-	- add the lyrics.
 {% endif %}
 {% if part == "ChordsAnon" %}\chordmode {
 	\startChords
@@ -86,5 +86,18 @@ doOwn = false
 	% part "C"
 	f'2. g,8 bes | f'2. d8 f | a4. bes8 a bes a bes | a4 f g, bes |
 	d2. ees8 f | d2. c8 bes | a2 a'~ | a2 aes,4 a | bes1~ | bes2 r2_\markup { "back to" \box "A" } |
+}
+{% endif %}
+{% if part == "LyricsAnon" %}\lyricmode {
+	Come with me and you'll be in a world of pure i -- ma -- gi -- na tion take a look and
+	you'll see in -- to your i -- ma -- gi -- na -- tion We'll be
+}
+{% endif %}
+{% if part == "LyricsmoreAnon" %}\lyricmode {
+	gin with a spin tra -- v'ling in the world of my cre -- a -- tion What we'll see will de --
+	fy ex -- pla na -- tion If you want to view pa -- ra -- dise sim -- ply look a -- round
+	and view it A -- ny -- thing you want to do it Want to change the world there's no --
+	thing to it There is no life I know to com -- pare with pure __ i -- ma -- gi -- na --
+	tion Li -- ving there you'll be free if you tru -- ly wish __ to be.
 }
 {% endif %}

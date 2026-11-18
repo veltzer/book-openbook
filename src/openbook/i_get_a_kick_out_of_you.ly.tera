@@ -5,6 +5,7 @@ default_version = "Wikifonia"
 title = "I Get A Kick Out Of You"
 style = "Jazz"
 composer = "Cole Porter"
+poet = "Cole Porter"
 piece = "Jazz"
 typesetter = "OpenBook contributors (MusicXML import)"
 completion = "3"
@@ -15,7 +16,7 @@ copyright = "All Rights Reserved"
 [versions.Wikifonia]
 doChords = true
 doVoice = true
-doLyrics = false
+doLyrics = true
 doLyricsmore = false
 doLyricsmoremore = false
 doChordBars = false
@@ -34,6 +35,7 @@ doOwn = false
 	- retained the original copyright notice where printed; the underlying music is not relicensed.
 	- retained written measures, pickups, repeats and endings; lyrics omitted.
 	- tempo is an editorial practice suggestion.
+	- put in the lyrics from Wikifonia/Cole Porter - I Get A Kick Out Of You.mxl.
 	TODO:
 	- proofread the music against the referenced PDF and check by ear.
 	- verify editorial chord spacing in measures 4, 15, 20, 27, 52; the archive places successive symbols at the same offset.
@@ -186,5 +188,15 @@ doOwn = false
 	es''1 ~ |
 	es''4 ^ "(" ^ ")" r4 r2 |
 	\endBar
+}
+{% endif %}
+{% if part == "LyricsWikifonia" %}\lyricmode {
+	I get no kick from chan -- paigne, __ mere al -- co -- hol does -- n't thrill me at all,
+	So tell me why should it be true, __ That I get a kick __ out of you? __ Some get a kick
+	from co -- caine, __ I'm sure that if I had ev -- en one sniff it would bore me ter -- rif --
+	ic -- "'ly" too __ Yet I get a kick __ out of you. __ I get a kick ev -- "'ry" -- time I
+	see you're stand -- ing there be -- fore me. I get a kick "tho'" it's clear to me you ob --
+	vious -- ly don't a -- dore me. I get no kick in a plane, __ fly -- in too high with some
+	"(gal)" in the sky is my i -- dea for noth -- ing to do. __ Yet I get a kick out of you. __
 }
 {% endif %}
