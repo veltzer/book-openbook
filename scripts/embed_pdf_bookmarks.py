@@ -61,7 +61,7 @@ def embed_bookmarks(pdf: Path, out: Path, book_name: str) -> int:
     writer.append(reader)
     for title, _composer, start in entries:
         # parse_toc reports 1-based pages aligned with physical PDF pages.
-        writer.add_outline_item(title, start - 1)
+        writer.add_outline_item(title=title, page_number=start - 1)
     metadata = {str(key): str(value) for key, value in (reader.metadata or {}).items()}
     metadata.setdefault("/Title", book_name)
     writer.add_metadata(metadata)
