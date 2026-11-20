@@ -23,3 +23,8 @@ executable_sha256 = "dad2faf6377d2daa4f4fabf459fe7ccfb98a5448f0d4bca8270ca9acb04
 url = "https://github.com/astral-sh/uv/releases/download/0.13.6/uv-x86_64-unknown-linux-gnu.tar.gz"
 sha256 = "f29c3e94ffabd7e6f3ba521dba169a9b7ec12100bf3257087f0f24f6123f3645"
 executable_sha256 = "23803452c0fbe125033054cd9ff245f1d649fb65b4b73f68429f4abda432436d"
+
+[binary.zizmor]
+url = "https://github.com/zizmorcore/zizmor/releases/download/v1.32.0/zizmor-x86_64-unknown-linux-gnu.tar.gz"
+sha256 = "bb110cc765eca9cd7efb2e284a956be5974c60027b0970f16397d86208a9957b"
+executable_sha256 = "04d55fb88e582a8e9a9ce6b4753df723fc44c35e0d1a8e8771db9e017066c6df"

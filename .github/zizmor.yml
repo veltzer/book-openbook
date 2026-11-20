@@ -1,0 +1,13 @@
+# zizmor policy, byte-identical across every repo (rsmultigit check same).
+#
+# Actions published by GitHub itself (actions/*) may be referenced by tag:
+# GitHub owns those tags and the runner that executes them. Every other
+# action must be pinned to a commit hash, with the release it is in a
+# trailing comment, because a third-party tag can be moved to different
+# code by whoever controls that repository.
+rules:
+  unpinned-uses:
+    config:
+      policies:
+        "actions/*": ref-pin
+        "*": hash-pin

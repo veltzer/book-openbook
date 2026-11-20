@@ -20,6 +20,9 @@ jobs:
         # A no-op in repos without submodules, so every repo shares this
         # exact file.
         submodules: recursive
+        # The token is not left in .git/config for later steps to pick up;
+        # the steps that call the API get it through GH_TOKEN.
+        persist-credentials: false
     - uses: actions/cache@v6
       with:
         path: .rsconstruct

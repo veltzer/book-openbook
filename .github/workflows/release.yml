@@ -10,7 +10,11 @@ name: release
 # so re-running a build finds its release already there instead of making a
 # second one.
 on:
-  workflow_run:
+  # workflow_run is the trigger zizmor calls dangerous, because it can run
+  # with write access on behalf of code from a fork's pull request. Not here:
+  # the build it follows runs on pushes only, this is limited to master, and
+  # nothing below executes anything from the checked-out tree.
+  workflow_run: # zizmor: ignore[dangerous-triggers]
     workflows: [build]
     types: [completed]
     branches: [master]
