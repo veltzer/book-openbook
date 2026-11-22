@@ -12,6 +12,7 @@
 ## Why did you start this?
 
 Because of many reasons:
+
 * I wanted to learn Jazz, and a good way to do that is to write down the tunes (amongst many other things).
 * I wanted beautiful sheet music that I could fiddle with.
 * I did not want to pay for the overly expensive real or fake books out there.
@@ -21,6 +22,7 @@ Because of many reasons:
 used by Jazz musicians both for practice and for performance.
 
 ## What tools are used?
+
 * [lilypond](https://lilypond.org/): the music engraver, this is the main tool we use
 * [rsconstruct](https://github.com/veltzer/rsconstruct): the build system (templating, dependency tracking, linting)
 * [uv](https://docs.astral.sh/uv/): manages the python environment
@@ -56,6 +58,7 @@ Windows is not currently supported although well-formed patches will be accepted
 to be accepted)
 
 ## What do I need to know to participate?
+
 * Some rudimentary Linux system administration (in order to install the software needed for this project to build).
 * Some basic git software content tracking (in order to fetch the project, modify and submit patches).
 * The lilypond language (in order to edit or add tunes).
@@ -94,6 +97,7 @@ If you are really into classical lilypond production, you may alternatively
 wish to contribute to the mutopia project at <http://www.mutopiaproject.org/>.
 
 ## How do I build the pdfs?
+
 * you need the [rsconstruct](https://github.com/veltzer/rsconstruct) build tool on your PATH.
 * clone the repository ```$ git clone https://github.com/{{ personal.GITHUB_USERNAME }}/{{ project.NAME }}.git```
 * cd into the newly created folder ```$ cd {{ project.NAME }}```
@@ -104,11 +108,13 @@ wish to contribute to the mutopia project at <http://www.mutopiaproject.org/>.
 * if you want to build all the tunes individually then run ```$ rsconstruct build --iset processor.generator.generic.songs_pdf.enabled=true --iset processor.generator.generic.songs_midi.enabled=true``` (after a plain build has rendered the songs).
 
 ## MacOS user notes
+
 * [Python3](https://realpython.com/installing-python)
 * [uv](https://docs.astral.sh/uv/)
 * [rsconstruct](https://github.com/veltzer/rsconstruct)
 
 ## How do I contribute?
+
 * create an account on github.
 * hack on the .ly.tera files (git add the files that you hack on).
 * commit to your own hard drive repository (git commit).
