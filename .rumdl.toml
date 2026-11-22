@@ -33,5 +33,10 @@ allowed_elements = ["bdi", "canvas", "details", "div", "img", "script", "summary
 [MD007]
 indent = 4
 
+# MD013 (line-length) is effectively off: prose is written one paragraph (or
+# one slide bullet) per line on purpose. Markdown joins wrapped lines anyway,
+# so the rendered slides, PDFs and pages are the same either way, while hard
+# wrapping would make a one-word edit rewrap, and show as changed, every
+# line after it. One line per paragraph keeps a change to one line.
 [MD013]
 line_length = 1000
