@@ -20,7 +20,7 @@
 # being used (a Windows example uses ">"), so the rule's fix would
 # rewrite authored teaching material. Kept off fleet-wide.
 [global]
-disable = ["MD022", "MD024", "MD026", "MD031", "MD032", "MD033", "MD034", "MD057", "MD014", "MD053"]
+disable = ["MD022", "MD024", "MD026", "MD031", "MD032", "MD033", "MD057", "MD014", "MD053"]
 
 [MD007]
 indent = 4

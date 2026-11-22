@@ -5,7 +5,7 @@
 
 description: OpenBook is an open source Jazz real book
 
-project website: https://veltzer.github.io/book-openbook
+project website: <https://veltzer.github.io/book-openbook>
 
 author: Mark Veltzer
 
@@ -23,7 +23,7 @@ version: 0.0.1
 OpenBook is a Jazz real book constructed with free software. A real book simply means a big book with lots of Jazz tunes or standards as they are more widely known.
 
 ## Where is the project's website?
-https://veltzer.github.io/book-openbook
+<https://veltzer.github.io/book-openbook>
 
 ## Why did you start this?
 Because of many reasons:
@@ -77,14 +77,14 @@ Look at the CREDITS file
 Your name could be here if you contribute...
 
 ## Where can I see some results?
-Check out the PDFs and other outputs in https://veltzer.github.io/book-openbook.
+Check out the PDFs and other outputs in <https://veltzer.github.io/book-openbook>.
 
 ## Why is there so little documentation?
 I just started this project (4 years all in all -> that's not true: it's 12 years in the making). Feel free to add stuff and request a pull.
 Contributing may make you an admin...
 
 ## How do you write the standards?
-Using lilypond. Check it out at http://www.lilypond.org/.
+Using lilypond. Check it out at <http://www.lilypond.org/>.
 
 ## Will you co-operate with the lilypond, mutopia and wikifonia communities?
 YES! Any bugs or feature suggestion are submitted to the lilypond community.
@@ -95,7 +95,7 @@ format as input format - so there could not be much co-operation there.
 ## Do you only allow Jazz tunes?
 No. Rock and Pop will be welcome and so would classical.
 If you are really into classical lilypond production, you may alternatively
-wish to contribute to the mutopia project at http://www.mutopiaproject.org/.
+wish to contribute to the mutopia project at <http://www.mutopiaproject.org/>.
 
 ## How do I build the pdfs?
 * you need the [rsconstruct](https://github.com/veltzer/rsconstruct) build tool on your PATH.

@@ -7,7 +7,7 @@
 
 description: {{ project.DESCRIPTION_SHORT }}
 
-project website: https://{{ personal.GITHUB_USERNAME }}.github.io/{{ project.NAME }}
+project website: <https://{{ personal.GITHUB_USERNAME }}.github.io/{{ project.NAME }}>
 
 author: {{ personal.FULLNAME }}
 
