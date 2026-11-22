@@ -101,29 +101,37 @@ wish to contribute to the mutopia project at <http://www.mutopiaproject.org/>.
 
 ## Can I just add a single tune?
 Yes. To add a tune named [tunename] just add single file named
+
 ```text
 src/openbook/[tunename].ly.tera
 ```
+
 The extension is .tera since I use "tera" for templating: the file carries the
 tune's metadata as TOML front matter followed by sections. Just copy them from
 some other tune. One section for chords, another for lyrics, another for the
 melody etc.
 The build picks the new tune up by itself — no other file needs editing.
 After working on the tune build just that single tune by issuing:
+
 ```sh
 rsconstruct build --iset processor.generator.generic.songs_pdf.enabled=true -t "*[tunename]*"
 ```
+
 or with --iset processor.generator.generic.songs_midi.enabled=true for the midi.
 
 ## Can I just build a single tune?
 Sure. Just use:
+
 ```sh
 rsconstruct build --iset processor.generator.generic.songs_pdf.enabled=true -t "*[tunename]*"
 ```
+
 to build the pdf
+
 ```sh
 rsconstruct build --iset processor.generator.generic.songs_midi.enabled=true -t "*[tunename]*"
 ```
+
 to build the midi (a plain ```rsconstruct build``` must have rendered the songs first).
 
 ## What about MusicXML?
@@ -142,7 +150,9 @@ Just edit the TONALITY_PITCH / TONALITY_NAME constants in `scripts/drivers.py`
 
 ## How do I download the external pdfs to compare them to this project?
 Just run:
+
 ``` sh
 rsconstruct build --iset processor.explicit.generic.real_books.enabled=true
 ```
+
 and look at the resulting `real_books_archive.gi` folder that is created.
