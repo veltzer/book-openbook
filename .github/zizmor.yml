@@ -1,3 +1,4 @@
+---
 # zizmor policy, byte-identical across every repo (rsmultigit check same).
 #
 # Actions published by GitHub itself (actions/*) may be referenced by tag:
