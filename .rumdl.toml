@@ -20,7 +20,7 @@
 # being used (a Windows example uses ">"), so the rule's fix would
 # rewrite authored teaching material. Kept off fleet-wide.
 [global]
-disable = ["MD022", "MD024", "MD031", "MD032", "MD057", "MD014", "MD053"]
+disable = ["MD022", "MD031", "MD032", "MD057", "MD014", "MD053"]
 
 # MD033 (no-inline-html) is on, allowing only the elements Markdown has no
 # syntax for and the fleet's pages need: Marp slide layouts (div), images
