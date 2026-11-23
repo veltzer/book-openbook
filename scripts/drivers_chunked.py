@@ -147,7 +147,7 @@ def sorted_songs(inputs: list[str]) -> list[SongMeta]:
     return [song_meta_from_derived(p) for p in tomls]
 
 
-def split_chunks(songs: list[SongMeta], count: int) -> list[list[SongMeta]]:
+def split_chunks[T](songs: list[T], count: int) -> list[list[T]]:
     """ cut the book into count consecutive runs of near-equal length """
     if count < 1 or len(songs) < count:
         raise ValueError(f"cannot split {len(songs)} songs into {count} chunks")

@@ -241,7 +241,7 @@ class DriverEmitter:
             return (not val) if match.group(2) else val
         match = re.fullmatch(r"attributes.get_working_version\(\)\['(\w+)'\](==False)?", cond)
         if match:
-            val = bool(self.song().working_version[match.group(1)])
+            val = self.song().working_version[match.group(1)]
             return (not val) if match.group(2) else val
         match = re.fullmatch(r"'(\w+)'( not)? in attributes", cond)
         if match:
@@ -322,7 +322,7 @@ class DriverEmitter:
         self.eval_lines(common_text.splitlines(keepends=True))
         return "".join(self.out)
 
-    def eval_lines(self, lines: list[str]) -> None:  # pylint: disable=too-many-branches
+    def eval_lines(self, lines: list[str]) -> None:
         """ evaluate a run of weave template lines """
         # frames: ("static", taking, seen_true) or ("runtime",)
         stack: list[tuple] = []
@@ -357,7 +357,10 @@ class DriverEmitter:
                     self.emit("\n")
                 continue
             if stripped.startswith("<%def"):
-                name = re.search(r'name="(\w+)\(\)"', line).group(1)  # type: ignore[union-attr]
+                def_match = re.search(r'name="(\w+)\(\)"', line)
+                if def_match is None:
+                    raise ValueError(f"cannot find the def name in [{line}]")
+                name = def_match.group(1)
                 body: list[str] = []
                 index += 1
                 while "</%def>" not in lines[index]:

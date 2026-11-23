@@ -61,6 +61,16 @@ select = [
   "EXE",     # flake8-executable: shebang vs executable bit
   "INT",     # flake8-gettext
   "SLOT",    # flake8-slots
+  "G",       # flake8-logging-format: lazy logging arguments, not f-strings
+  "SLF",     # flake8-self: no access to another object's private members
+  "PT",      # flake8-pytest-style: plain assert, pytest.raises
+  "NPY",     # numpy: deprecated and legacy API
+  "PD",      # pandas-vet: misused pandas API
+  "ICN",     # import conventions: np, pd, plt, ...
+  "AIR",     # airflow misuse (fires only on airflow code)
+  "DJ",      # django misuse (fires only on django code)
+  "FAST",    # fastapi misuse (fires only on fastapi code)
+  "FA",      # future annotations for the target version
 ]
 
 [lint.pep8-naming]

@@ -39,14 +39,14 @@ def tune_blocks(driver: str) -> list[str]:
 def test_split_chunks_is_contiguous_and_balanced():
     """ chunks keep book order and differ in length by at most one """
     items = list(range(10))
-    chunks = split_chunks(items, 3)  # type: ignore[arg-type]
+    chunks = split_chunks(items, 3)
     assert chunks == [[0, 1, 2, 3], [4, 5, 6], [7, 8, 9]]
 
 
 def test_split_chunks_rejects_too_many_chunks():
     """ every chunk must hold at least one song """
-    with pytest.raises(ValueError):
-        split_chunks([1, 2], 3)  # type: ignore[list-item]
+    with pytest.raises(ValueError, match="cannot split 2 songs into 3"):
+        split_chunks([1, 2], 3)
 
 
 def test_chunk_weave_drops_title_page_and_toc():
@@ -99,5 +99,5 @@ def test_read_labels(tmp_path):
     report = tmp_path / "c00.labels"
     report.write_text("tune2 7\ntune1 5\n", encoding="utf-8")
     assert read_labels(report, 2) == ["5", "7"]
-    with pytest.raises(ValueError):
+    with pytest.raises(ValueError, match=r"expected pages for tunes 1\.\.3"):
         read_labels(report, 3)

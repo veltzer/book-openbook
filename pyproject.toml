@@ -22,12 +22,19 @@ dev = [
 package = false
 
 [tool.pytest.ini_options]
+# Every strictness check pytest has (strict_config, strict_markers,
+# strict_xfail, strict_parametrization_ids), and every warning fails the
+# test that raised it rather than scrolling past in the summary.
+strict = true
+filterwarnings = ["error"]
 # the tests import scripts.* from the repository root
 pythonpath = ["."]
 
 [tool.pyrefly]
 # Type checking (rsconstruct's pyrefly processor), with pyrefly's default
 # error set. "." on the search path is mypy's implicit current directory.
+# Warnings fail the check like errors (pyrefly lets them pass by default).
+min-severity = "warn"
 search-path = [
     ".",
 ]

@@ -50,6 +50,11 @@ jobs:
         rsconstruct tool install project
     - name: build
       run: rsconstruct build
+      env:
+        # Build steps that call the GitHub API (gh, release metadata
+        # downloads) authenticate with the job's own token instead of
+        # sharing the runner IP's anonymous rate limit.
+        GH_TOKEN: ${{ github.token }}
     - name: status
       run: rsconstruct status
     - name: pages dir

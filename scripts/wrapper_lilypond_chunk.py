@@ -62,7 +62,9 @@ def main() -> int:
     pdf = one(outputs, ".pdf", required=True)
     next_file = one(outputs, ".next", required=True)
     labels = one(outputs, ".labels", required=False)
-    assert source is not None and pdf is not None and next_file is not None
+    assert source is not None
+    assert pdf is not None
+    assert next_file is not None
     stems = {p.parent / p.stem for p in outputs}
     if len(stems) != 1:
         raise ValueError(f"outputs must share one basename, got {args.output_files}")
