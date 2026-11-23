@@ -1,0 +1,76 @@
+# ruff config, shared fleet-wide (rsmultigit check same): byte-identical in
+# every repo whose rsconstruct.toml runs ruff. ruff prefers this file over a
+# [tool.ruff] table in pyproject.toml, so nothing per-repo lives there.
+
+line-length = 130
+
+# Where first-party modules live: the repo root, the src/ layout of the py*
+# packages, and scripts/ (helper modules imported by the scripts beside them).
+src = [".", "src", "scripts"]
+
+[lint]
+# ruff's default set (E4, E7, E9, F) plus the families below. Each one finds
+# bugs or dead code, or replaces a construct with a plainer equivalent.
+#
+# Not selected, on purpose rather than as a disable: E5 (line length - a
+# formatting question; prose and data lines in the teaching repos run long),
+# the PLR0 metrics and PLR2004 magic numbers, and families that judge style
+# rather than correctness (D docstrings, ANN annotations - pyrefly owns
+# types -, Q/COM quoting and commas, T20 print - the teaching code prints -,
+# PTH pathlib, ERA commented-out code, TRY/EM exception message style, S
+# bandit, which reports the deliberate vulnerabilities the security demos
+# exist to show, CPY copyright headers).
+select = [
+  "E1",      # pycodestyle: indentation
+  "E4",      # pycodestyle: imports
+  "E7",      # pycodestyle: statements
+  "E9",      # pycodestyle: runtime (syntax, io)
+  "W",       # pycodestyle warnings (whitespace, invalid escapes)
+  "F",       # pyflakes
+  "I",       # isort: import order
+  "B",       # flake8-bugbear: likely bugs
+  "UP",      # pyupgrade: syntax of the target python version
+  "C4",      # flake8-comprehensions
+  "SIM",     # flake8-simplify
+  "RUF",     # ruff's own rules
+  "PIE",     # flake8-pie: unnecessary code
+  "RET",     # flake8-return
+  "PERF",    # perflint
+  "PLE",     # pylint errors
+  "PLW",     # pylint warnings
+  "PLC",     # pylint conventions
+  "PLR1",    # pylint refactors (not the PLR0 metrics)
+  "PLR2044", # pylint: empty comment
+  "PLR5",    # pylint: collapsible else-if
+  "N",       # pep8-naming
+  "A",       # flake8-builtins: shadowing builtins
+  "ARG",     # flake8-unused-arguments
+  "BLE",     # flake8-blind-except
+  "DTZ",     # flake8-datetimez: naive datetimes
+  "PGH",     # pygrep-hooks: blanket noqa / type: ignore
+  "ISC",     # flake8-implicit-str-concat
+  "RSE",     # flake8-raise
+  "FURB",    # refurb
+  "FLY",     # flynt: static joins to f-strings
+  "PYI",     # flake8-pyi
+  "TID",     # flake8-tidy-imports
+  "LOG",     # flake8-logging
+  "T10",     # flake8-debugger
+  "YTT",     # flake8-2020: sys.version misuse
+  "ASYNC",   # flake8-async
+  "EXE",     # flake8-executable: shebang vs executable bit
+  "INT",     # flake8-gettext
+  "SLOT",    # flake8-slots
+]
+
+[lint.pep8-naming]
+# Method names that a framework, not this code, dictates (N802 cannot know):
+# pyinotify dispatches ProcessEvent.process_IN_<EVENT> by name at runtime,
+# and twisted's Protocol callbacks are camelCase. Exact names only - this
+# declares those APIs, it does not relax the naming rule.
+extend-ignore-names = [
+  "connectionLost",
+  "connectionMade",
+  "dataReceived",
+  "process_IN_*",
+]

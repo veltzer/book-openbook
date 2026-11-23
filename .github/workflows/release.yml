@@ -19,18 +19,21 @@ on:
     types: [completed]
     branches: [master]
 
+# Nothing by default: the job below asks for exactly what it uses.
+permissions: {}
+
 concurrency:
   group: ${{ github.workflow }}
   cancel-in-progress: false
 
 jobs:
   release:
+    name: release
     if: github.event.workflow_run.conclusion == 'success'
     runs-on: ubuntu-26.04
     permissions:
-      contents: write
-      # to download the build run's github-pages artifact
-      actions: read
+      contents: write  # create the release
+      actions: read  # download the build run's github-pages artifact
     steps:
     - name: release
       env:

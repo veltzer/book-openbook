@@ -71,14 +71,14 @@ def main() -> int:
     report = base.with_suffix(".labels")
 
     first_page = int(previous.read_text(encoding="utf-8")) if previous else 1
-    remove_if_exist(outputs + [report])
+    remove_if_exist([*outputs, report])
     command = ["lilypond", "--pdf", "-o", str(base), str(source)]
     env = {**os.environ, "CHUNK_FIRST_PAGE": str(first_page)}
     result = subprocess.run(command, capture_output=True, text=True, check=False, env=env)
     expected = [pdf] + ([labels] if labels else [])
     missing = [p for p in expected if not p.is_file()]
     if result.returncode != 0 or missing:
-        remove_if_exist(outputs + [report])
+        remove_if_exist([*outputs, report])
         sys.stderr.write(result.stdout)
         sys.stderr.write(result.stderr)
         print(f"{sys.argv[0]}: [{' '.join(command)}] failed "

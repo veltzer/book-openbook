@@ -193,11 +193,10 @@ def compute_scratch(attrs: dict[str, Any]) -> dict[str, str]:
             computed["copyright"] = "זכויות יוצרים © " + attrs["copyright"]
         else:
             computed["copyright"] = "Copyright © " + attrs["copyright"]
+    elif heb:
+        computed["copyright"] = "-- עיזרו לי למלא את שורת זכויות היוצרים הזו --"
     else:
-        if heb:
-            computed["copyright"] = "-- עיזרו לי למלא את שורת זכויות היוצרים הזו --"
-        else:
-            computed["copyright"] = "-- help me fill it out this copyright notice --"
+        computed["copyright"] = "-- help me fill it out this copyright notice --"
     if poet is not None and composer is not None and poet == composer:
         computed["fullcomposer"] = ("מילים ולחן: " if heb else "Lyrics and Music by ") + poet
         computed["fullpoet"] = ""
@@ -301,10 +300,12 @@ class DriverEmitter:
 
     def splice_part(self, part_expr: str) -> str:
         """ render one part of the current song, as mako's include did """
-        if part_expr.startswith("'"):
-            part = part_expr.strip("'")
-        else:  # e.g. part=Chords where Chords='Chords'+default version name
-            part = part_expr + self.song().default_version
+        # e.g. part=Chords where Chords='Chords'+default version name
+        part = (
+            part_expr.strip("'")
+            if part_expr.startswith("'")
+            else part_expr + self.song().default_version
+        )
         return (
             '{% set part = "' + part + '" %}'
             '{% include "' + self.song().tera_source.as_posix() + '" %}'
@@ -461,12 +462,11 @@ def derived_content(meta: SongMeta) -> str:
     lines = ["# derived from the song's front matter, do not edit\n"]
     lines.append(f"\ndefault_version = {toml_str(meta.default_version)}\n")
     lines.append("\n[attributes]\n")
-    for key in ATTR_ORDER:
-        if key in meta.attrs:
-            lines.append(f"{key} = {toml_str(meta.attrs[key])}\n")
+    lines.extend(
+        f"{key} = {toml_str(meta.attrs[key])}\n" for key in ATTR_ORDER if key in meta.attrs
+    )
     lines.append("\n[has]\n")
-    for key in ATTR_ORDER:
-        lines.append(f"{key} = {toml_str(key in meta.attrs)}\n")
+    lines.extend(f"{key} = {toml_str(key in meta.attrs)}\n" for key in ATTR_ORDER)
     lines.append("\n[computed]\n")
     for key, val in compute_scratch(meta.attrs).items():
         lines.append(f"{key} = {toml_str(val)}\n")
@@ -532,7 +532,7 @@ def cmd_songs(args: list[str]) -> int:
     if not args or len(args) % 2 != 0:
         print(f"usage: {sys.argv[0]} songs input output [input output ...]", file=sys.stderr)
         return 1
-    for source, output in zip(args[::2], args[1::2]):
+    for source, output in zip(args[::2], args[1::2], strict=False):
         meta = song_meta_from_derived(Path(source))
         write_driver(GATTR_SINGLE, [meta], SINGLE_VARS, Path(output))
     return 0

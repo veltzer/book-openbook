@@ -11,6 +11,7 @@ covered by its own tests.
 from pathlib import Path
 
 from pypdf import PdfReader, PdfWriter
+from pypdf.generic import Destination, IndirectObject
 
 from scripts import embed_pdf_bookmarks, gen_index_csv
 
@@ -40,9 +41,19 @@ def test_embed_bookmarks_writes_one_outline_per_tune(tmp_path, monkeypatch):
     assert count == 3
 
     reader = PdfReader(str(out))
-    outline = reader.outline
+    outline = [item for item in reader.outline if isinstance(item, Destination)]
+    assert len(outline) == len(reader.outline)
     assert [item.title for item in outline] == ["First", "Second", "Third"]
-    ref_to_index = {p.indirect_reference.idnum: i for i, p in enumerate(reader.pages)}
-    assert [ref_to_index[item["/Page"].indirect_reference.idnum] for item in outline] == [1, 3, 4]
+    ref_to_index = {}
+    for i, p in enumerate(reader.pages):
+        assert p.indirect_reference is not None
+        ref_to_index[p.indirect_reference.idnum] = i
+    page_indexes = []
+    for item in outline:
+        page = item.page
+        assert isinstance(page, IndirectObject)
+        page_indexes.append(ref_to_index[page.idnum])
+    assert page_indexes == [1, 3, 4]
+    assert reader.metadata is not None
     assert reader.metadata["/Title"] == "OpenBook"
     assert len(reader.pages) == 6

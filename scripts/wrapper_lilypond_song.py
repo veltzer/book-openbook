@@ -36,7 +36,7 @@ def compile_song(source: Path, output: Path) -> int:
         return 1
     with tempfile.TemporaryDirectory(prefix="lilypond_song.") as scratch:
         base = Path(scratch) / output.stem
-        command = ["lilypond"] + extra + ["-o", str(base), str(source)]
+        command = ["lilypond", *extra, "-o", str(base), str(source)]
         result = subprocess.run(command, capture_output=True, text=True, check=False)
         produced = base.with_suffix(output.suffix)
         if result.returncode != 0 or not produced.is_file():
@@ -56,7 +56,7 @@ def main() -> int:
     if not args or len(args) % 2 != 0:
         print(f"usage: {sys.argv[0]} input output [input output ...]", file=sys.stderr)
         return 1
-    for source, output in zip(args[::2], args[1::2]):
+    for source, output in zip(args[::2], args[1::2], strict=False):
         if (code := compile_song(Path(source), Path(output))) != 0:
             return code
     return 0

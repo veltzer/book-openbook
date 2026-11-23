@@ -1,1 +1,25 @@
+# shellcheck config, shared fleet-wide (rsmultigit check same).
+# Every default check runs. These optional checks run as well:
+#   require-variable-braces    - ${var}, not $var
+#   quote-safe-variables       - quote even variables that hold no spaces
+#   add-default-case           - a case statement ends with a *) branch
+#   avoid-negated-conditions   - [ -n x ], not [ ! -z x ]
+#   avoid-nullary-conditions   - [ -n "$x" ], not [ "$x" ]
+#   check-unassigned-uppercase - an environment variable the script reads is
+#                                declared, e.g. : "${HOME:?}", so a typo in
+#                                its name is an error rather than ""
+#   deprecate-which            - command -v, not which
+#   useless-use-of-cat         - cmd < file, not cat file | cmd
+# Not enabled: require-double-brackets ([ ... ] in a bash script is not a
+# bug, and the teaching examples show both forms on purpose), and
+# check-extra-masked-returns / check-set-e-suppressed (they report nearly
+# every $(...) used as an argument or a function called in a condition,
+# almost always where the masked exit status does not matter).
 enable=require-variable-braces
+enable=quote-safe-variables
+enable=add-default-case
+enable=avoid-negated-conditions
+enable=avoid-nullary-conditions
+enable=check-unassigned-uppercase
+enable=deprecate-which
+enable=useless-use-of-cat

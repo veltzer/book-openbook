@@ -2,17 +2,20 @@
 name: build
 "on": push
 
+# Nothing by default: each job asks for exactly what it uses.
+permissions: {}
+
 concurrency:
   group: ${{ github.workflow }}-${{ github.ref }}
   cancel-in-progress: true
 
 jobs:
   build:
+    name: build
     runs-on: ubuntu-26.04
     permissions:
-      contents: read
-      # needed by the stale-pages-artifact cleanup below
-      actions: write
+      contents: read  # check out the repository
+      actions: write  # delete a stale pages artifact (step below)
     outputs:
       pages-dir: ${{ steps.pages.outputs.dir }}
     steps:
@@ -61,11 +64,11 @@ jobs:
       # in the run. Delete any leftover from a previous attempt first.
       if: steps.pages.outputs.dir != ''
       run: |
-        gh api --paginate "repos/${{ github.repository }}/actions/runs/${{ github.run_id }}/artifacts" \
+        gh api --paginate "repos/${GITHUB_REPOSITORY}/actions/runs/${GITHUB_RUN_ID}/artifacts" \
           --jq '.artifacts[] | select(.name == "github-pages") | .id' |
         while read -r artifact_id; do
-          echo "deleting stale artifact $artifact_id"
-          gh api -X DELETE "repos/${{ github.repository }}/actions/artifacts/$artifact_id"
+          echo "deleting stale artifact ${artifact_id}"
+          gh api -X DELETE "repos/${GITHUB_REPOSITORY}/actions/artifacts/${artifact_id}"
         done
       env:
         GH_TOKEN: ${{ github.token }}
@@ -75,12 +78,13 @@ jobs:
         path: ${{ steps.pages.outputs.dir }}
 
   deploy:
+    name: deploy
     needs: build
     if: needs.build.outputs.pages-dir != ''
     runs-on: ubuntu-26.04
     permissions:
-      pages: write
-      id-token: write
+      pages: write  # publish the site
+      id-token: write  # prove to Pages that this run is the deployment
     environment:
       name: github-pages
       url: ${{ steps.deployment.outputs.page_url }}

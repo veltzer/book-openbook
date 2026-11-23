@@ -26,10 +26,8 @@ package = false
 pythonpath = ["."]
 
 [tool.pyrefly]
-# Type checking (rsconstruct's pyrefly processor). preset = "legacy" is
-# pyrefly's mypy-compatible behavior; "." on the search path is mypy's
-# implicit current directory.
-preset = "legacy"
+# Type checking (rsconstruct's pyrefly processor), with pyrefly's default
+# error set. "." on the search path is mypy's implicit current directory.
 search-path = [
     ".",
 ]

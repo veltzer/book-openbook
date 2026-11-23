@@ -28,7 +28,7 @@ def main() -> int:
     if not args or len(args) % 2 != 0:
         print(f"usage: {sys.argv[0]} input output [input output ...]", file=sys.stderr)
         return 1
-    for source, output in zip(args[::2], args[1::2]):
+    for source, output in zip(args[::2], args[1::2], strict=False):
         meta = parse_song_meta(Path(source))
         out = Path(output)
         out.parent.mkdir(parents=True, exist_ok=True)
