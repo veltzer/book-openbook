@@ -1,25 +1,32 @@
 # shellcheck config, shared fleet-wide (rsmultigit check same).
-# Every default check runs. These optional checks run as well:
-#   require-variable-braces    - ${var}, not $var
-#   quote-safe-variables       - quote even variables that hold no spaces
+# Every default check runs, and so does every optional check shellcheck 0.11
+# has (shellcheck --list-optional). They are named one by one rather than as
+# enable=all, so a new release's optional checks are turned on deliberately:
 #   add-default-case           - a case statement ends with a *) branch
-#   avoid-negated-conditions   - [ -n x ], not [ ! -z x ]
-#   avoid-nullary-conditions   - [ -n "$x" ], not [ "$x" ]
+#   avoid-negated-conditions   - [[ -n x ]], not [[ ! -z x ]]
+#   avoid-nullary-conditions   - [[ -n "$x" ]], not [[ "$x" ]]
+#   check-extra-masked-returns - no exit status is lost in a pipeline or in a
+#                                $(...) passed to another command; a failure
+#                                that is ignored on purpose says so: || true
+#   check-set-e-suppressed     - under set -e, a function is not called in a
+#                                condition or a $(...), where set -e is off
+#                                inside it
 #   check-unassigned-uppercase - an environment variable the script reads is
 #                                declared, e.g. : "${HOME:?}", so a typo in
 #                                its name is an error rather than ""
 #   deprecate-which            - command -v, not which
+#   quote-safe-variables       - quote even variables that hold no spaces
+#   require-double-brackets    - [[ ... ]], not [ ... ], in bash
+#   require-variable-braces    - ${var}, not $var
 #   useless-use-of-cat         - cmd < file, not cat file | cmd
-# Not enabled: require-double-brackets ([ ... ] in a bash script is not a
-# bug, and the teaching examples show both forms on purpose), and
-# check-extra-masked-returns / check-set-e-suppressed (they report nearly
-# every $(...) used as an argument or a function called in a condition,
-# almost always where the masked exit status does not matter).
-enable=require-variable-braces
-enable=quote-safe-variables
 enable=add-default-case
 enable=avoid-negated-conditions
 enable=avoid-nullary-conditions
+enable=check-extra-masked-returns
+enable=check-set-e-suppressed
 enable=check-unassigned-uppercase
 enable=deprecate-which
+enable=quote-safe-variables
+enable=require-double-brackets
+enable=require-variable-braces
 enable=useless-use-of-cat
