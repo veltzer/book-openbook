@@ -170,7 +170,7 @@ class SongMeta:
         return DERIVED / rel.parent / (rel.name[: -len(".ly.tera")] + ".ly.toml")
 
 
-def toml_str(value: str | bool | int) -> str:
+def toml_str(*, value: str | bool | int) -> str:
     """ serialize one scalar as TOML (json escaping is TOML-compatible) """
     return json.dumps(value, ensure_ascii=False)
 
@@ -339,7 +339,7 @@ class DriverEmitter:
                 index += 1 + self.unroll_loop(lines[index + 1:])
                 continue
             if control:
-                self.handle_control(control, stack, taking())
+                self.handle_control(control, stack, was_taking=taking())
                 index += 1
                 continue
             if stripped == "<%":  # code block: consumed, newline after %> kept
@@ -401,7 +401,7 @@ class DriverEmitter:
                 depth -= 1
         raise ValueError("unterminated % for loop in the weave")
 
-    def handle_control(self, control: re.Match, stack: list[tuple], was_taking: bool) -> None:
+    def handle_control(self, control: re.Match, stack: list[tuple], *, was_taking: bool) -> None:
         """ process one %-control line """
         keyword, cond = control.group(1), control.group(2)
         if keyword in ("if", "for"):
@@ -463,25 +463,25 @@ def derived_content(meta: SongMeta) -> str:
     driver emitter itself reads back to reconstruct the SongMeta,
     avoiding a second parse of the .ly.tera front matter """
     lines = ["# derived from the song's front matter, do not edit\n"]
-    lines.append(f"\ndefault_version = {toml_str(meta.default_version)}\n")
+    lines.append(f"\ndefault_version = {toml_str(value=meta.default_version)}\n")
     lines.append("\n[attributes]\n")
     lines.extend(
-        f"{key} = {toml_str(meta.attrs[key])}\n" for key in ATTR_ORDER if key in meta.attrs
+        f"{key} = {toml_str(value=meta.attrs[key])}\n" for key in ATTR_ORDER if key in meta.attrs
     )
     lines.append("\n[has]\n")
-    lines.extend(f"{key} = {toml_str(key in meta.attrs)}\n" for key in ATTR_ORDER)
+    lines.extend(f"{key} = {toml_str(value=key in meta.attrs)}\n" for key in ATTR_ORDER)
     lines.append("\n[computed]\n")
     for key, val in compute_scratch(meta.attrs).items():
-        lines.append(f"{key} = {toml_str(val)}\n")
+        lines.append(f"{key} = {toml_str(value=val)}\n")
     for name, flags in meta.versions.items():
         lines.append(f"\n[versions.{name}]\n")
         for flag, value in flags.items():
-            lines.append(f"{flag} = {toml_str(value)}\n")
+            lines.append(f"{flag} = {toml_str(value=value)}\n")
     for video in meta.videos:
         lines.append("\n[[youtube]]\n")
-        lines.append(f"id = {toml_str(video['id'])}\n")
+        lines.append(f"id = {toml_str(value=video['id'])}\n")
         if "remark" in video:
-            lines.append(f"remark = {toml_str(video['remark'])}\n")
+            lines.append(f"remark = {toml_str(value=video['remark'])}\n")
     return "".join(lines)
 
 

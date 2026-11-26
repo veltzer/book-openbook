@@ -73,6 +73,7 @@ select = [
   "FA",      # future annotations for the target version
   "TC",      # flake8-type-checking: imports needed only for annotations
   "TD",      # flake8-todos: a TODO names its author and says what is to do
+  "FBT",     # flake8-boolean-trap: a boolean argument is passed by name
 ]
 
 [lint.pep8-naming]

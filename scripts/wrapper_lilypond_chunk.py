@@ -41,7 +41,7 @@ def remove_if_exist(paths: list[Path]) -> None:
         path.unlink(missing_ok=True)
 
 
-def one(paths: list[Path], suffix: str, required: bool) -> Path | None:
+def one(paths: list[Path], suffix: str, *, required: bool) -> Path | None:
     """ the single path with the given suffix (None if optional and absent) """
     found = [p for p in paths if p.suffix == suffix]
     if len(found) > 1 or (required and not found):

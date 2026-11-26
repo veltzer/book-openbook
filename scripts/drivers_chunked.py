@@ -102,7 +102,7 @@ class ChunkEmitter(DriverEmitter):
     """ a DriverEmitter that can leave out the per-song loop while still
     knowing the song list (the title page prints the tune count) """
 
-    def __init__(self, gattr: dict, songs: list[SongMeta], with_songs: bool):
+    def __init__(self, gattr: dict, songs: list[SongMeta], *, with_songs: bool):
         super().__init__(gattr, songs)
         self.with_songs = with_songs
 
