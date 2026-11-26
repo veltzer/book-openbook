@@ -1,7 +1,57 @@
--- config/*.lua define top-level globals that are read by the rsconstruct
--- tera template renderer (load_lua), not by other Lua code — so defining
--- them is intended (allow_defined_top) and "unused global" (131) is noise.
+-- config/*.lua set top-level globals that are read by the rsconstruct tera
+-- template renderer (load_lua), not by other Lua code. These are the names
+-- it reads: setting one of them is intended and none of them is "unused".
+-- Any other global set in config/ is reported, which is how a mistyped name
+-- shows up.
 files["config"] = {
-    allow_defined_top = true,
-    ignore = { "131" },
+    globals = {
+        "BUILD",
+        "BUILD_REQUIRES",
+        "CLASSIFIERS",
+        "CONFIG",
+        "DEPS",
+        "DESCRIPTION_LONG",
+        "DESCRIPTION_SHORT",
+        "DOMAIN",
+        "EMAIL",
+        "EMAIL_KEY",
+        "FIRSTNAME",
+        "FULLNAME",
+        "GITHUB_USERNAME",
+        "INSTALL_REQUIRES",
+        "JSCHESS_GETJSTHIRDPARTY_ESCAPED",
+        "JSCHESS_JS_SECTION",
+        "JSCHESS_JS_SECTION_DEBUG",
+        "JSCHESS_JS_SECTION_HIGHLIGHT",
+        "JSCHESS_QUNIT",
+        "JSDOC_AUTHOR",
+        "KEY",
+        "KEYWORDS",
+        "KEY_SIGNER",
+        "LAUNCHPAD_USERNAME",
+        "LICENSE_TYPE",
+        "NAME",
+        "NAME_FANCY",
+        "ORIGIN",
+        "PACKAGES",
+        "PBUILD",
+        "PCONFIG",
+        "PDEPS",
+        "PLATFORMS",
+        "PTEST",
+        "PYPI",
+        "PYTHON_REQUIRES",
+        "REQUIRES",
+        "RUNTIMEDEPS",
+        "SCRIPTS",
+        "SLUG",
+        "SURNAME",
+        "TEST",
+        "TEST_REQUIRES",
+        "TYPES_REQUIRED",
+        "WORKFLOWS_PLATFORMS",
+        "WWW_DOMAINNAME",
+        "WWW_HOSTNAME",
+        "tup",
+    },
 }
