@@ -39,7 +39,8 @@ jobs:
           rsconstruct-${{ runner.os }}-
     - name: install rsconstruct
       run: |
-        gh release download --repo veltzer/rsconstruct --pattern 'rsconstruct-linux-x86_64' --output /usr/local/bin/rsconstruct
+        gh release download --repo veltzer/rsconstruct --pattern 'rsconstruct-linux-x86_64' \
+          --output /usr/local/bin/rsconstruct
         chmod +x /usr/local/bin/rsconstruct
         rsconstruct version
       env:
