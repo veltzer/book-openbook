@@ -1,3 +1,4 @@
+---
 name: release
 # A GitHub release after every successful build of master, carrying exactly
 # what GitHub Pages serves: the build uploads docs/ as the github-pages
@@ -9,12 +10,12 @@ name: release
 # byte-identical across the fleet. The tag is the build run's UTC creation time,
 # so re-running a build finds its release already there instead of making a
 # second one.
-on:
+"on":
   # workflow_run is the trigger zizmor calls dangerous, because it can run
   # with write access on behalf of code from a fork's pull request. Not here:
   # the build it follows runs on pushes only, this is limited to master, and
   # nothing below executes anything from the checked-out tree.
-  workflow_run: # zizmor: ignore[dangerous-triggers]
+  workflow_run:  # zizmor: ignore[dangerous-triggers]
     workflows: [build]
     types: [completed]
     branches: [master]
@@ -52,8 +53,10 @@ jobs:
         gh run download "$RUN_ID" --name github-pages --dir artifact
         mkdir site
         tar -xf artifact/artifact.tar -C site
+        notes="The books as published on https://veltzer.org/book-openbook/ at commit $SHA,"
+        notes="$notes released by the build $RUN_URL"
         gh release create "$tag" site/output/* \
           --target "$SHA" \
           --latest \
           --title "Openbook, $(date -u -d "$CREATED" '+%Y-%m-%d %H:%M UTC')" \
-          --notes "The books as published on https://veltzer.org/book-openbook/ at commit $SHA, released by the build $RUN_URL"
+          --notes "$notes"

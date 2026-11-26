@@ -1,0 +1,36 @@
+---
+extends: default
+
+# yamllint's default config makes comments, comments-indentation,
+# document-start and truthy warnings, which yamllint (and the gate) let pass:
+# here they fail the build like every other rule. Sequences may be indented
+# under their key or not, but one way per file (consistent).
+#
+# octal-values and float-values are off in yamllint's default config. Both are
+# on here: a bare 0755 or 010 is read as an octal number by YAML 1.1 parsers
+# and as a decimal one by YAML 1.2 parsers, and .5, 1e3, .nan and .inf are
+# numbers that read like strings.
+
+rules:
+  comments:
+    level: error
+  comments-indentation:
+    level: error
+  document-start:
+    level: error
+  truthy:
+    level: error
+    allowed-values: ['true', 'false']
+  line-length:
+    max: 120
+  indentation:
+    spaces: 2
+    indent-sequences: consistent
+  octal-values:
+    forbid-implicit-octal: true
+    forbid-explicit-octal: true
+  float-values:
+    require-numeral-before-decimal: true
+    forbid-scientific-notation: true
+    forbid-nan: true
+    forbid-inf: true
