@@ -2,9 +2,13 @@
 Tests for scripts.check_all: the cross-file uniqueness check on song uuids.
 """
 
-from pathlib import Path
+
+from typing import TYPE_CHECKING
 
 from scripts import check_all
+
+if TYPE_CHECKING:
+    from pathlib import Path
 
 SONG = '{#\n[attributes]\ntitle = "X"\nuuid = "%s"\n#}\n'
 

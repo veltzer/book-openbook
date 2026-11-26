@@ -8,12 +8,16 @@ the book name. The tune list comes from scripts.gen_index_csv, which is
 covered by its own tests.
 """
 
-from pathlib import Path
+
+from typing import TYPE_CHECKING
 
 from pypdf import PdfReader, PdfWriter
 from pypdf.generic import Destination, IndirectObject
 
 from scripts import embed_pdf_bookmarks, gen_index_csv
+
+if TYPE_CHECKING:
+    from pathlib import Path
 
 
 def _blank_pdf(path: Path, pages: int) -> None:

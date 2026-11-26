@@ -71,6 +71,8 @@ select = [
   "DJ",      # django misuse (fires only on django code)
   "FAST",    # fastapi misuse (fires only on fastapi code)
   "FA",      # future annotations for the target version
+  "TC",      # flake8-type-checking: imports needed only for annotations
+  "TD",      # flake8-todos: a TODO names its author and says what is to do
 ]
 
 [lint.pep8-naming]
