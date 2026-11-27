@@ -218,7 +218,7 @@ def compute_scratch(attrs: dict[str, Any]) -> dict[str, str]:
 class DriverEmitter:
     """ partial evaluator turning the weave master into one output's driver """
 
-    def __init__(self, gattr: dict[str, Any], songs: list[SongMeta]):
+    def __init__(self, gattr: dict[str, Any], songs: list[SongMeta]) -> None:
         self.gattr = gattr
         self.songs = songs
         self.current = songs[0] if songs else None

@@ -3,6 +3,7 @@ Tests for scripts.check_all: the cross-file uniqueness check on song uuids.
 """
 
 
+from pathlib import Path
 from typing import TYPE_CHECKING
 
 from scripts import check_all
@@ -22,11 +23,11 @@ def _check(tmp_path: Path, uuids: list[str]) -> check_all.Checker:
     return checker
 
 
-def test_unique_uuids_pass(tmp_path):
+def test_unique_uuids_pass(tmp_path: Path) -> None:
     assert _check(tmp_path, ["u1", "u2"]).errors == 0
 
 
-def test_duplicate_uuid_is_reported(tmp_path):
+def test_duplicate_uuid_is_reported(tmp_path: Path) -> None:
     checker = _check(tmp_path, ["u1", "u2", "u1"])
     assert [f.reason for f in checker.findings] == [
         f"duplicate uuid (also in {tmp_path / 'song0.ly.tera'})",

@@ -36,20 +36,20 @@ def tune_blocks(driver: str) -> list[str]:
     return [block.rstrip("\n") for block in section.split(LOOP_START)[1:]]
 
 
-def test_split_chunks_is_contiguous_and_balanced():
+def test_split_chunks_is_contiguous_and_balanced() -> None:
     """ chunks keep book order and differ in length by at most one """
     items = list(range(10))
     chunks = split_chunks(items, 3)
     assert chunks == [[0, 1, 2, 3], [4, 5, 6], [7, 8, 9]]
 
 
-def test_split_chunks_rejects_too_many_chunks():
+def test_split_chunks_rejects_too_many_chunks() -> None:
     """ every chunk must hold at least one song """
     with pytest.raises(ValueError, match="cannot split 2 songs into 3"):
         split_chunks([1, 2], 3)
 
 
-def test_chunk_weave_drops_title_page_and_toc():
+def test_chunk_weave_drops_title_page_and_toc() -> None:
     """ the chunk weave keeps the tunes but not the front matter """
     weave = chunk_weave(WEAVE.read_text(encoding="utf-8"))
     assert "book header" not in weave
@@ -57,14 +57,14 @@ def test_chunk_weave_drops_title_page_and_toc():
     assert "% for file in gattr['files']:" in weave
 
 
-def test_front_weave_marks_the_toc():
+def test_front_weave_marks_the_toc() -> None:
     """ the front weave has a marker where the TOC goes """
     weave = front_weave(WEAVE.read_text(encoding="utf-8"))
     assert TOC_MARKER in weave
     assert "table-of-contents" not in weave
 
 
-def test_chunks_concatenate_to_the_whole_book():
+def test_chunks_concatenate_to_the_whole_book() -> None:
     """ the chunks' tune sections are exactly the single-run book's """
     songs = [parse_song_meta(DEMO_SONG)] * 3
     whole = DriverEmitter(GATTR_BOOK, songs).run(WEAVE.read_text(encoding="utf-8"))
@@ -76,7 +76,7 @@ def test_chunks_concatenate_to_the_whole_book():
     assert joined == tune_blocks(whole)
 
 
-def test_front_driver_lists_every_tune_with_its_page():
+def test_front_driver_lists_every_tune_with_its_page() -> None:
     """ the front matter has the title page and a static TOC """
     songs = [parse_song_meta(DEMO_SONG)] * 2
     front = front_driver(songs, ["3", "5"])
@@ -88,13 +88,13 @@ def test_front_driver_lists_every_tune_with_its_page():
     assert "{% set meta" not in front
 
 
-def test_scheme_string_keeps_lilypond_escapes():
+def test_scheme_string_keeps_lilypond_escapes() -> None:
     """ a tocname is already escaped for a lilypond string, which is
     also a valid scheme string: it goes in unchanged """
     assert scheme_string('The \\"Medic\\" Theme') == '"The \\"Medic\\" Theme"'
 
 
-def test_read_labels(tmp_path):
+def test_read_labels(tmp_path: Path) -> None:
     """ the labels report maps tune indexes to start pages """
     report = tmp_path / "c00.labels"
     report.write_text("tune2 7\ntune1 5\n", encoding="utf-8")

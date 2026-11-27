@@ -9,6 +9,7 @@ covered by its own tests.
 """
 
 
+from pathlib import Path
 from typing import TYPE_CHECKING
 from unittest.mock import Mock
 
@@ -20,6 +21,8 @@ from scripts import embed_pdf_bookmarks, gen_index_csv
 if TYPE_CHECKING:
     from pathlib import Path
 
+    import pytest
+
 
 def _blank_pdf(path: Path, pages: int) -> None:
     writer = PdfWriter()
@@ -29,7 +32,7 @@ def _blank_pdf(path: Path, pages: int) -> None:
         writer.write(stream)
 
 
-def test_embed_bookmarks_writes_one_outline_per_tune(tmp_path, monkeypatch):
+def test_embed_bookmarks_writes_one_outline_per_tune(tmp_path: Path, monkeypatch: pytest.MonkeyPatch) -> None:
     entries = [
         ("First", "Composer A", 2),
         ("Second", "Composer B", 4),

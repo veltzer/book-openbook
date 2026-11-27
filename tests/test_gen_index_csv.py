@@ -8,23 +8,29 @@ start/end pages (including the single-page and last-tune cases).
 """
 
 from pathlib import Path
+from typing import TYPE_CHECKING
 from unittest.mock import Mock
+
+import pytest
 
 from scripts import gen_index_csv
 
+if TYPE_CHECKING:
+    import pytest
 
-def test_split_title_composer_basic():
+
+def test_split_title_composer_basic() -> None:
     assert gen_index_csv.split_title_composer("A Foggy Day / George Gershwin, Ira Gershwin") == (
         "A Foggy Day",
         "George Gershwin, Ira Gershwin",
     )
 
 
-def test_split_title_composer_no_composer():
+def test_split_title_composer_no_composer() -> None:
     assert gen_index_csv.split_title_composer("Always") == ("Always", "")
 
 
-def test_build_rows_pages(monkeypatch):
+def test_build_rows_pages(monkeypatch: pytest.MonkeyPatch) -> None:
     # Three tunes: the first spans two pages (next starts on 7), the second is
     # one page, the last runs to the end of a 10-page book.
     entries = [
@@ -44,7 +50,7 @@ def test_build_rows_pages(monkeypatch):
     assert all(r["Book Name"] == "OpenBook" for r in rows)
 
 
-def test_build_rows_single_page_when_successor_shares_page(monkeypatch):
+def test_build_rows_single_page_when_successor_shares_page(monkeypatch: pytest.MonkeyPatch) -> None:
     # Two tunes engraved onto the same page: end must not fall below start.
     entries = [("First", "A", 5), ("Second", "B", 5)]
     monkeypatch.setattr(gen_index_csv, "parse_toc", Mock(return_value=entries))

@@ -15,6 +15,7 @@ change:
 """
 
 from pathlib import Path
+from typing import TYPE_CHECKING
 
 from scripts.drivers import (
     GATTR_SINGLE,
@@ -26,6 +27,9 @@ from scripts.drivers import (
     song_meta_from_derived,
     toml_to_song,
 )
+
+if TYPE_CHECKING:
+    import pytest
 
 DEMO_SONG = Path("src/test/demo.ly.tera")
 EXPECTED_DRIVER = Path("tests/expected_demo_driver.ly.tera")
@@ -40,12 +44,12 @@ def generate_demo_driver() -> str:
     return driver_header(SINGLE_VARS) + body
 
 
-def test_demo_driver_matches_golden():
+def test_demo_driver_matches_golden() -> None:
     """ the emitter's output for the demo song is byte-identical to the fixture """
     assert generate_demo_driver() == EXPECTED_DRIVER.read_text(encoding="utf-8")
 
 
-def test_derived_content_contract():
+def test_derived_content_contract() -> None:
     """ the derived toml carries the sections the driver templates load """
     meta = parse_song_meta(DEMO_SONG)
     content = derived_content(meta)
@@ -56,13 +60,13 @@ def test_derived_content_contract():
     assert "copyright = " in content
 
 
-def test_toml_to_song_roundtrip():
+def test_toml_to_song_roundtrip() -> None:
     """ derived-toml paths map back to the song sources they came from """
     meta = parse_song_meta(DEMO_SONG)
     assert toml_to_song(meta.derived_toml) == DEMO_SONG
 
 
-def test_song_meta_from_derived_roundtrip(tmp_path, monkeypatch):
+def test_song_meta_from_derived_roundtrip(tmp_path: Path, monkeypatch: pytest.MonkeyPatch) -> None:
     """ round-trip a SongMeta through derived_content + song_meta_from_derived """
     original = parse_song_meta(DEMO_SONG)
     dst = tmp_path / original.derived_toml
