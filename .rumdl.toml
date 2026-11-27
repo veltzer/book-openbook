@@ -28,9 +28,14 @@
 # MD085: the lines of a paragraph are not indented. An indented outline is
 # written as the list or the code block it is.
 # MD088: quotes are the ASCII ones, not the typographic pairs.
+# MD072: the keys of a page's front matter are in alphabetical order.
+# MD080: no two headings of a page have the same anchor. A sub-heading
+# that repeats under several parents carries its parent's name.
+# MD082: a heading has text under it. A heading whose content is its
+# sub-headings is allowed ([MD082] below).
 [global]
 disable = ["MD014"]
-extend-enable = ["MD060", "MD070", "MD075", "MD081", "MD083", "MD084", "MD085", "MD087", "MD088", "MD091"]
+extend-enable = ["MD060", "MD070", "MD072", "MD075", "MD080", "MD081", "MD082", "MD083", "MD084", "MD085", "MD087", "MD088", "MD091"]
 
 # MD033 (no-inline-html) is on, allowing only the elements Markdown has no
 # syntax for and the fleet's pages need: Marp slide layouts (div), images
@@ -45,6 +50,9 @@ allowed_elements = ["bdi", "canvas", "details", "div", "img", "script", "summary
 # sign, in reading order inside right-to-left text.
 [MD084]
 allow = ["U+200E", "U+200F"]
+
+[MD082]
+allow-parent-headings = true
 
 [MD007]
 indent = 4
