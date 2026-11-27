@@ -10,6 +10,7 @@ covered by its own tests.
 
 
 from typing import TYPE_CHECKING
+from unittest.mock import Mock
 
 from pypdf import PdfReader, PdfWriter
 from pypdf.generic import Destination, IndirectObject
@@ -34,8 +35,8 @@ def test_embed_bookmarks_writes_one_outline_per_tune(tmp_path, monkeypatch):
         ("Second", "Composer B", 4),
         ("Third", "Composer C", 5),
     ]
-    monkeypatch.setattr(gen_index_csv, "parse_toc", lambda _pdf: entries)
-    monkeypatch.setattr(gen_index_csv, "pdf_page_count", lambda _pdf: 6)
+    monkeypatch.setattr(gen_index_csv, "parse_toc", Mock(return_value=entries))
+    monkeypatch.setattr(gen_index_csv, "pdf_page_count", Mock(return_value=6))
 
     src = tmp_path / "book.pdf"
     _blank_pdf(src, 6)

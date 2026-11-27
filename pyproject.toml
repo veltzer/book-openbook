@@ -42,6 +42,7 @@ search-path = [
 [tool.pyrefly.errors]
 implicit-any-attribute = "error"
 implicit-any-empty-container = "error"
+implicit-any-lambda = "error"
 implicit-any-type-argument = "error"
 instance-var-assign = "error"
 method-assign = "error"
