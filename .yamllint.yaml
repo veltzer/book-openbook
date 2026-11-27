@@ -34,3 +34,18 @@ rules:
     forbid-scientific-notation: true
     forbid-nan: true
     forbid-inf: true
+  # Off in yamllint's default config, on here: a key with nothing after it
+  # is null, which is rarely what was meant ({} or [] says it); an alias
+  # must have its anchor, an anchor must be used, and none is declared
+  # twice; and a file quotes its strings one way, not both.
+  empty-values:
+    forbid-in-block-mappings: true
+    forbid-in-flow-mappings: true
+    forbid-in-block-sequences: true
+  anchors:
+    forbid-undeclared-aliases: true
+    forbid-duplicated-anchors: true
+    forbid-unused-anchors: true
+  quoted-strings:
+    quote-type: consistent
+    required: false
