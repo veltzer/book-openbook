@@ -33,6 +33,12 @@
 # that repeats under several parents carries its parent's name.
 # MD082: a heading has text under it. A heading whose content is its
 # sub-headings is allowed ([MD082] below).
+# MD063 (heading capitalization) stays off, by decision (2026-11-27). What
+# it would write is often wrong: it breaks compound tokens (I/O to I/o,
+# C/C++ to C/c++), capitalises identifiers and file names (mmap() to
+# Mmap(), main.tf to Main.tf), and applies English title case to the
+# Russian and Hebrew pages. Passing it would take an ignore list of
+# hundreds of words here.
 [global]
 disable = ["MD014"]
 extend-enable = ["MD060", "MD070", "MD072", "MD075", "MD080", "MD081", "MD082", "MD083", "MD084", "MD085", "MD087", "MD088", "MD091"]
