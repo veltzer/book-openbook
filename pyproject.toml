@@ -41,6 +41,7 @@ search-path = [
 
 [tool.pyrefly.errors]
 implicit-any-attribute = "error"
+implicit-any-empty-container = "error"
 instance-var-assign = "error"
 method-assign = "error"
 missing-override-decorator = "error"

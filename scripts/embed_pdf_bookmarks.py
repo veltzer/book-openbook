@@ -62,7 +62,9 @@ def embed_bookmarks(pdf: Path, out: Path, book_name: str) -> int:
     for title, _composer, start in entries:
         # parse_toc reports 1-based pages aligned with physical PDF pages.
         writer.add_outline_item(title=title, page_number=start - 1)
-    metadata = {str(key): str(value) for key, value in (reader.metadata or {}).items()}
+    metadata: dict[str, str] = {}
+    if reader.metadata is not None:
+        metadata = {str(key): str(value) for key, value in reader.metadata.items()}
     metadata.setdefault("/Title", book_name)
     writer.add_metadata(metadata)
     out.parent.mkdir(parents=True, exist_ok=True)
