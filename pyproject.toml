@@ -43,5 +43,6 @@ search-path = [
 implicit-any-attribute = "error"
 instance-var-assign = "error"
 method-assign = "error"
+missing-override-decorator = "error"
 no-any-return = "error"
 possibly-uninitialized-attribute = "error"

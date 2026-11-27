@@ -50,6 +50,7 @@ import argparse
 import re
 import sys
 from pathlib import Path
+from typing import override
 
 from scripts.drivers import (
     BOOK_VARS,
@@ -106,6 +107,7 @@ class ChunkEmitter(DriverEmitter):
         super().__init__(gattr, songs)
         self.with_songs = with_songs
 
+    @override
     def unroll_loop(self, rest: list[str]) -> int:
         if self.with_songs:
             return super().unroll_loop(rest)
