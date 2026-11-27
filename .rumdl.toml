@@ -21,9 +21,16 @@
 # MD091 (Markdown inside an HTML block, which renders as literal text).
 # MD087: an inline disable comment must suppress something, the Markdown
 # side of the fleet's rule that every suppression is needed and says why.
+# MD060 (table-format): a table whose columns are padded is padded the
+# same way in every row.
+# MD084 (invisible characters): no zero-width or other unseen character,
+# except the two declared under [MD084] below.
+# MD085: the lines of a paragraph are not indented. An indented outline is
+# written as the list or the code block it is.
+# MD088: quotes are the ASCII ones, not the typographic pairs.
 [global]
 disable = ["MD014"]
-extend-enable = ["MD070", "MD075", "MD081", "MD083", "MD087", "MD091"]
+extend-enable = ["MD060", "MD070", "MD075", "MD081", "MD083", "MD084", "MD085", "MD087", "MD088", "MD091"]
 
 # MD033 (no-inline-html) is on, allowing only the elements Markdown has no
 # syntax for and the fleet's pages need: Marp slide layouts (div), images
@@ -32,6 +39,12 @@ extend-enable = ["MD070", "MD075", "MD081", "MD083", "MD087", "MD091"]
 # left-to-right runs inside Hebrew text (bdi). Any other element is reported.
 [MD033]
 allowed_elements = ["bdi", "canvas", "details", "div", "img", "script", "summary", "sup", "svg"]
+
+# The left-to-right and right-to-left marks are written on purpose in the
+# Hebrew pages: they keep a list of Latin names, or a number with its
+# sign, in reading order inside right-to-left text.
+[MD084]
+allow = ["U+200E", "U+200F"]
 
 [MD007]
 indent = 4
