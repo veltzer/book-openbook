@@ -14,8 +14,16 @@
 # repos: it separates the command from its output and marks the shell
 # being used (a Windows example uses ">"), so the rule's fix would
 # rewrite authored teaching material. Kept off fleet-wide.
+# Rules rumdl leaves off unless asked for, enabled here:
+# MD070 (nested-code-fence): a fenced block that shows a fence is written
+# with a longer outer fence, so the inner one cannot close it.
+# MD075 (orphaned table rows), MD081 (excessive emphasis), MD083 (mojibake),
+# MD091 (Markdown inside an HTML block, which renders as literal text).
+# MD087: an inline disable comment must suppress something, the Markdown
+# side of the fleet's rule that every suppression is needed and says why.
 [global]
 disable = ["MD014"]
+extend-enable = ["MD070", "MD075", "MD081", "MD083", "MD087", "MD091"]
 
 # MD033 (no-inline-html) is on, allowing only the elements Markdown has no
 # syntax for and the fleet's pages need: Marp slide layouts (div), images
