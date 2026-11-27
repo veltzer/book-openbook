@@ -218,7 +218,7 @@ def compute_scratch(attrs: dict[str, Any]) -> dict[str, str]:
 class DriverEmitter:
     """ partial evaluator turning the weave master into one output's driver """
 
-    def __init__(self, gattr: dict, songs: list[SongMeta]):
+    def __init__(self, gattr: dict[str, Any], songs: list[SongMeta]):
         self.gattr = gattr
         self.songs = songs
         self.current = songs[0] if songs else None
@@ -325,7 +325,7 @@ class DriverEmitter:
     def eval_lines(self, lines: list[str]) -> None:
         """ evaluate a run of weave template lines """
         # frames: ("static", taking, seen_true) or ("runtime",)  # noqa: ERA001  not code: an example of the value, written out
-        stack: list[tuple] = []
+        stack: list[tuple[Any, ...]] = []
         index = 0
 
         def taking() -> bool:
@@ -401,7 +401,7 @@ class DriverEmitter:
                 depth -= 1
         raise ValueError("unterminated % for loop in the weave")
 
-    def handle_control(self, control: re.Match, stack: list[tuple], *, was_taking: bool) -> None:
+    def handle_control(self, control: re.Match[str], stack: list[tuple[Any, ...]], *, was_taking: bool) -> None:
         """ process one %-control line """
         keyword, cond = control.group(1), control.group(2)
         if keyword in ("if", "for"):
@@ -516,7 +516,7 @@ def driver_header(var_names: list[str]) -> str:
     return "".join(parts)
 
 
-def write_driver(gattr: dict, songs: list[SongMeta], var_names: list[str], driver: Path) -> None:
+def write_driver(gattr: dict[str, Any], songs: list[SongMeta], var_names: list[str], driver: Path) -> None:
     """ generate one driver template by partial evaluation of the weave """
     emitter = DriverEmitter(gattr, songs)
     body = emitter.run(COMMON.read_text(encoding="utf-8"))
