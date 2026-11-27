@@ -17,7 +17,7 @@ src = [".", "src", "scripts"]
 # the PLR0 metrics and PLR2004 magic numbers, and families that judge style
 # rather than correctness (D docstrings, ANN annotations - pyrefly owns
 # types -, Q/COM quoting and commas, T20 print - the teaching code prints -,
-# PTH pathlib, ERA commented-out code, EM and TRY003 exception message style
+# PTH pathlib, EM and TRY003 exception message style
 # - a message built where the exception is raised is how this code reports
 # an error -, TRY301 a raise inside a try, which the exception lessons are
 # made of, S bandit, which reports the deliberate vulnerabilities the
@@ -81,6 +81,7 @@ select = [
   "TRY2",    # tryceratops: re-raising (`raise` alone, no useless handler)
   "TRY300",  # tryceratops: the success path goes in `else`
   "TRY4",    # tryceratops: logging an exception
+  "ERA",     # eradicate: no commented-out code
 ]
 
 [lint.pep8-naming]

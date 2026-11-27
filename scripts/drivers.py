@@ -324,7 +324,7 @@ class DriverEmitter:
 
     def eval_lines(self, lines: list[str]) -> None:
         """ evaluate a run of weave template lines """
-        # frames: ("static", taking, seen_true) or ("runtime",)
+        # frames: ("static", taking, seen_true) or ("runtime",)  # noqa: ERA001  not code: an example of the value, written out
         stack: list[tuple] = []
         index = 0
 
